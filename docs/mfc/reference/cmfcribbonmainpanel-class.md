@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403594"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375101"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Classe CMFCRibbonMainPanel
 
-Implementa un pannello della barra multifunzione che viene visualizzato quando si sceglie la [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+Implementa un gruppo della barra multifunzione che viene visualizzato quando si fa clic su [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,23 +46,23 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonMainPanel::Add](#add)|Aggiunge un elemento della barra multifunzione nel riquadro a sinistra del pannello pulsante dell'applicazione. (Esegue l'override [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Aggiunge una stringa di testo al menu dell'elenco di file recenti.|
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Aggiunge un elemento della barra multifunzione nel riquadro inferiore del pannello dell'applicazione della barra multifunzione.|
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Aggiunge un elemento della barra multifunzione nel riquadro a destra del pannello del pulsante dell'applicazione.|
+|[CMFCRibbonMainPanel::Add](#add)|Aggiunge un elemento della barra multifunzione al riquadro sinistro del gruppo di pulsanti dell'applicazione. (Esegue l'override [di CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
+|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Aggiunge una stringa di testo al menu dell'elenco dei file recenti.|
+|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Aggiunge un elemento della barra multifunzione nel riquadro inferiore del gruppo di applicazioni della barra multifunzione.|
+|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Aggiunge un elemento della barra multifunzione al riquadro destro del gruppo di pulsanti dell'applicazione.|
 |`CMFCRibbonMainPanel::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Restituisce un rettangolo che rappresenta l'area del pannello principale della barra multifunzione.|
-|`CMFCRibbonMainPanel::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|
+|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Restituisce un rettangolo che rappresenta l'area del gruppo principale della barra multifunzione.|
+|`CMFCRibbonMainPanel::GetThisClass`|Utilizzato dal framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il framework Visualizza il `CMFCRibbonMainPanel` quando si apre il pannello dell'applicazione. Include tre riquadri:
+Il framework `CMFCRibbonMainPanel` visualizza l'oggetto quando si apre il pannello dell'applicazione. Contiene tre riquadri:
 
-- Il riquadro a sinistra contiene comandi associati a file, ad esempio **aperto**, **salvare**, **stampa**, e **chiudere**. Per aggiungere un comando in questo riquadro, chiamare [CMFCRibbonMainPanel::Add](#add).
+- Il riquadro sinistro contiene i comandi associati ai file, ad esempio **Apri**, **Salva**, **Stampa**e **Chiudi**. Per aggiungere un comando a questo riquadro, chiamare [CMFCRibbonMainPanel::Add](#add).
 
-- Il riquadro destro contiene le opzioni che modificano il comando che si fa clic nel riquadro sinistro. Ad esempio, se si sceglie **Salva con nome** nel riquadro sinistro, riquadro di destra è possibile visualizzare i tipi di file disponibili. Per aggiungere un elemento in questo riquadro, chiamare [CMFCRibbonMainPanel::AddToRight](#addtoright).
+- Il riquadro di destra contiene le opzioni che modificano il comando su cui si fa clic nel riquadro sinistro. Ad esempio, se si fa clic su **Salva con nome** nel riquadro sinistro, nel riquadro destro è possibile visualizzare i tipi di file disponibili. Per aggiungere un elemento a questo riquadro, chiamare [CMFCRibbonMainPanel::AddToRight](#addtoright).
 
-- Nel riquadro inferiore contiene pulsanti che consentono di modificare le impostazioni dell'applicazione e di uscire dal programma. Per aggiungere un elemento in questo riquadro, chiamare [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
+- Il riquadro inferiore contiene pulsanti che consentono di modificare le impostazioni dell'applicazione e di uscire dal programma. Per aggiungere un elemento a questo riquadro, chiamare [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -76,9 +76,9 @@ Il framework Visualizza il `CMFCRibbonMainPanel` quando si apre il pannello dell
 
 **Intestazione:** afxRibbonMainPanel.h
 
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCRibbonMainPanel::Add
 
-Aggiunge un elemento della barra multifunzione nel riquadro a sinistra del pannello pulsante dell'applicazione.
+Aggiunge un elemento della barra multifunzione al riquadro sinistro del gruppo di pulsanti dell'applicazione.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -87,15 +87,15 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Parametri
 
 *pElem*<br/>
-[in, out] Un puntatore all'elemento da aggiungere al pannello principale della barra multifunzione.
+[in, out] Puntatore all'elemento della barra multifunzione da aggiungere al gruppo principale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Aggiunge un elemento della barra multifunzione al pannello. Elementi aggiunti con questo metodo si troverà nella colonna a sinistra del pannello principale.
+Aggiunge un elemento della barra multifunzione al gruppo. Gli elementi aggiunti utilizzando questo metodo si troveranno nella colonna sinistra del pannello principale.
 
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList
 
-Aggiunge una stringa di testo al menu dell'elenco di file recenti.
+Aggiunge una stringa di testo al menu dell'elenco dei file recenti.
 
 ```
 void AddRecentFilesList(
@@ -105,17 +105,17 @@ void AddRecentFilesList(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszLabel*<br/>
+*lpszLabel (etichetta di un'etichetta di base)*<br/>
 Specifica la stringa da aggiungere all'elenco dei file recenti.
 
-*nWidth*<br/>
-Specifica la larghezza, in pixel, del Pannello di elenco di file recenti.
+*nLarghezza*<br/>
+Specifica la larghezza, in pixel, del pannello dell'elenco dei file recenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom
 
-Aggiunge un elemento della barra multifunzione nel riquadro inferiore del pannello dell'applicazione della barra multifunzione.
+Aggiunge un elemento della barra multifunzione nel riquadro inferiore del gruppo di applicazioni della barra multifunzione.
 
 ```
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
@@ -124,13 +124,13 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ### <a name="parameters"></a>Parametri
 
 *pElem*<br/>
-[in, out] Un puntatore all'elemento da aggiungere alla parte inferiore del pannello principale della barra multifunzione.
+[in, out] Puntatore all'elemento della barra multifunzione da aggiungere alla parte inferiore del gruppo principale.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight
 
-Aggiunge un elemento della barra multifunzione nel riquadro a destra del pannello del pulsante dell'applicazione.
+Aggiunge un elemento della barra multifunzione al riquadro destro del gruppo di pulsanti dell'applicazione.
 
 ```
 void AddToRight(
@@ -141,18 +141,18 @@ void AddToRight(
 ### <a name="parameters"></a>Parametri
 
 *pElem*<br/>
-Puntatore a un elemento della barra multifunzione da aggiungere alla destra del riquadro principale.
+Puntatore a un elemento della barra multifunzione da aggiungere al lato destro del gruppo principale.
 
-*nWidth*<br/>
-Specifica la larghezza, in pixel, del riquadro a destra.
+*nLarghezza*<br/>
+Specifica la larghezza, in pixel, del pannello di destra.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Utilizzare questa funzione per aggiungere un elemento della barra multifunzione al pannello di destra. Il pannello di destra visualizza in genere l'elenco dei file recenti, ma è possibile aggiungere qualsiasi altro elemento della barra multifunzione qui.
+Utilizzare questa funzione per aggiungere un elemento della barra multifunzione al gruppo di destra. Il gruppo a destra in genere visualizza l'elenco dei file recenti, ma è possibile aggiungere qualsiasi altro elemento della barra multifunzione.
 
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame
 
-Restituisce un rettangolo che rappresenta l'area del pannello principale della barra multifunzione.
+Restituisce un rettangolo che rappresenta l'area del gruppo principale della barra multifunzione.
 
 ```
 CRect GetCommandsFrame() const;
@@ -160,10 +160,10 @@ CRect GetCommandsFrame() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Rettangolo che rappresenta l'area del pannello principale della barra multifunzione.
+Rettangolo che rappresenta l'area del gruppo principale della barra multifunzione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
+[CMFCRibbonPanel (classe)](../../mfc/reference/cmfcribbonpanel-class.md)

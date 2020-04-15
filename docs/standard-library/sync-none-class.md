@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: 4cb311289207dbcf78186e11b2c7f03c503389e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 046cbca30b6cdef2dc4e7dbbe2791d52384d9f25
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450308"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376564"
 ---
-# <a name="syncnone-class"></a>Classe sync_none
+# <a name="sync_none-class"></a>Classe sync_none
 
 Descrive un [filtro di sincronizzazione](../standard-library/allocators-header.md) che non fornisce alcuna sincronizzazione.
 
@@ -40,8 +40,8 @@ class sync_none
 
 |Funzione membro|Descrizione|
 |-|-|
-|[allocate](#allocate)|Alloca un blocco di memoria.|
-|[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
+|[Allocare](#allocate)|Alloca un blocco di memoria.|
+|[Deallocare](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
 |[equals](#equals)|Confronta due cache per stabilirne l'uguaglianza.|
 
 ## <a name="requirements"></a>Requisiti
@@ -50,7 +50,7 @@ class sync_none
 
 **Spazio dei nomi:** stdext
 
-## <a name="allocate"></a>  sync_none::allocate
+## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none::allocare
 
 Alloca un blocco di memoria.
 
@@ -64,11 +64,11 @@ void *allocate(std::size_t count);
 |---------------|-----------------|
 |*count*|Numero di elementi della matrice da allocare.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce `cache.allocate(count)`, dove `cache` è l'oggetto cache.
 
-## <a name="deallocate"></a>  sync_none::deallocate
+## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none::d esaldiare
 
 Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.
 
@@ -80,14 +80,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*Ptr*|Puntatore al primo oggetto che deve essere deallocato dall'archivio.|
 |*count*|Numero di oggetti da deallocare dall'archivio.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro chiama `cache.deallocate(ptr, count)`, dove `cache` rappresenta l'oggetto cache.
 
-## <a name="equals"></a>  sync_none::equals
+## <a name="sync_noneequals"></a><a name="equals"></a>sync_none::uguale a
 
 Confronta due cache per stabilirne l'uguaglianza.
 
@@ -106,8 +106,8 @@ bool equals(const sync<Cache>& Other) const;
 
 La funzione membro restituisce sempre **true**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocatori>](../standard-library/allocators-header.md)

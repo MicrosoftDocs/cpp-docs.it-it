@@ -16,12 +16,12 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6119bf922b05c30a14d8421800e3931c4a038779
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394481"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375952"
 ---
 # <a name="opening-files"></a>Apertura di file
 
@@ -31,25 +31,25 @@ In MFC, il modo più comune per aprire un file è un processo in due fasi.
 
 1. Creare l'oggetto file senza specificare un percorso o flag di autorizzazione.
 
-   È in genere creare un oggetto file dichiarando una [CFile](../mfc/reference/cfile-class.md) variabile nello stack frame.
+   In genere si crea un oggetto file dichiarando una variabile [CFile](../mfc/reference/cfile-class.md) nello stack frame.
 
-1. Chiamare il [aperto](../mfc/reference/cfile-class.md#open) funzione membro per l'oggetto file, specificando un percorso e l'autorizzazione per i flag.
+1. Chiamare la funzione membro [Open](../mfc/reference/cfile-class.md#open) per l'oggetto file, fornendo un percorso e flag di autorizzazione.
 
-   Il valore restituito per `Open` sarà diverso da zero se il file è stato aperto correttamente oppure 0 se non è stato possibile aprire il file specificato. Il `Open` funzione membro è il seguente prototipo:
+   Il valore `Open` restituito per sarà diverso da zero se il file è stato aperto correttamente o 0 se non è stato possibile aprire il file specificato. La `Open` funzione membro viene prototipo come segue:The member function is prototyped as follows:
 
    `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-   I flag open specificano le autorizzazioni, ad esempio sola lettura, desidera che per il file. I valori possibili flag sono definiti come costanti enumerate all'interno di `CFile` classe, in modo che siano qualificati con "`CFile::`" come in `CFile::modeRead`. Usare il `CFile::modeCreate` flag se si desidera creare il file.
+   I flag di apertura specificano le autorizzazioni desiderate per il file. I possibili valori di flag sono definiti `CFile` come costanti enumerate all'interno della classe, pertanto sono qualificati con "`CFile::`" come in `CFile::modeRead`. Utilizzare `CFile::modeCreate` il flag se si desidera creare il file.
 
-Nell'esempio seguente viene illustrato come creare un nuovo file con l'autorizzazione di lettura/scrittura (sostituendo eventuali file precedente con lo stesso percorso):
+L'esempio seguente mostra come creare un nuovo file con autorizzazione di lettura/scrittura (sostituendo qualsiasi file precedente con lo stesso percorso):The following example shows how to create a new file with read/write permission (placing any previous file with the same path):
 
 [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
 
 > [!NOTE]
->  In questo esempio crea e apre un file. Se si verificano problemi, il `Open` chiamata può restituire un `CFileException` oggetto nell'ultimo parametro, come illustrato di seguito. Utilizzo della macro TRACE viene stampato il nome del file e un codice che indica il motivo dell'errore. È possibile chiamare il `AfxThrowFileException` funzionare se sono necessarie più dettagliate segnalazione errori.
+> In questo esempio viene creato e aperto un file. In caso di `Open` problemi, la `CFileException` chiamata può restituire un oggetto nel relativo ultimo parametro, come illustrato di seguito. La macro TRACE stampa sia il nome del file che un codice che indica il motivo dell'errore. È possibile `AfxThrowFileException` chiamare la funzione se è necessaria una segnalazione degli errori più dettagliata.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CFile](../mfc/reference/cfile-class.md)<br/>
-[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
+[FileC::Aperto](../mfc/reference/cfile-class.md#open)<br/>
 [File](../mfc/files-in-mfc.md)

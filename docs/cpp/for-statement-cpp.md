@@ -1,26 +1,27 @@
 ---
 title: Istruzione for (C++)
-ms.date: 11/04/2016
+description: Riferimento all'istruzione standard di C' per in Microsoft Visual Studio.
+f1_keywords:
+- for_cpp
+ms.date: 04/14/2020
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: e3dfdb45bdf8a508eca9d29e90b3f7c05e7b147d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 92f7ae4b1f2fbaaf710cd5a8739b78cb98a0accb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179913"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375388"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C++)
 
-Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni sull'istruzione for basata su intervallo, vedere l' [istruzione for basata su intervallo (C++)](../cpp/range-based-for-statement-cpp.md).
+Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni sull'istruzione for basata sull'intervallo, vedere [Istruzione for basata su intervallo (C .](../cpp/range-based-for-statement-cpp.md)
 
 ## <a name="syntax"></a>Sintassi
 
-```
-for ( init-expression ; cond-expression ; loop-expression )
-    statement;
-```
+> **`for (`***init-expression* **`;`** *cond-expression* **`;`** *loop-expression***`)`**\
+> &nbsp;&nbsp;&nbsp;&nbsp;_affermazione_**`;`**
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -32,11 +33,11 @@ L'istruzione **for** è costituita da tre parti facoltative, come illustrato nel
 
 |Nome della sintassi|Quando viene eseguito|Descrizione|
 |-----------------|-------------------|-----------------|
-|`init-expression`|Prima di qualsiasi altro elemento dell'istruzione **for** , `init-expression` viene eseguito una sola volta. Il controllo passa a `cond-expression`.|Spesso utilizzato per inizializzare gli indici del ciclo. Può contenere espressioni o dichiarazioni.|
+|`init-expression`|Prima di qualsiasi altro elemento `init-expression` dell'istruzione **for,** viene eseguito una sola volta. Il controllo passa a `cond-expression`.|Spesso utilizzato per inizializzare gli indici del ciclo. Può contenere espressioni o dichiarazioni.|
 |`cond-expression`|Prima dell'esecuzione di ogni iterazione di `statement`, inclusa la prima iterazione. `statement` viene eseguito solo se `cond-expression` restituisce true (diverso da zero).|Un'espressione che restituisce un tipo di classe o un tipo integrale con una conversione non ambigua a un tipo integrale. Normalmente utilizzato per verificare i criteri di terminazione del ciclo For.|
 |`loop-expression`|Alla fine di ogni iterazione di `statement`. Dopo l'esecuzione di `loop-expression`, viene valutato `cond-expression`.|Normalmente utilizzato per incrementare gli indici del ciclo.|
 
-Negli esempi seguenti vengono illustrati diversi modi per utilizzare l'istruzione **for** .
+Negli esempi seguenti vengono illustrati diversi modi per utilizzare l'istruzione **for.**
 
 ```cpp
 #include <iostream>
@@ -98,11 +99,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-Un ciclo **for** termina quando viene eseguita un'istruzione [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md) (a un'istruzione con etichetta all'esterno del ciclo **for** ) all'interno di `statement`. Un'istruzione [continue](../cpp/continue-statement-cpp.md) in un ciclo **for** termina solo l'iterazione corrente.
+Un ciclo **for** termina quando viene eseguita un'interruzione , [,](../cpp/return-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md) (a un'istruzione con etichetta all'esterno del ciclo **for)** all'interno. `statement` [break](../cpp/break-statement-cpp.md) Un'istruzione [continue](../cpp/continue-statement-cpp.md) in un ciclo **for** termina solo l'iterazione corrente.
 
-Se `cond-expression` viene omesso, viene considerato true e il ciclo **for** non verrà terminato senza **break**, **return**o **goto** all'interno `statement`.
+Se `cond-expression` viene omesso, viene `true`considerato e il ciclo **for** non terminerà senza **un'interruzione**, **restituire**o **passare a** all'interno `statement`di .
 
-Sebbene i tre campi dell'istruzione **for** vengano normalmente utilizzati per l'inizializzazione, il test della terminazione e l'incremento, non sono limitati a questi utilizzi. Ad esempio, il codice seguente consente di stampare i numeri da 0 a 4. In questo caso, `statement` è l'istruzione Null:
+Anche se i tre campi dell'istruzione **for** vengono in genere utilizzati per l'inizializzazione, il test per la terminazione e l'incremento, non sono limitati a questi usi. Ad esempio, il codice seguente consente di stampare i numeri da 0 a 4. In questo caso, `statement` è l'istruzione Null:
 
 ```cpp
 #include <iostream>
@@ -119,7 +120,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>per i cicli e lo standard C++
 
-Lo C++ standard dichiara che una variabile dichiarata in un ciclo **for** deve uscire dall'ambito al termine del ciclo **for** . Ad esempio:
+Lo standard di C, indica che una variabile dichiarata in un ciclo **for** deve uscire dall'ambito dopo la fine del ciclo **for.** Ad esempio:
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -128,11 +129,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-Per impostazione predefinita, in [/ze](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un ciclo **for** rimane nell'ambito fino alla fine dell'ambito di inclusione del ciclo **for** .
+Per impostazione predefinita, in [/e](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un ciclo **for** rimane nell'ambito fino al termine dell'ambito di inclusione del ciclo **for.**
 
-[/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Abilita il comportamento standard delle variabili dichiarate nei cicli for senza la necessità di specificare `/Za`.
+[L'opzione /-c:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) abilita il comportamento standard delle `/Za`variabili dichiarate nei cicli for senza dover specificare .
 
-È anche possibile usare le differenze di ambito del ciclo **for** per dichiarare nuovamente le variabili in `/Ze` come indicato di seguito:
+È anche possibile usare le differenze **for** di ambito del ciclo `/Ze` for per ridichiarare le variabili in seguito a quanto segue:
 
 ```cpp
 // for_statement5.cpp
@@ -144,12 +145,12 @@ int main(){
 }
 ```
 
-Questo consente di simulare più accuratamente il comportamento standard di una variabile dichiarata in un ciclo **for** , che richiede variabili dichiarate in un ciclo **for** per uscire dall'ambito al termine del ciclo. Quando una variabile viene dichiarata in un ciclo **for** , il compilatore lo innalza internamente a una variabile locale nell'ambito di inclusione del ciclo **for** anche se è già presente una variabile locale con lo stesso nome.
+Questo comportamento simula più da vicino il comportamento standard di una variabile dichiarata in un ciclo **for,** che richiede che le variabili dichiarate in un ciclo **for** escano dall'ambito dopo l'operazione del ciclo. Quando una variabile viene dichiarata in un ciclo **for,** il compilatore la promuove internamente a una variabile locale nell'ambito di inclusione del ciclo **for.** Viene promosso anche se esiste già una variabile locale con lo stesso nome.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Istruzione while (C++)](../cpp/while-statement-cpp.md)<br/>
-[Istruzione do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[istruzione while (C](../cpp/while-statement-cpp.md)<br/>
+[Dichiarazione do-while (C )](../cpp/do-while-statement-cpp.md)<br/>
 [Istruzione for basata su intervallo (C++)](../cpp/range-based-for-statement-cpp.md)

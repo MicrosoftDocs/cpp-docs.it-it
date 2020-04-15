@@ -14,21 +14,21 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420736"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375847"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[Swap](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 Identifica in modo univoco il thread di esecuzione corrente.
 
@@ -40,7 +40,7 @@ thread::id this_thread::get_id() noexcept;
 
 Oggetto di tipo [thread::id](../standard-library/thread-class.md) che identifica in modo univoco il thread di esecuzione corrente.
 
-## <a name="sleep_for"></a>  sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 Blocca il thread chiamante.
 
@@ -59,7 +59,7 @@ Oggetto [duration](../standard-library/duration-class.md) che specifica un inter
 
 La funzione blocca il thread chiamante per almeno il tempo specificato da *Rel_time*. Questa funzione non genera eccezioni.
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 La funzione blocca il thread chiamante almeno fino all'ora specificata.
 
@@ -79,9 +79,9 @@ Rappresenta un punto nel tempo.
 
 Questa funzione non genera eccezioni.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Swap
 
-Scambia gli Stati di due oggetti **thread** .
+Scambia gli stati di due oggetti **thread.**
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
-Oggetto **thread** di sinistra.
+*Sinistra*\
+Oggetto **thread** sinistro.
 
-\ a *destra*
-Oggetto **thread** a destra.
+*va bene*\
+Oggetto **filettatura** destro.
 
 ### <a name="remarks"></a>Osservazioni
 
 La funzione chiama `Left.swap(Right)`.
 
-## <a name="yield"></a>  yield
+## <a name="yield"></a><a name="yield"></a>Rendimento
 
 Segnala al sistema operativo di eseguire altri thread, anche se in genere l'esecuzione del thread corrente dovrebbe continuare.
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<thread>](../standard-library/thread.md)
+[\<>di filettatura](../standard-library/thread.md)

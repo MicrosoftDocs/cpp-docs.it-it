@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: 14b816177593a9f6dade60e36676a37f724fc209
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f41c5b238f74e85bc18e9ff5c3aa6a0050fe27e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376915"
 ---
 # <a name="ltatomicgt-enums"></a>Enumerazioni &lt;atomic&gt;
 
-## <a name="memory_order_enum"></a>  Enumerazione memory_order
+## <a name="memory_order-enum"></a><a name="memory_order_enum"></a>Enum memory_order
 
 Fornisce nomi simbolici per le operazioni di sincronizzazione sulle posizioni di memoria. Queste operazioni influiscono sul modo in cui gli assegnamenti in un thread diventano visibili in un altro.
 
@@ -30,7 +30,7 @@ typedef enum memory_order {
 } memory_order;
 ```
 
-### <a name="enumeration-members"></a>Membri dell'enumerazione
+### <a name="enumeration-members"></a>Membri di enumerazione
 
 |||
 |-|-|
@@ -43,4 +43,4 @@ typedef enum memory_order {
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<atomic>](../standard-library/atomic.md)
+[\<>atomica](../standard-library/atomic.md)

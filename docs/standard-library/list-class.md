@@ -98,16 +98,16 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7e30583a185a46e5e0f0544ac2b00848dc989f26
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420078"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377313"
 ---
 # <a name="list-class"></a>Classe list
 
-La C++ classe List standard library è un modello di classe di contenitori sequenza che conservano gli elementi in una disposizione lineare e consentono inserimenti ed eliminazioni efficienti in qualsiasi posizione all'interno della sequenza. La sequenza viene archiviata come elenco collegato bidirezionale di elementi, ognuno dei quali contiene un membro dello stesso tipo *Type*.
+La classe di elenco della libreria standard di C' è un modello di classe di contenitori di sequenza che mantengono i relativi elementi in una disposizione lineare e consentono inserimenti ed eliminazioni efficienti in qualsiasi posizione all'interno della sequenza. La sequenza viene archiviata come elenco collegato bidirezionale di elementi, ognuno dei quali contiene un membro dello stesso tipo *Type*.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -118,29 +118,29 @@ class list
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo*\
+*digitare*\
 Tipo di dati degli elementi da archiviare nell'elenco.
 
-\ *allocatore*
-Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione e alla deallocazione di memoria dell'elenco. Questo argomento è facoltativo e il valore predefinito è **allocator**\<*tipo*>.
+*Allocatore*\
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione e alla deallocazione di memoria dell'elenco. Questo argomento è facoltativo e il valore predefinito è*Tipo*> **allocatore.**\<
 
 ## <a name="remarks"></a>Osservazioni
 
-La scelta del tipo di contenitore deve essere basata in genere sul tipo di ricerca e di inserimento richiesti dall'applicazione. I vettori  dovrebbero essere i contenitori preferiti per gestire una sequenza quando l'accesso casuale a qualsiasi elemento è limitato e gli inserimenti o le eliminazioni di elementi sono richiesti solo alla fine di una sequenza. Le prestazioni del contenitore della classe deque sono superiori quando è necessario l'accesso casuale e gli inserimenti e le eliminazioni sono importanti sia all'inizio che alla fine di una sequenza.
+La scelta del tipo di contenitore deve essere basata in genere sul tipo di ricerca e di inserimento richiesti dall'applicazione. I vettori devono essere il contenitore preferito per la gestione di una sequenza quando l'accesso casuale a un elemento è importante e gli inserimenti o le eliminazioni degli elementi sono necessari solo alla fine di una sequenza. Le prestazioni del contenitore della classe deque sono superiori quando è necessario l'accesso casuale e gli inserimenti e le eliminazioni sono importanti sia all'inizio che alla fine di una sequenza.
 
 Le funzioni membro della classe list, [merge](#merge), [reverse](#reverse), [unique](#unique), [remove](#remove) e [remove_if](#remove_if), sono state ottimizzate per le operazioni sugli oggetti list e offrono un'alternativa ad alte prestazioni alle loro controparti generiche.
 
 La riallocazione dell'elenco si verifica quando una funzione membro deve inserire o cancellare elementi dell'elenco. In questi casi, solo gli iteratori o i riferimenti che puntano alle parti cancellate della sequenza controllata diventeranno non validi.
 
-Includere l' C++ intestazione standard della libreria standard \<elenco > per definire l'elenco di modelli di classe del [contenitore](../standard-library/stl-containers.md) e diversi modelli di supporto.
+Includere l'elenco di intestazioni \<standard della libreria standard di C'> per definire l'elenco di modelli di classe [contenitore](../standard-library/stl-containers.md) e diversi modelli di supporto.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
 |||
 |-|-|
-|[list](#list)|Costruisce un elenco di dimensioni specifiche, con elementi di un valore specifico, con un oggetto `allocator` specifico o come copia di un altro elenco.|
+|[Elenco](#list)|Costruisce un elenco di dimensioni specifiche, con elementi di un valore specifico, con un oggetto `allocator` specifico o come copia di un altro elenco.|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -152,63 +152,63 @@ Includere l' C++ intestazione standard della libreria standard \<elenco > per de
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento a un elemento **const** archiviato in un elenco per la lettura e l'esecuzione di operazioni **const**.|
 |[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento **const** di un elenco.|
 |[difference_type](#difference_type)|Tipo che fornisce la differenza tra due iteratori che fanno riferimento agli elementi all'interno dello stesso elenco.|
-|[iterator](#iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un elenco.|
-|[pointer](#pointer)|Tipo che fornisce un puntatore a un elemento di un elenco.|
-|[reference](#reference)|Tipo che fornisce un riferimento a un elemento **const** archiviato in un elenco per la lettura e l'esecuzione di operazioni **const**.|
+|[Iteratore](#iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un elenco.|
+|[indicatore di misura](#pointer)|Tipo che fornisce un puntatore a un elemento di un elenco.|
+|[Riferimento](#reference)|Tipo che fornisce un riferimento a un elemento **const** archiviato in un elenco per la lettura e l'esecuzione di operazioni **const**.|
 |[reverse_iterator](#reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un elenco invertito.|
 |[size_type](#size_type)|Tipo che conta il numero di elementi in un elenco.|
-|[value_type](#value_type)|Tipo che rappresenta il tipo di dati archiviati in un elenco.|
+|[Value_type](#value_type)|Tipo che rappresenta il tipo di dati archiviati in un elenco.|
 
 ### <a name="functions"></a>Funzioni
 
 |||
 |-|-|
-|[assign](#assign)|Elimina elementi da un elenco e copia un nuovo set di elementi nell'elenco di destinazione.|
-|[back](#back)|Restituisce un riferimento all'ultimo elemento di un elenco.|
-|[begin](#begin)|Restituisce un iteratore che punta al primo elemento di un elenco.|
+|[Assegnare](#assign)|Elimina elementi da un elenco e copia un nuovo set di elementi nell'elenco di destinazione.|
+|[Indietro](#back)|Restituisce un riferimento all'ultimo elemento di un elenco.|
+|[Iniziare](#begin)|Restituisce un iteratore che punta al primo elemento di un elenco.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento di un elenco.|
 |[cend](#cend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un elenco.|
-|[deselezionare](#clear)|Cancella tutti gli elementi di un elenco.|
+|[Chiaro](#clear)|Cancella tutti gli elementi di un elenco.|
 |[crbegin](#crbegin)|Restituisce un iteratore const che punta al primo elemento di un elenco invertito.|
 |[crend](#crend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un elenco invertito.|
 |[emplace](#emplace)|Inserisce un elemento costruito sul posto in un elenco in una posizione specificata.|
 |[emplace_back](#emplace_back)|Aggiunge un elemento costruito sul posto alla fine di un elenco.|
 |[emplace_front](#emplace_front)|Aggiunge un elemento costruito sul posto all'inizio di un elenco.|
-|[empty](#empty)|Verifica se un elenco è vuoto.|
+|[Vuoto](#empty)|Verifica se un elenco è vuoto.|
 |[end](#end)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un elenco.|
 |[erase](#erase)|Rimuove un elemento o un intervallo di elementi di un elenco dalle posizioni specificate.|
-|[front](#front)|Restituisce un riferimento al primo elemento di un elenco.|
+|[Fronte](#front)|Restituisce un riferimento al primo elemento di un elenco.|
 |[get_allocator](#get_allocator)|Restituisce una copia dell'oggetto `allocator` usato per costruire un elenco.|
-|[insert](#insert)|Inserisce un elemento, un numero di elementi o un intervallo di elementi in un elenco in una posizione specificata.|
+|[Inserire](#insert)|Inserisce un elemento, un numero di elementi o un intervallo di elementi in un elenco in una posizione specificata.|
 |[max_size](#max_size)|Restituisce la lunghezza massima di un elenco.|
-|[merge](#merge)|Rimuove gli elementi dall'elenco di argomenti, li inserisce nell'elenco di destinazione e ordina il nuovo set combinato di elementi in ordine crescente o in un altro ordine specificato.|
+|[Unione](#merge)|Rimuove gli elementi dall'elenco di argomenti, li inserisce nell'elenco di destinazione e ordina il nuovo set combinato di elementi in ordine crescente o in un altro ordine specificato.|
 |[pop_back](#pop_back)|Rimuove l'elemento alla fine di un elenco.|
 |[pop_front](#pop_front)|Elimina l'elemento all'inizio di un elenco.|
 |[push_back](#push_back)|Aggiunge un elemento alla fine di un elenco.|
 |[push_front](#push_front)|Aggiunge un elemento all'inizio di un elenco.|
 |[rbegin](#rbegin)|Restituisce un iteratore che punta al primo elemento di un elenco invertito.|
-|[remove](#remove)|Cancella gli elementi in un elenco che corrispondono a un valore specificato.|
+|[rimozione](#remove)|Cancella gli elementi in un elenco che corrispondono a un valore specificato.|
 |[remove_if](#remove_if)|Cancella gli elementi dall'elenco per il quale viene soddisfatto un predicato specificato.|
 |[rend](#rend)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un elenco invertito.|
-|[resize](#resize)|Specifica una nuova dimensione per un elenco.|
-|[reverse](#reverse)|Inverte l'ordine in cui gli elementi sono disposti in un elenco.|
-|[size](#size)|Restituisce il numero di elementi in un elenco|
-|[sort](#sort)|Dispone gli elementi di un elenco in ordine crescente o in relazione a un altro ordine.|
+|[Ridimensionare](#resize)|Specifica una nuova dimensione per un elenco.|
+|[Invertire](#reverse)|Inverte l'ordine in cui gli elementi sono disposti in un elenco.|
+|[Dimensione](#size)|Restituisce il numero di elementi in un elenco|
+|[Sorta](#sort)|Dispone gli elementi di un elenco in ordine crescente o in relazione a un altro ordine.|
 |[splice](#splice)|Rimuove gli elementi dall'elenco di argomenti e li inserisce nell'elenco di destinazione.|
-|[swap](#swap)|Scambia gli elementi di due elenchi.|
-|[unique](#unique)|Rimuove gli elementi duplicati adiacenti o gli elementi adiacenti che soddisfano un altro predicato binario dall'elenco.|
+|[Swap](#swap)|Scambia gli elementi di due elenchi.|
+|[Unico](#unique)|Rimuove gli elementi duplicati adiacenti o gli elementi adiacenti che soddisfano un altro predicato binario dall'elenco.|
 
 ### <a name="operators"></a>Operatori
 
 |||
 |-|-|
-|[operator=](#op_eq)|Sostituisce gli elementi dell'elenco con una copia di un altro elenco.|
+|[operatore di comando](#op_eq)|Sostituisce gli elementi dell'elenco con una copia di un altro elenco.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<list>
+**Intestazione**: \<elenco>
 
-## <a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
 Tipo che rappresenta la classe allocator per un oggetto elenco.
 
@@ -218,13 +218,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-`allocator_type` è un sinonimo del parametro di modello *allocator*.
+`allocator_type`è un sinonimo del parametro di modello *Allocatore*.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo a [get_allocator](#get_allocator).
 
-## <a name="assign"></a>assegnare
+## <a name="assign"></a><a name="assign"></a>Assegnare
 
 Elimina elementi da un elenco e copia un nuovo set di elementi in un elenco specificato.
 
@@ -244,19 +244,19 @@ void assign(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Prima*\
 Posizione del primo elemento nell'intervallo di elementi da copiare dall'elenco degli argomenti.
 
-*Ultimo*\
+*Ultima*\
 Posizione del primo elemento immediatamente successivo all'intervallo di elementi da copiare dall'elenco degli argomenti.
 
 *Conteggio*\
 Numero di copie di un elemento inserito nell'elenco.
 
-\ *Val*
+*Val*\
 Valore dell'elemento inserito nell'elenco.
 
-*IList*\
+*Ilist*\
 Oggetto initializer_list che contiene gli elementi da inserire.
 
 ### <a name="remarks"></a>Osservazioni
@@ -313,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a>Indietro
+## <a name="back"></a><a name="back"></a>Indietro
 
 Restituisce un riferimento all'ultimo elemento di un elenco.
 
@@ -331,7 +331,7 @@ Ultimo elemento dell'elenco. Se l'elenco è vuoto, il valore restituito è indef
 
 Se il valore restituito di `back` viene assegnato a `const_reference`, l'oggetto elenco non può essere modificato. Se il valore restituito da `back` viene assegnato a `reference`, l'oggetto elenco può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -363,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a>iniziare
+## <a name="begin"></a><a name="begin"></a>Iniziare
 
 Restituisce un iteratore che punta al primo elemento di un elenco.
 
@@ -379,7 +379,7 @@ Iteratore bidirezionale che punta al primo elemento dell'elenco o alla posizione
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il valore restituito di `begin` viene assegnato a una `const_iterator`, gli elementi dell'oggetto elenco non possono essere modificati. Se il valore restituito di `begin` viene assegnato a una `iterator`, è possibile modificare gli elementi dell'oggetto List.
+Se il valore `begin` restituito di `const_iterator`è assegnato a un oggetto , gli elementi nell'oggetto elenco non possono essere modificati. Se il valore `begin` restituito di `iterator`viene assegnato a un oggetto , gli elementi nell'oggetto elenco possono essere modificati.
 
 ### <a name="example"></a>Esempio
 
@@ -416,9 +416,9 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
-Restituisce un iteratore **const** che punta al primo elemento nell'intervallo.
+Restituisce un iteratore **const** che indirizza il primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -426,13 +426,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso bidirezionale **const** che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
+Iteratore di accesso bidirezionale **const** che punta al primo elemento dell'intervallo o alla posizione appena `cbegin() == cend()`oltre la fine di un intervallo vuoto ( per un intervallo vuoto, ).
 
 ### <a name="remarks"></a>Osservazioni
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `begin()` e `cbegin()`.
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, `Container` si consideri un contenitore modificabile (non **const)** di qualsiasi tipo che supporta `begin()` e `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -442,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
 Restituisce un iteratore `const` che punta alla posizione oltre l'ultimo elemento di un intervallo.
 
@@ -458,7 +458,7 @@ Iteratore di accesso bidirezionale `const` che punta oltre la fine dell'interval
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `end()` e `cend()`.
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, `Container` si consideri un contenitore modificabile (non **const)** di qualsiasi tipo che supporta `end()` e `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -470,7 +470,7 @@ auto i2 = Container.cend();
 
 Non è consigliabile dereferenziare il valore restituito da `cend`.
 
-## <a name="clear"></a>deselezionare
+## <a name="clear"></a><a name="clear"></a>Chiaro
 
 Cancella tutti gli elementi di un elenco.
 
@@ -505,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>Const_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento **const** di un elenco.
 
@@ -521,7 +521,7 @@ Un tipo `const_iterator` non può essere usato per modificare il valore di un el
 
 Vedere l'esempio per [back](#back).
 
-## <a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
 Fornisce un puntatore a un elemento **const** in un elenco.
 
@@ -535,7 +535,7 @@ Un tipo `const_pointer` non può essere usato per modificare il valore di un ele
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto list.
 
-## <a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>Const_reference
 
 Tipo che fornisce un riferimento a un elemento **const** archiviato in un elenco per la lettura e l'esecuzione di operazioni **const**.
 
@@ -579,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>Const_reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento **const** di un elenco.
 
@@ -595,7 +595,7 @@ Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e 
 
 Vedere l'esempio per [rbegin](#rbegin).
 
-## <a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a>crbegin crbegin
 
 Restituisce un iteratore const che punta al primo elemento di un elenco invertito.
 
@@ -639,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a>crend
 
 Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un elenco invertito.
 
@@ -690,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 Tipo Signed Integer che può essere usato per rappresentare il numero di elementi di un elenco in un intervallo compreso tra gli elementi a cui puntano gli iteratori.
 
@@ -747,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 Inserisce un elemento costruito sul posto in un elenco in una posizione specificata.
 
@@ -758,9 +758,9 @@ void emplace(iterator Where, Type&& val);
 ### <a name="parameters"></a>Parametri
 
 *Dove*\
-Posizione nell'oggetto [list](../standard-library/list-class.md) di destinazione dove viene inserito il primo elemento.
+Posizione [nell'elenco](../standard-library/list-class.md) di destinazione in cui viene inserito il primo elemento.
 
-\ *Val*
+*Val*\
 Elemento aggiunto alla fine dell'oggetto `list`.
 
 ### <a name="remarks"></a>Osservazioni
@@ -791,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
 
 Aggiunge un elemento costruito sul posto alla fine di un elenco.
 
@@ -801,8 +801,8 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
-Elemento aggiunto alla fine dell'oggetto [list](../standard-library/list-class.md).
+*Val*\
+Elemento aggiunto alla fine [dell'elenco.](../standard-library/list-class.md)
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -832,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
 
 Aggiunge un elemento costruito sul posto all'inizio di un elenco.
 
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Elemento aggiunto all'inizio dell'oggetto [list](../standard-library/list-class.md).
 
 ### <a name="remarks"></a>Osservazioni
@@ -873,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a>Vuoto
 
 Verifica se un elenco è vuoto.
 
@@ -910,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a>fine
+## <a name="end"></a><a name="end"></a>Fine
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un elenco.
 
@@ -925,7 +925,7 @@ Iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento 
 
 ### <a name="remarks"></a>Osservazioni
 
-`end` viene usato per verificare se un iteratore ha raggiunto la fine del relativo elenco.
+`end`viene utilizzato per verificare se un iteratore ha raggiunto la fine dell'elenco.
 
 ### <a name="example"></a>Esempio
 
@@ -970,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a>cancellare
+## <a name="erase"></a><a name="erase"></a>Cancellare
 
 Rimuove un elemento o un intervallo di elementi di un elenco dalle posizioni specificate.
 
@@ -984,10 +984,10 @@ iterator erase(iterator first, iterator last);
 *Dove*\
 Posizione dell'elemento da rimuovere dall'elenco.
 
-*primo*\
+*Prima*\
 Posizione del primo elemento rimosso dall'elenco.
 
-*ultimo*\
+*Ultima*\
 Posizione immediatamente successiva all'ultimo elemento rimosso dall'elenco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1045,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a>fronte
+## <a name="front"></a><a name="front"></a>Fronte
 
 Restituisce un riferimento al primo elemento di un elenco.
 
@@ -1062,7 +1062,7 @@ Se l'elenco è vuoto, viene restituito un valore non definito.
 
 Se il valore restituito di `front` viene assegnato a `const_reference`, l'oggetto elenco non può essere modificato. Se il valore restituito da `front` viene assegnato a `reference`, l'oggetto elenco può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -1092,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 Restituisce una copia dell'oggetto allocator usato per costruire un elenco.
 
@@ -1106,7 +1106,7 @@ Allocatore usato dall'elenco.
 
 ### <a name="remarks"></a>Osservazioni
 
-Gli allocatori per la classe di elenco specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi contenitore della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
+Gli allocatori per la classe di elenco specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
 
 ### <a name="example"></a>Esempio
 
@@ -1132,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>inserire
+## <a name="insert"></a><a name="insert"></a>Inserire
 
 Inserisce un elemento, un numero di elementi o un intervallo di elementi in un elenco in una posizione specificata.
 
@@ -1152,16 +1152,16 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 *Dove*\
 Posizione nell'oggetto list di destinazione dove viene inserito il primo elemento.
 
-\ *Val*
+*Val*\
 Valore dell'elemento inserito nell'elenco.
 
 *Conteggio*\
 Numero di elementi da inserire nell'elenco.
 
-*Primo*\
+*Prima*\
 Posizione del primo elemento nell'intervallo di elementi nell'elenco di argomenti da copiare.
 
-*Ultimo*\
+*Ultima*\
 Posizione del primo elemento oltre l'intervallo di elementi nell'elenco di argomenti da copiare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1238,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a>iteratore
+## <a name="iterator"></a><a name="iterator"></a>Iteratore
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un elenco.
 
@@ -1248,13 +1248,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Osservazioni
 
-È possibile utilizzare un tipo `iterator` per modificare il valore di un elemento.
+Un `iterator` tipo può essere utilizzato per modificare il valore di un elemento.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio per [begin](#begin).
 
-## <a name="list"></a>elenco
+## <a name="list"></a><a name="list"></a>Elenco
 
 Costruisce un elenco di dimensioni specifiche, con elementi di un valore specifico, con un allocatore specifico oppure come copia di tutto o parte di un altro elenco.
 
@@ -1278,42 +1278,42 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametri
 
-\ *al*
+*Al*\
 Classe Allocator da usare con questo oggetto.
 
 *Conteggio*\
 Numero di elementi dell'elenco costruito.
 
-\ *Val*
+*Val*\
 Valore degli elementi dell'elenco.
 
-\ a *destra*
+*va bene*\
 Elenco di cui l'elenco costruito deve essere una copia.
 
-*Primo*\
+*Prima*\
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
-*Ultimo*\
+*Ultima*\
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
-*IList*\
+*Ilist*\
 initializer_list che contiene gli elementi da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Tutti i costruttori archiviano un oggetto allocatore (*al*) e inizializzano l'elenco.
+Tutti i costruttori archiviano un oggetto allocatore (*Al*) e inizializzano l'elenco.
 
 [get_allocator](#get_allocator) restituisce una copia dell'oggetto allocatore usato per costruire un elenco.
 
-I primi due costruttori specificano un elenco iniziale vuoto, il secondo specifica il tipo di allocatore (*al*) da usare.
+I primi due costruttori specificano un elenco iniziale vuoto, il secondo specifica il tipo di allocatore (*Al*) da utilizzare.
 
-Il terzo costruttore specifica una ripetizione di un numero specificato di elementi delvalore predefinito per la classe `Type`.
+Il terzo costruttore specifica una ripetizione*Count*di un numero specificato ( `Type`Count ) di elementi del valore predefinito per class .
 
-Il quarto e il quinto costruttore specificano una ripetizione di elementi (*count*) del valore *Val*.
+Il quarto e il quinto costruttore specificano una ripetizione di elementi (*Count*) del valore *Val*.
 
-Il sesto costruttore specifica una copia dell'elenco a *destra*.
+Il sesto costruttore specifica una copia dell'elenco *Right*.
 
-Il settimo costruttore sposta l'elenco a *destra*.
+Il settimo costruttore sposta l'elenco *Right*.
 
 L'ottavo costruttore usa un oggetto initializer_list per specificare gli elementi.
 
@@ -1412,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 Restituisce la lunghezza massima di un elenco.
 
@@ -1443,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a>merge
+## <a name="merge"></a><a name="merge"></a>Unione
 
 Rimuove gli elementi dall'elenco di argomenti, li inserisce nell'elenco di destinazione e ordina il nuovo set combinato di elementi in ordine crescente o in un altro ordine specificato.
 
@@ -1456,17 +1456,17 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*va bene*\
 Elenco di argomenti da unire all'elenco di destinazione.
 
-\ *comp*
+*Comp*\
 Operatore di confronto usato per ordinare gli elementi dell'elenco di destinazione.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il *diritto* elenco di argomenti viene unito all'elenco di destinazione.
+L'elenco di argomenti *a destra* viene unito all'elenco di destinazione.
 
-Gli elenchi di argomenti e di destinazione devono essere ordinati con la stessa relazione di confronto con cui verrà ordinata la sequenza risultante. L'ordine predefinito per la prima funzione membro è l'ordine crescente. La seconda funzione membro impone l'operazione di confronto specificata dall'utente *comp* della classe `Traits`.
+Gli elenchi di argomenti e di destinazione devono essere ordinati con la stessa relazione di confronto con cui verrà ordinata la sequenza risultante. L'ordine predefinito per la prima funzione membro è l'ordine crescente. La seconda funzione membro impone l'operazione di `Traits`confronto specificata dall'utente *comp* della classe .
 
 ### <a name="example"></a>Esempio
 
@@ -1527,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a>operatore di comando
 
 Sostituisce gli elementi dell'elenco con una copia di un altro elenco.
 
@@ -1538,12 +1538,12 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*va bene*\
 Oggetto [list](../standard-library/list-class.md) da copiare nell'oggetto `list`.
 
 ### <a name="remarks"></a>Osservazioni
 
-Dopo la cancellazione di tutti gli elementi esistenti in un `list`, l'operatore copia o sposta il contenuto di *direttamente* nel `list`.
+Dopo aver cancellato tutti `list`gli elementi esistenti in un oggetto , `list`l'operatore copia o sposta il contenuto di *right* nel file .
 
 ### <a name="example"></a>Esempio
 
@@ -1586,7 +1586,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>puntatore
+## <a name="pointer"></a>Puntatore <a name="pointer"></a>
 
 Fornisce un puntatore a un elemento in un elenco.
 
@@ -1596,11 +1596,11 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Osservazioni
 
-È possibile utilizzare un tipo `pointer` per modificare il valore di un elemento.
+Un `pointer` tipo può essere utilizzato per modificare il valore di un elemento.
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto list.
 
-## <a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a>pop_back
 
 Rimuove l'elemento alla fine di un elenco.
 
@@ -1642,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a>pop_front
 
 Elimina l'elemento all'inizio di un elenco.
 
@@ -1684,17 +1684,18 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a>push_back
 
 Aggiunge un elemento alla fine di un elenco.
 
 ```cpp
-void push_back(void push_back(Type&& val);
+void push_back(const Type& val);
+void push_back(Type&& val);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Elemento aggiunto alla fine dell'oggetto list.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1738,7 +1739,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a>push_front
 
 Aggiunge un elemento all'inizio di un elenco.
 
@@ -1749,7 +1750,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Elemento aggiunto all'inizio dell'oggetto list.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1793,7 +1794,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a>rbegin
 
 Restituisce un iteratore che indirizza al primo elemento di una lista invertita.
 
@@ -1864,7 +1865,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a>riferimento
+## <a name="reference"></a><a name="reference"></a>Riferimento
 
 Tipo che fornisce un riferimento a un elemento archiviato in un elenco.
 
@@ -1900,7 +1901,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a>rimuovere
+## <a name="remove"></a><a name="remove"></a>Rimuovere
 
 Cancella gli elementi in un elenco che corrispondono a un valore specificato.
 
@@ -1910,7 +1911,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Valore che, se contenuto da un elemento, comporterà la rimozione dell'elemento dall'elenco.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1957,7 +1958,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 Cancella da un elenco gli elementi per cui è soddisfatto un predicato specificato.
 
@@ -1968,7 +1969,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parametri
 
-*predazione*\
+*Pred*\
 Predicato unario che, se soddisfatto da un elemento, comporta l'eliminazione di tale elemento dall'elenco.
 
 ### <a name="example"></a>Esempio
@@ -2022,7 +2023,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a>Rend
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un oggetto list invertito.
 
@@ -2108,7 +2109,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a>ridimensionare
+## <a name="resize"></a><a name="resize"></a>Ridimensionare
 
 Specifica una nuova dimensione per un elenco.
 
@@ -2122,14 +2123,14 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*\
 Nuova dimensione della stringa.
 
-\ *Val*
+*Val*\
 Valore dei nuovi elementi da aggiungere all'elenco se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se le dimensioni dell'elenco sono inferiori alla dimensione richiesta, *_Newsize*, gli elementi vengono aggiunti all'elenco fino a raggiungere le dimensioni richieste.
+Se la dimensione dell'elenco è inferiore alla dimensione richiesta, *_Newsize*, gli elementi vengono aggiunti all'elenco fino a raggiungere la dimensione richiesta.
 
-Se le dimensioni dell'elenco sono maggiori della dimensione richiesta, gli elementi più vicini alla fine dell'elenco vengono eliminati finché l'elenco non raggiunge la dimensione *_Newsize*.
+Se le dimensioni dell'elenco sono maggiori della dimensione richiesta, gli elementi più vicini alla fine dell'elenco vengono eliminati fino a quando l'elenco non raggiunge la dimensione *_Newsize*.
 
 Se la dimensione attuale dell'elenco corrisponde a quella richiesta, non viene eseguita alcuna azione.
 
@@ -2175,7 +2176,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a>inverso
+## <a name="reverse"></a><a name="reverse"></a>Invertire
 
 Inverte l'ordine in cui gli elementi sono disposti in un elenco.
 
@@ -2219,7 +2220,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>Reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un elenco invertito.
 
@@ -2235,7 +2236,7 @@ Un tipo `reverse_iterator` viene usato per scorrere l'elenco in ordine inverso.
 
 Vedere l'esempio per [rbegin](#rbegin).
 
-## <a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a>Dimensione
 
 Restituisce il numero di elementi in un elenco
 
@@ -2276,7 +2277,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 Tipo che conta il numero di elementi in un elenco.
 
@@ -2288,7 +2289,7 @@ typedef typename Allocator::size_type size_type;
 
 Vedere l'esempio per [size](#size).
 
-## <a name="sort"></a>ordinamento
+## <a name="sort"></a><a name="sort"></a>Sorta
 
 Dispone gli elementi di un elenco in ordine crescente o in relazione a un altro ordine definito dall'utente.
 
@@ -2301,14 +2302,14 @@ template <class Traits>
 
 ### <a name="parameters"></a>Parametri
 
-\ *comp*
+*Comp*\
 Operatore di confronto utilizzato per ordinare gli elementi successivi.
 
 ### <a name="remarks"></a>Osservazioni
 
 La prima funzione membro inserisce gli elementi in ordine crescente per impostazione predefinita.
 
-La funzione del modello di membro ordina gli elementi in base all'operazione di confronto specificata dall'utente *comp* della classe `Traits`.
+La funzione del modello membro ordina gli elementi *comp* in `Traits`base all'operazione di confronto specificata dall'utente comp della classe .
 
 ### <a name="example"></a>Esempio
 
@@ -2353,7 +2354,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a>giuntura
+## <a name="splice"></a><a name="splice"></a>Giuntura
 
 Rimuove elementi da un elenco di origine e li inserisce in un elenco di destinazione.
 
@@ -2376,25 +2377,25 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 *Dove*\
 Posizione nell'elenco di destinazione prima della quale occorre effettuare l'inserimento.
 
-*Origine*\
+*fonte*\
 Elenco di origine da inserire nell'elenco di destinazione.
 
-\ *iter*
+*Iter*\
 Elemento da inserire dall'elenco di origine.
 
-*Primo*\
+*Prima*\
 Primo elemento dell'intervallo da inserire dall'elenco di origine.
 
-*Ultimo*\
+*Ultima*\
 Prima posizione dopo l'ultimo elemento dell'intervallo da inserire dall'elenco di origine.
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima coppia di funzioni membro inserisce tutti gli elementi dell'elenco di origine nell'elenco di destinazione prima della posizione a cui viene fatto riferimento da *where* e rimuove tutti gli elementi dall'elenco di origine. (`&Source` non devono essere uguali `this`).
+La prima coppia di funzioni membro inserisce tutti gli elementi nell'elenco di origine nell'elenco di destinazione prima della posizione a cui fa riferimento *Where* e rimuove tutti gli elementi dall'elenco di origine. (`&Source` non `this`deve essere uguale a .)
 
-La seconda coppia di funzioni membro inserisce l'elemento a cui fa riferimento *iter* prima della posizione nell'elenco di destinazione a cui fa riferimento *where* e rimuove *iter* dall'elenco di origine. Se `Where == Iter || Where == ++Iter`, non si verifica alcuna modifica.
+La seconda coppia di funzioni membro inserisce l'elemento a cui fa riferimento *Iter* prima della posizione nell'elenco di destinazione a cui fa riferimento *Where* e rimuove *Iter* dall'elenco di origine. Se `Where == Iter || Where == ++Iter`, non si verifica alcuna modifica.
 
-La terza coppia di funzioni membro inserisce l'intervallo designato da [`First`, `Last`) prima dell'elemento nell'elenco di destinazione a cui fa riferimento *where* e rimuove tale intervallo di elementi dall'elenco di origine. Se `&Source == this`, l'intervallo `[First, Last)` non deve includere l'elemento a *cui*punta.
+La terza coppia di funzioni membro inserisce `First` `Last`l'intervallo designato da [ , ) prima dell'elemento nell'elenco di destinazione a cui fa riferimento *Where* e rimuove tale intervallo di elementi dall'elenco di origine. Se `&Source == this`, l'intervallo `[First, Last)` non deve includere l'elemento a cui punta *Where*.
 
 Se l'operazione di splicing nell'intervallo inserisce `N` elementi e `&Source != this`, un oggetto della classe [iterator](../standard-library/forward-list-class.md#iterator) sarà incrementato `N` volte.
 
@@ -2476,7 +2477,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a>Swap
 
 Scambia gli elementi di due elenchi.
 
@@ -2487,11 +2488,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
-Elenco che fornisce gli elementi da scambiare o l'elenco i cui elementi devono essere scambiati con quelli dell'elenco a *sinistra*.
+*va bene*\
+L'elenco che fornisce gli elementi da scambiare, o l'elenco i cui elementi devono essere scambiati con quelli dell'elenco *lasciato*.
 
-\ a *sinistra*
-Elenco i cui elementi devono essere scambiati con quelli dell'elenco a *destra*.
+*Sinistra*\
+Elenco i cui elementi devono essere scambiati con quelli dell'elenco *a destra.*
 
 ### <a name="example"></a>Esempio
 
@@ -2541,7 +2542,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a>unico
+## <a name="unique"></a><a name="unique"></a>Unico
 
 Rimuove gli elementi duplicati adiacenti o gli elementi adiacenti che soddisfano un altro predicato binario da un elenco.
 
@@ -2554,7 +2555,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parametri
 
-*predazione*\
+*Pred*\
 Predicato binario usato per confrontare gli elementi successivi.
 
 ### <a name="remarks"></a>Osservazioni
@@ -2563,7 +2564,7 @@ Questa funzione presuppone che l'elenco sia ordinato, in modo che tutti gli elem
 
 La prima funzione membro rimuove tutti gli elementi che risultano uguali all'elemento precedente.
 
-La seconda funzione membro rimuove tutti gli elementi che soddisfano la funzione predicativa *Predator* rispetto all'elemento precedente. È possibile usare uno degli oggetti funzione binaria dichiarati nell'intestazione \<funzionale > per l'argomento *predazione* oppure è possibile crearne di personalizzati.
+La seconda funzione membro rimuove ogni elemento che soddisfa la funzione predicativa *pred* rispetto all'elemento precedente. È possibile utilizzare uno qualsiasi degli \<oggetti funzione binaria dichiarati nell'intestazione della funzione> per l'argomento *pred* oppure è possibile crearne di personalizzati.
 
 ### <a name="example"></a>Esempio
 
@@ -2614,7 +2615,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>Value_type
 
 Tipo che rappresenta il tipo di dati archiviati in un elenco.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c4b75a65fcfb34a4988b176ffcb5b2afcb7ea13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514817"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377370"
 ---
 # <a name="deployment-in-visual-c"></a>Distribuzione in Visual C++
 
@@ -26,7 +26,7 @@ Per distribuire centralmente le librerie di Visual C++, è possibile usare una d
 
 - File di *pacchetto ridistribuibile*, ovvero eseguibili da riga di comando autonomi che contengono tutte le librerie ridistribuibili di Visual C++ in forma compressa, oppure
 
-- *Modelli unione ridistribuibili* (file con estensione msm), che è possibile usare per distribuire librerie specifiche e includere nel file di Windows Installer (con estensione msi) dell'applicazione.
+- *Moduli unione ridistribuibili* (file con estensione msm), che è possibile utilizzare per distribuire librerie specifiche e da includere nel file di Windows Installer (MSI) dell'applicazione.
 
 Un file del pacchetto ridistribuibile consente di installare tutte le librerie di Visual C++ per un'architettura di sistema specifica. Se ad esempio l'applicazione è compilata per un'architettura x64, è possibile usare il pacchetto ridistribuibile vcredist_x64.exe per installare tutte le librerie di Visual C++ usate dall'applicazione. È possibile programmare il programma di installazione dell'applicazione in modo che esegua il pacchetto ridistribuibile come prerequisito prima di installare l'applicazione.
 
@@ -53,4 +53,4 @@ L'ordine di caricamento delle librerie di Visual C++ è dipendente dal sistema. 
 ## <a name="see-also"></a>Vedere anche
 
 - [Distribuzione di applicazioni desktop](deploying-native-desktop-applications-visual-cpp.md)
-- [Distribuzione Universal CRT](universal-crt-deployment.md)
+- [Distribuzione CRT universale](universal-crt-deployment.md)

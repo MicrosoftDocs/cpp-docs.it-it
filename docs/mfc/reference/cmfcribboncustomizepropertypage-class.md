@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: 8c790ca249f34a3c9b36d1bd77dafdc4a91bd352
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c77e2fed1067091c139eee664fb291b83742eb54
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237051"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375193"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Classe CMFCRibbonCustomizePropertyPage
 
-Implementa una pagina personalizzata per il **Personalizza** finestra di dialogo nelle applicazioni basate sulla barra multifunzione.
+Implementa una pagina personalizzata per la finestra di dialogo **Personalizza** nelle applicazioni basate sulla barra multifunzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,18 +44,18 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Aggiunge una categoria personalizzata per il **comandi** casella combinata.|
+|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Aggiunge una categoria personalizzata alla casella combinata **Comandi.**|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Chiamato dal sistema quando un utente fa clic **OK** nel **Personalizza** nella finestra di dialogo.|
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Utilizzato dal framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Chiamato dal sistema quando un utente fa clic **su OK** nella finestra di dialogo **Personalizza.**|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se si desidera aggiungere comandi personalizzati per il **Personalizza** finestra di dialogo, è necessario gestire il messaggio AFX_WM_ON_RIBBON_CUSTOMIZE. Nel gestore di messaggi, creare un'istanza di un `CMFCRibbonCustomizePropertyPage` oggetto nello stack. Creare un elenco di comandi personalizzati e quindi chiamare `AddCustomCategory` per aggiungere la nuova pagina per il **Personalizza** nella finestra di dialogo.
+Se si desidera aggiungere comandi personalizzati alla finestra di dialogo **Personalizza,** è necessario gestire il messaggio AFX_WM_ON_RIBBON_CUSTOMIZE. Nel gestore messaggi `CMFCRibbonCustomizePropertyPage` creare un'istanza di un oggetto nello stack. Creare un elenco di comandi `AddCustomCategory` personalizzati e quindi chiamare per aggiungere la nuova pagina alla finestra di dialogo **Personalizza.**
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire un `CMFCRibbonCustomizePropertyPage` oggetto e aggiungere una categoria personalizzata.
+Nell'esempio seguente viene `CMFCRibbonCustomizePropertyPage` illustrato come costruire un oggetto e aggiungere una categoria personalizzata.
 
 [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]
 
@@ -79,9 +79,9 @@ Nell'esempio seguente viene illustrato come costruire un `CMFCRibbonCustomizePro
 
 **Intestazione:** afxribboncustomizedialog.h
 
-##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory
+## <a name="cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory
 
-Aggiunge una categoria personalizzata per il **comandi** casella combinata.
+Aggiunge una categoria personalizzata alla casella combinata **Comandi.**
 
 ```
 void AddCustomCategory(
@@ -95,13 +95,13 @@ void AddCustomCategory(
 |-|-|
 |Parametro|Descrizione|
 |*lpszName*|[in] Specifica il nome della categoria personalizzata.|
-|*lstIDS*|[in] Contiene l'ID di comando della barra multifunzione da visualizzare nella categoria personalizzata.|
+|*lstIDS*|[in] Contiene gli ID dei comandi della barra multifunzione da visualizzare nella categoria personalizzata.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo aggiunge una categoria denominata *lpszName* per il **comandi** casella combinata. Quando l'utente seleziona la categoria, i comandi specificati nel *lstIDS* vengono visualizzati nell'elenco dei comandi.
+Questo metodo aggiunge una categoria denominata *lpszName* alla casella combinata **Comandi.** Quando l'utente seleziona la categoria, i comandi specificati in *lstIDS* vengono visualizzati nell'elenco dei comandi.
 
-##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+## <a name="cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
 
 Costruisce un oggetto `CMFCRibbonCustomizePropertyPage`.
 
@@ -111,22 +111,22 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*pRibbonBar*<br/>
-[in] Un puntatore a un controllo della barra multifunzione per i quali le opzioni di personalizzazione.
+*pRibbonBar (barra multifunzione)*<br/>
+[in] Puntatore a un controllo della barra multifunzione per il quale è possibile personalizzare le opzioni.
 
-##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK
+## <a name="cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK
 
-Calleld dal sistema quando l'utente sceglie **OK** nel **Personalizza** nella finestra di dialogo.
+Calleld dal sistema quando un utente fa clic **su OK** nella finestra di dialogo **Personalizza** .
 
 ```
 virtual void OnOK();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita applica le opzioni selezionate durante la **Personalizza** finestra di dialogo per la barra di accesso rapido.
+L'implementazione predefinita applica le opzioni selezionate nella finestra di dialogo **Personalizza** alla barra di accesso rapido.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

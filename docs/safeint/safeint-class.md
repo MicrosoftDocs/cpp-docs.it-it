@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076824"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373448"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
 Estende le primitive Integer per impedire l'overflow di Integer e consente di confrontare tipi Integer diversi.
 
 > [!NOTE]
-> La versione più recente di questa libreria è disponibile all'indirizzo [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
+> L'ultima versione di questa [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)libreria si trova all'indirizzo .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,10 +42,10 @@ class SafeInt;
 | Parametro  |  Descrizione |
 |---------|-----------------|
 | *rhs*      |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
-| *i*        |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
-| *bits*     |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
+| *Ho*        |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
+| *Bit*     |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -257,10 +257,10 @@ SafeInt (
 
 ### <a name="parameters"></a>Parametri
 
-*i*<br/>
+*Ho*<br/>
 [in] Valore per il nuovo oggetto `SafeInt`. Deve trattarsi di un parametro di tipo T o U, a seconda del costruttore.
 
-*b*<br/>
+*B*<br/>
 [in] Valore booleano per il nuovo oggetto `SafeInt`.
 
 *u*<br/>

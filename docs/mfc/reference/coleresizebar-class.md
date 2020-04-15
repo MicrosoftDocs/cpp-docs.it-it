@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224410"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376159"
 ---
 # <a name="coleresizebar-class"></a>Classe COleResizeBar
 
@@ -39,15 +39,15 @@ class COleResizeBar : public CControlBar
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleResizeBar::Create](#create)|Crea e Inizializza una finestra figlia di Windows e la associa al `COleResizeBar` oggetto.|
+|[COleResizeBar::Creare](#create)|Crea e inizializza una finestra figlio di `COleResizeBar` Windows e la associa all'oggetto.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`COleResizeBar` gli oggetti vengono visualizzati come un [CRectTracker](../../mfc/reference/crecttracker-class.md) con un bordo tratteggiato e outer quadratini di ridimensionamento.
+`COleResizeBar`Gli oggetti vengono visualizzati come [CRectTracker](../../mfc/reference/crecttracker-class.md) con un bordo tratteggiato e quadratini di ridimensionamento esterni.
 
-`COleResizeBar` gli oggetti sono in genere incorporato i membri del frame-window oggetti derivati dal [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) classe.
+`COleResizeBar`gli oggetti sono in genere membri incorporati di oggetti finestra cornice derivati dalla [Classe COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) .
 
-Per altre informazioni, vedere l'articolo [attivazione](../../mfc/activation-cpp.md).
+Per ulteriori informazioni, vedere l'articolo [Attivazione](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,15 +57,15 @@ Per altre informazioni, vedere l'articolo [attivazione](../../mfc/activation-cpp
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[Ccontrolbar](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** AFXOLE. h
+**Intestazione:** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar
 
 Costruisce un oggetto `COleResizeBar`.
 
@@ -73,13 +73,13 @@ Costruisce un oggetto `COleResizeBar`.
 COleResizeBar();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Chiamare `Create` per creare l'oggetto barra di ridimensionamento.
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Creare
 
-Crea una finestra figlio e la associa il `COleResizeBar` oggetto.
+Crea una finestra figlio e `COleResizeBar` la associa all'oggetto.
 
 ```
 virtual BOOL Create(
@@ -90,22 +90,22 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd*<br/>
+*pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra padre della barra di ridimensionamento.
 
-*dwStyle*<br/>
-Specifica la [styl okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributi.
+*DwStyle (in stile dwStyle)*<br/>
+Specifica gli attributi di stile della [finestra.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 *nID*<br/>
-ID di finestra figlio della barra di ridimensionamento.
+ID della finestra figlio della barra di ridimensionamento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la barra di ridimensionamento è stata creata. in caso contrario 0.
+Diverso da zero se la barra di ridimensionamento è stata creata; in caso contrario 0.
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC Sample SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
-[Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Esempio MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleServerDoc](../../mfc/reference/coleserverdoc-class.md)

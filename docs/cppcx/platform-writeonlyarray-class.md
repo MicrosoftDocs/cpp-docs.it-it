@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d06ed19b7c041f9ae73f862ba521449a206aa321
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500515"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374649"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -31,19 +31,19 @@ Questa classe di riferimento viene dichiarata come privata in vccorlib.h, di con
 private ref class WriteOnlyArray<T, 1>
 ```
 
-### <a name="members"></a>Members
+### <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Questi metodi presentano accessibilità interna, ovvero sono accessibili solo all'interno dell'app o del componente C++.
 
-|NOME|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[WriteOnlyArray::begin](#begin)|Iteratore che punta al primo elemento della matrice|
 |[WriteOnlyArray::Data](#data)|Puntatore al buffer di dati.|
 |[WriteOnlyArray::end](#end)|Iteratore che punta all'elemento dopo l'ultimo elemento nella matrice.|
-|[WriteOnlyArray::FastPass](#fastpass)|Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice|
-|[WriteOnlyArray::Length](#length)|Restituisce il numero di elementi nella matrice.|
+|[WriteOnlyArray::FastPassWriteOnlyArray::FastPass](#fastpass)|Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice|
+|[WriteOnlyArray::Lunghezza](#length)|Restituisce il numero di elementi nella matrice.|
 |[WriteOnlyArray::set](#set)|Imposta l'elemento specificato sul valore specificato.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
@@ -52,13 +52,13 @@ Questi metodi presentano accessibilità interna, ovvero sono accessibili solo al
 
 ### <a name="requirements"></a>Requisiti
 
-Opzione del compilatore: **/ZW**
+L'opzione del compilatore: **//W**
 
-**Metadati** Platform.winmd
+**Metadati:** Platform.winmd
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-## <a name="begin"></a>  WriteOnlyArray::begin (metodo)
+## <a name="writeonlyarraybegin-method"></a><a name="begin"></a>Metodo WriteOnlyArray::begin
 
 Restituisce un puntatore al primo elemento della matrice.
 
@@ -72,11 +72,11 @@ T* begin() const;
 
 Puntatore al primo elemento della matrice.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo iteratore può essere usato con algoritmi STL quali `std::sort` per intervenire sugli elementi della matrice.
 
-## <a name="data"></a>  Proprietà WriteOnlyArray::Data
+## <a name="writeonlyarraydata-property"></a><a name="data"></a>WriteOnlyArray::Data Proprietà
 
 Puntatore al buffer di dati.
 
@@ -92,7 +92,7 @@ property T* Data{
 
 Puntatore ai byte di matrice non elaborati.
 
-## <a name="end"></a>  WriteOnlyArray::end (metodo)
+## <a name="writeonlyarrayend-method"></a><a name="end"></a>Metodo WriteOnlyArray::end
 
 Restituisce un puntatore oltre l'ultimo elemento della matrice.
 
@@ -106,11 +106,11 @@ T* end() const;
 
 Iteratore di un puntatore oltre l'ultimo elemento della matrice.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo iteratore può essere usato con algoritmi STL per eseguire operazioni quali `std::sort` sugli elementi della matrice.
 
-## <a name="fastpass"></a>  Proprietà WriteOnlyArray::FastPass
+## <a name="writeonlyarrayfastpass-property"></a><a name="fastpass"></a>WriteOnlyArray::FastPass Proprietà
 
 Indica se l'ottimizzazione FastPass interna può essere eseguita. Non è destinata all'uso da parte del codice utente.
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Valore booleano che indica se la matrice è FastPass.
 
-## <a name="get"></a>Metodo WriteOnlyArray:: Get
+## <a name="writeonlyarrayget-method"></a><a name="get"></a>Metodo WriteOnlyArray::get
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
@@ -138,12 +138,12 @@ T& get(unsigned int indexArg) const;
 
 ### <a name="parameters"></a>Parametri
 
-*indexArg*<br/>
+*indexArg (Argino)*<br/>
 Indice da utilizzare.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="length"></a>  Proprietà WriteOnlyArray::Length
+## <a name="writeonlyarraylength-property"></a><a name="length"></a>WriteOnlyArray::Length Proprietà
 
 Restituisce il numero di elementi nella matrice allocata dal chiamante.
 
@@ -159,7 +159,7 @@ property unsigned int Length{
 
 Numero di elementi nella matrice.
 
-## <a name="set"></a>  WriteOnlyArray::set (funzione)
+## <a name="writeonlyarrayset-function"></a><a name="set"></a>Funzione WriteOnlyArray::setWriteOnlyArray::set Function
 
 Imposta il valore specificato in corrispondenza dell'indice specificato nella matrice.
 
@@ -173,21 +173,21 @@ T& set(
 
 ### <a name="parameters"></a>Parametri
 
-*indexArg*<br/>
+*indexArg (Argino)*<br/>
 Indice dell'elemento da impostare.
 
-*valueArg*<br/>
+*valueArg (valoreArg)*<br/>
 Valore da impostare in corrispondenza di `indexArg`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Riferimento all'elemento appena impostato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni su come interpretare il valore HRESULT, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes).
+Per ulteriori informazioni su come interpretare il valore HRESULT, vedere [Struttura dei codici di errore COM](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
+[Spazio dei nomi della piattaforma](platform-namespace-c-cx.md)<br/>
 [Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

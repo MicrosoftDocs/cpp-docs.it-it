@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::Unlock method
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
-ms.openlocfilehash: af567fd333854519df4543ad24084e52cda4d96e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dc43d4b9c16145ed7a5abe03cddb598c59b1e94
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374292"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits (struttura)
 
-Descrive le caratteristiche comuni del `SRWLock` classe in blocco in modalità condivisa.
+Descrive le caratteristiche `SRWLock` comuni della classe in modalità di blocco condiviso.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,14 +34,14 @@ struct SRWLockSharedTraits;
 
 Nome   | Descrizione
 ------ | --------------------------------------------------------------------------
-`Type` | Sinonimo di un puntatore per il [SRWLOCK](srwlock-class.md) classe.
+`Type` | Sinonimo di puntatore alla classe [SRWLOCK.](srwlock-class.md)
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                     | Descrizione
 -------------------------------------------------------- | -----------------------------------------------------------------
-[SRWLockSharedTraits::GetInvalidValue](#getinvalidvalue) | Recupera un `SRWLockSharedTraits` oggetto che non è sempre valido.
-[SRWLockSharedTraits::Unlock](#unlock)                   | Rilascia il controllo esclusivo del specificato `SRWLock` oggetto.
+[SRWLockSharedTraits::GetInvalidValue (Informazioni in due)](#getinvalidvalue) | Recupera un `SRWLockSharedTraits` oggetto che non è sempre valido.
+[SRWLockSharedTraits::Sblocca](#unlock)                   | Rilascia il controllo `SRWLock` esclusivo dell'oggetto specificato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,11 +49,11 @@ Nome                                                     | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers. h
+**Intestazione:** corewrappers.h
 
 **Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="getinvalidvalue"></a>SRWLockSharedTraits::GetInvalidValue
+## <a name="srwlocksharedtraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>SRWLockSharedTraits::GetInvalidValue (Informazioni in due)
 
 Recupera un `SRWLockSharedTraits` oggetto che non è sempre valido.
 
@@ -63,11 +63,11 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un handle per un `SRWLockSharedTraits` oggetto.
+Handle per `SRWLockSharedTraits` un oggetto.
 
-## <a name="unlock"></a>SRWLockSharedTraits::Unlock
+## <a name="srwlocksharedtraitsunlock"></a><a name="unlock"></a>SRWLockSharedTraits::Sblocca
 
-Rilascia il controllo esclusivo del specificato `SRWLock` oggetto.
+Rilascia il controllo `SRWLock` esclusivo dell'oggetto specificato.
 
 ```cpp
 inline static void Unlock(
@@ -78,4 +78,4 @@ inline static void Unlock(
 ### <a name="parameters"></a>Parametri
 
 *srwlock*<br/>
-Un handle per un `SRWLock` oggetto.
+Handle per `SRWLock` un oggetto.

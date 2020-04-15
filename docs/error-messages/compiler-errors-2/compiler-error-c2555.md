@@ -1,39 +1,48 @@
 ---
 title: Errore del compilatore C2555
-ms.date: 11/04/2016
+description: Riferimento per l'errore del compilatore C'è C2555.
+ms.date: 03/30/2020
 f1_keywords:
 - C2555
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-ms.openlocfilehash: ebf3e4a3aff48311edd5fb95b01a7b2d23990231
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fe0e6379e783387506e6098c9b14a047baa8e6c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202424"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374178"
 ---
 # <a name="compiler-error-c2555"></a>Errore del compilatore C2555
 
-' Class1:: funzione1': il tipo restituito della funzione virtuale che esegue l'override è diverso da' Class2:: funzione2' e non è covariante
+> '*classe1*::*funzione1*': il tipo restituito della funzione virtuale di override è diverso e non è covariante da '*class2**:: function2*'
 
-Una funzione virtuale e una funzione di override derivata hanno elenchi di parametri identici ma tipi restituiti diversi. Una funzione di override in una classe derivata non può essere diversa da una funzione virtuale in una classe base solo per il tipo restituito.
+Una funzione virtuale e una funzione di override derivata hanno elenchi di parametri identici ma tipi restituiti diversi.
 
-Per correggere l'errore, eseguire il cast del valore restituito dopo che è stata chiamata la funzione virtuale.
+## <a name="remarks"></a>Osservazioni
 
-Questo errore può essere visualizzato anche se si compila con/CLR.   Ad esempio, l'oggetto C++ visivo equivale alla Dichiarazione C# seguente:
+Una funzione di override in una classe derivata non può essere diversa solo per il tipo restituito da una funzione virtuale in una classe base.
 
-```
+Esiste un'eccezione a questa regola per alcuni tipi restituiti. Quando una classe derivata esegue l'override di una classe base pubblica, può restituire un puntatore o un riferimento alla classe derivata anziché un puntatore o un riferimento della classe base. Questi tipi restituiti sono denominati *covarianti*, in quanto variano insieme al tipo . Questa eccezione della regola non consente tipi di riferimento a puntatore o puntatore a puntatore covarianti.
+
+Un modo per risolvere l'errore consiste nel restituire lo stesso tipo della classe base. Quindi, eseguire il cast del valore restituito dopo che è stata chiamata la funzione virtuale. Un altro consiste nel modificare anche l'elenco di parametri, per rendere la funzione membro della classe derivata un overload anziché un override.
+
+## <a name="examples"></a>Esempi
+
+Questo errore può essere visualizzato **`/clr`** se si esegue la compilazione con . Ad esempio, l'equivalente di C ' per la seguente dichiarazione di C:
+
+```csharp
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);
 ```
 
 is
 
-```
+```cpp
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];
 ```
 
-L'esempio seguente genera l'C2555:
+Nell'esempio seguente viene generato l'errore C2555:
 
 ```cpp
 // C2555.cpp
@@ -46,3 +55,5 @@ struct Y : X {
    void func2();   // OK
 };
 ```
+
+Per risolvere il problema, `Y::func` modificare `void`il tipo restituito di in .

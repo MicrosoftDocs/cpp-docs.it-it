@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450285"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376557"
 ---
-# <a name="syncpercontainer-class"></a>Classe sync_per_container
+# <a name="sync_per_container-class"></a>Classe sync_per_container
 
 Descrive un [filtro di sincronizzazione](../standard-library/allocators-header.md) che fornisce un oggetto cache separato per ogni oggetto allocatore.
 
@@ -44,7 +44,7 @@ class sync_per_container
 
 **Spazio dei nomi:** stdext
 
-## <a name="equals"></a>  sync_per_container::equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::uguale a
 
 Confronta due cache per stabilirne l'uguaglianza.
 
@@ -54,7 +54,7 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*Cache*|Oggetto cache del filtro di sincronizzazione.|
 |*Altro*|Oggetto cache da confrontare per verificarne l'uguaglianza.|
@@ -63,8 +63,8 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 La funzione membro restituisce sempre **false**.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocatori>](../standard-library/allocators-header.md)

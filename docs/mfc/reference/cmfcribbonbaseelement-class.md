@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonBaseElement
+title: CMFCRibbonBaseElement (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonBaseElement
@@ -232,16 +232,16 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 20b5e6b38f11a257472713c18ee64559cfb7b9a3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505008"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375303"
 ---
-# <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
+# <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (classe)
 
-La `CMFCRibbonBaseElement` classe è la classe base per tutti gli elementi che è possibile aggiungere a una [barra multifunzione](../../mfc/reference/cmfcribbonbar-class.md). Esempi di elementi della barra multifunzione sono i pulsanti della barra multifunzione, le caselle di controllo della barra multifunzione e le caselle combinate della barra multifunzione.
+La `CMFCRibbonBaseElement` classe è la classe base per tutti gli elementi che è possibile aggiungere a una [barra multifunzione.](../../mfc/reference/cmfcribbonbar-class.md) Esempi di elementi della barra multifunzione sono i pulsanti della barra multifunzione, le caselle di controllo della barra multifunzione e le caselle combinate della barra multifunzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -249,11 +249,11 @@ La `CMFCRibbonBaseElement` classe è la classe base per tutti gli elementi che �
 class CMFCRibbonBaseElement : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |`CMFCRibbonBaseElement`|Costruisce un oggetto `CMFCRibbonBaseElement`.|
 
@@ -261,56 +261,56 @@ class CMFCRibbonBaseElement : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Aggiunge un suggerimento tasto di scelta per l'elemento della barra multifunzione a una matrice di suggerimenti per i tasti.|
-|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Aggiunge un elemento Ribbon alla casella di riepilogo comandi della barra multifunzione specificata.|
-|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indica se l'elemento della barra multifunzione può essere aggiunto alla barra di accesso rapido.|
-|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indica se la dimensione dell'elemento della barra multifunzione può essere compatta.|
-|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indica se l'altezza dell'elemento della barra multifunzione può aumentare verticalmente rispetto all'altezza di una riga della barra multifunzione.|
-|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indica se la larghezza dell'elemento della barra multifunzione può essere modificata.|
-|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Pulisce le impostazioni della dimensione per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Chiude il menu di scelta rapida per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Aggiunge un suggerimento per l'elemento della barra multifunzione a una matrice di suggerimenti tasto di scelta.|
+|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Aggiunge un elemento della barra multifunzione alla casella di riepilogo dei comandi della barra multifunzione specificata.|
+|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indica se l'elemento della barra multifunzione può essere aggiunto alla barra degli strumenti di accesso rapido.|
+|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indica se le dimensioni dell'elemento della barra multifunzione possono essere compatte.|
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indica se l'altezza dell'elemento della barra multifunzione può aumentare verticalmente fino all'altezza di una riga della barra multifunzione.|
+|[CMFCRibbonBaseElement::CanBeStretchedHorizontallyCMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indica se la larghezza dell'elemento della barra multifunzione può cambiare.|
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Pulisce le impostazioni delle dimensioni per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Chiude il menu a comparsa per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copia lo stato dell'oggetto specificato `CMFCRibbonBaseElement` nell'oggetto corrente.|
-|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Elimina definitivamente l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::D rawImage](#drawimage)|Disegna l'immagine per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::Find](#find)|Restituisce il puntatore specificato all'elemento Ribbon se punta all'oggetto corrente.|
-|[CMFCRibbonBaseElement::FindByData](#findbydata)|Recupera un puntatore all'elemento Ribbon se contiene i dati specificati.|
-|[CMFCRibbonBaseElement::FindByID](#findbyid)|Recupera un puntatore all'elemento Ribbon se tale elemento viene identificato dall'ID del comando specificato.|
-|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Recupera un puntatore all'elemento Ribbon se l'elemento della barra multifunzione originale corrisponde all'elemento della barra multifunzione specificato.|
+|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Elimina l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Disegna l'immagine per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::Find](#find)|Restituisce il puntatore specificato all'elemento della barra multifunzione se punta all'oggetto corrente.|
+|[CMFCRibbonBaseElement::FindByData](#findbydata)|Recupera un puntatore all'elemento della barra multifunzione se contiene i dati specificati.|
+|[CMFCRibbonBaseElement::FindByID](#findbyid)|Recupera un puntatore all'elemento della barra multifunzione se tale elemento è identificato dall'ID di comando specificato.|
+|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Recupera un puntatore all'elemento della barra multifunzione se l'elemento originale della barra multifunzione corrisponde all'elemento della barra multifunzione specificato.|
 |[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Restituisce la dimensione compatta dell'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::GetData](#getdata)|Recupera i dati definiti dall'utente associati all'elemento Ribbon.|
+|[CMFCRibbonBaseElement::GetDataCMFCRibbonBaseElement::GetData](#getdata)|Recupera i dati definiti dall'utente associati all'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetDescription](#getdescription)|Restituisce la descrizione dell'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Recupera un puntatore all'elemento Ribbon se il menu popup viene eliminato.|
-|[CMFCRibbonBaseElement:: GetElements](#getelements)|Aggiunge l'elemento della barra multifunzione corrente alla matrice specificata.|
+|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Recupera un puntatore all'elemento della barra multifunzione se il relativo menu a comparsa viene rilasciato.|
+|[CMFCRibbonBaseElement::GetElementsCMFCRibbonBaseElement::GetElements](#getelements)|Aggiunge l'elemento della barra multifunzione corrente alla matrice specificata.|
 |[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Aggiunge l'elemento della barra multifunzione corrente alla matrice specificata se l'elemento della barra multifunzione corrente contiene l'ID di comando specificato.|
-|[CMFCRibbonBaseElement:: gethighlighted](#gethighlighted)|Recupera un puntatore all'elemento Ribbon se è evidenziato.|
-|[CMFCRibbonBaseElement:: GetID](#getid)|Restituisce l'ID di comando dell'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Recupera un puntatore all'elemento della barra multifunzione se è evidenziato.|
+|[CMFCRibbonBaseElement::GetID](#getid)|Restituisce l'ID di comando dell'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Restituisce la dimensione dell'immagine dell'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Restituisce la dimensione dell'elemento della barra multifunzione nello stato intermedio.|
-|[CMFCRibbonBaseElement::GetKeys](#getkeys)|Restituisce il tasto di suggerimento associato all'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Recupera il rettangolo di limite del suggerimento per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Recupera la dimensione del testo del suggerimento tasto di misura.|
+|[CMFCRibbonBaseElement::GetKeysCMFCRibbonBaseElement::GetKeys](#getkeys)|Restituisce il suggerimento tasto di scelta associato all'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetKeyTipRectCMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Recupera il rettangolo del contorno della punta dei tasti per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Recupera le dimensioni del testo del suggerimento.|
 |[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Indica la posizione di visualizzazione dell'elemento della barra multifunzione in un gruppo della barra multifunzione.|
-|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Restituisce i suggerimenti tasti associati a un pulsante.|
-|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Recupera l'ID del comando di notifica per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: GetOriginal](#getoriginal)|Recupera l'elemento della barra multifunzione originale.|
+|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Restituisce i suggerimenti tasto di scelta associati a un pulsante.|
+|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Recupera l'ID di comando di notifica per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetOriginalCMFCRibbonBaseElement::GetOriginal](#getoriginal)|Recupera l'elemento originale della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Recupera la categoria della barra multifunzione per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Recupera il pannello della barra multifunzione che contiene l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: GetParentRibbonBar](#getparentribbonbar)|Recupera la barra multifunzione padre per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Recupera il gruppo della barra multifunzione che contiene l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Recupera la barra multifunzione padre per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Recupera la finestra padre per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: getPressed](#getpressed)|Recupera un puntatore all'elemento Ribbon se l'utente lo preme attualmente.|
-|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Recupera l'ID di comando dell'elemento Ribbon quando si trova nella barra di accesso rapido.|
-|[CMFCRibbonBaseElement::GetRect](#getrect)|Restituisce il rettangolo di delimitazione dell'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetPressed](#getpressed)|Recupera un puntatore all'elemento della barra multifunzione se l'utente lo preme attualmente.|
+|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Recupera l'ID di comando dell'elemento della barra multifunzione quando si trova nella barra degli strumenti di accesso rapido.|
+|[CMFCRibbonBaseElement::GetRectCMFCRibbonBaseElement::GetRect](#getrect)|Restituisce il rettangolo di delimitazione dell'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetSize](#getsize)|Restituisce la dimensione corrente dell'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::GetText](#gettext)|Restituisce il testo associato all'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: GetToolTipText](#gettooltiptext)|Restituisce il testo della descrizione comando dell'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: GetTopLevelRibbonBar](#gettoplevelribbonbar)|Recupera la barra multifunzione di livello superiore per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: HasCompactMode](#hascompactmode)|Specifica se l'elemento della barra multifunzione dispone di una modalità compatta.|
-|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indica se l'elemento padre dispone dello stato attivo della tastiera.|
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Restituisce il testo della descrizione comando dell'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Recupera la barra multifunzione di primo livello per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Specifica se l'elemento della barra multifunzione dispone di una modalità compatta.|
+|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indica se l'elemento padre ha lo stato attivo della tastiera.|
 |[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità intermedia.|
-|[CMFCRibbonBaseElement:: HasLargeMode](#haslargemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità grande.|
-|[CMFCRibbonBaseElement:: HasMenu](#hasmenu)|Indica se l'elemento della barra multifunzione dispone di un menu.|
-|[CMFCRibbonBaseElement::HitTest](#hittest)|Recupera un puntatore all'elemento Ribbon se il punto specificato si trova al suo interno.|
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità di grandi dimensioni.|
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indica se l'elemento della barra multifunzione dispone di un menu.|
+|[CMFCRibbonBaseElement::HitTest](#hittest)|Recupera un puntatore all'elemento della barra multifunzione se si trova il punto specificato al suo contenuto.|
 |[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indica se l'elemento della barra multifunzione è allineato verticalmente con altri elementi della barra multifunzione.|
 |[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indica se le dimensioni dell'immagine dell'elemento della barra multifunzione sono sempre grandi.|
 |[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indica se l'elemento della barra multifunzione è in modalità di ripetizione automatica.|
@@ -318,83 +318,83 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Specifica se l'elemento della barra multifunzione è in modalità compatta.|
 |[CMFCRibbonBaseElement::IsDefaultMenuLook](#isdefaultmenulook)||
 |[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|Specifica se l'elemento della barra multifunzione è disabilitato.|
-|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determina se l'elemento della barra multifunzione Visualizza un menu di scelta rapida e viene eliminato.|
+|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determina se l'elemento della barra multifunzione visualizza un menu a comparsa e viene rilasciato verso il basso.|
 |[CMFCRibbonBaseElement::IsFocused](#isfocused)|Specifica se l'elemento della barra multifunzione ha lo stato attivo.|
 |[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indica se l'elemento della barra multifunzione è contenuto in una raccolta della barra multifunzione.|
 |[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|Specifica se l'elemento della barra multifunzione è evidenziato.|
 |[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|Indica se l'immagine corrente per l'elemento della barra multifunzione è di dimensioni intermedie.|
-|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Indica se l'immagine corrente per l'elemento della barra multifunzione è di grandi dimensioni.|
-|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Indica se l'elemento Ribbon è contenuto in un menu.|
+|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Indica se l'immagine corrente per l'elemento della barra multifunzione ha dimensioni grandi.|
+|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Indica se l'elemento della barra multifunzione è contenuto in un menu.|
 |[CMFCRibbonBaseElement::IsPressed](#ispressed)|Indica se l'utente ha fatto clic sull'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indica se l'elemento della barra multifunzione è contenuto nella barra di accesso rapido.|
-|[CMFCRibbonBaseElement:: deseparatore](#isseparator)|Indica se l'elemento della barra multifunzione è un separatore di visualizzazione.|
-|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indica se l'elemento Ribbon è contenuto in un gruppo che visualizza un bordo comune.|
+|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indica se l'elemento della barra multifunzione è contenuto nella barra degli strumenti di accesso rapido.|
+|[CMFCRibbonBaseElement::IsSeparatorCMFCRibbonBaseElement::IsSeparator](#isseparator)|Indica se l'elemento della barra multifunzione è un separatore di visualizzazione.|
+|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indica se l'elemento della barra multifunzione è contenuto in un gruppo che visualizza un bordo comune.|
 |[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Indica se la descrizione comando viene visualizzata sotto l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::IsTabStop](#istabstop)|Indica se l'elemento della barra multifunzione può essere selezionato con la tastiera.|
 |[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Indica se il testo per l'elemento della barra multifunzione viene visualizzato a destra.|
-|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indica se l'elemento Ribbon è attualmente visualizzato.|
-|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indica se il altezza di visualizzazione dell'elemento della barra multifunzione è uguale all'altezza di visualizzazione del pannello della barra multifunzione che lo contiene.|
-|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Invia una notifica di comando alla finestra padre dell'elemento Ribbon.|
-|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifica alla finestra padre della barra multifunzione quando un utente evidenzia un elemento della barra multifunzione che si trova in un elenco.|
-|[CMFCRibbonBaseElement:: OnAddToQAToolbar](#onaddtoqatoolbar)|Aggiunge l'elemento della barra multifunzione alla barra di accesso rapido specificata.|
+|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indica se l'elemento della barra multifunzione è attualmente visualizzato.|
+|[CMFCRibbonBaseElement::IsWholeRowHeightCMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indica se l'eigth di visualizzazione dell'elemento della barra multifunzione corrisponde all'altezza di visualizzazione del gruppo della barra multifunzione che lo contiene.|
+|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Invia una notifica di comando alla finestra padre dell'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifica la finestra padre della barra multifunzione quando un utente evidenzia un elemento della barra multifunzione che si trova in un elenco.|
+|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Aggiunge l'elemento della barra multifunzione alla barra degli strumenti di accesso rapido specificata.|
 |[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Aggiorna la descrizione comando per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Aggiorna l'elemento della barra multifunzione in risposta a un input utente continuo.|
-|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calcola la dimensione del testo per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: OnChangeMenuHighlight](#onchangemenuhighlight)|Chiamata eseguita dal framework quando l'evidenziazione cambia per un elemento della barra multifunzione che si trova in un menu.|
-|[CMFCRibbonBaseElement:: onpare](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Chiamato dal Framework per creare il tasto di suggerimento per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Chiamata eseguita dal framework quando viene disegnata l'immagine del menu per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Chiamato dal Framework per creare l'elemento della barra multifunzione in una casella di riepilogo comandi.|
-|[CMFCRibbonBaseElement:: OnKey](#onkey)|Chiamata eseguita dal framework quando l'utente preme un suggerimento e l'elemento della barra multifunzione ha lo stato attivo.|
-|[CMFCRibbonBaseElement:: OnMenuKey](#onmenukey)||
-|[CMFCRibbonBaseElement:: OnRTLChanged](#onrtlchanged)|Chiamata eseguita dal framework quando il layout cambia direzione.|
-|[CMFCRibbonBaseElement:: OnShow](#onshow)|Chiamata eseguita dal Framework per mostrare o nascondere l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: OnShowPopupMenu](#onshowpopupmenu)|Chiamata eseguita dal framework quando l'elemento Ribbon Visualizza un menu di scelta rapida.|
-|[CMFCRibbonBaseElement::P ostMenuCommand](#postmenucommand)||
-|[CMFCRibbonBaseElement::Redraw](#redraw)|Aggiorna la visualizzazione per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Aggiorna l'elemento della barra multifunzione in risposta all'input dell'utente sostenuto.|
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calcola le dimensioni del testo per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Chiamato dal framework quando l'evidenziazione viene modificata per un elemento della barra multifunzione che si trova in un menu.|
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione.|
+|[Suggerimento CMFCRibbonBaseElement::OnDrawKey](#ondrawkeytip)|Chiamato dal framework per disegnare il suggerimento tasto per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Chiamato dal framework quando viene disegnata l'immagine del menu per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Chiamato dal framework per disegnare l'elemento della barra multifunzione in una casella di riepilogo dei comandi.|
+|[CMFCRibbonBaseElement::OnKey](#onkey)|Chiamato dal framework quando l'utente preme un suggerimento tasto di scelta e l'elemento della barra multifunzione ha lo stato attivo.|
+|[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||
+|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Chiamato dal framework quando il layout cambia direzione.|
+|[CMFCRibbonBaseElement::OnShow](#onshow)|Chiamato dal framework per visualizzare o nascondere l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Chiamato dal framework quando l'elemento della barra multifunzione sta per visualizzare un menu a comparsa.|
+|[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||
+|[CMFCRibbonBaseElement::Ridisegno](#redraw)|Aggiorna la visualizzazione per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Imposta i dati di accessibilità per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: SetCompactMode](#setcompactmode)|Imposta la dimensione di visualizzazione per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::SetData](#setdata)|Associa un elemento dati all'elemento Ribbon.|
+|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Imposta le dimensioni di visualizzazione per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::SetData](#setdata)|Associa un elemento dati all'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||
 |[CMFCRibbonBaseElement::SetDescription](#setdescription)|Imposta la descrizione dell'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: SetId](#setid)|Imposta l'ID di comando dell'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: SetInitialMode](#setinitialmode)|Imposta le dimensioni di visualizzazione iniziali per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Imposta un tasto di suggerimento per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Imposta l'elemento della barra multifunzione originale per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::SetID](#setid)|Imposta l'ID di comando dell'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Imposta le dimensioni di visualizzazione iniziali per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Imposta un suggerimento per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Imposta l'elemento originale della barra multifunzione per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Imposta la categoria padre per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Imposta il contenitore di menu padre per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Imposta il contenitore del menu padre per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Imposta la barra multifunzione padre per l'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::SetRect](#setrect)|Imposta le dimensioni UFT per visualizzare il rettangolo per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::SetRectCMFCRibbonBaseElement::SetRect](#setrect)|Imposta le dimensioni per la visualizzazione del rettangolo per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::SetText](#settext)|Imposta il testo per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Imposta il testo per l'elemento della barra multifunzione da visualizzare a destra.|
 |[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Imposta il testo della descrizione comando per l'elemento della barra multifunzione.|
 |[CMFCRibbonBaseElement::SetVisible](#setvisible)|Imposta lo stato di visibilità dell'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement:: StretchHorizontally](#stretchhorizontally)|Estende la larghezza dell'elemento della barra multifunzione.|
-|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Consente di modificare l'altezza di visualizzazione dell'elemento della barra multifunzione nell'altezza della riga specificata.|
-|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Aggiorna il testo della descrizione comando utilizzando la risorsa di comando per l'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Allunga la larghezza dell'elemento della barra multifunzione.|
+|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Modifica l'altezza di visualizzazione dell'elemento della barra multifunzione in base all'altezza della riga specificata.|
+|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Aggiorna il testo della descrizione comando utilizzando la risorsa comando per l'elemento della barra multifunzione.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Chiamata eseguita dal framework quando l'utente preme un tasto di scelta rapida.|
-|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Chiamata eseguita dal framework quando un elemento della barra multifunzione riceve o perde lo stato attivo per l'input.|
+|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Chiamato dal framework quando l'utente preme un tasto di scelta rapida.|
+|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Chiamato dal framework quando un elemento della barra multifunzione riceve o perde lo stato attivo per l'input.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La `CMFCRibbonBaseElement` classe definisce le proprietà comuni a tutti gli elementi della barra multifunzione che includono l'ID di comando, l'etichetta di testo, il testo della descrizione comando, la descrizione dell'elemento e lo stato, che può essere attivo, evidenziato, premuto, disabilitato, selezionato o rilasciato.
+La `CMFCRibbonBaseElement` classe definisce le proprietà comuni a tutti gli elementi della barra multifunzione che includono ID comando, etichetta di testo, testo della descrizione comando, descrizione dell'elemento e stato (che possono essere focalizzati, evidenziati, premuti, disabilitati, selezionati o rilasciati).
 
-Le dimensioni dell'immagine di un elemento della barra multifunzione `RibbonImageType` sono definite dal membro, che può essere uno dei valori seguenti:
+La dimensione dell'immagine di un `RibbonImageType` elemento della barra multifunzione è definita dal membro, che può essere uno dei valori seguenti:
 
 - `RibbonImageLarge`
 
 - `RibbonImageSmall`
 
-A seconda delle dimensioni, un elemento della barra multifunzione Visualizza un'immagine piccola o grande.
+A seconda delle dimensioni, un elemento della barra multifunzione visualizza un'immagine piccola o grande.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonBaseElement` . Nell'esempio viene illustrato come ottenere un `CMFCRibbonBaseElement` oggetto da una `CMFCRibbonStatusBar` classe, impostare la descrizione per l'elemento della barra multifunzione, impostare il testo, impostare un suggerimento tasto di ricerca e impostare il testo della descrizione comando per l'elemento della barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../overview/visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonBaseElement` . Nell'esempio viene illustrato `CMFCRibbonBaseElement` come `CMFCRibbonStatusBar` ottenere un oggetto da una classe, impostare la descrizione per l'elemento della barra multifunzione, impostare il testo, impostare un suggerimento tasto di scelta e impostare il testo della descrizione comando per l'elemento della barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -409,9 +409,9 @@ L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonBas
 
 **Intestazione:** afxbaseribbonelement.h
 
-##  <a name="addtokeylist"></a>CMFCRibbonBaseElement:: AddToKeyList
+## <a name="cmfcribbonbaseelementaddtokeylist"></a><a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList
 
-Aggiunge un suggerimento tasto di scelta per l'elemento della barra multifunzione a una matrice di suggerimenti per i tasti.
+Aggiunge un suggerimento per l'elemento della barra multifunzione a una matrice di suggerimenti tasto di scelta.
 
 ```
 virtual void AddToKeyList(
@@ -421,15 +421,15 @@ virtual void AddToKeyList(
 ### <a name="parameters"></a>Parametri
 
 *arElems*<br/>
-in Riferimento a una [CArray](../../mfc/reference/carray-class.md) dei suggerimenti per i tasti.
+[in] Riferimento a un [CArray](../../mfc/reference/carray-class.md) di suggerimenti tasto di scelta.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Quando è abilitata la funzionalità suggerimenti chiavi della barra multifunzione, il Framework Visualizza i suggerimenti per la barra multifunzione quando l'utente preme ALT o il tasto F10.
+Quando la funzionalità di suggerimenti tasto di scelta della barra multifunzione è abilitata, il framework visualizza i suggerimenti tasto di scelta della barra multifunzione quando l'utente preme il tasto ALT o F10.
 
-##  <a name="addtolistbox"></a>CMFCRibbonBaseElement:: AddToListBox
+## <a name="cmfcribbonbaseelementaddtolistbox"></a><a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox
 
-Aggiunge un elemento Ribbon alla casella di riepilogo comandi della barra multifunzione specificata.
+Aggiunge un elemento della barra multifunzione alla casella di riepilogo dei comandi della barra multifunzione specificata.
 
 ```
 virtual int AddToListBox(
@@ -439,23 +439,23 @@ virtual int AddToListBox(
 
 ### <a name="parameters"></a>Parametri
 
-*pWndListBox*<br/>
-in Puntatore a una casella di riepilogo comandi.
+*pWndListBox (informazioni in netto record)*<br/>
+[in] Puntatore a una casella di riepilogo dei comandi.
 
-*bDeep*<br/>
-in Questo parametro non viene utilizzato.
+*bProfondo*<br/>
+[in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Indice in base zero dell'elemento della barra multifunzione aggiunto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il Framework aggiunge elementi della barra multifunzione a una casella di riepilogo comandi per consentire all'utente di personalizzare l'interfaccia utente.
+Il framework aggiunge elementi della barra multifunzione a una casella di riepilogo dei comandi per consentire all'utente di personalizzare l'interfaccia utente.
 
-##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement:: CanBeAddedToQuickAccessToolBar
+## <a name="cmfcribbonbaseelementcanbeaddedtoquickaccesstoolbar"></a><a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar
 
-Indica se l'elemento della barra multifunzione può essere aggiunto alla barra di accesso rapido.
+Indica se l'elemento della barra multifunzione può essere aggiunto alla barra degli strumenti di accesso rapido.
 
 ```
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;
@@ -463,13 +463,13 @@ virtual BOOL CanBeAddedToQuickAccessToolBar() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento può essere aggiunto; in caso contrario, FALSE.
+TRUESe l'elemento può essere aggiunto. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="canbecompacted"></a>CMFCRibbonBaseElement:: CanBeCompacted
+## <a name="cmfcribbonbaseelementcanbecompacted"></a><a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted
 
-Indica se la dimensione dell'elemento della barra multifunzione può essere compatta.
+Indica se le dimensioni dell'elemento della barra multifunzione possono essere compatte.
 
 ```
 virtual BOOL CanBeCompacted() const;
@@ -477,15 +477,15 @@ virtual BOOL CanBeCompacted() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la dimensione dell'elemento della barra multifunzione può essere compatta; in caso contrario, FALSE.
+TRUESe le dimensioni dell'elemento della barra multifunzione possono essere compatte. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le dimensioni di un elemento della barra multifunzione possono essere Compact, Intermediate o large.
+Le dimensioni di un elemento della barra multifunzione possono essere compatte, intermedie o grandi.
 
-##  <a name="canbestretched"></a>  CMFCRibbonBaseElement::CanBeStretched
+## <a name="cmfcribbonbaseelementcanbestretched"></a><a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched
 
-Indica se l'altezza dell'elemento della barra multifunzione può aumentare verticalmente rispetto all'altezza di una riga della barra multifunzione.
+Indica se l'altezza dell'elemento della barra multifunzione può aumentare verticalmente fino all'altezza di una riga della barra multifunzione.
 
 ```
 virtual BOOL CanBeStretched();
@@ -495,13 +495,13 @@ virtual BOOL CanBeStretched();
 
 Restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre TRUE. Eseguire l'override di questo metodo per indicare se l'altezza dell'elemento della barra multifunzione può aumentare verticalmente rispetto all'altezza di una riga della barra multifunzione.
+Per impostazione predefinita, questo metodo restituisce sempre TRUE. Eseguire l'override di questo metodo per indicare se l'altezza dell'elemento della barra multifunzione può aumentare verticalmente fino all'altezza di una riga della barra multifunzione.
 
-##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement:: CanBeStretchedHorizontally
+## <a name="cmfcribbonbaseelementcanbestretchedhorizontally"></a><a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontallyCMFCRibbonBaseElement::CanBeStretchedHorizontally
 
-Indica se la larghezza dell'elemento della barra multifunzione può essere modificata.
+Indica se la larghezza dell'elemento della barra multifunzione può cambiare.
 
 ```
 virtual BOOL CanBeStretchedHorizontally();
@@ -511,35 +511,35 @@ virtual BOOL CanBeStretchedHorizontally();
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per indicare se è possibile modificare la larghezza dell'elemento della barra multifunzione.
+Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per indicare se la larghezza dell'elemento della barra multifunzione può cambiare.
 
-##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes
+## <a name="cmfcribbonbaseelementcleanupsizes"></a><a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes
 
-Pulisce le impostazioni della dimensione per l'elemento della barra multifunzione.
+Pulisce le impostazioni delle dimensioni per l'elemento della barra multifunzione.
 
 ```
 virtual void CleanUpSizes();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata per reimpostare le impostazioni della dimensione per l'elemento Ribbon.
+Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata per reimpostare le impostazioni di dimensione per l'elemento della barra multifunzione.
 
-##  <a name="closepopupmenu"></a>CMFCRibbonBaseElement:: ClosePopupMenu
+## <a name="cmfcribbonbaseelementclosepopupmenu"></a><a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu
 
-Chiude il menu di scelta rapida per l'elemento della barra multifunzione.
+Chiude il menu a comparsa per l'elemento della barra multifunzione.
 
 ```
 virtual void ClosePopupMenu();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="copyfrom"></a>CMFCRibbonBaseElement:: CopyFrom
+## <a name="cmfcribbonbaseelementcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom
 
-Copia lo stato del [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) specificato nell'oggetto corrente.
+Copia lo stato dell'oggetto specificato [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) per l'oggetto corrente.
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -548,23 +548,23 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="parameters"></a>Parametri
 
 *src*<br/>
-in Oggetto [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) di origine.
+[in] Oggetto [CMFCRibbonBaseElement di](../../mfc/reference/cmfcribbonbaseelement-class.md) origine.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::D estroyCtrl
+## <a name="cmfcribbonbaseelementdestroyctrl"></a><a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl
 
-Elimina definitivamente l'elemento della barra multifunzione.
+Elimina l'elemento della barra multifunzione.
 
 ```
 virtual void DestroyCtrl();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata per eliminare l'elemento della barra multifunzione.
 
-##  <a name="drawimage"></a>CMFCRibbonBaseElement::D rawImage
+## <a name="cmfcribbonbaseelementdrawimage"></a><a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage
 
 Disegna l'immagine per l'elemento della barra multifunzione.
 
@@ -578,26 +578,26 @@ virtual void DrawImage(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
 *type*<br/>
-in Valore enumerato del tipo di immagine. Per un elenco dei valori possibili, vedere la sezione Osservazioni.
+[in] Valore enumerato di tipo immagine. Vedere la sezione Osservazioni per un elenco dei valori possibili.
 
-*rectImage*<br/>
-in Rettangolo dell'immagine.
+*rectImage (immagine rect)*<br/>
+[in] Rettangolo dell'immagine.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata per creare l'immagine per l'elemento Ribbon.
+Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata per disegnare l'immagine per l'elemento della barra multifunzione.
 
-Nella tabella seguente sono elencati i valori possibili per il parametro di *tipo* :
+Nella tabella seguente sono elencati i valori possibili per il parametro *di tipo:*
 
 |||
 |-|-|
-| `RibbonImageLarge`  | Dimensioni grandi dell'immagine in pixel 32x32.  |
-| `RibbonImageSmall`  | Dimensioni piccole dell'immagine in pixel 16x16.  |
+| `RibbonImageLarge`  | Grande dimensione dell'immagine 32x32 pixel.  |
+| `RibbonImageSmall`  | Dimensioni dell'immagine di 16x16 pixel ridotte.  |
 
-##  <a name="find"></a>CMFCRibbonBaseElement:: Find
+## <a name="cmfcribbonbaseelementfind"></a><a name="find"></a>CMFCRibbonBaseElement::Find
 
 Restituisce il puntatore specificato se punta all'oggetto corrente.
 
@@ -607,18 +607,18 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 
 ### <a name="parameters"></a>Parametri
 
-*pElement*<br/>
-in Puntatore a un elemento della barra multifunzione.
+*pElemento*<br/>
+[in] Puntatore a un elemento della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento Ribbon se l'elemento *pelement* punta all'oggetto corrente. in caso contrario, NULL.
+Un puntatore all'elemento della barra multifunzione se *pElement* punta all'oggetto corrente; in caso contrario NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData
+## <a name="cmfcribbonbaseelementfindbydata"></a><a name="findbydata"></a>CMFCRibbonBaseElement::FindByData
 
-Recupera un puntatore all'elemento Ribbon se contiene i dati specificati.
+Recupera un puntatore all'elemento della barra multifunzione se contiene i dati specificati.
 
 ```
 virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
@@ -626,18 +626,18 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>Parametri
 
-*dwData*<br/>
-in Dati associati a un elemento della barra multifunzione.
+*dwData (dati)*<br/>
+[in] Dati associati a un elemento della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento Ribbon se contiene i dati specificati. in caso contrario, NULL.
+Puntatore all'elemento della barra multifunzione se contiene i dati specificati; in caso contrario NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="findbyid"></a>CMFCRibbonBaseElement:: FindByID
+## <a name="cmfcribbonbaseelementfindbyid"></a><a name="findbyid"></a>CMFCRibbonBaseElement::FindByID
 
-Recupera un puntatore all'elemento Ribbon se tale elemento viene identificato dall'ID del comando specificato.
+Recupera un puntatore all'elemento della barra multifunzione se tale elemento è identificato dall'ID di comando specificato.
 
 ```
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
@@ -645,16 +645,16 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 
 ### <a name="parameters"></a>Parametri
 
-*uiCmdID*<br/>
-in ID di comando per un elemento della barra multifunzione.
+*uiCmdID (informazioni in questo icomando)*<br/>
+[in] ID di comando per un elemento della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento Ribbon se tale elemento è identificato dall'ID comando specificato. in caso contrario, NULL.
+Puntatore all'elemento della barra multifunzione se tale elemento è identificato dall'ID di comando specificato; in caso contrario NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement:: FindByOriginal
+## <a name="cmfcribbonbaseelementfindbyoriginal"></a><a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal
 
 Recupera un puntatore all'elemento della barra multifunzione corrente se l'elemento della barra multifunzione originale corrisponde all'elemento della barra multifunzione specificato.
 
@@ -664,18 +664,18 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 
 ### <a name="parameters"></a>Parametri
 
-*pOriginal*<br/>
-in Puntatore a un elemento della barra multifunzione.
+*pOriginal (originale)*<br/>
+[in] Puntatore a un elemento della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento Ribbon se l'elemento della barra multifunzione originale corrisponde all'elemento della barra multifunzione specificato. in caso contrario, NULL.
+Un puntatore all'elemento della barra multifunzione se l'elemento originale della barra multifunzione corrisponde all'elemento della barra multifunzione specificato; in caso contrario NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Gli elementi della barra multifunzione che vengono copiati in un altro contenitore conservano un puntatore all'elemento della barra multifunzione originale.
+Gli elementi della barra multifunzione copiati in un altro contenitore mantengono un puntatore all'elemento originale della barra multifunzione.
 
-##  <a name="getcompactsize"></a>CMFCRibbonBaseElement:: GetCompactSize
+## <a name="cmfcribbonbaseelementgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize
 
 Restituisce la dimensione compatta dell'elemento della barra multifunzione.
 
@@ -686,18 +686,18 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
 ### <a name="return-value"></a>Valore restituito
 
 Dimensioni compatte di un elemento della barra multifunzione.
 
 > [!NOTE]
->  Le dimensioni compatte indicano che l'elemento della barra multifunzione è troncato (viene visualizzata una piccola immagine o un'immagine senza testo).
+> Le dimensioni compatte indicano che l'elemento della barra multifunzione viene troncato (visualizza un'immagine piccola o un'immagine senza testo).
 
-##  <a name="getdata"></a>CMFCRibbonBaseElement:: GetData
+## <a name="cmfcribbonbaseelementgetdata"></a><a name="getdata"></a>CMFCRibbonBaseElement::GetDataCMFCRibbonBaseElement::GetData
 
-Recupera i dati definiti dall'utente associati all'elemento Ribbon.
+Recupera i dati definiti dall'utente associati all'elemento della barra multifunzione.
 
 ```
 DWORD_PTR GetData() const;
@@ -705,9 +705,9 @@ DWORD_PTR GetData() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Dati definiti dall'utente associati all'elemento Ribbon.
+Dati definiti dall'utente associati all'elemento della barra multifunzione.
 
-##  <a name="getdescription"></a>CMFCRibbonBaseElement:: GetDescription
+## <a name="cmfcribbonbaseelementgetdescription"></a><a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription
 
 Restituisce la descrizione dell'elemento della barra multifunzione.
 
@@ -717,11 +717,11 @@ virtual CString GetDescription() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Descrizione dell'elemento della barra multifunzione. La descrizione viene visualizzata sulla barra di stato o in una descrizione comando o sotto il pulsante di menu se l'elemento della barra multifunzione si trova nella [classe CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
+Descrizione dell'elemento della barra multifunzione. La descrizione viene visualizzata nella barra di stato o in una descrizione comando oppure sotto il pulsante di menu se l'elemento della barra multifunzione si trova nella [classe CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
 
-##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement:: GetDroppedDown
+## <a name="cmfcribbonbaseelementgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown
 
-Recupera un puntatore all'elemento Ribbon se il menu popup viene eliminato.
+Recupera un puntatore all'elemento della barra multifunzione se il relativo menu a comparsa viene rilasciato.
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -729,11 +729,11 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento Ribbon se il menu popup viene eliminato; in caso contrario, NULL.
+Un puntatore all'elemento della barra multifunzione se il relativo menu a comparsa viene rilasciato; in caso contrario NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getelements"></a>CMFCRibbonBaseElement:: GetElements
+## <a name="cmfcribbonbaseelementgetelements"></a><a name="getelements"></a>CMFCRibbonBaseElement::GetElementsCMFCRibbonBaseElement::GetElements
 
 Aggiunge l'elemento della barra multifunzione corrente alla matrice specificata.
 
@@ -747,9 +747,9 @@ virtual void GetElements(
 *arElements*<br/>
 [in, out] Matrice di elementi della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement:: GetElementsByID
+## <a name="cmfcribbonbaseelementgetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID
 
 Aggiunge l'elemento della barra multifunzione corrente alla matrice specificata se l'elemento della barra multifunzione corrente contiene l'ID di comando specificato.
 
@@ -761,17 +761,17 @@ virtual void GetElementsByID(
 
 ### <a name="parameters"></a>Parametri
 
-*uiCmdID*<br/>
-in ID di comando di un elemento della barra multifunzione.
+*uiCmdID (informazioni in questo icomando)*<br/>
+[in] ID di comando di un elemento della barra multifunzione.
 
 *arElements*<br/>
-in Matrice di elementi della barra multifunzione.
+[in] Matrice di elementi della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="gethighlighted"></a>CMFCRibbonBaseElement:: gethighlighted
+## <a name="cmfcribbonbaseelementgethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted
 
-Recupera un puntatore all'elemento Ribbon se è evidenziato.
+Recupera un puntatore all'elemento della barra multifunzione se è evidenziato.
 
 ```
 virtual CMFCRibbonBaseElement* GetHighlighted();
@@ -779,11 +779,11 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento Ribbon se è evidenziato; in caso contrario, NULL.
+Un puntatore all'elemento della barra multifunzione se è evidenziato; in caso contrario NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getid"></a>CMFCRibbonBaseElement:: GetID
+## <a name="cmfcribbonbaseelementgetid"></a><a name="getid"></a>CMFCRibbonBaseElement::GetID
 
 Restituisce l'ID di comando dell'elemento della barra multifunzione.
 
@@ -793,9 +793,9 @@ UINT GetID() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-ID del comando dell'elemento della barra multifunzione.
+ID di comando dell'elemento della barra multifunzione.
 
-##  <a name="getimagesize"></a>CMFCRibbonBaseElement:: GetImageSize
+## <a name="cmfcribbonbaseelementgetimagesize"></a><a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize
 
 Restituisce la dimensione dell'immagine dell'elemento della barra multifunzione.
 
@@ -805,9 +805,9 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Dimensione dell'immagine dell'elemento della barra multifunzione.
+Dimensioni dell'immagine dell'elemento della barra multifunzione.
 
-##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement:: GetIntermediateSize
+## <a name="cmfcribbonbaseelementgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize
 
 Restituisce la dimensione dell'elemento della barra multifunzione nello stato intermedio.
 
@@ -818,15 +818,15 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Dimensione dell'elemento della barra multifunzione nello stato intermedio.
+Dimensioni dell'elemento della barra multifunzione nello stato intermedio.
 
-##  <a name="getkeys"></a>CMFCRibbonBaseElement:: getKeys
+## <a name="cmfcribbonbaseelementgetkeys"></a><a name="getkeys"></a>CMFCRibbonBaseElement::GetKeysCMFCRibbonBaseElement::GetKeys
 
-Restituisce il tasto di suggerimento associato all'elemento della barra multifunzione.
+Restituisce il suggerimento tasto di scelta associato all'elemento della barra multifunzione.
 
 ```
 LPCTSTR GetKeys() const;
@@ -834,11 +834,11 @@ LPCTSTR GetKeys() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Tasto di suggerimento associato all'elemento Ribbon.
+Suggerimento da tastiera associato all'elemento della barra multifunzione.
 
-##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement:: GetKeyTipRect
+## <a name="cmfcribbonbaseelementgetkeytiprect"></a><a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRectCMFCRibbonBaseElement::GetKeyTipRect
 
-Recupera il rettangolo di limite del suggerimento per l'elemento della barra multifunzione.
+Recupera il rettangolo del contorno della punta dei tasti per l'elemento della barra multifunzione.
 
 ```
 virtual CRect GetKeyTipRect(
@@ -849,22 +849,22 @@ virtual CRect GetKeyTipRect(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
-*bIsMenu*<br/>
-in TRUE se l'elemento della barra multifunzione Visualizza un menu di scelta rapida; in caso contrario, FALSE.
+*bIsMenu (Menu)*<br/>
+[in] TRUESe l'elemento della barra multifunzione viene visualizzato un menu a comparsa. in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce sempre un rettangolo con 0 valori.
+Restituisce sempre un rettangolo con valori 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in una classe derivata per restituire il rettangolo limite del suggerimento.
+Eseguire l'override di questo metodo in una classe derivata per restituire il rettangolo del limite della punta del tasto di scelta.
 
-##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement:: GetKeyTipSize
+## <a name="cmfcribbonbaseelementgetkeytipsize"></a><a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize
 
-Recupera la dimensione del testo del suggerimento tasto di misura.
+Recupera le dimensioni del testo del suggerimento.
 
 ```
 virtual CSize GetKeyTipSize(CDC* pDC);
@@ -873,15 +873,15 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Dimensione del testo del suggerimento tasto di misura.
+Dimensione del testo del suggerimento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement:: GetLocationInGroup
+## <a name="cmfcribbonbaseelementgetlocationingroup"></a><a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup
 
 Indica la posizione di visualizzazione dell'elemento della barra multifunzione in un gruppo della barra multifunzione.
 
@@ -891,23 +891,23 @@ RibbonElementLocation GetLocationInGroup() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore `RibbonElementLocation` enumerato. Nella tabella seguente sono elencati i valori possibili.
+Valore enumerato di `RibbonElementLocation`. Nella tabella seguente sono elencati i valori possibili.
 
-|Valore|Descrizione|
+|valore|Descrizione|
 |-----------|-----------------|
 |`RibbonElementNotInGroup`|L'elemento della barra multifunzione non è contenuto in un gruppo della barra multifunzione.|
 |`RibbonElementSingleInGroup`|L'elemento della barra multifunzione viene visualizzato come unico elemento in un gruppo della barra multifunzione.|
 |`RibbonElementFirstInGroup`|L'elemento della barra multifunzione viene visualizzato all'estremità sinistra di un gruppo della barra multifunzione.|
 |`RibbonElementLastInGroup`|L'elemento della barra multifunzione viene visualizzato all'estremità destra di un gruppo della barra multifunzione.|
-|`RibbonElementMiddleInGroup`|L'elemento della barra multifunzione non viene visualizzato su una delle estremità di un gruppo della barra multifunzione.|
+|`RibbonElementMiddleInGroup`|L'elemento della barra multifunzione non viene visualizzato su entrambe le estremità di un gruppo della barra multifunzione.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-I gruppi di elementi della barra multifunzione sono allineati solo orizzontalmente.
+I gruppi di elementi della barra multifunzione vengono allineati solo orizzontalmente.
 
-##  <a name="getmenukeys"></a>CMFCRibbonBaseElement:: GetMenuKeys
+## <a name="cmfcribbonbaseelementgetmenukeys"></a><a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys
 
-Restituisce il tasto di scelta rapida del menu per l'elemento della barra multifunzione.
+Restituisce il suggerimento del menu per l'elemento della barra multifunzione.
 
 ```
 LPCTSTR GetMenuKeys() const;
@@ -915,15 +915,15 @@ LPCTSTR GetMenuKeys() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il tasto di scelta rapida del menu associato all'elemento della barra multifunzione.
+Suggerimento del menu associato all'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Quando viene richiamato, un suggerimento tasto di scelta rapida Visualizza un menu a comparsa.
+Quando viene richiamato, un suggerimento del menu visualizza un menu a comparsa.
 
-##  <a name="getnotifyid"></a>CMFCRibbonBaseElement:: GetNotifyID
+## <a name="cmfcribbonbaseelementgetnotifyid"></a><a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID
 
-Recupera l'ID del comando di notifica per l'elemento della barra multifunzione.
+Recupera l'ID di comando di notifica per l'elemento della barra multifunzione.
 
 ```
 virtual UINT GetNotifyID();
@@ -933,11 +933,11 @@ virtual UINT GetNotifyID();
 
 ID del comando di notifica.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getoriginal"></a>CMFCRibbonBaseElement:: GetOriginal
+## <a name="cmfcribbonbaseelementgetoriginal"></a><a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginalCMFCRibbonBaseElement::GetOriginal
 
-Recupera l'elemento della barra multifunzione originale.
+Recupera l'elemento originale della barra multifunzione.
 
 ```
 CMFCRibbonBaseElement* GetOriginal() const;
@@ -945,13 +945,13 @@ CMFCRibbonBaseElement* GetOriginal() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento della barra multifunzione originale.
+Puntatore all'elemento originale della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Gli elementi della barra multifunzione che vengono copiati in un altro contenitore conservano un puntatore all'elemento della barra multifunzione originale.
+Gli elementi della barra multifunzione copiati in un altro contenitore mantengono un puntatore all'elemento originale della barra multifunzione.
 
-##  <a name="getparentcategory"></a>CMFCRibbonBaseElement:: GetParentCategory
+## <a name="cmfcribbonbaseelementgetparentcategory"></a><a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory
 
 Recupera la categoria della barra multifunzione per l'elemento della barra multifunzione.
 
@@ -963,11 +963,11 @@ CMFCRibbonCategory* GetParentCategory() const;
 
 Puntatore alla categoria della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getparentpanel"></a>CMFCRibbonBaseElement:: GetParentPanel
+## <a name="cmfcribbonbaseelementgetparentpanel"></a><a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel
 
-Recupera il pannello della barra multifunzione che contiene l'elemento della barra multifunzione.
+Recupera il gruppo della barra multifunzione che contiene l'elemento della barra multifunzione.
 
 ```
 virtual CMFCRibbonPanel* GetParentPanel() const;
@@ -975,11 +975,11 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al pannello della barra multifunzione che contiene l'elemento della barra multifunzione.
+Puntatore al gruppo della barra multifunzione che contiene l'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement:: GetParentRibbonBar
+## <a name="cmfcribbonbaseelementgetparentribbonbar"></a><a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar
 
 Recupera la barra multifunzione padre per l'elemento della barra multifunzione.
 
@@ -991,9 +991,9 @@ CMFCRibbonBar* GetParentRibbonBar() const;
 
 Puntatore alla barra multifunzione padre per l'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getparentwnd"></a>CMFCRibbonBaseElement:: GetParentWnd
+## <a name="cmfcribbonbaseelementgetparentwnd"></a><a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd
 
 Recupera la finestra padre per l'elemento della barra multifunzione.
 
@@ -1003,15 +1003,15 @@ virtual CWnd* GetParentWnd() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore alla finestra padre per l'elemento Ribbon se il metodo ha avuto esito positivo; in caso contrario, NULL.
+Puntatore alla finestra padre per l'elemento della barra multifunzione se il metodo ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La finestra padre di un elemento Ribbon è una [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) o [CMFCRibbonPanelMenuBar](internal-classes.md).
+La finestra padre per un elemento della barra multifunzione è una [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) o [CMFCRibbonPanelMenuBar](internal-classes.md).
 
-##  <a name="getpressed"></a>CMFCRibbonBaseElement:: getPressed
+## <a name="cmfcribbonbaseelementgetpressed"></a><a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed
 
-Recupera un puntatore all'elemento Ribbon se l'utente lo preme attualmente.
+Recupera un puntatore all'elemento della barra multifunzione se l'utente lo preme attualmente.
 
 ```
 virtual CMFCRibbonBaseElement* GetPressed();
@@ -1019,13 +1019,13 @@ virtual CMFCRibbonBaseElement* GetPressed();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento Ribbon se l'utente lo preme attualmente; in caso contrario, NULL.
+Un puntatore all'elemento della barra multifunzione se l'utente lo preme attualmente; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement:: GetQuickAccessToolBarID
+## <a name="cmfcribbonbaseelementgetquickaccesstoolbarid"></a><a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID
 
-Recupera l'ID di comando dell'elemento Ribbon quando si trova nella barra di accesso rapido.
+Recupera l'ID di comando dell'elemento della barra multifunzione quando si trova nella barra degli strumenti di accesso rapido.
 
 ```
 virtual UINT GetQuickAccessToolBarID() const;
@@ -1033,11 +1033,11 @@ virtual UINT GetQuickAccessToolBarID() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-ID del comando dell'elemento Ribbon quando si trova nella barra di accesso rapido.
+ID di comando dell'elemento della barra multifunzione quando si trova nella barra degli strumenti di accesso rapido.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="getrect"></a>CMFCRibbonBaseElement:: GetRect
+## <a name="cmfcribbonbaseelementgetrect"></a><a name="getrect"></a>CMFCRibbonBaseElement::GetRectCMFCRibbonBaseElement::GetRect
 
 Restituisce il rettangolo di delimitazione dell'elemento della barra multifunzione.
 
@@ -1047,9 +1047,9 @@ CRect GetRect() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Rettangolo di delimitazione dell'elemento della barra multifunzione. La posizione del rettangolo si trova nelle coordinate del controllo della barra multifunzione padre.
+Rettangolo di delimitazione dell'elemento della barra multifunzione. La posizione del rettangolo è nelle coordinate del controllo della barra multifunzione padre.
 
-##  <a name="getregularsize"></a>CMFCRibbonBaseElement:: GetRegularSize
+## <a name="cmfcribbonbaseelementgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize
 
 Restituisce la dimensione regolare dell'elemento della barra multifunzione.
 
@@ -1060,18 +1060,18 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Dimensione normale dell'elemento della barra multifunzione.
+Dimensioni normali dell'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
->  La dimensione normale è la dimensione massima possibile dell'elemento della barra multifunzione.
+> La dimensione normale è la dimensione massima possibile dell'elemento della barra multifunzione.
 
-##  <a name="getsize"></a>CMFCRibbonBaseElement:: GetSize
+## <a name="cmfcribbonbaseelementgetsize"></a><a name="getsize"></a>CMFCRibbonBaseElement::GetSize
 
 Restituisce la dimensione corrente dell'elemento della barra multifunzione.
 
@@ -1082,13 +1082,13 @@ virtual CSize GetSize(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
 ### <a name="return-value"></a>Valore restituito
 
 Dimensioni correnti dell'elemento della barra multifunzione.
 
-##  <a name="gettext"></a>CMFCRibbonBaseElement:: GetText
+## <a name="cmfcribbonbaseelementgettext"></a><a name="gettext"></a>CMFCRibbonBaseElement::GetText
 
 Restituisce il testo associato all'elemento della barra multifunzione.
 
@@ -1100,7 +1100,7 @@ LPCTSTR GetText() const;
 
 Testo associato all'elemento della barra multifunzione.
 
-##  <a name="gettooltiptext"></a>CMFCRibbonBaseElement:: GetToolTipText
+## <a name="cmfcribbonbaseelementgettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText
 
 Restituisce il testo della descrizione comando dell'elemento della barra multifunzione.
 
@@ -1112,9 +1112,9 @@ virtual CString GetToolTipText() const;
 
 Testo della descrizione comando dell'elemento della barra multifunzione.
 
-##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement:: GetTopLevelRibbonBar
+## <a name="cmfcribbonbaseelementgettoplevelribbonbar"></a><a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar
 
-Recupera la barra multifunzione di livello superiore per l'elemento della barra multifunzione.
+Recupera la barra multifunzione di primo livello per l'elemento della barra multifunzione.
 
 ```
 CMFCRibbonBar* GetTopLevelRibbonBar() const;
@@ -1122,11 +1122,11 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore alla barra multifunzione di livello superiore per l'elemento Ribbon se il metodo ha avuto esito positivo; in caso contrario, NULL.
+Un puntatore alla barra multifunzione di primo livello per l'elemento della barra multifunzione se il metodo ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="hascompactmode"></a>CMFCRibbonBaseElement:: HasCompactMode
+## <a name="cmfcribbonbaseelementhascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode
 
 Specifica se l'elemento della barra multifunzione dispone di una modalità compatta.
 
@@ -1136,14 +1136,14 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione dispone di una modalità compatta. In caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione dispone di una modalità compatta. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
->  In modalità compatta, un elemento Visualizza solo un'immagine piccola.
+> Nella modalità compatta, un elemento visualizza solo una piccola immagine.
 
-##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement:: HasIntermediateMode
+## <a name="cmfcribbonbaseelementhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode
 
 Specifica se l'elemento della barra multifunzione dispone di una modalità intermedia.
 
@@ -1153,11 +1153,11 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione dispone di una modalità intermedia, FALSE in caso contrario. Nella modalità intermedia, un elemento Visualizza un'immagine e un testo di piccole dimensioni a destra dell'immagine.
+TRUESe l'elemento della barra multifunzione dispone di una modalità intermedia, FALSE in caso contrario. Nella modalità intermedia, un elemento visualizza una piccola immagine e testo a destra dell'immagine.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="haslargemode"></a>CMFCRibbonBaseElement:: HasLargeMode
+## <a name="cmfcribbonbaseelementhaslargemode"></a><a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode
 
 Specifica se l'elemento della barra multifunzione dispone di una modalità di dimensioni elevate.
 
@@ -1167,13 +1167,13 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione dispone di una modalità grande. In caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione dispone di una modalità di grandi dimensioni. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In modalità large, un elemento può assumere l'altezza completa del pannello padre.
+Nella modalità grande, un elemento può assumere l'intera altezza del pannello padre.
 
-##  <a name="hasmenu"></a>CMFCRibbonBaseElement:: HasMenu
+## <a name="cmfcribbonbaseelementhasmenu"></a><a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu
 
 Indica se l'elemento della barra multifunzione dispone di un menu.
 
@@ -1185,13 +1185,13 @@ virtual BOOL HasMenu() const;
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo in una classe derivata per indicare se l'elemento della barra multifunzione dispone di un menu.
 
-##  <a name="hittest"></a>CMFCRibbonBaseElement:: HitTest
+## <a name="cmfcribbonbaseelementhittest"></a><a name="hittest"></a>CMFCRibbonBaseElement::HitTest
 
-Recupera un puntatore all'elemento Ribbon se il punto specificato si trova al suo interno.
+Recupera un puntatore all'elemento della barra multifunzione se si trova il punto specificato al suo contenuto.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
@@ -1199,18 +1199,18 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
-in Questo parametro non viene utilizzato.
+*Punto*<br/>
+[in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'elemento della barra multifunzione, se esistente. in caso contrario, FALSE.
+Un puntatore all'elemento della barra multifunzione, se presente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre un puntatore valido all'elemento Ribbon quando esiste. Eseguire l'override di questo metodo per indicare se il punto si trova nell'elemento Ribbon.
+Per impostazione predefinita, questo metodo restituisce sempre un puntatore valido all'elemento della barra multifunzione quando esiste. Eseguire l'override di questo metodo per indicare se il punto si trova nell'elemento della barra multifunzione.
 
-##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn
+## <a name="cmfcribbonbaseelementisalignbycolumn"></a><a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn
 
 Indica se l'elemento della barra multifunzione è allineato verticalmente con altri elementi della barra multifunzione.
 
@@ -1222,11 +1222,11 @@ virtual BOOL IsAlignByColumn() const;
 
 Restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre TRUE. Eseguire l'override di questo metodo in una classe derivata per indicare se l'elemento Ribbon derivato è allineato verticalmente con altri elementi della barra multifunzione.
+Per impostazione predefinita, questo metodo restituisce sempre TRUE. Eseguire l'override di questo metodo in una classe derivata per indicare se l'elemento della barra multifunzione derivato è allineato verticalmente con altri elementi della barra multifunzione.
 
-##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage
+## <a name="cmfcribbonbaseelementisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage
 
 Indica se le dimensioni dell'immagine dell'elemento della barra multifunzione sono sempre grandi.
 
@@ -1236,13 +1236,13 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se le dimensioni dell'immagine dell'elemento della barra multifunzione sono sempre grandi; in caso contrario, FALSE.
+TRUESe la dimensione dell'immagine dell'elemento della barra multifunzione è sempre grande. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le dimensioni dell'immagine grande sono 32 x 32 pixel.
+Le dimensioni dell'immagine di grandi dimensioni sono 32 x 32 pixel.
 
-##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement:: IsAutoRepeatMode
+## <a name="cmfcribbonbaseelementisautorepeatmode"></a><a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode
 
 Indica se l'elemento della barra multifunzione è in modalità di ripetizione automatica.
 
@@ -1252,20 +1252,20 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nDelay*<br/>
-in Questo parametro non viene utilizzato.
+*nRitardo*<br/>
+[in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per indicare se l'elemento della barra multifunzione è in modalità di ripetizione automatica.
 
-In modalità di ripetizione automatica, l'elemento della barra multifunzione risponde a un intervallo impostato, espresso in millisecondi, a un input utente continuo.
+In modalità di ripetizione automatica, l'elemento della barra multifunzione risponde a un intervallo impostato, misurato in millisecondi, all'input dell'utente sostenuto.
 
-##  <a name="ischecked"></a>CMFCRibbonBaseElement:: deselezionato
+## <a name="cmfcribbonbaseelementischecked"></a><a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked
 
 Specifica se l'elemento della barra multifunzione è selezionato.
 
@@ -1275,9 +1275,9 @@ virtual BOOL IsChecked() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è selezionato; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è selezionato. in caso contrario, FALSE.
 
-##  <a name="iscompactmode"></a>CMFCRibbonBaseElement:: IsCompactMode
+## <a name="cmfcribbonbaseelementiscompactmode"></a><a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode
 
 Specifica se l'elemento della barra multifunzione è in modalità compatta.
 
@@ -1287,11 +1287,11 @@ BOOL IsCompactMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è in modalità compatta; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è in modalità compatta. in caso contrario, FALSE.
 
-##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement:: IsDefaultMenuLook
+## <a name="cmfcribbonbaseelementisdefaultmenulook"></a><a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook
 
-Indica se l'elemento Ribbon è impostato in modo che venga visualizzato come comando popup.
+Indica se l'elemento della barra multifunzione è impostato per essere visualizzato come comando popup.
 
 ```
 BOOL IsDefaultMenuLook() const;
@@ -1299,11 +1299,11 @@ BOOL IsDefaultMenuLook() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento Ribbon è impostato in modo che venga visualizzato come comando popup; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è impostato per essere visualizzato come un comando popup. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isdisabled"></a>CMFCRibbonBaseElement:: Disabled
+## <a name="cmfcribbonbaseelementisdisabled"></a><a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled
 
 Specifica se l'elemento della barra multifunzione è disabilitato.
 
@@ -1313,11 +1313,11 @@ virtual BOOL IsDisabled() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è disabilitato; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è disabilitato. in caso contrario, FALSE.
 
-##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement:: IsDroppedDown
+## <a name="cmfcribbonbaseelementisdroppeddown"></a><a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown
 
-Specifica se l'elemento della barra multifunzione Visualizza un menu a comparsa e viene eliminato.
+Specifica se l'elemento della barra multifunzione visualizza un menu a comparsa e viene rilasciato verso il basso.
 
 ```
 virtual BOOL IsDroppedDown() const;
@@ -1325,9 +1325,9 @@ virtual BOOL IsDroppedDown() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione viene eliminato e visualizza un menu di scelta rapida; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione viene rilasciato verso il basso e viene visualizzato un menu a comparsa. in caso contrario, FALSE.
 
-##  <a name="isfocused"></a>CMFCRibbonBaseElement:: con stato attivo
+## <a name="cmfcribbonbaseelementisfocused"></a><a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused
 
 Specifica se l'elemento della barra multifunzione ha lo stato attivo.
 
@@ -1337,9 +1337,9 @@ virtual BOOL IsFocused() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione presenta lo stato attivo; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione ha lo stato attivo. in caso contrario, FALSE.
 
-##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement:: IsGalleryIcon
+## <a name="cmfcribbonbaseelementisgalleryicon"></a><a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon
 
 Indica se l'elemento della barra multifunzione è contenuto in una raccolta della barra multifunzione.
 
@@ -1351,11 +1351,11 @@ virtual BOOL IsGalleryIcon() const;
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo in una classe derivata per indicare se l'elemento Ribbon è contenuto in una raccolta della barra multifunzione.
+Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo in una classe derivata per indicare se l'elemento della barra multifunzione è contenuto in una raccolta della barra multifunzione.
 
-##  <a name="ishighlighted"></a>CMFCRibbonBaseElement:: evidenziato
+## <a name="cmfcribbonbaseelementishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted
 
 Specifica se l'elemento della barra multifunzione è evidenziato.
 
@@ -1365,11 +1365,11 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è evidenziato; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è evidenziato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement:: IsIntermediateMode
+## <a name="cmfcribbonbaseelementisintermediatemode"></a><a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode
 
 Indica se l'immagine corrente per l'elemento della barra multifunzione è di dimensioni intermedie.
 
@@ -1379,15 +1379,15 @@ BOOL IsIntermediateMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'immagine per l'elemento della barra multifunzione è di dimensioni intermedie; in caso contrario, FALSE.
+TRUESe l'immagine per l'elemento della barra multifunzione è di dimensioni intermedie. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le dimensioni dell'immagine intermedia sono 16 x 16 pixel.
+Le dimensioni intermedie dell'immagine sono 16 x 16 pixel.
 
-##  <a name="islargemode"></a>CMFCRibbonBaseElement:: IsLargeMode
+## <a name="cmfcribbonbaseelementislargemode"></a><a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode
 
-Indica se l'immagine corrente per l'elemento della barra multifunzione è di grandi dimensioni.
+Indica se l'immagine corrente per l'elemento della barra multifunzione ha dimensioni grandi.
 
 ```
 BOOL IsLargeMode() const;
@@ -1395,15 +1395,15 @@ BOOL IsLargeMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'immagine per l'elemento della barra multifunzione è di grandi dimensioni. in caso contrario, FALSE.
+TRUESe l'immagine per l'elemento della barra multifunzione è di grandi dimensioni. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le dimensioni dell'immagine grande sono 32 x 32 pixel.
+Le dimensioni dell'immagine di grandi dimensioni sono 32 x 32 pixel.
 
-##  <a name="ismenumode"></a>CMFCRibbonBaseElement:: IsMenuMode
+## <a name="cmfcribbonbaseelementismenumode"></a><a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode
 
-Indica se l'elemento Ribbon è contenuto in un menu.
+Indica se l'elemento della barra multifunzione è contenuto in un menu.
 
 ```
 BOOL IsMenuMode() const;
@@ -1411,11 +1411,11 @@ BOOL IsMenuMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è contenuto in un menu; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è contenuto in un menu. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="ispressed"></a>CMFCRibbonBaseElement:: è stato premuto
+## <a name="cmfcribbonbaseelementispressed"></a><a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed
 
 Indica se l'utente ha fatto clic sull'elemento della barra multifunzione.
 
@@ -1425,11 +1425,11 @@ virtual BOOL IsPressed() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'utente ha fatto clic sull'elemento della barra multifunzione; in caso contrario, FALSE.
+TRUESe l'utente ha fatto clic sull'elemento della barra multifunzione. in caso contrario, FALSE.
 
-##  <a name="isqatmode"></a>CMFCRibbonBaseElement:: IsQATMode
+## <a name="cmfcribbonbaseelementisqatmode"></a><a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode
 
-Indica se l'elemento della barra multifunzione è contenuto nella barra di accesso rapido.
+Indica se l'elemento della barra multifunzione è contenuto nella barra degli strumenti di accesso rapido.
 
 ```
 BOOL IsQATMode() const;
@@ -1437,11 +1437,11 @@ BOOL IsQATMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è contenuto nella barra di accesso rapido; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è contenuto nella barra degli strumenti di accesso rapido. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isseparator"></a>CMFCRibbonBaseElement:: deseparatore
+## <a name="cmfcribbonbaseelementisseparator"></a><a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparatorCMFCRibbonBaseElement::IsSeparator
 
 Indica se l'elemento della barra multifunzione è un separatore di visualizzazione.
 
@@ -1451,13 +1451,13 @@ virtual BOOL IsSeparator() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è un separatore di visualizzazione. in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è un separatore di visualizzazione. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement:: IsShowGroupBorder
+## <a name="cmfcribbonbaseelementisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder
 
-Indica se l'elemento Ribbon è contenuto in un gruppo che visualizza un bordo comune.
+Indica se l'elemento della barra multifunzione è contenuto in un gruppo che visualizza un bordo comune.
 
 ```
 BOOL IsShowGroupBorder() const;
@@ -1465,11 +1465,11 @@ BOOL IsShowGroupBorder() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento Ribbon è contenuto in un gruppo che visualizza un bordo comune; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è contenuto in un gruppo che visualizza un bordo comune. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement:: IsShowTooltipOnBottom
+## <a name="cmfcribbonbaseelementisshowtooltiponbottom"></a><a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom
 
 Indica se la descrizione comando viene visualizzata sotto l'elemento della barra multifunzione.
 
@@ -1479,11 +1479,11 @@ virtual BOOL IsShowTooltipOnBottom() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la descrizione comando viene visualizzata sotto l'elemento della barra multifunzione; FALSE se la descrizione comando viene visualizzata accanto al puntatore.
+TRUESe la descrizione comando viene visualizzata sotto l'elemento della barra multifunzione. FALSE se la descrizione comando viene visualizzata accanto al puntatore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="istabstop"></a>CMFCRibbonBaseElement:: IsTabStop
+## <a name="cmfcribbonbaseelementistabstop"></a><a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop
 
 Indica se l'elemento della barra multifunzione può essere selezionato con la tastiera.
 
@@ -1495,11 +1495,11 @@ virtual BOOL IsTabStop() const;
 
 Restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo restituisce sempre TRUE. Eseguire l'override di questo metodo per indicare se l'elemento della barra multifunzione può essere selezionato con la tastiera.
 
-##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight
+## <a name="cmfcribbonbaseelementistextalwaysonright"></a><a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight
 
 Indica se il testo per l'elemento della barra multifunzione viene visualizzato a destra.
 
@@ -1509,13 +1509,13 @@ BOOL IsTextAlwaysOnRight() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il testo per l'elemento della barra multifunzione viene visualizzato a destra; in caso contrario, FALSE.
+TRUESe il testo per l'elemento della barra multifunzione viene visualizzato a destra. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="isvisible"></a>CMFCRibbonBaseElement:: IsVisible
+## <a name="cmfcribbonbaseelementisvisible"></a><a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible
 
-Indica se l'elemento Ribbon è attualmente visualizzato.
+Indica se l'elemento della barra multifunzione è attualmente visualizzato.
 
 ```
 BOOL IsVisible() const;
@@ -1523,13 +1523,13 @@ BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento Ribbon è attualmente visualizzato; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è attualmente visualizzato. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement:: IsWholeRowHeight
+## <a name="cmfcribbonbaseelementiswholerowheight"></a><a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeightCMFCRibbonBaseElement::IsWholeRowHeight
 
-Indica se l'altezza di visualizzazione dell'elemento della barra multifunzione è uguale all'altezza di visualizzazione del pannello della barra multifunzione che lo contiene.
+Indica se l'altezza di visualizzazione dell'elemento della barra multifunzione corrisponde all'altezza di visualizzazione del gruppo della barra multifunzione che lo contiene.
 
 ```
 virtual BOOL IsWholeRowHeight() const;
@@ -1539,13 +1539,13 @@ virtual BOOL IsWholeRowHeight() const;
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per indicare se l'altezza di visualizzazione dell'elemento della barra multifunzione corrisponde all'altezza di visualizzazione del pannello della barra multifunzione che lo contiene.
+Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per indicare se l'altezza di visualizzazione dell'elemento della barra multifunzione corrisponde all'altezza di visualizzazione del gruppo della barra multifunzione che lo contiene.
 
-##  <a name="notifycommand"></a>CMFCRibbonBaseElement:: NotifyCommand
+## <a name="cmfcribbonbaseelementnotifycommand"></a><a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand
 
-Invia una notifica di comando alla finestra padre dell'elemento Ribbon.
+Invia una notifica di comando alla finestra padre dell'elemento della barra multifunzione.
 
 ```
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
@@ -1553,18 +1553,18 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-*bWithDelay*<br/>
-in TRUE per aggiungere la notifica del comando alla coda di messaggi della finestra padre; FALSE per inviare il messaggio immediatamente alla finestra padre.
+*bConDelay (Informazioni in base al ritardo e*<br/>
+[in] TRUE per aggiungere la notifica di comando alla coda di messaggi della finestra padre. FALSE per inviare immediatamente il messaggio alla finestra padre.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il messaggio è stato inviato. in caso contrario, FALSE.
+TRUESe il messaggio è stato inviato. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement:: NotifyHighlightListItem
+## <a name="cmfcribbonbaseelementnotifyhighlightlistitem"></a><a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem
 
-Notifica alla finestra padre della barra multifunzione quando un utente evidenzia un elemento della barra multifunzione che si trova in un elenco.
+Notifica la finestra padre della barra multifunzione quando un utente evidenzia un elemento della barra multifunzione che si trova in un elenco.
 
 ```
 virtual void NotifyHighlightListItem(int nIndex);
@@ -1573,13 +1573,13 @@ virtual void NotifyHighlightListItem(int nIndex);
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-in Indice dell'elemento della barra multifunzione nell'elenco.
+[in] Indice dell'elemento della barra multifunzione nell'elenco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement:: OnAddToQAToolbar
+## <a name="cmfcribbonbaseelementonaddtoqatoolbar"></a><a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar
 
-Aggiunge l'elemento della barra multifunzione alla barra di accesso rapido specificata.
+Aggiunge l'elemento della barra multifunzione alla barra degli strumenti di accesso rapido specificata.
 
 ```
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
@@ -1587,16 +1587,16 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 
 ### <a name="parameters"></a>Parametri
 
-*qat*<br/>
-in Barra di accesso rapido.
+*Qat*<br/>
+[in] Barra degli strumenti di accesso rapido.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce sempre TRUE che indica che l'elemento Ribbon è stato aggiunto alla barra di accesso rapido.
+Restituisce sempre TRUE che indica che l'elemento della barra multifunzione è stato aggiunto alla barra degli strumenti di accesso rapido.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement:: OnAfterChangeRect
+## <a name="cmfcribbonbaseelementonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect
 
 Aggiorna la descrizione comando per l'elemento della barra multifunzione.
 
@@ -1607,15 +1607,15 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Questo parametro non viene utilizzato.
+[in] Questo parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo aggiorna la descrizione comando per l'elemento della barra multifunzione. Eseguire l'override di questo metodo per aggiornare l'elemento Ribbon dopo che il relativo rettangolo di visualizzazione è stato modificato.
+Per impostazione predefinita, questo metodo aggiorna la descrizione comando per l'elemento della barra multifunzione. Eseguire l'override di questo metodo per aggiornare l'elemento della barra multifunzione dopo la modifica del rettangolo di visualizzazione.
 
-##  <a name="onautorepeat"></a>CMFCRibbonBaseElement:: OnAutoRepeat
+## <a name="cmfcribbonbaseelementonautorepeat"></a><a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat
 
-Aggiorna l'elemento della barra multifunzione in risposta a un input utente continuo.
+Aggiorna l'elemento della barra multifunzione in risposta all'input dell'utente sostenuto.
 
 ```
 virtual BOOL OnAutoRepeat();
@@ -1625,13 +1625,13 @@ virtual BOOL OnAutoRepeat();
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per elaborare l'input utente prolungato.
+Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per elaborare l'input dell'utente sostenuto.
 
-##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement:: OnCalcTextSize
+## <a name="cmfcribbonbaseelementoncalctextsize"></a><a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize
 
-Calcola la dimensione del testo per l'elemento della barra multifunzione.
+Calcola le dimensioni del testo per l'elemento della barra multifunzione.
 
 ```
 virtual void OnCalcTextSize(CDC* pDC);
@@ -1640,15 +1640,15 @@ virtual void OnCalcTextSize(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Questo parametro non viene utilizzato.
+[in] Questo parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per calcolare la dimensione del testo per l'elemento della barra multifunzione.
+Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per calcolare le dimensioni del testo per l'elemento della barra multifunzione.
 
-##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement:: OnChangeMenuHighlight
+## <a name="cmfcribbonbaseelementonchangemenuhighlight"></a><a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight
 
-Chiamata eseguita dal framework quando l'evidenziazione cambia per un elemento della barra multifunzione che si trova in un menu.
+Chiamato dal framework quando l'evidenziazione viene modificata per un elemento della barra multifunzione che si trova in un menu.
 
 ```
 virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
@@ -1657,17 +1657,17 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 
 ### <a name="parameters"></a>Parametri
 
-*pPanelMenuBar*<br/>
-in Questo parametro non viene utilizzato.
+*pPanelMenuBar (barra dei comandi)*<br/>
+[in] Questo parametro non viene utilizzato.
 
-*pHot*<br/>
-in Questo parametro non viene utilizzato.
+*Phot*<br/>
+[in] Questo parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per aggiornare un elemento della barra multifunzione che si trova in un menu quando l'evidenziazione cambia.
 
-##  <a name="ondraw"></a>CMFCRibbonBaseElement:: onpare
+## <a name="cmfcribbonbaseelementondraw"></a><a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw
 
 Chiamato dal framework per disegnare l'elemento della barra multifunzione.
 
@@ -1678,15 +1678,15 @@ virtual void OnDraw(CDC* pDC) = 0;
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in una classe derivata se si desidera personalizzare il disegno di un elemento della barra multifunzione specifico.
+Eseguire l'override di questo metodo in una classe derivata se si desidera personalizzare il disegno di un elemento specifico della barra multifunzione.
 
-##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement:: OnDrawKeyTip
+## <a name="cmfcribbonbaseelementondrawkeytip"></a><a name="ondrawkeytip"></a>Suggerimento CMFCRibbonBaseElement::OnDrawKey
 
-Chiamato dal Framework per creare il tasto di suggerimento per l'elemento della barra multifunzione.
+Chiamato dal framework per disegnare il suggerimento tasto per l'elemento della barra multifunzione.
 
 ```
 virtual void OnDrawKeyTip(
@@ -1698,19 +1698,19 @@ virtual void OnDrawKeyTip(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
-*rect*<br/>
-in Rettangolo limite per il suggerimento tasto di ricerca.
+*Rect*<br/>
+[in] Rettangolo di delimitazione per il suggerimento.
 
-*bIsMenu*<br/>
-in TRUE se il suggerimento tasto di scelta è per un pulsante del menu a comparsa; in caso contrario, FALSE.
+*bIsMenu (Menu)*<br/>
+[in] TRUESe il suggerimento tasto è per un pulsante di menu a comparsa; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="ondrawmenuimage"></a>CMFCRibbonBaseElement:: OnDrawMenuImage
+## <a name="cmfcribbonbaseelementondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage
 
-Chiamata eseguita dal framework quando viene disegnata l'immagine del menu per l'elemento della barra multifunzione.
+Chiamato dal framework quando viene disegnata l'immagine del menu per l'elemento della barra multifunzione.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -1721,20 +1721,20 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo.
+[in] Puntatore a un contesto di dispositivo.
 
-*rect*<br/>
-in Rettangolo dell'immagine del menu.
+*Rect*<br/>
+[in] Rettangolo immagine menu.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce sempre TRUE per indicare che l'immagine è stata disegnata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement:: OnDrawOnList
+## <a name="cmfcribbonbaseelementondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList
 
-Chiamato dal Framework per creare l'elemento della barra multifunzione in una casella di riepilogo comandi.
+Chiamato dal framework per disegnare l'elemento della barra multifunzione in una casella di riepilogo dei comandi.
 
 ```
 virtual void OnDrawOnList(
@@ -1749,30 +1749,30 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Puntatore a un contesto di dispositivo per l'elemento della barra multifunzione.
+[in] Puntatore a un contesto di dispositivo per l'elemento della barra multifunzione.
 
-*strText*<br/>
-in Testo visualizzato.
+*strText (testo str)*<br/>
+[in] Testo visualizzato.
 
-*nTextOffset*<br/>
-in Distanza, in pixel, dal lato sinistro della casella di riepilogo al testo visualizzato.
+*nTextOffset (Offset testo)*<br/>
+[in] Distanza, in pixel, dal lato sinistro della casella di riepilogo al testo visualizzato.
 
-*rect*<br/>
-in Rettangolo di visualizzazione per l'elemento della barra multifunzione.
+*Rect*<br/>
+[in] Rettangolo di visualizzazione per l'elemento della barra multifunzione.
 
-*bIsSelected*<br/>
-in Questo parametro non viene utilizzato.
+*bIsSelezionato*<br/>
+[in] Questo parametro non viene utilizzato.
 
-*bHighlighted*<br/>
-in Questo parametro non viene utilizzato.
+*bEvidenziato*<br/>
+[in] Questo parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Nella casella di riepilogo comandi vengono visualizzati gli elementi della barra multifunzione per consentire agli utenti di personalizzare la barra di accesso rapido.
+Nella casella di riepilogo Comandi vengono visualizzati gli elementi della barra multifunzione per consentire agli utenti di personalizzare la barra degli strumenti di accesso rapido.
 
-##  <a name="onkey"></a>CMFCRibbonBaseElement:: OnKey
+## <a name="cmfcribbonbaseelementonkey"></a><a name="onkey"></a>CMFCRibbonBaseElement::OnKey
 
-Chiamata eseguita dal framework quando l'utente preme un suggerimento e l'elemento della barra multifunzione ha lo stato attivo.
+Chiamato dal framework quando l'utente preme un suggerimento tasto di scelta e l'elemento della barra multifunzione ha lo stato attivo.
 
 ```
 virtual BOOL OnKey(BOOL bIsMenuKey);
@@ -1780,18 +1780,18 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 
 ### <a name="parameters"></a>Parametri
 
-*bIsMenuKey*<br/>
-in TRUE se il suggerimento tasto di scelta Visualizza un menu a comparsa; in caso contrario, FALSE.
+*bIsMenuKey (chiave di comando)*<br/>
+[in] TRUESe il suggerimento tasto visualizza un menu a comparsa. in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'evento è stato gestito. in caso contrario, FALSE.
+TRUESe l'evento è stato gestito. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="onmenukey"></a>CMFCRibbonBaseElement:: OnMenuKey
+## <a name="cmfcribbonbaseelementonmenukey"></a><a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey
 
-Chiamata eseguita dal framework quando l'utente preme un tasto di scelta rapida del menu nel pannello principale.
+Chiamato dal framework quando l'utente preme un suggerimento di menu nel pannello principale.
 
 ```
 virtual BOOL OnMenuKey(UINT nUpperChar);
@@ -1800,19 +1800,19 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ### <a name="parameters"></a>Parametri
 
 *nUpperChar*<br/>
-in Questo parametro non viene utilizzato.
+[in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per rispondere quando un utente preme un tasto di scelta rapida del menu nel pannello principale.
+Per impostazione predefinita, questo metodo restituisce sempre FALSE. Eseguire l'override di questo metodo per rispondere quando un utente preme un suggerimento di menu nel pannello principale.
 
-##  <a name="onprocesskey"></a>CMFCRibbonBaseElement:: OnProcessKey
+## <a name="cmfcribbonbaseelementonprocesskey"></a><a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey
 
-Chiamata eseguita dal framework quando l'utente preme un tasto di scelta rapida.
+Chiamato dal framework quando l'utente preme un tasto di scelta rapida.
 
 ```
 virtual BOOL OnProcessKey(UINT nChar);
@@ -1820,20 +1820,20 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>Parametri
 
-*nChar*<br/>
-in Questo parametro non viene utilizzato.
+*Nchar*<br/>
+[in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce sempre FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo se si desidera che l'elemento della barra multifunzione elabori un tasto di scelta rapida.
 
-##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement:: OnRTLChanged
+## <a name="cmfcribbonbaseelementonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged
 
-Chiamata eseguita dal framework quando il layout cambia direzione.
+Chiamato dal framework quando il layout cambia direzione.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -1842,27 +1842,27 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="parameters"></a>Parametri
 
 *bIsRTL*<br/>
-in Questo parametro non viene utilizzato.
+[in] Questo parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per modificare l'elemento della barra multifunzione quando il layout cambia direzione. La direzione predefinita del layout è da sinistra a destra.
+Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per regolare l'elemento della barra multifunzione quando il layout cambia direzione. La direzione di layout predefinita è da sinistra a destra.
 
-##  <a name="onsetfocus"></a>CMFCRibbonBaseElement:: OnSetFocus
+## <a name="cmfcribbonbaseelementonsetfocus"></a><a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus
 
-Chiamata eseguita dal framework quando un elemento della barra multifunzione riceve o perde lo stato attivo per l'input.
+Chiamato dal framework quando un elemento della barra multifunzione riceve o perde lo stato attivo per l'input.
 
 ```
 virtual void OnSetFocus(BOOL B);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questo metodo in una classe derivata se si desidera che l'applicazione gestisca una modifica nello stato attivo di un elemento della barra multifunzione.
 
-##  <a name="onshow"></a>CMFCRibbonBaseElement:: OnShow
+## <a name="cmfcribbonbaseelementonshow"></a><a name="onshow"></a>CMFCRibbonBaseElement::OnShow
 
-Chiamata eseguita dal Framework per mostrare o nascondere l'elemento della barra multifunzione.
+Chiamato dal framework per visualizzare o nascondere l'elemento della barra multifunzione.
 
 ```
 virtual void OnShow(BOOL bShow);
@@ -1871,27 +1871,27 @@ virtual void OnShow(BOOL bShow);
 ### <a name="parameters"></a>Parametri
 
 *bShow*<br/>
-in Questo parametro non viene utilizzato.
+[in] Questo parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per mostrare o nascondere l'elemento della barra multifunzione.
+Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per visualizzare o nascondere l'elemento della barra multifunzione.
 
-##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement:: OnShowPopupMenu
+## <a name="cmfcribbonbaseelementonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu
 
-Chiamato dal Framework prima che l'elemento Ribbon mostri un menu a comparsa.
+Chiamato dal framework prima dell'elemento della barra multifunzione mostra un menu a comparsa.
 
 ```
 virtual void OnShowPopupMenu();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo notifica alla finestra padre della barra multifunzione che l'elemento Ribbon visualizzerà un menu a comparsa.
+Questo metodo notifica alla finestra padre della barra multifunzione che l'elemento della barra multifunzione mostrerà un menu a comparsa.
 
-##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::P ostMenuCommand
+## <a name="cmfcribbonbaseelementpostmenucommand"></a><a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand
 
-Chiude il menu di scelta rapida per l'elemento della barra multifunzione e invia un messaggio di chiusura al menu padre.
+Chiude il menu a comparsa per l'elemento della barra multifunzione e invia un messaggio di chiusura al menu padre.
 
 ```
 void PostMenuCommand(UINT uiCmdId);
@@ -1899,14 +1899,14 @@ void PostMenuCommand(UINT uiCmdId);
 
 ### <a name="parameters"></a>Parametri
 
-*uiCmdId*<br/>
-in Il parametro non viene utilizzato.
+*uiCmdId (informazioni in questo base elementi)*<br/>
+[in] Il parametro non viene utilizzato.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il messaggio di chiusura viene inviato solo se l'elemento della barra multifunzione si trova in un menu di scelta rapida.
+Il messaggio di chiusura viene inviato solo se l'elemento della barra multifunzione si trova in un menu a comparsa.
 
-##  <a name="redraw"></a>CMFCRibbonBaseElement:: redisegnato
+## <a name="cmfcribbonbaseelementredraw"></a><a name="redraw"></a>CMFCRibbonBaseElement::Ridisegno
 
 Aggiorna la visualizzazione per l'elemento della barra multifunzione.
 
@@ -1914,11 +1914,11 @@ Aggiorna la visualizzazione per l'elemento della barra multifunzione.
 virtual void Redraw();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Questo metodo consente di ricreare il rettangolo di visualizzazione per l'elemento Ribbon chiamando [CWnd:: RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) con i flag RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW impostati.
+Questo metodo ridisegna il rettangolo di visualizzazione per l'elemento della barra multifunzione chiamando [CWnd::RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) con i flag RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW impostati.
 
-##  <a name="setaccdata"></a>CMFCRibbonBaseElement:: SetACCData
+## <a name="cmfcribbonbaseelementsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData
 
 Imposta i dati di accessibilità per l'elemento della barra multifunzione.
 
@@ -1930,7 +1930,7 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Parametri
 
-*pParent*<br/>
+*pPadre*<br/>
 Finestra padre per l'elemento della barra multifunzione.
 
 *data*<br/>
@@ -1940,13 +1940,13 @@ Dati di accessibilità per l'elemento della barra multifunzione.
 
 Restituisce sempre TRUE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo imposta i dati di accessibilità per l'elemento della barra multifunzione e restituisce sempre TRUE. Eseguire l'override di questo metodo per impostare i dati di accessibilità e restituire un valore che indica l'esito positivo o negativo.
 
-##  <a name="setcompactmode"></a>CMFCRibbonBaseElement:: SetCompactMode
+## <a name="cmfcribbonbaseelementsetcompactmode"></a><a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode
 
-Imposta la dimensione di visualizzazione per l'elemento della barra multifunzione.
+Imposta le dimensioni di visualizzazione per l'elemento della barra multifunzione.
 
 ```
 virtual void SetCompactMode(BOOL bCompactMode = TRUE);
@@ -1954,23 +1954,23 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bCompactMode*<br/>
-in TRUE per ridurre le dimensioni di visualizzazione dell'elemento della barra multifunzione; FALSE per aumentare le dimensioni di visualizzazione dell'elemento della barra multifunzione.
+*bModalitàcompatta*<br/>
+[in] TRUE per ridurre le dimensioni di visualizzazione dell'elemento della barra multifunzione. FALSE per aumentare le dimensioni di visualizzazione dell'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Nella tabella seguente viene riepilogata la logica per questo metodo.
 
-|*bCompactMode*|Dimensioni correnti degli elementi della barra multifunzione|Dimensioni nuovo elemento barra multifunzione|
+|*bModalitàcompatta*|Dimensione corrente dell'elemento della barra multifunzione|Nuova dimensione elemento della barra multifunzione|
 |--------------------|---------------------------------|-----------------------------|
 |TRUE|Compact|Nessuna modifica.|
-|TRUE|Intermedio|Compact se possibile.|
-|TRUE|Large|Intermedio se possibile.|
-|FALSE|Compact|Intermedio se possibile; in caso contrario, large.|
+|TRUE|Intermedio|Compatto se possibile.|
+|TRUE|large|Intermedio se possibile.|
+|FALSE|Compact|Intermedio se possibile; altrimenti grandi.|
 
-##  <a name="setdata"></a>CMFCRibbonBaseElement:: SetData
+## <a name="cmfcribbonbaseelementsetdata"></a><a name="setdata"></a>CMFCRibbonBaseElement::SetData
 
-Associa un elemento dati all'elemento Ribbon.
+Associa un elemento dati all'elemento della barra multifunzione.
 
 ```
 void SetData(DWORD_PTR dwData);
@@ -1978,12 +1978,12 @@ void SetData(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>Parametri
 
-*dwData*<br/>
-in Valore dei dati.
+*dwData (dati)*<br/>
+[in] Valore dei dati.
 
-##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement:: SetDefaultMenuLook
+## <a name="cmfcribbonbaseelementsetdefaultmenulook"></a><a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook
 
-Imposta l'elemento della barra multifunzione in modo che venga visualizzato come comando popup.
+Imposta l'elemento della barra multifunzione da visualizzare come comando popup.
 
 ```
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
@@ -1991,12 +1991,12 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bIsDefaultMenuLook*<br/>
-in TRUE per impostare l'elemento della barra multifunzione in modo che venga visualizzato come comando popup; in caso contrario, FALSE.
+*bIsDefaultMenuLook (Informazioni in lingua lingua stati invisi del menu predefinito*<br/>
+[in] TRUE per impostare l'elemento della barra multifunzione da visualizzare come un comando popup. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="setdescription"></a>CMFCRibbonBaseElement:: FileDescription
+## <a name="cmfcribbonbaseelementsetdescription"></a><a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription
 
 Imposta la descrizione dell'elemento della barra multifunzione.
 
@@ -2007,13 +2007,13 @@ virtual void SetDescription(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parametri
 
 *lpszText*<br/>
-in Descrizione dell'elemento della barra multifunzione.
+[in] Descrizione dell'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il Framework Visualizza la nuova descrizione sulla barra di stato o nella descrizione comando o sotto il pulsante di menu.
+Il framework visualizza la nuova descrizione sulla barra di stato, nella descrizione comando o sotto il pulsante di menu.
 
-##  <a name="setid"></a>CMFCRibbonBaseElement:: SetId
+## <a name="cmfcribbonbaseelementsetid"></a><a name="setid"></a>CMFCRibbonBaseElement::SetID
 
 Imposta l'ID di comando dell'elemento della barra multifunzione.
 
@@ -2024,9 +2024,9 @@ virtual void SetID(UINT nID);
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-in ID di comando.
+[in] ID del comando.
 
-##  <a name="setinitialmode"></a>CMFCRibbonBaseElement:: SetInitialMode
+## <a name="cmfcribbonbaseelementsetinitialmode"></a><a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode
 
 Imposta le dimensioni di visualizzazione iniziali per l'elemento della barra multifunzione.
 
@@ -2036,16 +2036,16 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-*bOneRow*<br/>
-in TRUE per limitare le dimensioni di visualizzazione dell'elemento della barra multifunzione a Compact o intermedio; in caso contrario, FALSE.
+*bUnsolo riga*<br/>
+[in] TRUE per limitare le dimensioni di visualizzazione per l'elemento della barra multifunzione a compatto o intermedio; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le dimensioni di visualizzazione degli elementi della barra multifunzione possono essere Compact, Intermediate o large.
+Le dimensioni di visualizzazione degli elementi della barra multifunzione possono essere compatte, intermedie o grandi.
 
-##  <a name="setkeys"></a>CMFCRibbonBaseElement:: getKeys
+## <a name="cmfcribbonbaseelementsetkeys"></a><a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys
 
-Imposta i suggerimenti per l'elemento della barra multifunzione.
+Imposta i suggerimenti tasto di scelta per l'elemento della barra multifunzione.
 
 ```
 virtual void SetKeys(
@@ -2055,15 +2055,15 @@ virtual void SetKeys(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszKeys*<br/>
-in Tasto di suggerimento per l'elemento della barra multifunzione.
+*chiavi di lpsz*<br/>
+[in] Descrizione del tasto di scelta per l'elemento della barra multifunzione.
 
-*lpszMenuKeys*<br/>
-in Suggerimento tasto di scelta per il menu di scelta rapida dell'elemento della barra multifunzione.
+*Tasto lpszMenuKeys*<br/>
+[in] Il suggerimento per il menu a comparsa dell'elemento della barra multifunzione.
 
-##  <a name="setoriginal"></a>CMFCRibbonBaseElement:: seoriginal
+## <a name="cmfcribbonbaseelementsetoriginal"></a><a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal
 
-Imposta l'elemento della barra multifunzione originale per l'elemento della barra multifunzione.
+Imposta l'elemento originale della barra multifunzione per l'elemento della barra multifunzione.
 
 ```
 virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
@@ -2071,14 +2071,14 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 
 ### <a name="parameters"></a>Parametri
 
-*pOriginal*<br/>
-in Puntatore a un elemento della barra multifunzione.
+*pOriginal (originale)*<br/>
+[in] Puntatore a un elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Gli elementi della barra multifunzione che vengono copiati in un altro contenitore conservano un puntatore all'elemento della barra multifunzione originale.
+Gli elementi della barra multifunzione copiati in un altro contenitore mantengono un puntatore all'elemento originale della barra multifunzione.
 
-##  <a name="setparentcategory"></a>CMFCRibbonBaseElement:: SetParentCategory
+## <a name="cmfcribbonbaseelementsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory
 
 Imposta la categoria padre per l'elemento della barra multifunzione.
 
@@ -2088,16 +2088,16 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 ### <a name="parameters"></a>Parametri
 
-*pParent*<br/>
-in Puntatore a una categoria della barra multifunzione.
+*pPadre*<br/>
+[in] Puntatore a una categoria della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 I gruppi a schede nei controlli della barra multifunzione sono denominati categorie.
 
-##  <a name="setparentmenu"></a>CMFCRibbonBaseElement:: SetParentMenu
+## <a name="cmfcribbonbaseelementsetparentmenu"></a><a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu
 
-Imposta il contenitore di menu padre per l'elemento della barra multifunzione.
+Imposta il contenitore del menu padre per l'elemento della barra multifunzione.
 
 ```
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
@@ -2105,12 +2105,12 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 
 ### <a name="parameters"></a>Parametri
 
-*pMenuBar*<br/>
-in Menu padre.
+*pMenuBar (barra dei comandi)*<br/>
+[in] Menu padre.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement:: SetParentRibbonBar
+## <a name="cmfcribbonbaseelementsetparentribbonbar"></a><a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar
 
 Imposta la barra multifunzione padre per l'elemento della barra multifunzione.
 
@@ -2120,12 +2120,12 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 ### <a name="parameters"></a>Parametri
 
-*pRibbonBar*<br/>
-in Puntatore alla barra multifunzione padre.
+*pRibbonBar (barra multifunzione)*<br/>
+[in] Puntatore alla barra multifunzione padre.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="setrect"></a>CMFCRibbonBaseElement:: serect
+## <a name="cmfcribbonbaseelementsetrect"></a><a name="setrect"></a>CMFCRibbonBaseElement::SetRectCMFCRibbonBaseElement::SetRect
 
 Imposta le dimensioni del rettangolo di visualizzazione per l'elemento della barra multifunzione.
 
@@ -2135,14 +2135,14 @@ void SetRect(CRect rect);
 
 ### <a name="parameters"></a>Parametri
 
-*rect*<br/>
-in Dimensioni del rettangolo.
+*Rect*<br/>
+[in] Dimensioni del rettangolo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="settext"></a>CMFCRibbonBaseElement:: SetText
+## <a name="cmfcribbonbaseelementsettext"></a><a name="settext"></a>CMFCRibbonBaseElement::SetText
 
-Imposta il testo e il tasto di suggerimento per l'elemento della barra multifunzione.
+Imposta il testo e il suggerimento per l'elemento della barra multifunzione.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -2151,11 +2151,11 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parametri
 
 *lpszText*<br/>
-in Testo e suggerimento tasto di ricerca per l'elemento della barra multifunzione.
+[in] Il testo e il suggerimento per l'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per impostare il suggerimento tasto di ricerca per l'elemento della barra multifunzione, aggiungere la sequenza di escape di nuova riga seguita dai caratteri del suggerimento tasto di *lpszText*a
+Per impostare il suggerimento per l'elemento della barra multifunzione, aggiungere a *lpszText*la sequenza di escape di nuova riga seguita dai caratteri del suggerimento tasto di scelta .
 
 ### <a name="example"></a>Esempio
 
@@ -2168,7 +2168,7 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))
 ```
 
-##  <a name="settextalwaysonright"></a>  CMFCRibbonBaseElement::SetTextAlwaysOnRight
+## <a name="cmfcribbonbaseelementsettextalwaysonright"></a><a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight
 
 Imposta il testo per l'elemento della barra multifunzione da visualizzare a destra.
 
@@ -2178,12 +2178,12 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bSet*<br/>
-in TRUE per visualizzare il testo a destra; in caso contrario, FALSE.
+*bImpostazione*<br/>
+[in] TRUE per visualizzare il testo a destra; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="settooltiptext"></a>CMFCRibbonBaseElement:: SetToolTipText
+## <a name="cmfcribbonbaseelementsettooltiptext"></a><a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText
 
 Imposta il testo della descrizione comando per l'elemento della barra multifunzione.
 
@@ -2194,9 +2194,9 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parametri
 
 *lpszText*<br/>
-in Testo della descrizione comando.
+[in] Testo della descrizione comando.
 
-##  <a name="setvisible"></a>CMFCRibbonBaseElement:: sevisible
+## <a name="cmfcribbonbaseelementsetvisible"></a><a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible
 
 Imposta la visibilità dell'elemento della barra multifunzione.
 
@@ -2206,26 +2206,26 @@ void SetVisible(BOOL bIsVisible);
 
 ### <a name="parameters"></a>Parametri
 
-*bIsVisible*<br/>
-in TRUE per visualizzare l'elemento della barra multifunzione; FALSE per nascondere l'elemento della barra multifunzione.
+*bIsVisibile*<br/>
+[in] TRUE per visualizzare l'elemento della barra multifunzione; FALSE per nascondere l'elemento della barra multifunzione.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement:: StretchHorizontally
+## <a name="cmfcribbonbaseelementstretchhorizontally"></a><a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally
 
-Estende la larghezza dell'elemento della barra multifunzione.
+Allunga la larghezza dell'elemento della barra multifunzione.
 
 ```
 virtual void StretchHorizontally();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo genera un errore di asserzione nelle build di debug e pertanto non deve essere chiamato. Eseguire l'override di questo metodo per estendere la larghezza dell'elemento della barra multifunzione.
 
-##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement:: StretchToWholeRow
+## <a name="cmfcribbonbaseelementstretchtowholerow"></a><a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow
 
-Consente di modificare l'altezza di visualizzazione dell'elemento della barra multifunzione nell'altezza della riga specificata.
+Modifica l'altezza di visualizzazione dell'elemento della barra multifunzione in base all'altezza della riga specificata.
 
 ```
 virtual BOOL StretchToWholeRow(
@@ -2236,32 +2236,32 @@ virtual BOOL StretchToWholeRow(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-in Questo parametro non viene utilizzato.
+[in] Questo parametro non viene utilizzato.
 
-*nHeight*<br/>
-in Altezza della riga.
+*nAltezza*<br/>
+[in] Altezza della riga.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se è stata impostata l'altezza di visualizzazione. in caso contrario, FALSE.
+TRUESe è stata impostata l'altezza di visualizzazione. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo per modificare l'altezza di visualizzazione dell'elemento della barra multifunzione nell'altezza della riga specificata.
+Eseguire l'override di questo metodo per modificare l'altezza di visualizzazione dell'elemento della barra multifunzione per l'altezza di riga specificata.
 
-##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement:: UpdateTooltipInfo
+## <a name="cmfcribbonbaseelementupdatetooltipinfo"></a><a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo
 
-Aggiorna il testo della descrizione comando utilizzando la risorsa di comando per l'elemento della barra multifunzione.
+Aggiorna il testo della descrizione comando utilizzando la risorsa comando per l'elemento della barra multifunzione.
 
 ```
 virtual void UpdateTooltipInfo();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-##  <a name="hasfocus"></a>CMFCRibbonBaseElement:: HasFocus
+## <a name="cmfcribbonbaseelementhasfocus"></a><a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus
 
-Indica se l'elemento padre dispone dello stato attivo della tastiera.
+Indica se l'elemento padre ha lo stato attivo della tastiera.
 
 ```
 virtual BOOL HasFocus() const;
@@ -2269,11 +2269,11 @@ virtual BOOL HasFocus() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento della barra multifunzione è attivo; in caso contrario, FALSE.
+TRUESe l'elemento della barra multifunzione è attivo. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)
