@@ -1,9 +1,11 @@
 ---
 title: _getch_nolock, _getwch_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getwch_nolock
 - _getch_nolock
+- _o__getch_nolock
+- _o__getwch_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: 9c8f27b468d0471f44211efa12dcee6453b3fac1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4ba88ad86b6db892a581b9d94cb36f5ab8240c10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955459"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344714"
 ---
 # <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
@@ -62,9 +65,11 @@ wint_t _getwch_nolock( void );
 
 Restituisce il carattere letto. Non vi è restituzione di errori.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**_getch_nolock** e **_getwch_nolock** sono identici a **_getch** e **_getchw** , ad eccezione del fatto che non sono protetti da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+**_getch_nolock** e **_getwch_nolock** sono identici **ai _getch** e **ai _getchw,** ad eccezione del fatto che non sono protetti da interferenze da altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -79,7 +84,7 @@ Restituisce il carattere letto. Non vi è restituzione di errori.
 |**_getch_nolock**|\<conio.h>|
 |**_getwch_nolock**|\<conio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -119,7 +124,7 @@ Type 'Y' when finished typing keys: Y
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

@@ -1,12 +1,17 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - logb
 - _logb
 - _logbl
 - logbf
+- _logbf
 - logbl
+- _o__logb
+- _o_logb
+- _o_logbf
+- _o_logbl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341674"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -80,23 +86,25 @@ float _logbf(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**logb** restituisce il valore dell'esponente non distorta di *x* come intero con segno rappresentato come valore a virgola mobile.
+**logb** restituisce il valore esponente imparziale di *x* come intero con segno rappresentato come valore a virgola mobile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se le *x* fossero rappresentate con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
+Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se *x* fosse rappresentato con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **logb** accetta e restituisce sempre un **valore Double**.
+Dato che il linguaggio C, è possibile chiamare overload di **logb** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **logb** accetta e restituisce sempre un **valore double**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|None|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|QNAN,IND|nessuno|_DOMAIN|
+|: 0 (in questo modo)|ZERODIVIDE|_SING|
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -105,7 +113,7 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che 
 |**_logb**|\<float.h>|
 |**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -113,5 +121,5 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

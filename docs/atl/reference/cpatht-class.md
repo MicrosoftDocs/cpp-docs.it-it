@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69496612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331480"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 
 Questa classe rappresenta un percorso.
 
 > [!IMPORTANT]
-> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,85 +72,85 @@ class CPathT
 
 #### <a name="parameters"></a>Parametri
 
-*StringType*<br/>
-Classe di stringa ATL/MFC da usare per il percorso (vedere [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
+*TipoStringa*<br/>
+Classe di stringhe ATL/MFC da utilizzare per il percorso (vedere [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CPathT::P CXSTR](#pcxstr)|Tipo stringa costante.|
-|[CPathT::P XSTR](#pxstr)|Tipo di stringa.|
-|[CPathT:: XCHAR](#xchar)|Tipo carattere.|
+|[CPathT::PCXSTR](#pcxstr)|Tipo di stringa costante.|
+|[CPathT::PXSTR](#pxstr)|Un tipo stringa.|
+|[CPathT::XCHAR](#xchar)|Tipo carattere.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CPathT:: CPathT](#cpatht)|Costruttore per il percorso.|
+|[CPathT::CPathT](#cpatht)|Costruttore per il percorso.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CPathT:: AddBackslash](#addbackslash)|Chiamare questo metodo per aggiungere una barra rovesciata alla fine di una stringa per creare la sintassi corretta per un percorso.|
-|[CPathT:: AddExtension](#addextension)|Chiamare questo metodo per aggiungere un'estensione di file a un percorso.|
-|[CPathT:: Append](#append)|Chiamare questo metodo per aggiungere una stringa al percorso corrente.|
-|[CPathT:: elemento buildroot](#buildroot)|Chiamare questo metodo per creare un percorso radice da un numero di unità specificato.|
-|[CPathT:: Canonicalize](#canonicalize)|Chiamare questo metodo per convertire il percorso in formato canonico.|
-|[CPathT:: combine](#combine)|Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta il nome di un percorso di file in un unico percorso.|
-|[CPathT:: CommonPrefix](#commonprefix)|Chiamare questo metodo per determinare se il percorso specificato condivide un prefisso comune con il percorso corrente.|
-|[CPathT:: CompactPath](#compactpath)|Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una larghezza di pixel specificata sostituendo i componenti del percorso con ellissi.|
-|[CPathT:: CompactPathEx](#compactpathex)|Chiamare questo metodo per troncare un percorso di file per adattarlo a un numero specificato di caratteri sostituendo i componenti del percorso con ellissi.|
-|[CPathT:: FileExists](#fileexists)|Chiamare questo metodo per verificare se il file con questo percorso esiste.|
-|[CPathT:: FindExtension](#findextension)|Chiamare questo metodo per trovare la posizione dell'estensione di file all'interno del percorso.|
-|[CPathT:: FindFileName](#findfilename)|Chiamare questo metodo per trovare la posizione del nome file all'interno del percorso.|
-|[CPathT:: GetDriveNumber](#getdrivenumber)|Chiamare questo metodo per eseguire una ricerca nel percorso di una lettera di unità compresa nell'intervallo tra' A ' è Z ' e restituire il numero di unità corrispondente.|
-|[CPathT:: GetExtension](#getextension)|Chiamare questo metodo per ottenere l'estensione del file dal percorso.|
-|[CPathT:: directory](#isdirectory)|Chiamare questo metodo per verificare se il percorso è una directory valida.|
-|[CPathT:: IsFileSpec](#isfilespec)|Chiamare questo metodo per eseguire la ricerca in un percorso di eventuali caratteri di delimitazione del percorso (ad esempio,':' o ' \\'). Se non sono presenti caratteri di delimitazione del percorso, il percorso viene considerato un percorso di specifica del file.|
-|[CPathT:: prefix](#isprefix)|Chiamare questo metodo per determinare se un percorso contiene un prefisso valido del tipo passato da *pszPrefix*.|
-|[CPathT:: è relativo](#isrelative)|Chiamare questo metodo per determinare se il percorso è relativo.|
-|[CPathT:: radice](#isroot)|Chiamare questo metodo per determinare se il percorso è una directory radice.|
-|[CPathT:: IsSameRoot](#issameroot)|Chiamare questo metodo per determinare se un altro percorso dispone di un componente radice comune con il percorso corrente.|
-|[CPathT:: IsUNC](#isunc)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (Universal Naming Convention) valido per un server e una condivisione.|
-|[CPathT:: IsUNCServer](#isuncserver)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (Universal Naming Convention) valido solo per un server.|
-|[CPathT:: IsUNCServerShare](#isuncservershare)|Chiamare questo metodo per determinare se il percorso è un percorso di condivisione UNC (Universal Naming Convention) valido, \\ \ *server* \ *condivisione*.|
-|[CPathT:: MakePretty](#makepretty)|Chiamare questo metodo per convertire un percorso in tutti i caratteri minuscoli per fornire al percorso un aspetto coerente.|
-|[CPathT:: MatchSpec](#matchspec)|Chiamare questo metodo per eseguire una ricerca nel percorso di una stringa contenente un tipo di corrispondenza con caratteri jolly.|
-|[CPathT:: QuoteSpaces](#quotespaces)|Chiamare questo metodo per racchiudere il percorso tra virgolette se contiene spazi.|
-|[CPathT:: RelativePathTo](#relativepathto)|Chiamare questo metodo per creare un percorso relativo da un file o una cartella a un altro.|
-|[CPathT:: RemoveArgs](#removeargs)|Chiamare questo metodo per rimuovere eventuali argomenti della riga di comando dal percorso.|
-|[CPathT:: RemoveBackslash](#removebackslash)|Chiamare questo metodo per rimuovere la barra rovesciata finale dal percorso.|
-|[CPathT:: RemoveBlanks](#removeblanks)|Chiamare questo metodo per rimuovere tutti gli spazi iniziali e finali dal percorso.|
-|[CPathT:: RemoveExtension](#removeextension)|Chiamare questo metodo per rimuovere l'estensione di file dal percorso, se presente.|
-|[CPathT:: RemoveFileSpec](#removefilespec)|Chiamare questo metodo per rimuovere il nome del file finale e la barra rovesciata dal percorso, se presenti.|
-|[CPathT:: RenameExtension](#renameextension)|Chiamare questo metodo per sostituire l'estensione del nome di file nel percorso con una nuova estensione. Se il nome file non contiene un'estensione, l'estensione verrà allegata alla fine della stringa.|
-|[CPathT:: SkipRoot](#skiproot)|Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o il server UNC/parti del percorso di condivisione.|
-|[CPathT:: StripPath](#strippath)|Chiamare questo metodo per rimuovere la parte del percorso di un percorso completo e un nome file.|
-|[CPathT:: StripToRoot](#striptoroot)|Chiamare questo metodo per rimuovere tutte le parti del percorso ad eccezione delle informazioni della radice.|
-|[CPathT:: UnquoteSpaces](#unquotespaces)|Chiamare questo metodo per rimuovere le virgolette dall'inizio e dalla fine di un percorso.|
+|[CPathT::AddBackslash](#addbackslash)|Chiamare questo metodo per aggiungere una barra rovesciata alla fine di una stringa per creare la sintassi corretta per un percorso.|
+|[CPathT::AddExtension (Informazioni in base alla proprietà del pulsante](#addextension)|Chiamare questo metodo per aggiungere un'estensione di file a un percorso.|
+|[CPathT::Accoda](#append)|Chiamare questo metodo per aggiungere una stringa al percorso corrente.|
+|[CPathT::BuildRoot](#buildroot)|Chiamare questo metodo per creare un percorso radice da un numero di unità specificato.|
+|[CPathT::Canonicalize](#canonicalize)|Chiamare questo metodo per convertire il percorso in formato canonico.|
+|[CPathT::Combina](#combine)|Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un unico percorso.|
+|[CPathT::CommonPrefix](#commonprefix)|Chiamare questo metodo per determinare se il percorso specificato condivide un prefisso comune con il percorso corrente.|
+|[CPathT::CompactPath](#compactpath)|Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una determinata larghezza in pixel sostituendo i componenti del percorso con puntini di sospensione.|
+|[CPathT::CompactPathEx](#compactpathex)|Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di un determinato numero di caratteri sostituendo i componenti del percorso con puntini di sospensione.|
+|[CPathT::FileExists](#fileexists)|Chiamare questo metodo per verificare se il file in questo nome di percorso esiste.|
+|[CPathT::FindExtension](#findextension)|Chiamare questo metodo per trovare la posizione dell'estensione di file all'interno del percorso.|
+|[Nome FileCPathT::FindFileName](#findfilename)|Chiamare questo metodo per trovare la posizione del nome del file all'interno del percorso.|
+|[CPathT::NumeroUnità](#getdrivenumber)|Chiamare questo metodo per cercare il percorso di una lettera di unità compresa nell'intervallo tra 'A' e '' e restituire il numero di unità corrispondente.|
+|[CPathT::GetExtension (Informazioni in base alla proprietà del logo o per la](#getextension)|Chiamare questo metodo per ottenere l'estensione del file dal percorso.|
+|[CPathT::IsDirectory](#isdirectory)|Chiamare questo metodo per verificare se il percorso è una directory valida.|
+|[Controllo dati::IsFileSpec](#isfilespec)|Chiamare questo metodo per cercare un percorso per eventuali caratteri che delimitano il percorso (ad esempio, ':' o '\\' ). Se non sono presenti caratteri che delimitano il percorso, il percorso viene considerato un percorso di file Spec.|
+|[CPathT::IsPrefix](#isprefix)|Chiamare questo metodo per determinare se un percorso contiene un prefisso valido del tipo passato da *pszPrefix*.|
+|[CPathT::IsRelative](#isrelative)|Chiamare questo metodo per determinare se il percorso è relativo.|
+|[CPathT::IsRoot](#isroot)|Chiamare questo metodo per determinare se il percorso è una radice di directory.|
+|[CPathT::IsSameRoot](#issameroot)|Chiamare questo metodo per determinare se un altro percorso dispone di un componente radice comune con il percorso corrente.|
+|[CPathT::IsUNC](#isunc)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (Universal Naming Convention) valido per un server e una condivisione.|
+|[CPathT::IsUNCServer](#isuncserver)|Chiamare questo metodo per determinare se il percorso è un percorso UNC (Universal Naming Convention) valido solo per un server.|
+|[CPathT::IsUNCServerShare](#isuncservershare)|Chiamare questo metodo per determinare se il percorso è un percorso \\ \ di condivisione UNC (Universal Naming Convention) valido,*condivisione* *server*\ .|
+|[CPathT::MakePretty](#makepretty)|Chiamare questo metodo per convertire un percorso in tutti i caratteri minuscoli per conferire al percorso un aspetto coerente.|
+|[CPathT::MatchSpec](#matchspec)|Chiamare questo metodo per cercare il percorso di una stringa contenente un tipo di corrispondenza con caratteri jolly.|
+|[CPathT::QuoteSpaces](#quotespaces)|Chiamare questo metodo per racchiudere il percorso tra virgolette se contiene spazi.|
+|[CPathT::RelativePathTo](#relativepathto)|Chiamare questo metodo per creare un percorso relativo da un file o una cartella a un altro.|
+|[CPathT::RemoveArgs](#removeargs)|Chiamare questo metodo per rimuovere eventuali argomenti della riga di comando dal percorso.|
+|[CPathT::RemoveBackslash](#removebackslash)|Chiamare questo metodo per rimuovere la barra rovesciata finale dal percorso.|
+|[CPathT::RemoveBlanks](#removeblanks)|Chiamare questo metodo per rimuovere tutti gli spazi iniziali e finali dal percorso.|
+|[CPathT::RemoveExtension (Percorso di chiamata)](#removeextension)|Chiamare questo metodo per rimuovere l'estensione del file dal percorso, se presente.|
+|[CPathT::RemoveFileSpec](#removefilespec)|Chiamare questo metodo per rimuovere il nome del file finale e la barra rovesciata dal percorso, se presente.|
+|CPathT::RenameExtension (Informazioni in base alla proprietà)|Chiamare questo metodo per sostituire l'estensione del nome file nel percorso con una nuova estensione. Se il nome del file non contiene un'estensione, l'estensione verrà allegata alla fine della stringa.|
+|[CPathT::SkipRoot](#skiproot)|Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o le parti del percorso di condivisione/server UNC.|
+|[CPathT::StripPath](#strippath)|Chiamare questo metodo per rimuovere la parte del percorso di un percorso completo e il nome del file.|
+|[CPathT::StripToRoot](#striptoroot)|Chiamare questo metodo per rimuovere tutte le parti del percorso ad eccezione delle informazioni radice.|
+|[CPathT::UnquoteSpaces (Spazi di uncitatura)](#unquotespaces)|Chiamare questo metodo per rimuovere le virgolette dall'inizio e dalla fine di un percorso.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CPathT:: operator const StringType &](#operator_const_stringtype_amp)|Questo operatore consente di trattare l'oggetto come una stringa.|
-|[CPathT:: operator CPathT::P CXSTR](#operator_cpatht__pcxstr)|Questo operatore consente di trattare l'oggetto come una stringa.|
-|[& CPathT:: operator StringType](#operator_stringtype_amp)|Questo operatore consente di trattare l'oggetto come una stringa.|
-|[CPathT:: operator + =](#operator_add_eq)|Questo operatore aggiunge una stringa al percorso.|
+|[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Questo operatore consente all'oggetto di essere trattato come una stringa.|
+|[CPathT::operatore CPathT::PCXSTR](#operator_cpatht__pcxstr)|Questo operatore consente all'oggetto di essere trattato come una stringa.|
+|[CPathT::operatorStringType &](#operator_stringtype_amp)|Questo operatore consente all'oggetto di essere trattato come una stringa.|
+|[CPathT::operatore](#operator_add_eq)|Questo operatore aggiunge una stringa al percorso.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CPathT:: m_strPath](#m_strpath)|Percorso.|
+|[CPathT::m_strPath](#m_strpath)|Percorso.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`CPath`, `CPathA` e `CPathW` sono creazioni di istanze di `CPathT` definite come segue:
+`CPath`, `CPathA`, `CPathW` e sono le `CPathT` istanze di definite come segue:
 
 `typedef CPathT< CString > CPath;`
 
@@ -160,21 +160,21 @@ Classe di stringa ATL/MFC da usare per il percorso (vedere [CStringT](../../atl-
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlpath. h
+**Intestazione:** atlpath.h
 
-##  <a name="addbackslash"></a>CPathT:: AddBackslash
+## <a name="cpathtaddbackslash"></a><a name="addbackslash"></a>CPathT::AddBackslash
 
-Chiamare questo metodo per aggiungere una barra rovesciata alla fine di una stringa per creare la sintassi corretta per un percorso. Se il percorso dispone già di una barra rovesciata finale, non verrà aggiunta alcuna barra rovesciata.
+Chiamare questo metodo per aggiungere una barra rovesciata alla fine di una stringa per creare la sintassi corretta per un percorso. Se il percorso ha già una barra rovesciata finale, non verrà aggiunta alcuna barra rovesciata.
 
 ```
 void AddBackslash();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni, vedere [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
+Per ulteriori informazioni, vedere [PathAddBackSlash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
 
-##  <a name="addextension"></a>CPathT:: AddExtension
+## <a name="cpathtaddextension"></a><a name="addextension"></a>CPathT::AddExtension (Informazioni in base alla proprietà del pulsante
 
 Chiamare questo metodo per aggiungere un'estensione di file a un percorso.
 
@@ -184,18 +184,18 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametri
 
-*pszExtension*<br/>
-Estensione di file da aggiungere.
+*spzEstensione*<br/>
+Estensione del file da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
 
-##  <a name="append"></a>CPathT:: Append
+## <a name="cpathtappend"></a><a name="append"></a>CPathT::Accoda
 
 Chiamare questo metodo per aggiungere una stringa al percorso corrente.
 
@@ -205,18 +205,18 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametri
 
-*pszMore*<br/>
+*pszMore (informazioni in base al stupe*<br/>
 Stringa da accodare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
 
-##  <a name="buildroot"></a>CPathT:: elemento buildroot
+## <a name="cpathtbuildroot"></a><a name="buildroot"></a>CPathT::BuildRoot
 
 Chiamare questo metodo per creare un percorso radice da un numero di unità specificato.
 
@@ -226,14 +226,14 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>Parametri
 
-*iDrive*<br/>
+*Idrive*<br/>
 Il numero di unità (0 è A:, 1 è B: e così via).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
-##  <a name="canonicalize"></a>CPathT:: Canonicalize
+## <a name="cpathtcanonicalize"></a><a name="canonicalize"></a>CPathT::Canonicalize
 
 Chiamare questo metodo per convertire il percorso in formato canonico.
 
@@ -241,13 +241,13 @@ Chiamare questo metodo per convertire il percorso in formato canonico.
 void Canonicalize();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
 
-##  <a name="combine"></a>CPathT:: combine
+## <a name="cpathtcombine"></a><a name="combine"></a>CPathT::Combina
 
-Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta il nome di un percorso di file in un unico percorso.
+Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un unico percorso.
 
 ```
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
@@ -258,14 +258,14 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 *pszDir*<br/>
 Percorso della directory.
 
-*pszFile*<br/>
+*file psz*<br/>
 Percorso del file.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
 
-##  <a name="commonprefix"></a>CPathT:: CommonPrefix
+## <a name="cpathtcommonprefix"></a><a name="commonprefix"></a>CPathT::CommonPrefix
 
 Chiamare questo metodo per determinare se il percorso specificato condivide un prefisso comune con il percorso corrente.
 
@@ -275,20 +275,20 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>Parametri
 
-*pszOther*<br/>
+*pszOther (informazioni in stato di*<br/>
 Percorso da confrontare con quello corrente.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce il prefisso comune.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Un prefisso è uno dei seguenti tipi: "C: \\ \\", ".", "..", ".. \\ \\ ". Per ulteriori informazioni, vedere [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
+Un prefisso è uno di\\\\questi tipi: "C: ", ".", "..", "... \\\\". Per ulteriori informazioni, vedere [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
-##  <a name="compactpath"></a>CPathT:: CompactPath
+## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una larghezza di pixel specificata sostituendo i componenti del percorso con ellissi.
+Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una determinata larghezza in pixel sostituendo i componenti del percorso con puntini di sospensione.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -296,23 +296,23 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parametri
 
-*hDC*<br/>
-Il contesto di dispositivo usato per la metrica del tipo di carattere.
+*Hdc*<br/>
+Contesto di dispositivo utilizzato per le metriche dei tipi di carattere.
 
-*nWidth*<br/>
-Larghezza, in pixel, in base alla quale verrà forzata la stringa.
+*nLarghezza*<br/>
+Larghezza, in pixel, che la stringa verrà forzata ad adattarsi.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
 
-##  <a name="compactpathex"></a>CPathT:: CompactPathEx
+## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Chiamare questo metodo per troncare un percorso di file per adattarlo a un numero specificato di caratteri sostituendo i componenti del percorso con ellissi.
+Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di un determinato numero di caratteri sostituendo i componenti del percorso con puntini di sospensione.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -321,7 +321,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="parameters"></a>Parametri
 
 *nMaxChars*<br/>
-Numero massimo di caratteri da contenere nella nuova stringa, incluso il carattere NULL di terminazione.
+Numero massimo di caratteri da contenuto nella nuova stringa, incluso il carattere di terminazione NULL.
 
 *dwFlags*<br/>
 Riservato.
@@ -330,11 +330,11 @@ Riservato.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
 
-##  <a name="cpatht"></a>CPathT:: CPathT
+## <a name="cpathtcpatht"></a><a name="cpatht"></a>CPathT::CPathT
 
 Costruttore.
 
@@ -346,15 +346,15 @@ CPathT() throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pszPath*<br/>
+*pszPath (percorso pszPath)*<br/>
 Puntatore a una stringa di percorso.
 
-*path*<br/>
+*Percorso*<br/>
 Stringa del percorso.
 
-##  <a name="fileexists"></a>CPathT:: FileExists
+## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT::FileExists
 
-Chiamare questo metodo per verificare se il file con questo percorso esiste.
+Chiamare questo metodo per verificare se il file in questo nome di percorso esiste.
 
 ```
 BOOL FileExists() const;
@@ -362,13 +362,13 @@ BOOL FileExists() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il file esiste; in caso contrario, FALSE.
+Restituisce TRUE se il file esiste, FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).
 
-##  <a name="findextension"></a>CPathT:: FindExtension
+## <a name="cpathtfindextension"></a><a name="findextension"></a>CPathT::FindExtension
 
 Chiamare questo metodo per trovare la posizione dell'estensione di file all'interno del percorso.
 
@@ -378,15 +378,15 @@ int FindExtension() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la posizione del "." che precede l'estensione. Se non viene trovata alcuna estensione, restituisce-1.
+Restituisce la posizione del "." che precede l'estensione. Se non viene trovata alcuna estensione, restituisce -1.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
 
-##  <a name="findfilename"></a>CPathT:: FindFileName
+## <a name="cpathtfindfilename"></a><a name="findfilename"></a>Nome FileCPathT::FindFileName
 
-Chiamare questo metodo per trovare la posizione del nome file all'interno del percorso.
+Chiamare questo metodo per trovare la posizione del nome del file all'interno del percorso.
 
 ```
 int FindFileName() const;
@@ -394,15 +394,15 @@ int FindFileName() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la posizione del nome file. Se non viene trovato alcun nome file, restituisce-1.
+Restituisce la posizione del nome del file. Se non viene trovato alcun nome di file, restituisce -1.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).
 
-##  <a name="getdrivenumber"></a>CPathT:: GetDriveNumber
+## <a name="cpathtgetdrivenumber"></a><a name="getdrivenumber"></a>CPathT::NumeroUnità
 
-Chiamare questo metodo per eseguire una ricerca nel percorso di una lettera di unità compresa nell'intervallo tra' A ' è Z ' e restituire il numero di unità corrispondente.
+Chiamare questo metodo per cercare il percorso di una lettera di unità compresa nell'intervallo tra 'A' e '' e restituire il numero di unità corrispondente.
 
 ```
 int GetDriveNumber() const;
@@ -410,13 +410,13 @@ int GetDriveNumber() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il numero di unità come intero compreso tra 0 e 25 (corrispondente a' A ' a' Z ') se il percorso ha una lettera di unità oppure-1 in caso contrario.
+Restituisce il numero di unità come numero intero compreso tra 0 e 25 (corrispondente a 'A' a ''' se il percorso dispone di una lettera di unità o -1 in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).
 
-##  <a name="getextension"></a>CPathT:: GetExtension
+## <a name="cpathtgetextension"></a><a name="getextension"></a>CPathT::GetExtension (Informazioni in base alla proprietà del logo o per la
 
 Chiamare questo metodo per ottenere l'estensione del file dal percorso.
 
@@ -428,7 +428,7 @@ StringType GetExtension() const;
 
 Restituisce l'estensione del file.
 
-##  <a name="isdirectory"></a>CPathT:: directory
+## <a name="cpathtisdirectory"></a><a name="isdirectory"></a>CPathT::IsDirectory
 
 Chiamare questo metodo per verificare se il percorso è una directory valida.
 
@@ -438,15 +438,15 @@ BOOL IsDirectory() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un valore diverso da zero (16) se il percorso è una directory; in caso contrario, FALSE.
+Restituisce un valore diverso da zero (16) se il percorso è una directory, FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
-##  <a name="isfilespec"></a>CPathT:: IsFileSpec
+## <a name="cpathtisfilespec"></a><a name="isfilespec"></a>Controllo dati::IsFileSpec
 
-Chiamare questo metodo per eseguire la ricerca in un percorso di eventuali caratteri di delimitazione del percorso (ad esempio,':' o ' \\'). Se non sono presenti caratteri di delimitazione del percorso, il percorso viene considerato un percorso di specifica del file.
+Chiamare questo metodo per cercare un percorso per eventuali caratteri che delimitano il percorso (ad esempio, ':' o '\\' ). Se non sono presenti caratteri che delimitano il percorso, il percorso viene considerato un percorso di file Spec.
 
 ```
 BOOL IsFileSpec() const;
@@ -454,13 +454,13 @@ BOOL IsFileSpec() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se non sono presenti caratteri di delimitazione del percorso all'interno del percorso, oppure FALSE se sono presenti caratteri di delimitazione del percorso.
+Restituisce TRUE se non sono presenti caratteri che delimitano il percorso all'interno del percorso oppure FALSE se sono presenti caratteri che delimitano il percorso.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).
 
-##  <a name="isprefix"></a>CPathT:: prefix
+## <a name="cpathtisprefix"></a><a name="isprefix"></a>CPathT::IsPrefix
 
 Chiamare questo metodo per determinare se un percorso contiene un prefisso valido del tipo passato da *pszPrefix*.
 
@@ -470,18 +470,18 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>Parametri
 
-*pszPrefix*<br/>
-Prefisso per il quale eseguire la ricerca. Un prefisso è uno dei seguenti tipi: "C: \\ \\", ".", "..", ".. \\ \\ ".
+*PszPrefix (ppzPrefix)*<br/>
+Prefisso per il quale eseguire la ricerca. Un prefisso è uno di\\\\questi tipi: "C: ", ".", "..", "... \\\\".
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il percorso contiene il prefisso. in caso contrario, FALSE.
+Restituisce TRUE se il percorso contiene il prefisso o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
 
-##  <a name="isrelative"></a>CPathT:: è relativo
+## <a name="cpathtisrelative"></a><a name="isrelative"></a>CPathT::IsRelative
 
 Chiamare questo metodo per determinare se il percorso è relativo.
 
@@ -491,15 +491,15 @@ BOOL IsRelative() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il percorso è relativo oppure FALSE se è assoluto.
+Restituisce TRUE se il percorso è relativo o FALSE se è assoluto.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
-##  <a name="isroot"></a>CPathT:: radice
+## <a name="cpathtisroot"></a><a name="isroot"></a>CPathT::IsRoot
 
-Chiamare questo metodo per determinare se il percorso è una directory radice.
+Chiamare questo metodo per determinare se il percorso è una radice di directory.
 
 ```
 BOOL IsRoot() const;
@@ -507,13 +507,13 @@ BOOL IsRoot() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il percorso è una radice; in caso contrario, FALSE.
+Restituisce TRUE se il percorso è una radice o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
-##  <a name="issameroot"></a>CPathT:: IsSameRoot
+## <a name="cpathtissameroot"></a><a name="issameroot"></a>CPathT::IsSameRoot
 
 Chiamare questo metodo per determinare se un altro percorso dispone di un componente radice comune con il percorso corrente.
 
@@ -523,18 +523,18 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>Parametri
 
-*pszOther*<br/>
-Altro percorso.
+*pszOther (informazioni in stato di*<br/>
+L'altro percorso.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se entrambe le stringhe hanno lo stesso componente radice; in caso contrario, FALSE.
+Restituisce TRUE se entrambe le stringhe hanno lo stesso componente radice o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).
 
-##  <a name="isunc"></a>CPathT:: IsUNC
+## <a name="cpathtisunc"></a><a name="isunc"></a>CPathT::IsUNC
 
 Chiamare questo metodo per determinare se il percorso è un percorso UNC (Universal Naming Convention) valido per un server e una condivisione.
 
@@ -544,13 +544,13 @@ BOOL IsUNC() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il percorso è un percorso UNC valido. in caso contrario, FALSE.
+Restituisce TRUE se il percorso è un percorso UNC valido o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
-##  <a name="isuncserver"></a>CPathT:: IsUNCServer
+## <a name="cpathtisuncserver"></a><a name="isuncserver"></a>CPathT::IsUNCServer
 
 Chiamare questo metodo per determinare se il percorso è un percorso UNC (Universal Naming Convention) valido solo per un server.
 
@@ -560,15 +560,15 @@ BOOL IsUNCServer() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se la stringa è un percorso UNC valido per un server (nessun nome di condivisione) o FALSE in caso contrario.
+Restituisce TRUE se la stringa è un percorso UNC valido solo per un server (nessun nome di condivisione) o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
-##  <a name="isuncservershare"></a>CPathT:: IsUNCServerShare
+## <a name="cpathtisuncservershare"></a><a name="isuncservershare"></a>CPathT::IsUNCServerShare
 
-Chiamare questo metodo per determinare se il percorso è un percorso di condivisione UNC (Universal Naming Convention) valido, \\ \ *server* \ *condivisione*.
+Chiamare questo metodo per determinare se il percorso è un percorso \\ \ di condivisione UNC (Universal Naming Convention) valido,*condivisione* *server*\ .
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,13 +576,13 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il percorso è nel formato \\ \ *server* \ *condivisione*. in caso contrario, false.
+Restituisce TRUE se il \\ \ percorso si trova nella*condivisione* *server*\ del modulo o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
-##  <a name="m_strpath"></a>CPathT:: m_strPath
+## <a name="cpathtm_strpath"></a><a name="m_strpath"></a>CPathT::m_strPath
 
 Percorso.
 
@@ -590,13 +590,13 @@ Percorso.
 StringType m_strPath;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`StringType` è il parametro di modello da `CPathT`.
+`StringType`è il parametro di modello per `CPathT`.
 
-##  <a name="makepretty"></a>CPathT:: MakePretty
+## <a name="cpathtmakepretty"></a><a name="makepretty"></a>CPathT::MakePretty
 
-Chiamare questo metodo per convertire un percorso in tutti i caratteri minuscoli per fornire al percorso un aspetto coerente.
+Chiamare questo metodo per convertire un percorso in tutti i caratteri minuscoli per conferire al percorso un aspetto coerente.
 
 ```
 BOOL MakePretty();
@@ -604,15 +604,15 @@ BOOL MakePretty();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il percorso è stato convertito; in caso contrario, FALSE.
+Restituisce TRUE se il percorso è stato convertito o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
-##  <a name="matchspec"></a>CPathT:: MatchSpec
+## <a name="cpathtmatchspec"></a><a name="matchspec"></a>CPathT::MatchSpec
 
-Chiamare questo metodo per eseguire una ricerca nel percorso di una stringa contenente un tipo di corrispondenza con caratteri jolly.
+Chiamare questo metodo per cercare il percorso di una stringa contenente un tipo di corrispondenza con caratteri jolly.
 
 ```
 BOOL MatchSpec(PCXSTR pszSpec) const;
@@ -620,18 +620,18 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>Parametri
 
-*pszSpec*<br/>
-Puntatore a una stringa con terminazione null con il tipo di file in cui eseguire la ricerca. Per verificare, ad esempio, se il file nel percorso corrente è un file DOC, *pszSpec* deve essere impostato su "*. doc".
+*pszSpec (spzSpec)*<br/>
+Puntatore a una stringa con terminazione null con il tipo di file per il quale eseguire la ricerca. Ad esempio, per verificare se il file nel percorso corrente è un file DOC, *pszSpec* deve essere impostato su ".doc".
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se la stringa corrisponde a o FALSE in caso contrario.
+Restituisce TRUE se la stringa corrisponde o FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
 
-##  <a name="operator_add_eq"></a>CPathT:: operator + =
+## <a name="cpathtoperator-"></a><a name="operator_add_eq"></a>CPathT::operatore
 
 Questo operatore aggiunge una stringa al percorso.
 
@@ -641,16 +641,16 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametri
 
-*pszMore*<br/>
+*pszMore (informazioni in base al stupe*<br/>
 Stringa da accodare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce il percorso aggiornato.
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT:: operator const StringType &amp;
+## <a name="cpathtoperator-const-stringtype-amp"></a><a name="operator_const_stringtype_amp"></a>CPathT::operator const StringType&amp;
 
-Questo operatore consente di trattare l'oggetto come una stringa.
+Questo operatore consente all'oggetto di essere trattato come una stringa.
 
 ```
 operator const StringType&() const throw();
@@ -660,9 +660,9 @@ operator const StringType&() const throw();
 
 Restituisce una stringa che rappresenta il percorso corrente gestito da questo oggetto.
 
-##  <a name="operator_cpatht__pcxstr"></a>CPathT:: operator CPathT::P CXSTR
+## <a name="cpathtoperator-cpathtpcxstr"></a><a name="operator_cpatht__pcxstr"></a>CPathT::operatore CPathT::PCXSTR
 
-Questo operatore consente di trattare l'oggetto come una stringa.
+Questo operatore consente all'oggetto di essere trattato come una stringa.
 
 ```
 operator PCXSTR() const throw();
@@ -672,9 +672,9 @@ operator PCXSTR() const throw();
 
 Restituisce una stringa che rappresenta il percorso corrente gestito da questo oggetto.
 
-##  <a name="operator_stringtype_amp"></a>@No__t_1 CPathT:: operator StringType
+## <a name="cpathtoperator-stringtype-amp"></a><a name="operator_stringtype_amp"></a>CPathT::operatorStringType (Operator StringType)&amp;
 
-Questo operatore consente di trattare l'oggetto come una stringa.
+Questo operatore consente all'oggetto di essere trattato come una stringa.
 
 ```
 operator StringType&() throw();
@@ -684,31 +684,31 @@ operator StringType&() throw();
 
 Restituisce una stringa che rappresenta il percorso corrente gestito da questo oggetto.
 
-##  <a name="pcxstr"></a>CPathT::P CXSTR
+## <a name="cpathtpcxstr"></a><a name="pcxstr"></a>CPathT::PCXSTR
 
-Tipo stringa costante.
+Tipo di stringa costante.
 
 ```
 typedef StringType::PCXSTR PCXSTR;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`StringType` è il parametro di modello da `CPathT`.
+`StringType`è il parametro di modello per `CPathT`.
 
-##  <a name="pxstr"></a>CPathT::P XSTR
+## <a name="cpathtpxstr"></a><a name="pxstr"></a>CPathT::PXSTR
 
-Tipo di stringa.
+Un tipo stringa.
 
 ```
 typedef StringType::PXSTR PXSTR;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`StringType` è il parametro di modello da `CPathT`.
+`StringType`è il parametro di modello per `CPathT`.
 
-##  <a name="quotespaces"></a>CPathT:: QuoteSpaces
+## <a name="cpathtquotespaces"></a><a name="quotespaces"></a>CPathT::QuoteSpaces
 
 Chiamare questo metodo per racchiudere il percorso tra virgolette se contiene spazi.
 
@@ -716,11 +716,11 @@ Chiamare questo metodo per racchiudere il percorso tra virgolette se contiene sp
 void QuoteSpaces();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
-##  <a name="relativepathto"></a>CPathT:: RelativePathTo
+## <a name="cpathtrelativepathto"></a><a name="relativepathto"></a>CPathT::RelativePathTo
 
 Chiamare questo metodo per creare un percorso relativo da un file o una cartella a un altro.
 
@@ -734,27 +734,27 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>Parametri
 
-*pszFrom*<br/>
+*pszDa*<br/>
 Inizio del percorso relativo.
 
-*dwAttrFrom*<br/>
-Attributi di file di *pszFrom*. Se questo valore contiene FILE_ATTRIBUTE_DIRECTORY, si presuppone che *pszFrom* sia una directory; in caso contrario, si presuppone che *pszFrom* sia un file.
+*dwAttrDa*<br/>
+Gli attributi File di *pszFrom*. Se questo valore contiene FILE_ATTRIBUTE_DIRECTORY, si presuppone *che pszFrom* sia una directory. in caso contrario, *pszFrom* viene considerato come un file.
 
-*pszTo*<br/>
+*pszTo (informazioni in stato di enoper*<br/>
 Punto finale del percorso relativo.
 
 *dwAttrTo*<br/>
-Attributi di file di *pszTo*. Se questo valore contiene FILE_ATTRIBUTE_DIRECTORY, si presuppone che *pszTo* sia una directory; in caso contrario, si presuppone che *pszTo* sia un file.
+Attributi File di *pszTo*. Se questo valore contiene FILE_ATTRIBUTE_DIRECTORY, si presuppone *che pszTo* sia una directory. in caso contrario, si presuppone *che pszTo* sia un file.
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).
 
-##  <a name="removeargs"></a>CPathT:: RemoveArgs
+## <a name="cpathtremoveargs"></a><a name="removeargs"></a>CPathT::RemoveArgs
 
 Chiamare questo metodo per rimuovere eventuali argomenti della riga di comando dal percorso.
 
@@ -762,11 +762,11 @@ Chiamare questo metodo per rimuovere eventuali argomenti della riga di comando d
 void RemoveArgs();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).
 
-##  <a name="removebackslash"></a>CPathT:: RemoveBackslash
+## <a name="cpathtremovebackslash"></a><a name="removebackslash"></a>CPathT::RemoveBackslash
 
 Chiamare questo metodo per rimuovere la barra rovesciata finale dal percorso.
 
@@ -774,11 +774,11 @@ Chiamare questo metodo per rimuovere la barra rovesciata finale dal percorso.
 void RemoveBackslash();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).
 
-##  <a name="removeblanks"></a>CPathT:: RemoveBlanks
+## <a name="cpathtremoveblanks"></a><a name="removeblanks"></a>CPathT::RemoveBlanks
 
 Chiamare questo metodo per rimuovere tutti gli spazi iniziali e finali dal percorso.
 
@@ -786,25 +786,25 @@ Chiamare questo metodo per rimuovere tutti gli spazi iniziali e finali dal perco
 void RemoveBlanks();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
 
-##  <a name="removeextension"></a>CPathT:: RemoveExtension
+## <a name="cpathtremoveextension"></a><a name="removeextension"></a>CPathT::RemoveExtension (Percorso di chiamata)
 
-Chiamare questo metodo per rimuovere l'estensione di file dal percorso, se presente.
+Chiamare questo metodo per rimuovere l'estensione del file dal percorso, se presente.
 
 ```
 void RemoveExtension();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
 
-##  <a name="removefilespec"></a>CPathT:: RemoveFileSpec
+## <a name="cpathtremovefilespec"></a><a name="removefilespec"></a>CPathT::RemoveFileSpec
 
-Chiamare questo metodo per rimuovere il nome del file finale e la barra rovesciata dal percorso, se presenti.
+Chiamare questo metodo per rimuovere il nome del file finale e la barra rovesciata dal percorso, se presente.
 
 ```
 BOOL RemoveFileSpec();
@@ -814,13 +814,13 @@ BOOL RemoveFileSpec();
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 
-##  <a name="renameextension"></a>CPathT:: RenameExtension
+## <a name="cpathtrenameextension"></a><a name="renameextension"></a>CPathT::RenameExtension (Informazioni in base alla proprietà)
 
-Chiamare questo metodo per sostituire l'estensione del nome di file nel percorso con una nuova estensione. Se il nome file non contiene un'estensione, l'estensione verrà allegata alla fine del percorso.
+Chiamare questo metodo per sostituire l'estensione del nome file nel percorso con una nuova estensione. Se il nome del file non contiene un'estensione, l'estensione verrà allegata alla fine del percorso.
 
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -828,20 +828,20 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametri
 
-*pszExtension*<br/>
-Nuova estensione del nome di file, preceduta da un carattere ".".
+*spzEstensione*<br/>
+Nuova estensione di file, preceduta da un carattere ".".
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).
 
-##  <a name="skiproot"></a>CPathT:: SkipRoot
+## <a name="cpathtskiproot"></a><a name="skiproot"></a>CPathT::SkipRoot
 
-Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o le parti del percorso del server/condivisione UNC (Universal Naming Convention).
+Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o le parti del percorso server/condivisione UNC (convenzione di denominazione universale).
 
 ```
 int SkipRoot() const;
@@ -851,25 +851,25 @@ int SkipRoot() const;
 
 Restituisce la posizione dell'inizio del sottopercorso che segue la radice (lettera di unità o server/condivisione UNC).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
-##  <a name="strippath"></a>CPathT:: StripPath
+## <a name="cpathtstrippath"></a><a name="strippath"></a>CPathT::StripPath
 
-Chiamare questo metodo per rimuovere la parte del percorso di un percorso completo e un nome file.
+Chiamare questo metodo per rimuovere la parte del percorso di un percorso completo e il nome del file.
 
 ```
 void StripPath();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
-##  <a name="striptoroot"></a>CPathT:: StripToRoot
+## <a name="cpathtstriptoroot"></a><a name="striptoroot"></a>CPathT::StripToRoot
 
-Chiamare questo metodo per rimuovere tutte le parti del percorso ad eccezione delle informazioni della radice.
+Chiamare questo metodo per rimuovere tutte le parti del percorso ad eccezione delle informazioni radice.
 
 ```
 BOOL StripToRoot();
@@ -877,13 +877,13 @@ BOOL StripToRoot();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se è stata trovata una lettera di unità valida nel percorso. in caso contrario, FALSE.
+Restituisce TRUE se è stata trovata una lettera di unità valida nel percorso oppure FALSE in caso contrario.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).
 
-##  <a name="unquotespaces"></a>CPathT:: UnquoteSpaces
+## <a name="cpathtunquotespaces"></a><a name="unquotespaces"></a>CPathT::UnquoteSpaces (Spazi di uncitatura)
 
 Chiamare questo metodo per rimuovere le virgolette dall'inizio e dalla fine di un percorso.
 
@@ -891,11 +891,11 @@ Chiamare questo metodo per rimuovere le virgolette dall'inizio e dalla fine di u
 void UnquoteSpaces();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
 
-##  <a name="xchar"></a>CPathT:: XCHAR
+## <a name="cpathtxchar"></a><a name="xchar"></a>CPathT::XCHAR
 
 Tipo carattere.
 
@@ -903,9 +903,9 @@ Tipo carattere.
 typedef StringType::XCHAR XCHAR;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`StringType` è il parametro di modello da `CPathT`.
+`StringType`è il parametro di modello per `CPathT`.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,11 +1,13 @@
 ---
 title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
+- _o_isgraph
+- _o_iswgraph
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +42,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b10038a783f05512f12f25a231dd553a1863c143
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442977"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343819"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -71,16 +74,16 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Valore Integer da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di un carattere stampabile diverso da uno spazio. l'oggetto **Graph** restituisce un valore diverso da zero se *c* è un carattere stampabile diverso da uno spazio. **iswgraph** restituisce un valore diverso da zero se *c* è un carattere Wide stampabile diverso da uno spazio di caratteri wide. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere stampabile diverso da uno spazio. **isgraph** restituisce un valore diverso da zero se *c* è un carattere stampabile diverso da uno spazio. **iswgraph** restituisce un valore diverso da zero se *c* è un carattere wide stampabile diverso da uno spazio di caratteri wide. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni che hanno il suffisso **_L** usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il **suffisso _l** utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento di **Graph** e **_isgraph_l** non è definito se *c* non è EOF o nell'intervallo compreso tra 0 e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di **isgraph** e **_isgraph_l** non è definito se *c* non è EOF o compreso nell'intervallo da 0 a 0xFF, inclusivo. Quando viene utilizzata una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -88,6 +91,10 @@ Il comportamento di **Graph** e **_isgraph_l** non è definito se *c* non è EOF
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
+
+## <a name="remarks"></a>Osservazioni
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -98,10 +105,10 @@ Il comportamento di **Graph** e **_isgraph_l** non è definito se *c* non è EOF
 |**_isgraph_l**|\<ctype.h>|
 |**_iswgraph_l**|\<ctype.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: _putch, _putwch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putwch
 - _putch
+- _o__putch
+- _o__putwch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950039"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338413"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -60,18 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Carattere da restituire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'esito è positivo, restituisce *c*. Se **_putch** ha esito negativo, restituisce **EOF**; Se **_putwch** ha esito negativo, restituisce **WEOF**.
+Se l'esito è positivo, restituisce *c*. Se **_putch** ha esito negativo, restituisce **EOF;** se **_putwch** ha esito negativo, restituisce **WEOF**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Queste funzioni scrivono il carattere *c* direttamente, senza buffer, nella console. In Windows NT **_putwch** scrive caratteri Unicode usando le impostazioni locali della console correnti.
+Queste funzioni scrivono direttamente il carattere *c,* senza buffering, nella console. In Windows NT **_putwch** scrive caratteri Unicode usando le impostazioni locali della console correnti.
 
-Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Per ulteriori informazioni, vedere **_putch_nolock**, **_putwch_nolock**.
+Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Per ulteriori informazioni, vedere **_putch_nolock** **, _putwch_nolock**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -86,7 +91,7 @@ Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che 
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -98,6 +103,6 @@ Vedere l'esempio per [_getch](getch-getwch.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

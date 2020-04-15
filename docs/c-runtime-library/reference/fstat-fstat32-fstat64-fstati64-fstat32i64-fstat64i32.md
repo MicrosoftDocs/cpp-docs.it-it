@@ -1,6 +1,6 @@
 ---
 title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fstat32
 - _fstat64
@@ -8,6 +8,10 @@ api_name:
 - _fstat
 - _fstat64i32
 - _fstat32i64
+- _o__fstat32
+- _o__fstat32i64
+- _o__fstat64
+- _o__fstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 1ab71071fdf5578295cfcd72f79930787e634d5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 02d297fec2ada545a8b693abacfecc7981149dae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956469"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345676"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -94,7 +99,7 @@ int _fstat64i32(
 
 ### <a name="parameters"></a>Parametri
 
-*fd*<br/>
+*Fd*<br/>
 Descrittore di file del file aperto.
 
 *buffer*<br/>
@@ -102,36 +107,38 @@ Puntatore alla struttura per l'archiviazione dei risultati.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 se si ottengono le informazioni sullo stato dei file. Un valore restituito di-1 indica un errore. Se il descrittore del file non è valido o il *buffer* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, nel caso di un descrittore di file non valido o di **EINVAL**, se il *buffer* è **null**.
+Restituisce 0 se si ottengono le informazioni sullo stato dei file. Un valore restituito di -1 indica un errore. Se il descrittore di file non è valido o *il buffer* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EBADF**, nel caso di un descrittore di file non valido, o **su EINVAL**, se *buffer* è **NULL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_fstat** ottiene informazioni sul file aperto associato a *FD* e lo archivia nella struttura a cui punta il *buffer*. La struttura **_stat** , definita in SYS\Stat.h, contiene i campi seguenti.
+La funzione **_fstat** ottiene informazioni sul file aperto associato a *fd* e le archivia nella struttura a cui punta *buffer*. La struttura **_stat,** definita in SYS-Stat.h, contiene i campi riportati di seguito.
 
 |Campo|Significato|
 |-|-|
 | **st_atime** | Ora dell'ultimo accesso al file. |
 | **st_ctime** | Ora di creazione del file. |
-| **st_dev** | Se un dispositivo, *FD*; in caso contrario, 0. |
-| **st_mode** | Maschera di bit per informazioni sulla modalità di file. Il bit **_S_IFCHR** viene impostato se *FD* fa riferimento a un dispositivo. Il bit **_S_IFREG** viene impostato se *FD* fa riferimento a un file normale. I bit di lettura/scrittura vengono impostati in base alla modalità di autorizzazione del file. **_S_IFCHR** e altre costanti sono definite in SYS\Stat.h. |
+| **st_dev** | Se un dispositivo, *fd*; in caso contrario 0. |
+| **st_mode** | Maschera di bit per informazioni sulla modalità di file. Il **bit _S_IFCHR** viene impostato se *fd* fa riferimento a un dispositivo. Il **bit _S_IFREG** viene impostato se *fd* si riferisce a un file ordinario. I bit di lettura/scrittura vengono impostati in base alla modalità di autorizzazione del file. **_S_IFCHR** e altre costanti sono definite in SYS. |
 | **st_mtime** | Ora dell'ultima modifica del file. |
 | **st_nlink** | Sempre 1 nel file system non NTFS. |
-| **st_rdev** | Se un dispositivo, *FD*; in caso contrario, 0. |
+| **st_rdev** | Se un dispositivo, *fd*; in caso contrario 0. |
 | **st_size** | Dimensioni del file, in byte. |
 
-Se *FD* fa riferimento a un dispositivo, i campi **st_atime**, **st_ctime**, **st_mtime**e **st_size** non sono significativi.
+Se *fd* fa riferimento a un dispositivo, i campi **st_atime**, **st_ctime**, **st_mtime**e **st_size** non sono significativi.
 
 Dato che Stat.h usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in Types.h, è necessario includere Types.h prima di Stat.h nel codice.
 
-**_fstat64**, che usa la struttura **__stat64** , consente di esprimere le date di creazione dei file fino a 23:59:59, 31 dicembre 3000, UTC; mentre le altre funzioni rappresentano solo le date fino 23:59:59 del 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
+**_fstat64**, che utilizza la struttura **__stat64,** consente di esprimere le date di creazione dei file fino alle 23:59:59, 31 dicembre 3000 UTC; mentre le altre funzioni rappresentano solo le date fino alle 23:59:59 del 18 gennaio 2038 UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
 
-Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica le dimensioni del tipo di tempo usato; il secondo suffisso è **i32** o **I64**, che indica se le dimensioni del file sono rappresentate come Integer a 32 bit o a 64 bit.
+Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica la dimensione del tipo di tempo utilizzato; il secondo suffisso è **i32** o **i64**, che indica se la dimensione del file è rappresentata come intero a 32 bit o a 64 bit.
 
-**_fstat** è equivalente a **_fstat64i32**e **struct** **_stat** contiene un'ora a 64 bit. Questo vale a meno che non sia definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_fstat** usa un'ora a 32 bit e **struct** **_stat** contiene un'ora a 32 bit. Lo stesso vale per **_fstati64**.
+**_fstat** è equivalente a **_fstat64i32**e **_stat** **struct** contiene un'ora a 64 bit. Questo è vero a meno che non sia definito **_USE_32BIT_TIME_T,** nel qual caso il comportamento precedente è attivo; **_fstat** utilizza un'ora a 32 bit e **_stat** **struct** contiene un'ora a 32 bit. Lo stesso vale per **_fstati64**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Variazioni tipo time e tipo lunghezza file di _stat
 
-|Funzioni|_USE_32BIT_TIME_T definito?|Tipo Time|Tipo lunghezza file|
+|Funzioni|_USE_32BIT_TIME_T definito?|Tipo time|Tipo lunghezza file|
 |---------------|------------------------------------|---------------|----------------------|
 |**_fstat**|Non definito|64 bit|32 bit|
 |**_fstat**|Definito|32 bit|32 bit|
@@ -153,7 +160,7 @@ Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze 
 |**_fstat32i64**|\<sys/stat.h> e \<sys/types.h>|
 |**_fstat64i32**|\<sys/stat.h> e \<sys/types.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -222,7 +229,7 @@ Time modified : Wed May 07 15:25:11 2003
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_filelength, _filelengthi64](filelength-filelengthi64.md)<br/>

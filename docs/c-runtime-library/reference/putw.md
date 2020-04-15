@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338325"
 ---
 # <a name="_putw"></a>_putw
 
@@ -52,18 +54,20 @@ int _putw(
 *binint*<br/>
 Integer binario da restituire.
 
-*stream*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il valore scritto. Un valore restituito di **EOF** potrebbe indicare un errore. Poiché **EOF** è anche un valore intero legittimo, usare **Ferrer** per verificare un errore. Se il *flusso* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EOF**.
+Restituisce il valore scritto. Un valore restituito di **EOF** potrebbe indicare un errore. Poiché **EOF** è anche un valore intero legittimo, utilizzare **ferror** per verificare un errore. Se *stream* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EOF**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_putw** scrive un valore binario di tipo **int** nella posizione corrente del *flusso.* **_putw** non influisce sull'allineamento degli elementi nel flusso né presuppone un allineamento speciale. **_putw** è principalmente per la compatibilità con le librerie precedenti. È possibile che si verifichino problemi di portabilità con **_putw** perché le dimensioni di un **int** e l'ordine dei byte all'interno di un **int** sono diverse tra i sistemi.
+La funzione **_putw** scrive un valore binario di tipo **int** nella posizione corrente del *flusso.* **_putw** non influisce sull'allineamento degli elementi nel flusso né presuppone alcun allineamento speciale. **_putw** è principalmente per la compatibilità con le librerie precedenti. I problemi di portabilità possono verificarsi con **_putw** perché la dimensione di un **int** e l'ordine dei byte all'interno di un **int** differiscono tra i sistemi.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -71,7 +75,7 @@ La funzione **_putw** scrive un valore binario di tipo **int** nella posizione c
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

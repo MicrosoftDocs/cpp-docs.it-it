@@ -1,8 +1,9 @@
 ---
 title: _fcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fcvt_s
+- _o__fcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 80f02467e160e3196982c10576ad55f5487e5fc1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623842"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347451"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -68,50 +70,52 @@ Buffer specificato che conterrà il risultato della conversione.
 *sizeInBytes*<br/>
 Dimensioni del buffer in byte.
 
-*valore*<br/>
+*Valore*<br/>
 Numero da convertire.
 
 *count*<br/>
 Numero di cifre dopo il separatore decimale.
 
-*dec*<br/>
+*Dicembre*<br/>
 Puntatore alla posizione del separatore decimale archiviata.
 
-*sign*<br/>
+*Segno*<br/>
 Puntatore all'indicatore di segno archiviato.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero in caso di esito positivo. Il valore restituito è un codice di errore se si verifica un errore. I codici di errore sono definiti in Errno.h. Per un elenco di questi errori, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione richiama il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione chiama il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*sizeInBytes*|valore|count|dec|segno|INVIO|Valore nel *buffer*|
+|*buffer*|*sizeInBytes*|value|count|dec|sign|Return|Valore nel *buffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|any|any|any|any|any|**EINVAL**|Non modificato.|
-|Not **null** (punta alla memoria valida)|<=0|any|any|any|any|**EINVAL**|Non modificato.|
-|any|any|any|any|**NULL**|any|**EINVAL**|Non modificato.|
-|any|any|any|any|any|**NULL**|**EINVAL**|Non modificato.|
+|**Null**|any|any|any|any|any|**Einval**|Non modificato.|
+|Non **NULL** (punta alla memoria valida)|<=0|any|any|any|any|**Einval**|Non modificato.|
+|any|any|any|any|**Null**|any|**Einval**|Non modificato.|
+|any|any|any|any|any|**Null**|**Einval**|Non modificato.|
 
-## <a name="security-issues"></a>Problemi relativi alla sicurezza
+## <a name="security-issues"></a>Problemi di sicurezza
 
-**_fcvt_s** potrebbe generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
+**_fcvt_s** potrebbe generare una violazione di accesso se *buffer* non punta a memoria valida e non è **NULL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_fcvt_s** converte un numero a virgola mobile in una stringa di caratteri con terminazione null. Il parametro *value* è il numero a virgola mobile da convertire. **_fcvt_s** archivia le cifre del *valore* come stringa e aggiunge un carattere null (' \ 0'). Il parametro *count* specifica il numero di cifre da archiviare dopo la virgola decimale. Le cifre in eccedenza vengono arrotondate per *calcolare* le posizioni. Se sono presenti meno di un *numero* di cifre di precisione, la stringa viene riempita con zeri.
+La funzione **_fcvt_s** converte un numero a virgola mobile in una stringa di caratteri con terminazione null. Il parametro *value* è il numero a virgola mobile da convertire. **_fcvt_s** archivia le cifre del *valore* come stringa e aggiunge un carattere nullo (''0'). Il parametro *count* consente di specificare il numero di cifre da memorizzare dopo il separatore decimale. Le cifre in eccesso vengono arrotondate per *contare* i luoghi. Se sono presenti meno di *count* cifre di precisione, la stringa viene riempita con zeri.
 
-Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* possono essere ottenuti da *Dec* e *firmare* dopo la chiamata. Il parametro *Dec* punta a un valore integer. Questo valore integer assegna la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il *segno* del parametro punta a un Integer che indica il segno del *valore*. Il valore integer viene impostato su 0 se il *valore* è positivo e viene impostato su un numero diverso da zero se il *valore* è negativo.
+Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* possono essere ottenuti da *dec* e *sign* dopo la chiamata. Il *dec* dec parametro punta a un valore intero; questo valore intero fornisce la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il segno di *parametro* punta a un numero intero che indica il segno di *valore*. Il numero intero è impostato su 0 se *value* è positivo ed è impostato su un numero diverso da zero se *value* è negativo.
 
 Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile.
 
-La differenza tra **_ecvt_s** e **_fcvt_s** è l'interpretazione del parametro *count* . **_ecvt_s** interpreta *count* come il numero totale di cifre nella stringa di output e **_fcvt_s** interpreta il *conteggio* come numero di cifre dopo il separatore decimale.
+La differenza tra **_ecvt_s** e **_fcvt_s** è nell'interpretazione del parametro *count.* **_ecvt_s** interpreta il *conteggio* come numero totale di cifre nella stringa di output e **_fcvt_s** interpreta *il conteggio* come numero di cifre dopo il separatore decimale.
 
-In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-La versione di debug di questa funzione riempie prima di tutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versione di debug di questa funzione riempie innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -157,8 +161,8 @@ Converted value: 120000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt_s](ecvt-s.md)<br/>
 [_gcvt_s](gcvt-s.md)<br/>

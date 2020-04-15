@@ -1,6 +1,6 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341872"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -74,24 +77,26 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore di cui trovare il logaritmo.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni di **log** restituiscono il logaritmo naturale (base *e*) di *x* in caso di esito positivo. Le funzioni **log10** restituiscono il logaritmo in base 10. Se *x* è negativo, queste funzioni restituiscono un valore indefinito (IND) per impostazione predefinita. Se *x* è 0, restituiscono Infinity (inf).
+Le funzioni **di log** restituiscono il logaritmo naturale (base *e*) di *x* in caso di esito positivo. Le funzioni **log10** restituiscono il logaritmo in base 10. Se *x* è negativo, queste funzioni restituiscono un indefinito (IND), per impostazione predefinita. Se *x* è 0, restituiscono infinito (INF).
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|QNAN, IND|none|_DOMAIN|
+|: 0 (in questo modo)|ZERODIVIDE|_SING|
 |*x* < 0|NON VALIDO|_DOMAIN|
 
-**log** e **log10** hanno un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**log** e **log10** hanno un'implementazione che utilizza Streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-C++consente l'overload, quindi è possibile chiamare gli overload di **log** e **log10** che accettano e restituiscono valori **float** o **long double** . In un programma C, **log** e **log10** accettano sempre e restituiscono un **valore Double**.
+Il linguaggio C, ovvero l'overload, pertanto è possibile chiamare overload di **log** e **log10** che accettano e restituiscono valori **float** o **long double.** In un programma C, **log** e **log10** accettano e restituiscono sempre un **doppio**file .
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -158,7 +163,7 @@ Log base 2 of 65536.000000 is 16.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md) <br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [_matherr](matherr.md) <br/>
 [pow, powf, powl](pow-powf-powl.md) <br/>

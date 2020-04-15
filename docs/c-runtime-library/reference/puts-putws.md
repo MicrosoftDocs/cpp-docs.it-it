@@ -1,9 +1,11 @@
 ---
 title: puts, _putws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putws
 - puts
+- _o__putws
+- _o_puts
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9681373ccf338daf05be3120fbadd39ba471e86a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332964"
 ---
 # <a name="puts-_putws"></a>puts, _putws
 
@@ -57,22 +60,24 @@ int _putws(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*Str*<br/>
 Stringa di output.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore non negativo se ha esito positivo. Se il **put** ha esito negativo, restituisce **EOF**; Se **_putws** ha esito negativo, restituisce **WEOF**. Se *Str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** su **EINVAL** e restituiscono **EOF** o **WEOF**.
+Restituisce un valore non negativo se ha esito positivo. Se **puts** ha esito negativo, restituisce **EOF;** se **_putws** ha esito negativo, restituisce **WEOF**. Se *str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** su **EINVAL** e restituiscono **EOF** o **WEOF**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **put** scrive la *Str* nel flusso di output standard **stdout**, sostituendo il carattere null di terminazione della stringa (' \ 0') con un carattere di nuova riga (' \n ') nel flusso di output.
+La funzione **puts** scrive *str* nel flusso di output standard **stdout**, sostituendo il carattere di terminazione della stringa null (''0') con un carattere di nuova riga (''n') nel flusso di output.
 
-**_putws** è la versione a caratteri wide di **put**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. il servizio **put** non supporta attualmente l'output in un flusso Unicode.
+**_putws** è la versione a caratteri wide di **puts**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **puts** non supporta attualmente l'output in un flusso UNICODE.
 
-**_putwch** scrive caratteri Unicode usando le impostazioni locali della console correnti.
+**_putwch** scrive caratteri Unicode utilizzando l'impostazione LOCALE CONSOLE corrente.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -87,7 +92,7 @@ La funzione **put** scrive la *Str* nel flusso di output standard **stdout**, so
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app UWP (Universal Windows Platform). Gli handle di flusso standard associati alla console, **stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano utilizzarli nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-ms.openlocfilehash: 079a3390df56ba55bd4d71a320faa249266abb54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c168653a82b4d4c5023de1f76a1e6269625c74d8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189013"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354867"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operatore di conversione esplicita di tipi: ()
 
@@ -27,13 +27,13 @@ simple-type-name ( expression-list )
 
 ## <a name="remarks"></a>Osservazioni
 
-Un *nome di tipo semplice* seguito da un *elenco di espressioni* racchiuso tra parentesi costruisce un oggetto del tipo specificato usando le espressioni specificate. Nell'esempio seguente viene illustrata una conversione di tipo esplicita per il tipo int:
+Un *simple-type-name* seguito da un *expression-list* racchiuso tra parentesi costruisce un oggetto del tipo specificato utilizzando le espressioni specificate. Nell'esempio seguente viene illustrata una conversione di tipo esplicita per il tipo int:
 
 ```cpp
 int i = int( d );
 ```
 
-Nell'esempio seguente viene illustrata una classe `Point`.
+Nell'esempio seguente `Point` viene illustrata una classe.
 
 ## <a name="example"></a>Esempio
 
@@ -88,7 +88,7 @@ x = 20, y = 10
 x = 0, y = 0
 ```
 
-Sebbene l'esempio precedente dimostri la conversione del tipo esplicita mediante le costanti, la stessa tecnica può essere utilizzata per eseguire queste conversioni di oggetti. Nel frammento di codice seguente viene illustrato quanto appena indicato:
+Sebbene l'esempio precedente dimostri la conversione del tipo esplicita mediante le costanti, la stessa tecnica può essere utilizzata per eseguire queste conversioni di oggetti. Nel frammento di codice che segue viene illustrata questa alternativa:
 
 ```cpp
 int i = 7;
@@ -116,16 +116,16 @@ struct Point
 Point pt = Point( 3, 10 );
 ```
 
-Nell'esempio precedente, che usa la conversione di tipo funzione, viene illustrato come convertire due valori (uno per *x* e uno per *y*) nel tipo definito dall'utente `Point`.
+Nell'esempio precedente, che utilizza la conversione in stile funzione, viene illustrato come convertire due `Point`valori (uno per *x* e uno per *y*) nel tipo definito dall'utente .
 
 > [!CAUTION]
->  Si consiglia di utilizzare con cautela le conversioni esplicite del tipo, poiché queste eseguono l'override del controllo del tipo incorporato del compilatore C++.
+> Si consiglia di utilizzare con cautela le conversioni esplicite del tipo, poiché queste eseguono l'override del controllo del tipo incorporato del compilatore C++.
 
-La notazione [cast](../cpp/cast-operator-parens.md) deve essere utilizzata per le conversioni ai tipi che non hanno un *nome di tipo semplice* (ad esempio, un puntatore o tipi di riferimento). La conversione in tipi che possono essere espressi con un *nome di tipo semplice* può essere scritta in qualsiasi formato.
+La notazione [cast](../cpp/cast-operator-parens.md) deve essere utilizzata per le conversioni in tipi che non hanno un *simple-type-name* (ad esempio, i tipi puntatore o di riferimento). La conversione in tipi che possono essere espressi con un *simple-type-name* possono essere scritti in entrambi i campi.
 
 La definizione del tipo all'interno dei cast non è consentita.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Espressioni di suffissi](../cpp/postfix-expressions.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[Espressioni in forma suffissa](../cpp/postfix-expressions.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

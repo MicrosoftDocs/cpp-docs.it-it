@@ -1,9 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951787"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333160"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -61,14 +63,14 @@ errno_t wmemmove_s(
 *dest*<br/>
 Oggetto di destinazione.
 
-*numberOfElements*<br/>
+*Sizeinbytes*<br/>
 Dimensioni del buffer di destinazione.
 
 *src*<br/>
 Oggetto di origine.
 
 *count*<br/>
-Numero di byte (**memmove_s**) o caratteri (**wmemmove_s**) da copiare.
+Numero di byte **(memmove_s**) o caratteri **(wmemmove_s**) da copiare.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -76,17 +78,19 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*dest*|*numberOfElements*|*src*|Valore restituito|Contenuto di *dest*|
+|*dest*|*Sizeinbytes*|*src*|Valore restituito|Contenuto di *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|qualsiasi|qualsiasi|**EINVAL**|non modificato|
-|qualsiasi|qualsiasi|**NULL**|**EINVAL**|non modificato|
-|qualsiasi|< *count*|qualsiasi|**ERANGE**|non modificato|
+|**Null**|any|any|**Einval**|non modificato|
+|any|any|**Null**|**Einval**|non modificato|
+|any|< *Conteggio*|any|**ERANGE**|non modificato|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Copia il *numero* di byte di caratteri da *src* a *dest*. Se alcune aree dell'area di origine e di destinazione si sovrappongono, **memmove_s** garantisce che i byte di origine originali nell'area sovrapposta vengano copiati prima di essere sovrascritti.
+Le copie *contano i* byte di caratteri da *src* a *dest*. Se alcune aree dell'area di origine e della destinazione si sovrappongono, **memmove_s** assicura che i byte di origine originali nell'area sovrapposta vengano copiati prima di essere sovrascritti.
 
-Se *dest* o se *src* è un puntatore null o se la stringa di destinazione è troppo piccola, queste funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
+Se *dest* o *src* è un puntatore null o se la stringa di destinazione è troppo piccola, queste funzioni richiamano un gestore di parametri non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,10 +1,11 @@
 ---
 title: floor, floorf, floorl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - floorf
 - floorl
 - floor
+- _o_floor
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957153"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346676"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -65,28 +67,30 @@ long double floorl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **floor** restituiscono un valore a virgola mobile che rappresenta l'intero più grande minore o uguale a *x*. Non vi è restituzione di errori.
+Le funzioni **del pavimento** restituiscono un valore a virgola mobile che rappresenta l'intero più grande minore o uguale a *x*. Non vi è restituzione di errori.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|_DOMAIN|
+|QNAN,IND|none|_DOMAIN|
 
-**floor** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**un'implementazione** che utilizza streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-C++consente l'overload, quindi è possibile chiamare gli overload di **floor** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C, **floor** accetta sempre e restituisce un **valore Double**.
+Il linguaggio C, ovvero l'overload, in modo da poter chiamare gli overload del **pavimento** che accettano e restituiscono valori **float** e **long** **double.** In un programma C, **floor** accetta e restituisce sempre un **doppio**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**floor**, **floorf**, **floorl**|\<math.h>|
+|**piano**, **piana**, **pavimento**|\<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -127,7 +131,7 @@ The ceil of -2.8 is -2.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: frexp, frexpf, frexpl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - frexp
+- _o_frexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345802"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
@@ -68,7 +70,7 @@ long double frexp(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile.
 
 *expptr*<br/>
@@ -76,13 +78,15 @@ Puntatore all'esponente intero archiviato.
 
 ## <a name="return-value"></a>Valore restituito
 
-**frexp** restituisce mantissa. Se *x* è 0, la funzione restituisce 0 sia per mantissa che per l'esponente. Se *expptr* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
+**frexp** restituisce la mantissa. Se *x* è 0, la funzione restituisce 0 sia per la mantissa che per l'esponente. Se *expptr* è **NULL**, il gestore di parametri non validi viene richiamato come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **frexp** suddivide il valore a virgola mobile (*x*) in un mantissa (*m*) e un esponente (*n*), in modo che il valore assoluto di *m* sia maggiore o uguale a 0,5 e minore di 1,0 e *x*  =  *m* * 2<sup>*n*</sup>. L'esponente integer *n* viene archiviato nella posizione a cui punta *expptr*.
+La funzione **frexp** scompone il valore a virgola mobile (*x*) in una mantissa (*m*) e un esponente (*n*), in modo che il valore assoluto di *m* sia maggiore o uguale a 0,5 e minore di 1,0 e *x* = *m* , 2<sup>*n*</sup>. L'esponente intero *n* viene memorizzato nella posizione a cui punta *expptr*.
 
-C++consente l'overload, in modo che sia possibile chiamare gli overload di **frexp**. In un programma C **frexp** accetta sempre un **valore Double** e un puntatore **int** e restituisce un **valore Double**.
+Il linguaggio C, ovvero l'overload, in modo da poter chiamare gli overload di **frexp**. In un programma C, **frexp** accetta sempre un **puntatore double** e un **int** e restituisce un **doppio**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -119,6 +123,6 @@ frexp( 16.400000, &n ) = 0.512500, n = 5
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

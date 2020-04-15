@@ -12,35 +12,35 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abb0443ab8fbd315524350caaff34e0250147ed2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328509"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importazione ed esportazione di funzioni inline
 
-Funzioni importate possono essere definite come inline. L'effetto equivale approssimativamente definizione inline una funzione standard. nel codice inline, molto simile a una macro vengono espanse le chiamate alla funzione. Questa funzionalità è particolarmente utile come un modo di supportare C++ le classi in una DLL che può rendere inline alcune delle loro membro funzioni per efficienza.
+Le funzioni importate possono essere definite come inline. L'effetto è all'incirca lo stesso della definizione di una funzione standard inline; le chiamate alla funzione vengono espanse nel codice inline, proprio come una macro. Ciò è principalmente utile per supportare le classi C , in una DLL che potrebbe inline alcune delle relative funzioni membro per l'efficienza.
 
-Una funzionalità di una funzione inline importata è che è possibile usare l'indirizzo in C++. Il compilatore restituisce l'indirizzo della copia della funzione inline che si trovano nella DLL. Un'altra funzionalità di funzioni inline importate è che è possibile inizializzare i dati locali statici della funzione importata, a differenza dei dati importati globale.
+Una caratteristica di una funzione inline importata è che è possibile prendere il suo indirizzo in C . Il compilatore restituisce l'indirizzo della copia della funzione inline che risieda nella DLL. Un'altra funzionalità delle funzioni inline importate è che è possibile inizializzare i dati locali statici della funzione importata, a differenza dei dati importati globali.
 
 > [!CAUTION]
->  È necessario prestare attenzione quando si forniscono funzioni inline importate perché possono creare conflitti di versione di. Una funzione inline viene espanso in codice dell'applicazione; Pertanto, se in un secondo momento si riscrive la funzione, non viene aggiornato a meno che non viene ricompilato l'applicazione stessa. (In genere, le funzioni di DLL possono essere aggiornate senza ricompilare le applicazioni che li utilizzano.)
+> È necessario prestare attenzione quando si forniscono funzioni inline importate perché possono creare la possibilità di conflitti di versione. Una funzione inline viene espansa nel codice dell'applicazione; Pertanto, se in seguito si riscrive la funzione, non viene aggiornata a meno che l'applicazione stessa non venga ricompilata. In genere, le funzioni DLL possono essere aggiornate senza ricompilare le applicazioni che le utilizzano.
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Esportazione da una DLL](exporting-from-a-dll.md)
 
-- [Esportazione da una DLL mediante. File DEF](exporting-from-a-dll-using-def-files.md)
+- [Esportare da una DLL utilizzando . File DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione da una DLL tramite dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Esportazione da una DLL utilizzando __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Esportazione e importazione utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Esportare e importare utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Esportare le funzioni di C, per l'utilizzo in file eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
 - [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 

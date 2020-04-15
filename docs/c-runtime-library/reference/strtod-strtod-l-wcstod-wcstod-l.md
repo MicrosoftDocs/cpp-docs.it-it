@@ -1,11 +1,15 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
-ms.date: 10/20/2017
+ms.date: 4/2/2020
 api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
+- _o__strtod_l
+- _o__wcstod_l
+- _o_strtod
+- _o_wcstod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a688846d5db4d508327745728f8933c91bfd54e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337659"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -81,24 +86,26 @@ double wcstod_l(
 
 ### <a name="parameters"></a>Parametri
 
-*strSource*<br/>
+*Strsource*<br/>
 Stringa con terminazione Null da convertire.
 
-*endptr*<br/>
+*endptr (in base alla data in*<br/>
 Puntatore al carattere che interrompe la lettura.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtod** restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione potrebbe causare un overflow, nel qual caso la funzione restituisce +/-**HUGE_VAL**. Il segno di **HUGE_VAL** corrisponde al segno del valore che non può essere rappresentato. **strtod** restituisce 0 se non è possibile eseguire alcuna conversione o si verifica un underflow.
+**strtod** restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione causerebbe un overflow, nel qual caso la funzione restituisce HUGE_VAL di**lavoro**. Il segno di **HUGE_VAL** corrisponde al segno del valore che non può essere rappresentato. **strtod** restituisce 0 se non è possibile eseguire alcuna conversione o se si verifica un underflow.
 
-**wcstod** restituisce i valori in modo analogo a **strtod**. Per entrambe le funzioni, **errno** viene impostato su **ERANGE** se si verifica un overflow o un underflow e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**wcstod** restituisce i valori analogamente a **strtod**. Per entrambe le funzioni, **errno** è impostato su **ERANGE** se si verifica un overflow o un underflow e viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Ogni funzione converte la stringa di input *strSource* in un **valore Double**. La funzione **strtod** converte *strSource* in un valore a precisione doppia. **strtod** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. **wcstod** è una versione a caratteri wide di **strtod**; il relativo argomento *strSource* è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+Ogni funzione converte la stringa di input *strSource* in un **file double.** La funzione **strtod** converte *strSource* in un valore a precisione doppia. **strtod** interrompe la lettura della stringa *strSource* al primo carattere che non è in grado di riconoscere come parte di un numero. Questo può essere il carattere Null di terminazione. **wcstod** è una versione a caratteri wide di **strtod**; il relativo argomento *strSource* è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -107,23 +114,23 @@ Ogni funzione converte la stringa di input *strSource* in un **valore Double**. 
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali correnti determina il riconoscimento del carattere punto radice in *strSource*. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il suffisso **suffisso** usano le impostazioni locali correnti; **_strtod_l** è identico a **_strtod_l** ad eccezione del fatto che usano le *impostazioni locali* passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+L'impostazione **LC_NUMERIC** categoria delle impostazioni locali correnti determina il riconoscimento del carattere del punto di radice in *strSource*. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il **suffisso _l** utilizzano le impostazioni locali correnti; **_strtod_l** è identica a **_strtod_l** ad eccezione del fatto che usano le *impostazioni locali* passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'analisi viene archiviato in corrispondenza della posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
+Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto l'analisi viene memorizzato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
 
-**strtod** prevede che *strSource* faccia riferimento a una stringa di uno dei seguenti formati:
+**strtod** prevede che *strSource* punti a una stringa di una delle forme seguenti:
 
-[*spazi vuoti*] [*segno*] {*cifre* [ *cifre*radice] &#124; *cifre*radice} [{**e** &#124; **e**} [*Sign*] *digits*] *[spazio vuoto*] [*Sign*] {**0x** &#124; **0x**} {*hexdigits* [*radice* *hexdigits*] &#124;  *radice* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*spazio vuoto*] *[sign*] {**inf** &#124; **Infinity**} [*spazio*] [ *Sign*] **NaN** [*Sequence*]
+[*spazio vuoto*] [*segno*] Cifre [*cifre* *radiodix* *digits*] &#124; *cifre* *radioss* [e**e** &#124; **E**: [*segno*] *cifre*] [*spazio vuoto*] [*segno*] -**0x** &#124; **0X**, x 0X , x , x , esadecimali [*cifre* esadecimali*radiox* *hexdigits*] &#124; *radix* *hexdigits*, [sezione**p** &#124; **P**,*[ segno*] *hexdigits*] [*spazio vuoto*] [*segno*] ]**- INF** &#124; **INFINITY**- [*spazio vuoto*] [*segno* **] [** *sequenza ]*]
 
-Lo spazio *vuoto* iniziali facoltativo può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* corrispondono a una o più cifre decimali; *hexdigits* sono una o più cifre esadecimali; la *radice* è il carattere punto radice, un punto (.) nelle impostazioni locali "C" predefinite oppure il valore specifico delle impostazioni locali se le impostazioni locali correnti sono diverse o se *le impostazioni locali sono specificate* . una *sequenza* è una sequenza di caratteri alfanumerici o di sottolineatura. Nei formati con numero decimale e esadecimale, se non sono presenti cifre prima del carattere punto radice, è necessario che almeno uno venga visualizzato dopo il carattere punto radice. Nel formato decimale, le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo. Nel formato esadecimale, le cifre esadecimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**p** o **p**) e da un Integer esadecimale con segno facoltativo che rappresenta l'esponente come potenza di 2. In entrambi i casi, se non viene visualizzata né una parte dell'esponente né un carattere punto di base, viene utilizzato un carattere punto radice per seguire l'ultima cifra della stringa. Il caso viene ignorato nei form **inf** e **NaN** . Il primo carattere che non rientra in uno di questi moduli interrompe l'analisi.
+Lo *spazio iniziale* facoltativo può essere costituito da spazi e caratteri di tabulazione, che vengono ignorati; *segno* è il segno più (-) o meno (-); *cifre* sono una o più cifre decimali; *le cifre esadecimali* sono una o più cifre esadecimali; *radix* è il carattere del punto di radice, un punto (.) nelle impostazioni locali "C" predefinite o il valore specifico delle impostazioni locali se le impostazioni locali correnti sono diverse o quando vengono specificate *le impostazioni locali;* una *sequenza* è una sequenza di caratteri alfanumerici o di sottolineatura. Nelle forme di numeri decimali ed esadecimali, se non vengono visualizzate cifre prima del carattere del punto di radice, almeno una deve comparire dopo il carattere del punto di radice. Nel formato decimale, le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **E**) e da un numero intero con segno facoltativo. Nel formato esadecimale, le cifre esadecimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**p** o **P**) e da un numero intero esadecimale con segno facoltativo che rappresenta l'esponente come potenza di 2. In entrambi i casi, se non viene visualizzata né una parte esponente né un carattere punto radice, si presuppone che un carattere punto di radice segua l'ultima cifra nella stringa. Case viene ignorato nei moduli **INF** e **NAN.** Il primo carattere che non rientra in una di queste forme interrompe la scansione.
 
-Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponenti di tipo FORTRAN (**d** o **d**). Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente. Le versioni UCRT supportano le stringhe esadecimali e il round trip dei valori INF e NAN, che non erano supportati nelle versioni precedenti. Questo può anche causare modifiche di rilievo nel codice. Ad esempio, la stringa "0x1a" verrebbe interpretata da **strtod** come 0,0 nelle versioni precedenti, ma come 26,0 nella versione UCRT.
+Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponenti in stile Fortran **(d** o **D).** Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente. Le versioni UCRT supportano stringhe esadecimali e round trip dei valori INF e NAN, che non erano supportati nelle versioni precedenti. Ciò può anche causare modifiche di rilievo nel codice. Ad esempio, la stringa "0x1a" verrebbe interpretata da **strtod** come 0.0 nelle versioni precedenti, ma come 26.0 nella versione UCRT.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strtod**, **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> o &lt;stdlib.h> |
+|**strtod** **, _strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> o &lt;stdlib.h> |
 |**wcstod**, **_wcstod_l**|C: &lt;stdlib.h> o &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> o &lt;wchar.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
@@ -195,10 +202,10 @@ string = 10110134932
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

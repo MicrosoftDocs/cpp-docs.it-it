@@ -1,8 +1,9 @@
 ---
 title: _eof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _eof
+- _o__eof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941976"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347926"
 ---
 # <a name="_eof"></a>_eof
 
@@ -50,16 +52,18 @@ int _eof(
 
 ### <a name="parameters"></a>Parametri
 
-*fd*<br/>
+*Fd*<br/>
 Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_eof** restituisce 1 se la posizione corrente è la fine del file o 0 in caso contrario. Un valore restituito di-1 indica un errore. in questo caso, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, che indica un descrittore di file non valido.
+**_eof** restituisce 1 se la posizione corrente è la fine del file oppure 0 se non lo è. Un valore restituito di -1 indica un errore; in questo caso, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EBADF**, che indica un descrittore di file non valido.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_eof** determina se è stata raggiunta la fine del file associato a *FD* .
+La funzione **_eof** determina se è stata raggiunta la fine del file associato a *fd.*
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -67,7 +71,7 @@ La funzione **_eof** determina se è stata raggiunta la fine del file associato 
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

@@ -1,9 +1,11 @@
 ---
 title: _rmdir, _wrmdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wrmdir
 - _rmdir
+- _o__rmdir
+- _o__wrmdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949211"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338062"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -65,21 +68,23 @@ Percorso della directory da rimuovere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Il valore restituito-1 indica un errore e **errno** viene impostato su uno dei valori seguenti:
+Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Un valore restituito pari a -1 indica un errore e **errno** è impostato su uno dei seguenti valori:
 
 |Valore errno|Condizione|
 |-|-|
 | **ENOTEMPTY** | Il percorso specificato non è una directory, la directory non è vuota o la directory è la directory di lavoro corrente o la directory radice. |
-| **ENOENT** | Il percorso non è valido. |
+| **ENOENTE** | Il percorso non è valido. |
 | **EACCES** | Un programma ha un handle aperto per la directory. |
 
-Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_rmdir** Elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
+La funzione **_rmdir** elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
 
-**_wrmdir** è una versione a caratteri wide di **_rmdir**; l'argomento *dirname* per **_wrmdir** è una stringa di caratteri wide. **_wrmdir** e **_rmdir** si comportano in modo identico.
+**_wrmdir** è una versione a caratteri wide di **_rmdir**; l'argomento *dirname* **per _wrmdir** è una stringa di caratteri wide. **_wrmdir** e **_rmdir** si comportano in modo identico in caso contrario.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -94,7 +99,7 @@ La funzione **_rmdir** Elimina la directory specificata da *dirname*. La directo
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
