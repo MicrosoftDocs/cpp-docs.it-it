@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-ms.openlocfilehash: 8afb2019e38f7548467e85d9a2c1c12c538cf744
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2beffbbed0efee799005190bd7fd071a2087e4d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330091"
 ---
 # <a name="exception-handling-macros"></a>Macro di gestione delle eccezioni
 
@@ -22,17 +22,17 @@ Queste macro forniscono supporto per la gestione delle eccezioni.
 
 |||
 |-|-|
-|[_ATLCATCH](#_atlcatch)|Una o più istruzioni per la gestione degli errori generati nel blocco `_ATLTRY`.|
-|[_ATLCATCHALL](#_atlcatchall)|Una o più istruzioni per la gestione degli errori generati nel blocco `_ATLTRY`.|
-|[_ATLTRY](#_atltry)|Contrassegna una sezione di codice protetto in cui potrebbe verificarsi un errore.|
+|[_ATLCATCH](#_atlcatch)|Istruzioni per gestire gli errori che `_ATLTRY`si verificano nell'oggetto associato.|
+|[_ATLCATCHALL](#_atlcatchall)|Istruzioni per gestire gli errori che `_ATLTRY`si verificano nell'oggetto associato.|
+|[_ATLTRY](#_atltry)|Contrassegna una sezione di codice sorvegliata in cui potrebbe verificarsi un errore.|
 
 ## <a name="requirements"></a>Requisiti:
 
 **Intestazione:** atldef.h
 
-##  <a name="_atlcatch"></a>  _ATLCATCH
+## <a name="_atlcatch"></a><a name="_atlcatch"></a>_ATLCATCH
 
-Una o più istruzioni per la gestione degli errori generati nel blocco `_ATLTRY`.
+Istruzioni per gestire gli errori che `_ATLTRY`si verificano nell'oggetto associato.
 
 ```
 _ATLCATCH(e)
@@ -41,35 +41,35 @@ _ATLCATCH(e)
 ### <a name="parameters"></a>Parametri
 
 *e*<br/>
-Eccezione da intercettare.
+Eccezione a catch.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usato in combinazione con `_ATLTRY`. Si risolve in C++ [catch (e CAtlException)](../../cpp/try-throw-and-catch-statements-cpp.md) per la gestione di un determinato tipo di eccezioni di C++.
+Viene utilizzata insieme a `_ATLTRY`. Risolve in [c'è catch(CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) per la gestione di un determinato tipo di eccezioni C .
 
-##  <a name="_atlcatchall"></a>  _ATLCATCHALL
+## <a name="_atlcatchall"></a><a name="_atlcatchall"></a>_ATLCATCHALL
 
-Una o più istruzioni per la gestione degli errori generati nel blocco `_ATLTRY`.
+Istruzioni per gestire gli errori che `_ATLTRY`si verificano nell'oggetto associato.
 
 ```
 _ATLCATCHALL
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usato in combinazione con `_ATLTRY`. Si risolve in C++ [catch ](../../cpp/try-throw-and-catch-statements-cpp.md) per la gestione di tutti i tipi di eccezioni C++.
+Viene utilizzata insieme a `_ATLTRY`. Risolve in [c'è catch(...)](../../cpp/try-throw-and-catch-statements-cpp.md) per la gestione di tutti i tipi di eccezioni C .
 
-##  <a name="_atltry"></a>  _ATLTRY
+## <a name="_atltry"></a><a name="_atltry"></a>_ATLTRY
 
-Contrassegna una sezione di codice protetto in cui potrebbe verificarsi un errore.
+Contrassegna una sezione di codice sorvegliata in cui potrebbe verificarsi un errore.
 
 ```
 _ATLTRY
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Usato in combinazione con [_ATLCATCH](#_atlcatch) oppure [_ATLCATCHALL](#_atlcatchall). Si risolve per il simbolo di C++ [provare](../../cpp/try-throw-and-catch-statements-cpp.md).
+Utilizzato in combinazione con [_ATLCATCH](#_atlcatch) o [_ATLCATCHALL](#_atlcatchall). Risolve il simbolo di C, [provare](../../cpp/try-throw-and-catch-statements-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

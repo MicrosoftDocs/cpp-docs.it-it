@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333232"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -68,7 +71,7 @@ Secondo buffer.
 *count*<br/>
 Numero di caratteri.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -82,13 +85,15 @@ Il valore restituito indica la relazione tra i buffer.
 |> 0|*buffer1* maggiore di *buffer2*.|
 |**_NLSCMPERROR**|Si è verificato un errore.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_memicmp** Confronta i primi caratteri di *conteggio* dei due buffer *buffer1* e *buffer2* byte per byte. Nel confronto non viene fatta distinzione tra maiuscole e minuscole.
+La funzione **_memicmp** confronta i primi caratteri di *conteggio* dei due buffer *buffer1* e *buffer2* byte per byte. Nel confronto non viene fatta distinzione tra maiuscole e minuscole.
 
-Se *buffer1* o *buffer2* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **_NLSCMPERROR** e imposta **errno** su **EINVAL**.
+Se *buffer1* o *buffer2* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **_NLSCMPERROR** e imposta **errno** su **EINVAL**.
 
-**_memicmp** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **_memicmp_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_memicmp** utilizza le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **_memicmp_l** è identica, ad eccezione del fatto che utilizza invece le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -97,7 +102,7 @@ Se *buffer1* o *buffer2* è un puntatore null, questa funzione richiama un gesto
 |**_memicmp**|\<memory.h> o \<string.h>|
 |**_memicmp_l**|\<memory.h> o \<string.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

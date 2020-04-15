@@ -1,9 +1,11 @@
 ---
 title: _get_dstbias
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_dstbias
 - __dstbias
+- _o___dstbias
+- _o__get_dstbias
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 969b6d2dfd83a1a136fdfb3d17f8f843337b792c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955943"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345222"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -49,20 +52,22 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parametri
 
-*secondi*<br/>
+*Secondi*<br/>
 Offset ora legale in secondi.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero se ha esito positivo o un valore **errno** se si verifica un errore.
+zero se ha esito positivo o un valore **errno** se si verifica un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_get_dstbias** Recupera il numero di secondi nell'ora legale come numero intero. Se è attiva l'ora legale, l'offset predefinito è pari a 3.600 secondi, che corrisponde al numero di secondi in un'ora (alcune regioni usano un offset di due ore).
+La funzione **_get_dstbias** recupera il numero di secondi nell'ora legale come numero intero. Se è attiva l'ora legale, l'offset predefinito è pari a 3.600 secondi, che corrisponde al numero di secondi in un'ora (alcune regioni usano un offset di due ore).
 
-Se *seconds* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Se *seconds* è **NULL**, il gestore di parametri non validi viene richiamato come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
-Si consiglia di usare questa funzione invece della macro **_dstbias** o della funzione deprecata **__dstbias**.
+È consigliabile utilizzare questa funzione anziché la **macro _dstbias** o la funzione deprecata **__dstbias**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -70,11 +75,11 @@ Si consiglia di usare questa funzione invece della macro **_dstbias** o della fu
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 
-Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_timezone](get-timezone.md)<br/>

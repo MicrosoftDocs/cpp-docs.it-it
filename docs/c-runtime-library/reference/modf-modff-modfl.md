@@ -1,10 +1,11 @@
 ---
 title: modf, modff, modfl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - modff
 - modf
 - modfl
+- _o_modf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951533"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338690"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -60,23 +62,25 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile.
 
-*intptr*<br/>
+*Intptr*<br/>
 Puntatore alla parte intera archiviata.
 
 ## <a name="return-value"></a>Valore restituito
 
 Questa funzione restituisce la parte frazionaria con segno di *x*. Non vi è restituzione di errori.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le funzioni **modf** suddividono il valore a virgola mobile *x* in parti frazionarie e intere, ognuna delle quali ha lo stesso segno di *x*. Viene restituita la parte frazionaria con segno di *x* . La parte intera viene archiviata come valore a virgola mobile in *IntPtr*.
+Le funzioni **modf** scompongono il valore a virgola mobile *x* in parti frazionarie e intere, ognuna delle quali ha lo stesso segno di *x*. Viene restituita la parte frazionaria firmata di *x.* La parte integer viene archiviata come valore a virgola mobile *intptr*.
 
-**modf** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**modf** ha un'implementazione che utilizza streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
 
-C++consente l'overload, quindi è possibile chiamare overload di **modf** che accettano e restituiscono parametri **float** o **Long** **Double** . In un programma C **modf** accetta sempre due valori Double e restituisce un valore Double.
+Il linguaggio C, ovvero l'overload, in modo da poter chiamare overload di **modf** che accettano e restituiscono parametri **float** o **long** **double.** In un programma C, **modf** accetta sempre due valori double e restituisce un valore double.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -112,6 +116,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

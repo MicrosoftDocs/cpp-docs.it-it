@@ -1,6 +1,6 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - llround
 - llroundf
@@ -8,6 +8,12 @@ api_name:
 - lroundf
 - lround
 - lroundl
+- _o_llround
+- _o_llroundf
+- _o_llroundl
+- _o_lround
+- _o_lroundf
+- _o_lroundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952990"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341625"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -87,26 +94,28 @@ long long llroundl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*X*<br/>
 Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **lround** e **llround** restituiscono il **valore Long Long o Long** **Long più** vicino a *x*. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non vi è restituzione di errori.
+Le funzioni **lround** e **llround** restituiscono a *x*l'intero **lungo** o lungo **più** **long** vicino. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non vi è restituzione di errori.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|**QNAN**, **IND**|none|**_DOMAIN**|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **lround** o **llround** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C, **lround** e **llround** accettano e restituiscono sempre un **valore Double**.
+Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **lround** o **llround** che accettano e restituiscono valori **float** e **long** **double.** In un programma C, **lround** e **llround** sempre prendere e restituire un **doppio**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
+|**lround**, **lroundf**, **lroundl**, **llround** **, llroundf**, **llroundl**|\<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -148,7 +157,7 @@ lroundl(-3.500000) is -4
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

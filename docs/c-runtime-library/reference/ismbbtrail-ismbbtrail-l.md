@@ -1,9 +1,11 @@
 ---
 title: _ismbbtrail, _ismbbtrail_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbtrail
 - _ismbbtrail_l
+- _o__ismbbtrail
+- _o__ismbbtrail_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: e445de41b05ac4829bdf108d1c98113cd5240ec0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e8615adf5d17986c1a52658fe5d680cc326976a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953964"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343393"
 ---
 # <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail, _ismbbtrail_l
 
@@ -56,19 +59,21 @@ int _ismbbtrail_l(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Valore Integer da testare.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_ismbbtrail** restituisce un valore diverso da zero se l'integer *c* è il secondo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono da 0x40 a 0x7E e da 0x80 a 0xFC.
+**_ismbbtrail** restituisce un valore diverso da zero se l'intero *c* è il secondo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono da 0x40 a 0x7E e da 0x80 a 0xFC.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**_ismbbtrail** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **_ismbbtrail_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_ismbbtrail** utilizza le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **_ismbbtrail_l** è identica, ad eccezione del fatto che utilizza invece le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -79,7 +84,7 @@ Impostazioni locali da usare.
 
 \* Per le costanti manifeste per le condizioni di test.
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

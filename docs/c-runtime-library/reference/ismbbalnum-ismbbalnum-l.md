@@ -1,9 +1,11 @@
 ---
 title: _ismbbalnum, _ismbbalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalnum
 - _ismbbalnum_l
+- _o__ismbbalnum
+- _o__ismbbalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: d817ea6875149f9342854b0c22b27b0c93d29636
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a200415571498c25ce5aacc6271004125ef16d2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343689"
 ---
 # <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum, _ismbbalnum_l
 
@@ -55,10 +58,10 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>Parametri
 
-*c*<br/>
+*C*<br/>
 Valore Integer da testare.
 
-*locale*<br/>
+*Impostazioni internazionali*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -67,9 +70,13 @@ Impostazioni locali da usare.
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-è diverso da zero per *c*oppure 0 in caso contrario.
+è diverso da zero per *c*, o 0 se non lo è.
 
-La versione di questa funzione con il suffisso **suffisso** è identica, ma usa le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.
+La versione di questa funzione con il **_l** suffisso è identica, ad eccezione del fatto che utilizza le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.
+
+## <a name="remarks"></a>Osservazioni
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -78,7 +85,7 @@ La versione di questa funzione con il suffisso **suffisso** è identica, ma usa 
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

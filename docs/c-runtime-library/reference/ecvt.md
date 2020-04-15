@@ -1,8 +1,9 @@
 ---
 title: _ecvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _ecvt
+- _o__ecvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9f91733c566c1782d5ccfc9a7c01e490a5915a85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e1760d5c68e650f6fbf44866d4e368b9d6233b6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942052"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348018"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Converte un numero **doppio** in una stringa. È disponibile una versione più sicura di questa funzione; vedere [_ecvt_s](ecvt-s.md).
+Converte un numero **double** in una stringa. È disponibile una versione più sicura di questa funzione; vedere [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,35 +53,37 @@ char *_ecvt(
 
 ### <a name="parameters"></a>Parametri
 
-*value*<br/>
+*Valore*<br/>
 Numero da convertire.
 
 *count*<br/>
 Numero di cifre archiviate.
 
-*dec*<br/>
+*Dicembre*<br/>
 Posizione del separatore decimale archiviata.
 
-*sign*<br/>
+*Segno*<br/>
 Segno del numero convertito.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_ecvt** restituisce un puntatore alla stringa di cifre; **Null** se si è verificato un errore.
+**_ecvt** restituisce un puntatore alla stringa di cifre; **NULL** se si è verificato un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_ecvt** converte un numero a virgola mobile in una stringa di caratteri. Il parametro *value* è il numero a virgola mobile da convertire. Questa funzione Archivia fino a *contare* le cifre del *valore* come stringa e aggiunge un carattere null (' \ 0'). Se il numero di cifre in *value* supera il *conteggio*, la cifra di ordine inferiore viene arrotondata. Se sono presenti meno di un *numero* di cifre, la stringa viene riempita con zeri.
+La funzione **_ecvt** converte un numero a virgola mobile in una stringa di caratteri. Il parametro *value* è il numero a virgola mobile da convertire. Questa funzione archivia fino a *contare* le cifre del *valore* come stringa e aggiunge un carattere nullo (''0'). Se il numero di cifre nel *valore* supera *count*, la cifra meno significativa viene arrotondata. Se sono presenti meno di *count* cifre, la stringa viene riempita con zeri.
 
 Il numero totale di cifre restituite da **_ecvt** non supererà **_CVTBUFSIZE**.
 
-Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* possono essere ottenuti da *Dec* e *firmare* dopo la chiamata. Il parametro *Dec* punta a un valore integer che indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro *Sign* punta a un Integer che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
+Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* possono essere ottenuti da *dec* e *sign* dopo la chiamata. Il parametro *dec* punta a un valore intero che indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro *sign* punta a un numero intero che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
 
-La differenza tra **_ecvt** e **_fcvt** è l'interpretazione del parametro *count* . **_ecvt** interpreta *count* come il numero totale di cifre nella stringa di output, mentre **_fcvt** interpreta il *conteggio* come numero di cifre dopo il separatore decimale.
+La differenza tra **_ecvt** e **_fcvt** è nell'interpretazione del parametro *count.* **_ecvt** interpreta il *conteggio* come il numero totale di cifre nella stringa di output, mentre **_fcvt** interpreta *il conteggio* come numero di cifre dopo il separatore decimale.
 
-**_ecvt** e **_fcvt** usano un singolo buffer allocato in modo statico per la conversione. Ogni chiamata a una di queste routine elimina definitivamente i risultati della chiamata precedente.
+**_ecvt** e **_fcvt** utilizzano un singolo buffer allocato in modo statico per la conversione. Ogni chiamata a una di queste funzioni elimina il risultato della chiamata precedente.
 
-Questa funzione convalida i relativi parametri. Se *Dec* o *Sign* è **null**o *count* è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito **null** .
+Questa funzione convalida i relativi parametri. Se *dec* o *sign* è **NULL**o *count* è 0, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e viene restituito **NULL.**
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -87,7 +91,7 @@ Questa funzione convalida i relativi parametri. Se *Dec* o *Sign* è **null**o *
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -120,8 +124,8 @@ source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: dfb13d5a48376efb72a845e2f5e2380407937f5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744560"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361130"
 ---
 # <a name="secure-template-overloads"></a>Overload di modelli sicuri
 
@@ -50,7 +50,7 @@ strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` non interessa le funzioni che accettano un conteggio, come `strncpy`. Per abilitare gli overload di modello per le funzioni di conteggio, definire `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` su 1. Prima di eseguire questa operazione, tuttavia, assicurarsi che il codice passi il numero dei caratteri, non la dimensione del buffer (un errore comune). Inoltre, il codice che scrive esplicitamente una terminazione null alla fine del buffer dopo la chiamata di funzione non è necessario se viene chiamata la variante sicura. Se è necessario il troncamento, vedere [_TRUNCATE](../c-runtime-library/truncate.md).
 
 > [!NOTE]
->  La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` necessita che anche `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` sia definito come 1. Se `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` è definito come 1 e `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` è definito come 0, l'applicazione non eseguirà alcun overload di modello.
+> La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` necessita che anche `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` sia definito come 1. Se `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` è definito come 1 e `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` è definito come 0, l'applicazione non eseguirà alcun overload di modello.
 
 La definizione di `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` su 1 abilita gli overload di modello delle varianti sicure (nomi che terminano in "_s"). In questo caso, se `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` è 1, sarà necessario apportare una piccola modifica al codice originale:
 
@@ -93,5 +93,5 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
 
 ## <a name="see-also"></a>Vedere anche
 
-[Funzionalità di sicurezza in CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
-[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Funzionalità di sicurezza in CRTSecurity Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
+[Funzioni della libreria CRT](../c-runtime-library/crt-library-features.md)

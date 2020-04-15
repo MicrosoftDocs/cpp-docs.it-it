@@ -1,10 +1,13 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remquof
 - remquo
 - remquol
+- _o_remquo
+- _o_remquof
+- _o_remquol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332845"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -56,24 +60,26 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Parametri
 
-*numer*<br/>
+*Numero*<br/>
 Numeratore.
 
 *denom*<br/>
 Denominatore.
 
-*quo*<br/>
+*Quo*<br/>
 Puntatore a un intero per archiviare un valore con il segno e la grandezza approssimativa del quoziente.
 
 ## <a name="return-value"></a>Valore restituito
 
-**remquo** restituisce il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **remquo** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** restituisce il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **remquo** restituisce un NaN tranquillo. Per informazioni sulla rappresentazione di un NaN silenzioso da parte della famiglia **printf,** vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **remquo** calcola il resto a virgola mobile *f* di *x* / *y* in modo che *x* = *i* \* *y* + *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
+La funzione **remquo** calcola il resto a virgola mobile *f* di *x* / *y* tale che *x* = *i* \* *y* + *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
 
-C++consente l'overload, quindi è possibile chiamare overload di **remquo** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **remquo** accetta sempre due argomenti **doppi** e restituisce un **valore Double**.
+Il linguaggio C, ovvero l'overload, pertanto è possibile chiamare overload di **remquo** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **remquo** accetta sempre due argomenti **double** e restituisce un **valore double**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -110,7 +116,7 @@ Approximate signed quotient is -3
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

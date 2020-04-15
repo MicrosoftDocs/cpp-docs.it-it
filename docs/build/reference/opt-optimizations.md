@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b25db4d6c260c3c6751de293aa2a82df8aa05e7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320246"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336217"
 ---
 # <a name="opt-optimizations"></a>/OPT (Ottimizzazioni)
 
@@ -30,60 +30,60 @@ Controlla le ottimizzazioni eseguite da LINK durante una compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/OPT:**{**REF** | **NOREF**}<br/>
-> **/OPT:**{**ICF**[**=**_iterations_] | **NOICF**}<br/>
-> **/OPT:**{**LBR** | **NOLBR**}
+> **/OPT:**-**REF** | **NOREF**<br/>
+> **/OPT:**-**ICF**[**=**_iterazioni_] **NOICF**<br/>
+> **/OPT:****: LBR** | **NOLBR**
 
 ## <a name="arguments"></a>Argomenti
 
-**REF** &#124; **NOREF**
+**&#124;** **RIFERIMENTO NOREF**
 
-**/OPT: ref** Elimina le funzioni e i dati che non sono mai fatto riferimento. **/OPT: NOREF** mantiene le funzioni e i dati che non vengono mai fatto riferimento.
+**/OPT:REF** elimina le funzioni e i dati a cui non viene mai fatto riferimento; **/OPT:NOREF** mantiene le funzioni e i dati a cui non viene mai fatto riferimento.
 
-Quando /OPT: REF è abilitato, LINK rimuove le funzioni di package e dati, detti *COMDAT*. Questa ottimizzazione è nota come eliminazione COMDAT transitiva. Il **/OPT: ref** opzione inoltre disabilita il collegamento incrementale.
+Quando /OPT:REF è abilitato, LINK rimuove i dati e le funzioni in pacchetto senza riferimenti, noti come *COMDATs*. Questa ottimizzazione è nota come eliminazione COMDAT transitiva. L'opzione **/OPT:REF** disabilita anche il collegamento incrementale.
 
-Le funzioni rese inline e le funzioni membro definite all'interno di una dichiarazione di classe sono sempre COMDAT. Tutte le funzioni in un file oggetto vengono trasformate in COMDAT se viene compilato usando il [/Gy](gy-enable-function-level-linking.md) opzione. Per posizionare **const** dei dati nei dati COMDAT, è necessario dichiararlo tramite `__declspec(selectany)`. Per informazioni su come specificare i dati per la rimozione o la riduzione, vedere [selectany](../../cpp/selectany.md).
+Le funzioni inline e le funzioni membro definite all'interno di una dichiarazione di classe sono sempre COMDAT. Tutte le funzioni in un file oggetto vengono trasformate in COMDAT se viene compilato utilizzando l'opzione [/Gy.](gy-enable-function-level-linking.md) Per inserire dati **const** in COMDAT, è `__declspec(selectany)`necessario dichiararla utilizzando . Per informazioni su come specificare i dati per la rimozione o la piegatura, vedere [selectany](../../cpp/selectany.md).
 
-Per impostazione predefinita, **/OPT: ref** è abilitata per il linker a meno che non **/OPT: NOREF** oppure [/debug](debug-generate-debug-info.md) è specificato. Per eseguire l'override di questa impostazione predefinita e mantenere dati COMDAT senza riferimenti nel programma, specificare **/OPT: NOREF**. È possibile usare la [/include](include-force-symbol-references.md) opzione per ignorare la rimozione di un simbolo specifico.
+Per impostazione predefinita, **/OPT:REF** è abilitato dal linker, a meno che non venga specificato **/OPT:NOREF** o [/DEBUG.](debug-generate-debug-info.md) Per eseguire l'override di questa impostazione predefinita e mantenere i COMDAT senza riferimenti nel programma, specificare **/OPT:NOREF**. È possibile utilizzare l'opzione [/INCLUDE](include-force-symbol-references.md) per ignorare la rimozione di un simbolo specifico.
 
-Se [/debug](debug-generate-debug-info.md) è specificato, il valore predefinito per **/zip** viene **NOREF**, e tutte le funzioni vengono mantenute nell'immagine. Per eseguire l'override di questa impostazione predefinita e ottimizzare una build di debug, specificare **/OPT: ref**. Questo può ridurre le dimensioni del file eseguibile che può risultare che si basa un'ottimizzazione utile anche in modalità debug. È consigliabile specificare anche **/OPT: NOICF** mantenere identica build funzioni in modalità debug. Questo semplifica la lettura delle tracce dello stack e l'impostazione di punti di interruzione nelle funzioni che altrimenti verrebbero ridotte insieme.
+Se si specifica [/DEBUG,](debug-generate-debug-info.md) il valore predefinito per **/OPT** è **NOREF**e tutte le funzioni vengono mantenute nell'immagine. Per eseguire l'override di questa impostazione predefinita e ottimizzare una build di debug, specificare **/OPT:REF**. Ciò può ridurre le dimensioni dell'eseguibile e può essere un'utile ottimizzazione anche nelle build di debug. È consigliabile specificare anche **/OPT:NOICF** per mantenere funzioni identiche nelle build di debug. Questo semplifica la lettura delle tracce dello stack e l'impostazione di punti di interruzione nelle funzioni che altrimenti verrebbero ridotte insieme.
 
-**ICF**\[**=**_iterations_] &#124; **NOICF**
+**Iterazioni ICF**\[**=**_iterations_] &#124; **NOICF**
 
-Uso **ICF**\[**=**_iterazioni_] per eseguire la riduzione di COMDAT identici. I dati COMDAT ridondanti possono essere rimossi dall'output del linker. L'opzione facoltativa *iterazioni* parametro specifica il numero di volte in cui scorrere i simboli per i duplicati. Il numero predefinito di iterazioni è 1. Attraverso iterazioni aggiuntive si potrebbero trovare più duplicati rivelati attraverso la riduzione nell'iterazione precedente.
+Utilizzare_le iterazioni_ **ICF**\[**=**] per eseguire la riduzione COMDAT identica. I dati COMDAT ridondanti possono essere rimossi dall'output del linker. Il parametro *facoltativo iterazioni* consente di specificare il numero di volte in cui attraversare i simboli per i duplicati. Il numero predefinito di iterazioni è 1.The default number of iterations is 1. Attraverso iterazioni aggiuntive si potrebbero trovare più duplicati rivelati attraverso la riduzione nell'iterazione precedente.
 
-Per impostazione predefinita, **/OPT: ICF** è abilitata per il linker a meno che non **/OPT: NOICF** oppure [/debug](debug-generate-debug-info.md) è specificato. Per eseguire l'override di questa impostazione predefinita e impedire che i dati COMDAT viene ridotta al programma, specificare **/OPT: NOICF**.
+Per impostazione predefinita, **/OPT:ICF** è abilitato dal linker, a meno che non venga specificato **/OPT:NOICF** o [/DEBUG.](debug-generate-debug-info.md) Per ignorare questa impostazione predefinita e impedire che i COMDAT vengano sottoposti a piegatura nel programma, specificare **/OPT:NOICF**.
 
-In una build di debug, è necessario specificare esplicitamente **/OPT: ICF** per abilitare la riduzione COMDAT. Tuttavia, poiché **/OPT: ICF** può unire funzioni o dati identici, può modificare i nomi delle funzioni visualizzati nelle analisi dello stack. Può anche rendere Impossibile impostare i punti di interruzione in alcune funzioni o per esaminare alcuni dati nel debugger e può offrire a funzioni impreviste quando è passo a passo del codice. Il comportamento del codice è identico, ma la presentazione del debugger può essere molto ambiguo. Pertanto, non è consigliabile usare **/OPT: ICF** nelle build di debug, a meno che i vantaggi del codice di dimensioni ridotte rendano tali svantaggi irrilevanti.
+In una build di debug, è necessario specificare in modo esplicito **/OPT:ICF** per abilitare la riduzione COMDAT. Tuttavia, poiché **/OPT:ICF** può unire funzioni o dati identici, è possibile modificare i nomi delle funzioni visualizzati nelle tracce dello stack. Può anche rendere impossibile impostare punti di interruzione in determinate funzioni o esaminare alcuni dati nel debugger e può prendere in funzioni impreviste quando si passo a passo attraverso il codice. Il comportamento del codice è identico, ma la presentazione del debugger può essere molto confusa. Pertanto, non è consigliabile utilizzare **/OPT:ICF** nelle build di debug a meno che i vantaggi del codice più piccolo non superino questi svantaggi.
 
 > [!NOTE]
-> Poiché **/OPT: ICF** possono causare lo stesso indirizzo da assegnare a differenti funzioni o i membri dati di sola lettura (vale a dire **const** variabili durante la compilazione usando **/Gy**), è possibile interrompere un programma che dipende da indirizzi univoci per le funzioni o i membri dati di sola lettura. Per altre informazioni, vedere [/Gy (Attiva collegamento a livello di funzione)](gy-enable-function-level-linking.md).
+> Poiché **/OPT:ICF** può fare in modo che lo stesso indirizzo venga assegnato a funzioni diverse o a membri dati di sola lettura, ovvero variabili **const** quando vengono compilate utilizzando **/Gy**, può interrompere un programma che dipende da indirizzi univoci per funzioni o membri dati di sola lettura. Per altre informazioni, vedere [/Gy (Attiva collegamento a livello di funzione)](gy-enable-function-level-linking.md).
 
 **LBR** &#124; **NOLBR**
 
-Il **/OPT: lbr** e **/OPT:NOLBR** opzioni si applicano solo ai file binari ARM. Poiché alcune istruzioni branch del processore ARM presentano un intervallo limitato, se il linker rileva un salto a un indirizzo non compreso in tale intervallo, sostituisce l'indirizzo di destinazione dell'istruzione branch con l'indirizzo di un'"isola" di codice contenente un'istruzione branch destinata alla destinazione effettiva. È possibile usare **/OPT: lbr** per ottimizzare il rilevamento delle istruzioni long branch e il posizionamento di isole di codice intermedie per ridurre al minimo la dimensione globale del codice. **/OPT:NOLBR** indica al linker di generare isole di codice per istruzioni branch lunghe quando vengono rilevati, senza ottimizzazione.
+Le opzioni **/OPT:LBR** e **/OPT:NOLBR** si applicano solo ai file binari ARM. Poiché alcune istruzioni di ramo del processore ARM hanno un intervallo limitato, se il linker rileva un salto a un indirizzo non compreso nell'intervallo, sostituisce l'indirizzo di destinazione dell'istruzione branch con l'indirizzo di un codice "isola" che contiene un'istruzione branch destinata alla destinazione effettiva. È possibile utilizzare **/OPT:LBR** per ottimizzare il rilevamento delle istruzioni di ramo lungo e il posizionamento delle isole di codice intermedio per ridurre al minimo le dimensioni complessive del codice. **/OPT:NOLBR** indica al linker di generare isole di codice per istruzioni di diramazione lunghe man mano che vengono rilevate, senza ottimizzazione.
 
-Per impostazione predefinita, il **/OPT: lbr** opzione viene impostata quando il collegamento incrementale non è abilitato. Se si desidera un collegamento non incrementale, ma non ottimizzazioni branch lunghe, specificare **/OPT:NOLBR**. Il **/OPT: lbr** disabilita il collegamento incrementale.
+Per impostazione predefinita, l'opzione **/OPT:LBR** è impostata quando il collegamento incrementale non è abilitato. Se si desidera un collegamento non incrementale ma non ottimizzazioni di diramazione lunghe, specificare **/OPT:NOLBR**. L'opzione **/OPT:LBR** disabilita il collegamento incrementale.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se usato nella riga di comando, il linker per impostazione predefinita **/OPT: REF, Firewall connessione Internet, LBR**. Se **/debug** è specificato, il valore predefinito è **/OPT: NOREF, NOICF, NOLBR**.
+Se utilizzato dalla riga di comando, il linker utilizza per impostazione predefinita **/OPT:REF,ICF,LBR**. Se si specifica **/DEBUG,** il valore predefinito è **/OPT:NOREF,NOICF,NOLBR**.
 
-Il **/zip** ottimizzazioni a livello generale diminuire le dimensioni dell'immagine e aumentare la velocità del programma. Questi miglioramenti possono essere notevoli in programmi di dimensioni superiori, motivo per cui sono abilitati per impostazione predefinita per le compilazioni delle vendite al dettaglio.
+Le ottimizzazioni **/OPT** in genere riducono le dimensioni dell'immagine e aumentano la velocità del programma. Questi miglioramenti possono essere sostanziali nei programmi più grandi, motivo per cui sono abilitati per impostazione predefinita per le build di vendita al dettaglio.
 
-Ottimizzazione del linker richiedere ulteriore tempo fin dall'inizio, ma il codice ottimizzato consente anche di risparmiare tempo quando il linker ha meno rilocazioni sistemare e crea un'immagine finale più piccola, e consentono di risparmiare ancora più tempo quando dispone di meno informazioni di debug per elaborare e scrivere nel file PDB. Quando è abilitata l'ottimizzazione, può comportare tempi di collegamento in generale, come il piccolo costo aggiuntivo durante l'analisi potrebbe essere più che ripagato entro l'ora di risparmi in linker passa tramite i file binari più piccoli.
+L'ottimizzazione del linker richiede molto tempo in anticipo, ma il codice ottimizzato consente inoltre di risparmiare tempo quando il linker ha meno rilocazioni per risolvere il problema e crea un'immagine finale più piccola e consente di risparmiare ancora più tempo quando dispone di meno informazioni di debug per elaborare e scrivere nel file PDB. Quando l'ottimizzazione è abilitata, può comportare un tempo di collegamento più veloce nel complesso, poiché il piccolo costo aggiuntivo nell'analisi può essere più che compensato dal risparmio di tempo nel passaggio del linker su file binari più piccoli.
 
-Il **/zip** argomenti possono essere specificati insieme, separati da virgole. Ad esempio, invece di **/OPT: REF /OPT: NOICF**, è possibile specificare **/OPT: REF, NOICF**.
+Gli argomenti **/OPT** possono essere specificati insieme, separati da virgole. Ad esempio, anziché **/OPT:REF /OPT:NOICF**, è possibile specificare **/OPT:REF,NOICF**.
 
-È possibile usare la [/verbose /Progress](verbose-print-progress-messages.md) l'opzione del linker per visualizzare le funzioni che sono state rimosse dal **/OPT: ref** e le funzioni che quelle ridotte da **/OPT: ICF**.
+È possibile utilizzare l'opzione del linker [/VERBOSE](verbose-print-progress-messages.md) per visualizzare le funzioni rimosse da **/OPT:REF** e le funzioni che vengono ripiegate da **/OPT:ICF**.
 
-Il **/zip** gli argomenti vengono spesso impostati per i progetti creati usando la **nuovo progetto** finestra di dialogo nell'IDE di Visual Studio, e in genere presentano valori diversi per il debug e configurazioni di rilascio. Se è impostato alcun valore per queste opzioni del linker nel progetto, è possibile ottenere le impostazioni predefinite del progetto, che possono essere diverse dai valori predefiniti usati dal linker nella riga di comando.
+Gli argomenti **/OPT** vengono spesso impostati per i progetti creati utilizzando la finestra di dialogo **Nuovo progetto** nell'IDE di Visual Studio e in genere hanno valori diversi per le configurazioni di debug e rilascio. Se non è impostato alcun valore per queste opzioni del linker nel progetto, è possibile ottenere i valori predefiniti del progetto, che possono essere diversi dai valori predefiniti utilizzati dal linker nella riga di comando.
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del linker OPT:ICF o OPT:REF nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **ottimizzazione** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà**Ottimizzazione** **linker** >  **delle proprietà** > di configurazione.
 
 1. Modificare una di queste proprietà:
 
@@ -93,11 +93,11 @@ Il **/zip** gli argomenti vengono spesso impostati per i progetti creati usando 
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del linker OPT:LBR nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà**Riga di comando** del**linker** >  **delle proprietà** > di configurazione.
 
-1. Immettere l'opzione in **opzioni aggiuntive**:
+1. Immettere l'opzione in **Opzioni aggiuntive**:
 
    `/opt:lbr` o `/opt:nolbr`
 

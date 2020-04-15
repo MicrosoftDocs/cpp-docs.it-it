@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 6ad784720833d2ae5de7d653d132ba144aec2677
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ff54357055d373db98f469b071edc75fce75e0b4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126378"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336788"
 ---
 # <a name="runtime_exception-class"></a>runtime_exception (classe)
 
-Tipo di base per le eccezioni nella C++ libreria amp (Accelerated Massive Parallelism).
+Il tipo di base per le eccezioni nella libreria AMP (Accelerated Massive Parallelism) di C.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -26,14 +26,14 @@ Tipo di base per le eccezioni nella C++ libreria amp (Accelerated Massive Parall
 class runtime_exception : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[Costruttore runtime_exception](#ctor)|Inizializza una nuova istanza della classe `runtime_exception`.|
-|[Distruttore ~ runtime_exception](#dtor)|Elimina definitivamente l'oggetto `runtime_exception`.|
+|[Destructor runtime_exception](#dtor)|Distrugge l'oggetto. `runtime_exception`|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -45,7 +45,7 @@ class runtime_exception : public std::exception;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copia il contenuto dell'oggetto `runtime_exception` specificato in questo oggetto.|
+|[operatore di comando](#operator_eq)|Copia il contenuto dell'oggetto specificato `runtime_exception` in questo.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -55,11 +55,11 @@ class runtime_exception : public std::exception;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amprt. h
+**Intestazione:** amprt.h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
-## <a name="ctor"></a>Costruttore runtime_exception
+## <a name="runtime_exception-constructor"></a><a name="ctor"></a>Costruttore runtime_exception
 
 Inizializza una nuova istanza della classe.
 
@@ -83,7 +83,7 @@ runtime_exception(
 Descrizione dell'errore che ha causato l'eccezione.
 
 *_Hresult*<br/>
-HRESULT di errore che ha causato l'eccezione.
+HRESULT dell'errore che ha causato l'eccezione.
 
 *_Other*<br/>
 Oggetto `runtime_exception` da copiare.
@@ -92,7 +92,7 @@ Oggetto `runtime_exception` da copiare.
 
 Oggetto `runtime_exception`.
 
-## <a name="dtor"></a>Distruttore ~ runtime_exception
+## <a name="runtime_exception-destructor"></a><a name="dtor"></a>Destructor runtime_exception
 
 Elimina l'oggetto.
 
@@ -102,7 +102,7 @@ Elimina l'oggetto.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="get_error_code"></a>get_error_code
+## <a name="get_error_code"></a><a name="get_error_code"></a>get_error_code
 
 Restituisce il codice di errore che ha causato l'eccezione.
 
@@ -114,10 +114,11 @@ HRESULT get_error_code() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-HRESULT di errore che ha causato l'eccezione.
+HRESULT dell'errore che ha causato l'eccezione.
 
-## <a name="operator_eq"></a>  operator=
-  Copia il contenuto dell'oggetto `runtime_exception` specificato in questo oggetto.
+## <a name="operator"></a><a name="operator_eq"></a>operatore di comando
+
+Copia il contenuto dell'oggetto specificato `runtime_exception` in questo.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -132,8 +133,8 @@ Oggetto `runtime_exception` da copiare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a questo oggetto `runtime_exception`.
+Un riferimento `runtime_exception` a questo oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Spazio dei nomi Concurrency (AMP)](concurrency-namespace-cpp-amp.md)

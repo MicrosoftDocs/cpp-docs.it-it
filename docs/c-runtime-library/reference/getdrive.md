@@ -1,8 +1,9 @@
 ---
 title: _getdrive
-ms.date: 09/19/2019
+ms.date: 4/2/2020
 api_name:
 - _getdrive
+- _o__getdrive
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
-ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
+ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71158757"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344328"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,7 +52,11 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce l'unità corrente (predefinita) (1=A, 2=B e così via). Un valore restituito pari a zero indica che il percorso corrente non inizia con un nome di unità lettera, ad esempio un percorso UNC. In alternativa, significa che un'allocazione del buffer interna non è riuscita. Se un'allocazione interna ha `errno` esito negativo, viene impostato su ENOMEM.
+Restituisce l'unità corrente (predefinita) (1=A, 2=B e così via). Un valore restituito pari a zero indica che il percorso corrente non inizia con un nome di unità lettera, ad esempio un percorso UNC. Oppure, significa che un'allocazione del buffer interno non è riuscita. Se un'allocazione `errno` interna ha esito negativo, viene impostata su ENOMEM.
+
+## <a name="remarks"></a>Osservazioni
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -58,7 +64,7 @@ Restituisce l'unità corrente (predefinita) (1=A, 2=B e così via). Un valore re
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

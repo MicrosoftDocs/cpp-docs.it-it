@@ -1,9 +1,11 @@
 ---
 title: getc, getwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - getwc
 - getc
+- _o_getc
+- _o_getwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5c05d7a2743cd0c1e843d6895e8f5574031ab098
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955489"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344843"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -59,16 +62,16 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Parametri
 
-*stream*<br/>
+*flusso*<br/>
 Flusso di input.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il carattere letto. Per indicare una condizione di errore di lettura o di fine file, **GETC** restituisce **EOF**e **getwc** restituisce **WEOF**. Per **GETC**, usare **Ferrer** o **feof** per verificare la presenza di un errore o della fine del file. Se il *flusso* è **null**, **GETC** e **getwc** richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** (o **WEOF** per **getwc**) e impostano **errno** su **EINVAL**.
+Restituisce il carattere letto. Per indicare un errore di lettura o una condizione di fine file, **getc** restituisce **EOF**e **getwc** restituisce **WEOF**. Per **getc**, utilizzare **ferror** o **feof** per verificare la presenza di un errore o per la fine del file. Se *stream* è **NULL**, **getc** e **getwc** richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** (o **WEOF** per **getwc**) e impostano **errno** su **EINVAL**.
 
-Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ogni routine legge un singolo carattere da un file alla posizione corrente e incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Il file è associato al *flusso*.
 
@@ -76,10 +79,12 @@ Queste funzioni bloccano il thread chiamante e pertanto sono thread-safe. Per un
 
 Seguono note specifiche per le routine.
 
-|Routine|Note|
+|Routine|Osservazioni|
 |-------------|-------------|
-|**getc**|Uguale a **fgetc**, ma implementato come funzione e come macro.|
-|**getwc**|Versione a caratteri wide di **GETC**. Legge un carattere multibyte o un carattere wide a seconda che il *flusso* venga aperto in modalità testo o in modalità binaria.|
+|**getc**|Uguale a **fgetc**, ma implementata come funzione e come macro.|
+|**getwc**|Versione a caratteri wide di **getc**. Legge un carattere multibyte o un carattere wide a seconda che *il flusso* venga aperto in modalità testo o in modalità binaria.|
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

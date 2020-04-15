@@ -1,8 +1,9 @@
 ---
 title: _lsearch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lsearch
+- _o__lsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a6ef3d86ffe8f03da34d4a374bddda1452815672
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438153"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341640"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -55,32 +57,34 @@ void *_lsearch(
 
 ### <a name="parameters"></a>Parametri
 
-*key*<br/>
+*Chiave*<br/>
 Oggetto da cercare.
 
 *base*<br/>
 Puntatore alla base della matrice da cercare.
 
-*number*<br/>
+*Numero*<br/>
 Numero di elementi.
 
 *width*<br/>
 Larghezza di ogni elemento della matrice.
 
-*compare*<br/>
+*Confrontare*<br/>
 Puntatore alla routine di confronto. Il primo parametro è un puntatore alla chiave per la ricerca. Il secondo parametro è un puntatore a un elemento della matrice da confrontare con la chiave.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la chiave viene trovata, **_lsearch** restituisce un puntatore all'elemento della matrice in *base* che corrisponde alla *chiave*. Se la chiave non viene trovata, **_lsearch** restituisce un puntatore all'elemento appena aggiunto alla fine della matrice.
+Se la chiave viene trovata, **_lsearch** restituisce un puntatore all'elemento della matrice in *corrispondenza* della chiave *.* Se la chiave non viene trovata, **_lsearch** restituisce un puntatore all'elemento appena aggiunto alla fine della matrice.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_lsearch** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bCerca**, **_lsearch** non richiede che la matrice sia ordinata. Se *Key* non viene trovato, **_lsearch** lo aggiunge alla fine della matrice e incrementa il *numero*.
+La funzione **_lsearch** esegue una ricerca lineare per la *chiave* di valore in una matrice di elementi *numerici,* ognuno dei byte di *larghezza.* A differenza di **bsearch**, **_lsearch** non richiede l'ordinamento della matrice. Se *key* non viene trovato, **_lsearch** lo aggiunge alla fine della matrice e incrementa il *numero*.
 
-L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che ne specifica la relazione. **_lsearch** chiama la routine di *confronto* una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. *confrontare* deve confrontare gli elementi e restituire un valore diverso da zero (che indica che gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).
+L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi della matrice e restituisce un valore che ne specifica la relazione. **_lsearch** chiama la routine di *confronto* una o più volte durante la ricerca, passando puntatori a due elementi della matrice a ogni chiamata. *compare* deve confrontare gli elementi e restituire diverso da zero (ovvero gli elementi sono diversi) o 0 (ovvero gli elementi sono identici).
 
-Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**.
+Questa funzione convalida i relativi parametri. Se *compare*, *key* o *number* è **NULL**o se *base* è **NULL** e *number* è diverso da zero o se *width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce **NULL**.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -88,7 +92,7 @@ Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* �
 |-------------|---------------------|
 |**_lsearch**|\<search.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

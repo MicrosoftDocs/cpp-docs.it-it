@@ -1,8 +1,9 @@
 ---
 title: _kbhit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _kbhit
+- _o__kbhit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438099"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342256"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -59,7 +61,9 @@ int _kbhit( void );
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_kbhit** controlla la presenza di una sequenza di tasti recente nella console. Se la funzione restituisce un valore diverso da zero, una sequenza di tasti è in attesa nel buffer. Il programma può quindi chiamare **_getch** o **_getche** per ottenere la sequenza di tasti.
+La funzione **_kbhit** verifica la presenza di una sequenza di tasti recente nella console. Se la funzione restituisce un valore diverso da zero, una sequenza di tasti è in attesa nel buffer. Il programma può quindi chiamare **_getch** o **_getche** per ottenere la sequenza di tasti.
+
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -67,7 +71,7 @@ La funzione **_kbhit** controlla la presenza di una sequenza di tasti recente ne
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -107,4 +111,4 @@ Key struck was 'q'
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
