@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e247b4f488411ffdcde5d1d9016436c9c36fe793
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326895"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747690"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapPtrBase
 
@@ -107,7 +107,7 @@ Nelle build di debug, si verificherà un errore di asserzione se la variabile me
 
 Chiamare questo metodo per assumere la proprietà di un puntatore esistente.
 
-```
+```cpp
 void Attach(T* pData) throw();
 ```
 
@@ -154,7 +154,7 @@ Rilascia la proprietà di un puntatore, imposta la variabile membro [CHeapPtrBas
 
 Chiamare questo metodo per eliminare un `CHeapPtrBase`oggetto a cui punta un oggetto .
 
-```
+```cpp
 void Free() throw();
 ```
 

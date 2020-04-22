@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 5915d9e25588e4e35538619662281ceaf1b35ff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317602"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746842"
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 
@@ -91,7 +91,7 @@ Questi dati sono composti da:
 
 Incrementa il conteggio dei riferimenti dell'oggetto stringa.
 
-```
+```cpp
 void AddRef() throw();
 ```
 
@@ -106,7 +106,7 @@ Incrementa il conteggio dei riferimenti dell'oggetto stringa.
 
 Restituisce un puntatore al buffer di caratteri di un oggetto stringa.
 
-```
+```cpp
 void* data() throw();
 ```
 
@@ -157,7 +157,7 @@ Chiamare questa funzione per determinare se il buffer di caratteri di un oggetto
 
 Blocca il buffer di caratteri dell'oggetto stringa associato.
 
-```
+```cpp
 void Lock() throw();
 ```
 
@@ -220,7 +220,7 @@ Archivia il gestore di memoria per l'oggetto stringa associato. Per ulteriori in
 
 Decrementa il conteggio dei riferimenti dell'oggetto dati stringa.
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -236,7 +236,7 @@ Ad esempio, il codice `CStringData::Release` seguente chiamerebbe per `str1`l'og
 
 Sblocca il buffer di caratteri dell'oggetto stringa associato.
 
-```
+```cpp
 void Unlock() throw();
 ```
 

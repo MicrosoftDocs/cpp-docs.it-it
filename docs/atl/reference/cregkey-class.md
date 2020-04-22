@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3bdb2e7c3ab0ef56ef7f6fba5d43f1ba0bb7fc6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331035"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746517"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -137,7 +137,7 @@ Quando si chiude una chiave, i relativi dati del Registro di sistema vengono scr
 
 Chiamare questo metodo per associare `CRegKey` una Chiave HKEY all'oggetto impostando l'handle del membro [m_hKey](#m_hkey) su *hKey*.
 
-```
+```cpp
 void Attach(HKEY hKey) throw();
 ```
 
@@ -221,7 +221,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Riferimento a un oggetto `CRegKey`.
 
 *Hkey*<br/>
@@ -414,7 +414,7 @@ Specifica un flag che indica se segnalare le modifiche nella chiave specificata 
 *dwNotifyFilter (filtro per instato)*<br/>
 Specifica un set di flag che controllano quali modifiche devono essere segnalate. Questo parametro può essere una combinazione dei seguenti valori:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|Notificare al chiamante se una sottochiave viene aggiunta o eliminata.|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|Notificare al chiamante le modifiche apportate agli attributi della chiave, ad esempio le informazioni sul descrittore di sicurezza.|
@@ -488,7 +488,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave da copiare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -887,7 +887,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *si*<br/>
 Specifica i componenti del descrittore di protezione da impostare. Il valore può essere una combinazione dei seguenti valori:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso discrezionale (DACL) della chiave. La chiave deve avere accesso WRITE_DAC oppure il processo chiamante deve essere il proprietario dell'oggetto.|
 |GROUP_SECURITY_INFORMATION|Imposta l'identificatore di protezione (SID) del gruppo primario della chiave. La chiave deve disporre dell'accesso WRITE_OWNER oppure il processo chiamante deve essere il proprietario dell'oggetto.|

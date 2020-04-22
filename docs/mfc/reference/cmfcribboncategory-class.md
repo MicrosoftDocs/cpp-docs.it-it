@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375272"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749548"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory (classe)
 
@@ -260,7 +260,7 @@ Nel diagramma seguente viene illustrata una figura della categoria Home dall'app
 
 Aggiunge l'elemento della barra multifunzione specificato alla matrice di elementi della barra multifunzione visualizzati nella finestra di dialogo di personalizzazione.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ Puntatore a un elemento della barra multifunzione se il metodo ha esito positivo
 
 Recupera tutti gli elementi della barra multifunzione nella categoria della barra multifunzione.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ Gli elementi della barra multifunzione progettati per l'utilizzo sulla barra deg
 
 Recupera tutti gli elementi della barra multifunzione associati all'ID di comando specificato.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ Le dimensioni recuperate includono il fattore di scala dell'immagine globale.
 
 Recupera gli ID di comando per gli elementi della barra multifunzione contenuti nella categoria della barra multifunzione.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ Posizione verticale del testo, in pixel, sui pulsanti della barra multifunzione 
 
 Recupera tutti gli elementi visibili che appartengono alla categoria della barra multifunzione.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 Definisce l'ordine di compressione dei gruppi della barra multifunzione della categoria della barra multifunzione.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ Nell'esempio `CMFCRibbonCategory` riportato di `SetCollapseOrder` seguito viene 
 
 Imposta i dati definiti dall'utente da associare alla categoria della barra multifunzione.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 Assegna un suggerimento alla categoria della barra multifunzione.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ I suggerimenti tasto di scelta vengono visualizzati quando l'utente preme il tas
 
 Assegna un nome e un suggerimento tasto di scelta alla categoria della barra multifunzione.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ Per impostare il suggerimento per la categoria della barra multifunzione, aggiun
 
 Imposta il colore della categoria della barra multifunzione.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 

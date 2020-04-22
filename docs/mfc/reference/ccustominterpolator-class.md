@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 2342432c7651fc1bd1eda23b3e56fa9306eadf09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00ce0661fa3fbde714a7299ecbbd54df7c9bcc36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359260"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749168"
 ---
 # <a name="ccustominterpolator-class"></a>Classe CCustomInterpolator
 
@@ -111,7 +111,7 @@ CCustomInterpolator(
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 Durata della transizione.
 
 *valore finale*
@@ -156,7 +156,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 Output: Durata della transizione, in secondi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -173,7 +173,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 ### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
+*value*<br/>
 Output: Valore finale di una variabile alla fine della transizione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -184,7 +184,7 @@ L'implementazione di base restituisce sempre TRUE. Restituire FALSE dall'impleme
 
 Inizializza la durata e il valore finale.
 
-```
+```cpp
 void Init(
     UI_ANIMATION_SECONDS duration,
     DOUBLE finalValue);
@@ -192,7 +192,7 @@ void Init(
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 Durata della transizione.
 
 *valore finale*<br/>
@@ -210,7 +210,7 @@ virtual BOOL InterpolateValue(
 
 ### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
+*value*<br/>
 Output: Valore interpolato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -294,7 +294,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 Durata della transizione.
 
 ### <a name="return-value"></a>Valore restituito

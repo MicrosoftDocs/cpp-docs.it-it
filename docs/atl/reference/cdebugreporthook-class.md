@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327107"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747728"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook (classe)
 
@@ -107,7 +107,7 @@ static int __cdecl CDebugReportHookProc(
 *reportType (tipo di report)*<br/>
 Tipo di report (_CRT_WARN, _CRT_ERROR o _CRT_ASSERT).
 
-*Messaggio*<br/>
+*message*<br/>
 La stringa di messaggio.
 
 *Returnvalue*<br/>
@@ -127,7 +127,7 @@ Il codice in questa funzione viene eseguito nel contesto di sicurezza sottostant
 
 Chiamare questo metodo per interrompere l'invio di report di debug alla named pipe e ripristinare l'hook del report precedente.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ Chiama [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-
 
 Chiamare questo metodo per avviare l'invio di report di debug alla named pipe.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
 Chiamare questo metodo per impostare il tempo in millisecondi che questa classe attenderà che la named pipe diventi disponibile.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 

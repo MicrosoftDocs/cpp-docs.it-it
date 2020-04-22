@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 9581ea142c6f87ae12665374a483abc00763ad97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1874ddfdd26b8dd371e32f7e68ea8f668c47d8e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371128"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750215"
 ---
 # <a name="canimationbaseobject-class"></a>Classe CAnimationBaseObject
 
@@ -246,7 +246,7 @@ Esegue un ciclo sull'elenco di variabili di animazione incapsulate in un oggetto
 
 Scollega un oggetto di animazione dal controller di animazione padre.
 
-```
+```cpp
 void DetachFromController();
 ```
 
@@ -310,7 +310,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametri
 
-*Elenco*<br/>
+*list*<br/>
 Elenco che deve essere riempito con variabili di animazione contenute in un oggetto di animazione.
 
 ### <a name="remarks"></a>Osservazioni
@@ -425,7 +425,7 @@ CAnimationController* m_pParentController;
 
 Imposta un flag per eliminare automaticamente le transizioni.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bValue);
 ```
 
@@ -442,7 +442,7 @@ Impostare questo flag solo se sono stati assegnati oggetti di transizione utiliz
 
 Imposta i nuovi ID.
 
-```
+```cpp
 void SetID(
     UINT32 nObjectID,
     UINT32 nGroupID = 0);
@@ -476,7 +476,7 @@ Questo helper può essere utilizzato per stabilire una relazione tra le variabil
 
 Imposta i dati definiti dall'utente.
 
-```
+```cpp
 void SetUserData (DWORD dwUserData);
 ```
 

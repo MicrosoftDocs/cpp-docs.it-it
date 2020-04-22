@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330326"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746023"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -394,7 +394,7 @@ Vedere [ArrangeIconicWindows](/windows/win32/api/winuser/nf-winuser-arrangeiconi
 
 Associa la finestra identificata da *hWndNew* all'oggetto. `CWindow`
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Vedere [ClientToScreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) in Windows SDK.
 
-La seconda versione di questo metodo consente di convertire le coordinate di un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+La seconda versione di questo metodo consente di convertire le coordinate di un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura.
 
 ## <a name="cwindowcreate"></a><a name="create"></a>CWindow::Create
 
@@ -771,7 +771,7 @@ Vedere [DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuser-dlgdirsele
 
 Registra se la finestra accetta i file trascinati.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ Vedere [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) in Win
 
 Contrassegna la fine del disegno.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ Vedere [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) in 
 
 Imposta lo stato attivo della tastiera su un controllo nella finestra di dialogo.
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ Vedere [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) in
 
 Invalida l'area client all'interno dell'area specificata.
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Vedere [MapWindowPoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) in Windows SDK.
 
-La seconda versione di questo metodo consente di convertire le coordinate di un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+La seconda versione di questo metodo consente di convertire le coordinate di un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura.
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>CWindow::MessageBox
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 Per un oggetto finestra di primo livello, i parametri x e y sono relativi all'angolo superiore sinistro dello schermo. Per un oggetto finestra figlio, sono relativi all'angolo superiore sinistro dell'area client della finestra padre.
 
-La seconda versione di questo metodo utilizza una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) per determinare la nuova posizione, larghezza e altezza della finestra.
+La seconda versione di questo metodo utilizza una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) per determinare la nuova posizione, larghezza e altezza della finestra.
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow::NextDlgCtrl
 
 Imposta lo stato attivo della tastiera sul controllo successivo nella finestra di dialogo.
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ Restituisce senza attendere che il thread elabori il messaggio.
 
 Imposta lo stato attivo della tastiera sul controllo precedente nella finestra di dialogo.
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ Vedere [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) in Windows SDK.
 
 Invia un messaggio [di WM_PRINT](/windows/win32/gdi/wm-print) alla finestra per richiedere che venga disegnato nel contesto di periferica specificato.
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 Invia un [messaggio WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) alla finestra per richiedere che venga disegnata l'area client nel contesto di periferica specificato.
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Vedere [ScreenToClient](/windows/win32/api/winuser/nf-winuser-screentoclient) in Windows SDK.
 
-La seconda versione di questo metodo consente di convertire le coordinate di un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+La seconda versione di questo metodo consente di convertire le coordinate di un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura.
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>Finestra di cWindow::ScrollWindow
 
@@ -2216,7 +2216,7 @@ Vedere [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) in Windo
 
 Invia il messaggio specificato a `CWindow` tutti gli elementi figlio immediati dell'oggetto.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2226,7 +2226,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parametri
 
-*Messaggio*<br/>
+*message*<br/>
 [in] Messaggio da inviare.
 
 *wParam*<br/>
@@ -2363,7 +2363,7 @@ Vedere [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) in Windows SDK
 
 Modifica il tipo di carattere corrente della finestra inviando un [messaggio di WM_SETFONT](/windows/win32/winmsg/wm-setfont) alla finestra.
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ Vedere [SetParent](/windows/win32/api/winuser/nf-winuser-setparent) in Windows S
 
 Imposta o cancella il flag di ridisegno inviando un [messaggio di WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) alla finestra.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Vedere [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) in Windows SDK.
 
-La seconda versione di questo metodo utilizza una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) per impostare la nuova posizione, larghezza e altezza della finestra.
+La seconda versione di questo metodo utilizza una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) per impostare la nuova posizione, larghezza e altezza della finestra.
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::SetWindowRgn
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: 8bdd0ebab0a6e4138e24edff38da9b444745f83a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76e0d12308ad579e4bdf9866dfcf1cde231a2d0c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369334"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749148"
 ---
 # <a name="ccustomtransition-class"></a>Classe CCustomTransition
 
@@ -161,7 +161,7 @@ CCustomInterpolator* m_pInterpolator;
 
 Imposta un valore iniziale, che verrà applicato a una variabile di animazione associata a questa transizione.
 
-```
+```cpp
 void SetInitialValue(DOUBLE initialValue);
 ```
 
@@ -173,7 +173,7 @@ void SetInitialValue(DOUBLE initialValue);
 
 Imposta una velocità iniziale, che verrà applicata a una variabile di animazione associata a questa transizione.
 
-```
+```cpp
 void SetInitialVelocity(DOUBLE initialVelocity);
 ```
 

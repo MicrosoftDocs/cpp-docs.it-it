@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361431"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749745"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -581,7 +581,7 @@ La categoria della barra multifunzione della barra degli strumenti Accesso rapid
 
 Aggiunge l'elemento della barra multifunzione specificato alla riga delle schede della barra multifunzione.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ TRUESe la finestra è stata creata. in caso contrario, FALSE.
 
 Chiude tutti i controlli del suggerimento tasto di scelta sulla barra multifunzione.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 Abilita o disabilita la funzionalità di descrizione dei tasti per la barra multifunzione.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ Quando si attiva questa funzionalità, i suggerimenti tasto vengono visualizzati
 
 Attiva o disattiva la funzionalità **Anteprima di stampa.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ Per impostazione predefinita, la funzionalità **Anteprima di stampa** è abilit
 
 Abilita o disabilita le descrizioni comandi e le descrizioni comandi facoltative sulla barra multifunzione.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ Indice in base zero di una categoria della barra multifunzione se il metodo ha e
 
 Regola il layout di tutti gli elementi nella barra multifunzione e nella finestra padre e ridisegna l'intera finestra.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ Elemento della barra multifunzione attualmente rilasciato verso il basso. o NULL
 
 Recupera una matrice di puntatori a tutti gli elementi della barra multifunzione che dispongono di un ID di comando specifico.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ Nella tabella seguente sono elencate le possibili combinazioni di flag per il va
 
 Recupera gli ID di comando per la raccolta specificata di elementi della barra multifunzione sulla barra multifunzione.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ Puntatore all'elemento della barra multifunzione sulla barra degli strumenti di 
 
 Recupera un elenco di ID di comando per gli elementi della barra multifunzione sulla barra degli strumenti di accesso rapido.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ Se una categoria di contesto è attiva, la categoria attiva viene reimpostata su
 
 Nasconde tutti i suggerimenti tasto di scelta sulla barra multifunzione.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ TRUESe l'evento di sequenza di tasti è stato elaborato. in caso contrario, FALS
 
 Rimuove una descrizione comando dalla visualizzazione.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ Dopo la regolazione del layout, la visualizzazione della barra multifunzione vie
 
 Elimina tutte le categorie della barra multifunzione dalla barra multifunzione.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ Questo metodo elimina tutte le categorie della barra multifunzione dalla memoria
 
 Rimuove tutti gli elementi della barra multifunzione dall'area della scheda.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ Se la categoria specificata da *pCategory* non è visualizzata, non può essere 
 
 Associa i pulsanti di sistema sulla barra multifunzione che appartengono a una finestra figlio di interfaccia a documenti multipli (MDI) alla finestra figlio MDI specificata.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 Assegna un pulsante della barra multifunzione dell'applicazione alla barra multifunzione.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ Il suggerimento menu facoltativo è per gli elementi della barra multifunzione c
 
 Imposta il livello di spostamento della tastiera quando l'utente preme i tasti di scelta rapida contenuti sulla barra multifunzione.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ La navigazione tramite tastiera della barra multifunzione viene avviata quando l
 
 Regola la barra multifunzione quando le dimensioni della finestra di una finestra figlio dell'interfaccia a documenti multipli (MDI) entrano o escono dallo stato ingrandito.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ La barra multifunzione visualizza i pulsanti di sistema per una finestra figlio 
 
 Aggiunge uno o più elementi della barra multifunzione alla barra di accesso rapido.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,13 +1890,13 @@ Nell'esempio `CMFCRibbonBar` riportato di `SetQuickAccessCommands` seguito viene
 
 Imposta la barra degli strumenti di accesso rapido allo stato predefinito.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*state*<br/>
 [in] Stato predefinito della barra degli strumenti accesso rapido.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1913,7 +1913,7 @@ Nell'esempio `CMFCRibbonBar` riportato di `SetQuickAccessDefaultState` seguito v
 
 Posiziona la barra degli strumenti di accesso rapido sopra o sotto la barra multifunzione.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 Imposta le dimensioni normali e grandi delle larghezze fisse della descrizione comandi per la barra multifunzione.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ L'impostazione di un parametro su 0 determina la variazione della larghezza corr
 
 Mostra o nasconde la categoria specificata della barra multifunzione.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 Mostra o nasconde le categorie contesto con l'ID specificato.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 Mostra i suggerimenti tasto di scelta per ogni elemento della barra multifunzione sulla barra multifunzione.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 Consente di visualizzare la barra multifunzione ridotta a icona e ingrandita e viceversa.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 Abilita o disabilita l'aspetto di Windows 7 (piccolo pulsante di applicazione rettangolare) per la barra multifunzione.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

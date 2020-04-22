@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376163"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745154"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 
@@ -328,7 +328,7 @@ L'implementazione predefinita semplicemente costruisce `CMFCPopupMenu` e restitu
 
 Disegna un'icona di documento sul pulsante del menu.
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ Questo metodo accetta un'icona di documento e la disegna sul pulsante di menu, c
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ Un pulsante del menu della barra degli strumenti può visualizzare un sottomenu.
 
 Recupera il rettangolo di delimitazione per l'immagine del pulsante.
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ Per impostazione predefinita, questo metodo imposta i dati di accessibilità per
 
 Specifica se il pulsante viene disegnato come pulsante di menu o come pulsante di divisione quando dispone sia di un ID di comando valido che di un sottomenu.
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ In genere, quando un pulsante del menu della barra degli strumenti dispone sia d
 
 Specifica se il menu a discesa è in modalità tavolozza.
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ Nella modalità tavolozza, tutte le voci di menu vengono visualizzate come tavol
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 

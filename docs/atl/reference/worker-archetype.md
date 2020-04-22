@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329340"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747350"
 ---
 # <a name="worker-archetype"></a>Archetipo operaio
 
@@ -58,7 +58,7 @@ Questi parametri di modello prevedono che la classe sia conforme a questo archet
 
 Chiamato per elaborare un elemento di lavoro.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -67,7 +67,7 @@ void Execute(
 
 #### <a name="parameters"></a>Parametri
 
-*Richiesta*<br/>
+*request*<br/>
 Elemento di lavoro da elaborare. L'elemento di lavoro è `RequestType`dello stesso tipo di .
 
 *pvWorkerParam*<br/>
@@ -109,7 +109,7 @@ Questo tipo deve essere utilizzato `WorkerArchetype::Execute` come primo paramet
 
 Chiamato per annullare l'inizializzazione dell'oggetto worker dopo che tutte le richieste sono state passate a `WorkerArchetype::Execute`).
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 

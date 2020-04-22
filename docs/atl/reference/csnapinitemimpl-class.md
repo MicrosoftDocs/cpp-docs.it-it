@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330723"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746423"
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 
@@ -350,7 +350,7 @@ STDMETHOD(Notify)(
 *Arg*<br/>
 [in] Dipende dal tipo di notifica.
 
-*param*<br/>
+*Param*<br/>
 [in] Dipende dal tipo di notifica.
 
 *pComponentData*<br/>
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 Chiamare questa funzione per modificare i flag di inserimento dei menu, specificati da *pInsertionAllowed*, per l'oggetto snap-in.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ Non tentare di impostare i bit in *pInsertionAllowed* che sono stati originariam
 
 Chiamare questa funzione per modificare gli stili dei pulsanti della barra degli strumenti, dell'oggetto snap-in, prima che venga creata la barra degli strumenti.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 Chiamare questa funzione per modificare una voce di menu prima che venga inserita nel menu di scelta rapida dell'oggetto snap-in.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
@@ -473,7 +473,7 @@ void UpdateMenuState(
 *pBuf*<br/>
 [in] Puntatore alla stringa per la voce di menu da aggiornare.
 
-*Bandiere*<br/>
+*flags*<br/>
 [in] Specifica i nuovi flag di stato. Può trattarsi di una combinazione dei seguenti flag:
 
 - MF_POPUP specifica che si tratta di un sottomenu all'interno del menu di scelta rapida. Le voci di menu, i punti di inserimento e `lCommandID` altri `IInsertionPointID`sottomenu possono essere aggiunti a questo sottomenu utilizzando il relativo .

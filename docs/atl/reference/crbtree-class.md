@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331243"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746584"
 ---
 # <a name="crbtree-class"></a>CrBTree (classe)
 
@@ -53,7 +53,7 @@ class CRBTree
 *K*<br/>
 Tipo di elemento chiave.
 
-*V*<br/>
+*Presso*<br/>
 Tipo di elemento valore.
 
 *Caratteristiche KTraits*<br/>
@@ -159,7 +159,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Valore di chiave.
 
 ### <a name="return-value"></a>Valore restituito
@@ -185,10 +185,10 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *Pos*<br/>
 Valore di posizione.
 
-*Chiave*<br/>
+*key*<br/>
 Variabile che riceve la chiave.
 
-*Valore*<br/>
+*value*<br/>
 Variabile che riceve il valore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -276,7 +276,7 @@ Il contatore di posizione *pos* viene aggiornato dopo ogni chiamata. Se l'elemen
 
 Chiamare questo metodo per ottenere la chiave e il valore di un elemento archiviato nella mappa e spostare la posizione all'elemento successivo.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -288,10 +288,10 @@ void GetNextAssoc(
 *Pos*<br/>
 Contatore di posizione, restituito da una precedente chiamata a metodi quali [CRBTree::GetHeadPosition](#getheadposition) o [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Chiave*<br/>
+*key*<br/>
 Parametro di modello che specifica il tipo della chiave dell'albero.
 
-*Valore*<br/>
+*value*<br/>
 Parametro di modello che specifica il tipo del valore della struttura ad albero.
 
 ### <a name="remarks"></a>Osservazioni
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 Chiamare questo metodo per rimuovere `CRBTree` tutti gli elementi dall'oggetto.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ Cancella l'oggetto, `CRBTree` liberando la memoria utilizzata per memorizzare gl
 
 Chiamare questo metodo per rimuovere l'elemento `CRBTree` nella posizione specificata nell'oggetto.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ Rimuove la coppia chiave/valore archiviata nella posizione specificata. La memor
 
 Chiamare questo metodo per modificare il valore `CRBTree` archiviato in una determinata posizione nell'oggetto.
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 
@@ -467,7 +467,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 *Pos*<br/>
 Contatore di posizione, restituito da una precedente chiamata a metodi quali [CRBTree::GetHeadPosition](#getheadposition) o [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Valore*<br/>
+*value*<br/>
 Valore da aggiungere `CRBTree` all'oggetto.
 
 ### <a name="remarks"></a>Osservazioni

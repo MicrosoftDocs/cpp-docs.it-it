@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 4d262ab5f88481d56de1c236effb66fcbf6a706a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3600bc5a945c24e91269bc280b4b8e99c54d4c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368385"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750451"
 ---
 # <a name="crecttracker-class"></a>Classe CRectTracker
 
@@ -174,7 +174,7 @@ Il costruttore predefinito `CRectTracker` inizializza l'oggetto con i valori di 
 
 Chiamare questa funzione per disegnare le linee esterne del rettangolo e l'area interna.
 
-```
+```cpp
 void Draw(CDC* pDC) const;
 ```
 
@@ -247,7 +247,7 @@ Eseguire l'override di questa funzione membro per nascondere o visualizzare le m
 
 Chiamare questa funzione per recuperare le coordinate del rettangolo.
 
-```
+```cpp
 void GetTrueRect(LPRECT lpTrueRect) const;
 ```
 
@@ -287,7 +287,7 @@ Il valore restituito è basato `CRectTracker::TrackerHit` sul tipo enumerato e p
 
 - `CRectTracker::hitBottomLeft`3
 
-- `CRectTracker::hitTop`4
+- `CRectTracker::hitTop` 4
 
 - `CRectTracker::hitRight`5
 

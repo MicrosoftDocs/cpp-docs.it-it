@@ -1,19 +1,19 @@
 ---
-title: Dichiaratore di riferimento rvalue:&amp;&amp;
+title: Dichiaratore di riferimento Rvalue:Rvalue Reference Declarator:&amp;&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: d6aa6aa9caed77f92b3b183cc49c63aaaa6c724f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53729cca7c259bc2d3b792ddc3509d5fc3bd255a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498570"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749823"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento Rvalue:Rvalue Reference Declarator:&amp;&amp;
 
 Contiene un riferimento a un'espressione rvalue.
 
@@ -23,19 +23,19 @@ Contiene un riferimento a un'espressione rvalue.
 type-id && cast-expression
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-I riferimenti rvalue consentono di distinguere un lvalue da un rvalue. I riferimenti lvalue e rvalue sono sintatticamente e semanticamente simili, ma seguono regole in qualche modo diverse. Per ulteriori informazioni su lvalue e rvalues, vedere [lvalue e rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Per ulteriori informazioni sui riferimenti lvalue, vedere dichiaratore di [riferimento lvalue: &](../cpp/lvalue-reference-declarator-amp.md).
+I riferimenti rvalue consentono di distinguere un lvalue da un rvalue. I riferimenti lvalue e rvalue sono sintatticamente e semanticamente simili, ma seguono regole in qualche modo diverse. Per ulteriori informazioni su valori lvalue e rvalue, vedere [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Per ulteriori informazioni sui riferimenti lvalue, vedere Dichiaratore di [riferimento Lvalue: &](../cpp/lvalue-reference-declarator-amp.md).
 
-Nelle sezioni seguenti viene descritto come i riferimenti rvalue supportano l'implementazione della semantica di *spostamento* e l' *avanzamento perfetto*.
+Nelle sezioni seguenti viene descritto come i riferimenti rvalue supportano l'implementazione della *semantica* di spostamento e *dell'inoltro perfetto.*
 
 ## <a name="move-semantics"></a>Semantica di spostamento
 
-I riferimenti rvalue supportano l'implementazione della semantica di *spostamento*, che può aumentare significativamente le prestazioni delle applicazioni. La semantica di spostamento consente di scrivere codice per il trasferimento delle risorse (ad esempio memoria allocata in modo dinamico) da un oggetto a un altro. La semantica di spostamento funziona in quanto consente il trasferimento delle risorse da oggetti temporanei a cui non è possibile fare riferimento in un altro punto del programma.
+I riferimenti Rvalue supportano l'implementazione della *semantica*di spostamento , che può aumentare in modo significativo le prestazioni delle applicazioni. La semantica di spostamento consente di scrivere codice per il trasferimento delle risorse (ad esempio memoria allocata in modo dinamico) da un oggetto a un altro. La semantica di spostamento funziona in quanto consente il trasferimento delle risorse da oggetti temporanei a cui non è possibile fare riferimento in un altro punto del programma.
 
-Per implementare la semantica di spostamento, in genere si fornisce un *costruttore di spostamento* e facoltativamente un operatore di assegnazione di spostamento (**operator =** ) alla classe. Nelle operazioni di copia e assegnazione le cui origini sono valori rvalue viene automaticamente utilizzata la semantica di spostamento. A differenza di un costruttore di copia predefinito, il compilatore non fornisce un costruttore di spostamento predefinito. Per ulteriori informazioni su come scrivere un costruttore di spostamento e su come utilizzarlo nell'applicazione, vedere costruttori di spostamento [e operatori di assegnazione di spostamentoC++()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Per implementare la semantica di spostamento, in genere si fornisce un *costruttore* di spostamento e, facoltativamente, un operatore di assegnazione di spostamento (**operatore**) alla classe . Nelle operazioni di copia e assegnazione le cui origini sono valori rvalue viene automaticamente utilizzata la semantica di spostamento. A differenza di un costruttore di copia predefinito, il compilatore non fornisce un costruttore di spostamento predefinito. Per ulteriori informazioni su come scrivere un costruttore di spostamento e su come utilizzarlo nell'applicazione, vedere [Costruttori di spostamento e operatori](../cpp/move-constructors-and-move-assignment-operators-cpp.md)di assegnazione di spostamento (C ) .
 
-È inoltre possibile sottoporre a overload funzioni e operatori comuni per sfruttare la semantica di spostamento. Visual Studio 2010 introduce la semantica di C++ spostamento nella libreria standard. Ad esempio, la classe `string` implementa le operazioni che eseguono la semantica di spostamento. Si consideri l'esempio seguente in cui vengono concatenate diverse stringhe e viene visualizzato il risultato:
+È inoltre possibile sottoporre a overload funzioni e operatori comuni per sfruttare la semantica di spostamento. In Visual Studio 2010 la semantica di spostamento viene introdotta nella libreria standard di C. Ad esempio, la classe `string` implementa le operazioni che eseguono la semantica di spostamento. Si consideri l'esempio seguente in cui vengono concatenate diverse stringhe e viene visualizzato il risultato:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,23 +51,23 @@ int main()
 }
 ```
 
-Prima di Visual Studio 2010, ogni chiamata a **operator +** alloca e restituisce un nuovo oggetto `string` temporaneo (rvalue). **operator +** non può aggiungere una stringa all'altra perché non sa se le stringhe di origine sono lvalue o RValues. Se le stringhe di origine sono entrambe lvalue, è possibile che a esse venga fatto riferimento in un altro punto del programma e pertanto non devono essere modificate. Utilizzando i riferimenti rvalue, **operator +** può essere modificato per eseguire rvalues, a cui non è possibile fare riferimento in altre parti del programma. Quindi, **operator +** può ora accodare una stringa a un'altra. Ciò può ridurre notevolmente il numero delle allocazioni di memoria dinamica che devono essere eseguite dalla classe `string`. Per ulteriori informazioni sulla `string` classe, vedere [classe basic_string](../standard-library/basic-string-class.md).
+Prima di Visual Studio 2010, ogni chiamata a `string` operator **e** restituisce un nuovo oggetto temporaneo (un rvalue). **Impossibile** aggiungere una stringa all'altra perché non sa se le stringhe di origine sono lvalue o rvalue. Se le stringhe di origine sono entrambe lvalue, è possibile che a esse venga fatto riferimento in un altro punto del programma e pertanto non devono essere modificate. Utilizzando i riferimenti rvalue, è possibile modificare **l'operatore per** accettare valori rvalue, a cui non è possibile fare riferimento in un altro punto del programma. Di conseguenza, **operator è** ora in grado di aggiungere una stringa a un'altra. Ciò può ridurre notevolmente il numero delle allocazioni di memoria dinamica che devono essere eseguite dalla classe `string`. Per ulteriori informazioni `string` sulla classe , vedere [basic_string Class](../standard-library/basic-string-class.md).
 
-La semantica di spostamento è utile anche quando il compilatore non può utilizzare l'ottimizzazione del valore restituito (RVO) o l'ottimizzazione del valore restituito denominato (NRVO). In questi casi, il compilatore chiama il costruttore di spostamento se è definito dal tipo. Per altre informazioni sull'ottimizzazione del valore restituito denominato, vedere [ottimizzazione del valore restituito denominato in Visual Studio 2005](/previous-versions/ms364057(v=vs.80)).
+La semantica di spostamento è utile anche quando il compilatore non può utilizzare l'ottimizzazione del valore restituito (RVO) o l'ottimizzazione del valore restituito denominato (NRVO). In questi casi, il compilatore chiama il costruttore di spostamento se è definito dal tipo.
 
 Per comprendere meglio la semantica di spostamento, si consideri l'esempio dell'inserimento di un elemento in un oggetto `vector`. Se la capacità dell'oggetto `vector` viene superata, tale oggetto `vector` dovrà allocare di nuovo la memoria per i relativi elementi, quindi copiare ogni elemento in un'altra posizione di memoria per creare spazio per l'elemento inserito. Quando viene eseguita la copia di un elemento tramite un'operazione di inserimento, viene creato un nuovo elemento, viene chiamato il costruttore di copia per copiare i dati dall'elemento precedente nel nuovo elemento, quindi viene eliminato l'elemento precedente. La semantica di spostamento consente di spostare gli oggetti direttamente senza dover effettuare le dispendiose operazioni di allocazione della memoria e di copia.
 
 Per sfruttare i vantaggi della semantica di spostamento nell'esempio `vector`, è possibile scrivere un costruttore di spostamento per spostare i dati da un oggetto a un altro.
 
-Per ulteriori informazioni sull'introduzione della semantica di spostamento nella libreria C++ standard in Visual Studio 2010, vedere [ C++ ](../standard-library/cpp-standard-library-reference.md)la pagina relativa alla libreria standard.
+Per ulteriori informazioni sull'introduzione della semantica di spostamento nella libreria standard di Visual Studio 2010, vedere Libreria standard di [C.](../standard-library/cpp-standard-library-reference.md)
 
 ## <a name="perfect-forwarding"></a>Inoltro perfetto
 
-L'inoltro perfetto riduce la necessità delle funzioni sottoposte a overload e consente di evitare il problema di inoltro. Il *problema* di inoltramento può verificarsi quando si scrive una funzione generica che accetta riferimenti come parametri e passa (o *Inoltra*) questi parametri a un'altra funzione. Ad esempio, se la funzione generica accetta un parametro di tipo `const T&`, la funzione chiamata non può modificare il valore di tale parametro. Se la funzione generica accetta un parametro di tipo `T&`, non sarà possibile chiamare tale funzione utilizzando un rvalue, ad esempio un oggetto temporaneo o un valore letterale Integer.
+L'inoltro perfetto riduce la necessità delle funzioni sottoposte a overload e consente di evitare il problema di inoltro. Il problema di *inoltro* può verificarsi quando si scrive una funzione generica che accetta riferimenti come parametri e passa (o *inoltra*) questi parametri a un'altra funzione. Ad esempio, se la funzione generica accetta un parametro di tipo `const T&`, la funzione chiamata non può modificare il valore di tale parametro. Se la funzione generica accetta un parametro di tipo `T&`, non sarà possibile chiamare tale funzione utilizzando un rvalue, ad esempio un oggetto temporaneo o un valore letterale Integer.
 
 In genere, per risolvere questo problema, è necessario fornire versioni sottoposte a overload della funzione generica che accettano `T&` e `const T&` per ogni parametro. Di conseguenza, il numero delle funzioni sottoposte a overload aumenta in modo esponenziale con il numero di parametri. I riferimenti rvalue consentono di scrivere una versione di una funzione che accetta argomenti arbitrari e li inoltra a un'altra funzione come se l'altra funzione fosse stata chiamata direttamente.
 
-Si consideri l'esempio seguente in cui vengono dichiarati quattro tipi, `W`, `X`, `Y` e `Z`. Il costruttore per ogni tipo accetta una combinazione diversa di riferimenti const e non const lvalue come parametri.
+Si consideri l'esempio seguente in cui vengono dichiarati quattro tipi, `W`, `X`, `Y` e `Z`. Il costruttore per ogni tipo accetta una combinazione diversa di riferimenti **lvalue const** e non**const** come parametri.
 
 ```cpp
 struct W
@@ -124,7 +124,7 @@ T* factory(A1&& a1, A2&& a2)
 }
 ```
 
-In questo esempio vengono utilizzati i riferimenti rvalue come parametri della funzione `factory`. Lo scopo della funzione [std:: inoltr](../standard-library/utility-functions.md#forward) è di inviare i parametri della funzione Factory al costruttore della classe modello.
+In questo esempio vengono utilizzati i riferimenti rvalue come parametri della funzione `factory`. Lo scopo della funzione [std::forward](../standard-library/utility-functions.md#forward) è inoltrare i parametri della funzione factory al costruttore della classe modello.
 
 Nell'esempio seguente viene illustrata la funzione `main` che utilizza la funzione `factory` modificata per creare istanze delle classi `W`, `X`, `Y` e `Z`. La funzione `factory` modificata inoltra i relativi parametri (valori lvalue o rvalue) al costruttore della classe appropriato.
 
@@ -146,9 +146,9 @@ int main()
 
 ## <a name="additional-properties-of-rvalue-references"></a>Proprietà aggiuntive dei riferimenti rvalue
 
-**È possibile eseguire l'overload di una funzione per eseguire un riferimento lvalue e un riferimento rvalue.**
+**È possibile eseguire l'overload di una funzione che accetta un riferimento lvalue e un riferimento rvalue.**
 
-Eseguendo l'overload di una funzione per eseguire un riferimento const lvalue o un riferimento rvalue, è possibile scrivere codice che distingue tra gli oggetti non modificabili (lvalue) e i valori temporanei modificabili (RValues). È possibile passare un oggetto a una funzione che accetta un riferimento rvalue a meno che l'oggetto non siacontrassegnato come const. Nell'esempio seguente viene illustrata la funzione `f`, che viene sottoposta a overload per accettare un riferimento lvalue e un riferimento rvalue. La funzione `main` chiama `f` con i valori lvalue e un valore rvalue.
+Eseguendo l'overload di una funzione per accettare un riferimento lvalue **const** o un riferimento rvalue, è possibile scrivere codice che distingue tra oggetti non modificabili (lvalue) e valori temporanei modificabili (rvalues). È possibile passare un oggetto a una funzione che accetta un riferimento rvalue a meno che l'oggetto non sia contrassegnato come **const**. Nell'esempio seguente viene illustrata la funzione `f`, che viene sottoposta a overload per accettare un riferimento lvalue e un riferimento rvalue. La funzione `main` chiama `f` con i valori lvalue e un valore rvalue.
 
 ```cpp
 // reference-overload.cpp
@@ -180,7 +180,7 @@ int main()
 }
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```Output
 In f(const MemoryBlock&). This version cannot modify the parameter.
@@ -229,7 +229,7 @@ int main()
 }
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```cpp
 In g(const MemoryBlock&).
@@ -240,7 +240,7 @@ In questo esempio la funzione `main` passa un rvalue a `f`. Il corpo di `f` trat
 
 - **È possibile eseguire il cast di un lvalue a un riferimento rvalue.**
 
-La C++ funzione della libreria standard [std:: Move](../standard-library/utility-functions.md#move) consente di convertire un oggetto in un riferimento rvalue a tale oggetto. In alternativa, è possibile usare la parola chiave **static_cast** per eseguire il cast di un lvalue a un riferimento rvalue, come illustrato nell'esempio seguente:
+La funzione [std::move](../standard-library/utility-functions.md#move) della libreria standard di C' consente di convertire un oggetto in un riferimento rvalue a tale oggetto. In alternativa, è possibile utilizzare la parola chiave **static_cast** per eseguire il cast di un lvalue a un riferimento rvalue, come illustrato nell'esempio seguente:Alternatively, you can use the static_cast keyword to cast an lvalue to an rvalue reference, as shown in the following example:
 
 ```cpp
 // cast-reference.cpp
@@ -272,18 +272,18 @@ int main()
 }
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```cpp
 In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-**I modelli di funzione deducono i tipi di argomento di modello e quindi utilizzano regole di compressione dei riferimenti.**
+**I modelli di funzione deducono i tipi di argomento di modello, quindi utilizzano le regole di compressione dei riferimenti.**
 
-È normale scrivere un modello di funzione che passa (o *Inoltra*) i parametri a un'altra funzione. È importante capire come funziona la deduzione del tipo di modello per i modelli di funzioni che accettano i riferimenti rvalue.
+È comune scrivere un modello di funzione che passa (o *inoltra) i*parametri a un'altra funzione. È importante capire come funziona la deduzione del tipo di modello per i modelli di funzioni che accettano i riferimenti rvalue.
 
-Se l'argomento della funzione è un rvalue, il compilatore deduce che l'argomento sia un riferimento rvalue. Ad esempio, se si passa un riferimento rvalue a un oggetto di tipo `X` a una funzione di modello che accetta il tipo `T&&` come parametro, la deduzione dell'argomento di modello deduce che `T` sia `X`. Pertanto, il parametro ha il tipo `X&&`. Se l'argomento della funzione è un lvalue o const lvalue, il compilatore deduce che il tipo sia un riferimento lvalue o un riferimento **const** lvalue di quel tipo.
+Se l'argomento della funzione è un rvalue, il compilatore deduce che l'argomento sia un riferimento rvalue. Ad esempio, se si passa un riferimento rvalue a un oggetto di tipo `X` a una funzione di modello che accetta il tipo `T&&` come parametro, la deduzione dell'argomento di modello deduce che `T` sia `X`. Pertanto, il parametro ha il tipo `X&&`. Se l'argomento della funzione è un lvalue o **const** lvalue, il compilatore deduce il tipo come riferimento lvalue o un riferimento **lvalue const** di tale tipo.
 
 Nell'esempio seguente viene dichiarato un modello di struttura, quindi ne viene definita la specializzazione per diversi tipi di riferimento. La funzione `print_type_and_value` accetta un riferimento rvalue come parametro e lo inoltra alla versione specializzata appropriata del metodo `S::print`. La funzione `main` illustra i vari modi di chiamare il metodo `S::print`.
 
@@ -366,7 +366,7 @@ int main()
 }
 ```
 
-Questo esempio produce il seguente output:
+Nell'esempio viene prodotto l'output seguente:
 
 ```cpp
 print<T&>: first
@@ -401,7 +401,7 @@ Nella tabella seguente vengono riepilogate le regole di compressione dei riferim
 
 La deduzione dell'argomento di modello è un elemento importante dell'implementazione dell'inoltro perfetto. La sezione Inoltro perfetto, presentata in precedenza in questo argomento, descrive l'inoltro perfetto più dettagliatamente.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 I riferimenti rvalue distinguono gli lvalue dagli rvalue. Consentono di migliorare le prestazioni delle applicazioni eliminando la necessità di allocazioni di memoria e operazioni di copia non necessarie. Consentono inoltre di scrivere una versione di una funzione che accetta argomenti arbitrari e li inoltra a un'altra funzione come se l'altra funzione fosse stata chiamata direttamente.
 
@@ -411,4 +411,4 @@ I riferimenti rvalue distinguono gli lvalue dagli rvalue. Consentono di migliora
 [Dichiaratore di riferimento lvalue: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
 [Elementi Lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [Costruttori di spostamento e operatori di assegnazione di spostamento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Libreria standard di C](../standard-library/cpp-standard-library-reference.md)

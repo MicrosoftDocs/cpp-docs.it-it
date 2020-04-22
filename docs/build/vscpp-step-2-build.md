@@ -1,33 +1,33 @@
 ---
 title: Compilare ed eseguire un progetto di app console C++
-description: Compilare ed eseguire un'app console Hello World in Visual C++
+description: Compilare ed eseguire un'app console Hello World in Visual C
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/20/2020
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1e92e598b370312730a7c4e208b935a264010bf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314271"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749249"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilare ed eseguire un progetto di app console C++
 
-Dopo aver creato un progetto di app console C++ e ha immesso il codice, è possibile compilare ed eseguirlo all'interno di Visual Studio e quindi eseguirlo come un'app autonoma dalla riga di comando.
+È stato creato un progetto di app per console di C e è stato immesso il codice. A questo punto è possibile compilarlo ed eseguirlo all'interno di Visual Studio.Now you can build it and run it within Visual Studio. Quindi, eseguirlo come app autonoma dalla riga di comando.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Visual Studio con il carico di lavoro Sviluppo di applicazioni desktop con C++ deve essere installato e in esecuzione nel computer. Se non si è ancora installato, seguire i passaggi descritti in [supporto di installazione di C++ in Visual Studio](vscpp-step-0-installation.md).
+- Visual Studio con il carico di lavoro Sviluppo di applicazioni desktop con C++ deve essere installato e in esecuzione nel computer. Se non è ancora installato, seguire i passaggi descritti in Installare il supporto di [C.](vscpp-step-0-installation.md)
 
-- Creare un "Hello, World!" progetto e immettere il codice sorgente. Se non è ancora stato fatto, seguire i passaggi descritti in [creare un progetto di app console C++](vscpp-step-1-create.md).
+- Creare un "Ciao, Mondo!" progetto e inserire il relativo codice sorgente. Se non hai ancora eseguito questo passaggio, segui i passaggi descritti in Creare un progetto di [app per console c'è](vscpp-step-1-create.md).
 
-Se Visual Studio è simile a ciò, si è pronti per compilare ed eseguire l'app:
+Se Visual Studio ha questo aspetto, sei pronto per compilare ed eseguire l'app:
 
-   ![Pronti a compilare il nuovo progetto](media/vscpp-ready-to-build.png "pronti a compilare il nuovo progetto")
+   ![Pronto per la creazione del nuovo progetto](media/vscpp-ready-to-build.png "Pronto per la creazione del nuovo progetto")
 
-## <a name="build-and-run-your-code-in-visual-studio"></a>Compilare ed eseguire il codice in Visual Studio
+## <a name="build-and-run-your-code-in-visual-studio"></a>Compilare ed eseguire il codice in Visual StudioBuild and run your code in Visual Studio
 
 1. Per compilare il progetto scegliere **Compila soluzione** dal menu **Compila**. Nella finestra **Output** vengono visualizzati i risultati del processo di compilazione.
 
@@ -39,47 +39,49 @@ Se Visual Studio è simile a ciò, si è pronti per compilare ed eseguire l'app:
 
    Si apre una finestra della console si apre e quindi viene eseguita l'app. Quando viene avviata in Visual Studio, un'app console esegue il codice, quindi stampa "Premere un tasto per continuare. . ." per consentire di visualizzare l'output.
 
-La procedura è stata completata. Si è creata la prima app console "Hello, World!" in Visual Studio. Premere un tasto per chiudere la finestra della console e tornare a Visual Studio.
+Congratulazioni! Si è creata la prima app console "Hello, World!" in Visual Studio. Premere un tasto per chiudere la finestra della console e tornare a Visual Studio.
 
 [Si è verificato un problema.](#build-and-run-your-code-in-visual-studio-issues)
 
-## <a name="run-your-code-in-a-command-window"></a>Eseguire il codice in una finestra di comando
+## <a name="run-your-code-in-a-command-window"></a>Eseguire il codice in una finestra di comandoRun your code in a command window
 
-In genere, si esegue l'App console al prompt dei comandi, non in Visual Studio. Dopo aver compilato l'app da Visual Studio, è possibile eseguirlo da qualsiasi finestra di comando. Di seguito viene illustrato come trovare ed eseguire la nuova app in una finestra del prompt dei comandi.
+In genere, le app console vengono eseguite al prompt dei comandi, non in Visual Studio. Dopo aver creato l'app da Visual Studio, puoi eseguirla da qualsiasi finestra di comando. Ecco come trovare ed eseguire la nuova app in una finestra del prompt dei comandi.
 
-1. Nelle **Esplora soluzioni**, selezionare la soluzione HelloWorld e fare doppio clic per aprire il menu di scelta rapida. Scegli **Apri cartella in Esplora File** per aprire una **Esplora File** finestra nella cartella della soluzione HelloWorld.
+1. In **Esplora soluzioni**selezionare la soluzione HelloWorld (non il progetto HelloWorld) e fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida. Scegliere **Apri cartella in Esplora file** per aprire una finestra Esplora **file** nella cartella della soluzione HelloWorld.
 
-1. Nel **Esplora File** finestra, aprire la cartella di Debug. Questo file contiene l'app, HelloWorld.exe e un paio di altri file di debug. Selezionare HelloWorld.exe, tenere premuto il tasto MAIUSC e fare doppio clic per aprire il menu di scelta rapida. Scegli **copia come percorso** per copiare il percorso per l'app negli Appunti.
+1. Nella finestra **Esplora file** aprire la cartella Debug. Questa cartella contiene l'app, *HelloWorld.exe,* e un paio di altri file di debug. Tenere premuto il **tasto Maiusc** e fare clic con il pulsante destro del mouse su *HelloWorld.exe* per aprire il menu di scelta rapida. Scegliere **Copia come percorso** per copiare il percorso dell'app negli Appunti.
 
-1. Per aprire una finestra del prompt dei comandi, premere Windows-R per aprire la **eseguire** finestra di dialogo. Immettere *cmd.exe* nel **Open** casella di testo, quindi scegliere **OK** aprire una finestra del prompt dei comandi.
+1. Per aprire una finestra del prompt dei comandi, premere **Windows e R** per aprire la finestra di dialogo **Esegui.** Immettere *cmd.exe* nella casella di testo **Apri,** quindi scegliere **OK** per eseguire una finestra del prompt dei comandi.
 
-1. Nella finestra del prompt dei comandi del pulsante destro del mouse per incollare il percorso all'app nel prompt dei comandi. Premere INVIO per eseguire l'app.
+1. Nella finestra del prompt dei comandi fare clic con il pulsante destro del mouse per incollare il percorso dell'app nel prompt dei comandi. Premi INVIO per eseguire l'app.
 
-   ![Eseguire l'app al prompt dei comandi](media/vscpp-run-in-cmd.gif "eseguire l'app al prompt dei comandi")
+   ![Eseguire l'app dal prompt dei comandi](media/vscpp-run-in-cmd.gif "Eseguire l'app dal prompt dei comandi")
 
-Complimenti, è stata compilata ed eseguita un'app console in Visual Studio.
+Congratulazioni, hai creato ed eseguito un'app console in Visual Studio!
 
 [Si è verificato un problema.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo che è stata creata ed eseguire questa app semplice, si è pronti per progetti più complessi. Visualizzare [usando l'IDE di Visual Studio per lo sviluppo Desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) per altre procedure dettagliate che illustrano le funzionalità di Visual C++ in Visual Studio.
+Dopo aver creato ed eseguito questa semplice app, sei pronto per progetti più complessi. Per ulteriori informazioni, vedere [Utilizzo dell'IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)di Visual Studio per lo sviluppo di desktop in C. Sono disponibili procedure dettagliate più dettagliate per l'esplorazione delle funzionalità di Microsoft C.
 
-## <a name="troubleshooting-guide"></a>Guida alla risoluzione dei problemi
+## <a name="troubleshooting-guide"></a>Guida per la risoluzione dei problemi
 
-Qui è per le soluzioni ai problemi comuni quando si crea il primo progetto in C++.
+Quando si crea il primo progetto in C.
 
-### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Compilare ed eseguire il codice in problemi di Visual Studio
+### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Compilare ed eseguire il codice in Visual Studio: problemi
 
-Se le sottolineature rosse vengono visualizzati in qualsiasi elemento nell'editor del codice sorgente, la compilazione potrebbe essere errori o avvisi. Verificare che il codice corrisponda all'esempio di ortografia, segni di punteggiatura e case.
+Se le tabelle ondulate rosse vengono visualizzate sotto qualsiasi elemento nell'editor del codice sorgente, la compilazione potrebbe avere errori o avvisi. Verificare che il codice corrisponda all'esempio in ortografia, punteggiatura e distinzione tra maiuscole e minuscole.
 
 [Indietro.](#build-and-run-your-code-in-visual-studio)
 
-### <a name="run-your-code-in-a-command-window-issues"></a>Eseguire il codice in una finestra di comando problemi
+### <a name="run-your-code-in-a-command-window-issues"></a>Eseguire il codice in una finestra di comando: problemiRun your code in a command window: issues
 
-È anche possibile passare alla cartella di Debug della soluzione nella riga di comando per eseguire l'app. È possibile eseguire l'app da altre directory senza specificare il percorso all'app. Tuttavia, è possibile copiare l'app in un'altra directory ed eseguirlo da tale posizione.
+Se il percorso visualizzato in Esplora file termina in * \\HelloWorld\\HelloWorld*, il *progetto* HelloWorld è stato aperto anziché la *soluzione*HelloWorld . Sarai confuso da una cartella Debug che non contiene la tua app. Spostarsi verso l'alto di un livello in Esplora file per ottenere la cartella della soluzione, il primo *HelloWorld* nel percorso. Questa cartella contiene anche una cartella Debug e l'app è presente.
 
-Se non viene visualizzata **copia come percorso** nel menu di scelta rapida, ignorare il menu di scelta e quindi tenere premuto MAIUSC mentre si apre nuovamente. Si tratta semplicemente per comodità. È anche possibile copiare il percorso della cartella dalla barra di ricerca di Esplora File e incollarlo nella **eseguire** finestra di dialogo e quindi immettere il nome del file eseguibile alla fine. È un po' più digitazione, ma ha lo stesso risultato.
+Puoi anche passare alla cartella Debug della soluzione dalla riga di comando per eseguire l'app. L'app non verrà eseguita da altre directory senza specificare il percorso dell'app. Tuttavia, puoi copiare l'app in un'altra directory ed eseguirla da lì. È anche possibile copiarlo in una directory specificata dalla variabile di ambiente PATH, quindi eseguirla da qualsiasi luogo.
+
+Se nel menu di scelta rapida non è visualizzato **Copia come percorso,** chiudere il menu e quindi tenere premuto **il tasto MAIUSC** mentre lo si riapre. Questo comando è solo per comodità. È inoltre possibile copiare il percorso della cartella dalla barra di ricerca di Esplora file e incollarlo nella finestra di dialogo **Esegui,** quindi immettere il nome dell'eseguibile alla fine. E 'solo un po 'più di digitazione, ma ha lo stesso risultato.
 
 [Indietro.](#run-your-code-in-a-command-window)
 

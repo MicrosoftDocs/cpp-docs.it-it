@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 610cbec6cb65d4e9616c5e0e0d64e729f39febcc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ba09430427b6ece8ae5956912cbcc40fb33fcf2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317752"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747164"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 Il `DATE` tipo viene implementato come valore a virgola mobile. I giorni sono misurati dal 30 dicembre 1899, a mezzanotte. La tabella seguente mostra alcune date e i relativi valori associati:
 
-|Data|Valore|
+|Data|valore|
 |----------|-----------|
 |29 dicembre 1899, mezzanotte|-1.0|
 |29 dicembre 1899, ore 6|-1.25|
@@ -155,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Data*<br/>
+*date*<br/>
 L'oggetto `COleDateTime` da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -296,7 +296,7 @@ Indica uno dei seguenti flag locali:
 
 - VAR_DATEVALUEONLY Ignorare la parte relativa al tempo durante l'analisi.
 
-*Lcid*<br/>
+*lcid*<br/>
 Indica l'ID delle impostazioni locali da utilizzare per la conversione. Per ulteriori informazioni sugli identificatori di lingua, vedere [Identificatori di lingua](/windows/win32/Intl/language-identifiers).
 
 *Formato lpsz*<br/>
@@ -940,7 +940,7 @@ Indica i flag per le impostazioni locali e l'analisi. Uno o più dei seguenti fl
 
 - VAR_DATEVALUEONLY Ignorare la parte relativa al tempo durante l'analisi.
 
-*Lcid*<br/>
+*lcid*<br/>
 Indica l'ID delle impostazioni locali da utilizzare per la conversione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1014,7 +1014,7 @@ Se il valore della data specificato dai parametri non è `COleDateTime::invalid`
 
 Di seguito sono riportati alcuni esempi di valori di data:
 
-|*nAnno*|*nMese*|*nGiorno*|Valore|
+|*nAnno*|*nMese*|*nGiorno*|valore|
 |-------------|--------------|------------|-----------|
 |2000|2|29|del 29 febbraio 2000|
 |1776|7|4|4 luglio 1776|
@@ -1089,7 +1089,7 @@ Se il valore di data o ora specificato dai parametri non è valido, lo stato di 
 
 Ecco alcuni esempi di valori temporali:
 
-|*nOre*|*nMin*|*nSec (Sec)*|Valore|
+|*nOre*|*nMin*|*nSec (Sec)*|valore|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1098,7 +1098,7 @@ Ecco alcuni esempi di valori temporali:
 
 Di seguito sono riportati alcuni esempi di valori di data:
 
-|*nAnno*|*nMese*|*nGiorno*|Valore|
+|*nAnno*|*nMese*|*nGiorno*|valore|
 |-------------|--------------|------------|-----------|
 |1995|4|15|15 aprile 1995|
 |1789|7|14|17 luglio 1789|
@@ -1135,13 +1135,13 @@ Vedere l'esempio per [GetStatus](#getstatus).
 
 Imposta lo stato `COleDateTime` di questo oggetto.
 
-```
+```cpp
 void SetStatus(DateTimeStatus status) throw();
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*status*<br/>
+*Stato*<br/>
 Nuovo valore di `COleDateTime` stato per questo oggetto.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1191,7 +1191,7 @@ Se il valore di ora specificato dai parametri non è valido, lo stato di questo 
 
 Ecco alcuni esempi di valori temporali:
 
-|*nOre*|*nMin*|*nSec (Sec)*|Valore|
+|*nOre*|*nMin*|*nSec (Sec)*|valore|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|

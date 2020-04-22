@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: ed6ee67194aa208f77a8d43dcc17ac43b0d74278
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148010"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745881"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Forme obsolete di dichiarazioni e definizioni di funzioni
 
@@ -30,7 +30,7 @@ Alle funzioni che restituiscono un intero o un puntatore con la stessa dimension
 
 Per la conformità allo standard ANSI C, le dichiarazioni di funzione obsolete con i puntini di sospensione generano ora un errore durante la compilazione con l'opzione /Za e un avviso di livello 4 durante la compilazione con /Ze. Ad esempio:
 
-```
+```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */
 int a;                 /* an error when compiling with /Za */
 {
@@ -39,7 +39,7 @@ int a;                 /* an error when compiling with /Za */
 
 È necessario riscrivere questa dichiarazione come prototipo:
 
-```
+```cpp
 void funct1( int a, ... )
 {
 }

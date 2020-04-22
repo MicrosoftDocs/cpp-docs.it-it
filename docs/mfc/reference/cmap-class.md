@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbb34d4db41ef11cd01a6a8a7f20cafa0e737268
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370101"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749069"
 ---
 # <a name="cmap-class"></a>Classe CMap
 
@@ -211,7 +211,7 @@ Numero di elementi nella tabella hash.
 
 Recupera l'elemento `rNextPosition`della mappa `rNextPosition` in , quindi viene aggiornato per fare riferimento all'elemento successivo nella mappa.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     KEY& rKey,
@@ -289,7 +289,7 @@ Vedere l'esempio per [CMap::SetAt](#setat).
 
 Inizializza la tabella hash.
 
-```
+```cpp
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```
 
@@ -338,7 +338,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *ARG_KEY*<br/>
 Parametro di modello che specifica il tipo del valore della *chiave.*
 
-*Chiave*<br/>
+*key*<br/>
 Specifica la chiave che identifica l'elemento da cercare.
 
 *Valore*<br/>
@@ -375,7 +375,7 @@ Parametro di modello che specifica il tipo del valore della mappa.
 *ARG_KEY*<br/>
 Parametro di modello che specifica il tipo del valore della chiave.
 
-*Chiave*<br/>
+*key*<br/>
 Chiave utilizzata per recuperare il valore dalla mappa.
 
 ### <a name="remarks"></a>Osservazioni
@@ -447,7 +447,7 @@ CPair* PLookup(ARG_KEY key);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave per l'elemento da cercare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -466,7 +466,7 @@ Chiamare questo metodo per cercare un elemento della mappa con una chiave che co
 
 Rimuove tutti i valori da questa mappa `DestructElements`chiamando la funzione di supporto globale .
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -491,7 +491,7 @@ BOOL RemoveKey(ARG_KEY key);
 *ARG_KEY*<br/>
 Parametro di modello che specifica il tipo della chiave.
 
-*Chiave*<br/>
+*key*<br/>
 Chiave per l'elemento da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -510,7 +510,7 @@ Vedere l'esempio per [CMap::SetAt](#setat).
 
 Il mezzo principale per inserire un elemento in una mappa.
 
-```
+```cpp
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```
 
@@ -519,7 +519,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 *ARG_KEY*<br/>
 Parametro di modello che specifica il tipo del parametro *chiave.*
 
-*Chiave*<br/>
+*key*<br/>
 Specifica la chiave del nuovo elemento.
 
 *ARG_VALUE*<br/>

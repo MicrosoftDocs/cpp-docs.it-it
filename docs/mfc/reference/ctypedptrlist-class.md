@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 40dbfb822e71309e9675aba14d46d333ffa4ee06
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4899d4470903a4145cc171579e4b251b984f95
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373270"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747194"
 ---
 # <a name="ctypedptrlist-class"></a>Classe CTypedPtrList
 
@@ -354,7 +354,7 @@ Il puntatore in precedenza alla fine dell'elenco. Questo puntatore è del tipo s
 
 Questa funzione `BASE_CLASS`membro chiama **::SetAt**.
 
-```
+```cpp
 void SetAt(POSITION pos, TYPE newElement);
 ```
 

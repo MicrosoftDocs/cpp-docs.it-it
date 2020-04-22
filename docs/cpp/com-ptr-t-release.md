@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: f455e855e782a939e79898ee46e445f65d25d37a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73de3c2d19063f0738b8b0a3c510ea520f58de0b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170592"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745052"
 ---
 # <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Chiama la funzione membro di **rilascio** di `IUnknown` sul puntatore a interfaccia incapsulato.
+Chiama **Release** la funzione `IUnknown` membro Release di sul puntatore a interfaccia incapsulato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 void Release( );
 ```
 
 ## <a name="remarks"></a>Osservazioni
 
-Chiama `IUnknown::Release` sul puntatore a interfaccia incapsulato, generando un errore `E_POINTER` se il puntatore di interfaccia è NULL.
+Chiama `IUnknown::Release` il puntatore a interfaccia `E_POINTER` incapsulato, generando un errore se questo puntatore a interfaccia è NULL.
 
-**Fine sezione specifica Microsoft**
+**FINE Specifico di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

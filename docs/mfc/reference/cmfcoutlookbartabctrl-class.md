@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 309b74126f57e76aa6399f57382d88fee4400700
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c5d7d5135c3b207bbf113970deb8cbeb186bcca
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369669"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749575"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -135,7 +135,7 @@ Nell'esempio riportato di `CMFCOutlookBarTabCtrl` seguito viene illustrato `CMFC
 
 Aggiunge un controllo di Windows come nuova scheda nella barra di Outlook.
 
-```
+```cpp
 void AddControl(
     CWnd* pWndCtrl,
     LPCTSTR lpszName,
@@ -277,7 +277,7 @@ Chiamare questa funzione per abilitare o disabilitare la modifica sul posto dell
 
 Chiamato dal framework per abilitare gli handle di scorrimento che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook.
 
-```
+```cpp
 void EnableScrollButtons(
     BOOL bEnable = TRUE,
     BOOL bIsUp = TRUE,
@@ -416,7 +416,7 @@ L'effetto visivo dell'impostazione della scheda attiva dipende dall'abilitazione
 
 Imposta la dimensione del bordo del controllo struttura a schede di Outlook.
 
-```
+```cpp
 void SetBorderSize(int nBorderSize);
 ```
 
@@ -433,7 +433,7 @@ Imposta le nuove dimensioni del bordo e ricalcola il layout della finestra di Ou
 
 Imposta l'allineamento delle etichette di testo sui pulsanti delle schede della barra di Outlook.
 
-```
+```cpp
 void SetPageButtonTextAlign(
     UINT uiAlign,
     BOOL bRedraw=TRUE);
@@ -495,7 +495,7 @@ Questo metodo non deve essere chiamato se non è in modalità Microsoft Office 2
 
 ## <a name="cmfcoutlookbartabctrlsetvisiblepagebuttons"></a><a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrlCtrl::SetVisiblePageButtons
 
-```
+```cpp
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 

@@ -3,12 +3,12 @@ title: Stato globale nel CRT
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81379100"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745357"
 ---
 # <a name="global-state-in-the-crt"></a>Stato globale nel CRT
 
@@ -20,8 +20,8 @@ Lo stato globale di UCRT non è condiviso tra le applicazioni e il sistema opera
 
 In UCRT, le funzioni che interagiscono con lo stato `_o_`globale hanno una funzione "gemella", preceduta da . Ad esempio:
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`influisce sullo stato globale specifico dell'app.
+- `_o_setlocale()`influisce sullo stato globale condiviso da tutti i componenti del sistema operativo, ma non sulle app.
 
 L'unica differenza tra queste funzioni "gemelle" è che quando leggono/scrivono lo stato CRT `_o_`globale, le versioni specifiche del sistema operativo (ovvero le versioni che iniziano con ) utilizzano la copia del sistema operativo dello stato globale anziché la copia dello stato globale dell'app.
 

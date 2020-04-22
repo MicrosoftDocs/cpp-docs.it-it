@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321333"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748599"
 ---
 # <a name="catlservicemodulet-class"></a>Classe CAtlServiceModuleT
 
@@ -147,7 +147,7 @@ Inizializza i membri dati e imposta lo stato iniziale del servizio.
 
 Routine del gestore per il servizio.
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ Restituisce TRUE se il servizio è installato, FALSE in caso contrario.
 
 Scrive nel log eventi.
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ Stringa con terminazione null in cui viene archiviato il nome del servizio.
 
 Eseguire l'override di questo metodo per continuare il servizio.
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 Eseguire l'override di questo metodo per interrogare il servizio.
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 Eseguire l'override di questo metodo per sospendere il servizio.
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 Eseguire l'override di questo metodo per arrestare il servizio.
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 Eseguire l'override di questo metodo per arrestare il servizio.
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 Eseguire l'override di questo metodo per gestire le richieste sconosciute al servizio.
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ Dopo la `Run` chiamata, chiama [CAtlServiceModuleT::PreMessageLoop](#premessagel
 
 Questo metodo viene chiamato da Gestione controllo servizi.
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ Dopo le chiamate `ServiceMain`di Gestione controllo servizi, un servizio deve fo
 
 Questo metodo aggiorna lo stato del servizio.
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 
