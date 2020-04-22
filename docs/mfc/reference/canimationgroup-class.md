@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 28d305e2107f7b9a8fd2164eb0ec9678d62ef8fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14ac32524436ff46449171ad90599e60f63dff2a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369740"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750160"
 ---
 # <a name="canimationgroup-class"></a>Classe CAnimationGroup
 
@@ -135,7 +135,7 @@ Distruttore. Chiamato quando un gruppo di animazione viene eliminato definitivam
 
 Helper che aggiunge fotogrammi chiave a uno storyboard.
 
-```
+```cpp
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```
 
@@ -151,7 +151,7 @@ Specifica se questo metodo deve essere aggiunto ai fotogrammi chiave dello story
 
 Helper che aggiunge transizioni a uno storyboard.
 
-```
+```cpp
 void AddTransitions(
     IUIAnimationStoryboard* pStoryboard,
     BOOL bDependOnKeyframes);
@@ -193,7 +193,7 @@ Questo metodo crea uno storyboard interno, crea e applica transizioni e pianific
 
 Applica le transizioni agli oggetti di animazione.
 
-```
+```cpp
 void ApplyTransitions();
 ```
 
@@ -326,7 +326,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 
 Rimuove e facoltativamente elimina tutti i fotogrammi chiave che appartengono a un gruppo di animazioni.
 
-```
+```cpp
 void RemoveKeyframes();
 ```
 
@@ -338,7 +338,7 @@ Se m_bAutodestroyKeyframes membro è TRUE, i fotogrammi chiave vengono rimossi e
 
 Rimuove le transizioni dagli oggetti di animazione che appartengono a un gruppo di animazioni.
 
-```
+```cpp
 void RemoveTransitions();
 ```
 
@@ -374,7 +374,7 @@ Chiamare questa funzione per pianificare un'animazione all'ora specificata. È n
 
 Indirizza tutti gli oggetti di animazione che appartengono al gruppo di eliminare automaticamente le transizioni.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```
 

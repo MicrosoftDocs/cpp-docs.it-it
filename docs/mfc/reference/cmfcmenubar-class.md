@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 50dd488d1f59c99b8fee1eb96acf6d0041547df9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f25bff9564eb7a4290f958f0b7810cac8ef7e238
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369695"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749627"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar (classe)
 
@@ -430,7 +430,7 @@ Utilizzare questo metodo se si desidera che un controllo menu abbia le stesse vo
 
 Attiva una casella combinata **della Guida** che si trova sul lato destro della barra dei menu.
 
-```
+```cpp
 void EnableHelpCombobox(
     UINT uiID,
     LPCTSTR lpszPrompt = NULL,
@@ -954,7 +954,7 @@ Le informazioni salvate includono le voci di menu, lo stato del dock e la posizi
 
 Imposta il menu predefinito per un [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) oggetto in base all'ID risorsa.
 
-```
+```cpp
 void SetDefaultMenuResId(UINT uiResId);
 ```
 
@@ -971,7 +971,7 @@ Utilizzare il [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) metodo pe
 
 ## <a name="cmfcmenubarsetforcedownarrows"></a><a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows
 
-```
+```cpp
 void SetForceDownArrows(BOOL bValue);
 ```
 
@@ -985,7 +985,7 @@ void SetForceDownArrows(BOOL bValue);
 
 Il framework chiama questo metodo quando un MDI cambia la modalità di visualizzazione e la barra dei menu deve essere aggiornata.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL,
@@ -1011,7 +1011,7 @@ Quando una finestra figlio MDI è ingrandita, una barra dei menu collegata alla 
 
 Imposta le informazioni sulla classe di runtime utilizzate dal framework quando l'utente crea pulsanti di menu.
 
-```
+```cpp
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```
 

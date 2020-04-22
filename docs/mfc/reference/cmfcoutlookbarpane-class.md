@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369634"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749602"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane (classe)
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Libera le risorse utilizzate dalle immagini nel riquadro della barra di Outlook.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ L'implementazione predefinita controlla la modalità di personalizzazione ( [CMF
 
 Specifica se le frecce di scorrimento nel riquadro della barra di Outlook avanzano l'elenco dei pulsanti pagina per pagina o pulsante per pulsante.
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ TRUESe il pulsante è stato rimosso correttamente. FALSE se l'ID di comando spec
 
 Imposta il colore di sfondo della barra di Outlook.
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ Chiamare questa funzione per impostare il colore di sfondo corrente per la barra
 
 Imposta l'immagine di sfondo.
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ Chiamare questo metodo per impostare l'immagine di sfondo della barra di Outlook
 
 Reimposta il riquadro della barra di Outlook sul set di pulsanti originale.
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ Questo metodo ripristina i pulsanti della barra di Outlook al set originale. Que
 
 Imposta il numero di pixel di spaziatura interna utilizzati intorno ai pulsanti nel riquadro della barra di Outlook.
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Consente di impostare i colori del testo normale ed evidenziato nel riquadro della barra di Outlook.
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 Imposta il colore trasparente per il riquadro della barra di Outlook.
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 

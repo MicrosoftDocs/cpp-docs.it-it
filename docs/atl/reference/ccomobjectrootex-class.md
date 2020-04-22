@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327599"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747910"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 
@@ -155,7 +155,7 @@ Ecco un modo tipico per creare un'aggregazione:Here is a typical way to create a
 
 È possibile eseguire l'override di questo metodo nella classe derivata per eseguire qualsiasi pulizia necessaria per l'oggetto.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ Se il modello di thread `InterlockedDecrement` è multithreading, viene utilizza
 
 Se il modello di thread è multithreading, questo metodo chiama la funzione API Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), che attende fino a quando il thread può assumere la proprietà dell'oggetto sezione critica ottenuto tramite un membro dati privato.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ Nelle compilazioni non di debug, restituisce sempre 0.In non-debug builds, alway
 
 Se il modello di thread è multithreading, questo metodo chiama la funzione API Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), che rilascia la proprietà dell'oggetto sezione critica ottenuto tramite un membro dati privato.
 
-```
+```cpp
 void Unlock();
 ```
 

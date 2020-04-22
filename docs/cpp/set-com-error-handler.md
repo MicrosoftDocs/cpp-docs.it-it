@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: debad733f351c710ada342e29fa95a4d1ff03b7d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857294"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749803"
 ---
 # <a name="_set_com_error_handler"></a>_set_com_error_handler
 
@@ -17,7 +17,7 @@ Sostituisce la funzione predefinita utilizzata per la gestione degli errori COM.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 void __stdcall _set_com_error_handler(
    void (__stdcall *pHandler)(
       HRESULT hr,
@@ -28,18 +28,18 @@ void __stdcall _set_com_error_handler(
 
 #### <a name="parameters"></a>Parametri
 
-*pHandler*<br/>
+*pHandler (gestore)*<br/>
 Puntatore alla funzione di sostituzione.
 
 *hr*<br/>
-Informazioni HRESULT.
+informazioni HRESULT.
 
 *perrinfo*<br/>
 Oggetto `IErrorInfo`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, [_com_raise_error](../cpp/com-raise-error.md) gestisce tutti gli errori com. È possibile modificare questo comportamento utilizzando **_set_com_error_handler** per chiamare una funzione di gestione degli errori personalizzata.
+Per impostazione predefinita, [_com_raise_error](../cpp/com-raise-error.md) gestisce tutti gli errori COM. È possibile modificare questo comportamento utilizzando **_set_com_error_handler** per chiamare la propria funzione di gestione degli errori.
 
 La funzione di sostituzione deve avere una firma uguale a quella di `_com_raise_error`.
 
@@ -84,11 +84,11 @@ int main()
 Exception raised: Unable to establish the connection!
 ```
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<Comdef. h >
+**Intestazione:** \<> comdef.h
 
-**Lib:** Se si specifica l'opzione del compilatore **/Zc: wchar_t** (impostazione predefinita), utilizzare comsuppw. lib o comsuppwd. lib. Se si specifica l'opzione **/Zc: wchar_t-** Compiler, utilizzare comsupp. lib. Per ulteriori informazioni, ad esempio su come impostare questa opzione nell'IDE, vedere [/Zc: wchar_t (wchar_t è di tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Se viene specificata l'opzione del compilatore **//c:wchar_t** (impostazione predefinita), utilizzare comsuppw.lib o comsuppwd.lib. Se viene specificata l'opzione del compilatore **/-c:wchar_t-,** utilizzare comsupp.lib. Per ulteriori informazioni, inclusa la modalità di impostazione di questa opzione nell'IDE, vedere [//c:wchar_t (wchar_t È di tipo nativo).](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
 
 ## <a name="see-also"></a>Vedere anche
 

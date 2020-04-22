@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 87bf903220a584798ea59c5f1c701fc35049e901
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 458f7cd50462a145d005f3f81d87cc06fc7e01b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321664"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748782"
 ---
 # <a name="cacl-class"></a>Classe CAcl
 
@@ -186,7 +186,7 @@ Restituisce il numero di `CAcl` voci ACE nell'oggetto.
 
 Recupera le voci dell'elenco di controllo `CAcl` di accesso (ACL) dall'oggetto.
 
-```
+```cpp
 void GetAclEntries(
     CSid::CSidArray* pSids,
     CAccessMaskArray* pAccessMasks = NULL,
@@ -220,7 +220,7 @@ Vedere [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) per ulteriori 
 
 Recupera tutte le informazioni su una voce in un elenco di controllo di accesso (ACL).
 
-```
+```cpp
 void GetAclEntry(
     UINT nIndex,
     CSid* pSid,
@@ -341,7 +341,7 @@ Restituisce un riferimento `CAcl` all'oggetto aggiornato.
 
 Rimuove una voce ACE specifica (voce `CAcl` di controllo di accesso) dall'oggetto.
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -371,7 +371,7 @@ Riferimento a un oggetto `CSid`.
 
 Contrassegna `CAcl` l'oggetto come vuoto.
 
-```
+```cpp
 void SetEmpty() throw();
 ```
 
@@ -383,7 +383,7 @@ L'oggetto `CAcl` può essere impostato su empty o su NULL: i due stati sono dist
 
 Contrassegna `CAcl` l'oggetto come NULL.
 
-```
+```cpp
 void SetNull() throw();
 ```
 

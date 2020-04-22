@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330694"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747575"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl (classe)
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 Chiamare questa funzione dopo che è stata apportata una modifica irreversibile ai dati in una pagina di una finestra delle proprietà modale.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ L'implementazione `OnApply` predefinita di restituisce TRUE.
 
 Questa funzione membro viene chiamata quando l'utente fa clic sul pulsante **?per** la pagina delle proprietà.
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ L'implementazione `OnQueryCancel` predefinita di restituisce TRUE.
 
 Questa funzione membro viene chiamata quando l'utente fa clic sul pulsante **Annulla.This** member function is called when the user clicks the Cancel button.
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ Se una pagina restituisce un valore diverso da zero, la finestra delle propriet�
 
 Chiamare questa funzione membro per abilitare o disabilitare il pulsante **Applica ora,** a seconda che le impostazioni nella pagina delle proprietà devono essere applicate all'oggetto esterno appropriato.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

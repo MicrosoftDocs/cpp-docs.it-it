@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331480"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746590"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 
@@ -72,7 +72,7 @@ class CPathT
 
 #### <a name="parameters"></a>Parametri
 
-*TipoStringa*<br/>
+*StringType*<br/>
 Classe di stringhe ATL/MFC da utilizzare per il percorso (vedere [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Membri
@@ -166,7 +166,7 @@ Classe di stringhe ATL/MFC da utilizzare per il percorso (vedere [CStringT](../.
 
 Chiamare questo metodo per aggiungere una barra rovesciata alla fine di una stringa per creare la sintassi corretta per un percorso. Se il percorso ha già una barra rovesciata finale, non verrà aggiunta alcuna barra rovesciata.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ Per ulteriori informazioni, vedere [PathAppend](/windows/win32/api/shlwapi/nf-sh
 
 Chiamare questo metodo per creare un percorso radice da un numero di unità specificato.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ Per ulteriori informazioni, vedere [PathBuildRoot](/windows/win32/api/shlwapi/nf
 
 Chiamare questo metodo per convertire il percorso in formato canonico.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ Per ulteriori informazioni, vedere [PathCanonicalize](/windows/win32/api/shlwapi
 
 Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un unico percorso.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -349,7 +349,7 @@ CPathT() throw();
 *pszPath (percorso pszPath)*<br/>
 Puntatore a una stringa di percorso.
 
-*Percorso*<br/>
+*path*<br/>
 Stringa del percorso.
 
 ## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT::FileExists
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 Chiamare questo metodo per racchiudere il percorso tra virgolette se contiene spazi.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ Per ulteriori informazioni, vedere [PathRelativePathTo](/windows/win32/api/shlwa
 
 Chiamare questo metodo per rimuovere eventuali argomenti della riga di comando dal percorso.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ Per ulteriori informazioni, vedere [PathRemoveArgs](/windows/win32/api/shlwapi/n
 
 Chiamare questo metodo per rimuovere la barra rovesciata finale dal percorso.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ Per ulteriori informazioni, vedere [PathRemoveBackslash](/windows/win32/api/shlw
 
 Chiamare questo metodo per rimuovere tutti gli spazi iniziali e finali dal percorso.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ Per ulteriori informazioni, vedere [PathRemoveBlanks](/windows/win32/api/shlwapi
 
 Chiamare questo metodo per rimuovere l'estensione del file dal percorso, se presente.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ Per ulteriori informazioni, vedere [PathSkipRoot](/windows/win32/api/shlwapi/nf-
 
 Chiamare questo metodo per rimuovere la parte del percorso di un percorso completo e il nome del file.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ Per ulteriori informazioni, vedere [PathStripToRoot](/windows/win32/api/shlwapi/
 
 Chiamare questo metodo per rimuovere le virgolette dall'inizio e dalla fine di un percorso.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

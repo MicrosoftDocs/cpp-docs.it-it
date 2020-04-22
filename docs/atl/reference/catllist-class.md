@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318935"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748741"
 ---
 # <a name="catllist-class"></a>Classe CAtlList
 
@@ -153,7 +153,7 @@ Se viene utilizzata la prima versione, viene creato un elemento vuoto utilizzand
 
 Chiamare questo metodo per aggiungere un elenco esistente all'intestazione dell'elenco.
 
-```
+```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -200,7 +200,7 @@ Se viene utilizzata la prima versione, viene creato un elemento vuoto utilizzand
 
 Chiamare questo metodo per aggiungere un elenco esistente alla parte finale dell'elenco.
 
-```
+```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -221,7 +221,7 @@ L'elenco a cui punta *plNew* viene inserito dopo l'ultimo elemento (se presente)
 
 Chiamare questo metodo per verificare che l'elenco sia valido.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -599,7 +599,7 @@ Restituisce true se l'elenco non contiene oggetti, in caso contrario false.
 
 Chiamare questo metodo per spostare l'elemento specificato all'intestazione dell'elenco.
 
-```
+```cpp
 void MoveToHead(POSITION pos) throw();
 ```
 
@@ -620,7 +620,7 @@ L'elemento specificato viene spostato dalla posizione corrente all'intestazione 
 
 Chiamare questo metodo per spostare l'elemento specificato alla coda dell'elenco.
 
-```
+```cpp
 void MoveToTail(POSITION pos) throw();
 ```
 
@@ -641,7 +641,7 @@ Vedere l'esempio per [CAtlList::MoveToHead](#movetohead).
 
 Chiamare questo metodo per rimuovere tutti gli elementi dall'elenco.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -657,7 +657,7 @@ Vedere l'esempio per [CAtlList::IsEmpty](#isempty).
 
 Chiamare questo metodo per rimuovere un singolo elemento dall'elenco.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -700,7 +700,7 @@ L'elemento head viene eliminato dall'elenco e la memoria viene liberata. Viene r
 
 Chiamare questo metodo per rimuovere l'elemento all'esterno dell'elenco senza restituire un valore.
 
-```
+```cpp
 void RemoveHeadNoReturn() throw();
 ```
 
@@ -736,7 +736,7 @@ L'elemento tail viene eliminato dall'elenco e la memoria viene liberata. Viene r
 
 Chiamare questo metodo per rimuovere l'elemento alla fine dell'elenco senza restituire un valore.
 
-```
+```cpp
 void RemoveTailNoReturn() throw();
 ```
 
@@ -752,7 +752,7 @@ Vedere l'esempio per [CAtlList::IsEmpty](#isempty).
 
 Chiamare questo metodo per impostare il valore dell'elemento in una determinata posizione nell'elenco.
 
-```
+```cpp
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
@@ -776,7 +776,7 @@ Sostituisce il valore esistente con *element*. Nelle build di debug, si verifich
 
 Chiamare questo metodo per scambiare gli elementi nell'elenco.
 
-```
+```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 

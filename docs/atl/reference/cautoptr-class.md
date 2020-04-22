@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: cb8e3d6b71db6ab60b3b246bd8c5bf4f2c9aaa34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2fa6eb26c2e2cd569d74c02d8303768b1aeb4f1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321261"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748263"
 ---
 # <a name="cautoptr-class"></a>Classe CAutoPtr
 
@@ -93,7 +93,7 @@ Vedere anche [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAut
 
 Chiamare questo metodo per assumere la proprietà di un puntatore esistente.
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -179,7 +179,7 @@ Vedere l'esempio in [Cenni preliminari su CAutoPtr](../../atl/reference/cautoptr
 
 Chiamare questo metodo per eliminare un `CAutoPtr`oggetto a cui punta un oggetto .
 
-```
+```cpp
 void Free() throw();
 ```
 

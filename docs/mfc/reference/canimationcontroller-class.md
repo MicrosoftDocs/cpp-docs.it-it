@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369762"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750183"
 ---
 # <a name="canimationcontroller-class"></a>Classe CAnimationController
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 Chiamato dal framework per pulire il gruppo quando l'animazione è stata pianificata.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -1010,7 +1010,7 @@ Questo metodo viene chiamato se si abilitano gli eventi storyboard utilizzando C
 
 Rimuove tutti i gruppi di animazioni dal controller di animazione.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ Tutti i gruppi verranno eliminati, il relativo puntatore, se archiviato a livell
 
 Rimuove un gruppo di animazioni con ID specificato dal controller di animazione.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ Questo metodo rimuove un gruppo di animazioni dall'elenco interno dei gruppi e l
 
 Rimuovere un oggetto di animazione dal controller di animazione.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ Rimuove un oggetto di animazione dal controller di animazione e dal gruppo di an
 
 Rimuove le transizioni dagli oggetti di animazione che appartengono al gruppo specificato.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ TRUESe l'animazione è stata pianificata correttamente. FALSE se lo storyboard n
 
 Stabilisce una relazione tra il controller di animazione e una finestra.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 

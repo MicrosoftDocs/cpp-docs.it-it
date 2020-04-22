@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 3b52661097ca1feab4c8045be240e4138a0c0f21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190664"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749696"
 ---
 # <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Collega un wrapper `_bstr_t` a  `BSTR`.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 void Attach(
    BSTR s
 );
@@ -38,9 +38,9 @@ Se `_bstr_t` in precedenza era associato a un altro `BSTR`, `_bstr_t` eseguirà 
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di utilizzo di **Connetti**, vedere [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) .
+Vedere [_bstr_t::Assign](../cpp/bstr-t-assign.md) per un esempio utilizzando **Attach**.
 
-**Fine sezione specifica Microsoft**
+**FINE Specifico di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

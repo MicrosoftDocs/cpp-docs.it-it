@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321447"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748662"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 
@@ -63,7 +63,7 @@ class CAtlMap
 *K*<br/>
 Tipo di elemento chiave.
 
-*V*<br/>
+*Presso*<br/>
 Tipo di elemento valore.
 
 *Caratteristiche KTraits*<br/>
@@ -159,7 +159,7 @@ Per ulteriori informazioni, vedere Classi di raccolte [ATL](../../atl/atl-collec
 
 Chiamare questo metodo per fare `CAtlMap` un'operazione ASSERT se l'oggetto non è valido.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ Questa classe viene utilizzata dai metodi [CAtlMap::GetNext](#getnext) e [CAtlMa
 
 Chiamare questo metodo per disabilitare `CAtlMap` il rehashing automatico dell'oggetto.
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ Quando il rehashing automatico è abilitato (che è per impostazione predefinita
 
 Chiamare questo metodo per abilitare `CAtlMap` il rehashing automatico dell'oggetto.
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ Quando il rehashing automatico è abilitato (che è per impostazione predefinita
 
 Chiamare questo metodo per restituire l'elemento in una posizione specificata nella mappa.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -291,10 +291,10 @@ CPair* GetAt(POSITION& pos) throw();
 *Pos*<br/>
 Contatore di posizione, restituito da una precedente chiamata a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
-*Chiave*<br/>
+*key*<br/>
 Parametro di modello che specifica il tipo della chiave della mappa.
 
-*Valore*<br/>
+*value*<br/>
 Parametro di modello che specifica il tipo del valore della mappa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -376,7 +376,7 @@ Restituisce un puntatore alla coppia successiva di elementi chiave/valore archiv
 
 Ottiene l'elemento successivo per l'iterazione.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -388,10 +388,10 @@ void GetNextAssoc(
 *Pos*<br/>
 Contatore di posizione, restituito da una precedente chiamata a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
-*Chiave*<br/>
+*key*<br/>
 Parametro di modello che specifica il tipo della chiave della mappa.
 
-*Valore*<br/>
+*value*<br/>
 Parametro di modello che specifica il tipo del valore della mappa.
 
 ### <a name="remarks"></a>Osservazioni
@@ -558,10 +558,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Specifica la chiave che identifica l'elemento da cercare.
 
-*Valore*<br/>
+*value*<br/>
 Variabile che riceve il valore cercato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -582,7 +582,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave dell'elemento da aggiungere o sostituire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -597,7 +597,7 @@ Se la chiave esiste già, l'elemento viene sostituito. Se la chiave non esiste, 
 
 Chiamare questo metodo per `CAtlMap` eseguire nuovamente l'hashing dell'oggetto.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ Se *nBins* è `CAtlMap` 0, calcola un numero ragionevole in base al numero di el
 
 Chiamare questo metodo per rimuovere `CAtlMap` tutti gli elementi dall'oggetto.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ Cancella l'oggetto, `CAtlMap` liberando la memoria utilizzata per memorizzare gl
 
 Chiamare questo metodo per rimuovere l'elemento `CAtlMap` nella posizione specificata nell'oggetto.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -649,7 +649,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave corrispondente alla coppia di elementi che si desidera rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -672,10 +672,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Valore della chiave da `CAtlMap` aggiungere all'oggetto.
 
-*Valore*<br/>
+*value*<br/>
 Valore da aggiungere `CAtlMap` all'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -690,7 +690,7 @@ Restituisce la posizione della coppia di `CAtlMap` elementi chiave/valore nell'o
 
 Chiamare questo metodo per impostare `CAtlMap` il carico ottimale dell'oggetto.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ Questo metodo ridefinisce il valore `CAtlMap` di carico ottimale per l'oggetto. 
 
 Chiamare questo metodo per modificare il valore `CAtlMap` archiviato in una determinata posizione nell'oggetto.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);
@@ -731,7 +731,7 @@ void SetValueAt(
 *Pos*<br/>
 Contatore di posizione, restituito da una precedente chiamata a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
-*Valore*<br/>
+*value*<br/>
 Valore da aggiungere `CAtlMap` all'oggetto.
 
 ### <a name="remarks"></a>Osservazioni
@@ -777,7 +777,7 @@ V  m_value;
 
 ### <a name="parameters"></a>Parametri
 
-*V*<br/>
+*Presso*<br/>
 Tipo di elemento valore.
 
 ## <a name="see-also"></a>Vedere anche

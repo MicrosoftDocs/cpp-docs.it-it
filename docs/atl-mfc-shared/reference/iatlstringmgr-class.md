@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: 49ef7850edb18cd51092f282644973376abd4c7c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317492"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746603"
 ---
 # <a name="iatlstringmgr-class"></a>Classe IAtlStringMgr
 
@@ -39,7 +39,7 @@ __interface IAtlStringMgr
 |-|-|
 |[Allocare](#allocate)|Chiamare questo metodo per allocare una nuova struttura di dati stringa.|
 |[Clone](#clone) (Clona)|Chiamare questo metodo per restituire un puntatore a un `CSimpleStringT`nuovo gestore di stringhe da utilizzare con un'altra istanza di .|
-|[Gratuito](#free)|Chiamare questo metodo per liberare una struttura di dati stringa.|
+|[Free](#free)|Chiamare questo metodo per liberare una struttura di dati stringa.|
 |[GetNilString (Informazioni in base a P:Ao)](#getnilstring)|Restituisce un `CStringData` puntatore all'oggetto utilizzato da oggetti stringa vuota.|
 |[Ridistribuire](#reallocate)|Chiamare questo metodo per riallocare una struttura di dati stringa.|
 
@@ -108,7 +108,7 @@ Tuttavia, se il gestore della memoria `CSimpleStringT`non supporta l'utilizzo da
 
 Libera una struttura di dati di stringa.
 
-```
+```cpp
 void Free(CStringData* pData) throw();
 ```
 

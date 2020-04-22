@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317727"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747088"
 ---
 # <a name="cpoint-class"></a>Classe CPoint
 
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 
 Aggiunge valori `x` ai membri e `y` dell'oggetto `CPoint`.
 
-```
+```cpp
 void Offset(int xOffset, int yOffset) throw();
 void Offset(POINT point) throw();
 void Offset(SIZE size) throw();
@@ -156,7 +156,7 @@ Specifica la quantità di `y` offset `CPoint`del membro del file .
 *Punto*<br/>
 Specifica la quantità [POINT](/windows/win32/api/windef/ns-windef-point) ( `CPoint`POINT o `CPoint`) per compensare il file .
 
-*Dimensione*<br/>
+*size*<br/>
 Specifica la quantità ( [SIo'](/windows/win32/api/windef/ns-windef-size) o `CPoint` [DimensioneC](../../atl-mfc-shared/reference/csize-class.md)) per compensare l'oggetto .
 
 ### <a name="example"></a>Esempio
@@ -209,14 +209,14 @@ Diverso da zero se i punti non sono uguali; in caso contrario 0.
 
 Il primo overload aggiunge `CPoint`una dimensione all'oggetto .
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Dimensione*<br/>
+*size*<br/>
 Contiene una struttura [di DIMENSIONE](/windows/win32/api/windef/ns-windef-size) o un oggetto [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *Punto*<br/>
@@ -238,14 +238,14 @@ Ad esempio, `CPoint(5, -7)` l'aggiunta `CPoint(30, 40)` a una `CPoint(35, 33)`va
 
 Il primo overload sottrae una dimensione da `CPoint`.
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Dimensione*<br/>
+*size*<br/>
 Contiene una struttura [di DIMENSIONE](/windows/win32/api/windef/ns-windef-size) o un oggetto [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *Punto*<br/>
@@ -275,7 +275,7 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Dimensione*<br/>
+*size*<br/>
 Contiene una struttura [di DIMENSIONE](/windows/win32/api/windef/ns-windef-size) o un oggetto [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *Punto*<br/>
@@ -314,7 +314,7 @@ CPoint operator-() const throw();
 *Punto*<br/>
 Una struttura [POINT](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
-*Dimensione*<br/>
+*size*<br/>
 Una struttura [di DIMENSIONE](/windows/win32/api/windef/ns-windef-size) o un oggetto [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *Lprect*<br/>

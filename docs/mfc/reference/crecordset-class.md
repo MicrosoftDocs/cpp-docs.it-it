@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368368"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750508"
 ---
 # <a name="crecordset-class"></a>CRecordset (classe)
 
@@ -331,7 +331,7 @@ Per ulteriori informazioni sui segnalibri e l'esplorazione dei recordset, vedere
 
 Richiede che l'origine dati annulli un'operazione asincrona in corso o un processo da un secondo thread.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ Si noti che le classi ODBC MFC non utilizzano più l'elaborazione asincrona; Per
 
 Annulla tutti gli aggiornamenti in sospeso, causati da un'operazione [Di modifica](#edit) o [AggiungiNuovo,](#addnew) prima che venga chiamato [L'operazione Update.](#update)
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ Nel codice seguente `COutParamRecordset` si `CRecordset`presuppone che sia un og
 
 Ottiene il valore del segnalibro per il record corrente.
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ Per ulteriori informazioni, vedere l'articolo [Recordset: dichiarazione di una c
 
 Recupera i dati del campo nel record corrente.
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ Per ulteriori informazioni sulla creazione di recordset, vedere l'articolo [Reco
 
 Ottiene informazioni sui campi nel recordset.
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ Per ulteriori informazioni, vedere `SQLExtendedFetch` la funzione API ODBC in Wi
 
 Determina l'indice del record corrente nel recordset e se l'ultimo record è stato visualizzato.
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ Per ulteriori informazioni sullo spostamento tra recordset, vedere gli articoli 
 
 Rende il primo record nel primo set di righe il record corrente.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ Per ulteriori informazioni sullo spostamento tra recordset, vedere gli articoli 
 
 Rende il primo record nell'ultimo set di righe completo è il record corrente.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ Per ulteriori informazioni sullo spostamento tra recordset, vedere gli articoli 
 
 Rende il primo record nel set di righe successivo il record corrente.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ Per ulteriori informazioni sullo spostamento tra recordset, vedere gli articoli 
 
 Rende il primo record nel set di righe precedente il record corrente.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ Negli esempi di codice seguenti `Open` vengono illustrate diverse forme della ch
 
 Aggiorna i dati e lo stato di una riga nel set di righe corrente.
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ In questo esempio viene ricompilato un recordset per applicare un ordinamento di
 
 Posiziona il recordset sul record corrispondente al numero di record specificato.
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ Per ulteriori informazioni sullo spostamento tra recordset e sui segnalibri, ved
 
 Posiziona il recordset sul record contenente il segnalibro specificato.
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ Per ulteriori informazioni sui segnalibri e l'esplorazione dei recordset, vedere
 
 Contrassegna un membro dati di campo del recordset come modificato o invariato.
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ Ciò significa che `param` non è possibile impostare tutti i campi su NULL, com
 
 Contrassegna un membro dati di campo del recordset come Null (in particolare senza valore) o come non Null.
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ Ciò significa che `param` non è possibile impostare tutti i campi su NULL, com
 
 Imposta la modalità di blocco su blocco "ottimistico" (impostazione predefinita) o "pessimistico". Determina la modalità di blocco dei record per gli aggiornamenti.
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ Chiamare questa funzione membro se è necessario specificare quale delle due str
 
 Contrassegna un parametro come Null (in particolare senza valore) o come non Null.
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ A differenza di [SetFieldNull](#setfieldnull), è possibile chiamare `SetParamNu
 
 Sposta il cursore su una riga all'interno del set di righe corrente.
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
