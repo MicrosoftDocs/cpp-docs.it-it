@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 761d7e9db650c6d95e916c85bd7456d9b1c647c5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318526"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754411"
 ---
 # <a name="cscrollbar-class"></a>Classe CScrollBar
 
@@ -287,7 +287,7 @@ La posizione corrente è un valore relativo che dipende dall'intervallo di scorr
 
 Copia le posizioni minime e massime correnti della barra di scorrimento per la barra di scorrimento specificata nelle posizioni specificate da *lpMinPos* e *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     LPINT lpMinPos,
     LPINT lpMaxPos) const;
@@ -375,7 +375,7 @@ Impostare *bRedraw* su FALSE ogni volta che la barra di scorrimento verrà ridis
 
 Imposta i valori di posizione minima e massima correnti per la barra di scorrimento specificata.
 
-```
+```cpp
 void SetScrollRange(
     int nMinPos,
     int nMaxPos,
@@ -411,7 +411,7 @@ La differenza tra i valori specificati da *nMinPos* e *nMaxPos* non deve essere 
 
 Mostra o nasconde una barra di scorrimento.
 
-```
+```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
 ```
 

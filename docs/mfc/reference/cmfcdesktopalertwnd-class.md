@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367644"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752455"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 Imposta la nuova velocità di animazione.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,7 +408,7 @@ Chiamare questo metodo per impostare la velocità di animazione per la finestra 
 
 Imposta il tipo di animazione.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
@@ -435,7 +435,7 @@ Chiamare questo metodo per impostare il tipo di animazione. È possibile specifi
 
 Imposta il timeout di chiusura automatica.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ La finestra di avviso viene chiusa automaticamente dopo l'ora specificata se l'u
 
 Consente di passare da una didascalia di dimensioni ridotte a una a una e a una normale.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ Chiamare questo metodo per visualizzare la didascalia di dimensioni ridotte o no
 
 Imposta il livello di trasparenza della finestra popup.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d05a2e186f001a69310e99cec013193a4d1bff3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1394a1b47a86022e37b11e032b87ee2a2a369862
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319727"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752804"
 ---
 # <a name="cmousemanager-class"></a>Classe CMouseManager
 
@@ -184,7 +184,7 @@ Questo metodo esegue la ricerca nelle visualizzazioni registrate tramite [CMouse
 
 Recupera un elenco di tutti i nomi delle viste registrate.
 
-```
+```cpp
 void GetViewNames(CStringList& listOfNames) const;
 ```
 
@@ -247,7 +247,7 @@ Nella maggior parte dei casi, non è necessario chiamare direttamente questa fun
 
 Associa un comando personalizzato a una visualizzazione registrata per la prima volta con il gestore del mouse.
 
-```
+```cpp
 void SetCommandForDblClk(
     int iViewId,
     UINT uiCmd);

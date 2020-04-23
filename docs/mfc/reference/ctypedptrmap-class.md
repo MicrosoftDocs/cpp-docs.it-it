@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 41416c8223ac94364e8f83028ea93189e9f3f60c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373248"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754369"
 ---
 # <a name="ctypedptrmap-class"></a>Classe CTypedPtrMap
 
@@ -82,7 +82,7 @@ Per ulteriori informazioni `CTypedPtrMap`sull'utilizzo di , vedere gli articoli 
 
 Recupera l'elemento `rNextPosition`della mappa `rNextPosition` in , quindi viene aggiornato per fare riferimento all'elemento successivo nella mappa.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rPosition,
     KEY& rKey,
@@ -127,7 +127,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Parametro di modello che specifica la classe di base della classe della mappa.
 
-*Chiave*<br/>
+*key*<br/>
 Chiave dell'elemento da cercare.
 
 *Valore*<br/>
@@ -160,7 +160,7 @@ Parametro di modello che specifica il tipo di valori archiviati in questa mappa.
 *BASE_CLASS*<br/>
 Parametro di modello che specifica la classe di base della classe della mappa.
 
-*Chiave*<br/>
+*key*<br/>
 Chiave dell'elemento da cercare o creare nella mappa.
 
 ### <a name="remarks"></a>Osservazioni
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *Chiave*<br/>
 Parametro di modello che specifica il tipo delle chiavi della mappa.
 
-*Chiave*<br/>
+*key*<br/>
 Chiave per l'elemento da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -195,7 +195,7 @@ Per osservazioni più dettagliate, vedere [CMapStringToOb::RemoveKey](../../mfc/
 
 Questa funzione `BASE_CLASS`membro chiama **::SetAt**.
 
-```
+```cpp
 void SetAt(KEY key, VALUE newValue);
 ```
 
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *Chiave*<br/>
 Parametro di modello che specifica il tipo delle chiavi della mappa.
 
-*Chiave*<br/>
+*key*<br/>
 Specifica il valore della chiave di newValue.
 
 *newValue*<br/>

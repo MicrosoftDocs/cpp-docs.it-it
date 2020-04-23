@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: cf0a1e6b7e742e950663f1ed9cc9ff2ddabd9d6f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b081b0728514c0fca2eb31462e1bcd9e91a47aa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364029"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753009"
 ---
 # <a name="cprintinfo-structure"></a>Struttura CPrintInfo
 
@@ -281,7 +281,7 @@ Il framework utilizza "Pagina %u nPagine %u-%u" come valore predefinito. Se si d
 
 Chiamare questa funzione per specificare il numero dell'ultima pagina del documento.
 
-```
+```cpp
 void SetMaxPage(UINT nMaxPage);
 ```
 
@@ -302,7 +302,7 @@ Questo valore viene `CPrintDialog` archiviato nell'oggetto a cui fa riferimento 
 
 Chiamare questa funzione per specificare il numero della prima pagina del documento.
 
-```
+```cpp
 void SetMinPage(UINT nMinPage);
 ```
 

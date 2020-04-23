@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e5294aabc42301e2f874d5b8328d648f4deeb3c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372360"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754950"
 ---
 # <a name="cinterpolatorbase-class"></a>Classe CInterpolatorBase
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 Output: Durata della transizione, in secondi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
+*value*<br/>
 Output: Valore finale di una variabile alla fine della transizione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *offset*<br/>
 Offset dall'inizio della transizione. L'offset è sempre maggiore o uguale a zero e minore della durata della transizione. Questo metodo non viene chiamato se la durata della transizione è zero.
 
-*Valore*<br/>
+*value*<br/>
 Output: Valore interpolato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -217,7 +217,7 @@ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCu
 
 Archivia un puntatore all'interpolatore personalizzato, che gestirà gli eventi.
 
-```
+```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 Durata della transizione.
 
 ### <a name="return-value"></a>Valore restituito

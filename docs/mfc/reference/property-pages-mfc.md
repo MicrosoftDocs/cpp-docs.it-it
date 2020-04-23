@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372989"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751147"
 ---
 # <a name="property-pages-mfc"></a>Pagine delle proprietà (MFC)
 
@@ -49,7 +49,7 @@ Di seguito è riportato un elenco delle macro utilizzate per creare e gestire le
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore di una proprietà integer con l'indice della selezione corrente di una casella combinata nella pagina delle proprietà.
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore di una proprietà stringa con la selezione corrente in una casella combinata nella pagina delle proprietà.
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore di una proprietà stringa che corrisponde esattamente alla selezione corrente in una casella combinata nella pagina delle proprietà.
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore della proprietà con il controllo casella di controllo della pagina delle proprietà associata.
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore di una proprietà integer con l'indice della selezione corrente in una casella di riepilogo nella pagina delle proprietà.
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore di una proprietà stringa con la selezione corrente in una casella di riepilogo nella pagina delle proprietà.
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore di una proprietà stringa che corrisponde esattamente alla selezione corrente in una casella di riepilogo nella pagina delle proprietà.
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà, per completare il trasferimento dei valori delle proprietà dalla pagina delle proprietà al controllo quando vengono salvati i valori delle proprietà.
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ Questa funzione deve essere chiamata dopo il completamento di tutte le funzioni 
 
 Chiamare questa funzione nella `DoPropExchange` funzione del controllo per sincronizzare il valore della proprietà con il controllo pulsante di opzione della pagina delle proprietà associato.
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
 Chiamare questa funzione nella `DoDataExchange` funzione del controllo per sincronizzare il valore della proprietà con il controllo della pagina delle proprietà associato.
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,

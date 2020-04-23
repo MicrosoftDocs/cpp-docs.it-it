@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b72daac576411b45908d1e91bd86bbd9aeacf738
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318634"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754462"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -218,7 +218,7 @@ Per un esempio di utilizzo di una visualizzazione Rich Edit in un'applicazione M
 
 Chiamare questa funzione per spostare la finestra di dialogo specificata in modo che non oscuri la selezione corrente.
 
-```
+```cpp
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
@@ -251,7 +251,7 @@ CRichEditView();
 
 Chiamare questa funzione per incollare l'elemento OLE in *dataobj* in questo documento/visualizzazione rich edit.
 
-```
+```cpp
 void DoPaste(
     COleDataObject& dataobj,
     CLIPFORMAT cf,
@@ -643,7 +643,7 @@ Numero di caratteri o byte nel controllo di modifica. Se sono stati impostati fl
 
 Chiamare questa funzione per inserire il file specificato (come un [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) oggetto) in una visualizzazione Rich edit.
 
-```
+```cpp
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
@@ -745,7 +745,7 @@ Uno dei valori seguenti:
 
 Chiamare questa funzione per attivare o disattivare gli effetti di formattazione dei caratteri per la selezione corrente.
 
-```
+```cpp
 void OnCharEffect(
     DWORD dwMask,
     DWORD dwEffect);
@@ -844,7 +844,7 @@ Per ulteriori informazioni, vedere [IStorage](/windows/win32/api/objidl/nn-objid
 
 Chiamare questa funzione per modificare l'allineamento dei paragrafi selezionati.
 
-```
+```cpp
 void OnParaAlign(WORD wAlign);
 ```
 
@@ -975,7 +975,7 @@ Per ulteriori informazioni, vedere [MessageBeep](/windows/win32/api/winuser/nf-w
 
 Il framework chiama questa funzione per aggiornare l'interfaccia utente del comando per i comandi di effetto carattere.
 
-```
+```cpp
 void OnUpdateCharEffect(
     CCmdUI* pCmdUI,
     DWORD dwMask,
@@ -1007,7 +1007,7 @@ Per ulteriori informazioni sui parametri *dwMask* e *dwEffect* e sui relativi va
 
 Il framework chiama questa funzione per aggiornare l'interfaccia utente del comando per i comandi di effetto paragrafo.
 
-```
+```cpp
 void OnUpdateParaAlign(
     CCmdUI* pCmdUI,
     WORD wAlign);
@@ -1153,7 +1153,7 @@ Per ulteriori informazioni su `IDataObject`HRESULT e , vedere struttura [dei cod
 
 Chiamare questa funzione per impostare gli attributi `CRichEditView` di formattazione dei caratteri per il nuovo testo in questo oggetto.
 
-```
+```cpp
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
@@ -1176,7 +1176,7 @@ Per ulteriori informazioni, vedere [EM_SETCHARFORMAT](/windows/win32/Controls/em
 
 Chiamare questa funzione per impostare i margini di stampa per questa visualizzazione rich edit.
 
-```
+```cpp
 void SetMargins(const CRect& rectMargin);
 ```
 
@@ -1199,7 +1199,7 @@ Si noti che i margini utilizzati da [PrintPage](#printpage) sono relativi alla p
 
 Chiamare questa funzione per impostare il formato carta per la stampa di questa visualizzazione rich edit.
 
-```
+```cpp
 void SetPaperSize(CSize sizePaper);
 ```
 
@@ -1247,7 +1247,7 @@ Per ulteriori informazioni, vedere [EM_SETPARAFORMAT](/windows/win32/Controls/em
 
 Chiamare questa funzione per reimpostare lo stato di ricerca interno del controllo [CRichEditView](../../mfc/reference/cricheditview-class.md) dopo una chiamata non riuscita a [FindText](#findtext).
 
-```
+```cpp
 void TextNotFound(LPCTSTR lpszFind);
 ```
 

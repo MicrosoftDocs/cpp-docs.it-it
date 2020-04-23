@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373975"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753194"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 
@@ -259,7 +259,7 @@ Utilizzare questa funzione per determinare il tipo di carattere della stampante 
 
 Chiamare `GetSelectedText` per copiare il `CString` testo selezionato in un oggetto, fino alla fine della selezione o il carattere che precede il primo carattere di ritorno a capo nella selezione.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ L'elemento `rect.bottom` dell'oggetto *rectLayout* viene modificato in modo che 
 
 Chiamata `SerializeRaw` per `CArchive` fare in modo che `CEditView` un oggetto legga o scriva il testo dell'oggetto in un file di testo.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ Riferimento all'oggetto `CArchive` che archivia il testo serializzato.
 
 Chiamare `SetPrinterFont` per impostare il tipo di carattere della stampante sul tipo di carattere specificato da *pFont*.
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ Se si desidera che la visualizzazione utilizzi sempre un `SetPrinterFont` partic
 
 Chiamare questa funzione per impostare le tabulazioni utilizzate per la visualizzazione e la stampa.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ Questo frammento di codice imposta le tabulazioni nel controllo su ogni quarto c
 
 Chiamare questa funzione membro per sbloccare il buffer.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

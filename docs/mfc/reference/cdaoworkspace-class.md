@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377120"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754670"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (classe)
 
@@ -213,7 +213,7 @@ Per informazioni correlate, vedere l'argomento "Metodo Append" nella Guida in li
 
 Chiamare questa funzione membro per avviare una transazione.
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ Per informazioni correlate, vedere l'argomento "Metodo Close" nella Guida in lin
 
 Chiamare questa funzione membro per eseguire il commit di una transazione, ovvero salvare un gruppo di modifiche e aggiornamenti in uno o più database nell'area di lavoro.
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ Numero di database aperti nell'area di lavoro.
 
 Chiamare questa funzione membro per ottenere vari tipi di informazioni su un database aperto nell'area di lavoro.
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ Questo conteggio non include le aree di lavoro aperte non aggiunte alla raccolta
 
 Chiamare questa funzione membro per ottenere vari tipi di informazioni su un'area di lavoro aperta nella sessione.
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ Per ulteriori informazioni sul ripristino dei database, vedere l'argomento "Meto
 
 Chiamare questa funzione membro per terminare la transazione corrente e ripristinare tutti i database nell'area di lavoro alla relativa condizione prima dell'inizio della transazione.
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ Chiamare `SetIniPath` solo se è necessario specificare impostazioni speciali. P
 
 Chiamare questa funzione membro per impostare il valore della proprietà DAO IsolateODBCTrans per l'area di lavoro.
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 

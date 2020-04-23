@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375576"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753332"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -332,7 +332,7 @@ TRUESe il riquadro ancorato è stato creato correttamente. FALSE in caso contrar
 
 Aggiunge un handle a un riquadro barra all'elenco dei riquadri a barre a schede MDI nascosti.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ Il parametro *dwAlignment* può avere uno dei seguenti valori:
 
 Ridimensiona un riquadro ancorato in modalità Nascondi automaticamente in modo che occupi l'intera larghezza o altezza dell'area client del frame circondato da siti di ancoraggio.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ NULL se la barra degli strumenti Nascondi automaticamente non è stata creata; i
 
 Porta le barre ancorate con l'allineamento specificato in alto.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 Aggiunge i nomi dei riquadri e delle barre degli strumenti di ancoraggio a un menu.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 Calcola il rettangolo previsto di una finestra ancorata.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ Lo stato di ancoraggio può essere uno dei seguenti valori:
 
 Abilita o disabilita il caricamento del layout di ancoraggio dal Registro di sistema.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ Chiamare questo metodo quando è necessario mantenere il layout corrente dei riq
 
 Ancora un riquadro a un altro riquadro o a una finestra cornice.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ Per impostazione predefinita, questo menu non viene visualizzato.
 
 Indica alla libreria di visualizzare un menu di scelta rapida speciale con un elenco di barre degli strumenti dell'applicazione e riquadri ancorati quando l'utente fa clic con il pulsante destro del mouse e la libreria sta elaborando il messaggio WM_CONTEXTMENU.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ Rettangolo che contiene i bordi esterni della cornice.
 
 Restituisce un elenco di riquadri appartenenti al gestore di ancoraggio. Sono inclusi tutti i riquadri mobili.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ Classe che contiene i parametri di ancoraggio intelligente per il gestore di anc
 
 Nasconde un riquadro in modalità Nascondi automaticamente.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1221,7 +1221,7 @@ TRUESe lo stato del gestore di ancoraggio è stato caricato correttamente. in ca
 
 Blocca la finestra specificata.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_DESTROY.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ TRUESe il metodo ha esito positivo. in caso contrario, FALSE.
 
 Chiamato dal framework quando compila un menu che dispone di un elenco di riquadri.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Rilascia i contenitori del riquadro vuoto.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 Rimuove il riquadro della barra nascosta specificato.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ TRUESe il frame specificato viene rimosso. FALSE in caso contrario.
 
 Annulla la registrazione di un riquadro e lo rimuove dall'elenco nel gestore di ancoraggio.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ TRUESe il riquadro viene sostituito correttamente. FALSE in caso contrario.
 
 Ricorre i telai nell'elenco dei mini telai.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ VERO sempre.
 
 Scrive il gestore di ancoraggio in un archivio.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ La scrittura del gestore di ancoraggio in un archivio comporta la determinazione
 
 Imposta le dimensioni, la larghezza e l'altezza delle barre di controllo e del riquadro specificato.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 Imposta la modalità di anteprima di stampa delle barre visualizzate nell'anteprima di stampa.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ Per utilizzare l'aspetto predefinito per gli indicatori di ancoraggio intelligen
 
 Mostra o nasconde le finestre dei mini fotogrammi.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ Sempre FALSE.
 
 Avvia l'ancoraggio intelligente della finestra specificata in base all'allineamento del gestore di ancoraggio intelligente.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 Interrompe l'aggancio intelligente.
 
-```
+```cpp
 void StopSDocking();
 ```
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: de28b308ec235e33e39aabd707677f4e75320b0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365289"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754217"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit (classe)
 
@@ -113,7 +113,7 @@ Nell'esempio seguente viene illustrato come impostare una maschera (ad esempio u
 
 Disabilita la convalida dell'input dell'utente.
 
-```
+```cpp
 void DisableMask();
 ```
 
@@ -125,7 +125,7 @@ Se la convalida dell'input dell'utente è disabilitata, il controllo di modifica
 
 Specifica se `GetWindowText` il metodo recupera solo i caratteri mascherati.
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -142,7 +142,7 @@ Utilizzare questo metodo per abilitare il recupero di caratteri mascherati. Crea
 
 Inizializza il controllo di modifica mascherato.
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -185,7 +185,7 @@ Nella tabella seguente sono elencati i caratteri maschera predefiniti:
 
 Specifica se il controllo di modifica mascherato consente all'utente di selezionare l'input di gruppi specifici o tutti gli input.
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
@@ -219,7 +219,7 @@ Se la selezione per gruppo è abilitata, l'utente può recuperare solo i gruppi 
 
 Specifica se il testo viene convalidato solo per i caratteri mascherati o per l'intera maschera.
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -291,7 +291,7 @@ Eseguire l'override di questo metodo per convalidare i caratteri di input nel pr
 
 Specifica una stringa di caratteri validi che l'utente può immettere.
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
@@ -321,7 +321,7 @@ m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindo
 
 Visualizza un messaggio di richiesta nel controllo di modifica mascherato.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: d03fb6f398e18957f68fc18c78d8a397efc67506
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 536d84fe2c2f68d62490e1ce2b65085426762e87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369270"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754199"
 ---
 # <a name="cd2dbrush-class"></a>Classe CD2DBrush
 
@@ -107,7 +107,7 @@ virtual ~CD2DBrush();
 
 Associa l'interfaccia delle risorse esistente all'oggetto.
 
-```
+```cpp
 void Attach(ID2D1Brush* pResource);
 ```
 
@@ -186,7 +186,7 @@ Valore compreso tra zero e 1 che indica l'opacità del pennello. Questo valore �
 
 Ottiene la trasformazione corrente della destinazione di rendering
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```
 
@@ -239,7 +239,7 @@ Puntatore a un ID2D1Brush interfaccia o NULL se l'oggetto non è ancora iniziali
 
 Imposta il grado di opacità di questo pennello
 
-```
+```cpp
 void SetOpacity(FLOAT opacity);
 ```
 
@@ -252,7 +252,7 @@ Valore compreso tra zero e 1 che indica l'opacità del pennello. Questo valore �
 
 Applica la trasformazione specificata alla destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegno successive si verificano nello spazio trasformato.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```
 

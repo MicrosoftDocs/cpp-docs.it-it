@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363674"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752865"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA (struttura)
 
@@ -170,7 +170,7 @@ TRUE indica che la fusione alfa è supportata; in caso contrario, FALSE.
 
 Rilascia le risorse allocate dal framework, ad esempio pennelli, tipi di carattere e DLL.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -190,7 +190,7 @@ HRESULT D2D1MakeRotateMatrix(
 *angle*<br/>
 Angolo di rotazione in senso antiorario espresso in gradi.
 
-*center*<br/>
+*Centro*<br/>
 Punto su cui ruotare.
 
 *Matrice*<br/>
@@ -288,7 +288,7 @@ Un tema definisce lo stile di visualizzazione di un'applicazione. Un tema non vi
 
 Abilita o disabilita il supporto di Microsoft Active Accessibility.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -404,7 +404,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Parametri
 
-*info*<br/>
+*Informazioni*<br/>
 [in, out] Struttura [NONCLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) che contiene le metriche scalabili associate all'area non client di una finestra non ridotta a icona.
 
 ### <a name="return-value"></a>Valore restituito
@@ -676,7 +676,7 @@ Il costruttore `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inizializza il membro a 4 pixe
 
 Rileva lo stato corrente delle funzionalità di animazione del menu del desktop e della barra delle applicazioni che si nasconde automaticamente.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ Questo metodo crea un tipo di carattere normale orizzontale, un tipo di caratter
 
 Reinizializza i tipi di carattere logici usati dal framework.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ Per ulteriori informazioni sui `CFont::CreateFontIndirect`tipi di carattere logi
 
 Inizializza i colori, l'intensità di colore, i pennelli, le penne e le immagini usati dal framework.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ Un valore intero con flag codificati che specificano le posizioni delle barre na
 
 Rilascia le interfacce `GetITaskbarList` `GetITaskbarList3` ottenute tramite i metodi e .
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361933"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754148"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
@@ -380,7 +380,7 @@ Questo metodo ricalcola come disegnare l'intero controllo griglia delle propriet
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>Suggerimento CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ TRUESe il metodo ha esito positivo. in caso contrario, FALSE.
 
 Abilita o disabilita l'area di descrizione visualizzata sotto l'elenco di proprietà nel controllo griglia delle proprietà.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ L'area di descrizione viene visualizzata nella parte inferiore del controllo gri
 
 Abilita o disabilita il controllo intestazione nella parte superiore del controllo griglia delle proprietà.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ TRUESe l'operazione di modifica termina correttamente. FALSE se i dati della pro
 
 Scorre un controllo griglia delle proprietà ed espande gli elementi delle proprietà fino a quando la proprietà specificata non è visibile.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 Espande o comprime tutti i nodi di controllo griglia delle proprietà.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ Puntatore all'oggetto proprietà che corrisponde all'elemento selezionato nel co
 
 Recupera i colori personalizzati attualmente definiti per gli elementi del controllo griglia delle proprietà.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1074,7 +1074,7 @@ Il termine *area delle proprietà* fa riferimento a una qualsiasi delle aree nom
 
 Questo metodo imposta il valore della variabile a cui punta il parametro *pnArea.* Nella tabella seguente sono elencati i valori possibili e le aree corrispondenti.
 
-|Valore|Area|
+|valore|Area|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|Controllo casella di espansione delle proprietà.|
 |`ClickArea::ClickName`|Nome della proprietà.|
@@ -1225,7 +1225,7 @@ Utilizzare il metodo [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) p
 
 Specifica come visualizzare le proprietà modificate.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ Per impostazione predefinita, questo metodo invia il [messaggio di AFX_WM_PROPER
 
 Chiamato dal framework quando viene selezionata una proprietà che contiene un controllo casella combinata.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 Rimuove tutti gli oggetti proprietà da un controllo griglia delle proprietà.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 Ripristina i valori originali di tutte le proprietà.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 Imposta o reimposta la modalità alfabetica.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ Quando il controllo griglia delle proprietà è in modalità alfabetica, il cont
 
 Specifica il testo delle etichette booleane.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 Seleziona una proprietà in un controllo griglia delle proprietà.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ Utilizzare questo metodo per annullare la selezione dell'elemento corrente nel c
 
 Specifica colori personalizzati per vari elementi del controllo griglia delle proprietà.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ Per personalizzare l'aspetto di una proprietà specifica, derivare una classe da
 
 Specifica il numero di righe da visualizzare nella sezione della descrizione del controllo griglia delle proprietà corrente.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 Specifica se visualizzare l'intera larghezza del nome della categoria per un gruppo di proprietà nel controllo griglia delle proprietà corrente.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ I termini *nome del gruppo* e nome della *categoria* vengono utilizzati in modo 
 
 Definisce un carattere utilizzato come delimitatore in un elenco di valori di proprietà.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ Per impostazione predefinita, il [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#c
 
 Specifica se il framework ridisegna le colonne nome e valore del controllo griglia delle proprietà corrente quando un utente ridimensiona le colonne.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ L'utente può ridimensionare le colonne nome e valore di un controllo griglia de
 
 Imposta l'aspetto del controllo griglia delle proprietà sullo stile utilizzato in Visual Studio .NET.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364015"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751129"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -149,7 +149,7 @@ Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combin
 - PBS_SMOOTH Visualizza un riempimento graduale e fluido nel controllo indicatore di stato. Senza questo flag, il controllo verrà riempito con blocchi.
 
 *Rect*<br/>
-Specifica le dimensioni e la posizione del controllo indicatore di stato. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura. Poiché il controllo deve essere una finestra figlio, le coordinate specificate sono relative all'area client di *pParentWnd*.
+Specifica le dimensioni e la posizione del controllo indicatore di stato. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura. Poiché il controllo deve essere una finestra figlio, le coordinate specificate sono relative all'area client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Specifica la finestra padre del controllo indicatore `CDialog`di stato, in genere un oggetto . Non deve essere NULL.
@@ -191,7 +191,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco di s
 Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione di stili di finestra descritta in [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) in Windows SDK.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.
@@ -263,7 +263,7 @@ La posizione del controllo indicatore di stato non è la posizione fisica sullo 
 
 Ottiene i limiti inferiore e superiore correnti, o intervallo, del controllo indicatore di stato.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -297,7 +297,7 @@ int GetState() const;
 
 Lo stato del controllo indicatore di stato corrente, che è uno dei valori seguenti:
 
-|Valore|State|
+|valore|State|
 |-----------|-----------|
 |PBST_NORMAL|In corso|
 |PBST_ERROR|Errore|
@@ -495,7 +495,7 @@ La posizione del controllo indicatore di stato non è la posizione fisica sullo 
 
 Imposta i limiti superiore e inferiore dell'intervallo del controllo indicatore di stato e ridisegna la barra per riflettere i nuovi intervalli.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

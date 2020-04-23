@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370050"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754554"
 ---
 # <a name="cmdiframewnd-class"></a>Classe CMDIFrameWnd
 
@@ -242,7 +242,7 @@ Eseguire l'override di questa funzione membro se si dispone di un menu finestra 
 
 Attiva una finestra figlio MDI diversa.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ Vedere l'esempio per [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).
 
 Dispone tutte le finestre figlio MDI in formato a cascata.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ Vedere l'esempio per [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwn
 
 Dispone tutte le finestre figlio del documento ridotte a icona.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ Vedere l'esempio per [CMDIFrameWnd::MDICascade](#mdicascade).
 
 Ingrandisce la finestra figlio MDI specificata.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ Vedere l'esempio per [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwn
 
 Attiva la finestra figlio immediatamente dietro la finestra figlio attualmente attiva e posiziona la finestra figlio attualmente attiva dietro tutte le altre finestre figlio.
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ Se la finestra figlio MDI attualmente attiva è ingrandita, la funzione membro r
 
 Attiva la finestra figlio precedente e posiziona la finestra figlio attualmente attiva immediatamente dietro di essa.
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ Se la finestra figlio MDI attualmente attiva è ingrandita, la funzione membro r
 
 Ripristina una finestra figlio MDI da dimensioni ingrandite o ridotte a icona.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ Non chiamare questa funzione membro se si utilizza il framework per gestire le f
 
 Dispone tutte le finestre figlio in un formato affiancato.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```

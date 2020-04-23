@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373311"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752116"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo di visualizzazione ad albero. Applicare gli stili di finestra, descritti in [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww), e qualsiasi combinazione di stili del [controllo visualizzazione](/windows/win32/Controls/tree-view-control-window-styles) struttura ad albero come descritto in Windows SDK.
 
 *Rect*<br/>
-Specifica le dimensioni e la posizione del controllo di visualizzazione ad albero. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+Specifica le dimensioni e la posizione del controllo di visualizzazione ad albero. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura.
 
 *pParentWnd (informazioni in due)*<br/>
 Specifica la finestra padre del controllo di `CDialog`visualizzazione struttura ad albero, in genere un oggetto . Non deve essere NULL.
@@ -361,7 +361,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco di s
 Specifica lo stile del controllo di visualizzazione ad albero. Applicare gli stili di finestra, descritti in [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww), e qualsiasi combinazione di stili del [controllo visualizzazione](/windows/win32/Controls/tree-view-control-window-styles) struttura ad albero come descritto in Windows SDK.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hElemento*|[in] Handle a un elemento del controllo di visualizzazione ad albero.|
 |*nParte*|[in] Identificatore per la parte. Deve essere impostato su TVGIPR_BUTTON.|
-|*Lprect*|[fuori] Puntatore a una struttura [RECT.](/previous-versions/dd162897\(v=vs.85\)) Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo della parte specificata da *hItem* e *nPart*.|
+|*Lprect*|[fuori] Puntatore a una struttura [RECT.](/windows/win32/api/windef/ns-windef-rect) Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo della parte specificata da *hItem* e *nPart*.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Handle di un elemento del controllo di visualizzazione ad albero.
 
 *Lprect*<br/>
-Puntatore a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che riceve il rettangolo di delimitazione. Le coordinate sono relative all'angolo superiore sinistro del controllo di visualizzazione ad albero.
+Puntatore a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che riceve il rettangolo di delimitazione. Le coordinate sono relative all'angolo superiore sinistro del controllo di visualizzazione ad albero.
 
 *bTestoSolo*<br/>
 Se questo parametro è diverso da zero, il rettangolo di delimitazione include solo il testo dell'elemento. In caso contrario, include l'intera riga occupata dall'elemento nel controllo di visualizzazione ad albero.
@@ -1366,7 +1366,7 @@ Quando questa funzione viene chiamata, il parametro *pt* specifica le coordinate
 
 |||
 |-|-|
-|Valore|Significato|
+|valore|Significato|
 |TVHT_ABOVE|Sopra l'area client.|
 |TVHT_BELOW|Sotto l'area client.|
 |TVHT_NOWHERE|Nell'area client, ma sotto l'ultimo elemento.|
@@ -1833,7 +1833,7 @@ Puntatore all'elenco di immagini precedente, se presente; in caso contrario NULL
 
 Chiamare questa funzione per impostare la larghezza del rientro per un controllo di visualizzazione ad albero e ridisegnare il controllo per riflettere la nuova larghezza.
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ Per utilizzare le descrizioni comandi, indicare lo stile TVS_NOTOOLTIPS quando s
 
 Visualizza l'infotip per l'elemento specificato nel controllo di visualizzazione ad albero corrente.
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

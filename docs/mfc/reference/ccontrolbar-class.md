@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: deb95d76e6d68ba5b9fad82bca1d88fd71c5a547
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2f8ea48bf9a1f015928650085b07198b152771a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369389"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754793"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -293,7 +293,7 @@ Eseguire l'override di questa funzione per personalizzare l'aspetto della barra 
 
 Chiamare questa funzione per abilitare una barra di controllo per essere ancorata.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -450,7 +450,7 @@ Per aggiornare un singolo pulsante o riquadro, utilizzare la macro ON_UPDATE_COM
 
 Chiamare questa funzione per impostare gli stili **di CBRS_** desiderati per la barra di controllo.
 
-```
+```cpp
 void SetBarStyle(DWORD dwStyle);
 ```
 
@@ -493,7 +493,7 @@ Non influisce sulle impostazioni **WS_** (stile finestra).
 
 Chiamare questa funzione per impostare le dimensioni dei bordi della barra di controllo.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -530,7 +530,7 @@ Nell'esempio di codice riportato di seguito i bordi superiore e inferiore della 
 
 Modifica il proprietario sul posto di una barra di controllo.
 
-```
+```cpp
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 

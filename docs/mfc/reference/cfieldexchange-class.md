@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: d4b99a4992075072253d4f9b3182a926673bdfd0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de9db2713a25b232bbd7f936958d1c10e96c511a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373927"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753176"
 ---
 # <a name="cfieldexchange-class"></a>Classe CFieldExchange
 
@@ -90,7 +90,7 @@ Seguire il modello delle funzioni RFX esistenti.
 
 È necessaria una `SetFieldType` chiamata a nell'override [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) o [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) della classe recordset.
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 

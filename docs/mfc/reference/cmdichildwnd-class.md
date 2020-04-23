@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370077"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754570"
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 
@@ -207,7 +207,7 @@ Il frame restituito è costituito `CMDIChildWnd` da due elementi padre rimossi d
 
 Chiamare questa funzione membro per attivare una finestra figlio MDI indipendentemente dalla finestra cornice MDI.
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ Quando il frame diventa attivo, verrà attivata anche la finestra figlio attivat
 
 Chiamare questa funzione membro per eliminare una finestra figlio MDI.
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ La funzione membro rimuove il titolo della finestra figlio dalla finestra cornic
 
 Chiamare questa funzione membro per ottimizzare una finestra figlio MDI.
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ Quando una finestra figlio viene ingrandita, Windows la ridimensiona per fare in
 
 Chiamare questa funzione membro per ripristinare una finestra figlio MDI da dimensioni ingrandite o ridotte a icona.
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 Imposta gli handle per le risorse di menu e tasti di scelta rapida.
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);

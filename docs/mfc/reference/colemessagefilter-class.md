@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374920"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753828"
 ---
 # <a name="colemessagefilter-class"></a>Classe COleMessageFilter
 
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 Attiva e disabilita la finestra di dialogo occupato, che viene visualizzata alla scadenza del ritardo in sospeso del messaggio (vedere [SetRetryReply](#setretryreply)) durante una chiamata OLE.
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ Specifica se la finestra di dialogo "occupato" è abilitata o disabilitata.
 
 Attiva e disabilita la finestra di dialogo "non risponde", che viene visualizzata se un messaggio della tastiera o del mouse è in sospeso durante una chiamata OLE e la chiamata è scaduta.
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ Il filtro messaggi predefinito del framework viene registrato automaticamente du
 
 Revoca una registrazione precedente eseguita da una chiamata a [Register](#register).
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ Anche il filtro messaggi predefinito, creato e registrato automaticamente dal fr
 
 Questa funzione imposta la "risposta occupata" dell'applicazione.
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ Per impostazione predefinita, la risposta occupata è SERVERCALL_RETRYLATER. Que
 
 Determina per quanto tempo l'applicazione chiamante attende una risposta dall'applicazione chiamata prima di eseguire ulteriori azioni.
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ Questa funzione funziona in concerto con [SetRetryReply](#setretryreply).
 
 Determina l'azione dell'applicazione chiamante quando riceve una risposta occupata da un'applicazione chiamata.
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 

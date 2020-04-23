@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367762"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752566"
 ---
 # <a name="cmfccolorbar-class"></a>Classe CMFCColorBar
 
@@ -380,7 +380,7 @@ L'etichetta standard per l'altro pulsante è **Altri colori...**.
 
 Calcola i margini verticali e orizzontali necessari per contenere i pulsanti del controllo barra dei colori e regola la posizione di tali pulsanti.
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ TRUESe questo metodo ha esito positivo. in caso contrario, FALSE.
 
 Mostra o nasconde il pulsante automatico.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ L'etichetta di testo del pulsante automatico viene eliminata se il *lpszLabel* p
 
 Attiva o disattiva la visualizzazione di una finestra di dialogo che consente all'utente di selezionare più colori.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ Puntatore alla tavolozza sostituita dalla tavolozza del pulsante padre del contr
 
 Imposta il colore attualmente selezionato.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ Questo metodo modifica il nome del `CMFCColorBar` colore specificato in tutti gl
 
 Imposta un nuovo ID di comando per un controllo barra dei colori.
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ Chiamare questo metodo per modificare l'ID di comando di un controllo barra dei 
 
 Imposta l'elenco dei colori utilizzati nel documento corrente.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 Imposta il margine orizzontale, ovvero lo spazio tra la cella di colore sinistro o destro e il contorno dell'area client.
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ Per impostazione predefinita, il [CMFCColorBar::CMFCColorBar](#cmfccolorbar) cos
 
 Imposta `m_pWndPropList` il membro dati protetto sul puntatore specificato a un controllo griglia delle proprietà.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 Imposta il margine verticale, ovvero il spazio tra la cella di colore superiore o inferiore e il limite dell'area client.
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

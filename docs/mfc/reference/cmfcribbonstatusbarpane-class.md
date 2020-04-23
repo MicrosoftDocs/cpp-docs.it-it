@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368790"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753511"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 
@@ -259,7 +259,7 @@ virtual void OnFinishAnimation();
 
 Definire il testo più lungo che può essere visualizzato nel riquadro della barra di stato senza troncamento.
 
-```
+```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```
 
@@ -276,7 +276,7 @@ La libreria calcola la dimensione del testo che *lpszAlmostLargeText* specifica 
 
 Associa al riquadro della barra di stato un elenco immagini che può essere utilizzato per l'animazione.
 
-```
+```cpp
 void SetAnimationList(
     HBITMAP hBmpAnimationList,
     int cxAnimation=16,
@@ -310,7 +310,7 @@ TRUESe l'elenco di immagini è collegato correttamente al riquadro della barra d
 
 Imposta l'allineamento del testo dell'etichetta del riquadro della barra di stato.
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
@@ -333,7 +333,7 @@ void SetTextAlign(int nAlign);
 
 Avvia l'animazione assegnata al riquadro.
 
-```
+```cpp
 void StartAnimation(
     UINT nFrameDelay=500,
     UINT nDuration=-1);
@@ -355,7 +355,7 @@ void StartAnimation(
 
 Interrompe l'animazione assegnata al riquadro della barra di stato.
 
-```
+```cpp
 void StopAnimation();
 ```
 

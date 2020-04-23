@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376969"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753698"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl (classe)
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*DwStyle (in stile dwStyle)*|[in] Combinazione bit per bit (OR) degli stili di [finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) e degli stili del [controllo pager](/windows/win32/Controls/pager-control-styles) da applicare al controllo.|
-|*Rect*|[in] Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che contiene la posizione e le dimensioni del controllo nelle coordinate client.|
+|*Rect*|[in] Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che contiene la posizione e le dimensioni del controllo nelle coordinate client.|
 |*pParentWnd (informazioni in due)*|[in] Puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto che è la finestra padre del controllo. Questo parametro non può essere NULL.|
 |*nID*|[in] ID del controllo.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*DwExStyle (in stile dwExStyle)*|[in] Combinazione bit per bit di stili estesi da applicare al controllo. Per ulteriori informazioni, vedere il parametro *dwExStyle* della funzione [CreateWindowEx.](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
 |*DwStyle (in stile dwStyle)*|[in] Combinazione bit per bit (OR) degli stili di [finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) e degli stili del [controllo pager](/windows/win32/Controls/pager-control-styles) da applicare al controllo.|
-|*Rect*|[in] Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che contiene la posizione e le dimensioni del controllo nelle coordinate client.|
+|*Rect*|[in] Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che contiene la posizione e le dimensioni del controllo nelle coordinate client.|
 |*pParentWnd (informazioni in due)*|[in] Puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto che è la finestra padre del controllo. Questo parametro non può essere NULL.|
 |*nID*|[in] ID del controllo.|
 
@@ -202,7 +202,7 @@ Per creare un controllo pager, dichiarare una `CPagerCtrl` variabile, quindi chi
 
 Abilita o disabilita l'inoltro [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) messaggi alla finestra contenuta nel controllo pager corrente.
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
@@ -462,7 +462,7 @@ Questo metodo invia il messaggio [di PGM_GETBUTTONSTATE,](/windows/win32/Control
 
 Fa sì che il controllo pager corrente ricalcoli le dimensioni della finestra contenuta.
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -572,7 +572,7 @@ Nell'esempio seguente viene creato un controllo pager, quindi viene utilizzato i
 
 Imposta la finestra contenuta per il controllo pager corrente.
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
@@ -598,7 +598,7 @@ Nell'esempio seguente viene creato un controllo pager, quindi viene utilizzato i
 
 Imposta la posizione di scorrimento del controllo pager corrente.
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 

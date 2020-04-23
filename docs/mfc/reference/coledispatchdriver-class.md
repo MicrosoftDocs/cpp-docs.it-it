@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366072"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753889"
 ---
 # <a name="coledispatchdriver-class"></a>Classe COleDispatchDriver
 
@@ -103,7 +103,7 @@ Per ulteriori informazioni `COleDispatchDriver`sull'utilizzo di , vedere i segue
 
 Chiamare la funzione membro `AttachDispatch` per collegare un puntatore `IDispatch` all'oggetto `COleDispatchDriver` . Per altre informazioni, vedere [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ Per ulteriori informazioni sul tipo LPDISPATCH, vedere [Implementazione dell'int
 
 Ottiene la proprietà dell'oggetto specificata da *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ Indirizzo della variabile che riceverà il valore della proprietà. Deve corrisp
 
 Chiama il metodo o la proprietà dell'oggetto specificato da *dwDispID*, nel contesto specificato da *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -283,7 +283,7 @@ I valori possibili per l'argomento *vtRet* sono tratti dall'enumerazione VARENUM
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
 |VT_I4|**Lungo**|
-|VT_R4|**Galleggiante**|
+|VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
 |VT_DATE|**Data**|
@@ -291,7 +291,7 @@ I valori possibili per l'argomento *vtRet* sono tratti dall'enumerazione VARENUM
 |VT_DISPATCH|Lpdispatch|
 |VT_ERROR|SCODE|
 |VT_BOOL|**Bool**|
-|VT_VARIANT|**VARIANT**|
+|VT_VARIANT|**Variante**|
 |VT_UNKNOWN|LPUNKNOWN (Informazioni in base a LPUNKNOWN|
 
 L'argomento *pbParamInfo* è un elenco separato da spazi di costanti **VTS_.** Uno o più di questi valori, separati da spazi (non virgole), specificano l'elenco dei parametri della funzione. I valori possibili sono elencati con la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 Rilascia `IDispatch` la connessione. Per altre informazioni, vedere [Implementazione dell'interfaccia IDispatchFor](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) more information, see Implementing the IDispatch Interface
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ Se il rilascio automatico è stato `IDispatch::Release` impostato per questa con
 
 Imposta la proprietà dell'oggetto OLE specificata da *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);

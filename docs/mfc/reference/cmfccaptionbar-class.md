@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367791"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752622"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (classe)
 
@@ -227,7 +227,7 @@ Restituisce FALSE a meno che non venga sottoposto a override.
 
 Attiva o disattiva il pulsante sulla barra del titolo.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
@@ -473,7 +473,7 @@ Eseguire l'override `CMFCCaptionBar` di questo metodo in una classe derivata per
 
 Rimuove l'immagine bitmap dalla barra del titolo.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
@@ -481,7 +481,7 @@ void RemoveBitmap();
 
 Rimuove il pulsante dalla barra del titolo.
 
-```
+```cpp
 void RemoveButton();
 ```
 
@@ -493,7 +493,7 @@ Il layout degli elementi della barra del titolo viene regolato automaticamente.
 
 Rimuove l'icona dalla barra del titolo.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
@@ -501,7 +501,7 @@ void RemoveIcon();
 
 Rimuove l'etichetta di testo dalla barra del titolo.
 
-```
+```cpp
 void RemoveText();
 ```
 
@@ -509,7 +509,7 @@ void RemoveText();
 
 Imposta l'immagine bitmap per la barra del titolo.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -557,7 +557,7 @@ La bitmap viene allineata come specificato dal *bmpAlignment* parametro.  Questo
 
 Imposta la dimensione del bordo della barra del titolo.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
@@ -570,7 +570,7 @@ void SetBorderSize(int nSize);
 
 Imposta il pulsante per la barra del titolo.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -596,7 +596,7 @@ TRUEse il pulsante visualizza una freccia a discesa, FALSE in caso contrario.
 
 Specifica se il pulsante rimane premuto.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
@@ -609,7 +609,7 @@ TRUESe il pulsante mantiene lo stato premuto, FALSE in caso contrario.
 
 Imposta la descrizione comando per il pulsante.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -627,7 +627,7 @@ void SetButtonToolTip(
 
 Imposta lo stile del bordo della barra del titolo.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
@@ -640,7 +640,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 Imposta l'icona per una barra del titolo.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -672,7 +672,7 @@ L'icona viene allineata in base al parametro *iconAlignment.* Può essere uno de
 
 Imposta la descrizione comando per l'immagine nella barra del titolo.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -690,7 +690,7 @@ void SetImageToolTip(
 
 Imposta la distanza tra il bordo dell'elemento barra del titolo e il bordo del controllo barra del titolo.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
@@ -703,7 +703,7 @@ void SetMargin(int nMargin);
 
 Imposta l'etichetta di testo per la barra del titolo.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);

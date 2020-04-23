@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352282"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752720"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 
@@ -121,7 +121,7 @@ Le mappe di invio, simili alle mappe `IDispatch` messaggi, vengono utilizzate pe
 
 Chiamare questa funzione per visualizzare il cursore come una clessidra quando si prevede che un comando per richiedere un intervallo di tempo notevole per l'esecuzione.
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ Puntatore alla struttura [MSG](/windows/win32/api/winuser/ns-winuser-msg) che de
 Punto di controllo della finestra del documento contenente l'oggetto.
 
 *Lprect*<br/>
-Puntatore alla struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) contenente le coordinate, in pixel, che definiscono il rettangolo di delimitazione di un oggetto in *hwndParent*.
+Puntatore alla struttura [RECT](/windows/win32/api/windef/ns-windef-rect) contenente le coordinate, in pixel, che definiscono il rettangolo di delimitazione di un oggetto in *hwndParent*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -183,7 +183,7 @@ Questa funzione membro è fondamentalmente un'implementazione di [IOleObject::Do
 
 Chiamare questa funzione per abilitare l'automazione OLE per un oggetto.
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ Questa funzione viene in genere chiamata dal costruttore dell'oggetto e deve ess
 
 Abilita la generazione di eventi sui punti di connessione.
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ Per abilitare i punti di connessione, chiamare questa funzione membro nel costru
 
 Abilita la libreria dei tipi di un oggetto.
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ Chiamare questa funzione membro nel `CCmdTarget`costruttore dell'oggetto derivat
 
 Chiamare questa funzione dopo `BeginWaitCursor` aver chiamato la funzione membro per tornare dal cursore a clessidra al cursore precedente.
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Parametri
 
 *pIID (in com/pIID)*<br/>
-Puntatore a un ID di interfaccia [(un GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Puntatore a un ID di interfaccia (un [GUID](/windows/win32/api/guiddef/ns-guiddef-guid.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -346,11 +346,11 @@ HRESULT GetTypeInfoOfGuid(
 
 ### <a name="parameters"></a>Parametri
 
-*Lcid*<br/>
+*lcid*<br/>
 Un identificatore `LCID`delle impostazioni locali ( ).
 
-*Guid*<br/>
-[GUID](/previous-versions/cc317743(v%3dmsdn.10)) della descrizione del tipo.
+*guid*<br/>
+Il [GUID](/windows/win32/api/guiddef/ns-guiddef-guid della descrizione del tipo.
 
 *ppTypeInfo (informazioni in due)*<br/>
 Puntatore a un `ITypeInfo` puntatore all'interfaccia.
@@ -371,7 +371,7 @@ virtual HRESULT GetTypeLib(
 
 ### <a name="parameters"></a>Parametri
 
-*Lcid*<br/>
+*lcid*<br/>
 Identificatore delle impostazioni locali (LCID).
 
 *ppTypeLib (informazioni in questo gruppo)*<br/>
@@ -514,7 +514,7 @@ Eseguire l'override di questa funzione per fornire una gestione speciale per que
 
 Chiamare questa funzione per ripristinare il cursore a clessidra appropriato dopo la modifica del cursore di sistema (ad esempio, dopo l'apertura e la chiusura di una finestra di messaggio durante un'operazione lunga).
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

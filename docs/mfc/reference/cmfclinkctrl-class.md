@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 1ef4e390d88f81d738d2ee18be6ba02843633011
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79edff8be6e2c37baa938fc5b624253932609e17
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374399"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754255"
 ---
 # <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
 
@@ -102,7 +102,7 @@ Eseguire l'override di questo metodo quando si desidera utilizzare il proprio co
 
 Visualizza un URL specificato come testo del pulsante.
 
-```
+```cpp
 void SetURL(LPCTSTR lpszURL);
 ```
 
@@ -117,7 +117,7 @@ void SetURL(LPCTSTR lpszURL);
 
 Imposta il protocollo implicito (ad esempio, "http:") dell'URL.
 
-```
+```cpp
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```
 

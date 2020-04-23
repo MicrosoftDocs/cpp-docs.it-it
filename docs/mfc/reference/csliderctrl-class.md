@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318219"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751269"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
 
@@ -169,7 +169,7 @@ Per ulteriori informazioni `CSliderCtrl`sull'utilizzo di , vedere [Controlli](..
 
 Cancella la selezione corrente in un controllo dispositivo di scorrimento.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ Bandiera di ridisegno. Se questo parametro è TRUE, il dispositivo di scorriment
 
 Rimuove i segni di graduazione correnti da un controllo dispositivo di scorrimento.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo dispositivo di scorrimento. Applicare qualsiasi combinazione di stili di [controllo dispositivo](/windows/win32/Controls/trackbar-control-styles)di scorrimento , descritta in Windows SDK, al controllo.
 
 *Rect*<br/>
-Specifica le dimensioni e la posizione del dispositivo di scorrimento. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+Specifica le dimensioni e la posizione del dispositivo di scorrimento. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura.
 
 *pParentWnd (informazioni in due)*<br/>
 Specifica la finestra padre del controllo `CDialog`dispositivo di scorrimento, in genere un oggetto . Non deve essere NULL.
@@ -251,7 +251,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco di s
 Specifica lo stile del controllo dispositivo di scorrimento. Applicare qualsiasi combinazione di stili di [controllo dispositivo](/windows/win32/Controls/trackbar-control-styles)di scorrimento , descritta in Windows SDK, al controllo.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.
@@ -304,7 +304,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_GETB
 
 Recupera le dimensioni e la posizione del rettangolo di delimitazione per il canale di un controllo dispositivo di scorrimento.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ Posizione corrente.
 
 Recupera le posizioni massima e minima per il dispositivo di scorrimento in un controllo dispositivo di scorrimento.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ Posizione minima del controllo.
 
 Recupera le posizioni iniziale e finale della selezione corrente in un controllo dispositivo di scorrimento.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ Questo metodo invia il [messaggio TBM_GETTHUMBLENGTH,](/windows/win32/Controls/t
 
 Recupera le dimensioni e la posizione del rettangolo di delimitazione per il dispositivo di scorrimento (pollice) in un controllo dispositivo di scorrimento.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ Le dimensioni della pagina influiscono sul tempo di spostamento del dispositivo 
 
 Imposta la posizione corrente del dispositivo di scorrimento in un dispositivo di scorrimento.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ Specifica la nuova posizione del cursore.
 
 Imposta l'intervallo (posizioni minima e massima) per il dispositivo di scorrimento in un dispositivo di scorrimento.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ Flag di ridisegno. Se questo parametro è TRUE, il dispositivo di scorrimento vi
 
 Imposta l'intervallo massimo per il dispositivo di scorrimento in un dispositivo di scorrimento.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ Flag di ridisegno. Se questo parametro è TRUE, il dispositivo di scorrimento vi
 
 Imposta l'intervallo minimo per il dispositivo di scorrimento in un dispositivo di scorrimento.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ Flag di ridisegno. Se questo parametro è TRUE, il dispositivo di scorrimento vi
 
 Imposta le posizioni iniziale e finale per la selezione corrente in un dispositivo di scorrimento.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ Posizione finale per il dispositivo di scorrimento.
 
 Imposta la lunghezza del dispositivo di scorrimento nel controllo trackbar corrente.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ Diverso da zero se il segno di graduazione è impostato; in caso contrario 0.
 
 Imposta la frequenza con cui i segni di graduazione vengono visualizzati in un dispositivo di scorrimento.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 TBM_SETTI
 
 Assegna un controllo descrizione comando a un controllo dispositivo di scorrimento.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

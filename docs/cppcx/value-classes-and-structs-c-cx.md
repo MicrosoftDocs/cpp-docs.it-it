@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740938"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752903"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
 
-Uno *struct di valore* o una *classe di valore* è un pod compatibile con Windows Runtime ("struttura di dati Plain Old"). con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.
+Una struttura di *valori* o una classe di *valori* è un POD compatibile con Windows Runtime ("struttura di dati semplice e precedente"). con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.
 
 Gli esempi seguenti mostrano come dichiarare e inizializzare struct di valore.
 
@@ -52,7 +52,7 @@ Quando una variabile di un tipo di valore viene assegnata a un'altra variabile, 
 
 Una *classe di valore* è analoga a uno `value struct` , eccetto per il fatto che ai relativi campi deve essere concessa esplicitamente l'accessibilità pubblica. La classe viene dichiarata utilizzando la parola chiave `value class` .
 
-Uno struct di valore o una classe di valore può contenere come campi solo tipi numerici fondamentali `Platform::String^`, classi di enumerazione, o [Platform:: iBox \<T > ^](../cppcx/platform-ibox-interface.md) , dove t è un tipo numerico o una classe di enumerazione o una classe di valore o uno struct. Un campo `IBox<T>^` può contenere un valore `nullptr`. Ecco come C++ implementa il concetto di *tipi di valore nullable*.
+Uno struct di valore o una classe di valori può `Platform::String^`contenere come campi solo tipi numerici fondamentali, classi enum o [Platform::IBox \<T>,](../cppcx/platform-ibox-interface.md) dove T è un tipo numerico o una classe enum o una classe o uno struct di valore. Un campo `IBox<T>^` può contenere un valore `nullptr`. Ecco come C++ implementa il concetto di *tipi di valore nullable*.
 
 Uno struct o una classe di valori che contiene un tipo `Platform::String^` o `IBox<T>^` come membro non supporta `memcpy`.
 
@@ -68,13 +68,13 @@ Se si ha un tipo valore come parametro di funzione o di metodo, normalmente vien
 
 Per dichiarare un parametro che passa un tipo valore per valore, usare codice simile al seguente:
 
-```
+```cpp
 void Method1(MyValueType obj);
 ```
 
 Per dichiarare un parametro che passa un tipo valore per riferimento, usa il simbolo di riferimento (&), come illustrato di seguito:
 
-```
+```cpp
 void Method2(MyValueType& obj);
 ```
 
@@ -90,7 +90,7 @@ Per passare un tipo valore per riferimento è possibile usare anche un simbolo p
 
 ## <a name="nullable-value-types"></a>Tipi valore nullable
 
-Come indicato in precedenza, una classe valore o uno struct di valore può avere un campo di tipo [Platform\<:: iBox T > ^](../cppcx/platform-ibox-interface.md), `IBox<int>^`ad esempio. A tale campo può essere assegnato qualsiasi valore numerico valido per il tipo `int` o un valore `nullptr`. È possibile passare un campo nullable come argomento a un metodo il cui parametro è dichiarato come facoltativo o qualsiasi altra posizione in cui un tipo di valore non deve necessariamente avere un valore.
+Come accennato in precedenza, una classe di valore o uno struct di valore può avere un campo di tipo [Platform::IBox\<T>,](../cppcx/platform-ibox-interface.md)ad esempio . `IBox<int>^` A tale campo può essere assegnato qualsiasi valore numerico valido per il tipo `int` o un valore `nullptr`. È possibile passare un campo nullable come argomento a un metodo il cui parametro è dichiarato come facoltativo o qualsiasi altra posizione in cui un tipo di valore non deve necessariamente avere un valore.
 
 L'esempio seguente mostra come inizializzare uno struct con un campo nullable.
 

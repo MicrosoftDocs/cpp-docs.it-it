@@ -9,35 +9,35 @@ helpviewer_keywords:
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-ms.openlocfilehash: 3792ed4d0fcd86c4a4e846771c450413fda130b5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d0822dfc730cbbb64f8364e6fa8fe8bc7207f9f9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187765"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750736"
 ---
 # <a name="_variant_tattach"></a>_variant_t::Attach
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Connette un oggetto `VARIANT` nell'oggetto **_variant_t** .
+Associa un `VARIANT` oggetto all'oggetto **_variant_t.**
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
 #### <a name="parameters"></a>Parametri
 
 *varSrc*<br/>
-Oggetto `VARIANT` da associare a questo oggetto **_variant_t** .
+Oggetto `VARIANT` da associare a questo **_variant_t** oggetto.
 
 ## <a name="remarks"></a>Osservazioni
 
-Acquisisce la proprietà del `VARIANT` incapsulando tale oggetto. Questa funzione membro rilascia tutti i `VARIANT`incapsulati esistenti, quindi copia il `VARIANT`fornito e imposta la relativa `VARTYPE` su VT_EMPTY per assicurarsi che le relative risorse possano essere rilasciate solo dal distruttore del **_variant_t** .
+Assume la `VARIANT` proprietà di l'oggetto incapsulandolo. Questa funzione membro rilascia `VARIANT`qualsiasi file incapsulato `VARIANT`esistente, `VARTYPE` quindi copia l'oggetto fornito e ne imposta la proprietà su VT_EMPTY per assicurarsi che le relative risorse possano essere rilasciate solo dal distruttore **_variant_t.**
 
-**Fine sezione specifica Microsoft**
+**FINE Specifico di Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

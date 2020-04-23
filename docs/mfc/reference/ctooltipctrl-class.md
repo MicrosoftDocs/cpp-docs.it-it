@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365108"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752189"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ Per ulteriori informazioni `CToolTipCtrl`sull'utilizzo di , vedere [Controlli](.
 
 Chiamare questa funzione per attivare o disattivare un controllo descrizione comandi.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ Puntatore alla finestra che contiene lo strumento.
 ID della risorsa stringa che contiene il testo per lo strumento.
 
 *LpRectTool (strumento LpRectTool)*<br/>
-Puntatore a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) contenente le coordinate del rettangolo di delimitazione dello strumento. Le coordinate sono relative all'angolo superiore sinistro dell'area client della finestra identificata da *pWnd*.
+Puntatore a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) contenente le coordinate del rettangolo di delimitazione dello strumento. Le coordinate sono relative all'angolo superiore sinistro dell'area client della finestra identificata da *pWnd*.
 
 *NIDTool (Strumento identità)*<br/>
 ID dello strumento.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parametri
 
 *lprc*<br/>
-Puntatore a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che contiene un rettangolo della finestra della descrizione comandi o un rettangolo di visualizzazione del testo.
+Puntatore a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che contiene un rettangolo della finestra della descrizione comandi o un rettangolo di visualizzazione del testo.
 
 *bPiù grande*<br/>
 Se TRUE, *lprc* viene utilizzato per specificare un rettangolo di visualizzazione di testo e riceve il rettangolo della finestra corrispondente. Se FALSE, *lprc* viene utilizzato per specificare un rettangolo della finestra e riceve il rettangolo di visualizzazione del testo corrispondente.
@@ -352,7 +352,7 @@ CToolTipCtrl();
 
 Rimuove lo strumento specificato da *pWnd* e *nIDTool* dalla raccolta di strumenti supportati da un controllo descrizione comandi.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETD
 
 Recupera i margini superiore, sinistro, inferiore e destro impostato per una finestra della descrizione comandi.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *lprc*<br/>
-Indirizzo di `RECT` una struttura che riceverà le informazioni sui margini. I membri della struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) non definiscono un rettangolo di delimitazione. Ai fini di questo messaggio, i membri della struttura vengono interpretati come segue:
+Indirizzo di `RECT` una struttura che riceverà le informazioni sui margini. I membri della struttura [RECT](/windows/win32/api/windef/ns-windef-rect) non definiscono un rettangolo di delimitazione. Ai fini di questo messaggio, i membri della struttura vengono interpretati come segue:
 
 |Membro|Rappresentazione|
 |------------|--------------------|
@@ -486,7 +486,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETM
 
 Recupera il testo mantenuto da un controllo descrizione comandi per uno strumento.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_GETT
 
 Recupera il titolo del controllo descrizione comandi corrente.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 Rimuove una finestra della descrizione comandi visualizzata dalla visualizzazione.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_POP]
 
 Determina la visualizzazione del controllo descrizione comandi corrente in corrispondenza delle coordinate dell'ultimo messaggio del mouse.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ Nell'esempio di codice riportato di seguito viene visualizzata una finestra di d
 
 Passa un messaggio del mouse a un controllo descrizione comandi per l'elaborazione.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ Un controllo descrizione comandi elabora solo i seguenti messaggi, `RelayEvent`c
 
 Imposta il tempo di ritardo per un controllo descrizione comandi.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ Il tempo di ritardo è il periodo di tempo in cui il cursore deve rimanere su un
 
 Imposta i margini superiore, sinistro, inferiore e destro per una finestra della descrizione comandi.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETM
 
 Imposta il colore di sfondo in una finestra della descrizione comandi.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETT
 
 Imposta il colore del testo in una finestra della descrizione comandi.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TTM_SETT
 
 Imposta le informazioni che una descrizione comandi mantiene per uno strumento.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-ttt
 
 Imposta un nuovo rettangolo di delimitazione per uno strumento.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ Puntatore alla finestra che contiene lo strumento.
 ID dello strumento.
 
 *Lprect*<br/>
-Puntatore a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che specifica il nuovo rettangolo di delimitazione.
+Puntatore a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che specifica il nuovo rettangolo di delimitazione.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
@@ -894,7 +894,7 @@ Questa funzione membro emula la funzionalità del messaggio [TTM_SETWINDOWTHEME,
 
 Forza il ridisegno dello strumento corrente.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 Aggiorna il testo della descrizione comandi per gli strumenti di questo controllo.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

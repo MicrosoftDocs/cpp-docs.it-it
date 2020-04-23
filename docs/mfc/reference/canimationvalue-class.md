@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e020e3e123bb5dc96a623e7a41896d75c611b81e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321969"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755079"
 ---
 # <a name="canimationvalue-class"></a>Classe CAnimationValue
 
@@ -94,7 +94,7 @@ Il CAnimationValue classe incapsula un singolo CAnimationVariable oggetto e può
 
 Aggiunge una transizione da applicare a un valore.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -239,7 +239,7 @@ Fornisce la conversione tra CAnimationValue e INT32. Questo metodo chiama intern
 
 Assegna un valore DOUBLE a CAnimationValue.
 
-```
+```cpp
 void operator=(DOUBLE dblVal);
 void operator=(INT32 nVal);
 ```
@@ -260,7 +260,7 @@ Assegna un valore DOUBLE a CAnimationValue. Questo valore viene impostato come v
 
 Imposta il valore predefinito.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 05ad60855cd03115cf88ab2b51e56e6a26822035
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74b07dc8144e853714ea73c8235f1259538a0c12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352437"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752749"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 Il valore restituito da un controllo pulsante creato con lo stile BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o BS_3STATE è uno dei valori seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Lo stato del pulsante è deselezionato.|
 |BST_CHECKED|Lo stato del pulsante è selezionato.|
@@ -664,7 +664,7 @@ L'utente è responsabile del rilascio della bitmap al termine dell'operazione.
 
 Modifica lo stile di un pulsante.
 
-```
+```cpp
 void SetButtonStyle(
     UINT nStyle,
     BOOL bRedraw = TRUE);
@@ -690,7 +690,7 @@ Utilizzare `GetButtonStyle` la funzione membro per recuperare lo stile del pulsa
 
 Imposta o reimposta lo stato di controllo di un pulsante di opzione o di una casella di controllo.
 
-```
+```cpp
 void SetCheck(int nCheck);
 ```
 
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *nControllare*<br/>
 Specifica lo stato del controllo. Questo parametro può essere uno dei seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Impostare lo stato del pulsante su unchecked.|
 |BST_CHECKED|Impostare lo stato del pulsante su checked.|
@@ -1074,7 +1074,7 @@ Nell'esempio di codice riportato di seguito viene impostato lo stile della frecc
 
 Imposta se un controllo pulsante è evidenziato o meno.
 
-```
+```cpp
 void SetState(BOOL bHighlight);
 ```
 

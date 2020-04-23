@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: 02eee13928979a7d220ce03f9f61c789c6320b6e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76f7c5c2c21f0e823545db3669ce454c8172317c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364104"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753616"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 
@@ -741,7 +741,7 @@ virtual LRESULT HitTest(
 
 Uno dei valori seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |HTNOWHERE|Il punto si trova all'esterno della finestra cornice piccola.|
 |HTCLIENT (Informazioni in stati inequino|Il punto si trova nell'area client.|
@@ -815,7 +815,7 @@ Per impostazione predefinita, il framework controlla se il puntatore del mouse s
 
 Arresta il timer di ancoraggio.
 
-```
+```cpp
 void KillDockingTimer();
 ```
 
@@ -976,7 +976,7 @@ Chiamato dal framework quando un riquadro nella finestra cornice viene visualizz
 
 ## <a name="cpaneframewndpin"></a><a name="pin"></a>CPaneFrameWnd::Pin
 
-```
+```cpp
 void Pin(BOOL bPin = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ## <a name="cpaneframewndsetdelayshow"></a><a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow
 
-```
+```cpp
 void SetDelayShow(BOOL bDelayShow);
 ```
 
@@ -1137,7 +1137,7 @@ void SetDelayShow(BOOL bDelayShow);
 
 ## <a name="cpaneframewndsetdockingmanager"></a><a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager
 
-```
+```cpp
 void SetDockingManager(CDockingManager* pManager);
 ```
 
@@ -1151,7 +1151,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 Imposta il timer di ancoraggio.
 
-```
+```cpp
 void SetDockingTimer(UINT nTimeOut);
 ```
 
@@ -1175,7 +1175,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ## <a name="cpaneframewndsethotpoint"></a><a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint
 
-```
+```cpp
 void SetHotPoint(CPoint& ptNew);
 ```
 

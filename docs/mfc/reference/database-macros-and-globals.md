@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 4e9700311bbc20ea017675357a91a56813cc4bde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d8bd56c0bfe4f9b35e34d067dd1042ed11066d5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376956"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751667"
 ---
 # <a name="database-macros-and-globals"></a>Macro e funzioni globali di database
 
@@ -47,7 +47,7 @@ Per il supporto del database MFC (o DAO) da una DLL MFC regolare collegata in `C
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 void AFXAPI AfxDbInitModule( );
 ```
 

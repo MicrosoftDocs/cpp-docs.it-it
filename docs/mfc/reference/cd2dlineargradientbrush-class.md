@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 6c488d66962f26b6ca9b8c63cb387fc75191085a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d87cdae5c24eae391be8db2fcdd04f91d592e427
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369204"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753151"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Classe CD2DLinearGradientBrush
 
@@ -111,7 +111,7 @@ virtual ~CD2DLinearGradientBrush();
 
 Associa all'oggetto un'interfaccia di risorsa esistente
 
-```
+```cpp
 void Attach(ID2D1LinearGradientBrush* pResource);
 ```
 
@@ -267,7 +267,7 @@ Puntatore a un ID2D1LinearGradientBrush interfaccia o NULL se l'oggetto non è a
 
 Imposta le coordinate finali della sfumatura lineare nello spazio delle coordinate del pennello
 
-```
+```cpp
 void SetEndPoint(CD2DPointF point);
 ```
 
@@ -280,7 +280,7 @@ Le coordinate bidimensionali finali della sfumatura lineare, nello spazio delle 
 
 Imposta le coordinate iniziali della sfumatura lineare nello spazio delle coordinate del pennello
 
-```
+```cpp
 void SetStartPoint(CD2DPointF point);
 ```
 

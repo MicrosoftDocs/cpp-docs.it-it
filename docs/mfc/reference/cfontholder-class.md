@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373808"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754990"
 ---
 # <a name="cfontholder-class"></a>Classe CFontHolder
 
@@ -170,7 +170,7 @@ La versione senza parametri restituisce un handle a un tipo di carattere dimensi
 
 Inizializza un oggetto `CFontHolder`.
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -204,7 +204,7 @@ LPFONT m_pFont;
 
 Recupera informazioni sul tipo di `CFontHolder` carattere fisico rappresentato dall'oggetto.
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -217,7 +217,7 @@ Puntatore a una struttura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textm
 
 Questa funzione disconnette `CFontHolder` `IFont` l'oggetto dalla relativa interfaccia.
 
-```
+```cpp
 void ReleaseFont();
 ```
 
@@ -255,7 +255,7 @@ Vedere [GetFontHandle](#getfonthandle) per una descrizione dei parametri *cyLogi
 
 Rilascia qualsiasi tipo di `CFontHolder` carattere `IFont` esistente e connette l'oggetto a un'interfaccia.
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 

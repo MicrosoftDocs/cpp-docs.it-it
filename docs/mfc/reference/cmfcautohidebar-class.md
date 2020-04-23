@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 62750f4fb1261f4f30286297c3a240ab67e6df1c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 05f77dfba442f1ce4a375c8f225908799ece1788
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369906"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751765"
 ---
 # <a name="cmfcautohidebar-class"></a>Classe CMFCAutoHideBar
 
@@ -315,7 +315,7 @@ Vedere [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveing
 
 ## <a name="cmfcautohidebarsetrecentvisiblestate"></a><a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState
 
-```
+```cpp
 void SetRecentVisibleState(BOOL bState);
 ```
 
@@ -384,7 +384,7 @@ Le classi derivate possono ignorare questo metodo per personalizzare il comporta
 
 Disabilita la modalità Nascondi automaticamente per un gruppo di barre di tipo Nascondi automaticamente.
 
-```
+```cpp
 void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 ```
 
@@ -398,7 +398,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 
 Chiamata dal framework quando è necessario ridisegnare la barra Nascondi automaticamente.
 
-```
+```cpp
 void UpdateVisibleState();
 ```
 

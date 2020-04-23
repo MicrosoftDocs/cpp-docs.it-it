@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366024"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753042"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo barra di stato. Applicare qualsiasi combinazione di stili di controllo della barra di stato elencati in [Stili di controllo comuni](/windows/win32/Controls/common-control-styles) in Windows SDK. Questo parametro deve includere lo stile WS_CHILD. Dovrebbe anche includere lo stile WS_VISIBLE.
 
 *Rect*<br/>
-Specifica le dimensioni e la posizione del controllo barra di stato. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+Specifica le dimensioni e la posizione del controllo barra di stato. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura.
 
 *pParentWnd (informazioni in due)*<br/>
 Specifica la finestra padre del controllo barra `CDialog`di stato, in genere un oggetto . Non deve essere NULL.
@@ -178,7 +178,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco di s
 Specifica lo stile del controllo barra di stato. Applicare qualsiasi combinazione di stili di controllo della barra di stato elencati in [Stili di controllo comuni](/windows/win32/Controls/common-control-styles) in Windows SDK. Questo parametro deve includere lo stile WS_CHILD. Dovrebbe anche includere lo stile WS_VISIBLE.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Indice in base zero della parte il cui rettangolo di delimitazione deve essere recuperato.
 
 *Lprect*<br/>
-Indirizzo di una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che riceve il rettangolo di delimitazione.
+Indirizzo di una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che riceve il rettangolo di delimitazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -530,7 +530,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [SB_SETIC
 
 Imposta l'altezza minima dell'area di disegno di un controllo barra di stato.
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ Il messaggio invalida la parte del controllo che è stata modificata, facendo in
 
 Imposta il testo della descrizione comando per un riquadro in una barra di stato.
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);

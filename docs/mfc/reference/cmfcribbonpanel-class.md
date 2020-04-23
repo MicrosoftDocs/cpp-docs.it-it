@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368886"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753542"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel (classe)
 
@@ -432,7 +432,7 @@ Puntatore valido all'elemento della barra multifunzione di base che si trova nel
 
 Recupera tutti gli elementi della barra multifunzione contenuti nel gruppo della barra multifunzione.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 Aggiunge gli elementi della barra multifunzione con l'ID di comando specificato alla matrice specificata.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ Indice in base zero dell'elemento della barra multifunzione specificato se il me
 
 Recupera gli ID di comando per tutti gli elementi della barra multifunzione nel gruppo della barra multifunzione.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ Chiamare questo metodo per rimuovere un elemento dal gruppo della barra multifun
 
 Elimina tutti gli elementi della barra multifunzione dal gruppo della barra multifunzione.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ Per sostituire un elemento della barra multifunzione in base alla posizione, chi
 
 Abilita o disabilita la centratura delle posizioni verticali degli elementi della barra multifunzione all'interno del rettangolo di visualizzazione.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 Associa i dati definiti dall'utente al gruppo della barra multifunzione.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 Abilita o disabilita la regolazione della larghezza degli elementi della barra multifunzione nella stessa colonna.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ Quando questa funzionalità è abilitata in un gruppo della barra multifunzione,
 
 Imposta il suggerimento per il pulsante predefinito del gruppo della barra multifunzione.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ Il menu a comparsa per il gruppo della barra multifunzione è disponibile solo q
 
 Imposta lo stato attivo sull'elemento Ribbon specificato.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ Puntatore a un Ribbon elemento che riceve lo stato attivo.
 
 Scorre la raccolta per rendere visibile l'elemento della barra multifunzione specificato.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ TRUESe la barra multifunzione padre ha l'aspetto di Windows 7. in caso contrario
 
 Recupera una matrice di elementi visibili.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);

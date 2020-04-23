@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: a5e95efe1880f1177490d55988ca1fe42c606b15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367546"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752424"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame (classe)
 
@@ -104,7 +104,7 @@ virtual BOOL Create(
 |-|-|
 |Parametro|Descrizione|
 |*pWndParent (padre di pWndParent)*|[in] Finestra padre del frame a discesa.|
-|*X*|[in] Coordinata orizzontale dello schermo per la posizione del riquadro in basso.|
+|*x*|[in] Coordinata orizzontale dello schermo per la posizione del riquadro in basso.|
 |*Y*|[in] Coordinata verticale dello schermo per la posizione del riquadro in basso.|
 |*PWndOriginToolbar*|[in] Barra degli strumenti con i pulsanti a discesa utilizzati da questo metodo per popolare il nuovo oggetto frame a discesa.|
 
@@ -173,7 +173,7 @@ Il framework chiama questo metodo quando viene creato il frame a discesa o la fi
 
 Imposta se la finestra della barra degli strumenti a discesa figlio viene distrutta automaticamente.
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 

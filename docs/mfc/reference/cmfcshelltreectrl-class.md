@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 41d9a14e379c566f001eda8b10b2669b95beb171
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f5856e92c2aca1d23ee6a37b99ea9700ea6db0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376145"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753439"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl (classe)
 
@@ -96,7 +96,7 @@ Nell'esempio riportato di seguito viene illustrato come creare un oggetto della 
 
 Attiva il menu di scelta rapida.
 
-```
+```cpp
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```
 
@@ -221,7 +221,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 
 Aggiorna e ridisegna [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md).
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -254,7 +254,7 @@ S_OK in caso di esito positivo; E_FAIL contrario.
 
 Imposta i flag per filtrare il contesto dell'albero.
 
-```
+```cpp
 void SetFlags(
     DWORD dwFlags,
     BOOL bRefresh = TRUE);
@@ -276,7 +276,7 @@ Tutti `CMFCShellTreeCtrl` i flag set vengono passati a [IShellFolder::EnumObject
 
 Associa un [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) oggetto a un [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) oggetto.
 
-```
+```cpp
 void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```
 

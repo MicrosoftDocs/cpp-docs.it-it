@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375303"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752475"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (classe)
 
@@ -1893,7 +1893,7 @@ Questo metodo notifica alla finestra padre della barra multifunzione che l'eleme
 
 Chiude il menu a comparsa per l'elemento della barra multifunzione e invia un messaggio di chiusura al menu padre.
 
-```
+```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
@@ -1972,7 +1972,7 @@ Nella tabella seguente viene riepilogata la logica per questo metodo.
 
 Associa un elemento dati all'elemento della barra multifunzione.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1985,7 +1985,7 @@ void SetData(DWORD_PTR dwData);
 
 Imposta l'elemento della barra multifunzione da visualizzare come comando popup.
 
-```
+```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
@@ -2129,7 +2129,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 Imposta le dimensioni del rettangolo di visualizzazione per l'elemento della barra multifunzione.
 
-```
+```cpp
 void SetRect(CRect rect);
 ```
 
@@ -2200,7 +2200,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 
 Imposta la visibilità dell'elemento della barra multifunzione.
 
-```
+```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 

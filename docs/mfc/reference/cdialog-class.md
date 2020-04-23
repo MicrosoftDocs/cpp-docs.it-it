@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375651"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753360"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -295,7 +295,7 @@ Se l'utente fa clic su uno dei pulsanti della finestra di dialogo, ad esempio OK
 
 Chiamare questa funzione membro per terminare una finestra di dialogo modale.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ Questo è in genere un pulsante OK.
 
 Sposta lo stato attivo sul controllo specificato nella finestra di dialogo.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ Le finestre di dialogo che contengono controlli ActiveX richiedono informazioni 
 
 Chiamata per convertire le unità della finestra di dialogo di un rettangolo in unità dello schermo.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ La `MapDialogRect` funzione membro sostituisce le unità della finestra di dialo
 
 Sposta lo stato attivo sul controllo successivo nella finestra di dialogo.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ L'editor finestre imposta in genere il tipo di carattere della finestra di dialo
 
 Imposta lo stato attivo sul controllo precedente nella finestra di dialogo.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ Se lo stato attivo si trova sul primo controllo della finestra di dialogo, si sp
 
 Modifica il controllo pulsante push predefinito per una finestra di dialogo.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ Specifica l'ID del controllo pulsante push che diventerà il valore predefinito.
 
 Imposta un ID della Guida sensibile al contesto per la finestra di dialogo.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

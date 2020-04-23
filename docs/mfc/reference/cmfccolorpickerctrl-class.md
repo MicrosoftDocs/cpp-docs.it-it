@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367694"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752530"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe CMFCColorPickerCtrl
 
@@ -184,7 +184,7 @@ Valore RGB del colore selezionato.
 
 Recupera i valori di tonalità, luminanza e saturazione del colore selezionato dall'utente.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ Componente di saturazione del colore selezionato.
 
 Imposta il colore corrente sul colore definito dai componenti di colore RGB specificati o dall'esagono della cella specificato.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -272,7 +272,7 @@ BOOL SelectCellHexagon(
 *B*<br/>
 [in] Componente di colore blu.
 
-*X*<br/>
+*x*<br/>
 [in] Coordinata x del cursore, che punta a un esagono di cella.
 
 *Y*<br/>
@@ -292,7 +292,7 @@ Il secondo overload di questo metodo imposta il colore corrente sul colore dell'
 
 Imposta il colore corrente sul valore di colore RGB specificato.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 Imposta il colore corrente sul valore di colore HLS specificato.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 Modifica la tonalità del colore attualmente selezionato.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 Modifica la luminanza del colore attualmente selezionato.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,13 +365,13 @@ void SetLuminance(double Luminance);
 
 Imposta la larghezza della barra di luminanza nel controllo selezione colori.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*W*<br/>
+*w*<br/>
 [in] Larghezza della barra di luminosità misurata in pixel.
 
 ### <a name="remarks"></a>Osservazioni
@@ -382,7 +382,7 @@ Utilizzate questo metodo per ridimensionare la barra di luminanza, che si trova 
 
 Imposta il colore selezionato iniziale.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ Chiamare questo metodo quando viene inizializzato il controllo selezione colori.
 
 Imposta la tavolozza dei colori corrente.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ La tavolozza dei colori definisce la matrice di colori che viene presentata nel 
 
 Modifica la saturazione del colore attualmente selezionato.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 Imposta il tipo di controllo selezione colori da visualizzare.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 822f4f6fe76bb5b82b455daec54ed96568ea6ba7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dbf28787e0c0f7d89586fbf98632bd9172c12eed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375163"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754164"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox (classe)
 
@@ -93,7 +93,7 @@ Dopo aver `CMFCRibbonFontComboBox` creato un oggetto, aggiungerlo a un gruppo de
 
 Popola la casella combinata sulla barra multifunzione con i tipi di carattere.
 
-```
+```cpp
 void BuildFonts(
     int nFontType = DEVICE_FONTTYPE | RASTER_FONTTYPE | TRUETYPE_FONTTYPE,
     BYTE nCharSet = DEFAULT_CHARSET,
@@ -167,7 +167,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 Popola la casella combinata sulla barra multifunzione con i tipi di carattere di un tipo di carattere, un set di caratteri, un set di caratteri e un'altezza e una famiglia specificati in precedenza.
 
-```
+```cpp
 void RebuildFonts();
 ```
 
