@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318494"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754414"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 
@@ -124,7 +124,7 @@ Per ulteriori informazioni `CScrollView`sull'utilizzo di , vedere [Architettura 
 
 Chiamare questa funzione membro per determinare se la visualizzazione di scorrimento dispone di barre orizzontali e verticali.
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ CScrollView();
 
 Chiamata `FillOutsideRect` per riempire l'area della vista visualizzata all'esterno dell'area di scorrimento.
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ Questa coppia di coordinate corrisponde alla posizione nel documento in cui è s
 
 `GetDeviceScrollSizes`ottiene la modalità di mapping corrente, la dimensione totale e le dimensioni di riga e di pagina della visualizzazione scorrevole.
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ Dimensione totale della visualizzazione di scorrimento in unità logiche. La dim
 
 Chiamare `ResizeParentToFit` per consentire alle dimensioni della visualizzazione di determinare le dimensioni della finestra cornice.
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ Questa operazione è consigliata solo per le visualizzazioni nelle finestre corn
 
 Chiamata `ScrollToPosition` per scorrere fino a un determinato punto nella visualizzazione.
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ La vista verrà scorrota in modo che questo punto si trova nell'angolo superiore
 
 Chiamare `SetScaleToFitSize` quando si desidera ridimensionare automaticamente le dimensioni della finestra in base alle dimensioni correnti della finestra.
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ In genere si inserisce `SetScaleToFitSize` la chiamata a nell'override della fun
 
 Chiamare `SetScrollSizes` quando la vista sta per essere aggiornata.
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

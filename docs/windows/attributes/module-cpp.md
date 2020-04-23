@@ -1,17 +1,17 @@
 ---
-title: Module (C++ attributo com)
+title: modulo (Attributo COM C
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.module
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9d4f9e23aaf182e28930ba3a4462b07533ba9015
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166692"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754374"
 ---
 # <a name="module-c"></a>modulo (C++)
 
@@ -26,54 +26,54 @@ Definisce il blocco di libreria nel file IDL.
 ### <a name="parameters"></a>Parametri
 
 *type*<br/>
-Opzionale Può essere uno dei seguenti:
+(Facoltativo) Può essere uno dei seguenti:
 
-- `dll` aggiunge funzioni e classi che consentono alla DLL risultante di funzionare come un server COM in-process. Si tratta del valore predefinito.
+- `dll`Aggiunge funzioni e classi che consentono alla DLL risultante di funzionare come server COM in-process. Si tratta del valore predefinito.
 
-- `exe` aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come un server COM out-of-process.
+- `exe`Aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come server COM out of process.
 
-- `service` aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come un servizio NT.
+- `service`Aggiunge funzioni e classi che consentono all'eseguibile risultante di funzionare come servizio NT.
 
-- `unspecified` Disabilita l'inserimento di codice ATL correlato all'attributo del modulo, ovvero l'inserimento della classe del modulo ATL, dell'istanza globale _AtlModule e delle funzioni del punto di ingresso. Non disabilita l'inserimento di codice ATL a causa di altri attributi del progetto.
+- `unspecified`Disabilita l'inserimento di codice ATL relativo all'attributo module: l'inserimento della classe ATL Module, le funzioni di _AtlModule di istanza globale e di punto di ingresso. Non disabilita l'inserimento di codice ATL a causa di altri attributi del progetto.
 
 *nome*<br/>
-Opzionale Nome del blocco di libreria.
+(Facoltativo) Nome del blocco di libreria.
 
 *version*<br/>
-Opzionale Numero di versione che si desidera assegnare al blocco di libreria. Il valore predefinito è 1,0.
+(Facoltativo) Il numero di versione che si desidera assegnare al blocco di libreria. Il valore predefinito è 1,0.
 
 *uuid*<br/>
-L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare l' *UUID* del blocco di libreria. a tale scopo, è possibile utilizzare l'identificatore **__uuidof (** *libraryname* **)** .
+L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria ed è possibile farlo mediante l'identificatore **__uuidof(** *nomelibreria* **)**.
 
 *lcid*<br/>
 Il parametro di localizzazione. Per altre informazioni, vedere [lcid](/windows/win32/Midl/lcid) .
 
-*control*<br/>
-Opzionale Specifica che tutte le coclassi nella libreria sono controlli.
+*Controllo*<br/>
+(Facoltativo) Specifica che tutte le coclassi nella libreria sono controlli.
 
 *helpstring*<br/>
 Specifica la libreria dei tipi.
 
 *helpstringdll*<br/>
-Opzionale Imposta il nome del file con estensione dll da usare per eseguire una ricerca di stringhe di documento. Per altre informazioni, vedere [helpstringdll](/windows/win32/Midl/helpstringdll) .
+(Facoltativo) Imposta il nome del file DLL da utilizzare per eseguire una ricerca di stringhe di documento. Per altre informazioni, vedere [helpstringdll](/windows/win32/Midl/helpstringdll) .
 
-*helpfile*<br/>
-Opzionale Nome del file della **Guida** per la libreria dei tipi.
+*Helpfile*<br/>
+(Facoltativo) Nome del file **della Guida** per la libreria dei tipi.
 
 *helpcontext*<br/>
-Opzionale **ID della Guida** per questa libreria dei tipi.
+(Facoltativo) **ID della Guida** per questa libreria dei tipi.
 
 *helpstringcontext*<br/>
-Opzionale Per ulteriori informazioni, vedere [helpstringcontext](helpstringcontext.md) .
+(Facoltativo) Per ulteriori informazioni, vedere [helpstringcontext.](helpstringcontext.md)
 
-*hidden*<br/>
-Opzionale Impedisce la visualizzazione dell'intera libreria. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Per altre informazioni, vedere l'attributo MIDL [hidden](/windows/win32/Midl/hidden) .
+*Nascosto*<br/>
+(Facoltativo) Impedisce la visualizzazione dell'intera libreria. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Per altre informazioni, vedere l'attributo MIDL [hidden](/windows/win32/Midl/hidden) .
 
-*restricted*<br/>
-Opzionale I membri della libreria non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](/windows/win32/Midl/restricted) .
+*Limitato*<br/>
+(Facoltativo) I membri della libreria non possono essere chiamati arbitrariamente. Per altre informazioni, vedere l'attributo MIDL [restricted](/windows/win32/Midl/restricted) .
 
-*custom*<br/>
-Opzionale Uno o più attributi; Questa operazione è simile all'attributo [personalizzato](custom-cpp.md) . Il primo parametro di *Custom* è il GUID dell'attributo. Ad esempio:
+*Personalizzato*<br/>
+(Facoltativo) Uno o più attributi; è simile all'attributo [personalizzato.](custom-cpp.md) Il primo parametro da *personalizzare* è il GUID dell'attributo. Ad esempio:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -93,21 +93,21 @@ Verrà creato un blocco di libreria se, oltre all'attributo **module** , il codi
 
 In un file IDL è consentito un solo blocco di libreria. Più voci di modulo nel codice sorgente vengono unite e vengono implementati i valori dei parametri più recenti.
 
-Se questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo cambia. Oltre al comportamento precedente, l'attributo inserisce anche un oggetto globale (denominato `_AtlModule`) del tipo corretto e codice di supporto aggiuntivo. Se l'attributo è autonomo, inserisce una classe derivata dal tipo di modulo corretto. Se l'attributo è applicato a una classe, aggiunge una classe base del tipo di modulo corretto. Il tipo corretto è determinato dal valore del parametro di *tipo* :
+Se questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo cambia. Oltre al comportamento precedente, l'attributo inserisce `_AtlModule`anche un oggetto globale (chiamato ) del tipo corretto e codice di supporto aggiuntivo. Se l'attributo è autonomo, inserisce una classe derivata dal tipo di modulo corretto. Se l'attributo è applicato a una classe, aggiunge una classe base del tipo di modulo corretto. Il tipo corretto è determinato dal valore del parametro *type:*
 
-- `type` = **dll**
+- `type` = **dll (in tis**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) si usa come classe base e punti di ingresso standard della DLL richiesti per un server COM. Questi punti di ingresso sono [DllMain](/windows/win32/Dlls/dllmain), [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)e [DllGetClassObject](/previous-versions//dd797891\(v=vs.85\)).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) si usa come classe base e punti di ingresso standard della DLL richiesti per un server COM. Questi punti di ingresso sono [DllMain](/windows/win32/Dlls/dllmain), [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)e [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - `type` = **exe**
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **service**
+- `type` = **Servizio**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **unspecified**
+- `type` = **Specificato**
 
    Disabilita l'inserimento del codice ATL correlato all'attributo di modulo.
 
@@ -166,8 +166,8 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[libreria](/windows/win32/Midl/library)<br/>
+[Libreria](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
-[helpfile](helpfile.md)<br/>
+[Helpfile](helpfile.md)<br/>
 [version](version-cpp.md)

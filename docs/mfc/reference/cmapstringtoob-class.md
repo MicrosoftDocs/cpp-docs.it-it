@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370112"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754587"
 ---
 # <a name="cmapstringtoob-class"></a>Classe CMapStringToOb
 
@@ -201,7 +201,7 @@ Nella tabella seguente vengono illustrate altre `CMapStringToOb::GetHashTableSiz
 
 Recupera l'elemento della mappa in *rNextPosition*, quindi aggiorna *rNextPosition* per fare riferimento all'elemento successivo nella mappa.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -329,7 +329,7 @@ UINT HashKey(LPCTSTR key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave di cui deve essere calcolato il valore hash.
 
 ### <a name="return-value"></a>Valore restituito
@@ -353,7 +353,7 @@ Nella tabella seguente vengono illustrate altre `CMapStringToOb::HashKey`funzion
 
 Inizializza la tabella hash.
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -423,7 +423,7 @@ BOOL Lookup(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Specifica la chiave di stringa che identifica l'elemento da cercare.
 
 *Rvalue*<br/>
@@ -466,7 +466,7 @@ BOOL LookupKey(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Specifica la chiave di stringa che identifica l'elemento da cercare.
 
 *Rkey*<br/>
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 Rimuove tutti gli elementi da questa `CString` mappa ed elimina gli oggetti chiave.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -571,7 +571,7 @@ BOOL RemoveKey(LPCTSTR key);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Specifica la stringa utilizzata per la ricerca della mappa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 Il mezzo principale per inserire un elemento in una mappa.
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);
@@ -620,7 +620,7 @@ void SetAt(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Specifica la stringa che è la chiave del nuovo elemento.
 
 *newValue*<br/>

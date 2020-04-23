@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367783"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754879"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton (classe)
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 Specifica se visualizzare il testo completo di una descrizione comando in una finestra di descrizione comandi di grandi dimensioni o una versione troncata del testo in una piccola finestra di descrizione comando.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 Specifica se il tipo di carattere del testo del pulsante corrisponde al tipo di carattere del menu dell'applicazione.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ Eseguire l'override di questo metodo per utilizzare il codice personalizzato per
 
 Imposta un pulsante sulla modalità di ripetizione automatica.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ Questo metodo fa in modo che il pulsante invii costantemente WM_COMMAND messaggi
 
 Imposta l'immagine per un pulsante selezionato.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 Imposta il colore di sfondo per il testo del pulsante.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ Utilizzare questo metodo per definire un nuovo colore di riempimento per lo sfon
 
 Imposta l'immagine di un pulsante.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ Nell'esempio `CMFCButton` seguente viene illustrato come `SetImage` utilizzare d
 
 Imposta l'immagine del cursore.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ Nell'esempio `CMFCButton` riportato di `SetMouseCursor` seguito viene illustrato
 
 Imposta il cursore sull'immagine di una mano.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ Utilizzare questo metodo per associare l'immagine del cursore di una mano con il
 
 Utilizza `CMenuImages` un oggetto per impostare l'immagine del pulsante.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -924,7 +924,7 @@ void SetStdImage(
 *id*<br/>
 [in] Uno degli identificatori di immagine del `CMenuImage::IMAGES_IDS` pulsante definiti nell'enumerazione. I valori delle immagini specificano immagini quali frecce, perni e pulsanti di opzione.
 
-*Stato*<br/>
+*state*<br/>
 [in] Uno degli identificatori di stato dell'immagine del pulsante definito nell'enumerazione. `CMenuImages::IMAGE_STATE` Gli stati dell'immagine specificano i colori dei pulsanti, ad esempio nero, grigio, grigio chiaro, bianco e grigio scuro. Il valore predefinito è `CMenuImages::ImageBlack`.
 
 *idDisabilitato*<br/>
@@ -936,7 +936,7 @@ void SetStdImage(
 
 Imposta il colore del testo del pulsante per un pulsante non selezionato.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 Imposta il colore del testo del pulsante per un pulsante selezionato.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 Associa una descrizione comando a un pulsante.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 

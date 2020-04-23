@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365079"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752174"
 ---
 # <a name="ctooltipmanager-class"></a>Classe CTooltipManager
 
@@ -128,7 +128,7 @@ Chiamare questo metodo per ogni [classe CToolTipCtrl](../../mfc/reference/ctoolt
 
 Personalizza l'aspetto del controllo descrizione comandi per i tipi di controllo di Windows specificati.
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -198,7 +198,7 @@ Il valore di *nType* deve essere lo stesso valore del parametro *nType* di [CToo
 
 Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
 
-```
+```cpp
 void UpdateTooltips();
 ```
 

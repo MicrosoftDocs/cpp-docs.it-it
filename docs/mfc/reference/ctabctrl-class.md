@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365959"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752317"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -160,7 +160,7 @@ Per ulteriori informazioni `CTabCtrl`sull'utilizzo di , vedere [Controlli](../..
 
 Calcola l'area di visualizzazione di un controllo struttura a schede in base a un rettangolo della finestra o calcola il rettangolo della finestra che corrisponderebbe a una determinata area di visualizzazione.
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indica l'operazione da eseguire. Se questo parametro è TRUE, *lpRect* specifica un rettangolo di visualizzazione e riceve il rettangolo della finestra corrispondente. Se questo parametro è FALSE, *lpRect* specifica un rettangolo di finestra e riceve il rettangolo di visualizzazione corrispondente.
 
 *Lprect*<br/>
-Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica il rettangolo specificato e riceve il rettangolo calcolato.
+Puntatore a un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura che specifica il rettangolo specificato e riceve il rettangolo calcolato.
 
 ### <a name="example"></a>Esempio
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo struttura a schede. Applicare qualsiasi combinazione di stili di controllo struttura a [schede,](/windows/win32/Controls/tab-control-styles)descritta in Windows SDK. Vedere **Osservazioni** per un elenco degli stili di finestra che è possibile applicare anche al controllo.
 
 *Rect*<br/>
-Specifica le dimensioni e la posizione del controllo struttura a schede. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
+Specifica le dimensioni e la posizione del controllo struttura a schede. Può essere un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura.
 
 *pParentWnd (informazioni in due)*<br/>
 Specifica la finestra padre del controllo `CDialog`struttura a schede, in genere un oggetto . Non deve essere NULL.
@@ -250,7 +250,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco di s
 Specifica lo stile del controllo struttura a schede. Applicare qualsiasi combinazione di stili di controllo struttura a [schede,](/windows/win32/Controls/tab-control-styles)descritta in Windows SDK. Vedere **Osservazioni** in [Creare](#create) per un elenco degli stili di finestra che è possibile applicare anche al controllo.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.
@@ -313,7 +313,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Reimposta gli elementi in un controllo struttura a schede, deselezionando gli elementi premuti.
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Indice in base zero della voce della scheda.
 
 *Lprect*<br/>
-Puntatore a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che riceve il rettangolo di delimitazione della scheda. Queste coordinate utilizzano la modalità di mapping corrente della finestra.
+Puntatore a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che riceve il rettangolo di delimitazione della scheda. Queste coordinate utilizzano la modalità di mapping corrente della finestra.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -682,7 +682,7 @@ Indice in base zero della nuova scheda in caso di esito positivo; in caso contra
 
 Rimuove l'immagine specificata dall'elenco di immagini di un controllo struttura a schede.
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ Il controllo struttura a schede aggiorna l'indice dell'immagine di ogni scheda i
 
 Imposta lo stato attivo su una scheda specificata in un controllo struttura a schede.
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -829,7 +829,7 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>Parametri
 
-*Dimensione*<br/>
+*size*<br/>
 La nuova larghezza e altezza, in pixel, degli elementi di controllo della scheda.
 
 ### <a name="return-value"></a>Valore restituito
@@ -892,20 +892,20 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TCM_SETM
 
 Imposta la quantità di spazio (padding) intorno all'icona e all'etichetta di ogni scheda in un controllo struttura a schede.
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Dimensione*<br/>
+*size*<br/>
 Imposta la quantità di spazio (padding) intorno all'icona e all'etichetta di ogni scheda in un controllo struttura a schede.
 
 ## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips
 
 Assegna un controllo descrizione comandi a un controllo struttura a schede.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

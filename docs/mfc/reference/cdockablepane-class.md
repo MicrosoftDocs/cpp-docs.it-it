@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375613"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753345"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -881,7 +881,7 @@ Eseguire l'override di questo metodo in una classe derivata per personalizzare l
 
 Abilita o disabilita la modalità Nascondi automaticamente per questo riquadro e per altri riquadri nel contenitore.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ Eseguire l'override di questo metodo in una classe derivata per implementare eff
 
 Il framework chiama questo metodo quando un riquadro viene disinserito.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ TRUESe la sostituzione ha esito positivo. in caso contrario, FALSE.
 
 Quando un riquadro viene deserializzato, il framework chiama questo metodo per ripristinare il divisore di riquadro predefinito.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ Chiamare questo metodo per passare un riquadro ancorabile alla modalità Nascond
 
 Imposta il pulsante Nascondi automaticamente e la barra degli strumenti Nascondi automaticamente per il riquadro.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 Imposta la percentuale di spazio occupata da un riquadro nel relativo contenitore.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ Il framework regola il riquadro per utilizzare il nuovo valore quando il layout 
 
 Imposta il divisore di riquadro predefinito ripristinato.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ Un divisore di riquadro predefinito ripristinato viene ottenuto quando un riquad
 
 Imposta le informazioni sulla classe di runtime per una finestra a schede che viene creata quando due riquadri vengono ancorati insieme.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 

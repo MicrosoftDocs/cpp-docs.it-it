@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 7ab02dba4bf10b04dddac4e2e954623223af42d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e384be534bdbb355554c28383e9e214e9084f217
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353031"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753021"
 ---
 # <a name="casyncsocket-class"></a>Classe CAsyncSocket
 
@@ -808,33 +808,33 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario 0 e un codic
 
 Le seguenti opzioni `GetSockOpt`sono supportate per . Il Type identifica il tipo di dati indirizzati da *lpOptionValue*. L'opzione TCP_NODELAY utilizza IPPROTO_TCP di livello; tutte le altre opzioni utilizzano il livello SOL_SOCKET.
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Socket è in ascolto.|
 |SO_BROADCAST|BOOL|Socket è configurato per la trasmissione di messaggi broadcast.|
 |SO_DEBUG|BOOL|Il debug è abilitato.|
 |SO_DONTLINGER|BOOL|Se true, l'opzione SO_LINGER è disabilitata.|
 |SO_DONTROUTE|BOOL|Il routing è disabilitato.|
-|SO_ERROR|**Int**|Recuperare lo stato di errore e cancellare.|
+|SO_ERROR|**int**|Recuperare lo stato di errore e cancellare.|
 |SO_KEEPALIVE|BOOL|Le vite vengono inviate.|
 |SO_LINGER|`struct LINGER`|Restituisce le opzioni residue correnti.|
 |SO_OOBINLINE|BOOL|I dati fuori banda vengono ricevuti nel flusso di dati normale.|
 |SO_RCVBUF|INT|Dimensione del buffer per le ricevute.|
 |SO_REUSEADDR|BOOL|Il socket può essere associato a un indirizzo già in uso.|
-|SO_SNDBUF|**Int**|Dimensione del buffer per le mandate.|
-|SO_TYPE|**Int**|Il tipo di socket (ad esempio, SOCK_STREAM).|
+|SO_SNDBUF|**int**|Dimensione del buffer per le mandate.|
+|SO_TYPE|**int**|Il tipo di socket (ad esempio, SOCK_STREAM).|
 |Tcp_nodelay|BOOL|Disabilita l'algoritmo Nagle di unione dei pacchetti in invio.|
 
 Le opzioni di Berkeley Software Distribution `GetSockOpt` (BSD) non supportate per sono:
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**Int**|Ricevere bassa scoria.|
-|SO_RCVTIMEO|**Int**|Timeout ricezione.|
-|SO_SNDLOWAT|**Int**|Invia bassa la temperatura dell'acqua.|
-|SO_SNDTIMEO|**Int**|Timeout di invio.|
+|SO_RCVLOWAT|**int**|Ricevere bassa scoria.|
+|SO_RCVTIMEO|**int**|Timeout ricezione.|
+|SO_SNDLOWAT|**int**|Invia bassa la temperatura dell'acqua.|
+|SO_SNDTIMEO|**int**|Timeout di invio.|
 |IP_OPTIONS||Ottenere le opzioni nell'intestazione IP.|
-|TCP_MAXSEG|**Int**|Ottenere la dimensione massima del segmento TCP.|
+|TCP_MAXSEG|**int**|Ottenere la dimensione massima del segmento TCP.|
 
 La `GetSockOpt` chiamata con un'opzione non supportata comporterà la restituzione di `GetLastError`un codice di errore di WSAENOPROTOOPT da .
 
@@ -1112,7 +1112,7 @@ Per ulteriori informazioni, vedere [Windows Sockets: notifiche socket](../../mfc
 
 Assegna un nuovo valore `CAsyncSocket` a un oggetto.
 
-```
+```cpp
 void operator=(const CAsyncSocket& rSrc);
 ```
 
@@ -1715,7 +1715,7 @@ Alcune implementazioni di Windows Sockets forniscono informazioni di debug dell'
 
 Le seguenti opzioni `SetSockOpt`sono supportate per . Il Type identifica il tipo di dati indirizzati da *lpOptionValue*.
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|Consentire la trasmissione di messaggi broadcast sul socket.|
 |SO_DEBUG|BOOL|Registra informazioni di debug.|
@@ -1724,22 +1724,22 @@ Le seguenti opzioni `SetSockOpt`sono supportate per . Il Type identifica il tipo
 |SO_KEEPALIVE|BOOL|Invia keep-alive.|
 |SO_LINGER|`struct LINGER`|Linger `Close` su se i dati non inviati sono presenti.|
 |SO_OOBINLINE|BOOL|Ricevere dati fuori banda nel normale flusso di dati.|
-|SO_RCVBUF|**Int**|Specificare la dimensione del buffer per le ricevute.|
+|SO_RCVBUF|**int**|Specificare la dimensione del buffer per le ricevute.|
 |SO_REUSEADDR|BOOL|Consentire al socket di essere associato a un indirizzo già in uso. (Vedere [Bind](#bind).)|
-|SO_SNDBUF|**Int**|Specificare la dimensione del buffer per le mandate.|
+|SO_SNDBUF|**int**|Specificare la dimensione del buffer per le mandate.|
 |Tcp_nodelay|BOOL|Disabilita l'algoritmo Nagle di unione dei pacchetti in invio.|
 
 Le opzioni di Berkeley Software Distribution `SetSockOpt` (BSD) non supportate per sono:
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Socket è in ascolto|
-|SO_ERROR|**Int**|Ottenere lo stato di errore e cancellare.|
-|SO_RCVLOWAT|**Int**|Ricevere bassa scoria.|
-|SO_RCVTIMEO|**Int**|Timeout di ricezione|
-|SO_SNDLOWAT|**Int**|Invia bassa la temperatura dell'acqua.|
-|SO_SNDTIMEO|**Int**|Timeout di invio.|
-|SO_TYPE|**Int**|Tipo di presa.|
+|SO_ERROR|**int**|Ottenere lo stato di errore e cancellare.|
+|SO_RCVLOWAT|**int**|Ricevere bassa scoria.|
+|SO_RCVTIMEO|**int**|Timeout di ricezione|
+|SO_SNDLOWAT|**int**|Invia bassa la temperatura dell'acqua.|
+|SO_SNDTIMEO|**int**|Timeout di invio.|
+|SO_TYPE|**int**|Tipo di presa.|
 |IP_OPTIONS||Impostare il campo delle opzioni nell'intestazione IP.|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket::ShutDown

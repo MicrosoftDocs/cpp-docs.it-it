@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366642"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752290"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -255,7 +255,7 @@ Esempio CTaskDialog
 
 Aggiunge un nuovo controllo `CTaskDialog`pulsante di comando all'oggetto .
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ Quando l'utente seleziona un controllo `CTaskDialog` pulsante di comando, il clo
 
 Aggiunge un pulsante `CTaskDialog`di opzione al file .
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ Utilizzare questa funzione per determinare in fase di esecuzione `CTaskDialog` s
 
 Aggiunge controlli pulsante di comando utilizzando i dati della tabella di stringhe.
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ Per impostazione predefinita, i nuovi controlli dei pulsanti di comando sono abi
 
 Aggiunge controlli pulsante di opzione utilizzando i dati della tabella di stringhe.
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ Eseguire l'override di questo metodo in una classe derivata per implementare il 
 
 Rimuove tutti i controlli `CTaskDialog`del pulsante di comando dall'oggetto .
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 Rimuove tutti i pulsanti di opzione dall'oggetto `CTaskDialog`.
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 Aggiorna un controllo pulsante di comando nel `CTaskDialog`file .
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ Utilizzare questo metodo per modificare se un controllo pulsante di comando `CTa
 
 Aggiorna un sottoinsieme di pulsanti comuni per essere abilitato e per richiedere l'elevazione del controllo dell'account utente.
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ Questo metodo abilita qualsiasi pulsante `CTaskDialog` disponibile per il ma non
 
 Aggiunge pulsanti `CTaskDialog`comuni al file .
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ Per impostazione predefinita, tutti i pulsanti comuni sono abilitati e non richi
 
 Aggiorna il contenuto `CTaskDialog`del file .
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ Il contenuto `CTaskDialog` della classe è il testo visualizzato all'utente nell
 
 Specifica il controllo pulsante di comando predefinito.
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ Questo metodo genera un'eccezione se non riesce a trovare il controllo pulsante 
 
 Specifica il pulsante di opzione predefinito.
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ Questo metodo genera un'eccezione se non riesce a trovare il pulsante di opzione
 
 Regola la larghezza `CTaskDialog`del file .
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ Se *nWidth* è impostato su 0, questo metodo imposta la finestra di dialogo sull
 
 Aggiorna l'area `CTaskDialog`di espansione del file .
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ Quando `CTaskDialog` viene visualizzato per la prima volta, non `strCollapsedLab
 
 Aggiorna l'icona del `CTaskDialog`piè di pagina del file .
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ Un `CTaskDialog` può accettare `HICON` `LPCWSTR` solo un'icona o come piè di p
 
 Aggiorna il testo nel `CTaskDialog`piè di pagina del file .
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ L'icona del piè di pagina viene visualizzata accanto al testo del piè di pagin
 
 Aggiorna l'icona principale `CTaskDialog`del file .
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ Un `CTaskDialog` può accettare `HICON` `LPCWSTR` solo un o come icona principal
 
 Aggiorna l'istruzione `CTaskDialog`principale del file .
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ L'istruzione principale `CTaskDialog` della classe è il testo visualizzato all'
 
 Configura le opzioni `CTaskDialog`per il file .
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ Nella tabella seguente sono elencate tutte le opzioni valide.
 
 Configura una barra di selezione `CTaskDialog` per e la aggiunge alla finestra di dialogo.
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ Questo metodo genera un'eccezione con la macro [ENSURE](diagnostic-services.md#e
 
 Regola la posizione dell'indicatore di stato.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ Questo metodo genera un'eccezione con la macro [ENSURE](diagnostic-services.md#e
 
 Regola l'intervallo dell'indicatore di stato.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ Questo metodo genera un'eccezione con la macro [ENSURE](diagnostic-services.md#e
 
 Imposta lo stato della barra di `CTaskDialog`avanzamento e lo visualizza sul file .
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ Nella tabella seguente sono elencati i valori possibili per *nState*. In tutti q
 
 Abilita o disabilita un pulsante di opzione.
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ Questo metodo genera un'eccezione con la macro [ENSURE](diagnostic-services.md#e
 
 Imposta lo stato selezionato della casella di controllo di verifica.
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 Imposta il testo visualizzato a destra della casella di controllo di verifica.
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ Questo metodo genera un'eccezione con la `CTaskDialog` macro [ENSURE](diagnostic
 
 Imposta il titolo `CTaskDialog`del file .
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 

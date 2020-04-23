@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374010"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753204"
 ---
 # <a name="cdumpcontext-class"></a>Classe CDumpContext
 
@@ -145,7 +145,7 @@ Chiamare questa funzione membro per eseguire il dump dell'elemento del tipo spec
 
 Forza la scrittura dei dati rimanenti nei buffer nel file allegato al contesto dump.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -173,7 +173,7 @@ Profondità del dump impostata da `SetDepth`.
 
 Esegue il dump di una matrice di byte formattati come numeri esadecimali.
 
-```
+```cpp
 void HexDump(
     LPCTSTR lpszLine,
     BYTE* pby,
@@ -249,7 +249,7 @@ Se si utilizza la IMPLEMENT_DYNAMIC o IMPLEMENT_SERIAL macro nell'implementazion
 
 Imposta la profondità per il dump.
 
-```
+```cpp
 void SetDepth(int nNewDepth);
 ```
 

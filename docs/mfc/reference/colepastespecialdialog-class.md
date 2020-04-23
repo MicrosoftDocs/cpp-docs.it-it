@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376979"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753819"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog (classe)
 
@@ -105,7 +105,7 @@ Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l
 
 Chiamare questa funzione per aggiungere nuovi formati all'elenco dei formati che l'applicazione può supportare in un'operazione Incolla speciale.
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -131,7 +131,7 @@ Stringa che descrive il formato per l'utente.
 *Risultato di lpsz*<br/>
 Stringa che descrive il risultato se questo formato viene scelto nella finestra di dialogo.
 
-*Bandiere*<br/>
+*flags*<br/>
 Le diverse opzioni di collegamento e incorporamento disponibili per questo formato. Questo flag è una combinazione bit per bit di uno o più valori diversi nel tipo enumerato OLEUIPASTEFLAG.
 
 *Cfr*<br/>
@@ -178,7 +178,7 @@ Struttura [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) c
 
 Chiamare questa funzione per aggiungere i seguenti formati degli Appunti all'elenco dei formati che l'applicazione può supportare in un'operazione Incolla speciale:Call this function to add the following Clipboard formats to the list of formats your application can support in a Paste Special operation:
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366127"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753914"
 ---
 # <a name="coledataobject-class"></a>Classe COleDataObject
 
@@ -92,7 +92,7 @@ Per ulteriori informazioni sull'utilizzo di oggetti dati nell'applicazione, vede
 
 Chiamare questa funzione `COleDataObject` per associare l'oggetto a un oggetto dati OLE.
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Chiamare questa funzione per preparare `GetNextFormat` le chiamate successive per il recupero di un elenco di formati di dati dall'elemento.
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ Dopo una chiamata a [COleDataObject::BeginEnumFormats](#beginenumformats), viene
 
 Per verificare la disponibilità di un determinato formato, chiamare [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Per ulteriori informazioni, vedere [IEnumXXXX::Next](/previous-versions//ms695273\(v=vs.85\)) in Windows SDK.
+Per ulteriori informazioni, vedere [IEnumXXXX::Next](/previous-versions/ms695273\(v=vs.85\)) in Windows SDK.
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::IsDataAvailable
 
@@ -328,7 +328,7 @@ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/win32/api/winu
 
 Chiamare questa funzione per rilasciare la proprietà dell'oggetto `COleDataObject` [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) precedentemente associato all'oggetto.
 
-```
+```cpp
 void Release();
 ```
 

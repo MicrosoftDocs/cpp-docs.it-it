@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 8c8ce90f5e36d6cdc2592233588bc3bd7bf2c9d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371689"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753071"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -619,7 +619,7 @@ Restituisce il numero corrente di colonne nella barra di divisione. Per una barr
 
 Restituisce informazioni sulla colonna specificata.
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -675,7 +675,7 @@ Restituisce il numero corrente di righe nella finestra con separatore. Per una f
 
 Restituisce informazioni sulla riga specificata.
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -896,7 +896,7 @@ Specificare il riquadro specificando una riga e una colonna **oppure** fornendo 
 
 Chiamare per impostare le informazioni sulla colonna specificata.
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -928,7 +928,7 @@ Quando il framework visualizza la finestra con separatore, dispone i riquadri in
 
 Chiamare per impostare le informazioni di riga specificate.
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -956,7 +956,7 @@ Quando il framework visualizza la finestra con separatore, dispone i riquadri in
 
 Specifica il nuovo stile di scorrimento per il supporto della barra di scorrimento condivisa della finestra con separatore.
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 

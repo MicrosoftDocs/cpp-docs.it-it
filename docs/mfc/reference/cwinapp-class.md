@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366826"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750676"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -377,7 +377,7 @@ Il `m_hPrevInstance` membro dati non esiste più. Per determinare se un'altra is
 
 Chiamare questa funzione membro per aggiungere un modello di documento all'elenco dei modelli di documento disponibili che l'applicazione gestisce.
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ Per personalizzare il comportamento, eseguire l'override di questa funzione in u
 
 Chiamare questa funzione membro per chiudere tutti i documenti aperti prima di uscire.
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ Restituisce TRUE se il supporto D2D è stato abilitato, FALSE - in caso contrari
 
 Chiamare questa funzione membro dall'interno del costruttore della `CWinApp`classe derivata da classe derivata da utilizzare HTMLHelp per la Guida dell'applicazione.
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 Chiamare questa funzione, `InitInstance` in genere dall'override, per consentire agli utenti dell'applicazione di aprire i file di dati quando fanno doppio clic sui file dall'interno di File Manager di Windows.Call this function, typically from your override, to enable your application's open data files when they double-click the files from within the Windows File Manager.
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ Tasto di sezione se la funzione ha esito positivo; in caso contrario NULL.
 
 Chiamare questa funzione membro per nascondere un'applicazione prima di chiudere i documenti aperti.
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ Utilizzare `LoadStandardIcon` la funzione membro o [LoadOEMIcon](#loadoemicon) p
 
 Chiamare questa funzione membro dall'interno della funzione membro [InitInstance](#initinstance) per abilitare e caricare l'elenco dei file utilizzati più di recente (MRU) e l'ultimo stato di anteprima.
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ Se un documento con tale nome è già aperto, la prima finestra cornice che cont
 
 Chiamare questa funzione membro per analizzare la riga di comando e inviare i parametri, uno alla volta, a [CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam).
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parametri
 
-*Codice*<br/>
+*code*<br/>
 Specifica un codice hook. Questa funzione membro utilizza il codice per determinare come elaborare *lpMsg.*
 
 *lpMsg*<br/>
@@ -1920,7 +1920,7 @@ L'implementazione predefinita restituisce semplicemente TRUE. Eseguire l'overrid
 
 Chiamare questa funzione membro per registrare tutti i tipi di documento dell'applicazione con Il file Manager di Windows.Call this member function to register all of your application's document types with the Windows File Manager.
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ L'implementazione predefinita di questa funzione membro chiama il [CDocument::Sa
 
 Chiamare questa funzione membro per selezionare una stampante specifica e rilasciare la stampante precedentemente selezionata nella finestra di dialogo Stampa.
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ Se *hDevMode* e *hDevNames* `SelectPrinter` sono NULL, utilizza la stampante pre
 
 Imposta il tipo di guida dell'applicazione.
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ Per impostare il tipo di Guida dell'applicazione su HTMLHelp, è possibile chiam
 
 Fa sì che le impostazioni dell'applicazione vengano archiviate nel Registro di sistema anziché nei file INI.
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ Eseguire l'override di questa funzione per eseguire passaggi di annullamento del
 
 Chiamare questa funzione membro per annullare la registrazione di tutti i tipi di documento dell'applicazione con Il file Manager di Windows.Call this member function to unregister all of your application's document types with the Windows File Manager.
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ Per un altro esempio, vedere l'esempio per [CWinApp::GetProfileInt](#getprofilei
 
 Imposta in modo esplicito l'ID modello utente dell'applicazione. Questo metodo deve essere chiamato prima che qualsiasi interfaccia utente viene presentata all'utente (la posizione migliore è il costruttore dell'applicazione).
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 

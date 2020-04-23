@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366162"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753949"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite (classe)
 
@@ -397,7 +397,7 @@ virtual HRESULT DoVerb(
 *nVerbo*<br/>
 Specifica il verbo da eseguire. Può includere uno dei seguenti elementi:
 
-|Valore|Significato|Simbolo|
+|valore|Significato|Simbolo|
 |-----------|-------------|------------|
 |0|verbo primario|OLEIVERB_PRIMARY|
 |-1|Verbo secondario|(nessuna)|
@@ -454,7 +454,7 @@ Diverso da zero se la finestra è stata precedentemente disabilitata, in caso co
 
 Specifica se il sito di controllo gestirà o ignorerà gli eventi generati da un controllo.
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ Se *bFreeze* è TRUE, il sito di controllo richiede al controllo di arrestare gl
 
 Recupera informazioni sui tasti di scelta rapida e sul comportamento della tastiera di un controllo.
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -953,7 +953,7 @@ virtual void MoveWindow(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Nuova posizione del lato sinistro della finestra.
 
 *Y*<br/>
@@ -1017,7 +1017,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Imposta il controllo come pulsante predefinito.
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
@@ -1142,7 +1142,7 @@ virtual BOOL SetWindowPos(
 *pWndInsertAfter (informazioni in stato instato)*<br/>
 Puntatore alla finestra.
 
-*X*<br/>
+*x*<br/>
 Nuova posizione del lato sinistro della finestra.
 
 *Y*<br/>

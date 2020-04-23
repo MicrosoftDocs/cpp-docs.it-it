@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377357"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753409"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog (classe)
 
@@ -120,7 +120,7 @@ L'esempio seguente illustra come usare i vari metodi nella classe `CMFCToolBarsC
 
 Inserisce un pulsante della barra degli strumenti nell'elenco dei comandi nella pagina **Comandi.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId (informazioni in questo gruppo)*<br/>
 [in] Specifica l'ID di categoria in cui inserire il pulsante.
 
-*pulsante*<br/>
+*Pulsante*<br/>
 [in] Specifica il pulsante da inserire.
 
 *iInsertBefore (Informazioni in stati incommidi*<br/>
@@ -187,7 +187,7 @@ Nella chiamata `AddMenuCommands`a , *bPopup* è FALSE. Di conseguenza, tale meto
 
 Aggiunge voci all'elenco di comandi nella pagina **Comandi** per rappresentare tutte le voci del menu specificato.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ Chiamare `Create` il metodo solo dopo aver inizializzato completamente la classe
 
 Abilita o disabilita la creazione di nuove barre degli strumenti utilizzando la finestra di dialogo **Personalizza.**
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ La `CMFCMousePropertyPage` classe utilizza questo metodo per popolare la casella
 
 Popola `CComboBox` l'oggetto fornito con il nome di ogni categoria di comandi nella finestra di dialogo **Personalizza.**
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ Le `CMFCToolBarsKeyboardPropertyPage` `CMFCKeyMapDialog` classi e utilizzano que
 
 Popola `CListBox` l'oggetto fornito con il nome di ogni categoria di comandi nella finestra di dialogo **Personalizza.**
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ Il nome della categoria deve essere univoco.
 
 Sostituisce un pulsante della barra degli strumenti nella casella di riepilogo dei comandi nella pagina **Comandi.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd (informazioni in stato in questo*<br/>
 [in] Specifica il comando del pulsante da sostituire.
 
-*pulsante*<br/>
+*Pulsante*<br/>
 [in] Un riferimento **const** all'oggetto pulsante della barra degli strumenti che sostituisce il pulsante precedente.
 
 ### <a name="remarks"></a>Osservazioni

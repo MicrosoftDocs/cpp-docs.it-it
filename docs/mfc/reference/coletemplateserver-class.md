@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: ddd7a8ce70fe49e66e1175e413418fd59a89c917
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 561da5060aae3c938dc3e55d0310718a881c1a3b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374859"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753735"
 ---
 # <a name="coletemplateserver-class"></a>Classe COleTemplateServer
 
@@ -85,7 +85,7 @@ Per una breve descrizione dell'utilizzo della `COleTemplateServer` classe, veder
 
 Connette il modello di documento a cui fa riferimento *pDocTemplate* all'oggetto [sottostante COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) oggetto.
 
-```
+```cpp
 void ConnectTemplate(
     REFCLSID clsid,
     CDocTemplate* pDocTemplate,
@@ -127,7 +127,7 @@ EnterRemarks
 
 Carica le informazioni sul tipo di file dalla stringa del modello di documento e le inserisce nel Registro di sistema OLE.
 
-```
+```cpp
 void UpdateRegistry(
     OLE_APPTYPE nAppType = OAT_INPLACE_SERVER,
     LPCTSTR* rglpszRegister = NULL,

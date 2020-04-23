@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 253cf12033af497115ad600e457630ae834cc69c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc065687f0c2c40b7e66326ff9d1e6210a6962c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372242"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754135"
 ---
 # <a name="clist-class"></a>Classe CList
 
@@ -583,7 +583,7 @@ Diverso da zero se questo elenco è vuoto; in caso contrario 0.
 
 Rimuove tutti gli elementi da questo elenco e libera la memoria associata.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -599,7 +599,7 @@ Non viene generato alcun errore se l'elenco è già vuoto.
 
 Rimuove l'elemento specificato da questo elenco.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
@@ -670,7 +670,7 @@ Elemento che si trovava alla fine dell'elenco.
 
 Una variabile di tipo POSITION è una chiave per l'elenco.
 
-```
+```cpp
 void SetAt(POSITION pos, ARG_TYPE newElement);
 ```
 

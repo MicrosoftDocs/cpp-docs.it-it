@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372454"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752694"
 ---
 # <a name="cimagelist-class"></a>Classe CImageList
 
@@ -295,7 +295,7 @@ Indice in base zero dell'immagine da utilizzare come origine dell'operazione di 
 *UFlags (Flag)*<br/>
 Valore del flag di bit che specifica il tipo di operazione di copia da eseguire. Questo parametro può essere uno dei seguenti valori:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |ILCF_MOVE|L'immagine di origine viene copiata nell'indice dell'immagine di destinazione. Questa operazione genera più istanze di una determinata immagine. ILCF_MOVE è l'impostazione predefinita.|
 |ILCF_SWAP|Le immagini di origine e di destinazione si scambiano posizioni all'interno dell'elenco immagini.|
@@ -357,7 +357,7 @@ Dimensioni di ogni immagine, in pixel.
 *Nflags*<br/>
 Specifica il tipo di elenco immagini da creare. Questo parametro può essere una combinazione dei valori seguenti, `ILC_COLOR` ma può includere solo uno dei valori.
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |ILC_COLOR|Utilizzare il comportamento predefinito se non viene specificato alcun o più flag ILC_COLOR . In genere, il valore predefinito è ILC_COLOR4; ma per i driver video meno recenti, l'impostazione predefinita è ILC_COLORDDB.|
 |ILC_COLOR4|Utilizzare una sezione di bitmap indipendente dal dispositivo (DIB) a 4 bit (16 colori) come bitmap per l'elenco immagini.|
@@ -591,7 +591,7 @@ Posizione in cui disegnare all'interno del contesto di periferica specificato.
 *nStyle*<br/>
 Flag che specifica lo stile di disegno. Può essere uno o più di questi valori:It can be one or more of these values:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |ILD_BLEND25, ILD_FOCUS|Disegna l'immagine, fondendo il 25% con il colore di evidenziazione del sistema. Questo valore non ha effetto se l'elenco immagini non contiene una maschera.|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Disegna l'immagine, fondendo il 50% con il colore di evidenziazione del sistema. Questo valore non ha effetto se l'elenco immagini non contiene una maschera.|
@@ -691,13 +691,13 @@ Puntatore al contesto di dispositivo di destinazione. È necessario eliminare qu
 Indice in base zero dell'immagine da disegnare.
 
 *pt*<br/>
-Struttura [POINT](/previous-versions/dd162805\(v=vs.85\)) contenente le coordinate x e y in cui verrà disegnata l'immagine.
+Struttura [POINT](/windows/win32/api/windef/ns-windef-point) contenente le coordinate x e y in cui verrà disegnata l'immagine.
 
 *Sz*<br/>
 Struttura [DI DIMENSIONE](/windows/win32/api/windef/ns-windef-size) che indica le dimensioni dell'immagine da disegnare.
 
 *ptOrigin*<br/>
-Struttura [POINT](/previous-versions/dd162805\(v=vs.85\)) contenente le coordinate x e y che specificano l'angolo superiore sinistro dell'operazione di disegno rispetto all'immagine stessa. I pixel dell'immagine che si trovano a sinistra della coordinata x e sopra la coordinata y non vengono disegnati.
+Struttura [POINT](/windows/win32/api/windef/ns-windef-point) contenente le coordinate x e y che specificano l'angolo superiore sinistro dell'operazione di disegno rispetto all'immagine stessa. I pixel dell'immagine che si trovano a sinistra della coordinata x e sopra la coordinata y non vengono disegnati.
 
 *fStile*<br/>
 Flag che specifica lo stile di disegno e, facoltativamente, l'immagine sovrapposta. Vedere la sezione Osservazioni per informazioni sull'immagine sovrapposta. L'implementazione predefinita MFC, ILD_NORMAL, disegna l'immagine utilizzando il colore di sfondo per l'elenco di immagini. Se il colore di sfondo è il valore CLR_NONE, l'immagine viene disegnata in modo trasparente utilizzando una maschera.
@@ -712,7 +712,7 @@ Altri valori possibili sono descritti nel membro *dwRop* della struttura [IMAGEL
 *rgbIndietro*<br/>
 Il colore di sfondo dell'immagine, per impostazione predefinita, CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei seguenti valori:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |CLR_DEFAULT|Colore di sfondo predefinito. L'immagine viene disegnata utilizzando il colore di sfondo dell'elenco immagini.|
 |CLR_NONE|Nessun colore di sfondo. L'immagine viene disegnata in modo trasparente.|
@@ -720,7 +720,7 @@ Il colore di sfondo dell'immagine, per impostazione predefinita, CLR_DEFAULT. Qu
 *rgbFore*<br/>
 Colore di primo piano dell'immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei seguenti valori:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |CLR_DEFAULT|Colore di primo piano predefinito. L'immagine viene disegnata utilizzando il colore di evidenziazione del sistema come colore di primo piano.|
 |CLR_NONE|Nessun colore di fusione. L'immagine viene fusa con il colore del contesto di dispositivo di destinazione.|
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parametri
 
 *lpPunto*<br/>
-Indirizzo di una struttura [POINT](/previous-versions/dd162805\(v=vs.85\)) che riceve la posizione di trascinamento corrente.
+Indirizzo di una struttura [POINT](/windows/win32/api/windef/ns-windef-point) che riceve la posizione di trascinamento corrente.
 
 *lpPointHotSpot*<br/>
 Indirizzo di `POINT` una struttura che riceve l'offset dell'immagine di trascinamento rispetto alla posizione di trascinamento.

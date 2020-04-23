@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367530"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752372"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl (classe)
 
@@ -133,7 +133,7 @@ Nell'esempio riportato di seguito `CMFCEditBrowseCtrl` viene `EnableFolderBrowse
 
 Visualizza o non visualizza il pulsante Sfoglia nel controllo di ricerca di modifica corrente.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ Se il parametro *bEnable* è TRUE, `BrowseMode_Default`la modalità di esplorazi
 
 Visualizza il pulsante Sfoglia nel controllo di visualizzazione di modifica corrente e attiva la modalità *di esplorazione dei file.*
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ Per un elenco completo dei flag disponibili, vedere [Struttura OPENFILENAME](/wi
 
 Visualizza il pulsante Sfoglia nel controllo di visualizzazione di modifica corrente e attiva la modalità *di esplorazione delle cartelle.*
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ Eseguire l'override di questa funzione in una classe derivata per personalizzare
 
 Imposta un'immagine personalizzata sul pulsante Sfoglia del controllo di ricerca di modifica.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);

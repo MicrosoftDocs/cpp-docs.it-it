@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370075"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754565"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 
@@ -249,7 +249,7 @@ TRUESe il riquadro è stato registrato correttamente con il gestore di ancoraggi
 
 Aggiunge un riquadro a schede.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ Eseguire l'override di questo metodo in una classe derivata e restituire FALSE s
 
 Ancora un riquadro.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Rimuove un riquadro dal gestore di ancoraggio.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ Un handle per un'icona da visualizzare nella scheda della barra delle applicazio
 
 Rimuove il figlio MDI dalle schede della barra delle applicazioni di Windows 7.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 Imposta le proprietà per una scheda della barra delle applicazioni di Windows 7.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ Combinazione di valori STPFLAG. Per ulteriori informazioni, vedere [ITaskbarList
 
 Inserisce l'elemento figlio MDI prima della finestra specificata nelle schede della barra delle applicazioni di Windows 7.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ Puntatore alla finestra figlio MDI la cui anteprima viene inserita a sinistra. Q
 
 Attiva la scheda della barra delle applicazioni di Windows 7 corrispondente.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ Specifica un puntatore alla finestra padre di primo livello della finestra da at
 *nHitTest (informazioni in base al test)*<br/>
 Specifica il prefisso dell'hit test. Un hit test è un test che determina la posizione del cursore.
 
-*Messaggio*<br/>
+*message*<br/>
 Specifica il numero del messaggio del mouse.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1146,7 +1146,7 @@ Puntatore a `CMDITabProxyWnd` un oggetto registrato con le schede della barra de
 
 Abilita o disabilita la selezione automatica di una parte dell'area client di una finestra da visualizzare come anteprima della finestra nella barra delle applicazioni.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 

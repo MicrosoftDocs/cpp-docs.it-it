@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318132"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753121"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili di controllo pulsante di selezione al controllo. Questi stili sono descritti in stili di [controllo di](/windows/win32/Controls/up-down-control-styles) scorrimento in Windows SDK.
 
 *Rect*<br/>
-Specifica le dimensioni e la posizione del controllo pulsante di selezione. Può essere un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [RECT](/previous-versions/dd162897\(v=vs.85\))
+Specifica le dimensioni e la posizione del controllo pulsante di selezione. Può essere un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [RECT](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra padre del controllo pulsante di selezione, in genere un `CDialog`oggetto . Non deve essere NULL.
@@ -160,7 +160,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco degl
 Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili di controllo pulsante di selezione al controllo. Questi stili sono descritti in stili di [controllo di](/windows/win32/Controls/up-down-control-styles) scorrimento in Windows SDK.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.
@@ -375,7 +375,7 @@ La posizione precedente (precisione `SetPos`a 16 bit `SetPos32`per , precisione 
 
 Imposta i limiti superiore e inferiore (intervallo) per un controllo pulsante di selezione.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

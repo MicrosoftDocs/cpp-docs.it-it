@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363942"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750976"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -165,7 +165,7 @@ Per ulteriori informazioni sull'utilizzo `CPropertySheet` degli oggetti, vedere 
 
 Aggiunge la pagina fornita con la scheda più a destra nella finestra delle proprietà.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ Se si `AddPage` chiama dopo la visualizzazione della pagina delle proprietà, la
 
 Costruisce un oggetto `CPropertySheet`.
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ Vedere l'esempio per [CPropertySheet::AddPage](#addpage).
 
 Indica se impilare righe di schede in una finestra delle proprietà.
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ Per impostazione predefinita, se una finestra delle proprietà contiene più sch
 
 Termina la finestra delle proprietà.
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ Per ulteriori informazioni su questa struttura, incluso un elenco dei relativi m
 
 Converte le unità della finestra di dialogo di un rettangolo in unità dello schermo.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *Lprect*<br/>
-Punta a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura o [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene le coordinate della finestra di dialogo da convertire.
+Punta a un [RECT](/windows/win32/api/windef/ns-windef-rect) struttura o [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene le coordinate della finestra di dialogo da convertire.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -641,7 +641,7 @@ Non è necessaria una voce della mappa messaggi per questa funzione membro.
 
 Simula la scelta del pulsante specificato in una finestra delle proprietà.
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ Una chiamata `PressButton` a non invierà la [notifica PSN_APPLY](/windows/win32
 
 Rimuove una pagina dalla finestra delle proprietà ed elimina la finestra associata.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ Vedere l'esempio per [CPropertySheet::GetActivePage](#getactivepage).
 
 Imposta il testo nel pulsante di comando Fine.
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ Chiamare `SetFinishText` per visualizzare il testo sul pulsante di comando Fine 
 
 Specifica la didascalia della finestra delle proprietà (il testo visualizzato nella barra del titolo di una finestra cornice).
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ Per impostazione predefinita, una finestra delle proprietà utilizza il parametr
 
 Abilita o disabilita il pulsante Indietro, Avanti o Fine in una finestra delle proprietà della procedura guidata.
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ A `CPropertySheet` dispone di tre `CStylePage` `CColorPage`pagine `CShapePage`de
 
 Stabilisce una pagina delle proprietà come procedura guidata.
 
-```
+```cpp
 void SetWizardMode();
 ```
 

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: bbc64aad0d65c0430ad23b96f635be8fe2b396e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81357037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751484"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>funzioni di bitmap grige e retinate
 
@@ -44,7 +44,7 @@ MFC fornisce anche due funzioni per la sostituzione dello sfondo di una bitmap c
 
 Disegna una versione in grigio di una bitmap.
 
-```
+```cpp
 void AFXAPI AfxDrawGrayBitmap(
     CDC* pDC,
     int x,
@@ -58,7 +58,7 @@ void AFXAPI AfxDrawGrayBitmap(
 *pDC*<br/>
 Punta al controller di dominio di destinazione.
 
-*X*<br/>
+*x*<br/>
 Coordinata X di destinazione.
 
 *Y*<br/>
@@ -88,7 +88,7 @@ La bitmap disegnata con `AfxDrawGrayBitmap` avrà l'aspetto di un controllo disa
 
 Copia una versione in grigio di una bitmap.
 
-```
+```cpp
 void AFXAPI AfxGetGrayBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -124,7 +124,7 @@ La bitmap copiata con `AfxGetGrayBitmap` avrà l'aspetto di un controllo disabil
 
 Disegna una bitmap, sostituendone lo sfondo con un motivo dithered (checker).
 
-```
+```cpp
 void AFXAPI AfxDrawDitheredBitmap(
     CDC* pDC,
     int x,
@@ -139,7 +139,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 *pDC*<br/>
 Punta al controller di dominio di destinazione.
 
-*X*<br/>
+*x*<br/>
 Coordinata X di destinazione.
 
 *Y*<br/>
@@ -172,7 +172,7 @@ La bitmap di origine viene disegnata sul controller di dominio di destinazione c
 
 Copia una bitmap, sostituendone lo sfondo con un motivo dithered (checker).
 
-```
+```cpp
 void AFXAPI AfxGetDitheredBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,

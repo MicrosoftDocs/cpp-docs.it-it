@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 3cb3217e02323f8a0afcd1639e6e24ee7b0f136e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc69143101c5d00d4f9a689bd02abdd9596e5b53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366149"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753929"
 ---
 # <a name="colecurrency-class"></a>Classe COleCurrency
 
@@ -159,7 +159,7 @@ Indica i flag per le impostazioni locali. Solo il seguente flag è rilevante per
 
 - LOCALE_NOUSEROVERRIDE Utilizzare le impostazioni locali predefinite del sistema, anziché le impostazioni utente personalizzate.
 
-*Lcid*<br/>
+*lcid*<br/>
 Indica l'ID delle impostazioni locali da utilizzare per la conversione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -469,7 +469,7 @@ Indica i flag per le impostazioni locali, probabilmente il seguente flag:
 
 - LOCALE_NOUSEROVERRIDE Utilizzare le impostazioni locali predefinite del sistema, anziché le impostazioni utente personalizzate.
 
-*Lcid*<br/>
+*lcid*<br/>
 Indica l'ID delle impostazioni locali da utilizzare per la conversione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -518,7 +518,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 Chiamare questa funzione membro per impostare le `COleCurrency` unità e la parte frazionaria di questo oggetto.
 
-```
+```cpp
 void SetCurrency(
     long nUnits,
     long nFractionalUnits);
@@ -542,13 +542,13 @@ Si noti che le unità e la parte frazionaria sono specificate da valori long con
 
 Chiamare questa funzione membro per impostare lo `COleCurrency` stato (validità) di questo oggetto.
 
-```
+```cpp
 void SetStatus(CurrencyStatus  status  );
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*status*<br/>
+*Stato*<br/>
 Nuovo stato per `COleCurrency` questo oggetto.
 
 ### <a name="remarks"></a>Osservazioni

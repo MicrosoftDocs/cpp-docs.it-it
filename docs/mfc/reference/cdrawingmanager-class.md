@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374023"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753232"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Parametro|Descrizione|
-|*Dimensione*|[in] Un parametro [CSize](../../atl-mfc-shared/reference/csize-class.md) che indica le dimensioni della bitmap.|
+|*size*|[in] Un parametro [CSize](../../atl-mfc-shared/reference/csize-class.md) che indica le dimensioni della bitmap.|
 |*pBits*|[fuori] Puntatore a un puntatore dati che riceve la posizione dei valori di bit della DIB.|
 |*Bitmap*|Un handle per la bitmap originale|
 |*ClrTransparent*|Valore RGB che specifica il colore trasparente della bitmap originale.|
@@ -174,7 +174,7 @@ Per ulteriori informazioni su come creare una bitmap DIB, vedere [CreateDIBSecti
 
 Visualizza bitmap con pixel trasparenti o semitrasparenti.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ Questo metodo esegue la fusione alfa per due bitmap. Per ulteriori informazioni 
 
 Disegna un'ellisse con i colori di riempimento e bordo forniti.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ Il rettangolo definito da *rect* deve avere una larghezza di almeno 5 pixel e un
 
 Disegna una linea.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ Questo metodo ha esito negativo se *clrLine* è uguale a -1.
 
 Disegna un rettangolo con i colori di riempimento e bordo forniti.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ Nell'esempio riportato di `DrawShadow` seguito `CDrawingManager` viene illustrat
 
 Riempie un'area rettangolare con due sfumature di colore.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ Questo metodo genera un errore di asserzione se *nPercentage* è minore di 0 o m
 
 Riempie un'area rettangolare con la sfumatura di colore specificata.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ Nell'esempio riportato di `FillGradient` seguito `CDrawingManager` viene illustr
 
 Riempie un'area rettangolare con una sfumatura di colore specificata.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -671,7 +671,7 @@ static COLORREF __stdcall HSVtoRGB(
 |Parametro|Descrizione|
 |*H*|[in] Numero compreso tra 0 e 360 che indica la tonalità del colore.|
 |*S*|[in] Numero compreso tra 0 e 1 che indica la saturazione del colore.|
-|*V*|[in] Numero compreso tra 0 e 1 che indica il valore per il colore.|
+|*Presso*|[in] Numero compreso tra 0 e 1 che indica il valore per il colore.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -737,7 +737,7 @@ Per convertire un colore HSV o HSL in una rappresentazione RGB, chiamate uno dei
 
 Capovolge un'area rettangolare.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -891,7 +891,7 @@ static void __stdcall RGBtoHSV(
 *S*<br/>
 [fuori] Puntatore a un valore double in cui questo metodo archivia la saturazione risultante per il colore.
 
-*V*<br/>
+*Presso*<br/>
 [fuori] Puntatore a un valore double in cui questo metodo archivia il valore risultante per il colore.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1012,7 +1012,7 @@ Il rapporto ponderato viene calcolato con \* la seguente formula: (color1 k1 : c
 
 Ruota di 90 gradi il contenuto del controller di dominio di origine all'interno del rettangolo specificato.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

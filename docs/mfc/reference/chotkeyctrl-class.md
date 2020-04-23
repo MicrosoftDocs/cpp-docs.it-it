@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366889"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750808"
 ---
 # <a name="chotkeyctrl-class"></a>Classe CHotKeyCtrl
 
@@ -151,7 +151,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco di s
 Specifica lo stile del controllo tasto di scelta. Applicare qualsiasi combinazione di stili di controllo. Per altre informazioni, vedere [Stili di controllo comuni](/windows/win32/Controls/common-control-styles) in Windows SDK.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.
@@ -254,7 +254,7 @@ Il nome della chiave restituito da questa funzione proviene dal driver della tas
 
 Imposta la scelta rapida da tastiera per un controllo tasto di scelta.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ Il codice tasto virtuale e i tasti di modifica definiscono insieme la scelta rap
 
 Chiamare questa funzione per definire le combinazioni non valide e la combinazione di modificatori predefinita per un controllo tasto di scelta.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);

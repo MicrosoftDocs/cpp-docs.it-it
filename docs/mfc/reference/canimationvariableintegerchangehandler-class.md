@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: 261f8eb17953c047fcc8ec05ae48dc369de4614c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dec940d2f5e68f0531fc917df447b5a1a5cb8189
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377031"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755053"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>Classe CAnimationVariableIntegerChangeHandler
 
@@ -128,7 +128,7 @@ S_OK se il metodo ha esito positivo; altrimenti E_FAIL.
 
 Archivia un puntatore al controller di animazione per instradare gli eventi.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 

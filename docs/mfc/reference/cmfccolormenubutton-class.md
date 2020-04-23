@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367708"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752526"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton (classe)
 
@@ -193,7 +193,7 @@ Questo metodo viene chiamato dal framework quando l'utente preme un pulsante di 
 
 Abilita e disabilita un pulsante "automatico" posizionato sopra i normali pulsanti di colore. (Il pulsante automatico di sistema standard è etichettato **automatico**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ Il pulsante automatico applica il colore predefinito corrente.
 
 Abilita la visualizzazione di colori specifici del documento anziché di colori di sistema.
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ Utilizzare questo metodo per visualizzare i colori correnti del documento o i co
 
 Abilita e disabilita un pulsante "altro" posizionato sotto i normali pulsanti di colore. (Il pulsante di sistema standard "altro" è etichettato **Più colori**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 Consente di strappare un riquadro dei colori.
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -533,7 +533,7 @@ static void SetColorName(
 
 Imposta il numero di colonne da visualizzare in un controllo di selezione del colore ( [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) oggetto).
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368824"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754049"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Classe CMFCRibbonStatusBar
 
@@ -140,7 +140,7 @@ L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonSta
 
 Aggiunge un elemento dinamico alla barra di stato della barra multifunzione.
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ A differenza degli elementi normali, gli elementi dinamici non sono personalizza
 
 Aggiunge un nuovo elemento della barra multifunzione alla barra di stato della barra multifunzione.
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 Aggiunge un elemento della barra multifunzione all'area estesa della barra di stato della barra multifunzione.
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ L'area estesa si trova a destra della barra di stato.
 
 Aggiunge un separatore alla barra di stato della barra multifunzione.
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 Rimuove tutti gli elementi dalla barra di stato della barra multifunzione.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ TRUESe un elemento con *l'uiID* specificato viene rimosso. In caso contrario, FA
 
 Abilita o disabilita la modalità di informazioni per la barra di stato della barra multifunzione.
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 

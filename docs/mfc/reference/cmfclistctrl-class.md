@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 099ec086bd95a1180af4cf5a8f6a9fa7f1d099ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370777"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754240"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl (classe)
 
@@ -94,7 +94,7 @@ L'esempio seguente illustra come usare i vari metodi nella classe `CMFCListCtrl`
 
 Contrassegna le colonne ordinate con un colore di sfondo diverso.
 
-```
+```cpp
 void EnableMarkSortedColumn(
     BOOL bMark = TRUE,
     BOOL bRedraw = TRUE);
@@ -116,7 +116,7 @@ void EnableMarkSortedColumn(
 
 Abilita l'ordinamento delle righe di dati nel controllo elenco in base a più colonne.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
@@ -277,7 +277,7 @@ Per impostazione predefinita, questo metodo chiama `GetTextColor` indipendenteme
 
 Rimuove una colonna di ordinamento dall'elenco delle colonne ordinate.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -294,7 +294,7 @@ Questo metodo rimuove una colonna di ordinamento dal controllo intestazione. Chi
 
 Imposta la colonna ordinata corrente e l'ordinamento.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending = TRUE,

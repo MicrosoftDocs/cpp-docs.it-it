@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363992"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751098"
 ---
 # <a name="cpropertypage-class"></a>Classe CPropertyPage
 
@@ -119,7 +119,7 @@ Per ulteriori informazioni sulla creazione di una finestra delle proprietà come
 
 Chiamare questa funzione dopo che è stata apportata una modifica irreversibile ai dati in una pagina di una finestra delle proprietà modale.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ La `CancelToClose` funzione membro non esegue alcuna operazione in una finestra 
 
 Chiamare questa funzione membro `CPropertyPage` per costruire un oggetto.
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ Se una pagina restituisce un valore diverso da zero, la finestra delle propriet�
 
 Chiamare questa funzione membro per abilitare o disabilitare il pulsante Applica ora, a seconda che le impostazioni nella pagina delle proprietà devono essere applicate all'oggetto esterno appropriato.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

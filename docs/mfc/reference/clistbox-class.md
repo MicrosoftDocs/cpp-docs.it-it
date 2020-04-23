@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372222"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753585"
 ---
 # <a name="clistbox-class"></a>Classe CListBox
 
@@ -342,7 +342,7 @@ Puntatore lungo `COMPAREITEMSTRUCT` a una struttura.
 
 Indica la posizione relativa dei due elementi descritti nella struttura [COMPAREITEMSTRUCT.](/windows/win32/api/winuser/ns-winuser-compareitemstruct) Può essere uno dei seguenti valori:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |-1|L'articolo 1 viene ordinato prima dell'articolo 2.|
 |0|L'elemento 1 e l'elemento 2 hanno lo stesso modo.|
@@ -479,7 +479,7 @@ int Dir(
 *Attr*<br/>
 Può essere qualsiasi combinazione dei valori `CFile::GetStatu` **di enumerazione** descritti in [s](../../mfc/reference/cfile-class.md#getstatus)o qualsiasi combinazione dei valori seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |0x0000|Il file può essere letto o scritto.|
 |0x0001|Il file può essere letto ma non scritto.|
@@ -717,7 +717,7 @@ Il valore doubleword è il parametro *dwItemData* di una chiamata [SetItemData.]
 
 Recupera il valore a 32 bit fornito dall'applicazione associato all'elemento della casella di riepilogo specificato come puntatore (**void** <strong>\*</strong>).
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ Vedere [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pe
 
 Rimuove tutti gli elementi da una casella di riepilogo.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ Utilizzare questa funzione membro solo con caselle di riepilogo a selezione mult
 
 Imposta l'ancoraggio in una casella di riepilogo a selezione multipla per iniziare una selezione estesa.
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ Se l'elemento non è visibile, viene fatto scorrere nella visualizzazione.
 
 Imposta la larghezza in pixel di tutte le colonne in una casella di riepilogo a più colonne (creata con lo stile [LBS_MULTICOLUMN).](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ Per impostare o rimuovere una selezione in una casella di riepilogo a selezione 
 
 Imposta la larghezza, in pixel, in base alla quale è possibile scorrere orizzontalmente una casella di riepilogo.
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ Per selezionare un elemento da una casella di riepilogo a selezione singola, uti
 
 Imposta le posizioni delle tabulazioni in una casella di riepilogo.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

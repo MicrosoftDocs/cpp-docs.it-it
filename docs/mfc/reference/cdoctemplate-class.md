@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 3376b8febe8ae4586ce649f3f83386875acb678f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 69b94a4188804f47c950ca31fb5cba80d85176e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375499"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753295"
 ---
 # <a name="cdoctemplate-class"></a>Classe CDocTemplate
 
@@ -511,7 +511,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Determina le risorse per i contenitori OLE durante la modifica di un elemento OLE sul posto.
 
-```
+```cpp
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```
 
@@ -547,7 +547,7 @@ Per informazioni sul titolo predefinito, `CDocTemplate::docName` vedere la descr
 
 Determina le risorse e le classi quando il documento server viene incorporato o modificato sul posto.
 
-```
+```cpp
 void SetServerInfo(
     UINT nIDOleEmbedding,
     UINT nIDOleInPlaceServer = 0,
@@ -603,7 +603,7 @@ Puntatore valido `CFrameWnd` a un oggetto oppure NULL se la creazione non riesce
 
 Imposta il gestore di anteprima fuori processo.
 
-```
+```cpp
 void SetPreviewInfo(
     UINT nIDPreviewFrame,
     CRuntimeClass* pPreviewFrameClass = NULL,

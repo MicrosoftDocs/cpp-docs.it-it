@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367514"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752369"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 
@@ -129,7 +129,7 @@ hr - chunk. SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 Cancella il ChunkValue.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -178,7 +178,7 @@ S_OK in caso di esito positivo; in caso contrario, un codice di errore.
 
 Inizializza questo valore di blocco dall'altro valore.
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -327,7 +327,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -367,7 +367,7 @@ Specifica una chiave di proprietà.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -411,7 +411,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -455,7 +455,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -499,7 +499,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -543,7 +543,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -587,7 +587,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -631,7 +631,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>
@@ -675,7 +675,7 @@ Specifica il valore del blocco da impostare.
 *chunkType (Tipo di blocco)*<br/>
 I flag indicano se il blocco contiene una proprietà di tipo text o value. I valori dei flag vengono ricavati dall'enumerazione CHUNKSTATE.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Lingua e sottolingua associati a una porzione di testo. Le impostazioni locali di Chunk vengono utilizzate dagli indicizzatori di documenti per eseguire l'interruzione corretta del testo. Se il blocco non è né text-type né value-type con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.
 
 *CwcLenSource (informazioni in due)*<br/>

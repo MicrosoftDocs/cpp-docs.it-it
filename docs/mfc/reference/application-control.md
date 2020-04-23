@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 1f438d3344e90a16def2bd4c0f9cedcd47a64203
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363562"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752863"
 ---
 # <a name="application-control"></a>Controllo Application
 
@@ -104,7 +104,7 @@ L'utente controlla l'applicazione quando apre o crea in modo esplicito un nuovo 
 
 Imposta o cancella il flag del controllo utente, `AfxOleGetUserCtrl`illustrato nel riferimento per .
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
@@ -127,7 +127,7 @@ Chiamare questa funzione se altre azioni nell'applicazione devono inserire l'ute
 
 Incrementa il conteggio globale del framework del numero di oggetti attivi nell'applicazione.
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
@@ -151,7 +151,7 @@ Chiamata `AfxOleLockApp` da qualsiasi oggetto che espone interfacce OLE, se non 
 
 Decrementa il conteggio del framework di oggetti attivi nell'applicazione.
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
@@ -268,7 +268,7 @@ Il Registro di sistema è costituito da un insieme di chiavi e valori. Gli argom
 
 I simboli vengono compilati come segue:
 
-|Simbolo|Valore|
+|Simbolo|valore|
 |------------|-----------|
 |%1|ID di classe, formattato come stringa|
 |%2|Nome di classe|
@@ -284,7 +284,7 @@ I simboli vengono compilati come segue:
 
 Implementa l'interfaccia utente per il comando *typename* Object.
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,

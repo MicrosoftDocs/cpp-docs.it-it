@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367370"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753455"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ Nell'esempio seguente viene illustrato come `CMFCTabCtrl` utilizzare vari `CMFCT
 
 Visualizza la scheda specificata del controllo struttura a schede corrente e imposta lo stato attivo su tale scheda.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ Sempre TRUE.
 
 Specifica se il framework deve ridimensionare l'area client di tutte le finestre di controllo struttura a schede quando viene modificato un elemento dell'interfaccia utente del controllo struttura a schede.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*Stile*<br/>
+*style*<br/>
 [in] Stile del controllo Struttura a schede. Per altre informazioni, vedere la sezione Osservazioni.
 
 *Rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] ID del controllo struttura a schede.
 
-*Posizione*<br/>
+*location*<br/>
 [in] La posizione delle schede. Il valore predefinito è LOCATION_BOTTOM. Per altre informazioni, vedere la sezione Osservazioni.
 
 *bCloseBtn (informazioni in base al servizio in cui si è*<br/>
@@ -381,7 +381,7 @@ Questo metodo viene chiamato quando si modifica l'etichetta di una scheda. Quest
 
 Mostra o nasconde un pulsante Chiudi ( **X**) nella scheda attiva.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 Consente di passare da un'interfaccia utente che utilizza due pulsanti per scorrere le schede della finestra e un'interfaccia che visualizza un menu a comparsa di finestre a schede.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ Utilizzare questo metodo per accedere alla barra di scorrimento incorporata del 
 
 Recupera il rettangolo di delimitazione dell'area dell'etichetta della scheda nella parte superiore o inferiore del controllo struttura a schede.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 Recupera il limite dell'area client del controllo struttura a schede corrente.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 Nasconde la barra di scorrimento orizzontale, se presente, nella finestra attiva.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ Utilizzare questo metodo per evitare che il controllo struttura a schede interve
 
 Specifica se il framework visualizza le finestre di controllo struttura a schede inattive.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 Abilita o disabilita il disegno dell'area delle schede se non sono presenti schede visibili.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametri
 
-*Stile*<br/>
+*style*<br/>
 [in] Uno dei valori di enumerazione che specifica l'aspetto del controllo struttura a schede. Per ulteriori informazioni, vedere la tabella in Osservazioni.
 
 ### <a name="return-value"></a>Valore restituito
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 Imposta la scheda corrente di un controllo struttura a schede come scheda attiva in un gruppo di schede dell'interfaccia a documenti multipli.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ Il `SetActiveTab` metodo chiama automaticamente il [CMFCTabCtrl::HideActiveWindo
 
 Abilita o disabilita l'utilizzo di un carattere in grassetto nelle schede attive.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 Specifica se un rettangolo di frame viene disegnato intorno a una barra incorporata.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 Specifica se disegnare una cornice piatta o 3D attorno all'area della scheda.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ Utilizzare il [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-clas
 
 Specifica il modo in cui il controllo struttura a schede corrente può essere ridimensionato e quindi visualizza nuovamente il controllo.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ Il parametro *resizeMode* può `ResizeMode` essere uno dei seguenti valori di en
 
 Specifica la larghezza massima della tabulazione in una finestra a schede.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ Utilizzare questo metodo per limitare la larghezza di ogni scheda in una finestr
 
 Termina l'operazione di ridimensionamento corrente nel controllo struttura a schede.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

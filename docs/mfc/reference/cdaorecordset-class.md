@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377156"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754672"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (classe)
 
@@ -626,7 +626,7 @@ Per informazioni correlate, vedere gli argomenti "AddNew Method", "Edit Method",
 
 Chiamare questa funzione membro per memorizzare nella cache un numero specificato di record dal recordset.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà Count" nella Guida di
 
 Chiamare questa funzione membro per ottenere informazioni sui campi in un recordset.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà Attributes" nella Gui
 
 Chiamare questa funzione membro per ottenere vari tipi di informazioni su un indice definito nella tabella di base sottostante un recordset.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, Mov
 
 Chiamare questa funzione membro per rendere il primo record nel recordset (se presente) il record corrente.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, Mov
 
 Chiamare questa funzione membro per rendere l'ultimo record (se presente) nel recordset il record corrente.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, Mov
 
 Chiamare questa funzione membro per rendere il record successivo nel recordset il record corrente.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ Per informazioni correlate, vedere gli argomenti "Metodo Move" e "MoveFirst, Mov
 
 Chiamare questa funzione membro per rendere il record precedente nel recordset il record corrente.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ Per informazioni correlate, vedere l'argomento "Metodo Seek" nella Guida in line
 
 Imposta il numero di record relativo del record corrente di un oggetto recordset.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà AbsolutePosition" nel
 
 Chiamare questa funzione membro per posizionare il recordset sul record contenente il segnalibro specificato.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ Per informazioni correlate, vedere gli argomenti "Proprietà Bookmark" e Bookmar
 
 Chiamare questa funzione membro per impostare il numero di record da memorizzati nella cache.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ Per informazioni correlate, vedere l'argomento "CacheSize, CacheStart Properties
 
 Chiamare questa funzione membro per specificare il segnalibro del primo record nel recordset da memorizzare nella cache.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Per informazioni correlate, vedere l'argomento CacheSize, CacheStart Properties"
 
 Chiamare questa funzione membro per impostare un indice in un recordset di tipo tabella.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ Per informazioni correlate, vedere l'argomento "Oggetto Index" e la definizione 
 
 Chiamare questa funzione membro per contrassegnare un membro dati di campo del recordset come modificato o invariato.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ Ciò significa che **param** non è possibile impostare `outputColumn` tutti i c
 
 Chiamare questa funzione membro per contrassegnare un membro dati di campo del recordset come Null (in particolare non ha alcun valore) o come non Null.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ Per informazioni correlate, vedere gli argomenti "Oggetto campo" e "Proprietà v
 
 Chiamare questa funzione membro per impostare il campo su un valore Null.Call this member function to set the field to a Null value.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ Per informazioni correlate, vedere gli argomenti "Oggetto campo" e "Proprietà v
 
 Chiamare questa funzione membro per impostare il tipo di blocco per il recordset.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 Posizione numerica del parametro nell'insieme Parameters di querydef.
 
-*Var*<br/>
+*var*<br/>
 Il valore da impostare; vedere Osservazioni.
 
 *lpszName*<br/>
@@ -2458,7 +2458,7 @@ Specificare il valore `COleVariant` da impostare come oggetto. Per informazioni 
 
 Chiamare questa funzione membro per impostare il parametro su un valore Null.Call this member function to set the parameter to a Null value.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ NULL c'è non è lo stesso di Null, che, nella terminologia del database, signif
 
 Chiamare questa funzione membro per impostare un valore che modifica la posizione approssimativa del record corrente nell'oggetto recordset in base a una percentuale dei record nel recordset.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

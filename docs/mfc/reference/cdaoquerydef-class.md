@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368957"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754703"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -410,7 +410,7 @@ Numero di campi definiti nella query.
 
 Chiamare questa funzione membro per ottenere vari tipi di informazioni su un campo definito nel querydef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ Per informazioni correlate, vedere gli argomenti "Oggetto parametro", "Insieme P
 
 Chiamare questa funzione membro per ottenere informazioni su un parametro definito nel querydef.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ Una volta aperto il querydef, è possibile chiamare la relativa funzione membro 
 
 Chiamare questa funzione membro per impostare la stringa di connessione dell'oggetto querydef.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ Per ulteriori informazioni sulla struttura della stringa di connessione ed esemp
 
 Chiamare questa funzione membro se si desidera modificare il nome di un querydef che non è temporaneo.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ I nomi di Querydef sono nomi univoci definiti dall'utente. È possibile `SetName
 
 Chiamare questa funzione membro per impostare il limite di tempo prima che si scada una query su un'origine dati ODBC.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ Specificare il valore `COleVariant` da impostare come oggetto. Per informazioni 
 
 Chiamare questa funzione membro come parte del processo di impostazione di una query pass-through SQL a un database esterno.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ In tal caso, è necessario creare il querydef `CDaoQueryDef` e impostarne le pro
 
 Chiamare questa funzione membro per impostare l'istruzione SQL eseguita da querydef.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

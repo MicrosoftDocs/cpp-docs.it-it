@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: 2f8ba8d0b35bd72efa8f8d63dbefd689e645d768
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d356ba6b6134221c2fc9595fc6d78f91961c5b7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374043"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753252"
 ---
 # <a name="cdocument-class"></a>Classe CDocument
 
@@ -260,7 +260,7 @@ Per ulteriori `CDocument`informazioni su , vedere [Serializzazione](../../mfc/se
 
 Chiamare questa funzione per allegare una visualizzazione al documento.
 
-```
+```cpp
 void AddView(CView* pView);
 ```
 
@@ -372,7 +372,7 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Parametri
 
-*Guid*<br/>
+*guid*<br/>
 Specifica il GUID di un blocco da trovare.
 
 *Pid*<br/>
@@ -734,7 +734,7 @@ Gli eventi del documento possono interessare più classi. Questo metodo è respo
 
 Nella tabella seguente sono elencati i valori possibili per *deEvent* e gli eventi a cui corrispondono.
 
-|Valore|Evento corrispondente|
+|valore|Evento corrispondente|
 |-----------|-------------------------|
 |`onAfterNewDocument`|È stato creato un nuovo documento.|
 |`onAfterOpenDocument`|È stato aperto un nuovo documento.|
@@ -765,7 +765,7 @@ Specifica un rettangolo di delimitazione dell'area in cui deve essere disegnata 
 
 Invia un messaggio tramite l'host di posta residente (se presente) con il documento come allegato.
 
-```
+```cpp
 void OnFileSendMail();
 ```
 
@@ -979,7 +979,7 @@ virtual void OnUnloadHandler();
 
 Abilita il comando ID_FILE_SEND_MAIL se è presente il supporto della posta (MAPI).
 
-```
+```cpp
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
@@ -1082,7 +1082,7 @@ Specifica il PID di un blocco da rimuovere.
 
 Chiamare questa funzione per scollegare una visualizzazione da un documento.
 
-```
+```cpp
 void RemoveView(CView* pView);
 ```
 
@@ -1224,7 +1224,7 @@ La chiamata a questa funzione aggiorna i titoli di tutte le finestre cornice che
 
 Chiamare questa funzione dopo la modifica del documento.
 
-```
+```cpp
 void UpdateAllViews(
     CView* pSender,
     LPARAM lHint = 0L,

@@ -1,5 +1,5 @@
 ---
-title: Aggiungere una proprietà
+title: Aggiungi proprietà
 ms.date: 11/09/2018
 f1_keywords:
 - vc.codewiz.prop.overview
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509524"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751183"
 ---
-# <a name="add-a-property"></a>Aggiungere una proprietà
+# <a name="add-a-property"></a>Aggiungi proprietà
 
 È possibile usare l'[Aggiunta guidata proprietà](#names-add-property-wizard) per aggiungere un metodo a un'interfaccia del progetto.
 
@@ -62,7 +62,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Imposta il nome della proprietà. Per le interfacce dispatch MFC associate ai controlli ActiveX, è possibile specificare il nome oppure selezionare un nome di proprietà predefinito dall'elenco predefinito. Se si specifica il nome di proprietà, il tipo di implementazione **Predefinito** non è disponibile. Vedere [Proprietà predefinite](#stock-properties) per una descrizione delle proprietà dell'elenco.
 
-  |Tipo interfaccia|DESCRIZIONE|
+  |Tipo interfaccia|Descrizione|
   |--------------------|-----------------|
   |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Specificare un nome di proprietà.|
   |Interfaccia dispatch MFC, interfaccia dispatch del controllo ActiveX MFC|Specificare un nome di proprietà o selezionare una proprietà predefinita dall'elenco. Se si seleziona una proprietà dall'elenco, il valore appropriato viene visualizzato nella casella **Tipo di proprietà**. È possibile modificare il tipo, a seconda dell'opzione selezionata in **Tipo di implementazione**.|
@@ -77,9 +77,9 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
 - **Funzione di notifica**
 
-  Solo interfacce dispatch MFC. Disponibile solo se si specifica **Variabile membro** in **Tipo di implementazione**. Imposta il nome dalla funzione di notifica chiamata se la proprietà viene modificata. Per impostazione predefinita, il nome della funzione di notifica è impostato su `On`*PropertyName*`Changed`. È possibile modificare il nome.
+  Solo interfacce dispatch MFC. Disponibile solo se si specifica **Variabile membro** in **Tipo di implementazione**. Imposta il nome dalla funzione di notifica chiamata se la proprietà viene modificata. Per impostazione predefinita, il nome `On`della funzione di notifica è impostato su *NomeProprietà*`Changed`. È possibile modificare il nome.
 
-- **Get**
+- **Funzione Get**
 
   Per le interfacce dispatch MFC. Disponibile solo se si specificano i **metodi Get/Set** in **Tipo di implementazione**. Imposta il nome della funzione per ottenere la proprietà. Per impostazione predefinita, il nome della funzione `Get` è impostato su `Get`*PropertyName*. È possibile modificare il nome. Se si elimina il nome, la funzione [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) viene inserita nella mappa di invio dell'interfaccia. La funzione `Get`*PropertyName* specifica la proprietà come accessibile in lettura.
 
@@ -91,13 +91,13 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce dispatch MFC. Specifica come implementare la proprietà da aggiungere.
 
-  |Tipo di implementazione|DESCRIZIONE|
+  |Tipo di implementazione|Descrizione|
   |-------------------------|-----------------|
   |**Predefinito**|Specifica un'implementazione predefinita per la proprietà selezionata in **Nome proprietà**. Valore predefinito. Per altre informazioni, vedere [Proprietà predefinite](#stock-properties).<br /><br /> Se si specifica **Predefinito**, **Tipo di proprietà**, **Tipo parametro** e **Nome parametro** appaiono disattivate.|
-  |**Variabile membro**|Specifica che la proprietà viene aggiunta come variabile membro. È possibile aggiungere proprietà personalizzate o la maggior parte delle proprietà predefinite come variabili membro. Non è possibile specificare **variabile membro** per le proprietà `Caption`, `hWnd` e `Text`.<br /><br /> Specifica i nomi predefiniti in **Nome variabile** e **Funzione di notifica**. È possibile modificare il nome.|
+  |**Variabile membro**|Specifica che la proprietà viene aggiunta come variabile membro. È possibile aggiungere proprietà personalizzate o la maggior parte delle proprietà predefinite come variabili membro. Non è possibile specificare `Caption`la `hWnd`variabile `Text` **membro** per le proprietà , e .<br /><br /> Specifica i nomi predefiniti in **Nome variabile** e **Funzione di notifica**. È possibile modificare il nome.|
   |**Metodi Get/Set**|Specifica che la proprietà viene aggiunta come funzione `Get`*PropertyName* e `Set`*PropertyName* per impostazione predefinita. Questi nomi sono visualizzati nella funzione **Get** e **Set**.<br /><br /> È possibile modificare il **Tipo di proprietà** predefinito che passa un valore per la funzione Get. È possibile specificare parametri per le funzioni `Get` e `Set`.|
 
-- **Get**
+- **Funzione Get**
 
   Per le interfacce ATL. Imposta la proprietà come accessibile in lettura, ovvero crea il metodo `Get` per il recupero della proprietà dall'oggetto. Selezionare **Get**, **Put** o entrambe.
 
@@ -105,21 +105,21 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce ATL. Imposta la proprietà come accessibile in scrittura, ovvero crea il metodo `Put` per l'impostazione o l'inserimento della proprietà dell'oggetto. Selezionare **Get**, **Put** o entrambe. Se si seleziona questa opzione, è possibile scegliere uno dei due modi seguenti per implementare il metodo:
 
-  |Opzione|DESCRIZIONE|
+  |Opzione|Descrizione|
   |------------|-----------------|
   |**PropPut**|La funzione [PropPut](../windows/propput.md) restituisce una copia dell'oggetto. Questo è il valore predefinito e il modo più comune per impostare la proprietà come accessibile in scrittura.|
   |**PropPutRef**|La funzione [PropPutRef](../windows/propputref.md) restituisce un riferimento all'oggetto anziché restituire la copia dell'oggetto. Può essere utile usare questa opzione per gli oggetti, ad esempio struct o matrici di grandi dimensioni, che potrebbero avere un sovraccarico di inizializzazione.|
 
 - **Attributi dei parametri**
 
-  Solo interfacce ATL. Specifica se il parametro specificato tramite **Nome parametro** è `in`, `out`, entrambi o nessuno.
+  Solo interfacce ATL. Imposta se il parametro `in`specificato `out`da **Nome parametro** è , , entrambi o nessuno.
 
-  |Opzione|DESCRIZIONE|
+  |Opzione|Descrizione|
   |------------|-----------------|
   |`in`|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|
   |`out`|Indica che il parametro del puntatore viene restituito dalla routine chiamata alla routine chiamante (dal server al client).|
 
-- **Tipo parametro**
+- **Tipo di parametro**
 
   Imposta il tipo di dati del parametro. Selezionare il tipo dall'elenco.
 
@@ -131,7 +131,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Visualizza l'elenco degli attributi da aggiungere alla proprietà. Ogni voce dell'elenco include il nome del parametro, il tipo di parametro e gli attributi. Usare **Aggiungi** e **Rimuovi** per aggiornare l'elenco.
 
-- **Aggiungi**
+- **Aggiungere**
 
   Aggiunge il parametro specificato in **Nome parametro** e **Tipo parametro** all'**Elenco parametri**. Selezionare **Aggiungi** per aggiungere un parametro all'elenco.
 
@@ -163,7 +163,7 @@ Usare questa pagina dell'Aggiunta guidata proprietà per specificare le impostaz
 
 Non tutte le opzioni sono disponibili per tutti i tipi di proprietà.
 
-|Opzione|DESCRIZIONE|
+|Opzione|Descrizione|
 |------------|-----------------|
 |`bindable`|Indica che la proprietà supporta il data binding. Vedere [bindable](/windows/win32/Midl/bindable) in *MIDL Reference* (Riferimento MIDL). Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|
 |`defaultbind`|Indica la singola proprietà associabile che meglio rappresenta l'oggetto. Vedere [defaultbind](/windows/win32/Midl/defaultbind) in *MIDL Reference* (Riferimento MIDL).|
@@ -181,7 +181,7 @@ Non tutte le opzioni sono disponibili per tutti i tipi di proprietà.
 
 Se si aggiunge una proprietà a un'interfaccia dispatch di MFC usando l'[Aggiunta guidata proprietà](#idl-attributes-add-property-wizard), è possibile scegliere una proprietà predefinita dall'elenco **Nome della proprietà** della pagina [Nomi](../ide/names-add-property-wizard.md) della procedura guidata. Di seguito sono riportate le proprietà:
 
-|Nome della proprietà|DESCRIZIONE|
+|Nome proprietà|Descrizione|
 |-------------------|-----------------|
 |`Appearance`|Restituisce o imposta un valore che determina l'aspetto del controllo. La proprietà `Appearance` del controllo può includere o omettere effetti di visualizzazione tridimensionale. Questa è una proprietà di lettura/scrittura ambientale.|
 |`BackColor`|Restituisce o imposta la proprietà ambientale `BackColor` del controllo su un colore della tavolozza (RGB) o un colore di sistema predefinito. Per impostazione predefinita, il relativo valore corrisponde al colore di sfondo del contenitore del controllo. Questa è una proprietà di lettura/scrittura ambientale.|
@@ -191,5 +191,5 @@ Se si aggiunge una proprietà a un'interfaccia dispatch di MFC usando l'[Aggiunt
 |`Font`|Restituisce o imposta il tipo di carattere dell'ambiente del controllo. Null se il controllo non ha alcun tipo di carattere.|
 |`ForeColor`|Restituisce o imposta la proprietà ambientale `ForeColor` del controllo.|
 |`hWnd`|Restituisce o imposta la proprietà `hWnd` del controllo. `hWnd` non ha alcun tipo di implementazione **variabile membro**.|
-|`ReadyState`|Restituisce o imposta la proprietà `ReadyState` del controllo. Un controllo può essere non inizializzato, inizializzato, in caricamento, interattivo o completo. Per altre informazioni, vedere [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) in *Internet SDK*.|
+|`ReadyState`|Restituisce o imposta la proprietà `ReadyState` del controllo. Un controllo può essere non inizializzato, inizializzato, in caricamento, interattivo o completo. Per altre informazioni, vedere [READYSTATE](/previous-versions/aa768362\(v=vs.85\)) in *Internet SDK*.|
 |`Text`|Restituisce o imposta il testo contenuto in un controllo. `Text` non ha alcun tipo di implementazione **variabile membro**.|

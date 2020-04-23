@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374829"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753713"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
@@ -93,7 +93,7 @@ Per ulteriori informazioni `COleVariant` sulla classe e sul relativo utilizzo ne
 
 Chiamare questa funzione per associare l'oggetto [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) specificato all'oggetto corrente. `COleVariant`
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ Per ulteriori informazioni su SCODE, vedere [Struttura dei codici](/windows/win3
 
 Converte il tipo di `COleVariant` valore variant in questo oggetto.
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ Per ulteriori informazioni, vedere le voci [VARIANT](/windows/win32/api/oaidl/ns
 
 Cancella la classe `VARIANT`.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ Per ulteriori informazioni, vedere le voci [VARIANT](/windows/win32/api/oaidl/ns
 
 Recupera una matrice di byte da una matrice variant esistente
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ L'operatore `COleVariant` di inserimento (**\<**) supporta il dump diagnostico e
 
 Imposta la stringa su un tipo particolare.
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 

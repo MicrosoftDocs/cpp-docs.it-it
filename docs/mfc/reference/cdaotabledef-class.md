@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377134"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754696"
 ---
 # <a name="cdaotabledef-class"></a>Classe CDaoTableDef
 
@@ -300,7 +300,7 @@ Per informazioni correlate, vedere l'argomento "Metodo CreateTableDef" nella Gui
 
 Chiamare questa funzione membro per aggiungere un campo alla tabella.
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ Per informazioni correlate, vedere l'argomento "Metodo CreateField" nella Guida 
 
 Chiamare questa funzione per aggiungere un indice a una tabella.
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ I membri rimanenti verranno ignorati se impostato su FALSE. Inoltre, il `m_lDist
 
 Chiamare questa funzione membro per rimuovere un campo e renderlo inaccessibile.
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ Per informazioni correlate, vedere l'argomento "Metodo Delete" nella Guida in li
 
 Chiamare questa funzione membro per eliminare un indice in una tabella sottostante.
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà Count" nella Guida di
 
 Chiamare questa funzione membro per ottenere vari tipi di informazioni su un campo definito nel tabledef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà Count" nella Guida di
 
 Chiamare questa funzione membro per ottenere vari tipi di informazioni su un indice definito nel tabledef.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ Puntatore a una stringa che specifica un nome di tabella.
 
 Chiamare questa funzione membro per aggiornare le informazioni di connessione per una tabella collegata.
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ Per informazioni correlate, vedere l'argomento "Metodo RefreshLink" nella Guida 
 
 Imposta un valore che indica una `CDaoTableDef` o più caratteristiche di un oggetto.
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà Attributes" nella Gui
 
 Per `CDaoTableDef` un oggetto che rappresenta una tabella collegata, l'oggetto stringa è costituito da una o due parti (un identificatore di tipo di database e un percorso al database).
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -894,7 +894,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà Connect" nella Guida 
 
 Chiamare questa funzione membro per impostare un nome definito dall'utente per una tabella.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà Name" nella Guida in 
 
 Chiamare questa funzione membro per specificare il nome di una tabella `CDaoTableDef` associata o il nome della tabella di base su cui si basa l'oggetto, come esiste nell'origine originale dei dati.
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà SourceTableName" nell
 
 Chiamare questa funzione membro per impostare una regola di convalida per un tabledef.Call this member function to set a validation rule for a tabledef.
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ Per informazioni correlate, vedere l'argomento "Proprietà ValidationRule" nella
 
 Chiamare questa funzione membro per impostare il `CDaoTableDef` testo dell'eccezione di una regola di convalida per un oggetto con una tabella di base sottostante supportata dal modulo di gestione di database Microsoft Jet.Call this member function to set the exception text of a validation rule for a object with an underlying base table supported by the Microsoft Jet database engine.
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 

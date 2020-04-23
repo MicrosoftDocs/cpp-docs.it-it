@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 8339785fd10fa3dcef1c0fb573310762dc2d2405
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9abe4ae55d9d84ea435cd5d82925ff8b8a544480
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352839"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752967"
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 
@@ -180,7 +180,7 @@ CBaseTransition();
 
 Rilascia l'oggetto COM IUIAnimationTransition incapsulato.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -374,7 +374,7 @@ TRANSITION_TYPE m_type;
 
 Imposta i fotogrammi chiave per una transizione.
 
-```
+```cpp
 void SetKeyframes(
     CBaseKeyFrame* pStart = NULL,
     CBaseKeyFrame* pEnd = NULL);
@@ -396,7 +396,7 @@ Questo metodo indica alla transizione di iniziare dopo il fotogramma chiave spec
 
 Stabilisce una relazione tra la variabile di animazione e la transizione.
 
-```
+```cpp
 void SetRelatedVariable(CAnimationVariable* pVariable);
 ```
 

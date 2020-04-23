@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369306"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754285"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Classe CD2DBitmapBrush
 
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 Associa all'oggetto un'interfaccia di risorsa esistente
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ Puntatore a una stringa con terminazione null che contiene il nome del file.
 
 Inizializza l'oggetto
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ Puntatore a un ID2D1BitmapBrush interfaccia o NULL se l'oggetto non è ancora in
 
 Specifica l'origine bitmap utilizzata da questo pennello per disegnare
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ Origine bitmap utilizzata dal pennello
 
 Specifica il modo in cui il pennello affianca orizzontalmente le aree che si estendono oltre la bitmap
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ Valore che specifica il modo in cui il pennello affianca orizzontalmente le aree
 
 Specifica il modo in cui il pennello affianca verticalmente le aree che si estendono oltre la bitmap
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ Valore che specifica il modo in cui il pennello affianca verticalmente le aree c
 
 Specifica la modalità di interpolazione utilizzata quando la bitmap del pennello viene ridimensionata o ruotata
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 

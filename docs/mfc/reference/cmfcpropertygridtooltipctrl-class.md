@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc5d6d99c326fba7020e8c5040c3bf28d09f8f0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361782"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754125"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl (classe)
 
@@ -115,7 +115,7 @@ TRUESe la finestra è stata creata correttamente. in caso contrario, FALSE.
 
 Disattiva e nasconde il controllo descrizione comando.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -127,7 +127,7 @@ Questo metodo imposta l'ultima posizione e il testo su valori vuoti, in modo che
 
 Restituisce le coordinate dell'ultima posizione del controllo descrizione comandi.
 
-```
+```cpp
 void GetLastRect(CRect& rect) const;
 ```
 
@@ -140,7 +140,7 @@ void GetLastRect(CRect& rect) const;
 
 Nasconde il controllo descrizione comando.
 
-```
+```cpp
 void Hide();
 ```
 
@@ -148,7 +148,7 @@ void Hide();
 
 Imposta la spaziatura tra il testo della descrizione comando e il bordo della finestra della descrizione comandi.
 
-```
+```cpp
 void SetTextMargin(int nTextMargin);
 ```
 
@@ -161,7 +161,7 @@ void SetTextMargin(int nTextMargin);
 
 Visualizza il controllo descrizione comando.
 
-```
+```cpp
 void Track(
     CRect rect,
     const CString& strText);

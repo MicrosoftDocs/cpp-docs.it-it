@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367519"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752395"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Classe CMFCDynamicLayout
 
@@ -123,7 +123,7 @@ La posizione e le dimensioni di un controllo figlio vengono modificate in modo d
 
 Aggiunge una finestra figlio, in genere un controllo, all'elenco di finestre controllate dal gestore del layout dinamico.
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ Posizione e dimensioni di un controllo figlio quando viene modificato in modo di
 
 Recupera il rettangolo per l'area client corrente della finestra.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ Valore [MoveSettings](#movesettings_structure) che incapsula il rapporto di spos
 
 Imposta le dimensioni finestra al di sotto delle quali il layout non verrà regolato.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Dimensione*<br/>
+*size*<br/>
 Le dimensioni finestra al di sotto delle quali il layout non verrà regolato.
 
 ### <a name="remarks"></a>Osservazioni

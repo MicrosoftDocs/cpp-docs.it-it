@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364287"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752203"
 ---
 # <a name="ctoolbar-class"></a>Classe CToolBar
 
@@ -292,7 +292,7 @@ Chiamare la funzione membro [Create](#create) per creare la finestra della barra
 
 Questa funzione membro recupera l'ID del controllo, lo stile e l'indice dell'immagine del pulsante della barra degli strumenti o del separatore nella posizione specificata da *nIndex.*
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ Ad esempio, `SetBitmap` chiamare per modificare l'immagine bitmap dopo che l'ute
 
 Chiamare questa funzione membro per impostare l'ID di comando del pulsante, lo stile e il numero di immagine.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ Se *lpIDArray* è NULL, questa funzione alloca spazio per il numero di elementi 
 
 Chiamare questa funzione membro per impostare lo stile di un pulsante o separatore o per raggruppare i pulsanti.
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Questa funzione membro imposta l'altezza della barra degli strumenti sul valore, in pixel, specificato in *cyHeight*.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ Se questa funzione non viene chiamata, il framework utilizza le dimensioni del p
 
 Chiamare questa funzione membro per impostare i pulsanti della barra degli strumenti sulle dimensioni, in pixel, specificate in *sizeButton*.
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321907"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754618"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 Chiude il controllo selezione data e ora corrente.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Specifica la combinazione di stili di controllo data e ora. Per ulteriori informazioni sugli stili di selezione data e ora, vedere [Stili del controllo selezione data e ora](/windows/win32/Controls/date-and-time-picker-control-styles) in Windows SDK.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT,](/previous-versions/dd162897\(v=vs.85\)) ovvero la posizione e le dimensioni del controllo selezione data e ora.
+Riferimento a una struttura [RECT,](/windows/win32/api/windef/ns-windef-rect) ovvero la posizione e le dimensioni del controllo selezione data e ora.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore a un [cWnd](../../mfc/reference/cwnd-class.md) oggetto che è la finestra padre del controllo selezione data e ora. Non deve essere NULL.
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor (colore)*<br/>
 **valore int** che specifica l'area del controllo calendario mensile da impostare. Questo valore può essere uno dei seguenti.
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |MCSC_BACKGROUND|Impostare il colore di sfondo visualizzato tra i mesi.|
 |MCSC_MONTHBK|Impostare il colore di sfondo visualizzato entro un mese.|
@@ -474,7 +474,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [DTM_SETM
 
 Imposta il tipo di carattere che verrà utilizzato dal controllo calendario del mese figlio del controllo selezione data e ora.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);

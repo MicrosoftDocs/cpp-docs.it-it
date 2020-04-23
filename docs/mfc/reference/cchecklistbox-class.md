@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 8ca8d3b2cb4ce3c5b070d883e0a418ebec3665b1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0e80e80d61104a4d8cb5f1cfd4e26a64c42249
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352374"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752736"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox (classe)
 
@@ -209,7 +209,7 @@ Se gli elementi della casella di controllo non hanno `Create`tutti la stessa alt
 
 Chiamare questa funzione per abilitare o disabilitare un elemento della casella di controllo.
 
-```
+```cpp
 void Enable(
     int nIndex,
     BOOL bEnabled = TRUE);
@@ -326,7 +326,7 @@ L'implementazione predefinita restituisce solo la posizione`rectCheckBox`e le di
 
 Imposta lo stato della casella di controllo specificata.
 
-```
+```cpp
 void SetCheck(
     int nIndex,
     int nCheck);
@@ -354,7 +354,7 @@ Nella tabella seguente sono elencati i valori possibili per il parametro *nCheck
 
 Chiamare questa funzione per impostare lo stile delle caselle di controllo nella casella dell'elenco di controllo.
 
-```
+```cpp
 void SetCheckStyle(UINT nStyle);
 ```
 

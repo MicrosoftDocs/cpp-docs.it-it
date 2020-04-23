@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365710"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751604"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 
@@ -307,7 +307,7 @@ Vedere l'esempio per [CFile::Abort](../../mfc/reference/cfile-class.md#abort).
 
 Genera un'eccezione di archivio.
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ Punta a una stringa contenente `CArchive` il nome dell'oggetto che ha causato l'
 
 Genera un'eccezione di file.
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ Genera un'eccezione di argomento non valido.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ Questa funzione viene chiamata quando vengono utilizzati argomenti non validi.
 
 Genera un'eccezione di memoria.
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ Chiamare questa funzione se le chiamate agli allocatori di memoria di sistema so
 
 Genera un'eccezione che è il risultato di una richiesta di una funzionalità non supportata.
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 Genera un'eccezione di risorsa.
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ Questa funzione viene in genere chiamata quando non è possibile caricare una ri
 
 Genera un'eccezione per arrestare un'operazione dell'utente finale.
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ Questa funzione viene normalmente chiamata immediatamente dopo `AfxMessageBox` a
 
 Utilizzare questa funzione per generare un'eccezione all'interno di una funzione di automazione OLE.
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ Le informazioni fornite a questa funzione possono essere visualizzate dall'appli
 
 Crea un oggetto `COleException` di tipo e genera un'eccezione.
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ La versione che accetta un HRESULT come argomento converte il codice del risulta
 
 Chiamare questa funzione per generare un'eccezione di tipo [CDaoException](../../mfc/reference/cdaoexception-class.md) dal proprio codice.
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ Per informazioni sulle eccezioni relative alle classi `CDaoException` DAO MFC, v
 
 Chiamare questa funzione per generare un'eccezione di tipo `CDBException` dal proprio codice.
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ Per informazioni sui valori RETCODE definiti da ODBC, vedere il capitolo 8 "Recu
 
 Funzione di terminazione predefinita fornita da MFC.
 
-```
+```cpp
 void  AfxAbort();
 ```
 

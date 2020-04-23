@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377055"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755062"
 ---
 # <a name="canimationvariable-class"></a>Classe CAnimationVariable
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 Aggiunge una transizione.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ Questo metodo viene chiamato per aggiungere una transizione all'elenco interno d
 
 Aggiunge transizioni dall'elenco interno allo storyboard.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ Costruisce un oggetto variabile di animazione e ne imposta il valore predefinito
 
 Cancella le transizioni.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ Questo metodo viene chiamato dal framework quando è necessario creare transizio
 
 Abilita o disabilita l'evento IntegerValueChanged.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ Quando l'evento ValueChanged è abilitato, il framework chiama il metodo virtual
 
 Abilita o disabilita l'evento ValueChanged.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 Imposta il valore predefinito e rilascia l'oggetto COM IUIAnimationVariable.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ Utilizzare questo metodo per reimpostare il valore predefinito. Questo metodo ri
 
 Imposta la relazione tra una variabile di animazione e un oggetto di animazione.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 

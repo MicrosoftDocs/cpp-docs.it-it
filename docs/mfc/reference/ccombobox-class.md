@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369516"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754838"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -308,7 +308,7 @@ CComboBox();
 
 Elimina (cancella) la selezione corrente, se presente, nel controllo di modifica della casella combinata.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -337,7 +337,7 @@ Puntatore long a una struttura [COMPAREITEMSTRUCT.](/windows/win32/api/winuser/n
 
 Indica la posizione relativa dei due `COMPAREITEMSTRUCT` elementi descritti nella struttura. Può essere uno dei valori seguenti:
 
-|Valore|Significato|
+|valore|Significato|
 |-----------|-------------|
 |- 1|L'articolo 1 viene ordinato prima dell'articolo 2.|
 |0|L'elemento 1 e l'elemento 2 hanno lo stesso modo.|
@@ -357,7 +357,7 @@ Per impostazione predefinita, questa funzione membro non esegue alcuna operazion
 
 Copia la selezione corrente, se presente, nel controllo di modifica della casella combinata negli Appunti in formato CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ Applicare gli stili di [finestra](../../mfc/reference/styles-used-by-mfc.md#wind
 
 Elimina (taglia) la selezione corrente, se presente, nel controllo di modifica della casella combinata e copia il testo eliminato negli Appunti in formato CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ Indice in base zero dell'elemento attualmente selezionato nella casella di riepi
 
 Chiamare `GetDroppedControlRect` la funzione membro per recuperare le coordinate dello schermo della casella di riepilogo visibile (rilasciata) di una casella combinata a discesa.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ Il valore a 32 bit può essere impostato con il parametro *dwItemData* di una ch
 
 Recupera il valore a 32 bit fornito dall'applicazione associato all'elemento della casella combinata specificato come puntatore (**void** <strong>\*</strong>).
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ Vedere [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pe
 
 Inserisce i dati dagli Appunti nel controllo di modifica della casella combinata nella posizione corrente del cursore.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ I dati vengono inseriti solo se gli Appunti contengono dati in formato CF_TEXT.
 
 Rimuove tutti gli elementi dalla casella di riepilogo e modifica il controllo di una casella combinata.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ Lo scorrimento nel controllo statico è disabilitato quando l'elenco di elementi
 
 Imposta la larghezza, in pixel, in base alla quale è possibile scorrere orizzontalmente la parte casella di riepilogo della casella combinata.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ Il sistema scorre la casella di riepilogo finché non viene visualizzato l'eleme
 
 Mostra o nasconde la casella di riepilogo di una casella combinata con lo stile [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [CBS_DROPDOWNLIST.](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

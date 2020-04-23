@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369469"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754818"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Specifica la combinazione di stili di casella combinata applicati alla casella combinata. Per ulteriori informazioni sugli stili, vedere **la sezione Osservazioni** riportata di seguito.
 
 *Rect*<br/>
-Un riferimento a un [oggetto CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [RECT,](/previous-versions/dd162897\(v=vs.85\)) ovvero la posizione e le dimensioni della casella combinata.
+Un riferimento a un [oggetto CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [RECT,](/windows/win32/api/windef/ns-windef-rect) ovvero la posizione e le dimensioni della casella combinata.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore a un oggetto [CWnd](../../mfc/reference/cwnd-class.md) che è la finestra `CDialog`padre della casella combinata (in genere un oggetto ). Non deve essere NULL.
@@ -210,7 +210,7 @@ Specifica lo stile esteso del controllo in fase di creazione. Per un elenco di s
 Stile del controllo casella combinata. Consultate [Creare](#create) per un elenco di stili.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
+Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
 
 *pParentWnd (informazioni in due)*<br/>
 Puntatore alla finestra che è padre del controllo.

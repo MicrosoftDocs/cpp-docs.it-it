@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: fcf9505a7792aea6807e37f05cd1cb1aaad55830
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8746be43e3f2a31558904323392983b183d4f198
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366111"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753893"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
 
@@ -104,7 +104,7 @@ Per ulteriori informazioni sulle origini dati e sul trasferimento dei dati, vede
 
 Chiamare questa funzione per specificare un formato in cui vengono offerti i dati durante le operazioni di trasferimento dei dati.
 
-```
+```cpp
 void CacheData(
     CLIPFORMAT cfFormat,
     LPSTGMEDIUM lpStgMedium,
@@ -140,7 +140,7 @@ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/win32/api/winu
 
 Chiamare questa funzione per specificare un formato in cui vengono offerti i dati durante le operazioni di trasferimento dei dati.
 
-```
+```cpp
 void CacheGlobalData(
     CLIPFORMAT cfFormat,
     HGLOBAL hGlobal,
@@ -180,7 +180,7 @@ COleDataSource();
 
 Chiamare questa funzione per specificare un formato in cui vengono offerti i dati durante le operazioni di trasferimento dei dati.
 
-```
+```cpp
 void DelayRenderData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -210,7 +210,7 @@ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/win32/api/winu
 
 Chiamare questa funzione per specificare un formato in cui vengono offerti i dati durante le operazioni di trasferimento dei dati.
 
-```
+```cpp
 void DelayRenderFileData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -240,7 +240,7 @@ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/win32/api/winu
 
 Chiamare questa funzione per supportare la modifica del contenuto dell'origine dati.
 
-```
+```cpp
 void DelaySetData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -316,7 +316,7 @@ Per ulteriori informazioni, vedere l'articolo [OLE drag and drop](../../mfc/drag
 
 Chiamare questa funzione `COleDataSource` per svuotare l'oggetto di dati.
 
-```
+```cpp
 void Empty();
 ```
 
@@ -482,7 +482,7 @@ Per ulteriori informazioni, vedere le strutture [STGMEDIUM](/windows/win32/api/o
 
 Inserisce nell'oggetto `COleDataSource` negli Appunti dopo aver chiamato una delle seguenti funzioni: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata)o [DelayRenderFileData](#delayrenderfiledata).
 
-```
+```cpp
 void SetClipboard();
 ```
 

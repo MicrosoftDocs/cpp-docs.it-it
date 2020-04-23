@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376252"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753052"
 ---
 # <a name="cstatusbar-class"></a>Classe CStatusBar
 
@@ -271,7 +271,7 @@ ID dell'indicatore specificato da *nIndex*.
 
 Copia le coordinate dell'indicatore specificato da *nIndex* nella struttura a cui punta *lpRect*.
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 Indice dell'indicatore di cui devono essere recuperate le coordinate del rettangolo.
 
 *Lprect*<br/>
-Punta a una struttura [RECT](/previous-versions/dd162897\(v=vs.85\)) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che riceverà le coordinate dell'indicatore specificato da *nIndex*.
+Punta a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che riceverà le coordinate dell'indicatore specificato da *nIndex*.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -293,7 +293,7 @@ Le coordinate sono in pixel rispetto all'angolo superiore sinistro della barra d
 
 Imposta *nID*, *nStyle*e *cxWidth* sull'ID, lo stile e la larghezza del riquadro dell'indicatore nella posizione specificata da *nIndex*.
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Imposta il riquadro dell'indicatore specificato su un nuovo ID, stile e larghezza.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ Sono supportati i seguenti stili di indicatore:
 
 Chiamare questa funzione membro per impostare lo stile del riquadro di una barra di stato.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);
