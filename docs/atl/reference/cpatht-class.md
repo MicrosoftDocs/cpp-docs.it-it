@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746590"
+ms.locfileid: "82032134"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 
@@ -102,8 +102,8 @@ Classe di stringhe ATL/MFC da utilizzare per il percorso (vedere [CStringT](../.
 |[CPathT::Canonicalize](#canonicalize)|Chiamare questo metodo per convertire il percorso in formato canonico.|
 |[CPathT::Combina](#combine)|Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un unico percorso.|
 |[CPathT::CommonPrefix](#commonprefix)|Chiamare questo metodo per determinare se il percorso specificato condivide un prefisso comune con il percorso corrente.|
-|[CPathT::CompactPath](#compactpath)|Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una determinata larghezza in pixel sostituendo i componenti del percorso con puntini di sospensione.|
-|[CPathT::CompactPathEx](#compactpathex)|Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di un determinato numero di caratteri sostituendo i componenti del percorso con puntini di sospensione.|
+|[CPathT::CompactPath](#compactpath)|Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una determinata larghezza in pixel sostituendo i componenti del percorso con i ellissi.|
+|[CPathT::CompactPathEx](#compactpathex)|Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di un determinato numero di caratteri sostituendo i componenti di percorso con i ellissi.|
 |[CPathT::FileExists](#fileexists)|Chiamare questo metodo per verificare se il file in questo nome di percorso esiste.|
 |[CPathT::FindExtension](#findextension)|Chiamare questo metodo per trovare la posizione dell'estensione di file all'interno del percorso.|
 |[Nome FileCPathT::FindFileName](#findfilename)|Chiamare questo metodo per trovare la posizione del nome del file all'interno del percorso.|
@@ -288,7 +288,7 @@ Un prefisso è uno di\\\\questi tipi: "C: ", ".", "..", "... \\\\". Per ulterior
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una determinata larghezza in pixel sostituendo i componenti del percorso con puntini di sospensione.
+Chiamare questo metodo per troncare un percorso di file per adattarlo all'interno di una determinata larghezza in pixel sostituendo i componenti del percorso con i ellissi.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ Per ulteriori informazioni, vedere [PathCompactPath](/windows/win32/api/shlwapi/
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di un determinato numero di caratteri sostituendo i componenti del percorso con puntini di sospensione.
+Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di un determinato numero di caratteri sostituendo i componenti di percorso con i ellissi.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

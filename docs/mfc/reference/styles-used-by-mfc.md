@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372921"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032395"
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC
 
@@ -418,7 +418,7 @@ Gli stili statici si applicano agli oggetti [CStatic Class.](../../mfc/reference
 |SS_BLACKRECT|Specifica un rettangolo riempito con il colore utilizzato per disegnare le cornici delle finestre. Il colore predefinito è nero.|
 |SS_CENTER|Designa un semplice rettangolo e visualizza il testo specificato centrato nel rettangolo. Il testo viene formattato prima di essere visualizzato. Le parole che si estendono oltre la fine di una riga vengono automaticamente mandate a capo all'inizio della riga centrata successiva.|
 |SS_CENTERIMAGE|Specifica che, se la bitmap o l'icona è più piccola dell'area client del controllo statico, il resto dell'area client viene riempito con il colore del pixel nell'angolo superiore sinistro della bitmap o dell'icona. Se il controllo statico contiene una singola riga di testo, il testo viene centrato verticalmente nell'area client del controllo.|
-|SS_ENDELLIPSIS|o SS_PATHELLIPSIS Sostituisce parte della stringa specificata con puntini di sospensione, se necessario, in modo che il risultato si adatti al rettangolo specificato. <br /><br />È possibile specificare SS_END_ELLIPSIS per sostituire i caratteri alla fine della stringa o SS_PATHELLIPSIS per sostituire i caratteri al centro della stringa. Se la stringa contiene\\caratteri barra rovesciata ( ), SS_PATHELLIPSIS conserva la maggior parte del testo dopo l'ultima barra rovesciata possibile.|
+|SS_ENDELLIPSIS|o SS_PATHELLIPSIS Sostituisce parte della stringa specificata con i puntini di sospensione, se necessario, in modo che il risultato si adatti al rettangolo specificato. <br /><br />È possibile specificare SS_END_ELLIPSIS per sostituire i caratteri alla fine della stringa o SS_PATHELLIPSIS per sostituire i caratteri al centro della stringa. Se la stringa contiene\\caratteri barra rovesciata ( ), SS_PATHELLIPSIS conserva la maggior parte del testo dopo l'ultima barra rovesciata possibile.|
 |SS_ENHMETAFILE|Specifica che un metafile avanzato deve essere visualizzato nel controllo statico. Il testo specificato è il nome di un metafile. Un controllo statico metafile avanzato ha una dimensione fissa; il metafile viene ridimensionato per adattarsi all'area client del controllo statico.|
 |SS_ETCHEDFRAME|Disegna la cornice del controllo statico utilizzando lo stile EDGE_ETCHED bordo.|
 |SS_ETCHEDHORZ|Disegna i bordi superiore e inferiore del controllo statico utilizzando lo stile EDGE_ETCHED bordo.|
@@ -439,7 +439,7 @@ Gli stili statici si applicano agli oggetti [CStatic Class.](../../mfc/reference
 |SS_USERITEM|Specifica un elemento definito dall'utente.|
 |SS_WHITEFRAME|Specifica una casella con una cornice disegnata con lo stesso colore dello sfondo della finestra. Il valore predefinito è bianco.|
 |SS_WHITERECT|Specifica un rettangolo riempito con il colore utilizzato per riempire lo sfondo della finestra. Il valore predefinito è bianco.|
-|SS_WORDELLIPSIS|Tronca il testo che non si adatta e aggiunge puntini di sospensione.|
+|SS_WORDELLIPSIS|Tronca il testo che non si adatta e aggiunge i lipsia.|
 
 ## <a name="window-styles"></a><a name="window-styles"></a>Stili di finestra
 

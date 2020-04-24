@@ -2,20 +2,20 @@
 title: Recupero di puntatori a buffer di dati (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e60adc4163e96349f6f4bafa919944e5d8d5b51
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162308"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032369"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Recupero di puntatori a buffer di dati (C++/CX)
 
 In Windows Runtime l'interfaccia [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) fornisce un modo indipendente dalla lingua e basato sui flussi per accedere ai buffer di dati. In C++ puoi ottenere un puntatore non elaborato alla matrice di byte sottostante utilizzando l'interfaccia IBufferByteAccess della libreria di Windows Runtime definita in robuffer.h. Con questo approccio puoi modificare la matrice di byte sul posto senza creare inutili copie dei dati.
 
-Il diagramma seguente mostra un elemento immagine XAML, la cui origine è [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap). Un'app client scritta in qualsiasi linguaggio può passare un riferimento a `WriteableBitmap` al codice C++, quindi C++ può utilizzare il riferimento per ottenere il buffer sottostante. In un'app Universal Windows Platform scritta in C++, è possibile usare la funzione nell'esempio seguente direttamente nel codice sorgente senza comprimerlo in un componente Windows Runtime.
+Il diagramma seguente mostra un elemento immagine XAML, la cui origine è [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap). Un'app client scritta in qualsiasi linguaggio può passare un riferimento a `WriteableBitmap` al codice C++, quindi C++ può utilizzare il riferimento per ottenere il buffer sottostante. In un'app della piattaforma Windows universale scritta in C, puoi usare la funzione nell'esempio seguente direttamente nel codice sorgente senza commila in un componente di Windows Runtime.
 
-![C&#43; &#43; il codice che accede direttamente i dati pixel](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; codice che accede direttamente ai dati pixel")
+![C&#43;&#43; codice che accede direttamente ai dati pixel](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43;&#43; codice che accede direttamente ai dati pixel")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
@@ -51,11 +51,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 ## <a name="complete-example"></a>Esempio completo
 
-La procedura seguente illustra come creare un'app c# (Universal Windows Platform) che passa un `WriteableBitmap` per una DLL del componente C++ di Windows Runtime. Il codice C++ ottiene un puntatore al buffer di pixel ed esegue una semplice modifica dell'immagine sul posto. In alternativa, puoi creare l'app client in Visual Basic, in JavaScript o in C++, anziché C#. Se usi C++, non è necessaria la DLL del componente. Puoi semplicemente aggiungere tali metodi direttamente alla classe MainPage o a un'altra classe che definisci.
+I passaggi seguenti illustrano come creare un'app `WriteableBitmap` della piattaforma Windows universale di C' che passa un oggetto a una DLL del componente di Windows Runtime di C. Il codice C++ ottiene un puntatore al buffer di pixel ed esegue una semplice modifica dell'immagine sul posto. In alternativa, puoi creare l'app client in Visual Basic, in JavaScript o in C++, anziché C#. Se usi C++, non è necessaria la DLL del componente. Puoi semplicemente aggiungere tali metodi direttamente alla classe MainPage o a un'altra classe che definisci.
 
 #### <a name="create-the-client"></a>Creare il client
 
-1. Usare il modello di progetto app vuota per creare un'app c# (Universal Windows Platform).
+1. Usare il modello di progetto di app vuota per creare un'app della piattaforma Windows universale di C.
 
 1. In MainPage.xaml
 
@@ -129,7 +129,7 @@ La procedura seguente illustra come creare un'app c# (Universal Windows Platform
 
 #### <a name="create-the-c-component"></a>Creare il componente C++
 
-1. Aggiungere un nuovo componente di Runtime di Windows C++ alla soluzione esistente e denominarlo `ImageManipCPP`. Aggiungi un riferimento al progetto C# facendo clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliendo **Aggiungi**, **Riferimento**.
+1. Aggiungere un nuovo componente di Windows Runtime di C, ad esempio, alla soluzione esistente, denominarlo. `ImageManipCPP` Aggiungi un riferimento al progetto C# facendo clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliendo **Aggiungi**, **Riferimento**.
 
 1. In Class1.h
 

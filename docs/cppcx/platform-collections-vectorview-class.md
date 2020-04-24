@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363799"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032226"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 
@@ -40,7 +40,7 @@ Specifica un predicato binario per verificare l'uguaglianza con valori di tipo `
 
 ### <a name="remarks"></a>Osservazioni
 
-La `VectorView` classe implementa l'interfaccia [Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) e il supporto per gli iteratori della libreria di modelli standard.
+La `VectorView` classe implementa l'interfaccia [Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) e il supporto per gli iteratori della libreria di modelli standard.
 
 ### <a name="members"></a>Membri
 
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
+*value*<br/>
 Elemento da cercare.
 
 *Indice*<br/>
@@ -250,10 +250,10 @@ Oggetto [std::initializer_list](../standard-library/initializer-list-class.md) i
 *N*<br/>
 Numero di elementi in una raccolta di oggetti utilizzati per inizializzare l'oggetto VectorView corrente.
 
-*Dimensione*<br/>
+*size*<br/>
 Numero di elementi nell'oggetto VectorView.
 
-*Valore*<br/>
+*value*<br/>
 Valore utilizzato per inizializzare ciascun elemento nell'oggetto VectorView corrente.
 
 *Presso*<br/>

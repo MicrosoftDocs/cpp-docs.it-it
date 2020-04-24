@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354439"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032447"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
-Rappresenta una *mappa*, che è una raccolta di coppie chiave-valore. Implementa [Windows::Foundation::Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) per facilitare [l'associazione dati](/windows/uwp/data-binding/data-binding-in-depth)XAML.
+Rappresenta una *mappa*, che è una raccolta di coppie chiave-valore. Implementa [Windows::Foundation::Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) per facilitare [l'associazione dati](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,7 +41,7 @@ ref class Map sealed;
 *K*<br/>
 Tipo di chiave nella coppia chiave-valore.
 
-*V*<br/>
+*Presso*<br/>
 Tipo di valore nella coppia chiave-valore.
 
 *C*<br/>
@@ -63,7 +63,7 @@ I tipi consentiti sono:
 
 - classe enum pubblica
 
-La mappa è fondamentalmente un wrapper per [std::map](../standard-library/map-class.md). Si tratta di un'implementazione concreta di [Windows::Foundation::Collections::IMap<Windows::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) tipi che vengono passati attraverso le interfacce pubbliche di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::Map` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. È possibile correggere l'errore modificando il tipo del parametro o il valore restituito in [Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+La mappa è fondamentalmente un wrapper per [std::map](../standard-library/map-class.md). Si tratta di un'implementazione concreta di [Windows::Foundation::Collections::IMap<Windows::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/windows.foundation.collections.imap-2) e [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) tipi che vengono passati attraverso le interfacce pubbliche di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::Map` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. È possibile correggere l'errore modificando il tipo del parametro o il valore restituito in [Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2).
 
 Per ulteriori informazioni, vedere [Raccolte](../cppcx/collections-c-cx.md).
 
@@ -88,7 +88,7 @@ Per ulteriori informazioni, vedere [Raccolte](../cppcx/collections-c-cx.md).
 |[Map::Remove](#remove)|Elimina la coppia chiave-valore specificata dall'oggetto Map corrente.|
 |[Mappa::Dimensione](#size)|Restituisce il numero di elementi nell'oggetto Map corrente.|
 
-### <a name="events"></a>Eventi
+### <a name="events"></a>Events
 
 |||
 |-|-|
@@ -136,7 +136,7 @@ Un modo pratico per contenere l'iteratore restituito da First() consiste nell'as
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>Metodo Map::GetView
 
-Restituisce una visualizzazione di sola lettura dell'oggetto Map corrente; ovvero una [classe Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md)che implementa l'interfaccia [Windows::Foundation::Collections::IMapView\<K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Restituisce una visualizzazione di sola lettura dell'oggetto Map corrente; ovvero [un'interfaccia Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md)che implementa l'interfaccia [di windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave usata per individuare l'elemento Map. Il tipo di *chiave* è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -179,10 +179,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
 
-*Valore*<br/>
+*value*<br/>
 Valore della coppia chiave-valore. Il tipo di *valore* è nometipo *V*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave utilizzata per individuare un elemento in Map. Il tipo di *chiave* è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito
 
-Oggetto [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si è verificato. Vedere anche [\<IMapChangedEventArgs K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+Oggetto [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si è verificato. Vedere anche [\<IMapChangedEventArgs K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>Metodo Map::Size
 
-Restituisce il numero di [elementi Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) nella mappa.
+Restituisce il numero di [elementi Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) nella mappa.
 
 ### <a name="syntax"></a>Sintassi
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: 36b8b524591693775403d66fdc1f0754aaf67778
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 986555ca91d19dfa838f807665f2cbf9a003bcef
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364994"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755101"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Classe CAnimationStoryboardEventHandler
 
@@ -142,7 +142,7 @@ S_OK se il metodo ha esito positivo; altrimenti E_FAIL.
 
 Archivia un puntatore al controller di animazione per instradare gli eventi.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 

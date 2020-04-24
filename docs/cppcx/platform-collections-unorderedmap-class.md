@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354425"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031498"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -32,7 +32,7 @@ ref class Map sealed;
 *K*<br/>
 Tipo di chiave nella coppia chiave-valore.
 
-*V*<br/>
+*Presso*<br/>
 Tipo di valore nella coppia chiave-valore.
 
 *C*<br/>
@@ -52,7 +52,7 @@ I tipi consentiti sono:
 
 - classe enum pubblica
 
-**UnorderedMap** è fondamentalmente un wrapper per [std::unordered_map](../standard-library/unordered-map-class.md) che supporta l'archiviazione di tipi Windows Runtime. Si tratta di un'implementazione concreta dei tipi [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) che vengono passati attraverso le interfacce pubbliche di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::UnorderedMap` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. Per correggere l'errore, modificare il tipo di parametro o di valore restituito in [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** è fondamentalmente un wrapper per [std::unordered_map](../standard-library/unordered-map-class.md) che supporta l'archiviazione di tipi Windows Runtime. Si tratta di un'implementazione concreta dei tipi [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2) e [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) che vengono passati attraverso le interfacce pubbliche di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::UnorderedMap` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. Per correggere l'errore, modificare il tipo di parametro o di valore restituito in [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
 
 Per ulteriori informazioni, vedere [Raccolte](../cppcx/collections-c-cx.md).
 
@@ -77,7 +77,7 @@ Per ulteriori informazioni, vedere [Raccolte](../cppcx/collections-c-cx.md).
 |[UnorderedMap::Rimuovi](#remove)|Elimina la coppia chiave-valore specificata dall'oggetto Map corrente.|
 |[UnorderedMap::Dimensione](#size)|Restituisce il numero di elementi nell'oggetto Map corrente.|
 
-### <a name="events"></a>Eventi
+### <a name="events"></a>Events
 
 |||
 |-|-|
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>Metodo UnorderedMap::First
 
-Restituisce un iteratore che specifica il primo elemento [windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) nella mappa non ordinata.
+Restituisce un iteratore che specifica il primo elemento [windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) nella mappa non ordinata.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -126,7 +126,7 @@ Un modo pratico per contenere l'iteratore restituito da First() consiste nell'as
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>Metodo UnorderedMap::GetViewUnorderedMap::GetView Method
 
-Restituisce una visualizzazione di sola lettura dell'oggetto UnorderedMap corrente; ovvero una [classe Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md) che implementa l'interfaccia [Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Restituisce una visualizzazione di sola lettura dell'oggetto UnorderedMap corrente; ovvero [un'interfaccia Platform::Collections::UnorderedMapView che](../cppcx/platform-collections-unorderedmapview-class.md) implementa l'interfaccia [Windows::Foundation::Collections::IMapView::IMapViewView.](/uwp/api/windows.foundation.collections.imapview-2)
 
 ### <a name="syntax"></a>Sintassi
 
@@ -152,7 +152,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave usata per individuare l'elemento UnorderedMap. Il tipo di *chiave* è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -174,10 +174,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
 
-*Valore*<br/>
+*value*<br/>
 Valore della coppia chiave-valore. Il tipo di *valore* è nometipo *V*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -198,7 +198,7 @@ V Lookup(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave usata per individuare un elemento in UnorderedMap. Il tipo di *chiave* è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito
 
-Oggetto [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si è verificato. Vedere anche [\<IMapChangedEventArgs K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+Oggetto [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si è verificato. Vedere anche [\<IMapChangedEventArgs K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
@@ -236,12 +236,12 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>Metodo UnorderedMap::SizeUnorderedMap::Size Method
 
-Restituisce il numero di [elementi Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) in UnorderedMap.
+Restituisce il numero di [elementi Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) in UnorderedMap.
 
 ### <a name="syntax"></a>Sintassi
 
