@@ -2,12 +2,12 @@
 title: Interfacce (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366045"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032356"
 ---
 # <a name="interfaces-ccx"></a>Interfacce (C++/CX)
 
@@ -63,7 +63,7 @@ Quando una classe di riferimento implementa più interfacce e queste ultime hann
 
 ## <a name="generic-interfaces"></a>Interfacce generiche
 
-La `generic` parola chiave viene utilizzata per rappresentare un tipo con parametri di Windows Runtime. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Windows Runtime definisce alcune interfacce generiche, ad [esempio, Windows::Foundation::Collections::IVector\<T>, ](/uwp/api/Windows.Foundation.Collections.IVector_T_)ma non supporta la creazione di interfacce generiche pubbliche definite dall'utente in C. Tuttavia, è possibile creare interfacce generiche private.
+La `generic` parola chiave viene utilizzata per rappresentare un tipo con parametri di Windows Runtime. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Windows Runtime definisce alcune interfacce generiche, ad [esempio, Windows::Foundation::Collections::IVector\<T>, ](/uwp/api/windows.foundation.collections.ivector-1)ma non supporta la creazione di interfacce generiche pubbliche definite dall'utente in C. Tuttavia, è possibile creare interfacce generiche private.
 
 Ecco come usare i tipi di Windows Runtime per creare un'interfaccia generica:Here's how Windows Runtime types can be used to author a generic interface:
 

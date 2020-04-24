@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369726"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755149"
 ---
 # <a name="canimationpoint-class"></a>Classe CAnimationPoint
 
@@ -102,7 +102,7 @@ Il CAnimationPoint classe incapsula due CAnimationVariable oggetti e può rappre
 
 Aggiunge transizioni per le coordinate X e Y.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -270,7 +270,7 @@ Questa funzione chiama internamente GetValue.This function internally calls GetV
 
 Assegna ptSrc a CAnimationPoint.
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
@@ -287,7 +287,7 @@ Assegna ptSrc a CAnimationPoint. È consigliabile eseguire questa operazione pri
 
 Imposta il valore predefinito.
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 

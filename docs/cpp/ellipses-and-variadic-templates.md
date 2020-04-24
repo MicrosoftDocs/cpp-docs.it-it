@@ -1,15 +1,15 @@
 ---
-title: Ellissi e modelli variadic
+title: Ellissi e modelli Variadic
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366343"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031524"
 ---
-# <a name="ellipses-and-variadic-templates"></a>Ellissi e modelli variadic
+# <a name="ellipsis-and-variadic-templates"></a>Ellissi e modelli Variadic
 
 In questo articolo viene illustrato come`...`utilizzare i farlipsis ( ) con i modelli variadic di C. I puntine hanno avuto molti usi in C e C . Questi includono elenchi di argomenti variabili per le funzioni. La `printf()` funzione della libreria di runtime C è uno degli esempi più noti.
 

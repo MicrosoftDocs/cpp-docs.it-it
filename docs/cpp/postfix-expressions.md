@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 25dfc6fd8f28f6c78fd5a4e9f76759ac076cae1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 897eb80c713f786ecf0f7e6c9cf24cd8bdfc0aa8
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032278"
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
 
@@ -21,10 +21,10 @@ Le espressioni di suffisso sono costituite da espressioni primarie o da espressi
 
 |Nome operatore|Notazione dell'operatore|
 |-------------------|-----------------------|
-|[Operatore di indice](../cpp/subscript-operator.md)|**[ ]**|
+|[Operatore pedice](../cpp/subscript-operator.md)|**[ ]**|
 |[Operatore di chiamata di funzione](../cpp/function-call-operator-parens.md)|**( )**|
-|[Operatore di conversione esplicita del tipo](../cpp/explicit-type-conversion-operator-parens.md)|*nome-tipo* **()**|
-|[Operatore di accesso ai membri](../cpp/member-access-operators-dot-and.md)|**.** o **->**|
+|[Operatore di conversione di tipi esplicita](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
+|[Operatore di accesso ai membri](../cpp/member-access-operators-dot-and.md)|**.** O**->**|
 |[Operatore di incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Operatore di decremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
 
@@ -35,13 +35,13 @@ primary-expression
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
-Il *suffisso-espressione* precedente può essere un'espressione primaria o un'altra espressione suffissa.  Vedere **espressioni primarie**.  Le espressioni di suffisso vengono raggruppate da sinistra a destra, consentendone il concatenamento nel modo seguente:
+*L'espressione suffissa* precedente può essere un'espressione primaria o un'altra espressione suffissa.  Vedere **Espressioni primarie**.  Le espressioni di suffisso vengono raggruppate da sinistra a destra, consentendone il concatenamento nel modo seguente:
 
 ```cpp
 func(1)->GetValue()++
 ```
 
-Nell'espressione precedente, `func` è un'espressione primaria, `func(1)` è un'espressione di suffisso di funzione, `func(1)->GetValue` è un'espressione suffissa che specifica un membro della classe, `func(1)->GetValue()` è un'altra espressione suffissa di funzione e l'intera espressione è un'espressione suffissa che incrementa il valore restituito di GetValue.  Il significato dell'intera espressione è "chiamare func passando 1 come argomento e ottenere un puntatore a una classe come valore restituito.  Chiamare quindi `GetValue()` sulla classe, quindi incrementare il valore restituito.
+Nell'espressione `func` precedente, è un'espressione primaria, `func(1)` è `func(1)->GetValue` un'espressione suffissa di funzione, `func(1)->GetValue()` è un'espressione suffissa che specifica un membro della classe, è un'altra espressione suffissa di funzione e l'intera espressione è un'espressione suffissa che incrementa il valore restituito di GetValue.  Il significato dell'intera espressione è "chiamare func passando 1 come argomento e ottenere un puntatore a una classe come valore restituito.  Quindi `GetValue()` chiamare su tale classe, quindi incrementare il valore restituito.
 
 Le espressioni sopra elencate sono espressioni di assegnazione, pertanto il loro risultato deve essere un r-value.
 
@@ -53,7 +53,7 @@ simple-type-name ( expression-list )
 
 indica la chiamata del costruttore.  Se il nome di tipo semplice è un tipo fondamentale, l'elenco di espressioni deve essere costituito da un'unica espressione, la quale indica un cast del valore dell'espressione al tipo fondamentale.  Questo tipo di espressione cast riproduce un costruttore.  Poiché questo formato consente la costruzione dei tipi fondamentali e delle classi utilizzando la stessa sintassi, è particolarmente utile quando si definiscono le classi modello.
 
-La *parola chiave cast* è uno dei **dynamic_cast**, **static_cast** o **reinterpret_cast**.  Ulteriori informazioni sono disponibili in **dynamic_cast**, **static_cast** e **reinterpet_cast**.
+La *parola chiave cast* è uno dei **dynamic_cast**, **static_cast** o **reinterpret_cast**.  Ulteriori informazioni sono disponibili in **dynamic_cast,** **static_cast** e **reinterpet_cast**.
 
 L'operatore **typeid** è considerato un'espressione suffissa.  Vedere **operatore typeid**.
 
@@ -65,7 +65,7 @@ Quando viene chiamata una funzione, vengono eseguite le seguenti attività:
 
 - Tutti gli argomenti effettivi forniti dal chiamante vengono valutati. Non esiste un ordine implicito di valutazione degli argomenti, ma ognuno di essi viene valutato, e i relativi effetti collaterali vengono completati, prima di essere inseriti nella funzione.
 
-- Ogni argomento formale viene inizializzato con il corrispondente argomento effettivo presente nell'elenco di espressioni. Un argomento formale è un argomento dichiarato nell'intestazione della funzione e utilizzato nel corpo di una funzione. Le conversioni vengono eseguite come se venisse eseguita l'inizializzazione: le conversioni standard e definite dall'utente vengono eseguite nella conversione di un argomento effettivo nel tipo corretto. Il seguente codice illustra a livello concettuale l'inizializzazione che viene eseguita:
+- Ogni argomento formale viene inizializzato con il corrispondente argomento effettivo presente nell'elenco di espressioni. Un argomento formale è un argomento dichiarato nell'intestazione della funzione e utilizzato nel corpo di una funzione. Le conversioni vengono eseguite come se mediante l'inizializzazione: le conversioni standard e definite dall'utente vengono eseguite nella conversione di un argomento effettivo nel tipo corretto. Il seguente codice illustra a livello concettuale l'inizializzazione che viene eseguita:
 
     ```cpp
     void Func( int i ); // Function prototype
@@ -80,13 +80,13 @@ Quando viene chiamata una funzione, vengono eseguite le seguenti attività:
     Func( Temp_i );
     ```
 
-   Si noti che l'inizializzazione viene eseguita come se si utilizzasse la sintassi del segno di uguale, anziché la sintassi di parentesi. Prima di passare il valore alla funzione, viene effettuata una copia di `i`. Per ulteriori informazioni, vedere [inizializzatori](../cpp/initializers.md) e [conversioni](../cpp/user-defined-type-conversions-cpp.md).
+   Si noti che l'inizializzazione viene eseguita come se si utilizzasse la sintassi del segno di uguale, anziché la sintassi di parentesi. Prima di passare il valore alla funzione, viene effettuata una copia di `i`. Per ulteriori informazioni, consultate [Inizializzatori](../cpp/initializers.md) e [conversioni.](../cpp/user-defined-type-conversions-cpp.md)
 
-   Pertanto, se il prototipo di funzione (dichiarazione) chiama un argomento di tipo **Long**e se il programma chiamante fornisce un argomento effettivo di tipo **int**, l'argomento effettivo viene promosso utilizzando una conversione di tipo standard nel tipo **Long** (vedere [conversioni standard](../cpp/standard-conversions.md)).
+   Pertanto, se il prototipo di funzione (dichiarazione) richiede un argomento di tipo **long**e se il programma chiamante fornisce un argomento effettivo di tipo **int**, l'argomento effettivo viene promosso utilizzando una conversione di tipo standard nel tipo **long** (vedere [Conversioni standard](../cpp/standard-conversions.md)).
 
    Fornire un argomento effettivo per il quale non esistono conversioni standard o definite dall'utente al tipo dell'argomento formale costituisce un errore.
 
-   Nel caso degli argomenti effettivi di tipo classe, l'argomento formale viene inizializzato chiamando il costruttore della classe. Per ulteriori informazioni su queste speciali funzioni membro di classe, vedere [costruttori](../cpp/constructors-cpp.md) .
+   Nel caso degli argomenti effettivi di tipo classe, l'argomento formale viene inizializzato chiamando il costruttore della classe. Per ulteriori informazioni su queste funzioni membro di classe speciali, vedere [Costruttori.](../cpp/constructors-cpp.md)
 
 - Viene eseguita la chiamata di funzione.
 
@@ -111,11 +111,11 @@ void func( long param1, double param2 )
 }
 ```
 
-Quando `func` viene chiamato da Main, il parametro formale `param1` viene inizializzato con il valore `i` (`i` viene convertito nel tipo **Long** in modo che corrisponda al tipo corretto utilizzando una conversione standard) e il parametro formale `param2` viene inizializzato con il valore di `j` (`j` viene convertito nel tipo **Double** utilizzando una conversione standard).
+Quando `func` `param1` viene chiamato da main, il parametro `i` formale`i` viene inizializzato con il valore di ( viene convertito nel tipo **long** in modo che corrisponda al tipo corretto utilizzando una conversione standard) e il parametro `param2` formale viene inizializzato con il valore di `j` (`j` viene convertito nel tipo **double** utilizzando una conversione standard).
 
 ## <a name="treatment-of-argument-types"></a>Trattamento dei tipi di argomento
 
-Gli argomenti formali dichiarati come tipi const non possono essere modificati nel corpo di una funzione. Le funzioni possono modificare qualsiasi argomento non di tipo **const**. Tuttavia, la modifica è locale rispetto alla funzione e non influisce sul valore dell'argomento effettivo a meno che l'argomento effettivo non sia un riferimento a un oggetto non di tipo **const**.
+Gli argomenti formali dichiarati come tipi const non possono essere modificati nel corpo di una funzione. Le funzioni possono modificare qualsiasi argomento non di tipo **const**. Tuttavia, la modifica è locale rispetto alla funzione e non influisce sul valore effettivo dell'argomento a meno che l'argomento effettivo non sia un riferimento a un oggetto non di tipo **const**.
 
 Nelle funzioni seguenti vengono illustrati alcuni di questi concetti:
 
@@ -135,26 +135,26 @@ double& func2( double& d, const char *c ) {
 }
 ```
 
-## <a name="ellipses-and-default-arguments"></a>Puntini di sospensione e argomenti predefiniti
+## <a name="ellipsis-and-default-arguments"></a>Ellissi e argomenti predefiniti
 
 Le funzioni possono essere dichiarate per accettare un numero di argomenti minore rispetto a quello specificato nella definizione di funzione, mediante uno dei due metodi: puntini di sospensione (`...`) o argomenti predefiniti.
 
-I puntini di sospensione indicano che gli argomenti potrebbero essere obbligatori, ma che il numero e i tipi non sono specificati nella dichiarazione. Si tratta in genere di una procedura di programmazione C++ di basso livello perché vanifica uno dei vantaggi di C++, l'indipendenza dai tipi. Alle funzioni dichiarate con i puntini di sospensione vengono applicate conversioni diverse rispetto a quelle applicate alle funzioni per le quali i tipi di argomenti formali ed effettivi sono noti:
+I ellissi indicano che gli argomenti possono essere obbligatori, ma che il numero e i tipi non sono specificati nella dichiarazione. Si tratta in genere di una procedura di programmazione C++ di basso livello perché vanifica uno dei vantaggi di C++, l'indipendenza dai tipi. Vengono applicate conversioni diverse alle funzioni dichiarate con i puntini di sospensione rispetto alle funzioni per le quali sono noti i tipi di argomento formali ed effettivi:
 
-- Se l'argomento effettivo è di tipo **float**, viene promosso al tipo **Double** prima della chiamata di funzione.
+- Se l'argomento effettivo è di tipo **float**, viene promosso al tipo **double** prima della chiamata di funzione.
 
-- Qualsiasi oggetto con segno o senza **segno**, **short**, tipo enumerato o campo di bit viene convertito in un valore signed o unsigned **int** usando la promozione integrale.
+- Qualsiasi **campo di tipo emesso**o senza segno char , **short**, enumerated type o bit viene convertito in un oggetto signed o unsigned **int** utilizzando la promozione integrale.
 
 - Qualsiasi argomento di tipo classe viene passato in base al valore come struttura di dati; la copia viene creata tramite la copia binaria anziché richiamando il costruttore di copia della classe (se presente).
 
-I punti di sospensione, se utilizzati, devono essere dichiarati per ultimi nell'elenco degli argomenti. Per ulteriori informazioni sul passaggio di un numero variabile di argomenti, vedere la descrizione di [va_arg, va_start e va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) in *riferimenti alla libreria di runtime*.
+I ellissi, se utilizzati, devono essere dichiarati per ultimi nell'elenco di argomenti. Per ulteriori informazioni sul passaggio di un numero variabile di argomenti, vedere la discussione su [va_arg, va_start e va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) in Riferimenti alla libreria di *runtime*.
 
-Per informazioni sugli argomenti predefiniti nella programmazione CLR, vedere [elenchi di argomenti variabili (...)C++(/CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Per informazioni sugli argomenti predefiniti nella programmazione CLR, vedere [Elenchi di argomenti variabili (...) (C](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
-Gli argomenti predefiniti consentono di specificare il valore che deve assumere un argomento se non viene fornito nella chiamata di funzione. Nel frammento di codice seguente viene illustrato come usare gli argomenti predefiniti. Per ulteriori informazioni sulle restrizioni relative alla specifica degli argomenti predefiniti, vedere [argomenti predefiniti](../cpp/default-arguments.md).
+Gli argomenti predefiniti consentono di specificare il valore che deve assumere un argomento se non viene fornito nella chiamata di funzione. Nel frammento di codice seguente viene illustrato come usare gli argomenti predefiniti. Per ulteriori informazioni sulle restrizioni relative alla specifica degli argomenti predefiniti, vedere [Argomenti predefiniti](../cpp/default-arguments.md).
 
 ```cpp
-// expre_Ellipses_and_Default_Arguments.cpp
+// expre_Ellipsis_and_Default_Arguments.cpp
 // compile with: /EHsc
 #include <iostream>
 
@@ -184,7 +184,7 @@ void print( const char *string, const char *terminator )
 }
 ```
 
-Nel programma precedente viene dichiarata una funzione, `print`, che accetta due argomenti. Tuttavia, il secondo argomento, *terminatore*, ha un valore predefinito `"\n"`. In `main`, le prime due chiamate a `print` consentono al secondo argomento predefinito di fornire una nuova riga per terminare la stringa stampata. La terza chiamata specifica un valore esplicito per il secondo argomento. L'output del programma è
+Nel programma precedente viene dichiarata una funzione, `print`, che accetta due argomenti. Tuttavia, il secondo argomento, *terminator* `"\n"`, ha un valore predefinito, . In `main`, le prime `print` due chiamate per consentire al secondo argomento predefinito di fornire una nuova riga per terminare la stringa stampata. La terza chiamata specifica un valore esplicito per il secondo argomento. L'output del programma è
 
 ```Output
 hello,

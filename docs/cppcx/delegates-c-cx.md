@@ -2,16 +2,16 @@
 title: Delegati (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 3ab455044b98cdd8c7b13a650f729efc2132797e
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: e570acafb8cce8b9496b79a062c3035015ba9811
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740274"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032473"
 ---
 # <a name="delegates-ccx"></a>Delegati (C++/CX)
 
-La `delegate` parola chiave viene usata per dichiarare un tipo di riferimento che è l'equivalente Windows Runtime di un oggetto funzione C++in standard. Dichiarazione di un delegato simile a una firma della funzione. Specifica il tipo restituito e i tipi di parametro per la relativa funzione di cui è stato eseguito il wrapping. Si tratta di una dichiarazione di un delegato definita dall'utente:
+La `delegate` parola chiave viene utilizzata per dichiarare un tipo di riferimento che è l'equivalente di Windows Runtime di un oggetto funzione nel linguaggio c'è. Dichiarazione di un delegato simile a una firma della funzione. Specifica il tipo restituito e i tipi di parametro per la relativa funzione di cui è stato eseguito il wrapping. Si tratta di una dichiarazione di un delegato definita dall'utente:
 
 ```cpp
 public delegate void PrimeFoundHandler(int result);
@@ -23,11 +23,11 @@ I delegati sono utilizzati in genere insieme agli eventi. Un evento dispone di u
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Quando si dichiarano delegati che verranno esposti ai client attraverso l'interfaccia binaria dell'applicazione Windows Runtime, utilizzare [Windows:\<: Foundation:: TypedEventHandler TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). I binari proxy e stub usati come prefisso per questo delegato ne permettono l'uso da parte di client Javascript.
+Quando si dichiarano delegati che verranno esposti ai client tramite l'interfaccia binaria dell'applicazione Windows Runtime, utilizzare [Windows::Foundation::TypedEventHandler\<TSender, TResult>](/uwp/api/windows.foundation.typedeventhandler-2). I binari proxy e stub usati come prefisso per questo delegato ne permettono l'uso da parte di client Javascript.
 
 ## <a name="consuming-delegates"></a>Utilizzo dei delegati
 
-Quando si crea un'app piattaforma UWP (Universal Windows Platform), spesso si lavora con un delegato come tipo di un evento esposto da una classe Windows Runtime. Per sottoscrivere un evento, crea un'istanza del relativo tipo di delegato specificando una funzione, o lambda, che corrisponda alla firma del delegato. Utilizza quindi l'operatore `+=` per passare l'oggetto delegato al membro dell'evento nella classe. Questo processo è noto come sottoscrizione dell'evento. Quando l'istanza della classe genera l'evento, viene chiamata la funzione insieme a tutti gli altri gestori aggiunti dal tuo oggetto o da altri oggetti.
+Quando crei un'app piattaforma Windows universale, spesso lavori con un delegato come tipo di evento esposto da una classe Windows Runtime. Per sottoscrivere un evento, crea un'istanza del relativo tipo di delegato specificando una funzione, o lambda, che corrisponda alla firma del delegato. Utilizza quindi l'operatore `+=` per passare l'oggetto delegato al membro dell'evento nella classe. Questo processo è noto come sottoscrizione dell'evento. Quando l'istanza della classe genera l'evento, viene chiamata la funzione insieme a tutti gli altri gestori aggiunti dal tuo oggetto o da altri oggetti.
 
 > [!TIP]
 > In Visual Studio molte operazioni vengono eseguite automaticamente durante la creazione di un gestore eventi. Ad esempio, se specifichi un gestore eventi nel markup XAML, compare una descrizione comandi. Se scegli la descrizione comandi, viene creato automaticamente il metodo del gestore eventi, che viene quindi associato all'evento nella classe di pubblicazione.
@@ -43,9 +43,9 @@ In app.cpp:
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> In genere, per un gestore di eventi è preferibile utilizzare una funzione denominata anziché una funzione lambda, a meno di non prestare molta attenzione a evitare i riferimenti circolari. Una funzione denominata acquisisce il puntatore "this" per riferimento debole, ma una funzione lambda lo acquisisce per riferimento forte e crea un riferimento circolare. Per ulteriori informazioni, vedere [riferimenti deboli e cicli di interruzioni](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
+> In genere, per un gestore di eventi è preferibile utilizzare una funzione denominata anziché una funzione lambda, a meno di non prestare molta attenzione a evitare i riferimenti circolari. Una funzione denominata acquisisce il puntatore "this" per riferimento debole, ma una funzione lambda lo acquisisce per riferimento forte e crea un riferimento circolare. Per ulteriori informazioni, consultate [Riferimenti deboli e cicli di interruzione.](../cppcx/weak-references-and-breaking-cycles-c-cx.md)
 
-Per convenzione, i nomi dei delegati del gestore eventi definiti dalla Windows Runtime hanno il formato * EventHandler, ad esempio RoutedEventHandler, SizeChangedEventHandler o SuspendingEventHandler. Sempre per convenzione, i delegati del gestore eventi accettano due parametri e restituiscono void. In un delegato privo di parametri di tipo, il primo parametro è di tipo [Platform::Object^](../cppcx/platform-object-class.md)e contiene un riferimento al mittente, ossia l'oggetto che ha generato l'evento. Prima di utilizzare l'argomento nel metodo del gestore dell'evento, devi eseguire il cast del tipo originale. In un delegato del gestore eventi che dispone di parametri di tipo, il primo parametro di tipo specifica il tipo del mittente, mentre il secondo è un handle a una classe di riferimento che contiene informazioni sull'evento. Per convenzione, la classe è denominata \*EventArgs. Ad esempio, un delegato RoutedEventHandler dispone di un secondo parametro di tipo RoutedEventArgs^ e DragEventHander dispone di un secondo parametro di tipo DragEventArgs^.
+Per convenzione, i nomi dei delegati del gestore eventi definiti da Windows Runtime hanno il formato , ad esempio RoutedEventHandler, SizeChangedEventHandler o SuspendingEventHandler. Sempre per convenzione, i delegati del gestore eventi accettano due parametri e restituiscono void. In un delegato privo di parametri di tipo, il primo parametro è di tipo [Platform::Object^](../cppcx/platform-object-class.md)e contiene un riferimento al mittente, ossia l'oggetto che ha generato l'evento. Prima di utilizzare l'argomento nel metodo del gestore dell'evento, devi eseguire il cast del tipo originale. In un delegato del gestore eventi che dispone di parametri di tipo, il primo parametro di tipo specifica il tipo del mittente, mentre il secondo è un handle a una classe di riferimento che contiene informazioni sull'evento. Per convenzione, tale \*classe è denominata EventArgs.By convention, that class is named EventArgs. Ad esempio, un delegato RoutedEventHandler dispone di un secondo parametro di tipo RoutedEventArgs^ e DragEventHander dispone di un secondo parametro di tipo DragEventArgs^.
 
 Per convenzione, i delegati che eseguono il wrapping del codice eseguito quando viene completata un'operazione asincrona sono denominati *CompletedHandler. Questi delegati sono definiti come proprietà della classe, non come eventi. Pertanto, non utilizzare l'operatore `+=` per sottoscriverli; assegna semplicemente un oggetto delegato alla proprietà.
 
@@ -54,7 +54,7 @@ Per convenzione, i delegati che eseguono il wrapping del codice eseguito quando 
 
 ## <a name="creating-custom-delegates"></a>Creazione di delegati personalizzati
 
-È possibile definire delegati personalizzati, per definire i gestori eventi o per consentire agli utenti di passare funzionalità personalizzate al componente Windows Runtime. Analogamente a qualsiasi altro tipo Windows Runtime, un delegato pubblico non può essere dichiarato come generico.
+Puoi definire delegati personalizzati, per definire gestori eventi o per consentire ai consumer di passare funzionalità personalizzate al componente Windows Runtime.You can define your own delegates, to define event handlers or to enable consumers to pass in custom functionality to your Windows Runtime component. Come qualsiasi altro tipo Windows Runtime, un delegato pubblico non può essere dichiarato come generico.
 
 ### <a name="declaration"></a>Dichiarazione
 
@@ -67,13 +67,13 @@ Una volta dichiarato un tipo di delegato, puoi dichiarare i membri della classe 
 [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]
 
 > [!NOTE]
-> Il simbolo "^" viene usato quando si fa riferimento al tipo delegato, analogamente a quanto avviene con qualsiasi Windows Runtime tipo di riferimento.
+> Si usa il simbolo "" quando si fa riferimento al tipo delegato, proprio come si fa con qualsiasi tipo di riferimento di Windows Runtime.
 
-Una dichiarazione di evento contiene sempre un tipo di delegato. In questo esempio viene illustrata una tipica firma del tipo delegato nel Windows Runtime:
+Una dichiarazione di evento contiene sempre un tipo di delegato. Questo esempio mostra una tipica firma del tipo delegato in Windows Runtime:This example shows a typical delegate type signature in the Windows Runtime:
 
 [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]
 
-L'evento `Click` nella classe `Windows:: UI::Xaml::Controls::Primitives::ButtonBase` è di tipo `RoutedEventHandler`. Per altre informazioni, vedere [Events](../cppcx/events-c-cx.md).
+L'evento `Click` nella classe `Windows:: UI::Xaml::Controls::Primitives::ButtonBase` è di tipo `RoutedEventHandler`. Per altre informazioni, vedere [Eventi](../cppcx/events-c-cx.md).
 
 Tramite il codice client viene innanzitutto creata l'istanza del delegato utilizzando `ref new` e fornendo un'espressione lambda compatibile con la firma del delegato e successivamente viene definito il comportamento personalizzato.
 
@@ -83,7 +83,7 @@ Il codice chiama quindi la funzione membro e passa il delegato. Supponi che `ci`
 
 [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]
 
-Nell'esempio seguente un'app client passa un delegato personalizzato a un metodo pubblico in un componente Windows Runtime che esegue il delegato rispetto a ogni elemento in un `Vector`oggetto:
+Nell'esempio successivo, un'app client passa un delegato personalizzato a un metodo pubblico in `Vector`un componente di Windows Runtime che esegue il delegato su ogni elemento in un:
 
 [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]
 
@@ -106,7 +106,7 @@ Nell'esempio riportato di seguito viene illustrato come costruire un delegato da
 [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]
 
 > [!WARNING]
-> Se usi un'espressione lambda che acquisisce il puntatore "this", assicurati di utilizzare l'operatore `-=` per annullare in modo esplicito la registrazione dall'evento prima di uscire da lambda. Per ulteriori informazioni, vedi [Eventi](../cppcx/events-c-cx.md).
+> Se usi un'espressione lambda che acquisisce il puntatore "this", assicurati di utilizzare l'operatore `-=` per annullare in modo esplicito la registrazione dall'evento prima di uscire da lambda. Per altre informazioni, vedere [Eventi](../cppcx/events-c-cx.md).
 
 ### <a name="generic-delegates"></a>Delegati generici
 
@@ -122,7 +122,7 @@ L'esempio successivo dichiara un'istanza specifica del delegato all'interno di u
 
 Un delegato, analogamente a un oggetto funzione, contiene del codice che verrà eseguito in un momento futuro. Se il codice che crea e passa il delegato e la funzione che accetta ed esegue il delegato sono in esecuzione nello stesso thread, diventa tutto relativamente semplice. Se il thread è il thread UI, gli oggetti dell'interfaccia utente come i controlli XAML possono essere modificati direttamente dal delegato.
 
-Se un'app client carica un componente Windows Runtime eseguito in un Apartment a thread e fornisce un delegato a tale componente, per impostazione predefinita il delegato viene richiamato direttamente sul thread STA. La maggior parte delle Windows Runtime componenti può essere eseguita in STA o MTA.
+Se un'app client carica un componente di Windows Runtime che viene eseguito in un apartment con thread e fornisce un delegato a tale componente, per impostazione predefinita il delegato viene richiamato direttamente sul thread STA. La maggior parte dei componenti di Windows Runtime può essere eseguita in STA o MTA.
 
 Se il codice che esegue il delegato è in esecuzione in un thread differente, ad esempio all'interno di un contesto di oggetto concurrency::task, sarà necessario sincronizzare l'accesso ai dati condivisi. Ad esempio, se il delegato e un controllo XAML contengono un riferimento a uno stesso vettore, è necessario evitare i deadlock e le race condition che potrebbero verificarsi nel momento in cui sia il delegato che il controllo XAML tentano di accedere contemporaneamente al vettore. Devi inoltre assicurarti che il delegato non tenti di acquisire tramite riferimenti le variabili locali che potrebbe uscire di ambito prima che il delegato sia richiamato.
 

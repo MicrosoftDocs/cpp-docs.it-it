@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354382"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032122"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
-Rappresenta una raccolta sequenziale di oggetti a cui è possibile accedere tramite indice. Implementa [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) per facilitare [l'associazione dati](/windows/uwp/data-binding/data-binding-in-depth)XAML.
+Rappresenta una raccolta sequenziale di oggetti a cui è possibile accedere tramite indice. Implementa [Windows::Foundation::Collections::IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) per facilitare [l'associazione dati](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,9 +61,9 @@ I tipi consentiti sono:
 
 1. classe enum pubblica
 
-La classe **Vector** è l'implementazione concreta di [Windows::Foundation::Collections::IVector.](/uwp/api/Windows.Foundation.Collections.IVector_T_)
+La classe **Vector** è l'implementazione concreta di [Windows::Foundation::Collections::IVector.](/uwp/api/windows.foundation.collections.ivector-1)
 
-Se si tenta di utilizzare un tipo **Vector** in un parametro o un valore restituito pubblico, viene generato l'errore del compilatore C3986. È possibile correggere l'errore modificando il tipo di parametro o di valore restituito in [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
+Se si tenta di utilizzare un tipo **Vector** in un parametro o un valore restituito pubblico, viene generato l'errore del compilatore C3986. È possibile correggere l'errore modificando il tipo di parametro o di valore restituito in [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membri
 
@@ -91,12 +91,12 @@ Se si tenta di utilizzare un tipo **Vector** in un parametro o un valore restitu
 |[Vector::SetAt](#setat)|Assegna il valore specificato all'elemento nell'oggetto Vector corrente che è identificato dall'indice specificato.|
 |[Vettore::Dimensione](#size)|Restituisce il numero di elementi nell'oggetto Vector corrente.|
 
-### <a name="events"></a>Eventi
+### <a name="events"></a>Events
 
 |||
 |-|-|
 |Nome|Descrizione|
-|evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T>: VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Si verifica quando l'oggetto Vector subisce delle modifiche.|
+|evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T>: VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Si verifica quando l'oggetto Vector subisce delle modifiche.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
+*value*<br/>
 Elemento da cercare.
 
 *Indice*<br/>
@@ -372,10 +372,10 @@ Oggetto [std::initializer_list](../standard-library/initializer-list-class.md) d
 *N*<br/>
 Numero di elementi in una raccolta di oggetti utilizzati per inizializzare l'oggetto Vector corrente.
 
-*Dimensione*<br/>
+*size*<br/>
 Numero di elementi nell'oggetto Vector.
 
-*Valore*<br/>
+*value*<br/>
 Valore utilizzato per inizializzare ciascun elemento nell'oggetto Vector corrente.
 
 *Presso*<br/>

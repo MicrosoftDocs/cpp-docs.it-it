@@ -1,19 +1,26 @@
 ---
 title: Puntatori non elaborati (C
 description: Come utilizzare i puntatori non elaborati in C
-ms.date: 11/19/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+no-loc:
+- void
+- nullptr
+- const
+- char
+- new
+- delete
+ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374671"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032096"
 ---
 # <a name="raw-pointers-c"></a>Puntatori non elaborati (C
 
-Un puntatore è un tipo di variabile che archivia l'indirizzo di un oggetto in memoria e viene utilizzato per accedere a tale oggetto. Un *puntatore non elaborato* è un puntatore la cui durata non è controllata da un oggetto incapsulante, ad esempio un [puntatore intelligente.](smart-pointers-modern-cpp.md) A un puntatore non elaborato può essere assegnato l'indirizzo di un'altra variabile non puntatore oppure può essere assegnato un valore [nullptr](nullptr.md). Un puntatore a cui non è stato assegnato un valore contiene dati casuali.
+Un *puntatore* è un tipo di variabile. Memorizza l'indirizzo di un oggetto in memoria e viene utilizzato per accedere a tale oggetto. Un *puntatore non elaborato* è un puntatore la cui durata non è controllata da un oggetto incapsulante, ad esempio un [puntatore intelligente.](smart-pointers-modern-cpp.md) A un puntatore non elaborato può essere assegnato l'indirizzo di [nullptr](nullptr.md)un'altra variabile non puntatore oppure può essere assegnato un valore di . Un puntatore a cui non è stato assegnato un valore contiene dati casuali.
 
 Un puntatore può anche essere *dereferenziato* per recuperare il valore dell'oggetto a cui punta. *L'operatore* di accesso ai membri fornisce l'accesso ai membri di un oggetto.
 
@@ -23,19 +30,17 @@ Un puntatore può anche essere *dereferenziato* per recuperare il valore dell'og
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
-
 ```
 
-Un puntatore può puntare a un oggetto tipizzato o a **void**. Quando un programma alloca un nuovo oggetto [nell'heap](https://wikipedia.org/wiki/Heap) in memoria, riceve l'indirizzo di tale oggetto sotto forma di puntatore. Tali puntatori sono *denominati puntatori proprietari*; un puntatore proprietario (o una copia di esso) deve essere utilizzato per eliminare in modo esplicito l'oggetto allocato nell'heap quando non è più necessario. La mancata eliminazione della memoria comporta una *perdita* di memoria e rende la posizione di memoria non disponibile per qualsiasi altro programma nel computer. Per ulteriori informazioni, vedere [operatori new e delete](new-and-delete-operators.md).
+Un puntatore può puntare a **void** un oggetto tipizzato o a . Quando un programma alloca un oggetto [nell'heap](https://wikipedia.org/wiki/Heap) in memoria, riceve l'indirizzo di tale oggetto sotto forma di puntatore. Tali puntatori sono *denominati puntatori proprietari*. Un puntatore proprietario (o una copia di esso) deve essere utilizzato per liberare in modo esplicito l'oggetto allocato heap quando non è più necessario. La mancata liberazione della memoria comporta una *perdita*di memoria e rende tale posizione di memoria non disponibile per qualsiasi altro programma nel computer. La memoria **new** allocata utilizzando **delete** deve essere liberata utilizzando (or ** delete \[]**). Per ulteriori informazioni, vedere [ new e delete operatori](new-and-delete-operators.md).
 
 ```cpp
-
     MyClass* mc = new MyClass(); // allocate object on the heap
     mc->print(); // access class member
     delete mc; // delete object (please don't forget!)
 ```
 
-Un puntatore (se non è dichiarato come **const**) può essere incrementato o decrementato in modo che punti a una nuova posizione in memoria. Questa operazione è denominata aritmetica dei *puntatori* e viene utilizzata nella programmazione di tipo C per scorrere gli elementi in matrici o altre strutture di dati. Un puntatore **const** non può essere fatto in modo che punti a una posizione di memoria diversa e in questo senso è molto simile a un [riferimento](references-cpp.md). Per ulteriori informazioni, vedere [puntatori const e volatile](const-and-volatile-pointers.md).
+Un puntatore (se non **const** è dichiarato come ) può essere incrementato o decrementato in modo da puntare a un'altra posizione in memoria. Questa operazione è *denominata aritmetica dei puntatori*. Viene utilizzato nella programmazione di tipo C per scorrere gli elementi in matrici o altre strutture di dati. Non **const** è possibile fare un puntatore in modo che punti a una posizione di memoria diversa e in tal senso è simile a un [riferimento](references-cpp.md). Per ulteriori informazioni, vedere [ const e puntatori volatili](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +54,13 @@ Un puntatore (se non è dichiarato come **const**) può essere incrementato o de
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-Nei sistemi operativi a 64 bit, un puntatore ha una dimensione di 64 bit; la dimensione del puntatore di un sistema determina la quantità di memoria indirizzabile che può avere. Tutte le copie di un puntatore puntano alla stessa posizione di memoria. I puntatori (insieme ai riferimenti) vengono ampiamente utilizzati in C , per passare oggetti più grandi da e verso le funzioni, perché in genere è molto più efficiente copiare l'indirizzo a 64 bit di un oggetto che per copiare un intero oggetto. Quando si definisce una funzione, specificare i parametri del puntatore come **const,** a meno che non si desideri che la funzione modifichi l'oggetto. In generale, i riferimenti **const** sono il modo migliore per passare oggetti alle funzioni, a meno che il valore dell'oggetto non possa essere **nullptr**.
+Nei sistemi operativi a 64 bit, un puntatore ha una dimensione di 64 bit. La dimensione del puntatore di un sistema determina la quantità di memoria indirizzabile che può avere. Tutte le copie di un puntatore puntano alla stessa posizione di memoria. I puntatori (insieme ai riferimenti) vengono ampiamente utilizzati in C , per passare oggetti più grandi da e verso le funzioni. Questo perché è spesso più efficiente copiare l'indirizzo di un oggetto che copiare l'intero oggetto. Quando si definisce una **const** funzione, specificare i parametri del puntatore come a meno che non si desideri che la funzione modifichi l'oggetto. In generale, **const** i riferimenti sono il modo migliore per passare oggetti **nullptr** alle funzioni, a meno che il valore dell'oggetto non possa essere .
 
 [I puntatori alle funzioni](#pointers_to_functions) consentono alle funzioni di essere passate ad altre funzioni e vengono utilizzate per i "callback" nella programmazione di tipo C.Pointers to functions enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Per questo scopo, il linguaggio c'è il linguaggio [moderno](lambda-expressions-in-cpp.md) C.
 
 ## <a name="initialization-and-member-access"></a>Inizializzazione e accesso ai membri
 
-Nell'esempio seguente viene illustrato come dichiarare un puntatore non elaborato e inizializzarlo con un oggetto allocato nell'heap e quindi come utilizzarlo. Mostra anche alcuni dei pericoli associati ai puntatori non elaborati. (Ricordate, questo è il linguaggio C-stile e non moderno c '!)
+Nell'esempio seguente viene illustrato come dichiarare, inizializzare e utilizzare un puntatore non elaborato. Viene inizializzato utilizzando **new** per puntare un oggetto allocato **delete** nell'heap, che è necessario in modo esplicito. L'esempio mostra anche alcuni dei pericoli associati ai puntatori non elaborati. (Ricordate, questo esempio è la programmazione di tipo C e non moderno c '!)
 
 ```cpp
 #include <iostream>
@@ -119,13 +124,13 @@ int main()
     pmc2->print(); // "Erika, 108"
 
     // Pass the pointer to a function.
-    func_A(mc);
+    func_A(pmc);
     pmc->print(); // "Erika, 3"
     pmc2->print(); // "Erika, 3"
 
     // Dereference the pointer and pass a copy
     // of the pointed-to object to a function
-    func_B(*mc);
+    func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
     delete(pmc); // don't forget to give memory back to operating system!
@@ -166,9 +171,9 @@ int main()
 }
 ```
 
-Alcune operazioni aritmetiche possono essere eseguite su puntatori non const per fare in modo che puntino a una nuova posizione di memoria. Un puntatore può essere incrementato **++** **+=** e **-=** **--** decrementato utilizzando gli operatori , e . Questa tecnica può essere utilizzata nelle matrici ed è particolarmente utile nei buffer di dati non tipizzati. Un **\* valore void** viene incrementato della dimensione di un **char** (1 byte). Un puntatore tipizzato viene incrementato in base alla dimensione del tipo a cui punta.
+Alcune operazioni aritmetiche possonoconst essere utilizzate su puntatori non puntatori per farli puntare a un'altra posizione di memoria. I puntatori vengono incrementati **++** e **+=** **-=** decrementati utilizzando gli operatori , e . **--** Questa tecnica può essere utilizzata nelle matrici ed è particolarmente utile nei buffer di dati non tipizzati. Un ** void ** oggetto viene incrementato **char** della dimensione di un (1 byte). Un puntatore tipizzato viene incrementato in base alle dimensioni del tipo a cui punta.
 
-Nell'esempio seguente viene illustrato come utilizzare l'aritmetica dei puntatori per accedere ai singoli pixel in una bitmap in Windows.The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Si noti l'utilizzo di **new** e **delete**e dell'operatore di dereferenziazione.
+Nell'esempio seguente viene illustrato come utilizzare l'aritmetica dei puntatori per accedere ai singoli pixel in una bitmap in Windows.The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Si noti **new** **delete** l'utilizzo di e , e dell'operatore di dereferenziazione.
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>puntatori void
+## <a name="opno-locvoid-pointers"></a>void- puntatori
 
-Un puntatore a **void** punta semplicemente a una posizione di memoria non elaborata. A volte è necessario utilizzare i puntatori **void,\* ** ad esempio quando si passa tra il codice C e le funzioni C.
+Puntatore **void** a punta semplicemente a una posizione di memoria non elaborata. A volte è necessario ** void ** utilizzare i puntatori, ad esempio quando si passa tra il codice C e le funzioni C.
 
-Quando si esegue il cast di un puntatore tipizzato a un puntatore void, il contenuto della posizione della memoria non viene modificato, ma le informazioni sul tipo vengono perse, in modo che non è possibile eseguire operazioni di incremento o decremento. È possibile eseguire il cast di una posizione di memoria, ad esempio da MyClass a void e viceversa a MyClass. Tali operazioni sono intrinsecamente soggette a errori e richiedono molta attenzione per evitare errori. Il moderno c'è scoraggia l'uso di puntatori void a meno che non sia assolutamente necessario.
+Quando si esegue il cast void di un puntatore tipizzato a un puntatore, il contenuto della posizione di memoria viene invariato. Tuttavia, le informazioni sul tipo vengono perse, in modo che non è possibile eseguire operazioni di incremento o decremento. È possibile eseguire il cast di `MyClass*` `void*` una posizione `MyClass*`di memoria, ad esempio da verso e viceversa in . Tali operazioni sono intrinsecamente soggette a errori e richiedono molta attenzione per evitare errori. Il linguaggio C' moderno void scoraggia l'uso di puntatori in quasi tutte le circostanze.
 
 ```cpp
 
@@ -293,7 +298,7 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Puntatori a funzioni
 
-Nella programmazione di tipo C, i puntatori a funzione vengono utilizzati principalmente per passare funzioni ad altre funzioni. In questo scenario, il chiamante può personalizzare il comportamento di una funzione senza modificarla. Nel linguaggio c'è moderno, le [espressioni lambda](lambda-expressions-in-cpp.md) forniscono la stessa funzionalità con maggiore indipendenza dai tipi e altri vantaggi.
+Nella programmazione di tipo C, i puntatori a funzione vengono utilizzati principalmente per passare funzioni ad altre funzioni. Questa tecnica consente al chiamante di personalizzare il comportamento di una funzione senza modificarla. Nel linguaggio c'è moderno, le [espressioni lambda](lambda-expressions-in-cpp.md) forniscono la stessa funzionalità con maggiore indipendenza dai tipi e altri vantaggi.
 
 Una dichiarazione di puntatore a funzione specifica la firma che la funzione a cui punta deve avere:A function pointer declaration specifies the signature that the pointed-to function must have:
 
@@ -311,7 +316,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-Nell'esempio seguente `combine` viene illustrata una funzione che `std::string` accetta come `std::string`parametro qualsiasi funzione che accetta un e restituisce un oggetto . A seconda della funzione `combine` che viene passata ad esso, anteporrà o aggiungerà una stringa.
+Nell'esempio seguente `combine` viene illustrata una funzione che `std::string` accetta come `std::string`parametro qualsiasi funzione che accetta un e restituisce un oggetto . A seconda della funzione passata a `combine`, antepone o aggiunge una stringa.
 
 ```cpp
 #include <iostream>

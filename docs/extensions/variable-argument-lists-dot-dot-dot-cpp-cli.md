@@ -6,19 +6,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: dfe40d20fc8bb795b0e530b3288b1c2101bc55ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171879"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032304"
 ---
 # <a name="variable-argument-lists--ccli"></a>Elenchi di argomenti variabili (...) (C++/CLI)
 
 Questo esempio illustra come usare la sintassi `...` in C++/CLI per implementare funzioni che hanno un numero variabile di argomenti.
 
 > [!NOTE]
-> Questo argomento si riferisce a C++/CLI. Per informazioni sull'uso di `...` nel linguaggio C++ standard ISO, vedere [Ellissi e modelli variadic](../cpp/ellipses-and-variadic-templates.md) ed Ellissi e argomenti predefiniti in [Espressioni in forma suffissa](../cpp/postfix-expressions.md).
+> Questo argomento si riferisce a C++/CLI. Per informazioni sull'utilizzo di `...` ISO Standard C, vedere [Ellissi e modelli variadici](../cpp/ellipses-and-variadic-templates.md) e ellissi e argomenti predefiniti nelle espressioni [Postfix](../cpp/postfix-expressions.md).
 
 Il parametro che usa `...` deve essere l'ultimo parametro nell'elenco di parametri.
 
@@ -103,4 +103,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Array](arrays-cpp-component-extensions.md)
+[Matrici](arrays-cpp-component-extensions.md)

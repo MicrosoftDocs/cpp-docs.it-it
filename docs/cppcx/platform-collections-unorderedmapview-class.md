@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354391"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031485"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 
@@ -31,7 +31,7 @@ ref class UnorderedMapView sealed;
 *K*<br/>
 Tipo di chiave nella coppia chiave-valore.
 
-*V*<br/>
+*Presso*<br/>
 Tipo di valore nella coppia chiave-valore.
 
 *C*<br/>
@@ -39,7 +39,7 @@ Tipo che fornisce un oggetto funzione che può confrontare due valori di chiavi 
 
 ### <a name="remarks"></a>Osservazioni
 
-UnorderedMapView è un'implementazione concreta di C, ovvero un'implementazione di [Windows::Foundation::Collections::IMapView\<K,V>'interfaccia](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) che viene passata attraverso l'interfaccia a binario dell'applicazione (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
+UnorderedMapView è un'implementazione concreta di C, ovvero un'implementazione di [Windows::Foundation::Collections::IMapView\<K,V>'interfaccia](/uwp/api/windows.foundation.collections.imapview-2) che viene passata attraverso l'interfaccia a binario dell'applicazione (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membri
 
@@ -71,7 +71,7 @@ UnorderedMapView è un'implementazione concreta di C, ovvero un'implementazione 
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>Metodo UnorderedMapView::First
 
-Restituisce un iteratore che specifica il primo elemento [windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) nella mappa non ordinata.
+Restituisce un iteratore che specifica il primo elemento [windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) nella mappa non ordinata.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -101,7 +101,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave usata per individuare l'elemento. Il tipo `key` di è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -120,7 +120,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Chiave usata per individuare un elemento in UnorderedMapView. Il tipo `key` di è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -129,7 +129,7 @@ Valore abbinato a `key`. Il tipo del valore restituito è typename *V*.
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>Metodo UnorderedMapView::SizeUnorderedMapView::Size Method
 
-Restituisce il numero di [elementi Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementi in UnorderedMapView.
+Restituisce il numero di [elementi Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) elementi in UnorderedMapView.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -218,7 +218,7 @@ UnorderedMapView(
 
 ### <a name="parameters"></a>Parametri
 
-*N*<br/>
+*n*<br/>
 Numero di elementi per cui preallocare spazio.
 
 *Init*<br/>
@@ -242,4 +242,4 @@ Iteratore di input del primo elemento dopo un intervallo di elementi usato per i
 ## <a name="see-also"></a>Vedere anche
 
 [Spazio dei nomi Platform::Collections](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)
