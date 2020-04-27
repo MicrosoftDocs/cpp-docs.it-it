@@ -1,5 +1,5 @@
 ---
-title: Esempi di script del Registro di sistemaRegistry Scripting Examples
+title: Esempi di script del registro di sistema
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scripting, examples
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: 7bcdb7076982e2f0bd08f4fd82bb45f21e61ef20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e225ce28309aa619fd9436d8f4b93e60544e86c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329333"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168748"
 ---
-# <a name="registry-scripting-examples"></a>Esempi di script del Registro di sistemaRegistry Scripting Examples
+# <a name="registry-scripting-examples"></a>Esempi di script del registro di sistema
 
-Negli esempi di script riportati in questo argomento viene illustrato come aggiungere una chiave al Registro di sistema, registrare il server COM di registrazione e specificare più alberi di analisi.
+Gli esempi di script in questo argomento illustrano come aggiungere una chiave al registro di sistema, registrare il server COM del registrar e specificare più alberi di analisi.
 
 ## <a name="add-a-key-to-hkey_current_user"></a>Aggiungere una chiave a HKEY_CURRENT_USER
 
-Nell'albero di analisi seguente viene illustrato un semplice script che aggiunge una singola chiave al Registro di sistema. In particolare, lo script `MyVeryOwnKey`aggiunge `HKEY_CURRENT_USER`la chiave, , a . Assegna inoltre il valore stringa `HowGoesIt` predefinito di alla nuova chiave:
+Nell'albero di analisi seguente viene illustrato un semplice script che aggiunge una singola chiave al registro di sistema. In particolare, lo script aggiunge la chiave, `MyVeryOwnKey`, a `HKEY_CURRENT_USER`. Assegna anche il valore stringa predefinito di `HowGoesIt` alla nuova chiave:
 
-```
+```rgs
 HKEY_CURRENT_USER
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```
 
-Questo script può essere facilmente esteso per definire più sottochiavi come segue:
+Questo script può essere facilmente esteso per definire più sottochiavi come indicato di seguito:
 
-```
+```rgs
 HKCU
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -45,13 +45,13 @@ HKCU
 }
 ```
 
-A questo punto, lo `HasASubkey`script `MyVeryOwnKey`aggiunge una sottochiave, , a . A questa sottochiave vengono `PrettyCool` aggiunti sia la `DWORD` sottochiave (con un `ANameValue` valore predefinito di 55) che il valore denominato (con un valore stringa di `WithANamedValue`).
+A questo punto, lo script aggiunge una `HasASubkey`sottochiave `MyVeryOwnKey`,, a. Per questa sottochiave, viene aggiunta la `PrettyCool` sottochiave (con un `DWORD` valore predefinito di 55) e `ANameValue` il valore denominato (con un valore di `WithANamedValue`stringa pari a).
 
-## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>Registrare il server COM di registrazioneRegister the Registrar COM Server
+## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>Registrare il server COM del registrar
 
-Lo script seguente registra il server COM di registrazione stesso.
+Lo script seguente registra il server COM del registrar.
 
-```
+```rgs
 HKCR
 {
     ATL.Registrar = s 'ATL Registrar Class'
@@ -72,31 +72,31 @@ HKCR
 }
 ```
 
-In fase di esecuzione, `ATL.Registrar` questo `HKEY_CLASSES_ROOT`albero di analisi aggiunge la chiave a . A questa nuova chiave:
+In fase di esecuzione, questo albero di analisi `ATL.Registrar` aggiunge la `HKEY_CLASSES_ROOT`chiave a. Alla nuova chiave, quindi:
 
 - Specifica `ATL Registrar Class` come valore stringa predefinito della chiave.
 
 - Aggiunge `CLSID` come sottochiave.
 
-- Specifica `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` per `CLSID`. (Questo valore è il CLSID della `CoCreateInstance`funzione di registrazione per l'utilizzo con .)
+- Specifica `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` per `CLSID`. Questo valore è il CLSID del registrar da usare con `CoCreateInstance`.
 
-Poiché `CLSID` è condiviso, non deve essere rimosso in modalità unregister. L'istruzione `NoRemove CLSID`, , esegue `CLSID` questa operazione indicando che deve essere aperta in modalità Register e ignorata in modalità Unregister.
+Poiché `CLSID` è condiviso, non deve essere rimosso in modalità di annullamento della registrazione. A tale scopo `NoRemove CLSID`, l'istruzione indica che `CLSID` deve essere aperta in modalità di registrazione e ignorata in modalità di annullamento della registrazione.
 
-L'istruzione `ForceRemove` fornisce una funzione di pulizia rimuovendo una chiave e tutte le relative sottochiavi prima di ricreare la chiave. Ciò può essere utile se i nomi delle sottochiavi sono stati modificati. In questo esempio `ForceRemove` di scripting, verifica se `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` esiste già. In caso `ForceRemove`affermativo, :
+L' `ForceRemove` istruzione fornisce una funzione di manutenzione rimuovendo una chiave e tutte le relative sottochiavi prima di ricreare la chiave. Questa operazione può essere utile se i nomi delle sottochiavi sono stati modificati. In questo esempio di scripting `ForceRemove` , verifica se `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` esiste già. In caso contrario, `ForceRemove`:
 
 - Elimina `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` in modo ricorsivo e tutte le relative sottochiavi.
 
-- Ricrea `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
+- Crea `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`nuovamente.
 
-- Aggiunge `ATL Registrar Class` come valore stringa `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`predefinito per .
+- Aggiunge `ATL Registrar Class` come valore stringa predefinito per `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
 
-L'albero di analisi ora `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`aggiunge due nuove sottochiavi a . La prima `ProgID`chiave, , ottiene un valore stringa predefinito che è il ProgID. La seconda `InprocServer32`chiave, , , `%MODULE%`ottiene un valore stringa predefinito, , ovvero un valore del preprocessore illustrato nella sezione [Using Replaceable Parameters (The Registrar's Preprocessor)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)di questo articolo. `InprocServer32`ottiene anche un `ThreadingModel`valore denominato, , `Apartment`con un valore stringa di .
+L'albero di analisi aggiunge ora due nuove sottochiavi `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`a. La prima chiave, `ProgID`, ottiene un valore stringa predefinito che corrisponde al ProgID. La seconda chiave, `InprocServer32`, ottiene un valore stringa predefinito, `%MODULE%`, che è un valore del preprocessore illustrato nella sezione, [usando i parametri sostituibili (il preprocessore del registrar)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)di questo articolo. `InprocServer32`Ottiene anche un valore denominato, `ThreadingModel`, con un valore di stringa `Apartment`pari a.
 
-## <a name="specify-multiple-parse-trees"></a>Specificare più alberi di analisiSpecify Multiple Parse Trees
+## <a name="specify-multiple-parse-trees"></a>Specificare più alberi di analisi
 
-Per specificare più di un albero di analisi in uno script, è sufficiente posizionare un albero alla fine di un altro. Ad esempio, lo script seguente `MyVeryOwnKey`aggiunge la chiave `HKEY_CLASSES_ROOT` , `HKEY_CURRENT_USER`, agli alberi di analisi per entrambi e :
+Per specificare più di un albero di analisi in uno script, è sufficiente inserire un albero alla fine di un altro. Ad esempio, lo script seguente aggiunge la chiave, `MyVeryOwnKey`, agli alberi di analisi per `HKEY_CLASSES_ROOT` e: `HKEY_CURRENT_USER`
 
-```
+```rgs
 HKCR
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -108,8 +108,8 @@ HKEY_CURRENT_USER
 ```
 
 > [!NOTE]
-> In uno script di registrazione, 4K è la dimensione massima del token. Un token è qualsiasi elemento riconoscibile nella sintassi. Nell'esempio di `HKCR`script `HKEY_CURRENT_USER` `'MyVeryOwnKey'`precedente, `'HowGoesIt'` , , e sono tutti token.
+> In uno script di registrazione, 4K è la dimensione massima del token. Un token è qualsiasi elemento riconoscibile nella sintassi. Nell'esempio di scripting precedente, `HKCR` `HKEY_CURRENT_USER` `'MyVeryOwnKey'`,, e `'HowGoesIt'` sono tutti token.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di script di registrazioneCreating Registrar Scripts](../atl/creating-registrar-scripts.md)
+[Creazione di script del registrar](../atl/creating-registrar-scripts.md)

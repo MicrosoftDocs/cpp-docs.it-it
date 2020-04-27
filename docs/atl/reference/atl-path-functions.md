@@ -41,38 +41,38 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: f3d8fa63e7fd20f8a0d6759fee8417b3fbc29486
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ab8dfc2e9d5789b7ee67f8082f28cf228608663
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319213"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168794"
 ---
 # <a name="atl-path-functions"></a>Funzioni di percorso ATL
 
-ATL fornisce la classe ATLPath per la modifica dei percorsi sotto forma di [CPathT](cpatht-class.md). Questo codice è disponibile in atlpath.h.
+ATL fornisce la classe ATLPath per la modifica dei percorsi nel formato [CPathT](cpatht-class.md). Questo codice si trova in atlpath. h.
 
-### <a name="related-classes"></a>Classi correlate
+## <a name="related-classes"></a>Classi correlate
 
 |||
 |-|-|
 |[Classe CPathT](cpatht-class.md)|Questa classe rappresenta un percorso.|
 
-### <a name="related-typedefs"></a>Typedef correlati
+## <a name="related-typedefs"></a>Typedef correlati
 
 |||
 |-|-|
-|`CPath`|Specializzazione di [CPathT](cpatht-class.md) utilizzando `CString`.|
-|`CPathA`|Specializzazione di [CPathT](cpatht-class.md) utilizzando `CStringA`.|
-|`CPathW`|Specializzazione di [CPathT](cpatht-class.md) utilizzando `CStringW`.|
+|`CPath`|Una specializzazione [CPathT](cpatht-class.md) di CPathT `CString`con.|
+|`CPathA`|Una specializzazione [CPathT](cpatht-class.md) di CPathT `CStringA`con.|
+|`CPathW`|Una specializzazione [CPathT](cpatht-class.md) di CPathT `CStringW`con.|
 
-### <a name="functions"></a>Funzioni
+## <a name="functions"></a>Funzioni
 
 |||
 |-|-|
 |[ATLPath::AddBackslash](#addbackslash)|Questa funzione è un wrapper di overload per [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).|
-|[ATLPath::AddExtension](#addextension)|Questa funzione è un wrapper in overload per [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).|
-|[ATLPath::Append](#append)|Questa funzione è un wrapper in overload per [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).|
+|[ATLPath::AddExtension](#addextension)|Questa funzione è un wrapper di overload per [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).|
+|[ATLPath::Append](#append)|Questa funzione è un wrapper di overload per [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).|
 |[ATLPath::BuildRoot](#buildroot)|Questa funzione è un wrapper di overload per [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).|
 |[ATLPath::Canonicalize](#canonicalize)|Questa funzione è un wrapper di overload per [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).|
 |[ATLPath::Combine](#combine)|Questa funzione è un wrapper di overload per [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).|
@@ -80,17 +80,17 @@ ATL fornisce la classe ATLPath per la modifica dei percorsi sotto forma di [CPat
 |[ATLPath::CompactPath](#compactpath)|Questa funzione è un wrapper di overload per [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).|
 |[ATLPath::CompactPathEx](#compactpathex)|Questa funzione è un wrapper di overload per [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).|
 |[ATLPath::FileExists](#fileexists)|Questa funzione è un wrapper di overload per [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).|
-|[ATLPath::FindExtension](#findextension)|Questa funzione è un wrapper in overload per [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).|
+|[ATLPath::FindExtension](#findextension)|Questa funzione è un wrapper di overload per [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).|
 |[ATLPath::FindFileName](#findfilename)|Questa funzione è un wrapper di overload per [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).|
 |[ATLPath::GetDriveNumber](#getdrivenumber)|Questa funzione è un wrapper di overload per [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).|
-|[ATLPath::IsDirectory](#isdirectory)|Questa funzione è un wrapper in overload per [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).|
+|[ATLPath::IsDirectory](#isdirectory)|Questa funzione è un wrapper di overload per [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).|
 |[ATLPath::IsFileSpec](#isfilespec)|Questa funzione è un wrapper di overload per [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).|
 |[ATLPath::IsPrefix](#isprefix)|Questa funzione è un wrapper di overload per [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).|
 |[ATLPath::IsRelative](#isrelative)|Questa funzione è un wrapper di overload per [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).|
-|[ATLPath::IsRoot](#isroot)|Questa funzione è un wrapper in overload per [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).|
+|[ATLPath::IsRoot](#isroot)|Questa funzione è un wrapper di overload per [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).|
 |[ATLPath::IsSameRoot](#issameroot)|Questa funzione è un wrapper di overload per [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).|
 |[ATLPath::IsUNC](#isunc)|Questa funzione è un wrapper di overload per [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).|
-|[ATLPath::IsUNCServer](#isuncserver)|Questa funzione è un wrapper in overload per [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).|
+|[ATLPath::IsUNCServer](#isuncserver)|Questa funzione è un wrapper di overload per [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).|
 |[ATLPath::IsUNCServerShare](#isuncservershare)|Questa funzione è un wrapper di overload per [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).|
 |[ATLPath::MakePretty](#makepretty)|Questa funzione è un wrapper di overload per [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).|
 |[ATLPath::MatchSpec](#matchspec)|Questa funzione è un wrapper di overload per [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).|
@@ -98,8 +98,8 @@ ATL fornisce la classe ATLPath per la modifica dei percorsi sotto forma di [CPat
 |[ATLPath::RelativePathTo](#relativepathto)|Questa funzione è un wrapper di overload per [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).|
 |[ATLPath::RemoveArgs](#removeargs)|Questa funzione è un wrapper di overload per [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).|
 |[ATLPath::RemoveBackslash](#removebackslash)|Questa funzione è un wrapper di overload per [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).|
-|[ATLPath::RemoveBlanks](#removeblanks)|Questa funzione è un wrapper in overload per [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).|
-|[ATLPath::RemoveExtension](#removeextension)|Questa funzione è un wrapper in overload per [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).|
+|[ATLPath::RemoveBlanks](#removeblanks)|Questa funzione è un wrapper di overload per [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).|
+|[ATLPath::RemoveExtension](#removeextension)|Questa funzione è un wrapper di overload per [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).|
 |[ATLPath::RemoveFileSpec](#removefilespec)|Questa funzione è un wrapper di overload per [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).|
 |[ATLPath::RenameExtension](#renameextension)|Questa funzione è un wrapper di overload per [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).|
 |[ATLPath::SkipRoot](#skiproot)|Questa funzione è un wrapper di overload per [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).|
@@ -109,90 +109,90 @@ ATL fornisce la classe ATLPath per la modifica dei percorsi sotto forma di [CPat
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlpath.h
+**Intestazione:** atlpath. h
 
-## <a name="atlpathaddbackslash"></a><a name="addbackslash"></a>PERCORSO::AddBackSlash
+## <a name="atlpathaddbackslash"></a><a name="addbackslash"></a>ATLPath:: AddBackSlash
 
 Questa funzione è un wrapper di overload per [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline char* AddBackslash(char* pszPath);
 inline wchar_t* AddBackslash(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Vedere [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw) per i dettagli.
+Per informazioni dettagliate, vedere [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw) .
 
-## <a name="atlpathaddextension"></a><a name="addextension"></a>PERCORSO ATLPath::AddExtension
+## <a name="atlpathaddextension"></a><a name="addextension"></a>ATLPath:: AddExtension
 
-Questa funzione è un wrapper in overload per [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
+Questa funzione è un wrapper di overload per [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL AddExtension(char* pszPath, const char* pszExtension);
 inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathAddExtension.See PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw) for details.
+Per informazioni dettagliate, vedere [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw) .
 
-## <a name="atlpathappend"></a><a name="append"></a>ATLPath::Accoda
+## <a name="atlpathappend"></a><a name="append"></a>ATLPath:: Append
 
-Questa funzione è un wrapper in overload per [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
+Questa funzione è un wrapper di overload per [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL Append(char* pszPath, const char* pszMore);
 inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathAppend.See PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw) for details.
+Per informazioni dettagliate, vedere [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw) .
 
-## <a name="atlpathbuildroot"></a><a name="buildroot"></a>ATLPath::BuildRoot
+## <a name="atlpathbuildroot"></a><a name="buildroot"></a>ATLPath:: elemento buildroot
 
 Questa funzione è un wrapper di overload per [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline char* BuildRoot(char* pszPath, int iDrive);
 inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathBuildRoot.See PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw) for details.
+Per informazioni dettagliate, vedere [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw) .
 
-## <a name="atlpathcanonicalize"></a><a name="canonicalize"></a>ATLPath::Canonicalize (Percorso ATLPath::Canonicalize)
+## <a name="atlpathcanonicalize"></a><a name="canonicalize"></a>ATLPath:: Canonicalize
 
 Questa funzione è un wrapper di overload per [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL Canonicalize(char* pszDest, const char* pszSrc);
 inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Vedere [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew) per i dettagli.
+Per informazioni dettagliate, vedere [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew) .
 
-## <a name="atlpathcombine"></a><a name="combine"></a>ATLPath::Combina
+## <a name="atlpathcombine"></a><a name="combine"></a>ATLPath:: combine
 
 Questa funzione è un wrapper di overload per [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline char* Combine(
    char* pszDest,
    const char* pszDir,
@@ -207,15 +207,15 @@ inline wchar_t* Combine(
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere PathCombine.See PathCombine for details.
+Per informazioni dettagliate, vedere PathCombine.
 
-## <a name="atlpathcommonprefix"></a><a name="commonprefix"></a>ATLPath::CommonPrefix
+## <a name="atlpathcommonprefix"></a><a name="commonprefix"></a>ATLPath:: CommonPrefix
 
 Questa funzione è un wrapper di overload per [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline int CommonPrefix(
    const char* pszFile1,
    const char* pszFile2,
@@ -229,15 +229,15 @@ inline int CommonPrefix(
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathCommonPrefix.See PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw) for details.
+Per informazioni dettagliate, vedere [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw) .
 
-## <a name="atlpathcompactpath"></a><a name="compactpath"></a>ATLPath::CompactPath
+## <a name="atlpathcompactpath"></a><a name="compactpath"></a>ATLPath:: CompactPath
 
 Questa funzione è un wrapper di overload per [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL CompactPath(
    HDC hDC,
    char* pszPath,
@@ -251,15 +251,15 @@ inline BOOL CompactPath(
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathCompactPath.See PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw) for details.
+Per informazioni dettagliate, vedere [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw) .
 
-## <a name="atlpathcompactpathex"></a><a name="compactpathex"></a>ATLPath::CompactPathEx
+## <a name="atlpathcompactpathex"></a><a name="compactpathex"></a>ATLPath:: CompactPathEx
 
 Questa funzione è un wrapper di overload per [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL CompactPathEx(
    char* pszDest,
    const char* pszSrc,
@@ -275,253 +275,253 @@ inline BOOL CompactPathEx(
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathCompactPathEx.See PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw) for details.
+Per informazioni dettagliate, vedere [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw) .
 
-## <a name="atlpathfileexists"></a><a name="fileexists"></a>ATLPercorso::FileExists
+## <a name="atlpathfileexists"></a><a name="fileexists"></a>ATLPath:: FileExists
 
 Questa funzione è un wrapper di overload per [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL FileExists(const char* pszPath);
 inline BOOL FileExists(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathFileExists.See PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw) for details.
+Per informazioni dettagliate, vedere [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw) .
 
-## <a name="atlpathfindextension"></a><a name="findextension"></a>PERCORSO ATLPath::FindExtension
+## <a name="atlpathfindextension"></a><a name="findextension"></a>ATLPath:: FindExtension
 
-Questa funzione è un wrapper in overload per [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
+Questa funzione è un wrapper di overload per [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline char* FindExtension(const char* pszPath);
 inline wchar_t* FindExtension(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathFindExtension.See PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw) for details.
+Per informazioni dettagliate, vedere [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw) .
 
-## <a name="atlpathfindfilename"></a><a name="findfilename"></a>ATLPercorso::NomeFileRicerca
+## <a name="atlpathfindfilename"></a><a name="findfilename"></a>ATLPath:: FindFileName
 
 Questa funzione è un wrapper di overload per [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline char* FindFileName(const char* pszPath);
 inline wchar_t* FindFileName(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathFindFileName.See PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) for details.
+Per informazioni dettagliate, vedere [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) .
 
-## <a name="atlpathgetdrivenumber"></a><a name="getdrivenumber"></a>PERCORSOATT::NumeroUnità
+## <a name="atlpathgetdrivenumber"></a><a name="getdrivenumber"></a>ATLPath:: GetDriveNumber
 
 Questa funzione è un wrapper di overload per [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline int GetDriveNumber(const char* pszPath);
 inline int GetDriveNumber(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathGetDriveNumber.See PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw) for details.
+Per informazioni dettagliate, vedere [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw) .
 
-## <a name="atlpathisdirectory"></a><a name="isdirectory"></a>ATLPath::IsDirectory
+## <a name="atlpathisdirectory"></a><a name="isdirectory"></a>ATLPath:: directory
 
-Questa funzione è un wrapper in overload per [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
+Questa funzione è un wrapper di overload per [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
-```
+```cpp
 inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere PathIsDirectory.See PathIsDirectory for details.
+Per informazioni dettagliate, vedere PathIsDirectory.
 
-## <a name="atlpathisfilespec"></a><a name="isfilespec"></a>ATLPath::IsFileSpec
+## <a name="atlpathisfilespec"></a><a name="isfilespec"></a>ATLPath:: IsFileSpec
 
 Questa funzione è un wrapper di overload per [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsFileSpec(const char* pszPath);
 inline BOOL IsFileSpec(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsFileSpec.See PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw) for details.
+Per informazioni dettagliate, vedere [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw) .
 
-## <a name="atlpathisprefix"></a><a name="isprefix"></a>ATLPath::IsPrefix
+## <a name="atlpathisprefix"></a><a name="isprefix"></a>ATLPath:: prefix
 
 Questa funzione è un wrapper di overload per [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsPrefix(const char* pszPrefix, const char* pszPath);
 inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsPrefix.See PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw) for details.
+Per informazioni dettagliate, vedere [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw) .
 
-## <a name="atlpathisrelative"></a><a name="isrelative"></a>ATLPath::IsRelative
+## <a name="atlpathisrelative"></a><a name="isrelative"></a>ATLPath:: è relativo
 
 Questa funzione è un wrapper di overload per [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsRelative(const char* pszPath);
 inline BOOL IsRelative(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsRelative.See PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew) for details.
+Per informazioni dettagliate, vedere [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew) .
 
-## <a name="atlpathisroot"></a><a name="isroot"></a>ATLPercorso::IsRoot
+## <a name="atlpathisroot"></a><a name="isroot"></a>ATLPath:: radice
 
-Questa funzione è un wrapper in overload per [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
+Questa funzione è un wrapper di overload per [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsRoot(const char* pszPath);
 inline BOOL IsRoot(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsRoot.See PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw) for details.
+Per informazioni dettagliate, vedere [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw) .
 
-## <a name="atlpathissameroot"></a><a name="issameroot"></a>PERCORSO ATLPath::IsSameRoot
+## <a name="atlpathissameroot"></a><a name="issameroot"></a>ATLPath:: IsSameRoot
 
 Questa funzione è un wrapper di overload per [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsSameRoot(const char* pszPath1, const char* pszPath2);
 inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsSameRoot.See PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw) for details.
+Per informazioni dettagliate, vedere [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw) .
 
-## <a name="atlpathisunc"></a><a name="isunc"></a>ATLPercorso::IsUNC
+## <a name="atlpathisunc"></a><a name="isunc"></a>ATLPath:: IsUNC
 
 Questa funzione è un wrapper di overload per [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsUNC(const char* pszPath);
 inline BOOL IsUNC(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsUNC.See PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw) for details.
+Per informazioni dettagliate, vedere [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw) .
 
-## <a name="atlpathisuncserver"></a><a name="isuncserver"></a>ATLPercorso::IsUNCServer
+## <a name="atlpathisuncserver"></a><a name="isuncserver"></a>ATLPath:: IsUNCServer
 
-Questa funzione è un wrapper in overload per [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
+Questa funzione è un wrapper di overload per [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsUNCServer(const char* pszPath);
 inline BOOL IsUNCServer(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsUNCServer.See PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw) for details.
+Per informazioni dettagliate, vedere [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw) .
 
-## <a name="atlpathisuncservershare"></a><a name="isuncservershare"></a>ATLPath::IsUNCServerShare (Percorso ATL::CondivisioneIsUNCServerShare)
+## <a name="atlpathisuncservershare"></a><a name="isuncservershare"></a>ATLPath:: IsUNCServerShare
 
 Questa funzione è un wrapper di overload per [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL IsUNCServerShare(const char* pszPath);
 inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathIsUNCServerShare.See PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew) for details.
+Per informazioni dettagliate, vedere [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew) .
 
-## <a name="atlpathmakepretty"></a><a name="makepretty"></a>ATLPath::MakePretty
+## <a name="atlpathmakepretty"></a><a name="makepretty"></a>ATLPath:: MakePretty
 
 Questa funzione è un wrapper di overload per [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL MakePretty(char* pszPath);
 inline BOOL MakePretty(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Vedere [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw) per i dettagli.
+Per informazioni dettagliate, vedere [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw) .
 
-## <a name="atlpathmatchspec"></a><a name="matchspec"></a>ATLPath::MatchSpec
+## <a name="atlpathmatchspec"></a><a name="matchspec"></a>ATLPath:: MatchSpec
 
 Questa funzione è un wrapper di overload per [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL MatchSpec(const char* pszPath, const char* pszSpec);
 inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathMatchSpec.See PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw) for details.
+Per informazioni dettagliate, vedere [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw) .
 
-## <a name="atlpathquotespaces"></a><a name="quotespaces"></a>ATLPath::QuoteSpaces
+## <a name="atlpathquotespaces"></a><a name="quotespaces"></a>ATLPath:: QuoteSpaces
 
 Questa funzione è un wrapper di overload per [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline void QuoteSpaces(char* pszPath);
 inline void QuoteSpaces(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathQuoteSpaces.See PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw) for details.
+Per informazioni dettagliate, vedere [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw) .
 
-## <a name="atlpathrelativepathto"></a><a name="relativepathto"></a>ATLPath::RelativePathTo
+## <a name="atlpathrelativepathto"></a><a name="relativepathto"></a>ATLPath:: RelativePathTo
 
 Questa funzione è un wrapper di overload per [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL RelativePathTo(
    char* pszPath,
    const char* pszFrom,
@@ -539,154 +539,154 @@ inline BOOL RelativePathTo(
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathRelativePathTo.See PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow) for details.
+Per informazioni dettagliate, vedere [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow) .
 
-## <a name="atlpathremoveargs"></a><a name="removeargs"></a>ATLPath::RemoveArgs
+## <a name="atlpathremoveargs"></a><a name="removeargs"></a>ATLPath:: RemoveArgs
 
 Questa funzione è un wrapper di overload per [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline void RemoveArgs(char* pszPath);
 inline void RemoveArgs(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Vedere [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw) per informazioni dettagliate.
+Per informazioni dettagliate, vedere [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw) .
 
-## <a name="atlpathremovebackslash"></a><a name="removebackslash"></a>PERCORSO::RimuovereBackslash
+## <a name="atlpathremovebackslash"></a><a name="removebackslash"></a>ATLPath:: RemoveBackslash
 
 Questa funzione è un wrapper di overload per [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline char* RemoveBackslash(char* pszPath);
 inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathRemoveBackslash.](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)
+Per informazioni dettagliate, vedere [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw) .
 
-## <a name="atlpathremoveblanks"></a><a name="removeblanks"></a>ATLPercorso::RemoveVuote
+## <a name="atlpathremoveblanks"></a><a name="removeblanks"></a>ATLPath:: RemoveBlanks
 
-Questa funzione è un wrapper in overload per [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
+Questa funzione è un wrapper di overload per [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline void RemoveBlanks(char* pszPath);
 inline void RemoveBlanks(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathRemoveBlanks.See PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw) for details.
+Per informazioni dettagliate, vedere [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw) .
 
-## <a name="atlpathremoveextension"></a><a name="removeextension"></a>ATLPercorso::RemoveExtension
+## <a name="atlpathremoveextension"></a><a name="removeextension"></a>ATLPath:: RemoveExtension
 
-Questa funzione è un wrapper in overload per [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
+Questa funzione è un wrapper di overload per [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline void RemoveExtension(char* pszPath);
 inline void RemoveExtension(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathRemoveExtension.See PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw) for details.
+Per informazioni dettagliate, vedere [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw) .
 
-## <a name="atlpathremovefilespec"></a><a name="removefilespec"></a>ATLPath::RemoveFileSpec
+## <a name="atlpathremovefilespec"></a><a name="removefilespec"></a>ATLPath:: RemoveFileSpec
 
 Questa funzione è un wrapper di overload per [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL RemoveFileSpec(char* pszPath);
 inline BOOL RemoveFileSpec(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathRemoveFileSpec.See PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw) for details.
+Per informazioni dettagliate, vedere [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw) .
 
-## <a name="atlpathrenameextension"></a><a name="renameextension"></a>ATLPath::RenameExtension (Percorso ATLPath::RenameExtension)
+## <a name="atlpathrenameextension"></a><a name="renameextension"></a>ATLPath:: RenameExtension
 
 Questa funzione è un wrapper di overload per [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL RenameExtension(char* pszPath, const char* pszExt);
 inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathRenameExtension.See PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw) for details.
+Per informazioni dettagliate, vedere [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw) .
 
-## <a name="atlpathskiproot"></a><a name="skiproot"></a>ATLPercorso::SkipRoot
+## <a name="atlpathskiproot"></a><a name="skiproot"></a>ATLPath:: SkipRoot
 
 Questa funzione è un wrapper di overload per [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline char* SkipRoot(const char* pszPath);
 inline wchar_t* SkipRoot(const wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathSkipRoot.See PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw) for details.
+Per informazioni dettagliate, vedere [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw) .
 
-## <a name="atlpathstrippath"></a><a name="strippath"></a>PERCORSOATC::StripPath
+## <a name="atlpathstrippath"></a><a name="strippath"></a>ATLPath:: StripPath
 
 Questa funzione è un wrapper di overload per [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline void StripPath(char* pszPath);
 inline void StripPath(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathStripPath.See PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw) for details.
+Per informazioni dettagliate, vedere [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw) .
 
-## <a name="atlpathstriptoroot"></a><a name="striptoroot"></a>PERCORSO ATLPath::StripToRoot
+## <a name="atlpathstriptoroot"></a><a name="striptoroot"></a>ATLPath:: StripToRoot
 
 Questa funzione è un wrapper di overload per [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline BOOL StripToRoot(char* pszPath);
 inline BOOL StripToRoot(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni [dettagliate, vedere PathStripToRoot.See PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw) for details.
+Per informazioni dettagliate, vedere [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw) .
 
-## <a name="atlpathunquotespaces"></a><a name="unquotespaces"></a>ATLPath::UnquoteSpaces (Spazi PER I prezzi di univirgolett)
+## <a name="atlpathunquotespaces"></a><a name="unquotespaces"></a>ATLPath:: UnquoteSpaces
 
 Questa funzione è un wrapper di overload per [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 inline void UnquoteSpaces(char* pszPath);
 inline void UnquoteSpaces(wchar_t* pszPath);
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate, vedere [PathUnquoteSpaces.See PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw) for details.
+Per informazioni dettagliate, vedere [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw) .

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ATL_MODULE70 structure
 - _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
-ms.openlocfilehash: d05683383fab64f027f198d49bfbf42aa593d582
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d39cdd281e09cdfe09546627aa630a11d12464e
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260922"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168566"
 ---
-# <a name="atlmodule70-structure"></a>Struttura _ATL_MODULE70
+# <a name="_atl_module70-structure"></a>Struttura _ATL_MODULE70
 
-Contiene i dati usati da ogni modulo ATL.
+Contiene i dati utilizzati da ogni modulo ATL.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 struct _ATL_MODULE70 {
     UINT cbSize;
     LONG m_nLockCnt;
@@ -31,23 +31,23 @@ struct _ATL_MODULE70 {
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 `cbSize`<br/>
-Le dimensioni della struttura, usata per il controllo delle versioni.
+Dimensioni della struttura, utilizzate per il controllo delle versioni.
 
 `m_nLockCnt`<br/>
-Conteggio dei riferimenti per determinare quanto tempo il modulo deve rimanere attivo.
+Conteggio dei riferimenti per determinare per quanto tempo il modulo deve rimanere attivo.
 
 `m_pTermFuncs`<br/>
-Funzioni tracce registrate da chiamare quando ATL viene arrestato.
+Tiene traccia delle funzioni che sono state registrate per essere chiamate al momento dell'arresto di ATL.
 
 `m_csStaticDataInitAndTypeInfo`<br/>
-Consente di coordinare l'accesso ai dati interni in situazioni multithread.
+Utilizzato per coordinare l'accesso ai dati interni in situazioni multithread.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module) viene definito come un typedef di `_ATL_MODULE70`.
+[_ATL_MODULE](atl-typedefs.md#_atl_module) viene definito come typedef di `_ATL_MODULE70`.
 
 ## <a name="requirements"></a>Requisiti
 

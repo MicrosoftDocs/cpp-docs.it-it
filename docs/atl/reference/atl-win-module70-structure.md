@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_WIN_MODULE70 structure
 - ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
-ms.openlocfilehash: 0b636d328852daf821269230aae443cef084578b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e78e4ad87338528aa654f5ecaa08b45315846
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260753"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168553"
 ---
-# <a name="atlwinmodule70-structure"></a>Struttura _ATL_WIN_MODULE70
+# <a name="_atl_win_module70-structure"></a>Struttura _ATL_WIN_MODULE70
 
-Utilizzato dal codice di windowing in ATL.
+Utilizzato dal codice di finestra in ATL.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize;
     CRITICAL_SECTION m_csWindowCreate;
@@ -31,23 +31,23 @@ struct _ATL_WIN_MODULE70 {
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 `cbSize`<br/>
-Le dimensioni della struttura, usata per il controllo delle versioni.
+Dimensioni della struttura, utilizzate per il controllo delle versioni.
 
 `m_csWindowCreate`<br/>
-Utilizzato per serializzare l'accesso al codice di registrazione di finestra. Usato internamente da ATL.
+Usato per serializzare l'accesso al codice di registrazione della finestra. Utilizzato internamente da ATL.
 
 `m_pCreateWndList`<br/>
-Utilizzato per associare windows agli oggetti. Usato internamente da ATL.
+Utilizzato per associare Windows ai relativi oggetti. Utilizzato internamente da ATL.
 
 `m_rgWindowClassAtoms`<br/>
-Usato per tenere traccia delle registrazioni di classe di finestra in modo che possano essere correttamente non registrati alla chiusura. Usato internamente da ATL.
+Usato per tenere traccia delle registrazioni della classe di finestra in modo che possano essere annullate correttamente alla chiusura. Utilizzato internamente da ATL.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) viene definito come un typedef di `_ATL_WIN_MODULE70`.
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) viene definito come typedef di `_ATL_WIN_MODULE70`.
 
 ## <a name="requirements"></a>Requisiti
 
