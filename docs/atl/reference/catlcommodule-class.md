@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 68fdb48edc9304d9d74df6f36bd208cfd35ff307
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b8c98630b27c35ed6a7e32318c6ebad8a82a5c5
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321475"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168823"
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
 
@@ -25,33 +25,33 @@ Questa classe implementa un modulo server COM.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 class CAtlComModule : public _ATL_COM_MODULE
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Modulo CAtlComModule::CAtlComModule](#catlcommodule)|Costruttore.|
-|[CAtlComModule:: CAtlComModule](#dtor)|Distruttore.|
+|[CAtlComModule:: CAtlComModule](#catlcommodule)|Costruttore.|
+|[CAtlComModule:: ~ CAtlComModule](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAtlComModule::RegisterServer (Modulo)](#registerserver)|Chiamare questo metodo per aggiornare il Registro di sistema per ogni oggetto nella mappa oggetti.|
-|[CAtlComModule::RegisterTypeLib](#registertypelib)|Chiamare questo metodo per registrare una libreria dei tipi.|
-|[CAtlComModule::UnregisterServer (Modulo di registrazione)](#unregisterserver)|Chiamare questo metodo per annullare la registrazione di ogni oggetto nella mappa oggetti.|
-|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Chiamare questo metodo per annullare la registrazione di una libreria dei tipi.|
+|[CAtlComModule:: RegisterServer](#registerserver)|Chiamare questo metodo per aggiornare il registro di sistema per ogni oggetto nella mappa degli oggetti.|
+|[CAtlComModule:: RegisterTypeLib](#registertypelib)|Chiamare questo metodo per registrare una libreria di tipi.|
+|[CAtlComModule:: UnregisterServer](#unregisterserver)|Chiamare questo metodo per annullare la registrazione di ogni oggetto nella mappa degli oggetti.|
+|[CAtlComModule:: UnRegisterTypeLib](#unregistertypelib)|Chiamare questo metodo per annullare la registrazione di una libreria di tipi.|
 
 ## <a name="remarks"></a>Osservazioni
 
 `CAtlComModule`implementa un modulo server COM, consentendo a un client di accedere ai componenti del modulo.
 
-Questa classe sostituisce la classe [CComModule](../../atl/reference/ccommodule-class.md) obsoleta utilizzata nelle versioni precedenti di ATL. Per ulteriori informazioni, vedere [Classi di moduli ATL.](../../atl/atl-module-classes.md)
+Questa classe sostituisce la classe [CComModule](../../atl/reference/ccommodule-class.md) obsoleta usata nelle versioni precedenti di ATL. Per ulteriori informazioni, vedere [classi di moduli ATL](../../atl/atl-module-classes.md) .
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -61,13 +61,13 @@ Questa classe sostituisce la classe [CComModule](../../atl/reference/ccommodule-
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase.h
+**Intestazione:** atlbase. h
 
-## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>Modulo CAtlComModule::CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule:: CAtlComModule
 
 Costruttore.
 
-```
+```cpp
 CAtlComModule() throw();
 ```
 
@@ -75,69 +75,69 @@ CAtlComModule() throw();
 
 Inizializza il modulo.
 
-## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule:: CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule:: ~ CAtlComModule
 
 Distruttore.
 
-```
+```cpp
 ~CAtlComModule();
 ```
 
 ### <a name="remarks"></a>Osservazioni
 
-Libera tutte le fabbriche di classe.
+Libera tutte le class factory.
 
-## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer (Modulo)
+## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule:: RegisterServer
 
-Chiamare questo metodo per aggiornare il Registro di sistema per ogni oggetto nella mappa oggetti.
+Chiamare questo metodo per aggiornare il registro di sistema per ogni oggetto nella mappa degli oggetti.
 
-```
+```cpp
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*bRegTypeLib (in questo stato instato)*<br/>
-TRUESe la libreria dei tipi deve essere registrata. Il valore predefinito è FALSE.
+*bRegTypeLib*<br/>
+TRUE se la libreria dei tipi deve essere registrata. Il valore predefinito è FALSE.
 
-*PCLSID (intattoLOGI)*<br/>
-Punta al CLSID dell'oggetto da registrare. Se NULL (valore predefinito), verranno registrati tutti gli oggetti nella mappa oggetti.
+*pCLSID*<br/>
+Punta al CLSID dell'oggetto da registrare. Se NULL (valore predefinito), tutti gli oggetti nella mappa degli oggetti verranno registrati.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ### <a name="remarks"></a>Osservazioni
 
 Chiama la funzione globale [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).
 
-## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
+## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule:: RegisterTypeLib
 
-Chiamare questo metodo per registrare una libreria dei tipi.
+Chiamare questo metodo per registrare una libreria di tipi.
 
-```
+```cpp
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Indice di lpsz*<br/>
-Stringa nel formato\\" . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+*lpszIndex*<br/>
+Stringa nel formato "\\\n", dove N è l'indice Integer della risorsa TypeLib.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ### <a name="remarks"></a>Osservazioni
 
-Aggiunge informazioni su una libreria dei tipi al Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare quale libreria dei tipi deve essere utilizzata.
+Aggiunge informazioni su una libreria dei tipi al registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, usare la prima versione di questo metodo per specificare la libreria dei tipi da usare.
 
-## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer (Modulo di registrazione)
+## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule:: UnregisterServer
 
-Chiamare questo metodo per annullare la registrazione di ogni oggetto nella mappa oggetti.
+Chiamare questo metodo per annullare la registrazione di ogni oggetto nella mappa degli oggetti.
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
@@ -145,41 +145,41 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Parametri
 
-*bRegTypeLib (in questo stato instato)*<br/>
-TRUESe la libreria dei tipi deve essere annullata la registrazione. Il valore predefinito è FALSE.
+*bRegTypeLib*<br/>
+TRUE se è necessario annullare la registrazione della libreria dei tipi. Il valore predefinito è FALSE.
 
-*PCLSID (intattoLOGI)*<br/>
-Punta al CLSID dell'oggetto di cui annullare la registrazione. Se NULL (valore predefinito), verrà annullata la registrazione di tutti gli oggetti nella mappa oggetti.
+*pCLSID*<br/>
+Punta al CLSID dell'oggetto di cui annullare la registrazione. Se NULL (valore predefinito), verrà annullata la registrazione di tutti gli oggetti nella mappa oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ### <a name="remarks"></a>Osservazioni
 
 Chiama la funzione globale [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
-## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
+## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule:: UnRegisterTypeLib
 
-Chiamare questo metodo per annullare la registrazione di una libreria dei tipi.
+Chiamare questo metodo per annullare la registrazione di una libreria di tipi.
 
-```
+```cpp
 HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Indice di lpsz*<br/>
-Stringa nel formato\\" . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+*lpszIndex*<br/>
+Stringa nel formato "\\\n", dove N è l'indice Integer della risorsa TypeLib.
 
 ### <a name="remarks"></a>Osservazioni
 
-Rimuove le informazioni su una libreria dei tipi dal Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare quale libreria dei tipi deve essere utilizzata.
+Rimuove le informazioni relative a una libreria dei tipi dal registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, usare la prima versione di questo metodo per specificare la libreria dei tipi da usare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ## <a name="see-also"></a>Vedere anche
 

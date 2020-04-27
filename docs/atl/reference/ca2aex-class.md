@@ -10,110 +10,110 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: 4f8b9f91e9bc499523fe3484bc76325e2efb8140
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dfd8967d21005d83b38eeae36cfc147051d7beaf
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319174"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168527"
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 
-Questa classe viene utilizzata dalle macro di conversione delle stringhe CA2TEX e CT2AEX e dal typedef CA2A.
+Questa classe viene utilizzata dalle macro di conversione di stringa CA2TEX e CT2AEX e typedef CA2A.
 
 > [!IMPORTANT]
-> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template <int t_nBufferLength = 128>
 class CA2AEX
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *t_nBufferLength*<br/>
-Dimensione del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
+Dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CA2AEX::CA2AEX (CA2AEX)](#ca2aex)|Costruttore.|
-|[CA2AEX::CA2AEX](#dtor)|Distruttore.|
+|[CA2AEX:: CA2AEX](#ca2aex)|Costruttore.|
+|[CA2AEX:: ~ CA2AEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CA2AEX::operatore LPSTR](#operator_lpstr)|Operatore di conversione.|
+|[CA2AEX:: operator LPSTR](#operator_lpstr)|Operatore di conversione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CA2AEX::m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
-|[CA2AEX::m_szBuffer](#m_szbuffer)|Buffer statico, utilizzato per archiviare la stringa convertita.|
+|[CA2AEX:: m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
+|[CA2AEX:: m_szBuffer](#m_szbuffer)|Buffer statico utilizzato per archiviare la stringa convertita.|
 
 ## <a name="remarks"></a>Osservazioni
 
-A meno che non siano necessarie funzionalità aggiuntive, utilizzare CA2TEX, CT2AEX o CA2A nel codice.
+A meno che non sia necessaria una funzionalità aggiuntiva, usare CA2TEX, CT2AEX o CA2A nel proprio codice.
 
-Questa classe contiene un buffer statico a dimensione fissa che viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per essere inserito nel buffer statico, la classe alloca memoria utilizzando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza delle macro di conversione del testo disponibili nelle versioni precedenti di ATL, questa classe è sicura da utilizzare nei cicli e che non verrà eseguito l'overflow dello stack.
+Questa classe contiene un buffer statico di dimensioni fisse usato per archiviare il risultato della conversione. Se il risultato è troppo grande per essere inserito nel buffer statico, la classe alloca memoria utilizzando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza delle macro di conversione del testo disponibili nelle versioni precedenti di ATL, questa classe è sicura per l'utilizzo in cicli e che non si inun overflow dello stack.
 
-Se la classe tenta di allocare memoria nell'heap e ha esito negativo, chiamerà `AtlThrow` con un argomento di E_OUTOFMEMORY.
+Se la classe tenta di allocare memoria nell'heap e ha esito negativo, `AtlThrow` verrà chiamata con un argomento di E_OUTOFMEMORY.
 
-Per impostazione predefinita, le macro e le classi di conversione ATL utilizzano la tabella codici ANSI del thread corrente per la conversione.
+Per impostazione predefinita, le classi e le macro di conversione ATL utilizzano la tabella codici ANSI del thread corrente per la conversione.
 
-Le seguenti macro sono basate su questa classe:
+Le macro seguenti sono basate su questa classe:
 
 - CA2TEX
 
 - CT2AEX
 
-Il typedef seguente è basato su questa classe:The following typedef is based on this class:
+Il typedef seguente si basa su questa classe:
 
 - CA2A
 
-Per una descrizione di queste macro di conversione del testo, vedere Macro di [conversione di stringhe ATL e MFC](string-conversion-macros.md).
+Per una descrizione di queste macro di conversione del testo, vedere le [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di utilizzo di queste macro di conversione delle stringhe, vedere Macro di conversione di stringhe [ATL e MFC.](string-conversion-macros.md)
+Vedere [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md) per un esempio di utilizzo di queste macro di conversione di stringhe.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlconv.h
+**Intestazione:** atlconv. h
 
-## <a name="ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX::CA2AEX (CA2AEX)
+## <a name="ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX:: CA2AEX
 
 Costruttore.
 
-```
+```cpp
 CA2AEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2AEX(LPCSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Psz*<br/>
+*PSZ*<br/>
 Stringa di testo da convertire.
 
-*nPaginaclico*<br/>
-Non utilizzato in questa classe.
+*nCodePage*<br/>
+Non usato in questa classe.
 
 ### <a name="remarks"></a>Osservazioni
 
-Crea il buffer necessario per la conversione.
+Crea il buffer necessario per la traduzione.
 
-## <a name="ca2aexca2aex"></a><a name="dtor"></a>CA2AEX::CA2AEX
+## <a name="ca2aexca2aex"></a><a name="dtor"></a>CA2AEX:: ~ CA2AEX
 
 Distruttore.
 
-```
+```cpp
 ~CA2AEX() throw();
 ```
 
@@ -121,27 +121,27 @@ Distruttore.
 
 Libera il buffer allocato.
 
-## <a name="ca2aexm_psz"></a><a name="m_psz"></a>CA2AEX::m_psz
+## <a name="ca2aexm_psz"></a><a name="m_psz"></a>CA2AEX:: m_psz
 
 Membro dati che archivia la stringa di origine.
 
-```
+```cpp
 LPSTR m_psz;
 ```
 
-## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a>CA2AEX::m_szBuffer
+## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a>CA2AEX:: m_szBuffer
 
-Buffer statico, utilizzato per archiviare la stringa convertita.
+Buffer statico utilizzato per archiviare la stringa convertita.
 
-```
+```cpp
 char m_szBuffer[ t_nBufferLength];
 ```
 
-## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX::operatore LPSTR
+## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX:: operator LPSTR
 
 Operatore di conversione.
 
-```
+```cpp
 operator LPSTR() const throw();
 ```
 
