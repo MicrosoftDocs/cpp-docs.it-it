@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 42c36259b14a7f0341e383bb3a7f2760bab165aa
+ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150953"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538591"
 ---
 # <a name="data-access-in-visual-c"></a>Accesso ai dati in Visual C++
 
 Praticamente tutti i prodotti database, SQL e NoSQL, offrono un'interfaccia per applicazioni C++ native. L'interfaccia standard del settore, ODBC, è supportata da tutti i principali prodotti database SQL e da molti prodotti NoSQL. Per altre informazioni su prodotti non Microsoft, rivolgersi al fornitore. Sono disponibili anche librerie di terze parti con varie condizioni di licenza.
 
-Dal 2011 Microsoft si è allineata a ODBC, adottando questa interfaccia come standard per le applicazioni native di connessione ai database Microsoft SQL Server, sia locali che nel cloud. Per altre informazioni, vedere [Programmazione dell'accesso ai dati \(MFC-ATL\)](data-access-programming-mfc-atl.md). Le librerie C++/CLI possono usare i driver ODBC nativi o ADO.NET. Per altre informazioni, vedere [Accesso ai dati tramite ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) e [Accesso ai dati in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Dal 2011 Microsoft si è allineata a ODBC, adottando questa interfaccia come standard per le applicazioni native di connessione ai database Microsoft SQL Server, sia locali che nel cloud. Per altre informazioni, vedere [Programmazione dell'accesso ai dati \(MFC-ATL\)](data-access-programming-mfc-atl.md). Le librerie C++/CLI possono usare i driver ODBC nativi o ADO.NET. Per altre informazioni, vedere [accesso ai dati tramite ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) e [accesso ai dati in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -29,16 +29,16 @@ Descrive la programmazione dell'accesso ai dati legacy in Visual C++, dove la mo
 [Open Database Connectivity (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
 La libreria MFC (Microsoft Foundation Classes) fornisce le classi per la programmazione con ODBC (Open Database Connectivity).
 
-[Programmazione con OLE DB](oledb/ole-db-programming.md)<br/>
+[Programmazione OLE DB](oledb/ole-db-programming.md)<br/>
 Un'interfaccia principalmente legacy che è ancora necessaria in alcuni scenari, in particolare per la programmazione per server collegati.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-[Connettersi a un database SQL tramite C e C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
+[Connettersi al database SQL tramite C e C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 Connettersi a un database SQL di Azure da applicazioni C o C++.
 
 [Libreria client di Archiviazione di Microsoft Azure per C++](https://github.com/Azure/azure-storage-cpp)<br/>
-[Archiviazione di Azure](/azure/storage/storage-introduction) è una soluzione di archiviazione cloud per applicazioni moderne in grado di garantire affidabilità, disponibilità e scalabilità per soddisfare le esigenze dei clienti. Per connettersi ad Archiviazione di Azure da C++ è possibile usare la libreria client di archiviazione di Azure per C++.
+[Archiviazione di Azure](/azure/storage/common/storage-introduction) è una soluzione di archiviazione cloud per applicazioni moderne in grado di garantire affidabilità, disponibilità e scalabilità per soddisfare le esigenze dei clienti. Per connettersi ad Archiviazione di Azure da C++ è possibile usare la libreria client di archiviazione di Azure per C++.
 
 [Driver ODBC per SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
 Il driver ODBC più recente garantisce accesso stabile ai dati dei database SQL di Microsoft Azure e Microsoft SQL Server per le applicazioni basate su C/C++. Offre inoltre il supporto per funzionalità quali Always Encrypted, Azure Active Directory e Gruppi di disponibilità AlwaysOn. Disponibile anche per MacOS e Linux.
@@ -49,7 +49,7 @@ Il driver OLE DB più recente è un'API (Application Programming Interface) auto
 [Centro per sviluppatori C++ e C di Microsoft Azure](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure semplifica la creazione di applicazioni C++ garantendo flessibilità, scalabilità e affidabilità maggiori con gli strumenti preferiti.
 
-[Come usare l’archiviazione BLOB da C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[Come usare l'archiviazione BLOB da C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 L'archiviazione BLOB di Azure è un servizio che archivia dati non strutturati nel cloud come oggetti/BLOB. Archivio BLOB può archiviare qualsiasi tipo di dati di testo o binari, ad esempio un documento, un file multimediale o un programma di installazione di un'applicazione. L'archivio BLOB è anche denominato archivio di oggetti.
 
 [Guida di riferimento per programmatori ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
