@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 88707da503b1d1cdc809827dc4d1bac0ccad9b5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421275"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373004"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenza di controlli OLE
 
@@ -37,13 +37,13 @@ Una funzionalità dei controlli OLE è la persistenza della proprietà (o la ser
 |[PXstring](#px_string)|Scambia una proprietà del controllo stringa di caratteri.|
 |[PX_VBXFontConvert](#px_vbxfontconvert)|Scambia le proprietà correlate al tipo di carattere di un controllo VBX in una proprietà del tipo di carattere del controllo OLE.|
 
-Viene inoltre fornita la funzione globale `AfxOleTypeMatchGuid` per verificare la presenza di una corrispondenza tra un TYPEDESC e un GUID specificato.
+Viene inoltre fornita la `AfxOleTypeMatchGuid` funzione Global per verificare la presenza di una corrispondenza tra un TYPEDESC e un GUID specificato.
 
-##  <a name="px_blob"></a>PX_Blob
+## <a name="px_blob"></a><a name="px_blob"></a>PX_Blob
 
-Chiamare questa funzione all'interno del `DoPropExchange` funzione membro del controllo per serializzare o inizializzare una proprietà che archivia dati BLOB (Binary Large Object).
+Chiamare questa funzione nella funzione membro del `DoPropExchange` controllo per serializzare o inizializzare una proprietà che archivia dati BLOB (Binary Large Object).
 
-```
+```cpp
 BOOL PX_Blob(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -71,7 +71,7 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 ### <a name="remarks"></a>Osservazioni
 
-Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *hBlob*, a seconda dei casi. Questa variabile deve essere inizializzata su NULL prima di chiamare inizialmente `PX_Blob` per la prima volta (in genere, questa operazione può essere eseguita nel costruttore del controllo). Se *hBlobDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene utilizzato se, per qualsiasi motivo, il processo di inizializzazione o di serializzazione del controllo ha esito negativo.
+Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *hBlob*, a seconda dei casi. Questa variabile deve essere inizializzata su NULL prima di `PX_Blob` chiamare inizialmente per la prima volta (in genere, è possibile eseguire questa operazione nel costruttore del controllo). Se *hBlobDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene utilizzato se, per qualsiasi motivo, il processo di inizializzazione o di serializzazione del controllo ha esito negativo.
 
 Il gestisce *hBlob* e *hBlobDefault* si riferiscono a un blocco di memoria che contiene quanto segue:
 
@@ -79,13 +79,13 @@ Il gestisce *hBlob* e *hBlobDefault* si riferiscono a un blocco di memoria che c
 
 - Un blocco di memoria contenente i dati binari effettivi.
 
-Si noti che `PX_Blob` alloca memoria tramite l'API [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) di Windows quando si caricano le proprietà del tipo di BLOB. L'utente è responsabile della liberazione della memoria. Pertanto, il distruttore del controllo deve chiamare [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) su qualsiasi handle di proprietà di tipo BLOB per liberare la memoria allocata al controllo.
+Si noti `PX_Blob` che la memoria viene allocata tramite l'API di Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) durante il caricamento delle proprietà del tipo di BLOB. L'utente è responsabile della liberazione della memoria. Pertanto, il distruttore del controllo deve chiamare [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) su qualsiasi handle di proprietà di tipo BLOB per liberare la memoria allocata al controllo.
 
-##  <a name="px_bool"></a>PX_Bool
+## <a name="px_bool"></a><a name="px_bool"></a>PX_Bool
 
-Chiamare questa funzione all'interno del `DoPropExchange` funzione membro del controllo per serializzare o inizializzare una proprietà di tipo BOOL.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo bool.
 
-```
+```cpp
 BOOL PX_Bool(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -120,11 +120,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *bValue*, a seconda dei casi. Se *bLivello predefinito* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_color"></a>PX_Color
+## <a name="px_color"></a><a name="px_color"></a>PX_Color
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà di tipo OLE_COLOR.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo OLE_COLOR.
 
-```
+```cpp
 BOOL PX_Color(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -159,11 +159,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *clrValue*, a seconda dei casi. Se *clrDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_currency"></a>PX_Currency
+## <a name="px_currency"></a><a name="px_currency"></a>PX_Currency
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà di tipo **Currency**.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo **Currency**.
 
-```
+```cpp
 BOOL PX_Currency(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -198,11 +198,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *cyValue*, a seconda dei casi. Se *cyDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_datapath"></a>PX_DataPath
+## <a name="px_datapath"></a><a name="px_datapath"></a>PX_DataPath
 
-Chiamare questa funzione all'interno del `DoPropExchange` funzione membro del controllo per serializzare o inizializzare una proprietà del percorso dati di tipo [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà del percorso dati di tipo [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
 
-```
+```cpp
 BOOL PX_DataPath(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -232,11 +232,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Le proprietà del percorso dati implementano le proprietà del controllo asincrono. Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *dataPathProperty*, a seconda dei casi.
 
-##  <a name="px_double"></a>PX_Double
+## <a name="px_double"></a><a name="px_double"></a>PX_Double
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà di tipo **Double**.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo **Double**.
 
-```
+```cpp
 BOOL PX_Double(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -271,11 +271,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *doubleValue*, a seconda dei casi. Se *doubleDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_font"></a>PX_Font
+## <a name="px_font"></a><a name="px_font"></a>PX_Font
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà di tipo font.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo font.
 
-```
+```cpp
 BOOL PX_Font(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -293,13 +293,13 @@ Puntatore all'oggetto [CPropExchange](../../mfc/reference/cpropexchange-class.md
 Nome della proprietà da scambiare.
 
 *carattere*<br/>
-Riferimento a un oggetto `CFontHolder` che contiene la proprietà del tipo di carattere.
+Riferimento a un `CFontHolder` oggetto che contiene la proprietà del tipo di carattere.
 
 *pFontDesc*<br/>
-Puntatore a una struttura `FONTDESC` contenente i valori da utilizzare per inizializzare lo stato predefinito della proprietà del tipo di carattere, nel caso in cui *pFontDispAmbient* è null.
+Puntatore a una `FONTDESC` struttura contenente i valori da utilizzare per inizializzare lo stato predefinito della proprietà del tipo di carattere, nel caso in cui *pFontDispAmbient* è null.
 
 *pFontDispAmbient*<br/>
-Puntatore all'interfaccia `IFontDisp` di un tipo di carattere da utilizzare per inizializzare lo stato predefinito della proprietà del tipo di carattere.
+Puntatore all' `IFontDisp` interfaccia di un tipo di carattere da utilizzare per inizializzare lo stato predefinito della proprietà del tipo di carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -307,13 +307,13 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 ### <a name="remarks"></a>Osservazioni
 
-Il valore della proprietà viene letto o scritto in `font`, un riferimento `CFontHolder`, quando appropriato. Se vengono specificati *pFontDesc* e *pFontDispAmbient* , vengono usati per inizializzare il valore predefinito della proprietà, quando necessario. Questi valori vengono utilizzati se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo. In genere, viene passato NULL per *pFontDesc* e il valore di ambiente restituito da `COleControl::AmbientFont` per *pFontDispAmbient*. Si noti che l'oggetto Font restituito da `COleControl::AmbientFont` deve essere rilasciato da una chiamata alla funzione membro `IFontDisp::Release`.
+Il valore della proprietà viene letto o scritto in `font`un `CFontHolder` riferimento, quando appropriato. Se vengono specificati *pFontDesc* e *pFontDispAmbient* , vengono usati per inizializzare il valore predefinito della proprietà, quando necessario. Questi valori vengono utilizzati se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo. In genere, viene passato NULL per *pFontDesc* e il valore di ambiente `COleControl::AmbientFont` restituito da per *pFontDispAmbient*. Si noti che l'oggetto Font restituito `COleControl::AmbientFont` da deve essere rilasciato da una chiamata alla `IFontDisp::Release` funzione membro.
 
-##  <a name="px_float"></a>PX_Float
+## <a name="px_float"></a><a name="px_float"></a>PX_Float
 
-Chiamare questa funzione all'interno del `DoPropExchange` funzione membro del controllo per serializzare o inizializzare una proprietà di tipo **float**.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo **float**.
 
-```
+```cpp
 BOOL PX_Float(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -348,11 +348,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *floatValue*, a seconda dei casi. Se *floatDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_iunknown"></a>PX_IUnknown
+## <a name="px_iunknown"></a><a name="px_iunknown"></a>PX_IUnknown
 
-Chiamare questa funzione all'interno del `DoPropExchange` funzione membro del controllo per serializzare o inizializzare una proprietà rappresentata da un oggetto con un'interfaccia derivata da `IUnknown`.
+Chiamare questa funzione nella funzione membro del `DoPropExchange` controllo per serializzare o inizializzare una proprietà rappresentata da un oggetto `IUnknown`con un'interfaccia derivata da.
 
-```
+```cpp
 BOOL PX_IUnknown(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -386,11 +386,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *punk*, a seconda dei casi. Se *pUnkDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_long"></a>PX_Long
+## <a name="px_long"></a><a name="px_long"></a>PX_Long
 
-Chiamare questa funzione all'interno del `DoPropExchange` funzione membro del controllo per serializzare o inizializzare una proprietà di tipo **Long**.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo **Long**.
 
-```
+```cpp
 BOOL PX_Long(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -425,11 +425,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *lvalue*, a seconda dei casi. Se *lDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_picture"></a>PX_Picture
+## <a name="px_picture"></a><a name="px_picture"></a>PX_Picture
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà Picture del controllo.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà Picture del controllo.
 
-```
+```cpp
 BOOL PX_Picture(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -464,11 +464,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *PICT*, a seconda dei casi. Se *pictDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_short"></a>PX_Short
+## <a name="px_short"></a><a name="px_short"></a>PX_Short
 
-Chiamare questa funzione all'interno del `DoPropExchange` funzione membro del controllo per serializzare o inizializzare una proprietà di tipo **short**.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo **short**.
 
-```
+```cpp
 BOOL PX_Short(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -503,11 +503,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *sValue*, a seconda dei casi. Se *sDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_ulong"></a>PX_ULong
+## <a name="px_ulong"></a><a name="px_ulong"></a>PX_ULong
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà di tipo **ULONG**.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo **ULONG**.
 
-```
+```cpp
 BOOL PX_ULong(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -542,11 +542,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *ulValue*, a seconda dei casi. Se *ulDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_ushort"></a>PX_UShort
+## <a name="px_ushort"></a><a name="px_ushort"></a>PX_UShort
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà di tipo **unsigned short**.
+Chiamare questa funzione nella funzione `DoPropExchange` membro del controllo per serializzare o inizializzare una proprietà di tipo **unsigned short**.
 
-```
+```cpp
 BOOL PX_UShort(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -581,11 +581,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *usValue*, a seconda dei casi. Se *usDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_string"></a>PXstring
+## <a name="pxstring"></a><a name="px_string"></a>PXstring
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per serializzare o inizializzare una proprietà della stringa di caratteri.
+Chiamare questa funzione nella funzione membro del `DoPropExchange` controllo per serializzare o inizializzare una proprietà della stringa di caratteri.
 
-```
+```cpp
 BOOL PXstring(
     CPropExchange* pPX,
     LPCTSTR pszPropName,
@@ -620,11 +620,11 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *strValue*, a seconda dei casi. Se *strDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
-##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert
+## <a name="px_vbxfontconvert"></a><a name="px_vbxfontconvert"></a>PX_VBXFontConvert
 
-Chiamare questa funzione all'interno della funzione membro `DoPropExchange` del controllo per inizializzare una proprietà del tipo di carattere convertendo le proprietà correlate al tipo di carattere di un controllo VBX.
+Chiamare questa funzione nella funzione membro del `DoPropExchange` controllo per inizializzare una proprietà del tipo di carattere convertendo le proprietà correlate al tipo di carattere di un controllo VBX.
 
-```
+```cpp
 BOOL PX_VBXFontConvert(
     CPropExchange* pPX,
     CFontHolder& font);
@@ -644,13 +644,13 @@ Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negati
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione deve essere utilizzata solo da un controllo OLE progettato come sostituzione diretta per un controllo VBX. Quando l'ambiente di sviluppo Visual Basic converte un form contenente un controllo VBX per l'uso del controllo OLE sostitutivo corrispondente, chiamerà la funzione di `IDataObject::SetData` del controllo, passando un set di proprietà che contiene i dati della proprietà del controllo VBX. Questa operazione, a sua volta, determina la chiamata della funzione `DoPropExchange` del controllo. `DoPropExchange` possibile chiamare `PX_VBXFontConvert` per convertire le proprietà correlate al tipo di carattere del controllo VBX, ad esempio "fontname", "FontSize" e così via, nei componenti corrispondenti della proprietà del tipo di carattere del controllo OLE.
+Questa funzione deve essere utilizzata solo da un controllo OLE progettato come sostituzione diretta per un controllo VBX. Quando l'ambiente di sviluppo Visual Basic converte un form contenente un controllo VBX per l'uso del controllo OLE sostitutivo corrispondente, chiamerà la `IDataObject::SetData` funzione del controllo, passando un set di proprietà che contiene i dati della proprietà del controllo VBX. Questa operazione, a sua volta, determina la chiamata `DoPropExchange` della funzione del controllo. `DoPropExchange`può chiamare `PX_VBXFontConvert` per convertire le proprietà correlate al tipo di carattere del controllo VBX, ad esempio "fontname", "FontSize" e così via, nei componenti corrispondenti della proprietà del tipo di carattere del controllo OLE.
 
-`PX_VBXFontConvert` deve essere chiamato solo quando il controllo è in realtà convertito da un'applicazione VBX form. Ad esempio:
+`PX_VBXFontConvert`deve essere chiamato solo quando il controllo è in realtà convertito da un'applicazione VBX form. Ad esempio:
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e globali](../../mfc/reference/mfc-macros-and-globals.md)
+[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

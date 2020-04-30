@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498193"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587377"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Crea un'applicazione con supporto Terminal Server)
 
@@ -24,7 +24,7 @@ ms.locfileid: "69498193"
 /TSAWARE[:NO]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'opzione/TSAWARE imposta un flag nel campo IMAGE_OPTIONAL_HEADER DllCharacteristics nell'intestazione facoltativa dell'immagine del programma. Quando questo flag viene impostato, Terminal Server non apporta determinate modifiche all'applicazione.
 
@@ -36,7 +36,7 @@ Se si usa/TSAWARE e l'applicazione usa ancora file INI, i file verranno condivis
 
 L'opzione/TSAWARE è abilitata per impostazione predefinita per le applicazioni Windows e console. Per informazioni, vedere [/Subsystem](subsystem-specify-subsystem.md) e [/Version](version-version-information.md) .
 
-/TSAWARE non è valido per driver, VxDs o dll.
+/TSAWARE non è valido per i driver o le dll.
 
 Se un'applicazione è stata collegata a/TSAWARE, DUMPBIN [/headers](headers.md) visualizzerà le informazioni relative a tale effetto.
 

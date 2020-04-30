@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 75d86b81d9651e5892913af5919ae0a78fe6bbc5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b1acf959c371aa23ac55ace7fea9466f0e20813f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502915"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318459"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -45,21 +45,21 @@ class CSettingsStore : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSettingsStore::CSettingsStore](#csettingsstore)|Costruisce un oggetto `CSettingsStore`.|
+|[CSettingsStore:: CSettingsStore](#csettingsstore)|Costruisce un oggetto `CSettingsStore`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CSettingsStore::Close](#close)|Chiude la chiave del registro di sistema aperta.|
-|[CSettingsStore::CreateKey](#createkey)|Apre la chiave specificata o la crea se non esiste.|
-|[CSettingsStore::DeleteKey](#deletekey)|Elimina la chiave specificata e tutti i relativi elementi figlio.|
-|[CSettingsStore::DeleteValue](#deletevalue)|Elimina il valore specificato della chiave di apertura.|
-|[CSettingsStore::Open](#open)|Apre la chiave specificata.|
-|[CSettingsStore::Read](#read)|Recupera i dati per un valore di chiave specificato.|
-|[CSettingsStore::Write](#write)|Scrive un valore nel registro di sistema sotto la chiave di apertura.|
+|[CSettingsStore:: Close](#close)|Chiude la chiave del registro di sistema aperta.|
+|[CSettingsStore:: CreateKey](#createkey)|Apre la chiave specificata o la crea se non esiste.|
+|[CSettingsStore::D eleteKey](#deletekey)|Elimina la chiave specificata e tutti i relativi elementi figlio.|
+|[CSettingsStore::D eleteValue](#deletevalue)|Elimina il valore specificato della chiave di apertura.|
+|[CSettingsStore:: Open](#open)|Apre la chiave specificata.|
+|[CSettingsStore:: Read](#read)|Recupera i dati per un valore di chiave specificato.|
+|[CSettingsStore:: Write](#write)|Scrive un valore nel registro di sistema sotto la chiave di apertura.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le funzioni `CreateKey` membro e `Open` sono molto simili. Se la chiave del registro di sistema `CreateKey` esiste `Open` già e funziona nello stesso modo. Tuttavia, se la chiave del registro di sistema non `CreateKey` esiste, la creerà `Open` , mentre restituirà un valore di errore.
 
@@ -79,7 +79,7 @@ Nell'esempio seguente viene illustrato come utilizzare i metodi Open e Read dell
 
 **Intestazione:** afxsettingsstore. h
 
-##  <a name="close"></a>  CSettingsStore::Close
+## <a name="csettingsstoreclose"></a><a name="close"></a>CSettingsStore:: Close
 
 Chiude la chiave del registro di sistema aperta.
 
@@ -87,11 +87,11 @@ Chiude la chiave del registro di sistema aperta.
 virtual void Close();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, questo metodo viene chiamato dal distruttore della [Classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).
 
-##  <a name="createkey"></a>CSettingsStore:: CreateKey
+## <a name="csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore:: CreateKey
 
 Apre una chiave del registro di sistema o la crea se non esiste.
 
@@ -108,11 +108,11 @@ in Specifica il nome di una chiave da creare o aprire.
 
 0 se ha esito positivo; in caso contrario, un valore diverso da zero.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `CreateKey`USA `m_hKey` come radice delle richieste del registro di sistema. Esegue la ricerca di *pszPath* come sottochiave `m_hKey`di. Se la chiave non esiste, `CreateKey` la crea. In caso contrario, apre la chiave. `CreateKey`imposta `m_hKey` quindi sulla chiave creata o aperta.
 
-##  <a name="csettingsstore"></a>CSettingsStore:: CSettingsStore
+## <a name="csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore:: CSettingsStore
 
 Crea un oggetto `CSettngsStore`.
 
@@ -130,7 +130,7 @@ in Parametro booleano che specifica se `CSettingsStore` l'oggetto agisce in moda
 *bReadOnly*<br/>
 in Parametro booleano che specifica se `CSettingsStore` l'oggetto viene creato in modalità di sola lettura.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se *bAdmin* è impostato su true, la `m_hKey` variabile membro è impostata su **HKEY_LOCAL_MACHINE**. Se si imposta *bAdmin* su false, `m_hKey` viene impostato su **HKEY_CURRENT_USER**.
 
@@ -138,7 +138,7 @@ L'accesso di sicurezza dipende dal parametro *bReadOnly* . Se *bReadOnly* è fal
 
 Distruttore per `CSettingsStore` i rilasci `m_hKey` automaticamente.
 
-##  <a name="deletekey"></a>  CSettingsStore::DeleteKey
+## <a name="csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::D eleteKey
 
 Elimina una chiave e tutti i relativi elementi figlio dal registro di sistema.
 
@@ -160,13 +160,13 @@ in Opzione che specifica la posizione della chiave da eliminare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo avrà esito negativo `CSettingsStore` se l'oggetto è in modalità di sola lettura.
 
 Se il parametro *bAdmin* è zero, `DeleteKey` cerca la chiave da eliminare in **HKEY_CURRENT_USER**. Se *bAdmin* è diverso da zero `DeleteKey` , Cerca la chiave da eliminare in **HKEY_LOCAL_MACHINE**.
 
-##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue
+## <a name="csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::D eleteValue
 
 Elimina un valore da `m_hKey`.
 
@@ -183,7 +183,7 @@ in Specifica il campo del valore da rimuovere.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-##  <a name="open"></a>CSettingsStore:: Open
+## <a name="csettingsstoreopen"></a><a name="open"></a>CSettingsStore:: Open
 
 Apre una chiave del registro di sistema.
 
@@ -200,11 +200,11 @@ in Nome di una chiave del registro di sistema.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando questo metodo apre correttamente la chiave specificata, imposta `m_hKey` sull'handle della chiave.
 
-##  <a name="read"></a>  CSettingsStore::Read
+## <a name="csettingsstoreread"></a><a name="read"></a>CSettingsStore:: Read
 
 Legge un valore da una chiave nel registro di sistema.
 
@@ -299,7 +299,7 @@ out Riferimento a una variabile di matrice di byte che riceve il valore letto da
 *lpPoint*<br/>
 out Riferimento a un puntatore a una `POINT` struttura che riceve il valore letto dalla chiave del registro di sistema.
 
-*rect*<br/>
+*Rect*<br/>
 out Riferimento a una variabile [CRect](../../atl-mfc-shared/reference/crect-class.md) che riceve il valore letto dalla chiave del registro di sistema.
 
 *ppData*<br/>
@@ -321,11 +321,11 @@ out Riferimento a un puntatore a una `CObject` variabile che riceve il valore le
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `Read`Verifica se *pszKey* è una sottochiave `m_hKey`di.
 
-##  <a name="write"></a>  CSettingsStore::Write
+## <a name="csettingsstorewrite"></a><a name="write"></a>CSettingsStore:: Write
 
 Scrive un valore nel registro di sistema sotto la chiave di apertura.
 
@@ -417,7 +417,7 @@ in Riferimento a una variabile di matrice di due parole a 32 bit che contiene i 
 *wcArray*<br/>
 in Riferimento a una variabile di matrice di Word a 16 bit che contiene i dati da archiviare.
 
-*rect*<br/>
+*Rect*<br/>
 in Riferimento a una variabile [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene i dati da archiviare.
 
 *lpPoint*<br/>
@@ -442,12 +442,12 @@ in Puntatore a un puntatore a una `CObject` variabile che contiene i dati da arc
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per scrivere nel registro di sistema, è necessario impostare *bReadOnly* su un valore diverso da zero quando si crea un oggetto [CSettingsStore](../../mfc/reference/csettingsstore-class.md) . Per ulteriori informazioni, vedere [CSettingsStore:: CSettingsStore](#csettingsstore).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)

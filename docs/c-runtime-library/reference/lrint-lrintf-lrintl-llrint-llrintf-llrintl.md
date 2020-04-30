@@ -1,6 +1,6 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lrint
 - lrintl
@@ -8,6 +8,12 @@ api_name:
 - llrint
 - llrintf
 - llrintl
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857749"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341663"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -109,11 +116,11 @@ Valore da arrotondare.
 
 Se ha esito positivo, restituisce il valore integrale arrotondato di *x*.
 
-|Problema|INVIO|
+|Problema|Return|
 |-----------|------------|
-|*x* non è compreso nell'intervallo del tipo restituito<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Genera **FE_INVALID** e restituisce zero (0).|
+|*x* non è compreso nell'intervallo del tipo restituito<br /><br /> *x* = ± ∞<br /><br /> *x* = Nan|Genera **FE_INVALID** e restituisce zero (0).|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché C++ consente l'overload, è possibile chiamare gli overload di **lrint** e **llrint** che accettano i tipi **float** e **Long** **Double** . In un programma C, **lrint** e **llrint** accettano sempre un **valore Double**.
 
@@ -121,14 +128,16 @@ Se *x* non rappresenta l'equivalente a virgola mobile di un valore integrale, qu
 
 **Specifico di Microsoft**: quando il risultato non è compreso nell'intervallo del tipo restituito o quando il parametro è NaN o Infinity, il valore restituito è definito dall'implementazione. Il compilatore Microsoft restituisce un valore zero (0).
 
-## <a name="requirements"></a>Requisiti di
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
