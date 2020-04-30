@@ -15,12 +15,12 @@ f1_keywords:
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-ms.openlocfilehash: 883e0a995605be3e2ac73495250f96815013df06
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8e9254e966f480538d80721bcfd86d301fac8d09
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372740"
 ---
 # <a name="concurrency-namespace-constants"></a>costanti dello spazio dei nomi Concurrency
 
@@ -33,7 +33,7 @@ ms.locfileid: "79419154"
 |[PPLParallelForeachEventGuid](#pplparallelforeacheventguid)|[PPLParallelInvokeEventGuid](#pplparallelinvokeeventguid)|[ResourceManagerEventGuid](#resourcemanagereventguid)|
 |[ScheduleGroupEventGuid](#schedulegroupeventguid)|[SchedulerEventGuid](#schedulereventguid)|[VirtualProcessorEventGuid](#virtualprocessoreventguid)|
 
-## <a name="agenteventguid"></a>AgentEventGuid
+## <a name="agenteventguid"></a><a name="agenteventguid"></a>AgentEventGuid
 
 Un GUID di categoria ({B9B5B78C-0713-4898-A21A-C67949DCED07}) che descrive gli eventi ETW generati dalla libreria di agenti nel runtime di concorrenza.
 
@@ -41,7 +41,7 @@ Un GUID di categoria ({B9B5B78C-0713-4898-A21A-C67949DCED07}) che descrive gli e
 const __declspec(selectany) GUID AgentEventGuid = {0xb9b5b78c, 0x713, 0x4898, { 0xa2, 0x1a, 0xc6, 0x79, 0x49, 0xdc, 0xed, 0x7 } };
 ```
 
-## <a name="choreeventguid"></a>ChoreEventGuid
+## <a name="choreeventguid"></a><a name="choreeventguid"></a>ChoreEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati ad attività di routine o attività.
 
@@ -54,7 +54,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 
 Questa categoria di eventi non è attualmente attivata dal runtime di concorrenza.
 
-## <a name="concrt_providerguid"></a>ConcRT_ProviderGuid
+## <a name="concrt_providerguid"></a><a name="concrt_providerguid"></a>ConcRT_ProviderGuid
 
 Il GUID del provider ETW per il runtime di concorrenza.
 
@@ -63,7 +63,7 @@ const __declspec(selectany) GUID ConcRT_ProviderGuid =
     { 0xF7B697A3, 0x4DB5, 0x4d3b, { 0xBE, 0x71, 0xC4, 0xD2, 0x84, 0xE6, 0x59, 0x2F } };
 ```
 
-## <a name="concrt_rm_version_1"></a>CONCRT_RM_VERSION_1
+## <a name="concrt_rm_version_1"></a><a name="concrt_rm_version_1"></a>CONCRT_RM_VERSION_1
 
 Indica il supporto dell'interfaccia Gestione risorse definito in Visual Studio 2010.
 
@@ -71,7 +71,7 @@ Indica il supporto dell'interfaccia Gestione risorse definito in Visual Studio 2
 const unsigned int CONCRT_RM_VERSION_1 = 0x00010000;
 ```
 
-## <a name="concrteventguid"></a>ConcRTEventGuid
+## <a name="concrteventguid"></a><a name="concrteventguid"></a>ConcRTEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che non sono descritti in maniera più specifica da un'altra categoria.
 
@@ -84,7 +84,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 
 Questa categoria di eventi non è attualmente attivata dal runtime di concorrenza.
 
-## <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE
+## <a name="cooperative_timeout_infinite"></a><a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE
 
 Valore indicante un'attesa che non deve terminare mai.
 
@@ -92,7 +92,7 @@ Valore indicante un'attesa che non deve terminare mai.
 const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```
 
-## <a name="cooperative_wait_timeout"></a>COOPERATIVE_WAIT_TIMEOUT
+## <a name="cooperative_wait_timeout"></a><a name="cooperative_wait_timeout"></a>COOPERATIVE_WAIT_TIMEOUT
 
 Valore indicante un'attesa terminata.
 
@@ -100,7 +100,7 @@ Valore indicante un'attesa terminata.
 const size_t COOPERATIVE_WAIT_TIMEOUT = SIZE_MAX;
 ```
 
-## <a name="contexteventguid"></a>ContextEventGuid
+## <a name="contexteventguid"></a><a name="contexteventguid"></a>ContextEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati a contesti.
 
@@ -109,7 +109,7 @@ const __declspec(selectany) GUID ContextEventGuid =
     { 0x5727A00F, 0x50BE, 0x4519, { 0x82, 0x56, 0xF7, 0x69, 0x98, 0x71, 0xFE, 0xCB } };
 ```
 
-## <a name="inherit_thread_priority"></a>INHERIT_THREAD_PRIORITY
+## <a name="inherit_thread_priority"></a><a name="inherit_thread_priority"></a>INHERIT_THREAD_PRIORITY
 
 Valore speciale per le chiavi dei criteri `ContextPriority` che indicano che la priorità del thread di tutti i contesti nell'utilità di pianificazione deve essere identica a quella del thread che ha creato l'utilità di pianificazione.
 
@@ -117,7 +117,7 @@ Valore speciale per le chiavi dei criteri `ContextPriority` che indicano che la 
 const unsigned int INHERIT_THREAD_PRIORITY = 0x0000F000;
 ```
 
-## <a name="lockeventguid"></a>LockEventGuid
+## <a name="lockeventguid"></a><a name="lockeventguid"></a>LockEventGuid
 
 GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza direttamente correlati ai blocchi.
 
@@ -130,7 +130,7 @@ const __declspec(selectany) GUID LockEventGuid =
 
 Questa categoria di eventi non è attualmente attivata dal runtime di concorrenza.
 
-## <a name="maxexecutionresources"></a>MaxExecutionResources
+## <a name="maxexecutionresources"></a><a name="maxexecutionresources"></a>MaxExecutionResources
 
 Valore speciale per le chiavi dei criteri `MinConcurrency` e `MaxConcurrency`. Assume come valore predefinito il numero di thread hardware sul computer in assenza di altri vincoli.
 
@@ -138,7 +138,7 @@ Valore speciale per le chiavi dei criteri `MinConcurrency` e `MaxConcurrency`. A
 const unsigned int MaxExecutionResources = 0xFFFFFFFF;
 ```
 
-## <a name="pplparallelforeventguid"></a>PPLParallelForEventGuid
+## <a name="pplparallelforeventguid"></a><a name="pplparallelforeventguid"></a>PPLParallelForEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati all'utilizzo della funzione `parallel_for`.
 
@@ -147,7 +147,7 @@ const __declspec(selectany) GUID PPLParallelForEventGuid =
     { 0x31c8da6b, 0x6165, 0x4042, { 0x8b, 0x92, 0x94, 0x9e, 0x31, 0x5f, 0x4d, 0x84 } };
 ```
 
-## <a name="pplparallelforeacheventguid"></a>PPLParallelForeachEventGuid
+## <a name="pplparallelforeacheventguid"></a><a name="pplparallelforeacheventguid"></a>PPLParallelForeachEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati all'utilizzo della funzione `parallel_for_each`.
 
@@ -156,7 +156,7 @@ const __declspec(selectany) GUID PPLParallelForeachEventGuid =
     { 0x5cb7d785, 0x9d66, 0x465d, { 0xba, 0xe1, 0x46, 0x11, 0x6, 0x1b, 0x54, 0x34 } };
 ```
 
-## <a name="pplparallelinvokeeventguid"></a>PPLParallelInvokeEventGuid
+## <a name="pplparallelinvokeeventguid"></a><a name="pplparallelinvokeeventguid"></a>PPLParallelInvokeEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati all'utilizzo della funzione `parallel_invoke`.
 
@@ -165,7 +165,7 @@ const __declspec(selectany) GUID PPLParallelInvokeEventGuid =
     { 0xd1b5b133, 0xec3d, 0x49f4, { 0x98, 0xa3, 0x46, 0x4d, 0x1a, 0x9e, 0x46, 0x82 } };
 ```
 
-## <a name="resourcemanagereventguid"></a>ResourceManagerEventGuid
+## <a name="resourcemanagereventguid"></a><a name="resourcemanagereventguid"></a>ResourceManagerEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati Gestore risorse.
 
@@ -178,7 +178,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 
 Questa categoria di eventi non è attualmente attivata dal runtime di concorrenza.
 
-## <a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid
+## <a name="schedulegroupeventguid"></a><a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati a gruppi di pianificazione.
 
@@ -191,7 +191,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 
 Questa categoria di eventi non è attualmente attivata dal runtime di concorrenza.
 
-## <a name="schedulereventguid"></a>SchedulerEventGuid
+## <a name="schedulereventguid"></a><a name="schedulereventguid"></a>SchedulerEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati all'attività dell'utilità di pianificazione.
 
@@ -200,7 +200,7 @@ const __declspec(selectany) GUID SchedulerEventGuid =
     { 0xE2091F8A, 0x1E0A, 0x4731, { 0x84, 0xA2, 0x0D, 0xD5, 0x7C, 0x8A, 0x52, 0x61 } };
 ```
 
-## <a name="virtualprocessoreventguid"></a>VirtualProcessorEventGuid
+## <a name="virtualprocessoreventguid"></a><a name="virtualprocessoreventguid"></a>VirtualProcessorEventGuid
 
 Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati a processori virtuali.
 
