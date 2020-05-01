@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 90c68d00475a622ec89b81cc86639f63b1190d02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
+ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364952"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643639"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (libreria standard C++)
 
@@ -121,7 +121,7 @@ class array;
 |`Ty`|Tipo di un elemento.|
 |`N`|Numero di elementi.|
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 |Definizione dei tipi|Descrizione|
 |-|-|
@@ -130,39 +130,39 @@ class array;
 |[const_reference](#const_reference)|Tipo di un riferimento costante a un elemento.|
 |[const_reverse_iterator](#const_reverse_iterator)|Tipo di un iteratore inverso costante per la sequenza controllata.|
 |[difference_type](#difference_type)|Tipo di una distanza Signed tra due elementi.|
-|[Iteratore](#iterator)|Tipo di un iteratore per la sequenza controllata.|
+|[iteratore](#iterator)|Tipo di un iteratore per la sequenza controllata.|
 |[indicatore di misura](#pointer)|Tipo di un puntatore a un elemento.|
-|[Riferimento](#reference)|Tipo di un riferimento a un elemento.|
+|[riferimento](#reference)|Tipo di un riferimento a un elemento.|
 |[reverse_iterator](#reverse_iterator)|Tipo di un iteratore inverso della sequenza controllata.|
 |[size_type](#size_type)|Tipo di una distanza Unsigned tra due elementi.|
-|[Value_type](#value_type)|Tipo di un elemento.|
+|[value_type](#value_type)|Tipo di un elemento.|
 
 |Funzione membro|Descrizione|
 |-|-|
-|[Matrice](#array)|Costruisce un oggetto di matrice.|
-|[Assegnare](#assign)|(Obsoleto. Utilizzare `fill`.) Sostituisce tutti gli elementi.|
-|[A](#at)|Accede a un elemento in una posizione specificata.|
+|[matrice](#array)|Costruisce un oggetto di matrice.|
+|[assign](#assign)|Obsoleto. Usare `fill`.) Sostituisce tutti gli elementi.|
+|[at](#at)|Accede a un elemento in una posizione specificata.|
 |[Indietro](#back)|Accede all'ultimo elemento.|
-|[Iniziare](#begin)|Indica l'inizio della sequenza controllata.|
+|[iniziare](#begin)|Indica l'inizio della sequenza controllata.|
 |[cbegin](#cbegin)|Restituisce un iteratore const ad accesso casuale al primo elemento nella matrice.|
 |[cend](#cend)|Restituisce un iteratore const ad accesso casuale che punta appena oltre la fine della matrice.|
 |[crbegin](#crbegin)|Restituisce un iteratore const che punta al primo elemento di una matrice invertita.|
 |[crend](#crend)|Restituisce un iteratore const alla fine di una matrice invertita.|
 |[data](#data)|Ottiene l'indirizzo del primo elemento.|
-|[Vuoto](#empty)|Verifica se sono presenti elementi.|
+|[empty](#empty)|Verifica se sono presenti elementi.|
 |[end](#end)|Designa la fine della sequenza controllata.|
-|[Riempire](#fill)|Sostituisce tutti gli elementi con un valore specificato.|
-|[Fronte](#front)|Accede al primo elemento.|
+|[riempimento](#fill)|Sostituisce tutti gli elementi con un valore specificato.|
+|[fronte](#front)|Accede al primo elemento.|
 |[max_size](#max_size)|Conta il numero di elementi.|
 |[rbegin](#rbegin)|Indica l'inizio della sequenza controllata inversa.|
 |[rend](#rend)|Indica la fine della sequenza controllata inversa.|
-|[Dimensione](#size)|Conta il numero di elementi.|
-|[Swap](#swap)|Scambia il contenuto di due contenitori.|
+|[size](#size)|Conta il numero di elementi.|
+|[scambio](#swap)|Scambia il contenuto di due contenitori.|
 
 |Operatore|Descrizione|
 |-|-|
-|[matrice::operatore](#op_eq)|Sostituisce la sequenza controllata.|
-|[matrice::operatore\[\]](#op_at)|Accede a un elemento in una posizione specificata.|
+|[array:: operator =](#op_eq)|Sostituisce la sequenza controllata.|
+|[Operatore array::\[\]](#op_at)|Accede a un elemento in una posizione specificata.|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -180,7 +180,7 @@ crea l'oggetto `ai` contenente quattro valori interi, inizializza i primi tre el
 
 **Spazio dei nomi:** std
 
-## <a name="arrayarray"></a><a name="array"></a>matrice::matrice
+## <a name="arrayarray"></a><a name="array"></a>array:: Array
 
 Costruisce un oggetto di matrice.
 
@@ -192,14 +192,14 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parametri
 
-*va bene*\
+*Ok*\
 Oggetto o un intervallo da inserire.
 
 ### <a name="remarks"></a>Osservazioni
 
 Il costruttore predefinito `array()` lascia la sequenza controllata non inizializzata (o inizializzata per impostazione predefinita). Viene usato per specificare una sequenza controllata non inizializzata.
 
-Il `array(const array& right)` costruttore di copia inizializza la sequenza controllata con la sequenza [*right*`.begin()`, *right*`.end()`). Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto matrice *right*.
+Il costruttore `array(const array& right)` di copia Inizializza la sequenza controllata con la sequenza [*right*`.begin()`, *right*`.end()`). Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto matrice *right*.
 
 ### <a name="example"></a>Esempio
 
@@ -239,11 +239,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayassign"></a><a name="assign"></a>matrice::assegnare
+## <a name="arrayassign"></a><a name="assign"></a>array:: Assign
 
 Obsoleto in C++ 11, sostituito da [fill](#fill). Sostituisce tutti gli elementi.
 
-## <a name="arrayat"></a><a name="at"></a>matrice::a
+## <a name="arrayat"></a><a name="at"></a>array:: at
 
 Accede a un elemento in una posizione specificata.
 
@@ -255,12 +255,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Fuori*\
+*off*\
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Osservazioni
 
-Le funzioni membro restituiscono un riferimento all'elemento della sequenza controllata in corrispondenza della posizione *off.* Se tale posizione non è valida, la funzione genera un oggetto della classe `out_of_range`.
+Le funzioni membro restituiscono un riferimento all'elemento della sequenza controllata nella posizione *off*. Se tale posizione non è valida, la funzione genera un oggetto della classe `out_of_range`.
 
 ### <a name="example"></a>Esempio
 
@@ -289,7 +289,7 @@ int main()
 }
 ```
 
-## <a name="arrayback"></a><a name="back"></a>matrice::indietro
+## <a name="arrayback"></a><a name="back"></a>array:: back
 
 Accede all'ultimo elemento.
 
@@ -334,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="arraybegin"></a><a name="begin"></a>matrice::begin
+## <a name="arraybegin"></a><a name="begin"></a>array:: Begin
 
 Indica l'inizio della sequenza controllata.
 
@@ -379,9 +379,9 @@ int main()
 0
 ```
 
-## <a name="arraycbegin"></a><a name="cbegin"></a>matrice::cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a>array:: cbegin
 
-Restituisce un iteratore **const** che indirizza il primo elemento nell'intervallo.
+Restituisce un iteratore **const** che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso casuale **const** che punta al primo elemento dell'intervallo o alla posizione `cbegin() == cend()`appena oltre la fine di un intervallo vuoto (per un intervallo vuoto, ).
+Iteratore **const** ad accesso casuale che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Osservazioni
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, `Container` si consideri un contenitore modificabile (non **const)** di qualsiasi tipo che supporta `begin()` e `cbegin()`.
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. `Container` Nell'esempio, si consideri come un contenitore modificabile (non **const**) di qualsiasi tipo `begin()` che `cbegin()`supporta e.
 
 ```cpp
 auto i1 = Container.begin();
@@ -405,9 +405,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="arraycend"></a><a name="cend"></a>matrice::cend
+## <a name="arraycend"></a><a name="cend"></a>array:: cend
 
-Restituisce un iteratore **const** che indirizza la posizione appena oltre l'ultimo elemento in un intervallo.
+Restituisce un iteratore **const** che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ Iteratore ad accesso casuale che punta oltre la fine dell'intervallo.
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, `Container` si consideri un contenitore modificabile (non **const)** di qualsiasi tipo che supporta `end()` e `cend()`.
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. `Container` Nell'esempio, si consideri come un contenitore modificabile (non **const**) di qualsiasi tipo `end()` che `cend()`supporta e.
 
 ```cpp
 auto i1 = Container.end();
@@ -433,7 +433,7 @@ auto i2 = Container.cend();
 
 Non è consigliabile dereferenziare il valore restituito da `cend`.
 
-## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>matrice::const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>array:: const_iterator
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -481,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>matrice::const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>array:: const_pointer
 
 Tipo di un puntatore costante a un elemento.
 
@@ -525,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reference"></a><a name="const_reference"></a>matrice::const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a>array:: const_reference
 
 Tipo di un riferimento costante a un elemento.
 
@@ -569,7 +569,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>matrice::const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>array:: const_reverse_iterator
 
 Tipo di un iteratore inverso costante per la sequenza controllata.
 
@@ -613,7 +613,7 @@ int main()
 3
 ```
 
-## <a name="arraycrbegin"></a><a name="crbegin"></a>matrice::crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a>array:: crbegin
 
 Restituisce un iteratore const che punta al primo elemento di una matrice invertita.
 
@@ -657,7 +657,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="arraycrend"></a><a name="crend"></a>matrice::crend
+## <a name="arraycrend"></a><a name="crend"></a>array:: crend
 
 Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di una matrice invertita.
 
@@ -701,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>matrice::data
+## <a name="arraydata"></a><a name="data"></a>matrice::d ATA
 
 Ottiene l'indirizzo del primo elemento.
 
@@ -747,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>matrice::difference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a>matrice::d ifference_type
 
 Tipo di una distanza Signed tra due elementi.
 
@@ -791,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="arrayempty"></a><a name="empty"></a>matrice::vuoto
+## <a name="arrayempty"></a><a name="empty"></a>array:: Empty
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -841,7 +841,7 @@ false
 true
 ```
 
-## <a name="arrayend"></a><a name="end"></a>matrice::end
+## <a name="arrayend"></a><a name="end"></a>array:: end
 
 Designa la fine della sequenza controllata.
 
@@ -887,7 +887,7 @@ int main()
 3
 ```
 
-## <a name="arrayfill"></a><a name="fill"></a>matrice::riempimento
+## <a name="arrayfill"></a><a name="fill"></a>array:: Fill
 
 Cancella una matrice e copia gli elementi specificati nella matrice vuota.
 
@@ -925,7 +925,7 @@ int main()
 
     v1.fill(3);
     cout << "v1 = ";
-    for (const auto& it : c0)
+    for (const auto& it : v1)
     {
         std::cout << " " << it;
     }
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="arrayfront"></a><a name="front"></a>matrice::front
+## <a name="arrayfront"></a><a name="front"></a>array:: front
 
 Accede al primo elemento.
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="arrayiterator"></a><a name="iterator"></a>matrice::iteratore
+## <a name="arrayiterator"></a><a name="iterator"></a>array:: iterator
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arraymax_size"></a><a name="max_size"></a>matrice::max_size
+## <a name="arraymax_size"></a><a name="max_size"></a>array:: max_size
 
 Conta il numero di elementi.
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="arrayoperator"></a><a name="op_at"></a>matrice::operatore[]
+## <a name="arrayoperator"></a><a name="op_at"></a>array:: operator []
 
 Accede a un elemento in una posizione specificata.
 
@@ -1082,14 +1082,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Fuori*\
+*off*\
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Osservazioni
 
-Le funzioni membro restituiscono un riferimento all'elemento della sequenza controllata in corrispondenza della posizione *off.* Se tale posizione non è valida, il comportamento è indefinito.
+Le funzioni membro restituiscono un riferimento all'elemento della sequenza controllata nella posizione *off*. Se tale posizione non è valida, il comportamento è indefinito.
 
-È inoltre disponibile una funzione [get](array-functions.md#get) non membro per ottenere un riferimento a un elemento di **una matrice**.
+È inoltre disponibile una funzione [Get](array-functions.md#get) non membro per ottenere un riferimento a un elemento di una **matrice**.
 
 ### <a name="example"></a>Esempio
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="arrayoperator"></a><a name="op_eq"></a>matrice::operatore
+## <a name="arrayoperator"></a><a name="op_eq"></a>array:: operator =
 
 Sostituisce la sequenza controllata.
 
@@ -1133,12 +1133,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>Parametri
 
-*va bene*\
+*Ok*\
 Contenitore da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore membro assegna ogni elemento di *right* all'elemento `*this`corrispondente della sequenza controllata, quindi restituisce . Utilizzarla per sostituire la sequenza controllata con una copia della sequenza controllata a *destra.*
+L'operatore membro assegna ogni elemento di *right* all'elemento corrispondente della sequenza controllata, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>array::pointer
+## <a name="arraypointer"></a><a name="pointer"></a>matrice::p ointer
 
 Tipo di un puntatore a un elemento.
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="arrayrbegin"></a><a name="rbegin"></a>matrice::rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a>array:: rbegin
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="arrayreference"></a><a name="reference"></a>matrice::riferimento
+## <a name="arrayreference"></a><a name="reference"></a>array:: Reference
 
 Tipo di un riferimento a un elemento.
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="arrayrend"></a><a name="rend"></a>matrice::rend
+## <a name="arrayrend"></a><a name="rend"></a>array:: rend
 
 Indica la fine della sequenza controllata inversa.
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>matrice::reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>array:: reverse_iterator
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="arraysize"></a><a name="size"></a>matrice::dimensione
+## <a name="arraysize"></a><a name="size"></a>array:: size
 
 Conta il numero di elementi.
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="arraysize_type"></a><a name="size_type"></a>matrice::size_type
+## <a name="arraysize_type"></a><a name="size_type"></a>array:: size_type
 
 Tipo di distanza senza segno tra due elementi.
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="arrayswap"></a><a name="swap"></a>matrice::swap
+## <a name="arrayswap"></a><a name="swap"></a>array:: swap
 
 Scambia il contenuto di questa matrice con un'altra matrice.
 
@@ -1497,14 +1497,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parametri
 
-*va bene*\
+*Ok*\
 Matrice con cui scambiare il contenuto.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro scambia le `*this` sequenze controllate tra e *right*. Esegue una serie di assegnazioni di elementi e chiamate ai costruttori proporzionale a `N`.
+La funzione membro scambia le sequenze controllate tra `*this` e *right*. Esegue una serie di assegnazioni di elementi e chiamate ai costruttori proporzionale a `N`.
 
-È inoltre disponibile una funzione di [scambio](array-functions.md#swap) non membro per scambiare due istanze di **matrice.**
+È inoltre disponibile una funzione di [scambio](array-functions.md#swap) non membro per lo scambio di due istanze di **matrice** .
 
 ### <a name="example"></a>Esempio
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayvalue_type"></a><a name="value_type"></a>matrice::value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a>array:: value_type
 
 Tipo di un elemento.
 
@@ -1602,4 +1602,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>array](../standard-library/array.md)
+[\<>matrice](../standard-library/array.md)
