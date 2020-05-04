@@ -1,5 +1,5 @@
 ---
-title: pack (pragma)
+title: Pragma pack
 ms.date: 11/11/2019
 f1_keywords:
 - pack_CPP
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 335289802b6c370158fc655646b710914a07a3f5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 037c57a10b1de7dd00249ae60acaef0939e355eb
+ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160333"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765734"
 ---
-# <a name="pack-pragma"></a>pack (pragma)
+# <a name="pack-pragma"></a>Pragma pack
 
 Specifica l'allineamento di compressione per la struttura, l'Unione e i membri della classe.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma pack (Mostra)** \
-> **#pragma pack (push** [ **,** *identificatore* ] [ **,** *n* ] **)** \
-> **#pragma pack (pop** [ **,** { *Identifier* | *n* }] **)** \
+> **#pragma pack (Mostra)**\
+> **#pragma pack (push** [ **,** *identificatore* ] [ **,** *n* ] **)**\
+> **#pragma pack (pop** [ **,** { *Identifier* | *n* }] **)**\
 > **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parametri
 
-**mostra**\
+**Visualizza**\
 Opzionale Visualizza il valore byte corrente per l'allineamento di compressione. Il valore viene visualizzato da un messaggio di avviso.
 
-\ **push**
+**spingere**\
 Opzionale Inserisce il valore di allineamento di compressione corrente nello stack interno del compilatore e imposta il valore di allineamento di compressione corrente su *n*. Se *n* non è specificato, viene effettuato il push del valore di allineamento di compressione corrente.
 
-\ **pop**
-Opzionale Rimuove il record dall'inizio dello stack interno del compilatore. Se *n* non è specificato con **pop**, il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si specifica *n* , ad esempio `#pragma pack(pop, 16)`, *n* diventa il nuovo valore di allineamento di compressione. Se si usa un *identificatore*, ad esempio `#pragma pack(pop, r1)`, verranno estratti tutti i record dello stack finché non viene trovato il record con *identificatore* . Il record viene estratto e il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si esegue il pop usando un *identificatore* non trovato in nessun record nello stack, il **pop** viene ignorato.
+**popup**\
+Opzionale Rimuove il record dall'inizio dello stack interno del compilatore. Se *n* non è specificato con **pop**, il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se viene specificato *n* , ad esempio `#pragma pack(pop, 16)`, *n* diventa il nuovo valore di allineamento di compressione. Se si esegue il pop usando un *identificatore*, ad `#pragma pack(pop, r1)`esempio, vengono estratti tutti i record dello stack finché non viene trovato il record con *identificatore* . Il record viene estratto e il valore di compressione associato al record risultante nella parte superiore dello stack è il nuovo valore di allineamento di compressione. Se si esegue il pop usando un *identificatore* non trovato in nessun record nello stack, il **pop** viene ignorato.
 
-Il `#pragma pack (pop, r1, 2)` di istruzione è equivalente `#pragma pack (pop, r1)` seguito da `#pragma pack(2)`.
+L'istruzione `#pragma pack (pop, r1, 2)` è equivalente a `#pragma pack (pop, r1)` seguita da `#pragma pack(2)`.
 
 *identificatore*\
 Opzionale Se usato con **push**, assegna un nome al record nello stack interno del compilatore. Quando viene usato con **pop**, estrae i record dallo stack interno finché non viene rimosso l' *identificatore* . Se l' *identificatore* non viene trovato nello stack interno, non viene estratto alcun elemento.
@@ -47,7 +47,7 @@ Opzionale Specifica il valore, in byte, da utilizzare per la compressione. Se l'
 
 ## <a name="remarks"></a>Osservazioni
 
-Per *comprimere* una classe è necessario posizionare i membri direttamente dopo l'altro in memoria. Può indicare che alcuni o tutti i membri possono essere allineati su un limite più piccolo dell'allineamento predefinito dell'architettura di destinazione. **Pack** fornisce il controllo a livello di dichiarazione dei dati. Si differenzia dall'opzione del compilatore [/ZP](../build/reference/zp-struct-member-alignment.md), che fornisce solo il controllo a livello di modulo. il **pacchetto** viene applicato alla prima dichiarazione di **struttura**, **Unione**o **classe** dopo che il pragma è stato individuato. il **pacchetto** non ha alcun effetto sulle definizioni. La chiamata a **Pack** senza argomenti imposta *n* sul valore impostato nell'opzione del compilatore `/Zp`. Se l'opzione del compilatore non è impostata, il valore predefinito è 8.
+Per *comprimere* una classe è necessario posizionare i membri direttamente dopo l'altro in memoria. Può indicare che alcuni o tutti i membri possono essere allineati su un limite più piccolo dell'allineamento predefinito dell'architettura di destinazione. **Pack** fornisce il controllo a livello di dichiarazione dei dati. Si differenzia dall'opzione del compilatore [/ZP](../build/reference/zp-struct-member-alignment.md), che fornisce solo il controllo a livello di modulo. il **pacchetto** viene applicato alla prima dichiarazione di **struttura**, **Unione**o **classe** dopo che il pragma è stato individuato. il **pacchetto** non ha alcun effetto sulle definizioni. La chiamata a **Pack** senza argomenti imposta *n* sul valore impostato nell'opzione `/Zp`del compilatore. Se l'opzione del compilatore non è impostata, il valore predefinito è 8 per x86, ARM e ARM64. Il valore predefinito è 16 per x64 native.
 
 Se si modifica l'allineamento di una struttura, ciò può non utilizzare molto spazio in memoria, ma è possibile osservare una riduzione delle prestazioni o addirittura ottenere un'eccezione generata dall'hardware per l'accesso non allineato.  È possibile modificare questo comportamento dell'eccezione usando [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode).
 
@@ -55,14 +55,14 @@ Per ulteriori informazioni sulla modifica dell'allineamento, vedere i seguenti a
 
 - [__alignof](../cpp/alignof-operator.md)
 
-- [align](../cpp/align-cpp.md)
+- [allineare](../cpp/align-cpp.md)
 
 - [__unaligned](../cpp/unaligned.md)
 
 - [Esempi di allineamento della struttura](../build/x64-software-conventions.md#examples-of-structure-alignment) (specifico per x64)
 
    > [!WARNING]
-   > In Visual Studio 2015 e versioni successive è possibile usare gli operatori **aligns** e **alignof** standard, che a differenza di `__alignof` e `declspec( align )` sono portabili tra i compilatori. Lo C++ standard non risolve la compressione, quindi è comunque necessario usare **Pack** (o l'estensione corrispondente in altri compilatori) per specificare gli allineamenti inferiori alle dimensioni della parola dell'architettura di destinazione.
+   > In Visual Studio 2015 e versioni successive è possibile usare gli operatori **aligns** e **alignof** standard, che a `__alignof` differenza `declspec( align )` di e sono portabili tra i compilatori. Lo standard C++ non risolve la compressione, quindi è comunque necessario usare **Pack** (o l'estensione corrispondente in altri compilatori) per specificare gli allineamenti inferiori alle dimensioni della parola dell'architettura di destinazione.
 
 ## <a name="examples"></a>Esempi
 
