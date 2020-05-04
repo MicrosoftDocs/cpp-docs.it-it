@@ -1,28 +1,28 @@
 ---
 title: Installare il carico di lavoro Linux C++ in Visual Studio
-description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
-ms.date: 06/11/2019
+description: Come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
+ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc75610aaefe2a3bdd919cbc4dd81413202794c6
+ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364336"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765747"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
 ::: moniker range="vs-2015"
 
-I progetti Linux sono supportati in Visual Studio 2017 e versioni successive.
+I progetti Linux sono supportati in Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-È possibile utilizzare l'IDE di Visual Studio in Windows per creare, modificare ed eseguire il debug di progetti C , che vengono eseguiti in un sistema Linux remoto, in una macchina virtuale o nel [sottosistema Windows per Linux.](/windows/wsl/about)
+È possibile usare l'IDE di Visual Studio in Windows per creare, modificare ed eseguire il debug di progetti C++ eseguiti in un sistema Linux remoto, in una macchina virtuale o nel [sottosistema Windows per Linux](/windows/wsl/about).
 
-È possibile lavorare sulla base di codice esistente che utilizza CMake senza doverlo convertire in un progetto di Visual Studio.You can work on your existing code base that uses CMake without having to convert it to a Visual Studio project. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio. Ad esempio, è possibile modificare, compilare ed eseguire il debug del codice in Windows usando Visual Studio, quindi ridestinare rapidamente il progetto per Linux per compilare ed eseguire il debug in un ambiente Linux.For example, you can edit, build, and debug your code on Windows using Visual Studio, then quickly retarget the project for Linux to build and debug in a Linux environment. I file di intestazione Linux vengono copiati automaticamente nel computer locale, dove Visual Studio li usa per fornire il supporto IntelliSense completo (completamento istruzioni, Vai a definizione e così via).
+È possibile lavorare sulla codebase esistente che usa CMake senza doverlo convertire in un progetto di Visual Studio. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio. È ad esempio possibile modificare, compilare ed eseguire il debug del codice in Windows tramite Visual Studio. Quindi, ridestinare rapidamente il progetto per Linux per compilare ed eseguire il debug in un ambiente Linux. I file di intestazione di Linux vengono copiati automaticamente nel computer locale. Visual Studio li usa per fornire supporto IntelliSense completo (completamento istruzioni, vai a definizione e così via).
 
 Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni Linux con C++**.
 
@@ -36,11 +36,11 @@ Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni 
 
    ![Casella di ricerca di Windows](media/visual-studio-installer-search.png)
 
-1. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando si apre il programma di installazione, scegliere **Modifica**, **Other toolsets** quindi fare clic **Linux development with C++** sulla scheda **Carichi di** lavoro.
+1. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando si apre il programma di installazione, scegliere **modifica**, quindi fare clic sulla scheda **carichi di lavoro** . scorrere verso il basso fino ad **altri set di strumenti** e selezionare il carico di lavoro **sviluppo per Linux con C++** .
 
    ![Carico di lavoro Visual C++ per lo sviluppo di applicazioni Linux](media/linuxworkload.png)
 
-1. Se la destinazione è IoT o piattaforme incorporate, passare al riquadro **Dettagli installazione** a destra. In **Sviluppo di Linux con il linguaggio C,** espandere Componenti **facoltativi**e scegliere i componenti necessari. Il supporto di CMake per Linux è selezionato per impostazione predefinita.
+1. Se la destinazione è Internet o piattaforme incorporate, passare al riquadro dei **Dettagli di installazione** a destra. In **sviluppo Linux con C++** espandere **componenti facoltativi**e scegliere i componenti necessari. Il supporto di CMake per Linux è selezionato per impostazione predefinita.
 
 1. Fare clic su **Modifica** per continuare con l'installazione.
 
@@ -48,44 +48,44 @@ Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni 
 
 Se non si ha già un computer Linux, è possibile creare una macchina virtuale Linux in Azure. Per altre informazioni, vedere [Guida introduttiva: Creare una macchina virtuale Linux nel portale di Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-In Windows 10 è possibile installare e impostare come destinazione la distribuzione Linux preferita nel sottosistema Windows per Linux (WSL). Per altre informazioni, vedere [Guida all'installazione del sottosistema Windows per Linux per Windows 10](/windows/wsl/install-win10). Se non riesci ad accedere a Windows Store, puoi [scaricare manualmente i pacchetti distro WSL.](/windows/wsl/install-manual) WSL è un ambiente di console pratico, ma non è consigliato per le applicazioni grafiche.
+In Windows 10 è possibile installare e impostare come destinazione la distribuzione Linux preferita nel sottosistema Windows per Linux (WSL). Per altre informazioni, vedere [Guida all'installazione del sottosistema Windows per Linux per Windows 10](/windows/wsl/install-win10). Se non si è in grado di accedere a Windows Store, è possibile [scaricare manualmente i pacchetti di distribuzione WSL](/windows/wsl/install-manual). WSL è un ambiente console pratico, ma non è consigliato per le applicazioni grafiche.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-I progetti Linux in Visual Studio richiedono l'installazione delle dipendenze seguenti nel sistema Linux remoto o WSL:
+Per i progetti Linux in Visual Studio è necessario che le dipendenze seguenti siano installate nel sistema Linux remoto o in WSL:
 
-- **Un compilatore** : Visual Studio 2019 dispone del supporto out-of-the-box per GCC e [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
-- **gdb:** Visual Studio avvia automaticamente gdb nel sistema Linux e usa il front-end del debugger di Visual Studio per fornire un'esperienza di debug con fedeltà completa in Linux.
-- **rsync** e **zip** - l'inclusione di rsync e zip consente a Visual Studio di estrarre i file di intestazione dal sistema Linux al file system di Windows per l'utilizzo da parte di IntelliSense.
-- **Fare**
-- **openssh-server** (solo sistemi Linux remoti): Visual Studio si connette a sistemi Linux remoti tramite una connessione SSH sicura.
-- **CMake** (solo progetti CMake) - È possibile installare i [file binari CMake collegati in modo statico](https://github.com/microsoft/CMake/releases)di Microsoft per Linux.
-- **ninja-build** (solo progetti CMake)- [Ninja](https://ninja-build.org/) è il generatore predefinito per le configurazioni Linux e WSL in Visual Studio 2019 versione 16.6 o successiva.
+- **Un compilatore** -Visual Studio 2019 dispone del supporto completo per GCC e [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **GDB** -Visual Studio avvia automaticamente gdb nel sistema Linux e usa il front-end del debugger di Visual Studio per offrire un'esperienza di debug completa in Linux.
+- **rsync** e **zip** : l'inclusione di rsync e zip consente a Visual Studio di estrarre i file di intestazione dal sistema Linux al file System di Windows per l'uso da parte di IntelliSense.
+- **Assicurarsi**
+- **OpenSSH-server** (solo sistemi Linux remoti): Visual Studio si connette a sistemi Linux remoti tramite una connessione SSH sicura.
+- **CMake** (solo progetti CMake): è possibile installare [i file binari CMake collegati staticamente da Microsoft per Linux](https://github.com/microsoft/CMake/releases).
+- **Ninja-Build** (solo progetti CMake)- [Ninja](https://ninja-build.org/) è il generatore predefinito per le configurazioni Linux e WSL in Visual Studio 2019 versione 16,6 o successiva.
 
-I seguenti comandi presuppongono che si stia utilizzando g e clang.
+I comandi seguenti presuppongono che si stia usando g + + anziché Clang.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-I progetti Linux in Visual Studio richiedono l'installazione delle dipendenze seguenti nel sistema Linux remoto o WSL:
+Per i progetti Linux in Visual Studio è necessario che le dipendenze seguenti siano installate nel sistema Linux remoto o in WSL:
 
-- **gcc** - Visual Studio 2017 include il supporto out-of-the-box per GCC.
-- **gdb:** Visual Studio avvia automaticamente gdb nel sistema Linux e usa il front-end del debugger di Visual Studio per fornire un'esperienza di debug con fedeltà completa in Linux.
-- **rsync** e **zip** - l'inclusione di rsync e zip consente a Visual Studio di estrarre i file di intestazione dal sistema Linux al file system di Windows da utilizzare per IntelliSense.
-- **Fare**
-- **openssh-server** - Visual Studio si connette a sistemi Linux remoti tramite una connessione SSH sicura.
-- **CMake** (solo progetti CMake) - È possibile installare i [file binari CMake collegati in modo statico](https://github.com/microsoft/CMake/releases)di Microsoft per Linux.
+- **GCC** -Visual Studio 2017 offre supporto completo per GCC.
+- **GDB** -Visual Studio avvia automaticamente gdb sul sistema Linux e usa il front-end del debugger di Visual Studio per offrire un'esperienza di debug completa in Linux.
+- **rsync** e **zip** : l'inclusione di rsync e zip consente a Visual Studio di estrarre i file di intestazione dal sistema Linux al file System di Windows da usare per IntelliSense.
+- **Assicurarsi**
+- **OpenSSH-server** -Visual Studio si connette a sistemi Linux remoti tramite una connessione SSH sicura.
+- **CMake** (solo progetti CMake): è possibile installare [i file binari CMake collegati staticamente da Microsoft per Linux](https://github.com/microsoft/CMake/releases).
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Configurazione di Linux: Ubuntu su WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Installazione di Linux: Ubuntu in WSL
 
-Quando si intende usare WSL, non è necessario aggiungere una connessione remota o configurare SSH per la compilazione e il debug. Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio per il supporto di Intellisense sono necessari **zip** e **rsync**. Se le applicazioni richieste non sono già presenti, è possibile installarle come segue. **ninja-build** è necessario solo per i progetti CMake.
+Quando si fa riferimento a WSL, non è necessario aggiungere una connessione remota o configurare SSH per compilare ed eseguire il debug. Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio per il supporto di Intellisense sono necessari **zip** e **rsync**. **Ninja-Build** è necessario solo per i progetti CMake. Se le applicazioni richieste non sono già presenti, è possibile installarle usando questo comando:
 
 ```bash
 sudo apt-get install g++ gdb make ninja-build rsync zip
@@ -97,7 +97,7 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu nei sistemi Linux remoti
 
-Il sistema Linux di destinazione deve avere **openssh-server**, **g,** **gdb**, **ninja-build** (solo progetti CMake) e **rendere** installato e il daemon ssh deve essere in esecuzione. **zip** e **rsync** sono necessari per la sincronizzazione automatica delle intestazioni remote con il computer locale per il supporto Intellisense. Se queste applicazioni non sono già presenti, è possibile installarle come indicato di seguito:
+Il sistema Linux di destinazione deve avere **OpenSSH-server**, **g + +**, **GDB**e **make** installato. **Ninja-Build** è necessario solo per i progetti CMake. Il daemon **SSH** deve essere in esecuzione. **zip** e **rsync** sono necessari per la sincronizzazione automatica delle intestazioni remote con il computer locale per il supporto IntelliSense. Se queste applicazioni non sono già presenti, è possibile installarle come segue:
 
 1. Al prompt dei comandi della shell nel computer Linux, eseguire le operazioni seguenti:
 
@@ -105,7 +105,7 @@ Il sistema Linux di destinazione deve avere **openssh-server**, **g,** **gdb**, 
    sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
-   È possibile che sia chiesta la password radice dato il comando sudo.  In questo caso, immetterla e continuare. Al termine, verranno installati gli strumenti e i servizi necessari.
+   È possibile che venga richiesta la password radice per eseguire il comando sudo. In questo caso, immetterla e continuare. Al termine, verranno installati gli strumenti e i servizi necessari.
 
 1. Assicurarsi che il servizio ssh sia in esecuzione nel computer Linux eseguendo il comando seguente:
 
@@ -113,7 +113,7 @@ Il sistema Linux di destinazione deve avere **openssh-server**, **g,** **gdb**, 
    sudo service ssh start
    ```
 
-   Il servizio viene avviato ed eseguito in background, pronto per accettare le connessioni.
+   Questo comando avvia il servizio e lo esegue in background, pronto per accettare le connessioni.
 
 ::: moniker-end
 
@@ -121,13 +121,13 @@ Il sistema Linux di destinazione deve avere **openssh-server**, **g,** **gdb**, 
 
 ## <a name="fedora-on-wsl"></a>Fedora in WSL
 
-Fedora usa il programma di installazione dei pacchetti **dnf**. Per scaricare il file **,** **gdb**, **make**, **rsync**, **ninja-build**e **zip**, eseguire:
+Fedora usa il programma di installazione dei pacchetti **dnf**. Per scaricare **g + +**, **GDB**, **make**, **rsync**, **Ninja-Build**e **zip**, eseguire:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync ninja-build make zip
    ```
 
-Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio per il supporto di Intellisense sono necessari **zip** e **rsync**. **ninja-build** è necessario solo per i progetti CMake.
+Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio per il supporto di Intellisense sono necessari **zip** e **rsync**. **Ninja-Build** è necessario solo per i progetti CMake.
 
 ::: moniker-end
 
@@ -135,7 +135,7 @@ Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora nei sistemi Linux remoti
 
-Il computer di destinazione che esegue Fedora usa il programma di installazione dei pacchetti **dnf**. Per scaricare **openssh-server**, **g,** **gdb**, **make**, **ninja-build**, **rsync**e **zip**e riavviare il daemon ssh , seguire queste istruzioni. **ninja-build** è necessario solo per i progetti CMake.
+Il computer di destinazione che esegue Fedora usa il programma di installazione dei pacchetti **dnf**. Per scaricare **OpenSSH-server**, **g + +**, **GDB**, **make**, **Ninja-Build**, **rsync**e **zip**e riavviare il daemon ssh, seguire queste istruzioni. **Ninja-Build** è necessario solo per i progetti CMake.
 
 1. Al prompt dei comandi della shell nel computer Linux, eseguire le operazioni seguenti:
 
@@ -143,7 +143,7 @@ Il computer di destinazione che esegue Fedora usa il programma di installazione 
    sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
-   È possibile che sia chiesta la password radice dato il comando sudo.  In questo caso, immetterla e continuare. Al termine, verranno installati gli strumenti e i servizi necessari.
+   È possibile che venga richiesta la password radice per eseguire il comando sudo. In questo caso, immetterla e continuare. Al termine, verranno installati gli strumenti e i servizi necessari.
 
 1. Assicurarsi che il servizio ssh sia in esecuzione nel computer Linux eseguendo il comando seguente:
 
@@ -151,15 +151,7 @@ Il computer di destinazione che esegue Fedora usa il programma di installazione 
    sudo systemctl start sshd
    ```
 
-   Il servizio viene avviato ed eseguito in background, pronto per accettare le connessioni.
-
-::: moniker-end
-
-::: moniker range="vs-2015"
-
-Il supporto per lo sviluppo di Linux C++ è disponibile in Visual Studio 2017 e versioni successive.
-
-::: moniker-end
+   Questo comando avvia il servizio e lo esegue in background, pronto per accettare le connessioni.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -167,3 +159,5 @@ A questo punto si è pronti per creare o aprire un progetto Linux e configurarlo
 
 - [Creare un nuovo progetto Linux](create-a-new-linux-project.md)
 - [Configurare un progetto CMake per Linux](cmake-linux-project.md)
+
+::: moniker-end
