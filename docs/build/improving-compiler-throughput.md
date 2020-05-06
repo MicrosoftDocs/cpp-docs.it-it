@@ -16,9 +16,9 @@ ms.locfileid: "62188758"
 ---
 # <a name="improving-compiler-throughput"></a>Incremento dell'efficienza delle operazioni del compilatore
 
-Usare file di intestazione precompilata per compilare il progetto più velocemente. Questo è importante se si usa ATL, MFC o i file di intestazione di Windows SDK.
+Usare i file di intestazione precompilata per compilare più velocemente il progetto. Questo è importante se si utilizzano i file di intestazione ATL, MFC o Windows SDK.
 
-Visualizzare [/Yc](reference/yc-create-precompiled-header-file.md) e [/Yu](reference/yu-use-precompiled-header-file.md).
+Vedere [/YC](reference/yc-create-precompiled-header-file.md) e [/Yu](reference/yu-use-precompiled-header-file.md).
 
 Per altre informazioni sulle intestazioni precompilate, vedere [file di intestazione precompilata](creating-precompiled-header-files.md).
 

@@ -3,11 +3,11 @@ title: Dimensione di matrice massima
 ms.date: 11/04/2016
 ms.assetid: 4c782cf6-73f3-40b0-b306-229d22da4ee1
 ms.openlocfilehash: a1f48bdade27d0d037609e3ad0e64b2f0fc7b9a9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232748"
 ---
 # <a name="largest-array-size"></a>Dimensione di matrice massima
 

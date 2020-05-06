@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62233363"
@@ -21,7 +21,7 @@ Un'espressione di indice può inoltre avere più indici, come nel modo seguente:
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, *expression1* **[** *expression2* **]** , viene valutata per prima. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. L'operatore di riferimento indiretto (<strong>\*</strong>) viene applicato dopo la valutazione dell'ultima espressione di indice, a meno che il valore del puntatore finale non indirizzi un tipo di matrice (vedere gli esempi riportati di seguito).
+Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, *expression1* **[** *expression2* **]**, viene valutata per prima. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. L'operatore di riferimento indiretto<strong>\*</strong>() viene applicato dopo la valutazione dell'ultima espressione di indice, a meno che il valore del puntatore finale non indirizzi un tipo di matrice (vedere gli esempi riportati di seguito).
 
 Le espressioni con più indici fanno riferimento agli elementi di "matrici multidimensionali". Una matrice multidimensionale è una matrice i cui elementi sono matrici. Ad esempio, il primo elemento di una matrice tridimensionale è una matrice con due dimensioni.
 

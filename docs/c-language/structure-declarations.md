@@ -9,11 +9,11 @@ helpviewer_keywords:
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157803"
 ---
 # <a name="structure-declarations"></a>Dichiarazioni di struttura
 
@@ -21,19 +21,19 @@ Una "dichiarazione di struttura" denomina un tipo e specifica una sequenza di va
 
 ## <a name="syntax"></a>Sintassi
 
-*struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+*struct-or-Union-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;identificatore *struct-or-Union* *identifier*<sub>opz</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**Unione**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
 
-*struct-declaration*:<br/>
+*struct-Declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
 
 *specifier-qualifier-list*:<br/>
@@ -41,11 +41,11 @@ Una "dichiarazione di struttura" denomina un tipo e specifica una sequenza di va
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
 
 *struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator* *struct-declarator-list* **,** *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;struct- *dichiaratore* *struct-declarator-list* **,** *struct-dichiaratore*
 
-*struct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
+*struct-dichiaratore*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Type-specifier* *declarator*<sub>opt</sub> **:** *Constant-Expression*
 
 La dichiarazione di un tipo di struttura non riserva spazio per una struttura. È solo un modello per le dichiarazioni delle variabili di struttura successive.
 
@@ -145,11 +145,11 @@ struct somestruct
 } w;
 ```
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Il compilatore consente l'utilizzo di una matrice senza dimensione o di dimensione pari a zero come ultimo membro di una struttura. Questa operazione può risultare utile se la dimensione di una matrice costante è diversa quando viene utilizzata in situazioni differenti. La dichiarazione di una struttura è simile alla seguente:
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**
+**struct** *identificatore* struct **{** *set-of-Declarations* *Type* <em>nome</em>**\[-matrice];};**
 
 Le matrici senza dimensione possono apparire solo come ultimo membro di una struttura. Le strutture contenenti le dichiarazioni di matrice senza dimensione possono essere annidate in altre strutture purché nelle strutture di inclusione non siano dichiarati altri membri. Le matrici di queste strutture non sono consentite. L'operatore `sizeof`, applicato a una variabile di questo tipo o al tipo stesso, presuppone il valore 0 per la dimensione della matrice.
 
@@ -173,7 +173,7 @@ p_s->b = 100;  /* A reference to a field in the s structure */
 
 Per altre informazioni sui riferimenti alle strutture, vedere [Membri di strutture e unioni](../c-language/structure-and-union-members.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

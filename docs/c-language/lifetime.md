@@ -18,11 +18,11 @@ helpviewer_keywords:
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
 ms.openlocfilehash: 962e5ef4cae1be142091d2a209b4c60c0b789e74
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232775"
 ---
 # <a name="lifetime"></a>Durata
 

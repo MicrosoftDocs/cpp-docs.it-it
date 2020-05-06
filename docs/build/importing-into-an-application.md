@@ -15,21 +15,21 @@ ms.locfileid: "62188886"
 ---
 # <a name="importing-into-an-application"></a>Importazione in un'applicazione
 
-È possibile importare le funzioni in un'applicazione usando due metodi:
+È possibile importare funzioni in un'applicazione usando due metodi:
 
-- Usare le parole chiave **declspec** v definici funkce nell'applicazione principale.
+- Usare le parole chiave **__declspec (dllimport)** in una definizione di funzione nell'applicazione principale
 
-- Usare un file di definizione (con estensione def) moduli insieme a **declspec**
+- Usare un file di definizione del modulo (con estensione def) insieme a **__declspec (dllimport)**
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
-- [Importazione in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
+- [Importazione in un'applicazione tramite __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Chiamate di funzione di importazione tramite declspec](importing-function-calls-using-declspec-dllimport.md)
+- [Importazione di chiamate di funzione tramite __declspec (dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Importare dati usando declspec](importing-data-using-declspec-dllimport.md)
+- [Importare dati tramite __declspec (dllimport)](importing-data-using-declspec-dllimport.md)
 
-- [Importazione tramite i file DEF](importing-using-def-files.md)
+- [Importa usando i file DEF](importing-using-def-files.md)
 
 ## <a name="see-also"></a>Vedere anche
 

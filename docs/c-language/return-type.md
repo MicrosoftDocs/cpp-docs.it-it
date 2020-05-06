@@ -23,10 +23,10 @@ Il tipo restituito di una funzione determina la dimensione e il tipo del valore 
 
 ## <a name="syntax"></a>Sintassi
 
-*function-definition*:<br/>
+*definizione di funzione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* è \*specifico di Microsoft /
+/\**attribute-seq* è specifico di Microsoft\*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -34,21 +34,21 @@ Il tipo restituito di una funzione determina la dimensione e il tipo del valore 
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**vuoto**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**breve**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int8 /\*** \*specifiche di Microsoft /<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int16 /\*** \*specifiche di Microsoft /<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int32 /\*** \*specifiche di Microsoft /<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;__int64 /\*** \*specifiche di Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8** / __int8\* specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16** / __int16\* specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32** / __int32\* specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64** / __int64\* specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lungo**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**doppio**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**con segno**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificatore enum*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 *type-specifier* può specificare qualsiasi struttura o tipo di unione fondamentale. Se non si include *type-specifier*, viene presupposto il tipo restituito `int`.
