@@ -10,11 +10,11 @@ helpviewer_keywords:
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325663"
 ---
 # <a name="c-identifiers"></a>Identificatori C
 
@@ -38,8 +38,8 @@ Un tipo speciale di identificatore, denominato etichetta istruzione, può essere
 
 ## <a name="syntax"></a>Sintassi
 
-*identifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+*identificatore*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*non numerico*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
@@ -52,11 +52,11 @@ Un tipo speciale di identificatore, denominato etichetta istruzione, può essere
 
 Il primo carattere del nome dell'identificatore deve essere `nondigit` ovvero il primo carattere deve essere un carattere di sottolineatura o una lettera maiuscola o minuscola. ANSI consente sei caratteri significativi in un nome dell'identificatore esterno e 31 per i nomi degli identificatori interni (all'interno di una funzione). Gli identificatori esterni (quelli dichiarati in ambito globale o dichiarati con classe di archiviazione `extern`) possono essere soggetti a restrizioni di denominazione aggiuntive in quanto tali identificatori devono essere elaborati da software diverso come i linker.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Sebbene ANSI consenta 6 caratteri significativi nei nomi degli identificatori esterni e 31 per i nomi degli identificatori interni (all'interno di una funzione), il compilatore C di Microsoft consente 247 caratteri nel nome dell'identificatore interno o esterno. Se la compatibilità con ANSI non costituisce un problema, è possibile modificare questa impostazione predefinita a un numero più piccolo o più grande utilizzando l'opzione /H (che limita la lunghezza dei nomi esterni).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 Il compilatore C considera lettere maiuscole e minuscole come caratteri distinti. Questa funzionalità, denominata "distinzione maiuscole/minuscole", consente di creare identificatori distinti che hanno la stessa ortografia ma maiuscole/minuscole differenti per una o più lettere. Ad esempio, ognuno dei seguenti identificatori è univoco:
 
@@ -67,11 +67,11 @@ Add
 aDD
 ```
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Non selezionare nomi di identificatori che iniziano con due caratteri di sottolineatura o con un carattere di sottolineatura seguito da una maiuscola. Lo standard ANSI C consente che i nomi degli identificatori che iniziano con queste combinazioni di caratteri siano riservati all'utilizzo del compilatore. Gli identificatori con ambito a livello di file non devono essere anche denominati con un carattere di sottolineatura e una minuscola come prime due lettere. Anche i nomi degli identificatori che iniziano con questi caratteri sono riservati. Per convenzione, Microsoft utilizza un carattere di sottolineatura e una lettera maiuscola per avviare nomi macro e un doppio carattere di sottolineatura per nomi di parola chiave specifici di Microsoft. Per evitare eventuali conflitti di denominazione, selezionare sempre nomi dell'identificatore che non iniziano con uno o due caratteri di sottolineatura o nomi che iniziano con un carattere di sottolineatura seguito da una maiuscola.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 Di seguito sono riportati alcuni esempi di identificatori validi conformi alle limitazioni di denominazione specifiche di ANSI o Microsoft:
 
@@ -84,7 +84,7 @@ skip12
 LastNum
 ```
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Sebbene gli identificatori in file di origine prevedano la distinzione tra maiuscole e minuscole per impostazione predefinita, i simboli nei file oggetto non la prevedono. Microsoft C esegue la distinzione tra maiuscole e minuscole per gli identificatori all'interno di un'unità di compilazione.
 
@@ -92,7 +92,7 @@ Per il linker di Microsoft viene applicata la distinzione tra maiuscole e minusc
 
 Il "set di caratteri di origine" è il set di caratteri validi che possono essere visualizzati in file di origine. Per Microsoft C, il set di origine è il set di caratteri ASCII standard. Il set di caratteri di origine e il set di caratteri di esecuzione includono i caratteri ASCII utilizzati come sequenze di escape. Per informazioni sul set di caratteri di esecuzione, vedere [Costanti carattere C](../c-language/c-character-constants.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 Un identificatore ha un "ambito", che rappresenta l'area del programma in cui è noto, e un "collegamento", che determina se lo stesso nome in un altro ambito si riferisce allo stesso identificatore. Questi argomenti sono descritti in [Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md).
 

@@ -7,30 +7,30 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
 ms.openlocfilehash: e1364e0edacd94efa4ade6c6892a57d619635a39
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326794"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
-Le parole chiave sono parole con significato particolare per il compilatore C. Nelle fasi di conversione 7 e 8 un identificatore non può avere la stessa ortografia e gli stessi caratteri maiuscoli/minuscoli di una parola chiave C. Per una descrizione delle [fasi di conversione](../preprocessor/phases-of-translation.md), vedere *Riferimenti al preprocessore*. Per informazioni sugli identificatori, vedere [Identificatori](../c-language/c-identifiers.md). Nel linguaggio C vengono utilizzate le parole chiave seguenti:
+Le parole chiave sono parole con significato particolare per il compilatore C. Nelle fasi di conversione 7 e 8 un identificatore non può avere la stessa ortografia e gli stessi caratteri maiuscoli/minuscoli di una parola chiave C. (Vedere una descrizione delle [fasi di conversione](../preprocessor/phases-of-translation.md) nella Guida di *riferimento al preprocessore*. per informazioni sugli identificatori, vedere [identificatori](../c-language/c-identifiers.md).) Il linguaggio C usa le parole chiave seguenti:
 
 |||||
 |-|-|-|-|
-|**auto**|**double**|**int**|**struct**|
-|**break**|**else**|**long**|**switch**|
-|**case**|**enum**|**register**|**typedef**|
-|**char**|**extern**|**return**|**union**|
+|**Automatico**|**double**|**int**|**struct**|
+|**break**|**else**|**lungo**|**commutatore**|
+|**caso**|**enum**|**Registro**|**typedef**|
+|**char**|**extern**|**ritorno**|**Unione**|
 |**const**|**float**|**short**|**unsigned**|
-|**continue**|**for**|**signed**|**void**|
-|**default**|**goto**|**sizeof**|**volatile**|
-|**do**|**if**|**static**|**while**|
+|**continuare**|**for**|**con segno**|**void**|
+|**predefinita**|**goto**|**sizeof**|**volatile**|
+|**do**|**if**|**statico**|**mentre**|
 
 Non è possibile ridefinire le parole chiave. È possibile tuttavia specificare il testo da sostituire alle parole chiave prima della compilazione tramite le [direttive per il preprocessore](../preprocessor/preprocessor-directives.md) C.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Lo standard ANSI C consente agli identificatori con due caratteri di sottolineatura iniziali di essere riservati per le implementazioni del compilatore. Di conseguenza, la convenzione di Microsoft consiste nel far precedere i nomi delle parole chiave specifiche di Microsoft da un doppio carattere di sottolineatura. Queste parole non possono essere usate come nomi di identificatori. Per una descrizione delle regole ANSI per la denominazione degli identificatori, incluso l'uso del doppio carattere di sottolineatura, vedere [Identificatori](../c-language/c-identifiers.md).
 
@@ -54,7 +54,7 @@ Le estensioni Microsoft sono attivate per impostazione predefinita. Per assicura
 
 Quando le estensioni Microsoft sono abilitate, è possibile utilizzare le parole chiave elencate in precedenza nei programmi. Per la compatibilità ANSI, la maggior parte di tali parole chiave è preceduta da un doppio carattere di sottolineatura. Le quattro eccezioni **dllexport**, **dllimport**, **naked** e **thread** vengono usate solo con **__declspec** e non richiedono un doppio carattere di sottolineatura iniziale. Ai fini della compatibilità con le versioni precedenti, sono supportate le versioni con singolo carattere di sottolineatura delle parole chiave rimanenti.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

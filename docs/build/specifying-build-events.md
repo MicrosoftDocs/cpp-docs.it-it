@@ -36,7 +36,7 @@ Per informazioni generali sugli eventi di compilazione, vedere [Informazioni sul
 
 1. In **Esplora soluzioni** selezionare il progetto per il quale si vuole specificare l'evento di compilazione.
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](working-with-project-properties.md).
 
 1. Nella cartella **Eventi di compilazione** selezionare la pagina delle proprietà di un evento di compilazione.
 
@@ -44,9 +44,9 @@ Per informazioni generali sugli eventi di compilazione, vedere [Informazioni sul
 
    - In **Riga di comando** specificare un comando con il formato usato al prompt dei comandi. Specificare un comando o un file batch valido e i file di input o output necessari. Specificare il comando batch **call** prima del nome di un file batch per garantire che tutti i comandi successivi vengano eseguiti.
 
-      Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [macro comuni per compilare i comandi e proprietà](reference/common-macros-for-build-commands-and-properties.md).
+      Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md).
 
-      Poiché il carattere "%" è riservato per MSBuild, se si specifica una variabile di ambiente sostituire ogni carattere di escape **%** con la sequenza di escape esadecimale **%25**. Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
+      Poiché il carattere '%' è riservato da MSBuild, se si specifica una variabile di ambiente, **%** sostituire ogni carattere di escape con la sequenza di escape esadecimale **%25** . Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
 
    - In **Descrizione** digitare una descrizione per l'evento. La descrizione viene visualizzata nella finestra **Output** quando si verifica l'evento.
 
@@ -54,6 +54,6 @@ Per informazioni generali sugli eventi di compilazione, vedere [Informazioni sul
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br>
+[Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br>
 [Macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md)<br>
 [Risoluzione dei problemi di personalizzazione della compilazione](troubleshooting-build-customizations.md)

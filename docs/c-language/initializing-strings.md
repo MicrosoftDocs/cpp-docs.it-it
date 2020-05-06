@@ -7,11 +7,11 @@ helpviewer_keywords:
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326001"
 ---
 # <a name="initializing-strings"></a>Inizializzazione di stringhe
 
@@ -46,11 +46,11 @@ char s[]  = {'a', 'b', 'c', '\0'},
 
 Se la stringa è minore delle dimensioni della matrice specificate, gli elementi rimanenti della matrice verranno inizializzati sul valore 0.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 In Microsoft C i valori letterali stringa possono essere lunghi fino a 2048 byte.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

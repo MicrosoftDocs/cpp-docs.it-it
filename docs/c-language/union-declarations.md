@@ -7,11 +7,11 @@ helpviewer_keywords:
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
 ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291041"
 ---
 # <a name="union-declarations"></a>Dichiarazioni di unione
 
@@ -19,13 +19,13 @@ Una "Dichiarazione di unione" specifica un set di valori variabili e, facoltativ
 
 ## <a name="syntax"></a>Sintassi
 
-*struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+*struct-or-Union-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;identificatore *struct-or-Union* *identifier*<sub>opz</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**Unione**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -33,7 +33,7 @@ Una "Dichiarazione di unione" specifica un set di valori variabili e, facoltativ
 
 Il contenuto dell'unione viene definito come
 
-*struct-declaration*:<br/>
+*struct-Declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list*  **;**
 
 *specifier-qualifier-list*:<br/>
@@ -42,7 +42,7 @@ Il contenuto dell'unione viene definito come
 
 *struct-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-dichiaratore*
 
 Una variabile di tipo **union** archivia uno dei valori definiti dallo questo tipo. Le stesse regole si applicano alla struttura e alle dichiarazioni di unione. Le unioni possono inoltre contenere campi di bit.
 
@@ -81,7 +81,7 @@ union               /* Defines a two-dimensional */
 
 La matrice di `screen` contiene 2.000 elementi. Ogni elemento della matrice rappresenta una singola unione con due membri: `window1` e `screenval`. Il membro `window1` è una struttura con due membri del campo di bit, `icon` e `color`. Il membro `screenval` è un `int`. In qualsiasi momento, ogni elemento unione contiene l'`int` rappresentato da `screenval` o la struttura rappresentata da `window1`.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Le unioni annidate possono essere dichiarate anonimamente quando sono membri di un'altra struttura o unione. Quello riportato di seguito è un esempio di unione senza nome:
 
@@ -119,7 +119,7 @@ struct x
 
 Per informazioni sui riferimenti alle unioni, vedere [Membri di struttura e di unione](../c-language/structure-and-union-members.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

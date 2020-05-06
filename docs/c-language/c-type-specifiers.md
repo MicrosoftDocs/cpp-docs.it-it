@@ -6,11 +6,11 @@ helpviewer_keywords:
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
 ms.openlocfilehash: 1191cf4d2912cda535547f465fe4bfbedebe8fa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313194"
 ---
 # <a name="c-type-specifiers"></a>Identificatori di tipi C
 
@@ -18,7 +18,7 @@ Gli identificatori di tipo nelle dichiarazioni definiscono il tipo di una dichia
 
 ## <a name="syntax"></a>Sintassi
 
-*type-specifier*: &nbsp;&nbsp;&nbsp;&nbsp;**void** &nbsp;&nbsp;&nbsp;&nbsp;**char** &nbsp;&nbsp;&nbsp;&nbsp;**short** &nbsp;&nbsp;&nbsp;&nbsp;**int** &nbsp;&nbsp;&nbsp;&nbsp;**long** &nbsp;&nbsp;&nbsp;&nbsp;**float** &nbsp;&nbsp;&nbsp;&nbsp;**double** &nbsp;&nbsp;&nbsp;&nbsp;**signed** &nbsp;&nbsp;&nbsp;&nbsp;**unsigned** &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+*Type-specifier*: &nbsp; &nbsp; &nbsp; &nbsp; **void** &nbsp; &nbsp; **char** &nbsp; **double** **int** &nbsp; **short** &nbsp; **long** &nbsp; **signed** **float** **unsigned** *typedef-name* *enum-specifier* *struct-or-union-specifier* char &nbsp;short int long float con segno doppio &nbsp;senza segno &nbsp;struct-or-Union-specifier &nbsp;enum-specifier &nbsp;typedef-Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
 I tipi **signed char**, **signed int**, **signed short int** e **signed long int** insieme alle relative controparti **unsigned** e a **enum** vengono denominati tipi *integrali*. Gli identificatori di tipo **float**, **double** e **long double** vengono denominati tipi *mobili* o *a virgola mobile*. È possibile utilizzare qualsiasi identificatore di tipo a virgola mobile o integrale in una dichiarazione di funzione o variabile. Se un *type-specifier* non viene specificato in una dichiarazione, si presuppone che sia **int**.
 
@@ -28,7 +28,7 @@ I tipi di enumerazione sono considerati tipi di base. Gli identificatori di tipo
 
 La parola chiave **void** ha tre utilizzi: specificare un tipo restituito dalla funzione, specificare un elenco di tipi di argomento per una funzione che non accetta argomenti e specificare un puntatore a un tipo non specificato. È possibile usare il tipo **void** per dichiarare le funzioni che non restituiscono valori o per dichiarare un puntatore a un tipo non specificato. Vedere [Argomenti](../c-language/arguments.md) per informazioni su **void** quando viene visualizzato da solo tra parentesi dopo il nome di una funzione.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Il controllo dei tipi è ora conforme ad ANSI, pertanto il tipo **short** e il tipo **int** sono tipi distinti. Ad esempio, questa è una ridefinizione del compilatore Microsoft C che è stata accettata da versioni precedenti del compilatore.
 
@@ -57,9 +57,9 @@ pi = pu;  /* Now generates warning */
 
 Le espressioni di tipo **void** vengono valutate per gli effetti collaterali. Non è possibile usare il valore (inesistente) di un'espressione con tipo **void** in nessun modo, né convertire un'espressione **void** (mediante conversione implicita o esplicita) in un qualsiasi tipo eccetto **void**. Se si usa un'espressione di qualsiasi altro tipo in un contesto in cui viene richiesta un'espressione **void**, il valore viene rimosso.
 
-Per essere conforme alla specifica ANSI, <strong>void\*\*</strong> non può essere usato come <strong>int\*\*</strong>. Solo **void**<strong>\*</strong> può essere usato come puntatore a un tipo non specificato.
+Per essere conforme alla specifica ANSI <strong>,\* void</strong> non può essere usato come <strong>int\*</strong>. È possibile utilizzare solo **void** <strong>\*</strong> come puntatore a un tipo non specificato.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 È possibile creare identificatori di tipo aggiuntivi con dichiarazioni **typedef**, come descritto in [Dichiarazioni typedef](../c-language/typedef-declarations.md). Per informazioni sulle dimensioni di ogni tipo vedere [Archiviazione di tipi di base](../c-language/storage-of-basic-types.md).
 

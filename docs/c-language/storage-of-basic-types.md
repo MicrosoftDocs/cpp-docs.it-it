@@ -1,5 +1,5 @@
 ---
-title: Archiviazione dei tipi di base
+title: Archiviazione di tipi di base
 ms.date: 10/02/2019
 helpviewer_keywords:
 - specifiers [C++], type
@@ -28,7 +28,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71998768"
 ---
-# <a name="storage-of-basic-types"></a>Archiviazione dei tipi di base
+# <a name="storage-of-basic-types"></a>Archiviazione di tipi di base
 
 Nella tabella seguente viene riepilogata l'archiviazione associata a ogni tipo di base.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wide characters
 ms.assetid: 165c4a12-8ab9-45fb-9964-c55e9956194c
 ms.openlocfilehash: 868acf0abd26a1f4b5533bb997fb9ea09a27954b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291002"
 ---
 # <a name="wide-characters"></a>Caratteri Wide
 

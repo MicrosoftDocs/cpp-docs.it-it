@@ -8,15 +8,15 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
 ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325520"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Espressioni L-Value e R-Value
 
-Le espressioni che fanno riferimento alle posizioni di memoria vengono chiamate "espressioni l-value". Con L-value si intende un valore del "localizzatore" dell'area di archiviazione o un valore "a sinistra", vale a dire che può essere visualizzato a sinistra del segno di uguale (**=**). Le espressioni L-value sono spesso identificatori.
+Le espressioni che fanno riferimento alle posizioni di memoria vengono chiamate "espressioni l-value". Un l-value rappresenta un valore "Locator" dell'area di archiviazione o un valore "left", che implica che può essere visualizzato a sinistra del segno di uguale (**=**). Le espressioni L-value sono spesso identificatori.
 
 Le espressioni che fanno riferimento alle posizioni modificabili vengono definite "l-value modificabili". Un'espressione L-value modificabile non può avere un tipo matrice, un tipo incompleto o un tipo con l'attributo **const**. Affinché le strutture e le unioni siano espressioni L-value modificabili, è necessario che non abbiano membri con l'attributo **const**. Il nome dell'identificatore indica un percorso di archiviazione, mentre il valore della variabile è il valore archiviato in quella posizione.
 
@@ -28,9 +28,9 @@ Una qualsiasi delle seguenti espressioni del linguaggio C può essere un'espress
 
 - Un'espressione di indice (**[ ]**) che non restituisce una matrice
 
-- Un'espressione di selezione dei membri (**->** o **.**)
+- Espressione di selezione di membri (**->** o) **.**
 
-- Un'espressione unaria di riferimento indiretto (<strong>\*</strong>) che non si riferisce a una matrice
+- Espressione unaria indiretta (<strong>\*</strong>) che non fa riferimento a una matrice
 
 - Un'espressione l-value tra parentesi
 
@@ -38,9 +38,9 @@ Una qualsiasi delle seguenti espressioni del linguaggio C può essere un'espress
 
 Il termine "r-value" talvolta viene utilizzato per descrivere il valore di un'espressione e per distinguerlo da l-value. Tutti le espressioni l-value sono r-value ma non tutti le espressioni r-value sono I-value.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Microsoft C include un'estensione allo standard ANSI C che consente di eseguire il cast delle espressioni l-value da utilizzare come l-value, purché la dimensione dell'oggetto venga non allungata tramite il cast. Per altre informazioni, vedere [Conversioni di cast di tipo](../c-language/type-cast-conversions.md). Nell'esempio seguente viene illustrata questa funzionalità:
+Microsoft C include un'estensione allo standard ANSI C che consente di eseguire il cast delle espressioni l-value da utilizzare come l-value, purché la dimensione dell'oggetto venga non allungata tramite il cast. Per ulteriori informazioni, vedere [conversioni di cast di tipo](../c-language/type-cast-conversions.md) . Questa funzionalità è illustrata nell'esempio seguente:
 
 ```
 char *p ;
@@ -53,7 +53,7 @@ long l;
 
 Per impostazione predefinita, in Microsoft C le estensioni Microsoft sono abilitate. Utilizzare l'opzione del compilatore /Za per disabilitare queste estensioni.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
