@@ -10,11 +10,11 @@ helpviewer_keywords:
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325679"
 ---
 # <a name="c-floating-point-constants"></a>Costanti C a virgola mobile
 
@@ -27,18 +27,18 @@ Una costante a virgola mobile è un numero decimale che rappresenta un numero re
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *exponent-part* *floating-suffix*<sub>opt</sub>
 
 *fractional-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence*<sub>opt</sub> **.** *digit-sequence*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence*  **.**
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-Sequence*<sub>opt</sub> **.** *digit-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sequenza numerica*  **.**
 
 *exponent-part*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**e** *sign*<sub>opt</sub> *digit-sequence*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**E** *sign*<sub>opt</sub> *digit-sequence*
+&nbsp;&nbsp;&nbsp;&nbsp;**e** *segno*<sub>opt</sub> *-sequenza*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**E** *segno*<sub>opt</sub> *-sequenza*
 
 *sign*: uno tra<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
-*digit-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*sequenza numerica*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cifre*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
 *floating-suffix*: uno tra<br/>
@@ -56,7 +56,7 @@ Gli esempi seguenti illustrano alcune forme delle espressioni e delle costanti a
 25E-4     /* =  0.0025 */
 ```
 
-Le costanti a virgola mobile sono positive a meno che non siano precedute da un segno meno (**-**). In questo caso, il segno di sottrazione viene considerato come operatore di negazione unario aritmetico. Le costanti a virgola mobile sono di tipo `float`, `double` o `long double`.
+Le costanti a virgola mobile sono positive a meno che non siano precedute da un**-** segno meno (). In questo caso, il segno di sottrazione viene considerato come operatore di negazione unario aritmetico. Le costanti a virgola mobile sono di tipo `float`, `double` o `long double`.
 
 Una costante a virgola mobile senza suffisso **f**, **F**, **l** o **L** è di tipo `double`. Se il suffisso è costituito dalla lettera **f** o **F**, la costante è di tipo `float`. Se il suffisso è costituito dalla lettera **l** o **L**, la costante è di tipo `long double`. Ad esempio:
 
@@ -65,7 +65,7 @@ Una costante a virgola mobile senza suffisso **f**, **F**, **l** o **L** è di t
 10.0F  /* Has type float        */
 ```
 
-Si noti che a livello interno il compilatore Microsoft C rappresenta `long double` allo stesso modo del tipo `double`. Vedere [Archiviazione di tipi di base](../c-language/storage-of-basic-types.md) per informazioni sui tipi `double`, `float` e `long double`.
+Si noti che a livello interno il compilatore Microsoft C rappresenta `long double` allo stesso modo del tipo `double`. Per informazioni sul tipo `double`, `float`e `long double`, vedere [archiviazione dei tipi di base](../c-language/storage-of-basic-types.md) .
 
 È possibile omettere la parte intera della costante a virgola mobile, come illustrato negli esempi seguenti. Il numero .75 può essere rappresentato in diversi modi, inclusi i seguenti:
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - wmain function
 ms.assetid: d0300812-adc4-40c6-bba3-b2da25468c80
 ms.openlocfilehash: d467d50a7188cd665f64de8b6f0ce6e6a37df752
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290820"
 ---
 # <a name="using-wmain"></a>Utilizzo di wmain
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Nel modello di programmazione Unicode è possibile definire una versione a caratteri wide della funzione **main**. Usare **wmain** anziché **main** se si vuole scrivere codice portabile conforme al modello di programmazione Unicode.
 
@@ -33,8 +33,8 @@ In modo analogo, se il programma usa una funzione **wmain**, all'avvio del progr
 
 Per altre informazioni sull'ambiente MBCS, vedere [Internazionalizzazione](../c-runtime-library/internationalization.md) in *Informazioni di riferimento per la libreria run-time*.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)
+[Funzione principale ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)

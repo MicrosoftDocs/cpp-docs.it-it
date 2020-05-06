@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
 ms.openlocfilehash: f6984c47ef8acde462a8e92e01b72ef26a61eddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325741"
 ---
 # <a name="c-constant-expressions"></a>Espressioni costanti C
 
@@ -19,23 +19,23 @@ Un'espressione costante viene valutata in fase di compilazione, non in fase di e
 
 ## <a name="syntax"></a>Sintassi
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
+*espressione costante*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione condizionale*
 
-*conditional-expression*:<br/>
+*espressione condizionale*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression* **?** *expression* **:** *conditional-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*Logical-or-Expression* **?** *espressione* **:** *conditional-expression*
 
-*expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
+*espressione*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assegnazione-espressione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione* **,** *assignment-expression*
 
 *assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione condizionale*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: uno tra<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=****&#42;** **/=** **%=** = **+=** **-=** **&#124;** = ** \< \< ** **>>=** **&=** **^=**
 
 I non terminal per il dichiaratore di struct, l'enumeratore, il dichiaratore diretto, il dichiaratore astratto diretto e l'istruzione etichettata contengono il non terminal *constant-expression*.
 

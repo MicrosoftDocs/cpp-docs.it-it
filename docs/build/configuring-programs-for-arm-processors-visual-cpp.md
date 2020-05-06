@@ -18,10 +18,10 @@ Questa sezione della documentazione contiene informazioni su come usare gli stru
 [Panoramica delle convenzioni ARM ABI](overview-of-arm-abi-conventions.md)\
 Illustra l'interfaccia binaria dell'applicazione usata da Windows on ARM per l'uso dei registri, le convenzioni di chiamata e la gestione delle eccezioni.
 
-[Panoramica delle convenzioni arm64 ABI](arm64-windows-abi-conventions.md)\
+[Panoramica delle convenzioni ABI di ARM64](arm64-windows-abi-conventions.md)\
 Descrive l'interfaccia binaria dell'applicazione usata da Windows su ARM64 per l'utilizzo dei registri, le convenzioni di chiamata e la gestione delle eccezioni.
 
-[Problemi comuni di migrazione di MSVC ARM](common-visual-cpp-arm-migration-issues.md)\
+[Problemi comuni relativi alla migrazione di MSVC ARM](common-visual-cpp-arm-migration-issues.md)\
 Descrive gli elementi del codice C++ generalmente ritenuti portabili tra le architetture ma che in ARM determinano risultati diversi rispetto a quanto avviene per le piattaforme x86 e x64.
 
 [Gestione delle eccezioni ARM](arm-exception-handling.md)\
@@ -32,8 +32,8 @@ Descrive lo schema di codifica per la rimozione dello stack durante la gestione 
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-Oggetti [intrinseci ARM](../intrinsics/arm-intrinsics.md)\
+[Oggetti intrinseci ARM](../intrinsics/arm-intrinsics.md)\
 Illustra il compilatore intrinseco per i processori che usano l'architettura ARM.
 
-\ [intrinseci arm64](../intrinsics/arm-intrinsics.md)
+[Funzioni intrinseche ARM64](../intrinsics/arm-intrinsics.md)\
 Vengono descritte le funzioni intrinseche del compilatore per i processori che usano l'architettura ARM64.

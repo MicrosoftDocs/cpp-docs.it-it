@@ -5,17 +5,17 @@ helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
 ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313337"
 ---
 # <a name="c-sequence-points"></a>Punti di sequenza C
 
 Il valore di un oggetto può essere modificato una sola volta da un'espressione tra "punti di sequenza" consecutivi. Il linguaggio C definisce i seguenti punti di sequenza:
 
-- L'operando sinistro dell'operatore logico AND (**&&**). L'operando sinistro dell'operatore logico AND viene valutato completamente e tutti gli effetti collaterali vengono completati prima di continuare. Se il secondo operando risulta essere false (0), l'altro operando non viene valutato.
+- Operando sinistro dell'operatore AND logico (**&&**). L'operando sinistro dell'operatore logico AND viene valutato completamente e tutti gli effetti collaterali vengono completati prima di continuare. Se il secondo operando risulta essere false (0), l'altro operando non viene valutato.
 
 - L'operando sinistro dell'operatore logico OR (`||`). L'operando sinistro dell'operatore logico OR viene valutato completamente e tutti gli effetti collaterali vengono completati prima di continuare. Se il secondo operando risulta essere true (diverso da zero), l'altro operando non viene valutato.
 
@@ -33,10 +33,10 @@ Il valore di un oggetto può essere modificato una sola volta da un'espressione 
 
 - L'espressione di controllo di un'istruzione `while` o **do**. L'espressione viene valutata completamente e tutti gli effetti collaterali vengono completati prima che vengano eseguite eventuali istruzioni presenti nell'iterazione successiva del ciclo `while` o **do**.
 
-- Ognuna delle tre espressioni di un'istruzione **for**. Le espressioni vengono valutate completamente e tutti gli effetti collaterali vengono completati prima dell'esecuzione di eventuali istruzioni presenti nell'iterazione successiva del ciclo **for**.
+- Ognuna delle tre espressioni di un'istruzione **for** . Le espressioni vengono valutate completamente e tutti gli effetti collaterali vengono completati prima dell'esecuzione di eventuali istruzioni presenti nell'iterazione successiva del ciclo **for**.
 
 - L'espressione in un'istruzione `return`. L'espressione viene valutata completamente e tutti gli effetti collaterali vengono completati prima che il controllo torni alla funzione chiamante.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Valutazione dell'espressione](../c-language/expression-evaluation-c.md)
+[Valutazione delle espressioni](../c-language/expression-evaluation-c.md)

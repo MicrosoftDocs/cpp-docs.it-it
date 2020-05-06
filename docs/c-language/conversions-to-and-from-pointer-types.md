@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
 ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312416"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversioni da e verso tipi di puntatore
 
@@ -34,7 +34,7 @@ Al contrario, un tipo integrale può essere convertito in un tipo di puntatore i
 
 - Se la dimensione del tipo integrale è diversa dalla dimensione del tipo di puntatore, il tipo integrale viene prima convertito nella dimensione del puntatore usando i percorsi di conversione specificati nelle tabelle [Conversione dai tipi integrali con segno](../c-language/conversions-from-signed-integral-types.md) e [Conversione dai tipi integrali senza segno](../c-language/conversions-from-unsigned-integral-types.md). Viene quindi utilizzato come valore del puntatore.
 
-Un'espressione costante integrale con valore 0 o la stessa espressione trasmessa al tipo **void**  <strong>\*</strong> può essere convertita con un cast di tipo, un'assegnazione o un confronto in un puntatore di qualsiasi tipo. Questa operazione produce un puntatore null equivalente a un altro puntatore null dello stesso tipo, ma questo puntatore null non corrisponde a nessun puntatore a una funzione o un oggetto. I numeri interi diversi dalla costante 0 possono essere convertiti in un tipo di puntatore, ma il risultato non è portabile.
+Un'espressione costante integrale con valore 0 o tale espressione cast al tipo **void** <strong>\*</strong> può essere convertita da un cast di tipo, dall'assegnazione o dal confronto con un puntatore di qualsiasi tipo. Questa operazione produce un puntatore null equivalente a un altro puntatore null dello stesso tipo, ma questo puntatore null non corrisponde a nessun puntatore a una funzione o un oggetto. I numeri interi diversi dalla costante 0 possono essere convertiti in un tipo di puntatore, ma il risultato non è portabile.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
 ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344798"
 ---
 # <a name="type-qualifiers"></a>Qualificatori di tipo
 
@@ -55,7 +55,7 @@ Se la specifica di un tipo matrice include i qualificatori di tipo, viene qualif
 
 Questo elenco descrive come usare **const** e `volatile`.
 
-- La parola chiave **const** può essere usata per modificare un tipo fondamentale o aggregato, un puntatore a un oggetto di qualsiasi tipo o un elemento `typedef`. Se un elemento viene dichiarato con il solo qualificatore di tipo **const**, si presuppone che il tipo sia **const int**. Una variabile **const** può essere inizializzata o può essere inserita in un'area di archiviazione di sola lettura. La parola chiave **const** è utile per la dichiarazione di puntatori a **const**, poiché richiede che la funzione non modifichi il puntatore in alcun modo.
+- La parola chiave **const** può essere usata per modificare un tipo fondamentale o aggregato, un puntatore a un oggetto di qualsiasi tipo o un elemento `typedef`. Se un elemento viene dichiarato con solo il qualificatore di tipo **const** , il tipo viene considerato come **const int**. Una variabile **const** può essere inizializzata o può essere inserita in un'area di archiviazione di sola lettura. La parola chiave **const** è utile per la dichiarazione di puntatori a **const**, poiché richiede che la funzione non modifichi il puntatore in alcun modo.
 
 - Il compilatore presuppone che, in un punto qualsiasi del programma, a una variabile `volatile` possa accedere un processo sconosciuto che utilizza o modifica il valore. Di conseguenza, indipendentemente dalle ottimizzazioni specificate nella riga di comando, il codice per ogni assegnazione o riferimento di una variabile `volatile` deve essere generato anche se sembra non produrre alcun effetto.
 

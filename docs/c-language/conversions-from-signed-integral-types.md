@@ -35,53 +35,53 @@ Per informazioni sulle dimensioni dei tipi a virgola mobile e integrali, vedere 
 
 Nella tabella seguente sono riepilogate le conversioni dai tipi integrali con segno. Presuppone che il tipo **char** sia firmato per impostazione predefinita. Se si usa un'opzione in fase di compilazione per modificare il valore predefinito per il tipo di **carattere** senza segno, le conversioni fornite nella tabella [conversioni da tipi integrali senza segno](../c-language/conversions-from-unsigned-integral-types.md) per il tipo **char senza** segno si applicano anziché le conversioni in questa tabella.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Nel compilatore Microsoft, **int** e **Long** sono tipi distinti ma equivalenti. La conversione di un valore **int** continua nello stesso modo in cui si esegue la conversione di un valore **Long**.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="table-of-conversions-from-signed-integral-types"></a>Tabella delle conversioni dai tipi integrali con segno
 
-|Da|A|Metodo|
+|From|A|Metodo|
 |----------|--------|------------|
 |**carattere**<sup>1</sup>|**short**|Estensione del segno|
-|**char**|**long**|Estensione del segno|
+|**char**|**lungo**|Estensione del segno|
 |**char**|**long long**|Estensione del segno|
 |**char**|**unsigned char**|Mantenimento del modello; il bit più significativo perde la funzione come bit di segno|
 |**char**|**unsigned short**|Estensione del segno a **short**; conversione di **short** in **short senza segno**|
 |**char**|**long senza segno**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|
-|**char**|**Long Long senza segno**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
+|**char**|**unsigned long long**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
 |**char**|**float**|Estensione del segno a **long**; conversione di **long** in **float**|
 |**char**|**double**|Estensione del segno a **long**; conversione di **long** in **double**|
 |**char**|**long double**|Estensione del segno a **long**; conversione di **long** in **double**|
 |**short**|**char**|Mantenimento del byte meno significativo|
-|**short**|**long**|Estensione del segno|
+|**short**|**lungo**|Estensione del segno|
 |**short**|**long long**|Estensione del segno|
-|**short**|**char senza segno**|Mantenimento del byte meno significativo|
+|**short**|**unsigned char**|Mantenimento del byte meno significativo|
 |**short**|**unsigned short**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
-|**short**|**unsigned long**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|
-|**short**|**Long Long senza segno**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
+|**short**|**long senza segno**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|
+|**short**|**unsigned long long**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
 |**short**|**float**|Estensione del segno a **long**; conversione di **long** in **float**|
 |**short**|**double**|Estensione del segno a **long**; conversione di **long** in **double**|
 |**short**|**long double**|Estensione del segno a **long**; conversione di **long** in **double**|
-|**long**|**char**|Mantenimento del byte meno significativo|
-|**long**|**short**|Mantenimento della parola meno significativa|
-|**long**|**long long**|Estensione del segno|
-|**long**|**unsigned char**|Mantenimento del byte meno significativo|
-|**long**|**short senza segno**|Mantenimento della parola meno significativa|
-|**long**|**unsigned long**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
-|**long**|**Long Long senza segno**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
-|**long**|**float**|Rappresentazione come **float**. Se **Long** non può essere rappresentato esattamente, la precisione viene persa.|
-|**long**|**double**|Rappresentazione come **double**. Se **Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
-|**long**|**long double**|Rappresentazione come **double**. Se **Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
+|**lungo**|**char**|Mantenimento del byte meno significativo|
+|**lungo**|**short**|Mantenimento della parola meno significativa|
+|**lungo**|**long long**|Estensione del segno|
+|**lungo**|**unsigned char**|Mantenimento del byte meno significativo|
+|**lungo**|**unsigned short**|Mantenimento della parola meno significativa|
+|**lungo**|**long senza segno**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
+|**lungo**|**unsigned long long**|Estensione del segno a Long **Long**; Converte **Long Long** a **unsigned** Long Long|
+|**lungo**|**float**|Rappresentazione come **float**. Se **Long** non può essere rappresentato esattamente, la precisione viene persa.|
+|**lungo**|**double**|Rappresentazione come **double**. Se **Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
+|**lungo**|**long double**|Rappresentazione come **double**. Se **Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
 |**long long**|**char**|Mantenimento del byte meno significativo|
 |**long long**|**short**|Mantenimento della parola meno significativa|
-|**long long**|**long**|Mantieni valore DWORD di ordine inferiore|
+|**long long**|**lungo**|Mantieni valore DWORD di ordine inferiore|
 |**long long**|**unsigned char**|Mantenimento del byte meno significativo|
 |**long long**|**unsigned short**|Mantenimento della parola meno significativa|
-|**long long**|**unsigned long**|Mantieni valore DWORD di ordine inferiore|
-|**long long**|**Long Long senza segno**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
+|**long long**|**long senza segno**|Mantieni valore DWORD di ordine inferiore|
+|**long long**|**unsigned long long**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
 |**long long**|**float**|Rappresentazione come **float**. Se **Long Long** non può essere rappresentato esattamente, la precisione viene persa.|
 |**long long**|**double**|Rappresentazione come **double**. Se **Long Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|
 |**long long**|**long double**|Rappresentazione come **double**. Se **Long Long** non può essere rappresentato esattamente come **Double**, la precisione viene persa.|

@@ -13,7 +13,7 @@ ms.locfileid: "62314598"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Mancata generazione di codice in seguito all'utilizzo di nomi di funzione senza ()
 
-Quando viene utilizzato il nome di una funzione dichiarato in un programma senza parentesi, il compilatore non genera codice. Ciò si verifica indipendentemente dal fatto o meno la funzione accetta parametri perché il compilatore calcola l'indirizzo di funzione. Tuttavia, poiché l'operatore di chiamata di funzione "()" non è presente, viene effettuata alcuna chiamata. Questo risultato è simile al seguente:
+Quando un nome di funzione dichiarato nel programma viene usato senza parentesi, il compilatore non genera codice. Questa situazione si verifica indipendentemente dal fatto che la funzione accetti parametri, perché il compilatore calcola l'indirizzo della funzione; Tuttavia, poiché l'operatore di chiamata di funzione "()" non è presente, non viene effettuata alcuna chiamata. Questo risultato è simile al seguente:
 
 ```
 // compile with /Wall to generate a warning
@@ -21,9 +21,9 @@ int a;
 a;      // no code generated here either
 ```
 
-In Visual C++, neanche usando il livello di avviso 4 non genera alcun output di diagnostica. Viene visualizzato alcun avviso; non viene generato alcun codice.
+In Visual C++, anche l'uso del livello di avviso 4 non genera alcun output di diagnostica. Non viene emesso alcun avviso; non viene generato alcun codice.
 
-Il codice di esempio seguente viene compilato (con un messaggio di avviso) e collegato correttamente senza errori ma mancata generazione di codice in riferimento a `funcn( )`. Per funzionare correttamente, aggiungere l'operatore di chiamata di funzione "()".
+Il codice di esempio seguente compila (con un avviso) e si collega correttamente senza errori, ma non produce codice in `funcn( )`riferimento a. Per il corretto funzionamento di questa operazione, aggiungere l'operatore di chiamata di funzione "()".
 
 ```
 #include <stdio.h>

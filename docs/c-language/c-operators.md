@@ -10,11 +10,11 @@ helpviewer_keywords:
 - binary data, binary expressions
 ms.assetid: 13bc4c8e-2dc9-4b23-9f3a-25064e8777ed
 ms.openlocfilehash: 139eedf54ab42ddc34b5c049abfcd1c2638c5efc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326378"
 ---
 # <a name="c-operators"></a>Operatori C
 
@@ -24,31 +24,31 @@ Sono disponibili tre tipi di operatori: Un'espressione unaria è costituita da u
 
 In C sono disponibili gli operatori unari seguenti:
 
-|Simbolo|nome|
+|Simbolo|Nome|
 |------------|----------|
 |**-** **~** **!**|Operatori di complemento e di negazione|
-|**&#42;** **&**|Operatori di riferimento indiretto e address-of|
+|**&#42;****&**|Operatori di riferimento indiretto e address-of|
 |**sizeof**|Operatore size|
 |**+**|Operatore più unario|
 |**++** **--**|Operatori di incremento e decremento unari|
 
 Gli operatori binari vengono associati da sinistra a destra. In C sono disponibili gli operatori binari seguenti:
 
-|Simbolo|nome|
+|Simbolo|Nome|
 |------------|----------|
-|**&#42;** **/** **%**|Operatori moltiplicativi|
+|**&#42;** **/****%**|Operatori moltiplicativi|
 |**+** **-**|Operatori additivi|
 |**\<\<** **>>**|Operatori shift|
-|**\<** **>** **\<=** **>=** **==** **!=**|Operatori relazionali|
-|**&** **&#124;** **^**|Operatori bit per bit|
-|**&&** **&#124;&#124;**|Operatori logici|
+|**\<****>** **\<** **>=** **==** **!=**|Operatori relazionali|
+|**&****&#124;****^**|Operatori bit per bit|
+|**&&****&#124;&#124;**|Operatori logici|
 |**,**|Operatore di valutazione sequenziale|
 
 L'operatore di base (**:>**), supportato da versioni precedenti del compilatore C a 16 bit di Microsoft, è descritto in [Riepilogo di sintassi del linguaggio C](../c-language/c-language-syntax-summary.md).
 
 L'operatore di espressione condizionale ha una precedenza minore rispetto alle espressioni binarie e differisce da tali espressioni per l'associatività a destra.
 
-Le espressioni con operatori includono inoltre espressioni di assegnazione, che utilizzano operatori di assegnazione unari o binari. Gli operatori di assegnazione unari sono gli operatori di incremento (**++**) e decremento (**--**), mentre gli operatori di assegnazione binari sono l'operatore di assegnazione semplice (**=**) e gli operatori di assegnazione composta. Ogni operatore di assegnazione composta è una combinazione di un altro operatore binario con l'operatore di assegnazione semplice.
+Le espressioni con operatori includono inoltre espressioni di assegnazione, che utilizzano operatori di assegnazione unari o binari. Gli operatori di assegnazione unari sono gli operatori**++** di incremento ()**--** e decremento (); gli operatori di assegnazione binari sono l'operatore di assegnazione semplice**=**() e gli operatori di assegnazione composta. Ogni operatore di assegnazione composta è una combinazione di un altro operatore binario con l'operatore di assegnazione semplice.
 
 ## <a name="see-also"></a>Vedere anche
 

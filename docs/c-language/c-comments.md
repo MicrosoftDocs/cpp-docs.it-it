@@ -9,15 +9,15 @@ helpviewer_keywords:
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326287"
 ---
 # <a name="c-comments"></a>Commenti C
 
-Un commento è una sequenza di caratteri che inizia con una combinazione barra/asterisco (<strong>/\*</strong>) considerata come un singolo spazio vuoto dal compilatore e altrimenti ignorata. Un commento può contenere qualsiasi combinazione di caratteri del set di caratteri rappresentabili, inclusi i caratteri di nuova riga, fatta eccezione per il delimitatore di fine commento (<strong>\*/</strong>). I commenti possono occupare più di una riga, ma non possono essere annidati.
+Un "commento" è una sequenza di caratteri che inizia con una combinazione di barra/asterisco<strong>/</strong>() che viene considerata come un singolo carattere di spazio vuoto dal compilatore e viene altrimenti ignorata. Un commento può includere qualsiasi combinazione di caratteri del set di caratteri rappresentabili, inclusi i caratteri di nuova riga, escluso il delimitatore di fine commento<strong>\*</strong>(). I commenti possono occupare più di una riga, ma non possono essere annidati.
 
 I commenti possono trovarsi in qualsiasi punto in cui sia consentito uno spazio vuoto. Poiché il compilatore considera un commento come un singolo spazio vuoto, non è possibile includere commenti nei token. In tal caso, i caratteri del commento verrebbero ignorati.
 
@@ -59,7 +59,7 @@ L'errore si verifica perché il compilatore riconosce la prima combinazione `*/`
 
 Sebbene sia possibile utilizzare i commenti per eseguire il rendering di alcune righe di codice inattive a scopo di test, le direttive per il preprocessore `#if` e `#endif` e la compilazione condizionale rappresentano un'alternativa utile per questa attività. Per altre informazioni, vedere [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md) in *Preprocessor Reference* (Riferimenti al preprocessore).
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Il compilatore Microsoft supporta anche commenti a riga singola preceduti da due barre (__//__). Se si esegue la compilazione con l'opzione /Za (standard ANSI), questi commenti generano errori. Tali commenti non possono estendersi su una seconda riga.
 
@@ -67,7 +67,7 @@ Il compilatore Microsoft supporta anche commenti a riga singola preceduti da due
 // This is a valid comment
 ```
 
-I commenti che iniziano con due barre (__//__) vengono terminati dal successivo carattere di nuova riga non preceduto da un carattere di escape. Nell'esempio seguente il carattere di nuova riga è preceduto da una barra rovesciata (**\\**), creando in tal modo una sequenza di escape. Questa sequenza di escape indica al compilatore di considerare la riga successiva nella riga precedente. Per altre informazioni, vedere [Sequenze di escape](../c-language/escape-sequences.md).
+I commenti che iniziano con due barre (__//__) vengono terminati dal successivo carattere di nuova riga che non è preceduto da un carattere di escape. Nell'esempio successivo, il carattere di nuova riga è preceduto da una barra**\\**rovesciata (), creando una "sequenza di escape". Questa sequenza di escape indica al compilatore di considerare la riga successiva nella riga precedente. Per altre informazioni, vedere [Sequenze di escape](../c-language/escape-sequences.md).
 
 ```C
 // my comment \
@@ -78,7 +78,7 @@ Di conseguenza, l'istruzione `i++;` viene impostata come commento.
 
 Per impostazione predefinita, in Microsoft C le estensioni Microsoft sono abilitate. Utilizzare l'opzione /Za per disabilitare tali estensioni.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

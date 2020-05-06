@@ -10,17 +10,17 @@ helpviewer_keywords:
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
 ms.openlocfilehash: e60a7935cdddc116848b64461b064c5fd5cdd00a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313524"
 ---
 # <a name="arguments"></a>Argomenti
 
 Gli argomenti in una chiamata di funzione hanno formato seguente:
 
-> *expression* **(** *expression-list*<SUB>opt</SUB> **)**  /* Function call */
+> *espressione* **(** *expression-list*<SUB>opt</SUB> **)** /* chiamata di funzione */
 
 In una chiamata di funzione, *expression-list* è un elenco di espressioni (separate da virgole). I valori di queste ultime espressioni sono gli argomenti passati alla funzione. Se la funzione non accetta argomenti, *expression-list* deve includere la parola chiave `void`.
 

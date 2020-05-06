@@ -8,21 +8,21 @@ helpviewer_keywords:
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
 ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336172"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Archiviazione e allineamento di strutture
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 I membri di struttura vengono archiviati in modo sequenziale nell'ordine in cui sono dichiarati: il primo avrà l'indirizzo di memoria più basso e l'ultimo quello più alto.
 
 Ogni oggetto dati ha un *alignment-requirement*. Per le strutture, il requisito è il più elevato dei relativi membri. A ogni oggetto viene allocato un *offset* affinché
 
-*offset* `%` *alignment-requirement* `==` 0
+allineamento *offset* `%` *-requisito* `==` 0
 
 I campi di bit adiacenti vengono compressi nella stessa unità di allocazione a 1, 2 o 4 byte se i tipi integrali sono della stessa dimensione e se il campo di bit successivo rientra nell'unità di allocazione corrente senza oltrepassare il limite imposto dai requisiti di allineamento comuni dei campi di bit.
 
@@ -38,7 +38,7 @@ Per utilizzare il pragma `pack` per specificare la compressione in modo diverso 
 
 Per impostazione predefinita, con il compilatore C Microsoft i campi di bit vengono impostati sulla dimensione **long**. I membri di struttura vengono allineati in base alla dimensione del tipo o alla dimensione di /Zp[*n*], a seconda di quale delle due è inferiore. La dimensione predefinita è 4.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
