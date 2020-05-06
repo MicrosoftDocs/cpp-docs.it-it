@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a05df3adc74edfd814bb6dc15121e4a343dc4d
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316704"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825756"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crea il file di intestazione precompilato)
 
@@ -28,45 +28,45 @@ Indica al compilatore di creare un file di intestazione precompilata (PCH) che r
 
 ## <a name="syntax"></a>Sintassi
 
-> __/Yc__<br/>
-> __/Yc__*filename*
+> __/YC__\
+> __/Yc__*Nome file* /YC
 
 ## <a name="arguments"></a>Argomenti
 
 *filename*<br/>
-Specifica un file di intestazione (h). Quando viene usato in questo argomento, il compilatore compila tutto il codice fino a e includendo il file con estensione h.
+Specifica un file di intestazione (. h). Quando si usa questo argomento, il compilatore compila tutto il codice fino al file con estensione h.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando **/Yc** viene specificata senza un argomento, il compilatore compila tutto il codice fino alla fine del file di origine di base o al punto nel file di base in cui un [hdrstop](../../preprocessor/hdrstop.md) direttiva si verifica. Il file con estensione pch risultante ha lo stesso nome di base del file di origine di base solo se si specifica un nome di file diverso usando il **hdrstop** pragma o il **/Fp** opzione.
+Quando **/YC** viene specificato senza un argomento, il compilatore compila tutto il codice fino alla fine del file di origine di base o fino al punto nel file di base in cui si verifica una direttiva [hdrstop](../../preprocessor/hdrstop.md) . Il file con estensione PCH risultante ha lo stesso nome di base del file di origine di base, a meno che non si specifichi un nome file diverso usando il pragma **hdrstop** o l'opzione **/FP** .
 
-Il codice precompilato viene salvato in un file con un nome creato dal nome di base del file specificato con il **/Yc** opzione ed estensione pch. È anche possibile usare il [/Fp (nome. File PCH)](fp-name-dot-pch-file.md) opzione per specificare un nome per il file di intestazione precompilata.
+Il codice precompilato viene salvato in un file con un nome creato dal nome di base del file specificato con l'opzione **/YC** e un'estensione PCH. È anche possibile usare [/FP (Name. File PCH)](fp-name-dot-pch-file.md) opzione per specificare un nome per il file di intestazione precompilata.
 
-Se si usa __/Yc__*filename*, il compilatore compila tutto il codice fino alla versione nel file specificato per un utilizzo successivo con il [/Yu (Usa intestazione File precompilata)](yu-use-precompiled-header-file.md) opzione.
+Se si usa __/YC__*filename*, il compilatore compila tutto il codice fino a includere il file specificato per l'uso successivo con l'opzione [/Yu (USA il file di intestazione precompilata)](yu-use-precompiled-header-file.md) .
 
-Se le opzioni __/Yc__*filename* e __/Yu__*filename* si verificano nella stessa riga di comando ed entrambe fanno riferimento a o implicano, lo stesso nome di file, __/Yc__*filename* ha la precedenza. Questa funzionalità semplifica la scrittura di makefile.
+Se le opzioni __/YC__*filename* e __/Yu__*filename* sono presenti nella stessa riga di comando e in entrambi i riferimenti, o implicano lo stesso nome file, __/YC__*filename* ha la precedenza. Questa funzionalità semplifica la scrittura di makefile.
 
-Per altre informazioni sulle intestazioni precompilate, vedere:
+Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
-- [/Y (intestazioni precompilate)](y-precompiled-headers.md)
+- [/Y (Intestazioni precompilate)](y-precompiled-headers.md)
 
 - [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Selezionare un file con estensione cpp. Il file con estensione cpp necessario #include il file con estensione h che contiene le informazioni di intestazione precompilata. Il progetto **/Yc** impostazione può essere sottoposto a override a livello di file.
+1. Selezionare un file con estensione cpp. Il file con estensione cpp deve #include il file con estensione h che contiene informazioni sull'intestazione precompilata. L'impostazione **/YC** del progetto può essere sottoposta a override a livello di file.
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Aprire il **le proprietà di configurazione**, **C/C++**, **intestazioni precompilate** pagina delle proprietà.
+1. Aprire la pagina delle proprietà **proprietà di configurazione**, **C/C++**, **intestazioni precompilate** .
 
-1. Modificare il **intestazione precompilata** proprietà.
+1. Modificare la proprietà dell' **intestazione precompilata** .
 
-1. Per impostare il nome del file, modificare il **File di intestazione precompilata** proprietà.
+1. Per impostare il nome del file, modificare la proprietà del **file di intestazione precompilata** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
-- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
+- Controllare <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
 
 ## <a name="example"></a>Esempio
 
@@ -81,7 +81,7 @@ Esaminare il codice seguente:
 // ...
 ```
 
-Quando questo codice viene compilato con il comando `CL /YcMYAPP.H PROG.CPP`, il compilatore Salva tutti la pre-elaborazione per AFXWIN. h, e denominato MyApp. MyApp. h in un file di intestazione precompilata.
+Quando questo codice viene compilato con il comando `CL /YcMYAPP.H PROG.CPP`, il compilatore salva tutta la pre-elaborazione per AFXWIN. h, Resource. h e MyApp. h in un file di intestazione precompilato denominato MyApp. pch.
 
 ## <a name="see-also"></a>Vedere anche
 

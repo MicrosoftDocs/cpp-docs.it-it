@@ -13,32 +13,32 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222055"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825915"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
 
-Gli operatori di spostamento bit per bit sono l'operatore di spostamento a destra (**&gt;&gt;**), che sposta i bit del *shift-expression* a destra e l'operatore di spostamento a sinistra (**&lt; &lt;**), che sposta i bit del *shift-expression* a sinistra. <sup>1</sup>
+Gli operatori di spostamento bit per bit sono l'operatore di**&gt;** spostamento a destra (), che sposta i bit di *Shift-Expression* a destra e l'operatore di spostamento**&lt;** a sinistra (), che sposta i bit di *Shift-Expression* a sinistra. <sup>1</sup>
 
 ## <a name="syntax"></a>Sintassi
 
-> *shift-expression* `<<` *additive-expression*
+> *cambio-espressione* `<<` *additiva-espressione*\
 > *shift-expression* `>>` *additive-expression*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!IMPORTANT]
-> Le descrizioni e gli esempi seguenti sono validi in Windows per le architetture x86 e x64. L'implementazione degli operatori di spostamento a sinistra e di spostamento a destra è sostanzialmente diversa in Windows per i dispositivi ARM. Per altre informazioni, vedere la sezione "Operatori di spostamento" del [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) post di blog.
+> Le descrizioni e gli esempi seguenti sono validi in Windows per le architetture x86 e x64. L'implementazione degli operatori di spostamento a sinistra e a destra è significativamente diversa in Windows per i dispositivi ARM. Per ulteriori informazioni, vedere la sezione "operatori shift" del post di Blog [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) .
 
 ## <a name="left-shifts"></a>Spostamenti a sinistra
 
-Fa in modo che l'operatore di spostamento a sinistra i bit nel *shift-expression* di spostare a sinistra del numero di posizioni specificato da *additive-expression*. Le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Uno spostamento a sinistra è uno spostamento logico (i bit spostati oltre la fine vengono eliminati, incluso il bit di segno). Per altre informazioni sui tipi di spostamento bit per bit, vedere [spostamento bit per bit](https://en.wikipedia.org/wiki/Bitwise_shift).
+L'operatore di spostamento a sinistra fa in modo che i bit in *Shift-Expression* vengano spostati a sinistra del numero di posizioni specificato da *additive-expression*. Le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Uno spostamento a sinistra è uno spostamento logico (i bit spostati oltre la fine vengono eliminati, incluso il bit di segno). Per ulteriori informazioni sui tipi di turni bit per bit, vedere [turni bit per bit](https://en.wikipedia.org/wiki/Bitwise_shift).
 
-Nell'esempio seguente vengono illustrate operazioni di spostamento a sinistra tramite numeri senza segno. Viene mostrato ciò che accade ai bit che rappresentano il valore come bitset. Per altre informazioni, vedere [classe bitset](../standard-library/bitset-class.md).
+Nell'esempio seguente vengono illustrate operazioni di spostamento a sinistra tramite numeri senza segno. Viene mostrato ciò che accade ai bit che rappresentano il valore come bitset. Per ulteriori informazioni, vedere [classe bits](../standard-library/bitset-class.md).
 
 ```cpp
 #include <iostream>
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Se si sposta a sinistra un numero con segno coinvolgendo il bit di segno, il risultato sarà indefinito. Nell'esempio seguente viene illustrato cosa accade quando un bit 1 viene spostato a sinistra nella posizione di bit di segno.
+Se si sposta a sinistra un numero con segno coinvolgendo il bit di segno, il risultato sarà indefinito. Nell'esempio seguente viene illustrato cosa accade quando un bit viene spostato a sinistra nella posizione del bit di segno.
 
 ```cpp
 #include <iostream>
@@ -86,10 +86,10 @@ int main() {
 
 ## <a name="right-shifts"></a>Spostamenti a destra
 
-L'operatore di spostamento a destra causa lo schema di bit nel *shift-expression* di spostare a destra del numero di posizioni specificato da *additive-expression*. Per i numeri senza segno, le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Per i numeri con segno, il bit di segno viene utilizzato per riempire le posizioni dei bit liberate. In altre parole, se il numero è positivo, si utilizza 0, se il numero è negativo, si utilizza 1.
+L'operatore di spostamento a destra fa in modo che lo schema di bit in *Shift-Expression* venga spostato a destra del numero di posizioni specificato da *additive-expression*. Per i numeri senza segno, le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Per i numeri con segno, il bit di segno viene utilizzato per riempire le posizioni dei bit liberate. In altre parole, se il numero è positivo, si utilizza 0, se il numero è negativo, si utilizza 1.
 
 > [!IMPORTANT]
-> Il risultato di uno spostamento a destra di un numero negativo con segno è dipendente dall'implementazione. Sebbene Microsoft C++ compilatore utilizza il bit di segno per riempire le posizioni di bit vuote, non c'è garanzia che le altre implementazioni eseguire anche questa operazione.
+> Il risultato di uno spostamento a destra di un numero negativo con segno è dipendente dall'implementazione. Sebbene il compilatore Microsoft C++ usi il bit di segno per riempire le posizioni dei bit sgomberate, non esiste alcuna garanzia che anche altre implementazioni eseguano questa operazione.
 
 Nell'esempio seguente vengono illustrate operazioni di spostamento a destra tramite numeri senza segno:
 
@@ -174,9 +174,9 @@ int main() {
 
 ## <a name="shifts-and-promotions"></a>Spostamenti e promozioni
 
-Le espressioni su entrambi i lati di un operatore di spostamento devono essere tipi integrali. Le promozioni integrali vengono eseguite in base alle regole descritte in [conversioni Standard](standard-conversions.md). Il tipo del risultato è lo stesso come il tipo di promosso *shift-expression*.
+Le espressioni su entrambi i lati di un operatore di spostamento devono essere tipi integrali. Le promozioni integrali vengono eseguite in base alle regole descritte in [conversioni standard](standard-conversions.md). Il tipo del risultato corrisponde al tipo dell' *espressione Shift*promossa.
 
-Nell'esempio seguente, una variabile di tipo **char** viene promosso a un **int**.
+Nell'esempio seguente una variabile di tipo **char** viene promossa a un valore **int**.
 
 ```cpp
 #include <iostream>
@@ -195,9 +195,9 @@ int main() {
 }
 ```
 
-## <a name="additional-details"></a>Altre informazioni
+## <a name="additional-details"></a>Altri dettagli
 
-Il risultato di un'operazione di spostamento è indefinito se *additive-expression* è negativo o se *additive-expression* è maggiore o uguale al numero di bit in promosso  *shift-expression*. Non viene eseguita alcuna operazione di spostamento se *additive-expression* è 0.
+Il risultato di un'operazione di spostamento non è definito se *additive-expression* è negativo o se *additive-expression* è maggiore o uguale al numero di bit nell' *espressione Shift*(innalzata di livello). Non viene eseguita alcuna operazione di spostamento se *additive-expression* è 0.
 
 ```cpp
 #include <iostream>
@@ -222,13 +222,13 @@ int main() {
 
 ## <a name="footnotes"></a>Note a piè di pagina
 
-<sup>1</sup> seguente rappresenta la descrizione degli operatori di spostamento nel ISO specifica c++11 (INCITS/ISO/IEC 14882-2011[2012]), sezioni 5.8.2 e 5.8.3.
+<sup>1</sup> di seguito è riportata la descrizione degli operatori shift nella specifica ISO c++ 11 (incis/ISO/IEC 14882-2011 [2012]), sezioni 5.8.2 e 5.8.3.
 
-Il valore di `E1 << E2` è `E1` spostato a sinistra di `E2` posizioni di bit. I bit vuoti vengono riempiti con zero. Se `E1` ha un tipo unsigned, il valore del risultato è **E1 × 2**<sup>**E2**</sup>, modulo ridotto uno oltre il valore massimo rappresentabile nel tipo di risultato. In caso contrario, se `E1` ha un tipo signed e un valore non negativo, e **E1 × 2**<sup>**E2** </sup> è rappresentabile nel tipo unsigned corrispondente del tipo di risultato, quindi tale valore, convertito nel tipo di risultato, è il valore risulta. in caso contrario, il comportamento è indefinito.
+Il valore di `E1 << E2` è `E1` spostato a sinistra di `E2` posizioni di bit. I bit vuoti vengono riempiti con zero. Se `E1` dispone di un tipo senza segno, il valore del risultato è **E1 × 2**<sup>**E2**</sup>, modulo ridotto uno più del valore massimo rappresentabile nel tipo di risultato. In caso contrario `E1` , se ha un tipo con segno e un valore non negativo e **E1 × 2**<sup>**E2**</sup> è rappresentabile nel tipo senza segno corrispondente del tipo di risultato, tale valore, convertito nel tipo di risultato, è il valore risultante. in caso contrario, il comportamento non è definito.
 
-Il valore di `E1 >> E2` è `E1` spostato a destra di `E2` posizioni di bit. Se `E1` dispone di un tipo unsigned o se `E1` dispone di un tipo con segno e un valore non negativo, il valore del risultato sarà parte integrante del quoziente dei **/2 E1**<sup>**E2** </sup>. Se `E1` dispone di un tipo signed e di un valore negativo, il valore risultante sarà definito dall'implementazione.
+Il valore di `E1 >> E2` è `E1` spostato a destra di `E2` posizioni di bit. Se `E1` ha un tipo senza segno o se `E1` ha un tipo con segno e un valore non negativo, il valore del risultato è la parte integrale del quoziente di **E1/2**<sup>**E2**</sup>. Se `E1` dispone di un tipo signed e di un valore negativo, il valore risultante sarà definito dall'implementazione.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
