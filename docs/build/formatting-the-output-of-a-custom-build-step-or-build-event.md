@@ -30,7 +30,7 @@ Se l'output di un'istruzione di compilazione personalizzata o un evento di compi
 
 Il formato dell'output sarà il seguente:
 
-> {<em>filename</em> **(** <em>riga #</em> \[ **,** <em>colonna #</em>] **)** &#124; *ToolName*} **:** \[ <em>qualsiasi testo</em> ] {**errore** &#124; **warning**} <em>codice + numero</em> **:** <em>stringa localizzabile</em> \[ <em>testo</em> ]
+> {<em>filename</em>**(**<em>line #</em> \[ **,** <em>Column #</em>]**)** &#124; *ToolName*} **:** \[ <em>qualsiasi testo</em> ] {**Error** &#124; **warning**} <em>codice + numero</em>**:**<em>stringa</em> \[ localizzabile <em>qualsiasi testo</em> ]
 
 Dove:
 
@@ -48,4 +48,4 @@ Ad esempio:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](understanding-custom-build-steps-and-build-events.md)
+[Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione](understanding-custom-build-steps-and-build-events.md)

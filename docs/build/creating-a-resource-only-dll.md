@@ -29,11 +29,11 @@ Per creare una DLL di sole risorse, creare un nuovo progetto DLL di Windows (non
 
 1. Nella **creazione guidata applicazione Win32**selezionare **Impostazioni applicazione**. Scegliere un **tipo** di applicazione **dll**. In **Opzioni aggiuntive**selezionare **Progetto vuoto**. Scegliere **fine** per creare il progetto.
 
-1. Creare un nuovo script di risorsa contenente le risorse per la DLL, ad esempio una stringa o un menu. Salvare il file di `.rc`.
+1. Creare un nuovo script di risorsa contenente le risorse per la DLL, ad esempio una stringa o un menu. Salvare il file.`.rc`
 
-1. Scegliere **Aggiungi elemento esistente**dal menu **progetto** , quindi inserire il nuovo file di `.rc` nel progetto.
+1. Scegliere **Aggiungi elemento esistente**dal menu `.rc` **progetto** , quindi inserire il nuovo file nel progetto.
 
-1. Specificare l'opzione del linker [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` impedisce al linker di collegare un riferimento a `_main` nella DLL; Questa opzione è necessaria per creare una DLL di sole risorse.
+1. Specificare l'opzione del linker [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`impedisce al linker di collegare un riferimento a `_main` alla dll. Questa opzione è necessaria per creare una DLL di sole risorse.
 
 1. Compilare la DLL.
 
@@ -44,11 +44,11 @@ Per creare una DLL di sole risorse, creare un nuovo progetto DLL di Windows (non
 
 1. Nella finestra di dialogo **progetto desktop Windows** selezionare un **tipo di applicazione** **libreria a collegamento dinamico**. In **Opzioni aggiuntive**selezionare **Progetto vuoto**. Scegliere **OK** per creare il progetto.
 
-1. Creare un nuovo script di risorsa contenente le risorse per la DLL, ad esempio una stringa o un menu. Salvare il file di `.rc`.
+1. Creare un nuovo script di risorsa contenente le risorse per la DLL, ad esempio una stringa o un menu. Salvare il file.`.rc`
 
-1. Scegliere **Aggiungi elemento esistente**dal menu **progetto** , quindi inserire il nuovo file di `.rc` nel progetto.
+1. Scegliere **Aggiungi elemento esistente**dal menu `.rc` **progetto** , quindi inserire il nuovo file nel progetto.
 
-1. Specificare l'opzione del linker [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` impedisce al linker di collegare un riferimento a `_main` nella DLL; Questa opzione è necessaria per creare una DLL di sole risorse.
+1. Specificare l'opzione del linker [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`impedisce al linker di collegare un riferimento a `_main` alla dll. Questa opzione è necessaria per creare una DLL di sole risorse.
 
 1. Compilare la DLL.
 
@@ -56,7 +56,7 @@ Per creare una DLL di sole risorse, creare un nuovo progetto DLL di Windows (non
 
 ## <a name="use-a-resource-only-dll"></a>Usare una DLL di sole risorse
 
-L'applicazione che usa la DLL di sole risorse deve chiamare [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) o una funzione correlata per collegarsi in modo esplicito alla dll. Per accedere alle risorse, chiamare le funzioni generiche `FindResource` e `LoadResource`, che funzionano su qualsiasi tipo di risorsa. In alternativa, chiamare una delle funzioni specifiche delle risorse seguenti:
+L'applicazione che usa la DLL di sole risorse deve chiamare [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) o una funzione correlata per collegarsi in modo esplicito alla dll. Per accedere alle risorse, chiamare le funzioni `FindResource` generiche `LoadResource`e, che funzionano su qualsiasi tipo di risorsa. In alternativa, chiamare una delle funzioni specifiche delle risorse seguenti:
 
 - `FormatMessage`
 
@@ -76,5 +76,5 @@ L'applicazione deve chiamare `FreeLibrary` al termine dell'uso delle risorse.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di file di risorse](../windows/working-with-resource-files.md)\
+[Uso dei file di risorse](../windows/working-with-resource-files.md)\
 [Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md)

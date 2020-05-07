@@ -23,4 +23,4 @@ In questa sezione viene fornita la descrizione completa del linguaggio C e delle
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C](../c-language/c-language-reference.md)
+[Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

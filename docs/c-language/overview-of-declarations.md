@@ -18,10 +18,10 @@ Una "dichiarazione" consente di specificare l'interpretazione e gli attributi di
 
 ## <a name="syntax"></a>Sintassi
 
-*declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+*dichiarazione*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opz</sub> *init-declarator-list*<sub>opt</sub>**;**
 
-/\* *attributo-Seq*<sub>opt</sub> è specifico di Microsoft */
+/\**attribute-seq*<sub>opt</sub> è specifico di Microsoft */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -33,8 +33,8 @@ Una "dichiarazione" consente di specificare l'interpretazione e gli attributi di
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*
 
 *init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inizializzatore* *dichiaratore* **=**
 
 > [!NOTE]
 > La sintassi per *declaration* non viene ripetuta nelle sezioni seguenti. La sintassi nelle sezioni seguenti di solito inizia con il non terminale *declarator*.
@@ -43,21 +43,21 @@ Le dichiarazioni nel componente *init-declarator-list* contengono gli identifica
 
 Le dichiarazioni possono contenere uno o più degli attributi facoltativi elencati in *attribute-seq*; *seq* è l'abbreviazione di sequenza. Questi attributi specifici di Microsoft eseguono una varietà di funzioni, che saranno discusse più dettagliatamente nel resto di questo manuale.
 
-Nella forma generale di una dichiarazione di variabili, *type-specifier* restituisce il tipo di dati della variabile. *type-specifier* può essere un'istruzione composta, ad esempio quando il tipo viene modificato da **const** o da `volatile`. `declarator` fornisce il nome della variabile, possibilmente modificato in modo da dichiarare un tipo di matrice o puntatore. Di seguito è riportato un esempio:
+Nella forma generale di una dichiarazione di variabili, *type-specifier* restituisce il tipo di dati della variabile. *type-specifier* può essere un'istruzione composta, ad esempio quando il tipo viene modificato da **const** o da `volatile`. `declarator` fornisce il nome della variabile, possibilmente modificato in modo da dichiarare un tipo di matrice o puntatore. Ad esempio,
 
 ```C
 int const *fp;
 ```
 
-dichiara una variabile denominata `fp` come puntatore a un valore `int` non modificabile (**const**). È possibile definire più variabili in una dichiarazione usando più dichiaratori, separati da virgole.
+dichiara una variabile denominata `fp` come puntatore a un valore non modificabile (**const**). `int` È possibile definire più variabili in una dichiarazione usando più dichiaratori, separati da virgole.
 
-Una dichiarazione deve avere almeno un dichiaratore oppure il relativo identificatore di tipi deve dichiarare un tag della struttura, un tag di unione o i membri di un'enumerazione. I dichiaratori forniscono le eventuali informazioni rimanenti su un identificatore. Un dichiaratore è un identificatore che può essere modificato con parentesi quadre ( **[ ]** ), asterischi (<strong>\*</strong>) o parentesi tonde ( **( )** ) per dichiarare rispettivamente un tipo di matrice, di puntatore o di funzione. Quando si dichiarano variabili semplici (ad esempio caratteri, integri ed elementi a virgola mobile) o strutture e unioni di variabili semplici, `declarator` è solo un identificatore. Per altre informazioni sui dichiaratori, vedere [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md).
+Una dichiarazione deve avere almeno un dichiaratore oppure il relativo identificatore di tipi deve dichiarare un tag della struttura, un tag di unione o i membri di un'enumerazione. I dichiaratori forniscono le eventuali informazioni rimanenti su un identificatore. Un dichiaratore è un identificatore che può essere modificato con parentesi quadre (**[ ]**), asterischi (<strong>\*</strong>) o parentesi tonde (**( )** ) per dichiarare rispettivamente un tipo di matrice, di puntatore o di funzione. Quando si dichiarano variabili semplici (ad esempio caratteri, integri ed elementi a virgola mobile) o strutture e unioni di variabili semplici, `declarator` è solo un identificatore. Per altre informazioni sui dichiaratori, vedere [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md).
 
 Tutte le definizioni sono implicitamente dichiarazioni, ma non tutte le dichiarazioni sono definizioni. Ad esempio, le dichiarazioni di variabili che iniziano con l'identificatore di classi di archiviazione `extern` fanno "riferimento" alle dichiarazioni, piuttosto che "definirle". Se è necessario fare riferimento a una variabile esterna prima che sia definita oppure se viene definita in un altro file di origine da quello in cui è usata, è necessaria una dichiarazione `extern`. Le risorse di archiviazione non vengono allocate "facendo riferimento" alle dichiarazioni, né è possibile inizializzare le variabili nelle dichiarazioni.
 
 Una classe o un tipo di archiviazione (o entrambi) è necessaria nelle dichiarazioni delle variabili. Fatta eccezione per `__declspec`, è consentito un solo identificatore di classi di archiviazione in una dichiarazione e non tutti gli identificatori di classi di archiviazione sono consentiti in ogni contesto. La classe di archiviazione `__declspec` è consentita con altri identificatori di classi di archiviazione e più di una volta. L'identificatore di classi di archiviazione di una dichiarazione incide sulla modalità di archiviazione e inizializzazione dell'elemento dichiarato e su quali parti di un programma possono fare riferimento all'elemento.
 
-I terminali *storage-class-specifier* definiti in C sono **auto**, `extern`, **register**, **static** e `typedef`. In più, Microsoft C include il terminale *storage-class-specifier* `__declspec`. Tutti i terminali *storage-class-specifier*, tranne `typedef` e `__declspec`, sono trattati nella sezione [Classi di archiviazione](../c-language/c-storage-classes.md). Per informazioni su `typedef`, vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md). Per informazioni su `__declspec`, vedere [Attributi di classi di archiviazione estesi](../c-language/c-extended-storage-class-attributes.md).
+I terminali *storage-class-specifier* definiti in C sono **auto**, `extern`, **register**, **static** e `typedef`. In più, Microsoft C include il terminale *storage-class-specifier*`__declspec`. Tutti i terminali *storage-class-specifier*, tranne `typedef` e `__declspec`, sono trattati nella sezione [Classi di archiviazione](../c-language/c-storage-classes.md). Per informazioni su `typedef`, vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md). Per informazioni su `__declspec`, vedere [Attributi di classi di archiviazione estesi](../c-language/c-extended-storage-class-attributes.md).
 
 La posizione della dichiarazione all'interno del programma di origine e la presenza o l'assenza di altre dichiarazioni della variabile sono fattori importanti nel determinare la durata delle variabili. Possono esserci più ridichiarazioni, ma una sola definizione. Tuttavia, una definizione può apparire in più unità di conversione. Per oggetti con collegamento interno, questa regola di applica separatamente a ogni unità di conversione, perché gli oggetti collegati internamente sono univoci di un'unità di conversione. Per gli oggetti con collegamenti esterni, questa regola si applica all'intero programma. Per altre informazioni sulla visibilità, vedere [Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md).
 

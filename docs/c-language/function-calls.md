@@ -18,14 +18,14 @@ ms.locfileid: "81334565"
 
 Una *chiamata di funzione* è un'espressione che trasferisce il controllo e gli argomenti (se presenti) a una funzione e ha il formato seguente:
 
-*espressione* (*elenco espressioni*<sub>opz</sub>)
+*espressione* (*elenco di espressioni*<sub>opt</sub>)
 
 dove *expression* è un nome di funzione o restituisce un indirizzo della funzione e *expression-list* è un elenco di espressioni (separate da virgole). I valori di queste ultime espressioni sono gli argomenti passati alla funzione. Se la funzione non restituisce un valore, dichiararla come funzione che restituisce `void`.
 
 Se prima della chiamata di funzione esiste una dichiarazione, ma non viene fornita alcuna informazione relativa ai parametri, tutti gli argomenti non dichiarati subiscono semplicemente le conversioni aritmetiche normali.
 
 > [!NOTE]
-> Le espressioni nell'elenco di argomenti della funzione possono essere valutate in qualsiasi ordine, pertanto gli argomenti i cui valori possono essere modificati da effetti collaterali di un altro argomento hanno valori non definiti. Il punto di sequenza definito dall'operatore della chiamata di funzione assicura solo che gli effetti collaterali nell'elenco di argomenti vengano valutati prima che il controllo venga passato alla funzione chiamata. (Si noti che l'ordine in cui gli argomenti vengono inseriti nello stack è una questione separata.) Per ulteriori informazioni, vedere [Punti di sequenza.](../c-language/c-sequence-points.md)
+> Le espressioni nell'elenco di argomenti della funzione possono essere valutate in qualsiasi ordine, pertanto gli argomenti i cui valori possono essere modificati da effetti collaterali di un altro argomento hanno valori non definiti. Il punto di sequenza definito dall'operatore della chiamata di funzione assicura solo che gli effetti collaterali nell'elenco di argomenti vengano valutati prima che il controllo venga passato alla funzione chiamata. Si noti che l'ordine in cui gli argomenti vengono inseriti nello stack è un aspetto distinto. Per ulteriori informazioni, vedere [punti di sequenza](../c-language/c-sequence-points.md) .
 
 L'unico requisito per qualsiasi chiamata di funzione è rappresentato dal fatto che l'espressione prima della parentesi deve restituire un indirizzo di funzione. Questo significa che una funzione può essere chiamata tramite qualsiasi espressione di puntatore a funzione.
 

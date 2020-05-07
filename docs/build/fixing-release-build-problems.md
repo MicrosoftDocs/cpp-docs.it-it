@@ -17,17 +17,17 @@ ms.locfileid: "62195286"
 ---
 # <a name="fixing-release-build-problems"></a>Correzione dei problemi della build di rilascio
 
-Se il codice genera errori di compilazione dopo il passaggio dalla compilazione di debug per build di rilascio, esistono alcune aree che è necessario controllare.
+Se il codice genera errori di compilazione dopo il cambio dalla build di debug alla build di rilascio, è necessario controllare alcune aree.
 
-È possibile ricevere gli avvisi del compilatore durante una build ottimizzata (rilascio) che non ha ricevuto durante una build di debug.
+È possibile ricevere avvisi del compilatore durante una compilazione ottimizzata (versione) non ricevuta durante una compilazione di debug.
 
 - [Esaminare le istruzioni ASSERT](using-verify-instead-of-assert.md)
 
-- [Usare la Build di Debug per un controllo della sovrascrittura di memoria](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [Usare la build di debug per verificare la sovrascrittura della memoria](using-the-debug-build-to-check-for-memory-overwrite.md)
 
-- [Attivare la generazione di informazioni di Debug per le Build di rilascio](how-to-debug-a-release-build.md)
+- [Attivare la generazione di informazioni di debug per la build di rilascio](how-to-debug-a-release-build.md)
 
-- [Controllo della sovrascrittura di memoria](checking-for-memory-overwrites.md)
+- [Verifica la sovrascrittura della memoria](checking-for-memory-overwrites.md)
 
 ## <a name="see-also"></a>Vedere anche
 

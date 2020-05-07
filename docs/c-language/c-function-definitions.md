@@ -26,17 +26,17 @@ Una definizione di funzione specifica il nome della funzione, i tipi e il numero
 ## <a name="syntax"></a>Sintassi
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*External-Declaration* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
-*external-declaration*: /\* Consentita solo in ambito esterno (file) \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+*External-Declaration*:/\* consentita solo in ambito esterno (file)\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*definizione di funzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*
 
-*function-definition*:<br/>
+*definizione di funzione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* è \*specifico di Microsoft /
+/\**attribute-seq* è specifico di Microsoft\*/
 
 I parametri del prototipo sono:
 
@@ -46,25 +46,25 @@ I parametri del prototipo sono:
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
-*declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*dichiaratore*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *Direct-declarator*
 
-*direct-declarator*: /\* Dichiaratore di funzione \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Dichiaratore nuovo stile \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Dichiaratore stile obsoleto \*/
+*Direct-declarator*:/\* dichiaratore di funzione\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Parameter-Type-list***)**  / \* dichiaratore nuovo stile      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Identifier-list*<sub>opt</sub> **)**  / \* dichiaratore di stile obsoleto    \*/
 
 L'elenco di parametri in una definizione utilizza questa sintassi:
 
-*parameter-type-list*: /\* Elenco parametri \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+*Parameter-Type-list*:/\* elenco di parametri\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* **,...**
 
-*parameter-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
+*elenco di parametri*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione di parametro*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parametro-Declaration*
 
 *parameter-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
@@ -72,14 +72,14 @@ L'elenco di parametri in una definizione utilizza questa sintassi:
 
 L'elenco di parametri in una definizione di funzione obsoleta utilizza questa sintassi:
 
-*identifier-list*: /\* Usato nelle definizioni di funzione e nelle dichiarazioni obsolete \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier-list* **,**  *identifier*
+*Identifier-list*:/\* usato nelle definizioni di funzione e nelle dichiarazioni in stile obsoleto\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identifier-list* **,**  *identificatore*
 
 La sintassi per il corpo della funzione è:
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opz</sub> *Statement-list*<sub>opt</sub> **}**
 
 Gli unici identificatori della classe di archiviazione che consentono di modificare una dichiarazione di funzione sono **extern** e **static**. L'identificatore **extern** significa che è possibile far riferimento alla funzione da altri file; ovvero il nome della funzione viene esportato nel linker. L'identificatore **static** significa che non è possibile far riferimento alla funzione da altri file, ovvero che il nome non viene esportato dal linker. Se in una definizione di funzione non viene visualizzata alcuna classe di archiviazione, viene presupposto **extern**. Tuttavia, la funzione è sempre visibile dal punto della definizione fino alla fine del file.
 

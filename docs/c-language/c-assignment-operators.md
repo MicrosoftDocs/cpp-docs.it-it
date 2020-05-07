@@ -44,15 +44,15 @@ Un'operazione di assegnazione assegna il valore dell'operando destro al percorso
 ## <a name="syntax"></a>Sintassi
 
 *assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;assegnazione *espressione unaria* *-operatore* *-espressione*
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione condizionale*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: uno tra<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*** **/=** **=** /=%= **+=** **-=** **\<\<=** **>>=&=^=** **|=** **^=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 Gli operatori di assegnazione in C possono sia trasformare che assegnare valori in un'unica operazione. In C sono disponibili gli operatori di assegnazione seguenti:
 
-|Operator|Operazione eseguita|
+|Operatore|Operazione eseguita|
 |--------------|-------------------------|
 |**=**|Assegnazione singola|
 |**&#42;=**|Assegnazione di moltiplicazione|

@@ -19,11 +19,11 @@ L'istruzione *do-while* consente di ripetere un'istruzione o un'istruzione compo
 
 ## <a name="syntax"></a>Sintassi
 
-*iterazione-Statement*: &nbsp;&nbsp;&nbsp;**do***istruzione*do &nbsp;**while (** *espressione* **);**
+*istruzione* *di iterazione*: &nbsp; &nbsp; &nbsp; &nbsp; **do****while (***Expression***);**        
 
 L'elemento *expression* in un'istruzione *do-while* viene valutato dopo l'esecuzione del corpo del ciclo. Di conseguenza, il corpo del ciclo viene eseguito sempre almeno una volta.
 
-*espressione* deve essere di tipo puntatore o aritmetico. L'esecuzione procede nel modo seguente:
+*expression* deve presentare un tipo di puntatore o un tipo aritmetico. L'esecuzione procede nel modo seguente:
 
 1. Viene eseguito il corpo dell'istruzione.
 

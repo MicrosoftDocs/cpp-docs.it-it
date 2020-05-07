@@ -14,11 +14,11 @@ ms.locfileid: "73964897"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma
 
-È possibile modificare un file di C++ progetto di Visual Studio per le diverse versioni C++ del set di strumenti della piattaforma, il Windows SDKC++e il .NET Framework (solo progetti/CLI). Per impostazione predefinita, il sistema del progetto usa la versione .NET Framework e la versione del set di strumenti corrispondenti alla versione di Visual Studio usata per creare il progetto. È possibile modificare tutti questi valori nel file con estensione vcxproj in modo da poter usare la stessa codebase per ogni destinazione di compilazione.
+È possibile modificare un file di progetto Visual Studio C++ per le diverse versioni del set di strumenti della piattaforma C++, il Windows SDK e il .NET Framework (solo per i progetti C++/CLI). Per impostazione predefinita, il sistema del progetto usa la versione .NET Framework e la versione del set di strumenti corrispondenti alla versione di Visual Studio usata per creare il progetto. È possibile modificare tutti questi valori nel file con estensione vcxproj in modo da poter usare la stessa codebase per ogni destinazione di compilazione.
 
 ## <a name="platform-toolset"></a>Set di strumenti della piattaforma
 
-Il set di strumenti della piattaforma C++ è costituito dal compilatore (cl. exe) e dal linker (link. exe),C++ insieme alle librerie C/standard. A partire da Visual Studio 2015, la versione principale del set di strumenti è rimasta a 14, il che significa che i progetti compilati con Visual Studio 2019 o Visual Studio 2017 sono compatibili con le versioni precedenti di Visual Studio 2015. La versione secondaria è stata aggiornata di 1 per ogni versione a partire da Visual Studio 2015:
+Il set di strumenti della piattaforma è costituito dal compilatore C++ (cl. exe) e dal linker (link. exe), insieme alle librerie standard di C/C++. A partire da Visual Studio 2015, la versione principale del set di strumenti è rimasta a 14, il che significa che i progetti compilati con Visual Studio 2019 o Visual Studio 2017 sono compatibili con le versioni precedenti di Visual Studio 2015. La versione secondaria è stata aggiornata di 1 per ogni versione a partire da Visual Studio 2015:
 
 - Visual Studio 2015: V140
 - Visual Studio 2017: V141
@@ -26,9 +26,9 @@ Il set di strumenti della piattaforma C++ è costituito dal compilatore (cl. exe
 
 Questi set di strumenti supportano .NET Framework 4,5 e versioni successive.
 
-Visual Studio supporta anche il multitargeting C++ per i progetti. È possibile usare l'IDE di Visual Studio per modificare e compilare i progetti creati con versioni precedenti di Visual Studio, senza aggiornarli per usare una nuova versione del set di strumenti. È necessario che nel computer siano installati i set di strumenti meno recenti. Per ulteriori informazioni, vedere [come utilizzare il multitargeting nativo in Visual Studio](../porting/use-native-multi-targeting.md). In Visual Studio 2015, ad esempio, è possibile *usare .NET Framework 2,0* , ma è necessario usare un set di strumenti precedente che lo supporta.
+Visual Studio supporta anche il multitargeting per i progetti C++. È possibile usare l'IDE di Visual Studio per modificare e compilare i progetti creati con versioni precedenti di Visual Studio, senza aggiornarli per usare una nuova versione del set di strumenti. È necessario che nel computer siano installati i set di strumenti meno recenti. Per ulteriori informazioni, vedere [come utilizzare il multitargeting nativo in Visual Studio](../porting/use-native-multi-targeting.md). In Visual Studio 2015, ad esempio, è possibile *usare .NET Framework 2,0* , ma è necessario usare un set di strumenti precedente che lo supporta.
 
-## <a name="target-framework-ccli-project-only"></a>Framework di destinazioneC++(solo progetto/CLI)
+## <a name="target-framework-ccli-project-only"></a>Framework di destinazione (solo progetto C++/CLI)
 
 Quando si modifica il framework di destinazione, viene modificato anche il set di strumenti della piattaforma in una versione che supporta tale framework. Per impostare .NET Framework 4.5 come destinazione, ad esempio, è necessario usare un set di strumenti della piattaforma compatibile, ad esempio Visual Studio 2015 (v140), Visual Studio 2013 (v120) o Visual Studio 2012 (v110). È possibile usare il set di strumenti della piattaforma [Windows 7,1 SDK](https://www.microsoft.com/download/details.aspx?id=8279) per la .NET Framework 2,0, 3,0, 3,5 e 4 e le piattaforme x86/x64.
 
@@ -63,8 +63,8 @@ Quando si modifica il framework di destinazione, viene modificato anche il set d
 
 1. Nel riquadro destro selezionare **Set strumenti della piattaforma** , quindi selezionare il set di strumenti desiderato dall'elenco a discesa. Ad esempio, se è stato installato il set di strumenti di Visual Studio 2010, selezionare **Visual studio 2010 (V100)** per usarlo per il progetto.
 
-1. Fare clic sul pulsante **OK**.
+1. Fare clic su **OK** .
 
 ## <a name="see-also"></a>Vedere anche
 
-[MSBuild dalla riga di comando - C++](msbuild-visual-cpp.md)
+[MSBuild nella riga di comando-C++](msbuild-visual-cpp.md)

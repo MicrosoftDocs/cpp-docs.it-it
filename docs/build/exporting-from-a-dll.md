@@ -19,31 +19,31 @@ ms.locfileid: "62196742"
 ---
 # <a name="exporting-from-a-dll"></a>Esportazione da una DLL
 
-Un file DLL ha un layout molto simile a un file .exe, con una differenza importante, ovvero un file DLL contiene una tabella di esportazione. La tabella di esportazione contiene il nome di ogni funzione che consente di esportare la DLL in altri file eseguibili. Queste funzioni sono i punti di ingresso nella DLL. solo le funzioni nella tabella di esportazione sono accessibili da altri file eseguibili. Qualsiasi altra funzione nella DLL sono privata per la DLL. La tabella di esportazione di una DLL può essere visualizzata tramite il [DUMPBIN](reference/dumpbin-reference.md) strumento con l'opzione /EXPORTS.
+Un file DLL presenta un layout molto simile a un file con estensione exe, con una differenza importante, ovvero un file DLL contiene una tabella exports. La tabella exports contiene il nome di ogni funzione esportata dalla DLL in altri eseguibili. Queste funzioni sono i punti di ingresso nella DLL. è possibile accedere solo alle funzioni nella tabella exports da altri eseguibili. Qualsiasi altra funzione nella DLL è privata per la DLL. La tabella exports di una DLL può essere visualizzata usando lo strumento [dumpbin](reference/dumpbin-reference.md) con l'opzione/EXPORTS..
 
-È possibile esportare funzioni da una DLL tramite due metodi:
+È possibile esportare le funzioni da una DLL usando due metodi:
 
-- Creare un file di definizione (con estensione def) del modulo e usare il file con estensione def quando si compila la DLL. Usare questo approccio se si desidera [esportazione di funzioni dalla DLL di base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+- Creare un file di definizione del modulo (con estensione def) e usare il file def durante la compilazione della DLL. Utilizzare questo approccio se si desidera [esportare le funzioni dalla dll in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-- Usare la parola chiave **dllexport** nella definizione della funzione.
+- Usare la parola chiave **__declspec (dllexport)** nella definizione della funzione.
 
-Quando si esportano le funzioni con entrambi i metodi, assicurarsi di usare la [stdcall](../cpp/stdcall.md) convenzione di chiamata.
+Quando si esportano funzioni con uno dei due metodi, assicurarsi di usare la convenzione di chiamata [__stdcall](../cpp/stdcall.md) .
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Esportazione da una DLL tramite i file def](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione da una DLL tramite dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Esportare da una DLL utilizzando __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Esportazione e importazione utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Esportare e importare utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Esportare le funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Esportare le funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Funzioni di esportazione da una DLL in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
+- [Esporta funzioni da una DLL in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
 - [Collegare un eseguibile a una DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 

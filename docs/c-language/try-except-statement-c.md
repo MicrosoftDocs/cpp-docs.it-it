@@ -29,7 +29,7 @@ Le eccezioni possono essere basate sull'hardware o sul software. Anche quando le
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (***espressione***)** istruzione*composta*      
+**__except (**  *Expression*  **)**  *compound-statement*
 
 L'istruzione composta dopo la clausola `__try` è la sezione protetta. L'istruzione composta dopo la clausola `__except` è il gestore dell'eccezione. Il gestore specifica un set di azioni da intraprendere se viene generata un'eccezione durante l'esecuzione della sezione protetta. L'esecuzione procede nel modo seguente:
 
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

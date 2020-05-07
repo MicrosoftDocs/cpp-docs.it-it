@@ -16,16 +16,16 @@ ms.locfileid: "81328582"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Esportazione di funzioni da una DLL in base al numero ordinale anziché al nome
 
-Il modo più semplice per esportare le funzioni dalla DLL consiste nell'esportarle in base al nome. Questo è ciò che accade quando si utilizza **__declspec(dllexport)**, ad esempio. Ma è invece possibile esportare le funzioni per ordinale. Con questa tecnica è necessario utilizzare un file def anziché **__declspec(dllexport)**. Per specificare il valore ordinale di una funzione, aggiungere il relativo ordinale al nome della funzione nel file def. Per informazioni sulla specifica degli ordinali, vedere [Esportazione da una DLL mediante file def](exporting-from-a-dll-using-def-files.md).
+Il modo più semplice per esportare le funzioni dalla DLL consiste nell'esportarli in base al nome. Questo è ciò che accade quando si usa **__declspec (dllexport)**, ad esempio. È invece possibile esportare le funzioni in base all'ordinale. Con questa tecnica, è necessario utilizzare un file def anziché **__declspec (dllexport)**. Per specificare il valore ordinale di una funzione, aggiungere il relativo ordinale al nome della funzione nel file def. Per informazioni sulla specifica di ordinali, vedere [esportazione da una dll tramite i file def](exporting-from-a-dll-using-def-files.md).
 
 > [!TIP]
-> Se si desidera ottimizzare le dimensioni del file della DLL, utilizzare l'attributo **NONAME** su ogni funzione esportata. Con l'attributo **NONAME,** gli ordinali vengono archiviati nella tabella di esportazione della DLL anziché nei nomi delle funzioni. Questo può essere un notevole risparmio se si esportano molte funzioni.
+> Se si desidera ottimizzare le dimensioni del file della DLL, utilizzare l'attributo **NoName** in ogni funzione esportata. Con l'attributo **NoName** , i numeri ordinali vengono archiviati nella tabella di esportazione della dll anziché nei nomi di funzione. Questo può essere un notevole risparmio se si esportano diverse funzioni.
 
 ## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
-- [Utilizzare un file def in modo da poter esportare per ordinale](exporting-from-a-dll-using-def-files.md)
+- [Usare un file con estensione def per poter esportare in base all'ordinale](exporting-from-a-dll-using-def-files.md)
 
-- [Utilizzare __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [USA __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 ## <a name="see-also"></a>Vedere anche
 
