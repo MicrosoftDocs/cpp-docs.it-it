@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343226"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919736"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -100,15 +100,15 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da testare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c* <è 255 ed è presente una routine **di _ismbb** corrispondente (ad esempio, **_ismbcalnum** corrisponde a **_ismbbalnum**), il risultato è il valore restituito della routine **_ismbb** corrispondente.
+Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c* <= 255 ed è presente una routine **_ismbb** corrispondente (ad esempio, **_ismbcalnum** corrisponde a **_ismbbalnum**), il risultato è il valore restituito della routine di **_ismbb** corrispondente.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -118,18 +118,18 @@ La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazi
 
 |Routine|Condizione di test (solo per la tabella codici 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS non-Kanji: 0x8140<-*c*<0x889E.|
-|**_ismbcl0_l**|JIS non-Kanji: 0x8140<-*c*<0x889E.|
-|**_ismbcl1**|Livello JIS-1: 0x889F<*- c*<-0x9872.|
-|**_ismbcl1_l**|Livello JIS-1: 0x889F<*- c*<-0x9872.|
-|**_ismbcl2**|Livello JIS-2: 0x989F<*- c*<-0xEAA4.|
-|**_ismbcl2_l**|Livello JIS-2: 0x989F<*- c*<-0xEAA4.|
+|**_ismbcl0**|JIS non Kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl0_l**|JIS non Kanji: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl1**|JIS livello-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl1_l**|JIS livello-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl2**|JIS livello 2:0x989F<=*c*<= 0xEAA4.|
+|**_ismbcl2_l**|JIS livello 2:0x989F<=*c*<= 0xEAA4.|
 
-Le funzioni controllano che il valore specificato *c* corrisponda alle condizioni di test descritte in precedenza, ma non controllano che *c* sia un carattere multibyte valido. Se il byte più basso è compreso tra 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, queste funzioni restituiscono un valore diverso da zero, indicando che il carattere soddisfa la condizione di test. Usare [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) per verificare se il carattere multibyte è definito.
+Le funzioni verificano che il valore specificato *c* corrisponda alle condizioni di test descritte in precedenza, ma non controlla che *c* sia un carattere multibyte valido. Se il byte più basso è compreso tra 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, queste funzioni restituiscono un valore diverso da zero, indicando che il carattere soddisfa la condizione di test. Usare [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) per verificare se il carattere multibyte è definito.
 
-**Tabella codici finali 932 specifica**
+**Tabella codici finale 932 specifica**
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

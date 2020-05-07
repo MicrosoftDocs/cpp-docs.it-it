@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: 6501fe53e67d0f277fa64c08e0edbff1d7eeb61a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332682"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918228"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
@@ -58,23 +58,23 @@ float _scalbf(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile e precisione doppia.
 
-*Exp*<br/>
+*exp*<br/>
 Esponente Long Integer.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (a seconda del segno di *x*), **_scalb** restituisce HUGE_VAL di **tipo x**; la variabile **errno** è impostata su **ERANGE**.
+Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (a seconda del segno di *x*), **_scalb** restituisce +/- **HUGE_VAL**; la variabile **errno** è impostata su **ERANGE**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_scalb** calcola il valore di *x* \* 2<sup>*exp*</sup>.
+La funzione **_scalb** calcola il valore di *x* \* 2<sup>*Exp*</sup>.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

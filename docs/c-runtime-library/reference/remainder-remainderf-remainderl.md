@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332871"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917855"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -60,29 +60,29 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Numeratore.
 
-*Y*<br/>
+*y*<br/>
 Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **resto** restituisce un NaN silenzioso. Per informazioni sulla rappresentazione di un NaN silenzioso da parte della famiglia **printf,** vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **resto** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **di resto** calcolano il resto a virgola mobile *r* di *x* / *y* tale che *x* = n*n* \* *y* + *r*, dove *n*è il valore intero più vicino a *x* / *y* e *n*è pari ogni volta che &#124; *n* - *x* / *y* &#124; è 1/2. Quando *r* è 0, *r* ha lo stesso segno di *x*.
+Le funzioni **resto** calcolano il resto a virgola mobile *r* di *x* / *y* in modo che *x* = *n* \* *y* + *r*, dove *n*è il numero intero più vicino al valore *x* / *y* e *n*è anche ogni volta che &#124; *n* - *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* ha lo stesso segno di *x*.
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **resto** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **il resto** accetta sempre due argomenti **double** e restituisce un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **resto** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C il **resto** accetta sempre due argomenti **doppi** e restituisce un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
+|Function|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |--------------|---------------------|-|
-|**resto**, **resto**, **resto**|\<math.h>|\<cmath> o \<math.h>|
+|**resto**, **remainderf**, **restol**|\<math.h>|\<cmath> o \<math.h>|
 
 Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
