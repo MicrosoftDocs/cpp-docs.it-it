@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C, program structure
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
 ms.openlocfilehash: 891207ac19da99f2f1b2b651e661560a0ab02d9f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232519"
 ---
 # <a name="program-structure"></a>Struttura del programma
 
 In questa sezione viene fornita una panoramica sui programmi C e sull'esecuzione dei programmi. Vengono anche illustrati i termini e le funzionalità importanti per la comprensione dei programmi e dei componenti del linguaggio C. Negli argomenti trattati sono inclusi:
 
-- [File e programmi di origine](../c-language/source-files-and-source-programs.md)
+- [File di origine e programmi di origine](../c-language/source-files-and-source-programs.md)
 
 - [Funzione main ed esecuzione del programma](../c-language/main-function-and-program-execution.md)
 

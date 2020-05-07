@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 ms.openlocfilehash: 30c076bcaf80a0d51a7f8aefc9c1b1806a12e42f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233722"
 ---
 # <a name="expressions-and-assignments"></a>Espressioni e assegnazioni
 
 In questa sezione viene descritto come creare espressioni e assegnare valori in linguaggio C. Costanti, identificatori, stringhe e chiamate di funzione sono tutti operandi che vengono modificati nelle espressioni. Il linguaggio C dispone di tutti i consueti operatori di linguaggio. In questa sezione vengono analizzati tali operatori, nonché gli operatori univoci per C o Microsoft C. Negli argomenti trattati sono inclusi:
 
-- [Espressioni l-value e r-value](../c-language/l-value-and-r-value-expressions.md)
+- [Espressioni L-value e r-value](../c-language/l-value-and-r-value-expressions.md)
 
 - [Espressioni costanti](../c-language/c-constant-expressions.md)
 

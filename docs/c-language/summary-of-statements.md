@@ -16,10 +16,10 @@ ms.locfileid: "74856995"
 &nbsp;&nbsp;&nbsp;&nbsp;*compound-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*iterazione-istruzione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-Statement* /\* \*specifiche di Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-Statement* /\* \*specifiche di Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-Statement*  / \* specifica di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-istruzione*  / \* specifica di Microsoft\*/
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**<br/>
@@ -28,40 +28,40 @@ ms.locfileid: "74856995"
 &nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opz</sub> *Statement-list*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
 
-*expression-statement*:<br/>
+*espressione-istruzione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
 
 *iteration-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione* **while (***Expression***)**      <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**for (**  *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **)** *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione* **for (***espressione opt*<sub>opt</sub> **;** *espressione*<sub>opt</sub> **;** *espressione*<sub>opt</sub> **)**  
 
 *selection-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*  **else**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (**  *expression*  **)**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**if (***espressione***)**(*istruzione* )      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *espressione*  **)**  *istruzione*  **else**  *istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione* **Switch (***Expression***)**      
 
-*labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
+con *etichetta-Statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identifier***:**(*istruzione* )    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**case**  *Constant-Expression*  **:**  *Statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
-*try-except-Statement*:/\* \*specifico di Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
+*try-except-Statement*:/\* specifico di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try compound**  *-* statement **__except (**  *Expression*  **)**  *compound-statement*
 
-*try-finally-Statement*:/\* \*specifico di Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
+*try-finally-Statement*:\* /specifico di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grammatica di struttura della frase](../c-language/phrase-structure-grammar.md)
+[Grammatica della struttura di frase](../c-language/phrase-structure-grammar.md)

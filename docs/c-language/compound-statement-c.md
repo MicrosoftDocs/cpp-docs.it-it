@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312570"
 ---
 # <a name="compound-statement-c"></a>Istruzione composta (C)
 
@@ -19,14 +19,14 @@ Un'istruzione composta (detta anche "blocco") viene in genere visualizzata come 
 ## <a name="syntax"></a>Sintassi
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opz</sub> *Statement-list*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
 
 Se esistono dichiarazioni, devono precedere qualsiasi istruzione. L'ambito di ogni identificatore dichiarato all'inizio di un'istruzione composta si estende dal punto di dichiarazione fino alla fine del blocco. È visibile nel blocco a meno che non esista una dichiarazione dello stesso identificatore in un blocco interno.

@@ -17,9 +17,9 @@ ms.locfileid: "62273573"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++
 
-Se si dispongono di funzioni in una DLL scritta in C, che si desidera accedere da un linguaggio C o C++ modulo linguistico, è consigliabile usare il **cplusplus** macro del preprocessore per determinare quale lingua è in fase di compilazione e quindi dichiarare questi le funzioni con collegamento C, se viene utilizzato da un C++ modulo linguistico. Se si usa questa tecnica e forniscono i file di intestazione per la DLL, queste funzioni possono essere usate dagli utenti di C e C++ senza alcuna modifica.
+Se si dispone di funzioni in una DLL scritta in C a cui si desidera accedere da un linguaggio C o un modulo di linguaggio C++, è necessario utilizzare la macro del preprocessore **__cplusplus** per determinare quale lingua viene compilata e quindi dichiarare queste funzioni con il collegamento c se utilizzate da un modulo del linguaggio c++. Se si usa questa tecnica e si forniscono file di intestazione per la DLL, queste funzioni possono essere usate dagli utenti C e C++ senza alcuna modifica.
 
-Il codice seguente illustra un file di intestazione che può essere utilizzato dalle applicazioni client di C e C++:
+Nel codice seguente viene illustrato un file di intestazione che può essere utilizzato dalle applicazioni client C e C++:
 
 ```h
 // MyCFuncs.h
@@ -36,7 +36,7 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif
 ```
 
-Se è necessario collegare le funzioni C all'eseguibile C++ e i file di intestazione di dichiarazione di funzione non usa la tecnica precedente, nel file di origine C++, eseguire il comando seguente per impedire al compilatore di decorazione dei nomi di funzione C:
+Se è necessario collegare le funzioni C al file eseguibile C++ e i file di intestazione della dichiarazione di funzione non hanno usato la tecnica precedente, nel file di origine C++ eseguire le operazioni seguenti per impedire al compilatore di decorare i nomi delle funzioni C:
 
 ```cpp
 extern "C" {
@@ -44,15 +44,15 @@ extern "C" {
 }
 ```
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Esportazione da una DLL tramite i file def](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione da una DLL tramite dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Esportare da una DLL utilizzando __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Esportazione e importazione utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Esportare e importare utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
 - [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
