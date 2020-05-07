@@ -6,11 +6,11 @@ helpviewer_keywords:
 - postfix operators
 ms.assetid: 76260011-1624-484e-8bef-72ae7ab556cc
 ms.openlocfilehash: a86ede25feeaee3a9fb1c6b146cf9667b85c0c2f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232247"
 ---
 # <a name="postfix-operators"></a>Operatori di suffisso
 
@@ -18,14 +18,14 @@ Gli operatori di suffisso hanno la precedenza più elevata (l'associazione più 
 
 ## <a name="syntax"></a>Sintassi
 
-*postfix-expression*:<br/>
+*suffisso-espressione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **[**  *expression*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **.**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **->**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **[**  *espressione*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **.**  *identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-identificatore di espressione***->***identifier*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **--**
 
 Gli operatori in questo livello di precedenza sono gli indici di matrice, le chiamate di funzione, la struttura e i membri di unione, nonché gli operatori di incremento e decremento in forma suffissa.
 
