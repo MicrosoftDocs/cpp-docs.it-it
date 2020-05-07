@@ -40,11 +40,11 @@ free( buf );
 
 Questo codice viene eseguito perfettamente in una versione di debug di un'applicazione MFC. Se la chiamata a `calloc( )` ha esito negativo, viene visualizzato un messaggio di diagnostica che include il file e il numero di riga. Tuttavia, in una build finale di un'applicazione MFC:
 
-- la chiamata a `calloc( )` non viene mai eseguita, lasciando `buf` non inizializzata o
+- la chiamata a `calloc( )` non viene mai eseguita `buf` , lasciando non inizializzata o
 
-- `strcpy_s( )` copia "`Hello, World`" in una porzione di memoria casuale, probabilmente bloccando l'applicazione o causando l'interruzione della risposta del sistema o
+- `strcpy_s( )`copia "`Hello, World`" in una porzione casuale di memoria, eventualmente arrestando l'arresto anomalo dell'applicazione o causando l'interruzione della risposta del sistema o
 
-- `free()` tenta di liberare memoria che non è mai stata allocata.
+- `free()`tenta di liberare memoria che non è mai stata allocata.
 
 Per utilizzare ASSERT correttamente, è necessario modificare l'esempio di codice nel modo seguente:
 

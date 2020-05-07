@@ -11,11 +11,11 @@ helpviewer_keywords:
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
 ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325767"
 ---
 # <a name="name-spaces"></a>Spazi dei nomi
 
@@ -30,7 +30,7 @@ Le etichette di istruzione denominate fanno parte delle istruzioni. Le definizio
 
 Tag di struttura, unione ed enumerazione - Questi tag fanno parte degli identificatori di tipo struttura, unione ed enumerazione e, se presenti, seguono sempre immediatamente le parole riservate **struct**, **union** o **enum**. I nomi di tag devono essere differenti da tutti gli altri tag della struttura, di enumerazione o di unione con la stessa visibilità.
 
-Membri di strutture o unioni - I nomi dei membri vengono allocati negli spazi dei nomi associati a ciascun tipo di unione e struttura. Pertanto, lo stesso identificatore può essere contemporaneamente il nome di un componente in un numero indefinito di strutture o unioni. Le definizioni dei nomi di componenti si verificano sempre negli identificatori del tipo di unione o struttura. La modalità di utilizzo dei nomi componente segue sempre immediatamente gli operatori di selezione dei membri (**->** e **.**). Il nome di un membro deve essere univoco nella struttura o unione, ma non deve essere diverso da altri nomi nel programma, inclusi i nomi dei membri di strutture e unioni differenti o il nome della struttura stessa.
+Membri di strutture o unioni - I nomi dei membri vengono allocati negli spazi dei nomi associati a ciascun tipo di unione e struttura. Pertanto, lo stesso identificatore può essere contemporaneamente il nome di un componente in un numero indefinito di strutture o unioni. Le definizioni dei nomi di componenti si verificano sempre negli identificatori del tipo di unione o struttura. Gli utilizzi dei nomi dei componenti seguono sempre immediatamente gli operatori di selezione**->** dei membri **(e).** Il nome di un membro deve essere univoco nella struttura o unione, ma non deve essere diverso da altri nomi nel programma, inclusi i nomi dei membri di strutture e unioni differenti o il nome della struttura stessa.
 
 Identificatori comuni - Tutti gli altri nomi rientrano in uno spazio dei nomi che include le variabili, le funzioni (inclusi i parametri formali e le variabili locali) e le costanti di enumerazione. I nomi degli identificatori possiedono una visibilità Nested, pertanto è possibile ridefinirli all'interno di blocchi.
 
@@ -46,7 +46,7 @@ struct student {
    } student;
 ```
 
-Quando viene visualizzato `student` dopo la parola chiave **struct**, il compilatore lo riconosce come un tag della struttura. Quando `student` viene visualizzato dopo un operatore di selezione dei membri (**->** o **.**), il nome fa riferimento al membro della struttura. In altri contesti, `student` fa riferimento alla variabile di struttura. Tuttavia, l'overload dello spazio dei nomi di tag non è consigliato poiché rende poco chiaro il significato.
+Quando viene visualizzato `student` dopo la parola chiave **struct**, il compilatore lo riconosce come un tag della struttura. Quando `student` viene visualizzato dopo un operatore di selezione dei**->** membri (o **.**), il nome fa riferimento al membro della struttura. In altri contesti, `student` fa riferimento alla variabile di struttura. Tuttavia, l'overload dello spazio dei nomi di tag non è consigliato poiché rende poco chiaro il significato.
 
 ## <a name="see-also"></a>Vedere anche
 

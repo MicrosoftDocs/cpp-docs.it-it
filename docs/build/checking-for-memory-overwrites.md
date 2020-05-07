@@ -13,20 +13,20 @@ ms.locfileid: "64342247"
 ---
 # <a name="checking-for-memory-overwrites"></a>Controllo delle sovrascritture di memoria
 
-Se si verifica una violazione di accesso in una chiamata a una funzione di manipolazione dell'heap, è possibile che il programma ha danneggiato l'heap. Potrebbe essere un sintomo di questa situazione comune:
+Se si verifica una violazione di accesso in una chiamata a una funzione di manipolazione dell'heap, è possibile che il programma abbia danneggiato l'heap. Un sintomo comune di questa situazione è:
 
 ```
 Access Violation in _searchseg
 ```
 
-Il [heapchk](../c-runtime-library/reference/heapchk.md) funzione è disponibile in entrambe le modalità di debug e build di rilascio (solo Windows NT) per verificare l'integrità dell'heap della libreria di runtime. È possibile usare `_heapchk` in modo analogo a come il `AfxCheckMemory` funzione per isolare la sovrascrittura di un heap, ad esempio:
+La funzione [_heapchk](../c-runtime-library/reference/heapchk.md) è disponibile nelle compilazioni di debug e di rilascio (solo Windows NT) per verificare l'integrità dell'heap della libreria di run-time. È possibile usare `_heapchk` in modo analogo alla `AfxCheckMemory` funzione per isolare la sovrascrittura di un heap, ad esempio:
 
 ```
 if(_heapchk()!=_HEAPOK)
    DebugBreak();
 ```
 
-Se questa funzione non viene eseguita correttamente, è necessario isolare a quel punto l'heap è danneggiato.
+Se questa funzione ha esito negativo, è necessario isolare il punto in cui l'heap è danneggiato.
 
 ## <a name="see-also"></a>Vedere anche
 

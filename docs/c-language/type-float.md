@@ -15,11 +15,11 @@ helpviewer_keywords:
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346327"
 ---
 # <a name="type-float"></a>Tipo float
 
@@ -29,7 +29,7 @@ I numeri a virgola mobile utilizzano il formato IEEE (Institute of Electrical an
 
 ### <a name="floating-point-types"></a>Tipi a virgola mobile
 
-|Tipo|Cifre significative|Numero di byte|
+|Type|Cifre significative|Numero di byte|
 |----------|------------------------|---------------------|
 |float|6 - 7|4|
 |double|15 - 16|8|
@@ -40,7 +40,7 @@ Nella tabella riportata di seguito viene indicato il numero di bit allocati alla
 
 ### <a name="lengths-of-exponents-and-mantissas"></a>Lunghezza degli esponenti e delle mantisse
 
-|Tipo|Lunghezza degli esponenti|Lunghezza delle mantisse|
+|Type|Lunghezza degli esponenti|Lunghezza delle mantisse|
 |----------|---------------------|---------------------|
 |float|8 bit|23 bit|
 |double|11 bit|52 bit|
@@ -55,9 +55,9 @@ Nella tabella seguente vengono riportati i valori minimo e massimo che è possib
 
 ### <a name="range-of-floating-point-types"></a>Intervallo dei tipi a virgola mobile
 
-|Tipo|Valore minimo|Valore massimo|
+|Type|Valore minimo|Valore massimo|
 |----------|-------------------|-------------------|
-|mobile|1,175494351 E - 38|3,402823466 E + 38|
+|float|1,175494351 E - 38|3,402823466 E + 38|
 |double|2,2250738585072014 E - 308|1,7976931348623158 E + 308|
 
 Se la precisione costituisce un problema minore, considerare la possibilità di utilizzare il tipo Float per le variabili a virgola mobile. Al contrario, se la precisione costituisce il criterio più importante, utilizzare il tipo Double.

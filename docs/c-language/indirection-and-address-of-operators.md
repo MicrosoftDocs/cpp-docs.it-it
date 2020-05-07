@@ -16,11 +16,11 @@ helpviewer_keywords:
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
 ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534368"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343890"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operatori address-of e di riferimento indiretto
 
@@ -38,9 +38,9 @@ Se il valore del puntatore non è valido, il risultato dell'operatore di riferim
 
 - Il puntatore specifica un indirizzo non utilizzato dal programma di esecuzione.
 
-L'operatore address-of unario (**&**) specifica l'indirizzo del relativo operando. L'operando deve essere un lvalue che specifica un oggetto non dichiarato __register__ e non è un campo di bit oppure il risultato di un operatore __&#42;__ unario, di un operatore (__&#91;&#93;__) senza riferimenti di matrice o di un indicatore di funzione. Il risultato è di tipo *pointer to type* per un operando di tipo *type*.
+L'operatore unario address-of**&**() restituisce l'indirizzo del relativo operando. L'operando deve essere un lvalue che specifica un oggetto non dichiarato __register__ e non è un campo di bit oppure il risultato di un operatore __&#42;__ unario, di un operatore (__&#91;&#93;__) senza riferimenti di matrice o di un indicatore di funzione. Il risultato è di tipo *pointer to type* per un operando di tipo *type*.
 
-Se l'operando è il risultato di un operatore __&#42;__ unario, non viene valutato alcun operatore e ne deriva un risultato che corrisponde all'omissione di entrambi. Il risultato non è un lvalue e i vincoli sugli operatori vengono mantenuti. Se l'operando è il risultato di un operatore __&#91;&#93;__, non viene valutato né l'operatore __&__ né l'operatore __&#42;__ unario implicato dall'operatore __&#91;&#93;__. Il risultato corrisponde alla rimozione dell'operatore __&__ e alla modifica dell'operatore __&#91;&#93;__ in un operatore __+__. In caso contrario, il risultato è un puntatore all'oggetto o alla funzione definita dall'operando.
+Se l'operando è il risultato di un operatore __&#42;__ unario, non viene valutato alcun operatore e ne deriva un risultato che corrisponde all'omissione di entrambi. Il risultato non è un lvalue e i vincoli sugli operatori vengono mantenuti. Se l'operando è il risultato di un operatore __&#91;&#93;__, non viene valutato né l'operatore __&__ né l'operatore __&#42;__ unario implicato dall'operatore __&#91;&#93;__. Il risultato ha lo stesso effetto della rimozione dell' __&__ operatore e della modifica dell'operatore __&#91;&#93;__ in __+__ un operatore. In caso contrario, il risultato è un puntatore all'oggetto o alla funzione definita dall'operando.
 
 ## <a name="examples"></a>Esempi
 
@@ -52,7 +52,7 @@ int a[20];
 double d;
 ```
 
-Questa istruzione usa l'operatore address-of (**&**) per accettare l'indirizzo del sesto elemento della matrice `a`. Il risultato viene archiviato nella variabile del puntatore `pa`:
+Questa istruzione usa l'operatore address-of (**&**) per prendere l'indirizzo del sesto elemento della matrice `a`. Il risultato viene archiviato nella variabile del puntatore `pa`:
 
 ```C
 pa = &a[5];

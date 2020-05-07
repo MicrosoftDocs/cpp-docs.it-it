@@ -14,56 +14,56 @@ ms.locfileid: "62295253"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Aggiunge i dati del profilo da uno o più file. pgc per il file pgd.
+Aggiunge i dati di profilo da uno o più file PGC al file. pgd.
 
 ## <a name="syntax"></a>Sintassi
 
-> **pgomgr** [*options*] *pgcfiles* *pgdfile*
+> **pgomgr** [*Opzioni*] *pgcfiles* *pgdFile*
 
 ### <a name="parameters"></a>Parametri
 
 *options*<br/>
-Le opzioni seguenti possono essere specificate da **pgomgr**:
+È possibile specificare le opzioni seguenti per **pgomgr**:
 
-- **/Help** o **/?** Consente di visualizzare disponibili **pgomgr** opzioni.
+- **/help** o **/?** Visualizza le opzioni **pgomgr** disponibili.
 
-- **/ cancellare** fa sì che il file pgd essere cancellate tutte le informazioni di profilo. Non è possibile specificare un. pgc file quando **/Clear** è specificato.
+- **/Clear** Consente di cancellare il file. PGD di tutte le informazioni sul profilo. Non è possibile specificare un file con estensione PGC quando viene specificato **/Clear** .
 
-- **/Detail** vengono visualizzate statistiche dettagliate, incluse le informazioni di code coverage grafico del flusso.
+- **/detail** Visualizza le statistiche dettagliate, incluse le informazioni sul code coverage del diagramma di flusso.
 
-- **/ summary** consente di visualizzare le statistiche per ogni funzione.
+- **/Summary** Visualizza le statistiche per ogni funzione.
 
-- **/ univoci** quando abbinata **/summary**, determina decorati i nomi delle funzioni da visualizzare. L'impostazione predefinita, quando **/ univoco** non viene utilizzato sia per i nomi di funzione non decorati da visualizzare.
+- **—/Unique** Se usato con **/Summary**, determina la visualizzazione dei nomi di funzione decorati. Il valore predefinito, quando **—/Unique** non viene utilizzato, è per i nomi di funzione non decorati da visualizzare.
 
-- **/ merge**\[**:**<em>n</em>] fa sì che i dati nel file. pgc o dei file da aggiungere al file pgd. Il parametro facoltativo *n*, consente di specificare che i dati devono essere aggiunte *n* volte. Ad esempio, se uno scenario comunemente sarebbe sei volte eseguite in modo da riflettere la frequenza avviene da parte dei clienti, è possibile eseguire una volta in un'esecuzione dei test e aggiungerlo al file pgd con sei volte **/merge: 6 pgomgr**.
+- **/merge**\[**:**<em>n</em>] causa l'aggiunta dei dati nel file con estensione PGC o nei file con estensione PGD. Il parametro facoltativo, *n*, consente di specificare che i dati devono essere aggiunti *n* volte. Se, ad esempio, uno scenario viene in genere eseguito sei volte per riflettere la frequenza con cui viene eseguito dai clienti, è possibile eseguire una sola volta in un'esecuzione dei test e aggiungerlo sei volte al file. pgd con **pgomgr/merge: 6**.
 
 *pgcfiles*<br/>
-Uno o più file pgc cui dati di profilo che si desidera unire il file pgd. È possibile specificare un file pgc singolo o più file. pgc. Se non si specifica tutti i file. pgc **pgomgr** unisce tutti i file. pgc cui nomi sono gli stessi file pgd.
+Uno o più file con estensione PGC i cui dati di profilo si desidera unire nel file. pgd. È possibile specificare un singolo file PGC o più file PGC. Se non si specifica alcun file con estensione PGC, **pgomgr** unisce tutti i file con estensione PGC i cui nomi sono uguali a quelli del file PGD.
 
-*pgdfile*<br/>
-Il file pgd in cui vengono uniti i dati dal file. pgc o dei file.
+*pgdFile*<br/>
+Il file. PGD in cui si uniscono i dati dal file o dai file PGC.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
 > È possibile avviare questo strumento solo da un prompt dei comandi per gli sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
 
 ## <a name="example"></a>Esempio
 
-Questo comando Cancella il file pgd di dati di profilo:
+Questo comando di esempio cancella il file MyApp. PGD dei dati di profilo:
 
 `pgomgr /clear myapp.pgd`
 
-Questo comando di esempio consente di aggiungere i dati del profilo in MyApp1 al file pgd tre volte:
+Questo comando di esempio aggiunge i dati di profilo in myapp1. PGC al file. PGD tre volte:
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-In questo esempio, i dati del profilo da tutti i file. pgc & myapp viene aggiunto al file pgd.
+In questo esempio, i dati di profilo di tutti i file MyApp #. pgc vengono aggiunti al file MyApp. pgd.
 
 `pgomgr -merge myapp1.pgd`
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ottimizzazioni PGO](profile-guided-optimizations.md)<br/>
+[Ottimizzazioni guidate da profilo (PGO)](profile-guided-optimizations.md)<br/>
 [PgoAutoSweep](pgoautosweep.md)<br/>
 [pgosweep](pgosweep.md)<br/>

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232852"
 ---
 # <a name="integer-types"></a>Tipi Integer
 
@@ -36,9 +36,9 @@ A ogni costante Integer viene assegnato un tipo in base al valore e al modo in c
 778866LU
 ```
 
-Il tipo assegnato a una costante dipende dal valore che la costante rappresenta. Il valore di una costante deve essere compreso tra i valori rappresentabili per il tipo. Il tipo di una costante determina quali conversioni vengono eseguite quando la costante viene usata in un'espressione o quando il segno meno (**-**) viene applicato. In questo elenco vengono riepilogate le regole di conversione per le costanti Integer.
+Il tipo assegnato a una costante dipende dal valore che la costante rappresenta. Il valore di una costante deve essere compreso tra i valori rappresentabili per il tipo. Il tipo di una costante determina quali conversioni vengono eseguite quando la costante viene utilizzata in un'espressione o quando viene applicato il segno**-** meno (). In questo elenco vengono riepilogate le regole di conversione per le costanti Integer.
 
-- Il tipo di una costante decimale senza un suffisso è `int`, **long int** o **unsigned long int**. Il primo di questi tre tipi in cui può essere rappresentato il valore della costante è il tipo assegnato alla costante.
+- Il tipo di una costante decimale senza un suffisso è `int`, **long int**o **unsigned long int**. Il primo di questi tre tipi in cui può essere rappresentato il valore della costante è il tipo assegnato alla costante.
 
 - Il tipo assegnato a costanti ottali ed esadecimali senza suffissi è `int`, `unsigned int`, **long int** o **unsigned long int** a seconda delle dimensioni della costante.
 

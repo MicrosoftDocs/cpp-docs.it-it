@@ -10,59 +10,59 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: cf6327b175344f1e2914792eb47a4838e544ea24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ddf56d92cc2d8fbbfaf635c8e1602443e35b5b
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292211"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825786"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Generare la build instrumentata di profilatura)
 
-Specifica la generazione di un file PDG dal linker per supportare l'ottimizzazione PGO. **/ GENPROFILE** e **/FASTGENPROFILE** usano parametri predefiniti diversi. Uso **/GENPROFILE** di preferire utilizzo della memoria e velocità di precisione durante la profilatura. Uso **/FASTGENPROFILE** per favorire la riduzione minore utilizzo della memoria e velocità rispetto alla precisione.
+Specifica la generazione di un file PDG dal linker per supportare l'ottimizzazione PGO. **/GENPROFILE** e **/FASTGENPROFILE** usano parametri predefiniti diversi. Usare **/GENPROFILE** per preferire la precisione rispetto alla velocità e all'utilizzo della memoria durante la profilatura. Usare **/FASTGENPROFILE** per ottimizzare l'utilizzo di memoria inferiore e velocizzare la precisione.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/ GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **TRACCIATO**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]<br/>
-> **/ FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **TRACCIATO**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]
+> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **esatto**|**noexact**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**percorso**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}] \
+> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **esatto**|**noexact**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**percorso**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]
 
 ### <a name="arguments"></a>Argomenti
 
-Uno dei seguenti argomenti, può essere specificato per **/GENPROFILE** oppure **/FASTGENPROFILE**. Gli argomenti elencati di seguito separati da una barra verticale (**|**) carattere si escludono a vicenda. Usare una virgola (**,**) carattere per separare le opzioni.
+È possibile specificare uno degli argomenti seguenti in **/GENPROFILE** o **/FASTGENPROFILE**. Gli argomenti elencati qui separati da un carattere**|** pipe () si escludono a vicenda. Usare un carattere virgola (**,**) per separare le opzioni.
 
 **COUNTER32** &#124; **COUNTER64**<br/>
-Usare **COUNTER32** per specificare l'utilizzo di contatori di probe a 32 bit, e **COUNTER64** per specificare i contatori di probe a 64 bit. Quando si specifica **/GENPROFILE**, il valore predefinito è **COUNTER64**. Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **COUNTER32**.
+Usare **COUNTER32** per specificare l'uso dei contatori di probe a 32 bit e **COUNTER64** per specificare i contatori di probe a 64 bit. Quando si specifica **/GENPROFILE**, il valore predefinito è **COUNTER64**. Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **COUNTER32**.
 
-**EXACT** &#124; **NOEXACT**<br/>
-Uso **EXACT** per specificare incrementi interlocked thread-safe per le ricerche. **NOEXACT** specifica le operazioni di incremento non protette per le ricerche. Il valore predefinito è **NOEXACT**.
+**Esatta** &#124; **noexact**<br/>
+Usare **exact** per specificare incrementi Interlocked thread-safe per i probe. **Noexact** specifica le operazioni di incremento non protette per i probe. Il valore predefinito è **noexact**.
 
-**MEMMAX**=*value*, **MEMMIN**=*value*<br/>
-Uso **MEMMAX** e **MEMMIN** per specificare le dimensioni di prenotazione minime e massime per i dati di training in memoria. Il valore è la quantità di memoria da riservare in byte. Per impostazione predefinita, questi valori vengono determinati da un approccio euristico interno.
+**MEMMAX**=*Valore*MEMMAX, **MEMMIN**=*valore* MEMMIN<br/>
+Usare **MEMMAX** e **MEMMIN** per specificare le dimensioni di prenotazione massime e minime per i dati di training in memoria. Il valore è la quantità di memoria da riservare in byte. Per impostazione predefinita, questi valori vengono determinati da un approccio euristico interno.
 
-**PATH**  &#124; **NOPATH** <br/>
-Uso **percorso** per specificare un set separato di contatori PGO per ogni percorso univoco a una funzione. Uso **NOPATH** per specificare un solo set di contatori per ogni funzione. Quando si specifica **/GENPROFILE**, il valore predefinito è **percorso** . Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **NOPATH** .
+**Percorso** &#124; **NOPATH** <br/>
+Usare **path** per specificare un set separato di contatori PGO per ogni percorso univoco di una funzione. Usare **NOPATH** per specificare un solo set di contatori per ogni funzione. Quando si specifica **/GENPROFILE**, il valore predefinito è **path** . Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **NOPATH** .
 
-**TRACKEH**  &#124; **NOTRACKEH** <br/>
-Specifica se usare i contatori aggiuntivi per mantenere un conteggio accurato quando vengono generate eccezioni durante il training. Uso **TRACKEH** per specificare i contatori aggiuntivi per un conteggio esatto. Usare **NOTRACKEH** per specificare i contatori singoli per il codice che non utilizza eccezione manipolazione o che non riscontra eccezioni negli scenari di formazione.  Quando si specifica **/GENPROFILE**, il valore predefinito è **TRACKEH** . Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **NOTRACKEH** .
+**TRACKEH** &#124; **NOTRACKEH** <br/>
+Specifica se usare i contatori aggiuntivi per mantenere un conteggio accurato quando vengono generate eccezioni durante il training. Usare **TRACKEH** per specificare i contatori aggiuntivi per un conteggio esatto. Usare **NOTRACKEH** per specificare i contatori singoli per il codice che non usa la gestione delle eccezioni o che non riscontra eccezioni negli scenari di training.  Quando si specifica **/GENPROFILE**, il valore predefinito è **TRACKEH** . Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **NOTRACKEH** .
 
-**PGD**=*nomefile*<br/>
+**PGD**=*Nome file* PGD<br/>
 Specifica un nome del file di base per il file PGD. Per impostazione predefinita, il linker usa il nome del file immagine eseguibile di base con estensione PGD.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/GENPROFILE** e **/FASTGENPROFILE** opzioni indicano al linker di generare il file di strumentazione di profilatura necessario per supportare la formazione dell'applicazione per l'ottimizzazione PGO (PGO). Queste opzioni sono novità di Visual Studio 2015. Queste opzioni all'oggetto deprecato preferisce **/LTCG: PGINSTRUMENT**, **/PGD** e **/POGOSAFEMODE** opzioni e il **PogoSafeMode**,  **VCPROFILE_ALLOC_SCALE** e **VCPROFILE_PATH** le variabili di ambiente. Le informazioni di profilatura generate dal training relativo alle applicazioni vengono usate come input per eseguire le ottimizzazioni mirate dell'intero programma durante la compilazione. È possibile impostare opzioni aggiuntive per controllare varie funzionalità di profilatura per le prestazioni durante il training relativo alle app e le compilazioni. Le opzioni predefinite specificate da **/GENPROFILE** forniscono risultati più accurati, soprattutto per grandi e complesse applicazioni multithread. Il **/FASTGENPROFILE** opzione Usa valori predefiniti diversi per un impatto minore sulla memoria e migliorare le prestazioni durante il training, a scapito della precisione.
+Le opzioni **/GENPROFILE** e **/FASTGENPROFILE** indicano al linker di generare il file di strumentazione per la profilatura necessario per supportare il training delle applicazioni per l'ottimizzazione PGO (PGO). Queste opzioni sono nuove in Visual Studio 2015. Preferire queste opzioni alle opzioni deprecate **/LTCG: PGINSTRUMENT**, **/PGD** e **/POGOSAFEMODE** e alle variabili di ambiente **POGOSAFEMODE**, **VCPROFILE_ALLOC_SCALE** e **VCPROFILE_PATH** . Le informazioni di profilatura generate dal training relativo alle applicazioni vengono usate come input per eseguire le ottimizzazioni mirate dell'intero programma durante la compilazione. È possibile impostare opzioni aggiuntive per controllare varie funzionalità di profilatura per le prestazioni durante il training relativo alle app e le compilazioni. Le opzioni predefinite specificate da **/GENPROFILE** forniscono risultati più accurati, soprattutto per app multithread complesse e di grandi dimensioni. L'opzione **/FASTGENPROFILE** usa valori predefiniti diversi per un footprint di memoria inferiore e prestazioni più veloci durante il training, a scapito dell'accuratezza.
 
-Le informazioni di profilatura vengono acquisite quando si esegue l'applicazione instrumentata dopo avere compilato usando **/GENPROFILE** dei **/FASTGENPROFILE**. Queste informazioni vengono acquisite quando si specifica la [/USEPROFILE](useprofile.md) opzione del linker per l'esecuzione della profilatura passaggio e quindi utilizzato per guidare il passaggio di compilazione ottimizzata. Per altre informazioni su come eseguire il training di app e informazioni dettagliate sui dati raccolti, vedere [le ottimizzazioni PGO](../profile-guided-optimizations.md).
+Le informazioni di profilatura vengono acquisite quando si esegue l'app instrumentata dopo la compilazione usando **/GENPROFILE** di **/FASTGENPROFILE**. Queste informazioni vengono acquisite quando si specifica l'opzione del linker [/USEPROFILE](useprofile.md) per eseguire il passaggio di profilatura e quindi si usa per guidare l'istruzione di compilazione ottimizzata. Per altre informazioni su come eseguire il training dell'app e informazioni dettagliate sui dati raccolti, vedere [ottimizzazione](../profile-guided-optimizations.md)PGO.
 
-È necessario specificare anche **/LTCG** quando si specifica **/GENPROFILE** oppure **/FASTGENPROFILE**.
+È inoltre necessario specificare **/LTCG** quando si specifica **/GENPROFILE** o **/FASTGENPROFILE**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà della**riga di comando** del**linker** >  **Proprietà** > di configurazione.
 
-1. Immettere il **/GENPROFILE** o **/FASTGENPROFILE** opzioni e gli argomenti in di **opzioni aggiuntive** casella. Scegliere **OK** per salvare le modifiche.
+1. Immettere le opzioni **/GENPROFILE** o **/FASTGENPROFILE** e gli argomenti nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

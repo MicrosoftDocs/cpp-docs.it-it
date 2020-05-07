@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Integrare strumenti personalizzati nelle proprietà del progetto'
+title: 'Procedura: integrare strumenti personalizzati nelle proprietà del progetto'
 ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
@@ -11,7 +11,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2019
 ms.locfileid: "65837025"
 ---
-# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procedura: Integrare strumenti personalizzati nelle proprietà del progetto
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procedura: integrare strumenti personalizzati nelle proprietà del progetto
 
 È possibile aggiungere opzioni di strumenti personalizzati nella finestra **Pagine delle proprietà** tramite la creazione di un file XML Schema sottostante.
 
@@ -37,4 +37,4 @@ Questo documento illustra come creare in una cartella set un file che contenga l
 
 ## <a name="see-also"></a>Vedere anche
 
-[MSBuild dalla riga di comando - C++](msbuild-visual-cpp.md)
+[MSBuild nella riga di comando-C++](msbuild-visual-cpp.md)

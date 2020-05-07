@@ -14,11 +14,11 @@ ms.locfileid: "79417194"
 ---
 # <a name="x64-software-conventions"></a>Convenzioni del software x64
 
-In questa sezione viene C++ descritta la metodologia della convenzione di chiamata per x64, l'estensione a 64 bit per l'architettura x86.
+In questa sezione viene descritta la metodologia della convenzione di chiamata C++ per x64, l'estensione a 64 bit per l'architettura x86.
 
 ## <a name="overview-of-x64-calling-conventions"></a>Panoramica delle convenzioni di chiamata x64
 
-Due differenze importanti tra x86 e x64 sono la funzionalità di indirizzamento a 64 bit e un set flat di registri a 16 64 bit per uso generale. Dato il set di registri espanso, x64 usa la convenzione di chiamata [__fastcall](../cpp/fastcall.md) e un modello di gestione delle eccezioni basato su RISC. La convenzione `__fastcall` usa i registri per i primi quattro argomenti e il stack frame per passare argomenti aggiuntivi. Per informazioni dettagliate sulla convenzione di chiamata x64, inclusi l'utilizzo del registro, i parametri dello stack, i valori restituiti e la rimozione dello stack, vedere [convenzione di chiamata x64](x64-calling-convention.md).
+Due differenze importanti tra x86 e x64 sono la funzionalità di indirizzamento a 64 bit e un set flat di registri a 16 64 bit per uso generale. Dato il set di registri espanso, x64 usa la convenzione di chiamata [__fastcall](../cpp/fastcall.md) e un modello di gestione delle eccezioni basato su RISC. La `__fastcall` convenzione usa i registri per i primi quattro argomenti e il stack frame per passare argomenti aggiuntivi. Per informazioni dettagliate sulla convenzione di chiamata x64, inclusi l'utilizzo del registro, i parametri dello stack, i valori restituiti e la rimozione dello stack, vedere [convenzione di chiamata x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Abilitare l'ottimizzazione per x64
 
@@ -50,7 +50,7 @@ Sebbene sia possibile accedere ai dati con qualsiasi allineamento, è consigliab
 |**INT8**|**char**|1|Byte|
 |**UINT8**|**unsigned char**|1|Byte|
 |**INT16**|**short**|2|Word|
-|**UINT16**|**short senza segno**|2|Word|
+|**UINT16**|**unsigned short**|2|Word|
 |**INT32**|**int**, **Long**|4|Parola doppia|
 |**UINT32**|**unsigned int, unsigned long**|4|Parola doppia|
 |**INT64**|**__int64**|8|Quadrupla|
@@ -85,7 +85,7 @@ Nella tabella seguente viene illustrato l'allineamento fortemente suggerito per 
 |**INT8**|**char**|Byte|
 |**UINT8**|**unsigned char**|Byte|
 |**INT16**|**short**|Word|
-|**UINT16**|**short senza segno**|Word|
+|**UINT16**|**unsigned short**|Word|
 |**INT32**|**int**, **Long**|Parola doppia|
 |**UINT32**|**unsigned int, unsigned long**|Parola doppia|
 |**INT64**|**__int64**|Quadrupla|
@@ -181,7 +181,7 @@ L'utilizzo di dati non allineati ha due implicazioni.
 
 - Le posizioni non allineate non possono essere usate nelle operazioni Interlocked.
 
-Se è necessario un allineamento più restrittivo, usare `__declspec(align(N))` sulle dichiarazioni di variabili. In questo modo il compilatore allinea dinamicamente lo stack per soddisfare le specifiche. Tuttavia, la regolazione dinamica dello stack in fase di esecuzione può causare un rallentamento dell'esecuzione dell'applicazione.
+Se è necessario un allineamento più restrittivo `__declspec(align(N))` , usare nelle dichiarazioni di variabili. In questo modo il compilatore allinea dinamicamente lo stack per soddisfare le specifiche. Tuttavia, la regolazione dinamica dello stack in fase di esecuzione può causare un rallentamento dell'esecuzione dell'applicazione.
 
 ## <a name="register-usage"></a>Utilizzo del registro
 
@@ -222,15 +222,15 @@ Per informazioni dettagliate sull'allocazione dello stack, l'allineamento, i tip
 
 ## <a name="prolog-and-epilog"></a>Prologo ed epilogo
 
-Ogni funzione che alloca spazio dello stack, chiama altre funzioni, Salva i registri non volatili o usa la gestione delle eccezioni deve avere un prologo i cui limiti degli indirizzi sono descritti nei dati di rimozione associati alla relativa voce della tabella di funzione e epilogo alle ogni uscita da una funzione. Per informazioni dettagliate sul codice di prologo e di epilogo richiesto su x64, vedere [prologo x64 e epilogo](prolog-and-epilog.md).
+Ogni funzione che alloca lo spazio dello stack, chiama altre funzioni, Salva i registri non volatili o usa la gestione delle eccezioni deve avere un prologo i cui limiti degli indirizzi sono descritti nei dati di rimozione associati alla relativa voce della tabella di funzione e epilogo a ogni uscita da una funzione. Per informazioni dettagliate sul codice di prologo e di epilogo richiesto su x64, vedere [prologo x64 e epilogo](prolog-and-epilog.md).
 
 ## <a name="x64-exception-handling"></a>Gestione delle eccezioni x64
 
-Per informazioni sulle convenzioni e sulle strutture di dati utilizzate per implementare la gestione C++ delle eccezioni strutturata e il comportamento di gestione delle eccezioni in x64, vedere [gestione delle eccezioni x64](exception-handling-x64.md).
+Per informazioni sulle convenzioni e sulle strutture di dati utilizzate per implementare la gestione delle eccezioni strutturata e il comportamento di gestione delle eccezioni C++ in x64, vedere [gestione delle eccezioni x64](exception-handling-x64.md).
 
 ## <a name="intrinsics-and-inline-assembly"></a>Funzioni intrinseche e assembly inline
 
-Uno dei vincoli per il compilatore x64 è quello di non avere supporto assembler inline. Ciò significa che le funzioni che non possono essere scritte in C++ C o dovranno essere scritte come subroutine o come funzioni intrinseche supportate dal compilatore. Alcune funzioni sono sensibili alle prestazioni mentre altre non lo sono. Le funzioni sensibili alle prestazioni devono essere implementate come funzioni intrinseche.
+Uno dei vincoli per il compilatore x64 è quello di non avere supporto assembler inline. Ciò significa che le funzioni che non possono essere scritte in C o C++ dovranno essere scritte come subroutine o come funzioni intrinseche supportate dal compilatore. Alcune funzioni sono sensibili alle prestazioni mentre altre non lo sono. Le funzioni sensibili alle prestazioni devono essere implementate come funzioni intrinseche.
 
 Gli intrinseci supportati dal compilatore sono descritti in [intrinseci del compilatore](../intrinsics/compiler-intrinsics.md).
 

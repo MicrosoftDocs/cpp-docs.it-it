@@ -12,11 +12,11 @@ helpviewer_keywords:
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
 ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233060"
 ---
 # <a name="if-statement-c"></a>Istruzione if (C)
 
@@ -24,9 +24,9 @@ L'istruzione **if** controlla la creazione condizionale di rami. Il corpo di un'
 
 ## <a name="syntax"></a>Sintassi
 
-*selection-statement*: **if (**  *expression*  **)**  *statement*
+*selection-statement*:*istruzione* **if (***Expression***)**      
 
-**if (**  *expression*  **)**  *statement*  **else**  *statement*
+**if (**  *espressione*  **)**  *istruzione*  **else**  *istruzione*
 
 In entrambi i formati dell'istruzione **if** vengono valutate le espressioni (che possono avere qualsiasi valore salvo una struttura), inclusi tutti gli effetti collaterali.
 

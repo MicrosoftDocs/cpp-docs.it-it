@@ -10,23 +10,23 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5523eb22bd8a839da9b3f73dd6c3718b4fd63
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404455"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825793"
 ---
 # <a name="for-each-in"></a>for each, in
 
-Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Il suo utilizzo non è tuttavia consigliato. È consigliabile usare una norma [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md) invece.
+Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Il suo utilizzo non è tuttavia consigliato. Si consiglia di utilizzare un' [istruzione for standard basata sull'intervallo (C++)](../cpp/range-based-for-statement-cpp.md) .
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
 ### <a name="syntax"></a>Sintassi
 
-> **per ognuno (** *tipo* *identificatore* **nel** *espressione* **) {**<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;*Istruzioni*<br/>
+> **per ogni (** *type* *identificatore* **di tipo nell'** *espressione* **) {**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*istruzioni*\
 > **}**
 
 ### <a name="parameters"></a>Parametri
@@ -34,28 +34,28 @@ Scorre una matrice o una raccolta. Questa parola chiave non standard è disponib
 *type*<br/>
 Tipo di `identifier`.
 
-*identifier*<br/>
+*identificatore*<br/>
 Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [operatore di riferimento di rilevamento](../extensions/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.
 
 *expression*<br/>
 Raccolta o espressione di matrice. L'elemento della raccolta deve poter essere convertito dal compilatore nel tipo `identifier`.
 
-*statements*<br/>
+*istruzioni*<br/>
 Una o più istruzioni da eseguire.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'istruzione `for each` viene utilizzata per scorrere una raccolta. È possibile modificare gli elementi di una raccolta, ma non è possibile aggiungere o eliminare elementi.
 
-Il *istruzioni* vengono eseguiti per ogni elemento nella matrice o nella raccolta. Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.
+Le *istruzioni* vengono eseguite per ogni elemento nella matrice o nella raccolta. Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.
 
-`for each` e `in` vengono [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
+`for each`e `in` sono [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
-Per ulteriori informazioni:
+Per altre informazioni:
 
 - [Scorrere la raccolta di librerie standard C++ tramite for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Procedura: Eseguire l'iterazione su matrici con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Procedura: Scorrere le matrici con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
 - [Procedura: Scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
@@ -107,14 +107,14 @@ Testing
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-**Note**
+**Osservazioni:**
 
-La sintassi CLR è lo stesso come il **tutti i runtime** informazioni sulla sintassi, tranne che come indicato di seguito.
+La sintassi CLR è la stessa della sintassi di **tutti i runtime** , ad eccezione di quanto segue.
 
 *expression*<br/>
-Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere in modo che il compilatore può convertirlo dal <xref:System.Object> per il *identificatore* tipo.
+Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere tale che il compilatore possa convertirlo <xref:System.Object> da nel tipo di *identificatore* .
 
-*espressione* restituisce un tipo che implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo che definisce una `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti nel `IEnumerator`.
+*l'espressione* restituisce un tipo <xref:System.Collections.IEnumerable>che implementa, <xref:System.Collections.Generic.IEnumerable%601>o un tipo che definisce un `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti in. `IEnumerator`
 
 ### <a name="requirements"></a>Requisiti
 

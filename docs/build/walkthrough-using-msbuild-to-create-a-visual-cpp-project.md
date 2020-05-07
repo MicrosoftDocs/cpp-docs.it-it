@@ -25,7 +25,7 @@ Vengono illustrate le attività seguenti:
 
 - Uso di MSBuild per personalizzare il progetto.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata, sono necessari i seguenti elementi:
 
@@ -233,7 +233,7 @@ Al prompt dei comandi digitare il comando seguente per creare una compilazione d
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Uso di MSBuild con gli strumenti e il compilatore a 64 bit
 
-Se è stato installato Visual Studio su Windows a 64 bit, per impostazione predefinita vengono installati gli strumenti nativi x64 a 64 bit. È possibile configurare MSBuild per usare il compilatore e gli strumenti a 64 bit per compilare l'applicazione impostando la proprietà `PreferredToolArchitecture`. Questa proprietà non influisce sulle proprietà di configurazione del progetto o dalla piattaforma. Per impostazione predefinita, viene usata la versione a 32 bit degli strumenti. Per specificare la versione a 64 bit del compilatore e degli strumenti, aggiungere il seguente elemento del gruppo di proprietà al file di progetto MyProject. vcxproj dopo l'elemento `Microsoft.Cpp.default.props` \<Import/>:
+Se è stato installato Visual Studio su Windows a 64 bit, per impostazione predefinita vengono installati gli strumenti nativi x64 a 64 bit. È possibile configurare MSBuild per usare il compilatore e gli strumenti a 64 bit per compilare l'applicazione impostando la proprietà `PreferredToolArchitecture`. Questa proprietà non influisce sulle proprietà di configurazione del progetto o dalla piattaforma. Per impostazione predefinita, viene usata la versione a 32 bit degli strumenti. Per specificare la versione a 64 bit del compilatore e degli strumenti, aggiungere il seguente elemento del gruppo di proprietà al file di progetto MyProject. vcxproj dopo `Microsoft.Cpp.default.props` \<l'elemento Import/>:
 
 ```xml
 <PropertyGroup>
@@ -247,7 +247,7 @@ Al prompt dei comandi, digitare il comando seguente per usare gli strumenti a 64
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>Uso di MSBuild con un set di strumenti diverso
 
-Se sono stati installati set di strumenti e librerie per altre versioni di Visual C++, MSBuild può compilare applicazioni per la versione corrente di Visual C++ o per le altre versioni installate. Se, ad esempio, è stato installato Visual Studio 2012, per specificare il C++ set di strumenti di Visual 11,0 per Windows XP, aggiungere il seguente elemento del gruppo di proprietà al file di progetto MyProject. vcxproj dopo l'elemento `Microsoft.Cpp.props` \<Import/>:
+Se sono stati installati set di strumenti e librerie per altre versioni di Visual C++, MSBuild può compilare applicazioni per la versione corrente di Visual C++ o per le altre versioni installate. Se, ad esempio, è stato installato Visual Studio 2012, per specificare il set di strumenti Visual C++ 11,0 per Windows XP, aggiungere il seguente elemento del gruppo di proprietà al file di progetto MyProject `Microsoft.Cpp.props` \<. vcxproj dopo l'elemento Import/>:
 
 ```xml
 <PropertyGroup>
@@ -263,8 +263,8 @@ Per ricompilare il progetto con il set di strumenti di Visual C++ 11.0 per Windo
 
 MSBuild offre vari modi per personalizzare il processo di compilazione. Gli argomenti seguenti illustrano come aggiungere istruzioni di compilazione, strumenti ed eventi personalizzati al progetto MSBuild:
 
-- [Procedura: Aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [Procedura: aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [Procedura: Aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [Procedura: aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [Procedura: Uso di eventi di compilazione in progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)
+- [Procedura: utilizzo di eventi di compilazione in progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)

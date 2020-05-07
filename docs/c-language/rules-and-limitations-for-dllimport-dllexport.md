@@ -7,15 +7,15 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
 ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158427"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Regole e limitazioni per dllimport/dllexport
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 - Se si dichiara una funzione senza l'attributo **dllimport** o `dllexport`, la funzione non viene considerata parte dell'interfaccia DLL. Di conseguenza, la definizione della funzione deve essere presente in tale modulo o in un altro modulo dello stesso programma. Per rendere la funzione parte dell'interfaccia DLL, è necessario dichiararne la definizione nell'altro modulo come `dllexport`. In caso contrario, durante la compilazione del client verrà generato un errore del linker.
 
@@ -94,7 +94,7 @@ ms.locfileid: "56150558"
 
     ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
