@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: d0c7f6db7ad6970be85203eef76e5ccb152e2200
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332593"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918183"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -104,29 +104,29 @@ long double scalblnl(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile.
 
-*Exp*<br/>
+*exp*<br/>
 Esponente dell'intero.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **scalbn** restituiscono il valore di *x* \* **FLT_RADIX**<sup>exp</sup> quando hanno esito positivo. In caso di overflow (a seconda del segno di *x*), **scalbn** restituisce HUGE_VAL **;** il valore **errno** è impostato su **ERANGE**.
+Le **funzioni scalbn** restituiscono il valore *di x* \* **FLT_RADIX**<sup>Exp</sup> in caso di esito positivo. In caso di overflow (a seconda del segno di *x*), **scalbn** restituisce +/- **HUGE_VAL**; il valore **errno** è impostato su **ERANGE**.
 
-Per ulteriori informazioni su **errno** e sui possibili valori restituiti di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per ulteriori informazioni su **errno** e sui possibili valori restituiti degli errori, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-**FLT_RADIX** è \<definito in float.h> come radice a virgola mobile nativa; sui sistemi binari, ha un valore di 2, e **scalbn** è equivalente a [ldexp](ldexp.md).
+**FLT_RADIX** è definito in \<float. h> come radice a virgola mobile nativa; nei sistemi binari, ha un valore pari a 2 e **scalbn** è equivalente a [ldexp](ldexp.md).
 
-Dato che il linguaggio C, è possibile chiamare overload di **scalbn** e **scalbln** che accettano e restituiscono tipi **float** o **long** **double.** In un programma C, **scalbn** accetta sempre un **double** e un **int** e restituisce un **double**, e **scalbln** accetta sempre un **double** e un **long** e restituisce un **double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **scalbn** e **scalbln** che accettano e restituiscono tipi **float** o **Long** **Double** . In un programma C **scalbn** accetta sempre un **valore** Double e un valore **Integer** e restituisce un **valore Double**e **scalbln** accetta sempre un **valore Double** e un oggetto **Long** e restituisce un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 

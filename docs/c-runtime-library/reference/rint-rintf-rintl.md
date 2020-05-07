@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332766"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917713"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -60,27 +60,27 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **rint** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. I valori a metà strada vengono arrotondati in base all'impostazione corrente della modalità di arrotondamento a virgola mobile, come le funzioni **nearbyint.** A differenza delle funzioni **nearbyint,** le funzioni **rint** possono generare l'eccezione **FE_INEXACT** a virgola mobile se il risultato è diverso in value dall'argomento. Non vi è restituzione di errori.
+Le funzioni **rint** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. I valori a metà vengono arrotondati in base all'impostazione corrente della modalità di arrotondamento a virgola mobile, come per le funzioni **nearbyint** . Diversamente dalle funzioni **nearbyint** , le funzioni **rint** possono generare l'eccezione a virgola mobile **FE_INEXACT** se il risultato è diverso dal valore dell'argomento. Non vi è restituzione di errori.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|, QNAN, IND|none|none|
+|± ∞, QNAN, IND|none|none|
 |Valori denormalizzati|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare gli overload di **rint** che accettano e restituiscono valori **float** e **long** **double.** In un programma C, **rint** accetta e restituisce sempre un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **rint** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C **rint** accetta e restituisce sempre un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
