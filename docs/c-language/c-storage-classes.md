@@ -27,12 +27,12 @@ C fornisce i seguenti identificatori della classe di archiviazione:
 ## <a name="syntax"></a>Sintassi
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Automatico**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Registro**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**statico**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifier-Seq* **)**  /\* \*specifiche di Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-Modifier-Seq* **)**  / \* specifico di Microsoft\*/
 
 Ad eccezione di `__declspec`, in una dichiarazione è possibile usare un solo *storage-class-specifier* in *declaration-specifier*. Se non viene creata alcuna specifica della classe di archiviazione, le dichiarazioni all'interno di un blocco creano oggetti automatici.
 
