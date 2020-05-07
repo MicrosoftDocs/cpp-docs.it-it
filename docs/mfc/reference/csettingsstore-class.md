@@ -43,13 +43,13 @@ class CSettingsStore : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSettingsStore:: CSettingsStore](#csettingsstore)|Costruisce un oggetto `CSettingsStore`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSettingsStore:: Close](#close)|Chiude la chiave del registro di sistema aperta.|
 |[CSettingsStore:: CreateKey](#createkey)|Apre la chiave specificata o la crea se non esiste.|

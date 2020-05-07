@@ -33,20 +33,20 @@ class CSettingsStoreSP
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSettingsStoreSP:: CSettingsStoreSP](#csettingsstoresp)|Costruisce un oggetto `CSettingsStoreSP`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSettingsStoreSP:: create](#create)|Crea un'istanza di una classe derivata da `CSettingsStore`.|
 |[CSettingsStoreSP:: SetRuntimeClass](#setruntimeclass)|Imposta la classe di Runtime. Il `Create` metodo usa la classe runtime per determinare la classe di oggetti da creare.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`m_dwUserData`|Dati utente personalizzati archiviati nell' `CSettingsStoreSP` oggetto. Questi dati vengono forniti nel costruttore dell' `CSettingsStoreSP` oggetto.|
 |`m_pRegistry`|`CSettingsStore`Oggetto derivato da creato dal `Create` metodo.|
