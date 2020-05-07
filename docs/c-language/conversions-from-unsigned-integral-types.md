@@ -33,58 +33,58 @@ Quando si converte un Unsigned Integer in un tipo a virgola mobile, se il valore
 
 Per informazioni sulle dimensioni dei tipi a virgola mobile e integrali, vedere [archiviazione dei tipi di base](../c-language/storage-of-basic-types.md) .
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Nel compilatore Microsoft, **senza segno** (o **unsigned int**) e **unsigned long** sono tipi Distinct ma equivalenti. La conversione di un valore **unsigned int** viene eseguita nello stesso modo di una conversione di un valore **unsigned long**.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza segno.
 
 ## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tabella delle conversioni dai tipi integrali senza segno
 
-|Da|A|Metodo|
+|From|A|Metodo|
 |----------|--------|------------|
 |**unsigned char**|**char**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
 |**unsigned char**|**short**|Estensione zero|
-|**unsigned char**|**long**|Estensione zero|
+|**unsigned char**|**lungo**|Estensione zero|
 |**unsigned char**|**long long**|Estensione zero|
 |**unsigned char**|**unsigned short**|Estensione zero|
-|**unsigned char**|**unsigned long**|Estensione zero|
-|**unsigned char**|**Long Long senza segno**|Estensione zero|
+|**unsigned char**|**long senza segno**|Estensione zero|
+|**unsigned char**|**unsigned long long**|Estensione zero|
 |**unsigned char**|**float**|Convertire a **long**; convertire **long** a **float**|
 |**unsigned char**|**double**|Convertire a **long**; convertire **long** a **double**|
 |**unsigned char**|**long double**|Convertire a **long**; convertire **long** a **double**|
 |**unsigned short**|**char**|Mantenimento del byte meno significativo|
 |**unsigned short**|**short**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
-|**unsigned short**|**long**|Estensione zero|
+|**unsigned short**|**lungo**|Estensione zero|
 |**unsigned short**|**long long**|Estensione zero|
 |**unsigned short**|**unsigned char**|Mantenimento del byte meno significativo|
-|**unsigned short**|**unsigned long**|Estensione zero|
-|**unsigned short**|**Long Long senza segno**|Estensione zero|
+|**unsigned short**|**long senza segno**|Estensione zero|
+|**unsigned short**|**unsigned long long**|Estensione zero|
 |**unsigned short**|**float**|Convertire a **long**; convertire **long** a **float**|
 |**unsigned short**|**double**|Convertire a **long**; convertire **long** a **double**|
 |**unsigned short**|**long double**|Convertire a **long**; convertire **long** a **double**|
-|**unsigned long**|**char**|Mantenimento del byte meno significativo|
-|**unsigned long**|**short**|Mantenimento della parola meno significativa|
-|**unsigned long**|**long**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
-|**unsigned long**|**long long**|Estensione zero|
-|**unsigned long**|**unsigned char**|Mantenimento del byte meno significativo|
-|**unsigned long**|**unsigned short**|Mantenimento della parola meno significativa|
-|**unsigned long**|**Long Long senza segno**|Estensione zero|
-|**unsigned long**|**float**|Convertire a **long**; convertire **long** a **float**|
-|**unsigned long**|**double**|Convertire direttamente a **double**|
-|**unsigned long**|**long double**|Convertire a **long**; convertire **long** a **double**|
-|**Long Long senza segno**|**char**|Mantenimento del byte meno significativo|
-|**Long Long senza segno**|**short**|Mantenimento della parola meno significativa|
-|**Long Long senza segno**|**long**|Mantieni valore DWORD di ordine inferiore|
-|**Long Long senza segno**|**long long**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
-|**Long Long senza segno**|**unsigned char**|Mantenimento del byte meno significativo|
-|**Long Long senza segno**|**unsigned short**|Mantenimento della parola meno significativa|
-|**Long Long senza segno**|**unsigned long**|Mantieni valore DWORD di ordine inferiore|
-|**Long Long senza segno**|**float**|Convertire a **long**; convertire **long** a **float**|
-|**Long Long senza segno**|**double**|Convertire direttamente a **double**|
-|**Long Long senza segno**|**long double**|Convertire a **long**; convertire **long** a **double**|
+|**long senza segno**|**char**|Mantenimento del byte meno significativo|
+|**long senza segno**|**short**|Mantenimento della parola meno significativa|
+|**long senza segno**|**lungo**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**long senza segno**|**long long**|Estensione zero|
+|**long senza segno**|**unsigned char**|Mantenimento del byte meno significativo|
+|**long senza segno**|**unsigned short**|Mantenimento della parola meno significativa|
+|**long senza segno**|**unsigned long long**|Estensione zero|
+|**long senza segno**|**float**|Convertire a **long**; convertire **long** a **float**|
+|**long senza segno**|**double**|Convertire direttamente a **double**|
+|**long senza segno**|**long double**|Convertire a **long**; convertire **long** a **double**|
+|**unsigned long long**|**char**|Mantenimento del byte meno significativo|
+|**unsigned long long**|**short**|Mantenimento della parola meno significativa|
+|**unsigned long long**|**lungo**|Mantieni valore DWORD di ordine inferiore|
+|**unsigned long long**|**long long**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**unsigned long long**|**unsigned char**|Mantenimento del byte meno significativo|
+|**unsigned long long**|**unsigned short**|Mantenimento della parola meno significativa|
+|**unsigned long long**|**long senza segno**|Mantieni valore DWORD di ordine inferiore|
+|**unsigned long long**|**float**|Convertire a **long**; convertire **long** a **float**|
+|**unsigned long long**|**double**|Convertire direttamente a **double**|
+|**unsigned long long**|**long double**|Convertire a **long**; convertire **long** a **double**|
 
 ## <a name="see-also"></a>Vedere anche
 

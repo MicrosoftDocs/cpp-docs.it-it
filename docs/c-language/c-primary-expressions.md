@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 49ac134f-0f8a-44f7-800e-86f31f2bd51c
 ms.openlocfilehash: 4374e88edd24c0ba47a567837794698af060747b
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400458"
@@ -17,15 +17,15 @@ Gli operandi nelle espressioni sono denominati "espressioni primarie".
 
 ## <a name="syntax"></a>Sintassi
 
-*primary-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *expression* **)**
+*espressione primaria*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*costante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*valore letterale stringa*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *espressione* **)**
 
-*expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
+*espressione*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assegnazione-espressione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione* **,** *assignment-expression*
 
 ## <a name="see-also"></a>Vedere anche
 

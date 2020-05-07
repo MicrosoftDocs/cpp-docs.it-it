@@ -21,7 +21,7 @@ Un programma di origine può essere suddiviso in uno o più file di origine, den
 ## <a name="syntax"></a>Sintassi
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*dichiarazione esterna* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*External-Declaration* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>

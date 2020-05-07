@@ -20,7 +20,7 @@ In questa sezione viene illustrato come definire i token e come vengono valutati
 
 Vengono trattati i seguenti argomenti:
 
-- [Token](../c-language/c-tokens.md)
+- [Tokens](../c-language/c-tokens.md)
 
 - [Commenti](../c-language/c-comments.md)
 
@@ -32,9 +32,9 @@ Vengono trattati i seguenti argomenti:
 
 - [Valori letterali stringa](../c-language/c-string-literals.md)
 
-- [Punteggiatura e caratteri speciali](../c-language/punctuation-and-special-characters.md)
+- [Segni di punteggiatura e caratteri speciali](../c-language/punctuation-and-special-characters.md)
 
-La sezione include anche le tabelle di riferimento per i [trigrammi](../c-language/trigraphs.md), i [limiti sulle costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md), i [limiti C e C++ Integer](../c-language/cpp-integer-limits.md)e le [sequenze di escape](../c-language/escape-sequences.md).
+La sezione include anche le tabelle di riferimento per i [trigrammi](../c-language/trigraphs.md), i [limiti sulle costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md), i [limiti di interi C e C++](../c-language/cpp-integer-limits.md)e le [sequenze di escape](../c-language/escape-sequences.md).
 
 Gli operatori sono simboli (sia singoli caratteri che combinazioni di caratteri) che specificano come utilizzare i valori. Ciascun simbolo viene interpretato come un'unità singola, denominata token. Per altre informazioni, vedere [Operatori](../c-language/c-operators.md).
 

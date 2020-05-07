@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C, functions
 ms.assetid: 31839f65-49f4-43e1-85ec-8769924ffa96
 ms.openlocfilehash: 50b03b6eb155b9f64803faccd65bce156455bc41
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233131"
 ---
 # <a name="functions-c"></a>Funzioni (C)
 
@@ -18,7 +18,7 @@ La funzione è l'unità modulare fondamentale in C. Una funzione viene in genere
 
 - [Panoramica delle funzioni](../c-language/overview-of-functions.md)
 
-- [Attributi di funzioni](../c-language/function-attributes.md)
+- [Attributi di funzione](../c-language/function-attributes.md)
 
 - [Specifica di convenzioni di chiamata](../c-language/specifying-calling-conventions.md)
 

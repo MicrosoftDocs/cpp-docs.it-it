@@ -1,62 +1,62 @@
 ---
-title: MSBuild dalla riga di comando - C++
+title: MSBuild nella riga di comando-C++
 ms.date: 12/12/2018
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
 ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220567"
 ---
-# <a name="msbuild-on-the-command-line---c"></a>MSBuild dalla riga di comando - C++
+# <a name="msbuild-on-the-command-line---c"></a>MSBuild nella riga di comando-C++
 
-In generale, è consigliabile utilizzare Visual Studio per impostare le proprietà del progetto e richiamare il sistema MSBuild. Tuttavia, è possibile usare la **MSBuild** strumento direttamente dal prompt dei comandi. Il processo di compilazione è controllato dalle informazioni in un file di progetto (vcxproj) che è possibile creare e modificare. Il file di progetto specifica le opzioni di compilazione basate su fasi, condizioni e gli eventi di compilazione. Inoltre, è possibile specificare zero o più della riga di comando *opzioni* argomenti.
+In generale, è consigliabile usare Visual Studio per impostare le proprietà del progetto e richiamare il sistema MSBuild. Tuttavia, è possibile utilizzare lo strumento **MSBuild** direttamente dal prompt dei comandi. Il processo di compilazione è controllato dalle informazioni contenute in un file di progetto (con estensione vcxproj) che è possibile creare e modificare. Il file di progetto specifica le opzioni di compilazione in base a fasi, condizioni ed eventi di compilazione. Inoltre, è possibile specificare zero o più argomenti delle *Opzioni* della riga di comando.
 
-> **msbuild.exe** [ *project_file* ] [ *options* ]
+> **MSBuild. exe** [ *project_file* ] [ *Opzioni* ]
 
-Usare la **/target** (o **/t**) e **/property** (o **/p**) le opzioni della riga di comando per eseguire l'override di proprietà specifiche e le destinazioni che vengono specificato nel file di progetto.
+Usare le opzioni della riga di comando **/target** (o **/t**) e **/Property** (o **/p**) per eseguire l'override di proprietà e destinazioni specifiche specificate nel file di progetto.
 
-Una funzione essenziale del file di progetto consiste nello specificare un *destinazione*, ovvero una determinata operazione applicata al progetto e gli input e output necessari per eseguire tale operazione. Un file di progetto è possibile specificare uno o più destinazioni, che possono includere una destinazione predefinita.
+Una funzione essenziale del file di progetto consiste nel specificare una *destinazione*, ovvero una particolare operazione applicata al progetto, e gli input e gli output necessari per eseguire tale operazione. Un file di progetto può specificare una o più destinazioni, che possono includere una destinazione predefinita.
 
-Ogni destinazione è costituita da una sequenza di uno o più *attività*. Ogni attività sono rappresentata da una classe .NET Framework che contiene un comando eseguibile. Ad esempio, il [attività CL](/visualstudio/msbuild/cl-task) contiene il [cl.exe](reference/compiling-a-c-cpp-program.md) comando.
+Ogni destinazione è costituita da una sequenza di una o più *attività*. Ogni attività è rappresentata da una classe .NET Framework che contiene un comando eseguibile. Ad esempio, l' [attività CL](/visualstudio/msbuild/cl-task) contiene il comando [CL. exe](reference/compiling-a-c-cpp-program.md) .
 
-Oggetto *parametri dell'attività* è una proprietà dell'attività della classe e in genere rappresenta un'opzione della riga di comando del comando eseguibile. Ad esempio, il `FavorSizeOrSpeed` parametro del `CL` attività corrisponde alla **/Os** e **/Ot** opzioni del compilatore.
+Un *parametro dell'attività* è una proprietà dell'attività della classe e in genere rappresenta un'opzione della riga di comando del comando eseguibile. Il `FavorSizeOrSpeed` parametro dell' `CL` attività, ad esempio, corrisponde alle opzioni del compilatore **/OS** e **/OT** .
 
-Parametri dell'attività aggiuntivi supportano l'infrastruttura MSBuild. Ad esempio, il `Sources` parametri dell'attività specifica un set di attività che possono essere utilizzate da altre attività. Per altre informazioni sulle attività di MSBuild, vedere [riferimenti delle attività](/visualstudio/msbuild/msbuild-task-reference).
+I parametri di attività aggiuntivi supportano l'infrastruttura di MSBuild. Il `Sources` parametro Task, ad esempio, specifica un set di attività che possono essere utilizzate da altre attività. Per altre informazioni sulle attività di MSBuild, vedere [riferimento alle attività](/visualstudio/msbuild/msbuild-task-reference).
 
-La maggior parte delle attività richiede input e output, ad esempio i nomi di file, percorsi e stringa, numerici o booleani parametri. Ad esempio, un input comune è il nome di un file di origine con estensione cpp da compilare. Un parametro di input importante è una stringa che specifica la configurazione della build e la piattaforma, ad esempio, "Debug\|Win32". Input e output sono specificati da uno o più XML definiti dall'utente `Item` gli elementi contenuti in un `ItemGroup` elemento.
+La maggior parte delle attività richiede input e output, ad esempio i nomi di file, i percorsi e i parametri stringa, numerico o booleano. Ad esempio, un input comune è il nome di un file di origine con estensione cpp da compilare. Un parametro di input importante è una stringa che specifica la configurazione di compilazione e la piattaforma, ad esempio\|"debug Win32". Gli input e gli output vengono specificati da uno o più elementi XML `Item` definiti dall'utente contenuti `ItemGroup` in un elemento.
 
-Inoltre possibile specificare un file di progetto definita dall'utente *delle proprietà* e `ItemDefinitionGroup` *elementi*. Proprietà e gli elementi formano coppie nome/valore che possono essere utilizzate come variabili nella compilazione. Definisce il componente del nome di una coppia di un *macro*, e il componente di valore dichiara le *valore della macro*. Una macro di proprietà si accede usando $(*name*) la notazione e una macro di elemento avviene tramite %(*nome*) notation.
+Un file di progetto può inoltre specificare le *Proprietà* e `ItemDefinitionGroup` *gli elementi*definiti dall'utente. Le proprietà e gli elementi formano le coppie nome/valore che possono essere usate come variabili nella compilazione. Il componente nome di una coppia definisce una *macro*e il componente valore dichiara il valore della *macro*. È possibile accedere a una macro di proprietà utilizzando la notazione $ (*Name*) e l'accesso a una macro di elemento tramite la*notazione%(.*
 
-Gli altri elementi XML in un file di progetto possono testare le macro e quindi in modo condizionale impostare il valore di qualsiasi macro o controllare l'esecuzione della compilazione. I nomi delle macro e stringhe letterali possono essere concatenate per generare costrutti come un percorso e nome file. Nella riga di comando, il **/property** opzione Imposta o esegue l'override di una proprietà del progetto. Gli elementi non è possibile fare riferimento nella riga di comando.
+Gli altri elementi XML in un file di progetto possono testare le macro e quindi impostare in modo condizionale il valore di qualsiasi macro o controllare l'esecuzione della compilazione. È possibile concatenare nomi di macro e stringhe letterali per generare costrutti come un percorso e un nome file. Nella riga di comando, l'opzione **/Property** imposta o esegue l'override di una proprietà del progetto. Non è possibile fare riferimento agli elementi nella riga di comando.
 
-Il sistema MSBuild può eseguire in modo condizionale una destinazione prima o dopo un'altra destinazione. Inoltre, il sistema può compilare una destinazione seconda se i file che utilizza la destinazione sono meno recenti di quelli che viene generato.
+Il sistema MSBuild può eseguire in modo condizionale una destinazione prima o dopo un'altra destinazione. Inoltre, il sistema può compilare una destinazione in base al fatto che i file utilizzati dalla destinazione siano più recenti rispetto ai file generati.
 
-Per altre informazioni su MSBuild, vedere:
+Per ulteriori informazioni su MSBuild, vedere:
 
-- [MSBuild](/visualstudio/msbuild/msbuild) concetti relativi a Panoramica di MSBuild.
+- [MSBuild](/visualstudio/msbuild/msbuild) Panoramica dei concetti relativi a MSBuild.
 
-- [Riferimenti a MSBuild](/visualstudio/msbuild/msbuild-reference) fanno riferimento a informazioni sul sistema MSBuild.
+- [Riferimenti a MSBuild](/visualstudio/msbuild/msbuild-reference) Informazioni di riferimento sul sistema MSBuild.
 
-- [Riferimenti allo Schema dei File di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference) Elenca gli elementi di XML Schema di MSBuild, insieme ai relativi attributi ed elementi padre e figlio. Si noti in particolare il [ItemGroup](/visualstudio/msbuild/itemgroup-element-msbuild), [PropertyGroup](/visualstudio/msbuild/propertygroup-element-msbuild), [destinazione](/visualstudio/msbuild/target-element-msbuild), e [attività](/visualstudio/msbuild/task-element-msbuild) elementi.
+- [Riferimento allo schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference) Elenca gli elementi di XML Schema di MSBuild, insieme ai relativi attributi e agli elementi padre e figlio. Si noti in particolare gli elementi [ItemGroup](/visualstudio/msbuild/itemgroup-element-msbuild), [PropertyGroup](/visualstudio/msbuild/propertygroup-element-msbuild), [target](/visualstudio/msbuild/target-element-msbuild)e [Task](/visualstudio/msbuild/task-element-msbuild) .
 
-- [Riferimento della riga di comando](/visualstudio/msbuild/msbuild-command-line-reference) descrive gli argomenti della riga di comando e opzioni che è possibile usare MSBuild.exe.
+- [Riferimenti alla riga di comando](/visualstudio/msbuild/msbuild-command-line-reference) Vengono descritti gli argomenti e le opzioni della riga di comando che è possibile utilizzare con MSBuild. exe.
 
-- [Riferimento di attività](/visualstudio/msbuild/msbuild-task-reference) MSBuild vengono descritte le attività. In particolare, tenere presenti queste attività, che sono specifiche di Visual C++: [BscMake Task](/visualstudio/msbuild/bscmake-task), [CL Task](/visualstudio/msbuild/cl-task), [CPPClean Task](/visualstudio/msbuild/cppclean-task), [LIB Task](/visualstudio/msbuild/lib-task), [Link Task](/visualstudio/msbuild/link-task), [MIDL Task](/visualstudio/msbuild/midl-task), [MT Task](/visualstudio/msbuild/mt-task), [RC Task](/visualstudio/msbuild/rc-task), [SetEnv Task](/visualstudio/msbuild/setenv-task), [VCMessage Task](/visualstudio/msbuild/vcmessage-task)
+- [Riferimento attività](/visualstudio/msbuild/msbuild-task-reference) Descrive le attività di MSBuild. Si notino in particolare queste attività, specifiche per Visual C++: [attività BSCMAKE](/visualstudio/msbuild/bscmake-task), [attività CL](/visualstudio/msbuild/cl-task), attività [CPPClean](/visualstudio/msbuild/cppclean-task), attività [lib](/visualstudio/msbuild/lib-task), [attività di collegamento](/visualstudio/msbuild/link-task), [attività MIDL](/visualstudio/msbuild/midl-task), [attività MT](/visualstudio/msbuild/mt-task), attività [RC](/visualstudio/msbuild/rc-task), [attività setenv](/visualstudio/msbuild/setenv-task), attività [VCMessage](/visualstudio/msbuild/vcmessage-task)
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 |Termine|Definizione|
 |----------|----------------|
-|[Procedura dettagliata: Uso di MSBuild per creare un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Viene illustrato come creare un Visual Studio C++ del progetto mediante **MSBuild**.|
-|[Procedura: Uso degli eventi di compilazione nei progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Viene illustrato come specificare un'azione che si verifica in una determinata fase nella build: prima dell'avvio della compilazione; prima dell'inizio del collegamento. o termine della compilazione.|
-|[Procedura: Aggiungere un'istruzione di compilazione personalizzata ai progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Viene illustrato come aggiungere una fase definita dall'utente alla sequenza di compilazione.|
-|[Procedura: Aggiungere strumenti di compilazione personalizzati ai progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Viene illustrato come associare uno strumento di compilazione a un determinato file.|
-|[Procedura: Integrare strumenti personalizzati nelle proprietà del progetto](how-to-integrate-custom-tools-into-the-project-properties.md)|Viene illustrato come aggiungere le opzioni per uno strumento personalizzato alla proprietà del progetto.|
-|[Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](how-to-modify-the-target-framework-and-platform-toolset.md)|Viene illustrato come compilare un progetto per più Framework o set di strumenti.|
+|[Procedura dettagliata: uso di MSBuild per la creazione di un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Viene illustrato come creare un progetto Visual Studio C++ utilizzando **MSBuild**.|
+|[Procedura: utilizzo di eventi di compilazione in progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Viene illustrato come specificare un'azione che si verifica in una fase particuler della compilazione: prima dell'avvio della compilazione. prima dell'avvio del passaggio del collegamento, o al termine della compilazione.|
+|[Procedura: aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Viene illustrato come aggiungere una fase definita dall'utente alla sequenza di compilazione.|
+|[Procedura: aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Viene illustrato come associare uno strumento di compilazione a un file specifico.|
+|[Procedura: integrare strumenti personalizzati nelle proprietà del progetto](how-to-integrate-custom-tools-into-the-project-properties.md)|Viene illustrato come aggiungere opzioni per uno strumento personalizzato alle proprietà del progetto.|
+|[Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma](how-to-modify-the-target-framework-and-platform-toolset.md)|Viene illustrato come compilare un progetto per più Framework o set di strumenti.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,19 +3,19 @@ title: Funzioni della libreria
 ms.date: 11/04/2016
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
 ms.openlocfilehash: 6cb9c0197ad625487a2c0e98d176c46c4bba4139
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232787"
 ---
 # <a name="library-functions"></a>Funzioni della libreria
 
 - [Macro NULL](../c-language/null-macro.md)
 
-- [Diagnostica stampata dalla funzione assert](../c-language/diagnostic-printed-by-the-assert-function.md)
+- [Diagnostica stampata dalla funzione Assert](../c-language/diagnostic-printed-by-the-assert-function.md)
 
-- [Test di caratteri](../c-language/character-testing.md)
+- [Test del carattere](../c-language/character-testing.md)
 
 - [Errori di dominio](../c-language/domain-errors.md)
 
@@ -27,27 +27,27 @@ ms.locfileid: "56149518"
 
 - [Segnali predefiniti](../c-language/default-signals.md)
 
-- [Caratteri di nuova riga di terminazione](../c-language/terminating-newline-characters.md)
+- [Terminazione di caratteri di nuova riga](../c-language/terminating-newline-characters.md)
 
 - [Righe vuote](../c-language/blank-lines.md)
 
-- [Caratteri Null](../c-language/null-characters.md)
+- [Caratteri null](../c-language/null-characters.md)
 
-- [Posizione nel file in modalità Append](../c-language/file-position-in-append-mode.md)
+- [Posizione del file in modalità Append](../c-language/file-position-in-append-mode.md)
 
 - [Troncamento dei file di testo](../c-language/truncation-of-text-files.md)
 
-- [Inserimento nel buffer di file](../c-language/file-buffering.md)
+- [Buffer dei file](../c-language/file-buffering.md)
 
 - [File di lunghezza zero](../c-language/zero-length-files.md)
 
-- [Nomi di file](../c-language/filenames.md)
+- [Nomi](../c-language/filenames.md)
 
 - [Limiti di accesso ai file](../c-language/file-access-limits.md)
 
-- [Eliminazione di file aperti](../c-language/deleting-open-files.md)
+- [Eliminazione dei file aperti](../c-language/deleting-open-files.md)
 
-- [Ridenominazione con un nome già esistente](../c-language/renaming-with-a-name-that-exists.md)
+- [Ridenominazione con un nome esistente](../c-language/renaming-with-a-name-that-exists.md)
 
 - [Lettura di valori puntatore](../c-language/reading-pointer-values.md)
 
@@ -57,7 +57,7 @@ ms.locfileid: "56149518"
 
 - [Messaggi generati dalla funzione perror](../c-language/messages-generated-by-the-perror-function.md)
 
-- [Nessuna allocazione di memoria](../c-language/allocating-zero-memory.md)
+- [Allocazione memoria azzerata](../c-language/allocating-zero-memory.md)
 
 - [Funzione abort](../c-language/abort-function-c.md)
 
@@ -75,4 +75,4 @@ ms.locfileid: "56149518"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)
+[Comportamento definito in fase di implementazione](../c-language/implementation-defined-behavior.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - functions [C], argument conversions
 ms.assetid: 04ea0f81-509a-4913-8b12-0937a81babcf
 ms.openlocfilehash: d9f205bbbbac353b57743f8e1211b20fa3d32f05
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233222"
 ---
 # <a name="function-call-conversions"></a>Conversioni di chiamata di funzione
 
@@ -23,4 +23,4 @@ Se non è presente alcun prototipo di funzione presente, sugli argomenti nella c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversioni di tipi](../c-language/type-conversions-c.md)
+[Conversione di tipi](../c-language/type-conversions-c.md)

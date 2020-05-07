@@ -24,11 +24,11 @@ Nell'ambiente di sviluppo Visual C++ esistono tre modi principali per personaliz
 
 - **Istruzioni di compilazione personalizzate**
 
-   Un'istruzione di compilazione personalizzata è una regola di compilazione associata a un progetto. Un'istruzione di compilazione personalizzata può specificare una riga di comando da eseguire, file di input o output aggiuntivi e un messaggio da visualizzare. Per altre informazioni, vedere [Procedura: Aggiungere un'istruzione di compilazione personalizzata ai progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
+   Un'istruzione di compilazione personalizzata è una regola di compilazione associata a un progetto. Un'istruzione di compilazione personalizzata può specificare una riga di comando da eseguire, file di input o output aggiuntivi e un messaggio da visualizzare. Per altre informazioni, vedere [Procedura: Aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
 - **Strumenti di compilazione personalizzati**
 
-   Uno strumento di compilazione personalizzato è una regola di compilazione associata a uno o più file. Un'istruzione di compilazione personalizzata può passare file di input a uno strumento di compilazione personalizzato, che restituisce uno o più file di output. Ad esempio, i file della Guida in un'applicazione MFC vengono compilati con uno strumento di compilazione personalizzato. Per altre informazioni, vedere [Procedura: Aggiungere strumenti di compilazione personalizzati ai progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) e [Specifica di strumenti di compilazione personalizzati](specifying-custom-build-tools.md).
+   Uno strumento di compilazione personalizzato è una regola di compilazione associata a uno o più file. Un'istruzione di compilazione personalizzata può passare file di input a uno strumento di compilazione personalizzato, che restituisce uno o più file di output. Ad esempio, i file della Guida in un'applicazione MFC vengono compilati con uno strumento di compilazione personalizzato. Per altre informazioni, vedere [Procedura: Aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) e [Specifica di strumenti di compilazione personalizzati](specifying-custom-build-tools.md).
 
 - **Eventi di compilazione**
 
@@ -68,7 +68,7 @@ Per ogni progetto in una soluzione, gli eventi di compilazione e le istruzioni d
 
 [Specificare strumenti di compilazione personalizzati](specifying-custom-build-tools.md)<br/>
 [Specificare gli eventi di compilazione](specifying-build-events.md)<br/>
-[Risoluzione dei problemi relativi alle personalizzazioni della compilazione](troubleshooting-build-customizations.md)<br/>
+[Risolvere i problemi relativi alle personalizzazioni di compilazione](troubleshooting-build-customizations.md)<br/>
 [Formattare l'output di un'istruzione di compilazione personalizzata o un evento di compilazione](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
 ## <a name="see-also"></a>Vedere anche

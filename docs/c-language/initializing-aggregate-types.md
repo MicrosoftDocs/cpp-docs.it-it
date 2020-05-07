@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62326079"
@@ -21,13 +21,13 @@ Un tipo *aggregato* può essere una struttura, un'unione o un tipo di matrice. S
 
 ## <a name="syntax"></a>Sintassi
 
-*initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Per inizializzazione aggregata \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
+*inizializzatore*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inizializzatore-list*  **}** /* per l'inizializzazione aggregata\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inizializzatore-list*  **,}**
 
-*initializer-list*:<br/>
+*elenco di inizializzatori*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list*  **,**  *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*inizializzatore-elenco*  **,**  *inizializzatore*
 
 *initializer-list* è un elenco di inizializzatori separati da virgole. Ogni inizializzatore presente nell'elenco è un'espressione costante o un elenco di inizializzatori. Di conseguenza, gli elenchi di inizializzatori possono essere annidati. Questo modulo è utile per inizializzare i membri di aggregazione di un tipo aggregato, come illustrato negli esempi riportati in questa sezione. Tuttavia, se l'inizializzatore di un identificatore automatico è un'espressione singola, non è necessario che sia un'espressione costante. È sufficiente che abbia un tipo appropriato per l'assegnazione all'identificatore.
 
@@ -35,7 +35,7 @@ Per ogni elenco di inizializzatori, i valori delle espressioni costanti vengono 
 
 Se *initializer-list* dispone di meno valori rispetto al tipo aggregato, gli altri membri o elementi presenti nel tipo aggregato vengono inizializzati su 0. Il valore iniziale di un identificatore automatico non esplicitamente inizializzato non è definito. Se *initializer-list* contiene più valori rispetto al tipo aggregato, viene generato un errore. Queste regole vengono applicate all'aggregazione nel suo complesso e a ogni elenco di inizializzatori incorporato.
 
-Un inizializzatore di struttura è un'espressione dello stesso tipo o un elenco di inizializzatori per i membri della struttura racchiusi tra parentesi graffe ( **{ }** ). I membri senza nome del campo di bit non vengono inizializzati.
+Un inizializzatore di struttura è un'espressione dello stesso tipo o un elenco di inizializzatori per i membri della struttura racchiusi tra parentesi graffe (**{ }**). I membri senza nome del campo di bit non vengono inizializzati.
 
 Quando viene inizializzata un'unione, *initializer-list* deve essere un'espressione costante singola. Il valore dell'espressione costante viene assegnato al primo membro dell'unione.
 
@@ -49,11 +49,11 @@ int x[ ] = { 0, 1, 2 }
 
 Se si specifica la dimensione e si indica un numero di inizializzatori errato, il compilatore genera un errore.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 La dimensione massima di una matrice è definita da **size_t**. Definito nel file di intestazione STDDEF.H, **size_t** è `unsigned int` con intervallo da 0x00000000 a 0x7CFFFFFF.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="examples"></a>Esempi
 

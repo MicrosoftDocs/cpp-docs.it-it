@@ -13,11 +13,11 @@ helpviewer_keywords:
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
 ms.openlocfilehash: 4003d9427c160b0e1c725cdc591190bd9777b3de
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234930"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Identificatori ed equivalenti di tipi di dati
 
@@ -32,9 +32,9 @@ In questa documentazione vengono utilizzati in genere i formati degli identifica
 |**signed short int**|**short**, **signed short**|
 |**signed long int**|**long**, **signed long**|
 |**unsigned char**|—|
-|**unsigned int**|**unsigned**|
+|**int senza segno**|**unsigned**|
 |**unsigned short int**|**unsigned short**|
-|**unsigned long int**|**unsigned long**|
+|**unsigned long int**|**long senza segno**|
 |**float**|—|
 |**long double**2|—|
 
@@ -42,11 +42,11 @@ In questa documentazione vengono utilizzati in genere i formati degli identifica
 
 2   In sistemi operativi a 32 bit e a 64 bit il compilatore C Microsoft esegue il mapping di **long double** al tipo **double**.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 È possibile specificare l'opzione del compilatore /J per modificare il tipo predefinito **char** con segno in senza segno. Quando viene applicata questa opzione, **char** equivale a **unsigned char** ed è necessario usare la parola chiave **signed** per dichiarare un valore di carattere con segno. Se un valore **char** viene dichiarato esplicitamente, l'opzione /J non ha effetto e il valore assume la forma con segno quando esteso a un tipo **int**. Il tipo **char** viene esteso in base a zero quando esteso al tipo **int**.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

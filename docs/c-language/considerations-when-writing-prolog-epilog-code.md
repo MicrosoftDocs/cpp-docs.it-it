@@ -18,9 +18,9 @@ ms.locfileid: "81334587"
 
 **Specifico di Microsoft**
 
-Prima di scrivere sequenze di codice di prologo ed epilogo personalizzate, è importante comprendere come viene disposto lo stack frame. È anche utile sapere come utilizzare il **__LOCAL_SIZE** costante predefinita.
+Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere in che modo il stack frame è disposto. È inoltre utile saper utilizzare la **__LOCAL_SIZE** costante predefinita.
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Layout cornice CStack
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Layout del frame CStack
 
 In questo esempio viene illustrato il codice standard di prologo che potrebbe essere visualizzato in una funzione a 32 bit:
 
@@ -79,7 +79,7 @@ __declspec ( naked ) func()
 }
 ```
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

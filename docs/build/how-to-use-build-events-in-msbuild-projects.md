@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare eventi di compilazione in progetti MSBuild'
+title: 'Procedura: utilizzo di eventi di compilazione in progetti MSBuild'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
@@ -11,7 +11,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/27/2019
 ms.locfileid: "70060060"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedura: Usare eventi di compilazione in progetti MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedura: utilizzo di eventi di compilazione in progetti MSBuild
 
 Un evento di compilazione è un comando eseguito da MSBuild in una determinata fase del processo di compilazione. L'evento di *pre-compilazione* si verifica prima dell'avvio della compilazione. l'evento di *pre-collegamento* si verifica prima dell'avvio del passaggio del collegamento. e l'evento di *post-compilazione* si verifica dopo che la compilazione termina correttamente. Un evento di compilazione si verifica solo se viene eseguito il passaggio di compilazione associato. L'evento di pre-collegamento, ad esempio, non si verifica se il passaggio del collegamento non viene eseguito.
 
@@ -37,7 +37,7 @@ La tabella seguente elenca ogni elemento *use-in-Build* :
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente può essere aggiunto all'interno dell'elemento Project del file MyProject. vcxproj creato in [procedura dettagliata: Utilizzo di MSBuild per la C++ creazione](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)di un progetto. Un evento di *pre-compilazione* crea una copia di Main. cpp; un evento di *pre-collegamento* crea una copia di Main. obj; e un evento di *post-compilazione* crea una copia di MyProject. exe. Se il progetto viene compilato utilizzando una configurazione di rilascio, verranno eseguiti gli eventi di compilazione. Se il progetto viene compilato utilizzando una configurazione di debug, gli eventi di compilazione non vengono eseguiti.
+L'esempio seguente può essere aggiunto all'interno dell'elemento Project del file MyProject. vcxproj creato in [procedura dettagliata: uso di MSBuild per creare un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Un evento di *pre-compilazione* crea una copia di Main. cpp; un evento di *pre-collegamento* crea una copia di Main. obj; e un evento di *post-compilazione* crea una copia di MyProject. exe. Se il progetto viene compilato utilizzando una configurazione di rilascio, verranno eseguiti gli eventi di compilazione. Se il progetto viene compilato utilizzando una configurazione di debug, gli eventi di compilazione non vengono eseguiti.
 
 ``` xml
 <ItemDefinitionGroup>
@@ -70,5 +70,5 @@ L'esempio seguente può essere aggiunto all'interno dell'elemento Project del fi
 
 ## <a name="see-also"></a>Vedere anche
 
-[MSBuild dalla riga di comando - C++](msbuild-visual-cpp.md)<br/>
-[Procedura dettagliata: Uso di MSBuild per creare un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild nella riga di comando-C++](msbuild-visual-cpp.md)<br/>
+[Procedura dettagliata: uso di MSBuild per la creazione di un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

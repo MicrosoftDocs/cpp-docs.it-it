@@ -6,11 +6,11 @@ helpviewer_keywords:
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
 ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233709"
 ---
 # <a name="expression-statement-c"></a>Istruzione di espressione (C)
 
@@ -18,7 +18,7 @@ Quando un'istruzione di espressione viene eseguita, l'espressione viene valutata
 
 ## <a name="syntax"></a>Sintassi
 
-*expression-statement*:<br/>
+*espressione-istruzione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
 
 Tutti gli effetti collaterali derivanti dalla valutazione delle espressioni vengono completati prima che venga eseguita l'istruzione successiva. Un'istruzione di espressione vuota viene definita un'istruzione null. Per altre informazioni, vedere [Istruzione Null](../c-language/null-statement-c.md).
