@@ -15,7 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: dfe0de4f48173a0e79bcdcfb24bfdf7a21f47a04
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b19b66279427aa4623cff037e67067096eb6bd42
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332811"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917789"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -55,7 +55,7 @@ Diverso da zero se la funzione ha esito positivo, zero se ha esito negativo.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_resetstkoflw** esegue il ripristino da una condizione di overflow dello stack, consentendo a un programma di continuare anziché avere esito negativo con un errore di eccezione irreversibile. Se la funzione **_resetstkoflw** non viene chiamata, non sono presenti pagine di protezione dopo l'eccezione precedente. La volta successiva che si verifica un overflow dello stack, non verrà generata alcuna eccezione e il processo viene terminato senza avvisi.
+La funzione **_resetstkoflw** esegue il ripristino da una condizione di overflow dello stack, consentendo a un programma di continuare anziché avere esito negativo con un errore di eccezione irreversibile. Se la funzione **_resetstkoflw** non viene chiamata, non sono presenti pagine Guard dopo l'eccezione precedente. La volta successiva che si verifica un overflow dello stack, non verrà generata alcuna eccezione e il processo viene terminato senza avvisi.
 
 Se un thread in un'applicazione causa un'eccezione **EXCEPTION_STACK_OVERFLOW**, il thread ha lasciato il relativo stack in uno stato danneggiato. Ciò si differenzia da altre eccezioni come **EXCEPTION_ACCESS_VIOLATION** o **EXCEPTION_INT_DIVIDE_BY_ZERO**, in cui lo stack non è danneggiato. Lo stack è impostato su un valore arbitrario piccolo quando il programma viene caricato per la prima volta. Lo stack poi cresce su richiesta per soddisfare le esigenze del thread. Ciò viene implementato inserendo una pagina con accesso PAGE_GUARD alla fine dello stack corrente. Per altre informazioni, vedere [Creating Guard Pages](/windows/win32/Memory/creating-guard-pages) (Creazione di guard page).
 
@@ -79,7 +79,7 @@ Quando la dimensione dello stack massima viene superata, il sistema esegue le tr
 
 Si noti che, a questo punto, lo stack non ha più una pagina di protezione. La volta successiva che il programma aumenta lo stack fino alla fine, in cui deve esserci una pagina di protezione, il programma scrive oltre la fine dello stack e provoca una violazione di accesso.
 
-Chiamare **_resetstkoflw** per ripristinare la pagina di protezione ogni volta che il ripristino viene eseguito dopo un'eccezione di overflow dello stack. Questa funzione può essere chiamata dall'interno del corpo principale di un blocco **__except** o all'esterno di un blocco **__except.** Tuttavia, esistono alcune limitazioni sui casi in cui deve essere utilizzata. **_resetstkoflw** non deve mai essere chiamato da:
+Chiamare **_resetstkoflw** per ripristinare la pagina di protezione ogni volta che il ripristino viene eseguito dopo un'eccezione di overflow dello stack. Questa funzione può essere chiamata dall'interno del corpo principale di un blocco di **__except** o all'esterno di un blocco di **__except** . Tuttavia, esistono alcune limitazioni sui casi in cui deve essere utilizzata. **_resetstkoflw** non deve mai essere chiamato da:
 
 - Un'espressione di filtro.
 
@@ -89,19 +89,19 @@ Chiamare **_resetstkoflw** per ripristinare la pagina di protezione ogni volta c
 
 - Un blocco **catch**.
 
-- Un **blocco __finally.**
+- Blocco **__finally** .
 
 A questi punti, lo stack non è ancora sufficientemente svuotato.
 
-Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non come eccezioni C, pertanto **_resetstkoflw** non è utile in un blocco **catch** ordinario perché non rileverà un'eccezione di overflow dello stack. Tuttavia, se si usa [_set_se_translator](set-se-translator.md) per implementare un convertitore di eccezioni strutturate che genera eccezioni C++ (come nel secondo esempio), per un'eccezione di overflow dello stack viene restituita un'eccezione C++ che può essere gestita da un blocco catch C++.
+Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non eccezioni C++, quindi **_resetstkoflw** non è utile in un blocco **catch** ordinario perché non rileverà un'eccezione di overflow dello stack. Tuttavia, se si usa [_set_se_translator](set-se-translator.md) per implementare un convertitore di eccezioni strutturate che genera eccezioni C++ (come nel secondo esempio), per un'eccezione di overflow dello stack viene restituita un'eccezione C++ che può essere gestita da un blocco catch C++.
 
 Non è sicuro chiamare **_resetstkoflw** in un blocco catch C++ che viene raggiunto da un'eccezione generata dalla funzione del convertitore di eccezioni strutturate. In questo caso, lo spazio dello stack non viene liberato e il puntatore dello stack non viene reimpostato fino all'esterno del blocco catch, anche se i distruttori sono stati chiamati per tutti gli oggetti distruttibili prima del blocco catch. Questa funzione non deve essere chiamata finché lo spazio dello stack non è libero e il puntatore dello stack non è stato reimpostato. Pertanto, deve essere chiamata solo dopo l'uscita dal blocco catch. Nel blocco catch è consigliabile utilizzare uno spazio di stack il più piccolo possibile, poiché un overflow dello stack che si verifica nel blocco catch che sta tentando di risolvere un overflow dello stack precedente non è reversibile e il programma può smettere di rispondere dal momento che l'overflow nel blocco catch genera un'eccezione che, a sua volta, è gestita dallo stesso blocco catch.
 
 Esistono situazioni in cui la funzione **_resetstkoflw** può avere esito negativo anche se usata in una posizione corretta, ad esempio in un blocco **__except**. Se, anche dopo la rimozione dello stack, non esiste ancora spazio dello stack sufficiente per eseguire **_resetstkoflw** senza scrivere nell'ultima pagina dello stack, **_resetstkoflw** non riesce a reimpostare l'ultima pagina dello stack come guard page e restituisce 0, a indicare una condizione di errore. Di conseguenza, l'utilizzo sicuro di questa funzione deve includere la verifica del valore restituito anziché supporre che lo stack sia sicuro da utilizzare.
 
-La gestione delle eccezioni strutturata non rileva un'eccezione **STATUS_STACK_OVERFLOW** quando l'applicazione viene compilata con **/clr** (vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+La gestione delle eccezioni strutturate non rileva un'eccezione **STATUS_STACK_OVERFLOW** quando l'applicazione viene compilata con **/CLR** (vedere [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -115,7 +115,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato l'utilizzo consigliato della funzione **_resetstkoflw.**
+Nell'esempio seguente viene illustrato l'utilizzo consigliato della funzione **_resetstkoflw** .
 
 ```C
 // crt_resetstkoflw.c
@@ -184,7 +184,7 @@ int main(int ac)
 }
 ```
 
-Output di esempio senza argomenti di programma:Sample output with no program arguments:
+Esempio di output senza argomenti del programma:
 
 ```Output
 loop #1
@@ -217,9 +217,9 @@ loop #10
 resetting stack overflow
 ```
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
-Nell'esempio seguente viene illustrato l'utilizzo consigliato di **_resetstkoflw** in un programma in cui le eccezioni strutturate vengono convertite in eccezioni c.
+Nell'esempio seguente viene illustrato l'utilizzo consigliato di **_resetstkoflw** in un programma in cui le eccezioni strutturate vengono convertite in eccezioni C++.
 
 ### <a name="code"></a>Codice
 

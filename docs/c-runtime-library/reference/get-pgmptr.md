@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: efcac6a64c01bee38a3753bdec378dae625db35e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a4a9bddfa861727e174325dc639868e3529162cd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345015"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918207"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
-Ottiene il valore corrente della variabile globale **_pgmptr.**
+Ottiene il valore corrente della variabile globale **_pgmptr** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,17 +52,17 @@ errno_t _get_pgmptr(
 ### <a name="parameters"></a>Parametri
 
 *pValue*<br/>
-Puntatore a una stringa da riempire con il valore corrente della variabile **_pgmptr.**
+Puntatore a una stringa da riempire con il valore corrente della variabile **_pgmptr** .
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* è **NULL**, il gestore di parametri non validi viene richiamato come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ## <a name="remarks"></a>Osservazioni
 
-Chiamare **_get_pgmptr** solo se il programma dispone di un punto di ingresso ristretto, ad **esempio main()** o **WinMain()**. La variabile globale **_pgmptr** contiene il percorso completo dell'eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Chiamare **_get_pgmptr** solo se il programma dispone di un punto di ingresso limitato, ad esempio **Main ()** o **WinMain ()**. La variabile globale **_pgmptr** contiene il percorso completo dell'eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
