@@ -46,7 +46,7 @@ In questo argomento vengono descritte le procedure consigliate per l'organizzazi
 
 1. Definire un riferimento al file di intestazione appropriato nel codice, usando la direttiva #include. Il file di intestazione deve essere presente nel percorso di inclusione o appartenere al progetto corrente. Per altre informazioni, vedere [Direttiva #include (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. È anche possibile impostare le dipendenze di progetto. L'impostazione delle dipendenze del progetto offre due garanzie. In primo luogo garantisce che i progetti vengano compilati nell'ordine corretto e che un progetto sia sempre in grado di trovare i file dipendenti necessari. In secondo luogo, aggiunge in modo implicito la directory di output del progetto dipendente al percorso in modo che i file possano essere trovati facilmente in fase di collegamento.
+1. È anche possibile impostare le dipendenze di progetto. L'impostazione delle dipendenze del progetto offre due garanzie. In primo luogo garantisce che i progetti vengano compilati nell'ordine corretto e che un progetto sia sempre in grado di trovare i file dipendenti necessari. In secondo luogo, aggiunge implicitamente la directory di output del progetto dipendente al percorso in modo che i file possano essere facilmente individuati in fase di collegamento.
 
 1. Per distribuire l'applicazione è necessario inserire la DLL in una posizione appropriata. I possibili valori sono i seguenti:
 

@@ -17,7 +17,7 @@ Il tipo **float** contiene 32 bit: 1 per il segno, 8 per l'esponente e 23 per la
 
 Il tipo **double** contiene 64 bit: 1 per il segno, 11 per l'esponente e 52 per la mantissa. L'intervallo è +/- 1,7E308 con almeno 15 cifre di precisione.
 
-Il tipo **long double** è distinto, ma ha la stessa rappresentazione del tipo **double** nel compilatore Microsoft C.
+Il tipo **long double** è Distinct, ma ha la stessa rappresentazione del tipo **Double** nel compilatore Microsoft C.
 
 ## <a name="see-also"></a>Vedere anche
 

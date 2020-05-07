@@ -29,15 +29,15 @@ Le istruzioni C sono costituite da token, espressioni e altre istruzioni. Un'ist
 
 [selection-statement](../c-language/if-statement-c.md)
 
-[iteration-statement](../c-language/do-while-statement-c.md)
+[iterazione-istruzione](../c-language/do-while-statement-c.md)
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-Statement](../c-language/try-except-statement-c.md) /* \*specifico di Microsoft /
+[try-except-Statement](../c-language/try-except-statement-c.md) /* specifico di Microsoft\*/
 
-[try-finally-statement](../c-language/try-finally-statement-c.md) /\* \*specifico di Microsoft /
+[try-finally-istruzione](../c-language/try-finally-statement-c.md)  / \* specifica di Microsoft\*/
 
-Il corpo dell'istruzione è spesso un'istruzione composta costituita da altre istruzioni che possono includere parole chiave. L'istruzione composta è racchiusa tra parentesi graffe ( **{ }** ). Tutte le altre istruzioni in linguaggio C terminano con un punto e virgola ( **;** ). Il punto e virgola è un terminatore dell'istruzione.
+Il corpo dell'istruzione è spesso un'istruzione composta costituita da altre istruzioni che possono includere parole chiave. L'istruzione composta è racchiusa tra parentesi graffe (**{ }**). Tutte le altre istruzioni in linguaggio C terminano con un punto e virgola (**;**). Il punto e virgola è un terminatore dell'istruzione.
 
 L'istruzione di espressione include un'espressione C che può contenere gli operatori aritmetici o logici presentati in [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md). L'istruzione null è un'istruzione vuota.
 

@@ -26,11 +26,11 @@ ms.locfileid: "81328859"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemi comuni durante la creazione di una build di rilascio
 
-Durante lo sviluppo, in genere si compila e si esegue il test con una build di debug del progetto. Se si compila quindi l'applicazione per una build di rilascio, è possibile che si verifichi una violazione di accesso.
+Durante lo sviluppo, in genere si compilerà e si eseguirà il test con una build di debug del progetto. Se quindi si compila l'applicazione per una build di rilascio, si potrebbe ottenere una violazione di accesso.
 
-L'elenco seguente mostra le differenze principali tra una build di debug e una build di rilascio (non debug). Esistono altre differenze, ma di seguito sono riportate le differenze principali che causerebbero l'esito negativo di un'applicazione in una build di rilascio quando funziona in una build di debug.
+L'elenco seguente mostra le differenze principali tra una compilazione di debug e una versione (non di debug). Esistono altre differenze, ma di seguito sono riportate le principali differenze che potrebbero causare un errore dell'applicazione in una build di rilascio quando funziona in una compilazione di debug.
 
-- [Heap Layout](#_core_heap_layout)
+- [Layout heap](#_core_heap_layout)
 
 - [Compilazione](#_core_compilation)
 
@@ -38,29 +38,29 @@ L'elenco seguente mostra le differenze principali tra una build di debug e una b
 
 - [Ottimizzazioni](#_core_optimizations)
 
-Vedere l'opzione del compilatore [/G (Catch Release-Build Errors in Debug Build)](reference/gz-enable-stack-frame-run-time-error-checking.md) per informazioni su come intercettare gli errori di compilazione di rilascio nelle build di debug.
+Per informazioni su come intercettare gli errori di compilazione della versione nelle build di debug, vedere l'opzione del compilatore [/gz (catch release-errori di compilazione di debug)](reference/gz-enable-stack-frame-run-time-error-checking.md) .
 
-## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Heap Layout
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Layout heap
 
-Il layout heap sarà la causa di circa il novanta percento dei problemi apparenti quando un'applicazione funziona nel debug, ma non il rilascio.
+Il layout dell'heap sarà causato da circa il 90% dei problemi evidenti quando un'applicazione funziona in fase di debug, ma non è rilasciata.
 
-Quando si compila il progetto per il debug, si utilizza l'allocatore di memoria di debug. Ciò significa che tutte le allocazioni di memoria hanno byte di protezione posizionati intorno a loro. Questi byte di protezione rilevano una sovrascrittura di memoria. Poiché il layout dell'heap è diverso tra le versioni di rilascio e di debug, una sovrascrittura di memoria potrebbe non creare problemi in una build di debug, ma potrebbe avere effetti catastrofici in una build di rilascio.
+Quando si compila il progetto per il debug, si usa l'allocatore di memoria di debug. Ciò significa che a tutte le allocazioni di memoria sono posizionati i byte Guard. Questi byte di Guard rilevano una sovrascrittura della memoria. Poiché il layout dell'heap è diverso tra le versioni di rilascio e di debug, una sovrascrittura della memoria potrebbe non creare problemi in una build di debug, ma potrebbe avere effetti irreversibili in una build di rilascio.
 
-Per ulteriori informazioni, vedere [Verificare la sovrascrittura di memoria](checking-for-memory-overwrites.md) e [Utilizzare la build di debug per verificare](using-the-debug-build-to-check-for-memory-overwrite.md)la sovrascrittura di memoria .
+Per altre informazioni, vedere [verificare la sovrascrittura della memoria](checking-for-memory-overwrites.md) e [usare la build di debug per verificare la sovrascrittura della memoria](using-the-debug-build-to-check-for-memory-overwrite.md).
 
 ## <a name="compilation"></a><a name="_core_compilation"></a>Compilazione
 
-Molte delle macro MFC e gran parte delle modifiche dell'implementazione MFC quando si compila per il rilascio. In particolare, la macro ASSERT restituisce nulla in una build di rilascio, pertanto non verrà eseguito alcun codice trovato in ASSERT. Per ulteriori informazioni, vedere [Esaminare le istruzioni ASSERT](using-verify-instead-of-assert.md).
+Molte delle macro MFC e gran parte dell'implementazione di MFC cambiano quando si compila per la versione. In particolare, la macro ASSERT restituisce Nothing in una build di rilascio, quindi non viene eseguito alcun codice trovato nelle ASSERZIONi. Per altre informazioni, vedere [esaminare istruzioni Assert](using-verify-instead-of-assert.md).
 
-Alcune funzioni sono inline per una maggiore velocità nella build di rilascio. Le ottimizzazioni vengono in genere attivate in una build di rilascio. Viene utilizzato anche un allocatore di memoria diverso.
+Alcune funzioni sono inline per aumentare la velocità nella build di rilascio. Le ottimizzazioni vengono in genere attivate in una build di rilascio. Viene usato anche un allocatore di memoria diverso.
 
 ## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Supporto del puntatore
 
-La mancanza di informazioni di debug rimuove la spaziatura interna dall'applicazione. In una build di rilascio, i puntatori vaganti hanno maggiori probabilità di puntare alla memoria non inizializzata anziché puntare alle informazioni di debug.
+La mancanza di informazioni di debug rimuove la spaziatura interna dall'applicazione. In una build di rilascio, i puntatori randagi hanno maggiori possibilità di puntare a una memoria non inizializzata anziché puntare a informazioni di debug.
 
 ## <a name="optimizations"></a><a name="_core_optimizations"></a>Ottimizzazioni
 
-A seconda della natura di alcuni segmenti di codice, il compilatore di ottimizzazione potrebbe generare codice imprevisto. Questa è la causa meno probabile di problemi di compilazione di rilascio, ma si verifica a volte. Per una soluzione, vedere [Ottimizzazione del codice](optimizing-your-code.md).
+A seconda della natura di determinati segmenti di codice, il compilatore di ottimizzazione potrebbe generare codice imprevisto. Questa è la causa meno probabile dei problemi di compilazione della versione, ma si verifica a volte. Per una soluzione, vedere [ottimizzazione del codice](optimizing-your-code.md).
 
 ## <a name="see-also"></a>Vedere anche
 

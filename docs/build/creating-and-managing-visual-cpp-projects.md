@@ -17,13 +17,13 @@ ms.locfileid: "80078685"
 ---
 # <a name="visual-studio-projects---c"></a>Progetti di Visual Studio - C++
 
-Un *progetto di Visual Studio* è un progetto basato sul sistema di compilazione MSBuild. MSBuild è il sistema di compilazione nativo per Visual Studio ed è in genere il sistema di compilazione migliore da usare per i programmi specifici di Windows. MSBuild è strettamente integrato con Visual Studio, ma si può usare anche dalla riga di comando. Per i progetti multipiattaforma o i progetti che usano librerie open source, è consigliabile usare i [progetti CMake in Visual Studio](cmake-projects-in-visual-studio.md) in visual studio 2017 e versioni successive. Per informazioni sull'aggiornamento di progetti MSBuild da versioni precedenti di Visual Studio, vedere [la C++ Guida al porting e all'aggiornamento di Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md).
+Un *progetto di Visual Studio* è un progetto basato sul sistema di compilazione MSBuild. MSBuild è il sistema di compilazione nativo per Visual Studio ed è in genere il sistema di compilazione migliore da usare per i programmi specifici di Windows. MSBuild è strettamente integrato con Visual Studio, ma si può usare anche dalla riga di comando. Per i progetti multipiattaforma o i progetti che usano librerie open source, è consigliabile usare i [progetti CMake in Visual Studio](cmake-projects-in-visual-studio.md) in visual studio 2017 e versioni successive. Per informazioni sull'aggiornamento di progetti MSBuild da versioni precedenti di Visual Studio, vedere la [Guida al porting e aggiornamento di Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Creare un progetto
 
 ::: moniker range="vs-2019"
 
-È possibile creare progetti C++ scegliendo **File** > **Nuovo** > **Progetto** e quindi impostando **Linguaggio** su C++. Nell'elenco risultati è disponibile un elenco di modelli di progetto che è possibile filtrare impostando un'opzione in **Piattaforma** o **Tipo di progetto** e digitando parole chiave nella casella di ricerca.
+È possibile creare progetti c++ scegliendo **file** > **nuovo** > **progetto**, quindi impostando la **lingua** su C++. Nell'elenco risultati è disponibile un elenco di modelli di progetto che è possibile filtrare impostando un'opzione in **Piattaforma** o **Tipo di progetto** e digitando parole chiave nella casella di ricerca.
 
    ![Modelli di progetto di Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Finestra di dialogo nuovo progetto di Visual Studio 2019")
 
@@ -31,7 +31,7 @@ Un *progetto di Visual Studio* è un progetto basato sul sistema di compilazione
 
 ::: moniker range="vs-2017"
 
-È possibile creare progetti C++ scegliendo **File** > **Nuovo** > **Progetto** e quindi scegliendo Visual C++ nel riquadro sinistro. Nel riquadro centrale è visualizzato un elenco di modelli di progetto:
+È possibile creare progetti C++ scegliendo **file** > **nuovo** > **progetto**, quindi Visual C++ nel riquadro sinistro. Nel riquadro centrale è visualizzato un elenco di modelli di progetto:
 
    ![Modelli di progetto](../overview/media/vs2017-new-project.png "Finestra di dialogo nuovo progetto di Visual Studio 2017")
 
@@ -69,22 +69,22 @@ In Elenco errori è possibile premere **F1** su un errore evidenziato per passar
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](working-with-project-properties.md)<br/>
+[Impostare il compilatore e le proprietà di compilazione C++ in Visual Studio](working-with-project-properties.md)<br/>
 Come usare le pagine delle proprietà e le finestre delle proprietà per specificare le impostazioni del progetto.
 
 [Fare riferimento a librerie e componenti in fase di compilazione](adding-references-in-visual-cpp-projects.md)<br/>
 Come includere librerie, DLL e componenti COM e .NET in un progetto.
 
-[Organizzare i file di output dei progetti](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organizzare i file di output del progetto](how-to-organize-project-output-files-for-builds.md)<br/>
 Come personalizzare la posizione dei file eseguibili creati nel processo di compilazione.
 
 [Istruzioni di compilazione personalizzate ed eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br/>
 Come aggiungere un comando arbitrario al processo di compilazione in punti specifici.
 
-[Creare un progetto da un codice esistente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
+[Creare un progetto da codice esistente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Come creare un nuovo progetto di Visual Studio da un'ampia raccolta di file di origine.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Progetti e sistemi di compilazione](projects-and-build-systems-cpp.md)<br>
-[Guida C++ al porting e aggiornamento Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Guida al porting e aggiornamento di Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

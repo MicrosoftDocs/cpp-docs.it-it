@@ -22,9 +22,9 @@ Gli identificatori di tipo `int` e `unsigned int` (o semplicemente `unsigned`) d
 
 **Specifico di Microsoft**
 
-I valori Signed Integer sono rappresentati in complemento a due. Il bit più significativo rappresenta il segno, ovvero 1 per il segno negativo, 0 per il segno positivo e zero. L'intervallo di valori è indicato in [Limiti di interi In C e C,](../c-language/cpp-integer-limits.md)ricavato dai limiti di LIMITS. File di intestazione H.
+I valori Signed Integer sono rappresentati in complemento a due. Il bit più significativo rappresenta il segno, ovvero 1 per il segno negativo, 0 per il segno positivo e zero. L'intervallo di valori viene specificato nei [limiti di interi C e C++](../c-language/cpp-integer-limits.md), che viene ricavato dai limiti. File di intestazione H.
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
 > [!NOTE]
 > Gli identificatori di tipo int e unsigned int sono diffusi nei programmi C perché consentono la gestione più efficiente possibile di Integer in un computer specifico. Tuttavia, poiché le dimensioni dei tipi int e unsigned int variano, i programmi che dipendono da una dimensione specifica di int potrebbero non essere eseguiti in altri computer. Per rendere più portabili i programmi, è possibile usare espressioni con l'operatore sizeof (come illustrato in [Operatore sizeof](../c-language/sizeof-operator-c.md)) anziché dimensioni di dati hardcoded.

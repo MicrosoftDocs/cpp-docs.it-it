@@ -21,7 +21,7 @@ Il linguaggio C dispone di un operatore ternario: l'operatore di espressione con
 
 *espressione condizionale*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *espressione*  **:**  *espressione condizionale*
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *espressione*  **:**  *conditional-expression*
 
 *logical-OR-expression* deve essere di tipo integrale, a virgola mobile o puntatore. Viene valutata in termini di equivalenza relativa a 0. *logical-OR-expression* è seguita da un punto di sequenza. La valutazione degli operandi prosegue nel modo seguente:
 

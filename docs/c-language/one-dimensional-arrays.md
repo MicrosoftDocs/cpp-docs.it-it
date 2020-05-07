@@ -19,7 +19,7 @@ ms.locfileid: "75299104"
 ---
 # <a name="one-dimensional-arrays"></a>Matrici unidimensionali
 
-Un'espressione di suffisso seguita da un'espressione tra parentesi quadre ( **[ ]** ) è una rappresentazione con indice di un elemento di un oggetto matrice. Un'espressione di indice rappresenta il valore all'indirizzo che si trova a un numero di posizioni corrispondente a *expression* oltre *postfix-expression*, se espressa come
+Un'espressione di suffisso seguita da un'espressione tra parentesi quadre (**[ ]**) è una rappresentazione con indice di un elemento di un oggetto matrice. Un'espressione di indice rappresenta il valore all'indirizzo che si trova a un numero di posizioni corrispondente a *expression* oltre *postfix-expression*, se espressa come
 
 ```
 postfix-expression [ expression ]
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Le espressioni di indice sono in genere utilizzate per fare riferimento agli elementi di matrice, ma è possibile applicare un indice a un puntatore. Qualsiasi sia l'ordine di valori, *expression* deve essere racchiusa tra parentesi ( **[ ]** ).
+Le espressioni di indice sono in genere utilizzate per fare riferimento agli elementi di matrice, ma è possibile applicare un indice a un puntatore. Qualsiasi sia l'ordine di valori, *expression* deve essere racchiusa tra parentesi (**[ ]**).
 
-L'espressione di indice viene valutata aggiungendo il valore integrale al valore puntatore e quindi applicando l'operatore di riferimento indiretto (<strong>\*</strong>) al risultato. Per una descrizione dell'operatore di riferimento indiretto [, vedere operatori di riferimento indiretto e address-of](../c-language/indirection-and-address-of-operators.md) . In effetti, per una matrice unidimensionale, le quattro espressioni seguenti sono equivalenti, supponendo che `a` è un puntatore e `b` è un numero intero:
+L'espressione di indice viene valutata aggiungendo il valore integrale al valore del puntatore, quindi applicando l'operatore di riferimento indiretto (<strong>\*</strong>) al risultato. Per una descrizione dell'operatore di riferimento indiretto [, vedere operatori di riferimento indiretto e address-of](../c-language/indirection-and-address-of-operators.md) . In effetti, per una matrice unidimensionale, le quattro espressioni seguenti sono equivalenti, supponendo `a` che sia un puntatore `b` ed è un numero intero:
 
 ```
 a[b]
@@ -51,9 +51,9 @@ In base alle regole di conversione per l'operatore di addizione, descritte in [O
 
 Ad esempio, si supponga che l'identificatore `line` faccia riferimento a una matrice di valori `int`. La procedura riportata di seguito viene utilizzata per valutare l'espressione di indice `line[ i ]`:
 
-1. L'Integer `i` viene moltiplicato per il numero di byte definito come la lunghezza di un elemento `int`. Il valore convertito di `i` rappresenta `i` posizioni di `int`.
+1. L'Integer `i` viene moltiplicato per il numero di byte definito come la lunghezza di un elemento `int`. Il valore convertito di `i` rappresenta `i` `int` le posizioni.
 
-1. Questo valore convertito viene aggiunto al valore del puntatore originale (`line`) per restituire un indirizzo offset `i` `int` posizioni da `line`.
+1. Questo valore convertito viene aggiunto al valore del puntatore originale (`line`) per restituire un indirizzo che rappresenta le `i` `int` posizioni di `line`offset da.
 
 1. L'operatore di riferimento indiretto viene applicato al nuovo indirizzo. Il risultato è il valore dell'elemento della matrice in tale posizione (intuitivamente, `line [ i ]`).
 

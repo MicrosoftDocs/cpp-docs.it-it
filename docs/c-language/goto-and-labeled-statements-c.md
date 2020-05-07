@@ -26,10 +26,10 @@ L'istruzione `goto` trasferisce il controllo a un'etichetta. L'etichetta specifi
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;l'identificatore **goto** **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
 
-*labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identifier* **:** *Statement*
+con *etichetta-Statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identifier***:**(*istruzione* )    
 
 Un'etichetta dell'istruzione è significativa solo a un'istruzione `goto`; in qualsiasi altro contesto, un'istruzione contrassegnata viene eseguita indipendentemente dall'etichetta.
 

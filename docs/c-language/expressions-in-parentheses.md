@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
 ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233748"
 ---
 # <a name="expressions-in-parentheses"></a>Espressioni tra parentesi
 
@@ -22,7 +22,7 @@ ms.locfileid: "56149349"
 ( 10 + 5 ) / 5
 ```
 
-le parentesi che racchiudono `10 + 5` indicano che il valore `10 + 5` viene valutato per primo e diventa l'operando sinistro dell'operatore di divisione (**/**). Il risultato di `( 10 + 5 ) / 5` è 3. Senza le parentesi, `10 + 5 / 5` restituirebbe 11.
+le parentesi intorno `10 + 5` a indicano che il valore di `10 + 5` viene valutato per primo e diventa l'operando sinistro dell'operatore Division**/**(). Il risultato di `( 10 + 5 ) / 5` è 3. Senza le parentesi, `10 + 5 / 5` restituirebbe 11.
 
 Sebbene le parentesi influiscano sulla modalità con cui vengono raggruppati gli operandi in un'espressione, non è possibile garantire un particolare ordine di valutazione in tutti i casi. Ad esempio, né le parentesi né il raggruppamento da sinistra a destra dell'espressione seguente garantisce che il valore `i` sarà in una delle sottoespressioni:
 

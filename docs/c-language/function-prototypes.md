@@ -21,10 +21,10 @@ Una dichiarazione di funzione precede la definizione di funzione e specifica il 
 
 ## <a name="syntax"></a>Sintassi
 
-*declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+*dichiarazione*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opz</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attributo-Seq*<sub>opt</sub> è \*specifico di Microsoft /
+/\**attribute-seq*<sub>opt</sub> è specifico di Microsoft\*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -36,15 +36,15 @@ Una dichiarazione di funzione precede la definizione di funzione e specifica il 
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
 
 *init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inizializzatore* *dichiaratore* **=**
 
-*declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*dichiaratore*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *Direct-declarator*
 
-*direct-declarator*: /\* Dichiaratore di funzione \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Dichiaratore nuovo stile \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Dichiaratore stile obsoleto \*/
+*Direct-declarator*:/\* dichiaratore di funzione\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Parameter-Type-list***)**   / \* dichiaratore nuovo stile      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Identifier-list*<sub>opt</sub> **)**  / \* dichiaratore di stile obsoleto    \*/
 
 Il prototipo ha lo stesso form della definizione di funzione, ma viene terminato da un punto e virgola immediatamente dopo la parentesi di chiusura e pertanto non ha corpo. In entrambi i casi, il tipo restituito deve corrispondere al tipo restituito specificato nella definizione di funzione.
 

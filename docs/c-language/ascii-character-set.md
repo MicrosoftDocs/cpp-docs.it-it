@@ -20,4 +20,4 @@ Il set di caratteri di origine è il set di caratteri validi che possono essere 
 
 ## <a name="see-also"></a>Vedere anche
 
-[personaggi](../c-language/characters.md)
+[Caratteri](../c-language/characters.md)

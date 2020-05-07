@@ -20,7 +20,7 @@ ms.locfileid: "80169812"
 ---
 # <a name="ieee-floating-point-representation"></a>Formato a virgola mobile IEEE
 
-Microsoft C++ (MSVC) è coerente con gli standard numerici IEEE. Lo standard IEEE-754 descrive i formati a virgola mobile, un modo per rappresentare i numeri reali nell'hardware. Esistono almeno cinque formati interni per i numeri a virgola mobile che possono essere rappresentati nell'hardware di destinazione del compilatore MSVC, ma il compilatore ne utilizza solo due. I formati con *precisione singola* (4 byte) e *precisione doppia* (8 byte) vengono usati in MSVC. La precisione singola viene dichiarata con la parola chiave **float**. La precisione doppia viene dichiarata con la parola chiave **Double**. Lo standard IEEE specifica anche i formati a *metà precisione* (a 2 byte) e a *quadrupla* (a 16 byte), nonché un formato a *precisione doppia (a* 10 byte), che alcuni C e C++ compilatori implementano come tipo di dati **long double** . Nel compilatore MSVC, il tipo di dati **long double** viene considerato come un tipo distinto, ma il tipo di archiviazione viene mappato a **Double**. Esistono, tuttavia, il supporto del linguaggio intrinseco e dell'assembly per i calcoli che usano gli altri formati, incluso il formato a precisione doppia (a 10 byte), dove supportato dall'hardware.
+Microsoft C++ (MSVC) è coerente con gli standard numerici IEEE. Lo standard IEEE-754 descrive i formati a virgola mobile, un modo per rappresentare i numeri reali nell'hardware. Esistono almeno cinque formati interni per i numeri a virgola mobile che possono essere rappresentati nell'hardware di destinazione del compilatore MSVC, ma il compilatore ne utilizza solo due. I formati con *precisione singola* (4 byte) e *precisione doppia* (8 byte) vengono usati in MSVC. La precisione singola viene dichiarata con la parola chiave **float**. La precisione doppia viene dichiarata con la parola chiave **Double**. Lo standard IEEE specifica inoltre i formati a *metà precisione* (2 byte) e *quadrupla* (a 16 byte), nonché un formato a *precisione doppia (a* 10 byte), che alcuni compilatori C e C++ implementano come tipo di dati **long double** . Nel compilatore MSVC, il tipo di dati **long double** viene considerato come un tipo distinto, ma il tipo di archiviazione viene mappato a **Double**. Esistono, tuttavia, il supporto del linguaggio intrinseco e dell'assembly per i calcoli che usano gli altri formati, incluso il formato a precisione doppia (a 10 byte), dove supportato dall'hardware.
 
 I valori vengono archiviati come indicato di seguito:
 
@@ -54,7 +54,7 @@ Il formato, quindi, per le varie dimensioni è il seguente:
 |precisione doppia|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 |precisione doppia-estesa|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S` rappresenta il bit di segno, i `X`sono i bit dell'esponente distorta e i `M`sono i bit separatore. Si noti che il bit più a sinistra si presuppone nei formati a precisione singola e precisione doppia, ma è presente come "1" in byte 3 del formato a precisione doppia.
+`S`rappresenta il bit del segno, `X`il sono i bit dell'esponente distorta `M`e i separatore sono i bit. Si noti che il bit più a sinistra si presuppone nei formati a precisione singola e precisione doppia, ma è presente come "1" in byte 3 del formato a precisione doppia.
 
 Per spostare correttamente il punto binario, è necessario innanzitutto depolarizzare l'esponente, quindi spostare il punto binario a destra o a sinistra del numero di bit appropriato.
 

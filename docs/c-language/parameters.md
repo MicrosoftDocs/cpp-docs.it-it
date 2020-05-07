@@ -31,19 +31,19 @@ Gli argomenti sono nomi dei valori passati a una funzione da una chiamata di fun
 /\**attribute-seq* è specifico di Microsoft\*/
 
 *dichiaratore*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *diretto-dichiaratore*
+&nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *Direct-declarator*
 
-*dichiaratore dirette*:\* / Un dichiaratore di funzione\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator***(** set*di tipi-parametro***)**  / \* dichiaratore new-style      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore diretto***(***identificatore-elenco*<sub>opz</sub> **)**  / \* dichiaratore di tipo obsoleto    \*/
+*Direct-declarator*:/\* dichiaratore di funzione\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Parameter-Type-list***)**  / \* dichiaratore nuovo stile      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Identifier-list*<sub>opt</sub> **)**  / \* dichiaratore di stile obsoleto    \*/
 
-*set di parametri:*\* / L'elenco di parametri\*/<br/>
+*Parameter-Type-list*:/\* elenco di parametri\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* **, ...**
+&nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* **,...**
 
 *elenco di parametri*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*dichiarazione di parametri*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* **,**  *parameter-declaration*
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione di parametro*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parametro-Declaration*
 
 *parameter-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
@@ -66,11 +66,11 @@ void new( double x, double y, double z )
 }
 ```
 
-Se nell'elenco dei parametri è presente almeno un parametro, l'elenco può terminare con una virgola seguita da tre punti (**, ...**). Questa costruzione, chiamata "notazione dei lipsiani", indica un numero variabile di argomenti per la funzione. Per ulteriori informazioni, vedere [Chiamate con un numero variabile di argomenti.](../c-language/calls-with-a-variable-number-of-arguments.md) Tuttavia, una chiamata alla funzione deve avere almeno lo tanti argomenti quanti sono i parametri prima dell'ultima virgola.
+Se nell'elenco di parametri è presente almeno un parametro, l'elenco può terminare con una virgola seguita da tre punti (**,**...). Questa costruzione, denominata "notazione con i puntini di sospensione", indica un numero variabile di argomenti alla funzione. Per ulteriori informazioni, vedere [chiamate con un numero variabile di argomenti](../c-language/calls-with-a-variable-number-of-arguments.md) . Tuttavia, una chiamata alla funzione deve avere almeno un numero di argomenti uguale al numero di parametri prima dell'ultima virgola.
 
 Se alla funzione non deve essere passato alcun parametro, l'elenco dei parametri viene sostituito dalla parola chiave `void`. Questo utilizzo di `void` è diverso dal relativo utilizzo come identificatore di tipo.
 
-L'ordine e il tipo di parametri, incluso qualsiasi utilizzo della notazione con i puntini di sospensione, devono essere identici in tutte le dichiarazioni di funzione, se presenti, e nella definizione di funzione. I tipi degli argomenti dopo le conversioni aritmetiche consuete devono essere compatibili con l'assegnazione dei tipi dei parametri corrispondenti. Per informazioni sulle conversioni aritmetiche, vedere [Conversioni aritmetiche usuali.](../c-language/usual-arithmetic-conversions.md) Gli argomenti che seguono i lipsia non vengono controllati. Un parametro può avere qualsiasi tipo fondamentale, di struttura, unione, puntatore o matrice.
+L'ordine e il tipo di parametri, incluso qualsiasi utilizzo della notazione con i puntini di sospensione, devono essere identici in tutte le dichiarazioni di funzione, se presenti, e nella definizione di funzione. I tipi degli argomenti dopo le conversioni aritmetiche consuete devono essere compatibili con l'assegnazione dei tipi dei parametri corrispondenti. Per informazioni sulle conversioni aritmetiche, vedere [conversioni aritmetiche consuete](../c-language/usual-arithmetic-conversions.md) . Gli argomenti che seguono i puntini di sospensione non vengono controllati. Un parametro può avere qualsiasi tipo fondamentale, di struttura, unione, puntatore o matrice.
 
 Il compilatore, se necessario, esegue le conversioni aritmetiche consuete in modo indipendente su ogni parametro e ogni argomento. Dopo la conversione, nessun parametro è più breve di `int` e nessuno è di tipo **float**, a meno che il tipo del parametro venga specificato in modo esplicito come **float** nel prototipo. Ciò significa, ad esempio, che la dichiarazione di un parametro come `char` equivale alla dichiarazione dello stesso come `int`.
 

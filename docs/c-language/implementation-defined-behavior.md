@@ -16,7 +16,7 @@ ms.locfileid: "81334563"
 ---
 # <a name="implementation-defined-behavior"></a>Comportamento definito in fase di implementazione
 
-ANSI X3.159-1989, *American National Standard for Information Systems* - *Programming Language* - *C*, contiene una sezione denominata "Problemi di portabilità". Nella sezione ANSI sono elencate le aree del linguaggio C che ANSI lascia aperte a qualsiasi implementazione specifica. In questa sezione viene descritto come Microsoft C gestisce queste aree definite in fase di implementazione del linguaggio C.
+ANSI x 3.159-1989, *American National Standard for Information Systems* - *Programming Language* - *C*, contiene una sezione denominata "problemi di portabilità". Nella sezione ANSI sono elencate le aree del linguaggio C che ANSI lascia aperte a qualsiasi implementazione specifica. In questa sezione viene descritto come Microsoft C gestisce queste aree definite in fase di implementazione del linguaggio C.
 
 In questa sezione viene seguito lo stesso ordine della sezione ANSI. Per ogni elemento illustrato sono inclusi riferimenti a ANSI che illustra il comportamento definito in fase di implementazione.
 
@@ -25,4 +25,4 @@ In questa sezione viene seguito lo stesso ordine della sezione ANSI. Per ogni el
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C](../c-language/c-language-reference.md)
+[Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

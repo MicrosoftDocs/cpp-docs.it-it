@@ -7,11 +7,11 @@ helpviewer_keywords:
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
 ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158521"
 ---
 # <a name="sequential-evaluation-operator"></a>Operatore di valutazione sequenziale
 
@@ -19,9 +19,9 @@ L'operatore valutazione-sequenziale, noto anche come "operatore virgola," restit
 
 ## <a name="syntax"></a>Sintassi
 
-*expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
+*espressione*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assegnazione-espressione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione* **,** *assignment-expression*
 
 L'operando sinistro dell'operatore valutazione-sequenziale viene valutato come un'espressione `void`. Il risultato dell'operazione avrà lo stesso valore e lo stesso tipo dell'operando destro. Ogni operando può essere di qualsiasi tipo. L'operatore valutazione-sequenziale non esegue le conversioni di tipi tra i propri operandi e non restituisce un l-value. Esiste un punto di sequenza dopo il primo operando, che significa che tutti gli effetti collaterali derivanti dalla valutazione dell'operando sinistro vengono completati prima di iniziare la valutazione dell'operando destro. Per altre informazioni, vedere [Punti di sequenza](../c-language/c-sequence-points.md).
 
@@ -48,4 +48,4 @@ Nella chiamata di funzione a `func_one`, vengono passati tre argomenti, separati
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operatore virgola: ,](../cpp/comma-operator.md)
+[Operatore virgola:,](../cpp/comma-operator.md)
