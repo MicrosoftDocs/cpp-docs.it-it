@@ -20,13 +20,13 @@ Un *corpo di funzione* è un'istruzione composta che contiene le istruzioni che 
 
 ## <a name="syntax"></a>Sintassi
 
-*function-definition*:<br/>
+*definizione di funzione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* è \*specifico di Microsoft /
+/\**attribute-seq* è specifico di Microsoft\*/
 
-*compound-statement*: /\* Corpo della funzione \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*compound-statement*:/\* corpo della funzione\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opz</sub> *Statement-list*<sub>opt</sub> **}**
 
 Se non diversamente specificato, le variabili dichiarate nel corpo di funzione, dette *variabili locali*, hanno la classe di archiviazione **auto**. Quando la funzione viene chiamata, l'archiviazione viene creata per le variabili locali e le inizializzazioni locali vengono eseguite. Il controllo di esecuzione passa alla prima istruzione in *compound-statement* e continua fino a quando non viene eseguita un'istruzione **return** non viene raggiunta la fine del corpo di funzione. Il controllo ritorna quindi al punto in cui la funzione è stata chiamata.
 

@@ -1,5 +1,5 @@
 ---
-title: Limiti C C++ e Integer
+title: Limiti di interi C e C++
 ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
@@ -13,17 +13,17 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72778380"
 ---
-# <a name="c-and-c-integer-limits"></a>Limiti C C++ e Integer
+# <a name="c-and-c-integer-limits"></a>Limiti di interi C e C++
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-I limiti per i tipi integer in C C++ e sono elencati nella tabella seguente. Questi limiti sono definiti nel file di intestazione standard C `<limits.h>`. L' C++ intestazione della libreria standard `<limits>` include `<climits>`, che include `<limits.h>`.
+Nella tabella seguente sono elencati i limiti per i tipi integer in C e C++. Questi limiti sono definiti nel file `<limits.h>`di intestazione standard C. L'intestazione `<limits>` della libreria standard C++ `<climits>`include, che `<limits.h>`include.
 
 Microsoft C consente inoltre la dichiarazione di variabili Integer ridimensionate, che sono tipi integrali di dimensioni 8, 16, 32 o 64 bit. Per ulteriori informazioni sugli Integer ridimensionati in C, vedere [tipi Integer ridimensionati](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Limiti su costanti Integer
 
-|**Costante**|Significato|Value|
+|**Costante**|Significato|valore|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Numero di bit nella variabile minore che non sia un campo di bit.|8|
 |**SCHAR_MIN**|Valore minimo per una variabile di tipo **char con segno**.|-128|
@@ -47,7 +47,7 @@ Microsoft C consente inoltre la dichiarazione di variabili Integer ridimensionat
 
 Se un valore è superiore al massimo valore rappresentabile con il tipo Integer, il compilatore Microsoft genera un errore.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

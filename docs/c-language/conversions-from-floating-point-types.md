@@ -18,7 +18,7 @@ Un valore a virgola mobile convertito in un altro tipo a virgola mobile subisce 
 
 Un valore a virgola mobile convertito in un tipo integrale viene innanzitutto troncato ignorando qualsiasi valore frazionario. Se il valore troncato è rappresentabile nel tipo di risultato, il risultato deve essere tale valore. Quando non è rappresentabile, il valore del risultato non è definito.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 I compilatori Microsoft usano la rappresentazione binary32 IEEE-754 per i valori **float** e la rappresentazione binary64 per **long double** e **Double**. Poiché **long double** e **Double** usano la stessa rappresentazione, hanno lo stesso intervallo e la stessa precisione.
 
@@ -34,35 +34,35 @@ Per la conversione in tipi Integer almeno la cui **lunghezza è lunga**, una con
 
 - Per la conversione in **unsigned long** o **unsigned**Long Long, il risultato della conversione di un valore non compreso nell'intervallo può essere un valore diverso dal valore rappresentativo massimo o minimo. Se il risultato è un valore sentinel o saturato oppure non dipende dalle opzioni del compilatore e dall'architettura di destinazione. Le versioni future del compilatore possono invece restituire un valore saturato o Sentinel.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 Nella tabella seguente sono riepilogate le conversioni dai tipi a virgola mobile.
 
 ## <a name="table-of-conversions-from-floating-point-types"></a>Tabella delle conversioni dai tipi a virgola mobile
 
-|Da|A|Metodo|
+|From|A|Metodo|
 |----------|--------|------------|
 |**float**|**char**|Convertire a **long**; convertire **long** a **char**|
 |**float**|**short**|Convertire a **long**; convertire **long** a **short**|
 |**float**|**int**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **int**, il risultato non è definito.|
-|**float**|**long**|Troncare in corrispondenza del separatore decimale. Se il valore risultante è troppo grande per essere rappresentato come **long** il risultato è indefinito.|
+|**float**|**lungo**|Troncare in corrispondenza del separatore decimale. Se il valore risultante è troppo grande per essere rappresentato come **long** il risultato è indefinito.|
 |**float**|**long long**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato **a lungo,** il risultato non è definito.|
 |**float**|**unsigned char**|Converti in **Long**; Converte **Long** in **unsigned char**|
 |**float**|**unsigned short**|Convertire a **long**; convertire **long** a **unsigned short**|
 |**float**|**unsigned**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **senza segno**, il risultato è indefinito.|
-|**float**|**unsigned long**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned long**, il risultato non è definito.|
-|**float**|**Long Long senza segno**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned**Long Long, il risultato non è definito.|
+|**float**|**long senza segno**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned long**, il risultato non è definito.|
+|**float**|**unsigned long long**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned**Long Long, il risultato non è definito.|
 |**float**|**double**|Rappresenta come **Double**.|
 |**float**|**long double**|Rappresenta come **valore long double**.|
 |**double**|**char**|Convertire a **float**; convertire **float** a **char**|
 |**double**|**short**|Convertire a **float**; convertire **float** a **short**|
 |**double**|**int**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **int**, il risultato non è definito.|
-|**double**|**long**|Troncare in corrispondenza del separatore decimale. Se il valore risultante è troppo grande per essere rappresentato come **long** il risultato è indefinito.|
+|**double**|**lungo**|Troncare in corrispondenza del separatore decimale. Se il valore risultante è troppo grande per essere rappresentato come **long** il risultato è indefinito.|
 |**double**|**unsigned char**|Converti in **Long**; Converte **Long** in **unsigned char**|
 |**double**|**unsigned short**|Convertire a **long**; convertire **long** a **unsigned short**|
 |**double**|**unsigned**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **senza segno**, il risultato è indefinito.|
-|**double**|**unsigned long**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned long**, il risultato non è definito.|
-|**double**|**Long Long senza segno**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned**Long Long, il risultato non è definito.|
+|**double**|**long senza segno**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned long**, il risultato non è definito.|
+|**double**|**unsigned long long**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **unsigned**Long Long, il risultato non è definito.|
 |**double**|**float**|Rappresentare come **float**. Se il valore **Double** non può essere rappresentato esattamente come **float**, si verifica una perdita di precisione. Se il valore è troppo grande per essere rappresentato come **float**, il risultato è indefinito.|
 |**double**|**long double**|Il valore **long double** viene considerato come **double**.|
 

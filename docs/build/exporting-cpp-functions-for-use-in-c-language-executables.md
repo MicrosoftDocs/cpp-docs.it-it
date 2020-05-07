@@ -16,25 +16,25 @@ ms.locfileid: "62195234"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C
 
-Se si dispone di funzioni in una DLL scritta in C++ che si desidera accedere da un modulo di linguaggio C, è necessario dichiarare queste funzioni con collegamento C invece di collegamento a C++. Se non diversamente specificato, il compilatore C++ Usa C++ indipendente dai tipi (noto anche come decorazione dei nomi) di denominazione e convenzioni di chiamata, che possono essere difficile da chiamare da C. C++
+Se si dispone di funzioni in una DLL scritta in C++ a cui si vuole accedere da un modulo del linguaggio C, è necessario dichiarare queste funzioni con il collegamento C anziché con il collegamento C++. Se non diversamente specificato, il compilatore C++ usa la denominazione indipendente dai tipi C++ (nota anche come decorazione del nome) e le convenzioni di chiamata C++, che possono essere difficili da chiamare da C.
 
-Per specificare il collegamento C, specificare `extern "C"` per le dichiarazioni di funzione. Ad esempio:
+Per specificare il collegamento C, `extern "C"` specificare per le dichiarazioni di funzione. Ad esempio:
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 ```
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Esportazione da una DLL tramite i file def](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione da una DLL tramite dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Esportare da una DLL utilizzando __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Esportazione e importazione utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Esportare e importare utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Esportare le funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
 - [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 

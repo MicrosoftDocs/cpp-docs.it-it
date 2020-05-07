@@ -6,19 +6,19 @@ helpviewer_keywords:
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
 ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148933"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343375"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Specifiche dei caratteri ottali ed esadecimali
 
-La sequenza **\\**<em>ooo</em> significa che è possibile specificare qualsiasi carattere presente nel set di caratteri ASCII come codice carattere ottale a tre cifre. Il valore numerico dell'intero ottale specifica il valore del carattere o del carattere "wide" desiderato.
+La sequenza **\\** <em>OOO</em> significa che è possibile specificare qualsiasi carattere nel set di caratteri ASCII come codice carattere ottale a tre cifre. Il valore numerico dell'intero ottale specifica il valore del carattere o del carattere "wide" desiderato.
 
 Analogamente, la sequenza **\x**<em>hhh</em> consente di specificare qualsiasi carattere ASCII come codice carattere esadecimale. Ad esempio, è possibile immettere il carattere ASCII backspace come sequenza di escape C normale (**\b**) oppure codificarlo come **\010** (ottale) o **\x008** (esadecimale).
 
-In una sequenza di escape ottale, è possibile utilizzare solo le cifre da 0 a 7. Le sequenze di escape ottali non possono mai essere più estese di tre cifre e vengono terminate dal primo carattere che non è una cifra ottale. Sebbene non sia necessario utilizzare tutte e tre le cifre, è necessario utilizzarne almeno una. Ad esempio, la rappresentazione ottale del carattere ASCII backspace è **\10**, mentre per la lettera A è **\101**, come riportato nella tabella dei codici ASCII.
+In una sequenza di escape ottale, è possibile utilizzare solo le cifre da 0 a 7. Le sequenze di escape ottali non possono mai essere più estese di tre cifre e vengono terminate dal primo carattere che non è una cifra ottale. Sebbene non sia necessario utilizzare tutte e tre le cifre, è necessario utilizzarne almeno una. Ad esempio, la rappresentazione ottale del carattere ASCII backspace è** \10**, mentre per la lettera A è **\101**, come riportato nella tabella dei codici ASCII.
 
 Analogamente, è necessario utilizzare almeno una cifra per le sequenze di escape esadecimali, ma è possibile omettere la seconda e la terza cifra. È quindi possibile specificare la sequenza di escape esadecimale per il carattere backspace in uno dei seguenti modi: **\x8**, **\x08** o **\x008**.
 
