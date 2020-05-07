@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
 ms.openlocfilehash: 1f512cc17832564b5eb530b97f8bfb2642c43d43
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220737"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Risorse localizzate in applicazioni MFC: DLL satellite
 
-Versione MFC 7.0 e versioni successive offre supporto avanzato per le DLL satellite, una funzionalità che aiuta nella creazione di applicazioni localizzate in più lingue. Una DLL satellite è una [DLL di sole risorse](creating-a-resource-only-dll.md) che contiene le risorse di un'applicazione localizzate per una determinata lingua. Quando l'applicazione inizia l'esecuzione, MFC carica automaticamente la risorsa localizzata più appropriata per l'ambiente. Ad esempio, hai un'applicazione con le risorse di lingua inglese con due DLL satellite, una che contiene una traduzione in francese di risorse e l'altro che contiene una traduzione in tedesco. Quando l'applicazione viene eseguita in un sistema in lingua inglese, Usa le risorse in lingua inglese. Se eseguito in un sistema francese, Usa le risorse francesi. Se eseguito in un sistema tedesco, Usa le risorse in tedesco.
+MFC versione 7,0 e versioni successive offre supporto avanzato per le DLL satellite, una funzionalità che consente di creare applicazioni localizzate per più linguaggi. Una DLL satellite è una [dll di sole risorse](creating-a-resource-only-dll.md) che contiene le risorse di un'applicazione localizzate per una lingua specifica. Quando viene avviata l'esecuzione dell'applicazione, MFC carica automaticamente la risorsa localizzata più appropriata per l'ambiente. Ad esempio, è possibile disporre di un'applicazione con risorse della lingua inglese con due DLL satellite, una contenente una traduzione in francese delle risorse e l'altra contenente una traduzione in tedesco. Quando l'applicazione viene eseguita in un sistema di lingua inglese, utilizza le risorse in lingua inglese. Se eseguito in un sistema francese, USA le risorse francesi; Se eseguito in un sistema tedesco, USA le risorse tedesche.
 
-Per supportare le risorse localizzate in un'applicazione MFC, MFC tenta di caricare una DLL satellite che contiene risorse localizzate per una lingua specifica. Le DLL satellite sono denominate *NomeApplicazioneXXX*. dll, dove *ApplicationName* è il nome di .exe o DLL utilizza MFC, e *XXX* è riportato il codice di tre lettere per la lingua le risorse (ad esempio, "ENU" o "DEU").
+Per supportare le risorse localizzate in un'applicazione MFC, MFC tenta di caricare una DLL satellite contenente le risorse localizzate in una lingua specifica. Le DLL satellite sono denominate *NomeApplicazioneXXX*. dll, dove *ApplicationName* è il nome del file con estensione exe o dll che Usa MFC e *xxx* è il codice di tre lettere per la lingua delle risorse (ad esempio,' ità o ' deu ').
 
-MFC tenta di caricare la DLL risorse per ognuna delle lingue seguenti nell'ordine, arrestandosi quando ne trova uno:
+MFC tenta di caricare la DLL di risorse per ogni lingua seguente in ordine, arrestandosi quando ne viene trovata una:
 
-1. Dell'interfaccia utente lingua predefinita dell'utente corrente, come restituito dall'API Win32 GetUserDefaultUILanguage().
+1. Lingua predefinita dell'interfaccia utente dell'utente corrente, come restituita dall'API Win32 GetUserDefaultUILanguage ().
 
-1. Lingua di interfaccia utente predefinita dell'utente corrente, senza alcuna sottolingua (vale a dire, ENC [inglese (Canada)] diventa ita [US English]).
+1. La lingua predefinita dell'interfaccia utente dell'utente corrente, senza una lingua specifica, ovvero ENC [Canadian English] diventa ita [US English].
 
-1. La lingua predefinita del sistema dell'interfaccia utente, come restituito dall'API di GetSystemDefaultUILanguage (). In altre piattaforme, questa è la lingua del sistema operativo stesso.
+1. La lingua dell'interfaccia utente predefinita del sistema, come restituita dall'API GetSystemDefaultUILanguage (). Su altre piattaforme, questo è il linguaggio del sistema operativo stesso.
 
-1. La lingua predefinita del sistema dell'interfaccia utente, senza alcuna sottolingua.
+1. Lingua predefinita dell'interfaccia utente del sistema, senza alcun linguaggio specifico.
 
-1. Un linguaggio fittizio con il codice di 3 lettere loc.
+1. Una lingua falsa con il codice di 3 lettere LOC.
 
-Se non trova tutte le DLL satellite MFC, Usa tutte le risorse sono contenute nell'applicazione stessa.
+Se MFC non trova alcuna DLL satellite, utilizzerà tutte le risorse contenute nell'applicazione stessa.
 
-Ad esempio, si supponga che un'applicazione LangExample.exe utilizza MFC e venga eseguito in un sistema di interfaccia utente più; la lingua dell'interfaccia utente del sistema è ita [US Inglese] e lingua della UI dell'utente corrente è impostata su FRC [francese (Canada)]. MFC è simile per le DLL seguenti nell'ordine seguente:
+Si supponga, ad esempio, che un'applicazione EsempioLingua. exe usi MFC e sia in esecuzione in un sistema a più interfacce utente. la lingua dell'interfaccia utente del sistema è ita [US English] e la lingua dell'interfaccia utente dell'utente corrente è impostata su FRC [Canadian francese]. MFC Cerca le DLL seguenti nell'ordine seguente:
 
-1. LangExampleFRC.dll (lingua dell'interfaccia utente dell'utente).
+1. LangExampleFRC. dll (lingua dell'interfaccia utente dell'utente).
 
-1. EsempioLinguaFRA. dll (lingua dell'interfaccia utente dell'utente senza la varietà di lingua, in questo esempio francese (Francia).
+1. LangExampleFRA. dll (lingua dell'interfaccia utente dell'utente senza la lingua, in questo esempio francese (Francia).
 
-1. LangExampleENU.dll (lingua dell'interfaccia utente del sistema).
+1. LangExampleENU. dll (lingua dell'interfaccia utente del sistema).
 
-1. LangExampleLOC.dll.
+1. LangExampleLOC. dll.
 
-Se nessuna di queste DLL vengono trovata, MFC Usa le risorse in LangExample.exe.
+Se nessuna di queste dll viene trovata, MFC utilizza le risorse in EsempioLingua. exe.
 
 ## <a name="see-also"></a>Vedere anche
 

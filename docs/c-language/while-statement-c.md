@@ -8,11 +8,11 @@ helpviewer_keywords:
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
 ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344734"
 ---
 # <a name="while-statement-c"></a>Istruzione while (C)
 
@@ -21,9 +21,9 @@ L'istruzione `while` consente di ripetere un'istruzione fino a quando un'espress
 ## <a name="syntax"></a>Sintassi
 
 *iteration-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione* **while (***Expression***)**      
 
-*espressione* deve essere di tipo puntatore o aritmetico. L'esecuzione procede nel modo seguente:
+*expression* deve presentare un tipo di puntatore o un tipo aritmetico. L'esecuzione procede nel modo seguente:
 
 1. L'*espressione* viene valutata.
 
@@ -31,7 +31,7 @@ L'istruzione `while` consente di ripetere un'istruzione fino a quando un'espress
 
    Se l'*espressione* è vera (diversa da zero), il corpo dell'istruzione viene eseguito e il processo viene ripetuto iniziando dal passaggio 1.
 
-L'istruzione `while` può terminare anche quando viene eseguita un'istruzione **break**, `goto` o `return` nel corpo dell'istruzione. Usare l'istruzione **continue** per terminare un'iterazione senza uscire dal ciclo `while`. L'istruzione **continue** passa il controllo all'iterazione successiva dell'istruzione `while`.
+L' `while` istruzione può terminare anche quando viene **break**eseguita un' `goto`interruzione, `return` o all'interno del corpo dell'istruzione. Usare l'istruzione **continue** per terminare un'iterazione senza uscire dal ciclo `while`. L'istruzione **continue** passa il controllo all'iterazione successiva dell'istruzione `while`.
 
 Di seguito, un esempio dell'istruzione `while`:
 

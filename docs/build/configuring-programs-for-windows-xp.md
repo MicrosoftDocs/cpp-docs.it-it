@@ -1,6 +1,6 @@
 ---
 title: Configurazione di programmi per Windows XP
-description: Come installare e usare i C++ set di strumenti di Windows XP in Visual Studio.
+description: Come installare e usare i set di strumenti C++ di Windows XP in Visual Studio.
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 92364d7fd25ac617baacc125b279fb0ee9c92f62
@@ -12,7 +12,7 @@ ms.locfileid: "79440475"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 
-Visual Studio supporta più set di strumenti della piattaforma. Ciò significa che è possibile fare riferimento a sistemi operativi e librerie di runtime non supportati dal set di strumenti predefinito. Se ad esempio si cambia il set di strumenti della piattaforma, è possibile usare il C++ compilatore di Visual Studio 2017 per creare app destinate a Windows XP e windows Server 2003. È anche possibile usare set di strumenti della piattaforma meno recenti per mantenere il codice legacy compatibile con il codice binario sfruttando comunque le funzionalità più recenti dell'IDE di Visual Studio.
+Visual Studio supporta più set di strumenti della piattaforma. Ciò significa che è possibile fare riferimento a sistemi operativi e librerie di runtime non supportati dal set di strumenti predefinito. Se ad esempio si cambia il set di strumenti della piattaforma, è possibile usare il compilatore C++ di Visual Studio 2017 per creare app destinate a Windows XP e Windows Server 2003. È anche possibile usare set di strumenti della piattaforma meno recenti per mantenere il codice legacy compatibile con il codice binario sfruttando comunque le funzionalità più recenti dell'IDE di Visual Studio.
 
 ::: moniker range="vs-2019"
 
@@ -24,29 +24,29 @@ Il set di strumenti V142 fornito in Visual Studio 2019 non include il supporto p
 
 ::: moniker range="<=vs-2017"
 
-Per ottenere i componenti e il set di strumenti della piattaforma Visual Studio 2017 per Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato lo **sviluppo C++ di applicazioni desktop con carico di** lavoro. Nell'elenco dei componenti facoltativi di questo carico di lavoro selezionare **Supporto Windows XP per C++** e quindi scegliere **Installa** o **Modifica**.
+Per ottenere i componenti e il set di strumenti della piattaforma Visual Studio 2017 per Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato il carico **di lavoro sviluppo di applicazioni desktop con C++** . Nell'elenco dei componenti facoltativi di questo carico di lavoro selezionare **Supporto Windows XP per C++** e quindi scegliere **Installa** o **Modifica**.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Per ottenere i componenti e il set di strumenti della piattaforma v141_xp destinati a Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato lo **sviluppo di C++ applicazioni desktop con carico di** lavoro. Nella scheda **singoli componenti** , in **compilatori, strumenti di compilazione e Runtime**, scegliere  **C++ supporto di Windows XP per gli strumenti di Visual Studio 2017 (V141) \[deprecato]** , quindi scegliere **Installa** o **Modifica**.
+Per ottenere i componenti e il set di strumenti della piattaforma v141_xp destinati a Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato il carico **di lavoro sviluppo di applicazioni desktop con C++** . Nella scheda **singoli componenti** , in **compilatori, strumenti di compilazione e Runtime**, scegliere **supporto C++ per Windows XP per gli strumenti \[di Visual Studio 2017 (V141) deprecato]**, quindi scegliere **Installa** o **Modifica**.
 
 ::: moniker-end
 
 ## <a name="windows-xp-targeting-experience"></a>Esperienza destinata a Windows XP
 
-Il set di strumenti della piattaforma Windows XP incluso in Visual Studio è una versione di Windows 7 SDK, ma usa il compilatore di Visual Studio C++ 2017. Configura inoltre le proprietà del progetto in base ai valori predefiniti appropriati, ad esempio specificando un linker compatibile per supportare una versione precedente. Solo le app desktop di Windows create con un set di strumenti della piattaforma Windows XP possono essere eseguite in Windows XP e Windows Server 2003. Queste app possono essere eseguite anche in sistemi operativi Windows più recenti.
+Il set di strumenti della piattaforma Windows XP incluso in Visual Studio è una versione di Windows 7 SDK, ma usa il compilatore C++ di Visual Studio 2017. Configura inoltre le proprietà del progetto in base ai valori predefiniti appropriati, ad esempio specificando un linker compatibile per supportare una versione precedente. Solo le app desktop di Windows create con un set di strumenti della piattaforma Windows XP possono essere eseguite in Windows XP e Windows Server 2003. Queste app possono essere eseguite anche in sistemi operativi Windows più recenti.
 
 ### <a name="to-target-windows-xp"></a>Per usare Windows XP
 
-1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.
+1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
 
-1. Nella finestra di dialogo **pagine delle proprietà** per il progetto selezionare **proprietà di configurazione** > **generale**. Impostare la proprietà set di **strumenti della piattaforma** sul set di strumenti di Windows XP preferito. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 usando il compilatore Microsoft C++ in Visual Studio 2017.
+1. Nella finestra di dialogo **pagine delle proprietà** per il progetto selezionare **Proprietà** > di configurazione**generale**. Impostare la proprietà set di **strumenti della piattaforma** sul set di strumenti di Windows XP preferito. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 usando il compilatore Microsoft C++ in Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Supporto di C++ runtime
 
-Insieme al set di strumenti della piattaforma Windows XP, diverse librerie includono il supporto di runtime per Windows XP e Windows Server 2003. Queste librerie sono: la libreria di runtime C (CRT) C++ , la libreria Standard, Active Template Library (ATL), la libreria di runtime di concorrenza (ConCRT), la libreria PPL (Parallel Patterns Library) C++ , laC++ libreria Microsoft Foundation Class (MFC) e la libreria amp (Accelerated Massive). Per questi sistemi operativi, le versioni minime supportate sono: Windows XP Service Pack 3 (SP3) per x86, Windows XP Service Pack 2 (SP2) per x64 e Windows Server 2003 Service Pack 2 (SP2) sia per x86 che per x64.
+Insieme al set di strumenti della piattaforma Windows XP, diverse librerie includono il supporto di runtime per Windows XP e Windows Server 2003. Queste librerie sono: la libreria di runtime C (CRT), la libreria standard C++, Active Template Library (ATL), la libreria di runtime di concorrenza (ConCRT), la libreria PPL (Parallel Patterns Library), la libreria Microsoft Foundation Class (MFC) e la libreria C++ AMP (C++ Accelerated Massive). Per questi sistemi operativi, le versioni minime supportate sono: Windows XP Service Pack 3 (SP3) per x86, Windows XP Service Pack 2 (SP2) per x64 e Windows Server 2003 Service Pack 2 (SP2) sia per x86 che per x64.
 
 Queste librerie sono supportate dai set di strumenti della piattaforma installati da Visual Studio, a seconda della destinazione:
 
@@ -68,7 +68,7 @@ A causa delle differenze nel supporto della piattaforma e della libreria, l'espe
 
 - **Funzionalità del linguaggio C++**
 
-   Nelle app che usano il set di strumenti della piattaforma v110\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2012. Nelle app che usano il set di strumenti della piattaforma v120\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2013. Nelle app che usano il set di strumenti della piattaforma v140\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2015. Solo C++ le funzionalità del linguaggio implementate in Visual Studio 2017 sono supportate nelle app che usano il set di strumenti V141\_XP Platform. Visual Studio usa il compilatore corrispondente quando esegue le compilazioni con set di strumenti della piattaforma precedenti. Usare il set di strumenti della piattaforma di Windows XP più recente per sfruttare le funzionalità aggiuntive del linguaggio C++ implementate in tale versione del compilatore.
+   Nelle app che usano il set di strumenti della piattaforma v110\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2012. Nelle app che usano il set di strumenti della piattaforma v120\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2013. Nelle app che usano il set di strumenti della piattaforma v140\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2015. Nelle app che usano il set di strumenti della piattaforma V141\_XP sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2017. Visual Studio usa il compilatore corrispondente quando esegue le compilazioni con set di strumenti della piattaforma precedenti. Usare il set di strumenti della piattaforma di Windows XP più recente per sfruttare le funzionalità aggiuntive del linguaggio C++ implementate in tale versione del compilatore.
 
 - **Debug remoto**
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313545"
 ---
 # <a name="array-declarations"></a>Dichiarazioni di matrice
 
@@ -19,7 +19,7 @@ Una "dichiarazione di matrice" denomina la matrice e specifica il tipo dei relat
 
 ## <a name="syntax"></a>Sintassi
 
-*declaration*:<br/>
+*dichiarazione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
 
 *init-declarator-list*:<br/>
@@ -27,14 +27,14 @@ Una "dichiarazione di matrice" denomina la matrice e specifica il tipo dei relat
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
 
 *init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inizializzatore* *dichiaratore* **=**
 
-*declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*dichiaratore*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *Direct-declarator*
 
-*direct-declarator*: /\* Dichiaratore di funzione \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**
+*Direct-declarator*:/\* dichiaratore di funzione\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator*  **[**  *Constant-Expression*<sub>opz</sub> **]**
 
 Dato che *constant-expression* è un elemento facoltativo, la sintassi presenta due formati:
 
@@ -48,7 +48,7 @@ I qualificatori di tipo possono essere visualizzati nella dichiarazione di un og
 
 È possibile dichiarare una matrice di matrici (una matrice "multidimensionale") facendo seguire al dichiaratore della matrice un elenco di espressioni costanti tra parentesi nel seguente formato:
 
-> *type-specifier* *declarator* **[** *constant-expression* **]** **[** *constant-expression* **]** ...
+> *Type-specifier* *declarator* **[** *Constant-Expression* **]** **[** *Constant-Expression* **]** ...
 
 Ogni *constant-expression* tra parentesi quadre definisce il numero di elementi di una data dimensione: le matrici bidimensionali dispongono di due espressioni tra parentesi quadre, le matrici tridimensionali ne hanno tre e così via. È possibile omettere la prima espressione costante se in precedenza la matrice è stata inizializzata, quindi è stata dichiarata come parametro o come riferimento a una matrice definita in modo esplicito in altre parti del programma.
 
@@ -88,11 +88,11 @@ extern char *name[];
 
 Questa istruzione dichiara il tipo e il nome di una matrice di puntatori a `char`. L'effettiva definizione di `name` viene eseguita altrove.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Il tipo di Integer richiesto per contenere la dimensione massima di una matrice è la dimensione **size_t**. Definito nel file di intestazione STDDEF.H, **size_t** è `unsigned int` con intervallo da 0x00000000 a 0x7CFFFFFF.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

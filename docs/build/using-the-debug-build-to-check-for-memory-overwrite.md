@@ -13,21 +13,21 @@ ms.locfileid: "62314286"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria
 
-Per usare la build di debug per verificare la presenza di sovrascrittura di memoria, è innanzitutto necessario ricompilare il progetto per il debug. Passare quindi all'inizio della propria applicazione `InitInstance` funzione e aggiungere la riga seguente:
+Per usare la build di debug per verificare la sovrascrittura della memoria, è necessario innanzitutto ricompilare il progetto per il debug. Quindi, passare all'inizio della `InitInstance` funzione dell'applicazione e aggiungere la riga seguente:
 
 ```
 afxMemDF |= checkAlwaysMemDF;
 ```
 
-L'allocatore di memoria di debug attiva byte guard intorno a tutte le allocazioni di memoria. Tuttavia, questi guard byte non fare nulla di buono, a meno che non si verifica se sono stati modificati (che potrebbe indicare una sovrascrittura di memoria). In caso contrario, questo fornisce solo un buffer che può, in realtà, consentono di ottenere subito una sovrascrittura di memoria.
+L'allocatore di memoria di debug inserisce i byte Guard intorno a tutte le allocazioni di memoria. Tuttavia, questi byte Guard non eseguono alcuna operazione, a meno che non si verifichi se sono stati modificati (che indicano una sovrascrittura della memoria). In caso contrario, questo fornisce solo un buffer che può, in realtà, consentire di ottenere una sovrascrittura della memoria.
 
-Attivando la `checkAlwaysMemDF`, si forzerà MFC per effettuare una chiamata al `AfxCheckMemory` funzionare ogni volta che una chiamata a **nuove** o **eliminare** viene eseguita. Se è stata rilevata una sovrascrittura di memoria, verrà generato un messaggio di traccia che ha un aspetto simile al seguente:
+Attivando la `checkAlwaysMemDF`, si impone a MFC di effettuare una chiamata alla `AfxCheckMemory` funzione ogni volta che viene effettuata una chiamata a **New** o **Delete** . Se è stata rilevata una sovrascrittura della memoria, verrà generato un messaggio di traccia simile al seguente:
 
 ```
 Damage Occurred! Block=0x5533
 ```
 
-Se viene visualizzato uno di questi messaggi, è necessario esaminare il codice per determinare dove si è verificato l'errore. Per isolare in modo più preciso in cui si verifica la sovrascrittura di memoria, è possibile effettuare chiamate esplicite a `AfxCheckMemory` manualmente. Ad esempio:
+Se viene visualizzato uno di questi messaggi, è necessario esaminare il codice per determinare il punto in cui si è verificato il danno. Per isolare più precisamente dove si è verificata la sovrascrittura della memoria, `AfxCheckMemory` è possibile effettuare chiamate esplicite a se stessi. Ad esempio:
 
 ```
 ASSERT(AfxCheckMemory());
@@ -35,9 +35,9 @@ ASSERT(AfxCheckMemory());
     ASSERT(AfxCheckMemory());
 ```
 
-Se la prima istruzione ASSERT ha esito positivo e il secondo non riesce, significa che la sovrascrittura di memoria deve essere eseguite nella funzione tra le due chiamate.
+Se la prima ASSERZIONe ha esito positivo e la seconda ha esito negativo, significa che la sovrascrittura della memoria deve essere avvenuta nella funzione tra le due chiamate.
 
-A seconda della natura dell'applicazione, si potrebbe scoprire che `afxMemDF` fa sì che un'esecuzione troppo lenta per anche eseguire il test del programma. Il `afxMemDF` variabile fa `AfxCheckMemory` per essere chiamato per ogni chiamata a new e delete. In tal caso, è necessario a dispersione per le chiamate a `AfxCheckMemory`() come illustrato in precedenza e provare a isolare la memoria sovrascrivere in questo modo.
+A seconda della natura dell'applicazione, è possibile che `afxMemDF` il programma venga eseguito troppo lentamente per eseguire il test. La `afxMemDF` variabile causa `AfxCheckMemory` la chiamata a ogni chiamata a New ed Delete. In tal caso, è necessario disperdere le proprie chiamate `AfxCheckMemory`a () come illustrato in precedenza e provare a isolare la sovrascrittura della memoria in questo modo.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
 ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326495"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C
 
@@ -18,11 +18,11 @@ In aggiunta alle dichiarazioni dei membri di una struttura o di un'unione, un di
 
 ## <a name="syntax"></a>Sintassi
 
-*struct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
+*struct-dichiaratore*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Type-specifier* *declarator*<sub>opt</sub> **:** *Constant-Expression*
 
-L'elemento *constant-expression* specifica la lunghezza del campo in bit. L'elemento *type-specifier* per `declarator` deve essere `unsigned int`, **signed int** o `int` e l'elemento *constant-expression* deve essere un valore intero non negativo. Se il valore è zero, la dichiarazione non ha un elemento `declarator`. Matrici di campi di bit, puntatori a campi di bit e funzioni che restituiscono campi di bit non sono consentiti. L'elemento `declarator` facoltativo assegna il nome al campo di bit. I campi di bit possono essere dichiarati come parte di una struttura. L'operatore address-of (**&**) non può essere applicato ai componenti di un campo di bit.
+L'elemento *constant-expression* specifica la lunghezza del campo in bit. L'elemento *type-specifier* per `declarator` deve essere `unsigned int`, **signed int** o `int` e l'elemento *constant-expression* deve essere un valore intero non negativo. Se il valore è zero, la dichiarazione non ha un elemento `declarator`. Matrici di campi di bit, puntatori a campi di bit e funzioni che restituiscono campi di bit non sono consentiti. L'elemento `declarator` facoltativo assegna il nome al campo di bit. I campi di bit possono essere dichiarati come parte di una struttura. L'operatore address-of (**&**) non può essere applicato ai componenti dei campi di bit.
 
 A campi di bit senza nome non si può fare riferimento e il relativo contenuto non è prevedibile in fase di esecuzione. I campi di bit possono essere utilizzati come campi fittizi per scopi di allineamento. Un campo di bit senza nome la cui lunghezza specificata è 0 garantisce che l'archiviazione per il membro successivo in *struct-declaration-list* inizi su un limite `int`.
 
@@ -49,7 +49,7 @@ La matrice contiene 2.000 elementi. Ogni elemento è un struttura individuale co
 
 I campi di bit hanno la stessa semantica dei tipi interi. Questo significa che un campo di bit è utilizzato nelle espressioni in modo analogo a come verrebbe utilizzata una variabile dello stesso tipo di base, indipendentemente al numero di bit presenti nel campo.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Campi di bit definiti come `int` vengono trattati come interi con segno. Un'estensione Microsoft allo standard ANSI C consente i tipi `char` e **long** (sia **signed** che `unsigned`) per i campi di bit. I campi di bit senza nome con tipo di base **long**, **short** o `char` (**signed** o `unsigned`) forzano l'allineamento su un limite appropriato al tipo di base.
 
@@ -80,7 +80,7 @@ cccccccb bbbbaaaa
 
 Dato che la famiglia di processori 8086 memorizza il byte basso dei valori interi prima di quello alto, il valore intero `0x01F2` precedente verrebbe memorizzato nella memoria fisica come `0xF2` seguito da `0x01`.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

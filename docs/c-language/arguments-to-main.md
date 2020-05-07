@@ -3,11 +3,11 @@ title: Argomenti passati a main
 ms.date: 11/04/2016
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
 ms.openlocfilehash: 918be9d281f1cb12c27c6c2f5dd834e4af137179
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313558"
 ---
 # <a name="arguments-to-main"></a>Argomenti passati a main
 
@@ -29,7 +29,7 @@ La matrice di stringhe termina con **argv[argc]** che contiene un puntatore Null
 
 Tutti gli elementi della matrice **argv** sono puntatori alle stringhe.
 
-Un programma richiamato senza argomenti della riga di comando riceverà un valore di uno per **argc**, quando il nome del file eseguibile viene posizionato in **argv[0]**. (In MS-DOS versione precedente alla 3.0, il nome del file eseguibile non è disponibile. La lettera "C" è inserita in **argv[0]**). Le stringhe puntate da **argv[1]** ad **argv[argc - 1]** rappresentano i parametri del programma.
+Un programma richiamato senza argomenti della riga di comando riceverà un valore di uno per **argc**, quando il nome del file eseguibile viene posizionato in **argv[0]**. (In MS-DOS versione precedente alla 3.0, il nome del file eseguibile non è disponibile. La lettera "C" è inserita in **argv [0]**. Le stringhe puntate da **argv [1]** a **argv [argc-1]** rappresentano i parametri del programma.
 
 I parametri **argc** e **argv** sono modificabili e mantengono i valori archiviati per ultimi tra l'avvio del programma e la chiusura del programma.
 

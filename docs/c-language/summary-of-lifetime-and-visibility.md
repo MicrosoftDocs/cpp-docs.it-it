@@ -18,14 +18,14 @@ Nella tabella seguente è riportato un riepilogo delle caratteristiche di visibi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 
-|Attributi:<br /><br /> Livello|Elemento|Classe di archiviazione<br /><br /> Identificatore|Result:<br /><br /> Durata|Visibility|
+|Attributi:<br /><br /> Level|Item|Classe di archiviazione<br /><br /> Identificatore|Risultato:<br /><br /> Durata|Visibilità|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Ambito di tipo file|Definizione di variabile|**static**|Global|Resto del file di origine in cui si verifica|
-||Dichiarazione di variabile|**extern**|Global|Resto del file di origine in cui si verifica|
-||Prototipo o definizione di funzione|**static**|Global|File di origine singolo|
-||Prototipo di funzione|**extern**|Global|Resto del file di origine|
-|Ambito del blocco|Dichiarazione di variabile|**extern**|Global|Blocca|
-||Definizione di variabile|**static**|Global|Blocca|
+|Ambito di tipo file|Definizione di variabile|**statico**|Globale|Resto del file di origine in cui si verifica|
+||Dichiarazione di variabile|**extern**|Globale|Resto del file di origine in cui si verifica|
+||Prototipo o definizione di funzione|**statico**|Globale|File di origine singolo|
+||Prototipo di funzione|**extern**|Globale|Resto del file di origine|
+|Ambito del blocco|Dichiarazione di variabile|**extern**|Globale|Blocca|
+||Definizione di variabile|**statico**|Globale|Blocca|
 ||Definizione di variabile|**auto** o **register**|Locale|Blocca|
 
 ## <a name="example"></a>Esempio
@@ -62,7 +62,7 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>Comments
+### <a name="comments"></a>Commenti
 
 In questo esempio, sono disponibili quattro livelli di visibilità: il livello esterno e tre livelli di blocco. I valori vengono visualizzati sullo schermo come indicato nei commenti che seguono ogni istruzione.
 

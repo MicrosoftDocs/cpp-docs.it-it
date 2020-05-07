@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345316"
 ---
 # <a name="trigraphs"></a>Trigrammi
 
@@ -48,7 +48,7 @@ Nella tabella seguente sono illustrate le nove sequenze di trigramma. Tutte le o
 
 Un trigramma è sempre considerato come un singolo carattere di origine. La conversione dei trigrammi avviene nella prima [fase di conversione](../preprocessor/phases-of-translation.md), prima del riconoscimento dei caratteri di escape nei valori letterali stringa e nelle costanti carattere. Sono riconosciuti solo i nove trigrammi riportati nella tabella precedente. Tutte le altre sequenze di caratteri non vengono convertite.
 
-La sequenza di caratteri di escape **\\?** impedisce l'errata interpretazione delle sequenze di caratteri simili a un trigramma. Per informazioni sulle sequenze di escape, vedere [Sequenze di escape](../c-language/escape-sequences.md). Ad esempio, se si tenta di stampare la stringa `What??!` con questa istruzione `printf`
+La sequenza di caratteri di escape, ** \\?**, impedisce l'errata interpretazione delle sequenze di caratteri simili a un trigramma. Per informazioni sulle sequenze di escape, vedere [sequenze di escape](../c-language/escape-sequences.md). Ad esempio, se si tenta di stampare la stringa `What??!` con questa `printf` istruzione
 
 ```C
 printf( "What??!\n" );

@@ -30,7 +30,7 @@ Per informazioni generali sugli strumenti di compilazione personalizzati e sulle
 
 ### <a name="to-specify-a-custom-build-tool"></a>Per specificare uno strumento di compilazione personalizzato
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](working-with-project-properties.md).
 
 1. Scegliere **Proprietà di configurazione** per attivare la casella **Configurazione**. Nella casella **Configurazione** selezionare la configurazione per la quale si vuole specificare uno strumento di compilazione personalizzato.
 
@@ -50,9 +50,9 @@ Per informazioni generali sugli strumenti di compilazione personalizzati e sulle
 
    - In **Riga di comando** specificare un comando con il formato usato al prompt dei comandi. Specificare un comando o un file batch valido e i file di input o output necessari. Specificare il comando batch **call** prima del nome di un file batch per garantire che tutti i comandi successivi vengano eseguiti.
 
-      Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [macro comuni per compilare i comandi e proprietà](reference/common-macros-for-build-commands-and-properties.md).
+      Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md).
 
-      Poiché il carattere "%" è riservato per MSBuild, se si specifica una variabile di ambiente sostituire ogni carattere di escape **%** con la sequenza di escape esadecimale **%25**. Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
+      Poiché il carattere '%' è riservato da MSBuild, se si specifica una variabile di ambiente, **%** sostituire ogni carattere di escape con la sequenza di escape esadecimale **%25** . Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
 
    - In **Descrizione** immettere un messaggio descrittivo per questo strumento di compilazione personalizzato. Il messaggio viene visualizzato nella finestra **Output** quando il sistema esegue lo strumento.
 
@@ -74,7 +74,7 @@ Questo comando esegue l'analizzatore lessicale su parser.l e restituisce parser.
 
 Nella proprietà **Output** immettere quanto segue:
 
-> **.\%(Filename).c**
+> **. \%(Nomefile). c**
 
 Quando si compila il progetto, il sistema di compilazione confronta i timestamp di parser.l e parser.c. Se parser.l è più recente o se parser.c non esiste, il sistema di compilazione esegue il valore della proprietà **Riga di comando** per aggiornare parser.c. Dato che anche parser.c è stato aggiunto al progetto, il sistema di compilazione compila quindi parser.c.
 

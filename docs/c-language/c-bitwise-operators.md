@@ -21,15 +21,15 @@ ms.locfileid: "80168773"
 ---
 # <a name="c-bitwise-operators"></a>Operatori bit per bit C
 
-Gli operatori bit per bit eseguono operazioni di tipo AND bit per bit ( **&** ), OR bit per bit esclusivo ( **^** ) e OR bit per bit inclusivo ( **&#124;** ).
+Gli operatori bit per bit eseguono operazioni AND**&** bit per bit (), OR bit**^** per bit-esclusivo () e bit per bit inclusivo (**&#124;**).
 
 ## <a name="syntax"></a>Sintassi
 
-*And-Expression*: &nbsp;&nbsp;*uguaglianza-* espressione &nbsp;&nbsp;*and-Expression* **&** *Equality-Expression*
+*And-Expression*: &nbsp; &nbsp;uguaglianza *-espressione* &nbsp; &nbsp; *e-* **&** espressione *uguaglianza-* espressione
 
-*exclusive-or-Expression*: &nbsp;&nbsp;*and-Expression* &nbsp;&nbsp;espressione *OR esclusiva* **^** *and* -Expression
+*exclusive-or-* Expression &nbsp; &nbsp; *: and-Expression* &nbsp; &nbsp; *exclusive-or-* **^** Expression *and-Expression*
 
-*inclusive-or-Expression*: &nbsp;&nbsp;*exclusive-or-Expression* &nbsp;&nbsp;*inclusive-or-Expression* &#124; *exclusive-or* -Expression
+*inclusive-or-Expression*: &nbsp; &nbsp; *exclusive-or-Expression* &nbsp; &nbsp; *inclusive-or-Expression* &#124; *exclusive-or-* Expression
 
 Gli operandi degli operatori bit per bit devono avere tipi di dati integrali, ma i tipi possono essere diversi. Questi operatori eseguono le conversioni aritmetiche comuni; il tipo del risultato è il tipo degli operandi dopo la conversione.
 
@@ -63,7 +63,7 @@ n = i ^ j;
 
 L'operatore OR bit per bit inclusivo nel secondo esempio restituisce il valore 0xABCD (esadecimale), mentre l'operatore OR bit per bit esclusivo nel terzo esempio produce 0xCD (esadecimale).
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 I risultati dell'elaborazione bit per bit su Integer con segno sono definiti dall'implementazione, in base allo standard C ANSI. Per il compilatore Microsoft C le operazioni bit per bit su Integer con segno funzionano in modo analogo alle operazioni bit per bit sui valori interi senza segno. Ad esempio, `-16 & 99` può essere espresso in formato binario come
 
@@ -76,7 +76,7 @@ I risultati dell'elaborazione bit per bit su Integer con segno sono definiti dal
 
 Il risultato dell'operazione AND bit per bit è 96 decimale.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

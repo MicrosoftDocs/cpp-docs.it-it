@@ -1,5 +1,5 @@
 ---
-title: C++Build di rilascio-Visual Studio
+title: Build di versioni C++-Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -22,8 +22,8 @@ Una build di rilascio usa le ottimizzazioni. Quando si usano le ottimizzazioni p
 [Problemi comuni durante la creazione di una build di rilascio](common-problems-when-creating-a-release-build.md)<br/>
 [Correzione dei problemi della build di versione](fixing-release-build-problems.md)<br/>
 [Uso di VERIFY invece di ASSERT](using-verify-instead-of-assert.md)<br/>
-[Uso della compilazione di debug per il controllo della sovrascrittura di memoria](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[Procedura: Eseguire il debug di una build di versione](how-to-debug-a-release-build.md)<br/>
+[Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
+[Procedura: eseguire il debug di una build di rilascio](how-to-debug-a-release-build.md)<br/>
 [Controllo delle sovrascritture di memoria](checking-for-memory-overwrites.md)<br/>
 [Ottimizzazione del codice](optimizing-your-code.md)
 

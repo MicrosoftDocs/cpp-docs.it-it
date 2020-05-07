@@ -8,22 +8,22 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326027"
 ---
 # <a name="bitwise-shift-operators"></a>Operatori di spostamento bit per bit
 
-Gli operatori shift spostano il primo operando a sinistra (**&lt;&lt;**) o a destra (**>>**) del numero di posizioni specificato dal secondo operando.
+Gli operatori shift spostano il primo operando**&lt;** a sinistra ()**>>** o a destra () in base al numero di posizioni che il secondo operando specifica.
 
 ## <a name="syntax"></a>Sintassi
 
 *shift-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-espressione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cambio-espressione* ** &lt; ** *additiva-espressione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cambio-espressione* **>>** *additiva-espressione*
 
 Entrambi gli operandi devono essere valori integrali. Questi operatori eseguono le consuete conversioni aritmetiche; il tipo del risultato è il tipo dell'operando sinistro dopo la conversione.
 
