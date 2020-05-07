@@ -187,7 +187,7 @@ Riferimento a un `CString` oggetto contenente la password dell'utente.
 *dwFlags*<br/>
 Flag che controllano come analizzare l'URL. Può essere una combinazione dei valori seguenti:
 
-|valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ICU_DECODE|Converte le sequenze di escape% XX in caratteri.|
 |ICU_NO_ENCODE|Non convertire i caratteri non sicuri nella sequenza di escape.|
