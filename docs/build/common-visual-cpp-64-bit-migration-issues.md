@@ -20,15 +20,15 @@ ms.locfileid: "69493319"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemi comuni relativi alla migrazione di Visual C++ a 64 bit
 
-Quando si usa il compilatore C++ Microsoft (MSVC) per creare applicazioni da eseguire in un sistema operativo Windows a 64 bit, è necessario tenere presenti i seguenti problemi:
+Quando si usa il compilatore Microsoft C++ (MSVC) per creare applicazioni da eseguire in un sistema operativo Windows a 64 bit, è necessario tenere presenti i seguenti problemi:
 
-- Nei sistemi operativi Windows a 64 bit gli oggetti `int` e `long` sono valori a 32 bit. Per i programmi che si prevede di compilare per le piattaforme a 64 bit, assicurarsi di non assegnare puntatori alle variabili a 32 bit. Nelle piattaforme a 64 bit i puntatori sono valori a 64 bit e, se vengono assegnati a una variabile a 32 bit, il valore del puntatore verrà troncato.
+- Nei sistemi operativi Windows a 64 bit gli oggetti `int` e `long` sono valori a 32 bit.  Per i programmi che si prevede di compilare per le piattaforme a 64 bit, assicurarsi di non assegnare puntatori alle variabili a 32 bit. Nelle piattaforme a 64 bit i puntatori sono valori a 64 bit e, se vengono assegnati a una variabile a 32 bit, il valore del puntatore verrà troncato.
 
-- `size_t`, `time_t` e`ptrdiff_t` sono valori a 64 bit nei sistemi operativi Windows a 64 bit.
+- `size_t`, `time_t`e `ptrdiff_t` sono valori a 64 bit nei sistemi operativi Windows a 64 bit.
 
 - `time_t`è un valore a 32 bit nei sistemi operativi Windows a 32 bit in Visual Studio 2005 e versioni precedenti. `time_t` è ora un valore Integer a 64 bit per impostazione predefinita. Per ulteriori informazioni, vedere [gestione del tempo](../c-runtime-library/time-management.md).
 
-   È consigliabile controllare attentamente le parti di codice in cui un valore `int` viene elaborato come valore `size_t` o `time_t`. È possibile che il numero diventi maggiore di un numero a 32 bit e che i dati vengano troncati quando il numero viene riassegnato alla variabile `int`.
+   È consigliabile controllare attentamente le parti di codice in cui un valore `int` viene elaborato come valore `size_t` o `time_t`. È possibile che il numero diventi maggiore di un numero a 32 bit e che i dati vengano troncati quando il numero viene riassegnato alla variabile `int`. 
 
 Il modificatore `int` (formato esadecimale di `printf`) non funzionerà nel modo previsto nei sistemi operativi Windows a 64 bit. Infatti, avrà effetto solo sui primi 32 bit del valore passato.
 
@@ -42,7 +42,7 @@ Per altre informazioni, vedere:
 
 - [Opzioni del compilatore MSVC](reference/compiler-options.md)
 
-- [Suggerimenti per la migrazione](/windows/win32/WinProg64/migration-tips)
+- [Suggerimenti sulla migrazione](/windows/win32/WinProg64/migration-tips)
 
 ## <a name="see-also"></a>Vedere anche
 

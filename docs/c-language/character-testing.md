@@ -11,11 +11,11 @@ ms.locfileid: "70740092"
 ---
 # <a name="character-testing"></a>Test del carattere
 
-**ANSI 4.3.1** Set di caratteri per cui è stato eseguito il test dalle funzioni `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint` e `isupper`
+**ANSI 4.3.1** Set di caratteri testati per dalle funzioni `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint`e `isupper`
 
 Nell'elenco seguente vengono descritte queste funzioni implementate dal compilatore Microsoft C.
 
-|Funzione|Test per|
+|Function|Test per|
 |--------------|---------------|
 |`isalnum`|Caratteri 0-9, A-Z, a-z ASCII 48-57, 65-90, 97-122|
 |`isalpha`|Caratteri A-Z, a-z ASCII 65-90, 97-122|

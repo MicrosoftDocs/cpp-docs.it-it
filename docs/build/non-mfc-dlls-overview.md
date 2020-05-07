@@ -1,5 +1,5 @@
 ---
-title: 'DLL non MFC: Panoramica'
+title: 'DLL non MFC: cenni preliminari'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
@@ -12,15 +12,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493167"
 ---
-# <a name="non-mfc-dlls-overview"></a>DLL non MFC: Panoramica
+# <a name="non-mfc-dlls-overview"></a>DLL non MFC: cenni preliminari
 
 Una DLL non MFC è una DLL che non Usa MFC internamente e le funzioni esportate nella DLL possono essere chiamate da file eseguibili MFC o non MFC. Le funzioni vengono in genere esportate da una DLL non MFC usando l'interfaccia C standard.
 
 Per ulteriori informazioni sulle dll non MFC, vedere [librerie a collegamento dinamico](/windows/win32/dlls/dynamic-link-libraries) nella Windows SDK.
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
-- [Procedura dettagliata: Creazione e utilizzo di una libreria a collegamento dinamico](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [Procedura dettagliata: creazione e utilizzo di una libreria a collegamento dinamico](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
 - [Esportazione da una DLL](exporting-from-a-dll.md)
 
@@ -34,7 +34,7 @@ Per ulteriori informazioni sulle dll non MFC, vedere [librerie a collegamento di
 
 - [DLL MFC regolari collegate a MFC in modo dinamico](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC (DLL di estensione): Panoramica](extension-dlls-overview.md)
+- [Panoramica delle DLL MFC di estensione](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Vedere anche
 

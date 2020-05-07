@@ -51,9 +51,9 @@ if (hDLL != NULL)
 
 Il modo in cui si specifica la funzione desiderata quando si chiama **GetProcAddress** dipende dalla modalità di compilazione della dll.
 
-È possibile ottenere l'ordinale di esportazione solo se la DLL a cui si sta collegando viene compilata con un file di definizione del modulo (con estensione def) e se i numeri ordinali sono elencati con le funzioni nella sezione EXPORTS del file def della dll. La chiamata di **GetProcAddress** con un ordinale di esportazione, anziché il nome della funzione, è leggermente più veloce se la dll include molte funzioni esportate poiché gli ordinali di esportazione vengono usati come indici nella tabella di esportazione della dll. Con un ordinale di esportazione, **GetProcAddress** può individuare la funzione direttamente anziché confrontare il nome specificato con i nomi di funzione nella tabella di esportazione della dll. Tuttavia, è necessario chiamare **GetProcAddress** con un ordinale di esportazione solo se si ha il controllo sull'assegnazione degli ordinali alle funzioni esportate nel file def.
+È possibile ottenere l'ordinale di esportazione solo se la DLL a cui si sta collegando viene compilata con un file di definizione del modulo (con estensione def) e se i numeri ordinali sono elencati con le funzioni nella sezione **exports** del file def della dll. La chiamata di **GetProcAddress** con un ordinale di esportazione, anziché il nome della funzione, è leggermente più veloce se la dll include molte funzioni esportate poiché gli ordinali di esportazione vengono usati come indici nella tabella di esportazione della dll. Con un ordinale di esportazione, **GetProcAddress** può individuare la funzione direttamente anziché confrontare il nome specificato con i nomi di funzione nella tabella di esportazione della dll. Tuttavia, è necessario chiamare **GetProcAddress** con un ordinale di esportazione solo se si ha il controllo sull'assegnazione degli ordinali alle funzioni esportate nel file def.
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Collegare un eseguibile a una DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 

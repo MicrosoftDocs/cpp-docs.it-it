@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Compilazione di applicazioni isolate per l'utilizzo di componenti COM"
+title: "Procedura: compilare applicazioni isolate per l'utilizzo di componenti COM"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
@@ -11,7 +11,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493241"
 ---
-# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Procedura: Compilazione di applicazioni isolate per l'utilizzo di componenti COM
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Procedura: compilare applicazioni isolate per l'utilizzo di componenti COM
 
 Le applicazioni isolate sono applicazioni con manifesti integrati nel programma. È possibile creare applicazioni isolate per utilizzare i componenti COM.
 
@@ -31,7 +31,7 @@ Le applicazioni isolate sono applicazioni con manifesti integrati nel programma.
 
 1. Espandere il nodo **proprietà di configurazione** , quindi espandere il nodo **strumento Manifesto** .
 
-1. Selezionare la pagina delle proprietà **input e output** , quindi impostare la proprietà **manifesto** di incorporamento su **Sì**.
+1. Selezionare la pagina delle proprietà **input e output** , quindi impostare la proprietà **manifesto di incorporamento** su **Sì**.
 
 1. Fare clic su **OK**.
 

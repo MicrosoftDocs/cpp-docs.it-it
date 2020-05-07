@@ -43,7 +43,7 @@ La specifica ARMv8 descrive nuovi opcode Helper crittografici e CRC facoltativi 
 
 Come per la versione ARM32 di Windows, in ARM64 Windows viene eseguito in modalità little-endian. Il cambio di un tipo di impostazione è difficile da raggiungere senza il supporto della modalità kernel in AArch64, quindi è più semplice da applicare.
 
-## <a name="alignment"></a>Allineamento
+## <a name="alignment"></a>Alignment
 
 Windows in esecuzione su ARM64 consente all'hardware della CPU di gestire in modo trasparente gli accessi non allineati. In un miglioramento di AArch32, questo supporto funziona ora anche per tutti gli accessi di tipo Integer (inclusi gli accessi a più parole) e per gli accessi a virgola mobile.
 
@@ -71,14 +71,14 @@ Allineamento del layout predefinito per gli elementi globali e statici:
 
 L'architettura AArch64 supporta i registri di 32 Integer:
 
-| Registrazione | Volatile? | Role |
+| Register | Volatile? | Ruolo |
 | - | - | - |
 | X0 | Volatile | Registro parametri/Scratch 1, registro risultati |
-| x1-x7 | Volatile | Registro parametri/Scratch 2-8 |
-| x8-x15 | Volatile | Registri Scratch |
+| X1-X7 | Volatile | Registro parametri/Scratch 2-8 |
+| X8-x15 | Volatile | Registri Scratch |
 | x16-x17 | Volatile | Registri temporanei di chiamata intra-routine |
 | x18 | Non volatile | Registro della piattaforma: in modalità kernel punta a KPCR per il processore corrente; in modalità utente punta a TEB |
-| x19-x28 | Non volatile | Registri Scratch |
+| x19-X28 | Non volatile | Registri Scratch |
 | x29/FP | Non volatile | Puntatori ai frame |
 | X30/LR | Non volatile | Registri di collegamento |
 
@@ -94,30 +94,30 @@ Il puntatore a frame (x29) è necessario per la compatibilità con Fast Stack Wa
 
 L'architettura AArch64 supporta anche i registri a virgola mobile/SIMD 32, riepilogati di seguito:
 
-| Registrazione | Volatile? | Role |
+| Register | Volatile? | Ruolo |
 | - | - | - |
 | V0 | Volatile | Registro parametri/Scratch 1, registro risultati |
 | V1-V7 | Volatile | Registri parametri/Scratch 2-8 |
 | V8-versione 15 | Non volatile | Registri Scratch (solo i bit 64 Bassi sono non volatili) |
-| v16-v31 | Volatile | Registri Scratch |
+| V16-V31 | Volatile | Registri Scratch |
 
 È possibile accedere a ogni registro come valore a 128 bit completo (tramite V0-V31 o Q0-q31). È possibile accedervi come valore a 64 bit (tramite D0-D31), come valore a 32 bit (tramite S0-S31), come valore a 16 bit (tramite H0-H31) o come valore a 8 bit (tramite B0-B31). Gli accessi di dimensioni inferiori a 128 bit accedono solo ai bit inferiori del registro completo a 128 bit. Lasciano invariati i restanti bit se non diversamente specificato. (AArch64 è diverso da AArch32, dove i registri più piccoli venivano compressi sopra i registri più grandi).
 
 Il registro di controllo a virgola mobile (FPCR) ha determinati requisiti per i vari campi al suo interno:
 
-| BITS | Significato | Volatile? | Role |
+| BITS | Significato | Volatile? | Ruolo |
 | - | - | - | - |
 | 26 | AHP | Non volatile | Controllo alternativo a metà precisione. |
 | 25 | DN | Non volatile | Controllo modalità NaN predefinito. |
 | 24 | FZ | Non volatile | Controllo modalità flush-to-zero. |
 | 23-22 | RMode | Non volatile | Controllo della modalità di arrotondamento. |
-| 15, 12-8 | IDE/IXE/etc | Non volatile | Bit di abilitazione della trap delle eccezioni. deve essere sempre 0. |
+| 15, 12-8 | IDE/IXE/ecc. | Non volatile | Bit di abilitazione della trap delle eccezioni. deve essere sempre 0. |
 
 ## <a name="system-registers"></a>Registri di sistema
 
 Analogamente a AArch32, la specifica AArch64 fornisce tre registri "ID thread" controllati dal sistema:
 
-| Registrazione | Role |
+| Register | Ruolo |
 | - | - |
 | TPIDR_EL0 | Riservato. |
 | TPIDRRO_EL0 | Contiene il numero di CPU per il processore corrente. |
@@ -145,7 +145,7 @@ Questa fase viene eseguita esattamente una volta, prima dell'inizio dell'elabora
 
 Per ogni argomento nell'elenco, viene applicata la prima regola di corrispondenza dall'elenco seguente. Se nessuna regola corrisponde, l'argomento viene usato senza modifiche.
 
-1. Se il tipo di argomento è un tipo composito le cui dimensioni non possono essere determinate in modo statico dal chiamante e dal chiamato, l'argomento viene copiato in memoria e l'argomento viene sostituito da un puntatore alla copia. Non esistono tipi di questo tipo in C/C++ , ma sono presenti in altre lingue o in estensioni di linguaggio.
+1. Se il tipo di argomento è un tipo composito le cui dimensioni non possono essere determinate in modo statico dal chiamante e dal chiamato, l'argomento viene copiato in memoria e l'argomento viene sostituito da un puntatore alla copia. In C/C++ non sono presenti tipi di questo tipo, ma esistono in altre lingue o in estensioni di linguaggio.
 
 1. Se il tipo di argomento è un HFA o un HVA, l'argomento viene usato senza modifiche.
 
@@ -157,7 +157,7 @@ Per ogni argomento nell'elenco, viene applicata la prima regola di corrispondenz
 
 Per ogni argomento nell'elenco, le regole seguenti vengono applicate a sua volta fino a quando l'argomento non è stato allocato. Quando un argomento viene assegnato a un registro, i bit inutilizzati nel registro hanno un valore non specificato. Se un argomento viene assegnato a uno slot dello stack, i byte di riempimento inutilizzati hanno un valore non specificato.
 
-1. Se l'argomento è un tipo a virgola mobile a precisione doppia o a virgola mobile e precisione doppia, mentre il valore di NSRN è minore di 8, l'argomento viene allocato ai bit meno significativi del Registro v\[NSRN]. Il NSRN viene incrementato di uno. L'argomento è ora allocato.
+1. Se l'argomento è un tipo a virgola mobile a precisione doppia o a virgola mobile e precisione doppia, mentre il valore di NSRN è minore di 8, l'argomento viene allocato ai bit meno significativi di Register v\[NSRN]. Il NSRN viene incrementato di uno. L'argomento è ora allocato.
 
 1. Se l'argomento è un HFA o un HVA e sono presenti registri SIMD e a virgola mobile sufficienti e non allocati (NSRN + numero di membri ≤ 8), l'argomento viene allocato a SIMD e ai registri a virgola mobile, un registro per ogni membro di HFA o HVA. Il valore di NSRN viene incrementato in base al numero di registri utilizzati. L'argomento è ora allocato.
 
@@ -175,7 +175,7 @@ Per ogni argomento nell'elenco, le regole seguenti vengono applicate a sua volta
 
 1. Se l'argomento è un tipo integrale, le dimensioni dell'argomento sono pari a 16 e il valore di NGRN è minore di 7, l'argomento viene copiato in x\[NGRN] e x\[NGRN + 1]. x\[NGRN] deve contenere la doppia parola doppia con indirizzo inferiore della rappresentazione di memoria dell'argomento. Il NGRN viene incrementato di due. L'argomento è ora allocato.
 
-1. Se l'argomento è un tipo composito e la dimensione in parole doppie dell'argomento non è maggiore di 8 meno NGRN, l'argomento viene copiato in registri di utilizzo generico consecutivi, a partire da x\[NGRN]. L'argomento viene passato come se fosse stato caricato nei registri da un indirizzo allineato a doppia parola, con una sequenza appropriata di istruzioni LDR che caricano registri consecutivi dalla memoria. Il contenuto di tutte le parti non utilizzate dei registri non è specificato da questo standard. Il valore di NGRN viene incrementato in base al numero di registri utilizzati. L'argomento è ora allocato.
+1. Se l'argomento è un tipo composito e la dimensione in parole doppie dell'argomento non è maggiore di 8 meno NGRN, l'argomento viene copiato in registri consecutivi di utilizzo generico, a partire da x\[NGRN]. L'argomento viene passato come se fosse stato caricato nei registri da un indirizzo allineato a doppia parola, con una sequenza appropriata di istruzioni LDR che caricano registri consecutivi dalla memoria. Il contenuto di tutte le parti non utilizzate dei registri non è specificato da questo standard. Il valore di NGRN viene incrementato in base al numero di registri utilizzati. L'argomento è ora allocato.
 
 1. NGRN è impostato su 8.
 
@@ -225,7 +225,7 @@ Tutti gli altri tipi utilizzano questa convenzione:
 
 Dopo l'ABI in base a ARM, lo stack deve rimanere sempre allineato a 16 byte. AArch64 contiene una funzionalità hardware che genera errori di allineamento dello stack ogni volta che SP non è allineato a 16 byte e viene eseguito un caricamento o un archivio relativo a SP. Windows viene eseguito con questa funzionalità abilitata in qualsiasi momento.
 
-Le funzioni che allocano 4K o più di uno stack devono garantire che ogni pagina precedente alla pagina finale venga toccata nell'ordine. Questa azione garantisce che nessun codice possa "saltare" le pagine di Guard utilizzate da Windows per espandere lo stack. In genere il tocco viene eseguito dall'helper `__chkstk`, che ha una convenzione di chiamata personalizzata che supera l'allocazione totale dello stack divisa per 16 in x15.
+Le funzioni che allocano 4K o più di uno stack devono garantire che ogni pagina precedente alla pagina finale venga toccata nell'ordine. Questa azione garantisce che nessun codice possa "saltare" le pagine di Guard utilizzate da Windows per espandere lo stack. In genere il tocco viene eseguito dall' `__chkstk` helper, che dispone di una convenzione di chiamata personalizzata che supera l'allocazione totale dello stack divisa per 16 in x15.
 
 ## <a name="red-zone"></a>Zona rossa
 
@@ -245,13 +245,13 @@ La rimozione durante la gestione delle eccezioni è assistita attraverso l'uso d
 
 Il interfaccia EABI ARM specifica anche un modello di rimozione delle eccezioni che usa i codici di rimozione. Tuttavia, la specifica presentata non è sufficiente per la rimozione in Windows, che deve gestire i casi in cui il PC si trova al centro di un prologo o di un epilogo della funzione.
 
-Il codice generato in modo dinamico deve essere descritto con le tabelle di funzioni dinamiche tramite `RtlAddFunctionTable` e funzioni associate, in modo che il codice generato possa partecipare alla gestione delle eccezioni.
+Il codice generato in modo dinamico deve essere descritto con le tabelle di funzioni `RtlAddFunctionTable` dinamiche tramite le funzioni associate, in modo che il codice generato possa partecipare alla gestione delle eccezioni.
 
 ## <a name="cycle-counter"></a>Contatore cicli
 
-Tutte le CPU ARMv8 sono necessarie per supportare un registro del contatore di cicli, un registro a 64 bit che Windows configura per essere leggibile a qualsiasi livello di eccezione, inclusa la modalità utente. È possibile accedervi tramite lo speciale registro di PMCCNTR_EL0, usando il codice operativo MSR nel codice dell'assembly o il `_ReadStatusReg` intrinsecoC++ in C/code.
+Tutte le CPU ARMv8 sono necessarie per supportare un registro del contatore di cicli, un registro a 64 bit che Windows configura per essere leggibile a qualsiasi livello di eccezione, inclusa la modalità utente. È possibile accedervi tramite lo speciale registro di PMCCNTR_EL0, usando il codice operativo MSR nel codice dell'assembly `_ReadStatusReg` o l'intrinseco nel codice C/C++.
 
-Il contatore di cicli è un vero contatore di cicli, non un orologio a parete. La frequenza di conteggio varia in funzione della frequenza del processore. Se si ritiene che sia necessario essere a conoscenza della frequenza del contatore del ciclo, non è consigliabile utilizzare il contatore del ciclo. Si vuole invece misurare il tempo di clock, per cui è necessario usare `QueryPerformanceCounter`.
+Il contatore di cicli è un vero contatore di cicli, non un orologio a parete. La frequenza di conteggio varia in funzione della frequenza del processore. Se si ritiene che sia necessario essere a conoscenza della frequenza del contatore del ciclo, non è consigliabile utilizzare il contatore del ciclo. Si desidera invece misurare il tempo di clock, per il quale è necessario utilizzare `QueryPerformanceCounter`.
 
 ## <a name="see-also"></a>Vedere anche
 

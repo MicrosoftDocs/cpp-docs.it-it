@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151364"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825691"
 ---
 # <a name="structure-and-union-members"></a>Membri di struttura e di unione
 
 Un'"espressione di selezione dei membri" si riferisce ai membri di strutture e unioni. Un'espressione di questo tipo ha il valore e il tipo del membro selezionato.
 
-> *postfix-expression* **.** *identifier*
-> *postfix-expression* **->** *identifier*
+> *suffisso-espressione* **.** *identificatore*\
+> *suffisso-identificatore di espressione* **->** *identifier*
 
 In questo elenco vengono descritti i due formati delle espressioni di selezione dei membri:
 
@@ -33,7 +33,7 @@ In questo elenco vengono descritti i due formati delle espressioni di selezione 
 
 I due formati delle espressioni di selezione dei membri hanno effetti simili.
 
-Infatti, un'espressione che usa l'operatore di selezione dei membri (**->**) è una versione abbreviata di un'espressione che usa il punto (**.**) se l'espressione prima del punto è l'operatore di riferimento indiretto (<strong>\*</strong>) applicato a un valore puntatore. Quindi,
+Infatti, un'espressione che interessa l'operatore di selezione dei membri (**->**) è una versione abbreviata di un'espressione che utilizza il punto (**.**) se l'espressione prima del periodo è costituita dall'operatore<strong>\*</strong>di riferimento indiretto () applicato a un valore del puntatore. Di conseguenza:
 
 ```cpp
 expression->identifier
@@ -49,7 +49,7 @@ quando *expression* è un valore puntatore.
 
 ## <a name="examples"></a>Esempi
 
-Negli esempi seguenti viene fatto riferimento a questa dichiarazione della struttura. Per informazioni sull'operatore di riferimento indiretto (<strong>\*</strong>) usato in questi esempi, vedere [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md).
+Negli esempi seguenti viene fatto riferimento a questa dichiarazione della struttura. Per informazioni sull'operatore di riferimento indiretto (<strong>\*</strong>) usato in questi esempi, vedere [operatori di riferimento indiretto e address-of](../c-language/indirection-and-address-of-operators.md).
 
 ```
 struct pair
@@ -72,7 +72,7 @@ Nell'esempio precedente, l'indirizzo della struttura `item` viene assegnato al m
 (item.sp)->a = 24;
 ```
 
-In questo esempio, l'espressione puntatore `item.sp` viene usata con l'operatore di selezione dei membri (**->**) per assegnare un valore al membro `a`.
+In questo esempio, l'espressione `item.sp` puntatore viene utilizzata con l'operatore di selezione dei membri**->**() per assegnare un valore al membro `a`.
 
 ```
 list[8].b = 12;

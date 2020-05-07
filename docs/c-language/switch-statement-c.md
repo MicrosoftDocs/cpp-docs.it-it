@@ -11,12 +11,12 @@ no-loc:
 - case
 - default
 - break
-ms.openlocfilehash: 5858447602a28dcc5573aa3138e869d106b5aa23
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: eb18b6244318b595e67cc45f99dfcde314866f55
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587367"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825678"
 ---
 # <a name="switch-statement-c"></a>`switch`Istruzione (C)
 
@@ -24,11 +24,11 @@ Le __`switch`__ istruzioni __`case`__ e consentono di controllare le complesse o
 
 ## <a name="syntax"></a>Sintassi
 
-> *`selection-statement`*:<br/>
+> *`selection-statement`*:\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
 
-> *`labeled-statement`*:<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*<br/>
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Osservazioni

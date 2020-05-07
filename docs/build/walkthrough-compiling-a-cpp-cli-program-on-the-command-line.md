@@ -1,39 +1,39 @@
 ---
-title: 'Procedura dettagliata: Compilazione di un c++ /CLI programma della riga di comando nella riga di comando'
+title: 'Procedura dettagliata: Compilazione di un programma in C++/CLI dalla riga di comando'
 ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
 ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64877460"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un c++ /CLI programma della riga di comando nella riga di comando
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un programma in C++/CLI dalla riga di comando
 
-È possibile creare programmi Visual C++ destinati a Common Language Runtime (CLR), che usano .NET Framework e compilarli dalla riga di comando. Visual C++ supporta il linguaggio di programmazione C++/CLI, che offre tipi e operatori aggiuntivi per indirizzare il lavoro al modello di programmazione .NET. Per informazioni generali su di C++linguaggio /CLI, vedere [programmazione con .NET C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+È possibile creare programmi Visual C++ destinati a Common Language Runtime (CLR), che usano .NET Framework e compilarli dalla riga di comando. Visual C++ supporta il linguaggio di programmazione C++/CLI, che offre tipi e operatori aggiuntivi per indirizzare il lavoro al modello di programmazione .NET. Per informazioni generali sul linguaggio C++/CLI, vedere [programmazione .NET con c++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-Questa procedura dettagliata illustra come usare un editor di testo per creare un programma C++/CLI di base, quindi compilarlo nella riga di comando. È possibile usare il proprio programma C++/CLI anziché digitare quello riportato nell'esempio oppure è possibile usare esempi di codice C++/CLI di un altro articolo della Guida. Questa tecnica è utile per la compilazione e test di piccoli moduli che non dispongono di alcun elemento dell'interfaccia utente.)
+Questa procedura dettagliata illustra come usare un editor di testo per creare un programma C++/CLI di base, quindi compilarlo nella riga di comando. È possibile usare il proprio programma C++/CLI anziché digitare quello riportato nell'esempio oppure è possibile usare esempi di codice C++/CLI di un altro articolo della Guida. Questa tecnica è utile per la compilazione e il test di piccoli moduli senza elementi dell'interfaccia utente.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Comprendere i concetti fondamentali del linguaggio C++.
+Si conoscono le nozioni di base del linguaggio C++.
 
 ## <a name="compiling-a-ccli-program"></a>Compilazione di un programma C++/CLI
 
 Nei passaggi seguenti viene illustrato come compilare un'applicazione console C++/CLI che usa le classi .NET Framework.
 
-Per abilitare la compilazione per C++/CLI, è necessario usare il [/clr](reference/clr-common-language-runtime-compilation.md) l'opzione del compilatore. Il compilatore MSVC genera un file .exe che contiene codice MSIL, o una combinazione di codice MSIL e codice nativo e i collegamenti alle librerie .NET Framework richieste.
+Per abilitare la compilazione per C++/CLI, è necessario usare l'opzione del compilatore [/CLR](reference/clr-common-language-runtime-compilation.md) . Il compilatore MSVC genera un file con estensione exe che contiene codice MSIL, o codice MSIL misto e codice nativo, e collega alle librerie .NET Framework richieste.
 
 ### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Per compilare un'applicazione C++/CLI dalla riga di comando
 
-1. Aprire una **prompt dei comandi sviluppatore** finestra. Per istruzioni specifiche, vedere [per aprire una finestra del prompt dei comandi per gli sviluppatori](building-on-the-command-line.md#developer_command_prompt).
+1. Aprire una finestra di **prompt dei comandi per gli sviluppatori** . Per istruzioni specifiche, vedere [per aprire una finestra del prompt dei comandi](building-on-the-command-line.md#developer_command_prompt)per gli sviluppatori.
 
-   Per la corretta compilazione del codice, a seconda del sistema operativo del computer e della configurazione, potrebbero essere necessarie le credenziali di amministratore. Per eseguire il prompt dei comandi come amministratore, fare doppio clic per aprire il menu di scelta rapida per il prompt dei comandi e quindi scegliere **altre** > **Esegui come amministratore**.
+   Per la corretta compilazione del codice, a seconda del sistema operativo del computer e della configurazione, potrebbero essere necessarie le credenziali di amministratore. Per eseguire la finestra del prompt dei comandi come amministratore, fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida per il prompt dei comandi, quindi scegliere **altro** > **Esegui come amministratore**.
 
 1. Al prompt dei comandi digitare `notepad basicclr.cpp`.
 
-   Scegli **Sì** quando viene chiesto di creare un file.
+   Scegliere **Sì** quando viene richiesto di creare un file.
 
 1. Nel Blocco note, inserire le righe seguenti:
 
@@ -44,9 +44,9 @@ Per abilitare la compilazione per C++/CLI, è necessario usare il [/clr](referen
    }
    ```
 
-1. Nella barra dei menu, scegliere **File** > **salvare**.
+1. Nella barra dei menu scegliere **file** > **Salva**.
 
-   È stato creato un file di origine Visual C++ che usa una classe .NET Framework (<xref:System.Console>) nel <xref:System> dello spazio dei nomi.
+   È stato creato un file di origine Visual C++ che usa una classe .NET Framework<xref:System.Console>() nello <xref:System> spazio dei nomi.
 
 1. Al prompt dei comandi digitare `cl /clr basicclr.cpp`. Il compilatore cl.exe compilerà il codice sorgente in un file .obj che contiene MSIL, quindi eseguirà il linker per generare un programma eseguibile denominato basicclr.exe.
 
@@ -60,6 +60,6 @@ Per abilitare la compilazione per C++/CLI, è necessario usare il [/clr](referen
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Progetti e sistemi di compilazione](projects-and-build-systems-cpp.md)<br/>
 [Opzioni del compilatore MSVC](reference/compiler-options.md)

@@ -1,5 +1,5 @@
 ---
-title: Creare C/C++ dll in Visual Studio
+title: Creare DLL C/C++ in Visual Studio
 description: Panoramica dei motivi e della creazione e dell'uso di dll con C++ in Visual Studio.
 ms.date: 01/27/2020
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/16/2020
 ms.locfileid: "79417355"
 ---
-# <a name="create-cc-dlls-in-visual-studio"></a>Creare C/C++ dll in Visual Studio
+# <a name="create-cc-dlls-in-visual-studio"></a>Creare DLL C/C++ in Visual Studio
 
 In Windows una libreria a collegamento dinamico (DLL) è un tipo di file eseguibile che funge da libreria condivisa di funzioni e risorse. Il collegamento dinamico è una funzionalità del sistema operativo. Consente a un eseguibile di chiamare funzioni o utilizzare risorse archiviate in un file separato. Queste funzioni e risorse possono essere compilate e distribuite separatamente dagli eseguibili che le usano.
 
@@ -24,7 +24,7 @@ Una DLL non è un file eseguibile autonomo. Le dll vengono eseguite nel contesto
 
 ## <a name="differences-between-dynamic-linking-and-static-linking"></a>Differenze tra il collegamento dinamico e il collegamento statico
 
-Il collegamento statico copia tutto il codice oggetto in una libreria statica nei file eseguibili che lo usano quando vengono compilati. Il collegamento dinamico include solo le informazioni necessarie a Windows in fase di esecuzione per individuare e caricare la DLL che contiene un elemento di dati o una funzione. Quando si crea una DLL, si crea anche una libreria di importazione che contiene queste informazioni. Quando si compila un file eseguibile che chiama la DLL, il linker usa i simboli esportati nella libreria di importazione per archiviare queste informazioni per il caricatore di Windows. Quando il caricatore carica una DLL, la DLL viene mappata allo spazio di memoria dell'applicazione. Se presente, viene chiamata una funzione speciale nella DLL, `DllMain`, per eseguire qualsiasi inizializzazione richiesta dalla DLL.
+Il collegamento statico copia tutto il codice oggetto in una libreria statica nei file eseguibili che lo usano quando vengono compilati. Il collegamento dinamico include solo le informazioni necessarie a Windows in fase di esecuzione per individuare e caricare la DLL che contiene un elemento di dati o una funzione. Quando si crea una DLL, si crea anche una libreria di importazione che contiene queste informazioni. Quando si compila un file eseguibile che chiama la DLL, il linker usa i simboli esportati nella libreria di importazione per archiviare queste informazioni per il caricatore di Windows. Quando il caricatore carica una DLL, la DLL viene mappata allo spazio di memoria dell'applicazione. Se presente, viene chiamata una speciale funzione nella DLL `DllMain`,, per eseguire qualsiasi inizializzazione richiesta dalla dll.
 
 <a name="differences-between-applications-and-dlls"></a>
 
@@ -62,9 +62,9 @@ Un potenziale svantaggio nell'uso delle dll è che l'applicazione non è indipen
 
 ## <a name="more-information-on-how-to-create-and-use-dlls"></a>Ulteriori informazioni su come creare e utilizzare le dll
 
-Gli articoli seguenti forniscono informazioni dettagliate su come creare C/C++ dll in Visual Studio.
+Gli articoli seguenti forniscono informazioni dettagliate su come creare DLL C/C++ in Visual Studio.
 
-[Procedura dettagliata: creazione e utilizzo di una libreria aC++collegamento dinamico ()](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)\
+[Procedura dettagliata: creazione e utilizzo di una libreria a collegamento dinamico (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)\
 Viene illustrato come creare e utilizzare una DLL in Visual Studio.
 
 [Tipi di dll](kinds-of-dlls.md)\
@@ -79,37 +79,37 @@ Viene descritto il collegamento esplicito e implicito a una DLL.
 [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)\
 Viene illustrato il codice di inizializzazione DLL che deve essere eseguito quando la DLL viene caricata.
 
-[Dll e comportamento C++ della libreria in fase di esecuzione visuale](run-time-library-behavior.md)\
+[Dll e Visual C++ comportamento della libreria di runtime](run-time-library-behavior.md)\
 Descrive la sequenza di avvio della DLL della libreria di Runtime.
 
 [LoadLibrary e AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)\
-Viene illustrato l'utilizzo di `LoadLibrary` e `AfxLoadLibrary` per il collegamento esplicito a una DLL in fase di esecuzione.
+Viene illustrato `LoadLibrary` l' `AfxLoadLibrary` utilizzo di e per il collegamento esplicito a una dll in fase di esecuzione.
 
-\ [GetProcAddress](getprocaddress.md)
-Viene illustrato l'utilizzo di `GetProcAddress` per ottenere l'indirizzo di una funzione esportata nella DLL.
+[GetProcAddress](getprocaddress.md)\
+Viene illustrato `GetProcAddress` l'utilizzo di per ottenere l'indirizzo di una funzione esportata nella dll.
 
-\ [FreeLibrary e AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
-Viene illustrato l'utilizzo di `FreeLibrary` e `AfxFreeLibrary` quando il modulo DLL non è più necessario.
+[FreeLibrary e AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)\
+Viene illustrato `FreeLibrary` l' `AfxFreeLibrary` utilizzo di e quando il modulo dll non è più necessario.
 
-\ dell' [ordine di ricerca della libreria a collegamento dinamico](/windows/win32/Dlls/dynamic-link-library-search-order)
+[Ordine di ricerca della libreria a collegamento dinamico](/windows/win32/Dlls/dynamic-link-library-search-order)\
 Descrive il percorso di ricerca usato dal sistema operativo Windows per individuare una DLL nel sistema.
 
-[Stati dei moduli di una DLL MFC normale collegata a mfc](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)\
+[Stati dei moduli di una DLL MFC normale collegata a MFC in modo dinamico](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)\
 Descrive gli Stati dei moduli di una DLL MFC normale collegata a MFC in modo dinamico.
 
-[Dll dell'estensione MFC](extension-dlls-overview.md)\
+[Dll estensione MFC](extension-dlls-overview.md)\
 Vengono illustrate le dll che in genere implementano classi riutilizzabili derivate dalle classi MFC esistenti.
 
 [Creazione di una DLL di sole risorse](creating-a-resource-only-dll.md)\
 Viene illustrata una DLL di sole risorse, ovvero che contiene unicamente delle risorse, come icone, bitmap, stringhe e finestre di dialogo.
 
-[Risorse localizzate in applicazioni MFC: dll Satellite](localized-resources-in-mfc-applications-satellite-dlls.md)\
+[Risorse localizzate in applicazioni MFC: dll satellite](localized-resources-in-mfc-applications-satellite-dlls.md)\
 Viene descritto un supporto avanzato per le DLL satellite, una funzionalità che aiuta a creare applicazioni localizzate in più lingue.
 
-[Importazione ed esportazione di](importing-and-exporting.md)\
+[Importazione ed esportazione](importing-and-exporting.md)\
 Viene descritto come importare simboli pubblici in un'applicazione o come esportare funzioni da una DLL.
 
-[Tecnologia Active e dll](active-technology-and-dlls.md)\
+[Tecnologia e dll attive](active-technology-and-dlls.md)\
 Permette l'implementazione di server oggetti in una DLL.
 
 [Automazione in una DLL](automation-in-a-dll.md)\

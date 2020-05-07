@@ -7,24 +7,24 @@ helpviewer_keywords:
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
 ms.openlocfilehash: dedc832d6726dccf8c0c2e88f9f4d5c67590c1c2
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220925"
 ---
 # <a name="automation-in-a-dll"></a>Automazione in una DLL
 
-Quando si sceglie l'opzione di automazione nella creazione guidata DLL MFC, la procedura guidata offre i seguenti elementi:
+Quando si sceglie l'opzione automazione nella creazione guidata DLL MFC, la procedura guidata offre le funzionalità seguenti:
 
-- Un linguaggio di descrizione oggetto starter (. File ODL)
+- Linguaggio di descrizione dell'oggetto iniziale (. (FAD) file
 
-- Una direttiva include nel file stdafx.
+- Una direttiva include nel file STDAFX. h per AFXOLE. h
 
-- Un'implementazione del `DllGetClassObject` funzione che chiama il **AfxDllGetClassObject** (funzione)
+- Implementazione della `DllGetClassObject` funzione, che chiama la funzione **AfxDllGetClassObject**
 
-- Un'implementazione del `DllCanUnloadNow` funzione che chiama il **AfxDllCanUnloadNow** (funzione)
+- Implementazione della `DllCanUnloadNow` funzione, che chiama la funzione **AfxDllCanUnloadNow**
 
-- Un'implementazione del `DllRegisterServer` funzione che chiama il [COleObjectFactory:: UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) (funzione)
+- Implementazione della `DllRegisterServer` funzione, che chiama la funzione [COleObjectFactory:: UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 

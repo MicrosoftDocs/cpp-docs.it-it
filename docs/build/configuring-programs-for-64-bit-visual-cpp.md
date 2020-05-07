@@ -1,5 +1,5 @@
 ---
-title: Configurare C++ progetti per destinazioni x64 a 64 bit
+title: Configurare progetti C++ per destinazioni x64 a 64 bit
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -14,25 +14,25 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493285"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurare C++ progetti per destinazioni x64 a 64 bit
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurare progetti C++ per destinazioni x64 a 64 bit
 
-Questa sezione contiene argomenti relativi all'hardware x64 a 64 bit con gli strumenti di C++ compilazione visivi.
+Questa sezione contiene argomenti relativi all'hardware x64 a 64 bit con gli strumenti di compilazione Visual C++.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Procedura: Configurare i progetti Visual C++ per piattaforme x64 a 64 bit](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Procedura: Abilitare un set di strumenti MSVC a 64 bit e x64 nella riga di comando](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Procedura: abilitare un set di strumenti MSVC ospitato da x64 a 64 bit nella riga di comando](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Problemi comuni relativi alla migrazione di Visual C++ a 64 bit](common-visual-cpp-64-bit-migration-issues.md)
 
-- [Convenzioni del software x64](x64-software-conventions.md)
+- [convenzioni software x64](x64-software-conventions.md)
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 [.NET Framework applicazioni a 64 bit](/dotnet/framework/64-bit-apps)
 
-[align](../cpp/align-cpp.md)
+[allineare](../cpp/align-cpp.md)
 
 [/clr (compilazione Common Language Runtime)](reference/clr-common-language-runtime-compilation.md)
 
@@ -42,7 +42,7 @@ Questa sezione contiene argomenti relativi all'hardware x64 a 64 bit con gli str
 
 [MASM per x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)
 
-[Elenco intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
+[Elenco oggetti intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
 ## <a name="see-also"></a>Vedere anche
 

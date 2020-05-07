@@ -6,14 +6,14 @@ helpviewer_keywords:
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400520"
 ---
 # <a name="c-integer-constants"></a>Costanti Integer C
 
-Un *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadecimale (base 16) che rappresenta un valore integrale. Utilizzare le costanti Integer per rappresentare i valori interi non modificabili.
+Una *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadecimale (base 16) che rappresenta un valore integrale. Utilizzare le costanti Integer per rappresentare i valori interi non modificabili.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,7 +23,7 @@ Un *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadeci
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
 
 *decimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cifre non zero*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *octal-constant*:<br/>
@@ -35,7 +35,7 @@ Un *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadeci
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 *hexadecimal-prefix*: uno tra<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0x**
 
 *nonzero-digit*: uno tra<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
@@ -60,7 +60,7 @@ Un *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadeci
 &nbsp;&nbsp;&nbsp;&nbsp;**u U**
 
 *long-suffix*: uno tra<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**l L**
+&nbsp;&nbsp;&nbsp;&nbsp;**l**
 
 *long-long-suffix*: uno tra<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ll LL**
@@ -70,7 +70,7 @@ Un *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadeci
 
 I suffissi **i64** e **I64** sono specifici di Microsoft.
 
-Le costanti Integer sono positive a meno che non siano precedute da un segno meno ( **-** ). Il segno meno viene interpretato come operatore di negazione aritmetico unario. Per informazioni su questo operatore, vedere [Operatori aritmetici unari](../c-language/unary-arithmetic-operators.md).
+Le costanti integer sono positive a meno che non siano precedute da un segno**-** meno (). Il segno meno viene interpretato come operatore di negazione aritmetico unario. Per informazioni su questo operatore, vedere [Operatori aritmetici unari](../c-language/unary-arithmetic-operators.md).
 
 Se una costante Integer inizia con **0x** o **0X**, è esadecimale. Se inizia con la cifra **0**, è ottale. In caso contrario, si presume che sia decimale.
 

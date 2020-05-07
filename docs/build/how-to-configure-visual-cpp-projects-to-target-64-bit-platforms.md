@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Configurare i progetti C++ di Visual Studio in modo che siano destinati a piattaforme x64 a 64 bit'
+title: 'Procedura: configurare progetti Visual Studio C++ per piattaforme x64 a 64 bit'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "68492246"
 ---
-# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Procedura: Configurare i progetti C++ di Visual Studio in modo che siano destinati a piattaforme x64 a 64 bit
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Procedura: configurare progetti Visual Studio C++ per piattaforme x64 a 64 bit
 
-È possibile usare le configurazioni di progetto nell'IDE di Visual Studio per configurare C++ le applicazioni in modo che siano destinate a piattaforme x64 a 64 bit. È anche possibile eseguire la migrazione di impostazioni di progetto Win32 in una configurazione di progetto a 64 bit.
+È possibile usare le configurazioni di progetto nell'IDE di Visual Studio per configurare le applicazioni C++ per piattaforme x64 a 64 bit. È anche possibile eseguire la migrazione di impostazioni di progetto Win32 in una configurazione di progetto a 64 bit.
 
 ### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Per configurare le applicazioni C++ per le piattaforme a 64 bit
 
@@ -24,11 +24,11 @@ ms.locfileid: "68492246"
 1. Aprire le pagine delle proprietà per il progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](working-with-project-properties.md).
 
    > [!NOTE]
-   > Per i progetti .NET, verificare che il nodo **proprietà di configurazione** , o uno dei relativi nodi figlio, sia selezionato nella finestra di  **\<dialogo NomeProgetto > pagine delle proprietà** . in caso contrario, il pulsante **Configuration Manager** rimane disponibile.
+   > Per i progetti .NET, verificare che il nodo **proprietà di configurazione** , o uno dei relativi nodi figlio, sia selezionato nella finestra di dialogo ** \<NomeProgetto> pagine delle proprietà** . in caso contrario, il pulsante **Configuration Manager** rimane non disponibile.
 
 1. Scegliere il pulsante **Gestione configurazione** per aprire la finestra di dialogo **Gestione configurazione** .
 
-1. Nell'elenco a discesa **piattaforma soluzione attiva** selezionare il  **\<nuovo... >** opzione per aprire la finestra di dialogo **nuova piattaforma soluzione** .
+1. Nell'elenco a discesa **piattaforma soluzione attiva** selezionare l' ** \<opzione nuovo... >** per aprire la finestra di dialogo **nuova piattaforma soluzione** .
 
 1. Nell'elenco a discesa **digitare o selezionare la nuova piattaforma** selezionare una piattaforma di destinazione a 64 bit.
 
@@ -37,7 +37,7 @@ ms.locfileid: "68492246"
 
 1. Fare clic su **OK** . La piattaforma selezionata nel passaggio precedente viene visualizzata in **Piattaforma soluzione attiva** nella finestra di dialogo **Gestione configurazione** .
 
-1. Scegliere il pulsante **Chiudi** nella finestra di dialogo **Configuration Manager** , quindi scegliere il pulsante **OK** nella finestra di dialogo  **\<NomeProgetto > pagine delle proprietà** .
+1. Scegliere il pulsante **Chiudi** nella finestra di dialogo **Configuration Manager** , quindi scegliere il pulsante **OK** nella finestra di dialogo ** \<NomeProgetto> pagine delle proprietà** .
 
 ### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Per copiare impostazioni di progetto Win32 in una configurazione di progetto a 64 bit
 
@@ -45,7 +45,7 @@ ms.locfileid: "68492246"
 
   - L'opzione del linker [/MACHINE](reference/machine-specify-target-platform.md) viene impostata su **/MACHINE:X64**.
 
-  - **Registra output** viene disattivata. Per altre informazioni, vedere [Linker Property Pages](reference/linker-property-pages.md).
+  - **Registra output** viene disattivata. Per altre informazioni, vedere [pagine delle proprietà del linker](reference/linker-property-pages.md).
 
   - **Ambiente di destinazione** viene impostata su **/env x64**. Per altre informazioni, vedere [pagine delle proprietà MIDL](reference/midl-property-pages.md).
 
@@ -59,4 +59,4 @@ ms.locfileid: "68492246"
 ## <a name="see-also"></a>Vedere anche
 
 [Configurare progetti C++ per destinazioni x64 a 64 bit](configuring-programs-for-64-bit-visual-cpp.md)<br/>
-[Eseguire il debug di applicazioni a 64 Bit](/visualstudio/debugger/debug-64-bit-applications)
+[Eseguire il debug di applicazioni a 64 bit](/visualstudio/debugger/debug-64-bit-applications)

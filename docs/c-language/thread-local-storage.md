@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
 ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69500273"
 ---
 # <a name="thread-local-storage"></a>archiviazione thread-local
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 L'archiviazione thread-local (TLS, Thread-Local Storage) è il meccanismo attraverso il quale ogni thread in un dato processo multithread alloca lo spazio di archiviazione per i dati specifici dei thread. Nei programmi multithread standard, i dati vengono condivisi da tutti i thread di un determinato processo, mentre l'archiviazione thread-local è il meccanismo che consente di allocare i dati per singoli thread. Per una descrizione completa dei thread, vedere [Processes and Threads](/windows/win32/ProcThread/processes-and-threads) (Processi e thread) in Windows SDK.
 
@@ -86,11 +86,11 @@ Nella dichiarazione di variabili thread-local associate in modo statico, è nece
 
    Tenere presente che un'espressione sizeof che include la variabile in fase di inizializzazione non rappresenta un riferimento a se stessa ed è consentita.
 
-- L'uso di **\_\_declspec(thread)** può interferire con il [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni delle DLL.
+- L'uso di ** \_ \_declspec (thread)** potrebbe interferire con il [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni dll.
 
 Per altre informazioni sull'uso dell'attributo thread, vedere [Multithreading Topics](../parallel/multithreading-support-for-older-code-visual-cpp.md) (Argomenti relativi al multithreading).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

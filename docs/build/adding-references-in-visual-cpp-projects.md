@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di librerie e componenti nei C++ progetti
+title: Utilizzo di librerie e componenti nei progetti C++
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -16,11 +16,11 @@ ms.locfileid: "80169955"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilizzo di librerie e componenti
 
-Un progetto deve C++ spesso chiamare funzioni o accedere ai dati in un file binario, ad esempio una libreria statica (file con estensione LIB), una dll, un componente Windows Runtime, un componente com o un assembly .NET. In questi casi, è necessario configurare il progetto in modo che possa trovare tale file binario in fase di compilazione. I passaggi specifici dipendono dal tipo di progetto, dal tipo di file binario e dal fatto che il file binario venga compilato nella stessa soluzione del progetto.
+Un progetto C++ deve spesso chiamare funzioni o accedere ai dati in un file binario, ad esempio una libreria statica (file con estensione LIB), una DLL, un componente Windows Runtime, un componente COM o un assembly .NET. In questi casi, è necessario configurare il progetto in modo che possa trovare tale file binario in fase di compilazione. I passaggi specifici dipendono dal tipo di progetto, dal tipo di file binario e dal fatto che il file binario venga compilato nella stessa soluzione del progetto.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Utilizzo delle librerie scaricate tramite vcpkg
 
-Per utilizzare una libreria scaricata tramite Gestione pacchetti **vcpkg** , è possibile ignorare le istruzioni riportate di seguito. Per altre informazioni [, C++ vedere vcpkg: Gestione pacchetti per Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
+Per utilizzare una libreria scaricata tramite Gestione pacchetti **vcpkg** , è possibile ignorare le istruzioni riportate di seguito. Per altre informazioni [, vedere vcpkg: Gestione pacchetti C++ per Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
 
 ## <a name="consuming-static-libraries"></a>Utilizzo di librerie statiche
 
@@ -46,11 +46,11 @@ Se la DLL non fa parte della soluzione dell'applicazione, sono necessari il file
 
 ## <a name="com-objects"></a>oggetti COM
 
-Se l'applicazione C++ nativa richiede l'utilizzo di un oggetto com e l'oggetto è *registrato*, è sufficiente chiamare COCREATEINSTANCE e passare il CLSID dell'oggetto. Il sistema lo troverà nel registro di sistema di Windows e lo caricherà. Un C++progetto/CLI può utilizzare un oggetto com nello stesso modo oppure aggiungendo un riferimento a esso dall'aggiunta di **riferimenti > elenco com** e utilizzandolo tramite il [Runtime Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper).
+Se l'applicazione C++ nativa deve utilizzare un oggetto COM e l'oggetto è *registrato*, è sufficiente chiamare CoCreateInstance e passare il CLSID dell'oggetto... Il sistema lo troverà nel registro di sistema di Windows e lo caricherà. Un progetto C++/CLI può utilizzare un oggetto COM nello stesso modo oppure aggiungendo un riferimento a esso dall' **aggiunta di riferimenti > elenco com** e utilizzandolo tramite il [Runtime Callable Wrapper](/dotnet/framework/interop/runtime-callable-wrapper).
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Assembly .NET e componenti Windows Runtime
 
-Nei progetti UWP C++o/CLI si utilizzano assembly .net o Windows Runtime componenti aggiungendo un *riferimento* all'assembly o al componente. Nel nodo **riferimenti** di un progetto UWP o C++/CLI è possibile visualizzare i riferimenti ai componenti di uso comune. Fare clic con il pulsante destro del mouse sul nodo **riferimenti** in **Esplora soluzioni** per visualizzare **Gestione riferimenti** e individuare i componenti aggiuntivi noti al sistema. Fare clic sul pulsante **Sfoglia** per passare alla cartella in cui si trova un componente personalizzato. Poiché gli assembly .NET e i componenti Windows Runtime contengono informazioni sul tipo predefinite, è possibile visualizzarne i metodi e le classi facendo clic con il pulsante destro del mouse e scegliendo **Visualizza nella Visualizzatore oggetti**.
+Nei progetti UWP o C++/CLI si utilizzano assembly .NET o Windows Runtime componenti aggiungendo un *riferimento* all'assembly o al componente. Nel nodo **riferimenti** di un progetto UWP o C++/CLI è possibile visualizzare i riferimenti ai componenti di uso comune. Fare clic con il pulsante destro del mouse sul nodo **riferimenti** in **Esplora soluzioni** per visualizzare **Gestione riferimenti** e individuare i componenti aggiuntivi noti al sistema. Fare clic sul pulsante **Sfoglia** per passare alla cartella in cui si trova un componente personalizzato. Poiché gli assembly .NET e i componenti Windows Runtime contengono informazioni sul tipo predefinite, è possibile visualizzarne i metodi e le classi facendo clic con il pulsante destro del mouse e scegliendo **Visualizza nella Visualizzatore oggetti**.
 
 ## <a name="reference-properties"></a>Proprietà riferimento
 
@@ -80,9 +80,9 @@ Le proprietà dei riferimenti ActiveX sono disponibili solo per i riferimenti ai
 
    Visualizza lo strumento usato per compilare l'assembly di interoperabilità dalla libreria COM a cui fa riferimento o dal controllo ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Proprietà riferimento ad assemblyC++(/CLI)
+### <a name="assembly-reference-properties-ccli"></a>Proprietà riferimento ad assembly (C++/CLI)
 
-Le proprietà dei riferimenti agli assembly sono disponibili solo per i riferimenti C++agli assembly .NET Framework nei progetti/CLI. Queste proprietà vengono visualizzate solo quando si seleziona un .NET Framework assembly nel riquadro **riferimenti** . Non è possibile modificare le proprietà.
+Le proprietà dei riferimenti agli assembly sono disponibili solo per i riferimenti agli assembly .NET Framework nei progetti C++/CLI. Queste proprietà vengono visualizzate solo quando si seleziona un .NET Framework assembly nel riquadro **riferimenti** . Non è possibile modificare le proprietà.
 
 - **Percorso relativo**
 
@@ -96,7 +96,7 @@ Sono disponibili le proprietà seguenti su vari tipi di riferimenti. Esse consen
 
    Specifica se copiare automaticamente l'assembly di riferimento nel percorso di destinazione durante una compilazione.
 
-- **Copia assembly satellite locale (C++/CLI)**
+- **Copiare assembly satellite locali (C++/CLI)**
 
    Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Usato solo se **Copia localmente** è impostato su **true**.
 
@@ -106,7 +106,7 @@ Sono disponibili le proprietà seguenti su vari tipi di riferimenti. Esse consen
 
 ### <a name="project-to-project-reference-properties"></a>Proprietà riferimento da progetto a progetto
 
-Le proprietà seguenti definiscono un *riferimento da progetto a progetto* dal progetto selezionato nel riquadro **riferimenti** a un altro progetto nella stessa soluzione. Per altre informazioni, vedere [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
+Le proprietà seguenti definiscono un *riferimento da progetto a progetto* dal progetto selezionato nel riquadro **riferimenti** a un altro progetto nella stessa soluzione. Per ulteriori informazioni, vedere [gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
 
 - **Collega dipendenze di libreria**
 
@@ -144,7 +144,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.
 
-- **Label**
+- **Etichetta**
 
    Visualizza l'etichetta del riferimento.
 
@@ -160,11 +160,11 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Impostato su`true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
 
-- **Version**
+- **Versione**
 
    Visualizza la versione dell'assembly di riferimento.
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++riferimento alla pagina delle proprietà del progetto](reference/property-pages-visual-cpp.md)<br>
-[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](working-with-project-properties.md)
+[Riferimento alla pagina delle proprietà del progetto C++](reference/property-pages-visual-cpp.md)<br>
+[Impostare il compilatore e le proprietà di compilazione C++ in Visual Studio](working-with-project-properties.md)

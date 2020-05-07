@@ -48,7 +48,7 @@ Il gestore terminazioni non viene chiamato se un processo viene terminato durant
 
 Vedere l'esempio relativo all'[istruzione try-except](../c-language/try-except-statement-c.md) per vedere come funziona l'istruzione `try-finally`.
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

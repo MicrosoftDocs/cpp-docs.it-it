@@ -17,11 +17,11 @@ helpviewer_keywords:
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157955"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Identificatori di classi di archiviazione per dichiarazioni di livello esterno
 
@@ -40,7 +40,7 @@ Una dichiarazione di variabile esterna che inizializza anche la variabile (in mo
 
 - Una variabile che in modo esplicito viene inizializzata a livello esterno. Ad esempio, `int j = 3;` è una definizione della variabile `j`.
 
-Nelle dichiarazioni delle variabili a livello esterno (ovvero al di fuori di tutte le funzioni) è possibile usare l'identificatore classe di archiviazione **static** o `extern` oppure omettere completamente l'identificatore classe di archiviazione. Non è possibile usare i terminali *storage-class-specifier* **auto** e **register** a livello esterno.
+Nelle dichiarazioni delle variabili a livello esterno (ovvero al di fuori di tutte le funzioni) è possibile usare l'identificatore classe di archiviazione **static** o `extern` oppure omettere completamente l'identificatore classe di archiviazione. Non è possibile usare i terminali **register** *Storage-Class-specifier* **auto** e Register a livello esterno.
 
 Una volta che una variabile è definita a livello esterno, è visibile in tutto il resto dell'unità di conversione. La variabile non è visibile prima della dichiarazione nello stesso file di origine. Inoltre, non è visibile in altri file di origine del programma, a meno che una dichiarazione di riferimento non lo renda visibile, come descritto di seguito.
 

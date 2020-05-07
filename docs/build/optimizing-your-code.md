@@ -21,7 +21,7 @@ Ottimizzando un eseguibile, è possibile ottenere un equilibrio tra la velocità
 
 ## <a name="language-features"></a>Funzionalità del linguaggio
 
-Negli argomenti seguenti vengono descritte alcune delle funzionalità di ottimizzazione del linguaggio CC++ /.
+Negli argomenti seguenti vengono descritte alcune delle funzionalità di ottimizzazione del linguaggio C/C++.
 
 [Pragma e parole chiave di ottimizzazione](optimization-pragmas-and-keywords.md) \
 Elenco di parole chiave e pragma che è possibile usare nel codice per migliorare le prestazioni.
@@ -29,7 +29,7 @@ Elenco di parole chiave e pragma che è possibile usare nel codice per migliorar
 [Opzioni del compilatore elencate per categoria](reference/compiler-options-listed-by-category.md) \
 Elenco di opzioni del compilatore **/o** che influiscono in modo specifico sulla velocità di esecuzione o sulle dimensioni del codice.
 
-[Dichiaratore di riferimento rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
+[Dichiaratore di riferimento rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
 I riferimenti rvalue supportano l'implementazione della *semantica di spostamento*. Se per implementare le librerie di modelli vengono utilizzate semantiche di spostamento, le prestazioni delle applicazioni che utilizzano tali modelli possono migliorare significativamente.
 
 ### <a name="the-optimize-pragma"></a>Pragma optimize
@@ -55,7 +55,7 @@ Negli argomenti seguenti vengono illustrate le buone procedure di programmazione
 [Suggerimenti per il miglioramento del codice critico per il tempo](tips-for-improving-time-critical-code.md) \
 Migliori tecniche di codifica possono produrre prestazioni migliori. Questo argomento suggerisce tecniche di codifica che consentono di assicurarsi che le parti cruciali del codice vengano eseguite in modo soddisfacente.
 
-[Procedure consigliate](optimization-best-practices.md) per l'ottimizzazione \
+[Procedure consigliate per l'ottimizzazione](optimization-best-practices.md) \
 Fornisce linee guida generali su come ottimizzare l'applicazione.
 
 ## <a name="debugging-optimized-code"></a>Debug del codice ottimizzato
@@ -66,7 +66,7 @@ Negli argomenti seguenti vengono fornite informazioni su come eseguire il debug 
 
 - [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
-- [Procedura: Eseguire il debug di codice ottimizzato](/visualstudio/debugger/how-to-debug-optimized-code)
+- [Procedura: eseguire il debug di codice ottimizzato](/visualstudio/debugger/how-to-debug-optimized-code)
 
 - [Causa della possibile perdita di precisione dei numeri a virgola mobile](why-floating-point-numbers-may-lose-precision.md)
 
@@ -80,23 +80,23 @@ Negli argomenti seguenti vengono fornite informazioni su come ottimizzare la com
 
 - [Impostazione dell'ottimizzazione del compilatore per un progetto ATL](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [Quali tecniche di ottimizzazione è consigliabile utilizzare per migliorare le prestazioni dell'applicazione client durante il caricamento?](../build/dll-frequently-asked-questions.md#mfc_optimization)
+- [Quali tecniche di ottimizzazione è necessario utilizzare per migliorare le prestazioni dell'applicazione client durante il caricamento?](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
 [Pragma e parole chiave di ottimizzazione](optimization-pragmas-and-keywords.md) \
 [Miglioramento della velocità effettiva del compilatore](improving-compiler-throughput.md) \
-[Perché i numeri a virgola mobile potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md) \
+[Motivi per cui i numeri a virgola mobile potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md) \
 [Rappresentazione a virgola mobile IEEE](ieee-floating-point-representation.md) \
 [Suggerimenti per il miglioramento del codice critico per il tempo](tips-for-improving-time-critical-code.md) \
-Se si [Usa il nome della funzione senza () non viene generato alcun codice](using-function-name-without-parens-produces-no-code.md) \
-[Procedure consigliate](optimization-best-practices.md) per l'ottimizzazione \
-[Ottimizzazioni](profile-guided-optimizations.md) PGO \
-[Variabili di ambiente per le ottimizzazioni pgo](environment-variables-for-profile-guided-optimizations.md) \
- \ [PgoAutoSweep](pgoautosweep.md)
- \ [pgomgr](pgomgr.md)
- \ [pgosweep](pgosweep.md)
-[Procedura: Unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
+[L'utilizzo del nome della funzione senza () non produce codice](using-function-name-without-parens-produces-no-code.md) \
+[Procedure consigliate per l'ottimizzazione](optimization-best-practices.md) \
+[Ottimizzazioni PGO](profile-guided-optimizations.md) \
+[Variabili di ambiente per le ottimizzazioni PGO](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[Procedura: unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Vedere anche
 

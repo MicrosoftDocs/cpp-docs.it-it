@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
 ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/12/2019
 ms.locfileid: "67861069"
@@ -22,13 +22,13 @@ Nella tabella seguente vengono riepilogati la precedenza e l'associatività (l'o
 
 ## <a name="precedence-and-associativity-of-c-operators"></a>Precedenza e associatività degli operatori C
 
-| Simbolo <sup>1</sup> | Tipo di operazione | Associazione |
+| Simbolo <sup>1</sup> | Tipo di operazione | Associatività |
 |-------------|-----------------------|-------------------|
-| `[` `]` `(` `)` `.` `->`<br/>`++` `--` (postfix) | Espressione | Da sinistra a destra |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (prefix) | Unario | Da destra a sinistra |
-| *cast di tipo* | Unario | Da destra a sinistra |
+| `[` `]` `(` `)` `.` `->`<br/>`++``--` (suffisso) | Expression | Da sinistra a destra |
+| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--` (prefisso) | Unaria | Da destra a sinistra |
+| *cast di tipo* | Unaria | Da destra a sinistra |
 | `*` `/` `%` | Moltiplicazione | Da sinistra a destra |
-| `+` `-` | Addizione | Da sinistra a destra |
+| `+` `-` | Additive | Da sinistra a destra |
 | `<<` `>>` | Spostamento bit per bit | Da sinistra a destra |
 | `<` `>` `<=` `>=` | Relazionale | Da sinistra a destra |
 | `==` `!=` | Uguaglianza | Da sinistra a destra |
@@ -47,7 +47,7 @@ Nella tabella seguente vengono riepilogati la precedenza e l'associatività (l'o
 
 Un'espressione può contenere numerosi operatori con uguale precedenza. Quando più operatori sono allo stesso livello in un'espressione, la valutazione continua in base all'associatività dell'operatore, sia da destra a sinistra che da sinistra a destra. La direzione della valutazione non influisce sui risultati delle espressioni che includono più di un operatore di moltiplicazione (`*`), di addizione (`+`) o binario bit per bit (`&`, `|` o `^`) allo stesso livello. L'ordine delle operazioni non è definito dal linguaggio. Il compilatore è libero di valutare tali espressioni in qualsiasi ordine, se può garantire un risultato coerente.
 
-Solo gli operatori di valutazione sequenziale (`,`), AND logico (`&&`), OR logico (`||`), espressione condizionale (`? :`) e di chiamata di funzione costituiscono punti di sequenza e pertanto garantiscono un determinato ordine di valutazione per i relativi operandi. L'operatore di chiamata di funzione è un set di parentesi che seguono l'identificatore della funzione. L'operatore di valutazione sequenziale (`,`) garantisce la valutazione dei propri operandi da sinistra a destra. L'operatore virgola in una chiamata di funzione non equivale all'operatore di valutazione sequenziale e non offre una garanzia analoga. Per altre informazioni, vedere [Punti di sequenza](c-sequence-points.md).
+Solo gli operatori di valutazione sequenziale (`,`), AND logico (`&&`), OR logico (`||`), espressione condizionale (`? :`) e di chiamata di funzione costituiscono punti di sequenza e pertanto garantiscono un determinato ordine di valutazione per i relativi operandi. L'operatore di chiamata di funzione è un set di parentesi che seguono l'identificatore della funzione. L'operatore di valutazione sequenziale (`,`) garantisce la valutazione dei propri operandi da sinistra a destra. L'operatore virgola in una chiamata di funzione non è uguale all'operatore di valutazione sequenziale e non fornisce alcuna garanzia di questo tipo. Per ulteriori informazioni, vedere [punti di sequenza](c-sequence-points.md).
 
 Anche gli operatori logici garantiscono la valutazione dei propri operandi da sinistra a destra. Tali operatori valutano tuttavia il minor numero di operandi necessari per determinare il risultato dell'espressione. Questa condizione viene denominata anche "valutazione short circuit". Alcuni operandi dell'espressione potrebbero pertanto non essere valutati. Ad esempio, nell'espressione
 
@@ -59,7 +59,7 @@ il secondo operando, `y++`, viene valutato solo se `x` è true (diverso da zero)
 
 Nell'elenco seguente viene mostrato il modo in cui il compilatore associa automaticamente diverse espressioni di esempio:
 
-| Espressione | Associazione automatica |
+| Expression | Associazione automatica |
 |----------------|-----------------------|
 | `a & b || c` | `(a & b) || c` |
 | `a = b || c` | `a = (b || c)` |

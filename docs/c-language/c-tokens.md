@@ -20,18 +20,18 @@ Nel programma di origine C l'elemento di base riconosciuto dal compilatore è il
 
 *token*: *keyword*
 
-*Identificatore*
+*identificatore*
 
 *constant*
 
-*stringa-letterale*
+*valore letterale stringa*
 
-*Operatore*
+*operatore*
 
 *punctuator*
 
 > [!NOTE]
-> Vedere l'introduzione a [C Language Syntax Summary](../c-language/c-language-syntax-summary.md) per una spiegazione delle convenzioni di sintassi ANSI.
+> Per una spiegazione delle convenzioni della sintassi ANSI, vedere l'introduzione al [Riepilogo della sintassi del linguaggio C](../c-language/c-language-syntax-summary.md) .
 
 Le parole chiave, gli identificatori, le costanti, i valori letterali stringa e gli operatori descritti in questa sezione sono esempi di token. Sono token anche i caratteri di punteggiatura quali parentesi quadre (**[ ]**), parentesi graffe (**{ }**), parentesi tonde ( **( )** ) e virgole (**,**).
 

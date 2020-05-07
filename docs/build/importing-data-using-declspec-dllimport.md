@@ -16,7 +16,7 @@ ms.locfileid: "79440452"
 ---
 # <a name="importing-data-using-__declspecdllimport"></a>Importazione di dati tramite __declspec(dllimport)
 
-Nel caso dei dati, l'utilizzo di **__declspec (dllimport)** è un elemento pratico che rimuove un livello di riferimento indiretto. Quando si importano dati da una DLL, è comunque necessario passare attraverso la tabella di indirizzi di importazione. Prima di **__declspec (dllimport)** , ciò significava che era necessario ricordare di eseguire un ulteriore livello di riferimento indiretto durante l'accesso ai dati esportati dalla dll:
+Nel caso dei dati, l'utilizzo di **__declspec (dllimport)** è un elemento pratico che rimuove un livello di riferimento indiretto. Quando si importano dati da una DLL, è comunque necessario passare attraverso la tabella di indirizzi di importazione. Prima di **__declspec (dllimport)**, ciò significava che era necessario ricordare di eseguire un ulteriore livello di riferimento indiretto durante l'accesso ai dati esportati dalla dll:
 
 ```
 // project.h
@@ -46,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Quando si contrassegnano i dati come **__declspec (dllimport)** , il compilatore genera automaticamente il codice di riferimento indiretto. Non è più necessario preoccuparsi dei passaggi precedenti. Come indicato in precedenza, non usare la Dichiarazione **__declspec (dllimport)** sui dati durante la compilazione della dll. Le funzioni all'interno della DLL non utilizzano la tabella di indirizzi di importazione per accedere all'oggetto dati. non sarà pertanto disponibile il livello aggiuntivo di riferimento indiretto.
+Quando si contrassegnano i dati come **__declspec (dllimport)**, il compilatore genera automaticamente il codice di riferimento indiretto. Non è più necessario preoccuparsi dei passaggi precedenti. Come indicato in precedenza, non usare la Dichiarazione **__declspec (dllimport)** sui dati durante la compilazione della dll. Le funzioni all'interno della DLL non utilizzano la tabella di indirizzi di importazione per accedere all'oggetto dati. non sarà pertanto disponibile il livello aggiuntivo di riferimento indiretto.
 
 Per esportare automaticamente i dati dalla DLL, usare questa dichiarazione:
 
