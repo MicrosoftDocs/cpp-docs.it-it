@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +28,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: b38a3430274b2324e345be30ce9e38f0c2749fa3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81b92404603820948a384b6ad33421251a27c13c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338269"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919555"
 ---
 # <a name="raise"></a>raise
 
 Invia un segnale al programma in esecuzione.
 
 > [!NOTE]
-> Non usare questo metodo per arrestare un'app di Microsoft Store, tranne negli scenari di test o debug. Le modalità a livello di codice o dell'interfaccia utente per chiudere un'app di Store non sono consentite in base ai criteri di [Microsoft Store.](/legal/windows/agreements/store-policies) Per altre informazioni, vedere Ciclo di [vita dell'app UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Non usare questo metodo per arrestare un'app Microsoft Store, tranne che negli scenari di test o di debug. I metodi a livello di codice o dell'interfaccia utente per chiudere un'app dello Store non sono consentiti in base ai [criteri Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere ciclo di vita dell' [app UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,9 +72,9 @@ La funzione **raise** invia *sig* al programma in esecuzione. Se una chiamata pr
 |**SIGSEGV**|Accesso all'archiviazione non valido|Termina il programma chiamante|
 |**SIGTERM**|Richiesta di terminazione inviata al programma|Ignora il segnale|
 
-Se l'argomento non è un segnale valido come sopra specificato, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se non viene gestita, la funzione imposta **errno** su **EINVAL** e restituisce un valore diverso da zero.
+Se l'argomento non è un segnale valido come sopra specificato, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se non gestito, la funzione imposta **errno** su **EINVAL** e restituisce un valore diverso da zero.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -87,5 +87,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
-[Interrompere](abort.md)<br/>
-[Segnale](signal.md)<br/>
+[interruzione](abort.md)<br/>
+[signal](signal.md)<br/>
