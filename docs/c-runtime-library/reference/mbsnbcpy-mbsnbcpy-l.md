@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 130e19fcb1107f27133854f4e379b35969130106
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea89458a51360b8781cb713fc9412239d2e03c78
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340671"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911901"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
@@ -86,13 +86,13 @@ unsigned char * _mbsnbcpy_l(
 *strDest*<br/>
 Destinazione per la stringa di caratteri da copiare.
 
-*Strsource*<br/>
+*strSource*<br/>
 Stringa di caratteri da copiare.
 
 *count*<br/>
 Numero di byte da copiare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -101,18 +101,18 @@ Impostazioni locali da usare.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_mbsnbcpy** copia i byte *di count* da *strSource* a *strDest*. Se *count* supera la dimensione di *strDest* o le stringhe di origine e di destinazione si sovrappongono, il comportamento di **_mbsnbcpy** non è definito.
+La funzione **_mbsnbcpy** copia i byte del *conteggio* da *strSource* a *strDest*. Se *count* supera la dimensione di *strDest* o le stringhe di origine e di destinazione si sovrappongono, il comportamento di **_mbsnbcpy** non è definito.
 
-Se *strSource* o *strDest* è un puntatore null, questa funzione richiama il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **NULL** e imposta **errno** su **EINVAL**.
+Se *strSource* o *strDest* è un puntatore null, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **null** e imposta **errno** su **EINVAL**.
 
-Il valore di output è influenzato dall'impostazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali; Per ulteriori informazioni, vedere [setlocale, _wsetlocale.](setlocale-wsetlocale.md) Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno il suffisso **_l** utilizzano le impostazioni locali correnti e le versioni che hanno il suffisso **_l** utilizzano invece il parametro locale passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione dell'impostazione di categoria **LC_CTYPE** delle impostazioni locali; Per ulteriori informazioni [, vedere setlocale _wsetlocale](setlocale-wsetlocale.md) . Le versioni di queste funzioni sono identiche, ad eccezione che quelle che non hanno il suffisso **_L** usano le impostazioni locali correnti e le versioni che hanno il suffisso **_L** usano invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere usati per eseguire codice di attacco arbitrario che può provocare un'elevazione dei privilegi non autorizzata e compromettere il sistema. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure e più recenti. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -132,7 +132,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>

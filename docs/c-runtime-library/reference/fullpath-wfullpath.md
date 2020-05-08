@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: 0910cf4f39e00be84e683cd6f3b9afbeb3f2a749
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345490"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909949"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -64,22 +64,22 @@ wchar_t *_wfullpath(
 
 ### <a name="parameters"></a>Parametri
 
-*absPath (percorso absPath)*<br/>
-Puntatore a un buffer contenente il nome assoluto o completo del percorso oppure **NULL**.
+*absPath*<br/>
+Puntatore a un buffer contenente il nome del percorso assoluto o completo o **null**.
 
-*relPath (Percorso)*<br/>
+*relPath*<br/>
 Nome del percorso relativo.
 
-*Maxlength*<br/>
-Lunghezza massima del buffer dei nomi di percorso assoluto (*absPath*). Questa lunghezza è in byte per **_fullpath** ma in caratteri wide (**wchar_t**) per **_wfullpath**.
+*maxLength*<br/>
+Lunghezza massima del buffer del nome del percorso assoluto (*absPath*). Questa lunghezza è in byte per **_fullpath** ma in caratteri wide (**wchar_t**) per **_wfullpath**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore a un buffer contenente il nome di percorso assoluto (*absPath*). Se si verifica un errore (ad esempio, se il valore passato in *relPath* include una lettera di unità non valida o non trovata o non trovata o se la lunghezza del nome di percorso assoluto creato (*absPath*) è maggiore di *maxLength*, la funzione restituisce **NULL**.
+Ognuna di queste funzioni restituisce un puntatore a un buffer contenente il nome del percorso assoluto (*absPath*). Se si verifica un errore (ad esempio, se il valore passato in *RelPath* include una lettera di unità non valida o non trovata oppure se la lunghezza del nome del percorso assoluto creato (*absPath*) è maggiore di *MaxLength*), la funzione restituisce **null**.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_fullpath** espande il nome del percorso relativo in *relPath* al percorso completo o assoluto e lo archivia in *absPath*. Se *absPath* è **NULL**, **malloc** viene utilizzato per allocare un buffer di lunghezza sufficiente per contenere il nome del percorso. È responsabilità del chiamante liberare questo buffer. Un nome di percorso relativo specifica un percorso a un'altra posizione dalla posizione corrente (ad esempio la directory di lavoro corrente: "."). Un nome di percorso assoluto è l'espansione di un nome di percorso relativo che indica il percorso intero necessario per raggiungere la posizione desiderata dalla radice del file system. A differenza **di _makepath**, **_fullpath** può essere utilizzato per ottenere il nome di percorso assoluto per i percorsi relativi (*relPath*) che includono "./" o ".. /" nei loro nomi.
+La funzione **_fullpath** espande il nome del percorso relativo in *RelPath* al percorso completo o assoluto e archivia il nome in *absPath*. Se *absPath* è **null**, **malloc** viene usato per allocare un buffer di lunghezza sufficiente per memorizzare il nome del percorso. È responsabilità del chiamante liberare questo buffer. Un nome di percorso relativo specifica un percorso a un'altra posizione dalla posizione corrente (ad esempio la directory di lavoro corrente: "."). Un nome di percorso assoluto è l'espansione di un nome di percorso relativo che indica il percorso intero necessario per raggiungere la posizione desiderata dalla radice del file system. A differenza di **_makepath**, è possibile usare **_fullpath** per ottenere il nome del percorso assoluto per i percorsi relativi (*RelPath*) che includono "./" o ".. /"nei rispettivi nomi.
 
 Per usare le routine di runtime C, ad esempio, l'applicazione deve includere i file di intestazione contenenti le dichiarazioni per le routine. L'istruzione include per ogni file di intestazione fa riferimento al percorso del file in modo relativo (dalla cartella di lavoro dell'applicazione):
 
@@ -93,11 +93,11 @@ e il percorso assoluto (percorso effettivo nel file sytem) del file potrebbe ess
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath** gestisce automaticamente gli argomenti di stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **_wfullpath** è una versione a caratteri wide di **_fullpath**; gli argomenti stringa per **_wfullpath** sono stringhe di caratteri wide. **_wfullpath** e **_fullpath** si comportano in modo identico, ad eccezione del fatto che **_wfullpath** non gestisce stringhe di caratteri multibyte.
+**_fullpath** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **_wfullpath** è una versione a caratteri wide di **_fullpath**; gli argomenti stringa da **_wfullpath** sono stringhe a caratteri wide. **_wfullpath** e **_fullpath** si comportano in modo identico, ad eccezione del fatto che **_wfullpath** non gestisce le stringhe di caratteri multibyte.
 
-Se **_DEBUG** e **_CRTDBG_MAP_ALLOC** sono entrambi definiti, le chiamate a **i _fullpath** e **ai _wfullpath** vengono sostituite da chiamate a **_fullpath_dbg** e **_wfullpath_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Se **_DEBUG** e **_CRTDBG_MAP_ALLOC** sono entrambi definiti, le chiamate a **_fullpath** e **_wfullpath** vengono sostituite dalle chiamate a **_fullpath_dbg** e **_wfullpath_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
-Questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida parametro](../../c-runtime-library/parameter-validation.md), se *maxlen* è minore o uguale a 0. Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **NULL**.
+Questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), se *maxlen* è minore o uguale a 0. Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **null**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -105,11 +105,11 @@ Questa funzione richiama il gestore di parametri non validi, come descritto in [
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-Se il buffer *absPath* è **NULL**, **_fullpath** chiama [malloc](malloc.md) per allocare un buffer e ignora l'argomento *maxLength.* È responsabilità del chiamante deallocare questo buffer (usando [free](free.md)) come appropriato. Se l'argomento *relPath* specifica un'unità disco, la directory corrente di questa unità viene combinata con il percorso.
+Se il buffer *absPath* è **null**, **_fullpath** chiama [malloc](malloc.md) per allocare un buffer e ignora l'argomento *MaxLength* . È responsabilità del chiamante deallocare questo buffer (usando [free](free.md)) come appropriato. Se l'argomento *RelPath* specifica un'unità disco, la directory corrente di questa unità viene combinata con il percorso.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fullpath**|\<stdlib.h>|
 |**_wfullpath**|\<stdlib.h> o \<wchar.h>|

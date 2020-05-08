@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 4a8ffd1dbce112272f04241a2502c5df63f163a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318667"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909903"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -63,31 +63,31 @@ long double sinh(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **sinh** restituiscono il seno iperbolico di *x*. Per impostazione predefinita, se il risultato è troppo grande, **sinh** imposta **errno** su **ERANGE** e restituisce**HUGE_VAL**.
+Le **funzioni di** per la funzione di stato restituiscono il seno iperbolico di *x*. Per impostazione predefinita, se il risultato è troppo grande **, il set di** **errno** viene impostato su **ERANGE** e viene restituito ±**HUGE_VAL**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN,IND|nessuno|_DOMAIN|
-|&#124;x&#124; : 7,104760e|OVERFLOW+INEXACT|OVERFLOW|
+|± QNAN, IND|Nessuno|_DOMAIN|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio C, è possibile chiamare gli overload di **sinh** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **sinh** accetta e restituisce **sempre double**.
+Poiché C++ **consente l'overload** , è possibile chiamare gli overload di che accettano e restituiscono valori **float** o **Long** **Double** . In un programma **C, il** valore di e restituisce sempre **Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-|-|-|
-|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> o \<math.h>|
+|**sinh** **sinhf**, **sinhl**|\<math.h>|\<cmath> o \<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

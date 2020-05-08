@@ -26,7 +26,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: 560fde4ae2167256acd54856fced15bc6ccecae6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c8b27c4cc618d34d9da9b5884c6db2f525fd2388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362357"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910006"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
@@ -87,39 +87,39 @@ int _towlower_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da convertire.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare per la conversione specifica delle impostazioni locali.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine converte una copia di *c* in minuscolo se la conversione è possibile e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
+Ognuna di queste routine converte una copia di *c* in lettere minuscole se la conversione è possibile e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
 
 ## <a name="remarks"></a>Osservazioni
 
-Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione caso di **towlower** è specifica delle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso **_l** utilizzano le impostazioni locali attualmente impostate. Le versioni di queste funzioni con il **suffisso _l** accettano le impostazioni locali come parametro e lo utilizzano al posto delle impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione del case di **towlower** è specifica delle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso **_L** usano le impostazioni locali attualmente impostate. Le versioni di queste funzioni che hanno il suffisso **_L** accettano le impostazioni locali come parametro e lo usano anziché le impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Affinché **_tolower** fornisse i risultati previsti, [__isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devono restituire entrambi un valore diverso da zero.
+Affinché **_tolower** forniscano i risultati previsti, è [necessario che i](isupper-isupper-l-iswupper-iswupper-l.md) [__isascii](isascii-isascii-iswascii.md) e l'oggetto sia restituito un valore diverso da zero.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totlower**|**Tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**ToLower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** e **_towlower_l** non hanno alcuna dipendenza delle impostazioni locali e non devono essere chiamati direttamente. Essi sono forniti per uso interno da **_totlower_l**.
+> **_tolower_l** e **_towlower_l** non hanno alcuna dipendenza dalle impostazioni locali e non sono destinati a essere chiamati direttamente. Vengono fornite per uso interno da **_totlower_l**.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**Tolower**|\<ctype.h>|
+|**ToLower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|
 |**towlower**|\<ctype.h> o \<wchar.h>|
 
@@ -134,5 +134,5 @@ Vedere l'esempio in [Funzioni to](../../c-runtime-library/to-functions.md).
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
 [Funzioni to](../../c-runtime-library/to-functions.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

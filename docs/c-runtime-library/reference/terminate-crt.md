@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1aa95daeab424c933f10060fb4f87cb317aa188c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362537"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912216"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Le chiamate [vengono interrotte](abort.md) o una funzione specificata utilizzando **set_terminate**.
+Chiama [Abort](abort.md) o una funzione specificata utilizzando **set_terminate**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,7 +46,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **di terminazione** viene utilizzata con la gestione delle eccezioni di C, e viene chiamata nei casi seguenti:
+La funzione **Terminate** viene utilizzata con la gestione delle eccezioni C++ e viene chiamata nei casi seguenti:
 
 - Non è possibile trovare un gestore catch corrispondente per un'eccezione C++ generata.
 
@@ -54,9 +54,9 @@ La funzione **di terminazione** viene utilizzata con la gestione delle eccezioni
 
 - Lo stack risulta danneggiato dopo la generazione di un'eccezione.
 
-**terminare** le chiamate [interrompere](abort.md) per impostazione predefinita. È possibile modificare questa impostazione predefinita scrivendo la propria funzione di terminazione e chiamando **set_terminate** con il nome della funzione come argomento. **terminate** chiama l'ultima funzione fornita come argomento per **set_terminate**. Per altre informazioni, vedere [Eccezioni C++ non gestite](../../cpp/unhandled-cpp-exceptions.md).
+**terminare** le chiamate [Abort](abort.md) per impostazione predefinita. È possibile modificare questa impostazione predefinita scrivendo una funzione di terminazione personalizzata e chiamando **set_terminate** con il nome della funzione come argomento. **Terminate** chiama l'ultima funzione specificata come argomento per **set_terminate**. Per altre informazioni, vedere [Eccezioni C++ non gestite](../../cpp/unhandled-cpp-exceptions.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -115,8 +115,8 @@ term_func() was called by terminate().
 ## <a name="see-also"></a>Vedere anche
 
 [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
-[Interrompere](abort.md)<br/>
+[interruzione](abort.md)<br/>
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[Inaspettato](unexpected-crt.md)<br/>
+[inaspettato](unexpected-crt.md)<br/>

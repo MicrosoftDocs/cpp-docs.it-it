@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333572"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912097"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -66,7 +66,7 @@ long double cbrtl(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile
 
 ## <a name="return-value"></a>Valore restituito
@@ -75,17 +75,17 @@ Le funzioni **cbrt** restituiscono la radice del cubo di *x*.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|, QNAN, IND|none|none|
+|± ∞, QNAN, IND|none|none|
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **cbrt** che accettano tipi **double** **float** o **long.** In un programma C, **cbrt** accetta e restituisce sempre **double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cbrt** che accettano tipi **float** o **Long** **Double** . In un programma C **cbrt** accetta e restituisce sempre **Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 

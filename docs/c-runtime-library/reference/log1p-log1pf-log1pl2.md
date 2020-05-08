@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: b4e077f5b806dbe38ed4a4f4e8eef0259170cb7e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341814"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911434"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -74,12 +74,12 @@ long double log1pl(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Argomento a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-In caso di esito positivo, restituisce il log naturale (base-e) di (*x* - 1).*e*
+Se ha esito positivo, restituisce il log naturale (base*e*) di (*x* + 1).
 
 In caso contrario, può restituire uno dei valori seguenti:
 
@@ -87,28 +87,28 @@ In caso contrario, può restituire uno dei valori seguenti:
 |-----------|------------|-------------------|-----------|
 |+inf|+inf|||
 |Valori denormalizzati|Uguale all'input|UNDERFLOW||
-|0 ( ) 0 (0)|Uguale all'input|||
+|± 0|Uguale all'input|||
 |-1|-inf|DIVBYZERO|ERANGE|
 |< -1|nan|NON VALIDO|EDOM|
 |-inf|nan|NON VALIDO|EDOM|
-|SNaN|Uguale all'input|NON VALIDO||
-|QNaN, a tempo indeterminato|Uguale all'input|||
+|SNaN ±|Uguale all'input|NON VALIDO||
+|± QNaN, non definito|Uguale all'input|||
 
-Il valore **errno** è impostato su ERANGE se *x* è -1. Il valore **errno** è impostato su **EDOM** se *x* < -1.
+Il valore **errno** è impostato su ERANGE se *x* =-1. Il valore **errno** viene impostato su **EDOM** se *x* <-1.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **log1p** possono essere `log(x + 1)` più accurate rispetto all'utilizzo quando *x* è vicino a 0.
+Le funzioni **log1p** possono essere più accurate rispetto all' `log(x + 1)` uso di quando *x* è vicino a 0.
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **log1p** che accettano e restituiscono tipi **float** e **long** **double.** In un programma C, **log1p** accetta e restituisce sempre un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **log1p** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **log1p** accetta e restituisce sempre un **valore Double**.
 
-Se *x* è un numero naturale, questa funzione restituisce il logaritmo del fattoriale di (*x* - 1).
+Se *x* è un numero naturale, questa funzione restituisce il logaritmo del fattoriale di (*x* -1).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
 
