@@ -28,7 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -67,19 +67,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 40bf64af8284d84c6e58bcb3e8591a1ef6fc9f48
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363822"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919937"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
 Converte una stringa in lettere minuscole. Sono disponibili versioni più sicure di queste funzioni. Vedere [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbslwr** e **_mbslwr_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbslwr** e **_mbslwr_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -139,7 +139,7 @@ unsigned char *_mbslwr_l(
 *Str*<br/>
 Stringa con terminazione Null da convertire in minuscolo.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -148,15 +148,15 @@ Ognuna di queste funzioni restituisce un puntatore alla stringa convertita. Dato
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_strlwr** converte tutte le lettere maiuscole in *str* in minuscole, come determinato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni su **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza **_l** il suffisso utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. le versioni con il **suffisso _l** sono identiche, ad eccezione del fatto che utilizzano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La funzione **_strlwr** converte le lettere maiuscole in *Str* in lettere minuscole, come determinato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni su **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_L** usano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Le funzioni **_wcslwr** e **_mbslwr** sono versioni a caratteri wide e a caratteri multibyte di **_strlwr**. L'argomento e **il** valore restituito di _wcslwr sono stringhe di caratteri wide; quelli di **_mbslwr** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+Le funzioni **_wcslwr** e **_mbslwr** sono versioni a caratteri wide e a caratteri multibyte di **_strlwr**. L'argomento e il valore restituito di **_wcslwr** sono stringhe a caratteri wide. i **_mbslwr** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Se *str* è un puntatore **NULL,** viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono la stringa originale e impostano **errno** su **EINVAL**.
+Se *Str* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono la stringa originale e impostano **errno** su **EINVAL**.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -169,9 +169,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_strlwr** **, _strlwr_l**|\<string.h>|
+|**_strlwr**, **_strlwr_l**|\<string.h>|
 |**_wcslwr**, **_wcslwr_l**|\<string.h> o \<wchar.h>|
-|**_mbslwr** **, _mbslwr_l**|\<mbstring.h>|
+|**_mbslwr**, **_mbslwr_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -213,6 +213,6 @@ Upper: THE STRING TO END ALL STRINGS!
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

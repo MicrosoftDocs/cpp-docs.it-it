@@ -4102,11 +4102,11 @@
                   items:
                     - name: Tipi di espressioni
                       href: cpp/types-of-expressions.md
-                    - name: Espressioni primarie
+                    - name: 'Espressioni principali:'
                       href: cpp/primary-expressions.md
                     - name: Ellissi e modelli variadic
                       href: cpp/ellipses-and-variadic-templates.md
-                    - name: Espressioni in forma suffissa
+                    - name: Espressioni di suffisso
                       href: cpp/postfix-expressions.md
                     - name: Espressioni con operatori unari
                       href: cpp/expressions-with-unary-operators.md

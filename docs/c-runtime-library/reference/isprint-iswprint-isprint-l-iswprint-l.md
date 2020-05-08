@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: f09168e8e010fb59d748c109d4a41c533318e2eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9921164220bc5289a7ae4a211c88107b4dac8e9c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342889"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918512"
 ---
 # <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
@@ -72,29 +72,29 @@ int _iswprint_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Valore Integer da testare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere stampabile. **isprint** restituisce un valore diverso da zero se *c* è un carattere stampabile, incluso il carattere spazio (0x20 - 0x7E). **iswprint** restituisce un valore diverso da zero se *c* è un carattere wide stampabile, incluso il carattere di spazio. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di un carattere stampabile. Se *c* è un carattere stampabile, **viene restituito un** valore diverso da zero, incluso il carattere di spazio (0x20-0x7E). **iswprint** restituisce un valore diverso da zero se *c* è un carattere Wide stampabile, incluso il carattere wide dello spazio. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Il risultato della condizione di test per queste funzioni dipende dall'impostazione di **categoria LC_CTYPE** delle impostazioni locali; Per ulteriori informazioni, vedere [setlocale, _wsetlocale.](setlocale-wsetlocale.md) Le versioni di queste funzioni che non hanno il suffisso **_l** utilizzano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. le versioni che hanno il suffisso **_l** sono identiche, ad eccezione del fatto che utilizzano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il risultato della condizione di test per queste funzioni dipende dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Per ulteriori informazioni [, vedere setlocale _wsetlocale](setlocale-wsetlocale.md) . Le versioni di queste funzioni che non hanno il suffisso **_L** usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; le versioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento di **isprint** e **_isprint_l** non è definito se *c* non è EOF o compreso nell'intervallo da 0 a 0xFF, inclusivo. Quando viene utilizzata una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di **_isprint_l** di **stampa** e non è definito se *c* non è EOF o nell'intervallo compreso tra 0 e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_unicode definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istprint (informatoino)**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
+|**_** **istprint**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -110,5 +110,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>

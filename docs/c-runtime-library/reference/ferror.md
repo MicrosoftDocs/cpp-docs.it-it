@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: e424ffe3f113e50e318d9198bd5f06aaec96852a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347300"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920145"
 ---
 # <a name="ferror"></a>ferror
 
@@ -54,19 +54,19 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se non si è verificato alcun errore nel *flusso,* **ferror** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Se stream è **NULL**, **ferror** richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
+Se non si è verificato alcun errore nel *flusso*, il **ferro** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Se il flusso è **null**, il **ferror** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La routine **ferror** (implementata sia come funzione che come macro) verifica la ricerca di un errore di lettura o scrittura sul file associato al *flusso*. Se si è verificato un errore, l'indicatore di errore per il flusso rimane impostato fino a quando il flusso non viene chiuso o riavvolto o fino a quando non viene chiamato **clearerr** su di esso.
+La routine del **ferratore** (implementata sia come funzione che come macro) testa un errore di lettura o scrittura nel file associato al *flusso*. Se si è verificato un errore, l'indicatore di errore per il flusso rimane impostato fino a quando il flusso non viene chiuso o riavvolto oppure finché non viene chiamato **clearerr** .
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**ferror**|\<stdio.h>|
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: d71a061d9af5028c9bc6b4008f9904606a233592
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1431a2d0886ffd3d16b43abf82b7342c166273a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340869"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909476"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
@@ -64,13 +64,13 @@ int _mbsbtype_l(
 
 ### <a name="parameters"></a>Parametri
 
-*mbstr (intalltore*<br/>
+*mbstr*<br/>
 Indirizzo di una sequenza di caratteri multibyte.
 
 *count*<br/>
 Offset dall'inizio della stringa in byte.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -79,20 +79,20 @@ Impostazioni locali da usare.
 
 |Valore restituito|Tipo di byte|
 |------------------|---------------|
-|**_MBC_SINGLE** (0)|Carattere a byte singolo. Ad esempio, nella tabella codici 932, **_mbsbtype** restituisce 0 se il byte specificato è compreso nell'intervallo 0x20 - 0x7E o 0xA1 - 0xDF.|
-|**_MBC_LEAD** (1)|Byte di apertura del carattere multibyte. Ad esempio, nella tabella codici 932, **_mbsbtype** restituisce 1 se il byte specificato è compreso nell'intervallo 0x81 - 0x9F o 0xE0 - 0xFC.|
-|**_MBC_TRAIL** (2)|Byte di chiusura del carattere multibyte. Ad esempio, nella tabella codici 932, **_mbsbtype** restituisce 2 se il byte specificato è compreso nell'intervallo 0x40 - 0x7E o 0x80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**Stringa NULL,** carattere non valido o byte null trovato prima del byte in *numero* di offset in *mbstr*.|
+|**_MBC_SINGLE** (0)|Carattere a byte singolo. Ad esempio, nella tabella codici 932, **_mbsbtype** restituisce 0 se il byte specificato è compreso nell'intervallo 0x20-0X7E o 0XA1-0xDF.|
+|**_MBC_LEAD** (1)|Byte di apertura del carattere multibyte. Ad esempio, nella tabella codici 932, **_mbsbtype** restituisce 1 se il byte specificato è compreso nell'intervallo 0X81-0X9F o 0xE0-0xFC.|
+|**_MBC_TRAIL** (2)|Byte di chiusura del carattere multibyte. Ad esempio, nella tabella codici 932, **_mbsbtype** restituisce 2 Se il byte specificato è compreso nell'intervallo 0X40-0x7E o 0X80-0xFC.|
+|**_MBC_ILLEGAL** (-1)|Stringa **null** , carattere non valido o byte NULL trovato prima del byte al *numero* di offset in *mbstr*.|
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_mbsbtype** determina il tipo di byte in una stringa di caratteri multibyte. La funzione esamina solo il byte al *conteggio* dell'offset in *mbstr*, ignorando i caratteri non validi prima del byte specificato.
+La funzione **_mbsbtype** determina il tipo di un byte in una stringa di caratteri multibyte. La funzione esamina solo il byte al *numero* di offset in *mbstr*, ignorando i caratteri non validi prima del byte specificato.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso **_l** utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. la versione con il suffisso **_l** è identica, ad eccezione del fatto che utilizza invece il parametro locale passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso **_L** usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il suffisso **_L** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se la stringa di input è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce **_MBC_ILLEGAL**.
+Se la stringa di input è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **_MBC_ILLEGAL**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

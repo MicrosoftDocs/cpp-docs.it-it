@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-ms.openlocfilehash: 70845124eb889d73a0f87aadd923e2d86db96c29
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: faed95bfeb6fad88f502101e166ec6124b6e591d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350077"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910410"
 ---
 # <a name="_chsize_s"></a>_chsize_s
 
@@ -51,27 +51,27 @@ errno_t _chsize_s(
 
 ### <a name="parameters"></a>Parametri
 
-*Fd*<br/>
+*FD*<br/>
 Descrittore del file che fa riferimento a un file aperto.
 
-*Dimensione*<br/>
+*size*<br/>
 Nuova lunghezza, in byte, del file.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_chsize_s** restituisce il valore 0 se la dimensione del file viene modificata correttamente. Un valore restituito diverso da zero indica un errore: il valore restituito è **EACCES** se il file specificato è bloccato per l'accesso, **EBADF** se il file specificato è di sola lettura o il descrittore non è valido, **ENOSPC** se non viene lasciato spazio sul dispositivo o **EINVAL** se la dimensione è minore di zero. **errno** è impostato sullo stesso valore.
+**_chsize_s** restituisce il valore 0 se la dimensione del file è stata modificata correttamente. Un valore restituito diverso da zero indica un errore: il valore restituito è **EACCES** se il file specificato è bloccato per l'accesso, **EBADF** se il file specificato è di sola lettura o il descrittore non è valido, **ENOSPC** se nel dispositivo non è presente spazio o **EINVAL** se la dimensione è minore di zero. **errno** è impostato sullo stesso valore.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_chsize_s** estende o tronca il file associato a *fd* alla lunghezza specificata dalla *dimensione*. Il file deve essere aperto in una modalità che consente la scrittura. Se il file viene esteso, vengono aggiunti caratteri null ("\0"). Se il file viene troncato, si perderanno tutti i dati a partire dalla fine del file abbreviato fino alla fine del file originale.
+La funzione **_chsize_s** estende o tronca il file associato a *FD* alla lunghezza specificata dalla *dimensione*. Il file deve essere aperto in una modalità che consente la scrittura. Se il file viene esteso, vengono aggiunti caratteri null ("\0"). Se il file viene troncato, si perderanno tutti i dati a partire dalla fine del file abbreviato fino alla fine del file originale.
 
-**_chsize_s** accetta un numero intero a 64 bit come dimensione del file e pertanto può gestire dimensioni di file superiori a 4 GB. **_chsize** è limitata a 32 bit di file.
+**_chsize_s** accetta un valore integer a 64 bit come dimensione del file e pertanto può gestire dimensioni dei file maggiori di 4 GB. **_chsize** è limitato alle dimensioni dei file a 32 bit.
 
-Questa funzione convalida i relativi parametri. Se *fd* non è un descrittore di file valido o size è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Questa funzione convalida i relativi parametri. Se *FD* non è un descrittore di file valido o la dimensione è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

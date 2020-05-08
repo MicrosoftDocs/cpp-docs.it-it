@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,19 +54,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 81932aa3ca6af01ecc5f6ff353db76185d027838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364506"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919288"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
 Copia i caratteri di una stringa in un'altra.  Queste versioni di [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncpy_s** e **_mbsncpy_s_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsncpy_s** e **_mbsncpy_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -156,36 +156,36 @@ errno_t _mbsncpy_s_l(
 *strDest*<br/>
 Stringa di destinazione.
 
-*Sizeinbytes*<br/>
+*numberOfElements*<br/>
 Dimensioni della stringa di destinazione, in caratteri.
 
-*Strsource*<br/>
+*strSource*<br/>
 Stringa di origine.
 
 *count*<br/>
 Numero dei caratteri da copiare o [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-zero se ha esito positivo, **STRUNCATE** se si è verificato il troncamento, in caso contrario un codice di errore.
+Zero se l'operazione riesce, **STRUNCATE** se si è verificato il troncamento, in caso contrario un codice di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*strDest*|*Sizeinbytes*|*Strsource*|Valore restituito|Contenuto di *strDest*|
+|*strDest*|*numberOfElements*|*strSource*|Valore restituito|Contenuto di *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**Null**|any|any|**Einval**|non modificato|
-|any|any|**Null**|**Einval**|*strDest*[0] impostato su 0|
-|any|0|any|**Einval**|non modificato|
-|non **NULL**|troppo piccolo|any|**ERANGE**|*strDest*[0] impostato su 0|
+|**NULL**|any|any|**EINVAL**|non modificato|
+|any|any|**NULL**|**EINVAL**|*strDest*[0] impostato su 0|
+|any|0|any|**EINVAL**|non modificato|
+|Not **null**|troppo piccolo|any|**ERANGE**|*strDest*[0] impostato su 0|
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni tentano di copiare i primi caratteri *D* di *strSource* in *strDest*, dove *D* è il minore di *count* e la lunghezza di *strSource*. Se tali caratteri *D* si adattano all'interno *di strDest* (la cui dimensione è specificata come *numberOfElements*) e lasciare comunque spazio per un terminatore null, tali caratteri vengono copiati e viene aggiunto un valore null di terminazione; in caso contrario, *strDest*[0] viene impostato sul carattere null e viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Queste funzioni tentano di copiare i primi *d* caratteri di *strSource* in *strDest*, dove *D* è il minor numero di *conteggio* e la lunghezza di *strSource*. Se tali caratteri *D* si adattano all'interno di *strDest* (le cui dimensioni sono specificate come *NumberOfElements*) e lasciano comunque spazio per un carattere di terminazione null, questi caratteri vengono copiati e viene aggiunto un valore null di terminazione. in caso contrario, *strDest*[0] viene impostato sul carattere null e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
-Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *count* è **_TRUNCATE**, la quantità di *strSource* che si adatterà in *strDest* viene copiata lasciando comunque spazio per il valore null di terminazione che viene sempre aggiunto.
+Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *count* è **_TRUNCATE**, la maggior parte di *strSource* che rientrerà in *strDest* viene copiata lasciando comunque lo spazio per la terminazione null, che viene sempre accodato.
 
 Ad esempio,
 
@@ -194,20 +194,20 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-significa che stiamo chiedendo **a strncpy_s** di copiare cinque caratteri in un buffer lungo cinque byte; questo non lascerebbe spazio per il carattere di terminazione null, pertanto **strncpy_s zero** la stringa e chiama il gestore di parametri non validi.
+significa che viene richiesto **strncpy_s** di copiare cinque caratteri in un buffer di cinque byte, Questo non lascia spazio per il carattere di terminazione null, quindi **strncpy_s** Azzera la stringa e chiama il gestore di parametri non validi.
 
-Se è necessario il comportamento del troncamento, usare **_TRUNCATE** o *(dimensione* - 1):
+Se è necessario il comportamento di troncamento, usare **_TRUNCATE** o (*size* -1):
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Si noti che a differenza di **strncpy**, se *count* è maggiore della lunghezza di *strSource*, la stringa di destinazione NON è riempita con caratteri null fino al *conteggio*della lunghezza .
+Si noti che, a differenza di **strncpy**, se *count* è maggiore della lunghezza di *strSource*, la stringa di destinazione non viene riempita con caratteri null fino al *numero*di lunghezze.
 
 Il comportamento di **strncpy_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
-Se *strDest* o *strSource* è **NULL**o *numberOfElements* è 0, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**.
+Se *strDest* o *strSource* è **null**o *NumberOfElements* è 0, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**.
 
 **wcsncpy_s** e **_mbsncpy_s** sono versioni a caratteri wide e a caratteri multibyte di **strncpy_s**. Gli argomenti e il valore restituito di **wcsncpy_s** e **mbsncpy_s** variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.
 
@@ -217,7 +217,7 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli.
 
 Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -227,13 +227,13 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**, **_wcsncpy_s_l** e **_mbsncpy_s_l** non hanno alcuna dipendenza delle impostazioni locali e vengono forniti solo per **_tcsncpy_s_l** e non devono essere chiamati direttamente.
+> **_strncpy_s_l**, **_wcsncpy_s_l** e **_mbsncpy_s_l** non hanno alcuna dipendenza dalle impostazioni locali e vengono fornite solo per **_tcsncpy_s_l** e non sono progettate per essere chiamate direttamente.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strncpy_s** **, _strncpy_s_l**|\<string.h>|
+|**strncpy_s**, **_strncpy_s_l**|\<string.h>|
 |**wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> o \<wchar.h>|
 |**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
@@ -412,9 +412,9 @@ After strncpy_s (with null-termination):
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

@@ -18,18 +18,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 819ea45bb9d5775bb59764b587a75e368fa0e80d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343751"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909527"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
@@ -52,19 +52,19 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Valore Integer da testare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_ismbbblank** restituisce un valore diverso da zero se *c* rappresenta uno spazio (0x20) carattere, un carattere di tabulazione orizzontale (0x09) o un carattere specifico delle impostazioni locali utilizzato per separare le parole all'interno di una riga di testo per cui **isspace** è true; in caso contrario, restituisce 0. **_ismbbblank** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **_ismbbblank_l** è identico, ad eccezione del fatto che utilizza invece le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** restituisce un valore diverso da zero se *c* rappresenta un carattere di spazio (0x20), un carattere di tabulazione orizzontale (0x09) o un carattere specifico delle impostazioni locali utilizzato per separare le parole all'interno di una riga di testo per cui **lo spazio** è true. in caso contrario, restituisce 0. **_ismbbblank** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **_ismbbblank_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -78,4 +78,4 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
-[Routine _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

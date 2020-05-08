@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334135"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909274"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -60,32 +60,32 @@ long double asin( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore di cui deve essere calcolato l'arcoseno.
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione **asin** restituisce l'arcoseno (la funzione seno inverso) di *x* nell'intervallo compreso tra -z/2 e s/2 radianti.
+La funzione **Asin** restituisce arcoseno (funzione inversa del seno) di *x* nell'intervallo compreso tra-π/2 e π/2 radianti.
 
-Per impostazione predefinita, se *x* è minore di -1 o maggiore di 1, **asin** restituisce un indefinito.
+Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **Asin** restituisce un valore indefinito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|**Non valido**|**_DOMAIN**|
-|**QNAN**, **IND**|none|**_DOMAIN**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
 |&#124;x&#124;>1|**Non valido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare gli overload di **asin** con valori **float** e **long** **double.** In un programma C, **asin** accetta e restituisce sempre un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Asin** con valori **float** e **Long** **Double** . In un programma C, **Asin** accetta sempre e restituisce un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
-|**asin**, **asinf**, **asinl**|\<math.h>|\<cmath> o \<math.h>|
+|**Asin**, **asinf**, **asinl**|\<math.h>|\<cmath> o \<math.h>|
 
 ## <a name="example"></a>Esempio
 

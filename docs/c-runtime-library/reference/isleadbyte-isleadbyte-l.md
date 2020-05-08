@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343833"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909547"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -57,22 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Valore Integer da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**isleadbyte** restituisce un valore diverso da zero se l'argomento soddisfa la condizione di test o 0 in caso contrario. Nelle impostazioni locali "C" e nelle impostazioni locali del set di caratteri a byte singolo (SBCS), **isleadbyte** restituisce sempre 0.
+**isleadbyte** restituisce un valore diverso da zero se l'argomento soddisfa la condizione di test oppure 0 in caso contrario. Nelle impostazioni locali "C" e nelle impostazioni locali del set di caratteri a byte singolo (SBCS), **isleadbyte** restituisce sempre 0.
 
 ## <a name="remarks"></a>Osservazioni
 
-La macro **isleadbyte** restituisce un valore diverso da zero se il relativo argomento è il primo byte di un carattere multibyte. **isleadbyte** produce un risultato significativo per qualsiasi argomento integer compreso tra -1 (**EOF**) **e UCHAR_MAX** (0xFF), inclusi.
+La macro **isleadbyte** restituisce un valore diverso da zero se il relativo argomento è il primo byte di un carattere multibyte. **isleadbyte** produce un risultato significativo per qualsiasi argomento integer da-1 (**EOF**) a **UCHAR_MAX** (0xFF), inclusi.
 
-Il tipo di argomento previsto di **isleadbyte** è **int**; Se viene passato un carattere con segno, il compilatore può convertirlo in un numero intero per estensione di segno, producendo risultati imprevisti.
+Il tipo di argomento previsto di **isleadbyte** è **int**; Se viene passato un carattere con segno, il compilatore può convertirlo in un integer con l'estensione del segno, ottenendo risultati imprevedibili.
 
-La versione di questa funzione con il **_l** suffisso è identica, ad eccezione del fatto che utilizza le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.
+La versione di questa funzione con il suffisso **_L** è identica, ma usa le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -92,5 +92,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
-[Routine _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

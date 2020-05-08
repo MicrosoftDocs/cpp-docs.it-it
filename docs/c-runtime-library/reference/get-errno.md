@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: f693655ecd1eb0122577446e39d4188703674419
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f1678628685c74519077fb68ca9c810aebe30fdd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345171"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919349"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -50,17 +50,17 @@ errno_t _get_errno(
 ### <a name="parameters"></a>Parametri
 
 *pValue*<br/>
-Puntatore a un numero intero da riempire con il valore corrente della variabile **errno.**
+Puntatore a un Integer da riempire con il valore corrente della variabile **errno** .
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* è **NULL**, il gestore di parametri non validi viene richiamato come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ## <a name="remarks"></a>Osservazioni
 
-I valori possibili di **errno** sono definiti in Errno.h. Vedere anche [Costanti errno](../../c-runtime-library/errno-constants.md).
+I valori possibili di **errno** sono definiti in errno. h. Vedere anche [Costanti errno](../../c-runtime-library/errno-constants.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="example"></a>Esempio
 
