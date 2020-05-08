@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: f61aa0edeadd74a254f906dd745e18b059da7f24
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365140"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910864"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -82,28 +82,28 @@ float wcstof_l(
 
 ## <a name="parameters"></a>Parametri
 
-*Strsource*<br/>
+*strSource*<br/>
 Stringa con terminazione Null da convertire.
 
-*endptr (in base alla data in*<br/>
+*endptr*<br/>
 Puntatore al carattere che interrompe la lettura.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtof** restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione causerebbe un overflow, nel qual caso la funzione restituisce**HUGE_VALF**. Il segno di **HUGE_VALF** corrisponde al segno del valore che non può essere rappresentato. **strtof** restituisce 0 se non è possibile eseguire alcuna conversione o se si verifica un underflow.
+**strtof** restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione potrebbe causare un overflow, nel qual caso la funzione restituisce +/-**HUGE_VALF**. Il segno di **HUGE_VALF** corrisponde al segno del valore che non può essere rappresentato. **strtof** restituisce 0 se non è possibile eseguire alcuna conversione o si verifica un underflow.
 
-**wcstof** restituisce i valori analogamente a **strtof**. Per entrambe le funzioni, **errno** è impostato su **ERANGE** se si verifica un overflow o un underflow e viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+**wcstof** restituisce i valori in modo analogo a **strtof**. Per entrambe le funzioni, **errno** viene impostato su **ERANGE** se si verifica un overflow o un underflow e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Ogni funzione converte la stringa di input *strSource* in un **oggetto float**. La funzione **strtof** converte *strSource* in un valore a precisione singola. **strtof** interrompe la lettura della stringa *strSource* al primo carattere che non è in grado di riconoscere come parte di un numero. Questo può essere il carattere Null di terminazione. **wcstof** è una versione a caratteri wide di **strtof**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
+Ogni funzione converte la stringa di input *strSource* in un valore **float**. La funzione **strtof** converte *strSource* in un valore a precisione singola. **strtof** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. **wcstof** è una versione a caratteri wide di **strtof**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -112,17 +112,17 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-L'impostazione di categoria **LC_NUMERIC** delle impostazioni locali correnti determina il riconoscimento del carattere di radice in *strSource*; Per ulteriori informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). Le funzioni che non hanno il suffisso **_l** utilizzano le impostazioni locali correnti; quelli che hanno il suffisso sono identici ad eccezione del fatto che usano le impostazioni locali che vengono passate invece. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali correnti determina il riconoscimento del carattere radice in *strSource*; Per ulteriori informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). Le funzioni che non hanno il suffisso **_L** usano le impostazioni locali correnti; quelle con il suffisso sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
+Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
 
-**strtof** prevede che *strSource* punti a una stringa del formato seguente:
+**strtof** prevede che *strSource* faccia riferimento a una stringa nel formato seguente:
 
-[*spazio vuoto*] [*segno*] [*cifre*] [__.__ *cifre*] [e**e** &#124; **E**- [*segno*] *cifre*]
+[*spazi vuoti*] [*segno*] [*cifre*] [__.__ *cifre*] [{**e** &#124; **e**} [*Sign*] *digits*]
 
-Uno *spazio può* essere costituito da spazi e caratteri di tabulazione, che vengono ignorati; *segno* è più**+**( )**-** o meno ( ); e *digits* sono una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **E**) e da un numero intero con segno facoltativo. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
+Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; *Sign* è più (**+**) o meno (**-**); le *cifre* e corrispondono a una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
 
-Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponenti in stile Fortran **(d** o **D).** Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente.
+Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponenti di tipo FORTRAN (**d** o **d**). Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -167,8 +167,8 @@ string = 3.14159This stopped it
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

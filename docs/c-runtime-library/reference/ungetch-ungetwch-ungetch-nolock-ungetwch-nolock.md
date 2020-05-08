@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361316"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909303"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -84,20 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da inserire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambe le funzioni restituiscono il carattere *c* se ha esito positivo. Se si verifica un errore, **_ungetch** restituisce il valore **EOF** e **_ungetwch** restituisce **WEOF**.
+Entrambe le funzioni restituiscono il carattere *c* in caso di esito positivo. Se si verifica un errore, **_ungetch** restituisce il valore **EOF** e **_ungetwch** restituisce **WEOF**.
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni spingono il carattere *c* alla console, facendo in modo che *c* sia il carattere successivo letto **da _getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** e **_ungetwch** non riescono se vengono chiamati più di una volta prima della lettura successiva. L'argomento *c* non può essere **EOF** (o **WEOF**).
+Queste funzioni eseguono il push del carattere *c* di nuovo nella console *, causando* il carattere successivo letto da **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** e **_ungetwch** hanno esito negativo se vengono chiamati più di una volta prima della successiva lettura. L'argomento *c* non può essere **EOF** (o **WEOF**).
 
 Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
