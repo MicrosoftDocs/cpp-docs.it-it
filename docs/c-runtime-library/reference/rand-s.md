@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: b11a40dd9dc58964df77330767a55aa95a179319
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338195"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919533"
 ---
 # <a name="rand_s"></a>rand_s
 
-Genera un numero pseudocasuale. Si tratta di una versione più sicura della funzione [rand](rand.md), con miglioramenti della protezione come descritto in Funzionalità di [protezione in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Genera un numero pseudocasuale. Si tratta di una versione più sicura della funzione [Rand](rand.md), con miglioramenti per la sicurezza, come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,18 +51,18 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>Parametri
 
-*randomValue (Valore casuale)*<br/>
-Puntatore a un numero intero per contenere il valore generato.
+*randomValue*<br/>
+Puntatore a un Integer in cui deve essere presente il valore generato.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero in caso di esito positivo. In caso contrario un codice di errore. Se il puntatore di input _randomValue_ è un puntatore null, la funzione richiama un gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**. Se la funzione ha esito negativo per qualsiasi altro motivo,_randomValue_ viene impostato su 0.
+Zero in caso di esito positivo. In caso contrario un codice di errore. Se il puntatore di input _randomValue_ è un puntatore null, la funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**. Se la funzione ha esito negativo per qualsiasi altro motivo, *_randomValue_ è impostato su 0.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **rand_s** scrive un numero intero pseudocasuale nell'intervallo 0 per **UINT_MAX** al puntatore di input. La funzione **rand_s** utilizza il sistema operativo per generare numeri casuali crittograficamente sicuri. Non utilizza il valore di controllo generato dalla funzione [srand,](srand.md) né influisce sulla sequenza numerica casuale utilizzata da [rand](rand.md).
+La funzione **rand_s** scrive un Integer pseudocasuale nell'intervallo compreso tra 0 e **UINT_MAX** al puntatore di input. La funzione **rand_s** usa il sistema operativo per generare numeri casuali crittograficamente sicuri. Non usa il valore di inizializzazione generato dalla funzione [srand](srand.md) , né influisce sulla sequenza numerica casuale usata da [Rand](rand.md).
 
-La funzione **rand_s** richiede che **_CRT_RAND_S** costante essere definita prima dell'istruzione di inclusione per la funzione da dichiarare, come nell'esempio seguente:
+La funzione **rand_s** richiede che la costante **_CRT_RAND_S** venga definita prima dell'istruzione di inclusione per la funzione da dichiarare, come nell'esempio seguente:
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,7 +71,7 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s** dipende dall'API [RtlGenRandom,](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) disponibile solo in Windows XP e versioni successive.
+**rand_s** dipende dall'API [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , disponibile solo in Windows XP e versioni successive.
 
 ## <a name="requirements"></a>Requisiti
 

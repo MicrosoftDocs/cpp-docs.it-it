@@ -1,6 +1,6 @@
 ---
 title: _popen, _wpopen
-description: Un riferimento per le funzioni _popen della libreria _wpopendi runtime di Microsoft C (CRT) e .
+description: Riferimento per le funzioni _popen della libreria Microsoft C Runtime (CRT) e _wpopen.
 ms.date: 4/2/2020
 api_name:
 - _popen
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338508"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915285"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -78,10 +78,10 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Parametri
 
-*Comando*\
+*comando*\
 Comando da eseguire.
 
-*Modalità*\
+*modalità*\
 Modalità del flusso restituito.
 
 ## <a name="return-value"></a>Valore restituito
@@ -92,21 +92,21 @@ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_popen** crea una pipe. Quindi esegue in modo asincrono una copia generata del processore di comandi e utilizza il *comando* come riga di comando. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
+La funzione **_popen** crea una pipe. Esegue quindi in modo asincrono una copia generata del processore dei comandi e usa il *comando* come riga di comando. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
 
-|Modalità di accesso|Descrizione|
+|Modalità di accesso|Description|
 |-|-|
-|**"r"**|Il processo chiamante può leggere l'output standard del comando generato usando il flusso restituito.|
-|**"w"**|Il processo chiamante può scrivere nell'input standard del comando generato usando il flusso restituito.|
-|**"b"**|Apertura in modalità binaria.|
-|**"t"**|Apertura in modalità testo.|
+|**r**|Il processo chiamante può leggere l'output standard del comando generato usando il flusso restituito.|
+|**w**|Il processo chiamante può scrivere nell'input standard del comando generato usando il flusso restituito.|
+|**b**|Apertura in modalità binaria.|
+|**t**|Apertura in modalità testo.|
 
 > [!NOTE]
-> Se utilizzata in un programma Windows, la funzione **_popen** restituisce un puntatore di file non valido che causa il blocco del programma all'infinito. **_popen** funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza l'input e l'output, vedere [Creazione di un processo figlio con input e output reindirizzati](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) in Windows SDK.
+> Se utilizzata in un programma Windows, la funzione **_popen** restituisce un puntatore di file non valido che impedisce la risposta illimitata del programma. **_popen** funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza input e output, vedere Creazione di [un processo figlio con input e output reindirizzati](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) nel Windows SDK.
 
-**_wpopen** è una versione a caratteri wide di **_popen**; l'argomento *path* di **_wpopen** è una stringa di caratteri wide. **_wpopen** e **_popen** si comportano in modo identico in caso contrario.
+**_wpopen** è una versione a caratteri wide di **_popen**; l'argomento *path* per **_wpopen** è una stringa di caratteri wide. **_wpopen** e **_popen** si comportano in modo identico.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -171,7 +171,7 @@ int main( void )
 }
 ```
 
-Questo output presuppone che nella directory corrente sia presente `.c` un solo file con estensione.
+Questo output presuppone che esista un `.c` solo file nella directory corrente con estensione di file.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -188,6 +188,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo dei processi e dell'ambiente](../../c-runtime-library/process-and-environment-control.md)\
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 401f715e99e6304f0726c8b9c96a71d9582dbc1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347159"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912890"
 ---
 # <a name="fflush"></a>fflush
 
@@ -57,25 +57,25 @@ Puntatore alla struttura **FILE**.
 **fflush** restituisce 0 se il buffer è stato scaricato correttamente. Il valore 0 viene restituito anche nel caso in cui il flusso specificato non ha nessun buffer o viene aperto in sola lettura. Un valore restituito di **EOF** indica un errore.
 
 > [!NOTE]
-> Se **fflush** restituisce **EOF**, i dati potrebbero essere andati persi a causa di un errore di scrittura. Quando si imposta un gestore errori critici, è più sicuro disattivare la disattivazione del buffer con la funzione **setvbuf** o utilizzare routine di I/O di basso livello, ad esempio **_open**, **_close**e **_write** anziché le funzioni di I/O del flusso.
+> Se **fflush** restituisce **EOF**, è possibile che i dati siano andati perduti a causa di un errore di scrittura. Quando si configura un gestore errori critico, è più sicuro disattivare il buffer con la funzione **setvbuf** o usare routine di i/o di basso livello, ad esempio **_open**, **_close**e **_Write** invece delle funzioni di i/o del flusso.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **fflush** scarica il flusso di *flusso.* Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità di lettura o se il flusso non dispone di buffer, la chiamata a **fflush** non ha alcun effetto e qualsiasi buffer viene mantenuto. Una chiamata a **fflush** nega l'effetto di qualsiasi chiamata precedente a **ungetc** per il flusso. Il flusso rimane aperto dopo la chiamata.
+La funzione **fflush** Scarica il *flusso*del flusso. Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità di lettura o se il flusso non ha buffer, la chiamata a **fflush** non ha alcun effetto e viene mantenuto qualsiasi buffer. Una chiamata a **fflush** nega l'effetto di qualsiasi chiamata precedente a **ungetc** per il flusso. Il flusso rimane aperto dopo la chiamata.
 
-Se *stream* è **NULL**, il comportamento è lo stesso di una chiamata a **fflush** su ogni flusso aperto. Tutti i flussi aperti in modalità scrittura e in modalità aggiornamento in cui l'ultima operazione è stata un'operazione di scrittura vengono scaricati. La chiamata non ha effetto su altri flussi.
+Se il *flusso* è **null**, il comportamento è lo stesso di una chiamata a **fflush** in ogni flusso aperto. Tutti i flussi aperti in modalità scrittura e in modalità aggiornamento in cui l'ultima operazione è stata un'operazione di scrittura vengono scaricati. La chiamata non ha effetto su altri flussi.
 
-I buffer sono normalmente gestiti dal sistema operativo, il quale determina il momento ottimale per scrivere automaticamente i dati sul disco: quando un buffer è pieno, quando un flusso viene chiuso o quando un programma termina normalmente senza chiudere i flussi. La funzionalità di commit al disco della libreria di runtime consente di assicurare che i dati critici siano scritti direttamente su disco anziché nei buffer del sistema operativo. Senza riscrivere un programma esistente, è possibile abilitare questa funzionalità collegando i file oggetto del programma a COMMODE.OBJ. Nel file eseguibile risultante, le chiamate a **_flushall** scrivere il contenuto di tutti i buffer su disco. Solo **_flushall** e **fflush** sono interessati da COMMODE.OBJ.
+I buffer sono normalmente gestiti dal sistema operativo, il quale determina il momento ottimale per scrivere automaticamente i dati sul disco: quando un buffer è pieno, quando un flusso viene chiuso o quando un programma termina normalmente senza chiudere i flussi. La funzionalità di commit al disco della libreria di runtime consente di assicurare che i dati critici siano scritti direttamente su disco anziché nei buffer del sistema operativo. Senza riscrivere un programma esistente, è possibile abilitare questa funzionalità collegando i file oggetto del programma a COMMODE.OBJ. Nel file eseguibile risultante, le chiamate a **_flushall** scrivono il contenuto di tutti i buffer su disco. Solo **_flushall** e **fflush** sono interessati da commode. obj.
 
 Per informazioni sul controllo della funzionalità di commit su disco, vedere [Flusso I/O](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
 
-Questa funzione blocca il thread che chiama e quindi è thread-safe. Per una versione non bloccante, vedere **_fflush_nolock**.
+Questa funzione blocca il thread che chiama e quindi è thread-safe. Per una versione senza blocco, vedere **_fflush_nolock**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 

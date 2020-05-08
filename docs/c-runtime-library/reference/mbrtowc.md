@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340923"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919183"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -50,43 +50,43 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Parametri
 
-*Wchar*<br/>
-Indirizzo di un carattere di tipo "wide" per ricevere la stringa di caratteri wide convertita (tipo **wchar_t**). Questo valore può essere un puntatore Null se non è richiesta la restituzione di caratteri wide.
+*WCHAR*<br/>
+Indirizzo di un carattere wide per ricevere la stringa di caratteri wide convertita (tipo **wchar_t**). Questo valore può essere un puntatore Null se non è richiesta la restituzione di caratteri wide.
 
-*mbchar (in questo mbchar)*<br/>
+*mbchar*<br/>
 Indirizzo di una sequenza di byte (carattere multibyte).
 
 *count*<br/>
 Numero di byte da controllare.
 
-*mbstate (in stato di stato)*<br/>
-Puntatore all'oggetto stato di conversione. Se questo valore è un puntatore Null, la funzione userà un oggetto stato di conversione interno statico. Poiché l'oggetto **interno mbstate_t** non è thread-safe, è consigliabile passare sempre il proprio argomento *mbstate.*
+*mbstate*<br/>
+Puntatore all'oggetto stato di conversione. Se questo valore è un puntatore Null, la funzione userà un oggetto stato di conversione interno statico. Poiché l'oggetto **mbstate_t** interno non è thread-safe, è consigliabile passare sempre un argomento *mbstate* personalizzato.
 
 ## <a name="return-value"></a>Valore restituito
 
 Uno dei valori seguenti:
 
-0 Il *conteggio* successivo o un numero inferiore di byte completa il carattere multibyte che rappresenta il carattere di larghezza null, archiviato in *wchar*, se *wchar* non è un puntatore null.
+0 il *numero* successivo o un minor numero di byte completa il carattere multibyte che rappresenta il carattere wide null archiviato in *WCHAR*, se *WCHAR* non è un puntatore null.
 
-1 to *count*, incluso *il conteggio* successivo o un numero inferiore di byte completa un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte. L'equivalente carattere wide viene archiviato in *wchar*, se *wchar* non è un puntatore null.
+1 per il *conteggio*, incluso il *conteggio* successivo o un minor numero di byte completa un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte. Il carattere wide equivalente viene archiviato in *WCHAR*, se *WCHAR* non è un puntatore null.
 
-(size_t) (-1) Si è verificato un errore di codifica. Il *conteggio* successivo o un numero inferiore di byte non contribuiscono a un carattere multibyte completo e valido. In questo caso, **errno** è impostato su EILSEQ e lo stato dello spostamento di conversione in *mbstate* non è specificato.
+(size_t) (-1) Si è verificato un errore di codifica. Il *numero* di byte successivo o inferiore non contribuisce a un carattere multibyte completo e valido. In questo caso, **errno** viene impostato su EILSEQ e lo stato di spostamento della conversione in *mbstate* non è specificato.
 
-(size_t) (-2) I byte di *conteggio* successivi contribuiscono a un carattere multibyte incompleto ma potenzialmente valido e tutti i byte di *conteggio* sono stati elaborati. Nessun valore viene archiviato in *wchar*, ma *mbstate* viene aggiornato per riavviare la funzione.
+(size_t) (-2) Il *numero* di byte successivo contribuisce a un carattere multibyte incompleto ma potenzialmente valido e tutti i byte del *conteggio* sono stati elaborati. Nessun valore viene archiviato in *WCHAR*, ma *mbstate* viene aggiornato per riavviare la funzione.
 
 ## <a name="remarks"></a>Osservazioni
 
-Se mbchar è un puntatore null, la funzione è equivalente alla chiamata:If *mbchar* is a null pointer, the function is equivalent to the call:
+Se *mbchar* è un puntatore null, la funzione è equivalente alla chiamata:
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-In questo caso, il valore degli argomenti *wchar* e *count* viene ignorato.
+In questo caso, il valore degli argomenti *WCHAR* e *count* viene ignorato.
 
-Se *mbchar* non è un puntatore null, la funzione esamina i byte *di count* da *mbchar* per determinare il numero richiesto di byte necessari per completare il carattere multibyte successivo. Se il carattere successivo è valido, il carattere multibyte corrispondente viene archiviato in *wchar* se non è un puntatore null. Se il carattere è il carattere wide null corrispondente, lo stato risultante di *mbstate* è lo stato di conversione iniziale.
+Se *mbchar* non è un puntatore null, la funzione esamina il *numero di byte da* *mbchar* per determinare il numero di byte necessario per completare il carattere multibyte successivo. Se il carattere successivo è valido, il carattere multibyte corrispondente viene archiviato in *WCHAR* se non è un puntatore null. Se il carattere è il carattere wide null corrispondente, lo stato risultante di *mbstate* è lo stato di conversione iniziale.
 
-La funzione **mbrtowc** differisce da [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) dalla sua rimocitale. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alla stessa o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione deve utilizzare **wcsrlen** anziché **wcslen** se viene utilizzata una chiamata successiva a **wcsrtombs** al posto di **wcstombs**.
+La funzione **mbrtowc** differisce da [mbtowc _mbtowc_l](mbtowc-mbtowc-l.md) dalla relativa riavviabilità. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione deve usare **wcsrlen** anziché **wcslen** se viene usata una chiamata successiva a **wcsrtombs** anziché **wcstombs**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="example"></a>Esempio
 
@@ -216,5 +216,5 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

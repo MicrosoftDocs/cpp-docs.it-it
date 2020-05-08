@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338413"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916184"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -63,20 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da restituire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'esito è positivo, restituisce *c*. Se **_putch** ha esito negativo, restituisce **EOF;** se **_putwch** ha esito negativo, restituisce **WEOF**.
+Se l'esito è positivo, restituisce *c*. Se **_putch** ha esito negativo, restituisce **EOF**; Se **_putwch** ha esito negativo, restituisce **WEOF**.
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni scrivono direttamente il carattere *c,* senza buffering, nella console. In Windows NT **_putwch** scrive caratteri Unicode usando le impostazioni locali della console correnti.
+Queste funzioni scrivono il carattere *c* direttamente, senza buffer, nella console. In Windows NT **_putwch** scrive caratteri Unicode usando le impostazioni locali della console correnti.
 
-Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Per ulteriori informazioni, vedere **_putch_nolock** **, _putwch_nolock**.
+Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Per ulteriori informazioni, vedere **_putch_nolock**, **_putwch_nolock**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -13,7 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: e7009272dbbd2b406c6355977514feaaf13ba746
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9b18c2eb0a76885f3c3aad7bb1f03d7dea52c5c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334372"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918065"
 ---
 # <a name="_cicos"></a>_CIcos
 
@@ -48,7 +48,7 @@ Questa versione della funzione [cos](../c-runtime-library/reference/cos-cosf-cos
 
 Il valore risultante viene inserito all'inizio dello stack a virgola mobile.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

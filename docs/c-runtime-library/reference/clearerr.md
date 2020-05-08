@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 174c94136cdc8b603416ff1dd239703489925bae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350025"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916977"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,13 +54,13 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **clearerr** reimposta l'indicatore di errore e l'indicatore di fine file per il *flusso*. Gli indicatori di errore non vengono cancellati automaticamente; una volta impostato l'indicatore di errore per un flusso specificato, le operazioni su tale flusso continuano a restituire un valore di errore fino a quando non viene chiamato **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**o [rewind](rewind.md) .
+La funzione **clearerr** Reimposta l'indicatore di errore e l'indicatore di fine del file per il *flusso*. Gli indicatori di errore non vengono cancellati automaticamente. una volta impostato l'indicatore di errore per un flusso specificato, le operazioni su tale flusso continuano a restituire un valore di errore fino a quando non viene chiamato **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**o [Rewind](rewind.md) .
 
-Se *stream* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce. Per ulteriori informazioni su **errno** e sui codici di errore, vedere [errno Constants](../../c-runtime-library/errno-constants.md).
+Se il *flusso* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce. Per altre informazioni sui codici **errno** e Error, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
 
 È disponibile una versione più sicura di questa funzione, vedere [clearerr_s](clearerr-s.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

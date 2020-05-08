@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: b181959ac05814a673ab11f33e4cfc5a39e3869e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333109"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916802"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -68,10 +68,10 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Base.
 
-*Y*<br/>
+*y*<br/>
 Esponente.
 
 ## <a name="return-value"></a>Valore restituito
@@ -80,27 +80,27 @@ Restituisce il valore di *x*<sup>*y*</sup>. In caso di overflow o di underflow n
 
 |Valori di x e y|Valore restituito di pow|
 |-----------------------|-------------------------|
-|*x* !, 0,0 e *y* 0,0|1|
-|*x* 0,0 e *y* 0,0|1|
-|*x* 0,0 e *y* < 0|INF|
+|*x* ! = 0,0 e *y* = = 0,0|1|
+|*x* = = 0,0 e *y* = = 0,0|1|
+|*x* = = 0,0 e *y* < 0|INF|
 
 ## <a name="remarks"></a>Osservazioni
 
-**pow** non riconosce valori integrali a virgola mobile maggiori di 2<sup>64</sup> (ad esempio, 1.0E100).
+**POW** non riconosce i valori a virgola mobile integrali maggiori di 2<sup>64</sup> (ad esempio, 1.0 E100).
 
-**pow** ha un'implementazione che utilizza streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**POW** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-Dal caso in cui il linguaggio C, è possibile eseguire l'overload, è possibile chiamare uno qualsiasi dei vari overload di **pow**. In un programma C, **pow** accetta sempre due valori **double** e restituisce un valore **double.**
+Poiché C++ consente l'overload, è possibile chiamare uno dei diversi overload di **POW**. In un programma C, **POW** accetta sempre due valori **Double** e restituisce un valore **Double** .
 
-L'overload `pow(int, int)` non è più disponibile. Se si utilizza questo overload, il compilatore potrebbe generare [l'errore C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast del primo parametro a **double**, **float**o **long** **double**.
+L'overload `pow(int, int)` non è più disponibile. Se si usa questo overload, il compilatore può generare [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast del primo parametro a **Double**, **float**o **Long** **Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-|-|-|
-|**pow**, **powf**, **ppoll**|\<math.h>|\<math.h> o \<cmath>|
+|**POW**, **powf**, **POWL**|\<math.h>|\<math.h> o \<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

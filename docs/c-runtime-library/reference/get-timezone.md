@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344898"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918504"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -50,20 +50,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parametri
 
-*Secondi*<br/>
+*secondi*<br/>
 La differenza in secondi tra l'ora UTC e l'ora locale.
 
 ## <a name="return-value"></a>Valore restituito
 
-zero se ha esito positivo o un valore **errno** se si verifica un errore.
+Zero se ha esito positivo o un valore **errno** se si verifica un errore.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_get_timezone** recupera la differenza in secondi tra l'ora UTC e l'ora locale come numero intero. Il valore predefinito è 28.800 secondi per l'ora solare Pacifico (otto ore in meno rispetto all'ora UTC).
+La funzione **_get_timezone** recupera la differenza in secondi tra l'ora UTC e l'ora locale come valore integer. Il valore predefinito è 28.800 secondi per l'ora solare Pacifico (otto ore in meno rispetto all'ora UTC).
 
-Se *seconds* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Se *seconds* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
