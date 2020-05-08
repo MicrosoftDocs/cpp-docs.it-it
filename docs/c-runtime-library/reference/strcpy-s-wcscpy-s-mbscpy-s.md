@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +45,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: ac68d2fb86a43d7114b3b0e7651f5ae4367aa44b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358702"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911838"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
 Copia una stringa. Queste versioni di [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s** e **_mbscpy_s_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbscpy_s** e **_mbscpy_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -116,12 +116,12 @@ errno_t _mbscpy_s_l(
 Posizione del buffer di stringa di destinazione.
 
 *dest_size*<br/>
-Dimensione del buffer di stringa di destinazione in unità **char** per funzioni strette e multibyte e **wchar_t** unità per funzioni wide. Questo valore deve essere maggiore di zero e non maggiore di **RSIZE_MAX**.
+Dimensioni del buffer della stringa di destinazione nelle unità di tipo **char** per le funzioni narrow e multibyte e **wchar_t** unità per le funzioni estese. Questo valore deve essere maggiore di zero e non maggiore di **RSIZE_MAX**.
 
 *src*<br/>
 Buffer della stringa di origine che termina con Null.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -132,17 +132,17 @@ Zero in caso di esito positivo; in caso contrario un errore.
 
 |*dest*|*dest_size*|*src*|Valore restituito|Contenuto di *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**|any|any|**Einval**|non modificato|
-|any|any|**Null**|**Einval**|*dest*[0] impostato su 0|
+|**NULL**|any|any|**EINVAL**|non modificato|
+|any|any|**NULL**|**EINVAL**|*dest*[0] impostato su 0|
 |any|0 o troppo piccolo|any|**ERANGE**|*dest*[0] impostato su 0|
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **strcpy_s** copia il contenuto nell'indirizzo di *src*, incluso il carattere di terminazione null, nella posizione specificata da *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Il comportamento di **strcpy_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
+La funzione **strcpy_s** copia il contenuto nell'indirizzo di *src*, incluso il carattere null di terminazione, nel percorso specificato da *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Il comportamento di **strcpy_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
-**wcscpy_s** è la versione a caratteri wide di **strcpy_s**e **_mbscpy_s** è la versione a caratteri multibyte. Gli argomenti di **wcscpy_s** sono stringhe di caratteri wide; quelli di **_mbscpy_s** e **_mbscpy_s_l** sono stringhe di caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico. **_mbscpy_s_l** è identico a **_mbscpy_s** ad eccezione del fatto che utilizza il parametro locale passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**wcscpy_s** è la versione a caratteri wide di **strcpy_s**e **_mbscpy_s** è la versione a caratteri multibyte. Gli argomenti di **wcscpy_s** sono stringhe a caratteri wide. i **_mbscpy_s** e **_mbscpy_s_l** sono stringhe di caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico. **_mbscpy_s_l** è identico a **_mbscpy_s** ad eccezione del fatto che usa il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *dest* o *src* è un puntatore null o se la dimensione della stringa di destinazione *dest_size* è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL** quando *dest* o *src* è un puntatore null e restituiscono **ERANGE** e impostano **errno** su **ERANGE** quando la stringa di destinazione è troppo piccola.
+Se *dest* o *src* è un puntatore null o se la dimensione della stringa di destinazione *Dest_size* è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL** quando *dest* o *src* è un puntatore null e restituiscono **ERANGE** e imposta **errno** su **ERANGE** quando la stringa di destinazione è troppo piccola.
 
 Quando l'esecuzione dell'operazione si conclude correttamente, la stringa di destinazione è sempre con terminazione Null.
 
@@ -150,7 +150,7 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; 
 
 Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -166,11 +166,11 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**wcscpy_s**|\<string.h> o \<wchar.h>|
 |**_mbscpy_s**|\<mbstring.h>|
 
-Queste funzioni sono specifiche di Microsoft.These functions are Microsoft-specific. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
-A differenza del codice di qualità di produzione, in questo esempio vengono chiamate le funzioni di stringa protetta senza verificare la presenza di errori:Unlike production quality code, this sample calls the secure string functions without checking for errors:
+A differenza del codice di qualità di produzione, in questo esempio vengono chiamate le funzioni stringa sicure senza verificare la presenza di errori:
 
 ```C
 // crt_strcpy_s.c
@@ -200,7 +200,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Durante la compilazione di un codice C, le versioni del modello possono essere più facili da usare.
+Quando si compila il codice C++, le versioni dei modelli possono essere più facili da usare.
 
 ```cpp
 // crt_wcscpy_s.cpp
@@ -233,7 +233,7 @@ String = Hello world from wcscpy_s and wcscat_s!
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md) <br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
 [strcmp, wcscmp, _mbscmp, _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
