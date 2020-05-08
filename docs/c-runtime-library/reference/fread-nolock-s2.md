@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 3fb34a75a0281058a1d70ce41e1ce33b4b1bbb59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346141"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912722"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -53,13 +53,13 @@ size_t _fread_nolock_s(
 *buffer*<br/>
 Percorso di archiviazione per i dati.
 
-*Buffersize*<br/>
+*bufferSize*<br/>
 Dimensioni del buffer di destinazione in byte.
 
-*elementSize (Dimensionielemento)*<br/>
+*elementSize*<br/>
 Dimensione dell'elemento da leggere in byte.
 
-*elementCount (conteggio elementi)*<br/>
+*Valore elementCount*<br/>
 Numero massimo di elementi da leggere.
 
 *flusso*<br/>
@@ -71,13 +71,13 @@ Vedere [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa funzione è una versione senza blocco di **fread_s**. È identico a **fread_s** tranne che non è protetto da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Questa funzione è una versione non di blocco di **fread_s**. È identico a **fread_s** ad eccezione del fatto che non è protetto da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fread_nolock_s**|C: \<stdio.h>; C++: \<cstdio> o \<stdio.h>|
 

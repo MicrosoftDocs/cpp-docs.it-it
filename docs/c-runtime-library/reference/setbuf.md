@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332069"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910338"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -57,11 +57,11 @@ Buffer allocato dall'utente.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **setbuf** controlla il buffering per *il flusso*. L'argomento *stream* deve fare riferimento a un file aperto che non è stato letto o scritto. Se l'argomento *buffer* è **NULL**, il flusso non viene memorizzato nel buffer. In caso contrario, il buffer deve puntare a una matrice di caratteri di lunghezza **BUFSI**, dove **BUFSI** è la dimensione del buffer come definito in STDIO. H. Per il buffering di I/O viene usato il buffer specificato dall'utente, invece del buffer allocato dal sistema predefinito per il flusso specificato. Il flusso **stderr** non è memorizzato nel buffer per impostazione predefinita, ma è possibile utilizzare **setbuf** per assegnare i buffer a **stderr**.
+La funzione **setbuf** controlla il buffering per il *flusso*. L'argomento del *flusso* deve fare riferimento a un file aperto che non è stato letto o scritto. Se l'argomento del *buffer* è **null**, il flusso non viene memorizzato nel buffer. In caso contrario, il buffer deve puntare a una matrice di caratteri di lunghezza **BUFSIZ**, dove **BUFSIZ** è la dimensione del buffer definita in stdio. H. Per il buffering di I/O viene usato il buffer specificato dall'utente, invece del buffer allocato dal sistema predefinito per il flusso specificato. Per impostazione predefinita, il flusso **stderr** non viene memorizzato nel buffer, ma è possibile usare **setbuf** per assegnare i buffer a **stderr**.
 
-**setbuf** è stato sostituito da [setvbuf](setvbuf.md), che è la routine preferita per il nuovo codice. A differenza di **setvbuf,** **setbuf** non ha modo di segnalare errori. **setvbuf** consente inoltre di controllare sia la modalità di buffering che la dimensione del buffer. **setbuf** esiste per la compatibilità con il codice esistente.
+**setbuf** è stato sostituito da [setvbuf](setvbuf.md), che è la routine preferita per il nuovo codice. A differenza di **setvbuf**, **setbuf** non è in grado di segnalare gli errori. **setvbuf** consente inoltre di controllare la modalità di buffering e le dimensioni del buffer. **setbuf** esiste per la compatibilità con il codice esistente.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

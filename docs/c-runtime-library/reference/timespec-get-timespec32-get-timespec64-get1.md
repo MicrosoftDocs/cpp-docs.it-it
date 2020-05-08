@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: fc6d91b076f2dd2e25c55d9cf7062e81c3fab11a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362496"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911812"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -77,25 +77,25 @@ Un valore specifico dell'implementazione diverso da zero che specifica la base t
 
 ## <a name="return-value"></a>Valore restituito
 
-Valore di base in *caso* di esito positivo, in caso contrario restituisce zero.
+Valore di *base* in caso di esito positivo; in caso contrario, restituisce zero.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **timespec_get** impostano l'ora corrente nella struttura a cui punta l'argomento *time_spec.* Tutte le versioni di questo struct dispongono di due **membri, tv_sec** e **tv_nsec**. Il valore **di tv_sec** viene impostato sul numero intero di secondi e **tv_nsec** al numero integrale di nanosecondi, arrotondato alla risoluzione dell'orologio di sistema, dall'inizio dell'epoca specificata da *base*.
+Le funzioni di **timespec_get** impostano l'ora corrente nello struct a cui punta l'argomento *time_spec* . Tutte le versioni di questo struct hanno due membri, **tv_sec** e **tv_nsec**. Il valore **tv_sec** è impostato sul numero intero di secondi e **tv_nsec** sul numero integrale di nanosecondi, arrotondato alla risoluzione del clock di sistema, dall'inizio del periodo specificato dalla *base*.
 
 **Specifico di Microsoft**
 
-Queste funzioni supportano solo **TIME_UTC** come valore di *base.* In questo modo il *valore time_spec* viene impostato sul numero di secondi e nanosecondi trascorsi dall'inizio dell'epoca, mezzanotte, 1 gennaio 1970, ora UTC (Coordinated Universal Time). In un **_timespec32** **struct** **, tv_sec** è un valore **__time32_t** . In una **_timespec64** **struct** **, tv_sec** è un valore **__time64_t.** In un **timespec struct** **timespec**, **tv_sec** è un tipo **di time_t,** che è 32 bit o 64 bit di lunghezza a seconda che la macro del preprocessore _USE_32BIT_TIME_T sia definita. La funzione **timespec_get** è una funzione inline che chiama **_timespec32_get** se _USE_32BIT_TIME_T è definito; in caso contrario chiama **_timespec64_get**.
+Queste funzioni supportano solo **TIME_UTC** come valore di *base* . In questo modo, il valore *time_spec* viene impostato sul numero di secondi e nanosecondi dall'inizio del periodo, ovvero la mezzanotte del 1 gennaio 1970, ora UTC (Coordinated Universal Time). In una **struct** **_timespec32**struct **tv_sec** è un valore di **__time32_t** . In una **struct** **_timespec64**struct **tv_sec** è un valore di **__time64_t** . In uno **struct** **timespec** **tv_sec** è un tipo di **time_t** , ovvero 32 bit o 64 bit, a seconda che sia definita la macro del preprocessore _USE_32BIT_TIME_T. La funzione **timespec_get** è una funzione inline che chiama **_timespec32_get** se _USE_32BIT_TIME_T è definito. in caso contrario, chiama **_timespec64_get**.
 
 **Fine sezione specifica Microsoft**
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**timespec_get** **, _timespec32_get**, **_timespec64_get**|C: \<time.h>, C++: \<ctime> o \<time.h>|
+|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h>, C++: \<ctime> o \<time.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

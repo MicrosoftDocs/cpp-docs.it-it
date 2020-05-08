@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: d35b3db157d4f33e3a8490c6620a08000ff090f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341610"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911311"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -63,34 +63,34 @@ __int64 _lseeki64(
 
 ### <a name="parameters"></a>Parametri
 
-*Fd*<br/>
+*FD*<br/>
 Descrittore del file che fa riferimento a un file aperto.
 
 *offset*<br/>
 Numero di byte da *origin*.
 
-*Origine*<br/>
+*origine*<br/>
 Posizione iniziale.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_lseek** restituisce l'offset, in byte, della nuova posizione dall'inizio del file. **_lseeki64** restituisce l'offset in un numero intero a 64 bit. La funzione restituisce -1L per indicare un errore. Se viene passato un parametro non valido, ad esempio un descrittore di file non valido o il valore per *origin* non è valido o la posizione specificata da *offset* è prima dell'inizio del file, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EBADF** e restituiscono -1L. Nei dispositivi che non supportano la ricerca (ad esempio terminali e stampanti), il valore restituito è indefinito.
+**_lseek** restituisce l'offset, in byte, della nuova posizione a partire dall'inizio del file. **_lseeki64** restituisce l'offset in un intero a 64 bit. La funzione restituisce-1L per indicare un errore. Se viene passato un parametro non valido, ad esempio un descrittore di file non valido o il valore per *origin* non è valido o la posizione specificata da *offset* è prima dell'inizio del file, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EBADF** e restituiscono-1L. Nei dispositivi che non supportano la ricerca (ad esempio terminali e stampanti), il valore restituito è indefinito.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_lseek** sposta il puntatore del file associato a *fd* in una nuova posizione che *viene compensata* tra i byte *dall'origine.* L'operazione successiva nel file viene eseguita nella nuova posizione. L'argomento *origin* deve essere una delle costanti seguenti, definite in Stdio.h.
+La funzione **_lseek** sposta il puntatore del file associato a *FD* in una nuova posizione che è un *offset* di byte dall' *origine*. L'operazione successiva nel file viene eseguita nella nuova posizione. L'argomento *origin* deve essere una delle costanti seguenti, definite in Stdio.h.
 
-|valore *di origine*||
+|valore di *origine*||
 |-|-|
 | **SEEK_SET** | Inizio del file. |
 | **SEEK_CUR** | Posizione corrente del puntatore del file. |
 | **SEEK_END** | Fine del file. |
 
-È possibile **utilizzare _lseek** per riposizionare il puntatore in un punto qualsiasi di un file o oltre la fine del file.
+È possibile utilizzare **_lseek** per riposizionare il puntatore in qualsiasi punto di un file o oltre la fine del file.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

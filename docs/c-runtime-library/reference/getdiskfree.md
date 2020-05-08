@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 095a272e1dd85c1b61e1970a1b881737acbb739d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344311"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913822"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
-Utilizza le informazioni su un'unità disco per popolare una struttura **_diskfree_t.**
+USA informazioni su un'unità disco per popolare una struttura **_diskfree_t** .
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -56,19 +56,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>Parametri
 
-*Guida*<br/>
+*unità*<br/>
 L'unità disco per cui si desidera ottenere informazioni.
 
-*Driveinfo*<br/>
+*DriveInfo*<br/>
 Struttura **_diskfree_t** che verrà popolata con informazioni sull'unità.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore restituito è zero. Se la funzione ha esito negativo, il valore restituito è il codice di errore. Il valore **errno** viene impostato per tutti gli errori restituiti dal sistema operativo. Per ulteriori informazioni sulle condizioni di errore indicate da **errno**, vedere [Constants errno](../../c-runtime-library/errno-constants.md).
+Se la funzione ha esito positivo, il valore restituito è zero. Se la funzione ha esito negativo, il valore restituito è il codice di errore. Il valore **errno** viene impostato per tutti gli errori restituiti dal sistema operativo. Per ulteriori informazioni sulle condizioni di errore indicate da **errno**, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La struttura **_diskfree_t** è definita in Direct.h.
+La struttura del **_diskfree_t** è definita in Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -79,9 +79,9 @@ struct _diskfree_t {
 };
 ```
 
-Questa funzione convalida i relativi parametri. Se il puntatore *driveinfo* è **NULL** o *l'unità* specifica un'unità non valida, questa funzione richiama un gestore di parametri non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**. Le unità valide sono comprese tra 0 e 26. Un valore di *unità* pari a 0 specifica l'unità corrente; in seguito, i numeri vengono mappati alle lettere dell'alfabeto inglese in modo che 1 indichi l'unità A, 3 indica l'unità C e così via.
+Questa funzione convalida i relativi parametri. Se il puntatore *DriveInfo* è **null** o l' *unità* specifica un'unità non valida, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**. Le unità valide sono comprese tra 0 e 26. Un valore di *unità* pari a 0 specifica l'unità corrente; Successivamente, i numeri vengono associati alle lettere dell'alfabeto inglese in modo che 1 indichi l'unità A, 3 indica l'unità C e così via.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
