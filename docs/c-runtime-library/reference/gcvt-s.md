@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 10d2b9af45b78a3f5ed673bde3d37894ccb00168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345367"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919421"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -70,7 +70,7 @@ Buffer per l'archiviazione del risultato della conversione.
 *sizeInBytes*<br/>
 Dimensioni del buffer.
 
-*Valore*<br/>
+*value*<br/>
 Valore da convertire.
 
 *Cifre*<br/>
@@ -82,25 +82,25 @@ Zero in caso di esito positivo. Se si verifica un errore a causa di un parametro
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*sizeInBytes*|*Valore*|*Cifre*|Return|Valore nel *buffer*|
+|*buffer*|*sizeInBytes*|*value*|*Cifre*|Return|Valore nel *buffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**Null**|any|any|any|**Einval**|Non modificato.|
-|Non **NULL** (punta alla memoria valida)|zero|any|any|**Einval**|Non modificato.|
-|Non **NULL** (punta alla memoria valida)|any|any|>= *sizeInBytes*|**Einval**|Non modificato.|
+|**NULL**|any|any|any|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|zero|any|any|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|any|any|>= *sizeInBytes*|**EINVAL**|Non modificato.|
 
 **Problemi di sicurezza**
 
-**_gcvt_s** possibile generare una violazione di accesso se *buffer* non punta a memoria valida e non è **NULL**.
+**_gcvt_s** possibile generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_gcvt_s** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e memorizza la stringa nel *buffer*. *buffer* deve essere sufficientemente grande per contenere il valore convertito più un carattere di terminazione null, che viene aggiunto automaticamente. Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile. Se viene utilizzata una dimensione del buffer di *cifre* 1, la funzione non sovrascriverà la fine del buffer, quindi assicurarsi di fornire un buffer sufficiente per questa operazione. **_gcvt_s** tenta di produrre *cifre cifre* in formato decimale. In caso contrario, *produce* cifre in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
+La funzione **_gcvt_s** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e archivia la stringa nel *buffer*. il *buffer* deve essere sufficientemente grande da contenere il valore convertito e un carattere null di terminazione, che viene aggiunto automaticamente. Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile. Se viene utilizzata una dimensione del buffer di *cifre* + 1, la funzione non sovrascriverà la fine del buffer, pertanto assicurarsi di specificare un buffer sufficiente per questa operazione. **_gcvt_s** tenta *di produrre cifre cifre in* formato decimale. In caso contrario, *le cifre vengono generate* in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
 
 In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-La versione di debug di questa funzione riempie innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versione di debug di questa funzione riempie prima di tutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

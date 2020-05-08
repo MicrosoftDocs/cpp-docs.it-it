@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350129"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920057"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -60,27 +60,27 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **atanh** restituiscono la tangente iberbolica inversa (tangente iperbolica dell'arco) di *x*. Se *x* è maggiore di 1 o minore di -1, **errno** è impostato su **EDOM** e il risultato è un NaN silenzioso. Se *x* è uguale a 1 o -1, viene restituito un infinito positivo o negativo, rispettivamente, e **errno** viene impostato su **ERANGE**.
+Le funzioni **atanh** restituiscono la tangente iperbolico inversa (tangente iperbolica di arco) di *x*. Se *x* è maggiore di 1 o minore di-1, **errno** viene impostato su **Edom** e il risultato è una NaN non interattiva. Se *x* è uguale a 1 o-1, viene restituito un infinito positivo o negativo, rispettivamente, e **errno** viene impostato su **ERANGE**.
 
 |Input|Eccezione SEH|**Matherr** Eccezione|
 |-----------|-------------------|-------------------------|
-|QNAN,IND|none|none|
-|*X* : 1; *x* - 1|none|none|
+|± QNAN, IND|none|none|
+|*X* ≥ 1; *x* ≤-1|none|none|
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare gli overload di **atanh** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **atanh** accetta e restituisce sempre **double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **atanh** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **atanh** accetta e restituisce sempre **Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> o \<math.h>|
 

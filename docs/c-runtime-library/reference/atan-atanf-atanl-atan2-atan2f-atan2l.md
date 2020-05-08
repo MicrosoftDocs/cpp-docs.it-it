@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,16 +44,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 3b8411f9839022477dff3100792e271e2f0b572b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334113"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920067"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcola l'arcotangente di **x** (**atan**, **atanf**e **atanl**) o l'arcotangente di **y**/**x** (**atan2**, **atan2f**e **atan2l**).
+Calcola il arcotangente di **x** (**atan**, **atanf**e **atanl**) o la arcotangente di **y**/**x** (**Atan2**, **atan2f**e **atan2l**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -82,29 +82,29 @@ Qualsiasi numero.
 
 ## <a name="return-value"></a>Valore restituito
 
-**atan** restituisce l'arcotangente di *x* compreso nell'intervallo compreso tra -2 e 2 radianti. **atan2** restituisce l'arcotangente di *y*/*x* nell'intervallo -a - a . Se *x* è 0, **atan** restituisce 0. Se entrambi i parametri di **atan2** sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
+**atan** restituisce il arcotangente di *x* compreso tra-π/2 e π/2 radianti. **Atan2** restituisce il arcotangente di *y*/*x* compreso tra-π e π radianti. Se *x* è 0, **atan** restituisce 0. Se entrambi i parametri di **Atan2** sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
 
-**atan2** utilizza i segni di entrambi i parametri per determinare il quadrante del valore restituito.
+**Atan2** usa i segni di entrambi i parametri per determinare il quadrante del valore restituito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|none|**_DOMAIN**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **atan** calcola l'arcotangente (funzione tangente inversa) di *x*. **atan2** calcola l'arcotangente di *y*/*x* (se *x* è uguale a 0, **atan2** restituisce s/2 se *y* è positivo, -/2 se *y* è negativo o 0 se *y* è 0.)
+La funzione **atan** calcola il arcotangente (funzione inversa della tangente) di *x*. **Atan2** calcola il arcotangente di *y*/*x* (se *x* è uguale a 0, **Atan2** restituisce π/2 Se *y* è positivo,-π/2 Se *y* è negativo oppure 0 se *y* è 0).
 
-**atan** ha un'implementazione che utilizza streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**atan** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-Dal momento che il linguaggio C, è possibile chiamare overload di **atan** e **atan2** che accettano argomenti **float** o **long** **double.** In un programma C, **atan** e **atan2** accettano sempre **doppi** argomenti e restituiscono un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **atan** e **Atan2** che accettano gli argomenti di tipo **float** o **Long** **Double** . In un programma C, **atan** e **Atan2** accettano sempre gli argomenti **doppi** e restituiscono un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
-|**atan**, **atan2**, **atanf**, **atan2f**, **atanl , atanl**, **atan2l**|\<math.h>|\<cmath> o \<math.h>|
+|**atan**, **Atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> o \<math.h>|
 
 ## <a name="example"></a>Esempio
 

@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348956"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920043"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Converte una stringa in un valore double (**_atodbl**), long double (**_atoldbl**) o float (**_atoflt**).
+Converte una stringa in un valore Double (**_atodbl**), long double (**_atoldbl**) o float (**_atoflt**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -83,34 +83,34 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
+*value*<br/>
 Il valore double, long double o float prodotto dalla conversione della stringa in valore a virgola mobile. Viene eseguito il wrapping di questi valori in una struttura.
 
 *Str*<br/>
 La stringa da analizzare per la conversione in valore a virgola mobile.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 in caso di esito positivo. I codici di errore possibili sono **_UNDERFLOW** o \< **_OVERFLOW**, definiti nel file di intestazione math.h>.
+Restituisce 0 in caso di esito positivo. I codici di errore possibili sono **_UNDERFLOW** o **_OVERFLOW**, definiti nel file \<di intestazione Math. h>.
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni convertono una stringa in un valore a virgola mobile. La differenza tra queste funzioni e la famiglia di funzioni **atof** è che queste funzioni non generano codice a virgola mobile e non causano eccezioni hardware. Al contrario, le condizioni di errore vengono segnalate come codici di errore.
+Queste funzioni convertono una stringa in un valore a virgola mobile. La differenza tra queste funzioni e la famiglia di funzioni **atof** consiste nel fatto che queste funzioni non generano codice a virgola mobile e non provocano eccezioni hardware. Al contrario, le condizioni di errore vengono segnalate come codici di errore.
 
-Se una stringa non ha un'interpretazione valida come valore a virgola mobile, *value* viene impostato su zero e il valore restituito è zero.
+Se una stringa non ha un'interpretazione valida come valore a virgola mobile, il *valore* viene impostato su zero e il valore restituito è zero.
 
-Le versioni di queste funzioni che hanno il **suffisso _l** sono identiche a quelli che non hanno il suffisso, ad eccezione del fatto che usano il parametro *locale* passato anziché le impostazioni locali del thread corrente.
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche a quelle che non hanno il suffisso, ad eccezione del fatto che usano il parametro delle *impostazioni locali* passato al posto delle impostazioni locali del thread corrente.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |--------------|---------------------|
-|**_atodbl**, **_atoldbl** **, _atoflt**<br /><br /> **_atodbl_l** **, _atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>Esempio
 
@@ -172,5 +172,5 @@ Return value: 3
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

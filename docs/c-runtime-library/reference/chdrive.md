@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 0c19fefcf6a766842ee2e25cbe6bdb61bbf48e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333351"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917013"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -53,7 +53,7 @@ int _chdrive(
 
 ### <a name="parameters"></a>Parametri
 
-*Guida*<br/>
+*unità*<br/>
 Numero intero da 1 a 26 che specifica l'unità di lavoro corrente (1=A, 2=B e così via).
 
 ## <a name="return-value"></a>Valore restituito
@@ -62,13 +62,13 @@ Zero (0) se l'unità di lavoro corrente è stata modificata correttamente, in ca
 
 ## <a name="remarks"></a>Osservazioni
 
-Se *l'unità* non è compresa nell'intervallo da 1 a 26, il gestore dei parametri non validi viene richiamato come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione **_chdrive** restituisce -1, **errno** è impostato su **EACCES**e **_doserrno** è impostato su **ERROR_INVALID_DRIVE**.
+Se l' *unità* non è compresa nell'intervallo da 1 a 26, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione **_chdrive** restituisce-1, **errno** viene impostato su **EACCES**e **_doserrno** è impostato su **ERROR_INVALID_DRIVE**.
 
 La funzione **_chdrive** non è thread-safe poiché dipende dalla funzione **SetCurrentDirectory** che non è a sua volta thread-safe. Per usare **_chdrive** in modo sicuro in un'applicazione multithread, è necessario includere la propria sincronizzazione dei thread. Per ulteriori informazioni, vedere [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 La funzione **_chdrive** modifica solo l'unità di lavoro corrente. **_chdir** modifica la directory di lavoro corrente.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
