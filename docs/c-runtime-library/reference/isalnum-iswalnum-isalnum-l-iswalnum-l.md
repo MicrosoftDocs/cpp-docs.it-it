@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +43,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: a64cdc28d78a4a8691c74c66e2b4c18e4d0c31b6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343974"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919806"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -65,19 +65,19 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Valore Integer da testare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere alfanumerico. **isalnum** restituisce un valore diverso da zero se **isalpha** o **isdigit** è diverso da zero per *c*, ovvero se *c* è compreso tra gli intervalli A - , a - z o 0 - 9. **iswalnum** restituisce un valore diverso da zero se **iswalpha** o **iswdigit** è diverso da zero per *c*. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di un carattere alfanumerico. **isalnum** restituisce un valore diverso da zero se l'oggetto di tipo o è diverso da zero *per c*, ovvero se *c* **è compreso** negli intervalli a-z, a- **z o 0-9** . **iswalnum** restituisce un valore diverso da zero se **iswalpha** o **iswdigit** è diverso da zero per *c*. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni con il **suffisso _l** utilizzano il parametro locale passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **_L** usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento di **isalnum** e **_isalnum_l** non è definito se *c* non è EOF o compreso nell'intervallo da 0 a 0xFF, inclusivo. Quando viene utilizzata una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di **isalnum** e **_isalnum_l** non è definito se *c* non è EOF o nell'intervallo compreso tra 0 e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -88,7 +88,7 @@ Il comportamento di **isalnum** e **_isalnum_l** non è definito se *c* non è E
 
 ## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -104,5 +104,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>

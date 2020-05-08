@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338155"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919522"
 ---
 # <a name="rand"></a>rand
 
-Genera un numero pseudocasuale utilizzando un algoritmo noto e completamente riproducibile. È disponibile una versione più sicura a livello di codice di questa funzione. vedere [rand_s](rand-s.md). I numeri generati da **rand** non sono crittograficamente sicuri. Per una generazione di numeri casuali più crittograficamente sicura, utilizzare [rand_s](rand-s.md) o le funzioni dichiarate nella libreria standard di C, in [ \<>casuale. ](../../standard-library/random.md)
+Genera un numero pseudocasuale usando un algoritmo noto e completamente riproducibile. È disponibile una versione più sicura di questa funzione a livello di codice. vedere [rand_s](rand-s.md). I numeri generati da **Rand** non sono crittograficamente sicuri. Per la generazione di numeri casuali più crittograficamente sicuri, usare [rand_s](rand-s.md) o le funzioni dichiarate nella libreria standard C++ in [ \<>casuale ](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -50,15 +50,15 @@ int rand( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**rand** restituisce un numero pseudocasuale, come descritto sopra. Non vi è restituzione di errori.
+**Rand** restituisce un numero pseudocasuale, come descritto in precedenza. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **rand** restituisce un numero intero pseudocasuale compreso nell'intervallo da 0 a **RAND_MAX** (32767). Utilizzare la funzione [srand](srand.md) per inizializzare il generatore di numeri pseudocasuali prima di chiamare **rand**.
+La funzione **Rand** restituisce un Integer pseudocasuale nell'intervallo compreso tra 0 e **RAND_MAX** (32767). Usare la funzione [srand](srand.md) per inizializzare il generatore di numeri di pseudocasuale prima di chiamare **Rand**.
 
-La funzione **rand** genera una sequenza nota e non è appropriata per l'utilizzo come funzione crittografica. Per una generazione di numeri casuali più crittograficamente sicura, utilizzare [rand_s](rand-s.md) o le funzioni dichiarate nella libreria standard di C, in [ \<>casuale. ](../../standard-library/random.md) Per informazioni su cosa non va \<in **rand** e su come> casuale risolve queste carenze, vedere questo video intitolato [rand Considerato dannoso](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+La funzione **Rand** genera una sequenza nota e non è appropriata per l'uso come funzione di crittografia. Per la generazione di numeri casuali più crittograficamente sicuri, usare [rand_s](rand-s.md) o le funzioni dichiarate nella libreria standard C++ in [ \<>casuale ](../../standard-library/random.md). Per informazioni sui problemi relativi a **Rand** e sul modo \<in cui Random> risolve questi difetti, vedere il video intitolato [Rand considerato dannoso](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

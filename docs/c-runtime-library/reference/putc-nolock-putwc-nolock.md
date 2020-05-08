@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: aa96275b29d2510400622f52fa34c58ae251ff6c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 21ab002dee736a099bae5ce12f5c78248e682d58
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338466"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913319"
 ---
 # <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock, _putwc_nolock
 
@@ -66,7 +66,7 @@ wint_t _putwc_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da scrivere.
 
 *flusso*<br/>
@@ -78,11 +78,11 @@ Vedere **putc, putwc**.
 
 ## <a name="remarks"></a>Osservazioni
 
-**_putc_nolock** e **_putwc_nolock** sono identici alle versioni senza il suffisso **di _nolock,** ad eccezione del fatto che non sono protetti da interferenze da altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+**_putc_nolock** e **_putwc_nolock** sono identici alle versioni senza il suffisso **_nolock** ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
-**_putwc_nolock** è la versione a caratteri wide di **_putc_nolock**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **_putc_nolock** attualmente non supporta l'output in un flusso UNICODE.
+**_putwc_nolock** è la versione a caratteri wide di **_putc_nolock**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **_putc_nolock** attualmente non supporta l'output in un flusso Unicode.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -97,7 +97,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app UWP (Universal Windows Platform). Gli handle di flusso standard associati alla console, **stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano utilizzarli nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

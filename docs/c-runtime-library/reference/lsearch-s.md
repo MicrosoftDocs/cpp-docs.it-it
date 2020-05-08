@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: 720b83dd48b42d77f35bce12f16e8ac79eb3b4d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d8c421eb3c7a6a617ce073cbf5f36416294c1874
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341655"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920450"
 ---
 # <a name="_lsearch_s"></a>_lsearch_s
 
@@ -59,19 +59,19 @@ void *_lsearch_s(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*<br/>
+*key*<br/>
 Oggetto da cercare.
 
 *base*<br/>
 Puntatore alla base della matrice da cercare.
 
-*Numero*<br/>
+*number*<br/>
 Numero di elementi.
 
-*Dimensione*<br/>
+*size*<br/>
 Dimensione di ogni elemento della matrice in byte.
 
-*Confrontare*<br/>
+*confrontare*<br/>
 Puntatore alla routine di confronto. Il secondo parametro è un puntatore alla chiave per la ricerca. Il terzo parametro è un puntatore a un elemento della matrice da confrontare con la chiave.
 
 *context*<br/>
@@ -79,28 +79,28 @@ Puntatore a un oggetto che potrebbe essere accessibile nella funzione di confron
 
 ## <a name="return-value"></a>Valore restituito
 
-Se *key* viene trovato, **_lsearch_s** restituisce un puntatore all'elemento della matrice in *corrispondenza* della chiave di base che corrisponde *alla chiave*. Se *key* non viene trovato, **_lsearch_s** restituisce un puntatore all'elemento appena aggiunto alla fine della matrice.
+Se la *chiave* viene trovata, **_lsearch_s** restituisce un puntatore all'elemento della matrice in *base* che corrisponde alla *chiave*. Se *Key* non viene trovato, **_lsearch_s** restituisce un puntatore all'elemento appena aggiunto alla fine della matrice.
 
-Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce **NULL**. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*Chiave*|*base*|*Confrontare*|*Numero*|*Dimensione*|**errno**|
+|*key*|*base*|*confrontare*|*number*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**Null**|any|any|any|any|**Einval**|
-|any|**Null**|any|!= 0|any|**Einval**|
-|any|any|any|any|zero|**Einval**|
-|any|any|**Null**|any|any|**Einval**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|zero|**EINVAL**|
+|any|any|**NULL**|any|any|**EINVAL**|
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_lsearch_s** esegue una ricerca lineare per la *chiave* di valore in una matrice di elementi *numerici,* ognuno dei byte di *larghezza.* A differenza **di bsearch_s**, **non _lsearch_s** richiede l'ordinamento della matrice. Se *key* non viene trovato, **_lsearch_s** lo aggiunge alla fine della matrice e incrementa il *numero*.
+La funzione **_lsearch_s** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bsearch_s**, **_lsearch_s** non richiede che la matrice sia ordinata. Se *Key* non viene trovato, **_lsearch_s** lo aggiunge alla fine della matrice e incrementa il *numero*.
 
-La funzione *di confronto* è un puntatore a una routine fornita dall'utente che confronta due elementi della matrice e restituisce un valore che ne specifica la relazione. La funzione *di confronto* accetta anche il puntatore al contesto come primo argomento. **_lsearch_s** chiamate *confrontano* una o più volte durante la ricerca, passando puntatori a due elementi della matrice a ogni chiamata. *compare* deve confrontare gli elementi e quindi restituire diverso da zero (ovvero gli elementi sono diversi) o 0 (ovvero gli elementi sono identici).
+La funzione *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che ne specifica la relazione. La funzione di *confronto* accetta anche il puntatore al contesto come primo argomento. **_lsearch_s** le chiamate *vengono confrontate* una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. *confrontare* deve confrontare gli elementi e quindi restituire un valore diverso da zero (che indica che gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).
 
-Il puntatore di *contesto* può essere utile se la struttura di dati ricercati fa parte di un oggetto e la funzione di *confronto* deve accedere ai membri dell'oggetto. Ad esempio, il codice nella funzione *di confronto* può eseguire il cast del puntatore void nel tipo di oggetto appropriato e accedere ai membri di tale oggetto. L'aggiunta del puntatore di *contesto* rende **_lsearch_s** più sicuro perché è possibile utilizzare un contesto aggiuntivo per evitare bug di rientranza associati all'utilizzo di variabili statiche per rendere disponibili i dati per la funzione di *confronto.*
+Il puntatore di *contesto* può essere utile se la struttura dei dati cercati fa parte di un oggetto e la funzione di *confronto* deve accedere ai membri dell'oggetto. Il codice nella funzione di *confronto* , ad esempio, può eseguire il cast del puntatore void nel tipo di oggetto appropriato e accedere ai membri di tale oggetto. L'aggiunta del puntatore di *contesto* rende **_lsearch_s** più sicuro perché può essere usato un contesto aggiuntivo per evitare i bug rientranti associati all'uso di variabili statiche per rendere disponibili i dati alla funzione di *confronto* .
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

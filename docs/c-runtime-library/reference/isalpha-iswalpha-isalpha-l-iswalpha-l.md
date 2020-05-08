@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 187031adc0b22aff2c5418cd7e0f3e64075f1745
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343923"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919805"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -76,19 +76,19 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Valore Integer da testare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare al posto delle impostazioni locali correnti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere alfabetico. **isalpha** restituisce un valore diverso da zero se *c* è all'interno degli intervalli A - s o a - z. **iswalpha** restituisce un valore diverso da zero solo per i caratteri wide per i quali [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) o **iswlower** è diverso da zero; ovvero, per qualsiasi carattere wide che fa parte di un set definito dall'implementazione per il quale nessuno di **iswcntrl**, **iswdigit**, **iswpunct**o **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di un carattere alfabetico. Se *c* è compreso negli intervalli a-z o a-z, **viene restituito un** valore diverso da zero. **iswalpha** restituisce un valore diverso da zero solo per i caratteri wide per i quali [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) o **iswlower** è diverso da zero. ovvero, per qualsiasi carattere wide che è uno di un set definito dall'implementazione per il quale nessuno dei **iswcntrl**, **iswdigit**, **iswpunct**o **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni con il **suffisso _l** utilizzano il parametro locale passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **_L** usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento di **isalpha** e **_isalpha_l** non è definito se *c* non è EOF o compreso nell'intervallo da 0 a 0xFF, inclusivo. Quando viene utilizzata una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di **alfa** e **_isalpha_l** non è definito se *c* non è EOF o nell'intervallo compreso tra 0 e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -99,7 +99,7 @@ Il comportamento di **isalpha** e **_isalpha_l** non è definito se *c* non è E
 
 ## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -115,5 +115,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>

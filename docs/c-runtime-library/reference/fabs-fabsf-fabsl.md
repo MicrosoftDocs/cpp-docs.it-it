@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347544"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920236"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -70,7 +70,7 @@ long double fabsl(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
@@ -79,17 +79,17 @@ Le funzioni **fabs** restituiscono il valore assoluto dell'argomento *x*. Non vi
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN,IND|none|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>Osservazioni
 
-Il linguaggio C, ovvero l'overload, in modo da \<poter chiamare gli overload dei **fabs** se si includono le credenziali>'intestazione. In un programma C, **fabs** accetta e restituisce sempre un **doppio**file .
+C++ consente l'overload, quindi è possibile chiamare gli overload di **fabs** se si include l' \<intestazione cmath>. In un programma C **fabs** accetta e restituisce sempre un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|-----------------------|---------------------------|
 |**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> o \<math.h>|
 
