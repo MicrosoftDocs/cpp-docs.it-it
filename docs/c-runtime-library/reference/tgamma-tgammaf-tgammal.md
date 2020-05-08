@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: d7e27e8b818a16cb0c18f58e2f40c0090dd13ecf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362499"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912236"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -74,40 +74,40 @@ long double tgammal(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore di cui trovare la funzione gamma.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se ha esito positivo, restituisce la gamma di *x*.
 
-Un errore di intervallo può verificarsi se la grandezza di *x* è troppo grande o troppo piccola per il tipo di dati. Se *x* <è 0, può verificarsi un errore di dominio o di intervallo.
+È possibile che si verifichi un errore di intervallo se la grandezza di *x* è troppo grande o troppo piccola per il tipo di dati. Se *x* <= 0, è possibile che si verifichi un errore di dominio o di intervallo.
 
 |Problema|Return|
 |-----------|------------|
-|x : 0|-INFINITO|
+|x = ± 0|INFINITO ±|
 |x = intero negativo|NaN|
-|x -INFINITY (INFINITO)|NaN|
+|x =-infinito|NaN|
 |x = +INFINITY|+INFINITO|
 |x = NaN|NaN|
 |Eerrore di dominio|NaN|
-|Errore polo|HUGE_VAL, HUGE_VALF o HUGE_VALL|
-|Errore di intervallo di overflow|HUGE_VAL, HUGE_VALF o HUGE_VALL|
+|Errore polo|± HUGE_VAL, ± HUGE_VALF o ± HUGE_VALL|
+|Errore di intervallo di overflow|± HUGE_VAL, ± HUGE_VALF o ± HUGE_VALL|
 |Errore di intervallo di underflow|Valore corretto dopo l'arrotondamento.|
 
 Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **tgamma** che accettano e restituiscono tipi **float** e **long** **double.** In un programma C, **tgamma** accetta e restituisce sempre un **valore double.**
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **tgamma** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **tgamma** accetta e restituisce sempre un **valore Double**.
 
 Se x è un numero naturale, questa funzione restituisce il fattoriale di (x-1).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
 
