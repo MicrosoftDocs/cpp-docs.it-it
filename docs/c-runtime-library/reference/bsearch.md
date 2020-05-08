@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: efad391eb2512cfa59cc3597430a84727676f27e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333810"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913374"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -53,38 +53,38 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave*\
-Puntatore al tasto da cercare.
+*chiave*\
+Puntatore alla chiave da cercare.
 
-*Base*\
+*base*\
 Puntatore alla base dei dati di ricerca.
 
-*Numero*\
+*numero*\
 Numero di elementi.
 
 *Larghezza*\
 Larghezza degli elementi.
 
-*Confrontare*\
+*confrontare*\
 Funzione di callback che confronta due elementi. Il primo è un puntatore alla chiave per la ricerca e il secondo è un puntatore all'elemento della matrice da confrontare con la chiave.
 
 ## <a name="return-value"></a>Valore restituito
 
-**bsearch** restituisce un puntatore a un'occorrenza di *key* nella matrice a cui punta *base*. Se *key* non viene trovato, la funzione restituisce **NULL**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
+**bCerca** restituisce un puntatore a un'occorrenza della *chiave* nella matrice a cui punta la *base*. Se *Key* non viene trovato, la funzione restituisce **null**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **bsearch** esegue una ricerca binaria di una matrice ordinata di elementi *numerici,* ognuno dei byte di *larghezza.* Il valore *di base* è un puntatore alla base della matrice da cercare e *key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento della matrice. Restituisce uno dei seguenti valori che ne specificano la relazione:
+La funzione **bCerca** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento di matrice. Restituisce uno dei valori seguenti che specificano la relazione:
 
-|Valore restituito dalla routine di *confronto*|Descrizione|
+|Valore restituito dalla routine di *confronto*|Description|
 |-----------------------------------------|-----------------|
 |\< 0|La chiave è minore dell'elemento della matrice.|
 |0|La chiave è uguale all'elemento della matrice.|
 |> 0|La chiave è maggiore dell'elemento della matrice.|
 
-Questa funzione convalida i relativi parametri. Se *compare*, *key* o *number* è **NULL**o se *base* è **NULL** e *number* è diverso da zero o se *width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato `EINVAL` su e la funzione restituisce **NULL**.
+Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su `EINVAL` e la funzione restituisce **null**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

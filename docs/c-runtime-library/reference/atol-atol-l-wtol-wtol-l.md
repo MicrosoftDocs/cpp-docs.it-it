@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 30f8375814259cac8c3d7216c636b69acbc7e90a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348748"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913539"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -86,32 +86,32 @@ long _wtol_l(
 *Str*<br/>
 Stringa da convertire.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il valore **long** prodotto interpretando i caratteri di input come un numero. Il valore restituito è 0L per **atol** se l'input non può essere convertito in un valore di quel tipo.
+Ogni funzione restituisce il valore **Long** prodotto interpretando i caratteri di input come numero. **Se l'** input non può essere convertito in un valore di tale tipo, il valore restituito è 0L.
 
-In caso di overflow con grandi valori integrali positivi, **atol** restituisce **LONG_MAX**; in caso di overflow con grandi valori integrali negativi, viene restituito **LONG_MIN.** In tutti i casi non compresi nell'intervallo, **errno** è impostato su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
+In caso di overflow con valori integrali positivi di grandi dimensioni **,** diviene restituito **LONG_MAX**; in caso di overflow con valori integrali negativi di grandi dimensioni, viene restituito **LONG_MIN** . In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni convertono una stringa di caratteri in un valore integer lungo (**atol**).
+Queste funzioni convertono una stringa di caratteri in un valore Long**atol**Integer.
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere può essere il carattere null ('\0' o L'\0') che termina la stringa.
 
-L'argomento *str* di **atol** ha il seguente formato:
+Il formato dell'argomento **atol** *Str* per No, è il seguente:
 
-> [*spazio vuoto*] [*segno*] [*cifre*]]
+> [*spazi vuoti*] [*segno*] [*cifre*]]
 
-Uno *spazio è* costituito da spazi o caratteri di tabulazione, che vengono ignorati; *segno* è il segno più (-) o meno (-); e *cifre* sono una o più cifre.
+Uno spazio *vuoto* è costituito da caratteri di spazio o di tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* e corrispondono a una o più cifre.
 
-**_wtol** è identico a **atol,** ad eccezione del fatto che accetta una stringa di caratteri wide.
+**_wtol** è identico a un oggetto, **ad eccezione del** fatto che accetta una stringa di caratteri wide.
 
-Le versioni di queste funzioni con il **suffisso _l** sono identiche, ad eccezione del fatto che utilizzano il parametro locale passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -129,7 +129,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="example"></a>Esempio
 
-Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici utilizzando la funzione **atol.**
+Questo programma mostra in che modo i numeri archiviati come stringhe possono essere convertiti in valori numerici **usando la funzione** di.
 
 ```C
 // crt_atol.c
@@ -180,7 +180,7 @@ Overflow condition occurred.
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

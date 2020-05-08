@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 81feacae0e4608512e7325c57e7f2b96bcf2cdde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356507"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912684"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350841"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913021"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -63,27 +63,27 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **acosh** restituiscono il coseno iberbolico inverso (arco coseno iperbolico) di *x*. Queste funzioni sono valide per il dominio *x* e 1. Se *x* è minore `errno` di `EDOM` 1, è impostato su e il risultato è un NaN silenzioso. Se *x* è un NaN tranquillo, indefinito o infinito, viene restituito lo stesso valore.
+Le funzioni **acosh** restituiscono il coseno iperbolico inverso (coseno iperbolico d'arco) di *x*. Queste funzioni sono valide nel dominio *x* ≥ 1. Se *x* è minore di 1, `errno` viene impostato su `EDOM` e il risultato è una NaN non interattiva. Se *x* è un valore NaN non interattiva, indefinito o infinito, viene restituito lo stesso valore.
 
 |Input|Eccezione SEH|Eccezione`_matherr`|
 |-----------|-------------------|--------------------------|
-|QNAN, IND, INF|none|none|
+|± QNAN, IND, INF|none|none|
 |*x* < 1|none|none|
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si utilizza il linguaggio C, è possibile chiamare gli overload di **acosh** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **acosh** accetta e restituisce **sempre double**.
+Quando si usa C++, è possibile chiamare gli overload di **acosh** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C **acosh** accetta e restituisce sempre **Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 

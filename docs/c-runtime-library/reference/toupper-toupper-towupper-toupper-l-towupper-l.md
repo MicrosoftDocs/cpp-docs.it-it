@@ -25,7 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 85c218fdb3f5153e572e434bffbdb64510554d07
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362315"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913873"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -86,47 +86,47 @@ int _towupper_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da convertire.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Ognuna di queste routine converte una copia di *c*, se possibile, e restituisce il risultato.
 
-Se *c* è un carattere wide per il quale **iswlower** è diverso da zero ed è presente un carattere wide corrispondente per il quale [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) è diverso da zero, **towupper** restituisce il carattere wide corrispondente; in caso contrario, **towupper** restituisce *c* invariato.
+Se *c* è un carattere wide per il quale **iswlower** è diverso da zero ed è presente un carattere wide corrispondente per il quale [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) è diverso da zero, **towupper** restituisce il carattere wide corrispondente. in caso contrario, **towupper** restituisce il linguaggio *c* invariato.
 
 Non esiste alcuno valore restituito riservato per indicare un errore.
 
-Affinché **toupper** per dare i risultati previsti, [__isascii](isascii-isascii-iswascii.md) e [più basso](islower-iswlower-islower-l-iswlower-l.md) deve restituire entrambi diverso da zero.
+Affinché **ToUpper** fornisca i risultati previsti, è necessario che [__isascii](isascii-isascii-iswascii.md) e il [valore di unlower](islower-iswlower-islower-l-iswlower-l.md) restituiscono entrambi un valore diverso da zero.
 
 ## <a name="remarks"></a>Osservazioni
 
-Ognuna di queste routine converte una determinata lettera minuscola in maiuscola, se possibile e appropriato. La conversione caso di **towupper** è specifica delle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso **_l** utilizzano le impostazioni locali attualmente impostate. Le versioni di queste funzioni con il **suffisso _l** accettano le impostazioni locali come parametro e lo utilizzano al posto delle impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Ognuna di queste routine converte una determinata lettera minuscola in maiuscola, se possibile e appropriato. La conversione del case di **towupper** è specifica delle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso **_L** usano le impostazioni locali attualmente impostate. Le versioni di queste funzioni con il suffisso **_L** accettano le impostazioni locali come parametro e lo usano anziché le impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Affinché **toupper** per dare i risultati attesi, [__isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) deve restituire entrambi diverso da zero.
+Affinché **ToUpper** fornisca i risultati previsti, [__isascii](isascii-isascii-iswascii.md) e l'oggetto è [necessario che entrambi](isupper-isupper-l-iswupper-iswupper-l.md) restituiscono un valore diverso da zero.
 
 [Routine di conversione dei dati](../../c-runtime-library/data-conversion.md)
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper**|**Toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** e **_towupper_l** non hanno alcuna dipendenza delle impostazioni locali e non devono essere chiamati direttamente. Essi sono forniti per uso interno da **_totupper_l**.
+> **_toupper_l** e **_towupper_l** non hanno alcuna dipendenza dalle impostazioni locali e non sono destinati a essere chiamati direttamente. Vengono fornite per uso interno da **_totupper_l**.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**Toupper**|\<ctype.h>|
+|**ToUpper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h> o \<wchar.h>|
 
@@ -140,5 +140,5 @@ Vedere l'esempio in [Funzioni to](../../c-runtime-library/to-functions.md).
 
 [is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
 [Funzioni to](../../c-runtime-library/to-functions.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

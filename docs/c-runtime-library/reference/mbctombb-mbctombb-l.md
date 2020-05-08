@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: 4afd1c92930fe622eb03569913b264d6c285dcda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5fcae2a0e403d75383e2998b1ea127dd6f2ef89
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341020"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914275"
 ---
 # <a name="_mbctombb-_mbctombb_l"></a>_mbctombb, _mbctombb_l
 
@@ -62,25 +62,25 @@ unsigned int _mbctombb_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Caratteri multibyte da convertire.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **_mbctombb** e **_mbctombb_l** restituisce il carattere a byte singolo che corrisponde a *c*; in caso contrario restituisce *c*.
+In caso di esito positivo, **_mbctombb** e **_mbctombb_l** restituisce il carattere a byte singolo che corrisponde a *c*; in caso contrario, restituisce *c*.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **_mbctombb** e **_mbctombb_l** convertono un determinato carattere multibyte in un carattere multibyte a byte singolo corrispondente. I caratteri devono corrispondere a caratteri a byte singolo compresi nell'intervallo 0x20 - 0x7E o 0xA1 - 0xDF da convertire.
+Le funzioni **_mbctombb** e **_mbctombb_l** convertono un carattere multibyte specificato in un carattere multibyte a byte singolo corrispondente. I caratteri devono corrispondere a caratteri a byte singolo compresi nell'intervallo 0x20-0x7E o 0xA1-0xDF da convertire.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso **_l** utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. la versione con il suffisso **_l** è identica, ad eccezione del fatto che utilizza invece il parametro locale passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso **_L** usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il suffisso **_L** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti, **_mbctombb** era chiamato **zentohan**. Utilizzare **invece _mbctombb.**
+Nelle versioni precedenti **_mbctombb** è stato chiamato **zentohan**. In alternativa, usare **_mbctombb** .
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

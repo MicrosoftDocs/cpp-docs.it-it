@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: e33840e772de770e0f05ae45d2c2d4bec7e09939
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348052"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915146"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
-Converte un numero **double** in una stringa. Questa è una versione di [_ecvt](ecvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) (Funzionalità di sicurezza in CRT).
+Converte un numero **doppio** in una stringa. Questa è una versione di [_ecvt](ecvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) (Funzionalità di sicurezza in CRT).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -92,34 +92,34 @@ Se uno parametro non è valido, come elencato nella tabella seguente, questa fun
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valore restituito|Valore nel *buffer*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**Null**|any|any|any|any|any|**Einval**|Non modificato.|
-|Non **NULL** (punta alla memoria valida)|<=0|any|any|any|any|**Einval**|Non modificato.|
-|any|any|any|any|**Null**|any|**Einval**|Non modificato.|
-|any|any|any|any|any|**Null**|**Einval**|Non modificato.|
+|**NULL**|any|any|any|any|any|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|<=0|any|any|any|any|**EINVAL**|Non modificato.|
+|any|any|any|any|**NULL**|any|**EINVAL**|Non modificato.|
+|any|any|any|any|any|**NULL**|**EINVAL**|Non modificato.|
 
 ## <a name="security-issues"></a>Problemi di sicurezza
 
-**_ecvt_s** potrebbe generare una violazione di accesso se *buffer* non punta a memoria valida e non è **NULL**.
+**_ecvt_s** potrebbe generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_ecvt_s** converte un numero a virgola mobile in una stringa di caratteri. Il *parametro _Value* è il numero a virgola mobile da convertire. Questa funzione archivia fino a *contare* le cifre di *_Value* come stringa e aggiunge un carattere nullo (''0'). Se il numero di cifre in *_Value* supera *_Count*, la cifra meno significativa viene arrotondata. Se sono presenti meno di *count* cifre, la stringa viene riempita con zeri.
+La funzione **_ecvt_s** converte un numero a virgola mobile in una stringa di caratteri. Il *_Value* parametro è il numero a virgola mobile da convertire. Questa funzione Archivia fino a *conteggiare* le cifre di *_Value* come stringa e aggiunge un carattere null (' \ 0'). Se il numero di cifre in *_Value* supera *_Count*, la cifra di ordine inferiore viene arrotondata. Se sono presenti meno di un *numero* di cifre, la stringa viene riempita con zeri.
 
-Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *_Value* possono essere ottenuti da *_Dec* e *_Sign* dopo la chiamata. Il *_Dec* parametro punta a un valore intero che indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il *parametro _Sign* punta a un numero intero che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
+Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *_Value* possono essere ottenuti da *_Dec* e *_Sign* dopo la chiamata. Il parametro *_Dec* punta a un valore integer che indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro *_Sign* punta a un intero che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
 
 Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile.
 
-La differenza tra **_ecvt_s** e **_fcvt_s** è nell'interpretazione del parametro *_Count.* **_ecvt_s** interpreta *_Count* come il numero totale di cifre nella stringa di output, mentre **_fcvt_s** interpreta *_Count* come il numero di cifre dopo il separatore decimale.
+La differenza tra **_ecvt_s** e **_fcvt_s** è l'interpretazione del parametro *_Count* . **_ecvt_s** interpreta *_Count* come numero totale di cifre nella stringa di output, mentre **_fcvt_s** interpreta *_Count* come numero di cifre dopo il separatore decimale.
 
 In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-La versione di debug di questa funzione riempie innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versione di debug di questa funzione riempie prima di tutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|Intestazione facoltativa|
+|Function|Intestazione obbligatoria|Intestazione facoltativa|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
