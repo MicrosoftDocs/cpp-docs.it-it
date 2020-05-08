@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 7f2a789bc5f475411808bc00a4280b7573b67cf2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347537"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920250"
 ---
 # <a name="_expand"></a>_expand
 
@@ -60,35 +60,35 @@ void *_expand(
 *memblock*<br/>
 Puntatore al blocco di memoria allocato in precedenza.
 
-*Dimensione*<br/>
+*size*<br/>
 Nuova dimensione in byte.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_expand** restituisce un puntatore void al blocco di memoria riallocato. **_expand**, a differenza **di realloc**, non può spostare un blocco per modificarne le dimensioni. Pertanto, se è disponibile memoria sufficiente per espandere il blocco senza spostarlo, il *memblock* parametro per **_expand** è lo stesso del valore restituito.
+**_expand** restituisce un puntatore void al blocco di memoria riallocato. **_expand**, a differenza di **realloc**, non è in grado di spostare un blocco per modificarne le dimensioni. Pertanto, se è disponibile memoria sufficiente per espandere il blocco senza lo stato spostato, il parametro *memblock* per **_expand** corrisponde al valore restituito.
 
-**_expand** restituisce **NULL** quando viene rilevato un errore durante il suo funzionamento. Ad esempio, se **_expand** viene utilizzato per compattare un blocco di memoria, è possibile che venga rilevato un danneggiamento nell'heap dei blocchi small o un puntatore a blocco non valido e restituisca **NULL.**
+**_expand** restituisce **null** quando viene rilevato un errore durante l'operazione. Ad esempio, se **_expand** viene usato per compattare un blocco di memoria, potrebbe rilevare il danneggiamento nell'heap in blocchi piccoli o un puntatore di blocco non valido e restituire **null**.
 
-Se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata senza spostarlo, la funzione restituisce **NULL**. **_expand** non restituisce mai un blocco espanso a una dimensione inferiore a quella richiesta. Se si verifica un errore, **errno** indica la natura dell'errore. Per ulteriori informazioni su **errno**, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata senza che lo si sposti, la funzione restituisce **null**. **_expand** non restituisce mai un blocco espanso a dimensioni inferiori a quelle richieste. Se si verifica un errore, **errno** indica la natura dell'errore. Per ulteriori informazioni su **errno**, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per verificare le nuove dimensioni dell'elemento, utilizzare **_msize**. Per ottenere un puntatore a un tipo diverso da **void**, utilizzare un cast di tipo sul valore restituito.
+Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per controllare la nuova dimensione dell'elemento, usare **_msize**. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_expand** modifica la dimensione di un blocco di memoria allocato in precedenza tentando di espandere o contrarre il blocco senza spostarne la posizione nell'heap. Il parametro *memblock* punta all'inizio del blocco. Il parametro *size* fornisce la nuova dimensione del blocco, in byte. Il contenuto del blocco rimane invariato fino alla dimensione nuova o alla precedente, a seconda di quale delle due è la più breve. *memblock* non deve essere un blocco che è stato liberato.
+La funzione **_expand** modifica la dimensione di un blocco di memoria allocato in precedenza tentando di espandere o comprimere il blocco senza spostarne la posizione nell'heap. Il parametro *memblock* punta all'inizio del blocco. Il parametro *size* fornisce le nuove dimensioni del blocco, in byte. Il contenuto del blocco rimane invariato fino alla dimensione nuova o alla precedente, a seconda di quale delle due è la più breve. *memblock* non deve essere un blocco che è stato liberato.
 
 > [!NOTE]
-> Nelle piattaforme a 64 bit, **_expand** potrebbe non contrarre il blocco se la nuova dimensione è inferiore alla dimensione corrente; in particolare, se le dimensioni del blocco sono inferiori a 16K e quindi allocate nell'heap a frammentazione bassa, **_expand** lascia il blocco invariato e restituisce *memblock*.
+> Nelle piattaforme a 64 bit **_expand** possibile che il blocco non venga contratto se la nuova dimensione è inferiore alla dimensione corrente; in particolare, se le dimensioni del blocco sono inferiori a 16K e quindi allocate nell'heap di frammentazione basso, **_expand** lascia il blocco invariato e restituisce *memblock*.
 
-Quando l'applicazione è collegata a una versione di debug delle librerie di runtime del linguaggio C, **_expand** viene risolto [in _expand_dbg](expand-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **_expand** risolve [_expand_dbg](expand-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-Questa funzione convalida i relativi parametri. Se *memblock* è un puntatore null, questa funzione richiama un gestore di parametri non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce **NULL**. Se *size* è maggiore di **_HEAP_MAXREQ**, **errno** viene impostato su **ENOMEM** e la funzione restituisce **NULL**.
+Questa funzione convalida i relativi parametri. Se *memblock* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**. Se *size* è maggiore di **_HEAP_MAXREQ**, **errno** viene impostato su **ENOMEM** e la funzione restituisce **null**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 
@@ -132,7 +132,7 @@ Expanded block to 1024 bytes at 002C12BC
 
 [Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Gratuito](free.md)<br/>
+[libero](free.md)<br/>
 [malloc](malloc.md)<br/>
 [_msize](msize.md)<br/>
 [realloc](realloc.md)<br/>

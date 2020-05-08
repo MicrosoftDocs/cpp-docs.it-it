@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: e2bdfbeac7b995be0b589156437a3ded39114adf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342155"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916440"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -63,7 +63,7 @@ long double lgamma( long double x ); //C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore da calcolare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,26 +72,26 @@ In caso di esito positivo, restituisce il logaritmo naturale del valore assoluto
 
 |Problema|Return|
 |-----------|------------|
-|*x* - NaN|NaN|
-|*x* : 0|+INFINITO|
-|*x*- numero intero negativo|+INFINITO|
-|-INFINITO|+INFINITO|
+|*x* = Nan|NaN|
+|*x* = ± 0|+INFINITO|
+|*x*= intero negativo|+INFINITO|
+|INFINITO ±|+INFINITO|
 |Errore polo|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
-|Errore di intervallo di overflow|HUGE_VAL, HUGE_VALF o HUGE_VALL|
+|Errore di intervallo di overflow|± HUGE_VAL, ± HUGE_VALF o ± HUGE_VALL|
 
 Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **lgamma** che accettano e restituiscono tipi **float** e **long** **double.** In un programma C, **lgamma** accetta e restituisce sempre un **valore double.**
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **lgamma** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **lgamma** accetta e restituisce sempre un **valore Double**.
 
-Se x è un numero razionale, questa funzione restituisce il logaritmo del fattoriale di (x - 1).
+Se x è un numero razionale, questa funzione restituisce il logaritmo del fattoriale di (x-1).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: f8e13e7fc197c66395556d518ecbd1cd20ac1f77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348622"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918524"
 ---
 # <a name="_commit"></a>_commit
 
@@ -52,20 +52,20 @@ int _commit(
 
 ### <a name="parameters"></a>Parametri
 
-*Fd*<br/>
+*FD*<br/>
 Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_commit** restituisce 0 se il file è stato scaricato correttamente su disco. Un valore restituito di -1 indica un errore.
+**_commit** restituisce 0 se il file è stato scaricato correttamente sul disco. Un valore restituito di-1 indica un errore.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_commit** impone al sistema operativo di scrivere su disco il file associato a *fd.* Questa chiamata assicura che il file specificato venga scaricato immediatamente, non a discrezione del sistema operativo.
+La funzione **_commit** impone al sistema operativo di scrivere il file associato a *FD* su disco. Questa chiamata assicura che il file specificato venga scaricato immediatamente, non a discrezione del sistema operativo.
 
-Se *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostato su **EBADF**.
+Se *FD* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EBADF**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

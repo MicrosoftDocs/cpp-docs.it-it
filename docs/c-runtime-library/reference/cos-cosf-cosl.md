@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 536d9a235ef0d4b2bb68362645b5b4e03d8f37a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1aae123de5ef03af8bcaf8480a84327f88c457c5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348461"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917237"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -62,23 +62,23 @@ long double cos( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a -263, si verifica una perdita di significato nel risultato.
+Coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, IND|none|**_DOMAIN**|
-|- INF|**Non valido**|**_DOMAIN**|
+|± QNAN, IND|none|**_DOMAIN**|
+|± INF|**Non valido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **cos** accetta e restituisce sempre un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **cos** accetta e restituisce sempre un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
