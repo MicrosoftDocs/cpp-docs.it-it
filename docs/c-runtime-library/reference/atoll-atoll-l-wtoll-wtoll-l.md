@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 34b7d0fdedb55241452f9a7f9937b64c58f7772c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348709"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913514"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Converte una stringa in un **valore** **long** integer.
+Converte una stringa **in un intero Long** **Long** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -76,34 +76,34 @@ long long _wtoll_l(
 *Str*<br/>
 Stringa da convertire.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il valore **long** **long** prodotto interpretando i caratteri di input come un numero. Il valore restituito per **atoll** è 0 se l'input non può essere convertito in un valore di quel tipo.
+Ogni funzione **restituisce il valore Long** **Long** prodotto interpretando i caratteri di input come numero. Il valore restituito per **Atoll** è 0 se l'input non può essere convertito in un valore di tale tipo.
 
-Per l'overflow con valori integrali positivi di grandi dimensioni, **atoll** restituisce **LLONG_MAX**e per l'overflow con grandi valori integrali negativi, restituisce **LLONG_MIN**.
+Per l'overflow con valori integrali positivi di grandi dimensioni, **Atoll** restituisce **LLONG_MAX**e per l'overflow con valori integrali negativi di grandi dimensioni restituisce **LLONG_MIN**.
 
-In tutti i casi non compresi nell'intervallo, **errno** è impostato su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
+In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni convertono una stringa di caratteri in un valore **Long Long** Integer.These functions convert a character string to a **long** long integer value.
+Queste funzioni convertono una stringa di caratteri **in un valore Long** **Long** Integer.
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere potrebbe essere il carattere null ('\0' or L'\0') che termina la stringa.
 
-Il *str* argomento **atoll** ha il seguente formato:
+L'argomento *Str* per **Atoll** ha il formato seguente:
 
-> [*spazio vuoto*] [*segno*] [*cifre*]
+> [*spazi vuoti*] [*segno*] [*cifre*]
 
-Uno *spazio è* costituito da spazi o caratteri di tabulazione, che vengono ignorati; *segno* è il segno più (-) o meno (-); e *cifre* sono una o più cifre.
+Uno spazio *vuoto* è costituito da caratteri di spazio o di tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* e corrispondono a una o più cifre.
 
-**_wtoll** è identico **all'atollo,** ad eccezione del fatto che accetta una stringa di caratteri wide come parametro.
+**_wtoll** è identico a **Atoll** , ad eccezione del fatto che accetta una stringa di caratteri wide come parametro.
 
-Le versioni di queste funzioni con il suffisso **_l** sono identiche alle versioni che non lo hanno, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche alle versioni che non lo hanno, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -117,12 +117,12 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |--------------|---------------------|
-|**atollo** **_atoll_l**|\<stdlib.h>|
-|**_wtoll** **, _wtoll_l**|\<stdlib.h> o \<wchar.h>|
+|**Atollo**, **_atoll_l**|\<stdlib.h>|
+|**_wtoll**, **_wtoll_l**|\<stdlib.h> o \<wchar.h>|
 
 ## <a name="example"></a>Esempio
 
-In questo programma viene illustrato come utilizzare le funzioni **atollo** per convertire i numeri memorizzati come stringhe in valori numerici.
+Questo programma Mostra come usare le funzioni **Atoll** per convertire i numeri archiviati come stringhe in valori numerici.
 
 ```C
 // crt_atoll.c
@@ -174,7 +174,7 @@ Overflow condition occurred.
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

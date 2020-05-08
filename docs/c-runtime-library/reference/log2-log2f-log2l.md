@@ -20,18 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341712"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911409"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -63,20 +63,20 @@ long double log2l(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore di cui determinare il logaritmo in base 2.
 
 ## <a name="return-value"></a>Valore restituito
 
-In caso di esito positivo, restituisce log2 *x*.
+Se l'operazione riesce, restituisce log2 *x*.
 
 In caso contrario, può restituire uno dei valori seguenti:
 
 |Problema|Return|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* : 0|-INFINITY|
-|*x* 1|+0|
+|*x* = ± 0|-INFINITY|
+|*x* = 1|+0|
 |+INFINITO|+INFINITO|
 |NaN|NaN|
 |Eerrore di dominio|NaN|
@@ -86,13 +86,13 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Se x è un numero intero, questa funzione restituisce essenzialmente l'indice in base zero del bit 1 più significativo di *x*.
+Se x è un numero intero, questa funzione restituisce essenzialmente l'indice in base zero dell'1 bit di *x*più significativo.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 
