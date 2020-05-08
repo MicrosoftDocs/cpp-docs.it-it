@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 3533e7897e9c460d3be73b8907a6bd3c96f6888f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910164"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -70,22 +70,22 @@ Puntatore alla struttura **FILE**.
 *offset*<br/>
 Numero di byte da *origin*.
 
-*Origine*<br/>
+*origine*<br/>
 Posizione iniziale.
 
 ## <a name="return-value"></a>Valore restituito
 
-Uguale rispettivamente a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md),
+Equivale rispettivamente a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni sono le versioni non bloccanti di [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), rispettivamente. Questi sono identici a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) ad eccezione del fatto che non sono protetti da interferenze da altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Queste funzioni sono rispettivamente le versioni non di blocco di [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md). Queste sono identiche a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 
@@ -96,4 +96,4 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
-[Riavvolgimento](rewind.md)<br/>
+[Rewind](rewind.md)<br/>
