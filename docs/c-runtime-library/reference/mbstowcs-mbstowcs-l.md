@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 11ff6920ea5f1dad2925a8010c9202e012fad87a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338844"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915465"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -74,38 +74,38 @@ size_t _mbstowcs_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Wcstr*<br/>
+*wcstr*<br/>
 Indirizzo di una sequenza di caratteri wide.
 
-*mbstr (intalltore*<br/>
+*mbstr*<br/>
 Indirizzo di una sequenza di caratteri multibyte con terminazione Null.
 
 *count*<br/>
 Numero massimo di caratteri multibyte da convertire.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **mbstowcs** converte correttamente la stringa di origine, restituisce il numero di caratteri multibyte convertiti. Se l'argomento *wcstr* è **NULL**, la funzione restituisce la dimensione richiesta (in caratteri di tipo "wide") della stringa di destinazione. Se **mbstowcs** rileva un carattere multibyte non valido, restituisce -1. Se il valore restituito è *count*, la stringa di caratteri wide non è con terminazione null.
+Se **mbstowcs** converte correttamente la stringa di origine, restituisce il numero di caratteri multibyte convertiti. Se l'argomento *wcstr* è **null**, la funzione restituisce la dimensione richiesta (in caratteri wide) della stringa di destinazione. Se **mbstowcs** rileva un carattere multibyte non valido, restituisce-1. Se il valore restituito è *count*, la stringa di caratteri Wide non è con terminazione null.
 
 > [!IMPORTANT]
-> Assicurarsi che *wcstr* e *mbstr* non si sovrappongano e che *il conteggio* rifletta correttamente il numero di caratteri multibyte da convertire.
+> Verificare che *wcstr* e *mbstr* non si sovrappongano e che il *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **mbstowcs** converte fino a un numero massimo di caratteri multibyte *count* a cui punta *mbstr* in una stringa di caratteri wide corrispondenti determinati dalle impostazioni locali correnti. Memorizza la stringa di caratteri wide risultante in corrispondenza dell'indirizzo rappresentato da *wcstr*. Il risultato è simile a una serie di chiamate a [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** rileva il carattere null a byte singolo (''0') prima o quando si verifica *il conteggio,* converte il carattere null in un carattere null a caratteri wide (L'''0') e si arresta. Pertanto la stringa di caratteri wide at *wcstr* viene terminata con null solo se durante la conversione viene rilevato un carattere null. Se le sequenze a cui punta *wcstr* e *mbstr* si sovrappongono, il comportamento non è definito.
+La funzione **mbstowcs** converte fino a un numero massimo di caratteri multibyte di *conteggio* a cui punta *mbstr* in una stringa di caratteri wide corrispondenti determinati dalle impostazioni locali correnti. Archivia la stringa di caratteri wide risultante nell'indirizzo rappresentato da *wcstr*. Il risultato è simile a una serie di chiamate a [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** rileva il carattere null a byte singolo (' \ 0') prima o quando si verifica il *conteggio* , il carattere null viene convertito in un carattere null Wide (L'\ 0') e viene arrestato. In questo modo, la stringa di caratteri wide in *wcstr* è con terminazione null solo se viene rilevato un carattere null durante la conversione. Se le sequenze a cui puntano *wcstr* e *mbstr* si sovrappongono, il comportamento non è definito.
 
-Se l'argomento *wcstr* è **NULL**, **mbstowcs** restituisce il numero di caratteri wide risultanti dalla conversione, escluso un carattere di terminazione null. La stringa di origine deve avere terminazione Null perché venga restituito il valore corretto. Se è necessario che la stringa di caratteri wide risultante abbia terminazione Null, aggiungere un carattere di terminazione Null al valore restituito.
+Se l'argomento *wcstr* è **null**, **mbstowcs** restituisce il numero di caratteri wide risultante dalla conversione senza includere un terminatore null. La stringa di origine deve avere terminazione Null perché venga restituito il valore corretto. Se è necessario che la stringa di caratteri wide risultante abbia terminazione Null, aggiungere un carattere di terminazione Null al valore restituito.
 
-Se l'argomento *mbstr* è **NULL**o se *count* è > **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, errno è impostato su **EINVAL** e la funzione restituisce -1.
+Se l'argomento *mbstr* è **null**o se *count* è > **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, errno viene impostato su **EINVAL** e la funzione restituisce-1.
 
-**mbstowcs** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_mbstowcs_l** è identico, ad eccezione del fatto che utilizza invece le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**mbstowcs** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_mbstowcs_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -214,8 +214,8 @@ Convert back to wide-character string:
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

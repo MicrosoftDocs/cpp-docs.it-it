@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333392"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917046"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -67,21 +67,21 @@ Percorso della nuova directory di lavoro.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Un valore restituito di -1 indica un errore. Se il percorso specificato non è stato trovato, **errno** viene impostato su **ENOENT**. Se *dirname* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce -1.
+Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Il valore restituito-1 indica un errore. Se il percorso specificato non è stato trovato, **errno** viene impostato su **ENOENT**. Se *dirname* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce-1.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_chdir** modifica la directory di lavoro corrente nella directory specificata da *dirname*. Il parametro *dirname* deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se in *dirname*viene specificata una nuova lettera di unità, viene modificata anche la lettera di unità predefinita. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:
+La funzione **_chdir** imposta la directory di lavoro corrente sulla directory specificata da *dirname*. Il parametro *dirname* deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se in *dirname*viene specificata una nuova lettera di unità, viene modificata anche la lettera di unità predefinita. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Quando si utilizza il carattere barra rovesciata facoltativa (**&#92;**) nei percorsi, è necessario inserire due barre rovesciate (**&#92;&#92;**) in un valore letterale stringa C per rappresentare una singola barra rovesciata (**&#92;**).
+Quando si usa il carattere barra rovesciata (**&#92;**) facoltativo nei percorsi, è necessario inserire due barre rovesciate (**&#92;&#92;**) in un valore letterale stringa C per rappresentare una singola barra rovesciata (**&#92;**).
 
-**_wchdir** è una versione a caratteri wide di **_chdir**; l'argomento *dirname* a **_wchdir** è una stringa di caratteri wide. **_wchdir** e **_chdir** si comportano in modo identico in caso contrario.
+**_wchdir** è una versione a caratteri wide di **_chdir**; l'argomento *dirname* per **_wchdir** è una stringa di caratteri wide. **_wchdir** e **_chdir** si comportano in modo identico.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico:
 

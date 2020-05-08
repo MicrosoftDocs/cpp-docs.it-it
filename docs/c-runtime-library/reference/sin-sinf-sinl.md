@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355007"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915766"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Calcola il sinusoidale di un valore a virgola mobile.
+Calcola il seno di un valore a virgola mobile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,31 +62,31 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **sin** restituiscono il seno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a -263, si verifica una perdita di significato nel risultato.
+Le funzioni **sin** restituiscono il seno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN,IND|nessuno|_DOMAIN|
-|(peccato, sinf, sinl)|NON VALIDO|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
+|± ∞ (sin, sinf, sinl)|NON VALIDO|_DOMAIN|
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload del **sin** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **il peccato** accetta e restituisce **sempre double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **sin** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **sin** accetta e restituisce sempre **Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-|-|-|
-|**peccato**, **sinf**, **peccato**|\<math.h>|\<cmath> o \<math.h>|
+|**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> o \<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

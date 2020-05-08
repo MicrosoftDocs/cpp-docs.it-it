@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341098"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914383"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -81,15 +81,15 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Caratteri multibyte da convertire.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* invariato.
+Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* non modificato.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -100,11 +100,11 @@ Le funzioni **_mbctohira** e **_mbctokata** testano un carattere *c* e, se possi
 |**_mbctohira**, **_mbctohira_l**|Da katakana multibyte a hiragana multibyte.|
 |**_mbctokata**, **_mbctokata_l**|Da hiragana multibyte a katakana multibyte.|
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, tranne per il fatto che quelle che non hanno il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e quelle che hanno il suffisso **_l** usano invece il parametro locale passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, tranne per il fatto che quelle che non hanno il suffisso **_L** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e quelle che hanno il suffisso **_L** usano invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti, **_mbctohira** era **denominata jtohira** e **_mbctokata** era **denominata jtokata**. Per il nuovo codice, usare i nuovi nomi.
+Nelle versioni precedenti, **_mbctohira** era denominato **jtohira** e **_mbctokata** era denominato **jtokata**. Per il nuovo codice, usare i nuovi nomi.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

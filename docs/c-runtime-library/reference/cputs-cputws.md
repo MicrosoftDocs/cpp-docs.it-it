@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348376"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917596"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
@@ -72,11 +72,11 @@ Se ha esito positivo, **_cputs** restituisce 0. In caso contrario, restituisce u
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_cputs** scrive la stringa con terminazione null a cui punta *str* direttamente nella console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
+La funzione **_cputs** scrive la stringa con terminazione null a cui punta *Str* direttamente nella console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
 
-Questa funzione convalida il relativo parametro. Se *str* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e viene restituito -1.
+Questa funzione convalida il relativo parametro. Se *Str* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito-1.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

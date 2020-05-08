@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: d8f0db5020f274de27f7f1bbf3a76659eae568e4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338635"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914581"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -55,24 +55,24 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Parametri
 
-*Input*<br/>
+*input*<br/>
 Valore stringa.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **nan** restituiscono un valore NaN silenzioso.
+Le funzioni **NaN** restituiscono un valore NaN non interattiva.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **nan** restituiscono un valore a virgola mobile che corrisponde a un NaN silenzioso (non segnalente). Il valore *di input* viene ignorato. Per informazioni sulla rappresentazione di un valore NaN per l'output, vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Le funzioni **NaN** restituiscono un valore a virgola mobile che corrisponde a un valore NaN non interattivo (senza segnalazione). Il valore di *input* viene ignorato. Per informazioni sulla rappresentazione di un valore NaN per l'output, vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
-|**nan**, **nanf**, **nanl**|\<math.h>|\<cmath> o \<math.h>|
+|**NaN**, **nanf (**, **nAnL**|\<math.h>|\<cmath> o \<math.h>|
 
 ## <a name="see-also"></a>Vedere anche
 
