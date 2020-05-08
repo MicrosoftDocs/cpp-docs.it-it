@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346281"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914852"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -60,21 +60,21 @@ int _fpclassf(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore integer che indica la classificazione a virgola mobile dell'argomento *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
+Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore intero che indica la classificazione a virgola mobile dell'argomento *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
 
 |valore|Descrizione|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Segnalazione NaN|
 |**_FPCLASS_QNAN**|NaN non interattivo|
-|**_FPCLASS_NINF**|Infinito negativo ( -INF)|
+|**_FPCLASS_NINF**|Infinito negativo (-INF)|
 |**_FPCLASS_NN**|Valore diverso da zero normalizzato negativo|
 |**_FPCLASS_ND**|Denormalizzato negativo|
-|**_FPCLASS_NZ**|zero negativo ( - 0)|
+|**_FPCLASS_NZ**|Zero negativo (-0)|
 |**_FPCLASS_PZ**|0 positivo (+0)|
 |**_FPCLASS_PD**|Denormalizzato positivo|
 |**_FPCLASS_PN**|Diverso da zero normalizzato positivo|
@@ -84,11 +84,11 @@ Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore integer che ind
 
 Le funzioni **_fpclass** e **_fpclassf** sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. La funzione **_fpclassf** è disponibile solo quando viene compilata per la piattaforma x64.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fpclass**, **_fpclassf**|\<float.h>|
 

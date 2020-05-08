@@ -20,7 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +48,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 7ad28633844c49ce5b86c8f71f4502c62eba1216
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359698"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914463"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Duplica le stringhe.
 
 > [!IMPORTANT]
-> **_mbsdup** non può essere utilizzato nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, consultate [Funzioni CRT non supportate nelle app della piattaforma Windows universale.](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)
+> non è possibile usare **_mbsdup** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [funzioni CRT non supportate nelle app piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -78,20 +78,20 @@ unsigned char *_mbsdup(
 
 ### <a name="parameters"></a>Parametri
 
-*Strsource*<br/>
+*strSource*<br/>
 Stringa di origine con terminazione null.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore alla posizione di archiviazione per la stringa copiata o **NULL** se non è possibile allocare spazio di archiviazione.
+Ognuna di queste funzioni restituisce un puntatore al percorso di archiviazione per la stringa copiata o **null** se non è possibile allocare l'archiviazione.
 
 ## <a name="remarks"></a>Osservazioni
 
 La funzione **_strdup** chiama [malloc](malloc.md) per allocare spazio di archiviazione per una copia di *strSource* e quindi copia *strSource* nello spazio allocato.
 
-**_wcsdup** e **_mbsdup** sono versioni a caratteri wide e a caratteri multibyte di **_strdup**. Gli argomenti e il valore restituito di **_wcsdup** sono stringhe di caratteri wide; quelli di **_mbsdup** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**_wcsdup** e **_mbsdup** sono versioni a caratteri wide e a caratteri multibyte di **_strdup**. Gli argomenti e il valore restituito di **_wcsdup** sono stringhe a caratteri wide. i **_mbsdup** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -99,9 +99,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Poiché **_strdup** chiama **malloc** per allocare spazio di archiviazione per la copia di *strSource*, è consigliabile rilasciare sempre questa memoria chiamando la routine [libera](free.md) sul puntatore restituito dalla chiamata a **_strdup**.
+Poiché **_strdup** chiama **malloc** per allocare spazio di archiviazione per la copia di *strSource*, è consigliabile rilasciarla sempre chiamando la routine [Free](free.md) sull'indicatore di misura restituito dalla chiamata a **_strdup**.
 
-Se vengono definiti **_DEBUG** e **_CRTDBG_MAP_ALLOC,** **_strdup** e **_wcsdup** vengono sostituiti da chiamate a **_strdup_dbg** e **_wcsdup_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
+Se vengono definiti **_DEBUG** e **_CRTDBG_MAP_ALLOC** , **_strdup** e **_wcsdup** vengono sostituiti dalle chiamate a **_strdup_dbg** e **_wcsdup_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -139,7 +139,7 @@ Copy:     This is the buffer text
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

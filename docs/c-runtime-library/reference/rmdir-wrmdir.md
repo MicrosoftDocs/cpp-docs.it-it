@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338062"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916921"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -68,23 +68,23 @@ Percorso della directory da rimuovere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Un valore restituito pari a -1 indica un errore e **errno** è impostato su uno dei seguenti valori:
+Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Il valore restituito-1 indica un errore e **errno** viene impostato su uno dei valori seguenti:
 
 |Valore errno|Condizione|
 |-|-|
 | **ENOTEMPTY** | Il percorso specificato non è una directory, la directory non è vuota o la directory è la directory di lavoro corrente o la directory radice. |
-| **ENOENTE** | Il percorso non è valido. |
+| **ENOENT** | Il percorso non è valido. |
 | **EACCES** | Un programma ha un handle aperto per la directory. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_rmdir** elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
+La funzione **_rmdir** Elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
 
-**_wrmdir** è una versione a caratteri wide di **_rmdir**; l'argomento *dirname* **per _wrmdir** è una stringa di caratteri wide. **_wrmdir** e **_rmdir** si comportano in modo identico in caso contrario.
+**_wrmdir** è una versione a caratteri wide di **_rmdir**; l'argomento *dirname* per **_wrmdir** è una stringa di caratteri wide. **_wrmdir** e **_rmdir** si comportano in modo identico.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

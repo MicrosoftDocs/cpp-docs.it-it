@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: e34fbe64d342205659a4b0bdaf703248e62ed733
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362407"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917480"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -84,23 +84,23 @@ Entrambe queste funzioni restituiscono 0 in caso di esito positivo o un numero d
 
 |||||
 |-|-|-|-|
-|*Str*|*sizeInChars*|**Valore restituito**|**Contenuto di**  *str*|
-|**Null**|any|**Einval**|non modificato|
-|non **NULL** (punta alla memoria valida)|troppo breve|**ERANGE**|non modificato|
+|*Str*|*sizeInChars*|**Valore restituito**|**Contenuto di**  *Str*|
+|**NULL**|any|**EINVAL**|non modificato|
+|Not **null** (punta alla memoria valida)|troppo breve|**ERANGE**|non modificato|
 
-Se *str* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
+Se *Str* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
 ## <a name="remarks"></a>Osservazioni
 
 Ognuna di queste funzioni restituisce il nome di un file che non esiste. **tmpnam_s** restituisce un nome univoco nella directory temporanea di Windows designata restituita da [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Tenere presente che quando un nome di file è preceduto da una barra rovesciata senza informazioni sul percorso, ad esempio \nomef21, significa che il nome è valido per la directory di lavoro corrente.
 
-Per **tmpnam_s**, è possibile archiviare il nome file generato in *str*. La lunghezza massima di una stringa restituita da **tmpnam_s** è **L_tmpnam_s**, definita in STDIO. H. Se *str* è **NULL**, **tmpnam_s** lascia il risultato in un buffer statico interno. Le eventuali chiamate successive eliminano quindi questo valore. Il nome generato da **tmpnam_s** è costituito da un nome di file generato dal programma e, dopo la prima chiamata a **tmpnam_s**, un'estensione di file di numeri sequenziali in base 32 (.1-1vvvvvu, quando **TMP_MAX_S** in STDIO. H è **INT_MAX**).
+Per **tmpnam_s**, è possibile archiviare il nome del file generato in *Str*. La lunghezza massima di una stringa restituita da **tmpnam_s** è **L_tmpnam_s**, definita in stdio. H. Se *Str* è **null**, **tmpnam_s** lascia il risultato in un buffer statico interno. Le eventuali chiamate successive eliminano quindi questo valore. Il nome generato da **tmpnam_s** è costituito da un nome di file generato dal programma e, dopo la prima chiamata a **tmpnam_s**, un'estensione di file dei numeri sequenziali in base 32 (. 1-. 1vvvvvu, quando **TMP_MAX_S** in stdio. H è **INT_MAX**).
 
-**tmpnam_s** gestisce automaticamente gli argomenti di stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici OEM ottenuta dal sistema operativo. **_wtmpnam_s** è una versione a caratteri wide di **tmpnam_s**; l'argomento e **il** valore restituito di _wtmpnam_s sono stringhe di caratteri wide. **_wtmpnam_s** e **tmpnam_s** si comportano in modo identico, ad eccezione del fatto che **_wtmpnam_s** non gestisce stringhe di caratteri multibyte.
+**tmpnam_s** gestisce automaticamente gli argomenti stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici OEM ottenuta dal sistema operativo. **_wtmpnam_s** è una versione a caratteri wide di **tmpnam_s**; l'argomento e il valore restituito di **_wtmpnam_s** sono stringhe a caratteri wide. **_wtmpnam_s** e **tmpnam_s** si comportano in modo identico, ad eccezione del fatto che **_wtmpnam_s** non gestisce le stringhe di caratteri multibyte.
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

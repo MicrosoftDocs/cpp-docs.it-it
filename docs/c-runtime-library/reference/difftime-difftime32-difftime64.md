@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348129"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914783"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -59,10 +59,10 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ### <a name="parameters"></a>Parametri
 
-*timeEnd (Fine del sistema)*<br/>
+*timeEnd*<br/>
 Tempo finale.
 
-*timeStart (Avvio in eora*<br/>
+*timeStart*<br/>
 Tempo iniziale.
 
 ## <a name="return-value"></a>Valore restituito
@@ -71,15 +71,15 @@ Tempo iniziale.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **difftime** calcola la differenza tra i due valori di ora forniti *timeStart* e *timeEnd*.
+La funzione **difftime** calcola la differenza tra i due valori temporali forniti *timeStart* e *timeEnd*.
 
-Il valore temporale fornito deve rientrare nell'intervallo di **time_t**. **time_t** è un valore a 64 bit. Pertanto, la fine dell'intervallo è stata estesa da 23:59:59 18 gennaio, 2038, ora UTC a 23:59:59, 31 dicembre, 3000. L'intervallo inferiore di **time_t** è ancora mezzanotte, 1 gennaio 1970.
+Il valore di ora fornito deve essere compreso nell'intervallo di **time_t**. **time_t** è un valore a 64 bit. Pertanto, la fine dell'intervallo è stata estesa da 23:59:59 18 gennaio, 2038, ora UTC a 23:59:59, 31 dicembre, 3000. L'intervallo inferiore di **time_t** è ancora mezzanotte, 1 gennaio 1970.
 
-**difftime** è una funzione inline che restituisce **_difftime32** o **_difftime64** a seconda che sia definito o meno **_USE_32BIT_TIME_T.** _difftime32 e _difftime64 possono essere utilizzati direttamente per imporre l'utilizzo di una determinata dimensione del tipo di tempo.
+**difftime** è una funzione inline che restituisce **_difftime32** o **_difftime64** a seconda che sia definito **_USE_32BIT_TIME_T** . _difftime32 e _difftime64 possono essere utilizzati direttamente per imporre l'utilizzo di una determinata dimensione del tipo di tempo.
 
-Queste funzioni convalidano i relativi parametri. Se i parametri hanno un valore pari a zero o negativo, viene richiamato il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, queste funzioni restituiscono 0 e impostano **errno** su **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se i parametri hanno un valore pari a zero o negativo, viene richiamato il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, queste funzioni restituiscono 0 e **errno** viene impostato su **EINVAL**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

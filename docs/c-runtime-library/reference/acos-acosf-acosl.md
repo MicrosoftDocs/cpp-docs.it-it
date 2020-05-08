@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348977"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916881"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -62,32 +62,32 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
-Valore compreso tra -1 e 1, per il quale calcolare l'arcocoseno (il coseno inverso).
+*x*<br/>
+Valore compreso tra-1 e 1, per il quale calcolare l'arcoseno (il coseno inverso).
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione **acos** restituisce l'arcocoseno di *x* compreso nell'intervallo da 0 a z radianti.
+La funzione **ARccOS** restituisce l'arcoseno di *x* nell'intervallo compreso tra 0 e π radianti.
 
-Per impostazione predefinita, se *x* è minore di -1 o maggiore di 1, **acos** restituisce un indefinito.
+Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **ARccOS** restituisce un valore indefinito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|NON VALIDO|_DOMAIN|
-|QNAN,IND|none|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
 |&#124;x&#124;>1|NON VALIDO|_DOMAIN|
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare gli overload di **acos** che accettano e restituiscono tipi **float** e **long** **double.** In un programma C, **acos** accetta e restituisce sempre un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **ARccOS** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **ARccOS** accetta e restituisce sempre un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**ARccOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Esempio
 

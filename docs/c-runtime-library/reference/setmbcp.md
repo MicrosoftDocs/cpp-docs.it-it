@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 61086471c6194aaa8434d291647978bf891a8aea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337597"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918821"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -50,16 +50,16 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Parametri
 
-*Codepage*<br/>
+*CodePage*<br/>
 Nuova impostazione della tabella codici per le routine multibyte indipendenti dalle impostazioni locali.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 se la tabella codici è impostata correttamente. Se viene fornito un valore di tabella codici non valido per la *tabella codici*, restituisce -1 e l'impostazione della tabella codici non viene modificata. Imposta **errno** su **EINVAL** se si verifica un errore di allocazione della memoria.
+Restituisce 0 se la tabella codici è impostata correttamente. Se per *codepage*viene specificato un valore di tabella codici non valido, restituisce-1 e l'impostazione della tabella codici è invariata. Imposta **errno** su **EINVAL** se si verifica un errore di allocazione della memoria.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_setmbcp** specifica una nuova tabella codici multibyte. Per impostazione predefinita, il sistema di runtime imposta automaticamente la tabella codici multibyte sulla tabella codici ANSI predefinita del sistema. L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte non dipendenti dalle impostazioni locali. Tuttavia, è possibile indicare a **_setmbcp** di utilizzare la tabella codici definita per le impostazioni locali correnti (vedere l'elenco seguente di costanti manifesto e risultati di comportamento associati). Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali, anziché dalla tabella codici multibyte, vedere [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+La funzione **_setmbcp** specifica una nuova tabella codici multibyte. Per impostazione predefinita, il sistema di runtime imposta automaticamente la tabella codici multibyte sulla tabella codici ANSI predefinita del sistema. L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte non dipendenti dalle impostazioni locali. Tuttavia, è possibile indicare **_setmbcp** di usare la tabella codici definita per le impostazioni locali correnti. vedere l'elenco seguente di costanti manifeste e i risultati del comportamento associati. Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali, anziché dalla tabella codici multibyte, vedere [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
 La tabella codici multibyte influisce anche sull'elaborazione dei caratteri multibyte per le routine della libreria di runtime seguenti:
 
@@ -69,23 +69,23 @@ La tabella codici multibyte influisce anche sull'elaborazione dei caratteri mult
 |[_fullpath](fullpath-wfullpath.md)|[Funzioni _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-Inoltre, tutte le routine della libreria di runtime che ricevono il carattere multibyte *argv* o gli argomenti del programma *envp* come parametri (ad esempio **le famiglie _exec** e **_spawn)** elaborano queste stringhe in base alla tabella codici multibyte. Pertanto, queste routine sono influenzate anche da una chiamata a **_setmbcp** che modifica la tabella codici multibyte.
+Inoltre, tutte le routine della libreria di runtime che ricevono argomenti di programma *argv* o *envp* di caratteri multibyte come parametri, ad esempio le famiglie **_exec** e **_spawn** , elaborano queste stringhe in base alla tabella codici multibyte. Queste routine sono pertanto interessate anche da una chiamata a **_setmbcp** che modifica la tabella codici multibyte.
 
-L'argomento *codepage* può essere impostato su uno dei seguenti valori:
+L'argomento *codepage* può essere impostato su uno dei valori seguenti:
 
-- **_MB_CP_ANSI** Utilizzare la tabella codici ANSI ottenuta dal sistema operativo all'avvio del programma.
+- **_MB_CP_ANSI** Usare la tabella codici ANSI ottenuta dal sistema operativo all'avvio del programma.
 
-- **_MB_CP_LOCALE** Utilizzare la tabella codici delle impostazioni locali correnti ottenuta da una precedente chiamata a [setlocale](setlocale-wsetlocale.md).
+- **_MB_CP_LOCALE** Usare la tabella codici delle impostazioni locali correnti ottenuta da una precedente chiamata a [setlocale](setlocale-wsetlocale.md).
 
-- **_MB_CP_OEM** Utilizzare la tabella codici OEM ottenuta dal sistema operativo all'avvio del programma.
+- **_MB_CP_OEM** Usare la tabella codici OEM ottenuta dal sistema operativo all'avvio del programma.
 
-- **_MB_CP_SBCS** Utilizzare una tabella codici a byte singolo. Quando la tabella codici è impostata su **_MB_CP_SBCS**, una routine come [_ismbblead](ismbblead-ismbblead-l.md) restituisce sempre false.
+- **_MB_CP_SBCS** Usare la tabella codici a byte singolo. Quando la tabella codici è impostata su **_MB_CP_SBCS**, una routine, ad esempio [_ismbblead](ismbblead-ismbblead-l.md) restituisce sempre false.
 
-- **_MB_CP_UTF8** Utilizzare UTF-8.  Quando la tabella codici è impostata su **_MB_CP_UTF8**, una routine, ad esempio [_ismbblead](ismbblead-ismbblead-l.md) restituisce sempre false.
+- **_MB_CP_UTF8** Usare UTF-8.  Quando la tabella codici è impostata su **_MB_CP_UTF8**, una routine, ad esempio [_ismbblead](ismbblead-ismbblead-l.md) restituisce sempre false.
 
-- Qualsiasi altro valore di tabella codici valido, indipendentemente dal fatto che il valore sia ANSI, OEM o un'altra tabella codici supportata dal sistema operativo (ad eccezione di UTF-7, che non è supportato).
+- Qualsiasi altro valore valido della tabella codici, indipendentemente dal fatto che il valore sia una tabella codici ANSI, OEM o un'altra tabella codici supportata dal sistema operativo (ad eccezione di UTF-7, che non è supportata).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
