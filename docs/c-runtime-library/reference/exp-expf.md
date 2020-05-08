@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: cbf303b2b92afd83a1c3181dc98a1dbdcd639c1b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347589"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909660"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -68,33 +68,33 @@ long double expl(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
-Valore a virgola mobile per esporre la base naturale del logaritmo *e* by.
+*x*<br/>
+Valore a virgola mobile in cui exponentiate il logaritmo naturale base *e* da.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **exp** restituiscono il valore esponenziale del parametro a virgola mobile, *x*, in caso di esito positivo. Cioè, il risultato è *e*<sup>*x*</sup>, dove *e* è la base del logaritmo naturale. In caso di overflow, la funzione restituisce INF (infinito) e in caso di underflow, **exp** restituisce 0.
+Le funzioni **Exp** restituiscono il valore esponenziale del parametro a virgola mobile, *x*, se ha esito positivo. Ovvero il risultato è *e*<sup>*x*</sup>, dove *e* è la base del logaritmo naturale. In un overflow, la funzione restituisce INF (infinito) e in underflow, **Exp** restituisce 0.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|- Tranquilla NaN, indeterminata|nessuno|_DOMAIN|
-|- Infinito|NON VALIDO|_DOMAIN|
+|± NaN silenzioso, indeterminato|Nessuno|_DOMAIN|
+|Infinito ±|NON VALIDO|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-La funzione **exp** ha un'implementazione che utilizza Streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
+La funzione **Exp** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
 
 ## <a name="remarks"></a>Osservazioni
 
-Il linguaggio C, ovvero l'overload, pertanto è possibile chiamare overload di **exp** che accettano un argomento **float** o **long double.** In un programma C, **exp** accetta e restituisce sempre un **valore double**.
+C++ consente l'overload, quindi è possibile chiamare gli overload di **Exp** che accettano un argomento **float** o **long double** . In un programma C, **Exp** accetta e restituisce sempre un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|---------------------|---|
-|**exp**, **expf**, **expl**|\<math.h>|\<cmath> o \<math.h>|
+|**Exp**, **expf**, **soluz**|\<math.h>|\<cmath> o \<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

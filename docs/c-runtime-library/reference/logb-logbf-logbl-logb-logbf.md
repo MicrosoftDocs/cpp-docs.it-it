@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341674"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911407"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -86,25 +86,25 @@ float _logbf(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**logb** restituisce il valore esponente imparziale di *x* come intero con segno rappresentato come valore a virgola mobile.
+**logb** restituisce il valore dell'esponente non distorta di *x* come intero con segno rappresentato come valore a virgola mobile.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se *x* fosse rappresentato con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
+Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se le *x* fossero rappresentate con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
 
-Dato che il linguaggio C, è possibile chiamare overload di **logb** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **logb** accetta e restituisce sempre un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **logb** accetta e restituisce sempre un **valore Double**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN,IND|nessuno|_DOMAIN|
-|: 0 (in questo modo)|ZERODIVIDE|_SING|
+|± QNAN, IND|Nessuno|_DOMAIN|
+|± 0|ZERODIVIDE|_SING|
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

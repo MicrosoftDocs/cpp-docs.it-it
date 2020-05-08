@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -77,16 +77,16 @@ no-loc:
 - _atof_l
 - _wtof
 - _wtof_l
-ms.openlocfilehash: dbeaf04d34aa20e15de48e99082ed07edb6129ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc54884cd32ffa9118abfb6d46d659125a44262c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912644"
 ---
 # <a name="strtol-wcstol-_strtol_l-_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
-Convertire le stringhe in un valore **long** integer.
+Converte le stringhe in un valore **Long** Integer.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -117,39 +117,39 @@ long _wcstol_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Stringa*\
+*stringa*\
 Stringa con terminazione Null da convertire.
 
 *end_ptr*\
-Un parametro di output, impostato in modo da puntare al carattere dopo l'ultimo carattere interpretato. Ignorato, se **NULL**.
+Parametro di output, impostato in modo da puntare al carattere dopo l'ultimo carattere interpretato. Ignorato, se **null**.
 
-*Base*\
+*base*\
 Base numerica da usare.
 
-*Impostazioni internazionali*\
+*locale*\
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtol**, **wcstol**, **_strtol_l**e **_wcstol_l** restituiscono il valore rappresentato in *string*. Restituiscono 0 se non è possibile alcuna conversione. Quando la rappresentazione causa un overflow, restituiscono **LONG_MAX** o **LONG_MIN**.
+**strtol**, **wcstol**, **_strtol_l**e **_wcstol_l** restituiscono il valore rappresentato nella *stringa*. Restituiscono 0 se non è possibile alcuna conversione. Quando la rappresentazione provocherebbe un overflow, restituiscono **LONG_MAX** o **LONG_MIN**.
 
-**errno** è impostato su **ERANGE** se si verifica un overflow o un underflow. È impostato su **EINVAL** se *string* è **NULL**. In alternativa, se *base* è diverso da zero e minore di 2 o maggiore di 36. Per ulteriori informazioni su **ERANGE**, **EINVAL**e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**errno** è impostato su **ERANGE** se si verifica un overflow o un underflow. È impostato su **EINVAL** se la *stringa* è **null**. Oppure se *base* è diverso da zero e minore di 2 o maggiore di 36. Per ulteriori informazioni su **ERANGE**, **EINVAL**e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **strtol**, **wcstol** **, _strtol_l**e **_wcstol_l** convertono una *stringa* in un **oggetto long**. Interrompono la lettura della *stringa* in corrispondenza del primo carattere non riconosciuto come parte di un numero. Può essere il carattere di terminazione null o il primo carattere alfanumerico maggiore o uguale a *base*.
+Le funzioni **strtol**, **wcstol**, **_strtol_l**e **_wcstol_l** convertono la *stringa* in un valore **Long**. Arrestano la lettura della *stringa* in corrispondenza del primo carattere non riconosciuto come parte di un numero. Può trattarsi del carattere di terminazione null oppure il primo carattere alfanumerico maggiore o uguale alla *base*.
 
-**wcstol** e **_wcstol_l** sono versioni a caratteri wide di **strtol** e **_strtol_l**. Il loro argomento *stringa* è una stringa di caratteri wide. Queste funzioni si comportano in modo identico a **strtol** e **_strtol_l** in caso contrario. L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali determina il riconoscimento del carattere di radice (marcatore frazionario o separatore decimale) nella *stringa*. Le funzioni **strtol** e **wcstol** utilizzano le impostazioni locali correnti. **_strtol_l** e **_wcstol_l** utilizzare le impostazioni locali passate. Per ulteriori informazioni, vedere [setlocale] e [Locale](../../c-runtime-library/locale.md).
+**wcstol** e **_wcstol_l** sono versioni a caratteri wide di **strtol** e **_strtol_l**. Il relativo argomento *stringa* è una stringa di caratteri wide. Queste funzioni si comportano in modo identico a **strtol** e **_strtol_l** in caso contrario. L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali determina il riconoscimento del carattere radice (il marcatore frazionario o il separatore decimale) nella *stringa*. Le funzioni **strtol** e **wcstol** usano le impostazioni locali correnti. **_strtol_l** e **_wcstol_l** utilizzano invece le impostazioni locali passate. Per ulteriori informazioni, vedere [setlocale] e [impostazioni locali](../../c-runtime-library/locale.md).
 
-Quando *end_ptr* è **NULL**, viene ignorato. In caso contrario, un puntatore al carattere che ha interrotto la scansione viene memorizzato nella posizione a cui *punta end_ptr*. Nessuna conversione è possibile se non vengono trovate cifre valide o se viene specificata una base non valida. Il valore di *string* viene quindi memorizzato nel percorso a cui punta *end_ptr*.
+Quando *end_ptr* è **null**, viene ignorato. In caso contrario, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *end_ptr*. Non è possibile alcuna conversione se non vengono trovate cifre valide o viene specificata una base non valida. Il valore della *stringa* viene quindi archiviato nella posizione a cui punta *end_ptr*.
 
-**strtol** prevede che *la stringa* punti a una stringa nel formato seguente:
+**strtol** prevede che la *stringa* punti a una stringa nel formato seguente:
 
-> [*spazio vuoto*] **-**[&#124;]**+** [**0** **[x** &#124; **X]]** [*caratteri alfanumerici*]
+> [*spazi vuoti*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*alfanumerici*]
 
-Le parentesi`[ ]`quadre ( ) circondano gli elementi facoltativi. Le parentesi graffe e`{ | }`una barra verticale ( ) circondano alternative per un singolo elemento. *gli spazi vuoti* possono essere costituiti da spazi e caratteri di tabulazione, che vengono ignorati. gli *alfanumerici* sono cifre decimali o le lettere da 'a' a 'z' (o da 'A' a '''). Il primo carattere che non rientra in questa forma interrompe la scansione. Se *base* è compreso tra 2 e 36, viene utilizzato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui punta *stringa* vengono utilizzati per determinare la base. Se il primo carattere è 0 e il secondo carattere non è 'x' o 'X', la stringa viene interpretata come un numero intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a ''') vengono assegnati i valori da 10 a 35. La scansione consente solo lettere i cui valori sono inferiori a *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Si supponga, ad esempio, *che string* inizi con "01". Se *base* è 0, lo scanner presuppone che sia un numero intero ottale. Un carattere '8' o '9' interrompe la scansione.
+Le parentesi quadre`[ ]`() racchiudono gli elementi facoltativi. Le parentesi graffe e una barra verticale (`{ | }`) racchiudono alternative per un singolo elemento. gli *spazi vuoti* possono essere costituiti da spazi e caratteri di tabulazione, che vengono ignorati. i *caratteri alfanumerici* sono cifre decimali o le lettere da' a' a' z ' (o da' A ' a' z '). Il primo carattere che non si adatta a questo modulo interrompe l'analisi. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta la *stringa* . Se il primo carattere è 0 e il secondo carattere non è' x ' o ' X ', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da' a' a' z ' (o da' A ' A ' Z ') vengono assegnati i valori da 10 a 35. L'analisi consente solo lettere i cui valori sono minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Si supponga, ad esempio, che la *stringa* inizi con "01". Se *base* è 0, lo scanner presuppone che si tratta di un Integer ottale. Un carattere "8" o "9" interrompe l'analisi.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -167,7 +167,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**_strtol_l**|\<stdlib.h>|
 |**_wcstol_l**|\<stdlib.h> o \<wchar.h>|
 
-Le **_strtol_l** **_wcstol_l** funzioni e sono specifiche di Microsoft e non fanno parte della libreria C standard. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../compatibility.md).
+Le **_strtol_l** funzioni **_wcstol_l** e sono specifiche di Microsoft, non parte della libreria C standard. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -176,7 +176,7 @@ Vedere l'esempio per [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dei dati](../data-conversion.md)\
-[Impostazioni internazionali](../locale.md)\
+[Locale](../locale.md)\
 [localeconv](localeconv.md)\
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)\
 [Funzioni da stringa a valore numerico](../string-to-numeric-value-functions.md)\
