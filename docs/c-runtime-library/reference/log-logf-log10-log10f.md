@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341872"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911474"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -77,26 +77,26 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore di cui trovare il logaritmo.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **di log** restituiscono il logaritmo naturale (base *e*) di *x* in caso di esito positivo. Le funzioni **log10** restituiscono il logaritmo in base 10. Se *x* è negativo, queste funzioni restituiscono un indefinito (IND), per impostazione predefinita. Se *x* è 0, restituiscono infinito (INF).
+Le funzioni di **log** restituiscono il logaritmo naturale (base *e*) di *x* in caso di esito positivo. Le funzioni **log10** restituiscono il logaritmo in base 10. Se *x* è negativo, queste funzioni restituiscono un valore indefinito (IND) per impostazione predefinita. Se *x* è 0, restituiscono Infinity (inf).
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, IND|none|_DOMAIN|
-|: 0 (in questo modo)|ZERODIVIDE|_SING|
+|± QNAN, IND|none|_DOMAIN|
+|± 0|ZERODIVIDE|_SING|
 |*x* < 0|NON VALIDO|_DOMAIN|
 
-**log** e **log10** hanno un'implementazione che utilizza Streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
+**log** e **log10** hanno un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
 
 ## <a name="remarks"></a>Osservazioni
 
-Il linguaggio C, ovvero l'overload, pertanto è possibile chiamare overload di **log** e **log10** che accettano e restituiscono valori **float** o **long double.** In un programma C, **log** e **log10** accettano e restituiscono sempre un **doppio**file .
+C++ consente l'overload, quindi è possibile chiamare overload di **log** e **log10** che accettano e restituiscono valori **float** o **long double** . In un programma C, **log** e **log10** accettano sempre e restituiscono un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

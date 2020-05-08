@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 57c6d1a81c9aac817b0028e8eccad38d03b0eef7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6af5dd101de74c9f25451c7b72ee561db35505d4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340550"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915544"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
@@ -73,13 +73,13 @@ unsigned char *_mbsnbset_l(
 *Str*<br/>
 Stringa da modificare.
 
-*C*<br/>
+*c*<br/>
 Impostazione di caratteri a un byte singolo o multibyte.
 
 *count*<br/>
 Numero di byte da impostare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -88,17 +88,17 @@ Impostazioni locali da usare.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le **funzioni _mbsnbset** e **_mbsnbset_l** impostano al massimo i primi byte di *conteggio* da *str* a *c*. Se *count* è maggiore della lunghezza di *str*, viene utilizzata la lunghezza di *str* anziché *count*. Se *c* è un carattere multibyte e non può essere impostato interamente nell'ultimo byte specificato da *count*, l'ultimo byte viene riempito con un carattere vuoto. **_mbsnbset** e **_mbsnbset_l** non inserisce un valore null di terminazione alla fine di *str*.
+Le funzioni **_mbsnbset** e **_mbsnbset_l** impostano, al massimo, il primo *numero* di byte da *STR* a *c*. Se *count* è maggiore della lunghezza di *Str*, viene utilizzata la lunghezza di *Str* anziché *count*. Se *c* è un carattere multibyte e non può essere impostato interamente nell'ultimo byte specificato da *count*, l'ultimo byte viene riempito con un carattere vuoto. **_mbsnbset** e **_mbsnbset_l** non inserisce un valore null di terminazione alla fine di *Str*.
 
-**_mbsnbset** e **_mbsnbset_l** è simile a **_mbsnset**, con la differenza che imposta i byte *di conteggio* anziché i caratteri *di conteggio* di *c*.
+**_mbsnbset** e **_mbsnbset_l** sono simili ai **_mbsnset**, ad eccezione del fatto che imposta il *numero* di byte anziché i caratteri di *conteggio* di *c*.
 
-Se *str* è **NULL** o *count* è zero, questa funzione genera un'eccezione di parametro non valido come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e la funzione restituisce **NULL**. Inoltre, se *c* non è un carattere multibyte valido, **errno** viene impostato su **EINVAL** e viene invece utilizzato uno spazio.
+Se *Str* è **null** o *count* è zero, questa funzione genera un'eccezione di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**. Inoltre, se *c* non è un carattere multibyte valido, **errno** viene impostato su **EINVAL** e viene invece utilizzato uno spazio.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Il **_mbsnbset** versione di questa funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. la versione **_mbsnbset_l** è identica, ad eccezione del fatto che utilizza invece il parametro locale passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione **_mbsnbset** di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; il **_mbsnbset_l** versione è identico, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 **Nota sulla sicurezza** Questa API è esposta a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -144,7 +144,7 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

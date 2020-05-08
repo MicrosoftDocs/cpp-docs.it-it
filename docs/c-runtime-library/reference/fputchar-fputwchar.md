@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 29d23dcaba75ad87b462a1a87c7a2ad9c8c7298b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346161"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912010"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -62,20 +62,20 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da scrivere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il carattere scritto. Ad **_fputchar**, un valore restituito di **EOF** indica un errore. Ad **_fputwchar**, un valore restituito di **WEOF** indica un errore. Se c è **NULL**, queste funzioni generano un'eccezione di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** (o **WEOF**) e impostano **errno** su **EINVAL**.
+Ognuna di queste funzioni restituisce il carattere scritto. Per **_fputchar**, un valore restituito di **EOF** indica un errore. Per **_fputwchar**, un valore restituito di **WEOF** indica un errore. Se c è **null**, queste funzioni generano un'eccezione di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** (o **WEOF**) e impostano **errno** su **EINVAL**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Entrambe queste funzioni scrivono il carattere singolo *c* a **stdout** e fa avanzare l'indicatore come appropriato. **_fputchar** è `fputc( stdout )`equivalente a . Equivale anche a **putchar**, ma implementato solo come funzione, anziché come funzione e macro. A differenza di **fputc** e **putchar**, queste funzioni non sono compatibili con lo standard ANSI.
+Entrambe queste funzioni scrivono il carattere singolo *c* in **stdout** e spostano l'indicatore in modo appropriato. **_fputchar** è equivalente a `fputc( stdout )`. È anche equivalente a **putchar**, ma implementata solo come funzione, anziché come funzione e macro. A differenza di **fputc** e **putchar**, queste funzioni non sono compatibili con lo standard ANSI.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -85,12 +85,12 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app UWP (Universal Windows Platform). Gli handle di flusso standard associati alla console,**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano utilizzarli nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
