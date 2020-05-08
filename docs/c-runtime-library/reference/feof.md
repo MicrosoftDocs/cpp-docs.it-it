@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 9ee085624be3c5613ac4b5e87965d47324727778
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347376"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920160"
 ---
 # <a name="feof"></a>feof
 
@@ -53,21 +53,21 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione **feof** restituisce un valore diverso da zero se un'operazione di lettura ha tentato di leggere oltre la fine del file; restituisce 0 in caso contrario. Se il puntatore del flusso è **NULL**, la funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostato su **EINVAL** e **feof** restituisce 0.
+La funzione **feof** restituisce un valore diverso da zero se un'operazione di lettura ha tentato di leggere oltre la fine del file; restituisce 0 in caso contrario. Se il puntatore del flusso è **null**, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e **feof** restituisce 0.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La routine **feof** (implementata sia come funzione che come macro) determina se la fine del *flusso* è stata passata. Quando viene passata la fine del file, le operazioni di lettura restituiscono un indicatore di fine file fino alla chiusura del flusso o fino a quando non viene chiamato [il](rewind.md)flusso , **fsetpos**, [fseek](fseek-fseeki64.md)o **clearerr.**
+La routine **feof** (implementata sia come funzione che come macro) determina se è stata passata la fine del *flusso* . Quando viene passata la fine del file, le operazioni di lettura restituiscono un indicatore di fine file fino a quando il flusso non viene chiuso o fino a quando non viene chiamato [Rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)o **clearerr** .
 
-Ad esempio, se un file contiene 10 byte e si legge 10 byte dal file, **feof** restituirà 0 perché, anche se il puntatore del file si trova alla fine del file, non si è tentato di leggere oltre la fine. Solo dopo aver provato a leggere un undicesimo byte **verrà restituito** un valore diverso da zero.
+Se, ad esempio, un file contiene 10 byte e si leggono 10 byte dal file, **feof** restituirà 0 perché, anche se il puntatore del file si trova alla fine del file, non si è tentato di leggere oltre la fine. Solo dopo il tentativo di leggere un undicesimo byte, **feof** restituirà un valore diverso da zero.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 

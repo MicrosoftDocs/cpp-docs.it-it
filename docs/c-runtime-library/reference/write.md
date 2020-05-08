@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: a616df570d266c335337d897da59a2a0ec69b40e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367387"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916699"
 ---
 # <a name="_write"></a>_write
 
@@ -51,7 +51,7 @@ int _write(
 
 ### <a name="parameters"></a>Parametri
 
-*Fd*<br/>
+*FD*<br/>
 Descrittore di file del file in cui vengono scritti i dati.
 
 *buffer*<br/>
@@ -62,21 +62,21 @@ Numero di byte.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **_write** restituisce il numero di byte scritti. Se lo spazio effettivo rimanente sul disco è inferiore alla dimensione del buffer che la funzione sta tentando di scrivere sul disco, **_write** non riesce e non scarica il contenuto del buffer sul disco. Un valore restituito di -1 indica un errore. Se vengono passati parametri non validi, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostato su uno dei tre valori seguenti: **EBADF**, ovvero il descrittore del file non è valido o il file non è aperto per la scrittura; **ENOSPC**, il che significa che non c'è abbastanza spazio sul dispositivo per l'operazione; o **EINVAL**, ovvero che *il buffer* era un puntatore null o che è stato passato un *conteggio* dispari di byte per essere scritto in un file in modalità Unicode.
+In caso di esito positivo, **_write** restituisce il numero di byte scritti. Se lo spazio effettivo rimanente sul disco è inferiore alle dimensioni del buffer che la funzione sta tentando di scrivere sul disco, **_write** ha esito negativo e non Scarica il contenuto del buffer sul disco. Un valore restituito di-1 indica un errore. Se vengono passati parametri non validi, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su uno dei tre valori seguenti: **EBADF**, il che significa che il descrittore del file non è valido o il file non è aperto per la scrittura. **ENOSPC**, il che significa che lo spazio disponibile nel dispositivo non è sufficiente per l'operazione. o **EINVAL**, il che significa che il *buffer* è un puntatore null o che è stato passato un *numero* dispari di byte da scrivere in un file in modalità Unicode.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Se il file viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con una coppia di avanzamento riga di ritorno a capo nell'output. La sostituzione non influisce sul valore restituito.
+Se il file viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con una coppia ritorno a capo/avanzamento riga nell'output. La sostituzione non influisce sul valore restituito.
 
-Quando il file viene aperto in modalità di conversione Unicode, ad esempio se *fd* viene aperto utilizzando **_open** o **_sopen** e un parametro mode che include **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, oppure se viene aperto utilizzando **fopen** e un parametro mode che include **ccs , UNICODE**, **ccs , UTF-16LE**o **ccs , UTF-8**o se la modalità viene modificata in una modalità di conversione Unicode utilizzando **_setmode**,*il buffer* viene interpretato come un wchar_t matrice **di** dati **UTF-16.** Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
+Quando il file viene aperto in modalità di conversione Unicode, ad esempio se *FD* viene aperto utilizzando **_open** o **_sopen** e un parametro di modalità che include **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o se viene aperto usando **fopen** e un parametro di modalità che include **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**o se la modalità viene modificata in una modalità di conversione Unicode usando **_setmode**, il*buffer* viene interpretato come un puntatore a una matrice di **wchar_t** che contiene dati **UTF-16** . Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_write** scrive i byte *di conteggio* dal *buffer* nel file associato a *fd*. L'operazione di scrittura inizia dalla posizione corrente del puntatore del file (se presente) associato al file specifico. Se il file è aperto per l'aggiunta, l'operazione inizia dalla fine corrente del file. Dopo l'operazione di scrittura, il puntatore del file viene aumentato del numero di byte scritti.
+La funzione **_write** scrive il *numero* di byte dal *buffer* nel file associato a *FD*. L'operazione di scrittura inizia dalla posizione corrente del puntatore del file (se presente) associato al file specifico. Se il file è aperto per l'aggiunta, l'operazione inizia dalla fine corrente del file. Al termine dell'operazione di scrittura, il puntatore del file viene incrementato del numero di byte scritti.
 
-Quando si scrive in file aperti in modalità testo, **_write** considera un carattere CTRL , come la fine logica del file. Durante la scrittura in un dispositivo, **_write** considera un carattere CTRL nel buffer come un terminatore di output.
+Quando si scrive in file aperti in modalità testo, **_write** considera un carattere CTRL + Z come fine logica del file. Quando si scrive in un dispositivo, **_write** considera un carattere CTRL + Z nel buffer come un terminatore di output.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

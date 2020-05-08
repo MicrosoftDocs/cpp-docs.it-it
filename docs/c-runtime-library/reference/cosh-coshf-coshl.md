@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: d7d2050be406e7f2be66ca200d1e3cfd9c2960b0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348436"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917220"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -59,25 +59,25 @@ long double cosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il coseno iperbolico di *x*.
+Coseno iperbolico di *x*.
 
-Per impostazione predefinita, se il risultato è troppo grande in una chiamata **cosh**, **coshf**o **coshl** , la funzione restituisce **HUGE_VAL** e imposta **errno** su **ERANGE**.
+Per impostazione predefinita, se il risultato è troppo grande in una chiamata a **cosh**, **coshf**o **coshl** , la funzione restituisce **HUGE_VAL** e imposta **errno** su **ERANGE**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|none|**_DOMAIN**|
-|*x* : 7,104760e|**OVERFLOW INESATTO**+**OVERFLOW**|**Overflow**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
+|*x* ≥ 7.104760 e + 002|**INEXACT**+**overflow** non esatto|**OVERFLOW**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Dato che il linguaggio Cè consente l'overload, è possibile chiamare overload di **cosh** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **cosh** accetta e restituisce sempre un **valore double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cosh** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **cosh** accetta e restituisce sempre un **valore Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -89,7 +89,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio in [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
+Vedere l'esempio in [sinhf, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>Vedere anche
 
