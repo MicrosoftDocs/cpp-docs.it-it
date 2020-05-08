@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342909"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919167"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -90,23 +90,23 @@ int _ismbstrail_l(
 *Str*<br/>
 Puntatore all'inizio della stringa o al precedente byte iniziale noto.
 
-*Corrente*<br/>
+*corrente*<br/>
 Puntatore alla posizione nella stringa da testare.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_ismbslead** restituisce -1 se il carattere è un byte iniziale e **_ismbstrail** restituisce -1 se il carattere è un byte finale. Se le stringhe di input sono valide ma non rappresentano un byte iniziale o finale, queste funzioni restituiscono zero. Se uno degli argomenti è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostano **errno** su **EINVAL**.
+**_ismbslead** restituisce-1 se il carattere è un byte iniziale e **_ismbstrail** restituisce-1 se il carattere è un byte finale. Se le stringhe di input sono valide ma non rappresentano un byte iniziale o finale, queste funzioni restituiscono zero. Se uno degli argomenti è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **null** e impostano **errno** su **EINVAL**.
 
 ## <a name="remarks"></a>Osservazioni
 
-**_ismbslead** e **_ismbstrail** sono più lenti delle **versioni _ismbblead** e **_ismbbtrail** perché prendono in considerazione il contesto della stringa.
+**_ismbslead** e **_ismbstrail** sono più lenti delle versioni **_ismbblead** e **_ismbbtrail** perché prendono in considerazione il contesto della stringa.
 
-Le versioni di queste funzioni che hanno il **suffisso _l** sono identiche, ad eccezione del fatto che per il comportamento dipendente dalle impostazioni locali usano le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -126,4 +126,4 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 [Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
 [Routines _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
-[Routine _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

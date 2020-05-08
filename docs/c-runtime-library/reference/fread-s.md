@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 97f7ca80d4b458b952393a5b1f72bebe0bdb0d9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346131"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919455"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -53,10 +53,10 @@ size_t fread_s(
 *buffer*<br/>
 Percorso di archiviazione per i dati.
 
-*Buffersize*<br/>
+*bufferSize*<br/>
 Dimensioni del buffer di destinazione in byte.
 
-*elementSize (Dimensionielemento)*<br/>
+*elementSize*<br/>
 Dimensione dell'elemento da leggere in byte.
 
 *count*<br/>
@@ -67,21 +67,21 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fread_s** restituisce il numero di elementi (intero) che sono stati letti nel buffer, che può essere inferiore al *conteggio* se viene rilevato un errore di lettura o la fine del file prima che venga raggiunto il *conteggio.* Utilizzare la funzione **feof** o **ferror** per distinguere un errore da una condizione di fine file. Se *size* o *count* è 0, **fread_s** restituisce 0 e il contenuto del buffer viene invariato. Se *stream* o *buffer* è un puntatore null, **fread_s** richiama il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
+**fread_s** restituisce il numero di elementi (interi) letti nel buffer, che può essere minore di *count* se viene rilevato un errore di lettura o la fine del file prima che venga raggiunto il *conteggio* . Usare la funzione **feof** o **ferretor** per distinguere un errore da una condizione di fine del file. Se *size* o *count* è 0, **fread_s** restituisce 0 e il contenuto del buffer non viene modificato. Se il *flusso* o il *buffer* è un puntatore null, **fread_s** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
 
 Per altre informazioni sui codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **fread_s** legge verso l'alto per *contare* gli elementi di *elementSize* byte dal *flusso* di input e li archivia nel *buffer*.  Il puntatore del file associato al *flusso* (se presente) viene aumentato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, le coppie ritorno a capo-avanzamento riga vengono sostituite con caratteri di avanzamento riga singola. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
+La funzione **fread_s** legge fino a *contare* gli elementi di *ElementSize* byte dal *flusso* di input e li archivia nel *buffer*.  Il puntatore del file associato al *flusso* (se ne è presente uno) viene aumentato in base al numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, le coppie ritorno a capo e avanzamento riga vengono sostituite con caratteri di avanzamento riga singoli. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
 
-Questa funzione blocca gli altri thread. Se è necessaria una versione non bloccante, utilizzare **_fread_nolock**.
+Questa funzione blocca gli altri thread. Se è necessaria una versione senza blocco, utilizzare **_fread_nolock**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 

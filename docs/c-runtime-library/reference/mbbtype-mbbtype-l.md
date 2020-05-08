@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: 7e2e818ed70ec393e4f81008f76ca9efe9cfa7e7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dca59f2d31cc5ad843a48e9825ef6a617d46ae4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341404"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919595"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype, _mbbtype_l
 
@@ -64,36 +64,36 @@ int _mbbtype_l(
 
 ### <a name="parameters"></a>Parametri
 
-*C*<br/>
+*c*<br/>
 Carattere da testare.
 
 *type*<br/>
 Tipo di byte per cui effettuare il test.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_mbbtype** restituisce il tipo di byte in una stringa. Questa decisione è sensibile al contesto, come specificato dal valore di *type*, che fornisce la condizione di test del controllo. *type* è il tipo del byte precedente nella stringa. Le costanti manifesto nella tabella seguente sono definite in Mbctype.h.
+**_mbbtype** restituisce il tipo di byte in una stringa. Questa decisione è sensibile al contesto, come specificato dal valore di *tipo*, che fornisce la condizione di test del controllo. il *tipo è il tipo del* byte precedente nella stringa. Le costanti manifesto nella tabella seguente sono definite in Mbctype.h.
 
-|Valore di *tipo*|**_mbbtype** per i test di _mbbtype per|Valore restituito|*C*|
+|Valore di *tipo*|**_mbbtype** test per|Valore restituito|*c*|
 |---------------------|--------------------------|------------------|---------|
-|Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_SINGLE** (0)|Byte singolo (0x20 - 0x7E, 0xA1 - 0xDF)|
-|Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_LEAD** (1)|Byte iniziale del carattere multibyte (0x81 - 0x9F, 0xE0 - 0xFC)|
-|Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_ILLEGAL**<br /><br /> ( -1)|Carattere non valido (qualsiasi valore tranne 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
-|1|Byte finale valido|**_MBC_TRAIL** (2)|Byte finale del carattere multibyte (0x40 - 0x7E, 0x80 - 0xFC)|
-|1|Byte finale valido|**_MBC_ILLEGAL**<br /><br /> ( -1)|Carattere non valido (qualsiasi valore tranne 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+|Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_SINGLE** (0)|Singolo byte (0x20-0x7E, 0xA1-0xDF)|
+|Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_LEAD** (1)|Byte di apertura del carattere multibyte (0x81-0x9F, 0xE0-0xFC)|
+|Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_ILLEGAL**<br /><br /> (-1)|Carattere non valido (qualsiasi valore, ad eccezione di 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, 0xE0-0xFC|
+|1|Byte finale valido|**_MBC_TRAIL** (2)|Byte finale di caratteri multibyte (0x40-0x7E, 0x80-0xFC)|
+|1|Byte finale valido|**_MBC_ILLEGAL**<br /><br /> (-1)|Carattere non valido (qualsiasi valore, ad eccezione di 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, 0xE0-0xFC|
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_mbbtype** determina il tipo di byte in un carattere multibyte. Se il valore di *type* è qualsiasi valore ad eccezione di 1, **_mbbtype** verifica un byte singolo o iniziale valido di un carattere multibyte. Se il valore di *tipo* è 1, **_mbbtype** verifica un byte finale valido di un carattere multibyte.
+La funzione **_mbbtype** determina il tipo di byte in un carattere multibyte. Se il valore di *tipo* è qualsiasi valore eccetto 1, **_mbbtype** verifica se è presente un byte iniziale o a byte singolo valido di un carattere multibyte. Se il valore di *tipo* è 1, **_mbbtype** testa un byte finale valido di un carattere multibyte.
 
-Il valore di output è influenzato dall'impostazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali; Per ulteriori informazioni, vedere [setlocale, _wsetlocale.](setlocale-wsetlocale.md) Il **_mbbtype** versione di questa funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. la versione **_mbbtype_l** è identica, ad eccezione del fatto che utilizza il parametro locale che viene passato invece. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione dell'impostazione di categoria **LC_CTYPE** delle impostazioni locali; Per ulteriori informazioni [, vedere setlocale _wsetlocale](setlocale-wsetlocale.md) . La versione **_mbbtype** di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; il **_mbbtype_l** versione è identico, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti, **_mbbtype** era denominato **chkctype**. Per il nuovo codice, usare invece **_mbbtype.**
+Nelle versioni precedenti, **_mbbtype** era denominato **chkctype**. Per il nuovo codice, usare invece **_mbbtype** .
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 

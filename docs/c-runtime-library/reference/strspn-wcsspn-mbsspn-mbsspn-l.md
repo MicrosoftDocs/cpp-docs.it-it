@@ -22,7 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,19 +47,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: 8bd8837f2e1f6cb92c5b7e2e819da56408273810
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317037"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911097"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Restituisce l'indice del primo carattere in una stringa, che non appartiene a un set di caratteri.
 
 > [!IMPORTANT]
-> **_mbsspn** e **_mbsspn_l** non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsspn** e **_mbsspn_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -88,32 +88,32 @@ size_t _mbsspn_l(
 *Str*<br/>
 Stringa con terminazione Null in cui eseguire la ricerca.
 
-*strCharSet (gruppo di caratteri strCharSet)*<br/>
+*strCharSet*<br/>
 Set di caratteri con terminazione Null.
 
-*Impostazioni internazionali*<br/>
+*locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore intero che specifica la lunghezza della sottostringa in *str* costituita interamente da caratteri in *strCharSet*. Se *str* inizia con un carattere non in *strCharSet*, la funzione restituisce 0.
+Restituisce un valore integer che specifica la lunghezza della sottostringa in *Str* costituita interamente da caratteri in *strCharSet*. Se *Str* inizia con un carattere non in *strCharSet*, la funzione restituisce 0.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **strspn** restituisce l'indice del primo carattere in *str* che non appartiene al set di caratteri in *strCharSet*. La ricerca non include i caratteri Null di terminazione.
+La funzione **strspn** restituisce l'indice del primo carattere in *Str* che non appartiene al set di caratteri in *strCharSet*. La ricerca non include i caratteri Null di terminazione.
 
-**wcsspn** e **_mbsspn** sono versioni a caratteri wide e a caratteri multibyte di **strspn**. Gli argomenti di **wcsspn** sono stringhe a caratteri wide; quelli di **_mbsspn** sono stringhe di caratteri multibyte. **_mbsspn** convalida i parametri. Se *str* o *strCharSet* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in Convalida [dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **_mbspn** imposta **errno** su **EINVAL** e restituisce 0. **strspn** e **wcsspn** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcsspn** e **_mbsspn** sono versioni a caratteri wide e a caratteri multibyte di **strspn**. Gli argomenti di **wcsspn** sono stringhe a caratteri wide. i **_mbsspn** sono stringhe di caratteri multibyte. **_mbsspn** convalida i relativi parametri. Se *Str* o *strCharSet* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **_mbspn** imposta **errno** su **EINVAL** e restituisce 0. **strspn** e **wcsspn** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
-|**n/d**|**n/d**|**_mbsspn_l**|**n/d**|
+|**n/a**|**n/a**|**_mbsspn_l**|**n/a**|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -154,9 +154,9 @@ The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione delle stringheString Manipulation](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Impostazioni internazionali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyteInterpretation of Multibyte-Character Sequences](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

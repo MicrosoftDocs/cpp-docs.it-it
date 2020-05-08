@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350467"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919614"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -60,28 +60,28 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*x*<br/>
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **asinh** restituiscono il seno iberbolico inverso (seno iperbolico arco) di *x*. Questa funzione è valida nel dominio a virgola mobile. Se *x* è un NaN tranquillo, indefinito o infinito, viene restituito lo stesso valore.
+Le funzioni **asinh** restituiscono il seno iperbolico inverso (seno iperbolico d'arco) di *x*. Questa funzione è valida nel dominio a virgola mobile. Se *x* è un valore NaN non interattiva, indefinito o infinito, viene restituito lo stesso valore.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|QNAN, IND, INF|none|none|
+|± QNAN, IND, INF|none|none|
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si utilizza il linguaggio C, è possibile chiamare gli overload di **asinh** che accettano e restituiscono valori **float** o **long** **double.** In un programma C, **asinh** accetta e restituisce **sempre double**.
+Quando si usa C++, è possibile chiamare gli overload di **asinh** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C **asinh** accetta e restituisce sempre **Double**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<o< \<mathmath> or math.h|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> o \<Math. h<|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

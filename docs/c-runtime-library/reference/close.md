@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: 4d8b702a10624ae80629b4ce4644c428322500cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c642820bf1bc2e2afbd14e17832fb3fdb6f865b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348650"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919847"
 ---
 # <a name="_close"></a>_close
 
@@ -49,22 +49,22 @@ int _close(
 
 ### <a name="parameters"></a>Parametri
 
-*Fd*<br/>
+*FD*<br/>
 Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_close** restituisce 0 se il file è stato chiuso correttamente. Un valore restituito di -1 indica un errore.
+**_close** restituisce 0 se il file è stato chiuso correttamente. Un valore restituito di-1 indica un errore.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_close** chiude il file associato a *fd*.
+La funzione **_close** chiude il file associato a *FD*.
 
-Il descrittore di file e il punto di controllo file del sistema operativo sottostante vengono chiusi. Pertanto, non è necessario chiamare **CloseHandle** se il file è stato originariamente aperto utilizzando la funzione Win32 **CreateFile** e convertito in un descrittore di file utilizzando **_open_osfhandle**.
+Il descrittore di file e il punto di controllo file del sistema operativo sottostante vengono chiusi. Non è pertanto necessario chiamare **CloseHandle** se il file è stato originariamente aperto utilizzando la funzione Win32 **CreateFile** e convertito in un descrittore di file utilizzando **_open_osfhandle**.
 
-Questa funzione convalida i relativi parametri. Se *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e **errno** è impostato su **EBADF**.
+Questa funzione convalida i relativi parametri. Se *FD* è un descrittore di file errato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e **errno** viene impostato su **EBADF**.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa impostazione, vedere [Stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
