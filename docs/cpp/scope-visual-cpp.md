@@ -10,38 +10,38 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267314"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204128"
 ---
 # <a name="scope-c"></a>Ambito (C++)
 
-Quando si dichiara un elemento del programma, ad esempio una classe, funzione o variabile, il nome può solo essere "visto" e utilizzato in determinate parti del programma. Viene chiamato il contesto in cui è visibile un nome relativo *ambito*. Ad esempio, se si dichiara una variabile `x` all'interno di una funzione, `x` solo è visibile all'interno di tale corpo della funzione. Dispone *ambito locale*. È possibile altre variabili con lo stesso nome nel programma; fino a quando sono in ambiti diversi, non violino una regola di definizione e viene generato alcun errore.
+Quando si dichiara un elemento del programma, ad esempio una classe, una funzione o una variabile, il nome può essere "visualizzato" solo e utilizzato in determinate parti del programma. Il contesto in cui un nome è visibile è denominato *ambito*. Se, ad esempio, si dichiara una variabile `x` all'interno di una funzione, `x` è visibile solo all'interno del corpo di tale funzione. Ha *ambito locale*. Nel programma potrebbero essere presenti altre variabili con lo stesso nome; finché si trovano in ambiti diversi, non violano la regola di definizione di una definizione e non viene generato alcun errore.
 
-Per variabili automatiche non statici, ambito determina anche quando vengono creati e distrutti in memoria programma.
+Per le variabili automatiche non statiche, l'ambito determina anche quando vengono creati ed eliminati nella memoria del programma.
 
 Sono disponibili sei tipi di ambito:
 
-- **Ambito globale** un nome globale è una variabile dichiarata all'esterno di qualsiasi classe, funzione o lo spazio dei nomi. In C++, tuttavia, anche questi nomi esistono con uno spazio dei nomi globale implicito. L'ambito dei nomi globali si estende dal punto di dichiarazione alla fine del file in cui sono dichiarate. Per i nomi globali, la visibilità è regolata anche dalle regole di [collegamento](program-and-linkage-cpp.md) che determinano se il nome è visibile in altri file del programma.
+- **Ambito globale** Un nome globale è uno dichiarato al di fuori di qualsiasi classe, funzione o spazio dei nomi. Tuttavia, in C++ anche questi nomi esistono con uno spazio dei nomi globale implicito. L'ambito dei nomi globali si estende dal punto di dichiarazione fino alla fine del file in cui sono dichiarati. Per i nomi globali, la visibilità è regolata anche dalle regole di [collegamento](program-and-linkage-cpp.md) , che determinano se il nome è visibile in altri file del programma.
 
-- **Ambito Namespace** un nome dichiarato all'interno di un [dello spazio dei nomi](namespaces-cpp.md), di fuori di qualsiasi definizione di classe o un'enumerazione o blocco della funzione, è visibile dal suo punto di dichiarazione alla fine dello spazio dei nomi. Uno spazio dei nomi può essere definita in più blocchi in file diversi.
+- **Ambito dello spazio dei nomi** Un nome dichiarato all'interno di uno [spazio dei nomi](namespaces-cpp.md), esterno a qualsiasi definizione di classe o di enumerazione o blocco di funzione, è visibile dal punto di dichiarazione alla fine dello spazio dei nomi. Uno spazio dei nomi può essere definito in più blocchi tra file diversi.
 
-- **Ambito locale** un nome dichiarato all'interno di una funzione o espressione lambda, inclusi i nomi dei parametri, hanno ambito locale. Essi sono spesso detto "variabili locali". Sono visibili solo dal relativo punto di dichiarazione alla fine del corpo della funzione o espressione lambda. Ambito locale è un tipo di ambito del blocco, che è descritti più avanti in questo articolo.
+- **Ambito locale** Un nome dichiarato all'interno di una funzione o di un'espressione lambda, inclusi i nomi dei parametri, ha ambito locale. Sono spesso denominate "variabili locali". Sono visibili solo dal punto di dichiarazione alla fine della funzione o del corpo dell'espressione lambda. L'ambito locale è un tipo di ambito del blocco, illustrato più avanti in questo articolo.
 
-- **Ambito di classe** i nomi dei membri della classe hanno un ambito di classe, che estende in tutta la definizione della classe indipendentemente dal punto di dichiarazione. Accessibilità del membro classe ulteriormente è controllato dal **pubbliche**, **privato**, e **protetti** parole chiave. I membri pubblici o protetti sono accessibili solo tramite gli operatori di selezione dei membri (**.** oppure **->**) o gli operatori puntatore a membro (**.** <strong>\*</strong> oppure **->** <strong>\*</strong>).
+- **Ambito della classe** I nomi dei membri della classe hanno un ambito di classe che si estende in tutta la definizione della classe, indipendentemente dal punto di dichiarazione. L'accessibilità dei membri di classe è ulteriormente controllata dalle parole chiave **public**, **private**e **protected** . È possibile accedere ai membri pubblici o protetti solo tramite gli operatori di selezione dei membri (**.** o **->** ) o operatori puntatore a membro (**.** <strong>\*</strong> o **->** <strong>\*</strong> ).
 
-- **Ambito dell'istruzione** i nomi dichiarati un **per**, **se**, **mentre**, o **passare** istruzione sono visibili fino alla fine del blocco di istruzioni.
+- **Ambito dell'istruzione** I nomi dichiarati in un'istruzione **for**, **if**, **while**o **Switch** sono visibili fino alla fine del blocco di istruzioni.
 
-- **Ambito funzione** un' [etichetta](labeled-statements.md) ha l'ambito della funzione, ovvero è visibile in tutto il corpo di una funzione anche prima che il punto di dichiarazione. Ambito della funzione rende possibile la scrittura di istruzioni come `goto cleanup` prima di `cleanup` l'etichetta viene dichiarata.
+- **Ambito della funzione** Un' [etichetta](labeled-statements.md) ha un ambito di funzione, il che significa che è visibile in un corpo di funzione anche prima del relativo punto di dichiarazione. L'ambito della funzione rende possibile la scrittura di istruzioni come `goto cleanup` prima che l' `cleanup` etichetta venisse dichiarata.
 
 ## <a name="hiding-names"></a>Nascondere nomi
 
 È possibile nascondere un nome dichiarandolo in un blocco chiuso. Nella figura seguente `i` viene ridichiarato nel blocco interno, quindi nascondendo la variabile associata a `i` nell'ambito del blocco esterno.
 
-![Blocco&#45;nascondere il nome di ambito](../cpp/media/vc38sf1.png "blocca&#45;nascondere il nome di ambito") <br/>
+![Nascondi nome ambito&#45;nascosto](../cpp/media/vc38sf1.png "Nascondi nome ambito&#45;nascosto") <br/>
 Nascondere il nome e l'ambito del blocco
 
 L'output del programma illustrato nella figura è:
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Nascondere nomi di classi
 
-È possibile nascondere i nomi della classe mediante la dichiarazione di una funzione, un oggetto o una variabile o un enumeratore nello stesso ambito. Tuttavia, il nome della classe è ancora accessibile quando è preceduto dalla parola chiave **classe**.
+È possibile nascondere i nomi della classe mediante la dichiarazione di una funzione, un oggetto o una variabile o un enumeratore nello stesso ambito. Tuttavia, è ancora possibile accedere al nome della classe quando il prefisso è la **classe**della parola chiave.
 
 ```cpp
 // hiding_class_names.cpp
@@ -85,31 +85,31 @@ int main()
     class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
-    cout << "Opening account with balance of: "
+    cout << "Opening account with a balance of: "
          << Checking.GetBalance() << "\n";
 }
-//Output: Opening account with balance of: 15.37
+//Output: Opening account with a balance of: 15.37
 ```
 
 > [!NOTE]
-> In qualsiasi luogo il nome della classe (`Account`) viene chiamato per, la parola chiave class deve essere usata per distinguerlo dall'Account di variabili con ambito globale. Questa regola non viene applicata quando il nome della classe si trova a sinistra dell'operatore di risoluzione dell'ambito (::). I nomi a sinistra dell'operatore di risoluzione dell'ambito vengono sempre considerati nomi classe.
+> Per ogni posizione in cui viene chiamato il nome della classe ( `Account` ), la classe della parola chiave deve essere usata per distinguerla dall'account della variabile con ambito globale. Questa regola non viene applicata quando il nome della classe si trova a sinistra dell'operatore di risoluzione dell'ambito (::). I nomi a sinistra dell'operatore di risoluzione dell'ambito vengono sempre considerati nomi classe.
 
-Nell'esempio seguente viene illustrato come dichiarare un puntatore a un oggetto di tipo `Account` usando il **classe** (parola chiave):
+Nell'esempio seguente viene illustrato come dichiarare un puntatore a un oggetto di tipo `Account` utilizzando la parola chiave **Class** :
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-Il `Account` nell'inizializzatore (tra parentesi) nell'istruzione precedente ha ambito globale, è di tipo **doppie**.
+L'oggetto `Account` nell'inizializzatore (tra parentesi) nell'istruzione precedente ha ambito globale; è di tipo **Double**.
 
 > [!NOTE]
 > Il riutilizzo dei nomi degli identificatori come illustrato in questo esempio viene considerato uno stile di programmazione di qualità insufficiente.
 
-Per informazioni sulla dichiarazione e inizializzazione di oggetti di classe, vedere [classi, strutture e unioni](../cpp/classes-and-structs-cpp.md). Per informazioni sull'utilizzo il **nuove** e **eliminare** operatori free-store, vedere [nuova ed eliminare operatori](new-and-delete-operators.md).
+Per informazioni sulla dichiarazione e l'inizializzazione degli oggetti classe, vedere [classi, strutture e unioni](../cpp/classes-and-structs-cpp.md). Per informazioni sull'uso degli operatori Free-Store **New** e **Delete** , vedere [operatori new e Delete](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Nascondere nomi con ambito globale
 
-È possibile nascondere i nomi con ambito globale dichiarando in modo esplicito lo stesso nome nell'ambito del blocco. Tuttavia, i nomi di ambito globale è possibile accedere tramite l'operatore di risoluzione dell'ambito (`::`).
+È possibile nascondere i nomi con ambito globale dichiarando in modo esplicito lo stesso nome nell'ambito del blocco. È tuttavia possibile accedere ai nomi di ambito globali utilizzando l'operatore di risoluzione dell'ambito ( `::` ).
 
 ```cpp
 #include <iostream>
