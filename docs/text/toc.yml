@@ -1,0 +1,61 @@
+- name: Testo e stringhe in MSVC
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Unicode e MBCS
+  expanded: false
+  items:
+    - name: Unicode e MBCS
+      href: ../text/unicode-and-mbcs.md
+    - name: Abilitazione di risorse internazionali
+      href: ../text/international-enabling.md
+    - name: Strategie di internazionalizzazione
+      href: ../text/internationalization-strategies.md
+    - name: Impostazioni locali e tabelle codici
+      href: ../text/locales-and-code-pages.md
+    - name: Vantaggi della portabilità dei set di caratteri
+      href: ../text/benefits-of-character-set-portability.md
+- name: Supporto per Unicode
+  expanded: false
+  items:
+    - name: Supporto per Unicode
+      href: ../text/support-for-unicode.md
+    - name: Supporto per l'uso di wmain
+      href: ../text/support-for-using-wmain.md
+    - name: Riepilogo della programmazione Unicode
+      href: ../text/unicode-programming-summary.md
+- name: 'Supporto per set di caratteri multibyte (MBCS, Multibyte Character Set)'
+  expanded: false
+  items:
+    - name: 'Supporto per set di caratteri multibyte (MBCS, Multibyte Character Set)'
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: Supporto per MBCS in MSVC
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: Suggerimenti sulla programmazione MBCS
+      expanded: false
+      items:
+        - name: Suggerimenti sulla programmazione MBCS
+          href: ../text/mbcs-programming-tips.md
+        - name: Suggerimenti generali sulla programmazione MBCS
+          href: ../text/general-mbcs-programming-advice.md
+        - name: Incremento e decremento dei puntatori
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: Indici di byte
+          href: ../text/byte-indices.md
+        - name: Ultimo carattere di una stringa
+          href: ../text/last-character-in-a-string.md
+        - name: Assegnazione di caratteri
+          href: ../text/character-assignment.md
+        - name: Confronto tra caratteri
+          href: ../text/character-comparison.md
+        - name: Overflow del buffer
+          href: ../text/buffer-overflow.md
+- name: Supporto per ANSI
+  href: ../text/support-for-ansi.md
+- name: Mapping di testo generico in tchar.h
+  expanded: false
+  items:
+    - name: Mapping di testo generico in tchar.h
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: Uso dei tipi di dati di TCHAR.H con il codice _MBCS
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: 'Procedura: Convertire vari tipi di stringhe'
+  href: ../text/how-to-convert-between-various-string-types.md
