@@ -1,49 +1,61 @@
 ---
 title: Introduzione a C++ Build Insights
-description: Una panoramica di alto livello di approfondimenti sulla build di C.
+description: Panoramica di alto livello delle informazioni dettagliate sulla compilazione di C++.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3a75dfe3bf1263cce53d70b764607cad4eec86d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325720"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759225"
 ---
 # <a name="get-started-with-c-build-insights"></a>Introduzione a C++ Build Insights
 
 ::: moniker range="<=vs-2017"
 
-In Visual Studio 2019 sono disponibili gli strumenti di analisi della build in C. Per visualizzare la documentazione relativa a tale versione, impostare il controllo del selettore della versione di Visual Studio per questo articolo su Visual Studio 2019.To see the documentation for that version, set the Visual Studio **Version** selector control for this article to Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+Gli strumenti di build Insights per C++ sono disponibili in Visual Studio 2019. Per visualizzare la documentazione relativa a tale versione, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Le informazioni dettagliate sulla compilazione in Cè sono una raccolta di strumenti che offre una maggiore visibilità nella catena di strumenti di Microsoft Visual C (MSVC). Gli strumenti raccolgono i dati relativi alle compilazioni di C, quindi li presentano in un formato che consente di rispondere alle domande più comuni, ad esempio:The tools collect data about your C's builds, and present it in a format that can help you answer questions, like:
+C++ Build Insights è una raccolta di strumenti che offre una maggiore visibilità nella catena di strumenti Microsoft Visual C++ (MSVC). Gli strumenti raccolgono i dati sulle compilazioni C++ e li presentano in un formato che può aiutare a rispondere a domande comuni, ad esempio:
 
-- Le mie costruzioni sono sufficientemente parallelizzate?
-- Cosa devo includere nella mia intestazione precompilata (PCH)?
-- C'è un collo di bottiglia specifico su cui dovrei concentrarmi per aumentare la velocità di compilazione?
+- Le compilazioni sono sufficientemente parallele?
+- Cosa è necessario includere nell'intestazione precompilata (PCH)?
+- È necessario concentrarsi su un collo di bottiglia specifico per aumentare le velocità di compilazione?
 
 I componenti principali di questa tecnologia sono:
 
-- *vcperf.exe*, un'utilità della riga di comando che è possibile utilizzare per raccogliere tracce per le compilazioni,
-- un'estensione di Windows Performance Analyzer (WPA) che consente di visualizzare le tracce di compilazione in WPA,
-- l'SDK di approfondimenti sulla compilazione di C, un kit di sviluppo software per la creazione di strumenti personalizzati che utilizzano i dati di Build Insights.
+- *vcperf. exe*, un'utilità da riga di comando che è possibile usare per raccogliere tracce per le compilazioni,
+- estensione di Windows Performance Analyzer (WPA) che consente di visualizzare le tracce di compilazione in WPA e
+- C++ Build Insights SDK, un Software Development Kit per la creazione di strumenti personalizzati che usano i dati di build Insights di C++.
 
-Clicca sui link qui sotto per iniziare rapidamente con questi componenti:
+## <a name="documentation-sections"></a>Sezioni della documentazione
 
 [Esercitazione: vcperf e Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
-Informazioni su come raccogliere le tracce di compilazione per i progetti in linguaggio C, nonché su come visualizzarle in WPA.
+Informazioni su come raccogliere le tracce di compilazione per i progetti C++ e come visualizzarle in WPA.
 
-[Esercitazione: Nozioni di base sulle prestazioni di WindowsTutorial: Windows Performance Basics](tutorials/wpa-basics.md)\
-Scopri utili suggerimenti WPA per analizzare le tue tracce di compilazione.
+[Esercitazione: Nozioni fondamentali sulle prestazioni di Windows](tutorials/wpa-basics.md)\
+Individuare utili suggerimenti per WPA per l'analisi delle tracce di compilazione.
 
-[SDK di approfondimenti per la compilazione in C](reference/sdk/overview.md)\
-Una panoramica dell'SDK per le informazioni dettagliate sulla compilazione in C.
+[SDK per Build Insights per C++](reference/sdk/overview.md)\
+Panoramica di C++ Build Insights SDK.
+
+## <a name="articles"></a>Articoli
+
+Leggere questi articoli dal Blog ufficiale del team di C++ per altre informazioni su C++ Build Insights:
+
+[Introduzione a C++ Build Insights](https://devblogs.microsoft.com/cppblog/introducing-c-build-insights/)
+
+[Analizzare le compilazioni a livello di codice con C++ Build Insights SDK](https://devblogs.microsoft.com/cppblog/analyze-your-builds-programmatically-with-the-c-build-insights-sdk/)
+
+[Ricerca di colli di bottiglia di compilazione con informazioni dettagliate sulla compilazione C++](https://devblogs.microsoft.com/cppblog/finding-build-bottlenecks-with-cpp-build-insights/)
+
+[Build più veloci con suggerimenti PCH da informazioni dettagliate sulla compilazione C++](https://devblogs.microsoft.com/cppblog/faster-builds-with-pch-suggestions-from-c-build-insights/)
 
 ::: moniker-end

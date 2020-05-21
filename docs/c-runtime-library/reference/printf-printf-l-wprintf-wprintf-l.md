@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950198"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759238"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -90,15 +90,15 @@ Impostazioni locali da usare.
 
 Restituisce il numero di caratteri stampati o un valore negativo se si verifica un errore. Se *Format* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**. Se viene rilevato **EOF** (0xFFFF) nell' *argomento*, la funzione restituisce-1.
 
-Per informazioni sui codici **errno** e Error, vedere [doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per informazioni sui codici di errore e **errno** , vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **printf** formatta e stampa una serie di caratteri e di valori nel flusso di output standard, **stdout**. Se gli argomenti seguono la stringa di *formato* , la stringa di *formato* deve contenere le specifiche che determinano il formato di output per gli argomenti. **printf** e [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) si comportano in modo identico, ad eccezione del fatto che **printf** scrive l'output in **stdout** anziché in una destinazione di tipo **file**.
 
 **wprintf** è una versione a caratteri wide di **printf**; *Format* è una stringa di caratteri wide. **wprintf** e **printf** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **printf** non supporta attualmente l'output in un flusso Unicode.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -119,7 +119,7 @@ Line one
         Line two
 ```
 
-Le [specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) iniziano sempre con un segno **%** di percentuale () e vengono lette da sinistra a destra. Quando **printf** rileva la prima specifica di formato, se presente, converte il valore del primo argomento dopo *Format* e lo restituisce di conseguenza. La seconda specifica di formato fa sì che venga convertito e restituito il secondo argomento e così via. Se sono presenti più argomenti che specifiche di formato, gli argomenti aggiuntivi vengono ignorati. I risultati sono indefiniti in mancanza di argomenti sufficienti per tutte le specifiche di formato.
+Le [specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) iniziano sempre con un segno di percentuale ( **%** ) e vengono lette da sinistra a destra. Quando **printf** rileva la prima specifica di formato, se presente, converte il valore del primo argomento dopo *Format* e lo restituisce di conseguenza. La seconda specifica di formato fa sì che venga convertito e restituito il secondo argomento e così via. Se sono presenti più argomenti che specifiche di formato, gli argomenti aggiuntivi vengono ignorati. I risultati sono indefiniti in mancanza di argomenti sufficienti per tutte le specifiche di formato.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.
@@ -199,7 +199,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Esempio di output
+### <a name="sample-output"></a>Output di esempio
 
 ```Output
 Integer formats:
@@ -228,12 +228,13 @@ Address as:   0012FF3C
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Sintassi per la specifica del formato: funzioni printf e wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
