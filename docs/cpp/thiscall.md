@@ -1,40 +1,36 @@
 ---
 title: __thiscall
-ms.date: 11/04/2016
+ms.date: 05/22/2020
 f1_keywords:
 - __thiscall
 - __thiscall_cpp
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: 8772159dca71bb7605af5e5919425065423d503d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9edc2cd8caa5fd5458f6a53c5fdb1f8a5e69914
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188155"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854814"
 ---
-# <a name="__thiscall"></a>__thiscall
+# `__thiscall`
 
-**Sezione specifica Microsoft**
+La convenzione di chiamata **specifica di Microsoft** **`__thiscall`** viene utilizzata nelle funzioni membro della classe C++ nell'architettura x86. Si tratta della convenzione di chiamata predefinita utilizzata dalle funzioni membro che non utilizzano argomenti variabili ( `vararg` funzioni).
 
-La convenzione di chiamata **__thiscall** viene utilizzata per le funzioni membro e rappresenta la convenzione di chiamata C++ predefinita utilizzata dalle funzioni membro che non utilizzano argomenti variabili. In **__thiscall**, il chiamato pulisce lo stack, operazione impossibile per le funzioni di `vararg`. Gli argomenti vengono inseriti nello stack da destra a sinistra, con il puntatore **this** passato tramite Register ECX e non nello stack sull'architettura x86.
+In **`__thiscall`** il chiamato pulisce lo stack, operazione impossibile per le `vararg` funzioni. Gli argomenti vengono inseriti nello stack da destra a sinistra. Il **`this`** puntatore viene passato tramite Register ECX e non nello stack.
 
-Un motivo per utilizzare **__thiscall** è nelle classi le cui funzioni membro utilizzano `__clrcall` per impostazione predefinita. In tal caso, è possibile usare **__thiscall** per rendere le singole funzioni membro richiamabili dal codice nativo.
+Nei computer ARM, ARM64 e x64, **`__thiscall`** viene accettata e ignorata dal compilatore. Questo perché usa una convenzione di chiamata basata su registro per impostazione predefinita.
 
-Quando si esegue la compilazione con [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), tutte le funzioni e i puntatori a funzione vengono `__clrcall` se non diversamente specificato. Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Un motivo per usare **`__thiscall`** è nelle classi le cui funzioni membro usano **`__clrcall`** per impostazione predefinita. In tal caso, è possibile usare **`__thiscall`** per rendere chiamabili le singole funzioni membro dal codice nativo.
 
-Nelle versioni precedenti a Visual Studio 2005, non è stato possibile specificare in modo esplicito la convenzione di chiamata **__thiscall** in un programma, perché **__thiscall** non era una parola chiave.
+Quando si esegue la compilazione con [**`/clr:pure`**](../build/reference/clr-common-language-runtime-compilation.md) , tutte le funzioni e i puntatori a funzione sono **`__clrcall`** se non diversamente specificato. Le **`/clr:pure`** **`/clr:safe`** Opzioni del compilatore e sono deprecate in visual studio 2015 e non sono supportate in visual studio 2017.
 
-`vararg` funzioni membro usano la convenzione di chiamata **__cdecl** . Tutti gli argomenti della funzione vengono inseriti nello stack, con l' **ultimo puntatore posizionato** sullo stack
+`vararg`le funzioni membro usano la **`__cdecl`** convenzione di chiamata. Tutti gli argomenti della funzione vengono inseriti nello stack, con il **`this`** puntatore posizionato sullo stack per ultimo.
 
-Poiché questa convenzione di chiamata si applica solo a C++, non esiste alcuno schema della decorazione dei nomi in C.
+Poiché questa convenzione di chiamata si applica solo a C++, non ha uno schema di decorazione del nome C.
 
-Nei computer ARM e x64, **__thiscall** viene accettata e ignorata dal compilatore.
-
-Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione.
-
-**Fine sezione specifica Microsoft**
+Quando si definisce una funzione membro di classe non statica out-of-line, specificare il modificatore della convenzione di chiamata solo nella dichiarazione. Non è necessario specificarlo di nuovo nella definizione out-of-line. Il compilatore usa la convenzione di chiamata specificata durante la dichiarazione in corrispondenza del punto di definizione.
 
 ## <a name="see-also"></a>Vedere anche
 
