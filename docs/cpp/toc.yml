@@ -1,959 +1,907 @@
+- name: Documentazione del linguaggio C++
+  href: ../cpp/index.yml
 - name: Riferimenti al linguaggio C++
-  href: ../cpp/cpp-language-reference.md
-- name: C++ (C++ moderno)
-  href: ../cpp/welcome-back-to-cpp-modern-cpp.md
-- name: Convenzioni lessicali
-  expanded: false
+  expanded: true
   items:
+    - name: Riferimenti al linguaggio C++
+      href: ../cpp/cpp-language-reference.md
+    - name: C++ (C++ moderno)
+      href: ../cpp/welcome-back-to-cpp-modern-cpp.md
     - name: Convenzioni lessicali
-      href: ../cpp/lexical-conventions.md
-    - name: Token e set di caratteri
-      href: ../cpp/character-sets.md
-    - name: Commenti
-      href: ../cpp/comments-cpp.md
-    - name: Identificatori
-      href: ../cpp/identifiers-cpp.md
-    - name: Parole chiave
-      href: ../cpp/keywords-cpp.md
-    - name: Segni di punteggiatura
-      href: ../cpp/punctuators-cpp.md
-    - name: 'Valori letterali numerici, booleani e puntatore'
-      href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
-    - name: Valori letterali stringa e carattere
-      href: ../cpp/string-and-character-literals-cpp.md
-    - name: Valori letterali definiti dall'utente
-      href: ../cpp/user-defined-literals-cpp.md
-- name: Concetti di base
-  expanded: false
-  items:
+      items:
+        - name: Convenzioni lessicali
+          href: ../cpp/lexical-conventions.md
+        - name: Token e set di caratteri
+          href: ../cpp/character-sets.md
+        - name: Commenti
+          href: ../cpp/comments-cpp.md
+        - name: Identificatori
+          href: ../cpp/identifiers-cpp.md
+        - name: Parole chiave
+          href: ../cpp/keywords-cpp.md
+        - name: Segni di punteggiatura
+          href: ../cpp/punctuators-cpp.md
+        - name: 'Valori letterali numerici, booleani e puntatore'
+          href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
+        - name: Valori letterali stringa e carattere
+          href: ../cpp/string-and-character-literals-cpp.md
+        - name: Valori letterali definiti dall'utente
+          href: ../cpp/user-defined-literals-cpp.md
     - name: Concetti di base
-      href: ../cpp/basic-concepts-cpp.md
-    - name: Sistema di tipi C++
-      href: ../cpp/cpp-type-system-modern-cpp.md
-    - name: Ambito
-      href: ../cpp/scope-visual-cpp.md
-    - name: File di intestazione
-      href: ../cpp/header-files-cpp.md
-    - name: Unità di conversione e collegamento
-      href: ../cpp/program-and-linkage-cpp.md
-    - name: Funzione main e argomenti della riga di comando
-      href: ../cpp/main-function-command-line-args.md
-    - name: Chiusura del programma
-      href: ../cpp/program-termination.md
-    - name: Elementi lvalue e rvalue
-      href: ../cpp/lvalues-and-rvalues-visual-cpp.md
-    - name: Oggetti temporanei
-      href: ../cpp/temporary-objects.md
-    - name: Allineamento
-      href: ../cpp/alignment-cpp-declarations.md
-    - name: 'Tipi semplici, tipi layout standard e tipi POD'
-      href: ../cpp/trivial-standard-layout-and-pod-types.md
-    - name: Tipi valore
-      href: ../cpp/value-types-modern-cpp.md
-    - name: Conversioni di tipi e indipendenza dai tipi
-      href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
-    - name: Conversioni standard
-      href: ../cpp/standard-conversions.md
-- name: Tipi incorporati
-  expanded: false
-  items:
+      items:
+        - name: Concetti di base
+          href: ../cpp/basic-concepts-cpp.md
+        - name: Sistema di tipi C++
+          href: ../cpp/cpp-type-system-modern-cpp.md
+        - name: Ambito
+          href: ../cpp/scope-visual-cpp.md
+        - name: File di intestazione
+          href: ../cpp/header-files-cpp.md
+        - name: Unità di conversione e collegamento
+          href: ../cpp/program-and-linkage-cpp.md
+        - name: Funzione main e argomenti della riga di comando
+          href: ../cpp/main-function-command-line-args.md
+        - name: Chiusura del programma
+          href: ../cpp/program-termination.md
+        - name: Elementi lvalue e rvalue
+          href: ../cpp/lvalues-and-rvalues-visual-cpp.md
+        - name: Oggetti temporanei
+          href: ../cpp/temporary-objects.md
+        - name: Allineamento
+          href: ../cpp/alignment-cpp-declarations.md
+        - name: 'Tipi semplici, tipi layout standard e tipi POD'
+          href: ../cpp/trivial-standard-layout-and-pod-types.md
+        - name: Tipi valore
+          href: ../cpp/value-types-modern-cpp.md
+        - name: Conversioni di tipi e indipendenza dai tipi
+          href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
+        - name: Conversioni standard
+          href: ../cpp/standard-conversions.md
     - name: Tipi incorporati
-      href: ../cpp/fundamental-types-cpp.md
-    - name: Intervalli dei tipi di dati
-      href: ../cpp/data-type-ranges.md
-    - name: nullptr
-      href: ../cpp/nullptr.md
-    - name: void
-      href: ../cpp/void-cpp.md
-    - name: bool
-      href: ../cpp/bool-cpp.md
-    - name: false
-      href: ../cpp/false-cpp.md
-    - name: true
-      href: ../cpp/true-cpp.md
-    - name: 'char, wchar_t, char16_t, char32_t'
-      href: ../cpp/char-wchar-t-char16-t-char32-t.md
-    - name: '__int8, __int16, __int32, __int64'
-      href: ../cpp/int8-int16-int32-int64.md
-    - name: __m64
-      href: ../cpp/m64.md
-    - name: __m128
-      href: ../cpp/m128.md
-    - name: __m128d
-      href: ../cpp/m128d.md
-    - name: __m128i
-      href: ../cpp/m128i.md
-    - name: '__ptr32, __ptr64'
-      href: ../cpp/ptr32-ptr64.md
-    - name: Limiti numerici
-      expanded: false
       items:
+        - name: Tipi incorporati
+          href: ../cpp/fundamental-types-cpp.md
+        - name: Intervalli dei tipi di dati
+          href: ../cpp/data-type-ranges.md
+        - name: nullptr
+          href: ../cpp/nullptr.md
+        - name: void
+          href: ../cpp/void-cpp.md
+        - name: bool
+          href: ../cpp/bool-cpp.md
+        - name: false
+          href: ../cpp/false-cpp.md
+        - name: true
+          href: ../cpp/true-cpp.md
+        - name: 'char, wchar_t, char16_t, char32_t'
+          href: ../cpp/char-wchar-t-char16-t-char32-t.md
+        - name: '__int8, __int16, __int32, __int64'
+          href: ../cpp/int8-int16-int32-int64.md
+        - name: __m64
+          href: ../cpp/m64.md
+        - name: __m128
+          href: ../cpp/m128.md
+        - name: __m128d
+          href: ../cpp/m128d.md
+        - name: __m128i
+          href: ../cpp/m128i.md
+        - name: '__ptr32, __ptr64'
+          href: ../cpp/ptr32-ptr64.md
         - name: Limiti numerici
-          href: ../cpp/numerical-limits-cpp.md
-        - name: Limiti per tipi Integer
-          href: ../cpp/integer-limits.md
-        - name: Limiti sulle costanti a virgola mobile
-          href: ../cpp/floating-limits.md
-- name: Dichiarazioni e definizioni
-  expanded: false
-  items:
+          items:
+            - name: Limiti numerici
+              href: ../cpp/numerical-limits-cpp.md
+            - name: Limiti per tipi Integer
+              href: ../cpp/integer-limits.md
+            - name: Limiti sulle costanti a virgola mobile
+              href: ../cpp/floating-limits.md
     - name: Dichiarazioni e definizioni
-      href: ../cpp/declarations-and-definitions-cpp.md
-    - name: Classi di archiviazione
-      href: ../cpp/storage-classes-cpp.md
-    - name: auto
-      href: ../cpp/auto-cpp.md
-    - name: const
-      href: ../cpp/const-cpp.md
-    - name: constexpr
-      href: ../cpp/constexpr-cpp.md
-    - name: extern
-      href: ../cpp/extern-cpp.md
-    - name: Inizializzatori
-      href: ../cpp/initializers.md
-    - name: Alias e typedef
-      href: ../cpp/aliases-and-typedefs-cpp.md
-    - name: dichiarazione using
-      href: ../cpp/using-declaration.md
-    - name: volatile
-      href: ../cpp/volatile-cpp.md
-    - name: decltype
-      href: ../cpp/decltype-cpp.md
-    - name: Attributi
-      href: ../cpp/attributes.md
-- name: 'Operatori predefiniti, precedenza e associazione'
-  expanded: false
-  items:
+      items:
+        - name: Dichiarazioni e definizioni
+          href: ../cpp/declarations-and-definitions-cpp.md
+        - name: Classi di archiviazione
+          href: ../cpp/storage-classes-cpp.md
+        - name: auto
+          href: ../cpp/auto-cpp.md
+        - name: const
+          href: ../cpp/const-cpp.md
+        - name: constexpr
+          href: ../cpp/constexpr-cpp.md
+        - name: extern
+          href: ../cpp/extern-cpp.md
+        - name: Inizializzatori
+          href: ../cpp/initializers.md
+        - name: Alias e typedef
+          href: ../cpp/aliases-and-typedefs-cpp.md
+        - name: dichiarazione using
+          href: ../cpp/using-declaration.md
+        - name: volatile
+          href: ../cpp/volatile-cpp.md
+        - name: decltype
+          href: ../cpp/decltype-cpp.md
+        - name: Attributi
+          href: ../cpp/attributes.md
     - name: 'Operatori predefiniti, precedenza e associazione'
-      href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
-    - name: Operatore __alignof
-      href: ../cpp/alignof-operator.md
-    - name: Operatore __uuidof
-      href: ../cpp/uuidof-operator.md
-    - name: 'Operatori di addizione: + e -'
-      href: ../cpp/additive-operators-plus-and.md
-    - name: 'Operatore address-of: &'
-      href: ../cpp/address-of-operator-amp.md
-    - name: Operatori di assegnazione
-      href: ../cpp/assignment-operators.md
-    - name: 'Operatore AND bit per bit: &'
-      href: ../cpp/bitwise-and-operator-amp.md
-    - name: 'Operatore OR bit per bit esclusivo: ^'
-      href: ../cpp/bitwise-exclusive-or-operator-hat.md
-    - name: 'Operatore OR bit per bit inclusivo: |'
-      href: ../cpp/bitwise-inclusive-or-operator-pipe.md
-    - name: 'Operatore cast: ()'
-      href: ../cpp/cast-operator-parens.md
-    - name: 'Operatore virgola: ,'
-      href: ../cpp/comma-operator.md
-    - name: 'Operatore condizionale: ? :'
-      href: ../cpp/conditional-operator-q.md
-    - name: Operatore delete
-      href: ../cpp/delete-operator-cpp.md
-    - name: 'Operatori di uguaglianza: == e !='
-      href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
-    - name: 'Operatore di conversione di tipi esplicita: ()'
-      href: ../cpp/explicit-type-conversion-operator-parens.md
-    - name: 'Operatore di chiamata di funzione: ()'
-      href: ../cpp/function-call-operator-parens.md
-    - name: 'Operatore di riferimento indiretto: *'
-      href: ../cpp/indirection-operator-star.md
-    - name: Operatori Left Shift e Right Shift (>> e <<)
-      href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
-    - name: 'Operatore AND logico: &&'
-      href: ../cpp/logical-and-operator-amp-amp.md
-    - name: 'Operatore di negazione logica: !'
-      href: ../cpp/logical-negation-operator-exclpt.md
-    - name: 'Operatore OR logico: ||'
-      href: ../cpp/logical-or-operator-pipe-pipe.md
-    - name: 'Operatori di accesso ai membri: . e ->'
-      href: ../cpp/member-access-operators-dot-and.md
-    - name: Operatori di moltiplicazione e operatori modulo
-      href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
-    - name: Operatore new
-      href: ../cpp/new-operator-cpp.md
-    - name: 'Operatore di complemento a uno: ~'
-      href: ../cpp/one-s-complement-operator-tilde.md
-    - name: 'Operatori puntatore a membro: .* e ->*'
-      href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
-    - name: 'Operatori di incremento e decremento in forma suffissa: ++ e --'
-      href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: 'Operatori di incremento e decremento in forma prefissa: ++ e --'
-      href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: 'Operatori relazionali: <, >, <= e >='
-      href: ../cpp/relational-operators-equal-and-equal.md
-    - name: 'Operatore di risoluzione dell''ambito: ::'
-      href: ../cpp/scope-resolution-operator.md
-    - name: Operatore sizeof
-      href: ../cpp/sizeof-operator.md
-    - name: 'Operatore di indice inferiore:'
-      href: ../cpp/subscript-operator.md
-    - name: Operatore typeid
-      href: ../cpp/typeid-operator.md
-    - name: 'Operatori più e operatori di negazione unari: + e -'
-      href: ../cpp/unary-plus-and-negation-operators-plus-and.md
-- name: Espressioni
-  expanded: false
-  items:
+      items:
+        - name: 'Operatori predefiniti, precedenza e associazione'
+          href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+        - name: Operatore __alignof
+          href: ../cpp/alignof-operator.md
+        - name: Operatore __uuidof
+          href: ../cpp/uuidof-operator.md
+        - name: 'Operatori di addizione: + e -'
+          href: ../cpp/additive-operators-plus-and.md
+        - name: 'Operatore address-of: &'
+          href: ../cpp/address-of-operator-amp.md
+        - name: Operatori di assegnazione
+          href: ../cpp/assignment-operators.md
+        - name: 'Operatore AND bit per bit: &'
+          href: ../cpp/bitwise-and-operator-amp.md
+        - name: 'Operatore OR bit per bit esclusivo: ^'
+          href: ../cpp/bitwise-exclusive-or-operator-hat.md
+        - name: 'Operatore OR bit per bit inclusivo: |'
+          href: ../cpp/bitwise-inclusive-or-operator-pipe.md
+        - name: 'Operatore cast: ()'
+          href: ../cpp/cast-operator-parens.md
+        - name: 'Operatore virgola: ,'
+          href: ../cpp/comma-operator.md
+        - name: 'Operatore condizionale: ? :'
+          href: ../cpp/conditional-operator-q.md
+        - name: Operatore delete
+          href: ../cpp/delete-operator-cpp.md
+        - name: 'Operatori di uguaglianza: == e !='
+          href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
+        - name: 'Operatore di conversione di tipi esplicita: ()'
+          href: ../cpp/explicit-type-conversion-operator-parens.md
+        - name: 'Operatore di chiamata di funzione: ()'
+          href: ../cpp/function-call-operator-parens.md
+        - name: 'Operatore di riferimento indiretto: *'
+          href: ../cpp/indirection-operator-star.md
+        - name: Operatori Left Shift e Right Shift (>> e <<)
+          href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
+        - name: 'Operatore AND logico: &&'
+          href: ../cpp/logical-and-operator-amp-amp.md
+        - name: 'Operatore di negazione logica: !'
+          href: ../cpp/logical-negation-operator-exclpt.md
+        - name: 'Operatore OR logico: ||'
+          href: ../cpp/logical-or-operator-pipe-pipe.md
+        - name: 'Operatori di accesso ai membri: . e ->'
+          href: ../cpp/member-access-operators-dot-and.md
+        - name: Operatori di moltiplicazione e operatori modulo
+          href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
+        - name: Operatore new
+          href: ../cpp/new-operator-cpp.md
+        - name: 'Operatore di complemento a uno: ~'
+          href: ../cpp/one-s-complement-operator-tilde.md
+        - name: 'Operatori puntatore a membro: .* e ->*'
+          href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
+        - name: 'Operatori di incremento e decremento in forma suffissa: ++ e --'
+          href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: 'Operatori di incremento e decremento in forma prefissa: ++ e --'
+          href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: 'Operatori relazionali: <, >, <= e >='
+          href: ../cpp/relational-operators-equal-and-equal.md
+        - name: 'Operatore di risoluzione dell''ambito: ::'
+          href: ../cpp/scope-resolution-operator.md
+        - name: Operatore sizeof
+          href: ../cpp/sizeof-operator.md
+        - name: 'Operatore di indice inferiore:'
+          href: ../cpp/subscript-operator.md
+        - name: Operatore typeid
+          href: ../cpp/typeid-operator.md
+        - name: 'Operatori più e operatori di negazione unari: + e -'
+          href: ../cpp/unary-plus-and-negation-operators-plus-and.md
     - name: Espressioni
-      href: ../cpp/expressions-cpp.md
-    - name: Tipi di espressioni
-      expanded: false
       items:
+        - name: Espressioni
+          href: ../cpp/expressions-cpp.md
         - name: Tipi di espressioni
-          href: ../cpp/types-of-expressions.md
-        - name: 'Espressioni principali:'
-          href: ../cpp/primary-expressions.md
-        - name: Ellissi e modelli variadic
-          href: ../cpp/ellipses-and-variadic-templates.md
-        - name: Espressioni di suffisso
-          href: ../cpp/postfix-expressions.md
-        - name: Espressioni con operatori unari
-          href: ../cpp/expressions-with-unary-operators.md
-        - name: Espressioni con operatori binari
-          href: ../cpp/expressions-with-binary-operators.md
-        - name: Espressioni costanti
-          href: ../cpp/cpp-constant-expressions.md
-    - name: Semantica delle espressioni
-      href: ../cpp/semantics-of-expressions.md
-    - name: Cast
-      expanded: false
-      items:
+          items:
+            - name: Tipi di espressioni
+              href: ../cpp/types-of-expressions.md
+            - name: 'Espressioni principali:'
+              href: ../cpp/primary-expressions.md
+            - name: Ellissi e modelli variadic
+              href: ../cpp/ellipses-and-variadic-templates.md
+            - name: Espressioni di suffisso
+              href: ../cpp/postfix-expressions.md
+            - name: Espressioni con operatori unari
+              href: ../cpp/expressions-with-unary-operators.md
+            - name: Espressioni con operatori binari
+              href: ../cpp/expressions-with-binary-operators.md
+            - name: Espressioni costanti
+              href: ../cpp/cpp-constant-expressions.md
+        - name: Semantica delle espressioni
+          href: ../cpp/semantics-of-expressions.md
         - name: Cast
-          href: ../cpp/casting.md
-        - name: Operatori di cast
-          expanded: false
           items:
+            - name: Cast
+              href: ../cpp/casting.md
             - name: Operatori di cast
-              href: ../cpp/casting-operators.md
-            - name: Operatore dynamic_cast
-              href: ../cpp/dynamic-cast-operator.md
-            - name: Eccezione bad_cast
-              href: ../cpp/bad-cast-exception.md
-            - name: Operatore static_cast
-              href: ../cpp/static-cast-operator.md
-            - name: Operatore const_cast
-              href: ../cpp/const-cast-operator.md
-            - name: Operatore reinterpret_cast
-              href: ../cpp/reinterpret-cast-operator.md
-        - name: Informazioni sui tipi di runtime
-          expanded: false
-          items:
+              items:
+                - name: Operatori di cast
+                  href: ../cpp/casting-operators.md
+                - name: Operatore dynamic_cast
+                  href: ../cpp/dynamic-cast-operator.md
+                - name: Eccezione bad_cast
+                  href: ../cpp/bad-cast-exception.md
+                - name: Operatore static_cast
+                  href: ../cpp/static-cast-operator.md
+                - name: Operatore const_cast
+                  href: ../cpp/const-cast-operator.md
+                - name: Operatore reinterpret_cast
+                  href: ../cpp/reinterpret-cast-operator.md
             - name: Informazioni sui tipi di runtime
-              href: ../cpp/run-time-type-information.md
-            - name: Eccezione bad_typeid
-              href: ../cpp/bad-typeid-exception.md
-            - name: Classe type_info
-              href: ../cpp/type-info-class.md
-- name: Istruzioni
-  expanded: false
-  items:
+              items:
+                - name: Informazioni sui tipi di runtime
+                  href: ../cpp/run-time-type-information.md
+                - name: Eccezione bad_typeid
+                  href: ../cpp/bad-typeid-exception.md
+                - name: Classe type_info
+                  href: ../cpp/type-info-class.md
     - name: Istruzioni
-      href: ../cpp/statements-cpp.md
-    - name: Panoramica delle istruzioni C++
-      href: ../cpp/overview-of-cpp-statements.md
-    - name: Istruzioni con etichetta
-      href: ../cpp/labeled-statements.md
-    - name: Istruzione di espressione
-      expanded: false
       items:
+        - name: Istruzioni
+          href: ../cpp/statements-cpp.md
+        - name: Panoramica delle istruzioni C++
+          href: ../cpp/overview-of-cpp-statements.md
+        - name: Istruzioni con etichetta
+          href: ../cpp/labeled-statements.md
         - name: Istruzione di espressione
-          href: ../cpp/expression-statement.md
-        - name: Istruzione Null
-          href: ../cpp/null-statement.md
-    - name: Istruzioni composte (blocchi)
-      href: ../cpp/compound-statements-blocks.md
-    - name: Istruzioni di selezione
-      expanded: false
-      items:
+          items:
+            - name: Istruzione di espressione
+              href: ../cpp/expression-statement.md
+            - name: Istruzione Null
+              href: ../cpp/null-statement.md
+        - name: Istruzioni composte (blocchi)
+          href: ../cpp/compound-statements-blocks.md
         - name: Istruzioni di selezione
-          href: ../cpp/selection-statements-cpp.md
-        - name: Istruzione if-else
-          href: ../cpp/if-else-statement-cpp.md
-        - name: Istruzione __if_exists
-          href: ../cpp/if-exists-statement.md
-        - name: Istruzione __if_not_exists
-          href: ../cpp/if-not-exists-statement.md
-        - name: Istruzione switch
-          href: ../cpp/switch-statement-cpp.md
-    - name: Istruzioni di iterazione
-      expanded: false
-      items:
+          items:
+            - name: Istruzioni di selezione
+              href: ../cpp/selection-statements-cpp.md
+            - name: Istruzione if-else
+              href: ../cpp/if-else-statement-cpp.md
+            - name: Istruzione __if_exists
+              href: ../cpp/if-exists-statement.md
+            - name: Istruzione __if_not_exists
+              href: ../cpp/if-not-exists-statement.md
+            - name: Istruzione switch
+              href: ../cpp/switch-statement-cpp.md
         - name: Istruzioni di iterazione
-          href: ../cpp/iteration-statements-cpp.md
-        - name: Istruzione while
-          href: ../cpp/while-statement-cpp.md
-        - name: Istruzione do-while
-          href: ../cpp/do-while-statement-cpp.md
-        - name: Istruzione for
-          href: ../cpp/for-statement-cpp.md
-        - name: Istruzione for basata su intervallo
-          href: ../cpp/range-based-for-statement-cpp.md
-    - name: Istruzioni di salto
-      expanded: false
-      items:
+          items:
+            - name: Istruzioni di iterazione
+              href: ../cpp/iteration-statements-cpp.md
+            - name: Istruzione while
+              href: ../cpp/while-statement-cpp.md
+            - name: Istruzione do-while
+              href: ../cpp/do-while-statement-cpp.md
+            - name: Istruzione for
+              href: ../cpp/for-statement-cpp.md
+            - name: Istruzione for basata su intervallo
+              href: ../cpp/range-based-for-statement-cpp.md
         - name: Istruzioni di salto
-          href: ../cpp/jump-statements-cpp.md
-        - name: Istruzione break
-          href: ../cpp/break-statement-cpp.md
-        - name: Istruzione continue
-          href: ../cpp/continue-statement-cpp.md
-        - name: Istruzione return
-          href: ../cpp/return-statement-cpp.md
-        - name: Istruzione goto
-          href: ../cpp/goto-statement-cpp.md
-        - name: Trasferimenti del controllo
-          href: ../cpp/transfers-of-control.md
-- name: Spazi dei nomi
-  href: ../cpp/namespaces-cpp.md
-- name: Enumerazioni
-  href: ../cpp/enumerations-cpp.md
-- name: Unioni
-  href: ../cpp/unions.md
-- name: Funzioni
-  expanded: false
-  items:
+          items:
+            - name: Istruzioni di salto
+              href: ../cpp/jump-statements-cpp.md
+            - name: Istruzione break
+              href: ../cpp/break-statement-cpp.md
+            - name: Istruzione continue
+              href: ../cpp/continue-statement-cpp.md
+            - name: Istruzione return
+              href: ../cpp/return-statement-cpp.md
+            - name: Istruzione goto
+              href: ../cpp/goto-statement-cpp.md
+            - name: Trasferimenti del controllo
+              href: ../cpp/transfers-of-control.md
+    - name: Spazi dei nomi
+      href: ../cpp/namespaces-cpp.md
+    - name: Enumerazioni
+      href: ../cpp/enumerations-cpp.md
+    - name: Unioni
+      href: ../cpp/unions.md
     - name: Funzioni
-      href: ../cpp/functions-cpp.md
-    - name: Funzioni con elenchi di argomenti variabili
-      href: ../cpp/functions-with-variable-argument-lists-cpp.md
-    - name: Overload di funzioni
-      href: ../cpp/function-overloading.md
-    - name: Funzioni impostate come predefinite ed eliminate in modo esplicito
-      href: ../cpp/explicitly-defaulted-and-deleted-functions.md
-    - name: Ricerca del nome dipendente dall'argomento nelle funzioni (Koenig)
-      href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
-    - name: Argomenti predefiniti
-      href: ../cpp/default-arguments.md
-    - name: Funzioni inline
-      href: ../cpp/inline-functions-cpp.md
-- name: Overload degli operatori
-  expanded: false
-  items:
+      items:
+        - name: Funzioni
+          href: ../cpp/functions-cpp.md
+        - name: Funzioni con elenchi di argomenti variabili
+          href: ../cpp/functions-with-variable-argument-lists-cpp.md
+        - name: Overload di funzioni
+          href: ../cpp/function-overloading.md
+        - name: Funzioni impostate come predefinite ed eliminate in modo esplicito
+          href: ../cpp/explicitly-defaulted-and-deleted-functions.md
+        - name: Ricerca del nome dipendente dall'argomento nelle funzioni (Koenig)
+          href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
+        - name: Argomenti predefiniti
+          href: ../cpp/default-arguments.md
+        - name: Funzioni inline
+          href: ../cpp/inline-functions-cpp.md
     - name: Overload degli operatori
-      href: ../cpp/operator-overloading.md
-    - name: Regole generali per overload di operatori
-      href: ../cpp/general-rules-for-operator-overloading.md
-    - name: Overload degli operatori unari
-      expanded: false
       items:
+        - name: Overload degli operatori
+          href: ../cpp/operator-overloading.md
+        - name: Regole generali per overload di operatori
+          href: ../cpp/general-rules-for-operator-overloading.md
         - name: Overload degli operatori unari
-          href: ../cpp/overloading-unary-operators.md
-        - name: Overload degli operatori di incremento e decremento
-          href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
-    - name: Operatori binari
-      href: ../cpp/binary-operators.md
-    - name: Assegnazione
-      href: ../cpp/assignment.md
-    - name: Chiamata di funzione
-      href: ../cpp/function-call-cpp.md
-    - name: Indice
-      href: ../cpp/subscripting.md
-    - name: Accesso ai membri
-      href: ../cpp/member-access.md
-- name: Classi e struct
-  expanded: false
-  items:
+          items:
+            - name: Overload degli operatori unari
+              href: ../cpp/overloading-unary-operators.md
+            - name: Overload degli operatori di incremento e decremento
+              href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
+        - name: Operatori binari
+          href: ../cpp/binary-operators.md
+        - name: Assegnazione
+          href: ../cpp/assignment.md
+        - name: Chiamata di funzione
+          href: ../cpp/function-call-cpp.md
+        - name: Indice
+          href: ../cpp/subscripting.md
+        - name: Accesso ai membri
+          href: ../cpp/member-access.md
     - name: Classi e struct
-      href: ../cpp/classes-and-structs-cpp.md
-    - name: classe
-      href: ../cpp/class-cpp.md
-    - name: struct
-      href: ../cpp/struct-cpp.md
-    - name: Panoramica dei membri di classe
-      href: ../cpp/class-member-overview.md
-    - name: Controllo di accesso ai membri
-      expanded: false
       items:
+        - name: Classi e struct
+          href: ../cpp/classes-and-structs-cpp.md
+        - name: classe
+          href: ../cpp/class-cpp.md
+        - name: struct
+          href: ../cpp/struct-cpp.md
+        - name: Panoramica dei membri di classe
+          href: ../cpp/class-member-overview.md
         - name: Controllo di accesso ai membri
-          href: ../cpp/member-access-control-cpp.md
-        - name: friend
-          href: ../cpp/friend-cpp.md
-        - name: private
-          href: ../cpp/private-cpp.md
-        - name: protected
-          href: ../cpp/protected-cpp.md
-        - name: public
-          href: ../cpp/public-cpp.md
-    - name: Inizializzazione con parentesi graffe
-      href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
-    - name: Durata degli oggetti e gestione delle risorse (RAII)
-      href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
-    - name: Idioma Pimpl per l'incapsulamento in fase di compilazione
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-    - name: Portabilità in base ai limiti ABI
-      href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
-    - name: Costruttori
-      expanded: false
-      items:
+          items:
+            - name: Controllo di accesso ai membri
+              href: ../cpp/member-access-control-cpp.md
+            - name: friend
+              href: ../cpp/friend-cpp.md
+            - name: private
+              href: ../cpp/private-cpp.md
+            - name: protected
+              href: ../cpp/protected-cpp.md
+            - name: public
+              href: ../cpp/public-cpp.md
+        - name: Inizializzazione con parentesi graffe
+          href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
+        - name: Durata degli oggetti e gestione delle risorse (RAII)
+          href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
+        - name: Idioma Pimpl per l'incapsulamento in fase di compilazione
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+        - name: Portabilità in base ai limiti ABI
+          href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
         - name: Costruttori
-          href: ../cpp/constructors-cpp.md
-        - name: Costruttori di copia e operatori di assegnazione copia
-          href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
-        - name: Costruttori di spostamento e operatori di assegnazione spostamento
-          href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
-        - name: Delega dei costruttori
-          href: ../cpp/delegating-constructors.md
-    - name: Distruttori
-      href: ../cpp/destructors-cpp.md
-    - name: Panoramica delle funzioni membro
-      expanded: false
-      items:
+          items:
+            - name: Costruttori
+              href: ../cpp/constructors-cpp.md
+            - name: Costruttori di copia e operatori di assegnazione copia
+              href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
+            - name: Costruttori di spostamento e operatori di assegnazione spostamento
+              href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
+            - name: Delega dei costruttori
+              href: ../cpp/delegating-constructors.md
+        - name: Distruttori
+          href: ../cpp/destructors-cpp.md
         - name: Panoramica delle funzioni membro
-          href: ../cpp/overview-of-member-functions.md
-        - name: Identificatore virtual
-          href: ../cpp/virtual-specifier.md
-        - name: Identificatore override
-          href: ../cpp/override-specifier.md
-        - name: Identificatore final
-          href: ../cpp/final-specifier.md
-    - name: Ereditarietà
-      expanded: false
-      items:
+          items:
+            - name: Panoramica delle funzioni membro
+              href: ../cpp/overview-of-member-functions.md
+            - name: Identificatore virtual
+              href: ../cpp/virtual-specifier.md
+            - name: Identificatore override
+              href: ../cpp/override-specifier.md
+            - name: Identificatore final
+              href: ../cpp/final-specifier.md
         - name: Ereditarietà
-          href: ../cpp/inheritance-cpp.md
-        - name: Funzioni virtuali
-          href: ../cpp/virtual-functions.md
-        - name: Ereditarietà singola
-          href: ../cpp/single-inheritance.md
-        - name: Classi di base
-          href: ../cpp/base-classes.md
-        - name: Classi di base multiple
-          href: ../cpp/multiple-base-classes.md
-        - name: Override espliciti
-          href: ../cpp/explicit-overrides-cpp.md
-        - name: Classi astratte
-          href: ../cpp/abstract-classes-cpp.md
-        - name: Riepilogo delle regole di ambito
-          href: ../cpp/summary-of-scope-rules.md
-        - name: Parole chiave di ereditarietà
-          href: ../cpp/inheritance-keywords.md
-        - name: virtuale
-          href: ../cpp/virtual-cpp.md
-        - name: __super
-          href: ../cpp/super.md
-        - name: __interface
-          href: ../cpp/interface.md
-    - name: Funzioni membro speciali
-      href: ../cpp/special-member-functions.md
-    - name: Membri statici
-      href: ../cpp/static-members-cpp.md
-    - name: Classi C++ come tipi valore
-      href: ../cpp/value-types-modern-cpp.md
-    - name: Conversioni di tipo definite dall'utente
-      href: ../cpp/user-defined-type-conversions-cpp.md
-    - name: Membri dati modificabili
-      href: ../cpp/mutable-data-members-cpp.md
-    - name: Dichiarazioni di classi annidate
-      href: ../cpp/nested-class-declarations.md
-    - name: Tipi di classe anonimi
-      href: ../cpp/anonymous-class-types.md
-    - name: Puntatori a membri
-      href: ../cpp/pointers-to-members.md
-    - name: Puntatore this
-      href: ../cpp/this-pointer.md
-    - name: Campi di bit
-      href: ../cpp/cpp-bit-fields.md
-- name: Espressioni lambda in C++
-  expanded: false
-  items:
+          items:
+            - name: Ereditarietà
+              href: ../cpp/inheritance-cpp.md
+            - name: Funzioni virtuali
+              href: ../cpp/virtual-functions.md
+            - name: Ereditarietà singola
+              href: ../cpp/single-inheritance.md
+            - name: Classi di base
+              href: ../cpp/base-classes.md
+            - name: Classi di base multiple
+              href: ../cpp/multiple-base-classes.md
+            - name: Override espliciti
+              href: ../cpp/explicit-overrides-cpp.md
+            - name: Classi astratte
+              href: ../cpp/abstract-classes-cpp.md
+            - name: Riepilogo delle regole di ambito
+              href: ../cpp/summary-of-scope-rules.md
+            - name: Parole chiave di ereditarietà
+              href: ../cpp/inheritance-keywords.md
+            - name: virtuale
+              href: ../cpp/virtual-cpp.md
+            - name: __super
+              href: ../cpp/super.md
+            - name: __interface
+              href: ../cpp/interface.md
+        - name: Funzioni membro speciali
+          href: ../cpp/special-member-functions.md
+        - name: Membri statici
+          href: ../cpp/static-members-cpp.md
+        - name: Classi C++ come tipi valore
+          href: ../cpp/value-types-modern-cpp.md
+        - name: Conversioni di tipo definite dall'utente
+          href: ../cpp/user-defined-type-conversions-cpp.md
+        - name: Membri dati modificabili
+          href: ../cpp/mutable-data-members-cpp.md
+        - name: Dichiarazioni di classi annidate
+          href: ../cpp/nested-class-declarations.md
+        - name: Tipi di classe anonimi
+          href: ../cpp/anonymous-class-types.md
+        - name: Puntatori a membri
+          href: ../cpp/pointers-to-members.md
+        - name: Puntatore this
+          href: ../cpp/this-pointer.md
+        - name: Campi di bit
+          href: ../cpp/cpp-bit-fields.md
     - name: Espressioni lambda in C++
-      href: ../cpp/lambda-expressions-in-cpp.md
-    - name: Sintassi delle espressioni lambda
-      href: ../cpp/lambda-expression-syntax.md
-    - name: Esempi di espressioni lambda
-      href: ../cpp/examples-of-lambda-expressions.md
-    - name: Espressioni lambda constexpr
-      href: ../cpp/lambda-expressions-constexpr.md
-- name: Matrici
-  href: ../cpp/arrays-cpp.md
-- name: Riferimenti
-  expanded: false
-  items:
+      items:
+        - name: Espressioni lambda in C++
+          href: ../cpp/lambda-expressions-in-cpp.md
+        - name: Sintassi delle espressioni lambda
+          href: ../cpp/lambda-expression-syntax.md
+        - name: Esempi di espressioni lambda
+          href: ../cpp/examples-of-lambda-expressions.md
+        - name: Espressioni lambda constexpr
+          href: ../cpp/lambda-expressions-constexpr.md
+    - name: Matrici
+      href: ../cpp/arrays-cpp.md
     - name: Riferimenti
-      href: ../cpp/references-cpp.md
-    - name: 'Dichiaratore di riferimento lvalue: &'
-      href: ../cpp/lvalue-reference-declarator-amp.md
-    - name: 'Dichiaratore di riferimento rvalue: &&'
-      href: ../cpp/rvalue-reference-declarator-amp-amp.md
-    - name: Argomenti della funzione tipo-riferimento
-      href: ../cpp/reference-type-function-arguments.md
-    - name: Elementi restituiti dalla funzione tipo-riferimento
-      href: ../cpp/reference-type-function-returns.md
-    - name: Riferimenti a puntatori
-      href: ../cpp/references-to-pointers.md
-- name: Puntatori
-  expanded: false
-  items:
-    - name: Pointers
-      href: ../cpp/pointers-cpp.md
-    - name: Puntatori non elaborati
-      href: ../cpp/raw-pointers.md
-    - name: Puntatori const e volatile
-      href: ../cpp/const-and-volatile-pointers.md
-    - name: Operatori new e delete
-      href: ../cpp/new-and-delete-operators.md
-    - name: Puntatori intelligenti
-      href: ../cpp/smart-pointers-modern-cpp.md
-    - name: 'Procedura: Creare e usare istanze unique_ptr'
-      href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
-    - name: 'Procedura: Creare e usare istanze shared_ptr'
-      href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
-    - name: 'Procedura: Creare e usare istanze weak_ptr'
-      href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
-    - name: 'Procedura: Creare e usare istanze CComPtr e CComQIPtr'
-      href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-    - name: Pimpl per incapsulamento in fase di compilazione
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-- name: Gestione delle eccezioni in C++
-  expanded: false
-  items:
+      items:
+        - name: Riferimenti
+          href: ../cpp/references-cpp.md
+        - name: 'Dichiaratore di riferimento lvalue: &'
+          href: ../cpp/lvalue-reference-declarator-amp.md
+        - name: 'Dichiaratore di riferimento rvalue: &&'
+          href: ../cpp/rvalue-reference-declarator-amp-amp.md
+        - name: Argomenti della funzione tipo-riferimento
+          href: ../cpp/reference-type-function-arguments.md
+        - name: Elementi restituiti dalla funzione tipo-riferimento
+          href: ../cpp/reference-type-function-returns.md
+        - name: Riferimenti a puntatori
+          href: ../cpp/references-to-pointers.md
+    - name: Puntatori
+      items:
+        - name: Pointers
+          href: ../cpp/pointers-cpp.md
+        - name: Puntatori non elaborati
+          href: ../cpp/raw-pointers.md
+        - name: Puntatori const e volatile
+          href: ../cpp/const-and-volatile-pointers.md
+        - name: Operatori new e delete
+          href: ../cpp/new-and-delete-operators.md
+        - name: Puntatori intelligenti
+          href: ../cpp/smart-pointers-modern-cpp.md
+        - name: 'Procedura: Creare e usare istanze unique_ptr'
+          href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
+        - name: 'Procedura: Creare e usare istanze shared_ptr'
+          href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
+        - name: 'Procedura: Creare e usare istanze weak_ptr'
+          href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
+        - name: 'Procedura: Creare e usare istanze CComPtr e CComQIPtr'
+          href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+        - name: Pimpl per incapsulamento in fase di compilazione
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
     - name: Gestione delle eccezioni in C++
-      href: ../cpp/exception-handling-in-visual-cpp.md
-    - name: Procedure consigliate C++
-      href: ../cpp/errors-and-exception-handling-modern-cpp.md
-    - name: Progettare la sicurezza dell'eccezione
-      href: ../cpp/how-to-design-for-exception-safety.md
-    - name: Interfaccia tra codice eccezionale e non eccezionale
-      href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
-    - name: 'Istruzioni try, throw e catch'
-      href: ../cpp/try-throw-and-catch-statements-cpp.md
-    - name: Modalità di valutazione dei blocchi catch
-      href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
-    - name: Eccezioni e rimozione dello stack
-      href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
-    - name: Specifiche di eccezione (generazione)
-      href: ../cpp/exception-specifications-throw-cpp.md
-    - name: noexcept
-      href: ../cpp/noexcept-cpp.md
-    - name: Eccezioni C++ non gestite
-      href: ../cpp/unhandled-cpp-exceptions.md
-    - name: Combinazione di eccezioni C (strutturate) e C++
-      expanded: false
       items:
+        - name: Gestione delle eccezioni in C++
+          href: ../cpp/exception-handling-in-visual-cpp.md
+        - name: Procedure consigliate C++
+          href: ../cpp/errors-and-exception-handling-modern-cpp.md
+        - name: Progettare la sicurezza dell'eccezione
+          href: ../cpp/how-to-design-for-exception-safety.md
+        - name: Interfaccia tra codice eccezionale e non eccezionale
+          href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+        - name: 'Istruzioni try, throw e catch'
+          href: ../cpp/try-throw-and-catch-statements-cpp.md
+        - name: Modalità di valutazione dei blocchi catch
+          href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
+        - name: Eccezioni e rimozione dello stack
+          href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
+        - name: Specifiche di eccezione (generazione)
+          href: ../cpp/exception-specifications-throw-cpp.md
+        - name: noexcept
+          href: ../cpp/noexcept-cpp.md
+        - name: Eccezioni C++ non gestite
+          href: ../cpp/unhandled-cpp-exceptions.md
         - name: Combinazione di eccezioni C (strutturate) e C++
-          href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
-        - name: Uso di setjmp-longjmp
-          href: ../cpp/using-setjmp-longjmp.md
-        - name: Gestire le eccezioni strutturate in C++
-          href: ../cpp/exception-handling-differences.md
-    - name: Gestione strutturata delle eccezioni (SEH) (C/C++)
-      expanded: false
-      items:
+          items:
+            - name: Combinazione di eccezioni C (strutturate) e C++
+              href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
+            - name: Uso di setjmp-longjmp
+              href: ../cpp/using-setjmp-longjmp.md
+            - name: Gestire le eccezioni strutturate in C++
+              href: ../cpp/exception-handling-differences.md
         - name: Gestione strutturata delle eccezioni (SEH) (C/C++)
-          href: ../cpp/structured-exception-handling-c-cpp.md
-        - name: Scrittura di un gestore di eccezioni
-          expanded: false
           items:
+            - name: Gestione strutturata delle eccezioni (SEH) (C/C++)
+              href: ../cpp/structured-exception-handling-c-cpp.md
             - name: Scrittura di un gestore di eccezioni
-              href: ../cpp/writing-an-exception-handler.md
-            - name: Istruzione try-except
-              href: ../cpp/try-except-statement.md
-            - name: Scrittura di un filtro eccezioni
-              href: ../cpp/writing-an-exception-filter.md
-            - name: Generazione di eccezioni software
-              href: ../cpp/raising-software-exceptions.md
-            - name: Eccezioni hardware
-              href: ../cpp/hardware-exceptions.md
-            - name: Limitazioni ai gestori di eccezioni
-              href: ../cpp/restrictions-on-exception-handlers.md
-        - name: Scrittura di un gestore di terminazione
-          expanded: false
-          items:
+              items:
+                - name: Scrittura di un gestore di eccezioni
+                  href: ../cpp/writing-an-exception-handler.md
+                - name: Istruzione try-except
+                  href: ../cpp/try-except-statement.md
+                - name: Scrittura di un filtro eccezioni
+                  href: ../cpp/writing-an-exception-filter.md
+                - name: Generazione di eccezioni software
+                  href: ../cpp/raising-software-exceptions.md
+                - name: Eccezioni hardware
+                  href: ../cpp/hardware-exceptions.md
+                - name: Limitazioni ai gestori di eccezioni
+                  href: ../cpp/restrictions-on-exception-handlers.md
             - name: Scrittura di un gestore di terminazione
-              href: ../cpp/writing-a-termination-handler.md
-            - name: Istruzione try-finally
-              href: ../cpp/try-finally-statement.md
-            - name: Pulizia delle risorse
-              href: ../cpp/cleaning-up-resources.md
-            - name: 'Intervallo di gestione delle eccezioni: Riepilogo'
-              href: ../cpp/timing-of-exception-handling-a-summary.md
-            - name: Limitazioni ai gestori di terminazione
-              href: ../cpp/restrictions-on-termination-handlers.md
-    - name: Trasporto delle eccezioni tra thread
-      href: ../cpp/transporting-exceptions-between-threads.md
-- name: Asserzione e messaggi specificati dall'utente
-  expanded: false
-  items:
+              items:
+                - name: Scrittura di un gestore di terminazione
+                  href: ../cpp/writing-a-termination-handler.md
+                - name: Istruzione try-finally
+                  href: ../cpp/try-finally-statement.md
+                - name: Pulizia delle risorse
+                  href: ../cpp/cleaning-up-resources.md
+                - name: 'Intervallo di gestione delle eccezioni: Riepilogo'
+                  href: ../cpp/timing-of-exception-handling-a-summary.md
+                - name: Limitazioni ai gestori di terminazione
+                  href: ../cpp/restrictions-on-termination-handlers.md
+        - name: Trasporto delle eccezioni tra thread
+          href: ../cpp/transporting-exceptions-between-threads.md
     - name: Asserzione e messaggi specificati dall'utente
-      href: ../cpp/assertion-and-user-supplied-messages-cpp.md
-    - name: static_assert
-      href: ../cpp/static-assert.md
-- name: Moduli
-  expanded: false
-  items:
-    - name: Panoramica dei moduli in C++
-      href: ../cpp/modules-cpp.md
-    - name: 'modulo, importare, esportare'
-      href: ../cpp/import-export-module.md
-- name: Modelli
-  expanded: false
-  items:
+      items:
+        - name: Asserzione e messaggi specificati dall'utente
+          href: ../cpp/assertion-and-user-supplied-messages-cpp.md
+        - name: static_assert
+          href: ../cpp/static-assert.md
+    - name: Moduli
+      items:
+        - name: Panoramica dei moduli in C++
+          href: ../cpp/modules-cpp.md
+        - name: 'modulo, importare, esportare'
+          href: ../cpp/import-export-module.md
     - name: Modelli
-      href: ../cpp/templates-cpp.md
-    - name: typename
-      href: ../cpp/typename.md
-    - name: Modelli di classe
-      href: ../cpp/class-templates.md
-    - name: Modelli di funzioni
-      expanded: false
       items:
+        - name: Modelli
+          href: ../cpp/templates-cpp.md
+        - name: typename
+          href: ../cpp/typename.md
+        - name: Modelli di classe
+          href: ../cpp/class-templates.md
         - name: Modelli di funzioni
-          href: ../cpp/function-templates.md
-        - name: Creazione di istanze di modelli di funzione
-          href: ../cpp/function-template-instantiation.md
-        - name: Creazione di un'istanza esplicita
-          href: ../cpp/explicit-instantiation.md
-        - name: Specializzazione esplicita di modelli di funzioni
-          href: ../cpp/explicit-specialization-of-function-templates.md
-        - name: Ordinamento parziale di modelli di funzione
-          href: ../cpp/partial-ordering-of-function-templates-cpp.md
-        - name: Modelli di funzioni membro
-          href: ../cpp/member-function-templates.md
-    - name: Specializzazione modello
-      href: ../cpp/template-specialization-cpp.md
-    - name: Modelli e risoluzione di nomi
-      expanded: false
-      items:
+          items:
+            - name: Modelli di funzioni
+              href: ../cpp/function-templates.md
+            - name: Creazione di istanze di modelli di funzione
+              href: ../cpp/function-template-instantiation.md
+            - name: Creazione di un'istanza esplicita
+              href: ../cpp/explicit-instantiation.md
+            - name: Specializzazione esplicita di modelli di funzioni
+              href: ../cpp/explicit-specialization-of-function-templates.md
+            - name: Ordinamento parziale di modelli di funzione
+              href: ../cpp/partial-ordering-of-function-templates-cpp.md
+            - name: Modelli di funzioni membro
+              href: ../cpp/member-function-templates.md
+        - name: Specializzazione modello
+          href: ../cpp/template-specialization-cpp.md
         - name: Modelli e risoluzione di nomi
-          href: ../cpp/templates-and-name-resolution.md
-        - name: Risoluzione dei nomi per tipi dipendenti
-          href: ../cpp/name-resolution-for-dependent-types.md
-        - name: Risoluzione dei nomi per nomi dichiarati in locale
-          href: ../cpp/name-resolution-for-locally-declared-names.md
-        - name: Risoluzione dell'overload di chiamate a modelli di funzioni
-          href: ../cpp/overload-resolution-of-function-template-calls.md
-    - name: Organizzazione del codice sorgente (modelli di C++)
-      href: ../cpp/source-code-organization-cpp-templates.md
-- name: Gestione di eventi
-  expanded: false
-  items:
+          items:
+            - name: Modelli e risoluzione di nomi
+              href: ../cpp/templates-and-name-resolution.md
+            - name: Risoluzione dei nomi per tipi dipendenti
+              href: ../cpp/name-resolution-for-dependent-types.md
+            - name: Risoluzione dei nomi per nomi dichiarati in locale
+              href: ../cpp/name-resolution-for-locally-declared-names.md
+            - name: Risoluzione dell'overload di chiamate a modelli di funzioni
+              href: ../cpp/overload-resolution-of-function-template-calls.md
+        - name: Organizzazione del codice sorgente (modelli di C++)
+          href: ../cpp/source-code-organization-cpp-templates.md
     - name: Gestione di eventi
-      href: ../cpp/event-handling.md
-    - name: __event
-      href: ../cpp/event.md
-    - name: __hook
-      href: ../cpp/hook.md
-    - name: __raise
-      href: ../cpp/raise.md
-    - name: __unhook
-      href: ../cpp/unhook.md
-    - name: Gestione di eventi in C++ nativo
-      href: ../cpp/event-handling-in-native-cpp.md
-    - name: Gestione di eventi in COM
-      href: ../cpp/event-handling-in-com.md
-- name: Modificatori specifici Microsoft
-  expanded: false
-  items:
+      items:
+        - name: Gestione di eventi
+          href: ../cpp/event-handling.md
+        - name: __event
+          href: ../cpp/event.md
+        - name: __hook
+          href: ../cpp/hook.md
+        - name: __raise
+          href: ../cpp/raise.md
+        - name: __unhook
+          href: ../cpp/unhook.md
+        - name: Gestione di eventi in C++ nativo
+          href: ../cpp/event-handling-in-native-cpp.md
+        - name: Gestione di eventi in COM
+          href: ../cpp/event-handling-in-com.md
     - name: Modificatori specifici Microsoft
-      href: ../cpp/microsoft-specific-modifiers.md
-    - name: Indirizzamento di base
-      expanded: false
       items:
+        - name: Modificatori specifici Microsoft
+          href: ../cpp/microsoft-specific-modifiers.md
         - name: Indirizzamento di base
-          href: ../cpp/based-addressing.md
-        - name: Grammatica __based
-          href: ../cpp/based-grammar.md
-        - name: Puntatori based
-          href: ../cpp/based-pointers-cpp.md
-    - name: Convenzioni di chiamata
-      expanded: false
-      items:
+          items:
+            - name: Indirizzamento di base
+              href: ../cpp/based-addressing.md
+            - name: Grammatica __based
+              href: ../cpp/based-grammar.md
+            - name: Puntatori based
+              href: ../cpp/based-pointers-cpp.md
         - name: Convenzioni di chiamata
-          href: ../cpp/calling-conventions.md
-        - name: Passaggio di argomenti e convenzioni di denominazione
-          expanded: false
           items:
+            - name: Convenzioni di chiamata
+              href: ../cpp/calling-conventions.md
             - name: Passaggio di argomenti e convenzioni di denominazione
-              href: ../cpp/argument-passing-and-naming-conventions.md
-            - name: __cdecl
-              href: ../cpp/cdecl.md
-            - name: __clrcall
-              href: ../cpp/clrcall.md
-            - name: __stdcall
-              href: ../cpp/stdcall.md
-            - name: __fastcall
-              href: ../cpp/fastcall.md
-            - name: __thiscall
-              href: ../cpp/thiscall.md
-            - name: __vectorcall
-              href: ../cpp/vectorcall.md
-        - name: 'Esempio di chiamata: Prototipo e chiamata di funzione'
-          expanded: false
-          items:
+              items:
+                - name: Passaggio di argomenti e convenzioni di denominazione
+                  href: ../cpp/argument-passing-and-naming-conventions.md
+                - name: __cdecl
+                  href: ../cpp/cdecl.md
+                - name: __clrcall
+                  href: ../cpp/clrcall.md
+                - name: __stdcall
+                  href: ../cpp/stdcall.md
+                - name: __fastcall
+                  href: ../cpp/fastcall.md
+                - name: __thiscall
+                  href: ../cpp/thiscall.md
+                - name: __vectorcall
+                  href: ../cpp/vectorcall.md
             - name: 'Esempio di chiamata: Prototipo e chiamata di funzione'
-              href: ../cpp/calling-example-function-prototype-and-call.md
-            - name: Esempio di risultati di chiamata
-              href: ../cpp/results-of-calling-example.md
-        - name: Chiamate di funzioni naked
-          expanded: false
-          items:
+              items:
+                - name: 'Esempio di chiamata: Prototipo e chiamata di funzione'
+                  href: ../cpp/calling-example-function-prototype-and-call.md
+                - name: Esempio di risultati di chiamata
+                  href: ../cpp/results-of-calling-example.md
             - name: Chiamate di funzioni naked
-              href: ../cpp/naked-function-calls.md
-            - name: Regole e limitazioni per le funzioni naked
-              href: ../cpp/rules-and-limitations-for-naked-functions.md
-            - name: Considerazioni per la scrittura di codice di prologo e di epilogo
-              href: ../cpp/considerations-for-writing-prolog-epilog-code.md
-        - name: Coprocessore a virgola mobile e convenzioni di chiamata
-          href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
-        - name: Convenzioni di chiamata obsolete
-          href: ../cpp/obsolete-calling-conventions.md
-    - name: restrict (C++ AMP)
-      href: ../cpp/restrict-cpp-amp.md
-    - name: Parola chiave tile_static
-      href: ../cpp/tile-static-keyword.md
-    - name: __declspec
-      expanded: false
-      items:
+              items:
+                - name: Chiamate di funzioni naked
+                  href: ../cpp/naked-function-calls.md
+                - name: Regole e limitazioni per le funzioni naked
+                  href: ../cpp/rules-and-limitations-for-naked-functions.md
+                - name: Considerazioni per la scrittura di codice di prologo e di epilogo
+                  href: ../cpp/considerations-for-writing-prolog-epilog-code.md
+            - name: Coprocessore a virgola mobile e convenzioni di chiamata
+              href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
+            - name: Convenzioni di chiamata obsolete
+              href: ../cpp/obsolete-calling-conventions.md
+        - name: restrict (C++ AMP)
+          href: ../cpp/restrict-cpp-amp.md
+        - name: Parola chiave tile_static
+          href: ../cpp/tile-static-keyword.md
         - name: __declspec
-          href: ../cpp/declspec.md
-        - name: align
-          href: ../cpp/align-cpp.md
-        - name: allocate
-          href: ../cpp/allocate.md
-        - name: allocator
-          href: ../cpp/allocator.md
-        - name: appdomain
-          href: ../cpp/appdomain.md
-        - name: code_seg (__declspec)
-          href: ../cpp/code-seg-declspec.md
-        - name: deprecated
-          href: ../cpp/deprecated-cpp.md
-        - name: 'dllexport, dllimport'
-          expanded: false
           items:
+            - name: __declspec
+              href: ../cpp/declspec.md
+            - name: align
+              href: ../cpp/align-cpp.md
+            - name: allocate
+              href: ../cpp/allocate.md
+            - name: allocator
+              href: ../cpp/allocator.md
+            - name: appdomain
+              href: ../cpp/appdomain.md
+            - name: code_seg (__declspec)
+              href: ../cpp/code-seg-declspec.md
+            - name: deprecated
+              href: ../cpp/deprecated-cpp.md
             - name: 'dllexport, dllimport'
-              href: ../cpp/dllexport-dllimport.md
-            - name: Definizioni e dichiarazioni
-              href: ../cpp/definitions-and-declarations-cpp.md
-            - name: Definizione delle funzioni C++ inline con dllexport e dllimport
-              href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
-            - name: Regole e limitazioni generali
-              href: ../cpp/general-rules-and-limitations.md
-            - name: Uso di dllimport e dllexport nelle classi C++
-              href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
-        - name: jitintrinsic
-          href: ../cpp/jitintrinsic.md
-        - name: naked
-          href: ../cpp/naked-cpp.md
-        - name: noalias
-          href: ../cpp/noalias.md
-        - name: noinline
-          href: ../cpp/noinline.md
-        - name: noreturn
-          href: ../cpp/noreturn.md
-        - name: nothrow
-          href: ../cpp/nothrow-cpp.md
-        - name: novtable
-          href: ../cpp/novtable.md
-        - name: processo
-          href: ../cpp/process.md
-        - name: proprietà
-          href: ../cpp/property-cpp.md
-        - name: restrict
-          href: ../cpp/restrict.md
-        - name: safebuffers
-          href: ../cpp/safebuffers.md
-        - name: selectany
-          href: ../cpp/selectany.md
-        - name: spectre
-          href: ../cpp/spectre.md
-        - name: thread
-          href: ../cpp/thread.md
-        - name: uuid
-          href: ../cpp/uuid-cpp.md
-    - name: __restrict
-      href: ../cpp/extension-restrict.md
-    - name: '__sptr, __uptr'
-      href: ../cpp/sptr-uptr.md
-    - name: __unaligned
-      href: ../cpp/unaligned.md
-    - name: __w64
-      href: ../cpp/w64.md
-    - name: __func__
-      href: ../cpp/func.md
-- name: Supporto COM del compilatore
-  expanded: false
-  items:
+              items:
+                - name: 'dllexport, dllimport'
+                  href: ../cpp/dllexport-dllimport.md
+                - name: Definizioni e dichiarazioni
+                  href: ../cpp/definitions-and-declarations-cpp.md
+                - name: Definizione delle funzioni C++ inline con dllexport e dllimport
+                  href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
+                - name: Regole e limitazioni generali
+                  href: ../cpp/general-rules-and-limitations.md
+                - name: Uso di dllimport e dllexport nelle classi C++
+                  href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
+            - name: jitintrinsic
+              href: ../cpp/jitintrinsic.md
+            - name: naked
+              href: ../cpp/naked-cpp.md
+            - name: noalias
+              href: ../cpp/noalias.md
+            - name: noinline
+              href: ../cpp/noinline.md
+            - name: noreturn
+              href: ../cpp/noreturn.md
+            - name: nothrow
+              href: ../cpp/nothrow-cpp.md
+            - name: novtable
+              href: ../cpp/novtable.md
+            - name: processo
+              href: ../cpp/process.md
+            - name: proprietà
+              href: ../cpp/property-cpp.md
+            - name: restrict
+              href: ../cpp/restrict.md
+            - name: safebuffers
+              href: ../cpp/safebuffers.md
+            - name: selectany
+              href: ../cpp/selectany.md
+            - name: spectre
+              href: ../cpp/spectre.md
+            - name: thread
+              href: ../cpp/thread.md
+            - name: uuid
+              href: ../cpp/uuid-cpp.md
+        - name: __restrict
+          href: ../cpp/extension-restrict.md
+        - name: '__sptr, __uptr'
+          href: ../cpp/sptr-uptr.md
+        - name: __unaligned
+          href: ../cpp/unaligned.md
+        - name: __w64
+          href: ../cpp/w64.md
+        - name: __func__
+          href: ../cpp/func.md
     - name: Supporto COM del compilatore
-      href: ../cpp/compiler-com-support.md
-    - name: Funzioni globali COM del compilatore
-      expanded: false
       items:
+        - name: Supporto COM del compilatore
+          href: ../cpp/compiler-com-support.md
         - name: Funzioni globali COM del compilatore
-          href: ../cpp/compiler-com-global-functions.md
-        - name: _com_raise_error
-          href: ../cpp/com-raise-error.md
-        - name: ConvertStringToBSTR
-          href: ../cpp/convertstringtobstr.md
-        - name: ConvertBSTRToString
-          href: ../cpp/convertbstrtostring.md
-        - name: _set_com_error_handler
-          href: ../cpp/set-com-error-handler.md
-    - name: Classi di supporto COM del compilatore
-      expanded: false
-      items:
+          items:
+            - name: Funzioni globali COM del compilatore
+              href: ../cpp/compiler-com-global-functions.md
+            - name: _com_raise_error
+              href: ../cpp/com-raise-error.md
+            - name: ConvertStringToBSTR
+              href: ../cpp/convertstringtobstr.md
+            - name: ConvertBSTRToString
+              href: ../cpp/convertbstrtostring.md
+            - name: _set_com_error_handler
+              href: ../cpp/set-com-error-handler.md
         - name: Classi di supporto COM del compilatore
-          href: ../cpp/compiler-com-support-classes.md
-        - name: Classe _bstr_t
-          expanded: false
           items:
-            - name: _bstr_t (classe)
-              href: ../cpp/bstr-t-class.md
-            - name: Funzioni membro _bstr_t
-              expanded: false
+            - name: Classi di supporto COM del compilatore
+              href: ../cpp/compiler-com-support-classes.md
+            - name: Classe _bstr_t
               items:
+                - name: _bstr_t (classe)
+                  href: ../cpp/bstr-t-class.md
                 - name: Funzioni membro _bstr_t
-                  href: ../cpp/bstr-t-member-functions.md
-                - name: '_bstr_t::Assign'
-                  href: ../cpp/bstr-t-assign.md
-                - name: '_bstr_t::Attach'
-                  href: ../cpp/bstr-t-attach.md
-                - name: '_bstr_t::_bstr_t'
-                  href: ../cpp/bstr-t-bstr-t.md
-                - name: '_bstr_t::copy'
-                  href: ../cpp/bstr-t-copy.md
-                - name: '_bstr_t::Detach'
-                  href: ../cpp/bstr-t-detach.md
-                - name: '_bstr_t::GetAddress'
-                  href: ../cpp/bstr-t-getaddress.md
-                - name: '_bstr_t::GetBSTR'
-                  href: ../cpp/bstr-t-getbstr.md
-                - name: '_bstr_t::length'
-                  href: ../cpp/bstr-t-length.md
-            - name: Operatori _bstr_t
-              expanded: false
-              items:
+                  items:
+                    - name: Funzioni membro _bstr_t
+                      href: ../cpp/bstr-t-member-functions.md
+                    - name: '_bstr_t::Assign'
+                      href: ../cpp/bstr-t-assign.md
+                    - name: '_bstr_t::Attach'
+                      href: ../cpp/bstr-t-attach.md
+                    - name: '_bstr_t::_bstr_t'
+                      href: ../cpp/bstr-t-bstr-t.md
+                    - name: '_bstr_t::copy'
+                      href: ../cpp/bstr-t-copy.md
+                    - name: '_bstr_t::Detach'
+                      href: ../cpp/bstr-t-detach.md
+                    - name: '_bstr_t::GetAddress'
+                      href: ../cpp/bstr-t-getaddress.md
+                    - name: '_bstr_t::GetBSTR'
+                      href: ../cpp/bstr-t-getbstr.md
+                    - name: '_bstr_t::length'
+                      href: ../cpp/bstr-t-length.md
                 - name: Operatori _bstr_t
-                  href: ../cpp/bstr-t-operators.md
-                - name: '_bstr_t::operator ='
-                  href: ../cpp/bstr-t-operator-equal.md
-                - name: '_bstr_t::operator +=, +'
-                  href: ../cpp/bstr-t-operator-add-equal-plus.md
-                - name: '_bstr_t::operator !'
-                  href: ../cpp/bstr-t-operator-logical-not.md
-                - name: Operatori relazionali _bstr_t
-                  href: ../cpp/bstr-t-relational-operators.md
-                - name: '_bstr_t::wchar_t *, _bstr_t::char*'
-                  href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
-        - name: Classe _com_error
-          expanded: false
-          items:
-            - name: _com_error (classe)
-              href: ../cpp/com-error-class.md
-            - name: Funzioni membro _com_error
-              expanded: false
+                  items:
+                    - name: Operatori _bstr_t
+                      href: ../cpp/bstr-t-operators.md
+                    - name: '_bstr_t::operator ='
+                      href: ../cpp/bstr-t-operator-equal.md
+                    - name: '_bstr_t::operator +=, +'
+                      href: ../cpp/bstr-t-operator-add-equal-plus.md
+                    - name: '_bstr_t::operator !'
+                      href: ../cpp/bstr-t-operator-logical-not.md
+                    - name: Operatori relazionali _bstr_t
+                      href: ../cpp/bstr-t-relational-operators.md
+                    - name: '_bstr_t::wchar_t *, _bstr_t::char*'
+                      href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
+            - name: Classe _com_error
               items:
+                - name: _com_error (classe)
+                  href: ../cpp/com-error-class.md
                 - name: Funzioni membro _com_error
-                  href: ../cpp/com-error-member-functions.md
-                - name: '_com_error::_com_error'
-                  href: ../cpp/com-error-com-error.md
-                - name: '_com_error::Description'
-                  href: ../cpp/com-error-description.md
-                - name: '_com_error::Error'
-                  href: ../cpp/com-error-error.md
-                - name: '_com_error::ErrorInfo'
-                  href: ../cpp/com-error-errorinfo.md
-                - name: '_com_error::ErrorMessage'
-                  href: ../cpp/com-error-errormessage.md
-                - name: '_com_error::GUID'
-                  href: ../cpp/com-error-guid.md
-                - name: '_com_error::HelpContext'
-                  href: ../cpp/com-error-helpcontext.md
-                - name: '_com_error::HelpFile'
-                  href: ../cpp/com-error-helpfile.md
-                - name: '_com_error::HRESULTToWCode'
-                  href: ../cpp/com-error-hresulttowcode.md
-                - name: '_com_error::Source'
-                  href: ../cpp/com-error-source.md
-                - name: '_com_error::WCode'
-                  href: ../cpp/com-error-wcode.md
-                - name: '_com_error::WCodeToHRESULT'
-                  href: ../cpp/com-error-wcodetohresult.md
-            - name: Operatori _com_error
-              expanded: false
-              items:
+                  items:
+                    - name: Funzioni membro _com_error
+                      href: ../cpp/com-error-member-functions.md
+                    - name: '_com_error::_com_error'
+                      href: ../cpp/com-error-com-error.md
+                    - name: '_com_error::Description'
+                      href: ../cpp/com-error-description.md
+                    - name: '_com_error::Error'
+                      href: ../cpp/com-error-error.md
+                    - name: '_com_error::ErrorInfo'
+                      href: ../cpp/com-error-errorinfo.md
+                    - name: '_com_error::ErrorMessage'
+                      href: ../cpp/com-error-errormessage.md
+                    - name: '_com_error::GUID'
+                      href: ../cpp/com-error-guid.md
+                    - name: '_com_error::HelpContext'
+                      href: ../cpp/com-error-helpcontext.md
+                    - name: '_com_error::HelpFile'
+                      href: ../cpp/com-error-helpfile.md
+                    - name: '_com_error::HRESULTToWCode'
+                      href: ../cpp/com-error-hresulttowcode.md
+                    - name: '_com_error::Source'
+                      href: ../cpp/com-error-source.md
+                    - name: '_com_error::WCode'
+                      href: ../cpp/com-error-wcode.md
+                    - name: '_com_error::WCodeToHRESULT'
+                      href: ../cpp/com-error-wcodetohresult.md
                 - name: Operatori _com_error
-                  href: ../cpp/com-error-operators.md
-                - name: '_com_error::operator ='
-                  href: ../cpp/com-error-operator-equal.md
-        - name: Classe _com_ptr_t
-          expanded: false
-          items:
-            - name: _com_ptr_t (classe)
-              href: ../cpp/com-ptr-t-class.md
-            - name: Funzioni membro _com_ptr_t
-              expanded: false
+                  items:
+                    - name: Operatori _com_error
+                      href: ../cpp/com-error-operators.md
+                    - name: '_com_error::operator ='
+                      href: ../cpp/com-error-operator-equal.md
+            - name: Classe _com_ptr_t
               items:
+                - name: _com_ptr_t (classe)
+                  href: ../cpp/com-ptr-t-class.md
                 - name: Funzioni membro _com_ptr_t
-                  href: ../cpp/com-ptr-t-member-functions.md
-                - name: '_com_ptr_t::_com_ptr_t'
-                  href: ../cpp/com-ptr-t-com-ptr-t.md
-                - name: '_com_ptr_t::AddRef'
-                  href: ../cpp/com-ptr-t-addref.md
-                - name: '_com_ptr_t::Attach'
-                  href: ../cpp/com-ptr-t-attach.md
-                - name: '_com_ptr_t::CreateInstance'
-                  href: ../cpp/com-ptr-t-createinstance.md
-                - name: '_com_ptr_t::Detach'
-                  href: ../cpp/com-ptr-t-detach.md
-                - name: '_com_ptr_t::GetActiveObject'
-                  href: ../cpp/com-ptr-t-getactiveobject.md
-                - name: '_com_ptr_t::GetInterfacePtr'
-                  href: ../cpp/com-ptr-t-getinterfaceptr.md
-                - name: '_com_ptr_t::QueryInterface'
-                  href: ../cpp/com-ptr-t-queryinterface.md
-                - name: '_com_ptr_t::Release'
-                  href: ../cpp/com-ptr-t-release.md
-            - name: Operatori _com_ptr_t
-              expanded: false
-              items:
+                  items:
+                    - name: Funzioni membro _com_ptr_t
+                      href: ../cpp/com-ptr-t-member-functions.md
+                    - name: '_com_ptr_t::_com_ptr_t'
+                      href: ../cpp/com-ptr-t-com-ptr-t.md
+                    - name: '_com_ptr_t::AddRef'
+                      href: ../cpp/com-ptr-t-addref.md
+                    - name: '_com_ptr_t::Attach'
+                      href: ../cpp/com-ptr-t-attach.md
+                    - name: '_com_ptr_t::CreateInstance'
+                      href: ../cpp/com-ptr-t-createinstance.md
+                    - name: '_com_ptr_t::Detach'
+                      href: ../cpp/com-ptr-t-detach.md
+                    - name: '_com_ptr_t::GetActiveObject'
+                      href: ../cpp/com-ptr-t-getactiveobject.md
+                    - name: '_com_ptr_t::GetInterfacePtr'
+                      href: ../cpp/com-ptr-t-getinterfaceptr.md
+                    - name: '_com_ptr_t::QueryInterface'
+                      href: ../cpp/com-ptr-t-queryinterface.md
+                    - name: '_com_ptr_t::Release'
+                      href: ../cpp/com-ptr-t-release.md
                 - name: Operatori _com_ptr_t
-                  href: ../cpp/com-ptr-t-operators.md
-                - name: '_com_ptr_t::operator ='
-                  href: ../cpp/com-ptr-t-operator-equal.md
-                - name: Operatori relazionali _com_ptr_t
-                  href: ../cpp/com-ptr-t-relational-operators.md
-                - name: Estrattori _com_ptr_t
-                  href: ../cpp/com-ptr-t-extractors.md
-            - name: Modelli di funzioni relazionali
-              href: ../cpp/relational-function-templates.md
-        - name: Classe _variant_t
-          expanded: false
-          items:
-            - name: _variant_t (classe)
-              href: ../cpp/variant-t-class.md
-            - name: Funzioni membro _variant_t
-              expanded: false
+                  items:
+                    - name: Operatori _com_ptr_t
+                      href: ../cpp/com-ptr-t-operators.md
+                    - name: '_com_ptr_t::operator ='
+                      href: ../cpp/com-ptr-t-operator-equal.md
+                    - name: Operatori relazionali _com_ptr_t
+                      href: ../cpp/com-ptr-t-relational-operators.md
+                    - name: Estrattori _com_ptr_t
+                      href: ../cpp/com-ptr-t-extractors.md
+                - name: Modelli di funzioni relazionali
+                  href: ../cpp/relational-function-templates.md
+            - name: Classe _variant_t
               items:
+                - name: _variant_t (classe)
+                  href: ../cpp/variant-t-class.md
                 - name: Funzioni membro _variant_t
-                  href: ../cpp/variant-t-member-functions.md
-                - name: '_variant_t::_variant_t'
-                  href: ../cpp/variant-t-variant-t.md
-                - name: '_variant_t::Attach'
-                  href: ../cpp/variant-t-attach.md
-                - name: '_variant_t::Clear'
-                  href: ../cpp/variant-t-clear.md
-                - name: '_variant_t::ChangeType'
-                  href: ../cpp/variant-t-changetype.md
-                - name: '_variant_t::Detach'
-                  href: ../cpp/variant-t-detach.md
-                - name: '_variant_t::SetString'
-                  href: ../cpp/variant-t-setstring.md
-            - name: Operatori _variant_t
-              expanded: false
-              items:
+                  items:
+                    - name: Funzioni membro _variant_t
+                      href: ../cpp/variant-t-member-functions.md
+                    - name: '_variant_t::_variant_t'
+                      href: ../cpp/variant-t-variant-t.md
+                    - name: '_variant_t::Attach'
+                      href: ../cpp/variant-t-attach.md
+                    - name: '_variant_t::Clear'
+                      href: ../cpp/variant-t-clear.md
+                    - name: '_variant_t::ChangeType'
+                      href: ../cpp/variant-t-changetype.md
+                    - name: '_variant_t::Detach'
+                      href: ../cpp/variant-t-detach.md
+                    - name: '_variant_t::SetString'
+                      href: ../cpp/variant-t-setstring.md
                 - name: Operatori _variant_t
-                  href: ../cpp/variant-t-operators.md
-                - name: '_variant_t::operator ='
-                  href: ../cpp/variant-t-operator-equal.md
-                - name: Operatori relazionali _variant_t
-                  href: ../cpp/variant-t-relational-operators.md
-                - name: Estrattori _variant_t
-                  href: ../cpp/variant-t-extractors.md
-- name: Estensioni Microsoft
-  href: ../cpp/microsoft-extensions.md
-- name: Comportamento non standard
-  href: ../cpp/nonstandard-behavior.md
-- name: Limiti del compilatore
-  href: ../cpp/compiler-limits.md
+                  items:
+                    - name: Operatori _variant_t
+                      href: ../cpp/variant-t-operators.md
+                    - name: '_variant_t::operator ='
+                      href: ../cpp/variant-t-operator-equal.md
+                    - name: Operatori relazionali _variant_t
+                      href: ../cpp/variant-t-relational-operators.md
+                    - name: Estrattori _variant_t
+                      href: ../cpp/variant-t-extractors.md
+    - name: Estensioni Microsoft
+      href: ../cpp/microsoft-extensions.md
+    - name: Comportamento non standard
+      href: ../cpp/nonstandard-behavior.md
+    - name: Limiti del compilatore
+      href: ../cpp/compiler-limits.md
+- name: Riferimenti al preprocessore C/C++
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: Informazioni di riferimento per la libreria standard C++
+  href: ../standard-library/cpp-standard-library-reference.md
