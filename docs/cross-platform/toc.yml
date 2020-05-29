@@ -1,36 +1,40 @@
 - name: Sviluppo di app per dispositivi mobili multipiattaforma con C++
+  href: ../cross-platform/index.yml
+- name: Panoramica
+  href: ../cross-platform/visual-cpp-for-cross-platform-mobile-development.md
+- name: Introduzione
+  expanded: true
   items:
-    - name: Sviluppo di app per dispositivi mobili multipiattaforma con C++
-      href: visual-cpp-for-cross-platform-mobile-development.md
     - name: Installare lo sviluppo di app per dispositivi mobili multipiattaforma con C++
-      items:
-        - name: Installare lo sviluppo di app per dispositivi mobili multipiattaforma con C++
-          href: install-visual-cpp-for-cross-platform-mobile-development.md
-        - name: Installare e configurare strumenti per la compilazione con iOS
-          href: install-and-configure-tools-to-build-using-ios.md
+      href: ../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md
+    - name: Installare e configurare strumenti per la compilazione con iOS
+      href: ../cross-platform/install-and-configure-tools-to-build-using-ios.md
+- name: Esercitazioni
+  expanded: true
+  items:
     - name: Creare un'app NativeActivity di Android
-      href: create-an-android-native-activity-app.md
+      href: ../cross-platform/create-an-android-native-activity-app.md
     - name: Compilare un'applicazione OpenGL ES in Android e iOS
-      href: build-an-opengl-es-application-on-android-and-ios.md
+      href: ../cross-platform/build-an-opengl-es-application-on-android-and-ios.md
     - name: Importare un progetto Xcode
-      href: import-an-xcode-project.md
+      href: ../cross-platform/import-an-xcode-project.md
     - name: Sincronizzare le modifiche tra Xcode e Visual Studio
-      href: sync-changes-between-xcode-and-visual-studio.md
-    - name: Esempi di sviluppo di app per dispositivi mobili multipiattaforma
-      href: cross-platform-mobile-development-examples.md
+      href: ../cross-platform/sync-changes-between-xcode-and-visual-studio.md
+- name: Esempi
+  href: ../cross-platform/cross-platform-mobile-development-examples.md
+- name: Riferimento
+  items:
     - name: Riferimento alla pagina delle proprietà multipiattaforma di C++
-      items:
-        - name: Riferimento alla pagina delle proprietà multipiattaforma di C++
-          href: cross-platform-prop-pages.md
-        - name: Proprietà dei progetti generali (Android C++)
-          href: general-android-prop-page.md
-        - name: Proprietà del debugger Android
-          href: android-debugger-prop-page.md
-        - name: Proprietà dei progetti Clang (Android C++)
-          href: clang-android-prop-page.md
-        - name: Proprietà dei progetti generali (makefile di Android C++)
-          href: general-makefile-android-prop-page.md
-        - name: Proprietà dei linker Clang (Android C++)
-          href: clanglink-prop-page.md
-        - name: Proprietà di NMake (Android C++)
-          href: nmake-android-prop-page.md
+      href: ../cross-platform/cross-platform-prop-pages.md
+    - name: Proprietà dei progetti generali (Android C++)
+      href: ../cross-platform/general-android-prop-page.md
+    - name: Proprietà del debugger Android
+      href: ../cross-platform/android-debugger-prop-page.md
+    - name: Proprietà dei progetti Clang (Android C++)
+      href: ../cross-platform/clang-android-prop-page.md
+    - name: Proprietà dei progetti generali (makefile di Android C++)
+      href: ../cross-platform/general-makefile-android-prop-page.md
+    - name: Proprietà dei linker Clang (Android C++)
+      href: ../cross-platform/clanglink-prop-page.md
+    - name: Proprietà di NMake (Android C++)
+      href: ../cross-platform/nmake-android-prop-page.md
