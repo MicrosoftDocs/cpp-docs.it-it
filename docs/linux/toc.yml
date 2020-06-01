@@ -3,7 +3,6 @@
 - name: 'Scaricare, installare e configurare il carico di lavoro per lo sviluppo di applicazioni Linux'
   href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: Connettersi al computer Linux remoto
-  expanded: true
   items:
     - name: Connettersi al computer Linux remoto
       href: ../linux/connect-to-your-remote-linux-computer.md
@@ -11,40 +10,43 @@
       href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: Informazioni di riferimento su ConnectionManager
       href: ../linux/connectionmanager-reference.md
-- name: Creare un nuovo progetto Linux
-  href: ../linux/create-a-new-linux-project.md
-- name: Configurare un progetto Linux
-  href: ../linux/configure-a-linux-project.md
-- name: Creare e configurare un progetto CMake per Linux
-  href: ../linux/cmake-linux-project.md
+- name: Creare progetti Linux con MSBuild in Visual Studio
+  items:
+    - name: Creare un nuovo progetto Linux
+      href: ../linux/create-a-new-linux-project.md
+    - name: Configurare un progetto Linux
+      href: ../linux/configure-a-linux-project.md
+    - name: 'Distribuire, eseguire e sottoporre a debug il progetto Linux'
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux
+      items:
+        - name: Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux
+          href: ../linux/prop-pages-linux.md
+        - name: Proprietà generali (Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: Proprietà di debug (Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: Proprietà Directory di VC++ (Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: Proprietà Copia origini (Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: Proprietà C/C++ (Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: Proprietà del linker (Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: Proprietà di un evento di compilazione (Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: Proprietà Istruzione di compilazione personalizzata (Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: Proprietà di un progetto makefile (Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: Proprietà di un archivio remoto (Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: Creare progetti Linux con CMake in Visual Studio
+  items:
+    - name: Creare e configurare un progetto CMake per Linux
+      href: ../linux/cmake-linux-project.md
+    - name: 'Esercitazione: Creare progetti multipiattaforma C++ in Visual Studio'
+      href: ../build/get-started-linux-cmake.md
 - name: Configurare progetti Linux per l'uso di Address Sanitizer
   href: ../linux/linux-asan-configuration.md
-- name: 'Distribuire, eseguire e sottoporre a debug il progetto Linux'
-  href: ../linux/deploy-run-and-debug-your-linux-project.md
-- name: 'Esercitazione: Creare progetti multipiattaforma C++ in Visual Studio'
-  href: ../build/get-started-linux-cmake.md
-- name: Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux
-  expanded: false
-  items:
-    - name: Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux
-      href: ../linux/prop-pages-linux.md
-    - name: Proprietà generali (Linux)
-      href: ../linux/prop-pages/general-linux.md
-    - name: Proprietà di debug (Linux)
-      href: ../linux/prop-pages/debugging-linux.md
-    - name: Proprietà Directory di VC++ (Linux)
-      href: ../linux/prop-pages/directories-linux.md
-    - name: Proprietà Copia origini (Linux)
-      href: ../linux/prop-pages/copy-sources-project.md
-    - name: Proprietà C/C++ (Linux)
-      href: ../linux/prop-pages/c-cpp-linux.md
-    - name: Proprietà del linker (Linux)
-      href: ../linux/prop-pages/linker-linux.md
-    - name: Proprietà di un evento di compilazione (Linux)
-      href: ../linux/prop-pages/build-events-linux.md
-    - name: Proprietà Istruzione di compilazione personalizzata (Linux)
-      href: ../linux/prop-pages/custom-build-step-linux.md
-    - name: Proprietà di un progetto makefile (Linux)
-      href: ../linux/prop-pages/makefile-linux.md
-    - name: Proprietà di un archivio remoto (Linux)
-      href: ../linux/prop-pages/remote-ar-linux.md
