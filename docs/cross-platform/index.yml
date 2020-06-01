@@ -1,0 +1,49 @@
+### YamlMime:Landing
+title: Sviluppo di applicazioni per dispositivi mobili con C++ | Windows UWP, Android e iOS
+summary: Creare app C++ native per dispositivi iOS, Android e Windows con Visual Studio.
+metadata:
+  title: Documentazione per lo sviluppo di app per dispositivi mobili con C++
+  description: Creare app C++ native per dispositivi iOS, Android e Windows con Visual Studio.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 7a858d9f26c106988156813b3f1f6bbe995e620a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153529"
+landingContent:
+- title: Informazioni su come creare app per dispositivi mobili multipiattaforma
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Installare lo sviluppo di app per dispositivi mobili multipiattaforma con C++
+      url: install-visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: overview
+    links:
+    - text: Panoramica delle soluzioni per lo sviluppo di app per dispositivi mobili multipiattaforma con C++
+      url: visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: tutorial
+    links:
+    - text: Compilare un'applicazione OpenGL ES in Android e iOS
+      url: build-an-opengl-es-application-on-android-and-ios.md
+    - text: Creare un'app NativeActivity di Android
+      url: create-an-android-native-activity-app.md
+  - linkListType: learn
+    links:
+    - text: Esempi di sviluppo di app per dispositivi mobili multipiattaforma
+      url: cross-platform-mobile-development-examples.md
+- title: Riferimenti multipiattaforma
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Riferimento alla pagina delle proprietà multipiattaforma di C++
+      url: cross-platform-prop-pages.md
+    - text: Documentazione della piattaforma UWP (Universal Windows Platform)
+      url: /cpp/cppcx/universal-windows-apps-cpp
+    - text: Documentazione dell'API iOS
+      url: https://developer.apple.com/reference
+    - text: Documentazione dell'API Android
+      url: https://developer.android.com/guide/index.html

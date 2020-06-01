@@ -1,4 +1,4 @@
-- name: Riferimenti della libreria di runtime di C
+- name: Riferimenti della libreria di runtime C (CRT)
   href: ../c-runtime-library/c-run-time-library-reference.md
 - name: Funzionalità della libreria CRT
   expanded: false
