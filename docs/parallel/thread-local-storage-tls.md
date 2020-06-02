@@ -9,22 +9,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 7e308f7ba23503879f8ebbcacde481cf72055229
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 888a33161cd33b20d5f40a07f9b54235f06b8bd8
+ms.sourcegitcommit: 57e26bdd7839fce3c4154a61e987d165f0ba6f5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510387"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301966"
 ---
 # <a name="thread-local-storage-tls"></a>Archiviazione thread-local (TLS)
 
-L'archiviazione thread-local è il metodo attraverso il quale ogni thread incluso in un processo multithreading specifico può allocare posizioni in cui archiviare dati specifici del thread. I dati specifici del thread in fase di esecuzione sono supportati tramite l'API TLS ([TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc). Win32 e il compilatore C++ Microsoft supportano ora i dati associati in modo statico (tempo di caricamento) per thread, oltre all'implementazione API esistente.
+L'archiviazione thread-local è il metodo attraverso il quale ogni thread incluso in un processo multithreading specifico può allocare posizioni in cui archiviare dati specifici del thread. I dati specifici del thread in fase di esecuzione sono supportati tramite l'API TLS ([TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)). Win32 e il compilatore Microsoft C++ supportano ora i dati associati in modo statico (tempo di caricamento) per thread oltre all'implementazione API esistente.
 
-## <a name="_core_compiler_implementation_for_tls"></a>Implementazione del compilatore per TLS
+## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>Implementazione del compilatore per TLS
 
-**C++11:**  L' `thread_local` identificatore di classe di archiviazione è il metodo consigliato per specificare l'archiviazione locale di thread per oggetti e membri di classe. Per ulteriori informazioni, vedere [classi di archiviazioneC++()](../cpp/storage-classes-cpp.md).
+**C++ 11:**  L' `thread_local` identificatore di classe di archiviazione è il metodo consigliato per specificare l'archiviazione locale di thread per oggetti e membri di classe. Per altre informazioni, vedere [classi di archiviazione (C++)](../cpp/storage-classes-cpp.md).
 
-MSVC fornisce anche un attributo specifico di Microsoft, [thread](../cpp/thread.md), come modificatore di classe di archiviazione estesa. Usare la parola chiave **_ _ declspec** per dichiarare una variabile di **thread** . Nel codice seguente, ad esempio, viene dichiarata una variabile locale di thread di tipo integer e quindi inizializzata con un valore:
+MSVC fornisce anche un attributo specifico di Microsoft, [thread](../cpp/thread.md), come modificatore di classe di archiviazione estesa. Usare la parola chiave **__declspec** per dichiarare una variabile di **thread** . Nel codice seguente, ad esempio, viene dichiarata una variabile locale di thread di tipo integer e quindi inizializzata con un valore:
 
 ```C
 __declspec( thread ) int tls_i = 1;
@@ -40,7 +40,7 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- Il modificatore di **thread** può essere specificato solo in elementi di dati con estensione **statica** . Sono inclusi gli oggetti dati globali (sia **statici** che **extern**), gli oggetti statici locali e i membri dati C++ statici delle classi. Impossibile dichiarare oggetti dati automatici con l'attributo **thread** . Il codice seguente genera errori del compilatore:
+- Il modificatore di **thread** può essere specificato solo in elementi di dati con estensione **statica** . Sono inclusi gli oggetti dati globali (sia **statici** che **extern**), gli oggetti statici locali e i membri dati statici delle classi C++. Impossibile dichiarare oggetti dati automatici con l'attributo **thread** . Il codice seguente genera errori del compilatore:
 
     ```C
     void func1()
@@ -68,7 +68,7 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     char __declspec( thread ) *ch;        // Error
     ```
 
-- Poiché la dichiarazione di C++ oggetti che utilizzano l'attributo **thread** è consentita, i due esempi seguenti sono semanticamente equivalenti:
+- Poiché la dichiarazione di oggetti C++ che usano l'attributo **thread** è consentita, i due esempi seguenti sono semanticamente equivalenti:
 
     ```cpp
     __declspec( thread ) class B
@@ -90,9 +90,9 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-   Questa restrizione non si C++applica a. Poiché C++ permette l'inizializzazione dinamica di tutti gli oggetti, è possibile inizializzare un oggetto usando un'espressione che usa l'indirizzo di una variabile thread-local. Viene eseguita esattamente come la costruzione di oggetti thread-local. Ad esempio, il codice illustrato in precedenza non genera un errore quando viene compilato come file C++ di origine. L'indirizzo di una variabile locale di thread è valido solo se il thread in cui è stato utilizzato l'indirizzo è ancora presente.
+   Questa restrizione non è applicabile in C++. Poiché C++ permette l'inizializzazione dinamica di tutti gli oggetti, è possibile inizializzare un oggetto usando un'espressione che usa l'indirizzo di una variabile thread-local. Viene eseguita esattamente come la costruzione di oggetti thread-local. Ad esempio, il codice illustrato in precedenza non genera un errore quando viene compilato come file di origine C++. L'indirizzo di una variabile locale di thread è valido solo se il thread in cui è stato utilizzato l'indirizzo è ancora presente.
 
-- Il linguaggio C standard consente l'inizializzazione di un oggetto o di una variabile con un'espressione che include un riferimento a se stessa, ma solo per oggetti di extent non statici. Sebbene C++ in genere consenta tale inizializzazione dinamica di oggetti con un'espressione che include un riferimento a se stessa, questo tipo di inizializzazione non è consentito con gli oggetti thread-local. Ad esempio:
+- Il linguaggio C standard consente l'inizializzazione di un oggetto o di una variabile con un'espressione che include un riferimento a se stessa, ma solo per oggetti di extent non statici. Sebbene C++ consenta in genere l'inizializzazione dinamica di oggetti con un'espressione che include un riferimento a se stessa, questo tipo di inizializzazione non è consentito con gli oggetti thread-local. Ad esempio:
 
     ```C
     __declspec( thread )int tls_i = tls_i;                // Error in C and C++
@@ -100,11 +100,11 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   Un' `sizeof` espressione che include l'oggetto in fase di inizializzazione non rappresenta un riferimento a se stessa ed è abilitata C++sia in C sia in.
+   Un' `sizeof` espressione che include l'oggetto in fase di inizializzazione non rappresenta un riferimento a se stessa ed è abilitata sia in C che in C++.
 
-   C++non consente l'inizializzazione dinamica dei dati di thread a causa di possibili miglioramenti futuri per la funzionalità di archiviazione thread-local.
+   C++ non consente l'inizializzazione dinamica dei dati di thread a causa di possibili miglioramenti futuri per la funzionalità di archiviazione thread-local.
 
-- Nei sistemi operativi Windows precedenti a Windows Vista `__declspec( thread )` , presenta alcune limitazioni. Se una dll dichiara qualsiasi dato o oggetto come `__declspec( thread )`, può causare un errore di protezione se caricato dinamicamente. Quando la dll viene caricata con [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), causa un errore di sistema ogni volta che `__declspec( thread )` il codice fa riferimento ai dati. Poiché lo spazio delle variabili globali per un thread viene allocato in fase di esecuzione, le dimensioni di questo spazio sono basate sul calcolo dei requisiti dell'applicazione sommati ai requisiti di tutte le DLL collegate staticamente. Quando si usa `LoadLibrary`, non è possibile estendere questo spazio per consentire le variabili locali di thread dichiarate con. `__declspec( thread )` Usare le API TLS, ad esempio [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc), nella dll per allocare TLS se la dll può essere caricata `LoadLibrary`con.
+- Nei sistemi operativi Windows precedenti a Windows Vista, `__declspec( thread )` presenta alcune limitazioni. Se una DLL dichiara qualsiasi dato o oggetto come `__declspec( thread )` , può causare un errore di protezione se caricato dinamicamente. Quando la DLL viene caricata con [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), causa un errore di sistema ogni volta che il codice fa riferimento ai `__declspec( thread )` dati. Poiché lo spazio delle variabili globali per un thread viene allocato in fase di esecuzione, le dimensioni di questo spazio sono basate sul calcolo dei requisiti dell'applicazione sommati ai requisiti di tutte le DLL collegate staticamente. Quando si usa `LoadLibrary` , non è possibile estendere questo spazio per consentire le variabili locali di thread dichiarate con `__declspec( thread )` . Usare le API TLS, ad esempio [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc), nella dll per allocare TLS se la dll può essere caricata con `LoadLibrary` .
 
 ## <a name="see-also"></a>Vedere anche
 
