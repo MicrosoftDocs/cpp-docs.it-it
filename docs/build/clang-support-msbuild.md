@@ -1,15 +1,15 @@
 ---
 title: Supporto Clang/LLVM nei progetti Visual Studio Visual Studio
-ms.date: 08/30/2019
+ms.date: 06/02/2020
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 8d7d7fec979d3e7b8f665e56094ee1c309e3b686
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a1dfef033bffd3d7f1d24233752d7beae11af8e
+ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323114"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84332279"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Supporto Clang/LLVM nei progetti di Visual Studio
 
@@ -31,13 +31,13 @@ Per il migliore supporto dell'IDE in Visual Studio, è consigliabile usare gli s
 
 ## <a name="configure-a-windows-project-to-use-clang-tools"></a>Configurare un progetto Windows per l'uso di strumenti Clang
 
-Per configurare un progetto di Visual Studio per l'uso di Clang, fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. In genere, è necessario innanzitutto scegliere **tutte le configurazioni** nella parte superiore della finestra di dialogo. Quindi, in **General** > **set di strumenti della piattaforma**generale, scegliere **LLVM (Clang-cl)** e quindi **OK**.
+Per configurare un progetto di Visual Studio per l'uso di Clang, fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. In genere, è necessario innanzitutto scegliere **tutte le configurazioni** nella parte superiore della finestra di dialogo. Quindi, in **General**  >  **set di strumenti della piattaforma**generale, scegliere **LLVM (Clang-cl)** e quindi **OK**.
 
 ![Installazione del componente Clang](media/clang-msbuild-prop-page.png)
 
-Se si usano gli strumenti Clang forniti con Visual Studio, non è necessario eseguire ulteriori passaggi. Per i progetti Windows, Visual Studio richiama per impostazione predefinita Clang in modalità [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) e si collega all'implementazione Microsoft della libreria standard. Per impostazione predefinita, **Clang-cl. exe** si trova `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`in.
+Se si usano gli strumenti Clang forniti con Visual Studio, non è necessario eseguire ulteriori passaggi. Per i progetti Windows, Visual Studio richiama per impostazione predefinita Clang in modalità [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) e si collega all'implementazione Microsoft della libreria standard. Per impostazione predefinita, **Clang-cl. exe** si trova in *% VCInstallDir% \\ Tools \\ LLVM \\ bin \\ * e *% VCInstallDir% \\ Tools \\ LLVM \\ x64 \\ bin \\ *.
 
-Se si usa un'installazione di Clang personalizzata, è possibile modificare le **Project** > **proprietà** > di progetto directory di**VC + +** > **Proprietà** > di configurazione di directory**eseguibili** aggiungendo la radice di installazione di Clang personalizzata come prima directory o modificare il `LLVMInstallDir` valore della proprietà. Per ulteriori informazioni, vedere [impostare un percorso di LLVM personalizzato](#custom_llvm_location) .
+Se si usa un'installazione di Clang personalizzata, è possibile modificare le proprietà di **progetto**directory  >  **Properties**  >  di**VC + +**  >  **proprietà di configurazione**  >  di directory**eseguibili** aggiungendo la radice di installazione di Clang personalizzata come prima directory o modificare il valore della `LLVMInstallDir` Proprietà. Per ulteriori informazioni, vedere [impostare un percorso di LLVM personalizzato](#custom_llvm_location) .
 
 ## <a name="configure-a-linux-project-to-use-clang-tools"></a>Configurare un progetto Linux per l'uso di strumenti Clang
 
@@ -52,7 +52,7 @@ Per configurare un progetto Linux di Visual Studio per l'uso di Clang:
 
 ![Installazione del componente Clang](media/clang-msbuild-prop-page.png)
 
-In Linux, Visual Studio USA per impostazione predefinita il primo percorso Clang rilevato nella proprietà di ambiente PATH. `LLVMInstallDir` Se si usa un'installazione di Clang personalizzata, è necessario modificare il valore della proprietà oppure sostituire un percorso nelle proprietà del **progetto** > **Properties** > **directory di****configurazione** > delle directory di**VC + +** > . Per ulteriori informazioni, vedere [impostare un percorso di LLVM personalizzato](#custom_llvm_location) .
+In Linux, Visual Studio USA per impostazione predefinita il primo percorso Clang rilevato nella proprietà di ambiente PATH. Se si usa un'installazione di Clang personalizzata, è necessario modificare il valore della `LLVMInstallDir` Proprietà oppure sostituire un percorso nelle proprietà del **progetto**directory di configurazione delle directory di  >  **Properties**  >  **VC + +**  >  **Configuration Properties**  >  **Executable Directories**. Per ulteriori informazioni, vedere [impostare un percorso di LLVM personalizzato](#custom_llvm_location) .
 
 ## <a name="set-a-custom-llvm-location"></a><a name="custom_llvm_location"></a>Impostare un percorso di LLVM personalizzato
 
@@ -68,7 +68,7 @@ In Linux, Visual Studio USA per impostazione predefinita il primo percorso Clang
 
 ## <a name="set-additional-properties-edit-build-and-debug"></a>Imposta proprietà aggiuntive, modifica, compila ed Esegui il debug
 
-Dopo aver configurato una configurazione Clang, fare di nuovo clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Ricarica progetto**. È ora possibile compilare ed eseguire il debug del progetto usando gli strumenti Clang. Visual Studio rileva che si sta usando il compilatore Clang e fornisce IntelliSense, l'evidenziazione, la navigazione e altre funzionalità di modifica. Gli errori e gli avvisi vengono visualizzati nel **finestra di output**. Le pagine delle proprietà del progetto per una configurazione Clang sono molto simili a quelle per MSVC, anche se alcune funzionalità dipendenti dal compilatore, ad esempio modifica e continuazione, non sono disponibili per le configurazioni Clang. Per impostare un'opzione del compilatore Clang o del linker non disponibile nelle pagine delle proprietà, è possibile aggiungerla manualmente nelle pagine delle proprietà in **Proprietà** > di configurazione**Opzioni aggiuntive**della**riga** > di comando**C/C++ (o linker)** > .
+Dopo aver configurato una configurazione Clang, fare di nuovo clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Ricarica progetto**. È ora possibile compilare ed eseguire il debug del progetto usando gli strumenti Clang. Visual Studio rileva che si sta usando il compilatore Clang e fornisce IntelliSense, l'evidenziazione, la navigazione e altre funzionalità di modifica. Gli errori e gli avvisi vengono visualizzati nel **finestra di output**. Le pagine delle proprietà del progetto per una configurazione Clang sono molto simili a quelle per MSVC, anche se alcune funzionalità dipendenti dal compilatore, ad esempio modifica e continuazione, non sono disponibili per le configurazioni Clang. Per impostare un'opzione del compilatore Clang o del linker non disponibile nelle pagine delle proprietà, è possibile aggiungerla manualmente nelle pagine delle proprietà in **proprietà di configurazione**  >  Opzioni aggiuntive della riga di comando**C/C++ (o linker)**  >  **Command Line**  >  **Additional Options**.
 
 Quando si esegue il debug, è possibile usare punti di interruzione, la visualizzazione di memoria e dati e la maggior parte delle altre funzionalità di debug.  
 
