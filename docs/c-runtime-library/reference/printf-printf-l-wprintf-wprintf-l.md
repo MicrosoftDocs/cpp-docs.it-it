@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 431c27a26fb549705abde28b08654ce47498e239
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759238"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421325"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -92,7 +92,7 @@ Restituisce il numero di caratteri stampati o un valore negativo se si verifica 
 
 Per informazioni sui codici di errore e **errno** , vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **printf** formatta e stampa una serie di caratteri e di valori nel flusso di output standard, **stdout**. Se gli argomenti seguono la stringa di *formato* , la stringa di *formato* deve contenere le specifiche che determinano il formato di output per gli argomenti. **printf** e [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) si comportano in modo identico, ad eccezione del fatto che **printf** scrive l'output in **stdout** anziché in una destinazione di tipo **file**.
 
@@ -139,6 +139,9 @@ Le [specifiche di formato](../../c-runtime-library/format-specification-syntax-p
 |**wprintf**, **_wprintf_l**|\<stdio.h> o \<wchar.h>|
 
 La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+> [!IMPORTANT]
+> A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, 1,5 e 2,5 devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [fesetenv](fesetenv1.md). In precedenza, l'arrotondamento veniva sempre scelto FE_TONEAREST comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per usare il comportamento di arrotondamento a virgola mobile legacy, collegare con [legacy_stdio_float_rounding. obj](../link-options.md).
 
 ## <a name="example"></a>Esempio
 
@@ -231,7 +234,7 @@ Address as:   0012FF3C
 [Sintassi per la specifica del formato: funzioni printf e wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
