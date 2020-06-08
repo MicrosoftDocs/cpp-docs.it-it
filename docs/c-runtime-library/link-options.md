@@ -30,12 +30,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: ea71faab639a8c0a09d6e332618dd7e09159a4e5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351105"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506858"
 ---
 # <a name="link-options"></a>Opzioni collegamento
 
@@ -51,7 +51,7 @@ Le versioni CLR in modalità pure di questi oggetti sono deprecate in Visual Stu
 |exe_initialize_mta.lib|n/d|Inizializza l'apartment MTA durante l'avvio del file EXE, che consente l'uso di oggetti COM in puntatori intelligenti globali. Poiché questa opzione emette un riferimento all'apartment MTA durante l'arresto, non utilizzarla per le DLL. Il collegamento a questo oggetto equivale a includere combase.h e a definire _EXE_INITIALIZE_MTA. |
 |fp10.obj|n/d|Modifica il controllo della precisione predefinito in 64 bit. Vedere [Supporto delle funzioni a virgola mobile](../c-runtime-library/floating-point-support.md).|
 |invalidcontinue.obj|pinvalidcontinue.obj|Imposta un gestore di parametri non validi predefinito che non esegue alcuna operazione, vale a dire che i parametri non validi passati alle funzioni CRT impostano semplicemente errno e restituiscono un risultato di errore.|
-|legacy_stdio_float_rounding.obj|n/d|La stampa di valori a virgola mobile (ad esempio, quando si usa [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)) con Il runtime C universale di Windows 10 19041 è stata corretta. Ora arrotonda correttamente i numeri a virgola mobile rappresentabili e rispetta l'arrotondamento a virgola mobile richiesto da [fesetenv](../c-runtime-library/reference/fesetenv1.md). Questo aggiornamento del comportamento è disponibile in Visual Studio 2019 versione 16.2 e successive. Il comportamento legacy viene usato nelle versioni precedenti di Visual Studio o fornendo questa opzione di collegamento.|
+|legacy_stdio_float_rounding. obj|n/d|La stampa di valori a virgola mobile (ad esempio, quando si usa [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)) con Windows 10 19041 Universal C Runtime è stata corretta. Ora completa correttamente i numeri a virgola mobile rappresentabili esattamente e rispetta l'arrotondamento a virgola mobile richiesto da [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md). Questo aggiornamento del comportamento è disponibile in Visual Studio 2019 versione 16,2 e successive. Il comportamento legacy viene usato nelle versioni precedenti di Visual Studio o specificando questa opzione di collegamento.|
 |loosefpmath.obj|n/d|Assicura che il codice a virgola mobile tolleri i valori denormalizzati.|
 |newmode.obj|pnewmode.obj|Fa sì che [malloc](../c-runtime-library/reference/malloc.md) chiami il nuovo gestore in caso di errore. Vedere [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) e [realloc](../c-runtime-library/reference/realloc.md).|
 |noarg.obj|pnoarg.obj|Disabilita tutte le elaborazioni di argc e argv.|
@@ -64,4 +64,4 @@ Le versioni CLR in modalità pure di questi oggetti sono deprecate in Visual Stu
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni della libreria CRT](../c-runtime-library/crt-library-features.md)
+- [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

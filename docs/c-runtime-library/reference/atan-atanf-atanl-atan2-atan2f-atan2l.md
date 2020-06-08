@@ -1,6 +1,6 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - atan2f
 - atan2l
@@ -10,6 +10,7 @@ api_name:
 - atanl
 - _o_atan
 - _o_atan2
+- _o_atan2f
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920067"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506780"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcola il arcotangente di **x** (**atan**, **atanf**e **atanl**) o la arcotangente di **y**/**x** (**Atan2**, **atan2f**e **atan2l**).
+Calcola il arcotangente di **x** (**atan**, **atanf**e **atanl**) o la arcotangente di **y** / **x** (**Atan2**, **atan2f**e **atan2l**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -82,17 +83,17 @@ Qualsiasi numero.
 
 ## <a name="return-value"></a>Valore restituito
 
-**atan** restituisce il arcotangente di *x* compreso tra-π/2 e π/2 radianti. **Atan2** restituisce il arcotangente di *y*/*x* compreso tra-π e π radianti. Se *x* è 0, **atan** restituisce 0. Se entrambi i parametri di **Atan2** sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
+**atan** restituisce il arcotangente di *x* compreso tra-π/2 e π/2 radianti. **Atan2** restituisce il arcotangente di *y* / *x* compreso tra-π e π radianti. Se *x* è 0, **atan** restituisce 0. Se entrambi i parametri di **Atan2** sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
 
 **Atan2** usa i segni di entrambi i parametri per determinare il quadrante del valore restituito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **atan** calcola il arcotangente (funzione inversa della tangente) di *x*. **Atan2** calcola il arcotangente di *y*/*x* (se *x* è uguale a 0, **Atan2** restituisce π/2 Se *y* è positivo,-π/2 Se *y* è negativo oppure 0 se *y* è 0).
+La funzione **atan** calcola il arcotangente (funzione inversa della tangente) di *x*. **Atan2** calcola il arcotangente di *y* / *x* (se *x* è uguale a 0, **Atan2** restituisce π/2 Se *y* è positivo,-π/2 Se *y* è negativo oppure 0 se *y* è 0).
 
 **atan** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -139,7 +140,7 @@ Arctangent of 0.500000 / 5.000000: 0.099669
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
