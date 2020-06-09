@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 7cf3fede663a7c4bc85573e17dd9c2f8bf3622b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 848cb3bb52ae13eb1b7798126becd13384fddeb6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373321"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625658"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Procedura: Aggiungere il supporto di Gestione riavvio
 
@@ -21,7 +21,7 @@ Dopo il riavvio, se l'applicazione è di tipo Unicode verrà visualizzata una fi
 > [!NOTE]
 > È possibile eseguire l'override del comportamento predefinito di Gestione riavvio per il salvataggio dei dati e il riavvio dell'applicazione.
 
-Per impostazione predefinita, le applicazioni MFC create utilizzando la creazione guidata progetto in Visual Studio supportano il gestore di riavvio quando le applicazioni vengono eseguite in un computer che dispone di un sistema operativo Windows Vista o versione successiva. Se non si vuole che l'applicazione supporti Gestione riavvio, è possibile disabilitare Gestione riavvio nella creazione guidata nuovo progetto.
+Per impostazione predefinita, le applicazioni MFC create tramite la creazione guidata progetto in Visual Studio supportano Gestione riavvio quando le applicazioni vengono eseguite in un computer che dispone di un sistema operativo Windows Vista o versioni successive. Se non si vuole che l'applicazione supporti Gestione riavvio, è possibile disabilitare Gestione riavvio nella creazione guidata nuovo progetto.
 
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>Per aggiungere il supporto di Gestione riavvio a un'applicazione esistente
 
@@ -37,14 +37,14 @@ Per impostazione predefinita, le applicazioni MFC create utilizzando la creazion
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. Verificare che il metodo `InitInstance` dell'applicazione chiami il metodo `InitInstance` padre: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) o `CWinAppEx::InitInstance`. Il `InitInstance` metodo è responsabile del controllo del *parametro m_dwRestartManagerSupportFlags.*
+1. Verificare che il metodo `InitInstance` dell'applicazione chiami il metodo `InitInstance` padre: [CWinApp::InitInstance](reference/cwinapp-class.md#initinstance) o `CWinAppEx::InitInstance`. Il `InitInstance` metodo è responsabile della verifica del parametro *m_dwRestartManagerSupportFlags* .
 
 1. Compilare ed eseguire l'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CDataRecoveryHandler](../mfc/reference/cdatarecoveryhandler-class.md)<br/>
-[CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)<br/>
-[Classe CWinApp](../mfc/reference/cwinapp-class.md)<br/>
-[CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
-[CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
+[Classe CDataRecoveryHandler](reference/cdatarecoveryhandler-class.md)<br/>
+[CWinApp:: m_dwRestartManagerSupportFlags](reference/cwinapp-class.md#m_dwrestartmanagersupportflags)<br/>
+[Classe CWinApp](reference/cwinapp-class.md)<br/>
+[CWinApp:: m_nAutosaveInterval](reference/cwinapp-class.md#m_nautosaveinterval)<br/>
+[CDocument:: OnDocumentEvent](reference/cdocument-class.md#ondocumentevent)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508265"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626266"
 ---
 # <a name="memory-management"></a>Gestione della memoria
 
@@ -25,21 +25,21 @@ Per informazioni non MFC sulla gestione della memoria nei programmi per Windows,
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Allocazione frame](../mfc/memory-management-frame-allocation.md)
+- [allocazione di frame](memory-management-frame-allocation.md)
 
-- [Allocazione heap](../mfc/memory-management-heap-allocation.md)
+- [Allocazione heap](memory-management-heap-allocation.md)
 
-- [Allocazione della memoria per una matrice](../mfc/memory-management-examples.md)
+- [Allocazione della memoria per una matrice](memory-management-examples.md)
 
-- [Deallocazione della memoria per una matrice dall'heap](../mfc/memory-management-examples.md)
+- [Deallocazione della memoria per una matrice dall'heap](memory-management-examples.md)
 
-- [Allocazione della memoria per una struttura di dati](../mfc/memory-management-examples.md)
+- [Allocazione della memoria per una struttura di dati](memory-management-examples.md)
 
-- [Allocazione della memoria per un oggetto](../mfc/memory-management-examples.md)
+- [Allocazione della memoria per un oggetto](memory-management-examples.md)
 
-- [Blocchi di memoria ridimensionabili](../mfc/memory-management-resizable-memory-blocks.md)
+- [Blocchi di memoria ridimensionabili](memory-management-resizable-memory-blocks.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti](../mfc/mfc-concepts.md)<br/>
-[Argomenti MFC generali](../mfc/general-mfc-topics.md)
+[Concetti](mfc-concepts.md)<br/>
+[Argomenti MFC generali](general-mfc-topics.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c82a3fac8ef95da9e226ca3e2e9122b3c8774cbf
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456574"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620837"
 ---
-# <a name="addconst-class"></a>Classe add_const
+# <a name="add_const-class"></a>Classe add_const
 
 Crea un tipo costante dal tipo.
 
@@ -30,9 +30,9 @@ struct add_const;
 *Ty*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un'istanza del modificatore di tipo include un tipo modificato che è *Ty* se *Ty* è un riferimento, una funzione o un tipo qualificato da const; in `const Ty`caso contrario,.
+Un'istanza del modificatore di tipo include un tipo modificato che è *Ty* se *Ty* è un riferimento, una funzione o un tipo qualificato da const; in caso contrario, `const Ty` .
 
 ## <a name="example"></a>Esempio
 
@@ -60,11 +60,11 @@ add_const<int> == int
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Classe remove_const](../standard-library/remove-const-class.md)
+[<type_traits>](type-traits.md)\
+[Classe remove_const](remove-const-class.md)

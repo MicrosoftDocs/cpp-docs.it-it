@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907624"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620686"
 ---
 # <a name="command-routing"></a>comandi (routing)
 
@@ -31,18 +31,18 @@ Classi di destinazione comando diverse controllano le proprie mappe messaggi in 
 
 Quanto è costoso questo meccanismo di routing rispetto a ciò che il gestore esegue in risposta a un comando, il costo del routing è basso. Occorre tenere presente che il framework genera comandi solo quando l'utente interagisce con un oggetto dell'interfaccia utente.
 
-### <a name="_core_standard_command_route"></a> Routing standard dei comandi
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a> Routing standard dei comandi
 
 |Quando un oggetto di questo tipo riceve un comando . . .|Concede a se stesso e ad altri oggetti destinazione comando l'opportunità di gestire il comando in questo ordine:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Finestra cornice MDI (`CMDIFrameWnd`)|1.  `CMDIChildWnd` attivo<br />2.  Questa finestra cornice<br />3.  Applicazione (oggetto `CWinApp`)|
-|Finestre cornice del documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Visualizzazione attiva<br />2.  Questa finestra cornice<br />3.  Applicazione (oggetto `CWinApp`)|
-|Visualizza|1.  Questa visualizzazione<br />2.  Documento collegato alla visualizzazione|
-|Documento|1.  Documento corrente<br />2.  Modello di documento collegato al documento|
-|Finestra di dialogo|1.  Questa finestra di dialogo<br />2.  Finestra proprietaria della finestra di dialogo.<br />3.  Applicazione (oggetto `CWinApp`)|
+|Finestra cornice MDI (`CMDIFrameWnd`)|1. attivo`CMDIChildWnd`<br />2. questa finestra cornice<br />3. applicazione ( `CWinApp` oggetto)|
+|Finestre cornice del documento (`CFrameWnd`, `CMDIChildWnd`)|1. visualizzazione attiva<br />2. questa finestra cornice<br />3. applicazione ( `CWinApp` oggetto)|
+|Visualizzazione|1. questa visualizzazione<br />2. documento collegato alla visualizzazione|
+|Document|1. questo documento<br />2. modello di documento collegato al documento|
+|Finestra di dialogo|1. questa finestra di dialogo<br />2. finestra proprietaria della finestra di dialogo<br />3. applicazione ( `CWinApp` oggetto)|
 
 Nei casi in cui le voci numerate nella seconda colonna della tabella precedente menzionano altri oggetti, come un documento, vedere l'elemento corrispondente nella prima colonna. Ad esempio, quando si legge nella seconda colonna che la visualizzazione inoltra un comando al suo documento, vedere la voce "Documento" nella prima colonna per continuare a seguire il routing.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+[Chiamata di un gestore dal framework](how-the-framework-calls-a-handler.md)

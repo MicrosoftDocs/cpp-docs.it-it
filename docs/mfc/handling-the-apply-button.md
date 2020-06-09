@@ -5,33 +5,33 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd1254a31491e713513f0db0d4cf87baddd9bb23
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240587"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618607"
 ---
 # <a name="handling-the-apply-button"></a>Gestione del pulsante Applica
 
-Finestre delle proprietà dispone di una funzione che non li supportano finestre di dialogo standard: Consentono all'utente di applicare le modifiche apportate prima di chiudere la finestra delle proprietà. Questa operazione viene eseguita utilizzando il pulsante Applica. Questo articolo illustra i metodi che è possibile usare per implementare correttamente questa funzionalità.
+Le finestre delle proprietà hanno una funzionalità che non sono disponibili nelle finestre di dialogo standard: consentono all'utente di applicare le modifiche apportate prima di chiudere la finestra delle proprietà. Questa operazione viene eseguita usando il pulsante Applica. Questo articolo illustra i metodi che è possibile usare per implementare correttamente questa funzionalità.
 
-In genere le finestre di dialogo modale applicano le impostazioni a un oggetto esterno quando l'utente fa clic su OK per chiudere la finestra di dialogo. Lo stesso vale per una finestra delle proprietà: Quando l'utente fa clic su OK, le nuove impostazioni nella finestra delle proprietà diventano effettive.
+Le finestre di dialogo modali in genere applicano le impostazioni a un oggetto esterno quando l'utente fa clic su OK per chiudere la finestra di dialogo. Lo stesso vale per una finestra delle proprietà: quando l'utente fa clic su OK, le nuove impostazioni nella finestra delle proprietà diventano effettive.
 
-Tuttavia, è possibile consentire all'utente di salvare le impostazioni senza dover chiudere la finestra di dialogo Proprietà foglio. Questa è la funzione del pulsante Applica. Il pulsante Applica applica le impostazioni correnti in tutte le pagine delle proprietà per l'oggetto esterno, invece di applicare solo le impostazioni correnti della pagina attualmente attiva.
+Tuttavia, potrebbe essere necessario consentire all'utente di salvare le impostazioni senza dover chiudere la finestra di dialogo della finestra delle proprietà. Questa è la funzione del pulsante Applica. Il pulsante Applica applica le impostazioni correnti di tutte le pagine delle proprietà all'oggetto esterno, anziché applicare solo le impostazioni correnti della pagina attualmente attiva.
 
-Per impostazione predefinita, il pulsante Applica è sempre disabilitato. È necessario scrivere codice per attivare il pulsante Applica nel momento appropriato, ed è necessario scrivere codice per implementare l'effetto dell'applicazione, come illustrato di seguito.
+Per impostazione predefinita, il pulsante Applica è sempre disabilitato. È necessario scrivere il codice per abilitare il pulsante applica nei momenti appropriati ed è necessario scrivere il codice per implementare l'effetto di Apply, come illustrato di seguito.
 
-Se non si desidera offrire la funzionalità di applica all'utente, non è necessario rimuovere il pulsante Applica. È possibile lasciarla disattivata, poiché saranno comuni tra le applicazioni che usano il supporto di finestra delle proprietà standard disponibile nelle versioni future di Windows.
+Se non si desidera offrire la funzionalità applica all'utente, non è necessario rimuovere il pulsante Applica. È possibile lasciarla disabilitata, in quanto sarà comune tra le applicazioni che utilizzano il supporto della finestra delle proprietà standard disponibile nelle versioni future di Windows.
 
-Per una pagina come modificata del report e abilitare il pulsante Applica, chiamare `CPropertyPage::SetModified( TRUE )`. Se uno dei report di pagine in fase di modifica, il pulsante Applica rimane abilitato, indipendentemente dal fatto che la pagina attualmente attiva è stata modificata.
+Per segnalare una pagina come modificata e abilitare il pulsante Applica, chiamare `CPropertyPage::SetModified( TRUE )` . Se viene modificato un report delle pagine, il pulsante Applica rimarrà abilitato, indipendentemente dal fatto che la pagina attualmente attiva sia stata modificata.
 
-È necessario chiamare [CPropertyPage:: SetModified](../mfc/reference/cpropertypage-class.md#setmodified) ogni volta che l'utente modifica le impostazioni nella pagina. Un modo per rilevare quando un utente cambia un'impostazione nella pagina consiste nell'implementare i gestori di notifica di modifica per ognuno dei controlli nella pagina delle proprietà, ad esempio **EN_CHANGE** oppure **BN_CLICKED**.
+È necessario chiamare [CPropertyPage:: Unmodified](reference/cpropertypage-class.md#setmodified) ogni volta che l'utente modifica le impostazioni nella pagina. Un modo per rilevare quando un utente modifica un'impostazione nella pagina consiste nell'implementare i gestori delle notifiche delle modifiche per ognuno dei controlli della pagina delle proprietà, ad esempio **EN_CHANGE** o **BN_CLICKED**.
 
-Per implementare l'effetto del pulsante Applica, la finestra delle proprietà deve indicare il relativo proprietario o un altro oggetto esterno nell'applicazione, per applicare le impostazioni correnti in pagine delle proprietà. Allo stesso tempo, la finestra delle proprietà debba disabilitare il pulsante Applica chiamando `CPropertyPage::SetModified( FALSE )` per tutte le pagine che hanno applicato le modifiche all'oggetto esterno.
+Per implementare l'effetto del pulsante Applica, la finestra delle proprietà deve indicare al proprietario o a un altro oggetto esterno nell'applicazione di applicare le impostazioni correnti nelle pagine delle proprietà. Allo stesso tempo, la finestra delle proprietà deve disabilitare il pulsante Applica chiamando `CPropertyPage::SetModified( FALSE )` per tutte le pagine che applicavano le modifiche apportate all'oggetto esterno.
 
-Per un esempio di questo processo, vedere l'esempio MFC generale [PROPDLG](../overview/visual-cpp-samples.md).
+Per un esempio di questo processo, vedere l'esempio generale MFC [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestre delle proprietà](../mfc/property-sheets-mfc.md)
+[Finestre delle proprietà](property-sheets-mfc.md)

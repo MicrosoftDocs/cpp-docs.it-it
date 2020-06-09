@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-ms.openlocfilehash: 31b6bcb134b62fc11df78a846b3c256a2ef69c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a70d1d9225d2ac8ef2f7ed3ad9f603a64a937bc7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620094"
 ---
 # <a name="header-items-in-a-header-control"></a>Elementi di intestazione in un controllo Header
 
-Si dispone di un notevole controllo sull'aspetto e comportamento degli elementi di intestazione che costituiscono un controllo header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Ogni elemento intestazione può avere una stringa, un'immagine bitmap, un'immagine da un elenco di immagini associato o un valore a 32 bit definita dall'applicazione associata. La stringa, bitmap o l'immagine viene visualizzato nell'elemento di intestazione.
+È possibile controllare in modo significativo l'aspetto e il comportamento degli elementi di intestazione che costituiscono un controllo Header ([CHeaderCtrl](reference/cheaderctrl-class.md)). Ogni elemento dell'intestazione può includere una stringa, un'immagine bitmap, un'immagine da un elenco di immagini associato o un valore a 32 bit definito dall'applicazione associato. La stringa, la bitmap o l'immagine viene visualizzata nell'elemento dell'intestazione.
 
-È possibile personalizzare l'aspetto e il contenuto di nuovi elementi quando vengono creati tramite una chiamata [CHeaderCtrl:: InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem) o modificando un elemento esistente, con una chiamata a [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md#getitem) e[ CHeaderCtrl::SetItem](../mfc/reference/cheaderctrl-class.md#setitem).
+È possibile personalizzare l'aspetto e il contenuto dei nuovi elementi quando vengono creati effettuando una chiamata a [CHeaderCtrl:: InsertItem](reference/cheaderctrl-class.md#insertitem) o modificando un elemento esistente, con una chiamata a [CHeaderCtrl:: GetItem](reference/cheaderctrl-class.md#getitem) e [CHeaderCtrl:: SetItem](reference/cheaderctrl-class.md#setitem).
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Personalizzazione dell'aspetto dell'elemento intestazione](../mfc/customizing-the-header-item-s-appearance.md)
+- [Personalizzazione dell'aspetto dell'elemento di intestazione](customizing-the-header-item-s-appearance.md)
 
-- [Ordinamento degli elementi nel controllo header](../mfc/ordering-items-in-the-header-control.md)
+- [Ordinamento degli elementi nel controllo intestazione](ordering-items-in-the-header-control.md)
 
-- [Fornire il supporto di trascinamento e rilascio per gli elementi dell'intestazione](../mfc/providing-drag-and-drop-support-for-header-items.md)
+- [Fornire il supporto per il trascinamento della selezione per gli elementi di intestazione](providing-drag-and-drop-support-for-header-items.md)
 
-- [Utilizzo di elenchi immagini con controlli header](../mfc/using-image-lists-with-header-controls.md)
+- [Uso di elenchi di immagini con controlli Header](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)
+[Uso di CHeaderCtrl](using-cheaderctrl.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 6317b6665adb7f3a06da564fcf049d0b64eb42e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f822e3393853c780bfe4ee86d5a5c799ec7646d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456567"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617670"
 ---
-# <a name="addlvaluereference-class"></a>Classe add_lvalue_reference
+# <a name="add_lvalue_reference-class"></a>Classe add_lvalue_reference
 
 Crea un riferimento al tipo dal tipo.
 
@@ -32,9 +32,9 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un'istanza del modificatore di tipo include un tipo modificato che è *t* se *t* è un riferimento lvalue; in `T&`caso contrario,.
+Un'istanza del modificatore di tipo include un tipo modificato che è *t* se *t* è un riferimento lvalue; in caso contrario, `T&` .
 
 ## <a name="example"></a>Esempio
 
@@ -61,11 +61,11 @@ add_lvalue_reference_t<int> == int
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Classe remove_reference](../standard-library/remove-reference-class.md)
+[<type_traits>](type-traits.md)\
+[Classe remove_reference](remove-reference-class.md)

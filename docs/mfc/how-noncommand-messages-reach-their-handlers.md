@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 - message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
-ms.openlocfilehash: 4b9fb0a72b330380f0207db9968199a7e4c3d9b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7b2bf819c5305da4039fae172578298d3b4e609
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407939"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618501"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Come i messaggi Noncommand raggiungono i relativi gestori
 
-A differenza dei comandi, i messaggi Windows standard non vengono instradati attraverso una catena di comando destinazioni, ma sono in genere gestiti mediante la finestra in cui Windows invia il messaggio. La finestra può essere una finestra cornice principale, una finestra figlia MDI, un controllo standard, una finestra di dialogo, una vista o un altro tipo di finestra figlio.
+A differenza dei comandi, i messaggi Windows standard non vengono instradati tramite una catena di destinazioni comandi, ma vengono in genere gestiti dalla finestra in cui Windows invia il messaggio. La finestra potrebbe essere una finestra cornice principale, una finestra figlio MDI, un controllo standard, una finestra di dialogo, una visualizzazione o un altro tipo di finestra figlio.
 
-In fase di esecuzione, ogni finestra di Windows è associata a un oggetto finestra (derivata direttamente o indirettamente da `CWnd`) che ha le sue funzioni di mappa e il gestore di messaggi associati. Il framework utilizza la mappa dei messaggi, come per un comando, per eseguire il mapping ai gestori di messaggi in arrivo.
+In fase di esecuzione, ogni finestra di Windows è associata a un oggetto finestra (derivato direttamente o indirettamente da `CWnd` ) a cui sono associate le funzioni di gestione e mappa messaggi. Il Framework utilizza la mappa messaggi, come per un comando, per eseguire il mapping dei messaggi in ingresso ai gestori.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+[Chiamata di un gestore dal framework](how-the-framework-calls-a-handler.md)

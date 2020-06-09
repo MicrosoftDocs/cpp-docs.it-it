@@ -15,55 +15,55 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620733"
 ---
 # <a name="connection-points"></a>Punti di connessione
 
-Questo articolo illustra come implementare i punti di connessione (precedentemente noti come punti di connessione OLE) usando le classi MFC `CCmdTarget` e `CConnectionPoint`.
+In questo articolo viene illustrato come implementare i punti di connessione (noti in precedenza come punti di connessione OLE) utilizzando le classi MFC `CCmdTarget` e `CConnectionPoint` .
 
-In passato, il modello COM (Component Object) è definito un meccanismo generale (`IUnknown::QueryInterface`*) che consentiva di oggetti da implementare e di esporre funzionalità nelle interfacce. Tuttavia, non è stato definito un meccanismo di corrispondente per consentire agli oggetti per esporre le proprie funzionalità per chiamare le interfacce specifiche. In altre parole, COM definiti in ingresso come puntatori agli oggetti gestiti (puntatori alle interfacce dell'oggetto), ma non disponeva di un modello esplicito per le interfacce in uscita (l'oggetto contiene alle interfacce degli altri oggetti puntatori). COM è ora disponibile un modello, denominato punti di connessione, che supporta questa funzionalità.
+In passato, il Component Object Model (COM) definisce un meccanismo generale ( `IUnknown::QueryInterface` *) che consentiva agli oggetti di implementare ed esporre le funzionalità nelle interfacce. Tuttavia, un meccanismo corrispondente che consentiva agli oggetti di esporre la loro capacità di chiamare interfacce specifiche non è stato definito. Ovvero COM definisce il modo in cui i puntatori in ingresso agli oggetti (puntatori alle interfacce di tale oggetto) sono stati gestiti, ma non disponeva di un modello esplicito per le interfacce in uscita (puntatori che l'oggetto contiene alle interfacce di altri oggetti). COM dispone ora di un modello, denominato punti di connessione, che supporta questa funzionalità.
 
-Una connessione è costituito da due parti: l'oggetto che chiama l'interfaccia, chiamato l'origine e l'oggetto che implementa l'interfaccia, chiamata sink. Un punto di connessione è l'interfaccia esposta dall'origine. Tramite l'esposizione di un punto di connessione, un'origine consente ai sink stabilire connessioni a se stessa (origine). Tramite la connessione punto meccanismo (il `IConnectionPoint` interface), viene passato un puntatore all'interfaccia sink per l'oggetto di origine. Puntatore ' this ' fornisce l'origine con accesso all'implementazione del sink di un set di funzioni membro. Ad esempio, per generare un evento implementato dal sink, origine possa chiamare il metodo appropriato dell'implementazione del sink. La figura seguente illustra la connessione punto appena descritto.
+Una connessione è costituita da due parti: l'oggetto che chiama l'interfaccia, denominato origine e l'oggetto che implementa l'interfaccia, denominato sink. Un punto di connessione è l'interfaccia esposta dall'origine. Esponendo un punto di connessione, un'origine consente ai sink di stabilire connessioni a se stesso (origine). Tramite il meccanismo del punto di connessione (l' `IConnectionPoint` interfaccia), un puntatore all'interfaccia di sink viene passato all'oggetto di origine. Questo puntatore fornisce all'origine l'accesso all'implementazione del sink di un set di funzioni membro. Ad esempio, per generare un evento implementato dal sink, l'origine può chiamare il metodo appropriato dell'implementazione del sink. Nella figura seguente viene illustrato il punto di connessione appena descritto.
 
-![Punto di connessione implementato](../mfc/media/vc37lh1.gif "punto di connessione implementato") <br/>
+![Punto di connessione implementato](../mfc/media/vc37lh1.gif "Punto di connessione implementato") <br/>
 Punto di connessione implementato
 
-MFC implementa questo modello i [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) e [CCmdTarget](../mfc/reference/ccmdtarget-class.md) classi. Le classi derivate da `CConnectionPoint` implementano il `IConnectionPoint` interfaccia, utilizzato per esporre i punti di connessione ad altri oggetti. Le classi derivate da `CCmdTarget` implementano il `IConnectionPointContainer` interfaccia, che è possibile enumerare tutti i punti di connessione disponibili di un oggetto o trovare un punto di connessione specifico.
+MFC implementa questo modello nelle classi [CConnectionPoint](reference/cconnectionpoint-class.md) e [CCmdTarget](reference/ccmdtarget-class.md) . Le classi derivate da `CConnectionPoint` implementano l' `IConnectionPoint` interfaccia, utilizzate per esporre punti di connessione ad altri oggetti. Le classi derivate da `CCmdTarget` implementano l' `IConnectionPointContainer` interfaccia, che può enumerare tutti i punti di connessione disponibili di un oggetto o trovare un punto di connessione specifico.
 
-Per ogni punto di connessione implementato nella classe, è necessario dichiarare una parte di connessione che implementa il punto di connessione. Se si implementano uno o più punti di connessione, è necessario dichiarare anche una mappa di singola connessione nella classe. Una mappa di connessioni è una tabella dei punti di connessione supportate dal controllo ActiveX.
+Per ogni punto di connessione implementato nella classe, è necessario dichiarare una parte di connessione che implementa il punto di connessione. Se si implementano uno o più punti di connessione, è necessario dichiarare anche una singola mappa di connessione nella classe. Una mappa di connessione è una tabella di punti di connessione supportata dal controllo ActiveX.
 
-Gli esempi seguenti illustrano una mappa di connessione semplice e un punto di connessione. Nel primo esempio viene dichiarata la mappa delle connessioni e un punto; Nel secondo esempio implementa il mapping e il punto. Si noti che `CMyClass` deve essere un `CCmdTarget`-classe derivata. Nel primo esempio, viene inserito nella dichiarazione di classe, sotto il **protetti** sezione:
+Negli esempi seguenti viene illustrata una semplice mappa di connessione e un punto di connessione. Nel primo esempio viene dichiarata la mappa di connessione e il punto; nel secondo esempio viene implementata la mappa e il punto. Si noti che `CMyClass` deve essere una `CCmdTarget` classe derivata da. Nel primo esempio, il codice viene inserito nella dichiarazione di classe, nella sezione **protected** :
 
-[!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]
+[!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
-Il **BEGIN_CONNECTION_PART** e **END_CONNECTION_PART viene** le macro dichiarano una classe incorporata, `XSampleConnPt` (derivato da `CConnectionPoint`), che implementa questa particolare connessione punto. Se si desidera eseguire l'override di qualsiasi `CConnectionPoint` funzioni membro o aggiungere funzioni di membro personalizzata, dichiarare le variabili tra questi due macro. Ad esempio, il `CONNECTION_IID` sostituzioni di macro di `CConnectionPoint::GetIID` funzione membro quando viene inserita tra questi due macro.
+Le macro **BEGIN_CONNECTION_PART** e **END_CONNECTION_PART** dichiarano una classe incorporata, `XSampleConnPt` derivata da `CConnectionPoint` , che implementa questo particolare punto di connessione. Se si desidera eseguire l'override `CConnectionPoint` di qualsiasi funzione membro o aggiungere funzioni membro personalizzate, dichiararle tra queste due macro. Ad esempio, la `CONNECTION_IID` macro esegue l'override della `CConnectionPoint::GetIID` funzione membro quando viene inserita tra queste due macro.
 
-Nel secondo esempio, codice viene inserito nel file di implementazione del controllo (cpp). Questo codice implementa la mappa delle connessioni, che include il punto di connessione, `SampleConnPt`:
+Nel secondo esempio, il codice viene inserito nel file di implementazione del controllo (file con estensione cpp). Questo codice implementa la mappa di connessione, che include il punto di connessione `SampleConnPt` :
 
-[!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#2](codesnippet/cpp/connection-points_2.cpp)]
 
-Se la classe dispone di più di una connessione punto, inserire ulteriori **CONNECTION_PART** macro tra le **macro BEGIN_CONNECTION_MAP** e **END_CONNECTION_MAP** macro.
+Se la classe dispone di più di un punto di connessione, inserire macro **CONNECTION_PART** aggiuntive tra le macro **BEGIN_CONNECTION_MAP** e **END_CONNECTION_MAP** .
 
 Infine, aggiungere una chiamata a `EnableConnections` nel costruttore della classe. Ad esempio:
 
-[!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#3](codesnippet/cpp/connection-points_3.cpp)]
 
-Dopo aver inserito questo codice, il `CCmdTarget`-classe derivata espone un punto di connessione per il `ISampleSink` interfaccia. La figura seguente illustra questo esempio.
+Una volta inserito il codice, la `CCmdTarget` classe derivata da espone un punto di connessione per l' `ISampleSink` interfaccia. Questo esempio è illustrato nella figura seguente.
 
-![Punto di connessione implementato tramite MFC](../mfc/media/vc37lh2.gif "punto di connessione implementato tramite MFC") <br/>
+![Punto di connessione implementato tramite MFC](../mfc/media/vc37lh2.gif "Punto di connessione implementato tramite MFC") <br/>
 Un punto di connessione implementato con MFC
 
-In genere, i punti di connessione supportano "multicasting", ovvero la possibilità di trasmettere più nei sink connessa all'interfaccia stessa. Il frammento di esempio seguente viene illustrato come multicast scorrendo ogni sink in un punto di connessione:
+In genere, i punti di connessione supportano il "multicast", ovvero la possibilità di trasmettere più sink connessi alla stessa interfaccia. Il frammento di esempio seguente illustra come eseguire il multicast scorrendo ogni sink in un punto di connessione:
 
-[!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#4](codesnippet/cpp/connection-points_4.cpp)]
 
-Questo esempio recupera il set corrente di connessioni nel `SampleConnPt` punto di connessione con una chiamata a `CConnectionPoint::GetConnections`. Quindi esegue l'iterazione attraverso le connessioni e le chiamate `ISampleSink::SinkFunc` su tutte le connessioni attive.
+In questo esempio viene recuperato il set corrente di connessioni nel `SampleConnPt` punto di connessione con una chiamata a `CConnectionPoint::GetConnections` . Scorre quindi le connessioni e chiama `ISampleSink::SinkFunc` su ogni connessione attiva.
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

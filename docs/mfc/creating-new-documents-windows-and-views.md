@@ -24,18 +24,18 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: aa1c58b02df92d79ca9915032b97fb5c0e2eaffc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a714b5d7ba97c12b7134fa4890bddf5ed095c5b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371673"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620557"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Creazione di nuovi documenti, finestre e visualizzazioni
 
-Le figure seguenti forniscono una panoramica del processo di creazione di documenti, visualizzazioni e finestre cornice. Altri articoli che si concentrano sugli oggetti partecipanti forniscono ulteriori dettagli.
+Le figure seguenti forniscono una panoramica del processo di creazione per documenti, visualizzazioni e finestre cornice. Altri articoli che si concentrano sugli oggetti partecipanti forniscono ulteriori dettagli.
 
-Al termine di questo processo, gli oggetti cooperanti esistono e archiviano i puntatori l'uno all'altro. Le figure seguenti mostrano la sequenza di creazione degli oggetti. È possibile seguire la sequenza da figura a figura.
+Al termine di questo processo, gli oggetti cooperating esistono e archiviano i puntatori tra loro. Nelle figure seguenti è illustrata la sequenza con cui vengono creati gli oggetti. È possibile seguire la sequenza da figure a figure.
 
 ![Sequenza per la creazione di un documento](../mfc/media/vc387l1.gif "Sequenza per la creazione di un documento") <br/>
 Sequenza di creazione di un documento
@@ -46,17 +46,17 @@ Sequenza di creazione di una finestra cornice
 ![Sequenza per la creazione di una visualizzazione](../mfc/media/vc387l3.gif "Sequenza per la creazione di una visualizzazione") <br/>
 Sequenza di creazione di una visualizzazione
 
-Per informazioni su come il framework inizializza i nuovi oggetti documento, visualizzazione e finestra cornice, vedere le classi [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) in Riferimenti alla libreria MFC. Vedere anche [la nota tecnica 22](../mfc/tn022-standard-commands-implementation.md), che illustra ulteriormente i processi di creazione e inizializzazione sotto la discussione dei comandi standard del framework per le voci **New** e **Open** del menu **File** .
+Per informazioni sul modo in cui il Framework inizializza i nuovi oggetti documento, visualizzazione e finestra cornice, vedere classi [CDocument](reference/cdocument-class.md), [CView](reference/cview-class.md), [CFrameWnd](reference/cframewnd-class.md), [CMDIFRAMEWND](reference/cmdiframewnd-class.md)e [CMDIChildWnd](reference/cmdichildwnd-class.md) in riferimenti alla libreria MFC. Vedere anche la [Nota tecnica 22](tn022-standard-commands-implementation.md), che illustra i processi di creazione e inizializzazione più avanti nella discussione dei comandi standard del Framework per gli elementi **nuovi** e **aperti** nel menu **file** .
 
 ## <a name="initializing-your-own-additions-to-these-classes"></a><a name="_core_initializing_your_own_additions_to_these_classes"></a>Inizializzazione delle proprie aggiunte a queste classi
 
-Le figure precedenti suggeriscono inoltre i punti in cui è possibile eseguire l'override delle funzioni membro per inizializzare gli oggetti dell'applicazione. Un override `OnInitialUpdate` di nella classe di visualizzazione è la posizione migliore per inizializzare la visualizzazione. La `OnInitialUpdate` chiamata si verifica immediatamente dopo la creazione della finestra cornice e la visualizzazione all'interno della finestra cornice è associata al documento. Ad esempio, se la visualizzazione è `CScrollView` una `CView`visualizzazione a scorrimento (derivata da anziché `OnInitialUpdate` da ), è necessario impostare le dimensioni della visualizzazione in base alle dimensioni del documento nella sostituzione. Questo processo è descritto nella descrizione della classe [CScrollView](../mfc/reference/cscrollview-class.md). È possibile `CDocument` eseguire `OnNewDocument` l'override delle funzioni membro e `OnOpenDocument` fornire l'inizializzazione specifica dell'applicazione del documento. In genere, è necessario eseguire l'override di entrambi poiché un documento può essere creato in due modi.
+Le cifre precedenti suggeriscono anche i punti in cui è possibile eseguire l'override delle funzioni membro per inizializzare gli oggetti dell'applicazione. Un override di `OnInitialUpdate` nella classe di visualizzazione è il posto migliore per inizializzare la visualizzazione. La `OnInitialUpdate` chiamata viene eseguita immediatamente dopo la creazione della finestra cornice e la visualizzazione all'interno della finestra cornice è associata al relativo documento. Ad esempio, se la visualizzazione è una visualizzazione a scorrimento (derivata da `CScrollView` anziché `CView` ), è necessario impostare la dimensione della visualizzazione in base alle dimensioni del documento nella `OnInitialUpdate` sostituzione. Questo processo è descritto nella descrizione della classe [CScrollView](reference/cscrollview-class.md). È possibile eseguire l'override delle `CDocument` funzioni membro `OnNewDocument` e `OnOpenDocument` fornire l'inizializzazione specifica dell'applicazione del documento. In genere, è necessario eseguire l'override di entrambi poiché è possibile creare un documento in due modi.
 
-Nella maggior parte dei casi, l'override deve chiamare la versione della classe base. Per ulteriori informazioni, vedere le funzioni membro denominate delle classi [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md)e [CWinApp](../mfc/reference/cwinapp-class.md) in Riferimenti alla libreria MFC.
+Nella maggior parte dei casi, l'override deve chiamare la versione della classe base. Per ulteriori informazioni, vedere le funzioni membro denominate delle classi [CDocument](reference/cdocument-class.md), [CView](reference/cview-class.md), [CFrameWnd](reference/cframewnd-class.md)e [CWinApp](reference/cwinapp-class.md) nei riferimenti alla libreria MFC.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli di documenti e processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[Creazione di modelli di documento](../mfc/document-template-creation.md)<br/>
-[Creazione di documenti/visualizzazioni](../mfc/document-view-creation.md)<br/>
-[Relazioni tra oggetti MFCRelationships Among MFC Objects](../mfc/relationships-among-mfc-objects.md)
+[Modelli di documenti e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)<br/>
+[Creazione di modelli di documento](document-template-creation.md)<br/>
+[Creazione di documenti/visualizzazioni](document-view-creation.md)<br/>
+[Relazioni tra oggetti MFC](relationships-among-mfc-objects.md)

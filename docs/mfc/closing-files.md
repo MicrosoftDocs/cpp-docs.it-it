@@ -5,23 +5,23 @@ helpviewer_keywords:
 - MFC, file operations
 - files [MFC], closing
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
-ms.openlocfilehash: 69a0960c1edabab00cb71702acda526ee9ebd798
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51e51c88260a51ec44f11ecb5c2a88e645194f4e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617237"
 ---
 # <a name="closing-files"></a>Chiusura dei file
 
-Come di consueto in operazioni dei / o, dopo aver completato con un file, è necessario chiuderlo.
+Come di consueto nelle operazioni di I/O, una volta terminata la ricerca di un file, è necessario chiuderla.
 
 #### <a name="to-close-a-file"></a>Per chiudere un file
 
-1. Usare la **Chiudi** funzione membro. Questa funzione consente di chiudere il file del file system e svuota i buffer, se necessario.
+1. Usare la funzione membro **Close** . Questa funzione chiude il file del file System e Scarica i buffer, se necessario.
 
-Se è stato allocato il [CFile](../mfc/reference/cfile-class.md) oggetto sul frame (come illustrato nell'esempio illustrato [apertura di file](../mfc/opening-files.md)), l'oggetto verrà automaticamente verrà chiuso e poi eliminati definitivamente quando esce dall'ambito. Si noti che l'eliminazione di `CFile` oggetto non comporta l'eliminazione del file fisico del file System.
+Se l'oggetto [CFile](reference/cfile-class.md) è stato allocato nel frame, come nell'esempio illustrato in [apertura di file](opening-files.md), l'oggetto verrà automaticamente chiuso e quindi eliminato definitivamente quando esce dall'ambito. Si noti che l'eliminazione dell' `CFile` oggetto non comporta l'eliminazione del file fisico nel file System.
 
 ## <a name="see-also"></a>Vedere anche
 
-[File](../mfc/files-in-mfc.md)
+[File](files-in-mfc.md)

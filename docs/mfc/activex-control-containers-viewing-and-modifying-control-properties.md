@@ -1,5 +1,5 @@
 ---
-title: 'Contenitori di controlli ActiveX: Visualizzazione e modifica delle proprietà del controllo'
+title: 'Contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], viewing and modifying
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 1d42820efd06c2ae52f5d1b22b0bdfb6335c4a89
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: b0ca43f59cf70dea1348f22a08cfb4e89b45c3dd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907812"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617362"
 ---
-# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Contenitori di controlli ActiveX: Visualizzazione e modifica delle proprietà del controllo
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli
 
 Quando si inserisce un controllo ActiveX in un progetto, è utile visualizzare e modificare le proprietà supportate dal controllo ActiveX. In questo articolo viene illustrato come utilizzare l'editor risorse di Visual C++ per questo scopo.
 
 Se l'applicazione contenitore di controlli ActiveX utilizza controlli incorporati, è possibile visualizzare e modificare le proprietà del controllo nell'editor risorse. È possibile utilizzare l'editor risorse anche per impostare i valori di proprietà durante la fase di progettazione. Tramite l'editor risorse questi valori vengono salvati automaticamente nel file di risorse del progetto. Ogni istanza del controllo avrà quindi le proprietà inizializzate a questi valori.
 
-In questa procedura si presuppone che sia stato inserito un controllo nel progetto. Per informazioni, vedere [contenitori di controlli ActiveX: Inserimento di un controllo in un'applicazione](../mfc/inserting-a-control-into-a-control-container-application.md)contenitore di controlli.
+In questa procedura si presuppone che sia stato inserito un controllo nel progetto. Per informazioni, vedere [contenitori di controlli ActiveX: inserimento di un controllo in un'applicazione contenitore di controlli](inserting-a-control-into-a-control-container-application.md).
 
 Il primo passaggio per visualizzare le proprietà del controllo consiste nell'aggiungere un'istanza del controllo al modello di finestra di dialogo del progetto.
 
@@ -41,4 +41,4 @@ Utilizzare la finestra di dialogo **Proprietà** per modificare e testare immedi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
+[Contenitori di controlli ActiveX](activex-control-containers.md)

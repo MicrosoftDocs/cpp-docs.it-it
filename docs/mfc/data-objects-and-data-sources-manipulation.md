@@ -12,87 +12,87 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: a08b6ff274c73d301c156d65aa56fbecca49128c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f1a83511edbf240d9a05d6d489f6cda9453ccea9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370544"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620406"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Oggetti dati e origini dati: modifica
 
-Dopo aver creato un oggetto dati o un'origine dati, è possibile eseguire una serie di operazioni comuni sui dati, ad esempio l'inserimento e la rimozione di dati, l'enumerazione dei formati in cui si trova il dati e altro ancora. In questo articolo vengono descritte le tecniche necessarie per completare le operazioni più comuni. Gli argomenti includono:
+Dopo la creazione di un oggetto dati o di un'origine dati, è possibile eseguire una serie di operazioni comuni sui dati, ad esempio l'inserimento e la rimozione di dati, l'enumerazione dei formati in cui si trovano i dati e altro ancora. Questo articolo descrive le tecniche necessarie per completare le operazioni più comuni. Gli argomenti includono:
 
-- [Inserimento di dati in un'origine datiInserting data into a data source](#_core_inserting_data_into_a_data_source)
+- [Inserimento di dati in un'origine dati](#_core_inserting_data_into_a_data_source)
 
-- [Determinazione dei formati disponibili in un oggetto datiDetermining the formats available in a data object](#_core_determining_the_formats_available_in_a_data_object)
+- [Determinazione dei formati disponibili in un oggetto dati](#_core_determining_the_formats_available_in_a_data_object)
 
-- [Recupero di dati da un oggetto datiRetrieving data from a data object](#_core_retrieving_data_from_a_data_object)
+- [Recupero di dati da un oggetto dati](#_core_retrieving_data_from_a_data_object)
 
-## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>Inserimento di dati in un'origine datiInserting Data into a Data Source
+## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>Inserimento di dati in un'origine dati
 
-La modalità di inserimento dei dati in un'origine dati dipende dal fatto che i dati vengano forniti immediatamente o su richiesta e dal supporto in cui vengono forniti. Le possibilità sono le seguenti.
+Il modo in cui i dati vengono inseriti in un'origine dati varia a seconda che i dati vengano forniti immediatamente o su richiesta e in quale supporto viene fornito. Di seguito sono riportate le possibilità.
 
-### <a name="supplying-data-immediately-immediate-rendering"></a>Fornitura immediata dei dati (rendering immediato)
+### <a name="supplying-data-immediately-immediate-rendering"></a>Fornire immediatamente dati (rendering immediato)
 
-- Chiamare `COleDataSource::CacheGlobalData` ripetutamente per ogni formato degli Appunti in cui si forniscono i dati. Passare il formato degli Appunti da utilizzare, un handle alla memoria contenente i dati e, facoltativamente, una struttura **FORMATETC** che descrive i dati.
-
-     -oppure-
-
-- Se si desidera lavorare direttamente con le `COleDataSource::CacheData` strutture `COleDataSource::CacheGlobalData` **STGMEDIUM,** chiamare anziché nell'opzione precedente.
-
-### <a name="supplying-data-on-demand-delayed-rendering"></a>Fornitura di dati su richiesta (rendering ritardato)
-
-Questo è un argomento avanzato.
-
-- Chiamare `COleDataSource::DelayRenderData` ripetutamente per ogni formato degli Appunti in cui si forniscono i dati. Passare il formato degli Appunti da utilizzare e, facoltativamente, una struttura **FORMATETC** che descrive i dati. Quando vengono richiesti i dati, `COleDataSource::OnRenderData`il framework chiamerà , di cui è necessario eseguire l'override.
+- Chiamare `COleDataSource::CacheGlobalData` ripetutamente per ogni formato degli Appunti in cui vengono forniti i dati. Passare il formato degli Appunti da usare, un handle per la memoria che contiene i dati e, facoltativamente, una struttura **FORMATETC** che descrive i dati.
 
      -oppure-
 
-- Se si `CFile` utilizza un oggetto per `COleDataSource::DelayRenderFileData` fornire `COleDataSource::DelayRenderData` i dati, chiamare anziché nell'opzione precedente. Quando vengono richiesti i dati, `COleDataSource::OnRenderFileData`il framework chiamerà , di cui è necessario eseguire l'override.
+- Se si desidera utilizzare direttamente le strutture **STGMEDIUM** , chiamare `COleDataSource::CacheData` anziché `COleDataSource::CacheGlobalData` nell'opzione precedente.
 
-## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>Determinazione dei formati disponibili in un oggetto datiDetermining the Formats Available in a Data Object
+### <a name="supplying-data-on-demand-delayed-rendering"></a>Fornire dati su richiesta (rendering ritardato)
 
-Prima che un'applicazione consente all'utente di incollare i dati in esso, è necessario sapere se sono presenti formati negli Appunti che è possibile gestire. A tale scopo, l'applicazione deve eseguire le operazioni seguenti:To do this, your application should do the following:
+Si tratta di un argomento avanzato.
 
-1. Creare `COleDataObject` un oggetto e una struttura **FORMATETC.**
+- Chiamare `COleDataSource::DelayRenderData` ripetutamente per ogni formato degli Appunti in cui vengono forniti i dati. Passare il formato degli Appunti da usare e, facoltativamente, una struttura **FORMATETC** che descrive i dati. Quando i dati vengono richiesti, il Framework chiamerà `COleDataSource::OnRenderData` , di cui è necessario eseguire l'override.
 
-1. Chiamare la funzione `AttachClipboard` membro dell'oggetto dati per associare l'oggetto dati ai dati negli Appunti.
+     -oppure-
+
+- Se si utilizza un `CFile` oggetto per fornire i dati, chiamare `COleDataSource::DelayRenderFileData` anziché `COleDataSource::DelayRenderData` nell'opzione precedente. Quando i dati vengono richiesti, il Framework chiamerà `COleDataSource::OnRenderFileData` , di cui è necessario eseguire l'override.
+
+## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>Determinazione dei formati disponibili in un oggetto dati
+
+Prima che un'applicazione consenta all'utente di incollare i dati, è necessario stabilire se sono presenti formati negli Appunti che è in grado di gestire. A tale scopo, l'applicazione deve eseguire le operazioni seguenti:
+
+1. Creare un `COleDataObject` oggetto e una struttura **FORMATETC** .
+
+1. Chiamare la funzione membro dell'oggetto dati `AttachClipboard` per associare l'oggetto dati ai dati negli Appunti.
 
 1. Eseguire una delle operazioni seguenti:
 
-   - Chiamare la funzione `IsDataAvailable` membro dell'oggetto dati se sono necessari solo uno o due formati. Ciò consente di risparmiare tempo nei casi in cui i dati negli Appunti supportano molti più formati rispetto all'applicazione.
+   - Chiamare la funzione membro dell'oggetto dati `IsDataAvailable` se sono presenti solo uno o due formati necessari. In questo modo si risparmia tempo nei casi in cui i dati negli Appunti supportano un numero significativamente maggiore di formati rispetto all'applicazione.
 
      \-oppure-
 
-   - Chiamare la funzione `BeginEnumFormats` membro dell'oggetto dati per avviare l'enumerazione dei formati disponibili negli Appunti. Chiamare `GetNextFormat` quindi finché gli Appunti non restituiscono un formato supportato dall'applicazione o non sono presenti altri formati.
+   - Chiamare la funzione membro dell'oggetto dati `BeginEnumFormats` per iniziare a enumerare i formati disponibili negli Appunti. Chiamare quindi `GetNextFormat` finché gli Appunti non restituiscono un formato supportato dall'applicazione oppure non sono disponibili altri formati.
 
-Se si utilizza **ON_UPDATE_COMMAND_UI**, è ora possibile attivare gli elementi Incolla ed eventualmente Incolla speciale dal menu Modifica . A tale scopo, `CMenu::EnableMenuItem` `CCmdUI::Enable`chiamare o . Per ulteriori informazioni sulle operazioni che le applicazioni contenitore devono eseguire con le voci di menu e quando, vedere [Menu e risorse: aggiunte contenitore](../mfc/menus-and-resources-container-additions.md).
+Se si usa **ON_UPDATE_COMMAND_UI**, è ora possibile abilitare l'operazione Incolla e, possibilmente, incollare elementi speciali nel menu Modifica. A tale scopo, chiamare `CMenu::EnableMenuItem` o `CCmdUI::Enable` . Per ulteriori informazioni sulle applicazioni contenitore che devono essere eseguite con le voci di menu e quando, vedere [menu e risorse: aggiunte di contenitori](menus-and-resources-container-additions.md).
 
-## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>Recupero di dati da un oggetto datiRetrieving Data from a Data Object
+## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>Recupero di dati da un oggetto dati
 
-Una volta deciso un formato dati, non resta che recuperare i dati dall'oggetto dati. A tale scopo, l'utente decide dove inserire i dati e l'applicazione chiama la funzione appropriata. I dati saranno disponibili in uno dei seguenti supporti:
+Una volta scelto un formato dati, tutto ciò che rimane è quello di recuperare i dati dall'oggetto dati. A tale scopo, l'utente decide dove inserire i dati e l'applicazione chiama la funzione appropriata. I dati saranno disponibili in uno dei seguenti supporti:
 
 |Media|Funzione da chiamare|
 |------------|----------------------|
-|Memoria globale`HGLOBAL`( )|`COleDataObject::GetGlobalData`|
-|File`CFile`( )|`COleDataObject::GetFileData`|
-|**Struttura STGMEDIUM** (`IStorage`)|`COleDataObject::GetData`|
+|Memoria globale ( `HGLOBAL` )|`COleDataObject::GetGlobalData`|
+|File ( `CFile` )|`COleDataObject::GetFileData`|
+|Struttura **STGMEDIUM** ( `IStorage` )|`COleDataObject::GetData`|
 
-In genere, il supporto verrà specificato insieme al relativo formato degli Appunti. Ad esempio, un **oggetto** CF_EMBEDDEDSTRUCT `IStorage` è sempre in un supporto che richiede una struttura **STGMEDIUM.** Pertanto, è `GetData` necessario utilizzare perché è l'unica di queste funzioni che può accettare una struttura **STGMEDIUM.**
+In genere, il supporto viene specificato insieme al formato degli Appunti. Ad esempio, un oggetto **CF_EMBEDDEDSTRUCT** è sempre in un `IStorage` supporto che richiede una struttura **STGMEDIUM** . Pertanto, si utilizzerà `GetData` perché è l'unica di queste funzioni che può accettare una struttura **STGMEDIUM** .
 
-Per i casi in cui `IStream` `HGLOBAL` il formato degli Appunti `CFile` è in un o medio, il framework può fornire un puntatore che fa riferimento ai dati. L'applicazione può quindi utilizzare la lettura file per ottenere i dati in modo molto simile a come potrebbe importare i dati da un file. Essenzialmente, si tratta dell'interfaccia `OnRenderData` lato client delle routine e nell'origine `OnRenderFileData` dati.
+Per i casi in cui il formato degli appunti si trova in un oggetto `IStream` o `HGLOBAL` medio, il Framework può fornire un `CFile` puntatore che fa riferimento ai dati. L'applicazione può quindi usare il file Read per ottenere i dati nello stesso modo in cui potrebbe importare dati da un file. In sostanza, si tratta dell'interfaccia sul lato client per `OnRenderData` le `OnRenderFileData` routine e nell'origine dati.
 
-L'utente può ora inserire dati nel documento come per qualsiasi altro dato nello stesso formato.
+L'utente può ora inserire i dati nel documento come per tutti gli altri dati nello stesso formato.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Cosa vuoi sapere di più su
+### <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Trascinamento della selezione](../mfc/drag-and-drop-ole.md)
+- [Trascinamento della selezione](drag-and-drop-ole.md)
 
-- [Appunti](../mfc/clipboard.md)
+- [Appunti](clipboard.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
-[Classe COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
-[Classe COleDataSource](../mfc/reference/coledatasource-class.md)
+[Oggetti dati e origini dati (OLE)](data-objects-and-data-sources-ole.md)<br/>
+[Classe COleDataObject](reference/coledataobject-class.md)<br/>
+[Classe COleDataSource](reference/coledatasource-class.md)

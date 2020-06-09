@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: ad15250cf9a8dd663072cf9423263260bbb40a0e
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d365be21ef19a6779df649e9368fdc0cda4851df
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685731"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621439"
 ---
 # <a name="working-with-dialog-boxes-in-mfc"></a>Utilizzo delle finestre di dialogo in MFC
 
@@ -25,30 +25,30 @@ Per le finestre di dialogo non modali, è spesso possibile estrarre dati dall'og
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Creazione e visualizzazione di finestre di dialogo](../mfc/creating-and-displaying-dialog-boxes.md)
+- [Creazione e visualizzazione di finestre di dialogo](creating-and-displaying-dialog-boxes.md)
 
-- [Creazione di finestre di dialogo modali](../mfc/creating-modal-dialog-boxes.md)
+- [Creazione di finestre di dialogo modali](creating-modal-dialog-boxes.md)
 
-- [Creazione di finestre di dialogo non modali](../mfc/creating-modeless-dialog-boxes.md)
+- [Creazione di finestre di dialogo non modali](creating-modeless-dialog-boxes.md)
 
-- [Uso di un modello di finestra di dialogo in memoria](../mfc/using-a-dialog-template-in-memory.md)
+- [Uso di un modello di finestra di dialogo in memoria](using-a-dialog-template-in-memory.md)
 
-- [Impostazione del colore di sfondo della finestra di dialogo](../mfc/setting-the-dialog-boxs-background-color.md)
+- [Impostazione del colore di sfondo della finestra di dialogo](setting-the-dialog-boxs-background-color.md)
 
-- [Inizializzazione della finestra di dialogo](../mfc/initializing-the-dialog-box.md)
+- [Inizializzazione della finestra di dialogo](initializing-the-dialog-box.md)
 
-- [Gestione dei messaggi di Windows nella finestra di dialogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [Gestione dei messaggi di Windows nella finestra di dialogo](handling-windows-messages-in-your-dialog-box.md)
 
-- [Recupero di dati dall'oggetto finestra di dialogo](../mfc/retrieving-data-from-the-dialog-object.md)
+- [Recupero di dati dall'oggetto finestra di dialogo](retrieving-data-from-the-dialog-object.md)
 
-- [Chiusura della finestra di dialogo](../mfc/closing-the-dialog-box.md)
+- [Chiusura della finestra di dialogo](closing-the-dialog-box.md)
 
-- [Eliminazione definitiva della finestra di dialogo](../mfc/destroying-the-dialog-box.md)
+- [Eliminazione definitiva della finestra di dialogo](destroying-the-dialog-box.md)
 
-- [DDX (Dialog Data Exchange) e convalida (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+- [DDX (Dialog Data Exchange) e convalida (DDV)](dialog-data-exchange-and-validation.md)
 
-- [Finestre di dialogo della finestra delle proprietà](../mfc/property-sheets-and-property-pages-mfc.md)
+- [Finestre di dialogo della finestra delle proprietà](property-sheets-and-property-pages-mfc.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestre di dialogo](../mfc/dialog-boxes.md)
+[Finestre di dialogo](dialog-boxes.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], common controls
 ms.assetid: 8ae39e2d-12a8-4b17-909d-5bf155749123
-ms.openlocfilehash: c4de0dcfdfe66ab645126d9b0960406a324772bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce7638404faa1421a5af7358972ce86463509459
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388728"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619297"
 ---
 # <a name="common-control-sample-list"></a>Elenco di esempi di controlli comuni
 
@@ -23,4 +23,4 @@ Vedere i seguenti programmi di esempio che illustrano i controlli comuni:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli](../mfc/controls-mfc.md)
+[Controlli](controls-mfc.md)

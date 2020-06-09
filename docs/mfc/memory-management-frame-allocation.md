@@ -1,5 +1,5 @@
 ---
-title: 'Gestione della memoria: Allocazione di frame'
+title: 'Gestione della memoria: allocazione di frame'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 1acf2ce89e18dd64c166103b59b5eb7007214efd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ecf1c08164d1a760fce62457a6019e767ed2605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626295"
 ---
-# <a name="memory-management-frame-allocation"></a>Gestione della memoria: Allocazione di frame
+# <a name="memory-management-frame-allocation"></a>Gestione della memoria: allocazione di frame
 
-Allocazione sul frame prende il nome da "frame dello stack" è impostato ogni volta che viene chiamata una funzione. Il frame dello stack è un'area di memoria che temporaneamente contiene gli argomenti alla funzione, nonché eventuali variabili definite locali rispetto alla funzione. Variabili di frame vengono spesso denominate "automatiche" variabili perché il compilatore alloca automaticamente lo spazio per loro.
+L'allocazione nel frame prende il nome dal "stack frame" configurato ogni volta che viene chiamata una funzione. Il stack frame è un'area di memoria che include temporaneamente gli argomenti per la funzione e le variabili definite localmente per la funzione. Le variabili di frame vengono spesso denominate variabili "automatiche" perché il compilatore alloca automaticamente lo spazio.
 
-Esistono due caratteristiche principali delle allocazioni di frame. In primo luogo, quando si definisce una variabile locale, viene allocato spazio sufficiente sul frame dello stack per contenere la variabile di tipo intera, anche se è una matrice di grandi dimensioni o una struttura di dati. In secondo luogo, variabili di frame vengono eliminate automaticamente quando escono dall'ambito:
+Esistono due caratteristiche principali delle allocazioni di frame. In primo luogo, quando si definisce una variabile locale, nello stack frame viene allocato spazio sufficiente per conservare l'intera variabile, anche se si tratta di una matrice di grandi dimensioni o di una struttura di dati. Secondo, le variabili di frame vengono eliminate automaticamente quando escono dall'ambito:
 
-[!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
+[!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-Per le variabili di funzione locale, questa transizione ambito si verifica quando uscita della funzione, ma l'ambito di una variabile di intervallo può essere inferiore a una funzione se vengono usate parentesi graffe annidate. L'eliminazione automatica delle variabili di frame è molto importante. Nel caso di semplici tipi primitivi (ad esempio **int** oppure **byte**), matrici o strutture di dati, l'eliminazione automatica recupera semplicemente la memoria usata dalla variabile. Poiché la variabile esce dall'ambito, non è accessibile comunque. Nel caso degli oggetti C++, tuttavia, il processo di eliminazione automatica è un po' più complicato.
+Per le variabili della funzione locale, questa transizione dell'ambito si verifica quando la funzione viene chiusa, ma l'ambito di una variabile di frame può essere minore di una funzione se vengono utilizzate parentesi graffe nidificate. Questa eliminazione automatica delle variabili del frame è molto importante. Nel caso di tipi primitivi semplici (ad esempio **int** o **byte**), matrici o strutture di dati, l'eliminazione automatica recupera semplicemente la memoria usata dalla variabile. Poiché la variabile è uscita dall'ambito, non è possibile accedervi comunque. Nel caso di oggetti C++, tuttavia, il processo di eliminazione automatica è un po' più complesso.
 
-Quando un oggetto viene definito come una variabile di frame, il relativo costruttore viene richiamato automaticamente in corrispondenza del punto in cui viene rilevata la definizione. Quando l'oggetto esce dall'ambito, il relativo distruttore viene chiamato automaticamente prima che la memoria per l'oggetto venga recuperata. La costruzione e distruzione di $ può essere molto utile, ma occorre tenere presenti le chiamate automatiche, in particolare al distruttore.
+Quando un oggetto viene definito come una variabile di frame, il relativo costruttore viene richiamato automaticamente nel punto in cui viene rilevata la definizione. Quando l'oggetto esce dall'ambito, il relativo distruttore viene richiamato automaticamente prima che venga recuperata la memoria per l'oggetto. Questa costruzione e distruzione automatica può essere molto utile, ma è necessario essere a conoscenza delle chiamate automatiche, soprattutto del distruttore.
 
-Il vantaggio principale di allocazione di oggetti nel frame è che questi vengono eliminati automaticamente. Quando si allocano oggetti sul frame, non devi preoccuparti oggetti dimenticati causando perdite di memoria. (Per informazioni dettagliate sulle perdite di memoria, vedere l'articolo [rilevamento di perdite di memoria in MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)).) Uno svantaggio dell'allocazione di frame è che le variabili di frame possono essere usate all'esterno all'ambito. Un altro fattore nella scelta di allocazione di frame e allocazione dell'heap è che per gli oggetti e strutture di grandi dimensioni, è spesso preferibile usare heap anziché lo stack per l'archiviazione, poiché lo spazio dello stack è spesso limitato.
+Il vantaggio principale dell'allocazione di oggetti nel frame è che vengono eliminati automaticamente. Quando si allocano gli oggetti nel frame, non è necessario preoccuparsi degli oggetti dimenticati che provocano perdite di memoria. Per informazioni dettagliate sulle perdite di memoria, vedere l'articolo [rilevamento di perdite di memoria in MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)). Uno svantaggio dell'allocazione dei frame è che non è possibile usare le variabili di frame al di fuori dell'ambito. Un altro fattore nella scelta dell'allocazione di frame e dell'allocazione dell'heap è che per strutture e oggetti di grandi dimensioni è spesso preferibile usare l'heap invece dello stack per l'archiviazione perché lo spazio dello stack è spesso limitato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione della memoria](../mfc/memory-management.md)
+[Gestione della memoria](memory-management.md)

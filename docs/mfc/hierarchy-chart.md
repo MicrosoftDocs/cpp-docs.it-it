@@ -6,30 +6,30 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 703008b78994a9400bd5dfa1dfa64072fea949bd
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f49580610b247605f1c3ca030c0927acab29db89
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611945"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618730"
 ---
 # <a name="hierarchy-chart"></a>Grafico delle gerarchie
 
-La figura seguente rappresenta le classi MFC derivate da `CObject`:
+Nella figura seguente vengono rappresentate le classi MFC derivate da `CObject` :
 
-![Le classi derivate da CObject](../mfc/media/mfc_hierarchy_chart1of3.png  "le classi derivate da CObject")
+![Classi derivate da CObject](../mfc/media/mfc_hierarchy_chart1of3.png  "Classi derivate da CObject")
 
-La figura seguente rappresenta le classi MFC derivate da `CWnd` e `CCmdTarget`:
+Nella figura seguente vengono rappresentate le classi MFC derivate da `CWnd` e `CCmdTarget` :
 
-![Le classi derivate da CCmdTarget o CWnd](../mfc/media/mfc_hierarchy_chart2of3.png "le classi derivate da CCmdTarget o CWnd")
+![Classi derivate da CCmdTarget o CWnd](../mfc/media/mfc_hierarchy_chart2of3.png "Classi derivate da CCmdTarget o CWnd")
 
-Nella figura seguente vengono rappresentate le classi MFC non derivate da `CObject`:
+Nella figura seguente vengono rappresentate le classi MFC non derivate da `CObject` :
 
-![Classi non derivate da CObject](../mfc/media/mfc_hierarchy_chart3of3.png "classi non derivate da CObject")
+![Classi non derivate da CObject](../mfc/media/mfc_hierarchy_chart3of3.png "Classi non derivate da CObject")
 
-È possibile scaricare il grafico completo dal percorso seguente: [Gerarchia MFC grafici Download](https://aka.ms/hxgg8e).
+È possibile scaricare il grafico completo dal percorso seguente: [download dei grafici delle gerarchie MFC](https://aka.ms/hxgg8e).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Categorie del grafico della gerarchia](../mfc/hierarchy-chart-categories.md)<br/>
-[Panoramica della classe](../mfc/class-library-overview.md)
+[Categorie del grafico della gerarchia](hierarchy-chart-categories.md)<br/>
+[Cenni preliminari sulle classi](class-library-overview.md)
