@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6d7cc1d45ed3b963de0a0a004c1696ddbf0af440
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623924"
 ---
-# <a name="addrvaluereference-class"></a>Classe add_rvalue_reference
+# <a name="add_rvalue_reference-class"></a>Classe add_rvalue_reference
 
 Crea un tipo di riferimento rvalue del parametro del modello, se si tratta di un tipo di oggetto o funzione. In caso contrario, a causa della semantica di compressione dei riferimenti, il tipo è lo stesso del parametro di modello.
 
@@ -32,11 +32,11 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La `add_rvalue_reference` classe dispone di un membro `type`denominato, che è un alias per il tipo di un riferimento rvalue al parametro di modello *T*. La semantica di compressione dei riferimenti implica che, per i tipi non oggetto e non-funzione *t*, `T&&` è un *t*. Se, ad esempio, *T* è un tipo di riferimento `add_rvalue_reference<T>::type` lvalue, è il tipo di riferimento lvalue, non un riferimento rvalue.
+La `add_rvalue_reference` classe dispone di un membro denominato `type` , che è un alias per il tipo di un riferimento rvalue al parametro di modello *T*. La semantica di compressione dei riferimenti implica che, per i tipi non oggetto e non-funzione *t*, `T&&` è un *t*. Se, ad esempio, *T* è un tipo di riferimento lvalue, `add_rvalue_reference<T>::type` è il tipo di riferimento lvalue, non un riferimento rvalue.
 
-Per praticità \<, type_traits > definisce un modello Helper, `add_rvalue_reference_t`, che alias il `type` membro di `add_rvalue_reference`.
+Per praticità, \<type_traits> definisce un modello Helper, `add_rvalue_reference_t` , che consente di eseguire l'alias del `type` membro di `add_rvalue_reference` .
 
 ## <a name="example"></a>Esempio
 
@@ -71,12 +71,12 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>Requisiti
 
-Intestazione: \<type_traits >
+Intestazione: \<type_traits>
 
-Spazio dei nomi: STD
+Spazio dei nomi: std
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Classe add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)\
-[Classe is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)
+[<type_traits>](type-traits.md)\
+[Classe add_lvalue_reference](add-lvalue-reference-class.md)\
+[Classe is_rvalue_reference](is-rvalue-reference-class.md)

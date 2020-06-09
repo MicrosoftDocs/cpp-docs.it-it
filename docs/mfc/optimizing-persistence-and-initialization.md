@@ -7,43 +7,43 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 294d9c43f5f767329c04932c574485d7dca704e9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 57b98f7e2e4f9e23175b8b01c2e37ff49c499949
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624003"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Ottimizzazione di persistenza e inizializzazione
 
-Per impostazione predefinita, la persistenza e inizializzazione di un controllo vengono gestite dal `DoPropExchange` funzione membro. In un tipico controllo, questa funzione contiene chiamate a diversi **px** funzioni (`PX_Color`, `PX_Font`e così via), uno per ogni proprietà.
+Per impostazione predefinita, la persistenza e l'inizializzazione in un controllo vengono gestite dalla `DoPropExchange` funzione membro. In un controllo tipico questa funzione contiene chiamate a diverse funzioni di **PX_** ( `PX_Color` , `PX_Font` e così via), una per ogni proprietà.
 
-Questo approccio ha il vantaggio che un singolo `DoPropExchange` implementazione può essere utilizzata per l'inizializzazione, per la persistenza in formato binario e per la persistenza in formato elenco-cosiddette"proprietà" utilizzata da alcuni contenitori. Questa uno funzione fornisce tutte le informazioni sulle proprietà e i relativi valori predefiniti in un'unica posizione.
+Questo approccio offre il vantaggio di `DoPropExchange` poter usare una singola implementazione per l'inizializzazione, la persistenza in formato binario e la persistenza nel formato cosiddetto "Property-Bag" usato da alcuni contenitori. Questa funzione fornisce tutte le informazioni sulle proprietà e i relativi valori predefiniti in un'unica posizione.
 
-Tuttavia, questo generalità comporta tuttavia l'efficienza. Il **px _** funzioni ottenere loro flessibilità alle implementazioni multilivello che sono implicitamente meno efficienti rispetto agli approcci più diretti, ma meno flessibili. Inoltre, se un controllo passa un valore predefinito da un **px _** funzione, valore predefinito deve essere fornito ogni volta, anche in situazioni in cui il valore predefinito non può essere necessariamente utilizzato. Se la generazione del valore predefinito è un'operazione non semplice (ad esempio, quando il valore viene ottenuto da una proprietà di ambiente), quindi extra, operazioni non necessarie viene eseguita nei casi in cui non viene usato il valore predefinito.
+Tuttavia, questa generalità si presenta a scapito dell'efficienza. Le funzioni **PX_** ottengono la loro flessibilità grazie a implementazioni multilivello intrinsecamente meno efficienti rispetto a approcci più diretti ma meno flessibili. Inoltre, se un controllo passa un valore predefinito a una funzione **PX_** , il valore predefinito deve essere specificato ogni volta, anche in situazioni in cui il valore predefinito potrebbe non essere necessariamente utilizzato. Se la generazione del valore predefinito è un'attività non semplice (ad esempio, quando il valore viene ottenuto da una proprietà di ambiente), il lavoro aggiuntivo superfluo viene eseguito nei casi in cui non viene utilizzato il valore predefinito.
 
-È possibile migliorare le prestazioni della persistenza binario del controllo eseguendo l'override del controllo `Serialize` (funzione). L'implementazione predefinita di questa funzione membro esegue una chiamata ai `DoPropExchange` (funzione). Con una sostituzione, è possibile fornire un'implementazione più diretta per la persistenza binaria. Ad esempio, prendere in considerazione questo `DoPropExchange` funzione:
+È possibile migliorare le prestazioni di persistenza binaria del controllo eseguendo l'override della funzione del controllo `Serialize` . L'implementazione predefinita di questa funzione membro esegue una chiamata alla `DoPropExchange` funzione. Eseguendo l'override, è possibile fornire un'implementazione più diretta per la persistenza binaria. Ad esempio, si consideri questa `DoPropExchange` funzione:
 
-[!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#1](codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]
 
-Per migliorare le prestazioni della persistenza binaria di questo controllo, è possibile eseguire l'override di `Serialize` funzionare nel modo seguente:
+Per migliorare le prestazioni della persistenza binaria di questo controllo, è possibile eseguire l'override della `Serialize` funzione come indicato di seguito:
 
-[!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#2](codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]
 
-Il `dwVersion` variabile locale può essere usata per rilevare la versione dello stato persistente del controllo in fase di caricamento o salvataggio. È possibile usare questa variabile invece di chiamare [CPropExchange:: GetVersion](../mfc/reference/cpropexchange-class.md#getversion).
+La `dwVersion` variabile locale può essere usata per rilevare la versione dello stato persistente del controllo caricato o salvato. È possibile usare questa variabile invece di chiamare [CPropExchange:: GetVersion](reference/cpropexchange-class.md#getversion).
 
-Per ridurre lo spazio nel formato persistente per un **BOOL** proprietà (e per mantenerlo compatibile con il formato generato dal `PX_Bool`), è possibile archiviare la proprietà come un **BYTE**, come indicato di seguito:
+Per salvare uno spazio ridotto nel formato persistente per una proprietà **bool** (e per mantenerlo compatibile con il formato prodotto da `PX_Bool` ), è possibile archiviare la proprietà come **byte**, come indicato di seguito:
 
-[!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#3](codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]
 
-Si noti che nel caso di caricamento, viene usata una variabile temporanea e il relativo valore viene assegnato, anziché eseguire il cast *m_boolProp* a un **BYTE** riferimento. La tecnica di cast comporterebbe un solo byte del *m_boolProp* in fase di modifica, lasciando i byte rimanenti non inizializzati.
+Si noti che nel caso di carico viene usata una variabile temporanea e quindi il relativo valore viene assegnato, anziché eseguire il cast *m_boolProp* a un riferimento a un **byte** . La tecnica di cast comporta la modifica di un solo byte di *m_boolProp* , lasciando i byte rimanenti non inizializzati.
 
-Per il controllo stesso, è possibile ottimizzare l'inizializzazione del controllo eseguendo l'override [OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) come indicato di seguito:
+Per lo stesso controllo, è possibile ottimizzare l'inizializzazione del controllo eseguendo l'override di [COleControl:: OnResetState](reference/colecontrol-class.md#onresetstate) come indicato di seguito:
 
-[!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#4](codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]
 
-Sebbene `Serialize` e `OnResetState` è stato eseguito l'override, il `DoPropExchange` funzione deve rimanere invariata perché viene ancora usato per il salvataggio permanente nel formato di contenitore di proprietà. È importante mantenere tutte e tre di queste funzioni per garantire che il controllo gestisce le relative proprietà in modo coerente, indipendentemente dal fatto che la persistenza Usa meccanismo del contenitore.
+Sebbene `Serialize` e `OnResetState` siano stati sottoposti a override, la `DoPropExchange` funzione deve essere mantenuta intatta perché è ancora usata per la persistenza nel formato del contenitore delle proprietà. È importante mantenere tutte e tre queste funzioni per garantire che il controllo gestisca le proprietà in modo coerente, indipendentemente dal meccanismo di persistenza utilizzato dal contenitore.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)
+[Controlli ActiveX MFC: ottimizzazione](mfc-activex-controls-optimization.md)

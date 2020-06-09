@@ -2,12 +2,12 @@
 title: Configurare un progetto C++ Linux in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150966"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623598"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -17,13 +17,13 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
-Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake Linux, vedere [Configurare un progetto Linux CMake](cmake-linux-project.md).
+Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake Linux, vedere [configurare un progetto CMake per Linux](cmake-linux-project.md).
 
 È possibile configurare un progetto Linux in modo che abbia come destinazione una macchina Linux fisica, una macchina virtuale o il [sottosistema Windows per Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 versione 16.1:**
+**Visual Studio 2019 versione 16,1**:
 
 - Quando la destinazione è WSL, è possibile evitare le operazioni di copia necessarie per la compilazione e IntelliSense quando le destinazioni sono i sistemi Linux remoti.
 
@@ -51,7 +51,7 @@ Per modificare le impostazioni relative al computer Linux remoto, configurare le
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 versione 16.1:** per impostare come destinazione il sottosistema Windows per Linux, fare clic sulla freccia giù per **Set di strumenti della piattaforma** e scegliere **WSL_1_0**. Le altre opzioni remote scompariranno e al loro posto verrà visualizzato il percorso alla shell WSL predefinita:
+   **Visual Studio 2019 versione 16,1**: per fare riferimento al sottosistema Windows per Linux, fare clic sulla freccia verso il basso per il **set di strumenti della piattaforma** e scegliere **WSL_1_0**. Le altre opzioni remote scompariranno e al loro posto verrà visualizzato il percorso alla shell WSL predefinita:
 
    ![Computer di generazione WSL](media/wsl-remote-vs2019.png)
 
@@ -78,7 +78,7 @@ Questa sezione non si applica se la destinazione è WSL.
 
 Durante la compilazione in sistemi remoti, i file di origine del computer di sviluppo vengono copiati nel computer Linux dove vengono poi compilati. Per impostazione predefinita, tutti i file di origine del progetto di Visual Studio vengono copiati nel percorso impostato sopra. Tuttavia,è anche possibile aggiungere file di origine aggiuntivi all'elenco oppure disabilitare totalmente la copia di file di origine. Quest'ultima è l'impostazione predefinita per i progetti makefile.
 
-- **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto. Per impostazione predefinita, ** \@il valore predefinito di (SourcesToCopyRemotely)** è impostato su tutti i file di codice sorgente nel progetto, ma non include alcun file di risorse/risorse, ad esempio immagini.
+- **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto. Per impostazione predefinita, il valore predefinito di ** \@ (SourcesToCopyRemotely)** è tutti i file del codice sorgente nel progetto, ma non tutti i file di asset/risorse, ad esempio le immagini.
 
 - L'opzione **Copia origini** può essere attivata e disattivata per attivare e disattivare la copia dei file di origine nel computer remoto.
 
@@ -97,7 +97,7 @@ Poiché tutta la compilazione avviene in un computer remoto (o WSL), sono stati 
 Quando si aggiunge una nuova connessione in **Gestione connessione**, Visual Studio rileva automaticamente le directory di inclusione per il compilatore nel sistema remoto. Visual Studio quindi comprime e copia i file in una directory nel computer Windows locale. Successivamente, ogni volta che si usa la connessione in un progetto Visual Studio o CMake, le intestazioni in tali directory vengono usate per gestire IntelliSense.
 
 > [!NOTE]
-> In Visual Studio 2019 versione 16.5 e successive, la copia dell'intestazione remota è stata ottimizzata. Le intestazioni vengono ora copiate su richiesta quando si apre un progetto Linux o si configura CMake per una destinazione Linux.Headers are now copied on-demand when opening a Linux project or configuring CMake for a Linux target. La copia viene eseguita in background in base al progetto, in base ai compilatori specificati del progetto. Per ulteriori informazioni, vedere [Miglioramenti all'accuratezza e alle prestazioni di Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
+> In Visual Studio 2019 versione 16,5 e successive la copia dell'intestazione remota è stata ottimizzata. Le intestazioni vengono ora copiate su richiesta quando si apre un progetto Linux o si configura CMake per una destinazione Linux. La copia viene eseguita in background per ogni progetto, in base ai compilatori specificati del progetto. Per altre informazioni, vedere [miglioramenti all'accuratezza e alle prestazioni di IntelliSense per Linux](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
 
 Questa funzionalità dipende dal computer Linux in cui è installato il file ZIP. Per installare lo ZIP usare questo comando apt-get:
 
@@ -126,7 +126,7 @@ Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiat
 ## <a name="see-also"></a>Vedere anche
 
 [Impostare il compilatore e le proprietà di compilazione](../build/working-with-project-properties.md)<br/>
-[Proprietà generali di C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Directory di VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Proprietà di un progetto Copia origini (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Proprietà di un evento di compilazione (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Proprietà generali di C++ (Linux C++)](prop-pages/general-linux.md)<br/>
+[Directory di VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Proprietà di un progetto Copia origini (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Proprietà di un evento di compilazione (Linux C++)](prop-pages/build-events-linux.md)

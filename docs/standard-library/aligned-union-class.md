@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ae6ef629535238b9406216afd9f680a5c1e1afe0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623796"
 ---
 # <a name="aligned_union-class"></a>Classe aligned_union
 
@@ -29,13 +29,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *Len*
+*Len*\
 Valore di allineamento per il tipo più grande dell'unione.
 
 *Tipi*\
 Tipi distinti nell'unione sottostante.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Usare il modello di classe per ottenere l'allineamento e la dimensione necessari per archiviare un'Unione in un archivio non inizializzato. Il typedef del membro `type` denomina un tipo POD adatto per l'archiviazione di qualsiasi tipo elencato nei *tipi*; la dimensione minima è *Len*. Il membro statico `alignment_value` di tipo `std::size_t` contiene l'allineamento più restrittivo necessario per tutti i tipi elencati nei *tipi*.
 
@@ -79,11 +79,11 @@ value of u->i is 1065353216
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Classe alignment_of](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[Classe alignment_of](alignment-of-class.md)

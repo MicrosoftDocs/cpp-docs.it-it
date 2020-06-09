@@ -1,5 +1,5 @@
 ---
-title: 'Appunti: Utilizzo degli Appunti di Windows'
+title: 'Appunti: utilizzo degli Appunti di Windows'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard commands
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b11bfe18443858de0dd7032f72fecadb1d6ebdd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326989"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626042"
 ---
-# <a name="clipboard-using-the-windows-clipboard"></a>Appunti: Utilizzo degli Appunti di Windows
+# <a name="clipboard-using-the-windows-clipboard"></a>Appunti: utilizzo degli Appunti di Windows
 
-Questo argomento descrive come usare le API degli Appunti di Windows standard all'interno dell'applicazione MFC.
+In questo argomento viene descritto come utilizzare l'API degli Appunti di Windows standard all'interno dell'applicazione MFC.
 
-La maggior parte delle applicazioni per Windows supportano Taglia o copia dei dati negli Appunti di Windows e incollare dati dagli Appunti. I formati di dati negli Appunti possono variare tra le applicazioni. Il framework supporta solo un numero limitato di formati degli Appunti per un numero limitato di classi. In genere si implementerà i comandi relativi agli Appunti, ovvero le operazioni Taglia, copia e Incolla, nel menu di modifica per la visualizzazione. La libreria di classi definisce gli ID di comando per i comandi seguenti: **ID_EDIT_CUT**, **ID_EDIT_COPY**, e **ID_EDIT_PASTE**. Vengono definite anche le richieste di messaggio.
+La maggior parte delle applicazioni per Windows supporta il sezionamento o la copia dei dati negli Appunti di Windows e incolla i dati dagli Appunti. I formati di dati degli Appunti variano tra le applicazioni. Il Framework supporta solo un numero limitato di formati degli Appunti per un numero limitato di classi. In genere, i comandi correlati agli Appunti, ovvero taglia, copia e incolla, vengono implementati dal menu modifica per la visualizzazione. La libreria di classi definisce gli ID comando per i comandi seguenti: **ID_EDIT_CUT**, **ID_EDIT_COPY**e **ID_EDIT_PASTE**. Vengono definite anche le richieste di riga di messaggio.
 
-[I messaggi e comandi nel Framework](../mfc/messages-and-commands-in-the-framework.md) viene illustrato come gestire i comandi di menu nell'applicazione eseguendo il mapping del comando di menu per una funzione del gestore. Fino a quando l'applicazione non definisce funzioni del gestore per i comandi negli Appunti dal menu Modifica, rimangono disabilitati. Per scrivere funzioni del gestore per i comandi Taglia e copia, implementare la selezione nell'applicazione. Per scrivere una funzione del gestore per il comando Incolla, eseguire una query negli Appunti se contiene dati in un formato che di applicazione può accettare. Ad esempio, per abilitare il comando di copia, è possibile scrivere un gestore simile al seguente:
+[Messaggi e comandi nel Framework](messages-and-commands-in-the-framework.md) spiegano come gestire i comandi di menu nell'applicazione eseguendo il mapping del comando di menu a una funzione del gestore. Finché l'applicazione non definisce le funzioni del gestore per i comandi degli Appunti nel menu modifica, restano disabilitate. Per scrivere le funzioni del gestore per i comandi taglia e copia, implementare la selezione nell'applicazione. Per scrivere una funzione di gestione per il comando Incolla, eseguire una query sugli Appunti per verificare se contiene dati in un formato che l'applicazione può accettare. Ad esempio, per abilitare il comando copy, è possibile scrivere un gestore simile al seguente:
 
 [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]
 
-I comandi Taglia, copia e Incolla solo sono significativi in determinati contesti. I comandi Taglia e copia devono essere abilitati solo quando viene selezionato un elemento e il comando Incolla solo quando un elemento è negli Appunti. È possibile fornire questo comportamento definendo le funzioni del gestore di aggiornamento che abilita o disabilita i comandi seguenti a seconda del contesto. Per altre informazioni, vedere [come oggetti dell'interfaccia utente di aggiornamento](../mfc/how-to-update-user-interface-objects.md).
+I comandi taglia, copia e incolla sono significativi solo in determinati contesti. I comandi taglia e copia devono essere abilitati solo quando si seleziona un elemento e il comando Incolla solo quando qualcosa è presente negli Appunti. È possibile fornire questo comportamento definendo le funzioni del gestore di aggiornamento che abilitano o disabilitano questi comandi a seconda del contesto. Per ulteriori informazioni, vedere [come aggiornare gli oggetti dell'interfaccia utente](how-to-update-user-interface-objects.md).
 
-La libreria Microsoft Foundation Class fornisce supporto per gli Appunti per la modifica di testo con il `CEdit` e `CEditView` classi. Le classi OLE inoltre semplificano implementa le operazioni degli Appunti che interessano elementi OLE. Per altre informazioni sulle classi OLE, vedere [negli Appunti: Utilizzo del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
+Il libreria Microsoft Foundation Class fornisce supporto per gli Appunti per la modifica del testo con le `CEdit` `CEditView` classi e. Le classi OLE semplificano inoltre l'implementazione di operazioni degli appunti che coinvolgono gli elementi OLE. Per ulteriori informazioni sulle classi OLE, vedere [Appunti: utilizzo del meccanismo degli Appunti OLE](clipboard-using-the-ole-clipboard-mechanism.md).
 
-Implementazione di altre modificare i comandi di menu, ad esempio di annullamento (**ID_EDIT_UNDO**) e fase di rollforward (**ID_EDIT_REDO**), viene lasciato anche all'utente. Se l'applicazione non supporta i comandi seguenti, è possibile eliminarli facilmente dal file di risorse usando l'editor di risorse di Visual C++.
+Anche l'implementazione di altri comandi di menu di modifica, ad esempio Undo (**ID_EDIT_UNDO**) e Redo (**ID_EDIT_REDO**), viene lasciata all'utente. Se l'applicazione non supporta questi comandi, è possibile eliminarli facilmente dal file di risorse usando gli editor di risorse Visual C++.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Copiare e incollare dati](../mfc/clipboard-copying-and-pasting-data.md)
+- [copiare e incollare dati](clipboard-copying-and-pasting-data.md)
 
-- [Uso del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+- [Utilizzo del meccanismo degli Appunti OLE](clipboard-using-the-ole-clipboard-mechanism.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Appunti](../mfc/clipboard.md)
+[Appunti](clipboard.md)

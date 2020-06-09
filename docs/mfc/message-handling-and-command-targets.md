@@ -9,26 +9,26 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-ms.openlocfilehash: 702cb96da13d6109c17a28e58c08a30af3f77fd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbcbce1e476fef0d076f9c25b46b3166c1eb5935
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624341"
 ---
 # <a name="message-handling-and-command-targets"></a>Gestione dei messaggi e destinazioni comandi
 
-L'interfaccia di dispatch comando `IOleCommandTarget` definisce un meccanismo semplice ed estendibile per eseguire una query ed eseguire i comandi. Questo meccanismo è più semplice rispetto all'automazione `IDispatch` perché si basa interamente su un set standard di comandi; i comandi hanno raramente argomenti ed non è coinvolta alcuna informazione sul tipo (indipendenza dai tipi viene ridotto per anche gli argomenti di comando).
+L'interfaccia dispatch del comando `IOleCommandTarget` definisce un meccanismo semplice ed estendibile per eseguire query ed eseguire comandi. Questo meccanismo è più semplice rispetto all'automazione `IDispatch` perché si basa interamente su un set standard di comandi. i comandi hanno raramente argomenti e non sono necessarie informazioni sul tipo (l'indipendenza dai tipi è diminuita anche per gli argomenti del comando).
 
-Nella progettazione dell'interfaccia dispatch del comando, ogni comando appartiene a un "gruppo di comandi" che viene identificato con un **GUID**. Pertanto, chiunque può definire un nuovo gruppo e tutti i comandi all'interno di tale gruppo senza dover rivolgersi a Microsoft o altri fornitori. (Si tratta fondamentalmente dello stesso metodo di definizione come una **dispinterface** plus **DISPID** in automazione. Si è in questo caso, si sovrappongono anche se questo meccanismo di routing di comandi è solo per il routing dei comandi e non per la creazione di script/programmabilità su larga scala, come gli handle di automazione).
+Nella progettazione dell'interfaccia dispatch del comando ogni comando appartiene a un "gruppo di comandi", che viene identificato con un **GUID**. Pertanto, chiunque può definire un nuovo gruppo e definire tutti i comandi all'interno di tale gruppo senza che sia necessario coordinarsi con Microsoft o altri fornitori. Si tratta essenzialmente dello stesso mezzo di definizione di un' **interfaccia dispatch** più **DISPID** in automazione. Qui si verifica una sovrapposizione, anche se questo meccanismo di routing dei comandi è solo per il routing dei comandi e non per lo script o la programmabilità su larga scala come handle di automazione.
 
-`IOleCommandTarget` gestisce gli scenari seguenti:
+`IOleCommandTarget`gestisce gli scenari seguenti:
 
-- Quando un oggetto è attivato, solo in genere vengono visualizzate le barre degli strumenti dell'oggetto e le barre degli strumenti dell'oggetto potrebbero essere disponibili pulsanti per alcuni dei comandi del contenitore, ad esempio sul posto **Print**, **anteprima di stampa**,  **Salvare**, **New**, **Zoom**e così via. (Attivazione sul posto standard consigliabile rimuovere tali pulsanti dalle barre degli strumenti o in meno disabilitarli. Ne consegue che questi comandi per essere abilitato e ancora indirizzato al gestore a destra.) Attualmente, non vi è alcun meccanismo per l'oggetto inviare i comandi seguenti per il contenitore.
+- Quando un oggetto viene attivato sul posto, vengono in genere visualizzate solo le barre degli strumenti dell'oggetto e le barre degli strumenti dell'oggetto possono contenere pulsanti per alcuni comandi del contenitore, ad esempio **stampa**, **Anteprima di stampa**, **Salva**, **nuovo**, **Zoom**e altro. Gli standard di attivazione sul posto consigliano agli oggetti di rimuovere tali pulsanti dalle barre degli strumenti o di disabilitarli almeno. Questa progettazione consente l'abilitazione di questi comandi e l'instradamento al gestore appropriato. Attualmente non è disponibile alcun meccanismo per l'invio di questi comandi al contenitore da parte dell'oggetto.
 
-- Quando un documento attivo viene incorporato in un contenitore di documenti attivi (ad esempio di Raccoglitore di Office), il contenitore potrebbe essere necessario inviare comandi tali **Print**, **Imposta pagina**, **proprietà**e così via al documento attivo indipendente.
+- Quando un documento attivo viene incorporato in un contenitore di documenti attivi (ad esempio, Binder di Office), potrebbe essere necessario che il contenitore invii comandi quali **stampa**, **Imposta pagina**, **proprietà**e altri utenti al documento attivo contenuto.
 
-Questo comando semplice di routing può essere gestito tramite gli standard di automazione esistenti e `IDispatch`. Tuttavia, l'overhead coinvolti `IDispatch` è maggiore di questo caso, è necessario in modo `IOleCommandTarget` fornisce un mezzo più semplice per ottenere gli stessi obiettivi:
+Questo semplice routing dei comandi può essere gestito tramite gli standard di automazione esistenti e `IDispatch` . Tuttavia, l'overhead associato a `IDispatch` è maggiore di quello necessario in questo caso, pertanto `IOleCommandTarget` fornisce un mezzo più semplice per ottenere le stesse estremità:
 
 ```
 interface IOleCommandTarget : IUnknown
@@ -47,8 +47,8 @@ interface IOleCommandTarget : IUnknown
     }
 ```
 
-Il `QueryStatus` qui il metodo verifica se un determinato set di comandi, il set viene identificato con un **GUID**, è supportato. Questa chiamata riempie una matrice di **OLECMD** valori (strutture) con l'elenco supportato di comandi, nonché la restituzione di testo che descrive il nome di un comando e/o lo stato di informazioni. Quando il chiamante desidera richiamare un comando, è possibile passare il comando (e il set **GUID**) a `Exec` oltre a opzioni e argomenti, ottenere nuovamente un valore restituito.
+Il `QueryStatus` metodo verifica se è supportato un particolare set di comandi, il set identificato con un **GUID**. Questa chiamata compila una matrice di valori **OLECMD** (strutture) con l'elenco supportato di comandi, nonché la restituzione di testo che descrive il nome di un comando e/o informazioni sullo stato. Quando il chiamante desidera richiamare un comando, può passare il comando (e il **GUID**del set) a `Exec` insieme a opzioni e argomenti, ottenendo un valore restituito.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Contenitori documenti attivi](../mfc/active-document-containers.md)
+[Contenitori documenti attivi](active-document-containers.md)

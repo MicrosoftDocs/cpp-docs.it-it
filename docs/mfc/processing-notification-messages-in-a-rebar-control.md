@@ -7,16 +7,16 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e1e1aaa5056b43f0dd23976fead94bc800163613
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507964"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625181"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Elaborazione dei messaggi di notifica in un controllo Rebar
 
-Nella classe padre del controllo Rebar creare una `OnChildNotify` funzione di gestione con un'istruzione switch per tutti i messaggi di notifica del controllo Rebar (`CReBarCtrl`) che si desidera gestire. Le notifiche vengono inviate alla finestra padre quando l'utente trascina oggetti sul controllo Rebar, modifica il layout delle bande del Rebar, Elimina le bande dal controllo Rebar e così via.
+Nella classe padre del controllo Rebar creare una `OnChildNotify` funzione di gestione con un'istruzione switch per tutti `CReBarCtrl` i messaggi di notifica del controllo Rebar () che si desidera gestire. Le notifiche vengono inviate alla finestra padre quando l'utente trascina oggetti sul controllo Rebar, modifica il layout delle bande del Rebar, Elimina le bande dal controllo Rebar e così via.
 
 L'oggetto controllo Rebar può inviare i messaggi di notifica seguenti:
 
@@ -42,5 +42,5 @@ Per ulteriori informazioni su queste notifiche, vedere Guida di [riferimento al 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
-[Controlli](../mfc/controls-mfc.md)
+[Uso di CReBarCtrl](using-crebarctrl.md)<br/>
+[Controlli](controls-mfc.md)

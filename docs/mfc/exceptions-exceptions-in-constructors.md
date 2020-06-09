@@ -1,26 +1,26 @@
 ---
-title: 'Eccezioni: Eccezioni nei costruttori'
+title: 'Eccezioni: eccezioni nei costruttori'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [MFC], exceptions
 - throwing exceptions [MFC], in constructors
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
-ms.openlocfilehash: 0b11f5be18879d5ad4b9e204bb02e18b4617c6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4089f4d44f03c7de3432f137b5d28f74189e1cb9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624621"
 ---
-# <a name="exceptions-exceptions-in-constructors"></a>Eccezioni: Eccezioni nei costruttori
+# <a name="exceptions-exceptions-in-constructors"></a>Eccezioni: eccezioni nei costruttori
 
-Quando si genera un'eccezione in un costruttore, pulire tutti gli oggetti e le allocazioni di memoria sono state apportate prima della generazione dell'eccezione, come spiegato in [alle eccezioni: Generazione di eccezioni da funzioni personalizzate](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
+Quando si genera un'eccezione in un costruttore, pulire tutti gli oggetti e le allocazioni di memoria creati prima di generare l'eccezione, come illustrato in [eccezioni: generazione di eccezioni dalle funzioni personalizzate](exceptions-throwing-exceptions-from-your-own-functions.md).
 
-Quando si genera un'eccezione in un costruttore, la memoria per l'oggetto stesso è già stata allocata entro l'ora che viene chiamato il costruttore. Pertanto, il compilatore deallocherà automaticamente la memoria occupata dall'oggetto dopo la generazione dell'eccezione.
+Quando viene generata un'eccezione in un costruttore, la memoria per l'oggetto stesso è già stata allocata nel momento in cui viene chiamato il costruttore. Quindi, il compilatore dealloca automaticamente la memoria occupata dall'oggetto dopo che l'eccezione viene generata.
 
-Per altre informazioni, vedere [alle eccezioni: Rilascio di oggetti nelle eccezioni](../mfc/exceptions-freeing-objects-in-exceptions.md).
+Per altre informazioni, vedere [Exceptions: Freeing Objects in Exceptions](exceptions-freeing-objects-in-exceptions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
+[Gestione delle eccezioni](exception-handling-in-mfc.md)

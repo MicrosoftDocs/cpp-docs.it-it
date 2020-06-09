@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 72470463c3d4ff402bca9c119456778cf7fadecb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28bf4beaafaaff5c4b9122daeca9d61ed05346fc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384075"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625905"
 ---
 # <a name="dialog-sample-list"></a>Elenco di esempi di finestre di dialogo
 
-Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e finestre delle proprietà:
+Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e le finestre delle proprietà:
 
 *Applicazione di esempio MDI con finestre di dialogo*
 
@@ -21,9 +21,9 @@ Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e f
 
 *Finestra di dialogo non modale*
 
-- [NON MODALE](../overview/visual-cpp-samples.md)
+- [MODALE](../overview/visual-cpp-samples.md)
 
-*Finestra di dialogo Proprietà finestra (finestra di dialogo scheda)*
+*Finestra di dialogo finestra delle proprietà (finestra di dialogo scheda)*
 
 - [PROPDLG](../overview/visual-cpp-samples.md)
 
@@ -37,7 +37,7 @@ Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e f
 
 - [CMNCTRL2](../overview/visual-cpp-samples.md)
 
-*Controlli di finestra di dialogo*
+*Controlli della finestra di dialogo*
 
 - [CMNCTRL1](../overview/visual-cpp-samples.md)
 
@@ -45,9 +45,9 @@ Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e f
 
 - [CTRLTEST](../overview/visual-cpp-samples.md)
 
-*Visualizzazioni Form di finestra di dialogo*
+*Visualizzazioni form simili a finestre di dialogo*
 
-- [VIEWEX](../overview/visual-cpp-samples.md)
+- [Sample](../overview/visual-cpp-samples.md)
 
 *Modello di finestra di dialogo in memoria*
 
@@ -55,4 +55,4 @@ Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e f
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestre di dialogo](../mfc/dialog-boxes.md)
+[Finestre di dialogo](dialog-boxes.md)

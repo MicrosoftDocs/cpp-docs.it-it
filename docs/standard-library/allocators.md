@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457538"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623506"
 ---
 # <a name="allocators"></a>Allocatori
 
@@ -24,7 +24,7 @@ template <
 class vector
 ```
 
-La libreria standard C++ offre un'implementazione predefinita per un allocatore. In C++11 e versioni successive, l'allocatore predefinito viene aggiornato in modo da esporre un'interfaccia più piccola. Il nuovo allocatore viene chiamato *allocatore minimo*. In particolare, il membro `construct()` dell'allocatore minimo supporta la semantica di spostamento, che consente di migliorare notevolmente le prestazioni. Nella maggior parte dei casi, l'allocatore predefinito dovrebbe essere sufficiente. In C++ 11 tutti i tipi e le funzioni della a libreria standard che accettano un parametro di tipo allocatore supportano l'iinterfaccia dell'allocatore minimo, tra cui `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Per altre informazioni sull'allocatore predefinito, vedere [Classe allocator](../standard-library/allocator-class.md).
+La libreria standard C++ offre un'implementazione predefinita per un allocatore. In C++11 e versioni successive, l'allocatore predefinito viene aggiornato in modo da esporre un'interfaccia più piccola. Il nuovo allocatore viene chiamato *allocatore minimo*. In particolare, il membro `construct()` dell'allocatore minimo supporta la semantica di spostamento, che consente di migliorare notevolmente le prestazioni. Nella maggior parte dei casi, l'allocatore predefinito dovrebbe essere sufficiente. In C++ 11 tutti i tipi e le funzioni della a libreria standard che accettano un parametro di tipo allocatore supportano l'iinterfaccia dell'allocatore minimo, tra cui `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Per altre informazioni sull'allocatore predefinito, vedere [Classe allocator](allocator-class.md).
 
 ## <a name="writing-your-own-allocator-c11"></a>Scrittura di un codificatore personalizzato (C++11)
 
@@ -34,7 +34,7 @@ Un allocatore minimo richiede molto meno boilerplate e consente di concentrarsi 
 
 1. un costruttore di copia di conversione (vedere l'esempio)
 
-1. operator==
+1. operatore ==
 
 1. operator!=
 
@@ -119,8 +119,8 @@ Inoltre, qualsiasi allocatore usato con i contenitori della libreria standard C+
 |`allocate`|`operator!=`|
 |`construct`||
 
-Per altre informazioni sulle definizioni dei tipi e sui metodi, vedere [Classe allocator](../standard-library/allocator-class.md).
+Per altre informazioni sulle definizioni dei tipi e sui metodi, vedere [Classe allocator](allocator-class.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Riferimenti per la libreria standard C++](cpp-standard-library-reference.md)

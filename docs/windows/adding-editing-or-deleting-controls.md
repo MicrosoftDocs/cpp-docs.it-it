@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623455"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: aggiungere, modificare o eliminare controlli (C++)
 
@@ -98,7 +98,7 @@ La scheda **editor finestre** viene visualizzata nella [finestra casella degli s
 
 ### <a name="to-add-a-custom-control"></a>Per aggiungere un controllo personalizzato
 
-È possibile aggiungere controlli personalizzati alla finestra di dialogo. Selezionare l'icona del **controllo personalizzato** nella **casella degli strumenti** e trascinarla nella finestra di dialogo. Per aggiungere un controllo `Syslink`, aggiungere un controllo personalizzato, quindi impostare la proprietà della **classe** del controllo su `Syslink`. Questa azione comporterà l'aggiornamento delle proprietà e la visualizzazione delle proprietà del controllo `Syslink`. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+È possibile aggiungere controlli personalizzati alla finestra di dialogo. Selezionare l'icona del **controllo personalizzato** nella **casella degli strumenti** e trascinarla nella finestra di dialogo. Per aggiungere un `Syslink` controllo, aggiungere un controllo personalizzato, quindi modificare la proprietà della **classe** del controllo in `Syslink` . Questa azione comporterà l'aggiornamento delle proprietà e la visualizzazione delle `Syslink` proprietà del controllo. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Controlli di modifica
 
@@ -118,14 +118,14 @@ La scheda **editor finestre** viene visualizzata nella [finestra casella degli s
 
 1. Verificare che il controllo abbia lo stato attivo nell' **editor finestre**.
 
-1. Vai a menu **modifica** > **Annulla**. Se lo stato attivo non è sul controllo, il comando **Annulla** non sarà disponibile.
+1. Vai a menu **modifica**  >  **Annulla**. Se lo stato attivo non è sul controllo, il comando **Annulla** non sarà disponibile.
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Per definire una variabile membro per il controllo di una finestra di dialogo (non pulsante)
 
 > [!NOTE]
 > Questo processo si applica solo ai controlli della finestra di dialogo all'interno di un progetto MFC. I progetti ATL devono utilizzare la finestra di dialogo **nuovi messaggi e gestori eventi di Windows** . Per ulteriori informazioni, vedere [tipi di messaggi associati a oggetti dell'interfaccia utente](../mfc/reference/message-types-associated-with-user-interface-objects.md), [modifica di un gestore di messaggi](../mfc/reference/editing-a-message-handler.md)e [definizione di un gestore di messaggi per un messaggio riflesso](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-1. Nell' [editor finestre](../windows/dialog-editor.md)selezionare un controllo.
+1. Nell' [editor finestre](dialog-editor.md)selezionare un controllo.
 
 1. Quando si preme il tasto **CTRL** , fare doppio clic sul controllo della finestra di dialogo.
 
@@ -142,11 +142,11 @@ La scheda **editor finestre** viene visualizzata nella [finestra casella degli s
 
 ## <a name="delete-controls"></a>Elimina controlli
 
-Nella finestra di dialogo selezionare il controllo, quindi premere il tasto **Canc** o vai a menu **modifica** > **Elimina**.
+Nella finestra di dialogo selezionare il controllo, quindi premere il tasto **Canc** o vai a menu **modifica**  >  **Elimina**.
 
 ## <a name="other-issues"></a>Altri problemi
 
-### <a name="troubleshooting"></a>risoluzione dei problemi
+### <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Dopo aver aggiunto un controllo comune o un controllo Rich Edit a una finestra di dialogo, non verrà visualizzato quando si testa la finestra di dialogo. In alternativa, la finestra di dialogo non verrà visualizzata. Ad esempio:
 
@@ -176,7 +176,7 @@ Attualmente, l' **editor finestre** non aggiunge automaticamente codice al proge
 
 Per utilizzare i controlli comuni in una finestra di dialogo, è necessario chiamare [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) o `AFXInitCommonControls` prima di creare la finestra di dialogo.
 
-Per usare i controlli RichEdit, è necessario chiamare `LoadLibrary`. Per ulteriori informazioni, vedere [informazioni sui controlli Rich Edit](/windows/win32/Controls/about-rich-edit-controls) nell'Windows SDK e [Panoramica del controllo Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
+Per usare i controlli RichEdit, è necessario chiamare `LoadLibrary` . Per ulteriori informazioni, vedere [informazioni sui controlli Rich Edit](/windows/win32/Controls/about-rich-edit-controls) nell'Windows SDK e [Panoramica del controllo Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
 > Per usare un controllo RichEdit con MFC, è prima necessario chiamare [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) per caricare il controllo richedit 2,0 (Riched20. DLL) oppure chiamare [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) per caricare il controllo richedit 1,0 precedente (Riched32. DLL).
@@ -187,7 +187,7 @@ Per usare i controlli RichEdit, è necessario chiamare `LoadLibrary`. Per ulteri
 
 Visual Studio consente di inserire controlli ActiveX nella finestra di dialogo. Per ulteriori informazioni, vedere [controlli ActiveX MFC](../mfc/mfc-activex-controls.md) e [contenitori di controlli ActiveX](../mfc/activex-control-containers.md).
 
-La finestra di dialogo **Inserisci controllo ActiveX** consente di inserire controlli ActiveX nella finestra di dialogo durante l'utilizzo dell' [editor finestre](../windows/dialog-editor.md). Questa finestra di dialogo contiene le proprietà seguenti:
+La finestra di dialogo **Inserisci controllo ActiveX** consente di inserire controlli ActiveX nella finestra di dialogo durante l'utilizzo dell' [editor finestre](dialog-editor.md). Questa finestra di dialogo contiene le proprietà seguenti:
 
 |Proprietà|Descrizione|
 |---|---|
@@ -216,7 +216,7 @@ La finestra di dialogo **Inserisci controllo ActiveX** consente di inserire cont
 
 I controlli ActiveX forniti da fornitori indipendenti possono essere dotati di proprietà e caratteristiche specifiche. Queste proprietà vengono visualizzate nella finestra **Proprietà** . Tutte le pagine delle proprietà create dai writer del controllo ActiveX vengono visualizzate nella finestra di dialogo **pagine delle proprietà** . (Per visualizzare la **pagina delle proprietà** per un controllo ActiveX specifico, selezionare il pulsante della **pagina delle proprietà** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)).
 
-- Selezionare il controllo **ActiveX** e passare a **visualizzazione** menu > **pagina delle proprietà** per visualizzare le proprietà. Apportare le modifiche necessarie nella pagina delle proprietà.
+- Selezionare la pagina delle proprietà controllo **ActiveX** e vai a **visualizzazione**menu  >  **Property Page** per visualizzare le proprietà. Apportare le modifiche necessarie nella pagina delle proprietà.
 
    Diverse schede vengono visualizzate nella pagina delle proprietà di un controllo ActiveX, a seconda delle finestre delle proprietà che provengono come parte del controllo ActiveX.
 

@@ -7,35 +7,35 @@ helpviewer_keywords:
 - events [MFC], event-driven programming
 - message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
-ms.openlocfilehash: 4ddfd0a5ff506e17efeb63624b7cb8c6a8b1eda4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db529e2a22b45de3c6f6a659874bbaa941187217
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383789"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624297"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Messaggi e comandi nel framework
 
-Applicazioni scritte per Microsoft Windows sono "message driven". In risposta a eventi, ad esempio clic del mouse, le sequenze di tasti, gli spostamenti delle finestre e così via, Windows invia i messaggi alla finestra appropriata. Le applicazioni Framework elaborano i messaggi di Windows come qualsiasi altra applicazione per Windows. Tuttavia, il framework fornisce anche alcuni miglioramenti che rendono l'elaborazione messaggi, più semplice, più facilmente gestibile ed efficiente incapsulato.
+Le applicazioni scritte per Microsoft Windows sono "basate su messaggi". In risposta a eventi quali clic del mouse, sequenze di tasti, spostamenti della finestra e così via, Windows invia messaggi alla finestra corretta. Le applicazioni Framework elaborano messaggi di Windows come qualsiasi altra applicazione per Windows. Tuttavia, il Framework fornisce anche alcuni miglioramenti che rendono i messaggi di elaborazione più semplici, gestibili e incapsulati.
 
-Gli argomenti seguenti introducono i termini chiave utilizzati per descrivere i messaggi e comandi nella parte restante della famiglia di articolo:
+Gli argomenti seguenti introducono i termini chiave usati nel resto della famiglia di articoli per discutere di messaggi e comandi:
 
-- [Messaggi](../mfc/messages.md)
+- [Messaggi](messages.md)
 
-- [Gestori di messaggi](../mfc/message-handlers.md)
+- [Gestori di messaggi](message-handlers.md)
 
-- [Categorie di messaggi](../mfc/message-categories.md)
+- [Categorie di messaggi](message-categories.md)
 
-- [I messaggi di Windows e i messaggi di notifica del controllo](../mfc/message-categories.md)
+- [Messaggi di Windows e messaggi di notifica di controllo](message-categories.md)
 
-- [Messaggi di comando](../mfc/message-categories.md)
+- [Messaggi di comando](message-categories.md)
 
-- [Mappe messaggi](../mfc/mapping-messages.md)
+- [Mappe messaggi](mapping-messages.md)
 
-- [Oggetti dell'interfaccia utente e ID comando](../mfc/user-interface-objects-and-command-ids.md)
+- [Oggetti dell'interfaccia utente e ID comando](user-interface-objects-and-command-ids.md)
 
-- [Destinazioni comandi](../mfc/command-targets.md)
+- [Destinazioni comando](command-targets.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
+[Gestione e mapping dei messaggi](message-handling-and-mapping.md)

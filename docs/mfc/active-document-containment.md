@@ -8,35 +8,35 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-ms.openlocfilehash: dc13384454c4732d3efbf99def5d05dd4f2d44aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c524d6890cd7b86bcae2c40d8c602e7b04e751b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623430"
 ---
 # <a name="active-document-containment"></a>Contenimento dei documenti attivi
 
-Contenimento dei documenti attivi è una tecnologia che fornisce un singolo frame in cui si desidera lavorare con i documenti, invece di dover creare e usare più frame dell'applicazione per ogni tipo di documento. Differisce dalla tecnologia di base OLE in quanto OLE funziona con oggetti incorporati all'interno di un documento composito in cui può essere attiva solo una singola parte di contenuto. Active document containment, si attiva un intero documento (vale a dire, un'intera applicazione, tra cui associati menu, barre degli strumenti e così via) nel contesto di un singolo frame.
+Il contenimento dei documenti attivi è una tecnologia che fornisce un singolo frame in cui utilizzare i documenti, anziché forzare la creazione e l'utilizzo di più frame dell'applicazione per ogni tipo di documento. Si differenzia dalla tecnologia OLE di base in quanto OLE funziona con gli oggetti incorporati all'interno di un documento composto in cui può essere attivo solo un singolo elemento di contenuto. Con il contenimento dei documenti attivi, si attiva un intero documento, ovvero un'intera applicazione, inclusi i menu associati, le barre degli strumenti e così via, all'interno del contesto di un singolo frame.
 
-Tecnologia active document containment è stato originariamente sviluppata per Microsoft Office implementare Raccoglitore di Office. Tuttavia, la tecnologia è sufficientemente flessibile per supportare i contenitori documenti attivi diverso da Raccoglitore di Office e può supportare i server di documento diverso da applicazioni di Office e compatibile con Office.
+La tecnologia di contenimento dei documenti attivi è stata sviluppata in origine per Microsoft Office per implementare il binder di Office. Tuttavia, la tecnologia è sufficientemente flessibile per supportare contenitori di documenti attivi diversi da Office Binder e può supportare i server di documenti diversi dalle applicazioni Office e compatibili con Office.
 
-L'applicazione che ospita documenti attivi viene chiamato un [contenitore di documenti attivi](../mfc/active-document-containers.md). Esempi di tali contenitori sono il Raccoglitore Microsoft Office o Microsoft Internet Explorer.
+L'applicazione che ospita i documenti attivi è denominata [contenitore di documenti attivi](active-document-containers.md). Esempi di tali contenitori sono Microsoft Office Binder o Microsoft Internet Explorer.
 
-Contenimento dei documenti attivi viene implementato come un set di estensioni OLE documenti, la tecnologia dei documenti compositi di OLE. Le estensioni sono interfacce aggiuntive che consentono a un oggetto sul posto, incorporabile rappresentare un intero documento anziché un singolo elemento di contenuto incorporato. Come per i documenti OLE, contenimento dei documenti attivi utilizza un contenitore che fornisce lo spazio di visualizzazione per i documenti attivi e i server che forniscono all'utente le funzionalità di interfaccia e la modifica di documenti attivi.
+Il contenimento dei documenti attivi viene implementato come un set di estensioni ai documenti OLE, la tecnologia dei documenti compositi di OLE. Le estensioni sono interfacce aggiuntive che consentono a un oggetto incorporabile incorporato di rappresentare un intero documento anziché una singola parte di contenuto incorporato. Come per i documenti OLE, il contenimento dei documenti attivi usa un contenitore che fornisce lo spazio di visualizzazione per i documenti attivi e i server che forniscono le funzionalità di manipolazione e interfaccia utente per i documenti attivi.
 
-Un' [server documenti attivi](../mfc/active-document-servers.md) è un'applicazione (ad esempio Word, Excel o PowerPoint) che supporta uno o più classi documento attivo, in cui ogni oggetto stesso supporta le interfacce dell'estensione che consentono l'oggetto che deve essere attivata in un contenitore appropriato.
+Un [server di documenti attivo](active-document-servers.md) è un'applicazione (ad esempio Word, Excel o PowerPoint) che supporta una o più classi di documenti attive, in cui ogni oggetto supporta le interfacce di estensione che consentono l'attivazione dell'oggetto in un contenitore appropriato.
 
-Un' [documento attivo](../mfc/active-documents.md) (fornito da un server documenti attivi, ad esempio Word o Excel) è essenzialmente un documento su larga scala, convenzionale che verrà incorporato come un oggetto all'interno di un altro contenitore documenti attivi. A differenza degli oggetti incorporati, i documenti attivi hanno il controllo completo sulle proprie pagine e l'interfaccia completo dell'applicazione (con tutti i relativi sottostante comandi e strumenti) è disponibile per l'utente per la modifica.
+Un [documento attivo](active-documents.md) , fornito da un server di documenti attivo come Word o Excel, è essenzialmente un documento convenzionale a scalabilità completa incorporato come oggetto all'interno di un altro contenitore di documenti attivi. Diversamente dagli oggetti incorporati, i documenti attivi hanno il controllo completo sulle pagine e l'interfaccia completa dell'applicazione (con tutti i comandi e gli strumenti sottostanti) è disponibile all'utente per modificarli.
 
-Un documento attivo può essere illustrato meglio per distinguerlo da un oggetto incorporato OLE standard. Seguire la convenzione OLE, un oggetto incorporato corrisponde a uno che viene visualizzato all'interno della pagina del documento che ne è proprietario e il documento è gestito da un contenitore OLE. Il contenitore archivia i dati dell'oggetto incorporato con il resto del documento. Tuttavia, gli oggetti incorporati sono limitati in quanto non controllano la pagina in cui appaiono.
+Un documento attivo è più comprensibile distinguerlo da un oggetto standard OLE embedded. Dopo la convenzione OLE, un oggetto incorporato è uno visualizzato all'interno della pagina del documento a cui è proprietario e il documento è gestito da un contenitore OLE. Il contenitore archivia i dati dell'oggetto incorporato con il resto del documento. Tuttavia, gli oggetti incorporati sono limitati perché non controllano la pagina in cui vengono visualizzati.
 
-Gli utenti di un'applicazione contenitore documenti attivi possono creare documenti attivi (denominati sezioni Raccoglitore di Office) usando le applicazioni preferite (fornito da queste applicazioni sono compatibili con i documenti attivi), ma gli utenti possono gestire il progetto risultante come una singola entità, che possono essere denominate in modo univoco, salvato, stampate e così via. Nello stesso modo, un utente di un browser Internet può considerare l'intera rete, nonché i file System locali, come un'entità di archiviazione singolo documento con la possibilità di esplorare i documenti nella che l'archiviazione da un'unica posizione.
+Gli utenti di un'applicazione contenitore di documenti attivi possono creare documenti attivi, denominati sezioni nel gestore di associazione di Office, usando le applicazioni preferite (purché queste applicazioni siano abilitate per il documento attivo), ma gli utenti possono gestire il progetto risultante come una singola entità, che può essere denominata, salvata, stampata in modo univoco e così via. Analogamente, un utente di un browser Internet è in grado di gestire l'intera rete, nonché i file system locali, come un'unica entità di archiviazione di documenti con la possibilità di esplorare i documenti in tale archiviazione da un'unica posizione.
 
 ## <a name="sample-programs"></a>Programmi di esempio
 
-- Il [MFCBIND](../overview/visual-cpp-samples.md) esempio illustra l'implementazione di un'applicazione contenitore documenti attivi.
+- L'esempio [MFCBIND](../overview/visual-cpp-samples.md) illustra l'implementazione di un'applicazione contenitore di documenti attivi.
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

@@ -1,5 +1,5 @@
 ---
-title: Editor tasti diC++scelta rapida ()
+title: Editor tasti di scelta rapida (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
@@ -33,23 +33,23 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 80ef6cc9ec956d0041c4aa3fb6a6211868cc9d73
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623492"
 ---
-# <a name="accelerator-editor-c"></a>Editor tasti diC++scelta rapida ()
+# <a name="accelerator-editor-c"></a>Editor tasti di scelta rapida (C++)
 
-Una tabella Accelerator è una C++ risorsa di Windows che contiene un elenco di tasti di scelta rapida, noti come tasti di scelta rapida e gli identificatori di comando associati. Un programma può avere più tabelle di tasti di scelta rapida.
+Una tabella di tasti di scelta rapida è una risorsa Windows C++ che contiene un elenco di tasti di scelta rapida, noti come tasti di scelta rapida e gli identificatori di comando associati. Un programma può avere più tabelle di tasti di scelta rapida.
 
 In genere i tasti di scelta rapida vengono usati per i comandi di programma disponibili anche in un menu o in una barra degli strumenti. Tuttavia, è possibile usare la tabella di tasti di scelta rapida per definire le combinazioni di tasti per i comandi che non hanno un oggetto dell'interfaccia utente associato.
 
 > [!TIP]
 > Quando si usa l' **Editor acceleratore**, fare clic con il pulsante destro del mouse per visualizzare un menu di scelta rapida di comandi frequenti. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il puntatore.
 
-È possibile usare [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) per associare i comandi dei tasti di scelta rapida al codice. Per un elenco di tasti di scelta rapida predefiniti, vedere [tasti di scelta rapida](../windows/predefined-accelerator-keys.md).
+È possibile usare [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) per associare i comandi dei tasti di scelta rapida al codice. Per un elenco di tasti di scelta rapida predefiniti, vedere [tasti di scelta rapida](predefined-accelerator-keys.md).
 
 > [!NOTE]
 > Windows non consente di creare tabelle di tasti di scelta rapida vuote. Se si crea una tabella di tasti di scelta rapida priva di voci, questa verrà eliminata automaticamente al salvataggio della tabella.
@@ -101,7 +101,7 @@ Di seguito sono riportate le voci valide per la proprietà **chiave** nella tabe
 
 La proprietà **Type** determina se la combinazione di tasti di scelta rapida associata all' **ID** acceleratore viene interpretata come un valore di chiave ASCII/ANSI o una combinazione di chiave virtuale (VIRTKEY).
 
-- Se la proprietà **Type** è **ASCII**, la proprietà **Modifier** può essere solo `None` o `Alt`, oppure può avere un tasto di scelta rapida che usa il tasto **CTRL** , come specificato dalla chiave con un `^`.
+- Se la proprietà **Type** è **ASCII**, la proprietà **Modifier** può essere solo `None` o oppure `Alt` può avere un tasto di scelta rapida che usa il tasto **CTRL** , come specificato dalla chiave con un oggetto `^` .
 
 - Se la proprietà **Type** è **VIRTKEY**, qualsiasi combinazione di **modificatori** e valori di **chiave** è valida.
 
@@ -110,7 +110,7 @@ La proprietà **Type** determina se la combinazione di tasti di scelta rapida as
 
 ## <a name="accelerator-tables"></a>Tabelle dei tasti di scelta rapida
 
-In un C++ progetto è possibile modificare direttamente una tabella di tasti di scelta rapida con la modifica sul posto nell' **editor di tasti di scelta rapida**.
+In un progetto C++ è possibile modificare direttamente una tabella dei tasti di scelta rapida con la modifica sul posto nell' **editor di tasti di scelta rapida**.
 
 Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle proprietà standard, ma la modifica sul posto e il metodo della pagina delle proprietà hanno lo stesso risultato. Le modifiche apportate utilizzando le pagine delle proprietà o la modifica sul posto vengono immediatamente riflesse nella tabella dei tasti di scelta rapida.
 
@@ -146,12 +146,12 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 
 1. Selezionare un **ID** nell'elenco a discesa nella casella **ID** oppure digitare un nuovo *ID* nella casella **ID** .
 
-1. Digitare la *chiave* che si desidera utilizzare come acceleratore oppure fare clic con il pulsante destro del mouse e scegliere **digitato il tasto avanti** per impostare una combinazione di tasti o vai a menu **modifica** > **chiave successiva digitata**.
+1. Digitare la *chiave* che si desidera utilizzare come acceleratore oppure fare clic con il pulsante destro del mouse e scegliere **digitato chiave successiva** per impostare una combinazione di tasti o vai a menu **modifica**  >  **chiave successiva digitata**.
 
 1. Modificare il **modificatore** e il **tipo**, se necessario, e premere **invio**.
 
 > [!NOTE]
-> Verificare che tutti gli acceleratori definiti siano univoci. È possibile assegnare diverse combinazioni di chiavi allo stesso ID senza effetti negativi. ad esempio, è possibile assegnare al ID_PRINT **Ctrl**+**P** e **F8** . Tuttavia, la combinazione di tasti assegnata a più di un ID non funzionerà correttamente, ad esempio **Ctrl**+**Z** assegnata sia a ID_SPELL_CHECK che ID_THESAURUS.
+> Verificare che tutti gli acceleratori definiti siano univoci. È possibile assegnare diverse combinazioni di chiavi allo stesso ID senza effetti negativi. ad esempio, è possibile assegnare a ID_PRINT la **combinazione di tasti CTRL** + **P** e **F8** . Tuttavia, la combinazione di tasti assegnata a più di un ID non funzionerà correttamente, ad esempio **CTRL** + **Z** assegnata a ID_SPELL_CHECK e ID_THESAURUS.
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Per eliminare una voce da una tabella dei tasti di scelta rapida
 
@@ -159,7 +159,7 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 
 1. Selezionare la voce che si desidera eliminare oppure tenere premuto **CTRL** o **MAIUSC** mentre si selezionano più voci.
 
-1. Fare clic con il pulsante destro del mouse e scegliere **Elimina**o vai a menu **modifica** > **Elimina**.
+1. Fare clic con il pulsante destro del mouse e scegliere **Elimina**o vai a menu **modifica**  >  **Elimina**.
 
 > [!TIP]
 > È anche possibile premere il tasto **Canc** per eliminare.
@@ -192,5 +192,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di risorse](../windows/resource-editors.md)<br/>
-[Tasti di scelta rapida](../windows/predefined-accelerator-keys.md)<br/>
+[Editor di risorse](resource-editors.md)<br/>
+[Tasti di scelta rapida](predefined-accelerator-keys.md)<br/>

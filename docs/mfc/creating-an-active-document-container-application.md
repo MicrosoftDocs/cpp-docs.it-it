@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152943"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616346"
 ---
 # <a name="creating-an-active-document-container-application"></a>Creazione di un'applicazione contenitore di documenti attivi
 
@@ -21,39 +21,39 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
 #### <a name="to-create-an-active-document-container-application"></a>Per creare un'applicazione contenitore di documenti attivi
 
-1. Dal **File** menu, fare clic su **Project**dal **New** sottomenu.
+1. Dal menu **file** scegliere **progetto**dal sottomenu **nuovo** .
 
-1. Nel riquadro sinistro, fare clic su **Visual C++** tipo di progetto.
+1. Nel riquadro sinistro fare clic su **Visual C++** tipo di progetto.
 
 1. Selezionare **applicazione MFC** dal riquadro di destra.
 
-1. Denominare il progetto *MyProj*, fare clic su **OK**.
+1. Assegnare al progetto il nome *PROG*, quindi fare clic su **OK**.
 
-1. Selezionare il **supporto documenti compositi** pagina.
+1. Selezionare la pagina **supporto documenti compositi** .
 
-1. Selezionare il **contenitore** oppure **contenitore/server completo** opzione.
+1. Selezionare l'opzione **contenitore** o **contenitore/server completo** .
 
-1. Selezionare il **contenitore di documenti attivi** casella di controllo.
+1. Selezionare la casella di controllo **contenitore documenti attivi** .
 
-1. Scegliere **Fine**.
+1. Fare clic su **Fine**.
 
 1. Una volta completata la generazione dell'applicazione tramite la Creazione guidata applicazione MFC, aprire i seguenti file in Esplora soluzioni:
 
    - *MyProjview.cpp*
 
-1. Nelle *MyProjview. cpp*, apportare le modifiche seguenti:
+1. In *file MyProjview. cpp*apportare le modifiche seguenti:
 
    - In `CMyProjView::OnPreparePrinting` sostituire il contenuto della funzione con il seguente codice:
 
-     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` fornisce il supporto di stampa. Questo codice sostituisce `DoPreparePrinting`, ovvero la preparazione predefinita alla stampa.
 
    Il contenimento del documento attivo fornisce uno schema di stampa avanzato:
 
-   - È possibile chiamare prima il documento attivo tramite relativo `IPrint` interfaccia e ordinargli di eseguire la stampa. Questo comportamento è diverso dal contenimento OLE precedente, in cui il contenitore doveva eseguire il rendering di un'immagine dell'elemento contenuto nella stampante `CDC` oggetto.
+   - È possibile chiamare prima il documento attivo tramite la relativa `IPrint` interfaccia e indicargli di stamparlo. Si tratta di una differenza rispetto al contenuto OLE precedente, in cui il contenitore doveva eseguire il rendering di un'immagine dell'elemento contenuto nell' `CDC` oggetto Printer.
 
-   - Se l'operazione fallisce, ordinare all'elemento di contenuto di stampa tramite relativo `IOleCommandTarget` interfaccia
+   - Se l'operazione ha esito negativo, indicare all'elemento contenuto di stamparlo tramite la relativa `IOleCommandTarget` interfaccia
 
    - Se l'operazione fallisce, eseguire il rendering dell'elemento.
 
@@ -63,4 +63,4 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
 ## <a name="see-also"></a>Vedere anche
 
-[Contenimento dei documenti attivi](../mfc/active-document-containment.md)
+[Contenimento dei documenti attivi](active-document-containment.md)

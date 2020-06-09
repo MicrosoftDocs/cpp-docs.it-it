@@ -9,29 +9,29 @@ helpviewer_keywords:
 - MFC, messages
 - messages [MFC], sending
 ms.assetid: 9ce189cb-b259-4c3b-b6f2-9cfbed18b98b
-ms.openlocfilehash: bda261f4141a7ceb4e678535d9012650818fabce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4da2fce68c1b6fd3827bc8b5d2a40dea5e5f117c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626167"
 ---
 # <a name="message-sending-and-receiving"></a>Invio e ricezione di messaggi
 
-Prendere in considerazione la parte di invio del processo e modalità di risposta del framework.
+Si consideri la parte di invio del processo e il modo in cui il Framework risponde.
 
-La maggior parte dei risultati i messaggi dall'interazione dell'utente con il programma. I comandi vengono generati tramite clic del mouse nelle voci di menu o i pulsanti della barra degli strumenti o tramite le sequenze di tasti di scelta rapida. L'utente genera anche i messaggi di Windows, ad esempio, sposta o si ridimensiona una finestra. Quando si verificano gli eventi, ad esempio l'avvio del programma o la chiusura, come windows ottenere o perde lo stato attivo e così via, vengono inviati altri messaggi di Windows. I messaggi di notifica del controllo vengono generati da clic del mouse o altre interazioni utente con un controllo, ad esempio un controllo pulsante o casella di riepilogo in una finestra di dialogo.
+La maggior parte dei messaggi risulta dall'interazione dell'utente con il programma. I comandi vengono generati dai clic del mouse nelle voci di menu o nei pulsanti della barra degli strumenti o dalle sequenze di tasti di scelta rapida. L'utente genera anche messaggi di Windows, ad esempio, spostando o ridimensionando una finestra. Quando si verificano eventi quali l'avvio o la terminazione di un programma, vengono inviati altri messaggi di Windows, in quanto Windows Ottiene o perde lo stato attivo e così via. I messaggi di notifica di controllo vengono generati tramite clic del mouse o altre interazioni utente con un controllo, ad esempio un pulsante o un controllo casella di riepilogo in una finestra di dialogo.
 
-Il `Run` funzione membro di classe `CWinApp` recupera i messaggi e li invia alla finestra appropriata. La maggior parte dei messaggi di comando vengono inviati alla finestra cornice principale dell'applicazione. Il `WindowProc` predefiniti da classe libreria Ottiene i messaggi e li instrada in modo diverso, a seconda della categoria del messaggio ricevuto.
+La `Run` funzione membro della classe `CWinApp` Recupera i messaggi e li invia alla finestra appropriata. La maggior parte dei messaggi di comando viene inviata alla finestra cornice principale dell'applicazione. L'oggetto `WindowProc` predefinito dalla libreria di classi ottiene i messaggi e li instrada in modo diverso, a seconda della categoria di messaggi ricevuti.
 
-Si consideri ora la parte del processo di ricezione.
+Si consideri ora la parte ricevente del processo.
 
-Il ricevitore iniziale di un messaggio deve essere un oggetto finestra. I messaggi di Windows sono in genere gestiti direttamente da tale oggetto finestra. I messaggi di comando, in genere che hanno origine nella finestra cornice principale dell'applicazione vengono instradati alla catena di destinazione comando descritto in [Routing dei comandi](../mfc/command-routing.md).
+Il ricevitore iniziale di un messaggio deve essere un oggetto finestra. I messaggi di Windows vengono in genere gestiti direttamente da tale oggetto finestra. I messaggi di comando, in genere originati nella finestra cornice principale dell'applicazione, vengono indirizzati alla catena di destinazione comando descritta in [routing dei comandi](command-routing.md).
 
-Ogni oggetto in grado di ricevere i messaggi o i comandi ha il proprio messaggio di eseguire il mapping che abbina un messaggio o un comando con il nome del relativo gestore.
+Ogni oggetto in grado di ricevere messaggi o comandi ha una propria mappa messaggi che associa un messaggio o un comando con il nome del relativo gestore.
 
-Quando un oggetto destinazione comando riceve un messaggio o un comando, viene cercato propria mappa messaggi per trovare una corrispondenza. Se viene rilevato un gestore per il messaggio, chiama il gestore. Per altre informazioni sul modo in cui vengono eseguita la ricerca di mappe messaggi, vedere [modo in cui il Framework ricerca nelle mappe](../mfc/how-the-framework-searches-message-maps.md). Fare nuovamente riferimento alla figura [comandi nel Framework](../mfc/user-interface-objects-and-command-ids.md).
+Quando un oggetto di destinazione comando riceve un messaggio o un comando, Cerca una corrispondenza nella mappa messaggi. Se trova un gestore per il messaggio, viene chiamato il gestore. Per ulteriori informazioni sul modo in cui viene eseguita la ricerca delle mappe messaggi, vedere [come il Framework cerca le mappe messaggi](how-the-framework-searches-message-maps.md). Fare di nuovo riferimento ai [comandi di figure nel Framework](user-interface-objects-and-command-ids.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+[Chiamata di un gestore dal framework](how-the-framework-calls-a-handler.md)

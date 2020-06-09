@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-ms.openlocfilehash: 3e56bd0f449992118db75a44c39b6e0e15cb0d86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c0a1e1e93433e0fbe07c11eb350216173e74d84
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625848"
 ---
 # <a name="frame-window-classes-windows"></a>Classi di finestre cornice (Windows)
 
-Finestre cornice sono finestre cornice intorno a un'applicazione o una parte di un'applicazione. Finestre cornice in genere contengono altre finestre, ad esempio viste, le barre degli strumenti e le barre di stato. Nel caso del `CMDIFrameWnd`, possono contenere `CMDIChildWnd` oggetti indirettamente.
+Le finestre cornice sono finestre che incorniciano un'applicazione o una parte di un'applicazione. Le finestre cornice contengono in genere altre finestre, ad esempio le visualizzazioni, le barre degli strumenti e le barre di stato. Nel caso di `CMDIFrameWnd` , possono contenere `CMDIChildWnd` oggetti indirettamente.
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-Classe di base per la finestra cornice principale di un'applicazione SDI. Anche la classe base per tutte le altre classi finestra cornice.
+[CFrameWnd](reference/cframewnd-class.md)<br/>
+Classe base per la finestra cornice principale di un'applicazione SDI. Anche la classe di base per tutte le altre classi della finestra cornice.
 
-[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
-Classe di base per la finestra cornice principale di un'applicazione MDI.
+[CMDIFrameWnd](reference/cmdiframewnd-class.md)<br/>
+Classe base per la finestra cornice principale di un'applicazione MDI.
 
-[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
-La classe base per finestre cornice del documento di un'applicazione MDI.
+[CMDIChildWnd](reference/cmdichildwnd-class.md)<br/>
+Classe base per le finestre cornice del documento di un'applicazione MDI.
 
-[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)<br/>
-Una finestra cornice di mezza altezza generalmente visualizzata in barre degli strumenti mobili.
+[CMiniFrameWnd](reference/cminiframewnd-class.md)<br/>
+Una finestra cornice di mezza altezza viene in genere visualizzata intorno alle barre degli strumenti mobili.
 
-[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
-Fornisce la finestra cornice per una visualizzazione quando viene modificato un documento del server sul posto.
+[COleIPFrameWnd](reference/coleipframewnd-class.md)<br/>
+Fornisce la finestra cornice per una visualizzazione quando un documento server viene modificato sul posto.
 
 ## <a name="related-class"></a>Classe correlata
 
-Classe `CMenu` fornisce un'interfaccia tramite cui si desidera accedere ai menu dell'applicazione. È utile per la gestione dei menu in modo dinamico in fase di esecuzione; ad esempio, durante l'aggiunta o eliminazione di voci di menu in base al contesto. Anche se i menu vengono spesso usati con finestre cornice, possono anche essere utilizzati con le finestre di dialogo e altre finestre non figlio.
+La classe `CMenu` fornisce un'interfaccia tramite la quale accedere ai menu dell'applicazione. È utile per la manipolazione dinamica dei menu in fase di esecuzione. ad esempio, quando si aggiungono o si eliminano voci di menu in base al contesto. Sebbene i menu siano spesso usati con le finestre cornice, possono essere usati anche con finestre di dialogo e altre finestre non figlio.
 
-[CMenu](../mfc/reference/cmenu-class.md)<br/>
-Incapsula un `HMENU` handle alla barra dei menu e menu di scelta rapida dell'applicazione.
+[CMenu](reference/cmenu-class.md)<br/>
+Incapsula un `HMENU` handle per la barra dei menu e i menu di scelta rapida dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../mfc/class-library-overview.md)
+[Cenni preliminari sulle classi](class-library-overview.md)
