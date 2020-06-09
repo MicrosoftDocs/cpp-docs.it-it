@@ -1,5 +1,5 @@
 ---
-title: 'Appunti: Quando usare ogni meccanismo di Appunti'
+title: 'Appunti: quando utilizzare ogni meccanismo di appunti'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - formats [MFC], Clipboard for OLE
 - Clipboard [MFC], formats
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
-ms.openlocfilehash: f92a9a29da7f417d5ea5860c18e6ae1d9b20a05e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88fef4b9c0cf37bb475e460c212765b17d4eb634
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327054"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625997"
 ---
-# <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Appunti: Quando usare ogni meccanismo di Appunti
+# <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Appunti: quando utilizzare ogni meccanismo di appunti
 
-Seguire queste linee guida usando gli Appunti:
+Seguire queste linee guida nell'uso degli Appunti:
 
-- Usare ora il meccanismo degli Appunti OLE per abilitare nuove funzionalità in futuro. Mentre verranno mantenute le API degli Appunti standard, il meccanismo OLE è il futuro di trasferimento dei dati.
+- Utilizzare ora il meccanismo degli Appunti OLE per abilitare nuove funzionalità in futuro. Mentre l'API degli Appunti standard viene mantenuta, il meccanismo OLE rappresenta il futuro del trasferimento dei dati.
 
-- Se si sta scrivendo un'applicazione OLE o vuole che tutte le funzionalità OLE, ad esempio trascinamento della selezione, usare il meccanismo degli Appunti OLE.
+- Utilizzare il meccanismo degli Appunti OLE se si sta scrivendo un'applicazione OLE o si desidera una delle funzionalità OLE, ad esempio il trascinamento della selezione.
 
-- Se si fornisce formati OLE, utilizzare il meccanismo degli Appunti OLE.
+- Utilizzare il meccanismo degli Appunti OLE se si forniscono formati OLE.
 
-## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire
+## <a name="what-do-you-want-to-do"></a>Cosa si vuole fare
 
-- [Uso del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+- [Usare il meccanismo degli Appunti OLE](clipboard-using-the-ole-clipboard-mechanism.md)
 
-- [Utilizzare il meccanismo di Appunti di Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+- [Usare il meccanismo degli Appunti di Windows](clipboard-using-the-windows-clipboard.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Appunti](../mfc/clipboard.md)
+[Appunti](clipboard.md)

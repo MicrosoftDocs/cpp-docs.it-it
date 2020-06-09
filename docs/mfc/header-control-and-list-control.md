@@ -9,33 +9,33 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-ms.openlocfilehash: 53dd6f1a7878d82a7f7ac48dd7082d791323941b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f9dd34b27ddbdc0b99fafbb23ad1cf9782d98605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370478"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626412"
 ---
 # <a name="header-control-and-list-control"></a>Controllo Header e controllo List
 
-Nella maggior parte dei casi, si utilizzerà il controllo intestazione incorporato in un [CListCtrl](../mfc/reference/clistctrl-class.md) o [CListView](../mfc/reference/clistview-class.md) oggetto. Tuttavia, esistono casi in cui è auspicabile un oggetto controllo intestazione separato, ad esempio la modifica dei dati, disposti in colonne o righe, in un oggetto derivato da CView.However, there are cases where a separate header control object is desirable, such as manipulating data, arranged in columns or rows, in a [CView-derived](../mfc/reference/cview-class.md)object. In questi casi, è necessario un maggiore controllo sull'aspetto e sul comportamento predefinito di un controllo intestazione incorporato.
+Nella maggior parte dei casi, si utilizzerà il controllo Header incorporato in un oggetto [CListCtrl](reference/clistctrl-class.md) o [CListView](reference/clistview-class.md) . Tuttavia, esistono casi in cui è preferibile un oggetto controllo intestazione separato, ad esempio la modifica dei dati, la disposizione in colonne o righe in un oggetto derivato da [CView](reference/cview-class.md). In questi casi, è necessario un maggiore controllo sull'aspetto e sul comportamento predefinito di un controllo intestazione incorporato.
 
-Nel caso comune in cui si desidera che un controllo intestazione fornisca il comportamento predefinito standard, è possibile utilizzare [cListCtrl](../mfc/reference/clistctrl-class.md) o [CListView](../mfc/reference/clistview-class.md) invece. Utilizzare `CListCtrl` quando si desidera la funzionalità di un controllo intestazione predefinito, incorporato in un controllo comune visualizzazione elenco. Utilizzare [CListView](../mfc/reference/clistview-class.md) quando si desidera la funzionalità di un controllo intestazione predefinito, incorporato in un oggetto visualizzazione.
+Nel caso comune in cui si vuole che un controllo intestazione fornisca un comportamento predefinito standard, è consigliabile usare [CListCtrl](reference/clistctrl-class.md) o [CListView](reference/clistview-class.md) . Usare `CListCtrl` quando si desidera la funzionalità di un controllo intestazione predefinito, incorporata in un controllo comune di visualizzazione elenco. Utilizzare [CListView](reference/clistview-class.md) quando si desidera che la funzionalità di un controllo intestazione predefinito, incorporata in un oggetto visualizzazione.
 
 > [!NOTE]
-> Questi controlli includono solo un controllo intestazione incorporato se il controllo visualizzazione elenco viene creato utilizzando lo stile **di LVS_REPORT.**
+> Questi controlli includono solo un controllo intestazione incorporato se il controllo visualizzazione elenco viene creato usando lo stile **LVS_REPORT** .
 
-Nella maggior parte dei casi, l'aspetto del controllo intestazione incorporato può essere modificato modificando gli stili del controllo visualizzazione elenco che lo contiene. Inoltre, le informazioni sul controllo intestazione possono essere ottenute tramite le funzioni membro del controllo visualizzazione elenco padre. Tuttavia, per il controllo completo e l'accesso agli attributi e agli stili del controllo intestazione incorporato, è consigliabile ottenere un puntatore all'oggetto controllo intestazione.
+Nella maggior parte dei casi, l'aspetto del controllo intestazione incorporato può essere modificato modificando gli stili del controllo di visualizzazione elenco che lo contiene. Inoltre, le informazioni sul controllo intestazione possono essere ottenute tramite le funzioni membro del controllo visualizzazione elenco padre. Tuttavia, per il controllo completo e l'accesso agli attributi e agli stili del controllo intestazione incorporato, è consigliabile ottenere un puntatore all'oggetto controllo intestazione.
 
-È possibile accedere all'oggetto `CListCtrl` controllo `CListView` intestazione incorporato da uno `GetHeaderCtrl` o con una chiamata alla funzione membro della rispettiva classe. Il codice seguente illustra questo processo:
+È possibile accedere all'oggetto controllo intestazione incorporato da `CListCtrl` o `CListView` con una chiamata alla funzione membro della relativa classe `GetHeaderCtrl` . Il codice seguente illustra questo processo:
 
-[!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#14](codesnippet/cpp/header-control-and-list-control_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>Cosa vuoi sapere di più su
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Uso di elenchi immagini con controlli intestazione](../mfc/using-image-lists-with-header-controls.md)
+- [Uso di elenchi di immagini con controlli Header](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
-[Controlli](../mfc/controls-mfc.md)
+[Uso di CHeaderCtrl](using-cheaderctrl.md)<br/>
+[Controlli](controls-mfc.md)

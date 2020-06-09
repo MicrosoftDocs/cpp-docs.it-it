@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078836"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616041"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Esempio: visualizzazione di una finestra di dialogo tramite un comando di menu
 
@@ -25,7 +25,7 @@ Questo argomento contiene le procedure per:
 
 - Visualizza una finestra di dialogo non modale tramite un comando di menu.
 
-Entrambe le procedure di esempio sono per le applicazioni MFC e funzionano in un'applicazione creata con la [creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md).
+Entrambe le procedure di esempio sono per le applicazioni MFC e funzionano in un'applicazione creata con la [creazione guidata applicazione MFC](reference/mfc-application-wizard.md).
 
 Le procedure utilizzano i nomi e i valori seguenti:
 
@@ -44,7 +44,7 @@ Le procedure utilizzano i nomi e i valori seguenti:
 
 1. Aggiungere una classe per la finestra di dialogo. Per ulteriori informazioni, vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md) .
 
-1. In **Visualizzazione classi**selezionare la classe Document (CDisplayDialogDoc). Nella finestra **Proprietà** fare clic sul pulsante **Eventi**. Fare doppio clic sull'ID del comando di menu (ID_VIEW_TEST). Fare quindi clic sulla freccia verso il basso e selezionare **\<aggiungi > OnViewTest**.
+1. In **Visualizzazione classi**selezionare la classe Document (CDisplayDialogDoc). Nella finestra **Proprietà** fare clic sul pulsante **Eventi** . Fare doppio clic sull'ID del comando di menu (ID_VIEW_TEST). Fare quindi clic sulla freccia verso il basso e selezionare ** \<Add> OnViewTest**.
 
    Se il comando di menu è stato aggiunto al mainframe di un'applicazione MDI, selezionare invece la classe dell'applicazione (CDisplayDialogApp).
 
@@ -112,5 +112,5 @@ Le procedure utilizzano i nomi e i valori seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
-[Finestre di dialogo modali e non modali](../mfc/modal-and-modeless-dialog-boxes.md)
+[Finestre di dialogo](dialog-boxes.md)<br/>
+[Finestre di dialogo modali e non modali](modal-and-modeless-dialog-boxes.md)

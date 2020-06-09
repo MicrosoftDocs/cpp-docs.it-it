@@ -6,24 +6,24 @@ helpviewer_keywords:
 - tool tips [MFC], tool tip controls
 - tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
-ms.openlocfilehash: 2ba935f52f24f62dded3b89df1563454cf7e0335
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26f31705068df009e906d50451efa9ea6572d7e6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383910"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625452"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Metodi di creazione di descrizioni comandi
 
-MFC fornisce tre classi per creare e gestire il controllo descrizione comando: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) e [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Le funzioni membro suggerimento dello strumento in queste classi di eseguire il wrapping di controlli comuni di Windows API. Classe `CToolBarCtrl` e la classe `CToolTipCtrl` derivano dalla classe `CWnd`.
+MFC fornisce tre classi per creare e gestire il controllo descrizione comando: [CWnd](reference/cwnd-class.md), [CToolBarCtrl](reference/ctoolbarctrl-class.md), [CToolTipCtrl](reference/ctooltipctrl-class.md) e [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md). Le funzioni membro della descrizione comando di queste classi avvolgono l'API del controllo comune di Windows. La classe e la classe `CToolBarCtrl` `CToolTipCtrl` sono derivate dalla classe `CWnd` .
 
-`CWnd` fornisce quattro funzioni membro per creare e gestire le descrizioni comandi: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), e [OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest). Vedere le singole funzioni membro per altre informazioni sull'implementazione delle descrizioni comandi.
+`CWnd`fornisce quattro funzioni membro per la creazione e la gestione di descrizioni comandi: [EnableToolTips](reference/cwnd-class.md#enabletooltips), [CancelToolTips](reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](reference/cwnd-class.md#filtertooltipmessage)e [OnToolHitTest](reference/cwnd-class.md#ontoolhittest). Per ulteriori informazioni sulla modalità di implementazione delle descrizioni comandi, vedere le singole funzioni membro.
 
-Se si crea una barra degli strumenti utilizzando `CToolBarCtrl`, è possibile implementare descrizioni comandi per la barra degli strumenti usano direttamente le funzioni membro seguenti: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) e [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). Vedere le singole funzioni membro e [suggerimento dello strumento Gestione delle notifiche](../mfc/handling-tool-tip-notifications.md) per altre informazioni sull'implementazione delle descrizioni comandi.
+Se si crea una barra degli strumenti usando `CToolBarCtrl` , è possibile implementare le descrizioni comandi per la barra degli strumenti direttamente usando le funzioni membro seguenti: [GetToolTips](reference/ctoolbarctrl-class.md#gettooltips) e [setooltips](reference/ctoolbarctrl-class.md#settooltips). Per ulteriori informazioni sulla modalità di implementazione delle descrizioni comandi, vedere le singole funzioni membro e la [gestione delle notifiche](handling-tool-tip-notifications.md) delle descrizioni comandi.
 
-Il `CToolTipCtrl` classe fornisce la funzionalità di controllo Windows comune descrizione comandi. Un singolo controllo descrizione comandi può fornire informazioni per più di uno strumento. Uno strumento è una finestra, ad esempio una finestra figlia di controllo o un'area rettangolare definita dall'applicazione all'interno dell'area client. Il [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) deriva dalla classe `CToolTipCtrl` e fornisce funzionalità e gli stili visivi aggiuntivi.
+La `CToolTipCtrl` classe fornisce la funzionalità del controllo ToolTip comune di Windows. Un singolo controllo descrizione comando può fornire informazioni per più di uno strumento. Uno strumento può essere una finestra, ad esempio una finestra o un controllo figlio, oppure un'area rettangolare definita dall'applicazione all'interno dell'area client di una finestra. La classe [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md) deriva da `CToolTipCtrl` e fornisce stili e funzionalità di visualizzazione aggiuntivi.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
-[Controlli](../mfc/controls-mfc.md)
+[Uso di CToolTipCtrl](using-ctooltipctrl.md)<br/>
+[Controlli](controls-mfc.md)

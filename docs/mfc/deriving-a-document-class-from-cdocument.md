@@ -8,27 +8,27 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-ms.openlocfilehash: 5998d5707eb741be0e8ac270f6ac5ce77a9ff8d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399230446977636cc8769efe32b8f86fad466b83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153268"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616108"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Derivazione di una classe documento da CDocument
 
-I documenti includono e gestiscono i dati dell'applicazione. Per usare la classe di documento generata dalla creazione guidata applicazione MFC, è necessario eseguire le operazioni seguenti:
+I documenti contengono e gestiscono i dati dell'applicazione. Per utilizzare la classe documento fornita dalla creazione guidata applicazione MFC, è necessario eseguire le operazioni seguenti:
 
 - Derivare una classe da `CDocument` per ogni tipo di documento.
 
-- Aggiungere variabili membro per archiviare i dati di ciascun documento.
+- Aggiungere variabili membro per archiviare i dati di ogni documento.
 
-- Eseguire l'override `CDocument`del `Serialize` funzione membro nella classe del documento. `Serialize` scrive e legge i dati del documento da e verso dischi.
+- Eseguire l'override `CDocument` della `Serialize` funzione membro nella classe del documento. `Serialize`scrive e legge i dati del documento da e verso il disco.
 
-## <a name="other-document-functions-often-overridden"></a>Altre funzioni di documento spesso sottoposto a override
+## <a name="other-document-functions-often-overridden"></a>Altre funzioni di documento spesso sostituite
 
-È anche possibile eseguire l'override di altri `CDocument` funzioni membro. In particolare, è spesso necessario eseguire l'override [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) e [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) per inizializzare i membri dati del documento e [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) da eliminare definitivamente dati allocati dinamicamente. Per informazioni sui membri sottoponibili a override, vedere la classe [CDocument](../mfc/reference/cdocument-class.md) nel *riferimento MFC*.
+Potrebbe anche essere necessario eseguire l'override di altre `CDocument` funzioni membro. In particolare, sarà spesso necessario eseguire l'override di [OnNewDocument](reference/cdocument-class.md#onnewdocument) e [OnOpenDocument](reference/cdocument-class.md#onopendocument) per inizializzare i membri dati del documento e [DeleteContents](reference/cdocument-class.md#deletecontents) per eliminare i dati allocati in modo dinamico. Per informazioni sui membri sottoponibili a override, vedere la classe [CDocument](reference/cdocument-class.md) nella Guida di *riferimento a MFC*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di documenti](../mfc/using-documents.md)
+[Utilizzo di documenti](using-documents.md)

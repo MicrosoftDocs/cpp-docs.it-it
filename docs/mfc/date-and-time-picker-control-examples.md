@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: f03c3a22-7725-45eb-8f8e-dddb2d15c3ca
-ms.openlocfilehash: 9de28d5407da6e83ed3b7cd77cad3f636538a70f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be65b5f04323c1a5135d33e9164948a55cf78cac
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241448"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616195"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Esempi di controllo selezione data e ora
 
-Il [CMNCTRL1](../overview/visual-cpp-samples.md) esempio illustra i vari attributi del `CDateTimeCtrl` classe. Una pagina separata contiene un controllo selezione data e ora che è possibile manipolare modificando i vari attributi e le funzionalità di base del controllo di test.
+L'esempio [CMNCTRL1](../overview/visual-cpp-samples.md) illustra i vari attributi della `CDateTimeCtrl` classe. Una pagina separata contiene un controllo selezione data e ora che l'utente può modificare modificando vari attributi e testando la funzionalità di base del controllo.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
-[Controlli](../mfc/controls-mfc.md)
+[Utilizzo di CDateTimeCtrl](using-cdatetimectrl.md)<br/>
+[Controlli](controls-mfc.md)

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - mappings [MFC], messages
 - messages [MFC], mapping
 ms.assetid: 996f0652-0698-4b8c-b893-cdaa836d9d0f
-ms.openlocfilehash: 82c55c82d6b7a3faa65906345137885555a57d08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d6d7725d82bed6c9bfc02e408b68dcf7ffe5e4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279230"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625497"
 ---
 # <a name="mapping-messages"></a>Mapping dei messaggi
 
-Ogni classe di framework che può ricevere messaggi o i comandi ha il proprio "mapping di messaggi". Il framework utilizza le mappe messaggi a cui connettersi alle funzioni del gestore di messaggi e comandi. Tutte le classi derivate dalla classe `CCmdTarget` può avere una mappa messaggi. Altri articoli illustrano le mappe messaggi in modo dettagliato e descrivono come usarli.
+Ogni classe Framework che può ricevere messaggi o comandi ha una propria "mappa messaggi". Il Framework usa le mappe messaggi per connettere messaggi e comandi alle relative funzioni di gestione. Qualsiasi classe derivata dalla classe `CCmdTarget` può disporre di una mappa messaggi. Altri articoli illustrano in dettaglio le mappe messaggi e descrivono come usarle.
 
-Nonostante il nome "mappa messaggi," messaggio mappe gestiscono entrambi i messaggi e comandi, ovvero tutte le tre categorie di messaggi elencati nel [categorie di messaggi](../mfc/message-categories.md).
+Nonostante il nome "mappa messaggi", le mappe messaggi gestiscono sia i messaggi che i comandi, tutte e tre le categorie di messaggi elencate nelle [categorie](message-categories.md)dei messaggi.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Messaggi e comandi nel framework](../mfc/messages-and-commands-in-the-framework.md)
+[Messaggi e comandi nel framework](messages-and-commands-in-the-framework.md)

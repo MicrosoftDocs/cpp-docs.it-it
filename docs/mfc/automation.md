@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370820"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616518"
 ---
 # <a name="automation"></a>Automazione
 
 L'automazione (precedentemente nota come automazione OLE) fa sì che un'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati.
 
-Un [server di automazione](../mfc/automation-servers.md) è un'applicazione (un tipo di server COM) che espone le proprie funzionalità tramite interfacce COM ad altre applicazioni, chiamate [client di automazione](../mfc/automation-clients.md). L'esposizione consente ai client di automazione di automatizzare determinate funzioni accedendo direttamente agli oggetti e utilizzando i servizi che essi forniscono.
+Un [server di automazione](automation-servers.md) è un'applicazione (un tipo di server COM) che espone le proprie funzionalità tramite interfacce COM ad altre applicazioni, chiamate [client di automazione](automation-clients.md). L'esposizione consente ai client di automazione di automatizzare determinate funzioni accedendo direttamente agli oggetti e utilizzando i servizi che essi forniscono.
 
 I server e i client di automazione utilizzano le interfacce COM che derivano sempre da `IDispatch` e accettano e restituiscono uno specifico set di tipi di dati denominati tipi di automazione. È possibile automatizzare qualsiasi oggetto che espone un'interfaccia di automazione, fornendo i metodi e le proprietà a cui è possibile accedere da altre applicazioni. L'automazione è disponibile sia per gli oggetti OLE che per gli oggetti COM. L'oggetto automatizzato potrebbe essere locale o remoto (in un altro computer a cui si accede attraverso una rete), quindi esistono due categorie di automazione:
 
@@ -49,9 +49,9 @@ Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, pe
 
 ## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> Passaggio di parametri nell'automazione
 
-Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Inoltre, supporta i tipi **HRESULT** (codici di errore OLE), **CURRENCY** (un tipo numerico a virgola fissa) `IUnknown` e `IDispatch` **DATE** (data e ora assoluta), nonché puntatori a e interfacce.
+Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Supporta inoltre i tipi **HRESULT** (codici di errore OLE), **Currency** (un tipo numerico a virgola fissa) e **Data** (data e ora assoluti), nonché i puntatori alle `IUnknown` `IDispatch` interfacce e.
 
-Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/colevariant-class.md) . Le classi **CURRENCY** e **DATE** di supporto sono incapsulate nelle classi [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .
+Il tipo **VARIANT** è incapsulato nella classe [COleVariant](reference/colevariant-class.md) . Le classi **CURRENCY** e **DATE** di supporto sono incapsulate nelle classi [COleCurrency](reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .
 
 ## <a name="automation-samples"></a>Esempi di automazione
 
@@ -67,26 +67,26 @@ Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/c
 
 - [MFCCALC](../overview/visual-cpp-samples.md) Mostra un'applicazione client di automazione.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Cosa vuoi sapere di più su
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Client di automazione](../mfc/automation-clients.md)
+- [Client di automazione](automation-clients.md)
 
-- [Server di automazione](../mfc/automation-servers.md)
+- [Server di automazione](automation-servers.md)
 
-- [OLE](../mfc/ole-in-mfc.md)
+- [OLE](ole-in-mfc.md)
 
-- [tecnologia Active](../mfc/mfc-com.md)
+- [tecnologia Active](mfc-com.md)
 
-## <a name="what-do-you-want-to-do"></a>Cosa vuoi fare
+## <a name="what-do-you-want-to-do"></a>Cosa si vuole fare
 
-- [Aggiungere una classe di automazione](../mfc/automation-servers.md)
+- [Aggiungere una classe di automazione](automation-servers.md)
 
-- [Utilizzare le librerie dei tipi](../mfc/automation-clients-using-type-libraries.md)
+- [Utilizzare le librerie dei tipi](automation-clients-using-type-libraries.md)
 
-- [Accedere a server di automazione](../mfc/automation-servers.md)
+- [Accedere a server di automazione](automation-servers.md)
 
-- [Scrivere client di automazione in C++](../mfc/automation-clients.md)
+- [Scrivere client di automazione in C++](automation-clients.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)

@@ -11,33 +11,33 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: 1d76570e7bfd4ce587b3803235394ec5406d30b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15f5034604f9d6b67574288140b79b144692478
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410200"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615354"
 ---
 # <a name="output-device-context-classes"></a>Classi Output (contesto del dispositivo)
 
-Queste classi includono i diversi tipi di contesti di dispositivo disponibili in Windows.
+Queste classi incapsulano i diversi tipi di contesti di dispositivo disponibili in Windows.
 
-La maggior parte delle classi seguenti incapsulano un handle per un contesto di periferica Windows. Un contesto di dispositivo è un oggetto di Windows che contiene informazioni sugli attributi disegni di un dispositivo, ad esempio una visualizzazione o una stampante. Tutte le chiamate di disegnare vengono effettuate tramite un oggetto di contesto di dispositivo. Altre classi derivate da `CDC` incapsulano funzionalità specializzate del contesto di dispositivo, incluso il supporto per i metafile di Windows.
+La maggior parte delle classi seguenti incapsula un handle per un contesto di dispositivo Windows. Un contesto di dispositivo è un oggetto di Windows che contiene informazioni sugli attributi di disegno di un dispositivo, ad esempio uno schermo o una stampante. Tutte le chiamate di disegno vengono eseguite tramite un oggetto del contesto di dispositivo. Classi aggiuntive derivate da `CDC` incapsulare funzionalità di contesto di dispositivo specializzate, incluso il supporto per i metafile di Windows.
 
-[CDC](../mfc/reference/cdc-class.md)<br/>
-Classe di base per i contesti di dispositivo. Utilizzati direttamente per l'accesso a schermo intero e l'accesso a contesti nondisplay, ad esempio le stampanti.
+[CDC](reference/cdc-class.md)<br/>
+Classe di base per i contesti di dispositivo. Usato direttamente per accedere all'intero schermo e per accedere ai contesti non visualizzati, ad esempio le stampanti.
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md)<br/>
-Un contesto di visualizzazione utilizzato in `OnPaint` funzioni membro di windows. Chiama automaticamente `BeginPaint` in fase di costruzione e `EndPaint` durante la distruzione.
+[CPaintDC](reference/cpaintdc-class.md)<br/>
+Contesto di visualizzazione utilizzato nelle `OnPaint` funzioni membro di Windows. Chiama automaticamente `BeginPaint` alla costruzione e `EndPaint` alla distruzione.
 
-[CClientDC](../mfc/reference/cclientdc-class.md)<br/>
-Un contesto di visualizzazione per le aree di client di windows. Usato, ad esempio, da disegnare in una risposta immediata agli eventi del mouse.
+[CClientDC](reference/cclientdc-class.md)<br/>
+Contesto di visualizzazione per le aree client di Windows. Utilizzato, ad esempio, per creare una risposta immediata agli eventi del mouse.
 
-[CWindowDC](../mfc/reference/cwindowdc-class.md)<br/>
-Un contesto di visualizzazione per intero windows, tra cui aree client e client.
+[CWindowDC](reference/cwindowdc-class.md)<br/>
+Contesto di visualizzazione per intere finestre, incluse le aree client e non client.
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)<br/>
-Un contesto di dispositivo metafile di Windows. Un metafile di Windows contiene una sequenza di comandi grafica device interface (GDI) che possono essere riprodotte per creare un'immagine. Le chiamate effettuate alle funzioni membro di un `CMetaFileDC` vengono registrate in un metafile.
+[CMetaFileDC](reference/cmetafiledc-class.md)<br/>
+Contesto di dispositivo per i file di Windows. Un metafile di Windows contiene una sequenza di comandi GDI (Graphics Device Interface) che è possibile riprodurre per creare un'immagine. Le chiamate effettuate alle funzioni membro di un oggetto `CMetaFileDC` vengono registrate in un metafile.
 
 ## <a name="related-classes"></a>Classi correlate
 
@@ -50,21 +50,21 @@ Contiene distanze, posizioni relative o valori accoppiati.
 [CRect](../atl-mfc-shared/reference/crect-class.md)<br/>
 Contiene le coordinate delle aree rettangolari.
 
-[CRgn](../mfc/reference/crgn-class.md)<br/>
-Incapsula un'area GDI per la modifica di un'area ellittica, poligonale o irregolare all'interno di una finestra. Usato in combinazione con le funzioni membro di ritaglio in classe `CDC`.
+[CRgn](reference/crgn-class.md)<br/>
+Incapsula un'area GDI per la modifica di un'area ellittica, poligonale o irregolare all'interno di una finestra. Utilizzato insieme alle funzioni membro di ritaglio nella classe `CDC` .
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-Visualizza e gestisce l'interfaccia utente per il ridimensionamento e spostamento di oggetti rettangolari.
+[CRectTracker](reference/crecttracker-class.md)<br/>
+Visualizza e gestisce l'interfaccia utente per il ridimensionamento e lo trasferimento di oggetti rettangolari.
 
-[CColorDialog](../mfc/reference/ccolordialog-class.md)<br/>
+[CColorDialog](reference/ccolordialog-class.md)<br/>
 Fornisce una finestra di dialogo standard per la selezione di un colore.
 
-[CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
+[CFontDialog](reference/cfontdialog-class.md)<br/>
 Fornisce una finestra di dialogo standard per la selezione di un tipo di carattere.
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
+[CPrintDialog](reference/cprintdialog-class.md)<br/>
 Fornisce una finestra di dialogo standard per la stampa di un file.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../mfc/class-library-overview.md)
+[Cenni preliminari sulle classi](class-library-overview.md)

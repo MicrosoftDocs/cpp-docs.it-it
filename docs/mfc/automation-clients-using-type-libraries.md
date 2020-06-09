@@ -1,5 +1,5 @@
 ---
-title: 'Client di automazione: Uso delle librerie di tipi'
+title: 'Client di automazione: utilizzo delle librerie dei tipi'
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: 480f8fca46b13d445f372311ed837475c71a1e9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e5f9ffcebc3725851c599e7b21369f45d0029d81
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509215"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626094"
 ---
-# <a name="automation-clients-using-type-libraries"></a>Client di automazione: Uso delle librerie di tipi
+# <a name="automation-clients-using-type-libraries"></a>Client di automazione: utilizzo delle librerie dei tipi
 
 I client di automazione devono disporre di informazioni sulle proprietà e i metodi degli oggetti server se i client devono modificare gli oggetti dei server. Le proprietà includono tipi di dati; i metodi spesso restituiscono valori e accettano parametri. Il client richiede informazioni sui tipi di dati di tutti questi elementi per eseguire un'associazione statica al tipo di oggetto server.
 
@@ -29,7 +29,7 @@ Queste informazioni sul tipo possono essere rese note in diversi modi. Il metodo
 
 Per informazioni su [MkTypLib](/windows/win32/Midl/differences-between-midl-and-mktyplib), vedere la Windows SDK.
 
-Visual C++ può leggere un file di libreria dei tipi e creare una classe dispatch derivata da [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Un oggetto di tale classe dispone di proprietà e operazioni che duplicano quelle dell'oggetto server. L'applicazione chiama le proprietà e le operazioni di questo oggetto e la funzionalità `COleDispatchDriver` ereditata da instrada queste chiamate al sistema OLE, che a sua volta le instrada all'oggetto server.
+Visual C++ possibile leggere un file della libreria dei tipi e creare una classe dispatch derivata da [COleDispatchDriver](reference/coledispatchdriver-class.md). Un oggetto di tale classe dispone di proprietà e operazioni che duplicano quelle dell'oggetto server. L'applicazione chiama le proprietà e le operazioni di questo oggetto e la funzionalità ereditata da `COleDispatchDriver` instrada queste chiamate al sistema OLE, che a sua volta le instrada all'oggetto server.
 
 Visual C++ gestisce automaticamente il file della libreria dei tipi se si è scelto di includere l'automazione al momento della creazione del progetto. Come parte di ogni compilazione, il file con estensione tlb verrà compilato con MkTypLib.
 
@@ -54,10 +54,10 @@ Visual C++ gestisce automaticamente il file della libreria dei tipi se si è sce
     > [!NOTE]
     >  Alcune informazioni sulla libreria dei tipi possono essere archiviate in file con. DLL,. OCX o. Estensioni di file OLB.
 
-1. Scegliere **Fine**.
+1. Fare clic su **Fine**.
 
    La procedura guidata scriverà quindi il codice per le classi dispatch usando la classe e i nomi di file specificati.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Automation Clients](../mfc/automation-clients.md)
+[Client di automazione](automation-clients.md)
