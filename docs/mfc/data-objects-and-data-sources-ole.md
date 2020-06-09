@@ -10,35 +10,35 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241207"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616215"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Oggetti dati e origini dati (OLE)
 
-Quando si esegue un trasferimento di dati, tramite l'utilizzo negli Appunti o trascinamento della selezione, i dati abbiano un'origine e una destinazione. Un'applicazione fornisce i dati per la copia e l'accetta un'altra applicazione per incollare. Ogni lato del trasferimento è necessario eseguire diverse operazioni sugli stessi dati per il trasferimento abbia esito positivo. La libreria Microsoft Foundation classi (MFC) fornisce due classi che rappresentano ogni lato di questo trasferimento:
+Quando si esegue un trasferimento dati, usando gli Appunti o il trascinamento della selezione, i dati hanno un'origine e una destinazione. Un'applicazione fornisce i dati per la copia e un'altra applicazione la accetta per incollarli. Ogni lato del trasferimento deve eseguire operazioni diverse sugli stessi dati perché il trasferimento abbia esito positivo. La libreria MFC (Microsoft Foundation Class) fornisce due classi che rappresentano ogni lato del trasferimento:
 
-- Origini dati (come implementato dalla `COleDataSource` oggetti) rappresentano l'origine del trasferimento dei dati. Vengono create dall'applicazione di origine quando i dati deve essere copiato negli Appunti oppure quando vengono forniti dati per un'operazione di trascinamento e rilascio.
+- Le origini dati (implementate da `COleDataSource` oggetti) rappresentano il lato di origine del trasferimento dei dati. Vengono creati dall'applicazione di origine quando i dati devono essere copiati negli Appunti o quando i dati vengono forniti per un'operazione di trascinamento della selezione.
 
-- Gli oggetti di data (come implementato dalla `COleDataObject` oggetti) rappresentano la destinazione del trasferimento dei dati. Vengono creati quando l'applicazione di destinazione ha dati trascinati al suo interno oppure quando viene richiesto di eseguire un'operazione Incolla dagli Appunti.
+- Gli oggetti dati (come implementato da `COleDataObject` oggetti) rappresentano il lato di destinazione del trasferimento dei dati. Vengono creati quando nell'applicazione di destinazione sono stati rilasciati dati o quando viene richiesto di eseguire un'operazione Incolla dagli Appunti.
 
-Gli articoli seguenti illustrano come usare gli oggetti dati e origini dati nelle applicazioni. Queste informazioni si applicano alle applicazioni contenitore sia il server, poiché entrambi possono essere utilizzate per copiare e incollare i dati.
+Negli articoli seguenti viene illustrato come utilizzare gli oggetti dati e le origini dati nelle applicazioni. Queste informazioni si applicano sia alle applicazioni del server che al contenitore, perché entrambi possono essere chiamati per copiare e incollare i dati.
 
-- [Oggetti dati e origini dati: creazione ed eliminazione definitiva](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Oggetti dati e origini dati: creazione e distruzione](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Oggetti dati e origini dati: manipolazione](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Oggetti dati e origini dati: modifica](data-objects-and-data-sources-manipulation.md)
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-[Trascinamento della selezione](../mfc/drag-and-drop-ole.md)
+[Trascinamento della selezione](drag-and-drop-ole.md)
 
-[Appunti](../mfc/clipboard.md)
+[Appunti](clipboard.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Classe COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
-[Classe COleDataSource](../mfc/reference/coledatasource-class.md)
+[OLE](ole-in-mfc.md)<br/>
+[Classe COleDataObject](reference/coledataobject-class.md)<br/>
+[Classe COleDataSource](reference/coledatasource-class.md)

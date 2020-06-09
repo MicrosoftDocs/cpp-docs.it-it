@@ -9,161 +9,161 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: f06a6f6f71e922163fd95c59836c50b88b05ed3a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448194"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616483"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controlli ActiveX in Internet
 
-Controlli ActiveX sono la versione aggiornata della specifica del controllo OLE.
+I controlli ActiveX sono la versione aggiornata della specifica del controllo OLE.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere usata per nuove attività di sviluppo. Per ulteriori informazioni, vedere [controlli ActiveX](activex-controls.md).
 
-I controlli sono un'architettura principale per lo sviluppo di componenti software programmabile che possono essere usati in diversi contenitori diversi, inclusi i browser Web compatibile con COM su Internet. Qualsiasi controllo ActiveX può essere un controllo di Internet e aggiungere le proprie funzionalità a un documento attivo o far parte di una pagina Web. I controlli in una pagina Web possono comunicare tra loro gli script.
+I controlli sono un'architettura primaria per lo sviluppo di componenti software programmabili che possono essere utilizzati in una vasta gamma di contenitori diversi, inclusi i Web browser compatibili con COM in Internet. Qualsiasi controllo ActiveX può essere un controllo Internet e può aggiungere la funzionalità a un documento attivo o far parte di una pagina Web. I controlli in una pagina Web possono comunicare tra loro tramite lo scripting.
 
-Controlli ActiveX non sono limitati a Internet. Un controllo ActiveX è anche utilizzabile in tutti i contenitori, purché il controllo supporta le interfacce richieste da tale contenitore.
+I controlli ActiveX non sono limitati a Internet. Un controllo ActiveX può essere usato anche in qualsiasi contenitore, purché il controllo supporti le interfacce richieste da tale contenitore.
 
 **I controlli ActiveX presentano diversi vantaggi, tra cui:**
 
-- Interfacce meno richieste rispetto ai precedenti controlli OLE.
+- Meno interfacce obbligatorie rispetto ai controlli OLE precedenti.
 
-- La possibilità di essere privi di finestra e sempre sul posto attivo.
+- La possibilità di essere senza finestra e sempre attiva sul posto.
 
-**Per poter essere un controllo ActiveX, è necessario un controllo:**
+**Per essere un controllo ActiveX, un controllo deve:**
 
-- Supporto di `IUnknown` interfaccia.
+- Supportare l' `IUnknown` interfaccia.
 
 - Essere un oggetto COM.
 
-- Esportare **DLLRegisterServer** e **DLLUnRegisterServer**.
+- Esportare **DllRegisterServer** e **DllUnregisterServer**.
 
-- Supporta le interfacce aggiuntive in base alle esigenze per la funzionalità.
+- Supportare le interfacce aggiuntive necessarie per la funzionalità.
 
-## <a name="making-your-existing-controls-internet-friendly"></a>Trasformazione facile integrazione con Internet dei controlli esistenti
+## <a name="making-your-existing-controls-internet-friendly"></a>Rendere i controlli esistenti intuitivi per Internet
 
-Progettazione di un controllo che funzionerà correttamente in un ambiente Internet richiede una riflessione sulla velocità di trasmissione relativamente basso in Internet. È possibile usare i controlli esistenti; Tuttavia, esistono passaggi da eseguire per ridurne le dimensioni del codice e rendere la proprietà del controllo di download in modo asincrono.
+La progettazione di un controllo che funzioni correttamente in un ambiente Internet richiede la considerazione della velocità di trasmissione relativamente bassa su Internet. È possibile usare i controlli esistenti. Tuttavia, è necessario eseguire alcune operazioni per ridurre le dimensioni del codice e rendere le proprietà del controllo scaricate in modo asincrono.
 
-Per migliorare le prestazioni dei controlli, seguire questi suggerimenti sulle considerazioni di efficienza:
+Per migliorare le prestazioni dei controlli, seguire questi suggerimenti sulle considerazioni sull'efficienza:
 
-- Implementare le tecniche descritte nell'articolo [controlli ActiveX: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
+- Implementare le tecniche descritte nell'articolo [controlli ActiveX: ottimizzazione](mfc-activex-controls-optimization.md).
 
-- Prendere in considerazione la modalità con cui viene creata un'istanza di un controllo.
+- Considerare la modalità di creazione di un'istanza di un controllo.
 
-- Asincrono; non includere modo altri programmi.
+- Essere asincrono; non tenere altri programmi.
 
-- Scaricare i dati in piccoli blocchi.
+- Scaricare i dati in blocchi di piccole dimensioni.
 
-   Quando si scaricano i flussi di grandi dimensioni, ad esempio le bitmap o dati video, accedere ai dati di un controllo in modo asincrono in collaborazione con il contenitore. Recuperare i dati in maniera graduale o incrementale, magari in collaborazione con altri controlli che possono anche essere il recupero dei dati. Codice può essere scaricato anche in modo asincrono.
+   Quando si scaricano flussi di grandi dimensioni, ad esempio bitmap o dati video, è possibile accedere in modo asincrono ai dati di un controllo in collaborazione con il contenitore. Recuperare i dati in modo incrementale o progressivo, lavorando in modo cooperativo con altri controlli che potrebbero anche recuperare i dati. Il codice può anche essere scaricato in modo asincrono.
 
 - Scaricare il codice e le proprietà in background.
 
-- Acquisire l'interfaccia utente attivo nel minor tempo.
+- Diventa l'interfaccia utente attiva il più rapidamente possibile.
 
-- Prendere in considerazione come si archiviano dati persistenti sia le proprietà grandi quantità di dati BLOB (ad esempio una bitmap immagini o video i dati).
+- Valutare il modo in cui vengono archiviati i dati persistenti, sia le proprietà sia i BLOB di dati di grandi dimensioni, ad esempio un'immagine bitmap o dati video.
 
-   I controlli con grandi quantità di dati persistenti, ad esempio le bitmap grandi o i file AVI, richiedono attenzione durante il metodo di download. Un documento o una pagina possono diventano visibile appena possibile e consentire all'utente di interagire con la pagina, mentre i controlli di recuperano i dati in background.
+   I controlli con quantità significative di dati persistenti, ad esempio bitmap di grandi dimensioni o file AVI, richiedono attenzione al download del metodo. Un documento o una pagina può essere visibile il prima possibile e consentire all'utente di interagire con la pagina mentre i controlli recuperano i dati in background.
 
-- Scrivere efficienti routine per mantenere la dimensione del codice e la fase di esecuzione.
+- Scrivere routine efficienti per ridurre le dimensioni del codice e il tempo di esecuzione.
 
-   Controlli pulsante e un'etichetta piccole, con solo pochi byte di dati persistenti, sono adatti per l'uso nell'ambiente Internet e funzionano correttamente all'interno di browser.
+   I controlli pulsante e etichetta piccoli, con solo pochi byte di dati persistenti, sono adatti per l'uso nell'ambiente Internet e funzionano correttamente all'interno dei browser.
 
-- Prendere in considerazione lo stato di avanzamento viene comunicato al contenitore.
+- Tenere presente che lo stato di avanzamento viene comunicato al contenitore.
 
-   Notificare al contenitore di stato di avanzamento del download asincrono, tra cui quando l'utente può iniziare a interagire con una pagina e una volta completato il download. Il contenitore può visualizzare lo stato di avanzamento (ad esempio, la percentuale di completamento) all'utente.
+   Inviare una notifica al contenitore dello stato di avanzamento nel download asincrono, ad esempio quando l'utente può iniziare a interagire con una pagina e al termine del download. Il contenitore può visualizzare lo stato di avanzamento, ad esempio la percentuale di completamento, per l'utente.
 
-- Prendere in considerazione come i controlli vengono registrati nel computer client.
+- Considerare la modalità di registrazione dei controlli nel computer client.
 
-## <a name="creating-a-new-activex-control"></a>Creare un nuovo controllo ActiveX
+## <a name="creating-a-new-activex-control"></a>Creazione di un nuovo controllo ActiveX
 
-Quando si crea un nuovo controllo tramite la creazione guidata applicazione, è possibile scegliere di abilitare il supporto per i moniker asincroni, nonché altre ottimizzazioni. Per aggiungere il supporto per scaricare le proprietà del controllo in modo asincrono, seguire questa procedura:
+Quando si crea un nuovo controllo utilizzando la creazione guidata applicazione, è possibile scegliere di abilitare il supporto per moniker asincroni e altre ottimizzazioni. Per aggiungere il supporto per scaricare le proprietà del controllo in modo asincrono, attenersi alla procedura seguente:
 
-#### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Per creare il progetto tramite la creazione guidata controllo ActiveX MFC
+#### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Per creare il progetto utilizzando la creazione guidata controllo ActiveX MFC
 
-1. Fare clic su **New** nel **File** menu.
+1. Scegliere **nuovo** dal menu **file** .
 
-1. Selezionare **Creazione guidata controllo ActiveX MFC** Visual Studio C++ progetti e denominare il progetto.
+1. Selezionare **creazione guidata controllo ActiveX MFC** dai progetti di Visual Studio C++ e assegnare un nome al progetto.
 
-1. Nel **le impostazioni di controllo** pagina, selezionare **carica le proprietà in modo asincrono**. Se si seleziona questa opzione imposta la proprietà stato pronto e l'evento di stato pronto modificato automaticamente.
+1. Nella pagina **Impostazioni controllo** selezionare Carica le **Proprietà in modo asincrono**. Se si seleziona questa opzione, la proprietà stato pronto e l'evento di modifica stato pronto vengono impostate.
 
-   È anche possibile selezionare altre ottimizzazioni, ad esempio **attivazione senza finestra**, descritta in [controlli ActiveX: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
+   È anche possibile selezionare altre ottimizzazioni, ad esempio l' **attivazione senza finestra**, descritta in [controlli ActiveX: ottimizzazione](mfc-activex-controls-optimization.md).
 
-1. Scegli **fine** per creare il progetto.
+1. Scegliere **fine** per creare il progetto.
 
 #### <a name="to-create-a-class-derived-from-cdatapathproperty"></a>Per creare una classe derivata da CDataPathProperty
 
-1. Creare una classe derivata da `CDataPathProperty`.
+1. Creare una classe derivata da `CDataPathProperty` .
 
-1. In ognuno dei file di origine che include il file di intestazione per il controllo, aggiungere il file di intestazione per questa classe prima di esso.
+1. In ogni file di origine che include il file di intestazione per il controllo, aggiungere il file di intestazione per questa classe prima.
 
-1. In questa classe, eseguire l'override `OnDataAvailable`. Questa funzione viene chiamata ogni volta che sono disponibili per la visualizzazione dei dati. Quando i dati diventano disponibili, è possibile gestirla nel modo preferito, ad esempio per eseguirne il rendering progressivo.
+1. In questa classe, eseguire l'override di `OnDataAvailable` . Questa funzione viene chiamata ogni volta che i dati sono disponibili per la visualizzazione. Man mano che i dati diventano disponibili, è possibile gestirli nel modo desiderato, ad esempio eseguendone progressivamente il rendering.
 
-   L'estratto di codice riportato di seguito è un esempio semplice di progressivamente la visualizzazione dei dati in un controllo di modifica. Si noti l'uso del flag **BSCF_FIRSTDATANOTIFICATION** per cancellare il controllo di modifica.
+   L'Estratto di codice seguente è un semplice esempio di visualizzazione progressiva dei dati in un controllo di modifica. Si noti l'uso di flag **BSCF_FIRSTDATANOTIFICATION** per cancellare il controllo di modifica.
 
-   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-   Si noti che è necessario includere AFXCMN. H per usare il `CListCtrl` classe.
+   Si noti che è necessario includere AFXCMN. H per usare la `CListCtrl` classe.
 
-1. Quando il controllo generale di stato cambia (ad esempio, dal caricamento a inizializzato o un utente interattivo), chiamata `COleControl::InternalSetReadyState`. Se il controllo dispone di proprietà del percorso dati solo una, è possibile aggiungere codice sul **BSCF_LASTDATANOTIFICATION** per notificare al contenitore che è stato completato il download. Ad esempio:
+1. Quando si modifica lo stato generale del controllo, ad esempio dal caricamento a Initialized o User Interactive, chiamare `COleControl::InternalSetReadyState` . Se il controllo ha una sola proprietà del percorso dati, è possibile aggiungere il codice **BSCF_LASTDATANOTIFICATION** per notificare al contenitore che il download è stato completato. Ad esempio:
 
-   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
-1. Eseguire l'override di `OnProgress`. In `OnProgress`, è stato passato un numero che indica l'intervallo massimo e un numero visualizzato fino a quando trova il download corrente sia. È possibile usare questi numeri per visualizzare lo stato, ad esempio la percentuale di completamento per l'utente.
+1. Eseguire l'override di `OnProgress`. In viene `OnProgress` passato un numero che mostra l'intervallo massimo e un numero che indica la distanza del download corrente. È possibile utilizzare questi numeri per visualizzare lo stato, ad esempio la percentuale di completamento dell'utente.
 
-La procedura seguente aggiunge una proprietà al controllo da usare per la classe derivata solo.
+La procedura successiva aggiunge una proprietà al controllo per usare la classe appena derivata.
 
 #### <a name="to-add-a-property"></a>Per aggiungere una proprietà
 
-1. Nelle **Visualizzazione classi**, fare doppio clic su interfaccia di sotto del nodo della libreria e selezionare **Add**, quindi **Aggiungi proprietà**. Verrà avviata il **Aggiunta guidata proprietà**.
+1. In **Visualizzazione classi**fare clic con il pulsante destro del mouse sull'interfaccia sotto il nodo libreria e scegliere **Aggiungi**, quindi **Aggiungi proprietà**. Verrà avviata l' **Aggiunta guidata proprietà**.
 
-1. Nel **Aggiunta guidata proprietà**, selezionare la **i metodi Set/Get** pulsante di opzione, digitare il **nome proprietà**, ad esempio, EditControlText e BSTR selezionare come il **Tipo di proprietà**.
+1. Nella **procedura guidata Aggiungi proprietà**selezionare il pulsante di opzione **imposta/Ottieni metodi** , digitare il **nome della proprietà**, ad esempio EditControlText, e selezionare BSTR come **tipo di proprietà**.
 
-1. Scegliere **Fine**.
+1. Fare clic su **Fine**.
 
-1. Dichiarare una variabile membro del `CDataPathProperty`-classe derivata per la classe del controllo ActiveX.
+1. Dichiarare una variabile membro della `CDataPathProperty` classe derivata da alla classe del controllo ActiveX.
 
-   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
-1. Implementare i metodi `Get/Set`. Per `Get`, restituire la stringa. Per la `Set`, caricare le proprietà e chiamate `SetModifiedFlag`.
+1. Implementare i metodi `Get/Set`. Per `Get` , restituire la stringa. Per `Set` , caricare la proprietà e chiamare `SetModifiedFlag` .
 
-   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
-1. Nelle [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), aggiungere la riga seguente:
+1. In [DoPropExchange](reference/colecontrol-class.md#dopropexchange)aggiungere la riga seguente:
 
-   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
-1. Eseguire l'override [ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) per notificare la proprietà da reimpostare il relativo controllo aggiungendo questa riga:
+1. Eseguire l'override di [ResetData](reference/cdatapathproperty-class.md#resetdata) per notificare alla proprietà la reimpostazione del controllo aggiungendo questa riga:
 
-   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
-## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Decidere se derivano da CDataPathProperty o CCachedDataPathProperty
+## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Decidere se derivare da CDataPathProperty o CCachedDataPathProperty
 
-Nell'esempio precedente vengono descritti i passaggi per la derivazione di proprietà del controllo da `CDataPathProperty`. Si tratta di un'ottima scelta se si scaricano i dati in tempo reale che cambia di frequente, e per cui non è necessaria mantenere tutti i dati, ma solo il valore corrente. Un esempio è un controllo stock ticker.
+Nell'esempio precedente vengono descritti i passaggi per la derivazione della proprietà del controllo da `CDataPathProperty` . Si tratta di una scelta ottimale se si scaricano dati in tempo reale che cambiano di frequente e per i quali non è necessario memorizzare tutti i dati, ma solo il valore corrente. Un esempio è un controllo del titolo di borsa.
 
-È anche possibile derivare da `CCachedDataPathProperty`. In questo caso, viene memorizzato nella cache i dati scaricati in un file di memoria. Si tratta di un'ottima scelta se è necessario mantenere tutti i dati scaricati, ad esempio, un controllo che esegue progressivamente il rendering di una bitmap. In questo caso, la classe dispone di una variabile membro contenente i dati:
+È anche possibile derivare da `CCachedDataPathProperty` . In questo caso, i dati scaricati vengono memorizzati nella cache in un file di memoria. Si tratta di una scelta ottimale se è necessario contenere tutti i dati scaricati, ad esempio un controllo che esegue progressivamente il rendering di una bitmap. In questo caso, la classe ha una variabile membro contenente i dati:
 
 `CMemFile m_Cache;`
 
-Nella classe del controllo ActiveX, è possibile usare questo file mappato alla memoria in `OnDraw` per visualizzare i dati. Nel controllo ActiveX `CCachedDataPathProperty`-classe derivata esegue l'override della funzione membro `OnDataAvailable` e invalidare il controllo, dopo la chiamata dell'implementazione della classe base.
+Nella classe del controllo ActiveX, è possibile utilizzare questo file con mapping di memoria in `OnDraw` per visualizzare i dati. Nella classe derivata dal controllo ActiveX `CCachedDataPathProperty` eseguire l'override della funzione membro `OnDataAvailable` e invalidare il controllo, dopo aver chiamato l'implementazione della classe di base.
 
-[!code-cpp[NVC_MFCActiveXControl#7](../mfc/codesnippet/cpp/activex-controls-on-the-internet_7.cpp)]
+[!code-cpp[NVC_MFCActiveXControl#7](codesnippet/cpp/activex-controls-on-the-internet_7.cpp)]
 
-## <a name="downloading-data-asynchronously-using-activex-controls"></a>Download dei dati in modo asincrono usando i controlli ActiveX
+## <a name="downloading-data-asynchronously-using-activex-controls"></a>Download asincrono dei dati tramite i controlli ActiveX
 
-Download dei dati attraverso una rete deve essere eseguito in modo asincrono. Il vantaggio di tale operazione è così che se viene trasferita una grande quantità di dati o se la connessione è lenta, il processo di download non blocca altri processi nel client.
+Il download dei dati in una rete deve essere eseguito in modo asincrono. Il vantaggio di questa operazione è che se si trasferisce una grande quantità di dati o se la connessione è lenta, il processo di download non bloccherà altri processi nel client.
 
-Moniker asincroni consentono di scaricare i dati in modo asincrono tramite una rete. Un'operazione di lettura su un moniker asincrono restituisce immediatamente, anche se l'operazione non è stata completata.
+I moniker asincroni consentono di scaricare i dati in modo asincrono in una rete. Un'operazione di lettura su un moniker asincrono restituisce immediatamente un valore, anche se l'operazione non è stata completata.
 
-Ad esempio, se sono disponibili 10 byte solo lettura viene chiamato in modo asincrono in un file da 1 KB, lettura non blocca, ma restituisce con 10 byte attualmente disponibili.
+Se, ad esempio, sono disponibili solo 10 byte e la lettura viene chiamata in modo asincrono in un file con estensione 1K, Read non blocca, ma restituisce con i 10 byte attualmente disponibili.
 
-Si implementa [moniker asincroni](../mfc/asynchronous-monikers-on-the-internet.md) usando il `CAsyncMonikerFile` classe. Tuttavia, è possono usare i controlli ActiveX il `CDataPathProperty` classe che deriva da `CAsyncMonikerFile`, per implementare le proprietà di controllo asincrono.
+Si implementano [moniker asincroni](asynchronous-monikers-on-the-internet.md) usando la `CAsyncMonikerFile` classe. Tuttavia, i controlli ActiveX possono utilizzare la `CDataPathProperty` classe, derivata da `CAsyncMonikerFile` , per consentire l'implementazione delle proprietà del controllo asincrono.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Visualizzazione di un controllo in una pagina Web
 
-Ecco un esempio di un tag object e gli attributi per l'inserimento di un controllo in una pagina Web.
+Di seguito è riportato un esempio di tag oggetto e attributi per l'inserimento di un controllo in una pagina Web.
 
 ```xml
 <OBJECT
@@ -181,17 +181,17 @@ Ecco un esempio di un tag object e gli attributi per l'inserimento di un control
 </OBJECT>
 ```
 
-## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>L'aggiornamento di un controllo OLE esistente per utilizzare nuove funzionalità di controllo ActiveX
+## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Aggiornamento di un controllo OLE esistente per l'utilizzo delle nuove funzionalità di controllo ActiveX
 
-Se il controllo OLE è stato creato con una versione di Visual C++ precedenti alla 4.2, ci sono passaggi che consentono di migliorare le prestazioni e la relativa funzionalità. Per una descrizione dettagliata di queste modifiche, vedere [controlli ActiveX: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
+Se il controllo OLE è stato creato con una versione di Visual C++ precedente alla 4,2, è possibile eseguire alcune operazioni per migliorarne le prestazioni e migliorarne le funzionalità. Per una descrizione dettagliata di queste modifiche, vedere [controlli ActiveX: ottimizzazione](mfc-activex-controls-optimization.md).
 
-Se si aggiunge il supporto asincrono della proprietà a un controllo esistente, è necessario aggiungere la proprietà stato pronto e `ReadyStateChange` evento manualmente. Nel costruttore per il controllo, aggiungere:
+Se si aggiunge il supporto di proprietà asincrone a un controllo esistente, sarà necessario aggiungere la proprietà stato pronto e l' `ReadyStateChange` evento. Nel costruttore del controllo aggiungere:
 
-[!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
+[!code-cpp[NVC_MFCActiveXControl#8](codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
-Si aggiornerà lo stato di pronto quando viene scaricato il codice chiamando [COleControl:: InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Un'unica posizione è possibile chiamare `InternalSetReadyState` proviene il `OnProgress` eseguire l'override di `CDataPathProperty`-classe derivata.
+Lo stato pronto verrà aggiornato durante il download del codice chiamando [COleControl:: InternalSetReadyState](reference/colecontrol-class.md#internalsetreadystate). Un'unica posizione che è possibile chiamare `InternalSetReadyState` è dall' `OnProgress` override della `CDataPathProperty` classe derivata da.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
-[Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
+[Attività di programmazione Internet MFC](mfc-internet-programming-tasks.md)<br/>
+[Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)

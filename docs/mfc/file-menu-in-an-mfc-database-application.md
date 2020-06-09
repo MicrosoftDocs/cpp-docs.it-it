@@ -5,33 +5,33 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbbb4382749278708e8e758f79a618d5cad0549e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405781"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615695"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu File in un'applicazione database MFC
 
-Se si crea un'applicazione database MFC e non utilizzare la serializzazione, come deve interpretare l'apertura, chiusura, salvare e salvare come i comandi del menu File mentre non sono presenti alcun linee guida di stile per questa domanda, ecco alcuni suggerimenti:
+Se si crea un'applicazione di database MFC senza usare la serializzazione, in che modo è possibile interpretare i comandi Apri, Chiudi, Salva e Salva con nome nel menu file quando non sono presenti linee guida di stile per questa domanda, di seguito sono riportati alcuni suggerimenti:
 
-- Eliminare interamente comando Apri del menu File.
+- Eliminare completamente il comando Apri del menu file.
 
-- Interpretare il comando Apri come "database aperto" e visualizzare all'utente un elenco delle origini dei dati riconosciuto dall'applicazione.
+- Interpretare il comando Open come "open database" e visualizzare all'utente un elenco di origini dati che l'applicazione riconosce.
 
-- Interpretare il comando Apri come, ad esempio, "Apri profilo" Mantieni aperto per l'apertura di un file serializzato, ma usare il file per archiviare un documento serializzato che contiene le informazioni di "profilo utente", ad esempio le preferenze dell'utente, inclusa la sua o l'ID di accesso (esclusi, facoltativamente, la password) e i dati di origine che potrà più utilizzato di recente.
+- Interpretare il comando aperto come, ad esempio, "Apri profilo". Mantenere aperto per l'apertura di un file serializzato, ma usare il file per archiviare un documento serializzato contenente le informazioni relative al profilo utente, ad esempio le preferenze dell'utente, incluso l'ID di accesso (facoltativamente esclusa la password) e l'origine dati con cui ha lavorato più di recente.
 
-La creazione guidata applicazione MFC supporta la creazione di un'applicazione senza comandi di menu File relativi al documento. Selezionare il **vista senza supporto per file di Database** opzione il **supportano Database** pagina.
+La creazione guidata applicazione MFC supporta la creazione di un'applicazione senza comandi di menu file correlati ai documenti. Selezionare l'opzione **visualizzazione database senza supporto file** nella pagina **supporto database** .
 
-Per interpretare un comando di menu File in modo speciale, è necessario sostituire uno o più gestori comando, soprattutto il `CWinApp`-classe derivata. Ad esempio, se si esegue l'override completamente `OnFileOpen` (che implementa il `ID_FILE_OPEN` comando) per indicare "database aperto:"
+Per interpretare un comando di menu file in modo particolare, è necessario eseguire l'override di uno o più gestori di comandi, principalmente nella `CWinApp` classe derivata da. Ad esempio, se si esegue l'override completo `OnFileOpen` (che implementa il `ID_FILE_OPEN` comando) per indicare "Apri database:"
 
-- Non chiamare la versione della classe base `OnFileOpen`, dal momento che si sta sostituendo completamente l'implementazione predefinita del framework del comando.
+- Non chiamare la versione della classe base di `OnFileOpen` perché si sostituisce completamente l'implementazione predefinita del Framework del comando.
 
-- Usare invece il gestore per visualizzare una finestra di dialogo elenca le origini dati. È possibile visualizzare una finestra di dialogo chiamando `CDatabase::OpenEx` oppure `CDatabase::Open` con il parametro **NULL**. Verrà visualizzata una finestra di dialogo ODBC che visualizza tutte le origini dati disponibili nel computer dell'utente.
+- Utilizzare invece il gestore per visualizzare una finestra di dialogo che elenca le origini dati. È possibile visualizzare tale finestra di dialogo chiamando `CDatabase::OpenEx` o `CDatabase::Open` con il parametro **null**. Verrà visualizzata una finestra di dialogo ODBC che consente di visualizzare tutte le origini dati disponibili nel computer dell'utente.
 
-- Poiché le applicazioni di database in genere non salvano un intero documento, è opportuno rimuovere il salvataggio e salvare come implementazioni se non si usa un documento serializzato per archiviare le informazioni del profilo. In caso contrario, è possibile implementare il comando Salva con nome, ad esempio, "eseguire il commit delle transazioni." Visualizzare [Nota tecnica 22](../mfc/tn022-standard-commands-implementation.md) per altre informazioni sulla sostituzione di questi comandi.
+- Poiché le applicazioni di database in genere non salvano un intero documento, è possibile che si desideri rimuovere le implementazioni Save e Save come, a meno che non si utilizzi un documento serializzato per archiviare le informazioni sul profilo. In caso contrario, è possibile implementare il comando Save come, ad esempio, "Commit Transaction". Per ulteriori informazioni sull'override di questi comandi, vedere la [Nota tecnica 22](tn022-standard-commands-implementation.md) .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Serializzazione: Serializzazione e Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serializzazione: serializzazione e input/output del database](serialization-serialization-vs-database-input-output.md)

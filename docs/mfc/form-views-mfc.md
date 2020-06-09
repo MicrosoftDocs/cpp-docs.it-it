@@ -8,60 +8,60 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: 5e8912c9013175fe254b2f4a4a968a67fd071f39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94d8b7d026ee3aaf1bac9dee2226de6dd9382599
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365303"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615691"
 ---
 # <a name="form-views-mfc"></a>Visualizzazioni Maschera (MFC)
 
-È possibile aggiungere i form a qualsiasi applicazione di Visual C, che supporta le librerie `CFormView`MFC, inclusa [un'applicazione basata su form](../mfc/reference/creating-a-forms-based-mfc-application.md) (una la cui classe di visualizzazione è derivata da ). Se inizialmente non è stata creata l'applicazione per i form di supporto, quando si inserisce un nuovo form, verrà aggiunto questo supporto automaticamente. In un'applicazione SDI o MDI, che implementa [l'architettura predefinita di visualizzazione/documento](../mfc/document-view-architecture.md), quando l'utente sceglie il comando **Nuovo** (per impostazione predefinita, nel menu **File),** Visual C.
+È possibile aggiungere moduli a qualsiasi applicazione Visual C++ che supporti le librerie MFC, inclusa un' [applicazione basata su form](reference/creating-a-forms-based-mfc-application.md) (una con la classe di visualizzazione derivata da `CFormView` ). Se l'applicazione non è stata inizialmente creata per supportare i moduli, Visual C++ aggiungerà questo supporto quando si inserisce un nuovo modulo. In un'applicazione SDI o MDI, che implementa l' [architettura documento/visualizzazione](document-view-architecture.md)predefinita, quando l'utente sceglie il **nuovo** comando (per impostazione predefinita, nel menu **file** ) Visual C++ chiede all'utente di scegliere i moduli disponibili.
 
-Con un'applicazione SDI, quando l'utente sceglie il **New** comando, l'istanza corrente del form continua a essere eseguito, ma viene creata una nuova istanza dell'applicazione con il form selezionato se non ne viene trovata una. In un'applicazione MDI, l'istanza corrente del form continua a essere eseguita quando l'utente sceglie il **New** comando.
+Con un'applicazione SDI, quando l'utente sceglie il **nuovo** comando, l'istanza corrente del modulo continua a essere eseguita, ma viene creata una nuova istanza dell'applicazione con il modulo selezionato, se non ne viene trovato uno. In un'applicazione MDI, l'istanza corrente del form continua a essere eseguita quando l'utente sceglie il **nuovo** comando.
 
 > [!NOTE]
-> È possibile inserire un form in un'applicazione basata `CDialog` su finestra di dialogo (una la cui classe della finestra di dialogo è basata su e una in cui non è implementata alcuna classe di visualizzazione). Tuttavia, senza l'architettura documento/visualizzazione, visual c'è non implementare automaticamente il **File**&#124;**nuova** funzionalità. È necessario creare un modo per l'utente di visualizzare moduli aggiuntivi, ad esempio implementando una finestra di dialogo a schede con varie pagine delle proprietà.
+> È possibile inserire un modulo in un'applicazione basata su finestre di dialogo, una con la classe di finestre di dialogo basata su `CDialog` e una in cui non è implementata alcuna classe di visualizzazione. Tuttavia, senza l'architettura documento/visualizzazione, Visual C++ non implementa automaticamente il **File**&#124;**nuova** funzionalità. È necessario creare un modo in cui l'utente può visualizzare moduli aggiuntivi, ad esempio implementando una finestra di dialogo a schede con varie pagine delle proprietà.
 
-Quando si inserisce un nuovo form nell'applicazione, visual C
+Quando si inserisce un nuovo modulo nell'applicazione, Visual C++ esegue le operazioni seguenti:
 
-- Crea una classe basata su una delle classi`CFormView` `CRecordView`di `CDaoRecordView`tipo `CDialog`form scelte ( , , o ).
+- Crea una classe basata su una delle classi di tipo form selezionate ( `CFormView` ,, `CRecordView` `CDaoRecordView` o `CDialog` ).
 
-- Crea una risorsa finestra di dialogo con stili appropriati (oppure è possibile usare una risorsa finestra di dialogo esistente non ancora associata a una classe).
+- Crea una risorsa finestra di dialogo con stili appropriati (oppure è possibile utilizzare una risorsa finestra di dialogo esistente che non è ancora stata associata a una classe).
 
-   Se si sceglie una risorsa finestra di dialogo esistente, potrebbe essere necessario impostare questi stili utilizzando la pagina Proprietà per la finestra di dialogo. Gli stili per una finestra di dialogo devono includere:
+   Se si sceglie una risorsa della finestra di dialogo esistente, potrebbe essere necessario impostare questi stili usando la pagina delle proprietà per la finestra di dialogo. Gli stili per una finestra di dialogo devono includere:
 
-     **WS_CHILD**Attivato
+     **WS_CHILD**= on
 
-     **WS_BORDER**Off (Disattivato)
+     **WS_BORDER**= disattivato
 
-     **WS_VISIBLE**-Off (Disattivato)
+     **WS_VISIBLE**= disattivato
 
-     **WS_CAPTION**-Disattivato
+     **WS_CAPTION**= disattivato
 
-Per le applicazioni basate sull'architettura documento/visualizzazione, anche il comando **Nuovo modulo** (fare clic con il pulsante destro del mouse in Visualizzazione classi):
+Per le applicazioni basate sull'architettura documento/visualizzazione, il comando **nuovo modulo** (fare clic con il pulsante destro del mouse Visualizzazione classi):
 
-- Crea `CDocument`una classe basata su
+- Crea una `CDocument` classe basata su
 
-   Anziché creare una nuova classe, è `CDocument`possibile utilizzare qualsiasi classe basata su esistente nel progetto.
+   Anziché creare una nuova classe, è possibile usare qualsiasi `CDocument` classe basata su esistente nel progetto.
 
-- Genera un modello di `CDocument`documento (derivato da ) con risorse stringa, menu e icona.
+- Genera un modello di documento (derivato da `CDocument` ) con risorse di stringa, menu e icona.
 
-   È inoltre possibile creare una nuova classe su cui basare il modello.
+   È anche possibile creare una nuova classe su cui basare il modello.
 
-- Aggiunge una `AddDocumentTemplate` chiamata a nel `InitInstance` codice dell'applicazione.
+- Aggiunge una chiamata a `AddDocumentTemplate` nel codice dell'applicazione `InitInstance` .
 
-   Quando l'utente sceglie il comando **Nuovo,** in Visual Cè viene aggiunto questo codice per ogni nuovo form creato, che aggiunge il form all'elenco dei moduli disponibili. Questo codice include l'ID risorsa associato del form e i nomi delle classi documento, visualizzazione e frame associate che insieme costituiscono il nuovo oggetto form.
+   Visual C++ aggiunge questo codice per ogni nuovo modulo creato, che aggiunge il modulo all'elenco dei moduli disponibili quando l'utente sceglie il **nuovo** comando. Questo codice include l'ID risorsa associato del modulo e i nomi delle classi di documento, visualizzazione e frame associate che compongono il nuovo oggetto Form.
 
-   I modelli di documento fungono da connessione tra documenti, finestre cornice e visualizzazioni. Per un singolo documento, è possibile creare molti modelli.
+   I modelli di documento vengono usati come connessione tra documenti, finestre cornice e viste. Per un singolo documento, è possibile creare molti modelli.
 
 Per altre informazioni, vedere:
 
-- [Creare un'applicazione basata su formCreate a Forms-Based Application](../mfc/reference/creating-a-forms-based-mfc-application.md)
+- [Creare un'applicazione basata su form](reference/creating-a-forms-based-mfc-application.md)
 
-- [Inserimento di un form in un progetto](../mfc/inserting-a-form-into-a-project.md)
+- [Inserimento di un form in un progetto](inserting-a-form-into-a-project.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)
+[Elementi dell'interfaccia utente](user-interface-elements-mfc.md)

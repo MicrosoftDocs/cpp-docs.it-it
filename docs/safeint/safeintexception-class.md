@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349947"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615415"
 ---
 # <a name="safeintexception-class"></a>Classe SafeIntException
 
 La classe `SafeInt` usa `SafeIntException` per identificare il motivo per cui non è stato possibile completare un'operazione matematica.
 
 > [!NOTE]
-> L'ultima versione di questa [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)libreria si trova all'indirizzo .
+> La versione più recente di questa libreria si trova in [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,17 +31,17 @@ La classe `SafeInt` usa `SafeIntException` per identificare il motivo per cui no
 class SafeIntException;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 Nome                                                    | Descrizione
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException (Eccezione insicurezza](#safeintexception) | Crea un oggetto `SafeIntException`.
+[SafeIntException:: SafeIntException](#safeintexception) | Crea un oggetto `SafeIntException`.
 
 ## <a name="remarks"></a>Osservazioni
 
-La [classe SafeInt](../safeint/safeint-class.md) è l'unica classe che usa la classe `SafeIntException`.
+La [classe SafeInt](safeint-class.md) è l'unica classe che usa la classe `SafeIntException`.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -53,7 +53,7 @@ La [classe SafeInt](../safeint/safeint-class.md) è l'unica classe che usa la cl
 
 **Spazio dei nomi:** msl::utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException::SafeIntException (Eccezione insicurezza
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException:: SafeIntException
 
 Crea un oggetto `SafeIntException`.
 
@@ -67,7 +67,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>Parametri
 
-*Codice*<br/>
+*code*<br/>
 [in] Valore di dati enumerato che descrive l'errore che si è verificato.
 
 ### <a name="remarks"></a>Osservazioni

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: fcdff67c57e932e414a2b61b28cd0498ab997c60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0868b12720cfa338ab7275a358e065506adc11d1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173578"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615921"
 ---
 # <a name="derived-message-maps"></a>Mappe messaggi derivate
 
-Durante la gestione dei messaggi, controllare la mappa messaggi di una classe non è la fine della storia della mappa messaggi. Cosa accade se classe `CMyView` (derivata da `CView`) non dispone di alcuna voce corrispondente per un messaggio
+Durante la gestione dei messaggi, controllare la mappa messaggi di una classe non è la fine della storia della mappa messaggi. Cosa accade se `CMyView` la classe (derivata da `CView` ) non contiene voci corrispondenti per un messaggio
 
-Tenere presente che `CView`, la classe base di `CMyView`, è derivata a sua volta da `CWnd`. In questo modo `CMyView` *viene* una `CView` e *viene* un `CWnd`. Ognuna di queste classi dispone di una propria mappa messaggi. Nella figura seguente "Gerarchia di una visualizzazione" viene illustrata la relazione gerarchica delle classi, ma occorre tenere presente che un oggetto `CMyView` è un singolo oggetto che ha le caratteristiche di tutte e tre le classi.
+Tenere presente che `CView`, la classe base di `CMyView`, è derivata a sua volta da `CWnd`. Pertanto `CMyView` *è* un oggetto `CView` e *è* un oggetto `CWnd` . Ognuna di queste classi dispone di una propria mappa messaggi. Nella figura seguente "Gerarchia di una visualizzazione" viene illustrata la relazione gerarchica delle classi, ma occorre tenere presente che un oggetto `CMyView` è un singolo oggetto che ha le caratteristiche di tutte e tre le classi.
 
-![Gerarchia di una vista](../mfc/media/vc38621.gif "gerarchia di una vista") <br/>
+![Gerarchia di una visualizzazione](../mfc/media/vc38621.gif "Gerarchia di una visualizzazione") <br/>
 Gerarchia di una visualizzazione
 
 Se pertanto non è possibile trovare la corrispondenza di un messaggio nella mappa messaggi della classe `CMyView`, il framework cerca anche nella mappa messaggi della relativa classe base immediata. La macro `BEGIN_MESSAGE_MAP` all'inizio della mappa messaggi specifica due nomi di classe come argomenti:
 
-[!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]
+[!code-cpp[NVC_MFCMessageHandling#2](codesnippet/cpp/derived-message-maps_1.cpp)]
 
 Il primo argomento indica il nome della classe alla quale la mappa messaggi appartiene. Il secondo argomento fornisce una connessione alla classe base immediata, in questo caso `CView`, pertanto il framework può cercare anche nella propria mappa messaggi.
 
@@ -37,4 +37,4 @@ Per velocizzare la corrispondenza mappa-messaggio, il framework memorizza nella 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Come vengono cercate le mappe messaggi nel framework](../mfc/how-the-framework-searches-message-maps.md)
+[Come vengono cercate le mappe messaggi nel framework](how-the-framework-searches-message-maps.md)
