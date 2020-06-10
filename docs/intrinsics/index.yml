@@ -1,0 +1,91 @@
+### YamlMime:Landing
+title: Intrinseci del compilatore e linguaggio dell'assembly
+summary: Informazioni su come Visual Studio consente di creare codice specifico del processore, a basso livello, per ottimizzare prestazioni e controllo.
+metadata:
+  title: Intrinseci del compilatore e linguaggio dell'assembly
+  description: Visual Studio include assembler e funzioni intrinseche del compilatore per attività di programmazione di basso livello.
+  ms.topic: landing-page
+  ms.date: 05/26/2020
+  ms.openlocfilehash: f50d2541bd9fd7ca0071cc6ff76397b3dd240843
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507822"
+landingContent:
+- title: Usare le funzioni intrinseche del compilatore
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Panoramica degli intrinseci del compilatore
+      url: ../intrinsics/compiler-intrinsics.md
+  - linkListType: reference
+    links:
+    - text: Intrinseci ARM
+      url: ../intrinsics/arm-intrinsics.md
+    - text: Funzioni intrinseche ARM64
+      url: ../intrinsics/arm64-intrinsics.md
+    - text: Elenco intrinseci x86
+      url: ../intrinsics/x86-intrinsics-list.md
+    - text: Elenco intrinseci x64 (amd64)
+      url: ../intrinsics/x64-amd64-intrinsics-list.md
+    - text: Intrinseci disponibili in tutte le architetture
+      url: ../intrinsics/intrinsics-available-on-all-architectures.md
+    - text: Elenco alfabetico funzioni intrinseche
+      url: ../intrinsics/alphabetical-listing-of-intrinsic-functions.md
+- title: Usare l'assembly inline per x86 in Microsoft C/C++
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Panoramica dell'assembler inline
+      url: ../assembler/inline/inline-assembler-overview.md
+  - linkListType: concept
+    links:
+    - text: La parola chiave __asm
+      url: ../assembler/inline/asm.md
+  - linkListType: how-to-guide
+    links:
+    - text: Usare il linguaggio assembly in blocchi __asm
+      url: ../assembler/inline/using-assembly-language-in-asm-blocks.md
+    - text: Usare C o C++ in blocchi __asm
+      url: ../assembler/inline/using-c-or-cpp-in-asm-blocks.md
+    - text: Usare e conservare i registri
+      url: ../assembler/inline/using-and-preserving-registers-in-inline-assembly.md
+    - text: Chiamare le funzioni C++ nell'assembly inline
+      url: ../assembler/inline/calling-cpp-functions-in-inline-assembly.md
+    - text: Ottimizzare l'assembly inline
+      url: ../assembler/inline/optimizing-inline-assembly.md
+- title: Usare l'assembler ARM e ARM64
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Informazioni di riferimento sull'assembler ARM e ARM64
+      url: ../assembler/arm/arm-assembler-reference.md
+    - text: Informazioni di riferimento sulla riga di comando dell'assembler ARM e ARM64
+      url: ../assembler/arm/arm-assembler-command-line-reference.md
+    - text: Messaggi di diagnostica dell'assembler ARM e ARM64
+      url: ../assembler/arm/arm-assembler-diagnostic-messages.md
+    - text: Direttive dell'assembler ARM e ARM64
+      url: ../assembler/arm/arm-assembler-directives.md
+- title: Usare l'assembler x86 e x64
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Informazioni di riferimento su Microsoft Macro Assembler per x86 e x64
+      url: ../assembler/masm/microsoft-macro-assembler-reference.md
+    - text: MASM per x64 (ml64.exe)
+      url: ../assembler/masm/masm-for-x64-ml64-exe.md
+    - text: Riferimenti alla riga di comando ML e ML64
+      url: ../assembler/masm/ml-and-ml64-command-line-reference.md
+    - text: Riferimento a direttive
+      url: ../assembler/masm/directives-reference.md
+    - text: Riferimenti ai simboli
+      url: ../assembler/masm/symbols-reference.md
+    - text: Riferimento a operatori
+      url: ../assembler/masm/operators-reference.md
+    - text: Grammatica BNF MASM
+      url: ../assembler/masm/masm-bnf-grammar.md
+    - text: Messaggi di errore ML e ML64
+      url: ../assembler/masm/ml-error-messages.md
+    - text: Manuali di programmazione del produttore del processore
+      url: ../assembler/masm/processor-manufacturer-programming-manuals.md

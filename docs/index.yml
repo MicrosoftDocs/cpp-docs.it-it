@@ -1,0 +1,185 @@
+### YamlMime:Hub
+title: Documentazione su Microsoft C++, C e assembler
+summary: Informazioni su come usare C++, C e linguaggio assembly per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.
+brand: visual-studio
+metadata:
+  title: Documentazione Microsoft C/C++
+  description: Informazioni su come usare C++ per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.
+  ms.prod: visual-cpp
+  ms.topic: hub-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 06/04/2020
+  ms.openlocfilehash: aa696ed1057c0c47ff8dd66a76dd1f65a46f10bb
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507842"
+highlightedContent:
+  items:
+  - title: Installare Visual Studio e scegliere i carichi di lavoro di C++
+    itemType: download
+    url: build/vscpp-step-0-installation.md
+  - title: Benvenuti in C++ in Visual Studio
+    itemType: overview
+    url: overview/visual-cpp-in-visual-studio.md
+  - title: Introduzione a Visual Studio e C++
+    itemType: get-started
+    url: get-started/tutorial-console-cpp.md
+  - title: Novità di C++ in Visual Studio
+    itemType: whats-new
+    url: overview/what-s-new-for-visual-cpp-in-visual-studio.md
+conceptualContent:
+  title: Introduzione a C++ e C
+  items:
+  - title: Informazioni sull'uso dell'IDE di Visual Studio
+    links:
+    - text: Presentazione guidata di Visual Studio
+      url: https://docs.microsoft.com/visualstudio/ide/visual-studio-ide
+      itemType: overview
+    - text: Aprire il codice da un repository
+      url: https://docs.microsoft.com/visualstudio/get-started/tutorial-open-project-from-repo
+      itemType: tutorial
+    - text: Scrivere e modificare il codice
+      url: https://docs.microsoft.com/visualstudio/ide/index-writing-code
+      itemType: tutorial
+    - text: Compilare il codice
+      url: https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio
+      itemType: tutorial
+    - text: Eseguire il debug del codice
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus
+    - text: Eseguire test del codice
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
+  - title: Scrivere app C++ e C in Visual Studio
+    links:
+    - text: Creare un'applicazione console
+      url: get-started/tutorial-console-cpp.md
+      itemType: tutorial
+    - text: Creare un'app desktop di Windows con Win32
+      url: windows/walkthrough-creating-windows-desktop-applications-cpp.md
+      itemType: tutorial
+    - text: Creare un'app desktop di Windows con MFC
+      url: mfc/reference/creating-an-mfc-application.md
+      itemType: tutorial
+    - text: Creare una DLL Windows
+      url: build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+      itemType: tutorial
+    - text: Creare una libreria statica
+      url: build/walkthrough-creating-and-using-a-static-library-cpp.md
+      itemType: tutorial
+    - text: Creare un componente .NET
+      url: dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+      itemType: tutorial
+    - text: Creare un'app UWP (Universal Windows Platform)
+      url: /windows/uwp/cpp-and-winrt-apis/get-started
+      itemType: tutorial
+  - title: Usare gli strumenti da riga di comando
+    links:
+    - text: Compilare codice C++
+      url: build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+      itemType: tutorial
+    - text: Compilare codice C
+      url: build/walkthrough-compile-a-c-program-on-the-command-line.md
+      itemType: tutorial
+    - text: Compilare C++/CX
+      url: build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+      itemType: tutorial
+    - text: Compilare C++/CLI
+      url: build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+      itemType: tutorial
+  - title: Usare C++ e C in Visual Studio Code
+    links:
+    - text: Introduzione a Visual Studio Code
+      url: https://code.visualstudio.com/docs
+      itemType: tutorial
+    - text: Installare l'estensione Microsoft C/C++
+      url: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+      itemType: tutorial
+    - text: Usare Microsoft C/C++ in Windows
+      url: https://code.visualstudio.com/docs/cpp/config-msvc
+      itemType: tutorial
+    - text: Usare C++ nel sottosistema Windows per Linux
+      url: https://code.visualstudio.com/docs/cpp/config-wsl
+      itemType: tutorial
+    - text: Usare C++ su Linux
+      url: https://code.visualstudio.com/docs/cpp/config-linux
+      itemType: tutorial
+    - text: Usare C++ su MacOS
+      url: https://code.visualstudio.com/docs/cpp/config-clang-mac
+      itemType: tutorial
+tools:
+  title: Linguaggi e framework
+  items:
+  - title: C++
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cpp/index.yml
+  - title: C
+    imageSrc: https://docs.microsoft.com/media/logos/logo_C.svg
+    url: c-language/index.yml
+  - title: Assembler Microsoft
+    imageSrc: media/index/logo-asm.svg
+    url: intrinsics/index.yml
+  - title: C++/CX per Windows Runtime
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cppcx/visual-c-language-reference-c-cx.md
+  - title: C++/CLI per .NET
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+  - title: Active Template Library (ATL)
+    imageSrc: media/index/logo-atl.svg
+    url: atl/atl-com-desktop-components.md
+  - title: Microsoft Foundation Classes (MFC)
+    imageSrc: media/index/logo-mfc.svg
+    url: mfc/mfc-desktop-applications.md
+  - title: C++/WinRT per Windows Runtime
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: /windows/uwp/cpp-and-winrt-apis/
+additionalContent:
+  sections:
+  - title: Carichi di lavoro, funzionalità e librerie C++ e C
+    summary: Sviluppare per le piattaforme desiderate con gli strumenti di Visual Studio.
+    items:
+    - title: Carichi di lavoro
+      links:
+      - text: Sviluppo della piattaforma UWP (Universal Windows Platform)
+        url: cppcx/universal-windows-apps-cpp.md
+      - text: Sviluppo per Windows Desktop
+        url: windows/windows-desktop-applications-cpp.md
+      - text: Sviluppo per Linux
+        url: linux/index.yml
+      - text: Sviluppo di app per dispositivi mobili
+        url: cross-platform/index.yml
+      - text: Sviluppo di giochi
+        url: /windows/uwp/gaming/e2e/
+    - title: Funzionalità
+      links:
+      - text: Modificare ed effettuare il refactoring del codice
+        url: ide/writing-and-refactoring-code-cpp.md
+      - text: Compilare progetti di codice
+        url: build/projects-and-build-systems-cpp.md
+      - text: Eseguire il debug del codice
+        url: https://docs.microsoft.com/visualstudio/debugger/debugging-native-code
+      - text: Analizzare il codice
+        url: code-quality/index.yml
+      - text: Migliorare le prestazioni delle app
+        url: https://docs.microsoft.com/visualstudio/profiling
+      - text: Convertire e aggiornare codice
+        url: porting/visual-cpp-porting-and-upgrading-guide.md
+    - title: Librerie
+      links:
+      - text: Informazioni di riferimento per la libreria standard C++
+        url: standard-library/cpp-standard-library-reference.md
+      - text: Informazioni di riferimento sulla libreria di runtime di C
+        url: c-runtime-library/c-run-time-library-reference.md
+      - text: Librerie Windows Desktop MFC e ATL
+        url: mfc/mfc-and-atl.md
+      - text: Librerie per la programmazione parallela
+        url: parallel/parallel-programming-in-visual-cpp.md
+      - text: Librerie di rete e cloud
+        url: cloud/cloud-and-web-programming-in-visual-cpp.md
+      - text: Librerie della piattaforma UWP
+        url: cppcx/namespaces-reference-c-cx.md
+  footer: '[Blog](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [segnalare un problema](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)contribuire alla documentazione C++: Leggere la [Guida per i collaboratori](https://docs.microsoft.com/contribute/).'
