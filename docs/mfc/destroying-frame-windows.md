@@ -15,25 +15,25 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: b64298bd2b0f14c30c824d78947a17628adec8b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bc7945ecd9aee9021ce97fa3ea05f512c58fe20
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394637"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621925"
 ---
 # <a name="destroying-frame-windows"></a>Distruzione di finestre cornice
 
-Il framework MFC gestisce distruzione di finestre, nonché la creazione delle finestre associate con framework documenti e visualizzazioni. Se si creano finestre aggiuntive, è responsabile anche alla relativa eliminazione.
+Il framework MFC gestisce la distruzione della finestra, nonché la creazione di tali finestre associate a documenti e visualizzazioni del Framework. Se si creano finestre aggiuntive, l'utente è responsabile dell'eliminazione.
 
-In framework, quando l'utente chiude la finestra cornice, impostazione predefinita della finestra [OnClose](../mfc/reference/cwnd-class.md#onclose) chiamate del gestore [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). È l'ultima funzione membro viene chiamato quando la finestra di Windows viene eliminata [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), che esegue una pulizia, chiama il [predefinito](../mfc/reference/cwnd-class.md#default) membro funzione per eseguire la pulizia di Windows e infine chiama il funzione membro virtuale [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). Il [CFrameWnd](../mfc/reference/cframewnd-class.md) implementazione di `PostNcDestroy` Elimina l'oggetto finestra C++. È sconsigliabile usare C++ **eliminare** operatore su una finestra cornice. In alternativa, utilizzare `DestroyWindow`.
+Nel Framework, quando l'utente chiude la finestra cornice, il gestore [OnClose](reference/cwnd-class.md#onclose) predefinito della finestra chiama [DestroyWindow](reference/cwnd-class.md#destroywindow). L'ultima funzione membro chiamata quando la finestra di Windows viene distrutta è [OnNcDestroy](reference/cwnd-class.md#onncdestroy), che esegue una pulizia, chiama la funzione membro [predefinita](reference/cwnd-class.md#default) per eseguire la pulizia di Windows e infine chiama la funzione membro virtuale [PostNcDestroy](reference/cwnd-class.md#postncdestroy). L'implementazione di [CFrameWnd](reference/cframewnd-class.md) di `PostNcDestroy` Elimina l'oggetto finestra di C++. Non usare mai l'operatore C++ **Delete** in una finestra cornice. Usare invece `DestroyWindow`.
 
-Quando si chiude la finestra principale, la chiusura dell'applicazione. Se vi vengono modificati documenti non salvati, il framework visualizza una finestra di messaggio per chiedere se i documenti devono essere salvati e assicura che i documenti appropriati vengono salvati se necessario.
+Quando la finestra principale si chiude, l'applicazione viene chiusa. Se sono stati modificati i documenti non salvati, il Framework Visualizza una finestra di messaggio per richiedere se i documenti devono essere salvati e assicurarsi che i documenti appropriati vengano salvati se necessario.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Creazione di finestre cornice documento](../mfc/creating-document-frame-windows.md)
+- [Creazione di finestre cornice di documento](creating-document-frame-windows.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di finestre cornice](../mfc/using-frame-windows.md)
+[Utilizzo di finestre cornice](using-frame-windows.md)

@@ -11,25 +11,25 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-ms.openlocfilehash: dc21bd4b3dbe7609a33af4b4f93f15a3f5c9a64e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d845b0fc3d00369d44c21c04a3fb7e3b8d6189e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151995"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618320"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gestione di dati con variabili dati documento
 
-Implementare i dati del documento come variabili membro della classe del documento. Ad esempio, il programma Scribble dichiara un membro dati di tipo `CObList` , ovvero un elenco collegato che archivia i puntatori a `CObject` oggetti. Questo elenco viene usato per archiviare le matrici di punti che compongono un disegno a mano libera.
+Implementare i dati del documento come variabili membro della classe del documento. Ad esempio, il programma Scribble dichiara un membro dati di tipo `CObList` , un elenco collegato che archivia i puntatori agli `CObject` oggetti. Questo elenco viene usato per archiviare matrici di punti che costituiscono un disegno a linee a mano libera.
 
-Come implementare i dati del documento membro dipende dalla natura dell'applicazione. Per agevolare out, MFC fornisce un gruppo di classi di raccolta di"", ovvero matrici, elenchi e mappe (dizionari), ad esempio le raccolte basate su modelli C++, insieme a classi che incapsulano una varietà di tipi di dati comuni, ad esempio `CString`, `CRect`, `CPoint`, `CSize`, e `CTime`. Per altre informazioni su queste classi, vedere la [Class Library Overview](../mfc/class-library-overview.md) nel *riferimento MFC*.
+La modalità di implementazione dei dati dei membri del documento dipende dalla natura dell'applicazione. In questo modo, MFC fornisce un gruppo di "classi di raccolta", ovvero matrici, elenchi e mappe (dizionari), incluse le raccolte basate su modelli C++, insieme alle classi che incapsulano una varietà di tipi di dati comuni, ad esempio,,, `CString` `CRect` `CPoint` `CSize` e `CTime` . Per ulteriori informazioni su queste classi, vedere [Cenni preliminari sulla libreria di classi](class-library-overview.md) nella Guida di riferimento a *MFC*.
 
-Quando si definiscono i dati dei membri del documento, in genere si aggiungerà funzioni membro alla classe documento da impostare e ottenere gli elementi di dati ed eseguire altre utili operazioni su di essi.
+Quando si definiscono i dati dei membri del documento, in genere si aggiungono funzioni membro alla classe Document per impostare e ottenere gli elementi di dati ed eseguire altre operazioni utili su di essi.
 
-Le visualizzazioni accedono all'oggetto documento utilizzando il proprio puntatore al documento, installato nella visualizzazione al momento della creazione. È possibile recuperare questo puntatore nelle funzioni membro di una visualizzazione chiamando il `CView` funzione membro `GetDocument`. Assicurarsi di eseguire il cast di questo puntatore a un proprio tipo di documento. È quindi possibile accedere membri pubblici del documento tramite il puntatore del mouse.
+Le visualizzazioni accedono all'oggetto Document usando il puntatore della vista al documento, installato nella visualizzazione al momento della creazione. È possibile recuperare questo puntatore nelle funzioni membro di una visualizzazione chiamando la `CView` funzione membro `GetDocument` . Assicurarsi di eseguire il cast di questo puntatore al tipo di documento. È quindi possibile accedere ai membri del documento pubblico tramite il puntatore.
 
-Se il trasferimento dei dati spesso richiede l'accesso diretto, o si vogliono usare i membri non pubblici della classe documento, è possibile rendere la visualizzazione di classe friend della classe di documenti (in termini di C++).
+Se per il trasferimento di dati frequente è necessario l'accesso diretto o si desidera utilizzare i membri non pubblici della classe Document, è consigliabile impostare la classe di visualizzazione come Friend (in termini di C++) della classe Document.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di documenti](../mfc/using-documents.md)
+[Utilizzo di documenti](using-documents.md)

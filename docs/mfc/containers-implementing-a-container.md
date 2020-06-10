@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: ed95324b8df978a6ab2f7582c0ddf626a45e7fe1
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0ba8d4aea6b69fdbfeedfba59449d0d30433eb94
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623220"
 ---
 # <a name="containers-implementing-a-container"></a>Contenitori: implementazione di un contenitore
 
@@ -18,51 +18,51 @@ Questo articolo riepiloga la procedura per l'implementazione di un contenitore e
 
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>Per preparare la classe derivata da CWinApp
 
-1. Inizializzare le librerie OLE chiamando `AfxOleInit` nella funzione membro `InitInstance`.
+1. Inizializzare le librerie OLE chiamando `AfxOleInit` nella `InitInstance` funzione membro.
 
-1. Chiamare `CDocTemplate::SetContainerInfo` in `InitInstance` per assegnare le risorse di menu e acceleratore utilizzate quando un elemento incorporato viene attivato sul posto. Per ulteriori informazioni su questo argomento, vedere [Activation](../mfc/activation-cpp.md).
+1. Chiamare `CDocTemplate::SetContainerInfo` `InitInstance` il metodo per assegnare le risorse di menu e acceleratore utilizzate quando un elemento incorporato viene attivato sul posto. Per ulteriori informazioni su questo argomento, vedere [Activation](activation-cpp.md).
 
-Queste funzionalità vengono fornite automaticamente quando si utilizza la creazione guidata applicazione MFC per creare un'applicazione contenitore. Vedere [creazione di un programma exe MFC](../mfc/reference/mfc-application-wizard.md).
+Queste funzionalità vengono fornite automaticamente quando si utilizza la creazione guidata applicazione MFC per creare un'applicazione contenitore. Vedere [creazione di un programma exe MFC](reference/mfc-application-wizard.md).
 
 #### <a name="to-prepare-your-view-class"></a>Per preparare la classe di visualizzazione
 
-1. Consente di tenere traccia degli elementi selezionati mantenendo un puntatore o un elenco di puntatori se si supporta la selezione multipla negli elementi selezionati. La funzione `OnDraw` deve creare tutti gli elementi OLE.
+1. Consente di tenere traccia degli elementi selezionati mantenendo un puntatore o un elenco di puntatori se si supporta la selezione multipla negli elementi selezionati. La `OnDraw` funzione deve creare tutti gli elementi OLE.
 
 1. Eseguire l'override `IsSelected` per verificare se l'elemento passato è attualmente selezionato.
 
-1. Implementare un gestore di messaggi `OnInsertObject` per visualizzare la finestra di dialogo **Inserisci oggetto** .
+1. Implementare un `OnInsertObject` gestore di messaggi per visualizzare la finestra di dialogo **Inserisci oggetto** .
 
-1. Implementare un gestore di messaggi `OnSetFocus` per trasferire lo stato attivo dalla visualizzazione a un elemento incorporato OLE attivo sul posto.
+1. Implementare un `OnSetFocus` gestore di messaggi per trasferire lo stato attivo dalla vista a un elemento OLE incorporato attivo sul posto.
 
-1. Implementare un gestore di messaggi `OnSize` per informare un elemento incorporato OLE che deve modificare il rettangolo in modo da riflettere la modifica delle dimensioni della visualizzazione che lo contiene.
+1. Implementare un `OnSize` gestore di messaggi per informare un elemento incorporato OLE che deve modificare il rettangolo in modo da riflettere la modifica delle dimensioni della visualizzazione che lo contiene.
 
 Poiché l'implementazione di queste funzionalità varia notevolmente da un'applicazione alla successiva, la creazione guidata applicazione fornisce solo un'implementazione di base. Sarà probabilmente necessario personalizzare queste funzioni per far funzionare correttamente l'applicazione. Per un esempio, vedere l'esempio di [contenitore](../overview/visual-cpp-samples.md) .
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Per gestire elementi incorporati e collegati
 
-1. Derivare una classe da [COleClientItem](../mfc/reference/coleclientitem-class.md). Gli oggetti di questa classe rappresentano gli elementi incorporati in o collegati al documento OLE.
+1. Derivare una classe da [COleClientItem](reference/coleclientitem-class.md). Gli oggetti di questa classe rappresentano gli elementi incorporati in o collegati al documento OLE.
 
-1. Eseguire l'override di `OnChange`, `OnChangeItemPosition`e `OnGetItemPosition`. Queste funzioni gestiscono il ridimensionamento, il posizionamento e la modifica di elementi incorporati e collegati.
+1. Eseguire l'override di `OnChange` , `OnChangeItemPosition` e `OnGetItemPosition` . Queste funzioni gestiscono il ridimensionamento, il posizionamento e la modifica di elementi incorporati e collegati.
 
-La creazione guidata applicazione deriverà la classe, ma sarà probabilmente necessario eseguire l'override di `OnChange` e delle altre funzioni elencate nel passaggio 2 della procedura precedente. Le implementazioni di scheletro devono essere personalizzate per la maggior parte delle applicazioni, poiché queste funzioni vengono implementate in modo diverso da un'applicazione a quella successiva. Per esempi, vedere gli esempi MFC [DRAWCLI](../overview/visual-cpp-samples.md) e [container](../overview/visual-cpp-samples.md).
+La creazione guidata applicazione deriverà la classe, ma sarà probabilmente necessario eseguire l'override di `OnChange` e di altre funzioni elencate nel passaggio 2 della procedura precedente. Le implementazioni di scheletro devono essere personalizzate per la maggior parte delle applicazioni, poiché queste funzioni vengono implementate in modo diverso da un'applicazione a quella successiva. Per esempi, vedere gli esempi MFC [DRAWCLI](../overview/visual-cpp-samples.md) e [container](../overview/visual-cpp-samples.md).
 
-Per supportare OLE, è necessario aggiungere una serie di elementi alla struttura di menu dell'applicazione contenitore. Per altre informazioni, vedere [menu e risorse: aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
+Per supportare OLE, è necessario aggiungere una serie di elementi alla struttura di menu dell'applicazione contenitore. Per altre informazioni, vedere [menu e risorse: aggiunte di contenitori](menus-and-resources-container-additions.md).
 
 È anche possibile che si voglia supportare alcune delle funzionalità seguenti nell'applicazione contenitore:
 
 - Attivazione sul posto durante la modifica di un elemento incorporato.
 
-   Per ulteriori informazioni, vedere [Activation](../mfc/activation-cpp.md).
+   Per ulteriori informazioni, vedere [Activation](activation-cpp.md).
 
 - Creazione di elementi OLE tramite il trascinamento e l'eliminazione di una selezione da un'applicazione server.
 
-   Per altre informazioni, vedere [trascinamento della selezione OLE](../mfc/drag-and-drop-ole.md).
+   Per altre informazioni, vedere [trascinamento della selezione OLE](drag-and-drop-ole.md).
 
 - Collegamenti a oggetti incorporati o applicazioni contenitore/server.
 
-   Per altre informazioni, vedere [contenitori: funzionalità avanzate](../mfc/containers-advanced-features.md).
+   Per altre informazioni, vedere [contenitori: funzionalità avanzate](containers-advanced-features.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Contenitori](../mfc/containers.md)<br/>
-[Contenitori: elementi client](../mfc/containers-client-items.md)
+[Contenitori](containers.md)<br/>
+[Contenitori: elementi client](containers-client-items.md)

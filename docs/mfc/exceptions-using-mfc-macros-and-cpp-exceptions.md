@@ -16,45 +16,45 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: afad5335bedf001329ecb401a8a16c663afb5571
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371595"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622731"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Eccezioni: utilizzo di macro MFC ed eccezioni C++
 
-In questo articolo vengono illustrate le considerazioni per la scrittura di codice che utilizza sia le macro di gestione delle eccezioni MFC e le parole chiave di gestione delle eccezioni di C .
+Questo articolo illustra le considerazioni per la scrittura di codice che usa le macro di gestione delle eccezioni MFC e le parole chiave di gestione delle eccezioni C++.
 
 Questo articolo include gli argomenti seguenti:
 
-- [Combinazione di macro e parole chiave di eccezione](#_core_mixing_exception_keywords_and_macros)
+- [Combinazione di parole chiave e macro di eccezione](#_core_mixing_exception_keywords_and_macros)
 
-- [Prova i blocchi all'interno dei blocchi catch](#_core_try_blocks_inside_catch_blocks)
+- [Blocchi try all'interno di blocchi catch](#_core_try_blocks_inside_catch_blocks)
 
 ## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Combinazione di parole chiave e macro di eccezione
 
-È possibile combinare le macro di eccezioni MFC e le parole chiave di eccezione c, nello stesso programma. Tuttavia, non è possibile combinare le macro MFC con le parole chiave di eccezione c'è nello stesso blocco perché le macro eliminano automaticamente gli oggetti eccezione quando escono dall'ambito, mentre il codice che utilizza le parole chiave di gestione delle eccezioni non lo fa. Per ulteriori informazioni, vedere l'articolo [eccezioni: intercettazione ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
+È possibile combinare macro di eccezioni MFC e parole chiave dell'eccezione C++ nello stesso programma. Tuttavia, non è possibile combinare macro MFC con parole chiave di eccezione C++ nello stesso blocco perché le macro eliminano automaticamente gli oggetti eccezione quando escono dall'ambito, mentre il codice che usa le parole chiave per la gestione delle eccezioni non lo fa. Per ulteriori informazioni, vedere l'articolo [eccezioni: catching and Deleting Exceptions](exceptions-catching-and-deleting-exceptions.md).
 
-La differenza principale tra le macro e le parole chiave è che le macro "automaticamente" eliminano un'eccezione intercettata quando l'eccezione esce dall'ambito. Il codice che utilizza le parole chiave non lo fa; le eccezioni rilevate in un blocco catch devono essere eliminate in modo esplicito. La combinazione di macro e parole chiave di eccezione c'è può causare perdite di memoria quando un oggetto eccezione non viene eliminato o il danneggiamento dell'heap quando un'eccezione viene eliminata due volte.
+La differenza principale tra le macro e le parole chiave è che le macro eliminano automaticamente un'eccezione rilevata quando l'eccezione esce dall'ambito. Il codice che usa le parole chiave non lo è. le eccezioni rilevate in un blocco catch devono essere eliminate in modo esplicito. Combinare le macro e le parole chiave delle eccezioni C++ possono causare perdite di memoria quando un oggetto eccezione non viene eliminato oppure un danneggiamento dell'heap quando un'eccezione viene eliminata due volte.
 
-Il codice seguente, ad esempio, invalida il puntatore all'eccezione:The following code, for example, invalidates the exception pointer:
+Il codice seguente, ad esempio, invalida il puntatore di eccezione:
 
-[!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#10](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
 
-Il problema `e` si verifica perché viene eliminato quando l'esecuzione passa dal blocco **CATCH** "interno". Se **si** utilizza la macro THROW_LAST anziché l'istruzione **THROW,** il blocco **CATCH** "esterno" riceverà un puntatore valido:
+Il problema si verifica perché `e` viene eliminato quando l'esecuzione passa all'esterno del blocco **catch** "Inner". Se si utilizza la macro **THROW_LAST** anziché l'istruzione **throw** , il blocco **catch** "Outer" riceverà un puntatore valido:
 
-[!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
+[!code-cpp[NVC_MFCExceptions#11](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Prova blocchi all'interno dei blocchi Catch
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Blocchi try all'interno di blocchi catch
 
-Non è possibile generare nuovamente l'eccezione corrente dall'interno di un blocco **try** che si trova all'interno di un blocco **CATCH.** L'esempio seguente non è valido:
+Non è possibile generare di nuovo l'eccezione corrente dall'interno di un blocco **try** che si trova all'interno di un blocco **catch** . L'esempio seguente non è valido:
 
-[!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Per ulteriori informazioni, vedere [Eccezioni: esame del contenuto delle eccezioni](../mfc/exceptions-examining-exception-contents.md).
+Per altre informazioni, vedere [eccezioni: esame del contenuto delle eccezioni](exceptions-examining-exception-contents.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
+[Gestione delle eccezioni](exception-handling-in-mfc.md)

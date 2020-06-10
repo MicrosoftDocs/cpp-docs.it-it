@@ -9,25 +9,25 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02546559183d0e14973bc2e5ccb26a4570a39b1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394702"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623260"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Allocazione e deallocazione di memoria delle finestre
 
-Non usare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice o una vista. Chiamare invece il `CWnd` funzione membro `DestroyWindow`. Finestre cornice, pertanto, devono essere allocate nell'heap con l'operatore **nuovo**. Prestare attenzione durante l'allocazione di finestre cornice sullo stack frame o a livello globale. Altre finestre devono essere impostate sullo stack frame laddove possibile.
+Non usare l'operatore C++ **Delete per eliminare** definitivamente una finestra cornice o una vista. Chiamare invece la `CWnd` funzione membro `DestroyWindow` . Le finestre cornice, pertanto, devono essere allocate nell'heap con Operator **New**. Prestare attenzione quando si allocano finestre cornice nella stack frame o a livello globale. Le altre finestre devono essere allocate nel stack frame quando possibile.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Creazione di finestre](../mfc/creating-windows.md)
+- [Creazione di finestre](creating-windows.md)
 
-- [Sequenza di distruzione di finestre](../mfc/window-destruction-sequence.md)
+- [Sequenza di eliminazione di finestre](window-destruction-sequence.md)
 
-- [Disconnessione di CWnd da HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Scollegamento di un elemento CWnd dal relativo HWND](detaching-a-cwnd-from-its-hwnd.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Eliminazione definitiva di oggetti finestra](../mfc/destroying-window-objects.md)
+[Eliminazione definitiva di oggetti finestra](destroying-window-objects.md)

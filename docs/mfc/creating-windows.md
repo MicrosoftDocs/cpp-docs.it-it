@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626513"
 ---
 # <a name="creating-windows"></a>Creazione di finestre
 
-Il framework crea automaticamente la maggior parte delle finestre che è necessario in un programma di framework. [Creazione di documenti/visualizzazioni](../mfc/document-view-creation.md) illustra come il framework crea le finestre cornice associate a documenti e visualizzazioni. Ma destinate a utilizzi specifici è possibile creare il proprio windows, tra cui il proprio finestre figlio di finestre cornice o viste, oltre a windows forniti dal framework.
+Il Framework crea automaticamente la maggior parte delle finestre necessarie in un programma Framework. [Creazione documento/visualizzazione Mostra](document-view-creation.md) come il Framework crea le finestre cornice associate a documenti e visualizzazioni. Tuttavia, per scopi speciali è possibile creare finestre personalizzate, incluse le finestre figlio delle finestre cornice o delle visualizzazioni, oltre alle finestre fornite dal Framework.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Registrazione di "classi di finestra"](../mfc/registering-window-classes.md) (invece di oggetti finestra C++)
+- [Registrazione della finestra "classi"](registering-window-classes.md) (in contrapposizione agli oggetti finestra C++)
 
-- [Sequenza di creazione finestre generale](../mfc/general-window-creation-sequence.md)
+- [Sequenza di creazione finestra generale](general-window-creation-sequence.md)
 
-- [Eliminazione definitiva di oggetti finestra](../mfc/destroying-window-objects.md)
+- [Eliminazione definitiva di oggetti finestra](destroying-window-objects.md)
 
-- [Uso di oggetti finestra](../mfc/working-with-window-objects.md)
+- [Utilizzo di oggetti finestra](working-with-window-objects.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Oggetti finestra](../mfc/window-objects.md)
+[Oggetti finestra](window-objects.md)
