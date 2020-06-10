@@ -12,35 +12,35 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-ms.openlocfilehash: 9a089829658265cd835a8c7344aa5bc45fbc109a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9945dc68ffd46bbf5e114a79467299e4b67e3659
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226170"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621324"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Gestione di menu, barre di controllo e tasti di scelta rapida
 
-La finestra cornice gestisce l'aggiornamento oggetti dell'interfaccia utente, inclusi i menu, pulsanti della barra degli strumenti, barra di stato e tasti di scelta rapida. Gestisce anche la barra dei menu nelle applicazioni MDI di condivisione.
+La finestra cornice gestisce l'aggiornamento degli oggetti dell'interfaccia utente, inclusi i menu, i pulsanti della barra degli strumenti, la barra di stato e gli acceleratori. Gestisce inoltre la condivisione della barra dei menu nelle applicazioni MDI.
 
 ## <a name="managing-menus"></a>Gestione dei menu
 
-La finestra cornice fa parte di aggiornamento degli elementi dell'interfaccia utente utilizzando il meccanismo ON_UPDATE_COMMAND_UI descritto nella [come oggetti dell'interfaccia utente di aggiornamento](../mfc/how-to-update-user-interface-objects.md). Pulsanti di barre degli strumenti e altre barre di controllo vengono aggiornati durante il ciclo inattivo. Voci di menu nel menu a discesa nella barra dei menu vengono aggiornate solo prima che il menu a discesa.
+La finestra cornice partecipa all'aggiornamento degli elementi dell'interfaccia utente usando il meccanismo di ON_UPDATE_COMMAND_UI descritto in [come aggiornare gli oggetti dell'interfaccia utente](how-to-update-user-interface-objects.md). I pulsanti sulle barre degli strumenti e altre barre di controllo vengono aggiornati durante il ciclo di inattività. Le voci di menu nei menu a discesa della barra dei menu vengono aggiornate immediatamente prima della disattivazione del menu.
 
-Per le applicazioni MDI, la finestra cornice MDI gestisce la barra dei menu e la didascalia. Una finestra cornice MDI possiede un menu predefinito che viene usato come barra dei menu quando non sono presenti alcuna finestra figlio MDI attivo. Quando sono presenti elementi figlio attivi, barra dei menu della finestra cornice MDI viene preso in carico dal menu di scelta per la finestra figlio MDI attiva. Se un'applicazione MDI supporta più tipi di documento, ad esempio i documenti grafico e del foglio di lavoro, ogni tipo inserisce i proprio menu nella barra dei menu e Modifica didascalia della finestra cornice principale.
+Per le applicazioni MDI, la finestra cornice MDI gestisce la barra dei menu e la didascalia. Una finestra cornice MDI è proprietaria di un menu predefinito utilizzato come barra dei menu quando non sono presenti finestre figlio MDI attive. Quando sono presenti elementi figlio attivi, la barra dei menu della finestra cornice MDI viene rilevata dal menu per la finestra figlio MDI attiva. Se un'applicazione MDI supporta più tipi di documenti, ad esempio i documenti Chart e Worksheet, ogni tipo inserisce i propri menu sulla barra dei menu e modifica la didascalia della finestra cornice principale.
 
-[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) fornisce le implementazioni predefinite per i comandi standard del menu finestra visualizzata per le applicazioni MDI. In particolare, il comando nuova finestra (ID_WINDOW_NEW) viene implementato per creare una nuova finestra cornice e visualizzazione del documento corrente. È necessario eseguire l'override di queste implementazioni solo se si necessita di personalizzazione avanzate.
+[CMDIFrameWnd](reference/cmdiframewnd-class.md) fornisce implementazioni predefinite per i comandi standard nel menu finestra visualizzato per le applicazioni MDI. In particolare, viene implementato il nuovo comando della finestra (ID_WINDOW_NEW) per creare una nuova finestra cornice e visualizzare il documento corrente. È necessario eseguire l'override di queste implementazioni solo se è necessaria una personalizzazione avanzata.
 
-Più finestre figlio MDI dello stesso tipo di documento condividono le risorse del menu. Se più finestre figlio MDI vengono create dallo stesso modello di documento, esse potranno utilizzare la stessa risorsa di menu, risparmiando per le risorse di sistema in Windows.
+Più finestre figlio MDI dello stesso tipo di documento condividono le risorse di menu. Se più finestre figlio MDI vengono create dallo stesso modello di documento, possono usare la stessa risorsa di menu, salvando le risorse di sistema in Windows.
 
-## <a name="managing-the-status-bar"></a>La gestione della barra di stato
+## <a name="managing-the-status-bar"></a>Gestione della barra di stato
 
-La finestra cornice posiziona la barra di stato all'interno della relativa area client e gestisce lo stato anche indicatori. La finestra cornice Cancella e aggiorna l'area dei messaggi nella barra di stato in base alle esigenze e consente di visualizzare le stringhe di richiesta quando l'utente seleziona voci di menu o i pulsanti della barra degli strumenti, come descritto in [come visualizzare informazioni sui comandi nella barra di stato](../mfc/how-to-display-command-information-in-the-status-bar.md).
+La finestra cornice posiziona anche la barra di stato all'interno dell'area client e gestisce gli indicatori della barra di stato. La finestra cornice cancella e aggiorna l'area dei messaggi nella barra di stato in base alle esigenze e visualizza le stringhe di richiesta quando l'utente seleziona le voci di menu o i pulsanti della barra degli strumenti, come descritto in [come visualizzare le informazioni sui comandi nella barra di stato](how-to-display-command-information-in-the-status-bar.md).
 
-## <a name="managing-accelerators"></a>Gestione dei tasti di scelta rapida
+## <a name="managing-accelerators"></a>Gestione degli acceleratori
 
-Ogni finestra cornice gestisce una tabella di tasti di scelta rapida facoltativo traduzione della tastiera tasti di scelta rapida per l'utente automaticamente. Questo meccanismo rende più facile definire tasti di scelta rapida (detti anche combinazioni di tasti) che richiamano comandi di menu.
+Ogni finestra cornice gestisce automaticamente una tabella di tasti di scelta rapida che consente la conversione del tasto di scelta rapida. Questo meccanismo semplifica la definizione dei tasti di scelta rapida (detti anche tasti di scelta rapida) che richiamano i comandi di menu.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di finestre cornice](../mfc/using-frame-windows.md)
+[Utilizzo di finestre cornice](using-frame-windows.md)

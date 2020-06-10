@@ -1,21 +1,21 @@
 ---
-title: "Procedura: Personalizzare il pulsante dell'applicazione"
+title: "Procedura: personalizzare il pulsante dell'applicazione"
 ms.date: 09/07/2019
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: 3a1d1625e80e6c6f4440864629a5123bed5744c7
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 9160e602848adf8dc95c840d702e0b1a1b2f9049
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907795"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620045"
 ---
-# <a name="how-to-customize-the-application-button"></a>Procedura: Personalizzare il pulsante dell'applicazione
+# <a name="how-to-customize-the-application-button"></a>Procedura: personalizzare il pulsante dell'applicazione
 
 Quando si fa clic sul pulsante applicazione, viene visualizzato un menu di comandi. In genere, il menu contiene comandi correlati ai file, ad esempio **apertura**, **salvataggio**, **stampa**e **uscita**.
 
-![Pulsante applicazione della barra multifunzione MFC](../mfc/media/application_button.png "Pulsante applicazione della barra multifunzione MFC")
+![Pulsante Applicazione della barra multifunzione MFC](../mfc/media/application_button.png "Pulsante Applicazione della barra multifunzione MFC")
 
 Per personalizzare il pulsante dell'applicazione, aprirlo nella finestra **Proprietà** (in **visualizzazione risorse**), modificarne le proprietà e quindi visualizzare l'anteprima del controllo Ribbon.
 
@@ -34,7 +34,7 @@ La tabella seguente definisce le proprietà del pulsante applicazione.
 |Proprietà|Definizione|
 |--------------|----------------|
 |**Pulsanti**|Contiene la raccolta di un massimo di tre pulsanti visualizzati nell'angolo in basso a destra del menu dell'applicazione.|
-|**Caption**|Specifica il testo del controllo. A differenza di altri elementi della barra multifunzione, il pulsante dell'applicazione non Visualizza il testo della didascalia. Il testo viene invece usato per l'accessibilità.|
+|**Didascalia**|Specifica il testo del controllo. A differenza di altri elementi della barra multifunzione, il pulsante dell'applicazione non Visualizza il testo della didascalia. Il testo viene invece usato per l'accessibilità.|
 |**Immagine di HDPI**|Specifica l'identificatore dell'icona del pulsante dell'applicazione HDPI (punti per pollice). Quando l'applicazione viene eseguita in un monitor DPI elevato, viene utilizzata l' **immagine HDPI** anziché **Image**.|
 |**HDPI immagini di grandi dimensioni**|Specifica l'identificatore delle immagini large con valori DPI alti. Quando l'applicazione viene eseguita in un monitor con valori DPI alti, vengono utilizzate **Immagini HDPI di grandi dimensioni** anziché **Immagini di grandi dimensioni**.|
 |**HDPI piccole immagini**|Specifica l'identificatore delle immagini con valori DPI alti. Quando l'applicazione viene eseguita in un monitor con valori DPI alti, viene utilizzata la **HDPI di piccole dimensioni** anziché le **Immagini di piccole dimensioni**.|
@@ -46,7 +46,7 @@ La tabella seguente definisce le proprietà del pulsante applicazione.
 |**Didascalia MRU**|Specifica il testo visualizzato nel pannello elenco recente.|
 |**Immagini piccole**|Specifica l'identificatore dell'immagine che contiene una serie di icone 16x16. Le icone vengono usate dai pulsanti nella raccolta Buttons.|
 |**Uso**|Abilita o Disabilita il pannello elenco recente. Il pannello elenco recente viene visualizzato nel menu dell'applicazione.|
-|**Width**|Specifica la larghezza in pixel del pannello elenco recente.|
+|**Larghezza**|Specifica la larghezza in pixel del pannello elenco recente.|
 
 Il menu applicazione non viene visualizzato nell'area di progettazione. Per visualizzarlo, è necessario visualizzare in anteprima la barra multifunzione o eseguire l'applicazione.
 
@@ -56,4 +56,4 @@ Il menu applicazione non viene visualizzato nell'area di progettazione. Per visu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
+[Finestra di progettazione della barra multifunzione (MFC)](ribbon-designer-mfc.md)

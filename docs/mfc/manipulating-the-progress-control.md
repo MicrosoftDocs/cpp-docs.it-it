@@ -8,46 +8,46 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-ms.openlocfilehash: c9da6f8048adf1c7da184570ff7f94deee7441e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e3521a82854a85062f9b06bc33eb268d4b9c7a6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279190"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622427"
 ---
 # <a name="manipulating-the-progress-control"></a>Modifica del controllo Progress
 
-Esistono tre modi per modificare la posizione corrente di un controllo di stato ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).
+Esistono tre modi per modificare la posizione corrente di un controllo Progress ([CProgressCtrl](reference/cprogressctrl-class.md)).
 
-- La posizione può essere modificata da un incremento predefinito.
+- La posizione può essere modificata da un valore di incremento preimpostato.
 
-- La posizione può essere modificata da un quantità arbitraria.
+- La posizione può essere modificata da un valore arbitrario.
 
-- La posizione può essere modificata su un valore specifico.
+- La posizione può essere modificata in un valore specifico.
 
-### <a name="to-change-the-position-by-a-preset-amount"></a>Per modificare la posizione di una quantità di set di impostazioni
+### <a name="to-change-the-position-by-a-preset-amount"></a>Per modificare la posizione in base a un valore predefinito
 
-1. Usare la [SetStep](../mfc/reference/cprogressctrl-class.md#setstep) funzione membro per impostare la quantità di incremento. Per impostazione predefinita, questo valore è 10. In genere, questo valore è impostato come una delle impostazioni iniziali per il controllo. Il valore di incremento può essere negativo.
+1. Utilizzare la funzione membro [sestep](reference/cprogressctrl-class.md#setstep) per impostare la quantità di incremento. Per impostazione predefinita, questo valore è 10. Questo valore viene in genere impostato come una delle impostazioni iniziali per il controllo. Il valore del passaggio può essere negativo.
 
-1. Usare la [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) funzione membro per incrementare la posizione. In questo modo il controllo venga ricreato.
-
-    > [!NOTE]
-    >  `StepIt` comporterà il ritorno a capo. Ad esempio, dato un intervallo di 1 -100, un passaggio di 20 e una posizione di 90, `StepIt` imposterà la posizione a 10.
-
-### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Per modificare la posizione da un quantità arbitraria
-
-1. Usare la [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) funzione membro per modificare la posizione. `OffsetPos` accetta i valori negativi.
+1. Usare la funzione membro [StepIt](reference/cprogressctrl-class.md#stepit) per incrementare la posizione. In questo modo il controllo viene ridisegnato automaticamente.
 
     > [!NOTE]
-    >  `OffsetPos`, a differenza di `StepIt`, la posizione non andrà a capo. La nuova posizione viene regolata per rimanere all'interno dell'intervallo.
+    >  `StepIt`provocherà il wrapping della posizione. Ad esempio, dato un intervallo di 1 -100, un passaggio di 20 e una posizione di 90, `StepIt` imposta la posizione su 10.
 
-### <a name="to-change-the-position-to-a-specific-value"></a>Per modificare la posizione su un valore specifico
+### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Per modificare la posizione di un importo arbitrario
 
-1. Usare la [funzione membro SetPos](../mfc/reference/cprogressctrl-class.md#setpos) funzione membro per impostare la posizione su un valore specifico. Se necessario, la nuova posizione viene regolata per rientrare nell'intervallo.
+1. Utilizzare la funzione membro [OffsetPos](reference/cprogressctrl-class.md#offsetpos) per modificare la posizione. `OffsetPos`accetterà i valori negativi.
 
-In genere, il controllo di stato di avanzamento viene usato esclusivamente per l'output. Per ottenere la posizione corrente senza specificare un nuovo valore, usare [GetPos](../mfc/reference/cprogressctrl-class.md#getpos).
+    > [!NOTE]
+    >  `OffsetPos`, diversamente da `StepIt` , non esegue il wrapping della posizione. La nuova posizione viene regolata in modo da rimanere nell'intervallo.
+
+### <a name="to-change-the-position-to-a-specific-value"></a>Per impostare la posizione su un valore specifico
+
+1. Utilizzare la funzione membro [SetPos](reference/cprogressctrl-class.md#setpos) per impostare la posizione su un valore specifico. Se necessario, la nuova posizione viene modificata in modo che sia compresa nell'intervallo.
+
+In genere, il controllo dello stato di avanzamento viene utilizzato solo per l'output. Per ottenere la posizione corrente senza specificare un nuovo valore, usare [GetPos](reference/cprogressctrl-class.md#getpos).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
-[Controlli](../mfc/controls-mfc.md)
+[Utilizzo di CProgressCtrl](using-cprogressctrl.md)<br/>
+[Controlli](controls-mfc.md)

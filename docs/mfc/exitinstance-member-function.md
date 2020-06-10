@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CWinApp class [MFC], ExitInstance
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
-ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58546d26293ad48a39a36b98ba4bfdabb68385ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405820"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622689"
 ---
 # <a name="exitinstance-member-function"></a>Funzione membro ExitInstance
 
-Il [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) la funzione membro della classe [CWinApp](../mfc/reference/cwinapp-class.md) viene chiamato ogni volta che una copia dell'applicazione termina in genere come risultato dell'utente in fase di chiusura dell'applicazione.
+La funzione membro [ExitInstance](reference/cwinapp-class.md#exitinstance) della classe [CWinApp](reference/cwinapp-class.md) viene chiamata ogni volta che una copia dell'applicazione termina, in genere come conseguenza dell'arresto dell'applicazione da parte dell'utente.
 
-Eseguire l'override `ExitInstance` se è necessario l'elaborazione di una pulizia speciale, ad esempio liberando così risorse di graphics device interface (GDI) o deallocazione di memoria utilizzata durante l'esecuzione del programma. Pulizia degli elementi standard, ad esempio documenti e visualizzazioni, tuttavia, viene fornita dal framework, con altre funzioni sottoponibili a override per operazioni di pulitura specifica a tali oggetti.
+Eseguire l'override `ExitInstance` se è necessaria un'elaborazione speciale per la pulizia, ad esempio la liberazione di risorse GDI (Graphics Device Interface) o la deallocazione della memoria usata durante l'esecuzione del programma. La pulizia di elementi standard, ad esempio documenti e visualizzazioni, viene tuttavia fornita dal Framework, con altre funzioni sottoponibili a override per eseguire operazioni di pulizia speciali specifiche per tali oggetti.
 
 ## <a name="see-also"></a>Vedere anche
 
-[CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp: classe Application](cwinapp-the-application-class.md)

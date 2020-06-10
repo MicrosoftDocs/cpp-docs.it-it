@@ -8,37 +8,37 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: 3ef23ad74e1ff53d947453faa5682c5ecc1f4e43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fb903fa169233ce532e41ecdf02c23ab6037c8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310916"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621457"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretazione dell'input utente attraverso una visualizzazione
 
-Altre funzioni membro della vista di gestire e interpretano l'input dell'utente. In genere si definirà funzioni membro di gestore di messaggi nella classe di visualizzazione per l'elaborazione:
+Altre funzioni membro della visualizzazione gestiscono e interpretano tutti gli input utente. Si definiscono in genere le funzioni membro del gestore di messaggi nella classe di visualizzazione da elaborare:
 
-- Windows [messaggi](../mfc/messages.md) generati dalle azioni del mouse e tastiera.
+- [Messaggi](messages.md) di Windows generati dalle azioni del mouse e della tastiera.
 
-- [I comandi](../mfc/user-interface-objects-and-command-ids.md) dal menu, pulsanti della barra degli strumenti e tasti di scelta rapida.
+- [Comandi](user-interface-objects-and-command-ids.md) da menu, pulsanti della barra degli strumenti e tasti di scelta rapida.
 
-Queste funzioni membro di gestore di messaggi interpretano le azioni seguenti come input di dati, selezione o la modifica, tra cui lo spostamento dei dati da e verso gli Appunti:
+Queste funzioni membro del gestore di messaggi interpretano le azioni seguenti come input di dati, selezione o modifica, incluso lo stato di trasferimento dei dati da e verso gli Appunti:
 
-- Spostamenti del mouse e clic e trascina e doppio clic
+- Movimenti del mouse, clic, trascinamento e doppio clic
 
-- Sequenze di tasti
+- Tasti
 
 - Comandi di menu
 
-I messaggi di Windows gli handle di visualizzazione varia in base alle esigenze dell'applicazione.
+Quali messaggi di Windows gli handle di visualizzazione dipendono dalle esigenze dell'applicazione.
 
-[La gestione e Mapping argomenti messaggi](../mfc/message-handling-and-mapping.md) spiega come assegnare le voci di menu e altri oggetti dell'interfaccia utente per i comandi e come associare i comandi per le funzioni del gestore. [La gestione e Mapping argomenti messaggi](../mfc/message-handling-and-mapping.md) inoltre viene spiegato come MFC instrada i comandi e invia i messaggi Windows standard per gli oggetti che contengono i relativi gestori.
+[Argomenti relativi alla gestione e al mapping dei messaggi](message-handling-and-mapping.md) spiega come assegnare voci di menu e altri oggetti dell'interfaccia utente ai comandi e come associare i comandi alle funzioni del gestore. [Argomenti relativi alla gestione e al mapping dei messaggi](message-handling-and-mapping.md) spiega anche il modo in cui MFC instrada i comandi e invia messaggi Windows standard agli oggetti che contengono gestori.
 
-Ad esempio, l'applicazione potrebbe essere necessario implementare mouse diretto di disegno nella visualizzazione. L'esempio di Scribble illustra come gestire i messaggi WM_LBUTTONDOWN e WM_MOUSEMOVE WM_LBUTTONUP rispettivamente per iniziare, continuare e termina il disegno di un segmento di linea. D'altra parte, in alcuni casi potrebbe essere necessario interpretare un clic del mouse nella visualizzazione come una selezione. La vista `OnLButtonDown` è determinata in funzione del gestore se l'utente è stato il disegno o selezione. Se si seleziona, il gestore potrebbe determinare se il clic avviene all'interno di un oggetto nella visualizzazione e, in questo caso, modificare la visualizzazione per mostrare l'oggetto è selezionato.
+Ad esempio, è possibile che l'applicazione debba implementare il disegno diretto del mouse nella visualizzazione. Nell'esempio Scribble viene illustrato come gestire i messaggi di WM_LBUTTONDOWN, WM_MOUSEMOVE e WM_LBUTTONUP rispettivamente per iniziare, continuare e terminare il disegno di un segmento di linea. D'altra parte, a volte potrebbe essere necessario interpretare un clic del mouse nella visualizzazione come selezione. La funzione del `OnLButtonDown` gestore della visualizzazione determina se l'utente sta disegnando o selezionando. Se si seleziona, il gestore determina se il clic si trovava all'interno dei limiti di un oggetto della vista e, in caso affermativo, modificare la visualizzazione in modo da visualizzare l'oggetto selezionato.
 
-La visualizzazione può anche gestire alcuni comandi di menu, ad esempio quelli dal menu Modifica per tagliare, copiare, incollare o eliminare i dati selezionati usando gli Appunti. Tale gestore chiamerebbe alcune del membro relative agli Appunti funzioni della classe `CWnd` per trasferire un elemento dati selezionato da o verso gli Appunti.
+La visualizzazione potrebbe anche gestire alcuni comandi di menu, ad esempio quelli del menu modifica per tagliare, copiare, incollare o eliminare dati selezionati usando gli Appunti. Tale gestore chiamerebbe alcune delle funzioni membro relative agli Appunti della classe `CWnd` per trasferire un elemento di dati selezionato da o negli Appunti.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle visualizzazioni](../mfc/using-views.md)
+[Utilizzo delle visualizzazioni](using-views.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: Personalizzare la barra di accesso rapido'
+title: 'Procedura: personalizzare la barra di accesso rapido'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907785"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620024"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Procedura: Personalizzare la barra di accesso rapido
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Procedura: personalizzare la barra di accesso rapido
 
 La barra di accesso rapido (QAT) è una barra degli strumenti personalizzabile che contiene un set di controlli che sono visualizzati accanto al pulsante Applicazione o nelle schede di categoria. Nella figura seguente viene illustrata una barra di accesso rapido tradizionale.
 
-![Barra di accesso rapido della barra multifunzione MFC](../mfc/media/quick_access_toolbar.png "Barra di accesso rapido della barra multifunzione MFC")
+![Barra di accesso rapido con barra multifunzione MFC](../mfc/media/quick_access_toolbar.png "Barra di accesso rapido con barra multifunzione MFC")
 
 Per personalizzare la barra di accesso rapido, aprirla nella finestra **Proprietà** , modificarne i comandi e quindi visualizzare l'anteprima del controllo Ribbon.
 
@@ -38,7 +38,7 @@ Nella tabella riportata di seguito vengono definite le proprietà della barra di
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Per aggiungere o rimuovere comandi dalla barra di accesso rapido
 
-1. Nella finestra **Proprietà** fare clic su **qat Items**, quindi fare clic sul pulsante con i puntini di sospensione **(...)** .
+1. Nella finestra **Proprietà** fare clic su **qat Items**, quindi fare clic sul pulsante con i puntini di sospensione **(...)**.
 
 1. Nella finestra di dialogo **Editor elementi QAT** usare i pulsanti **Aggiungi** e **Rimuovi** per modificare l'elenco dei comandi sulla barra di accesso rapido.
 
@@ -54,4 +54,4 @@ I comandi della barra di accesso rapido non vengono visualizzati nell'area di pr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
+[Finestra di progettazione della barra multifunzione (MFC)](ribbon-designer-mfc.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622603"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Chiamate del codice dal framework
 
@@ -29,8 +29,8 @@ Questo comportamento è piuttosto familiare ai programmatori che hanno avuto esp
 
 Negli argomenti correlati, verranno illustrate le operazioni eseguite dal framework, quali l'inizializzazione e l'esecuzione dell'applicazione e la pulizia al termine dell'applicazione. Inoltre si comprenderà dove viene inserito il codice che si scrive.
 
-Per altre informazioni, vedere [classe CWinApp: La classe dell'applicazione](../mfc/cwinapp-the-application-class.md) e [modelli di documenti e il processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md).
+Per ulteriori informazioni, vedere [la classe CWinApp: la classe dell'applicazione](cwinapp-the-application-class.md) e i [modelli di documento e il processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Compilazione nel framework](../mfc/building-on-the-framework.md)
+[Compilazione nel framework](building-on-the-framework.md)

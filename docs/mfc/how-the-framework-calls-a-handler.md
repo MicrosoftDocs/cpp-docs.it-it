@@ -7,29 +7,29 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcfcbdd224db66550e7f0ff27de6313c85f856a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254008"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618525"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Chiamata di un gestore dal framework
 
-Gli argomenti seguenti prima di tutto esamina come il framework indirizza i comandi, quindi esaminare le modalità di invio di altri messaggi e notifiche dei controlli per windows:
+Gli argomenti seguenti esaminano prima di tutto il modo in cui il Framework instrada i comandi, quindi esaminano la modalità di invio di altri messaggi e notifiche di controllo a Windows:
 
-- [L'invio e ricezione di messaggi](../mfc/message-sending-and-receiving.md)
+- [Invio e ricezione di messaggi](message-sending-and-receiving.md)
 
-- [Come i messaggi noncommand raggiungono relativi gestori](../mfc/how-noncommand-messages-reach-their-handlers.md)
+- [Come i messaggi Noncommand raggiungono i relativi gestori](how-noncommand-messages-reach-their-handlers.md)
 
-- [Routing dei comandi](../mfc/command-routing.md)
+- [Routing del comando](command-routing.md)
 
-- [Illustrazione del routing dei comandi](../mfc/command-routing-illustration.md)
+- [Illustrazione del routing dei comandi](command-routing-illustration.md)
 
-- [Gestore OnCmdMsg](../mfc/oncmdmsg-handler.md)
+- [Gestore OnCmdMsg](oncmdmsg-handler.md)
 
-- [Override del routing dei comandi standard](../mfc/overriding-the-standard-command-routing.md)
+- [Override del routing dei comandi standard](overriding-the-standard-command-routing.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
+[Gestione e mapping dei messaggi](message-handling-and-mapping.md)

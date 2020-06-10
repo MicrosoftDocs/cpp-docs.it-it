@@ -10,25 +10,25 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: 1937098de30884be327c67a698dbb0023be248bb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f47cac34f6cdbdae01af98ec28be5af17edf0e25
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620960"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Esclusione del meccanismo di serializzazione
 
-Come si è visto, il framework fornisce una modalità predefinita per leggere e scrivere dati da e verso i file. La serializzazione tramite un oggetto archivio appropriato per numerose applicazioni. Tale applicazione legge un file completamente in memoria, consente all'utente di aggiornare il file e quindi scrive la versione aggiornata sul disco.
+Come si è visto, il Framework fornisce un modo predefinito per leggere e scrivere i dati da e verso i file. La serializzazione tramite un oggetto archivio soddisfa le esigenze di un numero elevato di applicazioni. Tale applicazione legge un file completamente in memoria, consente all'utente di aggiornare il file e quindi scrive nuovamente la versione aggiornata sul disco.
 
-Tuttavia, alcune applicazioni di operano sui dati in modo molto diverso e per queste applicazioni serializzazione tramite un archivio non è adatta. Sono esempi di programmi di database, i programmi che modificano solo le parti del file di grandi dimensioni, i programmi che scrivere i file di solo testo e i programmi che condividono i file di dati.
+Tuttavia, alcune applicazioni operano sui dati in modo molto diverso e per queste applicazioni la serializzazione tramite un archivio non è adatta. Gli esempi includono programmi di database, programmi che modificano solo parti di file di grandi dimensioni, programmi che scrivono file di solo testo e programmi che condividono file di dati.
 
-In questi casi, è possibile eseguire l'override di [Serialize](../mfc/reference/cobject-class.md#serialize) funzione in modo diverso per la mediazione delle azioni del file tramite un [CFile](../mfc/reference/cfile-class.md) oggetto anziché un [CArchive](../mfc/reference/carchive-class.md) oggetto.
+In questi casi, è possibile eseguire l'override della funzione [Serialize](reference/cobject-class.md#serialize) in modo diverso per mediare le azioni dei file tramite un oggetto [CFile](reference/cfile-class.md) anziché un oggetto [CArchive](reference/carchive-class.md) .
 
-È possibile usare la `Open`, `Read`, `Write`, `Close`, e `Seek` funzioni membro della classe `CFile` per aprire un file, spostare il puntatore del file (ricerca) a un momento specifico nel file di leggere un record (un numero specificato di byte ) a questo punto, consentire all'utente di aggiornare il record, quindi tentare nuovamente allo stesso punto e scrivere il record nel file. Il framework verrà aperto il file per l'utente ed è possibile usare la `GetFile` la funzione membro della classe `CArchive` per ottenere un puntatore al `CFile` oggetto. Per l'uso ancora più sofisticata e flessibile, è possibile eseguire l'override di [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) e [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) funzioni membro della classe `CWinApp`. Per altre informazioni, vedere la classe [CFile](../mfc/reference/cfile-class.md) nel *riferimento MFC*.
+È possibile usare le `Open` `Read` `Write` funzioni membro,,, `Close` e `Seek` della classe `CFile` per aprire un file, spostare il puntatore del file (Seek) in un punto specifico nel file, leggere un record (un numero specificato di byte) a questo punto, consentire all'utente di aggiornare il record, quindi cercare nuovamente allo stesso punto e scrivere di nuovo il record nel file. Il Framework aprirà il file per l'utente ed è possibile usare la `GetFile` funzione membro della classe `CArchive` per ottenere un puntatore all' `CFile` oggetto. Per un uso ancora più sofisticato e flessibile, è possibile eseguire l'override delle funzioni membro [OnOpenDocument](reference/cdocument-class.md#onopendocument) e [OnSaveDocument](reference/cdocument-class.md#onsavedocument) della classe `CWinApp` . Per ulteriori informazioni, vedere la classe [CFile](reference/cfile-class.md) nella Guida di *riferimento a MFC*.
 
-In questo scenario il `Serialize` override non esegue alcuna operazione, a meno che non, ad esempio, si desidera leggere e scrivere un'intestazione di file per impedire che venga aggiornato alla chiusura del documento.
+In questo scenario, l' `Serialize` override non esegue alcuna operazione, a meno che, ad esempio, non si voglia leggere e scrivere un'intestazione di file per mantenerla aggiornata quando il documento viene chiuso.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di documenti](../mfc/using-documents.md)
+[Utilizzo di documenti](using-documents.md)

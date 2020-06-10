@@ -12,43 +12,43 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618794"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
-Il lavoro con il Framework della libreria Microsoft Foundation Class (MFC) si basa principalmente su alcune classi principali e su diversi strumenti C++ visivi. Alcune classi incapsulano una parte grande del Application Programming Interface Win32 (API). Altre classi incapsulano concetti di applicazione quali documenti, visualizzazioni e l'applicazione stessa. Altri ancora incapsulano le funzionalità OLE e la funzionalità di accesso ai dati ODBC e DAO.  DAO è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta.
+Il lavoro con il Framework della libreria Microsoft Foundation Class (MFC) si basa principalmente su alcune classi principali e su diversi strumenti di Visual C++. Alcune classi incapsulano una parte grande del Application Programming Interface Win32 (API). Altre classi incapsulano concetti di applicazione quali documenti, visualizzazioni e l'applicazione stessa. Altri ancora incapsulano le funzionalità OLE e la funzionalità di accesso ai dati ODBC e DAO.  DAO è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta.
 
-Il concetto di finestra Win32, ad esempio, è incapsulato dalla classe MFC `CWnd`. Ovvero una C++ classe denominata `CWnd` incapsula o esegue il wrapping dell'handle di `HWND` che rappresenta una finestra di Windows. Analogamente, la classe `CDialog` incapsula le finestre di dialogo Win32.
+Il concetto di finestra Win32, ad esempio, è incapsulato dalla classe MFC `CWnd` . Ovvero una classe C++ denominata `CWnd` incapsula o esegue il wrapping dell' `HWND` handle che rappresenta una finestra di Windows. Analogamente, la classe `CDialog` incapsula le finestre di dialogo Win32.
 
-Incapsulamento significa che C++ la classe `CWnd`, ad esempio, contiene una variabile membro di tipo `HWND`e le funzioni membro della classe incapsulano le chiamate alle funzioni Win32 che accettano un `HWND` come parametro. Le funzioni membro della classe hanno in genere lo stesso nome della funzione Win32 incapsulate.
+Incapsulamento significa che la classe C++ `CWnd` , ad esempio, contiene una variabile membro di tipo `HWND` e le funzioni membro della classe incapsulano le chiamate alle funzioni Win32 che accettano `HWND` come parametro. Le funzioni membro della classe hanno in genere lo stesso nome della funzione Win32 incapsulate.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[SDI e MDI](../mfc/sdi-and-mdi.md)
+[SDI e MDI](sdi-and-mdi.md)
 
-[Documenti, visualizzazioni e framework](../mfc/documents-views-and-the-framework.md)
+[Documenti, visualizzazioni e framework](documents-views-and-the-framework.md)
 
-[Procedure guidate ed editor di risorse](../mfc/wizards-and-the-resource-editors.md)
+[Procedure guidate ed editor di risorse](wizards-and-the-resource-editors.md)
 
 ## <a name="in-related-sections"></a>Sezioni correlate
 
-[Compilazione nel framework](../mfc/building-on-the-framework.md)
+[Compilazione nel framework](building-on-the-framework.md)
 
-[Chiamate del codice dal framework](../mfc/how-the-framework-calls-your-code.md)
+[Chiamate del codice dal framework](how-the-framework-calls-your-code.md)
 
-[CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp: classe Application](cwinapp-the-application-class.md)
 
-[Modelli di documento e processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Modelli di documenti e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)
 
-[Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
+[Gestione e mapping dei messaggi](message-handling-and-mapping.md)
 
-[Oggetti finestra](../mfc/window-objects.md)
+[Oggetti finestra](window-objects.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle classi per la creazione di applicazioni per Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[Uso delle classi per la creazione di applicazioni per Windows](using-the-classes-to-write-applications-for-windows.md)

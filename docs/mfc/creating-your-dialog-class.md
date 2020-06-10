@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685647"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620509"
 ---
 # <a name="creating-your-dialog-class"></a>Creazione della classe di finestre di dialogo
 
@@ -23,7 +23,7 @@ Per ogni finestra di dialogo del programma, creare una nuova classe di finestre 
 
 Nel file con estensione h:
 
-- Dichiarazione di classe per la classe della finestra di dialogo. La classe è derivata da [CDialog](../mfc/reference/cdialog-class.md).
+- Dichiarazione di classe per la classe della finestra di dialogo. La classe è derivata da [CDialog](reference/cdialog-class.md).
 
 Nel file con estensione cpp:
 
@@ -31,9 +31,9 @@ Nel file con estensione cpp:
 
 - Costruttore standard per la finestra di dialogo.
 
-- Override della funzione membro [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) . Modificare questa funzione. Viene utilizzato per le funzionalità di convalida e scambio di dati del dialogo, come descritto più avanti in [convalida e scambio di dati della finestra di dialogo](../mfc/dialog-data-exchange-and-validation.md).
+- Override della funzione membro [DoDataExchange](reference/cwnd-class.md#dodataexchange) . Modificare questa funzione. Viene utilizzato per le funzionalità di convalida e scambio di dati del dialogo, come descritto più avanti in [convalida e scambio di dati della finestra di dialogo](dialog-data-exchange-and-validation.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di una classe di finestre di dialogo con creazioni guidate codice](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Creazione di una classe di finestre di dialogo con creazioni guidate codice](creating-a-dialog-class-with-code-wizards.md)<br/>
+[Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)

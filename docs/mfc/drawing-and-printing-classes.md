@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing classes [MFC]
 - graphics [MFC], graphical output classes
 ms.assetid: 2781c599-a038-462a-98ca-634b07ee22b0
-ms.openlocfilehash: 64bcb958b2ba896000cdfc9de78fb8a38e8462c5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 63f116cb9b71efaf174e841a76e9aab155ef863c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445626"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618957"
 ---
 # <a name="drawing-and-printing-classes"></a>Disegno e stampa di classi
 
@@ -20,4 +20,4 @@ In Windows tutto l'output grafico viene disegnato su un'area di disegno virtuale
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../mfc/class-library-overview.md)
+[Cenni preliminari sulle classi](class-library-overview.md)

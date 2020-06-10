@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 6d3a692eab47a1309ee0248b51ab8563fb077d5a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619998"
 ---
 # <a name="html-basics"></a>Nozioni fondamentali su HTML
 
-La maggior parte dei browser ha la capacità di esaminare l'origine HTML delle pagine che si sfogliano. Quando si visualizza l'origine, verranno visualizzati diversi tag HTML (Hypertext markup language), racchiusi tra parentesi angolari (<>), intervallati da testo.
+La maggior parte dei browser è in grado di esaminare l'origine HTML delle pagine visualizzate. Quando si visualizza l'origine, viene visualizzato un numero di tag HTML (Hypertext Markup Language) racchiusi tra parentesi angolari (<>), intervallati dal testo.
 
-I passaggi seguenti utilizzano i tag HTML per creare una pagina Web semplice. In questa procedura verrà digitato testo normale in un file nel Blocco note, verranno apportate alcune modifiche, verrà salvato il file e ricaricato la pagina nel browser per visualizzare le modifiche.
+La procedura seguente usa i tag HTML per creare una semplice pagina Web. In questi passaggi si digitano testo normale in un file nel blocco note, si apportano alcune modifiche, si salva il file e si ricarica la pagina nel browser per visualizzare le modifiche.
 
 #### <a name="to-create-an-html-file"></a>Per creare un file HTML
 
-1. Aprire Blocco note o qualsiasi editor di testo normale.
+1. Aprire il blocco note o qualsiasi editor di testo normale.
 
-1. Scegliere **Nuovo**dal menu **File** .
+1. Scegliere **nuovo**dal menu **file** .
 
-1. Digitare le seguenti righe:
+1. Digitare le righe seguenti:
 
     ```html
     <HTML>
@@ -33,15 +33,15 @@ I passaggi seguenti utilizzano i tag HTML per creare una pagina Web semplice. In
     </HTML>
     ```
 
-1. Dal menu **File** , scegliere **Salva**e salvare il file con il nome c: Lasciare il file aperto nell'editor.
+1. Scegliere **Salva**dal menu **file** e salvare il file come c:\webpages\First.htm. Lasciare aperto il file nell'editor.
 
-1. Passare al browser e scegliere **Apri**dal menu **File** oppure digitare *file://C:/webpages/first.htm* nella casella di modifica dell'URL del browser. Dovresti vedere una pagina vuota con la didascalia della finestra "Top HTML Tags".
+1. Passare al browser e scegliere **Apri**dal menu **File** o digitare *file://C:/WEBPAGES/First.htm* nella casella di modifica URL del browser. Verrà visualizzata una pagina vuota con la didascalia della finestra "Top HTML Tags".
 
-   Si noti che i tag sono associati e sono inclusi tra parentesi angolari. I tag non fanno distinzione tra maiuscole e minuscole, ma le maiuscole vengono spesso utilizzate per mettere in risalto i tag.
+   Si noti che i tag sono abbinati e sono inclusi tra parentesi angolari. I tag non fanno distinzione tra maiuscole e minuscole, ma la maiuscola viene spesso usata per far emergere i tag.
 
-   Il \<tag HTML> avvia il \<documento e il tag /HTML> lo termina. I tag finali (non sempre obbligatori) sono gli stessi del tag iniziale, ma hanno una barra (/) davanti al tag. Non devono essere presenti spazi tra la parentesi angolare (<) e l'inizio del tag.
+   Il tag \<HTML> Avvia il documento e il tag lo \</HTML> termina. I tag di fine (non sempre necessari) corrispondono al tag di inizio, ma hanno una barra (/) davanti al tag. Non devono essere presenti spazi tra la parentesi uncinata (<) e l'inizio del tag.
 
-1. Tornare al Blocco note \<e, dopo la riga /HEAD>, digitare:
+1. Tornare al blocco note e, dopo la \</HEAD> riga, digitare:
 
     ```html
     <BODY>
@@ -50,21 +50,21 @@ I passaggi seguenti utilizzano i tag HTML per creare una pagina Web semplice. In
     </BODY>
     ```
 
-1. Scegliere **Salva**dal menu **File** .
+1. Scegliere **Salva**dal menu **file** .
 
 1. Tornare al browser e aggiornare la pagina.
 
-   Le parole verranno visualizzate nell'area client della finestra del browser. Si noti che il ritorno a capo viene ignorato. Se si desidera avere un'interruzione di `<BR>` riga, è necessario includere un tag dopo la prima riga.
+   Le parole verranno visualizzate nell'area client della finestra del browser. Si noti che il ritorno a capo viene ignorato. Se si desidera avere un'interruzioni di riga, è necessario includere un `<BR>` tag dopo la prima riga.
 
-   Per tutti i passaggi che seguono, inserire il testo in un punto qualsiasi tra \<BODY> e \</BODY> da aggiungere al corpo del documento.
+   Per tutti i passaggi successivi, inserire il testo tra \<BODY> e \</BODY> per aggiungere al corpo del documento.
 
-1. Aggiungere un'intestazione:Add a header:
+1. Aggiungere un'intestazione:
 
     ```html
     <H3>Here's the big picture</H3>
     ```
 
-1. Aggiungere un'immagine utilizzando un file .gif salvato nella stessa directory della pagina:
+1. Aggiungere un'immagine, usando un file con estensione gif salvato nella stessa directory della pagina:
 
     ```html
     <IMG src="yourfile.gif">
@@ -80,11 +80,11 @@ I passaggi seguenti utilizzano i tag HTML per creare una pagina Web semplice. In
     </UL>
     ```
 
-1. Per numerare l'elenco, \<utilizzare \<invece i tag OL \<> \<e /O>L associati al posto dei tag> UL e /UL>.
+1. Per numerare invece l'elenco, usare \<OL> \</OL> i tag e associati al posto dei \<UL> \</UL> tag e.
 
-Questo dovrebbe farti iniziare. Se viene visualizzata una grande funzionalità in una pagina Web, è possibile scoprire come è stata creata esaminando l'origine HTML. Gli editor HTML come Microsoft Front Page possono essere utilizzati per creare pagine semplici e avanzate.
+Questo dovrebbe iniziare. Se viene visualizzata un'eccezionale funzionalità in una pagina Web, è possibile scoprire come è stata creata esaminando l'origine HTML. Gli editor HTML, ad esempio Microsoft Front Page, possono essere usati per creare pagine semplici e avanzate.
 
-Ecco l'intera origine HTML per il file che hai costruito:
+Di seguito è illustrata l'intera origine HTML per il file che si sta compilando:
 
 ```html
 <HTML>
@@ -105,10 +105,10 @@ Life is good.
 </HTML>
 ```
 
-Per una descrizione completa di tag, attributi ed estensioni, vedere la specifica HTML (Hypertext Markup Language):
+Per una descrizione completa di tag, attributi ed estensioni, vedere la specifica Hypertext Markup Language (HTML):
 
-[Ultima versione pubblicata di HTML](https://www.w3.org/TR/html/) a W3C.org.
+[Ultima versione pubblicata del codice HTML](https://www.w3.org/TR/html/) in W3C.org.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
+[Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)

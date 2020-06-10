@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: 68ede3bc55669a29eef192d38b29b8c1ab433e4b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e9e5b94736de44d5cfeef81f5b78a759df3b8aa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508022"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619916"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Notifiche inviate mediante controlli Animation
 
-Un controllo di animazione ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) invia due tipi diversi di messaggi di notifica. Le notifiche vengono inviate sotto forma di messaggi [WM_COMMAND](/windows/win32/menurc/wm-command) .
+Un controllo di animazione ([CAnimateCtrl](reference/canimatectrl-class.md)) invia due tipi diversi di messaggi di notifica. Le notifiche vengono inviate sotto forma di messaggi di [WM_COMMAND](/windows/win32/menurc/wm-command) .
 
-Il messaggio [ACN_START](/windows/win32/Controls/acn-start) viene inviato quando il controllo animazione inizia a riprodurre un clip. Il messaggio [ACN_STOP](/windows/win32/Controls/acn-stop) viene inviato quando il controllo dell'animazione ha terminato o interrotto la riproduzione di un clip.
+Il messaggio [ACN_START](/windows/win32/Controls/acn-start) viene inviato quando il controllo animazione inizia a riprodurre una clip. Il messaggio [ACN_STOP](/windows/win32/Controls/acn-stop) viene inviato quando il controllo dell'animazione ha terminato o interrotto la riproduzione di un clip.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CAnimateCtrl](../mfc/using-canimatectrl.md)<br/>
-[Controlli](../mfc/controls-mfc.md)
+[Utilizzo di CAnimateCtrl](using-canimatectrl.md)<br/>
+[Controlli](controls-mfc.md)

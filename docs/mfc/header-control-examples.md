@@ -5,12 +5,12 @@ helpviewer_keywords:
 - sample applications [MFC], header controls
 - controls [MFC], header
 ms.assetid: 30050732-d53e-4eab-88d7-61aac52914c9
-ms.openlocfilehash: df72489ae11ab1567b0d0b2b06ba3c562ec312a9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2f8c1eff60a7d9594481b4ce668dd022c8721c97
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508461"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620112"
 ---
 # <a name="header-control-examples"></a>Esempi di controllo Header
 
@@ -18,5 +18,5 @@ Per esempi di controlli Header, vedere i [controlli Header](/windows/win32/Contr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
-[Controlli](../mfc/controls-mfc.md)
+[Uso di CHeaderCtrl](using-cheaderctrl.md)<br/>
+[Controlli](controls-mfc.md)

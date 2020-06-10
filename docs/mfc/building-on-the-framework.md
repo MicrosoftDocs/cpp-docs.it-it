@@ -7,29 +7,29 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c171b223892c8bca1b32e18c57c09027558c192
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385336"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619724"
 ---
 # <a name="building-on-the-framework"></a>Compilazione nel framework
 
-Il ruolo nella configurazione di un'applicazione con il framework MFC consiste nel fornire il codice sorgente specifiche dell'applicazione e per connettere i componenti definendo quali i messaggi e comandi a cui rispondono. Si usa il linguaggio C++ e le tecniche standard di C++ per derivare classi personalizzate specifiche dell'applicazione rispetto a quelli forniti dalla libreria di classi e per eseguire l'override e migliorare il comportamento della classe di base.
+Il ruolo di configurazione di un'applicazione con il framework MFC consiste nel fornire il codice sorgente specifico dell'applicazione e connettere i componenti definendo i messaggi e i comandi a cui rispondono. Si usano il linguaggio C++ e le tecniche C++ standard per derivare le classi specifiche dell'applicazione da quelle fornite dalla libreria di classi e per eseguire l'override del comportamento della classe di base.
 
-Negli argomenti correlati, le tabelle seguenti descrivono la sequenza generale di operazioni in genere seguirà e le responsabilità del cliente e le responsabilità del framework:
+Negli argomenti correlati, le tabelle seguenti descrivono la sequenza generale delle operazioni che si seguono in genere e le responsabilità rispetto a quelle del Framework:
 
-- [Sequenza per la creazione di un'applicazione con il Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+- [Sequenza per la compilazione di un'applicazione con il Framework](sequence-of-operations-for-building-mfc-applications.md)
 
-- [Sequenza delle operazioni per la creazione di applicazioni OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+- [Sequenza delle operazioni per la creazione di applicazioni OLE](sequence-of-operations-for-creating-ole-applications.md)
 
-- [Sequenza di operazioni per la creazione di controlli ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+- [Sequenza di operazioni per la creazione di controlli ActiveX](sequence-of-operations-for-creating-activex-controls.md)
 
-- [Sequenza delle operazioni per la creazione di applicazioni di database](../mfc/sequence-of-operations-for-creating-database-applications.md)
+- [Sequenza delle operazioni per la creazione di applicazioni database](sequence-of-operations-for-creating-database-applications.md)
 
-Nella maggior parte, è possibile seguire queste tabelle come una sequenza di passaggi per la creazione di un'applicazione MFC, anche se alcuni dei passaggi sono opzioni alternative. La maggior parte delle applicazioni, ad esempio, usano un tipo di classe di visualizzazione dai vari tipi disponibili.
+Nella maggior parte dei casi, è possibile seguire queste tabelle come sequenza di passaggi per la creazione di un'applicazione MFC, sebbene alcuni passaggi siano opzioni alternative. Per la maggior parte delle applicazioni, ad esempio, viene utilizzato un tipo di classe di visualizzazione dei diversi tipi disponibili.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Argomenti MFC generali](../mfc/general-mfc-topics.md)
+[Argomenti MFC generali](general-mfc-topics.md)

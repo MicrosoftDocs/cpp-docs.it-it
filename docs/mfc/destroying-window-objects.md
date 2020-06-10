@@ -7,29 +7,29 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297242"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621854"
 ---
 # <a name="destroying-window-objects"></a>Eliminazione definitiva di oggetti finestra
 
-Prestare attenzione con il proprio finestre figlio da eliminare definitivamente l'oggetto finestra C++ quando l'utente ha terminato con la finestra. Se questi oggetti non vengono eliminati definitivamente, l'applicazione non recupererà la memoria. Per fortuna, il framework gestisce distruzione di finestre, nonché la creazione di finestre cornice, visualizzazioni e finestre di dialogo. Se si creano finestre aggiuntive, è responsabile anche alla relativa eliminazione.
+È necessario prestare attenzione alle finestre figlio per eliminare l'oggetto finestra di C++ quando l'utente ha terminato la finestra. Se questi oggetti non vengono eliminati definitivamente, non verrà ripristinata la memoria dell'applicazione. Fortunatamente, il Framework gestisce la distruzione della finestra, nonché la creazione di finestre cornice, visualizzazioni e finestre di dialogo. Se si creano finestre aggiuntive, l'utente è responsabile dell'eliminazione.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Sequenza di distruzione di finestre](../mfc/window-destruction-sequence.md)
+- [Sequenza di eliminazione di finestre](window-destruction-sequence.md)
 
-- [Allocazione e deallocazione di memoria delle finestre](../mfc/allocating-and-deallocating-window-memory.md)
+- [Allocazione e deallocazione di memoria delle finestre](allocating-and-deallocating-window-memory.md)
 
-- [Disconnessione di CWnd da HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Scollegamento di un elemento CWnd dal relativo HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-- [Sequenza generale di creazione finestre](../mfc/general-window-creation-sequence.md)
+- [Sequenza generale di creazione finestre](general-window-creation-sequence.md)
 
-- [Eliminazione definitiva di finestre cornice](../mfc/destroying-frame-windows.md)
+- [Eliminazione definitiva di finestre cornice](destroying-frame-windows.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Oggetti finestra](../mfc/window-objects.md)
+[Oggetti finestra](window-objects.md)

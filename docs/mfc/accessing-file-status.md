@@ -8,12 +8,12 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 26c263b2d7e4e0243444925cb9416cb337dcd79d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c626940e700d3e9827ef6a7cf849d970e40d5d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392960"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619782"
 ---
 # <a name="accessing-file-status"></a>Accesso allo stato del file
 
@@ -21,14 +21,14 @@ ms.locfileid: "62392960"
 
 ### <a name="to-get-file-status"></a>Per ottenere lo stato del file
 
-1. Usare la [CFile](../mfc/reference/cfile-class.md) classe per ottenere e impostare le informazioni relative a un file. Un'applicazione utile consiste nell'usare la `CFile` una funzione membro statica **GetStatus** per determinare se esiste un file. **GetStatus** restituisce 0 se il file specificato non esiste.
+1. Usare la classe [CFile](reference/cfile-class.md) per ottenere e impostare le informazioni su un file. Un'applicazione utile consiste nell'usare la `CFile` funzione membro statica **GetStatus** per determinare se un file esiste. **GetStatus** restituisce 0 se il file specificato non esiste.
 
-Di conseguenza, è possibile usare il risultato del **GetStatus** per determinare se utilizzare il **modeCreate** flag quando si apre un file, come illustrato nell'esempio seguente:
+Quindi, è possibile usare il risultato di **GetStatus** per determinare se usare il flag **CFile:: modeCreate** quando si apre un file, come illustrato nell'esempio seguente:
 
 [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]
 
-Per informazioni correlate, vedere [serializzazione](../mfc/serialization-in-mfc.md).
+Per informazioni correlate, vedere [serializzazione](serialization-in-mfc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[File](../mfc/files-in-mfc.md)
+[File](files-in-mfc.md)

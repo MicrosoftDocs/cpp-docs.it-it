@@ -8,25 +8,25 @@ helpviewer_keywords:
 - detaching CWnds from HWNDs
 - Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
-ms.openlocfilehash: f7a6f97ba9f1dd3a928a5450c1a899ce09a4ac5f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2e0484698654cd14f22a92be76a80f71c0f9adf5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621850"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Disconnessione di CWnd da HWND
 
-Se è necessario aggirare la relazione`HWND` oggetto, MFC fornisce un'altra `CWnd` funzione membro, [Disconnetti](../mfc/reference/cwnd-class.md#detach), che disconnette l' C++ oggetto finestra dalla finestra di Windows. In questo modo si impedisce che il distruttore distrugga la finestra di Windows quando l'oggetto viene eliminato definitivamente.
+Se è necessario aggirare la `HWND` relazione tra oggetti, MFC fornisce un'altra `CWnd` funzione membro, [Detach](reference/cwnd-class.md#detach), che disconnette l'oggetto finestra C++ dalla finestra di Windows. In questo modo si impedisce che il distruttore distrugga la finestra di Windows quando l'oggetto viene eliminato definitivamente.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Creazione di finestre](../mfc/creating-windows.md)
+- [Creazione di finestre](creating-windows.md)
 
-- [Sequenza di distruzione della finestra](../mfc/window-destruction-sequence.md)
+- [Sequenza di eliminazione di finestre](window-destruction-sequence.md)
 
-- [Allocazione e deallocazione della memoria della finestra](../mfc/allocating-and-deallocating-window-memory.md)
+- [Allocazione e deallocazione di memoria delle finestre](allocating-and-deallocating-window-memory.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Oggetti finestra](../mfc/window-objects.md)
+[Oggetti finestra](window-objects.md)

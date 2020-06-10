@@ -10,72 +10,72 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 2594531df63bcd62cdaec44fbc3668ea68990922
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 529b6d0eaedaee200da547ef9ed980aab51ea233
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622168"
 ---
 # <a name="ole-in-mfc"></a>OLE in MFC
 
-In questi articoli vengono illustrati i concetti fondamentali della programmazione OLE tramite MFC. MFC fornisce il modo più semplice per scrivere programmi che utilizzano OLE:
+Questi articoli illustrano le nozioni di base della programmazione OLE con MFC. MFC fornisce il modo più semplice per scrivere programmi che usano OLE:
 
 - Per utilizzare la modifica visiva OLE (attivazione sul posto).
 
-- Per lavorare come contenitori OLE o server.
+- Per lavorare come contenitori o server OLE.
 
 - Per implementare la funzionalità di trascinamento della selezione.
 
 - Per utilizzare i dati di data e ora.
 
-- Per gestire i dati di stato dei moduli MFC, inclusi i punti di ingresso delle funzioni DLL esportate, i punti di ingresso dell'interfaccia OLE/COM e i punti di ingresso delle routine della finestra.
+- Per gestire i dati dello stato dei moduli MFC, inclusi i punti di ingresso delle funzioni DLL esportate, i punti di ingresso dell'interfaccia OLE/COM e i punti di ingresso della routine della finestra.
 
-È inoltre possibile utilizzare [l'automazione](../mfc/automation.md).
+È anche possibile usare l' [automazione](automation.md).
 
 > [!NOTE]
-> Il termine OLE indica le tecnologie associate al collegamento e all'incorporamento, inclusi contenitori OLE, server OLE, elementi OLE, attivazione sul posto (o modifica visiva), rilevamenti, trascinamento della selezione e unione di menu. Il termine Active si applica al modello COM (Component Object Model) e agli oggetti basati su COM, ad esempio i controlli ActiveX. L'automazione OLE è ora denominata automazione.
+> Il termine OLE indica le tecnologie associate al collegamento e all'incorporamento, inclusi contenitori OLE, server OLE, elementi OLE, attivazione sul posto (o modifica visiva), Tracker, trascinamento della selezione e Unione di menu. Il termine attivo si applica ai Component Object Model (COM) e agli oggetti basati su COM, ad esempio i controlli ActiveX. L'automazione OLE è ora chiamata automazione.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Sfondo OLE](../mfc/ole-background.md)<br/>
-Vengono illustrate le informazioni OLE e vengono fornite informazioni concettuali sul funzionamento.
+[Sfondo OLE](ole-background.md)<br/>
+Viene illustrato OLE e vengono fornite informazioni concettuali sul suo funzionamento.
 
-[Activation](../mfc/activation-cpp.md)<br/>
-Viene descritto il ruolo dell'attivazione nella modifica degli elementi OLE.
+[Activation](activation-cpp.md)<br/>
+Descrive il ruolo di attivazione nella modifica degli elementi OLE.
 
-[Contenitori](../mfc/containers.md)<br/>
-Vengono forniti collegamenti all'utilizzo di contenitori in OLE.
+[Contenitori](containers.md)<br/>
+Fornisce collegamenti all'uso di contenitori in OLE.
 
-[Data Objects and Data Sources](../mfc/data-objects-and-data-sources-ole.md)<br/>
-Vengono forniti collegamenti ad argomenti `COleDataObject` che `COleDataSource` illustrano l'utilizzo delle classi e .
+[Oggetti dati e origini dati](data-objects-and-data-sources-ole.md)<br/>
+Vengono forniti collegamenti ad argomenti che illustrano l'utilizzo `COleDataObject` delle `COleDataSource` classi e.
 
-[Trascinamento e rilascio](../mfc/drag-and-drop-ole.md)<br/>
-Viene illustrato l'utilizzo delle operazioni di copia e incolla con OLE.
+[Trascinamento della selezione](drag-and-drop-ole.md)<br/>
+Viene illustrato l'utilizzo della copia e incolla con OLE.
 
-[Menu e risorse OLE](../mfc/menus-and-resources-ole.md)<br/>
+[Menu e risorse OLE](menus-and-resources-ole.md)<br/>
 Viene illustrato l'utilizzo di menu e risorse nelle applicazioni documento OLE MFC.
 
-[Registrazione](../mfc/registration.md)<br/>
-Vengono illustrate l'installazione e l'inizializzazione del server.
+[Registrazione](registration.md)<br/>
+Descrive l'installazione e l'inizializzazione del server.
 
-[Server](../mfc/servers.md)<br/>
-Viene descritto come creare elementi OLE (o componenti) per l'utilizzo da parte delle applicazioni contenitore.
+[Server](servers.md)<br/>
+Viene descritto come creare elementi o componenti OLE per l'utilizzo da applicazioni contenitore.
 
-[Tracker](../mfc/trackers.md)<br/>
-Fornisce informazioni `CRectTracker` sulla classe , che fornisce un'interfaccia grafica per consentire agli utenti di interagire con gli elementi client OLE.
+[Tracker](trackers.md)<br/>
+Fornisce informazioni sulla `CRectTracker` classe, che fornisce un'interfaccia grafica per consentire agli utenti di interagire con gli elementi client OLE.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Punti di connessione](../mfc/connection-points.md)<br/>
-Viene illustrato come implementare i punti di connessione (precedentemente `CCmdTarget` `CConnectionPoint`noti come punti di connessione OLE) utilizzando le classi MFC e .
+[Punti di connessione](connection-points.md)<br/>
+Viene illustrato come implementare i punti di connessione (noti in precedenza come punti di connessione OLE) utilizzando le classi MFC `CCmdTarget` e `CConnectionPoint` .
 
-[Componenti COM contenitore/server](../mfc/containers-advanced-features.md)<br/>
-Vengono descritti i passaggi necessari per incorporare funzionalità avanzate facoltative nelle applicazioni contenitore esistenti.
+[Componenti COM contenitore/server](containers-advanced-features.md)<br/>
+Vengono descritti i passaggi necessari per incorporare funzionalità avanzate facoltative in applicazioni contenitore esistenti.
 
 [Component Object Model (COM)](/windows/win32/com/the-component-object-model)<br/>
 Viene descritto l'utilizzo di OLE senza MFC.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti](../mfc/mfc-concepts.md)
+[Concetti](mfc-concepts.md)
