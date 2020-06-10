@@ -1,6 +1,6 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918393"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664326"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -62,22 +62,22 @@ Ottenere un messaggio di errore di sistema (**strerror_s**, **_wcserror_s**) o s
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *buffer*<br/>
 Buffer contenente la stringa di errore.
 
-*numberOfElements*<br/>
-Dimensioni del buffer.
+*sizeInBytes*<br/>
+Numero di byte nel buffer.
+
+*sizeInWords*<br/>
+Numero di parole nel buffer.
 
 *errnum*<br/>
 Numero di errore.
@@ -122,7 +125,7 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 
 ### <a name="error-condtions"></a>Condizioni di errore
 
-|*buffer*|*numberOfElements*|*strErrMsg*|Contenuto del *buffer*|
+|*buffer*|*sizeInBytes/sizeInWords*|*strErrMsg*|Contenuto del *buffer*|
 |--------------|------------------------|-----------------|--------------------------|
 |**NULL**|any|any|n/d|
 |any|0|any|non modificato|
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 Se *strErrMsg* è **null**, **_strerror_s** restituisce una stringa nel *buffer* contenente il messaggio di errore di sistema per l'ultima chiamata di libreria che ha generato un errore. La stringa del messaggio di errore termina con il carattere di nuova riga ("\n"). Se *strErrMsg* è diverso da **null**, **_strerror_s** restituisce una stringa nel *buffer* contenente (nell'ordine) il messaggio della stringa, i due punti, uno spazio, il messaggio di errore di sistema per l'ultima chiamata di libreria che produce un errore e un carattere di nuova riga. La lunghezza massima consentita del messaggio stringa è pari a 94 caratteri.
 
-Queste funzioni troncano il messaggio di errore se la relativa lunghezza supera *NumberOfElements* -1. La stringa risultante nel *buffer* è sempre con terminazione null.
+Queste funzioni troncano il messaggio di errore se la lunghezza supera la dimensione del buffer-1. La stringa risultante nel *buffer* sarà sempre con terminazione null.
 
 Il numero di errore effettivo per **_strerror_s** viene archiviato nella variabile [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). I messaggi di errore di sistema sono accessibili tramite la variabile [sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), ovvero una matrice dei messaggi ordinati in base al numero di errore. **_strerror_s** accede al messaggio di errore appropriato utilizzando il valore **errno** come indice per la variabile **_sys_errlist**. Il valore della variabile [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene definito come il numero massimo di elementi nella matrice di **_sys_errlist** . Per produrre risultati accurati, chiamare **_strerror_s** immediatamente dopo la restituzione di una routine di libreria con un errore. In caso contrario, le chiamate successive a **strerror_s** o **_strerror_s** possono sovrascrivere il valore **errno** .
 
