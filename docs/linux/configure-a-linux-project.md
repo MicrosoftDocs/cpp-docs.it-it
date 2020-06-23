@@ -1,13 +1,13 @@
 ---
 title: Configurare un progetto C++ Linux in Visual Studio
-ms.date: 06/11/2019
+ms.date: 06/22/2020
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623598"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269741"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -33,7 +33,7 @@ Questo argomento illustra come configurare un progetto Linux C++ come descritto 
 
 ## <a name="general-settings"></a>Impostazioni generali
 
-Per visualizzare le opzioni di configurazione, selezionare il menu **Progetto > Proprietà** o fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà** dal menu di scelta rapida. Vengono visualizzate le impostazioni **Generale**.
+Per visualizzare le opzioni di configurazione, selezionare il menu **> Proprietà progetto** oppure fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **proprietà** dal menu di scelta rapida. Vengono visualizzate le impostazioni **Generale**.
 
 ![Configurazione generale](media/settings_general.png)
 
@@ -43,7 +43,7 @@ Per altre informazioni sulle impostazioni nelle pagine delle proprietà, vedere 
 
 ## <a name="remote-settings"></a>Impostazioni remote
 
-Per modificare le impostazioni relative al computer Linux remoto, configurare le impostazioni remote visualizzate in [Generale](prop-pages/general-linux.md).
+Per modificare le impostazioni relative al computer Linux remoto, configurare le impostazioni remote visualizzate in [generale](prop-pages/general-linux.md).
 
 - Per specificare un computer Linux di destinazione remoto, usare la voce **Computer di compilazione remota**. In questo modo sarà possibile selezionare una delle connessioni create in precedenza. Per creare una nuova voce, vedere [Connettersi al computer Linux remoto](connect-to-your-remote-linux-computer.md).
 
@@ -72,17 +72,17 @@ Per modificare le impostazioni relative al computer Linux remoto, configurare le
 
 ::: moniker range="vs-2019"
 
-Questa sezione non si applica se la destinazione è WSL.
+Questa sezione non si applica quando la destinazione è WSL.
 
 ::: moniker-end
 
 Durante la compilazione in sistemi remoti, i file di origine del computer di sviluppo vengono copiati nel computer Linux dove vengono poi compilati. Per impostazione predefinita, tutti i file di origine del progetto di Visual Studio vengono copiati nel percorso impostato sopra. Tuttavia,è anche possibile aggiungere file di origine aggiuntivi all'elenco oppure disabilitare totalmente la copia di file di origine. Quest'ultima è l'impostazione predefinita per i progetti makefile.
 
-- **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto. Per impostazione predefinita, il valore predefinito di ** \@ (SourcesToCopyRemotely)** è tutti i file del codice sorgente nel progetto, ma non tutti i file di asset/risorse, ad esempio le immagini.
+- **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto. Per impostazione predefinita, il valore predefinito di ** \@ (SourcesToCopyRemotely)** è tutti i file del codice sorgente nel progetto, ma non tutti i file di asset o risorse, ad esempio le immagini.
 
 - L'opzione **Copia origini** può essere attivata e disattivata per attivare e disattivare la copia dei file di origine nel computer remoto.
 
-- **Altre origini da copiare** consente di aggiungere file di origine che verranno copiati nel sistema remoto. È possibile specificare un elenco delimitato da punti e virgola, oppure usare la sintassi **:=** per specificare un nome locale e remoto da usare:
+- **Ulteriori origini da copiare** consentono di aggiungere ulteriori file di origine, che verranno copiati nel sistema remoto. È possibile specificare un elenco delimitato da punti e virgola, oppure usare la sintassi **:=** per specificare un nome locale e remoto da usare:
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
@@ -122,6 +122,10 @@ Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiat
 ![Registrazione remota](media/remote-logging-vs2019.png)
 
 ::: moniker-end
+
+## <a name="linux-target-locale"></a><a name="locale"></a>Impostazioni locali di destinazione per Linux
+
+Le impostazioni della lingua di Visual Studio non vengono propagate a destinazioni Linux perché Visual Studio non gestisce o configura i pacchetti installati. I messaggi visualizzati nella finestra di **output** , ad esempio gli errori di compilazione, vengono visualizzati usando la lingua e le impostazioni locali della destinazione Linux. È necessario configurare le destinazioni di Linux per le impostazioni locali desiderate.
 
 ## <a name="see-also"></a>Vedere anche
 

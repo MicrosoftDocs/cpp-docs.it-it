@@ -1,6 +1,6 @@
 ---
 title: 'Operatore di chiamata di funzione: ()'
-ms.date: 11/04/2016
+ms.date: 06/11/2020
 helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
@@ -10,48 +10,54 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+no-loc:
+- opt
+ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179770"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777305"
 ---
 # <a name="function-call-operator-"></a>Operatore di chiamata di funzione: ()
 
-Un'espressione suffissa seguita dall'operatore di chiamata di funzione, **()** , specifica una chiamata di funzione.
+Una chiamata di funzione è un tipo di *`postfix-expression`* , formato da un'espressione che identifica una funzione seguita dall'operatore di chiamata di funzione, **`()`** . Un oggetto può dichiarare una `operator ()` funzione, che fornisce la semantica di chiamata di funzione per l'oggetto.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-postfix-expression
-( [argument-expression-list ] )
-```
+> *`postfix-expression`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Gli argomenti nell'operatore di chiamata di funzione sono uguali a zero o a più espressioni separate da virgole, ossia sono gli argomenti effettivi della funzione.
+Gli argomenti dell'operatore di chiamata di funzione provengono da un oggetto *`argument-expression-list`* , un elenco delimitato da virgole di espressioni. I valori di queste espressioni vengono passati alla funzione come argomenti. *Argument-expression-list* può essere vuoto. Prima di C++ 17, l'ordine di valutazione dell'espressione di funzione e le espressioni di argomento non sono specificati e possono verificarsi in qualsiasi ordine. In C++ 17 e versioni successive, l'espressione di funzione viene valutata prima di qualsiasi espressione di argomento o di argomenti predefiniti. Le espressioni di argomento vengono valutate in una sequenza indeterminata.
 
-Il *suffisso-espressione* deve restituire un indirizzo di funzione (ad esempio, un identificatore di funzione o il valore di un puntatore a funzione) e *argument-expression-list* è un elenco di espressioni (separate da virgole) i cui valori (gli argomenti) vengono passati alla funzione. L'argomento *argument-expression-list* può essere vuoto.
+*`postfix-expression`* Identifica la funzione da chiamare. Deve restituire un indirizzo di funzione. Può assumere diverse forme:
 
-L' *espressione suffisso* deve essere di uno dei seguenti tipi:
+- un nome o un puntatore di oggetto funzione o funzione,
+- espressione lvalue che fa riferimento a una funzione o a un oggetto funzione.
+- una funzione di accesso della funzione membro, esplicita o implicita.
+
+La funzione specificata da *`postfix-expression`* può essere una funzione in overload. Le normali regole per la risoluzione dell'overload determinano la funzione effettiva da chiamare.
+
+Di seguito sono riportate alcune dichiarazioni di esempio:
 
 - Funzione che restituisce il tipo `T`. Una dichiarazione di esempio è
 
     ```cpp
-    T func( int i )
+    T func( int i );
     ```
 
 - Puntatore a una funzione che restituisce il tipo `T`. Una dichiarazione di esempio è
 
     ```cpp
-    T (*func)( int i )
+    T (*func)( int i );
     ```
 
 - Riferimento a una funzione che restituisce il tipo `T`. Una dichiarazione di esempio è
 
     ```cpp
-    T (&func)(int i)
+    T (&func)(int i);
     ```
 
 - Deferenziazione della funzione puntatore a membro che restituisce il tipo `T`. Le chiamate di funzione di esempio sono
@@ -97,7 +103,7 @@ Welcome to C++
 
 ## <a name="function-call-results"></a>Risultati della chiamata di funzione
 
-Una chiamata di funzione restituisce un r-value, a meno che la funzione non sia dichiarata come tipo di riferimento. Le funzioni con tipo restituito di riferimento restituiscono l-value e possono essere utilizzate a sinistra di un'istruzione di assegnazione, come indicato di seguito:
+Una chiamata di funzione restituisce un valore rvalue a meno che la funzione non sia dichiarata come tipo di riferimento. Le funzioni con i tipi restituiti di riferimento restituiscono lvalue. Queste funzioni possono essere usate sul lato sinistro di un'istruzione di assegnazione, come illustrato di seguito:
 
 ```cpp
 // expre_Function_Call_Results.cpp
@@ -129,9 +135,9 @@ int main()
 }
 ```
 
-Il codice precedente definisce una classe denominata `Point`, che contiene oggetti dati privati che rappresentano le coordinate *x* e *y* . È necessario modificare tali oggetti e recuperare i relativi valori. Questo programma rappresenta una delle diverse progettazioni possibili per tale classe. Un'altra progettazione valida consiste nell'utilizzo delle funzioni `GetX` e `SetX` o `GetY` e `SetY`.
+Il codice precedente definisce una classe denominata `Point` , che contiene oggetti dati privati che rappresentano le coordinate *x* e *y* . È necessario modificare tali oggetti e recuperare i relativi valori. Questo programma rappresenta una delle diverse progettazioni possibili per tale classe. Un'altra progettazione valida consiste nell'utilizzo delle funzioni `GetX` e `SetX` o `GetY` e `SetY`.
 
-Le funzioni che restituiscono tipi di classe, i puntatori ai tipi di classe o i riferimenti ai tipi di classe possono essere utilizzati come operando a sinistra degli operatori di selezione dei membri. Pertanto, il codice seguente è valido:
+Le funzioni che restituiscono tipi di classe, i puntatori ai tipi di classe o i riferimenti ai tipi di classe possono essere utilizzati come operando a sinistra degli operatori di selezione dei membri. Il codice seguente è valido:
 
 ```cpp
 // expre_Function_Results2.cpp
@@ -178,6 +184,6 @@ Le funzioni possono essere chiamate in modo ricorsivo. Per ulteriori informazion
 
 ## <a name="see-also"></a>Vedere anche
 
-[Espressioni di suffissi](../cpp/postfix-expressions.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Espressioni di suffisso](../cpp/postfix-expressions.md)<br/>
+[Operatori, precedenza e associatività predefiniti di C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Chiamata di funzione](../c-language/function-call-c.md)

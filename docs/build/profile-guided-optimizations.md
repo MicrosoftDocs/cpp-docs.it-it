@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 46619e77861b6a3a78d74ce6c6d9173a3a5f270f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857321"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777318"
 ---
 # <a name="profile-guided-optimizations"></a>Ottimizzazioni PGO (Profile Guided Optmization)
 
@@ -31,13 +31,13 @@ Per usare l'ottimizzazione PGO, seguire questa procedura per ottimizzare l'app:
 
 - Collegamento con [/LTCG](reference/ltcg-link-time-code-generation.md) e [/GENPROFILE o/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 
-   L'uso di **/LTCG** e **/GENPROFILE** o **/FASTGENPROFILE** crea `.pgd` un file quando viene eseguita l'app instrumentata. Dopo l'aggiunta dei dati di esecuzione dei test `.pgd` al file, è possibile usarli come input per il passaggio successivo del collegamento (creazione dell'immagine ottimizzata). Quando si specifica **/GENPROFILE**, è possibile aggiungere facoltativamente un argomento **PGD =**_filename_ per specificare un nome o un percorso non predefinito `.pgd` per il file. La combinazione di opzioni del linker **/LTCG** e **/GENPROFILE** o **/FASTGENPROFILE** sostituisce l'opzione del linker **/LTCG: PGINSTRUMENT** deprecata.
+   L'uso di **/LTCG** e **/GENPROFILE** o **/FASTGENPROFILE** crea un `.pgd` file quando viene eseguita l'app instrumentata. Dopo l'aggiunta dei dati di esecuzione dei test al `.pgd` file, è possibile usarli come input per il passaggio successivo del collegamento (creazione dell'immagine ottimizzata). Quando si specifica **/GENPROFILE**, è possibile aggiungere facoltativamente un argomento **PGD =**_filename_ per specificare un nome o un percorso non predefinito per il `.pgd` file. La combinazione di opzioni del linker **/LTCG** e **/GENPROFILE** o **/FASTGENPROFILE** sostituisce l'opzione del linker **/LTCG: PGINSTRUMENT** deprecata.
 
 - Profilare l'applicazione.
 
-   Ogni volta che una sessione EXE profilata termina o viene scaricata una DLL profilata, viene creato `appname!N.pgc` un file. Un `.pgc` file contiene informazioni su una particolare esecuzione di test dell'applicazione. *appname* è il nome dell'app e *N* è un numero che inizia con 1 che viene incrementato in base al numero di altri `appname!N.pgc` file nella directory. È possibile eliminare un `.pgc` file se l'esecuzione dei test non rappresenta uno scenario che si desidera ottimizzare.
+   Ogni volta che una sessione EXE profilata termina o viene scaricata una DLL profilata, `appname!N.pgc` viene creato un file. Un `.pgc` file contiene informazioni su una particolare esecuzione di test dell'applicazione. *appname* è il nome dell'app e *N* è un numero che inizia con 1 che viene incrementato in base al numero di altri `appname!N.pgc` file nella directory. È possibile eliminare un `.pgc` file se l'esecuzione dei test non rappresenta uno scenario che si desidera ottimizzare.
 
-   Durante un'esecuzione dei test, è possibile forzare la chiusura del `.pgc` file attualmente aperto e la creazione di `.pgc` un nuovo file con l'utilità [pgosweep](pgosweep.md) , ad esempio quando la fine di uno scenario di test non coincide con l'arresto dell'applicazione.
+   Durante un'esecuzione dei test, è possibile forzare la chiusura del `.pgc` file attualmente aperto e la creazione di un nuovo `.pgc` file con l'utilità [pgosweep](pgosweep.md) , ad esempio quando la fine di uno scenario di test non coincide con l'arresto dell'applicazione.
 
    L'applicazione può anche richiamare direttamente una funzione PGO, [PgoAutoSweep](pgoautosweep.md), per acquisire i dati del profilo al momento della chiamata come `.pgc` file. Può fornire un controllo più preciso sul codice coperto dai dati acquisiti nei `.pgc` file. Per un esempio di come usare questa funzione, vedere la documentazione di [PgoAutoSweep](pgoautosweep.md) .
 
@@ -47,7 +47,10 @@ Per usare l'ottimizzazione PGO, seguire questa procedura per ottimizzare l'app:
 
    Usare entrambe le opzioni del linker **/LTCG** e [/USEPROFILE](reference/useprofile.md) per creare l'immagine ottimizzata. Questo passaggio accetta come input il `.pgd` file. Quando si specifica **/USEPROFILE**, è possibile aggiungere facoltativamente un argomento **PGD =**_filename_ per specificare un nome o un percorso non predefinito per il `.pgd` file. È anche possibile specificare questo nome usando l'opzione del linker **/PGD** deprecata. La combinazione di **/LTCG** e **/USEPROFILE** sostituisce le opzioni del linker **/LTCG: PGOPTIMIZE** e **/LTCG: PGUPDATE** deprecate.
 
-È anche possibile creare il file eseguibile ottimizzato e in un secondo momento determinare che la profilatura aggiuntiva sarà utile per creare un'immagine più ottimizzata. Se l'immagine instrumentata e il `.pgd` relativo file sono disponibili, è possibile eseguire esecuzioni di test aggiuntive e ricompilare l'immagine `.pgd` ottimizzata con il file più recente, usando le stesse opzioni del linker **/LTCG** e **/USEPROFILE** .
+È anche possibile creare il file eseguibile ottimizzato e in un secondo momento determinare che la profilatura aggiuntiva sarà utile per creare un'immagine più ottimizzata. Se l'immagine instrumentata e il relativo `.pgd` file sono disponibili, è possibile eseguire esecuzioni di test aggiuntive e ricompilare l'immagine ottimizzata con il file più recente `.pgd` , usando le stesse opzioni del linker **/LTCG** e **/USEPROFILE** .
+
+> [!NOTE]
+> Entrambi `.pgc` `.pgd` i file e sono tipi di file binari. Se archiviato in un sistema di controllo del codice sorgente, evitare eventuali trasformazioni automatiche che possono essere apportate ai file di testo.
 
 ## <a name="optimizations-performed-by-pgo"></a>Ottimizzazioni eseguite da PGO
 
@@ -65,7 +68,7 @@ Le ottimizzazioni PGO includono i controlli e i miglioramenti seguenti:
 
 - **Layout della funzione** : in base al grafico delle chiamate e al comportamento del chiamante/chiamato profilato, le funzioni che tendono a trovarsi lungo lo stesso percorso di esecuzione vengono inserite nella stessa sezione.
 
-- **Ottimizzazione del ramo condizionale** : con i probe del valore, le ottimizzazioni PGO possono determinare se un determinato valore in un'istruzione switch viene usato più spesso di altri valori.  Quindi è possibile effettuare il pull di questo valore dall'istruzione switch.  Lo stesso si può fare con `if`... `else` istruzioni in cui Query Optimizer può ordinare `if`... `else` in modo che il `if` blocco `else` o venga inserito per primo, a seconda del blocco che è più spesso vero.
+- **Ottimizzazione del ramo condizionale** : con i probe del valore, le ottimizzazioni PGO possono determinare se un determinato valore in un'istruzione switch viene usato più spesso di altri valori.  Quindi è possibile effettuare il pull di questo valore dall'istruzione switch.  Lo stesso vale per le `if` istruzioni... in `else` cui Query Optimizer è in grado di ordinare `if` ... in `else` modo che il `if` `else` blocco o venga inserito per primo, a seconda del blocco che è più spesso vero.
 
 - **Separazione del codice inattivo** : il codice che non viene chiamato durante la profilatura viene spostato in una sezione speciale aggiunta alla fine del set di sezioni. Questa sezione viene effettivamente mantenuta dalle pagine utilizzate spesso.
 
@@ -77,21 +80,21 @@ Le ottimizzazioni PGO includono i controlli e i miglioramenti seguenti:
 
 Altre informazioni su queste variabili di ambiente, funzioni e strumenti che è possibile usare nelle ottimizzazioni PGO:
 
-[Variabili di ambiente per le ottimizzazioni PGO](environment-variables-for-profile-guided-optimizations.md)<br/>
+[Variabili d'ambiente per le ottimizzazioni GPO](environment-variables-for-profile-guided-optimizations.md)<br/>
 Queste variabili sono state usate per specificare il comportamento in fase di esecuzione degli scenari di test. Sono ora deprecate e sostituite dalle nuove opzioni del linker. Questo documento illustra come passare dalle variabili di ambiente alle opzioni del linker.
 
 [PgoAutoSweep](pgoautosweep.md)<br/>
-Funzione che è possibile aggiungere all'app per fornire un controllo granulare per `.pgc` l'acquisizione di dati di file.
+Funzione che è possibile aggiungere all'app per fornire un controllo granulare per l' `.pgc` acquisizione di dati di file.
 
 [pgosweep](pgosweep.md)<br/>
-Utilità della riga di comando che scrive tutti i dati del `.pgc` profilo nel file, chiude `.pgc` il file e apre un nuovo `.pgc` file.
+Utilità della riga di comando che scrive tutti i dati del profilo nel `.pgc` file, chiude il `.pgc` file e apre un nuovo `.pgc` file.
 
 [pgomgr](pgomgr.md)<br/>
-Utilità da riga di comando che aggiunge dati di profilo da uno o `.pgc` più file al `.pgd` file.
+Utilità da riga di comando che aggiunge dati di profilo da uno o più `.pgc` file al `.pgd` file.
 
-[Procedura: unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
+[Procedura: Unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
 Esempi di utilizzo di **pgomgr** .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ulteriori strumenti di compilazione MSVC](reference/c-cpp-build-tools.md)
+[Strumenti di compilazione aggiuntivi MSVC](reference/c-cpp-build-tools.md)
