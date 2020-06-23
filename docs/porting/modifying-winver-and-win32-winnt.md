@@ -1,25 +1,25 @@
 ---
 title: Aggiornare WINVER e _WIN32_WINNT
-description: Quando e come aggiornare le macro WINVER e _WIN32_WINNT nei progetti di Visual C++ Studio aggiornati.
-ms.date: 01/22/2020
+description: Quando e come aggiornare le macro WINVER e _WIN32_WINNT nei progetti di Visual Studio C++ aggiornati.
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725696"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141054"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>Aggiornare WINVER e _WIN32_WINNT
 
-Quando si usa il Windows SDK, è possibile specificare le versioni di Windows in cui è possibile eseguire il codice. Le macro del preprocessore **WINVER** e **_WIN32_WINNT** specificano la versione minima del sistema operativo supportata dal codice. Visual Studio e il supporto C++ del compilatore Microsoft destinati a Windows 7 SP1 e versioni successive. I set di strumenti meno recenti includono il supporto per Windows XP SP4, Windows Server 2003 SP4, vista e Windows Server 2008. Windows 95, Windows 98, Windows ME, Windows NT e Windows 2000 non sono supportati.
+Quando si usa il Windows SDK, è possibile specificare le versioni di Windows in cui è possibile eseguire il codice. Le macro del preprocessore **WINVER** e **_WIN32_WINNT** specificano la versione minima del sistema operativo supportata dal codice. Visual Studio e il supporto del compilatore Microsoft C++ destinati a Windows 7 SP1 e versioni successive. I set di strumenti meno recenti includono il supporto per Windows XP SP2, Windows Server 2003 SP1, vista e Windows Server 2008. Windows 95, Windows 98, Windows ME, Windows NT e Windows 2000 non sono supportati.
 
 Quando si aggiorna un progetto precedente, potrebbe essere necessario aggiornare le macro **WINVER** o **_WIN32_WINNT** . Se sono assegnati valori per una versione non supportata di Windows, è possibile che vengano visualizzati errori di compilazione correlati a queste macro.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per modificare le macro, in un file di intestazione, ad esempio in *targetver. h*, incluso in alcuni modelli di progetto destinati a Windows, aggiungere le righe seguenti.
 
