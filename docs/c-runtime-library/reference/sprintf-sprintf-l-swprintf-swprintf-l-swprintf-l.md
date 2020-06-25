@@ -1,6 +1,6 @@
 ---
 title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
-ms.date: 11/04/2016
+ms.date: 06/23/2020
 api_name:
 - __swprintf_l
 - sprintf
@@ -49,16 +49,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: c9a306788045fc6fe52da835029d32cfc42c0ed4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a3f10fc89d93717edfb032dea910040589c1254
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958280"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334953"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
-Scrivere dati formattati in una stringa. Sono disponibili versioni più sicure di alcune di queste funzioni. Vedere [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Le versioni sicure di **swprintf** e **_swprintf_l** non accettano un parametro *count* .
+Scrivere dati formattati in una stringa. Sono disponibili versioni più sicure di alcune di queste funzioni. Vedere [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Le versioni sicure di **swprintf** e **_swprintf_l** accettano le dimensioni del buffer come parametro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -125,7 +125,7 @@ Argomenti facoltativi
 *locale*<br/>
 Impostazioni locali da usare.
 
-Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -133,18 +133,18 @@ Numero di caratteri scritti oppure-1 se si è verificato un errore. Se il *buffe
 
 **sprintf** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere null di terminazione. **swprintf** restituisce il numero di caratteri wide archiviati nel *buffer*, senza contare il carattere wide null di terminazione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **sprintf** formatta e archivia una serie di caratteri e valori nel *buffer*. Ogni *argomento* , se presente, viene convertito e restituito in base alla specifica di formato corrispondente nel *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso formato e la stessa funzione dell'argomento *Format* per [printf](printf-printf-l-wprintf-wprintf-l.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Se si usa **sprintf**, non esiste alcun modo per limitare il numero di caratteri scritti, il che significa che il codice che usa **sprintf** è soggetto a sovraccarichi del buffer. Provare a usare la funzione correlata [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), che specifica un numero massimo di caratteri da scrivere nel *buffer*, oppure usare [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) per determinare la dimensione di un buffer necessaria. Assicurarsi inoltre che *Format* non sia una stringa definita dall'utente.
+> Se si usa **sprintf**, non esiste alcun modo per limitare il numero di caratteri scritti, il che significa che il codice che usa **sprintf** è soggetto a sovraccarichi del buffer. Provare a usare la funzione related [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), che specifica un numero massimo di caratteri da scrivere nel *buffer*, oppure usare [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) per determinare la dimensione di un buffer necessario. Assicurarsi inoltre che *Format* non sia una stringa definita dall'utente.
 
-**swprintf** è una versione a caratteri wide di **sprintf**; gli argomenti del puntatore a **swprintf** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **swprintf** può essere diverso da quello in **sprintf**. **swprintf** e **fwprintf** si comportano in modo identico, ad eccezione del fatto che **swprintf** scrive l'output in una stringa anziché in una destinazione di tipo **file**e **swprintf** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+**swprintf** è una versione a caratteri wide di **sprintf**; gli argomenti del puntatore a **swprintf** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **swprintf** potrebbe differire da **sprintf**. **swprintf** e **fwprintf** si comportano in modo identico, ad eccezione di **swprintf** scrive l'output in una stringa anziché in una destinazione di tipo **file**e **swprintf** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 **swprintf** è conforme allo standard ISO C, che richiede il secondo parametro, *count*, di tipo **size_t**. Per forzare il comportamento non standard precedente, definire **_CRT_NON_CONFORMING_SWPRINTFS**. In una versione futura, il comportamento precedente potrebbe venire rimosso, quindi il codice dovrebbe essere modificato per usare il nuovo comportamento conforme.
 
-In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

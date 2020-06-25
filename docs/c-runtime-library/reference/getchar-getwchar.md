@@ -1,6 +1,6 @@
 ---
 title: getchar, getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920336"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334968"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il carattere letto. Per indicare una condizione di errore di lettura o di fine file, **GetChar** restituisce **EOF**e **getwchar** restituisce **WEOF**. Per **GetChar**, usare **Ferrer** o **feof** per verificare la presenza di un errore o della fine del file.
+Restituisce il carattere letto. Queste funzioni attendono l'input e non vengono restituite fino a quando non è disponibile l'input.
 
-## <a name="remarks"></a>Osservazioni
+Per indicare una condizione di errore di lettura o di fine file, **GetChar** restituisce **EOF**e **getwchar** restituisce **WEOF**. Per **GetChar**, usare **Ferrer** o **feof** per verificare la presenza di un errore o della fine del file.
+
+## <a name="remarks"></a>Commenti
 
 Ogni routine legge un singolo carattere da **stdin** e incrementa il puntatore del file associato per puntare al carattere successivo. **GetChar** equivale a [_fgetchar](fgetc-fgetwc.md), ma viene implementato come funzione e come macro.
 
-Queste funzioni bloccano il thread chiamante e pertanto sono thread-safe. Per una versione che non blocca il thread, vedere [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+Queste funzioni bloccano anche il thread chiamante e sono thread-safe. Per una versione che non blocca il thread, vedere [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
