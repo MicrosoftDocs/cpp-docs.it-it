@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 3ed2eceb60c2efa78181faea58a256b0e35d489f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737565"
 ---
 # <a name="error_category-class"></a>Classe error_category
 
@@ -41,7 +41,7 @@ error_category(const error_category&) = delete
 
 Due oggetti predefiniti implementano `error_category`: [generic_category](../standard-library/system-error-functions.md#generic_category) e [system_category](../standard-library/system-error-functions.md#system_category).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="typedefs"></a>Typedef
 
@@ -54,7 +54,7 @@ Due oggetti predefiniti implementano `error_category`: [generic_category](../sta
 |||
 |-|-|
 |[default_error_condition](#default_error_condition)|Archivia il valore di codice di errore per un oggetto condizione di errore.|
-|[equivalent](#equivalent)|Restituisce un valore che specifica se gli oggetti di errore sono equivalenti.|
+|[equivalente](#equivalent)|Restituisce un valore che specifica se gli oggetti di errore sono equivalenti.|
 |[generic_category](#generic)||
 |[message](#message)|Restituisce il nome del codice di errore specificato.|
 |[nome](#name)|Restituisce il nome della categoria.|
@@ -64,10 +64,10 @@ Due oggetti predefiniti implementano `error_category`: [generic_category](../sta
 
 |||
 |-|-|
-|[operator=](#op_as)||
-|[operator==](#op_eq_eq)|Verifica l'uguaglianza tra oggetti `error_category`.|
-|[operator!=](#op_neq)|Verifica la disuguaglianza tra oggetti `error_category`.|
-|[operator<](#op_lt)|Verifica se l'oggetto [error_category](../standard-library/error-category-class.md) è più piccolo dell'oggetto `error_category` passato per il confronto.|
+|[operatore =](#op_as)||
+|[operatore = =](#op_eq_eq)|Verifica l'uguaglianza tra oggetti `error_category`.|
+|[operatore! =](#op_neq)|Verifica la disuguaglianza tra oggetti `error_category`.|
+|[operatore<](#op_lt)|Verifica se l'oggetto [error_category](../standard-library/error-category-class.md) è più piccolo dell'oggetto `error_category` passato per il confronto.|
 
 ## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
@@ -79,7 +79,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Errval*\
+`_Errval`\
 Valore del codice di errore da archiviare nella [error_condition](../standard-library/error-condition-class.md).
 
 ### <a name="return-value"></a>Valore restituito
@@ -137,16 +137,16 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Il valore del codice di errore da confrontare.
 
 #### <a name="return-value"></a>Valore restituito
 
-Restituisce un nome descrittivo del codice di errore *Val* per la categoria.
+Restituisce un nome descrittivo del codice di errore *Val* per la categoria. Se il codice di errore non è riconosciuto, restituisce `"unknown error"` .
 
 #### <a name="remarks"></a>Osservazioni
 
-### <a name="name"></a><a name="name"></a>nome
+### <a name="name"></a>Nome in <a name="name"></a>
 
 Restituisce il nome della categoria.
 
@@ -174,8 +174,8 @@ bool operator==(const error_category& right) const;
 
 #### <a name="parameters"></a>Parametri
 
-\ a *destra*
-L'oggetto di cui verificare l'uguaglianza.
+*Ok*\
+Oggetto di cui verificare l'uguaglianza.
 
 #### <a name="return-value"></a>Valore restituito
 
@@ -195,18 +195,18 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="parameters"></a>Parametri
 
-\ a *destra*
-Oggetto di cui verificare la disuguaglianza.
+*Ok*\
+L'oggetto di cui verificare la disuguaglianza.
 
 #### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto `error_category` non è uguale all'oggetto `error_category` passato a *destra*; in caso contrario, **false**.
+**true** se l' `error_category` oggetto non è uguale all' `error_category` oggetto passato a *destra*; in caso contrario, **false**.
 
 #### <a name="remarks"></a>Osservazioni
 
 L'operatore membro restituisce `(!*this == right)`.
 
-### <a name="operatorlt"></a><a name="op_lt">Operatore </a>&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto [error_category](../standard-library/error-category-class.md) è più piccolo dell'oggetto `error_category` passato per il confronto.
 
@@ -216,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 #### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*Ok*\
 L'oggetto `error_category` da confrontare.
 
 #### <a name="return-value"></a>Valore restituito

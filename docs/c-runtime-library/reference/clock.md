@@ -28,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 836d0c6448adb4c99a251a0e97aa642e30362dcb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737464"
 ---
 # <a name="clock"></a>clock
 
@@ -47,13 +47,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Tempo trascorso dall'inizializzazione CRT all'inizio del processo, misurato in unità **CLOCKS_PER_SEC** al secondo. Se il tempo trascorso non è disponibile o ha superato il tempo massimo positivo che può essere registrato come tipo **clock_t** , la funzione restituisce il valore `(clock_t)(-1)`.
+Tempo trascorso dall'inizializzazione CRT all'inizio del processo, misurato in unità **CLOCKS_PER_SEC** al secondo. Se il tempo trascorso non è disponibile o ha superato il tempo massimo positivo che può essere registrato come tipo di **clock_t** , la funzione restituisce il valore `(clock_t)(-1)` .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **Clock** indica la quantità di tempo trascorso dall'inizializzazione CRT durante l'avvio del processo. Si noti che questa funzione non è strettamente conforme a ISO C, che specifica il tempo di CPU net come valore restituito. Per ottenere i tempi di CPU, usare la funzione [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) di Win32. Per determinare il tempo trascorso in secondi, dividere il valore restituito dalla funzione **Clock** dalla macro **CLOCKS_PER_SEC**.
 
-Dato un tempo sufficiente, il valore restituito da **Clock** può superare il valore positivo massimo di **clock_t**. Quando il processo viene eseguito più a lungo, il valore restituito da clock `(clock_t)(-1)`è sempre, come specificato dallo standard ISO C99 standard (7.23.2.1) e ISO C11 standard (7.27.2.1). Microsoft implementa **clock_t** come **Long**, un Signed Integer a 32 bit e la macro **CLOCKS_PER_SEC** è definita come 1000. In questo modo si ottiene un valore restituito massimo della funzione di **Clock** di 2147483,647 secondi o circa 24,8 giorni. Non fare affidamento sul valore restituito da **Clock** nei processi eseguiti per un periodo di tempo superiore a quello previsto. È possibile usare la funzione [Time](time-time32-time64.md) a 64 bit o la funzione [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) di Windows per registrare i tempi di esecuzione del processo di molti anni.
+Dato un tempo sufficiente, il valore restituito da **Clock** può superare il valore positivo massimo di **clock_t**. Quando il processo viene eseguito più a lungo, il valore restituito da **Clock** è sempre `(clock_t)(-1)` , come specificato dallo standard ISO C99 standard (7.23.2.1) e ISO C11 standard (7.27.2.1). Microsoft implementa **clock_t** come **Long**, un Signed Integer a 32 bit e la macro **CLOCKS_PER_SEC** viene definita come 1000. In questo modo si ottiene un valore restituito massimo della funzione di **Clock** di 2147483,647 secondi o circa 24,8 giorni. Non fare affidamento sul valore restituito da **Clock** nei processi eseguiti per un periodo di tempo superiore a quello previsto. È possibile usare la funzione [Time](time-time32-time64.md) a 64 bit o la funzione [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) di Windows per registrare i tempi di esecuzione del processo di molti anni.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -75,7 +75,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 #include <stdlib.h>
 #include <time.h>
 
-// Pauses for a specified number of milliseconds.
+// Pauses for a specified number of clock cycles.
 void do_sleep( clock_t wait )
 {
    clock_t goal;
@@ -116,6 +116,6 @@ Time to do 600000000 empty loops is 1.354 seconds
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [difftime, _difftime32, _difftime64](difftime-difftime32-difftime64.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>

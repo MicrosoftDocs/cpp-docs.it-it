@@ -12,33 +12,34 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813550"
 ---
 # <a name="function-call-operator-"></a>Operatore di chiamata di funzione: ()
 
-Una chiamata di funzione è un tipo di *`postfix-expression`* , formato da un'espressione che identifica una funzione seguita dall'operatore di chiamata di funzione, **`()`** . Un oggetto può dichiarare una `operator ()` funzione, che fornisce la semantica di chiamata di funzione per l'oggetto.
+Una chiamata di funzione è un tipo di *`postfix-expression`* , formato da un'espressione che restituisce una funzione o un oggetto chiamabile seguito dall'operatore di chiamata di funzione, **`()`** . Un oggetto può dichiarare una `operator ()` funzione, che fornisce la semantica di chiamata di funzione per l'oggetto.
 
 ## <a name="syntax"></a>Sintassi
 
 > *`postfix-expression`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
+> &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Gli argomenti dell'operatore di chiamata di funzione provengono da un oggetto *`argument-expression-list`* , un elenco delimitato da virgole di espressioni. I valori di queste espressioni vengono passati alla funzione come argomenti. *Argument-expression-list* può essere vuoto. Prima di C++ 17, l'ordine di valutazione dell'espressione di funzione e le espressioni di argomento non sono specificati e possono verificarsi in qualsiasi ordine. In C++ 17 e versioni successive, l'espressione di funzione viene valutata prima di qualsiasi espressione di argomento o di argomenti predefiniti. Le espressioni di argomento vengono valutate in una sequenza indeterminata.
 
-*`postfix-expression`* Identifica la funzione da chiamare. Deve restituire un indirizzo di funzione. Può assumere diverse forme:
+*`postfix-expression`* Restituisce la funzione da chiamare. Può assumere diverse forme:
 
-- un nome o un puntatore di oggetto funzione o funzione,
-- espressione lvalue che fa riferimento a una funzione o a un oggetto funzione.
-- una funzione di accesso della funzione membro, esplicita o implicita.
+- identificatore di funzione, visibile nell'ambito corrente o nell'ambito di uno degli argomenti della funzione forniti.
+- espressione che restituisce una funzione, un puntatore a funzione, un oggetto chiamabile o un riferimento a uno,
+- funzione membro, esplicita o implicita,
+- puntatore dereferenziato a una funzione membro.
 
-La funzione specificata da *`postfix-expression`* può essere una funzione in overload. Le normali regole per la risoluzione dell'overload determinano la funzione effettiva da chiamare.
+*`postfix-expression`* Può essere un identificatore di funzione in overload o una funzione di accesso alla funzione membro di overload. Le regole per la risoluzione dell'overload determinano la funzione effettiva da chiamare. Se la funzione membro è virtuale, la funzione da chiamare viene determinata in fase di esecuzione.
 
 Di seguito sono riportate alcune dichiarazioni di esempio:
 

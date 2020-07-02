@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: b76c1db2176c27983ccdcd4742f889f5a4d95af6
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813509"
 ---
 # <a name="span-class-c-standard-library"></a>classe Span (libreria standard C++)
 
@@ -75,7 +75,7 @@ class span;
 
 ### <a name="template-parameters"></a>Parametri del modello
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |-|-|
 |`T`| Tipo degli elementi nell'intervallo. |
 |`Extent`| Numero di elementi nell'intervallo se specificato in fase di compilazione. In caso contrario `std::dynamic_extent` , se il numero di elementi verrà specificato in fase di esecuzione. |
@@ -92,7 +92,7 @@ class span;
 | [element_type](#element_type) | Tipo di un elemento span. |
 | [iteratore](#iterator) | Tipo di un iteratore per un intervallo. |
 | [puntatore](#pointer) | Tipo di un puntatore a un elemento. |
-| [riferimento](#reference) | Tipo di un riferimento a un elemento. |
+| [reference](#reference) | Tipo di un riferimento a un elemento. |
 | [reverse_iterator](#reverse_iterator) | Tipo di un iteratore inverso per un intervallo. |
 | [size_type](#size_type) | Tipo per il risultato della distanza senza segno tra due elementi nell'intervallo. |
 | [value_type](#value_type) | Tipo di un elemento, senza `const` qualifiche o `volatile` . |
@@ -109,18 +109,18 @@ class span;
 |[fronte](#front) | Ottiene il primo elemento nell'intervallo.|
 |[operatore\[\]](#op_at) | Accede a un elemento in una posizione specificata.|
 | **Osservatori** | **Descrizione** |
-|[vuoto](#empty)| Verificare se l'estensione è vuota.|
+|[empty](#empty)| Verificare se l'estensione è vuota.|
 |[size](#size) | Ottiene il numero di elementi nell'intervallo.|
 |[size_bytes](#size_bytes) | Ottiene le dimensioni dell'intervallo in byte.|
 | **Visualizzazioni secondarie** | **Descrizione**|
-| [prima](#first_view) | Ottiene un subspan dall'inizio dell'intervallo.|
-| [Ultima](#last_view) | Ottiene un subspan dal retro dell'intervallo.|
+| [first](#first_view) | Ottiene un subspan dall'inizio dell'intervallo.|
+| [last](#last_view) | Ottiene un subspan dal retro dell'intervallo.|
 | [sottospan](#sub_view) | Ottenere un subspan da qualsiasi punto dell'intervallo.|
 | **Operatori** | **Descrizione** |
 |[span:: operator =](#op_eq)| Sostituire l'intervallo.|
 |[operatore span::\[\]](#op_at)| Ottiene l'elemento in corrispondenza della posizione specificata. |
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Tutte le `span` funzioni membro hanno una complessità temporale costante.
 
@@ -270,7 +270,7 @@ Tipo degli elementi nell'intervallo.
 using element_type = T;
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il tipo viene tratto dal parametro di modello `T` quando viene creato un intervallo.
 
@@ -336,7 +336,7 @@ constexpr iterator end() const noexcept;
 
 Iteratore che punta appena oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `end` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
@@ -371,7 +371,7 @@ Il numero di elementi viene specificato come parametro per il modello o per la f
 
 Intervallo che contiene `count` gli elementi dall'inizio di questo intervallo.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Usare la versione modello di questa funzione quando possibile per convalidare in fase di `count` compilazione e mantenere le informazioni sull'intervallo poiché restituisce un intervallo di extent fisso.
 
@@ -387,14 +387,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.first(2);
     cout << "mySpan.first(2): ";
     for (auto& i : first2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.first<2>: ";
     auto viewSpan = mySpan.first<2>();
     for (auto& i : viewSpan)
@@ -451,7 +451,7 @@ Tipo di un iteratore sugli elementi span.
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questo tipo funge da iteratore sugli elementi in un intervallo.
 
@@ -496,7 +496,7 @@ Il numero può essere specificato come parametro per il modello o per la funzion
 
 Intervallo contenente gli ultimi `count` elementi di questo intervallo.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Usare la versione modello di questa funzione quando possibile per convalidare in fase di `count` compilazione e mantenere le informazioni sull'intervallo poiché restituisce un intervallo di extent fisso.
 
@@ -512,14 +512,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.last(2);
     cout << "mySpan.last(2): ";
     for (auto& i : last2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.last<2>: ";
     auto viewSpan = mySpan.last<2>();
     for (auto& i : viewSpan)
@@ -588,7 +588,7 @@ Intervallo da assegnare a questo.
 
 `*this`
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 L'assegnazione esegue una copia superficiale del puntatore ai dati e della dimensione. Una copia superficiale è sicura perché `span` non alloca memoria per gli elementi in esso contenuti.
 
@@ -643,7 +643,7 @@ int main()
     span<int>::pointer ptr = &mySpan[2];
     *ptr = 9;
     cout << mySpan[2];
-    
+
     // const pointer
     span<int>::const_pointer cPtr = &mySpan[0];
     // *cPtr = 9; error - const
@@ -740,7 +740,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 Iteratore inverso per il segnaposto che segue l'ultimo elemento nell'intervallo invertito; ovvero il segnaposto prima del primo elemento nell'intervallo non invertito.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `rend`viene usato con un intervallo invertito proprio come span [:: end](#end) viene usato con un intervallo. Usarlo per verificare se un iteratore inverso ha raggiunto la fine del relativo intervallo.
 
@@ -954,7 +954,7 @@ Crea una copia di questo intervallo.
 *r*\
 Costruisce un intervallo da questo intervallo.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Un intervallo non libera spazio di archiviazione per gli elementi nell'intervallo perché non è il proprietario dell'archiviazione degli oggetti al suo interno.
 
@@ -978,13 +978,13 @@ using namespace std;
 int main()
 {
     const int MAX=10;
-    
+
     int x[MAX];
     for (int i = 0; i < MAX; i++)
     {
         x[i] = i;
     }
-    
+
     span<int, MAX> span1{ x }; // fixed-size span: compiler error if size of x doesn't match template argument MAX
     span<int> span2{ x }; // size is inferred from x
     span<const int> span3 = span2; // converting constructor
@@ -1015,7 +1015,7 @@ Posizione nell'intervallo in cui iniziare l'intervallo.
 
 Intervallo che inizia in corrispondenza `offset` di in questo intervallo. Contiene `count` elementi.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 È disponibile una versione modello di questa funzione che controlla il conteggio in fase di compilazione, in modo da mantenere le informazioni sull'intervallo restituendo un intervallo di extent fisso.
 
@@ -1031,7 +1031,7 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     cout << "mySpan.subspan(1,2): ";
     for (auto& i : mySpan.subspan(1,2))
     {

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813522"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 
@@ -41,17 +41,17 @@ Rappresenta una condizione di eccezione correlata al file.
 class CFileException : public CException
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CFileexception:: CFileexception](#cfileexception)|Costruisce un oggetto `CFileException`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CFileexception:: ErrnoToException](#errnotoexception)|Restituisce il codice che corrisponde a un numero di errore in fase di esecuzione.|
 |[CFileexception:: GetErrorMessage](#geterrormessage)|Recupera il messaggio che descrive un'eccezione.|
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CFileexception:: m_cause](#m_cause)|Contiene codice portabile corrispondente alla provocazione dell'eccezione.|
 |[CFileexception:: m_lOsError](#m_loserror)|Contiene il numero di errore del sistema operativo correlato.|
@@ -205,11 +205,11 @@ Questo membro dati è una variabile pubblica di tipo **int**. Gli enumeratori e 
 | `CFileException::diskFull` | 13: il disco è pieno. |
 | `CFileException::endOfFile` | 14: è stata raggiunta la fine del file. |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> Questi enumeratori di causa `CFileException` sono diversi dagli enumeratori di causa `CArchiveException`.
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> `CArchiveException::generic` è stato deprecato. Usare invece `genericException`. Se l'opzione **Generic** viene utilizzata in un'applicazione e compilata con/CLR, gli errori di sintassi risultanti non sono facili da decifrare.
 
 ### <a name="example"></a>Esempio
 

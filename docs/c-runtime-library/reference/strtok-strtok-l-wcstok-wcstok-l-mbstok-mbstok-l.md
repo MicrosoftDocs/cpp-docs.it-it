@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 4/2/2020
+ms.date: 6/24/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737529"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -82,6 +82,11 @@ char *strtok_l(
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   wchar_t **context
 );
 wchar_t *wcstok_l(
    wchar_t *strToken,
@@ -110,6 +115,9 @@ Set di caratteri di delimitazione.
 *locale*<br/>
 Impostazioni locali da usare.
 
+*context*<br/>
+Punta alla memoria usata per archiviare lo stato interno del parser, in modo che il parser possa continuare dal punto in cui è stato interrotto la volta successiva che si chiama **wcstok**.
+
 ## <a name="return-value"></a>Valore restituito
 
 Restituisce un puntatore al token successivo trovato in *strToken*. Quando non vengono trovati altri token, le funzioni restituiscono **null** . Ogni chiamata modifica *strToken* sostituendo un carattere null per il primo delimitatore che si verifica dopo il token restituito.
@@ -117,6 +125,8 @@ Restituisce un puntatore al token successivo trovato in *strToken*. Quando non v
 ## <a name="remarks"></a>Osservazioni
 
 La funzione **strtok** trova il token successivo in *strToken*. Il set di caratteri in *strDelimit* specifica i possibili delimitatori del token da trovare in *strToken* nella chiamata corrente. **wcstok** e **_mbstok** sono versioni a caratteri wide e a caratteri multibyte di **strtok**. Gli argomenti e il valore restituito di **wcstok** sono stringhe a caratteri wide. i **_mbstok** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+
+La versione a due argomenti di **wcstok** non è standard. Se è necessario usare questa versione, è necessario definire `_CRT_NON_CONFORMING_WCSTOK` prima di `#include <wchar.h>` (o `#include <string.h>` ).
 
 > [!IMPORTANT]
 > Queste funzioni possono incorrere in una minaccia potenziale dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -145,6 +155,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> o \<wchar.h>|
+|**_wcstok_l**|<tchar.h>|
 |**_mbstok**, **_mbstok_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).

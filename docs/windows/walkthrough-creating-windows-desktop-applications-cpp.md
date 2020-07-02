@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813609"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procedura dettagliata: creare un'applicazione desktop di Windows tradizionale (C++)
 
@@ -389,7 +389,7 @@ Si apprenderà quindi come creare il codice per un'applicazione desktop di Windo
    ```
 
    `HDC`nel codice è un handle per un contesto di dispositivo, che viene usato per creare l'area client della finestra. Utilizzare le `BeginPaint` `EndPaint` funzioni e per preparare e completare il disegno nell'area client. `BeginPaint`Restituisce un handle per il contesto di periferica di visualizzazione usato per disegnare nell'area client. `EndPaint`termina la richiesta di disegno e rilascia il contesto di dispositivo.
-   
+
 1. Un'applicazione gestisce in genere molti altri messaggi. Ad esempio, [WM_CREATE](/windows/win32/winmsg/wm-create) al momento della creazione di una finestra e [WM_DESTROY](/windows/win32/winmsg/wm-destroy) quando la finestra viene chiusa. Il codice seguente illustra una funzione `WndProc` di base, ma completa.
 
    ```cpp

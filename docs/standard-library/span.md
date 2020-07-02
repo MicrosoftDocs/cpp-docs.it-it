@@ -5,16 +5,16 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: ebd0a30c677ea44f95e64e2d2ba010bc99cb412b
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813535"
 ---
 # <a name="ltspangt"></a>&lt;intervallo&gt;
 
-Un oggetto `span` è una visualizzazione su una sequenza contigua di oggetti. Consente l'accesso sicuro veloce e limitato. Diversamente da `vector` o `array` , non è "proprietario" degli elementi a cui fornisce l'accesso. 
+Un oggetto `span` è una visualizzazione su una sequenza contigua di oggetti. Consente l'accesso sicuro veloce e limitato. Diversamente da `vector` o `array` , non è "proprietario" degli elementi a cui fornisce l'accesso.
 
 Per informazioni dettagliate, vedere la [classe Span](span-class.md) . Di seguito è riportato un esempio di come è possibile usare un span:
 
