@@ -1,36 +1,36 @@
 ---
 title: noalias
-ms.date: 02/09/2018
+ms.date: 07/07/2020
 f1_keywords:
 - noalias_cpp
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 2eceffd10f97615859918991320ceebf577d094c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377439"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127869"
 ---
-# <a name="noalias"></a>noalias
+# `noalias`
 
-**Sezione specifica Microsoft**
+**Specifiche di Microsoft**
 
-**noalias** significa che una chiamata di funzione non modifica o fanno riferimento allo stato complessivo visibile e modifica solo la memoria puntata *direttamente* i parametri del puntatore (riferimenti indiretti di primo livello).
+**`noalias`** indica che una chiamata di funzione non modifica o fa riferimento a uno stato globale visibile e modifica solo la memoria a cui puntano *direttamente* i parametri del puntatore (riferimenti indiretti di primo livello).
 
-Se una funzione è annotata come **noalias**, query optimizer può presupporre che, oltre ai parametri stessi, i riferimenti indiretti di primo livello solo dei parametri del puntatore sono cui viene fatto riferimento o modificati all'interno della funzione. Lo stato complessivo visibile è il set di tutti i dati non definiti o a cui non si fa riferimento al di fuori dell'ambito di compilazione e il cui indirizzo non viene rilevato. L'ambito di compilazione è tutti i file di origine ([/LTCG (generazione di codice in fase di collegamento)](../build/reference/ltcg-link-time-code-generation.md) compilazioni) o un singolo file di origine (non -**/LTCG** compilazione).
+Se una funzione viene annotata come **`noalias`** , Query Optimizer può presumere che all'interno della funzione siano presenti solo i parametri stessi e solo i riferimenti indiretti di primo livello dei parametri del puntatore.
 
-Il **noalias** annotazione si applica solo all'interno del corpo della funzione con annotazione. Contrassegnare una funzione come **__declspec(noalias)** influisce l'aliasing dei puntatori restituiti dalla funzione.
+L' **`noalias`** annotazione si applica solo all'interno del corpo della funzione annotata. Contrassegnare una funzione come **`__declspec(noalias)`** non influisce sull'aliasing dei puntatori restituiti dalla funzione.
 
-Per un'altra annotazione che può influire sull'aliasing, vedere [__declspec(restrict)](../cpp/restrict.md).
+Per un'altra annotazione che può influisca sull'aliasing, vedere [`__declspec(restrict)`](../cpp/restrict.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra l'uso della **__declspec(noalias)**.
+Nell'esempio seguente viene illustrato l'utilizzo di **`__declspec(noalias)`** .
 
-Quando la funzione `multiply` che gli accessi alla memoria viene annotata **__declspec(noalias)**, indica al compilatore che questa funzione non modifichi lo stato complessivo salvo tramite i puntatori del relativo elenco di parametri.
+Quando la funzione `multiply` che accede alla memoria viene annotata **`__declspec(noalias)`** , indica al compilatore che questa funzione non modifica lo stato globale ad eccezione dei puntatori presenti nel relativo elenco di parametri.
 
 ```C
 // declspec_noalias.c
@@ -100,6 +100,6 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[__declspec(restrict)](../cpp/restrict.md)
+[`__declspec(restrict)`](../cpp/restrict.md)

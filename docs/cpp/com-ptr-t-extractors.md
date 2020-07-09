@@ -1,6 +1,7 @@
 ---
 title: _com_ptr_t Extractors
-ms.date: 11/04/2016
+description: Vengono descritti gli operatori di estrazione per la classe _com_ptr_t.
+ms.date: 07/07/2020
 f1_keywords:
 - _com_ptr_t::operatorInterface&
 - _com_ptr_t::operatorbool
@@ -20,22 +21,22 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190027"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127845"
 ---
-# <a name="_com_ptr_t-extractors"></a>_com_ptr_t Extractors
+# <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`Estrattori
 
-**Sezione specifica Microsoft**
+**Specifiche di Microsoft**
 
 Estrae il puntatore a interfaccia COM incapsulato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```c++
 operator Interface*( ) const throw( );
 operator Interface&( ) const;
 Interface& operator*( ) const;
@@ -46,20 +47,21 @@ operator bool( ) const throw( );
 
 ## <a name="remarks"></a>Osservazioni
 
-- **operator interface** <strong>\*</strong> restituisce il puntatore a interfaccia incapsulato, che può essere null.
+- **`operator Interface*`** Restituisce il puntatore a interfaccia incapsulato, che può essere NULL.
 
-- **& dell'interfaccia operatore** Restituisce un riferimento al puntatore a interfaccia incapsulato e genera un errore se il puntatore è NULL.
+- **`operator Interface&`** Restituisce un riferimento al puntatore a interfaccia incapsulato e genera un errore se il puntatore è NULL.
 
-- **operator** <strong>\*</strong> consente a un oggetto puntatore intelligente di agire come se fosse l'interfaccia incapsulata effettiva quando si dereferenziavano.
+- **`operator*`** Consente a un oggetto puntatore intelligente di agire come se fosse l'interfaccia incapsulata effettiva quando viene dereferenziata.
 
-- **operatore->** Consente a un oggetto puntatore intelligente di agire come se fosse l'interfaccia incapsulata effettiva quando viene dereferenziata.
+- **`operator->`** Consente a un oggetto puntatore intelligente di agire come se fosse l'interfaccia incapsulata effettiva quando viene dereferenziata.
 
-- **operatore &** Rilascia qualsiasi puntatore a interfaccia incapsulato, sostituendolo con NULL e restituisce l'indirizzo del puntatore incapsulato. In questo modo, il puntatore intelligente viene passato in base all'indirizzo a una funzione che ha un parametro *out* tramite il quale restituisce un puntatore a interfaccia.
+- **`operator&`** Rilascia qualsiasi puntatore a interfaccia incapsulato, sostituendolo con NULL e restituisce l'indirizzo del puntatore incapsulato. Questo operatore consente di passare il puntatore intelligente per indirizzo a una funzione che ha un parametro *out* tramite il quale restituisce un puntatore a interfaccia.
 
-- **operatore bool** Consente di utilizzare un oggetto puntatore intelligente in un'espressione condizionale. Questo operatore restituisce TRUE se il puntatore non è NULL.
+- **`operator bool`** Consente di utilizzare un oggetto puntatore intelligente in un'espressione condizionale. Questo operatore restituisce TRUE se il puntatore non è NULL.
 
-**Fine sezione specifica Microsoft**
+  > [!NOTE]
+  > Poiché **`operator bool`** non è dichiarato come **`explicit`** , `_com_ptr_t` è implicitamente convertibile in **`bool`** , che è convertibile in qualsiasi tipo scalare. Questo può avere conseguenze impreviste nel codice. Abilita [Avviso del compilatore (livello 4) C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) per impedire l'uso non intenzionale di questa conversione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)
+[_com_ptr_t (classe)](../cpp/com-ptr-t-class.md)
