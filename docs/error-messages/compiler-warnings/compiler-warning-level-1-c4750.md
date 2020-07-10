@@ -1,33 +1,36 @@
 ---
 title: Avviso del compilatore (livello 1) C4750
-ms.date: 11/04/2016
+description: Descrive il C4750 di avviso del compilatore MSVC su un possibile overflow dello stack.
+ms.date: 07/08/2020
 f1_keywords:
 - C4750
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a22bdda407b02b8723b7198d62289d39f62792d
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175168"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180968"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Avviso del compilatore (livello 1) C4750
 
-'identifier': funzione con _alloca() resa inline in un ciclo
+> '*Identifier*': funzione con _alloca () inline in un ciclo
 
-La funzione 'identifier' impone l'espansione inline della funzione [_alloca](../../c-runtime-library/reference/alloca.md) all'interno di un ciclo, che può provocare un overflow dello stack all'esecuzione del ciclo.
+## <a name="remarks"></a>Osservazioni
+
+La funzione '*Identifier*' impone l'espansione inline della [`_alloca`](../../c-runtime-library/reference/alloca.md) funzione all'interno di un ciclo, che potrebbe causare un overflow dello stack quando il ciclo viene eseguito.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Verificare che la funzione 'identifier' non venga modificata con l'identificatore [__forceinline](../../cpp/inline-functions-cpp.md) .
+1. Verificare che la funzione '*Identifier*' non venga modificata con l' [`__forceinline`](../../cpp/inline-functions-cpp.md) identificatore.
 
-1. Verificare che la funzione 'identifier' non contenga una funzione [_alloca](../../c-runtime-library/reference/alloca.md) all'interno di un ciclo.
+1. Verificare che la funzione '*Identifier*' non contenga una [`_alloca`](../../c-runtime-library/reference/alloca.md) funzione contenuta in un ciclo.
 
-1. Non specificare l'opzione di compilazione [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/Ox](../../build/reference/ox-full-optimization.md)o [/Og](../../build/reference/og-global-optimizations.md) .
+1. Non specificare l' [`/O1`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opzione di compilazione,, [`/O2`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) [`/Ox`](../../build/reference/ox-full-optimization.md) o [`/Og`](../../build/reference/og-global-optimizations.md) .
 
-1. Inserire la funzione [_alloca](../../c-runtime-library/reference/alloca.md) in un'istruzione [try-except](../../cpp/try-except-statement.md) che intercetterà un overflow dello stack.
+1. Inserire la [`_alloca`](../../c-runtime-library/reference/alloca.md) funzione in un' [istruzione try-except](../../cpp/try-except-statement.md) che rileverà un overflow dello stack.
 
 ## <a name="example"></a>Esempio
 

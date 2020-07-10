@@ -1,6 +1,7 @@
 ---
 title: /Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice)
-ms.date: 11/04/2016
+description: Le opzioni del compilatore MSVC/OS e/OT specificano se prediligere le dimensioni o la velocità durante l'ottimizzazione del codice.
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
@@ -17,43 +18,39 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: 0eda9461b3ef730e0e0a832aa94a688e03c7e1bb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 384019ddf7b80b8dd4e00197d73d1e4ac536634c
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336180"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180825"
 ---
-# <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice)
+# <a name="os-ot-favor-small-code-favor-fast-code"></a>`/Os`, `/Ot` (Ottimizza per dimensione codice, ottimizza per velocità codice)
 
-Riduce al minimo o massimizza le dimensioni di file EXE e DLL.
+Riduce al minimo o ingrandisce le dimensioni di exe e dll.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-/Os
-/Ot
-```
+> **`/Os`**\
+> **`/Ot`**
 
 ## <a name="remarks"></a>Osservazioni
 
-**/Os** (Favor Small Code) riduce al minimo le dimensioni di file EXE e DLL indicando al compilatore di preferire le dimensioni rispetto alla velocità. Il compilatore è in grado di ridurre molti costrutti C e C, a sequenze di codice macchina funzionalmente simili. Occasionalmente queste differenze offrono compromessi tra dimensioni e velocità. Le opzioni **/Os** e **/Ot** consentono di specificare una preferenza per uno rispetto all'altro:
+**`/Os`**(Predilige Small Code) consente di ridurre al minimo le dimensioni di exe e DLL indicando al compilatore di preferire le dimensioni rispetto alla velocità. Il compilatore è in grado di ridurre molti costrutti C e C++ per sequenze di codice macchina funzionalmente simili. Occasionalmente, queste differenze offrono compromessi di dimensioni rispetto alla velocità. Le **`/Os`** **`/Ot`** Opzioni e consentono di specificare una preferenza per uno rispetto all'altro:
 
-**/Ot** (Favor Fast Code) massimizza la velocità di file ESO e DLL indicando al compilatore di favorire la velocità rispetto alle dimensioni. Questa è l'impostazione predefinita. Il compilatore è in grado di ridurre molti costrutti C e C, a sequenze di codice macchina funzionalmente simili. Occasionalmente, queste differenze offrono compromessi tra dimensioni e velocità. L'opzione **/Ot** è implicita nell'opzione Massimizza velocità ([/O2](o1-o2-minimize-size-maximize-speed.md)). L'opzione **/O2** combina diverse opzioni per produrre codice molto veloce.
-
-Se si utilizza **/Os** o **/Ot**, è necessario specificare anche [/Og](og-global-optimizations.md) per ottimizzare il codice.
+**`/Ot`**(Ottimizza codice rapido) massimizza la velocità di exe e DLL indicando al compilatore di preferire la velocità rispetto alla dimensione. **`/Ot`** è il valore predefinito quando sono abilitate le ottimizzazioni. Il compilatore è in grado di ridurre molti costrutti C e C++ per sequenze di codice macchina funzionalmente simili. In alcuni casi, queste differenze offrono compromessi di dimensioni rispetto alla velocità. L' **`/Ot`** opzione è implicita nell' [`/O2`](o1-o2-minimize-size-maximize-speed.md) opzione (Ottimizza velocità). L' **`/O2`** opzione combina diverse opzioni per produrre codice più veloce.
 
 > [!NOTE]
-> Le informazioni raccolte dalle esecuzioni dei test di profilatura sostituiranno le ottimizzazioni che altrimenti sarebbero attive se si specifica **/Ob**, **/Os**o **/Ot**. Per ulteriori informazioni, [Ottimizzazioni PGO](../profile-guided-optimizations.md).
+> Le informazioni raccolte dalle esecuzioni dei test di profilatura sostituiscono eventuali ottimizzazioni che altrimenti sarebbero attive se si specifica **`/Ob`** , **`/Os`** o **`/Ot`** . Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md).
 
-**Sezione specifico x86**
+### <a name="x86-specific-example"></a>esempio specifico di x86
 
-Nel codice di esempio riportato di seguito viene illustrata la differenza tra le opzioni Favor Small Code (**/Os**) e l'opzione Favor Fast Code (**/Ot**):
+Nell'esempio di codice riportato di seguito viene illustrata la differenza tra l' **`/Os`** opzione (prediligi codice piccolo) e l' **`/Ot`** opzione (Ottimizza per il codice rapido):
 
 > [!NOTE]
-> Di seguito viene descritto il comportamento previsto quando si utilizza **/Os** o **/Ot**. Tuttavia, il comportamento del compilatore da release a release può comportare diverse ottimizzazioni per il codice seguente.
+> Questo esempio descrive il comportamento previsto quando si usa **`/Os`** o **`/Ot`** . Tuttavia, il comportamento del compilatore da release a release può causare diverse ottimizzazioni per il codice riportato di seguito.
 
-```
+```c
 /* differ.c
   This program implements a multiplication operator
   Compile with /Os to implement multiply explicitly as multiply.
@@ -65,16 +62,16 @@ int differ(int x)
 }
 ```
 
-Come illustrato nel frammento di codice macchina riportato di seguito, quando DIFFER.c viene compilato per la dimensione (**/Os**), il compilatore implementa l'espressione di moltiplicazione nell'istruzione return in modo esplicito come moltiplicazione per produrre una sequenza di codice breve ma più lenta:
+Come illustrato nel frammento di codice macchina seguente, quando *`differ.c`* viene compilato per size ( **`/Os`** ), il compilatore implementa l'espressione multiply nell'istruzione return in modo esplicito come moltiplicatore per produrre una sequenza di codice breve ma più lenta:
 
-```
+```asm
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-In alternativa, quando DIFFER.c viene compilato per la velocità (**/Ot**), il compilatore implementa l'espressione di moltiplicazione nell'istruzione return come una serie di spostamenti e `LEA` istruzioni per produrre una sequenza di codice veloce ma più lunga:
+In alternativa, quando *`differ.c`* viene compilato per Speed ( **`/Ot`** ), il compilatore implementa l'espressione multiply nell'istruzione return come una serie di turni e `LEA` istruzioni per produrre una sequenza di codice veloce ma più lunga:
 
-```
+```asm
 mov    eax, DWORD PTR _x$[ebp]
 mov    ecx, eax
 shl    eax, 3
@@ -82,17 +79,13 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx
 ```
 
-**FINE x86 Specifico**
-
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Fare clic sulla cartella **C/C++** .
+1. Selezionare la pagina delle proprietà di **configurazione**proprietà di  >  **ottimizzazione C/C++**  >  **Optimization** .
 
-1. Fare clic sulla pagina delle proprietà **Ottimizzazione.**
-
-1. Modificare la proprietà **Dimensione favorire o Velocità.**
+1. Modificare la proprietà **ottimizza dimensione o velocità** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -102,4 +95,4 @@ sub    eax, ecx
 
 [Opzioni /O (Ottimizza codice)](o-options-optimize-code.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVCMSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

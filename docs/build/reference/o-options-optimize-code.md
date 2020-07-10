@@ -1,6 +1,7 @@
 ---
 title: Opzioni /O (Ottimizza codice)
-ms.date: 09/25/2017
+description: Le opzioni del compilatore MSVC/O specificano le ottimizzazioni del compilatore da usare.
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.Optimization
 - /o
@@ -9,40 +10,40 @@ helpviewer_keywords:
 - performance, cle.exe compiler
 - cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-ms.openlocfilehash: ffd3023120f1d930a24ccef6fa297594062322df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36ef582787a3ec2d7aee1e589c70b48712d9d552
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320422"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180877"
 ---
-# <a name="o-options-optimize-code"></a>Opzioni /O (Ottimizza codice)
+# <a name="o-options-optimize-code"></a>`/O`Opzioni (Ottimizza codice)
 
-Il **/O** opzioni controllano diverse ottimizzazioni che consentono di creare codice per la velocità massima o dimensioni minime.
+Le **`/O`** opzioni controllano diverse ottimizzazioni che consentono di creare codice per la velocità massima o la dimensione minima.
 
-- [/ O1](o1-o2-minimize-size-maximize-speed.md) imposta una combinazione di ottimizzazioni che generano codice di dimensioni minime.
+- [`/O1`](o1-o2-minimize-size-maximize-speed.md)imposta una combinazione di ottimizzazioni che generano codice di dimensioni minime.
 
-- [/ O2](o1-o2-minimize-size-maximize-speed.md) imposta una combinazione di ottimizzazioni che ottimizza il codice per la velocità massima.
+- [`/O2`](o1-o2-minimize-size-maximize-speed.md)imposta una combinazione di ottimizzazioni che ottimizza il codice per la massima velocità.
 
-- [/OB](ob-inline-function-expansion.md) controlla l'espansione funzioni inline.
+- [`/Ob`](ob-inline-function-expansion.md)Controlla l'espansione della funzione inline.
 
-- [/Od](od-disable-debug.md) disabilita l'ottimizzazione, per maggiore velocità di compilazione e semplificare il debug.
+- [`/Od`](od-disable-debug.md)Disabilita l'ottimizzazione, per velocizzare la compilazione e semplificare il debug.
 
-- [/Og](og-global-optimizations.md) Abilita le ottimizzazioni globali.
+- [`/Og`](og-global-optimizations.md)(deprecato) Abilita le ottimizzazioni globali.
 
-- [/Oi](oi-generate-intrinsic-functions.md) genera funzioni intrinseche per le chiamate di funzione appropriata.
+- [`/Oi`](oi-generate-intrinsic-functions.md)genera funzioni intrinseche per le chiamate di funzione appropriate.
 
-- [/OS](os-ot-favor-small-code-favor-fast-code.md) indica al compilatore di preferire le ottimizzazioni per le dimensioni quelle per la velocità.
+- [`/Os`](os-ot-favor-small-code-favor-fast-code.md)indica al compilatore di preferire le ottimizzazioni per le dimensioni rispetto alle ottimizzazioni per la velocità.
 
-- [/Ot](os-ot-favor-small-code-favor-fast-code.md) (impostazione predefinita) indica al compilatore di preferire le ottimizzazioni per la velocità di quelle per le dimensioni.
+- [`/Ot`](os-ot-favor-small-code-favor-fast-code.md)(impostazione predefinita) indica al compilatore di preferire le ottimizzazioni per velocizzare le ottimizzazioni per le dimensioni.
 
-- [/Ox](ox-full-optimization.md) è un'opzione di combinazione che seleziona numerose ottimizzazioni con un'enfasi sulla velocità. È un subset limitato delle **/O2** ottimizzazioni.
+- [`/Ox`](ox-full-optimization.md)è un'opzione di combinazione che seleziona diverse ottimizzazioni con un'enfasi sulla velocità. **`/Ox`** è un subset rigoroso delle **`/O2`** ottimizzazioni.
 
-- [/Oy](oy-frame-pointer-omission.md) evita la creazione di puntatori ai frame nello stack di chiamate per le chiamate di funzione più veloce.
+- [`/Oy`](oy-frame-pointer-omission.md)evita la creazione di puntatori ai frame nello stack di chiamate per le chiamate di funzione più veloci.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-È possibile combinare più **/O** opzioni in un'istruzione singola opzione. Ad esempio, **/Odi** equivale a **/Oi /Od**. Alcune opzioni si escludono a vicenda e causano un errore del compilatore se utilizzati insieme. Vedere i singoli **/O** opzioni per altre informazioni.
+È possibile combinare più **`/O`** Opzioni in un'unica istruzione Option. Ad esempio, **`/Odi`** è uguale a **`/Od /Oi`** . Alcune opzioni si escludono a vicenda e generano un errore del compilatore se utilizzate insieme. Per ulteriori informazioni, vedere le singole **`/O`** Opzioni.
 
 ## <a name="see-also"></a>Vedere anche
 

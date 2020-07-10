@@ -1,6 +1,7 @@
 ---
 title: /LTCG (Generazione di codice in fase di collegamento)
-ms.date: 05/16/2019
+description: L'opzione del linker MSVC/LTCG consente la generazione di codice in fase di collegamento per l'ottimizzazione dell'intero programma.
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCLinkerTool.LinkTimeCodeGeneration
 - VC.Project.VCConfiguration.WholeProgramOptimization
@@ -13,88 +14,88 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: 1e33d62694fe782b1a1719fa3c5a36c6fb04670a
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c954794d6d0fd087eee74ebb7e86d77b89a9a8fc
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400621"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180799"
 ---
-# <a name="ltcg-link-time-code-generation"></a>/LTCG (Generazione di codice in fase di collegamento)
+# <a name="ltcg-link-time-code-generation"></a>`/LTCG`(Generazione di codice in fase di collegamento)
 
-Usare **/LTCG** per eseguire l'ottimizzazione dell'intero-programma o per creare la strumentazione per l'ottimizzazione PGO, eseguire il training e creare compilazioni con ottimizzazione PGO.
+Usare **`/LTCG`** per eseguire l'ottimizzazione dell'intero programma o per creare strumentazione di ottimizzazione PGO (PGO), eseguire il training e creare compilazioni ottimizzate dal profilo.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]
+> **`/LTCG`**[**`:`**{**`INCREMENTAL`**|**`NOSTATUS`**|**`STATUS`**|**`OFF`**}]
 
 Queste opzioni sono deprecate a partire da Visual Studio 2015:
 
-> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}
+> **`/LTCG:`**{**`PGINSTRUMENT`**|**`PGOPTIMIZE`**|**`PGUPDATE`**}
 
 ### <a name="arguments"></a>Argomenti
 
-**INCREMENTAL**<br/>
-(Facoltativo) Specifica che il linker applica l'ottimizzazione dell'intero programma o la generazione codice in fase di collegamento (LTCG) solo al set di file interessato da una modifica e non all'intero progetto. Per impostazione predefinita, questo flag non è impostato quando è specificata l'opzione **/LTCG** e l'intero progetto viene collegato usando l'ottimizzazione dell'intero programma.
+**`INCREMENTAL`**<br/>
+Opzionale Specifica che il linker applica solo l'ottimizzazione dell'intero programma o la generazione del codice in fase di collegamento (LTCG) ai file interessati da una modifica, anziché l'intero progetto. Per impostazione predefinita, questo flag non è impostato quando **`/LTCG`** si specifica e l'intero progetto viene collegato usando l'ottimizzazione dell'intero programma.
 
-**NOSTATUS** &#124; **STATUS**<br/>
+**`NOSTATUS`**&#124;**`STATUS`**<br/>
 (Facoltativo) Specifica se il linker visualizza un indicatore di stato che mostra la percentuale di completamento del collegamento. Per impostazione predefinita, queste informazioni sullo stato non vengono visualizzate.
 
-**OFF**<br/>
-(Facoltativo) Disabilita la generazione del codice in fase di collegamento. Lo stesso comportamento si ottiene non specificando **/LTCG** sulla riga di comando.
+**`OFF`**<br/>
+(Facoltativo) Disabilita la generazione del codice in fase di collegamento. Questo comportamento è identico a quando **`/LTCG`** non è specificato nella riga di comando.
 
-**PGINSTRUMENT**<br/>
-(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare al suo posto **/LTCG** e [/GENPROFILE o /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) per generare una compilazione instrumentata per l'ottimizzazione PGO. I dati che sono raccolti dalle esecuzioni instrumentate sono utilizzati per creare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma breve di questa opzione è **/LTCG:PGI**.
+**`PGINSTRUMENT`**<br/>
+(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** and `[/GENPROFILE` o `/FASTGENPROFILE` ] (genprofile-fastgenprofile-generate-profiling-Instrumented-Build.MD) per generare una compilazione instrumentata per l'ottimizzazione PGO. I dati che sono raccolti dalle esecuzioni instrumentate sono utilizzati per creare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGI`** .
 
-**PGOPTIMIZE**<br/>
-(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **/LTCG** e [/USEPROFILE](useprofile.md) per compilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma breve di questa opzione è **/LTCG:PGO**.
+**`PGOPTIMIZE`**<br/>
+(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** e [`/USEPROFILE`](useprofile.md) per compilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGO`** .
 
-**PGUPDATE**<br/>
-(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **/LTCG** e **/USEPROFILE** per ricompilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma breve di questa opzione è **/LTCG:PGU**.
+**`PGUPDATE`**<br/>
+(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** e **`/USEPROFILE`** per ricompilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGU`** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'opzione **/LTCG** indica al linker che è necessario chiamare il compilatore ed eseguire l'ottimizzazione dell'intero programma. È anche possibile eseguire un'ottimizzazione PGO. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md).
+L' **`/LTCG`** opzione indica al linker di chiamare il compilatore ed eseguire l'ottimizzazione dell'intero programma. È anche possibile eseguire un'ottimizzazione PGO. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md).
 
-Con le eccezioni seguenti, non è possibile aggiungere alla combinazione PGO di **/LTCG** e **/USEPROFILE** opzioni del linker non specificate nella precedente combinazione di inizializzazione PGO delle opzioni **/LTCG** e **/GENPROFILE**:
+Con le eccezioni seguenti, non è possibile aggiungere opzioni del linker alla combinazione PGO di **`/LTCG`** e **`/USEPROFILE`** che non sono state specificate nella combinazione di inizializzazione PGO precedente delle **`/LTCG`** **`/GENPROFILE`** Opzioni e:
 
-- [/BASE](base-base-address.md)
+- [`/BASE`](base-base-address.md)
 
-- [/FIXED](fixed-fixed-base-address.md)
+- [`/FIXED`](fixed-fixed-base-address.md)
 
-- **/LTCG**
+- **`/LTCG`**
 
-- [/MAP](map-generate-mapfile.md)
+- [`/MAP`](map-generate-mapfile.md)
 
-- [/MAPINFO](mapinfo-include-information-in-mapfile.md)
+- [`/MAPINFO`](mapinfo-include-information-in-mapfile.md)
 
-- [/NOLOGO](nologo-suppress-startup-banner-linker.md)
+- [`/NOLOGO`](nologo-suppress-startup-banner-linker.md)
 
-- [/OUT](out-output-file-name.md)
+- [`/OUT`](out-output-file-name.md)
 
-- [/PGD](pgd-specify-database-for-profile-guided-optimizations.md)
+- [`/PGD`](pgd-specify-database-for-profile-guided-optimizations.md)
 
-- [/PDB](pdb-use-program-database.md)
+- [`/PDB`](pdb-use-program-database.md)
 
-- [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)
+- [`/PDBSTRIPPED`](pdbstripped-strip-private-symbols.md)
 
-- [/STUB](stub-ms-dos-stub-file-name.md)
+- [`/STUB`](stub-ms-dos-stub-file-name.md)
 
-- [/VERBOSE](verbose-print-progress-messages.md)
+- [`/VERBOSE`](verbose-print-progress-messages.md)
 
-Le opzioni del linker specificate insieme alle opzioni **/LTCG** e **/GENPROFILE** per inizializzare PGO non devono essere specificate durante una compilazione con **/LTCG** e **/USEPROFILE**, in quanto sono implicite.
+Le opzioni del linker specificate insieme alle **`/LTCG`** **`/GENPROFILE`** Opzioni e per inizializzare PGO non devono essere specificate quando si compila tramite **`/LTCG`** e **`/USEPROFILE`** , ma sono implicite.
 
-Il resto dell'articolo descrive **/LTCG** in termini di generazione codice in fase di collegamento.
+Nella parte restante di questo articolo viene illustrata la generazione di codice in fase di collegamento eseguita da **`/LTCG`** .
 
-**/LTCG** è implicito con [/GL](gl-whole-program-optimization.md).
+**`/LTCG`** è implicito in [`/GL`](gl-whole-program-optimization.md) .
 
-La generazione di codice in fase di collegamento viene richiamata quando viene passato al linker un modulo compilato usando **/GL** oppure un modulo MSIL (vedere [File con estensione netmodule come input del linker](netmodule-files-as-linker-input.md)). Se non si specifica esplicitamente **/LTCG** quando si passa **/GL** o i moduli MSIL al linker, quest'ultimo lo rileva e riavvia il collegamento usando **/LTCG**. Per ridurre al minimo i tempi di compilazione, specificare **/LTCG** in modo esplicito quando si passa **/GL** e i moduli MSIL al linker.
+Il linker richiama la generazione di codice in fase di collegamento se viene passato un modulo compilato usando **`/GL`** o un modulo MSIL (vedere [ `.netmodule` file come input del linker](netmodule-files-as-linker-input.md)). Se non si specifica in modo esplicito **`/LTCG`** quando si passano **`/GL`** o moduli MSIL al linker, il linker rileva questa situazione e riavvia il collegamento usando **`/LTCG`** . Specificare in modo esplicito **`/LTCG`** quando si passano i **`/GL`** moduli e MSIL al linker per ottenere le prestazioni di compilazione più veloci possibile.
 
-Per aumentare ulteriormente le prestazioni, usare **/LTCG:INCREMENTAL**. Questa opzione indica al linker di ottimizzare di nuovo solo il set di file interessato da una modifica del file di origine, invece dell'intero progetto. In questo modo, la fase di collegamento necessaria può essere notevolmente ridotta. Questa opzione non equivale al collegamento incrementale.
+Per ottenere prestazioni ancora più veloci, usare **`/LTCG:INCREMENTAL`** . Questa opzione indica al linker di riottimizzare solo i file interessati dalla modifica di un file di origine, anziché l'intero progetto. Questa opzione consente di ridurre significativamente il tempo di collegamento richiesto. Questa opzione non è uguale a quella del [collegamento incrementale](incremental-link-incrementally.md).
 
-**/LTCG** non è valido per l'uso con [/INCREMENTAL](incremental-link-incrementally.md).
+**`/LTCG`** non è valido per l'uso con [`/INCREMENTAL`](incremental-link-incrementally.md) .
 
-Quando **/LTCG** viene usato per collegare moduli compilati con [/Og](og-global-optimizations.md), [/O1](o1-o2-minimize-size-maximize-speed.md), [/O2](o1-o2-minimize-size-maximize-speed.md) o [/Ox](ox-full-optimization.md), vengono eseguite le ottimizzazioni seguenti:
+Quando **`/LTCG`** si utilizza per collegare i moduli compilati utilizzando [`/Og`](og-global-optimizations.md) , [`/O1`](o1-o2-minimize-size-maximize-speed.md) , [`/O2`](o1-o2-minimize-size-maximize-speed.md) o [`/Ox`](ox-full-optimization.md) , vengono eseguite le ottimizzazioni seguenti:
 
 - Incorporamento tra moduli
 
@@ -111,9 +112,9 @@ Quando **/LTCG** viene usato per collegare moduli compilati con [/Og](og-global-
 > [!NOTE]
 > Il linker determina le ottimizzazioni usate per compilare ogni funzione e le applica al momento del collegamento.
 
-L'uso di **/LTCG** e **/Ogt** causa un'ottimizzazione con doppio allineamento.
+L'utilizzo **`/LTCG`** di e **`/O2`** determina l'ottimizzazione dell'allineamento doppio.
 
-Se sono specificati **/LTCG** e **/Ogs**, il doppio allineamento non viene eseguito. Se la maggior parte delle funzioni presenti in un'applicazione viene compilata per ottimizzare la velocità, mentre solo alcune funzioni vengono compilate per ottimizzare le dimensioni (ad esempio usando il pragma [optimize](../../preprocessor/optimize.md)), il compilatore esegue il doppio allineamento delle funzioni ottimizzate per le dimensioni se chiamano funzioni che necessitano del doppio allineamento.
+Se **`/LTCG`** **`/O1`** sono specificati e, il doppio allineamento non viene eseguito. Se la maggior parte delle funzioni di un'applicazione viene compilata per la velocità, con alcune funzioni compilate per la dimensione (ad esempio, usando il [`optimize`](../../preprocessor/optimize.md) pragma), il compilatore allinea a due volte le funzioni ottimizzate per la dimensione se chiamano funzioni che richiedono un doppio allineamento.
 
 Se è in grado di identificare tutti i siti di chiamata di una funzione, il compilatore ignora i modificatori espliciti della convenzione di chiamata in una funzione e prova a ottimizzare la convenzione di chiamata della funzione mediante:
 
@@ -123,28 +124,28 @@ Se è in grado di identificare tutti i siti di chiamata di una funzione, il comp
 
 - la rimozione dei parametri inutilizzati
 
-Se una funzione viene chiamata tramite un puntatore a funzione o viene chiamata dall'esterno di un modulo compilato con **/GL**, il compilatore non tenta di ottimizzarne la convenzione di chiamata della funzione.
+Se una funzione viene chiamata tramite un puntatore a funzione o se una funzione viene chiamata dall'esterno di un modulo compilato utilizzando **`/GL`** , il compilatore non tenta di ottimizzare la convenzione di chiamata della funzione.
 
 > [!NOTE]
-> Se si usa **/LTCG** e si ridefinisce `mainCRTStartup`, l'applicazione potrà comportarsi in modo imprevedibile rispetto al codice utente eseguito prima dell'inizializzazione di oggetti globali. Esistono tre modi per risolvere il problema: non ridefinire `mainCRTStartup`, non compilare il file che contiene `mainCRTStartup` usando **/LTCG** o inizializzare gli oggetti e le variabili globali in modo statico.
+> Se si usa **`/LTCG`** e si ridefiniscono `mainCRTStartup` , l'applicazione può avere un comportamento imprevedibile che si riferisce al codice utente eseguito prima dell'inizializzazione degli oggetti globali. Esistono tre modi per risolvere questo problema: non ridefinire `mainCRTStartup` , non compilare il file che contiene `mainCRTStartup` usando **`/LTCG`** o inizializzare staticamente variabili e oggetti globali.
 
-### <a name="ltcg-and-msil-modules"></a>Moduli /LTCG e MSIL
+### <a name="ltcg-and-msil-modules"></a>`/LTCG`e moduli MSIL
 
-I moduli compilati con [/GL](gl-whole-program-optimization.md) e [/clr](clr-common-language-runtime-compilation.md) possono essere usati come input per il linker quando è specificato **/LTCG** .
+Quando si specifica, i moduli compilati usando [`/GL`](gl-whole-program-optimization.md) e [`/clr`](clr-common-language-runtime-compilation.md) possono essere usati come input per il linker **`/LTCG`** .
 
-- **/LTCG** può accettare file oggetto nativi e file oggetto sia nativi che gestiti (compilati tramite **/clr**). Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017 e versioni successive.
+- **`/LTCG`** può accettare file oggetto nativi e file oggetto misti nativi/gestiti (compilati con **`/clr`** ). Le **`/clr:pure`** **`/clr:safe`** Opzioni del compilatore e sono deprecate in visual studio 2015 e non supportate in visual studio 2017 e versioni successive.
 
-- **/LTCG:PGI** non accetta i moduli nativi compilati con **/GL** e **/clr**
+- **`/LTCG:PGI`** non accetta moduli nativi compilati con **`/GL`** e**`/clr`**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà **Proprietà di configurazione** > **Generale**.
+1. Selezionare la **Configuration Properties**  >  pagina delle proprietà**generale** proprietà di configurazione.
 
 1. Modificare la proprietà **Ottimizzazione intero programma** .
 
-È anche possibile applicare **/LTCG** a compilazioni specifiche scegliendo **Compila** > **Ottimizzazione PGO** sulla barra dei menu oppure scegliendo una delle opzioni di ottimizzazione PGO dal menu di scelta rapida del progetto.
+È inoltre possibile applicare **`/LTCG`** a compilazioni specifiche **Build**scegliendo  >  **ottimizzazione PGO** dalla barra dei menu oppure scegliendo una delle opzioni di ottimizzazione PGO dal menu di scelta rapida per il progetto.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -152,5 +153,5 @@ I moduli compilati con [/GL](gl-whole-program-optimization.md) e [/clr](clr-comm
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di riferimento sul linker MSVC](linking.md)
-- [Opzioni del linker MSVC](linker-options.md)
+[Riferimento al linker MSVC](linking.md)\
+[Opzioni del linker MSVC](linker-options.md)
