@@ -2,19 +2,19 @@
 title: 'Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 83369fc7b458463ea1f44a347bbcd0ca4eb32224
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 456373fc9009920b734243f6a6c1af3d2c0301d4
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078200"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373684"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando
 
 > [!NOTE]
 > Per le nuove app e i componenti di UWP, è consigliabile usare [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/), una proiezione del linguaggio c++ 17 standard per le API Windows Runtime. C++/WinRT è disponibile in Windows 10 SDK dalla versione 1803 in poi. C++/WinRT viene implementato interamente nei file di intestazione ed è progettato per fornire l'accesso di prima classe all'API Windows moderna.
 
-Il compilatore Microsoft C++ (MSVC) supporta le estensioni del componente C++ (C++/CX), che dispone di tipi e operatori aggiuntivi per definire come destinazione il modello di programmazione Windows Runtime. È possibile usare C++/CX per compilare app per piattaforma UWP (Universal Windows Platform) (UWP) e Windows desktop. Per altre informazioni, vedere [Panoramica di C++/CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e delle [estensioni dei componenti per le piattaforme di runtime](../extensions/component-extensions-for-runtime-platforms.md).
+Il compilatore Microsoft C++ (MSVC) supporta le estensioni del componente C++ (C++/CX), che dispone di tipi e operatori aggiuntivi per definire come destinazione il modello di programmazione Windows Runtime. È possibile usare C++/CX per compilare app per piattaforma UWP (Universal Windows Platform) (UWP) e Windows desktop. Per altre informazioni, vedere [Panoramica di C++/CX](https://docs.microsoft.com/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx) e delle [estensioni dei componenti per le piattaforme di runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
 Questa procedura dettagliata illustra come usare un editor di testo per creare un programma C++/CX di base, quindi compilarlo nella riga di comando. È possibile usare il proprio programma C++/CX anziché digitare quello riportato nell'esempio oppure è possibile usare esempi di codice C++/CX di un altro articolo della Guida. Questa tecnica è utile per la compilazione e il test di piccoli moduli senza elementi dell'interfaccia utente.
 
@@ -50,13 +50,13 @@ Per abilitare la compilazione per C++/CX, è necessario usare l'opzione del comp
     }
     ```
 
-1. Nella barra dei menu scegliere **file** > **Salva**.
+1. Nella barra dei menu scegliere **file**  >  **Salva**.
 
    È stato creato un file di origine C++ che usa lo spazio dei nomi della [piattaforma](../cppcx/platform-namespace-c-cx.md) Windows Runtime.
 
 1. Al prompt dei comandi, immettere **cl/EHsc/ZW basiccx. cpp/link/Subsystem: console**. Il compilatore cl.exe compilerà il codice sorgente in un file .obj, quindi eseguirà il linker per generare un programma eseguibile denominato basiccx.exe. L'opzione del compilatore [/EHsc](reference/eh-exception-handling-model.md) specifica il modello di gestione delle eccezioni C++ e il flag [/link](reference/link-pass-options-to-linker.md) specifica un'applicazione console.
 
-1. Per eseguire il programma basiccx. exe, al prompt dei comandi immettere **basiccx**.
+1. Per eseguire il programma basiccx.exe, digitare **basiccx**al prompt dei comandi.
 
    Il programma viene avviato e chiuso dopo aver visualizzato il testo seguente:
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170059"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373710"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (utilizzo della funzionalità ASLR)
 
@@ -21,9 +21,9 @@ Specifica se generare un'immagine eseguibile che può essere ribasata in modo ca
 
 ## <a name="syntax"></a>Sintassi
 
-> **/DynamicBase**[ **: No**]
+> **/DynamicBase**[**: No**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione **/DynamicBase** modifica l'intestazione di un' *immagine eseguibile*, un file con estensione dll o exe, per indicare se l'applicazione deve essere ribasata in modo casuale in fase di caricamento e consente la sequenza casuale di allocazione degli indirizzi virtuali, che influiscono sulla posizione di memoria virtuale di heap, stack e altre allocazioni del sistema operativo. L'opzione **/DynamicBase** si applica alle immagini a 32 bit e a 64 bit. ASLR è supportato in Windows Vista e nei sistemi operativi successivi. L'opzione viene ignorata dai sistemi operativi precedenti.
 
@@ -33,7 +33,7 @@ Per impostazione predefinita, **/DynamicBase** è abilitato. Per disabilitare qu
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare le proprietà di **configurazione** > **linker** > pagina delle proprietà **Avanzate** .
+1. Selezionare la **Configuration Properties**  >  pagina delle proprietà avanzate del**linker**proprietà di configurazione  >  **Advanced** .
 
 1. Modificare la proprietà **indirizzo di base casuale** .
 
@@ -46,4 +46,4 @@ Per impostazione predefinita, **/DynamicBase** è abilitato. Per disabilitare qu
 - [Informazioni di riferimento sul linker MSVC](linking.md)
 - [Opzioni del linker MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Difese di sicurezza software ISV di Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Difese di sicurezza software ISV di Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

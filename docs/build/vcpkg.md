@@ -4,11 +4,12 @@ description: vcpkg è una gestione pacchetti da riga di comando che semplifica n
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2a179a25a7332a93486d42750f06f18658991b30
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058646"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373632"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Gestione pacchetti C++ per Windows, Linux e macOS
 
@@ -166,7 +167,7 @@ Eseguire **`vcpkg integrate install`** per configurare Visual Studio Code in Lin
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Linux come destinazione da Windows via WSL
 
-È possibile creare file binari Linux in un computer Windows usando il sottosistema Windows per Linux o WSL. Seguire le istruzioni per [configurare WSL in Windows 10](/windows/wsl/install-win10). Quindi, configurarlo con l' [estensione di Visual Studio per Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). È bene inserire tutte le librerie compilate per Windows e Linux nella stessa cartella. Sono accessibili da Windows e WSL.
+È possibile creare file binari Linux in un computer Windows usando il sottosistema Windows per Linux o WSL. Seguire le istruzioni per [configurare WSL in Windows 10](/windows/wsl/install-win10). Quindi, configurarlo con l' [estensione di Visual Studio per Linux](https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/). È bene inserire tutte le librerie compilate per Windows e Linux nella stessa cartella. Sono accessibili da Windows e WSL.
 
 ## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> Esportare i file binari compilati e le intestazioni
 

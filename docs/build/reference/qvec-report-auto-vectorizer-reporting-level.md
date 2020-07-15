@@ -2,16 +2,16 @@
 title: /Qvec-report (livello di segnalazione vettorizzazione automatica)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: 655be3581eee4b23a8d0f2bcfaea7d07c8b1b07c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 260cf89d50110f960eb6f320dccbb4a1d80f65bc
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319252"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373814"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (livello di segnalazione vettorizzazione automatica)
 
-Abilita la funzionalità di segnalazione del compilatore [vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) e specifica il livello dei messaggi informativi per l'output durante la compilazione.
+Abilita la funzionalità di creazione di report del compilatore [Vectorizer automaticamente](../../parallel/auto-parallelization-and-auto-vectorization.md) e specifica il livello dei messaggi informativi per l'output durante la compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -19,31 +19,31 @@ Abilita la funzionalità di segnalazione del compilatore [vettorizzazione automa
 /Qvec-report:{1}{2}
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**/Qvec-report:1**<br/>
-Invia un messaggio informativo per i cicli sono vettorizzati.
+**/Qvec-report: 1**<br/>
+Genera un messaggio informativo per i cicli che sono vettoriati.
 
-**/Qvec-report:2**<br/>
-Invia un messaggio informativo per i cicli sono vettorizzati e per i cicli non vettorizzati, insieme a un codice motivo.
+**/Qvec-report: 2**<br/>
+Genera un messaggio informativo per i cicli che sono vettoriati e per i cicli non vettoriati, insieme a un codice motivo.
 
-Per informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
+Per informazioni sui codici motivo e sui messaggi, vedere [Vectorizer e parallelizzazione automatica messages](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Per impostare l'opzione del compilatore /Qvec-report in Visual Studio
+### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Per impostare l'opzione del compilatore/Qvec-report in Visual Studio
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.
+1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
 
-1. Nel **pagine delle proprietà** nella finestra di dialogo **C/C++**, selezionare **riga di comando**.
+1. Nella finestra di dialogo **pagine delle proprietà** , in **C/C++**, selezionare **riga di comando**.
 
-1. Nel **opzioni aggiuntive** casella, immettere `/Qvec-report:1` o `/Qvec-report:2`.
+1. Nella casella **Opzioni aggiuntive** immettere `/Qvec-report:1` o `/Qvec-report:2` .
 
-### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore /Qvec-report a livello di codice
+### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore/Qvec-report a livello di codice
 
 - Usare l'esempio di codice in <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /Q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
+[Opzioni/q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
-[Programmazione parallela in codice nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)
+[Vettorizzazione del codice nativo in Visual Studio](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

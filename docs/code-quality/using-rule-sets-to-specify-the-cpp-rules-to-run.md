@@ -1,15 +1,15 @@
 ---
 title: Utilizzo di set di regole per specificare le regole C++ da eseguire
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269715"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373853"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Usare set di regole per specificare le regole C++ da eseguire
 
@@ -33,7 +33,7 @@ Per creare un nuovo set di regole personalizzate, salvarlo con un nuovo nome fil
 
      \- - oppure -
 
-   - Scegliere **\<Browse...>** di specificare un set di regole esistente non presente nell'elenco.
+   - Scegliere **\<Browse...>** di specificare un set di regole esistente non incluso nell'elenco.
 
 1. Scegliere **Apri** per visualizzare le regole nell'Editor set di regole.
 
@@ -236,17 +236,19 @@ Nello schema di RuleSet seguente viene descritta la XML Schema di un file di Rul
 
 Dettagli elemento schema:
 
-- TLocalization: informazioni di localizzazione, incluso il nome del file di RuleSet, la descrizione del file di RuleSet, il nome dell'assembly di risorse contenente la risorsa localizzata e il nome di base della risorsa localizzata.
-- TRuleHintPaths: percorsi di file usati come hint per la ricerca di file di RuleSet.
-- TName: nome del file di RuleSet corrente.
-- TDescription: Descrizione del file di RuleSet corrente.
-- TInclude: percorso di un set di regole incluso con l'azione della regola.
-- TIncludeAll: azione della regola per tutte le regole.
-- TRule: ID regola con azione regola.
-- TRules: raccolta di una o più regole.
-- TRuleSet: formato del file di RuleSet costituito da informazioni di localizzazione, percorsi di hint di regola, inclusione di tutte le informazioni, informazioni, informazioni sulle regole, nome, descrizione e informazioni sulla versione degli strumenti.
-- TRuleAction: enumerazione che descrive un'azione della regola, ad esempio un errore, un avviso, informazioni, hidden o None.
-- TIncludeAction: enumerazione che descrive un'azione della regola, ad esempio un errore, un avviso, informazioni, hidden, None o default.
-- TIncludeAllAction: enumerazione che descrive un'azione della regola, ad esempio un errore, un avviso, informazioni o nascosto.
+| Schema - elemento | Descrizione |
+|--------------------|--------------|
+| `TLocalization` | Informazioni di localizzazione, incluso il nome del file di RuleSet, la descrizione del file di RuleSet, il nome dell'assembly di risorse che contiene la risorsa localizzata e il nome di base della risorsa localizzata. |
+| `TRuleHintPaths` | Percorsi di file usati come hint per la ricerca di file di RuleSet |
+| `TName` | Nome del file di RuleSet corrente |
+| `TDescription` | Descrizione del file di RuleSet corrente |
+| `TInclude` | Percorso di un set di regole incluso con azione regola |
+| `TIncludeAll` | Azione regola per tutte le regole |
+| `TRule` | ID regola con azione regola |
+| `TRules` | Raccolta di una o più regole |
+| `TRuleSet` | Formato del file di RuleSet costituito da informazioni di localizzazione, percorsi di hint di regola, inclusione di tutte le informazioni, informazioni, informazioni sulle regole, nome, descrizione e informazioni sulla versione degli strumenti |
+| `TRuleAction` | Enumerazione che descrive un'azione della regola, ad esempio un errore, un avviso, informazioni, hidden o None |
+| `TIncludeAction` | Enumerazione che descrive un'azione della regola, ad esempio un errore, un avviso, informazioni, hidden, None o default |
+| `TIncludeAllAction` | Enumerazione che descrive un'azione della regola, ad esempio un errore, un avviso, informazioni o nascosto |
 
 Per visualizzare un esempio di RuleSet, vedere [per creare un set di regole in un editor di testo](#to-create-a-rule-set-in-a-text-editor)o uno qualsiasi dei RuleSet predefiniti archiviati in `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .

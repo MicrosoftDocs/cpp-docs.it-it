@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825928"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373476"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
-Restituisce, in una porta, un byte (`outp`, `_outp`), una parola (`outpw`, `_outpw`) o una parola doppia (`_outpd`).
+Restituisce, in una porta, un byte ( `outp` , `_outp` ), una parola ( `outpw` , `_outpw` ) o una parola doppia ( `_outpd` ).
 
 > [!IMPORTANT]
 > Queste funzioni sono obsolete. A partire da Visual Studio 2015, non sono disponibili in CRT. \
@@ -85,13 +85,13 @@ Valori di output.
 
 Le funzioni restituiscono l'output dei dati. Non vi è restituzione di errori.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni `_outp`, `_outpw`e `_outpd` scrivono un byte, una parola e una parola doppia, rispettivamente, nella porta di output specificata. L'argomento *Port* può essere qualsiasi Unsigned Integer nell'intervallo compreso tra 0 e 65.535; *databyte* può essere qualsiasi numero intero compreso nell'intervallo 0-255; e *dataword* può essere qualsiasi valore nell'intervallo di un numero intero, di un valore short integer senza segno e di un intero long senza segno, rispettivamente.
 
-Dato che queste funzioni leggono direttamente da una porta I/O, non possono essere usate nel codice utente. Per informazioni sull'uso delle porte I/O in questi sistemi operativi, cercare "Comunicazioni Seriali in Win32" su MSDN.
+Poiché queste funzioni scrivono direttamente su una porta I/O, non possono essere usate nel codice di Windows in modalità utente. Per informazioni sull'uso delle porte I/O nel sistema operativo Windows, vedere [comunicazioni seriali](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
-I `outp` nomi `outpw` e sono i nomi obsoleti e deprecati `_outp` per `_outpw` le funzioni e. Per altre informazioni, vedere [nomi di funzioni POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+I `outp` `outpw` nomi e sono i nomi obsoleti e deprecati per le `_outp` `_outpw` funzioni e. Per altre informazioni, vedere [nomi di funzioni POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Requisiti
 
