@@ -3,12 +3,12 @@ title: Guida e community di Visual C++
 ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66ff4844e34d1d3c781791b5e250387d6ac2a0d1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "75791693"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405078"
 ---
 # <a name="visual-c-help-and-community"></a>Guida e community di Visual C++
 
@@ -18,13 +18,13 @@ Le informazioni seguenti illustrano come scrivere codice in C++ e usare gli stru
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Codice di esempio per gli sviluppatori](https://code.msdn.microsoft.com/)|Contiene il codice di esempio scaricabile da Microsoft e dai collaboratori della community.|
+|[Codice di esempio per gli sviluppatori](https://docs.microsoft.com/samples)|Contiene il codice di esempio scaricabile da Microsoft e dai collaboratori della community.|
 
 ## <a name="product-documentation"></a>Documentazione del prodotto
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[C'è in Visual Studio](visual-cpp-in-visual-studio.md)|Contiene documentazione di riferimento e concettuale su Visual C++. Parte di MSDN Library.|
+|[C++ in Visual Studio](visual-cpp-in-visual-studio.md)|Contiene documentazione di riferimento e concettuale su Visual C++.|
 |[Windows Dev Center](https://developer.microsoft.com/windows/)|Contiene informazioni su come usare C++ e altri linguaggi per sviluppare app per Windows 10. Parte del Windows Dev Center, i contenuti di C++ sono nel nodo Documenti > Riferimento al linguaggio.|
 
 ### <a name="online-and-offline-documentation"></a>Documentazione online e offline
@@ -39,7 +39,7 @@ Molte sezioni della documentazione sono disponibili anche in formato PDF. Queste
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Blog del team di Visual C](https://blogs.msdn.microsoft.com/vcblog/)|Contiene i post su vari argomenti trattati dagli esperti del team di prodotto Visual C++.|
+|[Blog del team di C++](https://devblogs.microsoft.com/cppblog/)|Contiene i post su vari argomenti di esperti del team di prodotto C++ Microsoft.|
 |[Channel 9](https://channel9.msdn.com/)|Contiene video di interviste e conferenze. Usare la casella di ricerca nella home page di Channel 9, per trovare i contenuti riguardanti C++.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Contiene articoli e informazioni su Visual Studio e su gli strumenti di sviluppo correlati.|
-|[Forum MSDN](https://social.msdn.microsoft.com/Forums/home?category=visualc) e [Community degli sviluppatori](https://developercommunity.visualstudio.com)|Forum ufficiale Microsoft, in cui è possibile inserire domande su C++ e ottenere risposte da Microsoft e dagli esperti della community.|
+|[Forum MSDN](https://social.msdn.microsoft.com/Forums/) e community di [sviluppatori](https://developercommunity.visualstudio.com) di Visual Studio|Forum ufficiale Microsoft, in cui è possibile inserire domande su C++ e ottenere risposte da Microsoft e dagli esperti della community.|

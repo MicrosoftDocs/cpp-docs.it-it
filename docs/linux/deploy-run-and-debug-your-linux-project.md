@@ -3,12 +3,12 @@ title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visu
 description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df095d5561bea6dac94b9faa139c83c197802bbf
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80077833"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404411"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
@@ -134,17 +134,17 @@ In Visual Studio 2019 versione 16.1 è possibile separare il computer di compila
 
 ### <a name="msbuild-based-projects"></a>Progetti basati su MSBuild
 
-Per impostazione predefinita, il computer di debug remoto è lo stesso del computer di compilazione remoto (**Configuration Properties** > **General** > **Remote Build Machine**). Per specificare un nuovo computer di debug remoto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e passare a **Proprietà di configurazione** > **Debug** > **Computer di debug remoto**.  
+Per impostazione predefinita, il computer di debug remoto è lo stesso del computer di compilazione remoto (**proprietà di configurazione**  >  **generale**  >  **computer di compilazione remota**). Per specificare un nuovo computer di debug remoto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e passare a **Proprietà di configurazione** > **Debug** > **Computer di debug remoto**.  
 
 ![Computer di debug remoto Linux](media/linux-remote-debug-machine.png)
 
-Il menu a discesa per **Computer di debug remoto** è popolato con tutte le connessioni remote stabilite. Per aggiungere una nuova connessione remota, passare a**Opzioni** >  **degli strumenti** > **Gestione connessione** **multipiattaforma** > o cercare "Gestione connessione" in **Avvio veloce**. È inoltre possibile specificare una nuova directory di distribuzione remota nelle pagine delle proprietà del progetto (**Configuration Properties** > **General** > **Remote Deploy Directory**).
+Il menu a discesa per **Computer di debug remoto** è popolato con tutte le connessioni remote stabilite. Per aggiungere una nuova connessione remota, passare a **strumenti**  >  **Opzioni**  >  **Cross Platform**  >  **gestione connessione** multipiattaforma oppure cercare "gestione connessione" in **avvio veloce**. È anche possibile specificare una nuova directory di distribuzione remota nelle pagine delle proprietà del progetto (**proprietà di configurazione**  >  **generale**  >  **directory di distribuzione remota**).
 
 Per impostazione predefinita, nel computer di debug remoto vengono distribuiti solo i file necessari per il debug del processo. È possibile usare **Esplora soluzioni** per configurare i file di origine da distribuire nel computer di debug remoto. Quando si fa clic su un file di origine, viene visualizzata un'anteprima delle relative proprietà direttamente sotto Esplora soluzioni.
 
 ![File distribuibili Linux](media/linux-deployable-content.png)
 
-La proprietà **Content** specifica se il file verrà distribuito nel computer di debug remoto. È possibile disabilitare completamente la distribuzione passando a Gestione**configurazione** **pagine** > delle proprietà e deselezionando **Distribuisci** per la configurazione desiderata.
+La proprietà **Content** specifica se il file verrà distribuito nel computer di debug remoto. È possibile disabilitare completamente la distribuzione passando alle **pagine delle proprietà**  >  **Configuration Manager** e deselezionando **Distribuisci** per la configurazione desiderata.
 
 In alcuni casi può essere necessario maggiore controllo sulla distribuzione del progetto. Ad esempio quando alcuni file da distribuire si trovano all'esterno della soluzione oppure quando si vuole personalizzare la directory di distribuzione remota per singoli file o directory. In questi casi, aggiungere uno o più blocchi di codice seguenti al file con estensione vcxproj e sostituire "example.cpp" con i nomi dei file:
 
@@ -171,7 +171,7 @@ Per i progetti CMake destinati a un computer Linux remoto, è possibile specific
 
 ![Computer di debug remoto CMake](media/cmake-remote-debug-machine.png)
 
-IntelliSense suggerisce un elenco di tutte le connessioni remote stabilite. È possibile aggiungere una nuova connessione remota passando a**Opzioni** >  **strumenti** > **Gestione connessione** **multipiattaforma** > o cercando "Gestione connessione" in **Avvio veloce**.
+IntelliSense suggerisce un elenco di tutte le connessioni remote stabilite. È possibile aggiungere una nuova connessione remota passando a **strumenti**  >  **Opzioni**  >  **Cross Platform**  >  **gestione connessione** multipiattaforma oppure cercando "gestione connessione" in **avvio veloce**.
 
 Se si vuole un controllo completo sulla distribuzione, è possibile aggiungere uno o più blocchi di codice seguenti al file launch.vs.json. Ricordarsi di sostituire i valori dei segnaposto con i valori reali:
 
@@ -195,7 +195,7 @@ Se si vuole un controllo completo sulla distribuzione, è possibile aggiungere u
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per eseguire il debug di dispositivi ARM in Linux, vedere questo post di blog relativo al [debug di un dispositivo ARM incorporato in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Per eseguire il debug di dispositivi ARM in Linux, vedere questo post di blog relativo al [debug di un dispositivo ARM incorporato in Visual Studio](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="see-also"></a>Vedere anche
 

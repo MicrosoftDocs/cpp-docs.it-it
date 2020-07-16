@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: e26e62b0e8d613c1a09b077e3bf8d01d1eabba66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367056"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403868"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: associazione dinamica di colonne di dati (ODBC)
 
@@ -26,7 +26,7 @@ I recordset gestiscono l'associazione delle colonne di tabella specificate in fa
 - [Come associare le colonne in modo dinamico in fase di esecuzione](#_core_how_to_bind_columns_dynamically).
 
 > [!NOTE]
-> Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Le tecniche descritte in genere non sono consigliate se si usa il recupero di massa di righe. Per ulteriori informazioni sul recupero di massa di righe, vedere Recordset: recupero di massa di [record (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Le tecniche descritte in genere non sono consigliate se si usa il recupero di massa di righe. Per ulteriori informazioni sul recupero di righe in blocco, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> Quando associare colonne in modo dinamico
 
@@ -45,7 +45,7 @@ Con una piccola quantità di codice aggiuntivo, è possibile:
 
 Il recordset contiene ancora i membri dati per le colonne che erano note in fase di progettazione. Inoltre, include una piccola quantità di codice aggiuntivo che determina in modo dinamico se sono state aggiunte nuove colonne alla tabella di destinazione e, in tal caso, associa le nuove colonne alla memoria allocata in modo dinamico (invece che ai membri dati del recordset).
 
-In questo argomento non vengono illustrati altri casi di associazione dinamica, come le colonne o tabelle eliminate. In questi casi, è necessario usare le chiamate all'API ODBC in modo più diretto. Per informazioni, vedere le *informazioni di riferimento per programmatori* dell'SDK di ODBC sul CD di MSDN Library.
+In questo argomento non vengono illustrati altri casi di associazione dinamica, come le colonne o tabelle eliminate. In questi casi, è necessario usare le chiamate all'API ODBC in modo più diretto. Per informazioni, vedere [ODBC Programmer ' s Reference](/sql/odbc/reference/odbc-programmer-s-reference).
 
 ## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> Come associare le colonne in modo dinamico
 
@@ -81,7 +81,7 @@ L'associazione dinamica di colonne aggiunte in fase di esecuzione richiede i pas
 
    Un approccio consiste nel compilare uno o più elenchi dinamici, uno per i nuovi nomi delle colonne, un altro per i valori dei risultati e un terzo per i tipi di dati (se necessario). Questi elenchi, in particolare l'elenco dei valori, forniscono le informazioni e l'archiviazione necessaria per l'associazione. La figura seguente illustra la compilazione degli elenchi.
 
-   ![Creazione di elenchi di colonne da associare in modo dinamicoBuilding lists of columns to bind dynamically](../../data/odbc/media/vc37w61.gif "Compilazione degli elenchi di colonne da associare in modo dinamico")<br/>
+   ![Compilazione di elenchi di colonne da associare in modo dinamico](../../data/odbc/media/vc37w61.gif "Compilazione degli elenchi di colonne da associare in modo dinamico")<br/>
    Compilazione degli elenchi di colonne da associare in modo dinamico
 
 1. Aggiungere una chiamata di funzione RFX alla funzione `DoFieldExchange` del recordset principale per ciascuna colonna aggiunta. Queste chiamate RFX eseguono il recupero di un record, incluse le colonne aggiuntive, e l'associazione delle colonne ai membri dati del recordset o all'archiviazione fornita in modo dinamico.
@@ -139,14 +139,14 @@ Impostare quindi i percorsi di archiviazione per le colonne da associare in modo
 
 1. Compilare Dynamic-Column-Values, parallelamente a Columns-to-Bind-Dynamically, per contenere il valore dei dati in ogni colonna.
 
-   Ad esempio, l'illustrazione mostra valori di colonna dinamici `CString` (elenco 4) con un elemento: un oggetto contenente il numero di telefono effettivo per il record corrente: "555-1212".
+   Ad esempio, la figura mostra i valori della colonna dinamica (List 4) con un elemento, ovvero un `CString` oggetto contenente il numero di telefono effettivo per il record corrente: "555-1212".
 
    Nel caso più comune, Dynamic-Column-Values dispone di elementi di tipo `CString`. Se si usano colonne con svariati tipi di dati, è necessario un elenco in grado di contenere elementi di diversi tipi.
 
-Il risultato delle procedure precedenti è costituito da due elenchi principali: Columns-to-Bind-Dynamically contenente i nomi delle colonne e Dynamic-Column-Values contenenti i valori nelle colonne per il record corrente.
+Il risultato delle procedure precedenti è costituito da due elenchi principali, ovvero da colonne a binding, che contengono dinamicamente i nomi delle colonne e i valori di colonna dinamica contenenti i valori nelle colonne del record corrente.
 
 > [!TIP]
-> Se le nuove colonne non sono tutte dello stesso tipo di dati, può essere utile un altro elenco parallelo contenente elementi che definiscono in qualche modo il tipo di ciascun elemento corrispondente nell'elenco delle colonne. A tale scopo, è possibile usare i valori AFX_RFX_BOOL AFX_RFX_BYTE e così via. Queste costanti sono definite in AFXDB. H.) Scegliere un tipo di elenco in base alla modalità di rappresentazione dei tipi di dati della colonna.
+> Se le nuove colonne non sono tutte dello stesso tipo di dati, può essere utile un altro elenco parallelo contenente elementi che definiscono in qualche modo il tipo di ciascun elemento corrispondente nell'elenco delle colonne. A tale scopo, è possibile usare i valori AFX_RFX_BOOL AFX_RFX_BYTE e così via. Queste costanti sono definite in AFXDB. H.) scegliere un tipo di elenco in base alla modalità di rappresentazione dei tipi di dati della colonna.
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Aggiunta delle chiamate RFX per l'associazione delle colonne
 
@@ -174,4 +174,4 @@ Quando il framework chiama `DoFieldExchange` durante il processo `Open` per asso
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: gestione di dati di grandi dimensioni (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[Recordset: utilizzo di elementi di dati di grandi dimensioni (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

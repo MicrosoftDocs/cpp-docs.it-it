@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (supporta ASLR a 64 bit)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: 8f8601d89e8456461aac3d91f9fd2cfda216d7f5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 929d6aa71010c1f303bf7a1ce64109a01b8792e4
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373840"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404125"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (supporta ASLR a 64 bit)
 
@@ -15,15 +15,15 @@ Specifica se l'immagine eseguibile supporta un'entropia elevata a 64 bit per ASL
 
 ## <a name="syntax"></a>Sintassi
 
-> **/HIGHENTROPYVA**[**: No**]
+> **`/HIGHENTROPYVA`**[**`:NO`**]
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-**/HIGHENTROPYVA** modifica l'intestazione di un' *immagine eseguibile*, un file con estensione dll o exe, per indicare se ASLR può utilizzare l'intero spazio degli indirizzi a 64 bit. Quando questa opzione è impostata su un eseguibile e su tutti i moduli che da esso dipendono, un sistema operativo che supporta ASLR a 64 bit può impostare i segmenti dell'immagine eseguibile in fase di caricamento tramite l'uso di indirizzi causali in uno spazio di indirizzamento virtuale a 64 bit. Questo ampio spazio di indirizzi rende più difficile a un utente non autorizzato indovinare una particolare posizione di un'area della memoria.
+**`/HIGHENTROPYVA`** modifica l'intestazione di un file di *immagine eseguibile* (ad esempio, un *`.dll`* *`.exe`* file o) per indicare se ASLR può usare l'intero spazio degli indirizzi a 64 bit.  Per avere un effetto, impostare l'opzione sul file eseguibile e su tutti i moduli da cui dipende. Quindi, un sistema operativo che supporta ASLR a 64 bit può ribasare i segmenti dell'immagine eseguibile in fase di caricamento usando indirizzi virtuali casuali a 64 bit. Questo ampio spazio di indirizzi rende più difficile a un utente non autorizzato indovinare una particolare posizione di un'area della memoria.
 
-Per impostazione predefinita, **/HIGHENTROPYVA** è abilitato per le immagini eseguibili a 64 bit. Questa opzione richiede [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md), che è anche abilitata per impostazione predefinita per le immagini a 64 bit. **/HIGHENTROPYVA** non è applicabile a immagini eseguibili a 32 bit, in cui il linker ignora l'opzione. Per disabilitare in modo esplicito questa opzione, usare **/HIGHENTROPYVA: No**.
+Per impostazione predefinita, **`/HIGHENTROPYVA`** è abilitato per le immagini eseguibili a 64 bit. Questa opzione richiede [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md) , che è anche abilitata per impostazione predefinita per le immagini a 64 bit. **`/HIGHENTROPYVA`** non è applicabile a immagini eseguibili a 32 bit, in cui il linker ignora l'opzione. Per disabilitare in modo esplicito questa opzione, usare **`/HIGHENTROPYVA:NO`** .
 
-Affinché **/HIGHENTROPYVA** abbia effetto in fase di caricamento, è necessario abilitare anche [/DynamicBase](dynamicbase-use-address-space-layout-randomization.md) . **/DynamicBase** è abilitato per impostazione predefinita ed è necessario per abilitare ASLR in Windows Vista e nei sistemi operativi successivi. Le versioni precedenti di Windows ignorano questo flag.
+Per **`/HIGHENTROPYVA`** avere un effetto in fase di caricamento, [`/DYNAMICBASE`](dynamicbase-use-address-space-layout-randomization.md) è necessario abilitare anche. **`/DYNAMICBASE`** è abilitato per impostazione predefinita ed è necessario per abilitare ASLR in Windows Vista e nei sistemi operativi successivi. Le versioni precedenti di Windows ignorano questo flag.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio
 
@@ -37,6 +37,6 @@ Affinché **/HIGHENTROPYVA** abbia effetto in fase di caricamento, è necessario
 
 - [Informazioni di riferimento sul linker MSVC](linking.md)
 - [Opzioni del linker MSVC](linker-options.md)
-- [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
-- [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
+- [`/DYNAMICBASE`](dynamicbase-use-address-space-layout-randomization.md)
+- [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md)
 - [Difese di sicurezza software ISV di Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

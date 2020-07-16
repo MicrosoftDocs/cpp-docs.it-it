@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: 7a866c0e6b772a992f5ae81dbb17646765f172e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6fa1dd3985fd5b565bcc4b4727f41960d1f4f5d0
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708333"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405130"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Aggiunta guidata classe da libreria dei tipi
 
@@ -21,7 +21,7 @@ Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni suc
 
 ::: moniker range="<=vs-2017"
 
-Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreria dei tipi disponibili. La procedura guidata crea una classe per ogni interfaccia che aggiunta dalla libreria dei tipi selezionati.
+Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreria dei tipi disponibile. La procedura guidata crea una classe per ogni interfaccia aggiunta dalla libreria dei tipi selezionata.
 
 - **Aggiungi classe da**
 
@@ -29,14 +29,12 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreri
 
    |Opzione|Descrizione|
    |------------|-----------------|
-   |**Registry**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
+   |**Registro**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
    |**File**|La libreria dei tipi non è necessariamente registrata nel sistema ma è contenuta in un file. È necessario specificare il percorso del file in **Percorso**.|
 
 - **Available type libraries** (Librerie dei tipi disponibili)
 
-   Elenca le librerie dei tipi attualmente registrate nel sistema. Selezionare una libreria dei tipi da questo elenco per visualizzare le relative interfacce nel **interfacce** elenco.
-
-   Vedere "all'interno di Distributed COM: Tipo di integrazione di linguaggi e librerie"in MSDN library per ulteriori informazioni sulla registrazione delle librerie dei tipi.
+   Elenca le librerie dei tipi attualmente registrate nel sistema. Selezionare una libreria dei tipi da questo elenco per visualizzarne le interfacce nell'elenco **interfacce** .
 
 - **Posizione**
 
@@ -44,22 +42,22 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreri
 
 - **Interfacce**
 
-   Elenca le interfacce nella libreria dei tipi attualmente selezionato nel **librerie dei tipi disponibili** elenco.
+   Elenca le interfacce nella libreria dei tipi attualmente selezionata nell'elenco **librerie dei tipi disponibili** .
 
-   |Pulsante Trasferimento|Descrizione|
+   |Pulsante di trasferimento|Descrizione|
    |---------------------|-----------------|
-   |**>**|Aggiunge l'interfaccia selezionata nell'elenco **Interfacce**. Visualizzato in grigio se è selezionata alcuna interfaccia.|
-   |**>>**|Aggiunge tutte le interfacce nella libreria dei tipi attualmente selezionata nel **librerie dei tipi disponibili** elenco.|
-   |**\<**|Rimuove la classe selezionata nell'elenco **Classi generate**. Visualizzato in grigio se nessuna classe attualmente selezionata nel **le classi generate** elenco.|
-   |**\<\<**|Rimuove tutte le classi dell'elenco **Classi generate**. In grigio se il **le classi generate** elenco è vuoto.|
+   |**>**|Aggiunge l'interfaccia selezionata nell'elenco **Interfacce**. Visualizzato in grigio se non è selezionata alcuna interfaccia.|
+   |**>>**|Aggiunge tutte le interfacce nella libreria dei tipi attualmente selezionata nell'elenco **librerie dei tipi disponibili** .|
+   |**\<**|Rimuove la classe selezionata nell'elenco **Classi generate**. In grigio se nessuna classe è attualmente selezionata nell'elenco **classi generate** .|
+   |**\<\<**|Rimuove tutte le classi dell'elenco **Classi generate**. Visualizzato in grigio se l'elenco delle **classi generate** è vuoto.|
 
 - **Classi generate**
 
-   Specifica i nomi di classe da generare dalle interfacce aggiunte usando il pulsante **>** o **>>**. È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare le frecce su o giù per scorrere l'elenco, visualizzare il nome di ogni classe nel **classe** finestra e il nome file nei **File** casella che la procedura guidata genera quando si Fare clic su **fine**. È possibile selezionare solo una classe alla volta in questa casella.
+   Specifica i nomi di classe da generare dalle interfacce aggiunte utilizzando il **>** pulsante o **>>** . È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare i tasti freccia su o giù per scorrere l'elenco, visualizzando il nome della classe nella casella della **classe** e il nome file nella casella **file** che viene generata dalla procedura guidata quando si fa clic su **fine**. È possibile selezionare solo una classe alla volta in questa casella.
 
-   È possibile rimuovere una classe selezionandola nell'elenco e facendo clic su **<**. Non è necessario selezionare una classe nella casella di classi generate per rimuovere tutte le classi. facendo clic **<<**, è rimuovere tutte le classi nel **classi generate** casella.
+   Per rimuovere una classe, selezionarla nell'elenco e fare clic su **<** . Non è necessario selezionare una classe nella casella Classi generate per rimuovere tutte le classi. Fare clic su **<<** per rimuovere tutte le classi nella casella **Classi generate**.
 
-- **Classe**
+- **Class**
 
    Specifica il nome della classe selezionata nella casella **Classi generate** aggiunta dalla procedura guidata quando si fa clic su **Fine**. È possibile modificare il nome nella casella **Classe**.
 
@@ -74,4 +72,4 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreri
 ## <a name="see-also"></a>Vedere anche
 
 [Classe MFC da una libreria dei tipi](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Client di automazione: uso delle librerie dei tipi](../../mfc/automation-clients-using-type-libraries.md)
+[Client di automazione: utilizzo delle librerie dei tipi](../../mfc/automation-clients-using-type-libraries.md)

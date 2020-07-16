@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920014"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404320"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -123,7 +123,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-L'argomento *Format* è costituito da uno o più codici; come in **printf**, i codici di formattazione sono preceduti da un segno di**%** percentuale (). I caratteri che non iniziano con **%** vengono copiati senza modifiche in *strDest*. La categoria **LC_TIME** delle impostazioni locali correnti influiscono sulla formattazione dell'output di **strftime**. Per ulteriori informazioni su **LC_TIME**, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni **strftime** e **wcsftime** usano le impostazioni locali attualmente impostate. Le versioni **_strftime_l** e **_wcsftime_l** di queste funzioni sono identiche, ad eccezione del fatto che accettano le impostazioni locali come parametro e lo usano anziché le impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+L'argomento *Format* è costituito da uno o più codici; come in **printf**, i codici di formattazione sono preceduti da un segno di percentuale ( **%** ). I caratteri che non iniziano con **%** vengono copiati senza modifiche in *strDest*. La categoria **LC_TIME** delle impostazioni locali correnti influiscono sulla formattazione dell'output di **strftime**. Per ulteriori informazioni su **LC_TIME**, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni **strftime** e **wcsftime** usano le impostazioni locali attualmente impostate. Le versioni **_strftime_l** e **_wcsftime_l** di queste funzioni sono identiche, ad eccezione del fatto che accettano le impostazioni locali come parametro e lo usano anziché le impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 Le funzioni **strftime** supportano questi codici di formattazione:
 
@@ -179,14 +179,17 @@ Come nella funzione **printf** , il **#** flag può precedere qualsiasi codice d
 
 L'anno ISO 8601 della settimana e della settimana prodotto da **% V**, **% g**e **% g**usa una settimana che inizia il lunedì, dove la settimana 1 è la settimana che contiene il 4 gennaio, ovvero la prima settimana che include almeno quattro giorni dell'anno. Se il primo lunedì dell'anno è il secondo, il terzo o il 4, i giorni precedenti sono parte dell'ultima settimana dell'anno precedente. Per tali giorni, **% V** viene sostituito da 53 e i% **g** e **% g** vengono sostituiti dalle cifre dell'anno precedente.
 
+> [!NOTE]
+> Quando si utilizza una delle `strftime` funzioni con un `tm` puntatore restituito da `gmtime` , i valori stampati tramite `%Z` gli `%z` identificatori e non saranno accurati. Questo perché lo `tm` struct specificato dallo standard C non contiene le informazioni relative al nome del fuso orario né all'offset. Al contrario, le informazioni sul fuso orario vengono popolate tramite le variabili globali [ `_timezone` e `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**strftime**|\<time.h>|
-|**wcsftime**|\<time.h> or \<wchar.h>|
+|**wcsftime**|\<time.h> o \<wchar.h>|
 |**_strftime_l**|\<time.h>|
-|**_wcsftime_l**|\<time.h> or \<wchar.h>|
+|**_wcsftime_l**|\<time.h> o \<wchar.h>|
 
 Le funzioni **_strftime_l** e **_wcsftime_l** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -196,7 +199,7 @@ Vedere l'esempio per [time](time-time32-time64.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Locale](../../c-runtime-library/locale.md) <br/>
+[Impostazioni locali](../../c-runtime-library/locale.md) <br/>
 [Gestione del tempo](../../c-runtime-library/time-management.md) <br/>
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: b982c3adf59789f6c48e7e0f54ed4e71539692ad
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630781"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404281"
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 
-> Non è possibile aprire il file filetype:'*file*': *Message*
+> Non è possibile aprire il file *FileType* :'*file*': *Message*
 
-Il compilatore genera un errore C1083 quando non riesce a trovare un file necessario. Questo errore può essere dovuto a numerose cause. Un percorso di ricerca di inclusione non corretto o file di intestazione mancanti o non denominati sono le cause più comuni, ma anche altri tipi di file e problemi possono causare C1083. Di seguito sono riportati alcuni dei motivi comuni per cui il compilatore genera questo errore.
+Il compilatore genera un errore C1083 quando non riesce a trovare un file necessario. Questo errore può essere dovuto a varie cause. Un percorso di ricerca di inclusione non corretto o file di intestazione mancanti o non denominati sono le cause più comuni, ma anche altri tipi di file e problemi possono causare C1083. Di seguito sono riportati alcuni dei motivi comuni per cui il compilatore genera questo errore.
 
 ## <a name="the-specified-file-name-is-wrong"></a>Il nome file specificato non è corretto
 
-Nome di un file digitato in modo non corretto. Ad esempio,
+Nome di un file digitato in modo non corretto. ad esempio:
 
 `#include <algorithm.h>`
 
-potrebbe non trovare il file richiesto. La C++ maggior parte dei file di intestazione della libreria standard non dispone di un'estensione di file. h. L' \<algoritmo > intestazione non è stato trovato da questa `#include` direttiva. Per risolvere questo problema, verificare che sia stato immesso il nome file corretto, come nell'esempio seguente:
+potrebbe non trovare il file richiesto. La maggior parte dei file di intestazione della libreria standard C++ non dispone di un'estensione di file. h. L' \<algorithm> intestazione non è stata trovata da questa `#include` direttiva. Per risolvere questo problema, verificare che sia stato immesso il nome file corretto, come nell'esempio seguente:
 
 `#include <algorithm>`
 
@@ -55,15 +55,15 @@ ma questo esempio funziona:
 
 `#include "headers\myheader.h"`
 
-I percorsi relativi possono essere usati anche con le directory nel percorso di ricerca di inclusione. Se si aggiunge una directory alla variabile di ambiente **include** o al percorso delle **directory** di inclusione in Visual Studio, non aggiungere anche parte del percorso alle direttive include. Ad esempio, se l'intestazione si trova in \path\example\headers\myheader.h e si aggiunge \path\example\headers\ al percorso delle **directory** di inclusione in Visual Studio, ma `#include` la direttiva fa riferimento al file come
+I percorsi relativi possono essere usati anche con le directory nel percorso di ricerca di inclusione. Se si aggiunge una directory alla variabile di ambiente **include** o al percorso delle **directory di inclusione** in Visual Studio, non aggiungere anche parte del percorso alle direttive include. Ad esempio, se l'intestazione si trova in \path\example\headers\myheader.h e si aggiunge \path\example\headers\ al percorso delle **directory di inclusione** in Visual Studio, ma la `#include` direttiva fa riferimento al file come
 
 `#include <headers\myheader.h>`
 
-il file non viene trovato. Usare il percorso corretto rispetto alla directory specificata nel percorso di ricerca di inclusione. In questo esempio, è possibile modificare il percorso di ricerca di inclusione in \path\example\, o rimuovere il segmento Headers \ path `#include` dalla direttiva.
+il file non viene trovato. Usare il percorso corretto rispetto alla directory specificata nel percorso di ricerca di inclusione. In questo esempio, è possibile modificare il percorso di ricerca di inclusione in \path\example \, o rimuovere il segmento Headers \ path dalla `#include` direttiva.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemi relativi alla libreria di terze parti e vcpkg
 
-Se questo errore viene visualizzato quando si tenta di configurare una libreria di terze parti come parte della compilazione, è consigliabile utilizzare [vcpkg](../../vcpkg.md), gestione pacchetti C++ visuale, per installare e compilare la libreria. Vcpkg supporta un [elenco di librerie di terze parti di](https://github.com/Microsoft/vcpkg/tree/master/ports)grandi dimensioni e in continua crescita e imposta tutte le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto. Per ulteriori informazioni, vedere il post [di C++ Blog visivo](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) correlato.
+Se questo errore viene visualizzato quando si tenta di configurare una libreria di terze parti come parte della compilazione, è consigliabile usare [vcpkg](../../vcpkg.md), una gestione pacchetti C++, per installare e compilare la libreria. vcpkg supporta un [elenco di librerie di terze parti di](https://github.com/Microsoft/vcpkg/tree/master/ports)grandi dimensioni e in continua crescita e imposta tutte le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Il file si trova nel progetto, ma non nel percorso di ricerca di inclusione
 
@@ -71,11 +71,11 @@ Anche quando i file di intestazione sono elencati in **Esplora soluzioni** come 
 
 Per risolvere il problema, correggere il percorso usato dal compilatore per trovare il file importato o incluso. Un nuovo progetto utilizza i percorsi di ricerca predefiniti. Potrebbe essere necessario modificare il percorso di ricerca di inclusione per aggiungere una directory per il progetto. Se si esegue la compilazione nella riga di comando, aggiungere il percorso della variabile di ambiente **include** o l'opzione del compilatore **/i** per specificare il percorso del file.
 
-Per impostare il percorso della directory di inclusione in Visual Studio, aprire la finestra di dialogo **pagine delle proprietà** del progetto. Selezionare **directory di VC + +** in **proprietà di configurazione** nel riquadro a sinistra e quindi modificare la proprietà **directory** di inclusione. Per ulteriori informazioni sulle directory per singolo utente e per progetto cercate dal compilatore in Visual Studio, vedere la [pagina delle proprietà directory di VC + +](../../build/reference/vcpp-directories-property-page.md). Per ulteriori informazioni sull'opzione del compilatore **/i** , vedere [/i (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).
+Per impostare il percorso della directory di inclusione in Visual Studio, aprire la finestra di dialogo **pagine delle proprietà** del progetto. Selezionare **directory di VC + +** in **proprietà di configurazione** nel riquadro a sinistra e quindi modificare la proprietà **directory di inclusione** . Per ulteriori informazioni sulle directory per singolo utente e per progetto cercate dal compilatore in Visual Studio, vedere la [pagina delle proprietà directory di VC + +](../../build/reference/vcpp-directories-property-page.md). Per ulteriori informazioni sull'opzione del compilatore **/i** , vedere [/i (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>L'ambiente della riga di comando INCLUDE o LIB non è impostato
 
-Quando il compilatore viene richiamato sulla riga di comando, vengono spesso utilizzate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dalla variabile di ambiente **include** o **lib** non è impostato correttamente, può essere generato un errore C1083. È consigliabile usare un collegamento del prompt dei comandi per gli sviluppatori per impostare l'ambiente di base per le compilazioni della riga di comando. Per ulteriori informazioni, vedere [la pagina relativaC++ alla compilazione di C/nella riga di comando](../../build/building-on-the-command-line.md). Per ulteriori informazioni sull'utilizzo delle variabili di ambiente, vedere [procedura: Usare le variabili di ambiente in](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)una compilazione.
+Quando il compilatore viene richiamato sulla riga di comando, vengono spesso utilizzate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dalla variabile di ambiente **include** o **lib** non è impostato correttamente, può essere generato un errore C1083. È consigliabile usare un collegamento del prompt dei comandi per gli sviluppatori per impostare l'ambiente di base per le compilazioni della riga di comando. Per ulteriori informazioni, vedere [la pagina relativa alla compilazione di C/C++ nella riga di comando](../../build/building-on-the-command-line.md). Per altre informazioni su come usare le variabili di ambiente, vedere [procedura: usare le variabili di ambiente in una compilazione](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>Il file potrebbe essere bloccato o in uso
 
@@ -87,13 +87,13 @@ L'errore C1083 può anche indicare che è stata inclusa la versione non corretta
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Le intestazioni precompilate non sono ancora precompilate
 
-Quando un progetto è configurato per l'uso di intestazioni precompilate, è necessario creare i file pch corrispondenti in modo da poter compilare i file che usano il contenuto delle intestazioni. Ad esempio, il file *PCH. cpp* (*stdafx. cpp* in Visual Studio 2017 e versioni precedenti) viene creato automaticamente nella directory del progetto per i nuovi progetti. Compilare innanzitutto il file per creare i file di intestazione precompilati. Nella progettazione tipica del processo di compilazione questa operazione viene eseguita automaticamente. Per altre informazioni, vedere [creazione di file di intestazione](../../build/creating-precompiled-header-files.md)precompilata.
+Quando un progetto è configurato per l'uso di intestazioni precompilate, è necessario creare i file pch corrispondenti in modo da poter compilare i file che usano il contenuto delle intestazioni. Ad esempio, il file *PCH. cpp* (*stdafx. cpp* in Visual Studio 2017 e versioni precedenti) viene creato automaticamente nella directory del progetto per i nuovi progetti. Compilare innanzitutto il file per creare i file di intestazione precompilati. Nella progettazione tipica del processo di compilazione questa operazione viene eseguita automaticamente. Per altre informazioni, vedere [creazione di file di intestazione precompilata](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Cause aggiuntive
 
-- È stato installato un SDK o una libreria di terze parti, ma non è stata aperta una nuova finestra del prompt dei comandi per gli sviluppatori dopo l'installazione dell'SDK o della libreria. Se l'SDK o la libreria aggiunge file al percorso di inclusione, potrebbe essere necessario aprire una nuova finestra del prompt dei comandi per gli sviluppatori per individuare le modifiche apportate alle variabili di ambiente.
+- È stato installato un SDK o una libreria di terze parti, ma non è stata aperta una nuova finestra del prompt dei comandi per gli sviluppatori dopo l'installazione dell'SDK o della libreria. Se l'SDK o la libreria aggiunge file al percorso di **inclusione** , potrebbe essere necessario aprire una nuova finestra del prompt dei comandi per gli sviluppatori per individuare le modifiche apportate alle variabili di ambiente.
 
-- Il file usa codice gestito, ma l'opzione del compilatore **/CLR** non è specificata. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+- Il file usa codice gestito, ma l'opzione del compilatore **/CLR** non è specificata. Per altre informazioni, vedere [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 - Il file viene compilato usando un'impostazione di opzione del compilatore **/Analyze** diversa da quella usata per precompilare le intestazioni. Quando le intestazioni di un progetto sono precompilate, tutte devono usare le stesse impostazioni **/Analyze** . Per altre informazioni, vedere [/analyze (Analisi codice)](../../build/reference/analyze-code-analysis.md).
 
@@ -116,7 +116,7 @@ Nell'esempio seguente viene generato un errore C1083 quando il file `"test.h"` d
 #include "stdio.h"  // OK
 ```
 
-Per informazioni su come compilare i progetti CC++ /nell'IDE o sulla riga di comando e informazioni sull'impostazione delle variabili di ambiente, vedere [progetti e sistemi di compilazione](../../build/projects-and-build-systems-cpp.md).
+Per informazioni su come compilare progetti C/C++ nell'IDE o sulla riga di comando e informazioni sull'impostazione delle variabili di ambiente, vedere [progetti e sistemi di compilazione](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

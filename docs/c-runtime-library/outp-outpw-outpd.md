@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373476"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404060"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
@@ -61,15 +61,15 @@ Restituisce, in una porta, un byte ( `outp` , `_outp` ), una parola ( `outpw` , 
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,18 +78,20 @@ unsigned long _outpd(
 *porta*\
 Numero porta.
 
-*databyte, dataword*\
+*data_byte, data_word*\
 Valori di output.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni restituiscono l'output dei dati. Non vi è restituzione di errori.
+Le funzioni restituiscono l'output dei dati. Non viene restituito alcun errore.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Le funzioni `_outp`, `_outpw`e `_outpd` scrivono un byte, una parola e una parola doppia, rispettivamente, nella porta di output specificata. L'argomento *Port* può essere qualsiasi Unsigned Integer nell'intervallo compreso tra 0 e 65.535; *databyte* può essere qualsiasi numero intero compreso nell'intervallo 0-255; e *dataword* può essere qualsiasi valore nell'intervallo di un numero intero, di un valore short integer senza segno e di un intero long senza segno, rispettivamente.
+Le funzioni `_outp`, `_outpw`e `_outpd` scrivono un byte, una parola e una parola doppia, rispettivamente, nella porta di output specificata. L'argomento *Port* può essere qualsiasi Unsigned Integer nell'intervallo compreso tra 0 e 65.535. *data_byte* può essere qualsiasi numero intero compreso nell'intervallo 0-255. *data_word* può essere qualsiasi valore nell'intervallo di un intero, di un numero intero breve senza segno e di un intero lungo senza segno, rispettivamente.
 
-Poiché queste funzioni scrivono direttamente su una porta I/O, non possono essere usate nel codice di Windows in modalità utente. Per informazioni sull'uso delle porte I/O nel sistema operativo Windows, vedere [comunicazioni seriali](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Poiché queste funzioni scrivono direttamente su una porta I/O, non possono essere usate nel codice di Windows in modalità utente.
+
+Per informazioni sull'uso delle porte I/O nel sistema operativo Windows, vedere [comunicazioni seriali](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
 I `outp` `outpw` nomi e sono i nomi obsoleti e deprecati per le `_outp` `_outpw` funzioni e. Per altre informazioni, vedere [nomi di funzioni POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
@@ -110,4 +112,4 @@ Tutte le versioni delle [librerie di runtime C](../c-runtime-library/crt-library
 ## <a name="see-also"></a>Vedere anche
 
 [I/O console e porta](../c-runtime-library/console-and-port-i-o.md)\
-[INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

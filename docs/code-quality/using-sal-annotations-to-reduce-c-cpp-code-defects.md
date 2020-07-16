@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SAL annotations
 - code analysis, annotation
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
-ms.openlocfilehash: bfd6a58c7dc8664dce91906279a62380768a5c65
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1d47608137e2a9d9ed13740a5f4424cc0aff2902
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418711"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403894"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Uso delle annotazioni SAL per ridurre gli errori del codice C/C++
 
@@ -51,10 +51,6 @@ Gli articoli di questa sezione della documentazione illustrano gli aspetti di SA
 - [Suggerimenti ed esempi](../code-quality/best-practices-and-examples-sal.md)
 
      Fornisce esempi che illustrano come usare le annotazioni SAL. Vengono inoltre illustrati i problemi comuni.
-
-## <a name="related-resources"></a>Risorse correlate
-
-[Blog del team di analisi del codice](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>Vedere anche
 

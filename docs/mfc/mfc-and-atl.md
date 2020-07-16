@@ -3,12 +3,12 @@ title: MFC e ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 2fd109792bde0717c88222d5d53be3a26df95239
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0ad1eac7991655eae5ae1a328145e66031e40dd
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619926"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405039"
 ---
 # <a name="mfc-and-atl"></a>MFC e ATL
 
@@ -28,4 +28,4 @@ In Visual Studio 2017 e versioni successive, MFC e ATL sono sottocomponenti faco
 |[Componenti Desktop COM ATL](../atl/atl-com-desktop-components.md)|ATL fornisce modelli di classe e altri costrutti di utilizzo per semplificare la creazione di oggetti COM in C++.|
 |[Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Informazioni di riferimento per [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) e altre classi condivise da MFC e ATL.|
 |[Uso di file di risorse](../windows/working-with-resource-files.md)|L'editor risorse permette di modificare risorse dell'interfaccia utente come stringhe, immagini e finestre di dialogo.|
-|[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Argomento principale per tutto il contenuto relativo a C++ in MSDN Library.|
+|[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Argomento padre per tutta la documentazione di C++.|

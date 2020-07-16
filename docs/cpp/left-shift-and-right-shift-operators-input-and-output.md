@@ -1,5 +1,5 @@
 ---
-title: Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
+title: Operatori Left Shift e Right Shift ( &gt; &gt; e &lt; &lt; )
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825915"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404770"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift ( &gt; &gt; e &lt; &lt; )
 
-Gli operatori di spostamento bit per bit sono l'operatore di**&gt;** spostamento a destra (), che sposta i bit di *Shift-Expression* a destra e l'operatore di spostamento**&lt;** a sinistra (), che sposta i bit di *Shift-Expression* a sinistra. <sup>1</sup>
+Gli operatori di spostamento bit per bit sono l'operatore di spostamento a destra ( **&gt;&gt;** ), che sposta i bit di *Shift-Expression* a destra e l'operatore di spostamento **&lt;&lt;** a sinistra (), che sposta i bit di *Shift-Expression* a sinistra. <sup>1</sup>
 
 ## <a name="syntax"></a>Sintassi
 
-> *cambio-espressione* `<<` *additiva-espressione*\
+> *Shift-espressione* `<<` *additive-espressione*\
 > *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>Osservazioni
 
 > [!IMPORTANT]
-> Le descrizioni e gli esempi seguenti sono validi in Windows per le architetture x86 e x64. L'implementazione degli operatori di spostamento a sinistra e a destra è significativamente diversa in Windows per i dispositivi ARM. Per ulteriori informazioni, vedere la sezione "operatori shift" del post di Blog [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) .
+> Le descrizioni e gli esempi seguenti sono validi in Windows per le architetture x86 e x64. L'implementazione degli operatori di spostamento a sinistra e a destra è significativamente diversa in Windows per i dispositivi ARM. Per ulteriori informazioni, vedere la sezione "operatori shift" del post di Blog [Hello ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/) .
 
 ## <a name="left-shifts"></a>Spostamenti a sinistra
 
@@ -224,7 +224,7 @@ int main() {
 
 <sup>1</sup> di seguito è riportata la descrizione degli operatori shift nella specifica ISO c++ 11 (incis/ISO/IEC 14882-2011 [2012]), sezioni 5.8.2 e 5.8.3.
 
-Il valore di `E1 << E2` è `E1` spostato a sinistra di `E2` posizioni di bit. I bit vuoti vengono riempiti con zero. Se `E1` dispone di un tipo senza segno, il valore del risultato è **E1 × 2**<sup>**E2**</sup>, modulo ridotto uno più del valore massimo rappresentabile nel tipo di risultato. In caso contrario `E1` , se ha un tipo con segno e un valore non negativo e **E1 × 2**<sup>**E2**</sup> è rappresentabile nel tipo senza segno corrispondente del tipo di risultato, tale valore, convertito nel tipo di risultato, è il valore risultante. in caso contrario, il comportamento non è definito.
+Il valore di `E1 << E2` è `E1` spostato a sinistra di `E2` posizioni di bit. I bit vuoti vengono riempiti con zero. Se `E1` dispone di un tipo senza segno, il valore del risultato è **E1 × 2**<sup>**E2**</sup>, modulo ridotto uno più del valore massimo rappresentabile nel tipo di risultato. In caso contrario, se `E1` ha un tipo con segno e un valore non negativo e **E1 × 2**<sup>**E2**</sup> è rappresentabile nel tipo senza segno corrispondente del tipo di risultato, tale valore, convertito nel tipo di risultato, è il valore risultante; in caso contrario, il comportamento non è definito.
 
 Il valore di `E1 >> E2` è `E1` spostato a destra di `E2` posizioni di bit. Se `E1` ha un tipo senza segno o se `E1` ha un tipo con segno e un valore non negativo, il valore del risultato è la parte integrale del quoziente di **E1/2**<sup>**E2**</sup>. Se `E1` dispone di un tipo signed e di un valore negativo, il valore risultante sarà definito dall'implementazione.
 

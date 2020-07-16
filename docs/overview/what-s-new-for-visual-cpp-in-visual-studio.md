@@ -3,12 +3,12 @@ title: Novità di C++ in Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630484"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404974"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -20,7 +20,7 @@ In Visual Studio 2019 sono stati inclusi numerosi aggiornamenti e correzioni per
 
 - Supporto ottimizzato per le funzionalità di C++17 e le correzioni di correttezza e supporto sperimentale per le funzionalità di C++20 come i moduli e le coroutine. Per informazioni dettagliate, vedere [Miglioramenti della conformità di C++ in Visual Studio 2019](cpp-conformance-improvements.md).
 
-- L'opzione `/std:c++latest` include ora funzionalità di C++20 non necessariamente complete, incluso il supporto iniziale per l'operatore \<=> ("Spaceship") di C++20 per il confronto a tre livelli.
+- L' `/std:c++latest` opzione include ora funzionalità c++ 20 che non sono necessariamente complete, incluso il supporto iniziale per l'operatore c++ 20 \<=> ("spazio") per il confronto a tre vie.
 
 - L'opzione `/Gm` del compilatore C++ è ora deprecata. Provare a disabilitare l'opzione `/Gm` negli script di compilazione se è definita in modo esplicito. Tuttavia è anche possibile ignorare l'avviso di funzionalità deprecata per `/Gm`, perché non viene considerato un errore quando si usa l'opzione "Considera gli avvisi come errori" (`/WX`).
 
@@ -38,7 +38,7 @@ Miglioramento dell'analisi con `/Qspectre` per fornire assistenza per la mitigaz
 
 - È stato applicato il formato Clang alle intestazioni della libreria standard di C++ per migliorare la leggibilità.
 
-- Poiché Visual Studio supporta ora Just My Code per C++, la libreria standard non deve più fornire un sistema personalizzato affinché `std::function` e `std::visit` ottengano lo stesso effetto. La rimozione del sistema non ha alcun effetto visibile per l'utente, ad eccezione del fatto che il compilatore non produrrà più dati di diagnostica che indicano problemi nella riga 15732480 o 16707566 di \<type_traits> o \<variant>.
+- Poiché Visual Studio supporta ora Just My Code per C++, la libreria standard non deve più fornire un sistema personalizzato affinché `std::function` e `std::visit` ottengano lo stesso effetto. La rimozione del sistema non ha alcun effetto visibile per l'utente, Un'eccezione è che il compilatore non produrrà più la diagnostica che indica i problemi alla riga 15732480 o 16707566 di \<type_traits> o \<variant> .
 
 ## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>Miglioramenti di prestazioni/velocità effettiva nel compilatore e nella libreria standard
 
@@ -62,7 +62,7 @@ Miglioramento dell'analisi con `/Qspectre` per fornire assistenza per la mitigaz
 
   - Maggiore ottimizzazione del codice tramite `memmove`, ad esempio la costruzione di `std::copy` o di `std::vector` e `std::string`.
 
-- La progettazione fisica della libreria standard è stata ottimizzata per evitare la compilazione di parti della libreria standard non direttamente incluse. Questa modifica ha dimezzato il tempo di compilazione di un file vuoto che include solo \<vector>. Di conseguenza potrebbe essere necessario aggiungere direttive `#include` per le intestazioni in precedenza incluse indirettamente. Ad esempio, il codice che usa `std::out_of_range` potrebbe ora dover aggiungere `#include <stdexcept>`. Il codice che usa un operatore di inserimento del flusso potrebbe ora dover aggiungere `#include <ostream>`. Il vantaggio è rappresentato dal fatto che solo le unità di conversione che usano effettivamente i componenti \<stdexcept> o \<ostream> effettuano il pagamento della velocità effettiva per la compilazione.
+- La progettazione fisica della libreria standard è stata ottimizzata per evitare la compilazione di parti della libreria standard non direttamente incluse. Questa modifica consente di ridurre il tempo di compilazione di un file vuoto che include solo la \<vector> metà. Di conseguenza potrebbe essere necessario aggiungere direttive `#include` per le intestazioni in precedenza incluse indirettamente. Ad esempio, il codice che usa `std::out_of_range` potrebbe ora dover aggiungere `#include <stdexcept>`. Il codice che usa un operatore di inserimento del flusso potrebbe ora dover aggiungere `#include <ostream>`. Il vantaggio è che solo le unità di conversione che usano effettivamente \<stdexcept> \<ostream> i componenti o pagano il costo della velocità effettiva per compilarle.
 
 - `if constexpr` è stato applicato in più posizioni nella libreria standard per garantire un aumento della velocità effettiva e una riduzione delle dimensioni del codice nelle operazioni di copia, in permutazioni come l'inversione e la rotazione e nella libreria di algoritmi paralleli.
 
@@ -221,7 +221,7 @@ Il componente sperimentale Clang/C2 è stato rimosso. Usare il set di strumenti 
 
 - L'analisi codice viene ora eseguita automaticamente in background. Gli avvisi vengono visualizzati come linee a zigzag di colore verde all'interno dell'editor durante la digitazione. Per altre informazioni, vedere [In-editor code analysis in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/in-editor-code-analysis-in-visual-studio-2019-preview-2/) (Analisi del codice nell'editor in Visual Studio 2019 Preview 2).
 
-- Nuove regole ConcurrencyCheck sperimentali per i tipi noti della libreria standard dall'intestazione \<mutex>. Per altre informazioni, vedere [Concurrency Code Analysis in Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/) (Analisi del codice di concorrenza in Visual Studio 2019).
+- Nuove regole ConcurrencyCheck sperimentali per i tipi di libreria standard ben noti dall' \<mutex> intestazione. Per altre informazioni, vedere [Concurrency Code Analysis in Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/) (Analisi del codice di concorrenza in Visual Studio 2019).
 
 - Implementazione parziale aggiornata del [controllo dei profili di durata](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/), che rileva puntatori e riferimenti inesatti. Per altre informazioni, vedere [Lifetime Profile Update in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/) (Aggiornamento dei profili di durata in Visual Studio 2019 Preview 2).
 
@@ -358,8 +358,8 @@ In Visual Studio 2017 RTM sono disponibili ulteriori miglioramenti alla libreria
 
 ### <a name="conformance-improvements"></a>Miglioramenti della conformità
 
-- Sono stati aggiunti \<any\>, \<string_view\>, `apply()`, `make_from_tuple()`.
-- Sono stati aggiunti \<optional\>, \<variant\>, `shared_ptr::weak_type` e \<cstdalign\>.
+- Abbiamo aggiunto \<any\> , \<string_view\> , `apply()` , `make_from_tuple()` .
+- Aggiunta di \<optional\> ,, \<variant\> `shared_ptr::weak_type` e \<cstdalign\> .
 - È stato abilitato C++ 14 `constexpr` in `min(initializer_list)`, `max(initializer_list)` e `minmax(initializer_list)` e `min_element()`, `max_element()` e `minmax_element()`.
 
 Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Microsoft C++](../visual-cpp-language-conformance.md).
@@ -377,7 +377,7 @@ Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Micros
 - È stata effettuata la modifica di `static_assert(false, "message")` in `#error message`. Questa modifica migliora la diagnostica del compilatore, perché `#error` interrompe immediatamente la compilazione.
 - La libreria standard non contrassegna più le funzioni con `__declspec(dllimport)`. Ciò non è più richiesto dalla tecnologia dei linker moderni.
 - Estrazione di SFINAE negli argomenti del modello predefiniti, con conseguente riduzione della confusione rispetto ai tipi restituiti e ai tipi di argomenti delle funzioni.
-- I controlli di debug in \< Random \> usano ora il normale sistema della libreria standard, invece della funzione interna `_Rng_abort()` , chiamata `fputs()` a **stderr**. L'implementazione di questa funzione è stata mantenuta per la compatibilità binaria. Verrà rimosso nella successiva versione non compatibile binaria della libreria standard.
+- I controlli di debug in \<random\> ora usano il normale sistema della libreria standard, invece della funzione interna `_Rng_abort()` , chiamata `fputs()` a **stderr**. L'implementazione di questa funzione è stata mantenuta per la compatibilità binaria. Verrà rimosso nella successiva versione non compatibile binaria della libreria standard.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versione 15.5
 
@@ -414,7 +414,7 @@ Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Micros
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
 
 - il supporto per gli algoritmi paralleli non è più sperimentale
-- Nuova implementazione di \<filesystem>
+- Una nuova implementazione di\<filesystem>
 - Conversioni di stringhe elementari (parziale)
 - `std::launder()`
 - `std::byte`
@@ -454,7 +454,7 @@ Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Micros
 - Il percorso di crescita interno di `basic_string` non è più nel percorso di `shrink_to_fit()`.
 - Le operazioni di mutazione di `basic_string` vengono ora sottoposte a factoring nelle funzioni del percorso veloce senza allocazione e del percorso lento con allocazione, quindi l'implementazione inline nei chiamanti del caso comune senza riallocazione diventa più probabile.
 - Le `basic_string` operazioni di mutazione ora costruiscono buffer riallocati nello stato preferito anziché ridimensionare sul posto. Ad esempio, un inserimento all'inizio di una stringa ora sposta il contenuto dopo l'inserimento esattamente una volta. Viene spostato verso il basso o nel buffer appena allocato. Non viene più spostato due volte nel caso della riallocazione, prima nel buffer appena allocato e quindi in basso.
-- Le operazioni che chiamano la libreria standard C in \<string\> ora memorizzano nella cache l'indirizzo di `errno` per evitare interazioni ripetute con TLS.
+- Le operazioni che chiamano la libreria standard C in \<string\> ora memorizzano nella cache l' `errno` indirizzo per rimuovere l'interazione ripetuta con TLS.
 - L'implementazione di `is_pointer` è stata semplificata.
 - È stata completata la modifica dell'espressione SFINAE da basata su funzioni a basata su `struct` e `void_t`.
 - Gli algoritmi della libreria standard ora evitano il post-incremento degli iteratori.
@@ -507,7 +507,7 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 - Sono state riscritte diverse procedure guidate per il progetto e il codice nello stile basato su finestre di dialogo.
 - **Aggiungi classe** ora avvia direttamente la procedura guidata Aggiungi classe. Tutti gli altri elementi che in precedenza erano disponibili in questa posizione ora sono disponibili in **Aggiungi > Nuovo elemento**.
 - I progetti Win32 sono ora sotto la categoria **desktop di Windows** nella finestra di dialogo **nuovo progetto** .
-- I modelli **Applicazione console di Windows** e **Applicazione desktop di Windows** ora creano i progetti senza visualizzare una procedura guidata. Nella stessa categoria è presente una nuova **Creazione guidata applicazione desktop di Windows**, che visualizza le stesse opzioni della procedura guidata **Applicazione console Win32**.
+- I modelli di applicazione console e **Desktop** di **Windows** ora creano i progetti senza visualizzare una procedura guidata. Nella stessa categoria è presente una nuova **Creazione guidata applicazione desktop di Windows**, che visualizza le stesse opzioni della procedura guidata **Applicazione console Win32**.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versione 15.5
 
@@ -515,8 +515,8 @@ Diverse operazioni C++ che usano il motore IntelliSense per il refactoring e lo 
 
 |||
 |-|-|
-|Feature|Miglioramento delle prestazioni|
-|Rinominare|5.3x|
+|Funzionalità|Miglioramento delle prestazioni|
+|Rinomina|5.3x|
 |Modifica firma |4.5x|
 |Trova tutti i riferimenti|4.7x|
 
@@ -540,7 +540,7 @@ C++ supporta ora Ctrl+ clic **Vai a definizione**, semplificando lo spostamento 
 
 - È stata aggiunta una nuova funzionalità sperimentale IntelliSense predittiva che fornisce un elenco di risultati filtrato e compatibile con il contesto per l'elenco dei membri. Per altre informazioni, vedere [C++ IntelliSense Improvements - Predictive IntelliSense & Filtering](https://devblogs.microsoft.com/cppblog/c-intellisense-improvements-predictive-intellisense-filtering/) (Miglioramenti di IntelliSense per C++ - IntelliSense predittiva e filtri).
 - **Trova tutti i riferimenti** (MAIUSC + F12) ora consente di spostarsi in modo semplice, anche nelle codebase complesse. Offre funzioni avanzate di raggruppamento, filtro, ordinamento, ricerca all'interno dei risultati e, per alcuni linguaggi, colorazione, che agevolano notevolmente la comprensione dei riferimenti. Per C++ la nuova interfaccia utente include informazioni che indicano se è in corso la lettura o la scrittura in una variabile.
-- La funzionalità IntelliSense "da punto a freccia" è passata dalla fase sperimentale alla fase avanzata ed è ora abilitata per impostazione predefinita. Anche le funzionalità dell'editor **Espandi ambito** ed **Expand Precedence** (Espandi precedenza) sono passate dalla fase sperimentale alla fase avanzata.
+- La funzionalità IntelliSense "da punto a freccia" è passata dalla fase sperimentale alla fase avanzata ed è ora abilitata per impostazione predefinita. Le funzionalità dell'editor **Espandi ambito** ed **Espandi precedenza** sono state spostate anche da sperimentale ad avanzata.
 - Le funzionalità di refactoring sperimentale **Modifica firma** ed **Estrai funzione** sono ora disponibili per impostazione predefinita.
 - È stata aggiunta una funzionalità sperimentale per il caricamento più rapido dei progetti C++. Alla prossima apertura, un progetto C++ verrà caricato *molto* più velocemente e la volta successiva ancora più velocemente.
 - Alcune di queste funzionalità sono usate anche in altri linguaggi e alcune sono specifiche di C++. Per altre informazioni su queste nuove funzionalità, vedere [Announcing Visual Studio "15" Preview 5](https://devblogs.microsoft.com/visualstudio/announcing-visual-studio-15-preview-5/) (Annuncio di Visual Studio 15 Preview 5).
@@ -598,7 +598,7 @@ Gli strumenti di compilazione di Visual C++ (in precedenza disponibili come prod
 
 ## <a name="linux-development-with-c"></a>Sviluppo di applicazioni Linux con C++
 
-L'estensione comune [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) ora fa parte di Visual Studio. Questa installazione include tutto il necessario per lo sviluppo e il debug di applicazioni C++ in esecuzione in un ambiente Linux.
+L'estensione comune [Visual C++ for Linux Development](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment) ora fa parte di Visual Studio. Questa installazione include tutto il necessario per lo sviluppo e il debug di applicazioni C++ in esecuzione in un ambiente Linux.
 
 ##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017 versione 15.2
 

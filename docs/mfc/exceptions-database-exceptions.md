@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624663"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403725"
 ---
 # <a name="exceptions-database-exceptions"></a>Eccezioni: eccezioni di database
 
@@ -38,7 +38,7 @@ L'approccio più pragmatico per intercettare le eccezioni del database consiste 
 
 Oltre ai codici restituiti definiti dal Framework, che hanno nomi del modulo **AFX_SQL_ERROR_XXX**, alcuni [CDBException](reference/cdbexception-class.md) sono basati sui codici restituiti [ODBC](../data/odbc/odbc-basics.md) . I codici restituiti per tali eccezioni hanno nomi nel formato **SQL_ERROR_XXX**.
 
-I codici restituiti, sia definiti dal Framework che definiti da ODBC, che possono essere restituiti dalle classi di database sono documentati sotto il membro dati [m_nRetCode](reference/cdbexception-class.md#m_nretcode) della classe `CDBException` . Ulteriori informazioni sui codici restituiti definiti da ODBC sono disponibili in ODBC SDK *Programmer ' s Reference* in MSDN Library.
+I codici restituiti, sia definiti dal Framework che definiti da ODBC, che possono essere restituiti dalle classi di database sono documentati sotto il membro dati [m_nRetCode](reference/cdbexception-class.md#m_nretcode) della classe `CDBException` . Ulteriori informazioni sui codici restituiti definiti da ODBC sono disponibili in [ODBC Programmer ' s Reference](/sql/odbc/reference/odbc-programmer-s-reference).
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>Codici di errore utilizzati per le eccezioni DAO
 

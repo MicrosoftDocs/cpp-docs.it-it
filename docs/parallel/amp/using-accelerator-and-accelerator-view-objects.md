@@ -2,24 +2,24 @@
 title: Utilizzo degli oggetti accelerator e accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 80d9c26f636cc736f90eacddea07a8fc31caff93
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e3fed4dc2a431b751d4ad50484e32b738e786d10
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512881"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404177"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 
-È possibile usare le classi [Accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) per specificare il dispositivo o l'emulatore in C++ cui eseguire il codice amp. Un sistema potrebbe avere diversi dispositivi o emulatori che variano in base alla quantità di memoria, al supporto per la memoria condivisa, al supporto per il debug o al supporto a precisione doppia. C++Accelerated Massive Parallelism (C++ amp) fornisce le API che è possibile usare per esaminare gli acceleratori disponibili, impostarne uno come predefinito, specificare più accelerator_views per più chiamate a parallel_for_each ed eseguire attività di debug speciali.
+È possibile usare le classi [Accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) per specificare il dispositivo o l'emulatore in cui eseguire il codice di C++ amp. Un sistema potrebbe avere diversi dispositivi o emulatori che variano in base alla quantità di memoria, al supporto per la memoria condivisa, al supporto per il debug o al supporto a precisione doppia. C++ Accelerated Massive Parallelism (C++ AMP) fornisce le API che è possibile usare per esaminare gli acceleratori disponibili, impostarne uno come predefinito, specificare più accelerator_views per più chiamate a parallel_for_each ed eseguire attività di debug speciali.
 
 ## <a name="using-the-default-accelerator"></a>Uso del tasto di scelta rapida predefinito
 
-Il C++ Runtime amp Seleziona un acceleratore predefinito, a meno che non si scriva codice per sceglierne uno specifico. Il runtime sceglie l'acceleratore predefinito come segue:
+Il runtime di C++ AMP sceglie un acceleratore predefinito, a meno che non si scriva codice per sceglierne uno specifico. Il runtime sceglie l'acceleratore predefinito come segue:
 
 1. Se l'app è in esecuzione in modalità di debug, un acceleratore che supporta il debug.
 
-2. In caso contrario, l'acceleratore specificato dalla variabile di ambiente CPPAMP_DEFAULT_ACCELERATOR, se impostato.
+2. In caso contrario, l'acceleratore specificato dalla variabile di ambiente CPPAMP_DEFAULT_ACCELERATOR, se è impostato.
 
 3. In caso contrario, un dispositivo non emulato.
 
@@ -47,7 +47,7 @@ void default_properties() {
 
 ### <a name="cppamp_default_accelerator-environment-variable"></a>Variabile di ambiente CPPAMP_DEFAULT_ACCELERATOR
 
-È possibile impostare la variabile di ambiente CPPAMP_DEFAULT_ACCELERATOR per specificare `accelerator::device_path` l'oggetto dell'acceleratore predefinito. Il percorso è dipendente dall'hardware. Il codice seguente usa la `accelerator::get_all` funzione per recuperare un elenco di acceleratori disponibili e quindi Visualizza il percorso e le caratteristiche di ogni acceleratore.
+È possibile impostare la variabile di ambiente CPPAMP_DEFAULT_ACCELERATOR per specificare l'oggetto `accelerator::device_path` dell'acceleratore predefinito. Il percorso è dipendente dall'hardware. Il codice seguente usa la `accelerator::get_all` funzione per recuperare un elenco di acceleratori disponibili e quindi Visualizza il percorso e le caratteristiche di ogni acceleratore.
 
 ```cpp
 void list_all_accelerators()
@@ -69,7 +69,7 @@ void list_all_accelerators()
 
 ## <a name="selecting-an-accelerator"></a>Selezione di un acceleratore
 
-Per selezionare un tasto di scelta rapida `accelerator::get_all` , utilizzare il metodo per recuperare un elenco di acceleratori disponibili e quindi selezionarne uno in base alle relative proprietà. Questo esempio Mostra come selezionare il tasto di scelta rapida con la maggiore quantità di memoria:
+Per selezionare un tasto di scelta rapida, utilizzare il `accelerator::get_all` metodo per recuperare un elenco di acceleratori disponibili e quindi selezionarne uno in base alle relative proprietà. Questo esempio Mostra come selezionare il tasto di scelta rapida con la maggiore quantità di memoria:
 
 ```cpp
 void pick_with_most_memory()
@@ -92,13 +92,13 @@ void pick_with_most_memory()
 > [!NOTE]
 > Uno degli acceleratori restituiti da `accelerator::get_all` è l'acceleratore della CPU. Non è possibile eseguire codice sull'acceleratore della CPU. Per filtrare l'acceleratore della CPU, confrontare il valore della proprietà [device_path](reference/accelerator-class.md#device_path) dell'acceleratore restituito da `accelerator::get_all` con il valore di [Accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator). Per ulteriori informazioni, vedere la sezione "acceleratori speciali" in questo articolo.
 
-## <a name="shared-memory"></a>Memoria condivisa
+## <a name="shared-memory"></a>Shared Memory
 
-La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito. La proprietà Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) restituisce **true** se il tasto di scelta rapida supporta la memoria condivisa e la proprietà [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) ottiene il [access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinito per la memoria allocata nel `accelerator`, ad esempio, **Array**s `accelerator`associato a o `array_view` oggetti a cui si accede in `accelerator`.
+La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito. La proprietà Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) restituisce **true** se il tasto di scelta rapida supporta la memoria condivisa e la proprietà [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) ottiene la [access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per la memoria allocata in `accelerator` , ad esempio, la **matrice**associata all'oggetto `accelerator` o `array_view` gli oggetti a cui si accede in `accelerator` .
 
-Il C++ Runtime amp sceglie automaticamente il valore predefinito `access_type` migliore per ogni `accelerator`, ma le caratteristiche di prestazioni (larghezza di banda e latenza) della memoria condivisa possono essere peggiori di quelle della memoria acceleratore dedicata (non condivisa) quando lettura dalla CPU, scrittura dalla CPU o entrambi. Se la memoria condivisa viene eseguita insieme alla memoria dedicata per la lettura e la scrittura dalla CPU, l'impostazione predefinita `access_type_read_write`del runtime è. in caso contrario, il runtime sceglie `access_type`un valore predefinito più conservativo e consente all'app di eseguire l'override se l'accesso alla memoria i modelli dei kernel di calcolo traggono vantaggio da un `access_type`diverso.
+Il runtime di C++ AMP sceglie automaticamente il valore predefinito migliore `access_type` per ogni `accelerator` , ma le caratteristiche di prestazioni (larghezza di banda e latenza) della memoria condivisa possono essere inferiori rispetto a quelle della memoria dell'acceleratore dedicata (non condivisa) durante la lettura dalla CPU, la scrittura dalla CPU o entrambe. Se la memoria condivisa viene eseguita oltre alla memoria dedicata per la lettura e la scrittura dalla CPU, l'impostazione predefinita del runtime `access_type_read_write` è. in caso contrario, il runtime sceglie un valore predefinito più conservativo `access_type` e consente all'app di eseguirne l'override se i modelli di accesso alla memoria dei propri kernel di calcolo traggono vantaggio da un diverso `access_type` .
 
-Nell'esempio di codice seguente viene illustrato come determinare se il tasto di scelta rapida predefinito supporta la memoria condivisa, quindi esegue l'override del `accelerator_view` tipo di accesso predefinito e ne crea uno.
+Nell'esempio di codice seguente viene illustrato come determinare se il tasto di scelta rapida predefinito supporta la memoria condivisa, quindi esegue l'override del tipo di accesso predefinito e ne crea uno `accelerator_view` .
 
 ```cpp
 #include <amp.h>
@@ -127,11 +127,11 @@ int main()
 }
 ```
 
-Un `accelerator_view` oggetto riflette sempre `default_cpu_access_type` l'oggetto `accelerator` della classe a cui è associato e non fornisce alcuna interfaccia per eseguire l'override `access_type`o modificare il relativo.
+Un oggetto `accelerator_view` riflette sempre l'oggetto `default_cpu_access_type` della classe a `accelerator` cui è associato e non fornisce alcuna interfaccia per eseguire l'override o modificare il relativo `access_type` .
 
 ## <a name="changing-the-default-accelerator"></a>Modifica dell'acceleratore predefinito
 
-È possibile modificare l'acceleratore predefinito chiamando il `accelerator::set_default` metodo. È possibile modificare l'acceleratore predefinito solo una volta per ogni esecuzione dell'app ed è necessario modificarlo prima di eseguire qualsiasi codice nella GPU. Tutte le chiamate di funzione successive per modificare il tasto di scelta rapida restituiscono **false**. Se si vuole usare un tasto di scelta rapida diverso in una `parallel_for_each`chiamata a, vedere la sezione "uso di più acceleratori" in questo articolo. Nell'esempio di codice seguente il tasto di scelta rapida predefinito viene impostato su uno non emulato, non è connesso a una visualizzazione e supporta la precisione doppia.
+È possibile modificare l'acceleratore predefinito chiamando il `accelerator::set_default` metodo. È possibile modificare l'acceleratore predefinito solo una volta per ogni esecuzione dell'app ed è necessario modificarlo prima di eseguire qualsiasi codice nella GPU. Tutte le chiamate di funzione successive per modificare il tasto di scelta rapida restituiscono **false**. Se si vuole usare un tasto di scelta rapida diverso in una chiamata a `parallel_for_each` , vedere la sezione "uso di più acceleratori" in questo articolo. Nell'esempio di codice seguente il tasto di scelta rapida predefinito viene impostato su uno non emulato, non è connesso a una visualizzazione e supporta la precisione doppia.
 
 ```cpp
 bool pick_accelerator()
@@ -162,21 +162,21 @@ Esistono due modi per usare più acceleratori nell'app:
 
 - È possibile passare `accelerator_view` gli oggetti alle chiamate al metodo [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) .
 
-- È possibile costruire un oggetto **Array** usando un oggetto `accelerator_view` specifico. Il runtime di C + amp preleverà `accelerator_view` l'oggetto dall'oggetto **matrice** acquisito nell'espressione lambda.
+- È possibile costruire un oggetto **Array** usando un `accelerator_view` oggetto specifico. Il runtime di C + AMP preleverà l' `accelerator_view` oggetto dall'oggetto **matrice** acquisito nell'espressione lambda.
 
 ## <a name="special-accelerators"></a>Acceleratori speciali
 
 I percorsi dei dispositivi di tre acceleratori speciali sono disponibili come proprietà della `accelerator` classe:
 
-- [acceleratore::D membro dati irect3d_ref](reference/accelerator-class.md#direct3d_ref): Questo acceleratore a thread singolo usa il software sulla CPU per emulare una scheda grafica generica. Viene usato per impostazione predefinita per il debug, ma non è utile nell'ambiente di produzione perché è più lento degli acceleratori hardware. Inoltre, è disponibile solo in DirectX SDK e nei Windows SDK ed è improbabile che sia installato nei computer dei clienti. Per altre informazioni, vedere [debug del codice GPU](/visualstudio/debugger/debugging-gpu-code).
+- [acceleratore::d Irect3d_ref membro dati](reference/accelerator-class.md#direct3d_ref): questo acceleratore a thread singolo usa il software sulla CPU per emulare una scheda grafica generica. Viene usato per impostazione predefinita per il debug, ma non è utile nell'ambiente di produzione perché è più lento degli acceleratori hardware. Inoltre, è disponibile solo in DirectX SDK e nei Windows SDK ed è improbabile che sia installato nei computer dei clienti. Per altre informazioni, vedere [debug del codice GPU](/visualstudio/debugger/debugging-gpu-code).
 
-- [acceleratore::D membro dati irect3d_warp](reference/accelerator-class.md#direct3d_warp): Questo acceleratore fornisce una soluzione di fallback per C++ l'esecuzione del codice amp su CPU multicore che usano Streaming SIMD Extensions (SSE).
+- [Accelerator::d Irect3d_warp membro dati](reference/accelerator-class.md#direct3d_warp): questo acceleratore fornisce una soluzione di fallback per l'esecuzione di codice di C++ amp su CPU multicore che usano Streaming SIMD Extensions (SSE).
 
-- [membro dati Accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): È possibile utilizzare questo acceleratore per la configurazione di matrici di staging. Non è possibile C++ eseguire il codice amp. Per ulteriori informazioni, vedere la pagina relativa alle [matrici C++ di staging in amp](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) post nel Blog relativo alla programmazione parallela in codice nativo.
+- [membro dati Accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): è possibile usare questo acceleratore per la configurazione di matrici di staging. Non può eseguire codice C++ AMP. Per ulteriori informazioni, vedere la pagina relativa alle [matrici di staging in C++ amp](/archive/blogs/nativeconcurrency/staging-arrays-in-c-amp) post nel Blog relativo alla programmazione parallela in codice nativo.
 
 ## <a name="interoperability"></a>Interoperabilità
 
-Il C++ Runtime amp supporta l'interoperabilità `accelerator_view` tra la classe e l' [interfaccia ID3D11Device](/windows/win32/api/d3d11/nn-d3d11-id3d11device)di Direct3D. Il metodo [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) accetta un' `IUnknown` interfaccia e restituisce un `accelerator_view` oggetto. Il metodo [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) accetta un `accelerator_view` oggetto e restituisce un' `IUnknown` interfaccia.
+Il runtime di C++ AMP supporta l'interoperabilità tra la `accelerator_view` classe e l' [interfaccia ID3D11Device](/windows/win32/api/d3d11/nn-d3d11-id3d11device)di Direct3D. Il metodo [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) accetta un' `IUnknown` interfaccia e restituisce un `accelerator_view` oggetto. Il metodo [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) accetta un `accelerator_view` oggetto e restituisce un' `IUnknown` interfaccia.
 
 ## <a name="see-also"></a>Vedere anche
 

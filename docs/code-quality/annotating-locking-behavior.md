@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: 8966d982b7bcbe9844a7bf1ec3088c2a9424b23a
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418641"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404024"
 ---
 # <a name="annotating-locking-behavior"></a>Annotazione del comportamento di blocco
 
@@ -71,7 +71,7 @@ Nella tabella seguente sono elencate le annotazioni di blocco.
 |`_Create_lock_level_(name)`|Un'istruzione che dichiara il simbolo `name` come un livello di blocco in modo che possa essere utilizzato nelle annotazioni `_Has_Lock_level_` e `_Lock_level_order_`.|
 |`_Has_lock_kind_(kind)`|Annota qualsiasi oggetto per perfezionare le informazioni sul tipo di un oggetto risorsa. A volte viene usato un tipo comune per diversi tipi di risorse e il tipo di overload non è sufficiente per distinguere i requisiti semantici tra le varie risorse. Di seguito è riportato un elenco di parametri `kind` predefiniti:<br /><br /> `_Lock_kind_mutex_`<br /> ID del tipo di blocco per mutex.<br /><br /> `_Lock_kind_event_`<br /> ID del tipo di blocco per gli eventi.<br /><br /> `_Lock_kind_semaphore_`<br /> ID del tipo di blocco per i semafori.<br /><br /> `_Lock_kind_spin_lock_`<br /> ID del tipo di blocco per i blocchi di rotazione.<br /><br /> `_Lock_kind_critical_section_`<br /> ID del tipo di blocco per le sezioni critiche.|
 |`_Has_lock_level_(name)`|Annota un oggetto di blocco e lo fornisce al livello di blocco `name`.|
-|`_Lock_level_order_(name1, name2)`|Istruzione che fornisce l'ordinamento dei blocchi tra `name1` e `name2`.  I blocchi con `name1` di livello devono essere acquisiti prima di quelli con `name2`di livello.|
+|`_Lock_level_order_(name1, name2)`|Istruzione che fornisce l'ordinamento dei blocchi tra `name1` e `name2` .  I blocchi con livello `name1` devono essere acquisiti prima di quelli con livello `name2` .|
 |`_Post_same_lock_(expr1, expr2)`|Annota una funzione e indica che lo stato successivo dei due blocchi `expr1` e `expr2`, verrà considerato come se fosse lo stesso oggetto di blocco.|
 |`_Releases_exclusive_lock_(expr)`|Annota una funzione e indica lo stato successivo della funzione riducendo di uno il conteggio dei blocchi esclusivi dell'oggetto di blocco denominato da `expr`.|
 |`_Releases_lock_(expr)`|Annota una funzione e indica lo stato successivo della funzione riducendo di uno il conteggio dei blocchi dell'oggetto di blocco denominato da `expr`.|
@@ -101,22 +101,22 @@ Nella tabella seguente sono elencate le annotazioni per l'accesso ai dati condiv
 |Annotazione|Descrizione|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|Annota una variabile e indica se la variabile è accessibile, il conteggio dei blocchi dell'oggetto di blocco denominato da `expr` è di almeno uno.|
-|`_Interlocked_`|Annota una variabile ed è equivalente a `_Guarded_by_(_Global_interlock_)`.|
+|`_Interlocked_`|Annota una variabile ed è equivalente a `_Guarded_by_(_Global_interlock_)` .|
 |`_Interlocked_operand_`|Il parametro della funzione con annotazioni è l'operando di destinazione di una delle varie funzioni Interlocked.  Tali operandi devono disporre di proprietà aggiuntive specifiche.|
 |`_Write_guarded_by_(expr)`|Annota una variabile e indica se la variabile è modificata, il conteggio dei blocchi dell'oggetto di blocco denominato da `expr` è di almeno uno.|
 
 ## <a name="smart-lock-and-raii-annotations"></a>Annotazioni Smart Lock e RAII
 
-I blocchi intelligenti in genere avvolgono i blocchi nativi e ne gestiscono la durata. Nella tabella seguente sono elencate le annotazioni che è possibile usare con i blocchi intelligenti e i modelli di codifica RAII con supporto per la semantica di `move`.
+I blocchi intelligenti in genere avvolgono i blocchi nativi e ne gestiscono la durata. La tabella seguente elenca le annotazioni che possono essere usate con i blocchi intelligenti e i modelli di codifica RAII con il supporto per la `move` semantica.
 
 |Annotazione|Descrizione|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|Indica all'analizzatore di presumere che sia stato acquisito uno Smart Lock. Questa annotazione prevede un tipo di blocco di riferimento come parametro.|
 |`_Analysis_assume_smart_lock_released_`|Indica all'analizzatore di presumere che sia stato rilasciato uno Smart Lock. Questa annotazione prevede un tipo di blocco di riferimento come parametro.|
-|`_Moves_lock_(target, source)`|Descrive `move constructor` operazione che trasferisce lo stato di blocco dall'oggetto `source` al `target`. Il `target` viene considerato un oggetto appena costruito, quindi qualsiasi stato precedente viene perso e sostituito con lo stato `source`. Anche il `source` viene reimpostato su uno stato pulito senza conteggi dei blocchi o destinazioni di aliasing, ma gli alias che vi fanno riferimento rimangono invariati.|
-|`_Replaces_lock_(target, source)`|Descrive `move assignment operator` semantica in cui viene rilasciato il blocco di destinazione prima di trasferire lo stato dall'origine. Questo può essere considerato come una combinazione di `_Moves_lock_(target, source)` preceduta da un `_Releases_lock_(target)`.|
-|`_Swaps_locks_(left, right)`|Descrive il comportamento di `swap` standard che presuppone che gli oggetti `left` e `right` scambiare il proprio stato. Lo stato scambiato include il conteggio dei blocchi e la destinazione di alias, se presenti. Gli alias che puntano agli oggetti `left` e `right` rimangono invariati.|
-|`_Detaches_lock_(detached, lock)`|Descrive uno scenario in cui un tipo di wrapper di blocco consente la dissociazione con la relativa risorsa contenuta. Questo approccio è simile al funzionamento di `std::unique_ptr` con il puntatore interno: consente ai programmatori di estrarre il puntatore e lasciare il relativo contenitore del puntatore intelligente in uno stato pulito. Una logica simile è supportata da `std::unique_lock` e può essere implementata nei wrapper di blocco personalizzati. Il blocco scollegato mantiene il proprio stato (se presente, il numero di blocchi e la destinazione di aliasing), mentre il wrapper viene reimpostato in modo da contenere zero blocchi e nessuna destinazione di alias, mantenendo i propri alias. Non viene eseguita alcuna operazione sui conteggi dei blocchi (rilascio e acquisizione). Questa annotazione si comporta esattamente come `_Moves_lock_` ad eccezione del fatto che l'argomento scollegato deve essere `return` invece che `this`.|
+|`_Moves_lock_(target, source)`|Descrive `move constructor` l'operazione che trasferisce lo stato di blocco dall' `source` oggetto a `target` . `target`Viene considerato un oggetto appena costruito, quindi qualsiasi stato precedente viene perso e sostituito con lo `source` stato. `source`Viene inoltre reimpostato sullo stato Clean senza conteggi dei blocchi o destinazioni di aliasing, ma gli alias che vi fanno riferimento rimangono invariati.|
+|`_Replaces_lock_(target, source)`|Descrive la `move assignment operator` semantica in cui viene rilasciato il blocco di destinazione prima di trasferire lo stato dall'origine. Questo può essere considerato come una combinazione di `_Moves_lock_(target, source)` preceduta da un `_Releases_lock_(target)` .|
+|`_Swaps_locks_(left, right)`|Descrive il `swap` comportamento standard che presuppone che gli oggetti `left` e `right` scambino il proprio stato. Lo stato scambiato include il conteggio dei blocchi e la destinazione di alias, se presenti. Gli alias che puntano agli `left` `right` oggetti e rimangono invariati.|
+|`_Detaches_lock_(detached, lock)`|Descrive uno scenario in cui un tipo di wrapper di blocco consente la dissociazione con la relativa risorsa contenuta. Questo approccio è simile al `std::unique_ptr` funzionamento con il puntatore interno: consente ai programmatori di estrarre il puntatore e lasciare il contenitore del puntatore intelligente in uno stato pulito. Una logica simile è supportata da `std::unique_lock` e può essere implementata nei wrapper di blocco personalizzati. Il blocco scollegato mantiene il proprio stato (se presente, il numero di blocchi e la destinazione di aliasing), mentre il wrapper viene reimpostato in modo da contenere zero blocchi e nessuna destinazione di alias, mantenendo i propri alias. Non viene eseguita alcuna operazione sui conteggi dei blocchi (rilascio e acquisizione). Questa annotazione si comporta esattamente come `_Moves_lock_` ad eccezione del fatto che l'argomento scollegato deve essere `return` anziché `this` .|
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -128,4 +128,3 @@ I blocchi intelligenti in genere avvolgono i blocchi nativi e ne gestiscono la d
 - [Specificare dove e quando applicare un'annotazione](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [Funzioni intrinseche](../code-quality/intrinsic-functions.md)
 - [Suggerimenti ed esempi](../code-quality/best-practices-and-examples-sal.md)
-- [Blog del team di analisi del codice](https://blogs.msdn.microsoft.com/codeanalysis/)

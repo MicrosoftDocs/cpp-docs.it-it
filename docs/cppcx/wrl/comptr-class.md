@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332253"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404551"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -80,11 +80,11 @@ Interfaccia `ComPtr` rappresentata dall'oggetto.
 *U*<br/>
 Classe a cui l'oggetto corrente `ComPtr` è un elemento Friend. (Il modello che usa questo parametro è protetto.)
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 `ComPtr<>`dichiara un tipo che rappresenta il puntatore di interfaccia sottostante. Utilizzare `ComPtr<>` per dichiarare una variabile e quindi utilizzare l'operatore di accesso ai membri freccia ( `->` ) per accedere a una funzione membro di interfaccia.
 
-Per ulteriori informazioni sui puntatori intelligenti, vedere la sottosezione "puntatori intelligenti COM" dell'articolo [procedure di codifica com](/windows/win32/LearnWin32/com-coding-practices) in MSDN Library.
+Per ulteriori informazioni sui puntatori intelligenti, vedere la sottosezione "puntatori intelligenti COM" dell'articolo [procedure di codifica com](/windows/win32/LearnWin32/com-coding-practices) .
 
 ## <a name="members"></a>Membri
 
@@ -183,7 +183,7 @@ Interfaccia che deve essere rappresentata dal parametro *p*.
 *p*<br/>
 `ComPtr`Oggetto che rappresenta l'interfaccia specificata dal parametro *U*. Il parametro *p* non deve fare riferimento all' `ComPtr` oggetto corrente.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il primo modello è il form da usare nel codice. Il secondo modello è una specializzazione Helper interna. Supporta le funzionalità del linguaggio C++, ad esempio la parola chiave di deduzione del tipo [auto](../../cpp/auto-cpp.md) .
 
@@ -294,7 +294,7 @@ Oggetto di tipo *U*.
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il primo costruttore è il costruttore predefinito, che crea in modo implicito un oggetto vuoto. Il secondo costruttore specifica [__nullptr](../../extensions/nullptr-cpp-component-extensions.md), che consente di creare in modo esplicito un oggetto vuoto.
 
@@ -339,7 +339,7 @@ ID di interfaccia.
 
 S_OK in caso di esito positivo; in caso contrario, HRESULT che indica il motivo per cui l'operazione implicita `QueryInterface` non è riuscita.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 La prima funzione restituisce una copia di un puntatore all'interfaccia associata a questo oggetto `ComPtr` . Questa funzione restituisce sempre S_OK.
 
@@ -392,7 +392,7 @@ Incrementa il conteggio dei riferimenti dell'interfaccia associata a questo ogge
 void InternalAddRef() const;
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo è protetto.
 
@@ -404,7 +404,7 @@ Esegue un'operazione di rilascio COM sull'interfaccia associata a questo oggetto
 unsigned long InternalRelease();
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo è protetto.
 
@@ -422,7 +422,7 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 
 Riferimento debole all'oggetto corrente `ComPtr` .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo differisce da [ComPtr:: GetAddressOf](#getaddressof) in quanto questo metodo rilascia un riferimento al puntatore a interfaccia. Usare `ComPtr::GetAddressOf` quando è necessario l'indirizzo del puntatore a interfaccia ma non si vuole rilasciare tale interfaccia.
 
@@ -438,7 +438,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 Puntatore al tipo specificato dal nome del tipo di modello corrente.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione helper rimuove il sovraccarico non necessario causato dall'utilizzo della macro STDMETHOD. Questa funzione rende `IUnknown` `private` i tipi anziché `virtual` .
 
@@ -485,7 +485,7 @@ Un puntatore, un riferimento o un riferimento rvalue a un tipo o a un altro `Com
 
 Riferimento all'oggetto corrente `ComPtr` .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 La prima versione di questo operatore assegna un valore vuoto all'oggetto corrente `ComPtr` .
 
@@ -591,7 +591,7 @@ Contiene un puntatore all'interfaccia associata a e gestita da questo oggetto `C
 InterfaceType *ptr_;
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `ptr_`è un membro dati interno protetto.
 
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>Parametri
 
 *r*<br/>
-`ComPtr`.
+Un oggetto `ComPtr`.

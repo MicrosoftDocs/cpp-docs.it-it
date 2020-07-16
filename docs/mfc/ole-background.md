@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 96ece9a2a5be6ea29c95e17e81f6ce4adbfd4c0b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f18614f7b156a1757df9dfaac9e4a0ad4f8209eb
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624169"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404294"
 ---
 # <a name="ole-background"></a>Sfondo OLE
 
@@ -66,7 +66,7 @@ Negli articoli seguenti sono trattati alcuni degli argomenti OLE più importanti
 
 - [Sfondo OLE: implementazione MFC](ole-background-mfc-implementation.md)
 
-Per informazioni generali sulle OLE non trovate negli articoli precedenti, cercare OLE in MSDN.
+Per informazioni OLE generali non trovate negli articoli precedenti, [cercare OLE](https://docs.microsoft.com/search/?terms=ole) in Microsoft docs.
 
 ## <a name="see-also"></a>Vedere anche
 
