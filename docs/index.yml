@@ -10,12 +10,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 06/04/2020
-  ms.openlocfilehash: aa696ed1057c0c47ff8dd66a76dd1f65a46f10bb
-  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.openlocfilehash: 2ab980b46a68c46e19e5ee04aad63e4d664c2e85
+  ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 06/08/2020
-  ms.locfileid: "84507842"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "86404462"
 highlightedContent:
   items:
   - title: Installare Visual Studio e scegliere i carichi di lavoro di C++
@@ -55,7 +55,7 @@ conceptualContent:
       url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
   - title: Scrivere app C++ e C in Visual Studio
     links:
-    - text: Creare un'applicazione console
+    - text: Creare un'app calcolatore console
       url: get-started/tutorial-console-cpp.md
       itemType: tutorial
     - text: Creare un'app desktop di Windows con Win32
@@ -182,4 +182,4 @@ additionalContent:
         url: cloud/cloud-and-web-programming-in-visual-cpp.md
       - text: Librerie della piattaforma UWP
         url: cppcx/namespaces-reference-c-cx.md
-  footer: '[Blog](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [segnalare un problema](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)contribuire alla documentazione C++: Leggere la [Guida per i collaboratori](https://docs.microsoft.com/contribute/).'
+  footer: '[Blogs](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [Report an issue](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html) - Contribute to C++ docs: Read our [contributor guide](https://docs.microsoft.com/contribute/).'

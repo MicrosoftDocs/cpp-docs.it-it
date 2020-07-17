@@ -6,12 +6,12 @@ metadata:
   description: Informazioni di riferimento sulla programmazione C++ per gli utenti di Microsoft C++ e Visual Studio.
   ms.topic: landing-page
   ms.date: 05/08/2020
-  ms.openlocfilehash: d94a9821e28641c6297261f520359a7179006ff4
-  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.openlocfilehash: 599559aa1b5f1bd992646b5bacc3f1c51fcf070f
+  ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84108621"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "86404950"
 landingContent:
 - title: Informazioni su C++ in Visual Studio
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
     links:
     - text: Hello World in Visual Studio con C++
       url: ../build/vscpp-step-1-create.md
-    - text: Creare una calcolatrice in C++
+    - text: Creare un calcolatore console in C++
       url: ../get-started/tutorial-console-cpp.md
   - linkListType: video
     links:
