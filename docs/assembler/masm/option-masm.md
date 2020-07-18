@@ -1,17 +1,17 @@
 ---
 title: OPTION (MASM)
-ms.date: 12/17/2019
+ms.date: 07/15/2020
 f1_keywords:
 - option
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: bd50ac2e051db7f02ac077054e5856524745df54
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a614697a9d633628b02b59a7b810fa261887f859
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318748"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446437"
 ---
 # <a name="option"></a>OPTION
 
@@ -19,25 +19,30 @@ Abilita e Disabilita le funzionalità dell'assembler.
 
 ## <a name="syntax"></a>Sintassi
 
-> **Option (** *opzione)*
+> **`OPTION`***elenco di opzioni*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Le opzioni disponibili includono:
 
-|||||
-|-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATORE**|
-|**Noemulator**|**EPILOGO**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
-|**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**Prologo**|**READONLY**|**Noreadonly**|
-|**AMBITO**|**Senza ambito**|**SEGMENT**|**SETIF2**.|
+:::row:::
+   :::column span="":::
+      **`CASEMAP`**<br/>**`DOTNAME`**<br/>**`NODOTNAME`**<br/>**`EMULATOR`**<br/>**`NOEMULATOR`**<br/>**`EPILOGUE`**<br/>**`EXPR16`**
+   :::column-end:::
+   :::column span="":::
+      **`EXPR32`**<br/>**`LANGUAGE`**<br/>**`LJMP`**<br/>**`NOLJMP`**<br/>**`M510`**<br/>**`NOM510`**<br/>**`NOKEYWORD`**
+   :::column-end:::
+   :::column span="":::
+      **`NOSIGNEXTEND`**<br/>**`OFFSET`**<br/>**`OLDMACROS`**<br/>**`NOOLDMACROS`**<br/>**`OLDSTRUCTS`**<br/>**`NOOLDSTRUCTS`**<br/>**`PROC`**
+   :::column-end:::
+   :::column span="":::
+      **`PROLOGUE`**<br/>**`READONLY`**<br/>**`NOREADONLY`**<br/>**`SCOPED`**<br/>**`NOSCOPED`**<br/>**`SEGMENT`**<br/>**`SETIF2`**
+   :::column-end:::
+:::row-end:::
 
-La sintassi per LANGUAGE è **Option Language:** <em>x</em>, dove *x* è uno dei seguenti: C, syscall, stdcall, Pascal, FORTRAN o Basic.  SYSCALL, PASCAL, FORTRAN e BASIC non sono supportati con [. MODELLO](dot-model.md) flat.
+La sintassi per Language è **`OPTION LANGUAGE:`** _`x`_ , dove *`x`* è uno tra **`C`** ,,, **`SYSCALL`** **`STDCALL`** **`PASCAL`** , **`FORTRAN`** o **`BASIC`** . **`SYSCALL`**, **`PASCAL`** , **`FORTRAN`** e **`BASIC`** non sono supportati con [`.MODEL`](dot-model.md) **`FLAT`** .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

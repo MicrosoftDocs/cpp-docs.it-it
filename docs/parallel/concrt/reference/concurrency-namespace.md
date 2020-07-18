@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143234"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446740"
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 
-Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'accesso al runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md) (Runtime di concorrenza).
+Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'accesso al runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,7 +37,7 @@ Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'acc
 namespace concurrency;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="typedefs"></a>Typedef
 
@@ -53,7 +53,7 @@ namespace concurrency;
 |Nome|Descrizione|
 |----------|-----------------|
 |[Classe affinity_partitioner](affinity-partitioner-class.md)|La classe `affinity_partitioner` è simile alla classe `static_partitioner`, ma migliora l'affinità della cache offrendo la scelta di mappare sottointervalli ai thread di lavoro. Può migliorare notevolmente le prestazioni quando un ciclo viene eseguito di nuovo sullo stesso insieme di dati e i dati si adattano nella cache. Si noti che lo stesso oggetto `affinity_partitioner` deve essere usato con le iterazioni successive di un ciclo parallelo che viene eseguito su un particolare set di dati, per trarre vantaggio dalla località dei dati.|
-|[Classe agent](agent-class.md)|Classe destinata a essere usata come classe di base per tutti gli agenti indipendenti. Consente di nascondere lo stato ad altri agenti e di interagire attraverso il passaggio di messaggi.|
+|[Classe Agent](agent-class.md)|Classe destinata a essere usata come classe di base per tutti gli agenti indipendenti. Consente di nascondere lo stato ad altri agenti e di interagire attraverso il passaggio di messaggi.|
 |[Classe auto_partitioner](auto-partitioner-class.md)|La classe `auto_partitioner` rappresenta il metodo predefinito `parallel_for`, `parallel_for_each` e `parallel_transform` usato per partizionare l'intervallo su cui eseguono l'iterazione. Questo metodo di partizionamento usa il furto di un intervallo per il bilanciamento del carico e l'annullamento per iterazione.|
 |[Classe bad_target](bad-target-class.md)|Questa classe descrive un'eccezione generata quando un blocco della messaggistica riceve un puntatore a una destinazione non valida per l'operazione eseguita.|
 |[Classe call](call-class.md)|Un blocco della messaggistica `call` è un oggetto `target_block` multi-origine ordinato che richiama una funzione specificata quando riceve un messaggio.|
@@ -66,16 +66,16 @@ namespace concurrency;
 |[Classe concurrent_queue](concurrent-queue-class.md)|La classe `concurrent_queue` è una classe contenitore di sequenze che consente l'accesso di tipo First in First out ai relativi elementi. Abilita un set limitato di operazioni sicure per concorrenza, ad esempio `push` e `try_pop`.|
 |[Classe concurrent_unordered_map](concurrent-unordered-map-class.md)|La classe `concurrent_unordered_map` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
 |[Classe concurrent_unordered_multimap](concurrent-unordered-multimap-class.md)|La classe `concurrent_unordered_multimap` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
-|[Classe concurrent_unordered_multiset](concurrent-unordered-multiset-class.md)|La classe `concurrent_unordered_multiset` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
-|[Classe concurrent_unordered_set](concurrent-unordered-set-class.md)|La classe `concurrent_unordered_set` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
+|[Classe concurrent_unordered_multiset](concurrent-unordered-multiset-class.md)|La `concurrent_unordered_multiset` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
+|[Classe concurrent_unordered_set](concurrent-unordered-set-class.md)|La `concurrent_unordered_set` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.|
 |[Classe concurrent_vector](concurrent-vector-class.md)|La classe `concurrent_vector` è una classe contenitore di sequenze che consente un accesso casuale a qualsiasi elemento. Abilita accodamento, accesso elementi, accesso iteratori e operazioni traversali di iterazione indipendenti dalla concorrenza.|
-|[Classe Context](context-class.md)|Rappresenta un'astrazione per un contesto di esecuzione.|
+|[Context (classe)](context-class.md)|Rappresenta un'astrazione per un contesto di esecuzione.|
 |[Classe context_self_unblock](context-self-unblock-class.md)|Questa classe descrive un'eccezione generata quando il metodo `Unblock` di un oggetto `Context` viene chiamato dallo stesso contesto. Potrebbe indicare un tentativo da parte di un contesto specificato di sbloccarsi.|
 |[Classe context_unblock_unbalanced](context-unblock-unbalanced-class.md)|Questa classe descrive un'eccezione generata quando le chiamate ai metodi `Block` e `Unblock` di un oggetto `Context` non sono abbinate correttamente.|
 |[Classe critical_section](critical-section-class.md)|Un'esclusione reciproca non rientrante che tiene conto in modo esplicito del runtime di concorrenza.|
 |[Classe CurrentScheduler](currentscheduler-class.md)|Rappresenta un'astrazione per l'utilità di pianificazione corrente associata al contesto di chiamata.|
 |[Classe default_scheduler_exists](default-scheduler-exists-class.md)|Questa classe descrive un'eccezione generata quando il metodo `Scheduler::SetDefaultSchedulerPolicy` viene chiamato quando esiste già un'utilità di pianificazione predefinita all'interno del processo.|
-|[Classe event](event-class.md)|Un evento di reimpostazione manuale che tiene conto in modo esplicito del runtime di concorrenza.|
+|[Classe di evento](event-class.md)|Un evento di reimpostazione manuale che tiene conto in modo esplicito del runtime di concorrenza.|
 |[Classe improper_lock](improper-lock-class.md)|Questa classe descrive un'eccezione generata quando un blocco viene acquisito in modo errato.|
 |[Classe improper_scheduler_attach](improper-scheduler-attach-class.md)|Questa classe descrive un'eccezione generata quando il metodo `Attach` viene chiamato su un oggetto `Scheduler` già allegato al contesto corrente.|
 |[Classe improper_scheduler_detach](improper-scheduler-detach-class.md)|Questa classe descrive un'eccezione generata quando il metodo `CurrentScheduler::Detach` viene chiamato su un contesto che non è stato allegato ad alcuna unità di pianificazione tramite il metodo `Attach` di un oggetto `Scheduler`.|
@@ -91,7 +91,7 @@ namespace concurrency;
 |[Classe ITarget](itarget-class.md)|La classe `ITarget` corrisponde all'interfaccia per tutti i blocchi di destinazione. I blocchi di destinazione usano messaggi a loro offerti da blocchi `ISource`.|
 |[Classe join](join-class.md)|Un blocco della messaggistica `join` è un `propagator_block` multi-origine, a destinazione singola, che combina insieme messaggi di tipo `T` da ognuna delle origini.|
 |[Classe location](location-class.md)|Un'astrazione di una posizione fisica sull'hardware.|
-|[Classe message](message-class.md)|Busta del messaggio di base contenente il payload dei dati passati tra blocchi della messaggistica.|
+|[Classe Message](message-class.md)|Busta del messaggio di base contenente il payload dei dati passati tra blocchi della messaggistica.|
 |[Classe message_not_found](message-not-found-class.md)|Questa classe descrive un'eccezione generata quando un blocco della messaggistica non è in grado di trovare un messaggio richiesto.|
 |[Classe message_processor](message-processor-class.md)|La classe `message_processor` rappresenta la classe base astratta per l'elaborazione degli oggetti `message`. Non esiste garanzia sull'ordinamento dei messaggi.|
 |[Classe missing_wait](missing-wait-class.md)|Questa classe descrive un'eccezione generata quando vi sono attività ancora pianificate per un oggetto `task_group` o `structured_task_group` nel momento di esecuzione del distruttore dell'oggetto. Questa eccezione non sarà mai generata se il distruttore viene raggiunto a causa del processo di rimozione dello stack come risultato di un'eccezione.|
@@ -119,14 +119,14 @@ namespace concurrency;
 |[Classe static_partitioner](static-partitioner-class.md)|La classe `static_partitioner` rappresenta il partizionamento statico dell'intervallo iterato da `parallel_for`. Il partitioner divide l'intervallo in tutti i blocchi quanti sono i thread di lavoro disponibili per l'utilità di pianificazione sottostante.|
 |[Classe structured_task_group](structured-task-group-class.md)|La classe `structured_task_group` rappresenta una raccolta altamente strutturata di lavoro parallelo. È possibile mettere in coda attività parallele singole a un `structured_task_group` usando gli oggetti `task_handle`, e attenderne il completamento, oppure annullare il gruppo di attività prima di aver terminato l'esecuzione, interrompendo in tal modo qualsiasi attività che non abbia avviato l'esecuzione.|
 |[Classe target_block](target-block-class.md)|La classe `target_block` corrisponde a una classe base astratta che mette a disposizione la funzionalità di gestione dei collegamenti di base e il controllo degli errori per blocchi di sola destinazione.|
-|[Classe task (runtime di concorrenza)](task-class.md)|Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. È anche possibile comporla con altre attività usando i criteri continuations(`then`), join(`when_all`) e choice(`when_any`).|
-|[Classe task_canceled](task-canceled-class.md)|Questa classe descrive un'eccezione generata dal livello di attività PPL per forzare l'annullamento dell'attività corrente. Viene inoltre generata dal metodo `get()` sull' [attività](task-class.md), per un'attività annullata.|
+|[Classe Task (runtime di concorrenza)](task-class.md)|Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. È anche possibile comporla con altre attività usando i criteri continuations(`then`), join(`when_all`) e choice(`when_any`).|
+|[Classe task_canceled](task-canceled-class.md)|Questa classe descrive un'eccezione generata dal livello di attività PPL per forzare l'annullamento dell'attività corrente. Viene inoltre generata dal `get()` metodo nell' [attività](task-class.md)per un'attività annullata.|
 |[Classe task_completion_event](task-completion-event-class.md)|La classe `task_completion_event` consente di ritardare l'esecuzione di un'attività fino a quando non viene soddisfatta una condizione oppure di avviare un'attività in risposta a un evento esterno.|
 |[Classe task_continuation_context](task-continuation-context-class.md)|La classe `task_continuation_context` consente di specificare dove eseguire una continuazione. È utile usare questa classe solo da un'app UWP. Per le app non Windows Runtime, il contesto di esecuzione della continuazione dell'attività è determinato dal runtime e non è configurabile.|
 |[Classe task_group](task-group-class.md)|La classe `task_group` rappresenta una raccolta di lavoro parallelo che può essere messa in attesa o annullata.|
 |[Classe task_handle](task-handle-class.md)|La classe `task_handle` rappresenta un elemento di lavoro parallelo individuale. Incapsula le istruzioni e i dati richiesti per eseguire un lavoro.|
 |[Classe task_options (runtime di concorrenza)](task-options-class-concurrency-runtime.md)|Rappresenta le opzioni consentite per la creazione di un'attività|
-|[Classe timer](timer-class.md)|Un blocco della messaggistica `timer` è un `source_block` a destinazione singola in grado di inviare un messaggio alla sua destinazione dopo che è trascorso un determinato periodo di tempo oppure ad intervalli specifici.|
+|[timer (classe)](timer-class.md)|Un blocco della messaggistica `timer` è un `source_block` a destinazione singola in grado di inviare un messaggio alla sua destinazione dopo che è trascorso un determinato periodo di tempo oppure ad intervalli specifici.|
 |[Classe transformer](transformer-class.md)|Un blocco della messaggistica `transformer` è un `propagator_block` multi-origine, a destinazione singola, che può accettare messaggi di un tipo ed è in grado di archiviare un numero non associato di messaggi di un tipo diverso.|
 |[Classe unbounded_buffer](unbounded-buffer-class.md)|Un blocco della messaggistica `unbounded_buffer` è un `propagator_block` multi-origine a destinazione singola, in grado di archiviare un numero non associato di messaggi di un tipo diverso.|
 |[Classe unsupported_os](unsupported-os-class.md)|Tramite questa classe viene descritta un'eccezione generata quando viene utilizzato un sistema operativo non supportato.|
@@ -177,19 +177,19 @@ namespace concurrency;
 |----------|-----------------|
 |[Alloc (funzione)](concurrency-namespace-functions.md#alloc)|Assegna un blocco di memoria dalle dimensioni specificate dal suballocatore di cache del runtime di concorrenza.|
 |[Funzione asend](concurrency-namespace-functions.md#asend)|Di overload. Un'operazione di invio asincrona che pianifica un'attività per propagare i dati nel blocco di destinazione.|
-|[Funzione cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Annulla l'attività attualmente in esecuzione. Questa funzione può essere chiamata dal corpo di un'attività per interrompere l'esecuzione dell'attività e forzarne il passaggio allo stato `canceled`.<br /><br /> Chiamare questa funzione non è uno scenario supportato se non si è all'interno del corpo di un oggetto `task`. Questa operazione provocherà un comportamento non definito, ad esempio un arresto anomalo o un blocco nell'applicazione.|
+|[Funzione cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Annulla l'attività attualmente in esecuzione. Questa funzione può essere chiamata dal corpo di un'attività per interrompere l'esecuzione dell'attività e forzarne il passaggio allo stato `canceled`.<br /><br /> Chiamare questa funzione non è uno scenario supportato se non si è all'interno del corpo di un oggetto `task`. In questo modo si otterrà un comportamento non definito, ad esempio un arresto anomalo o la mancata risposta nell'applicazione.|
 |[Funzione create_async](concurrency-namespace-functions.md#create_async)|Crea un costrutto asincrono di Windows Runtime in base a un'espressione lambda o un oggetto funzione fornito dall'utente. Il tipo restituito `create_async` è uno tra `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` in base alla firma dell'espressione lambda passata al metodo.|
 |[Funzione create_task](concurrency-namespace-functions.md#create_task)|Di overload. Crea un oggetto [attività](task-class.md) ppl. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.|
 |[CreateResourceManager (funzione)](concurrency-namespace-functions.md#createresourcemanager)|Restituisce un'interfaccia che rappresenta l'istanza singleton di Gestione risorse del runtime di concorrenza. Gestione risorse è responsabile dell'assegnazione di risorse a utilità di pianificazione che vogliono cooperare tra loro.|
-|[DisableTracing (funzione)](concurrency-namespace-functions.md#disabletracing)|Disabilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW non viene registrata per impostazione predefinita.|
+|[Funzione DisableTracing](concurrency-namespace-functions.md#disabletracing)|Disabilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW non viene registrata per impostazione predefinita.|
 |[EnableTracing (funzione)](concurrency-namespace-functions.md#enabletracing)|Abilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW è ora attivata per impostazione predefinita.|
 |[Free (funzione)](concurrency-namespace-functions.md#free)|Rilascia un blocco di memoria precedentemente allocato dal metodo `Alloc` al suballocatore di cache del runtime di concorrenza.|
 |[Funzione get_ambient_scheduler (runtime di concorrenza)](concurrency-namespace-functions.md#get_ambient_scheduler)||
-|[GetExecutionContextId (funzione)](concurrency-namespace-functions.md#getexecutioncontextid)|Restituisce un identificatore univoco che può essere assegnato a un contesto di esecuzione che implementa l'interfaccia `IExecutionContext`.|
+|[Funzione GetExecutionContextId](concurrency-namespace-functions.md#getexecutioncontextid)|Restituisce un identificatore univoco che può essere assegnato a un contesto di esecuzione che implementa l'interfaccia `IExecutionContext`.|
 |[GetOSVersion (funzione)](concurrency-namespace-functions.md#getosversion)|Restituisce la versione del sistema operativo.|
-|[GetProcessorCount (funzione)](concurrency-namespace-functions.md#getprocessorcount)|Restituisce il numero dei thread hardware sul sistema sottostante.|
+|[Funzione GetProcessorCount](concurrency-namespace-functions.md#getprocessorcount)|Restituisce il numero dei thread hardware sul sistema sottostante.|
 |[GetProcessorNodeCount (funzione)](concurrency-namespace-functions.md#getprocessornodecount)|Restituisce il numero di nodi NUMA o pacchetti del processore sul sistema sottostante.|
-|[GetSchedulerId (funzione)](concurrency-namespace-functions.md#getschedulerid)|Restituisce un identificatore univoco che può essere assegnato a un'utilità di pianificazione che implementa l'interfaccia `IScheduler`.|
+|[Funzione GetSchedulerId](concurrency-namespace-functions.md#getschedulerid)|Restituisce un identificatore univoco che può essere assegnato a un'utilità di pianificazione che implementa l'interfaccia `IScheduler`.|
 |[Funzione interruption_point](concurrency-namespace-functions.md#interruption_point)|Crea un punto di interruzione per l'annullamento. Se un annullamento è in corso nel contesto in cui questa funzione viene chiamata, questa genererà un'eccezione interna che interrompe l'esecuzione del lavoro parallelo in esecuzione. Se l'annullamento non è in corso, la funzione non esegue alcuna operazione.|
 |[Funzione is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Restituisce un'informazione che indica se il gruppo di attività attualmente in esecuzione inline sul contesto corrente si trova nel mezzo di un annullamento attivo (o lo sarà a breve). Si noti che se non è presente alcun gruppo di attività in esecuzione inline sul contesto corrente, sarà restituito `false`.|
 |[Funzione make_choice](concurrency-namespace-functions.md#make_choice)|Di overload. Costruisce un blocco della messaggistica `choice` da un oggetto `Scheduler` o `ScheduleGroup` facoltativo e due o più origini di input.|
@@ -204,17 +204,17 @@ namespace concurrency;
 |[Funzione parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Di overload. Calcola la somma di tutti gli elementi in un intervallo specificato elaborando le somme parziali successive, o calcola il risultato dei risultati parziali successivi ottenuti analogamente tramite l'uso di un'operazione binaria specificata diversa da quella di somma, in parallelo. `parallel_reduce` è semanticamente simile a `std::accumulate`, con la differenza che richiede all'operazione binaria di essere associativa e richiede un valore di identità anziché un valore iniziale.|
 |[Funzione parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Di overload. Dispone gli elementi in un intervallo specificato in un ordine non decrescente o in base a un criterio di ordinamento specificato da un predicato binario, in parallelo. Questa funzione è semanticamente simile a `std::sort` in quanto si tratta di un ordinamento basato sul confronto, instabile, sul posto.|
 |[Funzione parallel_transform](concurrency-namespace-functions.md#parallel_transform)|Di overload. Applica un oggetto funzione specificato ad ogni elemento di un intervallo di origine o a una coppia di elementi di due intervalli di origine e copia i valori restituiti dell'oggetto funzione in un intervallo di destinazione, in parallelo. Questa funzione è semanticamente equivalente a `std::transform`.|
-|[Receive (funzione)](concurrency-namespace-functions.md#receive)|Di overload. Un'implementazione di ricezione generale, che consente a un contesto di attendere i dati esattamente da un'origine e di filtrare i valori accettati.|
+|[Funzione receive](concurrency-namespace-functions.md#receive)|Di overload. Un'implementazione di ricezione generale, che consente a un contesto di attendere i dati esattamente da un'origine e di filtrare i valori accettati.|
 |[Funzione run_with_cancellation_token](concurrency-namespace-functions.md#run_with_cancellation_token)|Esegue un oggetto funzione immediatamente e in modo sincrono nel contesto di uno specifico token di annullamento.|
-|[Funzione Send](concurrency-namespace-functions.md#send)|Di overload. Un'operazione di invio sincrona che attende fino a quando la destinazione accetta o rifiuta il messaggio.|
+|[Funzione send](concurrency-namespace-functions.md#send)|Di overload. Un'operazione di invio sincrona che attende fino a quando la destinazione accetta o rifiuta il messaggio.|
 |[Funzione set_ambient_scheduler (runtime di concorrenza)](concurrency-namespace-functions.md#set_ambient_scheduler)||
 |[Funzione set_task_execution_resources](concurrency-namespace-functions.md#set_task_execution_resources)|Di overload. Limita le risorse di esecuzione usate dai thread di lavoro interni del runtime di concorrenza al set di affinità specificato.<br /><br /> È valido chiamare questo metodo solo prima della creazione di Gestione risorse o tra due cicli di vita di Gestione risorse. Può essere chiamato più volte a condizione che Gestione risorse non esista al momento della chiamata. Dopo aver impostato un limite di affinità, rimane attiva fino alla successiva chiamata al metodo `set_task_execution_resources`.<br /><br /> La maschera di affinità fornita non deve essere un sottoinsieme della maschera di affinità del processo. L'affinità del processo verrà aggiornata, se necessario.|
-|[Funzione swap](concurrency-namespace-functions.md#swap)|Scambia gli elementi di due oggetti `concurrent_vector`.|
+|[swap (funzione)](concurrency-namespace-functions.md#swap)|Scambia gli elementi di due oggetti `concurrent_vector`.|
 |[Funzione task_from_exception (runtime di concorrenza)](concurrency-namespace-functions.md#task_from_exception)||
 |[Funzione task_from_result (runtime di concorrenza)](concurrency-namespace-functions.md#task_from_result)||
 |[Funzione Trace_agents_register_name](concurrency-namespace-functions.md#trace_agents_register_name)|Associa il nome specificato con il blocco di messaggi o l'agente nella traccia ETW.|
 |[Funzione try_receive](concurrency-namespace-functions.md#try_receive)|Di overload. Un'implementazione di ricezione try generale, che consente a un contesto di cercare i dati esattamente da un'origine e di filtrare i valori accettati. Se i dati non sono pronti, il metodo restituirà false.|
-|[Wait (funzione)](concurrency-namespace-functions.md#wait)|Consente di sospendere il contesto corrente per un intervallo di tempo specificato.|
+|[Funzione wait](concurrency-namespace-functions.md#wait)|Consente di sospendere il contesto corrente per un intervallo di tempo specificato.|
 |[Funzione when_all](concurrency-namespace-functions.md#when_all)|Crea un'attività che verrà completata correttamente quando tutte le attività fornite come argomenti verranno completate.|
 |[Funzione when_any](concurrency-namespace-functions.md#when_any)|Di overload. Crea un'attività che verrà completata correttamente quando una qualsiasi delle attività fornite come argomenti verrà completata.|
 
@@ -222,14 +222,14 @@ namespace concurrency;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator!=](concurrency-namespace-operators.md#operator_neq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore non è uguale all'oggetto `concurrent_vector` sul lato destro.|
-|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|Di overload. Crea un'attività che verrà completata correttamente quando entrambe le attività fornite come argomenti vengono completate correttamente.|
+|[operatore! =](concurrency-namespace-operators.md#operator_neq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore non è uguale all'oggetto `concurrent_vector` sul lato destro.|
+|[operatore&&](concurrency-namespace-operators.md#operator_amp_amp)|Di overload. Crea un'attività che verrà completata correttamente quando entrambe le attività fornite come argomenti vengono completate correttamente.|
 |[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Di overload. Crea un'attività che verrà completata correttamente quando una delle attività fornite come argomenti verranno completate correttamente.|
-|[operator<](concurrency-namespace-operators.md#operator_lt)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore dell'oggetto `concurrent_vector` sul lato destro.|
-|[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore o uguale all'oggetto `concurrent_vector` sul lato destro.|
-|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è uguale all'oggetto `concurrent_vector` sul lato destro.|
-|[operator>](concurrency-namespace-operators.md#operator_gt)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore dell'oggetto `concurrent_vector` sul lato destro.|
-|[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `concurrent_vector` sul lato destro.|
+|[operatore<](concurrency-namespace-operators.md#operator_lt)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore dell'oggetto `concurrent_vector` sul lato destro.|
+|[operatore<=](concurrency-namespace-operators.md#operator_lt_eq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore o uguale all'oggetto `concurrent_vector` sul lato destro.|
+|[operatore = =](concurrency-namespace-operators.md#operator_eq_eq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è uguale all'oggetto `concurrent_vector` sul lato destro.|
+|[operatore>](concurrency-namespace-operators.md#operator_gt)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore dell'oggetto `concurrent_vector` sul lato destro.|
+|[operatore>=](concurrency-namespace-operators.md#operator_lt_eq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `concurrent_vector` sul lato destro.|
 
 ### <a name="constants"></a>Costanti
 
