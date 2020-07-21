@@ -4,21 +4,21 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b5d44a378e231b99f1b6461bc1329179bfd68f89
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d8d47e9dbfce9e22cf7aab2e3e7beab72d86c770
+ms.sourcegitcommit: 00af3df3331854b23693ee844e5e7c10c8b05a90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075845"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491375"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore per versione del compilatore
 
-Il compilatore può escludere gli avvisi introdotti dopo una versione specificata tramite l'opzione del compilatore [/WV](../../build/reference/compiler-option-warning-level.md) . Questa opzione è utile per gestire il processo di compilazione quando si introduce una nuova versione del set di strumenti e si desidera disattivare temporaneamente nuovi avvisi. Questa opzione consente di disattivare solo gli avvisi, non i nuovi messaggi di errore. Non eliminare tutti i nuovi avvisi in modo permanente. Si consiglia di compilare sempre al livello di avviso regolare più elevato, `/W4`e rimuovere l'opzione di `/Wv` nella compilazione non appena possibile.
+Il compilatore può escludere gli avvisi introdotti dopo una versione specificata tramite l' [`/Wv`](../../build/reference/compiler-option-warning-level.md) opzione del compilatore. Questa opzione è utile per gestire il processo di compilazione quando si introduce una nuova versione del set di strumenti e si desidera disattivare temporaneamente nuovi avvisi. Questa opzione consente di disattivare solo gli avvisi, non i nuovi messaggi di errore. Non eliminare tutti i nuovi avvisi in modo permanente. È consigliabile eseguire sempre la compilazione al livello di avviso normale più elevato, **`/W4`** e rimuovere l' **`/Wv`** opzione nella compilazione non appena possibile.
 
 Queste versioni del compilatore hanno introdotto nuovi avvisi:
 
 | Prodotto | Numero di versione del compilatore |
-|-|-|
+|--|--|
 | Visual Studio 2002 | 13.00.9466 |
 | Visual Studio 2003 | 13.10.3077 |
 | Visual Studio 2005 | 14.00.50727.762 |
@@ -38,30 +38,105 @@ Queste versioni del compilatore hanno introdotto nuovi avvisi:
 | Visual Studio 2017 versione 15.8 | 19.15.26726.0 |
 | Visual Studio 2017 versione 15,9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
+| Visual Studio 2019 versione 16.1 | 19.21.27702.0 |
+| Visual Studio 2019 versione 16.2 | 19.22.27905.0 |
+| Visual Studio 2019 versione 16,3 | 19.23.28105.0 |
+|  Visual Studio 2019 versione 16.4 | 19.24.28314.0 |
+| Visual Studio 2019 versione 16,5 | 19.25.28610.0 |
+| Visual Studio 2019 versione 16,6 | 19.26.28805.0 |
 
-È possibile specificare solo il numero principale, i numeri principali e secondari oppure i numeri principale, secondario e Build per l'opzione `/Wv`. Il compilatore segnala tutti gli avvisi che corrispondono a versioni che iniziano con il numero specificato ed evita tutti gli avvisi per le versioni successive al numero specificato. Ad esempio, `/Wv:17` segnala gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 e Elimina gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versioni successive. Per non visualizzare gli avvisi introdotti in Visual Studio 2015 Update 2 e versioni successive, è possibile usare `/Wv:19.00.23506`. Usare `/Wv:19.11` per segnalare gli avvisi introdotti in qualsiasi versione di Visual Studio precedente a Visual Studio 2017 versione 15,5, ma non visualizzare gli avvisi introdotti in Visual Studio 2017 versione 15,5 e successive.
+È possibile specificare solo il numero principale, i numeri principali e secondari oppure i numeri principale, secondario e Build per l' **`/Wv`** opzione. Il compilatore segnala tutti gli avvisi che corrispondono a versioni che iniziano con il numero specificato. Elimina tutti gli avvisi per le versioni successive al numero specificato. Ad esempio, **`/Wv:17`** segnala gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 e Elimina gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versioni successive. Per non visualizzare gli avvisi introdotti in Visual Studio 2015 Update 2 e versioni successive, è possibile usare **`/Wv:19.00.23506`** . Usare **`/Wv:19.11`** per segnalare gli avvisi introdotti in qualsiasi versione di Visual Studio precedente a Visual studio 2017 versione 15,5, ma non visualizzare gli avvisi introdotti in Visual studio 2017 versione 15,5 e successive.
 
-Le sezioni seguenti elencano gli avvisi introdotti da ogni versione C++ di Visual che è possibile escludere usando l'opzione del compilatore `/Wv`. L'opzione `/Wv` non può escludere gli avvisi non elencati, che prevedono le versioni specificate del compilatore.
+Le sezioni seguenti elencano gli avvisi introdotti da ogni versione di Visual C++ che possono essere eliminati usando l' **`/Wv`** opzione del compilatore. L' **`/Wv`** opzione non può escludere gli avvisi che non sono elencati, che hanno predato le versioni specificate del compilatore.
 
 ::: moniker range=">= vs-2019"
 
+## <a name="warnings-introduced-in-visual-studio-2019-version-166-compiler-version-1926288050"></a>Avvisi introdotti in Visual Studio 2019 versione 16,6 (compilatore versione 19.26.28805.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.25`** .
+
+| Avviso | Message |
+|--|--|
+| C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
+| C5208 | `unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-165-compiler-version-1925286100"></a>Avvisi introdotti in Visual Studio 2019 versione 16,5 (compilatore versione 19.25.28610.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.24`** .
+
+|Avviso|Message|
+|-|-|
+| C5061 | `the use of a comma operator as a subscript expression has been deprecated` |
+| C5062 | `enum direct list initialization between 'type-1' and 'type-2' is no longer supported` |
+| C5063 | `'std::is_constant_evaluated' always evaluates to true in manifestly constant-evaluated expressions` |
+| C5108 | `__VA_OPT__ is reserved for use in variadic macros` |
+| C5204 | `'type-name': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly` |
+| C5205 | `delete of an abstract class 'type-name' that has a non-virtual destructor results in undefined behavior` |
+| C5206 | `deduced return types for coroutines is a non-standard extension` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-164-compiler-version-1924283140"></a>Avvisi introdotti in Visual Studio 2019 versione 16,4 (compilatore versione 19.24.28314.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.23`** .
+
+| Avviso | Message |
+|--|--|
+| C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | Avviso equivalente a C2429 per le funzionalità del linguaggio
+| C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
+| C5202 | `a global module fragment can only contain preprocessor directives` |
+| C5203 | `a parenthesized declarator name after 'explicit' will be considered an explicit-specifier in C++20` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-163-compiler-version-1923281050"></a>Avvisi introdotti in Visual Studio 2019 versione 16,3 (compilatore versione 19.23.28105.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.22`** .
+
+| Avviso | Message |
+|--|--|
+| C4856 | `'value' is not a valid argument for '/d1initAll:FillPattern' (value must be between 0 and 255). Command-line flag ignored` |
+| C4857 | `C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-162-compiler-version-1922279050"></a>Avvisi introdotti in Visual Studio 2019 versione 16,2 (compilatore versione 19.22.27905.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.21`** .
+
+| Avviso | Message |
+|--|--|
+| C4855 | `implicit capture of 'this' via '[=]' is deprecated in 'version'` |
+| C5054 | `operator 'operator-name': deprecated between enumerations of different types` |
+| C5055 | `operator 'operator-name': deprecated between enumerations and floating-point types` |
+| C5056 | `operator 'operator-name': deprecated for array types` |
+| C5057 | `header unit reference to 'name' already exists.  Ignoring header unit 'header-name'` |
+| C5058 | `file system error: cannot find header file 'file-name' for header unit 'unit-name'` |
+| C5059 | `runtime checks and address sanitizer is not currently supported - disabling runtime checks` |
+| C5060 | `/Qpar and address sanitizer not currently supported - disabling auto-parallelization` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-161-compiler-version-1921277020"></a>Avvisi introdotti in Visual Studio 2019 versione 16,1 (compilatore versione 19.21.27702.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.20`** .
+
+| Avviso | Message |
+|--|--|
+| C5052 | `Keyword 'keyword-name' was introduced in C++<version> and requires use of the 'option-name' command-line option` |
+| C5053 | `support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension` |
+
 ## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Avvisi introdotti in Visual Studio 2019 RTW (versione del compilatore 19.20.27004.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.15`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.15`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
+| C4854 | `binding dereferenced null pointer to reference has undefined behavior` |
+| C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
 ::: moniker range=">= vs-2017"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avvisi introdotti in Visual Studio 2017 versione 15,8 (compilatore versione 19.15.26726.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.14`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.14`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
 | C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
 | C4845 | `'__declspec(no_init_all)' is ignored if '/d1initall[0|1|2|3]' was not specified on the command line` |
@@ -84,27 +159,27 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Avvisi introdotti in Visual Studio 2017 versione 15,7 (compilatore versione 19.14.26428.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.13`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.13`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Avvisi introdotti in Visual Studio 2017 versione 15,6 (compilatore versione 19.13.26128.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.12`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.12`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Avvisi introdotti in Visual Studio 2017 versione 15,5 (compilatore versione 19.12.25830.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.11`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.11`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
 | C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
 | C5039 | `'function': pointer or reference to potentially throwing function passed to extern C function under -EHc. Undefined behavior may occur if this function throws an exception.` |
@@ -115,10 +190,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Avvisi introdotti in Visual Studio 2017 versione 15,3 (compilatore versione 19.11.25506.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.10`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.10`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4597 | `undefined behavior: description` |
 | C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
 | C4749 | `conditionally supported: description` |
@@ -137,10 +212,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Avvisi introdotti in Visual Studio 2017 RTM (versione del compilatore 19.10.25017.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
 | C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
 | C4839 | `non-standard use of class 'class' as an argument to a variadic function` |
@@ -150,10 +225,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Avvisi introdotti in Visual Studio 2015 Update 3 (versione del compilatore 19.00.24215.1)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00.23918`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00.23918`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4467 | `usage of ATL attributes is deprecated` |
 | C4596 | `'name': illegal qualified name in member declaration` |
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
@@ -161,10 +236,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Avvisi introdotti in Visual Studio 2015 Update 2 (versione del compilatore 19.00.23918.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00.23506`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00.23506`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4466 | `Could not perform coroutine heap elision` |
 | C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
@@ -172,10 +247,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Avvisi introdotti in Visual Studio 2015 Update 1 (versione del compilatore 19.00.23506.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:19.00.23026`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00.23026`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
 | C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
@@ -183,10 +258,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Avvisi introdotti in Visual Studio 2015 RTM (versione del compilatore 19.00.23026.0)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:18`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:18`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4427 | `'error': overflow in constant division, undefined behavior` |
 | C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
 | C4455 | `'operator name': literal suffix identifiers that do not start with an underscore are reserved` |
@@ -242,10 +317,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Avvisi introdotti in Visual Studio 2013 (versione del compilatore 18.00.21005.1)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:17`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:17`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
 | C4316 | `'type': object allocated on the heap may not be aligned number` |
 | C4380 | `'type': A default constructor cannot be deprecated` |
@@ -271,10 +346,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Avvisi introdotti in Visual Studio 2012 (versione del compilatore 17.00.51106.1)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:16`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:16`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4330 | `attribute 'attribute' for section 'section' ignored` |
 | C4415 | `duplicate __declspec(code_seg('name'))` |
 | C4416 | `__declspec(code_seg(...)) contains empty string: ignored` |
@@ -304,7 +379,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746| `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
+| C4746 | `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -314,10 +389,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Avvisi introdotti in Visual Studio 2010 (versione del compilatore 16.00.40219.01)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:15`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:15`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4352 | `'name': intrinsic function already defined` |
 | C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
 | C4574 | `'name' is defined to be '0': did you mean to use '#if name'?` |
@@ -330,10 +405,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Avvisi introdotti in Visual Studio 2008 (versione del compilatore 15.00.21022.08)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:14`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:14`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
 | C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
 | C4491 | `'description': has an illegal IDL version format` |
@@ -345,10 +420,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Avvisi introdotti in Visual Studio 2005 (versione del compilatore 14.00.50727.762)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:13`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:13`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
 | C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
 | C4333 | `'expression': right shift by too large amount, data loss` |
@@ -463,7 +538,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 | C4826 | `Conversion from 'type' to 'type' is sign-extended. This may cause unexpected runtime behavior.` |
 | C4829 | `Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'` |
 | C4835 | `'type': the initializer for exported data will not be run until managed code is first executed in the host assembly` |
-| C4867 | `'type': non-standard syntax; use '&' to create a pointer to member` |
+| Avviso C4867 | `'type': non-standard syntax; use '&' to create a pointer to member` |
 | C4936 | `this __declspec is supported only when compiled with /clr or /clr:pure` |
 | C4937 | `'name' and 'name' are indistinguishable as arguments to 'option'` |
 | C4938 | `'type': Floating point reduction variable may cause inconsistent results under /fp:strict or #pragma fenv_access` |
@@ -488,10 +563,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Avvisi introdotti in Visual Studio 2003 (versione del compilatore 13.10.3077)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:13.00.9466`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:13.00.9466`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4343 | `#pragma optimize(description,off) overrides /Og option` |
 | C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
 | C4346 | `'type': dependent name is not a type` |
@@ -524,10 +599,10 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Avvisi introdotti in Visual Studio 2002 (versione del compilatore 13.00.9466)
 
-Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore `/Wv:12`.
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:12`** .
 
-|||
-|-|-|
+| Avviso | Message |
+|--|--|
 | C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
 | C4097 | `expected pragma parameter to be 'restore' or 'off'` |
 | C4165 | `'HRESULT' is being converted to 'bool'; are you sure this is what you want?` |
@@ -555,7 +630,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 | C4298 | `'name': identifier in type library 'description' is already a macro; renaming to '__name'` |
 | C4299 | `'name': identifier in type library 'description' is a keyword; renaming to '__name'` |
 | C4302 | `'expression': truncation from 'type' to 'type'` |
-| C4303 | `conversion from 'type' to 'type' is deprecated, use static_cast, __try_cast or dynamic_cast` |
+| L'avviso C4303 | `conversion from 'type' to 'type' is deprecated, use static_cast, __try_cast or dynamic_cast` |
 | C4314 | `expected pragma parameter to be '32' or '64'` |
 | C4315 | `'type': 'this' pointer for member 'type' may not be aligned number as expected by the constructor` |
 | C4318 | `passing constant zero as the length to memset` |
@@ -673,8 +748,8 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 ## <a name="see-also"></a>Vedere anche
 
-[Errori eC++ avvisi di C/compilatore e strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
 [Avvisi del compilatore C4000-C5999](compiler-warnings-c4000-c5999.md) \
- \ [opzione del compilatore/WV](../../build/reference/compiler-option-warning-level.md)
+[/WV (opzione del compilatore)](../../build/reference/compiler-option-warning-level.md) \
 [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
-[warning](../../preprocessor/warning.md)
+[avviso](../../preprocessor/warning.md)
