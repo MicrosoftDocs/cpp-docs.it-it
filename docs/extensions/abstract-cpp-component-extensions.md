@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214295"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract (C++/CLI e C++/CX)
 
@@ -29,11 +29,11 @@ La parola chiave **abstract** dichiara:
 
 *class-declaration* *class-identifier* **abstract {}**
 
-**virtual** *return-type* *member-function-identifier* **() abstract ;**
+**`virtual`***return-type* *member-function-identifier* **() abstract;**
 
 ### <a name="remarks"></a>Osservazioni
 
-La sintassi del primo esempio dichiara una classe astratta. Il componente *class-declaration* può essere una dichiarazione C++ nativa (**class** o **struct**) o una dichiarazione di estensione C++ (**ref class** o **ref struct**) se è specificata l'opzione del compilatore `/ZW` o `/clr`.
+La sintassi del primo esempio dichiara una classe astratta. Il componente della *dichiarazione di classe* può essere una dichiarazione c++ nativa (** `class` * * * * o **`struct`** ) o una dichiarazione di estensione c++ (** classe ref * * o **struct Ref**) se `/ZW` `/clr` è specificata l'opzione del compilatore o.
 
 La sintassi del secondo esempio dichiara una funzione membro virtuale astratta. Dichiarare che una funzione astratta equivale a dichiararla come funzione virtuale pura. Dichiarare una funzione membro astratta comporta che la classe contenitore venga dichiarata astratta.
 
@@ -41,7 +41,7 @@ La parola chiave **abstract** è supportata in codice nativo e specifico della p
 
 È possibile rilevare in fase di compilazione se un tipo è astratto con la caratteristica di tipo `__is_abstract(type)`. Per altre informazioni, vedere [Supporto del compilatore per caratteristiche di tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-La parola chiave **abstract** è un identificatore di override sensibile al contesto. Per altre informazioni sulle parole chiave sensibili al contesto, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md). Per altre informazioni sugli identificatori di override, vedere [Procedura: Dichiarare gli identificatori di override nelle compilazioni native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+La parola chiave **abstract** è un identificatore di override sensibile al contesto. Per altre informazioni sulle parole chiave sensibili al contesto, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md). Per altre informazioni sugli identificatori di override, vedere [procedura: dichiarare gli identificatori di override nelle compilazioni native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -102,4 +102,4 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

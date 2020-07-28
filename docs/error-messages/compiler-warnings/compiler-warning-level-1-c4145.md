@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-ms.openlocfilehash: 5028ae20c2413c98fa55bd81081552d22381cdbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19d2d1a018c7ee981f83aa6fa0914f1241c55538
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163676"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220106"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>Avviso del compilatore (livello 1) C4145
 
 'espressione1': espressione relazionale come espressione switch. Possibile confusione con 'espressione2'.
 
-Un'istruzione `switch` usa un'espressione relazionale come espressione di controllo, di conseguenza viene restituito un valore booleano per le istruzioni **case** . Si intendeva *espressione2*?
+Un' **`switch`** istruzione usa un'espressione relazionale come espressione di controllo, che restituisce un valore booleano per le **`case`** istruzioni. Si intendeva *espressione2*?
 
 ## <a name="example"></a>Esempio
 

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404551"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220548"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -440,7 +440,7 @@ Puntatore al tipo specificato dal nome del tipo di modello corrente.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione helper rimuove il sovraccarico non necessario causato dall'utilizzo della macro STDMETHOD. Questa funzione rende `IUnknown` `private` i tipi anziché `virtual` .
+Questa funzione helper rimuove il sovraccarico non necessario causato dall'utilizzo della macro STDMETHOD. Questa funzione rende `IUnknown` **`private`** i tipi anziché **`virtual`** .
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: operator =
 
@@ -532,9 +532,9 @@ Riferimento a un altro `ComPtr` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo operatore restituisce `true` se l'oggetto *a* è uguale all'oggetto *b*; in caso contrario, `false` .
+Il primo operatore restituisce **`true`** se l'oggetto *a* è uguale all'oggetto *b*; in caso contrario, **`false`** .
 
-Il secondo e il terzo operatore producono `true` se l'oggetto *a* è uguale a `nullptr` ; in caso contrario, `false` .
+Il secondo e il terzo operatore producono **`true`** se l'oggetto *a* è uguale a **`nullptr`** ; in caso contrario, **`false`** .
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: operator! =
 
@@ -567,9 +567,9 @@ Riferimento a un altro `ComPtr` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo operatore restituisce `true` se l'oggetto *a* non è uguale all'oggetto *b*; in caso contrario, `false` .
+Il primo operatore restituisce **`true`** se l'oggetto *a* non è uguale all'oggetto *b*; in caso contrario, **`false`** .
 
-Il secondo e il terzo operatore producono `true` se l'oggetto *a* non è uguale a `nullptr` ; in caso contrario, `false` .
+Il secondo e il terzo operatore producono **`true`** se l'oggetto *a* non è uguale a **`nullptr`** ; in caso contrario, **`false`** .
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>Operatore ComPtr:: operator Microsoft:: WRL::D etails:: BoolType
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se un'interfaccia è associata a questo `ComPtr` , l'indirizzo del membro dati [BoolStruct:: member](boolstruct-structure.md#member) ; in caso contrario, `nullptr` .
+Se un'interfaccia è associata a questo `ComPtr` , l'indirizzo del membro dati [BoolStruct:: member](boolstruct-structure.md#member) ; in caso contrario, **`nullptr`** .
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr: tr_:p
 
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>Parametri
 
 *r*<br/>
-Un oggetto `ComPtr`.
+Oggetto `ComPtr`.

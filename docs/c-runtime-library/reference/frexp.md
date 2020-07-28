@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911613"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220704"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
@@ -82,15 +82,15 @@ Puntatore all'esponente intero archiviato.
 
 ## <a name="remarks"></a>Osservazioni
 
-La **Funzione frexp** suddivide il valore a virgola mobile (*x*) in un mantissa (*m*) e un esponente (*n*), in modo che il valore assoluto di *m* sia maggiore o uguale a 0,5 e minore di 1,0 *e x* = *m* * 2<sup>*n*</sup>. L'esponente integer *n* viene archiviato nella posizione a cui punta *expptr*.
+La funzione **frexp** suddivide il valore a virgola mobile (*x*) in un mantissa (*m*) e un esponente (*n*), in modo che il valore assoluto di *m* sia maggiore o uguale a 0,5 e minore di 1,0 e *x*  =  *m* * 2<sup>*n*</sup>. L'esponente integer *n* viene archiviato nella posizione a cui punta *expptr*.
 
-C++ consente l'overload, quindi è possibile chiamare gli overload di **frexp**. In un programma C **frexp** accetta sempre un **valore Double** e un puntatore **int** e restituisce un **valore Double**.
+C++ consente l'overload, quindi è possibile chiamare gli overload di **frexp**. In un programma C **frexp** accetta sempre un oggetto **`double`** e un **`int`** puntatore e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**frexp**, **frexpf**, **frexpl**|\<math.h>|
 
@@ -123,6 +123,6 @@ frexp( 16.400000, &n ) = 0.512500, n = 5
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

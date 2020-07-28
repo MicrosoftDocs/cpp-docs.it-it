@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2697ce5a790fffe762d97ca3380853514de6d437
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760283"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220262"
 ---
 # <a name="compiler-error-c2682"></a>Errore del compilatore C2682
 
 non è possibile usare casting_operator per eseguire la conversione da' tipo1' a' tipo2'
 
-Un operatore di cast ha tentato di eseguire la conversione tra tipi incompatibili. Non è ad esempio possibile utilizzare l'operatore [dynamic_cast](../../cpp/dynamic-cast-operator.md) per convertire un puntatore a un riferimento. Non è possibile usare l'operatore `dynamic_cast` per eseguire il cast di qualificatori. Tutti i qualificatori sui tipi devono corrispondere.
+Un operatore di cast ha tentato di eseguire la conversione tra tipi incompatibili. Non è ad esempio possibile utilizzare l'operatore [dynamic_cast](../../cpp/dynamic-cast-operator.md) per convertire un puntatore a un riferimento. **`dynamic_cast`** Non è possibile usare l'operatore per eseguire il cast di qualificatori. Tutti i qualificatori sui tipi devono corrispondere.
 
-È possibile utilizzare l'operatore `const_cast` per rimuovere attributi quali `const`, `volatile`o `__unaligned`.
+È possibile utilizzare l' **`const_cast`** operatore per rimuovere attributi come **`const`** , **`volatile`** o **`__unaligned`** .
 
 L'esempio seguente genera l'C2682:
 

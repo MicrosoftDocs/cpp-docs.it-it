@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939406"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220743"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -73,9 +73,9 @@ Numero complesso.
 
 Valore assoluto di *z*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **CAB** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono valori **float** o **Long** **Double** . In un programma C, i **CAB** accetta sempre un valore **_Dcomplex** e restituisce un valore **Double** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **CAB** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono **`float`** **`long double`** valori o. In un programma C, i **CAB** accetta sempre un valore **_Dcomplex** e restituisce un **`double`** valore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -83,7 +83,7 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **CAB** che a
 |-------------|--------------|------------------|
 |**CAB**, **cabsf**, **CAB**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

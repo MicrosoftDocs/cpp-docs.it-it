@@ -43,12 +43,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956553"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220691"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -83,7 +83,7 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*stream*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
@@ -101,16 +101,16 @@ Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti 
 
 Queste funzioni convalidano i relativi parametri. Se il *flusso* è un puntatore di file non valido oppure *Format* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostano **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **fscanf_s** legge i dati dalla posizione corrente del *flusso* nei percorsi specificati dall' *argomento* (se presente). Ogni *argomento* deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per **scanf_s**; vedere [campi di specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) per una descrizione del *formato*.  **fwscanf_s** è una versione a caratteri wide di **fscanf_s**; l'argomento format per **fwscanf_s** è una stringa di caratteri wide. Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fscanf_s** attualmente non supporta l'input da un flusso Unicode.
 
-La differenza principale tra le funzioni più sicure (che hanno il suffisso **_S** ) e le altre versioni è che le funzioni più sicure richiedono che le dimensioni dei caratteri di ogni **c**, **c**, **s**, **s**e **[** campo di tipo siano passato come argomento immediatamente successivo alla variabile. Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
+La differenza principale tra le funzioni più sicure (che hanno il suffisso **_S** ) e le altre versioni è che le funzioni più sicure richiedono che le dimensioni dei caratteri di ogni **c**, **c**, **s**, **s**e **[** campo di tipo vengano passate come argomenti immediatamente successivi alla variabile. Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Il parametro size è di tipo **unsigned**, non **size_t**.
+> Il parametro size è di tipo **`unsigned`** , non **size_t**.
 
-Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

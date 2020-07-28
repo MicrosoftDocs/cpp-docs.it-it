@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: aec4df98413bf34ac1e2966d012bb905edd4775e
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e12855127e417472eb88c951b71881240b808013
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857931"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214204"
 ---
 # <a name="__noop"></a>__noop
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Il `__noop` intrinseco specifica che una funzione deve essere ignorata. L'elenco di argomenti viene analizzato, ma non viene generato alcun codice per gli argomenti. È destinata all'uso in funzioni di debug globali che accettano un numero variabile di argomenti.
+La **`__noop`** funzione intrinseca specifica che una funzione deve essere ignorata. L'elenco di argomenti viene analizzato, ma non viene generato alcun codice per gli argomenti. È destinata all'uso in funzioni di debug globali che accettano un numero variabile di argomenti.
 
-Il compilatore converte il `__noop` intrinseco in 0 in fase di compilazione.
+Il compilatore converte l'oggetto **`__noop`** intrinseco in 0 in fase di compilazione.
 
 ## <a name="example"></a>Esempio
 
-Nel codice seguente viene illustrato come utilizzare `__noop`.
+Il codice seguente illustra come usare **`__noop`** .
 
 ```cpp
 // compiler_intrinsics__noop.cpp
@@ -42,7 +42,7 @@ int main() {
 }
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

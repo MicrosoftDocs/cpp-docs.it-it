@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949cd208d8c4f86afb1ef0a36db8483de4aac232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185334"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214386"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Avviso del compilatore (livello 4) C4437
 
@@ -19,7 +19,7 @@ dynamic_cast dalla base virtuale ' Class1' a' Class2' potrebbe non riuscire in a
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Il compilatore ha rilevato un'operazione `dynamic_cast` con le seguenti caratteristiche.
+Il compilatore ha rilevato un' **`dynamic_cast`** operazione con le seguenti caratteristiche.
 
 - Il cast ha origine da un puntatore della classe base a un puntatore della classe derivata.
 
@@ -29,11 +29,11 @@ Il compilatore ha rilevato un'operazione `dynamic_cast` con le seguenti caratter
 
 - Il cast non viene trovato in un costruttore o in un distruttore della classe derivata o in una classe che eredita ulteriormente dalla classe derivata; in caso contrario, verrà emesso un avviso del compilatore C4436.
 
-L'avviso indica che il `dynamic_cast` potrebbe non funzionare correttamente se opera su un oggetto parzialmente costruito.  Questa situazione si verifica quando la funzione contenitore viene chiamata da un costruttore o distruttore di una classe che eredita la classe derivata denominata nell'avviso.  Se la classe derivata denominata nell'avviso non è mai derivata ulteriormente oppure la funzione contenitore non viene chiamata durante la costruzione o l'eliminazione di un oggetto, l'avviso può essere ignorato.
+L'avviso indica che il **`dynamic_cast`** potrebbe non funzionare correttamente se opera su un oggetto parzialmente costruito.  Questa situazione si verifica quando la funzione contenitore viene chiamata da un costruttore o distruttore di una classe che eredita la classe derivata denominata nell'avviso.  Se la classe derivata denominata nell'avviso non è mai derivata ulteriormente oppure la funzione contenitore non viene chiamata durante la costruzione o l'eliminazione di un oggetto, l'avviso può essere ignorato.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene generato C4437 e viene illustrato il problema di generazione del codice che deriva dal campo `vtordisp` mancante.
+Nell'esempio seguente viene generato C4437 e viene illustrato il problema di generazione del codice che deriva dal `vtordisp` campo mancante.
 
 ```cpp
 // C4437.cpp

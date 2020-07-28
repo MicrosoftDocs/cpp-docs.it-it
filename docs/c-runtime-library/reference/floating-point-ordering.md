@@ -21,16 +21,16 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333703"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220717"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 
-Determina la relazione tra due valori a virgola mobile e gestione degli ordini.
+Determina la relazione di ordinamento tra due valori a virgola mobile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -107,33 +107,33 @@ inline bool isunordered(
 ### <a name="parameters"></a>Parametri
 
 *x*, *y*<br/>
-I valori a virgola mobile da confrontare.
+Valori a virgola mobile da confrontare.
 
 ## <a name="return-value"></a>Valore restituito
 
-In tutti i confronti, valori infiniti dello stesso segno considerati uguali. Infinito negativo è minore rispetto a qualsiasi valore finito o infinito positivo. Infinito positivo è maggiore di qualsiasi valore finito o infinito negativo. Gli zeri sono uguali indipendentemente dal segno più. NaN non sono minore, uguale o maggiore di qualsiasi valore, tra cui un altro NaN.
+In tutti i confronti, gli infiniti dello stesso segno vengono considerati uguali. L'infinito negativo è minore di qualsiasi valore finito o infinito positivo. L'infinito positivo è maggiore di qualsiasi valore finito o infinito negativo. Gli zeri sono uguali indipendentemente dal segno. NaNs non è minore, uguale o maggiore di qualsiasi valore, incluso un altro valore NaN.
 
-Quando nessuna delle due argomento è NaN, le macro di gestione degli ordini **isgreater**, **isgreaterequal**, **isless**, e **islessequal** restituire un diverso da zero valore se la relazione di ordinamento specificata tra *x* e *y* risulta vera. Queste macro restituiscono 0 se uno o entrambi gli argomenti sono valori NaN o se la relazione di ordinamento è false. I moduli di funzioni si comportano allo stesso modo, ma restituiscono **true** oppure **false**.
+Quando nessuno dei due argomenti è un valore NaN, **le macro di ordinamento,** **isgreaterequal**, **a meno**e **islessequal** , restituiscono un valore diverso da zero se la relazione di ordinamento specificata tra *x* e *y* include true. Queste macro restituiscono 0 se uno o entrambi gli argomenti sono NaNs o se la relazione di ordinamento è false. I form della funzione si comportano allo stesso modo, ma restituiscono **`true`** o **`false`** .
 
-Il **islessgreater** macro restituisce un valore diverso da zero se entrambi *x* e *y* non sono valori NaN, e *x* può essere minore o maggiore di *y*. Restituisce 0 se uno o entrambi gli argomenti sono valori NaN o se i valori sono uguali. Il modulo di funzione si comporta allo stesso modo, ma restituisce **true** oppure **false**.
+La macro **islessgreater** restituisce un valore diverso da zero se *x* e *y* non sono Nans e *x* è minore di o maggiore di *y*. Restituisce 0 se uno o entrambi gli argomenti sono NaNs o se i valori sono uguali. Il form della funzione si comporta allo stesso modo, ma restituisce **`true`** o **`false`** .
 
-Il **isunordered** macro restituisce un valore diverso da zero se *x*, *y*, o entrambi sono valori NaN. In caso contrario restituirà 0. Il modulo di funzione si comporta allo stesso modo, ma restituisce **true** oppure **false**.
+La macro **isunordered** restituisce un valore diverso da zero se *x*, *y*o entrambi sono Nans. In caso contrario, viene restituito 0. Il form della funzione si comporta allo stesso modo, ma restituisce **`true`** o **`false`** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Queste operazioni di confronto vengono implementate come macro quando viene compilato come C sia come funzioni di modello inline durante la compilazione come C++.
+Queste operazioni di confronto vengono implementate come macro quando vengono compilate come C e come funzioni del modello inline quando vengono compilate come C++.
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**, **isgreaterequal**, **isless**,<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> o \<cmath> |
+| **isgreater** **isgreaterequal**, **topless**,<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> o \<cmath> |
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2271
 ms.assetid: ea47bf57-f55d-4171-8e98-95a71d62820e
-ms.openlocfilehash: bddd5a413c0ca16d7b344e5d6c478b07f82ca1a5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8972b055020e5b28e8e33cd37ec964069ecc7dc6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758710"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220405"
 ---
 # <a name="compiler-error-c2271"></a>Errore del compilatore C2271
 
 ' operator ': New/Delete non può contenere modificatori di elenco formali
 
-L'operatore (`new` o `delete`) viene dichiarato con un identificatore del modello di memoria.
+L'operatore ( **`new`** o **`delete`** ) viene dichiarato con un identificatore del modello di memoria.
 
 L'esempio seguente genera l'C2271:
 

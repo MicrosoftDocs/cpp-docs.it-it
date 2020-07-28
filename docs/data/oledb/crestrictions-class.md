@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211302"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220444"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
@@ -47,7 +47,7 @@ Puntatore al GUID per lo schema.
 
 **Intestazione:** Atldbsch. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
@@ -82,7 +82,7 @@ in Specifica un oggetto sessione esistente usato per la connessione all'origine 
 in Specifica le restrizioni per il set di righe dello schema.
 
 *bBind*<br/>
-in Specifica se associare automaticamente la mappa delle colonne. Il valore predefinito è **true**, che determina l'associazione automatica della mappa delle colonne. Se si imposta *bBind* su **false** , viene impedita l'associazione automatica della mappa delle colonne, in modo che sia possibile eseguire il binding manualmente. (L'associazione manuale è di particolare interesse per gli utenti OLAP).
+in Specifica se associare automaticamente la mappa delle colonne. Il valore predefinito è **`true`** , che fa sì che la mappa a colonne venga associata automaticamente. L'impostazione di *bBind* su **`false`** impedisce l'associazione automatica della mappa delle colonne in modo che sia possibile eseguire il binding manualmente. (L'associazione manuale è di particolare interesse per gli utenti OLAP).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -97,5 +97,5 @@ Per informazioni sulle restrizioni definite su ogni set di righe dello schema, v
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Classi Rowset dello schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

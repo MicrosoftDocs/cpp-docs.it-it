@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913021"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220756"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -77,13 +77,13 @@ Le funzioni **acosh** restituiscono il coseno iperbolico inverso (coseno iperbol
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si usa C++, è possibile chiamare gli overload di **acosh** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C **acosh** accetta e restituisce sempre **Double**.
+Quando si usa C++, è possibile chiamare overload di **acosh** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C **acosh** accetta e restituisce sempre **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
@@ -119,7 +119,7 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

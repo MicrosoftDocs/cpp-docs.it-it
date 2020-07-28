@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: c1989518c3965f8faa54a05b2925d0e37455625e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 639fb14fc409a9954315184bab7ae1127460ea0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991700"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214412"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>Avviso del compilatore (livello 3) C4738
 
@@ -19,7 +19,7 @@ archiviazione in memoria del risultato float a 32 bit, possibile riduzione delle
 
 C4738 avverte che il risultato di un'assegnazione, un cast, un argomento passato o un'altra operazione potrebbe dover essere arrotondato o che l'operazione ha esaurito i registri ed è necessario usare la memoria (fuoriuscita). Ciò può comportare una perdita delle prestazioni.
 
-Per risolvere questo avviso ed evitare l'arrotondamento, compilare con [/FP: Fast](../../build/reference/fp-specify-floating-point-behavior.md) o usare `double` anziché `float`.
+Per risolvere questo avviso ed evitare l'arrotondamento, compilare con [/FP: Fast](../../build/reference/fp-specify-floating-point-behavior.md) o use **`double`** anziché **`float`** .
 
 Per risolvere questo avviso ed evitare l'esaurimento dei registri, modificare l'ordine di calcolo e modificare l'uso dell'incorporamento
 

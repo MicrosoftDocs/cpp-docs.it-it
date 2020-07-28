@@ -1,116 +1,116 @@
 ---
-title: switchIstruzione (C)
+title: :::no-loc(switch):::Istruzione (C)
 ms.date: 04/25/2020
 f1_keywords:
-- switch
+- ':::no-loc(switch):::'
 helpviewer_keywords:
-- switch keyword [C]
+- ':::no-loc(switch)::: keyword [C]'
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
 no-loc:
-- switch
-- case
-- default
-- break
-ms.openlocfilehash: eb18b6244318b595e67cc45f99dfcde314866f55
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+- ':::no-loc(switch):::'
+- ':::no-loc(case):::'
+- ':::no-loc(default):::'
+- ':::no-loc(break):::'
+ms.openlocfilehash: bdd6885f67728a3c81e395f05c33191156896ad9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825678"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220782"
 ---
-# <a name="switch-statement-c"></a>`switch`Istruzione (C)
+# <a name="no-locswitch-statement-c"></a>`:::no-loc(switch):::`Istruzione (C)
 
-Le __`switch`__ istruzioni __`case`__ e consentono di controllare le complesse operazioni condizionali e di branching. L' __`switch`__ istruzione trasferisce il controllo a un'istruzione all'interno del corpo.
+Le **`:::no-loc(switch):::`** **`:::no-loc(case):::`** istruzioni e consentono di controllare le complesse operazioni condizionali e di branching. L' **`:::no-loc(switch):::`** istruzione trasferisce il controllo a un'istruzione all'interno del corpo.
 
 ## <a name="syntax"></a>Sintassi
 
 > *`selection-statement`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
+> &nbsp;&nbsp;&nbsp;&nbsp; **`:::no-loc(switch)::: (`**&nbsp;*`expression`* &nbsp;**`)`**&nbsp;*`statement`*
 
 > *`labeled-statement`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
-> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
+> &nbsp;&nbsp;&nbsp;&nbsp; **`:::no-loc(case):::`**&nbsp;*`constant-expression`*&nbsp;**`:`**&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; **`:::no-loc(default):::`**&nbsp;**`:`**&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Osservazioni
 
-Un' __`switch`__ istruzione fa sì che il controllo venga *`labeled-statement`* trasferito a uno nel corpo dell'istruzione, a seconda del *`expression`* valore di.
+Un' **`:::no-loc(switch):::`** istruzione fa sì che il controllo venga trasferito a uno *`labeled-statement`* nel corpo dell'istruzione, a seconda del valore di *`expression`* .
 
-I valori di *`expression`* e *`constant-expression`* devono avere un tipo integrale. Un *`constant-expression`* oggetto deve avere un valore integrale costante non ambiguo in fase di compilazione.
+I valori di *`expression`* e *`constant-expression`* devono avere un tipo integrale. Un oggetto *`constant-expression`* deve avere un valore integrale costante non ambiguo in fase di compilazione.
 
-Il controllo passa all' **`case`** istruzione il *`constant-expression`* cui valore corrisponde al valore *`expression`* di. L' __`switch`__ istruzione può includere un numero qualsiasi __`case`__ di istanze. Tuttavia, due *`constant-expression`* valori nella stessa __`switch`__ istruzione non possono avere lo stesso valore. L'esecuzione del __`switch`__ corpo dell'istruzione inizia in corrispondenza della prima istruzione in o dopo *`labeled-statement`* la corrispondenza. L'esecuzione procede fino alla fine del corpo o finché un' __`break`__ istruzione non trasferisce il controllo all'esterno del corpo.
+Il controllo passa all' **`:::no-loc(case):::`** istruzione il cui *`constant-expression`* valore corrisponde al valore di *`expression`* . L' **`:::no-loc(switch):::`** istruzione può includere un numero qualsiasi di **`:::no-loc(case):::`** istanze. Tuttavia, due *`constant-expression`* valori nella stessa istruzione non **`:::no-loc(switch):::`** possono avere lo stesso valore. L'esecuzione del **`:::no-loc(switch):::`** corpo dell'istruzione inizia in corrispondenza della prima istruzione in o dopo la corrispondenza *`labeled-statement`* . L'esecuzione procede fino alla fine del corpo o finché un'istruzione non **`:::no-loc(break):::`** trasferisce il controllo all'esterno del corpo.
 
-L'uso dell' __`switch`__ istruzione in genere è simile al seguente:
+L'uso dell' **`:::no-loc(switch):::`** istruzione in genere è simile al seguente:
 
 ```C
-switch ( expression )
+:::no-loc(switch)::: ( expression )
 {
     // declarations
     // . . .
-    case constant_expression:
+    :::no-loc(case)::: constant_expression:
         // statements executed if the expression equals the
         // value of this constant_expression
-        break;
-    default:
+        :::no-loc(break):::;
+    :::no-loc(default)::::
         // statements executed if expression does not equal
-        // any case constant_expression
+        // any :::no-loc(case)::: constant_expression
 }
 ```
 
-È possibile utilizzare l' __`break`__ istruzione per terminare l'elaborazione di una particolare istruzione con etichetta all' __`switch`__ interno dell'istruzione. Viene diramato fino alla fine __`switch`__ dell'istruzione. Senza __`break`__, il programma continua con la successiva istruzione con etichetta, eseguendo le istruzioni fino a quando __`break`__ non viene raggiunto un oggetto o la fine dell'istruzione. Questa continuazione potrebbe essere auspicabile in alcune situazioni.
+È possibile utilizzare l' **`:::no-loc(break):::`** istruzione per terminare l'elaborazione di una particolare istruzione con etichetta all'interno dell' **`:::no-loc(switch):::`** istruzione. Viene diramato fino alla fine dell' **`:::no-loc(switch):::`** istruzione. Senza **`:::no-loc(break):::`** , il programma continua con la successiva istruzione con etichetta, eseguendo le istruzioni fino a quando non **`:::no-loc(break):::`** viene raggiunto un oggetto o la fine dell'istruzione. Questa continuazione potrebbe essere auspicabile in alcune situazioni.
 
-L' __`default`__ istruzione viene eseguita se nessun __`case`__ *`constant-expression`* valore è uguale al valore di *`expression`*. Se non è presente __`default`__ alcuna istruzione e non __`case`__ viene trovata alcuna corrispondenza, nessuna delle istruzioni nel __`switch`__ corpo viene eseguita. Può essere presente al massimo un' __`default`__ istruzione. L' __`default`__ istruzione non deve necessariamente arrivare alla fine. Può essere visualizzato in qualsiasi punto del corpo dell' __`switch`__ istruzione. Un' __`case`__ etichetta __`default`__ o può essere presente solo all' __`switch`__ interno di un'istruzione.
+L' **`:::no-loc(default):::`** istruzione viene eseguita se nessun **`:::no-loc(case):::`** *`constant-expression`* valore è uguale al valore di *`expression`* . Se non è presente alcuna **`:::no-loc(default):::`** istruzione e non **`:::no-loc(case):::`** viene trovata alcuna corrispondenza, nessuna delle istruzioni nel **`:::no-loc(switch):::`** corpo viene eseguita. Può essere presente al massimo un' **`:::no-loc(default):::`** istruzione. L' **`:::no-loc(default):::`** istruzione non deve necessariamente arrivare alla fine. Può essere visualizzato in qualsiasi punto del corpo dell' **`:::no-loc(switch):::`** istruzione. Un' **`:::no-loc(case):::`** **`:::no-loc(default):::`** etichetta o può essere presente solo all'interno di un' **`:::no-loc(switch):::`** istruzione.
 
-Il tipo di __`switch`__ *`expression`* e __`case`__ *`constant-expression`* deve essere integrale. Il valore di ogni __`case`__ *`constant-expression`* deve essere univoco all'interno del corpo dell'istruzione.
+Il tipo di **`:::no-loc(switch):::`** *`expression`* e **`:::no-loc(case):::`** *`constant-expression`* deve essere integrale. Il valore di ogni **`:::no-loc(case):::`** *`constant-expression`* deve essere univoco all'interno del corpo dell'istruzione.
 
-Le __`case`__ etichette __`default`__ e del corpo __`switch`__ dell'istruzione sono significative solo nel test iniziale che determina la posizione in cui viene avviata l'esecuzione nel corpo dell'istruzione. __`switch`__ le istruzioni possono essere nidificate. Tutte le variabili statiche vengono inizializzate prima dell'esecuzione __`switch`__ in qualsiasi istruzione.
+Le **`:::no-loc(case):::`** **`:::no-loc(default):::`** etichette e del **`:::no-loc(switch):::`** corpo dell'istruzione sono significative solo nel test iniziale che determina la posizione in cui viene avviata l'esecuzione nel corpo dell'istruzione. **`:::no-loc(switch):::`** le istruzioni possono essere nidificate. Tutte le variabili statiche vengono inizializzate prima dell'esecuzione in qualsiasi **`:::no-loc(switch):::`** istruzione.
 
 > [!NOTE]
-> Le dichiarazioni possono essere visualizzate all'inizio dell'istruzione composta che costituisce il __`switch`__ corpo, ma le inizializzazioni incluse nelle dichiarazioni non vengono eseguite. L' __`switch`__ istruzione trasferisce il controllo direttamente a un'istruzione eseguibile nel corpo, ignorando le righe che contengono inizializzazioni.
+> Le dichiarazioni possono essere visualizzate all'inizio dell'istruzione composta che costituisce il **`:::no-loc(switch):::`** corpo, ma le inizializzazioni incluse nelle dichiarazioni non vengono eseguite. L' **`:::no-loc(switch):::`** istruzione trasferisce il controllo direttamente a un'istruzione eseguibile nel corpo, ignorando le righe che contengono inizializzazioni.
 
-Gli esempi seguenti illustrano __`switch`__ le istruzioni:
+Gli esempi seguenti illustrano le **`:::no-loc(switch):::`** istruzioni:
 
 ```C
-switch( c )
+:::no-loc(switch):::( c )
 {
-    case 'A':
+    :::no-loc(case)::: 'A':
         capital_a++;
-    case 'a':
+    :::no-loc(case)::: 'a':
         letter_a++;
-    default :
+    :::no-loc(default)::: :
         total++;
 }
 ```
 
-Tutte e tre le __`switch`__ istruzioni del corpo in questo esempio vengono eseguite `c` se è uguale `'A'`a, poiché __`break`__ nessuna istruzione viene visualizzata prima __`case`__ di quanto segue. Il controllo di esecuzione viene trasferito alla prima istruzione (`capital_a++;`) e procede in ordine nel resto del corpo. Se `c` è uguale a `'a'`, `letter_a` e `total` vengono incrementati. Viene `total` incrementato solo quando `c` non è `'A'` uguale `'a'`a o.
+Tutte e tre le istruzioni del **`:::no-loc(switch):::`** corpo in questo esempio vengono eseguite se `c` è uguale a `'A'` , poiché nessuna **`:::no-loc(break):::`** istruzione viene visualizzata prima di quanto segue **`:::no-loc(case):::`** . Il controllo di esecuzione viene trasferito alla prima istruzione (`capital_a++;`) e procede in ordine nel resto del corpo. Se `c` è uguale a `'a'`, `letter_a` e `total` vengono incrementati. `total`Viene incrementato solo quando `c` non è uguale a `'A'` o `'a'` .
 
 ```C
-switch( i )
+:::no-loc(switch):::( i )
 {
-    case -1:
+    :::no-loc(case)::: -1:
         n++;
-        break;
-    case 0 :
+        :::no-loc(break):::;
+    :::no-loc(case)::: 0 :
         z++;
-        break;
-    case 1 :
+        :::no-loc(break):::;
+    :::no-loc(case)::: 1 :
         p++;
-        break;
+        :::no-loc(break):::;
 }
 ```
 
-In questo esempio, un' __`break`__ istruzione segue ogni istruzione del __`switch`__ corpo. L' __`break`__ istruzione forza un'uscita dal corpo dell'istruzione dopo l'esecuzione di un'istruzione. Se `i` è ugual a -1, solo `n` viene incrementato. L' __`break`__ istruzione `n++;` seguente causa il superamento del controllo di esecuzione dal corpo dell'istruzione, ignorando le istruzioni rimanenti. Analogamente, se `i` è uguale a 0, solo `z` viene incrementato; se `i` è uguale a 1, solo `p` viene incrementato. L'istruzione __`break`__ finale non è strettamente necessaria, poiché il controllo passa fuori dal corpo alla fine dell'istruzione composta. È incluso per coerenza.
+In questo esempio, un' **`:::no-loc(break):::`** istruzione segue ogni istruzione del **`:::no-loc(switch):::`** corpo. L' **`:::no-loc(break):::`** istruzione forza un'uscita dal corpo dell'istruzione dopo l'esecuzione di un'istruzione. Se `i` è ugual a -1, solo `n` viene incrementato. L' **`:::no-loc(break):::`** istruzione seguente `n++;` causa il superamento del controllo di esecuzione dal corpo dell'istruzione, ignorando le istruzioni rimanenti. Analogamente, se `i` è uguale a 0, solo `z` viene incrementato; se `i` è uguale a 1, solo `p` viene incrementato. L' **`:::no-loc(break):::`** istruzione finale non è strettamente necessaria, poiché il controllo passa fuori dal corpo alla fine dell'istruzione composta. È incluso per coerenza.
 
-Una singola istruzione può contenere più __`case`__ etichette, come illustrato nell'esempio seguente:
+Una singola istruzione può contenere più **`:::no-loc(case):::`** etichette, come illustrato nell'esempio seguente:
 
 ```C
-switch( c )
+:::no-loc(switch):::( c )
 {
-    case 'a' :
-    case 'b' :
-    case 'c' :
-    case 'd' :
-    case 'e' :
-    case 'f' :  convert_hex(c);
+    :::no-loc(case)::: 'a' :
+    :::no-loc(case)::: 'b' :
+    :::no-loc(case)::: 'c' :
+    :::no-loc(case)::: 'd' :
+    :::no-loc(case)::: 'e' :
+    :::no-loc(case)::: 'f' :  convert_hex(c);
 }
 ```
 
@@ -118,10 +118,10 @@ In questo esempio, se *constant-expression* è uguale a qualsiasi lettera tra `'
 
 ### <a name="microsoft-specific"></a>Specifico di Microsoft
 
-Microsoft C non limita il numero di __`case`__ valori in un' __`switch`__ istruzione. Tale numero è limitato solo dalla memoria disponibile. ANSI C richiede che siano consentite almeno 257 __`case`__ etichette __`switch`__ in un'istruzione.
+Microsoft C non limita il numero di **`:::no-loc(case):::`** valori in un' **`:::no-loc(switch):::`** istruzione. Tale numero è limitato solo dalla memoria disponibile. ANSI C richiede che **`:::no-loc(case):::`** siano consentite almeno 257 etichette in un' **`:::no-loc(switch):::`** istruzione.
 
-default Per Microsoft C, le estensioni Microsoft sono abilitate. Usare l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) per disabilitare queste estensioni.
+:::no-loc(default):::Per Microsoft C, le estensioni Microsoft sono abilitate. Usare l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) per disabilitare queste estensioni.
 
 ## <a name="see-also"></a>Vedere anche
 
-[switchIstruzione (C++)](../cpp/switch-statement-cpp.md)
+[:::no-loc(switch):::Istruzione (C++)](../cpp/:::no-loc(switch):::-statement-cpp.md)

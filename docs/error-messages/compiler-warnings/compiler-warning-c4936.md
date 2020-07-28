@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-ms.openlocfilehash: c6d54cf8b6704eec2a9e6af890c5c80c67106995
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9b1c3d1de662451432fe4fa0f058c503dc1f7b39
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165002"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220119"
 ---
 # <a name="compiler-warning-c4936"></a>Avviso del compilatore C4936
 
@@ -21,7 +21,7 @@ ms.locfileid: "80165002"
 
 L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
-È stato usato un modificatore `__declspec` , ma tale modificatore `__declspec` è valido solo quando viene compilato con una delle opzioni [/clr](../../build/reference/clr-common-language-runtime-compilation.md) .
+**`__declspec`** È stato usato un modificatore **`__declspec`** , ma tale modificatore è valido solo quando viene compilato con una delle opzioni [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) e [process](../../cpp/process.md).
 

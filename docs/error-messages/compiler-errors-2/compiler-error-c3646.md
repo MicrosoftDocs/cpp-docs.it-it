@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c11133fbf28cfb98de1367955c00c899e8b1042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200473"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214529"
 ---
 # <a name="compiler-error-c3646"></a>Errore del compilatore C3646
 
@@ -21,7 +21,7 @@ ms.locfileid: "80200473"
 
 Il compilatore ha trovato un token nella posizione in cui era prevista la ricerca di un identificatore di override, ma il token non è stato riconosciuto dal compilatore.
 
-Se, ad esempio, l' *identificatore* non riconosciuto è **_NOEXCEPT**, sostituirlo con la parola chiave **noexcept**.
+Se, ad esempio, l' *identificatore* non riconosciuto è **_NOEXCEPT**, sostituirlo con la parola chiave **`noexcept`** .
 
 Per altre informazioni, vedere [identificatori di override](../../extensions/override-specifiers-cpp-component-extensions.md).
 

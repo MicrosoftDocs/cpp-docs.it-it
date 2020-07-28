@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299078"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220808"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 
@@ -18,15 +18,15 @@ Nella tabella seguente è riportato un riepilogo delle caratteristiche di visibi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 
-|Attributi:<br /><br /> Level|Item|Classe di archiviazione<br /><br /> Identificatore|Risultato:<br /><br /> Durata|Visibilità|
+|Attributi:<br /><br /> Livello|Elemento|Classe di archiviazione<br /><br /> Identificatore|Risultato:<br /><br /> Durata|Visibilità|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Ambito di tipo file|Definizione di variabile|**statico**|Globale|Resto del file di origine in cui si verifica|
-||Dichiarazione di variabile|**extern**|Globale|Resto del file di origine in cui si verifica|
-||Prototipo o definizione di funzione|**statico**|Globale|File di origine singolo|
-||Prototipo di funzione|**extern**|Globale|Resto del file di origine|
-|Ambito del blocco|Dichiarazione di variabile|**extern**|Globale|Blocca|
-||Definizione di variabile|**statico**|Globale|Blocca|
-||Definizione di variabile|**auto** o **register**|Locale|Blocca|
+|Ambito di tipo file|Definizione di variabile|**`static`**|Global|Resto del file di origine in cui si verifica|
+||Dichiarazione di variabile|**`extern`**|Global|Resto del file di origine in cui si verifica|
+||Prototipo o definizione di funzione|**`static`**|Global|File di origine singolo|
+||Prototipo di funzione|**`extern`**|Global|Resto del file di origine|
+|Ambito del blocco|Dichiarazione di variabile|**`extern`**|Global|Blocca|
+||Definizione di variabile|**`static`**|Global|Blocca|
+||Definizione di variabile|**`auto`** o**`register`**|Locale|Blocca|
 
 ## <a name="example"></a>Esempio
 

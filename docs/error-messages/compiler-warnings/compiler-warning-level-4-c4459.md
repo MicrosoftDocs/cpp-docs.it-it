@@ -1,29 +1,29 @@
 ---
-title: Compilatore avviso (livello 4) C4459
+title: Avviso del compilatore (livello 4) C4459
 ms.date: 11/04/2016
 f1_keywords:
 - C4459
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d6d0a802f9f628145fbc5910aca805a5b01b94d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214373"
 ---
-# <a name="compiler-warning-level-4-c4459"></a>Compilatore avviso (livello 4) C4459
+# <a name="compiler-warning-level-4-c4459"></a>Avviso del compilatore (livello 4) C4459
 
-> dichiarazione di '*identificatore*' nasconde la dichiarazione globale
+> la dichiarazione di '*Identifier*' nasconde la dichiarazione globale
 
-La dichiarazione di *identifier* nell'ambito locale nasconde la dichiarazione dei con denominazione identica *identificatore* in ambito globale. Questo avviso informa l'utente che fa riferimento a *identificatore* in questo ambito risolvono nella versione dichiarata localmente, non la versione globale, che potrebbe non essere lo scopo previsto. In generale, è consigliabile che è ridurre al minimo l'uso delle variabili globali come una buona norma di progettazione. Per ridurre al minimo inquinamento dello spazio dei nomi globali, è consigliabile usare uno spazio dei nomi denominato per le variabili globali.
+La dichiarazione dell' *identificatore* nell'ambito locale nasconde la dichiarazione dell' *identificatore* con nome identico nell'ambito globale. Questo avviso informa che i riferimenti all' *identificatore* in questo ambito vengono risolti nella versione dichiarata localmente, non nella versione globale, che può essere o meno intenzionale. In genere, è consigliabile ridurre al minimo l'uso di variabili globali come procedura di progettazione efficace. Per ridurre al minimo l'inquinamento dello spazio dei nomi globale, è consigliabile usare uno spazio dei nomi denominato per le variabili globali.
 
-Questo avviso è stata introdotta in Visual Studio 2015, in Microsoft C++ versione del compilatore 18.00 inizia. Per eliminare gli avvisi da tale versione del compilatore o in un secondo momento durante la migrazione del codice, usare il [/WV:18](../../build/reference/compiler-option-warning-level.md) opzione del compilatore.
+Questo avviso è stato nuovo in Visual Studio 2015, nella versione 18,00 del compilatore Microsoft C++. Per escludere gli avvisi da tale versione del compilatore o in seguito durante la migrazione del codice, usare l'opzione del compilatore [/WV: 18](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4459:
+L'esempio seguente genera l'C4459:
 
 ```cpp
 // C4459_hide.cpp
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-Un modo per risolvere questo problema è per creare uno spazio dei nomi per le funzioni globali, ma non usa un `using` direttiva per portare tale spazio dei nomi nell'ambito, pertanto tutti i riferimenti devono utilizzare l'ambiguità di nomi completi:
+Un modo per risolvere questo problema consiste nel creare uno spazio dei nomi per gli elementi globali, ma non usare una **`using`** direttiva per portare tale spazio dei nomi nell'ambito, in modo che tutti i riferimenti debbano usare i nomi completi non ambigui:
 
 ```cpp
 // C4459_namespace.cpp

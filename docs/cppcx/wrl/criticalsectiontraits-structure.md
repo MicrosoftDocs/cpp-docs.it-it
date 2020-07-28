@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: 05c93bf6a2765bd11489075067c627ab3c3ab691
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3573cad21734a97629cbc12b76d73b99024cbc2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220509"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits (struttura)
 
@@ -34,14 +34,14 @@ struct CriticalSectionTraits;
 
 Nome   | Descrizione
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | Oggetto `typedef` che definisce un puntatore a una sezione critica. `Type` viene definito come `typedef CRITICAL_SECTION* Type;`.
+`Type` | Oggetto **`typedef`** che definisce un puntatore a una sezione critica. `Type` viene definito come `typedef CRITICAL_SECTION* Type;`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                       | Descrizione
 ---------------------------------------------------------- | -----------------
-[CriticalSectionTraits::GetInvalidValue](#getinvalidvalue) | Specializza un `CriticalSection` modello in modo che il modello non sia sempre valido.
-[CriticalSectionTraits::Sblocca](#unlock)                   | Specializza un `CriticalSection` modello in modo che supporti il rilascio della proprietà dell'oggetto sezione critica specificato.
+[CriticalSectionTraits:: GetInvalidValue](#getinvalidvalue) | Specializza un `CriticalSection` modello in modo che il modello sia sempre non valido.
+[CriticalSectionTraits:: Unlock](#unlock)                   | Specializza un `CriticalSection` modello in modo che supporti il rilascio della proprietà dell'oggetto sezione critica specificato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,13 +49,13 @@ Nome                                                       | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers.h
+**Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
-## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits::GetInvalidValue
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits:: GetInvalidValue
 
-Specializza un `CriticalSection` modello in modo che il modello non sia sempre valido.
+Specializza un `CriticalSection` modello in modo che il modello sia sempre non valido.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -69,7 +69,7 @@ Restituisce sempre un puntatore a una sezione critica non valida.
 
 Il modificatore di `Type` viene definito come `typedef CRITICAL_SECTION* Type;`.
 
-## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits::Sblocca
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits:: Unlock
 
 Specializza un `CriticalSection` modello in modo che supporti il rilascio della proprietà dell'oggetto sezione critica specificato.
 
@@ -81,11 +81,11 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametri
 
-*Cs*<br/>
+*CS*<br/>
 Puntatore a un oggetto sezione critica.
 
 ### <a name="remarks"></a>Osservazioni
 
 Il modificatore di `Type` viene definito come `typedef CRITICAL_SECTION* Type;`.
 
-Per altre informazioni, vedere Funzione LeaveCriticalSection nella sezione Funzioni di **sincronizzazione** della documentazione dell'API di Windows.For more information, see **LeaveCriticalSection function** in the Synchronization Functions section of the Windows API documentation.
+Per ulteriori informazioni, vedere la **funzione LeaveCriticalSection** nella sezione **funzioni di sincronizzazione** della documentazione dell'API Windows.

@@ -4,12 +4,12 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: 19d95c9519670db39f3ca467aff794233823d7ba
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d593f6575fec64aa0eb14c7aa0fcbb5c4eb66691
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180888"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220600"
 ---
 # <a name="classes-and-structs-c"></a>Classi e struct (C++)
 
@@ -23,7 +23,7 @@ Vengono trattati gli argomenti seguenti:
 
 - [struct](../cpp/struct-cpp.md)
 
-- [Panoramica dei membri di classe](../cpp/class-member-overview.md)
+- [Cenni preliminari sui membri della classe](../cpp/class-member-overview.md)
 
 - [Controllo di accesso ai membri](../cpp/member-access-control-cpp.md)
 
@@ -31,7 +31,7 @@ Vengono trattati gli argomenti seguenti:
 
 - [Membri statici](../cpp/static-members-cpp.md)
 
-- [Conversioni di tipo definite dall'utente](../cpp/user-defined-type-conversions-cpp.md)
+- [Conversioni di tipi definiti dall'utente](../cpp/user-defined-type-conversions-cpp.md)
 
 - [Membri dati modificabili (identificatore modificabile)](../cpp/mutable-data-members-cpp.md)
 
@@ -53,10 +53,10 @@ Per ulteriori informazioni sulle unioni, vedere [unioni](../cpp/unions.md). Per 
 
 |Strutture|Classi|Unioni|
 |----------------|-------------|------------|
-|la chiave della classe è **struct**|la classe Key è di **classe**|la chiave di classe è **Union**|
+|chiave della classe**`struct`**|chiave della classe**`class`**|chiave della classe**`union`**|
 |L'accesso predefinito è pubblico|L'accesso predefinito è privato|L'accesso predefinito è pubblico|
 |Nessun vincolo di utilizzo|Nessun vincolo di utilizzo|Usare solo un membro alla volta|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)

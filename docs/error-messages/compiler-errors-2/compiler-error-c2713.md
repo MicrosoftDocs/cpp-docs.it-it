@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2713
 ms.assetid: bae9bee3-b4b8-4be5-b6a5-02df587a7278
-ms.openlocfilehash: 37bc147a08e1c369c3a6d19dbc2758abadd1dab4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e2446eb26ba01bbd2112a4c9a883b9c15a94d5cf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202293"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214620"
 ---
 # <a name="compiler-error-c2713"></a>Errore del compilatore C2713
 
 è consentita una sola forma di gestione delle eccezioni per ogni funzione
 
-Non è possibile usare la gestione delle eccezioni strutturata (`__try`C++ /`__except`) e la gestione delle eccezioni (`try`/`catch`) nella stessa funzione.
+Non è possibile usare la gestione delle eccezioni strutturata ( `__try` / **`__except`** ) e la gestione delle eccezioni C++ ( **`try`** / **`catch`** ) nella stessa funzione.

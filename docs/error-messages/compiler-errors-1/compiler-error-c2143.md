@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 310083a650f842c6c0f0912efe1ceddb66c4fd6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353482"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214750"
 ---
 # <a name="compiler-error-c2143"></a>Errore del compilatore C2143
 
-Errore di sintassi: manca 'token1' prima di 'token2'
+errore di sintassi:' token1' mancante prima di ' token2'
 
-Ma è stato rilevato un altro token era previsto un token specifico (vale a dire un elemento di linguaggio diverso da spazi vuoti).
+Il compilatore prevedeva un token specifico (ovvero un elemento del linguaggio diverso da uno spazio vuoto) e trovava invece un altro token.
 
-Verificare i [riferimenti al linguaggio C++](../../cpp/cpp-language-reference.md) per determinare dove codice non è sintatticamente corretto. Poiché il compilatore può segnalare questo errore dopo che rileva la riga che causa il problema, controllare diverse righe di codice che precedono l'errore.
+Controllare le informazioni di [riferimento sul linguaggio C++](../../cpp/cpp-language-reference.md) per determinare il punto in cui il codice è sintatticamente errato. Poiché il compilatore può segnalare questo errore dopo che ha rilevato la riga che ha provocato il problema, controllare diverse righe di codice che precedono l'errore.
 
-C2143 può verificarsi in diverse situazioni.
+C2143 può verificarsi in situazioni diverse.
 
-Può verificarsi quando un operatore che può qualificare un nome (`::`, `->` e `.`) deve essere seguito dalla parola chiave `template`, come nel seguente esempio:
+Può verificarsi quando un operatore che può qualificare un nome ( `::` , `->` e `.` ) deve essere seguito dalla parola chiave **`template`** , come nell'esempio seguente:
 
 ```cpp
 class MyClass
@@ -35,7 +35,7 @@ class MyClass
 };
 ```
 
-Per impostazione predefinita, in C++ si presuppone che `Ty::PutFuncType` non è un modello; pertanto, `<` viene interpretato come segno minore di.  È necessario indicare al compilatore in modo esplicito che `PutFuncType` è un modello in modo da poter analizzare correttamente la parentesi angolare. Per correggere questo errore, utilizzare la parola chiave `template` sul nome del tipo dipendente, come illustrato di seguito:
+Per impostazione predefinita, in C++ si presuppone che `Ty::PutFuncType` non è un modello; pertanto, `<` viene interpretato come segno minore di.  È necessario indicare al compilatore in modo esplicito che `PutFuncType` è un modello in modo da poter analizzare correttamente la parentesi angolare. Per correggere l'errore, usare la **`template`** parola chiave sul nome del tipo dipendente, come illustrato di seguito:
 
 ```cpp
 class MyClass
@@ -47,7 +47,7 @@ class MyClass
 };
 ```
 
-C2143 può verificarsi quando si **/clr** viene usato e un `using` direttiva dispone di un errore di sintassi:
+C2143 può verificarsi quando si utilizza **/CLR** e una **`using`** direttiva presenta un errore di sintassi:
 
 ```cpp
 // C2143a.cpp
@@ -56,7 +56,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;
 ```
 
-Può inoltre verificarsi quando si sta tentando di compilare un file di codice sorgente utilizzando la sintassi CLR senza usare anche **/clr**:
+Può inoltre verificarsi quando si tenta di compilare un file di codice sorgente utilizzando la sintassi CLR senza utilizzare anche **/CLR**:
 
 ```cpp
 // C2143b.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-Il primo carattere diverso da uno spazio vuoto successivo a un'istruzione `if` deve essere una parentesi di apertura. Il compilatore non è possibile convertire qualsiasi altro elemento:
+Il primo carattere diverso da uno spazio vuoto che segue un' **`if`** istruzione deve essere una parentesi aperta. Il compilatore non è in grado di tradurre altre operazioni:
 
 ```cpp
 // C2143c.cpp
@@ -108,7 +108,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK
 ```
 
-In alternativa, quando un'etichetta non è collegata ad un'istruzione. Se è necessario inserire un'etichetta di per sé, ad esempio, alla fine di un'istruzione composta, associarla a un'istruzione null:
+In alternativa, quando un'etichetta non è collegata ad un'istruzione. Se è necessario inserire un'etichetta, ad esempio alla fine di un'istruzione composta, associarla a un'istruzione null:
 
 ```cpp
 // C2143f.cpp
@@ -122,7 +122,7 @@ void func1() {
 }
 ```
 
-L'errore può verificarsi quando viene effettuata una chiamata non qualificata a un tipo nella libreria Standard C++:
+L'errore può verificarsi quando viene effettuata una chiamata non qualificata a un tipo nella libreria standard C++:
 
 ```cpp
 // C2143g.cpp
@@ -132,7 +132,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK
 ```
 
-In alternativa, c'è una parola chiave `typename` mancante:
+Oppure è presente una **`typename`** parola chiave mancante:
 
 ```cpp
 // C2143h.cpp
@@ -164,7 +164,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK
 ```
 
-In un programma C, le variabili devono essere dichiarate all'inizio della funzione e non possono essere dichiarati dopo la funzione esegue le istruzioni di dichiarazione di non.
+In un programma C, le variabili devono essere dichiarate all'inizio della funzione e non possono essere dichiarate dopo che la funzione esegue istruzioni non di dichiarazione.
 
 ```C
 // C2143j.c

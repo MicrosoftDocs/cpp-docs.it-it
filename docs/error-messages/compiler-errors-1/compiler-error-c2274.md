@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2274
 ms.assetid: 8e874903-f499-45ef-8291-f821eee4cc1c
-ms.openlocfilehash: fd807dedb6c300860611d07212b8fc8952a90a65
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5907664ba367d6e4005698e112d0a19f3a2a26e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758671"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220379"
 ---
 # <a name="compiler-error-c2274"></a>Errore del compilatore C2274
 
@@ -19,7 +19,7 @@ ms.locfileid: "74758671"
 
 Un tipo viene visualizzato come operando destro di un operatore di accesso ai membri (.).
 
-Questo errore può essere causato dal tentativo di accedere a una conversione di tipo definito dall'utente. Usare la parola chiave `operator` tra il punto e il `type`.
+Questo errore può essere causato dal tentativo di accedere a una conversione di tipo definito dall'utente. Usare la parola chiave **`operator`** tra il punto e `type` .
 
 L'esempio seguente genera l'errore C2286:
 

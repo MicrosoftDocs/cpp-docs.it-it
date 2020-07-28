@@ -1,26 +1,26 @@
 ---
-title: C2131 errore del compilatore
+title: Errore del compilatore C2131
 ms.date: 02/28/2019
 f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220418"
 ---
-# <a name="compiler-error-c2131"></a>C2131 errore del compilatore
+# <a name="compiler-error-c2131"></a>Errore del compilatore C2131
 
-> espressione non dà come risultato una costante
+> l'espressione non ha restituito una costante
 
-Un'espressione è dichiarato come **const** oppure **constexpr** non restituire una costante in fase di compilazione. Il compilatore deve essere in grado di determinare il valore dell'espressione in corrispondenza del punto che viene usato.
+Un'espressione dichiarata come **`const`** o **`constexpr`** non ha restituito una costante in fase di compilazione. Il compilatore deve essere in grado di determinare il valore dell'espressione nel punto in cui viene usato.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio illustra un modo per fare in modo errore C2131 e su come risolverlo.
+Questo esempio illustra un modo per generare l'errore C2131 e come risolverlo.
 
 ```cpp
 // c2131.cpp

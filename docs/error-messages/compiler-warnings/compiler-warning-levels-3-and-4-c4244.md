@@ -2,18 +2,18 @@
 title: Avviso del compilatore (livelli 3 e 4) C4244
 ms.date: 11/04/2016
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-ms.openlocfilehash: a12bee4591df8a7a952dc741c4b26c637bb5256c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: cadba931af9c4497ec78938c37f94fe13daab0af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214321"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>Avviso del compilatore (livelli 3 e 4) C4244
 
 'conversion': conversione da 'type1' a 'type2'. Possibile perdita di dati
 
-Un tipo integer viene convertito in un tipo integer di dimensioni minori. Si tratta di un avviso di livello 4 Se *tipo1* è `int` e *tipo2* è minore di `int`. In caso contrario, è un livello 3 (assegnato un valore di tipo [__int64](../../cpp/int8-int16-int32-int64.md) a una variabile di tipo `unsigned int`). Potrebbe essersi verificata una perdita di dati.
+Un tipo integer viene convertito in un tipo integer di dimensioni minori. Si tratta di un avviso di livello 4 Se *tipo1* è **`int`** e *tipo2* è più piccolo di **`int`** . In caso contrario, è un livello 3 (assegnato un valore di tipo [__int64](../../cpp/int8-int16-int32-int64.md) a una variabile di tipo **`unsigned int`** ). Potrebbe essersi verificata una perdita di dati.
 
 Se viene visualizzato l'errore C4244, è consigliabile modificare il programma per poter usare tipi compatibili o aggiungere al codice la logica, per assicurarsi che l'intervallo di valori possibili sia sempre compatibili con i tipi usati.
 

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 40d1d0744588c4b7911e84f5e57a6b40372b48cf
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 68817498d6f29ef5982b72a2fee4e64a4423ccde
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630126"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214815"
 ---
 # <a name="compiler-error-c2065"></a>Errore del compilatore C2065
 
 > '*Identifier*': identificatore non dichiarato
 
-Il compilatore non riesce a trovare la dichiarazione per un identificatore. Questo errore può essere dovuto a numerose cause. Le cause più comuni di C2065 sono il fatto che l'identificatore non è stato dichiarato, che l'identificatore è stato digitato in modo errato, che l'intestazione in cui l'identificatore è dichiarata non è inclusa nel file o che `cout` nell'identificatore manca un qualificatore di ambito, ad esempio, anziché `std::cout`. Per ulteriori informazioni sulle dichiarazioni in C++, vedere [dichiarazioni e definizioni (C++)](../../cpp/declarations-and-definitions-cpp.md).
+Il compilatore non riesce a trovare la dichiarazione per un identificatore. Questo errore può essere dovuto a varie cause. Le cause più comuni di C2065 sono il fatto che l'identificatore non è stato dichiarato, che l'identificatore è stato digitato in modo errato, che l'intestazione in cui l'identificatore è dichiarato non è incluso nel file o che nell'identificatore manca un qualificatore di ambito, ad esempio, `cout` anziché `std::cout` . Per altre informazioni sulle dichiarazioni in C++, vedere [dichiarazioni e definizioni (c++)](../../cpp/declarations-and-definitions-cpp.md).
 
 Di seguito sono riportati alcuni problemi comuni e soluzioni in modo più dettagliato.
 
 ## <a name="the-identifier-is-undeclared"></a>Identificatore non dichiarato
 
-Se l'identificatore è una variabile o un nome di funzione, è necessario dichiararlo prima di poterlo usare. Una dichiarazione di funzione deve includere anche i tipi dei relativi parametri prima che la funzione possa essere utilizzata. Se la variabile viene dichiarata usando `auto`, il compilatore deve essere in grado di dedurre il tipo dal relativo inizializzatore.
+Se l'identificatore è una variabile o un nome di funzione, è necessario dichiararlo prima di poterlo usare. Una dichiarazione di funzione deve includere anche i tipi dei relativi parametri prima che la funzione possa essere utilizzata. Se la variabile viene dichiarata usando **`auto`** , il compilatore deve essere in grado di dedurre il tipo dal relativo inizializzatore.
 
-Se l'identificatore è un membro di una classe o di uno struct oppure è dichiarato in uno spazio dei nomi, deve essere qualificato dal nome della classe o dello struct oppure dal nome dello spazio dei nomi, se usato al di fuori dello struct, della classe o dell'ambito dello spazio dei nomi. In alternativa, lo spazio dei nomi deve essere introdotto nell'ambito `using` da una direttiva `using namespace std;`, ad esempio, oppure il nome del membro deve essere inserito `using` nell'ambito da `using std::string;`una dichiarazione, ad esempio. In caso contrario, il nome non qualificato viene considerato un identificatore non dichiarato nell'ambito corrente.
+Se l'identificatore è un membro di una classe o di uno struct oppure è dichiarato in uno spazio dei nomi, deve essere qualificato dal nome della classe o dello struct oppure dal nome dello spazio dei nomi, se usato al di fuori dello struct, della classe o dell'ambito dello spazio dei nomi. In alternativa, lo spazio dei nomi deve essere introdotto nell'ambito da una **`using`** direttiva, ad esempio `using namespace std;` , oppure il nome del membro deve essere inserito nell'ambito da una **`using`** dichiarazione, ad esempio `using std::string;` . In caso contrario, il nome non qualificato viene considerato un identificatore non dichiarato nell'ambito corrente.
 
-Se l'identificatore è il tag per un tipo definito dall'utente, ad esempio, `class` o `struct`, il tipo del tag deve essere dichiarato prima di poter essere utilizzato. Ad esempio, la Dichiarazione `struct SomeStruct { /*...*/ };` deve esistere prima di poter dichiarare una variabile `SomeStruct myStruct;` nel codice.
+Se l'identificatore è il tag per un tipo definito dall'utente, ad esempio, **`class`** o **`struct`** , il tipo del tag deve essere dichiarato prima di poter essere utilizzato. Ad esempio, la Dichiarazione `struct SomeStruct { /*...*/ };` deve esistere prima di poter dichiarare una variabile `SomeStruct myStruct;` nel codice.
 
-Se l'identificatore è un alias di tipo, il tipo deve essere dichiarato tramite una `using` dichiarazione o `typedef` prima di poter essere utilizzato. È ad esempio necessario dichiarare `using my_flags = std::ios_base::fmtflags;` prima che sia possibile utilizzare `my_flags` come alias di tipo per. `std::ios_base::fmtflags`
+Se l'identificatore è un alias di tipo, il tipo deve essere dichiarato tramite una **`using`** dichiarazione o **`typedef`** prima di poter essere utilizzato. È ad esempio necessario dichiarare `using my_flags = std::ios_base::fmtflags;` prima che sia possibile utilizzare `my_flags` come alias di tipo per `std::ios_base::fmtflags` .
 
 ## <a name="example-misspelled-identifier"></a>Esempio: identificatore con errori di ortografia
 
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="example-use-an-unscoped-identifier"></a>Esempio: usare un identificatore senza ambito
 
-Questo errore può verificarsi se l'ambito dell'identificatore non è corretto. Se viene visualizzato C2065 quando si usa `cout`, questo è il motivo. Quando C++ le funzioni e gli operatori della libreria standard non sono completi dallo spazio dei nomi oppure non è `std` stato portato lo spazio dei nomi nell'ambito `using` corrente tramite una direttiva, il compilatore non riesce a trovarli. Per risolvere il problema, è necessario qualificare completamente i nomi degli identificatori o specificare lo spazio dei `using` nomi con la direttiva.
+Questo errore può verificarsi se l'ambito dell'identificatore non è corretto. Se viene visualizzato C2065 quando si usa `cout` , questo è il motivo. Quando le funzioni e gli operatori della libreria standard C++ non sono completi dallo spazio dei nomi oppure non è stato portato lo `std` spazio dei nomi nell'ambito corrente tramite una **`using`** direttiva, il compilatore non riesce a trovarli. Per risolvere il problema, è necessario qualificare completamente i nomi degli identificatori o specificare lo spazio dei nomi con la **`using`** direttiva.
 
 Questo esempio non viene compilato perché `cout` e `endl` sono definiti nello `std` spazio dei nomi:
 
@@ -69,13 +69,13 @@ int main() {
 }
 ```
 
-Gli identificatori dichiarati all' `class`interno `struct`dei tipi `enum class` , o devono essere qualificati anche dal nome dell'ambito che lo contiene quando vengono usati al di fuori di tale ambito.
+Gli identificatori dichiarati all'interno dei **`class`** **`struct`** tipi, o **`enum class`** devono essere qualificati anche dal nome dell'ambito che lo contiene quando vengono usati al di fuori di tale ambito.
 
 ## <a name="example-precompiled-header-isnt-first"></a>Esempio: l'intestazione precompilata non è prima
 
 Questo errore può verificarsi se si inseriscono direttive per il preprocessore, ad esempio #include, #define o #pragma, prima del #include di un file di intestazione precompilato. Se il file di origine usa un file di intestazione precompilato, ovvero se viene compilato usando l'opzione del compilatore **/Yu** , tutte le direttive per il preprocessore prima che il file di intestazione precompilato venga ignorato.
 
-Questo esempio non viene compilato perché `cout` e `endl` sono definiti nell' \<intestazione iostream >, che viene ignorata perché è inclusa prima del file di intestazione precompilata. Per compilare questo esempio, creare tutti e tre i file, quindi compilare stdafx. cpp, quindi compilare C2065_pch. cpp.
+Questo esempio non viene compilato perché `cout` e `endl` sono definiti nell' \<iostream> intestazione, che viene ignorato perché è incluso prima del file di intestazione precompilato. Per compilare questo esempio, creare tutti e tre i file, quindi compilare stdafx. cpp, quindi compilare C2065_pch. cpp.
 
 ```cpp
 // pch.h (stdafx.h in Visual Studio 2017 and earlier)
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-Per risolvere il problema, aggiungere la #include di \<iostream > nel file di intestazione precompilata o spostarla dopo che il file di intestazione precompilata è incluso nel file di origine.
+Per risolvere il problema, aggiungere il #include di \<iostream> nel file di intestazione precompilata o spostarlo dopo che il file di intestazione precompilata è incluso nel file di origine.
 
 ## <a name="example-missing-header-file"></a>Esempio: file di intestazione mancante
 
@@ -119,7 +119,7 @@ int main() {
 }
 ```
 
-Un'altra possibile possibile è se si usa un elenco di inizializzatori \<senza includere l'intestazione initializer_list >.
+Un'altra possibile cause è se si usa un elenco di inizializzatori senza includere l' \<initializer_list> intestazione.
 
 ```cpp
 // C2065_initializer.cpp
@@ -134,7 +134,7 @@ int main() {
 }
 ```
 
-Questo errore può essere visualizzato nei file di origine dell'app desktop di Windows `VC_EXTRALEAN`se `WIN32_LEAN_AND_MEAN`si definisce `WIN32_EXTRA_LEAN`, o. Queste macro del preprocessore escludono alcuni file di intestazione da Windows.\_h e afxv W32. h per velocizzare le compilazioni. Cercare in Windows. h e afxv_w32. h una descrizione aggiornata degli elementi esclusi.
+Questo errore può essere visualizzato nei file di origine dell'app desktop di Windows se si definisce `VC_EXTRALEAN` , `WIN32_LEAN_AND_MEAN` o `WIN32_EXTRA_LEAN` . Queste macro del preprocessore escludono alcuni file di intestazione da Windows. h e afxv \_ W32. h per velocizzare le compilazioni. Cercare in Windows. h e afxv_w32. h una descrizione aggiornata degli elementi esclusi.
 
 ## <a name="example-missing-closing-quote"></a>Esempio: virgolette di chiusura mancanti
 
@@ -155,7 +155,7 @@ int main() {
 
 ## <a name="example-use-iterator-outside-for-loop-scope"></a>Esempio: usare l'iteratore all'esterno dell'ambito del ciclo
 
-Questo errore può verificarsi se si dichiara una variabile iteratore in `for` un ciclo, quindi si tenta di usare tale variabile iteratore al `for` di fuori dell'ambito del ciclo. Il compilatore Abilita l'opzione del compilatore [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) per impostazione predefinita. Per ulteriori informazioni, vedere supporto degli iteratori di [debug](../../standard-library/debug-iterator-support.md) .
+Questo errore può verificarsi se si dichiara una variabile iteratore in un **`for`** ciclo, quindi si tenta di usare tale variabile iteratore al di fuori dell'ambito del **`for`** ciclo. Il compilatore Abilita l'opzione del compilatore [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) per impostazione predefinita. Per ulteriori informazioni, vedere [supporto degli iteratori di debug](../../standard-library/debug-iterator-support.md) .
 
 ```cpp
 // C2065_iter.cpp
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Esempio: C++Errore di deduzione del tipo/CLI
+## <a name="example-ccli-type-deduction-failure"></a>Esempio: errore di deduzione del tipo C++/CLI
 
-Questo errore può verificarsi quando si chiama una funzione generica, se l'argomento di tipo previsto non può essere dedotto dai parametri utilizzati. Per ulteriori informazioni, vedere [funzioni genericheC++(/CLI)](../../extensions/generic-functions-cpp-cli.md).
+Questo errore può verificarsi quando si chiama una funzione generica, se l'argomento di tipo previsto non può essere dedotto dai parametri utilizzati. Per ulteriori informazioni, vedere [funzioni generiche (C++/CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,9 +220,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Esempio: C++Parametri dell'attributo/CLI
+## <a name="example-ccli-attribute-parameters"></a>Esempio: parametri dell'attributo C++/CLI
 
-Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: controllo dei parametri per gli attributi visivi C++ .
+Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: controllo dei parametri per gli attributi Visual C++.
 
 ```cpp
 // C2065_attributes.cpp

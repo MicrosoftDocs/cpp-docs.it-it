@@ -2,12 +2,12 @@
 title: Riepilogo di espressioni
 ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1660690c6d36aa1dbdc025d6afe92e19ff941463
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157818"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220834"
 ---
 # <a name="summary-of-expressions"></a>Riepilogo di espressioni
 
@@ -37,7 +37,7 @@ ms.locfileid: "62157818"
 &nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **[**  *espressione*  **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **.**  *identificatore*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-identificatore di espressione***->***identifier*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione* **->** *identificatore* di    <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **++**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*suffisso-espressione*  **--**
 
@@ -51,11 +51,11 @@ ms.locfileid: "62157818"
 &nbsp;&nbsp;&nbsp;&nbsp;**--**  *espressione unaria*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unario-operatore*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sizeof**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`sizeof`**  *espressione unaria*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *type-name*  **)**
 
 *unary-operator*: uno tra<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+**&#42;**-** **!** . **~**
+&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+** **-** **~** **!**
 
 *espressione cast*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression*<br/>
@@ -64,38 +64,34 @@ ms.locfileid: "62157818"
 *espressione moltiplicativa*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **&#42;**  *cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression***/***espressione cast* espressione moltiplicativa    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression***%***espressione cast* espressione moltiplicativa    
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione* **/** moltiplicativa *espressione cast*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione* **%** moltiplicativa *espressione cast*    
 
 *additive-espressione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression***+***espressione moltiplicativa* additiva-espressione    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression***-***espressione moltiplicativa* additiva-espressione    
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-espressione* **+** *espressione moltiplicativa*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-espressione* **-** *espressione moltiplicativa*    
 
 *shift-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-espressione*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cambio-espressione***\<***additiva-espressione*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cambio-espressione*  **>>**  *additiva-espressione*
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-espressione*   * *Shift-expression * additive-expression \<\<**  *additive-expression*<br/> &nbsp; &nbsp; &nbsp; &nbsp; * **>>** *additive-expression*  
 
 *espressione relazionale*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Shift-espressione*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*espressione di*spostamento-* espressione relazionale**\<**    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*espressione di*spostamento-* espressione relazionale**>**    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*espressione di*spostamento-* espressione relazionale**\<**    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*espressione di*spostamento-* espressione relazionale**>=**    
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* relazionale* \<=**  *shift-expression*<br/> &nbsp; &nbsp; - &nbsp; &nbsp; ** **>** <br/> &nbsp; &nbsp; &nbsp; &nbsp; *shift-expression* espressione relazionale-espressione * Shift-espressione relazionale-espressione * * relazionale-espressione * Shift-Expression* \<**  *shift-expression*<br/> &nbsp; &nbsp; &nbsp; &nbsp; *   * **>=** *shift-expression*    
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*uguaglianza-***==** espressione*relazionale-espressione*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione uguaglianza* **==** *espressione relazionale*    <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*  **!=**  *relational-expression*
 
 *AND-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*espressione uguaglianza*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*E-***&** espressione*uguaglianza-* espressione    
+&nbsp;&nbsp;&nbsp;&nbsp;*And-Expression* **&** *espressione uguaglianza*    
 
 *exclusive-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*AND-Expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Exclusive-or-Expression*  **^**  *e-Expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*exclusive-or-Expression* **^** *And-Expression*    
 
 *inclusivo o espressione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Exclusive-OR-Expression*<br/>
@@ -103,7 +99,7 @@ ms.locfileid: "62157818"
 
 *Logical-and-Expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-Expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Logical-and-Expression*  **&&**  *inclusive-or-Expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*Logical-and-Expression* **&&** *inclusive-or-Expression*    
 
 *Logical-or-Expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-Expression*<br/>

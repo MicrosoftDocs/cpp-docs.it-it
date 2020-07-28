@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "70311794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214243"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new (nuovo slot in vtable) (C++/CLI e C++/CX)
 
-La parola chiave **new** indica che un membro virtuale otterrà un nuovo slot in vtable.
+La **`new`** parola chiave indica che un membro virtuale otterrà un nuovo slot in vtable.
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
@@ -26,11 +26,11 @@ Elemento non supportato in Windows Runtime.
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-In una compilazione `/clr`, **new** indica che un membro virtuale otterrà un nuovo slot in vtable. La funzione non esegue l'override di un metodo della classe di base.
+In una `/clr` compilazione **`new`** indica che un membro virtuale otterrà un nuovo slot in vtable; che la funzione non esegue l'override di un metodo della classe base.
 
-**new** comporta l'aggiunta del modificatore newslot al linguaggio intermedio (IL) per la funzione.  Per altre informazioni su newslot, vedere:
+**`new`** fa in modo che il modificatore NewSlot venga aggiunto al linguaggio il per la funzione.  Per altre informazioni su newslot, vedere:
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
@@ -42,7 +42,7 @@ Opzione del compilatore: `/clr`
 
 ### <a name="examples"></a>Esempi
 
-L'esempio seguente illustra l'effetto di **new**.
+Nell'esempio seguente viene illustrato l'effetto di **`new`** .
 
 ```cpp
 // newslot.cpp
@@ -105,5 +105,5 @@ E::f() called
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Identificatori di override](override-specifiers-cpp-component-extensions.md)

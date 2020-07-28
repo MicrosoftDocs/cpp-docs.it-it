@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5e2dd6b01db5f7d3026f14c5032ab4623eb6fb58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760452"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220288"
 ---
 # <a name="compiler-error-c2662"></a>Errore del compilatore C2662
 
 ' Function ': Impossibile convertire il puntatore ' This ' da' tipo1' a' tipo2'
 
-Il compilatore non è riuscito a convertire il puntatore `this` da `type1` a `type2`.
+Il compilatore non è riuscito a convertire il **`this`** puntatore da `type1` a `type2` .
 
-Questo errore può essere causato dalla chiamata di una funzione membro non`const` su un oggetto `const`.  Di seguito vengono riportate alcune soluzioni possibili:
+Questo errore può essere causato dalla chiamata di una funzione non **`const`** membro su un **`const`** oggetto.  Di seguito vengono riportate alcune soluzioni possibili:
 
-- Rimuovere l'`const` dalla dichiarazione dell'oggetto.
+- Rimuovere **`const`** dalla dichiarazione dell'oggetto.
 
-- Aggiungere `const` alla funzione membro.
+- Aggiungere **`const`** la funzione membro.
 
 L'esempio seguente genera l'C2662:
 
@@ -41,7 +41,7 @@ int main() {
 }
 ```
 
-Quando si esegue la compilazione con **/CLR**, non è possibile chiamare una funzione in un `const` o `volatile` tipo gestito qualificato. Non è possibile dichiarare una funzione membro const di una classe gestita, pertanto non è possibile chiamare metodi su oggetti const gestiti.
+Quando si esegue la compilazione con **/CLR**, non è possibile chiamare una funzione in un **`const`** **`volatile`** tipo gestito qualificato o. Non è possibile dichiarare una funzione membro const di una classe gestita, pertanto non è possibile chiamare metodi su oggetti const gestiti.
 
 ```cpp
 // C2662_b.cpp

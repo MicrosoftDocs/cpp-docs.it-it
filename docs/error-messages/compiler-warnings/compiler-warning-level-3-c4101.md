@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: 0ac34fbaf4cbb54583394dff5b8645fe56b8b9cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9d3875fdc17def1e7d3bcb72149c5faf90f656a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199045"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220054"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>Avviso del compilatore (livello 3) C4101
 
@@ -27,7 +27,7 @@ int i;   // C4101
 }
 ```
 
-Tuttavia, questo avviso si verificherà anche quando si chiama una funzione membro **statica** tramite un'istanza della classe:
+Tuttavia, questo avviso si verificherà anche quando si chiama una **`static`** funzione membro tramite un'istanza della classe:
 
 ```cpp
 // C4101b.cpp
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-In questa situazione, il compilatore usa le informazioni relative a `si` per accedere alla funzione **statica** , ma l'istanza della classe non è necessaria per chiamare la funzione **statica** . di conseguenza, l'avviso. Per risolvere il problema, è possibile:
+In questa situazione, il compilatore usa le informazioni relative `si` all'accesso alla **`static`** funzione, ma l'istanza della classe non è necessaria per chiamare la **`static`** funzione, quindi l'avviso. Per risolvere il problema, è possibile:
 
-- Aggiungere un costruttore in cui il compilatore utilizzerebbe l'istanza di `si` nella chiamata a `func`.
+- Aggiungere un costruttore in cui il compilatore utilizzerebbe l'istanza di `si` nella chiamata a `func` .
 
-- Rimuovere la parola chiave **static** dalla definizione di `func`.
+- Rimuovere la **`static`** parola chiave dalla definizione di `func` .
 
-- Chiamare la funzione **statica** in modo esplicito: `int y = S::func();`.
+- Chiamare la **`static`** funzione in modo esplicito: `int y = S::func();` .

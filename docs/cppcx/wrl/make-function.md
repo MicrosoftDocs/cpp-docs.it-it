@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213811"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220470"
 ---
 # <a name="make-function"></a>Funzione Make
 
@@ -223,7 +223,7 @@ Argomento 9 passato alla classe di runtime specificata.
 
 ## <a name="return-value"></a>Valore restituito
 
-Un oggetto `ComPtr<T>` in caso di esito positivo; in caso contrario, `nullptr`.
+`ComPtr<T>`Oggetto in caso di esito positivo; in caso contrario, **`nullptr`** .
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -237,4 +237,4 @@ Vedere [procedura: creare un'istanza dei componenti WRL direttamente](how-to-ins
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi Microsoft::WRL](microsoft-wrl-namespace.md)
+[Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)

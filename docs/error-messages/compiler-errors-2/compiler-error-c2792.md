@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2792
 ms.assetid: 392cf748-4f5e-4e62-a364-3118d5658408
-ms.openlocfilehash: 175ec7ff6b842eb5f41896c5ec3cc0a0f5db817c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 70a1f483aa48b45847306a668a11446a6bb599e7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74739532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220223"
 ---
 # <a name="compiler-error-c2792"></a>Errore del compilatore C2792
 
 ' Super ': questa parola chiave deve essere seguita da'::'
 
-L'unico token che può seguire la parola chiave `__super` è `::`.
+L'unico token che può seguire la parola chiave **`__super`** è `::` .
 
 L'esempio seguente genera l'C2792:
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2619
 ms.assetid: c826f8ab-d66a-4b79-a0b2-93b0af8c41ac
-ms.openlocfilehash: 3ca5ea4612091f1e3eee8fead2b1eaebb264b696
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b64eccac351c6bdd8ac388278a6e264cc7a84868
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754771"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220301"
 ---
 # <a name="compiler-error-c2619"></a>Errore del compilatore C2619
 
 'identifier': membro dati statico non consentito in una struct o unione anonima
 
-Un membro di una struct o unione anonima è dichiarato come `static`.
+Viene dichiarato un membro di un'Unione o di uno struct anonimo **`static`** .
 
 L'esempio seguente genera l'errore C2619 e illustra come risolverlo rimuovendo la parola chiave static.
 

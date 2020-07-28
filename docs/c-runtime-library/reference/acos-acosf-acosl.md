@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916881"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220769"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -79,7 +79,7 @@ Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **ARccOS** 
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **ARccOS** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **ARccOS** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **ARccOS** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, **ARccOS** accetta e restituisce sempre un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -141,7 +141,7 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

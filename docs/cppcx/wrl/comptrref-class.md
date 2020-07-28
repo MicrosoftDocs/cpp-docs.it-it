@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-ms.openlocfilehash: df9ded817227547493c04035e0abc3d948e24495
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f92a3e14018cf8c02dec40b664b72a0956f6220e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220535"
 ---
 # <a name="comptrref-class"></a>ComPtrRef (classe)
 
@@ -46,11 +46,11 @@ class ComPtrRef : public ComPtrRefBase<T>;
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Un [tipo\<comPtr T>](comptr-class.md) o un tipo che ne deriva, non solo l'interfaccia rappresentata dall'oggetto `ComPtr`.
+Un [tipo \<T> ComPtr](comptr-class.md) o un tipo derivato da esso, non solo l'interfaccia rappresentata dall'oggetto `ComPtr` .
 
 ## <a name="remarks"></a>Osservazioni
 
-Rappresenta un riferimento a `ComPtr<T>`un oggetto di tipo .
+Rappresenta un riferimento a un oggetto di tipo `ComPtr<T>` .
 
 ## <a name="members"></a>Membri
 
@@ -58,25 +58,25 @@ Rappresenta un riferimento a `ComPtr<T>`un oggetto di tipo .
 
 Nome                               | Descrizione
 ---------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ComPtrRef::ComPtrRef](#comptrref) | Inizializza una nuova istanza `ComPtrRef` della classe dal `ComPtrRef` puntatore specificato a un altro oggetto.
+[ComPtrRef:: ComPtrRef](#comptrref) | Inizializza una nuova istanza della `ComPtrRef` classe dal puntatore specificato a un altro `ComPtrRef` oggetto.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                         | Descrizione
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef::GetAddressOf](#getaddressof)                     | Recupera l'indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto corrente. `ComPtrRef`
-[ComPtrRef::ReleaseAndGetAddressOf (Informazioni in base ai controlli per i comunicati ciò e della data](#releaseandgetaddressof) | Elimina l'oggetto corrente `ComPtrRef` e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall'oggetto. `ComPtrRef`
+[ComPtrRef:: GetAddressOf](#getaddressof)                     | Recupera l'indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto corrente `ComPtrRef` .
+[ComPtrRef:: ReleaseAndGetAddressOf](#releaseandgetaddressof) | Elimina l' `ComPtrRef` oggetto corrente e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall' `ComPtrRef` oggetto.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 Nome                                                                     | Descrizione
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef::operator InterfaceType](#operator-interfacetype-star-star) | Elimina l'oggetto corrente `ComPtrRef` e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall'oggetto. `ComPtrRef`
-[ComPtrRef::operatore T](#operator-t-star)                               | Restituisce il valore del membro dati [ptr_](comptrrefbase-class.md#ptr) dell'oggetto ComPtrRef corrente.
-[ComPtrRef::operator void](#operator-void-star-star)                   | Elimina l'oggetto corrente, `ComPtrRef` esegue il cast del puntatore all'interfaccia rappresentata dall'oggetto `ComPtrRef` come puntatore a puntatore a `void`, quindi restituisce il puntatore di cui il cast.
-[ComPtrRef::operatore](#operator-star)                                   | Recupera il puntatore all'interfaccia `ComPtrRef` rappresentata dall'oggetto corrente.
-[ComPtrRef::operator](#operator-equality)                              | Indica se due oggetti `ComPtrRef` sono uguali.
-[ComPtrRef::operator!](#operator-inequality)                            | Indica se due oggetti `ComPtrRef` non sono uguali.
+[ComPtrRef:: operator InterfaceType * *](#operator-interfacetype-star-star) | Elimina l' `ComPtrRef` oggetto corrente e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall' `ComPtrRef` oggetto.
+[ComPtrRef:: operator T *](#operator-t-star)                               | Restituisce il valore del membro dati [ptr_](comptrrefbase-class.md#ptr) dell'oggetto ComPtrRef corrente.
+[ComPtrRef:: operator void * *](#operator-void-star-star)                   | Elimina l' `ComPtrRef` oggetto corrente, esegue il cast del puntatore all'interfaccia rappresentata dall' `ComPtrRef` oggetto come puntatore a puntatore a **`void`** , quindi restituisce il puntatore del cast.
+[ComPtrRef:: operator *](#operator-star)                                   | Recupera il puntatore all'interfaccia rappresentata dall'oggetto corrente `ComPtrRef` .
+[ComPtrRef:: operator = =](#operator-equality)                              | Indica se due oggetti `ComPtrRef` sono uguali.
+[ComPtrRef:: operator! =](#operator-inequality)                            | Indica se due oggetti `ComPtrRef` non sono uguali.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -88,9 +88,9 @@ Nome                                                                     | Descr
 
 **Intestazione:** client.h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef::ComPtrRef
+## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef:: ComPtrRef
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -102,14 +102,14 @@ ComPtrRef(
 
 ### <a name="parameters"></a>Parametri
 
-*Ptr*<br/>
-Valore sottostante `ComPtrRef` di un altro oggetto.
+*ptr*<br/>
+Valore sottostante di un altro `ComPtrRef` oggetto.
 
 ### <a name="remarks"></a>Osservazioni
 
-Inizializza una nuova istanza `ComPtrRef` della classe dal `ComPtrRef` puntatore specificato a un altro oggetto.
+Inizializza una nuova istanza della `ComPtrRef` classe dal puntatore specificato a un altro `ComPtrRef` oggetto.
 
-## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef::GetAddressOf
+## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef:: GetAddressOf
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -119,13 +119,13 @@ InterfaceType* const * GetAddressOf() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto corrente. `ComPtrRef`
+Indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto corrente `ComPtrRef` .
 
 ### <a name="remarks"></a>Osservazioni
 
-Recupera l'indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto corrente. `ComPtrRef`
+Recupera l'indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto corrente `ComPtrRef` .
 
-## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef::operator
+## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef:: operator = =
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -158,25 +158,25 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*Un*<br/>
+*un*<br/>
 Riferimento a un oggetto `ComPtrRef`.
 
-*B*<br/>
-Un riferimento `ComPtrRef` a un altro oggetto o`void*`un puntatore a un tipo anonimo ( ).
+*b*<br/>
+Un riferimento a un altro `ComPtrRef` oggetto o un puntatore a un tipo anonimo ( **`void*`** ).
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo operatore restituisce **true** se l'oggetto *a* è uguale all'oggetto *b*; in caso contrario, **false**.
+Il primo operatore restituisce **`true`** se l'oggetto *a* è uguale all'oggetto *b*; in caso contrario, **`false`** .
 
-Il secondo e il terzo operatore restituiscono **true** se l'oggetto *a* è uguale a **nullptr**; in caso contrario, **false**.
+Il secondo e il terzo operatore producono **`true`** se l'oggetto *a* è uguale a **`nullptr`** ; in caso contrario, **`false`** .
 
-Il quarto e il quinto operatore restituiscono **true** se l'oggetto *a* è uguale all'oggetto *b*; in caso contrario, **false**.
+Il quarto e il quinto operatore restituiscono **`true`** se l'oggetto *a* è uguale all'oggetto *b*; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 Indica se due oggetti `ComPtrRef` sono uguali.
 
-## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef::operator!
+## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef:: operator! =
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -209,25 +209,25 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*Un*<br/>
+*un*<br/>
 Riferimento a un oggetto `ComPtrRef`.
 
-*B*<br/>
-Un riferimento `ComPtrRef` a un altro oggetto o`void*`un puntatore a un oggetto anonimo ( ).
+*b*<br/>
+Un riferimento a un altro `ComPtrRef` oggetto o un puntatore a un oggetto anonimo ( **`void*`** ).
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo operatore restituisce **true** se l'oggetto *a* non è uguale all'oggetto *b*; in caso contrario, **false**.
+Il primo operatore restituisce **`true`** se l'oggetto *a* non è uguale all'oggetto *b*; in caso contrario, **`false`** .
 
-Il secondo e il terzo operatore restituiscono **true** se l'oggetto *a* non è uguale a **nullptr**; in caso contrario, **false**.
+Il secondo e il terzo operatore producono **`true`** se l'oggetto *a* non è uguale a **`nullptr`** ; in caso contrario, **`false`** .
 
-Il quarto e il quinto operatore restituiscono **true** se l'oggetto *a* non è uguale all'oggetto *b*; in caso contrario, **false**.
+Il quarto e il quinto operatore producono **`true`** se l'oggetto *a* non è uguale all'oggetto *b*; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 Indica se due oggetti `ComPtrRef` non sono uguali.
 
-## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef::operator InterfaceType
+## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef:: operator InterfaceType\*\*
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -237,9 +237,9 @@ operator InterfaceType**();
 
 ### <a name="remarks"></a>Osservazioni
 
-Elimina l'oggetto corrente `ComPtrRef` e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall'oggetto. `ComPtrRef`
+Elimina l' `ComPtrRef` oggetto corrente e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall' `ComPtrRef` oggetto.
 
-## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef::operatore
+## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef:: operator *
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -249,13 +249,13 @@ InterfaceType* operator *();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'interfaccia rappresentata dall'oggetto corrente. `ComPtrRef`
+Puntatore all'interfaccia rappresentata dall'oggetto corrente `ComPtrRef` .
 
 ### <a name="remarks"></a>Osservazioni
 
-Recupera il puntatore all'interfaccia `ComPtrRef` rappresentata dall'oggetto corrente.
+Recupera il puntatore all'interfaccia rappresentata dall'oggetto corrente `ComPtrRef` .
 
-## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef::operatore T
+## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef:: operator T *
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -265,9 +265,9 @@ operator T*();
 
 ### <a name="remarks"></a>Osservazioni
 
-Restituisce il valore del [membro](comptrrefbase-class.md#ptr) `ComPtrRef` dati ptr_ dell'oggetto corrente.
+Restituisce il valore del membro dati [ptr_](comptrrefbase-class.md#ptr) dell' `ComPtrRef` oggetto corrente.
 
-## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef::operator void\*\*
+## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef:: operator void\*\*
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -277,9 +277,9 @@ operator void**() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-Elimina l'oggetto corrente, `ComPtrRef` esegue il cast del puntatore all'interfaccia rappresentata dall'oggetto `ComPtrRef` come puntatore a puntatore a `void`, quindi restituisce il puntatore di cui il cast.
+Elimina l' `ComPtrRef` oggetto corrente, esegue il cast del puntatore all'interfaccia rappresentata dall' `ComPtrRef` oggetto come puntatore a puntatore a **`void`** , quindi restituisce il puntatore del cast.
 
-## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtrRef::ReleaseAndGetAddressOf (Informazioni in base ai controlli per i comunicati ciò e della data
+## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtrRef:: ReleaseAndGetAddressOf
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -289,8 +289,8 @@ InterfaceType** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'interfaccia rappresentata `ComPtrRef` dall'oggetto eliminato.
+Puntatore all'interfaccia rappresentata dall' `ComPtrRef` oggetto eliminato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Elimina l'oggetto corrente `ComPtrRef` e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall'oggetto. `ComPtrRef`
+Elimina l' `ComPtrRef` oggetto corrente e restituisce un puntatore a un puntatore all'interfaccia rappresentata dall' `ComPtrRef` oggetto.
