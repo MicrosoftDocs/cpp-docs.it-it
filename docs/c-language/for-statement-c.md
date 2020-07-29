@@ -4,45 +4,45 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-ms.openlocfilehash: df00bcab2f9f9e51a6f37e19670b6cd240fa5cc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91675fbe15ec6abf5aae4548990d9b4e0703e967
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233644"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229727"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C)
 
-L'istruzione **for** consente di ripetere un'istruzione o un'istruzione composta un numero specificato di volte. Il corpo di un'istruzione **for** viene eseguito zero o più volte fino a quando una condizione facoltativa non restituisce false. È possibile usare espressioni facoltative nell'istruzione **for** per inizializzare e modificare i valori durante l'esecuzione dell'istruzione **for**.
+L' **`for`** istruzione consente di ripetere un'istruzione o un'istruzione composta un numero specificato di volte. Il corpo di un' **`for`** istruzione viene eseguito zero o più volte fino a quando una condizione facoltativa non diventa false. È possibile utilizzare espressioni facoltative nell' **`for`** istruzione per inizializzare e modificare i valori durante l' **`for`** esecuzione dell'istruzione.
 
 ## <a name="syntax"></a>Sintassi
 
 *iteration-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*istruzione* **for** **(** *init-expression*<sub>opt</sub> **;** *cond-expression*<sub>opt</sub> **;** *loop-expression*<sub>opt</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**`for`***istruzione* **(** *init-expression*<sub>opt</sub> **;** *cond-expression*<sub>opz</sub> **;** *loop-expression*<sub>opt</sub> **)**
 
-L'esecuzione di un'istruzione **for** procede nel modo seguente:
+L'esecuzione di un' **`for`** istruzione procede nel modo seguente:
 
 1. Se presente, viene valutato *init-expression*. Questo consente l'inizializzazione del ciclo. Non esistono restrizioni per il tipo di *init-expression*.
 
 1. Se presente, viene valutato *cond-expression*. Questa espressione deve essere di tipo aritmetico o puntatore. Viene valutata prima di ogni iterazione. Sono possibili tre risultati:
 
-   - Se *cond-expression* è **true** (diverso da zero), viene eseguito *statement*; quindi viene valutato *loop-expression*, se presente. *loop-expression* viene valutata al termine di ogni iterazione. Non esistono restrizioni per il relativo tipo. Gli effetti collaterali vengono eseguiti in ordine. Il processo inizia nuovamente con la valutazione di *cond-expression*.
+   - Se *cond-expression* è **`true`** (diverso da zero), viene eseguita l' *istruzione* , quindi *loop-expression*, se presente, viene valutato. *loop-expression* viene valutata al termine di ogni iterazione. Non esistono restrizioni per il relativo tipo. Gli effetti collaterali vengono eseguiti in ordine. Il processo inizia nuovamente con la valutazione di *cond-expression*.
 
-   - Se *cond-expression* è omesso, *cond-expression* è considerato true e l'esecuzione prosegue esattamente come descritto nel paragrafo precedente. Un'istruzione **for** senza un argomento *cond-expression* termina solo quando viene eseguita un'istruzione **break** o **return** nel corpo dell'istruzione o quando viene eseguita un'istruzione **goto** (a un'istruzione con etichetta all'esterno del corpo dell'istruzione **for**).
+   - Se *cond-expression* è omesso, *cond-expression* è considerato true e l'esecuzione prosegue esattamente come descritto nel paragrafo precedente. Un' **`for`** istruzione senza un argomento *cond-expression* termina solo quando viene **`break`** eseguita un' **`return`** istruzione o all'interno del corpo dell'istruzione o quando **`goto`** viene eseguita un'istruzione (a un'istruzione con etichetta all'esterno del **`for`** corpo dell'istruzione).
 
-   - Se *cond-expression* è **false** (0), l'esecuzione dell'istruzione **for** termina e il controllo passa all'istruzione successiva nel programma.
+   - Se *cond-expression* è **`false`** (0), l'esecuzione dell' **`for`** istruzione termina e il controllo passa all'istruzione successiva nel programma.
 
-L'istruzione **for** può terminare anche quando un'istruzione **break**, **goto** o **return** viene eseguita nel corpo dell'istruzione. Un'istruzione **continue** in un ciclo **for** causa la valutazione di *loop-expression*. Quando un'istruzione **break** viene eseguita all'interno di un ciclo **for**, *loop-expression* non viene valutato né eseguito. Questa istruzione
+Un' **`for`** istruzione termina anche quando **`break`** **`goto`** **`return`** viene eseguita un'istruzione, o all'interno del corpo dell'istruzione. Un' **`continue`** istruzione in un **`for`** ciclo determina la valutazione del *ciclo-espressione* . Quando un' **`break`** istruzione viene eseguita all'interno di un **`for`** ciclo, l' *espressione loop* non viene valutata né eseguita. Questa istruzione
 
 ```C
 for( ; ; )
 ```
 
-è la modalità consueta di produrre un ciclo infinito che può essere terminato solo con un'istruzione **break**, **goto** o **return**.
+è il modo personalizzato per produrre un ciclo infinito che può essere terminato solo con un' **`break`** **`goto`** istruzione, o **`return`** .
 
 ## <a name="example"></a>Esempio
 
-Questo esempio illustra l'istruzione **for**:
+In questo esempio viene illustrata l' **`for`** istruzione:
 
 ```C
 // c_for.c

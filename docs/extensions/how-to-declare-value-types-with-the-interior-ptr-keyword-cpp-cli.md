@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172282"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195577"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)
 
@@ -69,9 +69,9 @@ int main() {
 
 ### <a name="description"></a>Descrizione
 
-In un tipo valore il puntatore **this** restituisce un oggetto interior_ptr.
+In un tipo valore, il **`this`** puntatore restituisce un interior_ptr.
 
-Nel corpo di una funzione membro non statica di un tipo valore `V`, **this** è un'espressione di tipo `interior_ptr<V>` il cui valore è l'indirizzo dell'oggetto per cui la funzione viene chiamata.
+Nel corpo di una funzione membro non statica di un tipo di valore `V` , **`this`** è un'espressione di tipo il `interior_ptr<V>` cui valore è l'indirizzo dell'oggetto per il quale viene chiamata la funzione.
 
 ### <a name="code"></a>Codice
 

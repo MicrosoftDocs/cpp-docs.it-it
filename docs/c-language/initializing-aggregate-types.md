@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229623"
 ---
 # <a name="initializing-aggregate-types"></a>Inizializzazione di tipi di aggregazione
 
@@ -51,7 +51,7 @@ Se si specifica la dimensione e si indica un numero di inizializzatori errato, i
 
 **Specifico di Microsoft**
 
-La dimensione massima di una matrice è definita da **size_t**. Definito nel file di intestazione STDDEF.H, **size_t** è `unsigned int` con intervallo da 0x00000000 a 0x7CFFFFFF.
+La dimensione massima di una matrice è definita da **size_t**. Definito nel file di intestazione STDDEF. H, **size_t** è un oggetto **`unsigned int`** con intervallo compreso tra 0x00000000 e 0x7CFFFFFF.
 
 **TERMINA specifica Microsoft**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 In questa costruzione, la prima parentesi graffa sinistra sulla riga 1 avvia l'inizializzazione di `nlist[0]`, che è una matrice di tre strutture. I valori 1, 2 e 3 vengono assegnati ai tre membri della prima struttura. Quando viene rilevata la successiva parentesi graffa destra (dopo il valore 3), l'inizializzazione di `nlist[0]` è completa e le due strutture rimanenti della matrice a tre strutture vengono automaticamente inizializzate su 0. In modo simile `{ 4,5,6 }` inizializza la prima struttura presente nella seconda riga di `nlist`. Le due strutture rimanenti di `nlist[1]` vengono impostate su 0. Quando il compilatore rileva il successivo elenco di inizializzatori (`{ 7,8,9 }`) prova a inizializzare `nlist[2]`. Poiché `nlist` dispone di due sole righe, questo tentativo provoca un errore.
 
-Nell'esempio seguente, i tre membri `int` di `x` vengono inizializzati, rispettivamente, su 1, 2 e 3.
+Nell'esempio seguente, i tre **`int`** membri di `x` vengono inizializzati rispettivamente su 1, 2 e 3.
 
 ```C
 struct list

@@ -4,12 +4,12 @@ description: Guida di riferimento alle proprietà delle pagine delle proprietà 
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180890"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229740"
 ---
 # <a name="cc-property-pages"></a>Pagine delle proprietà C/C++
 
@@ -118,10 +118,10 @@ Consente di selezionare il livello di espansione della [funzione inline](../../c
 
 #### <a name="choices"></a>Opzioni
 
-- **Impostazione predefinita**
+- **Default**
 - **Disabled** : disattiva l'espansione inline, che è attiva per impostazione predefinita.
-- **Solo __inline** -espande solo le funzioni contrassegnate come **`inline`** , `__forceinline` o `__inline` . In alternativa, in una funzione membro C++, definita all'interno di una dichiarazione di classe.
-- **Any adatto** : espande le funzioni contrassegnate come **`inline`** o `__inline` e qualsiasi altra funzione scelta dal compilatore. L'espansione viene eseguita a discrezione del compilatore, spesso definita *incorporamento automatico*.
+- **Solo __inline** -espande solo le funzioni contrassegnate come **`inline`** , **`__forceinline`** o **`__inline`** . In alternativa, in una funzione membro C++, definita all'interno di una dichiarazione di classe.
+- **Any adatto** : espande le funzioni contrassegnate come **`inline`** o **`__inline`** e qualsiasi altra funzione scelta dal compilatore. L'espansione viene eseguita a discrezione del compilatore, spesso definita *incorporamento automatico*.
 
 ### <a name="enable-intrinsic-functions"></a>Abilita funzioni intrinseche
 
@@ -317,7 +317,7 @@ Abilita o Disabilita la modalità di conformità. Imposta [`/permissive-`](permi
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>Considera wchar_t come tipo incorporato
 
-Quando specificato, il tipo **`wchar_t`** diventa un tipo nativo mappato a `__wchar_t` in modo analogo **`short`** al mapping a `__int16` . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)è on per impostazione predefinita.
+Quando specificato, il tipo **`wchar_t`** diventa un tipo nativo mappato a **`__wchar_t`** in modo analogo **`short`** al mapping a **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)è on per impostazione predefinita.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Imponi conformità nell'ambito di un ciclo for
 
@@ -345,7 +345,7 @@ Determina lo standard del linguaggio C++ abilitato dal compilatore. Usare la ver
 
 #### <a name="choices"></a>Opzioni
 
-- **Impostazione predefinita**
+- **Default**
 - **Standard C++ 14 ISO**
 - **Standard C++ 17 ISO**
 - **Anteprima: funzionalità della bozza di lavoro C++ più recente**
@@ -434,10 +434,10 @@ Selezionare la convenzione di chiamata predefinita per l'applicazione (può esse
 
 #### <a name="choices"></a>Opzioni
 
-- **__cdecl** : specifica la `__cdecl` convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++ e delle funzioni contrassegnate come `__stdcall` o `__fastcall` .
-- **__fastcall** : specifica la `__fastcall` convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++ e delle funzioni contrassegnate come `__cdecl` o `__stdcall` . Tutte le funzioni `__fastcall` devono avere prototipi.
-- **__stdcall** : specifica la `__stdcall` convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++ e delle funzioni contrassegnate come `__cdecl` o `__fastcall` . Tutte le funzioni `__stdcall` devono avere prototipi.
-- **__vectorcall** : specifica la `__vectorcall` convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro di C++ e delle funzioni contrassegnate come `__cdecl` , `__fastcall` o `__stdcall` . Tutte le funzioni `__vectorcall` devono avere prototipi.
+- **`__cdecl`**: Specifica la **`__cdecl`** convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++ e delle funzioni contrassegnate come **`__stdcall`** o **`__fastcall`** .
+- **`__fastcall`**: Specifica la **`__fastcall`** convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++ e delle funzioni contrassegnate come **`__cdecl`** o **`__stdcall`** . Tutte le **`__fastcall`** funzioni devono avere prototipi.
+- **`__stdcall`**: Specifica la **`__stdcall`** convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++ e delle funzioni contrassegnate come **`__cdecl`** o **`__fastcall`** . Tutte le **`__stdcall`** funzioni devono avere prototipi.
+- **`__vectorcall`**: Specifica la **`__vectorcall`** convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++ e delle funzioni contrassegnate come **`__cdecl`** , **`__fastcall`** o **`__stdcall`** . Tutte le **`__vectorcall`** funzioni devono avere prototipi.
 
 ### <a name="compile-as"></a>Compila come
 

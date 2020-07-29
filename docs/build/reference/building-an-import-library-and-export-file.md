@@ -25,47 +25,47 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229753"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilazione di una libreria di importazione e di un file di esportazione
 
-Per compilare una libreria di importazione ed esportazione di file, usare la sintassi seguente:
+Per compilare una libreria di importazione e un file di esportazione, usare la sintassi seguente:
 
-> **LIB /DEF**[**:**<em>deffile</em>] [*opzioni*] [*objfiles*] [*librerie*]
+> **Lib/def**[**:**<em>deffile</em>] [*Opzioni*] [*objfiles*] [*librerie*]
 
-Quando viene specificata l'opzione /DEF, i file di output LIB Crea da esportazione specifiche che vengono passate nel comando LIB. Esistono tre metodi per la specifica di esportazioni, elencate in ordine di preferenza di utilizzo:
+Quando si specifica/DEF, LIB crea i file di output dalle specifiche di esportazione passate nel comando LIB. Sono disponibili tre metodi per specificare le esportazioni, elencate nell'ordine di utilizzo consigliato:
 
-1. Oggetto **dllexport** definizione in una delle *objfiles* o *librerie*
+1. Una **`__declspec(dllexport)`** definizione in uno dei *objfiles* o delle *librerie*
 
-1. Una specifica dell'opzione /EXPORT:*nome* nella riga di comando di LIB
+1. Specifica di/EXPORT:*nome* nella riga di comando di lib
 
-1. Una definizione in un **esportazioni** istruzione in un *deffile*
+1. Definizione in un'istruzione **exports** in un *deffile*
 
-Questi sono gli stessi metodi che consente di specificare le esportazioni durante il collegamento di un programma di esportazione. Un programma può utilizzare più di un metodo. È possibile specificare le parti del comando LIB (ad esempio multiplo *objfiles* o /EXPORT specifiche) in un file di comando del comando LIB, esattamente come è possibile in un comando di collegamento.
+Si tratta degli stessi metodi usati per specificare le esportazioni durante il collegamento di un programma di esportazione. Un programma può utilizzare più di un metodo. È possibile specificare parti del comando LIB (ad esempio, più specifiche *objfiles* o/export) in un file di comando nel comando LIB, esattamente come è possibile in un comando di collegamento.
 
-Le opzioni seguenti si applicano alla creazione di una libreria di importazione ed esportazione file:
+Le opzioni seguenti si applicano alla compilazione di una libreria di importazione e di un file di esportazione:
 
-> **/OUT:** *import*
+> **/Out:** *importazione*
 
-Esegue l'override del nome di file di output predefinito per il *importare* libreria da creare. Quando l'opzione /OUT non viene specificato, il nome predefinito è il nome di base del primo file oggetto o della libreria nel comando LIB e l'estensione. lib. Il file di esportazione viene assegnato lo stesso nome di base come la libreria di importazione e l'estensione. exp.
+Esegue l'override del nome del file di output predefinito per la libreria di *importazione* da creare. Se/OUT non è specificato, il nome predefinito è il nome di base del primo file oggetto o della raccolta nel comando LIB e l'estensione LIB. Al file di esportazione viene assegnato lo stesso nome di base della libreria di importazione e dell'estensione EXP.
 
-> **/EXPORT:** *entryname*\[**=** *internalname*]\[,**\@**<em>ordinal</em>\[, **NONAME**]]\[, **DATA**]
+> **/Export:** *entryname* \[ **=** *internalname*] \[ , **\@** <em>ordinale</em> \[ , **NoName**]] \[ , **Data**]
 
-Esporta una funzione dal programma per consentire ad altri programmi chiamare la funzione. È anche possibile esportare dati (tramite il **dati** parola chiave). Le esportazioni sono in genere definite in una DLL.
+Esporta una funzione dal programma per consentire ad altri programmi di chiamare la funzione. È anche possibile esportare dati (usando la parola chiave **Data** ). Le esportazioni vengono in genere definite in una DLL.
 
-Il *entryname* è il nome dell'elemento dati o funzione deve essere utilizzato dal programma chiamante. Facoltativamente, è possibile specificare il *internalname* come la funzione nota nel programma di definizione; per impostazione predefinita *internalname* equivale a *entryname*. Il *ordinale* specifica un indice nella tabella di esportazione nell'intervallo da 1 a 65.535; se non si specifica *ordinale*, ne viene assegnato uno. Il **NONAME** parola chiave consente di esportare la funzione solo come un numero ordinale, senza un' *entryname*. Il **dati** parola chiave viene usata per esportare gli oggetti di soli dati.
+*Entryname* è il nome della funzione o dell'elemento di dati che deve essere utilizzato dal programma chiamante. Facoltativamente, è possibile specificare *internalname* come funzione nota nel programma di definizione. per impostazione predefinita, *internalname* è uguale a *entryname*. Il *numero ordinale* specifica un indice nella tabella export nell'intervallo compreso tra 1 e 65.535; Se non si specifica un *numero ordinale*, lib ne assegna uno. La parola chiave **NoName** Esporta la funzione solo come ordinale, senza *entryname*. La parola chiave **Data** viene utilizzata per esportare oggetti solo dati.
 
-> **/INCLUDE:** *symbol*
+> **/Include:** *simbolo*
 
-Aggiunge l'oggetto specificato *simbolo* alla tabella dei simboli. Questa opzione è utile per imporre l'uso di un oggetto libreria che altrimenti non sarebbero incluso.
+Aggiunge il *simbolo* specificato alla tabella dei simboli. Questa opzione è utile per forzare l'utilizzo di un oggetto libreria che altrimenti non verrebbe incluso.
 
-Si noti che se si crea la libreria di importazione in un passaggio preliminare, prima di creare la DLL, è necessario passare lo stesso set di file oggetto quando si compila il file DLL, come è stato passato quando si compila la libreria di importazione.
+Si noti che se si crea la libreria di importazione in un passaggio preliminare, prima di creare il file con estensione dll, è necessario passare lo stesso set di file oggetto quando si compila la libreria di importazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di librerie di importazione e file di esportazione](working-with-import-libraries-and-export-files.md)
+[Utilizzo di librerie di importazione ed esportazione di file](working-with-import-libraries-and-export-files.md)

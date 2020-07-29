@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8a0674defb0f5e81e0d1417bab5a282cf82b82b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172386"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195694"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI e C++/CX)
 
@@ -40,8 +40,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametri
 
-*modifier*<br/>
-Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **static** e **virtual**.
+*modificatore*<br/>
+Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **`static`** e **`virtual`** .
 
 *delegate*<br/>
 [Delegato](delegate-cpp-component-extensions.md), la firma deve corrispondere al gestore dell'evento.
@@ -50,7 +50,7 @@ Un modificatore che può essere usato in una dichiarazione di evento o in un met
 Nome dell'evento.
 
 *return_value*<br/>
-Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere **void**.
+Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere **`void`** .
 
 *parameters*<br/>
 (Facoltativo) Parametri per il metodo `raise` che corrispondono alla firma del parametro *delegate*.
@@ -104,8 +104,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametri
 
-*modifier*<br/>
-Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **static** e **virtual**.
+*modificatore*<br/>
+Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **`static`** e **`virtual`** .
 
 *delegate*<br/>
 [Delegato](delegate-cpp-component-extensions.md), la firma deve corrispondere al gestore dell'evento.
@@ -114,7 +114,7 @@ Un modificatore che può essere usato in una dichiarazione di evento o in un met
 Nome dell'evento.
 
 *return_value*<br/>
-Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere **void**.
+Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere **`void`** .
 
 *parameters*<br/>
 (Facoltativo) Parametri per il metodo `raise` che corrispondono alla firma del parametro *delegate*.
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-Nell'esempio di codice seguente viene illustrata la logica usata per generare il metodo `raise` di un evento semplice: se l'evento ha uno o più sottoscrittori, quando si chiama il metodo `raise` in modo implicito o esplicito, viene chiamato il delegato. Se il tipo restituito del delegato non è **void** e se non sono presenti sottoscrittori dell'evento, il metodo `raise` restituisce il valore predefinito per il tipo delegato. Se non sono presenti sottoscrittori dell'evento, la chiamata del metodo `raise` restituisce il controllo e non viene generata alcuna eccezione. Se il tipo restituito del delegato non è **void**, viene restituito il tipo delegato.
+Nell'esempio di codice seguente viene illustrata la logica usata per generare il metodo `raise` di un evento semplice: se l'evento ha uno o più sottoscrittori, quando si chiama il metodo `raise` in modo implicito o esplicito, viene chiamato il delegato. Se il tipo restituito del delegato non è **`void`** e se sono presenti sottoscrittori di eventi zero, il `raise` metodo restituisce il valore predefinito per il tipo delegato. Se non sono presenti sottoscrittori dell'evento, la chiamata del metodo `raise` restituisce il controllo e non viene generata alcuna eccezione. Se il tipo restituito del delegato non è **`void`** , viene restituito il tipo delegato.
 
 ```cpp
 // trivial_events.cpp
@@ -272,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

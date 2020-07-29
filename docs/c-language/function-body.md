@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229701"
 ---
 # <a name="function-body"></a>Corpo della funzione
 
@@ -25,12 +25,12 @@ Un *corpo di funzione* è un'istruzione composta che contiene le istruzioni che 
 
 /\**attribute-seq* è specifico di Microsoft\*/
 
-*compound-statement*:/\* corpo della funzione\*/<br/>
+*compound-statement*:/ \* corpo della funzione\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opz</sub> *Statement-list*<sub>opt</sub> **}**
 
-Se non diversamente specificato, le variabili dichiarate nel corpo di funzione, dette *variabili locali*, hanno la classe di archiviazione **auto**. Quando la funzione viene chiamata, l'archiviazione viene creata per le variabili locali e le inizializzazioni locali vengono eseguite. Il controllo di esecuzione passa alla prima istruzione in *compound-statement* e continua fino a quando non viene eseguita un'istruzione **return** non viene raggiunta la fine del corpo di funzione. Il controllo ritorna quindi al punto in cui la funzione è stata chiamata.
+Le variabili dichiarate in un corpo della funzione, note come *variabili locali*, hanno una **`auto`** classe di archiviazione, se non diversamente specificato. Quando la funzione viene chiamata, l'archiviazione viene creata per le variabili locali e le inizializzazioni locali vengono eseguite. Il controllo dell'esecuzione passa alla prima istruzione in *compound-statement* e continua fino a quando non **`return`** viene eseguita un'istruzione o viene rilevata la fine del corpo della funzione. Il controllo ritorna quindi al punto in cui la funzione è stata chiamata.
 
-Un'istruzione **return** contenente un'espressione deve essere eseguita se la funzione restituisce un valore. Il valore restituito di una funzione non è definito se nessuna istruzione **return** viene eseguita o se l'istruzione **return** non include un'espressione.
+Un' **`return`** istruzione contenente un'espressione deve essere eseguita se la funzione deve restituire un valore. Il valore restituito di una funzione non è definito se nessuna **`return`** istruzione viene eseguita o se l' **`return`** istruzione non include un'espressione.
 
 ## <a name="see-also"></a>Vedere anche
 

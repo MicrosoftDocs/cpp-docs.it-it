@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: df699b12404d9de1a9acaae6e9dc8c00fd2f15df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181824"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195356"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Spazi dei nomi Platform, default e cli (C++/CLI e C++/CX)
 
@@ -42,11 +42,11 @@ using namespace cli;
 
 ### <a name="remarks"></a>Osservazioni
 
-C++/CLI supporta lo spazio dei nomi **cli**. Quando si esegue la compilazione con `/clr`, l'istruzione **using** nella sezione relativa alla sintassi è implicita.
+C++/CLI supporta lo spazio dei nomi **cli**. Quando si esegue la compilazione con `/clr` , l' **`using`** istruzione nella sezione della sintassi è implicita.
 
 Le funzionalità del linguaggio seguenti si trovano nello spazio dei nomi **cli**:
 
-- [Array](arrays-cpp-component-extensions.md)
+- [Matrici](arrays-cpp-component-extensions.md)
 
 - [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
 
@@ -80,4 +80,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

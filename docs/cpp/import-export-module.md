@@ -9,19 +9,19 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Utilizzare le dichiarazioni di importazione ed esportazione per accedere e pubblicare tipi e funzioni definiti nel modulo specificato.
-ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+description: Usare le dichiarazioni di importazione ed esportazione per accedere a e per pubblicare i tipi e le funzioni definiti nel modulo specificato.
+ms.openlocfilehash: 5be1618d7e64f6887cf78bd863d428d6710eaf7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374106"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187192"
 ---
 # <a name="module-import-export"></a>modulo, importare, esportare
 
-Le dichiarazioni del **modulo**, **import**e **export** sono disponibili in C , 20 e richiedono l'opzione del compilatore [/experimental:module](../build/reference/experimental-module.md) insieme a [/std:c.](../build/reference/std-specify-language-standard-version.md) Per ulteriori informazioni, vedere [Panoramica dei moduli in C.](modules-cpp.md)
+Il **modulo**, l' **importazione**e le **`export`** dichiarazioni sono disponibili in c++ 20 e richiedono l'opzione del compilatore [/Experimental: module](../build/reference/experimental-module.md) insieme a [/std: C + + Latest](../build/reference/std-specify-language-standard-version.md). Per ulteriori informazioni, vedere [Cenni preliminari sui moduli in C++](modules-cpp.md).
 
-## <a name="module"></a>modulo
+## <a name="module"></a>module
 
 Inserire una dichiarazione di **modulo** all'inizio di un file di implementazione del modulo per specificare che il contenuto del file appartiene al modulo denominato.
 
@@ -31,13 +31,13 @@ module ModuleA;
 
 ## <a name="export"></a>esportare
 
-Utilizzare una dichiarazione del modulo di **esportazione** per il file di interfaccia principale del modulo, che deve avere estensione **.ixx**:
+Usare una dichiarazione di **modulo Export** per il file di interfaccia principale del modulo, che deve avere estensione **IXX**:
 
 ```cpp
 export module ModuleA;
 ```
 
-In un file di interfaccia, utilizzare il modificatore **export** sui nomi che devono far parte dell'interfaccia pubblica:
+In un file di interfaccia, usare il **`export`** modificatore per i nomi che devono far parte dell'interfaccia pubblica:
 
 ```cpp
 // ModuleA.ixx
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-La parola chiave **export** potrebbe non essere visualizzata in un file di implementazione del modulo. Quando **l'esportazione** viene applicata a un nome dello spazio dei nomi, vengono esportati tutti i nomi nello spazio dei nomi.
+La **`export`** parola chiave non può essere visualizzata in un file di implementazione del modulo. Quando **`export`** viene applicato a un nome di spazio dei nomi, vengono esportati tutti i nomi nello spazio dei nomi.
 
-## <a name="import"></a>import
+## <a name="import"></a>importazione
 
-Utilizzare una dichiarazione di **importazione** per rendere visibili i nomi di un modulo nel programma. La dichiarazione di importazione deve comparire dopo la dichiarazione del modulo e dopo qualsiasi direttiva #include, ma prima di qualsiasi dichiarazione nel file.
+Usare una dichiarazione di **importazione** per rendere visibili i nomi di un modulo nel programma. La dichiarazione di importazione deve comparire dopo la dichiarazione del modulo e dopo le direttive #include, ma prima di qualsiasi dichiarazione nel file.
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>Osservazioni
 
-Sia **l'importazione** che il **modulo** vengono considerati come parole chiave solo quando appaiono all'inizio di una riga logica:
+Sia **Import** che **Module** vengono trattati come parole chiave solo quando vengono visualizzati all'inizio di una riga logica:
 
 ```cpp
 
@@ -112,7 +112,7 @@ int i; module ;
 
 **Specifico di Microsoft**
 
-In Microsoft C, **l'importazione** di token e **il modulo** sono sempre identificatori e mai parole chiave quando vengono utilizzati come argomenti di una macro.
+In Microsoft C++ i token **Import** e **Module** sono sempre identificatori e mai parole chiave quando vengono usati come argomenti per una macro.
 
 ### <a name="example"></a>Esempio
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42547828e78566982053d22e8288fe1ccbe6e26b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158236"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229532"
 ---
 # <a name="simple-variable-declarations"></a>Dichiarazioni di variabili semplici
 
@@ -31,7 +31,7 @@ Le classi o i tipi di archiviazione (o entrambi) sono necessari nelle dichiarazi
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
-Per i tipi aritmetici, struttura, unione, enumerazione e void e per i tipi rappresentati dai nomi `typedef`, i dichiaratori semplici possono essere utilizzati in una dichiarazione poiché l'identificatore di tipo fornisce tutte le informazioni sull'immissione. I tipi puntatore, matrice e funzione richiedono i dichiaratori più complessi.
+Per i tipi aritmetico, di struttura, Unione, enumerazione e void e per i tipi rappresentati dai **`typedef`** nomi, i dichiaratori semplici possono essere utilizzati in una dichiarazione poiché l'identificatore di tipo fornisce tutte le informazioni di tipizzazione. I tipi puntatore, matrice e funzione richiedono i dichiaratori più complessi.
 
 È possibile usare un elenco di identificatori delimitati da virgole (**,**) per specificare più variabili nella stessa dichiarazione. Tutte le variabili definite nella dichiarazione hanno lo stesso tipo base. Ad esempio:
 
@@ -40,7 +40,7 @@ int x, y;        /* Declares two simple variables of type int */
 int const z = 1; /* Declares a constant value of type int */
 ```
 
-Le variabili `x` e `y` possono contenere qualsiasi valore nel set definito dal tipo `int` per una determinata implementazione. L'oggetto semplice `z` viene inizializzato con il valore 1 e non è modificabile.
+Le variabili `x` e `y` possono conservare qualsiasi valore nel set definito dal **`int`** tipo per una determinata implementazione. L'oggetto semplice `z` viene inizializzato con il valore 1 e non è modificabile.
 
 Se la dichiarazione di `z` fosse per una variabile statica non inizializzata o fosse nell'ambito file, riceverebbe un valore iniziale pari a 0 e il valore non sarebbe modificabile.
 
@@ -49,7 +49,7 @@ unsigned long reply, flag; /* Declares two variables
                               named reply and flag     */
 ```
 
-In questo esempio, entrambe le variabili, `reply` e `flag`, dispongono del tipo `unsigned long` e contengono valori integrali senza segno.
+In questo esempio, entrambe le variabili, `reply` e `flag` , sono di **`unsigned long`** tipo e contengono valori integrali senza segno.
 
 ## <a name="see-also"></a>Vedere anche
 

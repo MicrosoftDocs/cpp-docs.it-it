@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 875fc3334d326315890396ee02e55b5880e8692e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195564"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Panoramica dei generics in C++/CLI
 
@@ -47,7 +47,7 @@ Una dichiarazione generica contiene uno o più tipi sconosciuti noti come *param
 
 ### <a name="type-arguments"></a>Argomenti tipo
 
-L'*argomento tipo* è il tipo effettivo usato al posto del parametro di tipo quando l'elemento generico è specializzato per uno o più tipi specifici. Ad esempio, **int** è l'argomento tipo in `List<int>`. I tipi di valore e di handle sono gli unici tipi consentiti come argomento di tipo generico.
+L'*argomento tipo* è il tipo effettivo usato al posto del parametro di tipo quando l'elemento generico è specializzato per uno o più tipi specifici. Ad esempio, **`int`** è l'argomento di tipo in `List<int>` . I tipi di valore e di handle sono gli unici tipi consentiti come argomento di tipo generico.
 
 ### <a name="constructed-type"></a>Tipo costruito
 

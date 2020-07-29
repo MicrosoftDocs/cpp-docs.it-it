@@ -6,16 +6,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: e8f62e82ebb7fcc18be5ac7d203df0fb46c9b635
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186971"
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 
-I controlli di accesso consentono di separare l'interfaccia [pubblica](../cpp/public-cpp.md) di una classe dai dettagli di implementazione [privati](../cpp/private-cpp.md) e dai membri [protetti](../cpp/protected-cpp.md) che possono essere utilizzati solo dalle classi derivate. L'identificatore di accesso si applica a tutti i membri dichiarati dopo l'identificatore stesso, fino a quando non viene rilevato l'identificatore di accesso successivo.
+I controlli di accesso consentono di separare l'interfaccia [pubblica](../cpp/public-cpp.md) di una classe dai dettagli di implementazione [privati](../cpp/private-cpp.md) e i membri [protetti](../cpp/protected-cpp.md) che vengono utilizzati solo dalle classi derivate. L'identificatore di accesso si applica a tutti i membri dichiarati dopo l'identificatore stesso, fino a quando non viene rilevato l'identificatore di accesso successivo.
 
 ```cpp
 class Point
@@ -35,15 +35,15 @@ protected:      // Declare protected function for derived classes only.
 };
 ```
 
-L'accesso predefinito è **privato** in una classe e **public** in uno struct o un'unione. Gli specificatori di accesso in una classe possono essere usati per un numero qualsiasi di volte in qualunque ordine. L'allocazione di memoria per oggetti di tipo classe è indipendente dall'implementazione, ma ai membri vengono assegnati gli indirizzi di memoria successivamente superiori tra gli identificatori di accesso.
+L'accesso predefinito si trova **`private`** in una classe e **`public`** in uno struct o Union. Gli specificatori di accesso in una classe possono essere usati per un numero qualsiasi di volte in qualunque ordine. L'allocazione di memoria per oggetti di tipo classe è indipendente dall'implementazione, ma ai membri vengono assegnati gli indirizzi di memoria successivamente superiori tra gli identificatori di accesso.
 
 ## <a name="member-access-control"></a>Controllo dell'accesso ai membri
 
 |Tipo di accesso|Significato|
 |--------------------|-------------|
-|[private](../cpp/private-cpp.md)|I membri di classe dichiarati come **privati** possono essere utilizzati solo da funzioni membro e amici (classi o funzioni) della classe.|
-|[protected](../cpp/protected-cpp.md)|I membri di classe **dichiarati** come protected possono essere utilizzati dalle funzioni membro e dagli amici (classi o funzioni) della classe. Inoltre, possono essere usati dalle classi derivate dalla classe.|
-|[public](../cpp/public-cpp.md)|I membri di classe dichiarati come **pubblici** possono essere utilizzati da qualsiasi funzione.|
+|[privata](../cpp/private-cpp.md)|I membri della classe dichiarati come **`private`** possono essere usati solo dalle funzioni membro e dagli elementi Friend (classi o funzioni) della classe.|
+|[protetto](../cpp/protected-cpp.md)|I membri della classe dichiarati come **`protected`** possono essere utilizzati dalle funzioni membro e dagli elementi Friend (classi o funzioni) della classe. Inoltre, possono essere usati dalle classi derivate dalla classe.|
+|[pubblico](../cpp/public-cpp.md)|I membri della classe dichiarati come **`public`** possono essere utilizzati da qualsiasi funzione.|
 
 Il controllo di accesso consente di impedire l'uso di oggetti secondo modalità di uso non previsto. Questa protezione viene persa quando vengono eseguite conversioni esplicite (di tipo cast).
 
@@ -54,7 +54,7 @@ Il controllo di accesso consente di impedire l'uso di oggetti secondo modalità 
 
 I due seguenti fattori controllano quali membri di una classe base sono accessibili in una classe derivata; questi stessi fattori controllano anche l'accesso ai membri ereditati presenti nella classe derivata:
 
-- Se la classe derivata dichiara la classe base utilizzando l'identificatore di accesso **pubblico.**
+- Indica se la classe derivata dichiara la classe di base usando l' **`public`** identificatore di accesso.
 
 - Quale è l'accesso ai membri presenti nella della classe base.
 
@@ -116,7 +116,7 @@ In `DerivedClass1` la funzione membro `PublicFunc` è un membro pubblico e `Prot
 
 In `DerivedClass2` le funzioni `PublicFunc` e `ProtectedFunc` sono considerate membri privati perché `BaseClass` è una classe base privata. Anche in questo caso `PrivateFunc` è privato per `BaseClass` ed è inaccessibile a tutte le classi derivate.
 
-È possibile dichiarare una classe derivata senza identificatore di accesso della classe base. In tal caso, la derivazione viene considerata privata se la dichiarazione della classe derivata utilizza la parola chiave **class.** La derivazione è considerata pubblica se la dichiarazione della classe derivata utilizza la parola chiave **struct.** Ad esempio, il seguente codice:
+È possibile dichiarare una classe derivata senza identificatore di accesso della classe base. In tal caso, la derivazione viene considerata privata se la dichiarazione della classe derivata usa la **`class`** parola chiave. La derivazione è considerata pubblica se la dichiarazione della classe derivata usa la **`struct`** parola chiave. Ad esempio, il seguente codice:
 
 ```cpp
 class Derived : Base
@@ -144,16 +144,16 @@ struct Derived : public Base
 ...
 ```
 
-Si noti che i membri dichiarati con accesso privato non sono accessibili alle funzioni o alle classi derivate a meno che tali funzioni o classi non vengano dichiarate utilizzando la dichiarazione **friend** nella classe base.
+Si noti che i membri dichiarati con accesso privato non sono accessibili alle funzioni o alle classi derivate a meno che tali funzioni o classi non vengano dichiarate utilizzando la **`friend`** dichiarazione nella classe di base.
 
-Un tipo **di unione** non può avere una classe base.
+Un **`union`** tipo non può avere una classe base.
 
 > [!NOTE]
-> Quando si specifica una classe base privata, è consigliabile usare in modo esplicito la parola chiave **private** in modo che gli utenti della classe derivata comprendano l'accesso ai membri.
+> Quando si specifica una classe base privata, è consigliabile usare in modo esplicito la **`private`** parola chiave per consentire agli utenti della classe derivata di comprendere l'accesso ai membri.
 
 ## <a name="access-control-and-static-members"></a>Controllo di accesso e membri statici
 
-Quando si specifica una classe base come **private**, influisce solo sui membri non statici. I membri statici pubblici sono ancora accessibili nelle classi derivate. Tuttavia, l'accesso ai membri della classe base usando i puntatori, i riferimenti o gli oggetti può richiedere una conversione, momento in cui viene nuovamente applicato il controllo di accesso. Prendere in considerazione gli esempi seguenti:
+Quando si specifica una classe base come **`private`** , ha effetto solo sui membri non statici. I membri statici pubblici sono ancora accessibili nelle classi derivate. Tuttavia, l'accesso ai membri della classe base usando i puntatori, i riferimenti o gli oggetti può richiedere una conversione, momento in cui viene nuovamente applicato il controllo di accesso. Prendere in considerazione gli esempi seguenti:
 
 ```cpp
 // access_control.cpp
@@ -187,7 +187,7 @@ int Derived2::ShowCount()
 }
 ```
 
-Nel codice precedente, il controllo di accesso impedisce la conversione da un puntatore a `Derived2` in un puntatore a `Base`. Il puntatore **this** è `Derived2 *`implicitamente di tipo . Per selezionare la `CountOf` funzione, **questa** deve essere convertita nel tipo `Base *`. Tale conversione non è consentita perché `Base` è una classe base indiretta privata di `Derived2`. La conversione in un tipo di classe base privata è accettabile solo per i puntatori alle classi derivate immediate. Di conseguenza, i puntatori di tipo `Derived1 *` possono essere convertiti nel tipo `Base *`.
+Nel codice precedente, il controllo di accesso impedisce la conversione da un puntatore a `Derived2` in un puntatore a `Base`. Il **`this`** puntatore è implicitamente di tipo `Derived2 *` . Per selezionare la `CountOf` funzione, **`this`** deve essere convertito nel tipo `Base *` . Tale conversione non è consentita perché `Base` è una classe base indiretta privata di `Derived2`. La conversione in un tipo di classe base privata è accettabile solo per i puntatori alle classi derivate immediate. Di conseguenza, i puntatori di tipo `Derived1 *` possono essere convertiti nel tipo `Base *`.
 
 Si noti che la chiamata alla funzione `CountOf` in modo esplicito, senza utilizzare un puntatore, un riferimento o un oggetto per selezionarla, non implica alcuna conversione. La chiamata è pertanto consentita.
 
@@ -195,7 +195,7 @@ I membri e gli elementi friend di una classe derivata, `T`, possono convertire u
 
 ## <a name="access-to-virtual-functions"></a>Accesso alle funzioni virtuali
 
-Il controllo di accesso applicato alle funzioni [virtuali](../cpp/virtual-cpp.md) è determinato dal tipo utilizzato per effettuare la chiamata di funzione. L'esecuzione dell'override delle dichiarazioni di funzione non influisce sul controllo accessi per un determinato tipo. Ad esempio:
+Il controllo di accesso applicato alle funzioni [virtuali](../cpp/virtual-cpp.md) è determinato dal tipo usato per effettuare la chiamata di funzione. L'esecuzione dell'override delle dichiarazioni di funzione non influisce sul controllo accessi per un determinato tipo. Ad esempio:
 
 ```cpp
 // access_to_virtual_functions.cpp
@@ -241,4 +241,4 @@ Nella figura un nome dichiarato nella classe `VBase` viene sempre raggiunto tram
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento al linguaggio C](../cpp/cpp-language-reference.md)
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)

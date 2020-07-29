@@ -10,12 +10,12 @@ helpviewer_keywords:
 - void keyword [C]
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
-ms.openlocfilehash: e7a5cd7624b55e7bce0fbd09451ab42426f5bc37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 192a6556fd8a5d3039598b883ed7c870fc01ad12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229649"
 ---
 # <a name="incomplete-types"></a>Tipi incompleti
 
@@ -27,7 +27,7 @@ Un *tipo incompleto* è un tipo che descrive un identificatore, ma non dispone d
 
 - Tipo di matrice le cui dimensioni non sono ancora state specificate.
 
-Il tipo **void** è un tipo incompleto che non può essere completato. Per completare un tipo incompleto, specificare le informazioni mancanti. Negli esempi seguenti viene illustrato come creare e completare i tipi incompleti.
+Il **`void`** tipo è un tipo incompleto che non può essere completato. Per completare un tipo incompleto, specificare le informazioni mancanti. Negli esempi seguenti viene illustrato come creare e completare i tipi incompleti.
 
 - Per creare un tipo di struttura incompleto, dichiarare un tipo di struttura senza specificare i relativi membri. In questo esempio il puntatore `ps` punta a un tipo di struttura incompleto denominato `student`.
 

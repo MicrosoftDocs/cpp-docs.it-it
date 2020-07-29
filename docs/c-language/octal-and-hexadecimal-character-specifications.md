@@ -5,12 +5,12 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bcd6eb84503b80b1e38be5d134e7506a0f490891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343375"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229584"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Specifiche dei caratteri ottali ed esadecimali
 
@@ -22,7 +22,7 @@ In una sequenza di escape ottale, è possibile utilizzare solo le cifre da 0 a 7
 
 Analogamente, è necessario utilizzare almeno una cifra per le sequenze di escape esadecimali, ma è possibile omettere la seconda e la terza cifra. È quindi possibile specificare la sequenza di escape esadecimale per il carattere backspace in uno dei seguenti modi: **\x8**, **\x08** o **\x008**.
 
-Il valore della sequenza di escape ottale o esadecimale deve essere compreso tra i valori rappresentabili per il tipo **unsigned char**, per una costante carattere, e per il tipo `wchar_t`, per una costante carattere wide. Per informazioni sulle costanti carattere wide, vedere [Caratteri multibyte e wide](../c-language/multibyte-and-wide-characters.md).
+Il valore della sequenza di escape ottale o esadecimale deve essere compreso tra i valori rappresentabili per il tipo **`unsigned char`** per una costante carattere e il tipo **`wchar_t`** per una costante carattere wide. Per informazioni sulle costanti carattere wide, vedere [Caratteri multibyte e wide](../c-language/multibyte-and-wide-characters.md).
 
 A differenza delle costanti di escape ottali, il numero di cifre esadecimali in una sequenza di escape è illimitato. Le sequenze di escape esadecimali terminano al primo carattere che non è una cifra esadecimale. Poiché le cifre esadecimali includono le lettere da **a** a **f**, è necessario verificare attentamente che la sequenza di escape termini in corrispondenza della cifra voluta. Per evitare confusione, è possibile inserire le definizioni dei caratteri esadecimali o ottali in una definizione macro:
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: 02546559183d0e14973bc2e5ccb26a4570a39b1e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 33d471b41c8f1fd670e25626049ecd9b06b034e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623260"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195200"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Allocazione e deallocazione di memoria delle finestre
 
-Non usare l'operatore C++ **Delete per eliminare** definitivamente una finestra cornice o una vista. Chiamare invece la `CWnd` funzione membro `DestroyWindow` . Le finestre cornice, pertanto, devono essere allocate nell'heap con Operator **New**. Prestare attenzione quando si allocano finestre cornice nella stack frame o a livello globale. Le altre finestre devono essere allocate nel stack frame quando possibile.
+Non usare l'operatore C++ **`delete`** per eliminare definitivamente una finestra cornice o una vista. Chiamare invece la `CWnd` funzione membro `DestroyWindow` . Le finestre cornice, pertanto, devono essere allocate nell'heap con operatore **`new`** . Prestare attenzione quando si allocano finestre cornice nella stack frame o a livello globale. Le altre finestre devono essere allocate nel stack frame quando possibile.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
@@ -26,7 +26,7 @@ Non usare l'operatore C++ **Delete per eliminare** definitivamente una finestra 
 
 - [Sequenza di eliminazione di finestre](window-destruction-sequence.md)
 
-- [Scollegamento di un elemento CWnd dal relativo HWND](detaching-a-cwnd-from-its-hwnd.md)
+- [Scollegamento di un oggetto CWnd dall'handle HWND](detaching-a-cwnd-from-its-hwnd.md)
 
 ## <a name="see-also"></a>Vedere anche
 
