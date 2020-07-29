@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172165"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228700"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI e C++/CX)
 
@@ -32,13 +32,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>Parametri
 
 *interface_access*<br/>
-Accessibilità di un'interfaccia all'esterno dell'assembly.  I valori possibili sono **public** e **private**.  Il valore predefinito è **private**. Le interfacce annidate non possono avere un identificatore *interface_access*.
+Accessibilità di un'interfaccia all'esterno dell'assembly.  I valori possibili sono **`public`** e **`private`** .  **`private`** è il valore predefinito. Le interfacce annidate non possono avere un identificatore *interface_access*.
 
 *nome*<br/>
 Nome dell'interfaccia.
 
 *inherit_access*<br/>
-Accessibilità di *base_interface*.  L'unico valore di accessibilità consentito per un'interfaccia di base è **public** (valore predefinito).
+Accessibilità di *base_interface*.  L'unica accessibilità consentita per un'interfaccia di base è **`public`** (impostazione predefinita).
 
 *base_interface*<br/>
 (Facoltativo) Interfaccia di base per l'oggetto *name* dell'interfaccia.
@@ -63,7 +63,7 @@ Per informazioni su altri tipi CLR, vedere [Classi e struct](classes-and-structs
 
 È possibile rilevare in fase di compilazione se un tipo è un'interfaccia con `__is_interface_class(type)`. Per altre informazioni, vedere [Supporto del compilatore per caratteristiche di tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-Nell'ambiente di sviluppo è possibile ottenere la Guida F1 per queste parole chiave evidenziando la parola chiave (ad esempio `interface class`) e premendo F1.
+Nell'ambiente di sviluppo è possibile ottenere la Guida sensibile al contesto per queste parole chiave evidenziando la parola chiave, **`interface class`** ad esempio, e premendo F1.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -220,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - list classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
-ms.openlocfilehash: 7796e1abb2d7d22f17ac704091e62cc65c428405
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56c9b2a2152fb3723ec5c400c59bb5885e734e24
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338519"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228557"
 ---
 # <a name="ready-to-use-list-classes"></a>Classi List pronte all'uso
 
-Le seguenti classi sono classi list pronte all'uso.
+Le classi seguenti sono classi List pronte all'uso.
 
 [CObList](../mfc/reference/coblist-class.md)<br/>
 Archivia i puntatori a oggetti della classe `CObject` o a oggetti di classi derivate da `CObject` in un elenco collegato.
 
 [CPtrList](../mfc/reference/cptrlist-class.md)<br/>
-Archivia i puntatori a **void** (puntatori generici) in un elenco collegato.
+Archivia i puntatori a **`void`** (puntatori generici) in un elenco collegato.
 
 [CStringList](../mfc/reference/cstringlist-class.md)<br/>
-Gli archivi `CString` gli oggetti in un elenco collegato.
+Archivia `CString` gli oggetti in un elenco collegato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../mfc/class-library-overview.md)
+[Cenni preliminari sulle classi](../mfc/class-library-overview.md)

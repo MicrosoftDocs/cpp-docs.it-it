@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 05decc095e43426044c4487b9aca05268642f915
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d58efa3c0dfb888f0802a84b11ec597dd1267de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620450"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228635"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar e CReBarCtrl
 
@@ -24,7 +24,7 @@ Visual C++ offre due modi per sfruttare il controllo comune del Rebar.
 - Creare il controllo Rebar usando `CReBar` , quindi chiamare [CReBar:: GetReBarCtrl](reference/crebar-class.md#getrebarctrl) per ottenere l'accesso alle `CReBarCtrl` funzioni membro.
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl`è una funzione membro inline che esegue il cast del puntatore **this** dell'oggetto Rebar. Ciò significa che, in fase di esecuzione, la chiamata di funzione non ha alcun overhead.
+    >  `CReBar::GetReBarCtrl`è una funzione membro inline che esegue il cast del **`this`** puntatore dell'oggetto Rebar. Ciò significa che, in fase di esecuzione, la chiamata di funzione non ha alcun overhead.
 
 - Creare il controllo Rebar usando il costruttore di [CReBarCtrl](reference/crebarctrl-class.md).
 
@@ -32,5 +32,5 @@ Uno dei due metodi fornirà l'accesso alle funzioni membro del controllo Rebar. 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CReBarCtrl](using-crebarctrl.md)<br/>
+[Utilizzo di CReBarCtrl](using-crebarctrl.md)<br/>
 [Controlli](controls-mfc.md)

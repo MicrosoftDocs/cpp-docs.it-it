@@ -8,38 +8,38 @@ helpviewer_keywords:
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-ms.openlocfilehash: 6136557bd436fb9964498384f277d48e8525a027
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ed191525e11ca2a4d3f5b1c39e9b50b65066d7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253994"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228544"
 ---
 # <a name="ready-to-use-map-classes"></a>Classi Map pronte all'uso
 
-Le classi seguenti sono le classi map pronte all'uso.
+Le classi seguenti sono classi map pronte all'uso.
 
 [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)<br/>
-Viene utilizzato **void** puntatori come chiavi per la ricerca di altri **void** puntatori.
+USA **`void`** i puntatori come chiavi per trovare altri **`void`** puntatori.
 
 [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)<br/>
-Viene utilizzato **void** puntatori come chiavi per la ricerca di dati di tipo **WORD**.
+USA i **`void`** puntatori come chiavi per la ricerca di dati di tipo **Word**.
 
 [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)<br/>
-Viene utilizzato `CString` oggetti come chiavi per la ricerca `CObject` puntatori.
+USA `CString` gli oggetti come chiavi per trovare i `CObject` puntatori.
 
 [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)<br/>
-Viene utilizzato `CString` oggetti come chiavi per la ricerca **void** puntatori.
+USA `CString` gli oggetti come chiavi per trovare i **`void`** puntatori.
 
 [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)<br/>
-Viene utilizzato `CString` oggetti come chiavi per la ricerca di altri `CString` oggetti.
+USA `CString` gli oggetti come chiavi per la ricerca di altri `CString` oggetti.
 
 [CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)<br/>
-Usa i dati di tipo **WORD** trovare `CObject` puntatori.
+USA i dati di tipo **Word** per trovare i `CObject` puntatori.
 
 [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)<br/>
-Usa i dati di tipo **WORD** trovare **void** puntatori.
+USA i dati di tipo **Word** per trovare i **`void`** puntatori.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../mfc/class-library-overview.md)
+[Cenni preliminari sulle classi](../mfc/class-library-overview.md)

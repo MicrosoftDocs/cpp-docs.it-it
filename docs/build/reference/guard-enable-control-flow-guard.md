@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: e6a8a1545b97976cbe82d1c81b0e70c3dac3a266
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8661f94e0ee35f8d5e2c8caba1fc01bbf4072876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270807"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190689"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (abilita la protezione del flusso di controllo)
 
@@ -22,11 +22,11 @@ Abilita la generazione dei controlli di sicurezza di Guard flusso di controllo n
 /guard:cf[-]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'opzione **/guard:cf** fa in modo che il compilatore analizzi il flusso di controllo per verificare la presenza di destinazioni di chiamata indiretta in fase di compilazione e che quindi inserisca il codice per verificare le destinazioni in fase di esecuzione. Per impostazione predefinita, **/guard:cf** è disattivato e deve essere abilitato in modo esplicito. Per disabilitare in modo esplicito questa opzione, usare **/guard:cf-**.
 
-**Visual Studio 2017 e versioni successive**: Questa opzione aggiunge le protezioni per **commutatore** istruzioni che generano tabelle di collegamento.
+**Visual Studio 2017 e versioni successive**: questa opzione aggiunge le protezioni per le **`switch`** istruzioni che generano jump table.
 
 Quando si specifica l'opzione **/guard:cf** (Guard flusso di controllo), il compilatore e il linker inseriscono controlli di sicurezza aggiuntivi in fase di esecuzione per rilevare i tentativi di violazione del codice. Durante la compilazione e il collegamento tutte le chiamate indirette presenti nel codice vengono analizzate allo scopo di individuare tutte le posizioni raggiungibili dal codice quando viene eseguito correttamente. Queste informazioni vengono archiviate in strutture aggiuntive nelle intestazioni dei file binari. Il compilatore inserisce anche un controllo prima di ogni chiamata indiretta presente nel codice al fine di garantire che la destinazione corrisponde a una delle posizioni verificate. Se il controllo eseguito su un sistema operativo compatibile con Guard flusso di controllo non riesce in fase di esecuzione, il programma viene chiuso dal sistema operativo.
 
@@ -40,7 +40,7 @@ Il codice compilato con **/guard:cf** può essere collegato a librerie e file og
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Selezionare **Proprietà di configurazione**, **C/C++**, **Generazione codice**.
 

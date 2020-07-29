@@ -11,18 +11,18 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-ms.openlocfilehash: 1f0b07a0a3439faba71078af1e2d7d1559a42b41
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ecf60fbdd11f540d12c1bfab047bbb80a3cb83e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228596"
 ---
 # <a name="memory-management-heap-allocation"></a>Gestione della memoria: allocazione di heap
 
-L'heap è riservato per le esigenze di allocazione della memoria del programma. Si tratta di un'area diversa dal codice del programma e dallo stack. I programmi C tipici usano le funzioni **malloc** e **liberano** di allocare e deallocare la memoria heap. La versione di debug di MFC fornisce le versioni modificate degli operatori predefiniti **New** e **Delete** di C++ per allocare e deallocare oggetti nella memoria heap.
+L'heap è riservato per le esigenze di allocazione della memoria del programma. Si tratta di un'area diversa dal codice del programma e dallo stack. I programmi C tipici usano le funzioni **malloc** e **liberano** di allocare e deallocare la memoria heap. La versione di debug di MFC fornisce le versioni modificate degli operatori predefiniti C++ **`new`** e **`delete`** per allocare e deallocare gli oggetti nella memoria heap.
 
-Quando si usa **New** ed **Delete** anziché **malloc** e **Free**, si è in grado di sfruttare i miglioramenti del debug della libreria di classi, che può essere utile per rilevare le perdite di memoria. Quando si compila il programma con la versione finale di MFC, le versioni standard degli operatori **New** e **Delete** forniscono un modo efficiente per allocare e deallocare memoria (la versione di rilascio di MFC non fornisce le versioni modificate di questi operatori).
+Quando si usano **`new`** e **`delete`** invece di **malloc** e **Free**, è possibile sfruttare i miglioramenti del debug della libreria di classi, che può essere utile per rilevare le perdite di memoria. Quando si compila il programma con la versione finale di MFC, le versioni standard degli **`new`** operatori e **`delete`** forniscono un modo efficiente per allocare e deallocare memoria (la versione finale di MFC non fornisce le versioni modificate di questi operatori).
 
 Si noti che la dimensione totale degli oggetti allocati nell'heap è limitata solo dalla memoria virtuale disponibile del sistema.
 

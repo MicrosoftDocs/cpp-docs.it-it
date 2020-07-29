@@ -1,5 +1,5 @@
 ---
-title: Aggiungi proprietà
+title: Aggiungere una proprietà
 ms.date: 11/09/2018
 f1_keywords:
 - vc.codewiz.prop.overview
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228674"
 ---
-# <a name="add-a-property"></a>Aggiungi proprietà
+# <a name="add-a-property"></a>Aggiungere una proprietà
 
 È possibile usare l'[Aggiunta guidata proprietà](#names-add-property-wizard) per aggiungere un metodo a un'interfaccia del progetto.
 
@@ -77,7 +77,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
 - **Funzione di notifica**
 
-  Solo interfacce dispatch MFC. Disponibile solo se si specifica **Variabile membro** in **Tipo di implementazione**. Imposta il nome dalla funzione di notifica chiamata se la proprietà viene modificata. Per impostazione predefinita, il nome `On`della funzione di notifica è impostato su *NomeProprietà*`Changed`. È possibile modificare il nome.
+  Solo interfacce dispatch MFC. Disponibile solo se si specifica **Variabile membro** in **Tipo di implementazione**. Imposta il nome dalla funzione di notifica chiamata se la proprietà viene modificata. Per impostazione predefinita, il nome della funzione di notifica è impostato su `On` *PropertyName* `Changed` . È possibile modificare il nome.
 
 - **Funzione Get**
 
@@ -94,7 +94,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
   |Tipo di implementazione|Descrizione|
   |-------------------------|-----------------|
   |**Predefinito**|Specifica un'implementazione predefinita per la proprietà selezionata in **Nome proprietà**. Valore predefinito. Per altre informazioni, vedere [Proprietà predefinite](#stock-properties).<br /><br /> Se si specifica **Predefinito**, **Tipo di proprietà**, **Tipo parametro** e **Nome parametro** appaiono disattivate.|
-  |**Variabile membro**|Specifica che la proprietà viene aggiunta come variabile membro. È possibile aggiungere proprietà personalizzate o la maggior parte delle proprietà predefinite come variabili membro. Non è possibile specificare `Caption`la `hWnd`variabile `Text` **membro** per le proprietà , e .<br /><br /> Specifica i nomi predefiniti in **Nome variabile** e **Funzione di notifica**. È possibile modificare il nome.|
+  |**Variabile membro**|Specifica che la proprietà viene aggiunta come variabile membro. È possibile aggiungere proprietà personalizzate o la maggior parte delle proprietà predefinite come variabili membro. Non è possibile specificare la **variabile membro** per le `Caption` `hWnd` proprietà, e `Text` .<br /><br /> Specifica i nomi predefiniti in **Nome variabile** e **Funzione di notifica**. È possibile modificare il nome.|
   |**Metodi Get/Set**|Specifica che la proprietà viene aggiunta come funzione `Get`*PropertyName* e `Set`*PropertyName* per impostazione predefinita. Questi nomi sono visualizzati nella funzione **Get** e **Set**.<br /><br /> È possibile modificare il **Tipo di proprietà** predefinito che passa un valore per la funzione Get. È possibile specificare parametri per le funzioni `Get` e `Set`.|
 
 - **Funzione Get**
@@ -105,16 +105,16 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce ATL. Imposta la proprietà come accessibile in scrittura, ovvero crea il metodo `Put` per l'impostazione o l'inserimento della proprietà dell'oggetto. Selezionare **Get**, **Put** o entrambe. Se si seleziona questa opzione, è possibile scegliere uno dei due modi seguenti per implementare il metodo:
 
-  |Opzione|Descrizione|
+  |Opzione|Description|
   |------------|-----------------|
   |**PropPut**|La funzione [PropPut](../windows/propput.md) restituisce una copia dell'oggetto. Questo è il valore predefinito e il modo più comune per impostare la proprietà come accessibile in scrittura.|
   |**PropPutRef**|La funzione [PropPutRef](../windows/propputref.md) restituisce un riferimento all'oggetto anziché restituire la copia dell'oggetto. Può essere utile usare questa opzione per gli oggetti, ad esempio struct o matrici di grandi dimensioni, che potrebbero avere un sovraccarico di inizializzazione.|
 
-- **Attributi dei parametri**
+- **Attributi parametro**
 
-  Solo interfacce ATL. Imposta se il parametro `in`specificato `out`da **Nome parametro** è , , entrambi o nessuno.
+  Solo interfacce ATL. Imposta un valore che indica se il parametro specificato in base al **nome del parametro** è `in` , `out` , both o None.
 
-  |Opzione|Descrizione|
+  |Opzione|Description|
   |------------|-----------------|
   |`in`|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|
   |`out`|Indica che il parametro del puntatore viene restituito dalla routine chiamata alla routine chiamante (dal server al client).|
@@ -127,7 +127,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Imposta il nome di un parametro da aggiungere per la proprietà, se la proprietà ha parametri. Dopo aver selezionato **Aggiungi**, il nome del parametro viene visualizzato nell'**Elenco parametri**.
 
-- **Elenco parametri**
+- **Elenco di parametri**
 
   Visualizza l'elenco degli attributi da aggiungere alla proprietà. Ogni voce dell'elenco include il nome del parametro, il tipo di parametro e gli attributi. Usare **Aggiungi** e **Rimuovi** per aggiornare l'elenco.
 
@@ -157,13 +157,13 @@ Usare questa pagina dell'Aggiunta guidata proprietà per specificare le impostaz
 
 - `helpstring`
 
-  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita, viene impostata su `property`&nbsp;*Property&nbsp;name*. Vedere [helpstring](/windows/win32/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
+  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita, è impostato sul **`property`** &nbsp; * &nbsp; nome della proprietà*. Vedere [helpstring](/windows/win32/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
 
 ### <a name="other-options"></a>Altre opzioni
 
 Non tutte le opzioni sono disponibili per tutti i tipi di proprietà.
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |`bindable`|Indica che la proprietà supporta il data binding. Vedere [bindable](/windows/win32/Midl/bindable) in *MIDL Reference* (Riferimento MIDL). Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|
 |`defaultbind`|Indica la singola proprietà associabile che meglio rappresenta l'oggetto. Vedere [defaultbind](/windows/win32/Midl/defaultbind) in *MIDL Reference* (Riferimento MIDL).|

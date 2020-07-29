@@ -2,34 +2,34 @@
 title: Utilizzo di sezioni
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: edef9154b0c4da6f53c8ac40ee84e55e9b38a9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126266"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228466"
 ---
 # <a name="using-tiles"></a>Utilizzo di sezioni
 
-È possibile usare l'affiancamento per ottimizzare l'accelerazione dell'app. L'affiancamento divide i thread in subset o *riquadri*rettangolari uguali. Se si usano le C++ dimensioni del riquadro appropriate e l'algoritmo affiancato, è possibile ottenere ancora più accelerazione dal codice amp. I componenti di base di affiancamento sono:
+È possibile usare l'affiancamento per ottimizzare l'accelerazione dell'app. L'affiancamento divide i thread in subset o *riquadri*rettangolari uguali. Se si usano le dimensioni del riquadro appropriate e l'algoritmo affiancato, è possibile ottenere ancora più accelerazione dal codice C++ AMP. I componenti di base di affiancamento sono:
 
-- variabili `tile_static`. Il vantaggio principale dell'affiancamento è il miglioramento delle prestazioni dall'accesso `tile_static`. L'accesso ai dati in `tile_static` memoria può essere notevolmente più veloce rispetto all'accesso ai dati nello spazio globale (`array` o `array_view` oggetti). Viene creata un'istanza di una variabile di `tile_static` per ogni sezione e tutti i thread nel riquadro hanno accesso alla variabile. In un tipico algoritmo affiancato, i dati vengono copiati in `tile_static` memoria una sola volta dalla memoria globale e quindi a cui si accede più volte dalla memoria del `tile_static`.
+- `tile_static`variabili. Il vantaggio principale dell'affiancamento è il miglioramento delle prestazioni dall' `tile_static` accesso. L'accesso ai dati in `tile_static` memoria può essere notevolmente più veloce rispetto all'accesso ai dati nello spazio globale ( `array` o `array_view` oggetti). Viene creata un'istanza di una `tile_static` variabile per ogni sezione e tutti i thread del riquadro hanno accesso alla variabile. In un tipico algoritmo affiancato, i dati vengono copiati in `tile_static` memoria una sola volta dalla memoria globale e quindi a cui si accede più spesso dalla `tile_static` memoria.
 
-- [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait). Una chiamata a `tile_barrier::wait` sospende l'esecuzione del thread corrente fino a quando tutti i thread nello stesso riquadro raggiungono la chiamata al `tile_barrier::wait`. Non è possibile garantire l'ordine in cui i thread vengono eseguiti, ma solo che nessun thread nel riquadro verrà eseguito oltre la chiamata a `tile_barrier::wait` finché tutti i thread non hanno raggiunto la chiamata. Ciò significa che, usando il metodo `tile_barrier::wait`, è possibile eseguire le attività su un elemento affiancato anziché una base thread per thread. Un algoritmo di affiancamento tipico contiene codice per inizializzare la memoria `tile_static` per l'intero riquadro seguito da una chiamata a `tile_barrier::wait`. Il codice che segue `tile_barrier::wait` contiene calcoli che richiedono l'accesso a tutti i valori di `tile_static`.
+- [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait). Una chiamata a `tile_barrier::wait` sospende l'esecuzione del thread corrente fino a quando tutti i thread nello stesso riquadro raggiungono la chiamata a `tile_barrier::wait` . Non è possibile garantire l'ordine in cui vengono eseguiti i thread, ma solo che nessun thread nel riquadro verrà eseguito oltre la chiamata a `tile_barrier::wait` fino a quando tutti i thread non avranno raggiunto la chiamata. Ciò significa che tramite il `tile_barrier::wait` metodo, è possibile eseguire le attività in un riquadro per riquadro anziché in base a thread. Un algoritmo di affiancamento tipico contiene codice per inizializzare la `tile_static` memoria per l'intero riquadro seguito da una chiamata a `tile_barrier::wait` . Il codice che segue `tile_barrier::wait` contiene i calcoli che richiedono l'accesso a tutti i `tile_static` valori.
 
-- Indicizzazione locale e globale. È possibile accedere all'indice del thread in relazione all'intero `array_view` o `array` oggetto e all'indice relativo alla sezione. Utilizzando l'indice locale è possibile semplificare la lettura e il debug del codice. In genere, si usa l'indicizzazione locale per accedere alle variabili `tile_static` e l'indicizzazione globale per accedere alle variabili `array` e `array_view`.
+- Indicizzazione locale e globale. È possibile accedere all'indice del thread in relazione all'intero `array_view` `array` oggetto o e all'indice relativo alla sezione. Utilizzando l'indice locale è possibile semplificare la lettura e il debug del codice. In genere, si usa l'indicizzazione locale per accedere alle `tile_static` variabili e l'indicizzazione globale per accedere alle `array` `array_view` variabili e.
 
-- classe [tiled_extent](../../parallel/amp/reference/tiled-extent-class.md) e [classe tiled_index](../../parallel/amp/reference/tiled-index-class.md). Usare un oggetto `tiled_extent` anziché un oggetto `extent` nella chiamata `parallel_for_each`. Usare un oggetto `tiled_index` anziché un oggetto `index` nella chiamata `parallel_for_each`.
+- classe [tiled_extent](../../parallel/amp/reference/tiled-extent-class.md) e [classe tiled_index](../../parallel/amp/reference/tiled-index-class.md). Usare un `tiled_extent` oggetto anziché un `extent` oggetto nella `parallel_for_each` chiamata. Usare un `tiled_index` oggetto anziché un `index` oggetto nella `parallel_for_each` chiamata.
 
-Per sfruttare i vantaggi dell'affiancamento, l'algoritmo deve partizionare il dominio di calcolo in riquadri e quindi copiare i dati del riquadro in variabili `tile_static` per un accesso più rapido.
+Per sfruttare i vantaggi dell'affiancamento, l'algoritmo deve partizionare il dominio di calcolo in riquadri e quindi copiare i dati del riquadro in `tile_static` variabili per un accesso più rapido.
 
 ## <a name="example-of-global-tile-and-local-indices"></a>Esempio di indici globali, di sezione e locali
 
 Il diagramma seguente rappresenta una matrice 8x9 di dati disposti nei riquadri 2x3.
 
-![8&#45;per&#45;9 matrici divise in&#45;2&#45;per 3 riquadri](../../parallel/amp/media/usingtilesmatrix.png "8&#45;per&#45;9 matrici divise in&#45;2&#45;per 3 riquadri")
+![8&#45;di&#45;9 matrice divisa in 2&#45;da&#45;3 riquadri](../../parallel/amp/media/usingtilesmatrix.png "8&#45;di&#45;9 matrice divisa in 2&#45;da&#45;3 riquadri")
 
-Nell'esempio seguente vengono visualizzati gli indici globali, di sezione e locali di questa matrice affiancata. Un oggetto `array_view` viene creato usando elementi di tipo `Description`. Il `Description` include gli indici globali, di sezione e locali dell'elemento nella matrice. Il codice nella chiamata a `parallel_for_each` imposta i valori degli indici globali, di sezione e locali di ogni elemento. Nell'output vengono visualizzati i valori nelle strutture di `Description`.
+Nell'esempio seguente vengono visualizzati gli indici globali, di sezione e locali di questa matrice affiancata. Un `array_view` oggetto viene creato usando gli elementi di tipo `Description` . L'oggetto `Description` include gli indici globali, di sezione e locali dell'elemento nella matrice. Il codice nella chiamata a `parallel_for_each` imposta i valori degli indici globali, di sezione e locali di ogni elemento. Nell'output vengono visualizzati i valori delle `Description` strutture.
 
 ```cpp
 #include <iostream>
@@ -141,33 +141,33 @@ int main() {
 }
 ```
 
-Il lavoro principale dell'esempio è la definizione dell'oggetto `array_view` e la chiamata a `parallel_for_each`.
+Il lavoro principale dell'esempio è la definizione dell' `array_view` oggetto e la chiamata a `parallel_for_each` .
 
-1. Il vettore di `Description` strutture viene copiato in un oggetto `array_view` 8x9.
+1. Il vettore di `Description` strutture viene copiato in un `array_view` oggetto 8x9.
 
-2. Il metodo `parallel_for_each` viene chiamato con un oggetto `tiled_extent` come dominio di calcolo. L'oggetto `tiled_extent` viene creato chiamando il metodo `extent::tile()` della variabile `descriptions`. I parametri di tipo della chiamata a `extent::tile()`, `<2,3>`, specificano che vengono creati i riquadri 2x3. Quindi, la matrice 8x9 viene affiancata in 12 riquadri, quattro righe e tre colonne.
+2. Il `parallel_for_each` metodo viene chiamato con un `tiled_extent` oggetto come dominio di calcolo. L' `tiled_extent` oggetto viene creato chiamando il `extent::tile()` metodo della `descriptions` variabile. I parametri di tipo della chiamata a `extent::tile()` , `<2,3>` , specificano che vengono creati i riquadri 2x3. Quindi, la matrice 8x9 viene affiancata in 12 riquadri, quattro righe e tre colonne.
 
-3. Il metodo `parallel_for_each` viene chiamato utilizzando un oggetto `tiled_index<2,3>` (`t_idx`) come indice. I parametri di tipo dell'indice (`t_idx`) devono corrispondere ai parametri di tipo del dominio di calcolo (`descriptions.extent.tile< 2, 3>()`).
+3. Il `parallel_for_each` metodo viene chiamato utilizzando un `tiled_index<2,3>` oggetto ( `t_idx` ) come indice. I parametri di tipo dell'indice ( `t_idx` ) devono corrispondere ai parametri di tipo del dominio di calcolo ( `descriptions.extent.tile< 2, 3>()` ).
 
-4. Quando ogni thread viene eseguito, l'indice `t_idx` restituisce informazioni sul riquadro in cui si trova il thread (`tiled_index::tile` proprietà) e sulla posizione del thread all'interno del riquadro (`tiled_index::local` proprietà).
+4. Quando ogni thread viene eseguito, l'indice `t_idx` restituisce informazioni sul riquadro in cui si trova il thread ( `tiled_index::tile` proprietà) e sulla posizione del thread all'interno del riquadro ( `tiled_index::local` proprietà).
 
 ## <a name="tile-synchronizationtile_static-and-tile_barrierwait"></a>Sincronizzazione affiancata: tile_static e tile_barrier:: wait
 
-L'esempio precedente illustra il layout e gli indici dei riquadri, ma non è molto utile.  L'affiancamento risulta utile quando i riquadri sono integrali nell'algoritmo e sfruttano `tile_static` variabili. Poiché tutti i thread in una sezione hanno accesso a variabili di `tile_static`, le chiamate a `tile_barrier::wait` vengono usate per sincronizzare l'accesso alle variabili di `tile_static`. Anche se tutti i thread in una sezione hanno accesso alle variabili `tile_static`, non esiste alcun ordine di esecuzione garantito dei thread nella sezione. Nell'esempio seguente viene illustrato come utilizzare variabili `tile_static` e il metodo `tile_barrier::wait` per calcolare il valore medio di ogni sezione. Ecco le chiavi per comprendere l'esempio:
+L'esempio precedente illustra il layout e gli indici dei riquadri, ma non è molto utile.  L'affiancamento diventa utile quando i riquadri sono integrali nell'algoritmo e le variabili di exploit `tile_static` . Poiché tutti i thread in una sezione hanno accesso a `tile_static` variabili, le chiamate a `tile_barrier::wait` vengono utilizzate per sincronizzare l'accesso alle `tile_static` variabili. Anche se tutti i thread in una sezione hanno accesso alle `tile_static` variabili, non esiste un ordine di esecuzione garantito dei thread nella sezione. Nell'esempio seguente viene illustrato come utilizzare le `tile_static` variabili e il `tile_barrier::wait` metodo per calcolare il valore medio di ogni sezione. Ecco le chiavi per comprendere l'esempio:
 
 1. RawData è archiviato in una matrice 8x8 Virtual.
 
-2. Le dimensioni del riquadro sono 2x2. In questo modo viene creata una griglia 4x4 di riquadri e le medie possono essere archiviate in una matrice 4x4 usando un oggetto `array`. Esiste solo un numero limitato di tipi che è possibile acquisire per riferimento in una funzione con restrizioni AMP. Il `array` classe è uno di essi.
+2. Le dimensioni del riquadro sono 2x2. In questo modo viene creata una griglia 4x4 di riquadri e le medie possono essere archiviate in una matrice 4x4 usando un `array` oggetto. Esiste solo un numero limitato di tipi che è possibile acquisire per riferimento in una funzione con restrizioni AMP. La `array` classe è uno di essi.
 
-3. Le dimensioni della matrice e le dimensioni del campione vengono definite tramite `#define` istruzioni, perché i parametri di tipo per `array`, `array_view`, `extent`e `tiled_index` devono essere valori costanti. È anche possibile usare dichiarazioni di `const int static`. Come ulteriore vantaggio, è semplice modificare le dimensioni del campione per calcolare la media sui riquadri 4x4.
+3. Le dimensioni della matrice e le dimensioni del campione vengono definite tramite `#define` istruzioni, perché i parametri di tipo per `array` ,, `array_view` `extent` e `tiled_index` devono essere valori costanti. È anche possibile usare le `const int static` dichiarazioni. Come ulteriore vantaggio, è semplice modificare le dimensioni del campione per calcolare la media sui riquadri 4x4.
 
-4. Una matrice `tile_static` 2x2 di valori float viene dichiarata per ogni sezione. Sebbene la dichiarazione si trovi nel percorso del codice per ogni thread, viene creata una sola matrice per ogni riquadro della matrice.
+4. `tile_static`Per ogni sezione viene dichiarata una matrice 2x2 di valori float. Sebbene la dichiarazione si trovi nel percorso del codice per ogni thread, viene creata una sola matrice per ogni riquadro della matrice.
 
-5. È presente una riga di codice per copiare i valori in ogni riquadro nella matrice `tile_static`. Per ogni thread, dopo che il valore viene copiato nella matrice, l'esecuzione del thread viene arrestata a causa della chiamata a `tile_barrier::wait`.
+5. È presente una riga di codice per copiare i valori in ogni sezione nella `tile_static` matrice. Per ogni thread, dopo la copia del valore nella matrice, l'esecuzione del thread viene arrestata a causa della chiamata a `tile_barrier::wait` .
 
-6. Quando tutti i thread in una sezione hanno raggiunto la barriera, la media può essere calcolata. Poiché il codice viene eseguito per ogni thread, è presente un'istruzione `if` per calcolare solo la media in un thread. La media viene archiviata nella variabile Averages. La barriera è essenzialmente il costrutto che controlla i calcoli per riquadro, così come si può usare un ciclo `for`.
+6. Quando tutti i thread in una sezione hanno raggiunto la barriera, la media può essere calcolata. Poiché il codice viene eseguito per ogni thread, è presente un' `if` istruzione per calcolare solo la media in un thread. La media viene archiviata nella variabile Averages. La barriera è essenzialmente il costrutto che controlla i calcoli per riquadro, molto come si può usare un **`for`** ciclo.
 
-7. I dati nella variabile `averages`, poiché si tratta di un oggetto `array`, devono essere copiati di nuovo nell'host. Questo esempio usa l'operatore di conversione vettoriale.
+7. I dati nella `averages` variabile, poiché si tratta di un `array` oggetto, devono essere copiati di nuovo nell'host. Questo esempio usa l'operatore di conversione vettoriale.
 
 8. Nell'esempio completo, è possibile modificare SAMPLESIZE in 4 e il codice viene eseguito correttamente senza altre modifiche.
 
@@ -252,7 +252,7 @@ int main() {
 
 ## <a name="race-conditions"></a>Condizioni di traccia
 
-Potrebbe essere tentata la creazione di una variabile di `tile_static` denominata `total` e l'incremento della variabile per ogni thread, come segue:
+È possibile che si stia tentando di creare una `tile_static` variabile denominata `total` e di incrementare la variabile per ogni thread, come segue:
 
 ```cpp
 // Do not do this.
@@ -263,7 +263,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-Il primo problema con questo approccio è che le variabili `tile_static` non possono avere inizializzatori. Il secondo problema è che è presente un race condition sull'assegnazione per `total`, poiché tutti i thread nel riquadro hanno accesso alla variabile senza un ordine particolare. È possibile programmare un algoritmo per consentire solo a un thread di accedere al totale a ogni barriera, come illustrato di seguito. Tuttavia, questa soluzione non è estendibile.
+Il primo problema con questo approccio è che le `tile_static` variabili non possono avere inizializzatori. Il secondo problema è che è presente un race condition sull'assegnazione a `total` , perché tutti i thread nel riquadro hanno accesso alla variabile senza un ordine particolare. È possibile programmare un algoritmo per consentire solo a un thread di accedere al totale a ogni barriera, come illustrato di seguito. Tuttavia, questa soluzione non è estendibile.
 
 ```cpp
 // Do not do this.
@@ -283,25 +283,25 @@ t_idx.barrier.wait();
 
 ## <a name="memory-fences"></a>Barriere di memoria
 
-Esistono due tipi di accesso alla memoria che devono essere sincronizzati, ovvero l'accesso alla memoria globale e l'accesso `tile_static` alla memoria. Un oggetto `concurrency::array` alloca solo la memoria globale. Un `concurrency::array_view` può fare riferimento a memoria globale, `tile_static` memoria o entrambi, a seconda di come è stato costruito.  Esistono due tipi di memoria che devono essere sincronizzati:
+Esistono due tipi di accesso alla memoria che devono essere sincronizzati: accesso alla memoria globale e accesso alla memoria `tile_static` . Un `concurrency::array` oggetto alloca solo la memoria globale. Un oggetto `concurrency::array_view` può fare riferimento a memoria globale, `tile_static` memoria o entrambi, a seconda di come è stato costruito.  Esistono due tipi di memoria che devono essere sincronizzati:
 
 - memoria globale
 
 - `tile_static`
 
-Un limite di *memoria* garantisce che gli accessi alla memoria siano disponibili per altri thread nella sezione del thread e che gli accessi alla memoria vengano eseguiti in base all'ordine del programma. Per garantire questo problema, i compilatori e i processori non riordinano le letture e le Scritture attraverso la recinzione. In C++ amp, un limite di memoria viene creato da una chiamata a uno di questi metodi:
+Un limite di *memoria* garantisce che gli accessi alla memoria siano disponibili per altri thread nella sezione del thread e che gli accessi alla memoria vengano eseguiti in base all'ordine del programma. Per garantire questo problema, i compilatori e i processori non riordinano le letture e le Scritture attraverso la recinzione. In C++ AMP, un limite di memoria viene creato da una chiamata a uno di questi metodi:
 
-- [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait): crea una recinzione intorno alla memoria globale e `tile_static`.
+- [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait): crea una recinzione intorno a globale e alla `tile_static` memoria.
 
-- [metodo tile_barrier:: wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): crea una recinzione intorno alla memoria globale e `tile_static`.
+- [metodo tile_barrier:: wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): crea una recinzione intorno a globale e alla `tile_static` memoria.
 
 - [metodo tile_barrier:: wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): crea una recinzione intorno solo alla memoria globale.
 
-- [metodo tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea una recinzione intorno solo `tile_static` memoria.
+- [metodo tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea una recinzione intorno alla `tile_static` memoria.
 
-La chiamata al limite specifico necessario può migliorare le prestazioni dell'app. Il tipo di barriera influiscono sul modo in cui il compilatore e l'hardware riordinano le istruzioni. Se, ad esempio, si usa un limite di memoria globale, si applica solo agli accessi alla memoria globale e pertanto il compilatore e l'hardware possono riordinare le letture e le Scritture nelle variabili `tile_static` sui due lati della recinzione.
+La chiamata al limite specifico necessario può migliorare le prestazioni dell'app. Il tipo di barriera influiscono sul modo in cui il compilatore e l'hardware riordinano le istruzioni. Se ad esempio si usa un limite di memoria globale, si applica solo agli accessi alla memoria globale e pertanto il compilatore e l'hardware potrebbero riordinare le letture e le Scritture `tile_static` nelle variabili sui due lati della recinzione.
 
-Nell'esempio seguente la barriera sincronizza le Scritture in `tileValues`, una variabile `tile_static`. In questo esempio `tile_barrier::wait_with_tile_static_memory_fence` viene chiamato anziché `tile_barrier::wait`.
+Nell'esempio seguente la barriera sincronizza le Scritture in `tileValues` una `tile_static` variabile. In questo esempio `tile_barrier::wait_with_tile_static_memory_fence` viene chiamato anziché `tile_barrier::wait` .
 
 ```cpp
 // Using a tile_static memory fence.

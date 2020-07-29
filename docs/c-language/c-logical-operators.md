@@ -11,22 +11,22 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227998"
 ---
 # <a name="c-logical-operators"></a>Operatori logici C
 
-Gli operatori logici eseguono operazioni logiche AND**&&**() e OR logico (**||**).
+Gli operatori logici eseguono operazioni logiche AND ( **&&** ) e OR logico ( **||** ).
 
 ## <a name="syntax"></a>Sintassi
 
 *Logical-and-Expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-Expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Logical-and-Expression*  **&&**  *inclusive-or-Expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*Logical-and-Expression* **&&** *inclusive-or-Expression*    
 
 *Logical-or-Expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-Expression*<br/>
@@ -34,7 +34,7 @@ Gli operatori logici eseguono operazioni logiche AND**&&**() e OR logico (**||**
 
 ## <a name="remarks"></a>Osservazioni
 
-Gli operatori logici non eseguono le conversioni aritmetiche comuni. Al contrario, tali operatori valutano ogni operando in termini di equivalenza con 0. Il risultato di un'operazione logica può essere 0 o 1. Il tipo del risultato è **int**.
+Gli operatori logici non eseguono le conversioni aritmetiche comuni. Al contrario, tali operatori valutano ogni operando in termini di equivalenza con 0. Il risultato di un'operazione logica può essere 0 o 1. Il tipo del risultato è **`int`** .
 
 Gli operatori logici C sono descritti di seguito:
 

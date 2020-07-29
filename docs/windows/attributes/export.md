@@ -1,17 +1,17 @@
 ---
-title: Export (C++ attributo com)
+title: Export (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 6264db037069f5fc6b858bdd466ce6c68b814a84
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae7c426466bfaf4a325ba1cafe30c8ca74f8ef95
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228076"
 ---
 # <a name="export"></a>esportare
 
@@ -25,17 +25,17 @@ Determina la posizione di una struttura di dati nel file con estensione IDL.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **Export** C++ causa l'inserimento di una struttura di dati nel file con estensione IDL e quindi la disponibilità nella libreria dei tipi in un formato compatibile con binario che lo rende disponibile per l'utilizzo con qualsiasi linguaggio.
+L' **`[export]`** attributo C++ comporta l'inserimento di una struttura di dati nel file con estensione IDL e quindi la disponibilità nella libreria dei tipi in un formato compatibile con binario che lo rende disponibile per l'utilizzo con qualsiasi linguaggio.
 
-Non è possibile applicare l'attributo **Export** a una classe anche se la classe dispone solo di membri pubblici (l'equivalente di uno **struct**).
+Non è possibile applicare l' **`[export]`** attributo a una classe anche se la classe dispone solo di membri pubblici (l'equivalente di un **`struct`** ).
 
-Se si esporta un' **enumerazione** o uno **struct**senza nome, viene assegnato un nome che inizia con **__unnamed**<em>x</em>, dove *x* è un numero sequenziale.
+Se si esporta un oggetto senza nome **`enum`** o **`struct`** , viene assegnato un nome che inizia con **__unnamed**<em>x</em>, dove *x* è un numero sequenziale.
 
-I typedef validi per l'esportazione sono tipi di base, struct, unioni, enumerazioni o identificatori di tipo.  Per ulteriori informazioni, vedere [typedef](/windows/win32/Midl/typedef) .
+I typedef validi per l'esportazione sono tipi di base, struct, unioni, enumerazioni o identificatori di tipo.  [`typedef`](/windows/win32/Midl/typedef)Per ulteriori informazioni, vedere.
 
 ## <a name="example"></a>Esempio
 
-Nel codice seguente viene illustrato come utilizzare l'attributo **Export** :
+Nel codice seguente viene illustrato come utilizzare l' **`[export]`** attributo:
 
 ```cpp
 // cpp_attr_ref_export.cpp
@@ -54,14 +54,14 @@ struct MyStruct {
 
 |||
 |-|-|
-|**Si applica a**|**Union**, **typedef**, **enum**, **struct**o **Interface**|
+|**Si applica a**|**`union`**, **`typedef`** , **`enum`** , **`struct`** o**`interface`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

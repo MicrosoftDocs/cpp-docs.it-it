@@ -1,17 +1,17 @@
 ---
-title: first_is (C++ attributo com)
+title: first_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 192d08471241526cace895bd5a5147070316cd6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167017"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228063"
 ---
 # <a name="first_is"></a>first_is
 
@@ -62,18 +62,18 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
+|**Si applica a**|Campo in **`struct`** o **`union`** , parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi del parametro](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
 [length_is](length-is.md)<br/>

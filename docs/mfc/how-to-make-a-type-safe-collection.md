@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620020"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228622"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Procedura: creazione di una raccolta indipendente dai tipi
 
@@ -63,7 +63,7 @@ Gli operatori di inserimento di overload per la `CArchive` chiamata `CObject::Se
 
 ## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>Utilizzo di classi Collection non basate su modelli
 
-MFC supporta inoltre le classi di raccolta introdotte con MFC versione 1,0. Queste classi non sono basate su modelli. Possono essere utilizzati per contenere i dati dei tipi supportati `CObject*` ,, `UINT` `DWORD` e `CString` . È possibile utilizzare queste raccolte predefinite, ad esempio, `CObList` per conservare raccolte di tutti gli oggetti derivati da `CObject` . MFC fornisce anche altre raccolte predefinite per mantenere i tipi primitivi, ad esempio `UINT` e i puntatori void ( `void` *). In generale, tuttavia, è spesso utile definire raccolte indipendenti dai tipi per mantenere gli oggetti di una classe più specifica e i relativi derivati. Si noti che questa operazione con le classi di raccolta non basate su modelli è più lavoro rispetto all'uso delle classi basate su modello.
+MFC supporta inoltre le classi di raccolta introdotte con MFC versione 1,0. Queste classi non sono basate su modelli. Possono essere utilizzati per contenere i dati dei tipi supportati `CObject*` ,, `UINT` `DWORD` e `CString` . È possibile utilizzare queste raccolte predefinite, ad esempio, `CObList` per conservare raccolte di tutti gli oggetti derivati da `CObject` . MFC fornisce anche altre raccolte predefinite per mantenere i tipi primitivi, ad esempio `UINT` e i puntatori void ( **`void*`** ). In generale, tuttavia, è spesso utile definire raccolte indipendenti dai tipi per mantenere gli oggetti di una classe più specifica e i relativi derivati. Si noti che questa operazione con le classi di raccolta non basate su modelli è più lavoro rispetto all'uso delle classi basate su modello.
 
 Esistono due modi per creare raccolte indipendenti dai tipi con le raccolte non basate su modelli:
 
