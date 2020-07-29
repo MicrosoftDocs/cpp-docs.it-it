@@ -1,6 +1,6 @@
 ---
 title: MatchEventStack
-description: Il riferimento alla funzione MatchEventStack di Build Insights in C.
+description: Riferimento alla funzione MatchEventStack di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a223d420e8c48667fbd1c6569f02d0486f597b5e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ae476c402c3ea0cad558ce41a979b4233e0f1dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323867"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224123"
 ---
 # <a name="matcheventstack"></a>MatchEventStack
 
 ::: moniker range="<=vs-2015"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `MatchEventStack` funzione viene utilizzata per confrontare uno stack di eventi con una gerarchia di eventi specifica. Le gerarchie corrispondenti vengono inoltrate a un gestore per un'ulteriore elaborazione. Per ulteriori informazioni su eventi, stack di eventi e gerarchie, vedere [la tabella degli eventi](../event-table.md).
+La `MatchEventStack` funzione viene utilizzata per trovare una corrispondenza tra uno stack di eventi e una gerarchia di eventi specifica. Le gerarchie corrispondenti vengono trasmesse a un gestore per un'ulteriore elaborazione. Per ulteriori informazioni su eventi, stack di eventi e gerarchie, vedere [tabella eventi](../event-table.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,36 +43,36 @@ bool MatchEventStack(
 
 ### <a name="parameters"></a>Parametri
 
-*Evento*\
-Tipo dell'elemento padre meno recente di cui trovare la corrispondenza nello stack di eventi.
+*TEvent*\
+Tipo dell'elemento padre più anziano da confrontare nello stack di eventi.
 
-*Eventi TEvents*\
-I tipi rimanenti che si desidera confrontare nello stack di eventi.
+*TEvents*\
+I tipi rimanenti di cui si desidera trovare una corrispondenza nello stack di eventi.
 
-*TCallabile*\
-Tipo che supporta `operator()`. Per altre informazioni su quali argomenti vengono passati a questo operatore, vedere la descrizione del parametro *richiamabile.*
+*TCallable*\
+Tipo che supporta `operator()` . Per ulteriori informazioni sugli argomenti che vengono passati a questo operatore, vedere la descrizione del parametro *chiamabile* .
 
-*TExtraArgs (informazioni in base all'altro)*\
-Tipi degli argomenti aggiuntivi `MatchEventStack`passati a .
+*TExtraArgs*\
+Tipi degli argomenti aggiuntivi passati a `MatchEventStack` .
 
-*eventStack (impilare)*\
+*eventStack*\
 Stack di eventi da confrontare con la gerarchia dei tipi di evento descritta da *TEvent* e *TEvents*.
 
 *Callable*\
-Una volta trovata correttamente la corrispondenza dello stack di `MatchEventStack` eventi con la gerarchia dei tipi di evento descritta da *TEvent* e *TEvents*, richiama *richiama bile*. Passa a un argomento r-value *richiamabile* per ogni tipo nella gerarchia di eventi. Il pacchetto di parametri *extraArgs* è perfetto inoltrato nei parametri rimanenti di *richiamabile.*
+Quando si corrisponde correttamente allo stack di eventi con la gerarchia dei tipi di evento descritta da *TEvent* e *TEvents*, `MatchEventStack` richiama *Callable*. Passa a un argomento *richiamabile* un r-value per ogni tipo nella gerarchia di eventi. Il pacchetto di parametri *OutArgs* è stato perfezionato nei parametri rimanenti di *Callable*.
 
-*ExtraArgs (informazioni in stato inci*\
-Argomenti che vengono inoltrati per perfect a *richiamabili* insieme al tipo di evento corrispondente.
+*Argomenti di*\
+Argomenti che vengono completati in modo perfetto per essere *richiamabili* insieme al tipo di evento corrispondente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore **bool** che è **true** se la corrispondenza ha avuto esito positivo o **false** in caso contrario.
+**`bool`** Valore che è **`true`** se la corrispondenza ha avuto esito positivo; **`false`** in caso contrario,.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'ultimo evento in *eventStack* viene sempre confrontato con \[l'ultima voce nell'evento *TEvent*, *TEvents concatenato...* \] nell'elenco dei tipi. Tutte le altre voci *TEvent* e *TEvents* possono corrispondere a qualsiasi posizione in *eventStack* tranne l'ultima, a condizione che siano nello stesso ordine.
+L'ultimo evento in *eventStack* viene sempre associato all'ultima voce dell'elenco concatenato \[ *TEvent*, *TEvents...* \] Type. Tutte le altre voci *TEvent* e *TEvents* possono corrispondere a qualsiasi posizione in *eventStack* tranne l'ultima, purché siano nello stesso ordine.
 
-I tipi di evento da utilizzare per i parametri *TEvent* e *TEvents* vengono selezionati da un elenco di classi di *acquisizione.* Per un elenco degli eventi e delle classi di acquisizione che è possibile utilizzare per associarli, vedere [tabella eventi](../event-table.md).
+I tipi di evento da usare per i parametri *TEvent* e *TEvents* sono selezionati da un elenco di *classi di acquisizione*. Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
 
 ## <a name="example"></a>Esempio
 

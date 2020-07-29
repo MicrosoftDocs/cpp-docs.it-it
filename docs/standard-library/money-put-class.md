@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: 035cc4e7b9cfac262979509bf7b4570e2c55336c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d15667f4e30561dbba024f877530c4ff0f824f64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377432"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224747"
 ---
 # <a name="money_put-class"></a>Classe money_put
 
-Il modello di classe descrive un oggetto che può essere utilizzato come facet delle `CharType`impostazioni locali per controllare le conversioni di valori monetari in sequenze di tipo .
+Il modello di classe descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni dei valori monetari in sequenze di tipo `CharType` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,7 +37,7 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*Chartype*\
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 *OutputIterator*\
@@ -66,15 +66,15 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 |Funzione membro|Descrizione|
 |-|-|
 |[do_put](#do_put)|Funzione virtuale chiamata per convertire un numero o una stringa in una sequenza di caratteri che rappresenta un valore monetario.|
-|[Mettere](#put)|Converte un numero o una stringa in una sequenza di caratteri che rappresenta un valore monetario.|
+|[mettere](#put)|Converte un numero o una stringa in una sequenza di caratteri che rappresenta un valore monetario.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:**\<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="money_putchar_type"></a><a name="char_type"></a>money_put::char_type
+## <a name="money_putchar_type"></a><a name="char_type"></a>money_put:: char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -86,7 +86,7 @@ typedef CharType char_type;
 
 Il tipo è un sinonimo del parametro di modello **CharType**.
 
-## <a name="money_putdo_put"></a><a name="do_put"></a>money_put::do_put
+## <a name="money_putdo_put"></a><a name="do_put"></a>money_put::d o_put
 
 Funzione virtuale chiamata per convertire un numero o una stringa in una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -112,7 +112,7 @@ virtual iter_type do_put(
 Iteratore che punta al primo elemento della stringa inserita.
 
 *_Intl*\
-Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **`true`** se internazionale, **`false`** se nazionale.
 
 *_Iosbase*\
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
@@ -129,11 +129,11 @@ Iteratore di output che punta alla posizione successiva all'ultimo elemento prod
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro virtuale protetta genera elementi sequenziali a partire da *un successivo* per produrre un campo di output monetario dall'oggetto [string_type](#string_type) *val*. La sequenza controllata da *val* deve iniziare con una o più cifre decimali, precedute facoltativamente da un segno meno (-), che rappresenta l'importo. La funzione restituisce un iteratore che designa il primo elemento dopo il campo di output di tipo valuta generato.
+La prima funzione membro virtuale protetta genera elementi sequenziali a partire da *Next* per produrre un campo di output di tipo valuta dall'oggetto [string_type](#string_type) *Val*. La sequenza controllata da *Val* deve iniziare con una o più cifre decimali, facoltativamente preceduta da un segno meno (-), che rappresenta la quantità. La funzione restituisce un iteratore che designa il primo elemento dopo il campo di output di tipo valuta generato.
 
-La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che converte in modo efficace *val* in una sequenza di cifre decimali, facoltativamente preceduta da un segno meno, quindi converte tale sequenza come sopra.
+La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che prima converte la *Val* in una sequenza di cifre decimali, facoltativamente preceduta da un segno meno, quindi converte tale sequenza come sopra.
 
-Il formato di un campo di output di tipo valuta è determinato dal valore fac [locale facet](../standard-library/locale-class.md#facet_class) restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
+Il formato di un campo di output di tipo valuta è determinato dal fac del [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) restituito dalla chiamata (effettiva) [use_facet](../standard-library/locale-functions.md#use_facet)  <  [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**> > ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
 In particolare:
 
@@ -157,11 +157,11 @@ In particolare:
 
 Se la stringa segno ( **fac**. `negative_sign` o **fac**. `positive_sign`) contiene più di un elemento, viene generato solo il primo elemento, nel punto in cui l'elemento uguale a **money_base::sign** compare nel modello di formato ( **fac**. `neg_format` o **fac**. `pos_format`). Gli eventuali elementi restanti vengono generati alla fine del campo di output di tipo valuta.
 
-Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) è diverso da zero, la stringa **fac**. `curr_symbol` viene generata nel punto in cui l'elemento uguale a **money_base::symbol** compare nel modello di formato. In caso contrario, non viene generato alcun simbolo di valuta.
+Se **iosbase**. [flag](../standard-library/ios-base-class.md#flags)  &  [showbase](../standard-library/ios-functions.md#showbase) è diverso da zero, la stringa **fac**. `curr_symbol` viene generata nel punto in cui l'elemento uguale a **money_base::symbol** compare nel modello di formato. In caso contrario, non viene generato alcun simbolo di valuta.
 
 Se **fac**. **grouping** (il primo elemento ha il valore CHAR_MAX), non verranno generate istanze di **fac**. `thousands_sep` nella parte valore del campo di output di tipo valuta, dove l'elemento uguale a **money_base::value** compare nel modello di formato. Se **fac**. `frac_digits` è zero, dopo le cifre decimali non viene generata alcuna istanza di **fac**. `decimal_point`. In caso contrario, il risultante campo di output di tipo valuta inserisce le cifre decimali **fac**. `frac_digits` di ordine inferiore a destra della virgola decimale.
 
-Viene inserita la spaziatura interna per i campi di output numerici, tranne nel caso in cui **iosbase**. **flag** & **iosbase**. [internal](../standard-library/ios-functions.md#internal) è diverso da zero. In questo caso, l'eventuale spaziatura interna viene inserita nel punto in cui l'elemento uguale a **money_base::space** compare, se compare, nel modello di formato. In caso contrario, la spaziatura interna viene inserita prima della sequenza generata. Il carattere di riempimento è **fill**.
+Viene inserita la spaziatura interna per i campi di output numerici, tranne nel caso in cui **iosbase**. **flag**  &  **iosbase**. [internal](../standard-library/ios-functions.md#internal) è diverso da zero. In questo caso, l'eventuale spaziatura interna viene inserita nel punto in cui l'elemento uguale a **money_base::space** compare, se compare, nel modello di formato. In caso contrario, la spaziatura interna viene inserita prima della sequenza generata. Il carattere di riempimento è **fill**.
 
 La funzione chiama **iosbase**. **width**(0) per reimpostare la larghezza del campo su zero.
 
@@ -169,7 +169,7 @@ La funzione chiama **iosbase**. **width**(0) per reimpostare la larghezza del ca
 
 Vedere l'esempio relativo a [put](#put), in cui la funzione membro virtuale viene chiamata da **put**.
 
-## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put::iter_type
+## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put:: iter_type
 
 Tipo che descrive un iteratore di output.
 
@@ -181,7 +181,7 @@ typedef OutputIterator iter_type;
 
 Il tipo è un sinonimo del parametro di modello **OutputIterator.**
 
-## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put::money_put
+## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put:: money_put
 
 Costruttore per oggetti di tipo `money_put`.
 
@@ -196,7 +196,7 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 ### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e il loro significato sono:
+I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -208,7 +208,7 @@ Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="money_putput"></a><a name="put"></a>money_put::put
+## <a name="money_putput"></a><a name="put"></a>money_put::p UT
 
 Converte un numero o una stringa in una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -234,7 +234,7 @@ iter_type put(
 Iteratore che punta al primo elemento della stringa inserita.
 
 *_Intl*\
-Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **`true`** se internazionale, **`false`** se nazionale.
 
 *_Iosbase*\
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
@@ -251,7 +251,7 @@ Iteratore di output che punta alla posizione successiva all'ultimo elemento prod
 
 ### <a name="remarks"></a>Osservazioni
 
-Entrambe le funzioni `next` `_Intl`membro `_Iosbase` `_Fill`restituiscono `val` [do_put](#do_put)( , , , , ).
+Entrambe le funzioni membro restituiscono [do_put](#do_put)( `next` ,, `_Intl` `_Iosbase` , `_Fill` , `val` ).
 
 ### <a name="example"></a>Esempio
 
@@ -281,7 +281,7 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="money_putstring_type"></a><a name="string_type"></a>money_put::string_type
+## <a name="money_putstring_type"></a><a name="string_type"></a>money_put:: string_type
 
 Tipo che descrive una stringa contenente caratteri di tipo `CharType`.
 
@@ -295,6 +295,6 @@ Il tipo descrive una specializzazione del modello di classe [basic_string](../st
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>delle impostazioni locali](../standard-library/locale.md)\
-[Facet (classe)](../standard-library/locale-class.md#facet_class)\
-[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[Classe facet](../standard-library/locale-class.md#facet_class)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6a8555561fcf935b3968bd6cb6d19ec42a78563
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224019"
 ---
 # <a name="exporting-from-a-dll"></a>Esportazione da una DLL
 
@@ -25,7 +25,7 @@ Un file DLL presenta un layout molto simile a un file con estensione exe, con un
 
 - Creare un file di definizione del modulo (con estensione def) e usare il file def durante la compilazione della DLL. Utilizzare questo approccio se si desidera [esportare le funzioni dalla dll in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-- Usare la parola chiave **__declspec (dllexport)** nella definizione della funzione.
+- Usare la parola chiave **`__declspec(dllexport)`** nella definizione della funzione.
 
 Quando si esportano funzioni con uno dei due metodi, assicurarsi di usare la convenzione di chiamata [__stdcall](../cpp/stdcall.md) .
 
@@ -43,7 +43,7 @@ Quando si esportano funzioni con uno dei due metodi, assicurarsi di usare la con
 
 - [Esporta funzioni da una DLL in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 
-- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da usare](determining-which-exporting-method-to-use.md)
 
 - [Collegare un eseguibile a una DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 6ebb1b1c80d5c2da19610a15e628fcbab5220719
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351733"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224812"
 ---
 # <a name="ltlocalegt-functions"></a>Funzioni &lt;locale&gt;
 
@@ -49,7 +49,7 @@ ms.locfileid: "81351733"
 |[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
 |[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[Tolower](#tolower)|[Toupper](#toupper)|[use_facet](#use_facet)|
+|[ToLower](#tolower)|[ToUpper](#toupper)|[use_facet](#use_facet)|
 
 ## <a name="has_facet"></a><a name="has_facet"></a>has_facet
 
@@ -67,7 +67,7 @@ Impostazioni locali in cui verificare l'eventuale presenza di un facet.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se le impostazioni locali contengono il facet di cui è stata verificata la presenza; in caso contrario, **false**.
+**`true`** Se le impostazioni locali hanno il facet testato per; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -113,7 +113,7 @@ Impostazioni locali contenenti l'elemento alfanumerico da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è alfanumerico; in caso contrario, **false**.
+**`true`** Se l'elemento testato è alfanumerico; in **`false`** caso contrario,
 
 ### <a name="example"></a>Esempio
 
@@ -180,11 +180,11 @@ Impostazioni locali contenenti l'elemento alfabetico da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è alfabetico; in caso contrario, **false**.
+**`true`** Se l'elemento testato è alfabetico; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Alpha**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -245,11 +245,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere di controllo; in caso contrario, **false**.
+**`true`** Se l'elemento testato è un carattere di controllo; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **tasti CTRL**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>isdigit
+## <a name="isdigit"></a><a name="isdigit"></a>IsDigit
 
 Verifica se un elemento delle impostazioni locali è un carattere numerico.
 
@@ -310,11 +310,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere numerico; in caso contrario, **false**.
+**`true`** Se l'elemento testato è un carattere numerico; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **digit**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -375,11 +375,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere alfanumerico o di punteggiatura; in caso contrario, **false**.
+**`true`** Se l'elemento testato è un carattere alfanumerico o di punteggiatura; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Graph**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -421,7 +421,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>èpiù basso
+## <a name="islower"></a><a name="islower"></a>IsLower
 
 Verifica se un elemento delle impostazioni locali è un carattere minuscolo.
 
@@ -440,11 +440,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere minuscolo; in caso contrario, **false**.
+**`true`** Se l'elemento testato è un carattere minuscolo; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Lower**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -505,11 +505,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere stampabile; in caso contrario, **false**.
+**`true`** Se l'elemento testato è stampabile; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Print**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -569,11 +569,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere di punteggiatura; in caso contrario, **false**.
+**`true`** Se l'elemento testato è un carattere di punteggiatura; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) `<` [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **punct**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -634,11 +634,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è uno spazio vuoto; in caso contrario, **false**.
+**`true`** Se l'elemento testato è uno spazio vuoto; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Space**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -680,7 +680,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>isupper
+## <a name="isupper"></a><a name="isupper"></a>IsUpper
 
 Verifica se un elemento delle impostazioni locali è un carattere maiuscolo.
 
@@ -699,11 +699,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere maiuscolo; in caso contrario, **false**.
+**`true`** Se l'elemento testato è un carattere maiuscolo; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Upper**, `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -764,11 +764,11 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elemento verificato è un carattere usato per rappresentare un numero esadecimale; in caso contrario, **false**.
+**`true`** Se l'elemento testato è un carattere utilizzato per rappresentare un numero esadecimale; in **`false`** caso contrario,
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **xdigit**, `Ch` ).
 
 Le cifre esadecimali usano la base 16, con numeri da 0 a 9 e lettere da A a F senza distinzione tra maiuscole e minuscole, per rappresentare i numeri decimali da 0 a 15.
 
@@ -812,7 +812,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>Tolower
+## <a name="tolower"></a><a name="tolower"></a>ToLower
 
 Converte un carattere in minuscolo.
 
@@ -835,7 +835,7 @@ Carattere convertito in minuscolo.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [al](../standard-library/ctype-class.md#tolower)più `Ch`basso ( ).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [ToLower](../standard-library/ctype-class.md#tolower)( `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -861,7 +861,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>Toupper
+## <a name="toupper"></a><a name="toupper"></a>ToUpper
 
 Converte un carattere in maiuscolo.
 
@@ -884,7 +884,7 @@ Carattere convertito in maiuscolo.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce `Loc` [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> >( ). [toupper](../standard-library/ctype-class.md#toupper) `Ch`( ).
+La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [ToUpper](../standard-library/ctype-class.md#toupper)( `Ch` ).
 
 ### <a name="example"></a>Esempio
 
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>delle impostazioni locali](../standard-library/locale.md)
+[\<locale>](../standard-library/locale.md)

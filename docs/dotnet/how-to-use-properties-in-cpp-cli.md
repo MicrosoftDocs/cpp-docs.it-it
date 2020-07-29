@@ -1,24 +1,24 @@
 ---
-title: 'Procedura: Usare le proprietà in C++/CLI'
+title: 'Procedura: utilizzare proprietà in C++/CLI'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225670"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Procedura: Usare le proprietà in C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>Procedura: utilizzare proprietà in C++/CLI
 
 Questo articolo illustra come usare le proprietà in C++/CLI.
 
 ## <a name="basic-properties"></a>Proprietà di base
 
-Per le proprietà di base, ovvero quelle che semplicemente assegnare e recuperare un membro dati privato, ovvero non è necessario definire get e set di funzioni di accesso perché il compilatore fornisce automaticamente li quando viene specificato solo il tipo di dati della proprietà in modo esplicito. Questo codice illustra una proprietà di base:
+Per le proprietà di base, ovvero quelle che assegnano e recuperano solo un membro dati privato, non è necessario definire in modo esplicito le funzioni di accesso get e set, perché il compilatore le fornisce automaticamente quando viene fornito solo il tipo di dati della proprietà. In questo codice viene illustrata una proprietà di base:
 
 ```cpp
 // SimpleProperties.cpp
@@ -43,7 +43,7 @@ c->Size = 111
 
 ## <a name="static-properties"></a>Proprietà statiche
 
-Questo esempio di codice viene illustrato come dichiarare e usare una proprietà statica.  Una proprietà statica può accedere solo i membri statici della relativa classe.
+In questo esempio di codice viene illustrato come dichiarare e utilizzare una proprietà statica.  Una proprietà statica può accedere solo ai membri statici della relativa classe.
 
 ```cpp
 // mcppv2_property_3.cpp
@@ -84,13 +84,13 @@ int main() {
 
 ## <a name="indexed-properties"></a>Proprietà indicizzate
 
-In genere, una proprietà indicizzata espone una struttura di dati a cui si accede tramite un operatore di indice.
+Una proprietà indicizzata in genere espone una struttura di dati a cui si accede tramite un operatore di pedice.
 
-Se si usa una proprietà indicizzata predefinita, la struttura dei dati è possibile accedere semplicemente facendo riferimento al nome della classe, ma se si usa una proprietà indicizzata definita dall'utente, è necessario per specificare il nome della proprietà per accedere alla struttura di dati.
+Se si utilizza una proprietà indicizzata predefinita, è possibile accedere alla struttura dei dati semplicemente facendo riferimento al nome della classe, ma se si utilizza una proprietà indicizzata definita dall'utente, è necessario specificare il nome della proprietà per accedere alla struttura dei dati.
 
-Per informazioni su come usare un indicizzatore che viene scritto in C#, vedere [procedura: Usare un C# indicizzatore (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Per informazioni sull'utilizzo di un indicizzatore scritto in C#, vedere [procedura: utilizzare un indicizzatore c# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
-Questo esempio di codice mostra come usare l'impostazione predefinita e le proprietà indicizzate definite dall'utente:
+In questo esempio di codice viene illustrato come utilizzare le proprietà indicizzate predefinite e definite dall'utente:
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-Nell'esempio successivo viene illustrato come chiamare l'indicizzatore predefinito utilizzando il `this` puntatore.
+Nell'esempio seguente viene illustrato come chiamare l'indicizzatore predefinito utilizzando il **`this`** puntatore.
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -177,7 +177,7 @@ private:
 };
 ```
 
-In questo esempio viene illustrato come utilizzare <xref:System.Reflection.DefaultMemberAttribute> per specificare l'indicizzatore predefinito:
+Questo esempio illustra come usare <xref:System.Reflection.DefaultMemberAttribute> per specificare l'indicizzatore predefinito:
 
 ```cpp
 // specify_default_indexer.cpp
@@ -193,7 +193,7 @@ public ref struct Squares {
 };
 ```
 
-Nell'esempio seguente usa i metadati che viene creato nell'esempio precedente.
+Nell'esempio seguente vengono utilizzati i metadati creati nell'esempio precedente.
 
 ```cpp
 // consume_default_indexer.cpp
@@ -211,7 +211,7 @@ int main() {
 
 ## <a name="virtual-properties"></a>Proprietà virtuali
 
-Questo esempio di codice viene illustrato come dichiarare e usare proprietà virtuali:
+In questo esempio di codice viene illustrato come dichiarare e utilizzare le proprietà virtuali:
 
 ```cpp
 // mcppv2_property_4.cpp
@@ -259,9 +259,9 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Proprietà astratte e sealed
 
-Anche se il [astratto](../extensions/abstract-cpp-component-extensions.md) e [sealed](../extensions/sealed-cpp-component-extensions.md) vengono specificate parole chiave come valide nello standard ECMA C++specifica /CLI, per Microsoft C++ (compilatore), è quindi possibile specificare nelle proprietà trivial, né sulle dichiarazione di proprietà di una proprietà non semplice.
+Sebbene le parole chiave [abstract](../extensions/abstract-cpp-component-extensions.md) e [sealed](../extensions/sealed-cpp-component-extensions.md) siano specificate come valide nella specifica ECMA c++/CLI, per il compilatore Microsoft c++ non è possibile specificarle in proprietà semplici, né nella dichiarazione di proprietà di una proprietà non semplice.
 
-Per dichiarare una proprietà abstract o sealed, è necessario definire una proprietà non semplice e quindi specificare il `abstract` o `sealed` parola chiave su get e set di funzioni di accesso.
+Per dichiarare una proprietà sealed o abstract, è necessario definire una proprietà non semplice e quindi specificare la **`abstract`** **`sealed`** parola chiave o nelle funzioni di accesso get e set.
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -326,7 +326,7 @@ int main() {
 
 ## <a name="multidimensional-properties"></a>Proprietà multidimensionali
 
-È possibile utilizzare proprietà multidimensionali per definire metodi della proprietà che accettano un numero di parametri non standard.
+È possibile utilizzare le proprietà multidimensionali per definire i metodi delle funzioni di accesso alle proprietà che accettano un numero di parametri non standard.
 
 ```cpp
 // mcppv2_property_5.cpp
@@ -368,7 +368,7 @@ int main() {
 1.1
 ```
 
-## <a name="overloading-property-accessors"></a>L'overload di funzioni di accesso proprietà
+## <a name="overloading-property-accessors"></a>Overload delle funzioni di accesso alle proprietà
 
 Nell'esempio seguente viene illustrato come eseguire l'overload di proprietà indicizzate.
 
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[proprietà](../extensions/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

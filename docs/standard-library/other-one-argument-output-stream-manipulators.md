@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8fe30a0df70d84f7a8a9eafcdf22439cbe321043
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453443"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224643"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Altri manipolatori di flusso di output a un solo argomento
 
-Nell'esempio seguente viene utilizzata una `money`classe, che è un tipo **Long** . Il manipolatore `setpic` allega alla classe una stringa "immagine" di formattazione che può essere usata dall'operatore di inserimento del flusso in overload della classe `money`. La stringa immagine viene archiviata come variabile statica nella classe `money` anziché come membro dati di una classe di flusso, pertanto non è necessario derivare una nuova classe del flusso di output.
+Nell'esempio seguente viene usata una classe `money` , che è un **`long`** tipo. Il manipolatore `setpic` allega alla classe una stringa "immagine" di formattazione che può essere usata dall'operatore di inserimento del flusso in overload della classe `money`. La stringa immagine viene archiviata come variabile statica nella classe `money` anziché come membro dati di una classe di flusso, pertanto non è necessario derivare una nuova classe del flusso di output.
 
 ## <a name="example"></a>Esempio
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2178
 ms.assetid: 79a14158-17f3-4221-bd06-9d675c49cef4
-ms.openlocfilehash: 85cac4919c048c30a3ed1ff5573a3c14b77da0bd
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4904c7009151748b4585060c816e0bd5c407be33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225553"
 ---
 # <a name="compiler-error-c2178"></a>Errore del compilatore C2178
 
 '*Identifier*' non può essere dichiarato con l'identificatore '*specifier*'
 
-In una dichiarazione è stato usato un identificatore di `mutable`, ma l'identificatore non è consentito in questo contesto.
+**`mutable`** In una dichiarazione è stato usato un identificatore, ma l'identificatore non è consentito in questo contesto.
 
-L'identificatore di `mutable` può essere applicato solo ai nomi dei membri dati della classe e non può essere applicato ai nomi dichiarati `const` o `static`e non può essere applicato ai membri di riferimento.
+L' **`mutable`** identificatore può essere applicato solo ai nomi dei membri dati della classe e non può essere applicato ai nomi dichiarati **`const`** o **`static`** e non può essere applicato ai membri di riferimento.
 
 ## <a name="example"></a>Esempio
 

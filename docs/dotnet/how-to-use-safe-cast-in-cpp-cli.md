@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56ac19871bcdc5162b959f6d60103387551ac2a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389086"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225657"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>Procedura: Usare safe_cast in C++/CLI
+# <a name="how-to-use-safe_cast-in-ccli"></a>Procedura: Usare safe_cast in C++/CLI
 
-Questo articolo illustra come usare safe_cast in C++applicazioni /CLI. Per informazioni su safe_cast in C++/CX, vedere [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
+Questo articolo illustra come usare safe_cast nelle applicazioni C++/CLI. Per informazioni sulle safe_cast in C++/CX, vedere [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
 
 ## <a name="upcasting"></a>Upcast
 
-Un upcast è un cast da un tipo derivato a una delle relative classi base. Questo cast è sicuro e non richiede una notazione cast esplicito. L'esempio seguente viene illustrato come eseguire un upcast con `safe_cast` e senza di essa.
+Un cast è un cast da un tipo derivato a una delle relative classi base. Questo cast è sicuro e non richiede una notazione cast esplicita. Nell'esempio seguente viene illustrato come eseguire un cast, con `safe_cast` e senza di esso.
 
 ```cpp
 // safe_upcast.cpp
@@ -68,7 +68,7 @@ in B::Test2
 
 ## <a name="downcasting"></a>Downcast
 
-Un downcast è un cast da una classe base a una classe che deriva dalla classe di base.  Un downcast è sicuro solo se l'oggetto che viene risolto in fase di esecuzione è effettivamente l'indirizzamento di un oggetto classe derivata.  A differenza `static_cast`, `safe_cast` esegue un controllo dinamico e genera un'eccezione <xref:System.InvalidCastException> se la conversione non riesce.
+Un abbassato è un cast da una classe base a una classe derivata dalla classe base.  Un abbattimento è sicuro solo se l'oggetto che viene indirizzato al Runtime sta effettivamente indirizzando a un oggetto classe derivato.  Diversamente da **`static_cast`** , `safe_cast` esegue una verifica dinamica e genera un'eccezione <xref:System.InvalidCastException> se la conversione non riesce.
 
 ```cpp
 // safe_downcast.cpp
@@ -119,9 +119,9 @@ in C::Test()
 in B::Test2()
 ```
 
-## <a name="safecast-with-user-defined-conversions"></a>safe_cast conversioni definite dall'utente
+## <a name="safe_cast-with-user-defined-conversions"></a>safe_cast con le conversioni definite dall'utente
 
-Nell'esempio successivo mostra come è possibile utilizzare `safe_cast` richiamare conversioni definite dall'utente.
+Nell'esempio seguente viene illustrato come è possibile utilizzare `safe_cast` per richiamare le conversioni definite dall'utente.
 
 ```cpp
 // safe_cast_udc.cpp
@@ -174,13 +174,13 @@ in operator R^(V& v
 in operator V^(R^ r)
 ```
 
-## <a name="safecast-and-boxing-operations"></a>operazioni safe_cast e boxing
+## <a name="safe_cast-and-boxing-operations"></a>operazioni di safe_cast e Boxing
 
 ### <a name="boxing"></a>Boxing
 
-Conversione boxing viene definito come una conversione definita dall'utente, inserito del compilatore.  Pertanto, è possibile usare `safe_cast` il boxing di un valore nell'heap di Common Language Runtime.
+La conversione boxing è definita come conversione definita dall'utente e inserita dal compilatore.  Pertanto, è possibile utilizzare `safe_cast` per eseguire il box di un valore nell'heap CLR.
 
-L'esempio seguente illustra la conversione boxing con i tipi valore semplice e definita dall'utente.  Oggetto `safe_cast` boxing una variabile di tipo valore che è nello stack nativo in modo che può essere assegnato a una variabile nell'heap sottoposto a garbage collection.
+Nell'esempio seguente viene illustrata la conversione boxing con tipi di valore semplici e definiti dall'utente.  Un oggetto `safe_cast` casella una variabile di tipo valore che si trova nello stack nativo, in modo che possa essere assegnata a una variabile nell'heap sottoposta a Garbage Collection.
 
 ```cpp
 // safe_cast_boxing.cpp
@@ -206,7 +206,7 @@ int main() {
 }
 ```
 
-Nell'esempio successivo mostra che la conversione boxing ha priorità rispetto a una conversione definita dall'utente in un `safe_cast` operazione.
+Nell'esempio seguente viene illustrato che la conversione boxing ha la priorità rispetto a una conversione definita dall'utente in un' `safe_cast` operazione.
 
 ```cpp
 // safe_cast_boxing_2.cpp
@@ -239,11 +239,11 @@ int main() {
 }
 ```
 
-### <a name="unboxing"></a>Conversione unboxing
+### <a name="unboxing"></a>Unboxing
 
-Conversione unboxing è definito come una conversione definita dall'utente, inserito del compilatore.  Pertanto, è possibile usare `safe_cast` eseguire la conversione unboxing di un valore nell'heap di Common Language Runtime.
+Unboxing viene definito come conversione definita dall'utente e inserita dal compilatore.  Pertanto, è possibile utilizzare `safe_cast` per eseguire l'unboxing di un valore nell'heap CLR.
 
-Unboxing è una conversione definita dall'utente, ma a differenza di conversione boxing, conversione unboxing è necessario essere espliciti, ovvero, deve essere eseguita da un `static_cast`di tipo c esegue il cast, o `safe_cast`; unboxing non può essere eseguita in modo implicito.
+Unboxing è una conversione definita dall'utente, ma a differenza di Boxing, unboxing deve essere esplicita, ovvero deve essere eseguita da un **`static_cast`** cast di tipo C o `safe_cast` ; unboxing non può essere eseguito in modo implicito.
 
 ```cpp
 // safe_cast_unboxing.cpp
@@ -254,7 +254,7 @@ int main() {
 }
 ```
 
-Nell'esempio seguente viene illustrato l'unboxing con tipi primitivi e tipi di valore.
+Nell'esempio seguente viene illustrata l'unboxing con tipi di valore e tipi primitivi.
 
 ```cpp
 // safe_cast_unboxing_2.cpp
@@ -300,9 +300,9 @@ int main() {
 }
 ```
 
-## <a name="safecast-and-generic-types"></a>safe_cast e tipi generici
+## <a name="safe_cast-and-generic-types"></a>tipi safe_cast e generici
 
-Nell'esempio successivo mostra come è possibile utilizzare `safe_cast` a effettuare un downcast con un tipo generico.
+Nell'esempio seguente viene illustrato come è possibile utilizzare `safe_cast` per eseguire un oggetto abbattuto con un tipo generico.
 
 ```cpp
 // safe_cast_generic_types.cpp

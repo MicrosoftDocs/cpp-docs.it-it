@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: ac85e99bfb834fd970a804269f25ec9f20960a23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab49dad1a24e57eb33834cc651d9ccdb50abe68c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375906"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224760"
 ---
 # <a name="money_get-class"></a>Classe money_get
 
-Il modello di classe descrive un oggetto che può essere utilizzato come `CharType` facet delle impostazioni locali per controllare le conversioni di sequenze di tipo in valori monetari.
+Il modello di classe descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo `CharType` in valori monetari.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,7 +36,7 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*Chartype*\
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 *InputIterator*\
@@ -69,11 +69,11 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:**\<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="money_getchar_type"></a><a name="char_type"></a>money_get::char_type
+## <a name="money_getchar_type"></a><a name="char_type"></a>money_get:: char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -85,7 +85,7 @@ typedef CharType char_type;
 
 Il tipo è un sinonimo del parametro di modello *CharType*.
 
-## <a name="money_getdo_get"></a><a name="do_get"></a>money_get::do_get
+## <a name="money_getdo_get"></a><a name="do_get"></a>money_get::d o_get
 
 Funzione virtuale chiamata per estrarre un valore numerico da una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -105,14 +105,14 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*Prima*\
+*prima*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
 *Ultima*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 *Intl*\
-Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **`true`** se internazionale, **`false`** se nazionale.
 
 *Iosbase*\
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario.
@@ -129,11 +129,11 @@ Iteratore di input che punta al primo elemento oltre il campo di input di tipo v
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo valuta completo e non vuoto. Se ha esito positivo, converte questo campo in una sequenza di una `-`o più cifre decimali, facoltativamente precedute da un segno meno ( ), per rappresentare l'importo e archivia il risultato nell'oggetto [string_type](#string_type) *val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo valuta. In caso contrario, la *val* funzione `ios_base::failbit` archivia una sequenza vuota in val e imposta nello *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo valuta valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `State`.
+La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo valuta completo e non vuoto. Se ha esito positivo, questo campo viene convertito in una sequenza di una o più cifre decimali, facoltativamente preceduto da un segno meno ( `-` ), per rappresentare la quantità e archivia il risultato nell'oggetto [string_type](#string_type) *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo valuta. In caso contrario, la funzione archivia una sequenza vuota in *Val* e imposta `ios_base::failbit` *lo stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo valuta valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `State`.
 
-La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che in caso di esito positivo converte la sequenza di cifre con segno facoltativo in un valore di tipo **long double** e archivia tale valore in *val*.
+La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che, se ha esito positivo, converte la sequenza di cifre con segno facoltativo in un valore di tipo **`long double`** e archivia tale valore in *Val*.
 
-Il formato di un campo di input di tipo valuta è determinato dal valore [fac](../standard-library/locale-class.md#facet_class)**locale facet** restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
+Il formato di un campo di input di tipo valuta è determinato dal**fac** del [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class)restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet)  <  [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
 In particolare:
 
@@ -155,17 +155,17 @@ In particolare:
 
 Se la stringa segno ( **fac**. `negative_sign` o **fac**. `positive_sign`) contiene più di un elemento, viene messo in corrispondenza solo il primo elemento, nel punto in cui l'elemento uguale a **money_base::sign** compare nel modello di formato ( **fac**. `neg_format`). Gli eventuali elementi restanti vengono messi in corrispondenza alla fine del campo di input di tipo valuta. Se nessuna delle due stringhe contiene un elemento corrispondente al successivo elemento del campo di input di tipo valuta, la stringa segno viene accettata come vuota e il segno è positivo.
 
-Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) è diverso da zero, la stringa **fac**. `curr_symbol` deve corrispondere nel punto in cui l'elemento uguale a **money_base::symbol** compare nel modello di formato. In caso contrario, se **money_base::symbol** viene visualizzato alla fine del modello di formato, e non rimangono elementi della stringa segno da associare, il simbolo di valuta non corrisponde. In caso contrario, il simbolo di valuta vene messo in corrispondenza in modo facoltativo.
+Se **iosbase**. [flag](../standard-library/ios-base-class.md#flags)  &  [showbase](../standard-library/ios-functions.md#showbase) è diverso da zero, la stringa **fac**. `curr_symbol` deve corrispondere nel punto in cui l'elemento uguale a **money_base::symbol** compare nel modello di formato. In caso contrario, se **money_base::symbol** viene visualizzato alla fine del modello di formato, e non rimangono elementi della stringa segno da associare, il simbolo di valuta non corrisponde. In caso contrario, il simbolo di valuta vene messo in corrispondenza in modo facoltativo.
 
 Se non esistono istanze di **fac**. `thousands_sep` nella parte valore del campo di input di tipo valuta, dove l'elemento uguale a **money_base::value** compare nel modello di formato, non viene applicato alcun vincolo di raggruppamento. In caso contrario, viene applicato qualsiasi vincolo di raggruppamento imposto da **fac**. **grouping**. Si noti che la sequenza di cifre risultante rappresenta un intero le cui cifre decimali **fac**. `frac_digits` di ordine inferiore vengono prese in considerazione alla destra della virgola decimale.
 
-Lo spazio vuoto arbitrario viene messo in corrispondenza nel punto in cui l'elemento uguale a **money_base::space** compare nel modello di formato, se viene visualizzato in una posizione diversa dalla fine del modello di formato. In caso contrario, non viene messo in corrispondenza alcuno spazio vuoto interno. Un elemento *ch* è considerato uno spazio vuoto se [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) è **true**.
+Lo spazio vuoto arbitrario viene messo in corrispondenza nel punto in cui l'elemento uguale a **money_base::space** compare nel modello di formato, se viene visualizzato in una posizione diversa dalla fine del modello di formato. In caso contrario, non viene messo in corrispondenza alcuno spazio vuoto interno. Un elemento *ch* viene considerato uno spazio vuoto se [use_facet](../standard-library/locale-functions.md#use_facet)  <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [è](../standard-library/ctype-class.md#is)( **ctype_base:: Space**, *ch*) è **`true`** .
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo a [get](#get), che chiama `do_get`.
 
-## <a name="money_getget"></a><a name="get"></a>money_get::ottenere
+## <a name="money_getget"></a><a name="get"></a>money_get:: Get
 
 Estrae un valore numerico da una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -187,14 +187,14 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-*Prima*\
+*prima*\
 Iteratore di input che indica l'inizio della sequenza da convertire.
 
 *Ultima*\
 Iteratore di input che indica la fine della sequenza da convertire.
 
 *Intl*\
-Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **`true`** se internazionale, **`false`** se nazionale.
 
 *Iosbase*\
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
@@ -211,7 +211,7 @@ Iteratore di input che punta al primo elemento oltre il campo di input di tipo v
 
 ### <a name="remarks"></a>Osservazioni
 
-Entrambe le funzioni membro restituiscono [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.
+Entrambe le funzioni membro restituiscono [do_get](#do_get) `(first, last, Intl, Iosbase, State, val)` .
 
 ### <a name="example"></a>Esempio
 
@@ -262,7 +262,7 @@ int main( )
 };
 ```
 
-## <a name="money_getiter_type"></a><a name="iter_type"></a>money_get::iter_type
+## <a name="money_getiter_type"></a><a name="iter_type"></a>money_get:: iter_type
 
 Tipo che descrive un iteratore di input.
 
@@ -274,7 +274,7 @@ typedef InputIterator iter_type;
 
 Il tipo è un sinonimo del parametro di modello **InputIterator**.
 
-## <a name="money_getmoney_get"></a><a name="money_get"></a>money_get::money_get
+## <a name="money_getmoney_get"></a><a name="money_get"></a>money_get:: money_get
 
 Costruttore per oggetti di tipo `money_get` utilizzati per estrarre i valori numerici dalle sequenze che rappresentano valori monetari.
 
@@ -289,19 +289,19 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 ### <a name="remarks"></a>Osservazioni
 
-I valori possibili per il parametro *_Refs* e il loro significato sono:
+I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \>1: Questi valori non sono definiti.
+- \>1: questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza il relativo oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
+Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="money_getstring_type"></a><a name="string_type"></a>money_get::string_type
+## <a name="money_getstring_type"></a><a name="string_type"></a>money_get:: string_type
 
 Tipo che descrive una stringa contenente caratteri di tipo **CharType**.
 
@@ -315,6 +315,6 @@ Il tipo descrive una specializzazione del modello di classe [basic_string](../st
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>delle impostazioni locali](../standard-library/locale.md)\
-[Facet (classe)](../standard-library/locale-class.md#facet_class)\
-[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[Classe facet](../standard-library/locale-class.md#facet_class)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

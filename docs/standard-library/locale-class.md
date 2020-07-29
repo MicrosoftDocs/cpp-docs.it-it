@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872387"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224825"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -202,9 +202,9 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo di un tipo **int** che può rappresentare un gruppo di elementi distinti di un tipo di maschera di maschera locale per le impostazioni locali della classe oppure può essere usato per rappresentare qualsiasi categoria di impostazioni locali C corrispondenti. Gli elementi sono i seguenti:
+Il tipo è un sinonimo di un **`int`** tipo che può rappresentare un gruppo di elementi distinti di un tipo di maschera di maschera locale per le impostazioni locali della classe oppure può essere usato per rappresentare qualsiasi categoria di impostazioni locali C corrispondenti. Gli elementi sono i seguenti:
 
 - `collate`, corrispondente alla categoria C LC_COLLATE
 
@@ -238,7 +238,7 @@ static const locale& classic();
 
 Riferimento alle impostazioni locali C.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Le impostazioni locali C classiche sono le impostazioni locali ASCII per la lingua inglese (Stati Uniti) all'interno della libreria C standard. Si tratta delle impostazioni locali usate in modo implicito nei programmi che non sono internazionali.
 
@@ -344,7 +344,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Non è possibile copiare o assegnare un oggetto della classe `facet` . È possibile creare e distruggere oggetti derivati dalla classe `locale::facet` ma non oggetti della classe di base proper. In genere, si costruisce un oggetto `_Myfac` derivato da `facet` quando si costruisce un oggetto `locale` , come in`locale loc(locale::classic(), new _Myfac);`
 
@@ -367,7 +367,7 @@ Impostazioni locali che devono essere usate come predefinite dal programma.
 
 Impostazioni locali precedenti alla reimpostazione delle impostazioni locali predefinite.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 All'avvio del programma, le impostazioni locali globali coincidono con le impostazioni locali classiche. La funzione `global()` chiama `setlocale( LC_ALL, loc.name. c_str())` per definire delle impostazioni locali corrispondenti nella libreria C standard.
 
@@ -412,7 +412,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Non è possibile copiare o assegnare un oggetto della classe `id` .
 
@@ -452,7 +452,7 @@ Categoria da sostituire nelle impostazioni locali costruite.
 *new_facet*\
 Facet da sostituire nelle impostazioni locali costruite.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il primo costruttore inizializza l'oggetto in modo che corrisponda alle impostazioni locali globali. Il secondo e il terzo costruttore inizializzano tutte le categorie delle impostazioni locali affinché il comportamento sia coerente con il nome delle impostazioni locali *locale_name*. I costruttori rimanenti copiano *from_locale*, con le eccezioni indicate:
 
@@ -574,9 +574,9 @@ Una delle impostazioni locali di cui verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore booleano che è **true** se le impostazioni locali non sono copie delle stesse impostazioni locali. È **false** se le impostazioni locali sono copie delle stesse impostazioni locali.
+Valore booleano che è **`true`** se le impostazioni locali non sono copie delle stesse impostazioni locali. È **`false`** se le impostazioni locali sono copie delle stesse impostazioni locali.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Due impostazioni locali sono uguali se le impostazioni locali sono uguali, se una è una copia dell'altra o se hanno nomi identici.
 
@@ -641,9 +641,9 @@ Seconda stringa da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-- `true`Se *Left* è lessicografico minore di *right*; in caso contrario, `false` .
+- **`true`** Se *Left* è lessicografico minore di *right*; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro gestisce in modo efficace quanto segue:
 
@@ -701,9 +701,9 @@ Una delle impostazioni locali di cui verificare l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore booleano che è **true** se le impostazioni locali sono copie delle stesse impostazioni locali. È **false** se le impostazioni locali non sono copie delle stesse impostazioni locali.
+Valore booleano che è **`true`** se le impostazioni locali sono copie delle stesse impostazioni locali. È **`false`** se le impostazioni locali non sono copie delle stesse impostazioni locali.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Due impostazioni locali sono uguali se le impostazioni locali sono uguali, se una è una copia dell'altra o se hanno nomi identici.
 

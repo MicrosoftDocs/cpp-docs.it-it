@@ -1,6 +1,6 @@
 ---
-title: Evento Corrispondenza
-description: Informazioni di riferimento per la funzione MatchEvent dell'SDK di Build Insights in C.
+title: MatchEvent
+description: Riferimento alla funzione MatchEvent di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c60653641c676716bcdd60865433773da79325f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323862"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224110"
 ---
-# <a name="matchevent"></a>Evento Corrispondenza
+# <a name="matchevent"></a>MatchEvent
 
 ::: moniker range="<=vs-2015"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `MatchEvent` funzione viene utilizzata per confrontare un evento con un elenco di tipi di evento. Se l'evento corrisponde a un tipo nell'elenco, viene inoltrato a un gestore per un'ulteriore elaborazione.
+La `MatchEvent` funzione viene usata per trovare la corrispondenza di un evento con un elenco di tipi di evento. Se l'evento corrisponde a un tipo nell'elenco, viene inviato a un gestore per un'ulteriore elaborazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,34 +43,34 @@ bool MatchEvent(
 
 ### <a name="parameters"></a>Parametri
 
-*Evento*\
-Primo tipo di evento di cui si desidera trovare la corrispondenza.
+*TEvent*\
+Primo tipo di evento a cui si desidera trovare una corrispondenza.
 
-*Eventi TEvents*\
-Tipi di evento rimanenti che si desidera abbinare.
+*TEvents*\
+Tipi di evento rimanenti di cui si desidera trovare una corrispondenza.
 
-*TCallabile*\
-Tipo che supporta `operator()`. Per altre informazioni su quali argomenti vengono passati a questo operatore, vedere la descrizione del parametro *richiamabile.*
+*TCallable*\
+Tipo che supporta `operator()` . Per ulteriori informazioni sugli argomenti che vengono passati a questo operatore, vedere la descrizione del parametro *chiamabile* .
 
-*TExtraArgs (informazioni in base all'altro)*\
-Tipi degli argomenti aggiuntivi passati `MatchEvent`a .
+*TExtraArgs*\
+Tipi degli argomenti aggiuntivi passati a `MatchEvent` .
 
-*Evento*\
+*evento*\
 Evento da confrontare con i tipi di evento descritti da *TEvent* e *TEvents*.
 
 *Callable*\
-`MatchEvent`richiama bile dopo aver *confrontato* correttamente l'evento con uno dei tipi di evento descritti da *TEvent* e *TEvents*. Il primo argomento passato a *callable* è un r-value del tipo di evento corrispondente. Il pacchetto di parametri *extraArgs* è perfetto inoltrato nei parametri rimanenti di *richiamabile.*  
+`MatchEvent`richiama *Callable* dopo aver corretto la corrispondenza dell'evento con uno dei tipi di evento descritti da *TEvent* e *TEvents*. Il primo argomento passato a *Callable* è un r-value del tipo di evento corrispondente. Il pacchetto di parametri *OutArgs* è stato perfezionato nei parametri rimanenti di *Callable*.  
 
-*ExtraArgs (informazioni in stato inci*\
-Argomenti che vengono inoltrati per perfect a *richiamabili* insieme al tipo di evento corrispondente.
+*Argomenti di*\
+Argomenti che vengono completati in modo perfetto per essere *richiamabili* insieme al tipo di evento corrispondente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore **bool** **true** se la corrispondenza ha avuto esito positivo o **false** in caso contrario.
+**`bool`** Valore che corrisponde A **`true`** se la corrispondenza ha avuto esito positivo; **`false`** in caso contrario,.
 
 ## <a name="remarks"></a>Osservazioni
 
-I tipi di evento da utilizzare per i parametri *TEvent* e *TEvents* vengono selezionati da un elenco di classi di *acquisizione.* Per un elenco degli eventi e delle classi di acquisizione che è possibile utilizzare per associarli, vedere [tabella eventi](../event-table.md).
+I tipi di evento da usare per i parametri *TEvent* e *TEvents* sono selezionati da un elenco di *classi di acquisizione*. Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
 
 ## <a name="example"></a>Esempio
 

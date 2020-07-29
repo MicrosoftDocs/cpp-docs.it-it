@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2377
 ms.assetid: f7660965-bf4c-4cd9-8307-1bd7016678a1
-ms.openlocfilehash: a1e8c50f7e5d822571daeefffc93d3e8c572c01b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2bf73aa9aee2a45e5271570b4c45c8fecaa4a4bf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745499"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225540"
 ---
 # <a name="compiler-error-c2377"></a>Errore del compilatore C2377
 
 'identifier': ridefinizione. Impossibile eseguire l'overload di typedef con altri simboli
 
-Un identificatore `typedef` è stato ridefinito.
+Un **`typedef`** identificatore viene ridefinito.
 
 L'esempio seguente genera l'errore C2377:
 

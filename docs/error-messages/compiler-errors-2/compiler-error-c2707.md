@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760439"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225423"
 ---
 # <a name="compiler-error-c2707"></a>Errore del compilatore C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760439"
 
 Le funzioni intrinseche di gestione delle eccezioni strutturate non sono valide in determinati contesti:
 
-- `_exception_code()` esterno a un filtro eccezioni o a un blocco di `__except`
+- `_exception_code()`all'esterno di un filtro o di un **`__except`** blocco eccezioni
 
-- `_exception_info()` esterno a un filtro eccezioni
+- `_exception_info()`al di fuori di un filtro eccezioni
 
-- `_abnormal_termination()` all'esterno di un blocco `__finally`
+- `_abnormal_termination()`all'esterno di un **`__finally`** blocco
 
 Per risolvere l'errore, assicurarsi che le funzioni intrinseche di gestione delle eccezioni siano inserite nel contesto appropriato.
 

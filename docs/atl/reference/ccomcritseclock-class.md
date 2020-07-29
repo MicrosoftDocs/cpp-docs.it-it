@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 4b2ef093c1142b592ad2a6605a08bd8c34a643ea
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: fd2904f67d84db42d6b35aa4e505b063d6ea9a9f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748080"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224292"
 ---
 # <a name="ccomcritseclock-class"></a>Classe CComCritSecLock
 
@@ -29,8 +29,8 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>Parametri
 
-*Blocco TLock*<br/>
-Oggetto da sbloccare e sbloccare.
+*TLock*<br/>
+Oggetto da bloccare e sbloccare.
 
 ## <a name="members"></a>Membri
 
@@ -39,22 +39,22 @@ Oggetto da sbloccare e sbloccare.
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|Costruttore.|
-|[Blocco CComCritSec:: CComCritSecLock](#dtor)|Distruttore.|
+|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComCritSecLock::Lock (Blocco)](#lock)|Chiamare questo metodo per bloccare l'oggetto sezione critica.|
-|[CComCritSecLock::Sblocca](#unlock)|Chiamare questo metodo per sbloccare l'oggetto sezione critica.|
+|[CComCritSecLock:: Lock](#lock)|Chiamare questo metodo per bloccare l'oggetto sezione critica.|
+|[CComCritSecLock:: Unlock](#unlock)|Chiamare questo metodo per sbloccare l'oggetto sezione critica.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Utilizzare questa classe per bloccare e sbloccare gli oggetti in modo più sicuro rispetto alla [classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) o [CComAutoCriticalSection .](../../atl/reference/ccomautocriticalsection-class.md)
+Usare questa classe per bloccare e sbloccare gli oggetti in modo più sicuro rispetto alla classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) o alla [classe CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase.h
+**Intestazione:** atlbase. h
 
 ## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
 
@@ -66,17 +66,17 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Parametri
 
-*Cs*<br/>
-Oggetto sezione critica.
+*CS*<br/>
+Oggetto della sezione critica.
 
-*bBloccoiniziale*<br/>
-Lo stato di blocco iniziale: **true** significa bloccato.
+*bInitialLock*<br/>
+Stato di blocco iniziale: **`true`** indica bloccato.
 
 ### <a name="remarks"></a>Osservazioni
 
 Inizializza l'oggetto sezione critica.
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>Blocco CComCritSec:: CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock
 
 Distruttore.
 
@@ -88,7 +88,7 @@ Distruttore.
 
 Sblocca l'oggetto sezione critica.
 
-## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock (Blocco)
+## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock:: Lock
 
 Chiamare questo metodo per bloccare l'oggetto sezione critica.
 
@@ -98,13 +98,13 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK se l'oggetto è stato bloccato correttamente o se si verifica un errore HRESULT in caso di errore.
+Restituisce S_OK se l'oggetto è stato bloccato correttamente oppure un errore HRESULT in caso di errore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'oggetto è già bloccato, si verificherà un errore ASSERT nelle build di debug.
+Se l'oggetto è già bloccato, si verificherà un errore di ASSERZIONe nelle compilazioni di debug.
 
-## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Sblocca
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock:: Unlock
 
 Chiamare questo metodo per sbloccare l'oggetto sezione critica.
 
@@ -114,9 +114,9 @@ void Unlock() throw();
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'oggetto è già sbloccato, si verificherà un errore ASSERT nelle build di debug.
+Se l'oggetto è già sbloccato, si verificherà un errore di ASSERZIONe nelle compilazioni di debug.
 
 ## <a name="see-also"></a>Vedere anche
 
-[CComCriticalSection (classe)](../../atl/reference/ccomcriticalsection-class.md)<br/>
-[CComAutoCriticalSection (classe)](../../atl/reference/ccomautocriticalsection-class.md)
+[Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
+[Classe CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8648258f17bff577ba1c0dde5016f5f284b82e25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420043"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224838"
 ---
 # <a name="ltlistgt-operators"></a>Operatori &lt;list&gt;
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto elenco a sinistra dell'operatore non è uguale all'oggetto elenco a destra.
 
@@ -37,15 +37,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli elenchi non sono uguali; in caso contrario, **false**.
+**`true`** Se gli elenchi non sono uguali; **`false`** se gli elenchi sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -76,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto elenco a sinistra dell'operatore è minore dell'oggetto elenco a destra.
 
@@ -88,15 +88,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è minore ma non uguale all'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è minore ma non uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto elenco a sinistra dell'operatore è minore o uguale all'oggetto elenco a destra.
 
@@ -143,15 +143,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è minore o uguale all'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è minore o uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto elenco a sinistra dell'operatore è uguale all'oggetto elenco a destra.
 
@@ -198,15 +198,15 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è uguale all'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -237,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
 
 Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore dell'oggetto elenco a destra.
 
@@ -249,15 +249,15 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è maggiore dell'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è maggiore dell'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore o uguale all'oggetto elenco a destra.
 
@@ -304,15 +304,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è maggiore o uguale all'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è maggiore o uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 

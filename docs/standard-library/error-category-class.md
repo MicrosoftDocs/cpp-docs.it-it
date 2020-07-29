@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737565"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224877"
 ---
 # <a name="error_category-class"></a>Classe error_category
 
@@ -113,7 +113,7 @@ L'oggetto [error_code](../standard-library/error-code-class.md) da confrontare.
 
 #### <a name="return-value"></a>Valore restituito
 
-**true** se la categoria e il valore sono uguali. in caso contrario, **false**.
+**`true`** Se la categoria e il valore sono uguali. in caso contrario, **`false`** .
 
 #### <a name="remarks"></a>Osservazioni
 
@@ -179,7 +179,7 @@ Oggetto di cui verificare l'uguaglianza.
 
 #### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti sono uguali; **false** se gli oggetti non sono uguali.
+**`true`** Se gli oggetti sono uguali; **`false`** se gli oggetti non sono uguali.
 
 #### <a name="remarks"></a>Osservazioni
 
@@ -200,7 +200,7 @@ L'oggetto di cui verificare la disuguaglianza.
 
 #### <a name="return-value"></a>Valore restituito
 
-**true** se l' `error_category` oggetto non è uguale all' `error_category` oggetto passato a *destra*; in caso contrario, **false**.
+**`true`** Se l' `error_category` oggetto non è uguale all' `error_category` oggetto passato a *destra*; in caso contrario, **`false`** .
 
 #### <a name="remarks"></a>Osservazioni
 
@@ -221,7 +221,7 @@ L'oggetto `error_category` da confrontare.
 
 #### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto `error_category` è più piccolo dell'oggetto `error_category` passato per il confronto; in caso contrario **false**.
+**`true`** Se l' `error_category` oggetto è minore dell' `error_category` oggetto passato per il confronto. In caso contrario, **`false`** .
 
 #### <a name="remarks"></a>Osservazioni
 
@@ -243,4 +243,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>Osservazioni
 
-Questa definizione di tipo è un sinonimo di **int**.
+Questa definizione di tipo è un sinonimo di **`int`** .
