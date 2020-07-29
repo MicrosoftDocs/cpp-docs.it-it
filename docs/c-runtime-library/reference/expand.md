@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234146"
 ---
 # <a name="_expand"></a>_expand
 
@@ -71,7 +71,7 @@ Nuova dimensione in byte.
 
 Se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata senza che lo si sposti, la funzione restituisce **null**. **_expand** non restituisce mai un blocco espanso a dimensioni inferiori a quelle richieste. Se si verifica un errore, **errno** indica la natura dell'errore. Per ulteriori informazioni su **errno**, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per controllare la nuova dimensione dell'elemento, usare **_msize**. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
+Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per controllare la nuova dimensione dell'elemento, usare **_msize**. Per ottenere un puntatore a un tipo diverso da **`void`** , usare un cast del tipo sul valore restituito.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -88,7 +88,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 
@@ -130,7 +130,7 @@ Expanded block to 1024 bytes at 002C12BC
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [libero](free.md)<br/>
 [malloc](malloc.md)<br/>

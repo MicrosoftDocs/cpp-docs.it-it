@@ -46,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234185"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -109,13 +109,13 @@ Le funzioni **ERF** calcolano la funzione di errore di Gauss di *x*, definita co
 
 La funzione di errore di Gauss complementare è definita come 1-ERF (x). Le funzioni **ERF** restituiscono un valore compreso tra-1,0 e 1,0. Non vi è restituzione di errori. Le funzioni **erfc** restituiscono un valore compreso tra 0 e 2. Se *x* è troppo grande per **erfc**, la variabile **errno** è impostata su **ERANGE**.
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **ERF** e **erfc** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **ERF** e **erfc** accettano e restituiscono sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **ERF** e **erfc** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, **ERF** e **erfc** accettano e restituiscono sempre un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**ERF**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
 
@@ -123,4 +123,4 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>

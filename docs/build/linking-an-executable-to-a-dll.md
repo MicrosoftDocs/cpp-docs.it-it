@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417362"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223941"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Collegare un eseguibile a una DLL
 
@@ -42,11 +42,11 @@ La libreria di importazione contiene solo codice per caricare la DLL e implement
 
 Quando il sistema avvia un programma che contiene riferimenti collegati in modo dinamico, USA le informazioni nel file eseguibile del programma per individuare le DLL necessarie. Se non è possibile individuare la DLL, il sistema termina il processo e visualizza una finestra di dialogo in cui viene segnalato l'errore. In caso contrario, il sistema esegue il mapping dei moduli DLL nello spazio degli indirizzi del processo.
 
-Se una delle dll dispone di una funzione del punto di ingresso per l'inizializzazione e il codice `DllMain`di terminazione, ad esempio, il sistema operativo chiama la funzione. Uno dei parametri passati alla funzione del punto di ingresso specifica un codice che indica che la DLL è collegata al processo. Se la funzione del punto di ingresso non restituisce TRUE, il sistema termina il processo e segnala l'errore.
+Se una delle dll dispone di una funzione del punto di ingresso per l'inizializzazione e il codice di terminazione, ad esempio `DllMain` , il sistema operativo chiama la funzione. Uno dei parametri passati alla funzione del punto di ingresso specifica un codice che indica che la DLL è collegata al processo. Se la funzione del punto di ingresso non restituisce TRUE, il sistema termina il processo e segnala l'errore.
 
 Infine, il sistema modifica il codice eseguibile del processo per fornire gli indirizzi iniziali per le funzioni DLL.
 
-Come il resto del codice di un programma, il caricatore esegue il mapping del codice DLL nello spazio degli indirizzi del processo all'avvio del processo. Il sistema operativo lo carica in memoria solo quando necessario. Di conseguenza, gli attributi `PRELOAD` del `LOADONCALL` codice e usati dai file def per controllare il caricamento nelle versioni precedenti di Windows non hanno più significato.
+Come il resto del codice di un programma, il caricatore esegue il mapping del codice DLL nello spazio degli indirizzi del processo all'avvio del processo. Il sistema operativo lo carica in memoria solo quando necessario. Di conseguenza, gli `PRELOAD` attributi del `LOADONCALL` codice e usati dai file def per controllare il caricamento nelle versioni precedenti di Windows non hanno più significato.
 
 ### <a name="explicit-linking"></a>Collegamento esplicito
 
@@ -64,9 +64,9 @@ La maggior parte delle applicazioni usa il collegamento implicito perché è il 
 
 Ecco due rischi per il collegamento esplicito da tenere presente:
 
-- Se la DLL include una `DllMain` funzione del punto di ingresso, il sistema operativo chiama la funzione nel contesto del thread che ha `LoadLibrary`chiamato. La funzione del punto di ingresso non viene chiamata se la DLL è già associata al processo a causa di una chiamata `LoadLibrary` precedente a che non ha avuto una chiamata `FreeLibrary` corrispondente alla funzione. Il collegamento esplicito può causare problemi se la DLL USA `DllMain` una funzione per inizializzare ogni thread di un processo, perché tutti i thread già `LoadLibrary` esistenti quando `AfxLoadLibrary`viene chiamato (o) non vengono inizializzati.
+- Se la DLL include una `DllMain` funzione del punto di ingresso, il sistema operativo chiama la funzione nel contesto del thread che ha chiamato `LoadLibrary` . La funzione del punto di ingresso non viene chiamata se la DLL è già associata al processo a causa di una chiamata precedente a `LoadLibrary` che non ha avuto una chiamata corrispondente alla `FreeLibrary` funzione. Il collegamento esplicito può causare problemi se la DLL usa una `DllMain` funzione per inizializzare ogni thread di un processo, perché tutti i thread già esistenti quando `LoadLibrary` `AfxLoadLibrary` viene chiamato (o) non vengono inizializzati.
 
-- Se una DLL dichiara dati di extent statici come, `__declspec(thread)`può causare un errore di protezione se collegato in modo esplicito. Dopo che la DLL è stata caricata da `LoadLibrary`una chiamata a, causa un errore di protezione ogni volta che il codice fa riferimento a questi dati. (I dati di extent statici includono elementi statici globali e locali). Per questo motivo, quando si crea una DLL, è consigliabile evitare di usare l'archiviazione locale di thread. Se non è possibile, informare gli utenti della DLL sulle potenziali trappole per il caricamento dinamico della DLL. Per ulteriori informazioni, vedere [utilizzo dell'archiviazione locale di thread in una libreria a collegamento dinamico (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
+- Se una DLL dichiara dati di extent statici come `__declspec(thread)` , può causare un errore di protezione se collegato in modo esplicito. Dopo che la DLL è stata caricata da una chiamata a `LoadLibrary` , causa un errore di protezione ogni volta che il codice fa riferimento a questi dati. (I dati di extent statici includono elementi statici globali e locali). Per questo motivo, quando si crea una DLL, è consigliabile evitare di usare l'archiviazione locale di thread. Se non è possibile, informare gli utenti della DLL sulle potenziali trappole per il caricamento dinamico della DLL. Per ulteriori informazioni, vedere [utilizzo dell'archiviazione locale di thread in una libreria a collegamento dinamico (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
 
 <a name="linking-implicitly"></a>
 
@@ -74,7 +74,7 @@ Ecco due rischi per il collegamento esplicito da tenere presente:
 
 Per usare una DLL tramite il collegamento implicito, gli eseguibili client devono ottenere questi file dal provider della DLL:
 
-- Uno o più file di intestazione (file con estensione h) che contengono le dichiarazioni dei dati esportati, delle funzioni e delle classi C++ nella DLL. Le classi, le funzioni e i dati esportati dalla DLL devono essere `__declspec(dllimport)` tutti contrassegnati nel file di intestazione. Per altre informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+- Uno o più file di intestazione (file con estensione h) che contengono le dichiarazioni dei dati esportati, delle funzioni e delle classi C++ nella DLL. Le classi, le funzioni e i dati esportati dalla DLL devono essere tutti contrassegnati `__declspec(dllimport)` nel file di intestazione. Per altre informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 - Libreria di importazione da collegare all'eseguibile. Il linker crea la libreria di importazione quando viene compilata la DLL. Per altre informazioni, vedere [file lib come input del linker](reference/dot-lib-files-as-linker-input.md).
 
@@ -94,11 +94,11 @@ Per usare una DLL tramite il collegamento esplicito, le applicazioni devono eseg
 
 - Chiamare [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) o una funzione simile per caricare la dll e ottenere un handle del modulo.
 
-- Chiamare [GetProcAddress](getprocaddress.md) per ottenere un puntatore a funzione per ogni funzione esportata chiamata dall'applicazione. Poiché le applicazioni chiamano le funzioni DLL tramite un puntatore, il compilatore non genera riferimenti esterni, quindi non è necessario collegarsi a una libreria di importazione. Tuttavia, è necessario disporre di `typedef` un' `using` istruzione o che definisce la firma di chiamata delle funzioni esportate chiamate.
+- Chiamare [GetProcAddress](getprocaddress.md) per ottenere un puntatore a funzione per ogni funzione esportata chiamata dall'applicazione. Poiché le applicazioni chiamano le funzioni DLL tramite un puntatore, il compilatore non genera riferimenti esterni, quindi non è necessario collegarsi a una libreria di importazione. Tuttavia, è necessario disporre **`typedef`** di un' **`using`** istruzione o che definisce la firma di chiamata delle funzioni esportate chiamate.
 
 - Chiamare [FreeLibrary](freelibrary-and-afxfreelibrary.md) al termine della dll.
 
-Questa funzione di esempio chiama `LoadLibrary` ad esempio per caricare una DLL denominata "MyDLL", chiama `GetProcAddress` per ottenere un puntatore a una funzione denominata "DLLFunc1", chiama la funzione e salva il risultato, quindi chiama `FreeLibrary` per scaricare la dll.
+Questa funzione di esempio chiama ad esempio `LoadLibrary` per caricare una DLL denominata "MyDLL", chiama `GetProcAddress` per ottenere un puntatore a una funzione denominata "DLLFunc1", chiama la funzione e salva il risultato, quindi chiama `FreeLibrary` per scaricare la dll.
 
 ```C
 #include "windows.h"
@@ -135,11 +135,11 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-A differenza di questo esempio, nella maggior parte dei casi `LoadLibrary` è `FreeLibrary` consigliabile chiamare e solo una volta nell'applicazione per una determinata DLL. È soprattutto vero se si intende chiamare più funzioni nella DLL o chiamare più volte le funzioni DLL.
+A differenza di questo esempio, nella maggior parte dei casi è consigliabile chiamare `LoadLibrary` e `FreeLibrary` solo una volta nell'applicazione per una determinata DLL. È soprattutto vero se si intende chiamare più funzioni nella DLL o chiamare più volte le funzioni DLL.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [Uso di librerie di importazione e file di esportazione](reference/working-with-import-libraries-and-export-files.md)
+- [Utilizzo di librerie di importazione ed esportazione di file](reference/working-with-import-libraries-and-export-files.md)
 
 - [Ordine di ricerca della libreria a collegamento dinamico](/windows/win32/Dlls/dynamic-link-library-search-order)
 

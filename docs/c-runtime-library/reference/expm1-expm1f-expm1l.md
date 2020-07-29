@@ -30,12 +30,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 77bd44975e97cc646f7d2fd100d86b6661b8c2e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63e984f2228ac6896cd9d2ea959b491565bfb8d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234133"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -68,11 +68,11 @@ Il valore esponenziale a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **expm1** restituiscono un valore a virgola mobile che rappresenta e<sup>x</sup> -1, se ha esito positivo. In overflow, **expm1** restituisce **HUGE_VAL**, **expm1f** restituisce **HUGE_VALF**, **expm1l** restituisce **HUGE_VALL**e **errno** è impostato su **ERANGE**. Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Le funzioni **expm1** restituiscono un valore a virgola mobile che rappresenta e<sup>x</sup> -1, se ha esito positivo. In overflow, **expm1** restituisce **HUGE_VAL**, **expm1f** restituisce **HUGE_VALF**, **expm1l** restituisce **HUGE_VALL**e **errno** viene impostato su **ERANGE**. Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **expm1** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C **expm1** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **expm1** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C **expm1** accetta e restituisce sempre un oggetto **`double`** .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -84,6 +84,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>
