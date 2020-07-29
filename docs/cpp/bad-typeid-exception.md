@@ -1,5 +1,5 @@
 ---
-title: bad_typeid (eccezione)
+title: Eccezione bad_typeid
 ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3e01f97c67803408c9ce5bf056e3e9ed4746d259
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245923"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229168"
 ---
-# <a name="bad_typeid-exception"></a>bad_typeid (eccezione)
+# <a name="bad_typeid-exception"></a>Eccezione bad_typeid
 
-L'eccezione **bad_typeid** viene generata dall' [operatore typeid](../cpp/typeid-operator.md) quando l'operando per **typeid** è un puntatore null.
+L'eccezione **bad_typeid** viene generata dall' [operatore typeid](../cpp/typeid-operator.md) quando l'operando per **`typeid`** è un puntatore null.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,7 +26,7 @@ catch (bad_typeid)
    statement
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'interfaccia per **bad_typeid** è:
 
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-Nell'esempio seguente viene illustrato l'operatore **typeid** che genera un'eccezione **bad_typeid** .
+Nell'esempio seguente viene illustrato l' **`typeid`** operatore che genera un'eccezione **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -80,5 +80,5 @@ Object is NULL
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni sui tipi di runtime](../cpp/run-time-type-information.md)\
+[Informazioni sui tipi in fase di esecuzione](../cpp/run-time-type-information.md)\
 [Parole chiave](../cpp/keywords-cpp.md)

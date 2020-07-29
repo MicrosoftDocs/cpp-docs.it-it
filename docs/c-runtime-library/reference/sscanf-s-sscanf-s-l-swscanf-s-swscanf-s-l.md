@@ -44,12 +44,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957977"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229350"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -104,9 +104,9 @@ Se il *buffer* o il *formato* è un puntatore **null** , viene richiamato il ges
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **sscanf_s** legge i dati dal *buffer* nella posizione specificata da ogni *argomento*. Gli argomenti dopo la stringa di formato specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. Diversamente dalla versione meno sicura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s**o i set di controllo stringa racchiusi tra **[]** . Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede. Ad esempio, se si sta leggendo una stringa, le dimensioni del buffer per tale stringa vengono passate nel modo seguente:
+La funzione **sscanf_s** legge i dati dal *buffer* nella posizione specificata da ogni *argomento*. Gli argomenti dopo la stringa di formato specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. Diversamente dalla versione meno sicura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s**o i set di controllo stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede. Ad esempio, se si sta leggendo una stringa, le dimensioni del buffer per tale stringa vengono passate nel modo seguente:
 
 ```C
 wchar_t ws[10];
@@ -132,13 +132,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Il parametro size è di tipo **unsigned**, non **size_t**. Quando si esegue la compilazione per destinazioni a 64 bit, usare un cast statico per convertire i risultati di **_countof** o **sizeof** nella dimensione corretta.
+> Il parametro size è di tipo **`unsigned`** , non **size_t**. Quando si esegue la compilazione per destinazioni a 64 bit, usare un cast statico per convertire **_countof** o **`sizeof`** risultati con le dimensioni corrette.
 
 L'argomento *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per la funzione **scanf_s** . Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-**swscanf_s** è una versione a caratteri wide di **sscanf_s**; gli argomenti di **swscanf_s** sono stringhe a caratteri wide. **sscanf_s** non gestisce i caratteri esadecimali multibyte. **swscanf_s** non gestisce i caratteri esadecimali a larghezza intera Unicode o "zona di compatibilità". In caso contrario, **swscanf_s** e **sscanf_s** si comportano in modo identico.
+**swscanf_s** è una versione a caratteri wide di **sscanf_s**; gli argomenti da **swscanf_s** sono stringhe a caratteri wide. **sscanf_s** non gestisce i caratteri esadecimali multibyte. **swscanf_s** non gestisce i caratteri esadecimali a larghezza intera Unicode o "zona di compatibilità". In caso contrario, **swscanf_s** e **sscanf_s** si comportano in modo identico.
 
-Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -201,5 +201,5 @@ Real:     = 15.000000
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

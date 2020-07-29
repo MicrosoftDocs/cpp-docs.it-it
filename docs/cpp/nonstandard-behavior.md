@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f31938c78e443bb53a286f79661d86b7a6e9edbc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186542"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
 
-Le sezioni seguenti elencano alcune delle posizioni in cui l'implementazione Microsoft C++ di non è conforme allo C++ standard. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).
+Le sezioni seguenti elencano alcune delle posizioni in cui l'implementazione Microsoft di C++ non è conforme allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).
 
-L'elenco dei limiti del compilatore che differiscono da quelli definiti C++ nello standard viene fornito nei [limiti del compilatore](../cpp/compiler-limits.md).
+L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ viene fornito nei [limiti del compilatore](../cpp/compiler-limits.md).
 
 ## <a name="covariant-return-types"></a>Tipi restituiti covarianti
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Associazione di nomi non dipendenti nei modelli
 
-Il compilatore C++ Microsoft attualmente non supporta l'associazione di nomi non dipendenti durante l'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.
+Il compilatore Microsoft C++ attualmente non supporta l'associazione di nomi non dipendenti durante l'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Per ulteriori informazioni sulle specifiche di eccezione, vedere [specifiche di 
 
 ## <a name="char_traitseof"></a>char_traits::eof()
 
-Gli C++ stati standard che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non devono corrispondere a un valore `char_type` valido. Il compilatore C++ Microsoft impone questo vincolo per il tipo **char**, ma non per il tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.
+Lo standard C++ indica che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non deve corrispondere a un `char_type` valore valido. Il compilatore Microsoft C++ impone questo vincolo per il tipo **`char`** , ma non per il tipo **`wchar_t`** . Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Percorso di archiviazione di oggetti
 
-Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia, con C++Microsoft, esistono casi in cui i tipi senza membri dati condividono un percorso di archiviazione con altri tipi per la durata dell'oggetto.
+Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia, con Microsoft C++, esistono casi in cui i tipi senza membri dati condividono un percorso di archiviazione con altri tipi per la durata dell'oggetto.

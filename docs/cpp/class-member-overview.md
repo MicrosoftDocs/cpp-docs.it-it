@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: cb978434707a9a7808b3388fc541ce4e0d996b0f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02c5593d9fb5e72ee6b398c9637397ab26c9f3f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366672"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229064"
 ---
 # <a name="class-member-overview"></a>Panoramica dei membri di classe
 
@@ -26,11 +26,11 @@ L'elenco completo delle categorie membro è il seguente:
 
 - [Panoramica delle funzioni membro](overview-of-member-functions.md).
 
-- [Membri dati,](static-members-cpp.md) inclusi tipi incorporati e altri tipi definiti dall'utente.
+- [Membri dati](static-members-cpp.md) , inclusi i tipi incorporati e altri tipi definiti dall'utente.
 
 - Operatori
 
-- [Dichiarazioni](nested-class-declarations.md) di classi annidate e.)
+- [Dichiarazioni di classi annidate](nested-class-declarations.md) e.)
 
 - [Unioni](unions.md)
 
@@ -92,11 +92,11 @@ int TestRun::_instances{ 0 };
 
 ## <a name="member-accessibility"></a>Accessibilità del membro
 
-I membri di una classe vengono dichiarati nell'elenco dei membri. L'elenco dei membri di una classe può essere suddiviso in un numero qualsiasi di sezioni **private**, **protected** e **public** utilizzando parole chiave note come identificatori di accesso.  I due punti **:** devono seguire l'identificatore di accesso.  Queste sezioni non devono essere contigue, ovvero, queste parole chiave possono essere visualizzate diverse volte nell'elenco dei membri.  La parola chiave consente di accedere a tutti i membri fino all'identificatore di accesso successivo o alla parentesi graffa di chiusura. Per ulteriori informazioni, vedere [Controllo dell'accesso ai](../cpp/member-access-control-cpp.md)membri (C ) .
+I membri di una classe vengono dichiarati nell'elenco dei membri. L'elenco dei membri di una classe può essere suddiviso in un numero qualsiasi di **`private`** **`protected`** **`public`** sezioni e utilizzando parole chiave note come identificatori di accesso.  I due punti **:** devono seguire l'identificatore di accesso.  Queste sezioni non devono essere contigue, ovvero, queste parole chiave possono essere visualizzate diverse volte nell'elenco dei membri.  La parola chiave consente di accedere a tutti i membri fino all'identificatore di accesso successivo o alla parentesi graffa di chiusura. Per ulteriori informazioni, vedere [controllo di accesso ai membri (C++)](../cpp/member-access-control-cpp.md).
 
 ## <a name="static-members"></a>Membri statici
 
-Un membro dati può essere dichiarato come statico, ovvero tutti gli oggetti della classe possono accedere alla stessa copia del membro. Una funzione membro può essere dichiarata come static, nel qual caso può accedere solo ai membri dati statici della classe (e non ha alcun puntatore *this).* Per ulteriori informazioni, vedere [Membri dati statici](../cpp/static-members-cpp.md).
+Un membro dati può essere dichiarato come statico, ovvero tutti gli oggetti della classe possono accedere alla stessa copia del membro. Una funzione membro può essere dichiarata come statica, nel qual caso può accedere solo ai membri dati statici della classe (e non ha *questo* puntatore). Per ulteriori informazioni, vedere [membri dati statici](../cpp/static-members-cpp.md).
 
 ## <a name="special-member-functions"></a>Funzioni membro speciali
 
@@ -106,15 +106,15 @@ Le funzioni membro speciali sono funzioni fornite automaticamente dal compilator
 
 1. Costruttore di copia
 
-1. **(C** Costruttore Move
+1. **(C++ 11)** Costruttore di spostamento
 
 1. Operatore di assegnazione di copia
 
-1. **(C** Operatore di assegnazione di spostamento
+1. **(C++ 11)** Operatore di assegnazione di spostamento
 
 1. Distruttore
 
-Per ulteriori informazioni, vedere [Funzioni membro speciali](../cpp/special-member-functions.md).
+Per ulteriori informazioni, vedere [funzioni membro speciali](../cpp/special-member-functions.md).
 
 ## <a name="memberwise-initialization"></a>Inizializzazione membro per membro
 
@@ -142,7 +142,7 @@ int main()
 
 Se a un membro viene assegnato un valore in un costruttore, tale valore sovrascrive il valore con cui il membro è stato inizializzato al momento della dichiarazione.
 
-Esiste una sola copia condivisa dei membri dei dati statici per tutti gli oggetti di un tipo di classe specifico. I membri dei dati statici devono essere definiti e possono essere inizializzati in ambito file. Per ulteriori informazioni sui membri dati statici, vedere [Membri dati statici.](../cpp/static-members-cpp.md) Nell'esempio seguente viene illustrato come eseguire queste inizializzazioni:The following example shows how to perform these initializations:
+Esiste una sola copia condivisa dei membri dei dati statici per tutti gli oggetti di un tipo di classe specifico. I membri dei dati statici devono essere definiti e possono essere inizializzati in ambito file. Per ulteriori informazioni sui membri dati statici, vedere [membri dati statici](../cpp/static-members-cpp.md). Nell'esempio seguente viene illustrato come eseguire queste inizializzazioni:
 
 ```cpp
 // class_members2.cpp

@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206193"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229298"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 Posizione del buffer di stringa di destinazione.
 
 *dest_size*<br/>
-Dimensioni del buffer della stringa di destinazione nelle unità di tipo **char** per le funzioni narrow e multibyte e **wchar_t** unità per le funzioni estese. Questo valore deve essere maggiore di zero e non maggiore di **RSIZE_MAX**. Verificare che questa dimensione conti per la terminazione `NULL` successiva alla stringa.
+Dimensioni del buffer della stringa di destinazione in **`char`** unità per funzioni narrow e multibyte e **`wchar_t`** unità per funzioni estese. Questo valore deve essere maggiore di zero e non maggiore di **RSIZE_MAX**. Verificare che questa dimensione conti per la terminazione `NULL` successiva alla stringa.
 
 *src*<br/>
 Buffer della stringa di origine che termina con Null.
@@ -136,7 +136,7 @@ Zero in caso di esito positivo; in caso contrario un errore.
 |any|any|**NULL**|**EINVAL**|*dest*[0] impostato su 0|
 |any|0 o troppo piccolo|any|**ERANGE**|*dest*[0] impostato su 0|
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 La funzione **strcpy_s** copia il contenuto nell'indirizzo di *src*, incluso il carattere null di terminazione, nel percorso specificato da *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Il comportamento di **strcpy_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 

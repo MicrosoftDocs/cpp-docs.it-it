@@ -52,12 +52,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229402"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
@@ -115,16 +115,16 @@ Se *input* o *Format* è un puntatore **null** , viene richiamato il gestore di 
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa funzione è simile a **sscanf_s** , con la differenza che fornisce la possibilità di specificare un numero fisso di caratteri da esaminare dalla stringa di input. Per altre informazioni, vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Questa funzione è simile **sscanf_s** ad eccezione del fatto che fornisce la possibilità di specificare un numero fisso di caratteri da esaminare dalla stringa di input. Per altre informazioni, vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Il parametro della dimensione del buffer è obbligatorio con i caratteri di campo di tipo **c**, **c**, **s**, **s**e **[** . Per altre informazioni, vedere [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
+Il parametro della dimensione del buffer è obbligatorio con i caratteri di campo di tipo **c**, **c**, **s**, **s**e **[**. Per altre informazioni, vedere [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Il parametro size è di tipo **unsigned**, non **size_t**.
+> Il parametro size è di tipo **`unsigned`** , non **size_t**.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -140,7 +140,7 @@ Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad e
 |**_snscanf_s**, **_snscanf_s_l**|\<stdio.h>|
 |**_snwscanf_s**, **_snwscanf_s_l**|\<stdio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

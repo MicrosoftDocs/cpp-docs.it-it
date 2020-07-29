@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180863"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229051"
 ---
 # <a name="cleaning-up-resources"></a>Pulizia di risorse
 
@@ -26,7 +26,7 @@ Di conseguenza, per essere certi, è necessario verificare quali risorse sono ef
 
 1. Nel blocco di istruzioni **__try** allocare le risorse. Gli handle vengono impostati su valori positivi mentre la risorsa viene allocata.
 
-1. Nel blocco di istruzioni **__finally** rilasciare ogni risorsa la cui variabile handle o flag corrispondente è diversa da zero o not null.
+1. Nel **`__finally`** blocco di istruzioni rilasciare ogni risorsa la cui variabile handle o flag corrispondente è diversa da zero o not null.
 
 ## <a name="example"></a>Esempio
 
@@ -73,4 +73,4 @@ int main() {
 ## <a name="see-also"></a>Vedere anche
 
 [Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)<br/>
-[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

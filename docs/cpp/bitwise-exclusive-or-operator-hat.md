@@ -1,6 +1,9 @@
 ---
 title: 'Operatore OR bit per bit esclusivo: ^'
-ms.date: 11/04/2016
+description: Sintassi esclusiva del linguaggio standard C++ e utilizzo di.
+ms.date: 07/23/2020
+f1_keywords:
+- xor_cpp
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -10,30 +13,29 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 9a44dc60a985729aae79ed0e2e48c44adace647b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190716"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229103"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operatore OR bit per bit esclusivo: ^
 
 ## <a name="syntax"></a>Sintassi
 
-```
-expression ^ expression
-```
+> *espressione* **`^`** *espressione*
 
 ## <a name="remarks"></a>Osservazioni
 
-L'operatore OR esclusivo bit per bit ( **^** ) confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit ha valore 0 e l'altro 1, il bit del risultato corrispondente verrà impostato su 1. altrimenti verrà impostato su 0.
+L'operatore OR esclusivo bit per bit ( **`^`** ) confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se il bit del primo operando è 0 e l'altro bit è 1, il bit del risultato corrispondente viene impostato su 1. altrimenti verrà impostato su 0.
 
-Entrambi gli operandi all'operatore OR bit per bit esclusivo devono essere di tipi integrali. Le conversioni aritmetiche consuete analizzate in [conversioni standard](standard-conversions.md) vengono applicate agli operandi.
+Entrambi gli operandi per l'operatore devono avere tipi integrali. Le conversioni aritmetiche consuete analizzate in [conversioni standard](standard-conversions.md) vengono applicate agli operandi.
 
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per ^
 
-L'operatore **Xor** è il testo equivalente di **^** . Esistono due modi per accedere all'operatore **Xor** nei programmi: includere il file di intestazione `iso646.h`o compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
+C++ specifica **`xor`** come ortografia alternativa per **`^`** . In C, l'ortografia alternativa viene fornita come una macro nell' \<iso646.h> intestazione. In C++, l'ortografia alternativa è una parola chiave. l'utilizzo di \<iso646.h> o dell'equivalente C++ \<ciso646> è deprecato. In Microsoft C++, l' [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) opzione del compilatore o è necessaria per abilitare l'ortografia alternativa.
+
 
 ## <a name="example"></a>Esempio
 
@@ -53,4 +55,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[Operatori, precedenza e associatività predefiniti di C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

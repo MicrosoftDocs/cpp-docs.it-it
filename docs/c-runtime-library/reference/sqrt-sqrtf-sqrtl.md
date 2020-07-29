@@ -37,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506884"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229363"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -75,7 +75,7 @@ Valore a virgola mobile non negativo
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Sqrt** che accettano tipi **float** o **Long** **Double** . In un programma C, **Sqrt** accetta sempre e restituisce **Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Sqrt** che accettano i **`float`** tipi o **`long double`** . In un programma C, **Sqrt** accetta e restituisce sempre **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -85,9 +85,9 @@ Le funzioni **Sqrt** restituiscono la radice quadrata di *x*. Per impostazione p
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND|Nessuno|_DOMAIN|
-|- ∞|Nessuno|_DOMAIN|
-|x<0|Nessuno|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
+|- ∞|none|_DOMAIN|
+|x<0|none|_DOMAIN|
 
 ## <a name="requirements"></a>Requisiti
 

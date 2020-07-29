@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229441"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -68,20 +68,20 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*drive*<br/>
+*unità*<br/>
 Unità disco rigido.
 
 *buffer*<br/>
 Posizione di archiviazione per il percorso.
 
 *maxlen*<br/>
-Lunghezza massima del percorso in caratteri: **char** per **_getdcwd** e **wchar_t** per **_wgetdcwd**.
+Lunghezza massima del percorso in caratteri: **`char`** per **_getdcwd** e **`wchar_t`** per **_wgetdcwd**.
 
 ## <a name="return-value"></a>Valore restituito
 
 Vedere [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 **_getdcwd_nolock** e **_wgetdcwd_nolock** sono identici rispettivamente a **_getdcwd** e **_wgetdcwd**, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
@@ -98,11 +98,11 @@ Vedere [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

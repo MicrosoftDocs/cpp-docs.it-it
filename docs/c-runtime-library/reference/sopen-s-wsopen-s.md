@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912684"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229389"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -114,7 +114,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-L'espressione integer *Oflag* è costituita dalla combinazione di una o più costanti manifeste, definite in \<fcntl. h>. Quando due o più costanti formano l'argomento *Oflag*, vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
+L'espressione integer *Oflag* è costituita dalla combinazione di una o più costanti manifesto, definite in \<fcntl.h> . Quando due o più costanti formano l'argomento *Oflag*, vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
 
 |costante *Oflag*|Comportamento|
 |-|-|
@@ -138,11 +138,11 @@ L'espressione integer *Oflag* è costituita dalla combinazione di una o più cos
 
 Per specificare la modalità di accesso ai file, è necessario specificare **_O_RDONLY**, **_O_RDWR**o **_O_WRONLY**. Non vi è alcun valore predefinito per la modalità d'accesso.
 
-Quando un file viene aperto in modalità Unicode usando **_O_WTEXT**, **_O_U8TEXT**o **_O_U16TEXT**, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **wchar_t**. Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **wchar_t**. Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
+Quando un file viene aperto in modalità Unicode usando **_O_WTEXT**, **_O_U8TEXT**o **_O_U16TEXT**, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **`wchar_t`** . Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **`wchar_t`** . Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
 
-Se **_sopen_s** viene chiamato con **_O_WRONLY** | **_O_APPEND** (modalità Append) e **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, tenta innanzitutto di aprire il file per la lettura e la scrittura, di leggere l'indicatore di ordine dei byte e quindi di riaprirlo per la sola scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
+Se **_sopen_s** viene chiamato con **_O_WRONLY**  |  **_O_APPEND** (modalità Append) e **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, tenta innanzitutto di aprire il file per la lettura e la scrittura, di leggere l'indicatore di ordine dei byte e quindi di riaprirlo per la sola scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
 
-L'argomento *shflag* è un'espressione costante costituita da una delle seguenti costanti manifesto, definite in \<share. h>.
+L'argomento *shflag* è un'espressione costante costituita da una delle seguenti costanti manifesto, definite in \<share.h> .
 
 |costante *shflag*|Comportamento|
 |-|-|
@@ -151,7 +151,7 @@ L'argomento *shflag* è un'espressione costante costituita da una delle seguenti
 | **_SH_DENYRD** | Nega l'accesso in lettura a un file. |
 | **_SH_DENYNO** | Consente l'accesso in lettura e scrittura. |
 
-L'argomento *pmode* è sempre obbligatorio, a differenza del **_sopen**. Quando si specifica **_O_CREAT**, se il file non esiste, *pmode* specifica le impostazioni di autorizzazione del file, che vengono impostate quando il nuovo file viene chiuso la prima volta. In caso contrario, *pmode* viene ignorato. *pmode* è un'espressione Integer che contiene una o entrambe le costanti manifeste **_S_IWRITE** e **_S_IREAD**, definite in \<SYS\Stat.h>. Quando vengono fornite entrambe le costanti, queste sono combinate con l'operatore OR bit per bit. Il significato di *pmode* è il seguente.
+L'argomento *pmode* è sempre obbligatorio, a differenza del **_sopen**. Quando si specifica **_O_CREAT**, se il file non esiste, *pmode* specifica le impostazioni di autorizzazione del file, che vengono impostate quando il nuovo file viene chiuso la prima volta. In caso contrario, *pmode* viene ignorato. *pmode* è un'espressione Integer che contiene una o entrambe le costanti manifeste **_S_IWRITE** e **_S_IREAD**, definite in \<sys\stat.h> . Quando vengono fornite entrambe le costanti, queste sono combinate con l'operatore OR bit per bit. Il significato di *pmode* è il seguente.
 
 |*pmode*|Significato|
 |-|-|
@@ -159,7 +159,7 @@ L'argomento *pmode* è sempre obbligatorio, a differenza del **_sopen**. Quando 
 | **_S_IWRITE** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
 | **_S_IREAD** &#124; **_S_IWRITE** | Lettura e scrittura consentite. |
 
-Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Nel sistema operativo Windows, tutti i file sono leggibili; non è possibile concedere l'autorizzazione di sola scrittura. Pertanto, le modalità **_S_IWRITE** e **_S_IREAD** | **_S_IWRITE** sono equivalenti.
+Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Nel sistema operativo Windows, tutti i file sono leggibili; non è possibile concedere l'autorizzazione di sola scrittura. Pertanto, le modalità **_S_IWRITE** e **_S_IREAD**  |  **_S_IWRITE** sono equivalenti.
 
 **_sopen_s** applica la maschera di autorizzazione file corrente a *pmode* prima che vengano impostate le autorizzazioni. Vedere [_umask](umask.md).
 
@@ -178,7 +178,7 @@ Vedere l'esempio per [_locking](locking.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

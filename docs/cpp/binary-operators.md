@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229129"
 ---
 # <a name="binary-operators"></a>Operatori binari
 
@@ -56,13 +56,13 @@ Nella tabella seguente viene mostrato un elenco di operatori che possono essere 
 
 Per dichiarare una funzione di un operatore binario come membro non statico, è necessario dichiararla nel seguente formato:
 
-> *operatore di tipo RET* **operator** *op* **(** *arg* **)**
+> *tipo RET* **`operator`** *op* **(** *arg* **)**
 
 dove *ret-Type* è il tipo restituito, *op* è uno degli operatori elencati nella tabella precedente e *arg* è un argomento di qualsiasi tipo.
 
 Per dichiarare una funzione di un operatore binario come funzione globale, è necessario dichiararla nel seguente formato:
 
-> **operatore** *op* *di tipo RET* **(** _arg1_ **,** _arg2_ **)**
+> *tipo RET* **`operator`** *op* **(** _arg1_**,** _arg2_ **)**
 
 dove *ret-Type* e *op* sono descritti per le funzioni dell'operatore membro e *arg1* e *arg2* sono argomenti. Almeno uno degli argomenti deve essere di tipo di classe.
 
