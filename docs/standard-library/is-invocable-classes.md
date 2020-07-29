@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 47801eff0ea0c41c7b69dfb7a1aa5190a43f1b75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076460"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233106"
 ---
 # <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>classi is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Questi modelli determinano se un tipo può essere richiamato con i tipi di argomento specificati. `is_invocable_r` e `is_nothrow_invocable_r` inoltre determinare se il risultato della chiamata è convertibile in un tipo specifico. `is_nothrow_invocable` e `is_nothrow_invocable_r` determinano inoltre se la chiamata è nota come non generare eccezioni. Aggiunto in C++ 17.
+Questi modelli determinano se un tipo può essere richiamato con i tipi di argomento specificati. `is_invocable_r``is_nothrow_invocable_r`inoltre, determinare se il risultato della chiamata è convertibile in un tipo specifico. `is_nothrow_invocable`e `is_nothrow_invocable_r` determinano inoltre se la chiamata è nota come non generare eccezioni. Aggiunto in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiamabili*
+*Callable*\
 Tipo chiamabile su cui eseguire una query.
 
-*Argomenti*\
+*Args*\
 Tipi di argomento su cui eseguire una query.
 
-\ *convertibili*
+*Convertibile*\
 Il tipo del risultato di *Callable* deve essere convertibile in.
 
 ## <a name="remarks"></a>Osservazioni
 
-Il predicato di tipo `is_invocable` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli argomenti *args* in un contesto non valutato.
+Il `is_invocable` predicato di tipo include true se il *chiamabile* del tipo chiamabile può essere richiamato usando gli argomenti *args* in un contesto non valutato.
 
-Il predicato di tipo `is_invocable_r` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli argomenti *args* in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*.
+Il `is_invocable_r` predicato di tipo include true se il *chiamabile* del tipo chiamabile può essere richiamato usando gli argomenti *args* in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*.
 
-Il predicato di tipo `is_nothrow_invocable` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli *argomenti arguments in un* contesto non valutato e tale chiamata è nota che non genera un'eccezione.
+Il `is_nothrow_invocable` predicato di tipo include true se il *chiamabile* del tipo chiamabile *Args* può essere richiamato usando gli argomenti arguments in un contesto non valutato e tale chiamata è nota come not per generare un'eccezione.
 
-Il predicato di tipo `is_nothrow_invocable_r` restituisce true se il tipo chiamabile *chiamabile può essere* richiamato usando gli argomenti arguments *in un* contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*e che tale chiamata non genera un'eccezione.
+Il `is_nothrow_invocable_r` predicato di tipo include true se il *chiamabile* del tipo chiamabile *Args* può essere richiamato usando gli argomenti arguments in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*e che tale chiamata non genera un'eccezione.
 
-Ognuno dei tipi *convertibili*, *richiamabili*e i tipi negli *argomenti* del pacchetto di parametri deve essere un tipo completo, una matrice di limiti sconosciuti o un **void**probabilmente qualificato da CV. In caso contrario, il comportamento del predicato non è definito.
+Ognuno dei tipi *convertibili*, *richiamabili*e i tipi negli *argomenti* del pacchetto di parametri deve essere un tipo completo, una matrice di limiti sconosciuti o un qualificatore CV **`void`** . In caso contrario, il comportamento del predicato non è definito.
 
 ## <a name="example"></a>Esempio
 
@@ -116,7 +116,7 @@ int main()
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits >
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

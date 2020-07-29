@@ -5,16 +5,16 @@ helpviewer_keywords:
 - objects [C++], destroying
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 1e1190f49c7ccf5c312172f265d32a4b855bd878
-ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.openlocfilehash: 5da7659d2d45bca9efba21be2cd0bf581d539780
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221666"
 ---
 # <a name="destructors-c"></a>Distruttori (C++)
 
-Un distruttore è una funzione membro che viene richiamata automaticamente quando l'oggetto esce dall'ambito o viene eliminato in modo esplicito da una chiamata a **Delete**. Un distruttore ha lo stesso nome della classe, preceduto da una tilde (`~`). Ad esempio, il distruttore per la classe `String` viene dichiarato con `~String()`.
+Un distruttore è una funzione membro che viene richiamata automaticamente quando l'oggetto esce dall'ambito o viene eliminato in modo esplicito da una chiamata a **`delete`** . Un distruttore ha lo stesso nome della classe, preceduto da una tilde ( `~` ). Ad esempio, il distruttore per la classe `String` viene dichiarato con `~String()`.
 
 Se non si definisce un distruttore, il compilatore ne fornirà uno predefinito; per molte classi è sufficiente. È sufficiente definire un distruttore personalizzato quando la classe archivia gli handle per le risorse di sistema che devono essere rilasciate o puntatori che possiedono la memoria a cui puntano.
 
@@ -57,7 +57,7 @@ int main() {
 }
 ```
 
-Nell'esempio precedente, il distruttore `String::~String` usa l'operatore **Delete** per deallocare lo spazio allocato in modo dinamico per l'archiviazione di testo.
+Nell'esempio precedente, il distruttore `String::~String` Usa l' **`delete`** operatore per deallocare lo spazio allocato in modo dinamico per l'archiviazione di testo.
 
 ## <a name="declaring-destructors"></a>Dichiarazione di distruttori
 
@@ -67,11 +67,11 @@ Diverse regole controllano la dichiarazione di distruttori. I distruttori:
 
 - Non accettano argomenti.
 
-- Non restituire un valore (o **void**).
+- Non restituire un valore (o **`void`** ).
 
-- Non possono essere dichiarati come **const**, **volatile**o **static**. Tuttavia, possono essere richiamati per la distruzione di oggetti dichiarati come **const**, **volatile**o **static**.
+- Non può essere dichiarato come **`const`** , **`volatile`** o **`static`** . Tuttavia, possono essere richiamati per la distruzione di oggetti dichiarati come **`const`** , **`volatile`** o **`static`** .
 
-- Può essere dichiarata come **virtuale**. Usando i distruttori virtuali, è possibile eliminare definitivamente gli oggetti senza conoscerne il tipo; il distruttore corretto per l'oggetto viene richiamato usando il meccanismo di funzione virtuale. Si noti che i distruttori possono essere dichiarati come funzioni virtuali pure per classi astratte.
+- Può essere dichiarato come **`virtual`** . Usando i distruttori virtuali, è possibile eliminare definitivamente gli oggetti senza conoscerne il tipo; il distruttore corretto per l'oggetto viene richiamato usando il meccanismo di funzione virtuale. Si noti che i distruttori possono essere dichiarati come funzioni virtuali pure per classi astratte.
 
 ## <a name="using-destructors"></a>Uso di distruttori
 
@@ -79,7 +79,7 @@ I distruttori vengono chiamati quando si verifica uno degli eventi seguenti:
 
 - Un oggetto (automatico) locale con ambito del blocco diventa esterno all'ambito.
 
-- Un oggetto allocato tramite l'operatore **New** viene deallocato in modo esplicito tramite **Delete**.
+- Un oggetto allocato tramite l' **`new`** operatore viene deallocato in modo esplicito tramite **`delete`** .
 
 - La durata di un oggetto temporaneo termina.
 
@@ -147,7 +147,7 @@ B1 dtor
 
 I distruttori delle classi base virtuali vengono chiamati in ordine inverso, rispetto a come appaiono in un grafico aciclico diretto (prima quelli che si trovano in profondità, da sinistra a destra, attraversamento post-ordine). La figura seguente rappresenta un grafico di ereditarietà.
 
-![Grafico dell'ereditarietà che mostra le classi base virtuali](../cpp/media/vc392j1.gif "Grafico dell'ereditarietà che mostra le classi base virtuali") <br/>
+![Rappresentazione grafica dell'ereditarietà con classi di base virtuali](../cpp/media/vc392j1.gif "Rappresentazione grafica dell'ereditarietà con classi di base virtuali") <br/>
 Rappresentazione grafica dell'ereditarietà con classi di base virtuali
 
 Di seguito vengono elencate le intestazioni di classe per le classi raffigurate nell'immagine.
@@ -184,11 +184,11 @@ Per determinare l'ordine di distruzione delle classi base virtuali di un oggetto
 
 Di conseguenza, per la classe `E`, l'ordine di distruzione è:
 
-1. Classe `E`base non virtuale.
+1. Classe base non virtuale `E` .
 
-1. Classe `D`base non virtuale.
+1. Classe base non virtuale `D` .
 
-1. Classe `C`base non virtuale.
+1. Classe base non virtuale `C` .
 
 1. Classe base virtuale `B`.
 
@@ -213,7 +213,7 @@ Nell'esempio precedente, il distruttore di `Base2` viene chiamato prima del dist
 
 ## <a name="explicit-destructor-calls"></a>Chiamate del distruttore esplicite
 
-La chiamata di un distruttore in modo esplicito è raramente necessaria. Tuttavia, può essere utile eseguire la pulizia di oggetti inseriti in corrispondenza di indirizzi assoluti. Questi oggetti vengono comunemente allocati utilizzando un operatore **New** definito dall'utente che accetta un argomento di posizione. L'operatore **Delete** non può deallocare la memoria perché non è allocata dall'archivio gratuito. per ulteriori informazioni, vedere [gli operatori new e Delete](../cpp/new-and-delete-operators.md). Una chiamata al distruttore è tuttavia in grado di eseguire una pulizia appropriata. Per chiamare in modo esplicito il distruttore di un oggetto, `s`, di classe `String`, utilizzare una delle seguenti istruzioni:
+La chiamata di un distruttore in modo esplicito è raramente necessaria. Tuttavia, può essere utile eseguire la pulizia di oggetti inseriti in corrispondenza di indirizzi assoluti. Questi oggetti vengono comunemente allocati utilizzando un operatore definito dall'utente **`new`** che accetta un argomento di posizione. L' **`delete`** operatore non può deallocare la memoria perché non è allocata dall'archivio gratuito. per ulteriori informazioni, vedere [gli operatori new e Delete](../cpp/new-and-delete-operators.md). Una chiamata al distruttore è tuttavia in grado di eseguire una pulizia appropriata. Per chiamare in modo esplicito il distruttore di un oggetto, `s`, di classe `String`, utilizzare una delle seguenti istruzioni:
 
 ```cpp
 s.String::~String();     // non-virtual call
@@ -231,7 +231,7 @@ Una classe richiede un distruttore se acquisisce una risorsa e per gestire la ri
 
 Se queste funzioni speciali non sono definite dall'utente, vengono definite in modo implicito dal compilatore. I costruttori e gli operatori di assegnazione generati in modo implicito eseguono una copia superficiale, membro per membro, che è quasi certamente errata se un oggetto gestisce una risorsa.
 
-Nell'esempio seguente, il costruttore di copia generato in modo implicito renderà i `str1.text` puntatori `str2.text` e farà riferimento alla stessa memoria e, quando viene restituito `copy_strings()`da, tale memoria verrà eliminata due volte, che è un comportamento non definito:
+Nell'esempio seguente, il costruttore di copia generato in modo implicito renderà i puntatori `str1.text` e farà `str2.text` riferimento alla stessa memoria e, quando viene restituito da `copy_strings()` , tale memoria verrà eliminata due volte, che è un comportamento non definito:
 
 ```cpp
 void copy_strings()
@@ -246,5 +246,5 @@ La definizione esplicita di un distruttore, un costruttore di copia o un operato
 
 ## <a name="see-also"></a>Vedere anche
 
-[Costruttori di copia e operatori di assegnazione copia](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
-[Costruttori di spostamento e operatori di assegnazione spostamento](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
+[Costruttori di copia e operatori di assegnazione di copia](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
+[Costruttori di spostamento e operatori di assegnazione di spostamento](../cpp/move-constructors-and-move-assignment-operators-cpp.md)

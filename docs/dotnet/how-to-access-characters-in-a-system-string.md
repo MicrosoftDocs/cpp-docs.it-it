@@ -7,24 +7,24 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988641"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221367"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: accedere ai caratteri in System::String
 
-È possibile accedere ai caratteri di un oggetto <xref:System.String> per le chiamate a prestazioni elevate a funzioni non gestite che accettano `wchar_t*` stringhe. Il metodo produce un puntatore interno al primo carattere dell'oggetto <xref:System.String>. Questo puntatore può essere modificato direttamente o aggiunto e passato a una funzione che prevede una stringa di `wchar_t` ordinata.
+È possibile accedere ai caratteri di un <xref:System.String> oggetto per le chiamate a prestazioni elevate a funzioni non gestite che accettano `wchar_t*` stringhe. Il metodo produce un puntatore interno al primo carattere dell' <xref:System.String> oggetto. Questo puntatore può essere modificato direttamente o aggiunto e passato a una funzione che prevede una stringa ordinata **`wchar_t`** .
 
 ## <a name="example"></a>Esempio
 
-`PtrToStringChars` restituisce un <xref:System.Char>, ovvero un puntatore interno (noto anche come `byref`). Di conseguenza, è soggetto a Garbage Collection. Non è necessario aggiungere questo puntatore a meno che non lo si passi a una funzione nativa.
+`PtrToStringChars`Restituisce un oggetto <xref:System.Char> , che è un puntatore interno (noto anche come `byref` ). Di conseguenza, è soggetto a Garbage Collection. Non è necessario aggiungere questo puntatore a meno che non lo si passi a una funzione nativa.
 
-Si consideri il codice seguente.  L'aggiunta non è necessaria perché `ppchar` è un puntatore interno e se il Garbage Collector sposta la stringa a cui punta, aggiornerà anche `ppchar`. Senza un [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), il codice funzionerà e non avrà il potenziale impatto sulle prestazioni causato dall'aggiunta.
+Si consideri il codice seguente.  L'aggiunta non è necessaria perché `ppchar` è un puntatore interno e se il Garbage Collector sposta la stringa a cui punta, verrà aggiornato anche `ppchar` . Senza un [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), il codice funzionerà e non avrà il potenziale impatto sulle prestazioni causato dall'aggiunta.
 
-Se si passa `ppchar` a una funzione nativa, deve essere un puntatore di blocco; il Garbage Collector non sarà in grado di aggiornare i puntatori sulla stack frame non gestita.
+Se si passa `ppchar` a una funzione nativa, è necessario che sia un puntatore di blocco. il Garbage Collector non sarà in grado di aggiornare i puntatori nella stack frame non gestita.
 
 ```cpp
 // PtrToStringChars.cpp
@@ -101,4 +101,4 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,17 +1,17 @@
 ---
-title: db_column (C++ attributo com)
+title: db_column (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 4ce57443480e35e7a4c7b9e872e41777662ddc20
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b78fb081895b7a3e8f0e266810cd19d1b2792240
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167290"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222147"
 ---
 # <a name="db_column"></a>db_column
 
@@ -25,8 +25,8 @@ Associa una colonna specificata a una variabile nel set di righe.
 
 ### <a name="parameters"></a>Parametri
 
-*Ordinale*<br/>
-Il numero di colonna ordinale (`DBCOLUMNINFO` ordinale) o il nome della colonna (stringa ANSI o Unicode) corrispondente a un campo nel set di righe a cui associare i dati. Se si utilizzano i numeri, è possibile ignorare gli ordinali consecutivi (ad esempio: 1, 2, 3, 5). Il nome può contenere spazi se il provider di OLE DB usato lo supporta. È ad esempio possibile utilizzare uno dei formati seguenti:
+*ordinal*<br/>
+Il numero di colonna ordinale ( `DBCOLUMNINFO` ordinale) o il nome della colonna (stringa ANSI o Unicode) corrispondente a un campo nel set di righe a cui associare i dati. Se si utilizzano i numeri, è possibile ignorare gli ordinali consecutivi (ad esempio: 1, 2, 3, 5). Il nome può contenere spazi se il provider di OLE DB usato lo supporta. È ad esempio possibile utilizzare uno dei formati seguenti:
 
 ```cpp
 [db_column("2")] TCHAR szCity[30];
@@ -37,10 +37,10 @@ Il numero di colonna ordinale (`DBCOLUMNINFO` ordinale) o il nome della colonna 
 Opzionale Indicatore di [tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) OLE DB per la voce della colonna.
 
 *precisione*<br/>
-Opzionale Precisione da utilizzare per la voce della colonna. Per informazioni dettagliate, vedere la descrizione dell'elemento `bPrecision` della [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+Opzionale Precisione da utilizzare per la voce della colonna. Per informazioni dettagliate, vedere la descrizione dell' `bPrecision` elemento della [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *scale*<br/>
-Opzionale Scala da utilizzare per la voce della colonna. Per informazioni dettagliate, vedere la descrizione dell'elemento `bScale` della [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+Opzionale Scala da utilizzare per la voce della colonna. Per informazioni dettagliate, vedere la descrizione dell' `bScale` elemento della [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *Stato*<br/>
 Opzionale Variabile membro utilizzata per mantenere lo stato della colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
@@ -50,7 +50,7 @@ Opzionale Variabile membro utilizzata per conservare la dimensione della colonna
 
 ## <a name="remarks"></a>Osservazioni
 
-**db_column** associa la colonna della tabella specificata a una variabile nel set di righe. Delimita i dati dei membri che possono partecipare a OLE DB associazione basata su `IAccessor`. Questo attributo imposta la mappa delle colonne normalmente definita usando le macro di consumer OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)e [COLUMN_ENTRY](../../data/oledb/column-entry.md). Questi consentono di modificare la [struttura OLE DB DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) per associare la colonna specificata. Ogni membro contrassegnato con l'attributo **db_column** occuperà una voce nella mappa delle colonne sotto forma di voce di colonna. Questo attributo viene pertanto chiamato in cui inserire la mappa delle colonne, ovvero nel comando o nella classe della tabella.
+**db_column** associa la colonna della tabella specificata a una variabile nel set di righe. Delimita i dati dei membri che possono partecipare all' `IAccessor` associazione basata su OLE DB. Questo attributo imposta la mappa delle colonne normalmente definita usando le macro di consumer OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)e [COLUMN_ENTRY](../../data/oledb/column-entry.md). Questi consentono di modificare la [struttura OLE DB DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) per associare la colonna specificata. Ogni membro contrassegnato con l'attributo **db_column** occuperà una voce nella mappa delle colonne sotto forma di voce di colonna. Questo attributo viene pertanto chiamato in cui inserire la mappa delle colonne, ovvero nel comando o nella classe della tabella.
 
 Utilizzare **db_column** insieme agli attributi [db_table](db-table.md) o [db_command](db-command.md) .
 
@@ -60,7 +60,7 @@ Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](
 
 ## <a name="example"></a>Esempio
 
-Questo esempio associa una colonna di una tabella a un membro dati **Long** e specifica i campi di stato e lunghezza.
+Questo esempio associa una colonna di una tabella a un **`long`** membro dati e specifica i campi di stato e lunghezza.
 
 ```cpp
 // db_column_1.cpp
@@ -80,7 +80,7 @@ class CProducts {
 
 ## <a name="example"></a>Esempio
 
-Questo esempio associa quattro colonne a **Long**, una stringa di caratteri, un timestamp e un `DB_NUMERIC` Integer, in questo ordine.
+Questo esempio associa quattro colonne a un oggetto **`long`** , una stringa di caratteri, un timestamp e un `DB_NUMERIC` numero intero, in questo ordine.
 
 ```cpp
 // db_column_2.cpp
@@ -104,10 +104,10 @@ class CProducts {
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**, membro, metodo|
+|**Si applica a**|**`class`**, **`struct`** , Member, metodo|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

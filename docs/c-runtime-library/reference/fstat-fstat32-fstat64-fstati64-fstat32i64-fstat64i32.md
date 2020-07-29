@@ -57,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 81c272187c681010e7b8560d43f2fad87e1e0fdc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910133"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221900"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -132,7 +132,7 @@ Dato che Stat.h usa il tipo [dev_t](../../c-runtime-library/standard-types.md) d
 
 Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica le dimensioni del tipo di tempo usato; il secondo suffisso è **i32** o **I64**, che indica se le dimensioni del file sono rappresentate come Integer a 32 bit o a 64 bit.
 
-**_fstat** equivale a **_fstat64i32**e **_stat** **struct** contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_fstat** usa un'ora a 32 bit e **struct** **_stat** contiene un'ora di 32 bit. Lo stesso vale per **_fstati64**.
+**_fstat** equivale a **_fstat64i32**e **`struct`** **_stat** contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_fstat** usa un'ora a 32 bit e **`struct`** **_stat** contiene un'ora a 32 bit. Lo stesso vale per **_fstati64**.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -151,7 +151,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fstat**|\<sys/stat.h> e \<sys/types.h>|
 |**_fstat32**|\<sys/stat.h> e \<sys/types.h>|
@@ -229,7 +229,7 @@ Time modified : Wed May 07 15:25:11 2003
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_filelength, _filelengthi64](filelength-filelengthi64.md)<br/>

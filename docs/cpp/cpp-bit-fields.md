@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221783"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C++
 
@@ -43,16 +43,16 @@ struct Date {
 
 Il layout concettuale di memoria di un oggetto di tipo `Date` viene illustrato nella figura seguente.
 
-![Layout di memoria di un oggetto data](../cpp/media/vc38uq1.png "Layout della memoria di un oggetto data") <br/>
+![Layout della memoria di un oggetto data](../cpp/media/vc38uq1.png "Layout della memoria di un oggetto data") <br/>
 Layout a memoria fissa dell'oggetto Data
 
-Si noti che `nYear` è lungo 8 bit ed è possibile che venga overflow il confine di parola del tipo dichiarato, **senza segno** **short**. Viene pertanto iniziata all'inizio di un nuovo **short** **senza segno** . Non è necessario che tutti i campi di bit si adattino a un oggetto del tipo sottostante e le nuove unità di archiviazione vengono allocate a seconda del numero di bit necessari per la dichiarazione.
+Si noti che `nYear` ha una lunghezza di 8 bit e potrebbe avere un overflow del confine di parola del tipo dichiarato **`unsigned short`** . Viene pertanto iniziata all'inizio di un nuovo oggetto **`unsigned short`** . Non è necessario che tutti i campi di bit si adattino a un oggetto del tipo sottostante e le nuove unità di archiviazione vengono allocate a seconda del numero di bit necessari per la dichiarazione.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 L'ordine dei dati dichiarati come campi di bit va dal bit meno significativo a quello più significativo, come illustrato nella figura precedente.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 Se la dichiarazione di una struttura include un campo senza nome di lunghezza 0, come indicato nell'esempio seguente,
 
@@ -70,12 +70,12 @@ struct Date {
 
 il layout della memoria è quindi illustrato nella figura seguente:
 
-![Layout dell'oggetto data con campo&#45;di bit di lunghezza zero](../cpp/media/vc38uq2.png "Layout dell'oggetto data con campo&#45;di bit di lunghezza zero") <br/>
+![Layout dell'oggetto data con campo di bit di lunghezza zero&#45;](../cpp/media/vc38uq2.png "Layout dell'oggetto data con campo di bit di lunghezza zero&#45;") <br/>
 Layout dell'oggetto Data con campo bit a lunghezza 0
 
 Il tipo sottostante di un campo di bit deve essere un tipo integrale, come descritto in [tipi incorporati](../cpp/fundamental-types-cpp.md).
 
-Se l'inizializzatore per un riferimento di tipo `const T&` è un lvalue che fa riferimento a un campo di bit di tipo `T`, il riferimento non è associato direttamente al campo di bit. Al contrario, il riferimento è associato a un oggetto temporaneo inizializzato per conservare il valore del campo di bit.
+Se l'inizializzatore per un riferimento di tipo `const T&` è un lvalue che fa riferimento a un campo di bit di tipo `T` , il riferimento non è associato direttamente al campo di bit. Al contrario, il riferimento è associato a un oggetto temporaneo inizializzato per conservare il valore del campo di bit.
 
 ## <a name="restrictions-on-bit-fields"></a>Limitazioni sui campi di bit
 
@@ -83,7 +83,7 @@ Nell'elenco seguente vengono descritte le operazioni erronee nei campi di bit:
 
 - Acquisizione dell'indirizzo di un campo di bit.
 
-- Inizializzazione di un riferimento non**const** con un campo di bit.
+- Inizializzazione di un oggetto non **`const`** di riferimento con un campo di bit.
 
 ## <a name="see-also"></a>Vedere anche
 

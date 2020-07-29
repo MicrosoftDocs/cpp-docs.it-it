@@ -1,17 +1,17 @@
 ---
-title: fileguidaC++ (attributo com)
+title: fileguida (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166978"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222121"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -30,7 +30,7 @@ Nome del file che contiene gli argomenti della guida.
 
 ## <a name="remarks"></a>Osservazioni
 
-L' **helpfile** C++ attributo fileguida ha la stessa funzionalità dell'attributo [di MIDL.](/windows/win32/Midl/helpfile)
+L' **attributo di fileguida C++ ha** la stessa funzionalità [dell'attributo](/windows/win32/Midl/helpfile) .
 
 ## <a name="example"></a>Esempio
 
@@ -42,10 +42,10 @@ Vedere l'esempio relativo a [Module](module-cpp.md) per un esempio di **come usa
 
 |||
 |-|-|
-|**Si applica a**|**Interface**, **typedef**, **Class**, Method, **Property**|
+|**Si applica a**|**interfaccia**, **`typedef`** , **`class`** , metodo,**`property`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -55,6 +55,6 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)

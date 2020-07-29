@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 99d712d11fd47f694477029bc5c2b23fe732eb04
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456255"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233119"
 ---
-# <a name="isfundamental-class"></a>Classe is_fundamental
+# <a name="is_fundamental-class"></a>Classe is_fundamental
 
 Verifica se il tipo è void o aritmetico.
 
@@ -30,9 +30,9 @@ struct is_fundamental;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo fondamentale, ovvero **void**, un tipo integrale, un tipo a virgola mobile o `cv-qualified` un form di uno di essi; in caso contrario, il valore è false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo fondamentale, ovvero, **`void`** un tipo integrale, un tipo a virgola mobile o un `cv-qualified` form di uno di essi; in caso contrario, il valore è false.
 
 ## <a name="example"></a>Esempio
 
@@ -71,7 +71,7 @@ is_fundamental<void> == true
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

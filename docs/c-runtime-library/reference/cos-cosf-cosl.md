@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506897"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221926"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -72,12 +72,12 @@ Coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si ver
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Nessuno|**_DOMAIN**|
+|± QNAN, IND|none|**_DOMAIN**|
 |± INF|**Non valido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **cos** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, **cos** accetta sempre e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

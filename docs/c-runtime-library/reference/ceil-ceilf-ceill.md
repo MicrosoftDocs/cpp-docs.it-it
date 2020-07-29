@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221952"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -77,13 +77,13 @@ Le **funzioni di** cella di sola risposta restituiscono un valore a virgola mobi
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
 
 il valore di **cella ha un'** implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ **consente l'overload** , è possibile chiamare gli overload di un valore di cella che accettano tipi **float** o **Long** **Double** . In un programma C, **è sempre necessario** e restituisce un **valore Double**.
+Poiché C++ **consente l'overload** , è possibile chiamare gli overload di una cella che accettano i **`float`** **`long double`** tipi o. In un programma **C, è** sempre necessario e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

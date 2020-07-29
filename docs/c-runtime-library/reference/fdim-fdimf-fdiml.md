@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221913"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -92,19 +92,19 @@ Restituisce la differenza positiva tra *x* e *y*:
 
 In caso contrario, può restituire uno degli errori seguenti:
 
-|Problema|INVIO|
+|Problema|Return|
 |-----------|------------|
 |Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
 |Errore di intervallo di underflow|valore corretto (dopo l'arrotondamento)|
 |*x* o *y* è NaN|NaN|
 
-Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
+Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **fdim** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **fdim** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **fdim** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **fdim** accetta e restituisce sempre un oggetto **`double`** .
 
-Ad eccezione della gestione NaN, questa funzione è equivalente a `fmax(x - y, 0)`.
+Ad eccezione della gestione NaN, questa funzione è equivalente a `fmax(x - y, 0)` .
 
 ## <a name="requirements"></a>Requisiti
 

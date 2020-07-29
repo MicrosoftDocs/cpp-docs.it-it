@@ -14,19 +14,19 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232859"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[Swap](#swap)|[yield](#yield)|
+|[scambio](#swap)|[yield](#yield)|
 
 ## <a name="get_id"></a><a name="get_id"></a>get_id
 
@@ -79,9 +79,9 @@ Rappresenta un punto nel tempo.
 
 Questa funzione non genera eccezioni.
 
-## <a name="swap"></a><a name="swap"></a>Swap
+## <a name="swap"></a><a name="swap"></a>scambio
 
-Scambia gli stati di due oggetti **thread.**
+Scambia gli stati dei due oggetti `thread`.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -90,16 +90,16 @@ void swap(thread& Left, thread& Right) noexcept;
 ### <a name="parameters"></a>Parametri
 
 *Sinistra*\
-Oggetto **thread** sinistro.
+L'oggetto `thread` a sinistra.
 
-*va bene*\
-Oggetto **filettatura** destro.
+*Ok*\
+L'oggetto `thread` corretto.
 
 ### <a name="remarks"></a>Osservazioni
 
 La funzione chiama `Left.swap(Right)`.
 
-## <a name="yield"></a><a name="yield"></a>Rendimento
+## <a name="yield"></a><a name="yield"></a>rendimento
 
 Segnala al sistema operativo di eseguire altri thread, anche se in genere l'esecuzione del thread corrente dovrebbe continuare.
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>di filettatura](../standard-library/thread.md)
+[\<thread>](../standard-library/thread.md)

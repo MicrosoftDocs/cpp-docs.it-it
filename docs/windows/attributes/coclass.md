@@ -1,17 +1,17 @@
 ---
-title: coclass (C++ attributo com)
+title: coclass (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.coclass
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 76540e90fef2e840b91bb07f570a7b8c0987eb10
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232794"
 ---
 # <a name="coclass"></a>coclass
 
@@ -25,11 +25,11 @@ Crea un oggetto COM che può implementare un'interfaccia COM.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **coclass** C++ inserisce un costrutto di coclasse nel file IDL generato.
+L'attributo **coclass** C++ inserisce un costrutto di coclasse nel file con estensione IDL generato.
 
 Quando si definisce una coclasse, è anche possibile specificare gli attributi [UUID](uuid-cpp-attributes.md), [Version](version-cpp.md), [Threading](threading-cpp.md), [vi_progid](vi-progid.md)e [ProgID](progid.md) . Se uno di essi non è specificato, verrà generato.
 
-Se due file di intestazione contengono classi con l'attributo **coclass** e non specificano un GUID, il compilatore utilizzerà lo stesso GUID per entrambe le classi e verrà generato un errore MIDL.  Pertanto, è necessario utilizzare l'attributo `uuid` quando si utilizza **coclass**.
+Se due file di intestazione contengono classi con l'attributo **coclass** e non specificano un GUID, il compilatore utilizzerà lo stesso GUID per entrambe le classi e verrà generato un errore MIDL.  Pertanto, è necessario utilizzare l' `uuid` attributo quando si utilizza **coclass**.
 
 **Progetti ATL**
 
@@ -39,29 +39,29 @@ Quando questo attributo precede una definizione di classe o struttura in un prog
 
 - Inserisce il codice o i dati per supportare un class factory COM per l'oggetto.
 
-- Inserisce il codice o i dati per implementare `IUnknown` e rendere l'oggetto un oggetto che è possibile creare COM.
+- Inserisce il codice o i dati da implementare `IUnknown` e rende l'oggetto creabile da com.
 
 In particolare, le seguenti classi di base vengono aggiunte all'oggetto di destinazione:
 
 - La [classe CComCoClass](../../atl/reference/ccomcoclass-class.md) fornisce il class factory e il modello di aggregazione predefiniti per l'oggetto.
 
-- La [classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) dispone di un modello basato sulla classe del modello di threading specificata dall'attributo [Threading](threading-cpp.md) . Se l'attributo `threading` non è specificato, il modello di threading predefinito è Apartment.
+- La [classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) dispone di un modello basato sulla classe del modello di threading specificata dall'attributo [Threading](threading-cpp.md) . Se l' `threading` attributo non è specificato, il modello di threading predefinito è Apartment.
 
 - [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) viene aggiunto se l'attributo non [creabile](noncreatable.md) non è specificato per l'oggetto di destinazione.
 
 Infine, qualsiasi interfaccia duale che non viene definita utilizzando IDL incorporato viene sostituita con la classe [IDispatchImpl](../../atl/reference/idispatchimpl-class.md) corrispondente. Se l'interfaccia duale è definita in IDL incorporato, l'interfaccia specifica nell'elenco di base non viene modificata.
 
-L'attributo **coclass** rende inoltre disponibili le funzioni seguenti tramite codice inserito o nel caso di `GetObjectCLSID`come metodo statico nella classe di base `CComCoClass`:
+L'attributo **coclass** rende inoltre disponibili le funzioni seguenti tramite codice inserito o, nel caso di `GetObjectCLSID` , come metodo statico nella classe di base `CComCoClass` :
 
-- `UpdateRegistry` registra le class factory della classe di destinazione.
+- `UpdateRegistry`registra le class factory della classe di destinazione.
 
 - `GetObjectCLSID`, correlato alla registrazione, può essere utilizzato anche per ottenere il CLSID della classe di destinazione.
 
-- per impostazione predefinita, `GetObjectFriendlyName` restituisce una stringa nel formato "\<*nome della classe di destinazione*> `Object`". Se questa funzione è già presente, non viene aggiunta. Aggiungere questa funzione alla classe di destinazione per restituire un nome più amichevole rispetto a quello generato automaticamente.
+- `GetObjectFriendlyName`per impostazione predefinita, restituisce una stringa nel formato " \<*target class name*> `Object` ". Se questa funzione è già presente, non viene aggiunta. Aggiungere questa funzione alla classe di destinazione per restituire un nome più amichevole rispetto a quello generato automaticamente.
 
 - `GetProgID`, correlato alla registrazione, restituisce la stringa specificata con l'attributo [ProgID](progid.md) .
 
-- `GetVersionIndependentProgID` ha la stessa funzionalità di `GetProgID`, ma restituisce la stringa specificata con [vi_progid](vi-progid.md).
+- `GetVersionIndependentProgID`ha la stessa funzionalità di `GetProgID` , ma restituisce la stringa specificata con [vi_progid](vi-progid.md).
 
 Vengono apportate le modifiche seguenti, correlate alla mappa COM, alla classe di destinazione:
 
@@ -69,7 +69,7 @@ Vengono apportate le modifiche seguenti, correlate alla mappa COM, alla classe d
 
 - Una macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) viene inserita nella mappa com.
 
-Il nome della coclasse generata nel file IDL per la classe avrà lo stesso nome della classe.  Ad esempio, per fare riferimento all'esempio seguente, per accedere all'ID di classe per una coclasse `CMyClass`in un client tramite il file di intestazione generato da MIDL, usare `CLSID_CMyClass`.
+Il nome della coclasse generata nel file IDL per la classe avrà lo stesso nome della classe.  Ad esempio, per fare riferimento all'esempio seguente, per accedere all'ID di classe per una coclasse `CMyClass` in un client tramite il file di intestazione generato da MIDL, usare `CLSID_CMyClass` .
 
 ## <a name="example"></a>Esempio
 
@@ -131,10 +131,10 @@ public:
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**|
+|**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -143,5 +143,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [appobject](appobject.md)

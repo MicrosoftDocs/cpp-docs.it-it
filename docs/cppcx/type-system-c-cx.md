@@ -2,12 +2,12 @@
 title: Sistema di tipi (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404626"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221549"
 ---
 # <a name="type-system-ccx"></a>Sistema di tipi (C++/CX)
 
@@ -39,7 +39,7 @@ La visibilità di un tipo o di un metodo nei metadati dipende da quali modificat
 |-|-|
 |**Pubblicato nei metadati**|**Non pubblicato nei metadati**|
 |public|private|
-|protected|internal|
+|protected|interno|
 |protetto pubblico|protetto privato|
 
 È possibile utilizzare il **Visualizzatore oggetti** per visualizzare il contenuto dei file .winmd. I componenti di Windows Runtime inclusi in Windows si trovano nel file Windows. winmd. Il file con estensione WinMD predefinito contiene i tipi fondamentali usati in C++/CX e Platform. winmd contiene tipi aggiuntivi dello spazio dei nomi Platform. Per impostazione predefinita, questi tre file. winmd sono inclusi in ogni progetto C++ per le app piattaforma UWP (Universal Windows Platform).
@@ -63,7 +63,7 @@ Per ulteriori informazioni, vedere [spazi dei nomi e visibilità del tipo](../cp
 
 Il Windows Runtime definisce i seguenti tipi fondamentali: UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Char16, Boolean e String. C++/CX supporta i tipi numerici fondamentali nello spazio dei nomi predefinito come UInt16, UInt32, UInt64, Int16, Int32, Int64, float32, float64 e Char16. Boolean e String sono inoltre definiti nello spazio dei nomi Platform.
 
-C++/CX definisce anche Uint8, equivalente a `unsigned char` , che non è supportato nell'Windows Runtime e non può essere usato in API pubbliche.
+C++/CX definisce anche Uint8, equivalente a **`unsigned char`** , che non è supportato nell'Windows Runtime e non può essere usato in API pubbliche.
 
 Un tipo fondamentale può essere reso nullable mediante il wrapping in un'interfaccia [Platform::IBox](../cppcx/platform-ibox-interface.md) . Per ulteriori informazioni, vedi [Classi e struct di valore](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -71,7 +71,7 @@ Per ulteriori informazioni sui tipi fondamentali, vedi [Tipi fondamentali](../cp
 
 ### <a name="strings"></a>Stringhe
 
-Una stringa di Windows Runtime è una sequenza non modificabile di caratteri UNICODE a 16 bit. Una stringa di Windows Runtime viene proiettata come `Platform::String^` . Questa classe fornisce i metodi per la creazione, la modifica e la conversione di stringhe verso e da `wchar_t`.
+Una stringa di Windows Runtime è una sequenza non modificabile di caratteri UNICODE a 16 bit. Una stringa di Windows Runtime viene proiettata come `Platform::String^` . Questa classe fornisce metodi per la creazione, la manipolazione e la conversione di stringhe da e verso **`wchar_t`** .
 
 Per ulteriori informazioni, vedi [Stringhe](../cppcx/strings-c-cx.md).
 
@@ -151,7 +151,7 @@ In C++/CX, è possibile intercettare i tipi di eccezione personalizzati, i tipi 
 
 Per ulteriori informazioni, vedi [Eccezioni](../cppcx/exceptions-c-cx.md).
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventi
 
 Un evento è un membro pubblico in una classe o uno struct di riferimento il cui tipo è un tipo di delegato. Un evento può essere richiamato, ovvero generato, dalla classe proprietaria. Tuttavia, il codice client può fornire funzioni proprie, che sono note come gestori eventi e vengono richiamate quando la classe proprietaria genera l'evento.
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171411"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221991"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -78,7 +78,7 @@ Le funzioni **ABS**, **Labs**, **llabs** e **_abs64** restituiscono il valore as
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **ABS** che accettano e restituiscono valori **Long** **, Long** **Long**, **float**, **Double**e **Long** **Double** . Questi overload sono definiti nell'intestazione \<cmath>. In un programma C, **ABS** accetta e restituisce sempre un valore **int**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **ABS** che accettano e restituiscono **`long`** **`long long`** **`float`** i valori,,, **`double`** e **`long double`** . Questi overload sono definiti nell' \<cmath> intestazione. In un programma C, **ABS** accetta e restituisce sempre un **`int`** .
 
 **Specifico di Microsoft**: poiché l'intervallo di numeri interi negativi che possono essere rappresentati usando qualsiasi tipo integrale è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati usando tale tipo, è possibile fornire un argomento a queste funzioni che non possono essere convertite. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, le funzioni **ABS** restituiscono il valore dell'argomento invariato. In particolare, `abs(INT_MIN)` restituisce `INT_MIN`, `labs(LONG_MIN)` restituisce `LONG_MIN`, `llabs(LLONG_MIN)` restituisce `LLONG_MIN` e `_abs64(_I64_MIN)` restituisce `_I64_MIN`. Ciò significa che non è possibile usare le funzioni **ABS** per garantire un valore positivo.
 
@@ -89,7 +89,7 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **ABS** che a
 |**ABS**, **Labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> o \<stdlib.h>|
 
-Per usare le versioni di overload di **ABS** in C++, è necessario includere l'intestazione \<cmath >.
+Per usare le versioni di overload di **ABS** in C++, è necessario includere l' \<cmath> intestazione.
 
 ## <a name="example"></a>Esempio
 
@@ -151,7 +151,7 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [imaxabs](imaxabs.md)

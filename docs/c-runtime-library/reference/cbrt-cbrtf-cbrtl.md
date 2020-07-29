@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221978"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -79,13 +79,13 @@ Le funzioni **cbrt** restituiscono la radice del cubo di *x*.
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **cbrt** che accettano tipi **float** o **Long** **Double** . In un programma C **cbrt** accetta e restituisce sempre **Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cbrt** che accettano i **`float`** **`long double`** tipi o. In un programma C **cbrt** accetta e restituisce sempre **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 
@@ -117,7 +117,7 @@ The cube root of -64.64 is -4.013289
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

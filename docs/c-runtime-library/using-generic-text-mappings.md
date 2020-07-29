@@ -27,40 +27,40 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747930"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221874"
 ---
 # <a name="using-generic-text-mappings"></a>Utilizzo di mapping testo generico
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Per semplificare lo sviluppo di codice per vari mercati internazionali, la libreria di runtime di Microsoft fornisce mapping di testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti. I mapping sono definiti in TCHAR.H. È possibile usare questi mapping di nomi per scrivere codice generico che può essere compilato per uno qualsiasi dei tre tipi di set di caratteri, ovvero ASCII (SBCS), MBCS o Unicode, in base a una costante di manifesto definita usando un'istruzione `#define`. I mapping di testo generico sono estensioni Microsoft non compatibili con ANSI.
+Per semplificare lo sviluppo di codice per vari mercati internazionali, la libreria di runtime di Microsoft fornisce mapping di testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti. I mapping sono definiti in TCHAR.H. È possibile utilizzare questi mapping di nomi per scrivere codice generico che può essere compilato per uno qualsiasi dei tre tipi di set di caratteri: ASCII (SBCS), MBCS o Unicode, in base a una costante di manifesto definita utilizzando un'istruzione `#define`. I mapping di testo generico sono estensioni Microsoft non compatibili con ANSI.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Direttive del preprocessore per i mapping di testo generico
 
 |#define|Versione compilata|Esempio|
 |--------------|----------------------|-------------|
-|`_UNICODE`|Unicode (caratteri wide)|`_tcsrev` viene mappata a `_wcsrev`|
-|`_MBCS`|Caratteri multibyte|`_tcsrev` viene mappata a `_mbsrev`|
-|Nessuno. Questa è l'impostazione predefinita: non viene definito né `_UNICODE` né `_MBCS`.|SBCS (ASCII)|`_tcsrev` viene mappata a `strrev`|
+|`_UNICODE`|Unicode (caratteri wide)|`_tcsrev` esegue il mapping a `_wcsrev`|
+|`_MBCS`|Caratteri multibyte|`_tcsrev` esegue il mapping a `_mbsrev`|
+|Nessuno. Questa è l'impostazione predefinita: non viene definito né `_UNICODE` né `_MBCS`.|SBCS (ASCII)|`_tcsrev` esegue il mapping a `strrev`|
 
 Ad esempio, la funzione di testo generico `_tcsrev`, definita in TCHAR.H, viene mappata a `mbsrev` se nel programma è stata definita la versione `MBCS` oppure a `_wcsrev` se è stata definita la versione `_UNICODE`. In caso contrario, `_tcsrev` viene mappata a `strrev`.
 
-Il tipo di dati di testo generico `_TCHAR`, anche definito in TCHAR.H, corrisponde al tipo `char` se `_MBCS` è definito, al tipo `wchar_t` se `_UNICODE` è definito e al tipo `char` se nessuna costante è definita. Per facilitare la programmazione, vengono forniti in TCHAR.H altri mapping del tipo di dati, ma `_TCHAR` è il tipo più utile.
+Il tipo di dati di testo generico `_TCHAR` , anche definito in TCHAR. H, viene eseguito il mapping al tipo **`char`** se `_MBCS` è definito, al tipo **`wchar_t`** se `_UNICODE` è definito e al tipo **`char`** se nessuna costante è definita. Per facilitare la programmazione, vengono forniti in TCHAR.H altri mapping del tipo di dati, ma `_TCHAR` è il tipo più utile.
 
 ### <a name="generic-text-data-type-mappings"></a>Mapping dei tipi di dati di testo generico
 
 |Nome del tipo di dati di testo generico|SBCS (_UNICODE, _MBCS non definiti)|_MBCS definito|_UNICODE definito|
 |----------------------------------|--------------------------------------------|--------------------|-----------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` o `_TEXT`|Nessun effetto (rimosso dal preprocessore)|Nessun effetto (rimosso dal preprocessore)|`L` (converte il carattere o la stringa seguente nell'equivalente Unicode)|
 
 Per un elenco completo dei mapping di testo generico di routine, variabili e altri oggetti, vedere [Mapping testo generico](../c-runtime-library/generic-text-mappings.md).
@@ -95,7 +95,7 @@ RetVal = strrev(szString);
 
 Pertanto, è possibile scrivere, mantenere e compilare un unico file di codice sorgente per eseguirlo con routine specifiche per uno dei tre tipi di set di caratteri.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -103,4 +103,4 @@ Pertanto, è possibile scrivere, mantenere e compilare un unico file di codice s
 [Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)<br/>
 [Mapping di costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Mapping di routine](../c-runtime-library/routine-mappings.md)<br/>
-[Programma di testo generico di esempio](../c-runtime-library/a-sample-generic-text-program.md)
+[Un programma di testo generico di esempio](../c-runtime-library/a-sample-generic-text-program.md)

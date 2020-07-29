@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b95c6459c0ff093d22f3e754f2c7fd6564d2b296
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221198"
 ---
 # <a name="compiler-error-c2361"></a>Errore del compilatore C2361
 
 l'inizializzazione di ' Identifier ' è stata ignorata dall'etichetta ' default '
 
-L'inizializzazione di `identifier` può essere ignorata in un'istruzione `switch`. Non è possibile passare oltre una dichiarazione con un inizializzatore, a meno che la dichiarazione non sia racchiusa in un blocco. A meno che non sia dichiarato all'interno di un blocco, la variabile rientra nell'ambito fino alla fine dell'istruzione `switch`.
+L'inizializzazione di `identifier` può essere ignorata in un' **`switch`** istruzione. Non è possibile passare oltre una dichiarazione con un inizializzatore, a meno che la dichiarazione non sia racchiusa in un blocco. A meno che non sia dichiarato all'interno di un blocco, la variabile rientra nell'ambito fino alla fine dell' **`switch`** istruzione.
 
 L'esempio seguente genera l'C2361:
 

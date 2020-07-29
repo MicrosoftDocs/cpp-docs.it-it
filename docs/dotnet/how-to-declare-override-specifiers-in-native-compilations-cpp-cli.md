@@ -1,28 +1,28 @@
 ---
-title: 'Procedura: dichiarare gli identificatori di override (C'
+title: 'Procedura: dichiarare gli identificatori di override (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374456"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221328"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedura: Dichiarare gli identificatori di override nelle compilazioni native (C++/CLI)
 
-[sealed](../extensions/sealed-cpp-component-extensions.md), [abstract](../extensions/abstract-cpp-component-extensions.md)e [override](../extensions/override-cpp-component-extensions.md) sono disponibili nelle compilazioni che non utilizzano **l'opzione //W** o [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+[sealed](../extensions/sealed-cpp-component-extensions.md), [abstract](../extensions/abstract-cpp-component-extensions.md)e [override](../extensions/override-cpp-component-extensions.md) sono disponibili nelle compilazioni che non usano **/ZW** o [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
-> [L'identificatore](../cpp/override-specifier.md) standard e l'identificatore [finale](../cpp/final-specifier.md) del linguaggio standard di C-11 sono ed entrambi sono supportati in Visual Studio Use `final` anziché `sealed` nel codice che deve essere compilato come solo nativo.
+> Il linguaggio standard ISO C++ 11 presenta l'identificatore di [override](../cpp/override-specifier.md) e l'identificatore [finale](../cpp/final-specifier.md) ed entrambi sono supportati in Visual Studio `final` anziché **`sealed`** in codice che deve essere compilato come solo nativo.
 
 ## <a name="example"></a>Esempio
 
 ### <a name="description"></a>Descrizione
 
-Nell'esempio seguente `sealed` viene illustrato che è valido nelle compilazioni native.
+Nell'esempio seguente viene illustrato che **`sealed`** è valido nelle compilazioni native.
 
 ### <a name="code"></a>Codice
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="description"></a>Descrizione
 
-L'esempio seguente `override` mostra che è valido nelle compilazioni native.
+Nell'esempio seguente viene illustrato che `override` è valido nelle compilazioni native.
 
 ### <a name="code"></a>Codice
 
@@ -73,7 +73,7 @@ public:
 
 ### <a name="description"></a>Descrizione
 
-In questo `abstract` esempio viene illustrato che è valido nelle compilazioni native.
+Questo esempio mostra che **`abstract`** è valido nelle compilazioni native.
 
 ### <a name="code"></a>Codice
 

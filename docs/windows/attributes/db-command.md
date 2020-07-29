@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825432"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232781"
 ---
 # <a name="db_command"></a>db_command
 
@@ -26,7 +26,7 @@ Crea un comando OLE DB.
 
 ### <a name="parameters"></a>Parametri
 
-*.*<br/>
+*command*<br/>
 Una stringa di comando che contiene il testo di un comando OLE DB. Un semplice esempio è:
 
 ```cpp
@@ -44,7 +44,7 @@ La sintassi di *command* è la seguente:
 
 Un *blocco del parametro di associazione* è definito nel modo seguente:
 
-> **(\[ ** *BindType* **]** *szVar1* szVar1 \[, *szVar2* szVar2 \[, *nVar3* nVar3 \[,...]]] **)**
+> **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
 dove:
 
@@ -52,15 +52,15 @@ dove:
 
 - **\[***BindType* **]** è una delle stringhe senza distinzione tra maiuscole e minuscole seguenti:
 
-  - ** \[db_column]** associa ogni variabile membro a una colonna in un set di righe.
+  - ** \[ db_column]** associa ogni variabile membro a una colonna in un set di righe.
 
-  - ** \[BindTo]** (uguale a ** \[db_column]**).
+  - ** \[ BindTo]** (uguale a ** \[ db_column]**).
 
-  - ** \[in]** associa le variabili membro come parametri di input.
+  - ** \[ in]** associa le variabili membro come parametri di input.
 
-  - ** \[out]** associa le variabili membro come parametri di output.
+  - ** \[ out] associa le** variabili membro come parametri di output.
 
-  - in, out] ** \[** associa le variabili membro come parametri di input/output.
+  - ** \[ in, out] associa le** variabili membro come parametri di input/output.
 
 - *szVarX*, *nVarX* si risolve in una variabile membro all'interno dell'ambito corrente.
 
@@ -86,7 +86,7 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name*<br/>
+*nome*<br/>
 (Facoltativo) Nome dell'handle usato con il set di righe. Se si specifica il parametro *name*, **db_command** genera una classe con il parametro *name*specificato, che può essere usato per attraversare il set di righe o per eseguire più query di comando. Se non si specifica il parametro *name*, non sarà possibile restituire più righe di risultati all'utente.
 
 *source_name*<br/>
@@ -242,9 +242,9 @@ int main() {
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**, membro, metodo, locale|
+|**Si applica a**|**`class`**, **`struct`** , membro, metodo, locale|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuno|
+|**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

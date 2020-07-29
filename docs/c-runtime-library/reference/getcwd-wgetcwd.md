@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6fb32a593a969f93a934f251f38cd50960440b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915741"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221887"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -70,7 +70,7 @@ wchar_t *_wgetcwd(
 Posizione di archiviazione per il percorso.
 
 *MAXLEN*\
-Lunghezza massima del percorso in caratteri: **char** per **_getcwd** e **wchar_t** per **_wgetcwd**.
+Lunghezza massima del percorso in caratteri: **`char`** per **_getcwd** e **`wchar_t`** per **_wgetcwd**.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -82,7 +82,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 La funzione **_getcwd** ottiene il percorso completo della directory di lavoro corrente per l'unità predefinita e la archivia nel *buffer*. L'argomento integer *maxlen* specifica la lunghezza massima per il percorso. Si verifica un errore se la lunghezza del percorso, incluso il carattere null di terminazione, supera *maxlen*. L'argomento *buffer* può essere **null**. un buffer di almeno dimensioni *maxlen* (solo se necessario) viene allocato automaticamente, usando **malloc**, per archiviare il percorso. Questo buffer può essere liberato in un secondo momento chiamando **Free** e passandogli il valore restituito **_getcwd** (un puntatore al buffer allocato).
 
-**_getcwd** restituisce una stringa che rappresenta il percorso della directory di lavoro corrente. Se la directory di lavoro corrente è la radice, la stringa termina con una barra`\`rovesciata (). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
+**_getcwd** restituisce una stringa che rappresenta il percorso della directory di lavoro corrente. Se la directory di lavoro corrente è la radice, la stringa termina con una barra rovesciata ( `\` ). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
 
 **_wgetcwd** è una versione a caratteri wide di **_getcwd**; l'argomento del *buffer* e il valore restituito di **_wgetcwd** sono stringhe a caratteri wide. **_wgetcwd** e **_getcwd** si comportano in modo identico.
 

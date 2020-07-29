@@ -1,17 +1,17 @@
 ---
-title: appobject (C++ attributo com)
+title: appobject (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae3547a32e6d5984a9ef95e495ba119c3a2ed385
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168512"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222160"
 ---
 # <a name="appobject"></a>appobject
 
@@ -25,7 +25,7 @@ Identifica la coclasse come oggetto applicazione, che è associato a un'applicaz
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **appobject** C++ ha la stessa funzionalità dell'attributo MIDL di [appobject](/windows/win32/Midl/appobject) .
+L'attributo **appobject** di C++ ha la stessa funzionalità dell'attributo MIDL di [appobject](/windows/win32/Midl/appobject) .
 
 ## <a name="example"></a>Esempio
 
@@ -52,10 +52,10 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**|
+|**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|`coclass`|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|`coclass`|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -63,4 +63,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92a95b97cb4c57d3ad5cfbf8fe1d9980d5362cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188296"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221211"
 ---
 # <a name="compiler-error-c2338"></a>Errore del compilatore C2338
 
-> *messaggio di errore*
+> *Messaggio di errore*
 
-Questo errore può essere causato da un `static_assert` errore durante la compilazione. Il messaggio viene fornito dal `static_assert` parametri.
+Questo errore può essere causato da un **`static_assert`** errore durante la compilazione. Il messaggio viene fornito dai **`static_assert`** parametri.
 
-Questo messaggio di errore può anche essere generato da provider esterni al compilatore. Nella maggior parte dei casi, questi errori vengono segnalati da un provider di attributi DLL, ad esempio ATLPROV. Alcuni moduli comuni di questo messaggio includono:
+Questo messaggio di errore può essere generato anche da provider esterni al compilatore. Nella maggior parte dei casi, questi errori vengono segnalati da una DLL del provider di attributi, ad esempio ATLPROV. Alcune forme comuni di questo messaggio includono:
 
-- «*attributo*' Provider di attributi Atl: errore ATL*numero* *messaggio*
+- Provider di attributi ATL '*attribute*': errore*numero* ATL *messaggio*
 
-- Utilizzo non corretto dell'attributo '*attributo*'
+- Utilizzo non corretto dell'attributo '*attribute*'
 
-- «*utilizzo*': formato non corretto per l'attributo 'usage'
+- '*Usage*': formato non corretto per l'attributo ' Usage '
 
 Questi errori spesso sono irreversibili e possono essere seguiti da un errore irreversibile del compilatore.
 
-Per risolvere questi problemi, correggere l'utilizzo dell'attributo. Ad esempio, in alcuni casi, i parametri di attributo devono essere dichiarati prima di poter essere usati. Se viene fornito un numero di errore ATL, vedere la documentazione per tale errore per informazioni più specifiche.
+Per risolvere questi problemi, correggere l'utilizzo dell'attributo. In alcuni casi, ad esempio, i parametri degli attributi devono essere dichiarati prima di poter essere utilizzati. Se viene fornito un numero di errore ATL, per informazioni più specifiche, consultare la documentazione relativa a tale errore.

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e66b3bd9f5e8058a4724746ba9ec5abd14cdae3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418972"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222463"
 ---
 # <a name="ios_base-class"></a>Classe ios_base
 
@@ -121,21 +121,21 @@ La classe descrive le funzioni membro e di archiviazione comuni ai flussi di inp
 
 Un oggetto della classe ios_base archivia le informazioni di formattazione che sono costituite da:
 
-- Flag di formato in un oggetto di tipo [`fmtflags`](#fmtflags).
+- Flag di formato in un oggetto di tipo [`fmtflags`](#fmtflags) .
 
-- Maschera di eccezione in un oggetto di tipo [`iostate`](#iostate).
+- Maschera di eccezione in un oggetto di tipo [`iostate`](#iostate) .
 
-- Larghezza del campo in un oggetto di tipo **int**.
+- Larghezza del campo in un oggetto di tipo **`int`** .
 
-- Una precisione di visualizzazione in un oggetto di tipo **int**.
+- Precisione di visualizzazione in un oggetto di tipo **`int`** .
 
-- Oggetto delle impostazioni locali in un oggetto di tipo `locale`.
+- Oggetto delle impostazioni locali in un oggetto di tipo `locale` .
 
-- Due matrici estendibili con elementi di tipo **Long** e **void** Pointer.
+- Due matrici estendibili con elementi di tipo **`long`** e **`void`** puntatore.
 
-Un oggetto della classe ios_base archivia anche le informazioni sullo stato del flusso, in un oggetto di tipo [`iostate`](#iostate)e in uno stack di callback.
+Un oggetto della classe ios_base archivia anche le informazioni sullo stato del flusso, in un oggetto di tipo [`iostate`](#iostate) e uno stack di callback.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
@@ -170,46 +170,46 @@ Un oggetto della classe ios_base archivia anche le informazioni sullo stato del 
 |[basefield](#fmtflags)|Maschera di bit definita come `dec` &#124; `hex` &#124; `oct`.|
 |[beg](#seekdir)|Specifica la ricerca relativa all'inizio di una sequenza.|
 |[binary](#openmode)|Specifica che un file deve essere letto come flusso binario, anziché come flusso di testo.|
-|[boolalpha](#fmtflags)|Specifica l'inserimento o l'estrazione di oggetti di tipo **bool** come nomi, ad esempio **true** e **false**, anziché come valori numerici.|
+|[boolalpha](#fmtflags)|Specifica l'inserimento o l'estrazione di oggetti di tipo **`bool`** come nomi (ad esempio **`true`** e **`false`** ) anziché come valori numerici.|
 |[cur](#seekdir)|Specifica la ricerca relativa alla posizione corrente all'interno di una sequenza.|
-|[dec](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato decimale.|
-|[end](#seekdir)|Specifica la ricerca relativa alla fine di una sequenza.|
+|[Dec](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato decimale.|
+|[fine](#seekdir)|Specifica la ricerca relativa alla fine di una sequenza.|
 |[eofbit](#iostate)|Registra la fine del file durante l'estrazione da un flusso.|
 |[failbit](#iostate)|Registra un errore per estrarre un campo valido da un flusso.|
-|[fixed](#fmtflags)|Specifica l'inserimento di valori a virgola mobile in formato a virgola fissa (senza il campo dell'esponente).|
+|[fissa](#fmtflags)|Specifica l'inserimento di valori a virgola mobile in formato a virgola fissa (senza il campo dell'esponente).|
 |[floatfield](#fmtflags)|Maschera di bit definita come `fixed` &#124; `scientific`|
 |[goodbit](#iostate)|Tutti i bit dello stato vengono cancellati.|
 |[hex](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato esadecimale.|
 |[in](#openmode)|Specifica l'estrazione da un flusso.|
-|[internal](#fmtflags)|Inserendo caratteri di riempimento in un punto interno a un campo numerico generato, riempie la larghezza di un campo.|
-|[left](#fmtflags)|Specifica la giustificazione a sinistra.|
-|[oct](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato ottale.|
+|[interno](#fmtflags)|Inserendo caratteri di riempimento in un punto interno a un campo numerico generato, riempie la larghezza di un campo.|
+|[sinistra](#fmtflags)|Specifica la giustificazione a sinistra.|
+|[ottobre](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato ottale.|
 |[out](#openmode)|Specifica l'inserimento in un flusso.|
-|[right](#fmtflags)|Specifica la giustificazione a destra.|
-|[scientific](#fmtflags)|Specifica l'inserimento di valori a virgola mobile in formato a virgola fissa (con un campo dell'esponente).|
+|[Ok](#fmtflags)|Specifica la giustificazione a destra.|
+|[scientifico](#fmtflags)|Specifica l'inserimento di valori a virgola mobile in formato a virgola fissa (con un campo dell'esponente).|
 |[showbase](#fmtflags)|Specifica l'inserimento di un prefisso che consente di visualizzare la base di un campo Integer generato.|
 |[showpoint](#fmtflags)|Specifica l'inserimento non condizionale di un punto decimale in un campo a virgola mobile generato.|
 |[showpos](#fmtflags)|Specifica l'inserimento di un segno più in un campo numerico generato non negativo.|
 |[skipws](#fmtflags)|Specifica di ignorare lo spazio vuoto iniziale prima di determinate estrazioni.|
 |[trunc](#openmode)|Specifica l'eliminazione di contenuti di un file esistente quando viene creato l'oggetto di controllo.|
 |[unitbuf](#fmtflags)|Provoca lo scaricamento dell'output dopo ogni inserimento.|
-|[uppercase](#fmtflags)|Specifica l'inserimento di equivalenti in lettere maiuscole di lettere minuscole in determinati inserimenti.|
+|[maiuscolo](#fmtflags)|Specifica l'inserimento di equivalenti in lettere maiuscole di lettere minuscole in determinati inserimenti.|
 
 ### <a name="functions"></a>Funzioni
 
 |||
 |-|-|
-|[failure](#failure)|La classe membro funge da classe base per tutte le eccezioni generate dalla funzione membro [Clear](../standard-library/basic-ios-class.md#clear) nel modello di classe [basic_ios](../standard-library/basic-ios-class.md).|
+|[errore](#failure)|La classe membro funge da classe base per tutte le eccezioni generate dalla funzione membro [Clear](../standard-library/basic-ios-class.md#clear) nel modello di classe [basic_ios](../standard-library/basic-ios-class.md).|
 |[flags](#flags)|Imposta o restituisce le impostazioni dei flag correnti.|
 |[getloc](#getloc)|Restituisce l'oggetto delle impostazioni locali archiviate.|
 |[imbue](#imbue)|Modifica le impostazioni locali.|
-|[Init](#init)|Crea gli oggetti di `iostream` standard quando viene costruito.|
+|[Init](#init)|Crea gli `iostream` oggetti standard quando viene costruito.|
 |[iword](#iword)|Assegna un valore da archiviare come un `iword`.|
 |[precisione](#precision)|Specifica il numero di cifre da visualizzare in un numero a virgola mobile.|
 |[pword](#pword)|Assegna un valore da archiviare come un `pword`.|
 |[register_callback](#register_callback)|Specifica una funzione di callback.|
 |[setf](#setf)|Imposta i flag specificati.|
-|[sync_with_stdio](#sync_with_stdio)|Assicura che le operazioni della libreria di runtime di `iostream` e C vengano eseguite nell'ordine in cui sono visualizzate nel codice sorgente.|
+|[sync_with_stdio](#sync_with_stdio)|Assicura che `iostream` le operazioni della libreria di runtime di e C vengano eseguite nell'ordine in cui sono visualizzate nel codice sorgente.|
 |[unsetf](#unsetf)|Provoca la disattivazione dei flag specificati.|
 |[width](#width)|Imposta la lunghezza del flusso di output.|
 |[xalloc](#xalloc)|Specifica che una variabile deve far parte del flusso.|
@@ -218,15 +218,15 @@ Un oggetto della classe ios_base archivia anche le informazioni sullo stato del 
 
 |||
 |-|-|
-|[operator=](#op_eq)|L'operatore di assegnazione per gli oggetti `ios_base`.|
+|[operatore =](#op_eq)|L'operatore di assegnazione per gli oggetti `ios_base`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> iOS
+**Intestazione:**\<ios>
 
 **Spazio dei nomi:** std
 
-## <a name="event"></a>evento
+## <a name="event"></a>Evento<a name="event"></a>
 
 Specifica i tipi di evento.
 
@@ -243,7 +243,7 @@ Il tipo è costituito da un tipo non enumerato che descrive un oggetto in grado 
 
 - `copyfmt_event`, per identificare un callback che si verifica in prossimità della fine di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), immediatamente prima che venga copiata la [maschera delle eccezioni](../standard-library/ios-base-class.md) .
 
-- `erase_event`, per identificare un callback che si verifica all'inizio di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt)o all'inizio di una chiamata al distruttore per **\*questa**.
+- `erase_event`, per identificare un callback che si verifica all'inizio di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt)o all'inizio di una chiamata al distruttore per ** \* questo**oggetto.
 
 - `imbue_event`, per identificare un callback che si verifica alla fine di una chiamata a [imbue](#imbue), immediatamente prima della restituzione della funzione.
 
@@ -251,7 +251,7 @@ Il tipo è costituito da un tipo non enumerato che descrive un oggetto in grado 
 
 Vedere [register_callback](#register_callback) per un esempio.
 
-## <a name="event_callback"></a>event_callback
+## <a name="event_callback"></a><a name="event_callback"></a>event_callback
 
 Descrive una funzione passata a [register_call](#register_callback).
 
@@ -281,7 +281,7 @@ Il tipo descrive un puntatore a una funzione che può essere registrata con [reg
 
 Vedere [register_call](#register_callback) per un esempio d'uso di `event_callback`.
 
-## <a name="failure"></a>errore
+## <a name="failure"></a><a name="failure"></a>errore
 
 La classe `failure` definisce la classe di base per tutti i tipi di oggetti generati come eccezioni dalle funzioni della libreria `iostreams` per segnalare gli errori rilevati durante le operazioni del buffer del flusso.
 
@@ -333,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a>Bandiere
+## <a name="flags"></a><a name="flags"></a>Bandiere
 
 Imposta o restituisce le impostazioni dei flag correnti.
 
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parametri
 
-\ *fmtfl*
+*fmtfl*\
 Nuova impostazione `fmtflags`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -379,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a>fmtflags
+## <a name="fmtflags"></a><a name="fmtflags"></a>fmtflags
 
 Costanti per specificare l'aspetto dell'output.
 
@@ -423,13 +423,13 @@ Il tipo è un tipo maschera di bit che descrive un oggetto in grado di archiviar
 
 - `showbase`, per inserire un prefisso che consente di visualizzare la base di un campo Integer generato.
 
-- `internal`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento in un punto interno di un campo numerico generato. Per informazioni sull'impostazione della larghezza del campo, vedere [`setw`](../standard-library/iomanip-functions.md#setw).
+- `internal`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento in un punto interno di un campo numerico generato. Per informazioni sull'impostazione della larghezza del campo, vedere [`setw`](../standard-library/iomanip-functions.md#setw) .
 
 - `left`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento alla fine di un campo generato (giustificazione a sinistra).
 
 - `right`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento all'inizio di un campo generato (giustificazione a destra).
 
-- `boolalpha`, per inserire o estrarre oggetti di tipo **bool** come nomi, ad esempio **true** e **false**, anziché come valori numerici.
+- `boolalpha`, per inserire o estrarre oggetti di tipo **`bool`** come nomi (ad esempio **`true`** e **`false`** ) anziché come valori numerici.
 
 - `fixed`, per inserire valori a virgola mobile in formato a virgola fissa (senza il campo dell'esponente).
 
@@ -453,9 +453,9 @@ Inoltre, altri valori utili sono:
 
 - `floatfield`, definito come `fixed` &#124; `scientific`
 
-Per esempi di funzioni che modificano questi flag di formato, vedere [\<iomanip>](../standard-library/iomanip.md).
+Per esempi di funzioni che modificano questi flag di formato, vedere [\<iomanip>](../standard-library/iomanip.md) .
 
-## <a name="getloc"></a>getloc
+## <a name="getloc"></a><a name="getloc"></a>getloc
 
 Restituisce l'oggetto delle impostazioni locali archiviate.
 
@@ -465,7 +465,7 @@ locale getloc() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto delle impostazioni locali archiviato.
+L'oggetto delle impostazioni locali archiviato.
 
 ### <a name="example"></a>Esempio
 
@@ -485,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a>imbue
+## <a name="imbue"></a><a name="imbue"></a>imbue
 
 Modifica le impostazioni locali.
 
@@ -504,15 +504,15 @@ Impostazioni locali precedenti.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro Archivia *_Loc* nell'oggetto delle impostazioni locali, quindi segnala l'evento di callback e la `imbue_event`. Restituisce il valore archiviato precedente.
+La funzione membro Archivia *_Loc* nell'oggetto delle impostazioni locali, quindi segnala l'evento di callback e `imbue_event` . Restituisce il valore archiviato precedente.
 
 ### <a name="example"></a>Esempio
 
 Vedere [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) per un esempio.
 
-## <a name="init"></a>Init
+## <a name="init"></a><a name="init"></a>Init
 
-Crea gli oggetti di `iostream` standard quando viene costruito.
+Crea gli `iostream` oggetti standard quando viene costruito.
 
 ```cpp
 class Init { };
@@ -520,9 +520,9 @@ class Init { };
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe annidata descrive un oggetto la cui costruzione garantisce che gli oggetti `iostream` standard siano costruiti correttamente, anche prima dell'esecuzione di un costruttore per un oggetto statico arbitrario.
+La classe annidata descrive un oggetto la cui costruzione garantisce che gli `iostream` oggetti standard siano costruiti correttamente, anche prima dell'esecuzione di un costruttore per un oggetto statico arbitrario.
 
-## <a name="ios_base"></a>ios_base
+## <a name="ios_base"></a><a name="ios_base"></a>ios_base
 
 Crea oggetti ios_base.
 
@@ -532,9 +532,9 @@ ios_base();
 
 ### <a name="remarks"></a>Osservazioni
 
-Il costruttore (protetto) non esegue alcuna operazione. Una chiamata successiva a `basic_ios::`[init](../standard-library/basic-ios-class.md#init) deve inizializzare l'oggetto prima che possa essere eliminato definitivamente. Pertanto, l'unico utilizzo sicuro per la classe ios_base è come classe di base per [basic_ios](../standard-library/basic-ios-class.md)modello di classe.
+Il costruttore (protetto) non esegue alcuna operazione. Una chiamata successiva a `basic_ios::` [init](../standard-library/basic-ios-class.md#init) deve inizializzare l'oggetto prima che possa essere eliminato definitivamente. Pertanto, l'unico utilizzo sicuro per la classe ios_base è come classe di base per [basic_ios](../standard-library/basic-ios-class.md)modello di classe.
 
-## <a name="iostate"></a>iostate
+## <a name="iostate"></a><a name="iostate"></a>iostate
 
 Tipo di costanti che descrivono lo stato di un flusso.
 
@@ -560,9 +560,9 @@ Il tipo è costituito da un tipo maschera di bit che descrive un oggetto in grad
 
 - `failbit`, per registrare un errore per l'estrazione di un campo valido da un flusso.
 
-Inoltre, viene `goodbit`un valore utile, in cui nessuno dei bit indicati in precedenza è impostato (`goodbit` è sicuramente zero).
+Inoltre, un valore utile è `goodbit` , in cui nessuno dei bit indicati in precedenza è impostato ( `goodbit` è sicuramente zero).
 
-## <a name="iword"></a>iword
+## <a name="iword"></a><a name="iword"></a>iword
 
 Assegna un valore da archiviare come un `iword`.
 
@@ -577,17 +577,17 @@ Indice del valore da archiviare come `iword`.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un riferimento all'elemento *idx* della matrice estendibile con elementi di tipo **Long**. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il valore zero. Il riferimento restituito non è valido dopo la chiamata successiva a `iword` per l'oggetto, dopo che l'oggetto è stato modificato da una chiamata a `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)o dopo che l'oggetto è stato eliminato definitivamente.
+La funzione membro restituisce un riferimento all'elemento *idx* della matrice estendibile con elementi di tipo **`long`** . Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il valore zero. Il riferimento restituito non è valido dopo la chiamata successiva a `iword` per l'oggetto, dopo che l'oggetto è stato modificato da una chiamata a `basic_ios::` [copyfmt](../standard-library/basic-ios-class.md#copyfmt)o dopo che l'oggetto è stato eliminato definitivamente.
 
-Se *idx* è negativo o se l'archiviazione univoca non è disponibile per l'elemento, la funzione chiama [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` e restituisce un riferimento che potrebbe non essere univoco.
+Se *idx* è negativo o se l'archiviazione univoca non è disponibile per l'elemento, la funzione chiama [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` e restituisce un riferimento che potrebbe non essere univoco.
 
-Per ottenere un indice univoco, da usare in tutti gli oggetti di tipo `ios_base`, chiamare [`xalloc`](#xalloc).
+Per ottenere un indice univoco, da usare in tutti gli oggetti di tipo `ios_base` , chiamare [`xalloc`](#xalloc) .
 
 ### <a name="example"></a>Esempio
 
-Per un esempio su come usare `iword`, vedere [`xalloc`](#xalloc) .
+[`xalloc`](#xalloc)Per un esempio di come usare, vedere `iword` .
 
-## <a name="openmode"></a>OpenMode
+## <a name="openmode"></a><a name="openmode"></a>OpenMode
 
 Descrive come interagire con un flusso.
 
@@ -605,11 +605,11 @@ public:
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un `bitmask type` che descrive un oggetto in grado di archiviare la modalità di apertura per diversi oggetti `iostream`. I valori flag distinti (elementi) sono:
+Il tipo è un `bitmask type` oggetto che descrive un oggetto in grado di archiviare la modalità di apertura per diversi `iostream` oggetti. I valori flag distinti (elementi) sono:
 
-- `app`, per cercare la fine di un flusso prima di ogni inserimento.
+- `app`, per cercare alla fine di un flusso prima di ogni inserimento.
 
-- `ate`, per eseguire la ricerca alla fine di un flusso quando viene creato per la prima volta l'oggetto di controllo.
+- `ate`, per cercare alla fine di un flusso quando viene creato per la prima volta l'oggetto di controllo.
 
 - `binary`, per leggere un file come flusso binario, anziché come flusso di testo.
 
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a>operatore =
 
 L'operatore di assegnazione per oggetti ios_base.
 
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `ios_base`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -656,11 +656,11 @@ Oggetto destinatario dell'assegnazione.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore copia le informazioni di formattazione archiviate e crea così una nuova copia delle matrici estendibili. Restituisce quindi **\*this**. Tenere presente che lo stack di callback non viene copiato.
+L'operatore copia le informazioni di formattazione archiviate e crea così una nuova copia delle matrici estendibili. Restituisce quindi ** \* questo**. Tenere presente che lo stack di callback non viene copiato.
 
 Questo operatore viene usato solo dalle classi derivate da `ios_base`.
 
-## <a name="precision"></a>precisione
+## <a name="precision"></a><a name="precision"></a>precisione
 
 Specifica il numero di cifre da visualizzare in un numero a virgola mobile.
 
@@ -706,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a>pword
+## <a name="pword"></a><a name="pword"></a>pword
 
 Assegna un valore da archiviare come un `pword`.
 
@@ -716,22 +716,22 @@ void *& pword(int index);
 
 ### <a name="parameters"></a>Parametri
 
-\ di *Indice*
+*Indice*\
 Indice del valore da archiviare come `pword`.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un riferimento all' *Indice* dell'elemento della matrice estendibile con elementi di tipo **void** Pointer. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il puntatore Null. Il riferimento restituito non è valido dopo la chiamata successiva a `pword` per l'oggetto, dopo che l'oggetto è stato modificato da una chiamata a `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)o dopo che l'oggetto è stato eliminato definitivamente.
+La funzione membro restituisce un riferimento all' *Indice* dell'elemento della matrice estendibile con elementi di tipo **`void`** pointer. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il puntatore Null. Il riferimento restituito non è valido dopo la chiamata successiva a `pword` per l'oggetto, dopo che l'oggetto è stato modificato da una chiamata a `basic_ios::` [copyfmt](../standard-library/basic-ios-class.md#copyfmt)o dopo che l'oggetto è stato eliminato definitivamente.
 
-Se *index* è negativo o se per l'elemento non è disponibile un'archiviazione univoca, la funzione chiama [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` e restituisce un riferimento che potrebbe non essere univoco.
+Se *index* è negativo o se l'archiviazione univoca non è disponibile per l'elemento, la funzione chiama [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` e restituisce un riferimento che potrebbe non essere univoco.
 
-Per ottenere un indice univoco, da usare in tutti gli oggetti di tipo `ios_base`, chiamare [`xalloc`](#xalloc).
+Per ottenere un indice univoco, da usare in tutti gli oggetti di tipo `ios_base` , chiamare [`xalloc`](#xalloc) .
 
 ### <a name="example"></a>Esempio
 
-Per un esempio dell'uso di `pword`, vedere [`xalloc`](#xalloc) .
+[`xalloc`](#xalloc)Per un esempio dell'utilizzo di `pword` , vedere.
 
-## <a name="register_callback"></a>register_callback
+## <a name="register_callback"></a><a name="register_callback"></a>register_callback
 
 Specifica una funzione di callback.
 
@@ -742,7 +742,7 @@ void register_callback(
 
 ### <a name="parameters"></a>Parametri
 
-\ *PFN*
+*PFN*\
 Puntatore alla funzione di callback.
 
 *idx*\
@@ -750,7 +750,7 @@ Numero definito dall'utente.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro inserisce la coppia `{pfn, idx}` nello [stack di callback](../standard-library/ios-base-class.md)dello stack di callback archiviato. Quando viene segnalato un evento di callback **EV** , le funzioni vengono chiamate, in ordine inverso del registro di sistema, dall'espressione `(*pfn)(ev, *this, idx)`.
+La funzione membro inserisce la coppia nello `{pfn, idx}` [stack di callback](../standard-library/ios-base-class.md)dello stack di callback archiviato. Quando viene segnalato un evento di callback **EV** , le funzioni vengono chiamate, in ordine inverso del registro di sistema, dall'espressione `(*pfn)(ev, *this, idx)` .
 
 ### <a name="example"></a>Esempio
 
@@ -839,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a>seekdir
+## <a name="seekdir"></a><a name="seekdir"></a>seekdir
 
 Specifica il punto iniziale per operazioni di offset.
 
@@ -858,9 +858,9 @@ namespace std {
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un tipo enumerato che descrive un oggetto in grado di archiviare la modalità di ricerca utilizzata come argomento per le funzioni membro di diverse classi `iostream`. I valori flag distinti sono:
+Il tipo è un tipo enumerato che descrive un oggetto in grado di archiviare la modalità di ricerca utilizzata come argomento per le funzioni membro di più `iostream` classi. I valori flag distinti sono:
 
-- `beg`, per eseguire la ricerca (modificare la posizione di lettura o scrittura corrente) rispetto all'inizio di una sequenza (matrice, flusso o file).
+- `beg`, per cercare (modificare la posizione di lettura o scrittura corrente) rispetto all'inizio di una sequenza (matrice, flusso o file).
 
 - `cur`, per eseguire la ricerca relativa alla posizione corrente all'interno di una sequenza.
 
@@ -888,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a>setf
+## <a name="setf"></a><a name="setf"></a>setf
 
 Imposta i flag specificati.
 
@@ -916,7 +916,7 @@ Flag di formato precedenti
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro chiama in modo efficace i [flag](#flags)`(_Mask | _Flags)` (imposta i bit selezionati) e quindi restituisce i flag di formato precedenti. La seconda funzione membro chiama in modo efficace `flags(_Mask & fmtfl, flags & ~_Mask)` (sostituisce i bit selezionati in una maschera) e quindi restituisce i flag di formato precedenti.
+La prima funzione membro chiama in modo efficace i [flag](#flags) `(_Mask | _Flags)` (imposta i bit selezionati) e quindi restituisce i flag di formato precedenti. La seconda funzione membro chiama in modo efficace `flags(_Mask & fmtfl, flags & ~_Mask)` (sostituisce i bit selezionati in una maschera) e quindi restituisce i flag di formato precedenti.
 
 ### <a name="example"></a>Esempio
 
@@ -942,9 +942,9 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a>sync_with_stdio
+## <a name="sync_with_stdio"></a><a name="sync_with_stdio"></a>sync_with_stdio
 
-Assicura che le operazioni della libreria di runtime di `iostream` e C vengano eseguite nell'ordine in cui sono visualizzate nel codice sorgente.
+Assicura che `iostream` le operazioni della libreria di runtime di e C vengano eseguite nell'ordine in cui sono visualizzate nel codice sorgente.
 
 ```cpp
 static bool sync_with_stdio(
@@ -955,7 +955,7 @@ static bool sync_with_stdio(
 ### <a name="parameters"></a>Parametri
 
 *_Sync*\
-Indica se tutti i flussi sono sincronizzati con `stdio`.
+Indica se tutti i flussi sono sincronizzati con `stdio` .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -963,9 +963,9 @@ Impostazione precedente per questa funzione.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro statica archivia un flag di sincronizzazione `stdio`, che inizialmente è **true**. Se il valore è **true**, questo flag garantisce che le operazioni nello stesso file vengano sincronizzate correttamente tra le funzioni [`iostreams`](../standard-library/iostreams-conventions.md) e C++ quelle definite nella libreria standard. In caso contrario, la sincronizzazione può essere garantita o meno, ma le prestazioni potrebbero essere migliorate. La funzione Archivia *_Sync* nel flag di sincronizzazione `stdio` e restituisce il relativo valore archiviato precedente. È possibile chiamarlo in modo affidabile solo prima di eseguire qualsiasi operazione sui flussi standard.
+La funzione membro statica archivia un `stdio` flag di sincronizzazione, che inizialmente corrisponde a **`true`** . Quando **`true`** , questo flag garantisce che le operazioni nello stesso file vengano sincronizzate correttamente tra le [`iostreams`](../standard-library/iostreams-conventions.md) funzioni e quelle definite nella libreria standard C++. In caso contrario, la sincronizzazione può essere garantita o meno, ma le prestazioni potrebbero essere migliorate. La funzione Archivia *_Sync* nel `stdio` flag di sincronizzazione e restituisce il relativo valore archiviato precedente. È possibile chiamarlo in modo affidabile solo prima di eseguire qualsiasi operazione sui flussi standard.
 
-## <a name="unsetf"></a>unsetf
+## <a name="unsetf"></a><a name="unsetf"></a>unsetf
 
 Provoca la disattivazione dei flag specificati.
 
@@ -982,13 +982,13 @@ Flag che si vuole disattivare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro chiama in modo efficace i [flag](#flags)(`~` *_Mask* **flag &** ) (Cancella i bit selezionati).
+La funzione membro chiama in modo efficace i [flag](#flags)( `~` *_Mask* **& flag**) (Cancella i bit selezionati).
 
 ### <a name="example"></a>Esempio
 
-Per un esempio di utilizzo di `unsetf`, vedere [ios_base:: setf](#setf) .
+Per un esempio di utilizzo di, vedere [ios_base:: setf](#setf) `unsetf` .
 
-## <a name="width"></a>Larghezza
+## <a name="width"></a><a name="width"></a>Larghezza
 
 Imposta la lunghezza del flusso di output.
 
@@ -1033,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a>xalloc
+## <a name="xalloc"></a><a name="xalloc"></a>xalloc
 
 Specifica che una variabile fa parte del flusso.
 
@@ -1047,7 +1047,7 @@ La funzione membro statica restituisce un valore statico archiviato, che increme
 
 ### <a name="remarks"></a>Osservazioni
 
-È possibile utilizzare il valore restituito come argomento di indice univoco quando si chiamano le funzioni membro [`iword`](#iword) o [`pword`](#pword).
+È possibile utilizzare il valore restituito come argomento di indice univoco quando si chiamano le funzioni membro [`iword`](#iword) o [`pword`](#pword) .
 
 ### <a name="example"></a>Esempio
 
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>Vedere anche
 
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
-[iostreams Conventions](../standard-library/iostreams-conventions.md) (Convenzioni di iostream)
+[convenzioni di iostreams](../standard-library/iostreams-conventions.md)

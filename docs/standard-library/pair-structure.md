@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: f372ae036ff4843532efa18c3d518820b5f06111
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244422"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233015"
 ---
 # <a name="pair-structure"></a>Struttura pair
 
@@ -70,17 +70,17 @@ Coppia i cui valori devono essere usati per inizializzare gli elementi di un'alt
 
 ## <a name="return-value"></a>Valore restituito
 
-Il primo costruttore (predefinito) Inizializza il primo elemento della coppia sul valore predefinito di tipo `T1` e il secondo elemento sul valore predefinito di tipo `T2`.
+Il primo costruttore (predefinito) Inizializza il primo elemento della coppia sul valore predefinito di tipo `T1` e il secondo elemento sul valore predefinito di tipo `T2` .
 
-Il secondo costruttore inizializza il primo elemento della coppia *Val1* e il secondo su *Val2.*
+Il secondo costruttore inizializza il primo elemento della coppia su *val1* e il secondo su *val2.*
 
-Il terzo costruttore (modello) inizializza il primo elemento della coppia su `Right`. **first** e il secondo su `Right`. **second**.
+Il terzo costruttore (modello) inizializza il primo elemento della coppia su `Right`. **first** e il secondo su `Right`. **secondo**.
 
-Il quarto costruttore inizializza il primo elemento della coppia *Val1* e il secondo su *Val2* usando [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Il quarto costruttore inizializza il primo elemento della coppia su *val1* e la seconda su *val2* usando il [dichiaratore di riferimento rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2`, rispettivamente. Il tipo `first_type` è uguale al parametro di modello `T1` e il tipo `second_type` è uguale al parametro di modello `T2`. `T1` e `T2` devono fornire solo un costruttore predefinito, un costruttore ad argomento singolo e un distruttore. Tutti i membri del tipo `pair` sono pubblici, in quanto il tipo è dichiarato come `struct` anziché come **class**. Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. La seconda soddisfa i requisiti relativi ai contenitori associativi di coppie e ha un tipo di valore con formato `pair`< **const**`key_type`, `mapped_type`>.
+Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2` , rispettivamente. Il tipo `first_type` è lo stesso del parametro di modello `T1` e il tipo `second_type` è lo stesso del parametro di modello `T2` . `T1`ognuno di essi `T2` deve fornire solo un costruttore predefinito, un costruttore a singolo argomento e un distruttore. Tutti i membri del tipo `pair` sono pubblici, perché il tipo è dichiarato come **`struct`** anziché come **`class`** . Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. Il secondo soddisfa i requisiti per un contenitore associativo di coppie e ha un tipo di valore nel formato `pair` <  **`const`** `key_type` `mapped_type`>.
 
 ## <a name="example"></a>Esempio
 

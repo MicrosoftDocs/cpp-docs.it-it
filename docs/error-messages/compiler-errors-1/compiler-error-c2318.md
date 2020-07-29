@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2318
 ms.assetid: 169e30b9-df78-46cb-90bf-576ad3c32fd4
-ms.openlocfilehash: 0af0b0e0fbf8894e5f29482a80c05c9ed1ce141d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5f608d0407c24bd01ed7b80dbef873dd30662661
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748086"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221250"
 ---
 # <a name="compiler-error-c2318"></a>Errore del compilatore C2318
 
 nessun blocco try associato a questo gestore catch
 
-Un gestore `catch` è stato definito, ma non è preceduto da un blocco `try` .
+Un **`catch`** gestore è definito ma non preceduto da un **`try`** blocco.
 
 L'esempio seguente genera l'errore C2318:
 

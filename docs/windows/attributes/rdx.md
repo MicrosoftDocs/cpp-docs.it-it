@@ -1,17 +1,17 @@
 ---
-title: RDX (C++ attributo com)
+title: RDX (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214630"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232755"
 ---
 # <a name="rdx"></a>rdx
 
@@ -32,11 +32,11 @@ Nome della chiave da creare o aprire.
 Opzionale Specifica il campo del valore da impostare. Se un campo valore con questo nome non esiste già nella chiave, viene aggiunto.
 
 *regtype*<br/>
-Tipo di chiave del registro di sistema da aggiungere. Può essere uno dei seguenti: `text`, `dword`, `binary`o `CString`.
+Tipo di chiave del registro di sistema da aggiungere. Può essere uno dei seguenti: `text` , `dword` , `binary` o `CString` .
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **RDX** C++ crea o modifica una chiave del registro di sistema esistente per un componente com. L'attributo aggiunge una BEGIN_RDX_MAP macro all'oggetto che implementa il membro di destinazione. `RegistryDataExchange`, una funzione inserita come risultato della macro BEGIN_RDX_MAP, può essere utilizzata per trasferire i dati tra il registro di sistema e i membri dati
+L'attributo di **RDX** C++ crea o modifica una chiave del registro di sistema esistente per un componente com. L'attributo aggiunge una BEGIN_RDX_MAP macro all'oggetto che implementa il membro di destinazione. `RegistryDataExchange`, una funzione inserita come risultato della macro BEGIN_RDX_MAP, può essere usata per trasferire i dati tra il registro di sistema e i membri dati
 
 Questo attributo può essere usato in combinazione con gli attributi [coclass](coclass.md), [ProgID](progid.md)o [vi_progid](vi-progid.md) o altri attributi che ne implicano uno di questi.
 
@@ -46,10 +46,10 @@ Questo attributo può essere usato in combinazione con gli attributi [coclass](c
 
 |||
 |-|-|
-|**Si applica a**|**classe** o membro **struct**|
+|**Si applica a**|**`class`** o **`struct`** membro|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

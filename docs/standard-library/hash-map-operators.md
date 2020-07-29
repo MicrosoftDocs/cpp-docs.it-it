@@ -5,21 +5,21 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: ed143349f3afc7a27ad565c1cc929c6ecb5f6ad8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c0ec796265f462fe386962c0b2e8288f41da628
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375457"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222433"
 ---
 # <a name="lthash_mapgt-operators"></a>Operatori &lt;hash_map&gt;
 
 |||
 |-|-|
-|[operatore!](#op_neq)|[operatore (multimap)](#op_neq_mm)|
-|[operatore di comando](#op_eq_eq)|[operatore (multimap)](#op_eq_eq_mm)|
+|[operatore! =](#op_neq)|[operatore! = (multimap)](#op_neq_mm)|
+|[operatore = =](#op_eq_eq)|[operatore = = (multimap)](#op_eq_eq_mm)|
 
-## <a name="operator"></a><a name="op_neq"></a>operatore!
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_map](unordered-map-class.md).
@@ -32,21 +32,21 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Oggetto di tipo `hash_map`.
 
-*va bene*\
+*Ok*\
 Oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti hash_map non sono uguali; in caso contrario, **false**.
+**`true`** Se il hash_maps non è uguale. **`false`** se hash_maps sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
-I membri dei<[hash_map>](hash-map.md) e<[hash_set>](hash-set.md) file di intestazione nello spazio dei [nomi stdext](stdext-namespace.md).
+I membri della [<hash_map>](hash-map.md) e [<hash_set](hash-set.md) i file di intestazione>nello [spazio dei nomi stdext](stdext-namespace.md).
 
 ### <a name="example"></a>Esempio
 
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore di comando
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_map](unordered-map-class.md).
@@ -101,15 +101,15 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Oggetto di tipo `hash_map`.
 
-*va bene*\
+*Ok*\
 Oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto hash_map a sinistra dell'operatore è uguale all'oggetto hash_map a destra; in caso contrario, **false**.
+**`true`** Se il hash_map sul lato sinistro dell'operatore è uguale all'hash_map a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator! (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operatore! = (hash_multimap)
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_multimap](unordered-multimap-class.md).
@@ -168,15 +168,15 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Oggetto di tipo `hash_multimap`.
 
-*va bene*\
+*Ok*\
 Oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti hash_multimap non sono uguali; **false** in caso contrario.
+**`true`** Se il hash_multimaps non è uguale. **`false`** se hash_multimaps sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operatore (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operatore = = (hash_multimap)
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_multimap](unordered-multimap-class.md).
@@ -235,15 +235,15 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Oggetto di tipo `hash_multimap`.
 
-*va bene*\
+*Ok*\
 Oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto hash_multimap a sinistra dell'operatore è uguale all'oggetto hash_multimap a destra; in caso contrario, **false**.
+**`true`** Se il hash_multimap sul lato sinistro dell'operatore è uguale all'hash_multimap a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -291,4 +291,4 @@ The hash_multimaps hm1 and hm3 are equal.
 
 ## <a name="see-also"></a>Vedere anche
 
-[>hash_map><](hash-map.md)
+[<hash_map>](hash-map.md)

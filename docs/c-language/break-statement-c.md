@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
-ms.openlocfilehash: b38ff6c535c142bd15ea09a4d7c80010c3fff31f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46173ceebd7291336c18d36203d1e4dc59ce46d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313363"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222004"
 ---
 # <a name="break-statement-c"></a>Istruzione break (C)
 
-L'istruzione `break` termina l'esecuzione dell'istruzione contenitore `do`, `for`, `switch` o `while` più vicina in cui è presente. Il controllo passa all'istruzione che segue l'istruzione terminata, se presente.
+L' **`break`** istruzione termina l'esecuzione dell'istruzione di inclusione,, o più vicina **`do`** **`for`** **`switch`** **`while`** in cui viene visualizzata. Il controllo passa all'istruzione che segue l'istruzione terminata, se presente.
 
 ## <a name="syntax"></a>Sintassi
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**break ;**
 
-L'istruzione `break` viene spesso utilizzata per terminare l'elaborazione di un particolare case all'interno di un'istruzione `switch`. La mancanza di un contenitore iterativo o di un'istruzione `switch` genera un errore.
+L' **`break`** istruzione viene spesso utilizzata per terminare l'elaborazione di un particolare case all'interno di un' **`switch`** istruzione. La mancanza di un'istruzione o iterativa di inclusione **`switch`** genera un errore.
 
-Nelle istruzioni annidate l'istruzione `break` termina solo l'istruzione `do`, `for`, `switch` o `while` che la contiene più da vicino. È possibile utilizzare un'istruzione `return` o `goto` per trasferire il controllo in un punto diverso della struttura annidata.
+All'interno di istruzioni nidificate, l' **`break`** istruzione termina solo l' **`do`** **`for`** istruzione,, **`switch`** o **`while`** che la racchiude immediatamente. È possibile utilizzare un' **`return`** **`goto`** istruzione o per trasferire il controllo altrove dalla struttura annidata.
 
-In questo esempio viene illustrata l'istruzione `break`:
+In questo esempio viene illustrata l' **`break`** istruzione:
 
 ```
 #include <stdio.h>

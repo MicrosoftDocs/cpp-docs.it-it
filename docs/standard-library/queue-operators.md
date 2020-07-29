@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8c02e79e6a300f23ac31ea876c9d4576cfe5e9a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232924"
 ---
 # <a name="ltqueuegt-operators"></a>Operatori &lt;queue&gt;
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto queue a sinistra dell'operatore non è uguale all'oggetto queue a destra.
 
@@ -35,15 +35,15 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `queue`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti queue non sono uguali; in caso contrario, **false**.
+**`true`** Se le code non sono uguali. **`false`** se le code sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -92,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore dell'oggetto queue a destra.
 
@@ -102,15 +102,15 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `queue`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto queue a sinistra dell'operatore è minore ma non uguale all'oggetto queue a destra; in caso contrario, **false**.
+**`true`** Se la coda sul lato sinistro dell'operatore è minore e non uguale alla coda sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore o uguale all'oggetto queue a destra.
 
@@ -165,15 +165,15 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `queue`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto queue a sinistra dell'operatore è rigorosamente minore dell'oggetto queue a destra; in caso contrario, **false**.
+**`true`** Se la coda sul lato sinistro dell'operatore è strettamente inferiore alla coda a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto queue a sinistra dell'operatore è uguale all'oggetto queue a destra.
 
@@ -230,15 +230,15 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `queue`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti queue non sono uguali; in caso contrario, **false**.
+**`true`** Se le code non sono uguali. **`false`** se le code sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -286,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore dell'oggetto queue a destra.
 
@@ -296,15 +296,15 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `queue`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto queue a sinistra dell'operatore è rigorosamente minore dell'oggetto queue a destra; in caso contrario, **false**.
+**`true`** Se la coda sul lato sinistro dell'operatore è strettamente inferiore alla coda a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore o uguale all'oggetto queue a destra.
 
@@ -362,15 +362,15 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `queue`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto queue a sinistra dell'operatore è rigorosamente minore dell'oggetto queue a destra; in caso contrario, **false**.
+**`true`** Se la coda sul lato sinistro dell'operatore è strettamente inferiore alla coda a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 

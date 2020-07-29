@@ -4,22 +4,22 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 106417519d00da1363f214492af9657712487088
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 585e76119b0e848e322c88ad0149ebb42c6b5b1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320346"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221601"
 ---
 # <a name="examples-of-lambda-expressions"></a>Esempi di espressioni lambda
 
-In questo articolo viene illustrato come utilizzare le espressioni lambda nei programmi. Per una panoramica delle espressioni lambda, vedere [Espressioni lambda](../cpp/lambda-expressions-in-cpp.md). Per ulteriori informazioni sulla struttura di un'espressione lambda, vedere [Sintassi delle espressioni lambda](../cpp/lambda-expression-syntax.md).
+In questo articolo viene illustrato come utilizzare le espressioni lambda nei programmi. Per una panoramica delle espressioni lambda, vedere [espressioni lambda](../cpp/lambda-expressions-in-cpp.md). Per ulteriori informazioni sulla struttura di un'espressione lambda, vedere [sintassi delle espressioni lambda](../cpp/lambda-expression-syntax.md).
 
-## <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>Dichiarazione di espressioni lambdaDeclaring Lambda Expressions
+## <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>Dichiarazione di espressioni lambda
 
 ### <a name="example-1"></a>Esempio 1
 
-Poiché un'espressione lambda è tipizzata, è possibile assegnarla a una variabile automatica o a un oggetto [funzione,](../standard-library/function-class.md) come illustrato di seguito:Because a lambda expression is typed, you can assign it to an **auto** variable or to a function object, as shown here:
+Poiché un'espressione lambda è tipizzata, è possibile assegnarla a una **`auto`** variabile o a un [`function`](../standard-library/function-class.md) oggetto, come illustrato di seguito:
 
 ### <a name="code"></a>Codice
 
@@ -55,13 +55,13 @@ int main()
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni, vedere [auto](../cpp/auto-cpp.md), [Function Class](../standard-library/function-class.md)e [Function Call](../cpp/function-call-cpp.md).
+Per ulteriori informazioni, vedere [`auto`](../cpp/auto-cpp.md) , [ `function` classe](../standard-library/function-class.md)e [chiamata di funzione](../cpp/function-call-cpp.md).
 
 Sebbene le espressioni lambda vengano dichiarate soprattutto nel corpo di una funzione, è possibile dichiararle in qualsiasi posizione sia possibile inizializzare una variabile.
 
 ### <a name="example-2"></a>Esempio 2
 
-Quando l'espressione viene dichiarata invece di quando viene chiamata l'espressione, il compilatore Microsoft Cè associa un'espressione lambda alle relative variabili acquisite. Nell'esempio seguente viene illustrata un'espressione lambda che acquisisce la variabile locale `i` per valore e la variabile locale `j` per riferimento. Poiché l'espressione lambda acquisisce `i` per valore, la riassegnazione successiva di `i` nel programma non influisce sul risultato dell'espressione. Tuttavia, poiché l'espressione lambda acquisisce `j` per riferimento, la riassegnazione di `j` influisce sul risultato dell'espressione.
+Il compilatore Microsoft C++ associa un'espressione lambda alle variabili acquisite quando l'espressione viene dichiarata anziché quando viene chiamata l'espressione. Nell'esempio seguente viene illustrata un'espressione lambda che acquisisce la variabile locale `i` per valore e la variabile locale `j` per riferimento. Poiché l'espressione lambda acquisisce `i` per valore, la riassegnazione successiva di `i` nel programma non influisce sul risultato dell'espressione. Tuttavia, poiché l'espressione lambda acquisisce `j` per riferimento, la riassegnazione di `j` influisce sul risultato dell'espressione.
 
 ### <a name="code"></a>Codice
 
@@ -99,9 +99,9 @@ int main()
 
 [[In questo articolo](#top)]
 
-## <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>Chiamata di espressioni lambdaCalling Lambda Expressions
+## <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>Chiamata di espressioni lambda
 
-È possibile chiamare un'espressione lambda immediatamente, come illustrato nel frammento di codice seguente. Nel secondo frammento viene illustrato come passare un'espressione lambda come `find_if`argomento agli algoritmi della libreria standard di C, ad esempio .
+È possibile chiamare un'espressione lambda immediatamente, come illustrato nel frammento di codice seguente. Il secondo frammento Mostra come passare un'espressione lambda come argomento per gli algoritmi della libreria standard C++, ad esempio `find_if` .
 
 ### <a name="example-1"></a>Esempio 1
 
@@ -130,7 +130,7 @@ int main()
 
 ### <a name="example-2"></a>Esempio 2
 
-Nell'esempio seguente viene passata un'espressione lambda come argomento alla funzione `find_if`. L'espressione lambda restituisce **true** se il relativo parametro è un numero pari.
+Nell'esempio seguente viene passata un'espressione lambda come argomento alla funzione `find_if`. L'espressione lambda restituisce **`true`** se il relativo parametro è un numero pari.
 
 ### <a name="code"></a>Codice
 
@@ -175,11 +175,11 @@ The first even number in the list is 42.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni `find_if` sulla funzione, vedere [find_if](../standard-library/algorithm-functions.md#find_if). Per ulteriori informazioni sulle funzioni della libreria standard di C, che eseguono algoritmi comuni, vedere [ \<>dell'algoritmo ](../standard-library/algorithm.md).
+Per ulteriori informazioni sulla `find_if` funzione, vedere [`find_if`](../standard-library/algorithm-functions.md#find_if) . Per ulteriori informazioni sulle funzioni della libreria standard C++ che eseguono algoritmi comuni, vedere [`<algorithm>`](../standard-library/algorithm.md) .
 
 [[In questo articolo](#top)]
 
-## <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>Annidamento di espressioni lambdaNesting Lambda Expressions
+## <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>Annidamento di espressioni lambda
 
 ### <a name="example"></a>Esempio
 
@@ -217,11 +217,11 @@ In questo esempio `[](int y) { return y * 2; }` è l'espressione lambda annidata
 
 [[In questo articolo](#top)]
 
-## <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>Funzioni Lambda di ordine superiore
+## <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>Funzioni lambda di ordine superiore
 
 ### <a name="example"></a>Esempio
 
-Molti linguaggi di programmazione supportano il concetto di *una funzione di ordine superiore.* Una funzione di ordine superiore è un'espressione lambda che accetta un'altra espressione lambda come argomento o che restituisce un'espressione lambda. È possibile usare la classe di [funzione](../standard-library/function-class.md) per abilitare un'espressione lambda di C, il comportarsi come una funzione di ordine superiore. Nell'esempio seguente viene illustrata un'espressione lambda che restituisce un oggetto `function` e un'espressione lambda che accetta un oggetto `function` come argomento.
+Molti linguaggi di programmazione supportano il concetto di *funzione di ordine superiore.* Una funzione di ordine superiore è un'espressione lambda che accetta un'altra espressione lambda come argomento o che restituisce un'espressione lambda. È possibile usare la [`function`](../standard-library/function-class.md) classe per consentire a un'espressione lambda C++ di comportarsi come una funzione di ordine superiore. Nell'esempio seguente viene illustrata un'espressione lambda che restituisce un oggetto `function` e un'espressione lambda che accetta un oggetto `function` come argomento.
 
 ### <a name="code"></a>Codice
 
@@ -266,14 +266,14 @@ int main()
 
 [[In questo articolo](#top)]
 
-## <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>Uso di un'espressione lambda in una funzioneUsing a Lambda Expression in a Function
+## <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>Uso di un'espressione lambda in una funzione
 
 ### <a name="example"></a>Esempio
 
-È possibile usare le espressioni lambda nel corpo di una funzione. L'espressione lambda può accedere a qualsiasi funzione o membro dati a cui può accedere la funzione contenitrice. È possibile acquisire in modo esplicito o implicito il puntatore **this** per fornire l'accesso alle funzioni e ai membri dati della classe che lo contiene.
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std:c'17](../build/reference/std-specify-language-standard-version.md)): **acquisisce questo** valore in base al valore (`[*this]`) quando l'espressione lambda verrà utilizzata in operazioni asincrone o parallele in cui il codice potrebbe essere eseguito dopo che l'oggetto originale esce dall'ambito.
+È possibile usare le espressioni lambda nel corpo di una funzione. L'espressione lambda può accedere a qualsiasi funzione o membro dati a cui può accedere la funzione contenitrice. È possibile acquisire in modo esplicito o implicito il **`this`** puntatore per fornire l'accesso alle funzioni e ai membri dati della classe contenitore.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ): Acquisisci **`this`** per valore ( `[*this]` ) quando l'espressione lambda verrà usata in operazioni asincrone o parallele in cui il codice può essere eseguito dopo che l'oggetto originale è uscito dall'ambito.
 
-È possibile utilizzare il puntatore this in modo esplicito in una funzione, come illustrato di seguito:You can use the **this** pointer explicitly in a function, as shown here:
+È possibile usare il **`this`** puntatore in modo esplicito in una funzione, come illustrato di seguito:
 
 ```cpp
 // capture "this" by reference
@@ -291,7 +291,7 @@ void ApplyScale2(const vector<int>& v) const
 }
 ```
 
-È anche possibile acquisire il puntatore this in modo implicito:You can also capture the **this** pointer implicitly:
+È anche possibile acquisire il **`this`** puntatore in modo implicito:
 
 ```cpp
 void ApplyScale(const vector<int>& v) const
@@ -355,15 +355,15 @@ int main()
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione `ApplyScale` usa un'espressione lambda per stampare il prodotto del valore di scala e ogni elemento in un oggetto `vector`. L'espressione lambda acquisisce in modo implicito **this** in modo che possa accedere al `_scale` membro.
+La funzione `ApplyScale` usa un'espressione lambda per stampare il prodotto del valore di scala e ogni elemento in un oggetto `vector`. L'espressione lambda acquisisce in modo implicito in **`this`** modo da poter accedere al `_scale` membro.
 
 [[In questo articolo](#top)]
 
-## <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>Utilizzo di espressioni lambda con i modelliUsing Lambda Expressions with Templates
+## <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>Uso di espressioni lambda con i modelli
 
 ### <a name="example"></a>Esempio
 
-Poiché le espressioni lambda sono tipizzate, è possibile utilizzarle con i modelli C++. Nell'esempio seguente vengono illustrate le funzioni `negate_all` e `print_all`. La `negate_all` funzione applica **l'operatore unario-** a ogni elemento nell'oggetto. `vector` La funzione `print_all` visualizza ogni elemento nell'oggetto `vector` nella console.
+Poiché le espressioni lambda sono tipizzate, è possibile utilizzarle con i modelli C++. Nell'esempio seguente vengono illustrate le funzioni `negate_all` e `print_all`. La `negate_all` funzione applica l'unario **`operator-`** a ogni elemento nell' `vector` oggetto. La funzione `print_all` visualizza ogni elemento nell'oggetto `vector` nella console.
 
 ### <a name="code"></a>Codice
 
@@ -419,15 +419,15 @@ After negate_all():
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni sui modelli di C, vedere [Modelli](../cpp/templates-cpp.md).
+Per ulteriori informazioni sui modelli C++, vedere [modelli](../cpp/templates-cpp.md).
 
 [[In questo articolo](#top)]
 
-## <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>Gestione delle eccezioniHandling Exceptions
+## <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>Gestione delle eccezioni
 
 ### <a name="example"></a>Esempio
 
-Il corpo di un'espressione lambda segue le regole per la gestione delle eccezioni strutturate (SEH) e la gestione delle eccezioni C++. È possibile gestire un'eccezione generata nel corpo di un'espressione lambda o rinviare la gestione delle eccezioni all'ambito contenitore. L'esempio seguente usa la funzione **for_each** `vector` e un'espressione lambda per riempire un oggetto con i valori di un altro oggetto. Usa un blocco**catch** **try**/per gestire l'accesso non valido al primo vettore.
+Il corpo di un'espressione lambda segue le regole per la gestione delle eccezioni strutturate (SEH) e la gestione delle eccezioni C++. È possibile gestire un'eccezione generata nel corpo di un'espressione lambda o rinviare la gestione delle eccezioni all'ambito contenitore. Nell'esempio seguente vengono usate la **`for_each`** funzione e un'espressione lambda per riempire un `vector` oggetto con i valori di un altro oggetto. Usa un **`try`** / **`catch`** blocco per gestire l'accesso non valido al primo vettore.
 
 ### <a name="code"></a>Codice
 
@@ -475,11 +475,11 @@ Caught 'invalid vector<T> subscript'.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni sulla gestione delle eccezioni, vedere [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md).
+Per ulteriori informazioni sulla gestione delle eccezioni, vedere [gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md).
 
 [[In questo articolo](#top)]
 
-## <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>Utilizzo di espressioni lambda con i tipi gestiti (C .
+## <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>Uso di espressioni lambda con tipi gestiti (C++/CLI)
 
 ### <a name="example"></a>Esempio
 
@@ -512,22 +512,22 @@ Hello!
 
 ### <a name="remarks"></a>Osservazioni
 
-È anche possibile usare espressioni lambda con la libreria STL/CLR. Per ulteriori informazioni, vedere [Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md).
+È anche possibile usare espressioni lambda con la libreria STL/CLR. Per ulteriori informazioni, vedere [riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md).
 
 > [!IMPORTANT]
-> Le espressioni lambda non sono supportate in queste entità gestite CLR (Common Language Runtime): **ref class**, **ref struct**, value **class**e **value struct**.
+> Le espressioni lambda non sono supportate nelle entità gestite di Common Language Runtime (CLR) **`ref class`** , ovvero,, **`ref struct`** **`value class`** e **`value struct`** .
 
 [[In questo articolo](#top)]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Espressioni lambdaLambda Expressions](../cpp/lambda-expressions-in-cpp.md)<br/>
+[Espressioni lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Sintassi delle espressioni lambda](../cpp/lambda-expression-syntax.md)<br/>
-[Automatico](../cpp/auto-cpp.md)<br/>
-[Classe function](../standard-library/function-class.md)<br/>
-[find_if](../standard-library/algorithm-functions.md#find_if)<br/>
-[\<>dell'algoritmo](../standard-library/algorithm.md)<br/>
+[`auto`](../cpp/auto-cpp.md)<br/>
+[`function`Classe](../standard-library/function-class.md)<br/>
+[`find_if`](../standard-library/algorithm-functions.md#find_if)<br/>
+[`<algorithm>`](../standard-library/algorithm.md)<br/>
 [Chiamata di funzione](../cpp/function-call-cpp.md)<br/>
 [Modelli](../cpp/templates-cpp.md)<br/>
 [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)<br/>
-[Riferimenti della libreria STL/CLR](../dotnet/stl-clr-library-reference.md)
+[Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md)

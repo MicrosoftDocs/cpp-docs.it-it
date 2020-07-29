@@ -1,5 +1,5 @@
 ---
-title: Classe COleException
+title: COleexception (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - COleException
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 737c9e669990f4de6ae18cdc7662c131ad61516f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c82099d816bc8ee8c179e9d4656f474156a629a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375003"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233197"
 ---
-# <a name="coleexception-class"></a>Classe COleException
+# <a name="coleexception-class"></a>COleexception (classe)
 
 Rappresenta una condizione di eccezione correlata a un'operazione OLE.
 
@@ -33,27 +33,27 @@ class COleException : public CException
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleException::Process](#process)|Converte un'eccezione intercettata in un codice restituito OLE.|
+|[COleexception::P rocess](#process)|Converte un'eccezione rilevata in un codice restituito OLE.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleException::m_sc](#m_sc)|Contiene il codice di stato che indica il motivo dell'eccezione.|
+|[COleexception:: m_sc](#m_sc)|Contiene il codice di stato che indica il motivo dell'eccezione.|
 
 ## <a name="remarks"></a>Osservazioni
 
 La `COleException` classe include un membro dati pubblico che contiene il codice di stato che indica il motivo dell'eccezione.
 
-In generale, non è `COleException` necessario creare direttamente un oggetto; chiamare [afxThrowOleException](exception-processing.md#afxthrowoleexception).
+In generale, non è consigliabile creare `COleException` direttamente un oggetto, bensì chiamare [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
 
-Per ulteriori informazioni sulle eccezioni, vedere gli articoli [Gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md) ed [Eccezioni: eccezioni OLE](../../mfc/exceptions-ole-exceptions.md).
+Per ulteriori informazioni sulle eccezioni, vedere gli articoli [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md) ed [eccezioni: eccezioni OLE](../../mfc/exceptions-ole-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CEccezione](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `COleException`
 
@@ -61,9 +61,9 @@ Per ulteriori informazioni sulle eccezioni, vedere gli articoli [Gestione delle 
 
 **Intestazione:** afxdisp.h
 
-## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleException::m_sc
+## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleexception:: m_sc
 
-Questo membro dati contiene il codice di stato OLE che indica il motivo dell'eccezione.
+Questo membro dati include il codice di stato OLE che indica il motivo dell'eccezione.
 
 ```
 SCODE m_sc;
@@ -73,15 +73,15 @@ SCODE m_sc;
 
 Il valore di questa variabile è impostato da [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
 
-Per ulteriori informazioni su SCODE, vedere [Struttura dei codici](/windows/win32/com/structure-of-com-error-codes) di errore COM in Windows SDK.
+Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes) nell'Windows SDK.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-## <a name="coleexceptionprocess"></a><a name="process"></a>COleException::Process
+## <a name="coleexceptionprocess"></a><a name="process"></a>COleexception::P rocess
 
-Chiamare il **Process** funzione membro per convertire un'eccezione intercettata in un codice di stato OLE.
+Chiamare la funzione membro del **processo** per convertire un'eccezione rilevata in un codice di stato OLE.
 
 ```
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -89,19 +89,19 @@ static SCODE PASCAL Process(const CException* pAnyException);
 
 ### <a name="parameters"></a>Parametri
 
-*pAnyException (eccezione)*<br/>
-Puntatore a un'eccezione intercettata.
+*pAnyException*<br/>
+Puntatore a un'eccezione rilevata.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice di stato OLE.
+Codice di stato OLE.
 
 ### <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
-> Questa funzione è **statica.**
+> Questa funzione è **`static`** .
 
-Per ulteriori informazioni su SCODE, vedere [Struttura dei codici](/windows/win32/com/structure-of-com-error-codes) di errore COM in Windows SDK.
+Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes) nell'Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -109,6 +109,6 @@ Per ulteriori informazioni su SCODE, vedere [Struttura dei codici](/windows/win3
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[CALCDRIV di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777318"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232729"
 ---
 # <a name="profile-guided-optimizations"></a>Ottimizzazioni PGO (Profile Guided Optmization)
 
@@ -68,7 +68,7 @@ Le ottimizzazioni PGO includono i controlli e i miglioramenti seguenti:
 
 - **Layout della funzione** : in base al grafico delle chiamate e al comportamento del chiamante/chiamato profilato, le funzioni che tendono a trovarsi lungo lo stesso percorso di esecuzione vengono inserite nella stessa sezione.
 
-- **Ottimizzazione del ramo condizionale** : con i probe del valore, le ottimizzazioni PGO possono determinare se un determinato valore in un'istruzione switch viene usato più spesso di altri valori.  Quindi è possibile effettuare il pull di questo valore dall'istruzione switch.  Lo stesso vale per le `if` istruzioni... in `else` cui Query Optimizer è in grado di ordinare `if` ... in `else` modo che il `if` `else` blocco o venga inserito per primo, a seconda del blocco che è più spesso vero.
+- **Ottimizzazione del ramo condizionale** : con i probe del valore, le ottimizzazioni PGO possono determinare se un determinato valore in un'istruzione switch viene usato più spesso di altri valori.  Quindi è possibile effettuare il pull di questo valore dall'istruzione switch.  Lo stesso vale per le **`if`** istruzioni... in **`else`** cui Query Optimizer è in grado di ordinare **`if`** ... in **`else`** modo che il **`if`** **`else`** blocco o venga inserito per primo, a seconda del blocco che è più spesso vero.
 
 - **Separazione del codice inattivo** : il codice che non viene chiamato durante la profilatura viene spostato in una sezione speciale aggiunta alla fine del set di sezioni. Questa sezione viene effettivamente mantenuta dalle pagine utilizzate spesso.
 

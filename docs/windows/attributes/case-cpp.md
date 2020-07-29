@@ -1,21 +1,21 @@
 ---
-title: Case (C++ attributo com)
+title: Case (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167336"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232807"
 ---
 # <a name="case-c"></a>case (C++)
 
-Utilizzato con l'attributo [switch_type](switch-type.md) in un' **Unione**.
+Utilizzato con l'attributo [switch_type](switch-type.md) in un oggetto **`union`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,19 +28,19 @@ Utilizzato con l'attributo [switch_type](switch-type.md) in un' **Unione**.
 *value*<br/>
 Un possibile valore di input per il quale si desidera fornire l'elaborazione. Il tipo di **valore** può essere uno dei tipi seguenti:
 
-- `int`
+- **`int`**
 
-- `char`
+- **`char`**
 
 - `boolean`
 
-- `enum`
+- **`enum`**
 
 o un identificatore di tale tipo.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **case** C++ ha la stessa funzionalità dell'attributo **case** MIDL. Questo attributo viene utilizzato solo con l'attributo [switch_type](switch-type.md) .
+L'attributo del **caso** C++ ha la stessa funzionalità dell'attributo del **case** MIDL. Questo attributo viene utilizzato solo con l'attributo [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -69,15 +69,15 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Si applica a**|Membro di una **classe** o di uno **struct**|
+|**Si applica a**|Membro di un oggetto **`class`** o**`struct`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)

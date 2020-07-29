@@ -1,5 +1,5 @@
 ---
-title: "Procedura: definire l'accesso e i valori delC++controllo ()"
+title: "Procedura: definire l'accesso e i valori del controllo (C++)"
 ms.date: 02/15/2019
 helpviewer_keywords:
 - access keys [C++], adding
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: e782788832063e210356864e074c15e9ba3555f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 91b6365334b977957ff6bd6c25278d4088961a2c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222069"
 ---
-# <a name="how-to-define-control-access-and-values-c"></a>Procedura: definire l'accesso e i valori delC++controllo ()
+# <a name="how-to-define-control-access-and-values-c"></a>Procedura: definire l'accesso e i valori del controllo (C++)
 
 ## <a name="tab-order"></a>Ordine di tabulazione
 
@@ -40,17 +40,17 @@ Anche i controlli che non dispongono della proprietà **TabStop** impostata su *
 > [!NOTE]
 > Se la finestra di dialogo contiene controlli sovrapposti, la modifica dell'ordine di tabulazione può cambiare il modo in cui vengono visualizzati i controlli. I controlli che si trovano in un secondo momento nell'ordine di tabulazione vengono sempre visualizzati sopra tutti i controlli sovrapposti che li precedono nell'ordine di tabulazione.
 
-- Per visualizzare l'ordine di tabulazione corrente per tutti i controlli, passare a **formato** menu > **ordine di tabulazione**oppure premere **CTRL** + **D**.
+- Per visualizzare l'ordine di tabulazione corrente per tutti i controlli, passare a **formato**menu  >  **ordine di tabulazione**oppure premere **CTRL**  +  **D**.
 
    Un numero nell'angolo superiore sinistro di ogni controllo ne mostra la posizione nell'ordine di tabulazione corrente.
 
-- Per modificare l'ordine di tabulazione per tutti i controlli, passare a **formato** menu > **ordine di tabulazione** e impostare l'ordine di tabulazione selezionando ogni controllo nell'ordine in cui si desidera che il tasto **Tab** segua.
+- Per modificare l'ordine di tabulazione per tutti i controlli, passare a **formato**menu ordine di tabulazione  >  **Tab Order** e impostare l'ordine di tabulazione selezionando ogni controllo nell'ordine in cui si desidera che il tasto **Tab** segua.
 
-- Per modificare l'ordine di tabulazione per due o più controlli, passare a **formato** menu > **ordine di tabulazione**. Tenere premuto il tasto **CTRL** e selezionare il controllo in cui inizierà la modifica in ordine, quindi rilasciare il tasto **CTRL** e selezionare i controlli nell'ordine in cui si desidera che il tasto **Tab** segua tale punto.
+- Per modificare l'ordine di tabulazione per due o più controlli, passare a **formato**menu  >  **ordine di tabulazione**. Tenere premuto il tasto **CTRL** e selezionare il controllo in cui inizierà la modifica in ordine, quindi rilasciare il tasto **CTRL** e selezionare i controlli nell'ordine in cui si desidera che il tasto **Tab** segua tale punto.
 
-   Se, ad esempio, si desidera modificare l'ordine dei controlli `7` tramite `9`, tenere premuto **CTRL**, quindi selezionare prima `6` controllo.
+   Se ad esempio si desidera modificare l'ordine dei controlli `7` tramite `9` , tenere premuto **CTRL**, quindi selezionare prima il controllo `6` .
 
-- Per impostare un controllo specifico su numero `1`o prima nell'ordine di tabulazione, fare doppio clic sul controllo.
+- Per impostare un controllo specifico sul numero `1` o prima nell'ordine di tabulazione, fare doppio clic sul controllo.
 
 > [!TIP]
 > Dopo aver immesso l'ordine di **tabulazione** , premere **ESC** o **invio** per uscire dalla modalità **ordine** di tabulazione e disabilitare la possibilità di modificare l'ordine di tabulazione.
@@ -63,9 +63,9 @@ In genere, gli utenti della tastiera spostano lo stato attivo di input da un con
 
 1. Selezionare il controllo nella finestra di dialogo.
 
-1. Nella proprietà **didascalia** della [finestra Proprietà](/visualstudio/ide/reference/properties-window)Digitare un nuovo nome per il controllo, digitando una e commerciale (`&`) davanti alla lettera desiderata come chiave di accesso per il controllo. Ad esempio: `&Radio1`.
+1. Nella proprietà **didascalia** della [finestra Proprietà](/visualstudio/ide/reference/properties-window)Digitare un nuovo nome per il controllo, digitando una e commerciale ( `&` ) davanti alla lettera desiderata come chiave di accesso per il controllo. Ad esempio: `&Radio1`.
 
-1. Premere **Invio**.
+1. Premere **INVIO**.
 
    Una sottolineatura viene visualizzata nella didascalia visualizzata per indicare la chiave di accesso, ad esempio **R**adio1.
 
@@ -73,12 +73,12 @@ In genere, gli utenti della tastiera spostano lo stato attivo di input da un con
 
 1. Creare una didascalia per il controllo utilizzando un controllo **testo statico** nella [casella degli strumenti](/visualstudio/ide/reference/toolbox).
 
-1. Nella didascalia di testo statico digitare una e commerciale (`&`) davanti alla lettera desiderata come chiave di accesso.
+1. Nella didascalia di testo statico digitare una e commerciale ( `&` ) davanti alla lettera desiderata come chiave di accesso.
 
 1. Verificare che il controllo testo statico preceda immediatamente il controllo da essa etichettato nell'ordine di tabulazione.
 
 > [!NOTE]
-> Tutte le chiavi di accesso all'interno di una finestra di dialogo devono essere univoche. Per verificare la presenza di chiavi di accesso duplicate, passare a **formato** menu > **selezionare il tasto**di scelta.
+> Tutte le chiavi di accesso all'interno di una finestra di dialogo devono essere univoche. Per verificare la presenza di chiavi di accesso duplicate, passare a menu **formato**tasti di scelta  >  **Check Mnemonics**.
 
 ## <a name="combo-box-values"></a>Valori della casella combinata
 
@@ -133,7 +133,7 @@ Quando si aggiungono pulsanti di opzione a una finestra di dialogo, considerarli
    Se si modifica la proprietà **Group** su **true** , lo stile WS_GROUP viene aggiunto alla voce del pulsante nell'oggetto finestra di dialogo dello script di risorsa e si impedisce all'utente di selezionare più pulsanti di opzione alla volta nel gruppo di pulsanti (se l'utente seleziona un pulsante di opzione, gli altri nel gruppo vengono cancellati).
 
    > [!NOTE]
-   > La proprietà **Group** deve essere impostata su **True**solo per il primo pulsante di opzione del gruppo. Se sono presenti controlli aggiuntivi che non fanno parte del gruppo di pulsanti, impostare anche la proprietà **Group** del primo controllo *che non è incluso nel gruppo* su **true** . È possibile identificare rapidamente il primo controllo esterno al gruppo utilizzando **Ctrl**+**D** per visualizzare l'ordine di tabulazione.
+   > La proprietà **Group** deve essere impostata su **True**solo per il primo pulsante di opzione del gruppo. Se sono presenti controlli aggiuntivi che non fanno parte del gruppo di pulsanti, impostare anche la proprietà **Group** del primo controllo *che non è incluso nel gruppo* su **true** . È possibile identificare rapidamente il primo controllo esterno al gruppo utilizzando **CTRL** + **D** per visualizzare l'ordine di tabulazione.
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Per aggiungere una variabile membro per il gruppo di pulsanti di opzione
 
@@ -143,9 +143,9 @@ Quando si aggiungono pulsanti di opzione a una finestra di dialogo, considerarli
 
    - Nella casella **Nome variabile** digitare il nome della nuova variabile membro.
 
-   - Nella casella di riepilogo **Tipo variabile** , selezionare **int** o digitare *int*.
+   - Nella casella di riepilogo **tipo di variabile** selezionare **`int`** o digitare *int*.
 
-   È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Ad esempio, `m_radioBox1 = 0;` seleziona il primo pulsante di opzione nel gruppo.
+   È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Ad esempio, `m_radioBox1 = 0;` Seleziona il primo pulsante di opzione nel gruppo.
 
 ## <a name="requirements"></a>Requisiti
 

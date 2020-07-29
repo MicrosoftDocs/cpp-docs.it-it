@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 2d06a92fea9a702633216e3244879687b66f97d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208728"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221432"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -82,7 +82,7 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire un numero di
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cliext/Functional >
+**Intestazione:**\<cliext/functional>
 
 **Spazio dei nomi:** cliext
 
@@ -91,9 +91,9 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire un numero di
 |Delegato|Descrizione|
 |--------------|-----------------|
 |[binary_delegate (STL/CLR)](#binary_delegate)|Delegato a due argomenti.|
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegato a due argomenti che restituisce **void**.|
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegato a due argomenti che restituisce **`void`** .|
 |[unary_delegate (STL/CLR)](#unary_delegate)|Delegato a un argomento.|
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegato a un argomento che restituisce **void**.|
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegato a un argomento che restituisce **`void`** .|
 
 |Classe|Descrizione|
 |-----------|-----------------|
@@ -124,7 +124,7 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire un numero di
 |[not1 (STL/CLR)](#not1)|Genera un unary_negate per un functor.|
 |[not2 (STL/CLR)](#not2)|Genera un binary_negate per un functor.|
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
 
@@ -204,7 +204,7 @@ compare(L'b', L'a') = False
 
 ## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
 
-La classe genereic descrive un delegato a due argomenti che restituisce **void**. Viene usato per specificare un delegato in termini di argomento.
+La classe genereic descrive un delegato a due argomenti che restituisce **`void`** . Viene usato per specificare un delegato in termini di argomento.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -224,7 +224,7 @@ Tipo del secondo argomento.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il delegato genereic descrive una funzione a due argomenti che restituisce **void**.
+Il delegato genereic descrive una funzione a due argomenti che restituisce **`void`** .
 
 Si noti che per:
 
@@ -302,12 +302,12 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor archiviato.
 
 ## <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -326,9 +326,9 @@ Tipo del functor archiviato.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a due argomenti che archivia un altro functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca l'oggetto logico NOT del functor archiviato chiamato con i due argomenti.
+La classe modello descrive un functor a due argomenti che archivia un altro functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca l'oggetto logico Not del functor archiviato chiamato con i due argomenti.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -388,7 +388,7 @@ int main()
 
 ## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st (STL/CLR)
 
-Genera un `binder1st` per un argomento e un functor.
+Genera un oggetto `binder1st` per un argomento e un functor.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -399,12 +399,12 @@ template<typename Fun,
         Arg left);
 ```
 
-#### <a name="template-parameters"></a>Parametri di modello
+#### <a name="template-parameters"></a>Parametri di template
 
 *ARG*<br/>
 Il tipo di argomento.
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor.
 
 #### <a name="function-parameters"></a>Parametri funzione
@@ -412,12 +412,12 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-*left*<br/>
+*sinistra*<br/>
 Primo argomento di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il primo argomento in un functor a un solo argomento che lo chiama con un secondo argomento.
+La funzione di modello restituisce [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il primo argomento in un functor a un solo argomento che lo chiama con un secondo argomento.
 
 ### <a name="example"></a>Esempio
 
@@ -469,7 +469,7 @@ int main()
 
 ## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd (STL/CLR)
 
-Genera un `binder2nd` per un argomento e un functor.
+Genera un oggetto `binder2nd` per un argomento e un functor.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -480,12 +480,12 @@ template<typename Fun,
         Arg right);
 ```
 
-#### <a name="template-parameters"></a>Parametri di modello
+#### <a name="template-parameters"></a>Parametri di template
 
 *ARG*<br/>
 Il tipo di argomento.
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor.
 
 #### <a name="function-parameters"></a>Parametri funzione
@@ -493,12 +493,12 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-*right*<br/>
+*Ok*<br/>
 Secondo argomento di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il secondo argomento in un functor a un solo argomento che lo chiama con un primo argomento.
+La funzione di modello restituisce [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il secondo argomento in un functor a un solo argomento che lo chiama con un primo argomento.
 
 ### <a name="example"></a>Esempio
 
@@ -577,12 +577,12 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor archiviato.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -601,9 +601,9 @@ Tipo del functor archiviato.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a un argomento che archivia un functor a due argomenti e un primo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il risultato della chiamata al functor archiviato con il primo argomento archiviato e il secondo argomento fornito.
+La classe modello descrive un functor a un argomento che archivia un functor a due argomenti e un primo argomento. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca il risultato della chiamata al functor archiviato con il primo argomento archiviato e il secondo argomento fornito.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -682,12 +682,12 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor archiviato.
 
 ## <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -706,9 +706,9 @@ Tipo del functor archiviato.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a un argomento che archivia un functor a due argomenti e un secondo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il risultato della chiamata al functor archiviato con il primo argomento fornito e il secondo argomento archiviato.
+La classe modello descrive un functor a un argomento che archivia un functor a due argomenti e un secondo argomento. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca il risultato della chiamata al functor archiviato con il primo argomento fornito e il secondo argomento archiviato.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -792,7 +792,7 @@ Tipo degli argomenti e valore restituito.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -812,7 +812,7 @@ Tipo degli argomenti e valore restituito.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento diviso per il secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -893,7 +893,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -911,9 +911,9 @@ Tipo degli argomenti.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è uguale al secondo.
+La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è uguale al secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -994,7 +994,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1014,7 +1014,7 @@ Tipo degli argomenti.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è maggiore del secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1095,7 +1095,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1113,9 +1113,9 @@ Tipo degli argomenti.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è maggiore o uguale al secondo.
+La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è maggiore o uguale al secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1196,7 +1196,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1216,7 +1216,7 @@ Tipo degli argomenti.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è minore del secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1297,7 +1297,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1315,9 +1315,9 @@ Tipo degli argomenti.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è minore o uguale al secondo.
+La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è minore o uguale al secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1398,7 +1398,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1418,7 +1418,7 @@ Tipo degli argomenti.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento e il secondo test sono true.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1497,7 +1497,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |argument_type|Tipo di argomento del functor.|
 |delegate_type|Tipo del delegato generico.|
@@ -1516,7 +1516,7 @@ Tipo degli argomenti.
 
 La classe modello descrive un functor a un argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il relativo argomento viene testato come false.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1589,7 +1589,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1607,9 +1607,9 @@ Tipo degli argomenti.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento o il secondo test è true.
+La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento o il secondo test è true.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1690,7 +1690,7 @@ Tipo degli argomenti e valore restituito.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1699,7 +1699,7 @@ Tipo degli argomenti e valore restituito.
 
 |Membro|Descrizione|
 |------------|-----------------|
-|Meno|Costruisce il functor.|
+|minus|Costruisce il functor.|
 
 |Operatore|Descrizione|
 |--------------|-----------------|
@@ -1710,7 +1710,7 @@ Tipo degli argomenti e valore restituito.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento meno il secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1791,7 +1791,7 @@ Tipo degli argomenti e valore restituito.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1811,7 +1811,7 @@ Tipo degli argomenti e valore restituito.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento modulo il secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1892,7 +1892,7 @@ Tipo degli argomenti e valore restituito.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -1912,7 +1912,7 @@ Tipo degli argomenti e valore restituito.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento per il secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -1991,7 +1991,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |argument_type|Tipo di argomento del functor.|
 |delegate_type|Tipo del delegato generico.|
@@ -2010,7 +2010,7 @@ Tipo degli argomenti.
 
 La classe modello descrive un functor a un argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisce il relativo argomento negato.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -2083,7 +2083,7 @@ Tipo degli argomenti.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -2101,9 +2101,9 @@ Tipo degli argomenti.
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento non è uguale al secondo.
+La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento non è uguale al secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -2152,7 +2152,7 @@ int main()
 
 ## <a name="not1-stlclr"></a><a name="not1"></a>not1 (STL/CLR)
 
-Genera un `unary_negate` per un functor.
+Genera un oggetto `unary_negate` per un functor.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -2161,9 +2161,9 @@ template<typename Fun>
     unary_negate<Fun> not1(Fun% functor);
 ```
 
-#### <a name="template-parameters"></a>Parametri di modello
+#### <a name="template-parameters"></a>Parametri di template
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor.
 
 #### <a name="function-parameters"></a>Parametri funzione
@@ -2173,7 +2173,7 @@ Functore di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione modello restituisce [unary_negate`<Fun>(functor)`(STL/CLR)](../dotnet/unary-negate-stl-clr.md) . Viene usato come un modo pratico per eseguire il wrapping di un functor a un solo argomento in un functor che fornisce il proprio NOT logico.
+La funzione di modello restituisce [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` . Viene usato come un modo pratico per eseguire il wrapping di un functor a un solo argomento in un functor che fornisce il proprio NOT logico.
 
 ### <a name="example"></a>Esempio
 
@@ -2224,7 +2224,7 @@ int main()
 
 ## <a name="not2-stlclr"></a><a name="not2"></a>not2 (STL/CLR)
 
-Genera un `binary_negate` per un functor.
+Genera un oggetto `binary_negate` per un functor.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -2233,9 +2233,9 @@ template<typename Fun>
     binary_negate<Fun> not2(Fun% functor);
 ```
 
-#### <a name="template-parameters"></a>Parametri di modello
+#### <a name="template-parameters"></a>Parametri di template
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor.
 
 #### <a name="function-parameters"></a>Parametri funzione
@@ -2245,7 +2245,7 @@ Functore di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione modello restituisce [binary_negate`<Fun>(functor)`(STL/CLR)](../dotnet/binary-negate-stl-clr.md) . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti in un functor che fornisce il proprio NOT logico.
+La funzione di modello restituisce [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti in un functor che fornisce il proprio NOT logico.
 
 ### <a name="example"></a>Esempio
 
@@ -2337,7 +2337,7 @@ Tipo degli argomenti e valore restituito.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |delegate_type|Tipo del delegato generico.|
 |first_argument_type|Tipo del primo argomento del functor.|
@@ -2346,7 +2346,7 @@ Tipo degli argomenti e valore restituito.
 
 |Membro|Descrizione|
 |------------|-----------------|
-|Più|Costruisce il functor.|
+|plus|Costruisce il functor.|
 
 |Operatore|Descrizione|
 |--------------|-----------------|
@@ -2357,7 +2357,7 @@ Tipo degli argomenti e valore restituito.
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento più il secondo.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 
@@ -2472,7 +2472,7 @@ hash(L'b') = 22
 
 ## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
 
-La classe genereic descrive un delegato di un solo argomento che restituisce **void**. Viene usato per specificare un delegato in termini di tipo di argomento.
+La classe genereic descrive un delegato di un solo argomento che restituisce **`void`** . Viene usato per specificare un delegato in termini di tipo di argomento.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -2488,7 +2488,7 @@ Il tipo di argomento.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il delegato genereic descrive una funzione a un solo argomento che restituisce **void**.
+Il delegato genereic descrive una funzione a un solo argomento che restituisce **`void`** .
 
 Si noti che per:
 
@@ -2561,12 +2561,12 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*Divertimento*<br/>
+*Fun*<br/>
 Tipo del functor archiviato.
 
 ### <a name="member-functions"></a>Funzioni di membro
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |argument_type|Tipo di argomento del functor.|
 |delegate_type|Tipo del delegato generico.|
@@ -2579,13 +2579,13 @@ Tipo del functor archiviato.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |operator()|Calcola la funzione desiderata.|
-|delegate_type^|Esegue il cast del functore a un delegato.|
+|delegate_type ^|Esegue il cast del functore a un delegato.|
 
 ### <a name="remarks"></a>Osservazioni
 
-La classe modello descrive un functor a un argomento che archivia un altro functor a un argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca l'oggetto logico NOT del functor archiviato chiamato con l'argomento.
+La classe modello descrive un functor a un argomento che archivia un altro functor a un argomento. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca l'oggetto logico Not del functor archiviato chiamato con l'argomento.
 
-È anche possibile passare l'oggetto come argomento della funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
+È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.
 
 ### <a name="example"></a>Esempio
 

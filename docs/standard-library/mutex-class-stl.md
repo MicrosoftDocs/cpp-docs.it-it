@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 84e6e3a46903a204444df9886556ae2c563304a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e2165a70dec8a3d3918eece6cb78057ac19138
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364841"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233041"
 ---
 # <a name="mutex-class-c-standard-library"></a>Classe mutex (libreria standard C++)
 
@@ -39,25 +39,25 @@ class mutex;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Mutex](#mutex)|Costruisce un oggetto `mutex`.|
-|[Distruttore mutex:: mutex](#dtormutex_destructor)|Rilascia le risorse utilizzate dall'oggetto `mutex`.|
+|[mutex](#mutex)|Costruisce un oggetto `mutex`.|
+|[distruttore mutex:: ~ mutex](#dtormutex_destructor)|Rilascia le risorse utilizzate dall'oggetto `mutex`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[lock](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|
+|[blocco](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|
 |[native_handle](#native_handle)|Restituisce il tipo specifico dell'implementazione che rappresenta l'handle mutex.|
 |[try_lock](#try_lock)|Tenta di ottenere proprietà di `mutex` senza bloccare.|
-|[Sbloccare](#unlock)|Rilascia la proprietà di `mutex`.|
+|[sbloccare](#unlock)|Rilascia la proprietà di `mutex`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<mutex>
+**Intestazione:**\<mutex>
 
 **Spazio dei nomi:** std
 
-## <a name="mutexlock"></a><a name="lock"></a>mutex::blocco
+## <a name="mutexlock"></a><a name="lock"></a>mutex:: Lock
 
 Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.
 
@@ -69,7 +69,7 @@ void lock();
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="mutexmutex-constructor"></a><a name="mutex"></a>Mutex::mutex Costruttore
+## <a name="mutexmutex-constructor"></a><a name="mutex"></a>Costruttore Mutex:: mutex
 
 Costruisce un oggetto `mutex` non bloccato.
 
@@ -77,7 +77,7 @@ Costruisce un oggetto `mutex` non bloccato.
 constexpr mutex() noexcept;
 ```
 
-## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>Distruttore mutex:: mutex
+## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>distruttore mutex:: ~ mutex
 
 Rilascia le risorse usate dall'oggetto `mutex`.
 
@@ -89,7 +89,7 @@ Rilascia le risorse usate dall'oggetto `mutex`.
 
 Se l'oggetto è bloccato quando il distruttore viene eseguito, il comportamento non è definito.
 
-## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex::native_handle
+## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex:: native_handle
 
 Restituisce il tipo specifico dell'implementazione che rappresenta l'handle mutex. L'handle del mutex può essere usato in modi specifici dell'implementazione.
 
@@ -101,7 +101,7 @@ native_handle_type native_handle();
 
 `native_handle_type` viene definito come `Concurrency::critical_section *` di cui viene eseguito il cast come `void *`.
 
-## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex::try_lock
+## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex:: try_lock
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -111,13 +111,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene `mutex`correttamente la proprietà dell'oggetto ; in caso contrario, **false**.
+**`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="mutexunlock"></a><a name="unlock"></a>mutex::sblocco
+## <a name="mutexunlock"></a><a name="unlock"></a>mutex:: Unlock
 
 Rilascia la proprietà di `mutex`.
 
@@ -131,5 +131,5 @@ Se il thread chiamante non è proprietario di `mutex`, il comportamento non è d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[\<>mutex](../standard-library/mutex.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943220"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221965"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -56,14 +56,14 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 Parte reale del numero complesso da costruire.
 
-*imaginary*<br/>
+*immaginaria*<br/>
 Parte immaginaria del numero complesso da costruire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Struttura **_Dcomplex**, **_Fcomplex**o **_Lcomplex** che rappresenta il numero complesso \* (*reale*, *immaginario* i) per i valori del tipo a virgola mobile specificato.
+Struttura di **_Dcomplex**, **_Fcomplex**o **_Lcomplex** che rappresenta il numero complesso (*reale*e *immaginaria* \* ) per i valori del tipo a virgola mobile specificato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le funzioni **_Cbuild**, **_FCbuild**e **_LCbuild** semplificano la creazione di tipi complessi. Usare le funzioni [CREAL, crealf, Creall](creal-crealf-creall.md) e [Cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) per recuperare le parti reali e immaginarie dei numeri complessi rappresentati.
 
@@ -73,7 +73,7 @@ Le funzioni **_Cbuild**, **_FCbuild**e **_LCbuild** semplificano la creazione di
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **_Fcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft ai tipi nativi C99 non implementati **Double _Complex**, **float _Complex**e **long double _Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **_Fcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft ai tipi nativi C99 non implementati **`double _Complex`** , e, **`float _Complex`** **`long double _Complex`** rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

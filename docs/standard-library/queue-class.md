@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419658"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232937"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -45,32 +45,32 @@ class queue
 *Tipo*\
 Tipo di dati degli elementi da archiviare nell'oggetto queue
 
-\ *contenitore*
+*Contenitore*\
 Tipo del contenitore sottostante usato per implementare l'oggetto queue.
 
 ## <a name="remarks"></a>Osservazioni
 
-Gli elementi della classe `Type` specificati nel primo parametro di modello di un oggetto Queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe di contenitore sottostante `Container` stipulata dal secondo parametro di modello. Il `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
+Gli elementi della classe `Type` stipulati nel primo parametro di modello di un oggetto Queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe del contenitore sottostante `Container` prevista dal secondo parametro di modello. L'oggetto `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
 
-Le classi contenitore sottostanti appropriate per la coda includono [deque](../standard-library/deque-class.md) ed [elenco](../standard-library/list-class.md)o qualsiasi altro contenitore sequenza che supporta le operazioni di `front`, `back`, `push_back`e `pop_front`. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
+Le classi contenitore sottostanti appropriate per la coda includono [deque](../standard-library/deque-class.md) ed [elenco](../standard-library/list-class.md)o qualsiasi altro contenitore sequenza che supporta le operazioni di `front` ,, `back` `push_back` e `pop_front` . La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
 
-Gli oggetti Queue sono confrontabili con l'uguaglianza se e solo se gli elementi della classe `Type` sono confrontabili con l'uguaglianza e sono meno di confrontabili se e solo se gli elementi della classe `Type` sono confrontabili con minore.
+Gli oggetti Queue sono confrontabili tra uguaglianza se e solo se gli elementi della classe `Type` sono confrontabili con l'uguaglianza e sono meno di confrontabili se e solo se gli elementi della classe `Type` sono confrontabili con minore.
 
 Esistono tre tipi di adattatori di contenitori definiti nella libreria standard C++: stack, queue e priority_queue. Ognuno di essi limita la funzionalità di una classe contenitore sottostante per fornire un'interfaccia controllata con precisione a una struttura di dati standard.
 
-- La [classe stack](../standard-library/stack-class.md) supporta una struttura di dati LIFO (Last-In, First-Out). Una buona analogia è costituita da una pila di piatti. Gli elementi (piatti) possono essere inseriti, ispezionati o rimossi solo dalla cima della pila/stack, ovvero l'ultimo elemento alla fine del contenitore di base. La restrizione relativa alla possibilità di accedere solo al primo elemento è il motivo per l'uso della classe stack.
+- La [classe Stack](../standard-library/stack-class.md) supporta una struttura di dati LIFO (Last-in, First-out). Una buona analogia è costituita da una pila di piatti. Gli elementi (piatti) possono essere inseriti, ispezionati o rimossi solo dalla cima della pila/stack, ovvero l'ultimo elemento alla fine del contenitore di base. La restrizione relativa alla possibilità di accedere solo al primo elemento è il motivo per l'uso della classe stack.
 
-- La classe queue supporta una struttura dei dati FIFO (First-In, First-Out). Una buona analogia è costituita da persone in coda davanti allo sportello di una banca. Gli elementi (persone) possono essere aggiunti alla fine della fila e vengono rimossi dalla parte iniziale della fila. È possibile ispezionare sia l'inizio che la fine della fila. La restrizione relativa alla possibilità di accedere solo agli elementi iniziali e finali in questo modo costituisce il motivo per l'uso della classe queue.
+- La classe queue supporta una struttura di dati FIFO (First-In, First-Out). Una buona analogia è costituita da persone in coda davanti allo sportello di una banca. Gli elementi (persone) possono essere aggiunti alla fine della fila e vengono rimossi dalla parte iniziale della fila. È possibile ispezionare sia l'inizio che la fine della fila. La restrizione relativa alla possibilità di accedere solo agli elementi iniziali e finali in questo modo costituisce il motivo per l'uso della classe queue.
 
-- La [classe priority_queue](../standard-library/priority-queue-class.md) ordina gli elementi in modo che l'elemento più grande sia sempre in posizione iniziale. Supporta l'inserimento di un elemento e l'ispezione e la rimozione del primo elemento. Una buona analogia è costituita da una fila di persone disposte in base a età, altezza o qualche altro criterio.
+- La [classe priority_queue](../standard-library/priority-queue-class.md) ordina gli elementi in modo che l'elemento più grande sia sempre in prima posizione. Supporta l'inserimento di un elemento e l'ispezione e la rimozione del primo elemento. Una buona analogia è costituita da una fila di persone disposte in base a età, altezza o qualche altro criterio.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
 |||
 |-|-|
-|[queue](#queue)|Costruisce un `queue` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
+|[coda](#queue)|Costruisce un `queue` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -84,14 +84,14 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 |||
 |-|-|
-|[back](#back)|Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine della `queue`.|
+|[Indietro](#back)|Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine della `queue`.|
 |[empty](#empty)|Verifica se `queue` è vuoto.|
-|[front](#front)|Restituisce un riferimento al primo elemento all'inizio dell'oggetto `queue`.|
-|[pop](#pop)|Rimuove un elemento dall'inizio dell'oggetto `queue`.|
+|[fronte](#front)|Restituisce un riferimento al primo elemento all'inizio dell'oggetto `queue`.|
+|[popup](#pop)|Rimuove un elemento dall'inizio dell'oggetto `queue`.|
 |[push](#push)|Aggiunge un elemento alla fine dell'oggetto `queue`.|
 |[size](#size)|Restituisce il numero di elementi nel `queue`.|
 
-## <a name="back"></a>Indietro
+## <a name="back"></a><a name="back"></a>Indietro
 
 Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine dell'oggetto queue.
 
@@ -107,9 +107,9 @@ Ultimo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore resti
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `back` viene assegnato a una `reference`, l'oggetto Queue può essere modificato.
+Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `back` viene assegnato a un `reference` , l'oggetto Queue può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a>container_type
 
 Tipo che fornisce il contenitore di base da adattare.
 
@@ -155,7 +155,7 @@ Per altre informazioni su `Container`, vedere la sezione Note dell'argomento [Cl
 
 Vedere l'esempio relativo a [queue](#queue) per indicazioni su come dichiarare e usare `container_type`.
 
-## <a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a>vuoto
 
 Verifica se un oggetto queue è vuoto.
 
@@ -165,7 +165,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto queue è vuoto; in caso contrario, **false**.
+**`true`** Se la coda è vuota. **`false`** se la coda non è vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>fronte
+## <a name="front"></a><a name="front"></a>fronte
 
 Restituisce un riferimento al primo elemento all'inizio dell'oggetto queue.
 
@@ -217,11 +217,11 @@ Primo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore restit
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `front` viene assegnato a una `reference`, l'oggetto Queue può essere modificato.
+Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `front` viene assegnato a un `reference` , l'oggetto Queue può essere modificato.
 
-La funzione membro restituisce un `reference` al primo elemento della sequenza controllata, che non deve essere vuoto.
+La funzione membro restituisce un oggetto `reference` al primo elemento della sequenza controllata, che non deve essere vuoto.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>popup
+## <a name="pop"></a><a name="pop"></a>popup
 
 Rimuove un elemento dall'inizio dell'oggetto queue.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>spingere
+## <a name="push"></a><a name="push"></a>spingere
 
 Aggiunge un elemento alla fine dell'oggetto queue.
 
@@ -319,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Elemento aggiunto alla fine dell'oggetto queue.
 
 ### <a name="remarks"></a>Osservazioni
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>coda
+## <a name="queue"></a>Coda di <a name="queue"></a>
 
 Costruisce un oggetto queue vuoto o che rappresenta una copia di un oggetto contenitore di base.
 
@@ -370,8 +370,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
-Il contenitore **const** di cui l'oggetto queue costruito deve essere una copia.
+*Ok*\
+**`const`** Contenitore di cui la coda costruita deve essere una copia.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a>dimensioni
 
 Restituisce il numero di elementi dell'oggetto queue.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un oggetto queue.
 
@@ -482,7 +482,7 @@ Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'ogg
 
 Vedere l'esempio relativo a [queue::front](#front) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto queue.
 
@@ -526,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -98,26 +98,26 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-ms.openlocfilehash: 815ec8c51bf4a446d5ff92c443f1086c1b2d0eca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7faba79dfcd585e9f397c6ecd0bf594a5fb6c501
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208715"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221406"
 ---
 # <a name="hash_multimap-stlclr"></a>hash_multimap (STL/CLR)
 
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi con accesso bidirezionale. Usare il contenitore `hash_multimap` per gestire una sequenza di elementi come tabella hash, ogni voce di tabella che archivia un elenco collegato bidirezionale di nodi e ogni nodo che archivia un elemento. Un elemento è costituito da una chiave, per ordinare la sequenza e un valore mappato, che viene utilizzato per la corsa.
 
-Nella descrizione seguente `GValue` è uguale a:
+Nella descrizione riportata di seguito `GValue` è uguale a:
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
 dove:
 
-`GKey` è uguale a *Key* a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Key^`
+`GKey`equivale a *Key* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso`Key^`
 
-`GMapped` è uguale a quello *mappato* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Mapped^`
+`GMapped`è uguale a *mappato* a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è`Mapped^`
 
 ## <a name="syntax"></a>Sintassi
 
@@ -141,18 +141,18 @@ template<typename Key,
 *Chiave*<br/>
 Tipo del componente chiave di un elemento nella sequenza controllata.
 
-*Mappato*<br/>
+*Mapped*<br/>
 Tipo del componente aggiuntivo di un elemento nella sequenza controllata.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cliext/hash_map >
+**Intestazione:**\<cliext/hash_map>
 
 **Spazio dei nomi:** cliext
 
 ## <a name="declarations"></a>Dichiarazioni
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |[hash_multimap::const_iterator (STL/CLR)](#const_iterator)|Tipo di un iteratore costante per la sequenza controllata.|
 |[hash_multimap::const_reference (STL/CLR)](#const_reference)|Tipo di un riferimento costante a un elemento.|
@@ -214,43 +214,43 @@ Tipo del componente aggiuntivo di un elemento nella sequenza controllata.
 |<xref:System.Collections.ICollection>|Mantiene il gruppo di elementi.|
 |<xref:System.Collections.Generic.IEnumerable%601>|Sequenza di elementi tipizzati.|
 |<xref:System.Collections.Generic.ICollection%601>|Mantiene il gruppo di elementi tipizzati.|
-|Chiave\<IHash, valore >|Mantiene il contenitore generico.|
+|IHash\<Key, Value>|Mantiene il contenitore generico.|
 
 ## <a name="remarks"></a>Osservazioni
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla come singoli nodi in un elenco collegato bidirezionale. Per velocizzare l'accesso, l'oggetto gestisce anche una matrice di lunghezza variabile di puntatori nell'elenco (tabella hash), gestendo in modo efficace l'intero elenco come sequenza di sottoelenchi o bucket. Inserisce gli elementi in un bucket che mantiene ordinato modificando i collegamenti tra i nodi, mai copiando il contenuto di un nodo in un altro. Ciò significa che è possibile inserire e rimuovere elementi liberamente senza disturbare gli elementi rimanenti.
 
-L'oggetto ordina ogni bucket che controlla chiamando un oggetto delegato archiviato di tipo [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<=(key_type, key_type)`.
+L'oggetto ordina ogni bucket che controlla chiamando un oggetto delegato archiviato di tipo [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<=(key_type, key_type)` .
 
-È possibile accedere all'oggetto delegato archiviato chiamando la funzione membro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Tale oggetto delegato deve definire un ordinamento equivalente tra chiavi di tipo [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Ciò significa che, per due chiavi `X` e `Y`:
+È possibile accedere all'oggetto delegato archiviato chiamando la funzione membro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Tale oggetto delegato deve definire un ordinamento equivalente tra chiavi di tipo [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Ciò significa che, per due chiavi `X` e `Y` :
 
-`key_comp()(X, Y)` restituisce lo stesso risultato booleano a ogni chiamata.
+`key_comp()(X, Y)`Restituisce lo stesso risultato booleano a ogni chiamata.
 
-Se `key_comp()(X, Y) && key_comp()(Y, X)` è true, `X` e `Y` hanno un ordinamento equivalente.
+Se `key_comp()(X, Y) && key_comp()(Y, X)` è true, `X` e `Y` si afferma che hanno un ordinamento equivalente.
 
-Tutte le regole di ordinamento che si comportano come `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` o `operator==(key_type, key_type)` definiscono l'ordinamento eqivalent.
+Qualsiasi regola di ordinamento che si comporta come `operator<=(key_type, key_type)` `operator>=(key_type, key_type)` o `operator==(key_type, key_type)` definisce l'ordine di eqivalent.
 
-Si noti che il contenitore garantisce solo che gli elementi le cui chiavi hanno un ordinamento equivalente (e quale hash per lo stesso valore Integer) siano adiacenti all'interno di un bucket. A differenza della classe modello [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md), un oggetto della classe modello `hash_multimap` non richiede che le chiavi per tutti gli elementi siano univoche. Due o più chiavi possono avere un ordinamento equivalente.
+Si noti che il contenitore garantisce solo che gli elementi le cui chiavi hanno un ordinamento equivalente (e quale hash per lo stesso valore Integer) siano adiacenti all'interno di un bucket. A differenza della classe modello [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md), un oggetto della classe modello non `hash_multimap` richiede che le chiavi per tutti gli elementi siano univoche. Due o più chiavi possono avere un ordinamento equivalente.
 
-L'oggetto determina quale bucket deve contenere una chiave di ordinamento specificata chiamando un oggetto delegato archiviato di tipo [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` per ottenere un valore integer che dipende dal valore della chiave. È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è la funzione `System::Object::hash_value(key_type)`. Ciò significa che per qualsiasi chiave `X` e `Y`:
+L'oggetto determina quale bucket deve contenere una chiave di ordinamento specificata chiamando un oggetto delegato archiviato di tipo [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` per ottenere un valore integer che dipende dal valore della chiave. È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è la funzione `System::Object::hash_value(key_type)` . Ciò significa che per tutte le chiavi `X` e `Y` :
 
-`hash_delegate()(X)` restituisce lo stesso risultato Integer a ogni chiamata.
+`hash_delegate()(X)`Restituisce lo stesso risultato Integer a ogni chiamata.
 
-Se `X` e `Y` hanno un ordinamento equivalente, `hash_delegate()(X)` deve restituire lo stesso risultato Integer `hash_delegate()(Y)`.
+Se `X` e `Y` hanno un ordinamento equivalente, `hash_delegate()(X)` deve restituire lo stesso risultato Integer di `hash_delegate()(Y)` .
 
 Ogni elemento contiene una chiave separata e un valore mappato. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario con una serie di operazioni indipendenti dal numero di elementi nella sequenza (tempo costante), almeno nei casi migliori. Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.
 
 Se i valori hash non sono distribuiti in modo uniforme, tuttavia, una tabella hash può essere degenerata. Nell'estremo, per una funzione hash che restituisce sempre lo stesso valore, la ricerca, l'inserimento e la rimozione sono proporzionali al numero di elementi nella sequenza (tempo lineare). Il contenitore tenta di scegliere una funzione hash ragionevole, le dimensioni del bucket medio e le dimensioni della tabella hash (numero totale di bucket), ma è possibile eseguire l'override di una o tutte le opzioni. Vedere, ad esempio, le funzioni [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) e [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
 
-Un hash_multimap supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti, dato un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito dal`()`[hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di hash_multimap per raggiungere il nodo Head, che verrà quindi confrontato con l'`end()`. Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()`.
+Un hash_multimap supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti, dato un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di hash_multimap per raggiungere il nodo Head e quindi confrontare uguale a `end()` . Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()` .
 
 Si noti che non è possibile fare riferimento a un elemento hash_multimap direttamente in base alla posizione numerica, che richiede un iteratore ad accesso casuale.
 
-Un iteratore di hash_multimap archivia un handle al nodo hash_multimap associato, che a sua volta archivia un handle per il contenitore associato. È possibile utilizzare gli iteratori solo con gli oggetti contenitore associati. Un iteratore di hash_multimap rimane valido finché il relativo nodo hash_multimap associato è associato ad alcune hash_multimap. Inoltre, un iteratore valido è dereferenziabile, che può essere usato per accedere o modificare il valore dell'elemento che designa, purché non sia uguale a `end()`.
+Un iteratore di hash_multimap archivia un handle al nodo hash_multimap associato, che a sua volta archivia un handle per il contenitore associato. È possibile utilizzare gli iteratori solo con gli oggetti contenitore associati. Un iteratore di hash_multimap rimane valido finché il relativo nodo hash_multimap associato è associato ad alcune hash_multimap. Inoltre, un iteratore valido è dereferenziabile, che può essere utilizzato per accedere o modificare il valore dell'elemento che designa, a condizione che non sia uguale a `end()` .
 
 La cancellazione o la rimozione di un elemento chiama il distruttore per il valore archiviato. L'eliminazione definitiva del contenitore Cancella tutti gli elementi. Pertanto, un contenitore il cui tipo di elemento è una classe di riferimento garantisce che nessun elemento sopravviva al contenitore. Si noti, tuttavia, che un contenitore di handle *non elimina definitivamente* i relativi elementi.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ## <a name="hash_multimapbegin-stlclr"></a><a name="begin"></a>hash_multimap:: begin (STL/CLR)
 
@@ -389,7 +389,7 @@ void clear();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro chiama in modo efficace [hash_multimap:: erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)`(` [hash_multimap:: begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md)`(),` hash_multimap [:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`())`. Viene usato per garantire che la sequenza controllata sia vuota.
+La funzione membro chiama in modo efficace [hash_multimap:: erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap:: begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -684,7 +684,7 @@ bool empty();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [hash_multimap:: size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`. Viene usato per verificare se la hash_multimap è vuota.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [hash_multimap:: size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() == 0` . Viene usato per verificare se la hash_multimap è vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -794,7 +794,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [hash_multimap:: lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)`(key),` hash_multimap [:: upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)`(key))`. Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [hash_multimap:: lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap:: upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -866,9 +866,9 @@ Elemento da cancellare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso o [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
+La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso o [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
 
-La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`) e restituisce un iteratore che definisce il primo elemento rimanente oltre gli eventuali elementi rimossi oppure `end()` se tale elemento non esiste. Viene usato per rimuovere zero o più elementi contigui.
+La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [ `first` , `last` ) e restituisce un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi o `end()` se tale elemento non esiste. Viene usato per rimuovere zero o più elementi contigui.
 
 La terza funzione membro rimuove qualsiasi elemento della sequenza controllata la cui chiave ha un ordinamento equivalente a *Key*e restituisce un conteggio del numero di elementi rimossi. Viene usato per rimuovere e contare tutti gli elementi che corrispondono a una chiave specificata.
 
@@ -948,7 +948,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`. Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
+Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -1300,7 +1300,7 @@ Fine dell'intervallo da inserire.
 *Pred*<br/>
 Predicato di ordinamento per la sequenza controllata.
 
-*right*<br/>
+*Ok*<br/>
 Oggetto o un intervallo da inserire.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1309,7 +1309,7 @@ Il costruttore:
 
 `hash_multimap();`
 
-Inizializza la sequenza controllata senza elementi, con il predicato di ordinamento predefinito `key_compare()`e con la funzione hash predefinita. Viene usato per specificare una sequenza controllata iniziale vuota, con il predicato di ordinamento e la funzione hash predefiniti.
+Inizializza la sequenza controllata senza elementi, con il predicato di ordinamento predefinito `key_compare()` e con la funzione hash predefinita. Viene usato per specificare una sequenza controllata iniziale vuota, con il predicato di ordinamento e la funzione hash predefiniti.
 
 Il costruttore:
 
@@ -1327,31 +1327,31 @@ Il costruttore:
 
 `hash_multimap(hash_multimap<Key, Mapped>% right);`
 
-Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`), con il predicato di ordinamento predefinito e con la funzione hash predefinita. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dal hash_multimap oggetto a *destra*, con il predicato di ordinamento e la funzione hash predefiniti.
+Inizializza la sequenza controllata con la sequenza [ `right.begin()` , `right.end()` ), con il predicato di ordinamento predefinito e con la funzione hash predefinita. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dal hash_multimap oggetto a *destra*, con il predicato di ordinamento e la funzione hash predefiniti.
 
 Il costruttore:
 
 `hash_multimap(hash_multimap<Key, Mapped>^ right);`
 
-Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`), con il predicato di ordinamento predefinito e con la funzione hash predefinita. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dal hash_multimap oggetto a *destra*, con il predicato di ordinamento e la funzione hash predefiniti.
+Inizializza la sequenza controllata con la sequenza [ `right->begin()` , `right->end()` ), con il predicato di ordinamento predefinito e con la funzione hash predefinita. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dal hash_multimap oggetto a *destra*, con il predicato di ordinamento e la funzione hash predefiniti.
 
 Il costruttore:
 
 `template<typename InIter> hash_multimap(InIter first, InIter last);`
 
-Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato di ordinamento predefinito e con la funzione hash predefinita. Viene usato per rendere la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento e la funzione hash predefiniti.
+Inizializza la sequenza controllata con la sequenza [ `first` , `last` ), con il predicato di ordinamento predefinito e con la funzione hash predefinita. Viene usato per rendere la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento e la funzione hash predefiniti.
 
 Il costruttore:
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`
 
-Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il *predicato*Order predicate e con la funzione hash predefinita. Viene usato per rendere la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento specificato e la funzione hash predefinita.
+Inizializza la sequenza controllata con la sequenza [ `first` , `last` ), con il predicato di ordinamento *predazione*e con la funzione hash predefinita. Viene usato per rendere la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento specificato e la funzione hash predefinita.
 
 Il costruttore:
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il *predicato*Order predicate e con la funzione hash *hashfn*. Viene usato per rendere la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento e la funzione hash specificati.
+Inizializza la sequenza controllata con la sequenza [ `first` , `last` ), con il predicato di ordinamento *predazione*e con la funzione hash *hashfn*. Viene usato per rendere la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento e la funzione hash specificati.
 
 Il costruttore:
 
@@ -1563,10 +1563,10 @@ Inizio dell'intervallo da inserire.
 *last*<br/>
 Fine dell'intervallo da inserire.
 
-*right*<br/>
+*Ok*<br/>
 Enumerazione da inserire.
 
-*val*<br/>
+*Val*<br/>
 Valore della chiave da inserire.
 
 *where*<br/>
@@ -1580,7 +1580,7 @@ La prima funzione membro inserisce un elemento con il valore *Val*e restituisce 
 
 La seconda funzione membro inserisce un elemento con il valore *Val*, usando *where* come hint (per migliorare le prestazioni) e restituisce un iteratore che designa l'elemento appena inserito. Viene usato per inserire un singolo elemento che può essere adiacente a un elemento noto.
 
-La terza funzione membro inserisce la sequenza [`first``last`). Viene usato per inserire zero o più elementi copiati da un'altra sequenza.
+La terza funzione membro inserisce la sequenza [ `first` , `last` ). Viene usato per inserire zero o più elementi copiati da un'altra sequenza.
 
 La quarta funzione membro inserisce la sequenza designata dal *diritto*. Viene usato per inserire una sequenza descritta da un enumeratore.
 
@@ -1877,7 +1877,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce `(float)`[hash_multimap:: size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)`() /` [hash_multimap:: bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)`()`. Viene usato per determinare le dimensioni medie del bucket.
+La funzione membro restituisce `(float)` [hash_multimap:: size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap:: bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md) `()` . Viene usato per determinare le dimensioni medie del bucket.
 
 ### <a name="example"></a>Esempio
 
@@ -1956,7 +1956,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina il primo elemento `X` nella sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; in caso contrario, restituisce un iteratore che definisce `X`. Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina il primo elemento `X` nella sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -2018,7 +2018,7 @@ Valore mappato da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un oggetto `value_type` la cui chiave *è la chiave e il* cui valore mappato è *mappato*. Viene usato per comporre un oggetto adatto per l'uso con diverse altre funzioni membro.
+La funzione membro restituisce un `value_type` oggetto la cui chiave è *la chiave* e il cui valore mappato è *mappato*. Viene usato per comporre un oggetto adatto per l'uso con diverse altre funzioni membro.
 
 ### <a name="example"></a>Esempio
 
@@ -2186,12 +2186,12 @@ hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Contenitore da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore membro copia *right* nell'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
+L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -2337,7 +2337,7 @@ void rehash();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro ricompila la tabella hash, assicurando che [hash_multimap:: load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md)`() <=` [hash_multimap:: max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md). In caso contrario, la tabella hash aumenta di dimensioni solo se necessario dopo un inserimento. Non diminuisce mai automaticamente le dimensioni. Viene usato per regolare le dimensioni della tabella hash.
+La funzione membro ricompila la tabella hash, assicurando che [hash_multimap:: load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap:: max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md). In caso contrario, la tabella hash aumenta di dimensioni solo se necessario dopo un inserimento. Non diminuisce mai automaticamente le dimensioni. Viene usato per regolare le dimensioni della tabella hash.
 
 ### <a name="example"></a>Esempio
 
@@ -2506,7 +2506,7 @@ size_type size();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [hash_multimap:: Empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)`()`.
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [hash_multimap:: Empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Esempio
 
@@ -2606,12 +2606,12 @@ void swap(hash_multimap<Key, Mapped>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Contenitore con cui scambiare il contenuto.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro scambia le sequenze controllate tra `this` e *right*. Esegue questa operazione in un tempo costante e non genera alcuna eccezione. Viene usato come modo rapido per scambiare il contenuto di due contenitori.
+La funzione membro scambia le sequenze controllate tra **`this`** e *right*. Esegue questa operazione in un tempo costante e non genera alcuna eccezione. Viene usato come modo rapido per scambiare il contenuto di due contenitori.
 
 ### <a name="example"></a>Esempio
 
@@ -2729,7 +2729,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina l'ultimo elemento `X` nella sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o `X` è l'ultimo elemento nella sequenza controllata, restituisce [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; in caso contrario, restituisce un iteratore che definisce il primo elemento oltre `X`. Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina l'ultimo elemento della `X` sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
