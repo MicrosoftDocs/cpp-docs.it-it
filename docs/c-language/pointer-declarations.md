@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232152"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211762"
 ---
 # <a name="pointer-declarations"></a>Dichiarazioni di puntatori
 
@@ -40,9 +40,9 @@ Una *dichiarazione di puntatore* denomina una variabile puntatore e specifica il
 
 *type-specifier* specifica il tipo dell'oggetto, che può essere qualsiasi tipo di base, struttura o unione. Le variabili puntatore possono inoltre fare riferimento a funzioni, matrici e altri puntatori. Per informazioni sulla dichiarazione e l'interpretazione di tipi di puntatore più complessi, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md).
 
-Rendendo *type-specifier* **void**, è possibile ritardare la specifica del tipo a cui fa riferimento il puntatore. Tale elemento viene definito "puntatore a **void**" e viene scritto come `void *`. Una variabile dichiarata come puntatore a *void* può essere usata per fare riferimento a un oggetto di qualsiasi tipo. Tuttavia, per eseguire la maggior parte delle operazioni sul puntatore o sull'oggetto ai quali fa riferimento, il tipo a cui fa riferimento deve essere specificato in modo esplicito per ogni operazione. Le variabili di tipo **char** <strong>\*</strong> e Type **void** <strong>\*</strong> sono compatibili con l'assegnazione senza un cast di tipo. Tale conversione può essere eseguita con un cast di tipo. per altre informazioni, vedere [conversioni di cast di tipo](../c-language/type-cast-conversions.md) .
+Rendendo il *tipo-specifier* **`void`** , è possibile ritardare la specifica del tipo a cui fa riferimento il puntatore. Tale elemento viene definito "puntatore a **`void`** " e viene scritto come `void *` . Una variabile dichiarata come puntatore a *void* può essere usata per fare riferimento a un oggetto di qualsiasi tipo. Tuttavia, per eseguire la maggior parte delle operazioni sul puntatore o sull'oggetto ai quali fa riferimento, il tipo a cui fa riferimento deve essere specificato in modo esplicito per ogni operazione. (Variabili di tipo **`char`** <strong>\*</strong> e il tipo **`void`** <strong>\*</strong> sono compatibili con l'assegnazione senza un cast di tipo. Tale conversione può essere eseguita con un cast di tipo. per altre informazioni, vedere [conversioni di cast di tipo](../c-language/type-cast-conversions.md) .
 
-*type-qualifier* può essere **const** o **volatile**, oppure entrambi. Tali qualificatori specificano rispettivamente che il puntatore non può essere modificato dal programma stesso (**const**) o che il puntatore può essere modificato in modo legittimo da un processo che esula dal controllo del programma (**volatile**). Vedere [Qualificatori di tipo](../c-language/type-qualifiers.md) per altre informazioni su **const** e **volatile**.
+Il *qualificatore di tipo* può essere **`const`** o o **`volatile`** entrambi. Questi specificano, rispettivamente, che il puntatore non può essere modificato dal programma stesso ( **`const`** ) o che il puntatore può essere modificato legittimamente da un processo che esula dal controllo del programma ( **`volatile`** ). Per ulteriori informazioni su e, vedere [qualificatori di tipo](../c-language/type-qualifiers.md) **`const`** **`volatile`** .
 
 *declarator* assegna un nome alla variabile e può includere un modificatore di tipo. Ad esempio, se *declarator* rappresenta una matrice, il tipo del puntatore viene modificato per rappresentare un puntatore a una matrice.
 
@@ -56,26 +56,26 @@ Negli esempi riportati di seguito vengono illustrate le dichiarazioni di puntato
 char *message; /* Declares a pointer variable named message */
 ```
 
-Il puntatore *message* fa riferimento a una variabile con il tipo **char**.
+Il puntatore del *messaggio* punta a una variabile di **`char`** tipo.
 
 ```
 int *pointers[10];  /* Declares an array of pointers */
 ```
 
-La matrice *pointers* contiene 10 elementi. Ogni elemento è un puntatore a una variabile con il tipo **int**.
+La matrice di *puntatori* ha 10 elementi; ogni elemento è un puntatore a una variabile di **`int`** tipo.
 
 ```
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-La variabile *pointer* fa riferimento a una matrice con 10 elementi. Ogni elemento di questa matrice ha il tipo **int**.
+La variabile *pointer* fa riferimento a una matrice con 10 elementi. Ogni elemento in questa matrice è di **`int`** tipo.
 
 ```
 int const *x;      /* Declares a pointer variable, x,
                       to a constant value */
 ```
 
-Il puntatore *x* può essere modificato per fare riferimento a un valore **int** diverso, ma il valore a cui fa riferimento non può essere modificato.
+Il puntatore *x* può essere modificato in modo da puntare a un **`int`** valore diverso, ma il valore a cui fa riferimento non può essere modificato.
 
 ```
 const int some_object = 5 ;
@@ -85,7 +85,7 @@ int volatile *const z = &some_object;
 int *const volatile w = &some_object;
 ```
 
-La variabile *y* in queste dichiarazioni viene dichiarata come puntatore costante a un valore **int**. Il valore a cui fa riferimento può essere modificato, ma il puntatore deve sempre fare riferimento alla stessa posizione, vale a dire all'indirizzo di *fixed_object*. Allo stesso modo, *z* è un puntatore costante, ma viene anche dichiarato per fare riferimento a un oggetto **int** il cui valore non può essere modificato dal programma. L'identificatore aggiuntivo **volatile** indica che anche se il valore di **const int** a cui fa riferimento *z* non può essere modificato dal programma, potrebbe essere modificato in modo legittimo da un processo in esecuzione simultanea al programma. La dichiarazione di *w* specifica che il programma non può modificare né il valore a cui viene fatto riferimento, né il puntatore.
+La variabile *y* in queste dichiarazioni viene dichiarata come puntatore costante a un **`int`** valore. Il valore a cui fa riferimento può essere modificato, ma il puntatore deve sempre fare riferimento alla stessa posizione, vale a dire all'indirizzo di *fixed_object*. Analogamente, *z* è un puntatore costante, ma viene anche dichiarato per puntare a un oggetto il **`int`** cui valore non può essere modificato dal programma. L'identificatore aggiuntivo **`volatile`** indica che anche se il valore di **const int** a cui punta *z* non può essere modificato dal programma, potrebbe essere modificato in modo legittimo da un processo in esecuzione contemporaneamente al programma. La dichiarazione di *w* specifica che il programma non può modificare né il valore a cui viene fatto riferimento, né il puntatore.
 
 ```
 struct list *next, *previous; /* Uses the tag for list */
@@ -102,7 +102,7 @@ struct list
 } line;
 ```
 
-La variabile *line* ha il tipo di struttura denominato *list*. Il tipo di struttura *list* ha tre membri. Il primo membro è un puntatore a un valore **char**, il secondo è un valore **int** e il terzo è un puntatore a un'altra struttura *list*.
+La variabile *line* ha il tipo di struttura denominato *list*. Il tipo di struttura *elenco* è costituito da tre membri: il primo membro è un puntatore a un **`char`** valore, il secondo è un **`int`** valore e il terzo è un puntatore a un'altra struttura *elenco* .
 
 ```
 struct id

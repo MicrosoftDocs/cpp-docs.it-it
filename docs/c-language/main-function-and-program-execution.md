@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123942"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211788"
 ---
 # <a name="main-function-and-program-execution"></a>Funzione main ed esecuzione di programmi
 
@@ -28,7 +28,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni nel programma di origine eseguono una o più attività specifiche. La funzione **main** può chiamare queste funzioni per eseguire le attività corrispondenti. Se **main** chiama un'altra funzione, passa il controllo dell'esecuzione a tale funzione, che viene eseguita a partire dalla sua prima istruzione. Una funzione restituisce il controllo a **main** quando viene eseguita un'istruzione `return` o quando viene raggiunta la fine della funzione.
+Le funzioni nel programma di origine eseguono una o più attività specifiche. La funzione **main** può chiamare queste funzioni per eseguire le attività corrispondenti. Se **main** chiama un'altra funzione, passa il controllo dell'esecuzione a tale funzione, che viene eseguita a partire dalla sua prima istruzione. Una funzione restituisce il controllo a **Main** quando viene **`return`** eseguita un'istruzione o quando viene raggiunta la fine della funzione.
 
 È possibile dichiarare una funzione, inclusa la funzione **main**, in modo che debba ricevere parametri. Il termine "parametro" o "parametro formale" si riferisce all'identificatore che riceve un valore passato a una funzione. Per altre informazioni sul passaggio di argomenti ai parametri, vedere [Parametri](../c-language/parameters.md). Quando una funzione chiama un'altra funzione, la funzione chiamata riceve i valori per i relativi parametri dalla funzione chiamante. Questi valori sono denominati "argomenti". È possibile dichiarare parametri formali per la funzione **main** perché questa possa ricevere argomenti dalla riga di comando. A questo scopo, usare il formato seguente:
 

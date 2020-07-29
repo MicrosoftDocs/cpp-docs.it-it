@@ -14,16 +14,16 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: 6bf4b9666d746199cea92fa2bd52b691c67e4a5b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1fa21f2a5a5c1d004fc23d70b686d7e45bbcac81
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126348"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215907"
 ---
 # <a name="texture_view-class"></a>Classe texture_view
 
-Fornisce accesso in lettura e accesso in scrittura a una trama. `texture_view` può essere usato solo per leggere trame il cui tipo di valore è `int`, `unsigned int`o `float` con bpse predefinito a 32 bit. Per leggere altri formati di trama, usare `texture_view<const value_type, _Rank>`.
+Fornisce accesso in lettura e accesso in scrittura a una trama. `texture_view`può essere usato solo per leggere trame il cui tipo di valore è **`int`** , **`unsigned int`** o con **`float`** bpse predefinito a 32 bit. Per leggere altri formati di trama, usare `texture_view<const value_type, _Rank>` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,24 +46,24 @@ class texture_view<const value_type, _Rank>
 Tipo degli elementi nell'aggregazione di trama.
 
 *_Rank*<br/>
-Rango del `texture_view`.
+Rango dell'oggetto `texture_view` .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |`value_type`|Tipo degli elementi nelle aggregazioni di trama.|
-|`coordinates_type`|Tipo della coordinata utilizzata per specificare un Texel nell'`texture_view`, ovvero una `short_vector` con lo stesso rango della trama associata con un tipo di valore `float`.|
-|`gather_return_type`|Tipo restituito utilizzato per le operazioni di raccolta, ovvero un `short_vector` di rango 4 che include i quattro componenti cromatici omogenei raccolti dai quattro valori di Texel campionati.|
+|`coordinates_type`|Tipo della coordinata utilizzata per specificare un Texel in, ovvero `texture_view` un oggetto `short_vector` con lo stesso rango della trama associata con un tipo di valore **`float`** .|
+|`gather_return_type`|Tipo restituito utilizzato per le operazioni di raccolta, ovvero un rango 4 `short_vector` che include i quattro componenti cromatici omogenei raccolti dai quattro valori di Texel campionati.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttore texture_view](#ctor)|Di overload. Costruisce un'istanza di `texture_view`.|
-|[distruttore ~ texture_view](#ctor)|Elimina definitivamente l'istanza di `texture_view`.|
+|[Costruttore texture_view](#ctor)|Di overload. Costruisce un' `texture_view` istanza di.|
+|[distruttore ~ texture_view](#ctor)|Elimina l' `texture_view` istanza.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -74,22 +74,22 @@ Rango del `texture_view`.
 |[gather_green](#gather_green)|Di overload. Esegue il campionamento della trama in corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti verdi (y) dei quattro Texel campionati.|
 |[gather_red](#gather_red)|Di overload. Esegue il campionamento della trama in corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti rossi (x) dei quattro Texel campionati.|
 |[get](#get)|Di overload. Ottiene il valore dell'elemento in base all'indice.|
-|[sample](#sample)|Di overload. Esegue il campionamento della trama in corrispondenza delle coordinate e del livello di dettaglio specificati utilizzando la configurazione di campionamento specificata.|
+|[esempio](#sample)|Di overload. Esegue il campionamento della trama in corrispondenza delle coordinate e del livello di dettaglio specificati utilizzando la configurazione di campionamento specificata.|
 |[set](#set)|Imposta il valore di un elemento in base all'indice.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator()](#operator_call)|Di overload. Ottiene il valore dell'elemento in base all'indice.|
-|[operator\[\]](#operator_at)|Di overload. Ottiene il valore dell'elemento in base all'indice.|
-|[operator=](#operator_eq)|Di overload. Operatore di assegnazione.|
+|[operatore ()](#operator_call)|Di overload. Ottiene il valore dell'elemento in base all'indice.|
+|[operatore\[\]](#operator_at)|Di overload. Ottiene il valore dell'elemento in base all'indice.|
+|[operatore =](#operator_eq)|Di overload. Operatore di assegnazione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[value_type](#value_type)|Tipo di valore degli elementi della `texture_view`.|
+|[value_type](#value_type)|Tipo di valore degli elementi di `texture_view` .|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -103,17 +103,17 @@ Rango del `texture_view`.
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="dtor"></a>~ texture_view
+## <a name="texture_view"></a><a name="dtor"></a>~ texture_view
 
-Elimina definitivamente l'istanza di `texture_view`.
+Elimina l' `texture_view` istanza.
 
 ```cpp
 ~texture_view() restrict(amp, cpu);
 ```
 
-## <a name="ctor"></a>texture_view
+## <a name="texture_view"></a><a name="ctor"></a>texture_view
 
-Costruisce un'istanza di `texture_view`.
+Costruisce un' `texture_view` istanza di.
 
 ```cpp
 texture_view(// [1] constructor
@@ -146,25 +146,25 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>Parametri
 
 *_Src*<br/>
-[1, 2] Costruttore `texture` in cui viene creata la `texture_view` scrivibile.
+[1, 2] Costruttore `texture` in cui viene creato l'oggetto scrivibile `texture_view` .
 
-[3, 4] Costruttore `texture` in cui viene creata la `texture_view` non scrivibile.
+[3, 4] Costruttore `texture` in cui viene creato l'oggetto non scrivibile `texture_view` .
 
 *_Other*<br/>
-[5] costruttore di copia il `texture_view`scrivibile di origine.
+[5] costruttore di copia l'origine scrivibile `texture_view` .
 
-[6, 7] Costruttore di copia il `texture_view`di origine non scrivibile.
+[6, 7] Costruttore di copia l'oggetto di origine non scrivibile `texture_view` .
 
 *_Mipmap_level*<br/>
-Livello di mipmap specifico nell'`texture` di origine a cui è associata questa `texture_view` scrivibile. Il valore predefinito è 0, che rappresenta il livello MIP principale (più dettagliato).
+Livello di mipmap specifico nell'origine `texture` a cui è associata la scrittura `texture_view` . Il valore predefinito è 0, che rappresenta il livello MIP principale (più dettagliato).
 
 *_Most_detailed_mip*<br/>
-Livello MIP principale (più dettagliato) per la vista, relativo all'oggetto `texture_view` specificato.
+Livello MIP principale (più dettagliato) per la vista, relativo all' `texture_view` oggetto specificato.
 
 *_Mip_levels*<br/>
-Il numero di livelli di mipmap accessibili tramite il `texture_view`.
+Il numero di livelli di mipmap accessibili tramite `texture_view` .
 
-## <a name="gather_red"></a>gather_red
+## <a name="gather_red"></a><a name="gather_red"></a>gather_red
 
 Esegue il campionamento della trama in corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti rossi (x) dei quattro Texel campionati.
 
@@ -183,10 +183,10 @@ const gather_return_type gather_red(
 ### <a name="parameters"></a>Parametri
 
 *_Address_mode*<br/>
-Modalità di indirizzamento da utilizzare per campionare il `texture_view`. La modalità di indirizzo è la stessa per tutte le dimensioni.
+Modalità di indirizzamento da utilizzare per campionare l'oggetto `texture_view` . La modalità di indirizzo è la stessa per tutte le dimensioni.
 
 *_Sampler*<br/>
-Configurazione del campionatore da utilizzare per campionare il `texture_view`.
+Configurazione del campionatore da utilizzare per campionare l'oggetto `texture_view` .
 
 *_Coord*<br/>
 Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie vengono utilizzati per l'interpolazione tra Texel di esempio.
@@ -195,7 +195,7 @@ Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie veng
 
 Un short vector di rango 4 che contiene il componente rosso (x) dei 4 valori Texel campionati.
 
-## <a name="gather_green"></a>gather_green
+## <a name="gather_green"></a><a name="gather_green"></a>gather_green
 
 Esegue il campionamento della trama in corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti verdi (y) dei quattro Texel campionati.
 
@@ -214,10 +214,10 @@ const gather_return_type gather_green(
 ### <a name="parameters"></a>Parametri
 
 *_Address_mode*<br/>
-Modalità di indirizzamento da utilizzare per campionare il `texture_view`. La modalità di indirizzo è la stessa per tutte le dimensioni.
+Modalità di indirizzamento da utilizzare per campionare l'oggetto `texture_view` . La modalità di indirizzo è la stessa per tutte le dimensioni.
 
 *_Sampler*<br/>
-Configurazione del campionatore da utilizzare per campionare il `texture_view`.
+Configurazione del campionatore da utilizzare per campionare l'oggetto `texture_view` .
 
 *_Coord*<br/>
 Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie vengono utilizzati per l'interpolazione tra Texel di esempio.
@@ -226,7 +226,7 @@ Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie veng
 
 Un short vector di rango 4 che contiene il componente verde (y) dei 4 valori Texel campionati.
 
-## <a name="gather_blue"></a>gather_blue
+## <a name="gather_blue"></a><a name="gather_blue"></a>gather_blue
 
 Esegue il campionamento della trama in corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti blu (z) dei quattro Texel campionati.
 
@@ -245,10 +245,10 @@ const gather_return_type gather_blue(
 ### <a name="parameters"></a>Parametri
 
 *_Address_mode*<br/>
-Modalità di indirizzamento da utilizzare per campionare il `texture_view`. La modalità di indirizzo è la stessa per tutte le dimensioni.
+Modalità di indirizzamento da utilizzare per campionare l'oggetto `texture_view` . La modalità di indirizzo è la stessa per tutte le dimensioni.
 
 *_Sampler*<br/>
-Configurazione del campionatore da utilizzare per campionare il `texture_view`.
+Configurazione del campionatore da utilizzare per campionare l'oggetto `texture_view` .
 
 *_Coord*<br/>
 Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie vengono utilizzati per l'interpolazione tra Texel di esempio.
@@ -257,7 +257,7 @@ Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie veng
 
 Un short vector di rango 4 che contiene il componente rosso (x) dei 4 valori Texel campionati.
 
-## <a name="gather_alpha"></a>gather_alpha
+## <a name="gather_alpha"></a><a name="gather_alpha"></a>gather_alpha
 
 Esegue il campionamento della trama in corrispondenza delle coordinate specificate utilizzando la configurazione di campionamento specificata e restituisce i componenti alfa (w) dei quattro Texel campionati.
 
@@ -276,10 +276,10 @@ const gather_return_type gather_alpha(
 ### <a name="parameters"></a>Parametri
 
 *_Address_mode*<br/>
-Modalità di indirizzamento da utilizzare per campionare il `texture_view`. La modalità di indirizzo è la stessa per tutte le dimensioni.
+Modalità di indirizzamento da utilizzare per campionare l'oggetto `texture_view` . La modalità di indirizzo è la stessa per tutte le dimensioni.
 
 *_Sampler*<br/>
-Configurazione del campionatore da utilizzare per campionare il `texture_view`.
+Configurazione del campionatore da utilizzare per campionare l'oggetto `texture_view` .
 
 *_Coord*<br/>
 Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie vengono utilizzati per l'interpolazione tra Texel di esempio.
@@ -288,7 +288,7 @@ Coordinate da cui eseguire l'esempio. I valori delle coordinate frazionarie veng
 
 Un short vector di rango 4 che contiene il componente alfa (w) dei 4 valori Texel campionati.
 
-## <a name="get"></a>Ottieni
+## <a name="get"></a><a name="get"></a>Ottieni
 
 Ottiene il valore dell'elemento in corrispondenza dell'indice specificato.
 
@@ -313,9 +313,9 @@ Livello di mipmap da cui ottenere il valore. Il valore predefinito 0 rappresenta
 
 Valore dell'elemento.
 
-## <a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a>operatore =
 
-Assegna una visualizzazione della stessa trama del `texture_view` specificato a questa istanza di `texture_view`.
+Assegna una visualizzazione della stessa trama dell'oggetto specificato `texture_view` a questa `texture_view` istanza.
 
 ```cpp
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor
@@ -331,15 +331,15 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="parameters"></a>Parametri
 
 *_Other*<br/>
-[1, 2] Costruttore di copia un oggetto `texture_view` scrivibile.
+[1, 2] Costruttore di copia un `texture_view` oggetto scrivibile.
 
-[3] costruttore di copia un oggetto `texture_view` non scrivibile.
+[3] costruttore di copia un oggetto non scrivibile `texture_view` .
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a questa istanza di `texture_view`.
+Riferimento a questa `texture_view` istanza.
 
-## <a name="operator_at"></a>operator []
+## <a name="operator"></a><a name="operator_at"></a>operator []
 
 Restituisce il valore dell'elemento in base all'indice.
 
@@ -363,9 +363,9 @@ Indice unidimensionale.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore dell'elemento indicizzato da `_Index`.
+Valore dell'elemento indicizzato da `_Index` .
 
-## <a name="operator_call"></a>operatore ()
+## <a name="operator"></a><a name="operator_call"></a>operatore ()
 
 Restituisce il valore dell'elemento in base all'indice.
 
@@ -416,9 +416,9 @@ Componente meno significativo dell'indice.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore dell'elemento indicizzato da `_Index`.
+Valore dell'elemento indicizzato da `_Index` .
 
-## <a name="sample"></a>esempio
+## <a name="sample"></a><a name="sample"></a>esempio
 
 Esegue il campionamento della trama in corrispondenza delle coordinate e del livello di dettaglio specificati utilizzando la configurazione di campionamento specificata.
 
@@ -458,7 +458,7 @@ Il valore specifica il livello di mipmap da cui eseguire l'esempio. I valori fra
 
 Valore di esempio interpolato.
 
-## <a name="set"></a>set
+## <a name="set"></a><a name="set"></a>set
 
 Imposta il valore dell'elemento in corrispondenza dell'indice specificato sul valore specificato.
 
@@ -476,7 +476,7 @@ Indice dell'elemento da impostare, possibilmente multidimensionali.
 *value*<br/>
 Valore su cui impostare l'elemento.
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Tipo di valore degli elementi della texture_view.
 

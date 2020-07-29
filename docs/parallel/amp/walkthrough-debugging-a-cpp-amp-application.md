@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404717"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215881"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procedura dettagliata: Debug di un'applicazione C++ AMP
 
@@ -215,7 +215,7 @@ Passaggi successivi:
 
 ## <a name="debugging-the-cpu-code"></a>Debug del codice CPU
 
-In questa procedura verrà usato il debugger Windows locale per assicurarsi che il codice CPU in questa applicazione sia corretto. Il segmento del codice CPU in questa applicazione particolarmente interessante è il `for` ciclo nella `reduction_sum_gpu_kernel` funzione. Controlla la riduzione parallela basata sulla struttura ad albero eseguita sulla GPU.
+In questa procedura verrà usato il debugger Windows locale per assicurarsi che il codice CPU in questa applicazione sia corretto. Il segmento del codice CPU in questa applicazione particolarmente interessante è il **`for`** ciclo nella `reduction_sum_gpu_kernel` funzione. Controlla la riduzione parallela basata sulla struttura ad albero eseguita sulla GPU.
 
 ### <a name="to-debug-the-cpu-code"></a>Per eseguire il debug del codice CPU
 

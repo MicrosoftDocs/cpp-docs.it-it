@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3017
 ms.assetid: 12ab2c2a-d0d2-4900-9cbf-39be0af590dd
-ms.openlocfilehash: af3f24a1a814fa79fa63b7e5bee204083006c9a2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 34347abffd91246ada080d19fee88ee09c8fce99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749740"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232066"
 ---
 # <a name="compiler-error-c3017"></a>Errore del compilatore C3017
 
 il formato del test di terminazione nell'istruzione 'for' OpenMP non è valido
 
-È necessario che sia specificato in modo completo ed esplicito un ciclo `for` in un'istruzione OpenMP.
+Un **`for`** ciclo in un'istruzione OpenMP deve essere specificato in modo completo e esplicito.
 
 L'esempio seguente genera l'errore C3017:
 

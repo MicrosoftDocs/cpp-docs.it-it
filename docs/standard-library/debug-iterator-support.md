@@ -1,5 +1,5 @@
 ---
-title: Supporto degli iteratori di debug
+title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416209"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231585"
 ---
-# <a name="debug-iterator-support"></a>Supporto degli iteratori di debug
+# <a name="debug-iterator-support"></a>Debug Iterator Support
 
 La libreria di runtime di Visual C++ rileva l'uso non corretto dell'iteratore, esegue un'asserzione e visualizza una finestra di dialogo in fase di esecuzione. Per abilitare il supporto degli iteratori di debug, è necessario usare le versioni di debug della libreria standard C++ e della libreria di runtime C per compilare il programma. Per altre informazioni, vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md). Per informazioni sull'uso degli iteratori verificati, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-Si noti che in questo esempio si usa l'espressione lambda `[] (int& elem) { elem *= 2; }` anziché un funtore. Sebbene questa scelta non influisca sull'errore di asserzione (un funtore simile causerebbe lo stesso errore), le espressioni lambda sono un modo molto utile per eseguire attività degli oggetti funzione Compact. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../cpp/lambda-expressions-in-cpp.md).
+Si noti che in questo esempio si usa l'espressione lambda `[] (int& elem) { elem *= 2; }` anziché un funtore. Sebbene questa scelta non influisca sull'errore di asserzione (un funtore simile causerebbe lo stesso errore), le espressioni lambda sono un modo molto utile per eseguire attività degli oggetti funzione Compact. Per ulteriori informazioni sulle espressioni lambda, vedere [espressioni lambda](../cpp/lambda-expressions-in-cpp.md).
 
 ## <a name="iterators-going-out-of-scope"></a>Iteratori usciti dall'ambito
 
-I controlli degli iteratori di debug determinano anche la presenza di una variabile iteratore dichiarata in un ciclo **for** fuori dall'ambito al termine dell'ambito del ciclo **for** .
+I controlli degli iteratori di debug determinano anche la presenza di una variabile iteratore dichiarata in un **`for`** ciclo all'esterno dell'ambito al **`for`** termine dell'ambito del ciclo.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Distruttori per gli iteratori di debug
 
-Gli iteratori di debug hanno distruttori non semplici. Se un distruttore non viene eseguito ma viene liberata la memoria dell'oggetto, potrebbero verificarsi violazioni di accesso e danneggiamento dei dati. Si consideri l'esempio seguente:
+Gli iteratori di debug hanno distruttori non semplici. Se un distruttore non viene eseguito ma viene liberata la memoria dell'oggetto, potrebbero verificarsi violazioni di accesso e danneggiamento dei dati. Considerare questo esempio:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)

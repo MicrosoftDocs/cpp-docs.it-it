@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: db24e3992e5db70895ccc2908dba108de843bcdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752071"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215946"
 ---
 # <a name="ctypedptrarray-class"></a>Classe CTypedPtrArray
 
@@ -43,10 +43,10 @@ class CTypedPtrArray : public BASE_CLASS
 #### <a name="parameters"></a>Parametri
 
 *BASE_CLASS*<br/>
-Classe base della classe matrice di puntatori tipizzata; deve essere una `CObArray` classe `CPtrArray`array ( o ).
+Classe di base della classe Array del puntatore tipizzato; deve essere una classe Array ( `CObArray` o `CPtrArray` ).
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nella matrice della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nella matrice della classe di base.
 
 ## <a name="members"></a>Membri
 
@@ -54,30 +54,30 @@ Tipo degli elementi archiviati nella matrice della classe base.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTypedPtrArray::Add](#add)|Aggiunge un nuovo elemento alla fine di una matrice. Aumenta l'array se necessario|
-|[CTypedPtrArray::Append](#append)|Aggiunge il contenuto di una matrice alla fine di un'altra. Aumenta l'array se necessario|
-|[CTypedPtrArray::Copia](#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
-|[CTypedPtrArray::ElementAt](#elementat)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|
-|[CTypedPtrArray::GetAt](#getat)|Restituisce il valore in corrispondenza di un indice specificato.|
-|[CTypedPtrArray::InsertAt](#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|
-|[CTypedPtrArray::SetAt](#setat)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|
+|[CTypedPtrArray:: Add](#add)|Aggiunge un nuovo elemento alla fine di una matrice. Aumenta la matrice se necessario|
+|[CTypedPtrArray:: Append](#append)|Aggiunge il contenuto di una matrice alla fine di un altro oggetto. Aumenta la matrice se necessario|
+|[CTypedPtrArray:: Copy](#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
+|[CTypedPtrArray:: ElementAt](#elementat)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|
+|[CTypedPtrArray:: GetA](#getat)|Restituisce il valore in corrispondenza di un indice specificato.|
+|[CTypedPtrArray:: InsertAt](#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|
+|[CTypedPtrArray:: SetAt](#setat)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|
+|[CTypedPtrArray:: SetAtGrow](#setatgrow)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTypedPtrArray::operatore \[\]](#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|
+|[Operatore \[ CTypedPtrArray::\]](#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si `CTypedPtrArray` utilizza `CPtrArray` `CObArray`invece o , la funzionalità di controllo dei tipi di C, consente di eliminare gli errori causati da tipi di puntatore non corrispondenti.
+Quando si usa `CTypedPtrArray` invece di `CPtrArray` o `CObArray` , la funzionalità di controllo dei tipi C++ consente di eliminare gli errori causati da tipi di puntatore non corrispondenti.
 
-Inoltre, il `CTypedPtrArray` wrapper esegue gran parte del cast `CObArray` che `CPtrArray`sarebbe necessario se si utilizzasse o .
+Inoltre, il `CTypedPtrArray` wrapper esegue gran parte del cast che sarebbe necessario se fosse stato usato `CObArray` o `CPtrArray` .
 
-Poiché `CTypedPtrArray` tutte le funzioni sono inline, l'utilizzo di questo modello non influisce in modo significativo sulle dimensioni o sulla velocità del codice.
+Poiché tutte le `CTypedPtrArray` funzioni sono inline, l'uso di questo modello non influisce in modo significativo sulle dimensioni o sulla velocità del codice.
 
-Per ulteriori informazioni `CTypedPtrArray`sull'utilizzo di , vedere gli articoli [Raccolte](../../mfc/collections.md) e [classi basate su modelli](../../mfc/template-based-classes.md).
+Per ulteriori informazioni sull'utilizzo di `CTypedPtrArray` , vedere gli articoli [raccolte](../../mfc/collections.md) e [classi basate su modello](../../mfc/template-based-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -89,9 +89,9 @@ Per ulteriori informazioni `CTypedPtrArray`sull'utilizzo di , vedere gli articol
 
 **Intestazione:** afxtempl.h
 
-## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray::Add
+## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray:: Add
 
-Questa funzione `BASE_CLASS`membro chiama **::Add**.
+Questa funzione membro chiama `BASE_CLASS` **:: Add**.
 
 ```
 INT_PTR Add(TYPE newElement);
@@ -99,10 +99,10 @@ INT_PTR Add(TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elemento da aggiungere alla matrice.
 
-*nuovoElemento*<br/>
+*newElement*<br/>
 Elemento da aggiungere a questa matrice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -111,11 +111,11 @@ Indice dell'elemento aggiunto.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::Add](../../mfc/reference/cobarray-class.md#add).
+Per osservazioni più dettagliate, vedere [Cobarrat:: Add](../../mfc/reference/cobarray-class.md#add).
 
-## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray::Append
+## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray:: Append
 
-Questa funzione `BASE_CLASS`membro chiama ::Append.
+Questa funzione membro chiama `BASE_CLASS` :: Append * *.
 
 ```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -124,13 +124,13 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Parametri
 
 *BASE_CLASS*<br/>
-Classe base della classe matrice di puntatori tipizzata; deve essere una classe array ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Classe di base della classe Array del puntatore tipizzato; deve essere una classe Array ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nella matrice della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nella matrice della classe di base.
 
 *src*<br/>
-Origine degli elementi da aggiungere a una matrice.
+Origine degli elementi da accodare a una matrice.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -138,11 +138,11 @@ Indice del primo elemento accodato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::Append](../../mfc/reference/cobarray-class.md#append).
+Per osservazioni più dettagliate, vedere [Cobarrat:: Append](../../mfc/reference/cobarray-class.md#append).
 
-## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray::Copia
+## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray:: Copy
 
-Questa funzione `BASE_CLASS`membro chiama **::Copy**.
+Questa funzione membro chiama `BASE_CLASS` **:: Copy**.
 
 ```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -151,21 +151,21 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Parametri
 
 *BASE_CLASS*<br/>
-Classe base della classe matrice di puntatori tipizzata; deve essere una classe array ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Classe di base della classe Array del puntatore tipizzato; deve essere una classe Array ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nella matrice della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nella matrice della classe di base.
 
 *src*<br/>
 Origine degli elementi da copiare in una matrice.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).
+Per osservazioni più dettagliate, vedere [Cobarrat:: Copy](../../mfc/reference/cobarray-class.md#copy).
 
-## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray::ElementAt
+## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray:: ElementAt
 
-Questa funzione inline chiama `BASE_CLASS` **::ElementAt**.
+Questa funzione inline chiama `BASE_CLASS` **:: ElementAt**.
 
 ```
 TYPE& ElementAt(INT_PTR nIndex);
@@ -173,23 +173,23 @@ TYPE& ElementAt(INT_PTR nIndex);
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati in questa matrice.
 
 *nIndex*<br/>
-Indice Integer maggiore o uguale a 0 e minore o uguale al valore restituito da `BASE_CLASS` **::GetUpperBound**.
+Indice integer maggiore o uguale a 0 e minore o uguale al valore restituito da `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento temporaneo all'elemento nella posizione specificata da *nIndex*. Questo elemento è del tipo specificato dal parametro di modello *TYPE*.
+Riferimento temporaneo all'elemento nella posizione specificata da *nIndex*. Questo elemento è del tipo specificato dal *tipo*di parametro del modello.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).
+Per osservazioni più dettagliate, vedere [Cobarrat:: ElementAt](../../mfc/reference/cobarray-class.md#elementat).
 
-## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray::GetAt
+## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray:: GetA
 
-Questa funzione inline chiama `BASE_CLASS` **::GetAt**.
+Questa funzione inline chiama `BASE_CLASS` **:: Geta**.
 
 ```
 TYPE GetAt(INT_PTR nIndex) const;
@@ -197,23 +197,23 @@ TYPE GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nella matrice.
 
 *nIndex*<br/>
-Indice Integer maggiore o uguale a 0 e minore o uguale al valore restituito da `BASE_CLASS` **::GetUpperBound**.
+Indice integer maggiore o uguale a 0 e minore o uguale al valore restituito da `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Copia dell'elemento nella posizione specificata da *nIndex*. Questo elemento è del tipo specificato dal parametro di modello *TYPE*.
+Copia dell'elemento nella posizione specificata da *nIndex*. Questo elemento è del tipo specificato dal *tipo*di parametro del modello.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)
+Per osservazioni più dettagliate, vedere [CObArray:: Geta](../../mfc/reference/cobarray-class.md#getat)
 
-## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray::InsertAt
+## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray:: InsertAt
 
-Questa funzione `BASE_CLASS`membro chiama **::InsertAt**.
+Questa funzione membro chiama `BASE_CLASS` **:: InsertAt**.
 
 ```cpp
 void InsertAt(
@@ -229,33 +229,33 @@ void InsertAt(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Indice integer che può essere maggiore del valore restituito da [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+Indice integer che può essere maggiore del valore restituito da [Cobarrat:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nella matrice della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nella matrice della classe di base.
 
-*nuovoElemento*<br/>
-Puntatore all'oggetto da inserire in questa matrice. È consentito *un newElement* di valore **NULL.**
+*newElement*<br/>
+Puntatore all'oggetto da inserire in questa matrice. È consentito un *newElement* di valore **null** .
 
-*nConteggio*<br/>
-Il numero di volte in cui questo elemento deve essere inserito (il valore predefinito è 1).
+*nCount*<br/>
+Il numero di volte in cui l'elemento deve essere inserito (il valore predefinito è 1).
 
-*nInizioIndice*<br/>
-Indice Integer che può essere maggiore del `CObArray::GetUpperBound`valore restituito da .
+*nStartIndex*<br/>
+Indice integer che può essere maggiore del valore restituito da `CObArray::GetUpperBound` .
 
 *BASE_CLASS*<br/>
-Classe base della classe matrice di puntatori tipizzata; deve essere una classe array ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Classe di base della classe Array del puntatore tipizzato; deve essere una classe Array ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
-*pNewArray (matrice)*<br/>
+*pNewArray*<br/>
 Un'altra matrice che contiene gli elementi da aggiungere a questa matrice.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
+Per osservazioni più dettagliate, vedere [Cobarrat:: InsertAt](../../mfc/reference/cobarray-class.md#insertat).
 
-## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray::operator [ ]
+## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray:: operator []
 
-Questi operatori inline chiamano `BASE_CLASS` **::operator [ ]**.
+Questi operatori inline chiamano `BASE_CLASS` **:: operator []**.
 
 ```
 TYPE& operator[ ](int_ptr nindex);
@@ -264,21 +264,21 @@ TYPE operator[ ](int_ptr nindex) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nella matrice.
 
 *nIndex*<br/>
-Indice Integer maggiore o uguale a 0 e minore o uguale al valore restituito da `BASE_CLASS` **::GetUpperBound**.
+Indice integer maggiore o uguale a 0 e minore o uguale al valore restituito da `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il primo operatore, chiamato per le matrici che non sono **const**, può essere utilizzato a destra (r-value) o a sinistra (l-value) di un'istruzione di assegnazione. Il secondo, richiamato per le matrici **const,** può essere utilizzato solo a destra.
+Il primo operatore, chiamato per le matrici che non sono **`const`** , può essere utilizzato sia sul lato destro (r-value) che sulla sinistra (l-value) di un'istruzione di assegnazione. Il secondo oggetto, richiamato per le **`const`** matrici, può essere utilizzato solo a destra.
 
-La versione di debug della libreria asserisce se il pedice (a sinistra o a destra di un'istruzione di assegnazione) non è più limitato.
+La versione di debug della libreria dichiara se l'indice (sul lato sinistro o destro di un'istruzione di assegnazione) non è più limitato.
 
-## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray::SetAt
+## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray:: SetAt
 
-Questa funzione `BASE_CLASS`membro chiama **::SetAt**.
+Questa funzione membro chiama `BASE_CLASS` **:: SetAt**.
 
 ```cpp
 void SetAt(
@@ -289,21 +289,21 @@ void SetAt(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Indice integer maggiore o uguale a 0 e minore o uguale al valore restituito da [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+Indice integer maggiore o uguale a 0 e minore o uguale al valore restituito da [Cobarrat:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nella matrice della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nella matrice della classe di base.
 
-*Ptr*<br/>
-Puntatore all'elemento da inserire nella matrice in corrispondenza di nIndex. È consentito un valore NULL.
+*ptr*<br/>
+Puntatore all'elemento da inserire nella matrice in corrispondenza del nIndex. È consentito un valore NULL.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).
+Per osservazioni più dettagliate, vedere [CObArray:: SetAt](../../mfc/reference/cobarray-class.md#setat).
 
-## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray::SetAtGrow
+## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray:: SetAtGrow
 
-Questa funzione `BASE_CLASS`membro chiama **::SetAtGrow**.
+Questa funzione membro chiama `BASE_CLASS` **:: SetAtGrow**.
 
 ```cpp
 void SetAtGrow(
@@ -314,21 +314,21 @@ void SetAtGrow(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Indice Integer maggiore o uguale a 0.
+Indice integer maggiore o uguale a 0.
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nella matrice della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nella matrice della classe di base.
 
-*nuovoElemento*<br/>
-Puntatore all'oggetto da aggiungere a questa matrice. È consentito un valore **NULL.**
+*newElement*<br/>
+Puntatore all'oggetto da aggiungere a questa matrice. È consentito un valore **null** .
 
 ### <a name="remarks"></a>Osservazioni
 
-Per osservazioni più dettagliate, vedere [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
+Per osservazioni più dettagliate, vedere [Cobarrat:: SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Raccolta di campioni MFC](../../overview/visual-cpp-samples.md)<br/>
+[Esempio di raccolta MFC](../../overview/visual-cpp-samples.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CPtrArray](../../mfc/reference/cptrarray-class.md)<br/>
-[Classe CObArray](../../mfc/reference/cobarray-class.md)
+[CObArray (classe)](../../mfc/reference/cobarray-class.md)

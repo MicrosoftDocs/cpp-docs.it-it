@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
-ms.translationtype: HT
+ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328961"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215998"
 ---
 # <a name="add-a-member-variable"></a>Aggiungere una variabile membro
 
@@ -66,27 +66,27 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
 - **Accesso**
 
-  Imposta l'accesso alla variabile membro. I modificatori di accesso sono parole chiave che specificano l'accesso di altre classi alla variabile membro. Per altre informazioni sulla specifica dell'accesso, vedere [Controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md). Il livello di accesso alla variabile membro è impostato su `public` per impostazione predefinita.
+  Imposta l'accesso alla variabile membro. I modificatori di accesso sono parole chiave che specificano l'accesso di altre classi alla variabile membro. Per ulteriori informazioni sulla specifica dell'accesso, vedere [controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md). Il livello di accesso della variabile membro è impostato su per **`public`** impostazione predefinita.
 
-  - [public](../cpp/public-cpp.md)
-  - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [pubblico](../cpp/public-cpp.md)
+  - [protetto](../cpp/protected-cpp.md)
+  - [privata](../cpp/private-cpp.md)
 
-- **Tipo variabile**
+- **Tipo di variabile**
 
   Imposta il tipo restituito per la variabile membro da aggiungere.
 
   - Se si aggiunge una variabile membro che non è un controllo di finestra di dialogo, selezionare un valore dall'elenco dei tipi disponibili.
 
-    Per altre informazioni sui tipi, vedere [Tipi fondamentali](../cpp/fundamental-types-cpp.md).
+    Per informazioni sui tipi, vedere [tipi fondamentali](../cpp/fundamental-types-cpp.md).
 
     |||
     |-|-|
-    |`char`|`short`|
-    |`double`|`unsigned char`|
-    |`float`|`unsigned int`|
-    |`int`|`unsigned long`|
-    |`long`||
+    |**`char`**|**`short`**|
+    |**`double`**|**`unsigned char`**|
+    |**`float`**|**`unsigned int`**|
+    |**`int`**|**`unsigned long`**|
+    |**`long`**||
 
   - Se si aggiunge una variabile membro per un controllo di finestra di dialogo, questa casella viene compilata con il tipo di oggetto restituito per un controllo o un valore. Se si seleziona **Controllo**, **Tipo variabile** specifica la classe di base del controllo selezionato nella casella **ID controllo**. Se il controllo di finestra di dialogo può contenere un valore e se si seleziona **Valore**, **Tipo di variabile** specifica il tipo appropriato per il valore che il controllo può contenere. Per altre informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](#dialog-box-controls-and-variable-types).
 
@@ -104,16 +104,16 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
   Imposta l'ID della variabile di controllo da aggiungere. Selezionare dall'elenco l'ID per il tipo di controllo per cui aggiungere la variabile membro. L'elenco è attivo solo quando la casella **Control variable** (Variabile di controllo) è selezionata ed è limitato agli ID per i controlli già aggiunti alla finestra di dialogo. Ad esempio, per il pulsante **OK** standard, l'ID controllo è **IDOK**.
 
-  |Opzione|Description|
+  |Opzione|Descrizione|
   |------------|-----------------|
-  |**Controllo**|Questa opzione è impostata per impostazione predefinita per il tipo di controllo. Gestisce il controllo e non lo stato o il contenuto del controllo (come è possibile fare con una casella di riepilogo, una casella combinata o una casella di modifica).|
+  |**Controllare**|Questa opzione è impostata per impostazione predefinita per il tipo di controllo. Gestisce il controllo e non lo stato o il contenuto del controllo (come è possibile fare con una casella di riepilogo, una casella combinata o una casella di modifica).|
   |**Valore**|Questa opzione è disponibile per i tipi di controllo che possono contenere un valore o visualizzare uno stato, ad esempio una casella di modifica o una casella di controllo. È anche disponibile per i tipi di controllo per i quali si può gestire un intervallo, dei contenuti o lo stato. Per altre informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](#dialog-box-controls-and-variable-types).|
 
 - **Categoria**
 
   Specifica se la variabile è basata su un tipo di controllo o sul valore del controllo.
 
-- **Tipo controllo**
+- **Tipo di controllo**
 
   Imposta il tipo di controllo da aggiungere. Questa casella non può essere modificata. Ad esempio, il tipo di controllo di un pulsante è **BUTTON**, mentre il tipo di controllo di una casella combinata è **COMBOBOX**. Per altre informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](#dialog-box-controls-and-variable-types).
 
@@ -123,11 +123,11 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
 - **Valore minimo**
 
-  Disponibile solo quando il tipo di variabile è `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, [COLECurrency](../mfc/reference/colecurrency-class.md) oppure [CTime](../atl-mfc-shared/reference/ctime-class.md). Indica il valore minimo accettabile per una scala o un intervallo di date.
+  Disponibile solo quando il tipo di variabile è,,, `BOOL` **`int`** `UINT` **`long`** , `DWORD` , **`float`** , **`double`** , `BYTE` , **`short`** , [COleCurrency](../mfc/reference/colecurrency-class.md) o [CTime](../atl-mfc-shared/reference/ctime-class.md). Indica il valore minimo accettabile per una scala o un intervallo di date.
 
 - **Valore massimo**
 
-  Disponibile solo quando il tipo di variabile è `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, `COLECurrency` oppure `CTime`. Indica il valore massimo accettabile per una scala o un intervallo di date.
+  Disponibile solo quando il tipo di variabile è,,, `BOOL` **`int`** `UINT` **`long`** , `DWORD` , **`float`** , **`double`** , `BYTE` , **`short`** , `COLECurrency` o `CTime` . Indica il valore massimo accettabile per una scala o un intervallo di date.
 
 - **File con estensione h**
 
@@ -137,20 +137,20 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
   Per i controlli ActiveX, le cui variabili membro richiedono una classe wrapper. Imposta il nome del file di implementazione per aggiungere la definizione di classe.
 
-- **Commentoo**
+- **Commento**
 
   Specifica un commento nel file di intestazione per la variabile membro.
 
 ## <a name="dialog-box-controls-and-variable-types"></a>Tipi di variabili e controlli di finestre di dialogo
 
-È possibile usare l'[Aggiunta guidata variabile membro](#add-member-variable-wizard) per aggiungere una variabile membro a un controllo di finestra di dialogo creato con MFC. Il tipo di controllo per il quale si aggiunge la variabile membro determina le opzioni visualizzate nella finestra di dialogo.
+È possibile utilizzare la [procedura guidata Aggiungi variabile membro](#add-member-variable-wizard) per aggiungere una variabile membro a un controllo finestra di dialogo creato utilizzando MFC. Il tipo di controllo per il quale si aggiunge la variabile membro determina le opzioni visualizzate nella finestra di dialogo.
 
 La tabella seguente descrive tutti i tipi di controllo di finestra di dialogo supportati in MFC e nell'[Editor di finestre](../windows/dialog-editor.md). Visualizza anche i relativi valori e tipi disponibili.
 
-|Control|Tipo di controllo|Tipo variabile controllo|Tipo variabile valore|Valori min e max (solo tipo di valore)|
+|Controllo|Tipo di controllo|Tipo variabile controllo|Tipo variabile valore|Valori min e max (solo tipo di valore)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |Controllo Animation|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Nessuno; solo controllo|N/D|
-|Button|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|Nessuno; solo controllo|N/D|
+|Pulsante|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|Nessuno; solo controllo|N/D|
 |Casella di controllo|CHECK|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|Valore min/valore max|
 |Casella combinata|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|N. max caratteri|
 |Controllo selezione data e ora|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|Valore min/valore max|
@@ -162,8 +162,8 @@ La tabella seguente descrive tutti i tipi di controllo di finestra di dialogo su
 |Controllo Progress|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Nessuno; solo controllo|N/D|
 |Controllo Rich Edit 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|N. max caratteri|
 |Controllo Rich Edit|RICHEDIT|`CRichEditCtrl`|`CString`|N. max caratteri|
-|Barra di scorrimento (verticale o orizzontale|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valore min/valore max|
-|Slider (controllo)|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valore min/valore max|
+|Barra di scorrimento (verticale o orizzontale|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|**`int`**|Valore min/valore max|
+|Controllo dispositivo di scorrimento|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|**`int`**|Valore min/valore max|
 |Controllo Spin|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Nessuno; solo controllo|N/D|
 |Controllo Tab|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Nessuno; solo controllo|N/D|
 |Controllo Tree|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Nessuno; solo controllo|N/D|

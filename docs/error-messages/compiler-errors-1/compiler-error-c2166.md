@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2166
 ms.assetid: 12789c3a-cc76-48bb-ae2e-64283e0964ed
-ms.openlocfilehash: 73b3c29c5e4bdd22a50330a8a90aad37a9d45cbf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a292a7d654861c265457ad26b009ae6f4b9cb54e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758411"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216336"
 ---
 # <a name="compiler-error-c2166"></a>Errore del compilatore C2166
 
 l'elemento l-value specifica un oggetto const
 
-Il codice tenta di modificare un elemento dichiarato `const`.
+Il codice tenta di modificare un elemento dichiarato **`const`** .
 
 L'esempio seguente genera l'errore C2166:
 

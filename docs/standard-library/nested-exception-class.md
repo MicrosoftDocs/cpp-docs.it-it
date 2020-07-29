@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441624"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212189"
 ---
 # <a name="nested_exception-class"></a>Classe nested_exception
 
@@ -28,13 +28,13 @@ class nested_exception {
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="operators"></a>Operatori
 
 |||
 |-|-|
-|[operator=](#op_as)||
+|[operatore =](#op_as)||
 
 ### <a name="functions"></a>Funzioni
 
@@ -43,13 +43,13 @@ class nested_exception {
 |[rethrow_nested](#rethrow_nested)|Genera l'eccezione archiviata.|
 |[nested_ptr](#nested_ptr)|Restituisce l'eccezione archiviata.|
 
-### <a name="op_as"></a>operatore =
+### <a name="operator"></a><a name="op_as"></a>operatore =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,9 +57,9 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Valore restituito
 
-Eccezione archiviata acquisita da questo oggetto `nested_exception`.
+Eccezione archiviata acquisita da questo `nested_exception` oggetto.
 
-### <a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,15 +67,15 @@ Eccezione archiviata acquisita da questo oggetto `nested_exception`.
 
 #### <a name="remarks"></a>Osservazioni
 
-Se `nested_ptr()` restituisce un puntatore null, la funzione chiama `std::terminate()`. In caso contrario, genera l'eccezione archiviata acquisita da `*this`.
+Se `nested_ptr()` restituisce un puntatore null, la funzione chiama `std::terminate()` . In caso contrario, genera l'eccezione archiviata acquisita da **`*this`** .
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<eccezione >
+**Intestazione:**\<exception>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[classe exception](../standard-library/exception-class.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
+[Classe Exception](../standard-library/exception-class.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

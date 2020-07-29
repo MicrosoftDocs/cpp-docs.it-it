@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172360"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216024"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 
@@ -41,9 +41,9 @@ Nella sintassi precedente vengono usati i termini seguenti:
 (Facoltativo) Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
 
 *class-key*<br/>
-**class** o **typename**
+**`class`** O**`typename`**
 
-*type-parameter-identifier(s)* : elenco delimitato da virgole di identificatori che specificano i nomi dei parametri di tipo.
+*type-parameter-identifier(s)*: elenco delimitato da virgole di identificatori che specificano i nomi dei parametri di tipo.
 
 *constraint-clauses*<br/>
 Elenco (non delimitato da virgole) di clausole **where** che specificano i vincoli per i parametri di tipo. Assume il formato:
@@ -51,15 +51,15 @@ Elenco (non delimitato da virgole) di clausole **where** che specificano i vinco
 > **dove** *type-parameter-Identifier* **:** *Constraint-list*  **...**
 
 *constraint-list*<br/>
-*classe o interfaccia*[`,` *...* ]
+*classe o interfaccia*[ `,` *...*]
 
 *accessibility-modifiers*<br/>
-Modificatori di accessibilità per la classe generica. Per Windows Runtime, l'unico modificatore consentito è **private**. Per Common Language Runtime, i modificatori consentiti sono **private** e **public**.
+Modificatori di accessibilità per la classe generica. Per il Windows Runtime, l'unico modificatore consentito è **`private`** . Per la Common Language Runtime, i modificatori consentiti sono **`private`** e **`public`** .
 
-*identifier*<br/>
+*identificatore*<br/>
 Nome della classe generica, qualsiasi identificatore C# valido.
 
-*modifiers*<br/>
+*modificatori*<br/>
 (Facoltativo) I modificatori consentiti includono **sealed** e **abstract**.
 
 *base-list*<br/>
@@ -69,9 +69,9 @@ Elenco che contiene la classe base ed eventuali interfacce implementate, tutte s
 Corpo della classe, che contiene campi, funzioni membro e così via.
 
 *declarators*<br/>
-Dichiarazioni di qualsiasi variabile di questo tipo. Ad esempio: `^`*identificatore*[`,` ...]
+Dichiarazioni di qualsiasi variabile di questo tipo. Ad esempio: `^` *Identifier*[ `,` ...]
 
-È possibile dichiarare classi generiche come queste (notare che è possibile usare la parola chiave **class** invece di **typename**). In questo esempio `ItemType`, `KeyType` e `ValueType` sono tipi sconosciuti specificati nel punto in cui il tipo `HashTable<int, int>` è un tipo costruito del tipo generico `HashTable<KeyType, ValueType>`. È possibile costruire diversi tipi costruiti da un unico tipo generico. I tipi costruiti da classi generiche vengono considerati come qualsiasi altro tipo classe di riferimento.
+È possibile dichiarare classi generiche come queste (si noti che la parola chiave **`class`** può essere usata al posto di **`typename`** ). In questo esempio `ItemType`, `KeyType` e `ValueType` sono tipi sconosciuti specificati nel punto in cui il tipo `HashTable<int, int>` è un tipo costruito del tipo generico `HashTable<KeyType, ValueType>`. È possibile costruire diversi tipi costruiti da un unico tipo generico. I tipi costruiti da classi generiche vengono considerati come qualsiasi altro tipo classe di riferimento.
 
 ```cpp
 // generic_classes_1.cpp
@@ -95,9 +95,9 @@ int main() {
 }
 ```
 
-I tipi valore (tipi predefiniti come **int** o **double**) e i tipi riferimento possono essere usati entrambi come argomento di tipo generico. La sintassi all'interno della definizione generica è la stessa in ogni caso. Dal punto di vista sintattico il tipo sconosciuto viene considerato come se fosse un tipo riferimento. Tuttavia, il runtime è in grado di determinare se il tipo effettivamente usato è un tipo valore e sostituire il codice generato appropriato per l'accesso diretto ai membri. I tipi valore usati come argomenti di tipo generico non vengono sottoposti a conversione boxing e di conseguenza non subiscono il peggioramento delle prestazioni associato alla conversione boxing. La sintassi usata all'interno del corpo del tipo generico deve essere `T^` e `->` invece di `.`. Qualsiasi utilizzo di [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) per il parametro di tipo verrà interpretato correttamente dal runtime come semplice creazione di un tipo valore se l'argomento tipo è un tipo valore.
+Entrambi i tipi di valore (tipi incorporati, ad esempio **`int`** o **`double`** , o tipi di valore definiti dall'utente) e i tipi di riferimento possono essere usati come argomento di tipo generico. La sintassi all'interno della definizione generica è la stessa in ogni caso. Dal punto di vista sintattico il tipo sconosciuto viene considerato come se fosse un tipo riferimento. Tuttavia, il runtime è in grado di determinare se il tipo effettivamente usato è un tipo valore e sostituire il codice generato appropriato per l'accesso diretto ai membri. I tipi valore usati come argomenti di tipo generico non vengono sottoposti a conversione boxing e di conseguenza non subiscono il peggioramento delle prestazioni associato alla conversione boxing. La sintassi usata all'interno del corpo del tipo generico deve essere `T^` e `->` invece di `.`. Qualsiasi utilizzo di [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) per il parametro di tipo verrà interpretato correttamente dal runtime come semplice creazione di un tipo valore se l'argomento tipo è un tipo valore.
 
-È anche possibile dichiarare una classe generica con [vincoli su parametri di tipo generico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) per i tipi che possono essere utilizzati per il parametro di tipo. Nell'esempio seguente qualsiasi tipo usato per `ItemType` deve implementare l'interfaccia `IItem`. Ad esempio, il tentativo di usare **int**, che non implementa `IItem`, produrrà un errore in fase di compilazione perché l'argomento tipo non soddisfa il vincolo.
+È anche possibile dichiarare una classe generica con [vincoli su parametri di tipo generico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) per i tipi che possono essere utilizzati per il parametro di tipo. Nell'esempio seguente qualsiasi tipo usato per `ItemType` deve implementare l'interfaccia `IItem`. Il tentativo di utilizzare **`int`** , ad esempio, che non implementa `IItem` , produrrebbe un errore in fase di compilazione perché l'argomento di tipo non soddisfa il vincolo.
 
 ```cpp
 // generic_classes_2.cpp
@@ -159,7 +159,7 @@ Le variabili di istanza di una classe generica possono avere tipi e inizializzat
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente vengono create tre istanze diverse della classe generica MyClass\<ItemType> usando gli argomenti di tipo appropriati (**int**, **double** e **string**).
+Nell'esempio seguente vengono create tre diverse istanze della classe generica, MyClass \<ItemType> , usando gli argomenti di tipo appropriati ( **`int`** , **`double`** e **String**).
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -665,7 +665,7 @@ Le regole per la dichiarazione e l'uso di struct generici sono identiche a quell
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente dichiara uno struct generico `MyGenStruct` con un campo `myField` e assegna valori di tipi diversi (**int**, **double** e `String^`) a questo campo.
+Nell'esempio seguente viene dichiarato uno struct generico, `MyGenStruct` , con un campo, `myField` , e vengono assegnati valori di tipi diversi ( **`int`** , **`double`** , `String^` ) a questo campo.
 
 ```cpp
 // generics_generic_struct1.cpp

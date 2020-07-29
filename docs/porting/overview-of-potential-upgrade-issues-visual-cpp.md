@@ -2,12 +2,12 @@
 title: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404821"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231637"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (Tipo nativo wchar_t)
 
-(In Microsoft Visual C++ 6,0 e versioni precedenti **wchar_t** non è stato implementato come tipo predefinito, ma è stato dichiarato in WCHAR. h come typedef per unsigned short). Lo standard C++ richiede che **wchar_t** sia un tipo incorporato. L'uso della versione typedef può causare problemi di portabilità. Se si esegue l'aggiornamento da versioni precedenti di Visual Studio e si verifica l'errore del compilatore C2664 perché il codice sta cercando di convertire in modo implicito **wchar_t** in **unsigned short**, è consigliabile modificare il codice per risolvere l'errore anziché impostare `/Zc:wchar_t-`. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(In Microsoft Visual C++ 6,0 e versioni precedenti, **`wchar_t`** non è stato implementato come tipo predefinito, ma è stato dichiarato in WCHAR. h come typedef per unsigned short). Lo standard C++ richiede che **`wchar_t`** sia un tipo incorporato. L'uso della versione typedef può causare problemi di portabilità. Se si esegue l'aggiornamento da versioni precedenti di Visual Studio e si verifica l'errore del compilatore C2664 perché il codice sta tentando di convertire in modo implicito **`wchar_t`** in **`unsigned short`** , è consigliabile modificare il codice per correggere l'errore, anziché impostare `/Zc:wchar_t-` . Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Aggiornare con le opzioni del linker /NODEFAULTLIB, /ENTRY e /NOENTRY
 

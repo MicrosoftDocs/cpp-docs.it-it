@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2673
 ms.assetid: 780230c0-619b-4a78-b01d-ff5886306741
-ms.openlocfilehash: 5ade00d0b912a44c0916e5ce5aa7f23b2cc91cf8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1a27b41c11905a509889d46da655900b69070445
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757163"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216115"
 ---
 # <a name="compiler-error-c2673"></a>Errore del compilatore C2673
 
 ' Function ': le funzioni globali non hanno puntatori ' This '
 
-Una funzione globale ha tentato di accedere `this`.
+Una funzione globale ha tentato di accedere a **`this`** .
 
 L'esempio seguente genera l'C2673:
 

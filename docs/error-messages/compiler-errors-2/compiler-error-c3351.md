@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3351
 ms.assetid: c021bbbe-1067-4f51-af4f-940d2b792eb5
-ms.openlocfilehash: d93d6b08268aa8d6a7a7ad2e2086f4799417bbb4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3390d57bf3c0a10ccde8a4f850a07451dd63ae67
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737465"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231988"
 ---
 # <a name="compiler-error-c3351"></a>Errore del compilatore C3351
 
 'object': costruttore di delegato: il secondo argomento deve essere l'indirizzo di una funzione membro statica o di una funzione globale
 
-Il compilatore prevedeva l'indirizzo di una funzione dichiarata `static`.
+Il compilatore prevedeva l'indirizzo di una funzione dichiarata **`static`** .
 
 L'esempio seguente genera l'errore C3351:
 

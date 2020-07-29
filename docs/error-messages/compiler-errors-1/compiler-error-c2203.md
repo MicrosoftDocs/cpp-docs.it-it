@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2203
 ms.assetid: 5497df43-86f6-43d5-b6cb-723c4c589b10
-ms.openlocfilehash: db36afa1376a0b64b3e110acd1722d3e0f2af449
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4a078cd4c64bbb8d301aa3e4817272d23e3acbb4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216310"
 ---
 # <a name="compiler-error-c2203"></a>Errore del compilatore C2203
 
 l'operatore delete non può specificare limiti per una matrice
 
-Con l'opzione **/za** (ANSI), l'operatore `delete` può eliminare un'intera matrice, ma non parti o membri specifici della matrice.
+Con l'opzione **/za** (ANSI), l' **`delete`** operatore può eliminare un'intera matrice, ma non parti o membri specifici della matrice.
 
 L'esempio seguente genera l'C2203:
 

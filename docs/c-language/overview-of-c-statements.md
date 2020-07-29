@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6b6cf9ee7aab3f14b3cb4b48c10e59125391c14c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857073"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211775"
 ---
 # <a name="overview-of-c-statements"></a>Cenni preliminari sulle istruzioni C
 
@@ -35,13 +35,13 @@ Le istruzioni C sono costituite da token, espressioni e altre istruzioni. Un'ist
 
 [try-except-Statement](../c-language/try-except-statement-c.md) /* specifico di Microsoft\*/
 
-[try-finally-istruzione](../c-language/try-finally-statement-c.md)  / \* specifica di Microsoft\*/
+[try-finally-Statement](../c-language/try-finally-statement-c.md)  / \* Specifiche di Microsoft\*/
 
 Il corpo dell'istruzione è spesso un'istruzione composta costituita da altre istruzioni che possono includere parole chiave. L'istruzione composta è racchiusa tra parentesi graffe (**{ }**). Tutte le altre istruzioni in linguaggio C terminano con un punto e virgola (**;**). Il punto e virgola è un terminatore dell'istruzione.
 
 L'istruzione di espressione include un'espressione C che può contenere gli operatori aritmetici o logici presentati in [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md). L'istruzione null è un'istruzione vuota.
 
-Qualsiasi istruzione C può iniziare con un'etichetta di identificazione costituita da un nome e da due punti. Poiché solo l'istruzione `goto` riconosce le etichette di istruzione, queste ultime vengono discusse con `goto`. Per altre informazioni, vedere [Istruzioni goto e con etichetta](../c-language/goto-and-labeled-statements-c.md).
+Qualsiasi istruzione C può iniziare con un'etichetta di identificazione costituita da un nome e da due punti. Poiché solo l' **`goto`** istruzione riconosce le etichette di istruzione, le etichette di istruzione vengono discusse con **`goto`** . Per altre informazioni, vedere [Istruzioni goto e con etichetta](../c-language/goto-and-labeled-statements-c.md).
 
 ## <a name="see-also"></a>Vedere anche
 

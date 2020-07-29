@@ -1,17 +1,17 @@
 ---
-title: switch_type (C++ attributo com)
+title: switch_type (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214526"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211931"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -34,7 +34,7 @@ Il tipo di opzione può essere un Integer, un carattere, un valore booleano o un
 
 L'attributo **switch_type** C++ ha la stessa funzionalità dell'attributo [switch_type](/windows/win32/Midl/switch-type) MIDL.
 
-C++gli attributi non supportano le [unioni incapsulate](/windows/win32/Midl/encapsulated-unions). Le [unioni non incapsulate](/windows/win32/Midl/nonencapsulated-unions) sono supportate solo nel formato seguente:
+Gli attributi C++ non supportano le [unioni incapsulate](/windows/win32/Midl/encapsulated-unions). Le [unioni non incapsulate](/windows/win32/Midl/nonencapsulated-unions) sono supportate solo nel formato seguente:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -63,15 +63,15 @@ Vedere l'esempio di [caso](case-cpp.md) per un uso di esempio di **switch_type**
 
 |||
 |-|-|
-|**Si applica a**|**typedef**|
+|**Si applica a**|**`typedef`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[esportazione](export.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 31154a38f8bbcb879fd871f1eb1bf5a4b15af79b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ce9ed987baf63f2cc9f095e2955a8165e977193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371013"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212215"
 ---
 # <a name="match_results-class"></a>Classe match_results
 
@@ -34,7 +34,7 @@ Tipo di un allocatore per gestire l'archiviazione.
 
 ## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive un oggetto che controlla una `sub_match<BidIt>` sequenza non modificabile di elementi di tipo generati da una ricerca di espressioni regolari. Ogni elemento punta alla sottosequenza corrispondente al gruppo Capture corrispondente a tale elemento.
+Il modello di classe descrive un oggetto che controlla una sequenza non modificabile di elementi di tipo `sub_match<BidIt>` generata da una ricerca di espressione regolare. Ogni elemento punta alla sottosequenza corrispondente al gruppo Capture corrispondente a tale elemento.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -51,40 +51,40 @@ Il modello di classe descrive un oggetto che controlla una `sub_match<BidIt>` se
 |[const_iterator](#const_iterator)|Tipo di iteratore const per le sottocorrispondenze.|
 |[const_reference](#const_reference)|Il tipo di un riferimento const dell'elemento.|
 |[difference_type](#difference_type)|Tipo di differenza iteratore.|
-|[Iteratore](#iterator)|Tipo di iteratore per le sottocorrispondenze.|
-|[Riferimento](#reference)|Tipo di un riferimento dell'elemento.|
+|[iteratore](#iterator)|Tipo di iteratore per le sottocorrispondenze.|
+|[reference](#reference)|Tipo di un riferimento dell'elemento.|
 |[size_type](#size_type)|Tipo di un conteggio delle sottocorrispondenze.|
 |[string_type](#string_type)|Tipo di una stringa.|
-|[Value_type](#value_type)|Tipo di una sottocorrispondenza.|
+|[value_type](#value_type)|Tipo di una sottocorrispondenza.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
 |Funzione membro|Descrizione|
 |-|-|
-|[Iniziare](#begin)|Definisce l'inizio di una sequenza di sottocorrispondenze.|
-|[Vuoto](#empty)|Verifica che non siano presenti sottocorrispondenze.|
-|[end](#end)|Definisce la fine di una sequenza di sottocorrispondenze.|
-|[Formato](#format)|Formatta le sottocorrispondenze.|
+|[iniziare](#begin)|Definisce l'inizio di una sequenza di sottocorrispondenze.|
+|[empty](#empty)|Verifica che non siano presenti sottocorrispondenze.|
+|[fine](#end)|Definisce la fine di una sequenza di sottocorrispondenze.|
+|[format](#format)|Formatta le sottocorrispondenze.|
 |[get_allocator](#get_allocator)|Restituisce l'allocatore archiviato.|
 |[length](#length)|Restituisce la lunghezza di una sottocorrispondenza.|
 |[max_size](#max_size)|Ottiene il numero massimo delle sottocorrispondenze.|
-|[Posizione](#position)|Ottiene l'offset iniziale di un sottogruppo.|
-|[Prefisso](#prefix)|Ottiene la sequenza prima della prima sottocorrispondenza.|
-|[Dimensione](#size)|Conteggia il numero di sottocorrispondenze.|
-|[Str](#str)|Restituisce una sottocorrispondenza.|
-|[suffix](#suffix)|Ottiene la sequenza dopo l'ultima sottocorrispondenza.|
-|[Swap](#swap)|Scambia due oggetti match_results.|
+|[posizione](#position)|Ottiene l'offset iniziale di un sottogruppo.|
+|[prefix](#prefix)|Ottiene la sequenza prima della prima sottocorrispondenza.|
+|[size](#size)|Conteggia il numero di sottocorrispondenze.|
+|[str](#str)|Restituisce una sottocorrispondenza.|
+|[suffisso](#suffix)|Ottiene la sequenza dopo l'ultima sottocorrispondenza.|
+|[scambio](#swap)|Scambia due oggetti match_results.|
 
 ### <a name="operators"></a>Operatori
 
 |Operatore|Descrizione|
 |-|-|
-|[operatore di comando](#op_eq)|Copia un oggetto match_results.|
-|[Operatore\[\]](#op_at)|Accede a un oggetto secondario.|
+|[operatore =](#op_eq)|Copia un oggetto match_results.|
+|[operatore\[\]](#op_at)|Accede a un oggetto secondario.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<regex>
+**Intestazione:**\<regex>
 
 **Spazio dei nomi:** std
 
@@ -188,7 +188,7 @@ next submatch: matched == false
 empty == false
 ```
 
-## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results::allocator_type
+## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results:: allocator_type
 
 Tipo di un allocatore per gestire l'archiviazione.
 
@@ -198,9 +198,9 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-il typedef è un sinonimo dell'argomento di modello *Alloc*.
+Typedef è un sinonimo dell'argomento di modello *Alloc*.
 
-## <a name="match_resultsbegin"></a><a name="begin"></a>match_results::begin
+## <a name="match_resultsbegin"></a><a name="begin"></a>match_results:: Begin
 
 Definisce l'inizio di una sequenza di sottocorrispondenze.
 
@@ -212,7 +212,7 @@ const_iterator begin() const;
 
 La funzione membro restituisce un iteratore di accesso casuale che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota).
 
-## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results::char_type
+## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results:: char_type
 
 Tipo di un elemento.
 
@@ -224,7 +224,7 @@ typedef typename iterator_traits<BidIt>::value_type char_type;
 
 typedef è un sinonimo del tipo `iterator_traits<BidIt>::value_type`, che corrisponde al tipo di elemento della sequenza di caratteri cercata.
 
-## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results::const_iterator
+## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results:: const_iterator
 
 Tipo di iteratore const per le sottocorrispondenze.
 
@@ -236,7 +236,7 @@ typedef T0 const_iterator;
 
 typedef descrive un oggetto che può essere usato come iteratore ad accesso casuale costante per la sequenza controllata.
 
-## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results::const_reference
+## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results:: const_reference
 
 Il tipo di un riferimento const dell'elemento.
 
@@ -248,7 +248,7 @@ typedef const typename Alloc::const_reference const_reference;
 
 Typedef descrive un oggetto che può essere usato come riferimento costante a un elemento della sequenza controllata.
 
-## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::difference_type
+## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::d ifference_type
 
 Tipo di differenza iteratore.
 
@@ -260,7 +260,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 typedef è un sinonimo del tipo `iterator_traits<BidIt>::difference_type`; descrive un oggetto che può rappresentare la differenza tra due iteratori che puntano a elementi della sequenza controllata.
 
-## <a name="match_resultsempty"></a><a name="empty"></a>match_results::vuoto
+## <a name="match_resultsempty"></a><a name="empty"></a>match_results:: Empty
 
 Verifica che non siano presenti sottocorrispondenze.
 
@@ -272,7 +272,7 @@ bool empty() const;
 
 La funzione membro restituisce true solo se la ricerca di espressioni regolari non riesce.
 
-## <a name="match_resultsend"></a><a name="end"></a>match_results::fine
+## <a name="match_resultsend"></a><a name="end"></a>match_results:: end
 
 Definisce la fine di una sequenza di sottocorrispondenze.
 
@@ -284,7 +284,7 @@ const_iterator end() const;
 
 La funzione membro restituisce un iteratore che punta poco oltre la fine della sequenza.
 
-## <a name="match_resultsformat"></a><a name="format"></a>match_results::formato
+## <a name="match_resultsformat"></a><a name="format"></a>match_results:: Format
 
 Formatta le sottocorrispondenze.
 
@@ -301,10 +301,10 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 *OutIt*\
 Tipo di iteratore di output.
 
-*Cambio*\
+*out*\
 Flusso di output in cui scrivere.
 
-*Fmt*\
+*FMT*\
 Stringa di formato.
 
 *Bandiere*\
@@ -312,11 +312,11 @@ Flag di formato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Ogni funzione membro genera testo formattato sotto il controllo del formato *fmt*. La prima funzione membro scrive il testo formattato nella sequenza definita dal relativo argomento *out* e restituisce *out*. La seconda funzione membro restituisce un oggetto stringa contenente una copia del testo formattato.
+Ogni funzione membro genera il testo formattato sotto il controllo del formato *FMT*. La prima funzione membro scrive il testo formattato nella sequenza *definita dal relativo argomento e* *restituisce un*risultato. La seconda funzione membro restituisce un oggetto stringa contenente una copia del testo formattato.
 
 Per generare testo formattato, il testo letterale della stringa di formato viene in genere copiato nella sequenza di destinazione. Ogni sequenza di escape della stringa di formato viene sostituita con il testo da essa rappresentato. I dettagli delle operazioni di copia e sostituzione vengono controllati dai flag di formato passati alla funzione.
 
-## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results::get_allocator
+## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results:: get_allocator
 
 Restituisce l'allocatore archiviato.
 
@@ -326,9 +326,9 @@ allocator_type get_allocator() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce una copia dell'oggetto allocatore usato da `*this` per allocare i relativi oggetti `sub_match`.
+La funzione membro restituisce una copia dell'oggetto allocatore usato da **`*this`** per allocare i relativi `sub_match` oggetti.
 
-## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results::iteratore
+## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results:: iterator
 
 Tipo di iteratore per le sottocorrispondenze.
 
@@ -340,7 +340,7 @@ typedef const_iterator iterator;
 
 Il tipo descrive un oggetto che può essere usato come iteratore ad accesso casuale per la sequenza controllata.
 
-## <a name="match_resultslength"></a><a name="length"></a>match_results::lunghezza
+## <a name="match_resultslength"></a><a name="length"></a>match_results:: length
 
 Restituisce la lunghezza di una sottocorrispondenza.
 
@@ -357,7 +357,7 @@ Indice della sottocorrispondenza.
 
 La funzione membro restituisce`(*this)[sub].length()`.
 
-## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results::match_results
+## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results:: match_results
 
 Costruisce l'oggetto.
 
@@ -372,14 +372,14 @@ match_results(const match_results& right);
 *Alloc*\
 Oggetto allocatore da archiviare.
 
-*va bene*\
+*Ok*\
 Oggetto match_results da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il primo costruttore crea un oggetto `match_results` che non contiene sottocorrispondenze. Il secondo costruttore `match_results` costruisce un oggetto che è una copia di *right*.
+Il primo costruttore crea un oggetto `match_results` che non contiene sottocorrispondenze. Il secondo costruttore crea un `match_results` oggetto che è una copia di *right*.
 
-## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results::max_size
+## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results:: max_size
 
 Ottiene il numero massimo delle sottocorrispondenze.
 
@@ -391,7 +391,7 @@ size_type max_size() const;
 
 La funzione membro restituisce la lunghezza della sequenza più lunga che l'oggetto può controllare.
 
-## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results::operatore
+## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results:: operator =
 
 Copia un oggetto match_results.
 
@@ -401,14 +401,14 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parametri
 
-*va bene*\
+*Ok*\
 Oggetto match_results da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore membro sostituisce `*this` la sequenza controllata da con una copia della sequenza controllata da *right*.
+L'operatore membro sostituisce la sequenza controllata da **`*this`** con una copia della sequenza controllata da *right*.
 
-## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results::operator[]
+## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results:: operator []
 
 Accede a un oggetto secondario.
 
@@ -418,14 +418,14 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parametri
 
-*N*\
+*n*\
 Indice della sottocorrispondenza.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce un riferimento all'elemento *n* della `sub_match` sequenza controllata o un riferimento a un oggetto vuoto se `size() <= n` o se il gruppo di acquisizione *n* non faceva parte della corrispondenza.
+La funzione membro restituisce un riferimento all'elemento *n* della sequenza controllata oppure un riferimento a un `sub_match` oggetto vuoto se `size() <= n` o se il gruppo Capture *n* non fa parte della corrispondenza.
 
-## <a name="match_resultsposition"></a><a name="position"></a>match_results::positione
+## <a name="match_resultsposition"></a><a name="position"></a>match_results::p osiziona
 
 Ottiene l'offset iniziale di un sottogruppo.
 
@@ -442,7 +442,7 @@ Indice della sottocorrispondenza.
 
 La funzione membro restituisce `std::distance(prefix().first, (*this)[sub].first)`, ovvero la distanza tra il primo carattere della sequenza di destinazione e il primo carattere nella sottocorrispondenza a cui punta l'elemento `n` della sequenza controllata.
 
-## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::prefix
+## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::p refisso
 
 Ottiene la sequenza prima della prima sottocorrispondenza.
 
@@ -454,7 +454,7 @@ const_reference prefix() const;
 
 La funzione membro restituisce un riferimento a un oggetto di tipo `sub_match<BidIt>` che punta alla sequenza di caratteri che inizia a partire dalla sequenza di destinazione e termina in corrispondenza di `(*this)[0].first`, ovvero punta al testo che precede la sottosequenza corrispondente.
 
-## <a name="match_resultsreference"></a><a name="reference"></a>match_results::riferimento
+## <a name="match_resultsreference"></a><a name="reference"></a>match_results:: Reference
 
 Tipo di un riferimento dell'elemento.
 
@@ -466,7 +466,7 @@ typedef const_reference reference;
 
 type è un sinonimo del tipo `const_reference`.
 
-## <a name="match_resultssize"></a><a name="size"></a>match_results::dimensione
+## <a name="match_resultssize"></a><a name="size"></a>match_results:: size
 
 Conteggia il numero di sottocorrispondenze.
 
@@ -478,7 +478,7 @@ size_type size() const;
 
 La funzione membro restituisce una corrispondenza più rispetto al numero di gruppi Capture nell'espressione regolare usata per la ricerca oppure zero se non è stata eseguita alcuna ricerca.
 
-## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results::size_type
+## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results:: size_type
 
 Tipo di un conteggio delle sottocorrispondenze.
 
@@ -490,7 +490,7 @@ typedef typename Alloc::size_type size_type;
 
 type è un sinonimo del tipo `Alloc::size_type`.
 
-## <a name="match_resultsstr"></a><a name="str"></a>match_results::str
+## <a name="match_resultsstr"></a><a name="str"></a>match_results:: Str
 
 Restituisce una sottocorrispondenza.
 
@@ -507,7 +507,7 @@ Indice della sottocorrispondenza.
 
 La funzione membro restituisce`string_type((*this)[sub])`.
 
-## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results::string_type
+## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results:: string_type
 
 Tipo di una stringa.
 
@@ -519,7 +519,7 @@ typedef basic_string<char_type> string_type;
 
 type è un sinonimo del tipo `basic_string<char_type>`.
 
-## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results::suffisso
+## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results:: suffisso
 
 Ottiene la sequenza dopo l'ultima sottocorrispondenza.
 
@@ -531,7 +531,7 @@ const_reference suffix() const;
 
 La funzione membro restituisce un riferimento a un oggetto di tipo `sub_match<BidIt>` che punta alla sequenza di caratteri che inizia a partire da `(*this)[size() - 1].second` e termina alla fine della sequenza di destinazione, ovvero punta al testo che segue la sottosequenza corrispondente.
 
-## <a name="match_resultsswap"></a><a name="swap"></a>match_results::swap
+## <a name="match_resultsswap"></a><a name="swap"></a>match_results:: swap
 
 Scambia due oggetti match_results.
 
@@ -541,14 +541,14 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*va bene*\
+*Ok*\
 Oggetto match_results con cui effettuare lo scambio.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro scambia `*this` il contenuto di e *right* in tempo costante e non genera eccezioni.
+La funzione membro scambia il contenuto di **`*this`** e a *destra* in un tempo costante e non genera eccezioni.
 
-## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results::value_type
+## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results:: value_type
 
 Tipo di una sottocorrispondenza.
 
@@ -562,4 +562,4 @@ typedef è un sinonimo del tipo `sub_match<BidIt>`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>regex](../standard-library/regex.md)
+[\<regex>](../standard-library/regex.md)

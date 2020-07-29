@@ -1,41 +1,41 @@
 ---
-title: '&lt;new&gt;'
+title: '&lt;Nuovo&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <new>
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457681"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212163"
 ---
-# <a name="ltnewgt"></a>&lt;new&gt;
+# <a name="ltnewgt"></a>&lt;Nuovo&gt;
 
 Definisce diversi tipi e funzioni che controllano l'allocazione e la liberazione di spazio di archiviazione nel controllo del programma. Definisce inoltre i componenti per la segnalazione degli errori di gestione della memoria.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<new>
+**Intestazione:**\<new>
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Alcune delle funzioni dichiarate in questa intestazione sono sostituibili. L'implementazione fornisce una versione predefinita, il cui comportamento è illustrato in questo documento. Un programma può, tuttavia, definire una funzione con la stessa firma per sostituire la versione predefinita in fase di collegamento. La versione di sostituzione deve soddisfare i requisiti descritti in questo documento.
+Alcune delle funzioni dichiarate in questa intestazione sono sostituibili.  L'implementazione fornisce una versione predefinita, il cui comportamento è illustrato in questo documento.  Un programma può, tuttavia, definire una funzione con la stessa firma per sostituire la versione predefinita in fase di collegamento. La versione di sostituzione deve soddisfare i requisiti descritti in questo documento.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="objects"></a>Oggetti
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Fornisce un oggetto da usare come argomento per le versioni **nothrow** di **New** e **Delete**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Fornisce un oggetto da usare come argomento per le **`nothrow`** versioni di **`new`** e **`delete`** .|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -55,9 +55,9 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili. L'imp
 
 |||
 |-|-|
-|[operator delete](../standard-library/new-operators.md#op_delete)|Funzione chiamata da un'espressione delete per rendere nuovamente disponibile l'archiviazione di singoli oggetti.|
+|[operatore delete](../standard-library/new-operators.md#op_delete)|Funzione chiamata da un'espressione delete per rendere nuovamente disponibile l'archiviazione di singoli oggetti.|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funzione chiamata da un'espressione delete per deallocare memoria per una matrice di oggetti.|
-|[operator new](../standard-library/new-operators.md#op_new)|La funzione chiamata da un'espressione new per allocare memoria per singoli oggetti.|
+|[operatore New](../standard-library/new-operators.md#op_new)|La funzione chiamata da un'espressione new per allocare memoria per singoli oggetti.|
 |[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|La funzione chiamata da un'espressione new per allocare memoria per una matrice di oggetti.|
 
 ### <a name="enums"></a>Enumerazioni
@@ -76,5 +76,5 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili. L'imp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

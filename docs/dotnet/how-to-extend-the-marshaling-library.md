@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988490"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216388"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Procedura: estendere la libreria del marshalling
 
 In questo argomento viene illustrato come estendere la libreria di marshalling per fornire più conversioni tra tipi di dati. Gli utenti possono estendere la libreria di marshalling per qualsiasi conversione di dati non supportata attualmente dalla libreria.
 
-È possibile estendere la libreria di marshalling in uno dei due modi seguenti: con o senza una [classe marshal_context](../dotnet/marshal-context-class.md). Esaminare la [Panoramica del marshalling nell' C++ ](../dotnet/overview-of-marshaling-in-cpp.md) argomento per determinare se una nuova conversione richiede un contesto.
+È possibile estendere la libreria di marshalling in uno dei due modi seguenti: con o senza una [classe marshal_context](../dotnet/marshal-context-class.md). Vedere l'argomento [Cenni preliminari sul marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md) per determinare se una nuova conversione richiede un contesto.
 
 In entrambi i casi, viene innanzitutto creato un file per le nuove conversioni di marshalling. Questa operazione viene eseguita per mantenere l'integrità dei file della libreria di marshalling standard. Se si desidera trasferire un progetto in un altro computer o in un altro programmatore, è necessario copiare il nuovo file di marshalling insieme al resto del progetto. In questo modo, all'utente che riceve il progetto verrà garantita la ricezione delle nuove conversioni e non sarà necessario modificare alcun file di libreria.
 
@@ -30,13 +30,13 @@ In entrambi i casi, viene innanzitutto creato un file per le nuove conversioni d
 
    - marshal_windows. h per i tipi di dati di Windows.
 
-   - marshal_cppstd. h per C++ i tipi di dati della libreria standard.
+   - marshal_cppstd. h per i tipi di dati della libreria standard C++.
 
    - marshal_atl. h per i tipi di dati ATL.
 
 1. Usare il codice alla fine di questi passaggi per scrivere la funzione di conversione. In questo codice, a è il tipo in cui eseguire la conversione, da è il tipo da cui eseguire la conversione e `from` è il parametro da convertire.
 
-1. Sostituire il commento sulla logica di conversione con il codice per convertire il parametro `from` in un oggetto di tipo e restituire l'oggetto convertito.
+1. Sostituire il commento sulla logica di conversione con il codice per convertire il `from` parametro in un oggetto di tipo e restituire l'oggetto convertito.
 
 ```
 namespace msclr {
@@ -59,19 +59,19 @@ namespace msclr {
 
    - marshal_windows. h per i tipi di dati di Windows.
 
-   - marshal_cppstd. h per C++ i tipi di dati della libreria standard.
+   - marshal_cppstd. h per i tipi di dati della libreria standard C++.
 
    - marshal_atl. h per i tipi di dati ATL.
 
-1. Usare il codice alla fine di questi passaggi per scrivere la funzione di conversione. In questo codice, a è il tipo in cui eseguire la conversione, da è il tipo da cui eseguire la conversione `toObject` è un puntatore in cui archiviare il risultato e `fromObject` è il parametro da convertire.
+1. Usare il codice alla fine di questi passaggi per scrivere la funzione di conversione. In questo codice, a è il tipo in cui eseguire la conversione, da è il tipo da cui eseguire la conversione, `toObject` è un puntatore in cui archiviare il risultato e `fromObject` è il parametro da convertire.
 
-1. Sostituire il commento sull'inizializzazione con il codice per inizializzare il `toPtr` sul valore vuoto appropriato. Se, ad esempio, si tratta di un puntatore, impostarlo su `NULL`.
+1. Sostituire il commento sull'inizializzazione con il codice per inizializzare sul `toPtr` valore vuoto appropriato. Se, ad esempio, si tratta di un puntatore, impostarlo su `NULL` .
 
-1. Sostituire il commento sulla logica di conversione con il codice per convertire il parametro `from` in un oggetto *di tipo.* Questo oggetto convertito verrà archiviato in `toPtr`.
+1. Sostituire il commento sulla logica di conversione con il codice per convertire il `from` parametro in un *TO* oggetto di tipo. Questo oggetto convertito verrà archiviato in `toPtr` .
 
-1. Sostituire il commento sull'impostazione `toObject` con il codice per impostare `toObject` all'oggetto convertito.
+1. Sostituire il commento sull'impostazione `toObject` con il codice da impostare sull' `toObject` oggetto convertito.
 
-1. Sostituire il commento sulla pulizia delle risorse native con il codice per liberare la memoria allocata dal `toPtr`. Se `toPtr` memoria allocata tramite `new`, utilizzare `delete` per liberare la memoria.
+1. Sostituire il commento sulla pulizia delle risorse native con il codice per liberare la memoria allocata da `toPtr` . Se `toPtr` la memoria allocata mediante **`new`** , utilizzare **`delete`** per liberare la memoria.
 
 ```
 namespace msclr {
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-Nell'esempio precedente, la funzione `marshal_as` restituisce un handle per i dati convertiti. Questa operazione è stata eseguita in modo da impedire la creazione di una copia aggiuntiva dei dati. Alla restituzione diretta della variabile verrebbe associato un costo di prestazioni non necessario.
+Nell'esempio precedente la `marshal_as` funzione restituisce un handle per i dati convertiti. Questa operazione è stata eseguita in modo da impedire la creazione di una copia aggiuntiva dei dati. Alla restituzione diretta della variabile verrebbe associato un costo di prestazioni non necessario.
 
 ```Output
 Managed name: Jeff Smith
@@ -268,4 +268,4 @@ Native zip code: 98111
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)
+[Cenni preliminari sul marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)

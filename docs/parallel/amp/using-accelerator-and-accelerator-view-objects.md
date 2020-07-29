@@ -2,12 +2,12 @@
 title: Utilizzo degli oggetti accelerator e accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: e3fed4dc2a431b751d4ad50484e32b738e786d10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404177"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215894"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 
@@ -94,7 +94,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>Shared Memory
 
-La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito. La proprietà Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) restituisce **true** se il tasto di scelta rapida supporta la memoria condivisa e la proprietà [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) ottiene la [access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per la memoria allocata in `accelerator` , ad esempio, la **matrice**associata all'oggetto `accelerator` o `array_view` gli oggetti a cui si accede in `accelerator` .
+La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito. La proprietà Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) restituisce **`true`** se il tasto di scelta rapida supporta la memoria condivisa e la proprietà [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) ottiene la [access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per la memoria allocata in `accelerator` , ad esempio, la **matrice**associata all'oggetto `accelerator` o `array_view` gli oggetti a cui si accede in `accelerator` .
 
 Il runtime di C++ AMP sceglie automaticamente il valore predefinito migliore `access_type` per ogni `accelerator` , ma le caratteristiche di prestazioni (larghezza di banda e latenza) della memoria condivisa possono essere inferiori rispetto a quelle della memoria dell'acceleratore dedicata (non condivisa) durante la lettura dalla CPU, la scrittura dalla CPU o entrambe. Se la memoria condivisa viene eseguita oltre alla memoria dedicata per la lettura e la scrittura dalla CPU, l'impostazione predefinita del runtime `access_type_read_write` è. in caso contrario, il runtime sceglie un valore predefinito più conservativo `access_type` e consente all'app di eseguirne l'override se i modelli di accesso alla memoria dei propri kernel di calcolo traggono vantaggio da un diverso `access_type` .
 
@@ -131,7 +131,7 @@ Un oggetto `accelerator_view` riflette sempre l'oggetto `default_cpu_access_type
 
 ## <a name="changing-the-default-accelerator"></a>Modifica dell'acceleratore predefinito
 
-È possibile modificare l'acceleratore predefinito chiamando il `accelerator::set_default` metodo. È possibile modificare l'acceleratore predefinito solo una volta per ogni esecuzione dell'app ed è necessario modificarlo prima di eseguire qualsiasi codice nella GPU. Tutte le chiamate di funzione successive per modificare il tasto di scelta rapida restituiscono **false**. Se si vuole usare un tasto di scelta rapida diverso in una chiamata a `parallel_for_each` , vedere la sezione "uso di più acceleratori" in questo articolo. Nell'esempio di codice seguente il tasto di scelta rapida predefinito viene impostato su uno non emulato, non è connesso a una visualizzazione e supporta la precisione doppia.
+È possibile modificare l'acceleratore predefinito chiamando il `accelerator::set_default` metodo. È possibile modificare l'acceleratore predefinito solo una volta per ogni esecuzione dell'app ed è necessario modificarlo prima di eseguire qualsiasi codice nella GPU. Tutte le chiamate di funzione successive per modificare il tasto di scelta rapida restituiscono **`false`** . Se si vuole usare un tasto di scelta rapida diverso in una chiamata a `parallel_for_each` , vedere la sezione "uso di più acceleratori" in questo articolo. Nell'esempio di codice seguente il tasto di scelta rapida predefinito viene impostato su uno non emulato, non è connesso a una visualizzazione e supporta la precisione doppia.
 
 ```cpp
 bool pick_accelerator()

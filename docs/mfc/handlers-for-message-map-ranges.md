@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 0ff9178679792929bbd6eb92bb6148cfa008dcad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231910"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestori per intervalli della mappa messaggi
 
@@ -143,8 +143,8 @@ Quando si scrive la funzione del gestore, specificare il parametro **uint** aggi
 
 Il `OnButtonClicked` gestore per un singolo messaggio di **BN_CLICKED** non accetta parametri. Lo stesso gestore per un intervallo di pulsanti accetta un **uint**. Il parametro aggiuntivo consente di identificare il controllo specifico responsabile della generazione del messaggio **BN_CLICKED** .
 
-Il codice illustrato nell'esempio è tipico: la conversione del valore passato a un oggetto `int` all'interno dell'intervallo di messaggi e l'asserzione di questo è il caso. È quindi possibile eseguire un'azione diversa a seconda del pulsante su cui è stato fatto clic.
+Il codice illustrato nell'esempio è tipico: la conversione del valore passato a un oggetto **`int`** all'interno dell'intervallo di messaggi e l'asserzione di questo è il caso. È quindi possibile eseguire un'azione diversa a seconda del pulsante su cui è stato fatto clic.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Dichiarazioni di funzioni gestore messaggi](declaring-message-handler-functions.md)
+[Dichiarazione delle funzioni del gestore di messaggi](declaring-message-handler-functions.md)

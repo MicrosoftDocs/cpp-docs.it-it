@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcef52144e4da932e9e1b6acbcd5f2170c4c7f86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291340"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211944"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (crea file binario in modalità Kernel)
 
@@ -27,28 +27,28 @@ Crea un file binario che può essere eseguito nel kernel di Windows.
 **/kernel**<br/>
 Il codice nel progetto corrente viene compilato e collegato mediante un set di regole del linguaggio C++ specifiche per il codice che verrà eseguito in modalità kernel.
 
-**/kernel-**<br/>
+**/kernel**<br/>
 Il codice nel progetto corrente viene compilato e collegato senza usare il set di regole del linguaggio C++ specifiche per il codice che verrà eseguito in modalità kernel.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-È presente alcun `#pragma` equivalente per controllare questa opzione.
+Non esiste alcun `#pragma` equivalente per controllare questa opzione.
 
-Specifica la **/kernel** opzione indica al compilatore e nel linker di arbitrare le funzionalità del linguaggio sono consentite in modalità kernel e assicurarsi che si potenza espressiva sia sufficiente per evitare l'instabilità del runtime che è univoco per modalità kernel C++. Questa operazione viene eseguita proibendo l'utilizzo delle funzionalità del linguaggio C++ che siano distruttive in modalità kernel e fornendo gli avvisi per le funzionalità del linguaggio C++ che sono potenzialmente dannose ma non possono essere disabilitate.
+Se si specifica l'opzione **/kernel** , il compilatore e il linker possono arbitrariare le funzionalità del linguaggio consentite in modalità kernel e assicurarsi di disporre di una potenza espressiva sufficiente per evitare l'instabilità del runtime, univoca per la modalità kernel C++. Questa operazione viene eseguita proibendo l'utilizzo delle funzionalità del linguaggio C++ che siano distruttive in modalità kernel e fornendo gli avvisi per le funzionalità del linguaggio C++ che sono potenzialmente dannose ma non possono essere disabilitate.
 
-Il **/kernel** opzione si applica il compilatore e linker nelle fasi di una compilazione e viene impostato a livello di progetto. Passare il **/kernel** switch per indicare al compilatore che il file binario risultante, dopo il collegamento, deve essere caricato nel kernel Windows. Il compilatore restringerà la gamma di funzionalità del linguaggio C++ a un subset compatibile con il kernel.
+L'opzione **/kernel** si applica sia alle fasi del compilatore che del linker di una compilazione e viene impostata a livello di progetto. Passare l'opzione **/kernel** per indicare al compilatore che il file binario risultante, dopo il collegamento, deve essere caricato nel kernel di Windows. Il compilatore restringerà la gamma di funzionalità del linguaggio C++ a un subset compatibile con il kernel.
 
-La tabella seguente elenca le modifiche nel comportamento del compilatore quando **/kernel** è specificato.
+La tabella seguente elenca le modifiche apportate al comportamento del compilatore quando viene specificato **/kernel** .
 
-|Tipo di comportamento|**/kernel** comportamento|
+|Tipo di comportamento|**/kernel** Comportamento|
 |-------------------|---------------------------|
-|Gestione delle eccezioni C++|Disabilitato. Tutte le istanze delle parole chiave `throw` e `try` generano un errore di compilazione (ad eccezione della specifica di eccezione `throw()`). No **/EH** le opzioni sono compatibili con **/kernel**, ad eccezione di **/EH-**.|
-|RTTI|Disabilitato. Tutte le istanze delle parole chiave `dynamic_cast` e `typeid` generano un errore del compilatore, a meno che `dynamic_cast` venga utilizzata in modo statico.|
+|Gestione delle eccezioni C++|Disabilitato. Tutte le istanze delle **`throw`** parole chiave e generano **`try`** un errore del compilatore (ad eccezione della specifica di eccezione `throw()` ). Nessuna opzione **/eh** è compatibile con **/kernel**, ad eccezione di **/eh-**.|
+|RTTI|Disabilitato. Tutte le istanze delle **`dynamic_cast`** parole chiave e generano **`typeid`** un errore del compilatore, a meno che non **`dynamic_cast`** venga usato in modo statico.|
 |`new` e `delete`|È necessario definire in modo esplicito l'operatore `new()` o `delete()`, né il tipo né il runtime fornirà una definizione predefinita.|
 
-Custom convenzioni di chiamata, il [/GS](gs-buffer-security-check.md) opzione di compilazione e tutte le ottimizzazioni sono consentite quando si utilizza il **/kernel** opzione. L'inline in gran parte non è influenzato **/kernel**, con la stessa semantica rispettata dal compilatore. Se si desidera assicurarsi che il `__forceinline` qualificatore di inline è rispettato, è necessario assicurarsi che l'avviso [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) è abilitata in modo da sapere quando una particolare `__forceinline` funzione non resa inline.
+Le convenzioni di chiamata personalizzate, l'opzione di compilazione [/GS](gs-buffer-security-check.md) e tutte le ottimizzazioni sono consentite quando si usa l'opzione **/kernel** . L'incorporamento non è influenzato da **/kernel**, con la stessa semantica rispettata dal compilatore. Per assicurarsi che il **`__forceinline`** qualificatore dell'incorporamento venga rispettato, è necessario assicurarsi che l'avviso [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) sia abilitato in modo da essere certi quando una particolare **`__forceinline`** funzione non è impostata come inline.
 
-Quando viene passato al compilatore il **/kernel** switch, viene predefinita una macro del preprocessore denominata `_KERNEL_MODE` e ha il valore **1**. È possibile utilizzare questo metodo per compilare in modo condizionale il codice basato sul fatto che l'ambiente di esecuzione sia in modalità utente o in modalità kernel. Ad esempio, il codice seguente specifica che la classe deve trovarsi in un segmento di memoria non divisibile in pagine quando viene compilata per l'esecuzione in modalità kernel.
+Quando al compilatore viene passata l'opzione **/kernel** , viene predefinita una macro del preprocessore denominata `_KERNEL_MODE` con il valore **1**. È possibile utilizzare questo metodo per compilare in modo condizionale il codice basato sul fatto che l'ambiente di esecuzione sia in modalità utente o in modalità kernel. Ad esempio, il codice seguente specifica che la classe deve trovarsi in un segmento di memoria non divisibile in pagine quando viene compilata per l'esecuzione in modalità kernel.
 
 ```cpp
 #ifdef _KERNEL_MODE
@@ -63,38 +63,38 @@ class NONPAGESECTION MyNonPagedClass
 };
 ```
 
-Alcuni seguenti combinazioni di architettura di destinazione e il **/arch** opzione genera un errore quando vengono usati con **/kernel**:
+Alcune delle seguenti combinazioni di architettura di destinazione e l'opzione **/Arch** generano un errore quando vengono usate con **/kernel**:
 
-- **/arch: {SSE&#124;SSE2&#124;AVX}** non sono supportati in x86. Solo **/arch:IA32** è supportato con **/kernel** x86.
+- **/Arch: {SSE&#124;SSE2&#124;AVX}** non sono supportati in x86. Con **/kernel** su x86 è supportato solo **/Arch: IA32** .
 
-- **/arch: AVX** non è supportato con **/kernel** su x64.
+- **/Arch: AVX** non è supportato con **/kernel** in x64.
 
-Compilazione con **/kernel** passa inoltre **/kernel** al linker. Ecco come ciò influisce sul comportamento del linker:
+La compilazione con **/kernel** passa anche **/kernel** al linker. Ecco come ciò influisce sul comportamento del linker:
 
-- Il collegamento incrementale è disabilitato. Se si aggiungono **/INCREMENTAL** alla riga di comando, il linker genera questo errore irreversibile:
+- Il collegamento incrementale è disabilitato. Se si aggiunge **/Incremental** alla riga di comando, il linker genera questo errore irreversibile:
 
-   **LINK: errore irreversibile LNK1295: '/ INCREMENTALE' non è compatibile con ' / KERNEL' specifica; collegamento senza '/ INCREMENTALE'**
+   **LINK: errore irreversibile LNK1295:'/INCREMENTAL ' non è compatibile con la specifica '/kernel '; collegamento senza '/INCREMENTAL '**
 
-- Il linker controlla ogni file oggetto (o qualsiasi membro archivio incluso da librerie statiche) per vedere se Impossibile sono stato compilato usando il **/kernel** opzione ma non era. Se le istanze soddisfano questi criteri, il linker collega di nuovo correttamente ma può presentarsi un avviso, come illustrato nella tabella seguente.
+- Il linker controlla ogni file oggetto (o qualsiasi membro dell'archivio incluso da librerie statiche) per verificare se potrebbe essere stato compilato usando l'opzione **/kernel** ma non lo è. Se le istanze soddisfano questi criteri, il linker collega di nuovo correttamente ma può presentarsi un avviso, come illustrato nella tabella seguente.
 
-   ||**/kernel** obj|**/kernel-** obj, MASM obj o cvtresed|Garantirebbe **/kernel** e **/kernel-** obj|
+   ||**/kernel** obj|**/kernel-** obj, MASM obj o cvtresed|Combinazione di **/kernel** e **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**link /kernel**|Yes|Yes|Sì con avviso LNK4257|
-   |**link**|Yes|Yes|Yes|
+   |**collegamento /kernel**|Sì|Sì|Sì con avviso LNK4257|
+   |**collegamento**|Sì|Sì|Sì|
 
-   **Oggetto a collegamento LNK4257 non compilato con /KERNEL; immagine non venga eseguita**
+   **Oggetto di collegamento LNK4257 non compilato con/kernel; l'immagine potrebbe non essere eseguita**
 
-Il **/kernel** opzione e il **/driver** opzione funzionano in modo indipendente e nessuna delle due influisce su altra.
+L'opzione **/kernel** e l'opzione **/driver** operano in modo indipendente, né influiscono sull'altro.
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Impostare l'opzione /kernel del compilatore in Visual Studio
 
-1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **C/C++** cartella.
+1. Selezionare la cartella **C/C++** .
 
-1. Selezionare il **riga di comando** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà **riga di comando** .
 
-1. Nel **opzioni aggiuntive** , aggiungere `/kernel` o `/kernel-`.
+1. Nella casella **Opzioni aggiuntive** aggiungere `/kernel` o `/kernel-` .
 
 ## <a name="see-also"></a>Vedere anche
 

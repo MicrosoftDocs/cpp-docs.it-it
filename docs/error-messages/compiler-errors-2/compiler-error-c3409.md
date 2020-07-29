@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200863"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231962"
 ---
 # <a name="compiler-error-c3409"></a>Errore del compilatore C3409
 
@@ -21,7 +21,7 @@ ms.locfileid: "80200863"
 
 Le parentesi quadre sono state interpretate dal compilatore come un blocco di attributi, ma non è stato trovato alcun [attributo](../../windows/attributes-alphabetical-reference.md) .
 
-Il compilatore può generare questo errore quando si utilizzano le parentesi quadre come parte della definizione di un'espressione lambda. Questo errore si verifica quando il compilatore non è in grado di determinare se le parentesi quadre sono parte della definizione di un'espressione lambda o di un blocco di attributi. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../../cpp/lambda-expressions-in-cpp.md).
+Il compilatore può generare questo errore quando si utilizzano le parentesi quadre come parte della definizione di un'espressione lambda. Questo errore si verifica quando il compilatore non è in grado di determinare se le parentesi quadre sono parte della definizione di un'espressione lambda o di un blocco di attributi. Per ulteriori informazioni sulle espressioni lambda, vedere [espressioni lambda](../../cpp/lambda-expressions-in-cpp.md).
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene generato C3409 perché un'espressione lambda utilizza la specifica `mutable`, ma non fornisce un elenco di parametri. Il compilatore non è in grado di determinare se le parentesi quadre sono parte della definizione di un'espressione lambda o di un blocco di attributi.
+Nell'esempio seguente viene generato C3409 perché un'espressione lambda utilizza la **`mutable`** specifica, ma non fornisce un elenco di parametri. Il compilatore non è in grado di determinare se le parentesi quadre sono parte della definizione di un'espressione lambda o di un blocco di attributi.
 
 ```cpp
 // C3409b.cpp
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
+[attributo](../../windows/attributes-alphabetical-reference.md)<br/>
 [Espressioni lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Sintassi delle espressioni lambda](../../cpp/lambda-expression-syntax.md)

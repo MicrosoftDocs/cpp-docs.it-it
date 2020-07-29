@@ -8,16 +8,16 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: e8ea949653c7e62f39ab9d1b181c419cf51fe3cb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 240cb4da03d6c8c1958b7a86e78171aca2dc30e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209833"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216453"
 ---
 # <a name="provider-support-for-bookmarks"></a>Supporto dei bookmark nel provider
 
-Nell'esempio riportato in questo argomento viene aggiunta l'interfaccia `IRowsetLocate` alla classe `CCustomRowset`. In quasi tutti i casi, si inizia aggiungendo un'interfaccia a un oggetto COM esistente. È quindi possibile testarlo aggiungendo altre chiamate dai modelli consumer. L'esempio illustra come eseguire le operazioni seguenti:
+Nell'esempio riportato in questo argomento viene aggiunta l' `IRowsetLocate` interfaccia alla `CCustomRowset` classe. In quasi tutti i casi, si inizia aggiungendo un'interfaccia a un oggetto COM esistente. È quindi possibile testarlo aggiungendo altre chiamate dai modelli consumer. L'esempio illustra come eseguire le operazioni seguenti:
 
 - Aggiungere un'interfaccia a un provider.
 
@@ -25,9 +25,9 @@ Nell'esempio riportato in questo argomento viene aggiunta l'interfaccia `IRowset
 
 - Aggiungere il supporto per i segnalibri.
 
-L'interfaccia `IRowsetLocate` eredita dall'interfaccia `IRowset` . Per aggiungere l'interfaccia `IRowsetLocate`, ereditare `CCustomRowset` da [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).
+L'interfaccia `IRowsetLocate` eredita dall'interfaccia `IRowset` . Per aggiungere l' `IRowsetLocate` interfaccia, ereditare `CCustomRowset` da [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).
 
-L'aggiunta dell'interfaccia `IRowsetLocate` è leggermente diversa dalla maggior parte delle interfacce. Per rendere la riga vtable, i modelli di provider OLE DB hanno un parametro di modello per gestire l'interfaccia derivata. Il codice seguente mostra il nuovo elenco di ereditarietà:
+L'aggiunta dell' `IRowsetLocate` interfaccia è leggermente diversa dalla maggior parte delle interfacce. Per rendere la riga vtable, i modelli di provider OLE DB hanno un parametro di modello per gestire l'interfaccia derivata. Il codice seguente mostra il nuovo elenco di ereditarietà:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -40,9 +40,9 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-Sono stati aggiunti il quarto, il quinto e il sesto parametro. In questo esempio vengono usate le impostazioni predefinite per il quarto e il quinto parametro, ma si specifica `IRowsetLocateImpl` come sesto parametro. `IRowsetLocateImpl` è una classe modello OLE DB che accetta due parametri di modello: questi consentono di associare l'interfaccia `IRowsetLocate` alla classe `CCustomRowset`. Per aggiungere la maggior parte delle interfacce, è possibile ignorare questo passaggio e passare a quello successivo. In questo modo è necessario gestire solo le interfacce `IRowsetLocate` e `IRowsetScroll`.
+Sono stati aggiunti il quarto, il quinto e il sesto parametro. In questo esempio vengono utilizzate le impostazioni predefinite per il quarto e il quinto `IRowsetLocateImpl` parametro, ma viene specificato come sesto parametro. `IRowsetLocateImpl`è una classe modello OLE DB che accetta due parametri di modello: questi consentono di collegare l' `IRowsetLocate` interfaccia alla `CCustomRowset` classe. Per aggiungere la maggior parte delle interfacce, è possibile ignorare questo passaggio e passare a quello successivo. `IRowsetLocate` `IRowsetScroll` In questo modo è necessario gestire solo le interfacce e.
 
-È quindi necessario indicare all'`CCustomRowset` di chiamare `QueryInterface` per l'interfaccia `IRowsetLocate`. Aggiungere la riga `COM_INTERFACE_ENTRY(IRowsetLocate)` alla mappa. La mappa dell'interfaccia per `CCustomRowset` dovrebbe apparire come illustrato nel codice seguente:
+È quindi necessario indicare all'oggetto `CCustomRowset` di chiamare `QueryInterface` per l' `IRowsetLocate` interfaccia. Aggiungere la riga `COM_INTERFACE_ENTRY(IRowsetLocate)` alla mappa. La mappa dell'interfaccia per `CCustomRowset` dovrebbe essere visualizzata come illustrato nel codice seguente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -56,11 +56,11 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-È anche necessario associare la mappa alla classe `CRowsetImpl`. Aggiungere nella macro COM_INTERFACE_ENTRY_CHAIN per eseguire l'hook nella mappa `CRowsetImpl`. Inoltre, creare un typedef denominato `RowsetBaseClass` costituito dalle informazioni sull'ereditarietà. Questo typedef è arbitrario e può essere ignorato.
+È anche necessario associare la mappa alla `CRowsetImpl` classe. Aggiungere nella macro COM_INTERFACE_ENTRY_CHAIN per eseguire l'hook nella `CRowsetImpl` mappa. Inoltre, creare un typedef denominato `RowsetBaseClass` costituito dalle informazioni sull'ereditarietà. Questo typedef è arbitrario e può essere ignorato.
 
-Infine, gestire la chiamata `IColumnsInfo::GetColumnsInfo`. Per eseguire questa operazione, in genere si usano le macro PROVIDER_COLUMN_ENTRY. Tuttavia, un consumer potrebbe voler usare i segnalibri. È necessario essere in grado di modificare le colonne restituite dal provider a seconda che il consumer chieda un segnalibro.
+Infine, gestire la `IColumnsInfo::GetColumnsInfo` chiamata. Per eseguire questa operazione, in genere si usano le macro PROVIDER_COLUMN_ENTRY. Tuttavia, un consumer potrebbe voler usare i segnalibri. È necessario essere in grado di modificare le colonne restituite dal provider a seconda che il consumer chieda un segnalibro.
 
-Per gestire la chiamata `IColumnsInfo::GetColumnsInfo`, eliminare la mappa PROVIDER_COLUMN nella classe `CTextData`. La macro PROVIDER_COLUMN_MAP definisce una funzione `GetColumnInfo`. Definire una funzione `GetColumnInfo` personalizzata. La dichiarazione di funzione dovrebbe essere simile alla seguente:
+Per gestire la `IColumnsInfo::GetColumnsInfo` chiamata, eliminare la mappa PROVIDER_COLUMN nella `CTextData` classe. La macro PROVIDER_COLUMN_MAP definisce una funzione `GetColumnInfo` . Definire una `GetColumnInfo` funzione personalizzata. La dichiarazione di funzione dovrebbe essere simile alla seguente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-Implementare quindi la funzione `GetColumnInfo` nel file *Custom*RS. cpp come indicato di seguito:
+Implementare quindi la `GetColumnInfo` funzione nel file *Custom*RS. cpp come indicato di seguito:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,9 +148,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo` verifica prima di tutto se è impostata una proprietà denominata `DBPROP_IRowsetLocate`. OLE DB dispone di proprietà per ognuna delle interfacce facoltative disattivate dall'oggetto set di righe. Se il consumer vuole usare una di queste interfacce facoltative, imposta una proprietà su true. Il provider può quindi verificare questa proprietà e intraprendere un'azione speciale basata su di essa.
+`GetColumnInfo`Verifica innanzitutto se è stata impostata una proprietà denominata `DBPROP_IRowsetLocate` . OLE DB dispone di proprietà per ognuna delle interfacce facoltative disattivate dall'oggetto set di righe. Se il consumer vuole usare una di queste interfacce facoltative, imposta una proprietà su true. Il provider può quindi verificare questa proprietà e intraprendere un'azione speciale basata su di essa.
 
-Nell'implementazione di si ottiene la proprietà utilizzando il puntatore all'oggetto Command. Il puntatore `pThis` rappresenta il set di righe o la classe di comando. Poiché i modelli vengono usati qui, è necessario passarli come puntatore **void** o il codice non viene compilato.
+Nell'implementazione di si ottiene la proprietà utilizzando il puntatore all'oggetto Command. Il `pThis` puntatore rappresenta il set di righe o la classe di comando. Poiché i modelli vengono usati qui, è necessario passarli come **`void`** puntatore o il codice non viene compilato.
 
 Specificare una matrice statica in cui conservare le informazioni sulla colonna. Se il consumer non desidera la colonna del segnalibro, una voce nella matrice viene sprecata. È possibile allocare questa matrice in modo dinamico, ma è necessario assicurarsi di eliminarla in modo corretto. Questo esempio definisce e usa le macro ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX per inserire le informazioni nella matrice. È possibile aggiungere le macro alla RS *personalizzata*. File H, come illustrato nel codice seguente:
 
@@ -183,7 +183,7 @@ Specificare una matrice statica in cui conservare le informazioni sulla colonna.
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;
 ```
 
-Per testare il codice nel consumer, è necessario apportare alcune modifiche al gestore `OnRun`. La prima modifica alla funzione è che si aggiunge codice per aggiungere una proprietà al set di proprietà. Il codice imposta la proprietà `DBPROP_IRowsetLocate` su true, indicando quindi al provider che si desidera la colonna bookmark. Il codice del gestore `OnRun` dovrebbe apparire come segue:
+Per testare il codice nel consumer, è necessario apportare alcune modifiche al `OnRun` gestore. La prima modifica alla funzione è che si aggiunge codice per aggiungere una proprietà al set di proprietà. Il codice imposta la `DBPROP_IRowsetLocate` proprietà su true, in modo da indicare al provider che si desidera la colonna bookmark. Il `OnRun` codice del gestore dovrebbe apparire come segue:
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -235,7 +235,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-Il ciclo **while** contiene il codice per chiamare il metodo `Compare` nell'interfaccia `IRowsetLocate`. Il codice necessario passa sempre perché si sta confrontando esattamente gli stessi segnalibri. Archiviare anche un segnalibro in una variabile temporanea per poterlo usare al termine del ciclo **while** per chiamare la funzione `MoveToBookmark` nei modelli consumer. La funzione `MoveToBookmark` chiama il metodo `GetRowsAt` in `IRowsetLocate`.
+Il **`while`** ciclo contiene il codice per chiamare il `Compare` metodo nell' `IRowsetLocate` interfaccia. Il codice necessario passa sempre perché si sta confrontando esattamente gli stessi segnalibri. Inoltre, archiviare un segnalibro in una variabile temporanea in modo che sia possibile utilizzarlo al **`while`** termine del ciclo per chiamare la `MoveToBookmark` funzione nei modelli consumer. La `MoveToBookmark` funzione chiama il `GetRowsAt` metodo in `IRowsetLocate` .
 
 È anche necessario aggiornare il record utente nel consumer. Aggiungere una voce nella classe per gestire un segnalibro e una voce nel COLUMN_MAP:
 
@@ -262,8 +262,8 @@ END_ACCESSOR_MAP()
 };
 ```
 
-Una volta aggiornato il codice, dovrebbe essere possibile compilare ed eseguire il provider con l'interfaccia `IRowsetLocate`.
+Una volta aggiornato il codice, dovrebbe essere possibile compilare ed eseguire il provider con l' `IRowsetLocate` interfaccia.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tecniche avanzate del provider](../../data/oledb/advanced-provider-techniques.md)
+[Tecniche avanzate per i provider](../../data/oledb/advanced-provider-techniques.md)

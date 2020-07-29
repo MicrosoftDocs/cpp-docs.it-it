@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455756"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212241"
 ---
-# <a name="ispod-class"></a>Classe is_pod
+# <a name="is_pod-class"></a>Classe is_pod
 
 Verifica se il tipo è POD.
 
@@ -30,9 +30,9 @@ struct is_pod;
 *T*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-`is_pod<T>::value`è **true** se il tipo *T* è Plain Old data (POD). In caso contrario, è **false**.
+`is_pod<T>::value`è **`true`** se il tipo *T* è Plain Old data (POD). In caso contrario, è **`false`** .
 
 I tipi aritmetici, i tipi di enumerazione, i tipi di puntatori e i tipi di puntatore a membro sono POD.
 
@@ -96,7 +96,7 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

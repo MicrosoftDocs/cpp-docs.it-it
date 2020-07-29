@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2201
 ms.assetid: ed927659-6e9c-447d-9963-19969ae1e957
-ms.openlocfilehash: 0b2a73358dc6e5991ebf086e8c774116e2fbd3de
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 05f8bb3e9b77d547bce363ea82b8e3816ed998cc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758970"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216323"
 ---
 # <a name="compiler-error-c2201"></a>Errore del compilatore C2201
 
 ' Identifier ': deve avere un collegamento esterno per poter essere esportato/importato
 
-L'identificatore esportato è `static`.
+L'identificatore esportato è **`static`** .
 
 L'esempio seguente genera l'errore C2286:
 

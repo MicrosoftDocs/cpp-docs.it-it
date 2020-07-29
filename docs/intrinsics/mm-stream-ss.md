@@ -7,16 +7,16 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ef1a2045a20070b667d416175826e5377fe30ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217343"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215985"
 ---
 # <a name="_mm_stream_ss"></a>_mm_stream_ss
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Scrive i dati a 32 bit in una posizione di memoria senza inquinare le cache.
 
@@ -34,26 +34,26 @@ void _mm_stream_ss(
 *Destinazione*\
 out Puntatore alla posizione in cui vengono scritti i dati di origine.
 
-*Source*\
-in Numero a 128 bit che contiene il `float` valore da scrivere nei 32 bit inferiori.
+*Origine*\
+in Numero a 128 bit che contiene il **`float`** valore da scrivere nei 32 bit inferiori.
 
 ## <a name="return-value"></a>Valore restituito
 
-No.
+Nessuno.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione intrinseca `movntss` genera l'istruzione. Per determinare il supporto hardware per questa istruzione, chiamare `__cpuid` l'oggetto `InfoType=0x80000001` intrinseco con e selezionare `CPUInfo[2] (ECX)`il bit 6 di. Questo bit è 1 quando l'istruzione è supportata e 0 in caso contrario.
+La funzione intrinseca genera l' `movntss` istruzione. Per determinare il supporto hardware per questa istruzione, chiamare l'oggetto `__cpuid` intrinseco con `InfoType=0x80000001` e selezionare il bit 6 di `CPUInfo[2] (ECX)` . Questo bit è 1 quando l'istruzione è supportata e 0 in caso contrario.
 
-Se si esegue codice che usa la `_mm_stream_ss` funzione intrinseca su hardware che non `movntss` supporta l'istruzione, i risultati sono imprevedibili.
+Se si esegue codice che usa la funzione `_mm_stream_ss` intrinseca su hardware che non supporta l' `movntss` istruzione, i risultati sono imprevedibili.
 
 ## <a name="example"></a>Esempio
 
@@ -87,9 +87,9 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-Parti Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione da Advanced Micro Devices, Inc.
+Parti Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti riservati. Riprodotto con l'autorizzazione da Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Vedere anche
 

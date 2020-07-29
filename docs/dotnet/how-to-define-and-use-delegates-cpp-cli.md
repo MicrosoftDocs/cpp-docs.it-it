@@ -1,25 +1,25 @@
 ---
-title: 'Procedura: Definire e usare delegati (C++/CLI)'
+title: 'Procedura: definire e utilizzare delegati (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387370"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216401"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Procedura: Definire e usare delegati (C++/CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Procedura: definire e utilizzare delegati (C++/CLI)
 
-Questo articolo illustra come definire e usare delegati in C++/CLI.
+Questo articolo illustra come definire e utilizzare i delegati in C++/CLI.
 
-Anche se .NET Framework fornisce un numero di delegati, in alcuni casi potrebbe essere necessario definire nuovi delegati.
+Sebbene il .NET Framework fornisca diversi delegati, a volte potrebbe essere necessario definire nuovi delegati.
 
-Esempio di codice seguente definisce un delegato denominato `MyCallback`. Il codice di gestione degli eventi, ovvero la funzione che viene chiamata quando viene generato questo nuovo delegato, ovvero deve avere un tipo restituito `void` e richiedere un <xref:System.String> riferimento.
+Nell'esempio di codice seguente viene definito un delegato denominato `MyCallback` . Il codice di gestione degli eventi, ovvero la funzione che viene chiamata quando viene attivato il nuovo delegato, deve avere un tipo restituito **`void`** e ottenere un <xref:System.String> riferimento.
 
-La funzione principale Usa un metodo statico definito da `SomeClass` per creare un'istanza di `MyCallback` delegare. Il delegato diventa quindi un metodo alternativo per chiamare questa funzione, come dimostrato inviando la stringa "singola" per l'oggetto delegato. Istanze aggiuntive o successiva di `MyCallback` sono collegate tra loro e quindi eseguita da una sola chiamata all'oggetto delegato.
+La funzione Main usa un metodo statico definito da `SomeClass` per creare un'istanza del `MyCallback` delegato. Il delegato diventa quindi un metodo alternativo per chiamare questa funzione, come dimostrato inviando la stringa "single" all'oggetto delegato. Successivamente, le istanze aggiuntive di `MyCallback` vengono collegate tra loro e quindi eseguite da una chiamata all'oggetto delegato.
 
 ```cpp
 // use_delegate.cpp
@@ -81,7 +81,7 @@ OtherClass::Method - chained, num = 99
 OtherClass::Method - chained, num = 100
 ```
 
-Nell'esempio di codice successivo mostra come associare un delegato con un membro di una classe di valore.
+Nell'esempio di codice successivo viene illustrato come associare un delegato a un membro di una classe di valori.
 
 ```cpp
 // mcppv2_del_mem_value_class.cpp
@@ -111,9 +111,9 @@ test
 test
 ```
 
-## <a name="how-to-compose-delegates"></a>Come creare delegati
+## <a name="how-to-compose-delegates"></a>Come comporre i delegati
 
-È possibile usare la "`-`" operatore per rimuovere un delegato componente da un delegato composto.
+È possibile utilizzare l' `-` operatore "" per rimuovere un delegato del componente da un delegato composto.
 
 ```cpp
 // mcppv2_compose_delegates.cpp
@@ -167,9 +167,9 @@ Invoking delegate d:
 
 ## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>Passare un delegato ^ a una funzione nativa che prevede un puntatore a funzione
 
-Da un componente gestito è possibile chiamare una funzione nativa con funzione di parametri di puntatore in cui la funzione nativa quindi possibile chiamare la funzione membro di delegato del componente gestito.
+Da un componente gestito è possibile chiamare una funzione nativa con i parametri del puntatore a funzione in cui la funzione nativa può chiamare la funzione membro del delegato del componente gestito.
 
-Questo esempio viene creato il file DLL che esporta le funzioni native:
+Questo esempio crea il file con estensione dll che esporta la funzione nativa:
 
 ```cpp
 // delegate_to_native_function.cpp
@@ -183,7 +183,7 @@ extern "C" {
 }
 ```
 
-Nell'esempio seguente usa il file DLL e passa un handle di delegato per la funzione nativa che prevede un puntatore a funzione.
+Nell'esempio seguente viene utilizzato il file con estensione dll e viene passato un handle del delegato alla funzione nativa che prevede un puntatore a funzione.
 
 ```cpp
 // delegate_to_native_function_2.cpp
@@ -217,7 +217,7 @@ Call to Managed Function
 
 ## <a name="to-associate-delegates-with-unmanaged-functions"></a>Per associare delegati a funzioni non gestite
 
-Per associare un delegato a una funzione nativa, è necessario includere la funzione nativa in un tipo gestito e dichiarare la funzione di essere richiamati tramite `PInvoke`.
+Per associare un delegato a una funzione nativa, è necessario eseguire il wrapping della funzione nativa in un tipo gestito e dichiarare la funzione da richiamare tramite `PInvoke` .
 
 ```cpp
 // mcppv2_del_to_umnangd_func.cpp
@@ -259,21 +259,21 @@ int main() {
 hello
 ```
 
-## <a name="to-use-unbound-delegates"></a>Usare i delegati non associati
+## <a name="to-use-unbound-delegates"></a>Per utilizzare delegati non associati
 
-È possibile usare un delegato non associato per passare un'istanza del tipo cui la funzione da chiamare quando viene chiamato il delegato.
+È possibile utilizzare un delegato non associato per passare un'istanza del tipo di cui si desidera chiamare la funzione quando viene chiamato il delegato.
 
-Delegati non associati sono particolarmente utili se si desidera scorrere gli oggetti in una raccolta, ovvero usando [per ognuna, in](../dotnet/for-each-in.md) parole chiave e chiamare una funzione membro in ogni istanza.
+I delegati non associati sono particolarmente utili se si desidera scorrere gli oggetti in una raccolta, usando [for each, in](../dotnet/for-each-in.md) keywords, e chiamare una funzione membro in ogni istanza.
 
-Di seguito viene illustrato come dichiarare, creare un'istanza e chiamata associato e annullare l'associazione di delegati:
+Di seguito viene illustrato come dichiarare, creare un'istanza e chiamare delegati associati e non associati:
 
-|Operazione|Associazione di delegati|Delegati non associati|
+|Azione|Delegati associati|Delegati non associati|
 |------------|---------------------|-----------------------|
-|Dichiarare|La firma del delegato deve corrispondere alla firma della funzione da chiamare tramite il delegato.|Il primo parametro della firma del delegato è il tipo di `this` per l'oggetto a cui si vuole chiamare.<br /><br /> Dopo il primo parametro, la firma del delegato deve corrispondere alla firma della funzione da chiamare tramite il delegato.|
-|Creare un'istanza di|Quando si crea un'istanza di un delegato associato, è possibile specificare una funzione di istanza o una funzione membro statica o globale.<br /><br /> Per specificare una funzione di istanza, il primo parametro è un'istanza del tipo di cui si vuole chiamare la funzione membro e il secondo parametro è l'indirizzo della funzione da chiamare.<br /><br /> Se si desidera chiamare una funzione membro statica o globale, è sufficiente passare il nome di una funzione globale o il nome della funzione membro statico.|Quando si crea un'istanza di un delegato non associato, è sufficiente passare l'indirizzo della funzione da chiamare.|
-|Chiamata|Quando si chiama un delegato associato, è sufficiente passare i parametri necessari per la firma del delegato.|Come associazione a un delegato, ma tenere presente che il primo parametro deve essere un'istanza dell'oggetto che contiene la funzione da chiamare.|
+|Declare|La firma del delegato deve corrispondere alla firma della funzione che si desidera chiamare tramite il delegato.|Il primo parametro della firma del delegato è il tipo di **`this`** per l'oggetto che si desidera chiamare.<br /><br /> Dopo il primo parametro, la firma del delegato deve corrispondere alla firma della funzione che si desidera chiamare tramite il delegato.|
+|Creare|Quando si crea un'istanza di un delegato associato, è possibile specificare una funzione di istanza o una funzione membro globale o statica.<br /><br /> Per specificare una funzione di istanza, il primo parametro è un'istanza del tipo la cui funzione membro si desidera chiamare e il secondo parametro è l'indirizzo della funzione che si desidera chiamare.<br /><br /> Se si vuole chiamare una funzione membro globale o statica, è sufficiente passare il nome di una funzione globale o il nome della funzione membro statica.|Quando si crea un'istanza di un delegato non associato, è sufficiente passare l'indirizzo della funzione che si vuole chiamare.|
+|Chiamata|Quando si chiama un delegato associato, è sufficiente passare i parametri necessari per la firma del delegato.|Uguale a un delegato associato, ma tenere presente che il primo parametro deve essere un'istanza dell'oggetto che contiene la funzione che si vuole chiamare.|
 
-Questo esempio viene illustrato come dichiarare, creare un'istanza e richiamare delegati non associati:
+Questo esempio illustra come dichiarare, creare un'istanza e chiamare delegati non associati:
 
 ```cpp
 // unbound_delegates.cpp
@@ -351,7 +351,7 @@ int main() {
 7
 ```
 
-Nell'esempio successivo illustra come usare i delegati non associati e il [per ognuna, in](../dotnet/for-each-in.md) parole chiave per scorrere gli oggetti in una raccolta e chiamare una funzione membro in ogni istanza.
+Nell'esempio seguente viene illustrato come utilizzare delegati non associati e [per each, in](../dotnet/for-each-in.md) parole chiave per scorrere gli oggetti in una raccolta e chiamare una funzione membro in ogni istanza.
 
 ```cpp
 // unbound_delegates_2.cpp
@@ -383,7 +383,7 @@ int main() {
 }
 ```
 
-In questo esempio crea un delegato non associato per le funzioni di accesso della proprietà:
+Questo esempio crea un delegato non associato alle funzioni di accesso di una proprietà:
 
 ```cpp
 // unbound_delegates_3.cpp
@@ -418,7 +418,7 @@ int main() {
 11
 ```
 
-L'esempio seguente viene illustrato come richiamare un delegato multicast, in cui è associata un'istanza e un'istanza non è associata.
+Nell'esempio seguente viene illustrato come richiamare un delegato multicast, in cui un'istanza è associata e un'istanza non è associata.
 
 ```cpp
 // unbound_delegates_4.cpp
@@ -458,7 +458,7 @@ in f(R ^ r)
 in f()
 ```
 
-Nell'esempio successivo viene illustrato come creare e chiamare un delegato generico non associato.
+Nell'esempio seguente viene illustrato come creare e chiamare un delegato generico non associato.
 
 ```cpp
 // unbound_delegates_5.cpp
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[delegate  (estensioni del componente C++)](../extensions/delegate-cpp-component-extensions.md)
+[delegato (Estensioni del componente C++)](../extensions/delegate-cpp-component-extensions.md)

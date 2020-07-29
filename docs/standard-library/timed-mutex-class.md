@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 6c9840d9b8c00d4b03e6ea329c7707a0edff9512
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3329c46f0760a13693507de18a09b974b6b646e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368011"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212098"
 ---
 # <a name="timed_mutex-class"></a>Classe timed_mutex
 
-Rappresenta un *tipo mutex a tempo.* Gli oggetti di questo tipo vengono usati per gestire l'esclusione reciproca mediante un blocco a tempo limitato all'interno di un programma.
+Rappresenta un *tipo mutex programmato*. Gli oggetti di questo tipo vengono usati per gestire l'esclusione reciproca mediante un blocco a tempo limitato all'interno di un programma.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,25 +42,25 @@ class timed_mutex;
 |Nome|Descrizione|
 |----------|-----------------|
 |[timed_mutex](#timed_mutex)|Costruisce un oggetto `timed_mutex` non bloccato.|
-|[Timed_mutex: : timed_mutex Distruttore](#dtortimed_mutex_destructor)|Rilascia le risorse usate dall'oggetto `timed_mutex`.|
+|[distruttore timed_mutex:: ~ timed_mutex](#dtortimed_mutex_destructor)|Rilascia le risorse usate dall'oggetto `timed_mutex`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[lock](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|
+|[blocco](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|
 |[try_lock](#try_lock)|Tenta di ottenere proprietà di `mutex` senza bloccare.|
 |[try_lock_for](#try_lock_for)|Tenta di ottenere la proprietà del `mutex` per un intervallo di tempo specificato.|
 |[try_lock_until](#try_lock_until)|Tenta di ottenere la proprietà del `mutex` fino all'ora specificata.|
-|[Sbloccare](#unlock)|Rilascia la proprietà di `mutex`.|
+|[sbloccare](#unlock)|Rilascia la proprietà di `mutex`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<mutex>
+**Intestazione:**\<mutex>
 
 **Spazio dei nomi:** std
 
-## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex::blocco
+## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex:: Lock
 
 Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.
 
@@ -72,7 +72,7 @@ void lock();
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>Costruttore timed_mutex::timed_mutex
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>Costruttore timed_mutex:: timed_mutex
 
 Costruisce un oggetto `timed_mutex` non bloccato.
 
@@ -80,7 +80,7 @@ Costruisce un oggetto `timed_mutex` non bloccato.
 timed_mutex();
 ```
 
-## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>Timed_mutex: : timed_mutex Distruttore
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>distruttore timed_mutex:: ~ timed_mutex
 
 Rilascia le risorse usate dall'oggetto `mutex`.
 
@@ -92,7 +92,7 @@ Rilascia le risorse usate dall'oggetto `mutex`.
 
 Se l'oggetto è bloccato quando il distruttore viene eseguito, il comportamento non è definito.
 
-## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex::try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex:: try_lock
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -102,13 +102,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene `mutex`correttamente la proprietà dell'oggetto ; in caso contrario, **false**.
+**`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex::try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex:: try_lock_for
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -124,13 +124,13 @@ Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica 
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene `mutex`correttamente la proprietà dell'oggetto ; in caso contrario, **false**.
+**`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex::try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex:: try_lock_until
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -148,13 +148,13 @@ Momento specifico che indica la soglia oltre la quale il metodo non tenta più d
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene `mutex`correttamente la proprietà dell'oggetto ; in caso contrario, **false**.
+**`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex::sblocca
+## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex:: Unlock
 
 Rilascia la proprietà di `mutex`.
 
@@ -168,5 +168,5 @@ Se il thread chiamante non è proprietario di `mutex`, il comportamento non è d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[\<>mutex](../standard-library/mutex.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

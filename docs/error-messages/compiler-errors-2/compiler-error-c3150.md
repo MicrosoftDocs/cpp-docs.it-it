@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3150
 ms.assetid: c1ff28f5-52fe-4fd4-81d0-2e0ad8548631
-ms.openlocfilehash: 23461f692914507e85dc23ae1b5e7a586ce85839
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 321fa0eaea6845a275fc9c508dd436844f0949e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375418"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232001"
 ---
 # <a name="compiler-error-c3150"></a>Errore del compilatore C3150
 
-'element': 'attribute' può essere applicata solo a una classe, interfaccia, matrice o puntatore
+' element ':' attribute ' può essere applicato solo a una classe, un'interfaccia, una matrice o un puntatore
 
-`__gc` può essere usato solo in una classe, interfaccia o matrice.
+**`__gc`** può essere utilizzato solo su una classe, un'interfaccia o una matrice.
 
-È raggiungibile tramite l'opzione del compilatore obsolete solo C3150 **/CLR: oldSyntax**.
+C3150 è raggiungibile solo usando l'opzione del compilatore obsolete **/CLR: oldSyntax**.

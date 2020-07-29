@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2702
 ms.assetid: 6def15d4-9a8d-43e7-ae35-42d7cb57c27e
-ms.openlocfilehash: 03a982ee35f0ac49a12568fc428de333f57f3ffa
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eb8a19bf5d29a2a0c69dc27e9b22f76df63ce8e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216076"
 ---
 # <a name="compiler-error-c2702"></a>Errore del compilatore C2702
 
 __except non può essere visualizzato nel blocco di terminazione
 
-Un gestore di eccezioni (`__try`/`__except`) non può essere annidato all'interno di un blocco `__finally`.
+Un gestore di eccezioni ( `__try` / **`__except`** ) non può essere annidato all'interno di un **`__finally`** blocco.
 
 L'esempio seguente genera l'C2702:
 

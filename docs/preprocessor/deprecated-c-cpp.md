@@ -7,19 +7,19 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 6caf5283aea848186c8bd6f9dd2009bb8d8ee8b5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 52d9deb4ad68dacc99fab9d12bc9eb21bc0d360e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231611"
 ---
 # <a name="deprecated-pragma"></a>deprecated (pragma)
 
-Il pragma **deprecated** consente di indicare che una funzione, un tipo o un qualsiasi altro identificatore potrebbero non essere più supportati in una versione futura o non devono più essere utilizzati.
+Il **`deprecated`** pragma consente di indicare che una funzione, un tipo o un altro identificatore potrebbe non essere più supportato in una versione futura o non deve più essere utilizzato.
 
 > [!NOTE]
-> Per informazioni sull'attributo `[[deprecated]]` C++ 14 e indicazioni su quando utilizzare tale attributo anziché il modificatore Microsoft `__declspec(deprecated)` o il pragma **deprecato** , vedere [attributi in C++ ](../cpp/attributes.md).
+> Per informazioni sull'attributo C++ 14 `[[deprecated]]` e indicazioni su quando utilizzare tale attributo anziché il `__declspec(deprecated)` modificatore Microsoft o il **`deprecated`** pragma, vedere [attributi in C++](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,13 +27,13 @@ Il pragma **deprecated** consente di indicare che una funzione, un tipo o un qua
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando il compilatore rileva un identificatore specificato da un pragma **deprecato** , emette un avviso del compilatore [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Quando il compilatore rileva un identificatore specificato da un **`deprecated`** pragma, emette un avviso del compilatore [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
 È possibile deprecare i nomi di macro. Inserire il nome della macro tra virgolette, altrimenti l'espansione della macro viene eseguita.
 
-Poiché il pragma **deprecated** funziona su tutti gli identificatori corrispondenti e non prende in considerazione le firme, non è l'opzione migliore per deprecare versioni specifiche di funzioni in overload. Qualsiasi nome di funzione corrispondente introdotto nell'ambito attiva l'avviso.
+Poiché il **`deprecated`** pragma funziona su tutti gli identificatori corrispondenti e non prende in considerazione le firme, non è l'opzione migliore per deprecare versioni specifiche delle funzioni in overload. Qualsiasi nome di funzione corrispondente introdotto nell'ambito attiva l'avviso.
 
-Si consiglia di usare l'attributo `[[deprecated]]` C++ 14, quando possibile, anziché il pragma **deprecato** . Il modificatore di Dichiarazione [__declspec (deprecato)](../cpp/deprecated-cpp.md) specifico di Microsoft rappresenta anche la scelta migliore in molti casi rispetto al pragma **deprecato** . L'attributo `[[deprecated]]` e il modificatore di `__declspec(deprecated)` consentono di specificare lo stato deprecato per particolari forme di funzioni in overload. L'avviso di diagnostica viene visualizzato solo sui riferimenti alla funzione di overload specifica a cui si applica l'attributo o il modificatore.
+È consigliabile usare l'attributo C++ 14 `[[deprecated]]` , quando possibile, anziché il **`deprecated`** pragma. Il modificatore di Dichiarazione [__declspec (deprecato)](../cpp/deprecated-cpp.md) specifico di Microsoft rappresenta anche la scelta migliore in molti casi rispetto al **`deprecated`** pragma. L' `[[deprecated]]` attributo e il `__declspec(deprecated)` modificatore consentono di specificare lo stato deprecato per particolari forme di funzioni in overload. L'avviso di diagnostica viene visualizzato solo sui riferimenti alla funzione di overload specifica a cui si applica l'attributo o il modificatore.
 
 ## <a name="example"></a>Esempio
 

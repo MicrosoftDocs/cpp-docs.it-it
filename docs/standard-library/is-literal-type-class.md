@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d5b750755f2499c89e91e497ed03244a11484871
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456216"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212254"
 ---
-# <a name="isliteraltype-class"></a>Classe is_literal_type
+# <a name="is_literal_type-class"></a>Classe is_literal_type
 
-Verifica se un tipo può essere usato come variabile `constexpr` oppure costruito, usato o restituito da funzioni `constexpr`.
+Verifica se un tipo può essere utilizzato come **`constexpr`** variabile o essere costruito, utilizzato da o restituito da **`constexpr`** funzioni.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,13 +29,13 @@ struct is_literal_type;
 *T*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un'istanza del predicato di tipo include true se il tipo *T* è un *tipo letterale*; in caso contrario, include false. Un tipo di valore letterale può essere **void**, un tipo scalare, un tipo di riferimento, una matrice di tipo letterale o un tipo di classe letterale. Un tipo di classe letterale è un tipo di classe che ha un distruttore semplice, è un tipo aggregato o ha almeno un costruttore `constexpr` che non supporta la copia o lo spostamento e tutti i relativi membri di dati non statici e le relative classi di base sono tipi letterali non volatili. Se da un lato il tipo di un valore letterale è sempre un tipo letterale, dall'altro il concetto di tipo letterale include tutto ciò che il compilatore può valutare come `constexpr` in fase di compilazione.
+Un'istanza del predicato di tipo include true se il tipo *T* è un *tipo letterale*; in caso contrario, include false. Un tipo di valore letterale può essere **`void`** , un tipo scalare, un tipo di riferimento, una matrice di tipo letterale o un tipo di classe letterale. Un tipo di classe letterale è un tipo di classe con un distruttore semplice, è un tipo di aggregazione o dispone di almeno un costruttore di non spostamento, non di copia **`constexpr`** , e tutte le relative classi di base e i membri dati non statici sono tipi letterali non volatili. Sebbene il tipo di un valore letterale sia sempre un tipo letterale, il concetto di tipo letterale include qualsiasi elemento che il compilatore può valutare come in fase di **`constexpr`** compilazione.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

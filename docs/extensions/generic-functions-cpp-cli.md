@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516376"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216011"
 ---
 # <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
 
@@ -53,16 +53,16 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametri
 
-*Attributi*<br/>
+*attributes*<br/>
 (Facoltativo) Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e sulle classi Attribute, vedere Attributi.
 
-*modifiers*<br/>
-(Facoltativo) Modificatore della funzione, ad esempio static.  Il modificatore **virtual** non è consentito perché i metodi virtuali non possono essere generici.
+*modificatori*<br/>
+(Facoltativo) Modificatore della funzione, ad esempio static.  **`virtual`** non è consentito perché i metodi virtuali potrebbero non essere generici.
 
-*return-type*<br/>
+*tipo restituito*<br/>
 Tipo restituito dal metodo. Se il tipo restituito è nullo, non è richiesto il valore restituito.
 
-*identifier*<br/>
+*identificatore*<br/>
 Nome della funzione.
 
 *type-parameter identifier(s)*<br/>
@@ -74,7 +74,7 @@ Elenco di identificatori delimitati da virgole.
 *type-parameter-constraints-clauses*<br/>
 Specifica le restrizioni sui tipi che è possibile usare come argomenti di tipo e ha il formato specificato in [Vincoli su parametri di tipo generico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
 
-*function-body*<br/>
+*corpo della funzione*<br/>
 Corpo del metodo, che può fare riferimento agli identificatori dei parametri di tipo.
 
 ### <a name="remarks"></a>Osservazioni
@@ -183,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Generics](generics-cpp-component-extensions.md)
