@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194564"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225202"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Errore degli strumenti del linker LNK2031
 
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare la funzione nativa da un'immagine pure. Si noti l'identificatore della convenzione di chiamata esplicita **__cdecl** .
+Nell'esempio seguente viene illustrato come utilizzare la funzione nativa da un'immagine pure. Si noti l' **`__cdecl`** identificatore della convenzione di chiamata esplicita.
 
 ```cpp
 // LNK2031_c.cpp

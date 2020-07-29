@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225072"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Eliminazione di tutti gli oggetti in una raccolta CObject
 
@@ -38,7 +38,7 @@ Questo articolo illustra come eliminare gli oggetti in:
 
 1. Usare `GetHeadPosition` e `GetNext` per scorrere l'elenco.
 
-1. Utilizzare l'operatore **Delete** per eliminare ogni oggetto rilevato nell'iterazione.
+1. Utilizzare l' **`delete`** operatore per eliminare ogni oggetto rilevato nell'iterazione.
 
 1. Chiamare la `RemoveAll` funzione per rimuovere tutti gli elementi dall'elenco dopo che gli oggetti associati a tali elementi sono stati eliminati.
 
@@ -54,7 +54,7 @@ Si noti la differenza tra l'eliminazione dell'oggetto di un elemento e la rimozi
 
 1. Usare i `GetSize` valori di indice Integer e per scorrere la matrice.
 
-1. Utilizzare l'operatore **Delete** per eliminare ogni elemento rilevato nell'iterazione.
+1. Utilizzare l' **`delete`** operatore per eliminare ogni elemento rilevato nell'iterazione.
 
 1. Chiamare la `RemoveAll` funzione per rimuovere tutti gli elementi dalla matrice dopo che sono stati eliminati.
 
@@ -68,7 +68,7 @@ Come nell'esempio di elenco precedente, è possibile chiamare `RemoveAll` per ri
 
 1. Usare `GetStartPosition` e `GetNextAssoc` per scorrere la matrice.
 
-1. Utilizzare l'operatore **Delete** per eliminare la chiave e/o il valore per ogni elemento della mappa quando viene rilevato nell'iterazione.
+1. Utilizzare l' **`delete`** operatore per eliminare la chiave e/o il valore per ogni elemento della mappa quando viene rilevato nell'iterazione.
 
 1. Chiamare la `RemoveAll` funzione per rimuovere tutti gli elementi dalla mappa dopo che sono stati eliminati.
 

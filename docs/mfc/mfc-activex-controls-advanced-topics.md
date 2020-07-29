@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 87cc0000f74935990cb5956e0fb3afd44e01532b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225033"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controlli ActiveX MFC: argomenti avanzati
 
@@ -69,7 +69,7 @@ Nella procedura seguente viene aggiunta una proprietà con parametri, denominata
 
 1. Nella casella **nome proprietà** Digitare `Array` .
 
-1. Nella casella **tipo proprietà** selezionare **short**.
+1. Nella casella **tipo proprietà** selezionare **`short`** .
 
 1. Per tipo di **implementazione** , fare clic su **metodi get/set**.
 
@@ -97,7 +97,7 @@ Inoltre, l'aggiunta guidata proprietà aggiunge le righe seguenti alla mappa di 
 
 Infine, le implementazioni delle `GetArray` funzioni e `SetArray` vengono aggiunte alla fine di. File CPP. Nella maggior parte dei casi, la funzione Get viene modificata in modo da restituire il valore della proprietà. La funzione set conterrà in genere il codice che deve essere eseguito, prima o dopo la modifica della proprietà.
 
-Affinché questa proprietà risulti utile, è possibile dichiarare una variabile membro della matrice bidimensionale nella classe del controllo, di tipo **short**, per archiviare i valori per la proprietà con parametri. È quindi possibile modificare la funzione Get per restituire il valore archiviato in corrispondenza della riga e della colonna corrette, come indicato dai parametri, e modificare la funzione set per aggiornare il valore a cui fanno riferimento i parametri di riga e colonna.
+Affinché questa proprietà risulti utile, è possibile dichiarare una variabile membro della matrice bidimensionale nella classe del controllo, di tipo **`short`** , per archiviare i valori per la proprietà con parametri. È quindi possibile modificare la funzione Get per restituire il valore archiviato in corrispondenza della riga e della colonna corrette, come indicato dai parametri, e modificare la funzione set per aggiornare il valore a cui fanno riferimento i parametri di riga e colonna.
 
 ## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>Gestione degli errori nel controllo ActiveX
 

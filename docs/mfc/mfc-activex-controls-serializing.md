@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621193"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225020"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controlli ActiveX MFC: serializzazione
 
@@ -58,13 +58,13 @@ Nella tabella seguente sono elencate le possibili funzioni di scambio di proprie
 |**PX_Bool ()**|Serializza una proprietà booleana di tipo.|
 |**PX_Color ()**|Serializza una proprietà del colore del tipo.|
 |**PX_Currency ()**|Serializza una proprietà **CY** (Currency) del tipo.|
-|**PX_Double ()**|Serializza una proprietà **Double** di tipo.|
+|**PX_Double ()**|Serializza una proprietà di tipo **`double`** .|
 |**PX_Font ()**|Serializza una proprietà del tipo di carattere.|
-|**PX_Float ()**|Serializza una proprietà **float** di tipo.|
+|**PX_Float ()**|Serializza una proprietà di tipo **`float`** .|
 |**PX_IUnknown ()**|Serializza una proprietà di tipo `LPUNKNOWN` .|
-|**PX_Long ()**|Serializza una proprietà **Long** del tipo.|
+|**PX_Long ()**|Serializza una proprietà di tipo **`long`** .|
 |**PX_Picture ()**|Serializza una proprietà Picture del tipo.|
-|**PX_Short ()**|Serializza una proprietà **short** del tipo.|
+|**PX_Short ()**|Serializza una proprietà di tipo **`short`** .|
 |**PXstring( )**|Serializza una proprietà di tipo `CString` .|
 |**PX_ULong ()**|Serializza una proprietà **ULONG** di tipo.|
 |**PX_UShort ()**|Serializza una proprietà **ushort** di tipo.|

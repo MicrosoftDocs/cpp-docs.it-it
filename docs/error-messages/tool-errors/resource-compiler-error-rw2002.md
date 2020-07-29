@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31962e3e7e4af63ec07ad569f7f72782b194032c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190690"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225176"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Errore del compilatore di risorse RW2002
 
 Errore di analisi
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
 1. **Tipo di acceleratore obbligatorio (ASCII o VIRTKEY)**
 
-   Il campo `type` nell'istruzione **ACCELERATORS** deve contenere il valore ASCII o VIRTKEY.
+   Il campo *tipo* nell'istruzione **Accelerators** deve contenere il valore ASCII o VIRTKEY.
 
-1. **INIZIO previsto nella tabella Accelerator**
+1. **Previsto BEGIN nella tabella dei tasti di scelta rapida**
 
    La parola chiave **BEGIN** deve seguire immediatamente la parola chiave **ACCELERATORS** .
 
@@ -31,7 +31,7 @@ Errore di analisi
 
    La parola chiave **Begin** deve seguire immediatamente la parola chiave **Dialog** .
 
-1. **INIZIO previsto nel menu**
+1. **BEGIN previsto nel menu**
 
    La parola chiave **BEGIN** deve seguire immediatamente la parola chiave **MENU** .
 
@@ -49,7 +49,7 @@ Errore di analisi
 
 1. **Carattere di controllo non compreso nell'intervallo [^ A-^ Z]**
 
-   Un carattere di controllo nell'istruzione **ACCELERATORS** non è valido. Il carattere che segue l'accento circonflesso ( **^** ) deve essere compreso tra A e Z incluse.
+   Un carattere di controllo nell'istruzione **ACCELERATORS** non è valido. Il carattere che segue il cursore ( **^** ) deve essere compreso tra a e Z, inclusi.
 
 1. **Menu vuoti non consentiti**
 
@@ -59,17 +59,17 @@ Errore di analisi
 
    La parola chiave **end** deve verificarsi alla fine di un'istruzione di **dialogo** . Verificare che non vi siano virgolette aperte rimaste dall'istruzione precedente.
 
-1. **FINE prevista nel menu**
+1. **END previsto in MENU**
 
    La parola chiave **END** deve essere specificata alla fine di un'istruzione **MENU** . Verificare che non siano presenti virgolette inglesi aperte o che il numero di istruzioni **BEGIN** corrisponda a quello delle istruzioni **END** .
 
 1. **Prevista virgola nella tabella dei tasti di scelta rapida**
 
-   Il compilatore di risorse richiede una virgola tra i campi `event` e *idvalue* nell'istruzione **ACCELERATORS** .
+   Il compilatore di risorse richiede una virgola tra i campi *Event* e *idValue* nell'istruzione **Accelerators** .
 
 1. **Previsto nome classe di controllo**
 
-   Il campo `class` di un'istruzione di **controllo** nell'istruzione della **finestra di dialogo** deve essere uno dei seguenti tipi: Button, ComboBox, Edit, ListBox, ScrollBar, static o definito dall'utente. Verificare che la classe sia stata digitata correttamente.
+   Il campo della *classe* di un'istruzione di **controllo** nell'istruzione della **finestra di dialogo** deve essere uno dei seguenti tipi: Button, ComboBox, Edit, ListBox, ScrollBar, static o definito dall'utente. Verificare che la classe sia stata digitata correttamente.
 
 1. **Nome del tipo di carattere previsto**
 
@@ -85,7 +85,7 @@ Errore di analisi
 
 1. **Previsto valore del comando numerico**
 
-   Nel compilatore di risorse era previsto un campo numerico *idValue* nell'istruzione **Accelerators** . Assicurarsi di aver usato una costante `#define` per specificare il valore e che la costante sia stata digitata correttamente.
+   Nel compilatore di risorse era previsto un campo numerico *idValue* nell'istruzione **Accelerators** . Assicurarsi di aver usato una `#define` costante per specificare il valore e che la costante sia stata digitata correttamente.
 
 1. **Prevista costante numerica nella tabella di stringhe**
 
@@ -105,19 +105,19 @@ Errore di analisi
 
 1. **Prevista stringa o comando costante Accelerator**
 
-   Il compilatore di risorse non è riuscito a determinare il tipo di tasto configurato per il tasto di scelta rapida. Il campo `event` nell'istruzione **ACCELERATORS** potrebbe non essere valido.
+   Il compilatore di risorse non è riuscito a determinare il tipo di tasto configurato per il tasto di scelta rapida. Il campo *evento* nell'istruzione **Accelerators** potrebbe non essere valido.
 
 1. **Previsto numero per ID**
 
-   Previsto un numero per il campo `id` di un'istruzione di controllo nell'istruzione della **finestra di dialogo** . Assicurarsi di disporre di un numero o di un'istruzione `#define` per l'ID del controllo.
+   Previsto un numero per il campo *ID* di un'istruzione di controllo nell'istruzione della **finestra di dialogo** . Assicurarsi di disporre di un numero o `#define` di un'istruzione per l'ID del controllo.
 
 1. **Prevista stringa tra virgolette nella classe della finestra di dialogo**
 
-   Il campo `class` dell'opzione CLASS nell'istruzione **DIALOG** deve essere un numero intero o una stringa racchiusa tra virgolette doppie.
+   Il campo della *classe* dell'opzione class nell'istruzione **Dialog** deve essere un numero intero o una stringa, racchiuso tra virgolette doppie.
 
 1. **Prevista stringa tra virgolette nel titolo della finestra di dialogo**
 
-   Il campo `captiontext` dell'opzione CAPTION nell'istruzione **DIALOG** deve essere una stringa di caratteri ASCII racchiusa tra virgolette doppie.
+   Il campo *CaptionText* dell'opzione caption nell'istruzione **Dialog** deve essere una stringa di caratteri ASCII racchiusa tra virgolette doppie.
 
 1. **Impossibile trovare il file: nomefile**
 
@@ -125,15 +125,15 @@ Errore di analisi
 
 1. **I nomi dei tipi di carattere devono essere numeri ordinali**
 
-   Il campo *pointsize* nell'istruzione font deve essere un numero intero, non una stringa.
+   Il campo *pointsize* nell'istruzione FONT deve essere un numero intero, non una stringa.
 
 1. **Acceleratore non valido**
 
-   Un campo `event` nell'istruzione **ACCELERATORS** non è stato riconosciuto o contiene più di due caratteri.
+   Un campo *evento* nell'istruzione **Accelerators** non è stato riconosciuto o è di lunghezza superiore a due caratteri.
 
 1. **Tipo di acceleratore non valido (ASCII o VIRTKEY)**
 
-   Il campo `type` nell'istruzione **ACCELERATORS** deve contenere il valore ASCII o VIRTKEY.
+   Il campo *tipo* nell'istruzione **Accelerators** deve contenere il valore ASCII o VIRTKEY.
 
 1. **Carattere di controllo non valido**
 

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358336"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225150"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operatore handle all'oggetto (^) (C++/CLI e C++/CX)
 
-Il *dichiaratore* di`^`handle ( , pronunciato "hat"), modifica l'identificatore di tipo in modo che l'oggetto dichiarato debba essere eliminato automaticamente quando il sistema determina che l'oggetto non è più accessibile. [specifier](../cpp/overview-of-declarators.md)
+Il *dichiaratore di handle* ( `^` , pronunciato "Hat"), modifica l' [identificatore](../cpp/overview-of-declarators.md) di tipo per indicare che l'oggetto dichiarato deve essere eliminato automaticamente quando il sistema determina che l'oggetto non è più accessibile.
 
 ## <a name="accessing-the-declared-object"></a>Accesso all'oggetto dichiarato
 
@@ -38,7 +38,7 @@ Il sistema usa il meccanismo *Garbage Collector* CLR per determinare se l'oggett
 
 Dal momento che i puntatori nativi C++ (`*`) e i riferimenti (`&`) non sono riferimenti gestiti, il Garbage Collector non può aggiornare automaticamente gli indirizzi a cui puntano. Per risolvere questo problema, utilizzare il dichiaratore di handle per specificare una variabile che il Garbage Collector riconosce e che consente l'aggiornamento automatico.
 
-Per ulteriori informazioni, vedere [Procedura: dichiarare gli handle nei tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
+Per altre informazioni, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Esempi
 
@@ -104,7 +104,7 @@ Not a boxed int
 100
 ```
 
-L'esempio mostra che il linguaggio C++ comune che prevede l'uso di un puntatore `void*` per puntare a un oggetto arbitrario viene sostituito da `Object^`, che può contenere un handle a qualsiasi classe di riferimento. Viene inoltre mostrato che tutti i tipi, ad esempio matrici e delegati, possono essere convertiti in un handle di oggetto.
+Questo esempio mostra che l'idioma C++ comune di uso di un **`void*`** puntatore per puntare a un oggetto arbitrario viene sostituito da `Object^` , che può mantenere un handle per qualsiasi classe di riferimento. Viene inoltre mostrato che tutti i tipi, ad esempio matrici e delegati, possono essere convertiti in un handle di oggetto.
 
 ```cpp
 // mcppv2_handle_3.cpp
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-In questo esempio viene`&`illustrato che un riferimento nativo ( ) non può essere associato a un membro **int** di un tipo gestito, **poiché int** potrebbe essere archiviato nell'heap sottoposto a Garbage Collection e i riferimenti nativi non tengono traccia dello spostamento degli oggetti nell'heap gestito. Per correggere è necessario utilizzare una variabile locale o modificare `&` in `%`, rendendolo un riferimento di traccia.
+In questo esempio viene illustrato che un riferimento nativo ( `&` ) non può essere associato a un **`int`** membro di un tipo gestito, poiché **`int`** può essere archiviato nell'heap sottoposto a Garbage Collection e i riferimenti nativi non tengono traccia dello spostamento di oggetti nell'heap gestito. Per correggere è necessario utilizzare una variabile locale o modificare `&` in `%`, rendendolo un riferimento di traccia.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -223,5 +223,5 @@ Opzione del compilatore: `/clr`
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni dei componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Operatore di riferimento di rilevamento](tracking-reference-operator-cpp-component-extensions.md)

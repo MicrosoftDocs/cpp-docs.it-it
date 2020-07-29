@@ -14,18 +14,18 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 8a936a0af9927aa0dc453a93c98676a77f4ad6dc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87183812"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Eccezioni: conversione da macro eccezioni MFC
 
 Si tratta di un argomento avanzato.
 
-Questo articolo illustra come convertire il codice esistente scritto con le macro di Microsoft Foundation Class ( **try**, **catch**, **throw**e così via) per usare le parole chiave di gestione delle eccezioni C++ **try**, **catch**e **throw**. Gli argomenti includono:
+Questo articolo illustra come convertire il codice esistente scritto con le macro di Microsoft Foundation Class ( **try**, **catch**, **throw**e così via) per usare le parole chiave di gestione delle eccezioni C++ **`try`** , **`catch`** e **`throw`** . Gli argomenti includono:
 
 - [Vantaggi della conversione](#_core_advantages_of_converting)
 
@@ -39,7 +39,7 @@ I principali vantaggi della conversione sono:
 
 - Il codice che usa le parole chiave di gestione delle eccezioni C++ viene compilato in un valore leggermente inferiore. EXE o. DLL.
 
-- Le parole chiave di gestione delle eccezioni C++ sono più versatili: possono gestire eccezioni di qualsiasi tipo di dati che può essere copiato (**int**, **float**, **char**e così via), mentre le macro gestiscono le eccezioni solo della classe `CException` e delle classi derivate.
+- Le parole chiave di gestione delle eccezioni C++ sono più versatili: possono gestire eccezioni di qualsiasi tipo di dati che può essere copiato ( **`int`** ,, **`float`** **`char`** e così via), mentre le macro gestiscono le eccezioni solo della classe `CException` e delle classi derivate.
 
 La differenza principale tra le macro e le parole chiave è che il codice che usa le macro "automaticamente" Elimina un'eccezione rilevata quando l'eccezione esce dall'ambito. Il codice che usa le parole chiave non lo consente, quindi è necessario eliminare in modo esplicito un'eccezione rilevata. Per ulteriori informazioni, vedere l'articolo [eccezioni: catching and Deleting Exceptions](exceptions-catching-and-deleting-exceptions.md).
 
@@ -53,7 +53,7 @@ Un'altra differenza è la sintassi. La sintassi per macro e parole chiave è div
 
    Si noti la virgola tra il nome della classe e il nome del puntatore all'oggetto.
 
-   La dichiarazione di eccezione per la parola chiave **catch** usa questa sintassi:
+   La dichiarazione di eccezione per la **`catch`** parola chiave usa questa sintassi:
 
    **catch (** *exception_type* *EXCEPTION_NAME* **)**
 
@@ -63,11 +63,11 @@ Un'altra differenza è la sintassi. La sintassi per macro e parole chiave è div
 
    Con le macro, la macro **catch** (con i relativi argomenti) inizia il primo blocco catch; la macro **AND_CATCH** avvia i blocchi catch successivi e la macro **END_CATCH** termina la sequenza dei blocchi catch.
 
-   Con le parole chiave, la parola chiave **catch** , con la relativa dichiarazione di eccezione, inizia ogni blocco catch. Non esiste alcuna controparte della macro **END_CATCH** . il blocco catch termina con la parentesi graffa di chiusura.
+   Con le parole chiave, la **`catch`** parola chiave (con la relativa dichiarazione di eccezione) inizia ogni blocco catch. Non esiste alcuna controparte della macro **END_CATCH** . il blocco catch termina con la parentesi graffa di chiusura.
 
 3. Espressione throw:
 
-   Le macro usano **THROW_LAST** per generare di nuovo l'eccezione corrente. La parola chiave **throw** , senza argomento, ha lo stesso effetto.
+   Le macro usano **THROW_LAST** per generare di nuovo l'eccezione corrente. La **`throw`** parola chiave, senza argomento, ha lo stesso effetto.
 
 ## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>Eseguire la conversione
 
@@ -77,17 +77,17 @@ Un'altra differenza è la sintassi. La sintassi per macro e parole chiave è div
 
 2. Sostituire o eliminare tutte le occorrenze delle macro seguenti:
 
-   **Prova** (Sostituisci con **try**)
+   **Prova** (Sostituisci con **`try`** )
 
-   **Catch** (Sostituisci con **catch**)
+   **Catch** (Sostituisci con **`catch`** )
 
-   **AND_CATCH** (sostituirla con **catch**)
+   **AND_CATCH** (sostituirla con **`catch`** )
 
    **END_CATCH** (Elimina)
 
-   **Throw** (Sostituisci con **throw**)
+   **Throw** (Sostituisci con **`throw`** )
 
-   **THROW_LAST** (sostituirla con **throw**)
+   **THROW_LAST** (sostituirla con **`throw`** )
 
 3. Modificare gli argomenti della macro in modo da formare dichiarazioni di eccezioni valide.
 
@@ -95,7 +95,7 @@ Un'altra differenza è la sintassi. La sintassi per macro e parole chiave è div
 
    [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   to
+   in
 
    [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 

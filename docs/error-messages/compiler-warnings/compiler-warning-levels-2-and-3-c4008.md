@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C4008
 ms.assetid: fb45e535-cb68-4743-80e9-a6e34cfffeca
-ms.openlocfilehash: 9b6fb56045d53cd18689f3903bb3d7a08c3d4e4d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab51b16331cc6a102c828234d2c2b8be84f2d276
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225241"
 ---
 # <a name="compiler-warning-levels-2-and-3-c4008"></a>Avviso del compilatore (livelli 2 e 3) C4008
 
 'identifier': attributo 'attribute' ignorato
 
-Il compilatore ha ignorato l'attributo `__fastcall`, **static**o **inline** per una funzione (avviso di livello 3) o per i dati (avviso di livello 2).
+Il compilatore ha ignorato **`__fastcall`** l' **`static`** attributo, o **`inline`** per una funzione (avviso di livello 3) o per i dati (avviso di livello 2).
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
-1. Attributo`__fastcall` con i dati.
+1. **`__fastcall`** attributo con i dati.
 
-1. Attributo**static** o **inline** con la funzione **main** .
+1. **`static`****`inline`** attributo o con la funzione **Main** .

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: 11aed7fbe2540984d8ed69f88b2a95649e8fee70
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 14a3ee638bd6df3b52e7327ca6e3c77f4a0e8b71
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457485"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224864"
 ---
-# <a name="istriviallyassignable-class"></a>Classe is_trivially_assignable
+# <a name="is_trivially_assignable-class"></a>Classe is_trivially_assignable
 
 Verifica se un valore di tipo `From` può essere facilmente assegnato al tipo `To`.
 
@@ -32,13 +32,13 @@ Il tipo di oggetto che riceve l'assegnazione.
 *Da*\
 Il tipo di oggetto che fornisce il valore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto e deve essere nota al compilatore per non richiedere operazioni complesse. Sia `From` che`To` devono essere tipi completi, **void**o matrici di associazione sconosciuta.
+L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto e deve essere nota al compilatore per non richiedere operazioni complesse. Sia `From` che `To` devono essere tipi completi, **`void`** , o matrici di associazione sconosciuta.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

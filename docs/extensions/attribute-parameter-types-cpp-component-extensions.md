@@ -5,40 +5,40 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7b219ddad939aab7d6093787dc2fe4131ccced5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172646"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225163"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Tipi di parametri degli attributi (C++/CLI e C++/CX)
 
 I valori passati agli attributi devono essere noti al compilatore in fase di compilazione.  I tipi dei parametri dell'attributo possono essere i seguenti:
 
-- **bool**
+- **`bool`**
 
-- **char**, **unsigned char**
+- **`char`**, **`unsigned char`**
 
-- **short**, **unsigned short**
+- **`short`**, **`unsigned short`**
 
-- **int**, **unsigned int**
+- **`int`**, **`unsigned int`**
 
-- **long**, **unsigned long**
+- **`long`**, **`unsigned long`**
 
-- **__int64**, **unsigned __int64**
+- **`__int64`**, **__int64 senza segno**
 
-- **float**, **double**
+- **`float`**, **`double`**
 
-- **wchar_t**
+- **`wchar_t`**
 
-- `char*` o `wchar_t*` o `System::String*`
+- **`char*`** o `wchar_t*` o`System::String*`
 
 - `System::Type ^`
 
 - `System::Object ^`
 
-- **enum**
+- **`enum`**
 
 ## <a name="example"></a>Esempio
 

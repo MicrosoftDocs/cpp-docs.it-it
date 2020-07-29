@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 3e718d0d34580d3bf2f13937159e431134631218
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: a5b9bc26b6d9ec66dc74e7adaad31eea1eece118
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142209"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224981"
 ---
 # <a name="choice-class"></a>Classe choice
 
@@ -43,39 +43,39 @@ class choice: public ISource<size_t>;
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Tipo basato su `tuple`che rappresenta i payload delle origini di input.
+`tuple`Tipo basato su che rappresenta i payload delle origini di input.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`type`|Alias di tipo per `T`.|
+|`type`|Alias del tipo per `T` .|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[scelta](#ctor)|Di overload. Costruisce un blocco della messaggistica `choice` .|
-|[distruttore ~ Choice](#dtor)|Elimina definitivamente il blocco della messaggistica `choice`.|
+|[choice](#ctor)|Di overload. Costruisce un blocco della messaggistica `choice` .|
+|[distruttore ~ Choice](#dtor)|Elimina definitivamente il `choice` blocco della messaggistica.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[accettare](#accept)|Accetta un messaggio offerto dal blocco `choice`, che trasferisce la proprietà al chiamante.|
-|[acquire_ref](#acquire_ref)|Acquisisce un conteggio di riferimenti in questo blocco di messaggistica `choice` per evitare l'eliminazione.|
-|[utilizzare](#consume)|Utilizza un messaggio precedentemente offerto da questo blocco di messaggistica `choice` e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.|
-|[has_value](#has_value)|Verifica se il blocco di messaggistica `choice` è stato ancora inizializzato con un valore.|
-|[index](#index)|Restituisce un indice nell'`tuple` che rappresenta l'elemento selezionato dal blocco della messaggistica `choice`.|
-|[link_target](#link_target)|Collega un blocco di destinazione a questo blocco di messaggistica `choice`.|
-|[release](#release)|Rilascia una prenotazione di messaggio precedente riuscita.|
-|[release_ref](#release_ref)|Rilascia un conteggio di riferimenti in questo blocco di messaggistica `choice`.|
-|[reserve](#reserve)|Riserva un messaggio precedentemente offerto da questo blocco di messaggistica `choice`.|
-|[unlink_target](#unlink_target)|Scollega un blocco di destinazione da questo blocco di messaggistica `choice`.|
-|[unlink_targets](#unlink_targets)|Scollega tutte le destinazioni da questo blocco di messaggistica `choice`. Esegue l'override di [ISource:: unlink_targets](isource-class.md#unlink_targets).|
-|[value](#value)|Ottiene il messaggio il cui indice è stato selezionato dal blocco della messaggistica `choice`.|
+|[accettare](#accept)|Accetta un messaggio offerto da questo `choice` blocco, trasferendo la proprietà al chiamante.|
+|[acquire_ref](#acquire_ref)|Acquisisce un conteggio di riferimenti in questo `choice` blocco della messaggistica, per evitare l'eliminazione.|
+|[consumare](#consume)|Utilizza un messaggio precedentemente offerto dal `choice` blocco della messaggistica e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.|
+|[has_value](#has_value)|Verifica se il `choice` blocco della messaggistica è stato ancora inizializzato con un valore.|
+|[Indice](#index)|Restituisce un indice nell'oggetto `tuple` che rappresenta l'elemento selezionato dal `choice` blocco della messaggistica.|
+|[link_target](#link_target)|Collega un blocco di destinazione a questo `choice` blocco di messaggistica.|
+|[versione](#release)|Rilascia una prenotazione di messaggio precedente riuscita.|
+|[release_ref](#release_ref)|Rilascia un conteggio di riferimenti in questo `choice` blocco di messaggistica.|
+|[riserva](#reserve)|Riserva un messaggio offerto in precedenza dal `choice` blocco della messaggistica.|
+|[unlink_target](#unlink_target)|Scollega un blocco di destinazione da questo `choice` blocco di messaggistica.|
+|[unlink_targets](#unlink_targets)|Scollega tutte le destinazioni da questo `choice` blocco di messaggistica. Esegue l'override di [ISource:: unlink_targets](isource-class.md#unlink_targets).|
+|[value](#value)|Ottiene il messaggio il cui indice è stato selezionato dal `choice` blocco della messaggistica.|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -95,9 +95,9 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="accept"></a>accettare
+## <a name="accept"></a><a name="accept"></a>accettare
 
-Accetta un messaggio offerto dal blocco `choice`, che trasferisce la proprietà al chiamante.
+Accetta un messaggio offerto da questo `choice` blocco, trasferendo la proprietà al chiamante.
 
 ```cpp
 virtual message<size_t>* accept(
@@ -108,18 +108,18 @@ virtual message<size_t>* accept(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` fornito.
+`runtime_object_identity`Oggetto dell'oggetto fornito `message` .
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `accept`.
+Puntatore al blocco di destinazione che chiama il `accept` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
 Puntatore al messaggio di cui il chiamante è ora proprietario.
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-Acquisisce un conteggio di riferimenti in questo blocco di messaggistica `choice` per evitare l'eliminazione.
+Acquisisce un conteggio di riferimenti in questo `choice` blocco della messaggistica, per evitare l'eliminazione.
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
@@ -132,9 +132,9 @@ Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo viene chiamato da un oggetto `ITarget` che viene collegato a questa origine durante il `link_target` metodo.
+Questo metodo viene chiamato da un `ITarget` oggetto che viene collegato a questa origine durante il `link_target` metodo.
 
-## <a name="ctor"></a>scelta
+## <a name="choice"></a><a name="ctor"></a>scelta
 
 Costruisce un blocco della messaggistica `choice` .
 
@@ -174,17 +174,17 @@ Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime
 
 Il costruttore di spostamento non viene eseguito durante un blocco. Ciò significa che l'utente deve assicurarsi che non ci siano attività leggere in corso al momento dello spostamento. In caso contrario, possono verificarsi situazioni di race condition che possono portare a eccezioni oppure a uno stato incoerente.
 
-## <a name="dtor"></a>~ Choice
+## <a name="choice"></a><a name="dtor"></a>~ Choice
 
-Elimina definitivamente il blocco della messaggistica `choice`.
+Elimina definitivamente il `choice` blocco della messaggistica.
 
 ```cpp
 ~choice();
 ```
 
-## <a name="consume"></a>consumare
+## <a name="consume"></a><a name="consume"></a>consumare
 
-Utilizza un messaggio precedentemente offerto da questo blocco di messaggistica `choice` e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.
+Utilizza un messaggio precedentemente offerto dal `choice` blocco della messaggistica e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.
 
 ```cpp
 virtual message<size_t>* consume(
@@ -195,22 +195,22 @@ virtual message<size_t>* consume(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` riservato.
+`runtime_object_identity`Oggetto dell'oggetto riservato `message` .
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `consume`.
+Puntatore al blocco di destinazione che chiama il `consume` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `message` cui il chiamante è ora proprietario.
+Puntatore all' `message` oggetto di cui il chiamante è ora proprietario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il metodo `consume` è simile a `accept`, ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito **true**.
+Il `consume` metodo è simile a `accept` , ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito **`true`** .
 
-## <a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-Verifica se il blocco di messaggistica `choice` è stato ancora inizializzato con un valore.
+Verifica se il `choice` blocco della messaggistica è stato ancora inizializzato con un valore.
 
 ```cpp
 bool has_value() const;
@@ -218,11 +218,11 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il blocco ha ricevuto un valore; in caso contrario, **false** .
+**`true`** Se il blocco ha ricevuto un valore; **`false`** in caso contrario,.
 
-## <a name="index"></a>Indice
+## <a name="index"></a><a name="index"></a>Indice
 
-Restituisce un indice nell'`tuple` che rappresenta l'elemento selezionato dal blocco della messaggistica `choice`.
+Restituisce un indice nell'oggetto `tuple` che rappresenta l'elemento selezionato dal `choice` blocco della messaggistica.
 
 ```cpp
 size_t index();
@@ -234,11 +234,11 @@ Indice del messaggio.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il payload del messaggio può essere estratto usando il metodo `get`.
+Il payload del messaggio può essere estratto usando il `get` metodo.
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
-Collega un blocco di destinazione a questo blocco di messaggistica `choice`.
+Collega un blocco di destinazione a questo `choice` blocco di messaggistica.
 
 ```cpp
 virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
@@ -247,9 +247,9 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="parameters"></a>Parametri
 
 *_PTarget*<br/>
-Puntatore a un blocco di `ITarget` da collegare a questo blocco della messaggistica `choice`.
+Puntatore a un `ITarget` blocco da collegare a questo `choice` blocco di messaggistica.
 
-## <a name="release"></a>versione
+## <a name="release"></a><a name="release"></a>versione
 
 Rilascia una prenotazione di messaggio precedente riuscita.
 
@@ -262,14 +262,14 @@ virtual void release(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` da rilasciare.
+`runtime_object_identity` `message` Oggetto dell'oggetto da rilasciare.
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `release`.
+Puntatore al blocco di destinazione che chiama il `release` metodo.
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-Rilascia un conteggio di riferimenti in questo blocco di messaggistica `choice`.
+Rilascia un conteggio di riferimenti in questo `choice` blocco di messaggistica.
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
@@ -282,11 +282,11 @@ Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo viene chiamato da un oggetto `ITarget` che viene scollegato da questa origine. Il blocco di origine può rilasciare tutte le risorse riservate per il blocco di destinazione.
+Questo metodo viene chiamato da un `ITarget` oggetto che viene scollegato da questa origine. Il blocco di origine può rilasciare tutte le risorse riservate per il blocco di destinazione.
 
-## <a name="reserve"></a>riserva
+## <a name="reserve"></a><a name="reserve"></a>riserva
 
-Riserva un messaggio precedentemente offerto da questo blocco di messaggistica `choice`.
+Riserva un messaggio offerto in precedenza dal `choice` blocco della messaggistica.
 
 ```cpp
 virtual bool reserve(
@@ -297,22 +297,22 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` da riservare.
+`runtime_object_identity`Dell' `message` oggetto riservato.
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `reserve`.
+Puntatore al blocco di destinazione che chiama il `reserve` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il messaggio è stato riservato correttamente; in caso contrario, **false** . Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
+**`true`** Se il messaggio è stato riservato correttamente; **`false`** in caso contrario,. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
 
 ### <a name="remarks"></a>Osservazioni
 
-Dopo aver chiamato `reserve`, in caso di esito positivo, è necessario chiamare `consume` o `release` per ottenere o concedere il possesso del messaggio, rispettivamente.
+Dopo aver chiamato `reserve` , in caso di esito positivo, è necessario chiamare o per ottenere `consume` `release` o concedere il possesso del messaggio, rispettivamente.
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
-Scollega un blocco di destinazione da questo blocco di messaggistica `choice`.
+Scollega un blocco di destinazione da questo `choice` blocco di messaggistica.
 
 ```cpp
 virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
@@ -321,11 +321,11 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="parameters"></a>Parametri
 
 *_PTarget*<br/>
-Puntatore a un blocco di `ITarget` da scollegare dal blocco della messaggistica `choice`.
+Puntatore a un `ITarget` blocco da scollegare da questo blocco di `choice` messaggistica.
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-Scollega tutte le destinazioni da questo blocco di messaggistica `choice`.
+Scollega tutte le destinazioni da questo `choice` blocco di messaggistica.
 
 ```cpp
 virtual void unlink_targets();
@@ -333,11 +333,11 @@ virtual void unlink_targets();
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo non deve essere chiamato dal distruttore perché il distruttore per il blocco di `single_assignment` interno verrà scollegato correttamente.
+Questo metodo non deve essere chiamato dal distruttore perché il distruttore del `single_assignment` blocco interno verrà scollegato correttamente.
 
-## <a name="value"></a>valore
+## <a name="value"></a>Valore della proprietà <a name="value"></a>
 
-Ottiene il messaggio il cui indice è stato selezionato dal blocco della messaggistica `choice`.
+Ottiene il messaggio il cui indice è stato selezionato dal `choice` blocco della messaggistica.
 
 ```cpp
 template <
@@ -357,10 +357,10 @@ Payload del messaggio.
 
 ### <a name="remarks"></a>Osservazioni
 
-Poiché un blocco di messaggistica `choice` può accettare input con tipi diversi di payload, è necessario specificare il tipo del payload al momento del recupero. È possibile determinare il tipo in base al risultato del metodo `index`.
+Poiché un blocco di messaggistica `choice` può accettare input con tipi diversi di payload, è necessario specificare il tipo del payload al momento del recupero. È possibile determinare il tipo in base al risultato del `index` metodo.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe join](join-class.md)<br/>
 [Classe single_assignment](single-assignment-class.md)

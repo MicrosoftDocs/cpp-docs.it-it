@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4806
 ms.assetid: 79eb74cd-b925-4b5b-84e1-8ae6f33e38b3
-ms.openlocfilehash: 5895e9bf489e240b1eff6f1499b711047ea74b9b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0d3b0aa05ca5fff16b3cd28c11e3bf8290de1b3b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175051"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225345"
 ---
 # <a name="compiler-warning-level-1-c4806"></a>Avviso del compilatore (livello 1) C4806
 
 'operation': operazione non affidabile: nessun valore di tipo 'type' promosso al tipo 'type' può eguagliare la costante data
 
-Questo messaggio fornisce un avviso su codice come `b == 3`, dove `b` è di tipo `bool`. Le regole di promozione causano la promozione di `bool` a `int`. Tale operazione è valida, ma non può mai essere **true**. L'esempio seguente genera l'errore C4806:
+Questo messaggio genera un avviso sul codice, ad esempio `b == 3` , dove `b` è di tipo **`bool`** . Le regole di innalzamento di pagina provocano la promozione di **`bool`** a **`int`** . Questa operazione è valida, ma non può mai essere **`true`** . L'esempio seguente genera l'errore C4806:
 
 ```cpp
 // C4806.cpp
