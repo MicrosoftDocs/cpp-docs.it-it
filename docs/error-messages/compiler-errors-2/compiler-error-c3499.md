@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738011"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228843"
 ---
 # <a name="compiler-error-c3499"></a>Errore del compilatore C3499
 
 un'espressione lambda specificata in modo che il tipo restituito sia void non può restituire un valore
 
-Il compilatore genera questo errore quando un'espressione lambda che specifica `void` come il tipo restituito restituisce un valore oppure quando un'espressione lambda contiene più di un'istruzione e restituisce un valore, ma non specifica il tipo restituito.
+Il compilatore genera questo errore quando un'espressione lambda che specifica **`void`** come il tipo restituito restituisce un valore oppure quando un'espressione lambda contiene più di un'istruzione e restituisce un valore, ma non specifica il tipo restituito.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 

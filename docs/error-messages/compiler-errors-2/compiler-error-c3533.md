@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: ce95bba417e9be3603f15376a0fd65a48f951a2f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 18ca9f7d61d96dcc81935bd3563f57bc37da8cd7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755642"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228804"
 ---
 # <a name="compiler-error-c3533"></a>Errore del compilatore C3533
 
 ' type ': un parametro non può avere un tipo che contiene ' auto '
 
-Un metodo o un parametro di modello non può essere dichiarato con la parola chiave `auto` se è attiva l'opzione predefinita del compilatore [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) .
+Un metodo o un parametro di modello non può essere dichiarato con la **`auto`** parola chiave se è attiva l'opzione predefinita del compilatore [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) .
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Rimuovere la parola chiave `auto` dalla dichiarazione di parametro.
+1. Rimuovere la **`auto`** parola chiave dalla dichiarazione di parametro.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene restituito C3533 perché dichiara un parametro di funzione con la parola chiave `auto` e viene compilato con **/Zc: auto**.
+Nell'esempio seguente viene restituito C3533 perché dichiara un parametro di funzione con la **`auto`** parola chiave e viene compilato con **/Zc: auto**.
 
 ```cpp
 // C3533a.cpp
@@ -35,7 +35,7 @@ void f(auto j) {} // C3533
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene restituito C3533 in modalità C++ 14 perché dichiara un parametro di modello con la parola chiave `auto` e viene compilato con **/Zc: auto**. In C++ 17 si tratta di una definizione valida di un modello di classe con un singolo parametro di modello non di tipo il cui tipo viene dedotto.
+Nell'esempio seguente viene restituito C3533 in modalità C++ 14 perché dichiara un parametro di modello con la **`auto`** parola chiave e viene compilato con **/Zc: auto**. In C++ 17 si tratta di una definizione valida di un modello di classe con un singolo parametro di modello non di tipo il cui tipo viene dedotto.
 
 ```cpp
 // C3533b.cpp
@@ -45,5 +45,5 @@ template<auto T> class C {}; // C3533
 
 ## <a name="see-also"></a>Vedere anche
 
-[Auto (parola chiave)](../../cpp/auto-keyword.md)<br/>
-[/Zc:auto (deduzione del tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)
+[Parola chiave auto](../../cpp/auto-keyword.md)<br/>
+[/Zc: auto (deduce il tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)

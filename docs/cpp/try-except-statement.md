@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: d0471bbd50e07fccbf160e9e866de4c545cdeb7e
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 6d0ed9cfa290ab83693ee248da5bebae6f91de57
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825770"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185697"
 ---
 # <a name="try-except-statement"></a>Istruzione try-except
 
@@ -40,7 +40,7 @@ L'istruzione **try-except** è un'estensione Microsoft che supporta la gestione 
 > {\
 > &nbsp;&nbsp;&nbsp;&nbsp;codice sorvegliato \
 > }\
-> Except ( *espressione* ) \ ** \_ \_**
+> ** \_ \_ except** ( *espressione* ) \
 > {\
 > &nbsp;&nbsp;&nbsp;&nbsp;codice gestore eccezioni \
 > }
@@ -56,33 +56,33 @@ Le eccezioni possono essere basate sull'hardware o sul software. La gestione str
 > [!NOTE]
 > La gestione eccezioni strutturata funziona con i file Win32 per i file di origine C++ e C. Tuttavia, non è progettato in modo specifico per C++. È possibile garantire maggiore portabilità del codice tramite la gestione delle eccezioni C++. Inoltre, la gestione eccezioni C++ è più flessibile, in quanto può gestire le eccezioni di qualsiasi tipo. Per i programmi C++, è consigliabile usare la gestione delle eccezioni C++ nativa: istruzioni [try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) .
 
-L'istruzione composta dopo la clausola **__try** è il *corpo* o la sezione *protetta* . L'espressione **__except** è nota anche come espressione di *filtro* . Il valore determina come viene gestita l'eccezione. L'istruzione composta dopo la clausola **__except** è il gestore di eccezioni. Il gestore specifica le azioni da intraprendere se viene generata un'eccezione durante l'esecuzione della sezione del corpo. L'esecuzione procede nel modo seguente:
+L'istruzione composta dopo la clausola **__try** è il *corpo* o la sezione *protetta* . L' **`__except`** espressione è nota anche come espressione di *filtro* . Il valore determina come viene gestita l'eccezione. L'istruzione composta dopo la **`__except`** clausola è il gestore di eccezioni. Il gestore specifica le azioni da intraprendere se viene generata un'eccezione durante l'esecuzione della sezione del corpo. L'esecuzione procede nel modo seguente:
 
 1. La sezione protetta viene eseguita.
 
-1. Se non si verifica alcuna eccezione durante l'esecuzione della sezione protetta, l'esecuzione continua in corrispondenza dell'istruzione dopo la clausola **__except** .
+1. Se non si verifica alcuna eccezione durante l'esecuzione della sezione protetta, l'esecuzione continua in corrispondenza dell'istruzione dopo la **`__except`** clausola.
 
-1. Se si verifica un'eccezione durante l'esecuzione della sezione protetta o nelle routine chiamate dalla sezione protetta, l'espressione **__except** viene valutata. I tre valori possibili sono:
+1. Se si verifica un'eccezione durante l'esecuzione della sezione protetta o nelle routine chiamate dalla sezione protetta, l' **`__except`** espressione viene valutata. I tre valori possibili sono:
 
    - `EXCEPTION_CONTINUE_EXECUTION`(-1) L'eccezione viene rilasciata. Continuare l'esecuzione nel punto in cui si è verificata l'eccezione.
 
    - `EXCEPTION_CONTINUE_SEARCH`(0) l'eccezione non è riconosciuta. Continuare la ricerca dello stack per un gestore, prima per contenere le istruzioni **try-except**, quindi per i gestori con la precedenza successiva più elevata.
 
-   - `EXCEPTION_EXECUTE_HANDLER`(1) l'eccezione è riconosciuta. Trasferire il controllo al gestore di eccezioni eseguendo l' **__except** istruzione composta, quindi continuare l'esecuzione dopo il blocco di **__except** .
+   - `EXCEPTION_EXECUTE_HANDLER`(1) l'eccezione è riconosciuta. Trasferire il controllo al gestore eccezioni eseguendo l' **`__except`** istruzione composta, quindi continuare l'esecuzione dopo il **`__except`** blocco.
 
-L'espressione **__except** viene valutata come un'espressione C. È limitato a un singolo valore, l'operatore di espressione condizionale o l'operatore virgola. Se è necessaria un'elaborazione più estesa, l'espressione può chiamare una routine che restituisce uno dei tre valori sopra elencati.
+L' **`__except`** espressione viene valutata come un'espressione C. È limitato a un singolo valore, l'operatore di espressione condizionale o l'operatore virgola. Se è necessaria un'elaborazione più estesa, l'espressione può chiamare una routine che restituisce uno dei tre valori sopra elencati.
 
 Ogni applicazione può essere associata al proprio gestore di eccezioni.
 
 Non è consentito passare a un'istruzione **__try** , ma è possibile uscire da una. Il gestore di eccezioni non viene chiamato se un processo viene terminato durante l'esecuzione di un'istruzione **try-except** .
 
-Per compatibilità con le versioni precedenti, **_try**, **_except**e **_leave** sono sinonimi **di __try**, **__except**e **__leave** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+Per compatibilità con le versioni precedenti, **_try**, **_except**e **_leave** sono sinonimi per **__try**, e a **`__except`** **`__leave`** meno che non sia specificata l'opzione del compilatore [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ### <a name="the-__leave-keyword"></a>La parola chiave __leave
 
-La parola chiave **__leave** è valida solo all'interno della sezione protetta di un'istruzione **try-except** e l'effetto è quello di passare alla fine della sezione protetta. L'esecuzione continua con la prima istruzione dopo il gestore dell'eccezione.
+La **`__leave`** parola chiave è valida solo all'interno della sezione protetta di un'istruzione **try-except** e l'effetto è quello di passare alla fine della sezione protetta. L'esecuzione continua con la prima istruzione dopo il gestore dell'eccezione.
 
-Un'istruzione **goto** può anche uscire dalla sezione sorvegliata e non comporta un peggioramento delle prestazioni in un'istruzione **try-finally** . Questo perché la rimozione dello stack non viene eseguita. È tuttavia consigliabile usare la parola chiave **__leave** anziché un'istruzione **goto** . Il motivo è che è meno probabile che si crei un errore di programmazione se la sezione sorvegliata è di grandi dimensioni o complessa.
+Un' **`goto`** istruzione può anche uscire dalla sezione sorvegliata e non comporta un peggioramento delle prestazioni in un'istruzione **try-finally** . Questo perché la rimozione dello stack non viene eseguita. Tuttavia, si consiglia di utilizzare la **`__leave`** parola chiave anziché un' **`goto`** istruzione. Il motivo è che è meno probabile che si crei un errore di programmazione se la sezione sorvegliata è di grandi dimensioni o complessa.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Funzioni intrinseche di gestione eccezioni strutturata
 
@@ -90,7 +90,7 @@ La gestione strutturata delle eccezioni fornisce due funzioni intrinseche dispon
 
 `GetExceptionCode`Restituisce il codice (un intero a 32 bit) dell'eccezione.
 
-La funzione `GetExceptionInformation` intrinseca restituisce un puntatore a una struttura [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers) contenente informazioni aggiuntive sull'eccezione. Tramite questo puntatore, è possibile accedere allo stato del computer esistente al momento di un'eccezione hardware. La struttura è analoga alla seguente:
+La funzione intrinseca `GetExceptionInformation` restituisce un puntatore a una struttura [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers) contenente informazioni aggiuntive sull'eccezione. Tramite questo puntatore, è possibile accedere allo stato del computer esistente al momento di un'eccezione hardware. La struttura è analoga alla seguente:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -99,13 +99,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-I `PEXCEPTION_RECORD` tipi di puntatore `PCONTEXT` e sono \<definiti nel file di inclusione Winnt. h> `_EXCEPTION_RECORD` e `_CONTEXT` e sono definiti nel file \<di inclusione EXCPT. h>
+I tipi di puntatore `PEXCEPTION_RECORD` e `PCONTEXT` sono definiti nel file di inclusione e \<winnt.h> `_EXCEPTION_RECORD` e `_CONTEXT` sono definiti nel file di inclusione\<excpt.h>
 
 È possibile utilizzare `GetExceptionCode` all'interno del gestore di eccezioni. Tuttavia, è possibile usare `GetExceptionInformation` solo all'interno dell'espressione di filtro eccezioni. Le informazioni a cui fa riferimento sono generalmente nello stack e non sono più disponibili quando il controllo viene trasferito al gestore di eccezioni.
 
 La funzione intrinseca [AbnormalTermination](/windows/win32/Debug/abnormaltermination) è disponibile all'interno di un gestore di terminazione. Restituisce 0 se il corpo dell'istruzione **try-finally** termina in sequenza. In tutti gli altri casi, restituisce 1.
 
-\<excpt. h> definisce alcuni nomi alternativi per queste funzioni intrinseche:
+\<excpt.h>definisce alcuni nomi alternativi per queste funzioni intrinseche:
 
 `GetExceptionCode`equivale a`_exception_code`
 

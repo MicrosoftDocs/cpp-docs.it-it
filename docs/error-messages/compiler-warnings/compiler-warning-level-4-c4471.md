@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076950"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228752"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Avviso del compilatore (livello 4) C4471
 
 '*Enumeration*': una dichiarazione con stato di un'enumerazione senza ambito deve avere un tipo sottostante (presupposto int)
 
-È stata trovata una dichiarazione con stato di un'enumerazione senza ambito senza un identificatore per il tipo sottostante. Per impostazione predefinita, C++ l'oggetto visivo presuppone che `int` sia il tipo sottostante per un'enumerazione. Ciò può causare problemi se nella definizione di enumerazione viene utilizzato un tipo diverso, ad esempio se viene specificato un tipo esplicito diverso o se un tipo diverso viene impostato in modo implicito da un inizializzatore. È anche possibile che si verifichino problemi di portabilità; gli altri compilatori non presuppongono `int` è il tipo sottostante di un'enumerazione.
+È stata trovata una dichiarazione con stato di un'enumerazione senza ambito senza un identificatore per il tipo sottostante. Per impostazione predefinita, Visual C++ presuppone che **`int`** sia il tipo sottostante per un'enumerazione. Ciò può causare problemi se nella definizione di enumerazione viene utilizzato un tipo diverso, ad esempio se viene specificato un tipo esplicito diverso o se un tipo diverso viene impostato in modo implicito da un inizializzatore. È anche possibile che si verifichino problemi di portabilità; altri compilatori non presumono **`int`** è il tipo sottostante di un'enumerazione.
 
 Questo avviso è disattivato per impostazione predefinita; è possibile usare/Wall o/w*N*4471 per abilitarlo nella riga di comando o usare #pragma [avviso](../../preprocessor/warning.md) nel file di origine.
 

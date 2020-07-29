@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: ba6d305a414e99bd22ca603aaac2615994780c7d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a132dcc795d6055c854a5ad147940868fe4e088b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185763"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228778"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Avviso del compilatore (livello 1) C4730
 
 ' Main ': la combinazione di _m64 ed espressioni a virgola mobile può produrre codice errato
 
-Una funzione usa [__m64](../../cpp/m64.md) e **float**/tipi **Double** . Poiché i registri MMX e a virgola mobile condividono lo stesso spazio di registro fisico (non può essere usato contemporaneamente), l'uso di `__m64` e **float**/tipi **Double** nella stessa funzione può causare il danneggiamento dei dati, causando probabilmente un'eccezione.
+Una funzione usa [__m64](../../cpp/m64.md) e i **`float`** / **`double`** tipi. Poiché i registri MMX e a virgola mobile condividono lo stesso spazio di registro fisico (non può essere usato contemporaneamente), l'uso **`__m64`** **`float`** / **`double`** di tipi e nella stessa funzione può causare il danneggiamento dei dati, causando probabilmente un'eccezione.
 
-Per usare in modo sicuro i tipi `__m64` e i tipi a virgola mobile nella stessa funzione, ogni istruzione che usa uno dei tipi deve essere separata dalla **_m_empty ()** (per MMX) o **_m_femms ()** (per 3DNow!) intrinseco.
+Per usare in modo sicuro **`__m64`** i tipi e i tipi a virgola mobile nella stessa funzione, ogni istruzione che usa uno dei tipi deve essere separata dalla **_m_empty ()** (per MMX) o da **_m_femms ()** (per 3DNow!) intrinseco.
 
 L'esempio seguente genera l'C4730:
 

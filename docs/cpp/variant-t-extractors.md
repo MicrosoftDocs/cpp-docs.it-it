@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187700"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185606"
 ---
 # <a name="_variant_t-extractors"></a>Estrattori _variant_t
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Estrae i dati dall'oggetto `VARIANT` incapsulato.
+Estrae i dati dall'oggetto incapsulato `VARIANT` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -87,31 +87,31 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>Osservazioni
 
-Estrae i dati non elaborati da un `VARIANT`incapsulato. Se il `VARIANT` non è già il tipo appropriato, viene usato `VariantChangeType` per tentare una conversione e viene generato un errore in caso di errore:
+Estrae i dati non elaborati da un oggetto incapsulato `VARIANT` . Se `VARIANT` non è già il tipo corretto, `VariantChangeType` viene usato per tentare una conversione e viene generato un errore in caso di errore:
 
-- **operatore Short ()** Estrae un valore integer **breve** .
+- **operatore Short ()** Estrae un **`short`** valore integer.
 
-- **operatore Long ()** Estrae un valore **Long** Integer.
+- **operatore Long ()** Estrae un **`long`** valore integer.
 
-- **operatore float ()** Estrae un valore numerico **float** .
+- **operatore float ()** Estrae un **`float`** valore numerico.
 
-- **Operatore Double ()** Estrae un valore integer **doppio** .
+- **Operatore Double ()** Estrae un **`double`** valore integer.
 
-- **operatore CY ()** Estrae un oggetto `CY`.
+- **operatore CY ()** Estrae un `CY` oggetto.
 
-- **operator bool ()** Estrae un valore **bool** .
+- **operator bool ()** Estrae un **`bool`** valore.
 
-- **Operatore Decimal ()** Estrae un valore `DECIMAL`.
+- **Operatore Decimal ()** Estrae un `DECIMAL` valore.
 
-- **operatore byte ()** Estrae un valore `BYTE`.
+- **operatore byte ()** Estrae un `BYTE` valore.
 
-- **operatore _bstr_t ()** Estrae una stringa che viene incapsulata in un oggetto `_bstr_t`.
+- **operatore _bstr_t ()** Estrae una stringa che viene incapsulata in un `_bstr_t` oggetto.
 
-- **operatore IDispatch\*()** Estrae un puntatore all'interfaccia dispatch da un `VARIANT`incapsulato. `AddRef` viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
+- **operator IDispatch \* ()** estrae un puntatore all'interfaccia dispatch da un oggetto incapsulato `VARIANT` . `AddRef`viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
 
-- **operatore IUnknown\*()** Estrae un puntatore a interfaccia COM da un `VARIANT`incapsulato. `AddRef` viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
+- **operator IUnknown \* ()** estrae un puntatore a interfaccia com da un incapsulato `VARIANT` . `AddRef`viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

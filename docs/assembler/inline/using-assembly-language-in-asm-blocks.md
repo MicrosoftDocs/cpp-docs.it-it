@@ -6,18 +6,18 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-ms.openlocfilehash: e5c7c9274ab5b75efa007fd96fc00d80bd53426e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 164cd45be5149b0c31cdbe4484bb852892476fa2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191436"
 ---
 # <a name="using-assembly-language-in-__asm-blocks"></a>Utilizzo del linguaggio assembly in blocchi __asm
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-L'assembler inline presenta molti aspetti in comune con gli altri assembler. Ad esempio, accetta qualsiasi espressione valida in MASM. In questa sezione viene descritto l'utilizzo delle funzionalità del linguaggio assembly nei blocchi `__asm`.
+L'assembler inline presenta molti aspetti in comune con gli altri assembler. Ad esempio, accetta qualsiasi espressione valida in MASM. In questa sezione viene descritto l'utilizzo delle funzionalità del linguaggio assembly nei **`__asm`** blocchi.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
@@ -25,7 +25,7 @@ L'assembler inline presenta molti aspetti in comune con gli altri assembler. Ad 
 
 - [Espressioni MASM in assembly inline](../../assembler/inline/masm-expressions-in-inline-assembly.md)
 
-- [Operatori e direttive dati in assembly inline](../../assembler/inline/data-directives-and-operators-in-inline-assembly.md)
+- [Operatori e direttive dati nell'assembly inline](../../assembler/inline/data-directives-and-operators-in-inline-assembly.md)
 
 - [Direttive EVEN e ALIGN](../../assembler/inline/even-and-align-directives.md)
 
@@ -33,17 +33,17 @@ L'assembler inline presenta molti aspetti in comune con gli altri assembler. Ad 
 
 - [Riferimenti ai segmenti nell'assembly inline](../../assembler/inline/segment-references-in-inline-assembly.md)
 
-- [Dimensioni delle variabili e dei tipi in assembly inline](../../assembler/inline/type-and-variable-sizes-in-inline-assembly.md)
+- [Dimensioni del tipo e delle variabili nell'assembly inline](../../assembler/inline/type-and-variable-sizes-in-inline-assembly.md)
 
 - [Commenti in linguaggio assembly](../../assembler/inline/assembly-language-comments.md)
 
-- [Il _emit Emit](../../assembler/inline/emit-pseudoinstruction.md)
+- [La pseudoistruzione _emit](../../assembler/inline/emit-pseudoinstruction.md)
 
 - [Debug ed elenchi per assembly inline](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)
 
-- [Set di istruzioni per MMX Intel](../../assembler/inline/intel-s-mmx-instruction-set.md)
+- [Set di istruzioni MMX di Intel](../../assembler/inline/intel-s-mmx-instruction-set.md)
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

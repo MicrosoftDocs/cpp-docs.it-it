@@ -9,18 +9,18 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-ms.openlocfilehash: b6ac9f7174baf1e0ebe41181c6a6f43e7bb3f5d1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cdcfee20cfdc5a6dc315d00ef024d1616900a2e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191105"
 ---
 # <a name="using-operators-in-__asm-blocks"></a>Utilizzo degli operatori in blocchi __asm
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Un blocco `__asm` non può utilizzare C C++ o operatori specifici, ad esempio l'operatore **<<** . Gli operatori condivisi da C e MASM, ad esempio l'operatore di \*, vengono tuttavia interpretati come operatori del linguaggio assembly. Ad esempio, all'esterno di un blocco di `__asm`, le parentesi quadre ( **[]** ) vengono interpretate come indici di matrice di inclusione, che C scala automaticamente alla dimensione di un elemento nella matrice. All'interno di un blocco `__asm`, vengono interpretate come operatore di indice di MASM, il che genera un offset dei byte non ridimensionato da qualsiasi oggetto dati o etichetta (non solo da una matrice). Nel codice riportato di seguito viene illustrata la differenza:
+Un **`__asm`** blocco non può utilizzare operatori specifici C o C++, ad esempio l' **<<** operatore. Gli operatori condivisi da C e MASM, ad esempio l' \* operatore, vengono tuttavia interpretati come operatori del linguaggio assembly. Ad esempio, all'esterno di un **`__asm`** blocco, le parentesi quadre (**[]**) vengono interpretate come indici di matrice di inclusione, che C scala automaticamente alla dimensione di un elemento nella matrice. All'interno di un **`__asm`** blocco, vengono considerati un operatore di indice MASM, che restituisce un offset di byte non ridimensionato da qualsiasi oggetto dati o etichetta (non solo da una matrice). Nel codice riportato di seguito viene illustrata la differenza:
 
 ```cpp
 int array[10];
@@ -38,8 +38,8 @@ __asm mov array[6 * TYPE int], 0 ; Store 0 at array + 24
 array[6] = 0;                   /* Store 0 at array + 24 */
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di C o C++ in blocchi __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[Utilizzo di C o C++ in blocchi di __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

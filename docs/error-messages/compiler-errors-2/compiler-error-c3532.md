@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 2ef5eb3c2bedd9defbd0b80e6d8c5c8912fcf16d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e2329111e916df9eac99d156bcf58a58e148cb08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761933"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228817"
 ---
 # <a name="compiler-error-c3532"></a>Errore del compilatore C3532
 
 ' type ': utilizzo non corretto di ' auto '
 
-Il tipo indicato non può essere dichiarato con la parola chiave `auto`. Non è ad esempio possibile usare la parola chiave `auto` per dichiarare una matrice o un tipo restituito di un metodo.
+Il tipo indicato non può essere dichiarato con la **`auto`** parola chiave. Non è ad esempio possibile utilizzare la **`auto`** parola chiave per dichiarare una matrice o un tipo restituito di un metodo.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
@@ -27,7 +27,7 @@ Il tipo indicato non può essere dichiarato con la parola chiave `auto`. Non è 
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente restituisce C3532 perché la parola chiave `auto` non può dichiarare un tipo restituito dal metodo.
+L'esempio seguente restituisce C3532 perché la **`auto`** parola chiave non può dichiarare un tipo restituito dal metodo.
 
 ```cpp
 // C3532a.cpp
@@ -37,7 +37,7 @@ auto f(){}   // C3532
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente restituisce C3532 perché la parola chiave `auto` non può dichiarare una matrice.
+Nell'esempio seguente viene restituito C3532 perché la **`auto`** parola chiave non può dichiarare una matrice.
 
 ```cpp
 // C3532b.cpp
@@ -56,4 +56,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Auto (parola chiave)](../../cpp/auto-keyword.md)
+[Parola chiave auto](../../cpp/auto-keyword.md)

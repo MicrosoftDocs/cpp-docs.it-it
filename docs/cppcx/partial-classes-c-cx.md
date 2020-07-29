@@ -2,12 +2,12 @@
 title: Classi parziali (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740479"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185463"
 ---
 # <a name="partial-classes-ccx"></a>Classi parziali (C++/CX)
 
@@ -17,23 +17,23 @@ Una classe parziale è un costrutto che supporta scenari in cui tu effettui la m
 
 Per definire una classe parziale, utilizza la parola chiave `partial` immediatamente prima della classe di chiave della definizione di classe normale. Una parola chiave come `partial ref class` è una parola chiave contestuale contenente spazi vuoti. Le definizioni parziali sono supportate nei seguenti costrutti.
 
-- `class` o `struct`
+- **`class`** o**`struct`**
 
-- `ref class` o `ref struct`
+- **`ref class`** o**`ref struct`**
 
-- `value class` o `value struct`
+- **`value class`** o**`value struct`**
 
-- `enum` o `enum class`
+- **`enum`** o**`enum class`**
 
-- `ref interface`, `interface class`, `interface struct`o `__interface`
+- `ref interface`, **`interface class`** , **`interface struct`** o **' __interface**
 
-- `union`
+- **`union`**
 
-In questo esempio viene illustrato un oggetto `ref class`parziale.
+In questo esempio viene illustrata un'operazione parziale **`ref class`** :
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>Sommario
+## <a name="contents"></a>Contenuto
 
 Se la parola chiave `partial` è stata omessa, una definizione di classe parziale può contenere qualsiasi elemento che può essere incluso in una definizione di classe completa. Ciò significa che, con un'unica eccezione, una definizione di classe parziale può includere qualsiasi costrutto valido come le classi di base, i membri dati, le funzioni membro, le enumerazioni, le dichiarazioni Friend e gli attributi. Sono inoltre consentite le definizioni inline dei membri dati statici.
 
@@ -61,7 +61,7 @@ Per ogni definizione completa di una classe possono esservi zero o più definizi
 
 Ogni definizione di classe parziale deve precedere a livello lessicale la definizione completa della stessa classe, ma non ne deve precedere le dichiarazioni con prototipo. Se non è presente alcuna definizione completa della classe, le dichiarazioni di classe parziali possono solo essere dichiarazioni con prototipo.
 
-Tutte le chiavi-classe come `class` e `struct` devono trovare corrispondenza. Ad esempio, non è corretto scrivere il codice `partial class X {}; struct X {};`.
+Tutte le chiavi di classe, ad esempio **`class`** e, **`struct`** devono corrispondere. Ad esempio, non è corretto scrivere il codice `partial class X {}; struct X {};`.
 
 Nell'esempio seguente vengono illustrati il numero e l'ordine. L'ultima dichiarazione parziale ha esito negativo perché la classe è già definita.
 
@@ -85,7 +85,7 @@ Una classe parziale non può essere un modello.
 
 Una classe parziale non può estendersi oltre un'unità di conversione.
 
-La parola chiave `partial` è supportata solo in combinazione con la parola chiave `ref class` o `value class` .
+La `partial` parola chiave è supportata solo in combinazione con la parola chiave **`ref class`** o la parola **`value class`** chiave.
 
 ### <a name="examples"></a>Esempi
 
@@ -98,5 +98,5 @@ Nell'esempio seguente la definizione della classe `Address` si estende a due fil
 ## <a name="see-also"></a>Vedere anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
-[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti agli spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

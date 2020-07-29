@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172568"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228726"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class e ref struct (C++/CLI e C++/CX)
 
@@ -41,16 +41,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>Parametri
 
 *class_access*<br/>
-(Facoltativo) Accessibilità della classe o dello struct all'esterno dell'assembly. I valori possibili sono **public** e **private** (**private** è quello predefinito). Le classi o gli struct annidati non possono avere un identificatore *class_access*.
+(Facoltativo) Accessibilità della classe o dello struct all'esterno dell'assembly. I valori possibili sono **`public`** e **`private`** ( **`private`** è l'impostazione predefinita). Le classi o gli struct annidati non possono avere un identificatore *class_access*.
 
 *nome*<br/>
 Nome della classe o dello struct.
 
-*modifier*<br/>
+*modificatore*<br/>
 (Facoltativo) [abstract](abstract-cpp-component-extensions.md) e [sealed](sealed-cpp-component-extensions.md) sono modificatori validi.
 
 *inherit_access*<br/>
-(Facoltativo) Accessibilità di *base_type*. L'unico valore consentito per l'accessibilità è **public** (**public** è il valore predefinito).
+(Facoltativo) Accessibilità di *base_type*. L'unica accessibilità consentita è **`public`** ( **`public`** impostazione predefinita).
 
 *base_type*<br/>
 (Facoltativo) Tipo di base. Tuttavia, un tipo valore non può fungere da tipo di base.
@@ -59,9 +59,9 @@ Per altre informazioni, vedere le descrizioni specifiche del linguaggio di quest
 
 ### <a name="remarks"></a>Osservazioni
 
-L'accessibilità del membro predefinita di un oggetto dichiarato con **ref class** o **value class** è **private**. L'accessibilità del membro predefinita di un oggetto dichiarato con **ref struct** o **value struct** è **public**.
+L'accessibilità del membro predefinita di un oggetto dichiarato con la classe di **riferimento** o la **classe di valore** è **`private`** . E l'accessibilità del membro predefinita di un oggetto dichiarato con struct di **riferimento** o **struct di valore** è **`public`** .
 
-Quando un tipo riferimento eredita da un altro tipo riferimento, le funzioni virtuali nella classe base devono essere sottoposte a override esplicito (con [override](override-cpp-component-extensions.md)) o nascoste (con [new (nuovo slot in vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Anche le funzioni di classi derivate devono essere contrassegnate in modo esplicito come **virtual**.
+Quando un tipo riferimento eredita da un altro tipo riferimento, le funzioni virtuali nella classe base devono essere sottoposte a override esplicito (con [override](override-cpp-component-extensions.md)) o nascoste (con [new (nuovo slot in vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Anche le funzioni della classe derivata devono essere contrassegnate in modo esplicito come **`virtual`** .
 
 Per rilevare in fase di compilazione se un tipo è una **classe di riferimento** o uno **struct di riferimento** oppure una **classe di valore** o uno **struct di valore**, usare `__is_ref_class (type)`, `__is_value_class (type)` o `__is_simple_value_class (type)`. Per altre informazioni, vedere [Supporto del compilatore per caratteristiche di tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -79,7 +79,7 @@ Per altre informazioni sulle classi e gli struct, vedere
 
 - [Conversioni definite dall'utente (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Procedura: Eseguire il wrapping di una classe nativa affinché possa essere usata in C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Procedura: eseguire il wrapping di una classe nativa per l'utilizzo in C #](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Classi generiche (C++/CLI)](generic-classes-cpp-cli.md)
 
@@ -123,4 +123,4 @@ Opzione del compilatore: `/clr`
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182032"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228713"
 ---
 # <a name="generic-delegates-ccli"></a>Delegati generici (C++/CLI)
 
@@ -39,12 +39,12 @@ Elenco delimitato da virgole degli identificatori per i parametri di tipo.
 Ha il formato specificato in [Vincoli su parametri di tipo generico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
 *accessibility-modifiers*<br/>
-(Facoltativo) Modificatori di accessibilità (ad esempio, **public**, **private**).
+Opzionale Modificatori di accessibilità (ad esempio **`public`** , **`private`** ).
 
-*result-type*<br/>
+*tipo di risultato*<br/>
 Tipo restituito del delegato.
 
-*identifier*<br/>
+*identificatore*<br/>
 Nome del delegato.
 
 *formal-parameters*<br/>
