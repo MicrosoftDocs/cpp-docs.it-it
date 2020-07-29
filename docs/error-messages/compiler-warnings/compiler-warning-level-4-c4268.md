@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4268
 ms.assetid: d0511e80-904f-4ee1-b4d7-39b5c0bd8234
-ms.openlocfilehash: f3a6497ae7fc2bb3a73684c9dc76401cf96ca3fa
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 1db8f67591560c130bc25c40c63232f54b3b7884
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219911"
 ---
 # <a name="compiler-warning-level-4-c4268"></a>Avviso del compilatore (livello 4) C4268
 
 ' Identifier ': i dati statici/globali ' const ' inizializzati con il costruttore predefinito generato dal compilatore riempiono l'oggetto con zeri
 
-Un'istanza globale o statica **const** di una classe non semplice viene inizializzata con un costruttore predefinito generato dal compilatore.
+Un' **`const`** istanza globale o statica di una classe non semplice viene inizializzata con un costruttore predefinito generato dal compilatore.
 
 ## <a name="example"></a>Esempio
 
@@ -32,4 +32,4 @@ public:
 const X x1;   // C4268
 ```
 
-Poiché questa istanza della classe è **const**, il valore di `m_data` non può essere modificato.
+Poiché questa istanza della classe è **`const`** , il valore di `m_data` non può essere modificato.

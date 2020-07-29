@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213515"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -109,7 +109,7 @@ Restituisce il valore a virgola mobile rappresentabile successivo del tipo resti
 
 Le famiglie di funzioni **nextafter** e **nexttoward** sono equivalenti, ad eccezione del tipo di parametro *y*. Se *x* e *y* sono uguali, il valore restituito è *y* convertito nel tipo restituito.
 
-Poiché \<C++ consente l'overload, se si include cmath> è possibile chiamare gli overload di **nextafter** e **nexttoward** che restituiscono i tipi **float** e **Long** **Double** . In un programma C, **nextafter** e **nexttoward** restituiscono sempre **Double**.
+Poiché C++ consente l'overload, se si include \<cmath> è possibile chiamare gli overload di **nextafter** e **nexttoward** che restituiscono i **`float`** **`long double`** tipi e. In un programma C, **nextafter** e **nexttoward** restituiscono sempre **`double`** .
 
 Le funzioni **_nextafter** e **_nextafterf** sono specifiche di Microsoft. La funzione **_nextafterf** è disponibile solo quando si esegue la compilazione per x64.
 
@@ -126,5 +126,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

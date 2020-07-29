@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3a81e06586e6de14d57ce4c4de36dc30c73383f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753204"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212514"
 ---
 # <a name="cdumpcontext-class"></a>Classe CDumpContext
 
@@ -41,45 +41,45 @@ class CDumpContext
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDumpContext::CDumpContext](#cdumpcontext)|Costruisce un oggetto `CDumpContext`.|
+|[CDumpContext:: CDumpContext](#cdumpcontext)|Costruisce un oggetto `CDumpContext`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDumpContext::DumpAsHex](#dumpashex)|Esegue il dump dell'elemento indicato in formato esadecimale.|
-|[CDumpContext::Flush](#flush)|Scarica tutti i dati nel buffer del contesto di dump.|
-|[CDumpContext::GetDepth](#getdepth)|Ottiene un numero intero corrispondente alla profondità del dump.|
-|[CDumpContext::HexDump](#hexdump)|Esegue il dump dei byte contenuti in una matrice in formato esadecimale.|
-|[CDumpContext::SetDepth](#setdepth)|Imposta la profondità del dump.|
+|[CDumpContext::D umpAsHex](#dumpashex)|Esegui il dump dell'elemento indicato in formato esadecimale.|
+|[CDumpContext:: Flush](#flush)|Scarica tutti i dati nel buffer del contesto di dump.|
+|[CDumpContext:: getDepth](#getdepth)|Ottiene un intero che corrisponde alla profondità del dump.|
+|[CDumpContext:: HexDump](#hexdump)|Dump di byte contenuti in una matrice in formato esadecimale.|
+|[CDumpContext:: sedepth](#setdepth)|Imposta la profondità del dump.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDumpContext::operatore&lt;&lt;](#operator_lt_lt)|Inserisce variabili e oggetti nel contesto di dump.|
+|[Operatore CDumpContext::&lt;&lt;](#operator_lt_lt)|Inserisce variabili e oggetti nel contesto di dump.|
 
 ## <a name="remarks"></a>Osservazioni
 
 `CDumpContext`non dispone di una classe base.
 
-È possibile utilizzare [afxDump](diagnostic-services.md#afxdump) `CDumpContext` , un oggetto predichiarato, per la maggior parte del dumping. L'oggetto `afxDump` è disponibile solo nella versione di debug della libreria Microsoft Foundation Class.
+[afxDump](diagnostic-services.md#afxdump) `CDumpContext` Per la maggior parte del dump, è possibile usare afxDump, un oggetto predichiarato. L' `afxDump` oggetto è disponibile solo nella versione di debug del libreria Microsoft Foundation Class.
 
-Molti dei [servizi](../../mfc/reference/diagnostic-services.md) di `afxDump` diagnostica della memoria utilizzano per l'output.
+Molti dei servizi di [diagnostica](../../mfc/reference/diagnostic-services.md) della memoria usano `afxDump` per l'output.
 
-Nell'ambiente Windows, l'output `afxDump` dell'oggetto predefinito, `cerr` concettualmente simile al flusso, viene `OutputDebugString`instradato al debugger tramite la funzione Windows.
+Nell'ambiente Windows, l'output dall' `afxDump` oggetto predefinito, concettualmente simile al `cerr` flusso, viene indirizzato al debugger tramite la funzione di Windows `OutputDebugString` .
 
-La `CDumpContext` classe dispone di **<<** un operatore di inserimento di overload ( ) per `CObject` i puntatori che eseguono il dump dei dati dell'oggetto. Se è necessario un formato di dump personalizzato per un oggetto derivato, eseguire l'override di [CObject::Dump](../../mfc/reference/cobject-class.md#dump). La maggior parte delle `Dump` classi Microsoft Foundation implementa una funzione membro sottoposta a override.
+La `CDumpContext` classe dispone di un operatore di inserimento ( **<<** ) di overload per i `CObject` puntatori che scaricano i dati dell'oggetto. Se è necessario un formato di dump personalizzato per un oggetto derivato, eseguire l'override di [CObject::D UMP](../../mfc/reference/cobject-class.md#dump). La maggior parte delle classi Microsoft Foundation implementa una funzione membro sottoposta a override `Dump` .
 
-Le classi non `CObject`derivate `CString`da `CTime`, `CTimeSpan`ad esempio , `CDumpContext` e , dispongono di propri `CFileStatus` `CPoint`operatori `CRect`di inserimento di overload, come le strutture utilizzate spesso, ad esempio , e .
+Le classi che non sono derivate da `CObject` , ad esempio `CString` , `CTime` e `CTimeSpan` , dispongono di propri `CDumpContext` operatori di inserimento di overload, come le strutture usate spesso come `CFileStatus` , `CPoint` e `CRect` .
 
-Se si utilizza la macro [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) o [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) `CObject::Dump` nell'implementazione della `CObject`classe, verrà stampato il nome della classe derivata. In caso contrario, verrà stampato `CObject`.
+Se si usa la [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) o la macro [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) nell'implementazione della classe, in `CObject::Dump` verrà stampato il nome della `CObject` classe derivata da. In caso contrario, verrà stampato `CObject` .
 
-La `CDumpContext` classe è disponibile con entrambe le versioni `Dump` Debug e Release della libreria, ma la funzione membro è definita solo nella versione Debug. Utilizzare **#ifdef _DEBUG**  /  `#endif` istruzioni per tramandare `Dump` il codice di diagnostica, incluse le funzioni membro personalizzate.
+La `CDumpContext` classe è disponibile con le versioni di debug e di rilascio della libreria, ma la `Dump` funzione membro è definita solo nella versione di debug. Usare **#ifdef**  /  `#endif` istruzioni _DEBUG per racchiudere il codice di diagnostica, incluse le `Dump` funzioni membro personalizzate.
 
-Prima di creare `CDumpContext` un oggetto personalizzato, è necessario creare un `CFile` oggetto che funga da destinazione di dump.
+Prima di creare `CDumpContext` un oggetto personalizzato, è necessario creare un `CFile` oggetto che funge da destinazione del dump.
 
-Per ulteriori `CDumpContext`informazioni su , vedere [Debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Per ulteriori informazioni su `CDumpContext` , vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 **#define _DEBUG**
 
@@ -89,11 +89,11 @@ Per ulteriori `CDumpContext`informazioni su , vedere [Debug di applicazioni MFC]
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afx.h
+**Intestazione:** AFX. h
 
-## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext:: CDumpContext
 
-Costruisce un oggetto `CDumpContext`della classe .
+Costruisce un oggetto della classe `CDumpContext` .
 
 ```
 CDumpContext(CFile* pFile = NULL);
@@ -101,22 +101,22 @@ CDumpContext(CFile* pFile = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*pFile (File)*<br/>
-Puntatore all'oggetto `CFile` che è la destinazione di dump.
+*pFile*<br/>
+Puntatore all' `CFile` oggetto che rappresenta la destinazione del dump.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'oggetto `afxDump` viene costruito automaticamente.
+L' `afxDump` oggetto viene costruito automaticamente.
 
-Non scrivere nel `CFile` sottostante mentre il contesto di dump è attivo; in caso contrario, si interferirà con la discarica. Nell'ambiente Windows, l'output viene instradato `OutputDebugString`al debugger tramite la funzione Windows .
+Non scrivere nell'oggetto sottostante `CFile` mentre il contesto di dump è attivo; in caso contrario, il dump verrà interferito. Nell'ambiente Windows, l'output viene indirizzato al debugger tramite la funzione Windows `OutputDebugString` .
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::D umpAsHex
 
-Esegue il dump del tipo specificato formattato come numeri esadecimali.
+Esegui il dump del tipo specificato formattato come numeri esadecimali.
 
 ```
 CDumpContext& DumpAsHex(BYTE b);
@@ -135,15 +135,15 @@ Riferimento a un oggetto `CDumpContext`.
 
 ### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione membro per eseguire il dump dell'elemento del tipo specificato come numero esadecimale. Per eseguire il dump di una matrice, chiamare [CDumpContext::HexDump](#hexdump).
+Chiamare questa funzione membro per eseguire il dump dell'elemento del tipo specificato come numero esadecimale. Per eseguire il dump di una matrice, chiamare [CDumpContext:: Hexdump](#hexdump).
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext:: Flush
 
-Forza la scrittura dei dati rimanenti nei buffer nel file allegato al contesto dump.
+Impone la scrittura dei dati rimanenti nei buffer nel file associato al contesto di dump.
 
 ```cpp
 void Flush();
@@ -153,7 +153,7 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext:: getDepth
 
 Determina se un dump profondo o superficiale è in corso.
 
@@ -163,15 +163,15 @@ int GetDepth() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Profondità del dump impostata da `SetDepth`.
+Profondità del dump impostata da `SetDepth` .
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [SetDepth](#setdepth).
+  Vedere l'esempio per [sedepth](#setdepth).
 
-## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext:: HexDump
 
-Esegue il dump di una matrice di byte formattati come numeri esadecimali.
+Dump di una matrice di byte formattati come numeri esadecimali.
 
 ```cpp
 void HexDump(
@@ -183,29 +183,29 @@ void HexDump(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszLine (linea di lavoro)*<br/>
+*lpszLine*<br/>
 Stringa da restituire all'inizio di una nuova riga.
 
-*pby*<br/>
+*PBY*<br/>
 Puntatore a un buffer contenente i byte di cui eseguire il dump.
 
-*nByte*<br/>
+*nBytes*<br/>
 Numero di byte di cui eseguire il dump.
 
-*nLarghezza*<br/>
+*nWidth*<br/>
 Numero massimo di byte scaricati per riga (non la larghezza della riga di output).
 
 ### <a name="remarks"></a>Osservazioni
 
-Per eseguire il dump di un singolo tipo di elemento specifico come numero esadecimale, chiamare [CDumpContext::DumpAsHex](#dumpashex).
+Per eseguire il dump di un singolo tipo di elemento specifico come numero esadecimale, chiamare [CDumpContext::D umpashex](#dumpashex).
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operatore&lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>Operatore CDumpContext::&lt;&lt;
 
-Restituisce i dati specificati nel contesto dump.
+Restituisce i dati specificati al contesto di dump.
 
 ```
 CDumpContext& operator<<(const CObject* pOb);
@@ -233,19 +233,19 @@ CDumpContext& operator<<(HFONT h);
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento `CDumpContext`. Utilizzando il valore restituito, è possibile scrivere più inserimenti su una singola riga di codice sorgente.
+Riferimento `CDumpContext`. Usando il valore restituito, è possibile scrivere più inserimenti in una singola riga di codice sorgente.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore di `CObject` inserimento è sottoposto a overload per i puntatori e per la maggior parte dei tipi primitivi. Un puntatore a i risultati carattere in un dump di contenuto di stringa; un puntatore a **void** genera un dump esadecimale solo dell'indirizzo. Un LONGLONG genera un dump di un intero con segno a 64 bit. Un ULONGLONG genera un dump di un intero senza segno a 64 bit.
+L'operatore di inserimento è sovraccarico per i `CObject` puntatori e per la maggior parte dei tipi primitivi. Un puntatore a un carattere restituisce un dump del contenuto della stringa. un puntatore a **`void`** genera un dump esadecimale solo dell'indirizzo. Un LONGLONG genera un dump di un intero con segno a 64 bit; Un ULONGLONG genera un dump di un Unsigned Integer a 64 bit.
 
-Se si utilizza la IMPLEMENT_DYNAMIC o IMPLEMENT_SERIAL macro nell'implementazione `CObject::Dump`della classe, l'operatore di inserimento, tramite , stamperà il nome della `CObject`classe derivata. In caso contrario, verrà stampato `CObject`. Se si `Dump` esegue l'override della funzione della classe , è possibile fornire un output più significativo del contenuto dell'oggetto anziché un dump esadecimale.
+Se si usa la macro IMPLEMENT_DYNAMIC o IMPLEMENT_SERIAL nell'implementazione della classe, l'operatore di inserimento, fino a `CObject::Dump` , stamperà il nome della `CObject` classe derivata da. In caso contrario, verrà stampato `CObject` . Se si esegue l'override della `Dump` funzione della classe, è possibile fornire un output più significativo del contenuto dell'oggetto anziché un dump esadecimale.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext:: sedepth
 
 Imposta la profondità per il dump.
 
@@ -255,15 +255,15 @@ void SetDepth(int nNewDepth);
 
 ### <a name="parameters"></a>Parametri
 
-*nNewDepth (profondità)*<br/>
+*nNewDepth*<br/>
 Nuovo valore di profondità.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si esegue il dump di `CObject` un tipo primitivo o semplice che non contiene puntatori ad altri oggetti, è sufficiente un valore pari a 0. Un valore maggiore di 0 specifica un dump completo in cui tutti gli oggetti vengono scaricati in modo ricorsivo. Ad esempio, un dump completo di una raccolta eseguirà il dump di tutti gli elementi della raccolta. È possibile utilizzare altri valori di profondità specifici nelle classi derivate.
+Se si esegue il dump di un tipo primitivo o semplice `CObject` che non contiene puntatori ad altri oggetti, è sufficiente un valore pari a 0. Un valore maggiore di 0 specifica un dump approfondito in cui viene eseguito il dump di tutti gli oggetti in modo ricorsivo. Ad esempio, un dump approfondito di una raccolta effettuerà il dump di tutti gli elementi della raccolta. È possibile utilizzare altri valori di profondità specifici nelle classi derivate.
 
 > [!NOTE]
-> I riferimenti circolari non vengono rilevati in dump profondi e possono causare cicli infiniti.
+> I riferimenti circolari non vengono rilevati nei dump profondi e possono generare cicli infiniti.
 
 ### <a name="example"></a>Esempio
 

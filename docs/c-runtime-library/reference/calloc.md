@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 067ce6f347f4b24ad8c85990e70fe4d79305535c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918714"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213632"
 ---
 # <a name="calloc"></a>calloc
 
@@ -58,7 +58,7 @@ Lunghezza in byte di ogni elemento.
 
 ## <a name="return-value"></a>Valore restituito
 
-**calloc** restituisce un puntatore allo spazio allocato. Lo spazio di archiviazione a cui punta il valore restituito garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
+**calloc** restituisce un puntatore allo spazio allocato. Lo spazio di archiviazione a cui punta il valore restituito garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da **`void`** , usare un cast del tipo sul valore restituito.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -68,7 +68,7 @@ La funzione **calloc** alloca lo spazio di archiviazione per una matrice di elem
 
 Nell'implementazione Microsoft, se *Number* o *size* è zero, **calloc** restituisce un puntatore a un blocco allocato di dimensioni diverse da zero. Un tentativo di leggere o scrivere tramite il puntatore restituito comporta un comportamento non definito.
 
-**calloc** usa la funzione C++ [_set_new_mode](set-new-mode.md) per impostare la *nuova modalità del gestore*. La nuova modalità del gestore indica se, in caso di errore, **calloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **calloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **calloc** non riesce ad allocare memoria, chiami la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore funziona quando ha esito negativo per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
+**calloc** usa la funzione C++ [_set_new_mode](set-new-mode.md) per impostare la *nuova modalità del gestore*. La nuova modalità del gestore indica se, in caso di errore, **calloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **calloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **calloc** non riesce ad allocare memoria, chiami la routine del nuovo gestore nello stesso modo in cui l' **`new`** operatore esegue in caso di errore per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
 
 ```C
 _set_new_mode(1);
@@ -78,7 +78,7 @@ all'inizio del programma o collegarsi a *NewMode. OBJ* (vedere [Opzioni di colle
 
 Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **calloc** viene risolto in [_calloc_dbg](calloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-**calloc** è contrassegnato `__declspec(noalias)` come `__declspec(restrict)`e, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**calloc** è contrassegnato `__declspec(noalias)` `__declspec(restrict)` come e, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -119,7 +119,7 @@ Allocated 40 long integers
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [libero](free.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

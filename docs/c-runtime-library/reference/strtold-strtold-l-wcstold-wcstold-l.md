@@ -35,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: ba57eed25fd8e1310b9e837c55cb1e1f7ec2b718
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213489"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -82,7 +82,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtold** restituisce il valore del numero a virgola mobile come **Long** **Double**, tranne nel caso in cui la rappresentazione provochi un overflow, in questo caso la funzione restituisce +/-**HUGE_VALL**. Il segno di **HUGE_VALL** corrisponde al segno del valore che non può essere rappresentato. **strtold** restituisce 0 se non è possibile eseguire alcuna conversione o si verifica un underflow.
+**strtold** restituisce il valore del numero a virgola mobile come **`long double`** , tranne quando la rappresentazione potrebbe causare un overflow, in questo caso la funzione restituisce +/-**HUGE_VALL**. Il segno di **HUGE_VALL** corrisponde al segno del valore che non può essere rappresentato. **strtold** restituisce 0 se non è possibile eseguire alcuna conversione o si verifica un underflow.
 
 **wcstold** restituisce i valori in modo analogo a **strtold**. Per entrambe le funzioni, **errno** viene impostato su **ERANGE** se si verifica un overflow o un underflow e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
@@ -90,7 +90,7 @@ Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_err
 
 ## <a name="remarks"></a>Osservazioni
 
-Ogni funzione converte la stringa di input *strSource* in un valore **Long** **Double**. La funzione **strtold** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. La versione a caratteri wide di **strtold** è **wcstold**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
+Ogni funzione converte la stringa di input *strSource* in un oggetto **`long double`** . La funzione **strtold** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. La versione a caratteri wide di **strtold** è **wcstold**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -109,7 +109,7 @@ Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'anali
 
 [*spazi vuoti*] [*segno*] [*cifre*] [. *cifre*] [{**d** &#124; **d** &#124; **e** &#124; **e**} [*Sign*]*digits*]
 
-Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; *Sign* è più (**+**) o meno (**-**); le *cifre* e corrispondono a una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**d**, **D**, **e** o **E**) e facoltativamente da un intero con segno. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
+Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; il *segno* è più ( **+** ) o meno ( **-** ) e le *cifre* sono costituite da una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**d**, **D**, **e** o **E**) e facoltativamente da un intero con segno. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -154,9 +154,9 @@ string = 3.1415926535898This stopped it
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bcf2548fbe1182f7f6c4bd966ca6aa9ef9f10089
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756760"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212605"
 ---
 # <a name="compiler-error-c3072"></a>Errore del compilatore C3072
 
-non è possibile applicare l'operatore ' operator ' a un'istanza di una classe di riferimento
+> non è possibile applicare l'operatore '*operator-Name*' a un'istanza di una classe di riferimento
 
-usare l'operatore '`operator`' unario per convertire un'istanza di una classe di riferimento in un tipo di handle
+usare l'operatore unario *nome-operatore* per convertire un'istanza di una classe di riferimento in un tipo di handle
 
 Un tipo CLR richiede operatori CLR, non operatori nativi (o standard).  Per altre informazioni, vedere [operatore di riferimento di rilevamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 

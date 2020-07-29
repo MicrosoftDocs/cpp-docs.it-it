@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a516be2e6e1966c3249ed21cc6d480ddea8b5ec1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220015"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>Avviso del compilatore (livello 4) C4800
 
@@ -23,7 +23,7 @@ Visual Studio 2019 e versioni successive:
 C4800 è un avviso di livello 3 in Visual Studio 2015 e versioni precedenti:
 > '*Type*': forzando il valore su bool ' true ' o ' false ' (avviso di prestazioni)
 
-Questo avviso viene generato quando un valore viene convertito in modo implicito nel tipo `bool`. In genere, questo messaggio viene causato dall'assegnazione di variabili di `int` alle variabili `bool` in cui la variabile `int` contiene solo valori **true** e **false**e può essere ridichiarata come tipo `bool`. Se non è possibile riscrivere l'espressione per usare il tipo `bool`, è possibile aggiungere "`!=0`" all'espressione, che fornisce il tipo di espressione `bool`. Eseguendo il cast dell'espressione al tipo `bool` non viene disabilitato l'avviso, ovvero in base alla progettazione.
+Questo avviso viene generato quando un valore viene convertito in modo implicito nel tipo **`bool`** . In genere, questo messaggio viene causato dall'assegnazione di **`int`** variabili a **`bool`** variabili in cui la **`int`** variabile contiene solo valori **`true`** e e **`false`** può essere ridichiarata come tipo **`bool`** . Se non è possibile riscrivere l'espressione per usare il tipo **`bool`** , è possibile aggiungere " `!=0` " all'espressione, che fornisce il tipo di espressione **`bool`** . Eseguendo il cast dell'espressione al tipo **`bool`** , l'avviso non viene disabilitato, che è da progettazione.
 
 ::: moniker range=">= vs-2017"
 Questo avviso non viene generato in Visual Studio 2017.

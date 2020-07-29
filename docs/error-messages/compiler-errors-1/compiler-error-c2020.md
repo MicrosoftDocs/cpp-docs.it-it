@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2020
 ms.assetid: 486f98ed-6574-4d82-89e3-74b5a61ed419
-ms.openlocfilehash: 01b13aa160c39d71b793d30c6392a35c6a24e118
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d093207ba06a479b49902d5dd50029a5276d1439
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212917"
 ---
 # <a name="compiler-error-c2020"></a>Errore del compilatore C2020
 
 ' member ': ridefinizione membro ' Class '
 
-Un membro ereditato da una classe o una struttura di base viene ridefinito. I membri ereditati non possono essere ridefiniti a meno che non vengano dichiarati come `virtual` nella classe di base.
+Un membro ereditato da una classe o una struttura di base viene ridefinito. I membri ereditati non possono essere ridefiniti a meno che non siano dichiarati come **`virtual`** nella classe di base.

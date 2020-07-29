@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: e206ea8d67bb333065bf43f7f9c2dc373a5a5258
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6fcc26c3ed86c86264773a70ac16501c102e1861
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857489"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213333"
 ---
 # <a name="lambda-expressions-in-c"></a>Espressioni lambda in C++
 
@@ -21,7 +21,7 @@ In C++ 11 e versioni successive, un'espressione lambda, spesso detta *lambda*, �
 
 - [Espressioni lambda e oggetti funzione](lambda-expression-syntax.md)
 - [Utilizzo di espressioni lambda](examples-of-lambda-expressions.md)
-- [espressioni lambda constExpr](lambda-expressions-constexpr.md)
+- [Espressioni lambda constexpr](lambda-expressions-constexpr.md)
 
 ## <a name="parts-of-a-lambda-expression"></a>Parti dell'espressione lambda
 
@@ -45,7 +45,7 @@ Questa figura illustra le parti della lambda:
 
 ![Elementi strutturali di un'espressione lambda](../cpp/media/lambdaexpsyntax.png "Elementi strutturali di un'espressione lambda")
 
-1. *clausola Capture* (anche nota come *lambda-introductor* nella C++ specifica).
+1. *clausola Capture* (nota anche come *lambda-introductor* nella specifica C++).
 
 1. *elenco di parametri* Opzionale. (Noto anche come *dichiaratore lambda*)
 
@@ -63,7 +63,7 @@ Un'espressione lambda può introdurre nuove variabili nel corpo (in **C++ 14**) 
 
 Una clausola di acquisizione vuota, `[ ]`, indica che il corpo dell'espressione lambda non accede a variabili nell'ambito che lo contiene.
 
-È possibile usare la modalità di acquisizione predefinita (*capture-default* nella sintassi standard) per indicare come acquisire eventuali variabili esterne a cui si fa riferimento nell'espressione lambda: `[&]` indica che tutte le variabili a cui si fa riferimento vengono acquisite per riferimento e `[=]` significa che vengono acquisite per valore. È possibile usare una modalità di acquisizione predefinita e quindi specificare esplicitamente la modalità opposta per variabili specifiche. Se ad esempio il corpo di un'espressione lambda accede alla variabile esterna `total` per riferimento e alla variabile esterna `factor` per valore, le seguenti clausole di acquisizione sono equivalenti:
+È possibile usare la modalità di acquisizione predefinita (*capture-default* nella sintassi standard) per indicare come acquisire qualsiasi variabile esterna a cui si fa riferimento nell'espressione lambda: `[&]` indica che tutte le variabili a cui si fa riferimento vengono acquisite per riferimento e `[=]` significa che vengono acquisite per valore. È possibile usare una modalità di acquisizione predefinita e quindi specificare esplicitamente la modalità opposta per variabili specifiche. Se ad esempio il corpo di un'espressione lambda accede alla variabile esterna `total` per riferimento e alla variabile esterna `factor` per valore, le seguenti clausole di acquisizione sono equivalenti:
 
 ```cpp
 [&total, factor]
@@ -76,7 +76,7 @@ Una clausola di acquisizione vuota, `[ ]`, indica che il corpo dell'espressione 
 
 Quando viene utilizzata un'acquisizione predefinita, vengono acquisite solo le variabili indicate nell'espressione lambda.
 
-Se una clausola di acquisizione include un `&`capture-default, nessun `identifier` in un `capture` di tale clausola di acquisizione può avere il formato `& identifier`. Analogamente, se la clausola di acquisizione include un `=`capture-default, nessun `capture` di tale clausola di acquisizione può avere il formato `= identifier`. Un identificatore o **questo** oggetto non può essere visualizzato più di una volta in una clausola di acquisizione. Nel frammento di codice seguente vengono illustrati alcuni esempi.
+Se una clausola di acquisizione include un'acquisizione predefinita `&` , nessun `identifier` in un oggetto `capture` di tale clausola di acquisizione può avere il formato `& identifier` . Analogamente, se la clausola di acquisizione include un'acquisizione-default `=` , nessuna `capture` di tale clausola di acquisizione potrà avere il formato `= identifier` . Un identificatore o **`this`** non può comparire più di una volta in una clausola di acquisizione. Nel frammento di codice seguente vengono illustrati alcuni esempi.
 
 ```cpp
 struct S { void f(int i); };
@@ -100,15 +100,15 @@ void f(Args... args) {
 }
 ```
 
-Per utilizzare le espressioni lambda nel corpo di un metodo della classe, passare il puntatore **this** alla clausola Capture per fornire l'accesso ai metodi e ai membri dati della classe contenitore.
+Per utilizzare le espressioni lambda nel corpo di un metodo della classe, passare il **`this`** puntatore alla clausola di acquisizione per fornire l'accesso ai metodi e ai membri dati della classe contenitore.
 
-**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): il puntatore **this** può essere acquisito per valore specificando `*this` nella clausola Capture. Acquisisci per valore significa che l'intera *chiusura*, ovvero l'oggetto funzione anonima che encapulates l'espressione lambda, viene copiata in ogni sito di chiamata in cui viene richiamata l'espressione lambda. Acquisisci per valore è utile quando l'espressione lambda viene eseguita in operazioni parallele o asincrone, in particolare in alcune architetture hardware come NUMA.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): il **`this`** puntatore può essere acquisito per valore specificando **`*this`** nella clausola di acquisizione. Acquisisci per valore significa che l'intera *chiusura*, ovvero l'oggetto funzione anonima che encapulates l'espressione lambda, viene copiata in ogni sito di chiamata in cui viene richiamata l'espressione lambda. Acquisisci per valore è utile quando l'espressione lambda viene eseguita in operazioni parallele o asincrone, in particolare in alcune architetture hardware come NUMA.
 
 Per un esempio in cui viene illustrato come utilizzare le espressioni lambda con i metodi della classe, vedere "esempio: utilizzo di un'espressione lambda in un metodo" in [esempi di espressioni lambda](../cpp/examples-of-lambda-expressions.md).
 
 Quando si usa la clausola di acquisizione, è consigliabile tenere in considerazione gli aspetti seguenti, in particolare quando si usano le espressioni lambda con il multithreading:
 
-- Le acquisizioni di riferimento possono essere usate per modificare le variabili all'esterno, ma le acquisizioni di valore non possono essere usate a tale scopo (**modificabile** consente la modifica delle copie, ma non degli originali).
+- Le acquisizioni di riferimento possono essere usate per modificare le variabili all'esterno, ma le acquisizioni di valore non possono essere usate a tale scopo ( **`mutable`** consente la modifica delle copie, ma non degli originali).
 
 - Le acquisizioni di riferimento riflettono gli aggiornamenti alle variabili all'esterno, contrariamente alle acquisizioni di valore.
 
@@ -138,7 +138,7 @@ auto y = [] (int first, int second)
 };
 ```
 
-In  **C++ 14**, se il tipo di parametro è generico, è possibile usare la parola chiave auto come identificatore di tipo. Ciò indica al compilatore di creare l'operatore di chiamata della funzione come modello. Ogni istanza di auto in un elenco di parametri equivale a un parametro di tipo distinto.
+In **C++ 14**, se il tipo di parametro è generico, è possibile usare la **`auto`** parola chiave come identificatore di tipo. Ciò indica al compilatore di creare l'operatore di chiamata della funzione come modello. Ogni istanza di **`auto`** in un elenco di parametri è equivalente a un parametro di tipo distinto.
 
 ```cpp
 auto y = [] (auto first, auto second)
@@ -149,15 +149,15 @@ auto y = [] (auto first, auto second)
 
 Un'espressione lambda può accettare un'altra espressione lambda come argomento. Per ulteriori informazioni, vedere "espressioni lambda di ordine superiore" nell'argomento [esempi di espressioni lambda](../cpp/examples-of-lambda-expressions.md).
 
-Poiché un elenco di parametri è facoltativo, è possibile omettere le parentesi vuote se non si passano argomenti all'espressione lambda e il relativo dichiaratore lambda non contiene la *specifica dell'eccezione*, il *tipo restituito finale*o la **modificabile**.
+Poiché un elenco di parametri è facoltativo, è possibile omettere le parentesi vuote se non si passano argomenti all'espressione lambda e il relativo dichiaratore lambda non contiene la *specifica dell'eccezione*, il *tipo restituito finale*o **`mutable`** .
 
 ### <a name="mutable-specification"></a>Specifica modificabile
 
-In genere, l'operatore di chiamata di funzione di un'espressione lambda è const-by-value, ma l'uso della parola chiave **mutable** annulla questa impostazione. Non produce membri dati modificabili. La specifica modificabile consente al corpo di un'espressione lambda di modificare le variabili acquisite per valore. Alcuni degli esempi più avanti in questo articolo illustrano come usare la **modificabile**.
+In genere, l'operatore di chiamata di funzione di un'espressione lambda è const-by-value, ma l'uso della **`mutable`** parola chiave annulla questa operazione. Non produce membri dati modificabili. La specifica modificabile consente al corpo di un'espressione lambda di modificare le variabili acquisite per valore. Alcuni degli esempi più avanti in questo articolo illustrano come usare **`mutable`** .
 
 ### <a name="exception-specification"></a>Specifica di eccezione
 
-È possibile usare la specifica di eccezione `noexcept` per indicare che l'espressione lambda non generi alcuna eccezione. Come per le normali funzioni, il C++ compilatore Microsoft genera l'avviso [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) se un'espressione lambda dichiara la specifica di eccezione `noexcept` e il corpo dell'espressione lambda genera un'eccezione, come illustrato di seguito:
+È possibile utilizzare la **`noexcept`** specifica di eccezione per indicare che l'espressione lambda non genera alcuna eccezione. Come per le normali funzioni, il compilatore Microsoft C++ genera l'avviso [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) se un'espressione lambda dichiara la **`noexcept`** specifica di eccezione e il corpo dell'espressione lambda genera un'eccezione, come illustrato di seguito:
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -172,9 +172,9 @@ Per ulteriori informazioni, vedere [specifiche di eccezione (throw)](../cpp/exce
 
 ### <a name="return-type"></a>Tipo restituito
 
-Il tipo restituito di un'espressione lambda viene dedotto automaticamente. Non è necessario usare la parola chiave [auto](../cpp/auto-cpp.md) a meno che non si specifichi un *tipo finale-return-type*. *Trailing-Return-Type* è simile alla parte del tipo restituito di un metodo o di una funzione ordinaria. Tuttavia, il tipo restituito deve seguire l'elenco di parametri ed è necessario includere la parola chiave di trailing-return-type `->` prima del tipo restituito.
+Il tipo restituito di un'espressione lambda viene dedotto automaticamente. Non è necessario usare la [`auto`](../cpp/auto-cpp.md) parola chiave a meno che non si specifichi un *tipo finale-return-type*. *Trailing-Return-Type* è simile alla parte del tipo restituito di un metodo o di una funzione ordinaria. Tuttavia, il tipo restituito deve seguire l'elenco di parametri ed è necessario includere la parola chiave trailing-Return-Type **`->`** prima del tipo restituito.
 
-È possibile omettere la parte del tipo restituito di un'espressione lambda se il corpo dell'espressione lambda contiene una sola istruzione return o l'espressione non restituisce un valore. Se il corpo dell'espressione lambda contiene un'istruzione return, il compilatore deduce il tipo restituito dal tipo dell'espressione restituita. In caso contrario, il compilatore deduce che il tipo restituito sia **void**. Vedere i frammenti di codice di esempio seguenti in cui viene illustrato questo principio.
+È possibile omettere la parte del tipo restituito di un'espressione lambda se il corpo dell'espressione lambda contiene una sola istruzione return o l'espressione non restituisce un valore. Se il corpo dell'espressione lambda contiene un'istruzione return, il compilatore deduce il tipo restituito dal tipo dell'espressione restituita. In caso contrario, il compilatore deduce che il tipo restituito sia **`void`** . Vedere i frammenti di codice di esempio seguenti in cui viene illustrato questo principio.
 
 ```cpp
 auto x1 = [](int i){ return i; }; // OK: return type is int
@@ -194,7 +194,7 @@ Il corpo dell'espressione lambda (*compound-statement* nella sintassi standard) 
 
 - Variabili dichiarate a livello locale
 
-- Membri dati della classe, quando vengono dichiarati all'interno di una classe e **questa** viene acquisita
+- Membri dati della classe, quando vengono dichiarati all'interno di una classe e **`this`** vengono acquisiti
 
 - Qualsiasi variabile con durata di archiviazione statica, ad esempio variabili globali
 
@@ -220,7 +220,7 @@ int main()
 0
 ```
 
-Poiché la variabile `n` viene acquisita per valore, il relativo valore rimane `0` dopo la chiamata all'espressione lambda. La specifica **modificabile** consente di modificare `n` all'interno dell'espressione lambda.
+Poiché la variabile `n` viene acquisita per valore, il relativo valore rimane `0` dopo la chiamata all'espressione lambda. La **`mutable`** specifica consente la `n` modifica all'interno dell'espressione lambda.
 
 Sebbene un'espressione lambda possa acquisire solo le variabili che hanno una durata dell'archiviazione automatica, nel corpo di un'espressione lambda è possibile usare variabili con durata dell'archiviazione statica. Nell'esempio seguente vengono usate la funzione `generate` e un'espressione lambda per assegnare un valore a ogni elemento di un oggetto `vector`. L'espressione lambda modifica la variabile statica per generare il valore dell'elemento successivo.
 
@@ -240,7 +240,7 @@ void fillVector(vector<int>& v)
 
 Per ulteriori informazioni, vedere [generate](../standard-library/algorithm-functions.md#generate).
 
-Nell'esempio di codice seguente viene usata la funzione dell'esempio precedente e viene aggiunto un esempio di espressione lambda che usa l' C++ algoritmo della libreria standard `generate_n`. Questa espressione lambda assegna un elemento di un oggetto `vector` alla somma dei due elementi precedenti. La parola chiave **mutable** viene utilizzata in modo che il corpo dell'espressione lambda possa modificare le proprie copie delle variabili esterne `x` e `y`, che l'espressione lambda acquisisce per valore. Poiché l'espressione lambda acquisisce le variabili originali `x` e `y` per valore, i relativi valori rimangono `1` dopo l'esecuzione dell'espressione lambda.
+Nell'esempio di codice seguente viene usata la funzione dell'esempio precedente e viene aggiunto un esempio di espressione lambda che usa l'algoritmo della libreria standard C++ `generate_n` . Questa espressione lambda assegna un elemento di un oggetto `vector` alla somma dei due elementi precedenti. La **`mutable`** parola chiave viene usata in modo che il corpo dell'espressione lambda possa modificare le proprie copie delle variabili esterne `x` e `y` , che l'espressione lambda acquisisce per valore. Poiché l'espressione lambda acquisisce le variabili originali `x` e `y` per valore, i relativi valori rimangono `1` dopo l'esecuzione dell'espressione lambda.
 
 ```cpp
 // compile with: /W4 /EHsc
@@ -322,9 +322,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 Per ulteriori informazioni, vedere [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="constexpr-lambda-expressions"></a>Espressioni lambda constexpr
+## <a name="constexpr-lambda-expressions"></a>`constexpr`espressioni lambda
 
-**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): un'espressione lambda può essere dichiarata come `constexpr` o usata in un'espressione costante quando l'inizializzazione di ogni membro dati acquisito o introdotto è consentita all'interno di un'espressione costante.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ): un'espressione lambda può essere dichiarata come **`constexpr`** o usata in un'espressione costante quando l'inizializzazione di ogni membro dati acquisito o introdotto è consentita all'interno di un'espressione costante.
 
 ```cpp
     int y = 32;
@@ -340,7 +340,7 @@ Per ulteriori informazioni, vedere [generate_n](../standard-library/algorithm-fu
     }
 ```
 
-Un'espressione lambda viene `constexpr` implicitamente se il risultato soddisfa i requisiti di una funzione `constexpr`:
+Un'espressione lambda è implicitamente **`constexpr`** se il risultato soddisfa i requisiti di una **`constexpr`** funzione:
 
 ```cpp
     auto answer = [](int n)
@@ -351,7 +351,7 @@ Un'espressione lambda viene `constexpr` implicitamente se il risultato soddisfa 
     constexpr int response = answer(10);
 ```
 
-Se un'espressione lambda è `constexpr`in modo implicito o esplicito, la conversione in un puntatore a funzione produce una funzione `constexpr`:
+Se un'espressione lambda viene eseguita in modo implicito o esplicito **`constexpr`** , la conversione in un puntatore a funzione produce una **`constexpr`** funzione:
 
 ```cpp
     auto Increment = [](int n)
@@ -364,9 +364,9 @@ Se un'espressione lambda è `constexpr`in modo implicito o esplicito, la convers
 
 ## <a name="microsoft-specific"></a>Specifico di Microsoft
 
-Le espressioni lambda non sono supportate nelle seguenti entità gestite di Common Language Runtime (CLR): **classe di riferimento**, struct di **riferimento**, classe di **valore**o struct di **valore**.
+Le espressioni lambda non sono supportate nelle entità gestite di Common Language Runtime (CLR) seguenti: **`ref class`** ,, **`ref struct`** **`value class`** o **`value struct`** .
 
-Se si usa un modificatore specifico di Microsoft, ad esempio [__declspec](../cpp/declspec.md), è possibile inserirlo in un'espressione lambda immediatamente dopo l'`parameter-declaration-clause`, ad esempio:
+Se si usa un modificatore specifico di Microsoft, ad esempio [`__declspec`](../cpp/declspec.md) , è possibile inserirlo in un'espressione lambda immediatamente dopo, `parameter-declaration-clause` ad esempio:
 
 ```cpp
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
@@ -378,7 +378,7 @@ Oltre alla funzionalità lambda standard C++ 11, Visual Studio supporta le espre
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
-[Oggetti funzione della libreria standard C++](../standard-library/function-objects-in-the-stl.md)<br/>
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Oggetti funzione nella libreria standard C++](../standard-library/function-objects-in-the-stl.md)<br/>
 [Chiamata di funzione](../cpp/function-call-cpp.md)<br/>
-[for_each](../standard-library/algorithm-functions.md#for_each)
+[`for_each`](../standard-library/algorithm-functions.md#for_each)

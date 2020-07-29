@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942330"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213593"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -55,11 +55,11 @@ Puntatore a un blocco di heap per il debug valido.
 
 ## <a name="return-value"></a>Valore restituito
 
-Quando viene passato un puntatore di heap di debug valido, la funzione **_CrtReportBlockType** restituisce il tipo di blocco e il sottotipo sotto forma di **int**. Se viene passato un puntatore non valido, la funzione restituisce -1.
+Quando viene passato un puntatore di heap di debug valido, la funzione **_CrtReportBlockType** restituisce il tipo di blocco e il sottotipo sotto forma di un oggetto **`int`** . Se viene passato un puntatore non valido, la funzione restituisce -1.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per estrarre il tipo e il sottotipo restituiti da **_CrtReportBlockType**, usare le macro **_BLOCK_TYPE** e **_BLOCK_SUBTYPE** (entrambe definite in CRTDBG. h) sul valore restituito.
+Per estrarre il tipo e il sottotipo restituiti da **_CrtReportBlockType**, utilizzare le macro **_BLOCK_TYPE** e **_BLOCK_SUBTYPE** (entrambe definite in CRTDBG. h) sul valore restituito.
 
 Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).
 
@@ -69,7 +69,7 @@ Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, ved
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -115,7 +115,7 @@ int main(void)
 }
 ```
 
-### <a name="sample-output"></a>Esempio di output
+### <a name="sample-output"></a>Output di esempio
 
 ```Output
 Dumper found block at 00314F78: type 4, subtype 3

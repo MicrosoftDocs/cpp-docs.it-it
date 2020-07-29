@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187960"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213138"
 ---
 # <a name="unions"></a>Unioni
 
 > [!NOTE]
 > In C++ 17 e versioni successive, la classe **std:: Variant** è un'alternativa indipendente dai tipi per le unioni.
 
-Un' **Unione** è un tipo definito dall'utente in cui tutti i membri condividono la stessa posizione di memoria. Ciò significa che in qualsiasi momento un'unione può includere al massimo un oggetto dal rispettivo elenco di membri. Significa anche che, indipendentemente dal numero di membri, un'unione usa sempre solo la quantità di memoria necessaria per archiviare il membro più grande.
+Un **`union`** è un tipo definito dall'utente in cui tutti i membri condividono la stessa posizione di memoria. Ciò significa che in qualsiasi momento un'unione può includere al massimo un oggetto dal rispettivo elenco di membri. Significa anche che, indipendentemente dal numero di membri, un'unione usa sempre solo la quantità di memoria necessaria per archiviare il membro più grande.
 
 Le unioni possono risultare utili per conservare la memoria quando sono presenti molti oggetti e/o la memoria è limitata. È tuttavia necessario prestare particolare attenzione e usarle correttamente, poiché occorre assicurare di accedere sempre all'ultimo membro sottoposto a scrittura. Se alcuni tipi di membro hanno un costruttore non superfluo, sarà necessario scrivere codice aggiuntivo per costruire e distruggere esplicitamente tale membro. Prima di usare un'unione, stabilire se il problema da risolvere non possa essere espresso meglio mediante una classe base e classi derivate.
 
@@ -41,7 +41,7 @@ Membri che possono essere inclusi nell'unione. Vedere la sezione Osservazioni.
 
 ## <a name="declaring-a-union"></a>Dichiarazione di un'unione
 
-Iniziare la dichiarazione di un'Unione con la parola chiave **Union** e racchiudere l'elenco dei membri tra parentesi graffe:
+Iniziare la dichiarazione di un'Unione con la **`union`** parola chiave e racchiudere l'elenco dei membri tra parentesi graffe:
 
 ```cpp
 // declaring_a_union.cpp
@@ -633,7 +633,7 @@ int main()
 
 L'unione `NumericType` viene gestita in memoria (concettualmente) come illustrato nella figura seguente.
 
-![Archiviazione dei dati in un'Unione di tipo numerico](../cpp/media/vc38ul1.png "Archiviazione dei dati in un'Unione NumericType") <br/>
+![Archiviazione dei dati di unione di tipo numerico](../cpp/media/vc38ul1.png "Archiviazione dei dati in un'Unione NumericType") <br/>
 Archiviazione di dati in unione NumericType
 
 ## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>Unioni anonime
@@ -648,9 +648,9 @@ I nomi dichiarati in un'unione anonima vengono utilizzati direttamente, come le 
 
 Oltre alle limitazioni per le unioni denominate, le unioni anonime sono soggette alle restrizioni aggiuntive seguenti:
 
-- Devono anche essere dichiarati come **statici** se dichiarati nell'ambito del file o dello spazio dei nomi.
+- Devono anche essere dichiarati come **`static`** se dichiarati nell'ambito del file o dello spazio dei nomi.
 
-- Possono avere solo membri **pubblici** ; i membri **privati** e **protetti** nelle unioni anonime generano errori.
+- Possono avere solo **`public`** membri **`private`** e **`protected`** i membri delle unioni anonime generano errori.
 
 - Non possono avere funzioni membro.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172478"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219754"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Vincoli su parametri di tipo generico (C++/CLI)
 
@@ -29,7 +29,7 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Parametri
 
-*type-parameter*<br/>
+*parametro di tipo*<br/>
 Uno dei parametri di tipo da vincolare.
 
 *constraint list*<br/>
@@ -37,13 +37,13 @@ Uno dei parametri di tipo da vincolare.
 
 Inoltre può essere compresa una classe. Affinché l'argomento tipo soddisfi un vincolo della classe base, deve trattarsi di una classe uguale a quella del vincolo o derivare dal vincolo.
 
-È anche possibile specificare **gcnew()** per indicare che l'argomento tipo deve avere un costruttore senza parametri pubblico, **ref class** per indicare che l'argomento tipo deve essere un tipo riferimento, inclusi qualsiasi tipo classe, interfaccia, delegato o matrice, oppure **value class** per indicare che l'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo valore tranne Nullable\<T>.
+È anche possibile specificare **gcnew()** per indicare che l'argomento tipo deve avere un costruttore senza parametri pubblico, **ref class** per indicare che l'argomento tipo deve essere un tipo riferimento, inclusi qualsiasi tipo classe, interfaccia, delegato o matrice, oppure **value class** per indicare che l'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo di valore eccetto Nullable \<T> .
 
 È inoltre possibile specificare un parametro generico come vincolo. L'argomento tipo fornito per il tipo che si sta vincolando deve corrispondere o derivare dal tipo del vincolo. Ciò viene definito vincolo di tipo naked.
 
 ## <a name="remarks"></a>Osservazioni
 
-La clausola di vincolo è costituita da **where** seguita da un parametro di tipo, due punti ( **:** ) e il vincolo, che specifica la natura della restrizione sul parametro di tipo. **where** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md). Separare più clausole **where** con uno spazio.
+La clausola di vincolo è costituita da **where** seguita da un parametro di tipo, due punti (**:**) e il vincolo, che specifica la natura della restrizione sul parametro di tipo. **where** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md). Separare più clausole **where** con uno spazio.
 
 I vincoli vengono applicati ai parametri di tipo per impostare limitazioni per i tipi che possono essere utilizzati come argomenti per un tipo o metodo generico.
 
@@ -64,7 +64,7 @@ Per questo vincolo è necessario che un argomento tipo usato per `T` implementi 
 
 I metodi statici nella classe dell'argomento tipo non possono essere chiamati tramite il parametro di tipo, ma soltanto tramite il tipo denominato effettivo.
 
-Un vincolo non può essere un tipo valore, inclusi i tipi predefiniti come **int** o **double**. Poiché ai tipi di valore non possono essere associate classi derivate, solo una classe potrebbe soddisfare il vincolo. In questo caso, il generico può essere riscritto con il parametro di tipo sostituito dal tipo di valore specifico.
+Un vincolo non può essere un tipo di valore, inclusi i tipi incorporati, ad esempio **`int`** o **`double`** . Poiché ai tipi di valore non possono essere associate classi derivate, solo una classe potrebbe soddisfare il vincolo. In questo caso, il generico può essere riscritto con il parametro di tipo sostituito dal tipo di valore specifico.
 
 I vincoli sono richiesti in alcuni casi poiché il compilatore non consente l'utilizzo di metodi o altre funzionalità di un tipo sconosciuto a meno che i vincoli implichino che il tipo sconosciuto supporti i metodi o le interfacce.
 

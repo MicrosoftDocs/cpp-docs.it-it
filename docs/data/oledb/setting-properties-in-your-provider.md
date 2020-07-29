@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 905a9bb32544dbd7453d46362e100047516d22a8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5d5ac364096ea1a4505b2ead81f25367a9c9458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209573"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212956"
 ---
 # <a name="setting-properties-in-your-provider"></a>Impostazione di proprietà nel provider
 
@@ -20,7 +20,7 @@ Nel codice del provider generato dalla procedura guidata, trovare la mappa delle
 
 Nella mappa delle proprietà aggiungere una macro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) . PROPERTY_INFO_ENTRY_EX accetta quattro parametri:
 
-- ID della proprietà corrispondente alla proprietà. Rimuovere i primi sette caratteri ("DBPROP_") dall'inizio del nome della proprietà. Se ad esempio si desidera aggiungere `DBPROP_MAXROWS`, passare `MAXROWS` come primo elemento. Se si tratta di una proprietà personalizzata, passare il nome completo del GUID, ad esempio `DBMYPROP_MYPROPERTY`.
+- ID della proprietà corrispondente alla proprietà. Rimuovere i primi sette caratteri ("DBPROP_") dall'inizio del nome della proprietà. Ad esempio, se si desidera aggiungere `DBPROP_MAXROWS` , passare `MAXROWS` come primo elemento. Se si tratta di una proprietà personalizzata, passare il nome completo del GUID (ad esempio, `DBMYPROP_MYPROPERTY` ).
 
 - Tipo Variant della proprietà (in [OLE DB proprietà](/previous-versions/windows/desktop/ms722734(v=vs.85)) nel **riferimento del programmatore OLE DB**). Immettere il tipo di VT_, ad esempio VT_BOOL o VT_I2, corrispondente al tipo di dati.
 
@@ -30,7 +30,7 @@ Nella mappa delle proprietà aggiungere una macro [PROPERTY_INFO_ENTRY_EX](../..
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE
     ```
 
-- Valore di base della proprietà. Questo potrebbe essere `VARIANT_FALSE` per un tipo booleano o zero per un tipo Integer, ad esempio. Il valore della proprietà è a meno che non venga modificato.
+- Valore di base della proprietà. Potrebbe trattarsi di `VARIANT_FALSE` un tipo booleano o zero per un tipo Integer, ad esempio. Il valore della proprietà è a meno che non venga modificato.
 
     > [!NOTE]
     > Alcune proprietà sono connesse o concatenate ad altre proprietà, ad esempio segnalibri o aggiornamenti. Quando un consumer imposta una proprietà su true, potrebbe essere impostata anche un'altra proprietà. I modelli di provider OLE DB supportano questa operazione tramite il metodo [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
@@ -39,14 +39,14 @@ Nella mappa delle proprietà aggiungere una macro [PROPERTY_INFO_ENTRY_EX](../..
 
 I provider Microsoft OLE DB ignorano le proprietà OLE DB seguenti:
 
-- `DBPROP_MAXROWS` funziona solo per i provider di sola lettura, ovvero dove `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` sono **false**. in caso contrario, questa proprietà non è supportata.
+- `DBPROP_MAXROWS`funziona solo per i provider di sola lettura (ovvero dove `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` sono **`false`** ); in caso contrario, questa proprietà non è supportata.
 
-- `DBPROP_MAXPENDINGROWS` viene ignorato; il provider specifica il proprio limite.
+- `DBPROP_MAXPENDINGROWS`viene ignorato; il provider specifica il proprio limite.
 
-- `DBPROP_MAXOPENROWS` viene ignorato; il provider specifica il proprio limite.
+- `DBPROP_MAXOPENROWS`viene ignorato; il provider specifica il proprio limite.
 
-- `DBPROP_CANHOLDROWS` viene ignorato; il provider specifica il proprio limite.
+- `DBPROP_CANHOLDROWS`viene ignorato; il provider specifica il proprio limite.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Uso dei modelli di provider di OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: Classe CFileException
+title: CFileexception (classe)
 ms.date: 06/09/2020
 f1_keywords:
 - CFileException
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813522"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212449"
 ---
-# <a name="cfileexception-class"></a>Classe CFileException
+# <a name="cfileexception-class"></a>CFileexception (classe)
 
 Rappresenta una condizione di eccezione correlata al file.
 
@@ -45,13 +45,13 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFileexception:: CFileexception](#cfileexception)|Costruisce un oggetto `CFileException`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFileexception:: ErrnoToException](#errnotoexception)|Restituisce il codice che corrisponde a un numero di errore in fase di esecuzione.|
 |[CFileexception:: GetErrorMessage](#geterrormessage)|Recupera il messaggio che descrive un'eccezione.|
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFileexception:: m_cause](#m_cause)|Contiene codice portabile corrispondente alla provocazione dell'eccezione.|
 |[CFileexception:: m_lOsError](#m_loserror)|Contiene il numero di errore del sistema operativo correlato.|
@@ -185,7 +185,7 @@ int m_cause;
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo membro dati è una variabile pubblica di tipo **int**. Gli enumeratori e i relativi significati sono i seguenti:
+Questo membro dati è una variabile pubblica di tipo **`int`** . Di seguito sono elencati gli enumeratori e i relativi significati:
 
 | Errore | Valore e significato |
 |--|--|

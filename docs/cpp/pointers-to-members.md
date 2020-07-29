@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213294"
 ---
 # <a name="pointers-to-members"></a>Puntatori a membri
 
@@ -25,7 +25,7 @@ Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del
 
    - Identificatore della classe di archiviazione facoltativo.
 
-   - Identificatori **const** e **volatile** facoltativi.
+   - **`const`** Identificatori e facoltativi **`volatile`** .
 
    - Il tipo di identificatore: il nome di un tipo. Si tratta del tipo del membro a cui puntare, non della classe.
 
@@ -39,7 +39,7 @@ Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del
 
    - __`*`__ Operatore.
 
-   - Identificatori **const** e **volatile** facoltativi.
+   - **`const`** Identificatori e facoltativi **`volatile`** .
 
    - L'identificatore di denominazione del puntatore a membro.
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-Nell'esempio precedente, `pwCaption` è un puntatore a qualsiasi membro della classe `Window` di tipo `char*` . Il tipo di `pwCaption` è `char * Window::*`. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.
+Nell'esempio precedente, `pwCaption` è un puntatore a qualsiasi membro della classe `Window` di tipo **`char*`** . Il tipo di `pwCaption` è `char * Window::*`. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

@@ -6,12 +6,12 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286440"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213528"
 ---
 # <a name="isnormal"></a>isnormal
 
@@ -37,11 +37,11 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**isnormal** restituisce un valore diverso da zero (**true** in C++ codice) se l'argomento *x* diverso da zero, subnormali, infinito o NaN. In caso contrario, **isnormal** restituisce 0 (**false** in C++ codice).
+l'oggetto **Normal** restituisce un valore diverso da zero ( **`true`** nel codice C++) se l'argomento *x* non è né zero, subnormal, infinito né Nan. In caso **contrario, viene** restituito 0 ( **`false`** nel codice C++).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**isnormal** è una macro quando viene compilato come C e un modello di funzione inline durante la compilazione come C++.
+l' **oggetto è una** macro quando viene compilata come C e un modello di funzione inline quando viene compilato come C++.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -49,11 +49,11 @@ Valore a virgola mobile da verificare.
 |--------------|---------------------------|-------------------------------|
 |**isnormal**|\<math.h>|\<math.h> o \<cmath>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

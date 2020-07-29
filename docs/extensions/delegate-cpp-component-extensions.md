@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172438"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219729"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI e C++/CX)
 
@@ -47,10 +47,10 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parametri
 
-*access*<br/>
-(Facoltativo) Accessibilità del delegato, che può essere **public** (impostazione predefinita) o **private**. Il prototipo di funzione può essere qualificato anche con la parola chiave **const** o **volatile**.
+*accesso*<br/>
+opzionale Accessibilità del delegato, che può essere **`public`** (impostazione predefinita) o **`private`** . Il prototipo di funzione può essere qualificato anche con le **`const`** **`volatile`** parole chiave o.
 
-*return-type*<br/>
+*tipo restituito*<br/>
 Tipo restituito del prototipo di funzione.
 
 *delegate-type-identifier*<br/>
@@ -81,13 +81,13 @@ function_declaration
 
 ### <a name="parameters"></a>Parametri
 
-*access*<br/>
+*accesso*<br/>
 (Facoltativo) L'accessibilità del delegato all'esterno dell'assembly può essere public o private.  L'impostazione predefinita è private.  All'interno di una classe un delegato può avere qualsiasi accessibilità.
 
 *function_declaration*<br/>
 Firma della funzione che può essere associata al delegato. Il tipo restituito di un delegato può essere qualsiasi tipo gestito. Per motivi di interoperabilità, è consigliabile che il tipo restituito di un delegato sia un tipo CLS.
 
-Per definire un delegato non associato, il primo parametro in *function_declaration* deve essere il tipo del puntatore **this** per l'oggetto.
+Per definire un delegato non associato, il primo parametro di *function_declaration* deve essere il tipo del **`this`** puntatore per l'oggetto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -202,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

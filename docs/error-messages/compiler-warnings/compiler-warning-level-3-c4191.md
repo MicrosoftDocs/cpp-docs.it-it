@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198965"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220028"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avviso del compilatore (livello 3) C4191
 
@@ -25,11 +25,11 @@ Numerose operazioni in cui sono usati puntatori a funzione sono considerate non 
 
 - Tipi restituiti o tipi di argomento con diverse dimensioni, categorie di tipi o classificazioni.
 
-- Lunghezze diverse degli elenchi di argomenti (su `__cdecl`, solo sul cast da un elenco più lungo a uno più breve, anche se quest'ultimo è varargs).
+- Differenze tra le lunghezze degli elenchi di argomenti (su **`__cdecl`** , solo sul cast da un elenco più lungo a un elenco più breve, anche se più breve è varargs).
 
-- Puntatore a dati (diversi da **void** <strong>\*</strong>) con alias per il funzionamento di un puntatore.
+- Puntatore a dati (diversi da **`void`** <strong>\*</strong> ) con alias rispetto a un puntatore a funzione.
 
-- Qualsiasi altra differenza di tipo che restituisce un errore o un avviso su un `reinterpret_cast`.
+- Qualsiasi altra differenza di tipo che restituisce un errore o un avviso in un oggetto **`reinterpret_cast`** .
 
 La chiamata di questa funzione tramite il puntatore risultante può causare l'arresto anomalo del programma.
 

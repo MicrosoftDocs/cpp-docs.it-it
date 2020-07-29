@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525293"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212943"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 
@@ -31,7 +31,7 @@ I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di
 > [!NOTE]
 > La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
 
-Quando si crea un consumer con la **Creazione guidata consumer OLE DB ATL**, è possibile supportare le operazioni di aggiornamento selezionando una o più delle tre caselle di controllo **Modifica**, **Inserisci** ed **Elimina**. Se si selezionano queste opzioni, la procedura guidata modifica il codice in modo che supporti il tipo di modifiche scelte. Se tuttavia non si usa la procedura guidata, per supportare gli aggiornamenti è necessario impostare le proprietà del set di righe seguenti su `VARIANT_TRUE`:
+Quando si crea un consumer con la **creazione guidata consumer OLE DB ATL**, è possibile supportare le operazioni di aggiornamento selezionando una o più delle tre caselle di controllo **modifica**, **Inserisci**ed **Elimina**. Se si selezionano queste opzioni, la procedura guidata modifica il codice in modo che supporti il tipo di modifiche scelte. Se tuttavia non si usa la procedura guidata, per supportare gli aggiornamenti è necessario impostare le proprietà del set di righe seguenti su `VARIANT_TRUE`:
 
 - `DBPROPVAL_UP_CHANGE` consente di modificare i valori dei dati in una riga.
 
@@ -80,9 +80,9 @@ HRESULT hr = product.SetData();
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **false** (valore predefinito) specifica che la riga corrente viene spostata alla riga successiva (nel qual caso punta alla riga inserita).
+- **`false`**(valore predefinito) specifica che la riga corrente viene incrementata alla riga successiva (nel qual caso punta alla riga inserita).
 
-- **true** specifica che la riga corrente rimane nella posizione in cui si trova.
+- **`true`** Specifica che la riga corrente rimane dove si trova.
 
 Il codice seguente imposta i valori dei membri dati associati alle colonne della tabella `Products` e quindi chiama `Insert` per inserire una nuova riga con tali valori dopo la centesima riga del set di righe. È consigliabile impostare tutti i valori della colonna per evitare che ci siano dati non definiti nella nuova riga:
 

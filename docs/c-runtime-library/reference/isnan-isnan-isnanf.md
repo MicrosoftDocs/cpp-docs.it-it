@@ -35,12 +35,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: a0cc60fb80f8d5b78ec2947a87fde82a536b413c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5aebacd15000e0202a26f600614900390c1ba7a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953757"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213541"
 ---
 # <a name="isnan-_isnan-_isnanf"></a>isnan, _isnan, _isnanf
 
@@ -74,30 +74,30 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-In C, la macro **isNaN** e le funzioni **_isnan** e **isnanf** restituiscono un valore diverso da zero se l'argomento *x* è NaN; in caso contrario, restituiscono 0.
+In C, la macro **isNaN** e le funzioni **_isnan** e **_isnanf** restituiscono un valore diverso da zero se l'argomento *x* è NaN; in caso contrario, restituiscono 0.
 
-In C++la funzione di modello **isNaN** restituisce **true** se l'argomento *x* è NaN; in caso contrario, restituisce **false**.
+In C++, la funzione di modello **isNaN** restituisce **`true`** se l'argomento *x* è NaN. in caso contrario, restituisce **`false`** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché un valore NaN non è uguale a un altro valore NaN, è necessario usare una di queste funzioni o macro per rilevarne una. Un valore NaN viene generato quando il risultato di un'operazione a virgola mobile non può essere rappresentato nel formato a virgola mobile IEEE-754 per il tipo specificato. Per informazioni sulla rappresentazione di un valore NaN per l'output, vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Quando viene compilato C++come, la macro **isNaN** non è definita e viene invece definita una funzione di modello **isNaN** . Si comporta allo stesso modo della macro, ma restituisce un valore di tipo **bool** anziché un Integer.
+Quando viene compilato come C++, la macro **isNaN** non è definita e viene invece definita una funzione di modello **isNaN** . Si comporta allo stesso modo della macro, ma restituisce un valore di tipo **`bool`** anziché un numero intero.
 
-Le funzioni **_isnan** e **isnanf** sono specifiche di Microsoft. La funzione **isnanf** è disponibile solo se compilata per x64.
+Le funzioni **_isnan** e **_isnanf** sono specifiche di Microsoft. La funzione **_isnanf** è disponibile solo se compilata per x64.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isnan**, **_isnanf**|\<math.h>|\<math.h> o \<cmath>|
+|**isNaN**, **_isnanf**|\<math.h>|\<math.h> o \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> o \<cfloat>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

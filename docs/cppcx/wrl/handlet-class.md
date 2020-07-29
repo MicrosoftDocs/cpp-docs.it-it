@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: bde7d7f1bd6730d96cb0f7a0d191a32eb8ed3e8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 661d3cb92b20fc929a9bae3cad7bb55740e5e096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371460"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213008"
 ---
 # <a name="handlet-class"></a>HandleT (classe)
 
@@ -62,36 +62,36 @@ Nome     | Descrizione
 
 Nome                                | Descrizione
 ----------------------------------- | --------------------------------------------------
-[HandleT::HandleT](#handlet)        | Inizializza una nuova istanza della classe `HandleT`.
-[Maniglia: : : HandleT](#tilde-handlet) | Deinizializza un'istanza `HandleT` della classe.
+[HandleT:: HandleT](#handlet)        | Inizializza una nuova istanza della classe `HandleT`.
+[HandleT:: ~ HandleT](#tilde-handlet) | Consente di deinizializzare un'istanza della `HandleT` classe.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                         | Descrizione
 ---------------------------- | ----------------------------------------------------------------------
-[HandleT::Allega](#attach)   | Associa l'handle specificato `HandleT` all'oggetto corrente.
-[HandleT::Chiudi](#close)     | Chiude l'oggetto `HandleT` corrente.
-[HandleT::Detach](#detach)   | Disassocia l'oggetto corrente `HandleT` dall'handle sottostante.
-[HandleT::Get](#get)         | Ottiene il valore dell'handle sottostante.
-[HandleT::IsValid](#isvalid) | Indica se l'oggetto corrente `HandleT` rappresenta un handle.
+[HandleT:: Connetti](#attach)   | Associa l'handle specificato all'oggetto corrente `HandleT` .
+[HandleT:: Close](#close)     | Chiude l'oggetto `HandleT` corrente.
+[HandleT::D etach](#detach)   | Annulla l'associazione tra l'oggetto corrente e l' `HandleT` handle sottostante.
+[HandleT:: Get](#get)         | Ottiene il valore dell'handle sottostante.
+[HandleT:: IsValid](#isvalid) | Indica se l' `HandleT` oggetto corrente rappresenta un handle.
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 Nome                                     | Descrizione
 ---------------------------------------- | ------------------------------------
-[HandleT::InternalClose](#internalclose) | Chiude l'oggetto `HandleT` corrente.
+[HandleT:: InternalClose](#internalclose) | Chiude l'oggetto `HandleT` corrente.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 Nome                                   | Descrizione
 -------------------------------------- | ----------------------------------------------------------------------------------
-[Maniglia::operatore](#operator-assign) | Sposta il valore `HandleT` dell'oggetto `HandleT` specificato nell'oggetto corrente.
+[HandleT:: operator =](#operator-assign) | Sposta il valore dell'oggetto specificato nell' `HandleT` `HandleT` oggetto corrente.
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 Nome                        | Descrizione
 --------------------------- | ----------------------------------------------------------------
-[HandleT::handle_](#handle) | Contiene l'handle rappresentato `HandleT` dall'oggetto.
+[HandleT:: handle_](#handle) | Contiene l'handle rappresentato dall' `HandleT` oggetto.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -99,21 +99,21 @@ Nome                        | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers.h
+**Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers
 
-## <a name="handlethandlet"></a><a name="tilde-handlet"></a>Maniglia: : : HandleT
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a>HandleT:: ~ HandleT
 
-Deinizializza un'istanza `HandleT` della classe.
+Consente di deinizializzare un'istanza della `HandleT` classe.
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="handletattach"></a><a name="attach"></a>HandleT::Allega
+## <a name="handletattach"></a><a name="attach"></a>HandleT:: Connetti
 
-Associa l'handle specificato `HandleT` all'oggetto corrente.
+Associa l'handle specificato all'oggetto corrente `HandleT` .
 
 ```cpp
 void Attach(
@@ -123,10 +123,10 @@ void Attach(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
+*h*<br/>
 Handle.
 
-## <a name="handletclose"></a><a name="close"></a>HandleT::Chiudi
+## <a name="handletclose"></a><a name="close"></a>HandleT:: Close
 
 Chiude l'oggetto `HandleT` corrente.
 
@@ -136,13 +136,13 @@ void Close();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'handle che esegue `HandleT` la parte `HandleT` corrente viene chiuso e l'oggetto è impostato sullo stato non valido.
+L'handle sottostante l'oggetto corrente `HandleT` viene chiuso e l'oggetto `HandleT` è impostato sullo stato non valido.
 
 Se l'handle non si chiude correttamente, viene generata un'eccezione nel thread chiamante.
 
-## <a name="handletdetach"></a><a name="detach"></a>HandleT::Detach
+## <a name="handletdetach"></a><a name="detach"></a>HandleT::D etach
 
-Disassocia l'oggetto corrente `HandleT` dall'handle sottostante.
+Annulla l'associazione tra l'oggetto corrente e l' `HandleT` handle sottostante.
 
 ```cpp
 typename HandleTraits::Type Detach();
@@ -154,9 +154,9 @@ Handle sottostante.
 
 ### <a name="remarks"></a>Osservazioni
 
-Quando questa operazione viene `HandleT` completata, la corrente viene impostata sullo stato non valido.
+Al termine dell'operazione, l'oggetto corrente `HandleT` viene impostato sullo stato non valido.
 
-## <a name="handletget"></a><a name="get"></a>HandleT::Get
+## <a name="handletget"></a><a name="get"></a>HandleT:: Get
 
 Ottiene il valore dell'handle sottostante.
 
@@ -168,15 +168,15 @@ typename HandleTraits::Type Get() const;
 
 Handle.
 
-## <a name="handlethandle_"></a><a name="handle"></a>HandleT::handle_
+## <a name="handlethandle_"></a><a name="handle"></a>HandleT:: handle_
 
-Contiene l'handle rappresentato `HandleT` dall'oggetto.
+Contiene l'handle rappresentato dall' `HandleT` oggetto.
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlethandlet"></a><a name="handlet"></a>HandleT::HandleT
+## <a name="handlethandlet"></a><a name="handlet"></a>HandleT:: HandleT
 
 Inizializza una nuova istanza della classe `HandleT`.
 
@@ -193,14 +193,14 @@ HandleT(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
+*h*<br/>
 Handle.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il primo costruttore `HandleT` inizializza un oggetto che non è un handle valido per un oggetto. Il secondo costruttore `HandleT` crea un nuovo oggetto dal parametro *h*.
+Il primo costruttore inizializza un `HandleT` oggetto che non è un handle valido per un oggetto. Il secondo costruttore crea un nuovo `HandleT` oggetto dal parametro *h*.
 
-## <a name="handletinternalclose"></a><a name="internalclose"></a>HandleT::InternalClose
+## <a name="handletinternalclose"></a><a name="internalclose"></a>HandleT:: InternalClose
 
 Chiude l'oggetto `HandleT` corrente.
 
@@ -210,15 +210,15 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se `HandleT` la corrente è stata chiusa correttamente; in caso contrario, **false**.
+**`true`** Se l'oggetto corrente è stato `HandleT` chiuso correttamente; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
-`InternalClose()` è `protected`.
+`InternalClose()`è **`protected`** .
 
-## <a name="handletisvalid"></a><a name="isvalid"></a>HandleT::IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a>HandleT:: IsValid
 
-Indica se l'oggetto corrente `HandleT` rappresenta un handle.
+Indica se l' `HandleT` oggetto corrente rappresenta un handle.
 
 ```cpp
 bool IsValid() const;
@@ -226,11 +226,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se `HandleT` l'oggetto rappresenta un handle; in caso contrario, **false**.
+**`true`** Se l'oggetto `HandleT` rappresenta un handle; in caso contrario, **`false`** .
 
-## <a name="handletoperator"></a><a name="operator-assign"></a>Maniglia::operatore
+## <a name="handletoperator"></a><a name="operator-assign"></a>HandleT:: operator =
 
-Sposta il valore `HandleT` dell'oggetto `HandleT` specificato nell'oggetto corrente.
+Sposta il valore dell'oggetto specificato nell' `HandleT` `HandleT` oggetto corrente.
 
 ```cpp
 HandleT& operator=(
@@ -240,13 +240,13 @@ HandleT& operator=(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
-Riferimento rvalue a un handle.
+*h*<br/>
+Un riferimento rvalue a un handle.
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento all'oggetto `HandleT` corrente.
+Riferimento all' `HandleT` oggetto corrente.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa operazione invalida `HandleT` l'oggetto specificato dal parametro *h*.
+Questa operazione invalida l' `HandleT` oggetto specificato dal parametro *h*.

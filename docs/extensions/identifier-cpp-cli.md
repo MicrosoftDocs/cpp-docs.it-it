@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172178"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219690"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -41,7 +41,7 @@ Opzione del compilatore: `/ZW`
 
 **Esempio**
 
-Nell'esempio seguente una classe denominata **template** viene creata in C# e distribuita come DLL. Nel programma C++/CLI che usa la classe **template**, la parola chiave **__identifier** nasconde il fatto che **template** è una parola chiave C++ standard.
+Nell'esempio seguente viene creata una classe denominata `template` in C# e distribuita come dll. Nel programma C++/CLI che usa la `template` classe, la **`__identifier`** parola chiave nasconde il fatto che `template` è una parola chiave C++ standard.
 
 ```csharp
 // identifier_template.cs
@@ -73,7 +73,7 @@ Opzione del compilatore: `/clr`
 
 ### <a name="examples"></a>Esempi
 
-Nell'esempio seguente una classe denominata **template** viene creata in C# e distribuita come DLL. Nel programma C++/CLI che usa la classe **template**, la parola chiave **__identifier** nasconde il fatto che **template** è una parola chiave C++ standard.
+Nell'esempio seguente viene creata una classe denominata `template` in C# e distribuita come dll. Nel programma C++/CLI che usa la `template` classe, la **`__identifier`** parola chiave nasconde il fatto che `template` è una parola chiave C++ standard.
 
 ```csharp
 // identifier_template.cs
@@ -96,5 +96,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

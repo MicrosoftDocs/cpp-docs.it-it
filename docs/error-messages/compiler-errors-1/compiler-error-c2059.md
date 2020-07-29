@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: f91eb428fcb49c81187788730128545916955790
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 52b389806f5bacac78750bc745cd77699eb59735
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127660"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212878"
 ---
 # <a name="compiler-error-c2059"></a>Errore del compilatore C2059
 
@@ -19,7 +19,7 @@ errore di sintassi:' token '
 
 Il token ha causato un errore di sintassi.
 
-Nell'esempio seguente viene generato un messaggio di errore per la riga che dichiara `j`.
+Nell'esempio seguente viene generato un messaggio di errore per la riga che dichiara `j` .
 
 ```cpp
 // C2059e.cpp
@@ -31,9 +31,9 @@ Nell'esempio seguente viene generato un messaggio di errore per la riga che dich
 
 Per determinare la motivo dell'errore, esaminare non solo la riga elencata nel messaggio di errore, ma anche le righe sopra di esso. Se l'analisi delle righe non restituisce alcun indizio sul problema, provare a impostare come commento la riga elencata nel messaggio di errore e forse più righe sopra.
 
-Se il messaggio di errore si verifica in un simbolo che segue immediatamente una variabile di `typedef`, assicurarsi che la variabile sia definita nel codice sorgente.
+Se il messaggio di errore si verifica in un simbolo che segue immediatamente una **`typedef`** variabile, assicurarsi che la variabile sia definita nel codice sorgente.
 
-C2059 viene generato quando un nome di simbolo del preprocessore viene riutilizzato come identificatore. Nell'esempio seguente il compilatore vede `DIGITS.ONE` come numero 1, che non è valido come nome di elemento enum:
+C2059 viene generato quando un nome di simbolo del preprocessore viene riutilizzato come identificatore. Nell'esempio seguente il compilatore considera `DIGITS.ONE` come il numero 1, che non è valido come nome di elemento enum:
 
 ```cpp
 #define ONE 1
@@ -44,7 +44,7 @@ enum class DIGITS {
 };
 ```
 
-È possibile ottenere C2059 se un simbolo non restituisce alcun valore, come può verificarsi quando si usa **/d**_Symbol_ **=** per la compilazione.
+È possibile ottenere C2059 se un simbolo non restituisce alcun valore, come si può verificare quando viene usato **/d**_Symbol_ **=** per la compilazione.
 
 ```cpp
 // C2059a.cpp
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-C2059 può verificarsi quando un operatore che può qualificare un nome (`::`, `->`e `.`) deve essere seguito dalla parola chiave `template`, come illustrato nell'esempio seguente:
+C2059 può verificarsi quando un operatore che può qualificare un nome ( `::` , `->` e `.` ) deve essere seguito dalla parola chiave **`template`** , come illustrato nell'esempio seguente:
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-Per impostazione predefinita, in C++ si presuppone che `AY::Rebind` non è un modello; pertanto, `<` viene interpretato come segno minore di.  È necessario indicare al compilatore in modo esplicito che `Rebind` è un modello in modo da poter analizzare correttamente la parentesi angolare. Per correggere questo errore, utilizzare la parola chiave `template` sul nome del tipo dipendente, come illustrato di seguito:
+Per impostazione predefinita, in C++ si presuppone che `AY::Rebind` non è un modello; pertanto, `<` viene interpretato come segno minore di.  È necessario indicare al compilatore in modo esplicito che `Rebind` è un modello in modo da poter analizzare correttamente la parentesi angolare. Per correggere l'errore, usare la **`template`** parola chiave sul nome del tipo dipendente, come illustrato di seguito:
 
 ```cpp
 template <typename T> struct Allocator {

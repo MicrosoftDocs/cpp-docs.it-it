@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a10d071e46c79f49abf7e3eba498fae0487ccdc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179692"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213359"
 ---
 # <a name="labeled-statements"></a>Istruzioni con etichetta
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**Istruzione goto**
+**Istruzione GoTo**
 
-L'aspetto di un'etichetta *identificatore* nel programma di origine dichiara un'etichetta. Solo un'istruzione [goto](../cpp/goto-statement-cpp.md) può trasferire il controllo a un'etichetta dell' *identificatore* . Nel frammento di codice seguente viene illustrato l'utilizzo dell'istruzione **goto** e di un'etichetta *Identifier* :
+L'aspetto di un'etichetta *identificatore* nel programma di origine dichiara un'etichetta. Solo un'istruzione [goto](../cpp/goto-statement-cpp.md) può trasferire il controllo a un'etichetta dell' *identificatore* . Nel frammento di codice seguente viene illustrato l'utilizzo dell' **`goto`** istruzione e di un'etichetta *Identifier* :
 
 Un'etichetta non può apparire da sola ma deve essere sempre associata a un'istruzione. Se è necessario che un'etichetta appaia da sola, inserire un'istruzione null dopo di essa.
 
@@ -81,7 +81,7 @@ int main() {
 
 **Istruzione case**
 
-Le etichette visualizzate dopo la parola chiave **case** non possono essere visualizzate anche al di fuori di un'istruzione **Switch** . Questa restrizione si applica anche alla parola chiave **default** . Nel frammento di codice seguente viene illustrato l'utilizzo corretto delle etichette **case** :
+Le etichette visualizzate dopo la **`case`** parola chiave non possono essere visualizzate anche all'esterno di un' **`switch`** istruzione. Questa restrizione si applica anche alla **`default`** parola chiave. Nel frammento di codice seguente viene illustrato l'utilizzo corretto delle **`case`** Etichette:
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>Etichette nell'istruzione case
 
-Le etichette visualizzate dopo la parola chiave **case** non possono essere visualizzate anche al di fuori di un'istruzione **Switch** . Questa restrizione si applica anche alla parola chiave **default** . Nel frammento di codice seguente viene illustrato l'utilizzo corretto delle etichette **case** :
+Le etichette visualizzate dopo la **`case`** parola chiave non possono essere visualizzate anche all'esterno di un' **`switch`** istruzione. Questa restrizione si applica anche alla **`default`** parola chiave. Nel frammento di codice seguente viene illustrato l'utilizzo corretto delle **`case`** Etichette:
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>Etichette nell'istruzione goto
 
-L'aspetto di un'etichetta *identificatore* nel programma di origine dichiara un'etichetta. Solo un'istruzione [goto](../cpp/goto-statement-cpp.md) può trasferire il controllo a un'etichetta dell' *identificatore* . Nel frammento di codice seguente viene illustrato l'utilizzo dell'istruzione **goto** e di un'etichetta *Identifier* :
+L'aspetto di un'etichetta *identificatore* nel programma di origine dichiara un'etichetta. Solo un'istruzione [goto](../cpp/goto-statement-cpp.md) può trasferire il controllo a un'etichetta dell' *identificatore* . Nel frammento di codice seguente viene illustrato l'utilizzo dell' **`goto`** istruzione e di un'etichetta *Identifier* :
 
 Un'etichetta non può apparire da sola ma deve essere sempre associata a un'istruzione. Se è necessario che un'etichetta appaia da sola, inserire un'istruzione null dopo di essa.
 
@@ -180,5 +180,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica delle istruzioni C++](../cpp/overview-of-cpp-statements.md)<br/>
+[Cenni preliminari sulle istruzioni C++](../cpp/overview-of-cpp-statements.md)<br/>
 [Istruzione switch (C++)](../cpp/switch-statement-cpp.md)

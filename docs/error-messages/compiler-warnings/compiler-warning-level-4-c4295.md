@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4295
 ms.assetid: 20dbff85-9f62-4ca3-8fe9-079d4512006d
-ms.openlocfilehash: 5e8b546e4eb4b60197db504382b3230e779b1dec
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: d960e5a5e2d7ad2d2b650095c42e9afea7bfe7fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924842"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219872"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Avviso del compilatore (livello 4) C4295
 
@@ -21,7 +21,7 @@ Una matrice è stata inizializzata, ma l'ultimo carattere della matrice non è n
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'C4295. Per risolvere questo problema, è possibile dichiarare la dimensione della matrice più grande, per mantenere un valore null di terminazione dalla stringa dell'inizializzatore oppure è possibile usare un elenco di inizializzatori di matrice per rendere chiaro che `char`si tratta di una matrice di, non di una stringa con terminazione null.
+L'esempio seguente genera l'C4295. Per risolvere questo problema, è possibile dichiarare la dimensione della matrice più grande, per mantenere un valore null di terminazione dalla stringa dell'inizializzatore oppure è possibile usare un elenco di inizializzatori di matrice per rendere chiaro che si tratta di una matrice di **`char`** , non di una stringa con terminazione null.
 
 ```C
 // C4295.c

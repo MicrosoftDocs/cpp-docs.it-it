@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152670"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213047"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (classe)
 
@@ -32,11 +32,11 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[1 costruttore MTAThreadAttribute](#ctor) costruttore|Inizializza una nuova istanza della classe.|
+|Costruttore [MTAThreadAttribute 1](#ctor)|Inizializza una nuova istanza della classe.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-L'attributo MTAThreadAttribute eredita da [classe platform:: Object](../cppcx/platform-object-class.md). MTAThreadAttribute esegue anche l'overload o contiene i membri seguenti:
+L'attributo MTAThreadAttribute eredita dalla [Classe Platform:: Object](../cppcx/platform-object-class.md). MTAThreadAttribute esegue anche l'overload o contiene i membri seguenti:
 
 |Nome|Descrizione|
 |----------|-----------------|
@@ -50,11 +50,11 @@ L'attributo MTAThreadAttribute eredita da [classe platform:: Object](../cppcx/pl
 
 ### <a name="requirements"></a>Requisiti
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-## <a name="ctor"></a> Costruttore MTAThreadAttribute
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>Costruttore MTAThreadAttribute
 
 Inizializza una nuova istanza della classe MTAThreadAttribute.
 
@@ -64,7 +64,7 @@ Inizializza una nuova istanza della classe MTAThreadAttribute.
 public:MTAThreadAttribute();
 ```
 
-## <a name="equals"></a> MTAThreadAttribute::Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute:: Equals
 
 Determina se l'oggetto specificato è uguale all'oggetto corrente.
 
@@ -81,9 +81,9 @@ Oggetto da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti sono uguali; in caso contrario, **false**.
+**`true`** Se gli oggetti sono uguali; in caso contrario, **`false`** .
 
-## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute:: GetHashCode
 
 Restituisce il codice hash per l'istanza.
 
@@ -97,7 +97,7 @@ public:int GetHashCode();
 
 Codice hash per l'istanza.
 
-## <a name="tostring"></a> MTAThreadAttribute::ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute:: ToString
 
 Restituisce una stringa che rappresenta l'oggetto corrente.
 
@@ -113,4 +113,4 @@ Stringa che rappresenta l'oggetto corrente.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Platform Namespace](platform-namespace-c-cx.md)
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: 2de019f908942a58b232877fcd9eebc4689d8e22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fddfc2e3295552414a00692006ab12725dc07d52
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187479"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213112"
 ---
 # <a name="void-c"></a>void (C++)
 
-Quando viene usato come tipo restituito da una funzione, la parola chiave **void** specifica che la funzione non restituisce un valore. Se utilizzato per l'elenco di parametri di una funzione, **void** specifica che la funzione non accetta parametri. Quando viene utilizzato nella dichiarazione di un puntatore, **void** specifica che il puntatore è "universale".
+Quando viene usato come tipo restituito da una funzione, la **`void`** parola chiave specifica che la funzione non restituisce un valore. Quando viene usato per un elenco di parametri di una funzione, **`void`** specifica che la funzione non accetta parametri. Quando viene utilizzato nella dichiarazione di un puntatore, **`void`** specifica che il puntatore è "universale".
 
-Se il tipo di un puntatore è **void\*** , il puntatore può puntare a qualsiasi variabile non dichiarata con la parola chiave **const** o **volatile** . Non è possibile dereferenziare un puntatore **\*void** a meno che non ne venga eseguito il cast a un altro tipo. Un puntatore **\*void** può essere convertito in qualsiasi altro tipo di puntatore dati.
+Se il tipo di un puntatore **è \* void**, il puntatore può puntare a qualsiasi variabile non dichiarata con **`const`** la **`volatile`** parola chiave o. Non è possibile dereferenziare un puntatore **void \* ** a meno che non ne venga eseguito il cast a un altro tipo. Un **puntatore \* void** può essere convertito in qualsiasi altro tipo di puntatore dati.
 
-Un puntatore **void** può puntare a una funzione, ma non a un membro della classe C++in.
+Un **`void`** puntatore può puntare a una funzione, ma non a un membro di classe in C++.
 
-Non è possibile dichiarare una variabile di tipo **void**.
+Non è possibile dichiarare una variabile di tipo **`void`** .
 
 ## <a name="example"></a>Esempio
 

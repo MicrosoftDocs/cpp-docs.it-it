@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217495"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219664"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Sposta un valore a 64 bit specificato dal primo parametro a destra, in base a un numero di bit specificato dal secondo parametro.
 
@@ -44,15 +44,15 @@ Maschera spostata da `nBit` bit.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se il secondo parametro è maggiore di 64 su x64 (32 su x86), il numero viene considerato modulo 64 (32 su x86) per determinare il numero di bit da spostare. Il `ll` prefisso indica che si tratta di un'operazione `long long`su, un altro `__int64`nome per il tipo integrale con segno a 64 bit.
+Se il secondo parametro è maggiore di 64 su x64 (32 su x86), il numero viene considerato modulo 64 (32 su x86) per determinare il numero di bit da spostare. Il `ll` prefisso indica che si tratta di un'operazione su **`long long`** , un altro nome per **`__int64`** il tipo integrale con segno a 64 bit.
 
 ## <a name="example"></a>Esempio
 
@@ -90,7 +90,7 @@ fffffffffffffff0
 > [!NOTE]
 > Se `_ull_rshift` è stato usato, il MSB del valore spostato a destra sarebbe stato zero, quindi il risultato desiderato non sarebbe stato ottenuto nel caso di un valore negativo.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

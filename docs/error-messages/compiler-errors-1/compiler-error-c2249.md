@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758892"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212800"
 ---
 # <a name="compiler-error-c2249"></a>Errore del compilatore C2249
 
 ' member ': non è stato dichiarato alcun percorso accessibile al membro dichiarato nella base virtuale ' Class '
 
-Il `member` viene ereditato da una classe o una struttura di base `virtual` non pubblica.
+`member`Viene ereditato da una **`virtual`** classe o una struttura di base non pubblica.
 
 ## <a name="example"></a>Esempio
 
@@ -42,7 +42,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-C2249 può anche verificarsi se si tenta di assegnare un flusso dalla libreria C++ standard a un altro flusso.  L'esempio seguente genera l'C2249.
+C2249 può verificarsi anche se si tenta di assegnare un flusso dalla libreria standard C++ a un altro flusso.  L'esempio seguente genera l'C2249.
 
 ```cpp
 // C2249_2.cpp

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3afc2e8049cfcca40db389bed84baa6f42dae126
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160827"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213151"
 ---
-# <a name="__super"></a>__super
+# `__super`
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Consente di dichiarare in modo esplicito che si sta chiamando un'implementazione della classe di base per una funzione di cui si esegue l'override.
 
@@ -29,9 +29,9 @@ __super::member_function();
 
 Tutti i metodi accessibili della classe di base vengono considerati durante la fase di risoluzione dell'overload e la funzione che fornisce la corrispondenza migliore è quella che viene chiamata.
 
-**__super** può essere presente solo all'interno del corpo di una funzione membro.
+**`__super`** può essere presente solo all'interno del corpo di una funzione membro.
 
-non è possibile usare **__super** con una dichiarazione using. Per ulteriori informazioni, vedere [utilizzo della dichiarazione](../cpp/using-declaration.md) .
+**`__super`** non può essere usato con una dichiarazione using. Per ulteriori informazioni, vedere [utilizzo della dichiarazione](../cpp/using-declaration.md) .
 
 Con l'introduzione degli [attributi](../windows/attributes/attributes-alphabetical-reference.md) che comportano il codice, il codice potrebbe contenere una o più classi di base i cui nomi non si conoscono ma che contengono i metodi che si desidera chiamare.
 
@@ -58,7 +58,7 @@ struct D : B1, B2 {
 };
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

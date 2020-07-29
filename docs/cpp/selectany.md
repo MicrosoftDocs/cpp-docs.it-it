@@ -7,14 +7,14 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e8ca82900ffd16264aca494950d4793029e55d9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213229"
 ---
-# <a name="selectany"></a>selectany
+# `selectany`
 
 **Specifico di Microsoft**
 
@@ -22,26 +22,24 @@ Viene indicato al compilatore che l'elemento dati globale (variabile o oggetto) 
 
 ## <a name="syntax"></a>Sintassi
 
-```
-__declspec( selectany ) declarator
-```
+> **`__declspec( selectany )`***dichiaratore*
 
 ## <a name="remarks"></a>Osservazioni
 
-In fase di collegamento, se sono visualizzate più definizioni di COMDAT, il linker ne sceglie una e ignora il resto. Se è selezionata l'opzione del linker [/OPT:REF](../build/reference/opt-optimizations.md) (Optimizations), si verificherà l'eliminazione COMDAT per rimuovere tutti gli elementi di dati senza riferimenti nell'output del linker.
+In fase di collegamento, se sono visualizzate più definizioni di COMDAT, il linker ne sceglie una e ignora il resto. Se l'opzione del linker [`/OPT:REF`](../build/reference/opt-optimizations.md) (ottimizzazioni) è selezionata, si verificherà l'eliminazione di COMDAT per rimuovere tutti gli elementi di dati senza riferimenti nell'output del linker.
 
 I costruttori e l'assegnazione attraverso funzione globale o metodi statici presenti nella dichiarazione non creano un riferimento e non impediscono l'eliminazione di /opt:REF. Non si dovrebbe contare sugli effetti collaterali di tale codice, quando non esistono altri riferimenti ai dati.
 
-Per gli oggetti globali inizializzati in modo dinamico, **selectany** eliminerà anche il codice di inizializzazione di un oggetto senza riferimenti.
+Per gli oggetti globali inizializzati in modo dinamico, **`selectany`** eliminerà anche il codice di inizializzazione di un oggetto senza riferimenti.
 
-In genere, un elemento dati globale può essere inizializzato solo una volta, in un progetto DLL o EXE. **selectany** può essere utilizzato per inizializzare i dati globali definiti dalle intestazioni, quando la stessa intestazione viene visualizzata in più di un file di origine. **selectany** è disponibile in entrambi i compilatori C e C.
+In genere, un elemento dati globale può essere inizializzato solo una volta, in un progetto DLL o EXE. **`selectany`** può essere utilizzato per inizializzare i dati globali definiti dalle intestazioni, quando la stessa intestazione viene visualizzata in più di un file di origine. **`selectany`** è disponibile nei compilatori C e C++.
 
 > [!NOTE]
-> **selectany** può essere applicato solo all'inizializzazione effettiva di elementi di dati globali visibili esternamente.
+> **`selectany`** può essere applicato solo all'inizializzazione effettiva di elementi di dati globali visibile esternamente.
 
 ## <a name="example"></a>Esempio
 
-Questo codice mostra come usare l'attributo **selectany:This** code shows how to use the selectany attribute:
+Questo codice Mostra come usare l' **`selectany`** attributo:
 
 ```cpp
 //Correct - x1 is initialized and externally visible
@@ -75,7 +73,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>Esempio
 
-Questo codice mostra come utilizzare l'attributo **selectany** per garantire la riduzione dei dati COMDAT quando si utilizza anche l'opzione del linker [/OPT:ICF.](../build/reference/opt-optimizations.md) Si noti che i dati devono essere contrassegnati con **selectany** e inseriti in una sezione **const** (readonly). È necessario specificare esplicitamente la sezione di sola lettura.
+Questo codice illustra come usare l' **`selectany`** attributo per garantire la riduzione dei dati COMDAT quando si usa anche l' [`/OPT:ICF`](../build/reference/opt-optimizations.md) opzione del linker. Si noti che i dati devono essere contrassegnati con **`selectany`** e inseriti in una **`const`** sezione (ReadOnly). È necessario specificare esplicitamente la sezione di sola lettura.
 
 ```cpp
 // selectany2.cpp
@@ -88,9 +86,9 @@ int main() {
 }
 ```
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

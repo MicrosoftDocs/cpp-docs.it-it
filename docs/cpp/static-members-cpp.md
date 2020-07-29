@@ -13,16 +13,16 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-ms.openlocfilehash: c18b29cf69c2f899fbf06c7cb75ebbd2242ab427
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b79b65ab3cbf4565f31ad6717f8163c678697c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178561"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213190"
 ---
 # <a name="static-members-c"></a>Membri statici (C++)
 
-Le classi possono contenere membri dati statici e funzioni membro. Quando un membro dati viene dichiarato come **statico**, viene mantenuta solo una copia dei dati per tutti gli oggetti della classe.
+Le classi possono contenere membri dati statici e funzioni membro. Quando un membro dati viene dichiarato come **`static`** , viene mantenuta solo una copia dei dati per tutti gli oggetti della classe.
 
 I membri dati statici non fanno parte degli oggetti di un tipo specifico della classe. Di conseguenza, la dichiarazione di un membro dati statico non è considerata una definizione. Il membro dati viene dichiarato nell'ambito della classe, ma la definizione viene fatta nell'ambito del file. Questi membri statici hanno collegamento esterno. L'esempio seguente illustra questi concetti.
 
@@ -63,7 +63,7 @@ Ai membri dati statici è possibile accedere senza fare riferimento a un oggetto
 long nBytes = BufferedOutput::bytecount;
 ```
 
-Affinché il membro statico esista, non è necessario che esistano tutti gli oggetti di tipo classe. È possibile accedere ai membri statici anche usando la selezione dei membri ( **.** e **->** ). Ad esempio:
+Affinché il membro statico esista, non è necessario che esistano tutti gli oggetti di tipo classe. È possibile accedere ai membri statici anche usando la selezione dei membri (**.** e **->** ). Ad esempio:
 
 ```cpp
 BufferedOutput Console;
@@ -75,7 +75,7 @@ Nel caso precedente, il riferimento all'oggetto (`Console`) non viene valutato e
 
 I membri dati statici sono soggetti alle regole di accesso al membro di classe, pertanto l'accesso privato ai membri dati statici è consentito solo per le funzioni friend e membro della classe. Queste regole sono descritte in [controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md). L'eccezione è costituita dal fatto che i membri dati statici devono essere definiti nell'ambito del file indipendentemente dalle restrizioni di accesso. Se il membro dati viene inizializzato in modo esplicito, insieme alla definizione deve essere fornito un inizializzatore.
 
-Il tipo di un membro statico non è qualificato dal nome della classe. Il tipo di `BufferedOutput::bytecount` è pertanto **Long**.
+Il tipo di un membro statico non è qualificato dal nome della classe. Pertanto, il tipo di `BufferedOutput::bytecount` è **`long`** .
 
 ## <a name="see-also"></a>Vedere anche
 

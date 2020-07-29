@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371452"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212995"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits (struttura)
 
-Definisce le caratteristiche comuni di una maniglia.
+Definisce le caratteristiche comuni di un handle.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,14 +34,14 @@ struct HANDLETraits;
 
 Nome   | Descrizione
 ------ | ---------------------
-`Type` | Un sinonimo di HANDLE.
+`Type` | Sinonimo di HANDLE.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                              | Descrizione
 ------------------------------------------------- | -----------------------------
-[HandleTraits::Chiudi](#close)                     | Chiude l'handle specificato.
-[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Rappresenta un handle non valido.
+[HANDLETraits:: Close](#close)                     | Chiude l'handle specificato.
+[HANDLETraits:: GetInvalidValue](#getinvalidvalue) | Rappresenta un handle non valido.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,11 +49,11 @@ Nome                                              | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers.h
+**Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>HandleTraits::Chiudi
+## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits:: Close
 
 Chiude l'handle specificato.
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
+*h*<br/>
 Handle da chiudere.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'handle *h* è stato chiuso correttamente; in caso contrario, **false**.
+**`true`** se handle *h* è stato chiuso correttamente; in caso contrario, **`false`** .
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits:: GetInvalidValue
 
 Rappresenta un handle non valido.
 
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce sempre INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE è definito da Windows.)
+Restituisce sempre INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE è definito da Windows).

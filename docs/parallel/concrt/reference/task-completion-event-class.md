@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219509"
 ---
 # <a name="task_completion_event-class"></a>Classe task_completion_event
 
@@ -36,7 +36,7 @@ class task_completion_event<void>;
 *_ResultType*<br/>
 Il tipo di risultato di questa classe `task_completion_event`.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -69,7 +69,7 @@ Se l'evento di completamento di attività non viene mai segnalato, le eventuali 
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="set"></a>set
+## <a name="set"></a><a name="set"></a>set
 
 Imposta l'evento di completamento attività.
 
@@ -86,13 +86,13 @@ Risultato con cui impostare questo evento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il metodo restituisce **true** se ha avuto esito positivo nell'impostazione dell'evento. Restituisce **false** se l'evento è già impostato.
+Il metodo restituisce **`true`** se ha avuto esito positivo nell'impostazione dell'evento. Restituisce **`false`** se l'evento è già impostato.
 
 ### <a name="remarks"></a>Osservazioni
 
-In presenza di più chiamate o simultanee a `set`, solo la prima chiamata avrà esito positivo e il risultato (se presente) verrà archiviato nell'evento di completamento dell'attività. I set rimanenti verranno ignorati e il metodo restituirà false. Quando si imposta un evento di completamento attività, tutte le attività create da tale evento verranno completate immediatamente e verranno pianificate le relative continuazioni. Gli oggetti di completamento delle attività che hanno un `_ResultType` diverso da **void** passeranno il valore alle relative continuazioni.
+In presenza di più chiamate simultanee a `set` , solo la prima chiamata avrà esito positivo e il risultato (se presente) verrà archiviato nell'evento di completamento dell'attività. I set rimanenti verranno ignorati e il metodo restituirà false. Quando si imposta un evento di completamento attività, tutte le attività create da tale evento verranno completate immediatamente e verranno pianificate le relative continuazioni. Gli oggetti di completamento delle attività che hanno un `_ResultType` valore diverso da **`void`** passeranno il valore alle relative continuazioni.
 
-## <a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a>set_exception
 
 Propaga un'eccezione a tutte le attività associate a questo evento.
 
@@ -116,7 +116,7 @@ Puntatore di eccezione da impostare.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
 
 Costruisce un oggetto `task_completion_event`.
 
@@ -126,4 +126,4 @@ task_completion_event();
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

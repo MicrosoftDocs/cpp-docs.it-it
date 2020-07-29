@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187505"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213125"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-La parola chiave **Virtual** dichiara una funzione virtuale o una classe base virtuale.
+La **`virtual`** parola chiave dichiara una funzione virtuale o una classe base virtuale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,7 +37,7 @@ Specifica il tipo restituito della funzione interna virtuale.
 Dichiara una nuova funzione interna.
 
 *identificatore di accesso*<br/>
-Definisce il livello di accesso alla classe di base, **public**, **protected** o **private**. Può apparire prima o dopo la parola chiave **Virtual** .
+Definisce il livello di accesso alla classe di base, **`public`** **`protected`** o **`private`** . Può apparire prima o dopo la **`virtual`** parola chiave.
 
 *Nome-classe-base*<br/>
 Identifica un tipo della classe dichiarato precedentemente.

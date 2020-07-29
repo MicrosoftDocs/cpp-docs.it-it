@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: fa948865685af4cbd6a865cfbf1d8546b29ab280
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e925f315e8506453403b0a0eda75b7c2956cc05c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161139"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219937"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>Avviso del compilatore (livello 4) C4221
 
 utilizzata estensione non standard:' Identifier ': Impossibile inizializzare utilizzando l'indirizzo della variabile automatica
 
-Con le estensioni Microsoft predefinite (/Ze), è possibile inizializzare un tipo di aggregazione (**Array**, `struct`o **Union**) con l'indirizzo di una variabile locale (automatica).
+Con le estensioni Microsoft predefinite (/Ze), è possibile inizializzare un tipo di aggregazione (**Array**, **`struct`** o **`union`** ) con l'indirizzo di una variabile locale (automatica).
 
 ## <a name="example"></a>Esempio
 

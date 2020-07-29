@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182175"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219742"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Parole chiave sensibili al contesto (C++/CLI e C++/CX)
 
@@ -24,13 +24,13 @@ Le *parole chiave sensibili al contesto* sono elementi del linguaggio riconosciu
 
 Di seguito è riportato un elenco di parole chiave sensibili al contesto:
 
-- [abstract](abstract-cpp-component-extensions.md)
+- [astratta](abstract-cpp-component-extensions.md)
 
 - [delegate](delegate-cpp-component-extensions.md)
 
 - [event](event-cpp-component-extensions.md)
 
-- [finally](../dotnet/finally.md)
+- [Infine](../dotnet/finally.md)
 
 - [for each, in](../dotnet/for-each-in.md)
 
@@ -38,7 +38,7 @@ Di seguito è riportato un elenco di parole chiave sensibili al contesto:
 
 - `internal`
 
-- [literal](literal-cpp-component-extensions.md)
+- [valore letterale](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -72,7 +72,7 @@ Opzione del compilatore: `/clr`
 
 ### <a name="examples"></a>Esempi
 
-L'esempio di codice seguente mostra che nel contesto appropriato è possibile usare la parola chiave sensibile al contesto **property** per definire una proprietà e una variabile.
+Nell'esempio di codice seguente viene illustrato che nel contesto appropriato **`property`** è possibile utilizzare la parola chiave sensibile al contesto per definire una proprietà e una variabile.
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -101,4 +101,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

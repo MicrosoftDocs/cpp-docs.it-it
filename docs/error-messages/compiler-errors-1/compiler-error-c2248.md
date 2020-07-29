@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ded4b06423be53911f3efd0b55d75cb979773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206552"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212813"
 ---
 # <a name="compiler-error-c2248"></a>Errore del compilatore C2248
 
 '*member*': Impossibile accedere al membro '*access_level*' dichiarato nella classe '*Class*'
 
-I membri di una classe derivata non possono accedere ai membri di `private` di una classe di base. Non è possibile accedere ai membri `private` o `protected` delle istanze di classe.
+I membri di una classe derivata non possono accedere ai **`private`** membri di una classe di base. Non è possibile accedere ai **`private`** **`protected`** membri delle istanze della classe o.
 
 ## <a name="example"></a>Esempio
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-Un altro problema di conformità che espone C2248 è l'uso degli amici e della specializzazione del modello. Per risolvere questo problema, dichiarare le funzioni del modello friend usando un elenco di parametri di modello vuoto < > o parametri di modello specifici.
+Un altro problema di conformità che espone C2248 è l'uso degli amici e della specializzazione del modello. Per risolvere questo problema, dichiarare le funzioni del modello friend usando un elenco di parametri di modello vuoto <> o parametri di modello specifici.
 
 ```cpp
 // C2248_template.cpp

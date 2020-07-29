@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c3eeb47ec81f4073452c17f40eb2fec4911989f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177677"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213281"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
 
@@ -44,11 +44,11 @@ L'effetto dell'applicazione dell'operatore di incremento suffisso ( **++** ) con
 
 Quando un operatore suffisso viene applicato a un argomento di funzione, non è garantito che il valore dell'argomento venga incrementato o decrementato prima di essere passato alla funzione.  Per ulteriori informazioni, vedere la sezione 1.9.17 in C++ standard.
 
-L'applicazione dell'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **Long** aggiunge effettivamente quattro alla rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, che in precedenza faceva riferimento all'elemento *n*della matrice, faccia riferimento all'elemento (*n*+ 1) Th.
+L'applicazione dell'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **`long`** aggiunge effettivamente quattro alla rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, che in precedenza faceva riferimento all'elemento *n*della matrice, faccia riferimento all'elemento (*n*+ 1) Th.
 
-Gli operandi degli operatori di incremento suffisso e di decremento suffisso devono essere valori l-value modificabili (non **const**) di tipo aritmetico o puntatore. Il tipo del risultato corrisponde a quello dell' *espressione suffissa*, ma non è più un l-value.
+Gli operandi per gli operatori di decremento suffisso e di decremento suffisso devono essere **`const`** valori l-value modificabili di tipo aritmetico o puntatore. Il tipo del risultato corrisponde a quello dell' *espressione suffissa*, ma non è più un l-value.
 
-**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un operatore di incremento o decremento suffisso non può essere di tipo **bool**.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un operatore di incremento o decremento suffisso non può essere di tipo **`bool`** .
 
 Il codice seguente illustra l'operatore di incremento suffisso:
 
@@ -75,6 +75,6 @@ for( myCompass = North; myCompass != West; myCompass++ ) // Error
 
 ## <a name="see-also"></a>Vedere anche
 
-[Espressioni di suffissi](../cpp/postfix-expressions.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operatori di incremento e decremento in forma suffissa C](../c-language/c-postfix-increment-and-decrement-operators.md)
+[Espressioni di suffisso](../cpp/postfix-expressions.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori di incremento e decremento suffisso C](../c-language/c-postfix-increment-and-decrement-operators.md)

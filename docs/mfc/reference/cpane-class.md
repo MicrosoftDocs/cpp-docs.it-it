@@ -133,16 +133,16 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 4609a56c7a7bf6909c687e371b67eeb6e42ae9d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753659"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219638"
 ---
 # <a name="cpane-class"></a>CPane Class
 
-La `CPane` classe rappresenta un miglioramento della [classe CControlBar](../../mfc/reference/ccontrolbar-class.md). Se si sta aggiornando un progetto MFC esistente, sostituire tutte le occorrenze `CControlBar` di `CPane`con.
+La `CPane` classe rappresenta un miglioramento della [classe CControlBar](../../mfc/reference/ccontrolbar-class.md). Se si sta aggiornando un progetto MFC esistente, sostituire tutte le occorrenze di `CControlBar` con `CPane` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -150,17 +150,17 @@ La `CPane` classe rappresenta un miglioramento della [classe CControlBar](../../
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |`CPane::~CPane`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPane:: AdjustSizeImmediate](#adjustsizeimmediate)|Ricalcola immediatamente il layout di un riquadro.|
 |[CPane:: AllocElements](#allocelements)|Alloca lo spazio di archiviazione per uso interno.|
@@ -173,9 +173,9 @@ class CPane : public CBasePane
 |[CPane:: CanBeTabbedDocument](#canbetabbeddocument)|Determina se il riquadro può essere convertito in un documento a schede.|
 |[CPane:: ConvertToTabbedDocument](#converttotabbeddocument)|Converte un riquadro ancorabile in un documento a schede.|
 |[CPane:: CopyState](#copystate)|Copia lo stato di un riquadro. Esegue l'override di [CBasePane:: CopyState](../../mfc/reference/cbasepane-class.md#copystate).|
-|[CPane:: create](#create)|Crea una barra di controllo e la `CPane` collega all'oggetto.|
+|[CPane:: create](#create)|Crea una barra di controllo e la collega all' `CPane` oggetto.|
 |[CPane:: CreateDefaultMiniframe](#createdefaultminiframe)|Crea una finestra con mini-cornice per un riquadro a virgola mobile.|
-|[CPane:: CreateEx](#createex)|Crea una barra di controllo e la `CPane` collega all'oggetto.|
+|[CPane:: CreateEx](#createex)|Crea una barra di controllo e la collega all' `CPane` oggetto.|
 |`CPane::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |[CPane::D ockByMouse](#dockbymouse)|Ancora un riquadro utilizzando il metodo di ancoraggio del mouse.|
 |[CPane::D ockPane](#dockpane)|Ancora il riquadro mobile a un riquadro di base.|
@@ -228,7 +228,7 @@ class CPane : public CBasePane
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPane:: OnAfterDock](#onafterdock)|Chiamata eseguita dal framework quando un riquadro è stato ancorato.|
 |[CPane:: OnAfterFloat](#onafterfloat)|Chiamata eseguita dal framework quando è stato eseguito il float di un riquadro.|
@@ -237,16 +237,16 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPane:: m_bHandleMinSize](#m_bhandleminsize)|Consente una gestione coerente delle dimensioni minime per i riquadri.|
 |[CPane:: m_recentDockInfo](#m_recentdockinfo)|Contiene informazioni di ancoraggio recenti.|
 
 ## <a name="remarks"></a>Osservazioni
 
-In genere `CPane` , non viene creata un'istanza diretta degli oggetti. Se è necessario un riquadro con funzionalità di ancoraggio, derivare l'oggetto da [CDockablePane](../../mfc/reference/cdockablepane-class.md). Se è necessaria la funzionalità della barra degli strumenti, derivare l'oggetto da [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+In genere, `CPane` non viene creata un'istanza diretta degli oggetti. Se è necessario un riquadro con funzionalità di ancoraggio, derivare l'oggetto da [CDockablePane](../../mfc/reference/cdockablepane-class.md). Se è necessaria la funzionalità della barra degli strumenti, derivare l'oggetto da [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
-Quando si deriva una classe da `CPane`, può essere ancorata in un [CDockSite](../../mfc/reference/cdocksite-class.md) e può essere fluttuata in un [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Quando si deriva una classe da `CPane` , può essere ancorata in un [CDockSite](../../mfc/reference/cdocksite-class.md) e può essere fluttuata in un [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -441,7 +441,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bActiveTabOnly*<br/>
-in Non utilizzato in `CPane::ConvertToTabbedDocument`.
+in Non utilizzato in `CPane::ConvertToTabbedDocument` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -510,7 +510,7 @@ TRUE se il riquadro è stato creato correttamente; in caso contrario, FALSE.
 
 Questo metodo crea un riquadro di Windows e lo connette all' `CPane` oggetto.
 
-Se [CPane:: m_recentDockInfo](#m_recentdockinfo) non è stato inizializzato in modo esplicito `Create`prima di chiamare, il parametro *Rect* verrà usato come rettangolo durante il mobile o l'ancoraggio del riquadro.
+Se [CPane:: m_recentDockInfo](#m_recentdockinfo) non è stato inizializzato in modo esplicito prima `Create` di chiamare, il parametro *Rect* verrà usato come rettangolo durante il mobile o l'ancoraggio del riquadro.
 
 ## <a name="cpanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CPane:: CreateDefaultMiniframe
 
@@ -533,7 +533,7 @@ Finestra con mini-cornice appena creata.
 
 Questo metodo viene chiamato dal Framework per creare una finestra con mini-cornice quando viene eseguito il float di un riquadro. La finestra con mini-cornice può essere di tipo [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) o di tipo [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Se il riquadro dispone dello stile AFX_CBRS_FLOAT_MULTI viene creata una finestra con mini-cornice.
 
-Le informazioni sulla classe di runtime per la finestra con mini-cornice sono `CPane::m_pMiniFrameRTC` archiviate nel membro. È possibile utilizzare una classe derivata per impostare questo membro se si decide di creare finestre con mini-cornice personalizzate.
+Le informazioni sulla classe di runtime per la finestra con mini-cornice sono archiviate nel `CPane::m_pMiniFrameRTC` membro. È possibile utilizzare una classe derivata per impostare questo membro se si decide di creare finestre con mini-cornice personalizzate.
 
 ## <a name="cpanecreateex"></a><a name="createex"></a>CPane:: CreateEx
 
@@ -585,7 +585,7 @@ TRUE se il riquadro è stato creato correttamente; in caso contrario, FALSE.
 
 Questo metodo crea un riquadro di Windows e lo connette all' `CPane` oggetto.
 
-Se [CPane:: m_recentDockInfo](#m_recentdockinfo) non è stato inizializzato in modo esplicito `CreateEx`prima di chiamare, il parametro *Rect* verrà usato come rettangolo durante il mobile o l'ancoraggio del riquadro.
+Se [CPane:: m_recentDockInfo](#m_recentdockinfo) non è stato inizializzato in modo esplicito prima `CreateEx` di chiamare, il parametro *Rect* verrà usato come rettangolo durante il mobile o l'ancoraggio del riquadro.
 
 ## <a name="cpanedockbymouse"></a><a name="dockbymouse"></a>CPane::D ockByMouse
 
@@ -658,7 +658,7 @@ in TRUE se il riquadro è stato ancorato correttamente. in caso contrario, FALSE
 
 ### <a name="return-value"></a>Valore restituito
 
-Questo metodo restituisce sempre il puntatore **this** .
+Questo metodo restituisce sempre il **`this`** puntatore.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -792,7 +792,7 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene la larghezza corrente, in pixel, di ogni lato del riquadro. Il valore del `left` membro dell' `CRect` oggetto, ad esempio, corrisponde alla larghezza del bordo sinistro.
+Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene la larghezza corrente, in pixel, di ogni lato del riquadro. Il valore del `left` membro dell'oggetto, ad esempio, `CRect` corrisponde alla larghezza del bordo sinistro.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -822,7 +822,7 @@ CDockingPanesRow* GetDockSiteRow() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un `CDockingPanesRow`* che punta alla riga di ancoraggio in cui il riquadro è ancorato o null se il riquadro non è ancorato.
+Un `CDockingPanesRow` * che punta alla riga di ancoraggio in cui il riquadro è ancorato o null se il riquadro non è ancorato.
 
 ## <a name="cpanegetexclusiverowmode"></a><a name="getexclusiverowmode"></a>CPane:: GetExclusiveRowMode
 
@@ -852,7 +852,7 @@ CPoint GetHotSpot() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-La `CPane` classe contiene un `CMFCDragFrameImpl` oggetto, `m_dragFrameImpl`, che è responsabile del disegno del rettangolo visualizzato quando l'utente sposta un riquadro nella modalità di ancoraggio standard. L'area sensibile viene utilizzata per creare il rettangolo rispetto alla posizione corrente del mouse quando l'utente sposta il riquadro.
+La `CPane` classe contiene un `CMFCDragFrameImpl` oggetto, `m_dragFrameImpl` , che è responsabile del disegno del rettangolo visualizzato quando l'utente sposta un riquadro nella modalità di ancoraggio standard. L'area sensibile viene utilizzata per creare il rettangolo rispetto alla posizione corrente del mouse quando l'utente sposta il riquadro.
 
 ## <a name="cpanegetminsize"></a><a name="getminsize"></a>CPane:: GetMinSize
 
@@ -865,7 +865,7 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="parameters"></a>Parametri
 
 *size*<br/>
-out `CSize` Oggetto riempito con la dimensione minima consentita.
+out `CSize`Oggetto riempito con la dimensione minima consentita.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -880,11 +880,11 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="parameters"></a>Parametri
 
 *strName*<br/>
-out `CString` Oggetto compilato con il nome della didascalia.
+out `CString`Oggetto compilato con il nome della didascalia.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il titolo del riquadro viene visualizzato nell'area della didascalia quando il riquadro è ancorato o mobile. Se il riquadro fa parte di un gruppo a schede, il titolo viene visualizzato nell'area della scheda. Se il riquadro è in modalità Nascondi automaticamente, il titolo viene visualizzato in un `CMFCAutoHideButton`.
+Il titolo del riquadro viene visualizzato nell'area della didascalia quando il riquadro è ancorato o mobile. Se il riquadro fa parte di un gruppo a schede, il titolo viene visualizzato nell'area della scheda. Se il riquadro è in modalità Nascondi automaticamente, il titolo viene visualizzato in un `CMFCAutoHideButton` .
 
 ## <a name="cpanegetvirtualrect"></a><a name="getvirtualrect"></a>CPane:: GetVirtualRect
 
@@ -897,7 +897,7 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ### <a name="parameters"></a>Parametri
 
 *rectVirtual*<br/>
-out `CRect` Oggetto riempito con il rettangolo virtuale.
+out `CRect`Oggetto riempito con il rettangolo virtuale.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -977,7 +977,7 @@ bool IsLeftOf(
 ### <a name="parameters"></a>Parametri
 
 *Rect*<br/>
-in Oggetto `CRect` utilizzato per il confronto.
+in `CRect`Oggetto utilizzato per il confronto.
 
 *bWindowRect*<br/>
 in Se TRUE, si presuppone che *Rect* includa le coordinate dello schermo; Se FALSE, si presuppone che *Rect* includa coordinate client.
@@ -1002,7 +1002,7 @@ TRUE se il riquadro è ridimensionabile. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Gli `CPane` oggetti di base non sono ridimensionabili.
+`CPane`Gli oggetti di base non sono ridimensionabili.
 
 Il gestore di ancoraggio usa il flag ridimensionabile per determinare il layout del riquadro. I riquadri non ridimensionabili si trovano sempre nei bordi esterni del frame padre.
 
@@ -1066,7 +1066,7 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 ### <a name="remarks"></a>Osservazioni
 
-Se uno o più riquadri ancorati nell'applicazione eseguono l' `GetMinSize`override o se l'applicazione chiama `SetMinSize`, potrebbe essere necessario impostare questo membro statico su true per consentire al Framework di gestire in modo coerente la modalità di ridimensionamento dei riquadri.
+Se uno o più riquadri ancorati nell'applicazione eseguono l'override `GetMinSize` o se l'applicazione chiama `SetMinSize` , potrebbe essere necessario impostare questo membro statico su true per consentire al Framework di gestire in modo coerente la modalità di ridimensionamento dei riquadri.
 
 Se questo valore è impostato su TRUE, tutti i riquadri la cui dimensione deve essere ridotta al di sotto delle dimensioni minime vengono ritagliati, non allungati. Poiché il Framework usa le aree della finestra per il ridimensionamento dei riquadri, non modificare le dimensioni dell'area della finestra per i riquadri ancorati se questo valore è impostato su TRUE.
 
@@ -1140,7 +1140,7 @@ in Se TRUE, questo metodo ignora la dimensione minima consentita del riquadro ( 
 
 ### <a name="return-value"></a>Valore restituito
 
-`CSize` Oggetto che contiene le differenze di larghezza e altezza tra i rettangoli nuovi e precedenti (vecchio rettangolo- *RectNew*).
+`CSize`Oggetto che contiene le differenze di larghezza e altezza tra i rettangoli nuovi e precedenti (vecchio rettangolo- *RectNew*).
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1219,7 +1219,7 @@ in TRUE per ritardare la regolazione del layout di ancoraggio globale; in caso c
 
 Questo metodo viene chiamato dal framework quando l'elemento padre del riquadro sta per essere modificato perché il riquadro è ancorato o floatato.
 
-Per impostazione predefinita, viene annullata la registrazione del riquadro con il riquadro di `CDockSite::RemovePane`ancoraggio chiamando.
+Per impostazione predefinita, viene annullata la registrazione del riquadro con il riquadro di ancoraggio chiamando `CDockSite::RemovePane` .
 
 ## <a name="cpaneonbeforedock"></a><a name="onbeforedock"></a>CPane:: OnBeforeDock
 
@@ -1352,7 +1352,7 @@ TRUE se lo stato è stato salvato correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il Framework chiama questo metodo quando salva lo stato del riquadro nel registro di sistema. Eseguire `SaveState` l'override in una classe derivata per archiviare informazioni aggiuntive.
+Il Framework chiama questo metodo quando salva lo stato del riquadro nel registro di sistema. Eseguire l'override `SaveState` in una classe derivata per archiviare informazioni aggiuntive.
 
 Quando si esegue l'override di questo metodo, chiamare anche il metodo di base e restituire FALSE se il metodo di base restituisce FALSE.
 
@@ -1373,7 +1373,7 @@ in Valore BOOLEANo che specifica se il riquadro è contrassegnato come attivo.
 
 Quando viene visualizzato un riquadro ancorabile o viene scelto un pulsante Nascondi automaticamente, il riquadro Nascondi automaticamente corrispondente è contrassegnato come attivo.
 
-L'aspetto di un pulsante Nascondi automaticamente associato al riquadro si basa su due fattori. Se il riquadro è attivo e il `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` valore è true, nel Framework viene visualizzato il pulsante Nascondi automaticamente come un'icona e un'etichetta. Per un riquadro inattivo, nel Framework viene visualizzata solo l'icona Nascondi automaticamente.
+L'aspetto di un pulsante Nascondi automaticamente associato al riquadro si basa su due fattori. Se il riquadro è attivo e il valore `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` è true, nel Framework viene visualizzato il pulsante Nascondi automaticamente come un'icona e un'etichetta. Per un riquadro inattivo, nel Framework viene visualizzata solo l'icona Nascondi automaticamente.
 
 Se `CMFCAutoHideButton::m_bOverlappingTabs` è false o se il riquadro non si trova in un gruppo, nel Framework viene visualizzato il pulsante Nascondi automaticamente associato come icona e etichetta.
 
@@ -1423,7 +1423,7 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="parameters"></a>Parametri
 
 *ptNew*<br/>
-in `CPoint` Oggetto che specifica la nuova area sensibile.
+in `CPoint`Oggetto che specifica la nuova area sensibile.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1478,7 +1478,7 @@ void SetMinSize(const CSize& size);
 ### <a name="parameters"></a>Parametri
 
 *size*<br/>
-in `CSize` Oggetto che contiene la dimensione minima consentita per il riquadro.
+in `CSize`Oggetto che contiene la dimensione minima consentita per il riquadro.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1495,7 +1495,7 @@ void SetVirtualRect(
 ### <a name="parameters"></a>Parametri
 
 *Rect*<br/>
-in `CRect` Oggetto che specifica il rettangolo virtuale da impostare.
+in `CRect`Oggetto che specifica il rettangolo virtuale da impostare.
 
 *bMapToParent*<br/>
 in Specificare TRUE se *Rect* contiene punti relativi alla finestra padre.
@@ -1521,7 +1521,7 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="remarks"></a>Osservazioni
 
-Quando viene eseguito il Floating di un riquadro, questo viene inserito in una finestra [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (mini-frame). È possibile fornire una classe `CPaneFrameWnd`derivata personalizzata che verrà usata quando viene chiamato [CPane:: CreateDefaultMiniframe](#createdefaultminiframe) .
+Quando viene eseguito il Floating di un riquadro, questo viene inserito in una finestra [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (mini-frame). È possibile fornire una `CPaneFrameWnd` classe derivata personalizzata che verrà usata quando viene chiamato [CPane:: CreateDefaultMiniframe](#createdefaultminiframe) .
 
 ## <a name="cpanestretchpanedeferwndpos"></a><a name="stretchpanedeferwndpos"></a>CPane:: StretchPaneDeferWndPos
 
@@ -1591,10 +1591,10 @@ void UpdateVirtualRect(CSize sizeNew);
 ### <a name="parameters"></a>Parametri
 
 *ptOffset*<br/>
-in `CPoint` Oggetto che specifica un offset in base al quale spostare il riquadro.
+in `CPoint`Oggetto che specifica un offset in base al quale spostare il riquadro.
 
 *sizeNew*<br/>
-in `CSize` Oggetto che specifica una nuova dimensione per il riquadro.
+in `CSize`Oggetto che specifica una nuova dimensione per il riquadro.
 
 ### <a name="remarks"></a>Osservazioni
 
