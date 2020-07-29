@@ -1,17 +1,17 @@
 ---
-title: Hidden (C++ attributo com)
+title: Hidden (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e0e3c5cb0355f3bedd8ecee57b034f0d9dde87df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224435"
 ---
 # <a name="hidden"></a>hidden
 
@@ -25,7 +25,7 @@ Indica che l'elemento esiste ma non deve essere visualizzato in un browser orien
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **Hidden** C++ ha la stessa funzionalità dell'attributo MIDL [nascosto](/windows/win32/Midl/hidden) .
+L'attributo C++ **nascosto** ha la stessa funzionalità dell'attributo MIDL [nascosto](/windows/win32/Midl/hidden) .
 
 ## <a name="example"></a>Esempio
 
@@ -37,10 +37,10 @@ Vedere l'esempio per [associabile](bindable.md) per un esempio di come usare **H
 
 |||
 |-|-|
-|**Si applica a**|**interfaccia**, **classe**, **struct**, metodo, proprietà|
+|**Si applica a**|**interfaccia**, **`class`** , **`struct`** , metodo, proprietà|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|**coclasse** (se applicata alla **classe** o allo **struct**)|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|**coclasse** (se applicata a **`class`** o **`struct`** )|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

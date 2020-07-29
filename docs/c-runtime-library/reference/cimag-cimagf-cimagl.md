@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: 38eef416afb078614ef26ab5d7c8810f46dd9a85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af7d15ee1b5dfd863025565bf8827199f7492841
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939157"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232547"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -66,17 +66,17 @@ Numero complesso.
 
 Parte immaginaria della *z*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **Cimag** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono valori **float** o **Long** **Double** . In un programma C **Cimag** accetta sempre un valore **_Dcomplex** e restituisce un valore **Double** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **Cimag** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono **`float`** **`long double`** valori o. In un programma C **Cimag** accetta sempre un valore **_Dcomplex** e restituisce un **`double`** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**cimag**,               **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+|**Cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

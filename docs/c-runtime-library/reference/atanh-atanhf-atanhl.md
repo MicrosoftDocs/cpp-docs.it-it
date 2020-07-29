@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920057"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232599"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -69,18 +69,18 @@ Le funzioni **atanh** restituiscono la tangente iperbolico inversa (tangente ipe
 
 |Input|Eccezione SEH|**Matherr** Eccezione|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|none|none|
-|*X* ≥ 1; *x* ≤-1|none|none|
+|± QNAN, IND|nessuno|nessuno|
+|*X* ≥ 1; *x* ≤-1|nessuno|nessuno|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **atanh** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **atanh** accetta e restituisce sempre **Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **atanh** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **atanh** accetta e restituisce sempre **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> o \<math.h>|
 
@@ -116,7 +116,7 @@ atanh( 0.655794 ) = 0.785398
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

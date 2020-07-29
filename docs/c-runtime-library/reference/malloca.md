@@ -26,12 +26,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952780"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232495"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -52,28 +52,28 @@ Byte da allocare dallo stack.
 
 ## <a name="return-value"></a>Valore restituito
 
-La routine **_malloca** restituisce un puntatore **void** allo spazio allocato, che è sicuramente allineato per l'archiviazione di qualsiasi tipo di oggetto. Se *size* è 0, **_malloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
+La routine **_malloca** restituisce un **`void`** puntatore allo spazio allocato, che è sicuramente allineato in modo adeguato per l'archiviazione di qualsiasi tipo di oggetto. Se *size* è 0, **_malloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
 
-Se *size* è maggiore di **_ALLOCA_S_THRESHOLD**, **_malloca** tenta di allocare sull'heap e restituisce un puntatore null se non è possibile allocare lo spazio. Se le *dimensioni* sono minori o uguali a **_ALLOCA_S_THRESHOLD**, **_malloca** tenta di allocare nello stack e viene generata un'eccezione di overflow dello stack se lo spazio non può essere allocato. L'eccezione di overflow dello stack C++ non è un'eccezione. si tratta di un'eccezione strutturata. Anziché utilizzare la C++ gestione delle eccezioni, è necessario utilizzare la [gestione delle eccezioni strutturata](../../cpp/structured-exception-handling-c-cpp.md) (SEH) per rilevare questa eccezione.
+Se *size* è maggiore di **_ALLOCA_S_THRESHOLD**, **_malloca** tenta di allocare sull'heap e restituisce un puntatore null se non è possibile allocare lo spazio. Se le *dimensioni* sono minori o uguali a **_ALLOCA_S_THRESHOLD**, **_malloca** tenta di allocare nello stack e viene generata un'eccezione di overflow dello stack se lo spazio non può essere allocato. L'eccezione di overflow dello stack non è un'eccezione C++. si tratta di un'eccezione strutturata. Anziché utilizzare la gestione delle eccezioni C++, è necessario utilizzare la [gestione delle eccezioni strutturata](../../cpp/structured-exception-handling-c-cpp.md) (SEH) per rilevare questa eccezione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**_malloca** alloca i byte di *dimensioni* dallo stack di programmi o dall'heap se la richiesta supera una determinata dimensione in byte fornita da **_ALLOCA_S_THRESHOLD**. La differenza tra **_malloca** e **alloca** è che **alloca** alloca sempre nello stack, indipendentemente dalle dimensioni. A differenza di **alloca**, che non richiede o non consente una chiamata **a Free** per liberare la memoria così allocata, **_malloca** richiede l'uso di [_freea](freea.md) per liberare memoria. In modalità di debug, **_malloca** alloca sempre memoria dall'heap.
+**_malloca** alloca i byte di *dimensioni* dallo stack di programmi o dall'heap se la richiesta supera una determinata dimensione in byte fornita da **_ALLOCA_S_THRESHOLD**. La differenza tra **_malloca** e **_alloca** è che **_alloca** alloca sempre nello stack, indipendentemente dalle dimensioni. A differenza **_alloca**, che non richiede o non consente una **chiamata a free per liberare** la memoria così allocata, **_malloca** richiede l'uso di [_freea](freea.md) per liberare memoria. In modalità di debug, **_malloca** alloca sempre memoria dall'heap.
 
-Esistono restrizioni per chiamare in modo esplicito **_malloca** in un gestore di eccezioni (eh). Le routine EH eseguite su processori x86 operano nel relativo frame di memoria: Eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamando in modo esplicito **_malloca** in uno degli scenari seguenti, si verifica un errore di programma durante la restituzione alla routine eh chiamante:
+Esistono restrizioni per chiamare in modo esplicito **_malloca** in un gestore di eccezioni (eh). Le routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamando in modo esplicito **_malloca** in uno degli scenari seguenti, si verifica un errore di programma durante la restituzione alla routine eh chiamante:
 
-- Espressione di filtro eccezioni Windows NT SEH : __except`_malloca ()` ()
+- Espressione di filtro eccezioni Windows NT SEH: **`__except`** ( `_malloca ()` )
 
-- Gestore eccezioni finale SEH Windows NT: **__finally** {`_malloca ()` }
+- Gestore eccezioni finale SEH Windows NT: **`__finally`** { `_malloca ()` }
 
 - Espressione della clausola catch EH C++
 
 Tuttavia, **_malloca** può essere chiamato direttamente dall'interno di una routine eh o da un callback fornito dall'applicazione che viene richiamato da uno degli scenari eh elencati in precedenza.
 
 > [!IMPORTANT]
-> In Windows XP, se **_malloca** viene chiamato all'interno di un blocco try/catch, è necessario chiamare [resetstkoflw](resetstkoflw.md) nel blocco catch.
+> In Windows XP, se **_malloca** viene chiamato all'interno di un blocco try/catch, è necessario chiamare [_resetstkoflw](resetstkoflw.md) nel blocco catch.
 
-Oltre alle restrizioni precedenti, quando si usa l'opzione [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) , non è possibile usare **_malloca** nei blocchi **__except** . Per altre informazioni, vedere [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Oltre alle restrizioni precedenti, quando si usa l'opzione [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) , non è possibile usare **_malloca** nei **`__except`** blocchi. Per altre informazioni, vedere [Limitazioni di /clr](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -167,7 +167,7 @@ int main()
 1000
 ```
 
-### <a name="sample-output"></a>Esempio di output
+### <a name="sample-output"></a>Output di esempio
 
 ```Output
 Enter the number of bytes to allocate using _malloca: 1000

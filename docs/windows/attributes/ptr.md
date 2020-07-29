@@ -1,17 +1,17 @@
 ---
-title: PTR (C++ attributo com)
+title: PTR (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224383"
 ---
 # <a name="ptr"></a>ptr
 
@@ -25,7 +25,7 @@ Designa un puntatore come puntatore completo.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **ptr** C++ ha la stessa funzionalità dell'attributo MIDL [ptr](/windows/win32/Midl/ptr) .
+L'attributo C++ **ptr** ha la stessa funzionalità dell'attributo MIDL [ptr](/windows/win32/Midl/ptr) .
 
 ## <a name="example"></a>Esempio
 
@@ -37,10 +37,10 @@ Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di utilizzo 
 
 |||
 |-|-|
-|**Si applica a**|Parametro di interfaccia, metodo di interfaccia, **typedef**|
+|**Si applica a**|Parametro di interfaccia, metodo di interfaccia,**`typedef`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -49,4 +49,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

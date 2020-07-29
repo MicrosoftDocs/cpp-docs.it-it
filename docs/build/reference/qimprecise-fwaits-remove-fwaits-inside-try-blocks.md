@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-ms.openlocfilehash: 40683382686ea64a80563f3f29b7d3523f4144a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424feda66f6925cb305256249101ea4013e3090f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232677"
 ---
-# <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (rimuovere comandi fwait all'interno dei blocchi try)
+# <a name="qimprecise_fwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (rimuovere comandi fwait all'interno dei blocchi try)
 
-Rimuove il `fwait` comandi all'interno `try` blocca quando si usa la [/fp: tranne](fp-specify-floating-point-behavior.md) opzione del compilatore.
+Rimuove i `fwait` comandi interni ai **`try`** blocchi quando si usa l'opzione del compilatore [/FP: except](fp-specify-floating-point-behavior.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,13 +24,13 @@ Rimuove il `fwait` comandi all'interno `try` blocca quando si usa la [/fp: trann
 /Qimprecise_fwaits
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa opzione non ha alcun effetto se **/fp: tranne** inoltre non è specificato. Se si specifica la **/fp: tranne** opzione, il compilatore inserirà un `fwait` comando intorno a ogni riga di codice in un `try` blocco. In questo modo, il compilatore può identificare la riga di codice che genera un'eccezione specifica. **/Qimprecise_fwaits** rimuove interni `fwait` istruzioni, lasciando solo il tutto il `try` blocco. Ciò migliora le prestazioni, ma il compilatore solo sarà in grado di indicare la `try` blocco genera un'eccezione, non la riga.
+Questa opzione non ha alcun effetto se non viene specificato anche **/FP: except** . Se si specifica l'opzione **/FP: except** , il compilatore inserirà un `fwait` comando intorno a ogni riga di codice in un **`try`** blocco. In questo modo, il compilatore è in grado di identificare la riga di codice specifica che produce un'eccezione. **/Qimprecise_fwaits** rimuove le `fwait` istruzioni interne, lasciando solo le attese del **`try`** blocco. Ciò migliora le prestazioni, ma il compilatore potrà solo indicare quale **`try`** blocco causa un'eccezione e non la riga.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -44,6 +44,6 @@ Questa opzione non ha alcun effetto se **/fp: tranne** inoltre non è specificat
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /Q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
+[Opzioni/q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

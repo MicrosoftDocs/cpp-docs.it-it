@@ -39,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916802"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232443"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -90,9 +90,9 @@ Restituisce il valore di *x*<sup>*y*</sup>. In caso di overflow o di underflow n
 
 **POW** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-Poiché C++ consente l'overload, è possibile chiamare uno dei diversi overload di **POW**. In un programma C, **POW** accetta sempre due valori **Double** e restituisce un valore **Double** .
+Poiché C++ consente l'overload, è possibile chiamare uno dei diversi overload di **POW**. In un programma C, **POW** accetta sempre due **`double`** valori e restituisce un **`double`** valore.
 
-L'overload `pow(int, int)` non è più disponibile. Se si usa questo overload, il compilatore può generare [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast del primo parametro a **Double**, **float**o **Long** **Double**.
+L'overload `pow(int, int)` non è più disponibile. Se si usa questo overload, il compilatore può generare [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast del primo parametro in **`double`** , **`float`** o **`long double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -127,7 +127,7 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md) <br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md) <br/>
 [sqrt, sqrtf, sqrtl](sqrt-sqrtf-sqrtl.md) <br/>

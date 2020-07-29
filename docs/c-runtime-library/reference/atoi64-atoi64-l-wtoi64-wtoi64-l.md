@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232560"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -86,7 +86,7 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa da convertire.
 
 *locale*<br/>
@@ -94,7 +94,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il valore **__int64** prodotto interpretando i caratteri di input come numero. Il valore restituito è 0 per **_atoi64** se l'input non può essere convertito in un valore di tale tipo.
+Ogni funzione restituisce il **`__int64`** valore prodotto interpretando i caratteri di input come numero. Il valore restituito è 0 per **_atoi64** se l'input non può essere convertito in un valore di tale tipo.
 
 In caso di overflow con valori integrali positivi di grandi dimensioni, **_atoi64** restituisce **I64_MAX** e **I64_MIN** in caso di overflow con valori integrali negativi di grandi dimensioni.
 
@@ -184,8 +184,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

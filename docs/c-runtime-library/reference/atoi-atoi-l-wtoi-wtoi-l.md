@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919869"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232573"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -81,7 +81,7 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa da convertire.
 
 *locale*<br/>
@@ -89,7 +89,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il valore **int** prodotto interpretando i caratteri di input come numero. Il valore restituito è 0 per **atoi** e **_wtoi**, se l'input non può essere convertito in un valore di tale tipo.
+Ogni funzione restituisce il **`int`** valore prodotto interpretando i caratteri di input come numero. Il valore restituito è 0 per **atoi** e **_wtoi**, se l'input non può essere convertito in un valore di tale tipo.
 
 In caso di overflow con valori integrali negativi di grandi dimensioni, viene restituito **LONG_MIN** . **atoi** e **_wtoi** restituiscono **INT_MAX** e **INT_MIN** in base a queste condizioni. In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
@@ -172,8 +172,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

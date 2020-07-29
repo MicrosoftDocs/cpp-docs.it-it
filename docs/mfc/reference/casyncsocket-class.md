@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 9a3a04046d75a4cfdbb50347259820eb727eeb38
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195096"
 ---
 # <a name="casyncsocket-class"></a>Classe CAsyncSocket
 
@@ -95,13 +95,13 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAsyncSocket:: CAsyncSocket](#casyncsocket)|Costruisce un oggetto `CAsyncSocket`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAsyncSocket:: Accept](#accept)|Accetta una connessione sul socket.|
 |[CAsyncSocket:: AsyncSelect](#asyncselect)|Richiede la notifica degli eventi per il socket.|
@@ -133,7 +133,7 @@ class CAsyncSocket : public CObject
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAsyncSocket:: OnAccept](#onaccept)|Notifica a un socket di ascolto che può accettare richieste di connessione in sospeso chiamando `Accept` .|
 |[CAsyncSocket:: OnClose](#onclose)|Notifica a un socket che il socket connesso è stato chiuso.|
@@ -144,14 +144,14 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAsyncSocket:: operator =](#operator_eq)|Assegna un nuovo valore a un `CAsyncSocket` oggetto.|
 |[SOCKET CAsyncSocket:: operator](#operator_socket)|Utilizzare questo operatore per recuperare l'handle del SOCKET dell' `CAsyncSocket` oggetto.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAsyncSocket:: m_hSocket](#m_hsocket)|Indica l'handle del SOCKET associato a questo `CAsyncSocket` oggetto.|
 
@@ -819,7 +819,7 @@ BOOL GetSockOpt(
 Opzione socket per la quale deve essere recuperato il valore.
 
 *lpOptionValue*<br/>
-Puntatore al buffer in cui deve essere restituito il valore per l'opzione richiesta. Il valore associato all'opzione selezionata viene restituito nel buffer *lpOptionValue*. Il numero intero a cui punta *lpOptionLen* deve contenere originariamente la dimensione del buffer in byte. e, al ritorno, verranno impostati sulla dimensione del valore restituito. Per SO_LINGER, questa sarà la dimensione di una `LINGER` struttura; per tutte le altre opzioni sarà la dimensione di un valore bool o **int**, a seconda dell'opzione. Vedere l'elenco di opzioni e le relative dimensioni nella sezione Osservazioni.
+Puntatore al buffer in cui deve essere restituito il valore per l'opzione richiesta. Il valore associato all'opzione selezionata viene restituito nel buffer *lpOptionValue*. Il numero intero a cui punta *lpOptionLen* deve contenere originariamente la dimensione del buffer in byte. e, al ritorno, verranno impostati sulla dimensione del valore restituito. Per SO_LINGER, questa sarà la dimensione di una `LINGER` struttura; per tutte le altre opzioni sarà la dimensione di un bool o un **`int`** , a seconda dell'opzione. Vedere l'elenco di opzioni e le relative dimensioni nella sezione Osservazioni.
 
 *lpOptionLen*<br/>
 Puntatore alla dimensione del buffer *lpOptionValue* in byte.
@@ -849,33 +849,33 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0 e un codi
 
 Per sono supportate le opzioni seguenti `GetSockOpt` . Il tipo identifica il tipo di dati da *lpOptionValue*. L'opzione TCP_NODELAY usa il livello IPPROTO_TCP; tutte le altre opzioni utilizzano SOL_SOCKET di livello.
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Il socket è in ascolto.|
 |SO_BROADCAST|BOOL|Il socket è configurato per la trasmissione di messaggi broadcast.|
 |SO_DEBUG|BOOL|Il debug è abilitato.|
 |SO_DONTLINGER|BOOL|Se true, l'opzione SO_LINGER è disabilitata.|
 |SO_DONTROUTE|BOOL|Il routing è disabilitato.|
-|SO_ERROR|**int**|Recuperare lo stato di errore e deselezionare.|
+|SO_ERROR|**`int`**|Recuperare lo stato di errore e deselezionare.|
 |SO_KEEPALIVE|BOOL|È in corso l'invio di Keep-Alive.|
 |SO_LINGER|`struct LINGER`|Restituisce le opzioni Linger correnti.|
 |SO_OOBINLINE|BOOL|Sono stati ricevuti dati fuori banda nel flusso di dati normale.|
 |SO_RCVBUF|INT|Dimensioni del buffer per le ricevute.|
 |SO_REUSEADDR|BOOL|Il socket può essere associato a un indirizzo già in uso.|
-|SO_SNDBUF|**int**|Dimensioni del buffer per le invii.|
-|SO_TYPE|**int**|Tipo di socket, ad esempio SOCK_STREAM.|
+|SO_SNDBUF|**`int`**|Dimensioni del buffer per le invii.|
+|SO_TYPE|**`int`**|Tipo di socket, ad esempio SOCK_STREAM.|
 |TCP_NODELAY|BOOL|Disabilita l'algoritmo Nagle di unione dei pacchetti in invio.|
 
 Le opzioni BSD (Berkeley Software Distribution) non supportate per `GetSockOpt` sono:
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|Ricevere il limite minimo.|
-|SO_RCVTIMEO|**int**|Timeout di ricezione.|
-|SO_SNDLOWAT|**int**|Inviare un contrassegno minimo.|
-|SO_SNDTIMEO|**int**|Timeout di invio.|
+|SO_RCVLOWAT|**`int`**|Ricevere il limite minimo.|
+|SO_RCVTIMEO|**`int`**|Timeout di ricezione.|
+|SO_SNDLOWAT|**`int`**|Inviare un contrassegno minimo.|
+|SO_SNDTIMEO|**`int`**|Timeout di invio.|
 |IP_OPTIONS||Ottiene le opzioni nell'intestazione IP.|
-|TCP_MAXSEG|**int**|Ottenere le dimensioni massime del segmento TCP.|
+|TCP_MAXSEG|**`int`**|Ottenere le dimensioni massime del segmento TCP.|
 
 Se `GetSockOpt` si chiama con un'opzione non supportata, verrà restituito un codice di errore di WSAENOPROTOOPT `GetLastError` .
 
@@ -1756,7 +1756,7 @@ Alcune implementazioni di Windows Sockets forniscono informazioni di debug dell'
 
 Per sono supportate le opzioni seguenti `SetSockOpt` . Il tipo identifica il tipo di dati da *lpOptionValue*.
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|Consente la trasmissione di messaggi broadcast sul socket.|
 |SO_DEBUG|BOOL|Registra informazioni di debug.|
@@ -1765,22 +1765,22 @@ Per sono supportate le opzioni seguenti `SetSockOpt` . Il tipo identifica il tip
 |SO_KEEPALIVE|BOOL|Invia keep-alive.|
 |SO_LINGER|`struct LINGER`|Persiste `Close` se sono presenti dati non inviati.|
 |SO_OOBINLINE|BOOL|Ricevere dati fuori banda nel flusso di dati normale.|
-|SO_RCVBUF|**int**|Specificare le dimensioni del buffer per le ricevute.|
+|SO_RCVBUF|**`int`**|Specificare le dimensioni del buffer per le ricevute.|
 |SO_REUSEADDR|BOOL|Consente di associare il socket a un indirizzo già in uso. (Vedere [Bind](#bind).)|
-|SO_SNDBUF|**int**|Specificare le dimensioni del buffer per le invii.|
+|SO_SNDBUF|**`int`**|Specificare le dimensioni del buffer per le invii.|
 |TCP_NODELAY|BOOL|Disabilita l'algoritmo Nagle di unione dei pacchetti in invio.|
 
 Le opzioni BSD (Berkeley Software Distribution) non supportate per `SetSockOpt` sono:
 
-|Valore|Type|Significato|
+|valore|Type|Significato|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Il socket è in ascolto|
-|SO_ERROR|**int**|Ottenere lo stato di errore e deselezionare.|
-|SO_RCVLOWAT|**int**|Ricevere il limite minimo.|
-|SO_RCVTIMEO|**int**|Timeout di ricezione|
-|SO_SNDLOWAT|**int**|Inviare un contrassegno minimo.|
-|SO_SNDTIMEO|**int**|Timeout di invio.|
-|SO_TYPE|**int**|Tipo di socket.|
+|SO_ERROR|**`int`**|Ottenere lo stato di errore e deselezionare.|
+|SO_RCVLOWAT|**`int`**|Ricevere il limite minimo.|
+|SO_RCVTIMEO|**`int`**|Timeout di ricezione|
+|SO_SNDLOWAT|**`int`**|Inviare un contrassegno minimo.|
+|SO_SNDTIMEO|**`int`**|Timeout di invio.|
+|SO_TYPE|**`int`**|Tipo di socket.|
 |IP_OPTIONS||Impostare il campo opzioni nell'intestazione IP.|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket:: ShutDown

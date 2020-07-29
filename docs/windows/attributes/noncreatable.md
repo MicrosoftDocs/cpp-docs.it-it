@@ -1,17 +1,17 @@
 ---
-title: non creabile (C++ attributo com)
+title: noncreable (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c5d51d7c5628a875f036b4e48b03b317490b37ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224396"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -23,11 +23,11 @@ Definisce un oggetto di cui non è possibile creare un'istanza.
 [noncreatable]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L' C++ attributo non generabile ha la stessa funzionalità dell'attributo MIDL non [creabile](/windows/win32/Midl/noncreatable) e viene passato automaticamente all'oggetto generato. File IDL del compilatore.
+L'attributo C++ non **creabile** ha la stessa funzionalità dell'attributo MIDL non [creabile](/windows/win32/Midl/noncreatable) e viene passato automaticamente all'oggetto generato. File IDL del compilatore.
 
-Quando questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo viene modificato. Oltre al comportamento precedente, l'attributo inserisce anche la macro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . Questa macro indica a ATL che l'oggetto non può essere creato esternamente.
+Quando questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo viene modificato. Oltre al comportamento precedente, l'attributo inserisce anche la [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro. Questa macro indica a ATL che l'oggetto non può essere creato esternamente.
 
 ## <a name="example"></a>Esempio
 
@@ -55,10 +55,10 @@ class CMyClass : public A
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**|
+|**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|**coclass**|
-|**Attributi non validi**|Nessuna|
+|**Attributi richiesti**|**coclass**|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

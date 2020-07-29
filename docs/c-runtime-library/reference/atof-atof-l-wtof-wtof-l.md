@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909107"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232586"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -86,7 +86,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa da convertire.
 
 *locale*<br/>
@@ -94,7 +94,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il valore **Double** prodotto interpretando i caratteri di input come numero. Il valore restituito è 0.0 se l'input non può essere convertito in un valore di tale tipo.
+Ogni funzione restituisce il **`double`** valore prodotto interpretando i caratteri di input come numero. Il valore restituito è 0.0 se l'input non può essere convertito in un valore di tale tipo.
 
 In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
@@ -127,8 +127,8 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |------------------|---------------------|
-|**atof**, **_atof_l**|C: \<math.h> o \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> o \<math.h>|
-|**_wtof**, **_wtof_l**|C: \<stdlib.h> o \<wchar.h> C++: \<cstdlib>, \<stdlib.h> o \<wchar.h>|
+|**atof**, **_atof_l**|C: \<math.h> o \<stdlib.h> C++: \<cstdlib> , \<stdlib.h> \<cmath> o\<math.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h> o \<wchar.h> C++: \<cstdlib> , \<stdlib.h> o\<wchar.h>|
 
 ## <a name="example"></a>Esempio
 
@@ -184,8 +184,8 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

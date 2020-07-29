@@ -9,47 +9,47 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271359"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232690"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Esporta una funzione)
 
-Esporta una funzione dal nome o un numero ordinale oppure i dati, dal programma.
+Esporta una funzione in base al nome, al numero ordinale o ai dati dal programma.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/EXPORT:**<em>entryname</em>[**,\@**<em>ordinal</em>[**,NONAME**]][**,DATA**]
+> **/Export:**<em>entryname</em>[**, \@ **<em>ordinale</em>[**, NoName**]] [**, dati**]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **/Export** opzione consente di specificare un funzione o un elemento dati da esportare dal programma in modo che altre applicazioni possono chiamare la funzione o utilizzare i dati. Le esportazioni sono in genere definite in una DLL.
+L'opzione **/Export** specifica una funzione o un elemento dati da esportare dal programma in modo che altri programmi possano chiamare la funzione o usare i dati. Le esportazioni vengono in genere definite in una DLL.
 
-Il *entryname* è il nome dell'elemento dati o funzione deve essere utilizzato dal programma chiamante. *ordinale* specifica un indice nella tabella di esportazioni compresi nell'intervallo da 1 a 65.535; se non si specifica *ordinale*, collegamento assegna uno. Il **NONAME** parola chiave consente di esportare la funzione solo come un numero ordinale, senza un' *entryname*.
+*Entryname* è il nome della funzione o dell'elemento di dati che deve essere utilizzato dal programma chiamante. *ordinale* specifica un indice nella tabella exports compreso nell'intervallo da 1 a 65.535; Se non si specifica un *numero ordinale*, il collegamento ne assegna uno. La parola chiave **NoName** Esporta la funzione solo come ordinale, senza *entryname*.
 
-Il **dati** parola chiave specifica che l'elemento esportato è un elemento di dati. L'elemento di dati del programma client deve essere dichiarata usando **extern declspec**.
+La parola chiave **Data** specifica che l'elemento esportato è un elemento di dati. L'elemento di dati nel programma client deve essere dichiarato utilizzando **extern __declspec (dllimport)**.
 
-Sono disponibili quattro metodi per l'esportazione di una definizione, elencati in ordine di preferenza di utilizzo:
+Sono disponibili quattro metodi per l'esportazione di una definizione, elencati nell'ordine di utilizzo consigliato:
 
-1. [dllexport](../../cpp/dllexport-dllimport.md) nel codice sorgente
+1. [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) nel codice sorgente
 
-1. Un' [esportazioni](exports.md) istruzione in un file def
+1. Un'istruzione [exports](exports.md) in un file con estensione def
 
-1. Una specifica dell'opzione /EXPORT in un comando LINK
+1. Una specifica /EXPORT in un comando LINK
 
-1. Oggetto [commento](../../preprocessor/comment-c-cpp.md) direttiva nel codice sorgente, del form `#pragma comment(linker, "/export: definition ")`.
+1. Una direttiva [Comment](../../preprocessor/comment-c-cpp.md) nel codice sorgente, nel formato `#pragma comment(linker, "/export: definition ")` .
 
-Tutti questi metodi possono essere usati nello stesso programma. Quando LINK compila un programma che contiene esportazioni, crea anche una libreria di importazione, a meno che non viene usato un file. exp nella compilazione.
+Tutti questi metodi possono essere usati nello stesso programma. Quando il collegamento compila un programma che contiene esportazioni, viene creata anche una libreria di importazione, a meno che nella compilazione non venga usato un file con estensione EXP.
 
-COLLEGAMENTO Usa decorati form degli identificatori. Il compilatore decora un identificatore quando crea il file con estensione obj. Se *entryname* è specificato per il linker nel relativo non decorato formano (così come appare nel codice sorgente), un tentativo di corrispondere al nome. Se non trova una corrispondenza univoca, collegamento genera un messaggio di errore. Usare la [DUMPBIN](dumpbin-reference.md) dello strumento per ottenere il [nome decorato](decorated-names.md) sotto forma di identificatore quando è necessario specificarlo al linker.
+Il collegamento utilizza forme decorate di identificatori. Il compilatore decora un identificatore quando crea il file obj. Se *entryname* viene specificato nel linker nel formato non decorato (come appare nel codice sorgente), il collegamento tenta di trovare la corrispondenza con il nome. Se non è possibile trovare una corrispondenza univoca, il collegamento genera un messaggio di errore. Utilizzare lo strumento [dumpbin](dumpbin-reference.md) per ottenere il formato di [nome decorato](decorated-names.md) di un identificatore quando è necessario specificarlo nel linker.
 
 > [!NOTE]
-> Non si specifica il formato decorato di C identificatori dichiarati `__cdecl` o `__stdcall`.
+> Non specificare il formato decorato di identificatori C dichiarati **`__cdecl`** o **`__stdcall`** .
 
-Se è necessario esportare un nome di funzione non decorati e avere esportazioni diversi a seconda della configurazione di compilazione (ad esempio, in compilazioni a 32 o 64 bit), è possibile usare i file DEF diversi per ogni configurazione. (Per il preprocessore condizionale non sono consentito nel file DEF.) In alternativa, è possibile usare una `#pragma comment` direttiva prima di una dichiarazione di funzione, come illustrato di seguito, dove `PlainFuncName` è il nome non decorato, e `_PlainFuncName@4` è il nome decorato della funzione:
+Se è necessario esportare un nome di funzione non decorato e si hanno esportazioni diverse a seconda della configurazione della build, ad esempio in compilazioni a 32 bit o a 64 bit, è possibile usare file DEF diversi per ogni configurazione. (Le direttive condizionali per il preprocessore non sono consentite nei file DEF). In alternativa, è possibile usare una `#pragma comment` direttiva prima di una dichiarazione di funzione come illustrato di seguito, dove `PlainFuncName` è il nome non decorato e `_PlainFuncName@4` è il nome decorato della funzione:
 
 ```cpp
 #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
@@ -58,11 +58,11 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
+1. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del**linker**proprietà di configurazione  >  **Command Line** .
 
-1. Inserire l'opzione nella **opzioni aggiuntive** casella.
+1. Immettere l'opzione nella casella **Opzioni aggiuntive** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954758"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232521"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -75,22 +75,22 @@ Valore specificato.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, restituisce l'esponente in base 2 di *x* come valore **int** con segno.
+Se ha esito positivo, restituisce l'esponente in base 2 di *x* come **`signed int`** valore.
 
-In caso contrario, restituisce uno dei valori seguenti definiti in \<math.h>:
+In caso contrario, restituisce uno dei valori seguenti, definito in \<math.h> :
 
 |Input|Risultato|
 |-----------|------------|
-|±0|FP_ILOGB0|
+|± 0|FP_ILOGB0|
 |± INF, ± Nan, non definito|FP_ILOGBNAN|
 
 Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **ilogb** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **ilogb** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **ilogb** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **ilogb** accetta e restituisce sempre un oggetto **`double`** .
 
-La chiamata a questa funzione è simile alla chiamata della funzione **logb** equivalente, quindi il cast del valore restituito a **int**.
+La chiamata a questa funzione è simile alla chiamata della funzione **logb** equivalente, quindi al cast del valore restituito a **`int`** .
 
 ## <a name="requirements"></a>Requisiti
 

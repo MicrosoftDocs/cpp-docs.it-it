@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506780"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232612"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -89,7 +89,7 @@ Qualsiasi numero.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
+|± **QNAN**, **IND**|nessuno|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -97,7 +97,7 @@ La funzione **atan** calcola il arcotangente (funzione inversa della tangente) d
 
 **atan** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **atan** e **Atan2** che accettano gli argomenti di tipo **float** o **Long** **Double** . In un programma C, **atan** e **Atan2** accettano sempre gli argomenti **doppi** e restituiscono un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **atan** e **Atan2** che accettano gli **`float`** argomenti o **`long double`** . In un programma C, **atan** e **Atan2** accettano sempre gli **`double`** argomenti e restituiscono un oggetto **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

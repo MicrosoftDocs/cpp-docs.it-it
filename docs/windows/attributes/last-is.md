@@ -1,17 +1,17 @@
 ---
-title: last_is (C++ attributo com)
+title: last_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7aa8acb52d19bc7f70513e44770817ae7fc403b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214812"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224409"
 ---
 # <a name="last_is"></a>last_is
 
@@ -42,18 +42,18 @@ Vedere [first_is](first-is.md) per un esempio di come specificare una sezione di
 
 |||
 |-|-|
-|**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
+|**Si applica a**|Campo in **`struct`** o **`union`** , parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi del parametro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [length_is](length-is.md)<br/>

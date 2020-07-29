@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224357"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: implementazione di una pagina delle proprietà
 
@@ -53,7 +53,7 @@ Prima di tutto, creare un nuovo progetto ATL per un server DLL denominato `ATLPa
 |----------|-----------|
 |Titolo|TextDocument|
 |Doc String|Proprietà VCUE TextDocument|
-|Helpfile|*\<>vuoto*|
+|Helpfile|*\<blank>*|
 
 I valori impostati in questa pagina della procedura guidata verranno restituiti al contenitore della pagina delle proprietà quando chiama `IPropertyPage::GetPageInfo`. Ciò che succede alle stringhe dopo questo momento dipende dal contenitore, ma in genere vengono usate per identificare la pagina per l'utente. Il titolo verrà visualizzato in genere in una scheda sopra la pagina e la stringa doc può essere visualizzata in una barra di stato o una descrizione comando (anche se la finestra delle proprietà standard non usa affatto questa stringa).
 
@@ -90,7 +90,7 @@ Aggiungere ora un paio di istruzioni `#import` a DocProperties.h in modo che il 
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-Sarà necessario anche fare riferimento alla classe base `IPropertyPageImpl`. Aggiungere il **typedef** seguente alla classe `CDocProperties`:
+È anche necessario fare riferimento alla classe di `IPropertyPageImpl` base. aggiungere quanto segue **`typedef`** alla `CDocProperties` classe:
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 

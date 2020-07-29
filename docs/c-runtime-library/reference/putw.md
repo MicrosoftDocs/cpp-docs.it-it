@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916076"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232430"
 ---
 # <a name="_putw"></a>_putw
 
@@ -65,7 +65,7 @@ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_putw** scrive un valore binario di tipo **int** nella posizione corrente del *flusso.* **_putw** non influisce sull'allineamento degli elementi nel flusso né presuppone un allineamento speciale. **_putw** è principalmente per la compatibilità con le librerie precedenti. È possibile che si verifichino problemi di portabilità con **_putw** perché le dimensioni di un **int** e l'ordine dei byte all'interno di un **int** sono diverse tra i sistemi.
+La funzione **_putw** scrive un valore binario di tipo nella **`int`** posizione corrente del *flusso.* **_putw** non influisce sull'allineamento degli elementi nel flusso né presuppone un allineamento speciale. **_putw** è principalmente per la compatibilità con le librerie precedenti. È possibile che si verifichino problemi di portabilità con **_putw** perché le dimensioni di un oggetto **`int`** e l'ordine dei byte all'interno di un **`int`** differiscono tra più sistemi.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

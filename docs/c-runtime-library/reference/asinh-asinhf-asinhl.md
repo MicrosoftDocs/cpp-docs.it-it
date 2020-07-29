@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919614"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232651"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -69,19 +69,19 @@ Le funzioni **asinh** restituiscono il seno iperbolico inverso (seno iperbolico 
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|none|none|
+|± QNAN, IND, INF|nessuno|nessuno|
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si usa C++, è possibile chiamare gli overload di **asinh** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C **asinh** accetta e restituisce sempre **Double**.
+Quando si usa C++, è possibile chiamare overload di **asinh** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C **asinh** accetta e restituisce sempre **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> o \<Math. h<|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath>o \< Math. h<|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -115,7 +115,7 @@ asinh( 0.868671 ) = 0.785398
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

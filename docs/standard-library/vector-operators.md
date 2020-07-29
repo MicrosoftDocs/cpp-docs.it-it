@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224539"
 ---
 # <a name="ltvectorgt-operators"></a>operatori &lt;vector&gt;
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.
 
@@ -35,15 +35,15 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `vector`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i vettori non sono uguali; in caso contrario, **false**.
+**`true`** Se i vettori non sono uguali; **`false`** se i vettori sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto a sinistra dell'operatore è minore dell'oggetto a destra.
 
@@ -86,15 +86,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `vector`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il vettore a sinistra dell'operatore è minore del vettore a destra; in caso contrario, **false**.
+**`true`** Se il vettore a sinistra dell'operatore è minore del vettore sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="example"></a>Esempio
 
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è minore o uguale all'oggetto a destra.
 
@@ -137,15 +137,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `vector`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il vettore a sinistra dell'operatore è minore o uguale al vettore a destra; in caso contrario, **false**.
+**`true`** Se il vettore a sinistra dell'operatore è minore o uguale al vettore sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="example"></a>Esempio
 
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.
 
@@ -188,15 +188,15 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `vector`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il vettore a sinistra dell'operatore è uguale al vettore a destra; in caso contrario, **false**.
+**`true`** Se il vettore a sinistra dell'operatore è uguale al vettore a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore dell'oggetto a destra.
 
@@ -239,15 +239,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `vector`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il vettore a sinistra dell'operatore è maggiore del vettore a destra; in caso contrario, **false**.
+**`true`** Se il vettore a sinistra dell'operatore è maggiore del vettore a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="example"></a>Esempio
 
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore o uguale all'oggetto a destra.
 
@@ -291,15 +291,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `vector`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il vettore a sinistra dell'operatore è maggiore o uguale al vettore a destra; in caso contrario, **false**.
+**`true`** Se il vettore a sinistra dell'operatore è maggiore o uguale al vettore sul lato destro del vettore; in caso contrario **`false`** ,.
 
 ### <a name="example"></a>Esempio
 

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 781deaad091b6aed72350100f7575c566bbae793
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f1c9446f9c3f0d637ea53d54584258959677b339
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948388"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232417"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
-Impostare una funzione di callback per thread per tradurre le eccezioni Win32 (eccezioni strutturate C C++ ) in eccezioni tipizzate.
+Impostare una funzione di callback per thread per tradurre le eccezioni Win32 (eccezioni strutturate C) in eccezioni tipizzate C++.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,21 +52,21 @@ Puntatore a una funzione di conversione di eccezioni strutturate C scritta dall'
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione di conversione precedente registrata da **_set_se_translator**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **nullptr**.
+Restituisce un puntatore alla funzione di conversione precedente registrata da **_set_se_translator**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **`nullptr`** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_set_se_translator** consente di gestire le eccezioni Win32 (eccezioni strutturate C) come C++ eccezioni tipizzate. Per consentire a ogni eccezione c di essere gestita da C++ un gestore **catch** , definire innanzitutto una classe wrapper di eccezioni c che può essere utilizzata o derivata da per attribuire un tipo di classe specifico a un'eccezione c. Per utilizzare questa classe, installare una funzione di conversione delle eccezioni C personalizzata che viene chiamata dal meccanismo interno di gestione delle eccezioni ogni volta che viene generata un'eccezione C. All'interno della funzione di conversione è possibile generare qualsiasi eccezione tipizzata che può essere rilevata da un gestore C++ **catch** corrispondente.
+La funzione **_set_se_translator** fornisce un modo per gestire le eccezioni Win32 (eccezioni strutturate C) come eccezioni tipizzate C++. Per consentire a ogni eccezione C di essere gestita da un **`catch`** gestore C++, definire innanzitutto una classe wrapper di eccezione c che può essere utilizzata o derivata da per attribuire un tipo di classe specifico a un'eccezione c. Per utilizzare questa classe, installare una funzione di conversione delle eccezioni C personalizzata che viene chiamata dal meccanismo interno di gestione delle eccezioni ogni volta che viene generata un'eccezione C. All'interno della funzione di conversione è possibile generare qualsiasi eccezione tipizzata che può essere rilevata da un gestore C++ corrispondente **`catch`** .
 
 È necessario usare [/EHA](../../build/reference/eh-exception-handling-model.md) quando si usa **_set_se_translator**.
 
-Per specificare una funzione di conversione personalizzata, chiamare **_set_se_translator** usando il nome della funzione di conversione come argomento. La funzione di conversione che si scrive viene chiamata una volta per ogni chiamata di funzione nello stack con blocchi **try** . Non esiste una funzione di conversione predefinita.
+Per specificare una funzione di conversione personalizzata, chiamare **_set_se_translator** usando il nome della funzione di conversione come argomento. La funzione di conversione che si scrive viene chiamata una volta per ogni chiamata di funzione nello stack con **`try`** blocchi. Non esiste una funzione di conversione predefinita.
 
 La funzione di conversione non dovrebbe fare altro che generare un'eccezione tipizzata C++. Se effettua altre operazioni oltre alla generazione (ad esempio, la scrittura in un file di log), il programma potrebbe non comportarsi come previsto, poiché il numero di volte in cui la funzione di conversione viene richiamata è dipendente dalla piattaforma.
 
-In un ambiente con multithreading, le funzioni di conversione vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione di conversione. Quindi, ogni thread è responsabile della propria gestione di conversione. **_set_se_translator** è specifico per un thread. un'altra DLL può installare una funzione di conversione diversa.
+In un ambiente con multithreading, le funzioni di conversione vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione di conversione. Quindi, ogni thread è responsabile della propria gestione di conversione. **_set_se_translator** è specifico di un thread. un'altra DLL può installare una funzione di conversione diversa.
 
-La funzione *seTransFunction* scritta deve essere una funzione compilata nativamente (non compilata con/CLR). Deve prendere un Unsigned Integer e un puntatore a una struttura **_EXCEPTION_POINTERS** Win32 come argomenti. Gli argomenti sono i valori restituiti delle chiamate alle funzioni API Win32 **GetExceptionCode** e **GetExceptionInformation** , rispettivamente.
+La funzione *seTransFunction* scritta deve essere una funzione compilata nativamente (non compilata con/CLR). Deve prendere un Unsigned Integer e un puntatore a una struttura di **_EXCEPTION_POINTERS** Win32 come argomenti. Gli argomenti sono i valori restituiti delle chiamate alle funzioni API Win32 **GetExceptionCode** e **GetExceptionInformation** , rispettivamente.
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
@@ -74,7 +74,7 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 Per **_set_se_translator**, esistono implicazioni quando si esegue il collegamento dinamico a CRT; un'altra DLL nel processo potrebbe chiamare **_set_se_translator** e sostituire il gestore con il proprio.
 
-Quando si usa **_set_se_translator** da codice gestito (codice compilato con/CLR) o codice misto nativo e gestito, tenere presente che il traduttore influiscono sulle eccezioni generate solo nel codice nativo. Le eccezioni gestite generate nel codice gestito (ad esempio, quando viene generata `System::Exception`) non vengono indirizzate attraverso la funzione di conversione. Le eccezioni generate nel codice gestito utilizzando la funzione Win32 RaiseException o causate da un'eccezione di sistema come un'eccezione di divisione per zero vengono indirizzate attraverso il convertitore.
+Quando si utilizzano **_set_se_translator** da codice gestito (codice compilato con/CLR) o codice misto nativo e gestito, tenere presente che il traduttore influiscono sulle eccezioni generate solo nel codice nativo. Le eccezioni gestite generate nel codice gestito (ad esempio, quando viene generata `System::Exception`) non vengono indirizzate attraverso la funzione di conversione. Le eccezioni generate nel codice gestito utilizzando la funzione Win32 **RaiseException** o causate da un'eccezione di sistema come un'eccezione di divisione per zero vengono indirizzate attraverso il convertitore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -82,11 +82,11 @@ Quando si usa **_set_se_translator** da codice gestito (codice compilato con/CLR
 |-------------|---------------------|
 |**_set_se_translator**|\<eh.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
-Questo esempio esegue il wrapping delle chiamate per impostare un convertitore di eccezioni strutturate e per ripristinare quello precedente in una classe `Scoped_SE_Translator`RAII. Questa classe consente di introdurre un convertitore specifico dell'ambito come singola dichiarazione. Il distruttore della classe ripristina il convertitore originale quando il controllo lascia l'ambito.
+Questo esempio esegue il wrapping delle chiamate per impostare un convertitore di eccezioni strutturate e per ripristinare quello precedente in una classe RAII `Scoped_SE_Translator` . Questa classe consente di introdurre un convertitore specifico dell'ambito come singola dichiarazione. Il distruttore della classe ripristina il convertitore originale quando il controllo lascia l'ambito.
 
 ```cpp
 // crt_settrans.cpp
@@ -159,7 +159,7 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example"></a>Esempio
 
-Sebbene la funzionalità fornita da **_set_se_translator** non sia disponibile nel codice gestito, è possibile utilizzare questo mapping nel codice nativo, anche se il codice nativo si trova in una compilazione sotto l'opzione **/CLR** , purché il codice nativo sia indicato utilizzando `#pragma unmanaged`. Se viene generata un'eccezione strutturata nel codice gestito di cui è necessario eseguire il mapping, il codice che genera e gestisce l'eccezione deve `#pragma unmanaged`essere contrassegnato. Il codice seguente illustra un possibile utilizzo. Per altre informazioni, vedere [Direttive pragma e parola chiave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Sebbene la funzionalità fornita da **_set_se_translator** non sia disponibile nel codice gestito, è possibile utilizzare questo mapping nel codice nativo, anche se il codice nativo si trova in una compilazione sotto l'opzione **/CLR** , purché il codice nativo venga indicato utilizzando `#pragma unmanaged` . Se viene generata un'eccezione strutturata nel codice gestito di cui è necessario eseguire il mapping, il codice che genera e gestisce l'eccezione deve essere contrassegnato `#pragma unmanaged` . Il codice seguente illustra un possibile utilizzo. Per altre informazioni, vedere [Direttive pragma e parola chiave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ```cpp
 // crt_set_se_translator_clr.cpp
@@ -235,5 +235,5 @@ Caught SE_Exception, error c0000094
 [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
-[Imprevisto](unexpected-crt.md)<br/>
+[terminare](terminate-crt.md)<br/>
+[inaspettato](unexpected-crt.md)<br/>

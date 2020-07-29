@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951936"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232469"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -88,11 +88,11 @@ Numero di caratteri da controllare.
 
 Se ha esito positivo, restituisce un puntatore alla prima posizione di *c* nel *buffer*. In caso contrario, restituisce NULL.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 `memchr`e `wmemchr` cercano la prima occorrenza di *c* nei primi caratteri di *conteggio* del *buffer*. Si interrompe quando viene trovato *c* o quando sono stati controllati i primi caratteri di *conteggio* .
 
-In C queste funzioni accettano un puntatore **const** per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a un oggetto non**const** restituisce un puntatore a un oggetto non**const**. Gli overload \_della\_macro\_CRT\_const corretti vengono definiti se sono disponibili entrambe le versioni **const** e non**const** di queste funzioni. Se è necessario il comportamento non**const** per entrambi C++ gli overload in C++, definire il simbolo \_const\_return.
+In C queste funzioni accettano un **`const`** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **`const`** restituisce un puntatore a **`const`** ; la versione che accetta un puntatore a non **`const`** restituisce un puntatore a non- **`const`** . Gli overload della macro \_ CRT \_ const \_ corretti \_ vengono definiti se **`const`** sono disponibili entrambe le versioni e non le **`const`** versioni di queste funzioni. Se è necessario il comportamento non- **`const`** per entrambi gli overload c++ in c++, definire il simbolo \_ const \_ return.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -101,7 +101,7 @@ In C queste funzioni accettano un puntatore **const** per il primo argomento. In
 |`memchr`|\<memory.h> o \<string.h>|
 |`wmemchr`|\<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -152,7 +152,7 @@ Result:      r found at position 12
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipolazione del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>

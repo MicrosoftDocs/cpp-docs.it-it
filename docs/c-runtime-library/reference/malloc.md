@@ -27,12 +27,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: 4e699920f37139be40542ba91b3740cd9edef148
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 30d92975d1a3971d29b1758dc23d3a84372288c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917505"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232508"
 ---
 # <a name="malloc"></a>malloc
 
@@ -53,7 +53,7 @@ Byte da allocare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**malloc** restituisce un puntatore void allo spazio allocato o **null** se la memoria disponibile è insufficiente. Per restituire un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito. Lo spazio di archiviazione a cui punta il valore restituito è sicuramente allineato in modo corretto per l'archiviazione di qualsiasi tipo di oggetto con un requisito di allineamento minore o uguale a quello dell'allineamento fondamentale. (In Visual C++, l'allineamento fondamentale è l'allineamento richiesto per un **valore Double**o 8 byte. Nel codice destinato alle piattaforme a 64 bit, è di 16 byte. Usare [_aligned_malloc](aligned-malloc.md) per allocare spazio di archiviazione per gli oggetti con un requisito di allineamento maggiore, ad esempio i tipi SSE [__m128](../../cpp/m128.md) e **__m256**e i tipi dichiarati usando `__declspec(align( n ))` dove **n** è maggiore di 8. Se *size* è 0, **malloc** alloca un elemento di lunghezza zero nell'heap e restituisce un puntatore valido a tale elemento. Controllare sempre il ritorno da **malloc**, anche se la quantità di memoria richiesta è ridotta.
+**malloc** restituisce un puntatore void allo spazio allocato o **null** se la memoria disponibile è insufficiente. Per restituire un puntatore a un tipo diverso da **`void`** , usare un cast del tipo sul valore restituito. Lo spazio di archiviazione a cui punta il valore restituito è sicuramente allineato in modo corretto per l'archiviazione di qualsiasi tipo di oggetto con un requisito di allineamento minore o uguale a quello dell'allineamento fondamentale. (In Visual C++, l'allineamento fondamentale è l'allineamento richiesto per **`double`** o 8 byte. Nel codice destinato alle piattaforme a 64 bit, è di 16 byte. Usare [_aligned_malloc](aligned-malloc.md) per allocare spazio di archiviazione per gli oggetti con un requisito di allineamento maggiore, ad esempio i tipi SSE [__m128](../../cpp/m128.md) e e i **`__m256`** tipi dichiarati usando `__declspec(align( n ))` dove **n** è maggiore di 8. Se *size* è 0, **malloc** alloca un elemento di lunghezza zero nell'heap e restituisce un puntatore valido a tale elemento. Controllare sempre il ritorno da **malloc**, anche se la quantità di memoria richiesta è ridotta.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -76,11 +76,11 @@ Il codice di avvio usa **malloc** per allocare spazio di archiviazione per le va
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[Ottiene](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per **malloc**. La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando si verifica un errore per lo stesso motivo. Per eseguire l'override dell'impostazione `_set_new_mode(1)` predefinita, chiamare all'inizio del programma o collegarsi a NewMode. OBJ (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).
+La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per **malloc**. La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui l' **`new`** operatore esegue quando si verifica un errore per lo stesso motivo. Per eseguire l'override dell'impostazione predefinita, chiamare `_set_new_mode(1)` all'inizio del programma o collegarsi a NewMode. OBJ (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).
 
 Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **malloc** viene risolto in [_malloc_dbg](malloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**malloc** è contrassegnato `__declspec(noalias)` come `__declspec(restrict)`e; Ciò significa che la funzione non modifica le variabili globali e che il puntatore restituito non è associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**malloc** è contrassegnato `__declspec(noalias)` `__declspec(restrict)` come e; ciò significa che la funzione non modifica le variabili globali e che il puntatore restituito non è associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -135,7 +135,7 @@ Memory freed
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [libero](free.md)<br/>
 [realloc](realloc.md)<br/>
