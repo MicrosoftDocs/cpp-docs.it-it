@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3551
 ms.assetid: c8ee23da-6568-40db-93a6-3ddb7ac47712
-ms.openlocfilehash: e9a4ce2276a602d59e495a2f336bb9d59dc0cc99
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1555817de6e50ea27a021718c8b094efeaebacde
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200759"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230844"
 ---
 # <a name="compiler-error-c3551"></a>Errore del compilatore C3551
 
 "è previsto un tipo restituito specificato in ritardo"
 
-Se si usa la parola chiave `auto` come segnaposto per il tipo restituito di una funzione, è necessario fornire un tipo restituito specificato in ritardo. Nell'esempio seguente il tipo restituito specificato in ritardo della funzione `myFunction` è un puntatore a una matrice di quattro elementi di tipo `int`.
+Se si utilizza la **`auto`** parola chiave come segnaposto per il tipo restituito di una funzione, è necessario fornire un tipo restituito specificato in ritardo. Nell'esempio seguente, il tipo restituito specificato in ritardo della funzione `myFunction` è un puntatore a una matrice di quattro elementi di tipo **`int`** .
 
 ```
 auto myFunction()->int(*)[4];
@@ -25,4 +25,4 @@ auto myFunction()->int(*)[4];
 
 ## <a name="see-also"></a>Vedere anche
 
-[auto](../../cpp/auto-cpp.md)
+[Automatico](../../cpp/auto-cpp.md)

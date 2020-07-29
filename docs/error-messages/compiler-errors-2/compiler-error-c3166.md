@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3166
 ms.assetid: ec3e330d-c15d-4158-8268-09101486c566
-ms.openlocfilehash: 17efd401314e93ff710be2c1e6f187a938e388b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1915d58f73ce8d16135951b359c3f0fd48aea3ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174303"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230870"
 ---
 # <a name="compiler-error-c3166"></a>Errore del compilatore C3166
 
-'pointer': non è possibile dichiarare un puntatore a un puntatore a GC interno come membro di 'type'
+> ' pointer ': non è possibile dichiarare un puntatore a un puntatore di __gc interno come membro di ' type '
 
-Il compilatore ha rilevato una dichiarazione di puntatore non valido (un `__nogc` puntatore a un `__gc` puntatore.).
+Il compilatore ha rilevato una dichiarazione di puntatore non valida (un **`__nogc`** puntatore a un **`__gc`** puntatore).
 
-È raggiungibile tramite l'opzione del compilatore obsolete solo C3166 **/CLR: oldSyntax**.
+C3166 è raggiungibile solo tramite l'opzione del compilatore obsoleta **`/clr:oldSyntax`** .

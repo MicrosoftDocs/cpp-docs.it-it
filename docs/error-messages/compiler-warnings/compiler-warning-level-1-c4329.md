@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4329
 ms.assetid: 4316f51a-2c56-4b3f-831e-65d24b83b65c
-ms.openlocfilehash: e8ef8c75a5e065f4f1679219d0d5fe57e5cfe86c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ed68b0b2bbbf4a08b4bcd1e2eea4f84346902b62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162959"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230688"
 ---
 # <a name="compiler-warning-level-1-c4329"></a>Avviso del compilatore (livello 1) C4329
 
 __declspec (align ()) viene ignorato nell'enumerazione
 
-L'uso della parola chiave [align](../../cpp/align-cpp.md) del modificatore [__declspec](../../cpp/declspec.md) non è consentito in un `enum`. L'esempio seguente genera l'C4329:
+L'utilizzo della parola chiave [align](../../cpp/align-cpp.md) del modificatore [__declspec](../../cpp/declspec.md) non è consentito in un oggetto **`enum`** . L'esempio seguente genera l'C4329:
 
 ```cpp
 // C4329.cpp

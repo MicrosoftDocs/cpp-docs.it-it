@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230896"
 ---
 # <a name="call_in_appdomain-function"></a>Funzione call_in_appdomain
 
@@ -45,19 +45,19 @@ RetType call_in_appdomain(
 AppDomain in cui chiamare la funzione.
 
 *voidFunc*<br/>
-Puntatore a una funzione `void` che accetta N parametri (0 < = N < = 15).
+Puntatore a una **`void`** funzione che accetta n parametri (0 <= N <= 15).
 
 *nonvoidFunc*<br/>
-Puntatore a una funzione non`void` che accetta N parametri (0 < = N < = 15).
+Puntatore a una funzione non **`void`** che accetta n parametri (0 <= N <= 15).
 
-*arg1...argN*<br/>
+*arg1... argN*<br/>
 Da zero a 15 parametri da passare a `voidFunc` o `nonvoidFunc` nell'altro AppDomain.
 
 ## <a name="return-value"></a>Valore restituito
 
 Risultato dell'esecuzione di `voidFunc` o `nonvoidFunc` nel dominio applicazione specificato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Gli argomenti della funzione passati a `call_in_appdomain` non devono essere tipi CLR.
 
@@ -116,8 +116,8 @@ default appdomain id = 1
 appDomain1 id = 2
 ```
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**File di intestazione** \<msclr\appdomain.h >
+**File di intestazione** \<msclr\appdomain.h>
 
 **Spazio dei nomi** msclr

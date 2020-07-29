@@ -1,5 +1,5 @@
 ---
-title: Identificatori (C++)
+title: identificatori [C++]
 ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: c905d6acc52f2f4f2a7bf3e92426f76adf25390e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 2d16dd318cd42b6294ef60edf44a16ccaf47b99b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187673"
 ---
-# <a name="identifiers-c"></a>Identificatori (C++)
+# <a name="identifiers-c"></a>identificatori [C++]
 
 Un identificatore è una sequenza di caratteri usata per indicare uno dei seguenti elementi:
 
@@ -60,9 +60,9 @@ Anche questi intervalli di numeri punto di codice Unicode sono consentiti come n
 
 - 0300-036F, 1DC0-1DFF, 20D0-20FF, FE20-FE2F
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Solo i primi 2048 caratteri degli identificatori di Microsoft C++ sono significativi. I nomi dei tipi definiti dall'utente sono decorati dal compilatore per conservare le informazioni sul tipo. Il nome risultante, incluse le informazioni sul tipo, non può essere più lungo di 2048 caratteri. (Vedere [nomi decorati](../build/reference/decorated-names.md) per altre informazioni.) I fattori che possono influenzare la lunghezza di un identificatore decorato sono i seguenti:
+Solo i primi 2048 caratteri degli identificatori di Microsoft C++ sono significativi. I nomi dei tipi definiti dall'utente sono decorati dal compilatore per conservare le informazioni sul tipo. Il nome risultante, incluse le informazioni sul tipo, non può essere più lungo di 2048 caratteri. Per ulteriori informazioni, vedere [nomi decorati](../build/reference/decorated-names.md) . I fattori che possono influenzare la lunghezza di un identificatore decorato sono:
 
 - Se l'identificatore indica un oggetto di tipo definito dall'utente o un tipo derivato da un tipo definito dall'utente.
 
@@ -70,7 +70,7 @@ Solo i primi 2048 caratteri degli identificatori di Microsoft C++ sono significa
 
 - Numero di argomenti per una funzione.
 
-Il segno di dollaro `$` è un carattere identificatore valido in Microsoft C++ compilatore (MSVC). MSVC consente anche di usare i caratteri effettivi rappresentati dagli intervalli consentiti di nomi di caratteri universali negli identificatori. Per usare questi caratteri, è necessario salvare il file usando una tabella codici di codifica file che li include.  Questo esempio mostra come sia i caratteri estesi sia i nomi di caratteri universali possano essere usati in modo intercambiabile nel codice.
+Il simbolo del dollaro `$` è un carattere identificatore valido nel compilatore Microsoft C++ (MSVC). MSVC consente inoltre di usare i caratteri effettivi rappresentati dagli intervalli consentiti di nomi di caratteri universali negli identificatori. Per usare questi caratteri, è necessario salvare il file usando una tabella codici di codifica file che li include.  Questo esempio mostra come sia i caratteri estesi sia i nomi di caratteri universali possano essere usati in modo intercambiabile nel codice.
 
 ```cpp
 // extended_identifier.cpp
@@ -87,15 +87,15 @@ int main() {
 }
 ```
 
-L'intervallo di caratteri consentiti in un identificatore è meno restrittivo quando si compila codice C++/CLI. Gli identificatori nel codice compilato con /clr devono seguire [ECMA-335 Standard: Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+L'intervallo di caratteri consentiti in un identificatore è meno restrittivo quando si compila codice C++/CLI. Gli identificatori nel codice compilato con /clr devono essere conformi allo  [standard ECMA-335: Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 Il primo carattere di un identificatore deve essere un carattere alfabetico, maiuscolo o minuscolo, oppure un carattere di sottolineatura ( **_** ). Poiché gli identificatori di C++ rispettano la distinzione tra maiuscole e minuscole, `fileName` è diverso da `FileName`.
 
-Gli identificatori non possono avere esattamente la stessa ortografia delle parole chiave. Gli identificatori contenenti parole chiave sono validi. Ad esempio, `Pint` è un identificatore valido, anche se contiene **int**, che è una parola chiave.
+Gli identificatori non possono avere esattamente la stessa ortografia delle parole chiave. Gli identificatori contenenti parole chiave sono validi. Ad esempio, `Pint` è un identificatore valido, anche se contiene **`int`** , che è una parola chiave.
 
-Utilizzo di due caratteri di sottolineatura sequenziali ( **_** ) in un identificatore, o di un singolo carattere di sottolineatura iniziale seguito da un carattere maiuscolo è riservato per C++ le implementazioni in tutti gli ambiti. Evitare di usare un carattere di sottolineatura iniziale seguito da una minuscola per i nomi con ambito file per non creare potenziali conflitti con gli identificatori riservati correnti o futuri.
+L'utilizzo di due caratteri di sottolineatura sequenziali ( **_ _** ) in un identificatore o di un singolo carattere di sottolineatura iniziale seguito da una lettera maiuscola è riservato per le implementazioni C++ in tutti gli ambiti. Evitare di usare un carattere di sottolineatura iniziale seguito da una minuscola per i nomi con ambito file per non creare potenziali conflitti con gli identificatori riservati correnti o futuri.
 
 ## <a name="see-also"></a>Vedere anche
 

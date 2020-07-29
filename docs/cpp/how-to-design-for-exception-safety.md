@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246510"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187803"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedura: progettare per la sicurezza delle eccezioni
 
@@ -85,7 +85,7 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Usare l'idioma RAII per gestire le risorse
 
-Per essere indipendente dalle eccezioni, una funzione deve garantire che gli oggetti allocati mediante `malloc` o **nuovo** vengano eliminati definitivamente e che tutte le risorse quali gli handle di file vengano chiuse o rilasciate anche se viene generata un'eccezione. L' *acquisizione di risorse è* la gestione dei vincoli di linguaggio di inizializzazione (RAII) per la durata delle variabili automatiche. Quando una funzione va fuori ambito o restituendo un risultato normalmente o a causa di un'eccezione, vengono richiamati i distruttori per tutte le variabili automatiche completamente costruite. Un oggetto wrapper del modello RAII, come un puntatore intelligente, chiama la funzione di chiusura o di eliminazione appropriata nel proprio distruttore. Nel codice indipendente dalle eccezioni è estremamente importante passare la proprietà di ogni risorsa immediatamente a un tipo di oggetto RAII. Si noti che le classi `vector`, `string`, `make_shared`, `fstream`e simili gestiscono l'acquisizione della risorsa.  Tuttavia, `unique_ptr` e le costruzioni `shared_ptr` tradizionali sono speciali perché l'acquisizione di risorse viene eseguita dall'utente anziché dall'oggetto; Pertanto, vengono conteggiati come *rilascio di risorse* , ma sono discutibili come RAII.
+Per essere indipendente dalle eccezioni, una funzione deve garantire che gli oggetti che ha allocato utilizzando `malloc` o **`new`** vengano eliminati definitivamente e che tutte le risorse quali gli handle di file vengano chiuse o rilasciate anche se viene generata un'eccezione. L' *acquisizione di risorse è* la gestione dei vincoli di linguaggio di inizializzazione (RAII) per la durata delle variabili automatiche. Quando una funzione va fuori ambito o restituendo un risultato normalmente o a causa di un'eccezione, vengono richiamati i distruttori per tutte le variabili automatiche completamente costruite. Un oggetto wrapper del modello RAII, come un puntatore intelligente, chiama la funzione di chiusura o di eliminazione appropriata nel proprio distruttore. Nel codice indipendente dalle eccezioni è estremamente importante passare la proprietà di ogni risorsa immediatamente a un tipo di oggetto RAII. Si noti che `vector` , `string` , `make_shared` , `fstream` e le classi simili gestiscono l'acquisizione della risorsa.  Tuttavia, `unique_ptr` `shared_ptr` le costruzioni tradizionali sono particolari perché l'acquisizione di risorse viene eseguita dall'utente anziché dall'oggetto; pertanto, viene conteggiata come la *versione delle risorse è la distruzione* ma è discutibile come RAII.
 
 ## <a name="the-three-exception-guarantees"></a>Le tre garanzie di eccezione
 
@@ -121,5 +121,5 @@ I tipi predefiniti sono tutti privi di errori e i tipi della libreria standard s
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedure C++ consigliate moderne per le eccezioni e la gestione degli errori](errors-and-exception-handling-modern-cpp.md)<br/>
-[Procedura: Interfaccia tra codice eccezionale e non eccezionale](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Procedure consigliate per C++ moderne per le eccezioni e la gestione degli errori](errors-and-exception-handling-modern-cpp.md)<br/>
+[Procedura: interfaccia tra codice eccezionale e non eccezionale](how-to-interface-between-exceptional-and-non-exceptional-code.md)

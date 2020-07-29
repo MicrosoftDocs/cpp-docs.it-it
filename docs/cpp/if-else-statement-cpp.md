@@ -1,7 +1,7 @@
 ---
 title: Istruzione if-else (C++)
 ms.date: 07/20/2019
-description: Usare le istruzioni if-else C++ in per controllare la diramazione condizionale.
+description: Usare le istruzioni if-else in C++ per controllare la diramazione condizionale.
 f1_keywords:
 - else_cpp
 - if_cpp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: fd2736d80d68249773c9aa6cf7cb9edffdaadac4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9256e32c89890635c5473a85b4bb3b56bec26d4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178431"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187569"
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
 
-Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco If* vengono eseguite solo se l' *espressione if* restituisce un valore diverso da zero (o true). Se il valore di *Expression* è diverso da zero, *istruzione1* e qualsiasi altra istruzione nel blocco vengono eseguiti e il blocco Else, se presente, viene ignorato. Se il valore di *Expression* è zero, il blocco if viene ignorato e il blocco Else, se presente, viene eseguito. Le espressioni che restituiscono un valore diverso da zero sono
+Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco If* vengono eseguite solo se l' *espressione if* restituisce un valore diverso da zero (o **`true`** ). Se il valore di *Expression* è diverso da zero, *istruzione1* e qualsiasi altra istruzione nel blocco vengono eseguiti e il blocco Else, se presente, viene ignorato. Se il valore di *Expression* è zero, il blocco if viene ignorato e il blocco Else, se presente, viene eseguito. Le espressioni che restituiscono un valore diverso da zero sono
 
-- TRUE
+- **`true`**
 - un puntatore non null,
 - qualsiasi valore aritmetico diverso da zero, oppure
 - tipo di classe che definisce una conversione non ambigua a un tipo aritmetico, booleano o puntatore. Per informazioni sulle conversioni, vedere [conversioni standard](../cpp/standard-conversions.md).
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>istruzione if con un inizializzatore
 
-**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): un'istruzione **if** può anche contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questo formato dell'istruzione If-quando la variabile è necessaria solo nell'ambito del blocco If.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): un' **`if`** istruzione può contenere anche un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questo formato dell'istruzione If-quando la variabile è necessaria solo nell'ambito del blocco If.
 
 ## <a name="example"></a>Esempio
 
@@ -159,11 +159,11 @@ int main()
 }
 ```
 
-In tutte le forme dell'istruzione **if** , l' *espressione*, che può avere qualsiasi valore tranne una struttura, viene valutata, inclusi tutti gli effetti collaterali. Il controllo passa dall'istruzione **if** all'istruzione successiva nel programma, a meno che una delle *istruzioni*s non includa [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md).
+In tutte le forme dell' **`if`** istruzione, l' *espressione*, che può avere qualsiasi valore tranne una struttura, viene valutata, inclusi tutti gli effetti collaterali. Il controllo passa dall' **`if`** istruzione all'istruzione successiva nel programma, a meno che una delle *istruzioni*contenga [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md).
 
-La clausola **else** di un'istruzione `if...else` viene associata all'istruzione **if** precedente più vicina nello stesso ambito che non dispone di un'istruzione **else** corrispondente.
+La **`else`** clausola di un' `if...else` istruzione è associata all'istruzione precedente più vicina **`if`** nello stesso ambito che non dispone di un' **`else`** istruzione corrispondente.
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> se le istruzioni constExpr
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">Se istruzioni constExpr
 
 **Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione è possibile usare un'istruzione **if constExpr** per eseguire decisioni di diramazione in fase di compilazione senza dover ricorrere a più overload di funzione. Ad esempio, è possibile scrivere una singola funzione che gestisce la decompressione del parametro (non è necessario alcun overload di parametro zero):
 
