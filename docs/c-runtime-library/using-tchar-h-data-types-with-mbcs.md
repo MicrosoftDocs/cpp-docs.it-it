@@ -6,22 +6,22 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: b86cbc6d99cbc6969536934c1583ba5207a53629
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
-ms.translationtype: HT
+ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57814436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188635"
 ---
-# <a name="using-tcharh-data-types-with-mbcs"></a>Using TCHAR.H Data Types with _MBCS
+# <a name="using-tcharh-data-types-with-_mbcs"></a>Using TCHAR.H Data Types with _MBCS
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Come indicato nella tabella dei mapping di routine di testo generico (vedere [Mapping testo generico](../c-runtime-library/generic-text-mappings.md)), quando la costante manifesto **_MBCS** è definita, una routine di testo generico specifica esegue il mapping a uno dei tipi di routine seguenti:
 
 - Una routine SBCS che gestisce in modo corretto byte, caratteri e stringhe multibyte. In questo caso, il tipo previsto per gli argomenti della stringa è **char&#42;**. Ad esempio, **_tprintf** viene mappata a **printf** e gli argomenti di stringa passati a **printf** sono di tipo **char&#42;**. Se per i tipi stringa si usa il tipo di dati di testo generico **_TCHAR**, i tipi di parametro formali ed effettivi di **printf** corrisponderanno, poiché **_TCHAR&#42;** è mappato a **char&#42;**.
 
-- Una routine specifica di MBCS. In questo caso, il tipo previsto per gli argomenti della stringa è __unsigned char&#42;__. Ad esempio, **_tcsrev** viene mappato a **_mbsrev**, che accetta e restituisce una stringa di tipo __unsigned char&#42;__. Anche in questo caso, se per i tipi di stringa si usa il tipo di dati a testo generico **_TCHAR**, è possibile che si verifichi un conflitto di tipi, poiché **_TCHAR** è mappato al tipo **char**.
+- Una routine specifica di MBCS. In questo caso, il tipo previsto per gli argomenti della stringa è __unsigned char&#42;__. Ad esempio, **_tcsrev** viene mappato a **_mbsrev**, che accetta e restituisce una stringa di tipo __unsigned char&#42;__. Anche in questo caso, se si usa il **_TCHAR** tipo di dati di testo generico per i tipi di stringa, è possibile che si verifichi un conflitto di tipo perché **_TCHAR** esegue il mapping al tipo **`char`** .
 
 Di seguito sono riportate tre soluzioni che consentono di evitare questo conflitto di tipi e la conseguente visualizzazione dei messaggi di avviso del compilatore C o degli errori del compilatore C++:
 
@@ -60,9 +60,9 @@ Di seguito sono riportate tre soluzioni che consentono di evitare questo conflit
    #define _tcschr _mbschr
    ```
 
-Se si adotta questo approccio, è necessario prestare molta attenzione per assicurare l'uso di tipi di dati appropriati per gli argomenti stringa e per i valori stringa restituiti. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico **_TXCHAR**. **_TXCHAR** viene mappato al tipo **char** nel codice SBCS, ma viene mappato al tipo **unsigned char** nel codice MBCS. Per altre informazioni sulle macro a testo generico, vedere [Mapping testo generico](../c-runtime-library/generic-text-mappings.md).
+Se si adotta questo approccio, è necessario prestare molta attenzione per assicurare l'uso di tipi di dati appropriati per gli argomenti stringa e per i valori stringa restituiti. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico **_TXCHAR**. **_TXCHAR** esegue il mapping al tipo **`char`** nel codice SBCS, ma esegue il mapping al tipo **`unsigned char`** nel codice MBCS. Per altre informazioni sulle macro a testo generico, vedere [Mapping testo generico](../c-runtime-library/generic-text-mappings.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

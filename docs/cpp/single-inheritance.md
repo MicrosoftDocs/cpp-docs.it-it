@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186360"
 ---
 # <a name="single-inheritance"></a>Ereditarietà singola
 
 Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base. Esaminare la relazione illustrata nella figura seguente.
 
-![Grafico di ereditarietà di base di singolo&#45;Basic single&#45;inheritance graph](../cpp/media/vc38xj1.gif "Grafico di ereditarietà di base di singolo&#45;Basic single&#45;inheritance graph") <br/>
+![Grafico di ereditarietà Single&#45;Basic](../cpp/media/vc38xj1.gif "Grafico di ereditarietà Single&#45;Basic") <br/>
 Grafico semplice dell'ereditarietà singola
 
 Si noti la progressione da generale a specifico nella figura. Un altro attributo comune trovato nella progettazione delle gerarchie di classi corrisponde al fatto che la classe derivata ha una relazione "tipo di" con la classe base. Nella figura, `Book` è un tipo di `PrintedDocument` e `PaperbackBook` è un tipo di `book`.
@@ -44,7 +44,7 @@ class PaperbackBook : public Book {};
 
 La classe base da cui ogni classe deriva viene dichiarata prima della classe derivata. Non è sufficiente fornire una dichiarazione di riferimento in avanti per una classe base, ma è necessario fornire una dichiarazione completa.
 
-Nell'esempio precedente viene utilizzato l'identificatore di accesso **public.** Il significato dell'ereditarietà pubblica, protetta e privata è descritto in Controllo accesso ai [membri.](../cpp/member-access-control-cpp.md)
+Nell'esempio precedente viene usato l'identificatore di accesso **`public`** . Il significato dell'ereditarietà pubblica, protetta e privata è descritto in [controllo dell'accesso ai membri.](../cpp/member-access-control-cpp.md)
 
 Una classe può essere usata come classe base per molte classi specifiche, come illustrato nella figura seguente.
 
