@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: d36ee5ea0d38455b52cb988dc30b13d47be16e53
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623852"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205535"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -49,13 +49,13 @@ Gli algoritmi numerici della libreria standard C++ forniti per l'elaborazione nu
 |||
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.|
-|[all_of](algorithm-functions.md#all_of)|Restituisce **true** quando una condizione è presente in ogni elemento nell'intervallo specificato.|
-|[any_of](algorithm-functions.md#any_of)|Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.|
+|[all_of](algorithm-functions.md#all_of)|Restituisce **`true`** quando una condizione è presente in ogni elemento nell'intervallo specificato.|
+|[any_of](algorithm-functions.md#any_of)|Restituisce **`true`** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.|
 |[binary_search](algorithm-functions.md#binary_search)|Verifica se in un intervallo ordinato è presente un elemento uguale a un valore specificato o equivalente a tale valore nel senso specificato da un predicato binario.|
 |[morsetto](algorithm-functions.md#clamp)||
 |[copy](algorithm-functions.md#copy)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.|
 |[copy_backward](algorithm-functions.md#copy_backward)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in indietro.|
-|[copy_if](algorithm-functions.md#copy_if)|Copia tutti gli elementi di un determinato intervallo che verificano **true** per una condizione specificata|
+|[copy_if](algorithm-functions.md#copy_if)|Copia tutti gli elementi di un intervallo specifico che verificano **`true`** una condizione specificata|
 |[copy_n](algorithm-functions.md#copy_n)|Copia un numero specificato di elementi.|
 |[count](algorithm-functions.md#count)|Restituisce il numero di elementi di un intervallo i cui valori corrispondono a un valore specificato.|
 |[count_if](algorithm-functions.md#count_if)|Restituisce il numero di elementi di un intervallo i cui valori corrispondono a una condizione specificata.|
@@ -74,12 +74,12 @@ Gli algoritmi numerici della libreria standard C++ forniti per l'elaborazione nu
 |[generate_n](algorithm-functions.md#generate_n)|Assegna i valori generati da un oggetto funzione a un numero specificato di elementi di un intervallo e torna alla posizione immediatamente successiva all'ultimo valore assegnato.|
 |[include](algorithm-functions.md#includes)|Verifica se un intervallo ordinato contiene tutti gli elementi contenuti in un secondo intervallo ordinato, in cui il criterio di ordinamento o di equivalenza tra gli elementi può essere specificato da un predicato binario.|
 |[inplace_merge](algorithm-functions.md#inplace_merge)|Combina gli elementi di due intervalli ordinati consecutivi in un unico intervallo ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.|
-|[is_heap](algorithm-functions.md#is_heap)|Restituisce **true** se gli elementi dell'intervallo specificato formano un heap.|
-|[is_heap_until](algorithm-functions.md#is_heap_until)|Restituisce **true** se l'intervallo specificato forma un heap fino all'ultimo elemento.|
-|[is_partitioned](algorithm-functions.md#is_partitioned)|Restituisce **true** se tutti gli elementi dell'intervallo specificato che verificano **true** per una condizione precedono gli elementi che testano **false**.|
+|[is_heap](algorithm-functions.md#is_heap)|Restituisce **`true`** se gli elementi dell'intervallo specificato formano un heap.|
+|[is_heap_until](algorithm-functions.md#is_heap_until)|Restituisce **`true`** se l'intervallo specificato forma un heap fino all'ultimo elemento.|
+|[is_partitioned](algorithm-functions.md#is_partitioned)|Restituisce **`true`** se tutti gli elementi dell'intervallo specificato che testano **`true`** per una condizione precedono gli elementi che testano **`false`** .|
 |[is_permutation](algorithm-functions.md#is_permutation)|Determina se gli elementi in un determinato intervallo formano una permutazione valida.|
-|[is_sorted](algorithm-functions.md#is_sorted)|Restituisce **true** se gli elementi nell'intervallo specificato sono ordinati.|
-|[is_sorted_until](algorithm-functions.md#is_sorted_until)|Restituisce **true** se gli elementi nell'intervallo specificato sono ordinati.|
+|[is_sorted](algorithm-functions.md#is_sorted)|Restituisce **`true`** se gli elementi dell'intervallo specificato sono ordinati.|
+|[is_sorted_until](algorithm-functions.md#is_sorted_until)|Restituisce **`true`** se gli elementi dell'intervallo specificato sono ordinati.|
 |[iter_swap](algorithm-functions.md#iter_swap)|Scambia due valori a cui viene fatto riferimento da una coppia di iteratori specificati.|
 |[lexicographical_compare](algorithm-functions.md#lexicographical_compare)|Confronta due sequenze elemento per elemento per determinare quale delle due è minore.|
 |[lower_bound](algorithm-functions.md#lower_bound)|Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore o equivalente a un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.|
@@ -95,12 +95,12 @@ Gli algoritmi numerici della libreria standard C++ forniti per l'elaborazione nu
 |[&lt;&gt;spostamento ALG](algorithm-functions.md#alg_move)|Sposta gli elementi associati a un intervallo specificato.|
 |[move_backward](algorithm-functions.md#move_backward)|Sposta gli elementi di un iteratore in un altro. Lo spostamento inizia con l'ultimo elemento in un intervallo specificato e termina con il primo elemento in quell'intervallo.|
 |[next_permutation](algorithm-functions.md#next_permutation)|Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.|
-|[none_of](algorithm-functions.md#none_of)|Restituisce **true** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.|
+|[none_of](algorithm-functions.md#none_of)|Restituisce **`true`** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.|
 |[nth_element](algorithm-functions.md#nth_element)|Esegue il partizionamento di un intervallo di elementi, individuando correttamente l' *n*esimo elemento della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.|
 |[partial_sort](algorithm-functions.md#partial_sort)|Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione in cui gli elementi di origine sono ordinati in base al predicato binario relativo al valore inferiore o a un altro predicato binario specificato.|
 |[partizione](algorithm-functions.md#partition)|Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano il predicato unario che precedono quelli che non lo soddisfano.|
-|[partition_copy](algorithm-functions.md#partition_copy)|Copia gli elementi per i quali una condizione è **true** in una destinazione e per la quale la condizione è **false** in un'altra. Gli elementi devono provenire da un intervallo specificato.|
+|[partition_copy](algorithm-functions.md#partition_copy)|Copia gli elementi per i quali una condizione è **`true`** in una destinazione e per la quale la condizione è **`false`** a un'altra. Gli elementi devono provenire da un intervallo specificato.|
 |[partition_point](algorithm-functions.md#partition_point)|Restituisce il primo elemento nell'intervallo specificato che non soddisfa la condizione. Gli elementi vengono ordinati in modo che quelli che soddisfano la condizione precedano quelli che non la soddisfano.|
 |[pop_heap](algorithm-functions.md#pop_heap)|Rimuove l'elemento più grande dall'inizio di un heap alla penultima posizione nell'intervallo e costituisce un nuovo heap con gli elementi rimanenti.|
 |[prev_permutation](algorithm-functions.md#prev_permutation)|Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.|

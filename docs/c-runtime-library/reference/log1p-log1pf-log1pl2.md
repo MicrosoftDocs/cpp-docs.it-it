@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218585"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -98,9 +98,9 @@ Il valore **errno** è impostato su ERANGE se *x* =-1. Il valore **errno** viene
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **log1p** possono essere più accurate rispetto all' `log(x + 1)` uso di quando *x* è vicino a 0.
+Le funzioni **log1p** possono essere più accurate rispetto all'uso di `log(x + 1)` quando *x* è vicino a 0.
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **log1p** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **log1p** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **log1p** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **log1p** accetta e restituisce sempre un oggetto **`double`** .
 
 Se *x* è un numero naturale, questa funzione restituisce il logaritmo del fattoriale di (*x* -1).
 
@@ -108,7 +108,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
 
@@ -116,6 +116,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

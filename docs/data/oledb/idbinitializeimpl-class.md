@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210769"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218325"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 
@@ -59,13 +59,13 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `IDBInitializeImpl`.
+Classe derivata da `IDBInitializeImpl` .
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
@@ -145,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>Osservazioni
 
-Questi flag specificano o indicano lo stato di diversi attributi per l'oggetto origine dati. Contiene uno o più dei valori **enum** seguenti:
+Questi flag specificano o indicano lo stato di diversi attributi per l'oggetto origine dati. Contiene uno o più dei valori seguenti **`enum`** :
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -174,4 +174,4 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

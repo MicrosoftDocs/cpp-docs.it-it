@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1173ad609a1b2c95d6cf118f4e2d5defeec5b9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234341"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Imponi conformità nell'ambito di un ciclo For)
 
@@ -24,13 +24,13 @@ Permette di implementare il comportamento C++ standard per cicli [for](../../cpp
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc:forScope**[**-**]
+> **/Zc: forScope**[ **-** ]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il comportamento standard permette all'inizializzatore del ciclo **for** di uscire dall'ambito dopo il ciclo **for** . In **/Zc:forScope-** e [/Ze](za-ze-disable-language-extensions.md)l'inizializzatore del ciclo **for** rimane nell'ambito fino al termine dell'ambito locale.
+Il comportamento standard consiste nel consentire all' **`for`** inizializzatore di un ciclo di uscire dall'ambito dopo il **`for`** ciclo. In **/Zc: forScope-** and [/ze](za-ze-disable-language-extensions.md)l' **`for`** inizializzatore del ciclo rimane nell'ambito fino al termine dell'ambito locale.
 
-Il **/Zc: forScope** opzione è attivata per impostazione predefinita. **/Zc: forScope** non influisce quando i [/PERMISSIVE--](permissive-standards-conformance.md) opzione specificata.
+L'opzione **/Zc: forScope** è abilitata per impostazione predefinita. **/Zc: forScope** non è influenzato quando viene specificata l'opzione [/permissive-](permissive-standards-conformance.md) .
 
 L'opzione **/Zc:forScope-** è deprecata e verrà rimossa in una futura versione. L'uso di **/Zc:forScope-** genera l'avviso di deprecazione D9035.
 
@@ -55,15 +55,15 @@ Se si usa **/Zc:forScope-**, viene visualizzato l'avviso C4288 (disattivato per 
 
 È possibile modificare il comportamento di runtime di **/Zc:forScope** con il pragma [conform](../../preprocessor/conform.md) .
 
-Se si usa **/Zc:forScope-** in un progetto con un file PCH esistente, viene generato un avviso, **/Zc:forScope-** viene ignorato e la compilazione continua con i file PCH esistenti. Se si vuole che venga generato un nuovo file pch, usare [/Yc (Crea precompilati o meno File di intestazione)](yc-create-precompiled-header-file.md).
+Se si usa **/Zc:forScope-** in un progetto con un file PCH esistente, viene generato un avviso, **/Zc:forScope-** viene ignorato e la compilazione continua con i file PCH esistenti. Se si vuole che venga generato un nuovo file PCH, usare [/YC (crea il file di intestazione precompilata)](yc-create-precompiled-header-file.md).
 
 Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **lingua** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà di **configurazione**proprietà del  >  **linguaggio C/C++**  >  **Language** .
 
 1. Modificare la proprietà **Imponi conformità nell'ambito di un ciclo For** .
 
@@ -73,5 +73,5 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Zc (conformità)](zc-conformance.md)<br/>
-[/Za, /Ze (disabilita le estensioni del linguaggio)](za-ze-disable-language-extensions.md)<br/>
+[/Zc (Conformità)](zc-conformance.md)<br/>
+[/Za,/ze (Disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)<br/>

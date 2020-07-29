@@ -8,12 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 4b49b3c296d3afcbb26af028dc0b4a885444a897
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617639"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205223"
 ---
 # <a name="algorithms"></a>Algoritmi
 
@@ -33,7 +33,7 @@ Le descrizioni delle funzioni di modello dell'algoritmo utilizzano diverse espre
 
 - Le espressioni come *x*  -  *Y*, dove *x* e *Y* possono essere iteratori diversi da iteratori ad accesso casuale, sono progettate nel senso matematico. La funzione non valuta necessariamente l'operatore **-** se deve determinare tale valore. Lo stesso vale anche per le espressioni come *x*  +  *n* e *x*  -  *n*, dove *N* è un tipo Integer.
 
-Diversi algoritmi usano un predicato che esegue un confronto a coppie, ad esempio con `operator==` , per produrre un risultato **bool** . La funzione predicativa `operator==`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso risultato **bool** ogni volta che viene valutato e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando.
+Diversi algoritmi usano un predicato che esegue un confronto a coppie, ad esempio con `operator==` , per restituire un **`bool`** risultato. La funzione predicativa `operator==`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso **`bool`** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando.
 
 Diversi algoritmi usano un predicato che deve imporre un ordinamento di tipo "strict weak" alle coppie di elementi di una sequenza. Per il predicato *Predator*(*X*, *Y*):
 
@@ -45,9 +45,9 @@ Diversi algoritmi usano un predicato che deve imporre un ordinamento di tipo "st
 
 Alcuni di questi algoritmi usano in modo implicito il predicato *x* \< *Y*. Other predicates that typically satisfy the strict weak ordering requirement are *X* > *Y*, `less` (*x*, *y*) e `greater` (*x*, *y*). Si noti, tuttavia, che i predicati come *X* \<= *Y* and *X* > =  *Y* non soddisfano questo requisito.
 
-Una sequenza di elementi designati dagli iteratori nell'intervallo \[ *First*, *Last*) è una sequenza ordinata per operatore **<** se, per *ogni N* nell'intervallo \[ 0, *ultimo*  -  *primo*) e per ogni *M* nell'intervallo (*N*, *Last*  -  *First*) il predicato \! ( \* (*prima*  +  *M*) < \* (*primo*  +  *N*)) è true. Si noti che gli elementi vengono ordinati in ordine crescente. La funzione predicato `operator<` o qualsiasi sostituzione per esso non deve modificare nessuno degli operandi. Deve restituire lo stesso risultato **bool** ogni volta che viene valutato e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando. Inoltre, deve imporre un ordinamento di tipo "strict weak" agli operandi che confronta.
+Una sequenza di elementi designati dagli iteratori nell'intervallo \[ *First*, *Last*) è una sequenza ordinata per operatore **<** se, per *ogni N* nell'intervallo \[ 0, *ultimo*  -  *primo*) e per ogni *M* nell'intervallo (*N*, *Last*  -  *First*) il predicato \! ( \* (*prima*  +  *M*) < \* (*primo*  +  *N*)) è true. Si noti che gli elementi vengono ordinati in ordine crescente. La funzione predicato `operator<` o qualsiasi sostituzione per esso non deve modificare nessuno degli operandi. Deve restituire lo stesso **`bool`** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando. Inoltre, deve imporre un ordinamento di tipo "strict weak" agli operandi che confronta.
 
-Una sequenza di elementi designati dagli iteratori nell'intervallo \[ `First` , `Last` ) è un heap ordinato in base a `operator<` , per ogni *N* nell'intervallo \[ 1, *ultimo*  -  *primo*) il predicato \! ( \* _primo_  <  \* (*primo*  +  *N*)) è true. Il primo elemento è il più grande. La struttura interna è altrimenti nota solo per le funzioni modello [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)e [push_heap](algorithm-functions.md#push_heap). Come con una sequenza ordinata, la funzione di predicato `operator<` , o qualsiasi sostituzione, non deve modificare gli operandi e deve imporre un ordinamento debole rigoroso sugli operandi da confrontare. Deve restituire lo stesso risultato **bool** ogni volta che viene valutato e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando.
+Una sequenza di elementi designati dagli iteratori nell'intervallo \[ `First` , `Last` ) è un heap ordinato in base a `operator<` , per ogni *N* nell'intervallo \[ 1, *ultimo*  -  *primo*) il predicato \! ( \* _primo_  <  \* (*primo*  +  *N*)) è true. Il primo elemento è il più grande. La struttura interna è altrimenti nota solo per le funzioni modello [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)e [push_heap](algorithm-functions.md#push_heap). Come con una sequenza ordinata, la funzione di predicato `operator<` , o qualsiasi sostituzione, non deve modificare gli operandi e deve imporre un ordinamento debole rigoroso sugli operandi da confrontare. Deve restituire lo stesso **`bool`** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando.
 
 Gli algoritmi della libreria standard C++ si trovano nei [\<algorithm>](algorithm.md) file di [\<numeric>](numeric.md) intestazione e.
 

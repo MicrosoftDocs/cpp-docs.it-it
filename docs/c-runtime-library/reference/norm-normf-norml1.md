@@ -33,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951324"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234055"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -66,17 +66,17 @@ Numero complesso.
 
 Grandezza quadrata della *z*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **NORM** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono valori **float** o **long double** . In un programma C, **Norm** accetta sempre un valore **_Dcomplex** e restituisce un valore **Double** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Norm** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono **`float`** **`long double`** valori o. In un programma C, **Norm** accetta sempre un valore **_Dcomplex** e restituisce un **`double`** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
+|**norma**, **normf**, **Normal**|\<complex.h>|\<complex.h>|
 
-I tipi **_Fcomplex**, **_Dcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft dei tipi nativi C99 non implementati **float _Complex**, **Double _Complex**e **long double _Complex**, rispettivamente.  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+I tipi **_Fcomplex**, **_Dcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft dei tipi C99 nativi non implementati **float _Complex**, **Double _Complex**e **long double _Complex**, rispettivamente.  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

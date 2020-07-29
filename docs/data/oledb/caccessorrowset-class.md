@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212251"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233483"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -58,13 +58,13 @@ Classe del set di righe.
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[Bind](#bind)|Crea associazioni (utilizzate quando `bBind` viene specificato come **false** in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[Associare](#bind)|Crea associazioni (utilizzate quando `bBind` viene specificato come **`false`** in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Costruttore.|
 |[Close](#close)|Chiude il set di righe e le funzioni di accesso.|
 |[FreeRecordMemory](#freerecordmemory)|Libera tutte le colonne del record corrente che devono essere liberate.|
@@ -72,11 +72,11 @@ Classe del set di righe.
 
 ## <a name="remarks"></a>Osservazioni
 
-Classe `TAccessor` gestisce la funzione di accesso. La classe *TRowset* gestisce il set di righe.
+`TAccessor`La classe gestisce la funzione di accesso. La classe *TRowset* gestisce il set di righe.
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: bind
 
-Crea i binding se è stato specificato `bBind` come **false** in [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Crea le associazioni se è stato specificato `bBind` come **`false`** in [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -154,4 +154,4 @@ Per ulteriori informazioni, vedere [IColumnsInfo:: GetColumnInfo](/previous-vers
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

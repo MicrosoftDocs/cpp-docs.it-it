@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218611"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -101,7 +101,7 @@ La funzione **localtime_s** converte un'ora archiviata come valore [time_t](../.
 
 **localtime_s** è una funzione inline che restituisce **_localtime64_s**e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come la precedente **time_t**a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. In questo modo **localtime_s** restituirà **_localtime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
 
-I campi del tipo di struttura [TM](../../c-runtime-library/standard-types.md) archiviano i valori seguenti, ognuno dei quali è un **int**.
+I campi del tipo di struttura [TM](../../c-runtime-library/standard-types.md) archiviano i valori seguenti, ognuno dei quali è un **`int`** .
 
 |Campo|Descrizione|
 |-|-|
@@ -123,7 +123,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |-------------|---------------------|-|
-|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<> CTime o \<time. h>|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<ctime> o \<time.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 

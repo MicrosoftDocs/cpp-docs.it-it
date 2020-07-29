@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913539"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218728"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -83,7 +83,7 @@ long _wtol_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa da convertire.
 
 *locale*<br/>
@@ -91,7 +91,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il valore **Long** prodotto interpretando i caratteri di input come numero. **Se l'** input non può essere convertito in un valore di tale tipo, il valore restituito è 0L.
+Ogni funzione restituisce il **`long`** valore prodotto interpretando i caratteri di input come numero. **Se l'** input non può essere convertito in un valore di tale tipo, il valore restituito è 0L.
 
 In caso di overflow con valori integrali positivi di grandi dimensioni **,** diviene restituito **LONG_MAX**; in caso di overflow con valori integrali negativi di grandi dimensioni, viene restituito **LONG_MIN** . In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
@@ -179,8 +179,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

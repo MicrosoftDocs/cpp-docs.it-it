@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d3af2b5629906679db46f6f669084c11a41f7ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233249"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Avviso del compilatore (livello 1) C4503
 
@@ -23,7 +23,7 @@ Questo avviso del compilatore è obsoleto e non viene generato nei compilatori V
 
 Il nome decorato è più lungo del limite del compilatore (4096) ed è stato troncato. Per evitare questo avviso e il troncamento, ridurre il numero di argomenti o la lunghezza del nome degli identificatori utilizzati. I nomi decorati più lunghi del limite del compilatore hanno un hash applicato e non sono a rischio di un conflitto di nomi.
 
-Quando si usa una versione precedente di Visual Studio, questo avviso può essere generato quando il codice contiene modelli specializzati sui modelli ripetutamente. Ad esempio, una mappa delle mappe (dalla libreria C++ standard). In questa situazione, è possibile rendere i typedef un tipo, ad esempio uno **struct**, che contiene la mappa.
+Quando si usa una versione precedente di Visual Studio, questo avviso può essere generato quando il codice contiene modelli specializzati sui modelli ripetutamente. Ad esempio, una mappa delle mappe (dalla libreria standard C++). In questa situazione, è possibile rendere i typedef un tipo **`struct`** , ad esempio, che contiene la mappa.
 
 Tuttavia, è possibile decidere di non ristrutturare il codice.  È possibile spedire un'applicazione che genera C4503, ma se si ottengono errori di collegamento in un simbolo troncato, può risultare più difficile determinare il tipo del simbolo nell'errore. Il debug può anche risultare più difficile; il debugger potrebbe avere difficoltà nel mapping del nome del simbolo al nome del tipo. La correttezza del programma, tuttavia, non è interessata dal nome troncato.
 

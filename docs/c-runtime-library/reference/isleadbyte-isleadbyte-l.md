@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909547"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234081"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -68,7 +68,7 @@ Valore Integer da testare.
 
 La macro **isleadbyte** restituisce un valore diverso da zero se il relativo argomento è il primo byte di un carattere multibyte. **isleadbyte** produce un risultato significativo per qualsiasi argomento integer da-1 (**EOF**) a **UCHAR_MAX** (0xFF), inclusi.
 
-Il tipo di argomento previsto di **isleadbyte** è **int**; Se viene passato un carattere con segno, il compilatore può convertirlo in un integer con l'estensione del segno, ottenendo risultati imprevedibili.
+Il tipo di argomento previsto di **isleadbyte** è **`int`** ; se viene passato un carattere con segno, il compilatore può convertirlo in un integer con l'estensione del segno, ottenendo risultati imprevedibili.
 
 La versione di questa funzione con il suffisso **_L** è identica, ma usa le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali.
 
@@ -91,6 +91,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

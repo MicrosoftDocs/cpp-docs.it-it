@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161815"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206042"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Avviso del compilatore (livello 2) C4396
 
@@ -21,11 +21,11 @@ Una specializzazione di un modello di funzione non può specificare uno degli id
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-- Rimuovere l'identificatore `inline`, `__inline`o `__forceinline` dalla dichiarazione di funzione Friend.
+- Rimuovere l' **`inline`** **`__inline`** identificatore, o **`__forceinline`** dalla dichiarazione di funzione Friend.
 
 ## <a name="example"></a>Esempio
 
-Il codice di esempio seguente mostra una dichiarazione di funzione Friend non valida con un identificatore `inline` .
+Nell'esempio di codice seguente viene illustrata una dichiarazione di funzione Friend non valida con un **`inline`** identificatore.
 
 ```cpp
 // C4396.cpp

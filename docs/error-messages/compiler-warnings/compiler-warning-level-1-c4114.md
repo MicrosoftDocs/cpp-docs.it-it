@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4114
 ms.assetid: 3983e1c6-e8bb-46dc-8894-e1827db48797
-ms.openlocfilehash: 5662dba4339765db27d225eff2ad382ed56396ac
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 8d2b0339ff3cce9a68dce57a5f2b4efac076c5c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233314"
 ---
 # <a name="compiler-warning-level-1-c4114"></a>Avviso del compilatore (livello 1) C4114
 
 stesso qualificatore di tipo utilizzato più di una volta
 
-Una dichiarazione o una definizione di tipo usa un qualificatore di tipo (**const**, **volatile**, **firmato**o **senza segno**) più di una volta. In questo modo viene generato un avviso con le estensioni Microsoft (/Ze) e un errore in compatibilità ANSI (/za).
+Una dichiarazione o una definizione di tipo usa più volte un qualificatore di tipo ( **`const`** ,, **`volatile`** **`signed`** o **`unsigned`** ). In questo modo viene generato un avviso con le estensioni Microsoft (/Ze) e un errore in compatibilità ANSI (/za).
 
 L'esempio seguente genera l'C4114:
 

@@ -4,34 +4,34 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, limits for language constructs
 ms.assetid: f1fa59c6-55b4-414b-80c5-3df72952160d
-ms.openlocfilehash: 9e61cae1638c87f03b6fa775552408961bde6859
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e0e2381d88c727466b06a97c72826d2d5e15a87b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233769"
 ---
 # <a name="compiler-limits"></a>Limiti del compilatore
 
-Nello standard C++ sono consigliati i limiti per vari costrutti di linguaggio. Di seguito è riportato un elenco di casi in cui C++ il compilatore Microsoft non implementa i limiti consigliati. Il primo numero è il limite stabilito nello standard ISO C++ 11 (incis/ISO/IEC 14882-2011 [2012], allegato B) e il secondo numero è il limite implementato dal compilatore Microsoft: C++
+Nello standard C++ sono consigliati i limiti per vari costrutti di linguaggio. Di seguito è riportato un elenco di casi in cui il compilatore Microsoft C++ non implementa i limiti consigliati. Il primo numero è il limite stabilito nello standard ISO C++ 11 (INCIs/ISO/IEC 14882-2011 [2012], allegato B) e il secondo numero è il limite implementato dal compilatore Microsoft C++:
 
-- Livelli di annidamento di istruzioni composte, strutture di controllo di iterazione C++ e strutture di controllo della C++ selezione-standard: 256, compilatore Microsoft: dipende dalla combinazione di istruzioni annidate, ma in genere tra 100 e 110.
+- Livelli di annidamento di istruzioni composte, strutture di controllo di iterazione e strutture di controllo di selezione-C++ standard: 256, compilatore Microsoft C++: dipende dalla combinazione di istruzioni annidate, ma in genere tra 100 e 110.
 
-- Parametri in una definizione di macro C++ : standard: 256, C++ compilatore Microsoft: 127.
+- Parametri in una definizione di macro-C++ standard: 256, compilatore Microsoft C++: 127.
 
-- Argomenti in una chiamata di macro- C++ standard: 256, compilatore C++ Microsoft 127.
+- Argomenti in una chiamata di macro-C++ standard: 256, compilatore Microsoft C++ 127.
 
-- Caratteri in un valore letterale stringa di caratteri o valore letterale stringa a caratteri C++ Wide (dopo la concatenazione)-standard: 65536, compilatore Microsoft C++ : 65535 caratteri a byte singolo, inclusi i caratteri di terminazione null e 32767 caratteri a byte doppio, incluso il terminatore null.
+- Caratteri in un valore letterale stringa di caratteri o valore letterale stringa a caratteri wide (dopo la concatenazione)-C++ standard: 65536, compilatore Microsoft C++: 65535 caratteri a byte singolo, inclusi i caratteri di terminazione NULL e 32767 caratteri DBCS, incluso il terminatore NULL.
 
-- Livelli della classe annidata, struttura o definizioni di Unione in un singolo `struct-declaration-list` C++ -standard: 256, C++ compilatore Microsoft: 16.
+- Livelli della classe annidata, struttura o definizioni di Unione in un singolo `struct-declaration-list` standard c++: 256, compilatore Microsoft C++: 16.
 
-- Inizializzatori di membro in una definizione del C++ Costruttore-standard: 6144 C++ , compilatore Microsoft: almeno 6144.
+- Inizializzatori di membro in una definizione di costruttore-C++ standard: 6144, compilatore Microsoft C++: almeno 6144.
 
-- Qualificazioni dell'ambito di un identificatore C++ -standard: 256, C++ compilatore Microsoft: 127.
+- Qualificazioni dell'ambito di un identificatore-C++ standard: 256, compilatore Microsoft C++: 127.
 
-- Specifiche **extern** annidate C++ -standard: 1024, C++ compilatore Microsoft: 9 (senza contare la specifica **extern** implicita nell'ambito globale o 10 se si conta la specifica **extern** implicita nell'ambito globale.
+- Specifiche annidate **`extern`** -c++ standard: 1024, compilatore Microsoft C++: 9 (senza contare la **`extern`** specifica implicita nell'ambito globale o 10 se si conta la specifica implicita **`extern`** nell'ambito globale.
 
-- Argomenti di modello in una dichiarazione di C++ modello-standard: 1024 C++ , compilatore Microsoft: 2046.
+- Argomenti di modello in una dichiarazione di modello-C++ standard: 1024, compilatore Microsoft C++: 2046.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 2a0bd21023bd1c6bc14b1f587c85960cf1e8b820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233639"
 ---
 # <a name="reference-type-function-arguments"></a>Argomenti della funzione tipo-riferimento
 
@@ -67,9 +67,9 @@ int main()
 }
 ```
 
-Il codice precedente mostra che si accede a membri di una struttura passata per riferimento usando l'operatore di selezione dei membri (**.**) anziché l'operatore di selezione dei membri del puntatore (**->**).
+Il codice precedente mostra che è possibile accedere ai membri di una struttura passata per riferimento utilizzando l'operatore di selezione dei membri (**.**) anziché l'operatore di selezione dei membri del puntatore ( **->** ).
 
-Anche se gli argomenti passati come tipi riferimento osservino la sintassi dei tipi non puntatore, mantengono una caratteristica importante dei tipi di puntatore: ovvero sono modificabili a meno che non dichiarati come **const**. Poiché lo scopo del codice precedente non è quello di modificare l'oggetto `date`, un prototipo di funzione più appropriato è il seguente:
+Sebbene gli argomenti passati come tipi di riferimento osservino la sintassi dei tipi non puntatore, mantengono una caratteristica importante dei tipi di puntatore: sono modificabili a meno che non dichiarati come **`const`** . Poiché lo scopo del codice precedente non è quello di modificare l'oggetto `date`, un prototipo di funzione più appropriato è il seguente:
 
 ```cpp
 long DateOfYear( const Date& date );
@@ -77,7 +77,7 @@ long DateOfYear( const Date& date );
 
 Questo prototipo garantisce che la funzione `DateOfYear` non modificherà il relativo argomento.
 
-Qualsiasi funzione con prototipo che utilizza un tipo riferimento può accettare un oggetto dello stesso tipo al suo posto perché viene eseguita una conversione standard dalla *nomeTipo* al *nomeTipo* <strong>&</strong>.
+Qualsiasi funzione con prototipo che accetta un tipo di riferimento può accettare un oggetto dello stesso tipo al suo posto perché è presente una conversione standard da *typeName* a *typeName* <strong>&</strong> .
 
 ## <a name="see-also"></a>Vedere anche
 

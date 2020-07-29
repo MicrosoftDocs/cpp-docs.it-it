@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218683"
 ---
 # <a name="floating-point-primitives"></a>Primitive a virgola mobile
 
@@ -377,11 +377,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>Parametri
 
 *PS*<br/>
-Puntatore alla rappresentazione bit per bit di un valore a virgola mobile espresso come matrice di **short** **senza segno** .
+Puntatore alla rappresentazione bit per bit di un valore a virgola mobile espresso come matrice di **`unsigned short`** .
 
 ### <a name="remarks"></a>Osservazioni
 
-Queste primitive a virgola mobile normalizzano la parte frazionaria di un valore a virgola mobile con propagazione e regolano la corrispondenza tra la *caratteristica*, o l'esponente distorta. Il valore viene passato come rappresentazione bit per bit del tipo a virgola mobile convertito in una matrice di **short** **senza segno** tramite il `_double_val`tipo `_ldouble_val`, o `_float_val` : crostacei Union dichiarata in Math. h. Il valore restituito è il risultato di **fpclassify** sul valore a virgola mobile di input se è NaN o infinito e in caso contrario sul valore di output.
+Queste primitive a virgola mobile normalizzano la parte frazionaria di un valore a virgola mobile con propagazione e regolano la corrispondenza tra la *caratteristica*, o l'esponente distorta. Il valore viene passato come rappresentazione bit per bit del tipo a virgola mobile convertito in una matrice di **`unsigned short`** tramite `_double_val` il `_ldouble_val` tipo, `_float_val` o: crostacei Union dichiarata in Math. h. Il valore restituito è il risultato di **fpclassify** sul valore a virgola mobile di input se è NaN o infinito e in caso contrario sul valore di output.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -406,7 +406,7 @@ Ordine del polinomiale da valutare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Queste primitive a virgola mobile restituiscono la valutazione di *x* nel polinomio dell'ordine *n* i cui coefficienti sono rappresentati dai valori costanti corrispondenti nella *tabella*. Se, ad esempio, la *tabella*\[0] = 3,0, *tabella*\[1] = 4,0, *tabella*\[2] = 5,0 e *n* = 2, rappresenta il polinomiale 5.0 x<sup>2</sup> + 4.0 x + 3,0. Se questo polinomi viene valutato per *x* di 2,0, il risultato è 31,0. Queste funzioni non vengono utilizzate internamente.
+Queste primitive a virgola mobile restituiscono la valutazione di *x* nel polinomio dell'ordine *n* i cui coefficienti sono rappresentati dai valori costanti corrispondenti nella *tabella*. Se, ad esempio, la *tabella* \[ 0] = 3,0, *tabella* \[ 1] = 4,0, *tabella* \[ 2] = 5,0 e *n* = 2, rappresenta il polinomiale 5.0 x<sup>2</sup> + 4.0 x + 3,0. Se questo polinomi viene valutato per *x* di 2,0, il risultato è 31,0. Queste funzioni non vengono utilizzate internamente.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -446,7 +446,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 Argomento della funzione a virgola mobile.
 
 *Quadrant*<br/>
-Offset del quadrante di 0, 1, 2 o 3 da usare per produrre `sin`i `cos`risultati `-sin`,, `-cos` e.
+Offset del quadrante di 0, 1, 2 o 3 da usare per produrre `sin` `cos` `-sin` i risultati,, e `-cos` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -454,13 +454,13 @@ Queste primitive a virgola mobile restituiscono il seno dell'offset *x* dal *qua
 
 ## <a name="requirements"></a>Requisiti
 
-Intestazione: \<Math. h>
+Intestazione: \<math.h>
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../floating-point-support.md)<br/>
+[Supporto delle funzioni a virgola mobile](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

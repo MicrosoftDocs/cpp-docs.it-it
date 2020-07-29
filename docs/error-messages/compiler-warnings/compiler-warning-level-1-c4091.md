@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 8c373ad1eba07337dc970cb84202370c147560dd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 333f76c2f570832c9d08a7ad666f2540cca37f05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163910"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233340"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>Avviso del compilatore (livello 1) C4091
 
@@ -21,7 +21,7 @@ Il compilatore ha rilevato una situazione in cui l'utente probabilmente ha volut
 
 ## <a name="example"></a>Esempio
 
-Un attributo `__declspec` all'inizio di una dichiarazione di tipo definito dall'utente si applica alla variabile di quel tipo. C4091 indica che non è stata dichiarata alcuna variabile. L'esempio seguente genera l'C4091.
+Un **`__declspec`** attributo all'inizio di una dichiarazione di tipo definito dall'utente si applica alla variabile di quel tipo. C4091 indica che non è stata dichiarata alcuna variabile. L'esempio seguente genera l'C4091.
 
 ```cpp
 // C4091.cpp

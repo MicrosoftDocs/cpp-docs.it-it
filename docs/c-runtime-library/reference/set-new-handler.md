@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913963"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218546"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-Trasferisce il controllo al meccanismo di gestione degli errori se l'operatore **new** non riesce ad allocare la memoria.
+Trasferisce il controllo al meccanismo di gestione degli errori se l' **`new`** operatore non riesce ad allocare memoria.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -58,7 +58,7 @@ Restituisce un puntatore alla funzione di gestione delle eccezioni precedente re
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione C++ **_set_new_handler** specifica una funzione di gestione delle eccezioni che ottiene il controllo se l'operatore **New** non riesce ad allocare memoria. Se **New** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni passata come argomento per **_set_new_handler**. **_PNH**, definito in New. h, è un puntatore a una funzione che restituisce il tipo **int** e accetta un argomento di tipo **size_t**. Usare **size_t** per specificare la quantità di spazio da allocare.
+La funzione C++ **_set_new_handler** specifica una funzione di gestione delle eccezioni che ottiene il controllo se l' **`new`** operatore non riesce ad allocare memoria. Se **`new`** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni passata come argomento per **_set_new_handler**. **_PNH**, definito in New. h, è un puntatore a una funzione che restituisce il tipo **`int`** e accetta un argomento di tipo **size_t**. Usare **size_t** per specificare la quantità di spazio da allocare.
 
 Non è previsto alcun gestore predefinito.
 
@@ -95,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da **_set_new_handler**. Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando si verifica un errore per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare:
+La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da **_set_new_handler**. Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui l' **`new`** operatore esegue quando si verifica un errore per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare:
 
 ```cpp
 _set_new_mode(1);
@@ -103,7 +103,7 @@ _set_new_mode(1);
 
 all'inizio del programma o collegare con Newmode.obj.
 
-Se viene specificato un oggetto `operator new` definito dall'utente, le nuove funzioni del gestore non vengono chiamate automaticamente in caso di errore.
+Se viene specificato un oggetto definito dall'utente `operator new` , le nuove funzioni del gestore non vengono chiamate automaticamente in caso di errore.
 
 Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*.
 
@@ -169,7 +169,7 @@ Please contact the application's support team for more information.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [libero](free.md)<br/>
 [realloc](realloc.md)<br/>

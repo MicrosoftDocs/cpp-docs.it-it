@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: cf0c6e9e2c33887082f945f3f2200d808ac13cd2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b945853a3d32f91c821d6fa174371df39bf183b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80174258"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218156"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>Avviso del compilatore (livello 2) C4146
 
@@ -21,15 +21,15 @@ I tipi non firmati possono mantenere solo valori non negativi, quindi il segno m
 
 In pratica, ciò si verifica quando il programmatore tenta di esprimere il valore intero minimo, ovvero-2147483648. Questo valore non può essere scritto come-2147483648 perché l'espressione viene elaborata in due fasi:
 
-1. Viene valutato il numero 2147483648. Poiché è maggiore del valore integer massimo 2147483647, il tipo di 2147483648 non è [int](../../c-language/integer-types.md), ma `unsigned int`.
+1. Viene valutato il numero 2147483648. Poiché è maggiore del valore integer massimo 2147483647, il tipo di 2147483648 non è [int](../../c-language/integer-types.md), ma **`unsigned int`** .
 
 1. Il segno meno unario viene applicato al valore, con un risultato senza segno, che risulta anche 2147483648.
 
-Il tipo senza segno del risultato può causare un comportamento imprevisto. Se il risultato viene usato in un confronto, potrebbe essere usato un confronto senza segno, ad esempio quando l'altro operando è un `int`. Questo spiega perché il programma di esempio seguente stampa solo una riga.
+Il tipo senza segno del risultato può causare un comportamento imprevisto. Se il risultato viene usato in un confronto, potrebbe essere usato un confronto senza segno, ad esempio quando l'altro operando è un **`int`** . Questo spiega perché il programma di esempio seguente stampa solo una riga.
 
-La seconda riga prevista, `1 is greater than the most negative int`, non viene stampata perché `((unsigned int)1) > 2147483648` è false.
+La seconda riga prevista, `1 is greater than the most negative int` , non viene stampata perché `((unsigned int)1) > 2147483648` è false.
 
-È possibile evitare C4146 usando INT_MIN da limits. h, il cui tipo è **signed int**.
+È possibile evitare C4146 usando INT_MIN da limits. h, che ha il tipo **`signed int`** .
 
 ## <a name="example"></a>Esempio
 

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234237"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -105,16 +105,16 @@ Numero di campi che sono stati convertiti ed assegnati correttamente. Il valore 
 
 Queste funzioni convalidano i relativi parametri. Se *Format* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e **errno** viene impostato su **EINVAL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_cscanf_s** legge i dati direttamente dalla console nei percorsi specificati dall' *argomento*. La funzione [_getche](getch-getwch.md) viene usata per leggere i caratteri. Ogni parametro facoltativo deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo nel *formato*. Il formato controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione del parametro *Format* per la funzione [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Mentre **_cscanf_s** generalmente restituisce il carattere di input, non esegue questa operazione se l'ultima chiamata a **_ungetch**.
+La funzione **_cscanf_s** legge i dati direttamente dalla console di nei percorsi specificati dall' *argomento*. La funzione [_getche](getch-getwch.md) viene usata per leggere i caratteri. Ogni parametro facoltativo deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo nel *formato*. Il formato controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione del parametro *Format* per la funzione [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Sebbene **_cscanf_s** in genere richiami il carattere di input, non esegue questa operazione se l'ultima chiamata è stata **_ungetch**.
 
-Analogamente ad altre versioni sicure delle funzioni nella famiglia **scanf** , **_cscanf_s** e **_cswscanf_s** richiedono argomenti di dimensione per i caratteri di campo di tipo **c**, **c**, **s**, **s**e **[** . Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
+Analogamente ad altre versioni sicure delle funzioni nella famiglia **scanf** , **_cscanf_s** e **_cswscanf_s** richiedono argomenti di dimensione per i caratteri di campo di tipo **c**, **c**, **s**, **s**e **[**. Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Il parametro size è di tipo **unsigned**, non **size_t**.
+> Il parametro size è di tipo **`unsigned`** , non **size_t**.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -130,7 +130,7 @@ Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad e
 |**_cscanf_s**, **_cscanf_s_l**|\<conio.h>|
 |**_cwscanf_s**, **_cwscanf_s_l**|\<conio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -173,7 +173,7 @@ You entered 1 2 3
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

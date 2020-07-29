@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: 1dc9781bc0cf1bc6c7f879cc3971828983471c6f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd815bf90b135f65072a56911c7c4b0f054fcfec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757748"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210072"
 ---
 # <a name="compiler-error-c2071"></a>Errore del compilatore C2071
 
 'identificatore': classe di archiviazione non valida
 
-`identifier` è stata dichiarata con una [classe di archiviazione](../../c-language/c-storage-classes.md)non valida. Questo errore può essere causato quando viene specificata più di una classe di archiviazione per un identificatore o quando la definizione non è compatibile con la dichiarazione di classe di archiviazione.
+`identifier`è stata dichiarata con una [classe di archiviazione](../../c-language/c-storage-classes.md)non valida. Questo errore può essere causato quando viene specificata più di una classe di archiviazione per un identificatore o quando la definizione non è compatibile con la dichiarazione di classe di archiviazione.
 
-Per risolvere questo problema, comprendere la classe di archiviazione prevista dell'identificatore, ad esempio `static` o `extern`, e correggere la dichiarazione in modo che corrisponda.
+Per risolvere questo problema, comprendere la classe di archiviazione desiderata dell'identificatore, ad esempio **`static`** o, **`extern`** e correggere la dichiarazione in modo che corrisponda.
 
 ## <a name="example"></a>Esempio
 

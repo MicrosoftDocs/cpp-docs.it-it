@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3817
 ms.assetid: c6dbb57a-c65e-4040-8dd2-85bd9d4fd337
-ms.openlocfilehash: 33515d9d676ec383763802ab200dc37ea652fa27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14d440b4a4f0b77494aa7b622721cdac336079df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233353"
 ---
 # <a name="compiler-error-c3817"></a>Errore del compilatore C3817
 
-'declaration': proprietà può essere applicata solo a una funzione
+' declaration ': la proprietà può essere applicata solo a una funzione
 
-Il `property` parola chiave può essere applicata solo a una definizione di funzione.
+La **`property`** parola chiave può essere applicata solo a una definizione di funzione.
 
-È raggiungibile tramite l'opzione del compilatore obsolete solo C3817 **/CLR: oldSyntax**.
+C3817 è raggiungibile solo usando l'opzione del compilatore obsolete **/CLR: oldSyntax**.

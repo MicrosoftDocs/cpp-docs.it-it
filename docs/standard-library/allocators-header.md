@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204885"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 alloca nodi con `allocator_chunklist` e il filtro di sincronizzazione [sync_per_thread](sync-per-thread-class.md).
 
-Un allocatore di blocco è una cache o un filtro. Una cache è un modello di classe che accetta un argomento di tipo std:: size_t. Definisce un allocatore di blocco che alloca e dealloca blocchi di memoria di un'unica dimensione. Deve ottenere memoria utilizzando operator **New**, ma non deve effettuare una chiamata separata a Operator **New** per ogni blocco. Può, ad esempio, sottoallocare da un blocco più grande o blocchi deallocati della cache per una riallocazione successiva.
+Un allocatore di blocco è una cache o un filtro. Una cache è un modello di classe che accetta un argomento di tipo std:: size_t. Definisce un allocatore di blocco che alloca e dealloca blocchi di memoria di un'unica dimensione. Deve ottenere la memoria utilizzando operator **`new`** , ma non deve effettuare una chiamata separata a Operator **`new`** per ogni blocco. Può, ad esempio, sottoallocare da un blocco più grande o blocchi deallocati della cache per una riallocazione successiva.
 
 Con un compilatore che non è in grado di riassociare il valore dell'argomento std:: size_t usato quando è stata creata un'istanza del modello non è necessariamente il valore dell'argomento _Sz passato alle funzioni membro della cache allocate e deallocate.
 

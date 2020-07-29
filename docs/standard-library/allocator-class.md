@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617501"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204989"
 ---
 # <a name="allocator-class"></a>Classe allocator
 
@@ -79,7 +79,7 @@ Questi `Type` specificano il form che puntatori e riferimenti devono prendere pe
 
 **C++11 e versioni successive:** per abilitare le operazioni di spostamento nell'allocatore, usare l'interfaccia dell'allocatore minimo e implementare il costruttore di copia, gli operatori == e !=, allocate e deallocate. Per altre informazioni e un esempio, vedere [Allocatori](allocators.md)
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
@@ -95,7 +95,7 @@ Questi `Type` specificano il form che puntatori e riferimenti devono prendere pe
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento costante al tipo di oggetto gestito dall'allocatore.|
 |[difference_type](#difference_type)|Tipo integrale con segno che può rappresentare la differenza tra valori di puntatori al tipo di oggetto gestito dall'allocatore.|
 |[puntatore](#pointer)|Tipo che fornisce un puntatore al tipo di oggetto gestito dall'allocatore.|
-|[riferimento](#reference)|Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.|
+|[reference](#reference)|Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.|
 |[size_type](#size_type)|Tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che un oggetto di tipo `allocator` può allocare.|
 |[value_type](#value_type)|Tipo gestito dall'allocatore.|
 
@@ -468,7 +468,7 @@ Il valore con cui viene inizializzato l'oggetto costruito.
 
 #### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro è equivalente a **New** (( `void` \* ) `ptr` ) **Type** ( `val` ).
+La prima funzione membro è equivalente a `new ((void *) ptr) Type(val)` .
 
 #### <a name="example"></a>Esempio
 
@@ -874,7 +874,7 @@ Tipo di elemento per il quale viene allocata la memoria.
 
 Questa struttura è utile per l'allocazione di memoria per un tipo diverso dal tipo di elemento del contenitore in fase di implementazione.
 
-Il modello di classe membro definisce il tipo other. Il suo unico scopo è fornire il nome del tipo **allocator** \<_ **Other**> , in base al nome del tipo **allocator** \< **Type**> .
+Il modello di classe membro definisce il tipo other. Il suo unico scopo è fornire il nome del tipo `allocator<_Other>` , dato il nome del tipo `allocator<Type>` .
 
 Ad esempio, dato un oggetto allocatore `al` di tipo `A` , è possibile allocare un oggetto di tipo `_Other` con l'espressione:
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4098
 ms.assetid: 8c8aef1c-1639-44ec-a3dd-c0dfe9aa727d
-ms.openlocfilehash: a0113a67ae41b523264de02795c1a897bf9c2ba1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d582a0384b50b6fabe1b199ee04d8c6f99b56b2d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163871"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233327"
 ---
 # <a name="compiler-warning-level-1-c4098"></a>Avviso del compilatore (livello 1) C4098
 
 ' Function ': funzione void che restituisce un valore
 
-Una funzione dichiarata con il tipo restituito [void](../../cpp/void-cpp.md) ha un'istruzione `return` che restituisce un valore. Il compilatore presuppone che la funzione restituisca un valore di tipo `int`.
+Una funzione dichiarata con il tipo restituito [void](../../cpp/void-cpp.md) ha un' **`return`** istruzione che restituisce un valore. Il compilatore presuppone che la funzione restituisca un valore di tipo **`int`** .

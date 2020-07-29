@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233977"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -108,7 +108,7 @@ Per ulteriori informazioni su questo e altri codici restituiti, vedere [_doserrn
 
 ## <a name="remarks"></a>Osservazioni
 
-Ogni funzione converte la stringa di input *strSource* in un **valore Double**. La funzione **strtod** converte *strSource* in un valore a precisione doppia. **strtod** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo carattere può essere il carattere null di terminazione. **wcstod** è una versione a caratteri wide di **strtod**; il relativo argomento *strSource* è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+Ogni funzione converte la stringa di input *strSource* in un oggetto **`double`** . La funzione **strtod** converte *strSource* in un valore a precisione doppia. **strtod** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo carattere può essere il carattere null di terminazione. **wcstod** è una versione a caratteri wide di **strtod**; il relativo argomento *strSource* è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -210,7 +210,7 @@ string = 10110134932
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

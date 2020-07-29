@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212292"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233457"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 
-Tutte le funzioni di accesso nei modelli di OLE DB derivano da questa classe. `CAccessorBase` consente a un set di righe di gestire più funzioni di accesso. Fornisce inoltre un'associazione per i parametri e le colonne di output.
+Tutte le funzioni di accesso nei modelli di OLE DB derivano da questa classe. `CAccessorBase`consente a un set di righe di gestire più funzioni di accesso. Fornisce inoltre un'associazione per i parametri e le colonne di output.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,7 +42,7 @@ Tutte le funzioni di accesso nei modelli di OLE DB derivano da questa classe. `C
 // Replace with syntax
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
@@ -122,7 +122,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se la funzione di accesso è un autoaccesso. Negli altri casi, viene restituito **false**.
+Restituisce **`true`** se la funzione di accesso è un autoaccesso. In caso contrario, restituisce **`false`** .
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: ReleaseAccessors
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>Parametri
 
 *pUnk*<br/>
-in Puntatore a un'interfaccia `IUnknown` per l'oggetto COM per il quale sono state create le funzioni di accesso.
+in Puntatore a un' `IUnknown` interfaccia per l'oggetto com per il quale sono state create le funzioni di accesso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -150,5 +150,5 @@ Chiamata eseguita da [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessorBase](../../data/oledb/caccessorbase-class.md)

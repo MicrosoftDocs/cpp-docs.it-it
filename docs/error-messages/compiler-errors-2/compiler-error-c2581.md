@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
-ms.openlocfilehash: 03fc7e9da8a9b3a2e2c445f5b06395c2616f0d98
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a632d6a47afb29b8bb46761c3188391905eda842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206874"
 ---
 # <a name="compiler-error-c2581"></a>Errore del compilatore C2581
 
 ' type ': la funzione ' operator =' statica non è valida
 
-L'operatore di assegnazione (`=`) è dichiarato erroneamente come `static`. Gli operatori di assegnazione non possono essere `static`. Per ulteriori informazioni, vedere [operatori definiti dall'utente (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+L' `=` operatore di assegnazione () è dichiarato erroneamente come **`static`** . Gli operatori di assegnazione non possono essere **`static`** . Per ulteriori informazioni, vedere [operatori definiti dall'utente (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

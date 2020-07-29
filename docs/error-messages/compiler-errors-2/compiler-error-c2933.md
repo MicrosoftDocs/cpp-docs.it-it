@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2933
 ms.assetid: 394891e3-6b52-4b61-83d2-a1c5125d9bd5
-ms.openlocfilehash: 713189b19fd2a839a05782910c7e7083671535f5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 51889ababd646edebbaf1d0d1a1c608e7b068009
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750078"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233418"
 ---
 # <a name="compiler-error-c2933"></a>Errore del compilatore C2933
 
 'class': id-classe-tipo ridefinito come membro typedef di 'identifier'
 
-Non è possibile usare una classe modello o generica come membro `typedef` .
+Non è possibile usare una classe generica o modello come **`typedef`** membro.
 
 L'esempio seguente genera l'errore C2933:
 

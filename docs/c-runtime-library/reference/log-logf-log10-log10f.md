@@ -48,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507040"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218598"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -88,7 +88,7 @@ Le funzioni di **log** restituiscono il logaritmo naturale (base *e*) di *x* in 
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Nessuno|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|NON VALIDO|_DOMAIN|
 
@@ -96,7 +96,7 @@ Le funzioni di **log** restituiscono il logaritmo naturale (base *e*) di *x* in 
 
 ## <a name="remarks"></a>Osservazioni
 
-C++ consente l'overload, quindi è possibile chiamare overload di **log** e **log10** che accettano e restituiscono valori **float** o **long double** . In un programma C, **log** e **log10** accettano sempre e restituiscono un **valore Double**.
+C++ consente l'overload, quindi è possibile chiamare overload di **log** e **log10** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, **log** e **log10** accettano sempre e restituiscono **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

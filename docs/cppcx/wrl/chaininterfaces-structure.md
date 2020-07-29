@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: dd1af3fb5c1079a40d8248dc71ae4972537aa856
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48b663f2042ff0095466d83fe872ef6196112f76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372657"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211541"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (struttura)
 
@@ -71,43 +71,43 @@ struct ChainInterfaces<
 ### <a name="parameters"></a>Parametri
 
 *I0*<br/>
-(Obbligatorio) ID interfaccia 0.
+Necessaria ID interfaccia 0.
 
 *I1*<br/>
-(Obbligatorio) ID interfaccia 1.
+Necessaria ID interfaccia 1.
 
 *I2*<br/>
-(Facoltativo) ID interfaccia 2.
+Opzionale ID interfaccia 2.
 
-*I3 I3*<br/>
-(Facoltativo) ID interfaccia 3.
+*I3*<br/>
+Opzionale ID interfaccia 3.
 
 *I4*<br/>
-(Facoltativo) ID interfaccia 4.
+Opzionale ID interfaccia 4.
 
 *I5*<br/>
-(Facoltativo) ID interfaccia 5.
+Opzionale ID interfaccia 5.
 
-*I6 I6*<br/>
-(Facoltativo) ID interfaccia 6.
+*I6*<br/>
+Opzionale ID interfaccia 6.
 
-*I7 I7*<br/>
-(Facoltativo) ID interfaccia 7.
+*I7*<br/>
+Opzionale ID interfaccia 7.
 
 *I8*<br/>
-(Facoltativo) ID interfaccia 8.
+Opzionale ID interfaccia 8.
 
 *I9*<br/>
-(Facoltativo) ID interfaccia 9.
+Opzionale ID interfaccia 9.
 
-*TipoDerivato*<br/>
+*DerivedType*<br/>
 Tipo derivato.
 
 *BaseType*<br/>
 Tipo di base di un tipo derivato.
 
 *hasImplements*<br/>
-Un valore booleano che, se **true**, indica che non è possibile utilizzare una struttura [MixIn](mixin-structure.md) con una classe che non deriva dalla struttura [Implements](implements-structure.md) .
+Valore booleano che **`true`** , se, significa che non è possibile usare una struttura [mixin](mixin-structure.md) con una classe che non deriva da [implementa](implements-structure.md) struttura.
 
 ## <a name="members"></a>Membri
 
@@ -115,16 +115,16 @@ Un valore booleano che, se **true**, indica che non è possibile utilizzare una 
 
 Nome                                                   | Descrizione
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Interfacce catena::CanCastToChainInterfaces::CanCastTo](#cancastto)               | Indica se è possibile eseguire il cast dell'ID di `ChainInterface` interfaccia specificato a ognuna delle specializzazioni definite dai parametri del modello.
-[Interfacce catena::CastToUnknownChainInterfaces::CastToUnknown](#casttounknown)       | Esegue il cast del puntatore a interfaccia del tipo `IUnknown`definito dal parametro di modello *I0* a un puntatore a .
-[Interfacce catena::FillArrayWithIidChainInterfaces::FillArrayWithIid](#fillarraywithiid) | Archivia l'ID di interfaccia definito dal parametro di modello *I0* in una posizione specificata in una matrice specificata di ID di interfaccia.
-[Interfacce catena::Verifica](#verify)                     | Verifica che ogni interfaccia definita dai parametri di modello da *I0* a *I9* erediti `IUnknown` da e/o `IInspectable`, e che *I0* erediti da *I1* a *I9*.
+[ChainInterfaces:: CanCastTo](#cancastto)               | Indica se è possibile eseguire il cast dell'ID di interfaccia specificato a ognuna delle specializzazioni definite dai `ChainInterface` parametri del modello.
+[ChainInterfaces:: CastToUnknown](#casttounknown)       | Esegue il cast del puntatore a interfaccia del tipo definito dal parametro di modello *I0* a un puntatore a `IUnknown` .
+[ChainInterfaces:: FillArrayWithIid](#fillarraywithiid) | Archivia l'ID di interfaccia definito dal parametro di modello *I0* in una posizione specificata in una matrice specificata di ID di interfaccia.
+[ChainInterfaces:: Verify](#verify)                     | Verifica che ogni interfaccia definita dai parametri del modello *I0* tramite *i9* erediti da `IUnknown` e/o `IInspectable` e che *I0* erediti da *I1* a *i9*.
 
 ### <a name="protected-constants"></a>Costanti protette
 
 Nome                                   | Descrizione
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[Interfacce catena::IidCountChainInterfaces::IidCount](#iidcount) | Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri di modello da *I0* a *I9*.
+[ChainInterfaces:: IidCount](#iidcount) | Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri del modello *I0* tramite *i9*.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -134,13 +134,13 @@ Nome                                   | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** implements.h
+**Intestazione:** Implements. h
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>Interfacce catena::CanCastToChainInterfaces::CanCastTo
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces:: CanCastTo
 
-Indica se è possibile eseguire il cast dell'ID di interfaccia specificato in ognuna delle specializzazioni definite dai parametri di modello non predefiniti.
+Indica se è possibile eseguire il cast dell'ID di interfaccia specificato a ognuna delle specializzazioni definite dai parametri di modello non predefiniti.
 
 ```cpp
 __forceinline bool CanCastTo(
@@ -151,19 +151,19 @@ __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parametri
 
-*Riid*<br/>
+*riid*<br/>
 ID di interfaccia.
 
-*Ppv*<br/>
-Puntatore all'ultimo ID di interfaccia di cui è stato eseguito correttamente il cast.
+*PPV*<br/>
+Puntatore all'ultimo ID di interfaccia di cui è stato eseguito il cast.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se tutte le operazioni di cast hanno avuto esito positivo; in caso contrario, **false**.
+**`true`** Se tutte le operazioni cast sono state completate correttamente; in caso contrario, **`false`** .
 
-## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>Interfacce catena::CastToUnknownChainInterfaces::CastToUnknown
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces:: CastToUnknown
 
-Esegue il cast del puntatore a interfaccia del tipo `IUnknown`definito dal parametro di modello *I0* a un puntatore a .
+Esegue il cast del puntatore a interfaccia del tipo definito dal parametro di modello *I0* a un puntatore a `IUnknown` .
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -173,7 +173,7 @@ __forceinline IUnknown* CastToUnknown();
 
 Puntatore a `IUnknown`.
 
-## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>Interfacce catena::FillArrayWithIidChainInterfaces::FillArrayWithIid
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces:: FillArrayWithIid
 
 Archivia l'ID di interfaccia definito dal parametro di modello *I0* in una posizione specificata in una matrice specificata di ID di interfaccia.
 
@@ -187,14 +187,14 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>Parametri
 
 *Indice*<br/>
-Puntatore a un valore di indice nella matrice *iids.*
+Puntatore a un valore di indice nella matrice *IID* .
 
-*iids*<br/>
+*IID*<br/>
 Matrice di ID di interfaccia.
 
-## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>Interfacce catena::IidCountChainInterfaces::IidCount
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces:: IidCount
 
-Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri di modello da *I0* a *I9*.
+Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri del modello *I0* tramite *i9*.
 
 ```cpp
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
@@ -206,11 +206,11 @@ Numero totale di ID di interfaccia.
 
 ### <a name="remarks"></a>Osservazioni
 
-I parametri di modello *I0* e *I1* sono obbligatori e i parametri da *I2* a *I9* sono facoltativi. Il numero di IID di ogni interfaccia è in genere 1.The IID count of each interface is typically 1.
+I parametri di modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *i9* sono facoltativi. Il numero di IID di ogni interfaccia è in genere pari a 1.
 
-## <a name="chaininterfacesverify"></a><a name="verify"></a>Interfacce catena::Verifica
+## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces:: Verify
 
-Verifica che ogni interfaccia definita dai parametri di modello da *I0* a *I9* erediti `IUnknown` da e/o `IInspectable`, e che *I0* erediti da *I1* a *I9*.
+Verifica che ogni interfaccia definita dai parametri del modello *I0* tramite *i9* erediti da `IUnknown` e/o `IInspectable` e che *I0* erediti da *I1* a *i9*.
 
 ```cpp
 WRL_NOTHROW __forceinline static void Verify();
@@ -218,6 +218,6 @@ WRL_NOTHROW __forceinline static void Verify();
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'operazione di `static_assert` verifica ha esito negativo, viene generato un messaggio di errore che descrive l'errore.
+Se l'operazione di verifica ha esito negativo, un oggetto **`static_assert`** genera un messaggio di errore che descrive l'errore.
 
-I parametri di modello *I0* e *I1* sono obbligatori e i parametri da *I2* a *I9* sono facoltativi.
+I parametri di modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *i9* sono facoltativi.

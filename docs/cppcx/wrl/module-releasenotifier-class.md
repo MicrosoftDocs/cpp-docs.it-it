@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::Release method
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-ms.openlocfilehash: f314d09c443d0d284e3a821b5c879bfb74baf812
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25fbb23ee7ecb7e55377aed74effe8bfa43a1597
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371281"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218364"
 ---
 # <a name="modulereleasenotifier-class"></a>Classe Module::ReleaseNotifier
 
@@ -38,15 +38,15 @@ class ReleaseNotifier;
 
 Nome                                                                                | Descrizione
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------
-[Modulo::ReleaseNotifier::](#releasenotifier-tilde-releasenotifier) | Deinizializza l'istanza corrente `Module::ReleaseNotifier` della classe.
-[Modulo::ReleaseNotifier::ReleaseNotifier](#releasenotifier-releasenotifier)        | Inizializza una nuova istanza della classe `Module::ReleaseNotifier`.
+[Module:: ReleaseNotifier:: ~ ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | Consente di deinizializzare l'istanza corrente della `Module::ReleaseNotifier` classe.
+[Module:: ReleaseNotifier:: ReleaseNotifier](#releasenotifier-releasenotifier)        | Inizializza una nuova istanza della classe `Module::ReleaseNotifier`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                         | Descrizione
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
-[Modulo::ReleaseNotifier::Richiamare](#releasenotifier-invoke)   | Quando implementato, chiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | Elimina l'oggetto corrente `Module::ReleaseNotifier` se l'oggetto è stato costruito con un parametro **true**.
+[Module:: ReleaseNotifier:: Invoke](#releasenotifier-invoke)   | Quando viene implementato, chiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | Elimina l' `Module::ReleaseNotifier` oggetto corrente se l'oggetto è stato costruito con un parametro di **`true`** .
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -54,35 +54,35 @@ Nome                                                         | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** module.h
+**Intestazione:** Module. h
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>Modulo::ReleaseNotifier::
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>Module:: ReleaseNotifier:: ~ ReleaseNotifier
 
-Deinizializza l'istanza corrente `Module::ReleaseNotifier` della classe.
+Consente di deinizializzare l'istanza corrente della `Module::ReleaseNotifier` classe.
 
 ```cpp
 WRL_NOTHROW virtual ~ReleaseNotifier();
 ```
 
-## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>Modulo::ReleaseNotifier::Richiamare
+## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>Module:: ReleaseNotifier:: Invoke
 
-Quando implementato, chiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.
+Quando viene implementato, chiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.
 
 ```cpp
 virtual void Invoke() = 0;
 ```
 
-## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>Modulo::ReleaseNotifier::Release
+## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>Module:: ReleaseNotifier:: Release
 
-Elimina l'oggetto corrente `Module::ReleaseNotifier` se l'oggetto è stato costruito con un parametro **true**.
+Elimina l' `Module::ReleaseNotifier` oggetto corrente se l'oggetto è stato costruito con un parametro di **`true`** .
 
 ```cpp
 void Release() throw();
 ```
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>Modulo::ReleaseNotifier::ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>Module:: ReleaseNotifier:: ReleaseNotifier
 
 Inizializza una nuova istanza della classe `Module::ReleaseNotifier`.
 
@@ -92,5 +92,5 @@ ReleaseNotifier(bool release) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Rilascio*<br/>
-`true`per eliminare questa `Release` istanza quando viene chiamato il metodo; `false` per non eliminare questa istanza.
+*versione*<br/>
+**`true`** per eliminare questa istanza quando `Release` viene chiamato il metodo; **`false`** per non eliminare l'istanza.

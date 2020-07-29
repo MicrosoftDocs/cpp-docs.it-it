@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910993"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233990"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -122,7 +122,7 @@ const unsigned char *_mbsstr_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa con terminazione Null in cui eseguire la ricerca.
 
 *strSearch*<br/>
@@ -142,7 +142,7 @@ La `strstr` funzione restituisce un puntatore alla prima occorrenza di *strSearc
 > [!IMPORTANT]
 > Queste funzioni potrebbero causare una minaccia da un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer possono essere utilizzati per attaccare un sistema perché possono consentire l'esecuzione di codice arbitrario che può causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-In C queste funzioni accettano un puntatore **const** per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a un oggetto non**const** restituisce un puntatore a un oggetto non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS viene definita se sono disponibili entrambe le versioni **const** e non**const** di queste funzioni. Se è necessario il comportamento non**const** per entrambi gli overload C++, definire il simbolo _CONST_RETURN.
+In C queste funzioni accettano un **`const`** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **`const`** restituisce un puntatore a **`const`** ; la versione che accetta un puntatore a non **`const`** restituisce un puntatore a non- **`const`** . La macro _CRT_CONST_CORRECT_OVERLOADS viene definita se **`const`** sono disponibili entrambe le funzioni e non le **`const`** versioni di queste funzioni. Se è necessario il comportamento non- **`const`** per entrambi gli overload C++, definire il simbolo _CONST_RETURN.
 
 Il valore di output è interessato dall'impostazione della categoria delle impostazioni locali di LC_CTYPE; Per ulteriori informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso **_L** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; le versioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -205,7 +205,7 @@ lazy found at position 36
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

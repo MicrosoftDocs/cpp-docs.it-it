@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911812"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233925"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -85,7 +85,7 @@ Le funzioni di **timespec_get** impostano l'ora corrente nello struct a cui punt
 
 **Specifico di Microsoft**
 
-Queste funzioni supportano solo **TIME_UTC** come valore di *base* . In questo modo, il valore *time_spec* viene impostato sul numero di secondi e nanosecondi dall'inizio del periodo, ovvero la mezzanotte del 1 gennaio 1970, ora UTC (Coordinated Universal Time). In una **struct** **_timespec32**struct **tv_sec** è un valore di **__time32_t** . In una **struct** **_timespec64**struct **tv_sec** è un valore di **__time64_t** . In uno **struct** **timespec** **tv_sec** è un tipo di **time_t** , ovvero 32 bit o 64 bit, a seconda che sia definita la macro del preprocessore _USE_32BIT_TIME_T. La funzione **timespec_get** è una funzione inline che chiama **_timespec32_get** se _USE_32BIT_TIME_T è definito. in caso contrario, chiama **_timespec64_get**.
+Queste funzioni supportano solo **TIME_UTC** come valore di *base* . In questo modo, il valore *time_spec* viene impostato sul numero di secondi e nanosecondi dall'inizio del periodo, ovvero la mezzanotte del 1 gennaio 1970, ora UTC (Coordinated Universal Time). In una **`struct`** **_timespec32**, **tv_sec** è un valore di **__time32_t** . In una **`struct`** **_timespec64**, **tv_sec** è un valore di **__time64_t** . In una **`struct`** **timespec** **tv_sec** è un tipo di **time_t** , ovvero 32 bit o 64 bit, a seconda che sia definita la macro del preprocessore _USE_32BIT_TIME_T. La funzione **timespec_get** è una funzione inline che chiama **_timespec32_get** se _USE_32BIT_TIME_T è definito. in caso contrario, chiama **_timespec64_get**.
 
 **Fine sezione specifica Microsoft**
 
@@ -95,7 +95,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h>, C++: \<ctime> o \<time.h>|
+|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h> , C++: \<ctime> o\<time.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

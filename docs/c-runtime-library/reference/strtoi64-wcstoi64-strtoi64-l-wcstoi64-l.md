@@ -47,16 +47,16 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: 7929f5e7d5971278dfe19a0850ccf660751c2acf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ede96e39b596225d13c041468eb6172853959c6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910889"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233951"
 ---
 # <a name="_strtoi64-_wcstoi64-_strtoi64_l-_wcstoi64_l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
-Converte una stringa in un valore **__int64** .
+Converte una stringa in un **`__int64`** valore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -111,7 +111,7 @@ Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_strtoi64** converte *strSource* in un **__int64**. Entrambe le funzioni interrompono la lettura della stringa *strSource* al primo carattere che non sono in grado di riconoscere come parte di un numero. Potrebbe trattarsi del carattere null di terminazione o del primo carattere numerico maggiore o uguale alla *base*. **_wcstoi64** è una versione a caratteri wide di **_strtoi64**; il relativo argomento *strSource* è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+La funzione **_strtoi64** converte *strSource* in un oggetto **`__int64`** . Entrambe le funzioni interrompono la lettura della stringa *strSource* al primo carattere che non sono in grado di riconoscere come parte di un numero. Potrebbe trattarsi del carattere null di terminazione o del primo carattere numerico maggiore o uguale alla *base*. **_wcstoi64** è una versione a caratteri wide di **_strtoi64**; il relativo argomento *strSource* è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -128,7 +128,7 @@ Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'anali
 
 **_strtoi64** prevede che *strSource* punti a una stringa nel formato seguente:
 
-> [*spazi vuoti*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*cifre* &#124; *lettere*]
+> [*spazi vuoti*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cifre* &#124; *lettere*]
 
 Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; le *cifre* corrispondono a una o più cifre decimali; le *lettere* sono una o più lettere da' a' a' z ' (o da' A ' a' z ').  Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta *strSource* . Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Se ad esempio *base* è 0 e il primo carattere analizzato è' 0', si presuppone un Integer ottale e il carattere ' 8' o ' 9' arresterà l'analisi.
 
@@ -144,7 +144,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

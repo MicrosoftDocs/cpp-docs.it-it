@@ -30,12 +30,12 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: d3805de6a591169f94926c09a4542ec01f221d1d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 692a891549e0c84d6297b108918d9d7c58495ef7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916832"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234042"
 ---
 # <a name="_pipe"></a>_pipe
 
@@ -57,7 +57,7 @@ int _pipe(
 ### <a name="parameters"></a>Parametri
 
 *PFD*<br/>
-Puntatore a una matrice di due **int** per conservare i descrittori di file di lettura e scrittura.
+Puntatore a una matrice di due **`int`** per conservare i descrittori di file di lettura e scrittura.
 
 *psize*<br/>
 Quantità di memoria da riservare.
@@ -81,7 +81,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _dose
 
 La funzione **_pipe** crea una *pipe*, ovvero un canale di I/O artificiale utilizzato da un programma per passare informazioni ad altri programmi. Una pipe è simile a un file perché ha un puntatore di file, un descrittore di file o entrambi, e può essere letta o scritta tramite le funzioni di input e output della libreria standard. Tuttavia, una pipe non rappresenta un file o un dispositivo specifico. Rappresenta invece uno spazio di archiviazione temporaneo in memoria, indipendente della memoria propria del programma e interamente controllato dal sistema operativo.
 
-**_pipe** è simile a **_open** ma apre la pipe per la lettura e la scrittura e restituisce due descrittori di file anziché uno. Il programma può usare entrambi i lati della pipe o chiudere quello non necessario. Ad esempio, il processore dei comandi in Windows crea una pipe quando esegue un comando come **Program1** | **Program2**.
+**_pipe** è simile a **_open** ma apre la pipe per la lettura e la scrittura e restituisce due descrittori di file anziché uno. Il programma può usare entrambi i lati della pipe o chiudere quello non necessario. Ad esempio, il processore dei comandi in Windows crea una pipe quando esegue un comando come **Program1**  |  **Program2**.
 
 Il descrittore di output standard di **Program1** è associato al descrittore di scrittura della pipe. Il descrittore di input standard di **Program2** è associato al descrittore di lettura della pipe. Viene così eliminata la necessità di creare file temporanei per il passaggio di informazioni ad altri programmi.
 
@@ -91,7 +91,7 @@ L'argomento *psize* specifica la quantità di memoria, in byte, da riservare per
 
 Nei programmi multithreading, non viene eseguito alcun blocco. I descrittori di file restituiti sono appena aperti e non è necessario farvi riferimento da alcun thread finché non viene completata la chiamata **_pipe** .
 
-Per usare la funzione **_pipe** per la comunicazione tra un processo padre e un processo figlio, ogni processo deve avere un solo descrittore aperto sulla pipe. I descrittori devono essere opposti: se il padre ha un descrittore di lettura aperto, il figlio deve avere un descrittore di scrittura aperto. Il modo più semplice per eseguire questa operazione consiste nell'usare**|** or bit per bit () come flag di **_O_NOINHERIT** con *TextMode*. Utilizzare quindi **_dup** o **_dup2** per creare una copia ereditabile del descrittore di pipe che si desidera passare al figlio. Chiudere il descrittore originale e quindi generare il processo figlio. Al completamento della chiamata di generazione, chiudere il descrittore duplicato nel processo padre. Per altre informazioni, vedere l'esempio 2 in questo articolo.
+Per usare la funzione **_pipe** per la comunicazione tra un processo padre e un processo figlio, ogni processo deve avere un solo descrittore aperto sulla pipe. I descrittori devono essere opposti: se il padre ha un descrittore di lettura aperto, il figlio deve avere un descrittore di scrittura aperto. Il modo più semplice per eseguire questa operazione consiste nell'usare or bit per bit ( **|** ) come flag di **_O_NOINHERIT** con *TextMode*. Utilizzare quindi **_dup** o **_dup2** per creare una copia ereditabile del descrittore di pipe che si desidera passare al figlio. Chiudere il descrittore originale e quindi generare il processo figlio. Al completamento della chiamata di generazione, chiudere il descrittore duplicato nel processo padre. Per altre informazioni, vedere l'esempio 2 in questo articolo.
 
 Nel sistema operativo Windows, una pipe viene eliminata quando tutti i relativi descrittori sono stati chiusi. Se tutti i descrittori di lettura sulla pipe sono stati chiusi, la scrittura nella pipe causa un errore. Tutte le operazioni di lettura e scrittura sulla pipe restano in attesa fino a quando non sono disponibili dati sufficienti o spazio sufficiente per completare la richiesta di I/O.
 
@@ -101,7 +101,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|
 |-------------|---------------------|---------------------|
-|**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
+|**_pipe**|\<io.h>|\<fcntl.h>, 1 \<errno.h> 2|
 
 1 per le definizioni **_O_BINARY** e **_O_TEXT** .
 
@@ -349,5 +349,5 @@ This is speaker beep number 10...
 
 ## <a name="see-also"></a>Vedere anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

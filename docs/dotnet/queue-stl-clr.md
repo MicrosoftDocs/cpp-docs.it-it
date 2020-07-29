@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208364"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210930"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
-La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che hanno un accesso First-in First-out. Usare l'adattatore contenitore `queue` per gestire un contenitore sottostante come coda.
+La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che hanno un accesso First-in First-out. L'adapter contenitore viene utilizzato `queue` per gestire un contenitore sottostante come coda.
 
-Nella descrizione seguente `GValue` corrisponde a *value* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` è uguale al *contenitore* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Container^`.
+Nella descrizione seguente corrisponde a `GValue` *value* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Value^` . Analogamente, `GContainer` è uguale al *contenitore* a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Container^` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -92,13 +92,13 @@ Tipo del contenitore sottostante.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cliext/Queue >
+**Intestazione:**\<cliext/queue>
 
 **Spazio dei nomi:** cliext
 
 ## <a name="declarations"></a>Dichiarazioni
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |[queue::const_reference (STL/CLR)](#const_reference)|Tipo di un riferimento costante a un elemento.|
 |[queue::container_type (STL/CLR)](#container_type)|Tipo del contenitore sottostante.|
@@ -130,25 +130,25 @@ Tipo del contenitore sottostante.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|Sostituisce la sequenza controllata.|
-|[operator!= (queue) (STL/CLR)](#op_neq)|Determina se un oggetto `queue` non è uguale a un altro oggetto `queue`.|
-|[operator< (queue) (STL/CLR)](#op_lt)|Determina se un oggetto `queue` è minore di un altro `queue` oggetto.|
-|[operator<= (queue) (STL/CLR)](#op_lteq)|Determina se un oggetto `queue` è minore o uguale a un altro oggetto `queue`.|
-|[operator== (queue) (STL/CLR)](#op_eq)|Determina se un oggetto `queue` è uguale a un altro oggetto `queue`.|
-|[operator> (queue) (STL/CLR)](#op_gt)|Determina se un oggetto `queue` è maggiore di un altro oggetto `queue`.|
-|[operator>= (queue) (STL/CLR)](#op_gteq)|Determina se un oggetto `queue` è maggiore o uguale a un altro oggetto `queue`.|
+|[operatore! = (coda) (STL/CLR)](#op_neq)|Determina se un `queue` oggetto non è uguale a un altro `queue` oggetto.|
+|[operatore< (Queue) (STL/CLR)](#op_lt)|Determina se un `queue` oggetto è minore di un altro `queue` oggetto.|
+|[operatore<= (coda) (STL/CLR)](#op_lteq)|Determina se un `queue` oggetto è minore o uguale a un altro `queue` oggetto.|
+|[operatore = = (coda) (STL/CLR)](#op_eq)|Determina se un `queue` oggetto è uguale a un altro `queue` oggetto.|
+|[operatore> (Queue) (STL/CLR)](#op_gt)|Determina se un `queue` oggetto è maggiore di un altro `queue` oggetto.|
+|[operator>= (queue) (STL/CLR)](#op_gteq)|Determina se un `queue` oggetto è maggiore o uguale a un altro `queue` oggetto.|
 
 ## <a name="interfaces"></a>Interfacce
 
 |Interfaccia|Descrizione|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicare un oggetto.|
-|Valore\<IQueue, > contenitore|Gestire un adapter contenitore generico.|
+|IQueue\<Value, Container>|Gestire un adapter contenitore generico.|
 
 ## <a name="remarks"></a>Osservazioni
 
-L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un contenitore sottostante, di tipo `Container`, che archivia gli elementi `Value` e cresce su richiesta. L'oggetto limita l'accesso al solo push del primo elemento e l'ultimo elemento, implementando una coda First-in First-out (nota anche come coda FIFO o semplicemente una coda).
+L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un contenitore sottostante, di tipo `Container` , che archivia `Value` gli elementi e cresce su richiesta. L'oggetto limita l'accesso al solo push del primo elemento e l'ultimo elemento, implementando una coda First-in First-out (nota anche come coda FIFO o semplicemente una coda).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ## <a name="queueassign-stlclr"></a><a name="assign"></a>Queue:: Assign (STL/CLR)
 
@@ -162,7 +162,7 @@ void assign(queue<Value, Container>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Adattatore contenitore da inserire.
 
 ### <a name="remarks"></a>Osservazioni
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Viene utilizzato per verificare se la coda è vuota.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() == 0` . Viene utilizzato per verificare se la coda è vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -685,7 +685,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da usare con l'interfaccia generica per questa classe del contenitore del modello. `GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento.
+Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da usare con l'interfaccia generica per questa classe del contenitore del modello. ( `GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento).
 
 ### <a name="example"></a>Esempio
 
@@ -784,12 +784,12 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Adattatore contenitore da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore membro copia *right* nell'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
+L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -930,7 +930,7 @@ explicit queue(container_type% wrapped);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Oggetto da copiare.
 
 *eseguito il wrapping*<br/>
@@ -948,13 +948,13 @@ Il costruttore:
 
 `queue(queue<Value, Container>% right);`
 
-Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right.get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto Queue *right*.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right.get_container()` . Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto Queue *right*.
 
 Il costruttore:
 
 `queue(queue<Value, Container>^ right);`
 
-Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right->get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto Queue `*right`.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right->get_container()` . Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto Queue `*right` .
 
 Il costruttore:
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [coda:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [queue:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Esempio
 
@@ -1270,15 +1270,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `!(left == right)`. Viene usato per verificare se *Left* non è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
+La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>operatore&lt; (Queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>operatore &lt; (Queue) (STL/CLR)
 
 Coda inferiore al confronto.
 
@@ -1341,15 +1341,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce true se, per la posizione più bassa `i` per cui `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->`[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() <` `right->size()` lo si utilizza per verificare se *Left* viene ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
+La funzione operator restituisce true se, per la posizione più bassa `i` per la quale `!(right[i] < left[i])` è anche true `left[i] < right[i]` . In caso contrario, restituisce `left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` che viene usato per verificare se *Left* viene ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operatore&lt;= (coda) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operatore &lt; = (coda) (STL/CLR)
 
 Coda di confronto minore o uguale a.
 
@@ -1412,15 +1412,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `!(right < left)`. Viene usato per verificare se *Left* non è ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
+La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1483,15 +1483,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i``left[i] ==` `right[i]`. Viene usato per verificare se *Left* è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
+La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i` , `left[i] ==` `right[i]` . Viene usato per verificare se *Left* è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>operatore&gt; (Queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>operatore &gt; (Queue) (STL/CLR)
 
 Coda maggiore di confronto.
 
@@ -1554,15 +1554,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `right` `left``<`. Viene usato per verificare se *Left* viene ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
+La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operatore&gt;= (coda) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operatore &gt; = (coda) (STL/CLR)
 
 Coda di confronto maggiore o uguale a.
 
@@ -1625,15 +1625,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `!(left < right)`. Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
+La funzione operator restituisce `!(left < right)` . Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 

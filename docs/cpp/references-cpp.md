@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 8a771b8bfc067966c3c054700538ebf180a5eb23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857333"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233613"
 ---
 # <a name="references-c"></a>Riferimenti (C++)
 
-Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimento: i riferimenti lvalue che fanno riferimento a una variabile denominata e a riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). L'operatore & indica un riferimento lvalue e l'operatore & & indica un riferimento rvalue o un riferimento universale (rvalue o lvalue), a seconda del contesto.
+Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimento: i riferimenti lvalue che fanno riferimento a una variabile denominata e a riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). L'operatore & indica un riferimento lvalue e l'operatore && significa un riferimento rvalue o un riferimento universale (rvalue o lvalue), a seconda del contesto.
 
 È possibile dichiarare i riferimenti tramite la seguente sintassi:
 
-> \[*Storage-Class-Specifiers*] \[*CV-Qualifiers*] *Type-Specifiers* \[*ms-modifier*] *dichiaratore* \[*espressione* **=** ] **;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *Type-Specifiers* \[ *MS-Modifier*] espressione del *dichiaratore* \[ **=** *expression*]**;**
 
 È possibile utilizzare qualsiasi dichiaratore valido che specifica un riferimento. A meno che il riferimento non sia un riferimento al tipo di funzione o di matrice, si applica la sintassi seguente semplificata:
 
-> \[*Storage-Class-Specifiers*] \[*CV-Qualifiers*] *type-specifiers* \[ **&** o **&&** ] \[*CV-Qualifiers*] *identificatore* \[ *espressione*=] **;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *Type-Specifiers* \[ **&** o **&&** ] \[ *CV-Qualifiers*] *identifier* \[ **=** *espressione*identificatore]**;**
 
 I riferimenti vengono dichiarati tramite la seguente sequenza:
 
@@ -34,7 +34,7 @@ I riferimenti vengono dichiarati tramite la seguente sequenza:
 
    - Identificatore della classe di archiviazione facoltativo.
 
-   - Qualificatori **const** e/o **volatile** facoltativi.
+   - **`const`** Qualificatori e/o **`volatile`** qualificatori.
 
    - Il tipo di identificatore: il nome di un tipo.
 
@@ -42,9 +42,9 @@ I riferimenti vengono dichiarati tramite la seguente sequenza:
 
    - Modificatore specifico di Microsoft facoltativo. Per ulteriori informazioni, vedere [modificatori specifici di Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-   - Operatore **&** o operatore **&&** .
+   - **&** Operatore o **&&** operatore.
 
-   - Qualificatori facoltativo **const** e/o **volatile** .
+   - Facoltativo **`const`** e/o **`volatile`** qualificatori.
 
    - Identificatore.
 
@@ -101,6 +101,6 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Argomenti della funzione tipo-riferimento](../cpp/reference-type-function-arguments.md)<br/>
-[Elementi restituiti dalla funzione tipo-riferimento](../cpp/reference-type-function-returns.md)<br/>
+[Argomenti della funzione di tipo riferimento](../cpp/reference-type-function-arguments.md)<br/>
+[La funzione di tipo riferimento restituisce](../cpp/reference-type-function-returns.md)<br/>
 [Riferimenti a puntatori](../cpp/references-to-pointers.md)

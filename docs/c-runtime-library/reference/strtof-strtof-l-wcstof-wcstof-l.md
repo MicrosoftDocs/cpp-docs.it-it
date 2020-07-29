@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910864"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233964"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -101,7 +101,7 @@ Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_err
 
 ## <a name="remarks"></a>Osservazioni
 
-Ogni funzione converte la stringa di input *strSource* in un valore **float**. La funzione **strtof** converte *strSource* in un valore a precisione singola. **strtof** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. **wcstof** è una versione a caratteri wide di **strtof**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
+Ogni funzione converte la stringa di input *strSource* in un oggetto **`float`** . La funzione **strtof** converte *strSource* in un valore a precisione singola. **strtof** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. **wcstof** è una versione a caratteri wide di **strtof**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -120,7 +120,7 @@ Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'anali
 
 [*spazi vuoti*] [*segno*] [*cifre*] [__.__ *cifre*] [{**e** &#124; **e**} [*Sign*] *digits*]
 
-Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; *Sign* è più (**+**) o meno (**-**); le *cifre* e corrispondono a una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
+Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; il *segno* è più ( **+** ) o meno ( **-** ) e le *cifre* sono costituite da una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
 
 Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponenti di tipo FORTRAN (**d** o **d**). Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente.
 
@@ -128,8 +128,8 @@ Le versioni UCRT di queste funzioni non supportano la conversione di lettere esp
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> o \<stdlib.h>|
-|**wcstof**, **_wcstof_l**|C: \<stdlib.h> o \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> o \<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt; cstdlib> o\<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> o \<wchar.h> C++: &lt; cstdlib> \<stdlib.h> o\<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -166,9 +166,9 @@ string = 3.14159This stopped it
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

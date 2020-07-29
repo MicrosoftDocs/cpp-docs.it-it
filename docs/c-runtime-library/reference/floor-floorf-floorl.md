@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507001"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218682"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -77,13 +77,13 @@ Le funzioni **floor** restituiscono un valore a virgola mobile che rappresenta l
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Nessuno|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
 
 **floor** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-C++ consente l'overload, quindi è possibile chiamare gli overload di **floor** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C, **floor** accetta sempre e restituisce un **valore Double**.
+C++ consente l'overload, quindi è possibile chiamare gli overload di **floor** che accettano e restituiscono **`float`** valori e **`long double`** . In un programma C, **floor** accetta sempre e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

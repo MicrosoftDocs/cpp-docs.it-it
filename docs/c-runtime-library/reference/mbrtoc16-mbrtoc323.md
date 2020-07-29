@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919560"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234068"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -64,7 +64,7 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>Parametri
 
 *destinazione*\
-Puntatore al **char16_t** o **char32_t** equivalente del carattere multibyte UTF-8 da convertire. Se è null, la funzione non archivia un valore.
+Puntatore all'oggetto **`char16_t`** o **`char32_t`** equivalente del carattere multibyte UTF-8 da convertire. Se è null, la funzione non archivia un valore.
 
 *origine*\
 Puntatore alla stringa di caratteri multibyte UTF-8 da convertire.
@@ -79,7 +79,7 @@ Puntatore a un oggetto **mbstate_t** stato di conversione utilizzato per interpr
 
 In caso di esito positivo, restituisce il valore della prima di queste condizioni che si applica, dato il valore *dello stato* corrente:
 
-|Value|Condizione|
+|valore|Condizione|
 |-----------|---------------|
 |0|Il *max_bytes* successivo o un minor numero di caratteri convertiti dall' *origine* corrisponde al carattere wide null, che corrisponde al valore archiviato se la *destinazione* non è null.<br /><br /> *lo stato contiene lo* stato iniziale di spostamento.|
 |Tra 1 e *max_bytes*inclusi|Il valore restituito è il numero di byte dell' *origine* che completa un carattere multibyte valido. Il carattere wide convertito viene archiviato se la *destinazione* non è null.|
@@ -91,7 +91,7 @@ In caso di esito positivo, restituisce il valore della prima di queste condizion
 
 La funzione **mbrtoc16** legge fino a *max_bytes* byte dall' *origine* per trovare il primo carattere multibyte UTF-8 valido completo e quindi archivia il carattere UTF-16 equivalente nella *destinazione*. Se il carattere richiede più di un carattere di output UTF-16, ad esempio una coppia di surrogati, il valore di *stato* viene impostato in modo da archiviare il successivo carattere UTF-16 nella *destinazione* alla chiamata successiva a **mbrtoc16**. La funzione **mbrtoc32** è identica, ma l'output viene archiviato come carattere UTF-32.
 
-Se *source* è null, queste funzioni restituiscono l'equivalente di una chiamata effettuata usando gli argomenti di **null** per `""` la *destinazione*, ovvero una stringa vuota con terminazione null, per l' *origine*e 1 per *max_bytes*. I valori passati della *destinazione* e della *max_bytes* vengono ignorati.
+Se *source* è null, queste funzioni restituiscono l'equivalente di una chiamata effettuata usando gli argomenti di **null** per la *destinazione*, `""` ovvero una stringa vuota con terminazione null, per l' *origine*e 1 per *max_bytes*. I valori passati della *destinazione* e della *max_bytes* vengono ignorati.
 
 Se l' *origine* non è null, la funzione inizia all'inizio della stringa e controlla fino a *max_bytes* byte per determinare il numero di byte necessari per completare il successivo carattere multibyte UTF-8, incluse le sequenze di spostamento. Se i byte esaminati contengono un carattere multibyte UTF-8 valido e completo, la funzione converte il carattere nel carattere o nei caratteri wide a 16 bit o a 32 bit equivalenti. Se la *destinazione* non è null, la funzione archivia il primo (ed eventualmente solo) carattere di risultato nella destinazione. Se sono necessari caratteri di output aggiuntivi, un valore viene impostato in *stato*, in modo che le chiamate successive alla funzione restituiscono i caratteri aggiuntivi e restituiscano il valore-3. Se non sono necessari altri caratteri di output, *lo* stato viene impostato sullo stato iniziale di spostamento.
 
@@ -101,7 +101,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**mbrtoc16**, **mbrtoc32**|\<uchar.h>|\<cuchar>|
 

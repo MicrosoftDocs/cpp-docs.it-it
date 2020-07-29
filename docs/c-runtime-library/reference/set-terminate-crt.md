@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914526"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234016"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -60,7 +60,7 @@ La funzione **set_terminate** installa *termFunction* come funzione chiamata da 
 
 In un ambiente multithreading, le funzioni di terminazione vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione di terminazione. Quindi, ogni thread è responsabile della propria gestione della terminazione.
 
-Il tipo di **terminate_function** è definito in eh. H come puntatore a una funzione di terminazione definita dall'utente, *termFunction* che restituisce **void**. La funzione personalizzata *termFunction* non può assumere argomenti e non deve tornare al chiamante. In caso contrario, viene chiamato [Abort](abort.md) . Un'eccezione non può essere generata dall'interno di *termFunction*.
+Il tipo di **terminate_function** è definito in eh. H come puntatore a una funzione di terminazione definita dall'utente, *termFunction* che restituisce **`void`** . La funzione personalizzata *termFunction* non può assumere argomenti e non deve tornare al chiamante. In caso contrario, viene chiamato [Abort](abort.md) . Un'eccezione non può essere generata dall'interno di *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -88,8 +88,8 @@ Vedere l'esempio per [terminate](terminate-crt.md).
 ## <a name="see-also"></a>Vedere anche
 
 [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
-[interruzione](abort.md)<br/>
+[abort](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[termine](terminate-crt.md)<br/>
+[terminare](terminate-crt.md)<br/>
 [inaspettato](unexpected-crt.md)<br/>

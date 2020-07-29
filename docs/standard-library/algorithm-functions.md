@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: c8c550be87eacf81fab994239e07ed2358fad39b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5b83306d34c5e881e679ac4b6f0d7b9c249035cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205574"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -329,7 +329,7 @@ They have values of 10 & 20.
 
 ## <a name="all_of"></a><a name="all_of"></a>all_of
 
-Restituisce **true** quando una condizione è presente in ogni elemento nell'intervallo specificato.
+Restituisce **`true`** quando una condizione è presente in ogni elemento nell'intervallo specificato.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -358,15 +358,15 @@ Iteratore di input che indica dove iniziare a cercare una condizione. L'iterator
 Iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
 
 *Pred*\
-Condizione da verificare. Si tratta di un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+Condizione da verificare. Si tratta di un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se la condizione viene rilevata in corrispondenza di ogni elemento nell'intervallo indicato oppure se l'intervallo è vuoto e **false** in caso contrario.
+Restituisce **`true`** se la condizione viene rilevata in corrispondenza di ogni elemento nell'intervallo indicato oppure se l'intervallo è vuoto e **`false`** in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione modello restituisce **true** solo se, per ogni `N` nell'intervallo `[0, last - first)` , il predicato `pred(*(first + N))` è **true**.
+La funzione di modello restituisce **`true`** solo se, per ogni `N` nell'intervallo `[0, last - first)` , il predicato `pred(*(first + N))` è **`true`** .
 
 ### <a name="example"></a>Esempio
 
@@ -405,7 +405,7 @@ All the elements are even numbers.
 
 ## <a name="any_of"></a><a name="any_of"></a>any_of
 
-Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.
+Restituisce **`true`** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -434,15 +434,15 @@ Iteratore di input che indica dove inizia l'intervallo di elementi in cui verifi
 Iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
 
 *Pred*\
-Condizione da verificare. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Il predicato definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+Condizione da verificare. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Il predicato definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se la condizione viene rilevata almeno una volta nell'intervallo indicato, **false** se la condizione non viene mai rilevata.
+Restituisce **`true`** se la condizione viene rilevata almeno una volta nell'intervallo indicato, **`false`** se la condizione non viene mai rilevata.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione modello restituisce **true** solo se, per alcuni `N` nell'intervallo
+La funzione di modello restituisce **`true`** solo se, per alcuni `N` nell'intervallo
 
 `[0, last - first)`, il predicato `pred(*(first + N))` è true.
 
@@ -511,11 +511,11 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 Il valore a cui deve corrispondere il valore dell'elemento o che deve soddisfare la condizione con il valore di elemento specificato dal predicato binario.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se viene trovato un elemento nell'intervallo che è uguale o equivalente al valore specificato; in caso contrario, **false**.
+**`true`** Se viene trovato un elemento nell'intervallo che è uguale o equivalente al valore specificato; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -650,7 +650,7 @@ Limite inferiore dei valori a cui bloccare il *valore* .
 Limite superiore dei valori a cui bloccare il *valore* .
 
 *Pred*\
-Predicato utilizzato per confrontare il valore con un *valore* *inferiore* o *superiore*. Un predicato di confronto accetta due argomenti e restituisce **true** se il primo è in un certo senso minore del secondo e in caso contrario, **false**.
+Predicato utilizzato per confrontare il valore con un *valore* *inferiore* o *superiore*. Un predicato di confronto accetta due argomenti e restituisce **`true`** se il primo è in un certo senso minore del secondo e in caso contrario **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -862,7 +862,7 @@ v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 
 ## <a name="copy_if"></a><a name="copy_if"></a>copy_if
 
-In un intervallo di elementi, copia gli elementi **true** per la condizione specificata.
+In un intervallo di elementi, copia gli elementi **`true`** per la condizione specificata.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -896,7 +896,7 @@ Iteratore di input che indica la fine dell'intervallo.
 Iteratore di output che indica la destinazione per gli elementi copiati.
 
 *Pred*\
-Condizione verificata in ogni elemento dell'intervallo. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Un predicato unario accetta un argomento e restituisce **true** o **false**.
+Condizione verificata in ogni elemento dell'intervallo. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Un predicato unario accetta un argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1148,7 +1148,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da conteggiare. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da conteggiare. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1289,17 +1289,17 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo inter
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo intervallo da testare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** solo se gli intervalli sono identici o equivalenti nel predicato binario quando vengono confrontati elemento per elemento; in caso contrario, **false**.
+**`true`** Se e solo se gli intervalli sono identici o equivalenti nel predicato binario quando vengono confrontati elemento per elemento; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 L'intervallo in cui eseguire la ricerca deve essere valido. Tutti gli iteratori devono essere dereferenziabili e l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Se i due intervalli sono di uguale lunghezza, la complessità di tempo dell'algoritmo è lineare nel numero di elementi contenuti nell'intervallo. In caso contrario, la funzione restituisce immediatamente **false**.
+Se i due intervalli sono di uguale lunghezza, la complessità di tempo dell'algoritmo è lineare nel numero di elementi contenuti nell'intervallo. In caso contrario, la funzione restituisce immediatamente **`false`** .
 
 Né l'operatore `operator==` né il predicato definito dall'utente sono necessari per imporre una relazione di equivalenza che sia simmetrica, riflessiva e transitiva tra gli operandi.
 
@@ -1367,7 +1367,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 Il valore da ricercare nell'intervallo ordinato.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1768,7 +1768,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1932,7 +1932,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2070,11 +2070,11 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);` in realtà, dove `T` è un tipo in cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. La parola chiave **const** viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **`true`** se è soddisfatto o **`false`** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);` in realtà, dove `T` è un tipo in cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. La **`const`** parola chiave viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di input che fa riferimento al primo elemento dell'intervallo che soddisfa la condizione specificata dal predicato (il predicato restituisce **true**). Se non viene trovato alcun elemento che soddisfi il predicato, restituisce per *ultimo*.
+Iteratore di input che fa riferimento al primo elemento dell'intervallo che soddisfa la condizione specificata dal predicato (il predicato restituisce **`true`** ). Se non viene trovato alcun elemento che soddisfi il predicato, restituisce per *ultimo*.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -2192,11 +2192,11 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);` in realtà, dove `T` è un tipo in cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. La parola chiave **const** viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **`true`** se è soddisfatto o **`false`** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);` in realtà, dove `T` è un tipo in cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. La **`const`** parola chiave viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di input che fa riferimento al primo elemento dell'intervallo che non soddisfa la condizione specificata dal predicato (il predicato restituisce **false**). Se tutti gli elementi soddisfano il predicato (il predicato restituisce **true** per ogni elemento), restituisce per *ultimo*.
+Iteratore di input che fa riferimento al primo elemento dell'intervallo che non soddisfa la condizione specificata dal predicato (il predicato restituisce **`false`** ). Se tutti gli elementi soddisfano il predicato (il predicato produce **`true`** per ogni elemento), restituisce l' *ultimo*.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -2598,11 +2598,11 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo dei d
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il primo intervallo ordinato contiene tutti gli elementi nel secondo intervallo ordinato; in caso contrario, **false**.
+**`true`** Se il primo intervallo ordinato contiene tutti gli elementi nel secondo intervallo ordinato; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -2816,7 +2816,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nel secondo 
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -2939,7 +2939,7 @@ vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 
 ## <a name="is_heap"></a><a name="is_heap"></a>is_heap
 
-Restituisce **true** se gli elementi dell'intervallo specificato formano un heap.
+Restituisce **`true`** se gli elementi dell'intervallo specificato formano un heap.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2979,11 +2979,11 @@ Iteratore di accesso casuale che indica l'inizio di un intervallo in cui cercare
 Iteratore di accesso casuale che indica la fine di un intervallo.
 
 *Pred*\
-Condizione da verificare per ordinare gli elementi. Un predicato di confronto accetta due argomenti e restituisce **true** o **false**.
+Condizione da verificare per ordinare gli elementi. Un predicato di confronto accetta due argomenti e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se gli elementi dell'intervallo specificato formano un heap, **false** in caso contrario.
+Restituisce **`true`** se gli elementi dell'intervallo specificato formano un heap, in **`false`** caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -3049,7 +3049,7 @@ La seconda funzione di modello si comporta come la prima, ad eccezione del fatto
 
 ## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
-Restituisce **true** se tutti gli elementi dell'intervallo specificato che verificano **true** per una condizione precedono gli elementi che testano **false**.
+Restituisce **`true`** se tutti gli elementi dell'intervallo specificato che testano **`true`** per una condizione precedono gli elementi che testano **`false`** .
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -3078,15 +3078,15 @@ Iteratore di input che indica l'inizio di un intervallo in cui cercare una condi
 Iteratore di input che indica la fine di un intervallo.
 
 *Pred*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** quando tutti gli elementi dell'intervallo specificato che verificano **true** per una condizione precedono tutti gli elementi che testano **false**; in caso contrario, restituisce **false**.
+Restituisce **`true`** quando tutti gli elementi dell'intervallo specificato che testano **`true`** per una condizione precedono tutti gli elementi che testano; **`false`** in caso contrario, restituisce **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce **true** solo se tutti gli elementi in `[first, last)` sono partizionati da *prede*, ovvero tutti gli elementi `X` in per i `[first, last)` quali `pred (X)` è true si verificano prima di tutti gli elementi `Y` per i quali `pred (Y)` è **false**.
+La funzione di modello restituisce **`true`** solo se tutti gli elementi in `[first, last)` sono partizionati da *prede*, ovvero tutti gli elementi `X` in per i `[first, last)` quali `pred (X)` è true si verificano prima di tutti gli elementi `Y` per i quali `pred (Y)` è **`false`** .
 
 ## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
@@ -3138,17 +3138,17 @@ Iteratore in avanti che fa riferimento al primo elemento del secondo intervallo,
 Iteratore in avanti che fa riferimento all'elemento successivo all'ultimo elemento del secondo intervallo, usato per il confronto.
 
 *Pred*\
-Predicato che verifica l'equivalenza e restituisce un valore **bool**.
+Predicato che verifica l'equivalenza e restituisce un **`bool`** .
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** quando gli intervalli possono essere ridisposti in modo che siano identici in base al predicato di confronto; in caso contrario, **false**.
+**`true`** Quando è possibile riorganizzare gli intervalli in modo che siano identici in base al predicato di confronto; in caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
 Nel peggiore dei casi, `is_permutation` ha una complessità quadratica.
 
-La prima funzione di modello presuppone che il numero di elementi nell'intervallo a partire da *first2* sia compreso nell'intervallo definito da `[first1, last1)` . Se esistono più elementi nel secondo intervallo, vengono ignorati; se esistono meno elementi, si verificherà un comportamento indefinito. La terza funzione modello (C++14 e versioni successive) non fa questa ipotesi. Entrambi restituiscono **true** solo se, per ogni elemento x nell'intervallo designato da `[first1, last1)` sono presenti tanti elementi Y nello stesso intervallo per cui x = = Y è presente nell'intervallo a partire da *first2* o `[first2, last2)` . In questo caso, `operator==` deve eseguire un confronto a coppie tra gli operandi.
+La prima funzione di modello presuppone che il numero di elementi nell'intervallo a partire da *first2* sia compreso nell'intervallo definito da `[first1, last1)` . Se esistono più elementi nel secondo intervallo, vengono ignorati; se esistono meno elementi, si verificherà un comportamento indefinito. La terza funzione modello (C++14 e versioni successive) non fa questa ipotesi. Entrambe restituiscono **`true`** solo se, per ogni elemento x nell'intervallo designato da `[first1, last1)` ci sono tutti gli elementi Y nello stesso intervallo per cui x = = Y è presente nell'intervallo a partire da *first2* o `[first2, last2)` . In questo caso, `operator==` deve eseguire un confronto a coppie tra gli operandi.
 
 La seconda e la quarta funzione modello si comportano allo stesso modo, tranne per il fatto che sostituiscono `operator==(X, Y)` con `Pred(X, Y)`. Per un corretto comportamento, il predicato deve essere simmetrico, riflessivo e transitivo.
 
@@ -3210,7 +3210,7 @@ int main()
 
 ## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
 
-Restituisce **true** se gli elementi nell'intervallo specificato sono ordinati.
+Restituisce **`true`** se gli elementi dell'intervallo specificato sono ordinati.
 
 ```cpp
 template<class ForwardIterator>
@@ -3250,7 +3250,7 @@ Iteratore in avanti che indica il punto in cui inizia l'intervallo da controllar
 Iteratore in avanti che indica la fine di un intervallo.
 
 *Pred*\
-La condizione da testare per determinare un ordine tra due elementi. Un predicato di confronto accetta due argomenti e restituisce **true** o **false**. Viene eseguita la stessa attività di `operator<`.
+La condizione da testare per determinare un ordine tra due elementi. Un predicato di confronto accetta due argomenti e restituisce **`true`** o **`false`** . Viene eseguita la stessa attività di `operator<`.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -3262,7 +3262,7 @@ La seconda funzione di modello restituisce `is_sorted_until( first, last , pred 
 
 Restituisce un `ForwardIterator` impostato sull'ultimo elemento nell'ordine definito da un intervallo specificato.
 
-La seconda versione consente di fornire un oggetto funzione di confronto che restituisce **true** quando due elementi specificati sono ordinati e **false** in caso contrario.
+La seconda versione consente di fornire un oggetto funzione di confronto che restituisce **`true`** quando due elementi specificati sono ordinati e in **`false`** caso contrario.
 
 ```cpp
 template<class ForwardIterator>
@@ -3302,7 +3302,7 @@ Iteratore in avanti che indica il punto in cui inizia l'intervallo da controllar
 Iteratore in avanti che indica la fine di un intervallo.
 
 *Pred*\
-La condizione da testare per determinare un ordine tra due elementi. Un predicato di confronto accetta due argomenti e restituisce **true** o **false**.
+La condizione da testare per determinare un ordine tra due elementi. Un predicato di confronto accetta due argomenti e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3526,11 +3526,11 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo inter
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo intervallo da confrontare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il primo intervallo è minore a livello lessicografico del secondo intervallo; in caso contrario, **false**.
+**`true`** Se il primo intervallo è lessicografico inferiore al secondo intervallo; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -3540,7 +3540,7 @@ Un confronto lessicografico tra sequenze confronta le sequenze elemento per elem
 
 - Non viene trovata alcuna disuguaglianza, ma una sequenza include più elementi dell'altra e la sequenza più breve è considerata minore della sequenza più lunga.
 
-- Non viene trovata alcuna disuguaglianza e le sequenze hanno lo stesso numero di elementi, quindi le sequenze sono uguali e il risultato del confronto è **false**.
+- Non viene trovata alcuna disuguaglianza e le sequenze hanno lo stesso numero di elementi, quindi le sequenze sono uguali e il risultato del confronto è **`false`** .
 
 ### <a name="example"></a>Esempio
 
@@ -3668,7 +3668,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 Valore la cui prima posizione o possibile prima posizione è da ricercare nell'intervallo ordinato.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3802,7 +3802,7 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'in
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -3901,7 +3901,7 @@ Maggiore dei due oggetti, a meno che nessuno dei due sia superiore; in tal caso,
 
 ### <a name="remarks"></a>Osservazioni
 
-Nell'algoritmo `max` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che agisce su un intervallo di elementi, usare invece [max_element](algorithm-functions.md#max_element). Visual Studio 2017 Abilita **constExpr** sugli overload che accettano un initializer_list.
+Nell'algoritmo `max` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che agisce su un intervallo di elementi, usare invece [max_element](algorithm-functions.md#max_element). Visual Studio 2017 Abilita **`constexpr`** gli overload che accettano un initializer_list.
 
 ### <a name="example"></a>Esempio
 
@@ -4113,7 +4113,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 Iteratore in avanti che punta alla prima posizione dopo l'elemento finale nell'intervallo in cui eseguire la ricerca dell'elemento più grande.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4288,7 +4288,7 @@ Iteratore di input che punta alla posizione successiva all'ultimo elemento nel s
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine da combinare e ordinare in un singolo intervallo.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4677,7 +4677,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca dell'elemento più piccolo.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4841,11 +4841,11 @@ Iteratore in avanti che indica l'inizio di un intervallo.
 Iteratore in avanti che indica la fine di un intervallo.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce il senso in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo è minore del secondo e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che definisce il senso in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e deve restituire **`true`** quando il primo è minore del secondo e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valori di codice restituiti
+Restituisce
 
 `pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
@@ -5003,7 +5003,7 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo inter
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo intervallo da testare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che confronta gli elementi correnti in ogni intervallo e ne determina l'equivalenza. Restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che confronta gli elementi correnti in ogni intervallo e ne determina l'equivalenza. Restituisce **`true`** quando viene soddisfatta e **`false`** quando non è soddisfatta.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5206,11 +5206,11 @@ Iteratore bidirezionale che punta alla posizione del primo elemento dell'interva
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo da permutare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la permutazione a livello lessicografico successiva esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario, **false** e l'ordinamento viene trasformato nella permutazione più piccola a livello lessicografico.
+**`true`** Se la permutazione successiva di lessicografico esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario **`false`** , nel qual caso l'ordinamento viene trasformato nella permutazione lessicografico più piccola.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -5408,7 +5408,7 @@ Iteratore ad accesso casuale che punta alla posizione dell'elemento da ordinare 
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -5488,7 +5488,7 @@ int main() {
 
 ## <a name="none_of"></a><a name="none_of"></a>none_of
 
-Restituisce **true** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.
+Restituisce **`true`** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -5517,15 +5517,15 @@ Iteratore di input che indica dove inizia l'intervallo di elementi in cui verifi
 Iteratore di input che indica dove termina un intervallo di elementi.
 
 *Pred*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se la condizione non viene rilevata almeno una volta nell'intervallo indicato e **false** se viene rilevata la condizione.
+Restituisce **`true`** se la condizione non viene rilevata almeno una volta nell'intervallo indicato e **`false`** se viene rilevata la condizione.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione modello restituisce **true** solo se, per alcuni `N` nell'intervallo `[0, last - first)` , il predicato `pred(*(first + N))` è sempre **false**.
+La funzione modello restituisce **`true`** solo se, per alcuni `N` nell'intervallo `[0, last - first)` , il predicato `pred(*(first + N))` è sempre **`false`** .
 
 ## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
@@ -5576,7 +5576,7 @@ Iteratore ad accesso casuale che punta alla posizione immediatamente successiva 
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare parzialmente.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -5714,7 +5714,7 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'in
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione ordinato.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5833,7 +5833,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5890,7 +5890,7 @@ int main()
 
 ## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
 
-Copia gli elementi per i quali una condizione è **true** in una destinazione e per la quale la condizione è **false** in un'altra. Gli elementi devono provenire da un intervallo specificato.
+Copia gli elementi per i quali una condizione è **`true`** in una destinazione e per la quale la condizione è **`false`** a un'altra. Gli elementi devono provenire da un intervallo specificato.
 
 ```cpp
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
@@ -5929,7 +5929,7 @@ Iteratore di output usato per copiare gli elementi che restituiscono true per un
 Iteratore di output usato per copiare gli elementi che restituiscono false per una condizione verificata tramite *predazione*.
 
 *Pred*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -5956,7 +5956,7 @@ ForwardIterator partition_point(
 `ForwardIterator` che indica la fine di un intervallo.
 
 *Pred*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5964,7 +5964,7 @@ Restituisce un oggetto `ForwardIterator` che fa riferimento al primo elemento ch
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello trova il primo iteratore `it` in `[first, last)` per il quale `pred(*it)` è **false**. La sequenza deve essere ordinata in base a *predazione*.
+La funzione di modello trova il primo iteratore `it` in `[first, last)` per cui `pred(*it)` è **`false`** . La sequenza deve essere ordinata in base a *predazione*.
 
 ## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
@@ -5992,7 +5992,7 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'he
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -6101,11 +6101,11 @@ Iteratore bidirezionale che punta alla posizione del primo elemento dell'interva
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo da permutare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la permutazione lessicografico precedente esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario, **false**, nel qual caso l'ordinamento viene trasformato nella permutazione lessicografico più grande.
+**`true`** Se la permutazione lessicografico precedente esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario **`false`** , nel qual caso l'ordinamento viene trasformato nella permutazione più grande lessicografico.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -6276,7 +6276,7 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'he
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -7643,7 +7643,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 *ricercatore*\
 Il ricercatore che incapsula il modello da cercare e l'algoritmo di ricerca da usare. Per ulteriori informazioni sui cercatori, vedere [default_searcher Class](default-searcher-class.md), classe [boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)e [boyer_moore_searcher Class](boyer-moore-searcher-class.md).
@@ -7815,7 +7815,7 @@ Le dimensioni della sottosequenza cercata.
 Il valore degli elementi nella sequenza cercata.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7975,7 +7975,7 @@ Iteratore di input che punta alla posizione successiva all'ultimo elemento nel s
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8177,7 +8177,7 @@ Iteratore di input che punta alla posizione successiva a quella dell'ultimo elem
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo di destinazione dove i due intervalli di origine devono essere uniti in un singolo intervallo ordinato che rappresenta l'intersezione dei due intervalli di origine.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8375,7 +8375,7 @@ Iteratore di input che punta alla posizione successiva all'ultimo elemento nel s
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8577,7 +8577,7 @@ Iteratore di input che punta alla posizione successiva all'ultimo elemento nel s
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8785,7 +8785,7 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'in
 Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Questo predicato binario accetta due argomenti e restituisce **true** se i due argomenti sono ordinati e **false** in caso contrario. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza. Per altre informazioni, vedere [Algoritmi](algorithms.md).
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Questo predicato binario accetta due argomenti e restituisce **`true`** se i due argomenti sono ordinati e in **`false`** caso contrario. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza. Per altre informazioni, vedere [Algoritmi](algorithms.md).
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -8889,7 +8889,7 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'he
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap di destinazione.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -8994,7 +8994,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato unario accetta un solo argomento e restituisce **`true`** se è soddisfatto o **`false`** se non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -9095,7 +9095,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -9557,7 +9557,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da analizzare per la rimozione di duplicati.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -9713,7 +9713,7 @@ Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione che riceve la copia con duplicati consecutivi rimossi.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -9832,7 +9832,7 @@ Posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui e
 Valore nell'intervallo ordinato che deve essere superato dal valore dell'elemento a cui punta l'iteratore restituito.
 
 *Pred*\
-Oggetto funzione predicato di confronto definito dall'utente che definisce il senso in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
+Oggetto funzione predicato di confronto definito dall'utente che definisce il senso in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 

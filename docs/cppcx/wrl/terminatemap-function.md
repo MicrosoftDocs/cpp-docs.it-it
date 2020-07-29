@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2aa4d6733d2a4e458ff8abff192778d52a4522b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213551"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233496"
 ---
 # <a name="terminatemap-function"></a>Funzione TerminateMap
 
@@ -29,18 +29,18 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>Parametri
 
-*module*<br/>
+*modulo*<br/>
 Un [modulo](module-class.md).
 
-*serverName*<br/>
+*Nomeserver*<br/>
 Nome di un subset di class factory nel modulo specificato dal *modulo*Parameter.
 
 *forceTerminate*<br/>
-**true** per terminare le class factory indipendentemente dal fatto che siano attive; **false** per non terminare le class factory se una factory è attiva.
+**`true`** per terminare le class factory indipendentemente dal fatto che siano attive; **`false`** per non terminare le class factory se è attiva una factory.
 
 ## <a name="return-value"></a>Valore restituito
 
-**true** se tutte le class factory sono state terminate; in caso contrario, **false**.
+**`true`** Se tutte le class factory sono state terminate; in caso contrario, **`false`** .
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -54,4 +54,4 @@ Arresta le class factory nel modulo specificato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

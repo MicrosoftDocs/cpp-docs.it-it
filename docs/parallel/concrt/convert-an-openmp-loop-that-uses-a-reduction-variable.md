@@ -5,20 +5,20 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: ee0a600f4234c3ebf4681ad92b5e3623be5665c3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 15ec81fb4fafd7850162a1feab28e72d469aff91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141272"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206003"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP che usa una variabile di riduzione per l'utilizzo del runtime di concorrenza
 
 In questo esempio viene illustrato come convertire un ciclo OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md) che utilizza la clausola [reduction](../../parallel/openmp/reference/reduction.md) per utilizzare la runtime di concorrenza.
 
-La clausola `reduction` OpenMP consente di specificare una o più variabili thread-private che sono soggette a un'operazione di riduzione alla fine dell'area parallela. OpenMP definisce un set di operatori di riduzione. Ogni variabile di riduzione deve essere scalare, ad esempio `int`, `long`e `float`. OpenMP definisce inoltre diverse restrizioni relative alla modalità di utilizzo delle variabili di riduzione in un'area parallela.
+La `reduction` clausola OpenMP consente di specificare una o più variabili thread-private che sono soggette a un'operazione di riduzione alla fine dell'area parallela. OpenMP definisce un set di operatori di riduzione. Ogni variabile di riduzione deve essere scalare, ad esempio,, **`int`** **`long`** e **`float`** . OpenMP definisce inoltre diverse restrizioni relative alla modalità di utilizzo delle variabili di riduzione in un'area parallela.
 
-La libreria PPL (Parallel Patterns Library) fornisce la classe [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) , che fornisce un'archiviazione locale di thread riutilizzabile che consente di eseguire calcoli con granularità fine e quindi di unire tali calcoli in un risultato finale. La classe `combinable` è un modello che agisce su tipi scalari e complessi. Per usare la classe `combinable`, eseguire calcoli secondari nel corpo di un costrutto parallelo e quindi chiamare il metodo [Concurrency:: combinable:: combine](reference/combinable-class.md#combine) o [Concurrency:: combinable:: combine_each](reference/combinable-class.md#combine_each) per produrre il risultato finale. I metodi `combine` e `combine_each` accettano ognuna una *funzione di combinazione* che specifica come combinare ogni coppia di elementi. Pertanto, la classe `combinable` non è limitata a un set fisso di operatori di riduzione.
+La libreria PPL (Parallel Patterns Library) fornisce la classe [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) , che fornisce un'archiviazione locale di thread riutilizzabile che consente di eseguire calcoli con granularità fine e quindi di unire tali calcoli in un risultato finale. La `combinable` classe è un modello che agisce su tipi scalari e complessi. Per usare la `combinable` classe, eseguire calcoli secondari nel corpo di un costrutto parallelo e quindi chiamare il metodo [Concurrency:: combinable:: combine](reference/combinable-class.md#combine) o [Concurrency:: combinable:: combine_each](reference/combinable-class.md#combine_each) per produrre il risultato finale. I `combine` `combine_each` metodi e accettano una *funzione di combinazione* che specifica come combinare ogni coppia di elementi. La `combinable` classe non è pertanto limitata a un set fisso di operatori di riduzione.
 
 ## <a name="example"></a>Esempio
 
@@ -35,13 +35,13 @@ Using the Concurrency Runtime...
 The sum of the first 35 Fibonacci numbers is 14930351.
 ```
 
-Per ulteriori informazioni sulla classe `combinable`, vedere [contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).
+Per ulteriori informazioni sulla `combinable` classe, vedere [contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `concrt-omp-fibonacci-reduction.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato, `concrt-omp-fibonacci-reduction.cpp` quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-> **CL. exe/EHsc/OpenMP concrt-omp-fibonacci-reduction. cpp**
+> **cl.exe/EHsc/OpenMP concrt-omp-fibonacci-reduction. cpp**
 
 ## <a name="see-also"></a>Vedere anche
 

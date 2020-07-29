@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 70796db02f8ff3fcfd67694fb596722664e8f904
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 424ae09f6462d4d34b5a847fc210f9329e76d788
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404255"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218338"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL: tipi di dati SQL e C++ (ODBC)
 
@@ -26,11 +26,11 @@ Nella tabella seguente viene eseguito il mapping dei tipi di dati SQL ANSI ai ti
 |------------------------|---------------------|
 |**CHAR**|`CString`|
 |**DECIMALE**|`CString`1|
-|**SMALLINT**|**int**|
-|**REALE**|**float**|
-|**INTERO**|**lungo**|
-|**FLOAT**|**double**|
-|**DOPPIO**|**double**|
+|**SMALLINT**|**`int`**|
+|**REALE**|**`float`**|
+|**INTERO**|**`long`**|
+|**FLOAT**|**`double`**|
+|**DOPPIO**|**`double`**|
 |**NUMERICO**|`CString`1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
@@ -42,7 +42,7 @@ Nella tabella seguente viene eseguito il mapping dei tipi di dati SQL ANSI ai ti
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**Data**|`CTime`, `CString`|
 |**TEMPO**|`CTime`, `CString`|
-|**timestamp**|`CTime`, `CString`|
+|**TIMESTAMP**|`CTime`, `CString`|
 
 1. Il mapping **decimale** e **numerico** ANSI a `CString` perché **SQL_C_CHAR** è il tipo di trasferimento ODBC predefinito.
 

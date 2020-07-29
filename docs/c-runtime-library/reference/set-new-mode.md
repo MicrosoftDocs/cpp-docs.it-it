@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aa21854f6a8c4b58a510b16e824449a53b91f329
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920093"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218533"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -57,7 +57,7 @@ Restituisce la modalità del gestore precedente impostata per **malloc**. Il val
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione C++ **_set_new_mode** imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando si verifica un errore per lo stesso motivo. Per altre informazioni, vedere le informazioni sugli operatori [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*. Per eseguire l'override del comportamento predefinito, chiamare:
+La funzione C++ **_set_new_mode** imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui l' **`new`** operatore esegue quando si verifica un errore per lo stesso motivo. Per altre informazioni, vedere le informazioni sugli operatori [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*. Per eseguire l'override del comportamento predefinito, chiamare:
 
 ```cpp
 _set_new_mode(1);
@@ -65,7 +65,7 @@ _set_new_mode(1);
 
 all'inizio del programma o collegamento con NewMode. obj (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).
 
-Questa funzione convalida il relativo parametro. Se *newhandlermode* è un valore diverso da 0 o 1, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, <strong>_set_new_mode</strong> restituisce-1 e **errno** viene impostato su `EINVAL`.
+Questa funzione convalida il relativo parametro. Se *newhandlermode* è un valore diverso da 0 o 1, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, <strong>_set_new_mode</strong> restituisce-1 e **errno** viene impostato su `EINVAL` .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -79,7 +79,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [libero](free.md)<br/>
 [realloc](realloc.md)<br/>

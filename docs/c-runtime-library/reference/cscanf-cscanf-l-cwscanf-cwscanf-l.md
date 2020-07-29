@@ -48,19 +48,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079987"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234250"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Legge i dati formattati dalla console. Sono disponibili versioni più sicure di queste funzioni. Vedere [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
 > [!NOTE]
-> In Visual Studio 2015 il `printf` e la famiglia di funzioni `scanf` sono stati dichiarati come **inline** e spostati nelle intestazioni `<stdio.h>` e `<conio.h>`. Se si esegue la migrazione di codice precedente, è possibile che venga visualizzato *LNK2019* in relazione a queste funzioni. Per ulteriori informazioni, vedere [la C++ cronologia delle modifiche visive 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> In Visual Studio 2015 la `printf` `scanf` famiglia di funzioni e è stata dichiarata come **`inline`** e spostata nelle `<stdio.h>` `<conio.h>` intestazioni e. Se si esegue la migrazione di codice precedente, è possibile che venga visualizzato *LNK2019* in relazione a queste funzioni. Per ulteriori informazioni, vedere [Visual C++ cronologia delle modifiche 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -125,7 +125,7 @@ Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezio
 |**_cscanf**, **_cscanf_l**|\<conio.h>|
 |**_cwscanf**, **_cwscanf_l**|\<conio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -166,7 +166,7 @@ You entered 3 2 1
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

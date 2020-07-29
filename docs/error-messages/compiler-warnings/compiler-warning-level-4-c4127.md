@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 9d4397c11c4d2f0f9013c7df914cbc4be9fd4e9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: afca92602aa6033c56869d3f84192ca0f029a23e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198484"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218117"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Avviso del compilatore (livello 4) C4127
 
@@ -19,9 +19,9 @@ ms.locfileid: "80198484"
 
 ## <a name="remarks"></a>Osservazioni
 
-L'espressione di controllo di un'istruzione **if** o di un ciclo **while** restituisce una costante. A causa dell'utilizzo comune di tipo idiomatiche, a partire da Visual Studio 2015 Update 3, le costanti semplici come 1 o **true** non attivano l'avviso, a meno che non siano il risultato di un'operazione in un'espressione.
+L'espressione di controllo di un' **`if`** istruzione o di un **`while`** ciclo restituisce una costante. A causa dell'utilizzo comune di tipo idiomatiche, a partire da Visual Studio 2015 Update 3, le costanti semplici come 1 o non **`true`** attivano l'avviso, a meno che non siano il risultato di un'operazione in un'espressione.
 
-Se l'espressione di controllo di un ciclo **while** è una costante perché il ciclo viene chiuso al centro, provare a sostituire il ciclo **while** con un ciclo **for** . È possibile omettere l'inizializzazione, il test di terminazione e l'incremento del ciclo di un ciclo **for** , che fa sì che il ciclo sia infinito, come `while(1)`ed è possibile uscire dal corpo dell'istruzione **for** .
+Se l'espressione di controllo di un **`while`** ciclo è una costante perché il ciclo viene chiuso al centro, provare a sostituire il **`while`** ciclo con un **`for`** ciclo. È possibile omettere l'inizializzazione, il test di terminazione e l'incremento del ciclo di un **`for`** ciclo, che fa sì che il ciclo sia infinito, proprio come `while(1)` ed è possibile uscire dal corpo dell' **`for`** istruzione.
 
 ## <a name="example"></a>Esempio
 

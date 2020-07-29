@@ -6,16 +6,16 @@ f1_keywords:
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331610"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234094"
 ---
 # <a name="isinf"></a>isinf
 
-Determina se un valore a virgola mobile è un numero infinito.
+Determina se un valore a virgola mobile è infinito.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,11 +37,11 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**isinf** restituisce un valore diverso da zero (**true** nel codice C++) se l'argomento *x* è un infinito positivo o negativo. **isinf** restituisce 0 (**false** nel codice C++) se l'argomento è limitato o è un NAN. Normali e subnormal valori a virgola mobile vengono considerati finiti.
+**isinf** restituisce un valore diverso da zero ( **`true`** nel codice C++) se l'argomento *x* è un infinito positivo o negativo. **isinf** restituisce 0 ( **`false`** nel codice C++) se l'argomento è finito o NaN. Sia i valori a virgola mobile normali che quelli subnormali sono considerati finiti.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**isinf** è una macro quando viene compilato come C e una funzione di modello inline durante la compilazione come C++.
+**isinf** è una macro quando viene compilata come C e una funzione di modello inline quando viene compilata come C++.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -49,11 +49,11 @@ Valore a virgola mobile da verificare.
 |--------------|---------------------------|-------------------------------|
 |**isinf**|\<math.h>|\<math.h> o \<cmath>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

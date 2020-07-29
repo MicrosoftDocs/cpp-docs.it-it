@@ -7,12 +7,12 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 168b1fc20d165c44c3230a8d1094c99b689ddbb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233548"
 ---
 # <a name="while-statement-c"></a>Istruzione while (C++)
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Osservazioni
 
-Il test dell' *espressione* si verifica prima di ogni esecuzione del ciclo; Pertanto, un ciclo **while** viene eseguito zero o più volte. l' *espressione* deve essere di un tipo integrale, un tipo di puntatore o un tipo di classe con una conversione non ambigua a un tipo integrale o puntatore.
+Il test dell' *espressione* si verifica prima di ogni esecuzione del ciclo; Pertanto, un **`while`** ciclo viene eseguito zero o più volte. l' *espressione* deve essere di un tipo integrale, un tipo di puntatore o un tipo di classe con una conversione non ambigua a un tipo integrale o puntatore.
 
-Un ciclo **while** può terminare anche quando viene eseguita un'istruzione [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)o [return](../cpp/return-statement-cpp.md) all'interno del corpo dell'istruzione. Utilizzare [continua](../cpp/continue-statement-cpp.md) per terminare l'iterazione corrente senza uscire dal ciclo **while** . **continua** passa il controllo all'iterazione successiva del ciclo **while** .
+Un **`while`** ciclo può terminare anche quando viene eseguita un'istruzione [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)o [return](../cpp/return-statement-cpp.md) all'interno del corpo dell'istruzione. Utilizzare [continua](../cpp/continue-statement-cpp.md) per terminare l'iterazione corrente senza uscire dal **`while`** ciclo. **`continue`** passa il controllo all'iterazione successiva del **`while`** ciclo.
 
-Il codice seguente usa un ciclo **while** per tagliare i caratteri di sottolineatura finali da una stringa:
+Il codice seguente usa un **`while`** ciclo per tagliare i caratteri di sottolineatura finali da una stringa:
 
 ```cpp
 // while_statement.cpp

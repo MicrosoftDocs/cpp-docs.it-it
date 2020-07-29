@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2534
 ms.assetid: 481f9f54-5b51-4aa0-8eea-218f10807705
-ms.openlocfilehash: 4b1e481c733f52b0be419b7fd786b26a90362f9c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 202e3bbe2238b4cc2a5233ac4e093717d623f099
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207901"
 ---
 # <a name="compiler-error-c2534"></a>Errore del compilatore C2534
 
 ' Identifier ': il costruttore non può restituire un valore
 
-Un costruttore non può restituire un valore o avere un tipo restituito (non anche un tipo `void` restituito).
+Un costruttore non può restituire un valore o avere un tipo restituito, non anche un **`void`** tipo restituito.
 
-Questo errore può essere corretto rimuovendo l'istruzione `return` dalla definizione del costruttore.
+Questo errore può essere corretto rimuovendo l' **`return`** istruzione dalla definizione del costruttore.
 
 L'esempio seguente genera l'C2534:
 

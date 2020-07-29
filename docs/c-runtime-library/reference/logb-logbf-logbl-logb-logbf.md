@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911407"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218572"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -97,7 +97,7 @@ Un valore a virgola mobile.
 
 Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se le *x* fossero rappresentate con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **logb** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **logb** accetta e restituisce sempre un oggetto **`double`** .
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -121,5 +121,5 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

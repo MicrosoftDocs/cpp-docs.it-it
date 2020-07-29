@@ -18,12 +18,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233730"
 ---
 # <a name="inheritance-keywords"></a>Parole chiave di ereditarietà
 
@@ -37,7 +37,7 @@ class [__virtual_inheritance] class-name;
 
 dove:
 
-*nome-classe*<br/>
+*Nome classe*<br/>
 Il nome della classe che si sta dichiarando.
 
 Il linguaggio C++ consente di dichiarare un puntatore a un membro della classe prima della definizione della classe. Ad esempio:
@@ -47,15 +47,15 @@ class S;
 int S::*p;
 ```
 
-Nel codice precedente, `p` viene dichiarato come un puntatore a un membro integer della classe S. Tuttavia, `class S` non è ancora stato definito in questo codice; è stato solo dichiarato. Quando il compilatore rileva tale puntatore, deve effettuare una rappresentazione generalizzata del puntatore. La dimensione della rappresentazione dipende dal modello di ereditarietà specificato. Sono disponibili quattro modi per specificare un modello di ereditarietà al compilatore:
+Nel codice precedente, `p` viene dichiarato come un puntatore a un membro integer della classe S. Tuttavia, `class S` non è ancora stato definito in questo codice. è stato dichiarato solo. Quando il compilatore rileva tale puntatore, deve effettuare una rappresentazione generalizzata del puntatore. La dimensione della rappresentazione dipende dal modello di ereditarietà specificato. Sono disponibili quattro modi per specificare un modello di ereditarietà al compilatore:
 
-- Nell'IDE in **rappresentazione puntatore a membro**
+- Nell'IDE sotto la **rappresentazione da puntatore a membro**
 
-- Nella riga di comando utilizzando l'opzione [/vmg](../build/reference/vmb-vmg-representation-method.md)
+- Dalla riga di comando usando l'opzione [/VMG](../build/reference/vmb-vmg-representation-method.md)
 
-- Utilizzo del pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
+- Uso del pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
 
-- Utilizzando le parole chiave di ereditarietà **__single_inheritance**, **__multiple_inheritance**e **__virtual_inheritance**. Con questa tecnica viene controllato il modello di ereditarietà in base alle classi.
+- Utilizzo delle parole chiave di ereditarietà **`__single_inheritance`** , **`__multiple_inheritance`** e **`__virtual_inheritance`** . Con questa tecnica viene controllato il modello di ereditarietà in base alle classi.
 
     > [!NOTE]
     >  Se si dichiara sempre un puntatore a un membro di una classe dopo la definizione della classe, non è necessario utilizzare nessuna di queste opzioni.
@@ -74,9 +74,9 @@ indipendentemente dalle opzioni della riga di comando o dai pragma, i puntatori 
 > [!NOTE]
 > La stessa dichiarazione con prototipo della rappresentazione della classe puntatore a membro deve verificarsi in ogni unità di conversione che dichiara i puntatori ai membri di quella classe e la dichiarazione deve verificarsi prima che vengano dichiarati i puntatori ai membri.
 
-Per compatibilità con le versioni precedenti, **_single_inheritance**, **_multiple_inheritance**e **_virtual_inheritance** sono sinonimi di **__single_inheritance**, **__multiple_inheritance**e **__virtual_inheritance,** a meno che non venga specificata l'opzione del compilatore [ \(/-As Disable).](../build/reference/za-ze-disable-language-extensions.md)
+Per compatibilità con le versioni precedenti, **_single_inheritance**, **_multiple_inheritance**e **_virtual_inheritance** sono sinonimi per **`__single_inheritance`** , e a **`__multiple_inheritance`** **`__virtual_inheritance`** meno che non sia specificata l'opzione del compilatore [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

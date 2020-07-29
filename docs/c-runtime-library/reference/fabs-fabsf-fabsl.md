@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920236"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234120"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -83,13 +83,13 @@ Le funzioni **fabs** restituiscono il valore assoluto dell'argomento *x*. Non vi
 
 ## <a name="remarks"></a>Osservazioni
 
-C++ consente l'overload, quindi è possibile chiamare gli overload di **fabs** se si include l' \<intestazione cmath>. In un programma C **fabs** accetta e restituisce sempre un **valore Double**.
+C++ consente l'overload, quindi è possibile chiamare gli overload di **fabs** se si include l' \<cmath> intestazione. In un programma C **fabs** accetta e restituisce sempre un oggetto **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|-----------------------|---------------------------|
 |**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> o \<math.h>|
 
@@ -101,6 +101,6 @@ Vedere l'esempio per [abs](abs-labs-llabs-abs64.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>

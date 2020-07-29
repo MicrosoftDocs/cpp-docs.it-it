@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d616079745c0a5adfa4167e4bdde8e7768f9b9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209846"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218312"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Override di una funzione di accesso dinamica
 
-Quando si usa una funzione di accesso dinamica, ad esempio `CDynamicAccessor`, il metodo `Open` comando crea automaticamente una funzione di accesso, in base alle informazioni sulla colonna del set di righe aperto. È possibile eseguire l'override della funzione di accesso dinamica per controllare esattamente il modo in cui vengono associate le colonne.
+Quando si usa una funzione di accesso dinamica, ad esempio `CDynamicAccessor` , il metodo di comando `Open` crea automaticamente una funzione di accesso, in base alle informazioni sulla colonna del set di righe aperto. È possibile eseguire l'override della funzione di accesso dinamica per controllare esattamente il modo in cui vengono associate le colonne.
 
-Per eseguire l'override della funzione di accesso dinamica, passare **false** come ultimo parametro al metodo `CCommand::Open`. In questo modo si impedisce `Open` la creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente illustra come eseguire questa operazione:
+Per eseguire l'override della funzione di accesso dinamica, passare **`false`** come ultimo parametro al `CCommand::Open` metodo. In questo modo si impedisce la `Open` creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente illustra come eseguire questa operazione:
 
 ```cpp
 USES_CONVERSION;

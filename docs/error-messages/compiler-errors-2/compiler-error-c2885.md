@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9b6b7bb54d5dce48dc6fce517eb0c909b0284da2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760928"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233444"
 ---
 # <a name="compiler-error-c2885"></a>Errore del compilatore C2885
 
@@ -21,7 +21,7 @@ ms.locfileid: "74760928"
 
 ## <a name="example"></a>Esempio
 
-Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: non è più valido avere una dichiarazione `using` a un tipo annidato; è necessario qualificare in modo esplicito ogni riferimento creato al tipo annidato, inserire il tipo in uno spazio dei nomi o creare un typedef.
+Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: non è più valido avere una **`using`** dichiarazione in un tipo annidato. è necessario qualificare in modo esplicito ogni riferimento effettuato al tipo annidato, inserire il tipo in uno spazio dei nomi o creare un typedef.
 
 L'esempio seguente genera l'C2885.
 
@@ -54,7 +54,7 @@ int main () {
 
 ## <a name="example"></a>Esempio
 
-Se si usa la parola chiave `using` con un membro di C++ classe, è necessario definire tale membro all'interno di un'altra classe (una classe derivata).
+Se si usa la **`using`** parola chiave con un membro di classe, C++ richiede di definire il membro all'interno di un'altra classe (una classe derivata).
 
 L'esempio seguente genera l'C2885.
 

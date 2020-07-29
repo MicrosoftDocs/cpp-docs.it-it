@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912236"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218520"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -99,7 +99,7 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **tgamma** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **tgamma** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **tgamma** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **tgamma** accetta e restituisce sempre un oggetto **`double`** .
 
 Se x è un numero naturale, questa funzione restituisce il fattoriale di (x-1).
 
@@ -107,7 +107,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
 
@@ -115,5 +115,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

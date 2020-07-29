@@ -5,18 +5,18 @@ f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926112"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233288"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Avviso del compilatore (livello 1) C4305
 
 > '*context*': troncamento da'*tipo1*' a'*tipo2*'
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questo avviso viene generato quando un valore viene convertito in un tipo più piccolo in un'inizializzazione o come argomento del costruttore, causando una perdita di informazioni.
 
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Per risolvere il problema, inizializzare utilizzando un valore del tipo corretto oppure utilizzare un cast esplicito al tipo corretto. Usare, ad esempio, un valore letterale **float** , ad esempio 2.71828 f anziché un valore **Double** (il tipo predefinito per i valori letterali a virgola mobile) per inizializzare una variabile **float** oppure passare a un costruttore che accetta un argomento **float** .
+Per risolvere il problema, inizializzare utilizzando un valore del tipo corretto oppure utilizzare un cast esplicito al tipo corretto. Usare, ad esempio, un **`float`** valore letterale come 2.71828 f anziché **`double`** (il tipo predefinito per i valori letterali a virgola mobile) per inizializzare una **`float`** variabile o passare a un costruttore che accetta un **`float`** argomento.

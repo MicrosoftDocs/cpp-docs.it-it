@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 7bded618c481e59f60c5528510c757dec7226acc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 716fdf244f19fa8f0960a0279da3c39af1546178
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759997"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218260"
 ---
 # <a name="compiler-error-c2348"></a>Errore del compilatore C2348
 
 ' type name ': non è un'aggregazione di tipo C e non può essere esportata in Embedded-IDL
 
-Per inserire un `struct` in un file con estensione IDL con l'attributo [Export](../../windows/export.md) , il `struct` deve contenere solo dati.
+Per inserire un oggetto **`struct`** in un file con estensione IDL con l'attributo [Export](../../windows/export.md) , **`struct`** deve contenere solo dati.
 
 L'esempio seguente genera l'C2348:
 

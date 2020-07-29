@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916699"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211619"
 ---
 # <a name="_write"></a>_write
 
@@ -68,7 +68,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _dose
 
 Se il file viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con una coppia ritorno a capo/avanzamento riga nell'output. La sostituzione non influisce sul valore restituito.
 
-Quando il file viene aperto in modalità di conversione Unicode, ad esempio se *FD* viene aperto utilizzando **_open** o **_sopen** e un parametro di modalità che include **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o se viene aperto usando **fopen** e un parametro di modalità che include **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**o se la modalità viene modificata in una modalità di conversione Unicode usando **_setmode**, il*buffer* viene interpretato come un puntatore a una matrice di **wchar_t** che contiene dati **UTF-16** . Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
+Quando il file viene aperto in modalità di conversione Unicode, ad esempio se *FD* viene aperto utilizzando **_open** o **_sopen** e un parametro di modalità che include **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o se viene aperto usando **fopen** e un parametro di modalità che include **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**o se la modalità viene modificata in una modalità di conversione Unicode usando **_setmode**, il*buffer* viene interpretato come un puntatore a una matrice di **`wchar_t`** che contiene dati **UTF-16** . Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -146,7 +146,7 @@ Wrote 36 bytes to file.
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

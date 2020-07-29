@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 068bdb2c7c87e8fe7cd3e482f53934de098a6166
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218091"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Avviso del compilatore (livello 4) C4512
 
@@ -23,13 +23,13 @@ L'avviso può essere generato da un operatore di assegnazione per la classe base
 
 Per evitare la visualizzazione dell'avviso, specificare un operatore di assegnazione definito dall'utente per la classe.
 
-Verrà inoltre generata una funzione di operatore di assegnazione per una classe che non ne definisce nessuna. L'operatore di assegnazione è una copia membro per membro dei membri dati di un oggetto. Poiché dopo l'inizializzazione non è possibile modificare gli elementi di dati `const`, se la classe contiene un elemento `const`, l'operatore di assegnazione predefinito non funzionerà. Un'altra causa dell'avviso di C4512 è una dichiarazione di un membro dati non statico di tipo di riferimento. Se l'intento è quello di creare un tipo non copiabile, è necessario anche impedire la creazione di un costruttore di copia predefinito.
+Verrà inoltre generata una funzione di operatore di assegnazione per una classe che non ne definisce nessuna. L'operatore di assegnazione è una copia membro per membro dei membri dati di un oggetto. Poiché gli **`const`** elementi di dati non possono essere modificati dopo l'inizializzazione, se la classe contiene un **`const`** elemento, l'operatore di assegnazione predefinito non funzionerà. Un'altra causa dell'avviso di C4512 è una dichiarazione di un membro dati non statico di tipo di riferimento. Se l'intento è quello di creare un tipo non copiabile, è necessario anche impedire la creazione di un costruttore di copia predefinito.
 
 Per evitare la visualizzazione dell'avviso C4512 per il codice, sono possibili tre soluzioni:
 
 - Definire in modo esplicito un operatore di assegnazione per la classe.
 
-- Rimuovere **const** o l'operatore Reference dall'elemento dati nella classe.
+- Rimuovere **`const`** o l'operatore di riferimento dall'elemento dati nella classe.
 
 - Utilizzare l'istruzione #pragma [warning](../../preprocessor/warning.md) per disattivare l'avviso.
 

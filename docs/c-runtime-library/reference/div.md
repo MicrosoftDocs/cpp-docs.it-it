@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937690"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234224"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -69,21 +69,21 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Parametri
 
-*numer*<br/>
+*numero*<br/>
 Numeratore.
 
-*denom*<br/>
+*Denom*<br/>
 Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
 
-**div** chiamato usando gli argomenti di tipo **int** restituisce una struttura di tipo **div_t**, che comprende il quoziente e il resto. Il valore restituito con argomenti di tipo **Long** è **ldiv_t**e il valore restituito con argomenti **di tipo Long** **Long** è **lldiv_t**. **div_t**, **ldiv_t**e **lldiv_t** sono definiti in \<stdlib. h >.
+**div** chiamato usando gli argomenti di tipo **`int`** restituisce una struttura di tipo **div_t**, che comprende il quoziente e il resto. Il valore restituito con argomenti di tipo **`long`** è **ldiv_t**e il valore restituito con argomenti di tipo **`long long`** è **lldiv_t**. **div_t**, **ldiv_t**e **lldiv_t** sono definite in \<stdlib.h> .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **div** divide i *numeri* per *Denom* e quindi calcola il quoziente e il resto. La struttura [div_t](../../c-runtime-library/standard-types.md) contiene il quoziente, la **quota**e il resto **REM**. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
+La funzione **div** divide i *numeri* per *Denom* e quindi calcola il quoziente e il resto. La struttura [div_t](../../c-runtime-library/standard-types.md) contiene il quoziente, la **quota**e il resto **REM**. Il segno del quoziente è identico a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
 
-Gli overload di **div** che accettano argomenti di tipo **Long** o **Long** **Long** sono disponibili solo per C++ il codice. I tipi restituiti [ldiv_t](../../c-runtime-library/standard-types.md) e [lldiv_t](../../c-runtime-library/standard-types.md) contengono i membri **quot** e **REM**, che hanno gli stessi significati dei membri di **div_t**.
+Gli overload di **div** che accettano argomenti di tipo **`long`** o **`long long`** sono disponibili solo per il codice C++. I tipi restituiti [ldiv_t](../../c-runtime-library/standard-types.md) e [lldiv_t](../../c-runtime-library/standard-types.md) contengono i membri **quot** e **REM**, che hanno gli stessi significati dei membri di **div_t**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -133,6 +133,6 @@ The quotient is 67, and the remainder is 5
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>

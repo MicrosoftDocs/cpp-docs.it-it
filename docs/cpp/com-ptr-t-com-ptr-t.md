@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180485"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233795"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Costruisce un oggetto **_com_ptr_t** .
 
@@ -139,30 +139,30 @@ explicit _com_ptr_t(
 Puntatore a interfaccia raw.
 
 *fAddRef*<br/>
-Se TRUE, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.
+Se **`true`** , `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.
 
-*cp*<br/>
+*CP*<br/>
 Oggetto **_com_ptr_t** .
 
 *p*<br/>
 Puntatore a interfaccia raw, il cui tipo è diverso dal tipo di puntatore intelligente di questo oggetto **_com_ptr_t** .
 
 *varSrc*<br/>
-Oggetto `_variant_t` .
+Un oggetto `_variant_t`.
 
-*CLSID*<br/>
-`CLSID` di una coclasse.
+*clsid*<br/>
+`CLSID`Di una coclasse.
 
 *dwClsContext*<br/>
 Contesto del codice eseguibile in esecuzione.
 
 *lpcStr*<br/>
-Stringa multibyte che include un `CLSID` (a partire da " **{** ") o una `ProgID`.
+Stringa multibyte che include un oggetto `CLSID` (a partire da "**{**") o `ProgID` .
 
 *pOuter*<br/>
 Oggetto sconosciuto esterno per l' [aggregazione](/windows/win32/com/aggregation).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

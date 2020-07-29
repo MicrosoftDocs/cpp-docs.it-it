@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913514"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218715"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Converte una stringa **in un intero Long** **Long** .
+Converte una stringa in un **`long long`** Integer.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -73,7 +73,7 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa da convertire.
 
 *locale*<br/>
@@ -81,7 +81,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione **restituisce il valore Long** **Long** prodotto interpretando i caratteri di input come numero. Il valore restituito per **Atoll** è 0 se l'input non può essere convertito in un valore di tale tipo.
+Ogni funzione restituisce il **`long long`** valore che viene prodotto interpretando i caratteri di input come numero. Il valore restituito per **Atoll** è 0 se l'input non può essere convertito in un valore di tale tipo.
 
 Per l'overflow con valori integrali positivi di grandi dimensioni, **Atoll** restituisce **LLONG_MAX**e per l'overflow con valori integrali negativi di grandi dimensioni restituisce **LLONG_MIN**.
 
@@ -89,7 +89,7 @@ In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste funzioni convertono una stringa di caratteri **in un valore Long** **Long** Integer.
+Queste funzioni convertono una stringa di caratteri in un **`long long`** valore integer.
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere potrebbe essere il carattere null ('\0' or L'\0') che termina la stringa.
 
@@ -173,8 +173,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

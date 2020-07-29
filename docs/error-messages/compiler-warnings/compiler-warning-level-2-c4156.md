@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: b9add4af0fddf8d68bbba0293530f2bb0ce3800d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 279ab5d9de738fb4e2aa6dece4bb16353eca031b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206484"
 ---
 # <a name="compiler-warning-level-2-c4156"></a>Avviso del compilatore (livello 2) C4156
 
 eliminazione di un'espressione di matrice senza utilizzare il formato di matrice ' Delete '; form di matrice sostituito
 
-Il formato non di matrice di **Delete** non può eliminare una matrice. Il compilatore ha convertito l' **eliminazione** nel formato della matrice.
+Il formato non di matrice di **`delete`** non può eliminare una matrice. Compilatore convertito nel **`delete`** formato della matrice.
 
 Questo avviso viene visualizzato solo in Microsoft Extensions (/Ze).
 

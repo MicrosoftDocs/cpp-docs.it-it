@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-ms.openlocfilehash: f739f86a8410c66135704d61944d122a38c196a5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fd2b037ce10f708ab133f31a20636438b0d04b93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938565"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234263"
 ---
 # <a name="_crtsetdumpclient"></a>_CrtSetDumpClient
 
@@ -51,9 +51,9 @@ Nuova funzione del dump di memoria definita dal client da associare al processo 
 
 Restituisce la funzione del dump di blocco definita precedentemente dal client.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_CrtSetDumpClient** consente all'applicazione di associare la propria funzione per eseguire il dump degli oggetti archiviati nei blocchi di memoria **_CLIENT_BLOCK** nel processo di dump della memoria di debug del runtime C. Di conseguenza, ogni volta che una funzione di dump del debug, ad esempio [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) o [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) , esegue il dump di un blocco di memoria **_CLIENT_BLOCK** , viene chiamata anche la funzione di dump dell'applicazione. **_CrtSetDumpClient** fornisce un'applicazione con un metodo semplice per rilevare le perdite di memoria e convalidare o segnalare il contenuto dei dati archiviati nei blocchi **_CLIENT_BLOCK** . Quando _ [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtSetDumpClient** vengono rimosse durante la pre-elaborazione.
+La funzione **_CrtSetDumpClient** consente all'applicazione di associare la propria funzione per eseguire il dump di oggetti archiviati in **_CLIENT_BLOCK** blocchi di memoria nel processo di dump della memoria di debug del runtime del linguaggio C. Di conseguenza, ogni volta che una funzione di dump del debug, ad esempio [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) o [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) esegue il dump di un blocco di memoria **_CLIENT_BLOCK** , viene chiamata anche la funzione di dump dell'applicazione. **_CrtSetDumpClient** fornisce un'applicazione con un metodo semplice per rilevare le perdite di memoria e convalidare o segnalare il contenuto dei dati archiviati nei blocchi di **_CLIENT_BLOCK** . Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtSetDumpClient** vengono rimosse durante la pre-elaborazione.
 
 La funzione **_CrtSetDumpClient** installa la nuova funzione di dump definita dall'applicazione specificata in *dumpClient* e restituisce la funzione di dump definita in precedenza. Segue un esempio di funzione di dump di blocco client:
 
@@ -61,13 +61,13 @@ La funzione **_CrtSetDumpClient** installa la nuova funzione di dump definita da
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-L'argomento *userPortion* è un puntatore all'inizio della parte di dati utente del blocco di memoria e *blockSize* specifica le dimensioni in byte del blocco di memoria allocato. La funzione di dump del blocco client deve restituire **void**. Il puntatore alla funzione di dump del client passato a **_CrtSetDumpClient** è di tipo **_CRT_DUMP_CLIENT**, come definito in CRTDBG. h:
+L'argomento *userPortion* è un puntatore all'inizio della parte di dati utente del blocco di memoria e *blockSize* specifica le dimensioni in byte del blocco di memoria allocato. La funzione di dump del blocco client deve restituire **`void`** . Il puntatore alla funzione di dump del client passato a **_CrtSetDumpClient** è di tipo **_CRT_DUMP_CLIENT**, come definito in CRTDBG. h:
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-Per altre informazioni sulle funzioni che operano sui blocchi di memoria di tipo **_CLIENT_BLOCK** , vedere [funzioni hook del blocco client](/visualstudio/debugger/client-block-hook-functions). La funzione [_CrtReportBlockType](crtreportblocktype.md) può essere usata per restituire informazioni sui tipi e i sottotipi di blocco.
+Per ulteriori informazioni sulle funzioni che operano sui blocchi di memoria di tipo **_CLIENT_BLOCK** , vedere [funzioni hook del blocco client](/visualstudio/debugger/client-block-hook-functions). La funzione [_CrtReportBlockType](crtreportblocktype.md) può essere usata per restituire informazioni sui tipi e i sottotipi di blocco.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -75,7 +75,7 @@ Per altre informazioni sulle funzioni che operano sui blocchi di memoria di tipo
 |-------------|---------------------|
 |**_CrtSetDumpClient**|\<crtdbg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

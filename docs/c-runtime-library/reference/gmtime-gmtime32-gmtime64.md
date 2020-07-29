@@ -37,12 +37,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 16f4315837873c8d78065ea97a11188bdddedbed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916232"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234107"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -63,7 +63,7 @@ Puntatore all'ora archiviata. L'ora è rappresentata come secondi trascorsi dall
 
 ## <a name="return-value"></a>Valore restituito
 
-Puntatore a una struttura di tipo [tm](../../c-runtime-library/standard-types.md). I campi della struttura restituita contengono il valore valutato dell'argomento *sourceTime* in formato UTC anziché nell'ora locale. Ognuno dei campi della struttura è di tipo **int**, come indicato di seguito:
+Puntatore a una struttura di tipo [tm](../../c-runtime-library/standard-types.md). I campi della struttura restituita contengono il valore valutato dell'argomento *sourceTime* in formato UTC anziché nell'ora locale. Ognuno dei campi della struttura è di tipo **`int`** , come indicato di seguito:
 
 |Campo|Descrizione|
 |-|-|
@@ -98,7 +98,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |-------------|---------------------|-|
-|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<> CTime o \<time. h>|
+|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<ctime> o \<time.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

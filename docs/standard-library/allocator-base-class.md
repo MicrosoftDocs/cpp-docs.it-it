@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: b55a7ec92787cb6b3103bf71b65d137d24ffff04
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205002"
 ---
 # <a name="allocator_base-class"></a>Classe allocator_base
 
@@ -61,7 +61,7 @@ class allocator_base
 |Parametro|Description|
 |---------------|-----------------|
 |*Tipo*|Tipo degli elementi assegnato dall'allocatore.|
-|*Sincrono*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](sync-none-class.md), la [Classe sync_per_container](sync-per-container-class.md), la [Classe sync_per_thread](sync-per-thread-class.md) o la [Classe sync_shared](sync-shared-class.md).|
+|*Sincronizza*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](sync-none-class.md), la [Classe sync_per_container](sync-per-container-class.md), la [Classe sync_per_thread](sync-per-thread-class.md) o la [Classe sync_shared](sync-shared-class.md).|
 
 ### <a name="constructors"></a>Costruttori
 
@@ -77,7 +77,7 @@ class allocator_base
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento costante al tipo di oggetto gestito dall'allocatore.|
 |[difference_type](#difference_type)|Tipo integrale con segno che può rappresentare la differenza tra valori di puntatori al tipo di oggetto gestito dall'allocatore.|
 |[puntatore](#pointer)|Tipo che fornisce un puntatore al tipo di oggetto gestito dall'allocatore.|
-|[riferimento](#reference)|Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.|
+|[reference](#reference)|Tipo che fornisce un riferimento al tipo di oggetto gestito dall'allocatore.|
 |[size_type](#size_type)|Tipo integrale senza segno che può rappresentare la lunghezza di qualsiasi sequenza che un oggetto di tipo `allocator_base` può allocare.|
 |[value_type](#value_type)|Tipo gestito dall'allocatore.|
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |Funzione membro|Descrizione|
 |-|-|
-|[_Charalloc](#charalloc)|Alloca lo spazio di archiviazione per una matrice di tipo **char**.|
-|[_Chardealloc](#chardealloc)|Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo **char**.|
+|[_Charalloc](#charalloc)|Alloca lo spazio di archiviazione per una matrice di tipo **`char`** .|
+|[_Chardealloc](#chardealloc)|Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo **`char`** .|
 |[address](#address)|Trova l'indirizzo di un oggetto il cui valore è specificato.|
 |[allocate](#allocate)|Alloca un blocco di memoria sufficiente a contenere almeno un numero specificato di elementi.|
 |[costrutto](#construct)|Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base:: _Charalloc
 
-Alloca lo spazio di archiviazione per una matrice di tipo **char**.
+Alloca lo spazio di archiviazione per una matrice di tipo **`char`** .
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ Questa funzione membro viene usata dai contenitori compilati con un compilatore 
 
 ## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base:: _Chardealloc
 
-Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo **char**.
+Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo **`char`** .
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -139,7 +139,7 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro viene usata dai contenitori compilati con un compilatore che non può compilare la riassociazione. Implementa `_Chardealloc` per l'allocatore definito dall'utente chiamando la funzione `deallocate` del filtro di sincronizzazione. Il puntatore ptr deve essere stato restituito in precedenza da una chiamata a `_Charalloc` per un oggetto allocatore che risulta uguale a `*this`, allocando un oggetto matrice con dimensione e tipo corrispondenti. `_Chardealloc` non genera mai un'eccezione.
+Questa funzione membro viene usata dai contenitori compilati con un compilatore che non può compilare la riassociazione. Implementa `_Chardealloc` per l'allocatore definito dall'utente chiamando la funzione `deallocate` del filtro di sincronizzazione. Il puntatore PTR deve essere stato restituito in precedenza da una chiamata a `_Charalloc` per un oggetto allocatore che risulta uguale a **`*this`** , allocando un oggetto matrice con le stesse dimensioni e tipo. `_Chardealloc` non genera mai un'eccezione.
 
 ## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base:: Address
 

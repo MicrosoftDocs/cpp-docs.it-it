@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761543"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233366"
 ---
 # <a name="compiler-error-c3538"></a>Errore del compilatore C3538
 
@@ -21,11 +21,11 @@ Tutte le variabili dichiarate in un elenco di dichiarazioni non restituiscono lo
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Assicurarsi che tutte le dichiarazioni `auto` nell'elenco siano dedotte nello stesso tipo.
+1. Verificare che tutte le **`auto`** dichiarazioni nell'elenco deducino allo stesso tipo.
 
 ## <a name="example"></a>Esempio
 
-Le seguenti istruzioni generano l'errore C3538. Ogni istruzione dichiara più variabili, ma ogni uso della parola chiave `auto` non viene dedotto nello stesso tipo.
+Le seguenti istruzioni generano l'errore C3538. Ogni istruzione dichiara più variabili, ma ogni utilizzo della **`auto`** parola chiave non deduce lo stesso tipo.
 
 ```cpp
 // C3538.cpp
@@ -47,4 +47,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Auto (parola chiave)](../../cpp/auto-keyword.md)
+[Parola chiave auto](../../cpp/auto-keyword.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919210"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218663"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -79,7 +79,7 @@ Posizione di archiviazione per il percorso o **NULL**.
 Se viene specificato **null** , questa funzione alloca un buffer di almeno dimensioni di *maxlen* usando **malloc**e il valore restituito di **_getdcwd** è un puntatore al buffer allocato. Il buffer può essere liberato chiamando **Free** e passandolo al puntatore.
 
 *maxlen*<br/>
-Intero positivo diverso da zero che specifica la lunghezza massima del percorso, in caratteri: **char** per **_getdcwd** e **wchar_t** per **_wgetdcwd**.
+Intero positivo diverso da zero che specifica la lunghezza massima del percorso, in caratteri: **`char`** per **_getdcwd** e **`wchar_t`** per **_wgetdcwd**.
 
 Se *maxlen* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Per altre informazioni, vedere [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
@@ -124,7 +124,7 @@ Vedere l'esempio in [_getdrive](getdrive.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

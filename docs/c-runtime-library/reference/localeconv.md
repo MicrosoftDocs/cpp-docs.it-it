@@ -28,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916401"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218637"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -57,12 +57,12 @@ La funzione **localeconv** ottiene informazioni dettagliate sulla formattazione 
 |-|-|
 decimal_point,<br/>_W_decimal_point|Puntatore al carattere del punto decimale per le quantità non monetarie.
 thousands_sep,<br/>_W_thousands_sep|Puntatore a carattere che separa i gruppi di cifre a sinistra del separatore decimale per le quantità non monetarie.
-raggruppamento|Puntatore a un intero di dimensione **char**che contiene la dimensione di ogni gruppo di cifre nelle quantità non monetarie.
+raggruppamento|Puntatore a un **`char`** intero di dimensioni che contiene la dimensione di ogni gruppo di cifre nelle quantità non monetarie.
 int_curr_symbol,<br/>_W_int_curr_symbol|Puntatore al simbolo di valuta internazionale per le impostazioni locali correnti. I primi tre caratteri specificano il simbolo di valuta internazionale alfabetico come definito nello standard *ISO 4217 dei codici per la rappresentazione di valute e fondi*. Il quarto carattere (carattere Null immediatamente precedente) separa il simbolo di valuta internazionale dalla quantità monetaria.
 currency_symbol,<br/>_W_currency_symbol|Puntatore al simbolo di valuta locale per le impostazioni locali correnti.
 mon_decimal_point,<br/>_W_mon_decimal_point|Puntatore al carattere del punto decimale per le quantità monetarie.
 mon_thousands_sep,<br/>_W_mon_thousands_sep|Puntatore al separatore per i gruppi di cifre a sinistra della posizione decimale in quantità monetarie.
-mon_grouping|Puntatore a un intero di dimensione **char**che contiene la dimensione di ogni gruppo di cifre nelle quantità monetarie.
+mon_grouping|Puntatore a un **`char`** intero di dimensioni che contiene la dimensione di ogni gruppo di cifre nelle quantità monetarie.
 positive_sign,<br/>_W_positive_sign|Stringa del segno per le quantità monetarie non negative.
 negative_sign,<br/>_W_negative_sign|Stringa del segno per le quantità monetarie negative.
 int_frac_digits|Numero di cifre a destra del separatore decimale in quantità monetarie con formattazione internazionale.
@@ -74,9 +74,9 @@ n_sep_by_space|Impostare su 1 se il simbolo di valuta è separato con uno spazio
 p_sign_posn|Posizione del segno positivo in quantità monetarie formattata non negative.
 n_sign_posn|Posizione del segno positivo in quantità monetarie formattata negative.
 
-Ad eccezione di quanto specificato, i **lconv** membri della struttura lconv `char *` con `wchar_t *` le versioni e sono puntatori alle stringhe. Uno di questi equivale a **""** (o **L ""** per **wchar_t** <strong>\*</strong>) è di lunghezza zero o non è supportato nelle impostazioni locali correnti. Si noti che **decimal_point** e **_W_decimal_point** sono sempre supportati e di lunghezza diversa da zero.
+Ad eccezione di quanto specificato, i **lconv** membri della struttura lconv `char *` `wchar_t *` con le versioni e sono puntatori alle stringhe. Uno qualsiasi di questi equivale a **""** (o **L ""** per **`wchar_t`** <strong>\*</strong> ) ha una lunghezza zero o non è supportata nelle impostazioni locali correnti. Si noti che **decimal_point** e **_W_decimal_point** sono sempre supportati e di lunghezza diversa da zero.
 
-I membri **char** della struttura sono numeri non negativi piccoli, non caratteri. Qualsiasi membro tra questi uguale a **CHAR_MAX** non è supportato nelle impostazioni locali correnti.
+I **`char`** membri della struttura sono numeri non negativi piccoli, non caratteri. Qualsiasi membro tra questi uguale a **CHAR_MAX** non è supportato nelle impostazioni locali correnti.
 
 I valori di **grouping** e **mon_grouping** vengono interpretati in base alle regole seguenti:
 
@@ -132,7 +132,7 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
 [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>

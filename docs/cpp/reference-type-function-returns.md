@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233626"
 ---
 # <a name="reference-type-function-returns"></a>Elementi restituiti dalla funzione tipo-riferimento
 
@@ -86,7 +86,7 @@ Si noti anche che in genere l'oggetto ThePoint rimane nell'ambito e quindi i ris
 
 Le dichiarazioni di tipi di riferimenti devono contenere gli inizializzatori tranne nei seguenti casi:
 
-- Dichiarazione **extern** esplicita
+- Dichiarazione esplicita **`extern`**
 
 - Dichiarazione di un membro di classe
 
@@ -108,7 +108,7 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-Il compilatore genera un avviso in questo caso: `warning C4172: returning address of local variable or temporary`. Nei programmi semplici è possibile che occasionalmente non si verifichino violazioni di accesso se il chiamante accede al riferimento prima della sovrascrittura della posizione di memoria. È una questione di fortuna. È consigliabile prestare attenzione all'avviso.
+Il compilatore genera un avviso in questo caso: `warning C4172: returning address of local variable or temporary` . Nei programmi semplici è possibile che occasionalmente non si verifichino violazioni di accesso se il chiamante accede al riferimento prima della sovrascrittura della posizione di memoria. È una questione di fortuna. È consigliabile prestare attenzione all'avviso.
 
 ## <a name="see-also"></a>Vedere anche
 
