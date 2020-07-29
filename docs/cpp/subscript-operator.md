@@ -1,5 +1,5 @@
 ---
-title: Operatore di indice]
+title: Pedice (operatore) []
 ms.date: 11/04/2016
 f1_keywords:
 - '[]'
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4eb878a18aa38b7047104903d10d96d66cc6720
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231091"
 ---
-# <a name="subscript-operator-"></a>Operatore di indice]
+# <a name="subscript-operator-"></a>Pedice (operatore) []
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,13 +24,13 @@ ms.locfileid: "62266894"
 postfix-expression [ expression ]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un'espressione in forma suffissa (che può anche essere un'espressione primaria) seguita dall'operatore di indice, **[]**, specifica l'indicizzazione della matrice.
+Un'espressione suffissa (che può anche essere un'espressione primaria) seguita dall'operatore di indice, **[]**, specifica l'indicizzazione della matrice.
 
 Per informazioni sulle matrici gestite in C++/CLI, vedere [matrici](../extensions/arrays-cpp-component-extensions.md).
 
-In genere, il valore rappresentato da *postfix-expression* è un valore di puntatore, quale un identificatore di matrice, e *espressione* è un valore integrale (inclusi i tipi enumerati). Tuttavia, l'unica condizione da soddisfare dal punto di vista sintattico è che una delle espressioni sia di tipo puntatore e l'altra di tipo integrale. Pertanto il valore integrale potrebbe essere nella *postfix-expression* posizione e il valore di puntatore potrebbe essere nelle parentesi quadre nella *espressione* o posizione sottoscritta. Si consideri il frammento di codice riportato di seguito.
+In genere, il valore rappresentato da *Postfix-Expression* è un valore di puntatore, ad esempio un identificatore di matrice, ed *Expression* è un valore integrale (inclusi i tipi enumerati). Tuttavia, l'unica condizione da soddisfare dal punto di vista sintattico è che una delle espressioni sia di tipo puntatore e l'altra di tipo integrale. Pertanto il valore integrale potrebbe essere nella posizione *Postfix-Expression* e il valore del puntatore potrebbe essere racchiuso tra parentesi nella posizione dell' *espressione* o dell'indice. Si consideri il frammento di codice riportato di seguito.
 
 ```cpp
 int nArray[5] = { 0, 1, 2, 3, 4 };
@@ -38,23 +38,23 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"
 ```
 
-Nell'esempio precedente l'espressione `nArray[2]` è identica a `2[nArray]`. Il motivo è che il risultato di un'espressione di indice `e1[e2]` è dato da:
+Nell'esempio precedente l'espressione `nArray[2]` è identica a `2[nArray]`. Il motivo è che il risultato di un'espressione di indice `e1[e2]` viene fornito da:
 
 `*((e2) + (e1))`
 
-Non è l'indirizzo restituito dall'espressione *e2* byte dall'indirizzo *e1*. Piuttosto, l'indirizzo è ridimensionato per restituire l'oggetto successivo nella matrice *e2*. Ad esempio:
+L'indirizzo restituito dall'espressione non è *e2* byte dall'indirizzo *E1*. L'indirizzo viene invece ridimensionato per restituire l'oggetto successivo nella matrice *e2*. Ad esempio:
 
 ```cpp
 double aDbl[2];
 ```
 
-Gli indirizzi dei `aDb[0]` e `aDb[1]` sono distanti a 8 byte, ovvero le dimensioni di un oggetto di tipo **doppie**. Questo ridimensionamento in base al tipo di oggetto viene eseguita automaticamente tramite il linguaggio C++ e viene definito nelle [operatori additivi](../cpp/additive-operators-plus-and.md) in cui viene illustrata l'addizione e sottrazione di operandi di tipo puntatore.
+Gli indirizzi di `aDb[0]` e `aDb[1]` sono a 8 byte, ovvero la dimensione di un oggetto di tipo **`double`** . Questo ridimensionamento in base al tipo di oggetto viene eseguito automaticamente dal linguaggio C++ e viene definito negli [operatori additivi](../cpp/additive-operators-plus-and.md) in cui viene discussa l'aggiunta e la sottrazione degli operandi del tipo di puntatore.
 
 Un'espressione di indice può inoltre avere più indici, come nel modo seguente:
 
 *expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, *expression1* **[** *expression2* **]**, viene valutata per prima. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. L'operatore di riferimento indiretto (<strong>\*</strong>) viene applicato dopo l'ultima espressione di indice viene valutata, a meno che il valore del puntatore finale indirizzi un tipo di matrice.
+Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, *expression1* **[** *expression2* **]**, viene valutata per prima. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. L'operatore di riferimento indiretto ( <strong>\*</strong> ) viene applicato dopo la valutazione dell'ultima espressione di indice, a meno che il valore del puntatore finale non indirizzi un tipo di matrice.
 
 Le espressioni con più indici fanno riferimento a elementi di "matrici multidimensionali". Una matrice multidimensionale è una matrice i cui elementi sono matrici. Ad esempio, il primo elemento di una matrice tridimensionale è una matrice con due dimensioni. Nell'esempio seguente viene dichiarata e inizializzata una matrice bidimensionale di caratteri semplice:
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="positive-and-negative-subscripts"></a>Indici positivo e negativo
 
-Il primo elemento di una matrice è l'elemento 0. L'intervallo di un C++ matrice proviene *matrice*[0] per *matrice*[*dimensione* - 1]. Tuttavia, C++ supporta gli indici positivi e negativi. Gli indici negativi devono essere compresi nei limiti della matrice; in caso contrario, i risultati sono imprevedibili. Il codice seguente mostra indici di matrice positivi e negativi:
+Il primo elemento di una matrice è l'elemento 0. L'intervallo di una matrice C++ è da *Array*[0] a *Array*[*size* -1]. Tuttavia, C++ supporta gli indici positivi e negativi. Gli indici negativi devono essere compresi nei limiti della matrice; in caso contrario, i risultati sono imprevedibili. Il codice seguente mostra indici di matrice positivi e negativi:
 
 ```cpp
 #include <iostream>
@@ -102,14 +102,14 @@ int main() {
 }
 ```
 
-L'indice negativo nell'ultima riga può produrre un errore di run-time, perché fa riferimento a un indirizzo 256 **int** posizioni più basso in memoria rispetto all'origine della matrice. Il puntatore del mouse `midArray` viene inizializzato al centro di `intArray`; è quindi possibile (ma pericoloso) usare entrambi gli indici di matrice positivi e negativi su di esso. Gli errori dell'indice di matrice non generano errori in fase di compilazione, ma producono solo risultati imprevisti.
+L'indice negativo nell'ultima riga può produrre un errore di run-time perché punta a un indirizzo 256 **`int`** posizioni inferiori in memoria rispetto all'origine della matrice. Il puntatore `midArray` viene inizializzato al centro di `intArray` ; è quindi possibile (ma pericoloso) usare gli indici di matrice sia positivi che negativi. Gli errori dell'indice di matrice non generano errori in fase di compilazione, ma producono solo risultati imprevisti.
 
-L'operatore di indice è commutativo. Di conseguenza, le espressioni *matrice*[*indice*] e *indice*[*matrice*] sono garantite essere equivalenti fino a quando l'indice operatore non è sottoposto a overload (vedere [operatori di overload](../cpp/operator-overloading.md)). Il primo form è la procedura di codifica più comune, ma entrambi funzionano.
+L'operatore di indice è commutativo. Pertanto, le espressioni *Array*[*index*] e *index*[*Array*] sono sempre equivalenti purché l'operatore pedice non venga sottoposta a overload (vedere [operatori di overload](../cpp/operator-overloading.md)). Il primo form è la procedura di codifica più comune, ma entrambi funzionano.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Espressioni di suffissi](../cpp/postfix-expressions.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Espressioni di suffisso](../cpp/postfix-expressions.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Matrici](../cpp/arrays-cpp.md)<br/>
 [Matrici unidimensionali](../c-language/one-dimensional-arrays.md)<br/>
 [Matrici multidimensionali](../c-language/multidimensional-arrays-c.md)<br/>

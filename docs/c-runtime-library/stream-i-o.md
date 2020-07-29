@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444612"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231247"
 ---
 # <a name="stream-io"></a>I/O di flusso
 
@@ -51,12 +51,12 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Leggere un carattere da **stdin** (versioni macro di **fgetchar** e **fgetwchar**)|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Restituisce il numero dei file aperti contemporaneamente consentito a livello di I/O del flusso.|
 |[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Leggere una riga da **stdin**|
-|[_getw](../c-runtime-library/reference/getw.md)|Leggere **int** binari da un flusso|
+|[_getw](../c-runtime-library/reference/getw.md)|Leggi binario **`int`** dal flusso|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Scrivere dati formattati in **stdout**|
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Scrivere un carattere in un flusso (versioni macro di **fputc** e **fputwc**)|
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Scrivere un carattere in **stdout** (versioni macro di **fputchar** e **fputwchar**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Scrivere una riga nel flusso|
-|[_putw](../c-runtime-library/reference/putw.md)|Scrivere **int** binari in un flusso|
+|[_putw](../c-runtime-library/reference/putw.md)|Scrivi binario **`int`** in flusso|
 |[rewind](../c-runtime-library/reference/rewind.md)|Spostare la posizione del file all'inizio di un flusso|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Rimuovere i file temporanei creati da **tmpfile**|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Leggere dati formattati da **stdin**|
@@ -64,7 +64,7 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 |[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|Impostare un massimo per il numero dei file aperti contemporaneamente al livello del flusso I/O.|
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|Controllare il buffering del flusso e la dimensione del buffer|
 |[_snprintf, _snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|Scrivere dati formattati di lunghezza specificata in una stringa|
-|[_snscanf, _snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Leggere dati formattati di lunghezza specificata dal flusso dello standard input.|
+|[_snscanf, _snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Legge i dati formattati di lunghezza specificata dal flusso dello standard input|
 |[sprintf, swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Scrivere dati formattati in una stringa|
 |[sscanf, swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md), [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|Leggere dati formattati da una stringa|
 |[_tempnam, _wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|Creare il filename temporaneo nella directory specificata|

@@ -24,12 +24,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946031"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188999"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
@@ -69,20 +69,20 @@ Se il *buffer* o il *formato* è un puntatore **null** , viene richiamato il ges
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **vsscanf_s** legge i dati dal *buffer* nei percorsi specificati da ogni argomento nell'elenco di argomenti di *arglist* . Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. A differenza della versione meno sicura **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s**o set di controlli stringa racchiusi tra **[]** . Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
+La funzione **vsscanf_s** legge i dati dal *buffer* nelle posizioni fornite da ogni argomento nell'elenco di argomenti *arglist* . Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. A differenza della versione meno sicura **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s**o set di controlli stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
 
 La dimensione del buffer include il carattere di terminazione null. Potrebbe essere usato un campo di specifica della larghezza per assicurarsi che il token letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 
 Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Il parametro size è di tipo **unsigned**, non **size_t**.
+> Il parametro size è di tipo **`unsigned`** , non **size_t**.
 
 L'argomento *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per la funzione **scanf_s** . Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-**vswscanf_s** è una versione a caratteri wide di **vsscanf_s**; gli argomenti di **vswscanf_s** sono stringhe a caratteri wide. **vsscanf_s** non gestisce i caratteri esadecimali multibyte. **vswscanf_s** non gestisce i caratteri esadecimali a larghezza intera Unicode o "zona di compatibilità". In caso contrario, **vswscanf_s** e **vsscanf_s** si comportano in modo identico.
+**vswscanf_s** è una versione a caratteri wide di **vsscanf_s**; gli argomenti da **vswscanf_s** sono stringhe a caratteri wide. **vsscanf_s** non gestisce i caratteri esadecimali multibyte. **vswscanf_s** non gestisce i caratteri esadecimali a larghezza intera Unicode o "zona di compatibilità". In caso contrario, **vswscanf_s** e **vsscanf_s** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -157,5 +157,5 @@ Real:     = 15.000000
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf, vswscanf](vsscanf-vswscanf.md)<br/>

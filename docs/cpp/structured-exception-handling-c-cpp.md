@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 01eaeaa57ee4d09452f37a7241f89e75fdca843e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857268"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231104"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -25,24 +25,24 @@ Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft a C per ge
 ## <a name="grammar"></a>Grammatica
 
 *try-except-Statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** Compound *-Statement* **`__except`** **(** *Expression* **)** *compound-statement*
 
 *try-finally-Statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** Compound *-* statement **`__finally`** *compound-statement*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Con SEH è possibile verificare che le risorse quali blocchi di memoria e file vengano rilasciate correttamente se l'esecuzione viene terminata in modo imprevisto. È anche possibile gestire problemi specifici, ad esempio memoria insufficiente, usando codice strutturato conciso che non si basa su istruzioni **goto** o test elaborati dei codici restituiti.
+Con SEH è possibile verificare che le risorse quali blocchi di memoria e file vengano rilasciate correttamente se l'esecuzione viene terminata in modo imprevisto. È anche possibile gestire problemi specifici, ad esempio memoria insufficiente, usando codice strutturato conciso che non si basa su **`goto`** istruzioni o test elaborati dei codici restituiti.
 
-Le istruzioni try-except e try-finally a cui si fa riferimento in questo articolo sono estensioni Microsoft per il linguaggio C. Supportano la gestione delle eccezioni strutturata permettendo alle applicazioni di ottenere il controllo di un programma dopo eventi che altrimenti terminerebbero l'esecuzione. Anche se la gestione delle eccezioni strutturata può essere usata con file di origine C++, non è stata progettata in modo specifico per C++. Se si usa SEH in un C++ programma compilato con l'opzione [/EHa o/EHsc](../build/reference/eh-exception-handling-model.md) , vengono chiamati i distruttori per gli oggetti locali, ma il comportamento di esecuzione potrebbe non essere quello previsto. Per un'illustrazione, vedere l'esempio più avanti in questo articolo. Nella maggior parte dei casi, anziché SEH è consigliabile usare la [ C++ gestione delle eccezioni](../cpp/try-throw-and-catch-statements-cpp.md)standard ISO, supportata anche dal C++ compilatore Microsoft. L'uso della gestione delle eccezioni C++ permette di assicurare una maggiore portabilità del codice e la gestione di qualsiasi tipo di eccezione.
+Le istruzioni try-except e try-finally a cui si fa riferimento in questo articolo sono estensioni Microsoft per il linguaggio C. Supportano la gestione delle eccezioni strutturata permettendo alle applicazioni di ottenere il controllo di un programma dopo eventi che altrimenti terminerebbero l'esecuzione. Anche se la gestione delle eccezioni strutturata può essere usata con file di origine C++, non è stata progettata in modo specifico per C++. Se si usa SEH in un programma C++ compilato con l'opzione [/EHa o/EHsc](../build/reference/eh-exception-handling-model.md) , vengono chiamati i distruttori per gli oggetti locali, ma il comportamento di esecuzione potrebbe non essere quello previsto. Per un'illustrazione, vedere l'esempio più avanti in questo articolo. Nella maggior parte dei casi, anziché SEH è consigliabile utilizzare la [gestione delle eccezioni c++](../cpp/try-throw-and-catch-statements-cpp.md)standard ISO, supportata anche dal compilatore Microsoft c++. L'uso della gestione delle eccezioni C++ permette di assicurare una maggiore portabilità del codice e la gestione di qualsiasi tipo di eccezione.
 
-Se si dispone di codice C che usa SEH, è possibile combinarlo C++ con codice che C++ usa la gestione delle eccezioni. Per informazioni, vedere [gestire le eccezioni strutturate in C++ ](../cpp/exception-handling-differences.md).
+Se si dispone di codice C che usa SEH, è possibile combinarlo con codice C++ che usa la gestione delle eccezioni C++. Per informazioni, vedere [gestire le eccezioni strutturate in C++](../cpp/exception-handling-differences.md).
 
 Sono disponibili due meccanismi per la gestione delle eccezioni strutturata:
 
-- [Gestori di eccezioni](../cpp/writing-an-exception-handler.md)o blocchi di **__except** che possono rispondere o ignorare l'eccezione.
+- [Gestori di eccezioni](../cpp/writing-an-exception-handler.md), o **`__except`** blocchi, che possono rispondere o ignorare l'eccezione.
 
-- I [gestori di terminazione](../cpp/writing-a-termination-handler.md)o i blocchi di **__finally** , che vengono sempre chiamati, se un'eccezione causa la terminazione o meno.
+- I [gestori di terminazione](../cpp/writing-a-termination-handler.md), o **`__finally`** blocchi, che vengono sempre chiamati, se un'eccezione causa la terminazione o meno.
 
 Questi due tipi di gestori sono distinti, ma sono strettamente correlati tramite un processo noto come "rimozione dello stack". Quando si verifica un'eccezione strutturata, Windows cerca il gestore di eccezioni installato più di recente attualmente attivo. Il gestore può procedere nei tre modi seguenti:
 
@@ -66,7 +66,7 @@ Durante la rimozione dello stack, il sistema operativo chiama eventuali gestori 
 
 ## <a name="example"></a>Esempio
 
-Come indicato in precedenza, i distruttori per gli oggetti locali vengono chiamati se si usa SEH C++ in un programma e lo si compila con l'opzione **/EHA** o **/EHsc** . È tuttavia possibile che il comportamento durante l'esecuzione non corrisponda a quanto previsto se si usano anche eccezioni C++. In questo esempio vengono illustrate queste differenze di comportamento.
+Come affermato in precedenza, i distruttori per gli oggetti locali vengono chiamati se si usa SEH in un programma C++ e lo si compila con l'opzione **/EHA** o **/EHsc** . È tuttavia possibile che il comportamento durante l'esecuzione non corrisponda a quanto previsto se si usano anche eccezioni C++. In questo esempio vengono illustrate queste differenze di comportamento.
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Se si usa **/EHsc** per compilare il codice, ma la macro del controllo test locale `CPPEX` non è definita, non viene eseguita alcuna esecuzione del distruttore `TestClass` e l'output è simile al seguente:
+Se si usa **/EHsc** per compilare il codice, ma la macro del controllo test locale non `CPPEX` è definita, non viene eseguita alcuna esecuzione del `TestClass` distruttore e l'output è simile al seguente:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-Se si usa **/EHsc** per compilare il codice e `CPPEX` viene definito usando `/DCPPEX` (in modo che venga C++ generata un'eccezione), il distruttore `TestClass` viene eseguito e l'output è simile al seguente:
+Se si usa **/EHsc** per compilare il codice e `CPPEX` viene definito usando `/DCPPEX` , in modo che venga generata un'eccezione C++, il `TestClass` distruttore viene eseguito e l'output è simile al seguente:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Se si utilizza **/EHA** per compilare il codice, il distruttore `TestClass` viene eseguito indipendentemente dal fatto che l'eccezione sia stata generata utilizzando `std::throw` o utilizzando SEH per attivare l'eccezione, ovvero se `CPPEX` definito o meno. L'output sarà analogo al seguente:
+Se si usa **/EHA** per compilare il codice, il `TestClass` distruttore viene eseguito indipendentemente dal fatto che l'eccezione sia stata generata tramite `std::throw` o usando SEH per attivare l'eccezione, ovvero se `CPPEX` definito o meno. L'output è simile al seguente:
 
 ```Output
 Throwing C++ exception
@@ -147,5 +147,5 @@ Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](../bu
 [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Errori e gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Gestione di errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Gestione strutturata delle eccezioni (Windows)](/windows/win32/debug/structured-exception-handling)

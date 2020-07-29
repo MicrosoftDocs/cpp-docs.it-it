@@ -1,43 +1,43 @@
 ---
 title: Istruzione for (C++)
-description: Riferimento all'istruzione standard di C' per in Microsoft Visual Studio.
+description: Riferimento all'istruzione standard C++ for in Microsoft Visual Studio C++.
 f1_keywords:
 - for_cpp
 ms.date: 04/14/2020
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: 92f7ae4b1f2fbaaf710cd5a8739b78cb98a0accb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16486fd58a9b3fec750ebef6ec6647f9d92bca3b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375388"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231182"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C++)
 
-Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni sull'istruzione for basata sull'intervallo, vedere [Istruzione for basata su intervallo (C .](../cpp/range-based-for-statement-cpp.md)
+Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni sull'istruzione for basata su intervallo, vedere [istruzione for basata su intervallo (C++)](../cpp/range-based-for-statement-cpp.md).
 
 ## <a name="syntax"></a>Sintassi
 
-> **`for (`***init-expression* **`;`** *cond-expression* **`;`** *loop-expression***`)`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;_affermazione_**`;`**
+> **`for (`***init-expression* **`;`** *cond-expression* **`;`** *espressione loop***`)`**\
+> &nbsp;&nbsp;&nbsp;&nbsp;_istruzione_**`;`**
 
 ## <a name="remarks"></a>Osservazioni
 
-Utilizzare l'istruzione **for** per costruire cicli che devono eseguire un numero specificato di volte.
+Utilizzare l' **`for`** istruzione per costruire cicli che devono eseguire un numero specificato di volte.
 
-L'istruzione **for** è costituita da tre parti facoltative, come illustrato nella tabella seguente.
+L' **`for`** istruzione è costituita da tre parti facoltative, come illustrato nella tabella seguente.
 
 ### <a name="for-loop-elements"></a>Elementi del ciclo For
 
 |Nome della sintassi|Quando viene eseguito|Descrizione|
 |-----------------|-------------------|-----------------|
-|`init-expression`|Prima di qualsiasi altro elemento `init-expression` dell'istruzione **for,** viene eseguito una sola volta. Il controllo passa a `cond-expression`.|Spesso utilizzato per inizializzare gli indici del ciclo. Può contenere espressioni o dichiarazioni.|
+|`init-expression`|Prima di qualsiasi altro elemento dell' **`for`** istruzione, `init-expression` viene eseguito una sola volta. Il controllo passa a `cond-expression`.|Spesso utilizzato per inizializzare gli indici del ciclo. Può contenere espressioni o dichiarazioni.|
 |`cond-expression`|Prima dell'esecuzione di ogni iterazione di `statement`, inclusa la prima iterazione. `statement` viene eseguito solo se `cond-expression` restituisce true (diverso da zero).|Un'espressione che restituisce un tipo di classe o un tipo integrale con una conversione non ambigua a un tipo integrale. Normalmente utilizzato per verificare i criteri di terminazione del ciclo For.|
 |`loop-expression`|Alla fine di ogni iterazione di `statement`. Dopo l'esecuzione di `loop-expression`, viene valutato `cond-expression`.|Normalmente utilizzato per incrementare gli indici del ciclo.|
 
-Negli esempi seguenti vengono illustrati diversi modi per utilizzare l'istruzione **for.**
+Negli esempi seguenti vengono illustrati diversi modi per utilizzare l' **`for`** istruzione.
 
 ```cpp
 #include <iostream>
@@ -99,11 +99,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-Un ciclo **for** termina quando viene eseguita un'interruzione , [,](../cpp/return-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md) (a un'istruzione con etichetta all'esterno del ciclo **for)** all'interno. `statement` [break](../cpp/break-statement-cpp.md) Un'istruzione [continue](../cpp/continue-statement-cpp.md) in un ciclo **for** termina solo l'iterazione corrente.
+Un **`for`** ciclo termina quando viene eseguita un'istruzione [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md) (a un'istruzione con etichetta all'esterno del **`for`** ciclo) in `statement` . Un'istruzione [continue](../cpp/continue-statement-cpp.md) in un **`for`** ciclo termina solo l'iterazione corrente.
 
-Se `cond-expression` viene omesso, viene `true`considerato e il ciclo **for** non terminerà senza **un'interruzione**, **restituire**o **passare a** all'interno `statement`di .
+Se `cond-expression` viene omesso, viene considerato **`true`** e il **`for`** ciclo non viene terminato senza **`break`** , **`return`** o **`goto`** all'interno di `statement` .
 
-Anche se i tre campi dell'istruzione **for** vengono in genere utilizzati per l'inizializzazione, il test per la terminazione e l'incremento, non sono limitati a questi usi. Ad esempio, il codice seguente consente di stampare i numeri da 0 a 4. In questo caso, `statement` è l'istruzione Null:
+Sebbene i tre campi dell' **`for`** istruzione vengano normalmente utilizzati per l'inizializzazione, il test della terminazione e l'incremento, non sono limitati a questi utilizzi. Ad esempio, il codice seguente consente di stampare i numeri da 0 a 4. In questo caso, `statement` è l'istruzione Null:
 
 ```cpp
 #include <iostream>
@@ -120,7 +120,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>per i cicli e lo standard C++
 
-Lo standard di C, indica che una variabile dichiarata in un ciclo **for** deve uscire dall'ambito dopo la fine del ciclo **for.** Ad esempio:
+Lo standard C++ indica che una variabile dichiarata in un **`for`** ciclo deve uscire dall'ambito al termine del **`for`** ciclo. Ad esempio:
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -129,11 +129,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-Per impostazione predefinita, in [/e](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un ciclo **for** rimane nell'ambito fino al termine dell'ambito di inclusione del ciclo **for.**
+Per impostazione predefinita, in [/ze](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un **`for`** ciclo rimane nell'ambito fino al **`for`** termine dell'ambito di inclusione del ciclo.
 
-[L'opzione /-c:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) abilita il comportamento standard delle `/Za`variabili dichiarate nei cicli for senza dover specificare .
+[/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Abilita il comportamento standard delle variabili dichiarate nei cicli for senza che sia necessario specificare `/Za` .
 
-È anche possibile usare le differenze **for** di ambito del ciclo `/Ze` for per ridichiarare le variabili in seguito a quanto segue:
+È anche possibile usare le differenze di ambito del **`for`** ciclo per dichiarare nuovamente le variabili in `/Ze` come segue:
 
 ```cpp
 // for_statement5.cpp
@@ -145,12 +145,12 @@ int main(){
 }
 ```
 
-Questo comportamento simula più da vicino il comportamento standard di una variabile dichiarata in un ciclo **for,** che richiede che le variabili dichiarate in un ciclo **for** escano dall'ambito dopo l'operazione del ciclo. Quando una variabile viene dichiarata in un ciclo **for,** il compilatore la promuove internamente a una variabile locale nell'ambito di inclusione del ciclo **for.** Viene promosso anche se esiste già una variabile locale con lo stesso nome.
+Questo comportamento simula più accuratamente il comportamento standard di una variabile dichiarata in un **`for`** ciclo, che richiede variabili dichiarate in un **`for`** ciclo per uscire dall'ambito dopo il completamento del ciclo. Quando una variabile viene dichiarata in un **`for`** ciclo, il compilatore lo innalza internamente a una variabile locale nell' **`for`** ambito di inclusione del ciclo. Viene innalzata di livello anche se è già presente una variabile locale con lo stesso nome.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[istruzione while (C](../cpp/while-statement-cpp.md)<br/>
-[Dichiarazione do-while (C )](../cpp/do-while-statement-cpp.md)<br/>
+[Istruzione while (C++)](../cpp/while-statement-cpp.md)<br/>
+[Istruzione do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
 [Istruzione for basata su intervallo (C++)](../cpp/range-based-for-statement-cpp.md)

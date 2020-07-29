@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c827f811813091abc62d07f12ac387bc2a0a0cc5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177625"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231143"
 ---
 # <a name="primary-expressions"></a>Espressioni primarie
 
@@ -28,9 +28,9 @@ name
 
 Un *valore letterale* è un'espressione primaria costante. Il tipo di tale valore letterale dipende dal formato della specifica. Per informazioni complete su come specificare i valori letterali, vedere [valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
 
-**Questa** parola chiave è un puntatore a un oggetto classe. È disponibile all'interno delle funzioni membro non statiche e fa riferimento all'istanza della classe per cui è stata richiamata la funzione. Impossibile utilizzare la parola chiave **this** all'esterno del corpo di una funzione membro di classe.
+La **`this`** parola chiave è un puntatore a un oggetto classe. È disponibile all'interno delle funzioni membro non statiche e fa riferimento all'istanza della classe per cui è stata richiamata la funzione. La **`this`** parola chiave non può essere utilizzata all'esterno del corpo di una funzione membro di classe.
 
-Il tipo del puntatore **this** è `type` **\*const** (dove `type` è il nome della classe) all'interno di funzioni che non modificano in modo specifico il puntatore **this** . Nell'esempio seguente vengono illustrate le dichiarazioni di funzione membro e i tipi di **questo**:
+Il tipo di **`this`** puntatore è `type` ** \* const** (dove `type` è il nome della classe) all'interno di funzioni che non modificano in modo specifico il **`this`** puntatore. Nell'esempio seguente vengono illustrate le dichiarazioni di funzione membro e i tipi di **`this`** :
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-Per ulteriori informazioni sulla modifica del tipo del puntatore **this** , vedere [questo puntatore](this-pointer.md) .
+Per ulteriori informazioni sulla modifica del tipo di puntatore, vedere [questo puntatore](this-pointer.md) **`this`** .
 
 L'operatore di risoluzione dell'ambito (`::`) seguito da un nome costituisce un'espressione primaria.  Tali nomi devono essere nomi in ambito globale e non nomi di membri.  Il tipo di questa espressione è determinato dalla dichiarazione del nome. È un l-value, ovvero può essere visualizzato a sinistra di un'espressione dell'operatore di assegnazione, se il nome dichiarante è un l-value. L'operatore di risoluzione dell'ambito consente di fare riferimento a un nome globale, anche se il nome è nascosto nell'ambito corrente. Vedere [ambito](../cpp/scope-visual-cpp.md) per un esempio di come usare l'operatore di risoluzione dell'ambito.
 
