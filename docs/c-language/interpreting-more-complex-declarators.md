@@ -5,16 +5,16 @@ helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 385392ea8836998e71584d02bd0ee4478fb774a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199906"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretazione di più dichiaratori complessi
 
-È possibile racchiudere qualsiasi dichiaratore tra parentesi per specificare un'interpretazione particolare di un "dichiaratore complesso". Un dichiaratore complesso è un identificatore qualificato da più matrici, puntatori o modificatori di funzione. È possibile applicare varie combinazioni di matrice, puntatore e modificatori di funzione a un singolo identificatore. `typedef` può essere utilizzato in genere per semplificare dichiarazioni. Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).
+È possibile racchiudere qualsiasi dichiaratore tra parentesi per specificare un'interpretazione particolare di un "dichiaratore complesso". Un dichiaratore complesso è un identificatore qualificato da più matrici, puntatori o modificatori di funzione. È possibile applicare varie combinazioni di matrice, puntatore e modificatori di funzione a un singolo identificatore. In genere **`typedef`** può essere usato per semplificare le dichiarazioni. Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).
 
 Nell'interpretazione dei dichiaratori complessi, le parentesi quadre e le parentesi (ovvero modificatori a destra dell'identificatore) hanno la precedenza sugli asterischi (ovvero modificatori a sinistra dell'identificatore). Parentesi quadre e parentesi tonde hanno la stessa precedenza e vengono associate da sinistra a destra. Dopo che il dichiaratore è stato completamente interpretato, l'identificatore del tipo viene applicato come ultimo passaggio. Utilizzando le parentesi tonde è possibile eseguire l'override dell'ordine di associazione predefinito e forzare un'interpretazione particolare. Non utilizzare mai le parentesi, tuttavia, attorno al nome di un identificatore da solo. Ciò potrebbe essere interpretato erroneamente come un elenco di parametri.
 
@@ -48,7 +48,7 @@ In questo esempio, i passaggi sono numerati in ordine e possono essere interpret
 
 1. puntatori a
 
-1. valori `char`.
+1. **`char`** valori.
 
 ## <a name="examples"></a>Esempi
 
@@ -58,25 +58,25 @@ Negli esempi seguenti vengono illustrate altre dichiarazioni complesse e mostrat
 int *var[5]; /* Array of pointers to int values */
 ```
 
-Il modificatore di matrice ha priorità più alta rispetto al modificatore del puntatore, quindi `var` viene dichiarato come una matrice. Il modificatore del puntatore viene applicato al tipo degli elementi di matrice; pertanto, gli elementi di matrice sono puntatori ai valori `int`.
+Il modificatore di matrice ha priorità più alta rispetto al modificatore del puntatore, quindi `var` viene dichiarato come una matrice. Il modificatore del puntatore viene applicato al tipo degli elementi della matrice; gli elementi della matrice sono pertanto puntatori a **`int`** valori.
 
 ```
 int (*var)[5]; /* Pointer to array of int values */
 ```
 
-In questa dichiarazione per `var`, mediante le parentesi viene associata al modificatore di puntatore una priorità più elevata rispetto al modificatore di matrice e `var` viene dichiarato come puntatore a una matrice di cinque valori `int`.
+In questa dichiarazione per `var` le parentesi forniscono al modificatore di puntatore una priorità più alta rispetto al modificatore di matrice ed `var` è dichiarata come puntatore a una matrice di cinque **`int`** valori.
 
 ```
 long *var( long, long ); /* Function returning pointer to long */
 ```
 
-I modificatori di funzione dispongono anche di priorità più alta rispetto ai modificatori del puntatore, pertanto questa dichiarazione per `var` dichiara che `var` è una funzione che restituisce un puntatore a un valore **long**. La funzione viene dichiarata come in grado di accettare come argomenti due valori **long**.
+I modificatori di funzione hanno anche una priorità più alta rispetto ai modificatori del puntatore, quindi questa dichiarazione per `var` dichiara `var` di essere una funzione che restituisce un puntatore a un **`long`** valore. La funzione viene dichiarata per assumere due **`long`** valori come argomenti.
 
 ```
 long (*var)( long, long ); /* Pointer to function returning long */
 ```
 
-Questo esempio è simile al precedente. Le parentesi assegnano priorità più elevata al modificatore del puntatore rispetto al modificatore di funzione e `var` viene dichiarato come puntatore a una funzione che restituisce un valore **long**. Anche in questo caso la funzione accetta due argomenti **long**.
+Questo esempio è simile al precedente. Le parentesi forniscono al modificatore di puntatore una priorità più alta rispetto al modificatore di funzione e `var` viene dichiarata come puntatore a una funzione che restituisce un **`long`** valore. Anche in questo caso, la funzione accetta due **`long`** argomenti.
 
 ```
 struct both       /* Array of pointers to functions */
@@ -101,13 +101,13 @@ unsigned int *(* const *name[5][10] ) ( void );
 
 La matrice `name` dispone di 50 elementi organizzati in una matrice multidimensionale. Gli elementi sono puntatori a un puntatore che è una costante. Questo puntatore constant fa riferimento a una funzione non ha alcun parametro e restituisce un puntatore a un tipo unsigned.
 
-L'esempio seguente è una funzione che restituisce un puntatore a una matrice di tre valori **double**.
+Questo esempio seguente è una funzione che restituisce un puntatore a una matrice di tre **`double`** valori.
 
 ```
 double ( *var( double (*)[3] ) )[3];
 ```
 
-In questa dichiarazione, una funzione restituisce un puntatore a una matrice, poiché le funzioni che restituiscono matrici non sono consentite. In questo caso `var` è dichiarato come funzione che restituisce un puntatore a una matrice di tre valori **double**. La funzione `var` accetta un argomento. L'argomento, come il valore restituito, è un puntatore a una matrice di tre valori **double**. Il tipo di argomento viene specificato da un *abstract-declarator* complesso. Le parentesi che racchiudono l'asterisco nel tipo di argomento sono necessarie; senza parentesi il tipo di argomento sarebbe una matrice di tre puntatori a valori **double**. Per informazioni ed esempi di dichiaratori abstract, vedere [Dichiaratori abstract](../c-language/c-abstract-declarators.md).
+In questa dichiarazione, una funzione restituisce un puntatore a una matrice, poiché le funzioni che restituiscono matrici non sono consentite. Qui `var` viene dichiarato come una funzione che restituisce un puntatore a una matrice di tre **`double`** valori. La funzione `var` accetta un argomento. L'argomento, come il valore restituito, è un puntatore a una matrice di tre **`double`** valori. Il tipo di argomento viene specificato da un *abstract-declarator* complesso. Le parentesi intorno all'asterisco nel tipo di argomento sono obbligatorie. senza di esse, il tipo di argomento sarebbe una matrice di tre puntatori a **`double`** valori. Per informazioni ed esempi di dichiaratori abstract, vedere [Dichiaratori abstract](../c-language/c-abstract-declarators.md).
 
 ```
 union sign         /* Array of arrays of pointers */
@@ -124,7 +124,7 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
                              of pointers to unions        */
 ```
 
-In questo esempio viene mostrato come la posizione delle parentesi modifica il significato della dichiarazione. In questo esempio, `var` è una matrice di cinque elementi dei puntatori a matrici di cinque elementi dei puntatori a unioni. Per esempi dell'uso di `typedef` per evitare dichiarazioni complesse, vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).
+In questo esempio viene mostrato come la posizione delle parentesi modifica il significato della dichiarazione. In questo esempio, `var` è una matrice di cinque elementi dei puntatori a matrici di cinque elementi dei puntatori a unioni. Per esempi relativi all'uso **`typedef`** di per evitare dichiarazioni complesse, vedere [dichiarazioni typedef](../c-language/typedef-declarations.md).
 
 ## <a name="see-also"></a>Vedere anche
 

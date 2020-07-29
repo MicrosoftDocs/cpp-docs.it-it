@@ -1,5 +1,5 @@
 ---
-title: Estensioni Microsoft a C e C++
+title: Estensioni Microsoft per C e C++
 ms.date: 06/14/2018
 helpviewer_keywords:
 - or_eq operator
@@ -29,24 +29,24 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231507"
 ---
-# <a name="microsoft-extensions-to-c-and-c"></a>Estensioni Microsoft a C e C++
+# <a name="microsoft-extensions-to-c-and-c"></a>Estensioni Microsoft per C e C++
 
 Visual C++ estende gli standard ANSI C e ANSI C++ come segue.
 
 ## <a name="keywords"></a>Parole chiave
 
-Sono state aggiunte diverse parole chiave. Nell'elenco [parole chiave](../../cpp/keywords-cpp.md), le parole chiave con due caratteri di sottolineatura iniziali sono estensioni di Visual C++.
+Sono state aggiunte diverse parole chiave. Nell'elenco delle [parole chiave](../../cpp/keywords-cpp.md)le parole chiave con due caratteri di sottolineatura iniziali sono Visual C++ estensioni.
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Dalla definizione della classe di const integrale (o enum) i membri statici
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Definizione della classe di membri statici const (o enum)
 
-Nello standard (**/Za**), è necessario creare una definizione out-of-class per i membri dati, come illustrato di seguito:
+In base allo standard (**/za**), è necessario creare una definizione out-of-Class per i membri dati, come illustrato di seguito:
 
 ```cpp
 class CMyClass  {
@@ -57,9 +57,9 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-Sotto **/Ze**, la definizione out-of-class è facoltativa per i membri dati static, const integral e const enum. Solo gli integrali e gli enum che sono static e const possono disporre di inizializzatori in una classe. L'espressione che inizializza deve essere un'espressione const.
+In **/ze**la definizione out-of-Class è facoltativa per i membri dati statici, const integrali e const enum. Solo gli integrali e gli enum che sono static e const possono disporre di inizializzatori in una classe. L'espressione che inizializza deve essere un'espressione const.
 
-Per evitare errori quando una definizione out-of-class viene fornita in un'intestazione di file e il file di intestazione è incluso in più file di origine, usare [selectany](../../cpp/selectany.md). Ad esempio:
+Per evitare errori quando viene fornita una definizione out-of-Class in un file di intestazione e il file di intestazione è incluso in più file di origine, usare [selectany](../../cpp/selectany.md). Ad esempio:
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -117,11 +117,11 @@ Il compilatore C supporta commenti a riga singola, introdotti usando due caratte
 // This is a single-line comment.
 ```
 
-## <a name="scope"></a>Ambito
+## <a name="scope"></a>Scope
 
 Il compilatore C supporta le seguenti funzionalità relative all'ambito.
 
-- Ridefinizioni di elementi extern come statico:
+- Ridefinizioni degli elementi extern come statici:
 
    ```C
    extern int clip();
@@ -129,7 +129,7 @@ Il compilatore C supporta le seguenti funzionalità relative all'ambito.
    {}
    ```
 
-- Uso di typedef non dannoso ridefinizioni nello stesso ambito:
+- Uso di ridefinizioni typedef benigne nello stesso ambito:
 
    ```C
    typedef int INT;
@@ -168,17 +168,17 @@ Il compilatore C supporta le seguenti funzionalità relative all'ambito.
    }
    ```
 
-## <a name="data-declarations-and-definitions"></a>Le definizioni e dichiarazioni di dati
+## <a name="data-declarations-and-definitions"></a>Dichiarazioni e definizioni di dati
 
 Il compilatore C supporta le seguenti funzionalità di dichiarazione e definizione dei dati.
 
-- Costanti carattere e stringa miste in un inizializzatore:
+- Costanti di tipo carattere misto e stringa in un inizializzatore:
 
    ```C
    char arr[5] = {'a', 'b', "cde"};
    ```
 
-- Campi di bit che hanno tipi di base diverso da **int senza segno** oppure **tipo signed int**.
+- Campi di bit con tipi di base diversi da **`unsigned int`** o **`signed int`** .
 
 - Dichiaratori che non dispongono di un tipo:
 
@@ -190,7 +190,7 @@ Il compilatore C supporta le seguenti funzionalità di dichiarazione e definizio
    }
    ```
 
-- Matrici non dimensionate come l'ultimo campo nelle strutture e unioni:
+- Matrici non dimensionate come ultimo campo di strutture e unioni:
 
    ```C
    struct zero
@@ -200,7 +200,7 @@ Il compilatore C supporta le seguenti funzionalità di dichiarazione e definizio
    };
    ```
 
-- Strutture senza nome (anonime):
+- Strutture senza nome (anonima):
 
    ```C
    struct
@@ -210,7 +210,7 @@ Il compilatore C supporta le seguenti funzionalità di dichiarazione e definizio
    };
    ```
 
-- Unioni (anonime) senza nome:
+- Unioni senza nome (anonima):
 
    ```C
    union
@@ -230,13 +230,13 @@ Il compilatore C supporta le seguenti funzionalità di dichiarazione e definizio
    }
    ```
 
-## <a name="intrinsic-floating-point-functions"></a>Funzioni a virgola mobile intrinseche
+## <a name="intrinsic-floating-point-functions"></a>Funzioni intrinseche a virgola mobile
 
-Entrambi x86 il compilatore C++ e il compilatore C supportano la generazione di inline del `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt`, e `tan` funzioni quando **/Oi** è specificato. Per il compilatore C, la conformità ANSI viene persa quando vengono utilizzate queste funzioni intrinseche in quanto non impostano la variabile `errno`.
+Sia il compilatore C++ x86 sia il compilatore C supportano la generazione inline `atan` delle `atan2` funzioni,, `cos` , `exp` , `log` , `log10` , `sin` , `sqrt` e `tan` quando viene specificato **/OI** . Per il compilatore C, la conformità ANSI viene persa quando vengono utilizzate queste funzioni intrinseche in quanto non impostano la variabile `errno`.
 
-## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Passando un parametro di puntatore non-const a una funzione che prevede un riferimento a un parametro del puntatore const
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Passaggio di un parametro puntatore non const a una funzione che prevede un riferimento a un parametro del puntatore const
 
-Questa è un'estensione a C++. Questo codice viene compilato con **/Ze**:
+Si tratta di un'estensione di C++. Questo codice verrà compilato con **/ze**:
 
 ```cpp
 typedef   int   T;
@@ -258,35 +258,35 @@ void func ()
 }
 ```
 
-## <a name="iso646h-not-enabled"></a>ISO646. H non abilitata
+## <a name="iso646h-not-enabled"></a>ISO646. H non abilitato
 
-Sotto **/Ze**, è necessario includere lt;iso646.h&gt Se si desidera utilizzare formati di testo degli operatori seguenti:
+In **/ze**è necessario includere iso646. h se si desidera utilizzare i formati di testo degli operatori seguenti:
 
-- & & (e)
+- && (and)
 
 - &= (and_eq)
 
-- & (bitand)
+- & (BITAND)
 
-- &#124; (bitor)
+- &#124; (BITOR)
 
 - ~ (compl)
 
-- ! (not)
+- ! non
 
-- != (not_eq)
+- ! = (not_eq)
 
 - &#124;&#124; (or)
 
 - &#124;= (or_eq)
 
-- ^ (xor)
+- ^ (XOR)
 
-- ^= (xor_eq)
+- ^ = (xor_eq)
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>Indirizzo del valore letterale stringa è di tipo const char [], non const char (*)]
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>L'indirizzo del valore letterale stringa è di tipo const char [], not const char (*) []
 
-Nell'esempio seguente restituirà `char const (*)[4]` sotto **/Za**, ma `char const [4]` sotto **/Ze**.
+Nell'esempio seguente viene restituito l'output `char const (*)[4]` in **/za**, ma `char const [4]` in **/ze**.
 
 ```cpp
 #include <stdio.h>
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-- [/Za, /Ze (disabilita le estensioni del linguaggio)](za-ze-disable-language-extensions.md)
+- [/Za,/ze (Disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)
 - [Opzioni del compilatore MSVC](compiler-options.md)
 - [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914965"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216973"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -77,19 +77,19 @@ Valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fmod** restituisce il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **fmod** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** restituisce il resto a virgola mobile di *x*  /  *y*. Se il valore di *y* è 0,0, **fmod** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La **funzione fmod** calcola il resto a virgola mobile *f* di *x* / *y* in modo *che x* = *i* \* *y* + *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
+La funzione **fmod** calcola il resto a virgola mobile *f* di *x*  /  *y* in modo *che x*  =  *i* \* *y*  +  *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **fmod** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C **fmod** accetta sempre due argomenti **doppi** e restituisce un **valore Double**.
+C++ consente l'overload, quindi è possibile chiamare overload di **fmod** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C **fmod** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fmod**, **fmodf**, **fmodl**|\<math.h>|
 
@@ -119,7 +119,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

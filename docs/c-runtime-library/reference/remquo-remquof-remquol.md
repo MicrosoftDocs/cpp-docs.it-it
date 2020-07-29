@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917825"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216791"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -71,19 +71,19 @@ Puntatore a un intero per archiviare un valore con il segno e la grandezza appro
 
 ## <a name="return-value"></a>Valore restituito
 
-**remquo** restituisce il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **remquo** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** restituisce il resto a virgola mobile di *x*  /  *y*. Se il valore di *y* è 0,0, **remquo** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-La **funzione remquo** calcola il resto a virgola mobile *f* di *x* / *y* in modo *che x* = *i* \* *y* + *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
+La funzione **remquo** calcola il resto a virgola mobile *f* di *x*  /  *y* in modo *che x*  =  *i* \* *y*  +  *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **remquo** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **remquo** accetta sempre due argomenti **doppi** e restituisce un **valore Double**.
+C++ consente l'overload, quindi è possibile chiamare overload di **remquo** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **remquo** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
+|Funzione|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> o \<math.h>|
 
@@ -116,7 +116,7 @@ Approximate signed quotient is -3
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

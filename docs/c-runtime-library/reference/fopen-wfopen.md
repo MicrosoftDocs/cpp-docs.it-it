@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: d468226028928e3edfe67cc7f9b9eec06e06bd56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914883"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216960"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -90,11 +90,11 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 **fopen** supporta i flussi di file Unicode. Per aprire un file Unicode, passare un flag **CCS** che specifichi la codifica desiderata per **fopen**, come indicato di seguito.
 
-> **FILE \*fp = fopen ("newfile. txt", "RT +, CCS =**_Encoding_**");**
+> **File \* fp = fopen ("newfile.txt", "RT +, CCS =**_Encoding_**");**
 
 I valori consentiti per la *codifica* sono **Unicode**, **UTF-8**e **UTF-16LE**.
 
-Quando un file viene aperto in modalità Unicode, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **wchar_t**. Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **wchar_t**. Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causa un errore di [convalida del parametro](../../c-runtime-library/parameter-validation.md) . Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
+Quando un file viene aperto in modalità Unicode, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **`wchar_t`** . Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **`wchar_t`** . Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causa un errore di [convalida del parametro](../../c-runtime-library/parameter-validation.md) . Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
 
 Se il file esiste già e viene aperto per la lettura o l'aggiunta, l'indicatore ordine byte (BOM), se presente nel file, determina la codifica. La codifica DBA ha la precedenza sulla codifica specificata dal flag **CCS** . La codifica **CCS** viene utilizzata solo se non è presente alcun BOM o se il file è un nuovo file.
 
@@ -168,31 +168,31 @@ Le opzioni seguenti possono essere aggiunte alla *modalità* per specificare com
 
 I caratteri validi per la stringa della *modalità* utilizzata in **fopen** e **_fdopen** corrispondono agli argomenti *Oflag* usati in [_open](open-wopen.md) e [_sopen](sopen-wsopen.md), come indicato di seguito.
 
-|Caratteri nella stringa della *modalità*|Valore *Oflag* equivalente per \_Open/\_sopen|
+|Caratteri nella stringa della *modalità*|Valore *Oflag* equivalente per \_ Open/ \_ sopen|
 |-------------------------------|----------------------------------------------------|
-|**un**|**\_O\_WRONLY** &#124; ** \_o\_Append** (in ** \_genere\_o WRONLY** &#124; ** \_o\_crea** &#124; ** \_\_o Append**)|
-|**a +**|**\_O\_RDWR** &#124; ** \_o\_Append** (in ** \_genere\_o RDWR** &#124; ** \_o\_Append** &#124; ** \_\_o create** )|
-|**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (in ** \_genere\_o WRONLY** &#124; ** \_o\_crea** &#124; ** \_\_o tronca**)|
-|**w +**|**\_O\_RDWR** (in ** \_genere\_o RDWR** &#124; ** \_o\_crea** &#124; ** \_\_o tronca**)|
-|**b**|**\_binario\_O**|
-|**t**|**\_testo\_O**|
+|**un**|** \_ O \_ WRONLY** &#124; ** \_ o \_ Append** (in genere ** \_ o \_ WRONLY** &#124; ** \_ o \_ Crea** &#124; ** \_ o \_ Append**)|
+|**a +**|** \_ O \_ RDWR** &#124; ** \_ o \_ Append** (in genere ** \_ o \_ RDWR** &#124; ** \_ o \_ Append** &#124; ** \_ o \_ create** )|
+|**r**|**\_O \_ RDONLY**|
+|**r +**|**\_O \_ RDWR**|
+|**w**|** \_ O \_ WRONLY** (in genere ** \_ o \_ WRONLY** &#124; ** \_ o \_ Crea** &#124; ** \_ o \_ Tronca**)|
+|**w +**|** \_ O \_ RDWR** (in genere ** \_ o \_ RDWR** &#124; ** \_ o \_ Crea** &#124; ** \_ o \_ Tronca**)|
+|**b**|**\_\_binario O**|
+|**t**|**\_\_Testo O**|
 |**c**|Nessuno|
 |**n**|Nessuno|
-|**S**|**\_O\_sequenziale**|
-|**R**|**\_O\_casuale**|
-|**T**|**\_O\_breve durata**|
-|**D**|**\_O\_temporanea**|
-|**CCS = UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**S**|**\_O \_ sequenziale**|
+|**R**|**\_O \_ casuale**|
+|**T**|**\_O \_ breve durata**|
+|**D**|**\_O \_ temporanea**|
+|**CCS = UNICODE**|**\_O \_ WTEXT**|
+|**CCS = UTF-8**|**\_O \_ UTF8**|
+|**CCS = UTF-16LE**|**\_O \_ UTF16**|
 
 Se si usa la modalità **RB** , non è necessario trasferire il codice e, se si prevede di leggere la maggior parte di un file di grandi dimensioni o non si è interessati alle prestazioni di rete, è anche possibile valutare se usare i file Win32 con mapping della memoria come opzione.
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fopen**|\<stdio.h>|
 |**_wfopen**|\<stdio.h> o \<wchar.h>|

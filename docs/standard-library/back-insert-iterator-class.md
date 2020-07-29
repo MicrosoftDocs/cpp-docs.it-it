@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: c3bbb2ec8ce9a09dd17c4744a80913f95d85bd00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a518253c28d89de6eeed51e152e11bfcb8bb969
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203882"
 ---
 # <a name="back_insert_iterator-class"></a>Classe back_insert_iterator
 
@@ -48,23 +48,23 @@ Il contenitore deve soddisfare i requisiti di una sequenza di inserimento invers
 |Nome tipo|Descrizione|
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce un contenitore per `back_insert_iterator`.|
-|[Riferimento](#reference)|Tipo che fornisce un riferimento per `back_insert_iterator`.|
+|[reference](#reference)|Tipo che fornisce un riferimento per `back_insert_iterator`.|
 
 ### <a name="operators"></a>Operatori
 
 |Operatore|Descrizione|
 |-|-|
-|[operatore](#op_star)|Operatore di dereferenza utilizzato \* `i`  =  `x` per implementare l'espressione dell'iteratore di output per un inserimento inretro.|
-|[operatore .](#op_add_add)|Incrementa `back_insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.|
-|[operatore di comando](#op_eq)|Operatore di assegnazione utilizzato \* `i`  =  `x` per implementare l'espressione dell'iteratore di output per un inserimento inback.|
+|[operatore](#op_star)|Operatore di dereferenziazione utilizzato per implementare l'espressione dell'iteratore \* `i`  =  `x` di output per un inserimento inverso.|
+|[operatore + +](#op_add_add)|Incrementa `back_insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.|
+|[operatore =](#op_eq)|Operatore di assegnazione usato per implementare l'espressione dell'iteratore \* `i`  =  `x` di output per un inserimento inverso.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<> iteratore
+**Intestazione**:\<iterator>
 
 **Spazio dei nomi:** std
 
-## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator::back_insert_iterator
+## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator:: back_insert_iterator
 
 Costruisce un `back_insert_iterator` che inserisce gli elementi dopo l'ultimo elemento di un contenitore.
 
@@ -129,7 +129,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator::container_type
+## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator:: container_type
 
 Tipo che fornisce un contenitore per `back_insert_iterator`.
 
@@ -183,9 +183,9 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator::operatore\*
+## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>operatore back_insert_iterator::\*
 
-Operatore di dereferezione utilizzato \* per implementare l'espressione iteratore di output *i* = *x*.
+Operatore di dereferenziazione utilizzato per implementare l'espressione dell'iteratore di output \* *i*  =  *x*.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -197,7 +197,7 @@ Riferimento all'elemento inserito alla fine del contenitore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Utilizzato per implementare l'espressione dell'iteratore = **value** ** \*** di output Valore iter . Se **Iter** è un iteratore che punta a un elemento in una sequenza, **\*Iter** = **value** sostituisce l'elemento con il valore senza modificare il numero totale di elementi presenti nella sequenza.
+Utilizzato per implementare il valore ** \* iter**dell'espressione dell'iteratore di output  =  **value**. Se **Iter** è un iteratore che punta a un elemento in una sequenza, **\*Iter** = **value** sostituisce l'elemento con il valore senza modificare il numero totale di elementi presenti nella sequenza.
 
 ### <a name="example"></a>Esempio
 
@@ -243,7 +243,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator::operator
+## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator:: operator + +
 
 Incrementa `back_insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.
 
@@ -304,7 +304,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator::operatore
+## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator:: operator =
 
 Aggiunge o esegue il push di un valore nel back-end di un contenitore.
 
@@ -326,11 +326,11 @@ Riferimento all'ultimo elemento inserito alla fine del contenitore.
 
 Il primo operatore membro valuta `Container.push_back( val)`
 
-e quindi restituisce `*this`. Il secondo operatore membro valuta
+restituisce quindi **`*this`** . Il secondo operatore membro valuta
 
 `container->push_back((typename Container::value_type&&)val)`,
 
-e quindi restituisce `*this`.
+restituisce quindi **`*this`** .
 
 ### <a name="example"></a>Esempio
 
@@ -371,7 +371,7 @@ int main( )
 }
 ```
 
-## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator::riferimento
+## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator:: Reference
 
 Tipo che fornisce un riferimento per `back_insert_iterator`.
 
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>iteratore](../standard-library/iterator.md)\
-[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimenti per librerie standard di C](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

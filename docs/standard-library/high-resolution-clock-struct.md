@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b00b20e7cea4fa24b37ad33d5536eb9844e6953
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 850d5e3a5434aa44e23a7f74aeb9c306ab6c0a8e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269123"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203208"
 ---
-# <a name="steadyclock-struct"></a>Struct steady_clock
+# <a name="steady_clock-struct"></a>Struct steady_clock
 
-Rappresenta un *high_resolution* orologio.
+Rappresenta un' *high_resolution* Clock.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,25 +29,25 @@ Rappresenta un *high_resolution* orologio.
 class high_resolution_clock
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|`duration`|Un sinonimo `nanoseconds`, definita in \<chrono >.|
-|`period`|Un sinonimo `nano`, definita in \<ratio >.|
-|`rep`|Un sinonimo **lungo** **long**, il tipo che viene usato per rappresentare il numero di tick del clock in istanze di contenuti di `duration`.|
+|`duration`|Sinonimo di `nanoseconds` , definito in \<chrono> .|
+|`period`|Sinonimo di `nano` , definito in \<ratio> .|
+|`rep`|Sinonimo di **`long long`** , il tipo utilizzato per rappresentare il numero di cicli di clock nella creazione di un'istanza contenuta di `duration` .|
 |`time_point`|Sinonimo di `chrono::time_point<high_resolution_clock>`.|
 
 ## <a name="functions"></a>Funzioni
 
 |||
 |-|-|
-|`now`|Restituisce l'ora corrente come un `time_point` valore.|
+|`now`|Restituisce l'ora corrente come `time_point` valore.|
 
 ## <a name="constants"></a>Costanti
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|`is_steady`|Mantiene **true**. Un oggetto `high_resolution_clock` è *costante*.|
+|`is_steady`|Include **`true`** . Un oggetto `high_resolution_clock` è *costante*.|

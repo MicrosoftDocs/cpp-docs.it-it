@@ -15,18 +15,18 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 050276da665ab6ed3eb53d9e65bfea06b88bcbea
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268753"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203962"
 ---
 # <a name="any-class"></a>qualsiasi classe
 
-Archivia un'istanza di qualsiasi tipo che soddisfa i requisiti di costruttore o si ha alcun valore, che viene chiamato lo stato della classe di qualsiasi oggetto.
+Archivia un'istanza di qualsiasi tipo che soddisfa i requisiti del costruttore o non ha alcun valore, che viene chiamato stato della classe qualsiasi oggetto.
 
-L'istanza archiviata viene chiamato il valore contenuto. Due stati sono uguali se sia non hanno alcun valore, o avere entrambe un valore e i valori contenuti sono uguali.
+L'istanza archiviata è denominata valore contenuto. Due Stati sono gli stessi se entrambi non hanno alcun valore o hanno un valore e i valori contenuti sono uguali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,33 +34,33 @@ L'istanza archiviata viene chiamato il valore contenuto. Due stati sono uguali s
 class any
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
 |||
 |-|-|
-|[any](#any)|Costruisce un oggetto di tipo `any`.|
+|[qualsiasi](#any)|Costruisce un oggetto di tipo `any`.|
 
 ### <a name="functions"></a>Funzioni
 
 |||
 |-|-|
 |[emplace](#emplace)|Imposta un valore qualsiasi.|
-|[has_value](#has_value)|Restituisce **true** se uno contiene un valore.|
-|[reset](#reset)|Reimposta un qualsiasi.|
-|[swap](#swap)|Scambia due oggetti.|
-|[type](#type)|Restituisce il tipo di qualsiasi.|
+|[has_value](#has_value)|Restituisce **`true`** se un oggetto ha un valore.|
+|[reset](#reset)|Reimposta un valore any.|
+|[scambio](#swap)|Scambia due oggetti.|
+|[type](#type)|Restituisce un tipo qualsiasi.|
 
 ### <a name="operators"></a>Operatori
 
 |||
 |-|-|
-|[operator=](#op_eq)|Sostituisce qualsiasi qualsiasi con una copia di un altro.|
+|[operatore =](#op_eq)|Sostituisce any con una copia di un altro oggetto.|
 
-## <a name="any"></a> Qualsiasi
+## <a name="any"></a><a name="any"></a>qualsiasi
 
-Costruisce un oggetto di tipo `any`. Include inoltre un distruttore.
+Costruisce un oggetto di tipo `any`. Include anche un distruttore.
 
 ```cpp
 constexpr any() noexcept;
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 Imposta un valore qualsiasi.
 
@@ -87,17 +87,17 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a> has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-Restituisce **true** se uno contiene un valore.
+Restituisce **`true`** se un oggetto ha un valore.
 
 ```cpp
 bool has_value() const noexcept;
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="operator"></a><a name="op_eq"></a>operatore =
 
-Sostituisce qualsiasi qualsiasi con una copia di un altro.
+Sostituisce any con una copia di un altro oggetto.
 
 ```cpp
 any& operator=(const any& right);
@@ -109,17 +109,17 @@ template <class T>
 ### <a name="parameters"></a>Parametri
 
 *Ok*\
-Eventuali copiate in uno qualsiasi.
+Qualsiasi oggetto copiato nell'oggetto any.
 
-## <a name="reset"></a> reimpostare
+## <a name="reset"></a><a name="reset"></a>reimpostazione
 
-Reimposta un qualsiasi.
+Reimposta un valore any.
 
 ```cpp
 void reset() noexcept;
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>scambio
 
 Scambia due oggetti.
 
@@ -127,9 +127,9 @@ Scambia due oggetti.
 void swap(any& rhs) noexcept;
 ```
 
-## <a name="type"></a> Tipo
+## <a name="type"></a>Tipo di<a name="type"></a>
 
-Restituisce il tipo di qualsiasi.
+Restituisce un tipo qualsiasi.
 
 ```cpp
 const type_info& type() const noexcept;

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: ebce276c8c4efa822601fe36652057b37e922570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2bfd9e108b36f073635c6d9e55e2299764dcb309
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198866"
 ---
 # <a name="type-int"></a>Tipo int
 
-La dimensione di un elemento `int` signed o unsigned è la dimensione standard di un Integer in un computer specifico. Ad esempio, in sistemi operativi a 16 bit, il tipo `int` è rappresentato in genere con 16 bit o con 2 byte. Nei sistemi operativi a 32 bit il tipo `int` è rappresentato in genere con 32 bit oppure con 4 byte. Di conseguenza, il tipo `int` equivale a `short int` o al tipo **long int**, mentre il tipo `unsigned int` equivale a **unsigned short** o al tipo `unsigned long`, a seconda dell'ambiente di destinazione. Se non specificato diversamente, i tipi `int` rappresentano tutti i valori signed.
+La dimensione di un **`signed int`** **`unsigned int`** elemento o è la dimensione standard di un Integer in un computer specifico. Ad esempio, nei sistemi operativi a 16 bit, il **`int`** tipo è in genere 16 bit o 2 byte. Nei sistemi operativi a 32 bit il **`int`** tipo è in genere 32 bit o 4 byte. Pertanto, il **`int`** tipo è equivalente a o al **`short int`** **`long int`** tipo e il **`unsigned int`** tipo è equivalente a **`unsigned short`** o al **`unsigned long`** tipo, a seconda dell'ambiente di destinazione. I **`int`** tipi rappresentano tutti i valori firmati, a meno che non sia specificato diversamente.
 
-Gli identificatori di tipo `int` e `unsigned int` (o semplicemente `unsigned`) definiscono determinate funzionalità del linguaggio C, ad esempio il tipo `enum`. In questi casi, le definizioni di `int` e unsigned int per un'implementazione effettiva determinano l'archiviazione effettiva.
+Gli identificatori **`int`** di tipo e **`unsigned int`** (o semplicemente **`unsigned`** ) definiscono determinate funzionalità del linguaggio C (ad esempio, il **`enum`** tipo). In questi casi, le definizioni di **`int`** e **`unsigned int`** per una determinata implementazione determinano l'archiviazione effettiva.
 
 **Specifico di Microsoft**
 
@@ -27,7 +27,7 @@ I valori Signed Integer sono rappresentati in complemento a due. Il bit più sig
 **TERMINA specifica Microsoft**
 
 > [!NOTE]
-> Gli identificatori di tipo int e unsigned int sono diffusi nei programmi C perché consentono la gestione più efficiente possibile di Integer in un computer specifico. Tuttavia, poiché le dimensioni dei tipi int e unsigned int variano, i programmi che dipendono da una dimensione specifica di int potrebbero non essere eseguiti in altri computer. Per rendere più portabili i programmi, è possibile usare espressioni con l'operatore sizeof (come illustrato in [Operatore sizeof](../c-language/sizeof-operator-c.md)) anziché dimensioni di dati hardcoded.
+> Gli **`int`** **`unsigned int`** identificatori di tipo e vengono ampiamente usati nei programmi C perché consentono a un computer specifico di gestire i valori interi nel modo più efficiente per tale computer. Tuttavia, poiché le dimensioni dei **`int`** tipi e **`unsigned int`** variano, i programmi che dipendono da una **`int`** dimensione specifica potrebbero non essere portabili ad altri computer. Per rendere più portabili i programmi, è possibile usare espressioni con l' **`sizeof`** operatore, come illustrato nell' [ `sizeof` operatore](../c-language/sizeof-operator-c.md), anziché le dimensioni dei dati hardcoded.
 
 ## <a name="see-also"></a>Vedere anche
 

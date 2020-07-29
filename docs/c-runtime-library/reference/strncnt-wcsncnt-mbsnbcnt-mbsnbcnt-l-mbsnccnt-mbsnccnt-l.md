@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914203"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231338"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -105,7 +105,7 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa da esaminare.
 
 *count*<br/>
@@ -116,7 +116,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_mbsnbcnt** e **_mbsnbcnt_l** restituiscono il numero di byte trovato nel primo *conteggio* di caratteri multibyte di *STR*. **_mbsnccnt** e **_mbsnccnt_l** restituiscono il numero di caratteri trovati nel primo *conteggio* di byte di *STR*. Se viene rilevato un carattere null prima del completamento dell'esame di *Str* , restituiscono il numero di byte o caratteri trovati prima del carattere null. Se *Str* è costituito da un numero di caratteri minore di *count* o byte, restituisce il numero di caratteri o byte nella stringa. Se *count* è minore di zero, restituiscono 0. Nelle versioni precedenti, queste funzioni avevano un valore restituito di tipo **int** anziché **size_t**.
+**_mbsnbcnt** e **_mbsnbcnt_l** restituiscono il numero di byte trovato nel primo *conteggio* di caratteri multibyte di *STR*. **_mbsnccnt** e **_mbsnccnt_l** restituiscono il numero di caratteri trovati nel primo *conteggio* di byte di *STR*. Se viene rilevato un carattere null prima del completamento dell'esame di *Str* , restituiscono il numero di byte o caratteri trovati prima del carattere null. Se *Str* è costituito da un numero di caratteri minore di *count* o byte, restituisce il numero di caratteri o byte nella stringa. Se *count* è minore di zero, restituiscono 0. Nelle versioni precedenti, queste funzioni avevano un valore restituito di tipo **`int`** anziché **size_t**.
 
 **_strncnt** restituisce il numero di caratteri nei primi byte dei *conteggi* della stringa a byte singolo *Str*. **_wcsncnt** restituisce il numero di caratteri nei primi caratteri wide *count* della stringa di caratteri wide *Str*.
 
@@ -185,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

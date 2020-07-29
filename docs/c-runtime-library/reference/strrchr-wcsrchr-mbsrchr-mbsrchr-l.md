@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1350cf14df0c87d57a87ad3aced35e3887b6676
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911155"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231299"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -120,7 +120,7 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa con terminazione Null in cui eseguire la ricerca.
 
 *c*<br/>
@@ -135,11 +135,11 @@ Restituisce un puntatore all'ultima occorrenza di *c* in *Str*oppure null se *c*
 
 ## <a name="remarks"></a>Osservazioni
 
-La `strrchr` funzione trova l'ultima occorrenza di *c* (convertita in **char**) in *STR*. La ricerca include il carattere Null di terminazione.
+La `strrchr` funzione trova l'ultima occorrenza di *c* (convertita in **`char`** ) in *STR*. La ricerca include il carattere Null di terminazione.
 
 `wcsrchr` e `_mbsrchr` sono le versioni a caratteri wide e a caratteri multibyte di `strrchr`. Gli argomenti e il valore restituito di `wcsrchr` sono stringhe con caratteri wide, mentre quelli di `_mbsrchr` sono stringhe con caratteri multibyte.
 
-In C queste funzioni accettano un puntatore **const** per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a un oggetto non**const** restituisce un puntatore a un oggetto non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS viene definita se sono disponibili entrambe le versioni **const** e non**const** di queste funzioni. Se è necessario il comportamento non**const** per entrambi gli overload C++, definire il simbolo _CONST_RETURN.
+In C queste funzioni accettano un **`const`** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **`const`** restituisce un puntatore a **`const`** ; la versione che accetta un puntatore a non **`const`** restituisce un puntatore a non- **`const`** . La macro _CRT_CONST_CORRECT_OVERLOADS viene definita se **`const`** sono disponibili entrambe le funzioni e non le **`const`** versioni di queste funzioni. Se è necessario il comportamento non- **`const`** per entrambi gli overload C++, definire il simbolo _CONST_RETURN.
 
 `_mbsrchr` convalida i propri parametri. Se *Str* è null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su EINVAL e `_mbsrchr` restituisce 0. `strrchr` e `wcsrchr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
@@ -171,7 +171,7 @@ Vedere [strchr](strchr-wcschr-mbschr-mbschr-l.md) per un esempio dell'uso di `st
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

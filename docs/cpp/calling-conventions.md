@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 432cb1b6910db5ea735288edfbf6aa9e10f0a486
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d351ae064b8c9bdd0599a1d6981166371a62af58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216609"
 ---
 # <a name="calling-conventions"></a>Convenzioni di chiamata
 
@@ -21,11 +21,11 @@ Per informazioni sulle convenzioni di chiamata per i processori x64, vedere [con
 
 ## <a name="topics-in-this-section"></a>Argomenti in questa sezione
 
-- [Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`e altri)
+- [Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md) ( **`__cdecl`** ,, **`__stdcall`** **`__fastcall`** e altri)
 
-- [Esempio di chiamata: prototipo e chiamata di funzione](../cpp/calling-example-function-prototype-and-call.md)
+- [Esempio di chiamata: prototipo di funzione e chiamata](../cpp/calling-example-function-prototype-and-call.md)
 
-- [Utilizzo di chiamate di funzione naked per scrivere codice di prologo/epilogo personalizzato](../cpp/naked-function-calls.md)
+- [Utilizzo di chiamate di funzione naked per scrivere codice di epilogo o di prologo personalizzato](../cpp/naked-function-calls.md)
 
 - [Coprocessore a virgola mobile e convenzioni di chiamata](../cpp/floating-point-coprocessor-and-calling-conventions.md)
 

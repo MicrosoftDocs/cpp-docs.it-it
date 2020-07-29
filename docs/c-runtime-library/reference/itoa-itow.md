@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914659"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216934"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -197,7 +197,7 @@ Ognuna di queste funzioni restituisce un puntatore al *buffer*. Non vi è restit
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa** convertono le cifre dell'argomento *valore* specificato in una stringa di caratteri con terminazione null e archiviano il risultato (fino a 33 caratteri per **_itoa**, **_ltoa**e **_ultoa**e 65 per **_i64toa** e **_ui64toa**) nel *buffer*. Se la *radice* è uguale a 10 e il *valore* è negativo, il primo carattere della stringa archiviata è il**-** segno meno (). Le funzioni **_itow**, **_ltow**, **_ultow**, **_i64tow**e **_ui64tow** sono rispettivamente versioni a caratteri wide di **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa**.
+Le funzioni **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa** convertono le cifre dell'argomento *valore* specificato in una stringa di caratteri con terminazione null e archiviano il risultato (fino a 33 caratteri per **_itoa**, **_ltoa**e **_ultoa**e 65 per **_i64toa** e **_ui64toa**) nel *buffer*. Se la *radice* è uguale a 10 e il *valore* è negativo, il primo carattere della stringa archiviata è il segno meno ( **-** ). Le funzioni **_itow**, **_ltow**, **_ultow**, **_i64tow**e **_ui64tow** sono rispettivamente versioni a caratteri wide di **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa**.
 
 > [!IMPORTANT]
 > Queste funzioni possono scrivere oltre la fine di un buffer troppo piccolo. Per evitare sovraccarichi del buffer, verificare che il *buffer* sia sufficientemente grande da mantenere le cifre convertite più il carattere null finale e un carattere di segno. L'utilizzo improprio di queste funzioni può causare gravi problemi di sicurezza nel codice.
@@ -240,7 +240,7 @@ Per usare una di queste macro in una funzione di conversione di stringhe, dichia
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-In questo esempio viene utilizzata una macro del conteggio delle conversioni per definire un buffer sufficientemente grande da contenere un Long Long **senza segno** in base 2:
+Questo esempio usa una macro del conteggio delle conversioni per definire un buffer sufficientemente grande da contenere un valore **`unsigned long long`** in base 2:
 
 ```cpp
 #include <wchar.h>

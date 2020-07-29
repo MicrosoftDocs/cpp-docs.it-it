@@ -1,21 +1,21 @@
 ---
-title: Implements (attributo COM C++)
+title: implementa (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409388"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217233"
 ---
 # <a name="implements-c"></a>implements (C++)
 
-Specifica le interfacce dispatch che vengono forzate per essere membri della coclasse IDL.
+Specifica le interfacce di invio forzate a essere membri della coclasse IDL.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,14 +27,14 @@ Specifica le interfacce dispatch che vengono forzate per essere membri della coc
 ### <a name="parameters"></a>Parametri
 
 *interfaces*<br/>
-Un elenco delimitato da virgole delle interfacce che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per specificare una singola interfaccia **implementa (** *interface_name* **)**.
+Elenco delimitato da virgole delle interfacce che saranno un membro della coclasse IDL. Un metodo a sintassi abbreviata per specificare una singola interfaccia è **implementa (** *INTERFACE_NAME* **)**.
 
 *dispinterfaces*<br/>
-Un elenco delimitato da virgole di interfaccia dispatch che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per specificare una singola interfaccia di dispatch **implementa (dispinterfaces =** *dispinterface_name* **)**.
+Elenco delimitato da virgole dell'interfaccia dispatch che sarà un membro della coclasse IDL. Viene implementato un metodo a sintassi abbreviata per specificare una singola interfaccia dispatch **(dispinterfaces =** *dispinterface_name* **)**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, solo i interfacce COM che sono classi di base di `coclass` vengono aggiunti nella coclasse IDL. **implementa** consente di forzare le altre interfacce a essere IDL `coclass` membri.
+Per impostazione predefinita, `coclass` nella coclasse IDL vengono aggiunte solo le interfacce com che sono classi di base di. **implementazioni** consente di forzare altre interfacce come `coclass` membri IDL.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -42,18 +42,18 @@ Per impostazione predefinita, solo i interfacce COM che sono classi di base di `
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**|
-|**Ripetibile**|Yes|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Si applica a**|**`class`**, **`struct`**|
+|**Ripetibile**|Sì|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente è costituita da tre parti: un file IDL e il file con estensione h associati e un file C++.
+L'esempio seguente è in tre parti: un file con estensione IDL e il file con estensione h associato e un file C++.
 
-Si supponga il seguente file. idl, sarà disponibile per il compilatore.
+Si supponga che il file IDL seguente, che sarà disponibile per il compilatore.
 
 ```
 // attr_implements.idl
@@ -101,7 +101,7 @@ library odod
 
 ## <a name="example"></a>Esempio
 
-E il file con estensione h seguenti, che deve inoltre essere disponibili per il compilatore.
+E il seguente file con estensione h, che deve essere disponibile anche per il compilatore.
 
 ```cpp
 // attr_implements.h
@@ -381,7 +381,7 @@ CBar;
 
 ## <a name="example"></a>Esempio
 
-Nel seguente programma, senza implementa `IBar1`, `IBar2`, e `ISna` non saranno nel `coclass` nel file IDL generato.
+Nel programma seguente, senza Implements, `IBar1` , `IBar2` e `ISna` non sarà presente nell'oggetto `coclass` IDL generato.
 
 ```cpp
 // attr_implements.cpp

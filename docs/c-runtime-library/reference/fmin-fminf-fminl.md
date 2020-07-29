@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957086"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216986"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -91,17 +91,17 @@ Se ha esito positivo, restituisce il più piccolo di *x* o *y*.
 |*y* è NaN|*x*|
 |*x* e *y* sono Nan|NaN|
 
-La funzione non fa in modo che [_matherr](matherr.md) venga richiamato, causi eccezioni a virgola mobile o modifica il valore di **errno**.
+La funzione non provoca la chiamata di [_matherr](matherr.md) , genera eccezioni a virgola mobile o modifica il valore di **errno**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **FMIN** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **FMIN** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **FMIN** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **FMIN** accetta e restituisce sempre un oggetto **`double`** .
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**fmin**, **fminf**, **fminl**|C: \<math.h><br />C++: \<math.h> o \<cmath>|
+|**FMIN**, **fminf**, **fminl**|C\<math.h><br />C++: \<math.h> o\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

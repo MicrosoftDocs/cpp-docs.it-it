@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 663ef761d6c52aeb4c3cc9ce109079c647904e36
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740481"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197553"
 ---
 # <a name="compiler-error-c3537"></a>Errore del compilatore C3537
 
 ' type ': non è possibile eseguire il cast a un tipo che contiene ' auto '
 
-Non è possibile eseguire il cast di una variabile al tipo indicato perché il tipo contiene la parola chiave `auto` e l'opzione predefinita del compilatore [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) è attiva.
+Non è possibile eseguire il cast di una variabile al tipo indicato perché il tipo contiene la **`auto`** parola chiave e l'opzione predefinita del compilatore [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) è attiva.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente restituisce C3537 perché viene eseguito il cast delle variabili in un tipo che contiene la parola chiave `auto`.
+Il codice seguente restituisce C3537 perché viene eseguito il cast delle variabili in un tipo che contiene la **`auto`** parola chiave.
 
 ```cpp
 // C3537.cpp
@@ -40,4 +40,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Auto (parola chiave)](../../cpp/auto-keyword.md)
+[Parola chiave auto](../../cpp/auto-keyword.md)

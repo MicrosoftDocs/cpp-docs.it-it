@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684420"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201960"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -24,24 +24,24 @@ Definisce i modelli per le costanti in fase di compilazione che forniscono infor
 #include <type_traits>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le classi e i modelli in \<type_traits > vengono utilizzati per supportare l'inferenza del tipo, la classificazione e la trasformazione in fase di compilazione. Vengono inoltre usati per rilevare gli errori correlati ai tipi e per semplificare l'ottimizzazione del codice generico. I tratti di tipo unario descrivono una proprietà di un tipo, i tratti di tipo binario descrivono una relazione tra tipi e i tratti di trasformazione modificano una proprietà di un tipo.
+Le classi e i modelli in \<type_traits> vengono utilizzati per supportare l'inferenza del tipo, la classificazione e la trasformazione in fase di compilazione. Vengono inoltre usati per rilevare gli errori correlati ai tipi e per semplificare l'ottimizzazione del codice generico. I tratti di tipo unario descrivono una proprietà di un tipo, i tratti di tipo binario descrivono una relazione tra tipi e i tratti di trasformazione modificano una proprietà di un tipo.
 
-La classe helper `integral_constant` e le specializzazioni dei modelli `true_type` e `false_type` formano le classi base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La classe helper `integral_constant` e le specializzazioni del modello `true_type` e `false_type` formano le classi base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo *include true*, è derivato pubblicamente, direttamente o indirettamente, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo *include false*, è derivato pubblicamente, direttamente o indirettamente, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificatore di tipo* o *tratto di trasformazione* è un modello che accetta uno o più argomenti di modello e include un membro, `type`, che è sinonimo di tipo modificato.
 
 ### <a name="alias-templates"></a>Modelli di alias
 
-Per semplificare le espressioni di tratti di tipo, vengono forniti [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per `typename some_trait<T>::type`, dove *some_trait* è il nome del modello di classe. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
+Per semplificare le espressioni di tratti di tipo, vengono forniti i [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per `typename some_trait<T>::type` , dove *some_trait* è il nome del modello di classe. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Questi sono gli alias forniti per i membri `type`:
+Questi sono gli alias forniti per i `type` membri:
 
 ||||
 |-|-|-|
@@ -68,7 +68,7 @@ Categorie di tipi primari
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Verifica se il tipo è **void**.|
+|[is_void](../standard-library/is-void-class.md)|Verifica se il tipo è **`void`** .|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Verifica se il tipo è `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Verifica se il tipo è integrale.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Verifica se il tipo è a virgola mobile.|
@@ -89,23 +89,23 @@ Categorie di tipi compositi
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Verifica se il tipo è un riferimento.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Verifica se il tipo è aritmetico.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Verifica se il tipo è **void** o aritmetico.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Verifica se il tipo è **`void`** o aritmetico.|
 |[is_object](../standard-library/is-object-class.md)|Verifica se il tipo è un tipo di oggetto.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Verifica se il tipo è scalare.|
 |[is_compound](../standard-library/is-compound-class.md)|Verifica se il tipo non è scalare.|
 |[is_member_pointer](../standard-library/is-member-pointer-class.md)|Verifica se il tipo è un puntatore a un membro.|
 
-Proprietà dei tipi
+Proprietà del tipo
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Verifica se il tipo è **const**.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Verifica se il tipo è **volatile**.|
+|[is_const](../standard-library/is-const-class.md)|Verifica se il tipo è **`const`** .|
+|[is_volatile](../standard-library/is-volatile-class.md)|Verifica se il tipo è **`volatile`** .|
 |[is_trivial](../standard-library/is-trivial-class.md)|Verifica se il tipo è semplice.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Verifica se il tipo è facilmente copiabile.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Verifica se il tipo è un tipo di layout standard.|
 |[is_pod](../standard-library/is-pod-class.md)|Verifica se il tipo è un POD.|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|Verifica se il tipo può essere una variabile `constexpr` o usato in una funzione `constexpr`.|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|Verifica se il tipo può essere una **`constexpr`** variabile o utilizzato in una **`constexpr`** funzione.|
 |[is_empty](../standard-library/is-empty-class.md)|Verifica se il tipo è una classe vuota.|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Verifica se il tipo è una classe polimorfica.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Verifica se il tipo è una classe astratta.|
@@ -153,7 +153,7 @@ Query sulle proprietà del tipo
 |||
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|Ottiene l'allineamento di un tipo.|
-|[rank](../standard-library/rank-class.md)|Ottiene il numero di dimensioni della matrice.|
+|[Rank](../standard-library/rank-class.md)|Ottiene il numero di dimensioni della matrice.|
 |[extent](../standard-library/extent-class.md)|Ottiene il numero di elementi nella dimensione di matrice specificata.|
 
 Relazioni tra i tipi
@@ -168,9 +168,9 @@ Modifiche costante-volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Produce un tipo **const** dal tipo.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Produce un tipo **volatile** dal tipo.|
-|[add_cv](../standard-library/add-cv-class.md)|Produce un tipo **const volatile** dal tipo.|
+|[add_const](../standard-library/add-const-class.md)|Produce un **`const`** tipo dal tipo.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Produce un **`volatile`** tipo dal tipo.|
+|[add_cv](../standard-library/add-cv-class.md)|Produce un **`const volatile`** tipo dal tipo.|
 |[remove_const](../standard-library/remove-const-class.md)|Genera un tipo non costante dal tipo.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Genera un tipo non volatile dal tipo.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Genera un tipo non costante non volatile dal tipo.|
@@ -211,7 +211,7 @@ Altre trasformazioni
 |[aligned_storage](../standard-library/aligned-storage-class.md)|Alloca memoria non inizializzata per un tipo allineato.|
 |[aligned_union](../standard-library/aligned-union-class.md)|Alloca memoria non inizializzata per un'unione allineata con un costruttore o un distruttore non semplice.|
 |[common_type](../standard-library/common-type-class.md)|Genera il tipo comune di tutti i tipi di pacchetto di parametri.|
-|[conditional](../standard-library/conditional-class.md)|Se la condizione è true, genera il primo tipo specificato, altrimenti genera il secondo.|
+|[condizionale](../standard-library/conditional-class.md)|Se la condizione è true, genera il primo tipo specificato, altrimenti genera il secondo.|
 |[decay](../standard-library/decay-class.md)|Genera il tipo come passato da valore. Crea un tipo di non riferimento, non constante o non volatile oppure crea un puntatore al tipo.|
 |[enable_if](../standard-library/enable-if-class.md)|Se la condizione è true, genera il primo tipo specificato, altrimenti non genera alcun tipo.|
 |[invoke_result](invoke-result-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunto in C++ 17. |
@@ -222,7 +222,7 @@ Tratti dell'operatore logico
 
 |||
 |-|-|
-|[insieme](../standard-library/conjunction-class.md)||
+|[unione](../standard-library/conjunction-class.md)||
 |[disgiunzione](../standard-library/disjunction-class.md)||
 |[negazione](../standard-library/negation-class.md)||
 

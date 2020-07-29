@@ -1,17 +1,17 @@
 ---
-title: transmit_as (C++ attributo com)
+title: transmit_as (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a34d57cc60dcc65e8b111c595fdd819dea407b78
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214487"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201128"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -70,15 +70,15 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**Si applica a**|**typedef**|
+|**Si applica a**|**`typedef`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[esportazione](export.md)

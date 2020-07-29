@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c209d5a8d2a35f2643e90e5595d86f41519f30b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371337"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216557"
 ---
 # <a name="issame-structure"></a>IsSame (struttura)
 
@@ -48,7 +48,7 @@ Verifica se un tipo specificato è uguale a un altro tipo specificato.
 
 Nome                    | Descrizione
 ----------------------- | --------------------------------------------------
-[IsSame::valore](#value) | Indica se un tipo è uguale a un altro.
+[Valore:: value](#value) | Indica se un tipo è uguale a un altro.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -56,11 +56,11 @@ Nome                    | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** internal.h
+**Intestazione:** Internal. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="issamevalue"></a><a name="value"></a>IsSame::valore
+## <a name="issamevalue"></a><a name="value"></a>Valore:: value
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -82,4 +82,4 @@ struct IsSame<T1, T1>
 
 Indica se un tipo è uguale a un altro.
 
-`value`è **true** se i parametri di modello sono uguali e **false** se i parametri di modello sono diversi.
+`value`indica **`true`** se i parametri del modello sono uguali e **`false`** se i parametri del modello sono diversi.

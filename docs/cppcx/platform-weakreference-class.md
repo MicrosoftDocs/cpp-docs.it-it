@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: befefba7cc76f24f6dddd58d0c5f040bfd205508
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182964"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216596"
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 
@@ -28,28 +28,28 @@ class WeakReference
 
 ### <a name="constructors"></a>Costruttori
 
-|Member|Descrizione|
+|Membro|Descrizione|
 |------------|-----------------|
 |[WeakReference:: WeakReference](#ctor)|Inizializza una nuova istanza della classe WeakReference.|
 
 ### <a name="methods"></a>Metodi
 
-|Member|Descrizione|
+|Membro|Descrizione|
 |------------|-----------------|
 |[WeakReference:: Resolve](#resolve)|Restituisce un handle alla classe di riferimento sottostante o nullptr se l'oggetto non esiste più.|
 
 ### <a name="operators"></a>Operatori
 
-|Member|Descrizione|
+|Membro|Descrizione|
 |------------|-----------------|
 |[WeakReference::operator=](#operator-assign)|Assegna un nuovo valore all'oggetto WeakReference.|
 |[BoolType WeakReference::operator](#booltype)|Implementa il modello bool sicuro.|
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La classe WeakReference stessa non è una classe di riferimento e pertanto non eredita da Platform::Object^ e non può essere usata nella firma di un metodo pubblico.
 
-## <a name="operator-assign"></a> Booltype =
+## <a name="weakreferenceoperator"></a><a name="operator-assign"></a>WeakReference:: operator =
 
 Assegna un valore a WeakReference.
 
@@ -62,11 +62,11 @@ WeakReference& operator=(WeakReference&& otherArg);
 WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-L'ultimo overload nell'elenco precedente consente di assegnare una classe di riferimento a una variabile WeakReference. In questo caso la classe di riferimento è eseguire il downcast a [platform:: Object](../cppcx/platform-object-class.md)^. Ripristinare il tipo originale in un secondo momento specificandolo come argomento per il parametro di tipo nel [WeakReference:: Resolve\<T >](#resolve) funzione membro.
+L'ultimo overload nell'elenco precedente consente di assegnare una classe di riferimento a una variabile WeakReference. In questo caso la classe ref è abbattuta per [Platform:: Object](../cppcx/platform-object-class.md)^. Il tipo originale viene ripristinato in un secondo momento specificandone il tipo come argomento per il parametro di tipo nella funzione membro [WeakReference:: Resolve \<T> ](#resolve) .
 
-## <a name="booltype"></a> Booltype WeakReference:: operator
+## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a>WeakReference:: operator BoolType
 
 Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esplicitamente dal codice.
 
@@ -76,9 +76,9 @@ Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esp
 BoolType BoolType();
 ```
 
-## <a name="resolve"></a> Metodo WeakReference:: Resolve (spazio dei nomi Platform)
+## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a>Metodo WeakReference:: Resolve (spazio dei nomi Platform)
 
-Restituisce un handle alla classe di riferimento originale o `nullptr` se l'oggetto non esiste più.
+Restituisce un handle alla classe di riferimento originale o **`nullptr`** se l'oggetto non esiste più.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -108,7 +108,7 @@ if (bar != nullptr)
 
 Si noti che il parametro di tipo è T, non T^.
 
-## <a name="ctor"></a> Costruttore WeakReference:: WeakReference
+## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a>Costruttore WeakReference:: WeakReference
 
 Offre vari modi per creare un elemento WeakReference.
 

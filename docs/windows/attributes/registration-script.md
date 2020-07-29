@@ -1,17 +1,17 @@
 ---
-title: registration_script (C++ attributo com)
+title: registration_script (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217220"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -26,7 +26,7 @@ Esegue lo script di registrazione personalizzato specificato.
 ### <a name="parameters"></a>Parametri
 
 *script*<br/>
-Percorso completo di un file di script di registrazione personalizzato (con estensione RGS). Il valore **None**, ad esempio `script = "none"`, indica che la coclasse non presenta requisiti di registrazione.
+Percorso completo di un file di script di registrazione personalizzato (con estensione RGS). Il valore **None**, ad esempio `script = "none"` , indica che la coclasse non presenta requisiti di registrazione.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -63,10 +63,10 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**|
+|**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Uno o più degli elementi seguenti: `coclass`, `progid`o `vi_progid`.|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Uno o più degli elementi seguenti: `coclass` , `progid` o `vi_progid` .|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

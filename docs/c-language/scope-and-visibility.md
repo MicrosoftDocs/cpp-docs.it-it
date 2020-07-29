@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 354b354a72b5a96a190ce2322eb160b7d6bff1c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158345"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199399"
 ---
 # <a name="scope-and-visibility"></a>Ambito e visibilità
 
@@ -27,7 +27,7 @@ Ambito del blocco - Il dichiaratore, o identificatore di tipo, di un identificat
 
 Ambito di tipo prototipo di funzione - Il dichiaratore, o identificatore di tipo, di un identificatore con ambito di tipo prototipo di funzione viene visualizzato nell'elenco delle dichiarazioni di parametro presente in un prototipo di funzione, che non fa parte della dichiarazione di funzione. Il suo ambito termina alla fine del dichiaratore di funzione.
 
-Le dichiarazioni appropriate per rendere le variabili visibili in altri file di origine sono descritte in [Classi di archiviazione](../c-language/c-storage-classes.md). Tuttavia, le variabili e le funzioni dichiarate a livello esterno attraverso l'identificatore di classe di archiviazione **static** sono visibili solo all'interno del file di origine in cui sono definite. Tutte le altre funzioni sono visibili a livello globale.
+Le dichiarazioni appropriate per rendere le variabili visibili in altri file di origine sono descritte in [Classi di archiviazione](../c-language/c-storage-classes.md). Tuttavia, le variabili e le funzioni dichiarate a livello esterno con l' **`static`** identificatore di classi di archiviazione sono visibili solo all'interno del file di origine in cui sono definite. Tutte le altre funzioni sono visibili a livello globale.
 
 ## <a name="see-also"></a>Vedere anche
 

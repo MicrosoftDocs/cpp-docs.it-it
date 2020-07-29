@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914631"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216869"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -78,7 +78,7 @@ Le funzioni **modf** suddividono il valore a virgola mobile *x* in parti frazion
 
 **modf** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **modf** che accettano e restituiscono parametri **float** o **Long** **Double** . In un programma C **modf** accetta sempre due valori Double e restituisce un valore Double.
+C++ consente l'overload, quindi è possibile chiamare overload di **modf** che accettano e restituiscono **`float`** **`long double`** parametri o. In un programma C **modf** accetta sempre due valori Double e restituisce un valore Double.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -86,7 +86,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**modf**, **modff**, **modFL**|C: \<math.h><br /><br /> C++:, \<cmath> o \<math.h>|
+|**modf**, **modff**, **modFL**|C\<math.h><br /><br /> C++:, \<cmath> o\<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -116,6 +116,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

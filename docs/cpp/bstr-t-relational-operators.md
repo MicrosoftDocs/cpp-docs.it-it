@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: a4126eb7771e17db5fb813898d6fa4917f6983bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8fc163255a5ab342938f56f8a22af3984a48e56a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216622"
 ---
 # <a name="_bstr_t-relational-operators"></a>Operatori relazionali _bstr_t
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Confronta due oggetti `_bstr_t`.
 
@@ -39,9 +39,9 @@ bool operator>=(const _bstr_t& str) const throw( );
 
 ## <a name="remarks"></a>Osservazioni
 
-Questi operatori confrontano due oggetti `_bstr_t` lessicograficamente. Gli operatori restituiscono TRUE se i confronti vengono mantenuti; in caso contrario, restituisce FALSE.
+Questi operatori confrontano due oggetti `_bstr_t` lessicograficamente. Gli operatori restituiscono **`true`** se i confronti sono in attesa; in caso contrario, restituisce **`false`** .
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

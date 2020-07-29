@@ -1,17 +1,17 @@
 ---
-title: helpstringdll (C++ attributo com)
+title: helpstringdll (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46323a7ff4164111b48aed24b12bef5d400afacc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168122"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217246"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -30,7 +30,7 @@ DLL da usare per eseguire la ricerca di stringhe di documento.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **helpstringdll** C++ ha la stessa funzionalità dell'attributo MIDL di [helpstringdll](/windows/win32/Midl/helpstringdll) .
+L'attributo **helpstringdll** di C++ ha la stessa funzionalità dell'attributo MIDL di [helpstringdll](/windows/win32/Midl/helpstringdll) .
 
 ## <a name="example"></a>Esempio
 
@@ -53,10 +53,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **interfaccia**, metodo di interfaccia|
+|**Si applica a**|**`class`**, **interfaccia**, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

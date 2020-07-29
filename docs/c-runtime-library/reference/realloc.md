@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 15c818ee6f70d02fb9b63f12deef6b1bf3698322
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 72c38021452940553bad770160ecc5db7ea546d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917936"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216817"
 ---
 # <a name="realloc"></a>realloc
 
@@ -67,13 +67,13 @@ Nuova dimensione in byte.
 
 ## <a name="return-value"></a>Valore restituito
 
-**realloc** restituisce un puntatore **void** al blocco di memoria riallocato (e possibilmente spostato).
+**realloc** restituisce un **`void`** puntatore al blocco di memoria riallocato (e possibilmente spostato).
 
 Se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata, il blocco originale viene lasciato invariato e viene restituito **null** .
 
 Se *size* è zero, il blocco a cui punta *memblock* viene liberato; il valore restituito è **null**e *memblock* viene lasciato puntare a un blocco liberato.
 
-Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
+Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da **`void`** , usare un cast del tipo sul valore restituito.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -83,7 +83,7 @@ L'argomento *size* fornisce le nuove dimensioni del blocco, in byte. Il contenut
 
 **realloc** imposta **errno** su **ENOMEM** se l'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera **_HEAP_MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** chiama **malloc** per poter usare la funzione C++ [_set_new_mode](set-new-mode.md) per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **realloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore funziona quando ha esito negativo per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
+**realloc** chiama **malloc** per poter usare la funzione C++ [_set_new_mode](set-new-mode.md) per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **realloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui l' **`new`** operatore esegue quando si verifica un errore per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
 
 ```C
 _set_new_mode(1);
@@ -93,7 +93,7 @@ all'inizio del programma o collegarsi a NEWMODE.OBJ (vedere [Opzioni di collegam
 
 Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **realloc** viene risolto in [_realloc_dbg](realloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-**realloc** è contrassegnato `__declspec(noalias)` come `__declspec(restrict)`e, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**realloc** è contrassegnato `__declspec(noalias)` `__declspec(restrict)` come e, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -154,7 +154,7 @@ Size of block after realloc of 1000 more longs: 8000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [libero](free.md)<br/>
 [malloc](malloc.md)<br/>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3485
 ms.assetid: d67536f9-67a1-4ad9-9a94-d8bbbca3d0dc
-ms.openlocfilehash: 0eacb6ce6426674d23fc78596ead3730f46ae370
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2117832ffd5a90612e9745a3706f01e3b5d1b18d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743042"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197670"
 ---
 # <a name="compiler-error-c3485"></a>Errore del compilatore C3485
 
 una definizione di espressione lambda non può contenere qualificatori di tipo const o volatile
 
-Non è possibile usare un qualificatore `const` o `volatile` come parte della definizione di un'espressione lambda.
+Non è possibile usare **`const`** un **`volatile`** qualificatore o come parte della definizione di un'espressione lambda.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-- Rimuovere il qualificatore `const` o `volatile` dalla definizione dell'espressione lambda.
+- Rimuovere il **`const`** **`volatile`** qualificatore o dalla definizione dell'espressione lambda.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3485 perché usa il qualificatore `const` come parte della definizione di un'espressione lambda:
+L'esempio seguente genera C3485 perché usa il **`const`** qualificatore come parte della definizione di un'espressione lambda:
 
 ```cpp
 // C3485.cpp

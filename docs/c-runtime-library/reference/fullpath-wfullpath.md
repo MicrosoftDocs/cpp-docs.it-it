@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909949"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231390"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -71,7 +71,7 @@ Puntatore a un buffer contenente il nome del percorso assoluto o completo o **nu
 Nome del percorso relativo.
 
 *maxLength*<br/>
-Lunghezza massima del buffer del nome del percorso assoluto (*absPath*). Questa lunghezza è in byte per **_fullpath** ma in caratteri wide (**wchar_t**) per **_wfullpath**.
+Lunghezza massima del buffer del nome del percorso assoluto (*absPath*). Questa lunghezza è in byte per **_fullpath** ma in caratteri wide ( **`wchar_t`** ) per **_wfullpath**.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -109,7 +109,7 @@ Se il buffer *absPath* è **null**, **_fullpath** chiama [malloc](malloc.md) per
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fullpath**|\<stdlib.h>|
 |**_wfullpath**|\<stdlib.h> o \<wchar.h>|
@@ -153,7 +153,7 @@ Full path is: C:\Documents and Settings\user\test
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md)<br/>
 [_makepath, _wmakepath](makepath-wmakepath.md)<br/>

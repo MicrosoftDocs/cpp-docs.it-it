@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157803"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217051"
 ---
 # <a name="structure-declarations"></a>Dichiarazioni di struttura
 
@@ -26,8 +26,8 @@ Una "dichiarazione di struttura" denomina un tipo e specifica una sequenza di va
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Unione**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -53,7 +53,7 @@ La dichiarazione di un tipo di struttura non riserva spazio per una struttura. �
 
 *struct-declaration-list* specifica i tipi e i nomi dei membri della struttura. Un argomento *struct-declaration-list* contiene una o più dichiarazioni di variabile o campo di bit.
 
-Ogni variabile dichiarata in *struct-declaration-list* è definita come un membro del tipo di struttura. Le dichiarazioni delle variabili in *struct-declaration-list* hanno lo stesso formato di altre dichiarazioni delle variabili illustrate in questa sezione, ad eccezione del fatto che le dichiarazioni non possono contenere gli identificatori o gli inizializzatori di una classe di archiviazione. I membri della struttura possono avere qualsiasi tipo di variabile tranne il tipo `void`, un tipo incompleto o un tipo di funzione.
+Ogni variabile dichiarata in *struct-declaration-list* è definita come un membro del tipo di struttura. Le dichiarazioni delle variabili in *struct-declaration-list* hanno lo stesso formato di altre dichiarazioni delle variabili illustrate in questa sezione, ad eccezione del fatto che le dichiarazioni non possono contenere gli identificatori o gli inizializzatori di una classe di archiviazione. I membri della struttura possono avere qualsiasi tipo di variabile tranne il tipo **`void`** , un tipo incompleto o un tipo di funzione.
 
 Un membro non può essere dichiarato con lo stesso tipo della struttura in cui è presente. Tuttavia, un membro può essere dichiarato come puntatore al tipo di struttura in cui è presente purché il tipo di struttura disponga di un tag. Questo consente di creare elenchi di strutture collegati.
 
@@ -94,7 +94,7 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-La struttura `employee` dispone di tre membri: `name`, `id` e `class`. Il membro `name` è una matrice di 20 elementi e `id` e `class` sono membri semplici, rispettivamente con il tipo `int` e **long**. L'identificatore `employee` è l'identificatore di struttura.
+La struttura `employee` dispone di tre membri: `name`, `id` e `class`. Il `name` membro è una matrice di 20 elementi e `id` e `class` sono membri semplici con il **`int`** **`long`** tipo e rispettivamente. L'identificatore `employee` è l'identificatore di struttura.
 
 ```C
 struct employee student, faculty, staff;
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-La struttura `complex` contiene due membri con il tipo **float**, `x` e `y`. Il tipo di struttura non presenta tag ed è pertanto senza nome o anonimo.
+La `complex` struttura ha due membri con **`float`** tipo, `x` e `y` . Il tipo di struttura non presenta tag ed è pertanto senza nome o anonimo.
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,7 +120,7 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-I primi due membri della struttura sono una variabile `char` e un puntatore a un valore **float**. Il terzo membro, `next`, viene dichiarato come un puntatore al tipo di struttura che si sta definendo (`sample`).
+I primi due membri della struttura sono una **`char`** variabile e un puntatore a un **`float`** valore. Il terzo membro, `next`, viene dichiarato come un puntatore al tipo di struttura che si sta definendo (`sample`).
 
 Le strutture anonime possono essere utili quando non è necessario il tag denominato. Questa situazione si verifica quando una dichiarazione definisce tutte le istanze della struttura. Ad esempio:
 
@@ -149,9 +149,9 @@ struct somestruct
 
 Il compilatore consente l'utilizzo di una matrice senza dimensione o di dimensione pari a zero come ultimo membro di una struttura. Questa operazione può risultare utile se la dimensione di una matrice costante è diversa quando viene utilizzata in situazioni differenti. La dichiarazione di una struttura è simile alla seguente:
 
-**struct** *identificatore* struct **{** *set-of-Declarations* *Type* <em>nome</em>**\[-matrice];};**
+**`struct`***identificatore* **{** *set-of-Declarations* *Type* <em>nome-matrice</em>** \[ ];};**
 
-Le matrici senza dimensione possono apparire solo come ultimo membro di una struttura. Le strutture contenenti le dichiarazioni di matrice senza dimensione possono essere annidate in altre strutture purché nelle strutture di inclusione non siano dichiarati altri membri. Le matrici di queste strutture non sono consentite. L'operatore `sizeof`, applicato a una variabile di questo tipo o al tipo stesso, presuppone il valore 0 per la dimensione della matrice.
+Le matrici senza dimensione possono apparire solo come ultimo membro di una struttura. Le strutture contenenti le dichiarazioni di matrice senza dimensione possono essere annidate in altre strutture purché nelle strutture di inclusione non siano dichiarati altri membri. Le matrici di queste strutture non sono consentite. L' **`sizeof`** operatore, quando applicato a una variabile di questo tipo o al tipo stesso, presuppone il valore 0 per la dimensione della matrice.
 
 Le dichiarazioni della struttura possono essere specificate senza un dichiaratore quando sono membri di un'altra struttura o unione. I nomi dei campi vengono promossi alla struttura di inclusione. Ad esempio, una struttura senza nome avrà il seguente aspetto:
 

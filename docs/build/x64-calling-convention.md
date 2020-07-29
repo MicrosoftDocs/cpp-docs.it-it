@@ -3,11 +3,12 @@ title: Convenzione di chiamata x64
 description: Dettagli della convenzione di chiamata predefinita x64.
 ms.date: 07/06/2020
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 9bfecd0fb154658a299d3dac7d9e45398ebe450b
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: b615d2e4473fed1d090b7411211c08b0b824bc8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058633"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200855"
 ---
 # <a name="x64-calling-convention"></a>Convenzione di chiamata x64
 
@@ -43,7 +44,7 @@ Gli argomenti con valori integer nelle quattro posizioni più a sinistra vengono
 
 Qualsiasi argomento a virgola mobile e precisione doppia nei primi quattro parametri viene passato in XMM0-XMM3, a seconda della posizione. I valori a virgola mobile vengono inseriti solo nei registri integer RCX, RDX, R8 e R9 quando sono presenti argomenti varargs. Per informazioni dettagliate, vedere [varargs](#varargs). Analogamente, i registri XMM0-XMM3 vengono ignorati quando l'argomento corrispondente è un tipo Integer o puntatore.
 
-[`__m128`](../cpp/m128.md)tipi, matrici e stringhe non vengono mai passati per valore immediato. Viene invece passato un puntatore alla memoria allocata dal chiamante. Gli struct e le unioni di dimensioni 8, 16, 32 o 64 bit e `__m64` i tipi vengono passati come se fossero numeri interi della stessa dimensione. Gli struct o le unioni di altre dimensioni vengono passati come puntatore alla memoria allocata dal chiamante. Per questi tipi di aggregazione passati come puntatore, incluso `__m128` , la memoria temporanea allocata dal chiamante deve essere allineata a 16 byte.
+[`__m128`](../cpp/m128.md)tipi, matrici e stringhe non vengono mai passati per valore immediato. Viene invece passato un puntatore alla memoria allocata dal chiamante. Gli struct e le unioni di dimensioni 8, 16, 32 o 64 bit e **`__m64`** i tipi vengono passati come se fossero numeri interi della stessa dimensione. Gli struct o le unioni di altre dimensioni vengono passati come puntatore alla memoria allocata dal chiamante. Per questi tipi di aggregazione passati come puntatore, incluso **`__m128`** , la memoria temporanea allocata dal chiamante deve essere allineata a 16 byte.
 
 Le funzioni intrinseche che non allocano lo spazio dello stack e non chiamano altre funzioni, talvolta usano altri registri volatili per passare argomenti di registro aggiuntivi. Questa ottimizzazione è resa possibile dalla stretta associazione tra il compilatore e l'implementazione della funzione intrinseca.
 
@@ -55,9 +56,9 @@ La tabella seguente riepiloga il modo in cui i parametri vengono passati, in bas
 |-|-|-|-|-|-|
 | virgola mobile | stack | XMM3 | XMM2 | XMM1 | XMM0 |
 | integer | stack | R9 | R8 | RDX | RCX |
-| Aggregazioni (8, 16, 32 o 64 bit) e`__m64` | stack | R9 | R8 | RDX | RCX |
+| Aggregazioni (8, 16, 32 o 64 bit) e**`__m64`** | stack | R9 | R8 | RDX | RCX |
 | Altre aggregazioni, come puntatori | stack | R9 | R8 | RDX | RCX |
-| `__m128`, come puntatore | stack | R9 | R8 | RDX | RCX |
+| **`__m128`**, come puntatore | stack | R9 | R8 | RDX | RCX |
 
 ### <a name="example-of-argument-passing-1---all-integers"></a>Esempio di argomento che passa 1-tutti i numeri interi
 
@@ -105,7 +106,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>Valori restituiti
 
-Un valore scalare restituito che può adattarsi a 64 bit, incluso il `__m64` tipo, viene restituito tramite Rax. I tipi non scalari, inclusi i tipi float, Double e Vector, ad esempio [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) , [`__m128d`](../cpp/m128d.md) vengono restituiti in XMM0. Lo stato dei bit non usati nel valore restituito in RAX o XMM0 non è definito.
+Un valore scalare restituito che può adattarsi a 64 bit, incluso il **`__m64`** tipo, viene restituito tramite Rax. I tipi non scalari, inclusi i tipi float, Double e Vector, ad esempio [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) , [`__m128d`](../cpp/m128d.md) vengono restituiti in XMM0. Lo stato dei bit non usati nel valore restituito in RAX o XMM0 non è definito.
 
 I tipi definiti dall'utente possono essere restituiti per valore dalle funzioni globali e dalle funzioni membro statiche. Per restituire un tipo definito dall'utente per valore in RAX, deve avere una lunghezza di 1, 2, 4, 8, 16, 32 o 64 bit. Non deve avere anche un costruttore, un distruttore o un operatore di assegnazione di copia definito dall'utente. Non può avere membri dati non statici privati o protetti, né membri dati non statici di tipo riferimento. Non può avere classi base o funzioni virtuali. Inoltre, può avere solo membri dati che soddisfano questi requisiti. Questa definizione è essenzialmente identica a quella di un tipo POD C++ 03. Poiché la definizione è cambiata nello standard C++ 11, non è consigliabile usare `std::is_pod` per questo test. In caso contrario, il chiamante deve allocare memoria per il valore restituito e passare un puntatore come primo argomento. Gli argomenti rimanenti vengono spostati di un argomento a destra. È necessario che lo stesso puntatore sia restituito dal computer chiamato in RAX.
 
@@ -211,7 +212,7 @@ Non creare presupposti sullo stato della parte volatile del registro MXCSR attra
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-Quando si include setjmpex. h o setjmp. h, tutte le chiamate a [`setjmp`](../c-runtime-library/reference/setjmp.md) o [`longjmp`](../c-runtime-library/reference/longjmp.md) generano una rimozione che richiama distruttori e `__finally` chiamate.  Questo comportamento è diverso da x86, dove l'inclusione di setjmp. h comporta la `__finally` mancata chiamata di clausole e distruttori.
+Quando si include setjmpex. h o setjmp. h, tutte le chiamate a [`setjmp`](../c-runtime-library/reference/setjmp.md) o [`longjmp`](../c-runtime-library/reference/longjmp.md) generano una rimozione che richiama distruttori e **`__finally`** chiamate.  Questo comportamento è diverso da x86, dove l'inclusione di setjmp. h comporta la **`__finally`** mancata chiamata di clausole e distruttori.
 
 Una chiamata a `setjmp` conserva il puntatore dello stack corrente, i registri non volatili e i registri MxCsr.  Chiama per `longjmp` tornare al sito di chiamata più recente `setjmp` e reimposta il puntatore dello stack, i registri non volatili e i registri MxCsr, tornando allo stato come mantenuto dalla chiamata più recente `setjmp` .
 

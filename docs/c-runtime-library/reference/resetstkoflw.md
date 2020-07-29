@@ -29,12 +29,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: b19b66279427aa4623cff037e67067096eb6bd42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f4d5d930ebdc487c3c2bcc2f93494a25528c438
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917789"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216778"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -79,7 +79,7 @@ Quando la dimensione dello stack massima viene superata, il sistema esegue le tr
 
 Si noti che, a questo punto, lo stack non ha più una pagina di protezione. La volta successiva che il programma aumenta lo stack fino alla fine, in cui deve esserci una pagina di protezione, il programma scrive oltre la fine dello stack e provoca una violazione di accesso.
 
-Chiamare **_resetstkoflw** per ripristinare la pagina di protezione ogni volta che il ripristino viene eseguito dopo un'eccezione di overflow dello stack. Questa funzione può essere chiamata dall'interno del corpo principale di un blocco di **__except** o all'esterno di un blocco di **__except** . Tuttavia, esistono alcune limitazioni sui casi in cui deve essere utilizzata. **_resetstkoflw** non deve mai essere chiamato da:
+Chiamare **_resetstkoflw** per ripristinare la pagina di protezione ogni volta che il ripristino viene eseguito dopo un'eccezione di overflow dello stack. Questa funzione può essere chiamata dall'interno del corpo principale di un **`__except`** blocco o all'esterno di un **`__except`** blocco. Tuttavia, esistono alcune limitazioni sui casi in cui deve essere utilizzata. **_resetstkoflw** non deve mai essere chiamato da:
 
 - Un'espressione di filtro.
 
@@ -87,17 +87,17 @@ Chiamare **_resetstkoflw** per ripristinare la pagina di protezione ogni volta c
 
 - Una funzione chiamata da una funzione di filtro.
 
-- Un blocco **catch**.
+- Un **`catch`** blocco.
 
-- Blocco **__finally** .
+- Un **`__finally`** blocco.
 
 A questi punti, lo stack non è ancora sufficientemente svuotato.
 
-Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non eccezioni C++, quindi **_resetstkoflw** non è utile in un blocco **catch** ordinario perché non rileverà un'eccezione di overflow dello stack. Tuttavia, se si usa [_set_se_translator](set-se-translator.md) per implementare un convertitore di eccezioni strutturate che genera eccezioni C++ (come nel secondo esempio), per un'eccezione di overflow dello stack viene restituita un'eccezione C++ che può essere gestita da un blocco catch C++.
+Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non eccezioni C++, quindi **_resetstkoflw** non è utile in un **`catch`** blocco normale perché non intercetta un'eccezione di overflow dello stack. Tuttavia, se si usa [_set_se_translator](set-se-translator.md) per implementare un convertitore di eccezioni strutturate che genera eccezioni C++ (come nel secondo esempio), per un'eccezione di overflow dello stack viene restituita un'eccezione C++ che può essere gestita da un blocco catch C++.
 
 Non è sicuro chiamare **_resetstkoflw** in un blocco catch C++ che viene raggiunto da un'eccezione generata dalla funzione del convertitore di eccezioni strutturate. In questo caso, lo spazio dello stack non viene liberato e il puntatore dello stack non viene reimpostato fino all'esterno del blocco catch, anche se i distruttori sono stati chiamati per tutti gli oggetti distruttibili prima del blocco catch. Questa funzione non deve essere chiamata finché lo spazio dello stack non è libero e il puntatore dello stack non è stato reimpostato. Pertanto, deve essere chiamata solo dopo l'uscita dal blocco catch. Nel blocco catch è consigliabile utilizzare uno spazio di stack il più piccolo possibile, poiché un overflow dello stack che si verifica nel blocco catch che sta tentando di risolvere un overflow dello stack precedente non è reversibile e il programma può smettere di rispondere dal momento che l'overflow nel blocco catch genera un'eccezione che, a sua volta, è gestita dallo stesso blocco catch.
 
-Esistono situazioni in cui la funzione **_resetstkoflw** può avere esito negativo anche se usata in una posizione corretta, ad esempio in un blocco **__except**. Se, anche dopo la rimozione dello stack, non esiste ancora spazio dello stack sufficiente per eseguire **_resetstkoflw** senza scrivere nell'ultima pagina dello stack, **_resetstkoflw** non riesce a reimpostare l'ultima pagina dello stack come guard page e restituisce 0, a indicare una condizione di errore. Di conseguenza, l'utilizzo sicuro di questa funzione deve includere la verifica del valore restituito anziché supporre che lo stack sia sicuro da utilizzare.
+Esistono situazioni in cui **_resetstkoflw** possono avere esito negativo anche se utilizzate in una posizione corretta, ad esempio all'interno di un **`__except`** blocco. Se, anche dopo la rimozione dello stack, non esiste ancora spazio dello stack sufficiente per eseguire **_resetstkoflw** senza scrivere nell'ultima pagina dello stack, **_resetstkoflw** non riesce a reimpostare l'ultima pagina dello stack come guard page e restituisce 0, a indicare una condizione di errore. Di conseguenza, l'utilizzo sicuro di questa funzione deve includere la verifica del valore restituito anziché supporre che lo stack sia sicuro da utilizzare.
 
 La gestione delle eccezioni strutturate non rileva un'eccezione **STATUS_STACK_OVERFLOW** quando l'applicazione viene compilata con **/CLR** (vedere [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -217,7 +217,7 @@ loop #10
 resetting stack overflow
 ```
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 
 Nell'esempio seguente viene illustrato l'utilizzo consigliato di **_resetstkoflw** in un programma in cui le eccezioni strutturate vengono convertite in eccezioni C++.
 

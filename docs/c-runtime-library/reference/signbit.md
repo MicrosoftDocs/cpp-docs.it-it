@@ -6,12 +6,12 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356329"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216739"
 ---
 # <a name="signbit"></a>signbit
 
@@ -44,11 +44,11 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**signbit** restituisce un valore diverso da zero (**true** in C++) se l'argomento *x* è infinito negativo o negativo. Restituisce 0 (**false** in C++) se l'argomento è infinity non negativo, positivo o un valore NAN.
+**signbit** restituisce un valore diverso da zero ( **`true`** in C++) se l'argomento *x* è negativo o infinito negativo. Restituisce 0 ( **`false`** in C++) se l'argomento è non negativo, infinito positivo o NaN.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**signbit** è una macro quando viene compilato come C e una funzione inline overload quando viene compilato come C++.
+**signbit** è una macro compilata come C e una funzione inline in overload quando viene compilata come C++.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -56,11 +56,11 @@ Valore a virgola mobile da verificare.
 |--------------|---------------------------|-------------------------------|
 |**signbit**|\<math.h>|\<math.h> o \<cmath>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4f793e8485628faf0a80445ce0414835e3b71d1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857112"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217168"
 ---
 # <a name="c-storage-classes"></a>Classi di archiviazione C
 
@@ -27,18 +27,18 @@ C fornisce i seguenti identificatori della classe di archiviazione:
 ## <a name="syntax"></a>Sintassi
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Automatico**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Registro**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**statico**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-Modifier-Seq* **)**  / \* specifico di Microsoft\*/
+&nbsp;&nbsp;&nbsp;&nbsp;**`auto`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`register`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`static`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`extern`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`***Extended-decl-Modifier-Seq* **`)`**  / \* Specifiche di Microsoft\*/
 
-Ad eccezione di `__declspec`, in una dichiarazione è possibile usare un solo *storage-class-specifier* in *declaration-specifier*. Se non viene creata alcuna specifica della classe di archiviazione, le dichiarazioni all'interno di un blocco creano oggetti automatici.
+Ad eccezione di **`__declspec`** , è possibile usare un solo *Storage-Class-specifier* in *Declaration-specifier* in una dichiarazione. Se non viene creata alcuna specifica della classe di archiviazione, le dichiarazioni all'interno di un blocco creano oggetti automatici.
 
-Gli elementi dichiarati con l'identificatore **auto** o **register** hanno durate locali. Gli elementi dichiarati con l'identificatore **static** o `extern` hanno durate globali.
+Gli elementi dichiarati con l' **`auto`** **`register`** identificatore o hanno durate locali. Gli elementi dichiarati con l' **`static`** **`extern`** identificatore o hanno durate globali.
 
-Poiché `typedef` e `__declspec` sono semanticamente diversi dagli altri quattro terminali *storage-class-specifier*, vengono descritti separatamente. Per informazioni specifiche su `typedef`, vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md). Per informazioni specifiche su `__declspec`, vedere [Attributi di classi di archiviazione estesi](../c-language/c-extended-storage-class-attributes.md).
+Poiché **`typedef`** e **`__declspec`** sono semanticamente diversi dagli altri quattro terminali *Storage-Class-specifier* , vengono descritti separatamente. Per informazioni specifiche su **`typedef`** , vedere [ `typedef` dichiarazioni](../c-language/typedef-declarations.md). Per informazioni specifiche su **`__declspec`** , vedere [attributi estesi della classe di archiviazione](../c-language/c-extended-storage-class-attributes.md).
 
 La posizione delle dichiarazioni di funzione e di variabile nei file di origine influisce anche sulla classe di archiviazione e sulla visibilità. Le dichiarazioni all'esterno di tutte le definizioni di funzione vengono visualizzate a livello "esterno". Le dichiarazioni all'interno delle definizioni di funzione vengono visualizzate a "livello interno".
 

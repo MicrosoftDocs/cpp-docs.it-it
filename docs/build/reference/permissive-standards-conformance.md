@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217207"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive/ (Conformità agli standard)
 
@@ -40,7 +40,7 @@ L' **`/permissive-`** opzione imposta le [**`/Zc:referenceBinding`**](zc-referen
 
 Nelle versioni del compilatore a partire da Visual Studio 2017 versione 15,3, l'opzione **`/permissive-`** imposta l' [**`/Zc:ternary`**](zc-ternary.md) opzione. Il compilatore implementa inoltre più requisiti per la ricerca del nome in due fasi. Quando l' **`/permissive-`** opzione è impostata, il compilatore analizza le definizioni di funzioni e modelli di classe e identifica i nomi dipendenti e non dipendenti usati nei modelli. In questa versione viene eseguita solo l'analisi delle dipendenze del nome.
 
-Le estensioni specifiche dell'ambiente e le aree di linguaggio che lo standard abbandona all'implementazione non sono interessate da **`/permissive-`** . Ad esempio, le parole chiave specifiche di Microsoft `__declspec` , la convenzione di chiamata e la gestione delle eccezioni strutturate e le direttive o gli attributi pragma specifici del compilatore non vengono contrassegnati dal compilatore in **`/permissive-`** modalità.
+Le estensioni specifiche dell'ambiente e le aree di linguaggio che lo standard abbandona all'implementazione non sono interessate da **`/permissive-`** . Ad esempio, le parole chiave specifiche di Microsoft **`__declspec`** , la convenzione di chiamata e la gestione delle eccezioni strutturate e le direttive o gli attributi pragma specifici del compilatore non vengono contrassegnati dal compilatore in **`/permissive-`** modalità.
 
 L' **`/permissive-`** opzione Usa il supporto della conformità nella versione corrente del compilatore per determinare quali costrutti di linguaggio non sono conformi. L'opzione non determina se il codice è conforme a una versione specifica dello standard C++. Per abilitare il supporto del compilatore implementato per l'ultima bozza standard, utilizzare l' [**`/std:c++latest`**](std-specify-language-standard-version.md) opzione. Per limitare il supporto del compilatore allo standard C++ 17 attualmente implementato, utilizzare l' [**`/std:c++17`**](std-specify-language-standard-version.md) opzione. Per limitare il supporto del compilatore allo standard C++ 14, utilizzare l' [**`/std:c++14`**](std-specify-language-standard-version.md) opzione, che corrisponde all'impostazione predefinita.
 

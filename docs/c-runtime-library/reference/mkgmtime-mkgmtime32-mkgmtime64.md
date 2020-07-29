@@ -43,16 +43,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc8ccfc628a0f0c5dd649dbb5cf3bd0b552b5d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914647"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216882"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Converte un'ora UTC rappresentata da uno **struct** **TM** in un'ora UTC rappresentata da un tipo di **time_t** .
+Converte un'ora UTC rappresentata da un **`struct`** **TM** in un'ora UTC rappresentata da un tipo di **time_t** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -71,7 +71,7 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>Parametri
 
 *timeptr*\
-Puntatore all'ora UTC come **struct** **TM** da convertire.
+Puntatore all'ora UTC come **`struct`** **TM** da convertire.
 
 ## <a name="return-value"></a>Valore restituito
 

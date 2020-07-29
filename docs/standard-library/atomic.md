@@ -1,6 +1,6 @@
 ---
 title: '&lt;atomic&gt;'
-description: Descrive i tipi e le funzioni disponibili nell'intestazione atomica della libreria standard C++ .
+description: Descrive i tipi e le funzioni disponibili nell'intestazione atomica della libreria C++ standard.
 ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
@@ -49,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3c5f732dbda701eb7744b1b25a9a8e7426f7a3e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991171"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203899"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -66,7 +66,7 @@ Definisce classi e modelli di classe da utilizzare per creare tipi che supportan
 #include <atomic>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 > [!NOTE]
 > Nel codice compilato usando [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md)questa intestazione è bloccata. Entrambe le versioni **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2017 e versioni successive.
@@ -79,11 +79,11 @@ Un'operazione atomica ha due proprietà chiave che consentono di usare più thre
 
 In alcune piattaforme, potrebbe non essere possibile implementare in modo efficiente operazioni atomiche per alcuni tipi senza usare blocchi `mutex`. Un tipo atomico è *senza blocco* se nessuna operazione atomica su tale tipo usa i blocchi.
 
-**C++ 11**: nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` sono true.
+**C++ 11**: nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` è true.
 
-La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornisce un tipo atomico minimo che contiene un flag **bool** . Le operazioni sono sempre senza blocco.
+La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornisce un tipo atomico minimo che contiene un **`bool`** flag. Le operazioni sono sempre senza blocco.
 
-Il modello di classe `atomic<T>` archivia un oggetto del tipo di argomento `T` e fornisce l'accesso atomico al valore archiviato. È possibile crearne un'istanza usando qualsiasi tipo che può essere copiato tramite [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) e testato per verificarne l'uguaglianza tramite [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). In particolare, è possibile usare la classe con tipi definiti dall'utente che soddisfano tali requisiti e, in molti casi, con tipi a virgola mobile.
+Il modello `atomic<T>` di classe archivia un oggetto del relativo tipo di argomento `T` e fornisce l'accesso atomico al valore archiviato. È possibile crearne un'istanza usando qualsiasi tipo che può essere copiato tramite [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) e testato per verificarne l'uguaglianza tramite [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). In particolare, è possibile usare la classe con tipi definiti dall'utente che soddisfano tali requisiti e, in molti casi, con tipi a virgola mobile.
 
 Il modello include anche un set di specializzazioni per i tipi integrali e una specializzazione parziale per i puntatori. Queste specializzazioni forniscono operazioni aggiuntive che non sono disponibili tramite il modello principale.
 
@@ -99,24 +99,24 @@ Ogni tipo `atomic<integral>` ha una macro corrispondente che è possibile usare 
 
 Per ogni tipo integrale, esiste un tipo atomico denominato corrispondente che gestisce un oggetto di quel tipo integrale. Ogni tipo `atomic_integral` ha lo stesso set di funzioni membro dell'istanza corrispondente di `atomic<T>` e può essere passato a qualsiasi funzione atomica non membro.
 
-|Tipo `atomic_integral`|Tipo integrale|`atomic_is_lock_free` Macro|
+|Tipo di `atomic_integral`|Tipo integrale|`atomic_is_lock_free` Macro|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**signed char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_uchar`|**char senza segno**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
-|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
-|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
-|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
-|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
-|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
-|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
-|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_ulong`|**long senza segno**|ATOMIC_LONG_LOCK_FREE|
-|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**Long Long senza segno**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_char`|**`char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**`signed char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**`unsigned char`**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|**`char16_t`**|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|**`char32_t`**|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**`wchar_t`**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**`short`**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**`unsigned short`**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**`int`**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**`unsigned int`**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**`long`**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**`unsigned long`**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**`long long`**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**`unsigned long long`**|ATOMIC_LLONG_LOCK_FREE|
 
-I nomi di typedef esistono per specializzazioni del modello atomico per alcuni dei tipi definiti nell'intestazione \<inttypes.h>.
+I nomi typedef sono disponibili per le specializzazioni del modello atomico per alcuni tipi definiti nell'intestazione \<inttypes.h> .
 
 |Tipo atomico|Nome typedef|
 |-----------------|------------------|
@@ -151,24 +151,24 @@ I nomi di typedef esistono per specializzazioni del modello atomico per alcuni d
 |`atomic_intmax_t`|`atomic<intmax_t>`|
 |`atomic_uintmax_t`|`atomic<uintmax_t>`|
 
-## <a name="structs"></a>Strutture
+## <a name="structs"></a>Struct
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Struttura atomic](../standard-library/atomic-structure.md)|Descrive un oggetto che esegue operazioni atomiche su un valore archiviato.|
-|[Struttura atomic_flag](../standard-library/atomic-flag-structure.md)|Descrive un oggetto che imposta e cancella atomicamente un flag **bool** .|
+|[Struttura atomic_flag](../standard-library/atomic-flag-structure.md)|Descrive un oggetto che imposta e cancella atomicamente un **`bool`** flag.|
 
 ## <a name="enums"></a>Enumerazioni
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Enumerazione memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Fornisce nomi simbolici per le operazioni di sincronizzazione sulle posizioni di memoria. Queste operazioni influiscono sul modo in cui gli assegnamenti in un thread diventano visibili in un altro.|
 
 ## <a name="functions"></a>Funzioni
 
-Nell'elenco seguente, le funzioni che non terminano con `_explicit` hanno la semantica del `_explicit`corrispondente, ad eccezione del fatto che hanno gli argomenti [memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti di `memory_order_seq_cst`.
+Nell'elenco seguente, le funzioni che non terminano con `_explicit` hanno la semantica dell'oggetto corrispondente `_explicit` , ad eccezione del fatto che hanno gli argomenti [memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti di `memory_order_seq_cst` .
 
-|Name|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Esegue un'operazione di *confronto e scambio atomico*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Esegue un'operazione di *confronto e scambio atomico*.|
@@ -186,10 +186,10 @@ Nell'elenco seguente, le funzioni che non terminano con `_explicit` hanno la sem
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Sottrae un valore specificato da un valore archiviato esistente.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Imposta il flag in un oggetto `atomic_flag` su **false**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Imposta il flag in un oggetto `atomic_flag` su **false**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Imposta il flag in un oggetto `atomic_flag` su **true**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Imposta il flag in un oggetto `atomic_flag` su **true**.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Imposta il flag in un `atomic_flag` oggetto su **`false`** .|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Imposta il flag in un `atomic_flag` oggetto su **`false`** .|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Imposta il flag in un `atomic_flag` oggetto su **`true`** .|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Imposta il flag in un `atomic_flag` oggetto su **`true`** .|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Imposta il valore archiviato in un oggetto `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Specifica se le operazioni atomiche in un oggetto specificato sono senza blocco.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera un valore in modo atomico.|
@@ -202,5 +202,5 @@ Nell'elenco seguente, le funzioni che non terminano con `_explicit` hanno la sem
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

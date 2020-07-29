@@ -8,16 +8,16 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3242f86e30dcf3227586400b83266ad366ec7e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233834"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217103"
 ---
 # <a name="extern-storage-class-specifier"></a>Identificatore di classi di archiviazione extern
 
-Una variabile dichiarata con l'identificatore di classe di archiviazione **extern** è un riferimento a una variabile con lo stesso nome, definita in un altro file di origine. Viene usata per rendere visibile la definizione della variabile a livello esterno. Una variabile dichiarata come **extern** non ha spazio di archiviazione allocato, ma è solo un nome.
+Una variabile dichiarata con l' **`extern`** identificatore della classe di archiviazione è un riferimento a una variabile con lo stesso nome definito in un altro file di origine. Viene usata per rendere visibile la definizione della variabile a livello esterno. Una variabile dichiarata come **`extern`** non dispone di spazio di archiviazione allocato per se stesso; è solo un nome.
 
 ## <a name="example"></a>Esempio
 
@@ -59,9 +59,9 @@ void func(void)
 }
 ```
 
-In questo esempio, la variabile `i` è definita in Source1.c con un valore iniziale 1. Una dichiarazione **extern** in Source2.c rende 'i' visibile in tale file.
+In questo esempio, la variabile `i` è definita in Source1.c con un valore iniziale 1. Una **`extern`** dichiarazione in source2. c rende visibile ' i ' in tale file.
 
-Nella funzione `func` l'indirizzo della variabile globale `i` viene usato per inizializzare la variabile puntatore **static**`external_i`. Questa operazione è possibile perché la variabile globale ha una durata **static**, pertanto il relativo indirizzo rimane invariato durante l'esecuzione del programma. Viene poi definita una variabile `i` all'interno dell'ambito di `func` come variabile locale con valore iniziale 16. Questa definizione non influisce sul valore di `i` a livello esterno, che viene nascosto mediante l'uso del nome per la variabile locale. Il valore della variabile globale `i` è ora accessibile solo tramite il puntatore `external_i`.
+Nella `func` funzione l'indirizzo della variabile globale `i` viene usato per inizializzare la **`static`** variabile puntatore `external_i` . Questa operazione funziona perché la variabile globale ha una durata, il che significa che l' **`static`** indirizzo non cambia durante l'esecuzione del programma. Viene poi definita una variabile `i` all'interno dell'ambito di `func` come variabile locale con valore iniziale 16. Questa definizione non influisce sul valore di `i` a livello esterno, che viene nascosto mediante l'uso del nome per la variabile locale. Il valore della variabile globale `i` è ora accessibile solo tramite il puntatore `external_i`.
 
 ## <a name="see-also"></a>Vedere anche
 

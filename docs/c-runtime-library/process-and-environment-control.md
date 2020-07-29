@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ed8d15181a171b4b6a436a3e410a99b48232bc6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742102"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217025"
 ---
 # <a name="process-and-environment-control"></a>Controllo processo e ambiente
 
@@ -24,10 +24,10 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 
 ## <a name="process-and-environment-control-functions"></a>Funzioni di controllo dei processi e dell'ambiente
 
-|Routine|Usa|
+|Routine|Uso|
 |-------------|---------|
 |[abort](../c-runtime-library/reference/abort.md)|Interrompe il processo senza scaricare i buffer né chiamare funzioni registrate da **atexit** e **_onexit**|
-|[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Verifica la presenza di errori logici|
+|[Assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Verifica la presenza di errori logici|
 |Macro [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Simile ad **assert**, ma disponibile solo nelle versioni di debug delle librerie di runtime|
 |[atexit](../c-runtime-library/reference/atexit.md)|Routine di pianificazione per l'esecuzione alla chiusura del programma|
 |[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)|Crea un nuovo thread in un processo del sistema operativo Windows|
@@ -47,7 +47,7 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Termina il processo immediatamente, senza chiamare **atexit** o **_onexit** e senza scaricare il buffer|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ottiene il valore della variabile di ambiente|
 |[_getpid](../c-runtime-library/reference/getpid.md)|Ottiene il numero dell'ID del processo|
-|[longjmp](../c-runtime-library/reference/longjmp.md)|Ripristina l'ambiente dello stack salvato; usarla per eseguire un **goto** non locale|
+|[longjmp](../c-runtime-library/reference/longjmp.md)|Ripristinare l'ambiente dello stack salvato; utilizzarlo per eseguire un non locale**`goto`**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Pianifica le routine per l'esecuzione alla chiusura del programma; usarla per assicurare la compatibilità con Microsoft C/C++ 7.0 e versioni precedenti|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Attende un nuovo processore dei comandi e chiude il flusso sulla pipe collegata|
 |[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)|Stampa un messaggio di errore|
@@ -55,7 +55,7 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)|Crea una pipe ed esegue il comando|
 |[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Aggiunge o modifica il valore della variabile di ambiente|
 |[raise](../c-runtime-library/reference/raise.md)|Invia un segnale al processo chiamante|
-|[setjmp](../c-runtime-library/reference/setjmp.md)|Salva l'ambiente dello stack; usarla per eseguire un **goto** non locale|
+|[setjmp](../c-runtime-library/reference/setjmp.md)|Salva l'ambiente dello stack; utilizzare per eseguire non locale**`goto`**|
 |[signal](../c-runtime-library/reference/signal.md)|Gestisce un segnale di interruzione|
 |[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|Crea ed esegue il nuovo processo con l'elenco di argomenti specificato|
 |[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|Crea ed esegue il nuovo processo con l'elenco di argomenti e l'ambiente specificati|
@@ -73,18 +73,18 @@ La differenza tra le famiglie **_exec** e **_spawn** consiste nel fatto che una 
 
 Le differenze tra le funzioni della famiglia **_exec**, come tra quelle della famiglia **_spawn**, includono il metodo di individuazione del file da eseguire come nuovo processo, il modo in cui gli argomenti vengono passati al nuovo processo e il metodo di impostazione dell'ambiente, come illustrato nella tabella seguente. Usare una funzione che passa un elenco di argomenti quando il numero di argomenti è costante o è noto in fase di esecuzione. Usare una funzione che passa un puntatore a una matrice contenente gli argomenti quando il numero di argomenti viene determinato in fase di esecuzione. Le informazioni riportate nella tabella seguente vengono applicate anche alle controparti con caratteri wide delle funzioni **_spawn** ed **_exec**.
 
-### <a name="spawn-and-exec-function-families"></a>Famiglie di funzioni _spawn e _exec
+### <a name="_spawn-and-_exec-function-families"></a>Famiglie di funzioni _spawn e _exec
 
 |Funzioni|Uso della variabile PATH per individuare il file|Convenzione per il passaggio degli argomenti|Impostazioni dell'ambiente|
 |---------------|--------------------------------------|----------------------------------|--------------------------|
-|**_execl**, **_spawnl**|No|List|Ereditate dal processo chiamante|
-|**_execle**, **_spawnle**|No|List|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
-|**_execlp**, **_spawnlp**|Sì|List|Ereditate dal processo chiamante|
-|**_execvpe**, **_spawnvpe**|Sì|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
-|**_execlpe**, **_spawnlpe**|Sì|List|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
-|**_execv**, **_spawnv**|No|Matrice|Ereditate dal processo chiamante|
-|**_execve**, **_spawnve**|No|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
-|**_execvp**, **_spawnvp**|Sì|Matrice|Ereditate dal processo chiamante|
+|**_execl**, **_spawnl**|No|Elenco|Ereditate dal processo chiamante|
+|**_execle**, **_spawnle**|No|Elenco|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
+|**_execlp**, **_spawnlp**|Sì|Elenco|Ereditate dal processo chiamante|
+|**_execvpe**, **_spawnvpe**|Sì|Array|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
+|**_execlpe**, **_spawnlpe**|Sì|Elenco|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
+|**_execv**, **_spawnv**|No|Array|Ereditate dal processo chiamante|
+|**_execve**, **_spawnve**|No|Array|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
+|**_execvp**, **_spawnvp**|Sì|Array|Ereditate dal processo chiamante|
 
 ## <a name="see-also"></a>Vedere anche
 

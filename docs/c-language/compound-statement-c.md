@@ -5,16 +5,16 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7fd24049c744874fb0ab3bda37eedef3a139a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200582"
 ---
 # <a name="compound-statement-c"></a>Istruzione composta (C)
 
-Un'istruzione composta (detta anche "blocco") viene in genere visualizzata come corpo di un'altra istruzione, ad esempio l'istruzione **if**. In [Dichiarazioni e tipi](../c-language/declarations-and-types.md) viene descritto il modulo e il significato delle dichiarazioni che possono essere visualizzate nell'intestazione di un'istruzione composta.
+Un'istruzione composta (detta anche "blocco") viene in genere visualizzata come corpo di un'altra istruzione, ad esempio l' **`if`** istruzione. In [Dichiarazioni e tipi](../c-language/declarations-and-types.md) viene descritto il modulo e il significato delle dichiarazioni che possono essere visualizzate nell'intestazione di un'istruzione composta.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,11 +31,11 @@ Un'istruzione composta (detta anche "blocco") viene in genere visualizzata come 
 
 Se esistono dichiarazioni, devono precedere qualsiasi istruzione. L'ambito di ogni identificatore dichiarato all'inizio di un'istruzione composta si estende dal punto di dichiarazione fino alla fine del blocco. È visibile nel blocco a meno che non esista una dichiarazione dello stesso identificatore in un blocco interno.
 
-Si presuppone che gli identificatori in un'istruzione composta siano **auto** salvo se dichiarati esplicitamente con **register**, **static** o `extern`, mentre le funzioni possono essere solo `extern`. È possibile ignorare l'identificatore `extern` nelle dichiarazioni di funzione e la funzione sarà sempre `extern`.
+Gli identificatori in un'istruzione composta sono presunti, a **`auto`** meno che non vengano dichiarati in modo esplicito con **`register`** , **`static`** o **`extern`** , ad eccezione delle funzioni, che possono essere solo **`extern`** . È possibile lasciare l' **`extern`** identificatore nelle dichiarazioni di funzione e la funzione sarà ancora **`extern`** .
 
-L'archiviazione non viene allocata e l'inizializzazione non è consentita se una variabile o una funzione viene dichiarata in un'istruzione composta con classe di archiviazione `extern`. La dichiarazione fa riferimento a una variabile esterna o a una funzione definita altrove.
+L'archiviazione non viene allocata e l'inizializzazione non è consentita se una variabile o una funzione viene dichiarata in un'istruzione composta con classe di archiviazione **`extern`** . La dichiarazione fa riferimento a una variabile esterna o a una funzione definita altrove.
 
-Le variabili dichiarate in un blocco con la parola chiave **auto** o **register** vengono ridistribuite e, se necessario, inizializzate ogni volta che viene inserita l'istruzione composta. Queste variabili non vengono definite quando si esce dall'istruzione composta. Se una variabile dichiarata in un blocco dispone dell'attributo **static**, la variabile viene inizializzata quando inizia l'esecuzione del programma e mantiene il suo valore nell'intero programma. Vedere [Classi di archiviazione](../c-language/c-storage-classes.md) per altre informazioni relative a **static**.
+Le variabili dichiarate in un blocco con la **`auto`** **`register`** parola chiave o vengono riallocate e, se necessario, inizializzate ogni volta che viene immessa l'istruzione composta. Queste variabili non vengono definite quando si esce dall'istruzione composta. Se una variabile dichiarata in un blocco dispone dell' **`static`** attributo, la variabile viene inizializzata all'inizio dell'esecuzione del programma e mantiene il relativo valore in tutto il programma. Per informazioni su, vedere [classi di archiviazione](../c-language/c-storage-classes.md) **`static`** .
 
 In questo esempio viene illustrata un'istruzione composta:
 

@@ -14,20 +14,20 @@ helpviewer_keywords:
 - character codes [C++], wide
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
-ms.openlocfilehash: 0d573fac938f5e4d62c99c8cd6e676b96123a0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e27a1832284c109cc2d8a4655f6d093bf7a2d99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232917"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199659"
 ---
 # <a name="multibyte-and-wide-characters"></a>Caratteri multibyte e wide
 
 Un carattere multibyte è un carattere composto da sequenze di uno o più byte. Ogni sequenza di byte rappresenta un singolo carattere nel set di caratteri esteso. I caratteri multibyte vengono utilizzati nei set di caratteri, ad esempio Kanji.
 
-I caratteri "wide" sono codici carattere multilingue costituiti sempre da 16 bit. Il tipo per le costanti carattere è `char`, mentre per i caratteri "wide" il tipo è `wchar_t`. Poiché i caratteri "wide" vengono sempre rappresentati con dimensione fissa, l'utilizzo di tali caratteri semplifica la programmazione con i set di caratteri internazionali.
+I caratteri "wide" sono codici carattere multilingue costituiti sempre da 16 bit. Il tipo per le costanti carattere è **`char`** . per i caratteri wide, il tipo è **`wchar_t`** . Poiché i caratteri "wide" vengono sempre rappresentati con dimensione fissa, l'utilizzo di tali caratteri semplifica la programmazione con i set di caratteri internazionali.
 
-Il valore letterale stringa a caratteri "wide" `L"hello"` diventa una matrice di sei Integer di tipo `wchar_t`.
+Il valore letterale stringa a caratteri wide `L"hello"` diventa una matrice di sei Integer di tipo **`wchar_t`** .
 
 ```
 {L'h', L'e', L'l', L'l', L'o', 0}

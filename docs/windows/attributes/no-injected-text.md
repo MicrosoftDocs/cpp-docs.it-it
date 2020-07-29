@@ -1,17 +1,17 @@
 ---
-title: no_injected_text (C++ attributo com)
+title: no_injected_text (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e5c822c45888f41e8dd849f25658d0139e6fda0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166614"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201245"
 ---
 # <a name="no_injected_text"></a>no_injected_text
 
@@ -26,7 +26,7 @@ Impedisce al compilatore di inserire codice come risultato dell'utilizzo dell'at
 ### <a name="parameters"></a>Parametri
 
 *boolean*<br/>
-Opzionale **true** se non si desidera inserire codice, **false** per consentire l'inserimento del codice. il valore predefinito è **true** .
+(Facoltativo) **`true`** Se non si desidera inserire codice, per consentire l'inserimento del **`false`** codice. **`true`** è il valore predefinito.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -40,8 +40,8 @@ L'uso più comune dell'attributo **no_injected_text** C++ è l'opzione del compi
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507014"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216726"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -72,14 +72,14 @@ Le funzioni **sin** restituiscono il seno di *x*. Se *x* è maggiore o uguale a 
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|nessuno|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
 |± ∞ (sin, sinf, sinl)|NON VALIDO|_DOMAIN|
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **sin** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **sin** accetta e restituisce sempre **Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **sin** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, **sin** accetta e restituisce sempre **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

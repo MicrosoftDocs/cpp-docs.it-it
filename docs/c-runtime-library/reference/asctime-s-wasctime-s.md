@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217012"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -81,7 +81,7 @@ Puntatore a un buffer per archiviare il risultato della stringa di caratteri. Qu
 Dimensioni del buffer utilizzato per archiviare il risultato.
 
 *tmSource*<br/>
-Struttura di data e ora. Questa funzione presuppone un puntatore a un oggetto **struct** **TM** valido.
+Struttura di data e ora. Questa funzione presuppone un puntatore a un oggetto **`struct`** **TM** valido.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -104,7 +104,7 @@ Zero in caso di esito positivo. In caso di esito negativo, viene richiamato il g
 
 La funzione **asctime** converte un'ora archiviata come una struttura in una stringa di caratteri. Il valore *tmSource* viene in genere ottenuto da una chiamata a **gmtime** o **localtime**. Entrambe le funzioni possono essere usate per compilare una struttura **TM** , come definito nel tempo. H.
 
-|membro timeptr|Value|
+|membro timeptr|valore|
 |--------------------|-----------|
 |**tm_hour**|Ore dalla mezzanotte (0-23)|
 |**tm_isdst**|Positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Negativo se lo stato dell'ora legale è sconosciuto. La libreria di runtime C presuppone le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).|
@@ -118,7 +118,7 @@ La funzione **asctime** converte un'ora archiviata come una struttura in una str
 
 La stringa di caratteri convertita viene anche regolata in base alle impostazioni di fuso orario locale. Vedere le funzioni [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](tzset.md) per informazioni sulla definizione delle variabili di ambiente e globali del fuso orario.
 
-Il risultato della stringa prodotto da **asctime_s** contiene esattamente 26 caratteri e ha il `Wed Jan 02 02:03:55 1980\n\0`formato. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. Il valore passato come secondo parametro deve avere una dimensione minima corrispondente. Se è minore, verrà restituito un codice di errore **EINVAL**.
+Il risultato della stringa prodotto da **asctime_s** contiene esattamente 26 caratteri e ha il formato `Wed Jan 02 02:03:55 1980\n\0` . Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. Il valore passato come secondo parametro deve avere una dimensione minima corrispondente. Se è minore, verrà restituito un codice di errore **EINVAL**.
 
 **_wasctime_s** è una versione a caratteri wide di **asctime_s**. **_wasctime_s** e **asctime_s** si comportano in modo identico.
 
@@ -139,9 +139,9 @@ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
-|**_wasctime_s**|\<time.h> or \<wchar.h>|
+|**_wasctime_s**|\<time.h> o \<wchar.h>|
 
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Security
 
 Se il puntatore del buffer non è **null** e il puntatore non punta a un buffer valido, la funzione sovrascriverà qualsiasi altra posizione. Questo può comportare anche una violazione di accesso.
 

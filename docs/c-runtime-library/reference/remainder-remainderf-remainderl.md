@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917855"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216804"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -68,19 +68,19 @@ Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **resto** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Resto a virgola mobile di *x*  /  *y*. Se il valore di *y* è 0,0, **resto** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **resto** calcolano il resto a virgola mobile *r* di *x* / *y* in modo che *x* = *n* \* *y* + *r*, dove *n*è il numero intero più vicino al valore *x* / *y* e *n*è anche ogni volta che &#124; *n* - *x* / *y* &#124; = 1/2. Quando *r* = 0, *r* ha lo stesso segno di *x*.
+Le funzioni **resto** calcolano il resto a virgola mobile *r* di *x*  /  *y* in modo che *x*  =  *n* \* *y*  +  *r*, dove *n*è il numero intero più vicino al valore *x*  /  *y* e *n*è anche ogni volta che &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Quando *r* = 0, *r* ha lo stesso segno di *x*.
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **resto** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C il **resto** accetta sempre due argomenti **doppi** e restituisce un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **resto** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C il **resto** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
+|Funzione|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |--------------|---------------------|-|
 |**resto**, **remainderf**, **restol**|\<math.h>|\<cmath> o \<math.h>|
 
@@ -110,7 +110,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

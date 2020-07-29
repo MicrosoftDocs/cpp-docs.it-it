@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1dacf23b6c4f698b61c5bfe2dd2fb1ff7ee389f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625849"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216752"
 ---
 # <a name="signal"></a>signal
 
@@ -45,7 +45,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 ### <a name="parameters"></a>Parametri
 
-*sig*<br/>
+*Sig*<br/>
 Valore del segnale.
 
 *func*<br/>
@@ -53,11 +53,11 @@ Il secondo parametro è un puntatore alla funzione da eseguire. Il primo paramet
 
 ## <a name="return-value"></a>Valore restituito
 
-**Signal** restituisce il valore precedente di Func associato al segnale specificato. Ad esempio, se il valore precedente di *Func* era **SIG_IGN**, anche il valore restituito è **SIG_IGN**. Un valore restituito di **SIG_ERR** indica un errore. in tal caso, **errno** viene impostato su **EINVAL**.
+**Signal** restituisce il valore precedente di Func associato al segnale specificato. Se ad esempio il valore precedente di *Func* è **SIG_IGN**, viene **SIG_IGN**anche il valore restituito. Un valore restituito di **SIG_ERR** indica un errore. in tal caso, **errno** viene impostato su **EINVAL**.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **Signal** consente a un processo di scegliere uno dei diversi modi per gestire un segnale di interrupt dal sistema operativo. L'argomento *sig* è l'interrupt a cui risponde il **segnale** . deve corrispondere a una delle costanti manifeste seguenti, definite in SIGNAL. H.
 
@@ -77,7 +77,7 @@ Per impostazione predefinita, **Signal** termina il programma chiamante con codi
 > [!NOTE]
 > **SIGINT** non è supportato per le applicazioni Win32. Quando si verifica un interrupt CTRL+C, i sistemi operativi Win32 generare un nuovo thread per gestire in maniera specifica l'interrupt. Ciò può far sì che un'applicazione a thread singolo, come una in UNIX, diventi multithreading e causi un comportamento imprevisto.
 
-L'argomento *Func* è un indirizzo per un gestore di segnale scritto dall'utente o per una delle costanti predefinite **SIG_DFL** o **SIG_IGN**, anch ' esse definite in Signal. H. Se *Func* è una funzione, viene installato come gestore di segnale per il segnale specificato. Il prototipo del gestore di segnale richiede un argomento formale, *sig*, di tipo **int**. Il sistema operativo fornisce l'argomento effettivo tramite *sig* quando si verifica un interrupt. l'argomento è il segnale che ha generato l'interrupt. Pertanto, è possibile utilizzare le sei costanti manifesto (elencate nella tabella precedente) nel gestore di segnale per determinare quale interrupt si è verificato ed eseguire l'azione appropriata. Ad esempio, è possibile chiamare due volte **Signal** per assegnare lo stesso gestore a due segnali diversi, quindi testare l'argomento *sig* nel gestore per eseguire azioni diverse in base al segnale ricevuto.
+L'argomento *Func* è un indirizzo per un gestore di segnale scritto dall'utente o per una delle costanti predefinite **SIG_DFL** o **SIG_IGN**, anch ' esse definite in Signal. H. Se *Func* è una funzione, viene installato come gestore di segnale per il segnale specificato. Il prototipo del gestore di segnale richiede un argomento formale, *sig*, di tipo **`int`** . Il sistema operativo fornisce l'argomento effettivo tramite *sig* quando si verifica un interrupt. l'argomento è il segnale che ha generato l'interrupt. Pertanto, è possibile utilizzare le sei costanti manifesto (elencate nella tabella precedente) nel gestore di segnale per determinare quale interrupt si è verificato ed eseguire l'azione appropriata. Ad esempio, è possibile chiamare due volte **Signal** per assegnare lo stesso gestore a due segnali diversi, quindi testare l'argomento *sig* nel gestore per eseguire azioni diverse in base al segnale ricevuto.
 
 Se si esegue il test per le eccezioni a virgola mobile (**SIGFPE**), *Func* punta a una funzione che accetta un secondo argomento facoltativo che corrisponde a una delle numerose costanti manifesto, definite in float. H, nel formato **FPE_xxx**. Quando si verifica un segnale **SIGFPE** , è possibile testare il valore del secondo argomento per determinare il tipo di eccezione a virgola mobile e quindi intraprendere l'azione appropriata. Questo argomento e i relativi valori possibili sono estensioni Microsoft.
 
@@ -85,17 +85,17 @@ Per le eccezioni a virgola mobile, il valore di *Func* non viene reimpostato qua
 
 Se il gestore del segnale restituisce il controllo, il processo chiamante riprende l'esecuzione subito dopo il punto in cui ha ricevuto il segnale di interrupt. Ciò si verifica indipendentemente dal tipo di segnale o dalla modalità operativa.
 
-Prima dell'esecuzione della funzione specificata, il valore di *Func* viene impostato su **SIG_DFL**. Il segnale di interrupt successivo viene considerato come descritto per **SIG_DFL**, a meno che non venga specificata una chiamata a **Signal** corrispondente. È possibile utilizzare questa funzionalità per reimpostare i segnali della funzione chiamata.
+Prima che venga eseguita la funzione specificata, il valore di *Func* viene impostato su **SIG_DFL**. Il segnale di interruzione successivo viene considerato come descritto per **SIG_DFL**, a meno che non venga specificata una chiamata a **Signal** corrispondente. È possibile utilizzare questa funzionalità per reimpostare i segnali della funzione chiamata.
 
 Dato che le routine del gestore di segnale vengono in genere chiamate in modo asincrono quando si verifica un'interrupt, la funzione del gestore di segnale può ottenere il controllo quando un'operazione di runtime è incompleta e in uno stato sconosciuto. Nell'elenco seguente sono riepilogate le restrizioni che determinano quali funzioni è possibile utilizzare nelle routine del gestore di segnale.
 
 - Non eseguire STDIO di basso livello o STDIO. Routine di I/O H (ad esempio, **printf** o **fread**).
 
-- Non chiamare routine heap o qualsiasi routine che utilizzi le routine dell'heap, ad esempio **malloc**, **_strdup**o **_putenv**. Per altre informazioni, vedere [malloc](malloc.md).
+- Non chiamare le routine dell'heap o qualsiasi routine che usi le routine dell'heap, ad esempio **malloc**, **_strdup**o **_putenv**. Per altre informazioni, vedere [malloc](malloc.md).
 
-- Non usare funzioni che generano una chiamata di sistema (ad esempio, **_getcwd** o **Time**).
+- Non usare funzioni che generano una chiamata di sistema, ad esempio **_getcwd** o **Time**.
 
-- Non usare **longjmp** , a meno che l'interrupt non sia causato da un'eccezione a virgola mobile (ovvero, *sig* è **SIGFPE**). In questo caso, reinizializzare prima il pacchetto a virgola mobile usando una chiamata a **_fpreset**.
+- Non usare **longjmp** , a meno che l'interrupt non sia causato da un'eccezione a virgola mobile (ovvero, *sig* è **SIGFPE**). In questo caso, reinizializzare prima il pacchetto a virgola mobile utilizzando una chiamata a **_fpreset**.
 
 - Non usare routine sostitutive.
 
@@ -107,7 +107,7 @@ volatile double d = 0.0f;
 
 I segnali **SIGILL** e **SIGTERM** non vengono generati in Windows. Sono incluso per compatibilità con ANSI. Pertanto, è possibile impostare i gestori di segnale per questi segnali usando **Signal**ed è anche possibile generare questi segnali in modo esplicito chiamando [Raise](raise.md).
 
-Le impostazioni del segnale non vengono mantenute nei processi generati creati dalle chiamate alle funzioni [_exec](../../c-runtime-library/exec-wexec-functions.md) o [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Le impostazioni del segnale del nuovo processo vengono reimpostate sui valori predefiniti.
+Le impostazioni del segnale non vengono mantenute nei processi generati che vengono creati dalle chiamate alle funzioni [_exec](../../c-runtime-library/exec-wexec-functions.md) o [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Le impostazioni del segnale del nuovo processo vengono reimpostate sui valori predefiniti.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -115,7 +115,7 @@ Le impostazioni del segnale non vengono mantenute nei processi generati creati d
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -162,9 +162,9 @@ R6010
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>
-[Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_fpreset](fpreset.md)<br/>
-[_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md) (Funzioni _spawn, _wspawn)<br/>
+[_spawn, funzioni _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

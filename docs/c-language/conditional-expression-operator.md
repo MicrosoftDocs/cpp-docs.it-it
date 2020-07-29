@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217129"
 ---
 # <a name="conditional-expression-operator"></a>Operatore di espressione condizionale
 
@@ -37,13 +37,13 @@ Il tipo del risultato di un'operazione condizionale dipende dal tipo dell'operan
 
 - Se *expression* e *conditional-expression* hanno lo stesso tipo struttura, unione o puntatore, il tipo del risultato è lo stesso tipo struttura, unione o puntatore.
 
-- Se entrambi gli operandi possiedono il tipo `void`, il risultato è di tipo `void`.
+- Se entrambi gli operandi sono di tipo **`void`** , il risultato è di tipo **`void`** .
 
-- Se uno degli operandi è un puntatore a un oggetto di qualsiasi tipo e l'altro operando è un puntatore a `void`, il puntatore all'oggetto viene convertito in un puntatore a `void` e il risultato è un puntatore a `void`.
+- Se uno degli operandi è un puntatore a un oggetto di qualsiasi tipo e l'altro operando è un puntatore a **`void`** , il puntatore all'oggetto viene convertito in un puntatore a **`void`** e il risultato è un puntatore a **`void`** .
 
 - Se *expression* o *conditional-expression* è un puntatore e l'altro operando è un'espressione costante con valore 0, il tipo del risultato è il tipo puntatore.
 
-Nel confronto dei tipi tra i puntatori qualsiasi qualificatore di tipo (**const** o `volatile`) nel tipo a cui punta il puntatore non è significativo, ma il tipo del risultato eredita i qualificatori da entrambi i componenti dell'espressione condizionale.
+Nel confronto dei tipi per i puntatori, qualsiasi qualificatore di tipo ( **`const`** o **`volatile`** ) nel tipo a cui punta il puntatore non è significativo, ma il tipo di risultato eredita i qualificatori da entrambi i componenti dell'oggetto condizionale.
 
 ## <a name="examples"></a>Esempi
 

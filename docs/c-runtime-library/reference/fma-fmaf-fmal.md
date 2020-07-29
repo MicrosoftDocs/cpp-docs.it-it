@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914944"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216999"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -112,7 +112,7 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **FMA** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **FMA** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **FMA** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, **FMA** accetta e restituisce sempre un **`double`** .
 
 Questa funzione calcola il valore come per la precisione infinita e quindi arrotonda il risultato finale.
 
@@ -120,7 +120,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**FMA**, **fmaf**, **Fmal**|\<math.h>|\<cmath>|
 
@@ -128,6 +128,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>
 [remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>

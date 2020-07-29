@@ -28,12 +28,12 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c87a63a9ed94eb1473230aedb5e9c17fcc6410b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949687"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216843"
 ---
 # <a name="_query_new_handler"></a>_query_new_handler
 
@@ -49,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce l'indirizzo della routine del nuovo gestore corrente impostata da **_set_new_handler**.
+Restituisce l'indirizzo della routine del nuovo gestore corrente, come impostato da **_set_new_handler**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La C++ funzione **_query_new_handler** restituisce l'indirizzo della funzione di gestione delle eccezioni corrente impostata dalla C++ funzione [_set_new_handler](set-new-handler.md) . **_set_new_handler** viene usato per specificare una funzione di gestione delle eccezioni che deve ottenere il controllo se l'operatore **New** non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
+La funzione C++ **_query_new_handler** restituisce l'indirizzo della funzione di gestione delle eccezioni corrente impostata dalla funzione c++ [_set_new_handler](set-new-handler.md) . **_set_new_handler** viene utilizzato per specificare una funzione di gestione delle eccezioni che deve ottenere il controllo se l' **`new`** operatore non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -61,7 +61,7 @@ La C++ funzione **_query_new_handler** restituisce l'indirizzo della funzione di
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -70,4 +70,4 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 ## <a name="see-also"></a>Vedere anche
 
 [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[libero](free.md)<br/>

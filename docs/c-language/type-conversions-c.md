@@ -8,12 +8,12 @@ helpviewer_keywords:
 - integral promotions
 - type casts, when performed
 ms.assetid: d130ee7c-03c3-48f4-af7b-1fdba0d3b086
-ms.openlocfilehash: 281234b857a97acbb57ebbfca7b678a637d00764
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7c55c15a8f3e2a53e350da947cf524ae064a09
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231429"
 ---
 # <a name="type-conversions-c"></a>Conversioni di tipi (C)
 
@@ -25,7 +25,7 @@ Le conversioni di tipo dipendono dall'operatore specificato e dal tipo dell'oper
 
 - Quando un valore viene passato come argomento a una funzione o quando un tipo viene restituito da una funzione
 
-Un carattere, uno short integer o un campo di bit intero, tutti signed o meno o un oggetto di tipo di enumerazione possono essere utilizzati in un'espressione ovunque un Integer possa essere utilizzato. Se `int` può rappresentare tutti i valori del tipo originale, allora il valore viene convertito in `int`; in caso contrario, viene convertito in `unsigned int`. Questo processo è noto come "promozione a intero". Le promozioni a intero mantengono il valore. Ovvero il valore dopo la promozione è sempre garantito come uguale a prima della promozione. Per altre informazioni, vedere [Conversioni aritmetiche comuni](../c-language/usual-arithmetic-conversions.md).
+Un carattere, uno short integer o un campo di bit intero, tutti signed o meno o un oggetto di tipo di enumerazione possono essere utilizzati in un'espressione ovunque un Integer possa essere utilizzato. Se un oggetto **`int`** può rappresentare tutti i valori del tipo originale, il valore viene convertito in **`int`** ; in caso contrario, viene convertito in **`unsigned int`** . Questo processo è noto come "promozione a intero". Le promozioni a intero mantengono il valore. Ovvero il valore dopo la promozione è sempre garantito come uguale a prima della promozione. Per altre informazioni, vedere [Conversioni aritmetiche comuni](../c-language/usual-arithmetic-conversions.md).
 
 ## <a name="see-also"></a>Vedere anche
 

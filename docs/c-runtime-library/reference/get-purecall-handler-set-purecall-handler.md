@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955667"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216947"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -60,22 +60,22 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 ### <a name="parameters"></a>Parametri
 
-*function*<br/>
+*funzione*<br/>
 Funzione da chiamare quando si chiama una funzione virtuale pura. Una funzione **_purecall_handler** deve avere un tipo restituito void.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_Purecall_handler**precedente. Restituisce **nullptr** se non è presente alcun gestore precedente.
+**_Purecall_handler**precedente. Restituisce **`nullptr`** se non è presente alcun gestore precedente.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le funzioni **_get_purecall_handler** e **_set_purecall_handler** sono specifiche di Microsoft e si applicano C++ solo al codice.
+Le funzioni **_get_purecall_handler** e **_set_purecall_handler** sono specifiche di Microsoft e si applicano solo al codice C++.
 
 Una chiamata a una funzione virtuale pura è un errore perché non ha un'implementazione. Per impostazione predefinita, il compilatore genera codice per richiamare una funzione del gestore errori quando viene chiamata una funzione virtuale pura, che termina il programma. È possibile installare una funzione del gestore errori personalizzata per le chiamate di funzioni virtuali pure, in modo da intercettarle per il debug o la creazione di report. Per usare un gestore errori personalizzato, creare una funzione con la firma **_purecall_handler** , quindi usare **_set_purecall_handler** per impostarla come gestore corrente.
 
-Poiché è presente un solo **_purecall_handler** per ogni processo, quando si chiama **_set_purecall_handler** , questo influisca immediatamente su tutti i thread. L'ultimo chiamante in qualsiasi thread imposta il gestore.
+Poiché è presente un solo **_purecall_handler** per ogni processo, quando si chiama **_set_purecall_handler** si influisca immediatamente su tutti i thread. L'ultimo chiamante in qualsiasi thread imposta il gestore.
 
-Per ripristinare il comportamento predefinito, chiamare **_set_purecall_handler** usando un argomento **nullptr** .
+Per ripristinare il comportamento predefinito, chiamare **_set_purecall_handler** usando un **`nullptr`** argomento.
 
 ## <a name="requirements"></a>Requisiti
 
