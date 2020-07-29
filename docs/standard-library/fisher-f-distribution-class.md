@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 2c6a976f3874d563f5bba600b9894ae0103625b0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219131"
 ---
 # <a name="fisher_f_distribution-class"></a>Classe fisher_f_distribution
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo reale*\
-Il tipo di risultato a virgola mobile è **double**. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
+*RealType*\
+Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-*URNG*\
-Il motore generatore di numeri casuali uniformi. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
+*GENERATORE URNG*\
+Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o tipo **double** se non ne viene fornito alcuno, distribuito in base alla distribuzione F di Fisher. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione F di Fisher. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -94,7 +94,7 @@ La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cach
 
 Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
 
-Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
+Per ulteriori informazioni sulle classi di distribuzione e i relativi membri, vedere [\<random>](../standard-library/random.md) .
 
 Per informazioni dettagliate, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione F](https://go.microsoft.com/fwlink/p/?linkid=400899).
 
@@ -233,11 +233,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<random>
+**Intestazione:**\<random>
 
 **Spazio dei nomi:** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution::fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution:: fisher_f_distribution
 
 Costruisce la distribuzione.
 
@@ -248,13 +248,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*M*\
+*m*\
 Parametro di distribuzione `m`.
 
-*N*\
+*n*\
 Parametro di distribuzione `n`.
 
-*Parm*\
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Osservazioni
@@ -265,7 +265,7 @@ Il primo costruttore crea un oggetto il cui valore `m` archiviato include il val
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::param_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::p aram_type
 
 Archivia i parametri della distribuzione.
 
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*M*\
+*m*\
 Parametro di distribuzione `m`.
 
-*N*\
+*n*\
 Parametro di distribuzione `n`.
 
-*va bene*\
+*Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Osservazioni
@@ -300,4 +300,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>casuali](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

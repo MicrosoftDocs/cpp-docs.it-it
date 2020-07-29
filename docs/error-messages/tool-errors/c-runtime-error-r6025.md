@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-ms.openlocfilehash: d5edb08278b7b6b9b3eb62e92fc04410f96a8f09
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6e184ba24ad535697a727276a980fd082625e082
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075124"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218052"
 ---
 # <a name="c-runtime-error-r6025"></a>Errore di runtime di C R6025
 
@@ -30,4 +30,4 @@ chiamata di funzione virtuale pura
 
 Non è stata creata un'istanza di un oggetto per gestire la chiamata alla funzione virtuale pura.
 
-Questo errore è causato dalla chiamata di una funzione virtuale in una classe di base astratta tramite un puntatore creato da un cast al tipo della classe derivata, ma è effettivamente un puntatore alla classe di base. Questo problema può verificarsi quando si esegue il cast da un<strong>\*</strong> **void** a un puntatore a una classe quando il<strong>\*</strong> **void** è stato creato durante la costruzione della classe di base.
+Questo errore è causato dalla chiamata di una funzione virtuale in una classe di base astratta tramite un puntatore creato da un cast al tipo della classe derivata, ma è effettivamente un puntatore alla classe di base. Questo problema può verificarsi quando si esegue il cast da un oggetto **`void`** <strong>\*</strong> a un puntatore a una classe quando **`void`** <strong>\*</strong> è stato creato durante la costruzione della classe di base.

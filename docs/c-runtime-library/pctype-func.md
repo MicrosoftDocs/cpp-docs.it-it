@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: 67447823b0322e647784cdbe0f3f7228e1c5fb34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a7972744d322cf16d056f70fff83f529a183020e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213645"
 ---
 # <a name="__pctype_func"></a>__pctype_func
 
@@ -46,7 +46,7 @@ Un puntatore a una matrice di informazioni sulla classificazione dei caratteri.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le informazioni nella tabella di classificazione dei caratteri sono solo per uso interno e sono utilizzate da diverse funzioni che classificano i caratteri di tipo `char`. Per alte informazioni, vedere la sezione `Remarks` in [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
+Le informazioni nella tabella di classificazione dei caratteri sono solo per uso interno e sono utilizzate da diverse funzioni che classificano i caratteri di tipo **`char`** . Per alte informazioni, vedere la sezione `Remarks` in [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](global-state.md).
 

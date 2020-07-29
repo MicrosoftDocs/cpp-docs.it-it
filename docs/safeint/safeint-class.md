@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219352"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
@@ -39,7 +39,7 @@ class SafeInt;
 | E         |  Tipo di dati enumerato che definisce i criteri di gestione degli errori. |
 | U         |  Tipo Integer o parametro booleano per il secondo operando. |
 
-| Parametro  |  Description |
+| Parametro  |  Descrizione |
 |---------|-----------------|
 | *rhs*      |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
 | *i*        |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
@@ -187,7 +187,7 @@ Quando si esegue un confronto logico con un oggetto SafeInt, il confronto è str
 
 - `((uint)~0) > -1`
 
-La prima istruzione si risolve in **true**, ma la seconda istruzione si risolve in `false`. La negazione bit per bit di 0 è 0xFFFFFFFF. Nella seconda istruzione l'operatore di confronto predefinito confronta 0xFFFFFFFF e 0xFFFFFFFF e li considera uguali. L'operatore di confronto per la `SafeInt` classe rende conto che il secondo parametro è negativo, ma il primo parametro è senza segno. Pertanto, sebbene la rappresentazione di bit sia identica, l' `SafeInt` operatore logico rende conto che il Unsigned Integer è maggiore di-1.
+La prima istruzione viene risolta in **`true`** , ma la seconda istruzione viene risolta in **`false`** . La negazione bit per bit di 0 è 0xFFFFFFFF. Nella seconda istruzione l'operatore di confronto predefinito confronta 0xFFFFFFFF e 0xFFFFFFFF e li considera uguali. L'operatore di confronto per la classe `SafeInt` rileva che il secondo parametro è negativo, mentre il primo parametro è senza segno. Di conseguenza, anche se la rappresentazione in bit è identica, l'operatore logico `SafeInt` determina che il valore intero senza segno è maggiore di -1.
 
 Fare attenzione quando si usa la classe `SafeInt` insieme all'operatore ternario `?:`. Considerare la riga di codice seguente.
 
@@ -201,7 +201,7 @@ Il compilatore la converte in quanto segue:
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-Se `flag` è `false`, il compilatore genera un'eccezione invece di assegnare il valore -1 a `x`. Pertanto, per evitare questo comportamento, il codice corretto da usare è la riga seguente.
+Se `flag` è **`false`** , il compilatore genera un'eccezione anziché assegnare il valore di-1 a `x` . Pertanto, per evitare questo comportamento, il codice corretto da usare è la riga seguente.
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;

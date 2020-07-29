@@ -2,16 +2,16 @@
 title: Programma di esempio
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da8c772a3534df2c865c18959329ac850e359160
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233939"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218858"
 ---
 # <a name="example-program"></a>Programma di esempio
 
-Il seguente programma di origine C è costituito da due file di origine. Viene fornita una panoramica di alcune delle varie dichiarazioni e definizioni possibili in un programma C. Nelle sezioni successive di questo libro viene descritto come scrivere tali dichiarazioni, definizioni e inizializzazioni e come usare le parole chiave di C come **static** e `extern`. La funzione `printf` viene dichiarata nel file di intestazione C STDIO.H.
+Il seguente programma di origine C è costituito da due file di origine. Viene fornita una panoramica di alcune delle varie dichiarazioni e definizioni possibili in un programma C. Nelle sezioni successive di questo libro viene descritto come scrivere tali dichiarazioni, definizioni e inizializzazioni e come utilizzare le parole chiave di C, ad esempio **`static`** e **`extern`** . La funzione `printf` viene dichiarata nel file di intestazione C STDIO.H.
 
 Si presume che le funzioni `main` e `max` siano in file separati e l'esecuzione del programma inizia con la funzione `main`. Nessuna funzione esplicita dell'utente viene eseguita prima di `main`.
 
@@ -75,4 +75,4 @@ La durata e la visibilità degli identificatori vengono illustrate in [Durata, a
 
 ## <a name="see-also"></a>Vedere anche
 
-[File e programmi di origine](../c-language/source-files-and-source-programs.md)
+[File di origine e programmi di origine](../c-language/source-files-and-source-programs.md)

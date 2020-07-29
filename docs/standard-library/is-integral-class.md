@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456247"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217766"
 ---
-# <a name="isintegral-class"></a>Classe is_integral
+# <a name="is_integral-class"></a>Classe is_integral
 
 Verifica se il tipo è integrale.
 
@@ -30,11 +30,11 @@ struct is_integral;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un'istanza del predicato di tipo include true se il tipo *Ty* è uno dei tipi integrali o un `cv-qualified` form di uno dei tipi integrali; in caso contrario, include false.
 
-Un tipo integrale è uno tra **bool**, **char**, **unsigned char**, **signed char**, **wchar_t**, **short**, unsigned **short**, **int**, unsigned **int**, **Long**e unsigned **Long**. Inoltre, con i compilatori che li forniscono, un tipo integrale può essere uno di Long **Long**, unsigned long **Long**, **__int64**e **unsigned __int64**.
+Un tipo integrale è uno tra **`bool`** ,,, **`char`** **`unsigned char`** **`signed char`** , **`wchar_t`** , **`short`** , **`unsigned short`** , **`int`** , **`unsigned int`** , **`long`** e **`unsigned long`** . Inoltre, con i compilatori che li forniscono, un tipo integrale può essere uno tra **`long long`** , **`unsigned long long`** , **`__int64`** e **__int64 senza segno**.
 
 ## <a name="example"></a>Esempio
 
@@ -70,7 +70,7 @@ is_integral<float> == false
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

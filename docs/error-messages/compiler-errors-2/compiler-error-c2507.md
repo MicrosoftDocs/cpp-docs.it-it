@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2507
 ms.assetid: f102aff5-de7d-4c3f-9cac-2ddf9ce02b14
-ms.openlocfilehash: 23433dccd7fc4f86c2e848359ac50c796fcccab0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 944eaeadb038e6466d65859f72900db164cfe34d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746799"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221159"
 ---
 # <a name="compiler-error-c2507"></a>Errore del compilatore C2507
 
 ' Identifier ': troppi modificatori virtuali nella classe di base
 
-Una classe o una struttura viene dichiarata come `virtual` più di una volta. È possibile visualizzare solo un modificatore di `virtual` per ogni classe in un elenco di classi di base.
+Una classe o una struttura viene dichiarata **`virtual`** più di una volta. È **`virtual`** possibile che venga visualizzato un solo modificatore per ogni classe in un elenco di classi di base.
 
 L'esempio seguente genera l'C2507:
 

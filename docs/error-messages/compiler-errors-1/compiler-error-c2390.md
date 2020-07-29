@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
-ms.openlocfilehash: 515e2e151d27dd2eb84fc1dc71b9197b36b14cbb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 48012c0fe31b2017cad29cc98992c9b1121efa7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221185"
 ---
 # <a name="compiler-error-c2390"></a>Errore del compilatore C2390
 
@@ -21,7 +21,7 @@ La classe di archiviazione non è valida per l'identificatore dell'ambito global
 
 Di seguito vengono riportate alcune soluzioni possibili:
 
-- Se l'identificatore è una funzione, dichiararla con `extern` archiviazione.
+- Se l'identificatore è una funzione, dichiararla con **`extern`** archiviazione.
 
 - Se l'identificatore è un parametro formale o una variabile locale, dichiararlo con l'archiviazione automatica.
 

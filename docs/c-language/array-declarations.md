@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218923"
 ---
 # <a name="array-declarations"></a>Dichiarazioni di matrice
 
@@ -28,17 +28,17 @@ Una "dichiarazione di matrice" denomina la matrice e specifica il tipo dei relat
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inizializzatore* *dichiaratore* **=**
+&nbsp;&nbsp;&nbsp;&nbsp;*dichiaratore* **=** *inizializzatore*
 
 *dichiaratore*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *Direct-declarator*
 
-*Direct-declarator*:/\* dichiaratore di funzione\*/<br/>
+*Direct-declarator*:/ \* dichiaratore di funzione\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator*  **[**  *Constant-Expression*<sub>opz</sub> **]**
 
 Dato che *constant-expression* è un elemento facoltativo, la sintassi presenta due formati:
 
-- Il primo formato definisce una variabile di matrice. L'argomento *constant-expression* all'interno delle parentesi specifica il numero di elementi presenti nella matrice. *constant-expression*, se presente, deve avere il tipo integrale e un valore superiore a zero. Ogni elemento presenta il tipo specificato da *type-specifier*, che può essere qualsiasi tipo tranne `void`. Un elemento di matrice non può essere un tipo di funzione.
+- Il primo formato definisce una variabile di matrice. L'argomento *constant-expression* all'interno delle parentesi specifica il numero di elementi presenti nella matrice. *constant-expression*, se presente, deve avere il tipo integrale e un valore superiore a zero. Ogni elemento ha il tipo specificato da *Type-specifier*, che può essere qualsiasi tipo tranne **`void`** . Un elemento di matrice non può essere un tipo di funzione.
 
 - Il secondo formato dichiara una variabile definita altrove. Omette l'argomento *constant-expression* tra parentesi quadre, ma non le parentesi. È possibile utilizzare questo formato solo se in precedenza la matrice è stata inizializzata, quindi è stata dichiarata come parametro o come riferimento a una matrice definita in modo esplicito in altre parti del programma.
 
@@ -72,7 +72,7 @@ In questi esempi sono illustrate le dichiarazioni di matrici:
 float matrix[10][15];
 ```
 
-La matrice bidimensionale denominata `matrix` dispone di 150 elementi, ognuno di tipo **float**.
+La matrice bidimensionale denominata `matrix` contiene 150 elementi, ognuno dei quali è di **`float`** tipo.
 
 ```C
 struct {
@@ -86,11 +86,11 @@ Si tratta di una dichiarazione di una matrice di strutture. Questa matrice conti
 extern char *name[];
 ```
 
-Questa istruzione dichiara il tipo e il nome di una matrice di puntatori a `char`. L'effettiva definizione di `name` viene eseguita altrove.
+Questa istruzione dichiara il tipo e il nome di una matrice di puntatori a **`char`** . L'effettiva definizione di `name` viene eseguita altrove.
 
 **Specifico di Microsoft**
 
-Il tipo di Integer richiesto per contenere la dimensione massima di una matrice è la dimensione **size_t**. Definito nel file di intestazione STDDEF.H, **size_t** è `unsigned int` con intervallo da 0x00000000 a 0x7CFFFFFF.
+Il tipo di Integer richiesto per contenere la dimensione massima di una matrice è la dimensione **size_t**. Definito nel file di intestazione STDDEF. H, **size_t** è un oggetto **`unsigned int`** con intervallo compreso tra 0x00000000 e 0x7CFFFFFF.
 
 **TERMINA specifica Microsoft**
 

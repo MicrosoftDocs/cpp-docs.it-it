@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320212"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217610"
 ---
 # <a name="recursive_mutex-class"></a>Classe recursive_mutex
 
@@ -44,17 +44,17 @@ class recursive_mutex;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[lock](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà del mutex.|
+|[blocco](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà del mutex.|
 |[try_lock](#try_lock)|Tenta di ottenere la proprietà del mutex senza blocco.|
-|[Sbloccare](#unlock)|Rilascia la proprietà del mutex.|
+|[sbloccare](#unlock)|Rilascia la proprietà del mutex.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<mutex>
+**Intestazione:**\<mutex>
 
 **Spazio dei nomi:** std
 
-## <a name="lock"></a><a name="lock"></a>Blocco
+## <a name="lock"></a><a name="lock"></a>blocco
 
 Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.
 
@@ -96,13 +96,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene `mutex` correttamente la proprietà di `mutex**; otherwise, **false`o se il thread chiamante è già proprietario dell'oggetto .
+**`true`** Se il metodo ottiene correttamente la proprietà di `mutex` o se il thread chiamante è già proprietario dell'oggetto `mutex**; otherwise, **false` .
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il thread chiamante `mutex`è già proprietario di , la funzione restituisce immediatamente **true**e il blocco precedente rimane attivo.
+Se il thread chiamante è già proprietario di `mutex` , la funzione restituisce immediatamente **`true`** e il blocco precedente rimane attivo.
 
-## <a name="unlock"></a><a name="unlock"></a>Sbloccare
+## <a name="unlock"></a><a name="unlock"></a>sbloccare
 
 Rilascia la proprietà del mutex.
 
@@ -118,5 +118,5 @@ Se il thread chiamante non è proprietario di `mutex`, il comportamento non è d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[\<>mutex](../standard-library/mutex.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

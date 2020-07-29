@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 445e368ced9d9c8faf30351ecaeecc4e1b8a59f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d3dc730e19aaadfed171816e92837ba2766883cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142844"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213879"
 ---
 # <a name="call-class"></a>Classe call
 
@@ -39,23 +39,23 @@ Tipo di payload dei messaggi propagati in questo blocco.
 *_FunctorType*<br/>
 Firma delle funzioni che questo blocco può accettare.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[chiamare](#ctor)|Di overload. Costruisce un blocco della messaggistica `call` .|
-|[~ distruttore di chiamate](#dtor)|Elimina definitivamente il blocco della messaggistica `call`.|
+|[call](#ctor)|Di overload. Costruisce un blocco della messaggistica `call` .|
+|[~ distruttore di chiamate](#dtor)|Elimina definitivamente il `call` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[process_input_messages](#process_input_messages)|Esegue la funzione di chiamata sui messaggi di input.|
-|[process_message](#process_message)|Elabora un messaggio accettato da questo blocco di messaggistica `call`.|
-|[propagate_message](#propagate_message)|Passa in modo asincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `propagate`, quando viene chiamato da un blocco di origine.|
-|[send_message](#send_message)|Passa in modo sincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `send`, quando viene chiamato da un blocco di origine.|
+|[process_message](#process_message)|Elabora un messaggio accettato da questo blocco di `call` messaggistica.|
+|[propagate_message](#propagate_message)|Passa in modo asincrono un messaggio da un `ISource` blocco a questo `call` blocco di messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.|
+|[send_message](#send_message)|Passa in modo sincrono un messaggio da un `ISource` blocco a questo `call` blocco di messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.|
 |[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. Esegue l'override di [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).|
 
 ## <a name="remarks"></a>Osservazioni
@@ -76,7 +76,7 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>chiamare
+## <a name="call"></a><a name="ctor"></a>chiamare
 
 Costruisce un blocco della messaggistica `call` .
 
@@ -125,19 +125,19 @@ Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di prop
 
 Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
-Il tipo `_Call_method` è un functor con `void (T const &)` di firma richiamato da questo blocco di messaggistica `call` per elaborare un messaggio.
+Il tipo `_Call_method` è un functor con la firma `void (T const &)` che viene richiamato da questo `call` blocco di messaggistica per elaborare un messaggio.
 
-Il tipo `filter_method` è un functor con `bool (T const &)` di firma richiamato da questo blocco di messaggistica `call` per determinare se deve accettare o meno un messaggio offerto.
+Il tipo `filter_method` è un functor con la firma `bool (T const &)` richiamata da questo `call` blocco di messaggistica per determinare se deve accettare o meno un messaggio offerto.
 
-## <a name="dtor"></a>~ chiamata
+## <a name="call"></a><a name="dtor"></a>~ chiamata
 
-Elimina definitivamente il blocco della messaggistica `call`.
+Elimina definitivamente il `call` blocco della messaggistica.
 
 ```cpp
 ~call();
 ```
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
 Esegue la funzione di chiamata sui messaggi di input.
 
@@ -150,9 +150,9 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 Puntatore al messaggio da gestire.
 
-## <a name="process_message"></a>process_message
+## <a name="process_message"></a><a name="process_message"></a>process_message
 
-Elabora un messaggio accettato da questo blocco di messaggistica `call`.
+Elabora un messaggio accettato da questo blocco di `call` messaggistica.
 
 ```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
@@ -163,9 +163,9 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 Puntatore al messaggio da gestire.
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-Passa in modo asincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `propagate`, quando viene chiamato da un blocco di origine.
+Passa in modo asincrono un messaggio da un `ISource` blocco a questo `call` blocco di messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.
 
 ```cpp
 virtual message_status propagate_message(
@@ -185,9 +185,9 @@ Puntatore al blocco di origine che offre il messaggio.
 
 [Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-Passa in modo sincrono un messaggio da un blocco `ISource` a questo blocco della messaggistica `call`. Viene richiamato dal metodo `send`, quando viene chiamato da un blocco di origine.
+Passa in modo sincrono un messaggio da un `ISource` blocco a questo `call` blocco di messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.
 
 ```cpp
 virtual message_status send_message(
@@ -207,7 +207,7 @@ Puntatore al blocco di origine che offre il messaggio.
 
 [Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
 Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata.
 
@@ -217,9 +217,9 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** perché il blocco non posticipa i messaggi offerti.
+**`true`** Poiché il blocco non posticipa i messaggi offerti.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe transformer](transformer-class.md)

@@ -2,12 +2,12 @@
 title: Uso dello stack x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: b598c33fbdd56630ca3e5ef0da551f38a73baa26
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1b1e0a8c30d5e24e81372912d5c488efce14841
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218936"
 ---
 # <a name="x64-stack-usage"></a>Uso dello stack x64
 
@@ -19,13 +19,13 @@ In questa sezione viene illustrata l'allocazione dello spazio dello stack per le
 
 Il prologo di una funzione è responsabile dell'allocazione dello spazio dello stack per variabili locali, registri salvati, parametri dello stack e parametri di registro.
 
-L'area dei parametri si trova sempre nella parte inferiore dello stack (anche `alloca` se si usa), in modo che sia sempre adiacente all'indirizzo restituito durante qualsiasi chiamata di funzione. Contiene almeno quattro voci, ma sempre spazio sufficiente per contenere tutti i parametri necessari per qualsiasi funzione che può essere chiamata. Si noti che lo spazio viene sempre allocato per i parametri del registro, anche se i parametri stessi non vengono mai assegnati allo stack; un chiamato è garantito che lo spazio sia stato allocato per tutti i parametri. Gli indirizzi Home sono necessari per gli argomenti Register, quindi è disponibile un'area contigua nel caso in cui la funzione chiamata debba prendere l'indirizzo dell'elenco di argomenti (va_list) o di un singolo argomento. In quest'area è inoltre possibile salvare gli argomenti di registro durante l'esecuzione del thunk e come opzione di debug (ad esempio, rende gli argomenti facili da trovare durante il debug se archiviati nei rispettivi indirizzi Home nel codice di prologo). Anche se la funzione chiamata dispone di meno di 4 parametri, questi 4 percorsi dello stack sono di proprietà della funzione chiamata e possono essere usati dalla funzione chiamata per altri scopi oltre al salvataggio dei valori del registro parametri.  In questo modo il chiamante non può salvare le informazioni in questa area dello stack in una chiamata di funzione.
+L'area dei parametri si trova sempre nella parte inferiore dello stack (anche se `alloca` si usa), in modo che sia sempre adiacente all'indirizzo restituito durante qualsiasi chiamata di funzione. Contiene almeno quattro voci, ma sempre spazio sufficiente per contenere tutti i parametri necessari per qualsiasi funzione che può essere chiamata. Si noti che lo spazio viene sempre allocato per i parametri del registro, anche se i parametri stessi non vengono mai assegnati allo stack; un chiamato è garantito che lo spazio sia stato allocato per tutti i parametri. Gli indirizzi Home sono necessari per gli argomenti Register, quindi è disponibile un'area contigua nel caso in cui la funzione chiamata debba prendere l'indirizzo dell'elenco di argomenti (va_list) o di un singolo argomento. In quest'area è inoltre possibile salvare gli argomenti di registro durante l'esecuzione del thunk e come opzione di debug (ad esempio, rende gli argomenti facili da trovare durante il debug se archiviati nei rispettivi indirizzi Home nel codice di prologo). Anche se la funzione chiamata dispone di meno di 4 parametri, questi 4 percorsi dello stack sono di proprietà della funzione chiamata e possono essere usati dalla funzione chiamata per altri scopi oltre al salvataggio dei valori del registro parametri.  In questo modo il chiamante non può salvare le informazioni in questa area dello stack in una chiamata di funzione.
 
-Se lo spazio viene allocato dinamicamente (`alloca`) in una funzione, è necessario usare un registro non volatile come puntatore di frame per contrassegnare la base della parte fissa dello stack e il registro deve essere salvato e inizializzato nel prologo. Si noti che `alloca` quando si usa, le chiamate allo stesso chiamato dallo stesso chiamante possono avere indirizzi Home diversi per i relativi parametri di registro.
+Se lo spazio viene allocato dinamicamente ( `alloca` ) in una funzione, è necessario usare un registro non volatile come puntatore di frame per contrassegnare la base della parte fissa dello stack e il registro deve essere salvato e inizializzato nel prologo. Si noti che quando `alloca` si usa, le chiamate allo stesso chiamato dallo stesso chiamante possono avere indirizzi Home diversi per i relativi parametri di registro.
 
 Lo stack verrà sempre allineato a 16 byte, tranne che all'interno del prologo, ad esempio dopo il push dell'indirizzo restituito, e, ad eccezione dei casi indicati nei [tipi di funzione](#function-types) per una determinata classe di funzioni frame.
 
-Di seguito è riportato un esempio del layout dello stack in cui la funzione A chiama una funzione non foglia B. il prologo della funzione A ha già allocato spazio per tutti i parametri Register e stack richiesti da B nella parte inferiore dello stack. La chiamata esegue il push dell'indirizzo restituito e il prologo B alloca spazio per le variabili locali, i registri non volatili e lo spazio necessario per chiamare le funzioni. Se B USA `alloca`, lo spazio viene allocato tra l'area di salvataggio del registro variabile locale/non volatile e l'area dello stack di parametri.
+Di seguito è riportato un esempio del layout dello stack in cui la funzione A chiama una funzione non foglia B. il prologo della funzione A ha già allocato spazio per tutti i parametri Register e stack richiesti da B nella parte inferiore dello stack. La chiamata esegue il push dell'indirizzo restituito e il prologo B alloca spazio per le variabili locali, i registri non volatili e lo spazio necessario per chiamare le funzioni. Se B USA `alloca` , lo spazio viene allocato tra l'area di salvataggio del registro variabile locale/non volatile e l'area dello stack di parametri.
 
 ![Esempio di conversione AMD](../build/media/vcamd_conv_ex_5.png "Esempio di conversione AMD")
 
@@ -47,9 +47,9 @@ Una funzione foglia è una funzione che non richiede una voce di tabella di funz
 
 ## <a name="malloc-alignment"></a>allineamento malloc
 
-[malloc](../c-runtime-library/reference/malloc.md) garantisce la restituzione di memoria allineata in modo adeguato per l'archiviazione di qualsiasi oggetto con un allineamento fondamentale e che possa adattarsi alla quantità di memoria allocata. Un *allineamento fondamentale* è un allineamento minore o uguale all'allineamento più grande supportato dall'implementazione senza una specifica di allineamento. (In Visual C++, questo è l'allineamento richiesto per `double`o 8 byte. Nel codice destinato alle piattaforme a 64 bit, è di 16 byte. Ad esempio, un'allocazione a quattro byte verrebbe allineata a un limite che supporta qualsiasi oggetto a quattro byte o più piccolo.
+[malloc](../c-runtime-library/reference/malloc.md) garantisce la restituzione di memoria allineata in modo adeguato per l'archiviazione di qualsiasi oggetto con un allineamento fondamentale e che possa adattarsi alla quantità di memoria allocata. Un *allineamento fondamentale* è un allineamento minore o uguale all'allineamento più grande supportato dall'implementazione senza una specifica di allineamento. (In Visual C++, questo è l'allineamento richiesto per **`double`** o 8 byte. Nel codice destinato alle piattaforme a 64 bit, è di 16 byte. Ad esempio, un'allocazione a quattro byte verrebbe allineata a un limite che supporta qualsiasi oggetto a quattro byte o più piccolo.
 
-Visual C++ consente tipi con *allineamento esteso*, noti anche come tipi con *allineatura eccessiva* . Ad esempio, i tipi SSE [__m128](../cpp/m128.md) e `__m256`e i tipi dichiarati con `__declspec(align( n ))` Where `n` è maggiore di 8 hanno un allineamento esteso. L'allineamento della memoria su un limite appropriato per un oggetto che richiede l'allineamento esteso non è garantito `malloc`da. Per allocare memoria per i tipi eccessivamente allineati, utilizzare [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) e le relative funzioni.
+Visual C++ consente tipi con *allineamento esteso*, noti anche come tipi con *allineatura eccessiva* . Ad esempio, i tipi SSE [__m128](../cpp/m128.md) e e i `__m256` tipi dichiarati con `__declspec(align( n ))` Where `n` è maggiore di 8 hanno un allineamento esteso. L'allineamento della memoria su un limite appropriato per un oggetto che richiede l'allineamento esteso non è garantito da `malloc` . Per allocare memoria per i tipi eccessivamente allineati, utilizzare [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) e le relative funzioni.
 
 ## <a name="alloca"></a>alloca
 

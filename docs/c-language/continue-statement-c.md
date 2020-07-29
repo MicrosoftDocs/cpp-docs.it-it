@@ -7,29 +7,29 @@ helpviewer_keywords:
 - loop structures, continue keyword
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
-ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cf5d1c25b8edc70bd686ca26ad98b15b970383c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312563"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218910"
 ---
 # <a name="continue-statement-c"></a>Istruzione continue (C)
 
-L'istruzione `continue` passa il controllo all'iterazione successiva in cui è visualizzata e che si trova nell'istruzione di inclusione `do`, `for` o `while` più vicina, ignorando qualunque altra istruzione presente nel corpo dell'istruzione `do`, `for` o `while`.
+L' **`continue`** istruzione passa il controllo alla successiva iterazione dell'istruzione di inclusione **`do`** , o più vicina **`for`** **`while`** in cui appare, ignorando le istruzioni rimanenti nel **`do`** **`for`** corpo dell'istruzione, o **`while`** .
 
 ## <a name="syntax"></a>Sintassi
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**continue ;**
 
-La successiva iterazione di un'istruzione `do`, `for` o `while` viene determinata come segue:
+L'iterazione successiva di **`do`** un' **`for`** istruzione, o **`while`** viene determinata nel modo seguente:
 
-- All'interno di un'istruzione `do` o `while`, l'iterazione successiva inizia rivalutando l'espressione dell'istruzione `do` o `while`.
+- All'interno di un' **`do`** **`while`** istruzione o, l'iterazione successiva inizia rivalutando l'espressione dell' **`do`** **`while`** istruzione o.
 
-- Un'istruzione `continue` in un'istruzione `for` provoca la valutazione dell'espressione loop dell'istruzione `for`. In seguito il compilatore rivaluta l'espressione condizionale e, a seconda del risultato, termina o ripete il corpo dell'istruzione. Vedere [Istruzione for](../c-language/for-statement-c.md) per altre informazioni sull'istruzione `for` e sui non terminali corrispondenti.
+- Un'istruzione **`continue`** in un' **`for`** istruzione provoca la valutazione dell'espressione loop dell' **`for`** istruzione. In seguito il compilatore rivaluta l'espressione condizionale e, a seconda del risultato, termina o ripete il corpo dell'istruzione. Per ulteriori informazioni sull'istruzione e sui relativi non terminali, vedere [l'istruzione for](../c-language/for-statement-c.md) **`for`** .
 
-Di seguito, un esempio dell'istruzione `continue`:
+Di seguito è riportato un esempio dell' **`continue`** istruzione:
 
 ```
 while ( i-- > 0 )
@@ -41,7 +41,7 @@ while ( i-- > 0 )
 }
 ```
 
-In questo esempio, il corpo dell'istruzione viene eseguito finché `i` è maggiore di 0. Il primo `f(i)` viene assegnato a `x`; quindi, se `x` è uguale a 1, l'istruzione `continue` viene eseguita. Le restanti istruzioni presenti nel corpo vengono ignorate e l'esecuzione riprende dall'inizio del ciclo con la valutazione del test del ciclo.
+In questo esempio, il corpo dell'istruzione viene eseguito finché `i` è maggiore di 0. `f(i)`Il primo viene assegnato a `x` ; quindi, se `x` è uguale a 1, l' **`continue`** istruzione viene eseguita. Le restanti istruzioni presenti nel corpo vengono ignorate e l'esecuzione riprende dall'inizio del ciclo con la valutazione del test del ciclo.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: Pragma alloc_text
+title: alloc_text (pragma)
 ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.alloc_text
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-ms.openlocfilehash: 7ddb12b39e068dea42f7a47f7fd937424be43725
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c638c2026a493453aeb5aff00ba6273efb5f184e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216347"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219443"
 ---
-# <a name="alloc_text-pragma"></a>Pragma alloc_text
+# <a name="alloc_text-pragma"></a>alloc_text (pragma)
 
 Assegnare un nome alla sezione di codice in cui devono essere presenti le definizioni di funzioni specificate. Il pragma deve essere trovarsi tra un dichiaratore di funzione e la definizione di funzione per le funzioni denominate.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma alloc_text (** "*textsection*" **,** *funzione1* [ **,** *funzione2* ...] **)**
+> **#pragma alloc_text (** "*textsection*" **,** *funzione1* [**,** *funzione2* ...] **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il pragma **alloc_text** non gestisce C++ funzioni membro o funzioni in overload. Si applica solo alle funzioni dichiarate con il collegamento C, ovvero funzioni dichiarate con la specifica di collegamento **extern "C"** . Se si tenta di utilizzare questo pragma in una funzione con collegamento C++, viene generato un errore del compilatore.
+Il pragma **alloc_text** non gestisce funzioni membro C++ o funzioni in overload. Si applica solo alle funzioni dichiarate con il collegamento C, ovvero funzioni dichiarate con la specifica di collegamento **extern "C"** . Se si tenta di utilizzare questo pragma in una funzione con collegamento C++, viene generato un errore del compilatore.
 
-Poiché l'indirizzamento `__based` della funzione using non è supportato, per specificare le posizioni della sezione è necessario usare il pragma **alloc_text** . Il nome specificato da *textsection* deve essere racchiuso tra virgolette doppie.
+Poiché l'indirizzamento **`__based`** della funzione using non è supportato, la specifica di percorsi di sezione richiede l'uso del pragma **alloc_text** . Il nome specificato da *textsection* deve essere racchiuso tra virgolette doppie.
 
 Il pragma **alloc_text** deve essere visualizzato dopo le dichiarazioni di una delle funzioni specificate e prima delle definizioni di queste funzioni.
 

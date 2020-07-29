@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 93f56580f35ffc1f6e517905467c3deb92922f5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368233"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218013"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Operatore di riferimento di traccia (C++/CLI e C++/CX)
 
-Un riferimento`%`di *rilevamento* ( ) si comporta`&`come un normale riferimento C, ad eccezione del fatto che quando un oggetto viene assegnato a un riferimento di rilevamento, il conteggio dei riferimenti dell'oggetto viene incrementato.
+Un *riferimento di traccia* ( `%` ) si comporta come un riferimento C++ normale ( `&` ) con la differenza che quando un oggetto viene assegnato a un riferimento di rilevamento, il conteggio dei riferimenti dell'oggetto viene incrementato.
 
 ## <a name="all-platforms"></a>Tutte le piattaforme
 
 Un riferimento di traccia presenta le caratteristiche descritte di seguito.
 
-- L'assegnazione di un oggetto a un riferimento di rilevamento determina l'incremento del conteggio dei riferimenti dell'oggetto.
+- L'assegnazione di un oggetto a un riferimento di rilevamento causa l'incremento del conteggio dei riferimenti dell'oggetto.
 
 - Un riferimento nativo (`&`) è il risultato quando si dereferenzia un oggetto `*`. Un riferimento di traccia (`%`) è il risultato quando si dereferenzia un oggetto `^`. Se si ha un riferimento `%` a un oggetto, l'oggetto rimane attivo in memoria.
 
@@ -31,7 +31,7 @@ Un riferimento di traccia presenta le caratteristiche descritte di seguito.
 
 - I riferimenti di traccia sono validi per i tipi valore e gli handle (ad esempio `String^`).
 
-- A un riferimento di traccia non può essere assegnato un valore Null o **nullptr**. Può essere riassegnato a un altro oggetto valido quando necessario.
+- Un riferimento di traccia non può essere assegnato a un valore null o **`nullptr`** . Può essere riassegnato a un altro oggetto valido quando necessario.
 
 - Un riferimento di traccia non può essere utilizzato come operatore unario di acquisizione indirizzo.
 
@@ -75,7 +75,7 @@ Non è possibile avere un riferimento C++ nativo a un oggetto nell'heap sottopos
 
 Per ulteriori informazioni sui riferimenti di traccia in C++/CLI, vedere:
 
-- [Procedura: Usare riferimenti di rilevamento in C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [Procedura: utilizzare riferimenti di rilevamento in C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Esempi
 

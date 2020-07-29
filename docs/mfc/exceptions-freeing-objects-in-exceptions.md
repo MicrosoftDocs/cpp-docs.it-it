@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217935"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Eccezioni: rilascio di oggetti nelle eccezioni
 
@@ -30,9 +30,9 @@ Le eccezioni generate dal Framework o dall'applicazione interrompono il normale 
 
 Sono disponibili due metodi principali per eseguire questa operazione.
 
-- Gestire le eccezioni localmente usando le parole chiave **try** e **catch** , quindi eliminare tutti gli oggetti con un'istruzione.
+- Gestire le eccezioni localmente usando **`try`** le **`catch`** parole chiave e, quindi eliminare tutti gli oggetti con un'istruzione.
 
-- Eliminare definitivamente tutti gli oggetti nel blocco **catch** prima di generare l'eccezione all'esterno del blocco per una gestione aggiuntiva.
+- Eliminare definitivamente tutti gli oggetti nel **`catch`** blocco prima di generare l'eccezione all'esterno del blocco per una gestione aggiuntiva.
 
 Questi due approcci sono illustrati di seguito come soluzioni per l'esempio problematico seguente:
 
@@ -50,7 +50,7 @@ Questo nuovo esempio configura un gestore di eccezioni per intercettare l'eccezi
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Generazione di eccezioni dopo l'eliminazione di oggetti
 
-Un altro modo per gestire le eccezioni consiste nel passarli al contesto di gestione delle eccezioni esterno successivo. Nel blocco **catch** è possibile eseguire alcune operazioni di pulizia degli oggetti allocati localmente e quindi generare l'eccezione in per un'ulteriore elaborazione.
+Un altro modo per gestire le eccezioni consiste nel passarli al contesto di gestione delle eccezioni esterno successivo. Nel **`catch`** blocco, è possibile eseguire alcune operazioni di pulizia degli oggetti allocati localmente e quindi generare l'eccezione in per un'ulteriore elaborazione.
 
 La funzione di generazione potrebbe non essere in grado di deallocare gli oggetti heap. Se la funzione dealloca sempre l'oggetto heap prima di restituire nel caso normale, la funzione deve anche deallocare l'oggetto heap prima di generare l'eccezione. D'altra parte, se la funzione non esegue in genere la deallocazione dell'oggetto prima di restituire nel caso normale, è necessario decidere caso per caso se l'oggetto heap deve essere deallocato.
 

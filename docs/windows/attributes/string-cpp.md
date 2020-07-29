@@ -1,21 +1,21 @@
 ---
-title: String (C++ attributo com)
+title: String (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 68708cce2e167c6f40b461d52861fe4ed82be867
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166161"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213814"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indica che la matrice unidimensionale **char**, **wchar_t**, `byte` (o equivalente) o il puntatore a tale matrice deve essere considerata come una stringa.
+Indica che la matrice unidimensionale **`char`** , **`wchar_t`** , `byte` (o equivalente) o il puntatore a una matrice di questo tipo devono essere considerati come una stringa.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,7 +25,7 @@ Indica che la matrice unidimensionale **char**, **wchar_t**, `byte` (o equivalen
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **stringa** C++ ha la stessa funzionalità dell'attributo MIDL di [stringa](/windows/win32/Midl/string) .
+L'attributo di **stringa** C++ ha la stessa funzionalità dell'attributo MIDL di [stringa](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Esempio
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl
 |-|-|
 |**Si applica a**|Matrice o puntatore a una matrice, un parametro di interfaccia, un metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -61,4 +61,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di matrice](array-attributes.md)<br/>
-[export](export.md)
+[esportazione](export.md)

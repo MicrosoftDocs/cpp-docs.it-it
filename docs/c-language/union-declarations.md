@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291041"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213697"
 ---
 # <a name="union-declarations"></a>Dichiarazioni di unione
 
@@ -24,8 +24,8 @@ Una "Dichiarazione di unione" specifica un set di valori variabili e, facoltativ
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Unione**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -44,14 +44,14 @@ Il contenuto dell'unione viene definito come
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-dichiaratore*
 
-Una variabile di tipo **union** archivia uno dei valori definiti dallo questo tipo. Le stesse regole si applicano alla struttura e alle dichiarazioni di unione. Le unioni possono inoltre contenere campi di bit.
+Una variabile con **`union`** tipo archivia uno dei valori definiti da quel tipo. Le stesse regole si applicano alla struttura e alle dichiarazioni di unione. Le unioni possono inoltre contenere campi di bit.
 
-I membri delle unioni non possono avere un tipo incompleto, un tipo `void` o un tipo funzione. Di conseguenza, i membri non possono essere un'istanza dell'unione ma possono essere puntatori al tipo di unione dichiarato.
+I membri delle unioni non possono avere un tipo incompleto, un tipo **`void`** o un tipo di funzione. Di conseguenza, i membri non possono essere un'istanza dell'unione ma possono essere puntatori al tipo di unione dichiarato.
 
 Una dichiarazione del tipo di unione è solo un modello. La memoria non viene riservata fino a che la variabile non viene dichiarata.
 
 > [!NOTE]
-> Se viene dichiarata un'unione di due tipi e viene archiviato un valore, ma l'accesso all'unione viene eseguito con l'altro tipo, i risultati sono inaffidabili. Ad esempio, viene dichiarata un'unione di **float** e `int`. Un valore **float** viene archiviato, ma in seguito il programma accede al valore come `int`. In una situazione del genere il valore dipende dall'archiviazione interna di valori **float**. L'Integer non sarebbe affidabile.
+> Se viene dichiarata un'unione di due tipi e viene archiviato un valore, ma l'accesso all'unione viene eseguito con l'altro tipo, i risultati sono inaffidabili. Ad esempio, **`float`** **`int`** viene dichiarata un'Unione di e. **`float`** Viene archiviato un valore, ma in seguito il programma accede al valore come **`int`** . In una situazione di questo tipo, il valore dipende dall'archiviazione interna dei **`float`** valori. L'Integer non sarebbe affidabile.
 
 ## <a name="examples"></a>Esempi
 
@@ -79,7 +79,7 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-La matrice di `screen` contiene 2.000 elementi. Ogni elemento della matrice rappresenta una singola unione con due membri: `window1` e `screenval`. Il membro `window1` è una struttura con due membri del campo di bit, `icon` e `color`. Il membro `screenval` è un `int`. In qualsiasi momento, ogni elemento unione contiene l'`int` rappresentato da `screenval` o la struttura rappresentata da `window1`.
+La matrice di `screen` contiene 2.000 elementi. Ogni elemento della matrice rappresenta una singola unione con due membri: `window1` e `screenval`. Il membro `window1` è una struttura con due membri del campo di bit, `icon` e `color`. Il `screenval` membro è un oggetto **`int`** . In un determinato momento ogni elemento Union include l'oggetto **`int`** rappresentato da `screenval` o la struttura rappresentata da `window1` .
 
 **Specifico di Microsoft**
 

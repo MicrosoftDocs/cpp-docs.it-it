@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: 2591c4cd124f83085235828d3eb29ab1a90d894a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f76682b14e49e5f699144674da33b0826975e2d6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217337"
 ---
 # <a name="weak_ptr-class"></a>Classe weak_ptr
 
@@ -47,20 +47,20 @@ template<class T> class weak_ptr;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *T*
+*T*\
 Tipo controllato dal puntatore debole.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe descrive un oggetto che punta a una risorsa gestita da uno o più oggetti [shared_ptr](shared-ptr-class.md) . Gli oggetti `weak_ptr` che puntano a una risorsa non influiscono sul conteggio dei riferimenti della risorsa. Quando l'ultimo `shared_ptr` oggetto che gestisce la risorsa viene eliminato definitivamente, la risorsa verrà liberata, anche se sono presenti `weak_ptr` oggetti che puntano a tale risorsa. Questo comportamento è essenziale per evitare cicli nelle strutture di dati.
+Il modello di classe descrive un oggetto che punta a una risorsa gestita da uno o più oggetti [shared_ptr](shared-ptr-class.md) . Gli `weak_ptr` oggetti che puntano a una risorsa non influiscono sul conteggio dei riferimenti della risorsa. Quando l'ultimo `shared_ptr` oggetto che gestisce la risorsa viene eliminato definitivamente, la risorsa verrà liberata, anche se sono presenti `weak_ptr` oggetti che puntano a tale risorsa. Questo comportamento è essenziale per evitare cicli nelle strutture di dati.
 
-Un oggetto `weak_ptr` punta a una risorsa se è stato costruito da un oggetto `shared_ptr` proprietario di tale risorsa, se è stato costruito da un oggetto `weak_ptr` che punta a tale risorsa o se la risorsa è stata assegnata a esso con [operator=](#op_eq). Un oggetto `weak_ptr` non fornisce accesso diretto alla risorsa a cui punta. Il codice che deve usare la risorsa lo fa tramite un oggetto `shared_ptr` proprietario di tale risorsa, creato chiamando la funzione membro [lock](#lock). Un oggetto `weak_ptr` è scaduto quando la risorsa a cui punta è stata liberata perché tutti gli oggetti `shared_ptr` proprietari della risorsa sono stati eliminati definitivamente. Chiamando `lock` su un oggetto `weak_ptr` scaduto viene creato un oggetto shared_ptr vuoto.
+Un oggetto `weak_ptr` punta a una risorsa se è stato costruito da un oggetto `shared_ptr` proprietario di tale risorsa, se è stato costruito da un oggetto `weak_ptr` che punta a tale risorsa o se la risorsa è stata assegnata a esso con [operator=](#op_eq). Un `weak_ptr` oggetto non fornisce accesso diretto alla risorsa a cui punta. Il codice che deve usare la risorsa lo fa tramite un oggetto `shared_ptr` proprietario di tale risorsa, creato chiamando la funzione membro [lock](#lock). Un `weak_ptr` oggetto è scaduto quando la risorsa a cui punta è stata liberata perché tutti gli `shared_ptr` oggetti proprietari della risorsa sono stati eliminati definitivamente. Chiamando `lock` su un oggetto `weak_ptr` scaduto viene creato un oggetto shared_ptr vuoto.
 
 Un oggetto weak_ptr vuoto non punta ad alcuna risorsa e non ha un blocco di controllo. La sua funzione membro `lock` restituisce un oggetto shared_ptr vuoto.
 
-Si verifica un ciclo quando due o più risorse controllate da oggetti `shared_ptr` contengono oggetti `shared_ptr` che fanno riferimento uno con l'altro. Ad esempio, un elenco collegato circolare con tre elementi ha un nodo head `N0`, tale nodo contiene un oggetto `shared_ptr` proprietario del nodo successivo `N1`, tale nodo contiene un oggetto `shared_ptr` proprietario del nodo successivo `N2` e tale nodo, a sua volta, contiene un oggetto `shared_ptr` proprietario del nodo head `N0`, che chiude il ciclo. In questa situazione, i conteggi dei riferimenti non diventano mai zero e i nodi nel ciclo non vengono mai liberati. Per eliminare il ciclo, l'ultimo nodo `N2` deve contenere un oggetto `weak_ptr` che punta all'oggetto `N0` anziché un oggetto `shared_ptr`. Poiché l'oggetto `weak_ptr` non è proprietario `N0` non influisce sul conteggio dei riferimenti `N0` e quando l'ultimo riferimento del programma al nodo head viene eliminato definitivamente, verranno eliminati anche i nodi dell'elenco.
+Si verifica un ciclo quando due o più risorse controllate da oggetti `shared_ptr` contengono oggetti `shared_ptr` che fanno riferimento uno con l'altro. Ad esempio, un elenco collegato circolare con tre elementi ha un nodo head `N0`, tale nodo contiene un oggetto `shared_ptr` proprietario del nodo successivo `N1`, tale nodo contiene un oggetto `shared_ptr` proprietario del nodo successivo `N2` e tale nodo, a sua volta, contiene un oggetto `shared_ptr` proprietario del nodo head `N0`, che chiude il ciclo. In questa situazione, i conteggi dei riferimenti non diventano mai zero e i nodi nel ciclo non vengono mai liberati. Per eliminare il ciclo, l'ultimo nodo `N2` deve contenere un oggetto `weak_ptr` che punta all'oggetto `N0` anziché un oggetto `shared_ptr`. Poiché l' `weak_ptr` oggetto non è proprietario di `N0` , non influisce sul `N0` conteggio dei riferimenti e quando l'ultimo riferimento del programma al nodo head viene eliminato definitivamente, anche i nodi nell'elenco verranno eliminati definitivamente.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 |||
 |-|-|
@@ -71,16 +71,16 @@ Si verifica un ciclo quando due o più risorse controllate da oggetti `shared_pt
 | **Typedef** | |
 |[element_type](#element_type)|Tipo dell'elemento.|
 | **Funzioni membro** | |
-|[expired](#expired)|Verifica se la proprietà è scaduta.|
-|[lock](#lock)|Ottiene la proprietà esclusiva di una risorsa.|
-|[owner_before](#owner_before)|Restituisce **true** se il `weak_ptr` viene ordinato prima (o minore di) del puntatore fornito.|
+|[scaduto](#expired)|Verifica se la proprietà è scaduta.|
+|[blocco](#lock)|Ottiene la proprietà esclusiva di una risorsa.|
+|[owner_before](#owner_before)|Restituisce **`true`** se `weak_ptr` l'oggetto viene ordinato prima (o minore di) del puntatore fornito.|
 |[reset](#reset)|Rilascia una risorsa di proprietà.|
-|[swap](#swap)|Scambia due oggetti `weak_ptr`.|
-|[use_count](#use_count)|Conta il numero di oggetti `shared_ptr`.|
+|[scambio](#swap)|Scambia due oggetti `weak_ptr`.|
+|[use_count](#use_count)|Conta il numero di `shared_ptr` oggetti.|
 | **Operatori** | |
-|[operator=](#op_eq)|Sostituisce una risorsa di proprietà.|
+|[operatore =](#op_eq)|Sostituisce una risorsa di proprietà.|
 
-## <a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a>element_type
 
 Tipo dell'elemento.
 
@@ -89,7 +89,7 @@ typedef T element_type; // through C++17
 using element_type = remove_extent_t<T>; // C++20
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `T`.
 
@@ -117,7 +117,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a>scaduto
+## <a name="expired"></a><a name="expired"></a>scaduto
 
 Verifica se la proprietà è scaduta, ovvero se l'oggetto a cui si fa riferimento è stato eliminato.
 
@@ -125,9 +125,9 @@ Verifica se la proprietà è scaduta, ovvero se l'oggetto a cui si fa riferiment
 bool expired() const noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce **true** se `*this` è scaduto; in caso contrario, **false**.
+La funzione membro restituisce **`true`** se **`*this`** è scaduto; in caso contrario, **`false`** .
 
 ### <a name="example"></a>Esempio
 
@@ -166,17 +166,17 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a>blocco
+## <a name="lock"></a><a name="lock"></a>blocco
 
-Ottiene un `shared_ptr` che condivide la proprietà di una risorsa.
+Ottiene un oggetto `shared_ptr` che condivide la proprietà di una risorsa.
 
 ```cpp
 shared_ptr<T> lock() const noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se `*this` è scaduto, la funzione membro restituisce un oggetto [shared_ptr](shared-ptr-class.md) vuoto. in caso contrario, restituisce un oggetto `shared_ptr<T>` proprietario della risorsa a cui `*this` punta. Restituisce un valore equivalente all'esecuzione atomica del `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)`.
+La funzione membro restituisce un oggetto [shared_ptr](shared-ptr-class.md) vuoto se **`*this`** è scaduto. in caso contrario, restituisce un `shared_ptr<T>` oggetto proprietario della risorsa **`*this`** a cui punta. Restituisce un valore equivalente all'esecuzione atomica di `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)` .
 
 ### <a name="example"></a>Esempio
 
@@ -215,7 +215,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a>operatore =
 
 Sostituisce una risorsa di proprietà.
 
@@ -231,15 +231,15 @@ weak_ptr& operator=(const shared_ptr<Other>& ptr) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altri* \
+*Altri*\
 Tipo controllato dal puntatore condiviso o debole dell'argomento.
 
-\ *ptr*
+*PTR*\
 Puntatore debole o puntatore condiviso da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Tutti gli operatori rilasciano la risorsa a cui punta attualmente `*this` e assegnano la proprietà della risorsa denominata da *ptr* al `*this`. Se un operatore ha esito negativo, lascia `*this` invariato. Ogni operatore ha un effetto equivalente a `weak_ptr(ptr).swap(*this)`.
+Tutti gli operatori rilasciano la risorsa a cui punta attualmente **`*this`** e assegnano la proprietà della risorsa denominata da *ptr* a **`*this`** . Se un operatore ha esito negativo, lascia **`*this`** invariato. Ogni operatore ha un effetto equivalente a `weak_ptr(ptr).swap(*this)` .
 
 ### <a name="example"></a>Esempio
 
@@ -273,9 +273,9 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a>owner_before
 
-Restituisce **true** se il `weak_ptr` viene ordinato prima (o minore di) del puntatore fornito.
+Restituisce **`true`** se `weak_ptr` l'oggetto viene ordinato prima (o minore di) del puntatore fornito.
 
 ```cpp
 template <class Other>
@@ -287,14 +287,14 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-\ *ptr*
-Riferimento lvalue a un `shared_ptr` o a un `weak_ptr`.
+*PTR*\
+Riferimento lvalue a un oggetto `shared_ptr` o `weak_ptr` .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro del modello restituisce **true** se `*this` viene ordinato prima di *ptr*.
+La funzione membro di modello restituisce **`true`** se **`*this`** è ordinato prima di *ptr*.
 
-## <a name="reset"></a>reimpostazione
+## <a name="reset"></a><a name="reset"></a>reimpostazione
 
 Rilascia la risorsa di proprietà.
 
@@ -302,9 +302,9 @@ Rilascia la risorsa di proprietà.
 void reset() noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro rilascia la risorsa a cui punta `*this` e converte `*this` in un oggetto `weak_ptr` vuoto.
+La funzione membro rilascia la risorsa a cui punta **`*this`** e viene convertito **`*this`** in un `weak_ptr` oggetto vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -336,7 +336,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a>scambio
 
 Scambia due oggetti `weak_ptr`.
 
@@ -353,12 +353,12 @@ void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-\ *WP*
+*WP*\
 Puntatore debole da scambiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Dopo un `swap`, alla risorsa a cui puntava `*this` viene fatto riferimento da *WP*e la risorsa a cui fa riferimento *WP* viene puntata da `*this`. La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione. L'effetto della specializzazione del modello è equivalente a `a.swap(b)`.
+Dopo un oggetto `swap` , alla risorsa a cui fa riferimento originariamente **`*this`** viene fatto riferimento da *WP*e la risorsa a cui fa riferimento *WP* viene puntata da **`*this`** . La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione. L'effetto della specializzazione del modello è equivalente a `a.swap(b)` .
 
 ### <a name="example"></a>Esempio
 
@@ -405,17 +405,17 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a>use_count
 
-Conta il numero di oggetti `shared_ptr` che possiedono la risorsa condivisa.
+Conta il numero di `shared_ptr` oggetti che possiedono la risorsa condivisa.
 
 ```cpp
 long use_count() const noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce il numero di oggetti `shared_ptr` che possiedono la risorsa a cui puntava `*this`.
+La funzione membro restituisce il numero di `shared_ptr` oggetti che possiedono la risorsa a cui punta **`*this`** .
 
 ### <a name="example"></a>Esempio
 
@@ -445,7 +445,7 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a>weak_ptr
+## <a name="weak_ptr"></a><a name="weak_ptr"></a>weak_ptr
 
 Costruisce un oggetto `weak_ptr`.
 
@@ -468,18 +468,18 @@ weak_ptr(const shared_ptr<Other>& sp) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altri* \
-Tipo controllato dal puntatore dell'argomento condiviso/debole. Questi costruttori non partecipano alla risoluzione dell'overload a meno che _altri \*_ non siano compatibili con `element_type*`.
+*Altri*\
+Tipo controllato dal puntatore dell'argomento condiviso/debole. Questi costruttori non partecipano alla risoluzione dell'overload a _meno \* che non sia_ compatibile con `element_type*` .
 
-\ *WP*
+*WP*\
 Puntatore debole da copiare.
 
-\ *SP*
+*SP*\
 Puntatore condiviso da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il costruttore predefinito costruisce un oggetto `weak_ptr` vuoto. I costruttori che accettano un argomento ogni costruiscono un oggetto `weak_ptr` vuoto se il puntatore dell'argomento è vuoto. In caso contrario, costruiscono un oggetto `weak_ptr` che punta alla risorsa denominata dall'argomento. Il conteggio dei riferimenti dell'oggetto condiviso non è stato modificato.
+Il costruttore predefinito costruisce un `weak_ptr` oggetto vuoto. I costruttori che accettano un argomento ogni costrutto di un `weak_ptr` oggetto vuoto se il puntatore dell'argomento è vuoto. In caso contrario, costruiscono un `weak_ptr` oggetto che punta alla risorsa denominata dall'argomento. Il conteggio dei riferimenti dell'oggetto condiviso non è stato modificato.
 
 ### <a name="example"></a>Esempio
 
@@ -514,7 +514,7 @@ wp0.expired() == true
 *wp2.lock() == 5
 ```
 
-## <a name="tilde-weak_ptr"></a>~ weak_ptr
+## <a name="weak_ptr"></a><a name="tilde-weak_ptr"></a>~ weak_ptr
 
 Elimina un oggetto `weak_ptr`.
 
@@ -522,12 +522,12 @@ Elimina un oggetto `weak_ptr`.
 ~weak_ptr();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Il distruttore Elimina questo `weak_ptr` ma non ha alcun effetto sul conteggio dei riferimenti dell'oggetto a cui punta il puntatore archiviato.
+Il distruttore Elimina questa operazione `weak_ptr` , ma non ha alcun effetto sul conteggio dei riferimenti dell'oggetto a cui punta il puntatore archiviato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](cpp-standard-library-header-files.md)\
+[Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
 [\<memory>](memory.md)\
 [Classe shared_ptr](shared-ptr-class.md)

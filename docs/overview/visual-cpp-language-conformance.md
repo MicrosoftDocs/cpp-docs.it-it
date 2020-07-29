@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d4ec3036a5c4d42d9d98e91f628416b75e596d12
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630466"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213944"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -26,12 +26,12 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 
 |  |  |
 |--|--|
-| __Funzionalità del linguaggio di base C++03/11__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++03/11__ | __Supportato__ |
 | &nbsp;&nbsp;Tutti gli altri elementi | VS 2015 <sup>[A](#note_A)</sup> |
 | &nbsp;&nbsp;Ricerca del nome in due fasi | VS 2017 15.7 <sup>[B](#note_B)</sup> |
 | &nbsp;&nbsp;[`N2634 Expression SFINAE`](https://wg21.link/N2634) | VS 2017 15.7 |
 | &nbsp;&nbsp;[`N1653 C99 preprocessor`](https://wg21.link/N1653) | <sup> [C](#note_C) parziale</sup> |
-| __Funzionalità del linguaggio di base C++14__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++14__ | __Supportato__ |
 | &nbsp;&nbsp;[`N3323 Tweaked wording for contextual conversions`](https://wg21.link/N3323) | Visual Studio 2013 |
 | &nbsp;&nbsp;[`N3472 Binary literals`](https://wg21.link/N3472) | VS 2015 |
 | &nbsp;&nbsp;[`N3638 auto and decltype(auto) return types`](https://wg21.link/n3638) | VS 2015 |
@@ -43,7 +43,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`N3651 Variable templates`](https://wg21.link/n3651) | VS 2015.2 |
 | &nbsp;&nbsp;[`N3652 Extended constexpr`](https://wg21.link/n3652) | VS 2017 15.0 |
 | &nbsp;&nbsp;[`N3653 Default member initializers for aggregates`](https://wg21.link/n3653) | VS 2017 15.0 |
-| __Funzionalità del linguaggio di base C++17__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++17__ | __Supportato__ |
 | &nbsp;&nbsp;[`N4086 Removing trigraphs`](https://wg21.link/n4086) | VS 2010 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`N3922 New rules for auto with braced-init-lists`](https://wg21.link/n3922) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`N4051 typename in template template-parameters`](https://wg21.link/n4051) | VS 2015 <sup>[14](#note_14)</sup> |
@@ -84,7 +84,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P0145R3 Refining expression evaluation order`](https://wg21.link/p0145r3)<br/>&nbsp;&nbsp;[`P0400R0 Order of evaluation of function arguments`](https://wg21.link/p0400r0) | VS 2017 15,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0195R2 Pack expansions in using-declarations`](https://wg21.link/p0195r2) | VS 2017 15,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0283R2 Ignoring unrecognized attributes`](https://wg21.link/p0283r2) | VS 2015 <sup>[14](#note_14)</sup> |
-| __Funzionalità del linguaggio di base C++17 (report sui difetti)__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++17 (report sui difetti)__ | __Supportato__ |
 | &nbsp;&nbsp;[`P0702R1 Fixing class template argument deduction for initializer-list ctors`](https://wg21.link/p0702r1) | VS 2017 15,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0961R1 Relaxing the structured bindings customization point finding rules`](https://wg21.link/p0961r1) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0969R0 Allowing structured bindings to accessible members`](https://wg21.link/p0969r0) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
@@ -96,7 +96,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P0859R0 CWG 1581: When are constexpr member functions defined`](https://wg21.link/p0859r0) | No |
 | &nbsp;&nbsp;[`P1009R2 Array size deduction in new-expressions`](https://wg21.link/P1009R2) | No |
 | &nbsp;&nbsp;[`P1286R2 Contra CWG DR1778`](https://wg21.link/P1286R2) | No |
-| __Funzionalità del linguaggio di base C++20__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++20__ | __Supportato__ |
 | &nbsp;&nbsp;[`P0704R1 Fixing const lvalue ref-qualified pointers to members`](https://wg21.link/p0704r1) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P1041R4 Make char16_t/char32_t string literals be UTF-16/32`](https://wg21.link/P1041R4) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P1330R0 Changing the active member of a union inside constexpr`](https://wg21.link/P1330R0) | VS 2017 15.0 <sup>[14](#note_14)</sup> |
@@ -136,9 +136,9 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P1907R1 Inconsistencies with non-type template parameters`](https://wg21.link/P1907R1) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US053: Mandate the return type for return_void and return_value to be void`](https://wg21.link/P1971R0) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US065: Apply Coroutines issue 24 from P0664R8`](https://wg21.link/P1971R0) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Parziale |
-| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | Parziale |
-| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | Parziale |
+| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partial |
+| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | Partial |
+| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | Partial |
 | &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | Parziale |
 | &nbsp;&nbsp;[`P0315R4 Allowing lambdas in unevaluated contexts`](https://wg21.link/P0315R4) | No |
 | &nbsp;&nbsp;[`P0388R4 Permit conversions to arrays of unknown bound`](https://wg21.link/P0388R4) | No |
@@ -183,7 +183,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 
 |  |  |
 |--|--|
-| __Funzionalità della libreria standard C++20__ | __Supporto__ |
+| __Funzionalità della libreria standard C++20__ | __Supportato__ |
 | &nbsp;&nbsp;[`P0809R0 Comparing Unordered Containers`](https://wg21.link/p0809r0) | VS 2010 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P0858R0 Constexpr Iterator Requirements`](https://wg21.link/p0858r0) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0777R1 Avoiding Unnecessary Decay`](https://wg21.link/p0777r1) | VS 2017 15.7 <sup>[14](#note_14)</sup> |
@@ -263,7 +263,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P1023R0 constexpr For std::array Comparisons`](https://wg21.link/P1023R0) | No |
 | &nbsp;&nbsp;[`P1032R1 Miscellaneous constexpr`](https://wg21.link/P1032R1) | No |
 | &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | No |
-| __Funzionalità della libreria standard C++17__ | __Supporto__ |
+| __Funzionalità della libreria standard C++17__ | __Supportato__ |
 | &nbsp;&nbsp;[`LWG 2221 Formatted output operator for nullptr`](https://cplusplus.github.io/LWG/issue2221) | VS 2019 16.1 |
 | &nbsp;&nbsp;[`N3911 void_t`](https://wg21.link/n3911) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`N4089 Safe Conversions In unique_ptr<T[]>`](https://wg21.link/n4089) | VS 2015 <sup>[14](#note_14)</sup> |
@@ -346,7 +346,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P0607R0 Inline Variables for the Standard Library`](https://wg21.link/p0607r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0618R0 Deprecating <codecvt>`](https://wg21.link/p0618r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0682R1 Repairing Elementary String Conversions`](https://wg21.link/P0682R1) | VS 2015 15.7 <sup>[17](#note_17)</sup> |
-| __Funzionalità della libreria standard C++14__ | __Supporto__ |
+| __Funzionalità della libreria standard C++14__ | __Supportato__ |
 | &nbsp;&nbsp;[`N3462 SFINAE-Friendly result_of`](https://wg21.link/n3462) | VS 2015.2 |
 | &nbsp;&nbsp;[`N3302 constexpr For <complex>`](https://wg21.link/n3302) | VS 2015 |
 | &nbsp;&nbsp;[`N3469 constexpr For <chrono>`](https://wg21.link/n3469) | VS 2015 |
@@ -397,7 +397,7 @@ __VS 2019 16,6__ indica le funzionalità supportate in Visual Studio 2019 versio
 
 ### <a name="notes"></a>Note
 
-<a name="note_A"></a>__In__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) modalità, le specifiche di eccezione dinamiche rimangono non implementate e `throw()` viene comunque considerata come sinonimo di `__declspec(nothrow)` . In C++17 le specifiche di eccezione dinamiche sono state per lo più rimosse da P0003R5. Vestige: `throw()` viene deprecato e si comporta come sinonimo di `noexcept`. In [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) modalità, MSVC Ora è conforme allo standard assegnando `throw()` lo stesso comportamento di `noexcept` , ovvero l'imposizione tramite terminazione.
+<a name="note_A"></a>__In__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) modalità, le specifiche di eccezione dinamiche rimangono non implementate e `throw()` viene comunque considerata come sinonimo di `__declspec(nothrow)` . In C++ 17, le specifiche di eccezione dinamiche sono state rimosse principalmente da P0003R5, lasciando una traccia: `throw()` è deprecata e deve comportarsi come sinonimo di **`noexcept`** . In [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) modalità, MSVC Ora è conforme allo standard assegnando `throw()` lo stesso comportamento di **`noexcept`** , ovvero l'imposizione tramite terminazione.
 
 L'opzione del compilatore [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) richiede il comportamento precedente di `__declspec(nothrow)` . È probabile che venga `throw()` rimosso in c++ 20. Per facilitare la migrazione del codice in risposta a queste modifiche nello standard e nell'implementazione, sono stati aggiunti nuovi avvisi del compilatore per i problemi relativi alle specifiche di eccezione in [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) e [`/permissive-`](../build/reference/permissive-standards-conformance.md) .
 
@@ -407,7 +407,7 @@ L'opzione del compilatore [`/Zc:noexceptTypes`](../build/reference/zc-noexceptty
 
 <a name="note_D"></a>__D__ supportato [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) con con un avviso suppressible, [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) .
 
-<a name="note_E"></a>__E__ si tratta di un'implementazione completamente nuova, incompatibile con la `std::experimental` versione precedente, resa necessaria dal supporto di collegamento simbolico, correzioni di bug e modifiche nel comportamento standard-required. Attualmente, con \<filesystem > sono inclusi il nuovo `std::experimental::filesystem` e il precedente \<. Con `std::filesystem`experimental/filesystem> è inclusa solo la precedente implementazione sperimentale. L'implementazione sperimentale sarà RIMOSSA nella prossima versione delle librerie con modifiche di rilievo per l'ABI.
+<a name="note_E"></a>__E__ si tratta di un'implementazione completamente nuova, incompatibile con la `std::experimental` versione precedente, resa necessaria dal supporto di collegamento simbolico, correzioni di bug e modifiche nel comportamento standard-required. Attualmente, incluso \<filesystem> fornisce il nuovo `std::filesystem` e il precedente `std::experimental::filesystem` , e include \<experimental/filesystem> solo la vecchia implementazione sperimentale. L'implementazione sperimentale sarà RIMOSSA nella prossima versione delle librerie con modifiche di rilievo per l'ABI.
 
 <a name="note_G"></a> __G__ Funzionalità supportata da una funzione intrinseca del compilatore.
 

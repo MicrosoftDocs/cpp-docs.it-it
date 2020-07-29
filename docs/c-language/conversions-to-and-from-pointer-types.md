@@ -7,18 +7,18 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6358216e72f054becf33d18aadb6a3a51bab8363
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218897"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversioni da e verso tipi di puntatore
 
 Un puntatore a un tipo di valore può essere convertito in un puntatore a un tipo diverso. Tuttavia, il risultato può essere non definito a causa dei requisiti di allineamento e delle dimensioni dei diversi tipi in archivio. Un puntatore a un oggetto può essere convertito in un puntatore a un oggetto il cui tipo richiede un allineamento di archiviazione ugualmente o meno rigido e nuovamente senza modifiche.
 
-Un puntatore a `void` può essere convertito in o da un puntatore con un tipo qualsiasi, senza restrizioni o perdita di informazioni. Se il risultato viene riconvertito nel tipo originale, il puntatore originale viene recuperato.
+Un puntatore a **`void`** può essere convertito in o da un puntatore a qualsiasi tipo, senza restrizioni o perdita di informazioni. Se il risultato viene riconvertito nel tipo originale, il puntatore originale viene recuperato.
 
 Se un puntatore viene convertito in un altro puntatore con lo stesso tipo, ma con qualificatori diversi o aggiuntivi, il nuovo puntatore è uguale a quello precedente, fatta eccezione per le restrizioni imposte dal nuovo qualificatore.
 
@@ -34,7 +34,7 @@ Al contrario, un tipo integrale può essere convertito in un tipo di puntatore i
 
 - Se la dimensione del tipo integrale è diversa dalla dimensione del tipo di puntatore, il tipo integrale viene prima convertito nella dimensione del puntatore usando i percorsi di conversione specificati nelle tabelle [Conversione dai tipi integrali con segno](../c-language/conversions-from-signed-integral-types.md) e [Conversione dai tipi integrali senza segno](../c-language/conversions-from-unsigned-integral-types.md). Viene quindi utilizzato come valore del puntatore.
 
-Un'espressione costante integrale con valore 0 o tale espressione cast al tipo **void** <strong>\*</strong> può essere convertita da un cast di tipo, dall'assegnazione o dal confronto con un puntatore di qualsiasi tipo. Questa operazione produce un puntatore null equivalente a un altro puntatore null dello stesso tipo, ma questo puntatore null non corrisponde a nessun puntatore a una funzione o un oggetto. I numeri interi diversi dalla costante 0 possono essere convertiti in un tipo di puntatore, ma il risultato non è portabile.
+Un'espressione costante integrale con valore 0 o un cast di un'espressione di questo tipo **`void`** <strong>\*</strong> può essere convertita da un cast di tipo, dall'assegnazione o dal confronto con un puntatore di qualsiasi tipo. Questa operazione produce un puntatore null equivalente a un altro puntatore null dello stesso tipo, ma questo puntatore null non corrisponde a nessun puntatore a una funzione o un oggetto. I numeri interi diversi dalla costante 0 possono essere convertiti in un tipo di puntatore, ma il risultato non è portabile.
 
 ## <a name="see-also"></a>Vedere anche
 

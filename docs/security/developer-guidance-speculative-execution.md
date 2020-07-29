@@ -1,5 +1,5 @@
 ---
-title: Linee guida per sviluppatori di C++ per l'esecuzione speculativa i canali
+title: Linee guida per sviluppatori C++ per canali laterali di esecuzione speculativa
 ms.date: 07/10/2018
 helpviewer_keywords:
 - Visual C++, security
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: b3895cdb060d45d3f75c75f75c930e868b3654b2
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d0b9faf0bd11892c05e25e981e8cd729cb623dd4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448600"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219326"
 ---
-# <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Linee guida per sviluppatori di C++ per l'esecuzione speculativa i canali
+# <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Linee guida per sviluppatori C++ per canali laterali di esecuzione speculativa
 
-Questo articolo contiene indicazioni per gli sviluppatori agevolare l'identificazione e attenuazione dell'esecuzione speculativa side channel hardware le vulnerabilità in software di C++. Le vulnerabilità possono rivelare informazioni riservate tra confini di trust e possono influire sul software in esecuzione su processori che supportano l'esecuzione speculativa, in ordine di istruzioni. Questa classe di vulnerabilità è stata prima descritto in gennaio 2018 e ulteriori informazioni generali e linee guida sono disponibili nel [security di Microsoft advisory](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
+Questo articolo contiene indicazioni per gli sviluppatori che assistono all'identificazione e alla mitigazione di vulnerabilità hardware del canale laterale per l'esecuzione speculativa nel software C++. Queste vulnerabilità possono divulgare informazioni riservate attraverso i confini del trust e possono influenzare il software eseguito su processori che supportano l'esecuzione speculativa e non ordinata delle istruzioni. Questa classe di vulnerabilità è stata descritta per la prima volta nel 2018 di gennaio, oltre a informazioni aggiuntive e indicazioni aggiuntive nell' [avviso di sicurezza di Microsoft](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
-Le indicazioni fornite in questo articolo sono correlata alle classi di vulnerabilità rappresentata da:
+Le linee guida fornite in questo articolo sono correlate alle classi di vulnerabilità rappresentate da:
 
-1. CVE-2017-5753, noto anche come Spectre variante 1. Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa che si verifica in seguito a soddisfare un ramo condizionale. Microsoft C++ compilatore in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codice potenzialmente vulnerabili correlati per CVE 2017-5753. Il `/Qspectre` commutatore è disponibile anche in Visual Studio 2015 Update 3 attraverso [KB 4338871](https://support.microsoft.com/help/4338871). La documentazione per il [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti.
+1. CVE-2017-5753, noto anche come Spectre Variant 1. Questa classe di vulnerabilità hardware è correlata ai canali laterali che possono verificarsi a causa di un'esecuzione speculativa che si verifica in seguito a una stima errata del ramo condizionale. Il compilatore Microsoft C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per l' `/Qspectre` opzione che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codifica potenzialmente vulnerabili correlati a CVE-2017-5753. L' `/Qspectre` opzione è disponibile anche in Visual Studio 2015 Update da 3 a [KB 4338871](https://support.microsoft.com/help/4338871). La documentazione relativa al flag [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fornisce ulteriori informazioni sugli effetti e sull'utilizzo.
 
-2. CVE-2018-3639, noto anche come [speculativa Store Bypass (SSB)](https://aka.ms/sescsrdssb). Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa di un carico prima di un archivio dipendenti come risultato di soddisfare un accesso memoria.
+2. CVE-2018-3639, noto anche come [SSB (speculative Store bypass)](https://aka.ms/sescsrdssb). Questa classe di vulnerabilità hardware è correlata ai canali laterali che possono verificarsi a causa di un'esecuzione speculativa di un carico in anticipo rispetto a un archivio dipendente in seguito a una stima errata dell'accesso alla memoria.
 
-Un'introduzione accessibile alla vulnerabilità del canale sul lato dell'esecuzione speculativa è reperibile nella presentazione intitolata [il Case di Spectre e Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4) da uno dei team di ricerca che questi problemi individuati.
+Un'introduzione accessibile alle vulnerabilità del canale laterale per l'esecuzione speculativa si trova nella presentazione denominata [caso di Spectre e Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4) da parte di uno dei team di ricerca che ha individuato questi problemi.
 
-## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>Quali sono le vulnerabilità di hardware speculativo esecuzione Side Channel?
+## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>Che cosa sono le vulnerabilità hardware del canale laterale per l'esecuzione speculativa?
 
-CPU più recenti di garantire livelli più elevati di prestazioni consentendo l'uso dell'esecuzione speculativa e di non in ordine di istruzioni. Ad esempio, questa operazione viene spesso eseguita per stimare la destinazione dei rami (condizionale e indiretti) che consente la CPU iniziare a speculativo eseguendo le istruzioni nella destinazione ramo stimato, evitando in tal modo un blocco fino a quando la destinazione branch effettivo è risolto. Nel caso in cui la CPU in un secondo momento rileva che si è verificato un soddisfare, tutto lo stato di computer che è stato calcolato speculativo viene eliminata. Ciò garantisce che non si verifichino effetti visibili a livello di architettura di speculazione stimate in modo errato.
+Le CPU moderne forniscono livelli di prestazioni più elevati usando un'esecuzione speculativa e non ordinata delle istruzioni. Ad esempio, questa operazione viene spesso eseguita tramite la stima della destinazione dei rami (condizionale e indiretto), che consente alla CPU di avviare speculativamente di esecuzione delle istruzioni nella destinazione del ramo stimato, evitando in tal modo un blocco fino a quando non viene risolta la destinazione effettiva del ramo. Nel caso in cui la CPU rileva in un secondo momento che si è verificata una stima errata, tutto lo stato del computer calcolato speculativamente viene ignorato. In questo modo si garantisce che non vi siano effetti visivi visibili della speculazione non stimata.
 
-Durante l'esecuzione speculativa non influisce sullo stato visibile a livello di architettura, può lasciare tracce residue in stato non dell'architettura, ad esempio le diverse cache utilizzati dalla CPU. Si tratta di queste tracce residue dell'esecuzione speculativa che può dar luogo a vulnerabilità del canale laterale. Per comprendere meglio questo, si consideri il frammento di codice seguente che fornisce un esempio di CVE-2017-5753 (limiti controllare Bypass):
+Anche se l'esecuzione speculativa non influisce sullo stato visibile dall'architettura, può lasciare tracce residue nello stato non architettonico, ad esempio le varie cache usate dalla CPU. Si tratta di tracce residue di esecuzione speculativa che possono dare luogo a vulnerabilità del canale laterale. Per comprendere meglio questo problema, prendere in considerazione il seguente frammento di codice, che fornisce un esempio di CVE-2017-5753 (bypass del controllo dei limiti):
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -45,53 +45,53 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-In questo esempio `ReadByte` viene fornito un buffer, le dimensioni del buffer e un indice nel buffer. Il parametro di indice, come specificato dalle `untrusted_index`, fornito da un minore di contesto con privilegi, ad esempio un processo non amministrativi. Se `untrusted_index` è minore di `buffer_size`, quindi il carattere in corrispondenza di tale indice viene letto dal `buffer` e utilizzato per l'indice in un'area condivisa di memoria a cui fa riferimento `shared_buffer`.
+In questo esempio `ReadByte` viene fornito un buffer, le dimensioni del buffer e un indice in tale buffer. Il parametro di indice, come specificato da `untrusted_index` , viene fornito da un contesto meno privilegiato, ad esempio un processo non amministrativo. Se `untrusted_index` è minore di `buffer_size` , il carattere in corrispondenza dell'indice viene letto `buffer` e utilizzato per indicizzare in un'area di memoria condivisa a cui fa riferimento `shared_buffer` .
 
-Da una prospettiva architetturale, questa sequenza di codice è perfettamente sicura perché è certo che `untrusted_index` sarà sempre minore di `buffer_size`. Tuttavia, in presenza dell'esecuzione speculativa, è possibile che la CPU verrà previsioni errate la diramazione condizionale ed esegue il corpo dell'oggetto se istruzione anche quando `untrusted_index` è maggiore o uguale a `buffer_size`. Di conseguenza, la CPU speculativo può leggere un byte superando i confini dei limiti del `buffer` (che può essere una chiave privata) e può quindi usare tale valore byte per calcolare l'indirizzo del caricamento successivo tramite `shared_buffer`.
+Dal punto di vista dell'architettura, questa sequenza di codice è perfettamente sicura perché garantisce che `untrusted_index` sarà sempre inferiore a `buffer_size` . Tuttavia, in presenza di un'esecuzione speculativa, è possibile che la CPU imprevedibili in modo improprio il ramo condizionale ed esegua il corpo dell'istruzione If anche quando `untrusted_index` è maggiore o uguale a `buffer_size` . Di conseguenza, la CPU può speculativamente leggere un byte oltre i limiti di `buffer` (che potrebbe essere un segreto) e quindi usare tale valore byte per calcolare l'indirizzo di un carico successivo tramite `shared_buffer` .
 
-Anche se la CPU alla fine rileverà questa soddisfare, effetti collaterali residui rimanga nella cache della CPU che rivelano informazioni sul valore byte che è stato letto, compreso nell'intervallo da `buffer`. Questi effetti collaterali possono essere rilevati da un minore di contesto con privilegi che eseguono il sistema mediante probing rapidità con cui ogni cache riga in `shared_buffer` è accessibile. I passaggi che possono essere effettuati a questo scopo sono:
+Mentre la CPU rileverà la stima errata, potrebbero essere presenti effetti collaterali residui nella cache della CPU che rivelano informazioni sul valore byte che è stato letto fuori dai limiti da `buffer` . Questi effetti collaterali possono essere rilevati da un contesto meno privilegiato in esecuzione nel sistema eseguendo il probe della velocità con cui viene eseguito l'accesso a ogni riga della cache `shared_buffer` . Di seguito sono riportati i passaggi che è possibile eseguire per eseguire questa operazione:
 
-1. **Richiamare `ReadByte` più volte con `untrusted_index` viene meno `buffer_size`** . Il contesto che esegue l'attacco può causare il contesto vittima richiamare `ReadByte` (ad esempio, tramite RPC) tale che i predittori ramo sono sottoposto a training essere considerato non come `untrusted_index` è minore di `buffer_size`.
+1. **Richiama `ReadByte` più volte con `untrusted_index` minore di `buffer_size` **. Il contesto di attacco può causare il richiamo del contesto della vittima, `ReadByte` ad esempio tramite RPC, in modo che il predittore del ramo venga sottoposto a training in modo da non essere eseguito come `untrusted_index` è minore di `buffer_size` .
 
-2. **Tutte le righe della cache di scaricamento `shared_buffer`** . Il contesto che esegue l'attacco debba scaricare tutte le righe della cache nell'area di memoria a cui fa riferimento condivisa `shared_buffer`. Poiché l'area di memoria è condivisa, questo è molto semplice e può essere effettuato utilizzando le funzioni intrinseche, ad esempio `_mm_clflush`.
+2. **Svuotare tutte le righe `shared_buffer` della cache in **. Il contesto di attacco deve scaricare tutte le righe della cache nell'area condivisa di memoria a cui fa riferimento `shared_buffer` . Poiché l'area di memoria è condivisa, è semplice e può essere eseguita usando intrinseci come `_mm_clflush` .
 
-3. **Richiamare `ReadByte` con `untrusted_index` maggiore `buffer_size`** . Il contesto che esegue l'attacco fa sì che il contesto vittima richiamare `ReadByte` in modo da stimare in modo non corretto che il ramo non verrà eseguito. Questo impedisce al processore speculativo esegue il corpo dell'oggetto se bloccare con `untrusted_index` maggiore `buffer_size`, quindi iniziali a una lettura non compresi nell'intervallo di `buffer`. Di conseguenza, `shared_buffer` vengono indicizzati utilizzando un valore potenzialmente riservato che è stato letto non compresi nell'intervallo, causando così la riga cache corrispondente da caricare dalla CPU.
+3. **Invoke `ReadByte` con `untrusted_index` maggiore di `buffer_size` **. Il contesto di attacco fa in modo che il contesto della vittima richiami in `ReadByte` modo che non venga correttamente stimato che il ramo non verrà utilizzato. In questo modo, il processore speculativamente l'esecuzione del corpo del blocco if con `untrusted_index` maggiore di, causando la `buffer_size` lettura di `buffer` . Di conseguenza, `shared_buffer` viene indicizzato usando un valore potenzialmente segreto che è stato letto fuori limite, causando in tal modo la carica della rispettiva riga della cache da parte della CPU.
 
-4. **In ogni riga della cache di lettura `shared_buffer` per vedere quale avviene più rapidamente**. Il contesto che esegue l'attacco può leggere in ogni riga della cache `shared_buffer` e rilevare la riga della cache che carica molto più velocemente rispetto agli altri. Questa è la riga della cache che è probabile che sono state introdotte passaggio 3. Poiché non esiste una relazione 1:1 tra la riga della cache e valore di byte in questo esempio, in questo modo l'autore dell'attacco per dedurre il valore effettivo di byte che è stato letto non compresi nell'intervallo.
+4. **Leggere ogni riga della cache in `shared_buffer` per vedere quali sono gli accessi più rapidi**. Il contesto di attacco può leggere ogni riga della cache in `shared_buffer` e rilevare la riga della cache che viene caricata significativamente più velocemente rispetto alle altre. Si tratta della riga della cache che probabilmente è stata introdotta nel passaggio 3. Poiché in questo esempio esiste una relazione 1:1 tra il valore di byte e la riga della cache, questo consente all'autore dell'attacco di dedurre il valore effettivo del byte che è stato letto fuori limite.
 
-I passaggi precedenti viene fornito un esempio dell'uso di una tecnica nota come SCARICAMENTO + RICARICAMENTO in combinazione con sui potenziali un'istanza di CVE 2017-5753.
+I passaggi precedenti forniscono un esempio di uso di una tecnica nota come SCARICAmento e ricarica insieme a exploiting di un'istanza di CVE-2017-5753.
 
-## <a name="what-software-scenarios-can-be-impacted"></a>Quali scenari di software possono essere interessati?
+## <a name="what-software-scenarios-can-be-impacted"></a>Quali scenari software possono essere interessati?
 
-Sviluppo di software protetti tramite un processo, come le [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) richiede in genere gli sviluppatori identificare i limiti di trust che esistono nella propria applicazione. Un limite di trust è presente nelle posizioni in cui un'applicazione può interagire con i dati forniti da un contesto meno attendibili, ad esempio un altro processo nel sistema o un processo in modalità utente senza privilegi di amministratore nel caso di un driver di dispositivo in modalità kernel. La nuova classe di vulnerabilità che interessano i canali lato dell'esecuzione speculativa è rilevante per molti dei limiti di trust in modelli di sicurezza software esistenti isolare codice e i dati in un dispositivo.
+Lo sviluppo di software protetti tramite un processo come [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) richiede in genere agli sviluppatori di identificare i limiti di trust presenti nella propria applicazione. Un limite di attendibilità esiste nei punti in cui un'applicazione può interagire con i dati forniti da un contesto meno attendibile, ad esempio un altro processo nel sistema o un processo in modalità utente non amministratore nel caso di un driver di dispositivo in modalità kernel. La nuova classe di vulnerabilità che coinvolgono i canali laterali di esecuzione speculativa è rilevante per molti dei limiti di trust nei modelli di sicurezza software esistenti che isolano il codice e i dati in un dispositivo.
 
-Nella tabella seguente fornisce un riepilogo dei modelli di protezione software in cui gli sviluppatori debbano essere interessati a queste vulnerabilità che si verificano:
+La tabella seguente fornisce un riepilogo dei modelli di sicurezza del software in cui gli sviluppatori possono avere la necessità di preoccuparsi di queste vulnerabilità:
 
 |Limite di attendibilità|Descrizione|
 |----------------|----------------|
-|Limite della macchina virtuale|Le applicazioni che isolano i carichi di lavoro in macchine virtuali separate che ricevono dati non attendibili provenienti da un'altra macchina virtuale potrebbero essere a rischio.|
-|Limite del kernel|Un driver di dispositivo in modalità kernel che riceve i dati non attendibili da un processo della modalità utente non amministratore potrebbe essere a rischio.|
-|Limite di processo|Un'applicazione che riceve i dati non attendibili da un altro processo in esecuzione nel sistema locale, ad esempio tramite una chiamata RPC (Remote Procedure), la memoria condivisa o altre comunicazioni tra processi (IPC) meccanismi possono essere a rischio.|
-|Limiti dell'enclave|Un'applicazione eseguita all'interno di una enclave protetta (ad esempio Intel SGX) che riceve i dati non attendibili all'esterno dell'enclave potrebbe essere a rischio.|
-|Limiti del linguaggio|Un'applicazione che interpreta o -in-time (JIT) compila ed esegue codice non attendibile, scritto in un linguaggio di livello superiore potrebbe essere a rischio.|
+|Limite macchina virtuale|Le applicazioni che isolano i carichi di lavoro in macchine virtuali separate che ricevono dati non attendibili da un'altra macchina virtuale possono essere a rischio.|
+|Limite kernel|Un driver di dispositivo in modalità kernel che riceve dati non attendibili da un processo in modalità utente non amministratore può essere a rischio.|
+|Limite processo|Un'applicazione che riceve dati non attendibili da un altro processo in esecuzione nel sistema locale, ad esempio tramite una chiamata di procedura remota (RPC), una memoria condivisa o altri meccanismi di comunicazione interprocesso (IPC) può essere a rischio.|
+|Confine enclave|Un'applicazione che viene eseguita all'interno di un enclave sicuro (ad esempio Intel SGX) che riceve dati non attendibili dall'esterno dell'enclave può essere a rischio.|
+|Confine della lingua|Un'applicazione che interpreta o JIT (just-in-Time) compila ed esegue codice non attendibile scritto in una lingua di livello superiore può essere a rischio.|
 
-Applicazioni con superficie di attacco esposta a una di queste trust limiti necessario rivedere il codice sulla superficie di attacco per identificare e contrastare le eventuali vulnerabilità del canale sul lato dell'esecuzione speculativa. Si noti che i confini del trust esposti alle superfici di attacco remoto, ad esempio i protocolli di rete remoto, non sono stati dimostrati a rischio di vulnerabilità del canale sul lato dell'esecuzione speculativa.
+Le applicazioni che presentano una superficie di attacco esposta a uno dei limiti di attendibilità precedenti devono esaminare il codice sulla superficie di attacco per identificare e attenuare le possibili istanze delle vulnerabilità del canale laterale per l'esecuzione speculativa. Si noti che i limiti di attendibilità esposti alle superfici di attacco remote, ad esempio i protocolli di rete remota, non sono stati dimostrati a rischio di vulnerabilità del canale laterale per l'esecuzione speculativa.
 
-## <a name="potentially-vulnerable-coding-patterns"></a>Potenzialmente vulnerabili i modelli di codifica
+## <a name="potentially-vulnerable-coding-patterns"></a>Modelli di codifica potenzialmente vulnerabili
 
-Vulnerabilità del canale sul lato dell'esecuzione speculativa può verificarsi come conseguenza di più modelli di codifica. In questa sezione descrive i modelli di scrittura di codice potenzialmente vulnerabili e vengono forniti esempi per ognuno, ma deve essere riconosciuto che le variazioni in questi temi potrebbe essere presente. Di conseguenza, gli sviluppatori sono invitati a eseguire questi modelli a livello esemplificativo e non come un elenco completo di tutti i modelli di codifica potenzialmente vulnerabili. Le stesse classi delle vulnerabilità di sicurezza della memoria che possono essere presenti nel software oggi è possibile che esistano lungo speculativa e percorsi di non in ordine di esecuzione, inclusi ma non solo i sovraccarichi del buffer, non compresi nell'intervallo della matrice gli accessi, utilizzo della memoria non inizializzata, tipo confusione e così via. Le stesse primitive che utenti malintenzionati possono usare per sfruttare le vulnerabilità di sicurezza della memoria lungo i percorsi dell'architettura potrebbero venire applicate anche ai percorsi speculativi.
+Le vulnerabilità del canale laterale per l'esecuzione speculativa possono verificarsi come conseguenza di più modelli di codifica. In questa sezione vengono descritti i modelli di codifica potenzialmente vulnerabili e vengono forniti esempi per ognuno di essi, ma è necessario riconoscere che possono esistere variazioni su questi temi. Per questo motivo, gli sviluppatori sono invitati a adottare questi modelli come esempi e non come un elenco esaustivo di tutti i modelli di codifica potenzialmente vulnerabili. Le stesse classi di vulnerabilità di sicurezza della memoria che possono esistere attualmente nel software possono esistere anche lungo percorsi di esecuzione speculativi e non ordinati, tra cui, tra l'altro, i sovraccarichi del buffer, gli accessi alla matrice out-of-Bound, l'utilizzo non inizializzato della memoria, la confusione dei tipi e così via. Le stesse primitive che possono essere usate dagli utenti malintenzionati per sfruttare le vulnerabilità di sicurezza della memoria lungo i percorsi architetturali possono anche essere applicate ai percorsi speculativi.
 
-In generale, soddisfare correlati a condizionale ramo di esecuzione speculativa lato canali può verificarsi durante un'espressione condizionale agisce sui dati che possono essere controllati o possono dipendere da un contesto meno attendibili. Ad esempio, può trattarsi espressioni condizionali utilizzate in `if`, `for`, `while`, `switch`, o istruzioni ternarie. Per ognuna di queste istruzioni, il compilatore può generarne una diramazione condizionale che la CPU potrebbe prevedere quindi la destinazione branch per in fase di esecuzione.
+In generale, i canali laterali di esecuzione speculativa correlati alla stima errata del ramo condizionale possono verificarsi quando un'espressione condizionale opera sui dati che possono essere controllati o influenzati da un contesto meno attendibile. Questo può includere, ad esempio, espressioni condizionali utilizzate nelle **`if`** **`for`** istruzioni,,, **`while`** **`switch`** , o ternarie. Per ognuna di queste istruzioni, il compilatore può generare un ramo condizionale che la CPU può quindi stimare per la destinazione del ramo in fase di esecuzione.
 
-Per ogni esempio, viene inserito un commento con la frase "Barriera" in cui uno sviluppatore potrebbe introdurre una barriera come prevenzione. Questo argomento viene discusso più dettagliatamente nella sezione in soluzioni di attenuazione.
+Per ogni esempio, viene inserito un commento con la frase "SPECULAtion BARRIER", in cui uno sviluppatore può introdurre una barriera come mitigazione. Questo argomento viene illustrato più dettagliatamente nella sezione sulle misure di mitigazione.
 
-## <a name="speculative-out-of-bounds-load"></a>Caricare speculativo non compresi nell'intervallo
+## <a name="speculative-out-of-bounds-load"></a>Carico speculativo fuori limite
 
-Questa categoria di scrittura del codice implica soddisfare un ramo condizionale che conduce a un speculativo non compresi nell'intervallo l'accesso alla memoria.
+Questa categoria di modelli di codifica prevede una stima errata del ramo condizionale che comporta l'accesso a una memoria fuori limite speculativa.
 
-### <a name="array-out-of-bounds-load-feeding-a-load"></a>Matrice non compresi nell'intervallo di caricare un carico di alimentazione
+### <a name="array-out-of-bounds-load-feeding-a-load"></a>Caricamento di un carico da un array fuori limite
 
-Questo modello di codifica è il modello di scrittura di codice vulnerabile originariamente descritto per CVE-2017-5753 (limiti controllare Bypass). La sezione dello sfondo di questo articolo illustra questo modello in modo dettagliato.
+Questo modello di codifica è il modello di codifica vulnerabile descritto originariamente per CVE-2017-5753 (bypass del controllo dei limiti). Questo modello è illustrato in dettaglio nella sezione relativa allo sfondo di questo articolo.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -106,7 +106,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-Analogamente, una matrice non compresi nell'intervallo caricamento può verificarsi in combinazione con un ciclo che supera la terminazione della condizione a causa di un soddisfare. In questo esempio, il ramo condizionale è associato il `x < buffer_size` potrebbe previsioni errate e speculativo esegue il corpo di espressione la `for` ciclo quando `x` è maggiore o uguale a `buffer_size`, pertanto ottenendo un speculativa caricamento non compresi nell'intervallo.
+Analogamente, è possibile che venga eseguito il caricamento di una matrice fuori limite insieme a un ciclo che supera la condizione di terminazione a causa di una stima errata. In questo esempio, il ramo condizionale associato all' `x < buffer_size` espressione può prevedere una stima errata e speculativamente eseguire il corpo del **`for`** ciclo quando `x` è maggiore o uguale a `buffer_size` , causando così un carico speculativo fuori limite.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -121,11 +121,11 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 }
 ```
 
-### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Matrice non compresi nell'intervallo caricare un ramo indiretto di alimentazione
+### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Il caricamento della matrice non è associato ad alcun ramo indiretto
 
-Questo modello di codifica comporta il caso in cui soddisfare un ramo condizionale può causare un oltre i limiti l'accesso a una matrice di puntatori a funzioni quali lead quindi a un ramo indiretto alla destinazione di indirizzi che è stato letto non compresi nell'intervallo. Il frammento di codice seguente viene fornito un esempio di questa procedura.
+Questo modello di codifica prevede il caso in cui una stima errata del ramo condizionale possa causare un accesso out-of-Bound a una matrice di puntatori a funzione che quindi conduce a un ramo indiretto all'indirizzo di destinazione che è stato letto fuori limite. Il frammento di codice seguente fornisce un esempio che illustra questa operazione.
 
-In questo esempio viene fornito un identificatore di messaggio non trusted per DispatchMessage attraverso il `untrusted_message_id` parametro. Se `untrusted_message_id` è minore di `MAX_MESSAGE_ID`, quindi viene usato per l'indicizzazione in una matrice di puntatori a funzione e il ramo per la destinazione ramo corrispondente. Questo codice sia sicuro a livello di architettura, ma se la CPU di previsioni errate dei branch condizionale, potrebbero verificarsi `DispatchTable` sono indicizzati dal `untrusted_message_id` quando il relativo valore è maggiore o uguale a `MAX_MESSAGE_ID`, pertanto sfociando in un accesso non compresi nell'intervallo. Ciò può comportare l'esecuzione speculativa da un indirizzo di destinazione succursale che sia derivato oltre i limiti della matrice che potrebbe causare la divulgazione di informazioni in base al codice che viene eseguito speculativo.
+In questo esempio viene fornito un identificatore di messaggio non attendibile per DispatchMessage tramite il `untrusted_message_id` parametro. Se `untrusted_message_id` è minore di `MAX_MESSAGE_ID` , viene usato per eseguire l'indicizzazione in una matrice di puntatori a funzione e creare un ramo per la destinazione del ramo corrispondente. Questo codice è indipendente dall'architettura, ma se la CPU non esegue una stima errata del ramo condizionale, può `DispatchTable` comportare l'indicizzazione in base a `untrusted_message_id` quando il valore è maggiore o uguale a `MAX_MESSAGE_ID` , causando un accesso out-of-Bound. Questo può comportare un'esecuzione speculativa da un indirizzo di destinazione del ramo che è derivato oltre i limiti della matrice, causando la divulgazione di informazioni a seconda del codice eseguito speculativamente.
 
 ```cpp
 #define MAX_MESSAGE_ID 16
@@ -142,13 +142,13 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 }
 ```
 
-Come nel caso della matrice fuori limite caricare un altro carico di alimentazione, questa condizione può verificarsi anche in combinazione con un ciclo che supera la condizione di interruzione a causa di un soddisfare.
+Come nel caso di un carico di matrici out-of-Bounds che alimenta un altro carico, questa condizione può verificarsi anche in combinazione con un ciclo che supera la condizione di terminazione a causa di una stima errata.
 
-### <a name="array-out-of-bounds-store-feeding-an-indirect-branch"></a>Matrice non compresi nell'intervallo archiviare un branch indiretta di alimentazione
+### <a name="array-out-of-bounds-store-feeding-an-indirect-branch"></a>Archivio out-of-Bounds dell'array che invia un ramo indiretto
 
-Mentre l'esempio precedente illustra come un speculativo non compresi nell'intervallo carico può influenzare una destinazione branch indiretta, è anche possibile che un archivio non compresi nell'intervallo per modificare una destinazione ramo indiretta, ad esempio un puntatore a funzione o un indirizzo del mittente. Ciò può causare l'esecuzione speculativa da un indirizzo specificato dall'autore dell'attacco.
+Mentre nell'esempio precedente è stato illustrato il modo in cui un carico speculativo di tipo out-of-Bounds può influenzare una destinazione di Branch indiretta, è anche possibile che un archivio out-of-Bound modifichi una destinazione di Branch indiretta, ad esempio un puntatore a funzione o un indirizzo mittente. Questo può causare un'esecuzione speculativa da un indirizzo specificato dagli utenti malintenzionati.
 
-In questo esempio, un indice non attendibile viene passato tramite la `untrusted_index` parametro. Se `untrusted_index` è minore rispetto al numero di elemento del `pointers` matrice (256 elementi), è necessario che il valore di puntatore fornito nella `ptr` viene scritto il `pointers` matrice. Questo codice sia sicuro a livello di architettura, ma se la CPU di previsioni errate dei branch condizionale, potrebbero verificarsi `ptr` speculativo scritto oltre i limiti di stack allocati `pointers` matrice. Questa operazione potrebbe danneggiare speculativa dell'indirizzo del mittente per `WriteSlot`. Se un utente malintenzionato può controllare il valore di `ptr`, potrebbe essere in grado di provocare l'esecuzione speculativa da un oggetto arbitrario di indirizzi quando `WriteSlot` restituisce lungo il tracciato speculativo.
+In questo esempio, un indice non attendibile viene passato tramite il `untrusted_index` parametro. Se `untrusted_index` è minore del numero di elementi della `pointers` matrice (256 elementi), il valore del puntatore fornito in `ptr` viene scritto nella `pointers` matrice. Questo codice è indipendente dall'architettura, ma se la CPU non prevede una stima errata del ramo condizionale, può comportare la `ptr` scrittura speculativamente oltre i limiti della matrice allocata dallo stack `pointers` . Questo potrebbe causare un danneggiamento speculativo dell'indirizzo mittente per `WriteSlot` . Se un utente malintenzionato può controllare il valore di `ptr` , potrebbe essere in grado di causare un'esecuzione speculativa da un indirizzo arbitrario quando viene `WriteSlot` restituito lungo il percorso speculativo.
 
 ```cpp
 unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
@@ -160,7 +160,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Analogamente, se una variabile locale puntatore funzione denominata `func` allocati nello stack, quindi potrebbe essere possibile speculativo modificare l'indirizzo che `func` fa riferimento al caso di soddisfare la diramazione condizionale. Ciò può comportare l'esecuzione speculativa da un indirizzo arbitrario quando il puntatore a funzione viene chiamato tramite.
+Analogamente, se una variabile locale del puntatore a funzione `func` è stata allocata nello stack, potrebbe essere possibile speculativamente modificare l'indirizzo a cui si `func` riferisce quando si verifica l'errore di stima del ramo condizionale. Questo potrebbe causare un'esecuzione speculativa da un indirizzo arbitrario quando il puntatore a funzione viene chiamato tramite.
 
 ```cpp
 unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
@@ -174,15 +174,15 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Si noti che entrambi questi esempi implica speculativa modifica dei puntatori ramo indiretta allocate nello stack. È possibile che la modifica speculativa può verificarsi anche per le variabili globali, con allocazione dell'heap di memoria e persino memoria di sola lettura su alcuni CPU. Per la memoria allocate nello stack, Microsoft C++ compilatore esegue già i passaggi per rendere più difficile speculativo modificare allocate nello stack indiretta le destinazioni, ad esempio tramite il riordinamento delle variabili locali in modo che i buffer vengono posizionati accanto a una protezione cookie durante la [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) funzionalità di sicurezza del compilatore.
+Si noti che entrambi questi esempi comportano una modifica speculativa dei puntatori a rami indiretti allocati nello stack. È possibile che si verifichino modifiche speculative anche per variabili globali, memoria allocata dall'heap e persino memoria di sola lettura in alcune CPU. Per la memoria allocata nello stack, il compilatore Microsoft C++ esegue già i passaggi per rendere più difficile speculativamente modificare le destinazioni dei rami indiretti allocati dallo stack, ad esempio riordinando le variabili locali in modo che i buffer siano posizionati accanto a un cookie di sicurezza come parte della funzionalità di sicurezza del compilatore [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) .
 
-## <a name="speculative-type-confusion"></a>Confusione di tipo speculativa
+## <a name="speculative-type-confusion"></a>Confusione tra tipi speculativi
 
-Questa categoria riguarda i modelli che possono generare confusione speculativa tipo di codifica. Ciò si verifica quando accedono alla memoria usando un tipo non corretto lungo un tracciato non architetturali durante l'esecuzione speculativa. Soddisfare ramo condizionale sia store speculativa bypass potenzialmente può generare confusione un tipo speculativa.
+Questa categoria riguarda i modelli di codifica che possono dare luogo a una confusione speculativa dei tipi. Questo errore si verifica quando si accede alla memoria utilizzando un tipo errato lungo un percorso non architettonico durante l'esecuzione speculativa. Sia la stima del ramo condizionale che il bypass dello Store speculativo possono causare una confusione dei tipi speculativi.
 
-Archivio speculativa bypass, ciò può verificarsi negli scenari in cui un compilatore riusa un percorso stack per le variabili di più tipi. Infatti, l'archivio dell'architettura di una variabile di tipo `A` possono essere ignorati, consentendo in tal modo il carico di tipo `A` speculativo eseguito prima che la variabile è assegnata. Se la variabile archiviata in precedenza è di tipo diverso, questo può creare le condizioni per una confusione tipo speculativa.
+Per il bypass di archivio speculativo, questo problema può verificarsi negli scenari in cui un compilatore riutilizza un percorso dello stack per variabili di più tipi. Ciò è dovuto al fatto che l'archivio dell'architettura di una variabile di tipo `A` può essere ignorato, consentendo così l'esecuzione del caricamento del tipo `A` in speculativamente prima dell'assegnazione della variabile. Se la variabile precedentemente archiviata è di un tipo diverso, è possibile creare le condizioni per una confusione di tipo speculativo.
 
-Per soddisfare ramo condizionale, il frammento di codice seguente verrà utilizzato per descrivere diverse condizioni che può concedere a confusione tipo speculativa solide basi le proprie.
+Per la stima errata del ramo condizionale, il frammento di codice seguente verrà usato per descrivere le diverse condizioni che possono essere generate dalla confusione dei tipi speculativi.
 
 ```cpp
 enum TypeName {
@@ -234,21 +234,21 @@ unsigned char ProcessType(CBaseType *obj)
 }
 ```
 
-### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Confusione di tipo speculativa portano a un carico non compresi nell'intervallo
+### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Confusione dei tipi speculativi che causa un carico fuori limite
 
-Questo modello di codifica comporta il caso in cui può causare confusione tipo speculative un non compresi nell'intervallo o l'accesso al campo confuso tipo in cui i feed di un indirizzo di caricamento successivo valore caricato. Come avviene per il modello di codifica non compresi nell'intervallo di matrice, ma si è dimostrato attraverso un'alternativa codifica sequenza, come illustrato in precedenza. In questo esempio, un contesto che esegue l'attacco potrebbe causare il contesto vittima eseguire `ProcessType` più volte con un oggetto di tipo `CType1` (`type` è uguale al campo `Type1`). Ciò avrà l'effetto del training la diramazione condizionale per i primi `if` istruzione da stimare non eseguito. Il contesto che esegue l'attacco può quindi causare contesto vittima eseguire `ProcessType` con un oggetto di tipo `CType2`. Ciò può comportare una confusione tipo speculativa se creare un ramo condizionale per i primi `if` istruzione previsioni errate dei ed esegue il corpo del `if` istruzione, pertanto il cast di un oggetto di tipo `CType2` a `CType1`. Poiché `CType2` inferiori `CType1`, l'accesso in memoria `CType1::field2` comporterà un speculativo non compresi nell'intervallo caricherà dei dati che possono essere segreti. Questo valore viene quindi usato in un carico dal `shared_buffer` che può creare osservabili effetti collaterali, come con la matrice non compresi nell'intervallo riportato di seguito viene descritto in precedenza.
+Questo modello di codifica prevede il caso in cui una confusione di tipo speculativo può comportare l'accesso a un campo non associato o confuso del tipo, in cui il valore caricato inserisce un indirizzo di caricamento successivo. Questa operazione è simile al modello di codifica out-of-Bounds della matrice, ma viene manifestata tramite una sequenza di codifica alternativa, come illustrato in precedenza. In questo esempio, un contesto di attacco può causare l'esecuzione più volte del contesto della vittima `ProcessType` con un oggetto di tipo `CType1` (il `type` campo è uguale a `Type1` ). In questo modo verrà effettuato il training del ramo condizionale per la prima **`if`** istruzione da stimare non eseguita. Il contesto di attacco può quindi causare l'esecuzione del contesto della vittima `ProcessType` con un oggetto di tipo `CType2` . Ciò può comportare una confusione del tipo speculativo se il ramo condizionale per la prima **`if`** istruzione esegue una stima errata ed esegue il corpo dell' **`if`** istruzione, eseguendo così il cast di un oggetto di tipo `CType2` a `CType1` . Poiché `CType2` il valore di è minore di `CType1` , l'accesso alla memoria a comporterà `CType1::field2` un carico di dati out-of-Bound speculativo che potrebbe essere segreto. Questo valore viene quindi utilizzato in un carico da `shared_buffer` cui è possibile creare effetti collaterali osservabili, come con l'esempio di out-of-Bounds descritto in precedenza.
 
-### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Confusione di tipo speculativa iniziali a un ramo indiretto
+### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Confusione del tipo speculativo che conduce a un ramo indiretto
 
-Questo modello di codifica comporta il caso in cui una confusione speculativa di tipo può comportare un ramo indiretto unsafe durante l'esecuzione speculativa. In questo esempio, un contesto che esegue l'attacco potrebbe causare il contesto vittima eseguire `ProcessType` più volte con un oggetto di tipo `CType2` (`type` è uguale al campo `Type2`). Ciò avrà l'effetto del training la diramazione condizionale per i primi `if` istruzione da eseguire e `else if` istruzione non da adottare. Il contesto che esegue l'attacco può quindi causare contesto vittima eseguire `ProcessType` con un oggetto di tipo `CType1`. Ciò può comportare una confusione tipo speculativa se creare un ramo condizionale per i primi `if` istruzione consente di stimare eseguita e il `else if` istruzione consente di stimare non eseguito, in modo da eseguire il corpo del `else if` ed eseguendo il cast di un oggetto di tipo `CType1` a `CType2`. Poiché il `CType2::dispatch_routine` si sovrappone a campo di `char` matrice `CType1::field1`, ciò può comportare un ramo speculativo indiretto a una destinazione branch non intenzionali. Se il contesto che esegue l'attacco può controllare i valori di byte nel `CType1::field1` matrice, potrebbe essere in grado di controllare l'indirizzo di destinazione ramo.
+Questo modello di codifica prevede il caso in cui una confusione di tipo speculativa può causare un ramo indiretto non sicuro durante l'esecuzione speculativa. In questo esempio, un contesto di attacco può causare l'esecuzione più volte del contesto della vittima `ProcessType` con un oggetto di tipo `CType2` (il `type` campo è uguale a `Type2` ). In questo modo verrà effettuato il training del ramo condizionale per la prima **`if`** istruzione da intraprendere e l' `else if` istruzione non verrà eseguita. Il contesto di attacco può quindi causare l'esecuzione del contesto della vittima `ProcessType` con un oggetto di tipo `CType1` . Ciò può comportare una confusione del tipo speculativo se il ramo condizionale per la prima **`if`** istruzione esegue la stima e l' `else if` istruzione non viene eseguita, in modo da eseguire il corpo di ed eseguire il `else if` cast di un oggetto di tipo `CType1` a `CType2` . Poiché il `CType2::dispatch_routine` campo si sovrappone alla **`char`** matrice `CType1::field1` , potrebbe verificarsi un ramo indiretto speculativo a una destinazione di Branch non intenzionale. Se il contesto di attacco può controllare i valori di byte nella `CType1::field1` matrice, potrebbe essere in grado di controllare l'indirizzo di destinazione del ramo.
 
-## <a name="speculative-uninitialized-use"></a>Uso non inizializzata speculativa
+## <a name="speculative-uninitialized-use"></a>Uso non inizializzato speculativo
 
-Questa categoria di scrittura del codice include scenari in cui l'esecuzione speculativa possa accedere alla memoria non inizializzata e usarlo per inserire un caricamento successivo o un ramo indiretta. Per questi modelli di codifica sia sfruttabile, deve essere in grado di controllare o influire in modo significativo il contenuto della memoria che viene usato senza inizializzato dal contesto che è usato in un utente malintenzionato.
+Questa categoria di modelli di codifica prevede scenari in cui l'esecuzione speculativa può accedere a una memoria non inizializzata e usarla per inserire un successivo carico o un ramo indiretto. Affinché questi modelli di codifica possano essere sfruttabili, un utente malintenzionato deve essere in grado di controllare o influenzare significativamente il contenuto della memoria utilizzata senza essere inizializzata dal contesto in cui viene utilizzata.
 
-### <a name="speculative-uninitialized-use-leading-to-an-out-of-bounds-load"></a>Uso non inizializzata speculativa portano a un carico non compresi nell'intervallo
+### <a name="speculative-uninitialized-use-leading-to-an-out-of-bounds-load"></a>Uso non inizializzato speculativo che causa un carico fuori limite
 
-Un uso non inizializzato speculativo può potenzialmente causare un carico non compresi nell'intervallo usando un valore di autore dell'attacco controllato. Nell'esempio seguente, il valore di `index` viene assegnato `trusted_index` in tutti i percorsi dell'architettura e `trusted_index` presuppone che sia minore o uguale a `buffer_size`. Tuttavia, a seconda del codice generato dal compilatore, è possibile che possa verificarsi che consente il caricamento da un bypass store speculativa `buffer[index]` e le espressioni dipendenti da eseguire prima dell'assegnazione a `index`. In questo caso, un valore non inizializzato per `index` verrà usato come offset nella `buffer` che è stato possibile abilitare un utente malintenzionato di leggere le informazioni riservate non compresi nell'intervallo e ciò comunicare tramite un canale lato attraverso il caricamento del dipendente `shared_buffer` .
+Un uso speculativo non inizializzato può potenzialmente causare un carico fuori limite usando un valore controllato da un utente malintenzionato. Nell'esempio seguente il valore di `index` viene assegnato a `trusted_index` tutti i percorsi architetturali e `trusted_index` si presuppone che sia minore o uguale a `buffer_size` . Tuttavia, a seconda del codice prodotto dal compilatore, è possibile che si verifichi un bypass di archivio speculativo che consente di eseguire il caricamento da `buffer[index]` e le espressioni dipendenti prima dell'assegnazione a `index` . In tal caso, verrà utilizzato un valore non inizializzato per `index` come offset in `buffer` che potrebbe consentire a un utente malintenzionato di leggere le informazioni riservate fuori dal limite e di trasportarlo tramite un canale laterale tramite il carico dipendente di `shared_buffer` .
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -269,9 +269,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-### <a name="speculative-uninitialized-use-leading-to-an-indirect-branch"></a>Uso non inizializzata speculativa iniziali a un ramo indiretto
+### <a name="speculative-uninitialized-use-leading-to-an-indirect-branch"></a>Uso non inizializzato speculativo che conduce a un ramo indiretto
 
-Un utilizzo non inizializzato speculativo potrebbe provocare un ramo indiretta in cui la destinazione branch viene controllata da un utente malintenzionato. Nell'esempio seguente, `routine` viene assegnato a una delle due `DefaultMessageRoutine1` oppure `DefaultMessageRoutine` a seconda del valore di `mode`. Nel percorso dell'architettura, l'operazione comporterà `routine` sempre in fase di inizializzazione prima del ramo indiretto. Tuttavia, a seconda del codice generato dal compilatore, un bypass store speculativa può verificarsi che consente il ramo indiretto tramite `routine` speculativo da eseguire prima dell'assegnazione a `routine`. Se in questo caso, un utente malintenzionato potrebbe essere in grado di eseguire speculativo da un indirizzo arbitrario, presupponendo che l'autore dell'attacco può influenzare o controllare il valore inizializzato di `routine`.
+Un uso non inizializzato speculativo può potenzialmente causare un ramo indiretto in cui la destinazione del ramo è controllata da un utente malintenzionato. Nell'esempio seguente `routine` viene assegnato a `DefaultMessageRoutine1` o a `DefaultMessageRoutine` seconda del valore di `mode` . Nel percorso dell'architettura, questo comporterà `routine` l'inizializzazione sempre prima del ramo indiretto. Tuttavia, a seconda del codice prodotto dal compilatore, è possibile che si verifichi un bypass di archivio speculativo che consenta l'esecuzione del ramo indiretto tramite `routine` speculativamente prima dell'assegnazione a `routine` . In tal caso, un utente malintenzionato potrebbe essere in grado di eseguire speculativamente da un indirizzo arbitrario, supponendo che l'utente malintenzionato possa influenzare o controllare il valore non inizializzato di `routine` .
 
 ```cpp
 #define MAX_MESSAGE_ID 16
@@ -302,19 +302,19 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 ## <a name="mitigation-options"></a>Opzioni di mitigazione
 
-Per ridurre la probabilità di vulnerabilità del canale sul lato dell'esecuzione speculativa è possibile apportare modifiche al codice sorgente. Queste modifiche possono comportare mitigazione specifiche istanze di una vulnerabilità, ad esempio aggiungendo un *barriera*, o se si apportano modifiche alla progettazione di un'applicazione per rendere le informazioni riservate inaccessibile ai speculativa esecuzione.
+Le vulnerabilità del canale laterale per l'esecuzione speculativa possono essere mitigate apportando modifiche al codice sorgente. Queste modifiche possono implicare la mitigazione di istanze specifiche di una vulnerabilità, ad esempio l'aggiunta di una *barriera speculativa*o la modifica della progettazione di un'applicazione per rendere le informazioni riservate inaccessibili all'esecuzione speculativa.
 
-### <a name="speculation-barrier-via-manual-instrumentation"></a>Barriera tramite strumentazione manuale
+### <a name="speculation-barrier-via-manual-instrumentation"></a>Ostacolo alla speculazione tramite strumentazione manuale
 
-Oggetto *barriera* è possibile inserire manualmente da uno sviluppatore per impedire l'esecuzione speculativa proseguimento lungo un tracciato non architetturale. Ad esempio, uno sviluppatore può inserire una barriera prima di un modello di codifica pericoloso nel corpo di un blocco condizionale, sia all'inizio del blocco (dopo la diramazione condizionale) o prima del primo caricamento che costituiscono un problema. Sarà in grado di soddisfare un ramo condizionale dell'esecuzione del codice dannoso in un percorso UNC non architetturale serializzando l'esecuzione. La sequenza di barriera di speculazione differisce dall'architettura hardware, come descritto nella tabella seguente:
+Una *barriera di speculazione* può essere inserita manualmente da uno sviluppatore per evitare che l'esecuzione speculativa prosegue in un percorso non architettonico. Ad esempio, uno sviluppatore può inserire una barriera speculativa prima di un modello di codifica pericoloso nel corpo di un blocco condizionale, all'inizio del blocco (dopo il ramo condizionale) o prima del primo carico di interesse. In questo modo si impedisce a un ramo condizionale di prevedere l'esecuzione del codice pericoloso in un percorso non architettonico serializzando l'esecuzione. La sequenza di barriera speculativa è diversa dall'architettura hardware descritta nella tabella seguente:
 
-|Architettura|Barriera intrinseco per CVE 2017-5753|Barriera intrinseco per CVE-2018-3639|
+|Architecture|Intrinseco della barriera speculativa per CVE-2017-5753|Intrinseco della barriera speculativa per CVE-2018-3639|
 |----------------|----------------|----------------|
-|x86/x64|_mm_lfence()|_mm_lfence()|
-|ARM|Attualmente non disponibile|__dsb(0)|
-|ARM64|Attualmente non disponibile|__dsb(0)|
+|x86/x64|_mm_lfence ()|_mm_lfence ()|
+|ARM|Attualmente non disponibile|__dsb (0)|
+|ARM64|Attualmente non disponibile|__dsb (0)|
 
-Ad esempio, il modello di codice seguente può essere ridotta mediante l'utilizzo di `_mm_lfence` intrinseco come illustrato di seguito.
+Ad esempio, il modello di codice seguente può essere mitigato usando il `_mm_lfence` intrinseco, come illustrato di seguito.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -329,15 +329,15 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barriera tramite strumentazione in fase di compilazione
+### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barriera alla speculazione tramite strumentazione in fase di compilazione
 
-Microsoft C++ compilatore in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore automaticamente inserisce una barriera per un set limitato di modelli di codice potenzialmente vulnerabili correlati a CVE-2017-5753. La documentazione per il [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti. È importante notare che questo flag non copre tutti i modelli di scrittura di codice potenzialmente vulnerabili e di conseguenza gli sviluppatori non devono affidarsi a essa come una mitigazione completa per questa classe di vulnerabilità.
+Il compilatore Microsoft C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per l' `/Qspectre` opzione che inserisce automaticamente una barriera di speculazione per un set limitato di modelli di codifica potenzialmente vulnerabili correlati a CVE-2017-5753. La documentazione relativa al flag [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fornisce ulteriori informazioni sugli effetti e sull'utilizzo. È importante notare che questo flag non copre tutti i modelli di codifica potenzialmente vulnerabili e che tali sviluppatori non devono basarsi su di esso come mitigazione completa per questa classe di vulnerabilità.
 
-### <a name="masking-array-indices"></a>Gli indici di matrice di maschera
+### <a name="masking-array-indices"></a>Mascheramento degli indici di matrice
 
-In casi in cui un speculativo non compresi nell'intervallo caricare può verificarsi, l'indice della matrice possa essere limitata fortemente nel sia il percorso dell'architettura e non dell'architettura mediante l'aggiunta di logica per associare in modo esplicito l'indice della matrice. Ad esempio, se una matrice può essere allocata a una dimensione che è allineata a una potenza di due, quindi una maschera semplice può essere introdotti. Questo è illustrato nell'esempio riportato di seguito in cui si presuppone che `buffer_size` è allineato a una potenza di due. Ciò assicura che `untrusted_index` è sempre minore `buffer_size`, anche se si verifica di soddisfare un ramo condizionale e `untrusted_index` passato con un valore maggiore o uguale a `buffer_size`.
+Nei casi in cui è possibile che si verifichi un carico speculativo fuori limite, è possibile che l'indice della matrice sia fortemente vincolato sia al percorso architettonico che a quello non dell'architettura aggiungendo la logica per associare in modo esplicito l'indice della matrice. Se, ad esempio, una matrice può essere allocata a una dimensione allineata a una potenza di due, è possibile introdurre una maschera semplice. Questa procedura è illustrata nell'esempio seguente, in cui si presuppone che `buffer_size` sia allineata a una potenza di due. `untrusted_index`In questo modo si garantisce che sia sempre minore di `buffer_size` , anche se si verifica un errore di stima del ramo condizionale che `untrusted_index` è stato passato con un valore maggiore o uguale a `buffer_size` .
 
-Si noti che il mascheramento indice eseguito qui potrebbe essere soggetti a bypass store speculative in base al codice generato dal compilatore.
+Si noti che la maschera dell'indice eseguita qui potrebbe essere soggetta a un bypass di archivio speculativo a seconda del codice generato dal compilatore.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -354,9 +354,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="removing-sensitive-information-from-memory"></a>Rimozione di informazioni riservate dalla memoria
 
-Un'altra tecnica che consente di ridurre le vulnerabilità del canale sul lato di esecuzione speculativa consiste nel rimuovere informazioni riservate dalla memoria. Gli sviluppatori di software possono individuare le opportunità per effettuare il refactoring la loro applicazione in modo che le informazioni riservate non sono accessibile durante l'esecuzione speculativa. Questa operazione può essere eseguita effettuando il refactoring di progettazione di un'applicazione per isolare le informazioni riservate in processi separati. Ad esempio, un'applicazione web browser può tentare di isolare i dati associati a ogni origine web in processi separati, evitando così che un processo in grado di accedere tra le origini dati tramite l'esecuzione speculativa.
+Un'altra tecnica che può essere usata per attenuare le vulnerabilità del canale laterale per l'esecuzione speculativa consiste nel rimuovere le informazioni riservate dalla memoria. Gli sviluppatori di software possono cercare le opportunità di effettuare il refactoring dell'applicazione in modo che le informazioni riservate non siano accessibili durante l'esecuzione speculativa. Questa operazione può essere eseguita effettuando il refactoring della progettazione di un'applicazione per isolare le informazioni riservate in processi distinti. Ad esempio, un'applicazione Web browser può tentare di isolare i dati associati a ogni origine Web in processi distinti, impedendo in tal modo a un processo di accedere ai dati tra origini mediante un'esecuzione speculativa.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Materiale sussidiario per ridurre le vulnerabilità di esecuzione speculativa canale laterale](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
-[Mitigazione delle vulnerabilità di esecuzione speculativa side channel hardware](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)
+[Linee guida per attenuare le vulnerabilità del canale laterale per l'esecuzione speculativa](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
+[Attenuazione di vulnerabilità hardware del canale lato esecuzione speculativa](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

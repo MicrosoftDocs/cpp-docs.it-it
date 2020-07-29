@@ -3,32 +3,32 @@ title: Aggiunta di una proprietà al controllo (Esercitazione di ATL, parte 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: 288dc9f5af57c02639d15a9a971419a633cfc08d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c5f71880f780e793cd77eb5a7571d31de4a8d01a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219001"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Aggiunta di una proprietà al controllo (Esercitazione di ATL, parte 3)
 
-`IPolyCtl` è l'interfaccia che contiene le proprietà e i metodi personalizzati del controllo, a cui verrà aggiunta una proprietà.
+`IPolyCtl`è l'interfaccia che contiene le proprietà e i metodi personalizzati del controllo e si aggiungerà una proprietà.
 
 ### <a name="to-add-the-property-definitions-to-your-project"></a>Per aggiungere le definizioni di proprietà al progetto
 
-1. In **Visualizzazione classi**espandere il ramo `Polygon`.
+1. In **Visualizzazione classi**espandere il `Polygon` ramo.
 
-1. Fare clic con il pulsante destro del mouse su `IPolyCtl`.
+1. Fare clic con il pulsante destro del mouse `IPolyCtl` .
 
 1. Scegliere **Aggiungi**dal menu di scelta rapida e quindi fare clic su **Aggiungi proprietà**. Verrà visualizzata l' **Aggiunta guidata proprietà** .
 
 1. Digitare `Sides` come **nome della proprietà**.
 
-1. Nell'elenco a discesa del tipo di **Proprietà**selezionare `short`.
+1. Nell'elenco a discesa del tipo di **Proprietà**selezionare **`short`** .
 
 1. Fare clic su **OK** per completare l'aggiunta della proprietà.
 
-1. Da **Esplora soluzioni**aprire Polygon. idl e sostituire le righe seguenti alla fine dell'interfaccia `IPolyCtl : IDispatch`:
+1. Da **Esplora soluzioni**aprire Polygon. idl e sostituire le righe seguenti alla fine dell' `IPolyCtl : IDispatch` interfaccia:
 
     ```cpp
     short get_Sides();
@@ -42,7 +42,7 @@ ms.locfileid: "77127587"
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. Da **Esplora soluzioni**aprire PolyCtl. h e aggiungere le righe seguenti dopo la definizione di `m_clrFillColor`:
+1. Da **Esplora soluzioni**aprire PolyCtl. h e aggiungere le righe seguenti dopo la definizione di `m_clrFillColor` :
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
@@ -50,17 +50,17 @@ Sebbene ora siano disponibili funzioni di ossatura per impostare e recuperare la
 
 ### <a name="to-update-the-get-and-put-methods"></a>Per aggiornare i metodi get e put
 
-1. Impostare il valore predefinito di `m_nSides`. Rendere la forma predefinita un triangolo aggiungendo una riga al costruttore in PolyCtl. h:
+1. Impostare il valore predefinito di `m_nSides` . Rendere la forma predefinita un triangolo aggiungendo una riga al costruttore in PolyCtl. h:
 
     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-1. Implementare i metodi `Get` e `Put`. Le dichiarazioni di funzione `get_Sides` e `put_Sides` sono state aggiunte a PolyCtl. h. A questo punto, aggiungere il codice per `get_Sides` e `put_Sides` a PolyCtl. cpp con quanto segue:
+1. Implementare i `Get` `Put` metodi e. Le `get_Sides` `put_Sides` dichiarazioni di funzione e sono state aggiunte a PolyCtl. h. A questo punto aggiungere il codice per `get_Sides` e `put_Sides` a PolyCtl. cpp con quanto segue:
 
     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
-Il metodo `get_Sides` restituisce il valore corrente della proprietà `Sides` tramite il puntatore `pVal`. Nel metodo `put_Sides` il codice assicura che l'utente stia impostando la proprietà `Sides` su un valore accettabile. Il valore minimo deve essere 3 e, poiché viene usata una matrice di punti per ogni lato, 100 è un limite ragionevole per un valore massimo.
+Il `get_Sides` metodo restituisce il valore corrente della `Sides` proprietà tramite il `pVal` puntatore. Nel `put_Sides` metodo, il codice assicura che l'utente stia impostando la `Sides` proprietà su un valore accettabile. Il valore minimo deve essere 3 e, poiché viene usata una matrice di punti per ogni lato, 100 è un limite ragionevole per un valore massimo.
 
-A questo punto è disponibile una proprietà denominata `Sides`. Nel passaggio successivo verrà modificato il codice di disegno per usarlo.
+A questo punto è disponibile una proprietà denominata `Sides` . Nel passaggio successivo verrà modificato il codice di disegno per usarlo.
 
 [Tornare al passaggio 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; al [passaggio 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 

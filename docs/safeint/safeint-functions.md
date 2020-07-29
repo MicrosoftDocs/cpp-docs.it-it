@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334925"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219339"
 ---
 # <a name="safeint-functions"></a>Funzioni SafeInt
 
@@ -51,7 +51,7 @@ Ognuna di queste funzioni ha due tipi di modello: `T` e `U`. Ognuno di questi ti
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-Funzione                      | Description
+Funzione                      | Descrizione
 ----------------------------- | --------------------------------------------------------------
 [SafeAdd](#safeadd)           | Somma due numeri e protegge dall'overflow.
 [SafeCast](#safecast)         | Esegue il cast di un tipo di parametro in un altro tipo.
@@ -94,7 +94,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se non si verifica alcun errore, **false** se si verifica un errore.
+**`true`** Se non si verificano errori; **`false`** se si verifica un errore.
 
 ## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
@@ -118,7 +118,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se non si verifica alcun errore, **false** se si verifica un errore.
+**`true`** Se non si verificano errori; **`false`** se si verifica un errore.
 
 ## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
 
@@ -146,7 +146,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se non si verifica alcun errore, **false** se si verifica un errore.
+**`true`** Se non si verificano errori; **`false`** se si verifica un errore.
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
@@ -170,9 +170,9 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se *t* e *u* sono uguali, in caso contrario **false**.
+**`true`** Se *t* e *u* sono uguali; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il metodo migliora `==` perché `SafeEquals` consente di confrontare due tipi diversi di numeri.
 
@@ -198,9 +198,9 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se *t* è maggiore di *u*, in caso contrario **false**.
+**`true`** Se *t* è maggiore di *u*; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `SafeGreaterThan` estende l'operatore di confronto normale consentendo di confrontare due tipi diversi di numeri.
 
@@ -226,9 +226,9 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se *t* è maggiore o uguale a *u*, in caso contrario **false**.
+**`true`** Se *t* è maggiore o uguale a *u*; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `SafeGreaterThanEquals` migliora l'operatore di confronto standard perché consente di confrontare due tipi diversi di numeri.
 
@@ -254,9 +254,9 @@ in Secondo numero. Deve essere di tipo `U`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se *t* è minore di *u*, in caso contrario **false**.
+**`true`** Se *t* è minore di *u*; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo migliora l'operatore di confronto standard perché `SafeLessThan` consente di confrontare due tipi diversi di numeri.
 
@@ -282,9 +282,9 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se *t* è minore o uguale a *u*, in caso contrario **false**.
+**`true`** Se *t* è minore o uguale a *u*; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `SafeLessThanEquals` estende l'operatore di confronto normale consentendo di confrontare due tipi diversi di numeri.
 
@@ -314,7 +314,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se non si verifica alcun errore, **false** se si verifica un errore.
+**`true`** Se non si verificano errori; **`false`** se si verifica un errore.
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
@@ -342,7 +342,7 @@ inline bool SafeMultiply (
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se non si verificano errori, `false` se si verifica un errore.
+**`true`** Se non si verificano errori; **`false`** se si verifica un errore.
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
@@ -366,9 +366,9 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se *t* e *u* non sono uguali. in caso contrario, **false**.
+**`true`** Se *t* e *u* non sono uguali; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il metodo migliora `!=` perché `SafeNotEquals` consente di confrontare due tipi diversi di numeri.
 
@@ -398,4 +398,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se non si verifica alcun errore, **false** se si verifica un errore.
+**`true`** Se non si verificano errori; **`false`** se si verifica un errore.

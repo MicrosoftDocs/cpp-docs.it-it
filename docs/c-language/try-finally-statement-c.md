@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b800daa7689cef769ce3a3b070c957f18e8794c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349609"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213710"
 ---
 # <a name="try-finally-statement-c"></a>Istruzione try-finally (C)
 
@@ -22,9 +22,9 @@ L'istruzione `try-finally` è un'estensione Microsoft del linguaggio C che conse
 
 *try-finally-statement*: **__try**  *compound-statement*
 
-**__finally**  *compound-statement*
+**`__finally`**  *compound-statement*
 
-L'istruzione composta dopo la clausola `__try` è la sezione protetta. L'istruzione composta dopo la clausola `__finally` è il gestore terminazioni. Il gestore specifica un set di azioni che vengono eseguite quando la sezione protetta viene terminata, indipendentemente dal fatto che tale terminazione avvenga tramite un'eccezione (terminazione anomala) o un passaggio standard (terminazione normale).
+L'istruzione composta dopo la clausola `__try` è la sezione protetta. L'istruzione composta dopo la **`__finally`** clausola è il gestore di terminazione. Il gestore specifica un set di azioni che vengono eseguite quando la sezione protetta viene terminata, indipendentemente dal fatto che tale terminazione avvenga tramite un'eccezione (terminazione anomala) o un passaggio standard (terminazione normale).
 
 Il controllo raggiunge un'istruzione `__try` tramite l'esecuzione sequenziale semplice (passaggio). Quando il controllo entra nell'istruzione `__try`, il relativo gestore associato diventa attivo. L'esecuzione procede nel modo seguente:
 
@@ -32,11 +32,11 @@ Il controllo raggiunge un'istruzione `__try` tramite l'esecuzione sequenziale se
 
 1. Il gestore terminazioni viene richiamato.
 
-1. Al termine dell'esecuzione del gestore terminazioni, l'esecuzione continua dopo l'istruzione `__finally`. Indipendentemente dal modo in cui la sezione protetta viene terminata (ad esempio tramite un'istruzione `goto` all'esterno del corpo protetto o un'istruzione `return`), il gestore terminazioni viene eseguito prima che il flusso di controllo venga spostato all'esterno della sezione protetta.
+1. Al termine del gestore terminazioni, l'esecuzione continua dopo l' **`__finally`** istruzione. Indipendentemente dal modo in cui termina la sezione protetta, ad esempio tramite un' **`goto`** istruzione all'esterno del corpo sorvegliato o tramite un' **`return`** istruzione, il gestore terminazioni viene eseguito prima che il flusso di controllo venga spostato all'esterno della sezione protetta.
 
-La parola chiave `__leave` è valida all'interno di un blocco di istruzioni `try-finally`. L'effetto di `__leave` è il passaggio alla fine del blocco `try-finally`. Il gestore terminazioni viene eseguito immediatamente. Sebbene per ottenere lo stesso risultato possa essere utilizzata un'istruzione `goto`, un'istruzione `goto` causa la rimozione dello stack. L'istruzione `__leave` è più efficiente perché non comporta la rimozione dello stack.
+Il ** `__leave** keyword is valid within a ` ` statement block. The effect of **` __leave try-finally** consiste nel passare alla fine del `try-finally` blocco. Il gestore terminazioni viene eseguito immediatamente. Sebbene sia **`goto`** possibile utilizzare un'istruzione per ottenere lo stesso risultato, un' **`goto`** istruzione causa la rimozione dello stack. L'istruzione **' __leave** è più efficiente perché non comporta la rimozione dello stack.
 
-L'uscita da un'istruzione `try-finally` mediante una funzione `return` o una funzione di runtime `longjmp` viene considerata una terminazione anomala. Il passaggio a un'istruzione `__try` non è un'operazione valida, mentre uscire da un'istruzione è consentito. Devono essere eseguite tutte le istruzioni `__finally` attive tra il punto di origine e il punto di destinazione. Questo procedimento è denominato "rimozione locale."
+L'uscita da un' `try-finally` istruzione mediante un' **`return`** istruzione o la `longjmp` funzione di runtime viene considerata una terminazione anomala. Il passaggio a un'istruzione `__try` non è un'operazione valida, mentre uscire da un'istruzione è consentito. **`__finally`** Devono essere eseguite tutte le istruzioni attive tra il punto di partenza e la destinazione. Questo procedimento è denominato "rimozione locale."
 
 Il gestore terminazioni non viene chiamato se un processo viene terminato durante l'esecuzione di un'istruzione `try-finally`.
 

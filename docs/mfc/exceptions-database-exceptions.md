@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403725"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217961"
 ---
 # <a name="exceptions-database-exceptions"></a>Eccezioni: eccezioni di database
 
@@ -54,11 +54,11 @@ Ulteriori informazioni sugli errori DAO, il tipo di oggetto errore DAO e la racc
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>Esempio di gestione delle eccezioni del database
 
-Nell'esempio seguente viene effettuato un tentativo di costruire un oggetto derivato da [CRecordset](reference/crecordset-class.md)nell'heap con l'operatore **New** , quindi viene aperto il recordset (per un'origine dati ODBC). Per un esempio simile per le classi DAO, vedere "esempio di eccezione DAO" riportata di seguito.
+Nell'esempio seguente viene effettuato un tentativo di costruire un oggetto derivato da [CRecordset](reference/crecordset-class.md)nell'heap con l' **`new`** operatore, quindi viene aperto il recordset (per un'origine dati ODBC). Per un esempio simile per le classi DAO, vedere "esempio di eccezione DAO" riportata di seguito.
 
 ### <a name="odbc-exception-example"></a>Esempio di eccezione ODBC
 
-La funzione membro [Open](reference/crecordset-class.md#open) potrebbe generare un'eccezione (di tipo [CDBException](reference/cdbexception-class.md) per le classi ODBC), in modo che la chiamata venga racchiusa tra parentesi quadre `Open` con un blocco **try** . Il blocco **catch** successivo rileverà un oggetto `CDBException` . È possibile esaminare l'oggetto eccezione, denominato `e` , ma in questo caso è sufficiente capire che il tentativo di creare un recordset non è riuscito. Il blocco **catch** Visualizza una finestra di messaggio e si pulisce eliminando l'oggetto recordset.
+La funzione membro [Open](reference/crecordset-class.md#open) potrebbe generare un'eccezione (di tipo [CDBException](reference/cdbexception-class.md) per le classi ODBC), pertanto questo codice racchiude la `Open` chiamata con un **`try`** blocco. Il blocco successivo rileverà **`catch`** un oggetto `CDBException` . È possibile esaminare l'oggetto eccezione, denominato `e` , ma in questo caso è sufficiente capire che il tentativo di creare un recordset non è riuscito. Il **`catch`** blocco Visualizza una finestra di messaggio e si pulisce eliminando l'oggetto recordset.
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

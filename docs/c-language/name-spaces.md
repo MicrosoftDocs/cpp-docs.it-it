@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28036219464e96ae20733473dedb4fab63f6de38
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325767"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218819"
 ---
 # <a name="name-spaces"></a>Spazi dei nomi
 
@@ -26,11 +26,11 @@ Il compilatore ha configurato gli "spazi dei nomi" per distinguere tra gli ident
 
 In questo elenco vengono descritti gli spazi dei nomi utilizzati nel linguaggio C.
 
-Le etichette di istruzione denominate fanno parte delle istruzioni. Le definizioni di etichette di istruzione vengono sempre seguite dai due punti, ma non fanno parte delle etichette **case**. Le etichette di istruzione vengono sempre usate immediatamente dopo la parola chiave **goto**. Le etichette di istruzione non devono essere differenti da altri nomi o dai nomi delle etichette di altre funzioni.
+Le etichette di istruzione denominate fanno parte delle istruzioni. Le definizioni delle etichette di istruzione sono sempre seguite da due punti, ma non fanno parte delle **`case`** etichette. Gli utilizzi delle etichette di istruzione seguono sempre immediatamente la parola chiave **`goto`** . Le etichette di istruzione non devono essere differenti da altri nomi o dai nomi delle etichette di altre funzioni.
 
-Tag di struttura, unione ed enumerazione - Questi tag fanno parte degli identificatori di tipo struttura, unione ed enumerazione e, se presenti, seguono sempre immediatamente le parole riservate **struct**, **union** o **enum**. I nomi di tag devono essere differenti da tutti gli altri tag della struttura, di enumerazione o di unione con la stessa visibilità.
+Tag di struttura, Unione ed enumerazione questi tag fanno parte degli identificatori di tipo struttura, Unione ed enumerazione e, se presenti, seguono sempre immediatamente le parole riservate **`struct`** , **`union`** o **`enum`** . I nomi di tag devono essere differenti da tutti gli altri tag della struttura, di enumerazione o di unione con la stessa visibilità.
 
-Membri di strutture o unioni - I nomi dei membri vengono allocati negli spazi dei nomi associati a ciascun tipo di unione e struttura. Pertanto, lo stesso identificatore può essere contemporaneamente il nome di un componente in un numero indefinito di strutture o unioni. Le definizioni dei nomi di componenti si verificano sempre negli identificatori del tipo di unione o struttura. Gli utilizzi dei nomi dei componenti seguono sempre immediatamente gli operatori di selezione**->** dei membri **(e).** Il nome di un membro deve essere univoco nella struttura o unione, ma non deve essere diverso da altri nomi nel programma, inclusi i nomi dei membri di strutture e unioni differenti o il nome della struttura stessa.
+Membri di strutture o unioni - I nomi dei membri vengono allocati negli spazi dei nomi associati a ciascun tipo di unione e struttura. Pertanto, lo stesso identificatore può essere contemporaneamente il nome di un componente in un numero indefinito di strutture o unioni. Le definizioni dei nomi di componenti si verificano sempre negli identificatori del tipo di unione o struttura. Gli utilizzi dei nomi dei componenti seguono sempre immediatamente gli operatori di selezione dei membri ( **->** e). **.** Il nome di un membro deve essere univoco nella struttura o unione, ma non deve essere diverso da altri nomi nel programma, inclusi i nomi dei membri di strutture e unioni differenti o il nome della struttura stessa.
 
 Identificatori comuni - Tutti gli altri nomi rientrano in uno spazio dei nomi che include le variabili, le funzioni (inclusi i parametri formali e le variabili locali) e le costanti di enumerazione. I nomi degli identificatori possiedono una visibilità Nested, pertanto è possibile ridefinirli all'interno di blocchi.
 
@@ -46,7 +46,7 @@ struct student {
    } student;
 ```
 
-Quando viene visualizzato `student` dopo la parola chiave **struct**, il compilatore lo riconosce come un tag della struttura. Quando `student` viene visualizzato dopo un operatore di selezione dei**->** membri (o **.**), il nome fa riferimento al membro della struttura. In altri contesti, `student` fa riferimento alla variabile di struttura. Tuttavia, l'overload dello spazio dei nomi di tag non è consigliato poiché rende poco chiaro il significato.
+Quando `student` viene visualizzato dopo la **`struct`** parola chiave, il compilatore lo riconosce come un tag della struttura. Quando `student` viene visualizzato dopo un operatore di selezione dei membri ( **->** o **.**), il nome fa riferimento al membro della struttura. In altri contesti, `student` fa riferimento alla variabile di struttura. Tuttavia, l'overload dello spazio dei nomi di tag non è consigliato poiché rende poco chiaro il significato.
 
 ## <a name="see-also"></a>Vedere anche
 

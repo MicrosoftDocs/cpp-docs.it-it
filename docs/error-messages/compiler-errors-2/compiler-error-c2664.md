@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221120"
 ---
 # <a name="compiler-error-c2664"></a>Errore del compilatore C2664
 
 'function': impossibile convertire l'argomento n da 'type1' a 'type2'
 
-Questo problema di conversione dei parametri può verificarsi quando si crea un'istanza di una classe e si tenta una conversione implicita su un costruttore contrassegnato con la parola chiave `explicit`. Per ulteriori informazioni sulle conversioni esplicite, vedere [conversioni di tipi definiti dall'utente](../../cpp/user-defined-type-conversions-cpp.md).
+Questo problema di conversione dei parametri può verificarsi se viene creata un'istanza di una classe e viene eseguito un tentativo di conversione implicita su un costruttore contrassegnato con la **`explicit`** parola chiave. Per ulteriori informazioni sulle conversioni esplicite, vedere [conversioni di tipi definiti dall'utente](../../cpp/user-defined-type-conversions-cpp.md).
 
-Se un oggetto temporaneo viene passato a una funzione che accetta un riferimento a un oggetto come un parametro, tale riferimento deve essere di tipo `const`.
+Se un oggetto temporaneo viene passato a una funzione che accetta un riferimento a un oggetto come parametro, il riferimento deve essere un **`const`** riferimento.
 
 Se la funzione viene passata a un parametro che non è del tipo previsto dalla funzione, viene creato un oggetto temporaneo mediante il costruttore appropriato. Questo oggetto temporaneo viene quindi passato alla funzione. In questo caso, l'oggetto temporaneo viene utilizzato per inizializzare il riferimento. Nelle versioni precedenti del linguaggio era possibile inizializzare tutti i riferimenti mediante oggetti temporanei.
 
@@ -31,7 +31,7 @@ Per correggere C2664,
 
 L'errore C2664 può inoltre verificarsi se una classe nasconde un membro in una delle relative classi base.
 
-Per altre informazioni, vedere [procedura: convertire System:: String in wchar_t * o char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Per altre informazioni, vedere [procedura: convertire System:: String in wchar_t * o char \* ](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Esempio
 
@@ -119,7 +119,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Per la compilazione vengono imposti i requisiti standard C++ per l'applicazione di `const`. In questo esempio viene generato l'errore C2664:
+Il compilatore impone i requisiti standard C++ per l'applicazione di **`const`** . In questo esempio viene generato l'errore C2664:
 
 ```cpp
 // C2664d.cpp
@@ -232,7 +232,7 @@ library myproj1 {
 }
 ```
 
-L'errore C2664 viene generato anche quando si usa `wchar_t` per la conversione del codice da Visual C++ 6.0 a versioni successive. In Visual C++ 6.0 e versioni precedenti il tipo `wchar_t` è `typedef` per `unsigned short`, pertanto è implicitamente convertibile in quel tipo. Dopo Visual C++ 6.0, `wchar_t` è il tipo predefinito, come specificato nello standard C++, pertanto non è più implicitamente convertibile in `unsigned short`. Vedere [/Zc: wchar_t (wchar_t è di tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2664 viene generato anche tramite **`wchar_t`** quando si porta il codice da Visual C++ 6,0 a versioni successive. In Visual C++ 6,0 e versioni precedenti, **`wchar_t`** era un **`typedef`** per **`unsigned short`** ed era quindi convertibile in modo implicito in tale tipo. Dopo Visual C++ 6,0, **`wchar_t`** è il proprio tipo incorporato, come specificato nello standard C++, e non è più convertibile in modo implicito in **`unsigned short`** . Vedere [/Zc: wchar_t (wchar_t è di tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="example"></a>Esempio
 

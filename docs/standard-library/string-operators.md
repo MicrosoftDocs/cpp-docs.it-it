@@ -20,22 +20,22 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: fef2eb784eca9c9eabbdcd727b051d5c2a4ccfd2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376643"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217389"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
 ||||
 |-|-|-|
-|[operatore!](#op_neq)|[Operatore&gt;](#op_gt)|[Operatore&gt;&gt;](#op_gt_gt)|
-|[Operatore&gt;=](#op_gt_eq)|[Operatore&lt;](#op_lt)|[Operatore&lt;&lt;](#op_lt_lt)|
-|[Operatore&lt;=](#op_lt_eq)|[operatore .](#op_add)|[operatore di comando](#op_eq_eq)|
+|[operatore! =](#op_neq)|[operatore&gt;](#op_gt)|[operatore&gt;&gt;](#op_gt_gt)|
+|[operatore&gt;=](#op_gt_eq)|[operatore&lt;](#op_lt)|[operatore&lt;&lt;](#op_lt_lt)|
+|[operatore&lt;=](#op_lt_eq)|[operatore +](#op_add)|[operatore = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_add"></a>operatore .
+## <a name="operator"></a><a name="op_add"></a>operatore +
 
 Concatena due oggetti stringa.
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
-*va bene*\
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -115,7 +115,7 @@ La stringa che rappresenta la concatenazione delle stringhe di input.
 
 ### <a name="remarks"></a>Osservazioni
 
-Le funzioni `operator+` ogni overload per concatenare due oggetti del modello di classe [basic_string Class](../standard-library/basic-string-class.md). Tutti ritornano `basic_string< CharType, Traits, Allocator>(Left).append(right)`efficacemente . Per ulteriori informazioni, vedere [append](../standard-library/basic-string-class.md#append).
+Le funzioni di ogni overload `operator+` per concatenare due oggetti della classe modello [basic_string classe](../standard-library/basic-string-class.md). Tutti effettivamente restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)` . Per ulteriori informazioni, vedere [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Esempio
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>operatore!
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto stringa a sinistra dell'operatore non è uguale all'oggetto stringa a destra.
 
@@ -192,15 +192,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*va bene*\
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto stringa a sinistra dell'operatore non è uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
+**`true`** Se l'oggetto stringa a sinistra dell'operatore non è lessicografico uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore di comando
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto stringa a sinistra dell'operatore è uguale all'oggetto stringa a destra.
 
@@ -283,15 +283,15 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*va bene*\
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto stringa a sinistra dell'operatore è uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
+**`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto stringa a sinistra dell'operatore è minore dell'oggetto stringa a destra.
 
@@ -374,15 +374,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*va bene*\
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto stringa a sinistra dell'operatore è minore, dal punto di vista lessicografico, dell'oggetto stringa a destra; in caso contrario, **false**.
+**`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico minore dell'oggetto stringa a destra; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto stringa a sinistra dell'operatore è minore o uguale all'oggetto stringa a destra.
 
@@ -470,15 +470,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*va bene*\
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto stringa a sinistra dell'operatore è minore o uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
+**`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico minore o uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operatore&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operatore&lt;&lt;
 
 Funzione modello che scrive una stringa nel flusso di output.
 
@@ -575,9 +575,9 @@ Scrive il valore della stringa specificata nel flusso di output *_Ostr*.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione template esegue l'overload **dell'operatore<<** per inserire un *oggetto str* del modello di classe [basic_string](../standard-library/basic-string-class.md) nel flusso * \_Ostr*. La funzione `_Ostr.write( str.c_str, str.size )`restituisce in modo efficace .
+La funzione di modello consente di eseguire l'overload dell' **operatore<<** per inserire un oggetto *Str* della classe template [basic_string](../standard-library/basic-string-class.md) nel flusso * \_ OSTR*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )` .
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
 
 Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore dell'oggetto stringa a destra.
 
@@ -600,15 +600,15 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*va bene*\
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto stringa a sinistra dell'operatore è maggiore, dal punto di vista lessicografico, dell'oggetto stringa a destra; in caso contrario, **false**.
+**`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico maggiore dell'oggetto stringa a destra; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto stringa a sinistra dell'operatore è maggiore o uguale all'oggetto stringa a destra.
 
@@ -703,15 +703,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*va bene*\
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto stringa a sinistra dell'operatore è maggiore o uguale, dal punto di vista lessicografico, all'oggetto stringa a destra; in caso contrario, **false**.
+**`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico maggiore o uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Operatore&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>operatore&gt;&gt;
 
 Funzione modello che legge una stringa dal flusso di input.
 
@@ -799,18 +799,18 @@ basic_istream<CharType, Traits>& operator>>(
 *_Istr*\
 Flusso di input usato per estrarre la sequenza
 
-*va bene*\
+*Ok*\
 Stringa da estrarre dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
-Legge il valore della stringa specificata *dall_Istr* e lo restituisce a *destra.*
+Legge il valore della stringa specificata da *_Istr* e lo restituisce a *destra*.
 
 ### <a name="remarks"></a>Osservazioni
 
 L'operatore ignora gli spazi iniziali a meno che il flag `skipws` non sia impostato. Legge tutti i caratteri successivi fino a quando incontra uno spazio vuoto o arriva alla fine del file.
 
-La funzione modello esegue l'overload **dell'operatore>>** per sostituire la sequenza controllata da *right* con una sequenza di elementi estratti dal flusso *_Istr*. L'estrazione termina:
+La funzione di modello consente di eseguire l'overload dell' **operatore>>** per sostituire la sequenza controllata da *right* con una sequenza di elementi estratti dal flusso *_Istr*. L'estrazione termina:
 
 - Alla fine del file.
 
@@ -818,9 +818,9 @@ La funzione modello esegue l'overload **dell'operatore>>** per sostituire la seq
 
 Dopo che la funzione ha estratto elementi `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size).
 
-- Dopo che la funzione ha estratto un elemento *ch* per cui [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) è true, nel qual caso il carattere viene reinserito.
+- Dopo che la funzione estrae un elemento *ch* per il quale [use_facet](../standard-library/basic-filebuf-class.md#open) <  **CType** \< **CharType**> > ( `getloc` ). **is**( **CType** \< **CharType**> :: **Space**, *ch*) è true, nel qual caso viene restituito il carattere.
 
-Se la funzione non estrae`ios_base::failbit`alcun elemento, chiama [setstate](../standard-library/basic-ios-class.md#setstate)( ). In tutti i casi, chiama **istr**. **width**(0) e restituisce \* **this**.
+Se la funzione non estrae alcun elemento, chiama [sestate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit` ). In tutti i casi, chiama **istr**. **Width**(0) e restituisce \* **`this`** .
 
 ### <a name="example"></a>Esempio
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>di stringhe](../standard-library/string.md)
+[\<string>](../standard-library/string.md)

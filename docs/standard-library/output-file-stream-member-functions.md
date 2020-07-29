@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: 8c23008d0c46a532f11e89442328ed25cc203077
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453061"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217675"
 ---
 # <a name="output-file-stream-member-functions"></a>Funzioni membro del flussi di file di output
 
@@ -17,9 +17,9 @@ Le funzioni membro del flusso di output sono di tre tipi: quelle equivalenti a m
 
 ## <a name="the-open-function-for-output-streams"></a>Funzione open per flussi di output
 
-Per usare un flusso di file di output ([ofstream](../standard-library/basic-ofstream-class.md)), è necessario associare tale flusso a un file su disco specifico nel costruttore `open` o nella funzione. Se si usa la `open` funzione, è possibile riutilizzare lo stesso oggetto flusso con una serie di file. In entrambi i casi, gli argomenti che descrivono i file sono gli stessi.
+Per usare un flusso di file di output ([ofstream](../standard-library/basic-ofstream-class.md)), è necessario associare tale flusso a un file su disco specifico nel costruttore o nella `open` funzione. Se si usa la `open` funzione, è possibile riutilizzare lo stesso oggetto flusso con una serie di file. In entrambi i casi, gli argomenti che descrivono i file sono gli stessi.
 
-Quando si apre il file associato a un flusso di output, in genere si `open_mode` specifica un flag. È possibile combinare questi flag, definiti come enumeratori nella classe `ios`, con l'operatore Bitwise-OR ( &#124; ). Per un elenco di enumeratori, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+Quando si apre il file associato a un flusso di output, in genere si specifica un `open_mode` flag. È possibile combinare questi flag, definiti come enumeratori nella classe `ios`, con l'operatore Bitwise-OR ( &#124; ). Per un elenco di enumeratori, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 Tre situazioni di flusso di output comuni impiegano opzioni di modalità:
 
@@ -86,7 +86,7 @@ int main( )
 }
 ```
 
-La `write` funzione non si arresta quando raggiunge un carattere null, quindi viene scritta la struttura di classe completa. La funzione accetta due argomenti: un puntatore **char** e un conteggio di caratteri da scrivere. Si noti il cast obbligatorio a **char** <strong>\*</strong> prima dell'indirizzo dell'oggetto struttura.
+La `write` funzione non si arresta quando raggiunge un carattere null, quindi viene scritta la struttura di classe completa. La funzione accetta due argomenti: un **`char`** puntatore e un conteggio di caratteri da scrivere. Si noti il cast richiesto a **`char`** <strong>\*</strong> prima dell'indirizzo dell'oggetto struttura.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Funzioni seekp e tellp
 
@@ -96,34 +96,34 @@ Un flusso di file di output mantiene un puntatore interno che punta alla posizio
 
 La `close` funzione membro chiude il file su disco associato a un flusso di file di output. Per completare tutto l'output del disco, è necessario chiudere il file. Se necessario, il `ofstream` distruttore chiude il file, ma è possibile usare la `close` funzione se è necessario aprire un altro file per lo stesso oggetto flusso.
 
-Il distruttore del flusso di output chiude automaticamente il file di un flusso solo se il costruttore `open` o la funzione membro ha aperto il file. Se si passa il costruttore a un descrittore di file per un file già aperto `attach` o si utilizza la funzione membro, è necessario chiudere il file in modo esplicito.
+Il distruttore del flusso di output chiude automaticamente il file di un flusso solo se il costruttore o la `open` funzione membro ha aperto il file. Se si passa il costruttore a un descrittore di file per un file già aperto o si utilizza la `attach` funzione membro, è necessario chiudere il file in modo esplicito.
 
-## <a name="vclrferrorprocessingfunctionsanchor10"></a> Funzioni per l'elaborazione degli errori
+## <a name="error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Funzioni per l'elaborazione degli errori
 
 Usare queste funzioni membro per verificare gli errori durante la scrittura in un flusso:
 
 |Funzione|Valore restituito|
 |--------------|------------------|
-|[bad](basic-ios-class.md#bad)|Restituisce **true** se è presente un errore irreversibile.|
-|[fail](basic-ios-class.md#fail)|Restituisce **true** se è presente un errore irreversibile o una condizione "prevista", ad esempio un errore di conversione, o se è impossibile trovare il file. L'elaborazione può spesso riprendersi dopo `clear` una chiamata a con un argomento zero.|
-|[good](basic-ios-class.md#good)|Restituisce **true** se non è presente alcuna condizione di errore (errore irreversibile o altro errore) e non è impostato il flag di fine file.|
-|[eof](basic-ios-class.md#eof)|Restituisce **true** in caso di condizione di fine file.|
-|[clear](basic-ios-class.md#clear)|Imposta lo stato di errore interno. Se chiamato con gli argomenti predefiniti, cancella tutti i bit di errore.|
+|[non valido](basic-ios-class.md#bad)|Restituisce **`true`** se si verifica un errore irreversibile.|
+|[esito negativo](basic-ios-class.md#fail)|Restituisce se si verifica un **`true`** errore irreversibile o una condizione "prevista", ad esempio un errore di conversione, oppure se il file non viene trovato. L'elaborazione può spesso riprendersi dopo una chiamata a `clear` con un argomento zero.|
+|[buona](basic-ios-class.md#good)|Restituisce **`true`** se non è presente alcuna condizione di errore (irreversibile o diversa) e il flag di fine del file non è impostato.|
+|[EOF](basic-ios-class.md#eof)|Restituisce **`true`** la condizione di fine del file.|
+|[deselezionare](basic-ios-class.md#clear)|Imposta lo stato di errore interno. Se chiamato con gli argomenti predefiniti, cancella tutti i bit di errore.|
 |rdstate (Basic-iOS-Class. MD # rdstate|Restituisce lo stato di errore corrente.|
 
-L'operatore **!** viene eseguito l'overload dell'operatore per eseguire la stessa funzione della `fail` funzione. Pertanto, l'espressione:
+Il **.** viene eseguito l'overload dell'operatore per eseguire la stessa funzione della `fail` funzione. Pertanto, l'espressione:
 
 ```cpp
 if(!cout)...
 ```
 
-equivale a:
+Equivale a:
 
 ```cpp
 if(cout.fail())...
 ```
 
-L'operatore **void\*()** viene sottoposto a overload per essere l'opposto dell'operatore **!** ; pertanto, l'espressione:
+L'operatore **void\*()** viene sottoposto a overload per essere l'opposto dell'operatore **!**; pertanto, l'espressione:
 
 ```cpp
 if(cout)...
@@ -135,7 +135,7 @@ if(cout)...
 if(!cout.fail())...
 ```
 
-L' **operatore\*void ()** non è equivalente a `good` perché non verifica la fine del file.
+L'operatore **void \* ()** non è equivalente a `good` perché non verifica la fine del file.
 
 ## <a name="see-also"></a>Vedere anche
 

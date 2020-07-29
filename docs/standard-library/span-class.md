@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813509"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217454"
 ---
 # <a name="span-class-c-standard-library"></a>classe Span (libreria standard C++)
 
@@ -86,8 +86,8 @@ class span;
 
 | **Definizioni dei tipi** | **Descrizione** |
 |-|-|
-| [const_pointer](#pointer) | Tipo di un puntatore a un `const` elemento. |
-| [const_reference](#reference) | Tipo di un riferimento a un `const` elemento. |
+| [const_pointer](#pointer) | Tipo di un puntatore a un **`const`** elemento. |
+| [const_reference](#reference) | Tipo di un riferimento a un **`const`** elemento. |
 | [difference_type](#difference_type) | Tipo di una distanza Signed tra due elementi. |
 | [element_type](#element_type) | Tipo di un elemento span. |
 | [iteratore](#iterator) | Tipo di un iteratore per un intervallo. |
@@ -95,9 +95,9 @@ class span;
 | [reference](#reference) | Tipo di un riferimento a un elemento. |
 | [reverse_iterator](#reverse_iterator) | Tipo di un iteratore inverso per un intervallo. |
 | [size_type](#size_type) | Tipo per il risultato della distanza senza segno tra due elementi nell'intervallo. |
-| [value_type](#value_type) | Tipo di un elemento, senza `const` qualifiche o `volatile` . |
+| [value_type](#value_type) | Tipo di un elemento, senza **`const`** qualifiche o **`volatile`** . |
 | **Costruttori** | **Descrizione** |
-|[intervallo](#span)| Costruisce un oggetto `span` .|
+|[intervallo](#span)| Creare un oggetto `span`.|
 | **Supporto degli iteratori** | **Descrizione** |
 |[iniziare](#begin) | Ottiene un iteratore che punta al primo elemento nell'intervallo.|
 |[fine](#end) | Ottiene un iteratore che punta alla fine dell'intervallo. |
@@ -306,7 +306,7 @@ constexpr bool empty() const noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce `true` se `this->size() == 0` . In caso contrario, `false`.
+Restituisce **`true`** se `this->size() == 0` . In caso contrario **`false`** ,.
 
 ### <a name="example"></a>Esempio
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-Tipi di puntatore e `const` puntatore a un elemento span.
+Tipi di puntatore e **`const`** puntatore a un elemento span.
 
 ```cpp
 using pointer = T*;
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-Tipi per un riferimento e un `const` riferimento a un elemento span.
+Tipi per un riferimento e un **`const`** riferimento a un elemento span.
 
 ```cpp
 using reference = T&;
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-Tipo dell'elemento nell'intervallo, senza le `const` `volatile` qualifiche o.
+Tipo dell'elemento nell'intervallo, senza le **`const`** **`volatile`** qualifiche o.
 
 ```cpp
 using value_type = std::remove_cv_t<T>;

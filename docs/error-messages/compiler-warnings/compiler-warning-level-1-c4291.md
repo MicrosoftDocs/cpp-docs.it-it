@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: c1972236e30be4e6ca738b606b00398f5c7860e0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e45856702eef7f24595d10b81f39047d8f9a08b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754863"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221003"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>Avviso del compilatore (livello 1) C4291
 
-'dichiarazione': nessun operatore corrispondente delete trovato; la memoria non verrà liberata se l'inizializzazione genera un'eccezione
+' declaration ': non è stato trovato alcun operatore delete corrispondente. la memoria non verrà liberata se l'inizializzazione genera un'eccezione
 
 Viene utilizzato un [nuovo](../../cpp/new-operator-cpp.md) posizionamento per il quale non è presente alcuna [eliminazione](../../cpp/delete-operator-cpp.md)di posizionamento.
 
-Quando la memoria viene allocata per un oggetto con operatore **new**, viene chiamato il costruttore dell'oggetto. Se il costruttore genera un'eccezione, qualsiasi memoria allocata per l'oggetto deve essere deallocata. Questa operazione non può avvenire a meno che non esista una funzione operator **delete** che corrisponda all'operatore **new**.
+Quando viene allocata memoria per un oggetto con operatore **`new`** , viene chiamato il costruttore dell'oggetto. Se il costruttore genera un'eccezione, è necessario deallocare la memoria allocata per l'oggetto. Questa operazione non può essere eseguita a meno **`delete`** che non esista una funzione dell'operatore corrispondente all'operatore **`new`** .
 
-Se si utilizza l'operatore **new** senza argomenti aggiuntivi e si esegue la compilazione con le opzioni [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md)o /EHa per abilitare la gestione delle eccezioni, il compilatore genererà il codice per chiamare l'operatore **delete** se il costruttore genera un'eccezione.
+Se si usa l'operatore **`new`** senza argomenti aggiuntivi e si compila con le opzioni [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md)o/EHA per abilitare la gestione delle eccezioni, il compilatore genererà il codice per chiamare operator **`delete`** se il costruttore genera un'eccezione.
 
-Se si utilizza la forma di posizionamento dell'operatore **new** (il modulo con argomenti oltre alla dimensione dell'allocazione) e il costruttore dell'oggetto genera un'eccezione, il compilatore genererà comunque il codice per chiamare operator **delete**; ma lo farà solo se esiste una forma di posizionamento di operator **delete** corrispondente alla forma di posizionamento dell'operatore **new** che ha allocato la memoria. Ad esempio:
+Se si usa il formato di posizionamento dell' **`new`** operatore (il form con gli argomenti oltre alla dimensione dell'allocazione) e il costruttore dell'oggetto genera un'eccezione, il compilatore genererà comunque il codice per chiamare operator, **`delete`** ma solo se esiste una forma di posizione dell'operatore **`delete`** che corrisponde al formato di posizionamento dell'operatore che ha **`new`** allocato la memoria. Ad esempio:
 
 ```cpp
 // C4291.cpp
@@ -74,7 +74,7 @@ int main(void)
 }
 ```
 
-Nell'esempio precedente viene generato l'avviso C4291 perché non è stata definita alcuna forma di posizionamento dell'operatore **delete** che corrisponda alla forma di posizionamento di operator **new**. Per risolvere il problema, inserire il codice seguente sopra **main**. Si noti che tutti i parametri della funzione **di eliminazione** dell'operatore di overload corrispondono a quelli dell'operatore di overload **new**, ad eccezione del primo parametro.
+L'esempio precedente genera l'avviso C4291 perché non è stata definita alcuna forma di posizionamento dell'operatore **`delete`** corrispondente al formato di posizionamento dell'operatore **`new`** . Per risolvere il problema, inserire il codice seguente sopra **Main**. Si noti che tutti i parametri della funzione dell'operatore **`delete`** di overload corrispondono a quelli dell'operatore di overload **`new`** , ad eccezione del primo parametro.
 
 ```cpp
 void operator delete(void* pMem, char* pszFilename, int nLine)

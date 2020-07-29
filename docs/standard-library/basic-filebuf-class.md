@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ae1b6b9460ec58aec319196e3c116bd29c3e80e4
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737515"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219313"
 ---
 # <a name="basic_filebuf-class"></a>Classe basic_filebuf
 
@@ -71,7 +71,7 @@ Tratti dell'elemento di base del buffer di file (in genere `char_traits<Char_T>`
 Il modello di classe descrive un buffer del flusso che controlla la trasmissione di elementi di tipo *Char_T*, i cui tratti di carattere sono determinati dalla classe *TR*, verso e da una sequenza di elementi archiviati in un file esterno.
 
 > [!NOTE]
-> Gli oggetti di tipo `basic_filebuf` vengono creati con un buffer interno di __tipo \* char__ indipendentemente dall' `char_type` oggetto specificato dal parametro di tipo *Char_T*. Ciò significa che una stringa Unicode (contenente **wchar_t** caratteri) verrà convertita in una stringa ANSI (contenente caratteri **char** ) prima che venga scritta nel buffer interno. Per archiviare stringhe Unicode nel buffer, creare un nuovo buffer di tipo **wchar_t** e impostarlo utilizzando il [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metodo. Per visualizzare un esempio che illustri questo comportamento, vedere di seguito.
+> Gli oggetti di tipo `basic_filebuf` vengono creati con un buffer interno di __tipo \* char__ indipendentemente dall' `char_type` oggetto specificato dal parametro di tipo *Char_T*. Ciò significa che una stringa Unicode (contenente i **`wchar_t`** caratteri) verrà convertita in una stringa ANSI (contenente i **`char`** caratteri) prima che venga scritta nel buffer interno. Per archiviare stringhe Unicode nel buffer, creare un nuovo buffer di tipo **`wchar_t`** e impostarlo utilizzando il [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metodo. Per visualizzare un esempio che illustri questo comportamento, vedere di seguito.
 
 Un oggetto della classe `basic_filebuf<Char_T, Tr>` Archivia un puntatore di file, che designa l' `FILE` oggetto che controlla il flusso associato a un file aperto. Archivia anche i puntatori a due facet di conversione di file usati dalle funzioni membro protetto [overflow](#overflow) e [underflow](#underflow). Per altre informazioni, vedere [`basic_filebuf::open`](#open).
 
@@ -271,9 +271,9 @@ La funzione membro restituisce un puntatore null se il puntatore del file è un 
 
 ### <a name="remarks"></a>Osservazioni
 
-`close` chiama `fclose(fp)`. Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, restituisce **this** per indicare che il file è stato chiuso.
+`close` chiama `fclose(fp)`. Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, viene restituito **`this`** per indicare che il file è stato chiuso correttamente.
 
-Per un flusso Wide, se si sono verificati inserimenti dopo l'apertura del flusso o dall'ultima chiamata a `streampos` , la funzione chiama [`overflow`](#overflow) . Inserisce anche qualsiasi sequenza necessaria per ripristinare lo stato di conversione iniziale usando il facet di conversione file `fac` per chiamare `fac.unshift` in base alle esigenze. Ogni elemento prodotto `byte` di tipo **char** viene scritto nel flusso associato designato dal puntatore del file `fp` come se fossero chiamate successive del form `fputc(byte, fp)` . Se la chiamata a `fac.unshift` o a qualsiasi scrittura ha esito negativo, la funzione non riesce.
+Per un flusso Wide, se si sono verificati inserimenti dopo l'apertura del flusso o dall'ultima chiamata a `streampos` , la funzione chiama [`overflow`](#overflow) . Inserisce anche qualsiasi sequenza necessaria per ripristinare lo stato di conversione iniziale usando il facet di conversione file `fac` per chiamare `fac.unshift` in base alle esigenze. Ogni elemento prodotto `byte` di tipo **`char`** viene scritto nel flusso associato designato dal puntatore del file `fp` come se fossero chiamate successive del form `fputc(byte, fp)` . Se la chiamata a `fac.unshift` o a qualsiasi scrittura ha esito negativo, la funzione non riesce.
 
 ### <a name="example"></a>Esempio
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il puntatore del file non è null.
+**`true`** Se il puntatore del file non è null.
 
 ### <a name="example"></a>Esempio
 
@@ -413,7 +413,7 @@ La protezione predefinita per l'apertura dei file, equivalente al parametro *shf
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il buffer è già aperto o se il puntatore del file è un puntatore null, la funzione restituisce un puntatore null. In caso contrario, restituisce **this**.
+Se il buffer è già aperto o se il puntatore del file è un puntatore null, la funzione restituisce un puntatore null. In caso contrario, restituisce **`this`** .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -510,7 +510,7 @@ La funzione membro virtuale protetta reinserisce un elemento nel buffer di input
 
 - Se la funzione può rendere `putback` disponibile una posizione, è possibile impostare il puntatore successivo in modo che punti a tale posizione e archiviare `ch` in tale posizione.
 
-- Se la funzione può eseguire il push di un elemento nel flusso di input, questa operazione può essere eseguita, ad esempio chiamando `ungetc` per un elemento di tipo **char**.
+- Se la funzione può eseguire il push di un elemento nel flusso di input, questa operazione può essere eseguita, ad esempio chiamando `ungetc` per un elemento di tipo **`char`** .
 
 ## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf::p os_type
 
@@ -582,7 +582,7 @@ La funzione membro virtuale protetta tenta di modificare le posizioni correnti p
 
 Per un file aperto per la lettura e la scrittura, entrambi i flussi di input e output vengono posizionati in parallelo. Per spostarsi tra l'inserimento e l'estrazione, è necessario chiamare [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) o [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) . Le chiamate a `pubseekoff` (e a `seekoff` ) presentano diverse limitazioni per i flussi di testo, i flussi binari e i flussi Wide.
 
-Per un flusso wide, se si sono verificati inserimenti dall'apertura del flusso o dall'ultima chiamata a `streampos`, la funzione chiama [overflow](#overflow). Inserisce anche qualsiasi sequenza necessaria per ripristinare lo stato di conversione iniziale usando il facet di conversione file `fac` per chiamare `fac.unshift` in base alle esigenze. Ogni elemento prodotto `byte` di tipo **char** viene scritto nel flusso associato designato dal puntatore del file `fp` come se fossero chiamate successive del form `fputc(byte, fp)` . Se la chiamata a `fac.unshift` o a qualsiasi scrittura ha esito negativo, la funzione non riesce.
+Per un flusso wide, se si sono verificati inserimenti dall'apertura del flusso o dall'ultima chiamata a `streampos`, la funzione chiama [overflow](#overflow). Inserisce anche qualsiasi sequenza necessaria per ripristinare lo stato di conversione iniziale usando il facet di conversione file `fac` per chiamare `fac.unshift` in base alle esigenze. Ogni elemento prodotto `byte` di tipo **`char`** viene scritto nel flusso associato designato dal puntatore del file `fp` come se fossero chiamate successive del form `fputc(byte, fp)` . Se la chiamata a `fac.unshift` o a qualsiasi scrittura ha esito negativo, la funzione non riesce.
 
 ## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf:: setbuf
 
@@ -608,7 +608,7 @@ La funzione membro protetto restituisce zero se il puntatore del file `fp` è un
 
 ### <a name="remarks"></a>Osservazioni
 
-`setbuf`chiama `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` per offrire la matrice di `count` elementi a partire da *_Buffer* come buffer per il flusso. Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, restituisce **this** per il successo di segnale.
+`setbuf`chiama `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` per offrire la matrice di `count` elementi a partire da *_Buffer* come buffer per il flusso. Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, viene restituito **`this`** a Signal success.
 
 ## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf:: swap
 
@@ -661,7 +661,7 @@ La funzione membro virtuale protetta tenta di estrarre l'elemento corrente `ch` 
 
 - Se è disponibile una posizione di lettura, accetta `ch` come elemento archiviato nella posizione di lettura e sposta in avanti il puntatore successivo per il buffer di input.
 
-- Può leggere uno o più elementi di tipo **char**, come per le chiamate successive del form `fgetc(fp)` , e convertirli in un elemento `ch` di tipo `Char_T` usando il facet di conversione file `fac` per chiamare in base alle `fac.in` esigenze. Se un'operazione di lettura o conversione ha esito negativo, la funzione non viene eseguita.
+- Può leggere uno o più elementi di tipo **`char`** , come per le chiamate successive del form `fgetc(fp)` , e convertirli in un elemento `ch` di tipo `Char_T` usando il facet di conversione file `fac` per chiamare in base alle `fac.in` esigenze. Se un'operazione di lettura o conversione ha esito negativo, la funzione non viene eseguita.
 
 ## <a name="see-also"></a>Vedere anche
 

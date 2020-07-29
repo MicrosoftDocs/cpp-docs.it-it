@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac694e517279e43a501bb8289544e5da5ddba72b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217415"
 ---
 # <a name="ltstackgt-operators"></a>Operatori &lt;stack&gt;
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto stack a sinistra dell'operatore non è uguale all'oggetto stack a destra.
 
@@ -35,15 +35,15 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `stack`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `stack`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti stack non sono uguali; in caso contrario, **false**.
+**`true`** Se gli stack o gli stack non sono uguali. **`false`** se gli stack o gli stack sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -90,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto stack a sinistra dell'operatore è minore dell'oggetto stack a destra.
 
@@ -100,15 +100,15 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `stack`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `stack`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se lo stack a sinistra dell'operatore è minore e non uguale allo stack a destra; in caso contrario, **false**.
+**`true`** Se lo stack a sinistra dell'operatore è minore e non uguale allo stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto stack a sinistra dell'operatore è minore o uguale all'oggetto stack a destra.
 
@@ -184,15 +184,15 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `stack`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `stack`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se lo stack a sinistra dell'operatore è minore o uguale allo stack a destra; in caso contrario, **false**.
+**`true`** Se lo stack a sinistra dell'operatore è minore o uguale allo stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto stack a sinistra dell'operatore è uguale all'oggetto stack a destra.
 
@@ -251,15 +251,15 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `stack`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `stack`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti stack sono uguali; in caso contrario, **false**.
+**`true`** Se gli stack o gli stack sono uguali; **`false`** se gli stack o gli stack non sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -306,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
 
 Verifica se l'oggetto stack a sinistra dell'operatore è maggiore dell'oggetto stack a destra.
 
@@ -316,15 +316,15 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `stack`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `stack`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se lo stack a sinistra dell'operatore è maggiore e non uguale allo stack a destra; in caso contrario, **false**.
+**`true`** Se lo stack a sinistra dell'operatore è maggiore e non uguale allo stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto stack a sinistra dell'operatore è maggiore o uguale all'oggetto stack a destra.
 
@@ -385,15 +385,15 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `stack`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `stack`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se lo stack a sinistra dell'operatore è rigorosamente minore dello stack a destra; in caso contrario, **false**.
+**`true`** Se lo stack a sinistra dell'operatore è rigorosamente minore dello stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 

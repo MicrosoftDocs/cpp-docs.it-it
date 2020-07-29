@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f1d98cdc6237f182e0240a85f2fdce3410232195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422262"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213892"
 ---
 # <a name="agent-class"></a>Classe agent
 
@@ -34,7 +34,7 @@ Classe destinata a essere usata come classe di base per tutti gli agenti indipen
 class agent;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -47,8 +47,8 @@ class agent;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[cancel](#cancel)|Sposta un agente dagli Stati `agent_created` o `agent_runnable` allo stato `agent_canceled`.|
-|[start](#start)|Sposta un agente dallo stato `agent_created` allo stato `agent_runnable` e lo pianifica per l'esecuzione.|
+|[cancel](#cancel)|Sposta un agente dagli `agent_created` `agent_runnable` Stati o allo `agent_canceled` stato.|
+|[start](#start)|Sposta un agente dallo `agent_created` stato allo `agent_runnable` stato e lo pianifica per l'esecuzione.|
 |[Stato](#status)|Origine sincrona delle informazioni sullo stato dell'agente.|
 |[status_port](#status_port)|Origine asincrona delle informazioni sullo stato dell'agente.|
 |[attendere](#wait)|Attende il completamento dell'attività da un agente.|
@@ -59,8 +59,8 @@ class agent;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[done](#done)|Sposta un agente nello stato `agent_done`, a indicare che l'agente è stato completato.|
-|[run](#run)|Rappresenta l'attività principale di un agente. `run` deve essere sottoposto a override in una classe derivata e specifica le operazioni che l'agente deve eseguire dopo l'avvio.|
+|[Fine](#done)|Sposta un agente nello `agent_done` stato, a indicare che l'agente è stato completato.|
+|[Correre](#run)|Rappresenta l'attività principale di un agente. `run`deve essere sottoposto a override in una classe derivata e specifica le operazioni che l'agente deve eseguire dopo l'avvio.|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -76,7 +76,7 @@ Per ulteriori informazioni, vedere [Asynchronous Agents](../../../parallel/concr
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>agente
+## <a name="agent"></a><a name="ctor"></a>agente
 
 Costruisce un agente.
 
@@ -91,16 +91,16 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="parameters"></a>Parametri
 
 *_PScheduler*<br/>
-Oggetto `Scheduler` in cui è pianificata l'attività di esecuzione dell'agente.
+`Scheduler`Oggetto all'interno del quale è pianificata l'attività di esecuzione dell'agente.
 
 *_PGroup*<br/>
-Oggetto `ScheduleGroup` in cui è pianificata l'attività di esecuzione dell'agente. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
+`ScheduleGroup`Oggetto all'interno del quale è pianificata l'attività di esecuzione dell'agente. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Osservazioni
 
 Se non si specificano i parametri `_PScheduler` o `_PGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
-## <a name="dtor"></a>~ Agent
+## <a name="agent"></a><a name="dtor"></a>~ Agent
 
 Elimina definitivamente l'agente.
 
@@ -110,11 +110,11 @@ virtual ~agent();
 
 ### <a name="remarks"></a>Osservazioni
 
-Non è possibile eliminare definitivamente un agente che non si trova in uno stato terminale (`agent_done` o `agent_canceled`). Questo può essere evitato attendendo che l'agente raggiunga uno stato terminale nel distruttore di una classe che eredita dalla classe `agent`.
+Non è possibile eliminare definitivamente un agente che non si trova in uno stato terminale ( `agent_done` o `agent_canceled` ). Questo può essere evitato attendendo che l'agente raggiunga uno stato terminale nel distruttore di una classe che eredita dalla `agent` classe.
 
-## <a name="cancel"></a>Annulla
+## <a name="cancel"></a><a name="cancel"></a>Annulla
 
-Sposta un agente dagli Stati `agent_created` o `agent_runnable` allo stato `agent_canceled`.
+Sposta un agente dagli `agent_created` `agent_runnable` Stati o allo `agent_canceled` stato.
 
 ```cpp
 bool cancel();
@@ -122,11 +122,11 @@ bool cancel();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'agente è stato annullato; in caso contrario, **false** . Non è possibile annullare l'esecuzione di un agente se è già stata avviata o è già stata completata.
+**`true`** Se l'agente è stato annullato; **`false`** in caso contrario,. Non è possibile annullare l'esecuzione di un agente se è già stata avviata o è già stata completata.
 
-## <a name="done"></a>eseguita
+## <a name="done"></a><a name="done"></a>eseguita
 
-Sposta un agente nello stato `agent_done`, a indicare che l'agente è stato completato.
+Sposta un agente nello `agent_done` stato, a indicare che l'agente è stato completato.
 
 ```cpp
 bool done();
@@ -134,15 +134,15 @@ bool done();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'agente viene spostato nello stato `agent_done`; in caso contrario, **false** . Non è possibile spostare un agente che è stato annullato nello stato `agent_done`.
+**`true`** Se l'agente viene spostato nello `agent_done` stato; **`false`** in caso contrario,. Non è possibile spostare un agente che è stato annullato nello `agent_done` stato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo deve essere chiamato alla fine del metodo `run`, quando si sa che l'esecuzione dell'agente è stata completata.
+Questo metodo deve essere chiamato alla fine del `run` metodo, quando si sa che l'esecuzione dell'agente è stata completata.
 
-## <a name="run"></a>Correre
+## <a name="run"></a><a name="run"></a>Correre
 
-Rappresenta l'attività principale di un agente. `run` deve essere sottoposto a override in una classe derivata e specifica le operazioni che l'agente deve eseguire dopo l'avvio.
+Rappresenta l'attività principale di un agente. `run`deve essere sottoposto a override in una classe derivata e specifica le operazioni che l'agente deve eseguire dopo l'avvio.
 
 ```cpp
 virtual void run() = 0;
@@ -150,11 +150,11 @@ virtual void run() = 0;
 
 ### <a name="remarks"></a>Osservazioni
 
-Lo stato dell'agente viene modificato in `agent_started` immediatamente prima che questo metodo venga richiamato. Il metodo deve richiamare `done` sull'agente con lo stato appropriato prima di restituire e non può generare eccezioni.
+Lo stato dell'agente viene impostato su `agent_started` right prima che questo metodo venga richiamato. Il metodo deve richiamare `done` sull'agente con lo stato appropriato prima di restituire e non può generare eccezioni.
 
-## <a name="start"></a>iniziare
+## <a name="start"></a><a name="start"></a>iniziare
 
-Sposta un agente dallo stato `agent_created` allo stato `agent_runnable` e lo pianifica per l'esecuzione.
+Sposta un agente dallo `agent_created` stato allo `agent_runnable` stato e lo pianifica per l'esecuzione.
 
 ```cpp
 bool start();
@@ -162,9 +162,9 @@ bool start();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'agente è stato avviato correttamente; in caso contrario, **false** . Non è possibile avviare un agente che è stato annullato.
+**`true`** Se l'agente è stato avviato correttamente; **`false`** in caso contrario,. Non è possibile avviare un agente che è stato annullato.
 
-## <a name="status"></a>stato
+## <a name="status"></a><a name="status"></a>stato
 
 Origine sincrona delle informazioni sullo stato dell'agente.
 
@@ -176,7 +176,7 @@ agent_status status();
 
 Restituisce lo stato corrente dell'agente. Si noti che questo stato restituito potrebbe cambiare immediatamente dopo essere stato restituito.
 
-## <a name="status_port"></a>status_port
+## <a name="status_port"></a><a name="status_port"></a>status_port
 
 Origine asincrona delle informazioni sullo stato dell'agente.
 
@@ -188,7 +188,7 @@ ISource<agent_status>* status_port();
 
 Restituisce un'origine del messaggio che può inviare messaggi sullo stato corrente dell'agente.
 
-## <a name="wait"></a>attendere
+## <a name="wait"></a><a name="wait"></a>attendere
 
 Attende il completamento dell'attività da un agente.
 
@@ -208,15 +208,15 @@ Tempo massimo di attesa, in millisecondi.
 
 ### <a name="return-value"></a>Valore restituito
 
-`agent_status` dell'agente al completamento dell'attesa. Può essere `agent_canceled` o `agent_done`.
+Oggetto `agent_status` dell'agente al completamento dell'attesa. Può essere `agent_canceled` o `agent_done` .
 
 ### <a name="remarks"></a>Osservazioni
 
-Un'attività agente viene completata quando l'agente immette gli Stati `agent_canceled` o `agent_done`.
+Un'attività di Agent viene completata quando l'agente immette `agent_canceled` gli `agent_done` Stati o.
 
-Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE`, viene generata l'eccezione [operation_timed_out](operation-timed-out-class.md) se il periodo di tempo specificato scade prima che l'agente abbia completato l'attività.
+Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE` , viene generata l'eccezione [operation_timed_out](operation-timed-out-class.md) se il periodo di tempo specificato scade prima che l'agente abbia completato l'attività.
 
-## <a name="wait_for_all"></a>wait_for_all
+## <a name="wait_for_all"></a><a name="wait_for_all"></a>wait_for_all
 
 Attende il completamento delle attività di tutti gli agenti specificati.
 
@@ -231,7 +231,7 @@ static void __cdecl wait_for_all(
 ### <a name="parameters"></a>Parametri
 
 *count*<br/>
-Numero di puntatori di agente presenti nella matrice `_PAgents`.
+Numero di puntatori di agente presenti nella matrice `_PAgents` .
 
 *_PAgents*<br/>
 Matrice di puntatori agli agenti da attendere.
@@ -244,11 +244,11 @@ Tempo massimo di attesa, in millisecondi.
 
 ### <a name="remarks"></a>Osservazioni
 
-Un'attività agente viene completata quando l'agente immette gli Stati `agent_canceled` o `agent_done`.
+Un'attività di Agent viene completata quando l'agente immette `agent_canceled` gli `agent_done` Stati o.
 
-Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE`, viene generata l'eccezione [operation_timed_out](operation-timed-out-class.md) se il periodo di tempo specificato scade prima che l'agente abbia completato l'attività.
+Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE` , viene generata l'eccezione [operation_timed_out](operation-timed-out-class.md) se il periodo di tempo specificato scade prima che l'agente abbia completato l'attività.
 
-## <a name="wait_for_one"></a>wait_for_one
+## <a name="wait_for_one"></a><a name="wait_for_one"></a>wait_for_one
 
 Attende che uno degli agenti specificati completi l'attività.
 
@@ -264,7 +264,7 @@ static void __cdecl wait_for_one(
 ### <a name="parameters"></a>Parametri
 
 *count*<br/>
-Numero di puntatori di agente presenti nella matrice `_PAgents`.
+Numero di puntatori di agente presenti nella matrice `_PAgents` .
 
 *_PAgents*<br/>
 Matrice di puntatori agli agenti da attendere.
@@ -280,10 +280,10 @@ Tempo massimo di attesa, in millisecondi.
 
 ### <a name="remarks"></a>Osservazioni
 
-Un'attività agente viene completata quando l'agente immette gli Stati `agent_canceled` o `agent_done`.
+Un'attività di Agent viene completata quando l'agente immette `agent_canceled` gli `agent_done` Stati o.
 
-Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE`, viene generata l'eccezione [operation_timed_out](operation-timed-out-class.md) se il periodo di tempo specificato scade prima che l'agente abbia completato l'attività.
+Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE` , viene generata l'eccezione [operation_timed_out](operation-timed-out-class.md) se il periodo di tempo specificato scade prima che l'agente abbia completato l'attività.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: cf2ef152d8c5ae0209a8a5cca85862f2f03a8f70
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 122536ae79c9b7d634677c6b7ec7fc4974f52b4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825862"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218754"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -40,15 +40,15 @@ Una specifica di conversione semplice contiene solo il segno di percentuale e un
 <a name="type"></a>
 
 > [!NOTE]
-> In Visual Studio 2015 la `printf` famiglia `scanf` di funzioni e è stata dichiarata come **inline** e `<stdio.h>` spostata nelle intestazioni e `<conio.h>` . Se si esegue la migrazione di codice precedente, è possibile che venga visualizzato *LNK2019* in relazione a queste funzioni. Per ulteriori informazioni, vedere [Visual C++ cronologia delle modifiche 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> In Visual Studio 2015 la `printf` `scanf` famiglia di funzioni e è stata dichiarata come **`inline`** e spostata nelle `<stdio.h>` `<conio.h>` intestazioni e. Se si esegue la migrazione di codice precedente, è possibile che venga visualizzato *LNK2019* in relazione a queste funzioni. Per ulteriori informazioni, vedere [Visual C++ cronologia delle modifiche 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="type-conversion-specifier"></a>Identificatore di conversione tipo
 
 Il carattere identificatore di conversione *tipo* specifica se l'argomento corrispondente deve essere interpretato come un carattere, una stringa, un puntatore, un numero intero o un numero a virgola mobile. Il carattere *tipo* è l'unico campo di specifica conversione obbligatorio e viene visualizzato dopo tutti i campi facoltativi.
 
-Gli argomenti che seguono la stringa di formato vengono interpretati a seconda del carattere *tipo* corrispondente e del prefisso [dimensione](#size) facoltativo. Le conversioni dei tipi di carattere `char` e `wchar_t` vengono specificate con **c** o **C** e le stringhe di caratteri estesi a byte singolo e multibyte vengono specificate con **s** o **S**, a seconda della funzione di formattazione usata. Gli argomenti di tipo carattere e stringa specificati usando **c** e **s** vengono interpretati `char` come `char*` e `printf` dalle funzioni della famiglia o `wchar_t` come `wchar_t*` e `wprintf` dalle funzioni della famiglia. Gli argomenti di tipo stringa e carattere che vengono specificati usando **C** e **S** vengono interpretati come `wchar_t` e `wchar_t*` dalle funzioni della famiglia `printf` o come `char` e `char*` dalle funzioni della famiglia `wprintf`. Questo comportamento è specifico di Microsoft.
+Gli argomenti che seguono la stringa di formato vengono interpretati a seconda del carattere *tipo* corrispondente e del prefisso [dimensione](#size) facoltativo. Le conversioni per i tipi di carattere **`char`** e **`wchar_t`** vengono specificate con **c** o **c**e le stringhe di caratteri a byte singolo e multibyte o Wide vengono specificate tramite **s** o **s**, a seconda della funzione di formattazione usata. Gli argomenti di tipo carattere e stringa specificati usando **c** e **s** vengono interpretati come **`char`** e **`char*`** dalle funzioni della `printf` famiglia o come **`wchar_t`** e `wchar_t*` dalle funzioni della `wprintf` famiglia. Gli argomenti di tipo carattere e stringa specificati usando **C** e **S** vengono interpretati come **`wchar_t`** e `wchar_t*` dalle funzioni della `printf` famiglia o come **`char`** e **`char*`** dalle funzioni della `wprintf` famiglia. Questo comportamento è specifico di Microsoft.
 
-I tipi integer come `short`, `int`, `long`, `long long`e le relative `unsigned` varianti vengono specificati tramite **d**, **i**, **o**, **u**, **x**e **x**. I tipi a virgola mobile `float`, `double`ad esempio `long double`, e, vengono specificati **usando**, **a, e**, **e**, **f**, **f**, **g**e **g**. **e** Per impostazione predefinita, a meno che non vengano modificati da un prefisso di *dimensione* , gli argomenti integer `int` vengono assegnati al tipo e gli argomenti a virgola mobile `double`vengono assegnati a. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione***ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
+I tipi integer come **`short`** , **`int`** , **`long`** , **`long long`** e le relative **`unsigned`** varianti vengono specificati tramite **d**, **i**, **o**, **u**, **x**e **x**. I tipi a virgola mobile, ad esempio **`float`** , **`double`** e **`long double`** , vengono specificati **a**usando, **a**, **e**, **e**, **f**, **f**, **g**e **g**. Per impostazione predefinita, a meno che non vengano modificati da un prefisso di *dimensione* , gli argomenti Integer vengono assegnati al **`int`** tipo e gli argomenti a virgola mobile vengono assegnati a **`double`** . Nei sistemi a 64 bit, un **`int`** è un valore a 32 bit. Pertanto, gli Integer a 64 bit verranno troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso di *dimensione* di **ll** o **I64** . I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
 
 > [!NOTE]
 > **Specifico di Microsoft:**\
@@ -76,8 +76,8 @@ I tipi integer come `short`, `int`, `long`, `long long`e le relative `unsigned` 
 |**A**|A virgola mobile|Valore a virgola mobile a precisione doppia esadecimale con segno e con formato [-]0X*h.hhhh*__P±__*dd*, dove *h.hhhh* sono le cifre esadecimali (in maiuscolo) della mantissa, mentre *dd* sono una o più cifre dell'esponente. La precisione indica il numero di cifre dopo il punto.|
 |**n**|Puntatore a intero|Numero di caratteri che viene scritto correttamente fino al flusso o nel buffer. Questo valore viene archiviato nel valore intero in cui l'indirizzo viene fornito come argomento. Le dimensioni del numero intero al quale si fa riferimento possono essere controllate da un prefisso di indicazione delle dimensioni dell'argomento. L'identificatore **n** è disattivato per impostazione predefinita. Per informazioni vedere l'importante la nota sulla sicurezza.|
 |**p**|Tipo di puntatore|Visualizza l'argomento come indirizzo nelle cifre esadecimali.|
-|**s**|string|Una volta usato con funzioni `printf`, specifica una stringa di caratteri a byte singolo o multibyte; una volta usato con le funzioni `wprintf`, specifica una stringa di carattere wide. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
-|**S**|string|Una volta usato con funzioni `printf`, specifica una stringa di caratteri wide; una volta usato con le funzioni `wprintf`, specifica una stringa di caratteri a un byte singolo o multibyte. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
+|**s**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri a byte singolo o multibyte; una volta usato con le funzioni `wprintf`, specifica una stringa di carattere wide. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
+|**S**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri wide; una volta usato con le funzioni `wprintf`, specifica una stringa di caratteri a un byte singolo o multibyte. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
 |**Z**|Struttura `ANSI_STRING` o `UNICODE_STRING`|Quando l'indirizzo di una struttura [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) o [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) viene passato come argomento, visualizza la stringa contenuta nel buffer a cui fa riferimento il campo `Buffer` della struttura. Usare il prefisso modificatore *dimensione***w** per specificare un argomento `UNICODE_STRING`, per esempio `%wZ`. Il campo `Length` della struttura deve essere impostato sulla lunghezza, espressa in byte, della stringa. Il campo `MaximumLength` della struttura deve essere impostato sulla lunghezza, espressa in byte, del buffer.<br /><br /> In genere il carattere tipo **Z** viene usato solo nelle funzioni che usano una specifica di formato, come ad esempio `dbgPrint` e `kdPrint`.|
 
 A partire da Visual Studio 2015, se l'argomento che corrisponde a un identificatore di conversione a virgola mobile (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) è infinito, non definito o NaN, l'output formattato è conforme allo standard C99. Questa tabella elenca l'output formattato:
@@ -133,11 +133,11 @@ Il primo campo facoltativo in una specifica di conversione contiene *direttive f
 
 ## <a name="width-specification"></a>Specifica della larghezza
 
-In una specifica di conversione, il campo facoltativo di specifica della larghezza viene visualizzato dopo qualsiasi carattere *flag*. L'argomento *larghezza* è un intero decimale non negativo che controlla il numero minimo di caratteri restituiti. Se il numero di caratteri nel valore di output è inferiore alla larghezza specificata, vengono aggiunti spazi vuoti a sinistra o a destra dei valori, a seconda che venga specificato il flag di allineamento a sinistra (**-**), fino a quando non viene raggiunta la larghezza minima. Se *larghezza* è preceduto da 0, vengono aggiunti zeri iniziali alle conversioni intere o a virgola mobile fino a raggiungere la larghezza minima, salvo se la conversione restituisce un valore infinito o non numerico.
+In una specifica di conversione, il campo facoltativo di specifica della larghezza viene visualizzato dopo qualsiasi carattere *flag*. L'argomento *larghezza* è un intero decimale non negativo che controlla il numero minimo di caratteri restituiti. Se il numero di caratteri nel valore di output è inferiore alla larghezza specificata, vengono aggiunti spazi vuoti a sinistra o a destra dei valori, a seconda che venga specificato il flag di allineamento a sinistra ( **-** ), fino a quando non viene raggiunta la larghezza minima. Se *larghezza* è preceduto da 0, vengono aggiunti zeri iniziali alle conversioni intere o a virgola mobile fino a raggiungere la larghezza minima, salvo se la conversione restituisce un valore infinito o non numerico.
 
 La specifica della larghezza non provoca mai il troncamento di un valore. Se il numero di caratteri nel valore di output è maggiore della larghezza specificata o se non viene specificato l'argomento *larghezza*, vengono restituiti tutti i caratteri del valore in base alla specifica *precisione*.
 
-Se la specifica della larghezza è un asterisco (`*`), il valore è fornito da un argomento `int` dall'elenco degli argomenti. L'argomento *larghezza* deve precedere il valore che viene formattato nell'elenco degli argomenti, come illustrato nel seguente esempio:
+Se la specifica della larghezza è un asterisco ( `*` ), un **`int`** argomento dall'elenco di argomenti fornisce il valore. L'argomento *larghezza* deve precedere il valore che viene formattato nell'elenco degli argomenti, come illustrato nel seguente esempio:
 
 `printf("%0*d", 5, 3);  /* 00003 is output */`
 
@@ -153,7 +153,7 @@ A differenza della specifica della larghezza, la specifica della precisione può
 
 `printf( "%.0d", 0 );      /* No characters output */`
 
-Se la specifica della precisione è un asterisco (\*), il valore viene specificato da un argomento `int` dell'elenco degli argomenti. Nell'elenco degli argomenti, l'argomento *precisione* deve precedere il valore da formattare, come illustrato nel seguente esempio:
+Se la specifica della precisione è un asterisco ( \* ), un **`int`** argomento dall'elenco di argomenti fornisce il valore. Nell'elenco degli argomenti, l'argomento *precisione* deve precedere il valore da formattare, come illustrato nel seguente esempio:
 
 `printf( "%.*f", 3, 3.14159265 );  /* 3.142 output */`
 
@@ -163,7 +163,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 |Type|Significato|Predefinito|
 |----------|-------------|-------------|
-|**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0, non viene stampato alcun separatore decimale, a meno che non venga usato il **#** flag.|
+|**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0, non viene stampato alcun separatore decimale, a meno che non **#** venga usato il flag.|
 |**c**, **c**|La precisione non ha alcun effetto.|Viene stampato il carattere.|
 |**d**, **i**, **o**, **u**, **x**, **X**|La precisione specifica il numero minimo di cifre da stampare. Se il numero di cifre nell'argomento è minore di *precisione*, il valore di output viene riempito a sinistra con zeri. Il valore non viene troncato quando il numero di cifre supera *precisione*.|La precisione predefinita è 1.|
 |**e**, **E**|La precisione specifica il numero di cifre da stampare dopo il separatore decimale. L'ultima cifra stampata viene arrotondata.|La precisione predefinita è 6. Se *precisione* è 0 o il punto (.) non è seguito da un numero, non viene stampato alcun separatore decimale.|
@@ -175,7 +175,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 ## <a name="argument-size-specification"></a>Specifica delle dimensioni dell'argomento
 
-In una specifica di conversione il campo *dimensione* è un modificatore della lunghezza argomento per l'identificatore di conversione *tipo*. I prefissi del campo *dimensione* per il campo *tipo* (**hh**, **h**, **j**, **l** (L minuscola), **L**, **ll**, **t**, **w**, **z**, **I** (i maiuscola), **I32** e **I64**) specificano le "dimensioni" dell'argomento corrispondente, ovvero lungo o corto, a 32 bit o a 64 bit, carattere a byte singolo o carattere wide, a seconda dell'identificatore di conversione che viene modificato. Questi prefissi di dimensioni vengono usati con i caratteri *tipo* nei gruppi di funzioni `printf` e `wprintf` per specificare l'interpretazione delle lunghezze degli argomenti, come mostrato nella tabella seguente. Il campo *dimensione* è facoltativo per alcuni tipi di argomento. Quando non viene specificato alcun prefisso, il formattatore usa argomenti di tipo Integer, ad esempio `char`, `short`, `int`, `long` firmati o non firmati, e tipi di enumerazione, ad esempio i tipi `int` a 32 bit e gli argomenti a virgola mobile `float`, `double`, e `long double` vengono usati come tipi `double` a 64 bit. Questo comportamento corrisponde alle regole di promozione degli argomenti predefinite per gli elenchi di argomenti variabili. Per ulteriori informazioni sulla promozione di argomenti, vedere puntini di sospensione e argomenti predefiniti nelle [espressioni suffisse](../cpp/postfix-expressions.md). Nei sistemi a 32 bit e 64 bit la specifica di conversione del formato di un argomento Integer a 64 bit deve includere un prefisso di dimensione **ll** o **I64**. In caso contrario, il comportamento del formattatore non sarà definito.
+In una specifica di conversione il campo *dimensione* è un modificatore della lunghezza argomento per l'identificatore di conversione *tipo*. I prefissi del campo *dimensione* per il campo *tipo* (**hh**, **h**, **j**, **l** (L minuscola), **L**, **ll**, **t**, **w**, **z**, **I** (i maiuscola), **I32** e **I64**) specificano le "dimensioni" dell'argomento corrispondente, ovvero lungo o corto, a 32 bit o a 64 bit, carattere a byte singolo o carattere wide, a seconda dell'identificatore di conversione che viene modificato. Questi prefissi di dimensioni vengono usati con i caratteri *tipo* nei gruppi di funzioni `printf` e `wprintf` per specificare l'interpretazione delle lunghezze degli argomenti, come mostrato nella tabella seguente. Il campo *dimensione* è facoltativo per alcuni tipi di argomento. Quando non viene specificato alcun prefisso di dimensione, il formattatore utilizza argomenti di tipo Integer, ad esempio con segno o senza segno **`char`** , **`short`** ,, **`int`** **`long`** e tipi di enumerazione, come tipi a 32 bit **`int`** , e gli **`float`** argomenti a **`double`** **`long double`** virgola mobile, e vengono utilizzati come tipi a 64 bit **`double`** . Questo comportamento corrisponde alle regole di promozione degli argomenti predefinite per gli elenchi di argomenti variabili. Per ulteriori informazioni sulla promozione di argomenti, vedere puntini di sospensione e argomenti predefiniti nelle [espressioni suffisse](../cpp/postfix-expressions.md). Nei sistemi a 32 bit e 64 bit la specifica di conversione del formato di un argomento Integer a 64 bit deve includere un prefisso di dimensione **ll** o **I64**. In caso contrario, il comportamento del formattatore non sarà definito.
 
 Alcuni tipi corrispondono a dimensioni diverse le codice a 32 bit e a 64 bit. Ad esempio, `size_t` ha una lunghezza pari a 32 bit nel codice compilato per x86 e a 64 bit nel codice compilato per x64. Per creare codice di formattazione indipendente dalla piattaforma per tipi a larghezza variabile, è possibile usare un modificatore di dimensioni per argomenti a larghezza variabile. In alternativa, usare un modificatore di dimensioni di argomenti a 64 bit e alzare di livello a 64 bit in modo esplicito il tipo di argomento a larghezza variabile. Il modificatore di dimensioni argomento specifico di Microsoft **I** (i maiuscola) gestisce gli argomenti interi con larghezza variabile; tuttavia per la portabilità è consigliato l'uso dei modificatori specifici del tipo **j**, **t** e **z**.
 
@@ -183,14 +183,14 @@ Alcuni tipi corrispondono a dimensioni diverse le codice a 32 bit e a 64 bit. Ad
 
 |Per specificare|Prefisso da usare|Con identificatore del tipo|
 |----------------|----------------|-------------------------|
-|`char`<br />`unsigned char`|**hh**|**d**, **i**, **o**, **u**, **x** o **X**|
-|`short int`<br />`short unsigned int`|**h**|**d**, **i**, **o**, **u**, **x** o **X**|
-|`__int32`<br />`unsigned __int32`|**I32**|**d**, **i**, **o**, **u**, **x** o **X**|
-|`__int64`<br />`unsigned __int64`|**I64**|**d**, **i**, **o**, **u**, **x** o **X**|
+|**`char`**<br />**`unsigned char`**|**hh**|**d**, **i**, **o**, **u**, **x** o **X**|
+|**`short int`**<br />**`short unsigned int`**|**h**|**d**, **i**, **o**, **u**, **x** o **X**|
+|**`__int32`**<br />**`unsigned __int32`**|**I32**|**d**, **i**, **o**, **u**, **x** o **X**|
+|**`__int64`**<br />**`unsigned __int64`**|**I64**|**d**, **i**, **o**, **u**, **x** o **X**|
 |`intmax_t`<br />`uintmax_t`|**j** o **I64**|**d**, **i**, **o**, **u**, **x** o **X**|
-|`long double`|**l** (L minuscola) o **L**|**a**, **A**, **e**, **E**, **f**, **F**, **g** o **G**|
-|`long int`<br />`long unsigned int`|**l** (L minuscola)|**d**, **i**, **o**, **u**, **x** o **X**|
-|`long long int`<br />`unsigned long long int`|**ll** (LL minuscole)|**d**, **i**, **o**, **u**, **x** o **X**|
+|**`long double`**|**l** (L minuscola) o **L**|**a**, **A**, **e**, **E**, **f**, **F**, **g** o **G**|
+|**`long int`**<br />**`long unsigned int`**|**l** (L minuscola)|**d**, **i**, **o**, **u**, **x** o **X**|
+|**`long long int`**<br />**`unsigned long long int`**|**ll** (LL minuscole)|**d**, **i**, **o**, **u**, **x** o **X**|
 |`ptrdiff_t`|**t** o **I** (i maiuscola)|**d**, **i**, **o**, **u**, **x** o **X**|
 |`size_t`|**z** o **I** (i maiuscola)|**d**, **i**, **o**, **u**, **x** o **X**|
 |Carattere a byte singolo|**h**|**c** o **c**|
@@ -198,15 +198,15 @@ Alcuni tipi corrispondono a dimensioni diverse le codice a 32 bit e a 64 bit. Ad
 |Stringa con caratteri a byte singolo|**h**|**s**, **S** o **Z**|
 |Stringa di caratteri wide|**l** (L minuscola) o **w**|**s**, **S** o **Z**|
 
-I tipi `ptrdiff_t` e `size_t` sono `__int32` o `unsigned __int32` nelle piattaforme a 32 bit e `__int64` o `unsigned __int64` nelle piattaforme a 64 bit. I prefissi di dimensioni **I** (i maiuscola), **j**, **t** e **z** adottano la larghezza argomento corretta per la piattaforma.
+I `ptrdiff_t` `size_t` tipi e sono **`__int32`** o **`unsigned __int32`** su piattaforme a 32 bit e **`__int64`** o **`unsigned __int64`** su piattaforme a 64 bit. I prefissi di dimensioni **I** (i maiuscola), **j**, **t** e **z** adottano la larghezza argomento corretta per la piattaforma.
 
-In Visual C++, anche se `long double` è un tipo distinto, ha la stessa rappresentazione interna di `double`.
+In Visual C++, anche se **`long double`** è un tipo distinto, ha la stessa rappresentazione interna di **`double`** .
 
-Un identificatore di tipo **hc** o **hC** è sinonimo di **c** nelle funzioni `printf` e di **C** nelle funzioni `wprintf`. Un identificatore di tipo **LC**, **LC**, **WC**o **WC** è sinonimo **C** di c `printf` nelle funzioni e **c** di c `wprintf` nelle funzioni. Un identificatore di tipo **hs** o **hS** è sinonimo di **s** nelle funzioni `printf` e di **S** nelle funzioni `wprintf`. Un identificatore di tipo **ls**, **lS**, **ws** o **wS** è sinonimo di **S** nelle funzioni `printf` e di **s** nelle funzioni `wprintf`.
+Un identificatore di tipo **hc** o **hC** è sinonimo di **c** nelle funzioni `printf` e di **C** nelle funzioni `wprintf`. Un identificatore di tipo **LC**, **LC**, **WC**o **WC** è sinonimo di **c** nelle `printf` funzioni e di **c** nelle `wprintf` funzioni. Un identificatore di tipo **hs** o **hS** è sinonimo di **s** nelle funzioni `printf` e di **S** nelle funzioni `wprintf`. Un identificatore di tipo **ls**, **lS**, **ws** o **wS** è sinonimo di **S** nelle funzioni `printf` e di **s** nelle funzioni `wprintf`.
 
 > [!NOTE]
 > **Specifico di Microsoft:**\
-> I prefissi di modifica dimensione argomento **I** (i maiuscola), **I32**, **I64** e **w** sono estensioni Microsoft e non sono compatibili con ISO C. Il prefisso **h** usato con dati di tipo `char` e il prefisso **l** (L minuscola) usato con dati di tipo `double` sono estensioni Microsoft.
+> I prefissi di modifica dimensione argomento **I** (i maiuscola), **I32**, **I64** e **w** sono estensioni Microsoft e non sono compatibili con ISO C. Il prefisso **h** usato con dati di tipo **`char`** e il prefisso **l** (l minuscolo) quando viene usato con dati di tipo **`double`** sono estensioni Microsoft.
 
 ## <a name="see-also"></a>Vedere anche
 

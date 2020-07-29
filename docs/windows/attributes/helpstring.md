@@ -1,17 +1,17 @@
 ---
-title: helpstring (C++ attributo com)
+title: helpstring (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 18a8dbea2387224070903aa10c812c9dd079bf96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166965"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217259"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -30,7 +30,7 @@ Testo della stringa della guida.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **helpstring** C++ ha la stessa funzionalità dell'attributo MIDL di [helpstring](/windows/win32/Midl/helpstring) .
+L'attributo **helpstring** di C++ ha la stessa funzionalità dell'attributo MIDL di [helpstring](/windows/win32/Midl/helpstring) .
 
 ## <a name="example"></a>Esempio
 
@@ -42,10 +42,10 @@ Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di come usar
 
 |||
 |-|-|
-|**Si applica a**|**Interface**, **typedef**, **Class**, Method, Property|
+|**Si applica a**|**interfaccia**, **`typedef`** , **`class`** , metodo, proprietà|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -55,6 +55,6 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
 [helpcontext](helpcontext.md)

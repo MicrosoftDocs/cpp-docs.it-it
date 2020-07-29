@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a963f1059eccaddce9ec01cd53a07df668ee46c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944718"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213658"
 ---
 # <a name="_abnormal_termination"></a>_abnormal_termination
 
-Indica se il blocco `__finally` di un'[istruzione try-finally](../cpp/try-finally-statement.md) viene inserito mentre il sistema esegue un elenco interno di gestori di terminazione.
+Indica se il **`__finally`** blocco di un' [istruzione try-finally](../cpp/try-finally-statement.md) viene inserito mentre il sistema esegue un elenco interno di gestori di terminazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,9 +40,9 @@ int   _abnormal_termination(
 
 ## <a name="return-value"></a>Valore restituito
 
-**true** se il sistema sta eseguendo la *rimozione* dello stack; in caso contrario, **false**.
+**`true`** Se il sistema sta *rimuovendo* lo stack; in caso contrario, **`false`** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di una funzione interna utilizzata per gestire eccezioni di rimozione e non deve essere chiamata dal codice utente.
 

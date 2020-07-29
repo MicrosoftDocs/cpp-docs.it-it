@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::span [C++], as_writable_bytes
 - std::as_bytes [C++]
-ms.openlocfilehash: 6573ea061673091113244ada0ab0cd84bdd7db75
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: f51c99d2f2a051a07cefcb985fdb46340fefb3ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226118"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217441"
 ---
 # <a name="ltspangt-functions"></a>&lt;&gt;funzioni span
 
@@ -65,7 +65,7 @@ void main()
 
 ## <a name="as_writable_bytes"></a>`as_writable_bytes`
 
-Se `T` non è `const` , ottiene una visualizzazione di lettura/scrittura della rappresentazione di byte non elaborati degli elementi nell'intervallo.
+Se `T` non è **`const`** , ottiene una visualizzazione di lettura/scrittura della rappresentazione di byte non elaborati degli elementi nell'intervallo.
 
 ```cpp
 template <class T, size_t Extent>

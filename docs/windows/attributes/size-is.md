@@ -1,17 +1,17 @@
 ---
-title: size_is (C++ attributo com)
+title: size_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213840"
 ---
 # <a name="size_is"></a>size_is
 
@@ -42,9 +42,9 @@ Vedere l'esempio per [first_is](first-is.md) per un esempio di come specificare 
 
 |||
 |-|-|
-|**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
+|**Si applica a**|Campo in **`struct`** o **`union`** , parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|`max_is`|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -52,8 +52,8 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi del parametro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
