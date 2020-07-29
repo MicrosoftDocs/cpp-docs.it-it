@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: beb02a8353c6c5187dd0fa0171518c753eee7868
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193341"
 ---
 # <a name="ltforward_listgt-operators"></a>Operatori &lt;forward_list&gt;
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è uguale all'oggetto elenco di inoltro a destra.
 
@@ -37,17 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `forward_list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `forward_list`.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione di modello consente di eseguire l'overload di `operator==` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Questa funzione di modello è `operator==` in overload per confrontare due oggetti di modello di classe `forward_list` . La funzione restituisce `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore non è uguale all'oggetto elenco di inoltro a destra.
 
@@ -59,21 +59,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `forward_list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli elenchi non sono uguali; in caso contrario, **false**.
+**`true`** Se gli elenchi non sono uguali; **`false`** se gli elenchi sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `!(left == right)`.
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore dell'oggetto elenco di inoltro a destra.
 
@@ -85,21 +85,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `forward_list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è minore ma non uguale all'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è minore ma non uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione di modello consente di eseguire l'overload di `operator<` per confrontare due oggetti della classe modello `forward_list`. La funzione restituisce `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Questa funzione di modello è `operator<` in overload per confrontare due oggetti di modello di classe `forward_list` . La funzione restituisce `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore o uguale all'oggetto elenco di inoltro a destra.
 
@@ -111,21 +111,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `forward_list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è minore o uguale all'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è minore o uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `!(right < left)`.
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore dell'oggetto elenco di inoltro a destra.
 
@@ -137,21 +137,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `forward_list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco a sinistra dell'operatore è maggiore dell'elenco a destra; in caso contrario, **false**.
+**`true`** Se l'elenco sul lato sinistro dell'operatore è maggiore dell'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
 Questa funzione modello restituisce `right < left`.
 
-## <a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore o uguale all'oggetto elenco di inoltro a destra.
 
@@ -163,15 +163,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `forward_list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `forward_list`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco di inoltri a sinistra dell'operatore è maggiore o uguale all'elenco di avanzamento sul lato destro dell'operatore; in caso contrario, **false**.
+**`true`** Se l'elenco di inoltri a sinistra dell'operatore è maggiore o uguale all'elenco di avanzamento sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
