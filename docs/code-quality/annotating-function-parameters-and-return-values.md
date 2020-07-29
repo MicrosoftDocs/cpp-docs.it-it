@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404037"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231260"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Annotazione di parametri di funzione e valori restituiti
 
@@ -167,7 +167,7 @@ Per le annotazioni nella tabella seguente, quando un parametro puntatore viene a
 
      Puntatore a una matrice, letto dalla funzione. La matrice è di `s` elementi size, che devono essere tutti validi.
 
-     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, `char` le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa `wchar_t` .
+     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, **`char`** le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa **`wchar_t`** .
 
 - `_In_reads_z_(s)`
 
@@ -190,7 +190,7 @@ Per le annotazioni nella tabella seguente, quando un parametro puntatore viene a
 
      In questo esempio, il chiamante fornisce un buffer di `size` elementi per `p1` . `MyStringCopy`rende validi alcuni di questi elementi. Ancora più importante, l' `_Null_terminated_` annotazione su `PWSTR` significa che `p1` è con terminazione null in fase di post-stato. In questo modo, il numero di elementi validi è ancora ben definito, ma non è necessario un conteggio di elementi specifico.
 
-     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, `char` le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa `wchar_t` .
+     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, **`char`** le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa **`wchar_t`** .
 
 - `_Out_writes_z_(s)`
 
@@ -202,7 +202,7 @@ Per le annotazioni nella tabella seguente, quando un parametro puntatore viene a
 
      Puntatore a una matrice, che viene letta e scritta nella funzione. Si tratta di elementi di dimensione `s` e validi in pre-stato e post-stato.
 
-     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, `char` le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa `wchar_t` .
+     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, **`char`** le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa **`wchar_t`** .
 
 - `_Inout_updates_z_(s)`
 
@@ -231,7 +231,7 @@ Per le annotazioni nella tabella seguente, quando un parametro puntatore viene a
 
      Puntatore a una matrice, che viene letta e scritta dalla funzione. Si tratta di elementi di dimensioni `s` che devono essere tutti validi nello stato precedente e gli `c` elementi devono essere validi in post-stato.
 
-     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, `char` le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa `wchar_t` .
+     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, **`char`** le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa **`wchar_t`** .
 
 - `_Inout_updates_all_(s)`
 
@@ -243,7 +243,7 @@ Per le annotazioni nella tabella seguente, quando un parametro puntatore viene a
 
      In altre parole, ogni elemento presente nel buffer fino a `s` nello stato precedente è valido nello stato precedente e successivo.
 
-     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, `char` le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa `wchar_t` .
+     La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, **`char`** le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa **`wchar_t`** .
 
 - `_In_reads_to_ptr_(p)`
 

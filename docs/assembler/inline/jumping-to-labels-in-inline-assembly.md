@@ -9,20 +9,20 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0c411289745466bd6478cc82ab30e6a05be9cc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192002"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Passaggio a etichette nell'assembly inline
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Come un'etichetta C o C++ comune, un'etichetta in un blocco `__asm` ha un ambito nella funzione in cui è definita (non solo nel blocco). Sia le istruzioni di assembly che le istruzioni `goto` possono passare alle etichette all'interno o all'esterno del blocco `__asm`.
+Analogamente a un'etichetta C o C++ ordinaria, un'etichetta in un **`__asm`** blocco ha un ambito per tutta la funzione in cui è definita (non solo nel blocco). Le istruzioni e le istruzioni **`goto`** di assembly possono passare alle etichette all'interno o all'esterno del **`__asm`** blocco.
 
-Nelle etichette definite in blocchi `__asm` non viene fatta distinzione tra maiuscole e minuscole; sia le istruzioni `goto` che le istruzioni di assembly possono fare riferimento a tali etichette senza tale distinzione. Nelle etichette C++ e C viene fatta distinzione tra maiuscole e minuscole solo se utilizzate dalle istruzioni `goto`. Le istruzioni di assembly possono passare a un'etichetta C o C++ senza fare distinzione tra maiuscole e minuscole.
+Le etichette definite nei **`__asm`** blocchi non fanno distinzione tra maiuscole e minuscole. entrambe **`goto`** le istruzioni e le istruzioni di assembly possono fare riferimento a tali etichette senza considerare i casi. Le etichette C e C++ fanno distinzione tra maiuscole e minuscole solo se utilizzate dalle **`goto`** istruzioni. Le istruzioni di assembly possono passare a un'etichetta C o C++ senza fare distinzione tra maiuscole e minuscole.
 
 Il codice seguente illustra tutte le permutazioni:
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Non utilizzare nomi delle funzioni della libreria C come etichette in blocchi `__asm`. Ad esempio, si potrebbe essere tentati di utilizzare `exit` come etichetta, come segue:
+Non usare i nomi di funzione della libreria C come etichette nei **`__asm`** blocchi. Ad esempio, si potrebbe essere tentati di utilizzare `exit` come etichetta, come segue:
 
 ```cpp
 ; BAD TECHNIQUE: using library function name as label
@@ -68,7 +68,7 @@ exit:
 
 Poiché **Exit** è il nome di una funzione della libreria C, questo codice può causare un passaggio alla funzione **Exit** invece che alla posizione desiderata.
 
-Come nei programmi MASM, il simbolo di dollaro (`$`) serve come contatore di posizione corrente. È un'etichetta per l'istruzione al momento assemblata. Nei blocchi `__asm`, l'uso principale è di eseguire passaggi condizionali lunghi:
+Come nei programmi MASM, il simbolo di dollaro (`$`) serve come contatore di posizione corrente. È un'etichetta per l'istruzione al momento assemblata. In **`__asm`** blocchi, l'uso principale è quello di eseguire salti condizionali lunghi:
 
 ```cpp
    jne $+5 ; next instruction is 5 bytes long
@@ -79,7 +79,7 @@ Come nei programmi MASM, il simbolo di dollaro (`$`) serve come contatore di pos
 farlabel:
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
