@@ -8,16 +8,16 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 402251592a87b723d75fd1b2cd0786be7b17dbfc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2db26a378526cd5f48992cb32ea46e9677125e66
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187622"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226958"
 ---
 # <a name="_variant_toperator-"></a>_variant_t::operator =
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -119,39 +119,39 @@ _variant_t& operator=(
 
 L'operatore consente di assegnare un nuovo valore all'oggetto `_variant_t`:
 
-- **operatore = (**  *varSrc*  **)** Assegna un `VARIANT` esistente a un oggetto `_variant_t`.
+- **operatore = (**  *varSrc*  **)** Assegna un oggetto esistente `VARIANT` a un `_variant_t` oggetto.
 
-- **operatore = (**  *pVarSrc*  **)** Assegna un `VARIANT` esistente a un oggetto `_variant_t`.
+- **operatore = (**  *pVarSrc*  **)** Assegna un oggetto esistente `VARIANT` a un `_variant_t` oggetto.
 
-- **operatore = (**  *var_t_Src*  **)** Assegna un oggetto `_variant_t` esistente a un oggetto `_variant_t`.
+- **operatore = (**  *var_t_Src*  **)** Assegna un oggetto esistente `_variant_t` a un `_variant_t` oggetto.
 
-- **operatore = (**  *sSrc*  **)** Assegna un valore integer **breve** a un oggetto `_variant_t`.
+- **operatore = (**  *sSrc*  **)** Assegna un **`short`** valore integer a un `_variant_t` oggetto.
 
-- **operatore = (** `lSrc` **)** Assegna un valore **Long** Integer a un oggetto `_variant_t`.
+- **operator = (** `lSrc` **)** assegna un **`long`** valore integer a un `_variant_t` oggetto.    
 
-- **operatore = (**  *fltSrc*  **)** Assegna un valore numerico **float** a un oggetto `_variant_t`.
+- **operatore = (**  *fltSrc*  **)** Assegna un **`float`** valore numerico a un `_variant_t` oggetto.
 
-- **operatore = (**  *dblSrc*  **)** Assegna un valore numerico **doppio** a un oggetto `_variant_t`.
+- **operatore = (**  *dblSrc*  **)** Assegna un **`double`** valore numerico a un `_variant_t` oggetto.
 
-- **operatore = (**  *cySrc*  **)** Assegna un oggetto `CY` a un oggetto `_variant_t`.
+- **operatore = (**  *cySrc*  **)** Assegna un `CY` oggetto a un `_variant_t` oggetto.
 
-- **operatore = (**  *bstrSrc*  **)** Assegna un oggetto `BSTR` a un oggetto `_variant_t`.
+- **operatore = (**  *bstrSrc*  **)** Assegna un `BSTR` oggetto a un `_variant_t` oggetto.
 
-- **operatore = (**  *wstrSrc*  **)** Assegna una stringa Unicode a un oggetto `_variant_t`.
+- **operatore = (**  *wstrSrc*  **)** Assegna una stringa Unicode a un `_variant_t` oggetto.
 
-- **operatore = (** `strSrc` **)** Assegna una stringa multibyte a un oggetto `_variant_t`.
+- **operator = (** `strSrc` **)** assegna una stringa multibyte a un `_variant_t` oggetto.    
 
-- **operatore = (** `bSrc` **)** Assegna un valore **bool** a un oggetto `_variant_t`.
+- **operator = (** `bSrc` **)** assegna un **`bool`** valore a un `_variant_t` oggetto.  
 
-- **operatore = (**  *pDispSrc*  **)** Assegna un oggetto `VT_DISPATCH` a un oggetto `_variant_t`.
+- **operatore = (**  *pDispSrc*  **)** Assegna un `VT_DISPATCH` oggetto a un `_variant_t` oggetto.
 
-- **operatore = (**  *pIUnknownSrc*  **)** Assegna un oggetto `VT_UNKNOWN` a un oggetto `_variant_t`.
+- **operatore = (**  *pIUnknownSrc*  **)** Assegna un `VT_UNKNOWN` oggetto a un `_variant_t` oggetto.
 
-- **operatore = (**  *decSrc*  **)** Assegna un valore `DECIMAL` a un oggetto `_variant_t`.
+- **operatore = (**  *decSrc*  **)** Assegna un `DECIMAL` valore a un `_variant_t` oggetto.
 
-- **operatore = (** `bSrc` **)** Assegna un valore `BYTE` a un oggetto `_variant_t`.
+- **operator = (** `bSrc` **)** assegna un `BYTE` valore a un `_variant_t` oggetto.  
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

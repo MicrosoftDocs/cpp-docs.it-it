@@ -43,12 +43,12 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-ms.openlocfilehash: 9e0e466893aedb565fcd5852c6768ecfc620c611
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ceeb541a44d969db471cb2ba798bdc13079b5759
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912399"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189259"
 ---
 # <a name="strtoul-_strtoul_l-wcstoul-_wcstoul_l"></a>strtoul, _strtoul_l, wcstoul, _wcstoul_l
 
@@ -103,7 +103,7 @@ Per ulteriori informazioni su questo e altri codici restituiti, vedere [_doserrn
 
 ## <a name="remarks"></a>Osservazioni
 
-Ognuna di queste funzioni converte la stringa di input *strSource* in un oggetto **Long** **senza segno** .
+Ognuna di queste funzioni converte la stringa di input *strSource* in un oggetto **`unsigned long`** .
 
 **strtoul** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Potrebbe trattarsi del carattere null di terminazione o del primo carattere numerico maggiore o uguale alla *base*. L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali determina il riconoscimento del carattere radice in *strSource*; Per ulteriori informazioni, vedere [setlocale](setlocale-wsetlocale.md). **strtoul** e **wcstoul** usano le impostazioni locali correnti; **_strtoul_l** e **_wcstoul_l** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -122,9 +122,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 **strtoul** prevede che *strSource* faccia riferimento a una stringa nel formato seguente:
 
-> [*spazi vuoti*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*cifre* &#124; *lettere*]
+> [*spazi vuoti*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cifre* &#124; *lettere*]
 
-Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. le *cifre* corrispondono a una o più cifre decimali. le *lettere* sono una o più lettere da' a' a' z ' (o da' A ' a' z '). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta *strSource* . Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Se ad esempio *base* è 0 e il primo carattere analizzato è' 0', si presuppone un Integer ottale e il carattere ' 8' o ' 9' arresterà l'analisi. **strtoul** consente un prefisso di**+** segno più ()**-** o meno (); un segno meno principale indica che il valore restituito è negato.
+Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. le *cifre* corrispondono a una o più cifre decimali. le *lettere* sono una o più lettere da' a' a' z ' (o da' A ' a' z '). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta *strSource* . Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Se ad esempio *base* è 0 e il primo carattere analizzato è' 0', si presuppone un Integer ottale e il carattere ' 8' o ' 9' arresterà l'analisi. **strtoul** consente un prefisso di **+** segno più () o meno ( **-** ). un segno meno iniziale indica che il valore restituito è negato.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -144,7 +144,7 @@ Vedere l'esempio per [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

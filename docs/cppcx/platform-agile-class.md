@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 0822cef10b199a5bc3b33f116065816e380bf8a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 839002a614b54990fdc9180fa06737ff43039a4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376506"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226937"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 
-Rappresenta un oggetto con MashalingBehavior=Standard come oggetto Agile, che riduce fortemente le probabilità che si verifichino eccezioni di threading di runtime. `Agile<T>` consente all'oggetto non Agile di chiamare o essere chiamato dallo stesso thread o da un thread differente. Per ulteriori informazioni, vedere [Threading e marshalling](../cppcx/threading-and-marshaling-c-cx.md).
+Rappresenta un oggetto con MashalingBehavior=Standard come oggetto Agile, che riduce fortemente le probabilità che si verifichino eccezioni di threading di runtime. `Agile<T>` consente all'oggetto non Agile di chiamare o essere chiamato dallo stesso thread o da un thread differente. Per ulteriori informazioni, vedere [Threading and marshalling](../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,7 +37,7 @@ Typename per la classe non Agile.
 
 ### <a name="remarks"></a>Osservazioni
 
-La maggior parte delle classi in Windows Runtime sono agili. Un oggetto Agile può chiamare o essere chiamato da un oggetto in-process o out-of-process nello stesso thread o in uno differente. Se un oggetto non è Agile, eseguire il wrapping dell'oggetto non Agile in un oggetto `Agile<T>` , che è Agile. Si può quindi eseguire il marshalling dell'oggetto `Agile<T>` e usare l'oggetto non Agile sottostante.
+La maggior parte delle classi nella Windows Runtime è agile. Un oggetto Agile può chiamare o essere chiamato da un oggetto in-process o out-of-process nello stesso thread o in uno differente. Se un oggetto non è Agile, eseguire il wrapping dell'oggetto non Agile in un oggetto `Agile<T>` , che è Agile. Si può quindi eseguire il marshalling dell'oggetto `Agile<T>` e usare l'oggetto non Agile sottostante.
 
 La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rappresenta l'oggetto non Agile e il *contesto*dell'oggetto Agile. Il contesto specifica il modello di threading e il comportamento di marshalling di un oggetto Agile. Il sistema operativo usa il contesto per determinare come eseguire il marshalling di un oggetto.
 
@@ -47,7 +47,7 @@ La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rap
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Agile::Agile](#ctor)|Inizializza una nuova istanza della classe Agile.|
+|[Agile:: agile](#ctor)|Inizializza una nuova istanza della classe Agile.|
 |[Distruttore Agile::~Agile](#dtor)|Eliminata l'istanza corrente della classe Agile.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -63,7 +63,7 @@ La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rap
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Agile::operator->](#operator-arrow)|Recupera un handle all'oggetto rappresentato dall'oggetto Agile corrente.|
+|[Agile:: operator->](#operator-arrow)|Recupera un handle all'oggetto rappresentato dall'oggetto Agile corrente.|
 |[Agile::operator=](#operator-assign)|Assegna il valore specificato all'oggetto Agile corrente.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
@@ -74,15 +74,15 @@ La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rap
 
 ### <a name="requirements"></a>Requisiti
 
-**Client minimo supportato:** Windows 8 (informazioni in due)
+**Client minimo supportato:** Windows 8
 
-**Server minimo supportato:** Windows Server 2012 (informazioni in due)
+**Server minimo supportato:** Windows Server 2012
 
 **Spazio dei nomi:** Platform
 
 **Intestazione:** agile.h
 
-## <a name="agileagile-constructor"></a><a name="ctor"></a>Costruttore Agile::Agile
+## <a name="agileagile-constructor"></a><a name="ctor"></a>Costruttore agile:: agile
 
 Inizializza una nuova istanza della classe Agile.
 
@@ -100,14 +100,14 @@ Agile(Agile<T>&& object);
 *T*<br/>
 Tipo specificato dal parametro typename del modello.
 
-*Oggetto*<br/>
+*object*<br/>
 Nella seconda versione di questo costruttore, oggetto utilizzato per inizializzare una nuova istanza Agile. Nella terza versione, oggetto copiato nella nuova istanza Agile. Nella quarta versione, oggetto spostato nella nuova istanza Agile.
 
 ### <a name="remarks"></a>Osservazioni
 
 La prima versione di questo costruttore rappresenta il costruttore predefinito. Nella seconda versione viene inizializzata la nuova classe Agile dell'istanza dall'oggetto specificato dal parametro `object`. La terza versione rappresenta il costruttore di copia. La quarta versione rappresenta il costruttore di spostamento. Questo costruttore non può generare eccezioni.
 
-## <a name="agileagile-destructor"></a><a name="dtor"></a>Agile:: Distruttore Agile
+## <a name="agileagile-destructor"></a><a name="dtor"></a>Distruttore agile:: ~ agile
 
 Eliminata l'istanza corrente della classe Agile.
 
@@ -121,7 +121,7 @@ Eliminata l'istanza corrente della classe Agile.
 
 Questo distruttore rilascia inoltre l'oggetto rappresentato dall'oggetto Agile corrente.
 
-## <a name="agileget-method"></a><a name="get"></a>Metodo Agile::Get
+## <a name="agileget-method"></a><a name="get"></a>Metodo Agile:: Get
 
 Restituisce un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
@@ -135,9 +135,9 @@ T^ Get() const;
 
 Handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
-Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la parola chiave **auto** type deduction. Ad esempio: `auto x = myAgileTvariable->Get();`.
+Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per conservare il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio: `auto x = myAgileTvariable->Get();`.
 
-## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a>Metodo Agile::GetAddressOf
+## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a>Metodo Agile:: GetAddressOf
 
 Reinizializza l'oggetto Agile corrente e restituisce l'indirizzo di un handle a un oggetto di tipo `T`.
 
@@ -158,9 +158,9 @@ Indirizzo di un handle a un oggetto di tipo `T`.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente, reinizializza i membri dati dell'oggetto Agile, acquisisce il contesto di threading corrente e quindi restituisce l'indirizzo di una variabile handle-oggetto che può rappresentare un oggetto non Agile. Per fare in modo che un'istanza della classe Agile rappresenti un oggetto, utilizzare l'operatore di assegnazione ([Agile::operator )](#operator-assign)per assegnare l'oggetto all'istanza della classe Agile .
+Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente, reinizializza i membri dati dell'oggetto Agile, acquisisce il contesto di threading corrente e quindi restituisce l'indirizzo di una variabile handle-oggetto che può rappresentare un oggetto non Agile. Per far sì che un'istanza della classe Agile rappresenti un oggetto, usare l'operatore di assegnazione ([agile:: operator =](#operator-assign)) per assegnare l'oggetto all'istanza della classe Agile.
 
-## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a>Metodo Agile::GetAddressOfForInOut
+## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a>Metodo Agile:: GetAddressOfForInOut
 
 Restituisce l'indirizzo di un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
@@ -183,7 +183,7 @@ Indirizzo di un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
 Questa operazione acquisisce il contesto di threading corrente e successivamente restituisce l'indirizzo di un handle all'oggetto sottostante.
 
-## <a name="agilerelease-method"></a><a name="release"></a>Metodo Agile::Release
+## <a name="agilerelease-method"></a><a name="release"></a>Metodo Agile:: Release
 
 Rimuove l'oggetto e il contesto sottostanti dell'oggetto Agile corrente.
 
@@ -197,7 +197,7 @@ void Release() throw();
 
 Se esistono, l'oggetto e il contesto sottostanti dell'oggetto Agile corrente vengono rimossi, quindi il valore dell'oggetto Agile viene impostato su null.
 
-## <a name="agileoperator-gt-operator"></a><a name="operator-arrow"></a>Operatore Agile::operator-&gt;
+## <a name="agileoperator-gt-operator"></a><a name="operator-arrow"></a>Operatore Agile:: operator- &gt;
 
 Recupera un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
@@ -211,9 +211,9 @@ T^ operator->() const throw();
 
 Handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
-Questo operatore restituisce un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la parola chiave **auto** type deduction.
+Questo operatore restituisce un tipo interno riservato. Un modo pratico per conservare il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo.
 
-## <a name="agileoperator-operator"></a><a name="operator-assign"></a>Operatore Agile::operatore
+## <a name="agileoperator-operator"></a><a name="operator-assign"></a>Operatore Agile:: operator =
 
 Assegna l'oggetto specificato all'oggetto Agile corrente.
 
@@ -231,10 +231,10 @@ T^ operator=( IUnknown* lp ) throw();
 *T*<br/>
 Tipo specificato dal typename del modello.
 
-*Oggetto*<br/>
+*object*<br/>
 Oggetto o handle a un oggetto che viene copiato o spostato nell'oggetto Agile corrente.
 
-*Lp*<br/>
+*LP*<br/>
 Puntatore a interfaccia IUnknown di un oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -249,4 +249,4 @@ L'operazione di assegnazione rende automaticamente persistente il contesto dell'
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi della piattaforma](platform-namespace-c-cx.md)
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)

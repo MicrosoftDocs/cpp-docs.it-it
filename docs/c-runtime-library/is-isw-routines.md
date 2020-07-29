@@ -19,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8292f04fb8771b8270b6f8e2be3ca2f044f6c9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189779"
 ---
 # <a name="is-isw-routines"></a>is, isw Routines
 
@@ -35,20 +35,20 @@ ms.locfileid: "70940183"
 |[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|
 |[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|
 |[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|
-|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
+|[iscsym, iscsymf, __iscsym, \_ _iswcsym, \_ _iscsymf, \_ _iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste routine verificano che i caratteri soddisfino le condizioni specificate.
 
-Le routine **is** producono risultati significativi per qualsiasi argomento Integer compreso tra -1 (`EOF`) e **UCHAR_MAX** (0xFF), inclusi. Il tipo di argomento previsto è `int`.
+Le routine **is** producono risultati significativi per qualsiasi argomento Integer compreso tra -1 (`EOF`) e **UCHAR_MAX** (0xFF), inclusi. Il tipo di argomento previsto è **`int`** .
 
 > [!CAUTION]
-> Per le routine **is**, il passaggio di un argomento di tipo `char` potrebbe generare risultati imprevedibili. Un carattere a un byte SBCS o MBCS di tipo `char` con un valore maggiore di 0x7F è negativo. Se viene passato un tipo `char`, è possibile che il compilatore converta il valore in un `int` o **long** con segno. Il valore potrebbe essere esteso con segno dal compilatore, con risultati non previsti.
+> Per le routine **is** , il passaggio di un argomento di tipo **`char`** può produrre risultati imprevedibili. Un carattere a byte singolo SBCS o MBCS di tipo **`char`** con un valore maggiore di 0x7F è negativo. Se **`char`** viene passato un oggetto, il compilatore può convertire il valore in un oggetto **`signed int`** o **`signed long`** . Il valore potrebbe essere esteso con segno dal compilatore, con risultati non previsti.
 
-Le routine **isw** producono risultati significativi per qualsiasi valore Integer compreso tra -1 (**WEOF**) e 0xFFFF, inclusi. Il tipo di dati **wint_t** è definito in WCHAR.H come **unsigned short**. Può usare qualsiasi carattere wide o valore wide di fine del file (**WEOF**).
+Le routine **isw** producono risultati significativi per qualsiasi valore Integer compreso tra -1 (**WEOF**) e 0xFFFF, inclusi. Il tipo di dati **wint_t** è definito in WCHAR. H come **`unsigned short`** ; può conservare qualsiasi carattere wide o il valore di fine del file (**WEOF**) a caratteri wide.
 
 La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali.
 
@@ -129,19 +129,19 @@ Il carattere ha una proprietà specificata dall'argomento `desc`. Per ogni valor
 
 |Valore dell'argomento *desc*|Equivalente di iswctype( *c, desc*)|
 |------------------------------|----------------------------------------|
-|**_ALPHA**|**iswalpha(** `c` **)**|
+|**_ALPHA**|**iswalpha (** `c` **)**|
 |**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_BLANK**|**iswblank (** `c` **)**|
 |**_CONTROL**|**iswcntrl(** `c` **)**|
 |**_DIGIT**|**iswdigit(** `c` **)**|
-|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph (** `c` **)**|
 |**_LOWER**|**iswlower(** `c` **)**|
-|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|
-|**_PUNCT**|**iswpunct(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint (** `c` **)**|
+|**_PUNCT**|**iswpunct (** `c` **)**|
+|**_BLANK**|**iswblank (** `c` **)**|
 |**_SPACE**|**iswspace(** `c` **)**|
 |**_UPPER**|**iswupper(** `c` **)**|
-|**_HEX**|**iswxdigit(** `c` **)**|
+|**_HEX**|**iswxdigit (** `c` **)**|
 
 `iswdigit`<br/>
 Carattere wide corrispondente a una cifra decimale.
@@ -340,7 +340,7 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classificazione di caratteri](../c-runtime-library/character-classification.md)<br/>
+[Classificazione caratteri](../c-runtime-library/character-classification.md)<br/>
 [Impostazioni locali](../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

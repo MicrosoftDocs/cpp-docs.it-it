@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
-ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.openlocfilehash: 5cff7a4607201175c7095a87134850583b76d636
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204128"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227088"
 ---
 # <a name="scope-c"></a>Ambito (C++)
 
@@ -31,9 +31,9 @@ Sono disponibili sei tipi di ambito:
 
 - **Ambito locale** Un nome dichiarato all'interno di una funzione o di un'espressione lambda, inclusi i nomi dei parametri, ha ambito locale. Sono spesso denominate "variabili locali". Sono visibili solo dal punto di dichiarazione alla fine della funzione o del corpo dell'espressione lambda. L'ambito locale è un tipo di ambito del blocco, illustrato più avanti in questo articolo.
 
-- **Ambito della classe** I nomi dei membri della classe hanno un ambito di classe che si estende in tutta la definizione della classe, indipendentemente dal punto di dichiarazione. L'accessibilità dei membri di classe è ulteriormente controllata dalle parole chiave **public**, **private**e **protected** . È possibile accedere ai membri pubblici o protetti solo tramite gli operatori di selezione dei membri (**.** o **->** ) o operatori puntatore a membro (**.** <strong>\*</strong> o **->** <strong>\*</strong> ).
+- **Ambito della classe** I nomi dei membri della classe hanno un ambito di classe che si estende in tutta la definizione della classe, indipendentemente dal punto di dichiarazione. L'accessibilità dei membri di classe è ulteriormente controllata dalle **`public`** **`private`** **`protected`** parole chiave, e. È possibile accedere ai membri pubblici o protetti solo tramite gli operatori di selezione dei membri (**.** o **->** ) o operatori puntatore a membro (**.** <strong>\*</strong> o **->** <strong>\*</strong> ).
 
-- **Ambito dell'istruzione** I nomi dichiarati in un'istruzione **for**, **if**, **while**o **Switch** sono visibili fino alla fine del blocco di istruzioni.
+- **Ambito dell'istruzione** I nomi dichiarati in un' **`for`** **`if`** istruzione,, **`while`** o **`switch`** sono visibili fino alla fine del blocco di istruzioni.
 
 - **Ambito della funzione** Un' [etichetta](labeled-statements.md) ha un ambito di funzione, il che significa che è visibile in un corpo di funzione anche prima del relativo punto di dichiarazione. L'ambito della funzione rende possibile la scrittura di istruzioni come `goto cleanup` prima che l' `cleanup` etichetta venisse dichiarata.
 
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Nascondere nomi di classi
 
-È possibile nascondere i nomi della classe mediante la dichiarazione di una funzione, un oggetto o una variabile o un enumeratore nello stesso ambito. Tuttavia, è ancora possibile accedere al nome della classe quando il prefisso è la **classe**della parola chiave.
+È possibile nascondere i nomi della classe mediante la dichiarazione di una funzione, un oggetto o una variabile o un enumeratore nello stesso ambito. Tuttavia, è ancora possibile accedere al nome della classe quando il prefisso è preceduto dalla parola chiave **`class`** .
 
 ```cpp
 // hiding_class_names.cpp
@@ -94,18 +94,18 @@ int main()
 > [!NOTE]
 > Per ogni posizione in cui viene chiamato il nome della classe ( `Account` ), la classe della parola chiave deve essere usata per distinguerla dall'account della variabile con ambito globale. Questa regola non viene applicata quando il nome della classe si trova a sinistra dell'operatore di risoluzione dell'ambito (::). I nomi a sinistra dell'operatore di risoluzione dell'ambito vengono sempre considerati nomi classe.
 
-Nell'esempio seguente viene illustrato come dichiarare un puntatore a un oggetto di tipo `Account` utilizzando la parola chiave **Class** :
+Nell'esempio seguente viene illustrato come dichiarare un puntatore a un oggetto di tipo `Account` utilizzando la **`class`** parola chiave:
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-L'oggetto `Account` nell'inizializzatore (tra parentesi) nell'istruzione precedente ha ambito globale; è di tipo **Double**.
+L'oggetto `Account` nell'inizializzatore (tra parentesi) nell'istruzione precedente ha ambito globale; è di tipo **`double`** .
 
 > [!NOTE]
 > Il riutilizzo dei nomi degli identificatori come illustrato in questo esempio viene considerato uno stile di programmazione di qualità insufficiente.
 
-Per informazioni sulla dichiarazione e l'inizializzazione degli oggetti classe, vedere [classi, strutture e unioni](../cpp/classes-and-structs-cpp.md). Per informazioni sull'uso degli operatori Free-Store **New** e **Delete** , vedere [operatori new e Delete](new-and-delete-operators.md).
+Per informazioni sulla dichiarazione e l'inizializzazione degli oggetti classe, vedere [classi, strutture e unioni](../cpp/classes-and-structs-cpp.md). Per informazioni sull'uso degli **`new`** **`delete`** operatori Free-Store e, vedere [operatori new e Delete](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Nascondere nomi con ambito globale
 

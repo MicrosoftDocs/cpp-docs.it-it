@@ -16,18 +16,18 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: c3ebe642284c6ee269dbfc39985630b7d949435f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5ff2fa22c8a466252cfaf8b80dc8d56774aff58e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227153"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-**__ptr32** rappresenta un puntatore nativo in un sistema a 32 bit, mentre **__ptr64** rappresenta un puntatore nativo in un sistema a 64 bit.
+**`__ptr32`** rappresenta un puntatore nativo in un sistema a 32 bit, mentre **`__ptr64`** rappresenta un puntatore nativo in un sistema a 64 bit.
 
 Di seguito viene illustrato come dichiarare ognuno dei seguenti tipi di puntatore:
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-In un sistema a 32 bit, un puntatore dichiarato con **__ptr64** viene troncato a un puntatore a 32 bit. In un sistema a 64 bit, un puntatore dichiarato con **__ptr32** viene assegnato a un puntatore a 64 bit.
+In un sistema a 32 bit, un puntatore dichiarato con **`__ptr64`** viene troncato a un puntatore a 32 bit. In un sistema a 64 bit, un puntatore dichiarato con **`__ptr32`** viene assegnato a un puntatore a 64 bit.
 
 > [!NOTE]
-> Non è possibile usare **__ptr32** o **__ptr64** durante la compilazione con **/CLR: pure**. In caso contrario, verrà generato un errore del compilatore C2472. Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+> Non è possibile usare **`__ptr32`** o quando si esegue **`__ptr64`** la compilazione con **/CLR: pure**. In caso contrario, verrà generato un errore del compilatore C2472. Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
-Per compatibilità con le versioni precedenti, **_ptr32** e **_ptr64** sono sinonimi per **__ptr32** e **__ptr64** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+Per compatibilità con le versioni precedenti, **_ptr32** e **_ptr64** sono sinonimi per **`__ptr32`** e, **`__ptr64`** a meno che non sia specificata l'opzione del compilatore [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come dichiarare e allocare i puntatori con le parole chiave **__ptr32** e **__ptr64** .
+Nell'esempio seguente viene illustrato come dichiarare e allocare i puntatori con le **`__ptr32`** **`__ptr64`** parole chiave e.
 
 ```cpp
 #include <cstdlib>
@@ -73,7 +73,7 @@ int main()
 64
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

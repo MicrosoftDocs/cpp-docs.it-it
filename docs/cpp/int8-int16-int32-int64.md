@@ -22,18 +22,18 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: 4e793f23581f7dc62a39fcd8c5c504fb5a2ccbc9
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7888a282fffbaa2a23783c3875e02838fd0b1826
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301470"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227400"
 ---
 # <a name="__int8-__int16-__int32-__int64"></a>__int8, __int16, __int32, __int64
 
-**Sezione specifica Microsoft**
+**Specifiche di Microsoft**
 
-Le funzionalità di Microsoft C/C++ supportano i tipi Integer ridimensionati. È possibile dichiarare variabili Integer a 8, 16, 32 o 64 bit usando l'identificatore di tipo **__int**<em>n</em> , dove *n* è 8, 16, 32 o 64.
+Le funzionalità di Microsoft C/C++ supportano i tipi Integer ridimensionati. È possibile dichiarare variabili Integer a 8, 16, 32 o 64 bit usando l' **`__intN`** identificatore di tipo, dove ***`N`*** è 8, 16, 32 o 64.
 
 Nell'esempio seguente viene dichiarata una variabile per ognuno dei quattro tipi Integer ridimensionati:
 
@@ -44,13 +44,13 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-I tipi **__int8**, **__int16**e **__int32** sono sinonimi per i tipi ANSI con la stessa dimensione e sono utili per la scrittura di codice portabile che si comporta in modo identico in più piattaforme. Il tipo di dati **__int8** è sinonimo del tipo **char**, **__int16** è sinonimo del tipo **short**e **__int32** è sinonimo del tipo **int**. Il tipo di **__int64** è sinonimo del tipo **Long Long**.
+I tipi **`__int8`** , **`__int16`** e **`__int32`** sono sinonimi per i tipi ANSI con la stessa dimensione e sono utili per la scrittura di codice portabile che si comporta in modo identico in più piattaforme. Il tipo **`__int8`** di dati è sinonimo del tipo **`char`** , **`__int16`** è sinonimo del tipo **`short`** ed **`__int32`** è sinonimo del tipo **`int`** . Il **`__int64`** tipo è sinonimo del tipo **`long long`** .
 
-Per compatibilità con le versioni precedenti, **_int8**, **_int16**, **_int32**e **_int64** sono sinonimi **per __int8**, **__int16**, **__int32**e **__int64** a meno che non sia specificata l'opzione del compilatore [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+Per compatibilità con le versioni precedenti,,, **`_int8`** **`_int16`** **`_int32`** e **`_int64`** sono sinonimi per **`__int8`** , **`__int16`** , e, **`__int32`** **`__int64`** a meno che non sia specificata l'opzione del compilatore [ `/Za` \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato che un parametro __int*XX* verrà promosso a **int**:
+Nell'esempio seguente viene illustrato che un `__intN` parametro verrà promosso a **`int`** :
 
 ```cpp
 // sized_int_types.cpp
@@ -72,8 +72,6 @@ int main()
 ```Output
 func
 ```
-
-**Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

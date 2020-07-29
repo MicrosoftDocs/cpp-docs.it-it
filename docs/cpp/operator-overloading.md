@@ -1,5 +1,5 @@
 ---
-title: Overload di operatori
+title: Overload degli operatori
 ms.date: 11/04/2016
 f1_keywords:
 - operator_cpp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: a16f68088ffffd6c3cf38f5ae3adda5f2d59fb57
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 822bd5efb3125e69ff60aa42ba6419969cace403
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227231"
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 
-La parola chiave **operator** dichiara una funzione che specifica il significato di *operator-symbol* quando viene applicata alle istanze di una classe. In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload. Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.
+La **`operator`** parola chiave dichiara una funzione che specifica il significato di *operator-symbol* quando viene applicata alle istanze di una classe. In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload. Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.
 
 ## <a name="syntax"></a>Sintassi
 
-> *type* **operatore** *di tipo operatore-symbol* **(** *parameter-list* **)**
+> *tipo* **`operator`** di *operatore-symbol* **(** *parameter-list* **)**
 
 ## <a name="remarks"></a>Osservazioni
 
 È possibile ridefinire la funzione della maggior parte degli operatori incorporati globalmente o classe per classe. Gli operatori di overload vengono implementati come funzioni.
 
-Il nome di un operatore di overload è **operator** *x*, dove *x* è l'operatore visualizzato nella tabella seguente. Per eseguire l'overload dell'operatore di addizione, ad esempio, si definisce una funzione denominata **operator +** . Analogamente, per eseguire l'overload dell'operatore di addizione/assegnazione, **+=** , definire una funzione denominata **operator + =** .
+Il nome di un operatore di overload è **`operator`** *x*, dove *x* è l'operatore visualizzato nella tabella seguente. Per eseguire l'overload dell'operatore di addizione, ad esempio, si definisce una funzione denominata **operator +**. Analogamente, per eseguire l'overload dell'operatore di addizione/assegnazione, **+=** , definire una funzione denominata **operator + =**.
 
 ### <a name="redefinable-operators"></a>Operatori ridefinibili
 
@@ -79,8 +79,8 @@ Il nome di un operatore di overload è **operator** *x*, dove *x* è l'operatore
 |**&#124;=**|Assegnazione OR inclusivo bit per bit|Binary|
 |**&#124;&#124;**|OR logico|Binary|
 |**~**|Complemento di uno|Unaria|
-|**delete**|Delete|—|
-|**Nuovo**|Nuovo|—|
+|**`delete`**|Elimina|—|
+|**`new`**|Nuovo|—|
 |operatori di conversione|operatori di conversione|Unaria|
 
 <sup>1</sup> sono presenti due versioni degli operatori di incremento e decremento unari: preincrement e postincrement.
@@ -101,7 +101,7 @@ Per ulteriori informazioni, vedere [regole generali per l'overload degli operato
 
 - [Incremento e decremento](../cpp/increment-and-decrement-operator-overloading-cpp.md).
 
-- [Conversioni di tipo definite dall'utente](../cpp/user-defined-type-conversions-cpp.md)
+- [Conversioni di tipi definiti dall'utente](../cpp/user-defined-type-conversions-cpp.md)
 
 Gli operatori elencati nella tabella seguente non possono essere sottoposti a overload. La tabella include i simboli del preprocessore **#** e **##** .
 
@@ -110,7 +110,7 @@ Gli operatori elencati nella tabella seguente non possono essere sottoposti a ov
 |Operatore|Nome|
 |-|-|
 |**.**|Selezione dei membri|
-|**.&#42;**|Selezione puntatore a membro|
+|**. &#42;**|Selezione puntatore a membro|
 |**::**|Risoluzione ambito|
 |**? :**|Condizionale|
 |**#**|Preprocessore - Conversione in stringa|
@@ -125,7 +125,7 @@ pt.operator+( 3 );  // Call addition operator to add 3 to pt.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene sovraccarico l'operatore **+** per aggiungere due numeri complessi e viene restituito il risultato.
+Nell'esempio seguente viene sovraccarico l' **+** operatore per aggiungere due numeri complessi e viene restituito il risultato.
 
 ```cpp
 // operator_overloading.cpp
@@ -162,7 +162,7 @@ int main() {
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-- [Regole generali per overload di operatori](../cpp/general-rules-for-operator-overloading.md)
+- [Regole generali per l'overload degli operatori](../cpp/general-rules-for-operator-overloading.md)
 
 - [Overload degli operatori unari](../cpp/overloading-unary-operators.md)
 
@@ -178,5 +178,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

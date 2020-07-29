@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: 97ef7093aa56b41b869979e09d77fc448c6cf43d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b8c7503c7d1c1b711006415a327c360731222042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186439"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196344"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>Avviso del compilatore (livello 1) C4532
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186439"
 
 Il compilatore ha rilevato una delle parole chiave seguenti:
 
-- [continue](../../cpp/continue-statement-cpp.md)
+- [continuare](../../cpp/continue-statement-cpp.md)
 
 - [break](../../cpp/break-statement-cpp.md)
 
@@ -27,9 +27,9 @@ Il compilatore ha rilevato una delle parole chiave seguenti:
 
 causa di un salto da un blocco [__finally](../../cpp/try-finally-statement.md) o [finally](../../dotnet/finally.md) durante la terminazione anomala.
 
-Se si verifica un'eccezione e quando lo stack viene rimosso durante l'esecuzione dei gestori di terminazione (i blocchi `__finally` o finally) e il codice esce da un blocco di `__finally` prima che il blocco `__finally` termini, il comportamento non è definito. Il controllo non può tornare al codice di rimozione, pertanto è possibile che l'eccezione non venga gestita correttamente.
+Se si verifica un'eccezione e mentre lo stack viene rimosso durante l'esecuzione dei gestori di terminazione ( **`__finally`** blocchi o finally) e il codice esce da un **`__finally`** blocco prima della **`__finally`** fine del blocco, il comportamento non è definito. Il controllo non può tornare al codice di rimozione, pertanto è possibile che l'eccezione non venga gestita correttamente.
 
-Se è necessario uscire da un blocco di **__finally** , verificare prima di tutto la chiusura anomala.
+Se è necessario uscire da un **`__finally`** blocco, verificare prima di tutto la chiusura anomala.
 
 L'esempio seguente genera C4532; è sufficiente impostare come commento le istruzioni Jump per risolvere gli avvisi.
 

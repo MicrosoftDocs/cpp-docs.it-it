@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 5a430154c9ad31a9776eeb2ba569fa0da33fac81
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373550"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189675"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica
 
@@ -34,7 +34,7 @@ La *tabella codici* è la tabella codici ANSI/OEM associata alle impostazioni lo
 
 Se si usa esclusivamente la tabella codici per specificare le impostazioni locali, vengono usati paese/area e lingua predefiniti dell'utente indicati da [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). Se ad esempio si specifica `".1254"` (ANSI - Turco) come valore delle impostazioni locali per un utente configurato per la lingua inglese (Stati Uniti), le impostazioni locali archiviate sono `English_United States.1254`. Questo formato non è consigliabile perché potrebbe generare un comportamento non coerente.
 
-Il valore `C` per l'argomento *locale* specifica l'ambiente ANSI minimo per la conversione C. Le impostazioni locali `C` presuppongono che ogni tipo di dati **char** sia 1 byte e il relativo valore sia sempre minore di 256. Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione.
+Il valore `C` per l'argomento *locale* specifica l'ambiente ANSI minimo per la conversione C. Le `C` impostazioni locali presuppongono che ogni **`char`** tipo di dati sia 1 byte e il relativo valore sia sempre inferiore a 256. Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione.
 
 È possibile specificare contemporaneamente tutte le categorie di impostazioni locali per le funzioni `setlocale` e `_wsetlocale` utilizzando la categoria `LC_ALL` . È possibile impostare le categorie sulle stesse impostazioni locali oppure impostare singolarmente ogni categoria utilizzando un argomento delle impostazioni locali con il formato seguente:
 

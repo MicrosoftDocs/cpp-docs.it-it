@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ce730b8d723a839c5b509c825cff84111ca613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371467"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226919"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits (struttura)
 
@@ -34,14 +34,14 @@ struct HANDLENullTraits;
 
 Nome   | Descrizione
 ------ | ---------------------
-`Type` | Un sinonimo di HANDLE.
+`Type` | Sinonimo di HANDLE.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                  | Descrizione
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Close](#close)                     | Chiude l'handle specificato.
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Rappresenta un handle non valido.
+[HANDLENullTraits:: Close](#close)                     | Chiude l'handle specificato.
+[HANDLENullTraits:: GetInvalidValue](#getinvalidvalue) | Rappresenta un handle non valido.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,11 +49,11 @@ Nome                                                  | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers.h
+**Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
-## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits:: Close
 
 Chiude l'handle specificato.
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
+*h*<br/>
 Handle da chiudere.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'handle *h* è stato chiuso correttamente; in caso contrario, **false**.
+**`true`** se handle *h* è stato chiuso correttamente; in caso contrario, **`false`** .
 
-## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits:: GetInvalidValue
 
 Rappresenta un handle non valido.
 
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce sempre `nullptr`.
+Restituisce sempre **`nullptr`** .

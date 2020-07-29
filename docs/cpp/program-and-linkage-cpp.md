@@ -2,12 +2,12 @@
 title: Unità di conversione e collegamento (C++)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: e964a3c70c138caf8848e6a6366097cbfb90f548
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: 5a166efc7ae926f6b028c35007b0972d0a652d6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108394"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227192"
 ---
 # <a name="translation-units-and-linkage"></a>Unità di conversione e collegamento
 
@@ -44,7 +44,7 @@ In alcuni casi potrebbe essere necessario dichiarare una variabile globale o una
 
 Una *funzione Free* è una funzione definita nell'ambito globale o dello spazio dei nomi. Per impostazione predefinita, le variabili globali non const e le funzioni gratuite hanno un *collegamento esterno*. sono visibili da qualsiasi unità di conversione del programma. Pertanto, nessun altro oggetto globale può avere tale nome. Un simbolo con *collegamento interno* o *nessun collegamento* è visibile solo all'interno dell'unità di conversione in cui è dichiarato. Quando un nome dispone di un collegamento interno, lo stesso nome può essere presente in un'altra unità di conversione. Le variabili dichiarate nelle definizioni di classe o nei corpi delle funzioni non hanno alcun collegamento.
 
-È possibile forzare il collegamento interno di un nome globale dichiarando in modo esplicito come **static**. Questo limita la visibilità alla stessa unità di conversione in cui è dichiarata. In questo contesto, **static** significa qualcosa di diverso da quando applicato alle variabili locali.
+È possibile forzare il collegamento interno di un nome globale dichiarando in modo esplicito come **`static`** . Questo limita la visibilità alla stessa unità di conversione in cui è dichiarata. In questo contesto, **`static`** significa qualcosa di diverso da quando applicato alle variabili locali.
 
 Per impostazione predefinita, gli oggetti seguenti hanno un collegamento interno:
 
@@ -53,7 +53,7 @@ Per impostazione predefinita, gli oggetti seguenti hanno un collegamento interno
 - typedef
 - oggetti statici nell'ambito dello spazio dei nomi
 
-Per assegnare un collegamento esterno a un oggetto const, dichiararlo come **extern** e assegnargli un valore:
+Per assegnare un collegamento esterno a un oggetto const, dichiararlo come **`extern`** e assegnargli un valore:
 
 ```cpp
 extern const int value = 42;

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-ms.openlocfilehash: db3a9594a77a9ada971213eaea74a9842bd96a54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9370952f503850fbc296c3df912d4a0fafe163f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179341"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227348"
 ---
 # <a name="mutable-data-members-c"></a>Membri dati modificabili (C++)
 
-Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe. Se un membro dati viene dichiarato **modificabile**, è consentito assegnare un valore a questo membro dati da una funzione membro **const** .
+Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe. Se viene dichiarato un membro dati **`mutable`** , è consentito assegnare un valore a questo membro dati da una **`const`** funzione membro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,7 +25,7 @@ mutable member-variable-declaration;
 
 ## <a name="remarks"></a>Osservazioni
 
-Il codice seguente, ad esempio, verrà compilato senza errori perché `m_accessCount` è stato dichiarato come **modificabile**e pertanto può essere modificato da `GetFlag` anche se `GetFlag` è una funzione membro const.
+Il codice seguente, ad esempio, verrà compilato senza errori perché `m_accessCount` è stato dichiarato come **`mutable`** e pertanto può essere modificato da `GetFlag` anche se `GetFlag` è una funzione membro const.
 
 ```cpp
 // mutable.cpp

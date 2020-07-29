@@ -7,16 +7,16 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227023"
 ---
 # <a name="using-declaration"></a>dichiarazione using
 
-La Dichiarazione **using** introduce un nome nell'area dichiarativa in cui viene visualizzata la dichiarazione using.
+La **`using`** dichiarazione introduce un nome nell'area dichiarativa in cui viene visualizzata la dichiarazione using.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,15 +27,15 @@ using declarator-list ;
 
 ### <a name="parameters"></a>Parametri
 
-*identificatore-nome-annidato* Sequenza di nomi di spazio dei nomi, classe o enumerazione e operatori di risoluzione dell'ambito (::), terminati da un operatore di risoluzione dell'ambito. Per introdurre un nome dallo spazio dei nomi globale, è possibile usare un singolo operatore di risoluzione dell'ambito. La parola chiave **typeName** è facoltativa e può essere usata per risolvere i nomi dipendenti quando viene introdotta in un modello di classe da una classe base.
+*identificatore-nome-annidato* Sequenza di nomi di spazio dei nomi, classe o enumerazione e operatori di risoluzione dell'ambito (::), terminati da un operatore di risoluzione dell'ambito. Per introdurre un nome dallo spazio dei nomi globale, è possibile usare un singolo operatore di risoluzione dell'ambito. La parola chiave **`typename`** è facoltativa e può essere usata per risolvere i nomi dipendenti quando viene introdotta in un modello di classe da una classe base.
 
 *ID non qualificato* Espressione ID non qualificata, che può essere un identificatore, un nome di operatore di overload, un operatore di valori letterali definito dall'utente o un nome di funzione di conversione, un nome di distruttore della classe o un nome di modello e un elenco di argomenti.
 
-*elenco di dichiaratori* Elenco delimitato da virgole dei dichiaratori non *qualificati* di [**typeName**] *Nested-Name-specifier* , seguiti facoltativamente da puntini di sospensione.
+*elenco di dichiaratori* Elenco delimitato da virgole di **`typename`** dichiaratori non *qualificati* di [] *Nested-Name-specifier* , seguiti facoltativamente da puntini di sospensione.
 
 ## <a name="remarks"></a>Osservazioni
 
-Una dichiarazione using introduce un nome non qualificato come sinonimo di un'entità dichiarata altrove. Consente di usare un singolo nome da uno spazio dei nomi specifico senza qualificazione esplicita nell'area di dichiarazione in cui viene visualizzata. Questo si differenzia dalla [direttiva using](../cpp/namespaces-cpp.md#using_directives), che consente l'uso di *tutti* i nomi in uno spazio dei nomi senza qualificazione. La parola chiave **using** viene usata anche per gli [alias di tipo](../cpp/aliases-and-typedefs-cpp.md).
+Una dichiarazione using introduce un nome non qualificato come sinonimo di un'entità dichiarata altrove. Consente di usare un singolo nome da uno spazio dei nomi specifico senza qualificazione esplicita nell'area di dichiarazione in cui viene visualizzata. Questo si differenzia dalla [direttiva using](../cpp/namespaces-cpp.md#using_directives), che consente l'uso di *tutti* i nomi in uno spazio dei nomi senza qualificazione. La **`using`** parola chiave viene usata anche per gli [alias di tipo](../cpp/aliases-and-typedefs-cpp.md).
 
 ## <a name="example"></a>Esempio
 
@@ -125,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>Esempio
 
-È possibile fare riferimento ai membri dichiarati utilizzando una dichiarazione using utilizzando la qualificazione esplicita. Il prefisso `::` si riferisce allo spazio dei nomi globale.
+È possibile fare riferimento ai membri dichiarati utilizzando una dichiarazione using utilizzando la qualificazione esplicita. Il `::` prefisso fa riferimento allo spazio dei nomi globale.
 
 ```cpp
 // using_declaration3.cpp
@@ -167,7 +167,7 @@ In A::g
 
 Quando viene eseguita una dichiarazione using, il sinonimo creato dalla dichiarazione si riferisce solo alle definizioni valide nel punto della dichiarazione using. Le definizioni aggiunte a uno spazio dei nomi dopo la dichiarazione using non sono sinonimi validi.
 
-Un nome definito da una Dichiarazione **using** è un alias per il nome originale. Non influisce sul tipo, sul collegamento o su altri attributi della dichiarazione originale.
+Un nome definito da una **`using`** dichiarazione è un alias per il nome originale. Non influisce sul tipo, sul collegamento o su altri attributi della dichiarazione originale.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -213,7 +213,7 @@ void g() {
 }
 ```
 
-Nell'esempio precedente, l'istruzione `using B::i` causa la dichiarazione di un secondo `int i` nella funzione `g()`. L'istruzione `using B::f` non è in conflitto con la funzione `f(char)` perché i nomi di funzione introdotti da `B::f` hanno tipi di parametro diversi.
+Nell'esempio precedente l' `using B::i` istruzione causa la `int i` dichiarazione di un secondo nella `g()` funzione. L' `using B::f` istruzione non è in conflitto con la `f(char)` funzione perché i nomi di funzione introdotti da `B::f` presentano tipi di parametro diversi.
 
 ## <a name="example"></a>Esempio
 
@@ -327,5 +327,5 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Namespaces](../cpp/namespaces-cpp.md) (Spazi dei nomi)<br/>
+[Spazi dei nomi](../cpp/namespaces-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)
