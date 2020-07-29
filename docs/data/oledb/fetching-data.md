@@ -1,5 +1,5 @@
 ---
-title: Recupero dei dati
+title: Recupero di dati
 ms.date: 10/19/2018
 helpviewer_keywords:
 - data [C++], fetching
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 441f036d1677806e81bc419ec6a45e810e63a34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409059"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184644"
 ---
-# <a name="fetching-data"></a>Recupero dei dati
+# <a name="fetching-data"></a>Recupero di dati
 
-Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile recuperare i dati. A seconda del tipo di funzione di accesso in uso, è necessario associare le colonne.
+Dopo aver aperto gli oggetti origine dati, sessione e set di righe, è possibile recuperare i dati. A seconda del tipo di funzione di accesso in uso, potrebbe essere necessario associare le colonne.
 
 ## <a name="to-fetch-data"></a>Per recuperare i dati
 
-1. Aprire il set di righe utilizzando il metodo appropriato **aperto** comando.
+1. Aprire il set di righe utilizzando il comando **Apri** appropriato.
 
-1. Se si usa `CManualAccessor`, associare le colonne di output se non è già fatto. L'esempio seguente è tratto dal [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) esempio. Per associare le colonne, chiamare `GetColumnInfo`e quindi creare una funzione di accesso con le associazioni, come illustrato nell'esempio seguente:
+1. Se si usa `CManualAccessor` , associare le colonne di output, se non è già stato fatto. L'esempio seguente è tratto dall'esempio [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) . Per associare le colonne, chiamare `GetColumnInfo` e quindi creare una funzione di accesso con le associazioni, come illustrato nell'esempio seguente:
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -39,7 +39,7 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
     rs.Bind();
     ```
 
-1. Scrivere un **mentre** ciclo per recuperare i dati. Nel ciclo, chiamare `MoveNext` far avanzare il cursore e testare il valore restituito rispetto S_OK, come illustrato nell'esempio seguente:
+1. Scrivere un **`while`** ciclo per recuperare i dati. Nel ciclo chiamare per far `MoveNext` avanzare il cursore e testare il valore restituito rispetto a S_OK, come illustrato nell'esempio seguente:
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -49,9 +49,9 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
     }
     ```
 
-1. All'interno di **mentre** ciclo, è possibile recuperare i dati in base al tipo di funzione di accesso.
+1. All'interno del **`while`** ciclo è possibile recuperare i dati in base al tipo di funzione di accesso.
 
-   - Se si usa la [CAccessor](../../data/oledb/caccessor-class.md) (classe), è necessario un record utente che contiene i membri dati. È possibile accedere ai dati usando tali membri dati, come illustrato nell'esempio seguente:
+   - Se si utilizza la classe [CAccessor](../../data/oledb/caccessor-class.md) , è necessario disporre di un record utente contenente i membri dati. È possibile accedere ai dati usando i membri dati, come illustrato nell'esempio seguente:
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -63,7 +63,7 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
         }
         ```
 
-   - Se si usa la `CDynamicAccessor` oppure `CDynamicParameterAccessor` (classe), è possibile recuperare i dati usando le funzioni di accesso `GetValue` e `GetColumn`, come illustrato nell'esempio seguente. Se si desidera determinare il tipo di dati in uso, usare `GetType`.
+   - Se si utilizza la `CDynamicAccessor` `CDynamicParameterAccessor` classe o, è possibile recuperare i dati utilizzando le funzioni di accesso `GetValue` e `GetColumn` , come illustrato nell'esempio seguente. Se si desidera determinare il tipo di dati in uso, utilizzare `GetType` .
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -78,7 +78,7 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
         }
         ```
 
-   - Se si usa `CManualAccessor`, è necessario specificare i propri membri dati, li associano personalmente e accedervi direttamente, come illustrato nell'esempio seguente:
+   - Se si usa `CManualAccessor` , è necessario specificare i propri membri dati, associarli manualmente e accedervi direttamente, come illustrato nell'esempio seguente:
 
         ```cpp
         while (rs.MoveNext() == S_OK)

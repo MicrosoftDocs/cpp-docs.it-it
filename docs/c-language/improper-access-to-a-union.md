@@ -2,12 +2,12 @@
 title: Accesso non corretto a un'unione
 ms.date: 11/04/2016
 ms.assetid: b273d984-62a8-4003-9a87-bf0149d3f2dd
-ms.openlocfilehash: 9fd7bdc753f6359a8760e58813f9009411c1bf44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a804ed80c8f1ac2f5dd9a24f12c67e96e199b6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326131"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227829"
 ---
 # <a name="improper-access-to-a-union"></a>Accesso non corretto a un'unione
 
@@ -15,7 +15,7 @@ ms.locfileid: "62326131"
 
 Se viene dichiarata un'unione di due tipi e viene archiviato un valore, ma l'accesso all'unione viene eseguito con l'altro tipo, i risultati sono inaffidabili.
 
-Ad esempio, viene dichiarata un'unione di **float** e `int`. Un valore **float** viene archiviato, ma in seguito il programma accede al valore come `int`. In una situazione del genere il valore dipende dall'archiviazione interna di valori **float**. L'Integer non sarebbe affidabile.
+Ad esempio, **`float`** **`int`** viene dichiarata un'Unione di e. **`float`** Viene archiviato un valore, ma in seguito il programma accede al valore come **`int`** . In una situazione di questo tipo, il valore dipende dall'archiviazione interna dei **`float`** valori. L'Integer non sarebbe affidabile.
 
 ## <a name="see-also"></a>Vedere anche
 

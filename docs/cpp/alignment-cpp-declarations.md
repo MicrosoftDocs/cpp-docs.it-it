@@ -1,20 +1,20 @@
 ---
-title: Alignment
-description: Modalità di specifica dell'allineamento dei dati C++in modern.
+title: Allineamento
+description: Modalità di specifica dell'allineamento dei dati nel linguaggio C++ moderno.
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 7f6bef061fee41389bad644d9ac5244f5644da76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076118"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227647"
 ---
-# <a name="alignment"></a>Alignment
+# <a name="alignment"></a>Allineamento
 
-Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore allinea i membri della classe e dello struct sul valore di dimensione: `bool` e `char` sui limiti di 1 byte, `short` su limiti di 2 byte, `int`, `long`e `float` su limiti di 4 byte e `long long`, `double`e `long double` sui limiti di 8 byte.
+Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore allinea i membri della classe e dello struct sul relativo valore di dimensione: **`bool`** e **`char`** sui limiti di 1 byte, **`short`** sui limiti di 2 byte,, **`int`** **`long`** e **`float`** sui limiti di 4 byte, nonché **`long long`** **`double`** **`long double`** sui limiti di 8 byte, e.
 
-Nella maggior parte degli scenari, non è mai necessario preoccuparsi dell'allineamento perché l'allineamento predefinito è già ottimale. In alcuni casi, tuttavia, è possibile ottenere miglioramenti significativi delle prestazioni o risparmi di memoria, specificando un allineamento personalizzato per le strutture di dati. Prima di Visual Studio 2015 è possibile usare le parole chiave specifiche di Microsoft `__alignof` e `declspec(alignas)` per specificare un allineamento maggiore rispetto a quello predefinito. A partire da Visual Studio 2015 è necessario usare le parole chiave standard C++ 11 **alignof** e **aligns** per la massima portabilità del codice. Le nuove parole chiave si comportano nello stesso modo in cui si trovino le estensioni specifiche di Microsoft. La documentazione relativa a tali estensioni si applica anche alle nuove parole chiave. Per ulteriori informazioni, vedere [operatore __alignof](../cpp/alignof-operator.md) e [Allinea](../cpp/align-cpp.md). Lo C++ standard non specifica il comportamento di compressione per l'allineamento sui limiti inferiori rispetto al valore predefinito del compilatore per la piattaforma di destinazione, quindi è comunque necessario usare Microsoft #pragma [Pack](../preprocessor/pack.md) in questo caso.
+Nella maggior parte degli scenari, non è mai necessario preoccuparsi dell'allineamento perché l'allineamento predefinito è già ottimale. In alcuni casi, tuttavia, è possibile ottenere miglioramenti significativi delle prestazioni o risparmi di memoria, specificando un allineamento personalizzato per le strutture di dati. Prima di Visual Studio 2015 è possibile usare le parole chiave specifiche di Microsoft **`__alignof`** e **`__declspec(align)`** specificare un allineamento maggiore rispetto a quello predefinito. A partire da Visual Studio 2015 è necessario usare le parole chiave standard di C++ 11 **`alignof`** e la **`alignas`** portabilità del codice massima. Le nuove parole chiave si comportano nello stesso modo in cui si trovino le estensioni specifiche di Microsoft. La documentazione relativa a tali estensioni si applica anche alle nuove parole chiave. Per ulteriori informazioni, vedere [ `alignof` operator](../cpp/alignof-operator.md) e [align](../cpp/align-cpp.md). Lo standard C++ non specifica il comportamento di compressione per l'allineamento sui limiti inferiori rispetto al valore predefinito del compilatore per la piattaforma di destinazione, quindi è necessario usare Microsoft [`#pragma pack`](../preprocessor/pack.md) in questo caso.
 
 Usare la [classe aligned_storage](../standard-library/aligned-storage-class.md) per l'allocazione di memoria di strutture di dati con allineamenti personalizzati. La [classe aligned_union](../standard-library/aligned-union-class.md) è per specificare l'allineamento per le unioni con costruttori o distruttori non semplici.
 
@@ -28,7 +28,7 @@ Le CPU eseguono istruzioni che operano sui dati archiviati in memoria. I dati ve
 
 I compilatori tentano di eseguire allocazioni di dati in modo da impedire l'allineamento dei dati.
 
-Per i tipi di dati semplici il compilatore assegna indirizzi che sono multipli delle dimensioni in byte del tipo di dati. Il compilatore, ad esempio, assegna indirizzi a variabili di tipo `long` che sono multipli di 4, impostando i 2 bit inferiori dell'indirizzo su zero.
+Per i tipi di dati semplici il compilatore assegna indirizzi che sono multipli delle dimensioni in byte del tipo di dati. Ad esempio, il compilatore assegna indirizzi a variabili di tipo **`long`** che sono multipli di 4, impostando i 2 bit inferiori dell'indirizzo su zero.
 
 Il compilatore adatta anche le strutture in modo da allineare in modo naturale ogni elemento della struttura. Si consideri la struttura `struct x_` nell'esempio di codice seguente:
 
@@ -59,17 +59,17 @@ struct x_
 } bar[3];
 ```
 
-Entrambe le dichiarazioni restituiscono `sizeof(struct x_)` di 12 byte.
+Entrambe le dichiarazioni restituiscono `sizeof(struct x_)` 12 byte.
 
 La seconda dichiarazione include due elementi di spaziatura interna:
 
-1. `char _pad0[3]` allineare il membro `int b` in un limite di 4 byte.
+1. `char _pad0[3]`per allineare il `int b` membro a un limite di 4 byte.
 
-1. `char _pad1[1]` allineare gli elementi di matrice della struttura `struct _x bar[3];` su un limite di quattro byte.
+1. `char _pad1[1]`per allineare gli elementi della matrice della struttura a `struct _x bar[3];` un limite di quattro byte.
 
 La spaziatura interna allinea gli elementi di `bar[3]` in modo da consentire l'accesso naturale.
 
-Nell'esempio di codice seguente viene illustrato il layout della matrice `bar[3]`:
+Nell'esempio di codice seguente viene illustrato il `bar[3]` layout della matrice:
 
 ```Output
 adr offset   element
@@ -96,13 +96,13 @@ adr offset   element
 0x0023   char _pad1[1];
 ```
 
-## <a name="alignof-and-alignas"></a>alignof e alignas
+## <a name="alignof-and-alignas"></a>`alignof` e `alignas`
 
-L'identificatore di tipo **Alignes** è un modo C++ portabile e standard per specificare l'allineamento personalizzato di variabili e tipi definiti dall'utente. L'operatore **alignof** è analogo a un metodo standard e portabile per ottenere l'allineamento di una variabile o di un tipo specificato.
+L' **`alignas`** identificatore di tipo è un metodo standard portabile in C++ per specificare l'allineamento personalizzato di variabili e tipi definiti dall'utente. L' **`alignof`** operatore è analogo a un metodo standard e portabile per ottenere l'allineamento di una variabile o di un tipo specificato.
 
 ## <a name="example"></a>Esempio
 
-È possibile usare **aligns** in una classe, uno struct o un'Unione o sui singoli membri. Quando vengono rilevati più identificatori **aligns** , il compilatore sceglierà quello più rigido, ovvero quello con il valore più grande.
+È possibile utilizzare **`alignas`** in una classe, uno struct o un'Unione o in singoli membri. Quando **`alignas`** vengono rilevati più identificatori, il compilatore sceglierà quello più rigido, ovvero quello con il valore più grande.
 
 ```cpp
 // alignas_alignof.cpp

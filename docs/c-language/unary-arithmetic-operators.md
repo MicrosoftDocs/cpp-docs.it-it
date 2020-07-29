@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logical negation
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
-ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0acbd98e25c05fee6fb5217bf00d80287460dbeb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290664"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189922"
 ---
 # <a name="unary-arithmetic-operators"></a>Operatori aritmetici unari
 
@@ -29,7 +29,7 @@ Gli operatori più unario, di negazione aritmetica, complemento e negazione logi
 |**+**|L'operatore più unario che precede un'espressione tra parentesi forza il raggruppamento delle operazioni incluse. Viene utilizzato con le espressioni che includono più di un operatore binario associativo o commutativo. L'operando deve disporre di un tipo aritmetico. Il risultato corrisponde al valore dell'operando. Un operando integrale viene sottoposto a una promozione a intero. Il tipo del risultato corrisponde al tipo dell'operando promosso.|
 |**-**|L'operatore di negazione aritmetica produce il corrispondente negativo (il complemento a due) del relativo operando. L'operando deve essere un valore integrale o a virgola mobile. Questo operatore esegue le consuete conversioni aritmetiche.|
 |`~`|L'operatore di complemento bit per bit (o NOT bit per bit) produce il complemento bit per bit del relativo operando. L'operando deve essere di tipo integrale. Questo operatore esegue le consuete conversioni aritmetiche; il tipo del risultato corrisponde al tipo dell'operando dopo la conversione.|
-|**!**|L'operatore di negazione logica (NOT logico) produce il valore 0 se il suo operando è true (diverso da zero) e il valore 1 se il suo operando è false (0). Il risultato è di tipo `int`. L'operando deve essere un valore integrale, a virgola mobile o di puntatore.|
+|**!**|L'operatore di negazione logica (NOT logico) produce il valore 0 se il suo operando è true (diverso da zero) e il valore 1 se il suo operando è false (0). Il risultato è di **`int`** tipo. L'operando deve essere un valore integrale, a virgola mobile o di puntatore.|
 
 Le operazioni aritmetiche unarie sui puntatori non sono valide.
 

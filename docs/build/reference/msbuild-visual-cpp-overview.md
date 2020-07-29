@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 010fa244ed77ea782fa76be959c58ff1e1b254a9
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166719"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190494"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Elementi interni di MSBuild per i progetti C++
 
@@ -23,47 +23,47 @@ Per impostazione predefinita, i file di supporto di Visual Studio primari si tro
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*versione*\\VCTargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *versione* \\ VCTargets\\
 
   Contiene i file di destinazione (con estensione targets) e i file di proprietà (con estensione props) primari che vengono usati dalle destinazioni. Per impostazione predefinita, la macro $(VCTargetsPath) fa riferimento a questa directory. Il segnaposto *versione* si riferisce alla versione di Visual Studio: V160 per visual studio 2019, carotatrice V150 per visual studio 2017.
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*versione*\\piattaforme\\VCTargets\\*Platform*\\
+- % VSINSTALLDIR% MSBuild \\ \\ piattaforma Microsoft VC \\ *versione* \\ VCTargets \\ \\ *Platforms*\\
 
   Contiene i file di destinazione e proprietà specifici della piattaforma che sostituiscono le destinazioni e le proprietà nella relativa directory padre. Questa directory contiene anche una DLL che definisce le attività che vengono usate dalle destinazioni in questa directory. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64.
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*versione*\\VCTargets\\piattaforme\\*Platform*\\PlatformToolsets\\*set di strumenti*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *versione* \\ VCTargets \\ piattaforme \\ *piattaforma* \\ PlatformToolsets \\ *set di strumenti*\\
 
   Contiene le directory che consentono di compilare applicazioni C++ usando il *set di strumenti* specificato. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64. Il segnaposto del *set* di strumenti rappresenta la sottodirectory del set di strumenti.
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\
+- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ VCTargets\\
 
   Contiene i file di destinazione (con estensione targets) e i file di proprietà (con estensione props) primari che vengono usati dalle destinazioni. Per impostazione predefinita, la macro $(VCTargetsPath) fa riferimento a questa directory.
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\*platforms\\platform*\\
+- % VSINSTALLDIR% Common7 \\ \\ piattaforma IDE \\ VC \\ VCTargets \\ *Platforms*\\
 
   Contiene i file di destinazione e proprietà specifici della piattaforma che sostituiscono le destinazioni e le proprietà nella relativa directory padre. Questa directory contiene anche una DLL che definisce le attività che vengono usate dalle destinazioni in questa directory. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64.
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\Platforms\\*Platform*\\PlatformToolsets\\*set di strumenti*\\
+- % VSINSTALLDIR% Common7 \\ del \\ \\ set di \\ \\ *platform* \\ \\ *strumenti* della piattaforma VCTargets piattaforme IDE VC\\
 
   Contiene le directory che consentono di compilare applicazioni C++ usando il *set di strumenti* specificato. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64. Il segnaposto del *set* di strumenti rappresenta la sottodirectory del set di strumenti.
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 e versioni precedenti
 
-- *unità*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp (x86)\\v 4.0\\*versione*\\
+- *unità*: \\ programmi *(x86)* \\ MSBuild \\ Microsoft. cpp (x86) \\ v 4.0 \\ *versione*\\
 
   Contiene i file di destinazione (con estensione targets) e i file di proprietà (con estensione props) primari che vengono usati dalle destinazioni. Per impostazione predefinita, la macro $(VCTargetsPath) fa riferimento a questa directory.
 
-- *unità*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\*versione*\\*Platforms\\Platform*\\
+- *unità*: \\ programmi *(x86)* \\ MSBuild \\ Microsoft. cpp \\ v 4.0 \\ *versione* \\ piattaforme \\ *Platform*\\
 
   Contiene i file di destinazione e proprietà specifici della piattaforma che sostituiscono le destinazioni e le proprietà nella relativa directory padre. Questa directory contiene anche una DLL che definisce le attività che vengono usate dalle destinazioni in questa directory. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64.
 
-- *unità*:\\programmi *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\*versione*\\piattaforme\\*piattaforma*\\PlatformToolsets\\*set di strumenti*\\
+- *unità*: \\ programmi *(x86)* \\ MSBuild \\ Microsoft. cpp \\ v 4.0 \\ *versione* \\ piattaforme \\ *piattaforma* \\ PlatformToolsets set di \\ *strumenti*\\
 
   Contiene le directory che consentono di compilare applicazioni C++ usando il *set di strumenti* specificato. Il segnaposto *Version* è v110 per visual Studio 2012, V120 per Visual Studio 2013 e V140 per visual studio 2015. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64. Il segnaposto del *set* di strumenti rappresenta la sottodirectory del set di strumenti. Ad esempio, è V140 per la creazione di app di Windows usando il set di strumenti di Visual Studio 2015. In alternativa, v120_xp compilare per Windows XP utilizzando il set di strumenti di Visual Studio 2013.
 
-- *unità*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\*Platforms\\Platform*\\PlatformToolsets\\*set di strumenti*\\
+- *unità*: \\ programmi *(x86)* \\ MSBuild \\ Microsoft. cpp \\ v 4.0 Platforms \\ \\ *Platform* \\ PlatformToolsets \\ *set di strumenti*\\
 
   I percorsi che consentono alla compilazione di generare applicazioni Visual Studio 2008 o Visual Studio 2010 non includono la *versione*. In queste versioni, il segnaposto della *piattaforma* rappresenta la sottodirectory Itanium, Win32 o x64. Il segnaposto *set di strumenti* rappresenta la sottodirectory del set di strumenti v90 o v100.
 
@@ -75,7 +75,7 @@ Le directory dei file di supporto contengono file con queste estensioni:
 | --------- | ----------- |
 | .targets | Contiene elementi XML `Target` che specificano le attività eseguite dalla destinazione. Può inoltre contenere elementi `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup` ed elementi `Item` definiti dall'utente utilizzabili per assegnare file e opzioni della riga di comando ai parametri delle attività.<br /><br /> Per altre informazioni, vedere [Elemento Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild). |
 | .props | Contiene elementi `Property Group` ed elementi XML `Property` definiti dall'utente che specificano le impostazioni di file e parametri usate durante una compilazione.<br /><br /> Può inoltre contenere elementi `ItemDefinitionGroup` ed elementi XML `Item` definiti dall'utente che specificano impostazioni aggiuntive. Gli elementi definiti in un gruppo di definizioni di elementi sono simili alle proprietà, ma non è possibile accedervi dalla riga di comando. I file di progetto di Visual Studio usano spesso gli elementi al posto delle proprietà per rappresentare le impostazioni.<br /><br /> Per altre informazioni, vedere [elemento ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [elemento ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)e [elemento Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild). |
-| xml | Contiene elementi XML che dichiarano e inizializzano gli elementi dell'interfaccia utente IDE. Ad esempio, le finestre delle proprietà, le pagine delle proprietà, i controlli TextBox e i controlli ListBox.<br /><br /> I file con estensione xml supportano direttamente l'IDE, ma non MSBuild. Tuttavia, i valori delle proprietà dell'IDE vengono assegnati agli elementi e alle proprietà di compilazione.<br /><br /> La maggior parte dei file con estensione xml si trova in una sottodirectory specifica per le impostazioni locali. Ad esempio, i file per l'area inglese-Stati Uniti si trovano in $ (VCTargetsPath)\\1033\\. |
+| xml | Contiene elementi XML che dichiarano e inizializzano gli elementi dell'interfaccia utente IDE. Ad esempio, le finestre delle proprietà, le pagine delle proprietà, i controlli TextBox e i controlli ListBox.<br /><br /> I file con estensione xml supportano direttamente l'IDE, ma non MSBuild. Tuttavia, i valori delle proprietà dell'IDE vengono assegnati agli elementi e alle proprietà di compilazione.<br /><br /> La maggior parte dei file con estensione xml si trova in una sottodirectory specifica per le impostazioni locali. Ad esempio, i file per l'area inglese-Stati Uniti si trovano in $ (VCTargetsPath) \\ 1033 \\ . |
 
 ## <a name="user-targets-and-properties"></a>Proprietà e destinazioni degli utenti
 
@@ -99,30 +99,30 @@ Ad esempio, impostare la proprietà `PreferredToolArchitecture` su `x64` per usa
 
 ### <a name="useenv-property"></a>Proprietà UseEnv
 
-Per impostazione predefinita, le impostazioni specifiche della piattaforma per il progetto corrente sostituiscono le variabili di ambiente PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION e PLATFORM. Impostare la proprietà `UseEnv` su **true** per garantire che non venga eseguito l'override delle variabili di ambiente.
+Per impostazione predefinita, le impostazioni specifiche della piattaforma per il progetto corrente sostituiscono le variabili di ambiente PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION e PLATFORM. Impostare la `UseEnv` proprietà su **`true`** per garantire che non venga eseguito l'override delle variabili di ambiente.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
-### <a name="targets"></a>Destinazioni
+### <a name="targets"></a>Targets
 
-Sono disponibili centinaia di destinazioni nei file di supporto di Visual Studio. Tuttavia, quasi tutte sono destinazioni orientate al sistema che l'utente può ignorare. La maggior parte delle destinazioni di sistema sono precedute da un carattere di sottolineatura (`_`) o hanno un nome che inizia con "PrepareFor", "Compute", "before", "After", "pre" o "post".
+Sono disponibili centinaia di destinazioni nei file di supporto di Visual Studio. Tuttavia, quasi tutte sono destinazioni orientate al sistema che l'utente può ignorare. La maggior parte delle destinazioni di sistema sono precedute da un carattere di sottolineatura ( `_` ) o hanno un nome che inizia con "PrepareFor", "Compute", "before", "After", "pre" o "post".
 
 Nella tabella seguente sono elencate diverse destinazioni utili orientate all'utente.
 
 | Destinazione | Descrizione |
 | ------ | ----------- |
 | BscMake | Esegue lo strumento Microsoft Browse Information Maintenance Utility, bscmake.exe. |
-| Compila | Compila il progetto.<br /><br /> Questa destinazione è l'impostazione predefinita per un progetto. |
+| Compilazione | Compila il progetto.<br /><br /> Questa destinazione è l'impostazione predefinita per un progetto. |
 | ClCompile | Esegue lo strumento compilatore MSVC, cl.exe. |
-| Pulisci | Elimina i file di compilazione temporanei e intermedi. |
+| Clean | Elimina i file di compilazione temporanei e intermedi. |
 | Lib | Esegue lo strumento di gestione librerie Microsoft a 32 bit, lib.exe. |
 | Collegamento | Esegue lo strumento linker MSVC, link.exe. |
 | ManifestResourceCompile | Estrae un elenco di risorse da un manifesto e quindi esegue lo strumento Compilatore di risorse di Microsoft Windows, rc.exe. |
 | Midl | Esegue lo strumento compilatore MIDL (Microsoft Interface Definition Language), midl.exe. |
-| Ricompila | Pulisce e quindi compila il progetto. |
+| Ricompilazione | Pulisce e quindi compila il progetto. |
 | ResourceCompile | Esegue lo strumento Compilatore di risorse di Microsoft Windows, rc.exe. |
 | XdcMake | Esegue lo strumento Documentazione XML, xdcmake.exe. |
-| Xsd | Esegue lo strumento XML Schema Definition, Xsd.exe. *Vedere la nota seguente.* |
+| Xsd | Esegue lo strumento XML Schema Definition, Xsd.exe. *Vedere la nota che segue.* |
 
 > [!NOTE]
 > In Visual Studio 2017 e versioni successive il supporto dei progetti C++ per i file **xsd** è deprecato. È comunque possibile usare **Microsoft.VisualC.CppCodeProvider** aggiungendo **CppCodeProvider.dll** manualmente alla Global Assembly Cache.
@@ -130,14 +130,14 @@ Nella tabella seguente sono elencate diverse destinazioni utili orientate all'ut
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti alle attività MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
-\ [attività BSCMAKE](/visualstudio/msbuild/bscmake-task)
-\ [attività CL](/visualstudio/msbuild/cl-task)
-\ [attività CPPClean](/visualstudio/msbuild/cppclean-task)
-\ [attività lib](/visualstudio/msbuild/lib-task)
-\ [attività di collegamento](/visualstudio/msbuild/link-task)
-\ [attività MIDL](/visualstudio/msbuild/midl-task)
-\ [attività MT](/visualstudio/msbuild/mt-task)
-\ [attività RC](/visualstudio/msbuild/rc-task)
-\ [attività setenv](/visualstudio/msbuild/setenv-task)
-\ [attività VCMessage](/visualstudio/msbuild/vcmessage-task)
+[Attività BscMake](/visualstudio/msbuild/bscmake-task)\
+[Attività CL](/visualstudio/msbuild/cl-task)\
+[Attività CPPClean](/visualstudio/msbuild/cppclean-task)\
+[Attività LIB](/visualstudio/msbuild/lib-task)\
+[Attività di collegamento](/visualstudio/msbuild/link-task)\
+[MIDL (attività)](/visualstudio/msbuild/midl-task)\
+[Attività MT](/visualstudio/msbuild/mt-task)\
+[Attività RC](/visualstudio/msbuild/rc-task)\
+[Attività SetEnv](/visualstudio/msbuild/setenv-task)\
+[Attività VCMessage](/visualstudio/msbuild/vcmessage-task)\
 [Attività XDCMake](/visualstudio/msbuild/xdcmake-task)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d477e33def7168d01f9c5f8a64579fed0b497eb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346106"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190065"
 ---
 # <a name="typedef-declarations"></a>Dichiarazioni typedef
 
@@ -30,18 +30,18 @@ Una dichiarazione typedef viene interpretata come una variabile o una dichiarazi
 &nbsp;&nbsp;&nbsp;&nbsp;*Type-Qualifier declaration-specifiers*<sub>opz</sub>
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**
+&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**vuoto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**breve**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lungo**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**doppio**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**con segno**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`void`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`char`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`short`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`long`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`float`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`double`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`signed`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificatore enum*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
@@ -49,7 +49,7 @@ Una dichiarazione typedef viene interpretata come una variabile o una dichiarazi
 *typedef-nome*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificatore*
 
-Si noti che una dichiarazione typedef non crea tipi. Crea sinonimi per i tipi esistenti o nomi per tipi che possono essere specificati in altri modi. Quando un nome di typedef viene utilizzato come identificatore di tipo, può essere combinato con certi identificatori di tipo, ma non altri. I modificatori accettabili sono **const** e `volatile`.
+Si noti che una dichiarazione typedef non crea tipi. Crea sinonimi per i tipi esistenti o nomi per tipi che possono essere specificati in altri modi. Quando un nome di typedef viene utilizzato come identificatore di tipo, può essere combinato con certi identificatori di tipo, ma non altri. I modificatori accettabili includono **`const`** e **`volatile`** .
 
 I nomi di typedef condividono lo spazio dei nomi con identificatori comuni. Per altre informazioni, vedere [Spazi dei nomi](../c-language/name-spaces.md). Pertanto, un programma può avere un nome di typedef e un identificatore in ambito locale dello stesso nome. Ad esempio:
 

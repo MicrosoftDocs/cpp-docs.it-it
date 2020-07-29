@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 495dc3cf77df79336af364eb80ea7edf17b54400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334565"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227868"
 ---
 # <a name="function-calls"></a>Chiamate di funzioni
 
@@ -20,7 +20,7 @@ Una *chiamata di funzione* è un'espressione che trasferisce il controllo e gli 
 
 *espressione* (*elenco di espressioni*<sub>opt</sub>)
 
-dove *expression* è un nome di funzione o restituisce un indirizzo della funzione e *expression-list* è un elenco di espressioni (separate da virgole). I valori di queste ultime espressioni sono gli argomenti passati alla funzione. Se la funzione non restituisce un valore, dichiararla come funzione che restituisce `void`.
+dove *expression* è un nome di funzione o restituisce un indirizzo della funzione e *expression-list* è un elenco di espressioni (separate da virgole). I valori di queste ultime espressioni sono gli argomenti passati alla funzione. Se la funzione non restituisce un valore, dichiararla come funzione che restituisce **`void`** .
 
 Se prima della chiamata di funzione esiste una dichiarazione, ma non viene fornita alcuna informazione relativa ai parametri, tutti gli argomenti non dichiarati subiscono semplicemente le conversioni aritmetiche normali.
 
@@ -31,7 +31,7 @@ L'unico requisito per qualsiasi chiamata di funzione è rappresentato dal fatto 
 
 ## <a name="example"></a>Esempio
 
-In questo esempio sono illustrate le chiamate di funzione definite da un'istruzione `switch`:
+In questo esempio vengono illustrate le chiamate di funzione chiamate da un' **`switch`** istruzione:
 
 ```
 int main()
@@ -81,9 +81,9 @@ work( count, lift );
 
 passa una variabile di tipo Integer, `count`, e l'indirizzo della funzione `lift` alla funzione `work`. Si noti che l'indirizzo della funzione viene passato semplicemente specificando l'identificatore della funzione, che restituisce un'espressione puntatore. Per utilizzare un identificatore di funzione in questo modo, la funzione deve essere dichiarata o definita prima che l'identificatore venga utilizzato, altrimenti l'identificatore non è riconosciuto. In questo caso, un prototipo per `work` viene fornito all'inizio della funzione `main`.
 
-Il parametro `function` in `work` viene dichiarato come puntatore a una funzione che accetta un argomento `int` e restituisce un valore **long**. Le parentesi che racchiudono il nome di parametro sono obbligatorie. Senza di esse la dichiarazione specificherebbe una funzione che restituisce un puntatore a un valore **long**.
+Il parametro `function` in `work` viene dichiarato come puntatore a una funzione che accetta un **`int`** argomento e restituisce un **`long`** valore. Sono necessarie le parentesi intorno al nome del parametro. senza di esse, la dichiarazione specifica una funzione che restituisce un puntatore a un **`long`** valore.
 
-La funzione `work` chiama la funzione selezionata dall'interno del ciclo **for** tramite la chiamata di funzione seguente:
+La funzione `work` chiama la funzione selezionata dall'interno del **`for`** ciclo usando la chiamata di funzione seguente:
 
 ```
 ( *function )( i );

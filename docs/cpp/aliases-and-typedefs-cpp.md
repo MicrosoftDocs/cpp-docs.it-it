@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 7a45c4570341aca056b9d4c30ea496317a1ac96f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6054b7119614d9325bd099dd39b8aa1365d97ed7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181564"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227673"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias e typedef (C++)
 
@@ -23,15 +23,15 @@ using identifier = type;
 
 ## <a name="remarks"></a>Osservazioni
 
-*identifier*<br/>
-Nome dell'alias
+*identificatore*<br/>
+Nome dell'alias.
 
 *type*<br/>
 Identificatore di tipo per il quale si crea un alias.
 
 Un alias non introduce un nuovo tipo e non può modificare il significato di un nome di tipo esistente.
 
-La forma più semplice di un alias è equivalente al meccanismo **typedef** di c++ 03:
+La forma più semplice di un alias è equivalente al **`typedef`** meccanismo di c++ 03:
 
 ```cpp
 // C++11
@@ -70,7 +70,7 @@ void actual_function(int arg) { /* some code */ }
 func fptr = &actual_function;
 ```
 
-Una limitazione del meccanismo **typedef** è che non funziona con i modelli. Tuttavia, la sintassi di alias di tipo in C++11 consente la creazione di modelli di alias:
+Una limitazione del **`typedef`** meccanismo è che non funziona con i modelli. Tuttavia, la sintassi di alias di tipo in C++11 consente la creazione di modelli di alias:
 
 ```cpp
 template<typename T> using ptr = T*;
@@ -81,7 +81,7 @@ ptr<int> ptr_int;
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare un modello di alias con un allocatore personalizzato, in questo caso un tipo intero vettoriale. Per creare un alias appropriato per nascondere gli elenchi di parametri complessi nel codice funzionale principale, è possibile sostituire qualsiasi tipo per **int** . Usando l'allocatore personalizzato nel codice è possibile migliorare la leggibilità e ridurre il rischio di introdurre bug causati da errori di battitura.
+L'esempio seguente illustra come usare un modello di alias con un allocatore personalizzato, in questo caso un tipo intero vettoriale. Per **`int`** creare un alias appropriato per nascondere gli elenchi di parametri complessi nel codice funzionale principale, è possibile sostituire qualsiasi tipo per. Usando l'allocatore personalizzato nel codice è possibile migliorare la leggibilità e ridurre il rischio di introdurre bug causati da errori di battitura.
 
 ```cpp
 #include <stdlib.h>
@@ -141,13 +141,13 @@ int main ()
 
 ## <a name="typedefs"></a>Typedef
 
-Una Dichiarazione **typedef** introduce un nome che, all'interno del relativo ambito, diventa un sinonimo del tipo fornito dalla parte della dichiarazione del *tipo* .
+Una **`typedef`** dichiarazione introduce un nome che, all'interno dell'ambito, diventa un sinonimo del tipo fornito dalla parte della dichiarazione di *tipo* .
 
 È possibile usare le dichiarazioni typedef per costruire nomi più brevi o più significativi per i tipi già definiti dal linguaggio o per i tipi dichiarati. I nomi di typedef consentono di incapsulare dettagli di implementazione che possono cambiare.
 
-Diversamente dalle dichiarazioni di **classe**, **struct**, **Union**e **enum** , le dichiarazioni **typedef** non introducono nuovi tipi, ma introducono nuovi nomi per i tipi esistenti.
+Diversamente dalle **`class`** **`struct`** dichiarazioni,, **`union`** e, le **`enum`** **`typedef`** dichiarazioni non introducono nuovi tipi, ma introducono nuovi nomi per i tipi esistenti.
 
-I nomi dichiarati con **typedef** occupano lo stesso spazio dei nomi degli altri identificatori (ad eccezione delle etichette di istruzione). Tali nomi pertanto non possono usare lo stesso identificatore di un nome dichiarato in precedenza, tranne che in una dichiarazione di tipo classe. Prendere in considerazione gli esempi seguenti:
+I nomi dichiarati utilizzando **`typedef`** occupano lo stesso spazio dei nomi degli altri identificatori (ad eccezione delle etichette di istruzione). Tali nomi pertanto non possono usare lo stesso identificatore di un nome dichiarato in precedenza, tranne che in una dichiarazione di tipo classe. Prendere in considerazione gli esempi seguenti:
 
 ```cpp
 // typedef_names1.cpp
@@ -156,7 +156,7 @@ typedef unsigned long UL;   // Declare a typedef name, UL.
 int UL;                     // C2377: redefined.
 ```
 
-Le regole per nascondere i nomi relative ad altri identificatori regolano anche la visibilità dei nomi dichiarati con **typedef**. Di conseguenza, l'esempio seguente è valido in C++.
+Le regole per nascondere i nomi relative ad altri identificatori regolano anche la visibilità dei nomi dichiarati tramite **`typedef`** . Di conseguenza, l'esempio seguente è valido in C++.
 
 ```cpp
 // typedef_names2.cpp
@@ -212,7 +212,7 @@ int;  // Illegal declaration
 
 ### <a name="examples"></a>Esempi
 
-Un utilizzo delle dichiarazioni **typedef** consiste nel rendere le dichiarazioni più uniformi e compatti. Ad esempio:
+Un uso delle **`typedef`** dichiarazioni è quello di rendere le dichiarazioni più uniformi e compatti. Ad esempio:
 
 ```cpp
 typedef char CHAR;          // Character type.
@@ -222,7 +222,7 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"
 ```
 
-Per usare **typedef** per specificare tipi fondamentali e derivati nella stessa dichiarazione, è possibile separare i dichiaratori con virgole. Ad esempio:
+Per usare **`typedef`** per specificare tipi fondamentali e derivati nella stessa dichiarazione, è possibile separare i dichiaratori con virgole. Ad esempio:
 
 ```cpp
 typedef char CHAR, *PSTR;
@@ -234,7 +234,7 @@ L'esempio seguente fornisce il tipo `DRAWF` per una funzione che non restituisce
 typedef void DRAWF( int, int );
 ```
 
-Dopo l'istruzione **typedef** precedente, la dichiarazione
+Dopo l' **`typedef`** istruzione precedente, la dichiarazione
 
 ```cpp
 DRAWF box;
@@ -246,7 +246,7 @@ sarà equivalente alla dichiarazione
 void box( int, int );
 ```
 
-**typedef** viene spesso combinato con **struct** per dichiarare e assegnare un nome ai tipi definiti dall'utente:
+**`typedef`** viene spesso combinato con **`struct`** per dichiarare e assegnare un nome ai tipi definiti dall'utente:
 
 ```cpp
 // typedef_specifier2.cpp
@@ -273,7 +273,7 @@ int main()
 
 ### <a name="re-declaration-of-typedefs"></a>Ridichiarazione di typedef
 
-La Dichiarazione **typedef** può essere usata per dichiarare nuovamente lo stesso nome per fare riferimento allo stesso tipo. Ad esempio:
+La **`typedef`** dichiarazione può essere usata per dichiarare nuovamente lo stesso nome per fare riferimento allo stesso tipo. Ad esempio:
 
 ```cpp
 // FILE1.H
@@ -287,9 +287,9 @@ typedef char CHAR;
 #include "file2.h"   // OK
 ```
 
-Programma *PROG. CPP* include due file di intestazione che contengono entrambe le dichiarazioni **typedef** per il nome `CHAR`. Se entrambe le dichiarazioni si riferiscono allo stesso tipo, tale ridichiarazione è accettabile.
+Programma *PROG. CPP* include due file di intestazione, entrambi contenenti **`typedef`** dichiarazioni per il nome `CHAR` . Se entrambe le dichiarazioni si riferiscono allo stesso tipo, tale ridichiarazione è accettabile.
 
-Un **typedef** non può ridefinire un nome dichiarato in precedenza come tipo diverso. Se quindi *file2. H* contiene
+Un oggetto **`typedef`** non può ridefinire un nome dichiarato in precedenza come tipo diverso. Se quindi *file2. H* contiene
 
 ```cpp
 // FILE2.H
@@ -309,9 +309,9 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;
 ```
 
-### <a name="typedefs-in-c-vs-c"></a>typedef in C++ vs. C
+### <a name="typedefs-in-c-vs-c"></a>typedef in C++ rispetto a C
 
-L'utilizzo dell'identificatore **typedef** con i tipi di classe è supportato in gran parte a causa della procedura ANSI C della dichiarazione di strutture senza nome nelle dichiarazioni **typedef** . Ad esempio, molti programmatori C utilizzano le operazioni seguenti:
+L'utilizzo dell' **`typedef`** identificatore con i tipi di classe è supportato in gran parte grazie alla procedura ANSI C relativa alla dichiarazione di strutture senza nome nelle **`typedef`** dichiarazioni. Ad esempio, molti programmatori C utilizzano le operazioni seguenti:
 
 ```cpp
 // typedef_with_class_types1.cpp
@@ -335,7 +335,7 @@ invece di:
 struct point_t ptOrigin;
 ```
 
-In C++la differenza tra i nomi **typedef** e i tipi reali (dichiarati con le parole chiave **Class**, **struct**, **Union**e **enum** ) è più distinta. Sebbene la procedura C relativa alla dichiarazione di una struttura senza nome in un'istruzione **typedef** funzioni ancora, non fornisce vantaggi per la notazione in c.
+In C++, la differenza tra i **`typedef`** nomi e i tipi reali (dichiarati con le **`class`** **`struct`** **`union`** parole chiave,, e **`enum`** ) è più distinta. Sebbene la procedura C relativa alla dichiarazione di una struttura senza nome in un' **`typedef`** istruzione continui a funzionare, non fornisce alcun vantaggio per la notazione in c.
 
 ```cpp
 // typedef_with_class_types2.cpp
@@ -347,9 +347,9 @@ typedef struct {
 } POINT;
 ```
 
-Nell'esempio precedente viene dichiarata una classe denominata `POINT` usando la sintassi del **typedef** della classe senza nome. `POINT` viene considerato come un nome di classe; tuttavia, le restrizioni seguenti vengono applicate ai nomi introdotti nel modo seguente:
+Nell'esempio precedente viene dichiarata una classe denominata `POINT` usando la sintassi della classe senza nome **`typedef`** . `POINT` viene considerato come un nome di classe; tuttavia, le restrizioni seguenti vengono applicate ai nomi introdotti nel modo seguente:
 
-- Il nome (il sinonimo) non può comparire dopo un prefisso di **classe**, **struct**o **Unione** .
+- Il nome (il sinonimo) non può essere visualizzato dopo un **`class`** **`struct`** prefisso, o **`union`** .
 
 - Il nome non può essere usato come nome del distruttore o del costruttore all'interno di una dichiarazione di classe.
 

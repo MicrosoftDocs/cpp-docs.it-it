@@ -1,9 +1,11 @@
 ---
 title: 'Operatori di uguaglianza: == e !='
-ms.date: 11/04/2016
+description: La sintassi e l'utilizzo dell'operatore C++ standard e non-equal-to del linguaggio C++.
+ms.date: 07/23/2020
 f1_keywords:
 - '!='
 - ==
+- not_eq_cpp
 helpviewer_keywords:
 - '!= operator'
 - equality operator
@@ -13,33 +15,31 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: 8a0c08f438528caeaac6d5e52e806a36fe56dd25
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 567b83e99dce0354626f08a4788f1343314493b1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189247"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227543"
 ---
 # <a name="equality-operators--and-"></a>Operatori di uguaglianza: == e !=
 
 ## <a name="syntax"></a>Sintassi
 
-```
-expression == expression
-expression != expression
-```
+> *espressione* **`==`** *espressione*\
+> *espressione* **`!=`** *espressione*
 
 ## <a name="remarks"></a>Osservazioni
 
 Gli operatori di uguaglianza binari confrontano i propri operandi per verificare identità o disuguaglianza.
 
-Gli operatori di uguaglianza, uguale a (`==`) e non uguale a (`!=`), hanno precedenza inferiore rispetto agli operatori relazionali, ma si comportano in modo analogo. Il tipo di risultato per questi operatori è **bool**.
+Gli operatori di uguaglianza, uguali a ( **`==`** ) e non uguali a ( **`!=`** ), hanno precedenza più bassa rispetto agli operatori relazionali, ma si comportano in modo analogo. Il tipo di risultato per questi operatori è **`bool`** .
 
-L'operatore di uguaglianza (`==`) restituisce **true** (1) se entrambi gli operandi hanno lo stesso valore. in caso contrario, restituisce **false** (0). L'operatore not-equal-to (`!=`) restituisce **true** se gli operandi non hanno lo stesso valore. in caso contrario, restituisce **false**.
+L'operatore di uguaglianza ( **`==`** ) restituisce **`true`** se entrambi gli operandi hanno lo stesso valore; in caso contrario, restituisce **`false`** . L'operatore not-equal-to ( **`!=`** ) restituisce **`true`** se gli operandi non hanno lo stesso valore; in caso contrario, restituisce **`false`** .
 
-## <a name="operator-keyword-for-"></a>Parola chiave operator per !=
+## <a name="operator-keyword-for-"></a>Parola chiave operator per! =
 
-L'operatore `not_eq` è il testo equivalente di `!=`. Esistono due modi per accedere all'operatore `not_eq` nei programmi: includere il file di intestazione `iso646.h`o compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
+C++ specifica **`not_eq`** come ortografia alternativa per **`!=`** . Non esiste alcuna ortografia alternativa per **`==`** . In C, l'ortografia alternativa viene fornita come una macro nell' \<iso646.h> intestazione. In C++, l'ortografia alternativa è una parola chiave. l'utilizzo di \<iso646.h> o dell'equivalente C++ \<ciso646> è deprecato. In Microsoft C++, l' [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) opzione del compilatore o è necessaria per abilitare l'ortografia alternativa.
 
 ## <a name="example"></a>Esempio
 
@@ -64,5 +64,5 @@ Gli operatori di uguaglianza possono confrontare i puntatori ai membri dello ste
 ## <a name="see-also"></a>Vedere anche
 
 [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori predefiniti C++, precedenza; e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatori relazionali e operatori di uguaglianza C](../c-language/c-relational-and-equality-operators.md)

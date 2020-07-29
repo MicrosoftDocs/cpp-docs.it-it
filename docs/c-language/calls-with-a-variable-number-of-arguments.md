@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9fee0c214b697126708ae36b4daee082ac0171e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032109"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227933"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Chiamate con un numero variabile di argomenti
 
@@ -24,7 +24,7 @@ Un elenco di parametri parziale può essere terminato dalla notazione con i punt
 
 Per chiamare una funzione con un numero variabile di argomenti, specificare un numero qualsiasi di argomenti nella chiamata di funzione. Un esempio è rappresentato dalla funzione `printf` dalla libreria di runtime del linguaggio C. La chiamata di funzione deve includere un argomento per ogni nome del tipo dichiarato nell'elenco di parametri o nell'elenco dei tipi di argomento.
 
-Tutti gli argomenti specificati nella chiamata di funzione vengono inseriti nello stack a meno che non venga specificata la convenzione di chiamata `__fastcall`. Il numero di parametri dichiarati per la funzione determina il numero di argomenti estratti dallo stack e assegnati ai parametri. L'utente deve recuperare tutti gli argomenti aggiuntivi dallo stack e determinare il numero di argomenti presenti. Il file STDARG.H contiene macro stile ANSI per accedere agli argomenti delle funzioni che accettano un numero variabile di argomenti. Inoltre, le macro stile XENIX in VARARGS.H sono ancora supportate.
+Tutti gli argomenti specificati nella chiamata di funzione vengono inseriti nello stack a meno che non **`__fastcall`** sia specificata la convenzione di chiamata. Il numero di parametri dichiarati per la funzione determina il numero di argomenti estratti dallo stack e assegnati ai parametri. L'utente deve recuperare tutti gli argomenti aggiuntivi dallo stack e determinare il numero di argomenti presenti. Il file STDARG.H contiene macro stile ANSI per accedere agli argomenti delle funzioni che accettano un numero variabile di argomenti. Inoltre, le macro stile XENIX in VARARGS.H sono ancora supportate.
 
 Questa dichiarazione di esempio si riferisce a una funzione che chiama un numero variabile di argomenti:
 

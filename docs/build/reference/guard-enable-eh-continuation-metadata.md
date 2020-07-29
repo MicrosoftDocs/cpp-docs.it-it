@@ -1,5 +1,5 @@
 ---
-title: '/Guard: ehcont (Abilita i metadati della continuazione EH)'
+title: /guard:ehcont (abilita i metadati della continuazione della gestione delle eccezioni)
 description: "Guida di riferimento all'opzione del compilatore Microsoft C++/Guard: ehcont."
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84425538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190520"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/Guard: ehcont (Abilita i metadati della continuazione EH)
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (abilita i metadati della continuazione della gestione delle eccezioni)
 
 Abilita la generazione di metadati di continuazione EH (EHCONT) da parte del compilatore.
 
@@ -23,7 +23,7 @@ Abilita la generazione di metadati di continuazione EH (EHCONT) da parte del com
 
 > **`/guard:ehcont`**[**`-`**]
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 L' **`/guard:ehcont`** opzione fa sì che il compilatore generi un elenco ordinato di indirizzi virtuali relativi (RVA) di tutte le destinazioni di continuazione di gestione delle eccezioni valide per un file binario. Viene usato durante il runtime per `NtContinue` la `SetThreadContext` convalida del puntatore all'istruzione e. Per impostazione predefinita, **`/guard:ehcont`** è disattivato e deve essere abilitato in modo esplicito. Per disabilitare in modo esplicito questa opzione, usare **`/guard:ehcont-`** .
 
@@ -33,7 +33,7 @@ La [tecnologia di imposizione del flusso di controllo (CET)](https://software.in
 
 Quando gli stack shadow sono disponibili per impedire gli attacchi por, gli utenti malintenzionati passano a usare altre tecniche di exploit. Una tecnica che può usare è il danneggiamento del valore del puntatore all'istruzione all'interno della struttura del [contesto](/windows/win32/api/winnt/ns-winnt-context) . Questa struttura viene passata alle chiamate di sistema che reindirizzano l'esecuzione di un thread, ad esempio `NtContinue` , [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) e [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) . La `CONTEXT` struttura è archiviata in memoria. Il danneggiamento del puntatore all'istruzione che contiene può causare il trasferimento dell'esecuzione da parte del sistema a un indirizzo controllato da un utente malintenzionato. Attualmente, `NTContinue` può essere chiamato con qualsiasi punto di continuità. Per questo motivo è essenziale convalidare il puntatore all'istruzione quando gli stack shadow sono abilitati.
 
-`RtlRestoreContext`e `NtContinue` vengono usati durante la rimozione delle eccezioni strutturate (SEH) per la rimozione del frame di destinazione che contiene il `__except` blocco. Non è previsto che il puntatore all'istruzione del `__except` blocco si trovi nello stack shadow, perché la convalida del puntatore all'istruzione non riesce. L' **`/guard:ehcont`** opzione del compilatore genera una "tabella di continuazione eh". Contiene un elenco ordinato di RVA di tutte le destinazioni di continuazione di gestione delle eccezioni valide nel file binario. `NtContinue`prima controlla lo stack di ombreggiatura per il puntatore all'istruzione fornito dall'utente. se il puntatore all'istruzione non viene trovato, viene eseguita la verifica della tabella di continuazione EH dal file binario che contiene il puntatore all'istruzione. Se il file binario che lo contiene non è stato compilato con la tabella, per la compatibilità con i file binari legacy `NtContinue` è consentito continuare. È importante distinguere tra i file binari legacy che non dispongono di dati EHCONT e i file binari contenenti dati EHCONT ma nessuna voce di tabella. Il primo consente a tutti gli indirizzi all'interno del file binario come destinazioni di continuazione valide. Il secondo non consente alcun indirizzo all'interno del file binario come destinazione di continuazione valida.
+`RtlRestoreContext`e `NtContinue` vengono usati durante la rimozione delle eccezioni strutturate (SEH) per la rimozione del frame di destinazione che contiene il **`__except`** blocco. Non è previsto che il puntatore all'istruzione del **`__except`** blocco si trovi nello stack shadow, perché la convalida del puntatore all'istruzione non riesce. L' **`/guard:ehcont`** opzione del compilatore genera una "tabella di continuazione eh". Contiene un elenco ordinato di RVA di tutte le destinazioni di continuazione di gestione delle eccezioni valide nel file binario. `NtContinue`prima controlla lo stack di ombreggiatura per il puntatore all'istruzione fornito dall'utente. se il puntatore all'istruzione non viene trovato, viene eseguita la verifica della tabella di continuazione EH dal file binario che contiene il puntatore all'istruzione. Se il file binario che lo contiene non è stato compilato con la tabella, per la compatibilità con i file binari legacy `NtContinue` è consentito continuare. È importante distinguere tra i file binari legacy che non dispongono di dati EHCONT e i file binari contenenti dati EHCONT ma nessuna voce di tabella. Il primo consente a tutti gli indirizzi all'interno del file binario come destinazioni di continuazione valide. Il secondo non consente alcun indirizzo all'interno del file binario come destinazione di continuazione valida.
 
 **`/guard:ehcont`** È necessario passare l'opzione sia al compilatore che al linker per generare RVA di destinazione di continuazione eh per un file binario. Se il file binario viene compilato con un solo comando `cl` , il compilatore passa l'opzione al linker. Il compilatore passa anche l' [**`/guard:cf`**](guard-enable-control-flow-guard.md) opzione al linker. Se si compilano e si collegano separatamente, queste opzioni devono essere impostate sia nei comandi del compilatore che del linker.
 
