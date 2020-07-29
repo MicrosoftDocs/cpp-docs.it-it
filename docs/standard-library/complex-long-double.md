@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 73027ba76d608424b1a6da346e861b10c66989fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302341"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228388"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Questo modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **long double**, il primo che rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.
+Questo modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`long double`** , il primo che rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,25 +39,25 @@ complex(
 ### <a name="parameters"></a>Parametri
 
 *_RealVal*\
-Valore di tipo **long double** per la parte reale del numero complesso da costruire.
+Valore di tipo **`long double`** per la parte reale del numero complesso da costruire.
 
 *_ImagVal*\
-Valore di tipo **long double** per la parte immaginaria del numero complesso da costruire.
+Valore di tipo **`long double`** per la parte immaginaria del numero complesso da costruire.
 
-\ *complexNum*
-Numero complesso di tipo **Double** o di tipo **float** le cui parti reale e immaginaria vengono usate per inizializzare un numero complesso di tipo **long double** da costruire.
+*complexNum*\
+Numero complesso di tipo **`double`** o di tipo le **`float`** cui parti reale e immaginaria vengono usate per inizializzare un numero complesso di tipo **`long double`** costruito.
 
 ## <a name="return-value"></a>Valore restituito
 
-Numero complesso di tipo **long double**.
+Numero complesso di tipo **`long double`** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La specializzazione esplicita del modello di classe `complex` a una classe complessa di tipo **long double** differisce dal modello di classe solo nei costruttori che definisce. La conversione da **long double** a **float** può essere implicita, ma la conversione da **Double** a **long double** deve essere **esplicita**. L'uso di una conversione **esplicita** esclude l'inizializzazione con conversione del tipo tramite la sintassi di assegnazione.
+La specializzazione esplicita del modello di classe `complex` in una classe complessa di tipo **`long double`** differisce dal modello di classe solo nei costruttori che definisce. La conversione da **`long double`** a **`float`** può essere implicita, ma la conversione da **`double`** a **`long double`** è obbligatoria **`explicit`** . L'uso di **`explicit`** regole esclude l'avvio con la conversione del tipo tramite la sintassi di assegnazione.
 
 Per ulteriori informazioni sul modello di classe `complex` e sui relativi membri, vedere [classe Complex](../standard-library/complex-class.md).
 
-**Specifico di Microsoft**: i tipi **long double** e **Double** hanno la stessa rappresentazione, ma sono tipi distinti. Per ulteriori informazioni, vedere [tipi incorporati](../cpp/fundamental-types-cpp.md).
+**Specifico di Microsoft**: i **`long double`** **`double`** tipi e hanno la stessa rappresentazione, ma sono tipi distinti. Per ulteriori informazioni, vedere [tipi incorporati](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Esempio
 
@@ -115,13 +115,13 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<complex>
+**Intestazione**:\<complex>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe complex](../standard-library/complex-class.md)\
+[Classe complessa](../standard-library/complex-class.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

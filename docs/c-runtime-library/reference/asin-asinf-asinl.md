@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909274"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189441"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -77,7 +77,7 @@ Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **Asin** re
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Asin** con valori **float** e **Long** **Double** . In un programma C, **Asin** accetta sempre e restituisce un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Asin** con **`float`** **`long double`** i valori e. In un programma C, **Asin** accetta sempre e restituisce un **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -93,7 +93,7 @@ Per altre informazioni, vedere [acos, acosf, acosl](acos-acosf-acosl.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

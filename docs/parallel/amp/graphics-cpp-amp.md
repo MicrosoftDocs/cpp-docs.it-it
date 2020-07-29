@@ -2,12 +2,12 @@
 title: Grafica (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 393fadbba90b135e6394cf848668b4957a6d7ce2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404834"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182811"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 
@@ -21,11 +21,11 @@ C++ AMP contiene diverse API nello spazio dei nomi [Concurrency:: graphics](../.
 
 ## <a name="the-norm-and-unorm-types"></a>Tipi norm e unorm
 
-I `norm` `unorm` tipi e sono tipi scalari che limitano l'intervallo di valori **float** ; questa operazione è nota come *clamping*. Questi tipi possono essere costruiti in modo esplicito da altri tipi scalari. Nel cast, viene prima eseguito il cast del valore in **float** , quindi viene eseguito il fissaggio alla rispettiva area consentita dalla norma [-1,0, 1,0] o unorm [0,0, 1,0]. Il cast da +/- all'infinito restituisce +/-1. Il cast da NaN non è definito. Un tipo norm può essere costruito in modo implicito da un tipo unorm senza perdita di dati. L'operatore di conversione implicita a float è definito su questi tipi. Gli operatori binari vengono definiti tra questi tipi e altri tipi scalari incorporati, ad esempio **float** e **int**: +,-, \* ,/, = =,! =, >, \<, > = <=. Sono supportati anche gli operatori di assegnazione composta: + =,-=, \* =,/=. L'operatore di negazione unario (-) è definito per i tipi norm.
+I `norm` `unorm` tipi e sono tipi scalari che limitano l'intervallo di **`float`** valori. questa operazione è nota come *bloccaggio*. Questi tipi possono essere costruiti in modo esplicito da altri tipi scalari. Nel cast, viene prima eseguito il cast del valore a, quindi viene eseguito il **`float`** fissaggio alla rispettiva area consentita dalla norma [-1,0, 1,0] o unorm [0,0, 1,0]. Il cast da +/- all'infinito restituisce +/-1. Il cast da NaN non è definito. Un tipo norm può essere costruito in modo implicito da un tipo unorm senza perdita di dati. L'operatore di conversione implicita a float è definito su questi tipi. Gli operatori binari vengono definiti tra questi tipi e altri tipi scalari incorporati, ad esempio **`float`** e **`int`** : +,-, \* ,/, = =,! =, >, \<, > = <=. Sono supportati anche gli operatori di assegnazione composta: + =,-=, \* =,/=. L'operatore di negazione unario (-) è definito per i tipi norm.
 
 ## <a name="short-vector-library"></a>Libreria Short Vector
 
-La libreria short vector fornisce alcune funzionalità del [tipo di vettore](https://go.microsoft.com/fwlink/p/?linkid=248500) definito in HLSL e viene in genere usata per definire Texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono **Double**, **float**, **int**, `norm` , `uint` e `unorm` . I nomi dei tipi sono riportati nella tabella seguente. Per ogni tipo è presente anche un **typedef** corrispondente che non contiene un carattere di sottolineatura nel nome. I tipi con i caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). I tipi che non dispongono dei caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati dai tipi fondamentali con nome simile, ad esempio **__int8** e **__int16**.
+La libreria short vector fornisce alcune funzionalità del [tipo di vettore](https://go.microsoft.com/fwlink/p/?linkid=248500) definito in HLSL e viene in genere usata per definire Texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono **`double`** , **`float`** , **`int`** , `norm` , `uint` e `unorm` . I nomi dei tipi sono riportati nella tabella seguente. Per ogni tipo è presente anche un oggetto corrispondente **`typedef`** che non contiene un carattere di sottolineatura nel nome. I tipi con i caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). I tipi che non dispongono dei caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati dai tipi fondamentali con nome simile, ad esempio **`__int8`** e **`__int16`** .
 
 ||Lunghezza 2|Lunghezza 3|Lunghezza 4|
 |-|--------------|--------------|--------------|
@@ -63,7 +63,7 @@ La Libreria Short Vector supporta il costrutto della funzione di accesso `vector
 
 Molte GPU dispongono di hardware e cache ottimizzati per recuperare pixel e texel ed eseguire il rendering di immagini e texture. La [classe \<T,N> texture](../../parallel/amp/reference/texture-class.md) , che è una classe contenitore per gli oggetti Texel, espone la funzionalità di trama di queste GPU. Un texel può essere:
 
-- **Int**, `uint` , **float**, **Double**, `norm` o `unorm` scalar.
+- Valore **`int`** `uint` scalare,,,, **`float`** **`double`** `norm` o `unorm` .
 
 - Uno short vector con due o quattro componenti. L'unica eccezione è `double_4`, che non è consentito.
 
@@ -214,7 +214,7 @@ Usare il metodo [texture:: set](reference/texture-class.md#set) per scrivere neg
 
 - T ha un solo componente scalare. Gli short vector non sono consentiti.
 
-- T non è **Double**, `norm` o `unorm` .
+- T non è **`double`** , `norm` o `unorm` .
 
 - La proprietà `texture::bits_per_scalar_element` è 32.
 

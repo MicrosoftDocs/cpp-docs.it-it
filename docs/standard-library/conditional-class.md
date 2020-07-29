@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 03ec6248ba3361622ad061ac3854a60995148f4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457315"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228375"
 ---
 # <a name="conditional-class"></a>Classe conditional
 
@@ -39,13 +39,13 @@ Il risultato di tipo quando B è true.
 *T2*\
 Il risultato di tipo quando B è false.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il `conditional<B, T1, T2>::type` typedef del membro del modello restituisce *T1* quando *b* restituisce **true**e restituisce *T2* quando *b* restituisce **false**.
+Il typedef del membro del modello `conditional<B, T1, T2>::type` restituisce *T1* quando *b* restituisce **`true`** e restituisce *T2* quando *b* restituisce **`false`** .
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

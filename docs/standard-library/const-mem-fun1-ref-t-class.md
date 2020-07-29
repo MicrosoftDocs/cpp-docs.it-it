@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 76fae1ce29cb4c47870e45e8f946f6ff1fea1885
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f9f426b7280872846695e204f2c9843d2622fe19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228336"
 ---
 # <a name="const_mem_fun1_ref_t-class"></a>Classe const_mem_fun1_ref_t
 
-Classe di adattatori che consente a una funzione membro **const** che accetta un singolo argomento di essere chiamata come oggetto funzione binaria, una volta inizializzata con un argomento di riferimento. Deprecato in C++ 11, rimosso in C++ 17.
+Classe di adattatori che consente a una **`const`** funzione membro che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di riferimento. Deprecato in C++ 11, rimosso in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,22 +31,22 @@ template <class Result, class Type, class Arg>
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *PM*
+*PM*\
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-\ a *sinistra*
-Oggetto **const** su cui viene chiamata la funzione membro *PM* .
+*sinistra*\
+**`const`** Oggetto su cui viene chiamata la funzione membro *PM* .
 
-\ a *destra*
+*Ok*\
 Argomento assegnato a *PM*.
 
 ## <a name="return-value"></a>Valore restituito
 
 Funzione binaria adattabile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe archivia una copia di *PM*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la funzione membro `operator()` come restituito (`left`. \* *PM*) (`right`) **const**.
+Il modello di classe archivia una copia di *PM*, che deve essere un puntatore a una funzione membro della classe `Type` , in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( `left` . \* *PM*) ( `right` ) **`const`** .
 
 ## <a name="example"></a>Esempio
 

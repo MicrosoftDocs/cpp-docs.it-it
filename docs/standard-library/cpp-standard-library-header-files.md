@@ -1,16 +1,16 @@
 ---
 title: File di intestazione della libreria standard C++
-ms.date: 07/12/2019
+ms.date: 07/23/2020
 helpviewer_keywords:
 - header files, C++ Standard Library
 - C++ Standard Library, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-ms.openlocfilehash: 207e7b7d2d689d3912399e3a867102ee893e003a
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 845fda9e020727b71752f19c38bb8432d5cf7c25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226048"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228297"
 ---
 # <a name="c-standard-library-header-files"></a>File di intestazione della libreria standard C++
 
@@ -20,7 +20,7 @@ File di intestazione per la libreria standard C++ e per le estensioni, per categ
 
 ::: moniker range=">=vs-2017"
 
-| Category | Intestazioni |
+| Categoria | Intestazioni |
 | - | - |
 | [Algoritmi](../cpp/algorithms-modern-cpp.md) | [\<algorithm>](algorithm.md), [\<cstdlib>](cstdlib.md), [\<numeric>](numeric.md) |
 | Operazioni atomiche |  [\<atomic>](atomic.md)<sup>11</sup> |
@@ -33,7 +33,7 @@ File di intestazione per la libreria standard C++ e per le estensioni, per categ
 | Adattatori del contenitore | [\<queue>](queue.md), [\<stack>](stack.md) |
 | Viste del contenitore | [\<span>](span.md)<sup>20</sup> |
 | [Errori e gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md) | [\<cassert>](cassert.md), [\<exception>](exception.md) , [\<stdexcept>](stdexcept.md) , [\<system_error>](system-error.md) <sup>11</sup> |
-| Utilità generali | \<any><sup>17</sup>, [\<bitset>](bitset.md) , \<charconv> <sup>17</sup>, [\<cstdlib>](cstdlib.md) , \<execution> <sup>17</sup>, [\<functional>](functional.md) , [\<memory>](memory.md) , \<memory_resource> <sup>17</sup>, \<optional> <sup>17</sup>, [\<ratio>](ratio.md) <sup>11</sup>, [\<scoped_allocator>](scoped-allocator.md) <sup>11</sup>, [\<tuple>](tuple.md) <sup>11</sup>, [\<type_traits>](type-traits.md) <sup>11</sup>, [\<typeindex>](typeindex.md) <sup>11</sup>, [\<utility>](utility.md) \<variant> <sup>17</sup> |
+| Utilità generali | \<any><sup>17</sup>, [\<bitset>](bitset.md) , [\<cstdlib>](cstdlib.md) , \<execution> <sup>17</sup>, [\<functional>](functional.md) , [\<memory>](memory.md) , \<memory_resource> <sup>17</sup>, \<optional> <sup>17</sup>, [\<ratio>](ratio.md) <sup>11</sup>, [\<scoped_allocator>](scoped-allocator.md) <sup>11</sup>, [\<tuple>](tuple.md) <sup>11</sup>, [\<type_traits>](type-traits.md) <sup>11</sup>, [\<typeindex>](typeindex.md) <sup>11</sup>, [\<utility>](utility.md) \<variant> <sup>17</sup> |
 | [I/O e formattazione](../text/string-and-i-o-formatting-modern-cpp.md) | [\<cinttypes>](cinttypes.md)<sup>11</sup>, [\<cstdio>](cstdio.md) , [\<filesystem>](filesystem.md) <sup>17</sup>, [\<fstream>](fstream.md) , [\<iomanip>](iomanip.md) , [\<ios>](ios.md) , [\<iosfwd>](iosfwd.md) , [\<iostream>](iostream.md) , [\<istream>](istream.md) , [\<ostream>](ostream.md) , [\<sstream>](sstream.md) , [\<streambuf>](streambuf.md) , [\<strstream>](strstream.md) <sup>c</sup>, \<syncstream> <sup>20</sup> |
 | Iterators | [\<iterator>](iterator.md) |
 | Lingue supportate | [\<cfloat>](cfloat.md), [\<climits>](climits.md) , [\<codecvt>](codecvt.md) <sup>11 a</sup>, \<compare> <sup>20</sup>, \<contract> <sup>20</sup>, \<coroutine> <sup>20</sup>, [\<csetjmp>](csetjmp.md) ,,, [\<csignal>](csignal.md) [\<cstdarg>](cstdarg.md) [\<cstddef>](cstddef.md) , [\<cstdint>](cstdint.md) <sup>11</sup>, [\<cstdlib>](cstdlib.md) , [\<exception>](exception.md) , [\<initializer_list>](initializer-list.md) <sup>11</sup>, [\<limits>](limits.md) , [\<new>](new.md) , [\<typeinfo>](typeinfo.md) , \<version> <sup>20</sup> |
@@ -43,8 +43,8 @@ File di intestazione per la libreria standard C++ e per le estensioni, per categ
 | Multithreading | [\<atomic>](atomic.md)<sup>11</sup>, [\<condition_variable>](condition-variable.md) <sup>11</sup>, [\<future>](future.md) <sup>11</sup>, [\<mutex>](mutex.md) <sup>11</sup>, [\<shared_mutex>](shared-mutex.md) <sup>14</sup>, [\<thread>](thread.md) <sup>11</sup> |
 | Intervalli | \<ranges><sup>20</sup> |
 | Espressioni regolari | [\<regex>](regex.md)<sup>11</sup> |
-| Stringhe e dati di tipo carattere | [\<cctype>](cctype.md), [\<cstdlib>](cstdlib.md) , [\<cstring>](cstring.md) , [\<cuchar>](cuchar.md) <sup>11</sup>, [\<cwchar>](cwchar.md) , [\<cwctype>](cwctype.md) , [\<regex>](regex.md) <sup>11</sup>, [\<string>](string.md) , [\<string_view>](string-view.md) <sup>17</sup> |
-| Ora | [\<chrono>](chrono.md)<sup>11</sup>,[\<ctime>](ctime.md) |
+| Stringhe e dati di tipo carattere | [\<charconv>](charconv.md)<sup>17</sup>, [\<cctype>](cctype.md) , [\<cstdlib>](cstdlib.md) , [\<cstring>](cstring.md) , [\<cuchar>](cuchar.md) <sup>11</sup>, [\<cwchar>](cwchar.md) , [\<cwctype>](cwctype.md) , [\<regex>](regex.md) <sup>11</sup>, [\<string>](string.md) , [\<string_view>](string-view.md) <sup>17</sup> |
+| Tempo | [\<chrono>](chrono.md)<sup>11</sup>,[\<ctime>](ctime.md) |
 
 <sup>11</sup> aggiunti nello standard c++ 11. \
 <sup>14</sup> aggiunti nello standard c++ 14. \
@@ -58,7 +58,7 @@ File di intestazione per la libreria standard C++ e per le estensioni, per categ
 
 ::: moniker range="vs-2015"
 
-|Category|Intestazioni|
+|Categoria|Intestazioni|
 |-|-|
 |[Algoritmi](../cpp/algorithms-modern-cpp.md)|[\<algorithm>](algorithm.md)|
 |Wrapper della libreria C|[\<cassert>](cassert.md), [\<cctype>](cctype.md), [\<cerrno>](cerrno.md), [\<cfenv>](cfenv.md), [\<cfloat>](cfloat.md), [\<cinttypes>](cinttypes.md), [\<ciso646>](ciso646.md), [\<climits>](climits.md), [\<clocale>](clocale.md), [\<cmath>](cmath.md), [\<csetjmp>](csetjmp.md), [\<csignal>](csignal.md), [\<cstdarg>](cstdarg.md), [\<cstdbool>](cstdbool.md), [\<cstddef>](cstddef.md), [\<cstdint>](cstdint.md), [\<cstdio>](cstdio.md), [\<cstdlib>](cstdlib.md), [\<cstring>](cstring.md), [\<ctgmath>](ctgmath.md), [\<ctime>](ctime.md), [\<cwchar>](cwchar.md), [\<cwctype>](cwctype.md)|

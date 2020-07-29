@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 5263612a26b2bcb606ad712a2a8e0a521ce9437a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6b34fb6b20b2aaf2f18fbe8d937e50bdbaa3bdff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688200"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228349"
 ---
 # <a name="const_mem_fun_t-class"></a>Classe const_mem_fun_t
 
@@ -30,19 +30,19 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *PM*
+*PM*\
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-@No__t_1 *Pleft*
+*Pleft*\
 Oggetto su cui viene chiamata la funzione membro *PM* .
 
 ## <a name="return-value"></a>Valore restituito
 
 Funzione unaria adattabile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il modello di classe archivia una copia di *PM*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la funzione membro `operator()` come restituito (`Pleft` -> \* `Pm`) () **const**.
+Il modello di classe archivia una copia di *PM*, che deve essere un puntatore a una funzione membro della classe `Type` , in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( `Pleft` -> \* `Pm` ) () **`const`** .
 
 ## <a name="example"></a>Esempio
 

@@ -33,19 +33,19 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 2eb5b908d66b221e9efae20ba04e2963805798ab
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: 86324d126fa1c3b659e6500579c4a1d220874094
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446606"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182746"
 ---
 # <a name="concurrency-namespace-functions"></a>Funzioni dello spazio dei nomi concurrency
 
 ||||
 |-|-|-|
 |[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
-|[EnableTracing](#enabletracing)|[Gratuito](#free)|[GetExecutionContextId](#getexecutioncontextid)|
+|[EnableTracing](#enabletracing)|[Free](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
 |[cancel_current_task](#cancel_current_task)|[deselezionare](#clear)|[create_async](#create_async)|
@@ -77,7 +77,7 @@ Numero di byte di memoria da allocare.
 
 Puntatore alla memoria appena allocata.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni sugli scenari in cui l'applicazione può trarre vantaggio dall'utilizzo del suballocatore di memorizzazione nella cache, vedere [utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
@@ -110,9 +110,9 @@ Riferimento ai dati da inviare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il messaggio è stato accettato prima della restituzione del metodo; in caso contrario, **false** .
+**`true`** Se il messaggio è stato accettato prima della restituzione del metodo; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per altre informazioni, vedere [funzioni di passaggio dei messaggi](../../../parallel/concrt/message-passing-functions.md).
 
@@ -163,7 +163,7 @@ Espressione lambda o oggetto funzione da cui si crea un costrutto asincrono di W
 
 Costrutto asincrono rappresentato da IAsyncAction ^, IAsyncActionWithProgress \<TProgress> ^, IAsyncOperation \<TResult> ^ o IAsyncOperationWithProgress \<TResult, TProgress> ^. L'interfaccia restituita dipende dalla firma dell'espressione lambda passata nella funzione.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il tipo restituito dell'espressione lambda determina se il costrutto è un'azione o un'operazione.
 
@@ -191,7 +191,7 @@ IResourceManager* __cdecl CreateResourceManager();
 
 Interfaccia `IResourceManager`.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Più chiamate successive a questo metodo restituiranno la stessa istanza della Gestione risorse. Ogni chiamata al metodo incrementa un conteggio dei riferimenti nell'Gestione risorse e deve essere abbinato a una chiamata al metodo [IResourceManager:: Release](iresourcemanager-structure.md) quando l'utilità di pianificazione viene eseguita comunicando con l'gestione risorse.
 
@@ -199,7 +199,7 @@ Più chiamate successive a questo metodo restituiranno la stessa istanza della G
 
 ## <a name="create_task"></a><a name="create_task"></a>create_task
 
-Crea un oggetto [attività](task-class.md) ppl. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.
+Crea un oggetto [attività](task-class.md) ppl. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per praticità, perché consente l'uso della **`auto`** parola chiave durante la creazione di attività.
 
 ```cpp
 template<typename T>
@@ -231,7 +231,7 @@ Attività da creare.
 
 Nuova attività di tipo `T` , che viene dedotta da `_Param` .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il primo overload si comporta come un costruttore di attività che accetta un singolo parametro.
 
@@ -278,7 +278,7 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 *_PAllocation*<br/>
 Puntatore alla memoria allocata in precedenza dal `Alloc` metodo che deve essere liberato. Se il parametro `_PAllocation` è impostato sul valore `NULL` , questo metodo lo ignorerà e restituirà immediatamente.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni sugli scenari in cui l'applicazione può trarre vantaggio dall'utilizzo del suballocatore di memorizzazione nella cache, vedere [utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
@@ -302,7 +302,7 @@ unsigned int __cdecl GetExecutionContextId();
 
 Identificatore univoco per un contesto di esecuzione.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Utilizzare questo metodo per ottenere un identificatore per il contesto di esecuzione prima di passare un' `IExecutionContext` interfaccia come parametro a uno dei metodi offerti dal gestione risorse.
 
@@ -318,7 +318,7 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
 
 Valore enumerato che rappresenta il sistema operativo.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 [unsupported_os](unsupported-os-class.md) viene generata se il sistema operativo non è supportato dall'runtime di concorrenza.
 
@@ -334,7 +334,7 @@ unsigned int __cdecl GetProcessorCount();
 
 Numero di thread hardware.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 [unsupported_os](unsupported-os-class.md) viene generata se il sistema operativo non è supportato dall'runtime di concorrenza.
 
@@ -350,7 +350,7 @@ unsigned int __cdecl GetProcessorNodeCount();
 
 Numero di nodi NUMA o pacchetti del processore.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Se il sistema contiene più nodi NUMA rispetto ai pacchetti del processore, viene restituito il numero di nodi NUMA. in caso contrario, viene restituito il numero di pacchetti del processore.
 
@@ -368,7 +368,7 @@ unsigned int __cdecl GetSchedulerId();
 
 Identificatore univoco per un'utilità di pianificazione.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Usare questo metodo per ottenere un identificatore per l'utilità di pianificazione prima di passare un' `IScheduler` interfaccia come parametro a uno dei metodi offerti dal gestione risorse.
 
@@ -402,13 +402,13 @@ Crea un punto di interruzione per l'annullamento. Se un annullamento è in corso
 inline void interruption_point();
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Non è consigliabile rilevare l'eccezione di annullamento interna generata dalla funzione `interruption_point()`. L'eccezione viene rilevata e gestita dal runtime, pertanto se viene rilevata potrebbe comportare un'esecuzione anomala del programma.
 
 ## <a name="is_current_task_group_canceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
-Restituisce un'informazione che indica se il gruppo di attività attualmente in esecuzione inline sul contesto corrente si trova nel mezzo di un annullamento attivo (o lo sarà a breve). Si noti che se non è presente alcun gruppo di attività in esecuzione inline sul contesto corrente, sarà restituito `false`.
+Restituisce un'informazione che indica se il gruppo di attività attualmente in esecuzione inline sul contesto corrente si trova nel mezzo di un annullamento attivo (o lo sarà a breve). Si noti che se non è presente alcun gruppo di attività attualmente in esecuzione inline sul contesto corrente, **`false`** verrà restituito.
 
 ```cpp
 bool __cdecl is_current_task_group_canceling();
@@ -416,9 +416,9 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il gruppo di attività attualmente in esecuzione è in fase di annullamento, **false** in caso contrario.
+**`true`** Se il gruppo di attività attualmente in esecuzione sta per essere annullato; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [annullamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
@@ -601,9 +601,9 @@ Funzione che verrà richiamata per eseguire il lavoro rappresentato dall' `task_
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `task_handle` .
+Un oggetto `task_handle`.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione è utile quando è necessario creare un `task_handle` oggetto con un'espressione lambda, perché consente di creare l'oggetto senza conoscere il tipo true del functor lambda.
 
@@ -679,12 +679,12 @@ Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento fin
 Istanza di un allocatore di memoria compatibile con la libreria standard C++.
 
 *_Func*<br/>
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
 
 *_Chunk_size*<br/>
 Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Tutti gli overload richiedono `n * sizeof(T)` spazio aggiuntivo, dove `n` è il numero di elementi da ordinare e `T` è il tipo di elemento. Nella maggior parte dei casi parallel_buffered_sort mostrerà un miglioramento delle prestazioni rispetto [parallel_sort](concurrency-namespace-functions.md)ed è consigliabile usarlo su parallel_sort se la memoria è disponibile.
 
@@ -767,9 +767,9 @@ Valore in base al quale eseguire l'iterazione da `first` a `last` . Il passaggio
 Funzione da eseguire a ogni iterazione. Può trattarsi di un'espressione lambda, di un puntatore a funzione o di un oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()(_Index_type)` .
 
 *_Part*<br/>
-Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , `const` [simple_partitioner](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` se viene utilizzato un [affinity_partitioner](affinity-partitioner-class.md) oggetto, il riferimento deve essere un riferimento l-value non const, in modo che l'algoritmo possa archiviare lo stato dei cicli futuri da riutilizzare.
+Riferimento all'oggetto partitioner. L'argomento può essere uno dei **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , **`const`** [simple_partitioner](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` se viene utilizzato un [affinity_partitioner](affinity-partitioner-class.md) oggetto, il riferimento deve essere un riferimento l-value non const, in modo che l'algoritmo possa archiviare lo stato dei cicli futuri da riutilizzare.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [algoritmi paralleli](../../../parallel/concrt/parallel-algorithms.md).
 
@@ -811,9 +811,9 @@ Iteratore che punta alla posizione immediatamente successiva all'ultimo elemento
 Oggetto funzione definito dall'utente che viene applicato a ogni elemento nell'intervallo.
 
 *_Part*<br/>
-Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , `const` [simple_partitioner](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` se viene utilizzato un [affinity_partitioner](affinity-partitioner-class.md) oggetto, il riferimento deve essere un riferimento l-value non const, in modo che l'algoritmo possa archiviare lo stato dei cicli futuri da riutilizzare.
+Riferimento all'oggetto partitioner. L'argomento può essere uno dei **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , **`const`** [simple_partitioner](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` se viene utilizzato un [affinity_partitioner](affinity-partitioner-class.md) oggetto, il riferimento deve essere un riferimento l-value non const, in modo che l'algoritmo possa archiviare lo stato dei cicli futuri da riutilizzare.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 [auto_partitioner](auto-partitioner-class.md) verrà usato per l'overload senza un partitioner esplicito.
 
@@ -1012,7 +1012,7 @@ Nono oggetto funzione da eseguire in parallelo.
 *_Func10*<br/>
 Decimo oggetto funzione da eseguire in parallelo.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Si noti che uno o più oggetti funzione specificati come parametri possono essere eseguiti in linea nel contesto chiamante.
 
@@ -1093,7 +1093,7 @@ Oggetto funzione di proiezione definito dall'utente che converte un elemento in 
 *_Chunk_size*<br/>
 Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Tutti gli overload richiedono `n * sizeof(T)` spazio aggiuntivo, dove `n` è il numero di elementi da ordinare e `T` è il tipo di elemento. Un functor di proiezione unario con la firma `I _Proj_func(T)` è necessario per restituire una chiave quando viene specificato un elemento, dove `T` è il tipo di elemento ed `I` è un tipo simile a Unsigned Integer.
 
@@ -1166,7 +1166,7 @@ Funzione che verrà utilizzata nella prima fase della riduzione. Per ulteriori i
 
 Risultato della riduzione.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per eseguire una riduzione parallela, la funzione divide l'intervallo in blocchi in base al numero di ruoli di lavoro disponibili per l'utilità di pianificazione sottostante. La riduzione avviene in due fasi, la prima fase esegue una riduzione in ogni blocco e la seconda fase esegue una riduzione tra i risultati parziali di ogni blocco.
 
@@ -1209,12 +1209,12 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'in
 Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.
 
 *_Func*<br/>
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
 
 *_Chunk_size*<br/>
 Dimensione minima di un blocco che verrà suddivisa in due per l'esecuzione parallela.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il primo overload usa il criterio di confronto binario `std::less` .
 
@@ -1325,7 +1325,7 @@ Iteratore di output che punta alla posizione del primo elemento nell'intervallo 
 Oggetto funzione unario definito dall'utente che viene applicato a ogni elemento nell'intervallo di origine.
 
 *_Part*<br/>
-Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , `const` [simple_partitioner](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` se viene utilizzato un [affinity_partitioner](affinity-partitioner-class.md) oggetto, il riferimento deve essere un riferimento l-value non const, in modo che l'algoritmo possa archiviare lo stato dei cicli futuri da riutilizzare.
+Riferimento all'oggetto partitioner. L'argomento può essere uno dei **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , **`const`** [simple_partitioner](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` se viene utilizzato un [affinity_partitioner](affinity-partitioner-class.md) oggetto, il riferimento deve essere un riferimento l-value non const, in modo che l'algoritmo possa archiviare lo stato dei cicli futuri da riutilizzare.
 
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo di origine da utilizzare.
@@ -1337,7 +1337,7 @@ Oggetto funzione binario definito dall'utente applicato a livello pairwise, in o
 
 Iteratore di output che punta alla prima posizione dopo l'elemento finale nell'intervallo di destinazione in cui vengono ricevuti gli elementi di output trasformati dall'oggetto funzione.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 [auto_partitioner](auto-partitioner-class.md) verrà usato per gli overload senza un argomento Partitioner esplicito.
 
@@ -1395,7 +1395,7 @@ Funzione di filtro che determina se i messaggi devono essere accettati.
 
 Valore dell'origine del tipo di payload.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Se il parametro `_Timeout` ha un valore diverso dalla costante `COOPERATIVE_TIMEOUT_INFINITE` , viene generata l'eccezione [operation_timed_out](operation-timed-out-class.md) se il periodo di tempo specificato scade prima della ricezione di un messaggio. Se si desidera un timeout di lunghezza zero, è necessario utilizzare la funzione [try_receive](concurrency-namespace-functions.md) , anziché chiamare `receive` con un timeout di `0` (zero), perché è più efficiente e non genera eccezioni in caso di timeout.
 
@@ -1423,7 +1423,7 @@ Oggetto funzione che verrà eseguito. Questo oggetto deve supportare l'operatore
 *_Ct*<br/>
 Token di annullamento tramite cui verrà controllato l'annullamento implicito dell'oggetto funzione. Utilizzare `cancellation_token::none()` se si desidera che la funzione venga eseguita senza alcuna possibilità di annullamento implicito da un gruppo di attività padre che viene annullato.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Quando l'oggetto `cancellation_token` viene annullato, verranno attivati tutti i punti di interruzione nell'oggetto funzione. Tramite il token esplicito `_Ct` questo parametro `_Func` verrà isolato dall'annullamento padre se al padre è associato un token diverso o se non ne dispone.
 
@@ -1452,9 +1452,9 @@ Riferimento ai dati da inviare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il messaggio è stato accettato; in caso contrario, **false** .
+**`true`** Se il messaggio è stato accettato; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per altre informazioni, vedere [funzioni di passaggio dei messaggi](../../../parallel/concrt/message-passing-functions.md).
 
@@ -1497,7 +1497,7 @@ Numero di voci `GROUP_AFFINITY` nella matrice specificata dal parametro `_PGroup
 *_PGroupAffinity*<br/>
 Matrice di voci `GROUP_AFFINITY`.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il metodo genererà un'eccezione [invalid_operation](invalid-operation-class.md) se una gestione risorse è presente al momento della chiamata e un'eccezione [invalid_argument](../../../standard-library/invalid-argument-class.md) se l'affinità specificata restituisce un set vuoto di risorse.
 
@@ -1530,7 +1530,7 @@ Vettore simultaneo i cui elementi devono essere scambiati con quelli del vettore
 *_B*<br/>
 Vettore simultaneo che fornisce gli elementi da scambiare o vettore i cui elementi devono essere scambiati con quelli del vettore simultaneo `_A` .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 La funzione modello è un algoritmo specializzato sulla classe contenitore `concurrent_vector` per eseguire la funzione membro `_A` . [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B` ). Si tratta di istanze di ordinamento parziale dei modelli di funzione da parte del compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, `template <class T> void swap(T&, T&)` , nella classe Algorithm funziona per assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.
 
@@ -1605,7 +1605,7 @@ Nome dell'oggetto fornito.
 
 ## <a name="try_receive"></a><a name="try_receive"></a>try_receive
 
-Un'implementazione di ricezione try generale, che consente a un contesto di cercare i dati esattamente da un'origine e di filtrare i valori accettati. Se i dati non sono pronti, il metodo restituirà **false**.
+Un'implementazione di ricezione try generale, che consente a un contesto di cercare i dati esattamente da un'origine e di filtrare i valori accettati. Se i dati non sono pronti, il metodo restituirà **`false`** .
 
 ```cpp
 template <class T>
@@ -1643,9 +1643,9 @@ Funzione di filtro che determina se i messaggi devono essere accettati.
 
 ### <a name="return-value"></a>Valore restituito
 
-`bool`Valore che indica se un payload è stato inserito `_value` .
+**`bool`** Valore che indica se un payload è stato inserito `_value` .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Per altre informazioni, vedere [funzioni di passaggio dei messaggi](../../../parallel/concrt/message-passing-functions.md).
 
@@ -1662,7 +1662,7 @@ void __cdecl wait(unsigned int _Milliseconds);
 *_Milliseconds*<br/>
 Numero di millisecondi durante i quali il contesto corrente deve essere sospeso. Se il parametro `_Milliseconds` viene impostato sul valore `0`, il contesto corrente deve essere eseguito in altri contesti eseguibili prima di continuare.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Se questo metodo viene chiamato su un runtime di concorrenza contesto dell'utilità di pianificazione, l'utilità di pianificazione troverà un contesto diverso da eseguire sulla risorsa sottostante. Poiché l'utilità di pianificazione è cooperativa di natura, non è possibile riprendere il contesto subito dopo il numero di millisecondi specificati. Se tramite l'utilità di pianificazione vengono eseguite altre attività che non vengono passate in modo cooperativo all'utilità, il periodo di attesa potrebbe essere indefinito.
 
@@ -1696,9 +1696,9 @@ Oggetto `task_options`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Attività che viene completata correttamente quando tutte le attività di input sono state completate correttamente. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà `task<std::vector<T>>`. Se le attività di input sono di tipo `void`, anche l'attività di output sarà `task<void>`.
+Attività che viene completata correttamente quando tutte le attività di input sono state completate correttamente. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà `task<std::vector<T>>`. Se le attività di input sono di tipo **`void`** , anche l'attività di output sarà un oggetto `task<void>` .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `when_all` è una funzione non bloccante che produce `task` come risultato. A differenza di [Task:: wait](task-class.md#wait), è possibile chiamare questa funzione in un'app UWP nel thread asta (Application sta).
 
@@ -1749,9 +1749,9 @@ Token di annullamento che controlla l'annullamento dell'attività restituita. Se
 
 ### <a name="return-value"></a>Valore restituito
 
-Attività che viene completata correttamente quando una delle attività di input è stata completata. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà un `task<std::pair<T, size_t>>>`, dove il primo elemento della coppia è il risultato dell'attività in corso di completamento e il secondo elemento è l'indice dell'attività completata. Se le attività di input sono di tipo `void` l'output è un `task<size_t>`, dove il risultato è l'indice dell'attività in corso di completamento.
+Attività che viene completata correttamente quando una delle attività di input è stata completata. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà un `task<std::pair<T, size_t>>>`, dove il primo elemento della coppia è il risultato dell'attività in corso di completamento e il secondo elemento è l'indice dell'attività completata. Se le attività di input sono di tipo **`void`** , l'output è un oggetto `task<size_t>` , dove il risultato è l'indice dell'attività di completamento.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 `when_any` è una funzione non bloccante che produce `task` come risultato. A differenza di [Task:: wait](task-class.md#wait), è possibile chiamare questa funzione in un'app UWP nel thread asta (Application sta).
 

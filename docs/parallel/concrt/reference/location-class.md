@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139818"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182694"
 ---
 # <a name="location-class"></a>Classe location
 
@@ -27,14 +27,14 @@ Un'astrazione di una posizione fisica sull'hardware.
 class location;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[location](#ctor)|Di overload. Costruisce un oggetto `location`.|
-|[~ distruttore località](#dtor)|Elimina un oggetto `location`.|
+|[~ distruttore località](#dtor)|Elimina un oggetto `location` .|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -47,9 +47,9 @@ class location;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Determina se due oggetti `location` rappresentano posizioni diverse.|
-|[operator=](#operator_eq)|Assegna il contenuto di un oggetto `location` differente a questo oggetto.|
-|[operator==](#operator_eq_eq)|Determina se due oggetti `location` rappresentano la stessa posizione.|
+|[operatore! =](#operator_neq)|Determina se due oggetti `location` rappresentano posizioni diverse.|
+|[operatore =](#operator_eq)|Assegna il contenuto di un oggetto `location` differente a questo oggetto.|
+|[operatore = =](#operator_eq_eq)|Determina se due `location` oggetti rappresentano la stessa posizione.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -61,15 +61,15 @@ class location;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="dtor"></a>~ località
+## <a name="location"></a><a name="dtor"></a>~ località
 
-Elimina un oggetto `location`.
+Elimina un oggetto `location` .
 
 ```cpp
 ~location();
 ```
 
-## <a name="current"></a>corrente
+## <a name="current"></a><a name="current"></a>corrente
 
 Restituisce un oggetto `location` che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.
 
@@ -81,7 +81,7 @@ static location __cdecl current();
 
 Posizione che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.
 
-## <a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
 
 Restituisce un oggetto `location` che rappresenta un nodo NUMA specifico.
 
@@ -98,7 +98,7 @@ Numero del nodo NUMA per cui costruire una posizione.
 
 Posizione che rappresenta il nodo NUMA specificato dal parametro `_NumaNodeNumber`.
 
-## <a name="ctor"></a>percorso
+## <a name="location"></a><a name="ctor"></a>percorso
 
 Costruisce un oggetto `location`.
 
@@ -132,7 +132,7 @@ Opzionale Puntatore di associazione.
 
 Una posizione costruita predefinita rappresenta il sistema nel suo complesso.
 
-## <a name="operator_neq"></a>operatore! =
+## <a name="operator"></a><a name="operator_neq"></a>operatore! =
 
 Determina se due oggetti `location` rappresentano posizioni diverse.
 
@@ -143,13 +143,13 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="parameters"></a>Parametri
 
 *_Rhs*<br/>
-`location`dell'operando.
+Operando `location` .
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se le due posizioni sono diverse; in caso contrario, **false** .
+**`true`** Se le due posizioni sono diverse; **`false`** in caso contrario,.
 
-## <a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a>operatore =
 
 Assegna il contenuto di un oggetto `location` differente a questo oggetto.
 
@@ -164,9 +164,9 @@ Oggetto `location` di origine.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="operator_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="operator_eq_eq"></a>operatore = =
 
-Determina se due oggetti `location` rappresentano la stessa posizione.
+Determina se due `location` oggetti rappresentano la stessa posizione.
 
 ```cpp
 bool operator== (const location& _Rhs) const;
@@ -175,12 +175,12 @@ bool operator== (const location& _Rhs) const;
 ### <a name="parameters"></a>Parametri
 
 *_Rhs*<br/>
-`location`dell'operando.
+Operando `location` .
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se le due posizioni sono identiche e **false** in caso contrario.
+**`true`** Se le due posizioni sono identiche e **`false`** in caso contrario.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

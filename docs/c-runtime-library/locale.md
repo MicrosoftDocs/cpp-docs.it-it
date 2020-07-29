@@ -10,12 +10,12 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: 89ff4b694137c7002ecb5f6a844c75ab403e6e2f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744384"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189584"
 ---
 # <a name="locale"></a>Impostazioni locali
 
@@ -25,11 +25,11 @@ Usare la funzione [setlocale](../c-runtime-library/reference/setlocale-wsetlocal
 
 Usare [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) per verificare se ogni thread ha le proprie impostazioni locali o se tutti i thread in un programma condividono le stesse impostazioni locali. Per alte informazioni, vedere [Impostazioni locali e tabelle codici](../text/locales-and-code-pages.md).
 
-Sono disponibili più versioni sicure delle funzioni presenti nella seguente tabella, indicate dal suffisso **_s** ("sicuro"). Per altre informazioni, vedere [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Sono disponibili più versioni sicure delle funzioni presenti nella seguente tabella, indicate dal suffisso **_s** ("sicuro"). Per altre informazioni, vedere [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md) (Funzionalità di sicurezza in CRT).
 
 ## <a name="locale-dependent-routines"></a>Routine dipendenti dalle impostazioni locali
 
-|Routine|Usa|Dipendenza dell'impostazione di categoria **setlocale**|
+|Routine|Uso|Dipendenza dell'impostazione di categoria **setlocale**|
 |-------------|---------|---------------------------------------------|
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertire un carattere in un valore a virgola mobile|**LC_NUMERIC**|
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Convertire un carattere in un Integer|**LC_NUMERIC**|
@@ -56,8 +56,8 @@ Sono disponibili più versioni sicure delle funzioni presenti nella seguente tab
 |[_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Confrontare i primi caratteri **n** di due stringhe (senza distinzione tra maiuscole e minuscole)|**LC_COLLATE**|
 |[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|Formattare il valore di data e ora secondo l'argomento **format** specificato|**LC_TIME**|
 |[_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md),[_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)|Convertire, sul posto, ogni lettera maiuscola della stringa specificata in lettera minuscola|**LC_CTYPE**|
-|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Convertire una stringa di caratteri in un valore **double**|**LC_NUMERIC** (determina il riconoscimento di caratteri radice)|
-|[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|Convertire una stringa di caratteri in un valore **long**|**LC_NUMERIC** (determina il riconoscimento di caratteri radice)|
+|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Converte una stringa di caratteri in un **`double`** valore|**LC_NUMERIC** (determina il riconoscimento di caratteri radice)|
+|[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|Converte una stringa di caratteri in un **`long`** valore|**LC_NUMERIC** (determina il riconoscimento di caratteri radice)|
 |[strtoul, _strtoul_l, wcstoul, _wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|Convertire una stringa di caratteri in un valore long unsigned|**LC_NUMERIC** (determina il riconoscimento di caratteri radice)|
 |[_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md),[_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)|Convertire, sul posto, ogni lettera minuscola della stringa in una lettera maiuscola|**LC_CTYPE**|
 |[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|Trasformare la stringa in un formato fascicolato in base alle impostazioni locali|**LC_COLLATE**|

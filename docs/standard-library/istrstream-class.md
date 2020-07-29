@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: d548a8c2c47a5a345be725afdedb47524344f720
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37118772f7cefd6f380ceb01908da55500ee7ab5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228232"
 ---
 # <a name="istrstream-class"></a>Classe istrstream
 
@@ -42,15 +42,15 @@ L'oggetto archivia un oggetto della classe `strstreambuf`.
 |Funzione membro|Descrizione|
 |-|-|
 |[rdbuf](#rdbuf)|Restituisce un puntatore all'oggetto `strstreambuf` associato del flusso.|
-|[Str](#str)|Chiama [freeze](../standard-library/strstreambuf-class.md#freeze) e quindi restituisce un puntatore all'inizio della sequenza controllata.|
+|[str](#str)|Chiama [freeze](../standard-library/strstreambuf-class.md#freeze) e quindi restituisce un puntatore all'inizio della sequenza controllata.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<strstream>
+**Intestazione:**\<strstream>
 
 **Spazio dei nomi:** std
 
-## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream::istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream:: istrstream
 
 Costruisce un oggetto di tipo `istrstream`.
 
@@ -72,17 +72,17 @@ istrstream(
 
 ### <a name="parameters"></a>Parametri
 
-*Conteggio*\
-La lunghezza del buffer (*ptr*).
+*conteggio*\
+Lunghezza del buffer (*ptr*).
 
-*Ptr*\
+*PTR*\
 Contenuto con cui viene inizializzato il buffer.
 
 ### <a name="remarks"></a>Osservazioni
 
-Tutti i costruttori inizializzano la classe base chiamando `sb` [istream](../standard-library/istream-typedefs.md#istream)(**sb**), dove è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). I primi due costruttori `sb` vengono inizializzati anche chiamando `strstreambuf`( ( **const** `char` \*) `ptr`, 0 ). I due costruttori `strstreambuf`rimanenti chiamano invece `count` ( ( **const** `char` , ) `ptr`, ).
+Tutti i costruttori inizializzano la classe base chiamando [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), dove `sb` è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). I primi due costruttori inizializzano anche chiamando `sb` `strstreambuf( ( const char *) ptr, 0 )` . I due costruttori rimanenti chiamano invece `strstreambuf( ( const char *) ptr, count )` .
 
-## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream::rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream:: rdbuf
 
 Restituisce un puntatore all'oggetto strstreambuf associato del flusso.
 
@@ -102,7 +102,7 @@ La funzione membro restituisce l'indirizzo del buffer del flusso archiviato di t
 
 Vedere[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) per un esempio d'uso di `rdbuf`.
 
-## <a name="istrstreamstr"></a><a name="str"></a>istrstream::str
+## <a name="istrstreamstr"></a><a name="str"></a>istrstream:: Str
 
 Chiama [freeze](../standard-library/strstreambuf-class.md#freeze) e quindi restituisce un puntatore all'inizio della sequenza controllata.
 
@@ -116,15 +116,15 @@ Puntatore all'inizio della sequenza controllata.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
+La funzione membro restituisce [rdbuf](#rdbuf)  ->  [Str](../standard-library/strstreambuf-class.md#str).
 
 ### <a name="example"></a>Esempio
 
-Vedere [strstream::str](../standard-library/strstreambuf-class.md#str) per un `str`esempio che utilizza .
+Vedere [strstream:: Str](../standard-library/strstreambuf-class.md#str) per un esempio che usa `str` .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Istream](../standard-library/istream-typedefs.md#istream)\
-[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programmazione iostream](../standard-library/iostream-programming.md)\
-[Convenzioni di iostream](../standard-library/iostreams-conventions.md)
+[IStream](../standard-library/istream-typedefs.md#istream)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programmazione di iostream](../standard-library/iostream-programming.md)\
+[convenzioni di iostreams](../standard-library/iostreams-conventions.md)
