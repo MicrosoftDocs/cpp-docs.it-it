@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231039"
 ---
 # <a name="virtual-functions"></a>Funzioni virtuali
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 Si noti che la funzione `NameOf` viene chiamata per `Base` sia se viene richiamata tramite un puntatore a `Derived` sia se viene richiamata tramite un puntatore a `Derived`. La funzione viene chiamata per `Derived` poiché `NameOf` è una funzione virtuale e `pBase` e `pDerived` puntano a un oggetto di tipo `Derived`.
 
-Poiché le funzioni virtuali vengono chiamate solo per oggetti di tipo classe, non è possibile dichiarare funzioni globali o statiche come **virtuali**.
+Poiché le funzioni virtuali vengono chiamate solo per oggetti di tipo classe, non è possibile dichiarare funzioni globali o statiche come **`virtual`** .
 
-La parola chiave **Virtual** può essere usata quando si dichiarano funzioni di override in una classe derivata, ma non è necessaria. gli override delle funzioni virtuali sono sempre virtuali.
+La **`virtual`** parola chiave può essere usata quando si dichiarano funzioni di override in una classe derivata, ma non è necessaria; le sostituzioni di funzioni virtuali sono sempre virtuali.
 
 Le funzioni virtuali in una classe base devono essere definite a meno che non vengano dichiarate usando *pure-specifier*. Per ulteriori informazioni sulle funzioni virtuali pure, vedere [classi astratte](../cpp/abstract-classes-cpp.md).
 

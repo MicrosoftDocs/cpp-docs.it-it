@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2573f30b2dfee20d12afea2a1072bbdcef46228b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160892"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231078"
 ---
 # <a name="subscripting"></a>Indice
 
-L'operatore di indice ( **[]** ), come l'operatore di chiamata di funzione, viene considerato un operatore binario. L'operatore di pedice deve essere una funzione membro non statica che accetta un solo argomento. In questo argomento può essere di qualsiasi tipo e definisce il pedice di matrice desiderato.
+L'operatore di indice (**[]**), come l'operatore di chiamata di funzione, viene considerato un operatore binario. L'operatore di pedice deve essere una funzione membro non statica che accetta un solo argomento. In questo argomento può essere di qualsiasi tipo e definisce il pedice di matrice desiderato.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come creare un vettore di tipo **int** che implementa il controllo dei limiti:
+Nell'esempio seguente viene illustrato come creare un vettore di tipo **`int`** che implementa il controllo dei limiti:
 
 ```cpp
 // subscripting.cpp
