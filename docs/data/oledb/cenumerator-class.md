@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211796"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214919"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
@@ -44,19 +44,19 @@ class CEnumerator :
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[Trovare](#find)|Esegue una ricerca attraverso i provider disponibili (origini dati) per cercare un elemento con il nome specificato.|
+|[Find](#find)|Esegue una ricerca attraverso i provider disponibili (origini dati) per cercare un elemento con il nome specificato.|
 |[GetMoniker](#getmoniker)|Recupera l'interfaccia `IMoniker` per il record corrente.|
 |[Apri](#open)|Apre l'enumeratore.|
 
 ## <a name="remarks"></a>Osservazioni
 
-È possibile recuperare i dati `ISourcesRowset` indirettamente da questa classe.
+È possibile recuperare i `ISourcesRowset` dati indirettamente da questa classe.
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
 
@@ -75,11 +75,11 @@ in Nome da cercare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il nome è stato trovato. In caso contrario, **false**.
+**`true`** Se il nome è stato trovato. In caso contrario, **`false`** .
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo nome esegue il mapping al membro `SOURCES_NAME` dell'interfaccia [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
+Questo nome esegue il mapping al `SOURCES_NAME` membro dell'interfaccia [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
 ## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
 
@@ -126,9 +126,9 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 in Puntatore a un moniker per un enumeratore.
 
 *pClsid*<br/>
-in Puntatore al `CLSID` di un enumeratore.
+in Puntatore all'oggetto `CLSID` di un enumeratore.
 
-*enumerator*<br/>
+*enumeratore*<br/>
 in Riferimento a un enumeratore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -139,4 +139,4 @@ Valore HRESULT standard.
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

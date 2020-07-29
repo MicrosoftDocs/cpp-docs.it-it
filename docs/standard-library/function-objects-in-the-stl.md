@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed413b2bcdcda8f65794b10c792b10358564420a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215738"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Oggetti funzione della libreria standard C++
 
@@ -47,7 +47,7 @@ L'ultima riga della funzione `main` mostra come chiamare l'oggetto function. Que
 
 ## <a name="function-objects-and-containers"></a>Oggetti funzione e contenitori
 
-La libreria standard C++ contiene diversi oggetti funzione nel file di intestazione [\<functional>](../standard-library/functional.md). Uno degli usi di questi oggetti funzione è come criterio di ordinamento per i contenitori. Ad esempio, il contenitore `set` è dichiarato come segue:
+La libreria standard C++ contiene diversi oggetti funzione nel [\<functional>](../standard-library/functional.md) file di intestazione. Uno degli usi di questi oggetti funzione è come criterio di ordinamento per i contenitori. Ad esempio, il contenitore `set` è dichiarato come segue:
 
 ```cpp
 template <class Key,
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Il secondo argomento di modello è l'oggetto funzione `less`. Questo oggetto funzione restituisce **true** se il primo parametro è minore del secondo parametro. Poiché alcuni contenitori ordinano gli elementi, il contenitore necessita di un modo per confrontare due elementi. Il confronto viene eseguito usando l'oggetto funzione. È possibile definirne i propri criteri di ordinamento per i contenitori creando un oggetto funzione e specificandolo nell'elenco di modelli del contenitore.
+Il secondo argomento di modello è l'oggetto funzione `less`. Questo oggetto funzione restituisce **`true`** se il primo parametro è minore del secondo parametro. Poiché alcuni contenitori ordinano gli elementi, il contenitore necessita di un modo per confrontare due elementi. Il confronto viene eseguito usando l'oggetto funzione. È possibile definirne i propri criteri di ordinamento per i contenitori creando un oggetto funzione e specificandolo nell'elenco di modelli del contenitore.
 
 ## <a name="function-objects-and-algorithms"></a>Oggetti funzione e algoritmi
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-L'ultimo argomento a `remove_if` è un oggetto funzione che restituisce un valore booleano (un *predicato*). Se il risultato dell'oggetto funzione è **true**, l'elemento viene rimosso dal contenitore a cui accedono gli iteratori `first` e. `last` È possibile usare uno qualsiasi degli oggetti funzione dichiarati nell'intestazione [\<functional>](../standard-library/functional.md) per l'argomento `pred` oppure è possibile crearne uno.
+L'ultimo argomento a `remove_if` è un oggetto funzione che restituisce un valore booleano (un *predicato*). Se il risultato dell'oggetto funzione è **`true`** , l'elemento viene rimosso dal contenitore a cui accedono gli iteratori `first` e `last` . È possibile usare uno degli oggetti funzione dichiarati nell' [\<functional>](../standard-library/functional.md) intestazione per l'argomento `pred` oppure è possibile crearne di personalizzati.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

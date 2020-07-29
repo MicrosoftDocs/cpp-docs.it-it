@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: ca5f53d67bb32e59c20d1d440879144f0a617c66
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1121bd4e782fca57588d05fb29b5b9b6cdec18e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686016"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215608"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
-Includere l'intestazione standard iostreams \<streambuf > per definire il modello di classe [basic_streambuf](../standard-library/basic-streambuf-class.md), che è di base per il funzionamento delle classi iostreams. Questa intestazione viene in genere inclusa automaticamente da altre intestazioni iostream. Raramente è necessario che sia inclusa direttamente dall'utente.
+Includere l'intestazione standard iostreams \<streambuf> per definire il modello di classe [basic_streambuf](../standard-library/basic-streambuf-class.md), che è di base per il funzionamento delle classi iostreams. Questa intestazione viene in genere inclusa automaticamente da altre intestazioni iostream. Raramente è necessario che sia inclusa direttamente dall'utente.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,22 +23,22 @@ Includere l'intestazione standard iostreams \<streambuf > per definire il modell
 #include <streambuf>
 ```
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|Nome del tipo|Descrizione|
+|Nome tipo|Descrizione|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Una specializzazione di `basic_streambuf` che utilizza **char** come parametri di modello.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Una specializzazione di `basic_streambuf` che utilizza **wchar_t** come parametri del modello.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Una specializzazione di `basic_streambuf` che usa **`char`** come parametri di modello.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Una specializzazione di `basic_streambuf` che usa **`wchar_t`** come parametri di modello.|
 
 ### <a name="classes"></a>Classi
 
-|Class|Descrizione|
+|Classe|Descrizione|
 |-|-|
 |[Classe basic_streambuf](basic-streambuf-class.md)|Il modello di classe descrive una classe base astratta per la derivazione di un buffer del flusso, che controlla la trasmissione di elementi da e verso una rappresentazione specifica di un flusso.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
-[Convenzioni di iostream](../standard-library/iostreams-conventions.md)
+[convenzioni di iostreams](../standard-library/iostreams-conventions.md)

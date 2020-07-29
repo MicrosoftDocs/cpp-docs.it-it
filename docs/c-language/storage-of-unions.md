@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], storage
 - union keyword [C]
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
-ms.openlocfilehash: 49b99dc17fd7bdddd8a47e3bfd5913a70a7631a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64e8b5184eeccd4de6d196e40ec464807bec93e7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157929"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211658"
 ---
 # <a name="storage-of-unions"></a>Archiviazione di unioni
 
@@ -25,7 +25,7 @@ union         /* Defines a union named x */
 } x;
 ```
 
-I membri dell'unione `x` sono, nell'ordine di dichiarazione, un puntatore a un valore `char`, un valore `char` e una matrice di valori **float**. Lo spazio di archiviazione allocato per `x` è lo spazio di archiviazione necessario per la matrice `f`di 20 elementi, poiché `f` è il membro più lungo dell'unione. Poiché nessun tag è associato all'unione, il tipo è senza nome o "anonimo".
+I membri dell' `x` Unione sono, nell'ordine di dichiarazione, un puntatore a un **`char`** valore, un **`char`** valore e una matrice di **`float`** valori. Lo spazio di archiviazione allocato per `x` è lo spazio di archiviazione necessario per la matrice `f`di 20 elementi, poiché `f` è il membro più lungo dell'unione. Poiché nessun tag è associato all'unione, il tipo è senza nome o "anonimo".
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620733"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214152"
 ---
 # <a name="connection-points"></a>Punti di connessione
 
@@ -37,7 +37,7 @@ MFC implementa questo modello nelle classi [CConnectionPoint](reference/cconnect
 
 Per ogni punto di connessione implementato nella classe, è necessario dichiarare una parte di connessione che implementa il punto di connessione. Se si implementano uno o più punti di connessione, è necessario dichiarare anche una singola mappa di connessione nella classe. Una mappa di connessione è una tabella di punti di connessione supportata dal controllo ActiveX.
 
-Negli esempi seguenti viene illustrata una semplice mappa di connessione e un punto di connessione. Nel primo esempio viene dichiarata la mappa di connessione e il punto; nel secondo esempio viene implementata la mappa e il punto. Si noti che `CMyClass` deve essere una `CCmdTarget` classe derivata da. Nel primo esempio, il codice viene inserito nella dichiarazione di classe, nella sezione **protected** :
+Negli esempi seguenti viene illustrata una semplice mappa di connessione e un punto di connessione. Nel primo esempio viene dichiarata la mappa di connessione e il punto; nel secondo esempio viene implementata la mappa e il punto. Si noti che `CMyClass` deve essere una `CCmdTarget` classe derivata da. Nel primo esempio, il codice viene inserito nella dichiarazione di classe, nella **`protected`** sezione:
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 

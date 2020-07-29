@@ -9,16 +9,16 @@ helpviewer_keywords:
 - external linkage, function declarations
 - external linkage, storage-class specifiers
 ms.assetid: 801d7df2-efa9-4924-a725-274a5654cfd4
-ms.openlocfilehash: 69d6fa2b17523f2bb4068cd05a11265d91750021
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e27cc6ac748c0af3063dbc5b608114761da8b7dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157883"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211697"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Identificatori di classi di archiviazione con Dichiarazioni di funzione
 
-È possibile usare l'identificatore **static** o della classe di archiviazione `extern` nelle dichiarazioni di funzione. Le funzioni hanno sempre durate globali.
+È possibile usare l' **`static`** **`extern`** identificatore di classe di archiviazione o nelle dichiarazioni di funzione. Le funzioni hanno sempre durate globali.
 
 **Specifico di Microsoft**
 
@@ -28,15 +28,15 @@ Le dichiarazioni di funzione a livello interno hanno lo stesso significato delle
 
 Le regole di visibilità per le funzioni variano leggermente dalle regole per le variabili, nel modo seguente:
 
-- Una funzione dichiarata come **static** è visibile solo all'interno del file di origine in cui viene definita. Le funzioni nello stesso file di origine possono chiamare la funzione **static**, ma le funzioni in altri file di origine non possono accedervi direttamente per nome. È possibile dichiarare un'altra funzione **static** con lo stesso nome in un file di origine diverso senza creare un conflitto.
+- Una funzione dichiarata come **`static`** è visibile solo all'interno del file di origine in cui è definita. Le funzioni nello stesso file di origine possono chiamare la **`static`** funzione, ma le funzioni in altri file di origine non possono accedervi direttamente in base al nome. È possibile dichiarare un'altra **`static`** funzione con lo stesso nome in un file di origine diverso senza conflitti.
 
-- Le funzioni dichiarate come `extern` sono visibili in tutti i file di origine del programma, a meno che non si ridichiari successivamente tale funzione come **static**. Qualsiasi funzione può chiamare una funzione `extern`.
+- Le funzioni dichiarate come **`extern`** sono visibili in tutti i file di origine del programma, a meno che non si ridichiara successivamente tale funzione come **`static`** . Qualsiasi funzione può chiamare una **`extern`** funzione.
 
-- Le dichiarazioni di funzione che omettendo l'identificatore della classe di archiviazione sono per impostazione predefinita `extern`.
+- Per impostazione predefinita, le dichiarazioni di funzione che omettono l'identificatore della classe di archiviazione sono **`extern`** per impostazione predefinita.
 
 **Specifico di Microsoft**
 
-Microsoft consente la ridefinizione di un identificatore `extern` come **static**.
+Microsoft consente la ridefinizione di un **`extern`** identificatore come **`static`** .
 
 **TERMINA specifica Microsoft**
 

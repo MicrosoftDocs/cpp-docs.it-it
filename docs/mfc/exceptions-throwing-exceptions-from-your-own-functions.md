@@ -6,18 +6,18 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: ebdfea18e6e8445dd734bf43fb6a4ecf422975e9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622739"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223187"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Eccezioni: generazione di eccezioni da funzioni personalizzate
 
 È possibile utilizzare il paradigma di gestione delle eccezioni MFC esclusivamente per intercettare le eccezioni generate dalle funzioni in MFC o in altre librerie. Oltre ad intercettare le eccezioni generate dal codice della libreria, è possibile generare eccezioni dal proprio codice se si scrivono funzioni che possono verificarsi condizioni eccezionali.
 
-Quando viene generata un'eccezione, l'esecuzione della funzione corrente viene arrestata e passa direttamente al blocco **catch** del frame di eccezione più interno. Il meccanismo di eccezione ignora il percorso di uscita normale da una funzione. Pertanto, è necessario assicurarsi di eliminare i blocchi di memoria che verrebbero eliminati in una normale uscita.
+Quando viene generata un'eccezione, l'esecuzione della funzione corrente viene arrestata e passa direttamente al **`catch`** blocco del frame dell'eccezione più interna. Il meccanismo di eccezione ignora il percorso di uscita normale da una funzione. Pertanto, è necessario assicurarsi di eliminare i blocchi di memoria che verrebbero eliminati in una normale uscita.
 
 #### <a name="to-throw-an-exception"></a>Per generare un'eccezione
 

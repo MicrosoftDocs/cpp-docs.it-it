@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-ms.openlocfilehash: aac308905a01a52a4ce5ee0fa3be03f2f33ac1cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ebfadea0d643ac68e2ace722a39587bd01312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153697"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223707"
 ---
 # <a name="goto-statement-c"></a>Istruzione goto (C++)
 
-Il **goto** istruzione trasferisce il controllo all'istruzione contrassegnata dall'identificatore specificato.
+L' **`goto`** istruzione trasferisce il controllo in modo incondizionato all'istruzione denominata dall'identificatore specificato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,13 +23,13 @@ Il **goto** istruzione trasferisce il controllo all'istruzione contrassegnata da
 goto identifier;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'istruzione con etichetta designata da `identifier` deve essere nella funzione corrente. Tutti i nomi di `identifier` sono membri di uno spazio dei nomi interno e quindi non interferiscono con altri identificatori.
 
-Un'etichetta di istruzione è significativa solo a un **goto** istruzione; in caso contrario, vengono ignorate le etichette di istruzione. Le etichette non possono essere ridichiarate.
+Un'etichetta di istruzione è significativa solo per un' **`goto`** istruzione; in caso contrario, le etichette delle istruzioni vengono ignorate. Le etichette non possono essere ridichiarate.
 
-Oggetto **goto** istruzione non è consentita per trasferire il controllo in una posizione che ignora l'inizializzazione di qualsiasi variabile nell'ambito in tale percorso. Nell'esempio seguente genera C2362:
+Un' **`goto`** istruzione non può trasferire il controllo a una posizione che ignora l'inizializzazione di qualsiasi variabile presente nell'ambito di tale percorso. L'esempio seguente genera l'C2362:
 
 ```cpp
 int goto_fn(bool b)
@@ -48,13 +48,13 @@ exit:
 }
 ```
 
-È buona norma programmare lo stile da utilizzare il **break**, **continuare**, e **restituire** istruzioni anziché il **goto** istruzione ogni volta che possibili. Tuttavia, poiché il **interruzione** istruzione consente di uscire da un solo livello di un ciclo, potrebbe essere necessario usare un **goto** istruzione per uscire da un ciclo eccessivamente annidato.
+Si tratta di uno stile di programmazione ottimale per utilizzare le **`break`** **`continue`** istruzioni, e **`return`** anziché l' **`goto`** istruzione quando possibile. Tuttavia, poiché l' **`break`** istruzione viene chiusa da un solo livello di un ciclo, potrebbe essere necessario utilizzare un' **`goto`** istruzione per uscire da un ciclo profondamente annidato.
 
-Per altre informazioni sulle etichette e la **goto** istruzione, vedere [istruzioni con etichetta](../cpp/labeled-statements.md).
+Per ulteriori informazioni sulle etichette e sull' **`goto`** istruzione, vedere [istruzioni con etichetta](../cpp/labeled-statements.md).
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, un **goto** istruzione trasferisce il controllo al punto etichettato `stop` quando `i` è uguale a 3.
+In questo esempio, un' **`goto`** istruzione trasferisce il controllo al punto con etichetta `stop` quando `i` è uguale a 3.
 
 ```cpp
 // goto_statement.cpp
@@ -99,5 +99,5 @@ Jumped to stop. i = 3
 
 ## <a name="see-also"></a>Vedere anche
 
-[Istruzioni di spostamento](../cpp/jump-statements-cpp.md)<br/>
+[Istruzioni di salto](../cpp/jump-statements-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752903"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214945"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
 
-Una struttura di *valori* o una classe di *valori* è un POD compatibile con Windows Runtime ("struttura di dati semplice e precedente"). con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.
+Uno *struct di valore* o una *classe di valore* è un pod compatibile con Windows Runtime ("struttura di dati Plain Old"). con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.
 
 Gli esempi seguenti mostrano come dichiarare e inizializzare struct di valore.
 
@@ -48,17 +48,17 @@ Gli esempi seguenti mostrano come dichiarare e inizializzare struct di valore.
     ts3.str = "Another way to init a value struct.";
 ```
 
-Quando una variabile di un tipo di valore viene assegnata a un'altra variabile, il valore viene copiato. In tal modo ciascuna delle due variabili dispone di una propria copia dei dati. Uno *struct di valore* è una struttura di dimensione fissa che contiene solo campi di dati pubblici e viene dichiarata utilizzando la parola chiave `value struct` .
+Quando una variabile di un tipo di valore viene assegnata a un'altra variabile, il valore viene copiato. In tal modo ciascuna delle due variabili dispone di una propria copia dei dati. Uno *struct di valore* è una struttura a dimensione fissa che contiene solo campi di dati pubblici e viene dichiarata tramite la **`value struct`** parola chiave.
 
-Una *classe di valore* è analoga a uno `value struct` , eccetto per il fatto che ai relativi campi deve essere concessa esplicitamente l'accessibilità pubblica. La classe viene dichiarata utilizzando la parola chiave `value class` .
+Una *classe di valori* è simile a **`value struct`** , ad eccezione del fatto che ai campi deve essere assegnata in modo esplicito l'accessibilità pubblica. Viene dichiarata usando la **`value class`** parola chiave.
 
-Uno struct di valore o una classe di valori può `Platform::String^`contenere come campi solo tipi numerici fondamentali, classi enum o [Platform::IBox \<T>,](../cppcx/platform-ibox-interface.md) dove T è un tipo numerico o una classe enum o una classe o uno struct di valore. Un campo `IBox<T>^` può contenere un valore `nullptr`. Ecco come C++ implementa il concetto di *tipi di valore nullable*.
+Uno struct di valore o una classe di valore può contenere come campi solo tipi numerici fondamentali, classi di enumerazione, `Platform::String^` o [Platform:: \<T> ^ iBox](../cppcx/platform-ibox-interface.md) dove T è un tipo numerico o una classe di enumerazione o una classe di valore o uno struct. Un `IBox<T>^` campo può avere un valore **`nullptr`** : questo è il modo in cui C++ implementa il concetto di *tipi di valore Nullable*.
 
 Uno struct o una classe di valori che contiene un tipo `Platform::String^` o `IBox<T>^` come membro non supporta `memcpy`.
 
-Poiché tutti i membri di una `value class` o di uno `value struct` sono pubblici e vengono generati nei metadati, i tipi C++ standard non sono consentiti come membri. Non è così per le classi di riferimento che possono contenere tipi C++ standard `private` o `internal` .
+Poiché tutti i membri di un oggetto **`value class`** o **`value struct`** sono pubblici e vengono emessi nei metadati, i tipi C++ standard non sono consentiti come membri. Questa operazione è diversa dalle classi di riferimento che possono **`private`** contenere **`internal`** tipi C++ standard o.
 
-Nel frammento di codice riportato di seguito i tipi `Coordinates` e `City` vengono dichiarati come struct di valore. Nota che uno dei membri dati `City` è un tipo `GeoCoordinates` . Uno `value struct` può contenere altri struct di valore come membri.
+Nel frammento di codice riportato di seguito i tipi `Coordinates` e `City` vengono dichiarati come struct di valore. Nota che uno dei membri dati `City` è un tipo `GeoCoordinates` . Un oggetto **`value struct`** può contenere altri struct di valore come membri.
 
 [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]
 
@@ -90,7 +90,7 @@ Per passare un tipo valore per riferimento è possibile usare anche un simbolo p
 
 ## <a name="nullable-value-types"></a>Tipi valore nullable
 
-Come accennato in precedenza, una classe di valore o uno struct di valore può avere un campo di tipo [Platform::IBox\<T>,](../cppcx/platform-ibox-interface.md)ad esempio . `IBox<int>^` A tale campo può essere assegnato qualsiasi valore numerico valido per il tipo `int` o un valore `nullptr`. È possibile passare un campo nullable come argomento a un metodo il cui parametro è dichiarato come facoltativo o qualsiasi altra posizione in cui un tipo di valore non deve necessariamente avere un valore.
+Come indicato in precedenza, una classe valore o uno struct di valore può avere un campo di tipo [Platform \<T> ^ :: iBox](../cppcx/platform-ibox-interface.md), ad esempio `IBox<int>^` . Tale campo può avere qualsiasi valore numerico valido per il **`int`** tipo oppure può avere un valore **`nullptr`** . È possibile passare un campo nullable come argomento a un metodo il cui parametro è dichiarato come facoltativo o qualsiasi altra posizione in cui un tipo di valore non deve necessariamente avere un valore.
 
 L'esempio seguente mostra come inizializzare uno struct con un campo nullable.
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>Vedere anche
 
 [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)<br/>
+[Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti agli spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Classi e struct di riferimento (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

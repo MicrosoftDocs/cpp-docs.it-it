@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62e8a2026babbfea3cd1583def05a03b4bc4a229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160684"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223512"
 ---
 # <a name="typename"></a>typename
 
@@ -27,7 +27,7 @@ typename identifier;
 
 Questa parola chiave deve essere usata se un nome in una definizione di modello è un nome completo che dipende da un argomento di modello; è facoltativo se il nome completo non è dipendente. Per altre informazioni, vedere [modelli e risoluzione dei nomi](../cpp/templates-and-name-resolution.md).
 
-**typeName** può essere usato da qualsiasi tipo in qualsiasi posizione in una dichiarazione o definizione di modello. Non è consentita nell'elenco di classi base, a meno che non sia un argomento di modello in una classe base del modello.
+**`typename`** può essere usato da qualsiasi tipo in qualsiasi posizione in una dichiarazione o definizione di modello. Non è consentita nell'elenco di classi base, a meno che non sia un argomento di modello in una classe base del modello.
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-La parola chiave **typeName** può essere usata anche al posto della **classe** negli elenchi di parametri di modello. Ad esempio, le istruzioni seguenti sono semanticamente equivalenti:
+La **`typename`** parola chiave può essere usata anche al posto di **`class`** negli elenchi di parametri di modello. Ad esempio, le istruzioni seguenti sono semanticamente equivalenti:
 
 ```cpp
 template<class T1, class T2>...

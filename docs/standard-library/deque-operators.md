@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d91fe64e7d06a80402a0a540be8f63d98ea96d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419133"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222485"
 ---
 # <a name="ltdequegt-operators"></a>Operatori &lt;deque&gt;
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore non è uguale all'oggetto deque sul lato destro.
 
@@ -35,15 +35,15 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `deque`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se gli oggetti deque non sono uguali, **false** se gli oggetti deque sono uguali.
+**`true`** Se gli oggetti deque non sono uguali; **`false`** se gli oggetti deque sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -76,7 +76,7 @@ int main( )
 The deques are not equal.
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore dell'oggetto deque sul lato destro.
 
@@ -86,15 +86,15 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `deque`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la deque a sinistra dell'operatore è minore ma non uguale alla deque a destra, in caso contrario **false**.
+**`true`** Se la deque sul lato sinistro dell'operatore è minore e non uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore o uguale all'oggetto deque sul lato destro.
 
@@ -141,15 +141,15 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `deque`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la deque a sinistra dell'operatore è minore o uguale alla deque a destra, in caso contrario **false**.
+**`true`** Se la deque sul lato sinistro dell'operatore è minore o uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è uguale all'oggetto deque sul lato destro.
 
@@ -196,15 +196,15 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `deque`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la deque a sinistra dell'operatore è uguale alla deque a destra, in caso contrario **false**.
+**`true`** Se la deque sul lato sinistro dell'operatore è uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -244,7 +244,7 @@ The deques are equal.
 The deques are not equal.
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è maggiore dell'oggetto deque sul lato destro.
 
@@ -254,15 +254,15 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `deque`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la deque a sinistra dell'operatore è maggiore della deque a destra, in caso contrario **false**.
+**`true`** Se la deque sul lato sinistro dell'operatore è maggiore della deque a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è maggiore o uguale all'oggetto deque sul lato destro.
 
@@ -310,15 +310,15 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `deque`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la deque a sinistra dell'operatore è maggiore o uguale alla deque a destra, in caso contrario **false**.
+**`true`** Se la deque sul lato sinistro dell'operatore è maggiore o uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
 ### <a name="remarks"></a>Osservazioni
 

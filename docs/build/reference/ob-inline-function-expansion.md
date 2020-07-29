@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 7eb3db1e359349eaf5125a6c8a46a3ac7d847f2f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 238e5533c062678c59b61ebeba71eee3231fb5fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915474"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215218"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Espansione funzioni inline)
 
@@ -39,13 +39,13 @@ Controlla l'espansione inline delle funzioni. Per impostazione predefinita, quan
 
 ::: moniker range=">=vs-2019"
 
-> **/Ob** {**0**|12|**3**}|
+> **/Ob**{**0** | **1** | **2** | **3**}
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-> **/Ob** {**0**|12|}
+> **/Ob**{**0** | **1** | **2**}
 
 ::: moniker-end
 
@@ -55,7 +55,7 @@ Controlla l'espansione inline delle funzioni. Per impostazione predefinita, quan
 Valore predefinito in [/od](od-disable-debug.md). Disabilita le espansioni inline.
 
 **1**\
-Consente l'espansione solo di funzioni contrassegnate come [inline](../../cpp/inline-functions-cpp.md), [__inline](../../cpp/inline-functions-cpp.md)o [__forceinline](../../cpp/inline-functions-cpp.md)o in C++ una funzione membro definita in una dichiarazione di classe.
+Consente l'espansione solo di funzioni contrassegnate come [inline](../../cpp/inline-functions-cpp.md), [__inline](../../cpp/inline-functions-cpp.md)o [__forceinline](../../cpp/inline-functions-cpp.md)o in una funzione membro C++ definita in una dichiarazione di classe.
 
 **2**\
 Il valore predefinito in [/O1](o1-o2-minimize-size-maximize-speed.md) e [/O2](o1-o2-minimize-size-maximize-speed.md). Consente al compilatore di espandere qualsiasi funzione non contrassegnata in modo esplicito per nessuna incorporata.
@@ -67,11 +67,11 @@ Questa opzione specifica l'incorporamento più aggressivo rispetto a **/Ob2**, m
 
 ::: moniker-end
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il compilatore considera come suggerimenti le opzioni di espansione inline e le parole chiave. Non vi è alcuna garanzia che le funzioni vengano espanse inline. È possibile disabilitare le espansioni inline, ma non è possibile forzare il compilatore in modo che inline una funzione specifica, `__forceinline` anche quando si usa la parola chiave.
+Il compilatore considera come suggerimenti le opzioni di espansione inline e le parole chiave. Non vi è alcuna garanzia che le funzioni vengano espanse inline. È possibile disabilitare le espansioni inline, ma non è possibile forzare il compilatore in modo che inline una funzione specifica, anche quando si usa la **`__forceinline`** parola chiave.
 
-Per escludere le funzioni dalla considerazione come candidati per l'espansione inline, è possibile usare [_ _ declspec (noinline)](../../cpp/noinline.md)o un'area contrassegnata da [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) e #pragma direttive [auto_inline (on)](../../preprocessor/auto-inline.md) . Per informazioni su un altro modo per fornire hint di incorporamento al compilatore, vedere la direttiva [intrinseca #pragma](../../preprocessor/intrinsic.md) .
+Per escludere le funzioni dalla considerazione come candidati per l'espansione inline, è possibile usare [__declspec (noinline)](../../cpp/noinline.md)o un'area contrassegnata da [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) e #pragma le direttive [auto_inline (on)](../../preprocessor/auto-inline.md) . Per informazioni su un altro modo per fornire hint di incorporamento al compilatore, vedere la direttiva [intrinseca #pragma](../../preprocessor/intrinsic.md) .
 
 > [!NOTE]
 > Le informazioni raccolte dalle esecuzioni dei test di profilatura eseguono l'override delle ottimizzazioni che altrimenti sarebbero attive perché è stato specificato **/ob**, **/OS**o **/OT**. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md).
@@ -80,7 +80,7 @@ Per escludere le funzioni dalla considerazione come candidati per l'espansione i
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione** >  > **C/C++** **ottimizzazione** .
+1. Selezionare la pagina delle proprietà di **configurazione**proprietà di  >  **ottimizzazione C/C++**  >  **Optimization** .
 
 1. Modificare la proprietà di **espansione della funzione inline** .
 
@@ -90,7 +90,7 @@ L'opzione **/OB3** non è disponibile nella proprietà di **espansione della fun
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà **configurazione proprietà** > > **C/C++**  **riga di comando** .
+1. Selezionare la pagina delle proprietà **Proprietà di configurazione** > **C/C++** > **Riga di comando**.
 
 1. Immettere **/OB3** in **Opzioni aggiuntive**.
 

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 6fe4286142c90f341925d7e76ca8de6d3b7daa9f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a67d4d859e3a9dd2241f14a476492df0fd3e6b8d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075016"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223421"
 ---
 # <a name="compiler-error-c3495"></a>Errore del compilatore C3495
 
 'var': la durata dell'archiviazione di un'acquisizione di espressioni lambda deve essere automatica
 
-Non è possibile acquisire una variabile che non ha una durata di archiviazione automatica, ad esempio una variabile contrassegnata come `static` o `extern`.
+Non è possibile acquisire una variabile che non ha una durata di archiviazione automatica, ad esempio una variabile contrassegnata come **`static`** o **`extern`** .
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-- Non passare una variabile `static` o `extern` all'elenco di acquisizione dell'espressione lambda.
+- Non passare una **`static`** variabile o **`extern`** all'elenco di acquisizione dell'espressione lambda.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C3495 perché la variabile `static``n` è presente nell'elenco di acquisizione di un'espressione lambda:
+Nell'esempio seguente viene generato C3495 perché la **`static`** variabile è `n` presente nell'elenco di acquisizione di un'espressione lambda:
 
 ```cpp
 // C3495.cpp

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417194"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223772"
 ---
 # <a name="x64-software-conventions"></a>Convenzioni del software x64
 
@@ -18,13 +18,13 @@ In questa sezione viene descritta la metodologia della convenzione di chiamata C
 
 ## <a name="overview-of-x64-calling-conventions"></a>Panoramica delle convenzioni di chiamata x64
 
-Due differenze importanti tra x86 e x64 sono la funzionalità di indirizzamento a 64 bit e un set flat di registri a 16 64 bit per uso generale. Dato il set di registri espanso, x64 usa la convenzione di chiamata [__fastcall](../cpp/fastcall.md) e un modello di gestione delle eccezioni basato su RISC. La `__fastcall` convenzione usa i registri per i primi quattro argomenti e il stack frame per passare argomenti aggiuntivi. Per informazioni dettagliate sulla convenzione di chiamata x64, inclusi l'utilizzo del registro, i parametri dello stack, i valori restituiti e la rimozione dello stack, vedere [convenzione di chiamata x64](x64-calling-convention.md).
+Due differenze importanti tra x86 e x64 sono la funzionalità di indirizzamento a 64 bit e un set flat di registri a 16 64 bit per uso generale. Dato il set di registri espanso, x64 usa la convenzione di chiamata [__fastcall](../cpp/fastcall.md) e un modello di gestione delle eccezioni basato su RISC. La **`__fastcall`** convenzione usa i registri per i primi quattro argomenti e il stack frame per passare argomenti aggiuntivi. Per informazioni dettagliate sulla convenzione di chiamata x64, inclusi l'utilizzo del registro, i parametri dello stack, i valori restituiti e la rimozione dello stack, vedere [convenzione di chiamata x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Abilitare l'ottimizzazione per x64
 
 L'opzione del compilatore seguente consente di ottimizzare l'applicazione per x64:
 
-- [/favor (ottimizza per le specifiche di architettura)](../build/reference/favor-optimize-for-architecture-specifics.md)
+- [/favor (Ottimizza per le specifiche di architettura)](../build/reference/favor-optimize-for-architecture-specifics.md)
 
 ## <a name="types-and-storage"></a>Tipi e archiviazione
 
@@ -47,19 +47,19 @@ Sebbene sia possibile accedere ai dati con qualsiasi allineamento, è consigliab
 |||||
 |-|-|-|-|
 |Tipo scalare|Tipo di dati C|Dimensioni di archiviazione (in byte)|Allineamento consigliato|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|Word|
-|**UINT16**|**unsigned short**|2|Word|
-|**INT32**|**int**, **Long**|4|Parola doppia|
+|**INT8**|**`char`**|1|Byte|
+|**UINT8**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|Word|
+|**UINT16**|**`unsigned short`**|2|Word|
+|**INT32**|**`int`**, **`long`**|4|Parola doppia|
 |**UINT32**|**unsigned int, unsigned long**|4|Parola doppia|
-|**INT64**|**__int64**|8|Quadrupla|
+|**INT64**|**`__int64`**|8|Quadrupla|
 |**UINT64**|**unsigned __int64**|8|Quadrupla|
-|**FP32 (precisione singola)**|**float**|4|Parola doppia|
-|**FP64 (precisione doppia)**|**double**|8|Quadrupla|
+|**FP32 (precisione singola)**|**`float`**|4|Parola doppia|
+|**FP64 (precisione doppia)**|**`double`**|8|Quadrupla|
 |**PUNTATORE**|__\*__|8|Quadrupla|
-|**__m64**|**__m64 struct**|8|Quadrupla|
-|**__m128**|**__m128 struct**|16|Octaword|
+|**`__m64`**|**__m64 struct**|8|Quadrupla|
+|**`__m128`**|**__m128 struct**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Aggregati e unioni
 
@@ -82,19 +82,19 @@ Nella tabella seguente viene illustrato l'allineamento fortemente suggerito per 
 ||||
 |-|-|-|
 |Tipo scalare|Tipo di dati C|Allineamento richiesto|
-|**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|Word|
-|**UINT16**|**unsigned short**|Word|
-|**INT32**|**int**, **Long**|Parola doppia|
+|**INT8**|**`char`**|Byte|
+|**UINT8**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|Word|
+|**UINT16**|**`unsigned short`**|Word|
+|**INT32**|**`int`**, **`long`**|Parola doppia|
 |**UINT32**|**unsigned int, unsigned long**|Parola doppia|
-|**INT64**|**__int64**|Quadrupla|
+|**INT64**|**`__int64`**|Quadrupla|
 |**UINT64**|**unsigned __int64**|Quadrupla|
-|**FP32 (precisione singola)**|**float**|Parola doppia|
-|**FP64 (precisione doppia)**|**double**|Quadrupla|
+|**FP32 (precisione singola)**|**`float`**|Parola doppia|
+|**FP64 (precisione doppia)**|**`double`**|Quadrupla|
 |**PUNTATORE**|<strong>\*</strong>|Quadrupla|
-|**__m64**|**__m64 struct**|Quadrupla|
-|**__m128**|**__m128 struct**|Octaword|
+|**`__m64`**|**__m64 struct**|Quadrupla|
+|**`__m128`**|**__m128 struct**|Octaword|
 
 Si applicano le seguenti regole di allineamento aggregate:
 
@@ -181,7 +181,7 @@ L'utilizzo di dati non allineati ha due implicazioni.
 
 - Le posizioni non allineate non possono essere usate nelle operazioni Interlocked.
 
-Se è necessario un allineamento più restrittivo `__declspec(align(N))` , usare nelle dichiarazioni di variabili. In questo modo il compilatore allinea dinamicamente lo stack per soddisfare le specifiche. Tuttavia, la regolazione dinamica dello stack in fase di esecuzione può causare un rallentamento dell'esecuzione dell'applicazione.
+Se è necessario un allineamento più restrittivo, usare `__declspec(align(N))` nelle dichiarazioni di variabili. In questo modo il compilatore allinea dinamicamente lo stack per soddisfare le specifiche. Tuttavia, la regolazione dinamica dello stack in fase di esecuzione può causare un rallentamento dell'esecuzione dell'applicazione.
 
 ## <a name="register-usage"></a>Utilizzo del registro
 
@@ -206,12 +206,12 @@ Nella tabella seguente viene descritto il modo in cui ogni registro viene usato 
 |RBX|Non volatile|Deve essere mantenuto dal chiamato.|
 |RBP|Non volatile|Può essere usato come puntatore ai frame. Deve essere mantenuto dal chiamato.|
 |RSP|Non volatile|Puntatore dello stack|
-|XMM0, YMM0|Volatile|Primo argomento FP; primo argomento di tipo vettore quando si usa `__vectorcall`.|
-|XMM1, YMM1|Volatile|Secondo argomento FP; secondo argomento di tipo vettore quando si usa `__vectorcall`.|
-|XMM2, YMM2|Volatile|Terzo argomento FP; terzo argomento di tipo vettore quando si usa `__vectorcall`.|
-|XMM3, YMM3|Volatile|Quarto argomento FP; quarto argomento di tipo vettore quando si usa `__vectorcall`.|
-|XMM4, YMM4|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; quinto argomento tipo vettore quando si usa `__vectorcall`.|
-|XMM5, YMM5|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; sesto argomento di tipo vettore quando si usa `__vectorcall`.|
+|XMM0, YMM0|Volatile|Primo argomento FP; primo argomento di tipo vettore quando **`__vectorcall`** si usa|
+|XMM1, YMM1|Volatile|Secondo argomento FP; secondo argomento di tipo vettore quando **`__vectorcall`** si usa|
+|XMM2, YMM2|Volatile|Terzo argomento FP; terzo argomento di tipo vettore quando **`__vectorcall`** si usa|
+|XMM3, YMM3|Volatile|Quarto argomento FP; quarto argomento di tipo vettore quando **`__vectorcall`** si usa|
+|XMM4, YMM4|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; quinto argomento di tipo vettore quando **`__vectorcall`** si usa|
+|XMM5, YMM5|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; sesto argomento di tipo vettore quando **`__vectorcall`** si usa|
 |XMM6:XMM15, YMM6:YMM15|Non volatile (XMM), volatile (metà superiore di YMM)|Deve essere mantenuto dal chiamato. I registri YMM devono essere mantenuti in base alle esigenze del chiamante.|
 
 Quando si esce dalla funzione e sulla voce di funzione per le chiamate della libreria di runtime C e le chiamate di sistema Windows, è previsto che il flag di direzione nel registro dei flag della CPU venga cancellato.

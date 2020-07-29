@@ -10,12 +10,12 @@ helpviewer_keywords:
 - library headers
 - C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
-ms.openlocfilehash: 9cc0bb51b159f6668adad05ebd2d386364ae2f81
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a73ebebb4fdde5dd72f148390d004c32b9f4dff7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450066"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215478"
 ---
 # <a name="using-c-library-headers"></a>Utilizzo delle intestazioni della libreria C++
 
@@ -27,21 +27,21 @@ ms.locfileid: "68450066"
 
 Le intestazioni standard possono essere incluse in qualsiasi ordine e più di una volta. È inoltre possibile includere due o più intestazioni standard che definiscono la stessa macro o lo stesso tipo. Non includere un'intestazione standard in una dichiarazione. Non definire macro con gli stessi nomi di parole chiave prima di includere un'intestazione standard.
 
-Un'intestazione della libreria C++ include qualsiasi altra intestazione della libreria C++ necessaria per definire i tipi desiderati. Includere sempre in modo esplicito le intestazioni della libreria C++ necessarie in un'unità di conversione, altrimenti si rischia di interpretare in modo errato le effettive dipendenze. Un'intestazione C standard non include mai un'altra intestazione standard. Un'intestazione standard dichiara o definisce solo le entità descritte per essa in questo documento.
+Un'intestazione della libreria C++ include qualsiasi altra intestazione della libreria C++ necessaria per definire i tipi desiderati. (Includere sempre in modo esplicito tutte le intestazioni della libreria C++ necessarie in un'unità di conversione, per evitare di indovinare le dipendenze effettive). Un'intestazione C standard non include mai un'altra intestazione standard. Un'intestazione standard dichiara o definisce solo le entità descritte per essa in questo documento.
 
 Ogni funzione nella libreria è dichiarata in un'intestazione standard. Diversamente dalle intestazioni C standard, le intestazioni standard non forniscono mai una macro di mascheramento con lo stesso nome della funzione che maschera la dichiarazione della funzione e produce lo stesso effetto. Per altre informazioni sulle macro di mascheramento, vedere [C++ Library Conventions](../standard-library/cpp-library-conventions.md) (Convenzioni della libreria C++).
 
-Tutti i nomi diversi da **operator delete** e **operator new** nelle C++ `std` intestazioni della libreria sono definiti nello spazio dei nomi o in uno spazio dei nomi `std` annidato nello spazio dei nomi. Per fare riferimento al nome `cin`, ad esempio, utilizzare `std::cin`. Si noti tuttavia che i nomi di macro non sono soggetti alla qualificazione dello spazio dei nomi, pertanto è necessario sempre scrivere `__STD_COMPLEX` senza qualificatore dello spazio dei nomi.
+Tutti i nomi diversi da **operator delete** e **operator new** nelle intestazioni della libreria C++ sono definiti nello `std` spazio dei nomi o in uno spazio dei nomi annidato nello `std` spazio dei nomi. Per fare riferimento al nome `cin`, ad esempio, utilizzare `std::cin`. Si noti tuttavia che i nomi di macro non sono soggetti alla qualificazione dello spazio dei nomi, pertanto è necessario sempre scrivere `__STD_COMPLEX` senza qualificatore dello spazio dei nomi.
 
-In alcuni ambienti di traduzione, inclusa C++ un'intestazione di libreria, può sollevare anche nomi `std` esterni dichiarati nello spazio dei nomi nello spazio dei nomi globale, con singole dichiarazioni **using** per ogni nome. In caso contrario, l'intestazione *non* introduce alcun nome di libreria nello spazio dei nomi corrente.
+In alcuni ambienti di traduzione, inclusa un'intestazione della libreria C++, può sollevare anche nomi esterni dichiarati nello `std` spazio dei nomi nello spazio dei nomi globale, con singole **`using`** dichiarazioni per ognuno dei nomi. In caso contrario, l'intestazione *non* introduce alcun nome di libreria nello spazio dei nomi corrente.
 
-Per C++ lo standard è necessario che le intestazioni standard C dichiarino tutti `std`i nomi esterni nello spazio dei nomi, quindi eseguirne il Lift nello spazio dei nomi globale con le singole dichiarazioni **using** per ogni nome. In alcuni ambienti di conversione tuttavia le intestazioni C standard non includono dichiarazioni dello spazio dei nomi e tutti i nomi vengono dichiarati direttamente nello spazio dei nomi globale. Pertanto, il modo migliore per gestire gli spazi dei nomi consiste nel seguire due regole:
+Lo standard C++ richiede che le intestazioni standard C dichiarino tutti i nomi esterni nello spazio dei nomi `std` , quindi li elevano allo spazio dei nomi globale con singole **`using`** dichiarazioni per ognuno dei nomi. In alcuni ambienti di conversione tuttavia le intestazioni C standard non includono dichiarazioni dello spazio dei nomi e tutti i nomi vengono dichiarati direttamente nello spazio dei nomi globale. Pertanto, il modo migliore per gestire gli spazi dei nomi consiste nel seguire due regole:
 
-- Per dichiarare con certezza nello spazio dei nomi `std` un nome esterno generalmente dichiarato in \<stdlib.h>, ad esempio, includere l'intestazione \<cstdlib>. Considerare che il nome potrebbe essere dichiarato anche nello spazio dei nomi globale.
+- Per dichiarare in modo sicuro nello spazio dei nomi `std` un nome esterno tradizionalmente dichiarato in \<stdlib.h> , ad esempio, includere l'intestazione \<cstdlib> . Considerare che il nome potrebbe essere dichiarato anche nello spazio dei nomi globale.
 
-- Per dichiarare con certezza nello spazio dei nomi globale un nome esterno dichiarato in \<stdlib.h>, includere direttamente l'intestazione \<stdlib.h>. Considerare che il nome potrebbe essere dichiarato anche nello spazio dei nomi `std`.
+- Per dichiarare in modo sicuro nello spazio dei nomi globale un nome esterno dichiarato in \<stdlib.h> , includere \<stdlib.h> direttamente l'intestazione. Considerare che il nome potrebbe essere dichiarato anche nello spazio dei nomi `std`.
 
-Se pertanto si desidera chiamare `std::abort` per causare una terminazione anomala, includere \<cstdlib>. Se si desidera chiamare `abort`, includere \<stdlib.h>.
+Pertanto, se si desidera chiamare `std::abort` per provocare una chiusura anomala, è necessario includere \<cstdlib> . Se si desidera chiamare `abort` , è necessario includere \<stdlib.h> .
 
 In alternativa, è possibile scrivere la dichiarazione seguente:
 
@@ -55,5 +55,5 @@ A meno che non venga espressamente indicato altrimenti, è possibile non definir
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

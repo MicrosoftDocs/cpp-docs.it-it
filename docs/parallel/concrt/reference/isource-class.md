@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: a9ef9990db6376536f2f2a15c053b3b1d4ed12cf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: df592e965b436ed5a1d60702f9e57088887d5a94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139311"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222706"
 ---
 # <a name="isource-class"></a>Classe ISource
 
@@ -39,33 +39,33 @@ class ISource;
 *T*<br/>
 Tipo di dati del payload all'interno dei messaggi prodotti dal blocco di origine.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`source_type`|Alias di tipo per `T`.|
+|`source_type`|Alias del tipo per `T` .|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Distruttore ~ ISource](#dtor)|Elimina definitivamente l'oggetto `ISource`.|
+|[Distruttore ~ ISource](#dtor)|Elimina definitivamente l' `ISource` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[accettare](#accept)|Quando sottoposto a override in una classe derivata, accetta un messaggio offerto da questo blocco di `ISource`, trasferendo la proprietà al chiamante.|
-|[acquire_ref](#acquire_ref)|Quando ne viene eseguito l'override in una classe derivata, acquisisce un conteggio di riferimenti in questo blocco di `ISource` per impedire l'eliminazione.|
-|[utilizzare](#consume)|Quando sottoposto a override in una classe derivata, utilizza un messaggio precedentemente offerto dal blocco `ISource` e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.|
-|[link_target](#link_target)|Quando sottoposto a override in una classe derivata, collega un blocco di destinazione a questo blocco di `ISource`.|
-|[release](#release)|Quando sottoposto a override in una classe derivata, rilascia una prenotazione di messaggi precedente riuscita.|
-|[release_ref](#release_ref)|Quando sottoposto a override in una classe derivata, rilascia un conteggio di riferimenti in questo blocco `ISource`.|
-|[reserve](#reserve)|Quando sottoposto a override in una classe derivata, riserva un messaggio offerto in precedenza dal blocco `ISource`.|
-|[unlink_target](#unlink_target)|Quando ne viene eseguito l'override in una classe derivata, scollega un blocco di destinazione da questo blocco di `ISource`, se è stato trovato in precedenza collegato.|
-|[unlink_targets](#unlink_targets)|Quando sottoposto a override in una classe derivata, scollega tutti i blocchi di destinazione dal blocco `ISource`.|
+|[accettare](#accept)|Quando sottoposto a override in una classe derivata, accetta un messaggio offerto da questo `ISource` blocco, trasferendo la proprietà al chiamante.|
+|[acquire_ref](#acquire_ref)|Quando sottoposto a override in una classe derivata, acquisisce un conteggio di riferimenti in questo `ISource` blocco per impedire l'eliminazione.|
+|[consumare](#consume)|Quando sottoposto a override in una classe derivata, utilizza un messaggio precedentemente offerto da questo `ISource` blocco e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.|
+|[link_target](#link_target)|Quando sottoposto a override in una classe derivata, collega un blocco di destinazione a questo `ISource` blocco.|
+|[versione](#release)|Quando sottoposto a override in una classe derivata, rilascia una prenotazione di messaggi precedente riuscita.|
+|[release_ref](#release_ref)|Quando sottoposto a override in una classe derivata, rilascia un conteggio di riferimenti in questo `ISource` blocco.|
+|[riserva](#reserve)|Quando sottoposto a override in una classe derivata, riserva un messaggio offerto in precedenza dal `ISource` blocco.|
+|[unlink_target](#unlink_target)|Quando ne viene eseguito l'override in una classe derivata, scollega un blocco di destinazione da questo `ISource` blocco, se è stato trovato in precedenza collegato.|
+|[unlink_targets](#unlink_targets)|Quando sottoposto a override in una classe derivata, scollega tutti i blocchi di destinazione dal `ISource` blocco.|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -81,9 +81,9 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="accept"></a>accettare
+## <a name="accept"></a><a name="accept"></a>accettare
 
-Quando sottoposto a override in una classe derivata, accetta un messaggio offerto da questo blocco di `ISource`, trasferendo la proprietà al chiamante.
+Quando sottoposto a override in una classe derivata, accetta un messaggio offerto da questo `ISource` blocco, trasferendo la proprietà al chiamante.
 
 ```cpp
 virtual message<T>* accept(
@@ -94,10 +94,10 @@ virtual message<T>* accept(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` fornito.
+`runtime_object_identity`Oggetto dell'oggetto fornito `message` .
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `accept`.
+Puntatore al blocco di destinazione che chiama il `accept` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -105,11 +105,11 @@ Puntatore al messaggio di cui il chiamante è ora proprietario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il metodo `accept` viene chiamato da una destinazione mentre un messaggio viene offerto da questo blocco di `ISource`. Il puntatore al messaggio restituito può essere diverso da quello passato nel metodo `propagate` del blocco di `ITarget`, se questa origine decide di eseguire una copia del messaggio.
+Il `accept` metodo viene chiamato da una destinazione mentre un messaggio viene offerto dal `ISource` blocco. Il puntatore al messaggio restituito può essere diverso da quello passato nel `propagate` metodo del `ITarget` blocco, se questa origine decide di eseguire una copia del messaggio.
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-Quando ne viene eseguito l'override in una classe derivata, acquisisce un conteggio di riferimenti in questo blocco di `ISource` per impedire l'eliminazione.
+Quando sottoposto a override in una classe derivata, acquisisce un conteggio di riferimenti in questo `ISource` blocco per impedire l'eliminazione.
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -122,11 +122,11 @@ Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo viene chiamato da un oggetto `ITarget` che viene collegato a questa origine durante il `link_target` metodo.
+Questo metodo viene chiamato da un `ITarget` oggetto che viene collegato a questa origine durante il `link_target` metodo.
 
-## <a name="consume"></a>consumare
+## <a name="consume"></a><a name="consume"></a>consumare
 
-Quando sottoposto a override in una classe derivata, utilizza un messaggio precedentemente offerto dal blocco `ISource` e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.
+Quando sottoposto a override in una classe derivata, utilizza un messaggio precedentemente offerto da questo `ISource` blocco e riservato correttamente dalla destinazione, trasferendo la proprietà al chiamante.
 
 ```cpp
 virtual message<T>* consume(
@@ -137,30 +137,30 @@ virtual message<T>* consume(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` riservato.
+`runtime_object_identity`Oggetto dell'oggetto riservato `message` .
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `consume`.
+Puntatore al blocco di destinazione che chiama il `consume` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `message` cui il chiamante è ora proprietario.
+Puntatore all' `message` oggetto di cui il chiamante è ora proprietario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il metodo `consume` è simile a `accept`, ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito **true**.
+Il `consume` metodo è simile a `accept` , ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito **`true`** .
 
-## <a name="dtor"></a>~ ISource
+## <a name="isource"></a><a name="dtor"></a>~ ISource
 
-Elimina definitivamente l'oggetto `ISource`.
+Elimina definitivamente l' `ISource` oggetto.
 
 ```cpp
 virtual ~ISource();
 ```
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
-Quando sottoposto a override in una classe derivata, collega un blocco di destinazione a questo blocco di `ISource`.
+Quando sottoposto a override in una classe derivata, collega un blocco di destinazione a questo `ISource` blocco.
 
 ```cpp
 virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -169,9 +169,9 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>Parametri
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione collegato a questo blocco `ISource`.
+Puntatore al blocco di destinazione collegato a questo `ISource` blocco.
 
-## <a name="release"></a>versione
+## <a name="release"></a><a name="release"></a>versione
 
 Quando sottoposto a override in una classe derivata, rilascia una prenotazione di messaggi precedente riuscita.
 
@@ -184,14 +184,14 @@ virtual void release(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` riservato.
+`runtime_object_identity`Oggetto dell'oggetto riservato `message` .
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `release`.
+Puntatore al blocco di destinazione che chiama il `release` metodo.
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-Quando sottoposto a override in una classe derivata, rilascia un conteggio di riferimenti in questo blocco `ISource`.
+Quando sottoposto a override in una classe derivata, rilascia un conteggio di riferimenti in questo `ISource` blocco.
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -204,11 +204,11 @@ Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo viene chiamato da un oggetto `ITarget` che viene scollegato da questa origine. Il blocco di origine può rilasciare tutte le risorse riservate per il blocco di destinazione.
+Questo metodo viene chiamato da un `ITarget` oggetto che viene scollegato da questa origine. Il blocco di origine può rilasciare tutte le risorse riservate per il blocco di destinazione.
 
-## <a name="reserve"></a>riserva
+## <a name="reserve"></a><a name="reserve"></a>riserva
 
-Quando sottoposto a override in una classe derivata, riserva un messaggio offerto in precedenza dal blocco `ISource`.
+Quando sottoposto a override in una classe derivata, riserva un messaggio offerto in precedenza dal `ISource` blocco.
 
 ```cpp
 virtual bool reserve(
@@ -219,22 +219,22 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parametri
 
 *_MsgId*<br/>
-`runtime_object_identity` dell'oggetto `message` fornito.
+`runtime_object_identity`Oggetto dell'oggetto fornito `message` .
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione che chiama il metodo `reserve`.
+Puntatore al blocco di destinazione che chiama il `reserve` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il messaggio è stato riservato correttamente; in caso contrario, **false** . Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
+**`true`** Se il messaggio è stato riservato correttamente; **`false`** in caso contrario,. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
 
 ### <a name="remarks"></a>Osservazioni
 
-Dopo aver chiamato `reserve`, in caso di esito positivo, è necessario chiamare `consume` o `release` per ottenere o concedere il possesso del messaggio, rispettivamente.
+Dopo aver chiamato `reserve` , in caso di esito positivo, è necessario chiamare o per ottenere `consume` `release` o concedere il possesso del messaggio, rispettivamente.
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
-Quando ne viene eseguito l'override in una classe derivata, scollega un blocco di destinazione da questo blocco di `ISource`, se è stato trovato in precedenza collegato.
+Quando ne viene eseguito l'override in una classe derivata, scollega un blocco di destinazione da questo `ISource` blocco, se è stato trovato in precedenza collegato.
 
 ```cpp
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -243,11 +243,11 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>Parametri
 
 *_PTarget*<br/>
-Puntatore al blocco di destinazione da scollegare dal blocco `ISource`.
+Puntatore al blocco di destinazione da scollegare dal `ISource` blocco.
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-Quando sottoposto a override in una classe derivata, scollega tutti i blocchi di destinazione dal blocco `ISource`.
+Quando sottoposto a override in una classe derivata, scollega tutti i blocchi di destinazione dal `ISource` blocco.
 
 ```cpp
 virtual void unlink_targets() = 0;
@@ -255,5 +255,5 @@ virtual void unlink_targets() = 0;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe ITarget](itarget-class.md)

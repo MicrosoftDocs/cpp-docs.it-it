@@ -2,12 +2,12 @@
 title: Istruzione for basata su intervallo (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1197080e2e96e0e5c51bc06e93026567a33c7842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188350"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223616"
 ---
 # <a name="range-based-for-statement-c"></a>Istruzione for basata su intervallo (C++)
 
@@ -15,18 +15,16 @@ Esegue `statement` ripetutamente e in sequenza per ogni elemento in `expression`
 
 ## <a name="syntax"></a>Sintassi
 
-```
-for ( for-range-declaration : expression )
-   statement
-```
+> **`for (`***per la dichiarazione* **`:`** di intervallo *espressione***`)`**\
+&emsp;*istruzione*
 
 ## <a name="remarks"></a>Osservazioni
 
-Usare l'istruzione **for** basata su intervallo per costruire cicli che devono essere eseguiti tramite un "intervallo", definito come qualsiasi elemento che è possibile scorrere, ad esempio `std::vector`o qualsiasi altra C++ sequenza di libreria standard il cui intervallo è definito da una `begin()` e `end()`. Il nome dichiarato nella parte `for-range-declaration` è locale per l'istruzione **for** e non può essere dichiarato di nuovo in `expression` o `statement`. Si noti che la parola chiave [auto](../cpp/auto-cpp.md) è preferibile nella parte `for-range-declaration` dell'istruzione.
+Usare l'istruzione basata sull'intervallo **`for`** per costruire cicli che devono essere eseguiti tramite un *intervallo*, definito come qualsiasi elemento che è possibile scorrere, ad esempio, `std::vector` o qualsiasi altra sequenza di libreria standard C++ il cui intervallo è definito da `begin()` e `end()` . Il nome dichiarato nella `for-range-declaration` parte è locale per l' **`for`** istruzione e non può essere dichiarato di nuovo in `expression` o `statement` . Si noti che la [`auto`](../cpp/auto-cpp.md) parola chiave è preferibile nella `for-range-declaration` parte dell'istruzione.
 
-**Novità di Visual Studio 2017:**  I cicli for basati su intervallo non richiedono più che Begin () e end () restituiscano oggetti dello stesso tipo. Ciò consente a end() di restituire un oggetto sentinel come viene usato dagli intervalli in base alla definizione nella proposta Ranges-V3. Per altre informazioni, vedere il documento relativo alla [generalizzazione del ciclo for basato su intervallo](https://wg21.link/p0184r0) e la [libreria range-v3 su GitHub](https://github.com/ericniebler/range-v3).
+**Novità di Visual Studio 2017:**  I cicli basati su intervallo **`for`** non richiedono più che `begin()` e `end()` restituiscano oggetti dello stesso tipo. Questo consente `end()` a di restituire un oggetto Sentinel, ad esempio usato dagli intervalli come definito nella proposta Ranges-V3. Per altre informazioni, vedere [generalizzare il `For` ciclo basato su intervallo](https://wg21.link/p0184r0) e la [libreria range-V3 su GitHub](https://github.com/ericniebler/range-v3).
 
-Questo codice Mostra come usare **i cicli for** basati sull'intervallo per scorrere una matrice e un vettore:
+Questo codice illustra come usare i cicli basati su intervalli **`for`** per scorrere una matrice e un vettore:
 
 ```cpp
 // range-based-for.cpp
@@ -96,9 +94,9 @@ end of integer array test
 end of vector test
 ```
 
-Un ciclo **for** basato su intervallo termina quando viene eseguita una di queste `statement`: [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md) in un'istruzione con etichetta al di fuori del ciclo **for** basato su intervallo. Un'istruzione [continue](../cpp/continue-statement-cpp.md) in un ciclo **for** basato su intervallo termina solo l'iterazione corrente.
+Un ciclo basato su intervallo **`for`** termina quando viene eseguito uno di questi in `statement` : [`break`](../cpp/break-statement-cpp.md) , [`return`](../cpp/return-statement-cpp.md) o [`goto`](../cpp/goto-statement-cpp.md) a un'istruzione con etichetta all'esterno del ciclo basato sull'intervallo **`for`** . Un' [`continue`](../cpp/continue-statement-cpp.md) istruzione in un ciclo basato su intervallo **`for`** termina solo l'iterazione corrente.
 
-Tenere presente queste informazioni sulla base **dell'intervallo per**:
+Tenere presente queste informazioni sulla base dell'intervallo **`for`** :
 
 - Riconosce automaticamente le matrici.
 
@@ -108,9 +106,9 @@ Tenere presente queste informazioni sulla base **dell'intervallo per**:
 
 ## <a name="see-also"></a>Vedere anche
 
-[auto](../cpp/auto-cpp.md)<br/>
+[`auto`](../cpp/auto-cpp.md)<br/>
 [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Istruzione while (C++)](../cpp/while-statement-cpp.md)<br/>
-[Istruzione do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
-[Istruzione for (C++)](../cpp/for-statement-cpp.md)
+[`while`Istruzione (C++)](../cpp/while-statement-cpp.md)<br/>
+[`do-while`Istruzione (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[`for`Istruzione (C++)](../cpp/for-statement-cpp.md)

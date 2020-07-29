@@ -1,49 +1,49 @@
 ---
-title: 'Operatore AND logico: &amp;&amp;'
-ms.date: 11/04/2016
+title: Operatore AND logico:&amp;&amp;
+description: Sintassi e uso della sintassi dell'operatore and logico del linguaggio standard C++.
+ms.date: 07/23/2020
 f1_keywords:
 - '&&'
+- and_cpp
 helpviewer_keywords:
 - logical AND operator
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 431e76a2943c2373d6191f1fbe9f14c54cfaa6c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179432"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223694"
 ---
-# <a name="logical-and-operator-ampamp"></a>Operatore AND logico: &amp;&amp;
+# <a name="logical-and-operator-ampamp"></a>Operatore AND logico:&amp;&amp;
 
 ## <a name="syntax"></a>Sintassi
 
-```
-expression && expression
-```
+> *espressione* **`&&`** *espressione*
 
 ## <a name="remarks"></a>Osservazioni
 
-L'operatore AND logico ( **&&** ) restituisce il valore booleano true se entrambi gli operandi sono true e restituisce false in caso contrario. Gli operandi vengono convertiti in modo implicito nel tipo **bool** prima della valutazione e il risultato è di tipo **bool**. L'operatore logico AND presenta un'associatività da sinistra verso destra.
+L'operatore AND logico ( **&&** ) restituisce **`true`** se entrambi gli operandi sono **`true`** e restituisce **`false`** in caso contrario. Gli operandi vengono convertiti in modo implicito nel tipo **`bool`** prima della valutazione e il risultato è di tipo **`bool`** . L'operatore logico AND presenta un'associatività da sinistra verso destra.
 
-Gli operandi dell'operatore logico AND non devono essere dello stesso tipo, ma devono essere di tipo integrale o puntatore. Gli operandi sono in genere espressioni di uguaglianza o relazionali.
+Gli operandi all'operatore logico AND non devono avere lo stesso tipo, ma devono avere un tipo booleano, integrale o puntatore. Gli operandi sono in genere espressioni di uguaglianza o relazionali.
 
-Il primo operando viene valutato completamente e tutti gli effetti collaterali vengono completati prima di continuare la valutazione dell'espressione logica AND.
+Il primo operando viene valutato completamente e tutti gli effetti collaterali vengono completati prima di continuare la valutazione dell'espressione AND logica.
 
-Il secondo operando viene valutato solo se il primo operando restituisce true (ossia non un valore zero). Questa valutazione elimina la necessità di valutare il secondo operando quando l'espressione logica AND restituisce false. È possibile utilizzare questa valutazione di corto circuito per impedire la deferenziazione del puntatore NULL, come illustrato nell'esempio seguente:
+Il secondo operando viene valutato solo se il primo operando restituisce **`true`** (diverso da zero). Questa valutazione elimina la valutazione superflua del secondo operando quando l'espressione logica AND è **`false`** . È possibile utilizzare questa valutazione di corto circuito per impedire la deferenziazione del puntatore NULL, come illustrato nell'esempio seguente:
 
 ```cpp
 char *pch = 0;
-...
+// ...
 (pch) && (*pch = 'a');
 ```
 
-Se `pch` è null (0), il lato destro dell'espressione non viene mai valutato. Di conseguenza, l'assegnazione mediante un puntatore null non è possibile.
+Se `pch` è null (0), il lato destro dell'espressione non viene mai valutato. Questa valutazione a corto circuito rende impossibile l'assegnazione tramite un puntatore null.
 
-## <a name="operator-keyword-for-"></a>Parola chiave operator per & &
+## <a name="operator-keyword-for-"></a>Parola chiave operator per &&
 
-L'operatore **and** è il testo equivalente di **&&** . Esistono due modi per accedere all'operatore **and** nei programmi: includere il file di intestazione `iso646.h`o compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
+C++ specifica **`and`** come ortografia alternativa per **`&&`** . In C, l'ortografia alternativa viene fornita come una macro nell' \<iso646.h> intestazione. In C++, l'ortografia alternativa è una parola chiave. l'utilizzo di \<iso646.h> o dell'equivalente C++ \<ciso646> è deprecato. In Microsoft C++, l' [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) opzione del compilatore o è necessaria per abilitare l'ortografia alternativa.
 
 ## <a name="example"></a>Esempio
 
@@ -69,6 +69,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++Precedenza e associatività degli operatori predefiniti](cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori, precedenza e associatività predefiniti di C++](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatori logici C](../c-language/c-logical-operators.md)

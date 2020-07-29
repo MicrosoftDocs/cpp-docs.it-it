@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 641e83cb85b6282e8c4c82dfed8c4b44fc4a7e8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837369"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223902"
 ---
 # <a name="clr-restrictions"></a>Limitazioni di /clr
 
@@ -17,7 +17,7 @@ L'uso di **/clr** è soggetto alle limitazioni seguenti:
 
 - In un gestore di eccezioni strutturato sono applicate alcune limitazioni all'uso di `_alloca` in caso di compilazione con **/clr**. Per altre informazioni, vedere [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- L'esecuzione di controlli degli errori di run-time non è supportata con **/clr**. Per altre informazioni, vedere [Procedura: Usare i controlli di runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- L'esecuzione di controlli degli errori di run-time non è supportata con **/clr**. Per altre informazioni, vedere [Procedura: Usare controlli run-time nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Quando **/clr** viene usato per compilare un programma che usa solo la sintassi standard di C++, all'uso dell'assembly inline si applicano le linee guida seguenti:
 
@@ -37,13 +37,13 @@ L'uso di **/clr** è soggetto alle limitazioni seguenti:
 
 - Le opzioni del compilatore seguenti non sono supportate con **/clr**:
 
-  - **/EHsc** e **/EHs** ( **/clr** implica **/EHa** (vedere [/EH (Modello di gestione delle eccezioni)](eh-exception-handling-model.md))
+  - **/EHsc** e **/EHs** (**/clr** implica **/EHa** (vedere [/EH (Modello di gestione delle eccezioni)](eh-exception-handling-model.md))
 
   - **/fp:strict** e **/fp:except** (vedere [/fp (Specifica il comportamento della virgola mobile)](fp-specify-floating-point-behavior.md))
 
   - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](gm-enable-minimal-rebuild.md)
+  - [/GM](gm-enable-minimal-rebuild.md)
 
   - [/MT](md-mt-ld-use-run-time-library.md)
 
@@ -55,7 +55,7 @@ L'uso di **/clr** è soggetto alle limitazioni seguenti:
 
 - L'uso di **/Zi** con **/clr** ha implicazioni a livello di prestazioni. Per altre informazioni, vedere [/Zi](z7-zi-zi-debug-information-format.md).
 
-- Se si passa un carattere wide a una routine di output di .NET Framework senza specificare anche [/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md) o senza eseguire il cast del carattere a `__wchar_t`, l'output verrà visualizzato come un `unsigned short int`. Ad esempio:
+- Il passaggio di un carattere wide a una routine di output .NET Framework senza specificare anche [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) o senza eseguire il cast del carattere a **`__wchar_t`** comporterà la visualizzazione dell'output come `unsigned short int` . Ad esempio:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
@@ -88,4 +88,4 @@ L'uso di **/clr** è soggetto alle limitazioni seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [/clr (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md)
+- [/CLR (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md)

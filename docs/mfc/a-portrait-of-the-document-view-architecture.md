@@ -1,5 +1,5 @@
 ---
-title: Descrizione dell'architettura documento-visualizzazione
+title: Un ritratto dell'architettura documento-visualizzazione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623444"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214191"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Descrizione dell'architettura documento/visualizzazione
 
@@ -27,7 +27,7 @@ I documenti e le visualizzazioni sono abbinati in una tipica applicazione MFC. I
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>Ottenere l'accesso ai dati del documento dalla vista
 
-La visualizzazione accede ai dati del documento tramite la funzione [GetDocument](reference/cview-class.md#getdocument) , che restituisce un puntatore al documento, oppure rendendo la classe di visualizzazione C++ `friend` della classe Document. La visualizzazione usa quindi l'accesso ai dati per ottenere i dati quando è pronto per l'estrazione o per modificarli in altro modo.
+La visualizzazione accede ai dati del documento tramite la funzione [GetDocument](reference/cview-class.md#getdocument) , che restituisce un puntatore al documento, oppure rendendo la classe di visualizzazione C++ **`friend`** della classe Document. La visualizzazione usa quindi l'accesso ai dati per ottenere i dati quando è pronto per l'estrazione o per modificarli in altro modo.
 
 Dalla funzione membro [Onpare](reference/cview-class.md#ondraw) di visualizzazione, ad esempio, la vista USA `GetDocument` per ottenere un puntatore al documento. USA quindi tale puntatore per accedere a un `CString` membro dati nel documento. La visualizzazione passa la stringa alla `TextOut` funzione. Per visualizzare il codice per questo esempio, vedere [Drawing in a View](drawing-in-a-view.md).
 

@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d13b58fc05055ceecb6472003d7682c41c76e23d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457388"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222537"
 ---
-# <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
+# <a name="ltcondition_variablegt"></a>&lt;condition_variable&gt;
 
 Definisce le classi [condition_variable](../standard-library/condition-variable-class.md) e [condition_variable_any](../standard-library/condition-variable-any-class.md) che vengono usate per creare oggetti che attendono che una condizione diventi true.
 
@@ -19,14 +19,14 @@ Questa intestazione usa il runtime di concorrenza (ConcRT) in modo da essere uti
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> condition_variable
+**Intestazione:**\<condition_variable>
 
 **Spazio dei nomi:** std
 
 > [!NOTE]
 > Nel codice compilato utilizzando **/CLR**, questa intestazione è bloccata.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il codice che è in attesa di una variabile di condizione deve usare anche un `mutex`. Un thread chiamante deve bloccare il `mutex` prima di chiamare le funzioni di attesa per la variabile di condizione. In seguito il `mutex` viene bloccato quando la funzione chiamata viene restituita. Il `mutex` non risulta bloccato mentre il thread è in attesa che la condizione diventi true. Per far sì che non vi siano risultati imprevedibili, tutti i thread in attesa di una variabile di condizione devono usare lo stesso oggetto `mutex`.
 
@@ -49,9 +49,9 @@ Le classi `condition_variable_any` e `condition_variable` hanno tre metodi che a
 
 - `wait_for` attende una condizione `time interval` specifica.
 
-Ognuno di questi metodi ha due versioni di overload. Una si limita ad attendere e può riattivarsi in modo spurio. L'altra accetta un argomento di modello aggiuntivo che definisce un predicato. Il metodo non restituisce alcun valore finché il predicato non è **true**.
+Ognuno di questi metodi ha due versioni di overload. Una si limita ad attendere e può riattivarsi in modo spurio. L'altra accetta un argomento di modello aggiuntivo che definisce un predicato. Il metodo non restituisce alcun risultato finché il predicato non è **`true`** .
 
-Ogni classe dispone inoltre di due metodi utilizzati per notificare a una variabile di condizione che la relativa condizione è **true**.
+Ogni classe dispone inoltre di due metodi utilizzati per notificare a una variabile di condizione che la relativa condizione è **`true`** .
 
 - `notify_one` attiva uno dei thread in attesa della variabile di condizione.
 
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Classe condition_variable](../standard-library/condition-variable-class.md)\
 [Classe condition_variable_any](../standard-library/condition-variable-any-class.md)

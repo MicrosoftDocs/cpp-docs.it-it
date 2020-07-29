@@ -9,16 +9,16 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 4d3f33a64dcebfc40778f81354cb5067a5239ace
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7b3ae1cd732fe1ec234e2734ea4c6fa86db9d5af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223863"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (Controlla la valutazione di constexpr)
 
-Usare le opzioni del compilatore **/constExpr** per controllare i parametri per la valutazione di **constExpr** in fase di compilazione.
+Usare le opzioni del compilatore **/constExpr** per controllare i parametri per la **`constexpr`** valutazione in fase di compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,15 +28,15 @@ Usare le opzioni del compilatore **/constExpr** per controllare i parametri per 
 
 ## <a name="arguments"></a>Argomenti
 
-**profondità**<em>n</em> consente di limitare la profondità della chiamata della funzione **constExpr** ricorsiva a *n* livelli. Il valore predefinito è 512.
+**profondità**<em>n</em> consente di limitare la profondità della chiamata di funzione ricorsiva **`constexpr`** a *n* livelli. Il valore predefinito è 512.
 
-**backtrace**<em>n</em> Mostra fino a *n* valutazioni **constExpr** nella diagnostica. Il valore predefinito è 10.
+**backtrace**<em>n</em> Mostra fino a *n* **`constexpr`** valutazioni nella diagnostica. Il valore predefinito è 10.
 
-i **passaggi**<em>n</em> terminano la valutazione di **constExpr** dopo *N* passaggi. Il valore predefinito è 100.000.
+i **passaggi**<em>n</em> terminano la **`constexpr`** valutazione dopo *N* passaggi. Il valore predefinito è 100.000.
 
 ## <a name="remarks"></a>Osservazioni
 
-Le opzioni del compilatore **/constExpr** controllano la valutazione in fase di compilazione delle espressioni **constExpr** . I passaggi di valutazione, i livelli di ricorsione e la profondità del backtrace sono controllati per evitare che il compilatore spenda troppo tempo nella valutazione di **constExpr** . Per ulteriori informazioni sull'elemento di linguaggio **constExpr** , vedere [constExpr (C++)](../../cpp/constexpr-cpp.md).
+Le opzioni del compilatore **/constExpr** controllano la valutazione in fase di compilazione delle **`constexpr`** espressioni. I passaggi di valutazione, i livelli di ricorsione e la profondità del backtrace sono controllati per evitare che il compilatore spenda troppo tempo per la **`constexpr`** valutazione. Per ulteriori informazioni sull' **`constexpr`** elemento del linguaggio, vedere [constExpr (C++)](../../cpp/constexpr-cpp.md).
 
 Le opzioni **/constExpr** sono disponibili a partire da Visual Studio 2015.
 

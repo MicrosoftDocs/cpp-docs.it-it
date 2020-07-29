@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 190acd619224bdf22a5c8d35f541fa48b6664fe1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625751"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223148"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Gestori per messaggi Windows standard
 
@@ -23,7 +23,7 @@ I gestori predefiniti per i messaggi Windows standard (**WM_**) sono predefiniti
 
 `afx_msg void OnPaint();`
 
-La parola chiave **afx_msg** suggerisce l'effetto della parola chiave C++ **virtuale** distinguendo i gestori da altre `CWnd` funzioni membro. Notare, tuttavia, che queste funzioni non sono effettivamente virtuali; vengono invece implementate attraverso le mappe messaggi. Le mappe messaggi dipendono unicamente da macro standard del preprocessore, non dalle estensioni del linguaggio C++. La parola chiave **afx_msg** viene risolta in uno spazio vuoto dopo la pre-elaborazione.
+La parola chiave **afx_msg** suggerisce l'effetto della **`virtual`** parola chiave C++ distinguendo i gestori da altre `CWnd` funzioni membro. Notare, tuttavia, che queste funzioni non sono effettivamente virtuali; vengono invece implementate attraverso le mappe messaggi. Le mappe messaggi dipendono unicamente da macro standard del preprocessore, non dalle estensioni del linguaggio C++. La parola chiave **afx_msg** viene risolta in uno spazio vuoto dopo la pre-elaborazione.
 
 Per eseguire l'override di un gestore definito in una classe base, definire semplicemente una funzione con lo stesso prototipo nella classe derivata e creare una voce nella mappa messaggi per il gestore. Il gestore "esegue l'override" di qualsiasi gestore dello stesso nome in una qualsiasi delle classi base della classe.
 
@@ -36,8 +36,8 @@ Come determinare la modalità appropriata per eseguire l'override di un determin
 
 [!code-cpp[NVC_MFCMessageHandling#3](codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
 
-Per convenzione, i nomi di questi gestori iniziano con il prefisso "On". Alcuni di questi gestori non accettano argomenti, mentre altri ne accettano diversi. Alcuni hanno anche un tipo restituito diverso da **void**. I gestori predefiniti per tutti i messaggi di **WM_** sono documentati nel *riferimento MFC* come funzioni membro della classe i `CWnd` cui nomi iniziano con "on". Le dichiarazioni di funzione membro in `CWnd` sono precedute dal prefisso **afx_msg**.
+Per convenzione, i nomi di questi gestori iniziano con il prefisso "On". Alcuni di questi gestori non accettano argomenti, mentre altri ne accettano diversi. Alcuni hanno anche un tipo restituito diverso da **`void`** . I gestori predefiniti per tutti i messaggi di **WM_** sono documentati nel *riferimento MFC* come funzioni membro della classe i `CWnd` cui nomi iniziano con "on". Le dichiarazioni di funzione membro in `CWnd` sono precedute dal prefisso **afx_msg**.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Dichiarazioni di funzioni gestore messaggi](declaring-message-handler-functions.md)
+[Dichiarazione delle funzioni del gestore di messaggi](declaring-message-handler-functions.md)

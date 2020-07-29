@@ -39,16 +39,16 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 6d025230abcff42e367a231e616a13f0f8c684f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b21f9ec2ace54281f30f8f32134c7fb3466a1faa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320282"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214854"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
-Includere l'intestazione `<cliext/utility>` STL/CLR `pair` per definire la classe modello e diverse funzioni di modello di supporto.
+Includere l'intestazione STL/CLR `<cliext/utility>` per definire la classe modello `pair` e diverse funzioni di modello di supporto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -58,7 +58,7 @@ Includere l'intestazione `<cliext/utility>` STL/CLR `pair` per definire la class
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cliext/utility>
+**Intestazione:**\<cliext/utility>
 
 **Spazio dei nomi:** cliext
 
@@ -66,16 +66,16 @@ Includere l'intestazione `<cliext/utility>` STL/CLR `pair` per definire la class
 
 |Classe|Descrizione|
 |-----------|-----------------|
-|[pair (STL/CLR)](#pair)|Eseguire il wrapping di una coppia di elementi.|
+|[pair (STL/CLR)](#pair)|Esegue il wrapping di una coppia di elementi.|
 
 |Operatore|Descrizione|
 |--------------|-----------------|
-|[operator== (pair) (STL/CLR)](#op_eq)|Coppia di confronto uguale.|
-|[operator! (coppia) (STL/CLR)](#op_neq)|Confronto non uguale.|
-|[< operatore (coppia) (STL/CLR)](#op_lt)|Coppia minore di confronto.|
-|[operatore\<: (coppia) (STL/CLR)](#op_lteq)|Coppia di confronto minore o uguale.|
-|[> operatore (coppia) (STL/CLR)](#op_gt)|Coppia maggiore del confronto.|
-|[operatore>- (coppia) (STL/CLR)](#op_gteq)|Coppia maggiore o uguale confronto.|
+|[operator== (pair) (STL/CLR)](#op_eq)|Confronto di uguaglianza tra coppie.|
+|[operatore! = (coppia) (STL/CLR)](#op_neq)|Confronto di coppie non uguali.|
+|[operatore< (pair) (STL/CLR)](#op_lt)|Coppia inferiore al confronto.|
+|[Operator \< = (pair) (STL/CLR)](#op_lteq)|Coppia di confronto minore o uguale a.|
+|[operatore> (pair) (STL/CLR)](#op_gt)|Coppia maggiore del confronto.|
+|[operatore>= (pair) (STL/CLR)](#op_gteq)|Coppia di confronto maggiore o uguale a.|
 
 |Funzione|Descrizione|
 |--------------|-----------------|
@@ -83,7 +83,7 @@ Includere l'intestazione `<cliext/utility>` STL/CLR `pair` per definire la class
 
 ## <a name="members"></a>Membri
 
-## <a name="pair-stlclr"></a><a name="pair"></a>coppia (STL/CLR)
+## <a name="pair-stlclr"></a><a name="pair"></a>Pair (STL/CLR)
 
 La classe modello descrive un oggetto che esegue il wrapping di una coppia di valori.
 
@@ -98,39 +98,39 @@ template<typename Value1,
 #### <a name="parameters"></a>Parametri
 
 *Value1*<br/>
-Tipo del primo valore di cui è stato eseguito il wrapping.
+Tipo del primo valore di cui è stato eseguito il Wrapped.
 
 *Value2*<br/>
-Tipo del secondo valore di cui è stato eseguito il wrapping.
+Tipo del secondo valore di cui è stato eseguito il Wrapped.
 
 ## <a name="members"></a>Membri
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
-|[pair::first_type (STL/CLR)](#first_type)|Tipo del primo valore di cui è stato eseguito il wrapping.|
-|[pair::second_type (STL/CLR)](#second_type)|Tipo del secondo valore di cui è stato eseguito il wrapping.|
+|[pair::first_type (STL/CLR)](#first_type)|Tipo del primo valore di cui è stato eseguito il Wrapped.|
+|[pair::second_type (STL/CLR)](#second_type)|Tipo del secondo valore di cui è stato eseguito il Wrapped.|
 
-|Oggetto Member|Descrizione|
+|Oggetto membro|Descrizione|
 |-------------------|-----------------|
 |[pair::first (STL/CLR)](#first)|Primo valore archiviato.|
 |[pair::second (STL/CLR)](#second)|Secondo valore archiviato.|
 
 |Funzione membro|Descrizione|
 |---------------------|-----------------|
-|[pair::pair (STL/CLR)](#pair_pair)|Costruisce un oggetto coppia.|
+|[pair::pair (STL/CLR)](#pair_pair)|Costruisce un oggetto Pair.|
 |[pair::swap (STL/CLR)](#swap)|Scambia il contenuto di due coppie.|
 
 |Operatore|Descrizione|
 |--------------|-----------------|
-|[pair::operator= (STL/CLR)](#op_as)|Sostituisce la coppia di valori archiviata.|
+|[pair::operator= (STL/CLR)](#op_as)|Sostituisce la coppia di valori archiviati.|
 
 ## <a name="remarks"></a>Osservazioni
 
-L'oggetto archivia una coppia di valori. Utilizzare questa classe modello per combinare due valori in un singolo oggetto. Inoltre, l'oggetto `cliext::pair` (descritto qui) archivia solo i tipi gestiti; per archiviare una coppia `std::pair`di tipi `<utility>`non gestiti, utilizzare , dichiarato in .
+L'oggetto archivia una coppia di valori. Usare questa classe modello per combinare due valori in un unico oggetto. Inoltre, l'oggetto `cliext::pair` (descritto qui) archivia solo i tipi gestiti. per archiviare una coppia di tipi non gestiti `std::pair` , usare, dichiarato in `<utility>` .
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>pair::first (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a>Pair:: First (STL/CLR)
 
-Primo valore di cui è stato eseguito il wrapping.
+Primo valore di cui è stato eseguito il Wrapped.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -140,7 +140,7 @@ Value1 first;
 
 ### <a name="remarks"></a>Osservazioni
 
-L'oggetto archivia il primo valore di cui è stato eseguito il wrapping.
+L'oggetto archivia il primo valore di cui è stato eseguito il Wrapped.
 
 ### <a name="example"></a>Esempio
 
@@ -165,9 +165,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>pair::first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>Pair:: first_type (STL/CLR)
 
-Tipo del primo valore di cui è stato eseguito il wrapping.
+Tipo del primo valore di cui è stato eseguito il Wrapped.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -177,7 +177,7 @@ typedef Value1 first_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del parametro di modello *Value1*.
+Il tipo è un sinonimo del parametro di modello *value1*.
 
 ### <a name="example"></a>Esempio
 
@@ -202,9 +202,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>pair::operator (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a>Pair:: operator = (STL/CLR)
 
-Sostituisce la coppia di valori archiviata.
+Sostituisce la coppia di valori archiviati.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -214,12 +214,12 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*va bene*<br/>
+*Ok*<br/>
 Coppia da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore membro copia *direttamente all'oggetto,* quindi restituisce `*this`. Utilizzarla per sostituire la coppia di valori archiviata con una copia della coppia di valori archiviata in *right*.
+L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la coppia di valori archiviati con una copia della coppia di valori archiviati a *destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -246,9 +246,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>pair::pair (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>coppia::p aria (STL/CLR)
 
-Costruisce un oggetto coppia.
+Costruisce un oggetto Pair.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -261,11 +261,11 @@ pair(Value1 val1, Value2 val2);
 
 #### <a name="parameters"></a>Parametri
 
-*va bene*<br/>
-Coppia da conservare.
+*Ok*<br/>
+Associazione da archiviare.
 
 *val1*<br/>
-Primo valore da memorizzare.
+Primo valore da archiviare.
 
 *val2*<br/>
 Secondo valore da archiviare.
@@ -276,23 +276,23 @@ Il costruttore:
 
 `pair();`
 
-inizializza la coppia archiviata con i valori costruiti predefiniti.
+Inizializza la coppia archiviata con i valori costruiti predefiniti.
 
 Il costruttore:
 
 `pair(pair<Value1, Value2>% right);`
 
-inizializza la coppia `right.`archiviata con [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) e `right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inizializza la coppia archiviata con `right.` [Pair:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) e `right.` [Pair:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
 
 `pair(pair<Value1, Value2>^ right);`
 
-inizializza la coppia `right->`archiviata con [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) e `right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inizializza la coppia archiviata con `right->` [Pair:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) e `right>` [Pair:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
 
 Il costruttore:
 
 `pair(Value1 val1, Value2 val2);`
 
-inizializza la coppia memorizzata con *val1* e *val2*.
+Inizializza la coppia archiviata con *val1* e *val2*.
 
 ### <a name="example"></a>Esempio
 
@@ -331,9 +331,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>coppia::secondo (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a>coppia:: Second (STL/CLR)
 
-Secondo valore di cui è stato eseguito il wrapping.
+Secondo valore di cui è stato eseguito il Wrapped.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -343,7 +343,7 @@ Value2 second;
 
 ### <a name="remarks"></a>Osservazioni
 
-L'oggetto archivia il secondo valore di cui è stato eseguito il wrapping.
+L'oggetto archivia il secondo valore di cui è stato eseguito il Wrapped.
 
 ### <a name="example"></a>Esempio
 
@@ -368,9 +368,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>coppia::second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>Pair:: second_type (STL/CLR)
 
-Tipo del secondo valore di cui è stato eseguito il wrapping.
+Tipo del secondo valore di cui è stato eseguito il Wrapped.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -380,7 +380,7 @@ typedef Value2 second_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del parametro di modello *Value2*.
+Il tipo è un sinonimo del parametro di modello *value2*.
 
 ### <a name="example"></a>Esempio
 
@@ -405,7 +405,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>coppia::swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a>Pair:: swap (STL/CLR)
 
 Scambia il contenuto di due coppie.
 
@@ -417,12 +417,12 @@ void swap(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*va bene*<br/>
-Abbina con cui scambiare i contenuti.
+*Ok*<br/>
+Coppia con cui scambiare il contenuto.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro scambia la `*this` coppia di valori archiviata tra e *right*.
+La funzione membro scambia la coppia di valori archiviati tra **`*this`** e *right*.
 
 ### <a name="example"></a>Esempio
 
@@ -476,7 +476,7 @@ a b c
 
 ## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
 
-Crea `pair` un da una coppia di valori.
+Creare un oggetto `pair` da una coppia di valori.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -489,20 +489,20 @@ template<typename Value1,
 #### <a name="parameters"></a>Parametri
 
 *Value1*<br/>
-Tipo del primo valore di cui è stato eseguito il wrapping.
+Tipo del primo valore di cui è stato eseguito il Wrapped.
 
 *Value2*<br/>
-Tipo del secondo valore di cui è stato eseguito il wrapping.
+Tipo del secondo valore di cui è stato eseguito il Wrapped.
 
-*Prima*<br/>
+*first*<br/>
 Primo valore di cui eseguire il wrapping.
 
-*Secondo*<br/>
+*second*<br/>
 Secondo valore di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione modello restituisce `pair<Value1, Value2>(first, second)`. Utilizzarla per costruire `pair<Value1, Value2>` un oggetto da una coppia di valori.
+La funzione modello restituisce `pair<Value1, Value2>(first, second)`. Viene usato per costruire un `pair<Value1, Value2>` oggetto da una coppia di valori.
 
 ### <a name="example"></a>Esempio
 
@@ -527,9 +527,9 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator! (coppia) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operatore! = (coppia) (STL/CLR)
 
-Confronto non uguale.
+Confronto di coppie non uguali.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -542,15 +542,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametri
 
-*Sinistra*<br/>
+*sinistra*<br/>
 Coppia sinistra da confrontare.
 
-*va bene*<br/>
-Coppia destra da confrontare.
+*Ok*<br/>
+Coppia corretta da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione `!(left == right)`operatore restituisce . Utilizzarla per verificare se *left* non è ordinato come *right* quando le due coppie vengono confrontate elemento per elemento.
+La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato come *right* quando le due coppie vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -581,9 +581,9 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operatore&lt; (coppia) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operatore &lt; (pair) (STL/CLR)
 
-Coppia minore di confronto.
+Coppia inferiore al confronto.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -596,15 +596,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametri
 
-*Sinistra*<br/>
+*sinistra*<br/>
 Coppia sinistra da confrontare.
 
-*va bene*<br/>
-Coppia destra da confrontare.
+*Ok*<br/>
+Coppia corretta da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`operatore restituisce . Utilizzarla per verificare se *left* viene ordinato prima *di destra* quando le due coppie vengono confrontate elemento per elemento.
+La funzione operator restituisce `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` . Viene usato per verificare se *Left* viene ordinato prima di *destra* quando le due coppie vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -635,9 +635,9 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operatore&lt;: (coppia) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>Operator &lt; = (pair) (STL/CLR)
 
-Coppia di confronto minore o uguale.
+Coppia di confronto minore o uguale a.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -650,15 +650,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametri
 
-*Sinistra*<br/>
+*sinistra*<br/>
 Coppia sinistra da confrontare.
 
-*va bene*<br/>
-Coppia destra da confrontare.
+*Ok*<br/>
+Coppia corretta da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione `!(right < left)`operatore restituisce . Utilizzarla per verificare se *left* non è ordinato dopo *right* quando le due coppie vengono confrontate elemento per elemento.
+La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando le due coppie vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -689,9 +689,9 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operatore (coppia) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operatore = = (coppia) (STL/CLR)
 
-Coppia di confronto uguale.
+Confronto di uguaglianza tra coppie.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -704,15 +704,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametri
 
-*Sinistra*<br/>
+*sinistra*<br/>
 Coppia sinistra da confrontare.
 
-*va bene*<br/>
-Coppia destra da confrontare.
+*Ok*<br/>
+Coppia corretta da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione `left.first ==` `right.first &&` `left.second ==` `right.second`operatore restituisce . Utilizzarla per verificare se *left* è ordinato come *right* quando le due coppie vengono confrontate elemento per elemento.
+La funzione operator restituisce `left.first ==` `right.first &&` `left.second ==` `right.second` . Viene usato per verificare se *Left* è ordinato come *right* quando le due coppie vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -743,7 +743,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operatore&gt; (coppia) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operatore &gt; (pair) (STL/CLR)
 
 Coppia maggiore del confronto.
 
@@ -758,15 +758,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametri
 
-*Sinistra*<br/>
+*sinistra*<br/>
 Coppia sinistra da confrontare.
 
-*va bene*<br/>
-Coppia destra da confrontare.
+*Ok*<br/>
+Coppia corretta da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione `right` `<` `left`operatore restituisce . Utilizzarla per verificare se *left* viene ordinato dopo *right* quando le due coppie vengono confrontate elemento per elemento.
+La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando le due coppie vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -797,9 +797,9 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operatore&gt;: (coppia) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>Operator &gt; = (pair) (STL/CLR)
 
-Coppia maggiore o uguale confronto.
+Coppia di confronto maggiore o uguale a.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -812,15 +812,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametri
 
-*Sinistra*<br/>
+*sinistra*<br/>
 Coppia sinistra da confrontare.
 
-*va bene*<br/>
-Coppia destra da confrontare.
+*Ok*<br/>
+Coppia corretta da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione `!(left < right)`operatore restituisce . Utilizzarla per verificare se *left* non è ordinato prima *di right* quando le due coppie vengono confrontate elemento per elemento.
+La funzione operator restituisce `!(left < right)` . Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando le due coppie vengono confrontate elemento per elemento.
 
 ### <a name="example"></a>Esempio
 

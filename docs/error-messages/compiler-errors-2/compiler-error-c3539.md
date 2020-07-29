@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 813da5a2fd79c191df731937e58100d749f8690c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223408"
 ---
 # <a name="compiler-error-c3539"></a>Errore del compilatore C3539
 
 ' type ': un argomento di modello non può essere un tipo che contiene ' auto '
 
-Il tipo di argomento del modello indicato non può contenere un utilizzo della parola chiave `auto`.
+Il tipo di argomento del modello indicato non può contenere un utilizzo della **`auto`** parola chiave.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 
-1. Non specificare l'argomento di modello con la parola chiave `auto`.
+1. Non specificare l'argomento di modello con la **`auto`** parola chiave.
 
 ## <a name="example"></a>Esempio
 
@@ -40,4 +40,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Auto (parola chiave)](../../cpp/auto-keyword.md)
+[Parola chiave auto](../../cpp/auto-keyword.md)

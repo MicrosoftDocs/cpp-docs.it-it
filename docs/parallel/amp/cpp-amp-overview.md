@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222758"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 
@@ -60,7 +60,7 @@ Di seguito sono riportate le parti importanti del codice:
 
 - Data: i dati sono costituiti da tre matrici. Tutti hanno lo stesso rango (uno) e la stessa lunghezza (cinque).
 
-- Iterazione: il primo `for` ciclo fornisce un meccanismo per scorrere gli elementi nelle matrici. Il codice che si desidera eseguire per calcolare le somme è contenuto nel primo `for` blocco.
+- Iterazione: il primo **`for`** ciclo fornisce un meccanismo per scorrere gli elementi nelle matrici. Il codice che si desidera eseguire per calcolare le somme è contenuto nel primo **`for`** blocco.
 
 - Index: la `idx` variabile accede ai singoli elementi delle matrici.
 
@@ -238,7 +238,7 @@ Nella tabella seguente sono riepilogate le analogie e le differenze tra le `arra
 
 La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito.
 
-`array`gli oggetti possono essere utilizzati per specificare un controllo con granularità fine sull'utilizzo della memoria condivisa se l'acceleratore associato lo supporta. Se un tasto di scelta rapida supporta la memoria condivisa è determinato dalla proprietà [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) dell'acceleratore, che restituisce **true** quando è supportata la memoria condivisa. Se la memoria condivisa è supportata, l' [enumerazione access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per le allocazioni di memoria sul tasto di scelta rapida è determinata dalla `default_cpu_access_type` Proprietà. Per impostazione predefinita `array` , `array_view` gli oggetti e accettano lo stesso `access_type` nome del database primario associato `accelerator` .
+`array`gli oggetti possono essere utilizzati per specificare un controllo con granularità fine sull'utilizzo della memoria condivisa se l'acceleratore associato lo supporta. Se un tasto di scelta rapida supporta la memoria condivisa è determinato dalla proprietà [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) dell'acceleratore, che restituisce **`true`** quando è supportata la memoria condivisa. Se la memoria condivisa è supportata, l' [enumerazione access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per le allocazioni di memoria sul tasto di scelta rapida è determinata dalla `default_cpu_access_type` Proprietà. Per impostazione predefinita `array` , `array_view` gli oggetti e accettano lo stesso `access_type` nome del database primario associato `accelerator` .
 
 Impostando la proprietà del [membro dati array:: cpu_access_type](reference/array-class.md#cpu_access_type) di un oggetto in `array` modo esplicito, è possibile esercitare un controllo accurato sulla modalità di utilizzo della memoria condivisa, in modo che sia possibile ottimizzare l'applicazione per le caratteristiche di prestazioni dell'hardware, in base ai modelli di accesso alla memoria dei kernel di calcolo. Un oggetto `array_view` riflette lo stesso oggetto a `cpu_access_type` cui è `array` associato; in alternativa, se la array_view viene costruita senza un'origine dati, `access_type` riflette l'ambiente che prima ne determina l'allocazione di spazio di archiviazione. Ovvero, se l'accesso viene eseguito per la prima volta dall'host (CPU), si comporta come se fosse stato creato su un'origine dati della CPU e condivide il `access_type` di `accelerator_view` associato da Capture. Tuttavia, se l'accesso è stato eseguito per la prima volta da un oggetto `accelerator_view` , si comporta come se fosse stato creato `array` su un oggetto creato in `accelerator_view` e condivide l'oggetto di `array` `access_type` .
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Librerie matematiche
 
-C++ AMP include due librerie matematiche. La libreria a precisione doppia nello [spazio dei nomi Concurrency::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornisce supporto per le funzioni a precisione doppia. Fornisce inoltre il supporto per le funzioni a precisione singola, anche se il supporto a precisione doppia nell'hardware è ancora necessario. È conforme alla [specifica C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Il tasto di scelta rapida deve supportare la precisione doppia completa. È possibile determinare se esegue questa operazione controllando il valore del [membro dati Accelerator:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). La libreria Math veloce, nello [spazio dei nomi Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contiene un altro set di funzioni matematiche. Queste funzioni, che supportano solo `float` operandi, vengono eseguite più rapidamente, ma non sono esatte come quelle nella libreria matematica a precisione doppia. Le funzioni sono contenute nel \<amp_math.h> file di intestazione e tutte sono dichiarate con `restrict(amp)` . Le funzioni nel \<cmath> file di intestazione vengono importate in entrambi gli `fast_math` `precise_math` spazi dei nomi e. La parola chiave **Restrict** viene utilizzata per distinguere la \<cmath> versione e la C++ amp versione. Il codice seguente calcola il logaritmo in base 10, usando il metodo rapido, di ogni valore presente nel dominio di calcolo.
+C++ AMP include due librerie matematiche. La libreria a precisione doppia nello [spazio dei nomi Concurrency::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) fornisce supporto per le funzioni a precisione doppia. Fornisce inoltre il supporto per le funzioni a precisione singola, anche se il supporto a precisione doppia nell'hardware è ancora necessario. È conforme alla [specifica C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Il tasto di scelta rapida deve supportare la precisione doppia completa. È possibile determinare se esegue questa operazione controllando il valore del [membro dati Accelerator:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). La libreria Math veloce, nello [spazio dei nomi Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contiene un altro set di funzioni matematiche. Queste funzioni, che supportano solo **`float`** operandi, vengono eseguite più rapidamente, ma non sono esatte come quelle nella libreria matematica a precisione doppia. Le funzioni sono contenute nel \<amp_math.h> file di intestazione e tutte sono dichiarate con `restrict(amp)` . Le funzioni nel \<cmath> file di intestazione vengono importate in entrambi gli `fast_math` `precise_math` spazi dei nomi e. La **`restrict`** parola chiave viene usata per distinguere la \<cmath> versione e la C++ amp versione. Il codice seguente calcola il logaritmo in base 10, usando il metodo rapido, di ogni valore presente nel dominio di calcolo.
 
 ```cpp
 #include <amp.h>
@@ -465,7 +465,7 @@ C++ AMP include una libreria di grafica progettata per la programmazione grafica
 
 - [Writeonly_texture_view class](../../parallel/amp/reference/writeonly-texture-view-class.md): fornisce l'accesso in sola scrittura a qualsiasi trama.
 
-- Short vector Library: definisce un set di tipi di vettori short di lunghezza 2, 3 e 4 basati su **int**, `uint` , **float**, **Double**, [Norm](../../parallel/amp/reference/norm-class.md)o [unorm](../../parallel/amp/reference/unorm-class.md).
+- Short vector Library: definisce un set di tipi di vettori short di lunghezza 2, 3 e 4 basati su **`int`** , `uint` , **`float`** , **`double`** , [Norm](../../parallel/amp/reference/norm-class.md)o [unorm](../../parallel/amp/reference/unorm-class.md).
 
 ## <a name="universal-windows-platform-uwp-apps"></a>App UWP (Universal Windows Platform)
 

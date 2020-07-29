@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222992"
 ---
 # <a name="cmapwordtoob-class"></a>Classe CMapWordToOb
 
@@ -51,9 +51,9 @@ Supporta mappe di puntatori `CObject` con chiave fornita da parole a 16 bit.
 class CMapWordToOb : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-Le funzioni membro di `CMapWordToOb` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che viene visualizzato un `CString` o un puntatore **const** a **char** come parametro di funzione o valore restituito, sostituire Word.
+Le funzioni membro di `CMapWordToOb` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Quando si visualizza un oggetto `CString` o un **`const`** puntatore a **`char`** come un parametro di funzione o un valore restituito, sostituire Word.
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
@@ -89,17 +89,17 @@ ad esempio, si converte in
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[\[ CMapWordToOb:: operator \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt`.|
+|[Operatore \[ CMapWordToOb::\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
 
 ## <a name="remarks"></a>Osservazioni
 
-`CMapWordToOb` incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa viene archiviata in un archivio, con l'operatore di inserimento ( **<<** ) di overload o con la funzione membro `Serialize`.
+`CMapWordToOb`incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa viene archiviata in un archivio, con l'operatore di inserimento ( **<<** ) di overload o con la `Serialize` funzione membro.
 
-Se è necessario un dump di singoli elementi di WORD-`CObject`, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
+Se è necessario un dump di singoli elementi di WORD `CObject` , è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
-Quando viene eliminato un oggetto `CMapWordToOb` o quando vengono rimossi gli elementi, i puntatori `CObject` vengono rimossi. Gli oggetti a cui fanno riferimento i puntatori `CObject` non vengono eliminati definitivamente.
+Quando un `CMapWordToOb` oggetto viene eliminato o quando vengono rimossi i relativi elementi, i `CObject` puntatori vengono rimossi. Gli oggetti a cui fanno riferimento i `CObject` puntatori non vengono eliminati definitivamente.
 
-Per ulteriori informazioni su `CMapWordToOb`, vedere le [raccolte](../../mfc/collections.md)di articoli.
+Per ulteriori informazioni su `CMapWordToOb` , vedere le [raccolte](../../mfc/collections.md)di articoli.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -114,4 +114,4 @@ Per ulteriori informazioni su `CMapWordToOb`, vedere le [raccolte](../../mfc/col
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

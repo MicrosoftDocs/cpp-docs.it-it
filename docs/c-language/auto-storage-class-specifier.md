@@ -2,19 +2,19 @@
 title: Identificatore di classi di archiviazione auto
 ms.date: 11/04/2016
 ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
-ms.openlocfilehash: 6bd36fd534602a5a4df95047a830058e8c5ef163
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e39b37e2dc91dce31b6871d721875c75b8ebd629
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313467"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223759"
 ---
-# <a name="auto-storage-class-specifier"></a>Identificatore di classi di archiviazione auto
+# <a name="auto-storage-class-specifier"></a>`auto`Identificatore di classi di archiviazione
 
-L'identificatore di classi di archiviazione **auto** dichiara una variabile automatica, caratterizzata da una durata locale. Una variabile **auto** è visibile solo nel blocco in cui viene dichiarata. Le dichiarazioni delle variabili **auto** possono includere inizializzatori, come illustrato in [Inizializzazione](../c-language/initialization.md). Poiché le variabili con la classe di archiviazione **auto** non vengono inizializzate automaticamente, è necessario inizializzarle in modo esplicito quando vengono dichiarate oppure assegnare loro valori iniziali nelle istruzioni all'interno del blocco. I valori delle variabili **auto** non inizializzate non sono definiti. Una variabile locale della classe di archiviazione **auto** o **register** viene inizializzata ogni volta che viene rilevata nell'ambito, se è specificato un inizializzatore.
+L' **`auto`** identificatore della classe di archiviazione dichiara una variabile automatica, una variabile con una durata locale. Una **`auto`** variabile è visibile solo nel blocco in cui è dichiarata. Le dichiarazioni di **`auto`** variabili possono includere inizializzatori, come illustrato in [inizializzazione](../c-language/initialization.md). Poiché le variabili con la **`auto`** classe di archiviazione non vengono inizializzate automaticamente, è necessario inizializzarle in modo esplicito quando vengono dichiarate oppure assegnare loro valori iniziali nelle istruzioni all'interno del blocco. I valori delle variabili non inizializzate non **`auto`** sono definiti. Una variabile locale di o di una **`auto`** **`register`** classe di archiviazione viene inizializzata ogni volta che rientra nell'ambito se viene fornito un inizializzatore.
 
-Una variabile interna **static** (variabile statica con ambito del blocco o locale) può essere inizializzata con l'indirizzo di un elemento esterno o **static** ma non con l'indirizzo di un altro elemento **auto**, perché l'indirizzo di un elemento **auto** non è una costante.
+Una **`static`** variabile interna (una variabile statica con ambito locale o di blocco) può essere inizializzata con l'indirizzo di qualsiasi **`static`** elemento o esterno, ma non con l'indirizzo di un altro **`auto`** elemento, perché l'indirizzo di un **`auto`** elemento non è una costante.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Parola chiave auto](../cpp/auto-keyword.md)
+[`auto`Parola chiave](../cpp/auto-keyword.md)

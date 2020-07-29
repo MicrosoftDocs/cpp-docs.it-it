@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToPtr [MFC], RemoveKey
 - CMapStringToPtr [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-ms.openlocfilehash: 0e722b305dad6595eb67b1a235c375d21f674353
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 26a606d5813a68b55d8fc555025ccef270a25766
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442611"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223018"
 ---
 # <a name="cmapstringtoptr-class"></a>Classe CMapStringToPtr
 
@@ -51,9 +51,9 @@ Supporta mappe di puntatori void con chiave fornita da oggetti `CString` .
 class CMapStringToPtr : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-Le funzioni membro di `CMapStringToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che viene visualizzato un puntatore `CObject` come un parametro di funzione o un valore restituito, sostituire un puntatore a **void**.
+Le funzioni membro di `CMapStringToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Quando viene visualizzato un `CObject` puntatore come parametro di funzione o valore restituito, sostituire un puntatore a **`void`** .
 
 `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> ) const;`
 
@@ -89,15 +89,15 @@ ad esempio, si converte in
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[\[ CMapStringToPtr:: operator \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt`.|
+|[Operatore \[ CMapStringToPtr::\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
 
 ## <a name="remarks"></a>Osservazioni
 
-`CMapStringToPtr` incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un oggetto `CDumpContext`. Se è necessario un dump di singoli elementi della mappa, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
+`CMapStringToPtr`incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della mappa, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
 Non è possibile serializzare le mappe da stringa a puntatore.
 
-Quando viene eliminato un oggetto `CMapStringToPtr` o quando vengono rimossi gli elementi, gli oggetti chiave `CString` e le parole vengono rimossi.
+Quando un `CMapStringToPtr` oggetto viene eliminato o quando vengono rimossi gli elementi, gli `CString` oggetti chiave e le parole vengono rimossi.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -112,4 +112,4 @@ Quando viene eliminato un oggetto `CMapStringToPtr` o quando vengono rimossi gli
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

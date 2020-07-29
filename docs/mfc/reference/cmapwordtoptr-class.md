@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapWordToPtr [MFC], RemoveKey
 - CMapWordToPtr [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
-ms.openlocfilehash: 71d79f9f57be2cdfe16c526bd50173a8ec3c5829
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3374b3123e150a4cac127e30bf7e9a6569371b5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222979"
 ---
 # <a name="cmapwordtoptr-class"></a>Classe CMapWordToPtr
 
@@ -51,9 +51,9 @@ Supporta mappe di puntatori void con chiave fornita da parole a 16 bit.
 class CMapWordToPtr : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-Le funzioni membro di `CMapWordToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che viene visualizzato un puntatore `CObject` come un parametro di funzione o un valore restituito, sostituire un puntatore a **void**. Ogni volta che viene visualizzato un `CString` o un puntatore **const** a **char** come parametro di funzione o valore restituito, sostituire Word.
+Le funzioni membro di `CMapWordToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Quando viene visualizzato un `CObject` puntatore come parametro di funzione o valore restituito, sostituire un puntatore a **`void`** . Quando si visualizza un oggetto `CString` o un **`const`** puntatore a **`char`** come un parametro di funzione o un valore restituito, sostituire Word.
 
 `BOOL CMapWordToPtr::Lookup( WORD <key>, void*& <rValue> ) const;`
 
@@ -89,17 +89,17 @@ ad esempio, si converte in
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[\[ CMapWordToPtr:: operator \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt`.|
+|[Operatore \[ CMapWordToPtr::\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
 
 ## <a name="remarks"></a>Osservazioni
 
-`CMapWordToPtr` incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un oggetto `CDumpContext`. Se è necessario un dump di singoli elementi della mappa, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
+`CMapWordToPtr`incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della mappa, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
 Non è possibile serializzare le mappe da Word a puntatore.
 
-Quando viene eliminato un oggetto `CMapWordToPtr` o quando vengono rimossi gli elementi, le parole e i puntatori vengono rimossi. Le entità a cui fanno riferimento i puntatori non vengono rimosse.
+Quando un `CMapWordToPtr` oggetto viene eliminato o quando vengono rimossi gli elementi, le parole e i puntatori vengono rimossi. Le entità a cui fanno riferimento i puntatori non vengono rimosse.
 
-Per ulteriori informazioni su `CMapWordToPtr`, vedere le [raccolte](../../mfc/collections.md)di articoli.
+Per ulteriori informazioni su `CMapWordToPtr` , vedere le [raccolte](../../mfc/collections.md)di articoli.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -114,4 +114,4 @@ Per ulteriori informazioni su `CMapWordToPtr`, vedere le [raccolte](../../mfc/co
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

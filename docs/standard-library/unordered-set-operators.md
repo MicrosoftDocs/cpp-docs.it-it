@@ -5,16 +5,16 @@ f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2b77c7d8e1b159198be471fb2da0bfb1f98bab0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422507"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215491"
 ---
 # <a name="ltunordered_setgt-operators"></a>Operatori &lt;unordered_set&gt;
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto [unordered_set](../standard-library/unordered-set-class.md) a sinistra dell'operatore non è uguale all'oggetto unordered_set a destra.
 
@@ -24,15 +24,15 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `unordered_set`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `unordered_set`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_sets non sono uguali. **false** se sono uguali.
+**`true`** Se il unordered_sets non è uguale. **`false`** se sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -82,7 +82,7 @@ int main()
 
 `c2 != c3: true`
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
 
 Verifica se l'oggetto [unordered_set](../standard-library/unordered-set-class.md) a sinistra dell'operatore è uguale all'oggetto unordered_set a destra.
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `unordered_set`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `unordered_set`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_sets sono uguali. **false** se non sono uguali.
+**`true`** Se la unordered_sets è uguale; **`false`** se non sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -148,7 +148,7 @@ c1 == c3: true
 c2 == c3: false
 ```
 
-## <a name="op_neq_unordered_multiset"></a>operatore! =
+## <a name="operator"></a><a name="op_neq_unordered_multiset"></a>operatore! =
 
 Verifica se l'oggetto [unordered_multiset](../standard-library/unordered-multiset-class.md) a sinistra dell'operatore non è uguale all'oggetto unordered_multiset a destra.
 
@@ -158,15 +158,15 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `unordered_multiset`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `unordered_multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_multisets non sono uguali. **false** se sono uguali.
+**`true`** Se il unordered_multisets non è uguale. **`false`** se sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -217,7 +217,7 @@ c1 != c3: false
 c2 != c3: true
 ```
 
-## <a name="op_eq_eq_unordered_multiset"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq_unordered_multiset"></a>operatore = =
 
 Verifica se l'oggetto [unordered_multiset](../standard-library/unordered-multiset-class.md) a sinistra dell'operatore è uguale all'oggetto unordered_multiset a destra.
 
@@ -227,15 +227,15 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `unordered_multiset`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `unordered_multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i unordered_multisets sono uguali. **false** se non sono uguali.
+**`true`** Se la unordered_multisets è uguale; **`false`** se non sono uguali.
 
 ### <a name="remarks"></a>Osservazioni
 

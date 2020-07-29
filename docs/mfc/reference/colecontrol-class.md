@@ -1,5 +1,5 @@
 ---
-title: Classe COleControl
+title: COleControl (classe)
 ms.date: 08/27/2018
 f1_keywords:
 - COleControl
@@ -334,14 +334,14 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: c0e31b44daad56da2cd0fd20bb7d591797079391
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753932"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214126"
 ---
-# <a name="colecontrol-class"></a>Classe COleControl
+# <a name="colecontrol-class"></a>COleControl (classe)
 
 Classe di base avanzata per lo sviluppo di controlli OLE.
 
@@ -351,17 +351,17 @@ Classe di base avanzata per lo sviluppo di controlli OLE.
 class COleControl : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleControl:: COleControl](#colecontrol)|Crea un oggetto `COleControl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleControl:: AmbientAppearance](#ambientappearance)|Recupera l'aspetto corrente del controllo.|
 |[COleControl:: AmbientBackColor](#ambientbackcolor)|Restituisce il valore della proprietà BackColor dell'ambiente.|
@@ -388,16 +388,16 @@ class COleControl : public CWnd
 |[COleControl:: ExchangeExtent](#exchangeextent)|Serializza la larghezza e l'altezza del controllo.|
 |[COleControl:: ExchangeStockProps](#exchangestockprops)|Serializza le proprietà predefinite del controllo.|
 |[COleControl:: ExchangeVersion](#exchangeversion)|Serializza il numero di versione del controllo.|
-|[COleControl:: FireClick](#fireclick)|Genera l'evento `Click` azionario.|
-|[COleControl:: FireDblClick](#firedblclick)|Genera l'evento `DblClick` azionario.|
-|[COleControl:: FireError (](#fireerror)|Genera l'evento `Error` azionario.|
+|[COleControl:: FireClick](#fireclick)|Genera l'evento azionario `Click` .|
+|[COleControl:: FireDblClick](#firedblclick)|Genera l'evento azionario `DblClick` .|
+|[COleControl:: FireError (](#fireerror)|Genera l'evento azionario `Error` .|
 |[COleControl:: FireEvent](#fireevent)|Genera un evento personalizzato.|
-|[COleControl:: FireKeyDown](#firekeydown)|Genera l'evento `KeyDown` azionario.|
-|[COleControl:: FireKeyPress](#firekeypress)|Genera l'evento `KeyPress` azionario.|
-|[COleControl:: FireKeyUp](#firekeyup)|Genera l'evento `KeyUp` azionario.|
-|[COleControl:: FireMouseDown](#firemousedown)|Genera l'evento `MouseDown` azionario.|
-|[COleControl:: FireMouseMove](#firemousemove)|Genera l'evento `MouseMove` azionario.|
-|[COleControl:: FireMouseUp](#firemouseup)|Genera l'evento `MouseUp` azionario.|
+|[COleControl:: FireKeyDown](#firekeydown)|Genera l'evento azionario `KeyDown` .|
+|[COleControl:: FireKeyPress](#firekeypress)|Genera l'evento azionario `KeyPress` .|
+|[COleControl:: FireKeyUp](#firekeyup)|Genera l'evento azionario `KeyUp` .|
+|[COleControl:: FireMouseDown](#firemousedown)|Genera l'evento azionario `MouseDown` .|
+|[COleControl:: FireMouseMove](#firemousemove)|Genera l'evento azionario `MouseMove` .|
+|[COleControl:: FireMouseUp](#firemouseup)|Genera l'evento azionario `MouseUp` .|
 |[COleControl:: FireReadyStateChange](#firereadystatechange)|Genera un evento quando viene modificato lo stato pronto del controllo.|
 |[COleControl:: GetActivationPolicy](#getactivationpolicy)|Modifica il comportamento di attivazione predefinito di un controllo che supporta l' `IPointerInactive` interfaccia.|
 |[COleControl:: GetAmbientProperty](#getambientproperty)|Restituisce il valore della proprietà di ambiente specificata.|
@@ -521,11 +521,11 @@ class COleControl : public CWnd
 |[COleControl:: TransformCoords](#transformcoords)|Trasforma i valori delle coordinate tra un contenitore e il controllo.|
 |[COleControl:: TranslateColor](#translatecolor)|Converte un valore OLE_COLOR in un valore COLORREF.|
 |[COleControl:: WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|Determina se le proprietà di ambiente saranno disponibili la volta successiva che il controllo verrà caricato.|
-|[COleControl:: WindowProc](#windowproc)|Fornisce una procedura di Windows per `COleControl` un oggetto.|
+|[COleControl:: WindowProc](#windowproc)|Fornisce una procedura di Windows per un `COleControl` oggetto.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleControl::D rawContent](#drawcontent)|Chiamata eseguita dal framework quando è necessario aggiornare l'aspetto del controllo.|
 |[COleControl::D rawMetafile](#drawmetafile)|Chiamato dal framework quando viene utilizzato il contesto di dispositivo metafile.|
@@ -534,7 +534,7 @@ class COleControl : public CWnd
 
 ## <a name="remarks"></a>Osservazioni
 
-Derivata da `CWnd`, questa classe eredita tutte le funzionalità di un oggetto finestra di Windows, oltre a funzionalità aggiuntive specifiche di OLE, ad esempio la generazione di eventi e la possibilità di supportare metodi e proprietà.
+Derivata da `CWnd` , questa classe eredita tutte le funzionalità di un oggetto finestra di Windows, oltre a funzionalità aggiuntive specifiche di OLE, ad esempio la generazione di eventi e la possibilità di supportare metodi e proprietà.
 
 I controlli OLE possono essere inseriti in applicazioni contenitore OLE e comunicano con il contenitore utilizzando un sistema bidirezionale di generazione di eventi e l'esposizione di metodi e proprietà al contenitore. Si noti che i contenitori OLE standard supportano solo le funzionalità di base di un controllo OLE. Non sono in grado di supportare le funzionalità estese di un controllo OLE. La generazione di eventi si verifica quando gli eventi vengono inviati al contenitore in seguito ad alcune azioni eseguite nel controllo. A sua volta, il contenitore comunica con il controllo usando un set esposto di metodi e proprietà analoghi alle funzioni membro e ai membri dati di una classe C++. Questo approccio consente allo sviluppatore di controllare l'aspetto del controllo e inviare una notifica al contenitore quando si verificano determinate azioni.
 
@@ -550,9 +550,9 @@ I controlli non necessitano di una finestra. I servizi offerti da una finestra p
 
 Quando viene usata l'attivazione senza finestra, il contenitore, che ha una finestra, è responsabile di fornire servizi che verrebbero altrimenti forniti dalla finestra del controllo. Se, ad esempio, il controllo deve eseguire una query sullo stato attivo della tastiera, eseguire una query sull'acquisizione del mouse o ottenere un contesto di dispositivo, queste operazioni vengono gestite dal contenitore. Le `COleControl` funzioni membro di operazione senza finestra richiamano queste operazioni nel contenitore.
 
-Quando è abilitata l'attivazione senza finestra, il contenitore delega i messaggi di input `IOleInPlaceObjectWindowless` all'interfaccia del controllo (un'estensione di [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) per il supporto senza finestra). `COleControl`l'implementazione di questa interfaccia invierà questi messaggi tramite la mappa messaggi del controllo, dopo aver modificato le coordinate del mouse in modo appropriato. È possibile elaborare questi messaggi come i normali messaggi della finestra, aggiungendo le voci corrispondenti alla mappa messaggi.
+Quando è abilitata l'attivazione senza finestra, il contenitore delega i messaggi di input all'interfaccia del controllo `IOleInPlaceObjectWindowless` (un'estensione di [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) per il supporto senza finestra). `COleControl`l'implementazione di questa interfaccia invierà questi messaggi tramite la mappa messaggi del controllo, dopo aver modificato le coordinate del mouse in modo appropriato. È possibile elaborare questi messaggi come i normali messaggi della finestra, aggiungendo le voci corrispondenti alla mappa messaggi.
 
-In un controllo senza finestra è consigliabile usare sempre le `COleControl` funzioni membro anziché le funzioni membro corrispondenti `CWnd` o le funzioni API Windows correlate.
+In un controllo senza finestra è consigliabile usare sempre le `COleControl` funzioni membro anziché le `CWnd` funzioni membro corrispondenti o le funzioni API Windows correlate.
 
 Gli oggetti di controllo OLE possono anche creare una finestra solo quando diventano attivi, ma la quantità di lavoro necessaria per la transizione inattiva-attiva aumenta e la velocità della transizione diventa inattiva. In alcuni casi si tratta di un problema: ad esempio, si consideri una griglia di caselle di testo. Quando si esegue il cursore verso l'alto e verso il basso nella colonna, ogni controllo deve essere attivato sul posto e quindi disattivato. La velocità della transizione inattiva/attiva influirà direttamente sulla velocità di scorrimento.
 
@@ -792,11 +792,11 @@ ID di invio di una proprietà associata del controllo.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa operazione deve essere chiamata ogni volta che il valore della proprietà viene modificato, anche nei casi in cui la modifica non è stata apportata tramite il metodo del set di proprietà. Essere particolarmente consapevoli delle proprietà associate di cui è stato eseguito il mapping a variabili membro. Ogni volta che una variabile membro viene modificata `BoundPropertyChanged` , deve essere chiamato.
+Questa operazione deve essere chiamata ogni volta che il valore della proprietà viene modificato, anche nei casi in cui la modifica non è stata apportata tramite il metodo del set di proprietà. Essere particolarmente consapevoli delle proprietà associate di cui è stato eseguito il mapping a variabili membro. Ogni volta che una variabile membro viene modificata, `BoundPropertyChanged` deve essere chiamato.
 
 ## <a name="colecontrolboundpropertyrequestedit"></a><a name="boundpropertyrequestedit"></a>COleControl:: BoundPropertyRequestEdit
 
-Richiede l' `IPropertyNotifySink` autorizzazione dall'interfaccia per modificare un valore della proprietà associata fornito dal controllo.
+Richiede l'autorizzazione dall' `IPropertyNotifySink` interfaccia per modificare un valore della proprietà associata fornito dal controllo.
 
 ```
 BOOL BoundPropertyRequestEdit(DISPID dispid);
@@ -858,9 +858,9 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Un accento circonflesso è una linea, un blocco o una bitmap lampeggiante che in genere indica la posizione in cui verranno inseriti il testo o la grafica.
 
-Un oggetto senza finestra non può visualizzare in modo sicuro un accento circonflesso senza prima controllare se il punto di inserimento è parzialmente o completamente nascosto da oggetti sovrapposti. Per ottenere questo possibile, un oggetto può usare `ClipCaretRect` per impostare il punto di inserimento (ridotto) per assicurarsi che si adatta all'area di ridimensionamento.
+Un oggetto senza finestra non può visualizzare in modo sicuro un accento circonflesso senza prima controllare se il punto di inserimento è parzialmente o completamente nascosto da oggetti sovrapposti. Per ottenere questo possibile, un oggetto può usare per impostare `ClipCaretRect` il punto di inserimento (ridotto) per assicurarsi che si adatta all'area di ridimensionamento.
 
-Gli oggetti che creano un cursore devono inviare il rettangolo del cursore `ClipCaretRect` a e utilizzare il rettangolo modificato per il punto di inserimento. Se il punto di inserimento è completamente nascosto, questo metodo restituirà FALSE e il punto di inserimento non verrà visualizzato in questo caso.
+Gli oggetti che creano un cursore devono inviare il rettangolo del cursore a `ClipCaretRect` e utilizzare il rettangolo modificato per il punto di inserimento. Se il punto di inserimento è completamente nascosto, questo metodo restituirà FALSE e il punto di inserimento non verrà visualizzato in questo caso.
 
 ## <a name="colecontrolcolecontrol"></a><a name="colecontrol"></a>COleControl:: COleControl
 
@@ -932,9 +932,9 @@ void DoClick();
 
 ### <a name="remarks"></a>Osservazioni
 
-Verrà chiamata la `COleControl::OnClick` funzione membro sottoponibile a override e verrà generato un evento Click di stock, se supportato dal controllo.
+`COleControl::OnClick`Verrà chiamata la funzione membro sottoponibile a override e verrà generato un evento Click di stock, se supportato dal controllo.
 
-Questa funzione è supportata dalla classe `COleControl` base come metodo azionario, denominato DoClick. Per ulteriori informazioni, vedere l'articolo [controlli ActiveX: Methods](../../mfc/mfc-activex-controls-methods.md).
+Questa funzione è supportata dalla `COleControl` classe base come metodo azionario, denominato DoClick. Per ulteriori informazioni, vedere l'articolo [controlli ActiveX: Methods](../../mfc/mfc-activex-controls-methods.md).
 
 ## <a name="colecontroldopropexchange"></a><a name="dopropexchange"></a>COleControl::D oPropExchange
 
@@ -953,7 +953,7 @@ Puntatore a un oggetto `CPropExchange`. Il Framework fornisce questo oggetto per
 
 Questa funzione esegue in genere chiamate alla famiglia di funzioni **PX_** per caricare o archiviare proprietà specifiche definite dall'utente di un controllo OLE.
 
-Se è stata usata la procedura guidata per creare il progetto di controllo OLE, la versione sottoposta a override di questa funzione determinerà la serializzazione delle proprietà predefinite supportate `COleControl` da `COleControl::DoPropExchange`con una chiamata alla funzione della classe base,. Quando si aggiungono proprietà definite dall'utente al controllo OLE, sarà necessario modificare questa funzione per serializzare le nuove proprietà. Per ulteriori informazioni sulla serializzazione, vedere l'articolo [controlli ActiveX: serializzazione](../../mfc/mfc-activex-controls-serializing.md).
+Se è stata usata la procedura guidata per creare il progetto di controllo OLE, la versione sottoposta a override di questa funzione determinerà la serializzazione delle proprietà predefinite supportate da `COleControl` con una chiamata alla funzione della classe base, `COleControl::DoPropExchange` . Quando si aggiungono proprietà definite dall'utente al controllo OLE, sarà necessario modificare questa funzione per serializzare le nuove proprietà. Per ulteriori informazioni sulla serializzazione, vedere l'articolo [controlli ActiveX: serializzazione](../../mfc/mfc-activex-controls-serializing.md).
 
 ## <a name="colecontroldosuperclasspaint"></a><a name="dosuperclasspaint"></a>COleControl::D oSuperclassPaint
 
@@ -1050,7 +1050,7 @@ Diverso da zero se la funzione ha esito positivo; 0 in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione viene in genere chiamata dall'implementazione predefinita di `COleControl::DoPropExchange`.
+Questa funzione viene in genere chiamata dall'implementazione predefinita di `COleControl::DoPropExchange` .
 
 ## <a name="colecontrolexchangestockprops"></a><a name="exchangestockprops"></a>COleControl:: ExchangeStockProps
 
@@ -1067,7 +1067,7 @@ Puntatore a un oggetto [CPropExchange](../../mfc/reference/cpropexchange-class.m
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione viene in genere chiamata dall'implementazione predefinita di `COleControl::DoPropExchange`.
+Questa funzione viene in genere chiamata dall'implementazione predefinita di `COleControl::DoPropExchange` .
 
 ## <a name="colecontrolexchangeversion"></a><a name="exchangeversion"></a>COleControl:: ExchangeVersion
 
@@ -1097,7 +1097,7 @@ Valore diverso da zero della funzione completata. 0 in caso contrario.
 
 ### <a name="remarks"></a>Osservazioni
 
-In genere, questa sarà la prima funzione chiamata dall'override di un controllo di `COleControl::DoPropExchange`. Durante il caricamento, questa funzione legge il numero di versione dei dati persistenti e imposta di conseguenza l'attributo Version dell'oggetto [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Quando si salva, questa funzione scrive il numero di versione dei dati persistenti.
+In genere, questa sarà la prima funzione chiamata dall'override di un controllo di `COleControl::DoPropExchange` . Durante il caricamento, questa funzione legge il numero di versione dei dati persistenti e imposta di conseguenza l'attributo Version dell'oggetto [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Quando si salva, questa funzione scrive il numero di versione dei dati persistenti.
 
 Per ulteriori informazioni sulla persistenza e sul controllo delle versioni, vedere l'articolo [controlli ActiveX: serializzazione](../../mfc/mfc-activex-controls-serializing.md).
 
@@ -1159,7 +1159,7 @@ Per segnalare un errore che si verifica durante una funzione Get della propriet�
 
 L'implementazione di un evento di errore di azione di un controllo OLE usa un valore SCODE. Se il controllo utilizza questo evento e deve essere utilizzato nel Visual Basic 4,0, si riceveranno degli errori perché il valore SCODE non è supportato in Visual Basic.
 
-Per risolvere questo problema, modificare manualmente il parametro SCODE nell'oggetto del controllo. File di FAD a un valore **Long**. Inoltre, qualsiasi evento personalizzato, metodo o proprietà che usa un parametro SCODE causa anche lo stesso problema.
+Per risolvere questo problema, modificare manualmente il parametro SCODE nell'oggetto del controllo. File di FAD a **`long`** . Inoltre, qualsiasi evento personalizzato, metodo o proprietà che usa un parametro SCODE causa anche lo stesso problema.
 
 ## <a name="colecontrolfireevent"></a><a name="fireevent"></a>COleControl:: FireEvent
 
@@ -1184,7 +1184,7 @@ Descrittore per i tipi di parametro dell'evento.
 
 In genere questa funzione non deve essere chiamata direttamente. Al contrario, le funzioni di generazione di eventi vengono chiamate nella sezione della mappa eventi della dichiarazione di classe del controllo.
 
-L'argomento *pbParams* è un elenco di **VTS_** separato da spazi. Uno o più di questi valori, separati da spazi (non virgole), specificano l'elenco dei parametri della funzione. Sono disponibili i valori seguenti:
+L'argomento *pbParams* è un elenco di **VTS_** separato da spazi. Uno o più di questi valori, separati da spazi (non virgole), specificano l'elenco dei parametri della funzione. I possibili valori sono i seguenti:
 
 |Simbolo|Tipo di parametro|
 |------------|--------------------|
@@ -1253,7 +1253,7 @@ Puntatore al valore del carattere del tasto premuto.
 
 Se questo evento viene definito come un evento personalizzato, si determina quando viene generato l'evento.
 
-Il destinatario dell'evento può modificare *pnChar*, ad esempio, convertire tutti i caratteri minuscoli in maiuscolo. Se si desidera esaminare il carattere modificato, eseguire l' `OnKeyPressEvent`override di.
+Il destinatario dell'evento può modificare *pnChar*, ad esempio, convertire tutti i caratteri minuscoli in maiuscolo. Se si desidera esaminare il carattere modificato, eseguire l'override di `OnKeyPressEvent` .
 
 Per la generazione automatica di un evento KeyPress, è necessario che la mappa eventi del controllo disponga di un evento KeyPress azionario definito.
 
@@ -1441,7 +1441,7 @@ Lo stato Ready può essere uno dei valori seguenti:
 
 Usare [GetReadyState](#getreadystate) per determinare la conformità corrente del controllo.
 
-[InternalSetReadyState](#internalsetreadystate) imposta lo stato Ready sul valore fornito, quindi chiama `FireReadyStateChange`.
+[InternalSetReadyState](#internalsetreadystate) imposta lo stato Ready sul valore fornito, quindi chiama `FireReadyStateChange` .
 
 ## <a name="colecontrolgetactivationpolicy"></a><a name="getactivationpolicy"></a>COleControl:: GetActivationPolicy
 
@@ -1465,11 +1465,11 @@ Combinazione di flag dell'enumerazione POINTERINACTIVE. I flag possibili sono:
 
 Quando l' `IPointerInactive` interfaccia è abilitata, il contenitore delega WM_SETCURSOR e WM_MOUSEMOVE messaggi. `COleControl`l'implementazione di questa interfaccia invierà questi messaggi tramite la mappa messaggi del controllo, dopo aver modificato le coordinate del mouse in modo appropriato.
 
-Ogni volta che il contenitore riceve un WM_SETCURSOR o WM_MOUSEMOVE messaggio con il puntatore del mouse su un oggetto `IPointerInactive`non attivo che supporta `GetActivationPolicy` , deve chiamare sull'interfaccia e restituire i flag dall'enumerazione POINTERINACTIVE.
+Ogni volta che il contenitore riceve un WM_SETCURSOR o WM_MOUSEMOVE messaggio con il puntatore del mouse su un oggetto `IPointerInactive` non attivo che supporta, deve chiamare `GetActivationPolicy` sull'interfaccia e restituire i flag dall'enumerazione POINTERINACTIVE.
 
 È possibile elaborare questi messaggi esattamente come i normali messaggi della finestra, aggiungendo le voci corrispondenti alla mappa messaggi. Nei gestori, evitare di usare la `m_hWnd` variabile membro (o qualsiasi funzione membro che lo USA) senza prima verificare che il relativo valore sia diverso da null.
 
-Qualsiasi oggetto progettato per eseguire più di impostare il cursore del mouse e/o generare un evento di spostamento del mouse, ad esempio fornire un feedback visivo speciale, deve restituire il flag di POINTERINACTIVE_ACTIVATEONENTRY e tracciare il feedback solo quando è attivo. Se l'oggetto restituisce questo flag, il contenitore deve attivarlo immediatamente sul posto e quindi procedere con lo stesso messaggio che ha attivato la chiamata a `GetActivationPolicy`.
+Qualsiasi oggetto progettato per eseguire più di impostare il cursore del mouse e/o generare un evento di spostamento del mouse, ad esempio fornire un feedback visivo speciale, deve restituire il flag di POINTERINACTIVE_ACTIVATEONENTRY e tracciare il feedback solo quando è attivo. Se l'oggetto restituisce questo flag, il contenitore deve attivarlo immediatamente sul posto e quindi procedere con lo stesso messaggio che ha attivato la chiamata a `GetActivationPolicy` .
 
 Se vengono restituiti entrambi i flag POINTERINACTIVE_ACTIVATEONENTRY e POINTERINACTIVE_DEACTIVATEONLEAVE, l'oggetto verrà attivato solo quando il mouse è posizionato sull'oggetto. Se viene restituito solo il flag di POINTERINACTIVE_ACTIVATEONENTRY, l'oggetto verrà attivato solo una volta quando il mouse entra per la prima volta nell'oggetto.
 
@@ -1477,11 +1477,11 @@ Potrebbe anche essere necessario che un controllo inattivo sia la destinazione d
 
 [!code-cpp[NVC_MFCAxCtl#1](../../mfc/reference/codesnippet/cpp/colecontrol-class_1.cpp)]
 
-Le informazioni comunicate `GetActivationPolicy` da non devono essere memorizzate nella cache da un contenitore. Al contrario, questo metodo deve essere chiamato ogni volta che il mouse entra in un oggetto inattivo.
+Le informazioni comunicate da `GetActivationPolicy` non devono essere memorizzate nella cache da un contenitore. Al contrario, questo metodo deve essere chiamato ogni volta che il mouse entra in un oggetto inattivo.
 
 Se un oggetto inattivo non richiede l'attivazione sul posto quando il mouse lo immette, il relativo contenitore deve inviare i messaggi di WM_SETCURSOR successivi a questo oggetto chiamando [OnInactiveSetCursor](#oninactivesetcursor) , purché il puntatore del mouse rimanga sull'oggetto.
 
-L'abilitazione dell' `IPointerInactive` interfaccia in genere significa che si desidera che il controllo sia in grado di elaborare i messaggi del mouse in qualsiasi momento. Per ottenere questo comportamento in un contenitore che non supporta l' `IPointerInactive` interfaccia, è necessario che il controllo venga sempre attivato quando è visibile, il che significa che il controllo deve avere il flag di OLEMISC_ACTIVATEWHENVISIBLE tra i flag varie. Tuttavia, per impedire che questo flag venga applicato in un contenitore che supporta `IPointerInactive`, è anche possibile specificare il flag di OLEMISC_IGNOREACTIVATEWHENVISIBLE:
+L'abilitazione dell' `IPointerInactive` interfaccia in genere significa che si desidera che il controllo sia in grado di elaborare i messaggi del mouse in qualsiasi momento. Per ottenere questo comportamento in un contenitore che non supporta l' `IPointerInactive` interfaccia, è necessario che il controllo venga sempre attivato quando è visibile, il che significa che il controllo deve avere il flag di OLEMISC_ACTIVATEWHENVISIBLE tra i flag varie. Tuttavia, per impedire che questo flag venga applicato in un contenitore che supporta `IPointerInactive` , è anche possibile specificare il flag di OLEMISC_IGNOREACTIVATEWHENVISIBLE:
 
 [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]
 
@@ -1526,7 +1526,7 @@ Diverso da zero se la proprietà di ambiente è supportata. in caso contrario, 0
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si usa `GetAmbientProperty` per recuperare le proprietà DisplayName e ScaleUnits di ambiente, impostare *vtProp* su VT_BSTR e *pvProp* su `CString*`. Se si sta recuperando la proprietà del tipo di carattere ambiente, impostare *vtProp* su VT_FONT e *pvProp* su LPFONTDISP *.
+Se si usa `GetAmbientProperty` per recuperare le proprietà DisplayName e ScaleUnits di ambiente, impostare *vtProp* su VT_BSTR e *pvProp* su `CString*` . Se si sta recuperando la proprietà del tipo di carattere ambiente, impostare *vtProp* su VT_FONT e *pvProp* su LPFONTDISP *.
 
 Si noti che le funzioni sono già state fornite per le proprietà di ambiente comuni, ad esempio [AmbientBackColor](#ambientbackcolor) e [AmbientFont](#ambientfont).
 
@@ -1540,7 +1540,7 @@ short GetAppearance ();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore restituito specifica l'impostazione dell'aspetto corrente come valore **short** (VT_I2), se ha esito positivo. Questo valore è zero se l'aspetto del controllo è flat e 1 se l'aspetto del controllo è 3D.
+Il valore restituito specifica l'impostazione dell'aspetto corrente come **`short`** valore (VT_I2), se ha esito positivo. Questo valore è zero se l'aspetto del controllo è flat e 1 se l'aspetto del controllo è 3D.
 
 ## <a name="colecontrolgetbackcolor"></a><a name="getbackcolor"></a>COleControl:: GetBackColor
 
@@ -1552,7 +1552,7 @@ OLE_COLOR GetBackColor();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore restituito specifica il colore di sfondo corrente come valore di OLE_COLOR, se ha esito positivo. Questo valore può essere convertito in un valore COLORREF con una chiamata a `TranslateColor`.
+Il valore restituito specifica il colore di sfondo corrente come valore di OLE_COLOR, se ha esito positivo. Questo valore può essere convertito in un valore COLORREF con una chiamata a `TranslateColor` .
 
 ## <a name="colecontrolgetborderstyle"></a><a name="getborderstyle"></a>COleControl:: getborderstyle
 
@@ -1576,9 +1576,9 @@ CWnd* GetCapture();
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il controllo è attivato e senza finestra, restituisce **questo** valore se il controllo dispone attualmente dell'acquisizione del mouse (come determinato dal contenitore del controllo) o null se non dispone dell'acquisizione.
+Se il controllo è attivato e senza finestra, restituisce **`this`** se il controllo dispone attualmente dell'acquisizione del mouse (come determinato dal contenitore del controllo) o null se non dispone dell'acquisizione.
 
-In caso contrario, `CWnd` restituisce l'oggetto con il mouse capture (uguale `CWnd::GetCapture`a).
+In caso contrario, restituisce l' `CWnd` oggetto con il mouse capture (uguale a `CWnd::GetCapture` ).
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1636,7 +1636,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Puntatore a una `RECT` struttura contenente le dimensioni dell'area client del controllo senza finestra; ovvero le dimensioni del controllo meno i bordi della finestra, i frame, le barre di scorrimento e così via. Il parametro *lpRect* indica le dimensioni del rettangolo client del controllo, non la relativa posizione.
+Puntatore a una `RECT` struttura contenente le dimensioni dell'area client del controllo senza finestra, ovvero le dimensioni del controllo meno i bordi della finestra, i frame, le barre di scorrimento e così via. Il parametro *lpRect* indica le dimensioni del rettangolo client del controllo, non la relativa posizione.
 
 ## <a name="colecontrolgetclientsite"></a><a name="getclientsite"></a>COleControl:: GetClientSite
 
@@ -1652,7 +1652,7 @@ Puntatore al sito client corrente del controllo nel relativo contenitore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il puntatore restituito punta a un'istanza di `IOleClientSite`. L' `IOleClientSite` interfaccia, implementata dai contenitori, è la visualizzazione dell'oggetto del relativo contesto, ovvero la posizione in cui è ancorata nel documento, dove ottiene le risorse di archiviazione, l'interfaccia utente e altre risorse.
+Il puntatore restituito punta a un'istanza di `IOleClientSite` . L' `IOleClientSite` interfaccia, implementata dai contenitori, è la visualizzazione dell'oggetto del relativo contesto, ovvero la posizione in cui è ancorata nel documento, dove ottiene le risorse di archiviazione, l'interfaccia utente e altre risorse.
 
 ## <a name="colecontrolgetcontrolflags"></a><a name="getcontrolflags"></a>COleControl:: GetControlFlags
 
@@ -1684,8 +1684,8 @@ Per impostazione predefinita, il metodo `GetControlFlags` restituisce `fastBegin
 |||
 |-|-|
 |`fastBeginPaint`|Se impostato, usa una funzione begin-Paint personalizzata per i controlli OLE anziché l'API [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) (impostata per impostazione predefinita).|
-|`clipPaintDC`|Se non è impostato, Disabilita la chiamata a `IntersectClipRect` eseguita da e `COleControl` ottiene un vantaggio di piccola velocità. Se si usa l'attivazione senza finestra, il flag non ha alcun effetto.|
-|`pointerInactive`|Se impostato, fornisce l'interazione del mouse mentre il controllo è inattivo `COleControl`abilitando l' `IPointerInactive` implementazione dell'interfaccia, che è disabilitata per impostazione predefinita.|
+|`clipPaintDC`|Se non è impostato, Disabilita la chiamata a `IntersectClipRect` eseguita da `COleControl` e ottiene un vantaggio di piccola velocità. Se si usa l'attivazione senza finestra, il flag non ha alcun effetto.|
+|`pointerInactive`|Se impostato, fornisce l'interazione del mouse mentre il controllo è inattivo abilitando `COleControl` l'implementazione dell' `IPointerInactive` interfaccia, che è disabilitata per impostazione predefinita.|
 |`noFlickerActivate`|Se impostato, Elimina ulteriori operazioni di disegno e lo sfarfallio visivo associato. Usare quando il controllo si disegna in modo identico negli stati inattivi e inattivi. Se si usa l'attivazione senza finestra, il flag non ha alcun effetto.|
 |`windowlessActivate`|Se impostato, indica che il controllo utilizza l'attivazione senza finestra.|
 |`canOptimizeDraw`|Se impostato, indica che il controllo eseguirà il disegno ottimizzato, se il contenitore lo supporta.|
@@ -1740,11 +1740,11 @@ Attributi di disegno del contesto di dispositivo. Sono disponibili le opzioni se
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al contesto del dispositivo di visualizzazione per l' `CWnd` area client del contenitore se ha esito positivo; in caso contrario, il valore restituito è NULL. Il contesto del dispositivo di visualizzazione può essere utilizzato nelle funzioni GDI successive per creare l'area client della finestra del contenitore.
+Puntatore al contesto del dispositivo di visualizzazione per l' `CWnd` area client del contenitore in caso di esito positivo; in caso contrario, il valore restituito è null. Il contesto del dispositivo di visualizzazione può essere utilizzato nelle funzioni GDI successive per creare l'area client della finestra del contenitore.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro [ReleaseDC](#releasedc) deve essere chiamata per rilasciare il contesto dopo il disegno. Quando si `GetDC`chiama, gli oggetti passano il rettangolo in cui si desidera creare le proprie coordinate client. `GetDC`converte questi oggetto in coordinate dell'area client del contenitore. L'oggetto non deve richiedere un rettangolo di disegno desiderato più grande del rettangolo dell'area client, la cui dimensione può essere recuperata con [GetClientRect](#getclientrect). In questo modo si impedisce agli oggetti di disegnare inavvertitamente la posizione in cui non sono considerati.
+La funzione membro [ReleaseDC](#releasedc) deve essere chiamata per rilasciare il contesto dopo il disegno. Quando `GetDC` si chiama, gli oggetti passano il rettangolo in cui si desidera creare le proprie coordinate client. `GetDC`converte questi oggetto in coordinate dell'area client del contenitore. L'oggetto non deve richiedere un rettangolo di disegno desiderato più grande del rettangolo dell'area client, la cui dimensione può essere recuperata con [GetClientRect](#getclientrect). In questo modo si impedisce agli oggetti di disegnare inavvertitamente la posizione in cui non sono considerati.
 
 ## <a name="colecontrolgetenabled"></a><a name="getenabled"></a>COleControl:: GetEnabled
 
@@ -1786,9 +1786,9 @@ CWnd* GetFocus();
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il controllo è attivato e senza finestra, restituisce **this** se il controllo dispone attualmente dello stato attivo della tastiera (come determinato dal contenitore del controllo) o null se non ha lo stato attivo.
+Se il controllo è attivato e senza finestra, restituisce **`this`** se il controllo dispone attualmente dello stato attivo della tastiera (come determinato dal contenitore del controllo) o null se non ha lo stato attivo.
 
-In caso contrario, `CWnd` restituisce l'oggetto con lo stato attivo ( `CWnd::GetFocus`uguale a).
+In caso contrario, restituisce l' `CWnd` oggetto con lo stato attivo (uguale a `CWnd::GetFocus` ).
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1830,7 +1830,7 @@ Riferimento a un oggetto [CFontHolder](../../mfc/reference/cfontholder-class.md)
 
 ### <a name="remarks"></a>Osservazioni
 
-Tale tipo di carattere può essere selezionato con la funzione [COleControl:: SelectFontObject](#selectfontobject) . `GetFontTextMetrics`Inizializza la `TEXTMETRIC` struttura a cui punta *lptm* con le informazioni di metrica valide relative `fontHolder`al tipo di carattere in caso di esito positivo o riempie la struttura con zeri in caso di esito negativo. Usare questa funzione invece di [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) quando si dipinge il controllo perché i controlli, come qualsiasi oggetto OLE incorporato, possono essere necessari per eseguire il rendering in un metafile.
+Tale tipo di carattere può essere selezionato con la funzione [COleControl:: SelectFontObject](#selectfontobject) . `GetFontTextMetrics`Inizializza la `TEXTMETRIC` struttura a cui punta *lptm* con le informazioni di metrica valide relative al `fontHolder` tipo di carattere in caso di esito positivo o riempie la struttura con zeri in caso di esito negativo. Usare questa funzione invece di [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) quando si dipinge il controllo perché i controlli, come qualsiasi oggetto OLE incorporato, possono essere necessari per eseguire il rendering in un metafile.
 
 La `TEXTMETRIC` struttura per il tipo di carattere predefinito viene aggiornata quando viene chiamata la funzione [SelectFontObject](#selectfontobject) . È consigliabile chiamare `GetFontTextMetrics` solo dopo aver selezionato la proprietà del tipo di carattere di azione per garantire che le informazioni fornite siano valide.
 
@@ -1844,7 +1844,7 @@ OLE_COLOR GetForeColor();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore restituito specifica il colore di primo piano corrente come valore di OLE_COLOR, se ha esito positivo. Questo valore può essere convertito in un valore [COLORREF](/windows/win32/gdi/colorref) con una chiamata a `TranslateColor`.
+Il valore restituito specifica il colore di primo piano corrente come valore di OLE_COLOR, se ha esito positivo. Questo valore può essere convertito in un valore [COLORREF](/windows/win32/gdi/colorref) con una chiamata a `TranslateColor` .
 
 ## <a name="colecontrolgethwnd"></a><a name="gethwnd"></a>COleControl:: GetHwnd
 
@@ -1954,7 +1954,7 @@ Puntatore a una struttura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textm
 
 La `GetStockTextMetrics` funzione Inizializza la `TEXTMETRIC` struttura a cui punta *lptm* con le informazioni di metrica valide se ha esito positivo o riempie la struttura con zeri in caso di esito negativo. Usare questa funzione invece di [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) quando si dipinge il controllo perché i controlli, come qualsiasi oggetto OLE incorporato, possono essere necessari per eseguire il rendering in un metafile.
 
-La `TEXTMETRIC` struttura per il tipo di carattere predefinito viene aggiornata quando viene `SelectStockFont` chiamata la funzione. Questa funzione deve essere chiamata solo dopo aver selezionato il tipo di carattere di magazzino per garantire che le informazioni fornite siano valide.
+La `TEXTMETRIC` struttura per il tipo di carattere predefinito viene aggiornata quando `SelectStockFont` viene chiamata la funzione. Questa funzione deve essere chiamata solo dopo aver selezionato il tipo di carattere di magazzino per garantire che le informazioni fornite siano valide.
 
 ## <a name="colecontrolgettext"></a><a name="gettext"></a>COleControl:: GetText
 
@@ -1973,11 +1973,11 @@ Valore corrente della stringa di testo del controllo o di una stringa di lunghez
 
 ### <a name="remarks"></a>Osservazioni
 
-Si noti che il chiamante di questa funzione deve `SysFreeString` chiamare sulla stringa restituita per liberare la risorsa. All'interno dell'implementazione del controllo, usare `InternalGetText` per accedere al testo di titolo o alla proprietà didascalia del controllo.
+Si noti che il chiamante di questa funzione deve chiamare `SysFreeString` sulla stringa restituita per liberare la risorsa. All'interno dell'implementazione del controllo, usare `InternalGetText` per accedere al testo di titolo o alla proprietà didascalia del controllo.
 
 ## <a name="colecontrolgetwindowlessdroptarget"></a><a name="getwindowlessdroptarget"></a>COleControl:: GetWindowlessDropTarget
 
-Eseguire `GetWindowlessDropTarget` l'override di quando si desidera che un controllo senza finestra sia la destinazione di un'operazione di trascinamento della selezione OLE.
+Eseguire l'override di `GetWindowlessDropTarget` quando si desidera che un controllo senza finestra sia la destinazione di un'operazione di trascinamento della selezione OLE.
 
 ```
 virtual IDropTarget* GetWindowlessDropTarget();
@@ -1985,7 +1985,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all' `IDropTarget` interfaccia dell'oggetto. Poiché non dispone di una finestra, un oggetto senza finestra non può registrare un' `IDropTarget` interfaccia. Tuttavia, per partecipare al trascinamento della selezione, un oggetto senza finestra può comunque implementare l'interfaccia e restituirla `GetWindowlessDropTarget`.
+Puntatore all'interfaccia dell'oggetto `IDropTarget` . Poiché non dispone di una finestra, un oggetto senza finestra non può registrare un' `IDropTarget` interfaccia. Tuttavia, per partecipare al trascinamento della selezione, un oggetto senza finestra può comunque implementare l'interfaccia e restituirla `GetWindowlessDropTarget` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -2084,7 +2084,7 @@ Specifica se lo sfondo all'interno dell'area di aggiornamento deve essere cancel
 
 ### <a name="remarks"></a>Osservazioni
 
-Se *lpRect* ha un valore null, verrà ridisegnato l'intero controllo. Se *lpRect* non è null, indica la parte del rettangolo del controllo da invalidare. Nei casi in cui il controllo non dispone di una finestra o non è attualmente attivo, il rettangolo viene ignorato e viene eseguita una chiamata alla funzione membro [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) del sito client. Usare questa funzione invece di `CWnd::InvalidateRect` o `InvalidateRect`.
+Se *lpRect* ha un valore null, verrà ridisegnato l'intero controllo. Se *lpRect* non è null, indica la parte del rettangolo del controllo da invalidare. Nei casi in cui il controllo non dispone di una finestra o non è attualmente attivo, il rettangolo viene ignorato e viene eseguita una chiamata alla funzione membro [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) del sito client. Usare questa funzione invece di `CWnd::InvalidateRect` o `InvalidateRect` .
 
 ## <a name="colecontrolinvalidatergn"></a><a name="invalidatergn"></a>COleControl:: InvalidateRgn
 
@@ -2122,7 +2122,7 @@ Diverso da zero se il controllo viene convertito; in caso contrario, 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Quando si converte un modulo che usa i controlli VBX in uno che usa i controlli OLE, potrebbe essere necessario un codice di caricamento speciale per i controlli OLE. Ad esempio, se si sta caricando un'istanza del controllo OLE, potrebbe essere presente una chiamata a [PX_Font](persistence-of-ole-controls.md#px_font) in `DoPropExchange`:
+Quando si converte un modulo che usa i controlli VBX in uno che usa i controlli OLE, potrebbe essere necessario un codice di caricamento speciale per i controlli OLE. Ad esempio, se si sta caricando un'istanza del controllo OLE, potrebbe essere presente una chiamata a [PX_Font](persistence-of-ole-controls.md#px_font) in `DoPropExchange` :
 
 [!code-cpp[NVC_MFCAxCtl#3](../../mfc/reference/codesnippet/cpp/colecontrol-class_4.cpp)]
 
@@ -2130,9 +2130,9 @@ Tuttavia, i controlli VBX non hanno un oggetto Font; ogni proprietà font è sta
 
 [!code-cpp[NVC_MFCAxCtl#4](../../mfc/reference/codesnippet/cpp/colecontrol-class_5.cpp)]
 
-Un altro caso sarebbe se il controllo VBX salvava i dati binari proprietari (nel gestore di messaggi VBM_SAVEPROPERTY) e il controllo OLE Salva i dati binari in un formato diverso. Se si vuole che il controllo OLE sia compatibile con le versioni precedenti del controllo VBX, è possibile leggere sia i vecchi che i nuovi formati `IsConvertingVBX` usando la funzione, distinguendo se il controllo VBX o il controllo OLE è stato caricato.
+Un altro caso sarebbe se il controllo VBX salvava i dati binari proprietari (nel gestore di messaggi VBM_SAVEPROPERTY) e il controllo OLE Salva i dati binari in un formato diverso. Se si vuole che il controllo OLE sia compatibile con le versioni precedenti del controllo VBX, è possibile leggere sia i vecchi che i nuovi formati usando la `IsConvertingVBX` funzione, distinguendo se il controllo VBX o il controllo OLE è stato caricato.
 
-Nella `DoPropExchange` funzione del controllo è possibile verificare la presenza di questa condizione e, se true, eseguire il codice di caricamento specifico per questa conversione, ad esempio gli esempi precedenti. Se il controllo non viene convertito, è possibile eseguire il normale codice di caricamento. Questa possibilità è applicabile solo ai controlli convertiti da controparti VBX.
+Nella funzione del controllo `DoPropExchange` è possibile verificare la presenza di questa condizione e, se true, eseguire il codice di caricamento specifico per questa conversione, ad esempio gli esempi precedenti. Se il controllo non viene convertito, è possibile eseguire il normale codice di caricamento. Questa possibilità è applicabile solo ai controlli convertiti da controparti VBX.
 
 ## <a name="colecontrolisinvokeallowed"></a><a name="isinvokeallowed"></a>COleControl:: IsInvokeAllowed
 
@@ -2148,7 +2148,7 @@ Diverso da zero se il controllo è stato inizializzato. in caso contrario, 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione del Framework di `IDispatch::Invoke` chiama `IsInvokeAllowed` per determinare se una determinata funzione (identificata `dispid`da) può essere richiamata. Il comportamento predefinito di un controllo OLE consente di richiamare i metodi di automazione solo se il controllo è stato inizializzato. Tuttavia, `IsInvokeAllowed` è una funzione virtuale e può essere sottoposta a override, se necessario (ad esempio, quando il controllo viene usato come server di automazione).
+L'implementazione del Framework di `IDispatch::Invoke` chiama `IsInvokeAllowed` per determinare se una determinata funzione (identificata da `dispid` ) può essere richiamata. Il comportamento predefinito di un controllo OLE consente di richiamare i metodi di automazione solo se il controllo è stato inizializzato. Tuttavia, `IsInvokeAllowed` è una funzione virtuale e può essere sottoposta a override, se necessario (ad esempio, quando il controllo viene usato come server di automazione).
 
 ## <a name="colecontrolismodified"></a><a name="ismodified"></a>COleControl:: modified
 
@@ -2258,7 +2258,7 @@ virtual void OnAppearanceChanged ();
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà. L'implementazione predefinita chiama `InvalidateControl`.
+Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà. L'implementazione predefinita chiama `InvalidateControl` .
 
 ## <a name="colecontrolonbackcolorchanged"></a><a name="onbackcolorchanged"></a>COleControl:: OnBackColorChanged
 
@@ -2270,7 +2270,7 @@ virtual void OnBackColorChanged();
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà. L'implementazione predefinita chiama `InvalidateControl`.
+Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà. L'implementazione predefinita chiama `InvalidateControl` .
 
 ## <a name="colecontrolonborderstylechanged"></a><a name="onborderstylechanged"></a>COleControl:: OnBorderStyleChanged
 
@@ -2282,7 +2282,7 @@ virtual void OnBorderStyleChanged();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita chiama `InvalidateControl`.
+L'implementazione predefinita chiama `InvalidateControl` .
 
 Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà.
 
@@ -2307,13 +2307,13 @@ Indice di un pulsante del mouse. I valori consentiti sono i seguenti:
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita chiama `COleControl::FireClick`.
+L'implementazione predefinita chiama `COleControl::FireClick` .
 
 Eseguire l'override di questa funzione membro per modificare o estendere la gestione predefinita.
 
 ## <a name="colecontrolonclose"></a><a name="onclose"></a>COleControl:: OnClose
 
-Chiamata eseguita dal framework quando il contenitore ha chiamato la `IOleControl::Close` funzione del controllo.
+Chiamata eseguita dal framework quando il contenitore ha chiamato la funzione del controllo `IOleControl::Close` .
 
 ```
 virtual void OnClose(DWORD dwSaveOption);
@@ -2332,7 +2332,7 @@ Flag che indica se l'oggetto deve essere salvato prima del caricamento. I valori
 
 ### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita `OnClose` , Salva l'oggetto controllo se è stato modificato e *dwSaveOption* è OLECLOSE_SAVEIFDIRTY o OLECLOSE_PROMPTSAVE.
+Per impostazione predefinita, `OnClose` Salva l'oggetto controllo se è stato modificato e *dwSaveOption* è OLECLOSE_SAVEIFDIRTY o OLECLOSE_PROMPTSAVE.
 
 ## <a name="colecontrolondoverb"></a><a name="ondoverb"></a>COleControl:: OnDoVerb
 
@@ -2510,7 +2510,7 @@ virtual void OnFontChanged();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita chiama `COleControl::InvalidateControl`. Se il controllo è una sottoclasse di un controllo Windows, l'implementazione predefinita invia anche un messaggio di WM_SETFONT alla finestra del controllo.
+L'implementazione predefinita chiama `COleControl::InvalidateControl` . Se il controllo è una sottoclasse di un controllo Windows, l'implementazione predefinita invia anche un messaggio di WM_SETFONT alla finestra del controllo.
 
 Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà.
 
@@ -2528,13 +2528,13 @@ virtual void OnForeColorChanged();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita chiama `InvalidateControl`.
+L'implementazione predefinita chiama `InvalidateControl` .
 
 Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà.
 
 ## <a name="colecontrolonfreezeevents"></a><a name="onfreezeevents"></a>COleControl:: OnFreezeEvents
 
-Chiamata eseguita dal Framework dopo che il contenitore `IOleControl::FreezeEvents`chiama.
+Chiamata eseguita dal Framework dopo che il contenitore chiama `IOleControl::FreezeEvents` .
 
 ```
 virtual void OnFreezeEvents(BOOL bFreeze);
@@ -2646,7 +2646,7 @@ Per ulteriori informazioni sull'Unione di risorse OLE, vedere l'articolo [menu e
 
 ## <a name="colecontrolongetnaturalextent"></a><a name="ongetnaturalextent"></a>COleControl:: OnGetNaturalExtent
 
-Chiamata eseguita dal Framework in risposta alla `IViewObjectEx::GetNaturalExtent` richiesta di un contenitore.
+Chiamata eseguita dal Framework in risposta alla richiesta di un contenitore `IViewObjectEx::GetNaturalExtent` .
 
 ```
 virtual BOOL OnGetNaturalExtent(
@@ -2684,7 +2684,7 @@ typedef struct tagExtentInfo
 }   DVEXTENTINFO;
 ```
 
-Il membro `dwExtentMode` della struttura può assumere uno dei due valori seguenti:
+Il membro della struttura `dwExtentMode` può assumere uno dei due valori seguenti:
 
 - DVEXTENT_CONTENT sapere quanto è grande il controllo deve adattarsi esattamente al contenuto (snap-to-size)
 
@@ -2699,7 +2699,7 @@ Diverso da zero se restituisce o regola correttamente le dimensioni; in caso con
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione per restituire le dimensioni di visualizzazione dell'oggetto più vicine alle dimensioni proposte e alla `DVEXTENTINFO` modalità extent nella struttura. L'implementazione predefinita restituisce FALSE e non apporta alcuna modifica alle dimensioni.
+Eseguire l'override di questa funzione per restituire le dimensioni di visualizzazione dell'oggetto più vicine alle dimensioni proposte e alla modalità extent nella `DVEXTENTINFO` struttura. L'implementazione predefinita restituisce FALSE e non apporta alcuna modifica alle dimensioni.
 
 ## <a name="colecontrolongetpredefinedstrings"></a><a name="ongetpredefinedstrings"></a>COleControl:: OnGetPredefinedStrings
 
@@ -2729,11 +2729,11 @@ Diverso da zero se gli elementi sono stati aggiunti a *pStringArray* e *pCookieA
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione se il controllo ha una proprietà con un set di valori possibili che possono essere rappresentati da stringhe. Per ogni elemento aggiunto a *pStringArray*, è necessario aggiungere un elemento "cookie" corrispondente a *pCookieArray.* Questi valori "cookie" possono essere passati in un secondo momento dal framework `COleControl::OnGetPredefinedValue` alla funzione.
+Eseguire l'override di questa funzione se il controllo ha una proprietà con un set di valori possibili che possono essere rappresentati da stringhe. Per ogni elemento aggiunto a *pStringArray*, è necessario aggiungere un elemento "cookie" corrispondente a *pCookieArray.* Questi valori "cookie" possono essere passati in un secondo momento dal Framework alla `COleControl::OnGetPredefinedValue` funzione.
 
 ## <a name="colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a>COleControl:: OnGetPredefinedValue
 
-Chiamato dal Framework per ottenere il valore corrispondente a una delle stringhe predefinite restituite in precedenza da un override di `COleControl::OnGetPredefinedStrings`.
+Chiamato dal Framework per ottenere il valore corrispondente a una delle stringhe predefinite restituite in precedenza da un override di `COleControl::OnGetPredefinedStrings` .
 
 ```
 virtual BOOL OnGetPredefinedValue(
@@ -2748,7 +2748,7 @@ virtual BOOL OnGetPredefinedValue(
 L'ID di invio di una proprietà del controllo.
 
 *dwCookie*<br/>
-Valore del cookie restituito in precedenza da un override `COleControl::OnGetPredefinedStrings`di.
+Valore del cookie restituito in precedenza da un override di `COleControl::OnGetPredefinedStrings` .
 
 *lpvarOut*<br/>
 Puntatore a una `VARIANT` struttura tramite la quale verrà restituito un valore della proprietà.
@@ -2793,7 +2793,7 @@ Eseguire l'override di questa funzione se il controllo utilizza il disegno a due
 
 ## <a name="colecontrolongetviewrect"></a><a name="ongetviewrect"></a>COleControl:: OnGetViewRect
 
-Chiamata eseguita dal Framework in risposta alla `IViewObjectEx::GetRect` richiesta di un contenitore.
+Chiamata eseguita dal Framework in risposta alla richiesta di un contenitore `IViewObjectEx::GetRect` .
 
 ```
 virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
@@ -2823,7 +2823,7 @@ Le dimensioni dell'oggetto vengono convertite `OnGetViewRect` in un rettangolo a
 
 ## <a name="colecontrolongetviewstatus"></a><a name="ongetviewstatus"></a>COleControl:: OnGetViewStatus
 
-Chiamata eseguita dal Framework in risposta alla `IViewObjectEx::GetViewStatus` richiesta di un contenitore.
+Chiamata eseguita dal Framework in risposta alla richiesta di un contenitore `IViewObjectEx::GetViewStatus` .
 
 ```
 virtual DWORD OnGetViewStatus();
@@ -2838,7 +2838,7 @@ Uno dei valori dell'enumerazione VIEWSTATUS se ha esito positivo; in caso contra
 |VIEWSTATUS_OPAQUE|L'oggetto è completamente opaco. Se questo bit non è impostato, l'oggetto contiene parti trasparenti. Questo bit si applica solo agli aspetti correlati al contenuto e non DVASPECT_ICON o DVASPECT_DOCPRINT.|
 |VIEWSTATUS_SOLIDBKGND|L'oggetto ha uno sfondo a tinta unita (costituito da un colore a tinta unita, non da un modello di pennello). Questo bit è significativo solo se VIEWSTATUS_OPAQUE è impostato e si applica solo agli aspetti correlati al contenuto e non DVASPECT_ICON o DVASPECT_DOCPRINT.|
 |VIEWSTATUS_DVASPECTOPAQUE|L'oggetto supporta DVASPECT_OPAQUE. Tutti i metodi IViewObjectEx che accettano un aspetto del disegno come parametro possono essere chiamati con questo aspetto.|
-|VIEWSTATUS_DVASPECTTRANSPARENT|L'oggetto supporta DVASPECT_TRANSPARENT. Tutti `IViewObjectEx` i metodi che accettano un aspetto del disegno come parametro possono essere chiamati con questo aspetto.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|L'oggetto supporta DVASPECT_TRANSPARENT. Tutti i `IViewObjectEx` metodi che accettano un aspetto del disegno come parametro possono essere chiamati con questo aspetto.|
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -2854,7 +2854,7 @@ virtual void OnHideToolBars();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione deve nascondere tutte le barre degli strumenti `OnShowToolbars`visualizzate da.
+L'implementazione deve nascondere tutte le barre degli strumenti visualizzate da `OnShowToolbars` .
 
 ## <a name="colecontroloninactivemousemove"></a><a name="oninactivemousemove"></a>COleControl:: OnInactiveMouseMove
 
@@ -3076,7 +3076,7 @@ Nell'implementazione predefinita viene visualizzata una finestra di dialogo prop
 
 ## <a name="colecontrolonqueryhitpoint"></a><a name="onqueryhitpoint"></a>COleControl:: OnQueryHitPoint
 
-Chiamata eseguita dal Framework in risposta alla `IViewObjectEx::QueryHitPoint` richiesta di un contenitore.
+Chiamata eseguita dal Framework in risposta alla richiesta di un contenitore `IViewObjectEx::QueryHitPoint` .
 
 ```
 virtual BOOL OnQueryHitPoint(
@@ -3122,7 +3122,7 @@ Esegue una query se il rettangolo di visualizzazione di un oggetto si sovrappone
 
 ## <a name="colecontrolonqueryhitrect"></a><a name="onqueryhitrect"></a>COleControl:: OnQueryHitRect
 
-Chiamata eseguita dal Framework in risposta alla `IViewObjectEx::QueryHitRect` richiesta di un contenitore.
+Chiamata eseguita dal Framework in risposta alla richiesta di un contenitore `IViewObjectEx::QueryHitRect` .
 
 ```
 virtual BOOL OnQueryHitRect(
@@ -3186,13 +3186,13 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il formato specificato è quello precedentemente inserito nell'oggetto controllo utilizzando le funzioni membro [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) o [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) per il rendering ritardato. L'implementazione predefinita di questa funzione chiama `OnRenderFileData` o `OnRenderGlobalData`, rispettivamente, se il supporto di archiviazione fornito è un file o una memoria. Se il formato richiesto è CF_METAFILEPICT o il formato del set di proprietà persistente, l'implementazione predefinita esegue il rendering dei dati appropriati e restituisce un valore diverso da zero. In caso contrario, restituisce 0 e non esegue alcuna operazione.
+Il formato specificato è quello precedentemente inserito nell'oggetto controllo utilizzando le funzioni membro [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) o [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) per il rendering ritardato. L'implementazione predefinita di questa funzione chiama `OnRenderFileData` o `OnRenderGlobalData` , rispettivamente, se il supporto di archiviazione fornito è un file o una memoria. Se il formato richiesto è CF_METAFILEPICT o il formato del set di proprietà persistente, l'implementazione predefinita esegue il rendering dei dati appropriati e restituisce un valore diverso da zero. In caso contrario, restituisce 0 e non esegue alcuna operazione.
 
 Se *lpStgMedium->TYMED* è TYMED_NULL, STGMEDIUM deve essere allocato e compilato come specificato da *lpFormatEtc->TYMED*. Se non TYMED_NULL, il STGMEDIUM deve essere compilato con i dati.
 
-Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se i dati sono di dimensioni ridotte e di dimensioni `OnRenderGlobalData`fisse, eseguire l'override di. Se i dati sono in un file o sono di dimensioni variabili, eseguire l' `OnRenderFileData`override di.
+Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se i dati sono di dimensioni ridotte e di dimensioni fisse, eseguire l'override di `OnRenderGlobalData` . Se i dati sono in un file o sono di dimensioni variabili, eseguire l'override di `OnRenderFileData` .
 
-Per ulteriori informazioni, vedere le `FORMATETC` strutture `STGMEDIUM` e nel Windows SDK.
+Per ulteriori informazioni, vedere le `FORMATETC` `STGMEDIUM` strutture e nel Windows SDK.
 
 ## <a name="colecontrolonrenderfiledata"></a><a name="onrenderfiledata"></a>COleControl:: OnRenderFileData
 
@@ -3220,7 +3220,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Il formato specificato è quello precedentemente inserito nell'oggetto controllo utilizzando la funzione membro [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) per il rendering ritardato. L'implementazione predefinita di questa funzione restituisce semplicemente FALSE.
 
-Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se si desidera gestire più supporti di archiviazione, eseguire l' `OnRenderData`override di. Se i dati sono in un file o sono di dimensioni variabili, eseguire l' `OnRenderFileData`override di.
+Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se si desidera gestire più supporti di archiviazione, eseguire l'override di `OnRenderData` . Se i dati sono in un file o sono di dimensioni variabili, eseguire l'override di `OnRenderFileData` .
 
 Per ulteriori informazioni, vedere la `FORMATETC` struttura nella Windows SDK.
 
@@ -3252,7 +3252,7 @@ Il formato specificato è quello precedentemente inserito nell'oggetto controllo
 
 Se *phGlobal* è null, è necessario allocare e restituire un nuovo HGLOBAL in *phGlobal*. In caso contrario, il HGLOBAL specificato da *phGlobal* deve essere riempito con i dati. La quantità di dati inseriti in HGLOBAL non deve superare la dimensione corrente del blocco di memoria. Inoltre, il blocco non può essere riallocato a dimensioni maggiori.
 
-Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se si desidera gestire più supporti di archiviazione, eseguire l' `OnRenderData`override di. Se i dati sono in un file o sono di dimensioni variabili, eseguire l' `OnRenderFileData`override di.
+Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se si desidera gestire più supporti di archiviazione, eseguire l'override di `OnRenderData` . Se i dati sono in un file o sono di dimensioni variabili, eseguire l'override di `OnRenderFileData` .
 
 Per ulteriori informazioni, vedere la `FORMATETC` struttura nella Windows SDK.
 
@@ -3268,11 +3268,11 @@ virtual void OnResetState();
 
 L'implementazione predefinita chiama [DoPropExchange](#dopropexchange), passando un `CPropExchange` oggetto che determina l'impostazione delle proprietà sui valori predefiniti.
 
-Il writer del controllo può inserire il codice di inizializzazione per il controllo OLE in questo oggetto sottoponibile a override. Questa funzione viene chiamata quando [IPersistStream:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) o [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) ha esito negativo o [IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) o [IPersistStorage:: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) viene chiamato senza prima chiamare `IPersistStream::Load` o `IPersistStorage::Load`.
+Il writer del controllo può inserire il codice di inizializzazione per il controllo OLE in questo oggetto sottoponibile a override. Questa funzione viene chiamata quando [IPersistStream:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) o [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) ha esito negativo o [IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) o [IPersistStorage:: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) viene chiamato senza prima chiamare `IPersistStream::Load` o `IPersistStorage::Load` .
 
 ## <a name="colecontrolonsetclientsite"></a><a name="onsetclientsite"></a>COleControl:: OnSetClientSite
 
-Chiamata eseguita dal framework quando il contenitore ha chiamato la `IOleControl::SetClientSite` funzione del controllo.
+Chiamata eseguita dal framework quando il contenitore ha chiamato la funzione del controllo `IOleControl::SetClientSite` .
 
 ```
 virtual void OnSetClientSite();
@@ -3280,7 +3280,7 @@ virtual void OnSetClientSite();
 
 ### <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita `OnSetClientSite` , controlla se le proprietà del percorso dati vengono caricate e, in `DoDataPathPropExchange`caso affermativo, chiama.
+Per impostazione predefinita, `OnSetClientSite` Controlla se le proprietà del percorso dati vengono caricate e, in caso affermativo, chiama `DoDataPathPropExchange` .
 
 Eseguire l'override di questa funzione per eseguire un'elaborazione speciale della notifica. In particolare, le sostituzioni di questa funzione devono chiamare la classe di base.
 
@@ -3312,11 +3312,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se i dati sono nel formato del set di proprietà persistente, l'implementazione predefinita modifica lo stato del controllo di conseguenza. In caso contrario, l'implementazione predefinita non esegue alcuna operazione. Se *bRelease* è true, viene eseguita una chiamata `ReleaseStgMedium` a. in caso contrario,.
+Se i dati sono nel formato del set di proprietà persistente, l'implementazione predefinita modifica lo stato del controllo di conseguenza. In caso contrario, l'implementazione predefinita non esegue alcuna operazione. Se *bRelease* è true, viene eseguita una chiamata a `ReleaseStgMedium` ; in caso contrario,.
 
 Eseguire l'override di questa funzione per sostituire i dati del controllo con i dati specificati.
 
-Per ulteriori informazioni, vedere le `FORMATETC` strutture `STGMEDIUM` e nel Windows SDK.
+Per ulteriori informazioni, vedere le `FORMATETC` `STGMEDIUM` strutture e nel Windows SDK.
 
 ## <a name="colecontrolonsetextent"></a><a name="onsetextent"></a>COleControl:: OnSetExtent
 
@@ -3337,7 +3337,7 @@ Diverso da zero se la modifica delle dimensioni è stata accettata; in caso cont
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita gestisce il ridimensionamento dell'extent del controllo. Se il controllo è attivo sul posto, `OnPosRectChanged` viene eseguita una chiamata al contenitore.
+L'implementazione predefinita gestisce il ridimensionamento dell'extent del controllo. Se il controllo è attivo sul posto, viene eseguita una chiamata al contenitore `OnPosRectChanged` .
 
 Eseguire l'override di questa funzione per modificare il ridimensionamento predefinito del controllo.
 
@@ -3391,13 +3391,13 @@ virtual void OnTextChanged();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita chiama `InvalidateControl`.
+L'implementazione predefinita chiama `InvalidateControl` .
 
 Eseguire l'override di questa funzione se si desidera una notifica dopo la modifica di questa proprietà.
 
 ## <a name="colecontrolonwindowlessmessage"></a><a name="onwindowlessmessage"></a>COleControl:: OnWindowlessMessage
 
-Chiamata eseguita dal Framework in risposta alla `IOleInPlaceObjectWindowless::OnWindowMessage` richiesta di un contenitore.
+Chiamata eseguita dal Framework in risposta alla richiesta di un contenitore `IOleInPlaceObjectWindowless::OnWindowMessage` .
 
 ```
 virtual BOOL OnWindowlessMessage(
@@ -3429,7 +3429,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Elabora i messaggi della finestra per i controlli privi di finestra. `COleControl`è `OnWindowlessMessage` consigliabile utilizzare per i messaggi di finestra diversi dai messaggi del mouse e dai messaggi della tastiera. `COleControl`fornisce l' [acquisizione](#setcapture) e lo [stato attivo in modo specifico per](#setfocus) ottenere l'acquisizione del mouse e lo stato attivo della tastiera per oggetti OLE senza finestra.
 
-Poiché gli oggetti senza finestra non dispongono di una finestra, devono disporre di un meccanismo per consentire al contenitore di inviare messaggi a tali oggetti. Un oggetto OLE senza finestra ottiene i messaggi dal relativo contenitore, tramite `OnWindowMessage` il metodo sull' `IOleInPlaceObjectWindowless` interfaccia (un'estensione di [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) per il supporto senza finestra). `OnWindowMessage`non accetta un `HWND` parametro.
+Poiché gli oggetti senza finestra non dispongono di una finestra, devono disporre di un meccanismo per consentire al contenitore di inviare messaggi a tali oggetti. Un oggetto OLE senza finestra ottiene i messaggi dal relativo contenitore, tramite il `OnWindowMessage` metodo sull' `IOleInPlaceObjectWindowless` interfaccia (un'estensione di [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) per il supporto senza finestra). `OnWindowMessage`non accetta un `HWND` parametro.
 
 ## <a name="colecontrolparenttoclient"></a><a name="parenttoclient"></a>COleControl::P arentToClient
 
@@ -3469,7 +3469,7 @@ Se *bHitTest* è false, restituisce HTNOWHERE. Se *bHitTest* è true, restituisc
 
 - HTCLIENT in un'area client.
 
-- HTERROR sullo sfondo dello schermo o su una linea di divisione tra le finestre (uguale a HTNOWHERE, `DefWndProc` ad eccezione del fatto che la funzione Windows genera un segnale acustico di sistema per indicare un errore).
+- HTERROR sullo sfondo dello schermo o su una linea di divisione tra le finestre (uguale a HTNOWHERE, ad eccezione del fatto che la `DefWndProc` funzione Windows genera un segnale acustico di sistema per indicare un errore).
 
 - HTGROWBOX in una casella delle dimensioni.
 
@@ -3524,7 +3524,7 @@ Handle per la finestra padre della finestra di dialogo modale.
 
 ### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione dopo aver visualizzato una finestra di dialogo modale. È necessario chiamare questa funzione in modo che il contenitore possa abilitare tutte le finestre di primo livello `PreModalDialog`disabilitate da. Questa funzione deve essere abbinata a una chiamata a `PreModalDialog`.
+Chiamare questa funzione dopo aver visualizzato una finestra di dialogo modale. È necessario chiamare questa funzione in modo che il contenitore possa abilitare tutte le finestre di primo livello disabilitate da `PreModalDialog` . Questa funzione deve essere abbinata a una chiamata a `PreModalDialog` .
 
 ## <a name="colecontrolpremodaldialog"></a><a name="premodaldialog"></a>COleControl::P reModalDialog
 
@@ -3541,7 +3541,7 @@ Handle per la finestra padre della finestra di dialogo modale.
 
 ### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione prima di visualizzare qualsiasi finestra di dialogo modale. È necessario chiamare questa funzione in modo che il contenitore possa disabilitare tutte le finestre di primo livello. Una volta visualizzata la finestra di dialogo modale, è necessario chiamare `PostModalDialog`.
+Chiamare questa funzione prima di visualizzare qualsiasi finestra di dialogo modale. È necessario chiamare questa funzione in modo che il contenitore possa disabilitare tutte le finestre di primo livello. Una volta visualizzata la finestra di dialogo modale, è necessario chiamare `PostModalDialog` .
 
 ## <a name="colecontrolrecreatecontrolwindow"></a><a name="recreatecontrolwindow"></a>COleControl:: RecreateControlWindow
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione è supportata dalla classe `COleControl` base come metodo azionario, denominato Refresh. Ciò consente agli utenti del controllo OLE di ridisegnare il controllo in un momento specifico. Per ulteriori informazioni su questo metodo, vedere l'articolo [controlli ActiveX: Methods](../../mfc/mfc-activex-controls-methods.md).
+Questa funzione è supportata dalla `COleControl` classe base come metodo azionario, denominato Refresh. Ciò consente agli utenti del controllo OLE di ridisegnare il controllo in un momento specifico. Per ulteriori informazioni su questo metodo, vedere l'articolo [controlli ActiveX: Methods](../../mfc/mfc-activex-controls-methods.md).
 
 ## <a name="colecontrolreleasecapture"></a><a name="releasecapture"></a>COleControl:: ReleaseCapture
 
@@ -3638,7 +3638,7 @@ void ResetStockProps();
 
 Le proprietà sono: Appearance, BackColor, BorderStyle, Caption, Enabled, font, ForeColor, hWnd e Text. Per una descrizione delle proprietà predefinite, vedere [controlli ActiveX: aggiunta di proprietà predefinite](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-È possibile migliorare le prestazioni di inizializzazione binaria di `ResetStockProps` un `ResetVersion` controllo utilizzando `COleControl::OnResetState`e per eseguire l'override di. Vedere l'esempio seguente. Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
+È possibile migliorare le prestazioni di inizializzazione binaria di un controllo utilizzando `ResetStockProps` e `ResetVersion` per eseguire l'override di `COleControl::OnResetState` . Vedere l'esempio seguente. Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Esempio
 
@@ -3659,7 +3659,7 @@ Numero di versione da assegnare al controllo.
 
 ### <a name="remarks"></a>Osservazioni
 
-È possibile migliorare le prestazioni di inizializzazione binaria di `ResetVersion` un `ResetStockProps` controllo utilizzando `COleControl::OnResetState`e per eseguire l'override di. Vedere l'esempio in [ResetStockProps](#resetstockprops). Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
+È possibile migliorare le prestazioni di inizializzazione binaria di un controllo utilizzando `ResetVersion` e `ResetStockProps` per eseguire l'override di `COleControl::OnResetState` . Vedere l'esempio in [ResetStockProps](#resetstockprops). Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="colecontrolscrollwindow"></a><a name="scrollwindow"></a>COleControl:: ScrollWindow
 
@@ -3685,7 +3685,7 @@ Specifica la quantità, in unità di dispositivo, dello scorrimento verticale. Q
 Punta a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o a una struttura Rect che specifica la parte dell'area client dell'oggetto OLE da scorrere, nelle coordinate client della finestra che lo contiene. Se *lpRect* è null, viene eseguito lo scorrimento dell'intera area client dell'oggetto OLE.
 
 *lpClipRect*<br/>
-Punta a un `CRect` oggetto o `RECT` a una struttura che specifica il rettangolo in cui ritagliare. Viene eseguito lo scorrimento solo dei pixel all'interno del rettangolo. I bit esterni al rettangolo non sono interessati anche se sono nel rettangolo *lpRect* . Se *lpClipRect* è null, non viene eseguito alcun ritaglio sul rettangolo di scorrimento.
+Punta a un `CRect` oggetto o a una `RECT` struttura che specifica il rettangolo in cui ritagliare. Viene eseguito lo scorrimento solo dei pixel all'interno del rettangolo. I bit esterni al rettangolo non sono interessati anche se sono nel rettangolo *lpRect* . Se *lpClipRect* è null, non viene eseguito alcun ritaglio sul rettangolo di scorrimento.
 
 ## <a name="colecontrolselectfontobject"></a><a name="selectfontobject"></a>COleControl:: SelectFontObject
 
@@ -3724,7 +3724,7 @@ Il contesto di dispositivo in cui verrà selezionato il tipo di carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto selezionato `CFont` in precedenza. Al termine, è necessario usare [CDC:: SelezionaOggetto](../../mfc/reference/cdc-class.md#selectobject) per selezionare nuovamente questo tipo di carattere nel contesto del dispositivo.
+Puntatore all'oggetto selezionato in precedenza `CFont` . Al termine, è necessario usare [CDC:: SelezionaOggetto](../../mfc/reference/cdc-class.md#selectobject) per selezionare nuovamente questo tipo di carattere nel contesto del dispositivo.
 
 ## <a name="colecontrolserializeextent"></a><a name="serializeextent"></a>COleControl:: SerializeExtente
 
@@ -3737,11 +3737,11 @@ void SerializeExtent(CArchive& ar);
 ### <a name="parameters"></a>Parametri
 
 *AR*<br/>
-`CArchive` Oggetto da serializzare in o da.
+`CArchive`Oggetto da serializzare in o da.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per migliorare le prestazioni di persistenza binaria di un `SerializeExtent`controllo `SerializeStockProps`, è `SerializeVersion` possibile utilizzare `COleControl::Serialize`, e per eseguire l'override di. Vedere l'esempio seguente. Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
+Per migliorare le prestazioni di persistenza binaria di un controllo, è possibile utilizzare `SerializeExtent` , `SerializeStockProps` e `SerializeVersion` per eseguire l'override di `COleControl::Serialize` . Vedere l'esempio seguente. Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Esempio
 
@@ -3749,7 +3749,7 @@ Per migliorare le prestazioni di persistenza binaria di un `SerializeExtent`cont
 
 ## <a name="colecontrolserializestockprops"></a><a name="serializestockprops"></a>COleControl:: SerializeStockProps
 
-Serializza o Inizializza lo stato delle proprietà `COleControl` predefinite: aspetto, BackColor, BorderStyle, Caption, Enabled, font, ForeColor e Text.
+Serializza o Inizializza lo stato delle `COleControl` proprietà predefinite: aspetto, BackColor, BorderStyle, Caption, Enabled, font, ForeColor e Text.
 
 ```cpp
 void SerializeStockProps(CArchive& ar);
@@ -3758,13 +3758,13 @@ void SerializeStockProps(CArchive& ar);
 ### <a name="parameters"></a>Parametri
 
 *AR*<br/>
-`CArchive` Oggetto da serializzare in o da.
+`CArchive`Oggetto da serializzare in o da.
 
 ### <a name="remarks"></a>Osservazioni
 
 Per una descrizione delle proprietà predefinite, vedere [controlli ActiveX: aggiunta di proprietà predefinite](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Per migliorare le prestazioni di persistenza binaria di un `SerializeStockProps`controllo `SerializeExtent`, è `SerializeVersion` possibile utilizzare `COleControl::Serialize`, e per eseguire l'override di. Per un esempio, vedere il codice in [SerializeExtente](#serializeextent). Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
+Per migliorare le prestazioni di persistenza binaria di un controllo, è possibile utilizzare `SerializeStockProps` , `SerializeExtent` e `SerializeVersion` per eseguire l'override di `COleControl::Serialize` . Per un esempio, vedere il codice in [SerializeExtente](#serializeextent). Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="colecontrolserializeversion"></a><a name="serializeversion"></a>COleControl:: SerializeVersion
 
@@ -3780,7 +3780,7 @@ DWORD SerializeVersion(
 ### <a name="parameters"></a>Parametri
 
 *AR*<br/>
-`CArchive` Oggetto da serializzare in o da.
+`CArchive`Oggetto da serializzare in o da.
 
 *dwVersionDefault*<br/>
 Numero di versione corrente del controllo.
@@ -3790,11 +3790,11 @@ Indica se i dati permanenti devono essere convertiti nel formato più recente qu
 
 ### <a name="return-value"></a>Valore restituito
 
-Numero di versione del controllo. Se è in corso il caricamento dell' `SerializeVersion` archivio specificato, restituisce la versione caricata dall'archivio. In caso contrario, restituisce la versione attualmente caricata.
+Numero di versione del controllo. Se è in corso il caricamento dell'archivio specificato, `SerializeVersion` restituisce la versione caricata dall'archivio. In caso contrario, restituisce la versione attualmente caricata.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per migliorare le prestazioni di persistenza binaria di un `SerializeVersion`controllo `SerializeExtent`, è `SerializeStockProps` possibile utilizzare `COleControl::Serialize`, e per eseguire l'override di. Per un esempio, vedere il codice in [SerializeExtente](#serializeextent). Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
+Per migliorare le prestazioni di persistenza binaria di un controllo, è possibile utilizzare `SerializeVersion` , `SerializeExtent` e `SerializeStockProps` per eseguire l'override di `COleControl::Serialize` . Per un esempio, vedere il codice in [SerializeExtente](#serializeextent). Per ulteriori informazioni sull'ottimizzazione dell'inizializzazione, vedere [controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="colecontrolsetappearance"></a><a name="setappearance"></a>COleControl:: separity
 
@@ -3807,7 +3807,7 @@ void SetAppearance (short sAppearance);
 ### <a name="parameters"></a>Parametri
 
 *sAppearance*<br/>
-Valore **short** (VT_I2) da utilizzare per l'aspetto del controllo. Il valore zero imposta l'aspetto del controllo su flat e il valore 1 imposta l'aspetto del controllo su 3D.
+**`short`** Valore (VT_I2) da utilizzare per l'aspetto del controllo. Il valore zero imposta l'aspetto del controllo su flat e il valore 1 imposta l'aspetto del controllo su 3D.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -3857,11 +3857,11 @@ CWnd* SetCapture();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto finestra `CWnd` che in precedenza ha ricevuto l'input del mouse.
+Puntatore all' `CWnd` oggetto finestra che in precedenza ha ricevuto l'input del mouse.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il controllo è attivato e senza finestra, questa funzione fa sì che la finestra del contenitore del controllo acquisisca il possesso dell'acquisizione del mouse, per conto del controllo. In caso contrario, questa funzione fa in modo che il controllo stesso prenda il possesso dell'acquisizione `CWnd::SetCapture`del mouse (uguale a).
+Se il controllo è attivato e senza finestra, questa funzione fa sì che la finestra del contenitore del controllo acquisisca il possesso dell'acquisizione del mouse, per conto del controllo. In caso contrario, questa funzione fa in modo che il controllo stesso prenda il possesso dell'acquisizione del mouse (uguale a `CWnd::SetCapture` ).
 
 ## <a name="colecontrolsetcontrolsize"></a><a name="setcontrolsize"></a>COleControl:: SetControlSize
 
@@ -3904,7 +3904,7 @@ TRUE se il controllo deve essere abilitato. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Dopo aver impostato questa proprietà `OnEnabledChange` , viene chiamato il metodo.
+Dopo aver impostato questa proprietà, `OnEnabledChange` viene chiamato il metodo.
 
 ## <a name="colecontrolsetfocus"></a><a name="setfocus"></a>COleControl:: SetFocus
 
@@ -3916,13 +3916,13 @@ CWnd* SetFocus();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto `CWnd` finestra che in precedenza aveva lo stato attivo per l'input o null se non esiste tale finestra.
+Puntatore all' `CWnd` oggetto finestra che in precedenza aveva lo stato attivo per l'input o null se non esiste tale finestra.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il controllo è attivato e senza finestra, questa funzione fa sì che la finestra del contenitore del controllo abbia il possesso dello stato attivo per l'input, per conto del controllo. Lo stato attivo per l'input indirizza l'input da tastiera alla finestra del contenitore e il contenitore Invia tutti i messaggi della tastiera successivi all'oggetto OLE che `SetFocus`chiama. Qualsiasi finestra che in precedenza aveva lo stato attivo per l'input lo perde.
+Se il controllo è attivato e senza finestra, questa funzione fa sì che la finestra del contenitore del controllo abbia il possesso dello stato attivo per l'input, per conto del controllo. Lo stato attivo per l'input indirizza l'input da tastiera alla finestra del contenitore e il contenitore Invia tutti i messaggi della tastiera successivi all'oggetto OLE che chiama `SetFocus` . Qualsiasi finestra che in precedenza aveva lo stato attivo per l'input lo perde.
 
-Se il controllo non è privo di finestra, questa funzione induce il controllo stesso a prendere possesso dello stato attivo per l' `CWnd::SetFocus`input (uguale a).
+Se il controllo non è privo di finestra, questa funzione induce il controllo stesso a prendere possesso dello stato attivo per l'input (uguale a `CWnd::SetFocus` ).
 
 ## <a name="colecontrolsetfont"></a><a name="setfont"></a>COleControl:: sefont
 
@@ -4015,7 +4015,7 @@ void SetNotPermitted();
 
 ### <a name="remarks"></a>Osservazioni
 
-Chiamare questa funzione quando `BoundPropertyRequestEdit` ha esito negativo. Questa funzione genera un'eccezione di tipo `COleDispScodeException` per indicare che l'operazione di impostazione non è consentita.
+Chiamare questa funzione quando ha `BoundPropertyRequestEdit` esito negativo. Questa funzione genera un'eccezione di tipo `COleDispScodeException` per indicare che l'operazione di impostazione non è consentita.
 
 ## <a name="colecontrolsetnotsupported"></a><a name="setnotsupported"></a>COleControl:: SetNotSupported
 
@@ -4048,7 +4048,7 @@ Diverso da zero se la chiamata ha avuto esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il controllo è aperto, viene ridimensionato; in caso contrario, `OnPosRectChanged` viene chiamata la funzione del contenitore.
+Se il controllo è aperto, viene ridimensionato; in caso contrario `OnPosRectChanged` , viene chiamata la funzione del contenitore.
 
 ## <a name="colecontrolsettext"></a><a name="settext"></a>COleControl:: SetText
 
@@ -4175,11 +4175,11 @@ Diverso da zero indica che le proprietà di ambiente saranno valide. in caso con
 
 ### <a name="remarks"></a>Osservazioni
 
-In alcuni contenitori, il controllo potrebbe non avere accesso alle proprietà di ambiente durante la chiamata iniziale all'override di `COleControl::DoPropExchange`. Questa situazione si verifica se il contenitore chiama [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) o [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) prima di chiamare [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (ovvero se non rispetta il bit di stato OLEMISC_SETCLIENTSITEFIRST).
+In alcuni contenitori, il controllo potrebbe non avere accesso alle proprietà di ambiente durante la chiamata iniziale all'override di `COleControl::DoPropExchange` . Questa situazione si verifica se il contenitore chiama [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) o [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) prima di chiamare [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (ovvero se non rispetta il bit di stato OLEMISC_SETCLIENTSITEFIRST).
 
 ## <a name="colecontrolwindowproc"></a><a name="windowproc"></a>COleControl:: WindowProc
 
-Fornisce una procedura di Windows per `COleControl` un oggetto.
+Fornisce una procedura di Windows per un `COleControl` oggetto.
 
 ```
 virtual LRESULT WindowProc(

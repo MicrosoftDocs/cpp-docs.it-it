@@ -9,20 +9,20 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 78e5d89e1e87d081e762fab1298eb990b914324c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446598"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215361"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
 
-Quando viene definita la costante manifesto `_MBCS`, una routine di testo generico specifica esegue il mapping a uno dei tipi di routine seguenti:
+Quando viene definita la costante del manifesto `_MBCS` , una routine di testo generico specifica esegue il mapping a uno dei tipi di routine seguenti:
 
-- Una routine SBCS che gestisce in modo corretto byte, caratteri e stringhe multibyte. In questo caso, il tipo previsto per gli argomenti della stringa è `char*`. Ad esempio, `_tprintf` viene mappata a `printf` e gli argomenti di stringa passati a `printf` sono di tipo `char*`. Se per i tipi stringa si usa il tipo di dati di testo generico `_TCHAR`, i tipi di parametro formali ed effettivi di `printf` corrisponderanno, poiché `_TCHAR*` è mappato a `char*`.
+- Una routine SBCS che gestisce in modo corretto byte, caratteri e stringhe multibyte. In questo caso, è previsto che gli argomenti di stringa siano di tipo **`char*`** . Ad esempio, `_tprintf` esegue il mapping a `printf` ; gli argomenti stringa di `printf` sono di tipo **`char*`** . Se si usa il `_TCHAR` tipo di dati di testo generico per i tipi di stringa, i tipi di parametro formali ed effettivi per `printf` corrisponderanno perché `_TCHAR*` esegue il mapping a **`char*`** .
 
-- Una routine specifica di MBCS. In questo caso, il tipo previsto per gli argomenti della stringa è `unsigned char*`. Ad esempio, `_tcsrev` viene mappato a `_mbsrev`, che accetta e restituisce una stringa di tipo `unsigned char*`. Se si usa il `_TCHAR` tipo di dati di testo generico per i tipi di stringa, è possibile che si verifichi un conflitto di tipi perché `_TCHAR` esegue il mapping al tipo `char`.
+- Una routine specifica di MBCS. In questo caso, il tipo previsto per gli argomenti della stringa è `unsigned char*`. Ad esempio, `_tcsrev` viene mappato a `_mbsrev`, che accetta e restituisce una stringa di tipo `unsigned char*`. Se si usa il `_TCHAR` tipo di dati di testo generico per i tipi di stringa, è possibile che si verifichi un conflitto di tipi perché `_TCHAR` esegue il mapping al tipo **`char`** .
 
 Di seguito sono riportate tre soluzioni che consentono di evitare questo conflitto di tipi e la conseguente visualizzazione dei messaggi di avviso del compilatore C o degli errori del compilatore C++:
 
@@ -32,7 +32,7 @@ Di seguito sono riportate tre soluzioni che consentono di evitare questo conflit
     char * _tcsrev(char *);
     ```
 
-   Nel caso predefinito, il prototipo per `_tcsrev` viene mappato a `_mbsrev` tramite un thunk in libc. lib. In questo modo i tipi di `_mbsrev` parametri in ingresso e il valore restituito in uscita vengono modificati da `_TCHAR*` (ovvero `char *`) a `unsigned char *`. Questo metodo assicura la corrispondenza dei tipi quando si usa `_TCHAR`, ma è relativamente lento a causa del sovraccarico della chiamata di funzione.
+   Nel caso predefinito, il prototipo per viene `_tcsrev` mappato a `_mbsrev` tramite un thunk in libc. lib. In questo modo vengono modificati i tipi di `_mbsrev` parametri in ingresso e il valore restituito in uscita da `_TCHAR*` (ovvero `char *` ) a `unsigned char *` . Questo metodo assicura la corrispondenza dei tipi quando si usa `_TCHAR` , ma è relativamente lento a causa del sovraccarico della chiamata di funzione.
 
 - Usare l'incorporamento della funzione, incorporando nel codice l'istruzione del preprocessore seguente.
 
@@ -61,8 +61,8 @@ Di seguito sono riportate tre soluzioni che consentono di evitare questo conflit
     #define _tcschr _mbschr
     ```
 
-   Quando si esegue questo approccio, è necessario prestare attenzione per garantire l'utilizzo dei tipi di dati appropriati per gli argomenti stringa e i valori restituiti di stringa. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico `_TXCHAR`. `_TXCHAR` esegue il mapping al tipo **char** nel codice SBCS, ma esegue il mapping al tipo **unsigned char** nel codice MBCS. Per ulteriori informazioni sulle macro di testo generico, vedere [mapping di testo generico](../c-runtime-library/generic-text-mappings.md) in riferimenti alla *libreria di runtime*.
+   Quando si esegue questo approccio, è necessario prestare attenzione per garantire l'utilizzo dei tipi di dati appropriati per gli argomenti stringa e i valori restituiti di stringa. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico `_TXCHAR`. `_TXCHAR`esegue il mapping al tipo **`char`** nel codice SBCS, ma esegue il mapping al tipo **`unsigned char`** nel codice MBCS. Per ulteriori informazioni sulle macro di testo generico, vedere [mapping di testo generico](../c-runtime-library/generic-text-mappings.md) in riferimenti alla *libreria di runtime*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Mapping di testo generico in tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+[Mapping di testo generico in TCHAR. h](../text/generic-text-mappings-in-tchar-h.md)

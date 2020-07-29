@@ -53,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f5cfbb4f6125c1c72550018735b377e1507ab08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208325"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214887"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi con accesso in primo luogo. Usare l'adattatore del contenitore `stack` per gestire un contenitore sottostante come uno stack di push.
 
-Nella descrizione seguente `GValue` corrisponde a *value* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` è uguale al *contenitore* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Container^`.
+Nella descrizione seguente corrisponde a `GValue` *value* , a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Value^` . Analogamente, `GContainer` è uguale al *contenitore* a meno che quest'ultimo non sia un tipo di riferimento, nel qual caso è `Container^` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -88,13 +88,13 @@ Tipo del contenitore sottostante.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cliext/stack >
+**Intestazione:**\<cliext/stack>
 
 **Spazio dei nomi:** cliext
 
 ## <a name="declarations"></a>Dichiarazioni
 
-|Definizione dei tipi|Descrizione|
+|Definizione del tipo|Descrizione|
 |---------------------|-----------------|
 |[stack::const_reference (STL/CLR)](#const_reference)|Tipo di un riferimento costante a un elemento.|
 |[stack::container_type (STL/CLR)](#container_type)|Tipo del contenitore sottostante.|
@@ -124,25 +124,25 @@ Tipo del contenitore sottostante.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|Sostituisce la sequenza controllata.|
-|[operator!= (stack) (STL/CLR)](#op_neq)|Determina se un oggetto `stack` non è uguale a un altro oggetto `stack`.|
-|[operator< (stack) (STL/CLR)](#op_lt)|Determina se un oggetto `stack` è minore di un altro `stack` oggetto.|
-|[operator<= (stack) (STL/CLR)](#op_lteq)|Determina se un oggetto `stack` è minore o uguale a un altro oggetto `stack`.|
-|[operator== (stack) (STL/CLR)](#op_eq)|Determina se un oggetto `stack` è uguale a un altro oggetto `stack`.|
-|[operator> (stack) (STL/CLR)](#op_gt)|Determina se un oggetto `stack` è maggiore di un altro oggetto `stack`.|
-|[operator>= (stack) (STL/CLR)](#op_gteq)|Determina se un oggetto `stack` è maggiore o uguale a un altro oggetto `stack`.|
+|[operator! = (stack) (STL/CLR)](#op_neq)|Determina se un `stack` oggetto non è uguale a un altro `stack` oggetto.|
+|[operatore< (stack) (STL/CLR)](#op_lt)|Determina se un `stack` oggetto è minore di un altro `stack` oggetto.|
+|[operatore<= (stack) (STL/CLR)](#op_lteq)|Determina se un `stack` oggetto è minore o uguale a un altro `stack` oggetto.|
+|[operator== (stack) (STL/CLR)](#op_eq)|Determina se un `stack` oggetto è uguale a un altro `stack` oggetto.|
+|[operatore> (stack) (STL/CLR)](#op_gt)|Determina se un `stack` oggetto è maggiore di un altro `stack` oggetto.|
+|[operatore>= (stack) (STL/CLR)](#op_gteq)|Determina se un `stack` oggetto è maggiore o uguale a un altro `stack` oggetto.|
 
 ## <a name="interfaces"></a>Interfacce
 
 |Interfaccia|Descrizione|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicare un oggetto.|
-|Valore\<di, contenitore >|Gestire un adapter contenitore generico.|
+|IStack\<Value, Container>|Gestire un adapter contenitore generico.|
 
 ## <a name="remarks"></a>Osservazioni
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un contenitore sottostante, di tipo *container*, che archivia gli elementi *valore* e aumenta su richiesta. L'oggetto limita l'accesso al push e al pop dell'ultimo elemento, implementando una coda LIFO (Last-in First-out), nota anche come coda o stack LIFO.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ## <a name="stackassign-stlclr"></a><a name="assign"></a>stack:: Assign (STL/CLR)
 
@@ -156,7 +156,7 @@ void assign(stack<Value, Container>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Adattatore contenitore da inserire.
 
 ### <a name="remarks"></a>Osservazioni
@@ -354,7 +354,7 @@ bool empty();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Viene usato per verificare se lo stack è vuoto.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() == 0` . Viene usato per verificare se lo stack è vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -471,7 +471,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da usare con l'interfaccia generica per questa classe del contenitore del modello. `GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento.
+Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da usare con l'interfaccia generica per questa classe del contenitore del modello. ( `GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento).
 
 ### <a name="example"></a>Esempio
 
@@ -571,12 +571,12 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Adattatore contenitore da copiare.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'operatore membro copia *right* nell'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
+L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -673,7 +673,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro inserisce un elemento con un valore `val` alla fine della sequenza controllata. Viene usato per aggiungere un altro elemento allo stack.
+La funzione membro inserisce un elemento con il valore `val` alla fine della sequenza controllata. Viene usato per aggiungere un altro elemento allo stack.
 
 ### <a name="example"></a>Esempio
 
@@ -763,7 +763,7 @@ size_type size();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Esempio
 
@@ -869,7 +869,7 @@ explicit stack(container_type% wrapped);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Oggetto da copiare.
 
 *eseguito il wrapping*<br/>
@@ -887,13 +887,13 @@ Il costruttore:
 
 `stack(stack<Value, Container>% right);`
 
-Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right.get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack a *destra*.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right.get_container()` . Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack a *destra*.
 
 Il costruttore:
 
 `stack(stack<Value, Container>^ right);`
 
-Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right->get_container()`. Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `*right`.
+Crea un contenitore di cui è stato eseguito il wrapper che è una copia di `right->get_container()` . Viene usato per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto Stack `*right` .
 
 Il costruttore:
 
@@ -1161,15 +1161,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `!(left == right)`. Viene usato per verificare se *Left* non è ordinato come *right* quando i due stack vengono confrontati elemento per elemento.
+La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato come *right* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operatore&lt; (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operatore &lt; (stack) (STL/CLR)
 
 Stack inferiore al confronto.
 
@@ -1232,15 +1232,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce true se, per la posizione più bassa `i` per cui `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->`[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() <` `right->size()` lo si utilizza per verificare se *Left* viene ordinato prima del *diritto* quando i due stack vengono confrontati elemento per elemento.
+La funzione operator restituisce true se, per la posizione più bassa `i` per la quale `!(right[i] < left[i])` è anche true `left[i] < right[i]` . In caso contrario, restituisce `left->` [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` che viene usato per verificare se *Left* viene ordinato prima del *diritto* quando i due stack vengono confrontati con l'elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operatore&lt;= (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>Operator &lt; = (stack) (STL/CLR)
 
 Confronto di stack minore di o uguale a.
 
@@ -1303,15 +1303,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `!(right < left)`. Viene usato per verificare se *Left* non è ordinato dopo *right* quando i due stack vengono confrontati elemento per elemento.
+La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1374,15 +1374,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i``left[i] ==` `right[i]`. Viene usato per verificare se *Left* è ordinato come *right* quando i due stack vengono confrontati con l'elemento.
+La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i` , `left[i] ==` `right[i]` . Viene usato per verificare se *Left* è ordinato come *right* quando i due stack vengono confrontati con l'elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operatore&gt; (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operatore &gt; (stack) (STL/CLR)
 
 Stack maggiore di confronto.
 
@@ -1445,15 +1445,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `right` `left``<`. Viene usato per verificare se *Left* viene ordinato dopo *right* quando i due stack vengono confrontati elemento per elemento.
+La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operatore&gt;= (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>Operator &gt; = (stack) (STL/CLR)
 
 Confronto dello stack maggiore o uguale a.
 
@@ -1516,15 +1516,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*<br/>
 Contenitore sinistro da confrontare.
 
-*right*<br/>
+*Ok*<br/>
 Contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione operator restituisce `!(left < right)`. Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando i due stack vengono confrontati elemento per elemento.
+La funzione operator restituisce `!(left < right)` . Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando i due stack vengono confrontati elemento per elemento.
 
 ### <a name="example"></a>Esempio
 

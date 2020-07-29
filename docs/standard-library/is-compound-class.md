@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae2e3c66b3abf22bbefbcb0fcd3292f0a3dbdbe2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452896"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215712"
 ---
-# <a name="iscompound-class"></a>Classe is_compound
+# <a name="is_compound-class"></a>Classe is_compound
 
 Verifica che il tipo specificato non sia fondamentale.
 
@@ -30,9 +30,9 @@ struct is_compound;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un'istanza del predicato di tipo include **false** se il tipo di *Ty* è un tipo fondamentale, ovvero se [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > possiede **true**. in caso contrario, è **true**. Di conseguenza, il predicato è **true** se *Ty* è un tipo di matrice, un tipo di funzione, un puntatore a **void** o un oggetto o una funzione, un riferimento, una classe, un'Unione, un'enumerazione o un puntatore a un membro di classe non statica o un form *qualificato CV* di uno di essi.
+Un'istanza del predicato di tipo include **`false`** se il tipo di *Ty* è un tipo fondamentale (ovvero se [is_fundamental](../standard-library/is-fundamental-class.md) \<Ty> include **`true`** ); in caso contrario, include **`true`** . Pertanto, il predicato include **`true`** se *Ty* è un tipo di matrice, un tipo di funzione, un puntatore a **`void`** o un oggetto o una funzione, un riferimento, una classe, un'Unione, un'enumerazione o un puntatore a un membro di classe non statica o un form *cv-qualified* di uno di essi.
 
 ## <a name="example"></a>Esempio
 
@@ -77,7 +77,7 @@ is_compound<int> == false
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

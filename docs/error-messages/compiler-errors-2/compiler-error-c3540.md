@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
-ms.openlocfilehash: 94f35f9f3bf64e09087f28a11a4fb9802d9d3c0f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a041961e8a91832be67d8def8f2a6a3ef70906d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761517"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223395"
 ---
 # <a name="compiler-error-c3540"></a>Errore del compilatore C3540
 
 ' type ': non è possibile applicare sizeof a un tipo che contiene ' auto '
 
-Non è possibile applicare l'operatore [sizeof](../../cpp/sizeof-operator.md) al tipo indicato perché contiene l'identificatore `auto`.
+Non è possibile applicare l'operatore [sizeof](../../cpp/sizeof-operator.md) al tipo indicato perché contiene l' **`auto`** identificatore.
 
 ## <a name="example"></a>Esempio
 
@@ -36,6 +36,6 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Auto (parola chiave)](../../cpp/auto-keyword.md)<br/>
-[/Zc:auto (deduzione del tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[Parola chiave auto](../../cpp/auto-keyword.md)<br/>
+[/Zc: auto (deduce il tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [Operatore sizeof](../../cpp/sizeof-operator.md)

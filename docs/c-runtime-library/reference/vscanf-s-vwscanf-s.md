@@ -24,12 +24,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945404"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215101"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
@@ -58,22 +58,22 @@ Elenco di argomenti variabili.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è **EOF** per un errore o se viene rilevato il carattere di fine del file o il carattere di fine della stringa nel primo tentativo di leggere un carattere. Se *Format* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **vscanf_s** e **Vwscanf_s** restituiscono **EOF** e impostano **errno** su **EINVAL**.
+Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è **EOF** per un errore o se viene rilevato il carattere di fine del file o il carattere di fine della stringa nel primo tentativo di leggere un carattere. Se *Format* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **vscanf_s** e **vwscanf_s** restituire **EOF** e impostare **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **vscanf_s** legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni fornite dall'elenco di argomenti di *arglist* . Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+La funzione **vscanf_s** legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni fornite dall'elenco di argomenti *arglist* . Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 **vwscanf_s** è una versione a caratteri wide di **vscanf_s**; l'argomento *Format* per **vwscanf_s** è una stringa di caratteri wide. **vwscanf_s** e **vscanf_s** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vscanf_s** non supporta l'input da un flusso Unicode.
 
-A differenza di **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** richiedono la specifica delle dimensioni del buffer per tutti i parametri di input di tipo **c**, **c**, **s**, **s**o set di controlli stringa racchiusi tra **[]** . La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. Le dimensioni del buffer in caratteri per una stringa **wchar_t** non corrispondono alle dimensioni in byte.
+A differenza di **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** richiedono la specifica delle dimensioni del buffer per tutti i parametri di input di tipo **c**, **c**, **s**, **s**o set di controlli stringa racchiusi tra **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. La dimensione del buffer in caratteri per una **`wchar_t`** stringa non corrisponde alle dimensioni in byte.
 
 La dimensione del buffer include il carattere di terminazione null. È possibile usare un campo di specifica della larghezza per assicurarsi che il token che viene letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 
 > [!NOTE]
-> Il parametro *size* è di tipo **unsigned**, non **size_t**.
+> Il parametro *size* è di tipo **`unsigned`** , non **size_t**.
 
 Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
 
@@ -159,7 +159,7 @@ The contents are: 36 92.300003 y n Wide characters
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

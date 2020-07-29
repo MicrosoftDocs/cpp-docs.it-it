@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222524"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Include l'intestazione \<della libreria standard C stddef. h > e aggiunge i nomi associati `std` allo spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria `std` standard C vengano dichiarati nello spazio dei nomi.
+Include l'intestazione della libreria standard C \<stddef.h> e aggiunge i nomi associati allo `std` spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria standard C vengano dichiarati nello `std` spazio dei nomi.
 
 > [!NOTE]
-> \<cstddef > include il tipo **byte** e non include il tipo **wchar_t**.
+> \<cstddef>include il tipo **byte** e non include il tipo **`wchar_t`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,7 +52,7 @@ Tipo di Unsigned Integer definito dall'implementazione sufficientemente grande d
 Tipo POD il cui requisito di allineamento è almeno uguale a quello di ogni tipo scalare e il cui requisito di allineamento è supportato in ogni contesto.
 
 *nullptr_t*\
-Sinonimo del tipo di un'espressione **nullptr** . Sebbene non sia possibile adottare un indirizzo **nullptr** , è possibile prendere l'indirizzo di un altro oggetto *nullptr_t* che è un lvalue.
+Sinonimo del tipo di un' **`nullptr`** espressione. Sebbene **`nullptr`** non sia possibile prendere un indirizzo, è possibile prendere l'indirizzo di un altro *nullptr_t* oggetto lvalue.
 
 ## <a name="byte-class"></a>Classe byte
 
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

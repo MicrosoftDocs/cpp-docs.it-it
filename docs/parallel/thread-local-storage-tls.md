@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 888a33161cd33b20d5f40a07f9b54235f06b8bd8
-ms.sourcegitcommit: 57e26bdd7839fce3c4154a61e987d165f0ba6f5b
+ms.openlocfilehash: f677d7382a9747df63023bd83b104a6bb3b74c1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301966"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222654"
 ---
 # <a name="thread-local-storage-tls"></a>Archiviazione thread-local (TLS)
 
@@ -22,9 +22,9 @@ L'archiviazione thread-local è il metodo attraverso il quale ogni thread inclus
 
 ## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>Implementazione del compilatore per TLS
 
-**C++ 11:**  L' `thread_local` identificatore di classe di archiviazione è il metodo consigliato per specificare l'archiviazione locale di thread per oggetti e membri di classe. Per altre informazioni, vedere [classi di archiviazione (C++)](../cpp/storage-classes-cpp.md).
+**C++ 11:**  L' **`thread_local`** identificatore di classe di archiviazione è il metodo consigliato per specificare l'archiviazione locale di thread per oggetti e membri di classe. Per altre informazioni, vedere [classi di archiviazione (C++)](../cpp/storage-classes-cpp.md).
 
-MSVC fornisce anche un attributo specifico di Microsoft, [thread](../cpp/thread.md), come modificatore di classe di archiviazione estesa. Usare la parola chiave **__declspec** per dichiarare una variabile di **thread** . Nel codice seguente, ad esempio, viene dichiarata una variabile locale di thread di tipo integer e quindi inizializzata con un valore:
+MSVC fornisce anche un attributo specifico di Microsoft, [thread](../cpp/thread.md), come modificatore di classe di archiviazione estesa. Usare la **`__declspec`** parola chiave per dichiarare una **`thread`** variabile. Nel codice seguente, ad esempio, viene dichiarata una variabile locale di thread di tipo integer e quindi inizializzata con un valore:
 
 ```C
 __declspec( thread ) int tls_i = 1;
@@ -34,13 +34,13 @@ __declspec( thread ) int tls_i = 1;
 
 Le linee guida seguenti devono essere osservate quando si dichiarano variabili e oggetti thread-local associati staticamente. Queste linee guida si applicano sia a [thread](../cpp/thread.md) che a [thread_local](../cpp/storage-classes-cpp.md):
 
-- L'attributo **thread** può essere applicato solo a dichiarazioni e definizioni di classi e dati. Non può essere usato in dichiarazioni o definizioni di funzione. Il codice seguente, ad esempio, genera un errore di compilazione:
+- L' **`thread`** attributo può essere applicato solo a dichiarazioni e definizioni di classi e dati. Non può essere usato in dichiarazioni o definizioni di funzione. Il codice seguente, ad esempio, genera un errore di compilazione:
 
     ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- Il modificatore di **thread** può essere specificato solo in elementi di dati con estensione **statica** . Sono inclusi gli oggetti dati globali (sia **statici** che **extern**), gli oggetti statici locali e i membri dati statici delle classi C++. Impossibile dichiarare oggetti dati automatici con l'attributo **thread** . Il codice seguente genera errori del compilatore:
+- Il **`thread`** modificatore può essere specificato solo per gli elementi di dati con **`static`** extent. Sono inclusi gli oggetti dati globali ( **`static`** e **`extern`** ), gli oggetti statici locali e i membri dati statici delle classi C++. Gli oggetti dati automatici non possono essere dichiarati con l' **`thread`** attributo. Il codice seguente genera errori del compilatore:
 
     ```C
     void func1()
@@ -54,7 +54,7 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     }
     ```
 
-- Le dichiarazioni e la definizione di un oggetto thread-local devono specificare tutti l'attributo **thread** . Il codice seguente genera ad esempio un errore:
+- Le dichiarazioni e la definizione di un oggetto thread-local devono specificare l' **`thread`** attributo. Il codice seguente genera ad esempio un errore:
 
     ```C
     #define Thread  __declspec( thread )
@@ -62,13 +62,13 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- L'attributo **thread** non può essere utilizzato come modificatore di tipo. Il codice seguente, ad esempio, genera un errore di compilazione:
+- L' **`thread`** attributo non può essere utilizzato come modificatore di tipo. Il codice seguente, ad esempio, genera un errore di compilazione:
 
     ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- Poiché la dichiarazione di oggetti C++ che usano l'attributo **thread** è consentita, i due esempi seguenti sono semanticamente equivalenti:
+- Poiché la dichiarazione di oggetti C++ che usano l' **`thread`** attributo è consentita, i due esempi seguenti sono semanticamente equivalenti:
 
     ```cpp
     __declspec( thread ) class B
@@ -100,7 +100,7 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   Un' `sizeof` espressione che include l'oggetto in fase di inizializzazione non rappresenta un riferimento a se stessa ed è abilitata sia in C che in C++.
+   Un' **`sizeof`** espressione che include l'oggetto in fase di inizializzazione non rappresenta un riferimento a se stessa ed è abilitata sia in C che in C++.
 
    C++ non consente l'inizializzazione dinamica dei dati di thread a causa di possibili miglioramenti futuri per la funzionalità di archiviazione thread-local.
 

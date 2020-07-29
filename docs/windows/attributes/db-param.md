@@ -1,21 +1,21 @@
 ---
-title: db_param (C++ attributo COM)
+title: db_param (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32dcceae1e4e4fbc730101381eda84b5350ffd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215309"
 ---
-# <a name="dbparam"></a>db_param
+# <a name="db_param"></a>db_param
 
-Consente di associare la variabile di membro specificato con un parametro di input o output e delimita la variabile.
+Associa la variabile membro specificata a un parametro di input o output e delimita la variabile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,45 +28,45 @@ Consente di associare la variabile di membro specificato con un parametro di inp
 *ordinal*<br/>
 Numero di colonna (ordinale DBCOLUMNINFO) corrispondente a un campo nel set di righe a cui associare i dati.
 
-*paramtype*<br/>
-(Facoltativo) Il tipo da impostare per il parametro. Provider supportano solo i tipi dei / o di parametro supportati dall'origine dati sottostante. Il tipo è una combinazione di uno o più valori DBPARAMIOENUM:
+*ParamType*<br/>
+Opzionale Tipo da impostare per il parametro. I provider supportano solo i tipi di I/O di parametro supportati dall'origine dati sottostante. Il tipo è una combinazione di uno o più valori DBPARAMIOENUM:
 
-- DBPARAMIO_INPUT un parametro di input.
+- DBPARAMIO_INPUT Parametro di input.
 
-- DBPARAMIO_OUTPUT un parametro di output.
+- DBPARAMIO_OUTPUT Parametro di output.
 
-- DBPARAMIO_NOTPARAM la funzione di accesso non ha parametri. Impostazione `eParamIO` a questo valore nella riga delle funzioni di accesso ricorda all'utente che i parametri vengono ignorati.
+- DBPARAMIO_NOTPARAM La funzione di accesso non dispone di parametri. `eParamIO`L'impostazione di questo valore nelle funzioni di accesso alla riga ricorda all'utente che i parametri vengono ignorati.
 
-*dbtype*<br/>
-(Facoltativo) OLE DB [indicatore del tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) per la voce di colonna.
+*DbType*<br/>
+Opzionale Indicatore di [tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) OLE DB per la voce della colonna.
 
-*precision*<br/>
-(Facoltativo) La precisione da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+*precisione*<br/>
+Opzionale Precisione da utilizzare per la voce della colonna. Per informazioni dettagliate, vedere la descrizione dell' `bPrecision` elemento della [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *scale*<br/>
-(Facoltativo) La scala da usare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+Opzionale Scala da utilizzare per la voce della colonna. Per informazioni dettagliate, vedere la descrizione dell' `bScale` elemento della [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*status*<br/>
-(Facoltativo) Una variabile membro usata per mantenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio valori NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+*Stato*<br/>
+Opzionale Variabile membro utilizzata per mantenere lo stato della colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
 *length*<br/>
-(Facoltativo) Una variabile membro usata per contenere le dimensioni della colonna in byte.
+Opzionale Variabile membro utilizzata per conservare la dimensione della colonna in byte.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**db_param** definisce i parametri che usano comandi; quindi viene usata con `db_command`. Ad esempio, è possibile usare **db_param** per associare i parametri nella query SQL o stored procedure. I parametri in una stored procedure sono indicati da punti interrogativi (?) e si devono associare i membri dati nell'ordine in cui vengono visualizzati i parametri.
+**db_param** definisce i parametri utilizzati nei comandi. quindi, viene usato con `db_command` . Ad esempio, è possibile utilizzare **db_param** per associare parametri in query SQL o stored procedure. I parametri in una stored procedure sono indicati da punti interrogativi (?) ed è necessario associare i membri dati nell'ordine in cui vengono visualizzati i parametri.
 
-**db_param** delimita i dati dei membri che può far parte di OLE DB `ICommandWithParameters`-associazione basata su. Imposta il tipo di parametro (di input o output), tipo OLE DB, precisione, scala, lo stato e lunghezza per il parametro specificato. Questo attributo consente di inserire le macro di consumer OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Ogni membro è contrassegnare con il **db_param** attributo occupa una voce nella mappa sotto forma di un COLUMN_ENTRY.
+**db_param** delimita i dati dei membri che possono partecipare all' `ICommandWithParameters` associazione basata su OLE DB. Imposta il tipo di parametro (input o output), il tipo OLE DB, la precisione, la scala, lo stato e la lunghezza per il parametro specificato. Questo attributo inserisce le macro del consumer OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Ogni membro contrassegnato con l'attributo **db_param** occuperà una voce nella mappa sotto forma di COLUMN_ENTRY.
 
-**db_param** viene usato in combinazione con il [db_table](db-table.md) oppure [db_command](db-command.md) attributi.
+**db_param** viene utilizzato in combinazione con gli attributi [db_table](db-table.md) o [db_command](db-command.md) .
 
 Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente crea una classe di comando basata sulla procedura SalesbyYear archiviati nel database Northwind. Associa il primo parametro nella stored procedure con il `m_RETURN_VALUE` variabile e definisce come un parametro di output. Associa gli ultimi due parametri (inpui) con `m_Beginning_Date` e `m_Ending_Date`.
+Nell'esempio seguente viene creata una classe Command basata sul stored procedure SalesbyYear nel database Northwind. Associa il primo parametro del stored procedure alla `m_RETURN_VALUE` variabile e lo definisce come parametro di output. Associa gli ultimi due parametri (input) con `m_Beginning_Date` e `m_Ending_Date` .
 
-L'esempio seguente associa il `nOutput` variabile con un parametro di output.
+Nell'esempio seguente la variabile viene associata `nOutput` a un parametro di output.
 
 ```cpp
 // db_param.cpp
@@ -108,10 +108,10 @@ struct CSalesbyYear {
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**, membro, metodo, locale|
+|**Si applica a**|**`class`**, **`struct`** , membro, metodo, locale|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

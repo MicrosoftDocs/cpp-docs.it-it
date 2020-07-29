@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178849"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223603"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 
-Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) degli operatori nelle [convenzioni lessicali](../cpp/lexical-conventions.md), Mostra C++ le relazioni imposte dagli operatori sulle espressioni).
+Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) degli operatori nelle [convenzioni lessicali](../cpp/lexical-conventions.md), Mostra le relazioni imposte dagli operatori C++ sulle espressioni).
 
 ## <a name="order-of-evaluation"></a>Ordine di valutazione
 
@@ -43,7 +43,7 @@ int main()
 54
 ```
 
-![Ordine di valutazione in un'espressione](../cpp/media/vc38zv1.gif "Ordine di valutazione di un'espressione") <br/>
+![Ordine di valutazione di un'espressione](../cpp/media/vc38zv1.gif "Ordine di valutazione di un'espressione") <br/>
 Ordine di valutazione delle espressioni
 
 L'ordine in cui viene valutata l'espressione nella figura riportata sopra è determinato dalla precedenza e dall'associatività degli operatori:
@@ -52,11 +52,11 @@ L'ordine in cui viene valutata l'espressione nella figura riportata sopra è det
 
 1. L'addizione (+) ha la precedenza più elevata successiva, pertanto `a` viene aggiunto al prodotto di `b` e `c`.
 
-1. Lo spostamento a sinistra (< <) presenta la precedenza più bassa nell'espressione, ma sono presenti due occorrenze. Poiché l'operatore di spostamento a sinistra raggruppa gli elementi da sinistra verso destra, viene prima valutata la sottoespressione sinistra, quindi la sottoespressione destra.
+1. Lo spostamento a sinistra (<<) ha la precedenza più bassa nell'espressione, ma sono presenti due occorrenze. Poiché l'operatore di spostamento a sinistra raggruppa gli elementi da sinistra verso destra, viene prima valutata la sottoespressione sinistra, quindi la sottoespressione destra.
 
 Quando per raggruppare le sottoespressioni vengono utilizzate le parentesi, queste alterano la precedenza e anche l'ordine in cui l'espressione viene valutata, come illustrato di seguito.
 
-![Ordine di valutazione dell'espressione con parentesi](../cpp/media/vc38zv2.gif "Ordine di valutazione di un'espressione con parentesi") <br/>
+![Ordine di valutazione di un'espressione con parentesi](../cpp/media/vc38zv2.gif "Ordine di valutazione di un'espressione con parentesi") <br/>
 Ordine di valutazione delle espressioni tra parentesi
 
 Le espressioni come quelle nella figura riportata sopra vengono valutate esclusivamente per i relativi effetti collaterali (in questo caso, per trasferire le informazioni del dispositivo di uscita di output standard).
@@ -69,10 +69,10 @@ Il linguaggio C++ specifica determinate compatibilità quando specifica gli oper
 
 |Tipo previsto|Tipi consentiti|
 |-------------------|-------------------|
-|*type*|*tipo* di `const`<br /> *tipo* di `volatile`<br /> *digitare*&<br /> *tipo* di `const`&<br /> *tipo* di `volatile`&<br /> *tipo* di `volatile const`<br /> *tipo* di `volatile const`&|
-|*digitare* \*|*digitare* \*<br /> *tipo* di `const` \*<br /> *tipo* di `volatile` \*<br /> *tipo* di `volatile const` \*|
-|*tipo* di `const`|*type*<br /> *tipo* di `const`<br />*tipo* di `const`&|
-|*tipo* di `volatile`|*type*<br /> *tipo* di `volatile`<br /> *tipo* di `volatile`&|
+|*type*|**`const`***tipo* di<br /> **`volatile`***tipo* di<br /> *tipo*&<br /> **`const`***tipo* di&<br /> **`volatile`***tipo* di&<br /> `volatile const` *type*<br /> `volatile const`*tipo* di&|
+|*type* \*|*type* \*<br /> **`const`***tipo* di\*<br /> **`volatile`***tipo* di\*<br /> `volatile const` *type* \*|
+|**`const`***tipo* di|*type*<br /> **`const`***tipo* di<br />**`const`***tipo* di&|
+|**`volatile`***tipo* di|*type*<br /> **`volatile`***tipo* di<br /> **`volatile`***tipo* di&|
 
 Poiché le regole precedenti possono essere sempre utilizzate in combinazione, qualora sia previsto un puntatore, è possibile fornire un puntatore di tipo const a un oggetto di tipo volatile.
 
@@ -88,13 +88,13 @@ func( i, ++i );
 
 Il linguaggio C++ non garantisce l'ordine in cui gli argomenti a una chiamata di funzione vengano valutati. Pertanto, nell'esempio precedente, `func` potrebbe ottenere i valori 7 e 8 o 8 e 8 per i relativi parametri, a seconda se i parametri vengono valutati da sinistra verso destra o da destra verso sinistra.
 
-## <a name="c-sequence-points-microsoft-specific"></a>C++punti di sequenza (specifici di Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>Punti di sequenza C++ (specifico di Microsoft)
 
 Un'espressione può modificare il valore di un oggetto una sola volta tra "punti di sequenza" consecutivi.
 
 La definizione del linguaggio C++ attualmente non specifica i punti di sequenza. In Microsoft C++ vengono usati gli stessi punti di sequenza di ANSI C per qualsiasi espressione contenente gli operatori C, ma non gli operatori di overload. Quando gli operatori sono sottoposti a overload, la semantica cambia dalla sequenza dell'operatore nella sequenza della chiamata di funzione. In Microsoft C++ vengono usati i seguenti punti di sequenza:
 
-- Operando sinistro dell'operatore logico AND (& &). L'operando sinistro dell'operatore logico AND viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico AND venga valutato.
+- Operando sinistro dell'operatore logico AND (&&). L'operando sinistro dell'operatore logico AND viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico AND venga valutato.
 
 - Operando sinistro dell'operatore logico OR (&#124;&#124;). L'operando sinistro dell'operatore logico OR viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico OR venga valutato.
 

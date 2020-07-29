@@ -139,12 +139,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636930"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215166"
 ---
 # <a name="data-type-constants"></a>Costanti del tipo di dati
 
@@ -159,29 +159,29 @@ Queste costanti specificano gli intervalli per i tipi di dati integrali. Per usa
 ```
 
 > [!NOTE]
-> L'opzione del compilatore [/J](../build/reference/j-default-char-type-is-unsigned.md) modifica il tipo **char** predefinito in **unsigned**.
+> L' [`/J`](../build/reference/j-default-char-type-is-unsigned.md) opzione del compilatore modifica il **`char`** tipo predefinito da **`signed char`** a **`unsigned char`** .
 
-|Costante|Valore|Descrizione|
+|Costante|valore|Descrizione|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|Numero di bit in un **char**|
-|**SCHAR_MIN**|(-128)|Valore minimo di signed **char**|
-|**SCHAR_MAX**|127|Valore massimo di signed **char**|
-|**UCHAR_MAX**|255 (0xff)|Valore massimo di **unsigned** **char**|
-|**CHAR_MIN**|(-128) (0 se si usa l'opzione **/J**)|Valore minimo di **char**|
-|**CHAR_MAX**|127 (255 se si usa l'opzione **/J**)|Valore massimo di **char**|
-|**MB_LEN_MAX**|5|Numero massimo di byte in multibyte **char**|
-|**SHRT_MIN**|-32768|Valore minimo di signed **short**|
-|**SHRT_MAX**|32767|Valore massimo di signed **short**|
-|**USHRT_MAX**|65535 (0xffff)|Valore massimo di **unsigned** **short**|
-|**INT_MIN**|(-2147483647 - 1)|Valore minimo di signed **int**|
-|**INT_MAX**|2147483647|Valore massimo di signed **int**|
-|**UINT_MAX**|4294967295 (0xffffffff)|Valore massimo di **unsigned** **int**|
-|**LONG_MIN**|(-2147483647L - 1)|Valore minimo di signed **long**|
-|**LONG_MAX**|2147483647L|Valore massimo di signed **long**|
-|**ULONG_MAX**|4294967295UL (0xfffffffful)|Valore massimo di **unsigned** **long**|
-|**LLONG_MIN**|(-9223372036854775807LL - 1)|Valore minimo di signed **long** **long** o **__int64**|
-|**LLONG_MAX**|9223372036854775807LL|Valore massimo di signed **long** **long** o **__int64**|
-|**ULLONG_MAX**|0xffffffffffffffffull|Valore massimo di **unsigned** **long** **long**|
+|**CHAR_BIT**|8|Numero di bit in un oggetto**`char`**|
+|**SCHAR_MIN**|(-128)|**`signed char`** Valore minimo|
+|**SCHAR_MAX**|127|**`signed char`** Valore massimo|
+|**UCHAR_MAX**|255 (0xff)|**`unsigned char`** Valore massimo|
+|**CHAR_MIN**|(-128) (0 se è stata **`/J`** usata l'opzione)|**`char`** Valore minimo|
+|**CHAR_MAX**|127 (opzione 255 if **`/J`** utilizzata)|**`char`** Valore massimo|
+|**MB_LEN_MAX**|5|Numero massimo di byte in multibyte**`char`**|
+|**SHRT_MIN**|-32768|**`signed short`** Valore minimo|
+|**SHRT_MAX**|32767|**`signed short`** Valore massimo|
+|**USHRT_MAX**|65535 (0xffff)|**`unsigned short`** Valore massimo|
+|**INT_MIN**|(-2147483647 - 1)|**`signed int`** Valore minimo|
+|**INT_MAX**|2147483647|**`signed int`** Valore massimo|
+|**UINT_MAX**|4294967295 (0xffffffff)|**`unsigned int`** Valore massimo|
+|**LONG_MIN**|(-2147483647L - 1)|**`signed long`** Valore minimo|
+|**LONG_MAX**|2147483647L|**`signed long`** Valore massimo|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|**`unsigned long`** Valore massimo|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|**`signed long long`** Valore minimo o **`__int64`**|
+|**LLONG_MAX**|9223372036854775807LL|**`signed long long`** Valore massimo o **`__int64`**|
+|**ULLONG_MAX**|0xffffffffffffffffull|**`unsigned long long`** Valore massimo|
 |**_I8_MIN**|(-127i8 - 1)|Valore minimo signed a 8 bit|
 |**_I8_MAX**|127i8|Valore massimo signed a 8 bit|
 |**_UI8_MAX**|0xffui8|Valore massimo unsigned a 8 bit|
@@ -202,23 +202,23 @@ Queste costanti specificano gli intervalli per i tipi di dati integrali. Per usa
 
 ## <a name="floating-point-type-constants"></a>Costanti del tipo di dati a virgola mobile
 
-Le costanti elencate di seguito specificano l'intervallo e altre caratteristiche dei tipi di dati **long** **double**, **double** e **float**. Per usare queste costanti, includere l'intestazione float.h nel file di origine:
+Le costanti seguenti forniscono l'intervallo e altre caratteristiche dei tipi di **`long double`** **`double`** dati, e **`float`** . Per usare queste costanti, includere l'intestazione float.h nel file di origine:
 
 ```C
 #include <float.h>
 ```
 
-|Costante|Valore|Descrizione|
+|Costante|valore|Descrizione|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|N. di cifre decimali di approssimazione di arrotondamento|
 |**DBL_DIG**|15|N. di cifre decimali di precisione|
 |**DBL_EPSILON**|2.2204460492503131e-016|Il più piccolo in modo che 1.0 + **DBL_EPSILON** != 1.0|
 |**DBL_HAS_SUBNORM**|1|Il tipo supporta i numeri subnormali (denormalizzati)|
 |**DBL_MANT_DIG**|53|N. di bit nel significando (mantissa)|
-|**DBL_MAX**|1.7976931348623158e+308|Valore massimo|
+|**DBL_MAX**|1,7976931348623158e+308|Valore massimo|
 |**DBL_MAX_10_EXP**|308|Esponente decimale massimo|
 |**DBL_MAX_EXP**|1024|Esponente binario massimo|
-|**DBL_MIN**|2.2250738585072014e-308|Valore positivo normalizzato minimo|
+|**DBL_MIN**|2,2250738585072014e-308|Valore positivo normalizzato minimo|
 |**DBL_MIN_10_EXP**|(-307)|Esponente decimale minimo|
 |**DBL_MIN_EXP**|(-1021)|Esponente binario minimo|
 |**_DBL_RADIX**|2|Base dell'esponente|
@@ -240,10 +240,10 @@ Le costanti elencate di seguito specificano l'intervallo e altre caratteristiche
 |**LDBL_EPSILON**|2.2204460492503131e-016|Il più piccolo in modo che 1.0 + **LDBL_EPSILON** != 1.0|
 |**LDBL_HAS_SUBNORM**|1|Il tipo supporta i numeri subnormali (denormalizzati)|
 |**LDBL_MANT_DIG**|53|N. di bit nel significando (mantissa)|
-|**LDBL_MAX**|1.7976931348623158e+308|Valore massimo|
+|**LDBL_MAX**|1,7976931348623158e+308|Valore massimo|
 |**LDBL_MAX_10_EXP**|308|Esponente decimale massimo|
 |**LDBL_MAX_EXP**|1024|Esponente binario massimo|
-|**LDBL_MIN**|2.2250738585072014e-308|Valore positivo normalizzato minimo|
+|**LDBL_MIN**|2,2250738585072014e-308|Valore positivo normalizzato minimo|
 |**LDBL_MIN_10_EXP**|(-307)|Esponente decimale minimo|
 |**LDBL_MIN_EXP**|(-1021)|Esponente binario minimo|
 |**_LDBL_RADIX**|2|Base dell'esponente|

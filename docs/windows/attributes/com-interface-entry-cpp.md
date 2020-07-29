@@ -1,17 +1,17 @@
 ---
-title: com_interface_entry (C++ attributo com)
+title: com_interface_entry (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215348"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -33,7 +33,7 @@ Stringa contenente il testo effettivo della voce. Per un elenco di valori possib
 
 L'attributo **COM_INTERFACE_ENTRY** C++ inserisce il contenuto non abbreviato di una stringa di caratteri nella mappa dell'interfaccia com dell'oggetto di destinazione. Se l'attributo viene applicato una volta all'oggetto di destinazione, la voce viene inserita all'inizio della mappa dell'interfaccia esistente. Se l'attributo viene applicato ripetutamente allo stesso oggetto di destinazione, le voci vengono inserite all'inizio della mappa dell'interfaccia nell'ordine in cui vengono ricevute.
 
-Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se ad esempio `progid` viene applicato, vengono applicati anche `vi_progid` e `coclass`.
+Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se, ad esempio, `progid` viene applicato `vi_progid` , `coclass` vengono applicati anche.
 
 Poiché il primo utilizzo di **COM_INTERFACE_ENTRY** comporta l'inserimento della nuova interfaccia all'inizio della mappa dell'interfaccia, deve essere uno dei seguenti tipi di COM_INTERFACE_ENTRY:
 
@@ -47,7 +47,7 @@ Poiché il primo utilizzo di **COM_INTERFACE_ENTRY** comporta l'inserimento dell
 
 Gli utilizzi aggiuntivi dell'attributo **COM_INTERFACE_ENTRY** possono usare tutti i tipi di COM_INTERFACE_ENTRY supportati.
 
-Questa restrizione è necessaria perché ATL utilizza la prima voce nella mappa dell'interfaccia come identità `IUnknown`; Pertanto, la voce deve essere un'interfaccia valida. Ad esempio, l'esempio di codice seguente non è valido perché la prima voce nella mappa dell'interfaccia non specifica un'interfaccia COM effettiva.
+Questa restrizione è necessaria perché ATL utilizza la prima voce nella mappa dell'interfaccia come identità. `IUnknown` pertanto, la voce deve essere un'interfaccia valida. Ad esempio, l'esempio di codice seguente non è valido perché la prima voce nella mappa dell'interfaccia non specifica un'interfaccia COM effettiva.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ Questa restrizione è necessaria perché ATL utilizza la prima voce nella mappa 
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente aggiunge due voci alla mappa dell'interfaccia COM esistente del `CMyBaseClass`. Il primo è un'interfaccia standard e il secondo nasconde l'interfaccia `IDebugTest`.
+Il codice seguente aggiunge due voci alla mappa dell'interfaccia COM esistente di `CMyBaseClass` . Il primo è un'interfaccia standard e il secondo nasconde l' `IDebugTest` interfaccia.
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -109,10 +109,10 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**|
+|**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|Sì|
-|**Attributi obbligatori**|Uno o più degli elementi seguenti: `coclass`, `progid`o `vi_progid`.|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Uno o più degli elementi seguenti: `coclass` , `progid` o `vi_progid` .|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -120,4 +120,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

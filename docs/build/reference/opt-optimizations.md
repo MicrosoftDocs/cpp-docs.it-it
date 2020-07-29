@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 5c0ab3579fcb9633c435305a8b02b0c3f73d7a6f
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825704"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215192"
 ---
 # <a name="opt-optimizations"></a>/OPT (Ottimizzazioni)
 
@@ -30,9 +30,9 @@ Controlla le ottimizzazioni eseguite da LINK durante una compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/opt:**{**ref** | **NOREF**} \
-> **/Opt:**{**ICF**[**=**_iterazioni_] | **NOICF**} \
-> **/opt:**{**LBR** | **NOLBR**}
+> **/opt:**{**ref**  |  **NOREF**} \
+> **/Opt:**{**ICF**[ **=** _iterazioni_] | **NOICF**} \
+> **/opt:**{**LBR**  |  **NOLBR**}
 
 ## <a name="arguments"></a>Argomenti
 
@@ -42,22 +42,22 @@ Controlla le ottimizzazioni eseguite da LINK durante una compilazione.
 
 Quando/OPT: REF è abilitato, LINK rimuove le funzioni e i dati in pacchetto senza riferimenti, noti come *COMDAT*. Questa ottimizzazione è nota come eliminazione COMDAT transitiva. L'opzione **/opt: Ref** Disabilita inoltre il collegamento incrementale.
 
-Le funzioni inline e le funzioni membro definite all'interno di una dichiarazione di classe sono sempre COMDAT. Tutte le funzioni in un file oggetto vengono apportate in COMDAT se vengono compilate tramite l'opzione [/Gy](gy-enable-function-level-linking.md) . Per inserire i dati **const** in COMDAT, è necessario dichiararli usando `__declspec(selectany)`. Per informazioni su come specificare i dati per la rimozione o la riduzione, vedere [selectany](../../cpp/selectany.md).
+Le funzioni inline e le funzioni membro definite all'interno di una dichiarazione di classe sono sempre COMDAT. Tutte le funzioni in un file oggetto vengono apportate in COMDAT se vengono compilate tramite l'opzione [/Gy](gy-enable-function-level-linking.md) . Per inserire **`const`** i dati in COMDAT, è necessario dichiararli usando `__declspec(selectany)` . Per informazioni su come specificare i dati per la rimozione o la riduzione, vedere [selectany](../../cpp/selectany.md).
 
 Per impostazione predefinita, **/opt: Ref** è abilitato dal linker a meno che non sia specificato **/opt: NOREF** o [/debug](debug-generate-debug-info.md) . Per eseguire l'override di questa impostazione predefinita e lasciare COMDAT senza riferimenti nel programma, specificare **/opt: NOREF**. È possibile usare l'opzione [/include](include-force-symbol-references.md) per eseguire l'override della rimozione di un simbolo specifico.
 
 Se si specifica [/debug](debug-generate-debug-info.md) , l'impostazione predefinita per **/opt** è **NOREF**e tutte le funzioni vengono mantenute nell'immagine. Per eseguire l'override di questa impostazione predefinita e ottimizzare una build di debug, specificare **/opt: Ref**. Questo può ridurre le dimensioni del file eseguibile e può essere un'ottimizzazione utile anche nelle build di debug. Si consiglia inoltre di specificare **/opt: NOICF** per mantenere funzioni identiche nelle compilazioni di debug. Questo semplifica la lettura delle tracce dello stack e l'impostazione di punti di interruzione nelle funzioni che altrimenti verrebbero ridotte insieme.
 
-**ICF**\[**=**_Iterazioni_ICF] &#124; **NOICF**
+**ICF** \[ ICF **=** _iterazioni_] &#124; **NOICF**
 
-Usare le_iterazioni_ **ICF**\[**=**] per eseguire una riduzione COMDAT identica. I dati COMDAT ridondanti possono essere rimossi dall'output del linker. Il parametro facoltativo *iterazioni* specifica il numero di volte in cui attraversare i simboli dei duplicati. Il numero predefinito di iterazioni è 1. Attraverso iterazioni aggiuntive si potrebbero trovare più duplicati rivelati attraverso la riduzione nell'iterazione precedente.
+Usare **ICF**le \[ **=** _iterazioni_ICF] per eseguire una riduzione COMDAT identica. I dati COMDAT ridondanti possono essere rimossi dall'output del linker. Il parametro facoltativo *iterazioni* specifica il numero di volte in cui attraversare i simboli dei duplicati. Il numero predefinito di iterazioni è 1. Attraverso iterazioni aggiuntive si potrebbero trovare più duplicati rivelati attraverso la riduzione nell'iterazione precedente.
 
 Per impostazione predefinita, **/opt: ICF** è abilitato dal linker a meno che non sia specificato **/opt: NOICF** o [/debug](debug-generate-debug-info.md) . Per eseguire l'override di questa impostazione predefinita e impedire che COMDAT venga ripiegato nel programma, specificare **/opt: NOICF**.
 
 In una build di debug è necessario specificare in modo esplicito **/opt: ICF** per abilitare la riduzione del COMDAT. Tuttavia, poiché **/opt: ICF** può unire dati o funzioni identiche, può modificare i nomi di funzione visualizzati nelle analisi dello stack. Consente inoltre di impostare punti di interruzione in determinate funzioni o di esaminare alcuni dati nel debugger e di accedere a funzioni impreviste quando si esegue una sola istruzione nel codice. Il comportamento del codice è identico, ma la presentazione del debugger può creare confusione. Pertanto, non è consigliabile utilizzare **/opt: ICF** nelle build di debug, a meno che i vantaggi del codice più piccolo superino questi svantaggi.
 
 > [!NOTE]
-> Poiché **/opt: ICF** può causare l'assegnazione dello stesso indirizzo a funzioni diverse o a membri dati di sola lettura (ovvero, variabili **const** durante la compilazione tramite **/Gy**), può interrompere un programma che dipende da indirizzi univoci per le funzioni o i membri dati di sola lettura. Per altre informazioni, vedere [/Gy (Attiva collegamento a livello di funzione)](gy-enable-function-level-linking.md).
+> Poiché **/opt: ICF** può causare l'assegnazione dello stesso indirizzo a funzioni diverse o a membri dati di sola lettura (ovvero **`const`** variabili quando vengono compilati tramite **/Gy**), può interrompere un programma che dipende da indirizzi univoci per le funzioni o i membri dati di sola lettura. Per altre informazioni, vedere [/Gy (Attiva collegamento a livello di funzione)](gy-enable-function-level-linking.md).
 
 **LBR** &#124; **NOLBR**
 
@@ -83,7 +83,7 @@ Gli argomenti **/opt** sono spesso impostati per i progetti creati usando la fin
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di**ottimizzazione** del**linker** > delle **Proprietà** > di configurazione.
+1. Selezionare la **Configuration Properties**  >  pagina delle proprietà di ottimizzazione del**linker**delle proprietà di configurazione  >  **Optimization** .
 
 1. Modificare una di queste proprietà:
 
@@ -95,7 +95,7 @@ Gli argomenti **/opt** sono spesso impostati per i progetti creati usando la fin
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà della**riga di comando** del**linker** >  **Proprietà** > di configurazione.
+1. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del**linker**proprietà di configurazione  >  **Command Line** .
 
 1. Immettere l'opzione in **Opzioni aggiuntive**:
 

@@ -1,5 +1,5 @@
 ---
-title: variante di classe
+title: Classe Variant
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::variant
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: 9bfdf644374a0b825fd0ca02bf4164a766cb42a3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269303"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215400"
 ---
-# <a name="variant-class"></a>variante di classe
+# <a name="variant-class"></a>Classe Variant
 
-Qualsiasi istanza di tipo variant in un determinato momento contiene sia un valore di uno dei relativi tipi alternativi, o non contiene alcun valore.
+Qualsiasi istanza di Variant in un determinato momento può contenere un valore di uno dei tipi alternativi o non include alcun valore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,32 +29,32 @@ template <class... Types>
     class variant
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
 |||
 |-|-|
-|[Variant](#variant)|Costruisce un oggetto di tipo `variant`.|
+|[variant](#variant)|Costruisce un oggetto di tipo `variant`.|
 
 ### <a name="functions"></a>Funzioni
 
 |||
 |-|-|
-|[emplace](#emplace)|Crea un nuovo valore indipendente.|
-|[index](#index)|Restituisce l'indice di un valore indipendente.|
-|[swap](#swap)||
-|[valueless_by_exception](#emplace)|Restituisce **false** se la variante contiene un valore.|
+|[emplace](#emplace)|Crea un nuovo valore contenuto.|
+|[Indice](#index)|Restituisce l'indice di un valore contenuto.|
+|[scambio](#swap)||
+|[valueless_by_exception](#emplace)|Restituisce **`false`** se il VARIANT include un valore.|
 
 ### <a name="operators"></a>Operatori
 
 |||
 |-|-|
-|[operator=](#op_eq)|Sostituisce la variante con una copia di un'altra variante.|
+|[operatore =](#op_eq)|Sostituisce la variante con una copia di un'altra variante.|
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
-Crea un nuovo valore indipendente.
+Crea un nuovo valore contenuto.
 
 ```cpp
 template <class T, class... Args>
@@ -67,17 +67,17 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a> Indice
+## <a name="index"></a><a name="index"></a>Indice
 
-Restituisce l'indice di un valore indipendente.
+Restituisce l'indice di un valore contenuto.
 
 ```cpp
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a> Variant
+## <a name="variant"></a><a name="variant"></a>variante
 
-Costruisce un oggetto di tipo `variant`. Include inoltre un distruttore.
+Costruisce un oggetto di tipo `variant`. Include anche un distruttore.
 
 ```cpp
 constexpr variant() noexcept(see below);
@@ -119,7 +119,7 @@ template <class Alloc, size_t I, class U, class... Args>
 *Al*\
 Classe Allocator da usare con questo oggetto.
 
-## <a name="op_eq"></a> operator=
+## <a name="operator"></a><a name="op_eq"></a>operatore =
 
 Sostituisce la variante con una copia di un'altra variante.
 
@@ -130,15 +130,15 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>scambio
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless"></a> valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
 
-Restituisce **false** se la variante contiene un valore.
+Restituisce **`false`** se il VARIANT include un valore.
 
 ```cpp
 constexpr bool valueless_by_exception() const noexcept;

@@ -4,12 +4,12 @@ description: Elenco di riferimenti in ordine alfabetico delle opzioni della riga
 ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 41a2f6617e879a00101205f3505e70831f9efd50
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180929"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223889"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -37,7 +37,7 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/E`](e-preprocess-to-stdout.md) | Copia l'output del preprocessore in un output standard. |
 | [`/EH`](eh-exception-handling-model.md) | Specifica il modello di gestione delle eccezioni. |
 | [`/EP`](ep-preprocess-to-stdout-without-hash-line-directives.md) | Copia l'output del preprocessore in un output standard. |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Operazione deprecata. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Deprecato. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | Impostare il set di caratteri di esecuzione. |
 | [`/experimental:module`](experimental-module.md) | Abilita il supporto del modulo sperimentale. |
 | [`/experimental:preprocessor`](experimental-preprocessor.md) | Abilita il supporto per il preprocessore conforme sperimentale. |
@@ -59,32 +59,32 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/FU`](fu-name-forced-hash-using-file.md) | Impone l'utilizzo di un nome di file come se fosse stato passato alla [`#using`](../../preprocessor/hash-using-directive-cpp.md) direttiva. |
 | [`/Fx`](fx-merge-injected-code.md) | Unisce il codice inserito al file di origine. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Ottimizza il codice per l'applicazione Windows. |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Usa la convenzione di chiamata `__cdecl` (solo x86). |
-| [`/Ge`](ge-enable-stack-probes.md) | Operazione deprecata. Attiva le ricerche dello stack. |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Usa la **`__cdecl`** convenzione di chiamata (solo x86). |
+| [`/Ge`](ge-enable-stack-probes.md) | Deprecato. Attiva le ricerche dello stack. |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | Attiva la condivisione delle stringhe. |
 | [`/GH`](gh-enable-pexit-hook-function.md) | Chiama la funzione hook `_pexit`. |
 | [`/Gh`](gh-enable-penter-hook-function.md) | Chiama la funzione hook `_penter`. |
 | [`/GL`](gl-whole-program-optimization.md) | Attiva l'ottimizzazione dell'intero programma. |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | Operazione deprecata. Attiva una ricompilazione minima. |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | Deprecato. Attiva una ricompilazione minima. |
 | [`/GR`](gr-enable-run-time-type-information.md) | Attiva RTTI (Run-Time Type Information). |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Usa la convenzione di chiamata `__fastcall` (solo x86). |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Usa la **`__fastcall`** convenzione di chiamata (solo x86). |
 | [`/GS`](gs-buffer-security-check.md) | Inserisce i controlli di sicurezza nel buffer. |
 | [`/Gs`](gs-control-stack-checking-calls.md) | Controlla le ricerche dello stack. |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | Supporta l'indipendenza da fiber per i dati allocati mediante l'archiviazione locale di thread statici. |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | Aggiunge controlli di sicurezza guard del flusso di controllo. |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | Abilita i metadati di continuazione EH. |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Usa la convezione di chiamata `__vectorcall` . (solo x86 e x64) |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Usa la **`__vectorcall`** convenzione di chiamata. (solo x86 e x64) |
 | [`/Gw`](gw-optimize-global-data.md) | Abilita l'ottimizzazione dei dati globale per l'intero programma |
-| [`/GX`](gx-enable-exception-handling.md) | Operazione deprecata. Attiva la gestione sincrona delle eccezioni. In [`/EH`](eh-exception-handling-model.md) alternativa, usare. |
+| [`/GX`](gx-enable-exception-handling.md) | Deprecato. Attiva la gestione sincrona delle eccezioni. In [`/EH`](eh-exception-handling-model.md) alternativa, usare. |
 | [`/Gy`](gy-enable-function-level-linking.md) | Attiva il collegamento a livello di funzione. |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Operazione deprecata. Uguale a [`/RTC1`](rtc-run-time-error-checks.md) . |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Usa la convenzione di chiamata `__stdcall` (solo x86). |
-| [`/H`](h-restrict-length-of-external-names.md) | Operazione deprecata. Limita la lunghezza dei nomi esterni (pubblici). |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Deprecato. Uguale a [`/RTC1`](rtc-run-time-error-checks.md) . |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Usa la **`__stdcall`** convenzione di chiamata (solo x86). |
+| [`/H`](h-restrict-length-of-external-names.md) | Deprecato. Limita la lunghezza dei nomi esterni (pubblici). |
 | [`/HELP`](help-compiler-command-line-help.md) | Elenca le opzioni del compilatore. |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Forza la scrittura di parametri passati nei registri nei rispettivi percorsi nello stack quando vengono immesse funzioni. Questa opzione del compilatore è solo per i compilatori x64 (compilazione nativa e incrociata). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Crea un'immagine con patch a caldo. |
 | [`/I`](i-additional-include-directories.md) | Ricerca i file di inclusione in una directory. |
-| [`/J`](j-default-char-type-is-unsigned.md) | Modifica il tipo `char` predefinito. |
+| [`/J`](j-default-char-type-is-unsigned.md) | Modifica il **`char`** tipo predefinito. |
 | [`/JMC`](jmc.md) | Supporta il debug di Just My Code C++ nativo. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | Il compilatore e il linker creeranno un file binario che può essere eseguito nel kernel di Windows. |
 | [`/LD`](md-mt-ld-use-run-time-library.md) | Crea una libreria a collegamento dinamico. |
@@ -101,7 +101,7 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/O2`](o1-o2-minimize-size-maximize-speed.md) | Effettua creazioni in base alla velocità del codice. |
 | [`/Ob`](ob-inline-function-expansion.md) | Controlla l'espansione inline. |
 | [`/Od`](od-disable-debug.md) | Disabilita l'ottimizzazione. |
-| [`/Og`](og-global-optimizations.md) | Operazione deprecata. Usa le ottimizzazioni globali. |
+| [`/Og`](og-global-optimizations.md) | Deprecato. Usa le ottimizzazioni globali. |
 | [`/Oi`](oi-generate-intrinsic-functions.md) | Genera funzioni intrinseche. |
 | [`/openmp`](openmp-enable-openmp-2-0-support.md) | Abilita la [`#pragma omp`](../../preprocessor/omp.md) direttiva nel codice sorgente. |
 | [`/Os`](os-ot-favor-small-code-favor-fast-code.md) | Ottimizza per dimensione codice. |
@@ -111,8 +111,8 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/P`](p-preprocess-to-a-file.md) | Scrive l'output del preprocessore in un file. |
 | [`/permissive-`](permissive-standards-conformance.md) | Impostare la modalità di conformità standard. |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | Genera funzioni trascendenti veloci. |
-| [`/QIfist`](qifist-suppress-ftol.md) | Operazione deprecata. Elimina `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale (solo x86). |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Rimuove i comandi `fwait` all'interno dei blocchi `try` . |
+| [`/QIfist`](qifist-suppress-ftol.md) | Deprecato. Elimina `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale (solo x86). |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Rimuove i `fwait` comandi all'interno di **`try`** blocchi. |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Attenua l'effetto sulle prestazioni dell'aggiornamento di microcodice cui all'errata Intel CCM. |
 | [/Qpar (parallelizzazione automatica automatico)](qpar-auto-parallelizer.md) | Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop()](../../preprocessor/loop.md) . |
 | [`/Qsafe_fp_loads`](qsafe-fp-loads.md) | Usa istruzioni di spostamento Integer per i valori a virgola mobile e disabilita determinate ottimizzazioni di carico a virgola mobile. |
@@ -132,7 +132,7 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/U`](u-u-undefine-symbols.md) | Rimuove una macro predefinita. |
 | [`/u`](u-u-undefine-symbols.md) | Rimuove tutte le macro predefinite. |
 | [`/utf-8`](utf-8-set-source-and-executable-character-sets-to-utf-8.md) | Imposta i set di caratteri di esecuzione e di origine su UTF-8. |
-| [`/V`](v-version-number.md) | Operazione deprecata. Imposta la stringa di versione del file OBJ. |
+| [`/V`](v-version-number.md) | Deprecato. Imposta la stringa di versione del file OBJ. |
 | [`/validate-charset`](validate-charset-validate-for-compatible-characters.md) | Convalidare i file UTF-8 solo per i caratteri compatibili. |
 | [`/vd`](vd-disable-construction-displacements.md) | Disabilita o abilita i membri della classe vtordisp nascosti. |
 | [`/vmb`](vmb-vmg-representation-method.md) | Usa la base migliore per i puntatori ai membri. |
@@ -149,19 +149,19 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/we`](compiler-option-warning-level.md) | Considera l'avviso specificato come un errore. |
 | [`/WL`](wl-enable-one-line-diagnostics.md) | Attiva la diagnostica a riga singola dei messaggi di errore e di avviso durante la compilazione del codice sorgente C++ dalla riga di comando. |
 | [`/wo`](compiler-option-warning-level.md) | Visualizza l'avviso specificato una sola volta. |
-| [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | Obsoleto. Rileva i problemi di portabilità a 64 bit. |
+| [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | Obsoleta. Rileva i problemi di portabilità a 64 bit. |
 | [`/Wv`](compiler-option-warning-level.md) | Non visualizza avvisi introdotti dopo la versione specificata del compilatore. |
 | [`/WX`](compiler-option-warning-level.md) | Considera tutti gli avvisi come errori. |
 | [`/X`](x-ignore-standard-include-paths.md) | Ignora la directory di inclusione standard. |
 | [`/Y-`](y-ignore-precompiled-header-options.md) | Ignora tutte le altre opzioni del compilatore dell'intestazione precompilata nella generazione corrente. |
 | [`/Yc`](yc-create-precompiled-header-file.md) | Crea un file di intestazione precompilato. |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | Operazione deprecata. Inserisce informazioni di debug complete in tutti i file oggetto. In [`/Zi`](z7-zi-zi-debug-information-format.md) alternativa, usare. |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | Deprecato. Inserisce informazioni di debug complete in tutti i file oggetto. In [`/Zi`](z7-zi-zi-debug-information-format.md) alternativa, usare. |
 | [`/Yl`](yl-inject-pch-reference-for-debug-library.md) | Inserisce un riferimento PCH durante la creazione di una libreria di debug |
 | [`/Yu`](yu-use-precompiled-header-file.md) | Usa un file di intestazione precompilato durante la compilazione. |
 | [`/Z7`](z7-zi-zi-debug-information-format.md) | Genera informazioni di debug compatibili con C 7,0. |
 | [`/Za`](za-ze-disable-language-extensions.md) | Disabilita le estensioni del linguaggio. |
 | [`/Zc`](zc-conformance.md) | Specifica i comportamenti standard. |
-| [`/Ze`](za-ze-disable-language-extensions.md) | Operazione deprecata. Attiva le estensioni del linguaggio. |
+| [`/Ze`](za-ze-disable-language-extensions.md) | Deprecato. Attiva le estensioni del linguaggio. |
 | [`/Zf`](zf.md) | Migliora il tempo di generazione PDB nelle compilazioni parallele. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Rimosso in Visual Studio 2015. Genera prototipi di funzione. |
 | [`/ZH`](zh.md) | Specifica MD5, SHA-1 o SHA-256 per i checksum nelle informazioni di debug. |

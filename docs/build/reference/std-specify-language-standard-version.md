@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: ddb0fc9ad4880ed317a28d7aec5eba1669eabbc5
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507066"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223824"
 ---
-# <a name="std-specify-language-standard-version"></a>/std (specifica la versione standard del linguaggio)
+# <a name="std-specify-language-standard-version"></a>`/std`(Specifica la versione standard del linguaggio)
 
 Abilita le funzionalità supportate del linguaggio C++ dalla versione specificata dello standard del linguaggio C++.
 
@@ -29,9 +29,9 @@ L' **`/std`** opzione è disponibile in Visual Studio 2017 e versioni successive
 
 L' **`/std:c++14`** opzione predefinita abilita il set di funzionalità c++ 14 implementate dal compilatore MSVC. Questa opzione Disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni più recenti dello standard del linguaggio. Non Disabilita alcune funzionalità di C++ 17 già implementate nelle versioni precedenti del compilatore MSVC. Per evitare modifiche di rilievo per gli utenti che hanno già eseguito dipendenze dalle funzionalità disponibili in o prima di Visual Studio 2015 Update 2, queste funzionalità restano abilitate quando **`/std:c++14`** si specifica l'opzione:
 
-- [Regole per la deduzione automatica con braced-init-list](https://wg21.link/n3922)
+- [Regole per `auto` with braced-init-lists](https://wg21.link/n3922)
 
-- [typename nei parametri di modello template](https://wg21.link/n4051)
+- [`typename`in Template Template-Parameters](https://wg21.link/n4051)
 
 - [Rimozione di trigrammi](https://wg21.link/n4086)
 

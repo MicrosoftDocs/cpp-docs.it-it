@@ -1,17 +1,17 @@
 ---
-title: db_table (C++ attributo com)
+title: db_table (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e05a980764b8b97f6c774165fdddd5428a0c989
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167251"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215283"
 ---
 # <a name="db_table"></a>db_table
 
@@ -34,7 +34,7 @@ Opzionale Nome dell'handle usato per lavorare con la tabella. È necessario spec
 *source_name*<br/>
 (Facoltativo) La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](db-source.md).
 
-*hresult*<br/>
+*HRESULT*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
 ## <a name="remarks"></a>Osservazioni
@@ -45,7 +45,7 @@ Quando il provider di attributi del consumer applica questo attributo a una clas
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene aperta la tabella Products per l'utilizzo da parte di `CProducts`.
+Nell'esempio seguente viene aperta la tabella Products per l'utilizzo da parte di `CProducts` .
 
 ```cpp
 // db_table.cpp
@@ -68,10 +68,10 @@ Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](
 
 |||
 |-|-|
-|**Si applica a**|**classe**, **struct**|
+|**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

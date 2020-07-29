@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 412dc8426112e65d00b572a65f064667d2709a0d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0afeea71daf8358b2aeeefe8d368c135a54a6ad6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620777"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222628"
 ---
 # <a name="add_cv-class"></a>Classe add_cv
 
-Crea il tipo **const volatile** dal tipo.
+Crea il **`const volatile`** tipo dal tipo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +35,7 @@ Tipo da modificare.
 
 ## <a name="remarks"></a>Osservazioni
 
-Un'istanza del tipo modificato `add_cv<T>` ha un `type` **typedef** membro equivalente a *t* modificato da [Add_volatile](add-volatile-class.md) e [add_const](add-const-class.md), a meno che *T* non abbia già i qualificatori CV, è un riferimento o è una funzione.
+Un'istanza del tipo modificato `add_cv<T>` ha un `type` membro **`typedef`** equivalente a *t* modificato da [add_volatile](add-volatile-class.md) e [add_const](add-const-class.md), a meno che *T* non abbia già i qualificatori CV, è un riferimento o è una funzione.
 
 Il tipo di helper `add_cv_t<T>` è un collegamento per l'accesso al typedef del membro `add_cv<T>``type`.
 

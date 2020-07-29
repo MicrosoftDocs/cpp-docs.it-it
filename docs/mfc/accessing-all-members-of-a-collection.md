@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616488"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214178"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accesso a tutti i membri di una raccolta
 
@@ -42,11 +42,11 @@ Le procedure seguenti mostrano come eseguire un'iterazione sui tre tipi principa
 
    In questo esempio si usa una matrice con puntatore tipizzato che contiene puntatori agli oggetti `CPerson` . La matrice è derivata dalla classe `CObArray`, una delle classi predefinite non basate su modelli. `GetAt` restituisce un puntatore a un oggetto `CPerson` . Per le classi di raccolte con puntatore tipizzato, ovvero matrici o elenchi, il primo parametro specifica la classe base e il secondo specifica il tipo da memorizzare.
 
-   La `CTypedPtrArray` classe esegue anche l'overload dell'operatore **[]** in modo che sia possibile utilizzare la sintassi della matrice di pedice personalizzata per accedere agli elementi di una matrice. Un'alternativa all'istruzione nel corpo del ciclo **for** precedente è
+   La `CTypedPtrArray` classe esegue anche l'overload dell'operatore **[]** in modo che sia possibile utilizzare la sintassi della matrice di pedice personalizzata per accedere agli elementi di una matrice. Un'alternativa all'istruzione nel corpo del **`for`** ciclo precedente è
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   Questo operatore è disponibile in entrambe le versioni **const** e non**const** . La versione **const** , che viene richiamata per le matrici **const** , può apparire solo sul lato destro di un'istruzione di assegnazione.
+   Questo operatore esiste sia in **`const`** che in versioni diverse da **`const`** . La **`const`** versione, che viene richiamata per le **`const`** matrici, può apparire solo sul lato destro di un'istruzione di assegnazione.
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> Per eseguire un'iterazione su un elenco
 

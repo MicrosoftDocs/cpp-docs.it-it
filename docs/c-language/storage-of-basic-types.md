@@ -21,14 +21,14 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-ms.openlocfilehash: 64c642df4dd85e4aa09f90a143b8aa67c28b7dc2
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 973866a912b694510d587df765ac8dd54176638e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998768"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211671"
 ---
-# <a name="storage-of-basic-types"></a>Archiviazione di tipi di base
+# <a name="storage-of-basic-types"></a>Archiviazione dei tipi di base
 
 Nella tabella seguente viene riepilogata l'archiviazione associata a ogni tipo di base.
 
@@ -36,16 +36,16 @@ Nella tabella seguente viene riepilogata l'archiviazione associata a ogni tipo d
 
 |Type|Archiviazione|
 |----------|-------------|
-|**char**, **unsigned char**, **signed char**|1 byte|
-|**short**, **unsigned short**|2 byte|
-|**int**, **unsigned int**|4 byte|
-|**long**, **unsigned long**|4 byte|
-|Long **Long**, **unsigned** Long Long|8 byte|
-|**float**|4 byte|
-|**double**|8 byte|
-|**long double**|8 byte|
+|**`char`**, **`unsigned char`**, **`signed char`**|1 byte|
+|**`short`**, **`unsigned short`**|2 byte|
+|**`int`**, **`unsigned int`**|4 byte|
+|**`long`**, **`unsigned long`**|4 byte|
+|**`long long`**, **`unsigned long long`**|8 byte|
+|**`float`**|4 byte|
+|**`double`**|8 byte|
+|**`long double`**|8 byte|
 
-I tipi di dati C possono essere suddivisi in categorie generali. I *tipi integrali* includono **int**, **char**, **short**, **Long**e **Long Long**. Questi tipi possono essere **qualificati con segno o senza** **segno**e **senza** segno da solo possono essere usati come abbreviazione per **int senza segno**. I tipi di enumerazione (**enum**) vengono considerati anche come tipi integrali per la maggior parte degli scopi. I *tipi a virgola mobile* sono **float**, **Double**e **long double**. I *tipi aritmetici* includono tutti i tipi a virgola mobile e integrali.
+I tipi di dati C possono essere suddivisi in categorie generali. I *tipi integrali* includono **`int`** ,,, **`char`** **`short`** **`long`** e **`long long`** . Questi tipi possono essere qualificati con **`signed`** o **`unsigned`** e **`unsigned`** possono essere usati come sintassi abbreviata per **`unsigned int`** . I tipi di enumerazione ( **`enum`** ) vengono considerati anche come tipi integrali per la maggior parte degli scopi. I *tipi a virgola mobile* sono **`float`** , **`double`** e **`long double`** . I *tipi aritmetici* includono tutti i tipi a virgola mobile e integrali.
 
 ## <a name="see-also"></a>Vedere anche
 

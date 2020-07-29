@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 07b4c6e0821c925e70ce1bce1d910f184d658982
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f09a15fd4c115a764f9bf738a00e1b977786397a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163612"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223304"
 ---
 # <a name="compiler-warning-level-1-c4154"></a>Avviso del compilatore (livello 1) C4154
 
 eliminazione di un'espressione di matrice; conversione in puntatore fornito
 
-Non è possibile usare `delete` su una matrice, in modo che il compilatore converta la matrice in un puntatore.
+Non è possibile usare **`delete`** in una matrice, quindi il compilatore converte la matrice in un puntatore.
 
 ## <a name="example"></a>Esempio
 

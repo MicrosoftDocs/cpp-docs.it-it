@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9d84cdbecb7cc6d39cb30077780c558db85888c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422290"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222719"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo
 
@@ -24,7 +24,7 @@ Sebbene l'ordinamento bitonic sia un esempio di una *rete di ordinamento* che or
 > [!NOTE]
 > In questo esempio viene utilizzata, a scopo illustrativo, una routine di ordinamento in parallelo. È inoltre possibile utilizzare gli algoritmi di ordinamento predefiniti che la libreria PPL fornisce: [concorrenza::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concorrenza::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)e [concorrenza::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Per ulteriori informazioni, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="top"></a> Sezioni
+## <a name="sections"></a><a name="top"></a>Sezioni
 
 In questo documento vengono descritte le attività seguenti:
 
@@ -32,41 +32,41 @@ In questo documento vengono descritte le attività seguenti:
 
 - [Uso di parallel_invoke per eseguire l'ordinamento bitonic in parallelo](#parallel)
 
-## <a name="serial"></a>Esecuzione seriale di un ordinamento bitonic
+## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a>Esecuzione seriale di un ordinamento bitonic
 
-Nell'esempio seguente viene illustrata la versione seriale dell'algoritmo di ordinamento bitonico. La funzione `bitonic_sort` divide la sequenza in due partizioni, Ordina le partizioni in direzioni opposte, quindi unisce i risultati. Questa funzione chiama se stessa due volte in modo ricorsivo per ordinare ogni partizione.
+Nell'esempio seguente viene illustrata la versione seriale dell'algoritmo di ordinamento bitonico. La `bitonic_sort` funzione divide la sequenza in due partizioni, Ordina le partizioni in direzioni opposte, quindi unisce i risultati. Questa funzione chiama se stessa due volte in modo ricorsivo per ordinare ogni partizione.
 
 [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]
 
-[[Torna all'inizio](#top)]
+[All'[inizio](#top)]
 
-## <a name="parallel"></a>Uso di parallel_invoke per eseguire l'ordinamento bitonic in parallelo
+## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a>Uso di parallel_invoke per eseguire l'ordinamento bitonic in parallelo
 
-In questa sezione viene descritto come utilizzare l'algoritmo `parallel_invoke` per eseguire l'algoritmo di ordinamento bitonico in parallelo.
+In questa sezione viene descritto come utilizzare l' `parallel_invoke` algoritmo per eseguire l'algoritmo di ordinamento bitonico in parallelo.
 
 ### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>Per eseguire l'algoritmo di ordinamento bitonico in parallelo
 
-1. Aggiungere una direttiva `#include` per il file di intestazione ppl. h.
+1. Aggiungere una `#include` direttiva per il file di intestazione ppl. h.
 
 [!code-cpp[concrt-parallel-bitonic-sort#10](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_2.cpp)]
 
-1. Aggiungere una direttiva `using` per lo spazio dei nomi `concurrency`.
+1. Aggiungere una **`using`** direttiva per lo `concurrency` spazio dei nomi.
 
 [!code-cpp[concrt-parallel-bitonic-sort#11](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_3.cpp)]
 
-1. Creare una nuova funzione, denominata `parallel_bitonic_mege`, che usa l'algoritmo `parallel_invoke` per unire le sequenze in parallelo se è presente una quantità di lavoro sufficiente. In caso contrario, chiamare `bitonic_merge` per unire le sequenze in modo seriale.
+1. Creare una nuova funzione, denominata `parallel_bitonic_mege` , che usa l' `parallel_invoke` algoritmo per unire le sequenze in parallelo se è presente una quantità di lavoro sufficiente. In caso contrario, chiamare `bitonic_merge` per unire le sequenze in modo seriale.
 
 [!code-cpp[concrt-parallel-bitonic-sort#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_4.cpp)]
 
-1. Eseguire un processo simile a quello del passaggio precedente, ma per la funzione `bitonic_sort`.
+1. Eseguire un processo simile a quello del passaggio precedente, ma per la `bitonic_sort` funzione.
 
 [!code-cpp[concrt-parallel-bitonic-sort#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_5.cpp)]
 
-1. Creare una versione di overload della funzione `parallel_bitonic_sort` che ordina la matrice in ordine crescente.
+1. Creare una versione di overload della `parallel_bitonic_sort` funzione che ordina la matrice in ordine crescente.
 
 [!code-cpp[concrt-parallel-bitonic-sort#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_6.cpp)]
 
-L'algoritmo `parallel_invoke` riduce l'overhead eseguendo l'ultima serie di attività nel contesto chiamante. Nella funzione `parallel_bitonic_sort`, ad esempio, la prima attività viene eseguita in un contesto separato e la seconda attività viene eseguita nel contesto chiamante.
+L' `parallel_invoke` algoritmo riduce l'overhead eseguendo l'ultima serie di attività nel contesto chiamante. Nella funzione, ad esempio, `parallel_bitonic_sort` la prima attività viene eseguita in un contesto separato e la seconda attività viene eseguita nel contesto chiamante.
 
 [!code-cpp[concrt-parallel-bitonic-sort#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_7.cpp)]
 
@@ -81,19 +81,19 @@ serial time: 4353
 parallel time: 1248
 ```
 
-[[Torna all'inizio](#top)]
+[All'[inizio](#top)]
 
 ### <a name="compiling-the-code"></a>Compilazione del codice
 
-Per compilare il codice, copiarlo e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-bitonic-sort.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
+Per compilare il codice, copiarlo e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato, `parallel-bitonic-sort.cpp` quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-> **CL. exe/EHsc bitonic. cpp**
+> **cl.exe/EHsc bitonic. cpp**
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
-In questo esempio viene utilizzato l'algoritmo `parallel_invoke` invece della classe [Concurrency:: task_group](reference/task-group-class.md) perché la durata di ogni gruppo di attività non si estende oltre una funzione. Si consiglia di utilizzare `parallel_invoke` quando è possibile, in quanto dispone di un sovraccarico di esecuzione inferiore rispetto a `task group` oggetti e pertanto consente di scrivere codice con prestazioni migliori.
+Questo esempio usa l' `parallel_invoke` algoritmo invece della classe [Concurrency:: task_group](reference/task-group-class.md) perché la durata di ogni gruppo di attività non si estende oltre una funzione. Si consiglia di utilizzare `parallel_invoke` quando è possibile, perché il sovraccarico di esecuzione è inferiore a quello `task group` degli oggetti e pertanto è possibile scrivere codice con prestazioni migliori.
 
-Le versioni parallele di alcuni algoritmi sono migliori solo quando è necessario eseguire operazioni sufficienti. Ad esempio, la funzione `parallel_bitonic_merge` chiama la versione seriale `bitonic_merge`, se la sequenza contiene 500 o meno elementi. È anche possibile pianificare la strategia di ordinamento globale in base alla quantità di lavoro. Ad esempio, potrebbe essere più efficiente usare la versione seriale dell'algoritmo di ordinamento rapido se la matrice contiene meno di 500 elementi, come illustrato nell'esempio seguente:
+Le versioni parallele di alcuni algoritmi sono migliori solo quando è necessario eseguire operazioni sufficienti. Ad esempio, la `parallel_bitonic_merge` funzione chiama la versione seriale, `bitonic_merge` , se la sequenza contiene 500 o meno elementi. È anche possibile pianificare la strategia di ordinamento globale in base alla quantità di lavoro. Ad esempio, potrebbe essere più efficiente usare la versione seriale dell'algoritmo di ordinamento rapido se la matrice contiene meno di 500 elementi, come illustrato nell'esempio seguente:
 
 [!code-cpp[concrt-parallel-bitonic-sort#9](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_9.cpp)]
 
