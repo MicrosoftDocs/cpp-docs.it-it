@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404024"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232365"
 ---
 # <a name="annotating-locking-behavior"></a>Annotazione del comportamento di blocco
 
@@ -116,7 +116,7 @@ I blocchi intelligenti in genere avvolgono i blocchi nativi e ne gestiscono la d
 |`_Moves_lock_(target, source)`|Descrive `move constructor` l'operazione che trasferisce lo stato di blocco dall' `source` oggetto a `target` . `target`Viene considerato un oggetto appena costruito, quindi qualsiasi stato precedente viene perso e sostituito con lo `source` stato. `source`Viene inoltre reimpostato sullo stato Clean senza conteggi dei blocchi o destinazioni di aliasing, ma gli alias che vi fanno riferimento rimangono invariati.|
 |`_Replaces_lock_(target, source)`|Descrive la `move assignment operator` semantica in cui viene rilasciato il blocco di destinazione prima di trasferire lo stato dall'origine. Questo può essere considerato come una combinazione di `_Moves_lock_(target, source)` preceduta da un `_Releases_lock_(target)` .|
 |`_Swaps_locks_(left, right)`|Descrive il `swap` comportamento standard che presuppone che gli oggetti `left` e `right` scambino il proprio stato. Lo stato scambiato include il conteggio dei blocchi e la destinazione di alias, se presenti. Gli alias che puntano agli `left` `right` oggetti e rimangono invariati.|
-|`_Detaches_lock_(detached, lock)`|Descrive uno scenario in cui un tipo di wrapper di blocco consente la dissociazione con la relativa risorsa contenuta. Questo approccio è simile al `std::unique_ptr` funzionamento con il puntatore interno: consente ai programmatori di estrarre il puntatore e lasciare il contenitore del puntatore intelligente in uno stato pulito. Una logica simile è supportata da `std::unique_lock` e può essere implementata nei wrapper di blocco personalizzati. Il blocco scollegato mantiene il proprio stato (se presente, il numero di blocchi e la destinazione di aliasing), mentre il wrapper viene reimpostato in modo da contenere zero blocchi e nessuna destinazione di alias, mantenendo i propri alias. Non viene eseguita alcuna operazione sui conteggi dei blocchi (rilascio e acquisizione). Questa annotazione si comporta esattamente come `_Moves_lock_` ad eccezione del fatto che l'argomento scollegato deve essere `return` anziché `this` .|
+|`_Detaches_lock_(detached, lock)`|Descrive uno scenario in cui un tipo di wrapper di blocco consente la dissociazione con la relativa risorsa contenuta. Questo approccio è simile al `std::unique_ptr` funzionamento con il puntatore interno: consente ai programmatori di estrarre il puntatore e lasciare il contenitore del puntatore intelligente in uno stato pulito. Una logica simile è supportata da `std::unique_lock` e può essere implementata nei wrapper di blocco personalizzati. Il blocco scollegato mantiene il proprio stato (se presente, il numero di blocchi e la destinazione di aliasing), mentre il wrapper viene reimpostato in modo da contenere zero blocchi e nessuna destinazione di alias, mantenendo i propri alias. Non viene eseguita alcuna operazione sui conteggi dei blocchi (rilascio e acquisizione). Questa annotazione si comporta esattamente come `_Moves_lock_` ad eccezione del fatto che l'argomento scollegato deve essere **`return`** anziché **`this`** .|
 
 ## <a name="see-also"></a>Vedere anche
 

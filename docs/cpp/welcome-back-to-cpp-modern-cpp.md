@@ -1,17 +1,17 @@
 ---
-title: C++-c++ moderno
+title: Bentornato in C++ - C++ moderno
 description: Vengono descritti i nuovi idiomi di programmazione in C++ moderno e la relativa logica.
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 76ac17e71368cdeee669b98505778838ef0dfee7
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550797"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232196"
 ---
-# <a name="welcome-back-to-c---modern-c"></a>C++-c++ moderno
+# <a name="welcome-back-to-c---modern-c"></a>Bentornato in C++ - C++ moderno
 
 Dal momento della creazione, C++ è diventato uno dei linguaggi di programmazione più diffusi nel mondo. I programmi in C++ ben scritti sono veloci ed efficienti. Il linguaggio è più flessibile di altri linguaggi, ovvero può funzionare ai massimi livelli di astrazione e al livello del silicio. C++ fornisce librerie standard altamente ottimizzate. Consente l'accesso a funzionalità hardware di basso livello, per ottimizzare la velocità e ridurre al minimo i requisiti di memoria. Con C++ è possibile creare un'ampia gamma di app. Giochi, driver di dispositivo e software scientifico a elevate prestazioni. Programmi incorporati. App client di Windows. Anche le librerie e i compilatori per altri linguaggi di programmazione vengono scritti in C++.
 
@@ -115,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>Cicli basati su intervallo `for`
 
-L'iterazione in stile C su matrici e contenitori è soggetta a errori di indicizzazione ed è anche noiosa per il tipo. Per eliminare questi errori e rendere il codice più leggibile, usare cicli basati su intervallo `for` con i contenitori della libreria standard e le matrici non elaborate. Per altre informazioni, vedere [ `for` istruzione basata sull'intervallo](../cpp/range-based-for-statement-cpp.md).
+L'iterazione in stile C su matrici e contenitori è soggetta a errori di indicizzazione ed è anche noiosa per il tipo. Per eliminare questi errori e rendere il codice più leggibile, usare cicli basati su intervallo **`for`** con i contenitori della libreria standard e le matrici non elaborate. Per altre informazioni, vedere [ `for` istruzione basata sull'intervallo](../cpp/range-based-for-statement-cpp.md).
 
 ```cpp
 #include <iostream>
@@ -200,7 +200,7 @@ Nella programmazione di tipo C, una funzione può essere passata a un'altra funz
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-L'espressione lambda `[=](int i) { return i > x && i < y; }` può essere letta come "funzione che accetta un solo argomento di tipo `int` e restituisce un valore booleano che indica se l'argomento è maggiore di `x` e minore di `y` ". Si noti che le variabili `x` e `y` dal contesto circostante possono essere utilizzate nell'espressione lambda. `[=]`Specifica che tali variabili vengono *acquisite* in base al valore. in altre parole, l'espressione lambda ha copie proprie di tali valori.
+L'espressione lambda `[=](int i) { return i > x && i < y; }` può essere letta come "funzione che accetta un solo argomento di tipo **`int`** e restituisce un valore booleano che indica se l'argomento è maggiore di `x` e minore di `y` ". Si noti che le variabili `x` e `y` dal contesto circostante possono essere utilizzate nell'espressione lambda. `[=]`Specifica che tali variabili vengono *acquisite* in base al valore. in altre parole, l'espressione lambda ha copie proprie di tali valori.
 
 ## <a name="exceptions"></a>Eccezioni
 

@@ -2,16 +2,16 @@
 title: char, wchar_t, char16_t, char32_t
 ms.date: 02/14/2018
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-ms.openlocfilehash: 8d109ec452df33b774848229837ed3e2eae80dc4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6efbae1b8f6155410b823f1abef35c3dec90d458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232339"
 ---
 # <a name="char-wchar_t-char16_t-char32_t"></a>char, wchar_t, char16_t, char32_t
 
-I tipi **char**, **wchar_t**, **char16_t** e **char32_t** sono tipi incorporati che rappresentano caratteri alfanumerici, oltre a glifi non alfanumerici e caratteri non stampabili.
+I tipi **`char`** , **`wchar_t`** **`char16_t`** e **`char32_t`** sono tipi incorporati che rappresentano caratteri alfanumerici, nonché glifi non alfanumerici e caratteri non stampabili.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,10 +24,10 @@ char32_t ch4{ U'a' };
 
 ## <a name="remarks"></a>Osservazioni
 
-Il tipo **char** è il tipo di carattere originale in C C++e. Il tipo **unsigned char** viene spesso usato per rappresentare un *byte*, che non è un tipo incorporato in C++. Il tipo **char** può essere usato per archiviare caratteri dal set di caratteri ASCII o da uno qualsiasi dei set di caratteri ISO-8859 e da singoli byte di caratteri multibyte come Shift-JIS o la codifica UTF-8 del set di caratteri Unicode. Le stringhe di tipo **char** sono denominate stringhe *strette* , anche quando vengono usate per codificare i caratteri multibyte. Nel compilatore Microsoft **char** è un tipo a 8 bit.
+Il **`char`** tipo è il tipo di carattere originale in C e C++. Il tipo **`unsigned char`** viene spesso usato per rappresentare un *byte*, che non è un tipo incorporato in C++. Il **`char`** tipo può essere usato per archiviare caratteri dal set di caratteri ASCII o da uno qualsiasi dei set di caratteri ISO-8859 e da singoli byte di caratteri multibyte, ad esempio Shift-JIS o la codifica UTF-8 del set di caratteri Unicode. Le stringhe di **`char`** tipo sono denominate stringhe *strette* , anche quando vengono usate per codificare i caratteri multibyte. Nel compilatore Microsoft **`char`** è un tipo a 8 bit.
 
-Il tipo di **wchar_t** è un tipo di carattere wide definito dall'implementazione. Nel compilatore Microsoft, rappresenta un carattere wide a 16 bit utilizzato per archiviare Unicode codificato come UTF-16LE, il tipo di carattere nativo nei sistemi operativi Windows. Le versioni a caratteri wide delle funzioni della libreria UCRT (Universal C Runtime) usano **wchar_t** e i relativi tipi di puntatore e matrice come parametri e valori restituiti, così come le versioni a caratteri wide dell'API Windows nativa.
+Il **`wchar_t`** tipo è un tipo di carattere wide definito dall'implementazione. Nel compilatore Microsoft, rappresenta un carattere wide a 16 bit utilizzato per archiviare Unicode codificato come UTF-16LE, il tipo di carattere nativo nei sistemi operativi Windows. Le versioni a caratteri wide delle funzioni della libreria di Universal C Runtime (UCRT) usano **`wchar_t`** e i relativi tipi di puntatore e matrice come parametri e valori restituiti, così come le versioni a caratteri wide dell'API Windows nativa.
 
-I tipi **char16_t** e **char32_t** rappresentano rispettivamente caratteri wide a 16 bit e a 32 bit. Il formato Unicode codificato come UTF-16 può essere archiviato nel tipo di **char16_t** e il formato Unicode codificato come utf-32 può essere archiviato nel tipo di **char32_t** . Le stringhe di questi tipi e **wchar_t** sono tutte denominate stringhe *Wide* , sebbene il termine faccia spesso riferimento in modo specifico alle stringhe di tipo **wchar_t** .
+I **`char16_t`** **`char32_t`** tipi e rappresentano rispettivamente caratteri wide a 16 bit e a 32 bit. Unicode codificata come UTF-16 può essere archiviato nel **`char16_t`** tipo e Unicode codificato come UTF-32 può essere archiviato nel **`char32_t`** tipo. Le stringhe di questi tipi e **`wchar_t`** sono tutte denominate stringhe *Wide* , sebbene il termine faccia spesso riferimento in modo specifico alle stringhe di **`wchar_t`** tipo.
 
-Nella libreria C++ standard, il tipo di `basic_string` è specializzato per le stringhe narrow e Wide. Utilizzare `std::string` quando i caratteri sono di tipo **char**, `std::u16string` quando i caratteri sono di tipo **char16_t**, `std::u32string` quando i caratteri sono di tipo **char32_t**e `std::wstring` quando i caratteri sono di tipo **wchar_t**. Altri tipi che rappresentano testo, inclusi `std::stringstream` e `std::cout` hanno specializzazioni per le stringhe narrow e Wide.
+Nella libreria standard C++, il `basic_string` tipo è specializzato per le stringhe narrow e Wide. Utilizzare `std::string` quando i caratteri sono di tipo **`char`** , `std::u16string` quando i caratteri sono di tipo **`char16_t`** , `std::u32string` quando i caratteri sono di tipo **`char32_t`** e `std::wstring` quando i caratteri sono di tipo **`wchar_t`** . Altri tipi che rappresentano testo, inclusi `std::stringstream` e `std::cout` hanno specializzazioni per le stringhe narrow e Wide.

@@ -1,19 +1,19 @@
 ---
-title: Modelli di funzione
+title: Modelli di funzioni
 ms.date: 07/15/2019
 helpviewer_keywords:
 - function templates
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179744"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232287"
 ---
-# <a name="function-templates"></a>Modelli di funzione
+# <a name="function-templates"></a>Modelli di funzioni
 
 I modelli di classe definiscono un gruppo di classi correlate, basate sugli argomenti tipo passati alla classe mediante la creazione di istanze. I modelli di funzione sono simili ai modelli di classe ma definiscono un gruppo di funzioni. Con i modelli di funzione è possibile specificare un set di funzioni basate sullo stesso codice, ma che agiscono su tipi o classi differenti. Il modello di funzione seguente scambia due elementi:
 
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-Questo codice definisce un gruppo di funzioni che scambiano i valori degli argomenti. Da questo modello è possibile generare funzioni che sostituiscono i tipi **int** e **Long** e anche i tipi definiti dall'utente. `MySwap` scambia anche le classi se il costruttore di copia e l'operatore di assegnazione della classe sono definiti correttamente.
+Questo codice definisce un gruppo di funzioni che scambiano i valori degli argomenti. Da questo modello è possibile generare funzioni che sostituiscono i **`int`** **`long`** tipi e e anche i tipi definiti dall'utente. `MySwap` scambia anche le classi se il costruttore di copia e l'operatore di assegnazione della classe sono definiti correttamente.
 
 Inoltre, il modello di funzione impedisce lo scambio di oggetti di tipi diversi, perché il compilatore conosce i tipi dei parametri *a* e *b* in fase di compilazione.
 
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-Quando un argomento di modello è specificato in modo esplicito, le normali conversioni implicite vengono effettuate per convertire l'argomento della funzione nel tipo dei parametri del modello di funzione corrispondente. Nell'esempio precedente, il compilatore convertirà `j` nel tipo **char**.
+Quando un argomento di modello è specificato in modo esplicito, le normali conversioni implicite vengono effettuate per convertire l'argomento della funzione nel tipo dei parametri del modello di funzione corrispondente. Nell'esempio precedente, il compilatore eseguirà la conversione nel `j` tipo **`char`** .
 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli](../cpp/templates-cpp.md)<br/>
 [Creazione di istanze di modelli di funzione](../cpp/function-template-instantiation.md)<br/>
 [Creazione di un'istanza esplicita](../cpp/explicit-instantiation.md)<br/>
-[Specializzazione esplicita di modelli di funzioni](../cpp/explicit-specialization-of-function-templates.md)
+[Specializzazione esplicita di modelli di funzione](../cpp/explicit-specialization-of-function-templates.md)

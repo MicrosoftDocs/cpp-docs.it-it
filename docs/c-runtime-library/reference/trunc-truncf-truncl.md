@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946002"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232391"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -68,17 +68,17 @@ Se ha esito positivo, restituisce un valore intero pari a *x*, arrotondato per e
 
 In caso contrario, può restituire uno dei valori seguenti:
 
-|Problema|INVIO|
+|Problema|Return|
 |-----------|------------|
-|*x* = ±INFINITY|x|
-|*x* =  ±0|x|
-|*x* = NaN|NaN|
+|*x* = ± infinito|x|
+|*x* = ± 0|x|
+|*x* = Nan|NaN|
 
-Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
+Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tronca** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C, **Tronca** accetta e restituisce sempre un **valore Double**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tronca** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, **Tronca** accetta sempre e restituisce un **`double`** .
 
 Poiché i valori a virgola mobile più grandi sono numeri interi esatti, questa funzione non genererà un overflow autonomamente. Tuttavia, è possibile causare l'overflow della funzione restituendo un valore in un tipo Integer.
 
@@ -88,7 +88,7 @@ Poiché i valori a virgola mobile più grandi sono numeri interi esatti, questa 
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
-|**trunc**, **truncf**, **truncl**|\<math.h>|\<cmath>|
+|**Tronca**, **truncf**, **truncl**|\<math.h>|\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

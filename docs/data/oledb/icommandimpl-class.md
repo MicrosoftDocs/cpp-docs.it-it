@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212162"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232157"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `ICommandImpl`.
+Classe derivata da `ICommandImpl` .
 
 *CommandBase*<br/>
 Interfaccia di comando. Il valore predefinito è `ICommand`.
@@ -81,7 +81,7 @@ Interfaccia di comando. Il valore predefinito è `ICommand`.
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
@@ -90,7 +90,7 @@ Interfaccia di comando. Il valore predefinito è `ICommand`.
 |[Annulla](#cancel)|Annulla l'esecuzione del comando corrente.|
 |[CancelExecution](#cancelexecution)|Annulla l'esecuzione del comando corrente.|
 |[CreateRowset](#createrowset)|Crea un oggetto set di righe.|
-|[Eseguire](#execute)|Esegue il comando.|
+|[Eseguire](#execute)|Viene eseguito il comando.|
 |[GetDBSession](#getdbsession)|Restituisce un puntatore a interfaccia per la sessione che ha creato il comando.|
 |[ICommandImpl](#icommandimpl)|Costruttore.|
 
@@ -152,36 +152,36 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 Membro della classe modello che rappresenta la classe del set di righe dell'utente. Generalmente generato dalla procedura guidata.
 
 *pUnkOuter*<br/>
-in Puntatore all'interfaccia di controllo `IUnknown` se il set di righe viene creato come parte di un'aggregazione. in caso contrario, è null.
+in Puntatore all'interfaccia di controllo `IUnknown` se il set di righe viene creato come parte di un'aggregazione; in caso contrario, è null.
 
 *riid*<br/>
-in Corrisponde a *riid* in `ICommand::Execute`.
+in Corrisponde a *riid* in `ICommand::Execute` .
 
 *pParams*<br/>
-[in/out] Corrisponde a *pParams* in `ICommand::Execute`.
+[in/out] Corrisponde a *pParams* in `ICommand::Execute` .
 
 *pcRowsAffected*<br/>
-Corrisponde a *pcRowsAffected* in `ICommand::Execute`.
+Corrisponde a *pcRowsAffected* in `ICommand::Execute` .
 
 *ppRowset*<br/>
-[in/out] Corrisponde a *ppRowset* in `ICommand::Execute`.
+[in/out] Corrisponde a *ppRowset* in `ICommand::Execute` .
 
 *pRowsetObj*<br/>
 out Puntatore a un oggetto set di righe. In genere, questo parametro non viene utilizzato, ma può essere utilizzato se è necessario eseguire più operazioni sul set di righe prima di passarlo a un oggetto COM. Il ciclo di vita di *pRowsetObj* è associato a *ppRowset*.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore HRESULT standard. Per un elenco di valori tipici, vedere `ICommand::Execute`.
+Valore HRESULT standard. `ICommand::Execute`Per un elenco di valori tipici, vedere.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per creare più di un set di righe o per fornire condizioni personalizzate per la creazione di set di righe diversi, effettuare chiamate diverse a `CreateRowset` dall'interno `Execute`.
+Per creare più di un set di righe o per fornire condizioni personalizzate per la creazione di set di righe diversi, effettuare chiamate diverse a `CreateRowset` dall'interno di `Execute` .
 
 Vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB.*
 
 ## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl:: Execute
 
-Esegue il comando.
+Viene eseguito il comando.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -201,7 +201,7 @@ Vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)
 
 L'interfaccia in uscita richiesta sarà un'interfaccia acquisita dall'oggetto set di righe creato da questa funzione.
 
-`Execute` chiama [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Eseguire l'override dell'implementazione predefinita per creare più di un set di righe o fornire condizioni personalizzate per la creazione di set di righe diversi.
+`Execute`chiama [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Eseguire l'override dell'implementazione predefinita per creare più di un set di righe o fornire condizioni personalizzate per la creazione di set di righe diversi.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
 
@@ -244,7 +244,7 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>Osservazioni
 
-È possibile recuperare questa variabile nel metodo `Execute` della classe Command e annullarla in base alle esigenze.
+È possibile recuperare questa variabile nel `Execute` metodo della classe Command e annullarla in base alle esigenze.
 
 ## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
@@ -258,7 +258,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il valore predefinito è **true** (può essere annullato).
+Il valore predefinito **`true`** è (può essere annullato).
 
 ## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
@@ -272,9 +272,9 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il metodo `Execute` della classe Command può impostare questa variabile su **true**.
+Il `Execute` metodo della classe Command può impostare questa variabile su **`true`** .
 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], about derived classes
 - classes [C++], derived
 ms.assetid: 3534ca19-d9ed-4a40-be1b-b921ad0e6956
-ms.openlocfilehash: 214900f8f36de0fa90ffcd6ca75f3a4e6e2c0777
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab8425a916eb96f6419c67a76fa401716ad84631
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178256"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232261"
 ---
 # <a name="inheritance--c"></a>Ereditarietà (C++)
 
@@ -33,7 +33,7 @@ class Derived : [virtual] [access-specifier] Base1,
 };
 ```
 
-Dopo il tag (nome) della classe, vengono visualizzati i due punti seguiti da un elenco di specifiche di base.  Le classi base così denominate devono essere state dichiarate in precedenza.  Le specifiche di base possono contenere un identificatore di accesso, ovvero una delle parole chiave **public**, **protected** o **private**.  Gli identificatori di accesso vengono visualizzati prima del nome della classe base e si applicano solo a tale classe.  Questi identificatori controllano l'autorizzazione della classe derivata a utilizzare i membri della classe base.  Per informazioni sull'accesso ai membri della classe base, vedere [controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md) .  Se l'identificatore di accesso viene omesso, l'accesso a tale base viene considerato **privato**.  Le specifiche di base possono contenere la parola chiave **Virtual** per indicare l'ereditarietà virtuale.  Questa parola chiave può essere visualizzata prima o dopo l'identificatore di accesso, se presente.  Se viene utilizzata l'ereditarietà virtuale, la classe base viene definita come una classe base virtuale.
+Dopo il tag (nome) della classe, vengono visualizzati i due punti seguiti da un elenco di specifiche di base.  Le classi base così denominate devono essere state dichiarate in precedenza.  Le specifiche di base possono contenere un identificatore di accesso, ovvero una delle parole **`public`** chiave **`protected`** o **`private`** .  Gli identificatori di accesso vengono visualizzati prima del nome della classe base e si applicano solo a tale classe.  Questi identificatori controllano l'autorizzazione della classe derivata a utilizzare i membri della classe base.  Per informazioni sull'accesso ai membri della classe base, vedere [controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md) .  Se l'identificatore di accesso viene omesso, viene considerato l'accesso a tale base **`private`** .  Le specifiche di base possono contenere la parola chiave **`virtual`** per indicare l'ereditarietà virtuale.  Questa parola chiave può essere visualizzata prima o dopo l'identificatore di accesso, se presente.  Se viene utilizzata l'ereditarietà virtuale, la classe base viene definita come una classe base virtuale.
 
 È possibile specificare più classi base, separandole con virgole.  Se viene specificata una singola classe base, il modello di ereditarietà è [Single ereditarietà](../cpp/single-inheritance.md). Se viene specificata più di una classe base, il modello di ereditarietà viene chiamato [ereditarietà multipla](../cpp/multiple-base-classes.md).
 
@@ -41,7 +41,7 @@ Vengono trattati gli argomenti seguenti:
 
 - [Ereditarietà singola](../cpp/single-inheritance.md)
 
-- [Più classi base](../cpp/multiple-base-classes.md)
+- [Classi di base multiple](../cpp/multiple-base-classes.md)
 
 - [Funzioni virtuali](../cpp/virtual-functions.md)
 
@@ -55,4 +55,4 @@ Le parole chiave [__super](../cpp/super.md) e [__interface](../cpp/interface.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)
