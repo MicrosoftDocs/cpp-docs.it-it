@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300308"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226242"
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
 
@@ -37,7 +37,7 @@ Queste funzioni eseguono e terminano le ricerche per i nomi di file specificati:
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione `_findfirst` fornisce informazioni sulla prima istanza di un nome file che corrisponde al file specificato nell'argomento `filespec` . In `filespec` è possibile usare qualsiasi combinazione di caratteri jolly supportata dal sistema operativo host.
 
@@ -67,7 +67,7 @@ Nei file system che non supportano le ore di creazione e di ultimo accesso di un
 Non è possibile specificare gli attributi di destinazione (ad esempio `_A_RDONLY`) per limitare l'operazione di ricerca. Questi attributi vengono restituiti nel campo `attrib` della struttura `_finddata_t` e possono includere i valori seguenti (definiti in IO.h). Gli utenti non devono considerarli gli unici valori possibili per il campo `attrib` .
 
 `_A_ARCH`<br/>
-Archivio. Viene impostato ogni volta che il file viene modificato ed eliminato dal comando **BACKUP** . Valore: 0x20.
+Archiviazione. Viene impostato ogni volta che il file viene modificato ed eliminato dal comando **BACKUP** . Valore: 0x20.
 
 `_A_HIDDEN`<br/>
 File nascosto. In genere non viene visualizzato con il comando DIR, a meno che non venga usata l'opzione **/AH** . Restituisce informazioni sui file con questo attributo e sui file normali. Valore: 0x02.
@@ -76,7 +76,7 @@ File nascosto. In genere non viene visualizzato con il comando DIR, a meno che n
 Normale. File non contiene altri set di attributi e può essere letto o scritto senza alcuna restrizione. Valore: 0x00.
 
 `_A_RDONLY`<br/>
-Sola lettura. Il file non può essere aperto per la scrittura e non è possibile creare un file con lo stesso nome. Valore: 0x01.
+Di sola lettura. Il file non può essere aperto per la scrittura e non è possibile creare un file con lo stesso nome. Valore: 0x01.
 
 `_A_SUBDIR`<br/>
 Sottodirectory. Valore: 0x10.
@@ -88,7 +88,7 @@ File di sistema. In genere non viene visualizzato con il comando **DIR** , a men
 
 È possibile annidare le funzioni `_find` . Ad esempio, se una chiamata a `_findfirst` o `_findnext` trova il file che corrisponde a una sottodirectory, è possibile avviare una nuova ricerca con un'altra chiamata a `_findfirst` o `_findnext`.
 
-`_wfindfirst` e `_wfindnext` sono versioni a caratteri wide di `_findfirst` e `_findnext`. L'argomento della struttura delle versioni a caratteri wide contiene il tipo di dati `_wfinddata_t` definito in IO.h e WCHAR.h. I campi di questo tipo di dati sono identici a quelli del tipo di dati `_finddata_t` , ad eccezione del campo del nome in `_wfinddata_t` , che è di tipo `wchar_t` anziché `char`. Per il resto, `_wfindfirst` e `_wfindnext` si comportano in modo identico a `_findfirst` e `_findnext`.
+`_wfindfirst` e `_wfindnext` sono versioni a caratteri wide di `_findfirst` e `_findnext`. L'argomento della struttura delle versioni a caratteri wide contiene il tipo di dati `_wfinddata_t` definito in IO.h e WCHAR.h. I campi di questo tipo di dati sono identici a quelli del `_finddata_t` tipo di dati, ad eccezione del fatto che nel `_wfinddata_t` campo del nome è di tipo **`wchar_t`** anziché di tipo **`char`** . Per il resto, `_wfindfirst` e `_wfindnext` si comportano in modo identico a `_findfirst` e `_findnext`.
 
 `_findfirst` e `_findnext` usano il tipo Time a 64 bit. Se è necessario usare il precedente tipo Time a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. Le versioni di queste funzioni che contengono il suffisso `32` nei nomi usano il tipo Time a 32 bit, mentre quelle con il suffisso `64` usano il tipo Time a 64 bit.
 
@@ -100,11 +100,11 @@ Anche le funzioni `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`e `_wfi
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|**`__int64`**|
+|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` è `typedef` per `unsigned long` (32 bit).
+`_fsize_t`è **`typedef`** per **`unsigned long`** (32 bit).
 
 ## <a name="example"></a>Esempio
 

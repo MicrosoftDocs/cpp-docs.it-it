@@ -3,12 +3,12 @@ title: Informazioni su SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: fe48e31e5f4390915c4f3b5b6bf9c09bbd9fffe1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403985"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226047"
 ---
 # <a name="understanding-sal"></a>Informazioni su SAL
 
@@ -78,7 +78,7 @@ Questa implementazione contiene un errore comune. Fortunatamente, l'autore del c
 
 SAL definisce quattro tipi di parametri di base, classificati in base al modello di utilizzo.
 
-|Category|Annotazione parametro|Descrizione|
+|Categoria|Annotazione parametro|Descrizione|
 |--------------|--------------------------|-----------------|
 |**Input per la funzione chiamata**|`_In_`|I dati vengono passati alla funzione chiamata e vengono considerati di sola lettura.|
 |**Input della funzione chiamata e output al chiamante**|`_Inout_`|I dati utilizzabili vengono passati nella funzione e potenzialmente modificati.|
@@ -359,7 +359,7 @@ Visual Studio Code analisi convalida che questa funzione verifica la presenza di
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Esempio: \_ \_ annotazione riuscita in combinazione con \_ out\_
 
-Le annotazioni possono essere applicate alla maggior parte degli oggetti.  In particolare, è possibile aggiungere annotazioni a una funzione intera.  Una delle caratteristiche più ovvie di una funzione è che può avere esito positivo o negativo. Tuttavia, analogamente all'associazione tra un buffer e le relative dimensioni, C/C++ non può esprimere l'esito positivo o negativo della funzione. Utilizzando l' `_Success_` annotazione, è possibile indicare l'esito positivo di una funzione.  Il parametro dell' `_Success_` annotazione è semplicemente un'espressione che, quando è true, indica che la funzione ha avuto esito positivo. L'espressione può essere qualsiasi elemento che può essere gestito dal parser dell'annotazione. Gli effetti delle annotazioni dopo la restituzione della funzione sono applicabili solo quando la funzione ha esito positivo. In questo esempio viene illustrato come `_Success_` interagisce con `_Out_` per eseguire le operazioni corrette. È possibile usare la parola chiave `return` per rappresentare il valore restituito.
+Le annotazioni possono essere applicate alla maggior parte degli oggetti.  In particolare, è possibile aggiungere annotazioni a una funzione intera.  Una delle caratteristiche più ovvie di una funzione è che può avere esito positivo o negativo. Tuttavia, analogamente all'associazione tra un buffer e le relative dimensioni, C/C++ non può esprimere l'esito positivo o negativo della funzione. Utilizzando l' `_Success_` annotazione, è possibile indicare l'esito positivo di una funzione.  Il parametro dell' `_Success_` annotazione è semplicemente un'espressione che, quando è true, indica che la funzione ha avuto esito positivo. L'espressione può essere qualsiasi elemento che può essere gestito dal parser dell'annotazione. Gli effetti delle annotazioni dopo la restituzione della funzione sono applicabili solo quando la funzione ha esito positivo. In questo esempio viene illustrato come `_Success_` interagisce con `_Out_` per eseguire le operazioni corrette. È possibile usare la parola chiave **`return`** per rappresentare il valore restituito.
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)

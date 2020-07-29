@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998796"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226464"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversioni dai tipi integrali senza segno
 
@@ -35,7 +35,7 @@ Per informazioni sulle dimensioni dei tipi a virgola mobile e integrali, vedere 
 
 **Specifico di Microsoft**
 
-Nel compilatore Microsoft, **senza segno** (o **unsigned int**) e **unsigned long** sono tipi Distinct ma equivalenti. La conversione di un valore **unsigned int** viene eseguita nello stesso modo di una conversione di un valore **unsigned long**.
+Nel compilatore Microsoft **`unsigned`** (o **`unsigned int`** ) e **`unsigned long`** sono tipi Distinct ma equivalenti. La conversione di un **`unsigned int`** valore continua nello stesso modo della conversione di un oggetto **`unsigned long`** .
 
 **TERMINA specifica Microsoft**
 
@@ -45,46 +45,46 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza 
 
 |From|A|Metodo|
 |----------|--------|------------|
-|**unsigned char**|**char**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
-|**unsigned char**|**short**|Estensione zero|
-|**unsigned char**|**lungo**|Estensione zero|
-|**unsigned char**|**long long**|Estensione zero|
-|**unsigned char**|**unsigned short**|Estensione zero|
-|**unsigned char**|**long senza segno**|Estensione zero|
-|**unsigned char**|**unsigned long long**|Estensione zero|
-|**unsigned char**|**float**|Convertire a **long**; convertire **long** a **float**|
-|**unsigned char**|**double**|Convertire a **long**; convertire **long** a **double**|
-|**unsigned char**|**long double**|Convertire a **long**; convertire **long** a **double**|
-|**unsigned short**|**char**|Mantenimento del byte meno significativo|
-|**unsigned short**|**short**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
-|**unsigned short**|**lungo**|Estensione zero|
-|**unsigned short**|**long long**|Estensione zero|
-|**unsigned short**|**unsigned char**|Mantenimento del byte meno significativo|
-|**unsigned short**|**long senza segno**|Estensione zero|
-|**unsigned short**|**unsigned long long**|Estensione zero|
-|**unsigned short**|**float**|Convertire a **long**; convertire **long** a **float**|
-|**unsigned short**|**double**|Convertire a **long**; convertire **long** a **double**|
-|**unsigned short**|**long double**|Convertire a **long**; convertire **long** a **double**|
-|**long senza segno**|**char**|Mantenimento del byte meno significativo|
-|**long senza segno**|**short**|Mantenimento della parola meno significativa|
-|**long senza segno**|**lungo**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
-|**long senza segno**|**long long**|Estensione zero|
-|**long senza segno**|**unsigned char**|Mantenimento del byte meno significativo|
-|**long senza segno**|**unsigned short**|Mantenimento della parola meno significativa|
-|**long senza segno**|**unsigned long long**|Estensione zero|
-|**long senza segno**|**float**|Convertire a **long**; convertire **long** a **float**|
-|**long senza segno**|**double**|Convertire direttamente a **double**|
-|**long senza segno**|**long double**|Convertire a **long**; convertire **long** a **double**|
-|**unsigned long long**|**char**|Mantenimento del byte meno significativo|
-|**unsigned long long**|**short**|Mantenimento della parola meno significativa|
-|**unsigned long long**|**lungo**|Mantieni valore DWORD di ordine inferiore|
-|**unsigned long long**|**long long**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
-|**unsigned long long**|**unsigned char**|Mantenimento del byte meno significativo|
-|**unsigned long long**|**unsigned short**|Mantenimento della parola meno significativa|
-|**unsigned long long**|**long senza segno**|Mantieni valore DWORD di ordine inferiore|
-|**unsigned long long**|**float**|Convertire a **long**; convertire **long** a **float**|
-|**unsigned long long**|**double**|Convertire direttamente a **double**|
-|**unsigned long long**|**long double**|Convertire a **long**; convertire **long** a **double**|
+|**`unsigned char`**|**`char`**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**`unsigned char`**|**`short`**|Estensione zero|
+|**`unsigned char`**|**`long`**|Estensione zero|
+|**`unsigned char`**|**`long long`**|Estensione zero|
+|**`unsigned char`**|**`unsigned short`**|Estensione zero|
+|**`unsigned char`**|**`unsigned long`**|Estensione zero|
+|**`unsigned char`**|**`unsigned long long`**|Estensione zero|
+|**`unsigned char`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
+|**`unsigned char`**|**`double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned char`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned short`**|**`char`**|Mantenimento del byte meno significativo|
+|**`unsigned short`**|**`short`**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**`unsigned short`**|**`long`**|Estensione zero|
+|**`unsigned short`**|**`long long`**|Estensione zero|
+|**`unsigned short`**|**`unsigned char`**|Mantenimento del byte meno significativo|
+|**`unsigned short`**|**`unsigned long`**|Estensione zero|
+|**`unsigned short`**|**`unsigned long long`**|Estensione zero|
+|**`unsigned short`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
+|**`unsigned short`**|**`double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned short`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned long`**|**`char`**|Mantenimento del byte meno significativo|
+|**`unsigned long`**|**`short`**|Mantenimento della parola meno significativa|
+|**`unsigned long`**|**`long`**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**`unsigned long`**|**`long long`**|Estensione zero|
+|**`unsigned long`**|**`unsigned char`**|Mantenimento del byte meno significativo|
+|**`unsigned long`**|**`unsigned short`**|Mantenimento della parola meno significativa|
+|**`unsigned long`**|**`unsigned long long`**|Estensione zero|
+|**`unsigned long`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
+|**`unsigned long`**|**`double`**|Converti direttamente in**`double`**|
+|**`unsigned long`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned long long`**|**`char`**|Mantenimento del byte meno significativo|
+|**`unsigned long long`**|**`short`**|Mantenimento della parola meno significativa|
+|**`unsigned long long`**|**`long`**|Mantieni valore DWORD di ordine inferiore|
+|**`unsigned long long`**|**`long long`**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
+|**`unsigned long long`**|**`unsigned char`**|Mantenimento del byte meno significativo|
+|**`unsigned long long`**|**`unsigned short`**|Mantenimento della parola meno significativa|
+|**`unsigned long long`**|**`unsigned long`**|Mantieni valore DWORD di ordine inferiore|
+|**`unsigned long long`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
+|**`unsigned long long`**|**`double`**|Converti direttamente in**`double`**|
+|**`unsigned long long`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
 
 ## <a name="see-also"></a>Vedere anche
 

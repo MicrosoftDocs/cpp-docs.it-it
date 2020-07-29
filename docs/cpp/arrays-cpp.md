@@ -6,20 +6,20 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 91c57a9c4ef190dcace1813dd81739ac72e6b358
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: d4689162ea38f67b81c0f78bccba557cb40e78d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188995"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226034"
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 
-Una matrice è una sequenza di oggetti dello stesso tipo che occupano un'area di memoria contigua. Le matrici di tipo C tradizionali sono l'origine di molti bug, ma sono ancora comuni, soprattutto nelle basi di codice precedenti. In Modern C++è consigliabile usare [std:: Vector](../standard-library/vector-class.md) o [std:: Array](../standard-library/array-class-stl.md) anziché le matrici di tipo C descritte in questa sezione. Entrambi i tipi di libreria standard archiviano gli elementi come un blocco di memoria contiguo, ma garantiscono una maggiore indipendenza dai tipi insieme agli iteratori che fanno riferimento a una posizione valida all'interno della sequenza. Per ulteriori informazioni, vedere [contenitori (moderni C++)](containers-modern-cpp.md).
+Una matrice è una sequenza di oggetti dello stesso tipo che occupano un'area di memoria contigua. Le matrici di tipo C tradizionali sono l'origine di molti bug, ma sono ancora comuni, soprattutto nelle basi di codice precedenti. Nel linguaggio C++ moderno, è consigliabile usare [std:: Vector](../standard-library/vector-class.md) o [std:: Array](../standard-library/array-class-stl.md) anziché le matrici di tipo C descritte in questa sezione. Entrambi i tipi di libreria standard archiviano gli elementi come un blocco di memoria contiguo, ma garantiscono una maggiore indipendenza dai tipi insieme agli iteratori che fanno riferimento a una posizione valida all'interno della sequenza. Per altre informazioni, vedere [contenitori (C++ moderno)](containers-modern-cpp.md).
 
 ## <a name="stack-declarations"></a>Dichiarazioni dello stack
 
-In una C++ dichiarazione di matrice, la dimensione della matrice viene specificata dopo il nome della variabile, non dopo il nome del tipo come in altri linguaggi. Nell'esempio seguente viene dichiarata una matrice di 1000 Double da allocare nello stack. Il numero di elementi deve essere specificato come valore letterale intero o in caso contrario come espressione costante perché il compilatore deve conoscere la quantità di spazio dello stack da allocare. non può utilizzare un valore calcolato in fase di esecuzione. A ogni elemento nella matrice viene assegnato il valore predefinito 0. Se non si assegna un valore predefinito, ogni elemento conterrà inizialmente tutti i valori casuali che si trovano in tale posizione.
+In una dichiarazione di matrice C++, la dimensione della matrice viene specificata dopo il nome della variabile, non dopo il nome del tipo come in altre lingue. Nell'esempio seguente viene dichiarata una matrice di 1000 Double da allocare nello stack. Il numero di elementi deve essere specificato come valore letterale intero o in caso contrario come espressione costante perché il compilatore deve conoscere la quantità di spazio dello stack da allocare. non può utilizzare un valore calcolato in fase di esecuzione. A ogni elemento nella matrice viene assegnato il valore predefinito 0. Se non si assegna un valore predefinito, ogni elemento conterrà inizialmente tutti i valori casuali che si trovano in tale posizione.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,15 +44,15 @@ In una C++ dichiarazione di matrice, la dimensione della matrice viene specifica
     }
 ```
 
-Il primo elemento della matrice è l'elemento 0A e l'ultimo elemento è l'elemento (*n*-1), dove *n* è il numero di elementi che la matrice può contenere. Il numero di elementi nella dichiarazione deve essere di un tipo integrale e deve essere maggiore di 0. È responsabilità dell'utente garantire che il programma non passi mai un valore all'operatore di pedice maggiore di `(size - 1)`.
+Il primo elemento della matrice è l'elemento 0A e l'ultimo elemento è l'elemento (*n*-1), dove *n* è il numero di elementi che la matrice può contenere. Il numero di elementi nella dichiarazione deve essere di un tipo integrale e deve essere maggiore di 0. È responsabilità dell'utente garantire che il programma non passi mai un valore all'operatore di pedice maggiore di `(size - 1)` .
 
-Una matrice di dimensioni zero è valida solo quando la matrice è l'ultimo campo in uno **struct** o un' **Unione** e quando le estensioni Microsoft (/Ze) sono abilitate.
+Una matrice di dimensioni zero è valida solo quando la matrice è l'ultimo campo in un oggetto **`struct`** o **`union`** e quando le estensioni Microsoft (/Ze) sono abilitate.
 
 Le matrici basate su stack sono più veloci da allocare e accedere alle matrici basate su heap, ma il numero di elementi non può essere così elevato da usare una quantità eccessiva di memoria dello stack. La quantità eccessiva dipende dal programma. È possibile usare gli strumenti di profilatura per determinare se una matrice è troppo grande.
 
 ## <a name="heap-declarations"></a>Dichiarazioni heap
 
-Se è necessaria una matrice troppo grande per essere allocata nello stack o le cui dimensioni non sono note in fase di compilazione, è possibile allocarla nell'heap con una nuova espressione [\[\]](new-operator-cpp.md) . L'operatore restituisce un puntatore al primo elemento. È possibile utilizzare l'operatore di indice con la variabile puntatore Analogamente a una matrice basata su stack. È inoltre possibile utilizzare l' [aritmetica dei puntatori](../c-language/pointer-arithmetic.md) per spostare il puntatore a tutti gli elementi arbitrari nella matrice. È responsabilità dell'utente verificare che:
+Se è necessaria una matrice troppo grande per essere allocata nello stack o le cui dimensioni non sono note in fase di compilazione, è possibile allocarla nell'heap con una [nuova \[ \] ](new-operator-cpp.md) espressione. L'operatore restituisce un puntatore al primo elemento. È possibile utilizzare l'operatore di indice con la variabile puntatore Analogamente a una matrice basata su stack. È inoltre possibile utilizzare l' [aritmetica dei puntatori](../c-language/pointer-arithmetic.md) per spostare il puntatore a tutti gli elementi arbitrari nella matrice. È responsabilità dell'utente verificare che:
 
 - si mantiene sempre una copia dell'indirizzo del puntatore originale, in modo che sia possibile eliminare la memoria quando la matrice non è più necessaria.
 - non si incrementa o decrementa l'indirizzo del puntatore oltre i limiti della matrice.
@@ -131,9 +131,9 @@ int main()
 
 ## <a name="passing-arrays-to-functions"></a>Passaggio di matrici a funzioni
 
-Quando una matrice viene passata a una funzione, viene passata come puntatore al primo elemento. Questo vale sia per le matrici basate su stack sia per quelle basate su heap. Il puntatore non contiene informazioni aggiuntive sul tipo o sulle dimensioni. Questo comportamento viene definito *decadimento del puntatore*. Quando si passa una matrice a una funzione, è sempre necessario specificare il numero di elementi in un parametro separato. Questo comportamento implica anche che gli elementi della matrice non vengano copiati quando la matrice viene passata a una funzione. Per impedire che la funzione modifichi gli elementi, specificare il parametro come puntatore a elementi **const** .
+Quando una matrice viene passata a una funzione, viene passata come puntatore al primo elemento. Questo vale sia per le matrici basate su stack sia per quelle basate su heap. Il puntatore non contiene informazioni aggiuntive sul tipo o sulle dimensioni. Questo comportamento viene definito *decadimento del puntatore*. Quando si passa una matrice a una funzione, è sempre necessario specificare il numero di elementi in un parametro separato. Questo comportamento implica anche che gli elementi della matrice non vengano copiati quando la matrice viene passata a una funzione. Per impedire che la funzione modifichi gli elementi, specificare il parametro come puntatore a **`const`** elementi.
 
-Nell'esempio seguente viene illustrata una funzione che accetta una matrice e una lunghezza. Il puntatore punta alla matrice originale, non a una copia. Poiché il parametro non è **const**, la funzione può modificare gli elementi della matrice.
+Nell'esempio seguente viene illustrata una funzione che accetta una matrice e una lunghezza. Il puntatore punta alla matrice originale, non a una copia. Poiché il parametro non è **`const`** , la funzione può modificare gli elementi della matrice.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -170,9 +170,9 @@ Le matrici generate da altre matrici sono matrici multidimensionali. Queste matr
 int i2[5][7];
 ```
 
-Specifica una matrice di tipo **int**, concettualmente disposta in una matrice bidimensionale di cinque righe e sette colonne, come illustrato nella figura seguente:
+Specifica una matrice di tipo **`int`** , disposta concettualmente in una matrice bidimensionale di cinque righe e sette colonne, come illustrato nella figura seguente:
 
-![Layout concettuale di una&#45;matrice multidimensionale](../cpp/media/vc38rc1.gif "Layout concettuale di una&#45;matrice multidimensionale") <br/>
+![Layout concettuale di una matrice multi&#45;dimensionale](../cpp/media/vc38rc1.gif "Layout concettuale di una matrice multi&#45;dimensionale") <br/>
 Layout concettuale di una matrice multidimensionale
 
 Nelle dichiarazioni di matrici multidimensionali che dispongono di un elenco di inizializzatori (come descritto in [inizializzatori](../cpp/initializers.md)), l'espressione costante che specifica i limiti della prima dimensione può essere omessa. Ad esempio:
@@ -283,7 +283,7 @@ int main()
 
 Il primo elemento `aPoint` viene costruito usando il costruttore `Point( int, int )`; i due elementi rimanenti vengono costruiti usando il costruttore predefinito.
 
-Le matrici di membri statiche, sia **const** che non possono essere inizializzate nelle rispettive definizioni (all'esterno della dichiarazione di classe). Ad esempio:
+Le matrici di membri statiche (indipendentemente dal fatto che siano **`const`** o meno) possono essere inizializzate nelle rispettive definizioni (all'esterno della dichiarazione di classe). Ad esempio:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -336,11 +336,11 @@ int main() {
 }
 ```
 
-Nel codice precedente `multi` è una matrice tridimensionale di tipo **Double**. Il puntatore `p2multi` punta a una matrice di tipo **Double** di dimensioni tre. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.
+Nel codice precedente, `multi` è una matrice tridimensionale di tipo **`double`** . Il `p2multi` puntatore punta a una matrice di tipo **`double`** di dimensioni tre. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.
 
 ## <a name="overloading-subscript-operator"></a>Overload dell'operatore pedice
 
-Analogamente ad altri operatori, l'operatore di indice (`[]`) può essere ridefinito dall'utente. Il comportamento predefinito dell'operatore di indice, se non sottoposto a overload, è di combinare il nome della matrice e l'indice utilizzando il seguente metodo:
+Analogamente ad altri operatori, l'operatore di indice ( `[]` ) può essere ridefinito dall'utente. Il comportamento predefinito dell'operatore di indice, se non sottoposto a overload, è di combinare il nome della matrice e l'indice utilizzando il seguente metodo:
 
 `*((array_name) + (subscript))`
 
@@ -352,7 +352,7 @@ Analogamente, per le matrici multidimensionali, l'indirizzo viene derivato utili
 
 ## <a name="arrays-in-expressions"></a>Matrici nelle espressioni
 
-Quando un identificatore di un tipo di matrice viene visualizzato in un'espressione diversa da `sizeof`, address-of (`&`) o l'inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice. Ad esempio:
+Quando un identificatore di un tipo di matrice viene visualizzato in un'espressione diversa da **`sizeof`** , address-of ( `&` ) o l'inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice. Ad esempio:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";

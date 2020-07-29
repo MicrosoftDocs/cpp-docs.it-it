@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226216"
 ---
 # <a name="_getw"></a>_getw
 
@@ -58,7 +58,7 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_getw** legge il successivo valore binario di tipo **int** dal file associato a *Stream* e incrementa il puntatore del file associato (se presente) per puntare al carattere non letto successivo. **_getw** non presuppone alcun allineamento speciale degli elementi nel flusso. I problemi di portabilità possono verificarsi con **_getw** perché le dimensioni del tipo **int** e l'ordine dei byte all'interno del tipo **int** sono diverse tra i sistemi.
+La funzione **_getw** legge il successivo valore binario di tipo **`int`** dal file associato al *flusso* e incrementa il puntatore del file associato (se presente) per puntare al carattere non letto successivo. **_getw** non presuppone alcun allineamento speciale degli elementi nel flusso. I problemi di portabilità possono verificarsi con **_getw** perché le dimensioni del **`int`** tipo e l'ordine dei byte all'interno del **`int`** tipo differiscono tra i sistemi.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

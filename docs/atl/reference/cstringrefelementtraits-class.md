@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: b4dd76b9592b255a1553be3ca7a249f58fb2672e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6fa8772033a5a82940cf30b2a73d6ea356269d67
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226555"
 ---
 # <a name="cstringrefelementtraits-class"></a>Classe CStringRefElementTraits
 
-Questa classe fornisce funzioni statiche correlate alle stringhe archiviate negli oggetti della classe di raccolta. Gli oggetti stringa vengono trattati come riferimenti.
+Questa classe fornisce funzioni statiche correlate alle stringhe archiviate negli oggetti classe della raccolta. Gli oggetti stringa vengono gestiti come riferimenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,15 +39,15 @@ Tipo di dati da archiviare nella raccolta.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CStringRefElementTraits::CompareElements](#compareelements)|Chiamare questa funzione statica per confrontare due elementi stringa per l'uguaglianza.|
-|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Chiamare questa funzione statica per confrontare due elementi stringa.|
-|[CStringRefElementTraits::Hash](#hash)|Chiamare questa funzione statica per calcolare un valore hash per l'elemento stringa specificato.|
+|[CStringRefElementTraits:: CompareElements](#compareelements)|Chiamare questa funzione statica per confrontare due elementi stringa per verificarne l'uguaglianza.|
+|[CStringRefElementTraits:: CompareElementsOrdered](#compareelementsordered)|Chiamare questa funzione statica per confrontare due elementi di stringa.|
+|[CStringRefElementTraits:: hash](#hash)|Chiamare questa funzione statica per calcolare un valore hash per l'elemento stringa specificato.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce funzioni statiche per il confronto di stringhe e per la creazione di un valore hash. Queste funzioni sono utili quando si usa una classe di raccolta per archiviare dati basati su stringa. A differenza di [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) `CStringRefElementTraits` , fa sì che `CString` gli argomenti vengano passati come riferimenti **const.** `CString&`
+Questa classe fornisce funzioni statiche per il confronto di stringhe e per la creazione di un valore hash. Queste funzioni sono utili quando si usa una classe Collection per archiviare dati basati su stringa. A differenza di [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` fa sì che gli `CString` argomenti vengano passati come **`const`** `CString&` riferimenti.
 
-Per ulteriori informazioni, vedere Classi di raccolte [ATL](../../atl/atl-collection-classes.md).
+Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,11 +57,11 @@ Per ulteriori informazioni, vedere Classi di raccolte [ATL](../../atl/atl-collec
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcoll.h
+**Intestazione:** atlcoll. h
 
-## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements
+## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits:: CompareElements
 
-Chiamare questa funzione statica per confrontare due elementi stringa per l'uguaglianza.
+Chiamare questa funzione statica per confrontare due elementi stringa per verificarne l'uguaglianza.
 
 ```
 static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
@@ -69,19 +69,19 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*elemento1*<br/>
+*element1*<br/>
 Primo elemento stringa.
 
-*elemento2*<br/>
-Secondo elemento stringa.
+*element2*<br/>
+Secondo elemento di stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se gli elementi sono uguali, false in caso contrario.
+Restituisce true se gli elementi sono uguali; in caso contrario, false.
 
-## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered
+## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits:: CompareElementsOrdered
 
-Chiamare questa funzione statica per confrontare due elementi stringa.
+Chiamare questa funzione statica per confrontare due elementi di stringa.
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -92,14 +92,14 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 *str1*<br/>
 Primo elemento stringa.
 
-*str2 (in cui*<br/>
-Secondo elemento stringa.
+*str2*<br/>
+Secondo elemento di stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-zero se le stringhe sono identiche, < 0 se *str1* è minore di *str2*o > 0 se *str1* è maggiore di *str2*. Il [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metodo viene utilizzato per eseguire i confronti.
+Zero se le stringhe sono identiche, < 0 se *str1* è minore di *str2*oppure > 0 se *str1* è maggiore di *str2*. Per eseguire i confronti, viene usato il metodo [CStringT:: compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) .
 
-## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Hash
+## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits:: hash
 
 Chiamare questa funzione statica per calcolare un valore hash per l'elemento stringa specificato.
 
@@ -109,7 +109,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Elemento stringa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -118,5 +118,5 @@ Restituisce un valore hash, calcolato utilizzando il contenuto della stringa.
 
 ## <a name="see-also"></a>Vedere anche
 
-[CElementTraitsBase (classe)](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

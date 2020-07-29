@@ -1,12 +1,12 @@
 ---
-title: setlocale, _wsetlocale
-description: Descrive le funzioni setlocale della libreria Microsoft C Runtime (CRT) _wsetlocalee.
+title: ':::no-loc(setlocale):::, :::no-loc(_wsetlocale):::'
+description: 'Descrive le funzioni della libreria Microsoft C Runtime (CRT) :::no-loc(setlocale)::: e :::no-loc(_wsetlocale)::: .'
 ms.date: 4/2/2020
 api_name:
-- _wsetlocale
-- setlocale
-- _o__wsetlocale
-- _o_setlocale
+- ':::no-loc(_wsetlocale):::'
+- ':::no-loc(setlocale):::'
+- '_o_:::no-loc(_wsetlocale):::'
+- '_o_:::no-loc(setlocale):::'
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,40 +25,40 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _wsetlocale
-- _tsetlocale
-- setlocale
+- ':::no-loc(_wsetlocale):::'
+- '_t:::no-loc(setlocale):::'
+- ':::no-loc(setlocale):::'
 helpviewer_keywords:
-- wsetlocale function
-- setlocale function
-- tsetlocale function
+- 'w:::no-loc(setlocale)::: function'
+- ':::no-loc(setlocale)::: function'
+- 't:::no-loc(setlocale)::: function'
 - locales, defining
-- _tsetlocale function
+- '_t:::no-loc(setlocale)::: function'
 - defining locales
-- _wsetlocale function
+- ':::no-loc(_wsetlocale)::: function'
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
-- setlocale
-- _wsetlocale
-ms.openlocfilehash: 312fd8e9f794368d334ea353e2c92241d701ab0b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+- ':::no-loc(setlocale):::'
+- ':::no-loc(_wsetlocale):::'
+ms.openlocfilehash: 05e4e96297e2237ed6768e05ff4cacfd63744e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918845"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226138"
 ---
-# <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
+# <a name="no-locsetlocale-no-loc_wsetlocale"></a>:::no-loc(setlocale):::, :::no-loc(_wsetlocale):::
 
 Imposta o recupera le impostazioni locali in fase di esecuzione.
 
 ## <a name="syntax"></a>Sintassi
 
 ```C
-char *setlocale(
+char *:::no-loc(setlocale):::(
    int category,
    const char *locale
 );
-wchar_t *_wsetlocale(
+wchar_t *:::no-loc(_wsetlocale):::(
    int category,
    const wchar_t *locale
 );
@@ -79,7 +79,7 @@ Se vengono specificate le *impostazioni locali* e la *categoria* valide, restitu
 Ad esempio, la chiamata
 
 ```C
-setlocale( LC_ALL, "en-US" );
+:::no-loc(setlocale):::( LC_ALL, "en-US" );
 ```
 
 imposta tutte le categorie, restituendo solo la stringa
@@ -88,13 +88,13 @@ imposta tutte le categorie, restituendo solo la stringa
 en-US
 ```
 
-È possibile copiare la stringa restituita da **setlocale** per ripristinare la parte delle informazioni sulle impostazioni locali del programma. Per la stringa restituita da **setlocale**viene utilizzata l'archiviazione globale o locale dei thread. Le chiamate successive a **setlocale** sovrascrivono la stringa, che invalida i puntatori di stringa restituiti dalle chiamate precedenti.
+È possibile copiare la stringa restituita da **:::no-loc(setlocale):::** per ripristinare la parte delle informazioni sulle impostazioni locali del programma. L'archiviazione globale o thread-local viene utilizzata per la stringa restituita da **:::no-loc(setlocale):::** . Le chiamate successive a **:::no-loc(setlocale):::** sovrascrivono la stringa, che invalida i puntatori di stringa restituiti dalle chiamate precedenti.
 
 ## <a name="remarks"></a>Osservazioni
 
-Utilizzare la funzione **setlocale** per impostare, modificare o eseguire una query su alcune o tutte le informazioni sulle impostazioni locali del programma corrente specificate in base alle *impostazioni locali* e alla *categoria*. le *impostazioni locali* si riferiscono alla località (paese/area geografica e lingua) per cui è possibile personalizzare alcuni aspetti del programma. Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari. Se si impostano le *impostazioni locali* sulla stringa predefinita per una lingua con più forme supportate nel computer, è necessario controllare il valore restituito da **setlocale** per vedere quale lingua è attiva. Se ad esempio si impostano le *impostazioni locali* su "cinese", il valore restituito potrebbe essere "cinese semplificato" o "cinese tradizionale".
+Utilizzare la **:::no-loc(setlocale):::** funzione per impostare, modificare o eseguire una query su alcune o tutte le informazioni sulle impostazioni locali del programma corrente specificate in base alle *impostazioni locali* e alla *categoria*. le *impostazioni locali* si riferiscono alla località (paese/area geografica e lingua) per cui è possibile personalizzare alcuni aspetti del programma. Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari. Se si impostano le *impostazioni locali* sulla stringa predefinita per una lingua con più forme supportate nel computer, è necessario controllare il **:::no-loc(setlocale):::** valore restituito per vedere quale lingua è attiva. Se ad esempio si impostano le *impostazioni locali* su "cinese", il valore restituito potrebbe essere "cinese semplificato" o "cinese tradizionale".
 
-**_wsetlocale** è una versione a caratteri wide di **setlocale**; l'argomento delle *impostazioni locali* e il valore restituito di **_wsetlocale** sono stringhe a caratteri wide. **_wsetlocale** e **setlocale** si comportano in modo identico.
+**:::no-loc(_wsetlocale):::** è una versione a caratteri wide di **:::no-loc(setlocale):::** . l'argomento delle *impostazioni locali* e il valore restituito di **:::no-loc(_wsetlocale):::** sono stringhe a caratteri wide. **:::no-loc(_wsetlocale):::** e si **:::no-loc(setlocale):::** comportano in modo identico.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -102,7 +102,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
+|**_t:::no-loc(setlocale):::**|**:::no-loc(setlocale):::**|**:::no-loc(setlocale):::**|**:::no-loc(_wsetlocale):::**|
 
 L'argomento *Category* specifica le parti delle informazioni sulle impostazioni locali di un programma interessate. Le macro usate per la *categoria* e le parti del programma che influiscono sono le seguenti:
 
@@ -117,22 +117,22 @@ L'argomento *Category* specifica le parti delle informazioni sulle impostazioni 
 
 Questa funzione convalida il parametro di categoria. Se il parametro category non è uno dei valori indicati nella tabella precedente, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** su **EINVAL** e restituisce **null**.
 
-L'argomento delle *impostazioni locali* è un puntatore a una stringa che specifica le impostazioni locali. Per informazioni sul formato dell'argomento delle *impostazioni locali* , vedere [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione. Il valore **c** specifica l'ambiente di conformità ANSI minimo per la conversione c. Nelle impostazioni locali **C** si presuppone che tutti i tipi di dati **char** siano di 1 byte e che il relativo valore sia sempre inferiore a 256.
+L'argomento delle *impostazioni locali* è un puntatore a una stringa che specifica le impostazioni locali. Per informazioni sul formato dell'argomento delle *impostazioni locali* , vedere [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione. Il valore **c** specifica l'ambiente di conformità ANSI minimo per la conversione c. Nelle impostazioni locali **C** si presuppone che tutti i **`char`** tipi di dati siano di 1 byte e che il relativo valore sia sempre inferiore a 256.
 
 All'avvio del programma, viene eseguito l'equivalente dell'istruzione seguente:
 
-`setlocale( LC_ALL, "C" );`
+`:::no-loc(setlocale):::( LC_ALL, "C" );`
 
-L'argomento delle *impostazioni locali* può assumere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e un codice paese/area geografica, una tabella codici o una stringa di lingua, un codice paese e una tabella codici. Il set di nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati da Windows NLS API. Il set di nomi delle impostazioni locali supportato da **setlocale** è descritto in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe per lingua e paese/area geografica supportate da **setlocale** è elencato in stringhe di [lingua](../../c-runtime-library/language-strings.md) e [stringhe di paese/area geografica](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
+L'argomento delle *impostazioni locali* può assumere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e un codice paese/area geografica, una tabella codici o una stringa di lingua, un codice paese e una tabella codici. Il set di nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati da Windows NLS API. Il set di nomi delle impostazioni locali supportato da **:::no-loc(setlocale):::** è descritto in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe lingua e paese/area geografica supportate da **:::no-loc(setlocale):::** sono elencate in [stringhe di lingua](../../c-runtime-library/language-strings.md) e [stringhe di paese/area geografica](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
 
-Un puntatore NULL passato come argomento delle *impostazioni locali* indica a **setlocale** di eseguire query anziché impostare l'ambiente internazionale. Se l'argomento delle *impostazioni locali* è un puntatore null, le impostazioni locali correnti del programma non vengono modificate. Invece, **setlocale** restituisce un puntatore alla stringa associata alla *categoria* delle impostazioni locali correnti del thread. Se l'argomento *Category* è **LC_ALL**, la funzione restituisce una stringa che indica l'impostazione corrente di ogni categoria, separate da punti e virgola. Ad esempio, la sequenza di chiamate
+Un puntatore NULL passato come argomento delle *impostazioni locali* indica **:::no-loc(setlocale):::** a di eseguire query anziché impostare l'ambiente internazionale. Se l'argomento delle *impostazioni locali* è un puntatore null, le impostazioni locali correnti del programma non vengono modificate. Restituisce invece **:::no-loc(setlocale):::** un puntatore alla stringa associata alla *categoria* delle impostazioni locali correnti del thread. Se l'argomento *Category* è **LC_ALL**, la funzione restituisce una stringa che indica l'impostazione corrente di ogni categoria, separate da punti e virgola. Ad esempio, la sequenza di chiamate
 
 ```C
 // Set all categories and return "en-US"
-setlocale(LC_ALL, "en-US");
+:::no-loc(setlocale):::(LC_ALL, "en-US");
 // Set only the LC_MONETARY category and return "fr-FR"
-setlocale(LC_MONETARY, "fr-FR");
-printf("%s\n", setlocale(LC_ALL, NULL));
+:::no-loc(setlocale):::(LC_MONETARY, "fr-FR");
+printf("%s\n", :::no-loc(setlocale):::(LC_ALL, NULL));
 ```
 
 Restituisce
@@ -145,81 +145,81 @@ che è la stringa associata alla categoria **LC_ALL** .
 
 Gli esempi seguenti riguardano la categoria **LC_ALL** . Una delle stringhe ". OCP "e". ACP "può essere utilizzato al posto di un numero di tabella codici per specificare l'utilizzo della tabella codici OEM predefinita dell'utente e della tabella codici ANSI predefinita dell'utente per il nome delle impostazioni locali, rispettivamente.
 
-- `setlocale( LC_ALL, "" );`
+- `:::no-loc(setlocale):::( LC_ALL, "" );`
 
    Imposta le impostazioni locali sui valori predefiniti, ovvero la tabella codici ANSI predefinita dell'utente ottenuta dal sistema operativo. Il nome delle impostazioni locali è impostato sul valore restituito da [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La tabella codici è impostata sul valore restituito da [GetACP](/windows/win32/api/winnls/nf-winnls-getacp).
 
-- `setlocale( LC_ALL, ".OCP" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".OCP" );`
 
    Imposta le impostazioni locali sulla tabella codici OEM corrente ottenuta dal sistema operativo. Il nome delle impostazioni locali è impostato sul valore restituito da [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La tabella codici è impostata sul valore [LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants) per il nome delle impostazioni locali predefinito dell'utente [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, ".ACP" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".ACP" );`
 
    Imposta le impostazioni locali sulla tabella codici ANSI ottenuta dal sistema operativo. Il nome delle impostazioni locali è impostato sul valore restituito da [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La tabella codici è impostata sul valore [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) per il nome delle impostazioni locali predefinito dell'utente [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, "<localename>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<localename>" );`
 
-   Imposta le impostazioni locali sul nome delle impostazioni locali indicato da * \<localename>*. La tabella codici è impostata sul valore [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) per il nome delle impostazioni locali specificato da [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Imposta le impostazioni locali sul nome delle impostazioni locali indicato da *\<localename>* . La tabella codici è impostata sul valore [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) per il nome delle impostazioni locali specificato da [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, "<language>_<country>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>_<country>" );`
 
-   Imposta le impostazioni locali sulla lingua e il paese/area geografica indicati da * \<lingua>* e * \<paese>*, insieme alla tabella codici predefinita ottenuta dal sistema operativo host. La tabella codici è impostata sul valore [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) per il nome delle impostazioni locali specificato da [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Imposta le impostazioni locali sulla lingua e il paese/area geografica indicati da *\<language>* e *\<country>* , insieme alla tabella codici predefinita ottenuta dal sistema operativo host. La tabella codici è impostata sul valore [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) per il nome delle impostazioni locali specificato da [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Imposta le impostazioni locali sulla lingua, il paese/area geografica e la tabella codici indicati dalle stringhe * \<>lingua *, * \<paese>* e * \<code_page>* . È possibile utilizzare varie combinazioni di lingua, paese e tabella codici. Questa chiamata imposta ad esempio le impostazioni locali sulla lingua francese del Canada con la tabella codici 1252:
+   Imposta le impostazioni locali sulla lingua, il paese/area geografica e la tabella codici indicati *\<language>* dalle *\<country>* stringhe, e *\<code_page>* . È possibile utilizzare varie combinazioni di lingua, paese e tabella codici. Questa chiamata imposta ad esempio le impostazioni locali sulla lingua francese del Canada con la tabella codici 1252:
 
-   `setlocale( LC_ALL, "French_Canada.1252" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.1252" );`
 
    Questa chiamata imposta le impostazioni locali sulla lingua francese del Canada con la tabella codici ANSI predefinita:
 
-   `setlocale( LC_ALL, "French_Canada.ACP" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.ACP" );`
 
    Questa chiamata imposta le impostazioni locali sulla lingua francese del Canada con la tabella codici OEM predefinita:
 
-   `setlocale( LC_ALL, "French_Canada.OCP" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.OCP" );`
 
-- `setlocale( LC_ALL, "<language>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>" );`
 
-   Imposta le impostazioni locali sulla lingua indicata dalla * \<lingua>* e usa il paese/area geografica predefinito per la lingua specificata e la tabella codici ANSI predefinita dell'utente per quel paese/area geografica ottenuta dal sistema operativo host. Ad esempio, le chiamate seguenti a **setlocale** sono equivalenti dal punto di vista funzionale:
+   Imposta le impostazioni locali sulla lingua indicata da *\<language>* e usa il paese/area geografica predefinito per la lingua specificata e la tabella codici ANSI predefinita dell'utente per tale paese/area geografica, come ottenuto dal sistema operativo host. Ad esempio, le chiamate a seguenti **:::no-loc(setlocale):::** sono equivalenti dal punto di vista funzionale:
 
-   `setlocale( LC_ALL, "en-US" );`
+   `:::no-loc(setlocale):::( LC_ALL, "en-US" );`
 
-   `setlocale( LC_ALL, "English" );`
+   `:::no-loc(setlocale):::( LC_ALL, "English" );`
 
-   `setlocale( LC_ALL, "English_United States.1252" );`
+   `:::no-loc(setlocale):::( LC_ALL, "English_United States.1252" );`
 
    Ai fini delle prestazioni e della manutenibilità, è consigliabile utilizzare la prima forma.
 
-- `setlocale( LC_ALL, ".<code_page>" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".<code_page>" );`
 
    Imposta la tabella codici sul valore indicato da *<code_page>*, con il paese/area geografica e la lingua predefiniti (come definito dal sistema operativo host) per la tabella codici specificata.
 
-La categoria deve essere **LC_ALL** o **LC_CTYPE** per applicare una modifica della tabella codici. Se, ad esempio, il paese e la lingua predefiniti del sistema operativo host sono "Stati Uniti" e "English", le due chiamate seguenti a **setlocale** sono equivalenti dal punto di vista funzionale:
+La categoria deve essere **LC_ALL** o **LC_CTYPE** per applicare una modifica della tabella codici. Se, ad esempio, il paese e la lingua predefiniti del sistema operativo host sono "Stati Uniti" e "English", le due chiamate seguenti a **:::no-loc(setlocale):::** sono equivalenti dal punto di vista funzionale:
 
-`setlocale( LC_ALL, ".1252" );`
+`:::no-loc(setlocale):::( LC_ALL, ".1252" );`
 
-`setlocale( LC_ALL, "English_United States.1252");`
+`:::no-loc(setlocale):::( LC_ALL, "English_United States.1252");`
 
-Per altre informazioni, vedere la direttiva pragma [setlocale](../../preprocessor/setlocale.md) in [Riferimenti al preprocessore C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
+Per ulteriori informazioni, vedere la [:::no-loc(setlocale):::](../../preprocessor/:::no-loc(setlocale):::.md) direttiva pragma nella Guida di [riferimento al preprocessore C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
 
-La funzione [_configthreadlocale](configthreadlocale.md) viene utilizzata per **controllare se setlocale influisca sulle impostazioni** locali di tutti i thread di un programma o solo sulle impostazioni locali del thread chiamante.
+La funzione [_configthreadlocale](configthreadlocale.md) viene utilizzata per controllare se **:::no-loc(setlocale):::** influisca sulle impostazioni locali di tutti i thread di un programma o solo sulle impostazioni locali del thread chiamante.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**setlocale**|\<locale.h>|
-|**_wsetlocale**|\<locale.h> o \<wchar.h>|
+|**:::no-loc(setlocale):::**|\<locale.h>|
+|**:::no-loc(_wsetlocale):::**|\<locale.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
 ```C
-// crt_setlocale.c
+// crt_:::no-loc(setlocale):::.c
 //
-// This program demonstrates the use of setlocale when
+// This program demonstrates the use of :::no-loc(setlocale)::: when
 // using two independent threads.
 //
 
@@ -263,7 +263,7 @@ uintptr_t __stdcall SecondThreadFunc( void* pArguments )
 
     // Set the thread locale
     printf("The thread locale is now set to %s.\n",
-           setlocale(LC_ALL, locale));
+           :::no-loc(setlocale):::(LC_ALL, locale));
 
     // Retrieve the date string from the helper function
     if (get_date(str) == 0)
@@ -289,7 +289,7 @@ int main()
 
     // Set the locale of the main thread to US English.
     printf("The thread locale is now set to %s.\n",
-           setlocale(LC_ALL, "en-US"));
+           :::no-loc(setlocale):::(LC_ALL, "en-US"));
 
     // Create the second thread with a German locale.
     // Our thread function takes an argument of the locale to use.

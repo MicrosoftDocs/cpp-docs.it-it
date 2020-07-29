@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CPtrArray [MFC], SetAtGrow
 - CPtrArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
-ms.openlocfilehash: 7bab68fcbd2cfa4cfe44b0fcd2a1f78af886533d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5db9f69348e96fffc1aa6fdc88134d777eb5406d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363987"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226854"
 ---
 # <a name="cptrarray-class"></a>Classe CPtrArray
 
@@ -61,7 +61,7 @@ class CPtrArray : public CObject
 
 ## <a name="members"></a>Membri
 
-Le funzioni `CPtrArray` membro di sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ovunque venga visualizzato `CObject` un puntatore come parametro di funzione o valore restituito, sostituire un puntatore a **void**.
+Le funzioni membro di `CPtrArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Quando viene visualizzato un `CObject` puntatore come parametro di funzione o valore restituito, sostituire un puntatore a **`void`** .
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -73,48 +73,48 @@ ad esempio, si converte in
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPtrArray::CPtrArray](../../mfc/reference/cobarray-class.md#cobarray)|Costruisce una matrice vuota.|
+|[CPtrArray:: CPtrArray](../../mfc/reference/cobarray-class.md#cobarray)|Costruisce una matrice vuota.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPtrArray::Aggiungere](../../mfc/reference/cobarray-class.md#add)|Aggiunge un elemento alla fine della matrice; se necessario, aumenta le dimensioni della matrice.|
-|[CPtrArray::Aggiungi](../../mfc/reference/cobarray-class.md#append)|Accoda alla matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
-|[CPtrArray::Copia](../../mfc/reference/cobarray-class.md#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
-|[CPtrArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|
-|[CPtrArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|
-|[CPtrArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Restituisce il valore in corrispondenza di un indice specificato.|
-|[CPtrArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ottiene il numero di elementi nella matrice.|
-|[CPtrArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere `NULL`.|
-|[CPtrArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ottiene il numero di elementi nella matrice.|
-|[CPtrArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Restituisce il massimo indice valido.|
-|[CPtrArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|
-|[CPtrArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determina se la matrice è vuota.|
-|[CPtrArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Rimuove tutti gli elementi dalla matrice.|
-|[CPtrArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Rimuove un elemento in corrispondenza di un indice specificato.|
-|[CPtrArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|
-|[CPtrArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|
-|[CPtrArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Imposta il numero di elementi che la matrice deve contenere.|
+|[CPtrArray:: Add](../../mfc/reference/cobarray-class.md#add)|Aggiunge un elemento alla fine della matrice; se necessario, aumenta le dimensioni della matrice.|
+|[CPtrArray:: Append](../../mfc/reference/cobarray-class.md#append)|Accoda alla matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
+|[CPtrArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
+|[CPtrArray:: ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|
+|[CPtrArray:: FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|
+|[CPtrArray:: GetA](../../mfc/reference/cobarray-class.md#getat)|Restituisce il valore in corrispondenza di un indice specificato.|
+|[CPtrArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ottiene il numero di elementi nella matrice.|
+|[CPtrArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere `NULL`.|
+|[CPtrArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ottiene il numero di elementi nella matrice.|
+|[CPtrArray:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Restituisce il massimo indice valido.|
+|[CPtrArray:: InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|
+|[CPtrArray:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determina se la matrice è vuota.|
+|[CPtrArray:: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Rimuove tutti gli elementi dalla matrice.|
+|[CPtrArray:: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Rimuove un elemento in corrispondenza di un indice specificato.|
+|[CPtrArray:: SetAt](../../mfc/reference/cobarray-class.md#setat)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|
+|[CPtrArray:: SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|
+|[CPtrArray:: sesize](../../mfc/reference/cobarray-class.md#setsize)|Imposta il numero di elementi che la matrice deve contenere.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPtrArray::operatore \[\]](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|
+|[Operatore \[ CPtrArray::\]](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|
 
 ## <a name="remarks"></a>Osservazioni
 
-`CPtrArray`incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso `CDumpContext` e il dump dei tipi in fase di esecuzione a un oggetto. Se è necessario un dump di singoli elementi della matrice di puntatori, è necessario impostare la profondità del contesto di dump su 1 o su un valore maggiore.
+`CPtrArray`incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della matrice di puntatori, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
 > [!NOTE]
 > Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.
 
-Le matrici di puntatori non possono essere serializzate.
+Impossibile serializzare le matrici di puntatori.
 
-Quando una matrice di puntatori viene eliminata o quando i relativi elementi vengono rimossi, vengono rimossi solo i puntatori, non le entità a cui fanno riferimento.
+Quando viene eliminata una matrice di puntatori o quando vengono rimossi gli elementi, vengono rimossi solo i puntatori e non le entità a cui fanno riferimento.
 
-Per ulteriori informazioni `CPtrArray`sull'utilizzo di , vedere l'articolo [Raccolte](../../mfc/collections.md).
+Per ulteriori informazioni sull'utilizzo di `CPtrArray` , vedere le [raccolte](../../mfc/collections.md)di articoli.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -124,10 +124,10 @@ Per ulteriori informazioni `CPtrArray`sull'utilizzo di , vedere l'articolo [Racc
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxcoll.h
+**Intestazione:** AFXCOLL. h
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
-[Classe CObArray](../../mfc/reference/cobarray-class.md)
+[CObArray (classe)](../../mfc/reference/cobarray-class.md)

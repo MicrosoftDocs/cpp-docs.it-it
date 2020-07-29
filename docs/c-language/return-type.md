@@ -10,12 +10,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1d905e02be02784b562b9d1a8f72a9bfa4057b9b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857034"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226327"
 ---
 # <a name="return-type"></a>Tipo restituito
 
@@ -34,26 +34,26 @@ Il tipo restituito di una funzione determina la dimensione e il tipo del valore 
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**vuoto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**breve**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** / __int8\* specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** / __int16\* specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** / __int32\* specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** / __int64\* specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lungo**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**doppio**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**con segno**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`void`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`char`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`short`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int8`** /\*Specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int16`** /\*Specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int32`** /\*Specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int64`** /\*Specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`long`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`float`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`double`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`signed`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificatore enum*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
-*type-specifier* può specificare qualsiasi struttura o tipo di unione fondamentale. Se non si include *type-specifier*, viene presupposto il tipo restituito `int`.
+*type-specifier* può specificare qualsiasi struttura o tipo di unione fondamentale. Se non si include *Type-specifier*, viene utilizzato il tipo restituito **`int`** .
 
-Il tipo restituito fornito nella definizione di funzione deve corrispondere al tipo restituito nelle dichiarazioni della funzione in altre parti del programma. Una funzione restituisce un valore quando un'istruzione `return` che contiene un'espressione viene eseguita. L'espressione viene valutata, convertita in un tipo di valore restituito se necessario e viene restituita al punto in cui la funzione è stata chiamata. Se una funzione è dichiarata con il tipo restituito `void`, un'istruzione return che contiene un'espressione genera un avviso e l'espressione non viene valutata.
+Il tipo restituito fornito nella definizione di funzione deve corrispondere al tipo restituito nelle dichiarazioni della funzione in altre parti del programma. Una funzione restituisce un valore quando **`return`** viene eseguita un'istruzione contenente un'espressione. L'espressione viene valutata, convertita in un tipo di valore restituito se necessario e viene restituita al punto in cui la funzione è stata chiamata. Se una funzione viene dichiarata con il tipo restituito **`void`** , un'istruzione return contenente un'espressione genera un avviso e l'espressione non viene valutata.
 
 Negli esempi seguenti vengono illustrati i valori restituiti dalla funzione.
 
@@ -73,7 +73,7 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }
 ```
 
-Viene definito il tipo `STUDENT` con una dichiarazione `typedef` e viene definita la funzione `sortstu` per avere il tipo restituito `STUDENT`. La funzione selezionata e restituisce uno dei propri argomenti struttura. Nelle successive chiamate alla funzione, il compilatore controlla per verificare che i tipi di argomento siano `STUDENT`.
+In questo esempio viene definito il `STUDENT` tipo con una **`typedef`** dichiarazione e viene definita la funzione `sortstu` per avere un `STUDENT` tipo restituito. La funzione selezionata e restituisce uno dei propri argomenti struttura. Nelle successive chiamate alla funzione, il compilatore controlla per verificare che i tipi di argomento siano `STUDENT`.
 
 > [!NOTE]
 > L'efficienza risulta miglioratala passando di puntatori alla struttura, piuttosto che l'intera struttura.
@@ -93,9 +93,9 @@ char *smallstr( char s1[], char s2[] )
 }
 ```
 
-Nell'esempio seguente viene definita una funzione che restituisce un puntatore a una matrice di caratteri. La funzione accetta due matrici di caratteri (stringhe) come argomenti e restituisce un puntatore alla più breve delle due stringhe. Un puntatore a un elemento punta al primo degli elementi della matrice e ha il suo tipo; pertanto, il tipo restituito della funzione è un puntatore al tipo `char`.
+Nell'esempio seguente viene definita una funzione che restituisce un puntatore a una matrice di caratteri. La funzione accetta due matrici di caratteri (stringhe) come argomenti e restituisce un puntatore alla più breve delle due stringhe. Un puntatore a una matrice punta al primo degli elementi della matrice e ha il tipo. Pertanto, il tipo restituito della funzione è un puntatore al tipo **`char`** .
 
-Non è necessario dichiarare le funzioni con il tipo restituito `int` prima di chiamarle, sebbene i prototipi siano consigliati in modo da consentire il controllo del tipo corretto per gli argomenti e i valori restituiti.
+Non è necessario dichiarare le funzioni con **`int`** il tipo restituito prima di chiamarle, sebbene i prototipi siano consigliati in modo da abilitare il controllo del tipo corretto per gli argomenti e i valori restituiti.
 
 ## <a name="see-also"></a>Vedere anche
 

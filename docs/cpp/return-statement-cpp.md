@@ -7,12 +7,12 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: c8ea796ab40a2090ed9853377f7c9415914bc0e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a1ed4f374f133abd0233826d1b58896d49576cf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178982"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225865"
 ---
 # <a name="return-statement-c"></a>Istruzione return (C++)
 
@@ -26,15 +26,15 @@ return [expression];
 
 ## <a name="remarks"></a>Osservazioni
 
-La clausola `expression`, se presente, viene convertita nel tipo specificato nella dichiarazione di funzione, come se si eseguisse un'inizializzazione. La conversione dal tipo dell'espressione al tipo **restituito** della funzione può creare oggetti temporanei. Per ulteriori informazioni su come e quando vengono creati temporaries, vedere [oggetti temporanei](../cpp/temporary-objects.md).
+La clausola `expression`, se presente, viene convertita nel tipo specificato nella dichiarazione di funzione, come se si eseguisse un'inizializzazione. La conversione dal tipo dell'espressione al **`return`** tipo della funzione può creare oggetti temporanei. Per ulteriori informazioni su come e quando vengono creati temporaries, vedere [oggetti temporanei](../cpp/temporary-objects.md).
 
-Il valore della clausola `expression` viene restituito alla funzione chiamante. Se l'espressione viene omessa, il valore restituito della funzione è indefinito. I costruttori e i distruttori e le funzioni di tipo **void**non possono specificare un'espressione nell'istruzione **Return** . Le funzioni di tutti gli altri tipi devono specificare un'espressione nell'istruzione **return** .
+Il valore della clausola `expression` viene restituito alla funzione chiamante. Se l'espressione viene omessa, il valore restituito della funzione è indefinito. I costruttori e i distruttori e le funzioni di tipo **`void`** non possono specificare un'espressione nell' **`return`** istruzione. Le funzioni di tutti gli altri tipi devono specificare un'espressione nell' **`return`** istruzione.
 
-Quando il flusso di controllo esce dal blocco che include la definizione della funzione, il risultato è lo stesso che sarebbe se fosse stata eseguita un'istruzione **return** senza un'espressione. Ciò non è valido per le funzioni che vengono dichiarate come elementi che restituiscono un valore.
+Quando il flusso di controllo esce dal blocco che include la definizione della funzione, il risultato è identico a quello di un' **`return`** istruzione senza un'espressione eseguita. Ciò non è valido per le funzioni che vengono dichiarate come elementi che restituiscono un valore.
 
-Una funzione può avere un numero qualsiasi di istruzioni **return** .
+Una funzione può avere un numero qualsiasi di **`return`** istruzioni.
 
-Nell'esempio seguente viene utilizzata un'espressione con un'istruzione **return** per ottenere il più elevato tra due numeri interi.
+Nell'esempio seguente viene utilizzata un'espressione con un' **`return`** istruzione per ottenere il più grande tra due numeri interi.
 
 ## <a name="example"></a>Esempio
 
@@ -58,5 +58,5 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Istruzioni di spostamento](../cpp/jump-statements-cpp.md)<br/>
+[Istruzioni di salto](../cpp/jump-statements-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

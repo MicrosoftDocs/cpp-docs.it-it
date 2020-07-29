@@ -1,5 +1,5 @@
 ---
-title: Classe (C++)
+title: class (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - class_cpp
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: c1b9d8f6510dfe15644f0e47cad7e0aecbac36c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180976"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226008"
 ---
-# <a name="class-c"></a>Classe (C++)
+# <a name="class-c"></a>class (C++)
 
-La parola chiave **Class** dichiara un tipo di classe o definisce un oggetto di un tipo di classe.
+La **`class`** parola chiave dichiara un tipo di classe o definisce un oggetto di un tipo di classe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +35,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 Specifiche facoltative del modello. Per ulteriori informazioni, vedere [modelli](templates-cpp.md).
 
 *class*<br/>
-Parola chiave **Class** .
+**`class`** Parola chiave.
 
 *MS-decl-spec*<br/>
 Specifica della classe di archiviazione facoltativa. Per ulteriori informazioni, fare riferimento alla parola chiave [__declspec](../cpp/declspec.md) .
@@ -50,7 +50,7 @@ Elenco facoltativo delle classi o delle strutture da cui questa classe deriva i 
 Elenco dei membri della classe. Per ulteriori informazioni, vedere [Cenni preliminari sui membri della classe](../cpp/class-member-overview.md) .
 
 *declarators*<br/>
-Elenco dei dichiaratori che specificano i nomi di una o più istanze del tipo di classe. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della classe sono **pubblici**. Questo è più comune nelle strutture, i cui membri dati sono **pubblici** per impostazione predefinita, rispetto alle classi. Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](../cpp/overview-of-declarators.md) .
+Elenco dei dichiaratori che specificano i nomi di una o più istanze del tipo di classe. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della classe sono **`public`** . Questo è più comune nelle strutture, i cui membri dati sono **`public`** per impostazione predefinita, rispetto alle classi. Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](../cpp/overview-of-declarators.md) .
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -78,7 +78,6 @@ Per informazioni sulle classi gestite e sugli struct in C++/CLI e C++/CX, vedere
 
 #include <iostream>
 #include <string>
-#define TRUE = 1
 using namespace std;
 
 class dog

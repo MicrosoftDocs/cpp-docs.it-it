@@ -6,29 +6,29 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: 0d9566739a15e5d216eb052a7265313850515648
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 710831ea8ef6b52292ba3e8eb84a69575c6c7508
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226828"
 ---
 # <a name="using-an-image-list"></a>Utilizzo di un elenco di immagini
 
-L'utilizzo tipico di un elenco di immagini segue il modello seguente:Typical usage of an image list follows the pattern below:
+L'utilizzo tipico di un elenco di immagini segue il modello seguente:
 
-- Costruire un [Oggetto CImageList](../mfc/reference/cimagelist-class.md) e chiamare uno [Create](../mfc/reference/cimagelist-class.md#create) degli overload della relativa funzione Create `CImageList` per creare un elenco immagini e associarlo all'oggetto.
+- Costruire un oggetto [CImageList](../mfc/reference/cimagelist-class.md) e chiamare uno degli overload della relativa funzione [create](../mfc/reference/cimagelist-class.md#create) per creare un elenco di immagini e collegarlo all' `CImageList` oggetto.
 
-- Se non sono state aggiunte immagini durante la creazione dell'elenco immagini, aggiungere immagini all'elenco immagini chiamando la funzione membro [Add](../mfc/reference/cimagelist-class.md#add) o [Read.](../mfc/reference/cimagelist-class.md#read)
+- Se non sono state aggiunte immagini quando è stato creato l'elenco di immagini, aggiungere immagini all'elenco di immagini chiamando la funzione membro [Add](../mfc/reference/cimagelist-class.md#add) o [Read](../mfc/reference/cimagelist-class.md#read) .
 
-- Associare l'elenco immagini a un controllo chiamando la funzione membro appropriata di tale controllo o disegnare immagini dall'elenco immagini utilizzando la funzione membro [Draw](../mfc/reference/cimagelist-class.md#draw) dell'elenco immagini.
+- Associare l'elenco di immagini a un controllo chiamando la funzione membro appropriata del controllo oppure creare immagini dall'elenco di immagini utilizzando la [funzione membro di](../mfc/reference/cimagelist-class.md#draw) creazione dell'elenco immagini.
 
-- Forse consentire all'utente di trascinare un'immagine, utilizzando il supporto incorporato dell'elenco di immagini per il trascinamento.
+- Potrebbe consentire all'utente di trascinare un'immagine, usando il supporto incorporato dell'elenco immagini per il trascinamento.
 
 > [!NOTE]
-> Se l'elenco immagini è stato creato con `CImageList` l'operatore **new,** è necessario eliminare l'oggetto al termine dell'operazione.
+> Se l'elenco immagini è stato creato con l' **`new`** operatore, è necessario eliminare definitivamente l' `CImageList` oggetto al termine dell'operazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di CImageList](../mfc/using-cimagelist.md)<br/>
+[Utilizzo di CImageList](../mfc/using-cimagelist.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

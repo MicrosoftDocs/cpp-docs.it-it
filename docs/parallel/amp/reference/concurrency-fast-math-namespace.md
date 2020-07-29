@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 57e2134a2254dc4bc34d515e65e2ec629efeff33
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139517"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226750"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Spazio dei nomi Concurrency::fast_math
 
-Le funzioni nello spazio dei nomi `fast_math` hanno una precisione inferiore, supportano solo una precisione singola (`float`) e chiamano gli intrinseci DirectX. Esistono due versioni di ciascuna funzione, ad esempio `cos` e `cosf`. Entrambe le versioni accettano e restituiscono un `float`, ma ognuna chiama la stessa funzione intrinseca DirectX.
+Le funzioni nello `fast_math` spazio dei nomi hanno una precisione inferiore, supportano solo una precisione singola ( **`float`** ) e chiamano gli intrinseci DirectX. Sono disponibili due versioni di ciascuna funzione, ad esempio `cos` e `cosf` . Entrambe le versioni accettano e restituiscono un oggetto **`float`** , ma ognuna chiama la stessa funzione intrinseca DirectX.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,7 +21,7 @@ Le funzioni nello spazio dei nomi `fast_math` hanno una precisione inferiore, su
 namespace fast_math;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="functions"></a>Funzioni
 
@@ -29,9 +29,9 @@ namespace fast_math;
 |----------|-----------------|
 |[cos](concurrency-fast-math-namespace-functions.md#cos)|Calcola l'arcoseno dell'argomento|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Calcola l'arcoseno dell'argomento|
-|[asin](concurrency-fast-math-namespace-functions.md#asin)|Calcola l'arcoseno dell'argomento|
+|[Asin](concurrency-fast-math-namespace-functions.md#asin)|Calcola l'arcoseno dell'argomento|
 |[asinf](concurrency-fast-math-namespace-functions.md#asinf)|Calcola l'arcoseno dell'argomento|
-|[atan](concurrency-fast-math-namespace-functions.md#atan)|Calcola l'arcotangente dell'argomento.|
+|[Atan](concurrency-fast-math-namespace-functions.md#atan)|Calcola l'arcotangente dell'argomento.|
 |[atan2](concurrency-fast-math-namespace-functions.md#atan2)|Calcola il arcotangente di _Y/_X|
 |[atan2f](concurrency-fast-math-namespace-functions.md#atan2f)|Calcola il arcotangente di _Y/_X|
 |[atanf](concurrency-fast-math-namespace-functions.md#atanf)|Calcola l'arcotangente dell'argomento.|
@@ -47,7 +47,7 @@ namespace fast_math;
 |[expf](concurrency-fast-math-namespace-functions.md#expf)|Calcola l'esponenziale in base e dell'argomento|
 |[fabs](concurrency-fast-math-namespace-functions.md#fabs)|Restituisce il valore assoluto dell'argomento.|
 |[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|Restituisce il valore assoluto dell'argomento.|
-|[floor](concurrency-fast-math-namespace-functions.md#floor)|Calcola il piano dell'argomento|
+|[Floor](concurrency-fast-math-namespace-functions.md#floor)|Calcola il piano dell'argomento|
 |[floorf](concurrency-fast-math-namespace-functions.md#floorf)|Calcola il piano dell'argomento|
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|Determinare il valore numerico massimo degli argomenti|
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|Determinare il valore numerico massimo degli argomenti|
@@ -59,7 +59,7 @@ namespace fast_math;
 |[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Ottiene mantissa ed esponente di _X|
 |[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Determina se l'argomento ha un valore finito|
 |[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Determina se l'argomento è un infinito|
-|[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Determina se l'argomento è NaN|
+|[IsNaN](concurrency-fast-math-namespace-functions.md#isnan)|Determina se l'argomento è NaN|
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Calcola un numero reale da mantissa ed esponente|
 |[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|Calcola un numero reale da mantissa ed esponente|
 |[log](concurrency-fast-math-namespace-functions.md#log)|Calcola il logaritmo in base e dell'argomento|
@@ -70,15 +70,15 @@ namespace fast_math;
 |[logf](concurrency-fast-math-namespace-functions.md#logf)|Calcola il logaritmo in base e dell'argomento|
 |[modf](concurrency-fast-math-namespace-functions.md#modf)|Suddivide _X in parti frazionarie e intere.|
 |[modff](concurrency-fast-math-namespace-functions.md#modff)|Suddivide _X in parti frazionarie e intere.|
-|[pow](concurrency-fast-math-namespace-functions.md#pow)|Calcola _X elevato alla potenza di _Y|
+|[POW](concurrency-fast-math-namespace-functions.md#pow)|Calcola _X elevato alla potenza di _Y|
 |[powf](concurrency-fast-math-namespace-functions.md#powf)|Calcola _X elevato alla potenza di _Y|
-|[round](concurrency-fast-math-namespace-functions.md#round)|Arrotonda _X al numero intero più vicino|
+|[turno](concurrency-fast-math-namespace-functions.md#round)|Arrotonda _X al numero intero più vicino|
 |[roundf](concurrency-fast-math-namespace-functions.md#roundf)|Arrotonda _X al numero intero più vicino|
 |[rsqrt](concurrency-fast-math-namespace-functions.md#rsqrt)|Restituisce il reciproco della radice quadrata dell'argomento|
 |[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|Restituisce il reciproco della radice quadrata dell'argomento|
 |[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Restituisce il segno dell'argomento.|
 |[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Restituisce il segno dell'argomento.|
-|[sin](concurrency-fast-math-namespace-functions.md#sin)|Calcola il valore del seno dell'argomento.|
+|[peccato](concurrency-fast-math-namespace-functions.md#sin)|Calcola il valore del seno dell'argomento.|
 |[SinCos](concurrency-fast-math-namespace-functions.md#sincos)|Calcola il valore del seno e del coseno di _X|
 |[sincosf](concurrency-fast-math-namespace-functions.md#sincosf)|Calcola il valore del seno e del coseno di _X|
 |[sinf](concurrency-fast-math-namespace-functions.md#sinf)|Calcola il valore del seno dell'argomento.|
@@ -86,7 +86,7 @@ namespace fast_math;
 |[sinhf](concurrency-fast-math-namespace-functions.md#sinhf)|Calcola il valore del seno iperbolico dell'argomento|
 |[sqrt](concurrency-fast-math-namespace-functions.md#sqrt)|Calcola la radice quadrata dell'argomento|
 |[sqrtf](concurrency-fast-math-namespace-functions.md#sqrtf)|Calcola la radice quadrata dell'argomento|
-|[tan](concurrency-fast-math-namespace-functions.md#tan)|Calcola il valore tangente dell'argomento.|
+|[Tan](concurrency-fast-math-namespace-functions.md#tan)|Calcola il valore tangente dell'argomento.|
 |[tanf](concurrency-fast-math-namespace-functions.md#tanf)|Calcola il valore tangente dell'argomento.|
 |[tanh](concurrency-fast-math-namespace-functions.md#tanh)|Calcola il valore della tangente iperbolica dell'argomento|
 |[tanhf](concurrency-fast-math-namespace-functions.md#tanhf)|Calcola il valore della tangente iperbolica dell'argomento|

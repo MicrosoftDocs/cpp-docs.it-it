@@ -1,20 +1,20 @@
 ---
-title: 'Categorie di valori: lvalue e rvaluesC++()'
+title: 'Categorie di valori: lvalue e rvalues (C++)'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 23625ddf44d16a4dc408b87f27b9cdfba7a9cbd4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b4b3ba5fdbc11ec97870b0f06fd1aabd3b57f5ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077231"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225969"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Elementi Lvalue e Rvalue (C++)
 
-Ogni C++ espressione ha un tipo e appartiene a una *categoria di valori*. Le categorie di valori rappresentano la base per le regole che i compilatori devono seguire durante la creazione, la copia e lo trasferimento di oggetti temporanei durante la valutazione dell'espressione.
+Ogni espressione C++ dispone di un tipo e appartiene a una *categoria di valori*. Le categorie di valori rappresentano la base per le regole che i compilatori devono seguire durante la creazione, la copia e lo trasferimento di oggetti temporanei durante la valutazione dell'espressione.
 
 Lo standard C++ 17 definisce le categorie di valori di espressione nel modo seguente:
 
@@ -26,9 +26,9 @@ Lo standard C++ 17 definisce le categorie di valori di espressione nel modo segu
 
 Il diagramma seguente illustra le relazioni tra le categorie:
 
-![C++Categorie di valori di espressione](media/value_categories.png "C++Categorie di valori di espressione")
+![Categorie di valori dell'espressione C++](media/value_categories.png "Categorie di valori dell'espressione C++")
 
-Un lvalue ha un indirizzo a cui il programma può accedere. Esempi di espressioni lvalue includono i nomi delle variabili, incluse le variabili **const** , gli elementi di matrice, le chiamate di funzione che restituiscono un riferimento lvalue, i campi di bit, le unioni e i membri della classe.
+Un lvalue ha un indirizzo a cui il programma può accedere. Esempi di espressioni lvalue includono i nomi delle variabili, incluse le **`const`** variabili, gli elementi di matrice, le chiamate di funzione che restituiscono un riferimento lvalue, i campi di bit, le unioni e i membri della classe.
 
 Un'espressione prvalue non dispone di un indirizzo accessibile dal programma. Esempi di espressioni prvalue includono valori letterali, chiamate di funzione che restituiscono un tipo non di riferimento e oggetti temporanei creati durante l'espressione valutazione ma accessibili solo dal compilatore.
 
@@ -66,7 +66,7 @@ int main()
 > [!NOTE]
 > Gli esempi contenuti in questo argomento illustrano utilizzi corretti e non corretti riferiti ai casi in cui gli operatori non sono sottoposti a overload. Eseguendo l'overload degli operatori, è possibile rendere un'espressione come `j * 4` un lvalue.
 
-I termini *lvalue* e *rvalue* vengono spesso utilizzati quando si fa riferimento a riferimenti a oggetti. Per ulteriori informazioni sui riferimenti, vedere [lvalue Reference Dichiarator: &](../cpp/lvalue-reference-declarator-amp.md) e [rvalue reference dichiarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+I termini *lvalue* e *rvalue* vengono spesso utilizzati quando si fa riferimento a riferimenti a oggetti. Per ulteriori informazioni sui riferimenti, vedere [lvalue Reference Dichiarator: &](../cpp/lvalue-reference-declarator-amp.md) e [rvalue reference dichiarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

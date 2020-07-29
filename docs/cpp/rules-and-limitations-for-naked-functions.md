@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3dd089e13323e1811cf9d7c7717612313f2cef7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178951"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225852"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regole e limitazioni per le funzioni naked
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Le seguenti regole e limitazioni si applicano alle funzioni naked:
 
-- Istruzione **return** non consentita.
+- L' **`return`** istruzione non è consentita.
 
 - I costrutti di gestione delle eccezioni C++ e di gestione strutturata delle eccezioni non sono consentiti in quanto è necessario rimuoverli nello stack frame.
 
@@ -31,9 +31,9 @@ Le seguenti regole e limitazioni si applicano alle funzioni naked:
 
 - Non è possibile dichiarare gli oggetti di classe C++ nell'ambito lessicale della funzione. È possibile, tuttavia, dichiarare gli oggetti in un blocco annidato.
 
-- La parola chiave **naked** viene ignorata durante la compilazione con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+- La **`naked`** parola chiave viene ignorata durante la compilazione con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Per [__fastcall](../cpp/fastcall.md) funzioni naked, ogni volta che è presente un riferimento inC++ C/codice a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:
+- Per [__fastcall](../cpp/fastcall.md) funzioni naked, ogni volta che è presente un riferimento nel codice C/C++ a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:
 
 ```cpp
 // nkdfastcl.cpp
@@ -70,7 +70,7 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 }
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

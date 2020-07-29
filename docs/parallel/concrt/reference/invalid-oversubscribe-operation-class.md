@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0c95d234fee412c1dacb014dd135ca56fc73bf5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140842"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193965"
 ---
 # <a name="invalid_oversubscribe_operation-class"></a>Classe invalid_oversubscribe_operation
 
-Questa classe descrive un'eccezione generata quando il metodo `Context::Oversubscribe` viene chiamato con il parametro `_BeginOversubscription` impostato su **false** senza una chiamata precedente al metodo `Context::Oversubscribe` con il parametro `_BeginOversubscription` impostato su **true**.
+Questa classe descrive un'eccezione generata quando il `Context::Oversubscribe` metodo viene chiamato con il `_BeginOversubscription` parametro impostato su **`false`** senza una chiamata precedente al `Context::Oversubscribe` metodo con il `_BeginOversubscription` parametro impostato su **`true`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,7 +25,7 @@ Questa classe descrive un'eccezione generata quando il metodo `Context::Oversubs
 class invalid_oversubscribe_operation : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -45,7 +45,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>invalid_oversubscribe_operation
+## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a>invalid_oversubscribe_operation
 
 Costruisce un oggetto `invalid_oversubscribe_operation`.
 
@@ -62,4 +62,4 @@ Messaggio descrittivo dell'errore.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

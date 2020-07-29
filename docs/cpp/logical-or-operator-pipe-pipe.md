@@ -1,46 +1,48 @@
 ---
-title: 'Operatore OR logico: ||'
-ms.date: 06/14/2018
+title: 'Operatore OR logico:  &#124;&#124;'
+description: Sintassi e uso della sintassi dell'operatore OR logico del linguaggio standard C++.
+ms.date: 07/23/2020
 f1_keywords:
 - '||'
+- or_cpp
 helpviewer_keywords:
 - OR operator [C++], logical
 - '|| operator'
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-ms.openlocfilehash: 94b2bc024dd7223ac7adacc72924f5ee289bab37
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1845aef59f88d5dd044cefedd21cb618e1102e13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178080"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225995"
 ---
-# <a name="logical-or-operator-"></a>Operatore OR logico: ||
+# <a name="logical-or-operator-124124"></a>Operatore OR logico:  &#124;&#124;
 
 ## <a name="syntax"></a>Sintassi
 
-> Logical- *or-expression* **||** *Logical-and-Expression*
+> *Logical-or-Expression* **`||`** *Logical-and-Expression*
 
 ## <a name="remarks"></a>Osservazioni
 
-L'operatore OR logico ( **||** ) restituisce il valore booleano true se uno o entrambi gli operandi sono true e restituisce false in caso contrario. Gli operandi vengono convertiti in modo implicito nel tipo **bool** prima della valutazione e il risultato è di tipo **bool**. L'operatore OR logico presenta un'associatività da sinistra a destra.
+L'operatore OR logico ( **`||`** ) restituisce il valore booleano **`true`** se uno o entrambi gli operandi sono **`true`** e restituisce **`false`** in caso contrario. Gli operandi vengono convertiti in modo implicito nel tipo **`bool`** prima della valutazione e il risultato è di tipo **`bool`** . L'operatore OR logico presenta un'associatività da sinistra a destra.
 
-Gli operandi dell'operatore OR logico non devono essere dello stesso tipo, ma devono essere di tipo integrale o di tipo puntatore. Gli operandi sono in genere espressioni di uguaglianza o relazionali.
+Gli operandi dell'operatore logico OR non devono avere lo stesso tipo, ma devono essere di tipo booleano, integrale o puntatore. Gli operandi sono in genere espressioni di uguaglianza o relazionali.
 
 Il primo operando viene completamente restituito e tutti gli effetti collaterali vengono completati prima di continuare la restituzione dell'espressione OR logica.
 
-Il secondo operando viene restituito solo se il primo operando restituisce false (0). In questo modo si evita la valutazione del secondo operando quando l'espressione OR logica è true.
+Il secondo operando viene valutato solo se il primo operando restituisce **`false`** , perché la valutazione non è necessaria quando l'espressione OR logica è **`true`** . È noto come valutazione a *corto circuito* .
 
 ```cpp
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-Nell'esempio precedente, se `x` è uguale a `w`, `y` o a `z`, il secondo argomento della funzione `printf` restituisce true e il valore 1 viene stampato. In caso contrario, restituisce false e il valore 0 viene formattato. Appena una delle condizioni restituisce true, la restituzione viene interrotta.
+Nell'esempio precedente, se `x` è uguale a `w` , `y` o `z` , il secondo argomento della `printf` funzione restituisce **`true`** , che viene quindi promosso a un intero e il valore 1 viene stampato. In caso contrario, restituisce **`false`** e il valore 0 viene stampato. Non appena una delle condizioni restituisce, la valutazione viene **`true`** arrestata.
 
-## <a name="operator-keyword-for-124124"></a>Parola chiave operator per&#124;&#124;
+## <a name="operator-keyword-for-124124"></a>Parola chiave operator per &#124;&#124;
 
-L'operatore **or** è il testo equivalente di **||** . Esistono due modi per accedere all'operatore **or** nei programmi: includere il file di intestazione \<iso646. h > o compilare con l'opzione del compilatore [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
+C++ specifica **`or`** come ortografia alternativa per **`||`** . In C, l'ortografia alternativa viene fornita come una macro nell' \<iso646.h> intestazione. In C++, l'ortografia alternativa è una parola chiave. l'utilizzo di \<iso646.h> o dell'equivalente C++ \<ciso646> è deprecato. In Microsoft C++, l' [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) opzione del compilatore o è necessaria per abilitare l'ortografia alternativa.
 
 ## <a name="example"></a>Esempio
 
@@ -64,6 +66,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++Precedenza e associatività degli operatori predefiniti](cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori, precedenza e associatività predefiniti di C++](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatori logici C](../c-language/c-logical-operators.md)

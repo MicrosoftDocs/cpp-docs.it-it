@@ -7,27 +7,27 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8a72a8657daec39bb042fea744b5f97d3b34009
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226529"
 ---
 # <a name="bitwise-shift-operators"></a>Operatori di spostamento bit per bit
 
-Gli operatori shift spostano il primo operando**&lt;** a sinistra ()**>>** o a destra () in base al numero di posizioni che il secondo operando specifica.
+Gli operatori shift spostano il primo operando **&lt;&lt;** a sinistra () o a destra ( **>>** ) in base al numero di posizioni che il secondo operando specifica.
 
 ## <a name="syntax"></a>Sintassi
 
 *shift-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-espressione*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cambio-espressione* ** &lt; ** *additiva-espressione*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cambio-espressione* **>>** *additiva-espressione*
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-espressione* **&lt;&lt;** *additive-espressione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-espressione* **>>** *additive-espressione*
 
 Entrambi gli operandi devono essere valori integrali. Questi operatori eseguono le consuete conversioni aritmetiche; il tipo del risultato è il tipo dell'operando sinistro dopo la conversione.
 
-Per spostamenti verso sinistra, i bit a destra sgomberati vengono impostati su 0. Per spostamenti verso destra, i bit a sinistra sgomberati vengono riempiti in base al tipo del primo operando dopo la conversione. Se il tipo è `unsigned`, vengono impostati su 0. In caso contrario, vengono riempiti con copie del bit di segno. Per operatori left-shift senza overflow, l'istruzione
+Per spostamenti verso sinistra, i bit a destra sgomberati vengono impostati su 0. Per spostamenti verso destra, i bit a sinistra sgomberati vengono riempiti in base al tipo del primo operando dopo la conversione. Se il tipo è **`unsigned`** , vengono impostati su 0. In caso contrario, vengono riempiti con copie del bit di segno. Per operatori left-shift senza overflow, l'istruzione
 
 ```C
 expr1 << expr2

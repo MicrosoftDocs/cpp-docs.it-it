@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5b0e5766fda878acb1fdc54a79ce162444eb06de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371294"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225722"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Classe Module::MethodReleaseNotifier
 
-Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi viene specificato da un oggetto e dal relativo membro puntatore a un metodo.
+Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi viene specificato da un oggetto e dal relativo membro puntatore a metodo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,20 +44,20 @@ Tipo dell'oggetto la cui funzione membro è il gestore eventi.
 
 Nome                                                                                                 | Descrizione
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
-[Modulo::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | Inizializza una nuova istanza della classe `Module::MethodReleaseNotifier`.
+[Module:: MethodReleaseNotifier:: MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | Inizializza una nuova istanza della classe `Module::MethodReleaseNotifier`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                                   | Descrizione
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Modulo::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | Chiama il gestore eventi `Module::MethodReleaseNotifier` associato all'oggetto corrente.
+[Module:: MethodReleaseNotifier:: Invoke](#methodreleasenotifier-invoke) | Chiama il gestore eventi associato all'oggetto corrente `Module::MethodReleaseNotifier` .
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 Nome                                                                    | Descrizione
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Modulo::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Contiene un puntatore al gestore eventi per l'oggetto corrente. `Module::MethodReleaseNotifier`
-[Modulo::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Contiene un puntatore all'oggetto la cui funzione `Module::MethodReleaseNotifier` membro è il gestore eventi per l'oggetto corrente.
+[Module:: MethodReleaseNotifier:: method_](#methodreleasenotifier-method) | Include un puntatore al gestore eventi per l'oggetto corrente `Module::MethodReleaseNotifier` .
+[Module:: MethodReleaseNotifier:: object_](#methodreleasenotifier-object) | Include un puntatore all'oggetto la cui funzione membro è il gestore eventi per l' `Module::MethodReleaseNotifier` oggetto corrente.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -67,27 +67,27 @@ Nome                                                                    | Descri
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** module.h
+**Intestazione:** Module. h
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>Modulo::MethodReleaseNotifier::Invoke
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>Module:: MethodReleaseNotifier:: Invoke
 
-Chiama il gestore eventi `Module::MethodReleaseNotifier` associato all'oggetto corrente.
+Chiama il gestore eventi associato all'oggetto corrente `Module::MethodReleaseNotifier` .
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>Modulo::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>Module:: MethodReleaseNotifier:: method_
 
-Contiene un puntatore al gestore eventi per l'oggetto corrente. `Module::MethodReleaseNotifier`
+Include un puntatore al gestore eventi per l'oggetto corrente `Module::MethodReleaseNotifier` .
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>Modulo::MethodReleaseNotifier::MethodReleaseNotifier
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>Module:: MethodReleaseNotifier:: MethodReleaseNotifier
 
 Inizializza una nuova istanza della classe `Module::MethodReleaseNotifier`.
 
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Parametri
 
-*Oggetto*<br/>
+*object*<br/>
 Oggetto la cui funzione membro è un gestore eventi.
 
 *Metodo*<br/>
-Funzione membro *dell'oggetto* parametro che è il gestore eventi.
+Funzione membro dell' *oggetto* Parameter che rappresenta il gestore eventi.
 
-*Rilascio*<br/>
-Specificare per abilitare `true` la chiamata al metodo [sottostante Module::ReleaseNotifier::Release();](module-releasenotifier-class.md#releasenotifier-release) in caso `false`contrario, specificare .
+*versione*<br/>
+Specificare **`true`** per abilitare la chiamata al metodo [Module:: ReleaseNotifier:: Release ()](module-releasenotifier-class.md#releasenotifier-release) sottostante; in caso contrario, specificare **`false`** .
 
-## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>Modulo::MethodReleaseNotifier::object_
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>Module:: MethodReleaseNotifier:: object_
 
-Contiene un puntatore all'oggetto la cui funzione `Module::MethodReleaseNotifier` membro è il gestore eventi per l'oggetto corrente.
+Include un puntatore all'oggetto la cui funzione membro è il gestore eventi per l' `Module::MethodReleaseNotifier` oggetto corrente.
 
 ```cpp
 T* object_;

@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: 55c870263fdf6bd96cf8a137308adb329866c9e5
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: f5de7914f76d70d4bc618508d6a13ed0bdaf13df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150667"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193536"
 ---
 # <a name="forward_list-class"></a>Classe forward_list
 
@@ -103,12 +103,12 @@ class forward_list
 Tipo * \
 Tipo di dati degli elementi da archiviare in forward_list.
 
-\ *allocatore*
-Oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di forward_list e alla deallocazione della memoria. Questo parametro è facoltativo. Il valore predefinito è allocator <`Type`>.
+*Allocatore*\
+Oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di forward_list e alla deallocazione della memoria. Questo parametro è facoltativo e, Il valore predefinito è allocator<`Type`>.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Un oggetto `forward_list` alloca e libera la memoria per la sequenza che controlla tramite un oggetto archiviato della classe *allocator* basata sulla [classe allocator](../standard-library/allocator-class.md) (comunemente nota come `std::allocator)`. Per altre informazioni, vedere [Allocatori](../standard-library/allocators.md). Un oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto di tipo `allocator`.
+Un `forward_list` oggetto alloca e libera la memoria per la sequenza che controlla tramite un oggetto archiviato della classe *allocator* basata sulla [classe allocator](../standard-library/allocator-class.md) , comunemente nota come `std::allocator)` . Per altre informazioni, vedere [Allocatori](../standard-library/allocators.md). Un oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto di tipo `allocator` .
 
 > [!NOTE]
 > L'oggetto allocatore archiviato non viene copiato quando viene assegnato l'oggetto contenitore.
@@ -117,7 +117,7 @@ Iteratori, puntatori e riferimenti potrebbero diventare non validi quando vengon
 
 Le aggiunte alla sequenza controllata possono avvenire mediante chiamate a [forward_list::insert_after](#insert_after), che è l'unica funzione membro che chiama il costruttore `Type(const  T&)`. `forward_list` potrebbe anche chiamare costruttori di spostamento. Se tale espressione genera un'eccezione, l'oggetto contenitore non inserisce nuovi elementi e genera di nuovo l'eccezione. Pertanto, un oggetto di tipo `forward_list` viene lasciato in uno stato noto quando si verificano tali eccezioni.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
@@ -131,11 +131,11 @@ Le aggiunte alla sequenza controllata possono avvenire mediante chiamate a [forw
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe allocator per un oggetto elenco di inoltro.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore costante per l'elenco di inoltro.|
-|[const_pointer](#const_pointer)|Tipo che fornisce un puntatore a un elemento **const** in un elenco di inoltri.|
+|[const_pointer](#const_pointer)|Tipo che fornisce un puntatore a un **`const`** elemento in un elenco di inoltri.|
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento costante a un elemento nell'elenco di inoltro.|
 |[difference_type](#difference_type)|Tipo intero con segno che può essere usato per rappresentare il numero di elementi di un elenco di inoltro in un intervallo compreso tra gli elementi a cui puntano gli iteratori.|
-|[iterator](#iterator)|Tipo che fornisce un iteratore per l'elenco di inoltro.|
-|[pointer](#pointer)|Tipo che fornisce un puntatore a un elemento nell'elenco di inoltro.|
+|[iteratore](#iterator)|Tipo che fornisce un iteratore per l'elenco di inoltro.|
+|[puntatore](#pointer)|Tipo che fornisce un puntatore a un elemento nell'elenco di inoltro.|
 |[reference](#reference)|Tipo che fornisce un riferimento a un elemento nell'elenco di inoltro.|
 |[size_type](#size_type)|Tipo che rappresenta la distanza senza segno tra due elementi.|
 |[value_type](#value_type)|Tipo che rappresenta il tipo di elemento archiviato in un elenco di inoltro.|
@@ -146,7 +146,7 @@ Le aggiunte alla sequenza controllata possono avvenire mediante chiamate a [forw
 |-|-|
 |[assign](#assign)|Cancella gli elementi da un elenco di inoltro e copia un nuovo set di elementi in un elenco di inoltro di destinazione.|
 |[before_begin](#before_begin)|Restituisce un iteratore che punta alla posizione precedente al primo elemento in un elenco di inoltro.|
-|[begin](#begin)|Restituisce un iteratore che punta al primo elemento in un elenco di inoltro.|
+|[iniziare](#begin)|Restituisce un iteratore che punta al primo elemento in un elenco di inoltro.|
 |[cbefore_begin](#cbefore_begin)|Restituisce un iteratore const che punta alla posizione precedente al primo elemento in un elenco di inoltro.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento in un elenco di inoltro.|
 |[cend](#cend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento in un elenco di inoltro.|
@@ -154,9 +154,9 @@ Le aggiunte alla sequenza controllata possono avvenire mediante chiamate a [forw
 |[emplace_after](#emplace_after)|Sposta un nuovo elemento dopo una posizione specificata.|
 |[emplace_front](#emplace_front)|Aggiunge un elemento costruito sul posto all'inizio dell'elenco.|
 |[empty](#empty)|Verifica se un elenco di inoltro è vuoto.|
-|[end](#end)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento in un elenco di inoltro.|
+|[fine](#end)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento in un elenco di inoltro.|
 |[erase_after](#erase_after)|Rimuove gli elementi dall'elenco di inoltro dopo una posizione specificata.|
-|[front](#front)|Restituisce un riferimento al primo elemento in un elenco di inoltro.|
+|[fronte](#front)|Restituisce un riferimento al primo elemento in un elenco di inoltro.|
 |[get_allocator](#get_allocator)|Restituisce una copia dell'oggetto allocatore usato per costruire un elenco di inoltro.|
 |[insert_after](#insert_after)|Aggiunge elementi all'elenco di inoltro dopo una posizione specificata.|
 |[max_size](#max_size)|Restituisce la lunghezza massima di un elenco di inoltro.|
@@ -165,18 +165,18 @@ Le aggiunte alla sequenza controllata possono avvenire mediante chiamate a [forw
 |[push_front](#push_front)|Elimina un elemento all'inizio di un elenco di inoltro.|
 |[remove](#remove)|Cancella gli elementi in un elenco di inoltro che corrispondono a un valore specificato.|
 |[remove_if](#remove_if)|Cancella gli elementi da un elenco di inoltro per il quale viene soddisfatto un predicato specificato.|
-|[resize](#resize)|Specifica una nuova dimensione per un elenco di inoltro.|
-|[reverse](#reverse)|Inverte l'ordine degli elementi in un elenco di inoltro.|
+|[ridimensionare](#resize)|Specifica una nuova dimensione per un elenco di inoltro.|
+|[inverso](#reverse)|Inverte l'ordine degli elementi in un elenco di inoltro.|
 |[sort](#sort)|Dispone gli elementi in ordine crescente o in base a un ordine specificato da un predicato.|
 |[splice_after](#splice_after)|Unisce di nuovo i collegamenti tra nodi.|
-|[swap](#swap)|Scambia gli elementi di due elenchi di inoltro.|
+|[scambio](#swap)|Scambia gli elementi di due elenchi di inoltro.|
 |[unique](#unique)|Rimuove gli elementi adiacenti che superano un test specificato.|
 
 ### <a name="operators"></a>Operatori
 
 |||
 |-|-|
-|[operator=](#op_eq)|Sostituisce gli elementi dell'elenco con una copia di un altro elenco di inoltro.|
+|[operatore =](#op_eq)|Sostituisce gli elementi dell'elenco con una copia di un altro elenco di inoltro.|
 
 ## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
@@ -186,7 +186,7 @@ Tipo che rappresenta la classe allocator per un oggetto elenco di inoltro.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `allocator_type` è sinonimo del parametro di modello Allocator.
 
@@ -208,16 +208,16 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametri
 
-*primo*\
+*prima*\
 Inizio dell'intervallo di sostituzione.
 
-*ultimo*\
+*Ultima*\
 Fine dell'intervallo di sostituzione.
 
 *conteggio*\
 Numero di elementi da assegnare.
 
-\ *Val*
+*Val*\
 Valore da assegnare a ogni elemento.
 
 *Tipo*\
@@ -226,11 +226,11 @@ Tipo del valore.
 *IList*\
 Initializer_list da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Se forward_list è di tipo Integer, la prima funzione membro si comporta come `assign((size_type)First, (Type)Last)`. In caso contrario, la prima funzione membro sostituisce la sequenza controllata da `*this` con la sequenza [ `First, Last)`, che non deve sovrapporsi alla sequenza controllata iniziale.
+Se forward_list è di tipo Integer, la prima funzione membro si comporta come `assign((size_type)First, (Type)Last)`. In caso contrario, la prima funzione membro sostituisce la sequenza controllata da **`*this`** con la sequenza [ `First, Last)` , che non deve sovrapporsi alla sequenza controllata iniziale.
 
-La seconda funzione membro sostituisce la sequenza controllata da `*this` con una ripetizione di `Count` elementi con valore `Val`.
+La seconda funzione membro sostituisce la sequenza controllata da **`*this`** con una ripetizione di `Count` elementi di valore `Val` .
 
 La terza funzione membro copia gli elementi di initializer_list in forward_list.
 
@@ -247,7 +247,7 @@ iterator before_begin();
 
 Iteratore in avanti che punta subito prima del primo elemento della sequenza (o subito prima della fine di una sequenza vuota).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="begin"></a><a name="begin"></a>iniziare
 
@@ -262,7 +262,7 @@ iterator begin();
 
 Iteratore in avanti che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="cbefore_begin"></a><a name="cbefore_begin"></a>cbefore_begin
 
@@ -276,11 +276,11 @@ const_iterator cbefore_begin() const;
 
 Iteratore in avanti che punta subito prima del primo elemento della sequenza (o subito prima della fine di una sequenza vuota).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
-Restituisce un iteratore **const** che punta al primo elemento nell'intervallo.
+Restituisce un **`const`** iteratore che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -288,13 +288,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso in avanti **const** che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
+**`const`** Iteratore di accesso in avanti che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `begin()` e `cbegin()`.
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri come `Container` un contenitore (non **`const`** ) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()` .
 
 ```cpp
 auto i1 = Container.begin();
@@ -305,7 +305,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a><a name="cend"></a>cend
 
-Restituisce un iteratore **const** che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un **`const`** iteratore che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -315,11 +315,11 @@ const_iterator cend() const;
 
 Iteratore di accesso in avanti che punta oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` essere un contenitore modificabile (non **const**) di qualsiasi tipo che supporta `end()` e `cend()`.
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri come `Container` un contenitore (non **`const`** ) modificabile di qualsiasi tipo che supporta `end()` e `cend()` .
 
 ```cpp
 auto i1 = Container.end();
@@ -339,7 +339,7 @@ Cancella tutti gli elementi di un elenco di inoltro.
 void clear();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro chiama `erase_after(before_begin(), end()).`
 
@@ -351,20 +351,20 @@ Tipo che fornisce un iteratore costante per l'elenco di inoltro.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `const_iterator` descrive un oggetto che può essere usato come iteratore in avanti costante per la sequenza controllata. Qui è descritto come sinonimo di un tipo definito dall'implementazione.
 
 ## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
-Tipo che fornisce un puntatore a un elemento **const** in un elenco di inoltri.
+Tipo che fornisce un puntatore a un **`const`** elemento in un elenco di inoltri.
 
 ```cpp
 typedef typename Allocator::const_pointer
     const_pointer;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
@@ -374,7 +374,7 @@ Tipo che fornisce un riferimento costante a un elemento nell'elenco di inoltro.
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
@@ -384,7 +384,7 @@ Tipo intero con segno che può essere usato per rappresentare il numero di eleme
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `difference_type` descrive un oggetto che può rappresentare la differenza tra gli indirizzi di due elementi qualsiasi nella sequenza controllata.
 
@@ -399,17 +399,17 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parametri
 
-*Dove*\
+*In cui*\
 Posizione all'interno dell'elenco di inoltro di destinazione in cui viene costruito il nuovo elemento.
 
-\ *Val*
+*Val*\
 Argomento costruttore.
 
 ### <a name="return-value"></a>Valore restituito
 
 Iteratore che designa l'elemento appena inserito.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro inserisce un elemento con gli argomenti del costruttore *Val* subito dopo l'elemento a *cui* punta nella sequenza controllata. Il comportamento altrimenti è uguale a quello di [forward_list::insert_after](#insert_after).
 
@@ -424,10 +424,10 @@ template <class Type>
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Elemento aggiunto all'inizio dell'elenco di inoltro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione membro inserisce un elemento con gli argomenti costruttore `_ val` alla fine della sequenza controllata.
 
@@ -443,7 +443,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'elenco di inoltri è vuoto; in caso contrario, **false**.
+**`true`** Se l'elenco di inoltri è vuoto; in caso contrario, **`false`** .
 
 ## <a name="end"></a><a name="end"></a>fine
 
@@ -469,20 +469,20 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 ### <a name="parameters"></a>Parametri
 
-*Dove*\
+*In cui*\
 Posizione all'interno dell'elenco di inoltro di destinazione in cui viene cancellato l'elemento.
 
-*primo*\
+*prima*\
 Inizio dell'intervallo da cancellare.
 
-*ultimo*\
+*Ultima*\
 Fine dell'intervallo da cancellare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Iteratore che designa il primo elemento rimanente oltre tutti gli elementi rimossi oppure [forward_list::end](#end) se tale elemento non esiste.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La prima funzione membro rimuove l'elemento della sequenza controllata subito dopo *where*.
 
@@ -515,34 +515,34 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametri
 
-\ *al*
+*Al*\
 Classe Allocator da usare con questo oggetto.
 
 *Conteggio*\
 Numero di elementi dell'elenco costruito.
 
-\ *Val*
+*Val*\
 Valore degli elementi dell'elenco costruito.
 
-\ a *destra*
+*Ok*\
 Elenco di cui l'elenco costruito deve essere una copia.
 
-*Primo*\
+*Prima*\
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
-*Ultimo*\
+*Ultima*\
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
 *IList*\
 Initializer_list da copiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Tutti i costruttori archiviano un oggetto [allocator](../standard-library/allocator-class.md) e inizializzano la sequenza controllata. L'oggetto allocatore è l'argomento *al*, se presente. Per il costruttore di copia, è `right.get_allocator()`. In caso contrario, è `Allocator()`.
 
 I primi due costruttori specificano una sequenza controllata iniziale vuota.
 
-Il terzo costruttore specifica una ripetizione di elementi *count* di value `Type()`.
+Il terzo costruttore specifica una ripetizione di elementi *count* di value `Type()` .
 
 Il quarto e il quinto costruttore specificano una ripetizione di elementi *count* del valore *Val*.
 
@@ -592,19 +592,19 @@ template <class InputIterator>
 
 ### <a name="parameters"></a>Parametri
 
-*Dove*\
+*In cui*\
 Posizione all'interno dell'elenco di inoltro di destinazione in cui viene inserito il primo elemento.
 
 *Conteggio*\
 Numero di elementi da inserire.
 
-*Primo*\
+*Prima*\
 Inizio dell'intervallo di inserimento.
 
-*Ultimo*\
+*Ultima*\
 Fine dell'intervallo di inserimento.
 
-\ *Val*
+*Val*\
 Elemento aggiunto all'elenco di inoltro.
 
 *IList*\
@@ -614,7 +614,7 @@ Initializer_list da inserire.
 
 Iteratore che designa l'elemento appena inserito (solo prima e ultima funzione membro).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Ogni funzione membro inserisce, subito dopo l'elemento a cui punta la *posizione* nella sequenza controllata, una sequenza specificata dagli operandi rimanenti.
 
@@ -640,7 +640,7 @@ Tipo che fornisce un iteratore per l'elenco di inoltro.
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 `iterator` descrive un oggetto che può essere usato come iteratore in avanti per la sequenza controllata. Qui è descritto come sinonimo di un tipo definito dall'implementazione.
 
@@ -656,7 +656,7 @@ size_type max_size() const;
 
 Lunghezza della sequenza più lunga che l'oggetto può controllare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 ## <a name="merge"></a><a name="merge"></a>merge
 
@@ -670,17 +670,17 @@ template <class Predicate>
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*Ok*\
 Elenco di inoltro a partire dal quale deve essere eseguita l'unione.
 
-\ *comp*
+*comp*\
 Oggetto funzione di confronto usato per ordinare gli elementi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-`forward_list::merge` rimuove gli elementi dalla `right`di `forward_list` e li inserisce in questo `forward_list`. Entrambe le sequenze devono essere ordinate in base allo stesso predicato, descritto di seguito. La sequenza combinata è ordinata anche in base all'oggetto funzione di confronto.
+`forward_list::merge`rimuove gli elementi da `forward_list` `right` e li inserisce in `forward_list` . Entrambe le sequenze devono essere ordinate in base allo stesso predicato, descritto di seguito. La sequenza combinata è ordinata anche in base all'oggetto funzione di confronto.
 
-Per gli iteratori `Pi` e `Pj` che designano gli elementi nelle posizioni `i` e `j`, la prima funzione membro impone l'ordine `!(*Pj < *Pi)` ogni volta che `i < j` Gli elementi vengono ordinati in base a `ascending` ordine. La seconda funzione membro impone l'ordine `! comp(*Pj, *Pi)` ogni volta che `i < j`.
+Per gli iteratori `Pi` e `Pj` che designano gli elementi nelle posizioni `i` e `j`, la prima funzione membro impone l'ordine `!(*Pj < *Pi)` ogni volta che `i < j` Gli elementi vengono ordinati in `ascending` ordine. La seconda funzione membro impone l'ordine `! comp(*Pj, *Pi)` ogni volta che `i < j` .
 
 Nessuna coppia di elementi inclusa nella sequenza controllata originale viene invertita nella sequenza controllata risultante. Se una coppia di elementi nella sequenza controllata risultante risulta uguale ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), un elemento della sequenza controllata originale appare prima di un elemento della sequenza controllata da `right`.
 
@@ -698,13 +698,13 @@ forward_list& operator=(forward_list&& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*Ok*\
 Elenco di inoltro che viene copiato nell'elenco di inoltro.
 
 *IList*\
 Elenco di inizializzatori tra parentesi graffe che si comporta come una sequenza di elementi di tipo `Type`.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo operatore membro sostituisce la sequenza controllata con una copia della sequenza controllata da *right*.
 
@@ -712,7 +712,7 @@ Il secondo operatore membro sostituisce la sequenza controllata da un oggetto de
 
 Il terzo operatore membro è uguale al primo, ma con un riferimento [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="pointer"></a><a name="pointer"></a>puntatore
+## <a name="pointer"></a>Puntatore <a name="pointer"></a>
 
 Tipo che fornisce un puntatore a un elemento nell'elenco di inoltro.
 
@@ -728,7 +728,7 @@ Elimina l'elemento all'inizio di un elenco di inoltro.
 void pop_front();
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il primo elemento dell'elenco di inoltro non deve essere vuoto.
 
@@ -745,10 +745,10 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Elemento aggiunto all'inizio dell'elenco di inoltro.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Se viene generata un'eccezione, il contenitore viene lasciato inalterato e viene nuovamente generata l'eccezione.
 
@@ -770,10 +770,10 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-\ *Val*
+*Val*\
 Valore che, se contenuto da un elemento, comporterà la rimozione dell'elemento dall'elenco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro rimuove dalla sequenza controllata tutti gli elementi, designati dall'iteratore `P`, per cui `*P ==  val`.
 
@@ -790,10 +790,10 @@ template <class Predicate>
 
 ### <a name="parameters"></a>Parametri
 
-*predazione*\
+*Pred*\
 Predicato unario che, se soddisfatto da un elemento, comporta l'eliminazione di tale elemento dall'elenco.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro rimuove dalla sequenza controllata tutti gli elementi, designati dall'iteratore `P`, per cui `pred(*P)` è true.
 
@@ -813,12 +813,12 @@ void resize(size_type _Newsize, const Type& val);
 *_Newsize*\
 Numero di elementi nell'elenco di inoltro ridimensionato.
 
-\ *Val*
+*Val*\
 Valore da usare per la spaziatura interna.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-Le funzioni membro assicurano che il numero di elementi nell'elenco sia in *_Newsize*. Se la sequenza controllata deve essere più lunga, la prima funzione membro accoda elementi con valore `Type()`, mentre la seconda funzione membro accoda gli elementi con il valore *Val*. Per accorciare la sequenza controllata, tutte e due le funzioni membro chiamano `erase_after(begin() + _Newsize - 1, end())`.
+Le funzioni membro assicurano che il numero di elementi nell'elenco sia in *_Newsize*. Se la sequenza controllata deve essere più lunga, la prima funzione membro accoda elementi con valore `Type()` , mentre la seconda funzione membro accoda gli elementi con il valore *Val*. Per accorciare la sequenza controllata, tutte e due le funzioni membro chiamano `erase_after(begin() + _Newsize - 1, end())`.
 
 ## <a name="reverse"></a><a name="reverse"></a>inverso
 
@@ -836,7 +836,7 @@ Tipo che rappresenta la distanza senza segno tra due elementi.
 typedef typename Allocator::size_type size_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo Unsigned Integer descrive un oggetto che può rappresentare la lunghezza di una sequenza controllata.
 
@@ -852,14 +852,14 @@ void sort(Predicate pred);
 
 ### <a name="parameters"></a>Parametri
 
-*predazione*\
+*Pred*\
 Predicato di ordinamento.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Entrambe le funzioni membro ordinano gli elementi nella sequenza controllata in base a un predicato, descritto di seguito.
 
-Per gli iteratori `Pi` e `Pj` che designano gli elementi nelle posizioni `i` e `j`, la prima funzione membro impone l'ordine `!(*Pj < *Pi)` ogni volta che `i < j` Gli elementi vengono ordinati in base a `ascending` ordine. La funzione del modello di membro impone l'ordine `! pred(*Pj, *Pi)` ogni volta che `i < j`. Nessuna coppia ordinata di elementi inclusa nella sequenza controllata originale viene invertita nella sequenza controllata risultante. L'ordinamento è stabile.
+Per gli iteratori `Pi` e `Pj` che designano gli elementi nelle posizioni `i` e `j`, la prima funzione membro impone l'ordine `!(*Pj < *Pi)` ogni volta che `i < j` Gli elementi vengono ordinati in `ascending` ordine. La funzione del modello di membro impone l'ordine `! pred(*Pj, *Pi)` ogni volta che `i < j` . Nessuna coppia ordinata di elementi inclusa nella sequenza controllata originale viene invertita nella sequenza controllata risultante. L'ordinamento è stabile.
 
 Si verifica un'eccezione solo se *prede* genera un'eccezione. In questo caso, la sequenza controllata viene lasciata in un ordine non specificato e viene nuovamente generata l'eccezione.
 
@@ -892,30 +892,30 @@ void splice_after(
 
 ### <a name="parameters"></a>Parametri
 
-*Dove*\
+*In cui*\
 Posizione nell'elenco forward_list di destinazione prima dopo cui effettuare l'inserimento.
 
 *Origine*\
 Elenco forward_list di origine da inserire nell'elenco forward_list di destinazione.
 
-\ *iter*
+*Iter*\
 Elemento da inserire dall'elenco forward_list di origine.
 
-*Primo*\
+*Prima*\
 Primo elemento dell'intervallo da inserire dall'elenco forward_list di origine.
 
-*Ultimo*\
+*Ultima*\
 Prima posizione oltre l'intervallo da inserire dall'elenco forward_list di origine.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La prima coppia di funzioni membro inserisce la sequenza controllata dall' *origine* subito dopo l'elemento nella sequenza controllata a *cui*punta. Rimuove anche tutti gli elementi dall' *origine*. (`&Source` non devono essere **uguali)** .
+La prima coppia di funzioni membro inserisce la sequenza controllata dall' *origine* subito dopo l'elemento nella sequenza controllata a *cui*punta. Rimuove anche tutti gli elementi dall' *origine*. ( `&Source` non deve essere uguale a **`this`** ).
 
 La seconda coppia di funzioni membro rimuove l'elemento subito dopo *iter* nella sequenza controllata dall' *origine* e lo inserisce subito dopo l'elemento nella sequenza controllata a *cui*punta. Se `Where == Iter || Where == ++Iter`, non si verifica alcuna modifica.
 
-La terza coppia di funzioni membro (splicing con intervallo) inserisce l'intervallo secondario designato da `(First, Last)` dalla sequenza controllata dall' *origine* subito dopo l'elemento nella sequenza controllata a *cui*punta. Viene anche rimosso il sottointervallo originale dalla sequenza controllata dall' *origine*. Se `&Source == this`, l'intervallo `(First, Last)` non deve includere l'elemento a *cui*punta.
+La terza coppia di funzioni membro (splicing con intervallo) inserisce il sottointervallo designato da `(First, Last)` dalla sequenza controllata dall' *origine* subito dopo l'elemento nella sequenza controllata a *cui*punta. Viene anche rimosso il sottointervallo originale dalla sequenza controllata dall' *origine*. Se `&Source == this` , l'intervallo `(First, Last)` non deve includere l'elemento a *cui*punta.
 
-Se l'operazione di splicing nell'intervallo inserisce `N` elementi e `&Source != this`, un oggetto della classe [iterator](#iterator) viene incrementato `N` volte.
+Se l'operazione di splicing nell'intervallo inserisce `N` elementi e `&Source != this`, un oggetto della classe [iterator](#iterator) sarà incrementato `N` volte.
 
 Nessun iteratore, puntatore o riferimento che designa elementi sottoposti a splicing diventerà non valido.
 
@@ -1002,12 +1002,12 @@ void swap(forward_list& right);
 
 ### <a name="parameters"></a>Parametri
 
-\ a *destra*
+*Ok*\
 Elenco di inoltro che fornisce gli elementi da scambiare.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
-La funzione membro scambia le sequenze controllate tra `*this` e *right*. Se `get_allocator() ==  right.get_allocator()`, esegue l'operazione in un tempo costante, non genera alcuna eccezione e non invalida riferimenti, puntatori o iteratori che designano gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
+La funzione membro scambia le sequenze controllate tra **`*this`** e *right*. Se `get_allocator() ==  right.get_allocator()`, esegue l'operazione in un tempo costante, non genera alcuna eccezione e non invalida riferimenti, puntatori o iteratori che designano gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
 
 ## <a name="unique"></a><a name="unique"></a>unico
 
@@ -1021,10 +1021,10 @@ void unique(BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parametri
 
-\ *comp*
+*comp*\
 Predicato binario usato per confrontare gli elementi successivi.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Mantiene la prima istanza di ogni elemento univoco e rimuove il resto. Gli elementi devono essere ordinati in modo che quelli di valore uguale siano adiacenti nell'elenco.
 
@@ -1042,6 +1042,6 @@ Tipo che rappresenta il tipo di elemento archiviato in un elenco di inoltro.
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il tipo è un sinonimo del parametro di modello `Type`.

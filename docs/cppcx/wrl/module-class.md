@@ -43,12 +43,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: afd2edacefdf5d62b50a03c0a8c37f13ee5d9c9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7930247c979c111a7f4798e35ebe7aa95209f37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225748"
 ---
 # <a name="module-class"></a>Module (classe)
 
@@ -69,8 +69,8 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="parameters"></a>Parametri
 
-*moduleType (Tipo modulo)*<br/>
-Combinazione di uno o più [ModuleType](moduletype-enumeration.md) valori di enumerazione.
+*moduleType*<br/>
+Combinazione di uno o più valori di enumerazione [ModuleType](moduletype-enumeration.md) .
 
 ## <a name="members"></a>Membri
 
@@ -78,61 +78,61 @@ Combinazione di uno o più [ModuleType](moduletype-enumeration.md) valori di enu
 
 Nome                                                                                | Descrizione
 ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Modulo::GenericReleaseNotifier](module-genericreleasenotifier-class.md) | Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi è specificato da in un'espressione lambda, un funtore o un puntatore a funzione.
-[Modulo::MethodReleaseNotifier](module-methodreleasenotifier-class.md)   | Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi viene specificato da un oggetto e dal relativo membro puntatore a un metodo.
-[Modulo::ReleaseNotifier](module-releasenotifier-class.md)               | Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.
+[Module:: GenericReleaseNotifier](module-genericreleasenotifier-class.md) | Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi viene specificato da su un lambda, un functor o un puntatore a funzione.
+[Module:: MethodReleaseNotifier](module-methodreleasenotifier-class.md)   | Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi viene specificato da un oggetto e dal relativo membro puntatore a metodo.
+[Module:: ReleaseNotifier](module-releasenotifier-class.md)               | Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 Nome                             | Descrizione
 -------------------------------- | -----------------------------------------------------------
-[Modulo:: .](#tilde-module) | Deinizializza l'istanza corrente `Module` della classe.
+[Modulo Module:: ~](#tilde-module) | Consente di deinizializzare l'istanza corrente della `Module` classe.
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
 Nome                      | Descrizione
 ------------------------- | ---------------------------------------------------
-[Modulo::Modulo](#module) | Inizializza una nuova istanza della classe `Module`.
+[Module:: module](#module) | Inizializza una nuova istanza della classe `Module`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Nome                                                    | Descrizione
 ------------------------------------------------------- | --------------------------------------------------------------------------------------------------
-[Modulo::Crea](#create)                               | Crea un'istanza di un modulo.
-[Modulo::DecrementObjectCount](#decrementobjectcount)   | Decrementa il numero di oggetti rilevati dal modulo.
-[Modulo::GetActivationFactory](#getactivationfactory)   | Ottiene una factory di attivazione per il modulo.
-[Modulo::GetClassObject](#getclassobject)               | Recupera una cache di class factory.
-[Modulo::GetModule](#getmodule)                         | Crea un'istanza di un modulo.
-[Modulo::GetObjectCount](#getobjectcount)               | Recupera il numero di oggetti gestiti da questo modulo.
-[Modulo::IncrementObjectCount](#incrementobjectcount)   | Incrementa il numero di oggetti rilevati dal modulo.
-[Modulo::RegisterCOMObject](#registercomobject)         | Registra uno o più oggetti COM in modo che altre applicazioni possano connettersi a essi.
-[Modulo::RegisterObjects](#registerobjects)             | Registra gli oggetti COM o Windows Runtime in modo che altre applicazioni possano connettersi a essi.
-[Modulo::RegisterWinRTObject](#registerwinrtobject)     | Registra uno o più oggetti Windows Runtime in modo che altre applicazioni possano connettersi a essi.
-[Modulo::Termina](#terminate)                         | Determina l'arresto di tutte le factory di cui è stata creata un'istanza dal modulo.
-[Modulo::UnregisterCOMObject](#unregistercomobject)     | Annulla la registrazione di uno o più oggetti COM, impedendo ad altre applicazioni di connettersi ad essi.
-[Modulo::UnregisterObjects](#unregisterobjects)         | Annulla la registrazione degli oggetti nel modulo specificato in modo che altre applicazioni non possano connettersi ad essi.
-[Modulo::UnregisterWinRTObject](#unregisterwinrtobject) | Annulla la registrazione di uno o più oggetti Windows Runtime in modo che altre applicazioni non possano connettersi a essi.
+[Module:: create](#create)                               | Crea un'istanza di un modulo.
+[Modulo::D ecrementObjectCount](#decrementobjectcount)   | Decrementa il numero di oggetti rilevati dal modulo.
+[Module:: GetActivationFactory](#getactivationfactory)   | Ottiene una factory di attivazione per il modulo.
+[Module:: GetClassObject](#getclassobject)               | Recupera una cache di class factory.
+[Module:: GetModule](#getmodule)                         | Crea un'istanza di un modulo.
+[Module:: GetObjectCount](#getobjectcount)               | Recupera il numero di oggetti gestiti da questo modulo.
+[Module:: IncrementObjectCount](#incrementobjectcount)   | Incrementa il numero di oggetti rilevati dal modulo.
+[Module:: RegisterCOMObject](#registercomobject)         | Registra uno o più oggetti COM in modo che le altre applicazioni possano connettersi a esse.
+[Module:: RegisterObjects](#registerobjects)             | Registra gli oggetti COM o Windows Runtime in modo che possano connettersi ad altre applicazioni.
+[Module:: RegisterWinRTObject](#registerwinrtobject)     | Registra uno o più oggetti Windows Runtime in modo che le altre applicazioni possano connettersi a esse.
+[Module:: terminate](#terminate)                         | Causa l'arresto di tutte le factory di cui è stata creata un'istanza dal modulo.
+[Module:: UnregisterCOMObject](#unregistercomobject)     | Annulla la registrazione di uno o più oggetti COM, che impedisce ad altre applicazioni di connettersi a esse.
+[Module:: UnregisterObjects](#unregisterobjects)         | Annulla la registrazione degli oggetti nel modulo specificato in modo che le altre applicazioni non possano connettersi a esse.
+[Module:: UnregisterWinRTObject](#unregisterwinrtobject) | Annulla la registrazione di uno o più oggetti Windows Runtime in modo che le altre applicazioni non possano connettersi a esse.
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 Nome                      | Descrizione
 ------------------------- | --------------------------------
-[Modulo::Crea](#create) | Crea un'istanza di un modulo.
+[Module:: create](#create) | Crea un'istanza di un modulo.
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
 Nome                                         | Descrizione
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
-[Modulo::objectCount_](#objectcount)         | Tiene traccia di quante classi sono state create con la funzione [Make.](make-function.md)
-[Modulo::releaseNotifier_](#releasenotifier) | Contiene un puntatore a un `ReleaseNotifier` oggetto.
+[Modulo:: objectCount_](#objectcount)         | Tiene traccia del numero di classi create con la funzione [make](make-function.md) .
+[Modulo:: releaseNotifier_](#releasenotifier) | Include un puntatore a un `ReleaseNotifier` oggetto.
 
 ### <a name="macros"></a>Macro
 
 Nome                                                                   | Descrizione
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ActivatableClass](activatableclass-macros.md)              | Popola una cache interna che contiene una factory in grado di creare un'istanza della classe specificata. Questa macro specifica i parametri predefiniti di tipo factory e ID gruppo.
-[ActivatableClassWithFactory](activatableclass-macros.md)   | Popola una cache interna che contiene una factory in grado di creare un'istanza della classe specificata. Questa macro consente di specificare un particolare parametro factory.
-[ActivatableClassWithFactoryEx](activatableclass-macros.md) | Popola una cache interna che contiene una factory in grado di creare un'istanza della classe specificata. Questa macro consente di specificare particolari parametri di ID di gruppo e di fabbrica.
+[ActivatableClass](activatableclass-macros.md)              | Popola una cache interna che contiene una factory in grado di creare un'istanza della classe specificata. Questa macro specifica i parametri predefiniti di Factory e ID gruppo.
+[ActivatableClassWithFactory](activatableclass-macros.md)   | Popola una cache interna che contiene una factory in grado di creare un'istanza della classe specificata. Questa macro consente di specificare un determinato parametro Factory.
+[ActivatableClassWithFactoryEx](activatableclass-macros.md) | Popola una cache interna che contiene una factory in grado di creare un'istanza della classe specificata. Questa macro consente di specificare determinati parametri di Factory e ID di gruppo.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -144,19 +144,19 @@ Nome                                                                   | Descriz
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** module.h
+**Intestazione:** Module. h
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="modulemodule"></a><a name="tilde-module"></a>Modulo:: .
+## <a name="modulemodule"></a><a name="tilde-module"></a>Modulo Module:: ~
 
-Deinizializza l'istanza corrente `Module` della classe.
+Consente di deinizializzare l'istanza corrente della `Module` classe.
 
 ```cpp
 virtual ~Module();
 ```
 
-## <a name="modulecreate"></a><a name="create"></a>Modulo::Crea
+## <a name="modulecreate"></a><a name="create"></a>Module:: create
 
 Crea un'istanza di un modulo.
 
@@ -181,17 +181,17 @@ Tipo di modulo.
 *callback*<br/>
 Chiamato quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
-*Oggetto*<br/>
-I parametri *dell'oggetto* e del *metodo* vengono utilizzati in combinazione. Punta all'ultimo oggetto di istanza quando viene rilasciato l'ultimo oggetto istanza nel modulo.
+*object*<br/>
+I parametri *oggetto* e *Metodo* vengono utilizzati in combinazione. Punta all'ultimo oggetto istanza quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
 *Metodo*<br/>
-I parametri *dell'oggetto* e del *metodo* vengono utilizzati in combinazione. Punta al metodo dell'ultimo oggetto istanza quando viene rilasciato l'ultimo oggetto istanza nel modulo.
+I parametri *oggetto* e *Metodo* vengono utilizzati in combinazione. Punta al metodo dell'ultimo oggetto istanza quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
 ### <a name="return-value"></a>Valore restituito
 
 Riferimento al modulo.
 
-## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>Modulo::DecrementObjectCount
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>Modulo::D ecrementObjectCount
 
 Decrementa il numero di oggetti rilevati dal modulo.
 
@@ -203,7 +203,7 @@ virtual long DecrementObjectCount();
 
 Conteggio prima dell'operazione di decremento.
 
-## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>Modulo::GetActivationFactory
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>Module:: GetActivationFactory
 
 Ottiene una factory di attivazione per il modulo.
 
@@ -217,20 +217,20 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parametri
 
-*pActivatibleClassId (informazioni in stato inoperato in questo stato)*<br/>
-IID di una classe di runtime.
+*pActivatibleClassId*<br/>
+IID di una classe di Runtime.
 
-*PpIFactory (file ppIFactory)*<br/>
-Oggetto IActivationFactory per la classe di runtime specificata.
+*ppIFactory*<br/>
+IActivationFactory per la classe di runtime specificata.
 
 *Nomeserver*<br/>
-Nome di un sottoinsieme di class factory nel modulo corrente. Specificare il nome del server utilizzato nella macro `nullptr` [ActivatableClassWithFactoryEx](activatableclass-macros.md) oppure specificare di ottenere il nome del server predefinito.
+Nome di un subset di class factory nel modulo corrente. Specificare il nome del server utilizzato nella macro [ActivatableClassWithFactoryEx](activatableclass-macros.md) oppure specificare **`nullptr`** per ottenere il nome del server predefinito.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK in caso di esito positivo; in caso contrario, il valore HRESULT restituito da GetActivationFactory.
+S_OK in caso di esito positivo; in caso contrario, HRESULT restituito da GetActivationFactory.
 
-## <a name="modulegetclassobject"></a><a name="getclassobject"></a>Modulo::GetClassObject
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a>Module:: GetClassObject
 
 Recupera una cache di class factory.
 
@@ -248,22 +248,22 @@ HRESULT GetClassObject(
 *clsid*<br/>
 ID classe.
 
-*Riid*<br/>
-ID interfaccia richiesto.
+*riid*<br/>
+ID di interfaccia richiesta.
 
-*Ppv*<br/>
+*PPV*<br/>
 Puntatore all'oggetto restituito.
 
 *Nomeserver*<br/>
-Il nome del server specificato `ActivatableClassWithFactory` `ActivatableClassWithFactoryEx`nella `ActivatableClass` macro , , o ; o `nullptr` per ottenere il nome del server predefinito.
+Nome del server specificato nella macro, o oppure `ActivatableClassWithFactory` `ActivatableClassWithFactoryEx` `ActivatableClass` **`nullptr`** per ottenere il nome del server predefinito.
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Osservazioni
 
-Utilizzare questo metodo solo per COM, non Windows Runtime. Questo metodo espone `IClassFactory` solo metodi.
+Usare questo metodo solo per COM, non per il Windows Runtime. Questo metodo espone solo i `IClassFactory` metodi.
 
-## <a name="modulegetmodule"></a><a name="getmodule"></a>Modulo::GetModule
+## <a name="modulegetmodule"></a><a name="getmodule"></a>Module:: GetModule
 
 Crea un'istanza di un modulo.
 
@@ -274,9 +274,9 @@ WRL_NOTHROW static Module& GetModule();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento a un modulo.
+Riferimento a un modulo.
 
-## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>Modulo::GetObjectCount
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>Module:: GetObjectCount
 
 Recupera il numero di oggetti gestiti da questo modulo.
 
@@ -288,7 +288,7 @@ virtual long GetObjectCount() const;
 
 Numero corrente di oggetti gestiti da questo modulo.
 
-## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>Modulo::IncrementObjectCount
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>Module:: IncrementObjectCount
 
 Incrementa il numero di oggetti rilevati dal modulo.
 
@@ -300,7 +300,7 @@ virtual long IncrementObjectCount();
 
 Conteggio prima dell'operazione di incremento.
 
-## <a name="modulemodule"></a><a name="module"></a>Modulo::Modulo
+## <a name="modulemodule"></a><a name="module"></a>Module:: module
 
 Inizializza una nuova istanza della classe `Module`.
 
@@ -310,19 +310,19 @@ Module();
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo costruttore è protetto e `new` non può essere chiamato con la parola chiave . Chiamare invece [Module::GetModule](#getmodule) o [Module::Create](#create).
+Questo costruttore è protetto e non può essere chiamato con la **`new`** parola chiave. Chiamare invece [Module:: GetModule](#getmodule) o [Module:: create](#create).
 
-## <a name="moduleobjectcount_"></a><a name="objectcount"></a>Modulo::objectCount_
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a>Modulo:: objectCount_
 
-Tiene traccia di quante classi sono state create con la funzione [Make.](make-function.md)
+Tiene traccia del numero di classi create con la funzione [make](make-function.md) .
 
 ```cpp
 volatile long objectCount_;
 ```
 
-## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>Modulo::RegisterCOMObject
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>Module:: RegisterCOMObject
 
-Registra uno o più oggetti COM in modo che altre applicazioni possano connettersi a essi.
+Registra uno o più oggetti COM in modo che le altre applicazioni possano connettersi a esse.
 
 ```cpp
 WRL_NOTHROW virtual HRESULT RegisterCOMObject(
@@ -338,14 +338,14 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 *Nomeserver*<br/>
 Nome completo di un server.
 
-*Clsid*<br/>
+*CLSID*<br/>
 Matrice di CLSID da registrare.
 
 *factories*<br/>
-Matrice di interfacce IUnknown degli oggetti di classe la cui disponibilità viene pubblicata.
+Matrice di interfacce IUnknown degli oggetti classe la cui disponibilità è in corso di pubblicazione.
 
-*Biscotti*<br/>
-Al termine dell'operazione, matrice di puntatori a valori che identificano gli oggetti classe registrati. Questi valori vengono successivamente utilizzati revocare la registrazione.
+*cookie*<br/>
+Al termine dell'operazione, una matrice di puntatori a valori che identificano gli oggetti classe registrati. Questi valori vengono usati in seguito per revocare la registrazione.
 
 *count*<br/>
 Numero di CLSID da registrare.
@@ -356,13 +356,13 @@ S_OK se successfu; in caso contrario, un HRESULT, ad esempio CO_E_OBJISREG che i
 
 ### <a name="remarks"></a>Osservazioni
 
-Gli oggetti COM vengono registrati con l'enumeratore CLSCTX_LOCAL_SERVER di Enumerazione CLSCTX.
+Gli oggetti COM vengono registrati con l'enumeratore CLSCTX_LOCAL_SERVER dell'enumerazione CLSCTX.
 
-Il tipo di connessione agli oggetti registrati è specificato da una combinazione del parametro di modello *comflag* corrente e dell'enumeratore REGCLS_SUSPENDED dell'enumerazione REGCLS.
+Il tipo di connessione agli oggetti registrati viene specificato da una combinazione del parametro di modello *comflag* corrente e dell'enumeratore REGCLS_SUSPENDED dell'enumerazione REGCLS.
 
-## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>Modulo::RegisterObjects
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>Module:: RegisterObjects
 
-Registra gli oggetti COM o Windows Runtime in modo che altre applicazioni possano connettersi a essi.
+Registra gli oggetti COM o Windows Runtime in modo che possano connettersi ad altre applicazioni.
 
 ```cpp
 HRESULT RegisterObjects(
@@ -372,7 +372,7 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Parametri
 
-*Modulo*<br/>
+*modulo*<br/>
 Matrice di oggetti COM o Windows Runtime.
 
 *Nomeserver*<br/>
@@ -380,11 +380,11 @@ Nome del server che ha creato gli oggetti.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK in caso di esito positivo; in caso contrario, un HRESULT che indica il motivo dell'operazione non riuscita.
+S_OK in caso di esito positivo; in caso contrario, valore HRESULT che indica il motivo per cui l'operazione non è riuscita.
 
-## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>Modulo::RegisterWinRTObject
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>Module:: RegisterWinRTObject
 
-Registra uno o più oggetti Windows Runtime in modo che altre applicazioni possano connettersi a essi.
+Registra uno o più oggetti Windows Runtime in modo che le altre applicazioni possano connettersi a esse.
 
 ```cpp
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
@@ -396,13 +396,13 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 ### <a name="parameters"></a>Parametri
 
 *Nomeserver*<br/>
-Nome che specifica un sottoinsieme di oggetti interessati da questa operazione.
+Nome che specifica un subset di oggetti interessati da questa operazione.
 
 *activatableClassIds*<br/>
-Matrice di CLSID attivabili da registrare.
+Matrice di CLSID attivabile da registrare.
 
-*Cookie*<br/>
-Valore che identifica gli oggetti classe registrati. Questo valore viene utilizzato in un secondo momento per revocare la registrazione.
+*cookie*<br/>
+Valore che identifica gli oggetti classe registrati. Questo valore viene usato in un secondo momento per revocare la registrazione.
 
 *count*<br/>
 Numero di oggetti da registrare.
@@ -411,17 +411,17 @@ Numero di oggetti da registrare.
 
 S_OK in caso di esito positivo; in caso contrario, un errore HRESULT, ad esempio CO_E_OBJISREG che indica il motivo per cui l'operazione non è riuscita.
 
-## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>Modulo::releaseNotifier_
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>Modulo:: releaseNotifier_
 
-Contiene un puntatore a un `ReleaseNotifier` oggetto.
+Include un puntatore a un `ReleaseNotifier` oggetto.
 
 ```cpp
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="moduleterminate"></a><a name="terminate"></a>Modulo::Termina
+## <a name="moduleterminate"></a><a name="terminate"></a>Module:: terminate
 
-Determina l'arresto di tutte le factory di cui è stata creata un'istanza dal modulo.
+Causa l'arresto di tutte le factory di cui è stata creata un'istanza dal modulo.
 
 ```cpp
 void Terminate();
@@ -429,11 +429,11 @@ void Terminate();
 
 ### <a name="remarks"></a>Osservazioni
 
-Rilascia le factory nella cache.
+Rilascia le Factory nella cache.
 
-## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>Modulo::UnregisterCOMObject
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>Module:: UnregisterCOMObject
 
-Annulla la registrazione di uno o più oggetti COM, impedendo ad altre applicazioni di connettersi ad essi.
+Annulla la registrazione di uno o più oggetti COM, che impedisce ad altre applicazioni di connettersi a esse.
 
 ```cpp
 virtual HRESULT UnregisterCOMObject(
@@ -445,21 +445,21 @@ virtual HRESULT UnregisterCOMObject(
 ### <a name="parameters"></a>Parametri
 
 *Nomeserver*<br/>
-(Inutilizzato)
+Inutilizzati
 
-*Biscotti*<br/>
-Matrice di puntatori a valori che identificano gli oggetti classe di cui annullare la registrazione. La matrice è stata creata dal [metodo RegisterCOMObject.](#registercomobject)
+*cookie*<br/>
+Matrice di puntatori a valori che identificano gli oggetti della classe di cui annullare la registrazione. La matrice è stata creata dal metodo [RegisterCOMObject](#registercomobject) .
 
 *count*<br/>
 Numero di classi di cui annullare la registrazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK se l'operazione ha esito positivo; in caso contrario, un HRESULT di errore che indica il motivo per cui l'operazione non è riuscita.
+S_OK se l'operazione ha esito positivo; in caso contrario, un errore HRESULT che indica il motivo per cui l'operazione non è riuscita.
 
-## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>Modulo::UnregisterObjects
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>Module:: UnregisterObjects
 
-Annulla la registrazione degli oggetti nel modulo specificato in modo che altre applicazioni non possano connettersi ad essi.
+Annulla la registrazione degli oggetti nel modulo specificato in modo che le altre applicazioni non possano connettersi a esse.
 
 ```cpp
 HRESULT UnregisterObjects(
@@ -469,19 +469,19 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Parametri
 
-*Modulo*<br/>
+*modulo*<br/>
 Puntatore a un modulo.
 
 *Nomeserver*<br/>
-Un nome di qualificazione che specifica un sottoinsieme di oggetti interessati da questa operazione.
+Nome completo che specifica un subset di oggetti interessati da questa operazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK se l'operazione ha esito positivo; in caso contrario, un Errore HRESULT che indica il motivo per cui l'operazione non è riuscita.
+S_OK se l'operazione ha esito positivo; in caso contrario, un errore HRESULT che indica il motivo per cui l'operazione non è riuscita.
 
-## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>Modulo::UnregisterWinRTObject
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>Module:: UnregisterWinRTObject
 
-Annulla la registrazione di uno o più oggetti Windows Runtime in modo che altre applicazioni non possano connettersi a essi.
+Annulla la registrazione di uno o più oggetti Windows Runtime in modo che le altre applicazioni non possano connettersi a esse.
 
 ```cpp
 virtual HRESULT UnregisterWinRTObject(
@@ -492,5 +492,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Parametri
 
-*Cookie*<br/>
-Puntatore a un valore che identifica l'oggetto classe la cui registrazione deve essere revocata.
+*cookie*<br/>
+Puntatore a un valore che identifica l'oggetto della classe la cui registrazione deve essere revocata.

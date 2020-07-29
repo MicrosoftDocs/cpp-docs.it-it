@@ -1,30 +1,30 @@
 ---
 title: Tipi Integer con dimensione C
-ms.date: 11/04/2016
+ms.date: 07/22/2020
 helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
-ms.openlocfilehash: 136065466d3adb4017cf18f2baf8c3387ffbd035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f785efb2fc93d2ec57783dd20a43642c87e4a4c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226503"
 ---
 # <a name="c-sized-integer-types"></a>Tipi Integer con dimensione C
 
 **Specifico di Microsoft**
 
-Le funzionalità di Microsoft C supportano i tipi Integer ridimensionati. È possibile dichiarare variabili Integer a 8, 16, 32 o 64 bit utilizzando l'identificatore di tipo __int*n*, dove *n* è la dimensione in bit della variabile Integer. Il valore di *n* può essere 8, 16, 32 o 64. Nell'esempio seguente viene dichiarata una variabile di ognuno dei quattro tipi Integer ridimensionati:
+Le funzionalità di Microsoft C supportano i tipi Integer ridimensionati. È possibile dichiarare variabili Integer a 8, 16, 32 o 64 bit usando l' `__intN` identificatore di tipo, dove *`N`* è la dimensione, in bit, della variabile integer. Il valore di *n* può essere 8, 16, 32 o 64. Nell'esempio seguente viene dichiarata una variabile di ognuno dei quattro tipi Integer ridimensionati:
 
-```
-__int8 nSmall;      // Declares 8-bit integer
+```C
+__int8  nSmall;     // Declares 8-bit integer
 __int16 nMedium;    // Declares 16-bit integer
 __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-I primi tre tipi Integer ridimensionati sono sinonimi per i tipi ANSI con la stessa dimensione e sono utili per la scrittura di codice portabile che si comporta in modo identico in più piattaforme. Si noti che il tipo di dati __int8 è sinonimo del \_tipo char, _int16 è sinonimo del \_tipo short e _int32 è sinonimo del tipo int. Il \_tipo di _int64 non ha una controparte ANSI equivalente.
+I primi tre tipi di Integer ridimensionati sono sinonimi per i tipi ANSI con le stesse dimensioni. Sono utili per la scrittura di codice portabile che si comporta in modo identico in più piattaforme. Il tipo **`__int8`** di dati è sinonimo del tipo **`char`** , **`__int16`** è sinonimo del tipo **`short`** , **`__int32`** è sinonimo del tipo **`int`** ed **`__int64`** è sinonimo del tipo **`long long`** .
 
 **TERMINA specifica Microsoft**
 

@@ -3,12 +3,12 @@ title: Novità di C++ in Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446870"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226789"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -231,7 +231,7 @@ Il componente sperimentale Clang/C2 è stato rimosso. Usare il set di strumenti 
 
 - Nuove correzioni rapide per controlli di variabili non inizializzate. Per altre informazioni, vedere [New code analysis quick fixes for uninitialized memory (C6001) and use before init (C26494) warnings](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/) (Nuove correzioni rapide di analisi del codice per avvisi di memoria non inizializzata (C6001) and use-before-init (C26494)).
 
-## <a name="unit-testing"></a>Unit test
+## <a name="unit-testing"></a>Testing unità
 
 Il modello di progetto di test C++ gestito non è più disponibile. È possibile continuare a usare il framework di test C++ gestito nei progetti esistenti. Per i nuovi unit test, è consigliabile usare uno dei framework di test nativi per cui Visual Studio fornisce modelli (MSTest, Google Test) o il modello di progetto di test C# gestito.
 
@@ -249,7 +249,7 @@ Il compilatore C++ e la libreria standard sono stati aggiornati in questa versio
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versione 15.5
 
-Il compilatore supporta il 75% circa delle nuove funzionalità di C++17, inclusi binding strutturati, espressioni lambda `constexpr`, `if constexpr`, variabili inline, espressioni di riduzione e aggiunta di `noexcept` al sistema di tipi. Queste funzionalità sono disponibili con l' **`/std:c++17`** opzione. Per altre informazioni, vedere [miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements.md)
+Il compilatore supporta circa il 75% delle funzionalità nuove in C++ 17, inclusi binding strutturati, **`constexpr`** espressioni lambda, `if constexpr` , variabili inline, espressioni di riduzioni e aggiunta **`noexcept`** al sistema di tipi. Queste funzionalità sono disponibili con l' **`/std:c++17`** opzione. Per altre informazioni, vedere [miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements.md)
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
 
@@ -296,7 +296,7 @@ Visual C++ prestazioni di runtime continuano a migliorare grazie a una migliore 
 
 Il compilatore Microsoft C++ supporta Intel AVX-512. Include istruzioni per la lunghezza del vettore che riportano nuove funzioni in AVX-512 a registri estesi a 128 bit e 256 bit.
 
-L'opzione [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) può essere usata per ripristinare la versione C++14 di `noexcept` durante l'uso della modalità C++ 17 in generale. Questa opzione consente di aggiornare il codice sorgente per garantire la conformità a C++17 senza dover riscrivere contemporaneamente tutto il codice `throw()`. Per altre informazioni, vedere [Dynamic exception specification removal and noexcept](cpp-conformance-improvements.md#noexcept_removal) (Rimozione della specifica di eccezione dinamica e noexcept).
+L'opzione [/Zc: noexceptTypes-](../build/reference/zc-noexcepttypes.md) può essere usata per ripristinare la versione c++ 14 di **`noexcept`** durante l'uso della modalità c++ 17 in generale. Questa opzione consente di aggiornare il codice sorgente per garantire la conformità a C++17 senza dover riscrivere contemporaneamente tutto il codice `throw()`. Per altre informazioni, vedere [Dynamic exception specification removal and noexcept](cpp-conformance-improvements.md#noexcept_removal) (Rimozione della specifica di eccezione dinamica e noexcept).
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
 
@@ -314,7 +314,7 @@ L'opzione [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) può esse
 - È stato corretto l'operatore di assegnazione di spostamento di `std::promise`, che in precedenza causava il blocco irreversibile del codice.
 - Sono stati corretti gli errori del compilatore relativi alla conversione implicita di `atomic<T*>` in `T*`.
 - `pointer_traits<Ptr>` ora rileva correttamente `Ptr::rebind<U>`.
-- È stata corretta la mancanza di un qualificatore `const` nell'operatore di sottrazione `move_iterator`.
+- Correzione di un **`const`** qualificatore mancante nell' `move_iterator` operatore di sottrazione.
 - È stato corretto codegen non interattivo errato per gli allocatori definiti dall'utente con stato che richiedono `propagate_on_container_copy_assignment` e `propagate_on_container_move_assignment`.
 - `atomic<T>` ora tollera `operator&()` con overload.
 - La diagnostica del compilatore è stata leggermente migliorata per le chiamate a `bind()` non corrette.
@@ -335,8 +335,8 @@ In Visual Studio 2017 RTM sono disponibili ulteriori miglioramenti alla libreria
 - È stato corretto anche il problema "la specifica di eccezione nella dichiarazione non corrisponde alla dichiarazione precedente" segnalata da Clang **-Wmicrosoft-Exception-spec**.
 - Sono stati corretti anche gli avvisi relativi all'ordinamento dell'elenco degli inizializzatori dei membri segnalati da Clang e C1XX.
 - I contenitori non ordinati non scambiavano le funzioni hash o i predicati corrispondenti quando venivano scambiati i contenitori stessi. Ora lo fanno.
-- Molte operazioni di scambio del contenitore sono ora contrassegnate con `noexcept`. La libreria standard infatti non intende mai generare un'eccezione quando rileva una condizione di comportamento non definita non-equal-allocator `propagate_on_container_swap`.
-- Molte operazioni `vector<bool>` sono ora contrassegnate con `noexcept`.
+- Molte operazioni di scambio di contenitori sono ora contrassegnate **`noexcept`** (poiché la libreria standard non prevede mai di generare un'eccezione durante il rilevamento della `propagate_on_container_swap` condizione di comportamento non definito dell'allocatore non uguale a).
+- Molte `vector<bool>` operazioni sono ora contrassegnate come **`noexcept`** .
 - La libreria standard impone ora la corrispondenza di `value_type` dell'allocatore (in modalità C++17) con un'opzione di emergenza per il rifiuto esplicito.
 - Sono state corrette alcune condizioni nelle quali un'operazione self-range-insert in `basic_string` compromette il contenuto delle stringhe. (Nota: lo standard proibisce ancora le operazioni self-range-insert in vettori.)
 - `propagate_on_container_swap` dell'allocatore non influisce più su `basic_string::shrink_to_fit()`.
@@ -360,7 +360,7 @@ In Visual Studio 2017 RTM sono disponibili ulteriori miglioramenti alla libreria
 
 - Abbiamo aggiunto \<any\> , \<string_view\> , `apply()` , `make_from_tuple()` .
 - Aggiunta di \<optional\> ,, \<variant\> `shared_ptr::weak_type` e \<cstdalign\> .
-- È stato abilitato C++ 14 `constexpr` in `min(initializer_list)`, `max(initializer_list)` e `minmax(initializer_list)` e `min_element()`, `max_element()` e `minmax_element()`.
+- Enabled C++ 14 **`constexpr`** in `min(initializer_list)` , `max(initializer_list)` , e `minmax(initializer_list)` , e `min_element()` , e `max_element()` `minmax_element()` .
 
 Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Microsoft C++](../visual-cpp-language-conformance.md).
 
@@ -368,11 +368,11 @@ Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Micros
 
 - Sono state implementate varie funzionalità aggiuntive C++17. Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Microsoft C++](cpp-conformance-improvements.md#improvements_153).
 - Implementazione di P0602R0 "variant e optional devono propagare trivially_move e trivially_copy".
-- La libreria standard ora tollera ufficialmente la disabilitazione di RTTI dinamici tramite l'opzione [/gr-](../build/reference/gr-enable-run-time-type-information.md) . Sia `dynamic_pointer_cast()` che `rethrow_if_nested()` richiedono intrinsecamente `dynamic_cast` , quindi la libreria standard ora le contrassegna come `=delete` sotto **`/GR-`** .
+- La libreria standard ora tollera ufficialmente la disabilitazione di RTTI dinamici tramite l'opzione [/gr-](../build/reference/gr-enable-run-time-type-information.md) . Sia `dynamic_pointer_cast()` che `rethrow_if_nested()` richiedono intrinsecamente **`dynamic_cast`** , quindi la libreria standard ora le contrassegna come `=delete` sotto **`/GR-`** .
 - Anche quando la RTTI dinamica è stata disabilitata tramite **`/GR-`** , "static RTTI" nel formato `typeid(SomeType)` è ancora disponibile e alimenta diversi componenti della libreria standard. La libreria standard ora supporta anche la disabilitazione di questa funzionalità tramite **`/D_HAS_STATIC_RTTI=0`** . Questo flag disabilita anche le funzioni membro `std::any`, `target()` e `target_type()` di `std::function` e la funzione membro Friend `get_deleter()` di `std::shared_ptr` e `std::weak_ptr`.
-- La libreria standard ora usa `constexpr` di C++14 in modo non condizionale, anziché usare macro definite in modo condizionale.
+- La libreria standard ora usa C++ 14 in modo non **`constexpr`** condizionale, anziché le macro definite in modo condizionale.
 - La libreria standard ora usa modelli di alias internamente.
-- La libreria standard ora usa `nullptr` internamente, anziché usare `nullptr_t{}`. (L'utilizzo interno di NULL è stato eliminato. L'utilizzo interno di 0 come null verrà rimosso gradualmente.)
+- La libreria standard ora usa **`nullptr`** internamente, anziché `nullptr_t{}` . (L'utilizzo interno di NULL è stato eliminato. L'utilizzo interno di 0 come null verrà rimosso gradualmente.)
 - La libreria standard ora usa `std::move()` internamente, anziché usare `std::forward()` in modo stilisticamente non corretto.
 - È stata effettuata la modifica di `static_assert(false, "message")` in `#error message`. Questa modifica migliora la diagnostica del compilatore, perché `#error` interrompe immediatamente la compilazione.
 - La libreria standard non contrassegna più le funzioni con `__declspec(dllimport)`. Ciò non è più richiesto dalla tecnologia dei linker moderni.
@@ -439,7 +439,7 @@ Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Micros
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versione 15.3
 
-- Sono state aggirate `noexcept` le interazioni con, che hanno impedito l'incorporamento dell' `std::atomic` implementazione in funzioni che usano la gestione delle eccezioni strutturata (SEH).
+- Sono state aggirate **`noexcept`** le interazioni con, che hanno impedito l'incorporamento dell' `std::atomic` implementazione in funzioni che usano la gestione delle eccezioni strutturata (SEH).
 - È stata modificata la funzione `_Deallocate()` interna della libreria standard per ottimizzare le dimensioni del codice, consentendone l'implementazione inline in più posizioni.
 - Sono state apportate modifiche a `std::try_lock()` per consentire l'uso dell'espansione di pacchetto invece della ricorsione.
 - È stato migliorato l'algoritmo per la prevenzione di deadlock di `std::lock()` con l'uso di operazioni `lock()` al posto della rotazione di `try_lock()` in tutti i blocchi.
@@ -456,7 +456,7 @@ Per ulteriori informazioni, vedere [tabella di conformità del linguaggio Micros
 - Le `basic_string` operazioni di mutazione ora costruiscono buffer riallocati nello stato preferito anziché ridimensionare sul posto. Ad esempio, un inserimento all'inizio di una stringa ora sposta il contenuto dopo l'inserimento esattamente una volta. Viene spostato verso il basso o nel buffer appena allocato. Non viene più spostato due volte nel caso della riallocazione, prima nel buffer appena allocato e quindi in basso.
 - Le operazioni che chiamano la libreria standard C in \<string\> ora memorizzano nella cache l' `errno` indirizzo per rimuovere l'interazione ripetuta con TLS.
 - L'implementazione di `is_pointer` è stata semplificata.
-- È stata completata la modifica dell'espressione SFINAE da basata su funzioni a basata su `struct` e `void_t`.
+- Fine della modifica dell'espressione basata su funzione SFINAE su **`struct`** e `void_t` su.
 - Gli algoritmi della libreria standard ora evitano il post-incremento degli iteratori.
 - Correzione degli avvisi di troncamento durante l'uso di allocatori a 32 bit in sistemi a 64 bit.
 - L'assegnazione di spostamento di `std::vector` è ora più efficiente nel caso di allocatori non uguali e non POCMA, grazie al riutilizzo del buffer quando possibile.
@@ -657,7 +657,7 @@ I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versione 15.5
 
-- I nuovi controlli delle linee guida di base di C++ riguardano la correttezza del puntatore intelligente, l'uso corretto degli inizializzatori globali e l'uso di flag per i costrutti come `goto` e cast non corretti.
+- I nuovi controlli Linee guida di base di C++ verificano la correttezza del puntatore intelligente, l'uso corretto degli inizializzatori globali e l'utilizzo di flag per gli utilizzi di costrutti come **`goto`** e cast non validi.
 
 - Alcuni numeri di avviso che potrebbero essere presenti in 15.3 non sono più disponibili in 15.5. Questi avvisi sono stati sostituiti con controlli più specifici.
 

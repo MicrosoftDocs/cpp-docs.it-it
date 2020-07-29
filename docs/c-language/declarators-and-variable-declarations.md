@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226451"
 ---
 # <a name="declarators-and-variable-declarations"></a>Dichiaratori e dichiarazioni di variabili
 
@@ -21,7 +21,7 @@ Nel resto di questa sezione viene descritto il formato e il significato delle di
 |----------------------|-----------------|
 |[Variabili semplici](../c-language/simple-variable-declarations.md)|Le variabili contenenti un singolo valore con tipo integrale o a virgola mobile|
 |[Matrici](../c-language/array-declarations.md)|Le variabili composte di una raccolta di elementi con lo stesso tipo|
-|[Puntatori](../c-language/pointer-declarations.md)|Le variabili che puntano ad altre variabili e che contengono le posizioni delle variabili (sotto forma di indirizzi) invece dei valori|
+|[Pointers](../c-language/pointer-declarations.md)|Le variabili che puntano ad altre variabili e che contengono le posizioni delle variabili (sotto forma di indirizzi) invece dei valori|
 |[Variabili di enumerazione](../c-language/c-enumeration-declarations.md)|Le variabili semplici con tipo integrale che contengono un valore derivante da un set di costanti Integer denominate|
 |[Strutture](../c-language/structure-declarations.md)|Le variabili composte di una raccolta di valori che può contenere tipi differenti|
 |[Unioni](../c-language/union-declarations.md)|Le variabili composte di diversi valori di tipi differenti che occupano lo stesso spazio di archiviazione|
@@ -36,7 +36,7 @@ Nel dichiaratore
 __declspec(thread) char *var;
 ```
 
-`char` è l'identificatore di tipo, `__declspec(thread)` e `*` sono i modificatori e `var` è il nome dell'identificatore.
+**`char`** è l'identificatore di tipo, `__declspec(thread)` e `*` sono i modificatori e `var` è il nome dell'identificatore.
 
 **TERMINA specifica Microsoft**
 
@@ -65,7 +65,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 > Vedere la sintassi per *declaration* in [Cenni preliminari sulle dichiarazioni](../c-language/overview-of-declarations.md) o [Riepilogo di sintassi del linguaggio C](../c-language/c-language-syntax-summary.md) per informazioni sulla sintassi che fa riferimento a *declarator*.
 
-Quando un dichiaratore è costituito da un identificatore non modificato, l'elemento dichiarato è un tipo di base. Se a sinistra di<strong>\*</strong>un identificatore viene visualizzato un asterisco (), il tipo viene modificato in un tipo di puntatore. Se l'identificatore è seguito da parentesi quadre (**[ ]**), il tipo viene modificato in un tipo di matrice. Se l'identificatore è seguito da parentesi tonde, il tipo viene modificato in un tipo di funzione. Per altre informazioni sull'interpretazione della precedenza all'interno delle dichiarazioni, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md).
+Quando un dichiaratore è costituito da un identificatore non modificato, l'elemento dichiarato è un tipo di base. Se <strong>\*</strong> a sinistra di un identificatore viene visualizzato un asterisco (), il tipo viene modificato in un tipo di puntatore. Se l'identificatore è seguito da parentesi quadre (**[ ]**), il tipo viene modificato in un tipo di matrice. Se l'identificatore è seguito da parentesi tonde, il tipo viene modificato in un tipo di funzione. Per altre informazioni sull'interpretazione della precedenza all'interno delle dichiarazioni, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md).
 
 Ogni dichiaratore dichiara almeno un identificatore. Per essere una dichiarazione completa, il dichiaratore deve includere un identificatore di tipo. L'identificatore di tipo fornisce il tipo di elementi di un tipo di matrice, il tipo di oggetto indirizzato da un tipo puntatore o il tipo restituito di una funzione.
 

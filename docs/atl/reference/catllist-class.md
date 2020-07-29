@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 15830a30e8236a13f3911d1b84d3727d3246fc0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168046"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226672"
 ---
 # <a name="catllist-class"></a>Classe CAtlList
 
@@ -63,7 +63,7 @@ Tipo dell'elemento.
 *ETraits*<br/>
 Codice utilizzato per copiare o spostare elementi. Per ulteriori informazioni, vedere la [classe CElementTraits](../../atl/reference/celementtraits-class.md) .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -115,7 +115,7 @@ Codice utilizzato per copiare o spostare elementi. Per ulteriori informazioni, v
 
 La `CAtlList` classe supporta elenchi ordinati di oggetti non univoci accessibili in sequenza o in base al valore. `CAtlList`gli elenchi si comportano come elenchi doppiamente collegati. Ogni elenco include una parte iniziale e una coda, mentre i nuovi elementi (o elenchi in alcuni casi) possono essere aggiunti a entrambe le estremità dell'elenco oppure inseriti prima o dopo elementi specifici.
 
-La maggior parte `CAtlList` dei metodi usa un valore di posizione. Questo valore viene usato dai metodi per fare riferimento alla posizione di memoria effettiva in cui sono archiviati gli elementi e non deve essere calcolato o stimato direttamente. Se è necessario accedere all'elemento *n*nell'elenco, il metodo [CAtlList:: FindIndex](#findindex) restituirà il valore di posizione corrispondente per un indice specificato. I metodi [CAtlList:: GetNext](#getnext) e [CAtlList:: GetPrev](#getprev) possono essere usati per scorrere gli oggetti nell'elenco.
+La maggior parte dei `CAtlList` metodi usa un valore di posizione. Questo valore viene usato dai metodi per fare riferimento alla posizione di memoria effettiva in cui sono archiviati gli elementi e non deve essere calcolato o stimato direttamente. Se è necessario accedere all'elemento *n*nell'elenco, il metodo [CAtlList:: FindIndex](#findindex) restituirà il valore di posizione corrispondente per un indice specificato. I metodi [CAtlList:: GetNext](#getnext) e [CAtlList:: GetPrev](#getprev) possono essere usati per scorrere gli oggetti nell'elenco.
 
 Per ulteriori informazioni sulle classi di raccolta disponibili con ATL, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
 
@@ -266,7 +266,7 @@ Distruttore.
 
 Libera tutte le risorse allocate, inclusa una chiamata a [CAtlList:: RemoveAll](#removeall) per rimuovere tutti gli elementi dall'elenco.
 
-Nelle build di debug, si verificherà un errore di asserzione se l'elenco contiene ancora alcuni elementi `RemoveAll`dopo la chiamata a.
+Nelle build di debug, si verificherà un errore di asserzione se l'elenco contiene ancora alcuni elementi dopo la chiamata a `RemoveAll` .
 
 ## <a name="catllistfind"></a><a name="find"></a>CAtlList:: Find
 
@@ -343,9 +343,9 @@ Riferimento a, o copia di, dell'elemento.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'elenco è **const**, `GetAt` restituisce una copia dell'elemento. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
+Se l'elenco è **`const`** , `GetAt` restituisce una copia dell'elemento. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
 
-Se l'elenco non è **const**, `GetAt` restituisce un riferimento all'elemento. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
+Se l'elenco non è **`const`** , `GetAt` restituisce un riferimento all'elemento. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
 
 Nelle build di debug, si verificherà un errore di asserzione se *pos* è uguale a null.
 
@@ -384,9 +384,9 @@ Restituisce un riferimento a o una copia di, l'elemento all'inizio dell'elenco.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'elenco è **const**, `GetHead` restituisce una copia dell'elemento all'inizio dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
+Se l'elenco è **`const`** , `GetHead` restituisce una copia dell'elemento all'inizio dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
 
-Se l'elenco non è **const**, `GetHead` restituisce un riferimento all'elemento all'inizio dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
+Se l'elenco non è **`const`** , `GetHead` restituisce un riferimento all'elemento all'inizio dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
 
 Nelle build di debug, si verificherà un errore di asserzione se l'intestazione dell'elenco punta a NULL.
 
@@ -426,13 +426,13 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="parameters"></a>Parametri
 
 *POS*<br/>
-Valore di posizione, restituito da una chiamata precedente a `GetNext`, [CAtlList:: GetHeadPosition](#getheadposition)o un altro `CAtlList` metodo.
+Valore di posizione, restituito da una chiamata precedente a `GetNext` , [CAtlList:: GetHeadPosition](#getheadposition)o un altro `CAtlList` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se l'elenco è **const**, `GetNext` restituisce una copia dell'elemento successivo dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
+Se l'elenco è **`const`** , `GetNext` restituisce una copia dell'elemento successivo dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
 
-Se l'elenco non è **const**, `GetNext` restituisce un riferimento all'elemento successivo dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
+Se l'elenco non è **`const`** , `GetNext` restituisce un riferimento all'elemento successivo dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -454,13 +454,13 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="parameters"></a>Parametri
 
 *POS*<br/>
-Valore di posizione, restituito da una chiamata precedente a `GetPrev`, [CAtlList:: GetTailPosition](#gettailposition)o un altro `CAtlList` metodo.
+Valore di posizione, restituito da una chiamata precedente a `GetPrev` , [CAtlList:: GetTailPosition](#gettailposition)o un altro `CAtlList` metodo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se l'elenco è **const**, `GetPrev` restituisce una copia di un elemento dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
+Se l'elenco è **`const`** , `GetPrev` restituisce una copia di un elemento dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
 
-Se l'elenco non è **const**, `GetPrev` restituisce un riferimento a un elemento dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
+Se l'elenco non è **`const`** , `GetPrev` restituisce un riferimento a un elemento dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -485,9 +485,9 @@ Restituisce un riferimento a o una copia di, l'elemento in corrispondenza della 
 
 ### <a name="remarks"></a>Osservazioni
 
-Se l'elenco è **const**, `GetTail` restituisce una copia dell'elemento all'inizio dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
+Se l'elenco è **`const`** , `GetTail` restituisce una copia dell'elemento all'inizio dell'elenco. Ciò consente di utilizzare il metodo solo sul lato destro di un'istruzione di assegnazione e di proteggere l'elenco dalla modifica.
 
-Se l'elenco non è **const**, `GetTail` restituisce un riferimento all'elemento all'inizio dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
+Se l'elenco non è **`const`** , `GetTail` restituisce un riferimento all'elemento all'inizio dell'elenco. In questo modo, il metodo può essere usato su entrambi i lati di un'istruzione di assegnazione e quindi consente la modifica delle voci dell'elenco.
 
 Nelle build di debug, si verificherà un errore di asserzione se la parte finale dell'elenco punta a NULL.
 
