@@ -1,40 +1,40 @@
 ---
 title: Avviso del compilatore (livello 1) C4530
-description: Guida di riferimento all'avviso del compilatore C. C. C.
+description: Guida di riferimento all'avviso del compilatore Microsoft C++ C4530.
 ms.date: 04/02/2020
 f1_keywords:
 - C4530
 helpviewer_keywords:
 - C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-ms.openlocfilehash: 9de88a4b0b6c7176ff82b68c92d09d9fe75a70b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe0a2b4c8eb881327f3e59d66e7e6941f0a2cad8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369788"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230662"
 ---
 # <a name="compiler-warning-level-1-c4530"></a>Avviso del compilatore (livello 1) C4530
 
-> È stato utilizzato il gestore di eccezioni di C, ma la semantica di rimozione non è abilitata. Specificare /EHsc
+> Utilizzato gestore eccezioni C++, ma la semantica di rimozione non è abilitata. Specificare/EHsc
 
-Nel codice viene utilizzata la gestione delle eccezioni di C, ma [/EHsc](../../build/reference/eh-exception-handling-model.md) non è stato incluso nelle opzioni del compilatore.
+Il codice usa la gestione delle eccezioni C++, ma [/EHsc](../../build/reference/eh-exception-handling-model.md) non è stato incluso nelle opzioni del compilatore.
 
 ## <a name="remarks"></a>Osservazioni
 
-Il compilatore **`/EHsc`** richiede l'opzione per compilare il codice C , che segue lo standard di C, per la gestione delle eccezioni. La *semantica* di rimozione standard di C, c'è, specifica che gli oggetti e gli stack frame costruiti tra il punto in cui viene generata un'eccezione e il punto in cui viene intercettata devono essere eliminati e le relative risorse recuperate. Questo processo è noto come *rimozione dello stack*.
+Il compilatore richiede l' **`/EHsc`** opzione per compilare codice c++ che segue lo standard c++ per la gestione delle eccezioni. La *semantica di rimozione* standard di C++ specifica che gli oggetti e gli stack frame creati tra il punto in cui viene generata un'eccezione e il punto in cui vengono intercettati devono essere eliminati e le relative risorse vengono ripristinate. Questo processo è noto come *rimozione dello stack*.
 
-L'opzione **`/EHsc`** indica al compilatore di generare codice che chiama i distruttori sugli oggetti di archiviazione automatica quando un'eccezione passa attraverso lo stack frame contenitore. *Gli* oggetti di archiviazione automatica sono oggetti allocati nello stack, ad esempio variabili locali. Si chiama archiviazione automatica perché viene allocata automaticamente quando le funzioni vengono chiamate e rilasciate automaticamente quando vengono restituite. Uno *stack frame* è il dato inserito nello stack quando viene chiamata una funzione, insieme alla relativa archiviazione automatica.
+L' **`/EHsc`** opzione indica al compilatore di generare codice che chiama i distruttori sugli oggetti di archiviazione automatica quando un'eccezione passa attraverso la stack frame che lo contiene. Gli oggetti di *archiviazione automatici* sono oggetti allocati nello stack, ad esempio le variabili locali. Viene chiamato archiviazione automatica perché viene allocato automaticamente quando vengono chiamate le funzioni e viene rilasciato automaticamente quando restituiscono. Un *stack frame* è i dati inseriti nello stack quando viene chiamata una funzione, insieme alla relativa archiviazione automatica.
 
-Quando viene generata un'eccezione, può viaggiare attraverso diversi stack frame prima che venga intercettato. Questi stack frame devono essere eliminati man mano che l'eccezione passa attraverso di essi in ordine di chiamata inverso. Gli oggetti di archiviazione automatici in ogni stack frame devono essere eliminati per recuperare le risorse in modo pulito. È lo stesso processo di distruzione e recupero che avviene automaticamente quando una funzione restituisce normalmente.
+Quando viene generata un'eccezione, può attraversare diversi stack frame prima che venga rilevata. Questi stack frame devono essere rilasciati quando l'eccezione passa attraverso di essi in ordine di chiamata inverso. Gli oggetti di archiviazione automatici in ogni stack frame devono essere eliminati definitivamente per ripristinare le proprie risorse. Si tratta dello stesso processo di distruzione e ripristino che si verifica automaticamente quando una funzione restituisce normalmente.
 
-Quando **`/EHsc`** l'opzione non è abilitata, gli oggetti di archiviazione automatica negli stack frame tra la funzione di generazione e la funzione in cui viene rilevata l'eccezione non vengono eliminati. Solo gli oggetti di archiviazione automatica creati in un blocco **try** o **catch** vengono distrutti, il che può causare perdite significative di risorse e altri comportamenti imprevisti.
+Quando l' **`/EHsc`** opzione non è abilitata, gli oggetti di archiviazione automatica negli stack frame tra la funzione di generazione e la funzione in cui viene rilevata l'eccezione non vengono eliminati. Vengono eliminati solo gli oggetti di archiviazione automatici creati in un **`try`** **`catch`** blocco o, che possono causare perdite di risorse significative e altri comportamenti imprevisti.
 
-Se nell'eseguibile non è possibile generare eccezioni, è possibile ignorare questo avviso. Alcuni codici potrebbero richiedere altre opzioni di gestione delle eccezioni. Per ulteriori informazioni, vedere [/EH](../../build/reference/eh-exception-handling-model.md).
+Se non è possibile generare eccezioni nell'eseguibile, è possibile ignorare questo avviso. Il codice può richiedere altre opzioni di gestione delle eccezioni. Per ulteriori informazioni, vedere [/eh](../../build/reference/eh-exception-handling-model.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene generato l'errore C4530:
+L'esempio seguente genera l'C4530:
 
 ```cpp
 // C4530.cpp

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: d83f5278c2c4f8344334bfce40946612e9ca3e56
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53a77ff993d3a99cae1ec8e48a06dd7800ce74c7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448956"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230220"
 ---
-# <a name="chartraitsltchar16tgt-struct"></a>Struct char_traits&lt;char16_t&gt;
+# <a name="char_traitsltchar16_tgt-struct"></a>Struct char_traits&lt;char16_t&gt;
 
-Struct che rappresenta una specializzazione dello struct modello **char_traits\<CharType>** in un elemento di tipo `char16_t`.
+Struct che rappresenta una specializzazione dello struct modello **char_traits \<CharType> ** a un elemento di tipo **`char16_t`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,13 +25,13 @@ template <>
 struct char_traits<char16_t>;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La specializzazione consente allo struct di sfruttare i vantaggi delle funzioni della libreria che modificano gli oggetti di tipo `char16_t`.
+La specializzazione consente allo struct di sfruttare i vantaggi delle funzioni della libreria che modificano oggetti di tipo **`char16_t`** .
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<string>
+**Intestazione:**\<string>
 
 **Spazio dei nomi:** std
 
@@ -39,4 +39,4 @@ La specializzazione consente allo struct di sfruttare i vantaggi delle funzioni 
 
 [\<string>](../standard-library/string.md)\
 [Struct char_traits](../standard-library/char-traits-struct.md)\
-[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

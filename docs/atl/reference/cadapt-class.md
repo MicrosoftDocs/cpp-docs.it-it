@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 1bae98663b8dc2b09efeff9139e8d028abcd862e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168830"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230000"
 ---
 # <a name="cadapt-class"></a>Classe CAdapt
 
@@ -35,7 +35,7 @@ class CAdapt
 *T*<br/>
 Il tipo adattato.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -47,7 +47,7 @@ Il tipo adattato.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAdapt:: operator const T&](#operator_const_t_amp)|Restituisce un riferimento **const** a `m_T`.|
+|[CAdapt:: operator const T&](#operator_const_t_amp)|Restituisce un **`const`** riferimento a `m_T` .|
 |[&CAdapt:: operator T](#operator_t_amp)|Restituisce un riferimento a `m_T`.|
 |[<CAdapt:: operator](#operator_lt)|Confronta un oggetto del tipo adattato con `m_T`.|
 |[CAdapt:: operator =](#operator_eq)|Assegna un oggetto del tipo adattato a `m_T`.|
@@ -61,7 +61,7 @@ Il tipo adattato.
 
 ## <a name="remarks"></a>Osservazioni
 
-`CAdapt` è un modello semplice utilizzato per eseguire il wrapping delle classi che consentono di ridefinire l'operatore address-of (`operator &`) per restituire un valore diverso da quello dell'indirizzo dell'oggetto. Esempi di tali classi includono le classi `CComBSTR`, `CComPtr` e `CComQIPtr` di ATL e la classe di supporto COM del compilatore, `_com_ptr_t`. Queste classi ridefiniscono tutti l'operatore address-of per restituire l'indirizzo di uno dei relativi membri dati (un BSTR nel caso `CComBSTR`di e un puntatore di interfaccia nel caso delle altre classi).
+`CAdapt` è un modello semplice utilizzato per eseguire il wrapping delle classi che consentono di ridefinire l'operatore address-of (`operator &`) per restituire un valore diverso da quello dell'indirizzo dell'oggetto. Esempi di tali classi includono le classi `CComBSTR`, `CComPtr` e `CComQIPtr` di ATL e la classe di supporto COM del compilatore, `_com_ptr_t`. Queste classi ridefiniscono tutti l'operatore address-of per restituire l'indirizzo di uno dei relativi membri dati (un BSTR nel caso di `CComBSTR` e un puntatore di interfaccia nel caso delle altre classi).
 
 `CAdapt`il ruolo primario di è nascondere l'operatore address-of definito dalla classe *T*, mantenendo tuttavia le caratteristiche della classe adattata. `CAdapt`soddisfa questo ruolo mantenendo un membro pubblico, [m_T](#m_t), di tipo *T*e definendo gli operatori di conversione, gli operatori di confronto e un costruttore di copia per consentire che le specializzazioni di `CAdapt` vengano considerate come se fossero oggetti di tipo *t*.
 
@@ -103,11 +103,11 @@ T m_T;
 
 ### <a name="remarks"></a>Osservazioni
 
-È possibile accedere a questo membro dati **pubblico** direttamente o indirettamente con [operator const t&](#operator_const_t_amp) e [operator t&](#operator_t_amp).
+**`public`** È possibile accedere a questo membro dati direttamente o indirettamente con [operator const t&](#operator_const_t_amp) e [operator t&](#operator_t_amp).
 
 ## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt:: operator const T&amp;
 
-Restituisce un riferimento **const** al membro [m_T](#m_t) , consentendo all'oggetto adapter di essere considerato come un oggetto di tipo *T*.
+Restituisce un **`const`** riferimento al membro [m_T](#m_t) , consentendo all'oggetto adapter di essere considerato come un oggetto di tipo *T*.
 
 ```cpp
 operator const T&() const;
@@ -115,7 +115,7 @@ operator const T&() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento **const** a `m_T`.
+**`const`** Riferimento a `m_T` .
 
 ## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>Operatore CAdapt:: operator T&amp;
 

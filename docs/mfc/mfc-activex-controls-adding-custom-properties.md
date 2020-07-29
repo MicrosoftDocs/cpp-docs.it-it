@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 5014a32386a0a140f0fdc00b23a0ac24a54afcee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626139"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230493"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà personalizzate
 
@@ -62,7 +62,7 @@ Questa stessa procedura può essere utilizzata anche per aggiungere altre propri
 
 1. Per **Tipo di implementazione**, fare clic su **Metodi Get/Set**.
 
-1. Nella casella **tipo proprietà** selezionare **short**.
+1. Nella casella **tipo proprietà** selezionare **`short`** .
 
 1. Digitare nomi univoci per le funzioni Get e set o accettare i nomi predefiniti.
 
@@ -95,6 +95,6 @@ Si noti che l'aggiunta guidata proprietà aggiunge automaticamente una chiamata,
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: proprietà](mfc-activex-controls-properties.md)<br/>
+[Controlli ActiveX MFC: Proprietà](mfc-activex-controls-properties.md)<br/>
 [Controlli ActiveX MFC: metodi](mfc-activex-controls-methods.md)<br/>
-[Classe COleControl](reference/colecontrol-class.md)
+[COleControl (classe)](reference/colecontrol-class.md)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 5cdf13ebbb982ad8184a52dcf1a3e30d71e4e5b0
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 04dc7e5b8c0c5dd21567f23395b4bafd4ae839dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167708"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229987"
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
 
@@ -30,7 +30,7 @@ Questa classe fornisce supporto per i componenti di Windows ATL.
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -74,11 +74,11 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 Puntatore alla `_AtlCreateWndData` struttura da inizializzare e aggiungere al modulo corrente.
 
 *pObject*<br/>
-Puntatore al puntatore **this** di un oggetto.
+Puntatore al puntatore di un oggetto **`this`** .
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo chiama [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) che Inizializza una struttura [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Questa struttura archivia il puntatore **this** , usato per ottenere l'istanza della classe nelle routine della finestra.
+Questo metodo chiama [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) che Inizializza una struttura [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Questa struttura archivia il **`this`** puntatore, usato per ottenere l'istanza della classe nelle routine della finestra.
 
 ## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule:: CAtlWinModule
 
@@ -114,7 +114,7 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla `_AtlCreateWndData` struttura aggiunta in precedenza con [CAtlWinModule:: AddCreateWndData](#addcreatewnddata)o null se non è disponibile alcun oggetto.
+Restituisce un puntatore alla `_AtlCreateWndData` struttura aggiunta in precedenza con [CAtlWinModule:: ADDCREATEWNDDATA](#addcreatewnddata)o null se non è disponibile alcun oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229909"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilizzo di librerie e componenti
 
@@ -26,7 +26,7 @@ Per utilizzare una libreria scaricata tramite Gestione pacchetti **vcpkg** , è 
 
 Se il progetto di libreria statica viene compilato nella stessa soluzione:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>includere i file di intestazione per la libreria statica utilizzando le virgolette. In una soluzione tipica il percorso inizierà con `../<library project name>`. IntelliSense ti aiuterà a trovarlo.
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>includere i file di intestazione per la libreria statica utilizzando le virgolette. In una soluzione tipica il percorso inizierà con `../<library project name>` . IntelliSense ti aiuterà a trovarlo.
 2. Aggiungere un riferimento al progetto di libreria statica. Fare clic con il pulsante destro del mouse su **riferimenti** nel nodo progetto applicazione in **Esplora soluzioni** e scegliere **Aggiungi riferimento**.
 
 Se la libreria statica non fa parte della soluzione:
@@ -98,11 +98,11 @@ Sono disponibili le proprietà seguenti su vari tipi di riferimenti. Esse consen
 
 - **Copiare assembly satellite locali (C++/CLI)**
 
-   Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Usato solo se **Copia localmente** è impostato su **true**.
+   Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Utilizzato solo se **Copy Local** è **`true`** .
 
 - **Output assembly di riferimento**
 
-   Specifica se l'assembly viene usato nel processo di compilazione. Se impostato su **true**, l'assembly verrà usato nella riga di comando del compilatore durante la compilazione.
+   Specifica se l'assembly viene usato nel processo di compilazione. Se **`true`** , l'assembly viene usato nella riga di comando del compilatore durante la compilazione.
 
 ### <a name="project-to-project-reference-properties"></a>Proprietà riferimento da progetto a progetto
 
@@ -144,7 +144,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.
 
-- **Etichetta**
+- **Label**
 
    Visualizza l'etichetta del riferimento.
 
@@ -158,9 +158,9 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
 - **Nome sicuro**
 
-   Impostato su`true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
+   **`true`** Se l'assembly a cui si fa riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
 
-- **Versione**
+- **Version**
 
    Visualizza la versione dell'assembly di riferimento.
 

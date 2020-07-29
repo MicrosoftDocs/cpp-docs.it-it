@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295671"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229792"
 ---
 # <a name="mutual-imports"></a>Importazioni reciproche
 
@@ -37,20 +37,20 @@ La soluzione generale per la gestione delle importazioni reciproche è:
 
 1. Dopo aver utilizzato collegamento o LIB per compilare tutte le librerie di importazione, tornare indietro ed eseguire il collegamento per compilare tutti i file eseguibili non compilati nel passaggio precedente. Si noti che è necessario specificare il file exp corrispondente nella riga di collegamento.
 
-   Se in precedenza è stata eseguita l'utilità LIB per produrre una libreria di importazione per DLL1, LIB avrebbe prodotto anche il file DLL1. exp. È necessario usare DLL1. exp come input per il collegamento quando si compila DLL1. dlll.
+   Se in precedenza è stata eseguita l'utilità LIB per produrre una libreria di importazione per DLL1, LIB avrebbe prodotto anche il file DLL1. exp. È necessario usare DLL1. exp come input per il collegamento quando si compila DLL1.dlll.
 
 Nella figura seguente viene illustrata una soluzione per due dll che si importano reciprocamente, DLL1 e DLL2. Il passaggio 1 consiste nell'eseguire LIB con l'opzione/DEF impostata su DLL1. Il passaggio 1 produce DLL1. lib, una libreria di importazione e DLL1. exp. Nel passaggio 2 la libreria di importazione viene usata per compilare DLL2, che a sua volta produce una libreria di importazione per i simboli Dll2. Il passaggio 3 compila DLL1 usando DLL1. exp e DLL2. lib come input. Si noti che non è necessario un file exp per DLL2 perché LIB non è stato usato per compilare la libreria di importazione Dll2.
 
-![Uso delle importazioni reciproche per collegare due dll](media/vc37yj1.gif "tramite importazioni reciproche")<br/>
+![Utilizzo di importazioni reciproche per collegare due DLL](media/vc37yj1.gif "Utilizzo di importazioni reciproche per collegare due DLL")<br/>
 Collegamento di due DLL con importazioni reciproche
 
 ## <a name="limitations-of-_afxext"></a>Limitazioni di _AFXEXT
 
 È possibile utilizzare il `_AFXEXT` simbolo del preprocessore per le DLL di estensione MFC, purché non siano presenti più livelli di dll di estensione MFC. Se si dispone di dll di estensione MFC che chiamano o derivano dalle classi nelle DLL dell'estensione MFC, che derivano quindi dalle classi MFC, è necessario usare il simbolo del preprocessore per evitare ambiguità.
 
-Il problema è che in Win32 è necessario dichiarare in modo esplicito i dati come **__declspec (dllexport)** se devono essere esportati da una dll e **__declspec (dllimport)** se devono essere importati da una dll. Quando si definisce `_AFXEXT`, le intestazioni MFC assicurano che **AFX_EXT_CLASS** sia definito correttamente.
+Il problema è che in Win32 è necessario dichiarare in modo esplicito tutti i dati come **`__declspec(dllexport)`** se fossero esportati da una dll e **`__declspec(dllimport)`** se devono essere importati da una dll. Quando si definisce `_AFXEXT` , le intestazioni MFC assicurano che **AFX_EXT_CLASS** sia definito correttamente.
 
-Quando si dispone di più livelli, un simbolo come **AFX_EXT_CLASS** non è sufficiente, perché una DLL di estensione MFC potrebbe esportare nuove classi, oltre ad importare altre classi da un'altra DLL di estensione MFC. Per risolvere questo problema, utilizzare un simbolo del preprocessore speciale che indichi che si sta compilando la DLL rispetto all'utilizzo della DLL. Si immagini, ad esempio, due dll di estensione MFC, un file dll e B. dll. Ognuno di essi Esporta alcune classi rispettivamente in A. h e B. h. B. dll utilizza le classi di un file con estensione dll. I file di intestazione avranno un aspetto simile al seguente:
+Quando si dispone di più livelli, un simbolo come **AFX_EXT_CLASS** non è sufficiente, perché una DLL di estensione MFC potrebbe esportare nuove classi, oltre ad importare altre classi da un'altra DLL di estensione MFC. Per risolvere questo problema, utilizzare un simbolo del preprocessore speciale che indichi che si sta compilando la DLL rispetto all'utilizzo della DLL. Si supponga, ad esempio, che due dll di estensione MFC A.dll e B.dll. Ognuno di essi Esporta alcune classi rispettivamente in A. h e B. h. B.dll utilizza le classi da A.dll. I file di intestazione avranno un aspetto simile al seguente:
 
 ```
 /* A.H */
@@ -75,9 +75,9 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...
 ```
 
-Quando si compila un file con estensione dll, questo viene `/D A_IMPL` compilato con e quando B. dll viene compilato, viene compilato `/D B_IMPL`con. Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato `CExampleA` e viene importato durante la compilazione di B. dll. `CExampleA`viene esportato quando si compila un file con estensione dll e viene importato quando viene utilizzato da B. dll (o un altro client).
+Quando A.dll viene compilato, viene compilato con `/D A_IMPL` e quando B.dll viene compilato, viene compilato con `/D B_IMPL` . Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato e `CExampleA` viene importato durante la compilazione di B.dll. `CExampleA`viene esportato durante la compilazione di A.dll e importato quando viene usato da B.dll (o un altro client).
 
-Non è possibile eseguire questo tipo di sovrapposizione quando si usano i simboli predefiniti **AFX_EXT_CLASS** e `_AFXEXT` del preprocessore. La tecnica descritta sopra risolve questo problema in modo diverso dal meccanismo che MFC utilizza per la compilazione delle relative tecnologie attive, database e dll di estensione MFC di rete.
+Non è possibile eseguire questo tipo di sovrapposizione quando si usano i simboli predefiniti **AFX_EXT_CLASS** e del `_AFXEXT` preprocessore. La tecnica descritta sopra risolve questo problema in modo diverso dal meccanismo che MFC utilizza per la compilazione delle relative tecnologie attive, database e dll di estensione MFC di rete.
 
 ## <a name="not-exporting-the-entire-class"></a>Non viene esportata l'intera classe
 
@@ -119,7 +119,7 @@ class CExampleA : public CObject
 
 - [Esportare le funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da usare](determining-which-exporting-method-to-use.md)
 
 - [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 

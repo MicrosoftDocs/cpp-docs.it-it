@@ -1,17 +1,17 @@
 ---
-title: Restricted (C++ attributo com)
+title: Restricted (attributo COM C++)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166367"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230026"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,12 +27,12 @@ Specifica che un membro di un modulo, di un'interfaccia o di un'interfaccia disp
 
 ### <a name="parameters"></a>Parametri
 
-*interfacce*<br/>
+*interfaces*<br/>
 Una o più interfacce che non possono essere chiamate arbitrariamente su un oggetto COM. Questo parametro è valido solo se applicato a una classe.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **Restricted** C++ ha la stessa funzionalità dell'attributo MIDL [limitato](/windows/win32/Midl/restricted) .
+L'attributo C++ con **restrizioni** ha la stessa funzionalità dell'attributo MIDL [limitato](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Esempio
 
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Si applica a**|Metodo di interfaccia, **interfaccia**, **classe**, **struct**|
+|**Si applica a**|Metodo di interfaccia, **interfaccia**, **`class`** ,**`struct`**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|**coclasse** (se applicata alla **classe** o allo **struct**)|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|**coclasse** (se applicata a **`class`** o **`struct`** )|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

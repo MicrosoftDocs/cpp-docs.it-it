@@ -2,12 +2,12 @@
 title: Panoramica delle convenzioni ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320723"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229766"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI di ARM32
 
@@ -25,7 +25,7 @@ Il supporto per la divisione di numeri interi (UDIV/SDIV) è fortemente consigli
 
 Windows su ARM viene eseguito in modalità little endian. Sia il compilatore MSVC che Windows Runtime prevedono sempre dati little-endian. Anche se l'istruzione SETEND nell'architettura ISA (Instruction Set Architecture) ARM consente anche al codice in modalità utente di cambiare l'ordine dei byte corrente, è sconsigliato farlo perché è pericoloso per un'applicazione. Se viene generata un'eccezione in modalità big endian, il comportamento non è prevedibile e può provocare un errore dell'applicazione in modalità utente o un controllo errori in modalità kernel.
 
-## <a name="alignment"></a>Alignment
+## <a name="alignment"></a>Allineamento
 
 Anche se Windows consente all'hardware ARM di gestire in modo trasparente gli accessi ai numeri interi disallineati, in alcune situazioni possono tuttavia essere generati errori di allineamento. Seguire queste regole per l'allineamento:
 
@@ -60,7 +60,7 @@ L'uso di istruzioni IT nel codice Thumb-2 non è consentito, se non in questi ca
    |STR, STRB, STRH|Store to memory||
    |ADD, ADC, RSB, SBC, SUB|Add or subtract|Ma non formati ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
    |CMP, CMN|Confronto|Rm != PC, Rn != PC|
-   |MUL|Moltiplicazione||
+   |MUL|Moltiplica||
    |ASR, LSL, LSR, ROR|Bit shift||
    |AND, BIC, EOR, ORR, TST|Bitwise arithmetic||
    |BX|Branch to register|Rm != PC|
@@ -201,7 +201,7 @@ Lo stack in modalità kernel predefinito in Windows è di tre pagine (12 KB). Pr
 
 Le enumerazioni sono tipi Integer a 32 bit a meno che almeno un valore nell'enumerazione non richieda memoria double word a 64 bit. In questo caso, il livello dell'enumerazione viene alzato a un tipo Integer a 64 bit.
 
-`wchar_t` è definito come equivalente a `unsigned short`, per mantenere la compatibilità con le altre piattaforme.
+**`wchar_t`** viene definito come equivalente a **`unsigned short`** , per mantenere la compatibilità con altre piattaforme.
 
 ## <a name="stack-walking"></a>Analisi dello stack
 

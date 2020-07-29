@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364853"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230259"
 ---
 # <a name="bernoulli_distribution-class"></a>Classe bernoulli_distribution
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*URNG*\
-Il motore generatore di numeri casuali uniformi. Per i tipi [ \< ](../standard-library/random.md)possibili, vedere random>.
+*GENERATORE URNG*\
+Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Osservazioni
 
-La classe descrive una distribuzione che produce valori di tipo **bool**, distribuiti in base alla funzione di probabilità discreta della distribuzione di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe descrive una distribuzione che produce valori di tipo **`bool`** , distribuiti in base alla funzione di probabilità discreta della distribuzione di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ La funzione membro `reset()` rimuove gli eventuali valori memorizzati nella cach
 
 Le funzioni membro `operator()` restituiscono il successivo valore generato basato sul motore URNG, dal pacchetto di parametri corrente o da quello specificato.
 
-Per ulteriori informazioni sulle classi di [ \< ](../standard-library/random.md)distribuzione e sui relativi membri, vedere random>.
+Per ulteriori informazioni sulle classi di distribuzione e i relativi membri, vedere [\<random>](../standard-library/random.md) .
 
 Per informazioni dettagliate sulla funzione di probabilità discreta di Bernoulli, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione di Bernoulli](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
@@ -154,11 +154,11 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<random>
+**Intestazione:**\<random>
 
 **Spazio dei nomi:** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution:: bernoulli_distribution
 
 Costruisce la distribuzione.
 
@@ -169,39 +169,39 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*P*\
+*p*\
 Parametro di distribuzione `p` archiviato.
 
-*Parm*\
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Osservazioni
 
-**Prerequisito:**`0.0 ≤ p ≤ 1.0`
+**Precondizione:**`0.0 ≤ p ≤ 1.0`
 
 Il primo costruttore crea un oggetto il cui valore `p` archiviato include il valore *p*.
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::param_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::p aram_type
 
 Contiene i parametri della distribuzione.
 
-struct param_type bernoulli_distribution distribution_type; param_type(double p - 0,5); double p() const;
+struct param_type {typedef bernoulli_distribution distribution_type; param_type (Double p = 0,5); Double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parametri
 
-*P*\
+*p*\
 Parametro di distribuzione `p` archiviato.
 
 ### <a name="remarks"></a>Osservazioni
 
-**Prerequisito:**`0.0 ≤ p ≤ 1.0`
+**Precondizione:**`0.0 ≤ p ≤ 1.0`
 
 Questa struttura può essere passata al costruttore di classe della distribuzione durante la creazione di istanze, alla funzione membro `param()` per impostare i parametri archiviati di una distribuzione esistente e a `operator()` per l'uso in sostituzione dei parametri archiviati.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>casuali](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

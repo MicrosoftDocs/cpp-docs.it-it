@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 441006c977b4a4249270d0f4809da0fba0163395
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688246"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230065"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-Descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float**, il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.
+Descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`float`** , il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,24 +41,24 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_RealVal*
-Valore di tipo **float** per la parte reale del numero complesso che viene costruito.
+*_RealVal*\
+Valore di tipo **`float`** per la parte reale del numero complesso da costruire.
 
-@No__t_1 *_ImagVal*
-Valore di tipo **float** per la parte immaginaria del numero complesso che viene costruito.
+*_ImagVal*\
+Valore di tipo **`float`** per la parte immaginaria del numero complesso da costruire.
 
-\ *complexNum*
-Numero complesso di tipo **Double** o di tipo **long double** le cui parti reale e immaginaria vengono usate per inizializzare un numero complesso di tipo **float** costruito.
+*complexNum*\
+Numero complesso di tipo **`double`** o di tipo le **`long double`** cui parti reale e immaginaria vengono usate per inizializzare un numero complesso di tipo **`float`** costruito.
 
 ## <a name="return-value"></a>Valore restituito
 
-Numero complesso di tipo **float**.
+Numero complesso di tipo **`float`** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La specializzazione esplicita del modello di classe Complex a una classe complessa di tipo **float** differisce dal modello di classe solo nei costruttori che definisce. La conversione da **float** a **Double** può essere implicita, ma la conversione meno sicura da **float** a **long double** deve essere **esplicita**. L'uso di una conversione **esplicita** esclude l'inizializzazione con conversione del tipo tramite la sintassi di assegnazione.
+La specializzazione esplicita del modello di classe Complex a una classe complessa di tipo **`float`** differisce dal modello di classe solo nei costruttori che definisce. La conversione da **`float`** a **`double`** può essere implicita, ma la conversione meno sicura da **`float`** a **`long double`** è obbligatoria **`explicit`** . L'uso di **`explicit`** regole esclude l'avvio con la conversione del tipo tramite la sintassi di assegnazione.
 
-Per ulteriori informazioni sul modello di classe `complex`, vedere [classe Complex](../standard-library/complex-class.md). Per un elenco di membri del modello di classe `complex`, vedere.
+Per ulteriori informazioni sul modello di classe `complex` , vedere [classe Complex](../standard-library/complex-class.md). Per un elenco di membri del modello di classe `complex` , vedere.
 
 ## <a name="example"></a>Esempio
 
@@ -118,11 +118,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<complex>
+**Intestazione**:\<complex>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe complex](../standard-library/complex-class.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe complessa](../standard-library/complex-class.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

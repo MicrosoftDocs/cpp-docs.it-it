@@ -10,36 +10,36 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d792dac45d69a0857bda551d1f3c03fc3d03d1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229883"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Chiamata di funzioni DLL da applicazioni Visual Basic
 
 Per Visual Basic applicazioni (o applicazioni in altri linguaggi, ad esempio Pascal o FORTRAN) per chiamare funzioni in una DLL C/C++, le funzioni devono essere esportate utilizzando la convenzione di chiamata corretta senza alcuna decorazione del nome eseguita dal compilatore
 
-`__stdcall`Crea la convenzione di chiamata corretta per la funzione (la funzione chiamata pulisce lo stack e i parametri vengono passati da destra a sinistra), ma decora il nome della funzione in modo diverso. Pertanto, quando **__declspec (dllexport)** viene utilizzato in una funzione esportata in una dll, viene esportato il nome decorato.
+**`__stdcall`** Crea la convenzione di chiamata corretta per la funzione (la funzione chiamata pulisce lo stack e i parametri vengono passati da destra a sinistra), ma decora il nome della funzione in modo diverso. Pertanto, quando **`__declspec(dllexport)`** viene utilizzato in una funzione esportata in una dll, viene esportato il nome decorato.
 
-La `__stdcall` decorazione del nome prefissa il nome del simbolo con un carattere **\_** di sottolineatura () e aggiunge il simbolo con**\@** un carattere di chiocciola () seguito dal numero di byte nell'elenco di argomenti (lo spazio dello stack richiesto). Di conseguenza, la funzione viene dichiarata come:
+La **`__stdcall`** decorazione del nome prefissa il nome del simbolo con un carattere di sottolineatura ( **\_** ) e aggiunge il simbolo con un carattere di chiocciola ( **\@** ) seguito dal numero di byte nell'elenco di argomenti (lo spazio dello stack richiesto). Di conseguenza, la funzione viene dichiarata come:
 
 ```C
 int __stdcall func (int a, double b)
 ```
 
-è decorato `_func@12` come nell'output.
+è decorato come `_func@12` nell'output.
 
-La convenzione di chiamata C`__cdecl`() decora il nome come `_func`.
+La convenzione di chiamata C ( **`__cdecl`** ) decora il nome come `_func` .
 
-Per ottenere il nome decorato, usare [/Map](reference/map-generate-mapfile.md). L'uso di **__declspec (dllexport)** esegue le operazioni seguenti:
+Per ottenere il nome decorato, usare [/Map](reference/map-generate-mapfile.md). L'utilizzo di **`__declspec(dllexport)`** esegue le operazioni seguenti:
 
-- Se la funzione viene esportata con la convenzione di`__cdecl`chiamata C (), il carattere di sottolineatura ( **\_** ) viene ritagliato quando il nome viene esportato.
+- Se la funzione viene esportata con la convenzione di chiamata C ( **`__cdecl`** ), il carattere di sottolineatura () viene ritagliato **\_** quando il nome viene esportato.
 
-- Se la funzione esportata non usa la convenzione di chiamata C (ad esempio `__stdcall`,), esporta il nome decorato.
+- Se la funzione esportata non usa la convenzione di chiamata C (ad esempio, **`__stdcall`** ), esporta il nome decorato.
 
-Poiché non è possibile eseguire l'override del punto in cui viene eseguita la pulizia dello `__stdcall`stack, è necessario utilizzare. Per dedecorare i nomi `__stdcall`con, è necessario specificarli usando gli alias nella sezione EXPORTS del file def. Come illustrato di seguito per la seguente dichiarazione di funzione:
+Poiché non è possibile eseguire l'override del punto in cui viene eseguita la pulizia dello stack, è necessario utilizzare **`__stdcall`** . Per dedecorare i nomi con **`__stdcall`** , è necessario specificarli usando gli alias nella sezione EXPORTS del file def. Come illustrato di seguito per la seguente dichiarazione di funzione:
 
 ```C
 int  __stdcall MyFunc (int a, double b);
@@ -62,11 +62,11 @@ Per chiamare le dll da programmi scritti in Visual Basic, è necessario usare la
 
 - [Esportazione da una DLL utilizzando. File DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione da una DLL utilizzando __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Esportazione da una DLL tramite __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da usare](determining-which-exporting-method-to-use.md)
 
 - [Nomi decorati](reference/decorated-names.md)
 

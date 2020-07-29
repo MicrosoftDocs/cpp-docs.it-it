@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 9a5cf2eb7734a20d04ec5c47ae71e80180a7b29d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0daf61f641b0b68bf806bba081b3c312777c6fe7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459048"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230207"
 ---
-# <a name="chartraitsltchar32tgt-struct"></a>Struct char_traits&lt;char32_t&gt;
+# <a name="char_traitsltchar32_tgt-struct"></a>Struct char_traits&lt;char32_t&gt;
 
-Struct che rappresenta una specializzazione dello struct modello **char_traits\<CharType>** in un elemento di tipo `char32_t`.
+Struct che rappresenta una specializzazione dello struct modello **char_traits \<CharType> ** a un elemento di tipo **`char32_t`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,13 +25,13 @@ template <>
 struct char_traits<char32_t>;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La specializzazione consente allo struct di sfruttare i vantaggi delle funzioni della libreria che modificano gli oggetti di questo tipo `char32_t`.
+La specializzazione consente allo struct di sfruttare i vantaggi delle funzioni della libreria che modificano oggetti di questo tipo **`char32_t`** .
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<string>
+**Intestazione:**\<string>
 
 **Spazio dei nomi:** std
 

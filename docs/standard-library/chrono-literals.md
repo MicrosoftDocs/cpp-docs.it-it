@@ -2,16 +2,16 @@
 title: valori letterali chrono
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 28ba8138d41cf1bd72911959f07b0d3c9e5fdc0e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244898"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230156"
 ---
 # <a name="chrono-literals"></a>valori letterali chrono
 
-(C++14) L'intestazione \<chrono> definisce 12 [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) per facilitare l'uso di valori letterali che rappresentano le ore, i minuti, i secondi, i millisecondi, i microsecondi e i nanosecondi. Ogni valore letterale definito dall'utente presenta un integrale e un overload a virgola mobile. I valori letterali sono definiti nello spazio dei nomi inline literals::chrono_literals che viene inserito nell'ambito automaticamente quando std::chrono rientra nell'ambito.
+(C++ 14) L' \<chrono> intestazione definisce 12 [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) per semplificare l'utilizzo di valori letterali che rappresentano le ore, i minuti, i secondi, i millisecondi, i microsecondi e i nanosecondi. Ogni valore letterale definito dall'utente presenta un integrale e un overload a virgola mobile. I valori letterali sono definiti nello spazio dei nomi inline literals::chrono_literals che viene inserito nell'ambito automaticamente quando std::chrono rientra nell'ambito.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -60,7 +60,7 @@ inline namespace literals {
 
 ## <a name="return-value"></a>Valore restituito
 
-I valori letterali che accettano un **long long** argomenti restituiscono un valore o il tipo corrispondente. I valori letterali che accettano un argomento a virgola mobile restituiscono una [durata](../standard-library/duration-class.md).
+I valori letterali che accettano un **`long long`** argomento restituiscono un valore o il tipo corrispondente. I valori letterali che accettano un argomento a virgola mobile restituiscono una [durata](../standard-library/duration-class.md).
 
 ## <a name="example"></a>Esempio
 

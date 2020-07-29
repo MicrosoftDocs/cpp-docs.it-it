@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 1ab25ad26357abe9091d273637f3ae9f77457342
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754411"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230480"
 ---
 # <a name="cscrollbar-class"></a>Classe CScrollBar
 
@@ -53,37 +53,37 @@ class CScrollBar : public CWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Controllo Utente::CScrollBar](#cscrollbar)|Costruisce un oggetto `CScrollBar`.|
+|[CScrollBar:: CScrollBar](#cscrollbar)|Costruisce un oggetto `CScrollBar`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CScrollBar::Creare](#create)|Crea la barra di scorrimento di `CScrollBar` Windows e la associa all'oggetto.|
-|[Proprietà CScrollBar::EnableScrollBar](#enablescrollbar)|Abilita o disabilita una o entrambe le frecce di una barra di scorrimento.|
-|[Controllo Utente::GetScrollBarInfo](#getscrollbarinfo)|Recupera informazioni sulla barra di `SCROLLBARINFO` scorrimento utilizzando una struttura.|
-|[Proprietà CScrollBar::GetScrollInfo](#getscrollinfo)|Recupera informazioni sulla barra di scorrimento.|
-|[CScrollBar::GetScrollLimit](#getscrolllimit)|Recupera il limite della barra di scorrimento|
-|[CScrollBar::GetScrollPos](#getscrollpos)|Recupera la posizione corrente di una casella di scorrimento.|
-|[CScrollBar::GetScrollRange](#getscrollrange)|Recupera le posizioni minime e massime correnti della barra di scorrimento per la barra di scorrimento specificata.|
-|[Proprietà CScrollBar::SetScrollInfo](#setscrollinfo)|Imposta informazioni sulla barra di scorrimento.|
-|[Controllo Utente::SetScrollPos](#setscrollpos)|Imposta la posizione corrente di una casella di scorrimento.|
-|[CScrollBar::SetScrollRange](#setscrollrange)|Imposta i valori di posizione minima e massima correnti per la barra di scorrimento specificata.|
-|[Proprietà CScrollBar::ShowScrollBar](#showscrollbar)|Mostra o nasconde una barra di scorrimento.|
+|[CScrollBar:: create](#create)|Crea la barra di scorrimento di Windows e la collega all' `CScrollBar` oggetto.|
+|[CScrollBar:: EnableScrollBar](#enablescrollbar)|Abilita o disabilita una o entrambe le frecce di una barra di scorrimento.|
+|[CScrollBar:: GetScrollBarInfo](#getscrollbarinfo)|Recupera le informazioni sulla barra di scorrimento usando una `SCROLLBARINFO` struttura.|
+|[CScrollBar:: GetScrollInfo](#getscrollinfo)|Recupera le informazioni sulla barra di scorrimento.|
+|[CScrollBar:: GetScrollLimit](#getscrolllimit)|Recupera il limite della barra di scorrimento|
+|[CScrollBar:: GetScrollPos](#getscrollpos)|Recupera la posizione corrente di una casella di scorrimento.|
+|[CScrollBar:: GetScrollRange](#getscrollrange)|Recupera le posizioni della barra di scorrimento minima e massima correnti per la barra di scorrimento specificata.|
+|[CScrollBar:: SetScrollInfo](#setscrollinfo)|Imposta informazioni sulla barra di scorrimento.|
+|[CScrollBar:: SetScrollPos](#setscrollpos)|Imposta la posizione corrente di una casella di scorrimento.|
+|[CScrollBar:: SetScrollRange](#setscrollrange)|Imposta i valori di posizione minima e massima correnti per la barra di scorrimento specificata.|
+|[CScrollBar:: ShowScrollBar](#showscrollbar)|Consente di visualizzare o nascondere una barra di scorrimento.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Creare un controllo barra di scorrimento in due passaggi. In primo luogo, `CScrollBar` chiamare `CScrollBar` il costruttore per costruire l'oggetto, quindi chiamare il `CScrollBar` [Create](#create) funzione membro per creare il Windows controllo barra di scorrimento e associarlo all'oggetto.
+Si crea un controllo barra di scorrimento in due passaggi. Chiamare innanzitutto il costruttore `CScrollBar` per costruire l' `CScrollBar` oggetto, quindi chiamare la funzione membro [create](#create) per creare il controllo barra di scorrimento di Windows e collegarlo all' `CScrollBar` oggetto.
 
-Se si `CScrollBar` crea un oggetto all'interno di `CScrollBar` una finestra di dialogo (tramite una risorsa finestra di dialogo), viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
+Se si crea un `CScrollBar` oggetto in una finestra di dialogo (tramite una risorsa della finestra di dialogo), il `CScrollBar` viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.
 
-Se si `CScrollBar` crea un oggetto all'interno di una finestra, potrebbe anche essere necessario distruggerlo.
+Se si crea un `CScrollBar` oggetto all'interno di una finestra, potrebbe essere necessario eliminarlo.
 
-Se si `CScrollBar` crea l'oggetto nello stack, viene eliminato automaticamente. Se si `CScrollBar` crea l'oggetto nell'heap utilizzando la **nuova** funzione, è necessario chiamare **delete** sull'oggetto per eliminarlo quando l'utente termina la barra di scorrimento di Windows.
+Se si crea l' `CScrollBar` oggetto nello stack, questo viene eliminato automaticamente. Se si crea l' `CScrollBar` oggetto nell'heap usando la **`new`** funzione, è necessario chiamare **`delete`** sull'oggetto per eliminarlo quando l'utente termina la barra di scorrimento di Windows.
 
-Se si alloca `CScrollBar` memoria nell'oggetto, eseguire l'override del `CScrollBar` distruttore per eliminare le allocazioni.
+Se si alloca memoria nell' `CScrollBar` oggetto, eseguire l'override del `CScrollBar` distruttore per eliminare le allocazioni.
 
-Per informazioni correlate `CScrollBar`sull'utilizzo di , vedere [Controlli](../../mfc/controls-mfc.md).
+Per informazioni correlate sull'uso di `CScrollBar` , vedere [controlli](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -99,9 +99,9 @@ Per informazioni correlate `CScrollBar`sull'utilizzo di , vedere [Controlli](../
 
 **Intestazione:** afxwin.h
 
-## <a name="cscrollbarcreate"></a><a name="create"></a>CScrollBar::Creare
+## <a name="cscrollbarcreate"></a><a name="create"></a>CScrollBar:: create
 
-Crea la barra di scorrimento di `CScrollBar` Windows e la associa all'oggetto.
+Crea la barra di scorrimento di Windows e la collega all' `CScrollBar` oggetto.
 
 ```
 virtual BOOL Create(
@@ -113,17 +113,17 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*DwStyle (in stile dwStyle)*<br/>
-Specifica lo stile della barra di scorrimento. Applicare qualsiasi combinazione di stili della barra di [scorrimento](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) alla barra di scorrimento.
+*dwStyle*<br/>
+Specifica lo stile della barra di scorrimento. Applicare qualsiasi combinazione di [stili barra di scorrimento](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) alla barra di scorrimento.
 
 *Rect*<br/>
-Specifica le dimensioni e la posizione della barra di scorrimento. Può essere `RECT` una struttura `CRect` o un oggetto.
+Specifica le dimensioni e la posizione della barra di scorrimento. Può essere una `RECT` struttura o un `CRect` oggetto.
 
-*pParentWnd (informazioni in due)*<br/>
-Specifica la finestra padre della barra `CDialog` di scorrimento, in genere un oggetto. Non deve essere NULL.
+*pParentWnd*<br/>
+Specifica la finestra padre della barra di scorrimento, in genere un `CDialog` oggetto. Non deve essere NULL.
 
 *nID*<br/>
-ID di controllo della barra di scorrimento.
+ID del controllo della barra di scorrimento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -131,23 +131,23 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Costruire un `CScrollBar` oggetto in due passaggi. In primo luogo, chiamare il `CScrollBar` costruttore, che costruisce l'oggetto; quindi `Create`chiamare , che crea e inizializza la barra di `CScrollBar` scorrimento di Windows associata e la associa all'oggetto.
+Si costruisce un `CScrollBar` oggetto in due passaggi. Chiamare innanzitutto il costruttore, che costruisce l' `CScrollBar` oggetto, quindi chiamare `Create` , che crea e inizializza la barra di scorrimento di Windows associata e la associa all' `CScrollBar` oggetto.
 
-Applicare i seguenti stili di [finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) a una barra di scorrimento:
+Applicare gli [stili della finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) seguenti a una barra di scorrimento:
 
 - WS_CHILD sempre
 
-- WS_VISIBLE di solito
+- WS_VISIBLE in genere
 
-- WS_DISABLED Raramente
+- WS_DISABLED raramente
 
-- WS_GROUP A raggruppare i controlli
+- WS_GROUP ai controlli di gruppo
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]
 
-## <a name="cscrollbarcscrollbar"></a><a name="cscrollbar"></a>Controllo Utente::CScrollBar
+## <a name="cscrollbarcscrollbar"></a><a name="cscrollbar"></a>CScrollBar:: CScrollBar
 
 Costruisce un oggetto `CScrollBar`.
 
@@ -157,13 +157,13 @@ CScrollBar();
 
 ### <a name="remarks"></a>Osservazioni
 
-Dopo aver creato l'oggetto, chiamare la `Create` funzione membro per creare e inizializzare la barra di scorrimento di Windows.After constructing the object, call the member function to create and initialize the Windows scroll bar.
+Dopo la costruzione dell'oggetto, chiamare la `Create` funzione membro per creare e inizializzare la barra di scorrimento di Windows.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]
 
-## <a name="cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a>Proprietà CScrollBar::EnableScrollBar
+## <a name="cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a>CScrollBar:: EnableScrollBar
 
 Abilita o disabilita una o entrambe le frecce di una barra di scorrimento.
 
@@ -173,12 +173,12 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 
 ### <a name="parameters"></a>Parametri
 
-*nArrowFlags (Flag di proprietà)*<br/>
-Specifica se le frecce di scorrimento sono abilitate o disabilitate e quali frecce sono abilitate o disabilitate. Questo parametro può essere uno dei seguenti valori:
+*nArrowFlags*<br/>
+Specifica se le frecce di scorrimento sono abilitate o disabilitate e quali frecce sono abilitate o disabilitate. Questo parametro può essere uno dei valori seguenti:
 
-- ESB_ENABLE_BOTH Attiva entrambe le frecce di una barra di scorrimento.
+- ESB_ENABLE_BOTH Abilita entrambe le frecce di una barra di scorrimento.
 
-- ESB_DISABLE_LTUP Disabilita la freccia sinistra di una barra di scorrimento orizzontale o la freccia verso l'alto di una barra di scorrimento verticale.
+- ESB_DISABLE_LTUP disabilita la freccia sinistra di una barra di scorrimento orizzontale o la freccia verso l'alto di una barra di scorrimento verticale.
 
 - ESB_DISABLE_RTDN Disabilita la freccia destra di una barra di scorrimento orizzontale o la freccia verso il basso di una barra di scorrimento verticale.
 
@@ -186,13 +186,13 @@ Specifica se le frecce di scorrimento sono abilitate o disabilitate e quali frec
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se le frecce sono abilitate o disabilitate come specificato; in caso contrario 0, che indica che le frecce sono già nello stato richiesto o che si è verificato un errore.
+Diverso da zero se le frecce sono abilitate o disabilitate come specificato; in caso contrario, 0, che indica che le frecce si trovano già nello stato richiesto o che si è verificato un errore.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CScrollBar::SetScrollRange](#setscrollrange).
+  Vedere l'esempio per [CScrollBar:: SetScrollRange](#setscrollrange).
 
-## <a name="cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>Controllo Utente::GetScrollBarInfo
+## <a name="cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CScrollBar:: GetScrollBarInfo
 
 Recupera le informazioni gestite dalla struttura `SCROLLBARINFO` su una barra di scorrimento.
 
@@ -202,8 +202,8 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 
 ### <a name="parameters"></a>Parametri
 
-*pScrollInfo (informazioni in stato inquestoeper*<br/>
-Puntatore alla struttura [SCROLLBARINFO.](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)
+*pScrollInfo*<br/>
+Puntatore alla struttura [SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -211,9 +211,9 @@ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione membro emula la funzionalità del messaggio [di SBM_SCROLLBARINFO,](/windows/win32/Controls/sbm-getscrollbarinfo) come descritto in Windows SDK.
+Questa funzione membro emula la funzionalità del messaggio di [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo) , come descritto nel Windows SDK.
 
-## <a name="cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>Proprietà CScrollBar::GetScrollInfo
+## <a name="cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>CScrollBar:: GetScrollInfo
 
 Recupera le informazioni gestite dalla struttura `SCROLLINFO` su una barra di scorrimento.
 
@@ -225,29 +225,29 @@ BOOL GetScrollInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*lpScrollInfo (informazioni in questo oggetto utente)*<br/>
-Puntatore a una struttura [SCROLLINFO.](/windows/win32/api/winuser/ns-winuser-scrollinfo) Vedere Windows SDK per ulteriori informazioni su questa struttura.
+*lpScrollInfo*<br/>
+Puntatore a una struttura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) . Per ulteriori informazioni su questa struttura, vedere la Windows SDK.
 
-*nMaschera*<br/>
-Specifica i parametri della barra di scorrimento da recuperare. Utilizzo tipico, SIF_ALL, specifica una combinazione di SIF_PAGE, SIF_POS, SIF_TRACKPOS e SIF_RANGE. Per `SCROLLINFO` ulteriori informazioni sui valori di nMask, vedere per ulteriori informazioni sui valori di nMask.
+*nMask*<br/>
+Specifica i parametri della barra di scorrimento da recuperare. Utilizzo tipico, SIF_ALL, specifica una combinazione di SIF_PAGE, SIF_POS, SIF_TRACKPOS e SIF_RANGE. `SCROLLINFO`Per ulteriori informazioni sui valori nMask, vedere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il messaggio recupera i valori, il valore restituito è TRUE. In caso contrario, è FALSE.
+Se il messaggio recupera tutti i valori, il valore restituito è TRUE. In caso contrario, è FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-`GetScrollInfo`consente alle applicazioni di utilizzare le posizioni di scorrimento a 32 bit.
+`GetScrollInfo`consente alle applicazioni di usare le posizioni di scorrimento a 32 bit.
 
-La struttura [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) contiene informazioni su una barra di scorrimento, incluse le posizioni di scorrimento minima e massima, le dimensioni della pagina e la posizione della casella di scorrimento (la casella di scorrimento). Per `SCROLLINFO` ulteriori informazioni sulla modifica delle impostazioni predefinite della struttura, vedere l'argomento relativo alla struttura in Windows SDK.
+La struttura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) contiene informazioni su una barra di scorrimento, incluse le posizioni di scorrimento minime e massime, le dimensioni della pagina e la posizione della casella di scorrimento (il cursore). `SCROLLINFO`Per ulteriori informazioni sulla modifica delle impostazioni predefinite della struttura, vedere l'argomento relativo alla struttura nella Windows SDK.
 
-I gestori di messaggi di Windows MFC che indicano la posizione della barra di scorrimento, [CWnd::OnHScroll, e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), forniscono solo 16 bit di dati di posizione. `GetScrollInfo`e `SetScrollInfo` forniscono 32 bit di dati sulla posizione della barra di scorrimento. Pertanto, un'applicazione può chiamare `GetScrollInfo` durante l'elaborazione `CWnd::OnHScroll` o `CWnd::OnVScroll` per ottenere dati di posizione della barra di scorrimento a 32 bit.
+I gestori di messaggi di Windows MFC che indicano la posizione della barra di scorrimento, [CWnd:: OnHScroll e [CWnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), forniscono solo 16 bit di dati di posizione. `GetScrollInfo`e `SetScrollInfo` forniscono 32 bit di dati sulla posizione della barra di scorrimento. Pertanto, un'applicazione può chiamare `GetScrollInfo` durante l'elaborazione `CWnd::OnHScroll` `CWnd::OnVScroll` di o per ottenere i dati di posizione della barra di scorrimento a 32 bit.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Vedere l'esempio per [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar::GetScrollLimit
+## <a name="cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar:: GetScrollLimit
 
 Recupera la posizione di scorrimento massima della barra di scorrimento.
 
@@ -257,13 +257,13 @@ int GetScrollLimit();
 
 ### <a name="return-value"></a>Valore restituito
 
-Specifica la posizione massima di una barra di scorrimento in caso di esito positivo; in caso contrario 0.
+Specifica la posizione massima di una barra di scorrimento in caso di esito positivo; in caso contrario, 0.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Vedere l'esempio per [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar::GetScrollPos
+## <a name="cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar:: GetScrollPos
 
 Recupera la posizione corrente di una casella di scorrimento.
 
@@ -273,19 +273,19 @@ int GetScrollPos() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Specifica la posizione corrente della casella di scorrimento in caso di esito positivo; in caso contrario 0.
+Specifica la posizione corrente della casella di scorrimento in caso di esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-La posizione corrente è un valore relativo che dipende dall'intervallo di scorrimento corrente. Ad esempio, se l'intervallo di scorrimento è compreso tra 100 e 200 e la casella di scorrimento si trova al centro della barra, la posizione corrente è 150.
+La posizione corrente è un valore relativo che dipende dall'intervallo di scorrimento corrente. Se, ad esempio, l'intervallo di scorrimento è da 100 a 200 e la casella di scorrimento si trova al centro della barra, la posizione corrente è 150.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Vedere l'esempio per [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar::GetScrollRange
+## <a name="cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar:: GetScrollRange
 
-Copia le posizioni minime e massime correnti della barra di scorrimento per la barra di scorrimento specificata nelle posizioni specificate da *lpMinPos* e *lpMaxPos*.
+Copia le posizioni della barra di scorrimento minima e massima correnti per la barra di scorrimento specificata nei percorsi specificati da *lpMinPos* e *lpMaxPos*.
 
 ```cpp
 void GetScrollRange(
@@ -295,10 +295,10 @@ void GetScrollRange(
 
 ### <a name="parameters"></a>Parametri
 
-*LpMinPos*<br/>
+*lpMinPos*<br/>
 Punta alla variabile integer che deve ricevere la posizione minima.
 
-*LpMaxPos*<br/>
+*lpMaxPos*<br/>
 Punta alla variabile integer che deve ricevere la posizione massima.
 
 ### <a name="remarks"></a>Osservazioni
@@ -307,11 +307,11 @@ L'intervallo predefinito per un controllo barra di scorrimento è vuoto (entramb
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Vedere l'esempio per [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>Proprietà CScrollBar::SetScrollInfo
+## <a name="cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>CScrollBar:: SetScrollInfo
 
-Imposta le informazioni `SCROLLINFO` mantenute dalla struttura su una barra di scorrimento.
+Imposta le informazioni che la `SCROLLINFO` struttura gestisce su una barra di scorrimento.
 
 ```
 BOOL SetScrollInfo(
@@ -321,29 +321,29 @@ BOOL SetScrollInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*lpScrollInfo (informazioni in questo oggetto utente)*<br/>
-Puntatore a una struttura [SCROLLINFO.](/windows/win32/api/winuser/ns-winuser-scrollinfo)
+*lpScrollInfo*<br/>
+Puntatore a una struttura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) .
 
 *bRedraw*<br/>
-Specifica se la barra di scorrimento deve essere ridisegnata per riflettere le nuove informazioni. Se *bRedraw* è TRUE, la barra di scorrimento viene ridisegnata. Se è FALSE, non viene ridisegnato. La barra di scorrimento viene ridisegnata per impostazione predefinita.
+Specifica se la barra di scorrimento deve essere ridisegnato per riflettere le nuove informazioni. Se *bRedraw* è true, la barra di scorrimento viene ridisegnato. Se è FALSE, non viene ridisegnato. Per impostazione predefinita, la barra di scorrimento viene ridisegnato.
 
 ### <a name="return-value"></a>Valore restituito
 
-In caso di esito positivo, il ritorno è TRUE. In caso contrario, è FALSE.
+Se ha esito positivo, il valore restituito è TRUE. In caso contrario, è FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-È necessario fornire i `SCROLLINFO` valori richiesti dai parametri della struttura, inclusi i valori dei flag.
+È necessario fornire i valori richiesti dai `SCROLLINFO` parametri della struttura, inclusi i valori del flag.
 
-La `SCROLLINFO` struttura contiene informazioni su una barra di scorrimento, incluse le posizioni di scorrimento minimo e massimo, le dimensioni della pagina e la posizione della casella di scorrimento (la casella di scorrimento). Per ulteriori informazioni sulla modifica delle impostazioni predefinite della struttura, vedere l'argomento relativo alla struttura [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) in Windows SDK.
+La `SCROLLINFO` struttura contiene informazioni su una barra di scorrimento, incluse le posizioni di scorrimento minime e massime, le dimensioni della pagina e la posizione della casella di scorrimento (il cursore). Per ulteriori informazioni sulla modifica delle impostazioni predefinite della struttura, vedere l'argomento relativo alla struttura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]
 
-## <a name="cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>Controllo Utente::SetScrollPos
+## <a name="cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>CScrollBar:: SetScrollPos
 
-Imposta la posizione corrente di una casella di scorrimento su quella specificata da *nPos* e, se specificata, ridisegna la barra di scorrimento per riflettere la nuova posizione.
+Imposta la posizione corrente di una casella di scorrimento su quella specificata da *nPos* e, se specificato, ridisegni la barra di scorrimento in modo da riflettere la nuova posizione.
 
 ```
 int SetScrollPos(
@@ -353,25 +353,25 @@ int SetScrollPos(
 
 ### <a name="parameters"></a>Parametri
 
-*Npos*<br/>
-Specifica la nuova posizione per la casella di scorrimento. Deve essere compreso nell'intervallo di scorrimento.
+*nPos*<br/>
+Specifica la nuova posizione per la casella di scorrimento. Deve trovarsi all'interno dell'intervallo di scorrimento.
 
 *bRedraw*<br/>
-Specifica se la barra di scorrimento deve essere ridisegnata per riflettere la nuova posizione. Se *bRedraw* è TRUE, la barra di scorrimento viene ridisegnata. Se è FALSE, non viene ridisegnato. La barra di scorrimento viene ridisegnata per impostazione predefinita.
+Specifica se la barra di scorrimento deve essere ridisegnato per riflettere la nuova posizione. Se *bRedraw* è true, la barra di scorrimento viene ridisegnato. Se è FALSE, non viene ridisegnato. Per impostazione predefinita, la barra di scorrimento viene ridisegnato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Specifica la posizione precedente della casella di scorrimento in caso di esito positivo; in caso contrario 0.
+Specifica la posizione precedente della casella di scorrimento in caso di esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Impostare *bRedraw* su FALSE ogni volta che la barra di scorrimento verrà ridisegnata da una chiamata successiva a un'altra funzione per evitare che la barra di scorrimento venga ridisegnata due volte in un breve intervallo.
+Impostare *bRedraw* su false ogni volta che la barra di scorrimento verrà ridisegnato da una chiamata successiva a un'altra funzione per evitare che la barra di scorrimento venga ridisegnato due volte in un breve intervallo.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CScrollBar::SetScrollRange](#setscrollrange).
+  Vedere l'esempio per [CScrollBar:: SetScrollRange](#setscrollrange).
 
-## <a name="cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar::SetScrollRange
+## <a name="cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar:: SetScrollRange
 
 Imposta i valori di posizione minima e massima correnti per la barra di scorrimento specificata.
 
@@ -384,14 +384,14 @@ void SetScrollRange(
 
 ### <a name="parameters"></a>Parametri
 
-*NMinPos (informazioni in bosnia)*<br/>
+*nMinPos*<br/>
 Specifica la posizione di scorrimento minima.
 
 *nMaxPos*<br/>
 Specifica la posizione di scorrimento massima.
 
 *bRedraw*<br/>
-Specifica se la barra di scorrimento deve essere ridisegnata per riflettere la modifica. Se *bRedraw* è TRUE, la barra di scorrimento viene ridisegnata; se FALSE, non viene ridisegnato. Viene ridisegnato per impostazione predefinita.
+Specifica se la barra di scorrimento deve essere ridisegnato per riflettere la modifica. Se *bRedraw* è true, la barra di scorrimento viene ridisegnato; Se FALSE, non viene ridisegnato. Per impostazione predefinita, viene ridisegnato.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -399,17 +399,17 @@ Impostare *nMinPos* e *nMaxPos* su 0 per nascondere le barre di scorrimento stan
 
 Non chiamare questa funzione per nascondere una barra di scorrimento durante l'elaborazione di un messaggio di notifica della barra di scorrimento.
 
-Se una `SetScrollRange` chiamata a segue `SetScrollPos` immediatamente una chiamata alla `SetScrollPos` funzione membro, impostare *bRedraw* in su 0 per evitare che la barra di scorrimento venga ridisegnata due volte.
+Se una chiamata a `SetScrollRange` segue immediatamente una chiamata alla `SetScrollPos` funzione membro, impostare *bRedraw* su `SetScrollPos` 0 per impedire che la barra di scorrimento venga ridisegnato due volte.
 
-La differenza tra i valori specificati da *nMinPos* e *nMaxPos* non deve essere maggiore di 32.767. L'intervallo predefinito per un controllo barra di scorrimento è vuoto (entrambi *nMinPos* e *nMaxPos* sono 0).
+La differenza tra i valori specificati da *nMinPos* e *nMaxPos* non deve essere maggiore di 32.767. L'intervallo predefinito per un controllo barra di scorrimento è vuoto ( *nMinPos* e *nMaxPos* sono 0).
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]
 
-## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>Proprietà CScrollBar::ShowScrollBar
+## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar:: ShowScrollBar
 
-Mostra o nasconde una barra di scorrimento.
+Consente di visualizzare o nascondere una barra di scorrimento.
 
 ```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
@@ -418,7 +418,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bShow*<br/>
-Specifica se la barra di scorrimento viene visualizzata o nascosta. Se questo parametro è TRUE, viene visualizzata la barra di scorrimento; in caso contrario è nascosto.
+Specifica se la barra di scorrimento è visualizzata o nascosta. Se questo parametro è TRUE, viene visualizzata la barra di scorrimento; in caso contrario, è nascosto.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -426,7 +426,7 @@ Un'applicazione non deve chiamare questa funzione per nascondere una barra di sc
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CScrollBar::Create](#create).
+  Vedere l'esempio per [CScrollBar:: create](#create).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -435,7 +435,7 @@ Un'applicazione non deve chiamare questa funzione per nascondere una barra di sc
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
 [Classe CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Classe CStatic](../../mfc/reference/cstatic-class.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)

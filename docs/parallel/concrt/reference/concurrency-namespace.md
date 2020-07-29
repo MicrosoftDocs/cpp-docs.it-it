@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446740"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230376"
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 
@@ -83,7 +83,7 @@ namespace concurrency;
 |[Classe invalid_link_target](invalid-link-target-class.md)|Questa classe descrive un'eccezione generata quando il metodo `link_target` di un blocco della messaggistica viene chiamato e tale blocco non è in grado di collegarsi alla destinazione. Può essere il risultato del superamento del numero di collegamenti consentito dal blocco della messaggistica o del tentativo di collegare una destinazione specifica due volte alla stessa origine.|
 |[Classe invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)|Questa classe descrive un'eccezione generata quando un oggetto `task_handle` è pianificato più volte usando il metodo `run` di un oggetto `task_group` o `structured_task_group` senza una chiamata intermedia a uno dei metodi `wait` o `run_and_wait`.|
 |[Classe invalid_operation](invalid-operation-class.md)|Questa classe descrive un'eccezione generata quando viene eseguita un'operazione non valida non più descritta in maniera accurata da un altro tipo di eccezione generata dal runtime di concorrenza.|
-|[Classe invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Questa classe descrive un'eccezione generata quando il metodo `Context::Oversubscribe` viene chiamato con il parametro `_BeginOversubscription` impostato su `false` senza una chiamata precedente al metodo `Context::Oversubscribe` con il parametro `_BeginOversubscription` impostato su `true`.|
+|[Classe invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Questa classe descrive un'eccezione generata quando il `Context::Oversubscribe` metodo viene chiamato con il `_BeginOversubscription` parametro impostato su **`false`** senza una chiamata precedente al `Context::Oversubscribe` metodo con il `_BeginOversubscription` parametro impostato su **`true`** .|
 |[Classe invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)|Questa classe descrive un'eccezione generata quando una chiave non valida o sconosciuta viene passata a un costruttore dell'oggetto `SchedulerPolicy` o il metodo `SetPolicyValue` di un oggetto `SchedulerPolicy` viene passato a una chiave che deve essere modificata mediante altri mezzi come, ad esempio, il metodo `SetConcurrencyLimits`.|
 |[Classe invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)|Questa classe descrive un'eccezione generata quando si tenta di impostare i limiti di concorrenza di un oggetto `SchedulerPolicy` in modo che il valore della chiave `MinConcurrency` sia inferiore a quella della chiave `MaxConcurrency`.|
 |[Classe invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)|Questa classe descrive un'eccezione generata quando una chiave dei criteri di un oggetto `SchedulerPolicy` viene impostata su un valore non valido per tale chiave.|
@@ -179,7 +179,7 @@ namespace concurrency;
 |[Funzione asend](concurrency-namespace-functions.md#asend)|Di overload. Un'operazione di invio asincrona che pianifica un'attività per propagare i dati nel blocco di destinazione.|
 |[Funzione cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Annulla l'attività attualmente in esecuzione. Questa funzione può essere chiamata dal corpo di un'attività per interrompere l'esecuzione dell'attività e forzarne il passaggio allo stato `canceled`.<br /><br /> Chiamare questa funzione non è uno scenario supportato se non si è all'interno del corpo di un oggetto `task`. In questo modo si otterrà un comportamento non definito, ad esempio un arresto anomalo o la mancata risposta nell'applicazione.|
 |[Funzione create_async](concurrency-namespace-functions.md#create_async)|Crea un costrutto asincrono di Windows Runtime in base a un'espressione lambda o un oggetto funzione fornito dall'utente. Il tipo restituito `create_async` è uno tra `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` in base alla firma dell'espressione lambda passata al metodo.|
-|[Funzione create_task](concurrency-namespace-functions.md#create_task)|Di overload. Crea un oggetto [attività](task-class.md) ppl. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.|
+|[Funzione create_task](concurrency-namespace-functions.md#create_task)|Di overload. Crea un oggetto [attività](task-class.md) ppl. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per praticità, perché consente l'uso della **`auto`** parola chiave durante la creazione di attività.|
 |[CreateResourceManager (funzione)](concurrency-namespace-functions.md#createresourcemanager)|Restituisce un'interfaccia che rappresenta l'istanza singleton di Gestione risorse del runtime di concorrenza. Gestione risorse è responsabile dell'assegnazione di risorse a utilità di pianificazione che vogliono cooperare tra loro.|
 |[Funzione DisableTracing](concurrency-namespace-functions.md#disabletracing)|Disabilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW non viene registrata per impostazione predefinita.|
 |[EnableTracing (funzione)](concurrency-namespace-functions.md#enabletracing)|Abilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW è ora attivata per impostazione predefinita.|
@@ -191,7 +191,7 @@ namespace concurrency;
 |[GetProcessorNodeCount (funzione)](concurrency-namespace-functions.md#getprocessornodecount)|Restituisce il numero di nodi NUMA o pacchetti del processore sul sistema sottostante.|
 |[Funzione GetSchedulerId](concurrency-namespace-functions.md#getschedulerid)|Restituisce un identificatore univoco che può essere assegnato a un'utilità di pianificazione che implementa l'interfaccia `IScheduler`.|
 |[Funzione interruption_point](concurrency-namespace-functions.md#interruption_point)|Crea un punto di interruzione per l'annullamento. Se un annullamento è in corso nel contesto in cui questa funzione viene chiamata, questa genererà un'eccezione interna che interrompe l'esecuzione del lavoro parallelo in esecuzione. Se l'annullamento non è in corso, la funzione non esegue alcuna operazione.|
-|[Funzione is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Restituisce un'informazione che indica se il gruppo di attività attualmente in esecuzione inline sul contesto corrente si trova nel mezzo di un annullamento attivo (o lo sarà a breve). Si noti che se non è presente alcun gruppo di attività in esecuzione inline sul contesto corrente, sarà restituito `false`.|
+|[Funzione is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Restituisce un'informazione che indica se il gruppo di attività attualmente in esecuzione inline sul contesto corrente si trova nel mezzo di un annullamento attivo (o lo sarà a breve). Si noti che se non è presente alcun gruppo di attività attualmente in esecuzione inline sul contesto corrente, **`false`** verrà restituito.|
 |[Funzione make_choice](concurrency-namespace-functions.md#make_choice)|Di overload. Costruisce un blocco della messaggistica `choice` da un oggetto `Scheduler` o `ScheduleGroup` facoltativo e due o più origini di input.|
 |[Funzione make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Di overload. Costruisce un blocco della messaggistica `greedy multitype_join` da un oggetto `Scheduler` o `ScheduleGroup` facoltativo e due o più origini di input.|
 |[Funzione make_join](concurrency-namespace-functions.md#make_join)|Di overload. Costruisce un blocco della messaggistica `non_greedy multitype_join` da un oggetto `Scheduler` o `ScheduleGroup` facoltativo e due o più origini di input.|

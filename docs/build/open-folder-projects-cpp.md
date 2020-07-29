@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320954"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229805"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Supporto per Apri cartella per i sistemi di compilazione C++ in Visual Studio
 
@@ -37,7 +37,7 @@ Per usare l'IDE di Visual Studio con un sistema di compilazione o un set di stru
 |tasks.vs.json|Specificare i comandi di compilazione personalizzati. Accessibile tramite il comando **Configura attività** nel menu di scelta rapida **Esplora soluzioni**.|
 |launch.vs.json|Specifica argomenti della riga di comando per il debugger. Accessibile tramite il comando **Impostazioni per debug e avvio** nel menu di scelta rapida **Esplora soluzioni**.|
 
-## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Configurare la navigazione del codice con CppProperties. JSON
+## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Configurare la navigazione del codice con CppProperties.js
 
 Per il corretto funzionamento di IntelliSense e del comportamento di esplorazione, ad esempio **Vai a definizione** , Visual Studio deve essere in grado di individuare il compilatore utilizzato, la posizione delle intestazioni di sistema e i file di inclusione aggiuntivi se non sono direttamente nella cartella aperta (cartella dell'area di lavoro). Per specificare una configurazione, è possibile scegliere **Gestisci configurazioni** dall'elenco a discesa sulla barra degli strumenti principale:
 
@@ -47,7 +47,7 @@ Visual Studio offre le configurazioni predefinite seguenti:
 
 ![Configurazioni predefinite](media/default-configurations.png)
 
-Se, ad esempio, si sceglie **x64-debug**, Visual Studio crea un file denominato *CppProperties. JSON* nella cartella radice del progetto:
+Se, ad esempio, si sceglie **x64-debug**, Visual Studio crea un file denominato *CppProperties.js* nella cartella radice del progetto:
 
 ```json
 {
@@ -76,7 +76,7 @@ Se, ad esempio, si sceglie **x64-debug**, Visual Studio crea un file denominato 
 Questa configurazione eredita le variabili di ambiente di Visual Studio [x64 prompt dei comandi per gli sviluppatori](building-on-the-command-line.md). Una di queste variabili è `INCLUDE` ed è possibile farvi riferimento usando la `${env.INCLUDE}` macro. La `includePath` proprietà indica a Visual Studio dove cercare tutte le origini necessarie per IntelliSense. In questo caso, viene visualizzato il messaggio "Cerca in tutte le directory specificate dalla variabile di ambiente INCLUDE e anche in tutte le directory nell'albero delle cartelle di lavoro corrente". La `name` proprietà è il nome che verrà visualizzato nell'elenco a discesa e può essere qualsiasi elemento. La `defines` proprietà fornisce hint a IntelliSense quando rileva blocchi di compilazione condizionali. La `intelliSenseMode` proprietà fornisce alcuni hint aggiuntivi in base al tipo del compilatore. Per MSVC, GCC e Clang sono disponibili diverse opzioni.
 
 > [!NOTE]
-> Se Visual Studio sembra ignorare le impostazioni in *CppProperties. JSON*, provare ad aggiungere un'eccezione al file con *estensione gitignore* come segue: `!/CppProperties.json`.
+> Se Visual Studio sembra ignorare le impostazioni in *CppProperties.json*, provare ad aggiungere un'eccezione al file con *estensione gitignore* come segue: `!/CppProperties.json` .
 
 ## <a name="default-configuration-for-mingw-w64"></a>Configurazione predefinita per MinGW-w64
 
@@ -109,7 +109,7 @@ Se si aggiunge la configurazione MinGW-w64, il codice JSON è simile al seguente
 }
 ```
 
-Si noti `environments` il blocco. Definisce le proprietà che si comportano come le variabili di ambiente e sono disponibili non solo nel file *CppProperties. JSON* , ma anche negli altri file di configurazione *Task. vs. JSON* e *Launch. vs. JSON*. La `Mingw64` configurazione eredita l' `mingw_w64` ambiente e usa la relativa `INCLUDE` proprietà per specificare il valore per `includePath`. È possibile aggiungere altri percorsi alla proprietà della matrice in base alle esigenze.
+Si noti il `environments` blocco. Definisce le proprietà che si comportano come le variabili di ambiente e sono disponibili non solo nell' *CppProperties.jssu* file, ma anche negli altri file di configurazione *task.vs.js* e *launch.vs.json*. La `Mingw64` configurazione eredita l' `mingw_w64` ambiente e usa la relativa `INCLUDE` proprietà per specificare il valore per `includePath` . È possibile aggiungere altri percorsi alla proprietà della matrice in base alle esigenze.
 
 La `intelliSenseMode` proprietà è impostata su un valore appropriato per GCC. Per altre informazioni su tutte queste proprietà, vedere [CppProperties Schema Reference](cppproperties-schema-reference.md).
 
@@ -119,11 +119,11 @@ Quando tutto funziona correttamente, si vedrà IntelliSense dalle intestazioni G
 
 ## <a name="enable-intellisense-diagnostics"></a>Abilita diagnostica IntelliSense
 
-Se non viene visualizzato il messaggio IntelliSense previsto, è possibile risolvere i problemi passando a **strumenti** > **Opzioni** > **Editor** > di testo**C/C++** > **Avanzate** e impostando **Abilita registrazione** su **true**. Per iniziare, provare a impostare il **livello di registrazione** su 5 e registrare i **filtri** su 8.
+Se non viene visualizzato il messaggio IntelliSense previsto, è possibile risolvere i problemi passando a **strumenti**  >  **Opzioni**  >  **editor di testo**  >  **C/C++**  >  **Avanzate** e impostando **Abilita registrazione** su **`true`** . Per iniziare, provare a impostare il **livello di registrazione** su 5 e registrare i **filtri** su 8.
 
 ![Registrazione diagnostica](media/diagnostic-logging.png)
 
-L'output viene reindirizzato al **finestra di output** ed è visibile quando si sceglie **Mostra Output da: Visual C++ log*. L'output contiene, tra le altre cose, l'elenco dei percorsi di inclusione effettivi che IntelliSense sta tentando di usare. Se i percorsi non corrispondono a quelli in *CppProperties. JSON*, provare a chiudere la cartella ed eliminare la sottocartella *. vs* che contiene i dati di esplorazione memorizzati nella cache.
+L'output viene reindirizzato al **finestra di output** ed è visibile quando si sceglie **Mostra Output da: Visual C++ log*. L'output contiene, tra le altre cose, l'elenco dei percorsi di inclusione effettivi che IntelliSense sta tentando di usare. Se i percorsi non corrispondono a quelli in *CppProperties.json*, provare a chiudere la cartella ed eliminare la sottocartella *. vs* che contiene i dati di esplorazione memorizzati nella cache.
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>Definire le attività di compilazione con tasks.vs.json
 
@@ -131,7 +131,7 @@ L'output viene reindirizzato al **finestra di output** ed è visibile quando si 
 
 ![Configura attività di Apri cartella](media/configure-tasks.png)
 
-Viene creato o aperto il file *Tasks. vs. JSON* nella cartella. vs creata da Visual Studio nella cartella radice del progetto. È possibile definire un'attività arbitraria in questo file, quindi chiamarla usando il nome specificato dal menu di scelta rapida **Esplora soluzioni**. Per continuare l'esempio GCC, il frammento di codice seguente mostra un file *Tasks. vs. JSON* completo con un'unica attività che richiama *g + +. exe* per compilare un progetto. Si supponga che il progetto contenga un solo file denominato *Hello. cpp*.
+Questa operazione crea (o apre) il *tasks.vs.js* nel file nella cartella. vs creata da Visual Studio nella cartella radice del progetto. È possibile definire un'attività arbitraria in questo file, quindi chiamarla usando il nome specificato dal menu di scelta rapida **Esplora soluzioni**. Per continuare l'esempio GCC, il frammento di codice seguente mostra un *tasks.vs.jscompleto su* file con una singola attività che richiama *g + +. exe* per compilare un progetto. Si supponga che il progetto contenga un solo file denominato *Hello. cpp*.
 
 ```json
 {
@@ -154,9 +154,9 @@ Viene creato o aperto il file *Tasks. vs. JSON* nella cartella. vs creata da Vis
 
 ```
 
-Il file JSON viene inserito nella sottocartella *. vs* . Per visualizzare la cartella, fare clic sul pulsante **Mostra tutti i file** nella parte superiore del **Esplora soluzioni**. È possibile eseguire questa attività facendo clic con il pulsante destro del mouse sul nodo radice in **Esplora soluzioni** e scegliendo **Compila Hello**. Al termine dell'attività, verrà visualizzato un nuovo file, *Hello. exe* in **Esplora soluzioni**.
+Il file JSON viene inserito nella sottocartella *. vs* . Per visualizzare la cartella, fare clic sul pulsante **Mostra tutti i file** nella parte superiore del **Esplora soluzioni**. È possibile eseguire questa attività facendo clic con il pulsante destro del mouse sul nodo radice in **Esplora soluzioni** e scegliendo **Compila Hello**. Al termine dell'attività, verrà visualizzato un nuovo file, *hello.exe* in **Esplora soluzioni**.
 
-È possibile definire molti tipi di attività. Nell'esempio seguente viene illustrato un *file Tasks. vs. JSON* che definisce una singola attività. `taskLabel` definisce il nome visualizzato nel menu di scelta rapida. `appliesTo` definisce i file sui quali può essere eseguito il comando. La `command` proprietà fa riferimento alla variabile di ambiente ComSpec, che identifica il percorso per la console (*cmd. exe* in Windows). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. La proprietà `args` specifica la riga di comando da chiamare. La macro `${file}` recupera il file selezionato in **Esplora soluzioni**. Nell'esempio seguente viene visualizzato il nome del file con estensione cpp attualmente selezionato.
+È possibile definire molti tipi di attività. Nell'esempio seguente viene illustrato un *tasks.vs.jssu un file* che definisce una singola attività. `taskLabel` definisce il nome visualizzato nel menu di scelta rapida. `appliesTo` definisce i file sui quali può essere eseguito il comando. La `command` proprietà fa riferimento alla variabile di ambiente ComSpec, che identifica il percorso per la console (*cmd.exe* in Windows). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. La proprietà `args` specifica la riga di comando da chiamare. La macro `${file}` recupera il file selezionato in **Esplora soluzioni**. Nell'esempio seguente viene visualizzato il nome del file con estensione cpp attualmente selezionato.
 
 ```json
 {
@@ -173,13 +173,13 @@ Il file JSON viene inserito nella sottocartella *. vs* . Per visualizzare la car
 }
 ```
 
-Dopo aver salvato *Tasks. vs. JSON*, è possibile fare clic con il pulsante destro del mouse su un file con *estensione cpp* nella cartella, scegliere **echo filename** dal menu di scelta rapida e visualizzare il nome del file visualizzato nella finestra di output.
+Dopo aver salvato *tasks.vs.json*, è possibile fare clic con il pulsante destro del mouse su un file con *estensione cpp* nella cartella, scegliere **echo filename** dal menu di scelta rapida e visualizzare il nome del file visualizzato nella finestra output.
 
 Per altre informazioni, vedere [Riferimento allo schema Tasks.vs.json](tasks-vs-json-schema-reference-cpp.md).
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurare i parametri di debug con launch.vs.json
 
-Per personalizzare gli argomenti della riga di comando del programma e le istruzioni di debug, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Verrà aperto un file *Launch. vs. JSON* esistente o, se non ne esiste alcuno, verrà creato un nuovo file con un set di impostazioni di avvio minime. Per prima cosa, è possibile scegliere il tipo di sessione di debug che si desidera configurare. Per eseguire il debug di un progetto MinGw-W64, si sceglie **avvio C/C++ per MinGW/Cygwin (gdb)**. Questa operazione crea una configurazione di avvio per l'uso di *gdb. exe* con alcune ipotesi colte sui valori predefiniti. Uno di questi valori predefiniti è `MINGW_PREFIX`. È possibile sostituire il percorso letterale (come illustrato di seguito) oppure è possibile `MINGW_PREFIX` definire una proprietà in *CppProperties. JSON*:
+Per personalizzare gli argomenti della riga di comando del programma e le istruzioni di debug, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Verrà aperto unlaunch.vs.jsesistente *nel* file o, se non ne esiste alcuno, verrà creato un nuovo file con un set di impostazioni di avvio minime. Per prima cosa, è possibile scegliere il tipo di sessione di debug che si desidera configurare. Per eseguire il debug di un progetto MinGw-W64, si sceglie **avvio C/C++ per MinGW/Cygwin (gdb)**. Questa operazione crea una configurazione di avvio per l'uso di *gdb.exe* con alcune ipotesi colte sui valori predefiniti. Uno di questi valori predefiniti è `MINGW_PREFIX` . È possibile sostituire il percorso letterale (come illustrato di seguito) oppure è possibile definire una `MINGW_PREFIX` Proprietà in *CppProperties.js*in:
 
 ```json
 {
@@ -207,11 +207,11 @@ Per avviare il debug, scegliere il file eseguibile nell'elenco a discesa debug, 
 
 Verrà visualizzata la finestra di dialogo **inizializzazione debugger** , quindi una finestra della console esterna in cui è in esecuzione il programma.
 
-Per altre informazioni, vedere Guida di [riferimento allo schema Launch. vs. JSON](launch-vs-schema-reference-cpp.md).
+Per ulteriori informazioni, vedere [launch.vs.jsdi riferimento allo schema](launch-vs-schema-reference-cpp.md).
 
 ## <a name="launching-other-executables"></a>Avvio di altri eseguibili
 
-È possibile definire le impostazioni di avvio per qualsiasi eseguibile nel computer. L'esempio seguente avvia *7za* e specifica argomenti aggiuntivi, aggiungendoli alla matrice `args` JSON:
+È possibile definire le impostazioni di avvio per qualsiasi eseguibile nel computer. L'esempio seguente avvia *7za* e specifica argomenti aggiuntivi, aggiungendoli alla `args` matrice JSON:
 
 ```json
 {

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e571c1ca8beef684a40bbf643e83aba3f205fc8e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230117"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Definisce diversi modelli di classe che descrivono oggetti basati sul modello di classe [codecvt](../standard-library/codecvt-class.md). Questi oggetti possono fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) che controllano le conversioni tra una sequenza di valori di tipo `Elem` e una sequenza di valori di tipo **char**.
+Definisce diversi modelli di classe che descrivono oggetti basati sul modello di classe [codecvt](../standard-library/codecvt-class.md). Questi oggetti possono fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) che controllano le conversioni tra una sequenza di valori di tipo `Elem` e una sequenza di valori di tipo **`char`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,7 +24,7 @@ Definisce diversi modelli di classe che descrivono oggetti basati sul modello di
 #include <codecvt>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 I facet delle impostazioni locali dichiarati in questa intestazione eseguono la conversione tra diverse codifiche di caratteri. Per i caratteri wide (archiviati all'interno del programma come interi a dimensione fissa):
 
@@ -34,7 +34,7 @@ I facet delle impostazioni locali dichiarati in questa intestazione eseguono la 
 
 - UCS-16 è codificato con Unicode all'interno del programma come uno dei due interi a 16 bit. Si noti che questo uso non soddisfa tutti i requisiti di una codifica di caratteri wide valida per C o C++ standard, ma è comunque ampiamente diffuso.
 
-Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o archiviati all'interno del programma in una matrice di **caratteri**):
+Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o archiviati all'interno del programma in una matrice di **`char`** ):
 
 - UTF-8 è codificato con Unicode all'interno di un flusso di byte come uno o più byte di otto bit con un ordine deterministico dei byte.
 
@@ -50,7 +50,7 @@ Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o a
 
 ### <a name="classes"></a>Classi
 
-|Class|Descrizione|
+|Classe|Descrizione|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|Rappresenta un facet di impostazioni locali che esegue la conversione tra caratteri wide codificati come UCS-2 o UCS-4 e un flusso di byte codificato come UTF-8.|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Rappresenta un facet di impostazioni locali che esegue la conversione tra caratteri wide codificati come UTF-16 e un flusso di byte codificato come UTF-8.|
@@ -58,7 +58,7 @@ Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o a
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<codecvt>
+**Intestazione:**\<codecvt>
 
 **Spazio dei nomi:** std
 

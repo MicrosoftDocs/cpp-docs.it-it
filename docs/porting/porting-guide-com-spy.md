@@ -2,12 +2,12 @@
 title: 'Guida al porting: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c21049a2faa8bb34ecd1ba75a5beda1db119f0fc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230285"
 ---
 # <a name="porting-guide-com-spy"></a>Guida al porting: COM Spy
 
@@ -25,7 +25,7 @@ Il file di progetto viene convertito facilmente e produce un report di migrazion
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Uno dei problemi frequenti nell'aggiornamento dei progetti è che potrebbe essere necessario rivedere l'impostazione **OutputFile del linker** nella finestra di dialogo delle proprietà del progetto. Per i progetti creati con versioni precedenti a Visual Studio 2010, OutputFile è un'impostazione che, se impostata su un valore non standard, crea problemi con la procedura guidata di conversione automatica. In questo caso i percorsi dei file di output sono stati impostati su una cartella non standard, ovvero XP32_DEBUG. Altre informazioni su questo errore sono reperibili in un [post di blog](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) relativo all'aggiornamento del progetto Visual Studio 2010, l'aggiornamento che include l'importante passaggio da vcbuild a msbuild. In base a queste informazioni, il valore predefinito per l'impostazione **File di output** quando si crea un nuovo progetto è `$(OutDir)$(TargetName)$(TargetExt)`, che però non viene impostato durante la conversione perché nei progetti convertiti non è possibile verificare che tutto sia corretto. Provare comunque a specificare questo valore per OutputFile e verificare se funziona.  In caso affermativo, sarà possibile procedere. Se non esistono motivi specifici per usare una cartella di output non standard, è consigliabile usare il percorso standard. In questo caso, è stato scelto di mantenere il percorso di output non standard durante il processo di portabilità e di aggiornamento. `$(OutDir)` risolve la cartella XP32_DEBUG nella configurazione di **Debug** e la cartella ReleaseU per la configurazione **Versione**.
+Uno dei problemi frequenti nell'aggiornamento di progetti è che l'impostazione **outputfile del linker** nella finestra di dialogo Proprietà del progetto potrebbe dover essere esaminata. Per i progetti creati con versioni precedenti a Visual Studio 2010, OutputFile è un'impostazione che, se impostata su un valore non standard, crea problemi con la procedura guidata di conversione automatica. In questo caso i percorsi dei file di output sono stati impostati su una cartella non standard, ovvero XP32_DEBUG. Altre informazioni su questo errore sono reperibili in un [post di blog](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) relativo all'aggiornamento del progetto Visual Studio 2010, l'aggiornamento che include l'importante passaggio da vcbuild a msbuild. In base a queste informazioni, il valore predefinito per l'impostazione **File di output** quando si crea un nuovo progetto è `$(OutDir)$(TargetName)$(TargetExt)`, che però non viene impostato durante la conversione perché nei progetti convertiti non è possibile verificare che tutto sia corretto. Provare comunque a specificare questo valore per OutputFile e verificare se funziona.  In caso affermativo, sarà possibile procedere. Se non esistono motivi specifici per usare una cartella di output non standard, è consigliabile usare il percorso standard. In questo caso, è stato scelto di mantenere il percorso di output non standard durante il processo di portabilità e di aggiornamento. `$(OutDir)` risolve la cartella XP32_DEBUG nella configurazione di **Debug** e la cartella ReleaseU per la configurazione **Versione**.
 
 ### <a name="step-2-getting-it-to-build"></a>Passaggio 2. Preparazione della compilazione
 
@@ -115,7 +115,7 @@ for (i=0;i<lCount;i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-Il problema è che `i` è dichiarato come `UINT` e `lCount` è dichiarato come **long**, da cui deriva l'errata corrispondenza tra signed e unsigned. Modificare il tipo di `lCount` in `UINT` sarebbe scomodo perché questo ottiene il relativo valore da `IMtsEventInfo::get_Count`, che usa il tipo **long** e non è incluso nel codice utente. A questo punto viene aggiunto un cast al codice. Un cast di tipo C farebbe per un cast numerico come questo, ma **static_cast** è lo stile consigliato.
+Il problema è che `i` è dichiarato come `UINT` ed `lCount` è dichiarato come **`long`** , di conseguenza la mancata corrispondenza tra signed e unsigned. Non è consigliabile modificare il tipo di `lCount` in `UINT` , poiché Ottiene il relativo valore da `IMtsEventInfo::get_Count` , che usa il tipo **`long`** e non è presente nel codice utente. A questo punto viene aggiunto un cast al codice. Un cast di tipo C può essere eseguito per un cast numerico come questo, ma **`static_cast`** è lo stile consigliato.
 
 ```cpp
 for (i=0;i<static_cast<UINT>(lCount);i++)
@@ -143,7 +143,7 @@ virtual ~CWindowImplRoot()
 
 `hWnd` è in genere impostato su zero nella funzione `WindowProc`, ma questo non si è verificato perché invece della funzione `WindowProc` predefinita è stato chiamato un gestore personalizzato per il messaggio Windows (WM_SYSCOMMAND) che chiude la finestra e tale gestore non ha impostato `hWnd` su zero. Dando un'occhiata al codice simile nella classe `CWnd` di MFC è possibile notare che durante l'eliminazione di una finestra viene chiamato `OnNcDestroy` e, in MFC, la documentazione consiglia che durante l'override di `CWnd::OnNcDestroy`, è necessario chiamare la versione di base di `NcDestroy` per garantire l'esecuzione delle operazioni di pulizia corrette, tra cui la separazione del punto di controllo dalla finestra, vale a dire l'impostazione di `hWnd` su zero. È possibile che questa asserzione sia stata attivata anche nella versione originale dell'esempio, dal momento che lo stesso codice dell'asserzione era presente nella versione precedente di atlwin.h.
 
-Per testare la funzionalità dell'app, è stato creato un **componente servito** usando il modello di progetto ATL, è stato scelto di aggiungere il supporto di COM, nella creazione guidata progetto ATL. Se non hai mai lavorato con i componenti serviti in precedenza, non è difficile crearne uno e ottenerlo registrato e disponibile sul sistema o sulla rete per l'uso da parte di altre app. L'app COM Spy viene usata per monitorare l'attività di componenti servizi per finalità diagnostiche.
+Per testare la funzionalità dell'app, è stato creato un **componente servito** usando il modello di progetto ATL e si è scelto di aggiungere il supporto com+ nella creazione guidata progetto ATL. Se non si è mai lavorato con componenti serviti, non è difficile crearne uno e registrarne uno e renderlo disponibile nel sistema o nella rete per poter usare altre app. L'app COM Spy viene usata per monitorare l'attività di componenti servizi per finalità diagnostiche.
 
 È stata quindi aggiunta una classe, è stato scelto Oggetto ATL ed è stato specificato `Dog` come nome dell'oggetto. aggiungendo l'implementazione in dog.h e dog.cpp.
 
@@ -156,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-Successivamente, è stato compilato e registrato (è necessario eseguire Visual Studio come amministratore) e attivato utilizzando l'applicazione componente servita nel Pannello di controllo di Windows.Next, we built and registered it (you'll need to run Visual Studio as Administrator), and activated it using the **Serviced Component** application in the Windows Control Panel. È stato creato un progetto Windows Forms C#, è stato trascinato un pulsante nel form dalla casella degli strumenti ed è stato fatto doppio clic su di esso per un gestore eventi clic. È stato aggiunto il codice seguente per creare un'istanza del componente `Dog`.
+Successivamente, è stato compilato e registrato (sarà necessario eseguire Visual Studio come amministratore) e attivato utilizzando l'applicazione **componente servito** nel pannello di controllo di Windows. È stato creato un progetto Windows Forms C#, è stato trascinato un pulsante nel form dalla casella degli strumenti ed è stato fatto doppio clic su di esso per un gestore eventi clic. È stato aggiunto il codice seguente per creare un'istanza del componente `Dog`.
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1017fc315a4440350a0190cf4b40e644cda16876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454219"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230039"
 ---
-# <a name="enableif-class"></a>Classe enable_if
+# <a name="enable_if-class"></a>Classe enable_if
 
-Crea un'istanza di un tipo in modo condizionale per la risoluzione dell'overload SFINAE. Il typedef `enable_if<Condition,Type>::type` annidato esiste, ed è un sinonimo di `Type`, se e `Condition` solo se è **true**.
+Crea un'istanza di un tipo in modo condizionale per la risoluzione dell'overload SFINAE. Il typedef annidato `enable_if<Condition,Type>::type` esiste, ed è un sinonimo di `Type` , se e solo se `Condition` è **`true`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,7 +33,7 @@ Valore che determina l'esistenza del tipo risultante.
 *T*\
 Tipo di cui creare un'istanza se *B* è true.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Se *B* è true, `enable_if<B, T>` include un typedef annidato denominato "Type" che è sinonimo di *T*.
 
@@ -50,7 +50,7 @@ In C++ un errore di sostituzione dei parametri modello non è un errore vero e p
 
 Ecco quattro scenari di esempio:
 
-- Scenario 1: Wrapping del tipo restituito di una funzione:
+- Scenario 1: wrapping del tipo restituito di una funzione:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Scenario 2: Aggiunta di un parametro di funzione con un argomento predefinito:
+- Scenario 2: aggiunta di un parametro di funzione che include un argomento predefinito:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Scenario 3: Aggiunta di un parametro di modello che include un argomento predefinito:
+- Scenario 3: aggiunta di un parametro di modello che include un argomento predefinito:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Scenario 4: Se la funzione ha un argomento non basato su modelli, è possibile eseguire il wrapping del relativo tipo:
+- Scenario 4: se la funzione include un argomento non basato su modello, è possibile eseguire il wrapping del relativo tipo:
 
 ```cpp
     template <typename T>
@@ -92,7 +92,7 @@ s) {// ...
 
 Lo scenario 1 non funziona con i costruttore e gli operatori di conversione poiché questi non dispongono di tipi restituiti.
 
-Lo scenario 2 lascia il parametro non denominato. È possibile specificare `::type Dummy = BAR`, ma il nome `Dummy` è irrilevante ed è probabile che l'assegnazione di un nome generi un avviso di tipo "parametro senza riferimento". È necessario scegliere un tipo di parametro di funzione `FOO` e l'argomento `BAR` predefinito.  È possibile indicare **int** e `0`, ma gli utenti del codice potrebbero accidentalmente passare alla funzione un numero intero aggiuntivo che verrebbe ignorato. È invece `void **` consigliabile usare `0` e o **nullptr** perché quasi nulla è convertibile in `void **`:
+Lo scenario 2 lascia il parametro non denominato. È possibile specificare `::type Dummy = BAR`, ma il nome `Dummy` è irrilevante ed è probabile che l'assegnazione di un nome generi un avviso di tipo "parametro senza riferimento". È necessario scegliere un tipo di parametro di funzione `FOO` e l'argomento `BAR` predefinito.  È possibile pronunciare **`int`** e `0` , ma gli utenti del codice potrebbero accidentalmente passare alla funzione un intero aggiuntivo che verrebbe ignorato. È invece consigliabile usare `void **` e `0` o **`nullptr`** perché quasi nulla è convertibile in `void **` :
 
 ```cpp
 template <your_stuff>
@@ -107,7 +107,7 @@ Lo scenario 3 usa il nome `Dummy`, ma è facoltativo. In realtà funziona anche 
 
 Lo scenario 4 funziona per i costruttori che dispongono di tipi restituiti e quindi risolve la limitazione di wrapping dello scenario 1.  Lo scenario 4, tuttavia, è limitato agli argomenti di funzione non basati su modello, che non sempre sono disponibili  (l'uso dello scenario 4 su un argomento di funzione basato su modello impedisce il funzionamento della deduzione di argomenti del modello su di esso).
 
-L'oggetto `enable_if` è potente, ma è anche pericoloso se usato in modo improprio.  Dato che il suo scopo consiste nell'eliminazione di candidati prima della risoluzione dell'overload, se viene usato in modo improprio i suoi effetti possono essere molto ambigui.  Ecco alcuni consigli:
+L'oggetto `enable_if` è potente, ma è anche pericoloso se usato in modo improprio.  Dato che il suo scopo consiste nell'eliminazione di candidati prima della risoluzione dell'overload, se viene usato in modo improprio i suoi effetti possono essere molto ambigui.  Di seguito sono elencati alcuni suggerimenti:
 
 - Non usare `enable_if` per la selezione di implementazioni in fase di compilazione. Non scrivere mai un `enable_if` per `CONDITION` e un altro per `!CONDITION`.  Usare invece un criterio di *invio tag*, ad esempio un algoritmo che seleziona le implementazioni in base ai punti di forza degli iteratori assegnati.
 
@@ -127,13 +127,13 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-In questo esempio `make_pair("foo", "bar")` restituisce `pair<const char *, const char *>`. La risoluzione dell'overload deve stabilire quale `func()` è richiesto. `pair<A, B>` ha un costruttore a conversione implicita tratto da `pair<X, Y>`.  Non si tratta di una novità. Era infatti presente in C++98. In C++98/03, tuttavia, la firma del costruttore a conversione implicita esiste sempre, anche se è `pair<int, int>(const pair<const char *, const char *>&)`.  La risoluzione dell'overload non è importante che un tentativo di creare un'istanza di tale costruttore `const char *` esploda in modo implicito perché non è implicitamente convertibile in **int**, ma solo le firme, prima che venga creata un'istanza delle definizioni di funzione.  Il codice di esempio è quindi ambiguo perché sono presenti firme per convertire `pair<const char *, const char *>` sia in `pair<int, int>` che in `pair<string, string>`.
+In questo esempio `make_pair("foo", "bar")` restituisce `pair<const char *, const char *>`. La risoluzione dell'overload deve stabilire quale `func()` è richiesto. `pair<A, B>` ha un costruttore a conversione implicita tratto da `pair<X, Y>`.  Non si tratta di una novità. Era infatti presente in C++98. In C++98/03, tuttavia, la firma del costruttore a conversione implicita esiste sempre, anche se è `pair<int, int>(const pair<const char *, const char *>&)`.  La risoluzione dell'overload non è importante che un tentativo di creare un'istanza di tale costruttore esploda in `const char *` modo implicito perché non è implicitamente convertibile in **`int`** ; vengono esaminate solo le firme, prima che venga creata un'istanza delle definizioni di funzione.  Il codice di esempio è quindi ambiguo perché sono presenti firme per convertire `pair<const char *, const char *>` sia in `pair<int, int>` che in `pair<string, string>`.
 
 C++11 risolve questa ambiguità usando `enable_if` per verificare che `pair<A, B>(const pair<X, Y>&)` esista **solo** quando `const X&` è convertibile implicitamente in `A` e `const Y&` è convertibile implicitamente in `B`.  In questo modo, la risoluzione dell'overload può stabilire che `pair<const char *, const char *>` non è convertibile in `pair<int, int>` e che l'overload che accetta `pair<string, string>` è possibile.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

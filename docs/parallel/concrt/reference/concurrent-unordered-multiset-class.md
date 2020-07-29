@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-ms.openlocfilehash: 92158d675b9526d1eb82a9b3f67c1c7263557d8e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: eeebb5d3b7541cf2005ea9b4eeffeac895a20713
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230311"
 ---
 # <a name="concurrent_unordered_multiset-class"></a>Classe concurrent_unordered_multiset
 
-La classe `concurrent_unordered_multiset` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico.
+La `concurrent_unordered_multiset` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in un modo che Abilita le operazioni di Accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,7 +55,7 @@ Tipo di oggetto della funzione di confronto di uguaglianza. Questo argomento è 
 *_Allocator_type*<br/>
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione e alla deallocazione della memoria per il vettore simultaneo. Questo argomento è facoltativo e il valore predefinito è `std::allocator<K>`.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
@@ -88,20 +88,20 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |Nome|Descrizione|
 |----------|-----------------|
 |[hash_function](#hash_function)|Restituisce l'oggetto della funzione hash archiviato.|
-|[insert](#insert)|Di overload. Aggiunge elementi all'oggetto `concurrent_unordered_multiset`.|
+|[insert](#insert)|Di overload. Aggiunge elementi all' `concurrent_unordered_multiset` oggetto.|
 |[key_eq](#key_eq)|Oggetto della funzione di confronto di uguaglianza archiviato.|
-|[swap](#swap)|Scambia il contenuto di due oggetti `concurrent_unordered_multiset`. Questo metodo non è indipendente dalla concorrenza.|
-|[unsafe_erase](#unsafe_erase)|Di overload. Rimuove gli elementi dal `concurrent_unordered_multiset` nelle posizioni specificate. Questo metodo non è indipendente dalla concorrenza.|
+|[scambio](#swap)|Scambia il contenuto di due oggetti `concurrent_unordered_multiset`. Questo metodo non è indipendente dalla concorrenza.|
+|[unsafe_erase](#unsafe_erase)|Di overload. Rimuove gli elementi dalla `concurrent_unordered_multiset` posizione specificata. Questo metodo non è indipendente dalla concorrenza.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_multiset` oggetto a questo. Questo metodo non è indipendente dalla concorrenza.|
+|[operatore =](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_multiset` oggetto a quello corrente. Questo metodo non è indipendente dalla concorrenza.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Per informazioni dettagliate sulla classe `concurrent_unordered_multiset`, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).
+Per informazioni dettagliate sulla `concurrent_unordered_multiset` classe, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -117,7 +117,7 @@ Per informazioni dettagliate sulla classe `concurrent_unordered_multiset`, veder
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="begin"></a>iniziare
+## <a name="begin"></a><a name="begin"></a>iniziare
 
 Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -131,7 +131,7 @@ const_iterator begin() const;
 
 Iteratore per il primo elemento nel contenitore simultaneo.
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
 Restituisce un iteratore const che punta al primo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -143,7 +143,7 @@ const_iterator cbegin() const;
 
 Iteratore const al primo elemento nel contenitore simultaneo.
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
 Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -155,7 +155,7 @@ const_iterator cend() const;
 
 Iteratore const alla posizione successiva all'ultimo elemento nel contenitore simultaneo.
 
-## <a name="clear"></a>deselezionare
+## <a name="clear"></a><a name="clear"></a>deselezionare
 
 Cancella tutti gli elementi nel contenitore simultaneo. Questa funzione non è sicura per la concorrenza.
 
@@ -163,7 +163,7 @@ Cancella tutti gli elementi nel contenitore simultaneo. Questa funzione non è s
 void clear();
 ```
 
-## <a name="ctor"></a>concurrent_unordered_multiset
+## <a name="concurrent_unordered_multiset"></a><a name="ctor"></a>concurrent_unordered_multiset
 
 Costruisce un multiset non ordinato simultaneo.
 
@@ -226,13 +226,13 @@ Tramite il primo costruttore viene specificato un multiset iniziale vuoto e veng
 
 Tramite il secondo costruttore viene specificato un allocatore per il multiset non ordinato.
 
-Il terzo costruttore specifica i valori forniti dall'intervallo dell'iteratore [`_Begin`, `_End`).
+Il terzo costruttore specifica i valori forniti dall'intervallo dell'iteratore [ `_Begin` , `_End` ).
 
 Tramite il quarto e il quinto costruttore viene specificata una copia del multiset non ordinato simultaneo `_Uset`.
 
 Tramite l'ultimo costruttore viene specificato uno spostamento del multiset non ordinato simultaneo `_Uset`.
 
-## <a name="count"></a>conteggio
+## <a name="count"></a><a name="count"></a>conteggio
 
 Conta il numero di elementi corrispondenti a una chiave specificata. Questa funzione è sicura per la concorrenza.
 
@@ -249,7 +249,7 @@ Chiave da ricercare.
 
 Il numero di volte in cui la chiave viene visualizzata nel contenitore.
 
-## <a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a>vuoto
 
 Verifica se sono presenti o meno degli elementi. Questo metodo è sicuro per la concorrenza.
 
@@ -259,13 +259,13 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il contenitore simultaneo è vuoto; in caso contrario, **false** .
+**`true`** Se il contenitore simultaneo è vuoto; **`false`** in caso contrario,.
 
 ### <a name="remarks"></a>Osservazioni
 
 In presenza di inserimenti simultanei, se il contenitore simultaneo è vuoto può cambiare immediatamente dopo la chiamata a questa funzione, prima che venga letto anche il valore restituito.
 
-## <a name="end"></a>fine
+## <a name="end"></a><a name="end"></a>fine
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -279,7 +279,7 @@ const_iterator end() const;
 
 Un iteratore alla posizione successiva all'ultimo elemento nel contenitore simultaneo.
 
-## <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a>equal_range
 
 Trova un intervallo che corrisponde a una chiave specificata. Questa funzione è sicura per la concorrenza.
 
@@ -306,7 +306,7 @@ Una [coppia](../../../standard-library/pair-structure.md) in cui il primo elemen
 
 È possibile che gli inserimenti simultanei causino l'inserimento di chiavi aggiuntive dopo l'iteratore Begin e prima dell'iteratore finale.
 
-## <a name="find"></a>trovare
+## <a name="find"></a><a name="find"></a>trovare
 
 Trova un elemento che corrisponde a una chiave specificata. Questa funzione è sicura per la concorrenza.
 
@@ -323,9 +323,9 @@ Valore chiave da cercare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore che punta alla posizione del primo elemento che corrisponde alla chiave fornita oppure l'iteratore `end()` se tale elemento non esiste.
+Iteratore che punta alla posizione del primo elemento che corrisponde alla chiave specificata o all'iteratore `end()` se tale elemento non esiste.
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 Restituisce l'oggetto allocatore archiviato per il contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -337,7 +337,7 @@ allocator_type get_allocator() const;
 
 Oggetto allocatore archiviato per il contenitore simultaneo.
 
-## <a name="hash_function"></a>hash_function
+## <a name="hash_function"></a><a name="hash_function"></a>hash_function
 
 Restituisce l'oggetto della funzione hash archiviato.
 
@@ -349,9 +349,9 @@ hasher hash_function() const;
 
 Oggetto della funzione hash archiviato.
 
-## <a name="insert"></a>inserire
+## <a name="insert"></a><a name="insert"></a>inserire
 
-Aggiunge elementi all'oggetto `concurrent_unordered_multiset`.
+Aggiunge elementi all' `concurrent_unordered_multiset` oggetto.
 
 ```cpp
 iterator insert(
@@ -405,13 +405,13 @@ Iteratore che punta alla posizione di inserimento.
 
 Tramite la prima funzione membro l'elemento `value` viene inserito nella sequenza controllata, quindi viene restituito l'iteratore mediante cui viene definito l'elemento inserito.
 
-La seconda funzione membro restituisce Insert (`value`), usando `_Where` come punto di partenza all'interno della sequenza controllata per cercare il punto di inserimento.
+La seconda funzione membro restituisce Insert ( `value` ), utilizzando `_Where` come posizione iniziale nella sequenza controllata per cercare il punto di inserimento.
 
-La terza funzione membro inserisce la sequenza di valori di elemento dall'intervallo [`first`, `last`).
+La terza funzione membro inserisce la sequenza di valori di elemento dall'intervallo [ `first` , `last` ).
 
 Il comportamento delle ultime due funzioni membro è uguale a quello delle prime due, con la differenza che `value` viene utilizzato per costruire il valore inserito.
 
-## <a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a>key_eq
 
 Oggetto della funzione di confronto di uguaglianza archiviato.
 
@@ -423,7 +423,7 @@ key_equal key_eq() const;
 
 Oggetto della funzione di confronto di uguaglianza archiviato.
 
-## <a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a>load_factor
 
 Calcola e restituisce il fattore di carico corrente del contenitore. Il fattore di carico è il numero di elementi nel contenitore diviso per il numero di bucket.
 
@@ -435,7 +435,7 @@ float load_factor() const;
 
 Il fattore di carico per il contenitore.
 
-## <a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
 
 Ottiene o imposta il fattore di carico massimo del contenitore. Il fattore di carico massimo è il maggior numero di elementi che possono essere presenti in qualsiasi bucket prima che il contenitore cresca la tabella interna.
 
@@ -453,7 +453,7 @@ void max_load_factor(float _Newmax);
 
 La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro non restituisce un valore, ma genera un'eccezione [out_of_range](../../../standard-library/out-of-range-class.md) se il fattore di carico fornito non è valido.
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 Restituisce la dimensione massima del contenitore simultaneo, determinato dall'allocatore. Questo metodo è sicuro per la concorrenza.
 
@@ -469,9 +469,9 @@ Numero massimo di elementi che possono essere inseriti in questo contenitore sim
 
 Questo valore limite superiore può essere effettivamente superiore rispetto a quello che il contenitore può effettivamente contenere.
 
-## <a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a>operatore =
 
-Assegna il contenuto di un altro `concurrent_unordered_multiset` oggetto a questo. Questo metodo non è indipendente dalla concorrenza.
+Assegna il contenuto di un altro `concurrent_unordered_multiset` oggetto a quello corrente. Questo metodo non è indipendente dalla concorrenza.
 
 ```cpp
 concurrent_unordered_multiset& operator= (const concurrent_unordered_multiset& _Uset);
@@ -486,13 +486,13 @@ Oggetto `concurrent_unordered_multiset` di origine.
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a questo oggetto `concurrent_unordered_multiset`.
+Riferimento a questo `concurrent_unordered_multiset` oggetto.
 
 ### <a name="remarks"></a>Osservazioni
 
 Dopo l'eliminazione di tutti gli elementi esistenti in un multiset non ordinato simultaneo, tramite `operator=` il contenuto di `_Uset` viene copiato o spostato nel multiset non ordinato simultaneo.
 
-## <a name="rehash"></a>rehash
+## <a name="rehash"></a><a name="rehash"></a>rehash
 
 Ricompila la tabella hash.
 
@@ -511,7 +511,7 @@ La funzione membro modifica il numero di bucket in modo da essere almeno pari a 
 
 Genera un'eccezione [out_of_range](../../../standard-library/out-of-range-class.md) se il numero di bucket non è valido (0 o maggiore del numero massimo di bucket).
 
-## <a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a>dimensioni
 
 Restituisce il numero di elementi in questo contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -527,7 +527,7 @@ Numero di elementi presenti nel contenitore.
 
 In presenza di operazioni di inserimento simultanee, il numero di elementi presenti nel contenitore simultaneo potrebbe cambiare immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.
 
-## <a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a>scambio
 
 Scambia il contenuto di due oggetti `concurrent_unordered_multiset`. Questo metodo non è indipendente dalla concorrenza.
 
@@ -540,7 +540,7 @@ void swap(concurrent_unordered_multiset& _Uset);
 *_Uset*<br/>
 Oggetto `concurrent_unordered_multiset` con cui eseguire lo scambio.
 
-## <a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a><a name="unsafe_begin"></a>unsafe_begin
 
 Restituisce un iteratore al primo elemento in questo contenitore per un bucket specifico.
 
@@ -559,7 +559,7 @@ Indice del bucket.
 
 Iteratore che punta all'inizio del bucket.
 
-## <a name="unsafe_bucket"></a>unsafe_bucket
+## <a name="unsafe_bucket"></a><a name="unsafe_bucket"></a>unsafe_bucket
 
 Restituisce l'indice del bucket a cui viene mappata una chiave specifica in questo contenitore.
 
@@ -576,7 +576,7 @@ Chiave dell'elemento cercata.
 
 Indice del bucket per la chiave in questo contenitore.
 
-## <a name="unsafe_bucket_count"></a>unsafe_bucket_count
+## <a name="unsafe_bucket_count"></a><a name="unsafe_bucket_count"></a>unsafe_bucket_count
 
 Restituisce il numero corrente di bucket in questo contenitore.
 
@@ -588,7 +588,7 @@ size_type unsafe_bucket_count() const;
 
 Numero corrente di bucket in questo contenitore.
 
-## <a name="unsafe_bucket_size"></a>unsafe_bucket_size
+## <a name="unsafe_bucket_size"></a><a name="unsafe_bucket_size"></a>unsafe_bucket_size
 
 Restituisce il numero di elementi in un bucket specifico di questo contenitore.
 
@@ -605,7 +605,7 @@ Bucket da ricercare.
 
 Numero corrente di bucket in questo contenitore.
 
-## <a name="unsafe_cbegin"></a>unsafe_cbegin
+## <a name="unsafe_cbegin"></a><a name="unsafe_cbegin"></a>unsafe_cbegin
 
 Restituisce un iteratore al primo elemento in questo contenitore per un bucket specifico.
 
@@ -622,7 +622,7 @@ Indice del bucket.
 
 Iteratore che punta all'inizio del bucket.
 
-## <a name="unsafe_cend"></a>unsafe_cend
+## <a name="unsafe_cend"></a><a name="unsafe_cend"></a>unsafe_cend
 
 Restituisce un iteratore alla posizione successiva all'ultimo elemento in un bucket specifico.
 
@@ -639,7 +639,7 @@ Indice del bucket.
 
 Iteratore che punta all'inizio del bucket.
 
-## <a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a><a name="unsafe_end"></a>unsafe_end
 
 Restituisce un iteratore all'ultimo elemento in questo contenitore per un bucket specifico.
 
@@ -658,9 +658,9 @@ Indice del bucket.
 
 Iteratore che punta alla fine del bucket.
 
-## <a name="unsafe_erase"></a>unsafe_erase
+## <a name="unsafe_erase"></a><a name="unsafe_erase"></a>unsafe_erase
 
-Rimuove gli elementi dal `concurrent_unordered_multiset` nelle posizioni specificate. Questo metodo non è indipendente dalla concorrenza.
+Rimuove gli elementi dalla `concurrent_unordered_multiset` posizione specificata. Questo metodo non è indipendente dalla concorrenza.
 
 ```cpp
 iterator unsafe_erase(
@@ -690,11 +690,11 @@ Le prime due funzioni membro restituiscono un iteratore che definisce il primo e
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro rimuove l'elemento a cui punta `_Where`. La seconda funzione membro rimuove gli elementi compresi nell'intervallo [`_Begin``_End`).
+La prima funzione membro rimuove l'elemento a cui punta `_Where` . La seconda funzione membro rimuove gli elementi compresi nell'intervallo [ `_Begin` , `_End` ).
 
 La terza funzione membro rimuove gli elementi nell'intervallo delimitato da [equal_range](#equal_range)(KVal).
 
-## <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
+## <a name="unsafe_max_bucket_count"></a><a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
 
 Restituisce il numero massimo di bucket in questo contenitore.
 
@@ -708,5 +708,5 @@ Numero massimo di bucket in questo contenitore.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md)

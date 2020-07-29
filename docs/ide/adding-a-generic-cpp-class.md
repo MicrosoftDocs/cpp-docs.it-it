@@ -10,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: 08ebe572da605e0f6d4d712bd7e48159598ba844
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: e81ea442578e69bdd28301eba8f70561f6aa76c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694140"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230545"
 ---
 # <a name="add-a-generic-c-class"></a>Aggiungere una classe C++ generica
 
@@ -45,11 +45,11 @@ Aggiunge una classe C++ generica a un progetto. La classe non eredita da ATL o M
 
 - **File con estensione h**
 
-  Imposta il nome del file di intestazione per la nuova classe. Per impostazione predefinita, il nome è basato sul nome specificato in **Nome classe**. Per salvare il file di intestazione nel percorso desiderato o aggiungere la dichiarazione di classe in un file esistente, fare clic sul pulsante con i puntini di sospensione (**...**). Se si specifica un file esistente e si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Per aggiungere la dichiarazione, selezionare **Sì**; per tornare alla procedura guidata e specificare un altro nome file, selezionare **No**.
+  Imposta il nome del file di intestazione per la nuova classe. Per impostazione predefinita, il nome è basato sul nome specificato in **Nome classe**. Per salvare il file di intestazione nel percorso desiderato o per aggiungere la dichiarazione di classe a un file esistente, selezionare il pulsante con i puntini di sospensione (**...**). Se si specifica un file esistente e si seleziona **fine**, la procedura guidata richiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Per aggiungere la dichiarazione, selezionare **Sì**; per tornare alla procedura guidata e specificare un altro nome file, selezionare **No**.
 
 - **File con estensione cpp**
 
-  Imposta il nome del file di implementazione per la nuova classe. Per impostazione predefinita, il nome è basato sul nome specificato in **Nome classe**. Per salvare il file di implementazione nel percorso desiderato o aggiungere la definizione di classe in un file esistente, fare clic sul pulsante con i puntini di sospensione (**...**). Se si specifica un file esistente e si sceglie **Fine**, la procedura guidata chiede di specificare se la definizione di classe deve essere aggiunta al contenuto del file. Per aggiungere la definizione, selezionare **Sì**; per tornare alla procedura guidata e specificare un altro nome file, selezionare **No**.
+  Imposta il nome del file di implementazione per la nuova classe. Per impostazione predefinita, il nome è basato sul nome specificato in **Nome classe**. Per salvare il file di implementazione nel percorso desiderato o per aggiungere la definizione di classe a un file esistente, selezionare il pulsante con i puntini di sospensione (**...**). Se si specifica un file esistente e si seleziona **fine**, la procedura guidata richiede di specificare se la definizione della classe deve essere aggiunta al contenuto del file. Per aggiungere la definizione, selezionare **Sì**; per tornare alla procedura guidata e specificare un altro nome file, selezionare **No**.
 
 - **Classe base**
 
@@ -57,11 +57,11 @@ Aggiunge una classe C++ generica a un progetto. La classe non eredita da ATL o M
 
 - **Accesso**
 
-  Imposta l'accesso ai membri della classe base per la nuova classe. I modificatori di accesso sono parole chiave che specificano il livello di accesso di altre classi alle funzioni membro della classe. Per altre informazioni sulla specifica dell'accesso, vedere [Controllo di accesso dei membri](../cpp/member-access-control-cpp.md). Per impostazione predefinita, il livello di accesso della classe è impostato su `public`.
+  Imposta l'accesso ai membri della classe base per la nuova classe. I modificatori di accesso sono parole chiave che specificano il livello di accesso di altre classi alle funzioni membro della classe. Per altre informazioni sulla specifica dell'accesso, vedere [Controllo di accesso dei membri](../cpp/member-access-control-cpp.md). Per impostazione predefinita, il livello di accesso della classe è impostato su **`public`** .
 
-  - `public`
-  - `protected`
-  - `private`
+  - **`public`**
+  - **`protected`**
+  - **`private`**
   - **Predefinito** (Non viene generato alcun modificatore di accesso).
 
 - **Distruttore virtuale**
@@ -72,6 +72,6 @@ Aggiunge una classe C++ generica a un progetto. La classe non eredita da ATL o M
 
   Genera il costruttore della classe e la definizione della classe come funzioni inline nel file di intestazione.
 
-- **Gestito**
+- **Gestiti**
 
   Se selezionata, aggiunge una classe gestita e il file di intestazione. Se non è selezionata, aggiunge una classe nativa e il file di intestazione.

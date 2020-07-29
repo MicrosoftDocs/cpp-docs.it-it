@@ -5,19 +5,19 @@ f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 3d7d001a2835514cc5385a7069c0bcda58cdd88e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a929fd0f583150e84ce5b1efa7e896bc16e4247
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329352"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229935"
 ---
 # <a name="winmodule-global-functions"></a>Funzioni globali WinModule
 
 Queste funzioni forniscono il supporto per `_AtlCreateWndData` le operazioni di struttura.
 
 > [!IMPORTANT]
-> Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite in Windows Runtime.
+> Le funzioni elencate nella tabella seguente non possono essere usate nelle applicazioni eseguite nel Windows Runtime.
 
 |||
 |-|-|
@@ -26,9 +26,9 @@ Queste funzioni forniscono il supporto per `_AtlCreateWndData` le operazioni di 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase.h
+**Intestazione:** atlbase. h
 
-## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData (Informazioni in base ai moduli atWinModuleCreateWndData)
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData
 
 Questa funzione viene utilizzata per inizializzare e aggiungere una struttura `_AtlCreateWndData`.
 
@@ -41,18 +41,18 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 ### <a name="parameters"></a>Parametri
 
-*pWinModule (informazioni in stato instato)*<br/>
+*pWinModule*<br/>
 Puntatore alla struttura [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) di un modulo.
 
-*pDati*<br/>
+*pData*<br/>
 Puntatore alla struttura [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) da inizializzare e aggiungere al modulo corrente.
 
-*pOggetto*<br/>
-Puntatore al puntatore **this** di un oggetto.
+*pObject*<br/>
+Puntatore al puntatore di un oggetto **`this`** .
 
 ### <a name="remarks"></a>Osservazioni
 
-Inizializza `_AtlCreateWndData` una struttura, utilizzata per archiviare il puntatore **this** utilizzato per fare riferimento alle istanze `_ATL_WIN_MODULE70` della classe e la aggiunge all'elenco a cui fa riferimento la struttura di un modulo. Chiamato da [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
+Inizializza una `_AtlCreateWndData` struttura utilizzata per archiviare il **`this`** puntatore utilizzato per fare riferimento alle istanze della classe e aggiungerlo all'elenco a cui fa riferimento la struttura di un modulo `_ATL_WIN_MODULE70` . Chiamata eseguita da [CAtlWinModule:: AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
 
 ## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData
 
@@ -64,16 +64,16 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 
 ### <a name="parameters"></a>Parametri
 
-*pWinModule (informazioni in stato instato)*<br/>
+*pWinModule*<br/>
 Puntatore alla struttura [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) di un modulo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla struttura [_AtlCreateWndData.](../../atl/reference/atlcreatewnddata-structure.md)
+Restituisce un puntatore alla struttura [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) .
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione estrarrà una struttura esistente `_AtlCreateWndData` dall'elenco a cui fa riferimento la struttura di `_ATL_WIN_MODULE70` un modulo.
+Questa funzione estrae una `_AtlCreateWndData` struttura esistente dall'elenco a cui fa riferimento la struttura di un modulo `_ATL_WIN_MODULE70` .
 
 ## <a name="see-also"></a>Vedere anche
 

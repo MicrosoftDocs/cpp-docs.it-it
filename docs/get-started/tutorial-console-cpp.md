@@ -1,19 +1,19 @@
 ---
-title: Creare un calcolatore della console in C++
+title: Creare un calcolatore console in C++
 description: Creare un'app console Hello World e un'app calcolatrice in Visual C++
 ms.custom: mvc
 ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 5f448e68878e211969c89f7c4c750e3231d3a9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404450"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230584"
 ---
-# <a name="create-a-console-calculator-in-c"></a>Creare un calcolatore della console in C++
+# <a name="create-a-console-calculator-in-c"></a>Creare un calcolatore console in C++
 
 ::: moniker range=">=vs-2019"
 
@@ -123,7 +123,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
    > Informazioni sul codice:
    >
    > - Le istruzioni `#include` consentono di fare riferimento al codice che si trova in altri file. In alcuni casi, è possibile che venga visualizzato un nome file racchiuso tra parentesi acute ( **\<\>** ); altre volte è racchiuso tra virgolette (**""**). In generale, le parentesi quadre vengono usate quando si fa riferimento alla libreria standard C++, mentre le virgolette vengono usate per gli altri file.
-   > - La riga `using namespace std;` indica al compilatore che è previsto materiale in arrivo dalla libreria standard C++ da usare in questo file. Senza questa riga, ogni parola chiave proveniente dalla libreria dovrà essere preceduta da `std::`, per indicarne l'ambito. Ad esempio, senza tale riga, ogni riferimento a `cout` deve essere scritto come `std::cout`. L'istruzione `using` viene aggiunta per rendere il codice più pulito.
+   > - La riga `using namespace std;` indica al compilatore che è previsto materiale in arrivo dalla libreria standard C++ da usare in questo file. Senza questa riga, ogni parola chiave proveniente dalla libreria dovrà essere preceduta da `std::`, per indicarne l'ambito. Ad esempio, senza tale riga, ogni riferimento a `cout` deve essere scritto come `std::cout`. L' **`using`** istruzione viene aggiunta per rendere il codice più pulito.
    > - La parola chiave `cout` viene usata per stampare in un output standard di C++. L' **\<\<** operatore indica al compilatore di inviare qualsiasi cosa sia a destra dell'output standard.
    > - La parola chiave **endl** è simile al tasto INVIO, termina la riga e sposta il cursore nella riga successiva. È opportuno inserire un elemento `\n` all'interno della stringa (racchiuso tra "") per eseguire la stessa operazione, poiché `endl` svuota sempre il buffer e può influire negativamente sulle prestazioni del programma, ma dal momento che si tratta di un'app di dimensioni molto ridotte, si usa `endl` per migliorare la leggibilità.
    > - Tutte le istruzioni C++ devono terminare con un punto e virgola e tutte le applicazioni C++ devono contenere una funzione `main()`. Questa funzione è ciò che il programma esegue all'inizio. Tutto il codice deve essere accessibile da `main()` per poter essere usato.
@@ -205,7 +205,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
    >
    > - La funzione `Calculate` usa un numero, un operatore e un secondo numero, quindi esegue l'operazione richiesta sui numeri.
    > - L'istruzione switch verifica quale operatore è stato specificato ed esegue solo il case corrispondente a tale operazione. Il case predefinito rappresenta il fallback nel caso in cui l'utente digiti un operatore che non viene accettato, in modo che il programma non venga interrotto. In generale, è consigliabile gestire l'input utente non valido in modo più elegante, ma ciò esula dall'ambito di questa esercitazione.
-   > - La parola chiave `double` denota un tipo di numero che supporta i decimali. In questo modo, la calcolatrice può gestire funzioni matematiche sia con numeri decimali che con numeri interi. La funzione `Calculate` è necessaria per restituire sempre un numero di questo tipo a causa della presenza di `double` all'inizio del codice (indica il tipo restituito della funzione), motivo per cui viene restituito 0.0 anche nel case predefinito.
+   > - La **`double`** parola chiave indica un tipo di numero che supporta i numeri decimali. In questo modo, la calcolatrice può gestire funzioni matematiche sia con numeri decimali che con numeri interi. `Calculate`È necessario che la funzione restituisca sempre tale numero a causa di all' **`double`** inizio del codice (indica il tipo restituito della funzione), motivo per cui si restituisce 0,0 anche nel caso predefinito.
    > - Il file H dichiara il *prototipo* di funzione, che indica in anticipo al compilatore quali sono i parametri richiesti e quale tipo restituito è previsto. Il file CPP contiene tutti i dettagli dell'implementazione della funzione.
 
 Se a questo punto si compila e si esegue nuovamente il codice, verrà comunque chiesto quale operazione eseguire e il codice verrà chiuso. Successivamente, si modificherà la funzione `main` per eseguire alcuni calcoli.
@@ -251,7 +251,7 @@ Se a questo punto si compila e si esegue nuovamente il codice, verrà comunque c
    > - Poiché i programmi C++ iniziano sempre con la funzione `main()`, è necessario chiamare altro codice da tale posizione, quindi è necessaria un'istruzione `#include`.
    > - Alcune variabili iniziali, `x`, `y`, `oper` e `result`, vengono dichiarate per archiviare rispettivamente il primo numero, il secondo numero, l'operatore e il risultato finale. È sempre opportuno assegnare alle variabili alcuni valori iniziali per evitare un comportamento indefinito, operazione eseguita in questa procedura.
    > - La riga `Calculator c;` dichiara un oggetto denominato "c" come istanza della classe `Calculator`. La classe stessa è semplicemente un progetto iniziale per il funzionamento delle calcolatrici e l'oggetto è la calcolatrice specifica che esegue le funzioni matematiche.
-   > - L'istruzione `while (true)` è un ciclo. Il codice all'interno del ciclo continua a essere eseguito ripetutamente finché la condizione all'interno di `()` risulta vera. Poiché la condizione viene indicata semplicemente come `true`, è sempre vera, quindi il ciclo viene eseguito all'infinito. Per chiudere il programma, l'utente deve chiudere manualmente la finestra della console. In caso contrario, il programma attende sempre un nuovo input.
+   > - L'istruzione `while (true)` è un ciclo. Il codice all'interno del ciclo continua a essere eseguito ripetutamente finché la condizione all'interno di `()` risulta vera. Poiché la condizione viene semplicemente elencata come **`true`** , è sempre true, quindi il ciclo viene eseguito per sempre. Per chiudere il programma, l'utente deve chiudere manualmente la finestra della console. In caso contrario, il programma attende sempre un nuovo input.
    > - La parola chiave `cin` viene usata per accettare l'input da parte dell'utente. Questo flusso di input è in grado di elaborare una riga di testo immessa nella finestra della console e di inserirla all'interno di ogni variabile specificata, in ordine, presupponendo che l'input dell'utente corrisponda alla specifica richiesta. È possibile modificare questa riga per accettare tipi diversi di input, ad esempio, più di due numeri, benché sia anche necessario aggiornare la funzione `Calculate()` per gestire questa situazione.
    > - L'espressione `c.Calculate(x, oper, y);` chiama la funzione `Calculate` definita in precedenza e specifica i valori di input immessi. La funzione restituisce quindi un numero che viene memorizzato in `result`.
    > - Infine, `result` viene stampato nella console, in modo che l'utente veda il risultato del calcolo.
@@ -487,7 +487,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
    >
    > - Le istruzioni `#include` consentono di fare riferimento al codice che si trova in altri file. In alcuni casi, è possibile che venga visualizzato un nome file racchiuso tra parentesi acute ( **\<\>** ); altre volte è racchiuso tra virgolette (**""**). In generale, le parentesi quadre vengono usate quando si fa riferimento alla libreria standard C++, mentre le virgolette vengono usate per gli altri file.
    > - La riga `#include "pch.h"` (o in Visual Studio 2017 e versioni precedenti, `#include "stdafx.h"`) fa riferimento a un elemento noto come intestazione precompilata. Questi oggetti vengono spesso usati dai programmatori professionisti per migliorare i tempi di compilazione, ma esulano dall'ambito di questa esercitazione.
-   > - La riga `using namespace std;` indica al compilatore che è previsto materiale in arrivo dalla libreria standard C++ da usare in questo file. Senza questa riga, ogni parola chiave proveniente dalla libreria dovrà essere preceduta da `std::`, per indicarne l'ambito. Ad esempio, senza tale riga, ogni riferimento a `cout` deve essere scritto come `std::cout`. L'istruzione `using` viene aggiunta per rendere il codice più pulito.
+   > - La riga `using namespace std;` indica al compilatore che è previsto materiale in arrivo dalla libreria standard C++ da usare in questo file. Senza questa riga, ogni parola chiave proveniente dalla libreria dovrà essere preceduta da `std::`, per indicarne l'ambito. Ad esempio, senza tale riga, ogni riferimento a `cout` deve essere scritto come `std::cout`. L' **`using`** istruzione viene aggiunta per rendere il codice più pulito.
    > - La parola chiave `cout` viene usata per stampare in un output standard di C++. L' **\<\<** operatore indica al compilatore di inviare qualsiasi cosa sia a destra dell'output standard.
    > - La parola chiave **endl** è simile al tasto INVIO, termina la riga e sposta il cursore nella riga successiva. È opportuno inserire un elemento `\n` all'interno della stringa (racchiuso tra "") per eseguire la stessa operazione, poiché `endl` svuota sempre il buffer e può influire negativamente sulle prestazioni del programma, ma dal momento che si tratta di un'app di dimensioni molto ridotte, si usa `endl` per migliorare la leggibilità.
    > - Tutte le istruzioni C++ devono terminare con un punto e virgola e tutte le applicazioni C++ devono contenere una funzione `main()`. Questa funzione è ciò che il programma esegue all'inizio. Tutto il codice deve essere accessibile da `main()` per poter essere usato.
@@ -568,7 +568,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
    >
    > - La funzione `Calculate` usa un numero, un operatore e un secondo numero, quindi esegue l'operazione richiesta sui numeri.
    > - L'istruzione switch verifica quale operatore è stato specificato ed esegue solo il case corrispondente a tale operazione. Il case predefinito rappresenta il fallback nel caso in cui l'utente digiti un operatore che non viene accettato, in modo che il programma non venga interrotto. In generale, è consigliabile gestire l'input utente non valido in modo più elegante, ma ciò esula dall'ambito di questa esercitazione.
-   > - La parola chiave `double` denota un tipo di numero che supporta i decimali. In questo modo, la calcolatrice può gestire funzioni matematiche sia con numeri decimali che con numeri interi. La funzione `Calculate` è necessaria per restituire sempre un numero di questo tipo a causa della presenza di `double` all'inizio del codice (indica il tipo restituito della funzione), motivo per cui viene restituito 0.0 anche nel case predefinito.
+   > - La **`double`** parola chiave indica un tipo di numero che supporta i numeri decimali. In questo modo, la calcolatrice può gestire funzioni matematiche sia con numeri decimali che con numeri interi. `Calculate`È necessario che la funzione restituisca sempre tale numero a causa di all' **`double`** inizio del codice (indica il tipo restituito della funzione), motivo per cui si restituisce 0,0 anche nel caso predefinito.
    > - Il file H dichiara il *prototipo* di funzione, che indica in anticipo al compilatore quali sono i parametri richiesti e quale tipo restituito è previsto. Il file CPP contiene tutti i dettagli dell'implementazione della funzione.
 
 Se a questo punto si compila e si esegue nuovamente il codice, verrà comunque chiesto quale operazione eseguire e il codice verrà chiuso. Successivamente, si modificherà la funzione `main` per eseguire alcuni calcoli.
@@ -615,7 +615,7 @@ Se a questo punto si compila e si esegue nuovamente il codice, verrà comunque c
    > - Poiché i programmi C++ iniziano sempre con la funzione `main()`, è necessario chiamare altro codice da tale posizione, quindi è necessaria un'istruzione `#include`.
    > - Alcune variabili iniziali, `x`, `y`, `oper` e `result`, vengono dichiarate per archiviare rispettivamente il primo numero, il secondo numero, l'operatore e il risultato finale. È sempre opportuno assegnare alle variabili alcuni valori iniziali per evitare un comportamento indefinito, operazione eseguita in questa procedura.
    > - La riga `Calculator c;` dichiara un oggetto denominato "c" come istanza della classe `Calculator`. La classe stessa è semplicemente un progetto iniziale per il funzionamento delle calcolatrici e l'oggetto è la calcolatrice specifica che esegue le funzioni matematiche.
-   > - L'istruzione `while (true)` è un ciclo. Il codice all'interno del ciclo continua a essere eseguito ripetutamente finché la condizione all'interno di `()` risulta vera. Poiché la condizione viene indicata semplicemente come `true`, è sempre vera, quindi il ciclo viene eseguito all'infinito. Per chiudere il programma, l'utente deve chiudere manualmente la finestra della console. In caso contrario, il programma attende sempre un nuovo input.
+   > - L'istruzione `while (true)` è un ciclo. Il codice all'interno del ciclo continua a essere eseguito ripetutamente finché la condizione all'interno di `()` risulta vera. Poiché la condizione viene semplicemente elencata come **`true`** , è sempre true, quindi il ciclo viene eseguito per sempre. Per chiudere il programma, l'utente deve chiudere manualmente la finestra della console. In caso contrario, il programma attende sempre un nuovo input.
    > - La parola chiave `cin` viene usata per accettare l'input da parte dell'utente. Questo flusso di input è in grado di elaborare una riga di testo immessa nella finestra della console e di inserirla all'interno di ogni variabile specificata, in ordine, presupponendo che l'input dell'utente corrisponda alla specifica richiesta. È possibile modificare questa riga per accettare tipi diversi di input, ad esempio, più di due numeri, benché sia anche necessario aggiornare la funzione `Calculate()` per gestire questa situazione.
    > - L'espressione `c.Calculate(x, oper, y);` chiama la funzione `Calculate` definita in precedenza e specifica i valori di input immessi. La funzione restituisce quindi un numero che viene memorizzato in `result`.
    > - Infine, `result` viene stampato nella console, in modo che l'utente veda il risultato del calcolo.
