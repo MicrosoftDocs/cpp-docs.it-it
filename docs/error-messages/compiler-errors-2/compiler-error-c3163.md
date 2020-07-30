@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: 436fb112758dfdec9997ff7e6dd7ef8f9dcdc66e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 29f810ab1ab1608ab9c0492c9f88b8edfe042168
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761777"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390026"
 ---
 # <a name="compiler-error-c3163"></a>Errore del compilatore C3163
 
-' construct ': attributi non coerenti con la dichiarazione precedente
+> '*construct*': attributi non coerenti con la dichiarazione precedente
 
 Gli attributi applicati a una definizione sono in conflitto con l'attributo o gli attributi applicati a una dichiarazione.
 
 Un modo per risolvere C3163 consiste nell'eliminare gli attributi nella dichiarazione in avanti. Tutti gli attributi in una dichiarazione in avanti devono essere minori degli attributi nella definizione o, al massimo, uguali.
 
-Una possibile causa dell'errore C3163 riguarda il linguaggio di annotazione del codice sorgente Microsoft (SAL). Le macro SAL non si espandono, a meno che il progetto non venga compilato con il flag **/Analyze** . Un programma che compila senza/analyze potrebbe generare C3163 se si tenta di ricompilarlo con l'opzione/analyze. Per altre informazioni su SAL, vedere [annotazioni SAL](../../c-runtime-library/sal-annotations.md).
+Una possibile causa dell'errore C3163 riguarda il linguaggio di annotazione del codice sorgente Microsoft (SAL). Le macro SAL non si espandono, a meno che il progetto non venga compilato con il **`/analyze`** flag. Un programma che compila senza problemi **`/analyze`** può generare C3163 se si tenta di ricompilarlo con l' **`/analyze`** opzione. Per altre informazioni su SAL, vedere [annotazioni SAL](../../c-runtime-library/sal-annotations.md).
 
 ## <a name="example"></a>Esempio
 

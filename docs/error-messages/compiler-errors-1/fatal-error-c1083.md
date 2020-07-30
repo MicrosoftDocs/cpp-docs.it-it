@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404281"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389779"
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 
@@ -29,7 +29,7 @@ potrebbe non trovare il file richiesto. La maggior parte dei file di intestazion
 
 `#include <algorithm>`
 
-Alcune intestazioni della libreria di runtime C risiedono in una sottodirectory della directory include standard. Ad esempio, per includere sys/types. h, è necessario includere il nome della sottodirectory sys nella `#include` direttiva:
+Alcune intestazioni della libreria di runtime C risiedono in una sottodirectory della directory include standard. Per includere, ad esempio *`sys/types.h`* , è necessario includere il *`sys`* nome della sottodirectory nella `#include` direttiva:
 
 `#include <sys/types.h>`
 
@@ -45,9 +45,9 @@ Se il nome è racchiuso tra parentesi angolari,
 
 `#include <stdio.h>`
 
-il compilatore segue un percorso di ricerca definito dall'ambiente di compilazione, l'opzione del compilatore **/i** , l'opzione del compilatore **/x** e la variabile di ambiente **include** . Per ulteriori informazioni, inclusi dettagli specifici sull'ordine di ricerca utilizzato per trovare un file, vedere [#include direttiva (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) e [#import direttiva](../../preprocessor/hash-import-directive-cpp.md).
+il compilatore segue un percorso di ricerca definito dall'ambiente di compilazione, dall' **`/I`** opzione del compilatore, dall' **`/X`** opzione del compilatore e dalla variabile di ambiente **include** . Per ulteriori informazioni, inclusi dettagli specifici sull'ordine di ricerca utilizzato per trovare un file, vedere [#include direttiva (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) e [#import direttiva](../../preprocessor/hash-import-directive-cpp.md).
 
-Se i file di inclusione si trovano in un'altra directory rispetto alla directory di origine e si usa un percorso relativo nelle direttive include, è necessario usare le virgolette doppie anziché le parentesi angolari. Se, ad esempio, il file di intestazione MyFile. h si trova in una sottodirectory delle origini progetto denominate intestazioni, questo esempio non riesce a trovare il file e genera C1083:
+Se i file di inclusione si trovano in un'altra directory rispetto alla directory di origine e si usa un percorso relativo nelle direttive include, è necessario usare le virgolette doppie anziché le parentesi angolari. Se, ad esempio, il file *`myheader.h`* di intestazione si trova in una sottodirectory delle origini progetto denominate intestazioni, questo esempio non riesce a trovare il file e genera C1083:
 
 `#include <headers\myheader.h>`
 
@@ -55,23 +55,23 @@ ma questo esempio funziona:
 
 `#include "headers\myheader.h"`
 
-I percorsi relativi possono essere usati anche con le directory nel percorso di ricerca di inclusione. Se si aggiunge una directory alla variabile di ambiente **include** o al percorso delle **directory di inclusione** in Visual Studio, non aggiungere anche parte del percorso alle direttive include. Ad esempio, se l'intestazione si trova in \path\example\headers\myheader.h e si aggiunge \path\example\headers\ al percorso delle **directory di inclusione** in Visual Studio, ma la `#include` direttiva fa riferimento al file come
+I percorsi relativi possono essere usati anche con le directory nel percorso di ricerca di inclusione. Se si aggiunge una directory alla variabile di ambiente **include** o al percorso delle **directory di inclusione** in Visual Studio, non aggiungere anche parte del percorso alle direttive include. Ad esempio, se l'intestazione si trova in *`\path\example\headers\myheader.h`* e si aggiunge *`\path\example\headers\`* al percorso delle **directory di inclusione** in Visual Studio, ma la `#include` direttiva fa riferimento al file come
 
 `#include <headers\myheader.h>`
 
-il file non viene trovato. Usare il percorso corretto rispetto alla directory specificata nel percorso di ricerca di inclusione. In questo esempio, è possibile modificare il percorso di ricerca di inclusione in \path\example \, o rimuovere il segmento Headers \ path dalla `#include` direttiva.
+il file non viene trovato. Usare il percorso corretto rispetto alla directory specificata nel percorso di ricerca di inclusione. In questo esempio, è possibile modificare il percorso di ricerca di inclusione in *`\path\example\`* oppure rimuovere il *`headers\`* segmento del percorso dalla `#include` direttiva.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemi relativi alla libreria di terze parti e vcpkg
 
-Se questo errore viene visualizzato quando si tenta di configurare una libreria di terze parti come parte della compilazione, è consigliabile usare [vcpkg](../../vcpkg.md), una gestione pacchetti C++, per installare e compilare la libreria. vcpkg supporta un [elenco di librerie di terze parti di](https://github.com/Microsoft/vcpkg/tree/master/ports)grandi dimensioni e in continua crescita e imposta tutte le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto.
+Se questo errore viene visualizzato quando si tenta di configurare una libreria di terze parti come parte della compilazione, si consiglia [`vcpkg`](../../vcpkg.md) di usare, una gestione pacchetti C++, per installare e compilare la libreria. vcpkg supporta un [elenco di librerie di terze parti di](https://github.com/Microsoft/vcpkg/tree/master/ports)grandi dimensioni e in continua crescita e imposta tutte le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Il file si trova nel progetto, ma non nel percorso di ricerca di inclusione
 
-Anche quando i file di intestazione sono elencati in **Esplora soluzioni** come parte di un progetto, i file vengono trovati solo dal compilatore quando vengono definiti da una `#include` direttiva o `#import` in un file di origine e si trovano in un percorso di ricerca di inclusione. Tipi diversi di compilazioni possono utilizzare percorsi di ricerca diversi. L'opzione del compilatore **/x** può essere usata per escludere le directory dal percorso di ricerca di inclusione. In questo modo, compilazioni diverse possono utilizzare file di inclusione diversi con lo stesso nome, ma archiviati in directory diverse. Si tratta di un'alternativa alla compilazione condizionale utilizzando i comandi del preprocessore. Per ulteriori informazioni sull'opzione del compilatore **/x** , vedere [/X (Ignora percorsi di inclusione standard)](../../build/reference/x-ignore-standard-include-paths.md).
+Anche quando i file di intestazione sono elencati in **Esplora soluzioni** come parte di un progetto, i file vengono trovati solo dal compilatore quando vengono definiti da una `#include` direttiva o `#import` in un file di origine e si trovano in un percorso di ricerca di inclusione. Tipi diversi di compilazioni possono utilizzare percorsi di ricerca diversi. L' **`/X`** opzione del compilatore può essere usata per escludere le directory dal percorso di ricerca di inclusione. In questo modo, compilazioni diverse possono utilizzare file di inclusione diversi con lo stesso nome, ma archiviati in directory diverse. Si tratta di un'alternativa alla compilazione condizionale utilizzando i comandi del preprocessore. Per ulteriori informazioni sull' **`/X`** opzione del compilatore, vedere [ `/X` (ignorare i percorsi di inclusione standard)](../../build/reference/x-ignore-standard-include-paths.md).
 
-Per risolvere il problema, correggere il percorso usato dal compilatore per trovare il file importato o incluso. Un nuovo progetto utilizza i percorsi di ricerca predefiniti. Potrebbe essere necessario modificare il percorso di ricerca di inclusione per aggiungere una directory per il progetto. Se si esegue la compilazione nella riga di comando, aggiungere il percorso della variabile di ambiente **include** o l'opzione del compilatore **/i** per specificare il percorso del file.
+Per risolvere il problema, correggere il percorso usato dal compilatore per trovare il file importato o incluso. Un nuovo progetto utilizza i percorsi di ricerca predefiniti. Potrebbe essere necessario modificare il percorso di ricerca di inclusione per aggiungere una directory per il progetto. Se si sta eseguendo la compilazione nella riga di comando, aggiungere il percorso della variabile di ambiente **include** o l' **`/I`** opzione del compilatore per specificare il percorso del file.
 
-Per impostare il percorso della directory di inclusione in Visual Studio, aprire la finestra di dialogo **pagine delle proprietà** del progetto. Selezionare **directory di VC + +** in **proprietà di configurazione** nel riquadro a sinistra e quindi modificare la proprietà **directory di inclusione** . Per ulteriori informazioni sulle directory per singolo utente e per progetto cercate dal compilatore in Visual Studio, vedere la [pagina delle proprietà directory di VC + +](../../build/reference/vcpp-directories-property-page.md). Per ulteriori informazioni sull'opzione del compilatore **/i** , vedere [/i (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).
+Per impostare il percorso della directory di inclusione in Visual Studio, aprire la finestra di dialogo **pagine delle proprietà** del progetto. Selezionare **directory di VC + +** in **proprietà di configurazione** nel riquadro a sinistra e quindi modificare la proprietà **directory di inclusione** . Per ulteriori informazioni sulle directory per singolo utente e per progetto cercate dal compilatore in Visual Studio, vedere la [pagina delle proprietà directory di VC + +](../../build/reference/vcpp-directories-property-page.md). Per ulteriori informazioni sull' **`/I`** opzione del compilatore, vedere [ `/I` (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>L'ambiente della riga di comando INCLUDE o LIB non è impostato
 
@@ -87,15 +87,15 @@ L'errore C1083 può anche indicare che è stata inclusa la versione non corretta
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Le intestazioni precompilate non sono ancora precompilate
 
-Quando un progetto è configurato per l'uso di intestazioni precompilate, è necessario creare i file pch corrispondenti in modo da poter compilare i file che usano il contenuto delle intestazioni. Ad esempio, il file *PCH. cpp* (*stdafx. cpp* in Visual Studio 2017 e versioni precedenti) viene creato automaticamente nella directory del progetto per i nuovi progetti. Compilare innanzitutto il file per creare i file di intestazione precompilati. Nella progettazione tipica del processo di compilazione questa operazione viene eseguita automaticamente. Per altre informazioni, vedere [creazione di file di intestazione precompilata](../../build/creating-precompiled-header-files.md).
+Quando un progetto è configurato per l'utilizzo di intestazioni precompilate, è *`.pch`* necessario creare i file rilevanti in modo che i file che utilizzano il contenuto dell'intestazione possano essere compilati. Ad esempio, il *`pch.cpp`* file ( *`stdafx.cpp`* in Visual Studio 2017 e versioni precedenti) viene creato automaticamente nella directory del progetto per i nuovi progetti. Compilare innanzitutto il file per creare i file di intestazione precompilati. Nella progettazione tipica del processo di compilazione questa operazione viene eseguita automaticamente. Per altre informazioni, vedere [creazione di file di intestazione precompilata](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Cause aggiuntive
 
 - È stato installato un SDK o una libreria di terze parti, ma non è stata aperta una nuova finestra del prompt dei comandi per gli sviluppatori dopo l'installazione dell'SDK o della libreria. Se l'SDK o la libreria aggiunge file al percorso di **inclusione** , potrebbe essere necessario aprire una nuova finestra del prompt dei comandi per gli sviluppatori per individuare le modifiche apportate alle variabili di ambiente.
 
-- Il file usa codice gestito, ma l'opzione del compilatore **/CLR** non è specificata. Per altre informazioni, vedere [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+- Il file usa codice gestito, ma l'opzione del compilatore **`/clr`** non è specificata. Per ulteriori informazioni, vedere [ `/clr` (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-- Il file viene compilato usando un'impostazione di opzione del compilatore **/Analyze** diversa da quella usata per precompilare le intestazioni. Quando le intestazioni di un progetto sono precompilate, tutte devono usare le stesse impostazioni **/Analyze** . Per altre informazioni, vedere [/analyze (Analisi codice)](../../build/reference/analyze-code-analysis.md).
+- Il file viene compilato usando un'impostazione di **`/analyze`** opzione del compilatore diversa da quella usata per precompilare le intestazioni. Quando le intestazioni di un progetto sono precompilate, tutte devono usare le stesse **`/analyze`** impostazioni. Per ulteriori informazioni, vedere [ `/analyze` (analisi codice)](../../build/reference/analyze-code-analysis.md).
 
 - Il file o la directory è stato creato dal sottosistema Windows per Linux, la distinzione tra maiuscole e minuscole per directory è abilitata e il case specificato di un percorso o di un file non corrisponde al caso del percorso o del file su disco.
 

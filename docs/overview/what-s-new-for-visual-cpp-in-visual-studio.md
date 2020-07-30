@@ -3,12 +3,12 @@ title: Novità di C++ in Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226789"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390000"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -231,7 +231,7 @@ Il componente sperimentale Clang/C2 è stato rimosso. Usare il set di strumenti 
 
 - Nuove correzioni rapide per controlli di variabili non inizializzate. Per altre informazioni, vedere [New code analysis quick fixes for uninitialized memory (C6001) and use before init (C26494) warnings](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/) (Nuove correzioni rapide di analisi del codice per avvisi di memoria non inizializzata (C6001) and use-before-init (C26494)).
 
-## <a name="unit-testing"></a>Testing unità
+## <a name="unit-testing"></a>Unit test
 
 Il modello di progetto di test C++ gestito non è più disponibile. È possibile continuare a usare il framework di test C++ gestito nei progetti esistenti. Per i nuovi unit test, è consigliabile usare uno dei framework di test nativi per cui Visual Studio fornisce modelli (MSTest, Google Test) o il modello di progetto di test C# gestito.
 
@@ -513,12 +513,11 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 
 Diverse operazioni C++ che usano il motore IntelliSense per il refactoring e lo spostamento di codice vengono eseguite molto più velocemente. I numeri seguenti sono basati sulla soluzione di Visual Studio Chromium con i progetti 3500:
 
-|||
-|-|-|
-|Funzionalità|Miglioramento delle prestazioni|
-|Rinomina|5.3x|
-|Modifica firma |4.5x|
-|Trova tutti i riferimenti|4.7x|
+| Feature | Miglioramento delle prestazioni |
+|--|--|
+| Rinomina | 5.3x |
+| Modifica firma | 4.5x |
+| Trova tutti i riferimenti | 4.7x |
 
 C++ supporta ora Ctrl+ clic **Vai a definizione**, semplificando lo spostamento del mouse sulle definizioni. Anche il visualizzatore della struttura appartenente al pacchetto di strumenti di potenziamento della produttività è ora incluso nel prodotto per impostazione predefinita.
 
@@ -667,7 +666,7 @@ I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
 
-- Aggiunto il supporto per [/analyze: ruleset](../build/reference/analyze-code-analysis.md) che consente di specificare le regole di analisi codice da eseguire.
+- È stato aggiunto [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) il supporto per, che consente di specificare le regole di analisi del codice da eseguire.
 - Aggiunto il supporto per le regole aggiuntive delle Linee guida di base di C++.  Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Testing unità in Visual Studio 2017
@@ -697,7 +696,7 @@ Visual Studio Diagnostica della grafica Tools: è possibile usarli per registrar
 
 - **Ricerca e filtro nella tabella degli oggetti:** un modo rapido e semplice per individuare le risorse che si stanno cercando.
 
-  ![Ricerca](media/search.png)
+  ![Cerca](media/search.png)
 
 - **Cronologia risorse:** consente di visualizzare con facilità l'intera cronologia delle modifiche di una risorsa usata durante il rendering di un frame acquisito. Per richiamare la cronologia per qualsiasi risorsa, fare clic sull'icona di clock accanto a qualsiasi collegamento ipertestuale della risorsa.
 
