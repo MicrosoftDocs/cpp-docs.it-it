@@ -73,7 +73,7 @@ Se la memoria disponibile non è sufficiente per espandere il blocco alla dimens
 
 Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per controllare la nuova dimensione dell'elemento, usare **_msize**. Per ottenere un puntatore a un tipo diverso da **`void`** , usare un cast del tipo sul valore restituito.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_expand** modifica la dimensione di un blocco di memoria allocato in precedenza tentando di espandere o comprimere il blocco senza spostarne la posizione nell'heap. Il parametro *memblock* punta all'inizio del blocco. Il parametro *size* fornisce le nuove dimensioni del blocco, in byte. Il contenuto del blocco rimane invariato fino alla dimensione nuova o alla precedente, a seconda di quale delle due è la più breve. *memblock* non deve essere un blocco che è stato liberato.
 

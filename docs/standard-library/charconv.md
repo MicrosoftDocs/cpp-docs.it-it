@@ -39,7 +39,7 @@ Di seguito sono elencati alcuni dei vantaggi derivanti dall'utilizzo della `<cha
 
 ### <a name="types"></a>Tipi
 
-| Type | Description |
+| Tipo | Description |
 |-|:-|
 | [chars_format](chars-format-class.md) | Specifica il tipo di formattazione, ad esempio scientifico, esadecimale e così via. |
 | [from_chars_result](from-chars-result-structure.md) | Include il risultato di una `from_chars` conversione. |
