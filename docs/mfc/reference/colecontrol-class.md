@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: c0e31b44daad56da2cd0fd20bb7d591797079391
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214126"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470919"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 Punta alla struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che specifica il formato in cui vengono richieste le informazioni.
 
 *lpStgMedium*<br/>
-Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) in cui devono essere restituiti i dati.
+Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) in cui devono essere restituiti i dati.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che specifica il formato dei dati.
 
 *lpStgMedium*<br/>
-Puntatore a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) in cui risiedono i dati.
+Puntatore a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) in cui risiedono i dati.
 
 *bRelease*<br/>
 TRUE se il controllo deve liberare il supporto di archiviazione; FALSE se il controllo non deve liberare il supporto di archiviazione.
