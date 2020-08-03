@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3386
 ms.assetid: 93fa8c33-0f10-402b-8eec-b0a217a1f8dc
-ms.openlocfilehash: 0cb6235f1b6bc868655cc6a6ba301be1308402cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: efe882db447b9ebc69d02e3b10d9e484a3cfd8a8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221081"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520448"
 ---
 # <a name="compiler-error-c3386"></a>Errore del compilatore C3386
 
-' type ': non è possibile applicare __declspec (dllexport)/ \_ _declspec (dllimport) a un oggetto gestito o WinRTtype
+> '*Type-Name*': `__declspec(dllexport)` / `__declspec(dllimport)` non può essere applicato a un tipo gestito o WinRT
 
-I `dllimport` modificatori e [dllexport](../../cpp/dllexport-dllimport.md) **`__declspec`** c'* * non sono validi in un tipo gestito o Windows Runtime.
+I [`dllimport`](../../cpp/dllexport-dllimport.md) [`dllexport`](../../cpp/dllexport-dllimport.md) **`__declspec`** modificatori e non sono validi in un tipo gestito o Windows Runtime.
 
 L'esempio seguente genera l'errore C3386 e mostra come risolverlo:
 

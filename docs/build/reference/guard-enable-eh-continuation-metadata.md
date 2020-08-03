@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190520"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520525"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (abilita i metadati della continuazione della gestione delle eccezioni)
 
@@ -23,7 +23,7 @@ Abilita la generazione di metadati di continuazione EH (EHCONT) da parte del com
 
 > **`/guard:ehcont`**[**`-`**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L' **`/guard:ehcont`** opzione fa sì che il compilatore generi un elenco ordinato di indirizzi virtuali relativi (RVA) di tutte le destinazioni di continuazione di gestione delle eccezioni valide per un file binario. Viene usato durante il runtime per `NtContinue` la `SetThreadContext` convalida del puntatore all'istruzione e. Per impostazione predefinita, **`/guard:ehcont`** è disattivato e deve essere abilitato in modo esplicito. Per disabilitare in modo esplicito questa opzione, usare **`/guard:ehcont-`** .
 
@@ -51,9 +51,9 @@ Per informazioni sulla sezione SEH trovate in COMDAT, ma non compilate usando **
 
 Se il linker non è in grado di generare metadati, genera uno degli errori seguenti:
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 Per verificare se un file binario contiene dati EHCONT, cercare gli elementi seguenti durante il dump della configurazione di caricamento del file binario:
 

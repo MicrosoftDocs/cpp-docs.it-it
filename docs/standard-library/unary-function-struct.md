@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: a38a22abe4381afd45948e56d46c54f39028517d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b93664377838cd5ff97346282cb9120ae9b5e37
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217376"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520590"
 ---
 # <a name="unary_function-struct"></a>Struct unary_function
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>Osservazioni
 
-Lo struct del modello funge da base per le classi che definiscono una funzione membro del form **result_type** `operator()` ( **constargument_type&**) **`const`** .
+Lo struct del modello funge da base per le classi che definiscono una funzione membro del form `result_type operator()( constargument_type& ) const` .
 
 Tutte le funzioni unarie derivate possono fare riferimento a un unico argomento come **argument_type** e al tipo restituito come **result_type**.
 

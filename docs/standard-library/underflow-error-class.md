@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-ms.openlocfilehash: 41e3c8606cb8c6c90a84927f01eb953be138534a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f521e8ec083cd158212b3ae9cb9fcf26edc7e76
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454997"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520512"
 ---
-# <a name="underflowerror-class"></a>Classe underflow_error
+# <a name="underflow_error-class"></a>Classe underflow_error
 
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un underflow aritmetico.
 
@@ -29,9 +29,9 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il valore restituito da [what](../standard-library/exception-class.md) è una copia di **message**`.`[data](../standard-library/basic-string-class.md#data).
+Il valore restituito da `what()` è una copia di `message.data()` . Per ulteriori informazioni, vedere [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Esempio
 
@@ -61,11 +61,11 @@ Type: class std::underflow_error
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<stdexcept>
+**Intestazione:**\<stdexcept>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe runtime_error](../standard-library/runtime-error-class.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
