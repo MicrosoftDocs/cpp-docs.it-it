@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-ms.openlocfilehash: 1c5caa0129730750a6429d9f7fa883e9af30f225
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb15785cbff18daa1bfa9a1198a64d018383764
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449257"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521200"
 ---
 # <a name="invalid_argument-class"></a>Classe invalid_argument
 
@@ -29,9 +29,9 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il valore restituito da [what](../standard-library/exception-class.md) è una copia di **message**`.`[data](../standard-library/basic-string-class.md#data).
+Il valore restituito da `what()` è una copia di `message.data()` . Per ulteriori informazioni, vedere [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Esempio
 
@@ -63,11 +63,11 @@ Type class std::invalid_argument
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<stdexcept>
+**Intestazione:**\<stdexcept>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[logic_error Class](../standard-library/logic-error-class.md)\ (Classe logic_error)
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe logic_error](../standard-library/logic-error-class.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229103"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521161"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operatore OR bit per bit esclusivo: ^
 
@@ -26,9 +26,9 @@ ms.locfileid: "87229103"
 
 > *espressione* **`^`** *espressione*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-L'operatore OR esclusivo bit per bit ( **`^`** ) confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se il bit del primo operando è 0 e l'altro bit è 1, il bit del risultato corrispondente viene impostato su 1. altrimenti verrà impostato su 0.
+L'operatore OR esclusivo bit per bit ( **`^`** ) confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se il bit in uno degli operandi è 0 e il bit nell'altro operando è 1, il bit del risultato corrispondente viene impostato su 1. altrimenti verrà impostato su 0.
 
 Entrambi gli operandi per l'operatore devono avere tipi integrali. Le conversioni aritmetiche consuete analizzate in [conversioni standard](standard-conversions.md) vengono applicate agli operandi.
 

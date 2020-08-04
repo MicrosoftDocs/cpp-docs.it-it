@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215322"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521252"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -34,7 +34,7 @@ ID univoco.
 *value*<br/>
 Valore che può essere inserito in una variante.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo C++ **personalizzato** farà sì che le informazioni vengano inserite nella libreria dei tipi. Sarà necessario uno strumento che legga il valore personalizzato dalla libreria dei tipi.
 
@@ -44,12 +44,10 @@ L'attributo **personalizzato** ha la stessa funzionalità dell'attributo MIDL [p
 
 ### <a name="attribute-context"></a>Contesto attributo
 
-|||
-|-|-|
-|**Si applica a**|**Interfaccia**non com, **`class`** , **`enum`** s, `idl_module` metodi, membri di interfaccia, parametri di interfaccia, **`typedef`** s, **`union`** s, **`struct`** s|
-|**Ripetibile**|Sì|
-|**Attributi richiesti**|**coclasse** (se utilizzata nella classe)|
-|**Attributi non validi**|Nessuno|
+- **Si applica a**: tipi non com `interface` , `idl_module` metodi, membri di interfaccia, parametri di interfaccia,,,, **`typedef`** **`class`** **`enum`** **`union`** e **`struct`** .
+- **Ripetibile**: Sì.
+- **Attributi obbligatori**: **coclass** (se usato nella classe).
+- **Attributi non validi**: nessuno.
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

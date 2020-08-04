@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233015"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520927"
 ---
 # <a name="pair-structure"></a>Struttura pair
 
@@ -78,9 +78,9 @@ Il terzo costruttore (modello) inizializza il primo elemento della coppia su `Ri
 
 Il quarto costruttore inizializza il primo elemento della coppia su *val1* e la seconda su *val2* usando il [dichiaratore di riferimento rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2` , rispettivamente. Il tipo `first_type` è lo stesso del parametro di modello `T1` e il tipo `second_type` è lo stesso del parametro di modello `T2` . `T1`ognuno di essi `T2` deve fornire solo un costruttore predefinito, un costruttore a singolo argomento e un distruttore. Tutti i membri del tipo `pair` sono pubblici, perché il tipo è dichiarato come **`struct`** anziché come **`class`** . Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. Il secondo soddisfa i requisiti per un contenitore associativo di coppie e ha un tipo di valore nel formato `pair` <  **`const`** `key_type` `mapped_type`>.
+Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2` , rispettivamente. Il tipo `first_type` è lo stesso del parametro di modello `T1` e il tipo `second_type` è lo stesso del parametro di modello `T2` . `T1`ognuno di essi `T2` deve fornire solo un costruttore predefinito, un costruttore a singolo argomento e un distruttore. Tutti i membri del tipo `pair` sono pubblici, perché il tipo è dichiarato come **`struct`** anziché come **`class`** . Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. Il secondo soddisfa i requisiti per un contenitore associativo di coppie e ha un tipo di valore nel formato `pair< const key_type, mapped_type >` .
 
 ## <a name="example"></a>Esempio
 

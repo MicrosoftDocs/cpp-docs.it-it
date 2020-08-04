@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3bbbc48aa2020782594606c6a53a34f7b937fc58
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453079"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521278"
 ---
 # <a name="out_of_range-class"></a>Classe out_of_range
 
@@ -29,9 +29,9 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il valore restituito da [what](../standard-library/exception-class.md) è una copia di **message**`.`[data](../standard-library/basic-string-class.md#data).
+Il valore restituito da `what()` è una copia di `message.data()` . Per ulteriori informazioni, vedere [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Esempio
 
@@ -65,11 +65,11 @@ Caught: invalid string position
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<stdexcept>
+**Intestazione:**\<stdexcept>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[logic_error Class](../standard-library/logic-error-class.md)\ (Classe logic_error)
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe logic_error](../standard-library/logic-error-class.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

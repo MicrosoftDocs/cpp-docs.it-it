@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - domain_error class
 ms.assetid: a1d8245d-61c2-4d1e-973f-073bd5dd5fa3
-ms.openlocfilehash: 6eabb4ca8ed1c7b5259a8479e1a3e067de073b8e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 850615f07af022aff3ed209d9142823b0f038134
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454314"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521239"
 ---
 # <a name="domain_error-class"></a>Classe domain_error
 
@@ -29,9 +29,9 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il valore restituito da [what](../standard-library/exception-class.md) è una copia di **message**`.`[data](../standard-library/basic-string-class.md#data).
+Il valore restituito da `what()` è una copia di `message.data()` . Per ulteriori informazioni, vedere [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Esempio
 
@@ -62,11 +62,11 @@ Type: class std::domain_error
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<stdexcept>
+**Intestazione:**\<stdexcept>
 
 **Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 
-[logic_error Class](../standard-library/logic-error-class.md)\ (Classe logic_error)
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe logic_error](../standard-library/logic-error-class.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
