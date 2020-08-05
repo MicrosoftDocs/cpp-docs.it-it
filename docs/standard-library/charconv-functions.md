@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246110"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565950"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;funzioni charconv
 
@@ -23,13 +23,13 @@ L' \<charconv> intestazione include le funzioni non membro seguenti:
 |[to_chars](#to_chars) | Converte un valore integer o a virgola mobile in una sequenza di **`char`** . |
 |[from_chars](#from_chars) | Converte una sequenza di **`char`** in un valore integer o a virgola mobile. |
 
-Queste funzioni di conversione sono ottimizzate per le prestazioni e supportano anche il comportamento di round trip più breve. Il comportamento di round trip più breve significa che quando un numero viene convertito in caratteri, viene scritta solo una precisione sufficiente per consentire il recupero del numero originale durante la conversione di tali caratteri in un punto a virgola mobile.
+Queste funzioni di conversione sono ottimizzate per le prestazioni e supportano anche il comportamento di round trip più breve. Il comportamento di round trip più breve indica quando un numero viene convertito in caratteri, viene scritta solo una precisione sufficiente per consentire il recupero del numero originale durante la conversione di tali caratteri in un punto a virgola mobile.
 
 - Quando si convertono i caratteri in un numero, il valore numerico non deve essere con terminazione null. Analogamente, quando si converte un numero in caratteri, il risultato non è con terminazione null.
 - Le funzioni di conversione non allocano memoria. Si è proprietari del buffer in tutti i casi.
 - Le funzioni di conversione non generano. Viene restituito un risultato dal quale è possibile determinare se la conversione è stata eseguita correttamente.
 - Le funzioni di conversione non sono sensibili alla modalità di arrotondamento in fase di esecuzione.
-- Le funzioni di conversione non sono in grado di riconoscere le impostazioni locali. Stampano sempre e analizzano i punti decimali come `'.'` e mai come ',' per le impostazioni locali che usano virgole.
+- Le funzioni di conversione non sono compatibili con le impostazioni locali. Stampano sempre e analizzano i punti decimali come `'.'` e mai come ',' per le impostazioni locali che usano virgole.
 
 ## `to_chars`
 
@@ -95,14 +95,14 @@ Per le conversioni a virgola mobile, il numero di cifre di precisione per il val
 
 ### <a name="remarks"></a>Osservazioni
 
-Le funzioni che accettano un parametro di [chars_format](chars-format-class.md) determinano l'identificatore di conversione come se fossero utilizzate `printf()` come segue: l'identificatore di conversione è `f` se `fmt` è `chars_format::fixed` , `e` se `fmt` è, `chars_format::scientific` `a` (senza "0x" nel risultato) se `fmt` è `chars_format::hex` e se è `g` `fmt` `chars_format::general` . La specifica della notazione fissa più breve può comunque produrre un output lungo perché potrebbe essere la rappresentazione più breve possibile quando il valore è molto grande o molto piccolo.
+Le funzioni che accettano un parametro di [chars_format](chars-format-class.md) determinano l'identificatore di conversione come se si utilizzasse `printf()` come indicato di seguito: l'identificatore di conversione è `'f'` se `fmt` è `chars_format::fixed` , `'e'` se `fmt` è, `chars_format::scientific` `'a'` (senza il valore iniziali `0x` nel risultato) se `fmt` è `chars_format::hex` e se è `'g'` `fmt` `chars_format::general` . La specifica della notazione fissa più breve può comunque produrre un output lungo perché potrebbe essere la rappresentazione più breve possibile quando il valore è molto grande o molto piccolo.
 
-Nella tabella seguente viene descritto il comportamento di conversione in base a diverse combinazioni di `fmt` `precision` parametri e. Il termine "round trip più breve" si riferisce alla scrittura del minor numero di cifre necessarie in modo che l'analisi di tale rappresentazione mediante la `from_chars` funzione corrispondente recuperi il valore esattamente.
+Nella tabella seguente viene descritto il comportamento di conversione in base a diverse combinazioni di `fmt` `precision` parametri e. Il termine "comportamento di round trip più breve" si riferisce alla scrittura del minor numero di cifre necessarie in modo che l'analisi di tale rappresentazione tramite la `from_chars` funzione corrispondente recuperi il valore esattamente.
 
 | `fmt`e `precision` combinazione | Output |
 |--|--|
 |  Nessuno | Qualunque sia la notazione fissa o scientifica è più breve, preferendo un valore fisso come spareggio.</br>Questo comportamento non può essere simulato da un overload che accetta il `fmt` parametro. |
-| `fmt` | Il comportamento di round trip più breve per il formato specificato, ad esempio il formato scientifico più breve. |
+| `fmt` | Comportamento del round trip più breve per il formato specificato, ad esempio il formato scientifico più breve. |
 | `fmt` e `precision` | Usa la precisione specificata, `printf()` lo stile seguente, senza il comportamento di round trip più breve. |
 
 ### <a name="return-value"></a>Valore restituito
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:**\<charconv>
+
+**Spazio dei nomi:** std
+
+/STD: è necessario c++ 17 o versione successiva.
+
 ## <a name="see-also"></a>Vedere anche
 
 [\<charconv>](charconv.md)  
-[Stringa decimale più breve che arrotonda i round trip](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+[Stringa decimale più breve che arrotonda i round trip](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+ [identificatori di formato printf ()](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)
