@@ -1269,7 +1269,7 @@
                   href: using-your-old-toolbars.md
         - name: Gestione visualizzazione
           href: visualization-manager.md
-        - name: WINDOWS
+        - name: Windows
           expanded: false
           items:
             - name: WINDOWS
@@ -2706,6 +2706,8 @@
           href: reference/afx-messages.md
         - name: Stili dei controlli ToolBar
           href: reference/toolbar-control-styles.md
+        - name: Enumerazione BufferCommand
+          href: reference/buffercommand-enumeration.md
         - name: 'Enumerazione CMFCImagePaintArea::IMAGE_EDIT_MODE'
           href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
         - name: Enumerazione UICheckState
