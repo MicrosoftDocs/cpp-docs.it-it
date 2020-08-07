@@ -1,17 +1,17 @@
 ---
 title: Tabella di conformità al linguaggio C++ di Microsoft
 description: Tabella degli aggiornamenti della conformità di Microsoft C++ in base alla versione di Visual Studio.
-ms.date: 05/18/2020
+ms.date: 08/05/2020
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4467e9fa47ecdeb0b4c5c44ab4d366222369d994
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213944"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807810"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -24,7 +24,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 
 ## <a name="compiler-features"></a>Funzionalità del compilatore
 
-|  |  |
+| Funzionalità | Supporto |
 |--|--|
 | __Funzionalità del linguaggio di base C++03/11__ | __Supportato__ |
 | &nbsp;&nbsp;Tutti gli altri elementi | VS 2015 <sup>[A](#note_A)</sup> |
@@ -136,9 +136,9 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P1907R1 Inconsistencies with non-type template parameters`](https://wg21.link/P1907R1) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US053: Mandate the return type for return_void and return_value to be void`](https://wg21.link/P1971R0) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US065: Apply Coroutines issue 24 from P0664R8`](https://wg21.link/P1971R0) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partial |
-| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | Partial |
-| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | Partial |
+| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Parziale |
+| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | Parziale |
+| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | Parziale |
 | &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | Parziale |
 | &nbsp;&nbsp;[`P0315R4 Allowing lambdas in unevaluated contexts`](https://wg21.link/P0315R4) | No |
 | &nbsp;&nbsp;[`P0388R4 Permit conversions to arrays of unknown bound`](https://wg21.link/P0388R4) | No |
@@ -181,7 +181,9 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 
 ## <a name="standard-library-features"></a>Funzionalità della libreria standard
 
-|  |  |
+Un elenco più dettagliato delle funzionalità della libreria standard e delle correzioni di bug in base alla versione del prodotto è disponibile nella pagina del log di [Microsoft STL wiki di GitHub](https://github.com/microsoft/STL/wiki/Changelog) .
+
+| Funzionalità | Supporto |
 |--|--|
 | __Funzionalità della libreria standard C++20__ | __Supportato__ |
 | &nbsp;&nbsp;[`P0809R0 Comparing Unordered Containers`](https://wg21.link/p0809r0) | VS 2010 <sup>[14](#note_14)</sup> |
@@ -238,20 +240,29 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P1165R1 Consistently Propagating Stateful Allocators In basic_string's operator+()`](https://wg21.link/P1165R1) | VS 2019 16,6 <sup> [14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P1423R3 char8_t backward compatibility remediation`](https://wg21.link/P1423R3) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1645R1 constexpr for <numeric> algorithms`](https://wg21.link/P1645R1) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0415R1 constexpr For <complex> (Again)`](https://wg21.link/p0415r1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0476R2 <bit> bit_cast`](https://wg21.link/P0476R2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0674R1 make_shared() For Arrays`](https://wg21.link/p0674r1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0718R2 atomic<shared_ptr<T>>, atomic<weak_ptr<T>>`](https://wg21.link/p0718r2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1023R0 constexpr For std::array Comparisons`](https://wg21.link/P1023R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1115R3 erase()/erase_if() Return size_type`](https://wg21.link/P1115R3) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1831R1 Deprecating volatile in the standard library`](https://wg21.link/P1831R1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1956R1 <bit> has_single_bit(), bit_ceil(), bit_floor(), bit_width()`](https://wg21.link/P1956R1) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1964R2 Replacing boolean With boolean-testable`](https://wg21.link/P1964R2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1976R2 Fixed-size span construction from dynamic range`](https://wg21.link/P1976R2) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2091R0 Issues with range access CPOs`](https://wg21.link/P2091R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2102R0 Make "implicit expression variations" more explicit`](https://wg21.link/P2102R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2116R0 Remove tuple-like protocol support from fixed-extent span`](https://wg21.link/P2116R0) | VS 2019 16,7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0019R8 atomic_ref`](https://wg21.link/P0019R8) | No |
 | &nbsp;&nbsp;[`P0053R7 <syncstream>`](https://wg21.link/p0053r7)<br/>&nbsp;&nbsp;[`P0753R2 osyncstream Manipulators`](https://wg21.link/p0753r2) | No |
 | &nbsp;&nbsp;[`P0339R6 polymorphic_allocator<>`](https://wg21.link/P0339R6) | No |
 | &nbsp;&nbsp;[`P0355R7 <chrono> Calendars And Time Zones`](https://wg21.link/p0355r7) | No |
-| &nbsp;&nbsp;[`P0415R1 constexpr For <complex> (Again)`](https://wg21.link/p0415r1) | No |
 | &nbsp;&nbsp;[`P0475R1 Guaranteed Copy Elision For Piecewise Construction`](https://wg21.link/P0475R1) | No |
-| &nbsp;&nbsp;[`P0476R2 <bit> bit_cast`](https://wg21.link/P0476R2) | No |
 | &nbsp;&nbsp;[`P0528R3 Atomic Compare-And-Exchange With Padding Bits`](https://wg21.link/P0528R3) | No |
 | &nbsp;&nbsp;[`P0591R4 Utility Functions For Uses-Allocator Construction`](https://wg21.link/P0591R4) | No |
 | &nbsp;&nbsp;[`P0608R3 Improving variant's Converting Constructor/Assignment`](https://wg21.link/P0608R3) | No |
 | &nbsp;&nbsp;[`P0653R2 to_address()`](https://wg21.link/p0653r2) | No |
 | &nbsp;&nbsp;[`P0655R1 visit<R>()`](https://wg21.link/P0655R1) | No |
-| &nbsp;&nbsp;[`P0674R1 make_shared() For Arrays`](https://wg21.link/p0674r1) | No |
-| &nbsp;&nbsp;[`P0718R2 atomic<shared_ptr<T>>, atomic<weak_ptr<T>>`](https://wg21.link/p0718r2) | No |
 | &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | No |
 | &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | No |
 | &nbsp;&nbsp;[`P0896R4 <ranges\>`](https://wg21.link/P0896R4) | No |
@@ -260,7 +271,6 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P1001R2 execution::unseq`](https://wg21.link/P1001R2) | No |
 | &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | No |
 | &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | No |
-| &nbsp;&nbsp;[`P1023R0 constexpr For std::array Comparisons`](https://wg21.link/P1023R0) | No |
 | &nbsp;&nbsp;[`P1032R1 Miscellaneous constexpr`](https://wg21.link/P1032R1) | No |
 | &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | No |
 | __Funzionalità della libreria standard C++17__ | __Supportato__ |
@@ -393,7 +403,8 @@ __VS 2019 16,2__ indica le funzionalità supportate in Visual Studio 2019 versio
 __VS 2019 16,3__ indica le funzionalità supportate in Visual Studio 2019 versione 16,3. \
 __VS 2019 16,4__ indica le funzionalità supportate in Visual Studio 2019 versione 16,4. \
 __VS 2019 16,5__ indica le funzionalità supportate in Visual Studio 2019 versione 16,5. \
-__VS 2019 16,6__ indica le funzionalità supportate in Visual Studio 2019 versione 16,6.
+__VS 2019 16,6__ indica le funzionalità supportate in Visual Studio 2019 versione 16,6. \
+__VS 2019 16,7__ indica le funzionalità supportate in Visual Studio 2019 versione 16,7.
 
 ### <a name="notes"></a>Note
 
@@ -415,7 +426,7 @@ L'opzione del compilatore [`/Zc:noexceptTypes`](../build/reference/zc-noexceptty
 
 <a name="note_17"></a>__17__ queste funzionalità sono abilitate dall' [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) opzione del [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) compilatore (o).
 
-<a name="note_20"></a>__20__ queste funzionalità sono abilitate dall' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opzione del compilatore. Quando l'implementazione di C++20 sarà stata completata, verrà aggiunta una nuova opzione del compilatore **/std:c++20** che includerà anche queste funzionalità.
+<a name="note_20"></a>__20__ queste funzionalità sono abilitate dall' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opzione del compilatore. Quando l'implementazione di C++ 20 è completa, viene **`/std:c++20`** aggiunta una nuova opzione del compilatore, in cui saranno disponibili anche queste funzionalità.
 
 <a name="note_byte"></a>__byte__ `std::byte` è abilitato da [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (o [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) ), ma perché può entrare in conflitto con le intestazioni Windows SDK in alcuni casi, presenta una macro con granularità fine. Può essere disabilitato definendo `_HAS_STD_BYTE` come `0`.
 
