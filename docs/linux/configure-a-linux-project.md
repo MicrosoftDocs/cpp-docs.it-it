@@ -1,15 +1,16 @@
 ---
-title: Configurare un progetto C++ Linux in Visual Studio
-ms.date: 06/22/2020
+title: Configurare un progetto C++ MSBuild per Linux in Visual Studio
+ms.date: 08/06/2020
+description: Configurare un progetto Linux basato su MSBuild in Visual Studio in modo da poterlo compilare.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269741"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043863"
 ---
-# <a name="configure-a-linux-project"></a>Configurare un progetto Linux
+# <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Configurare un progetto C++ MSBuild per Linux in Visual Studio
 
 ::: moniker range="vs-2015"
 
@@ -17,7 +18,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
-Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake Linux, vedere [configurare un progetto CMake per Linux](cmake-linux-project.md).
+Questo argomento descrive come configurare un progetto Linux basato su MSBuild come descritto in [creare un progetto Linux MSBuild C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake Linux, vedere [configurare un progetto CMake per Linux](cmake-linux-project.md).
 
 È possibile configurare un progetto Linux in modo che abbia come destinazione una macchina Linux fisica, una macchina virtuale o il [sottosistema Windows per Linux](/windows/wsl/about) (WSL).
 
