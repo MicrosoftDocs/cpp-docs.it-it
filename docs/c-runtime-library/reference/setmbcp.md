@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
+ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918821"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88086968"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -60,16 +60,6 @@ Restituisce 0 se la tabella codici è impostata correttamente. Se per *codepage*
 ## <a name="remarks"></a>Osservazioni
 
 La funzione **_setmbcp** specifica una nuova tabella codici multibyte. Per impostazione predefinita, il sistema di runtime imposta automaticamente la tabella codici multibyte sulla tabella codici ANSI predefinita del sistema. L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte non dipendenti dalle impostazioni locali. Tuttavia, è possibile indicare **_setmbcp** di usare la tabella codici definita per le impostazioni locali correnti. vedere l'elenco seguente di costanti manifeste e i risultati del comportamento associati. Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali, anziché dalla tabella codici multibyte, vedere [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
-
-La tabella codici multibyte influisce anche sull'elaborazione dei caratteri multibyte per le routine della libreria di runtime seguenti:
-
-||||
-|-|-|-|
-|[Funzioni _exec](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
-|[_fullpath](fullpath-wfullpath.md)|[Funzioni _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-
-Inoltre, tutte le routine della libreria di runtime che ricevono argomenti di programma *argv* o *envp* di caratteri multibyte come parametri, ad esempio le famiglie **_exec** e **_spawn** , elaborano queste stringhe in base alla tabella codici multibyte. Queste routine sono pertanto interessate anche da una chiamata a **_setmbcp** che modifica la tabella codici multibyte.
 
 L'argomento *codepage* può essere impostato su uno dei valori seguenti:
 
