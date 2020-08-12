@@ -3,12 +3,12 @@ title: Novità di C++ in Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390000"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144178"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -513,9 +513,9 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 
 Diverse operazioni C++ che usano il motore IntelliSense per il refactoring e lo spostamento di codice vengono eseguite molto più velocemente. I numeri seguenti sono basati sulla soluzione di Visual Studio Chromium con i progetti 3500:
 
-| Feature | Miglioramento delle prestazioni |
+| Funzionalità | Miglioramento delle prestazioni |
 |--|--|
-| Rinomina | 5.3x |
+| Rinominare | 5.3x |
 | Modifica firma | 4.5x |
 | Trova tutti i riferimenti | 4.7x |
 
@@ -636,7 +636,7 @@ Sono ora disponibili nuove opzioni per la scrittura e la creazione di pacchetti 
 
 È stato aggiunto un modello di **Progetto di creazione di pacchetti di applicazioni Windows** che semplifica notevolmente la creazione di pacchetti di applicazioni desktop con Desktop Bridge. È disponibile in **File > Nuovo > Progetto > Installati > Visual C++ > Piattaforma UWP**. Per altre informazioni, vedere [Creare un pacchetto dell'app con Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Quando si scrive nuovo codice, ora è possibile usare C++/WinRT, una proiezione standard del linguaggio C++ per Windows Runtime implementata esclusivamente nei file di intestazione. Consente di utilizzare e creare API Windows Runtime utilizzando un compilatore C++ conforme agli standard. C++/WinRT è progettato per offrire agli sviluppatori C++ un accesso di prima classe all'API Windows moderna. Per ulteriori informazioni, vedere [c++/WinRT: Modern c++ per la Windows Runtime](https://moderncpp.com/).
+Quando si scrive nuovo codice, ora è possibile usare C++/WinRT, una proiezione standard del linguaggio C++ per Windows Runtime implementata esclusivamente nei file di intestazione. Consente di utilizzare e creare API Windows Runtime utilizzando un compilatore C++ conforme agli standard. C++/WinRT è progettato per offrire agli sviluppatori C++ un accesso di prima classe all'API Windows moderna. Per ulteriori informazioni, vedere [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/).
 
 A partire dalla Build 17025 dell'anteprima di Windows SDK Insider, C++/WinRT è incluso nel Windows SDK. Per altre informazioni, vedere [C++/WinRT is now included the Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/) (C++/WinRT ora incluso in Windows SDK).
 
@@ -696,7 +696,7 @@ Visual Studio Diagnostica della grafica Tools: è possibile usarli per registrar
 
 - **Ricerca e filtro nella tabella degli oggetti:** un modo rapido e semplice per individuare le risorse che si stanno cercando.
 
-  ![Cerca](media/search.png)
+  ![Ricerca](media/search.png)
 
 - **Cronologia risorse:** consente di visualizzare con facilità l'intera cronologia delle modifiche di una risorsa usata durante il rendering di un frame acquisito. Per richiamare la cronologia per qualsiasi risorsa, fare clic sull'icona di clock accanto a qualsiasi collegamento ipertestuale della risorsa.
 

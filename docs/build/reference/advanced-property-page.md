@@ -1,77 +1,99 @@
 ---
-title: Pagina delle proprietà Avanzate (progetto)Advanced Property Page (Project)
-ms.date: 07/19/2019
+title: Pagina delle proprietà avanzate (progetto)
+ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 8ce62b768f5cda30501e791bcd040a40b18bfb23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d6694e44d3da4023998a0335cd06c85b353b2b1
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328418"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144165"
 ---
-# <a name="advanced-property-page"></a>Pagina delle proprietà Avanzate
+# <a name="advanced-property-page"></a>Pagina delle proprietà avanzate
 
-La pagina delle proprietà Avanzate è disponibile in Visual Studio 2019 e versioni successive.
+::: moniker range="<=vs-2017"
+
+La pagina delle proprietà avanzate è disponibile in Visual Studio 2019 e versioni successive. Per visualizzare la documentazione relativa a tale versione, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+
+::: moniker-end
 
 ::: moniker range="vs-2019"
+
+La pagina delle proprietà avanzate è disponibile in Visual Studio 2019 e versioni successive.
 
 ## <a name="advanced-properties"></a>Advanced Properties
 
 - **Estensione file di destinazione**
 
-   Specifica l'estensione di file da utilizzare per l'output di compilazione. Il valore predefinito è **.exe** per le applicazioni, **.lib** per le librerie statiche e **DLL** per le DLL.
+   Specifica l'estensione di file da utilizzare per l'output di compilazione. Il valore predefinito è *`.exe`* per le applicazioni, *`.lib`* per le librerie statiche e *`.dll`* per le dll.
 
 - **Estensioni da eliminare durante la pulitura**
 
-   L'opzione **Pulisci** (menu **Compila**) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate con questa proprietà verranno eliminati quando si sceglie **Pulisci** o si esegue una ricompilazione. Oltre ai file di queste estensioni presenti nella directory intermedia, il sistema di compilazione eliminerà anche tutto l'output noto della compilazione indipendentemente da dove si trova (inclusi gli output intermedi come i file con estensione obj). È possibile specificare caratteri jolly.
+   L'opzione **Pulisci** (menu **Compila**) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate in questa proprietà vengono eliminati quando viene eseguita la **pulizia** o quando si ricompila. Il sistema di compilazione Elimina tutti i file con queste estensioni nella directory intermedia. Elimina anche eventuali output noti della compilazione, indipendentemente dalla posizione. Che include gli output intermedi, ad esempio *`.obj`* i file. È possibile specificare caratteri jolly in questa proprietà.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
 - **File del log di compilazione**
 
-   Permette di specificare un percorso non predefinito per il file di log creato ogni volta che si compila un progetto. Il percorso predefinito è specificato dalla macro $(IntDir)$(MSBuildProjectName).log.
+   Consente di specificare un percorso non predefinito per il file di log creato ogni volta che si compila un progetto. Il percorso predefinito viene specificato dalle macro `$(IntDir)$(MSBuildProjectName).log` .
 
-   È possibile usare macro di progetto per modificare il percorso della directory. Vedere Macro comuni per comandi e proprietà di [compilazione](common-macros-for-build-commands-and-properties.md).
+   È possibile usare macro di progetto per modificare il percorso della directory. Vedere [macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md).
 
-- **Architettura dello strumento di compilazione preferitoPreferred Build Tool Architecture**
+- **Architettura dello strumento di compilazione preferito**
 
-   Specifica se utilizzare gli strumenti di compilazione x86 o x64.
+   Specifica se usare gli strumenti di compilazione x86 o x64.
 
-- **Utilizzo delle librerie di debug**
+- **USA librerie di debug**
 
-   Specifica se creare una compilazione DEBUG o RELEASE.
+   Specifica se creare una build di debug o di rilascio.
 
-- **Abilitare la build di Unità (JUMBO)Enable Unity (JUMBO) build**
+- **Abilita compilazione Unity (JUMBO)**
 
-   Consente di eseguire un processo di compilazione in cui molti file di origine di C, vengono combinati in uno o più file di "unità" prima della compilazione per migliorare le prestazioni di compilazione. Non correlato al motore di gioco Unity.
+   Consente un processo di compilazione più veloce che combina molti file di origine C++ in uno o più file prima della compilazione. Questi file combinati sono noti come file *Unity* . Non sono correlate al motore di gioco Unity.
+
+- **Copia il contenuto in OutDir**
+
+   Copiare gli elementi contrassegnati come *contenuti* nel progetto nella directory di output del progetto ( `$(OutDir)` ). Questa impostazione può semplificare la distribuzione. Questa proprietà è disponibile a partire da Visual Studio 2019 versione 16,7.
+
+- **Copia i riferimenti al progetto in OutDir**
+
+   Copiare gli elementi di riferimento del progetto eseguibile (file DLL e EXE) nella directory di output del progetto ( `$(OutDir)` ). Nei progetti C++/CLI ( [`/clr`](clr-common-language-runtime-compilation.md) ) questa proprietà viene ignorata. Al contrario, la proprietà **Copia localmente** in ogni riferimento al progetto controlla se viene copiata nella directory di output. Questa impostazione può semplificare la distribuzione locale. È disponibile a partire da Visual Studio 2019 versione 16,7.
+
+- **Copia i simboli dei riferimenti al progetto in OutDir**
+
+   Copiare i file PDB per gli elementi di riferimento del progetto insieme agli elementi eseguibili di riferimento del progetto nella directory di output del progetto ( `$(OutDir)` ). Questa proprietà è sempre abilitata per i progetti C++/CLI. Questa impostazione può semplificare la distribuzione del debug. È disponibile a partire da Visual Studio 2019 versione 16,7.
+
+- **Copia il runtime C++ in OutDir**
+
+   Copiare le DLL di runtime nella directory di output del progetto ( `$(OutDir)` ). Questa impostazione può semplificare la distribuzione locale. È disponibile a partire da Visual Studio 2019 versione 16,7.
 
 - **Uso di MFC**
 
-   Specifica se il progetto sarà collegato staticamente o dinamicamente alla DLL MFC. Per i progetti non MFC, è possibile selezionare **Usa librerie standard di Windows** per consentire il collegamento a diverse librerie Win32 incluse quando si usa MFC.
+   Specifica se il progetto MFC si collega in modo statico o dinamico alla DLL MFC. In progetti non MFC selezionare **Usa librerie standard di Windows** per collegare le librerie Win32 incluse in MFC.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
 
 - **Set di caratteri**
 
-   Definisce se deve essere impostato _UNICODE o _MBCS. Influisce anche sul punto di ingresso del linker nei casi appropriati.
+   Definisce se `_UNICODE` `_MBCS` è necessario impostare o. Influisce anche sul punto di ingresso del linker nei casi appropriati.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
 
 - **Con ottimizzazione intero programma**
 
-   Specifica l'opzione del compilatore [/GL](gl-whole-program-optimization.md) e l'opzione del linker [/LTCG](ltcg-link-time-code-generation.md). Per impostazione predefinita, questa opzione è disabilitata per le configurazioni di debug ed è abilitata per le configurazioni di versione finale.
+   Specifica l' [`/GL`](gl-whole-program-optimization.md) opzione del compilatore e l' [`/LTCG`](ltcg-link-time-code-generation.md) opzione del linker. Per impostazione predefinita, l'ottimizzazione dell'intero programma è disabilitata per le configurazioni di debug e abilitata per le configurazioni di rilascio.
 
 - **Versione del set di strumenti MSVC**
 
-   Specifica la versione completa del set di strumenti MSVC che verrà utilizzato per compilare il progetto. Se sono installate varie versioni di aggiornamento e anteprima di un set di strumenti, è possibile specificare quale utilizzare qui.
+   Specifica la versione completa del set di strumenti MSVC usato per compilare il progetto. È possibile che siano installate diverse versioni di aggiornamento e anteprima di un set di strumenti. È possibile specificare quello da usare qui.
 
-## <a name="ccli-properties"></a>Proprietà di C/CLI
+## <a name="ccli-properties"></a>Proprietà C++/CLI
 
 - **Supporto Common Language Runtime**
 
-   Determina l'uso dell'opzione del compilatore [/clr](clr-common-language-runtime-compilation.md).
+   Comporta l' [`/clr`](clr-common-language-runtime-compilation.md) utilizzo dell'opzione del compilatore.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions%2A>.
 
@@ -81,6 +103,6 @@ La pagina delle proprietà Avanzate è disponibile in Visual Studio 2019 e versi
 
 - **Abilita compilazione incrementale gestita**
 
-   Per i progetti gestiti, consente il rilevamento della visibilità esterna quando si generano assembly. Se una modifica a un progetto gestito non è visibile in altri progetti, i progetti dipendenti non saranno ricompilati. È così possibile migliorare considerevolmente i tempi di compilazione di soluzioni che includono progetti gestiti.
+   Per i progetti gestiti, questa opzione Abilita il rilevamento della visibilità esterna quando si generano assembly. Se una modifica apportata a un progetto gestito non è visibile ad altri progetti, i progetti dipendenti non vengono ricompilati. Le compilazioni incrementali gestite possono migliorare notevolmente i tempi di compilazione nelle soluzioni che includono progetti gestiti.
 
 ::: moniker-end
