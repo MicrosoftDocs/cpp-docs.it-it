@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 30dbc71a03c398c77124738b2477a3563191d50d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214984"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610907"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -63,7 +63,7 @@ I tipi consentiti sono:
 
 - classe enum pubblica
 
-La mappa è fondamentalmente un wrapper per [std::map](../standard-library/map-class.md). Si tratta di un'implementazione concreta di C++ dei tipi [Windows:: Foundation:: Collections:: IMAP<Windows:: Foundation:: \<K,V> > Collections:: IKeyValuePair](/uwp/api/windows.foundation.collections.imap-2) e [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) passati attraverso le interfacce Windows Runtime pubbliche. Se tenti di usare un tipo `Platform::Collections::Map` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. È possibile correggere l'errore modificando il tipo del parametro o del valore restituito in [Windows:: Foundation:: Collections:: \<K,V> IMAP](/uwp/api/windows.foundation.collections.imap-2).
+La mappa è fondamentalmente un wrapper per [std::map](../standard-library/map-class.md). Si tratta di un'implementazione concreta di C++ dei tipi [Windows:: Foundation:: Collections:: IMAP \<Windows::Foundation::Collections::IKeyValuePair\<K,V> > ](/uwp/api/windows.foundation.collections.imap-2) e [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) passati attraverso le interfacce di Windows Runtime pubbliche. Se tenti di usare un tipo `Platform::Collections::Map` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. È possibile correggere l'errore modificando il tipo del parametro o del valore restituito in [Windows:: Foundation:: Collections:: \<K,V> IMAP](/uwp/api/windows.foundation.collections.imap-2).
 
 Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
@@ -105,7 +105,7 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 **Spazio dei nomi:** Platform::Collections
 
-## <a name="mapclear-method"></a><a name="clear"></a>Metodo Map:: Clear
+## <a name="mapclear-method"></a><a name="clear"></a> Metodo Map:: Clear
 
 Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.
 
@@ -115,7 +115,7 @@ Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.
 virtual void Clear();
 ```
 
-## <a name="mapfirst-method"></a><a name="first"></a>Metodo Map:: First
+## <a name="mapfirst-method"></a><a name="first"></a> Metodo Map:: First
 
 Restituisce un iteratore che specifica il primo elemento nella mappa o **`nullptr`** se la mappa è vuota.
 
@@ -134,7 +134,7 @@ Iteratore che specifica il primo elemento nella mappa.
 
 Un modo pratico per conservare l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio: `auto x = myMap->First();`.
 
-## <a name="mapgetview-method"></a><a name="getview"></a>Metodo Map:: GetView
+## <a name="mapgetview-method"></a><a name="getview"></a> Metodo Map:: GetView
 
 Restituisce una visualizzazione di sola lettura dell'oggetto Map corrente. ovvero una [Classe Platform:: Collections:: MapView](../cppcx/platform-collections-mapview-class.md), che implementa l'interfaccia [Windows:: Foundation:: Collections:: \<K,V> IMapView](/uwp/api/windows.foundation.collections.imapview-2) .
 
@@ -148,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Un oggetto `MapView`.
 
-## <a name="maphaskey-method"></a><a name="haskey"></a>Metodo Map:: HasKey
+## <a name="maphaskey-method"></a><a name="haskey"></a> Metodo Map:: HasKey
 
 Determina se l'oggetto Map corrente contiene la chiave specificata.
 
@@ -167,7 +167,7 @@ Chiave usata per individuare l'elemento Map. Il tipo di *chiave* è TypeName *K*
 
 **`true`** Se la chiave viene trovata; in caso contrario, **`false`** .
 
-## <a name="mapinsert-method"></a><a name="insert"></a>Metodo Map:: Insert
+## <a name="mapinsert-method"></a><a name="insert"></a> Metodo Map:: Insert
 
 Aggiunge la coppia chiave-valore all'oggetto Map corrente.
 
@@ -189,7 +189,7 @@ Valore della coppia chiave-valore. Il tipo di *valore* è TypeName *V*.
 
 **`true`** Se la chiave di un elemento esistente nella mappa corrente corrisponde alla *chiave* e la parte relativa al valore dell'elemento è impostata su *value*. **`false`** Se nessun elemento esistente nell'oggetto Map corrente corrisponde alla *chiave* e i parametri *Key* e *value* vengono eseguiti in una coppia chiave-valore e quindi aggiunti alla mappa corrente.
 
-## <a name="maplookup-method"></a><a name="lookup"></a>Metodo Map:: Lookup
+## <a name="maplookup-method"></a><a name="lookup"></a> Metodo Map:: Lookup
 
 Recupera il valore di tipo V associato alla chiave specificata di tipo K, se la chiave esiste.
 
@@ -212,7 +212,7 @@ Valore abbinato alla *chiave*. Il tipo del valore restituito è TypeName *V*.
 
 Se la chiave non esiste, viene generata un'eccezione [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) .
 
-## <a name="mapmap-constructor"></a><a name="ctor"></a>Costruttore Map:: Map
+## <a name="mapmap-constructor"></a><a name="ctor"></a> Costruttore Map:: Map
 
 Inizializza una nuova istanza della classe Map.
 
@@ -246,7 +246,7 @@ Iteratore di input del primo elemento in un intervallo di elementi utilizzato pe
 *last*<br/>
 Iteratore di input del primo elemento dopo un intervallo di elementi utilizzato per inizializzare l'oggetto Map corrente.
 
-## <a name="mapmapchanged-event"></a><a name="mapchanged"></a>Evento map:: MapChanged
+## <a name="mapmapchanged-event"></a><a name="mapchanged"></a> Evento map:: MapChanged
 
 Generato quando un elemento viene inserito o rimosso dalla mappa.
 
@@ -264,7 +264,7 @@ Oggetto [MapChangedEventHandler \<K,V> ](/uwp/api/windows.foundation.collections
 
 Windows Runtime app che usano C# o Visual Basic progetto IMap \<K,V> come IDictionary \<K,V> .
 
-## <a name="mapremove-method"></a><a name="remove"></a>Metodo Map:: Remove
+## <a name="mapremove-method"></a><a name="remove"></a> Metodo Map:: Remove
 
 Elimina la coppia chiave-valore specificata dall'oggetto Map corrente.
 
@@ -279,7 +279,7 @@ virtual void Remove(K key);
 *key*<br/>
 Chiave della coppia chiave-valore. Il tipo di *chiave* è TypeName *K*.
 
-## <a name="mapsize-method"></a><a name="size"></a>Metodo Map:: size
+## <a name="mapsize-method"></a><a name="size"></a> Metodo Map:: size
 
 Restituisce il numero di elementi [Windows:: Foundation:: Collections: \<K,V> : IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) nella mappa.
 

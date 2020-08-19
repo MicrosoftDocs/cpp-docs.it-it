@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: d625d80df67a3c8207467ad629afd4c2bf88db18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23548df6718b9397db8521b2bebc6e8389859dcd
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318665"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610699"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -30,41 +30,41 @@ private ref class Array<TArg, 1> :
 
 ### <a name="members"></a>Membri
 
-Platform::Array eredita tutti i relativi metodi dalla [classe Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) e implementa la `Value` proprietà dell'interfaccia [Platform::IBoxArray](../cppcx/platform-iboxarray-interface.md).
+Platform:: Array eredita tutti i relativi metodi dalla [Classe Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) e implementa la `Value` proprietà dell' [interfaccia Platform:: IBoxArray](../cppcx/platform-iboxarray-interface.md).
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Costruttori Array](#ctor)|Inizializza una matrice unidimensionale modificabile modificabile di tipi specificati dal parametro di modello della classe, *T*.|
+|[Costruttori Array](#ctor)|Inizializza una matrice modificabile unidimensionale di tipi specificati dal parametro di modello di classe, *T*.|
 
 ### <a name="methods"></a>Metodi
 
-Vedere [Classe Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md).
+Vedere [Classe Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md).
 
 ### <a name="properties"></a>Proprietà
 
 |||
 |-|-|
-|[Matrice::Valore](#value)|Recupera un handle alla matrice corrente.|
+|[Array:: value](#value)|Recupera un handle alla matrice corrente.|
 
 ### <a name="remarks"></a>Osservazioni
 
 La classe Array è sealed e non può essere ereditata.
 
-Il sistema di tipi di Windows Runtime non supporta il concetto di matrici frastagliate e pertanto non è possibile passare un>> IVector<Platform::Array\<T come valore restituito o parametro del metodo. Per passare una matrice di matrici o una sequenza di sequenze attraverso l'interfaccia applicativa binaria (ABI), usa `IVector<IVector<T>^>`.
+Il sistema di tipi Windows Runtime non supporta il concetto di matrici di matrici e pertanto non è possibile passare `IVector<Platform::Array<T>>` come valore restituito o parametro di metodo. Per passare una matrice di matrici o una sequenza di sequenze attraverso l'interfaccia applicativa binaria (ABI), usa `IVector<IVector<T>^>`.
 
-Per ulteriori informazioni su quando e come utilizzare Platform::Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Per altre informazioni su quando e come usare Platform:: Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-Questa classe è definita nel file di intestazione vccorlib.h, che è incluso automaticamente dal compilatore. È visibile in IntelliSense ma non nel Visualizzatore oggetti perché non è un tipo pubblico definito in platform.winmd.
+Questa classe è definita nel file di intestazione vccorlib.h, che è incluso automaticamente dal compilatore. È visibile in IntelliSense ma non in Visualizzatore oggetti perché non è un tipo pubblico definito in Platform. winmd.
 
 ### <a name="requirements"></a>Requisiti
 
-L'opzione del compilatore: **//W**
+Opzione del compilatore: **/ZW**
 
-## <a name="array-constructors"></a><a name="ctor"></a>Costruttori di matriceArray Constructors
+## <a name="array-constructors"></a><a name="ctor"></a> Costruttori di matrici
 
-Inizializza una matrice unidimensionale modificabile modificabile di tipi specificati dal parametro di modello della classe, *T*.
+Inizializza una matrice modificabile unidimensionale di tipi specificati dal parametro di modello di classe, *T*.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -78,7 +78,7 @@ Array(T* data, unsigned int size);
 *T*<br/>
 Parametro di modello della classe.
 
-*Dimensione*<br/>
+*size*<br/>
 Numero di elementi nella matrice.
 
 *data*<br/>
@@ -86,9 +86,9 @@ Puntatore a una matrice di dati di tipo `T` utilizzato per inizializzare l'ogget
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni su come creare istanze di Platform::Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Per ulteriori informazioni sulla creazione di istanze di Platform:: Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="arrayget-method"></a><a name="get"></a>Metodo Array::get
+## <a name="arrayget-method"></a><a name="get"></a> Metodo Array:: Get
 
 Recupera un riferimento all'elemento di matrice in corrispondenza della posizione di indice specificata.
 
@@ -100,14 +100,14 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
-Indice in base zero che identifica un elemento della matrice. L'indice minimo è 0 e l'indice `size` massimo è il valore specificato dal parametro nel [costruttore Array](#ctor).
+*index*<br/>
+Indice in base zero che identifica un elemento della matrice. L'indice minimo è 0 e l'indice massimo è il valore specificato dal `size` parametro nel costruttore di [matrice](#ctor).
 
 ### <a name="return-value"></a>Valore restituito
 
 Elemento di matrice specificato dal parametro `index`.
 
-## <a name="arrayvalue-property"></a><a name="value"></a>Array::Value Proprietà
+## <a name="arrayvalue-property"></a><a name="value"></a> Proprietà Array:: value
 
 Recupera un handle alla matrice corrente.
 

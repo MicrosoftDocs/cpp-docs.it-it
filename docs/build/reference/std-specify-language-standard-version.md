@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9755194d70774f27af4c5174151588cc03d5f97a
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223824"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610959"
 ---
-# <a name="std-specify-language-standard-version"></a>`/std`(Specifica la versione standard del linguaggio)
+# <a name="std-specify-language-standard-version"></a>`/std` (Specifica la versione standard del linguaggio)
 
 Abilita le funzionalità supportate del linguaggio C++ dalla versione specificata dello standard del linguaggio C++.
 
@@ -21,17 +21,17 @@ Abilita le funzionalità supportate del linguaggio C++ dalla versione specificat
 
 > **`/std:c++14`**\
 > **`/std:c++17`**\
-> **`/std:c++latest`**]
+> **`/std:c++latest`**
 
 ## <a name="remarks"></a>Osservazioni
 
-L' **`/std`** opzione è disponibile in Visual Studio 2017 e versioni successive. Viene usato per controllare le funzionalità standard del linguaggio di programmazione ISO C++ specifiche della versione abilitate durante la compilazione del codice. Questa opzione consente di disabilitare il supporto per alcune nuove funzionalità della lingua e della libreria: quelle che potrebbero commettere il codice esistente che è conforme a una versione specifica dello standard del linguaggio. Per impostazione predefinita, **`/std:c++14`** è specificato, che disabilita le funzionalità della lingua e della libreria standard disponibili nelle versioni successive dello standard del linguaggio C++. Usare **`/std:c++17`** per abilitare le funzionalità e il comportamento specifici dello standard c++ 17. Per abilitare in modo esplicito le funzionalità del compilatore e della libreria standard attualmente implementate proposte per lo standard Draft successivo, usare **`/std:c++latest`** . Tutte le funzionalità di C++ 20 richiedono **`/std:c++latest`** . al termine dell'implementazione, **`/std:c++20`** verrà abilitata una nuova opzione.
+L' **`/std`** opzione è disponibile in Visual Studio 2017 e versioni successive. Viene usato per controllare le funzionalità standard del linguaggio di programmazione ISO C++ specifiche della versione abilitate durante la compilazione del codice. Questa opzione consente di disabilitare il supporto per alcune nuove funzionalità della lingua e della libreria: quelle che potrebbero commettere il codice esistente che è conforme a una versione specifica dello standard del linguaggio. Per impostazione predefinita, **`/std:c++14`** è specificato, che disabilita le funzionalità della lingua e della libreria standard disponibili nelle versioni successive dello standard del linguaggio C++. Usare  **`/std:c++17`** per abilitare le funzionalità e il comportamento specifici dello standard c++ 17. Per abilitare in modo esplicito le funzionalità del compilatore e della libreria standard attualmente implementate proposte per lo standard Draft successivo, usare **`/std:c++latest`** . Tutte le funzionalità di C++ 20 richiedono **`/std:c++latest`** . al termine dell'implementazione, **`/std:c++20`** verrà abilitata una nuova opzione.
 
 L' **`/std:c++14`** opzione predefinita abilita il set di funzionalità c++ 14 implementate dal compilatore MSVC. Questa opzione Disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni più recenti dello standard del linguaggio. Non Disabilita alcune funzionalità di C++ 17 già implementate nelle versioni precedenti del compilatore MSVC. Per evitare modifiche di rilievo per gli utenti che hanno già eseguito dipendenze dalle funzionalità disponibili in o prima di Visual Studio 2015 Update 2, queste funzionalità restano abilitate quando **`/std:c++14`** si specifica l'opzione:
 
 - [Regole per `auto` with braced-init-lists](https://wg21.link/n3922)
 
-- [`typename`in Template Template-Parameters](https://wg21.link/n4051)
+- [`typename` in Template Template-Parameters](https://wg21.link/n4051)
 
 - [Rimozione di trigrammi](https://wg21.link/n4086)
 

@@ -2,12 +2,12 @@
 title: Raccolte (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233509"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610946"
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 
@@ -39,7 +39,7 @@ Quando la classe deve passare un contenitore di sequenza a un altro componente W
 > [!IMPORTANT]
 > Se passi una sequenza nel tuo programma, utilizza `Vector` o `std::vector` perché sono più efficienti rispetto a `IVector`. Utilizza `IVector` solo quando passi il contenitore nell'ABI.
 >
-> Il sistema di tipi Windows Runtime non supporta il concetto di matrici di matrici e pertanto non è possibile passare un IVector<Platform:: array \<T>> come valore restituito o parametro di metodo. Per passare una matrice di matrici o una sequenza di sequenze attraverso l'interfaccia applicativa binaria (ABI), usa `IVector<IVector<T>^>`.
+> Il sistema di tipi Windows Runtime non supporta il concetto di matrici di matrici e pertanto non è possibile passare `IVector<Platform::Array<T>>` come valore restituito o parametro di metodo. Per passare una matrice di matrici o una sequenza di sequenze attraverso l'interfaccia applicativa binaria (ABI), usa `IVector<IVector<T>^>`.
 
 `Vector<T>` fornisce i metodi necessari per l'aggiunta, la rimozione e l'accesso agli elementi nella raccolta ed è implicitamente convertibile in `IVector<T>`. Puoi anche utilizzare gli algoritmi STL nelle istanze di `Vector<T>`. Nell'esempio riportato di seguito viene illustrato l'utilizzo di base. Le funzioni [begin](../cppcx/begin-function.md) e [end](../cppcx/end-function.md) derivano qui dallo spazio dei nomi `Platform::Collections` , non dallo spazio dei nomi `std` .
 
@@ -121,7 +121,7 @@ Iteratore STL che soddisfa le richieste di un iteratore di input STL.
 Iteratore STL che soddisfa le richieste di un iteratore STL di accesso causale modificabile.
 
 [Classe Platform:: Collections:: oggetto VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-Iteratore STL che soddisfa i requisiti di un **`const`** iteratore di accesso casuale STL.
+Iteratore STL che soddisfa i requisiti di un  **`const`** iteratore di accesso casuale STL.
 
 ### <a name="begin-and-end-functions"></a>Funzioni begin() ed end()
 

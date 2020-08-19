@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190494"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610848"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Elementi interni di MSBuild per i progetti C++
 
@@ -23,15 +23,15 @@ Per impostazione predefinita, i file di supporto di Visual Studio primari si tro
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *versione* \\ VCTargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *versione*\\
 
   Contiene i file di destinazione (con estensione targets) e i file di proprietà (con estensione props) primari che vengono usati dalle destinazioni. Per impostazione predefinita, la macro $(VCTargetsPath) fa riferimento a questa directory. Il segnaposto *versione* si riferisce alla versione di Visual Studio: V160 per visual studio 2019, carotatrice V150 per visual studio 2017.
 
-- % VSINSTALLDIR% MSBuild \\ \\ piattaforma Microsoft VC \\ *versione* \\ VCTargets \\ \\ *Platforms*\\
+- % VSINSTALLDIR% MSBuild \\ \\ \\ *version* \\ \\ *piattaforma* piattaforme Microsoft VC versione\\
 
   Contiene i file di destinazione e proprietà specifici della piattaforma che sostituiscono le destinazioni e le proprietà nella relativa directory padre. Questa directory contiene anche una DLL che definisce le attività che vengono usate dalle destinazioni in questa directory. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *versione* \\ VCTargets \\ piattaforme \\ *piattaforma* \\ PlatformToolsets \\ *set di strumenti*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *versione* \\ piattaforme \\ *piattaforma* \\ PlatformToolsets \\ *set di strumenti*\\
 
   Contiene le directory che consentono di compilare applicazioni C++ usando il *set di strumenti* specificato. Il segnaposto *piattaforma* rappresenta la sottodirectory ARM, Win32 o x64. Il segnaposto del *set* di strumenti rappresenta la sottodirectory del set di strumenti.
 
@@ -103,7 +103,7 @@ Per impostazione predefinita, le impostazioni specifiche della piattaforma per i
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
-### <a name="targets"></a>Targets
+### <a name="targets"></a>Server di destinazione
 
 Sono disponibili centinaia di destinazioni nei file di supporto di Visual Studio. Tuttavia, quasi tutte sono destinazioni orientate al sistema che l'utente può ignorare. La maggior parte delle destinazioni di sistema sono precedute da un carattere di sottolineatura ( `_` ) o hanno un nome che inizia con "PrepareFor", "Compute", "before", "After", "pre" o "post".
 
@@ -112,7 +112,7 @@ Nella tabella seguente sono elencate diverse destinazioni utili orientate all'ut
 | Destinazione | Descrizione |
 | ------ | ----------- |
 | BscMake | Esegue lo strumento Microsoft Browse Information Maintenance Utility, bscmake.exe. |
-| Compilazione | Compila il progetto.<br /><br /> Questa destinazione è l'impostazione predefinita per un progetto. |
+| Compilare | Compila il progetto.<br /><br /> Questa destinazione è l'impostazione predefinita per un progetto. |
 | ClCompile | Esegue lo strumento compilatore MSVC, cl.exe. |
 | Clean | Elimina i file di compilazione temporanei e intermedi. |
 | Lib | Esegue lo strumento di gestione librerie Microsoft a 32 bit, lib.exe. |
