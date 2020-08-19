@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stdext::allocator_variable_size
 - stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
-ms.openlocfilehash: 4e4c5ab0167d49c9ee892f39f18892edd004c3f6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 24769962d615c75f4573a6261b6000fadf39b218
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623710"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561349"
 ---
 # <a name="allocator_variable_size-class"></a>Classe allocator_variable_size
 
@@ -29,13 +29,12 @@ class allocator_variable_size;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Tipo*|Tipo degli elementi assegnato dall'allocatore.|
+*Tipo*\
+Tipo degli elementi assegnato dall'allocatore.
 
 ## <a name="remarks"></a>Osservazioni
 
-La [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) macro passa questa classe come parametro del *nome* nell'istruzione seguente:`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
+La [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) macro passa questa classe come parametro del *nome* nell'istruzione seguente: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
 
 ## <a name="requirements"></a>Requisiti
 

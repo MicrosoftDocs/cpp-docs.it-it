@@ -1,5 +1,5 @@
 ---
-title: CMFCImagePaintArea (classe)
+title: Classe Enumerazione CMFCImagePaintArea
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImagePaintArea
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: cd74d2418bb874553fbbafa637f527a7b84b73bf
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3d8bfc40c3c9e937ad5acd7228e49877af65204a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754274"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562155"
 ---
-# <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea (classe)
+# <a name="cmfcimagepaintarea-class"></a>Classe Enumerazione CMFCImagePaintArea
 
-Fornisce l'area dell'immagine utilizzata per modificare un'immagine in una finestra di dialogo dell'editor di immagini.
+Fornisce l'area immagine utilizzata per modificare un'immagine in una finestra di dialogo dell'editor di immagini.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,7 +40,7 @@ class CMFCImagePaintArea : public CButton
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Costruisce un oggetto `CMFCImagePaintArea`.|
+|[Enumerazione CMFCImagePaintArea:: Enumerazione CMFCImagePaintArea](#cmfcimagepaintarea)|Costruisce un oggetto `CMFCImagePaintArea`.|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -48,20 +48,20 @@ class CMFCImagePaintArea : public CButton
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCImagePaintArea::GetMode](#getmode)|Recupera la modalità di disegno corrente.|
-|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Imposta l'immagine bitmap per l'area dell'immagine.|
-|[CMFCImagePaintArea::SetColor](#setcolor)|Imposta il colore di disegno corrente.|
-|[CMFCImagePaintArea::SetMode](#setmode)|Imposta la modalità di disegno corrente.|
+|[Enumerazione CMFCImagePaintArea:: GetMode](#getmode)|Recupera la modalità di disegno corrente.|
+|[Enumerazione CMFCImagePaintArea:: sebitmap](#setbitmap)|Imposta l'immagine bitmap per l'area dell'immagine.|
+|[Enumerazione CMFCImagePaintArea:: ToColor](#setcolor)|Imposta il colore del disegno corrente.|
+|[Enumerazione CMFCImagePaintArea:: semode](#setmode)|Imposta la modalità di disegno corrente.|
 
 ### <a name="remarks"></a>Osservazioni
 
 Questa classe non è destinata a essere utilizzata direttamente dal codice.
 
-Il framework utilizza questa classe per visualizzare l'area dell'immagine in una finestra di dialogo dell'editor di immagini. Per ulteriori informazioni sulla finestra di dialogo dell'editor di immagini, vedere [Classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
+Il Framework usa questa classe per visualizzare l'area dell'immagine in una finestra di dialogo dell'editor di immagini. Per ulteriori informazioni sulla finestra di dialogo Editor di immagini, vedere [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come `CMFCImagePaintArea` costruire un oggetto della classe, impostare il colore di disegno corrente, impostare la modalità di disegno corrente e impostare l'immagine bitmap per l'area dell'immagine.
+Nell'esempio seguente viene illustrato come costruire un oggetto della `CMFCImagePaintArea` classe, impostare il colore di disegno corrente, impostare la modalità di disegno corrente e impostare l'immagine bitmap per l'area dell'immagine.
 
 [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]
 
@@ -75,13 +75,13 @@ Nell'esempio seguente viene illustrato come `CMFCImagePaintArea` costruire un og
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)
+[Enumerazione CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afximagepaintarea.h
+**Intestazione:** afximagepaintarea. h
 
-## <a name="cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea
+## <a name="cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a> Enumerazione CMFCImagePaintArea:: Enumerazione CMFCImagePaintArea
 
 Costruisce un oggetto `CMFCImagePaintArea`.
 
@@ -91,12 +91,10 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 
 ### <a name="parameters"></a>Parametri
 
-|||
-|-|-|
-|Parametro|Descrizione|
-|*pParentDlg*|[in] Puntatore alla finestra di dialogo padre dell'editor di immagini.|
+*pParentDlg*\
+in Puntatore alla finestra di dialogo padre dell'editor di immagini.
 
-## <a name="cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFCImagePaintArea::GetMode
+## <a name="cmfcimagepaintareagetmode"></a><a name="getmode"></a> Enumerazione CMFCImagePaintArea:: GetMode
 
 Recupera la modalità di disegno corrente.
 
@@ -108,7 +106,7 @@ IMAGE_EDIT_MODE GetMode() const;
 
 Valore [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) che specifica la modalità di disegno corrente.
 
-## <a name="cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap
+## <a name="cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a> Enumerazione CMFCImagePaintArea:: sebitmap
 
 Imposta l'immagine bitmap per l'area dell'immagine.
 
@@ -118,18 +116,16 @@ void SetBitmap(CBitmap* pBitmap);
 
 ### <a name="parameters"></a>Parametri
 
-|||
-|-|-|
-|Parametro|Descrizione|
-|*pBitmap*|[in] Nuova immagine bitmap da visualizzare.|
+*pBitmap*\
+in Nuova immagine bitmap da visualizzare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se *pBitmap* è NULL, questo metodo imposta la dimensione dell'area di disegno modificabile su zero. In caso contrario, imposta le dimensioni dell'area di disegno modificabile sulle dimensioni dell'immagine bitmap fornita.
+Se *pBitmap* è null, questo metodo imposta la dimensione dell'area di disegno modificabile su zero. In caso contrario, imposta la dimensione dell'area di disegno modificabile sulla dimensione dell'immagine bitmap fornita.
 
-## <a name="cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>CMFCImagePaintArea::SetColor
+## <a name="cmfcimagepaintareasetcolor"></a><a name="setcolor"></a> Enumerazione CMFCImagePaintArea:: ToColor
 
-Imposta il colore di disegno corrente.
+Imposta il colore del disegno corrente.
 
 ```cpp
 void SetColor(COLORREF color);
@@ -137,18 +133,16 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-|||
-|-|-|
-|Parametro|Descrizione|
-|*Colore*|[in] Nuovo colore di disegno.|
+*Colore*\
+in Nuovo colore del disegno.
 
 ### <a name="remarks"></a>Osservazioni
 
-Quando si seleziona un colore dalla barra della tavolozza dell'editor di immagini o dal selettore colore, il framework chiama questo metodo per aggiornare il colore di disegno corrente. Il colore di disegno iniziale è nero (un valore COLORREF pari a 0).
+Quando si seleziona un colore dalla barra della tavolozza dell'editor di immagini o dalla selezione colori, il Framework chiama questo metodo per aggiornare il colore del disegno corrente. Il colore iniziale del disegno è nero (il valore COLORREF è 0).
 
-Il colore di disegno viene utilizzato dalla finestra di dialogo dell'editor di immagini per tutte le modalità di disegno, ad eccezione di IMAGE_EDIT_MODE_COLOR. Per ulteriori informazioni sulle modalità di disegno, vedere [CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).
+Il colore di disegno viene utilizzato dalla finestra di dialogo Editor di immagini per tutte le modalità di disegno ad eccezione di IMAGE_EDIT_MODE_COLOR. Per ulteriori informazioni sulle modalità di disegno, vedere [Enumerazione CMFCImagePaintArea:: IMAGE_EDIT_MODE Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).
 
-## <a name="cmfcimagepaintareasetmode"></a><a name="setmode"></a>CMFCImagePaintArea::SetMode
+## <a name="cmfcimagepaintareasetmode"></a><a name="setmode"></a> Enumerazione CMFCImagePaintArea:: semode
 
 Imposta la modalità di disegno corrente.
 
@@ -158,13 +152,11 @@ void SetMode(IMAGE_EDIT_MODE mode);
 
 ### <a name="parameters"></a>Parametri
 
-|||
-|-|-|
-|Parametro|Descrizione|
-|*Modalità*|[in] Valore [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) che specifica la modalità di disegno corrente.|
+*modalità*\
+in Valore [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) che specifica la modalità di disegno corrente.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCImageEditorDialog (classe)](../../mfc/reference/cmfcimageeditordialog-class.md)
+[Classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ee422423356a18f1c81796790593a20dc03fbab
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366749"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560713"
 ---
 # <a name="cache_chunklist-class"></a>Classe cache_chunklist
 
@@ -30,15 +30,14 @@ class cache_chunklist
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Sz*|Numero di elementi della matrice da allocare.|
+*SZ*\
+Numero di elementi della matrice da allocare.
 
 ## <a name="remarks"></a>Osservazioni
 
-Questo modello di classe utilizza **operator new** per allocare blocchi di memoria non elaborata, suballocando blocchi per allocare spazio di archiviazione per un blocco di memoria quando necessario; archivia i blocchi di memoria deallocati in un elenco libero separato per ogni blocco e utilizza **operator delete** per deallocare un blocco quando nessuno dei relativi blocchi di memoria è in uso.
+Questo modello di classe USA **operator new** per allocare blocchi di memoria RAW, sottoallocando blocchi per allocare spazio di archiviazione per un blocco di memoria quando necessario; Archivia i blocchi di memoria deallocati in un elenco libero separato per ogni blocco e USA **operator delete** per deallocare un blocco quando nessuno dei blocchi di memoria è in uso.
 
-Ogni blocco di memoria contiene *Sz* byte di memoria utilizzabile e un puntatore al blocco a cui appartiene. Ogni blocco `Nelts` contiene blocchi di memoria, tre puntatori, un int e i dati che **l'operatore new** e **operator delete** richiedono.
+Ogni blocco di memoria include *SZ* byte di memoria utilizzabile e un puntatore al blocco a cui appartiene. Ogni blocco include `Nelts` blocchi di memoria, tre puntatori, int e i dati necessari per **operator new** e **operator delete** .
 
 ### <a name="constructors"></a>Costruttori
 
@@ -50,16 +49,16 @@ Ogni blocco di memoria contiene *Sz* byte di memoria utilizzabile e un puntatore
 
 |Funzione membro|Descrizione|
 |-|-|
-|[Allocare](#allocate)|Alloca un blocco di memoria.|
-|[Deallocare](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
+|[allocare](#allocate)|Alloca un blocco di memoria.|
+|[deallocare](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<allocators>
+**Intestazione:**\<allocators>
 
 **Spazio dei nomi:** stdext
 
-## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist::allocare
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a> cache_chunklist:: allocate
 
 Alloca un blocco di memoria.
 
@@ -69,9 +68,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*count*|Numero di elementi della matrice da allocare.|
+*conteggio*\
+Numero di elementi della matrice da allocare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -79,7 +77,7 @@ Puntatore all'oggetto allocato.
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a> cache_chunklist:: cache_chunklist
 
 Costruisce un oggetto di tipo `cache_chunklist`.
 
@@ -89,7 +87,7 @@ cache_chunklist();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::deallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a> cache_chunklist::d eallocate
 
 Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.
 
@@ -99,13 +97,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Ptr*|Puntatore al primo oggetto che deve essere deallocato dall'archivio.|
-|*count*|Numero di oggetti da deallocare dall'archivio.|
+*PTR*\
+Puntatore al primo oggetto che deve essere deallocato dall'archivio.
+
+*conteggio*\
+Numero di oggetti da deallocare dall'archivio.
 
 ### <a name="remarks"></a>Osservazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocatori>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217454"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560452"
 ---
 # <a name="span-class-c-standard-library"></a>classe Span (libreria standard C++)
 
@@ -73,12 +73,13 @@ template<class T, size_t Extent = dynamic_extent>
 class span;
 ```
 
-### <a name="template-parameters"></a>Parametri del modello
+### <a name="template-parameters"></a>Parametri di modelli
 
-|Parametro|Descrizione|
-|-|-|
-|`T`| Tipo degli elementi nell'intervallo. |
-|`Extent`| Numero di elementi nell'intervallo se specificato in fase di compilazione. In caso contrario `std::dynamic_extent` , se il numero di elementi verrà specificato in fase di esecuzione. |
+`T`\
+ Tipo degli elementi nell'intervallo.
+
+`Extent`\
+ Numero di elementi nell'intervallo se specificato in fase di compilazione. In caso contrario  `std::dynamic_extent` , se il numero di elementi verrà specificato in fase di esecuzione.
 
 [Guida alla deduzione](#deduction_guides)
 
@@ -742,7 +743,7 @@ Iteratore inverso per il segnaposto che segue l'ultimo elemento nell'intervallo 
 
 ### <a name="remarks"></a>Osservazioni
 
-`rend`viene usato con un intervallo invertito proprio come span [:: end](#end) viene usato con un intervallo. Usarlo per verificare se un iteratore inverso ha raggiunto la fine del relativo intervallo.
+`rend` viene usato con un intervallo invertito proprio come span [:: end](#end) viene usato con un intervallo. Usarlo per verificare se un iteratore inverso ha raggiunto la fine del relativo intervallo.
 
 `rend`Non è possibile dereferenziare il valore restituito da.
 
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`costruttori.
+`span` costruttori.
 
 ```cpp
 constexpr span() noexcept
@@ -962,7 +963,7 @@ Un intervallo non libera spazio di archiviazione per gli elementi nell'intervall
 |---------|---------|
 |`span()` | Costruisce un intervallo vuoto. Viene considerato solo durante la risoluzione dell'overload quando il parametro di modello `Extent` è `0` o `dynamic_extent` .|
 |`span(It first, size_type count)` | Costruisce un intervallo dai primi `count` elementi dell'iteratore `first` .  Considerato solo durante la risoluzione dell'overload quando il parametro di modello `Extent` non è `dynamic_extent` . |
-|`span(It first, End last)` | Costruisce un intervallo dagli elementi nell'iteratore `first` fino a quando non `last` viene raggiunta la fine. Considerato solo durante la risoluzione dell'overload quando il parametro di modello `Extent` non è `dynamic_extent` . `It`deve essere un oggetto `contiguous_iterator` .  |
+|`span(It first, End last)` | Costruisce un intervallo dagli elementi nell'iteratore `first` fino a quando non `last` viene raggiunta la fine. Considerato solo durante la risoluzione dell'overload quando il parametro di modello `Extent` non è `dynamic_extent` . `It` deve essere un oggetto `contiguous_iterator` .  |
 |`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  Costruisce un intervallo dagli `N` elementi della matrice specificata. Viene considerato solo durante la risoluzione dell'overload quando il parametro di modello `Extent` è `dynamic_extent` o è uguale a `N` . |
 |`span(R&& r)` |  Costruire un intervallo da un intervallo. Partecipa solo alla risoluzione dell'overload se il parametro di modello `Extent` non è `dynamic_extent` .|
 |`span(const span& other)` |  Costruttore di copia generato dal compilatore. Una copia superficiale del puntatore dati è sicura perché l'intervallo non alloca la memoria per conservare gli elementi. |
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>Guide per la deduzione
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> Guide per la deduzione
 
 Per span sono disponibili le guide di deduzione seguenti.
 

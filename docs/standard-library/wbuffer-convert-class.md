@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ba8c98075741ae6cb8db0ecdfcb1e18cf4f4f89c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688535"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561115"
 ---
 # <a name="wbuffer_convert-class"></a>Classe wbuffer_convert
 
@@ -27,15 +27,18 @@ class wbuffer_convert
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Codecvt*|Facet delle [impostazioni locali](../standard-library/locale-class.md) che rappresenta l'oggetto di conversione.|
-|*Elem*|Tipo di elemento a caratteri "wide".|
-|*Tratti*|Tratti associati a *Elem*.|
+*Codecvt*\
+Facet delle [impostazioni locali](../standard-library/locale-class.md) che rappresenta l'oggetto di conversione.
 
-## <a name="remarks"></a>Note
+*Elem*\
+Tipo di elemento a caratteri "wide".
 
-Questo modello di classe descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `_Elem`, i cui tratti di carattere sono descritti dalla classe `Traits`, da e verso un buffer del flusso di byte di tipo `std::streambuf`.
+*Tratti*\
+Tratti associati a *Elem*.
+
+## <a name="remarks"></a>Osservazioni
+
+Questo modello di classe descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `_Elem` , i cui tratti di carattere sono descritti dalla classe `Traits` , verso e da un buffer del flusso di byte di tipo `std::streambuf` .
 
 La conversione tra una sequenza di valori `Elem` e sequenze multibyte viene eseguita da un oggetto della classe `Codecvt<Elem, char, std::mbstate_t>`, che soddisfa i requisiti del facet standard di conversione del codice `std::codecvt<Elem, char, std::mbstate_t>`.
 

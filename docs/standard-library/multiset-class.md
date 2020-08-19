@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: f481848228e1d93e457ce79948bacd5f3e6d4760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69a884a2b60e7838154586dd0dcc8c1d54681b53
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224721"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561167"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -211,7 +211,7 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 
 **Spazio dei nomi:** std
 
-## <a name="multisetallocator_type"></a><a name="allocator_type"></a>multiset:: allocator_type
+## <a name="multisetallocator_type"></a><a name="allocator_type"></a> multiset:: allocator_type
 
 Tipo che rappresenta la classe allocator per l'oggetto multiset.
 
@@ -229,7 +229,7 @@ Per altre informazioni su `Allocator`, vedere la sezione Note dell'argomento [Cl
 
 Vedere l'esempio relativo a [get_allocator](#get_allocator) per indicazioni su come usare `allocator_type`.
 
-## <a name="multisetbegin"></a><a name="begin"></a>multiset:: Begin
+## <a name="multisetbegin"></a><a name="begin"></a> multiset:: Begin
 
 Restituisce un iteratore che punta al primo elemento dell'oggetto multiset.
 
@@ -282,7 +282,7 @@ The first element of ms1 is 1
 The first element of ms1 is now 2
 ```
 
-## <a name="multisetcbegin"></a><a name="cbegin"></a>multiset:: cbegin
+## <a name="multisetcbegin"></a><a name="cbegin"></a> multiset:: cbegin
 
 Restituisce un **`const`** iteratore che punta al primo elemento nell'intervallo.
 
@@ -308,7 +308,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="multisetcend"></a><a name="cend"></a>multiset:: cend
+## <a name="multisetcend"></a><a name="cend"></a> multiset:: cend
 
 Restituisce un **`const`** iteratore che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
@@ -336,7 +336,7 @@ auto i2 = Container.cend();
 
 Non è consigliabile dereferenziare il valore restituito da `cend`.
 
-## <a name="multisetclear"></a><a name="clear"></a>multiset:: Clear
+## <a name="multisetclear"></a><a name="clear"></a> multiset:: Clear
 
 Cancella tutti gli elementi di un oggetto multiset.
 
@@ -374,7 +374,7 @@ The size of the multiset is initially 2.
 The size of the multiset after clearing is 0.
 ```
 
-## <a name="multisetconst_iterator"></a><a name="const_iterator"></a>multiset:: const_iterator
+## <a name="multisetconst_iterator"></a><a name="const_iterator"></a> multiset:: const_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere un **`const`** elemento nell'oggetto multiset.
 
@@ -390,7 +390,7 @@ Un tipo `const_iterator` non può essere usato per modificare il valore di un el
 
 Vedere l'esempio relativo a [begin](#begin) per indicazioni su come usare `const_iterator`.
 
-## <a name="multisetconst_pointer"></a><a name="const_pointer"></a>multiset:: const_pointer
+## <a name="multisetconst_pointer"></a><a name="const_pointer"></a> multiset:: const_pointer
 
 Tipo che fornisce un puntatore a un **`const`** elemento in un oggetto multiset.
 
@@ -404,7 +404,7 @@ Un tipo `const_pointer` non può essere usato per modificare il valore di un ele
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto multiset.
 
-## <a name="multisetconst_reference"></a><a name="const_reference"></a>multiset:: const_reference
+## <a name="multisetconst_reference"></a><a name="const_reference"></a> multiset:: const_reference
 
 Tipo che fornisce un riferimento a un **`const`** elemento archiviato in un oggetto multiset per la lettura e l'esecuzione di **`const`** operazioni.
 
@@ -445,7 +445,7 @@ int main( )
 The first element in the multiset is 10.
 ```
 
-## <a name="multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>multiset:: const_reverse_iterator
+## <a name="multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> multiset:: const_reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi **`const`** elemento nell'oggetto multiset.
 
@@ -461,7 +461,7 @@ Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e 
 
 Vedere l'esempio relativo a [rend](#rend) per indicazioni su come dichiarare e usare `const_reverse_iterator`.
 
-## <a name="multisetcount"></a><a name="count"></a>multiset:: count
+## <a name="multisetcount"></a><a name="count"></a> multiset:: count
 
 Restituisce il numero di elementi di un multiset la cui chiave corrisponde a una chiave specificata dal parametro.
 
@@ -482,7 +482,7 @@ Il numero di elementi nel multiset la cui chiave di ordinamento corrisponde alla
 
 La funzione membro restituisce il numero di elementi *x* nell'intervallo
 
-\[lower_bound (*chiave*), upper_bound (*chiave*)
+\[ lower_bound (*chiave*), upper_bound (*chiave*)
 
 ### <a name="example"></a>Esempio
 
@@ -526,7 +526,7 @@ The number of elements in ms1 with a sort key of 2 is: 1.
 The number of elements in ms1 with a sort key of 3 is: 0.
 ```
 
-## <a name="multisetcrbegin"></a><a name="crbegin"></a>multiset:: crbegin
+## <a name="multisetcrbegin"></a><a name="crbegin"></a> multiset:: crbegin
 
 Restituisce un iteratore const che punta al primo elemento di un multiset invertito.
 
@@ -574,7 +574,7 @@ int main( )
 The first element in the reversed multiset is 30.
 ```
 
-## <a name="multisetcrend"></a><a name="crend"></a>multiset:: crend
+## <a name="multisetcrend"></a><a name="crend"></a> multiset:: crend
 
 Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un oggetto multiset invertito.
 
@@ -620,7 +620,7 @@ int main() {
 }
 ```
 
-## <a name="multisetdifference_type"></a><a name="difference_type"></a>multiset::d ifference_type
+## <a name="multisetdifference_type"></a><a name="difference_type"></a> multiset::d ifference_type
 
 Tipo Signed Integer che può essere usato per rappresentare il numero di elementi di un oggetto multiset in un intervallo compreso tra gli elementi a cui puntano gli iteratori.
 
@@ -692,7 +692,7 @@ The number '20' occurs 2 times in multiset ms1.
 The number of elements in the multiset ms1 is: 3.
 ```
 
-## <a name="multisetemplace"></a><a name="emplace"></a>multiset:: emplace
+## <a name="multisetemplace"></a><a name="emplace"></a> multiset:: emplace
 
 Inserisce un elemento costruito in locale (senza che vengano eseguite operazioni di copia o di spostamento), con un suggerimento sulla posizione.
 
@@ -703,9 +703,8 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|-|-|
-|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multiset.|
+*args*\
+Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multiset.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -758,7 +757,7 @@ int main()
 }
 ```
 
-## <a name="multisetemplace_hint"></a><a name="emplace_hint"></a>multiset:: emplace_hint
+## <a name="multisetemplace_hint"></a><a name="emplace_hint"></a> multiset:: emplace_hint
 
 Inserisce un elemento costruito in locale (senza che vengano eseguite operazioni di copia o di spostamento), con un suggerimento sulla posizione.
 
@@ -771,10 +770,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|-|-|
-|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multiset.|
-|*where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto precede immediatamente la *posizione*, l'inserimento può essere eseguito in tempo costante ammortizzato anziché in tempo logaritmico.|
+*args*\
+Argomenti inoltrati per costruire un elemento da inserire nell'oggetto multiset.
+
+*in cui*\
+Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto precede immediatamente la *posizione*, l'inserimento può essere eseguito in tempo costante ammortizzato anziché in tempo logaritmico.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -788,7 +788,7 @@ Se viene generata un'eccezione durante l'inserimento, lo stato del contenitore n
 
 Per un esempio di codice, vedere [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="multisetempty"></a><a name="empty"></a>multiset:: Empty
+## <a name="multisetempty"></a><a name="empty"></a> multiset:: Empty
 
 Verifica se un oggetto multiset è vuoto.
 
@@ -831,7 +831,7 @@ The multiset ms1 is not empty.
 The multiset ms2 is empty.
 ```
 
-## <a name="multisetend"></a><a name="end"></a>multiset:: end
+## <a name="multisetend"></a><a name="end"></a> multiset:: end
 
 Restituisce l'iteratore successivo all'ultimo valore.
 
@@ -853,7 +853,7 @@ Non è consigliabile dereferenziare il valore restituito da **end**.
 
 Per un esempio di codice, vedere [multiset::find](#find).
 
-## <a name="multisetequal_range"></a><a name="equal_range"></a>multiset:: equal_range
+## <a name="multisetequal_range"></a><a name="equal_range"></a> multiset:: equal_range
 
 Restituisce una coppia di iteratori rispettivamente al primo elemento di un oggetto multiset con una chiave maggiore di una chiave specificata e al primo elemento dell'oggetto multiset con una chiave uguale o maggiore di tale chiave.
 
@@ -932,7 +932,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The multiset ms1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="multiseterase"></a><a name="erase"></a>multiset:: erase
+## <a name="multiseterase"></a><a name="erase"></a> multiset:: erase
 
 Rimuove un elemento o un intervallo di elementi di un oggetto multiset dalle posizioni specificate oppure rimuove gli elementi che corrispondono a una chiave specificata.
 
@@ -972,7 +972,7 @@ Per la terza funzione membro, restituisce il numero di elementi rimossi dall'ogg
 
 Per un esempio di codice, vedere [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="multisetfind"></a><a name="find"></a>multiset:: Find
+## <a name="multisetfind"></a><a name="find"></a> multiset:: Find
 
 Restituisce un iteratore che fa riferimento alla posizione di un elemento in un multiset che contiene una chiave equivalente a una chiave specificata.
 
@@ -1058,7 +1058,7 @@ int main()
 }
 ```
 
-## <a name="multisetget_allocator"></a><a name="get_allocator"></a>multiset:: get_allocator
+## <a name="multisetget_allocator"></a><a name="get_allocator"></a> multiset:: get_allocator
 
 Restituisce una copia dell'oggetto allocatore usato per costruire l'oggetto multiset.
 
@@ -1126,7 +1126,7 @@ int main( )
 }
 ```
 
-## <a name="multisetinsert"></a><a name="insert"></a>multiset:: Insert
+## <a name="multisetinsert"></a><a name="insert"></a> multiset:: Insert
 
 Inserisce un elemento o un intervallo di elementi in un multiset.
 
@@ -1166,15 +1166,26 @@ IList);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|-|-|
-|*Val*|Valore di un elemento da inserire nel multiset.|
-|*Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto precede immediatamente la *posizione*, l'inserimento può essere eseguito in tempo costante ammortizzato anziché in tempo logaritmico.|
-|*ValTy*|Parametro di modello che specifica il tipo di argomento che può essere usato dall'oggetto multiset per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e che consente di eseguire l'avanzamento perfetto di *Val* come argomento.|
-|*First*|Posizione del primo elemento da copiare.|
-|*Ultima*|Posizione immediatamente dopo l'ultimo elemento da copiare.|
-|*InputIterator*|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
+*Val*\
+Valore di un elemento da inserire nel multiset.
+
+*In cui*\
+Posizione in cui iniziare a cercare il punto di inserimento corretto. Se il punto precede immediatamente la *posizione*, l'inserimento può essere eseguito in tempo costante ammortizzato anziché in tempo logaritmico.
+
+*ValTy*\
+Parametro di modello che specifica il tipo di argomento che può essere usato dall'oggetto multiset per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e che consente di eseguire l'avanzamento perfetto di *Val* come argomento.
+
+*Prima*\
+Posizione del primo elemento da copiare.
+
+*Ultima*\
+Posizione immediatamente dopo l'ultimo elemento da copiare.
+
+*InputIterator*\
+Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).
+
+*IList*\
+[Initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1286,7 +1297,7 @@ int main()
 }
 ```
 
-## <a name="multisetiterator"></a><a name="iterator"></a>multiset:: iterator
+## <a name="multisetiterator"></a><a name="iterator"></a> multiset:: iterator
 
 Tipo che fornisce un [iteratore bidirezionale](../standard-library/bidirectional-iterator-tag-struct.md) costante in grado di leggere qualsiasi elemento in un oggetto multiset.
 
@@ -1298,7 +1309,7 @@ typedef implementation-defined iterator;
 
 Vedere l'esempio relativo a [Begin](#begin) per un esempio di come dichiarare e usare un oggetto `iterator` .
 
-## <a name="multisetkey_comp"></a><a name="key_comp"></a>multiset:: key_comp
+## <a name="multisetkey_comp"></a><a name="key_comp"></a> multiset:: key_comp
 
 Recupera una copia dell'oggetto di confronto usato per ordinare le chiavi di un oggetto multiset.
 
@@ -1373,7 +1384,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.
 ```
 
-## <a name="multisetkey_compare"></a><a name="key_compare"></a>multiset:: key_compare
+## <a name="multisetkey_compare"></a><a name="key_compare"></a> multiset:: key_compare
 
 Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi nell'oggetto multiset.
 
@@ -1391,7 +1402,7 @@ Per altre informazioni su `Compare`, vedere la sezione Note dell'argomento [Clas
 
 Vedere l'esempio relativo a [key_comp](#key_comp) per indicazioni su come dichiarare e usare `key_compare`.
 
-## <a name="multisetkey_type"></a><a name="key_type"></a>multiset:: key_type
+## <a name="multisetkey_type"></a><a name="key_type"></a> multiset:: key_type
 
 Tipo che fornisce un oggetto funzione in grado di confrontare le chiavi di ordinamento per determinare l'ordine relativo di due elementi nell'oggetto multiset.
 
@@ -1409,7 +1420,7 @@ Per altre informazioni su `Key`, vedere la sezione Note dell'argomento [Classe m
 
 Vedere l'esempio relativo a [value_type](#value_type) per indicazioni su come dichiarare e usare `key_type`.
 
-## <a name="multisetlower_bound"></a><a name="lower_bound"></a>multiset:: lower_bound
+## <a name="multisetlower_bound"></a><a name="lower_bound"></a> multiset:: lower_bound
 
 Restituisce un iteratore al primo elemento di un oggetto multiset con una chiave uguale o maggiore di una chiave specificata.
 
@@ -1477,7 +1488,7 @@ The multiset ms1 doesn't have an element with a key of 40.
 The element of ms1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="multisetmax_size"></a><a name="max_size"></a>multiset:: max_size
+## <a name="multisetmax_size"></a><a name="max_size"></a> multiset:: max_size
 
 Restituisce la lunghezza massima dell'oggetto multiset.
 
@@ -1509,7 +1520,7 @@ int main( )
 }
 ```
 
-## <a name="multisetmultiset"></a><a name="multiset"></a>multiset:: multiset
+## <a name="multisetmultiset"></a><a name="multiset"></a> multiset:: multiset
 
 Costruisce un oggetto multiset vuoto o che rappresenta una copia totale o parziale di un altro oggetto multiset.
 
@@ -1562,14 +1573,23 @@ multiset (
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|-|-|
-|*Al*|Classe dell'allocatore di memoria da usare per l'oggetto multiset. Per impostazione predefinita è `Allocator`.|
-|*Comp*|Funzione di confronto di tipo `const Compare` usata per ordinare gli elementi nell'oggetto multiset. Per impostazione predefinita è `Compare`.|
-|*Ok*|Oggetto multiset di cui il multiset costruito deve essere una copia.|
-|*First*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
-|*Ultima*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
-|*IList*|initializer_list da cui copiare gli elementi.|
+*Al*\
+Classe dell'allocatore di memoria da usare per l'oggetto multiset. Per impostazione predefinita è `Allocator`.
+
+*Comp*\
+Funzione di confronto di tipo `const Compare` usata per ordinare gli elementi nell'oggetto multiset. Per impostazione predefinita è `Compare`.
+
+*Ok*\
+Oggetto multiset di cui il multiset costruito deve essere una copia.
+
+*Prima*\
+Posizione del primo elemento nell'intervallo di elementi da copiare.
+
+*Ultima*\
+Posizione del primo elemento oltre l'intervallo di elementi da copiare.
+
+*IList*\
+initializer_list da cui copiare gli elementi.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1690,7 +1710,7 @@ int main()
 }
 ```
 
-## <a name="multisetoperator"></a><a name="op_eq"></a>multiset:: operator =
+## <a name="multisetoperator"></a><a name="op_eq"></a> multiset:: operator =
 
 Sostituisce gli elementi di questo oggetto `multiset` usando gli elementi di un altro oggetto `multiset`.
 
@@ -1702,13 +1722,12 @@ multiset& operator=(multiset&& right);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|-|-|
-|*Ok*|Oggetto `multiset` da cui gli elementi vengono copiati o spostati.|
+*Ok*\
+Oggetto `multiset` da cui gli elementi vengono copiati o spostati.
 
 ### <a name="remarks"></a>Osservazioni
 
-`operator=`copia o sposta gli elementi all' *interno di* questo oggetto `multiset` , a seconda del tipo di riferimento (lvalue o rvalue) utilizzato. Gli elementi presenti in questo oggetto `multiset` prima dell'esecuzione di `operator=` vengono eliminati.
+`operator=` copia o sposta gli elementi all' *interno di* questo oggetto `multiset` , a seconda del tipo di riferimento (lvalue o rvalue) utilizzato. Gli elementi presenti in questo oggetto `multiset` prima dell'esecuzione di `operator=` vengono eliminati.
 
 ### <a name="example"></a>Esempio
 
@@ -1747,7 +1766,7 @@ int main( )
    }
 ```
 
-## <a name="multisetpointer"></a><a name="pointer"></a>multiset::p ointer
+## <a name="multisetpointer"></a><a name="pointer"></a> multiset::p ointer
 
 Tipo che fornisce un puntatore a un elemento di un oggetto multiset.
 
@@ -1761,7 +1780,7 @@ Un tipo **pointer** può essere usato per modificare il valore di un elemento.
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto multiset.
 
-## <a name="multisetrbegin"></a><a name="rbegin"></a>multiset:: rbegin
+## <a name="multisetrbegin"></a><a name="rbegin"></a> multiset:: rbegin
 
 Restituisce un iteratore che punta al primo elemento di un multiset invertito.
 
@@ -1838,7 +1857,7 @@ The reversed multiset is: 30 20 10
 After the erasure, the first element in the reversed multiset is 20.
 ```
 
-## <a name="multisetreference"></a><a name="reference"></a>multiset:: Reference
+## <a name="multisetreference"></a><a name="reference"></a> multiset:: Reference
 
 Tipo che fornisce un riferimento a un elemento archiviato in un oggetto multiset.
 
@@ -1874,7 +1893,7 @@ int main( )
 The first element in the multiset is 10.
 ```
 
-## <a name="multisetrend"></a><a name="rend"></a>multiset:: rend
+## <a name="multisetrend"></a><a name="rend"></a> multiset:: rend
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un oggetto multiset invertito.
 
@@ -1947,7 +1966,7 @@ int main() {
 }
 ```
 
-## <a name="multisetreverse_iterator"></a><a name="reverse_iterator"></a>multiset:: reverse_iterator
+## <a name="multisetreverse_iterator"></a><a name="reverse_iterator"></a> multiset:: reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un oggetto multiset invertito.
 
@@ -1963,7 +1982,7 @@ Un tipo `reverse_iterator` viene usato per eseguire l'iterazione sull'oggetto mu
 
 Vedere l'esempio relativo a [rbegin](#rbegin) per indicazioni su come dichiarare e usare `reverse_iterator`.
 
-## <a name="multisetsize"></a><a name="size"></a>multiset:: size
+## <a name="multisetsize"></a><a name="size"></a> multiset:: size
 
 Restituisce il numero di elementi nell'oggetto multiset.
 
@@ -2004,7 +2023,7 @@ The multiset length is 1.
 The multiset length is now 2.
 ```
 
-## <a name="multisetsize_type"></a><a name="size_type"></a>multiset:: size_type
+## <a name="multisetsize_type"></a><a name="size_type"></a> multiset:: size_type
 
 Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un oggetto multiset.
 
@@ -2016,7 +2035,7 @@ typedef typename allocator_type::size_type size_type;
 
 Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="multisetswap"></a><a name="swap"></a>multiset:: swap
+## <a name="multisetswap"></a><a name="swap"></a> multiset:: swap
 
 Scambia gli elementi di due oggetti multiset.
 
@@ -2084,7 +2103,7 @@ After swapping with ms2, list ms1 is: 100 200.
 After swapping with ms3, list ms1 is: 300.
 ```
 
-## <a name="multisetupper_bound"></a><a name="upper_bound"></a>multiset:: upper_bound
+## <a name="multisetupper_bound"></a><a name="upper_bound"></a> multiset:: upper_bound
 
 Restituisce un iteratore al primo elemento di un oggetto multiset con una chiave maggiore di una chiave specificata.
 
@@ -2152,7 +2171,7 @@ The first element of ms1 with a key greater than
 that of the initial element of ms1 is: 20.
 ```
 
-## <a name="multisetvalue_comp"></a><a name="value_comp"></a>multiset:: value_comp
+## <a name="multisetvalue_comp"></a><a name="value_comp"></a> multiset:: value_comp
 
 Recupera una copia dell'oggetto di confronto usato per ordinare i valori degli elementi di un oggetto multiset.
 
@@ -2227,7 +2246,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of ms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.
 ```
 
-## <a name="multisetvalue_compare"></a><a name="value_compare"></a>multiset:: value_compare
+## <a name="multisetvalue_compare"></a><a name="value_compare"></a> multiset:: value_compare
 
 Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinarne l'ordine relativo nell'oggetto multiset.
 
@@ -2247,7 +2266,7 @@ Per altre informazioni su `Compare`, vedere la sezione Note dell'argomento [Clas
 
 Vedere l'esempio relativo a [value_comp](#value_comp) per indicazioni su come dichiarare e usare `value_compare`.
 
-## <a name="multisetvalue_type"></a><a name="value_type"></a>multiset:: value_type
+## <a name="multisetvalue_type"></a><a name="value_type"></a> multiset:: value_type
 
 Tipo che descrive un oggetto archiviato come elemento di un oggetto multiset in qualità di valore.
 

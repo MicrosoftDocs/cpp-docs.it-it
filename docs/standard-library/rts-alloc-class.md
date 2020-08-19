@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: f422b171c14695a1207a30419a10d50cdfb5adf0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228128"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560556"
 ---
 # <a name="rts_alloc-class"></a>Classe rts_alloc
 
@@ -32,9 +32,8 @@ class rts_alloc
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*Cache*|Il tipo delle istanze cache contenuto nell'array. Può essere la [classe cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Cache*\
+Il tipo delle istanze cache contenuto nell'array. Può essere [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) o [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -44,7 +43,7 @@ Questo modello di classe include più istanze dell'allocatore di blocchi e deter
 
 |Funzione membro|Descrizione|
 |-|-|
-|[allocate](#allocate)|Alloca un blocco di memoria.|
+|[allocare](#allocate)|Alloca un blocco di memoria.|
 |[deallocare](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
 |[equals](#equals)|Confronta due cache per stabilirne l'uguaglianza.|
 
@@ -54,7 +53,7 @@ Questo modello di classe include più istanze dell'allocatore di blocchi e deter
 
 **Spazio dei nomi:** stdext
 
-## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc:: allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a> rts_alloc:: allocate
 
 Alloca un blocco di memoria.
 
@@ -64,9 +63,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*count*|Numero di elementi della matrice da allocare.|
+*conteggio*\
+Numero di elementi della matrice da allocare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -76,7 +74,7 @@ Puntatore all'oggetto allocato.
 
 La funzione membro restituisce `caches[_IDX].allocate(count)` , in cui l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator new(count)` . Oggetto `cache` che rappresenta l'oggetto cache.
 
-## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::d eallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d eallocate
 
 Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.
 
@@ -86,16 +84,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*ptr*|Puntatore al primo oggetto che deve essere deallocato dall'archivio.|
-|*count*|Numero di oggetti da deallocare dall'archivio.|
+*PTR*\
+Puntatore al primo oggetto che deve essere deallocato dall'archivio.
+
+*conteggio*\
+Numero di oggetti da deallocare dall'archivio.
 
 ### <a name="remarks"></a>Osservazioni
 
 La funzione membro chiama `caches[_IDX].deallocate(ptr, count)` , dove l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator delete(ptr)` .
 
-## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc:: Equals
+## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: Equals
 
 Confronta due cache per stabilirne l'uguaglianza.
 
@@ -105,10 +104,11 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*_Cache*|Oggetto cache associato al filtro.|
-|*_Other*|Oggetto cache da confrontare per verificarne l'uguaglianza.|
+*_Cache*\
+Oggetto cache associato al filtro.
+
+*_Other*\
+Oggetto cache da confrontare per verificarne l'uguaglianza.
 
 ### <a name="remarks"></a>Osservazioni
 

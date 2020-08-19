@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948556"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562038"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
@@ -57,15 +57,15 @@ Destinazione dei messaggi di errore.
 
 Restituisce la precedente impostazione o -1 se si verifica un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Controlla il sink di output degli errori impostando il valore di **__error_mode**. Ad esempio, è possibile indirizzare l'output a un errore standard o usare l'API **MessageBox** .
 
 Il parametro *mode_val* può essere impostato su uno dei valori seguenti.
 
-|Parametro|DESCRIZIONE|
+|valore|Descrizione|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|Il sink di errore è determinato da **__app_type**.|
+|**_OUT_TO_DEFAULT**|Il sink di errore è determinato dal **__app_type**.|
 |**_OUT_TO_STDERR**|Il sink di errore è un errore standard.|
 |**_OUT_TO_MSGBOX**|Il sink di errore è una finestra di messaggio.|
 |**_REPORT_ERRMODE**|Segnala il valore **__error_mode** corrente.|
@@ -104,4 +104,4 @@ Please contact the application's support team for more information.
 
 ## <a name="see-also"></a>Vedere anche
 
-[assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
+[Macro ASSERT, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

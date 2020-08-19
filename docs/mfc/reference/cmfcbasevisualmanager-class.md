@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754884"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561323"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe CMFCBaseVisualManager
 
-Un livello tra i gestori visivi derivati e l'API del tema di Windows.
+Livello tra i gestori degli oggetti visivi derivati e l'API del tema di Windows.
 
-`CMFCBaseVisualManager`carica UxTheme.dll, se disponibile, e gestisce l'accesso ai metodi dell'API del tema di Windows.
+`CMFCBaseVisualManager` carica UxTheme.dll, se disponibile, e gestisce l'accesso ai metodi dell'API del tema di Windows.
 
 Questa classe è solo per uso interno.
 
@@ -56,7 +56,7 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Costruisce e inizializza un oggetto `CMFCBaseVisualManager`.|
+|[CMFCBaseVisualManager:: CMFCBaseVisualManager](#cmfcbasevisualmanager)|Costruisce e inizializza un oggetto `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -64,28 +64,28 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|Disegna un controllo casella di controllo utilizzando il tema di Windows corrente.|
-|[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Disegna un bordo della casella combinata utilizzando il tema di Windows corrente.|
-|[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Disegna un pulsante a discesa della casella combinata utilizzando il tema di Windows corrente.|
-|[CMFCBaseVisualManager::DrawPushButton](#drawpushbutton)|Disegna un pulsante di comando utilizzando il tema di Windows corrente.|
-|[CMFCBaseVisualManager::DrawRadioButton](#drawradiobutton)|Disegna un controllo pulsante di opzione utilizzando il tema di Windows corrente.|
-|[CMFCBaseVisualManager::DrawStatusBarProgress](#drawstatusbarprogress)|Disegna un indicatore di stato su un controllo barra di stato ( [CMFCStatusBar class](../../mfc/reference/cmfcstatusbar-class.md)) utilizzando il tema di Windows corrente.|
-|[CMFCBaseVisualManager::FillReBarPane](#fillrebarpane)|Riempie lo sfondo del controllo Rebar utilizzando il tema di Windows corrente.|
-|[CMFCBaseVisualManager::GetStandardWindowsTheme](#getstandardwindowstheme)|Ottiene il tema di Windows corrente.|
+|[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|Disegna un controllo casella di controllo utilizzando il tema Windows corrente.|
+|[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|Disegna un bordo della casella combinata usando il tema di Windows corrente.|
+|[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|Disegna un pulsante a discesa della casella combinata usando il tema Windows corrente.|
+|[CMFCBaseVisualManager::D rawPushButton](#drawpushbutton)|Disegna un pulsante di push usando il tema Windows corrente.|
+|[CMFCBaseVisualManager::D rawRadioButton](#drawradiobutton)|Disegna un controllo pulsante di opzione utilizzando il tema Windows corrente.|
+|[CMFCBaseVisualManager::D rawStatusBarProgress](#drawstatusbarprogress)|Disegna un indicatore di stato in un controllo barra di stato ( [classe CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) utilizzando il tema Windows corrente.|
+|[CMFCBaseVisualManager:: FillReBarPane](#fillrebarpane)|Riempie lo sfondo del controllo rebar utilizzando il tema Windows corrente.|
+|[CMFCBaseVisualManager:: GetStandardWindowsTheme](#getstandardwindowstheme)|Ottiene il tema corrente di Windows.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Chiamate `CloseThemeData` per tutti `UpdateSystemColors`gli handle ottenuti in .|
-|[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Chiamate `OpenThemeData` per ottenere handle per il disegno di vari controlli: finestre, barre degli strumenti, pulsanti e così via.|
+|[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|Chiama `CloseThemeData` per tutti gli handle ottenuti in `UpdateSystemColors` .|
+|[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|Chiama `OpenThemeData` per ottenere gli handle per il disegno di diversi controlli: Windows, barre degli strumenti, pulsanti e così via.|
 
 ## <a name="remarks"></a>Osservazioni
 
 Non è necessario creare direttamente un'istanza di oggetti di questa classe.
 
-Poiché è una classe base per tutti i gestori visivi, è sufficiente chiamare [CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), ottenere un puntatore a Visual Manager corrente e accedere ai metodi per `CMFCBaseVisualManager` l'utilizzo di tale puntatore. Tuttavia, se è necessario visualizzare un controllo utilizzando il tema di `CMFCVisualManagerWindows` Windows corrente, è preferibile utilizzare l'interfaccia.
+Poiché si tratta di una classe di base per tutti i gestori di oggetti visivi, è possibile chiamare solo [CMFCVisualManager:: GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), ottenere un puntatore al gestore di visualizzazione corrente e accedere ai metodi per l' `CMFCBaseVisualManager` uso di tale puntatore. Tuttavia, se è necessario visualizzare un controllo utilizzando il tema Windows corrente, è preferibile utilizzare l' `CMFCVisualManagerWindows` interfaccia.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -95,11 +95,11 @@ Poiché è una classe base per tutti i gestori visivi, è sufficiente chiamare [
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxvisualmanager.h
+**Intestazione:** afxvisualmanager. h
 
-## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes
+## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a> CMFCBaseVisualManager:: CleanUpThemes
 
-Chiamate `CloseThemeData` per tutti `UpdateSystemColors`gli handle ottenuti in .
+Chiama `CloseThemeData` per tutti gli handle ottenuti in `UpdateSystemColors` .
 
 ```cpp
 void CleanUpThemes();
@@ -109,7 +109,7 @@ void CleanUpThemes();
 
 Solo per uso interno.
 
-## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager
+## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a> CMFCBaseVisualManager:: CMFCBaseVisualManager
 
 Costruisce e inizializza un oggetto `CMFCBaseVisualManager`.
 
@@ -117,9 +117,9 @@ Costruisce e inizializza un oggetto `CMFCBaseVisualManager`.
 CMFCBaseVisualManager();
 ```
 
-## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox
+## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a> CMFCBaseVisualManager::D rawCheckBox
 
-Disegna un controllo casella di controllo utilizzando il tema di Windows corrente.
+Disegna un controllo casella di controllo utilizzando il tema Windows corrente.
 
 ```
 virtual BOOL DrawCheckBox(
@@ -136,42 +136,42 @@ virtual BOOL DrawCheckBox(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivoA pointer to a device context
+in Puntatore a un contesto di dispositivo
 
 *Rect*<br/>
-[in] Rettangolo di delimitazione della casella di controllo.
+in Rettangolo di delimitazione della casella di controllo.
 
-*bEvidenziato*<br/>
-[in] Specifica se la casella di controllo è evidenziata.
+*bHighlighted*<br/>
+in Specifica se la casella di controllo è evidenziata.
 
-*nStato*<br/>
-[in] 0 per unchecked, 1 per la normale controllata,
+*nState*<br/>
+[in] 0 per deselezionato, 1 per controllo normale
 
 2 per il normale misto.
 
-*bAbilitato*<br/>
-[in] Specifica se la casella di controllo è attivata.
+*bEnabled*<br/>
+in Specifica se la casella di controllo è abilitata.
 
-*bPressione*<br/>
-[in] Specifica se la casella di controllo è premuta.
+*bPressed*<br/>
+in Specifica se la casella di controllo è premuta.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'API del tema è abilitata. in caso contrario, FALSE.
+TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-I valori di *nState* corrispondono agli stili delle caselle di controllo seguenti.
+I valori di *nState* corrispondono agli stili della casella di controllo seguenti.
 
-|nStato|Stile casella di controllo|
+|nState|Stile casella di controllo|
 |------------|---------------------|
 |0|CBS_UNCHECKEDNORMAL|
 |1|CBS_CHECKEDNORMAL|
 |2|CBS_MIXEDNORMAL|
 
-## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder
+## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a> CMFCBaseVisualManager::D rawComboBorder
 
-Disegna il bordo della casella combinata utilizzando il tema di Windows corrente.
+Disegna il bordo della casella combinata usando il tema di Windows corrente.
 
 ```
 virtual BOOL DrawComboBorder(
@@ -185,27 +185,27 @@ virtual BOOL DrawComboBorder(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
 *Rect*<br/>
-[in] Rettangolo di delimitazione del bordo della casella combinata.
+in Rettangolo di delimitazione del bordo della casella combinata.
 
-*bDisabilitato*<br/>
-[in] Specifica se il bordo della casella combinata è disabilitato.
+*bDisabled*<br/>
+in Specifica se il bordo della casella combinata è disabilitato.
 
-*bIsAbbassato*<br/>
-[in] Specifica se il bordo della casella combinata viene rilasciato verso il basso.
+*bIsDropped*<br/>
+in Specifica se il bordo della casella combinata è stato eliminato.
 
-*bIsEvidenziato*<br/>
-[in] Specifica se il bordo della casella combinata è evidenziato.
+*bIsHighlighted*<br/>
+in Specifica se il bordo della casella combinata è evidenziato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'API del tema è abilitata. in caso contrario, FALSE.
+TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton
+## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a> CMFCBaseVisualManager::D rawComboDropButton
 
-Disegna un pulsante a discesa della casella combinata utilizzando il tema di Windows corrente.
+Disegna un pulsante a discesa della casella combinata usando il tema Windows corrente.
 
 ```
 virtual BOOL DrawComboDropButton(
@@ -218,21 +218,28 @@ virtual BOOL DrawComboDropButton(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*pDC*|[in] Puntatore a un contesto di dispositivo.|
-|*Rect*|[in] Rettangolo di delimitazione del pulsante a discesa della casella combinata.|
-|*bDisabilitato*|[in] Specifica se il pulsante a discesa della casella combinata è disabilitato.|
-|*bIsAbbassato*|[in] Specifica se il pulsante a discesa della casella combinata viene rilasciato.|
-|*bIsEvidenziato*|[in] Specifica se il pulsante a discesa della casella combinata è evidenziato.|
+*pDC*\
+in Puntatore a un contesto di dispositivo.
+
+*Rect*\
+in Rettangolo delimitatore del pulsante a discesa della casella combinata.
+
+*bDisabled*\
+in Specifica se il pulsante a discesa della casella combinata è disabilitato.
+
+*bIsDropped*\
+in Specifica se il pulsante a discesa della casella combinata è stato eliminato.
+
+*bIsHighlighted*\
+in Specifica se il pulsante a discesa della casella combinata è evidenziato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'API del tema è abilitata. in caso contrario, FALSE.
+TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton
+## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a> CMFCBaseVisualManager::D rawPushButton
 
-Disegna un pulsante di comando utilizzando il tema di Windows corrente.
+Disegna un pulsante di push usando il tema Windows corrente.
 
 ```
 virtual BOOL DrawPushButton(
@@ -245,24 +252,24 @@ virtual BOOL DrawPushButton(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
 *Rect*<br/>
-[in] Rettangolo di delimitazione del pulsante di comando.
+in Rettangolo di delimitazione del pulsante di push.
 
-*pButton (Pulsante)*<br/>
-[in] Puntatore all'oggetto [classe CMFCButton](../../mfc/reference/cmfcbutton-class.md) da disegnare.
+*p*<br/>
+in Puntatore all'oggetto della [classe CMFCButton](../../mfc/reference/cmfcbutton-class.md) da creare.
 
-*uiState (informazioni in stato di stato*<br/>
-[in] Ignorato. Lo stato è tratto da *pButton*.
+*uiState*<br/>
+in Ignorato. Lo stato viene tratto da *p*.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'API del tema è abilitata. in caso contrario, FALSE.
+TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton
+## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a> CMFCBaseVisualManager::D rawRadioButton
 
-Disegna un controllo pulsante di opzione utilizzando il tema di Windows corrente.
+Disegna un controllo pulsante di opzione utilizzando il tema Windows corrente.
 
 ```
 virtual BOOL DrawRadioButton(
@@ -277,30 +284,30 @@ virtual BOOL DrawRadioButton(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
 *Rect*<br/>
-[in] Rettangolo di delimitazione del pulsante di opzione.
+in Rettangolo delimitatore del pulsante di opzione.
 
-*bEvidenziato*<br/>
-[in] Specifica se il pulsante di opzione è evidenziato.
+*bHighlighted*<br/>
+in Specifica se il pulsante di opzione è evidenziato.
 
-*bControllato*<br/>
-[in] Specifica se il pulsante di opzione è selezionato.
+*bChecked*<br/>
+in Specifica se il pulsante di opzione è selezionato.
 
-*bAbilitato*<br/>
-[in] Specifica se il pulsante di opzione è abilitato.
+*bEnabled*<br/>
+in Specifica se il pulsante di opzione è abilitato.
 
-*bPressione*<br/>
-[in] Specifica se il pulsante di opzione è premuto.
+*bPressed*<br/>
+in Specifica se il pulsante di opzione è premuto.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'API del tema è abilitata. in caso contrario, FALSE.
+TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress
+## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a> CMFCBaseVisualManager::D rawStatusBarProgress
 
-Disegna l'indicatore di stato sul controllo barra di stato ( [CMFCStatusBar (classe](../../mfc/reference/cmfcstatusbar-class.md)) utilizzando il tema di Windows corrente.
+Disegna la barra di stato nel controllo barra di stato ( [classe CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) usando il tema Windows corrente.
 
 ```
 virtual BOOL DrawStatusBarProgress(
@@ -318,39 +325,39 @@ virtual BOOL DrawStatusBarProgress(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
-*pStatusBar (barra degli stati in stato)*<br/>
-[in] Puntatore alla barra di stato. Questo valore viene ignorato.
+*pStatusBar*<br/>
+in Puntatore alla barra di stato. Questo valore viene ignorato.
 
-*rectProgresso*<br/>
-[in] Rettangolo di delimitazione dell'indicatore di stato in coordinate *pDC.*
+*rectProgress*<br/>
+in Rettangolo di delimitazione dell'indicatore di stato nelle coordinate *PDC* .
 
 *nProgressTotal*<br/>
-[in] Valore di avanzamento totale.
+in Valore di avanzamento totale.
 
 *nProgressCurr*<br/>
-[in] Valore di avanzamento corrente.
+in Valore di avanzamento corrente.
 
 *clrBar*<br/>
-[in] Colore iniziale. `CMFCBaseVisualManager`ignora questo. Le classi derivate possono utilizzarlo per le sfumature di colore.
+in Colore iniziale. `CMFCBaseVisualManager` Ignora questa. Le classi derivate possono utilizzarla per le sfumature di colore.
 
 *clrProgressBarDest*<br/>
-[in] Colore finale. `CMFCBaseVisualManager`ignora questo. Le classi derivate possono utilizzarlo per le sfumature di colore.
+in Colore finale. `CMFCBaseVisualManager` Ignora questa. Le classi derivate possono utilizzarla per le sfumature di colore.
 
 *clrProgressText*<br/>
-[in] Colore del testo di avanzamento. `CMFCBaseVisualManager`ignora questo. Il colore del `afxGlobalData.clrBtnText`testo è definito da .
+in Colore del testo di avanzamento. `CMFCBaseVisualManager` Ignora questa. Il colore del testo è definito da `afxGlobalData.clrBtnText` .
 
 *bProgressText*<br/>
-[in] Specifica se visualizzare il testo di avanzamento.
+in Specifica se visualizzare il testo dello stato di avanzamento.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'API del tema è abilitata. in caso contrario, FALSE.
+TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
-## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane
+## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a> CMFCBaseVisualManager:: FillReBarPane
 
-Riempie lo sfondo del controllo Rebar utilizzando il tema di Windows corrente.
+Riempie lo sfondo del controllo rebar utilizzando il tema Windows corrente.
 
 ```
 virtual void FillReBarPane(
@@ -362,21 +369,21 @@ virtual void FillReBarPane(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
-*pBar (Barra)*<br/>
-[in] Puntatore a un riquadro il cui sfondo deve essere disegnato.
+*pBar*<br/>
+in Puntatore a un riquadro il cui sfondo deve essere disegnato.
 
-*RectClient (client)*<br/>
-[in] Rettangolo di delimitazione dell'area da riempire.
+*rectClient*<br/>
+in Rettangolo di delimitazione dell'area da riempire.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'API del tema è abilitata. in caso contrario, FALSE.
+TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
-## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme
+## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a> CMFCBaseVisualManager:: GetStandardWindowsTheme
 
-Ottiene il tema di Windows corrente.
+Ottiene il tema corrente di Windows.
 
 ```
 virtual WinXpTheme GetStandardWindowsTheme();
@@ -384,21 +391,21 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 ### <a name="return-value"></a>Valore restituito
 
-Colore del tema di Windows attualmente selezionato. Può essere uno dei seguenti valori enumerati:
+Colore del tema Windows attualmente selezionato. Può essere uno dei seguenti valori enumerati:
 
-- `WinXpTheme_None`- non c'è nessun tema abilitato.
+- `WinXpTheme_None` -Nessun tema abilitato.
 
-- `WinXpTheme_NonStandard`- viene selezionato un tema non standard (ovvero è selezionato un tema, ma nessuno dall'elenco sottostante).
+- `WinXpTheme_NonStandard` -il tema non standard è selezionato, ovvero un tema è selezionato, ma nessuno nell'elenco riportato di seguito.
 
-- `WinXpTheme_Blue`- tema blu (Luna).
+- `WinXpTheme_Blue` -tema blu (Luna).
 
-- `WinXpTheme_Olive`- Tema dell'oliva.
+- `WinXpTheme_Olive` -tema oliva.
 
-- `WinXpTheme_Silver`- Tema d'argento.
+- `WinXpTheme_Silver` -tema Silver.
 
-## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors
+## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a> CMFCBaseVisualManager:: UpdateSystemColors
 
-Chiamate `OpenThemeData` per ottenere handle per il disegno di vari controlli: finestre, barre degli strumenti, pulsanti e così via.
+Chiama `OpenThemeData` per ottenere gli handle per il disegno di diversi controlli: Windows, barre degli strumenti, pulsanti e così via.
 
 ```cpp
 void UpdateSystemColors();

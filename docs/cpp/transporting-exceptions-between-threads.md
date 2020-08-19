@@ -14,12 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: 1b3e6ffa0e98d54b047e18e4c023a8f5173470b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186100"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561362"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Trasporto delle eccezioni tra thread
 
@@ -40,12 +40,17 @@ namespace std
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Unspecified*|Classe interna non specificata utilizzata per implementare il tipo `exception_ptr`.|
-|*p*|Oggetto `exception_ptr` che fa riferimento a un'eccezione.|
-|*E*|Classe che rappresenta un'eccezione.|
-|*e*|Istanza della classe del parametro `E`.|
+*Unspecified*\
+Classe interna non specificata utilizzata per implementare il tipo `exception_ptr`.
+
+*p*\
+Oggetto `exception_ptr` che fa riferimento a un'eccezione.
+
+*E*\
+Classe che rappresenta un'eccezione.
+
+*e*\
+Istanza della classe del parametro `E`.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -90,7 +95,7 @@ Solo la seguente combinazione di opzioni del compilatore e di istruzioni di prog
    > [!IMPORTANT]
    > È consigliabile specificare l'opzione del compilatore **/EHsc** e intercettare solo le eccezioni C++. Se si usa l'opzione del compilatore **/EHA** o **/CLR** e un' **`catch`** istruzione con una *dichiarazione di eccezione* con i puntini di sospensione (), si espone a una minaccia per la sicurezza `catch(...)` . Probabilmente si intende utilizzare l' **`catch`** istruzione per acquisire alcune eccezioni specifiche. L'istruzione `catch(...)`, tuttavia, acquisisce tutte le eccezioni C++ e SEH, incluse quelle impreviste che potrebbero essere irreversibili. Se si ignora o si gestisce in modo non corretto un'eccezione imprevista, del codice dannoso potrebbe sfruttare questa opportunità per compromettere la sicurezza del programma.
 
-## <a name="usage"></a>Utilizzo
+## <a name="usage"></a>Uso
 
 Le sezioni seguenti descrivono come trasferire le eccezioni usando il `exception_ptr` tipo e le `current_exception` funzioni, `rethrow_exception` e `make_exception_ptr` .
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 9f1a984d38bed9dd3795164e355c7ccac100ae6b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b516762f0ae2f6d25c4d5109cbc9870f1254b89
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232885"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562077"
 ---
 # <a name="sync_shared-class"></a>Classe sync_shared
 
@@ -32,15 +32,14 @@ class sync_shared
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*Cache*|Tipo di cache associato al filtro di sincronizzazione. Può essere [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Cache*\
+Tipo di cache associato al filtro di sincronizzazione. Può essere [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) o [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ### <a name="member-functions"></a>Funzioni membro
 
 |Funzione membro|Descrizione|
 |-|-|
-|[allocate](#allocate)|Alloca un blocco di memoria.|
+|[allocare](#allocate)|Alloca un blocco di memoria.|
 |[deallocare](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
 |[equals](#equals)|Confronta due cache per stabilirne l'uguaglianza.|
 
@@ -50,7 +49,7 @@ class sync_shared
 
 **Spazio dei nomi:** stdext
 
-## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared:: allocate
+## <a name="sync_sharedallocate"></a><a name="allocate"></a> sync_shared:: allocate
 
 Alloca un blocco di memoria.
 
@@ -60,9 +59,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*count*|Numero di elementi della matrice da allocare.|
+*conteggio*\
+Numero di elementi della matrice da allocare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -72,7 +70,7 @@ Puntatore all'oggetto allocato.
 
 La funzione membro blocca il mutex, chiama `cache.allocate(count)`, sblocca il mutex e restituisce il risultato della precedente chiamata a `cache.allocate(count)`. `cache` rappresenta l'oggetto cache corrente.
 
-## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared::d eallocate
+## <a name="sync_shareddeallocate"></a><a name="deallocate"></a> sync_shared::d eallocate
 
 Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.
 
@@ -82,16 +80,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*ptr*|Puntatore al primo oggetto che deve essere deallocato dall'archivio.|
-|*count*|Numero di oggetti da deallocare dall'archivio.|
+*PTR*\
+Puntatore al primo oggetto che deve essere deallocato dall'archivio.
+
+*conteggio*\
+Numero di oggetti da deallocare dall'archivio.
 
 ### <a name="remarks"></a>Osservazioni
 
 La funzione membro blocca il mutex, chiama `cache.deallocate(ptr, count)`, dove `cache` rappresenta l'oggetto cache, e quindi sblocca il mutex.
 
-## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared:: Equals
+## <a name="sync_sharedequals"></a><a name="equals"></a> sync_shared:: Equals
 
 Confronta due cache per stabilirne l'uguaglianza.
 
@@ -101,10 +100,11 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*Cache*|Tipo di cache associato al filtro di sincronizzazione.|
-|*Altro*|Cache da confrontare per verificarne l'uguaglianza.|
+*Cache*\
+Tipo di cache associato al filtro di sincronizzazione.
+
+*Altri*\
+Cache da confrontare per verificarne l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fba77be22796f3cb5495543d262dd270ac13d598
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457407"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560595"
 ---
-# <a name="isstandardlayout-class"></a>Classe is_standard_layout
+# <a name="is_standard_layout-class"></a>Classe is_standard_layout
 
 Verifica se il tipo è un layout standard.
 
@@ -27,17 +27,16 @@ struct is_standard_layout;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Ty*|Tipo su cui eseguire una query|
+*Ty*\
+Tipo su cui eseguire una query
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un'istanza di questo predicato di tipo contiene true se il tipo *Ty* è una classe che ha un layout standard di oggetti membro in memoria; in caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 

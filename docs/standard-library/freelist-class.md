@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 7425f99f7966548bdb1f94d3007382eeb99863df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf88e33f5d00b9b6b90d2712a0bbabaa3e571340
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193224"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561206"
 ---
 # <a name="freelist-class"></a>Classe freelist
 
@@ -30,10 +30,11 @@ class freelist : public Max
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*SZ*|Numero di elementi della matrice da allocare.|
-|*Max*|Classe max che rappresenta il numero massimo di elementi da archiviare nell'elenco di disponibilità. La classe max può essere [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
+*SZ*\
+Numero di elementi della matrice da allocare.
+
+*Max*\
+Classe max che rappresenta il numero massimo di elementi da archiviare nell'elenco di disponibilità. La classe max può essere [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -58,7 +59,7 @@ Questo modello di classe gestisce un elenco di blocchi di memoria di dimensioni 
 
 **Spazio dei nomi:** stdext
 
-## <a name="freelistfreelist"></a><a name="freelist"></a>freename:: freename
+## <a name="freelistfreelist"></a><a name="freelist"></a> freename:: freename
 
 Costruisce un oggetto di tipo `freelist`.
 
@@ -68,7 +69,7 @@ freelist();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="freelistpop"></a><a name="pop"></a>gratuito::p op
+## <a name="freelistpop"></a><a name="pop"></a> gratuito::p op
 
 Rimuove il primo blocco di memoria dall'elenco di disponibilità.
 
@@ -84,7 +85,7 @@ Restituisce un puntatore al blocco di memoria rimosso dall'elenco.
 
 La funzione membro restituisce NULL se l'elenco è vuoto. In caso contrario, rimuove il primo blocco di memoria dall'elenco.
 
-## <a name="freelistpush"></a><a name="push"></a>gratuito::p USH
+## <a name="freelistpush"></a><a name="push"></a> gratuito::p USH
 
 Aggiunge un blocco di memoria all'elenco.
 
@@ -94,9 +95,8 @@ bool push(void* ptr);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*ptr*|Puntatore al blocco di memoria da aggiungere all'elenco di disponibilità.|
+*PTR*\
+Puntatore al blocco di memoria da aggiungere all'elenco di disponibilità.
 
 ### <a name="return-value"></a>Valore restituito
 

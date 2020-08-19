@@ -28,12 +28,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0791fe6002b751906c6bc6f83dafe1ccf202bc8b
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912143"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562025"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -52,15 +52,22 @@ void _tzset( void );
 
 La funzione **_tzset** usa l'impostazione corrente della variabile di ambiente **TZ** per assegnare valori a tre variabili globali: **_daylight**, **_timezone**e **_tzname**. Queste variabili vengono usate dalle funzioni [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) per apportare correzioni dall'ora UTC (Coordinated Universal Time) all'ora locale e dalla funzione [Time](time-time32-time64.md) per calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare la variabile di ambiente **TZ** :
 
-> **set TZ =**_tzn_ \[ **+**&#124;**-**]*HH*\[**:**_mm_\[**:**_SS_]] [*DZN*]
+> **set TZ =**_tzn_ \[ **+**&#124;**-** ]*HH* \[ **:**_mm_ \[ **:**_SS_]] [*DZN*]
 
-|Parametro|Descrizione|
-|-|-|
-| *tzn* | Nome del fuso orario di tre lettere, ad esempio PST. È necessario specificare l'offset corretto dall'ora locale all'ora UTC. |
-| *hh* | La differenza in ore tra l'ora UTC e l'ora locale. Segno più (+) facoltativo per i valori positivi. |
-| *mm* | Minuti. Separato da *HH* con i due punti (**:**). |
-| *ss* | Secondi. Separato da *mm* di due punti (**:**). |
-| *dzn* | Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale non è mai attiva nella località, impostare **TZ** senza un valore per *DZN*. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST). |
+ *tzn* \
+ Nome del fuso orario di tre lettere, ad esempio PST. È necessario specificare l'offset corretto dall'ora locale all'ora UTC.
+
+ *HH* \
+ La differenza in ore tra l'ora UTC e l'ora locale. Segno più (+) facoltativo per i valori positivi.
+
+ *mm* \
+ Minuti. Separato da *HH* con i due punti (**:**).
+
+ *SS* \
+ Secondi. Separato da *mm* di due punti (**:**).
+
+ *dzn* \
+ Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale non è mai attiva nella località, impostare **TZ** senza un valore per *DZN*. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).
 
 > [!NOTE]
 > Prestare attenzione nel calcolare il segno della differenza di tempo. Dal momento che la differenza di tempo è l'offset dall'ora locale all'ora UTC (anziché viceversa), il relativo segno potrebbe essere l'opposto di quanto ci si potrebbe intuitivamente aspettare. Per i fusi orari avanti rispetto all'ora UTC, la differenza di tempo è negativa; per quelli che sono indietro rispetto all'ora UTC, la differenza è positiva.
