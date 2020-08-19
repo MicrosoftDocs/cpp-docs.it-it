@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 411c4c386031bd44a0303e6cfeec1fbea7ea2dda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213216"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560634"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -26,12 +26,13 @@ static_assert( constant-expression, string-literal );
 static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-|Parametro|Description|
-|---------------|-----------------|
-|*espressione costante*|Espressione costante integrale che può essere convertita in un valore booleano.<br /><br /> Se l'espressione valutata è zero (false), viene visualizzato il parametro *stringa-Literal* e la compilazione ha esito negativo con un errore. Se l'espressione è diversa da zero (true), la **`static_assert`** dichiarazione non ha alcun effetto.|
-|*valore letterale stringa*|Messaggio che viene visualizzato se il parametro *Constant-Expression* è zero. Il messaggio è una stringa di caratteri nel [set di caratteri di base](../c-language/ascii-character-set.md) del compilatore. ovvero non [caratteri multibyte o Wide](../c-language/multibyte-and-wide-characters.md).|
+*espressione costante*\
+Espressione costante integrale che può essere convertita in un valore booleano. Se l'espressione valutata è zero (false), viene visualizzato il parametro *stringa-Literal* e la compilazione ha esito negativo con un errore. Se l'espressione è diversa da zero (true), la **`static_assert`** dichiarazione non ha alcun effetto.
+
+*valore letterale stringa*\
+Messaggio che viene visualizzato se il parametro *Constant-Expression* è zero. Il messaggio è una stringa di caratteri nel [set di caratteri di base](../c-language/ascii-character-set.md) del compilatore. ovvero non [caratteri multibyte o Wide](../c-language/multibyte-and-wide-characters.md).
 
 ## <a name="remarks"></a>Osservazioni
 
