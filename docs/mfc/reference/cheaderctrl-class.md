@@ -955,7 +955,7 @@ Questa funzione membro implementa il comportamento della macro Win32 [HDM_SETORD
 
   Vedere l'esempio per [CHeaderCtrl:: GetOrderArray](#getorderarray).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -244,7 +244,7 @@ in Puntatore a un riquadro oggetto [CMFCAutoHideBar](../../mfc/reference/cmfcaut
 
 Questo metodo cerca la riga che contiene *pAutoHideToolbar*. Chiama `CMFCAutoHideBar.UnSetAutoHideMode` tutti gli `CMFCAutoHideBar` oggetti in tale riga. Se *pAutoHideToolbar* non viene trovato o è null, questo metodo chiama `CMFCAutoHideBar.UnSetAutoHideMode` per tutti gli `CMFCAutoHideBar` oggetti in `CAutoHideDockSite` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

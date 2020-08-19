@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219352"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560961"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
 Estende le primitive Integer per impedire l'overflow di Integer e consente di confrontare tipi Integer diversi.
 
 > [!NOTE]
-> La versione più recente della libreria SafeInt si trova in [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Per usare la libreria SafeInt, clonare il repository e`#include "SafeInt.hpp"`
+> La versione più recente della libreria SafeInt si trova in [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Per usare la libreria SafeInt, clonare il repository e `#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,17 +33,23 @@ class SafeInt;
 
 ### <a name="parameters"></a>Parametri
 
-| Modello  |  Descrizione |
-|--------|------------|
-| T         |  Tipo Integer o parametro booleano sostituito da `SafeInt`. |
-| E         |  Tipo di dati enumerato che definisce i criteri di gestione degli errori. |
-| U         |  Tipo Integer o parametro booleano per il secondo operando. |
+*`T`*\
+Tipo Integer o parametro booleano sostituito da `SafeInt`.
 
-| Parametro  |  Descrizione |
-|---------|-----------------|
-| *rhs*      |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
-| *i*        |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
-| *bit*     |  [in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome. |
+*`E`*\
+Tipo di dati enumerato che definisce i criteri di gestione degli errori.
+
+*`U`*\
+Tipo Integer o parametro booleano per il secondo operando.
+
+*RHS*\
+[in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.
+
+*i*\
+[in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.
+
+*bit*\
+[in] Parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.
 
 ## <a name="members"></a>Membri
 
@@ -174,7 +180,7 @@ La tabella relativa agli operatori in questo argomento elenca gli operatori mate
 
 Le operazioni di confronto tra un oggetto `SafeInt` e un tipo di dati integrale possono essere eseguite in entrambe le direzioni. Ad esempio, entrambe le operazioni `SafeInt<int>(x) < y` e `y> SafeInt<int>(x)` sono valide e restituiscono lo stesso risultato.
 
-Molti operatori binari non supportano l'uso di due `SafeInt` tipi diversi. Un esempio è costituito dall'operatore `&`. `SafeInt<T, E> & int`è supportato, ma `SafeInt<T, E> & SafeInt<U, E>` non è. Nell'ultimo esempio, il compilatore non sa quale tipo di parametro restituire. Per risolvere questo problema è possibile eseguire il cast del secondo parametro nel tipo di base. Usando gli stessi parametri, questa operazione può essere eseguita con `SafeInt<T, E> & (U)SafeInt<U, E>`.
+Molti operatori binari non supportano l'uso di due `SafeInt` tipi diversi. Un esempio è costituito dall'operatore `&`. `SafeInt<T, E> & int` è supportato, ma `SafeInt<T, E> & SafeInt<U, E>` non è. Nell'ultimo esempio, il compilatore non sa quale tipo di parametro restituire. Per risolvere questo problema è possibile eseguire il cast del secondo parametro nel tipo di base. Usando gli stessi parametri, questa operazione può essere eseguita con `SafeInt<T, E> & (U)SafeInt<U, E>`.
 
 > [!NOTE]
 > Per le operazioni bit per bit, i due diversi parametri devono avere le stesse dimensioni. Se le dimensioni sono differenti, il compilatore genererà un'eccezione [ASSERT](../mfc/reference/diagnostic-services.md#assert). Non è possibile garantire l'accuratezza dei risultati di questa operazione. Per risolvere questo problema, eseguire il cast del parametro di dimensioni inferiori fino a ottenere le stesse dimensioni del parametro più grande.
@@ -248,7 +254,7 @@ int main()
 
 **Spazio dei nomi:** None
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a> SafeInt:: SafeInt
 
 Costruisce un oggetto `SafeInt`.
 
@@ -277,7 +283,7 @@ SafeInt (const U& i)
 `u`<br/>
 [in] Oggetto `SafeInt` di tipo U. Il nuovo oggetto `SafeInt` avrà lo stesso valore di *u*, ma sarà di tipo T.
 
-`U`Tipo di dati archiviati in `SafeInt` . Può trattarsi di un tipo booleano, carattere o Integer. Se è di tipo Integer, può essere firmato o senza segno e deve avere una lunghezza compresa tra 8 e 64 bit.
+`U` Tipo di dati archiviati in `SafeInt` . Può trattarsi di un tipo booleano, carattere o Integer. Se è di tipo Integer, può essere firmato o senza segno e deve avere una lunghezza compresa tra 8 e 64 bit.
 
 ### <a name="remarks"></a>Osservazioni
 

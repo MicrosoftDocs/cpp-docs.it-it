@@ -522,6 +522,6 @@ Attributi del file da impostare per il file. Per ulteriori informazioni, vedere 
 
 Questo wrapper chiama la `SetFileAttributesTransacted` funzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)

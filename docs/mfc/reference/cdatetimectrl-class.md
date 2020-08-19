@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 80b6177d788cfbe44388ec1e6a203b8037f834bc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f04cce93aa6a86d11c2d9ec953992a0f90f635c5
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223096"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561947"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 
@@ -108,7 +108,7 @@ Il controllo selezione data e ora usa anche le notifiche e i callback, descritti
 
 **Intestazione:** AFXDTCTL. h
 
-## <a name="cdatetimectrlcdatetimectrl"></a><a name="cdatetimectrl"></a>CDateTimeCtrl:: CDateTimeCtrl
+## <a name="cdatetimectrlcdatetimectrl"></a><a name="cdatetimectrl"></a> CDateTimeCtrl:: CDateTimeCtrl
 
 Costruisce un oggetto `CDateTimeCtrl`.
 
@@ -116,7 +116,7 @@ Costruisce un oggetto `CDateTimeCtrl`.
 CDateTimeCtrl();
 ```
 
-## <a name="cdatetimectrlclosemonthcal"></a><a name="closemonthcal"></a>CDateTimeCtrl:: CloseMonthCal
+## <a name="cdatetimectrlclosemonthcal"></a><a name="closemonthcal"></a> CDateTimeCtrl:: CloseMonthCal
 
 Chiude il controllo selezione data e ora corrente.
 
@@ -140,7 +140,7 @@ Nell'esempio di codice seguente viene chiuso il calendario a discesa per il cont
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]
 
-## <a name="cdatetimectrlcreate"></a><a name="create"></a>CDateTimeCtrl:: create
+## <a name="cdatetimectrlcreate"></a><a name="create"></a> CDateTimeCtrl:: create
 
 Crea il controllo selezione data e ora e lo collega all' `CDateTimeCtrl` oggetto.
 
@@ -184,7 +184,7 @@ Quando si chiama `Create` , i controlli comuni vengono inizializzati.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]
 
-## <a name="cdatetimectrlgetdatetimepickerinfo"></a><a name="getdatetimepickerinfo"></a>CDateTimeCtrl:: GetDateTimePickerInfo
+## <a name="cdatetimectrlgetdatetimepickerinfo"></a><a name="getdatetimepickerinfo"></a> CDateTimeCtrl:: GetDateTimePickerInfo
 
 Recupera le informazioni sul controllo selezione data e ora corrente.
 
@@ -194,9 +194,8 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*pDateTimePickerInfo*|out Puntatore a una struttura [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) che riceve una descrizione del controllo selezione data e ora corrente.<br /><br /> Il chiamante è responsabile dell'allocazione di questa struttura. Questo metodo inizializza tuttavia il membro *cbSize* della struttura.|
+*pDateTimePickerInfo*\
+out Puntatore a una struttura [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) che riceve una descrizione del controllo selezione data e ora corrente. Il chiamante è responsabile dell'allocazione di questa struttura. Questo metodo inizializza tuttavia il membro *cbSize* della struttura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -218,7 +217,7 @@ Nell'esempio di codice riportato di seguito viene indicato se recuperare corrett
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]
 
-## <a name="cdatetimectrlgetmonthcalcolor"></a><a name="getmonthcalcolor"></a>CDateTimeCtrl:: GetMonthCalColor
+## <a name="cdatetimectrlgetmonthcalcolor"></a><a name="getmonthcalcolor"></a> CDateTimeCtrl:: GetMonthCalColor
 
 Recupera il colore per una parte specificata del calendario mensile all'interno del controllo selezione data e ora.
 
@@ -243,7 +242,7 @@ Questa funzione membro implementa il comportamento del [DTM_GETMCCOLOR](/windows
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]
 
-## <a name="cdatetimectrlgetmonthcalctrl"></a><a name="getmonthcalctrl"></a>CDateTimeCtrl:: GetMonthCalCtrl
+## <a name="cdatetimectrlgetmonthcalctrl"></a><a name="getmonthcalctrl"></a> CDateTimeCtrl:: GetMonthCalCtrl
 
 Recupera l' `CMonthCalCtrl` oggetto associato al controllo selezione data e ora.
 
@@ -263,7 +262,7 @@ Controlli di selezione data e ora creare un controllo calendario mensile figlio 
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]
 
-## <a name="cdatetimectrlgetmonthcalfont"></a><a name="getmonthcalfont"></a>CDateTimeCtrl:: GetMonthCalFont
+## <a name="cdatetimectrlgetmonthcalfont"></a><a name="getmonthcalfont"></a> CDateTimeCtrl:: GetMonthCalFont
 
 Ottiene il tipo di carattere attualmente utilizzato dal controllo calendario mensile del controllo selezione data e ora.
 
@@ -279,7 +278,7 @@ Puntatore a un oggetto [CFont](../../mfc/reference/cfont-class.md) o null in cas
 
 L' `CFont` oggetto a cui fa riferimento il valore restituito è un oggetto temporaneo e viene eliminato definitivamente durante il successivo tempo di elaborazione inattivo.
 
-## <a name="cdatetimectrlgetmonthcalstyle"></a><a name="getmonthcalstyle"></a>CDateTimeCtrl:: GetMonthCalStyle
+## <a name="cdatetimectrlgetmonthcalstyle"></a><a name="getmonthcalstyle"></a> CDateTimeCtrl:: GetMonthCalStyle
 
 Ottiene lo stile del controllo calendario mensile a discesa associato al controllo selezione data e ora corrente.
 
@@ -295,7 +294,7 @@ Stile del controllo calendario mensile a discesa, ovvero una combinazione bit pe
 
 Questo metodo invia il messaggio di [DTM_GETMCSTYLE](/windows/win32/Controls/dtm-getmcstyle) , descritto nel Windows SDK.
 
-## <a name="cdatetimectrlgetrange"></a><a name="getrange"></a>CDateTimeCtrl:: GetRange
+## <a name="cdatetimectrlgetrange"></a><a name="getrange"></a> CDateTimeCtrl:: GetRange
 
 Recupera gli orari di sistema minimi e massimi correnti per un controllo selezione data e ora.
 
@@ -337,7 +336,7 @@ Questa funzione membro implementa il comportamento del [DTM_GETRANGE](/windows/w
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]
 
-## <a name="cdatetimectrlgettime"></a><a name="gettime"></a>CDateTimeCtrl:: getTime
+## <a name="cdatetimectrlgettime"></a><a name="gettime"></a> CDateTimeCtrl:: getTime
 
 Recupera l'ora attualmente selezionata da un controllo selezione data e ora e lo inserisce in una `SYSTEMTIME` struttura specificata.
 
@@ -369,7 +368,7 @@ Il valore DWORD restituito nella seconda e nella terza versione precedente indic
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]
 
-## <a name="cdatetimectrlgetidealsize"></a><a name="getidealsize"></a>CDateTimeCtrl:: GetIdealSize
+## <a name="cdatetimectrlgetidealsize"></a><a name="getidealsize"></a> CDateTimeCtrl:: GetIdealSize
 
 Restituisce la dimensione ideale del controllo selezione data e ora richiesto per visualizzare la data o l'ora corrente.
 
@@ -379,9 +378,8 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*psize*|out Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) che contiene le dimensioni ideali per il controllo.|
+*psize*\
+out Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) che contiene le dimensioni ideali per il controllo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -403,7 +401,7 @@ Nell'esempio di codice seguente vengono recuperate le dimensioni ideali per visu
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-## <a name="cdatetimectrlsetformat"></a><a name="setformat"></a>CDateTimeCtrl:: seformatt
+## <a name="cdatetimectrlsetformat"></a><a name="setformat"></a> CDateTimeCtrl:: seformatt
 
 Imposta la visualizzazione di un controllo selezione data e ora in base a una stringa di formato specificata.
 
@@ -431,7 +429,7 @@ Questa funzione membro implementa il comportamento del [DTM_SETFORMAT](/windows/
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]
 
-## <a name="cdatetimectrlsetmonthcalcolor"></a><a name="setmonthcalcolor"></a>CDateTimeCtrl:: SetMonthCalColor
+## <a name="cdatetimectrlsetmonthcalcolor"></a><a name="setmonthcalcolor"></a> CDateTimeCtrl:: SetMonthCalColor
 
 Imposta il colore per una porzione specificata del calendario mensile in un controllo selezione data e ora.
 
@@ -455,7 +453,7 @@ COLORREF SetMonthCalColor(
 |MCSC_TITLETEXT|Consente di impostare il colore utilizzato per visualizzare il testo all'interno del titolo del calendario.|
 |MCSC_TRAILINGTEXT|Imposta il colore utilizzato per visualizzare il testo dell'intestazione e del giorno finale. Le intestazioni e i giorni finali sono i giorni dei mesi precedenti e successivi visualizzati nel calendario corrente.|
 
-*ref*<br/>
+*Ref*<br/>
 Valore COLORREF che rappresenta il colore che verrà impostato per l'area specificata del calendario mensile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -470,7 +468,7 @@ Questa funzione membro implementa il comportamento del [DTM_SETMCCOLOR](/windows
 
   Vedere l'esempio per [CDateTimeCtrl:: GetMonthCalColor](#getmonthcalcolor).
 
-## <a name="cdatetimectrlsetmonthcalfont"></a><a name="setmonthcalfont"></a>CDateTimeCtrl:: SetMonthCalFont
+## <a name="cdatetimectrlsetmonthcalfont"></a><a name="setmonthcalfont"></a> CDateTimeCtrl:: SetMonthCalFont
 
 Imposta il tipo di carattere utilizzato dal controllo calendario mensile figlio del controllo selezione data e ora.
 
@@ -499,7 +497,7 @@ Questa funzione membro implementa il comportamento del [DTM_SETMCFONT](/windows/
 > [!NOTE]
 > Se si usa questo codice, è necessario creare un membro della `CDialog` classe derivata da denominato *m_MonthFont* di tipo `CFont` .
 
-## <a name="cdatetimectrlsetmonthcalstyle"></a><a name="setmonthcalstyle"></a>CDateTimeCtrl:: SetMonthCalStyle
+## <a name="cdatetimectrlsetmonthcalstyle"></a><a name="setmonthcalstyle"></a> CDateTimeCtrl:: SetMonthCalStyle
 
 Imposta lo stile del controllo calendario mensile a discesa associato al controllo selezione data e ora corrente.
 
@@ -509,9 +507,8 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*dwStyle*|in Nuovo stile del controllo calendario mensile, ovvero una combinazione bit per bit (o) degli stili del controllo calendario mensile. Per altre informazioni, vedere [stili del controllo calendario mensile](/windows/win32/Controls/month-calendar-control-styles).|
+*dwStyle*\
+in Nuovo stile del controllo calendario mensile, ovvero una combinazione bit per bit (o) degli stili del controllo calendario mensile. Per altre informazioni, vedere [stili del controllo calendario mensile](/windows/win32/Controls/month-calendar-control-styles).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -533,7 +530,7 @@ Nell'esempio di codice seguente viene impostato il controllo selezione data e or
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]
 
-## <a name="cdatetimectrlsetrange"></a><a name="setrange"></a>CDateTimeCtrl:: SetRange
+## <a name="cdatetimectrlsetrange"></a><a name="setrange"></a> CDateTimeCtrl:: SetRange
 
 Imposta l'ora di sistema minima e massima consentita per un controllo selezione data e ora.
 
@@ -567,7 +564,7 @@ Questa funzione membro implementa il comportamento del [DTM_SETRANGE](/windows/w
 
   Vedere l'esempio per [CDateTimeCtrl:: GetRange](#getrange).
 
-## <a name="cdatetimectrlsettime"></a><a name="settime"></a>CDateTimeCtrl:: setime
+## <a name="cdatetimectrlsettime"></a><a name="settime"></a> CDateTimeCtrl:: setime
 
 Imposta l'ora in un controllo selezione data e ora.
 

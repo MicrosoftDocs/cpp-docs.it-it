@@ -8,16 +8,16 @@ helpviewer_keywords:
 - LIDT instruction
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
-ms.openlocfilehash: 24778b761ada56830b155a2fc65e90f54ba729ed
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 87a49643e7cd11ae57dc01130f250895cf012065
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217514"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562493"
 ---
 # <a name="__lidt"></a>__lidt
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Carica il registro della tabella del descrittore di interrupt (IDTR) con il valore nella posizione di memoria specificata.
 
@@ -29,25 +29,24 @@ void __lidt(void * Source);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Origine*|in Puntatore al valore da copiare in IDTR.|
+*Origine*\
+in Puntatore al valore da copiare in IDTR.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__lidt`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La `__lidt` funzione è equivalente all'istruzione `LIDT` del computer ed è disponibile solo in modalità kernel. Per ulteriori informazioni, cercare il documento "Intel Architecture Software Developer ' s Manual, volume 2: Riferimento al set di istruzioni "nel sito [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
+La `__lidt` funzione è equivalente all' `LIDT` istruzione del computer ed è disponibile solo in modalità kernel. Per ulteriori informazioni, cercare il documento "Intel Architecture Software Developer ' s Manual, volume 2: Instruction Set Reference" nel sito di [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__sidt](../intrinsics/sidt.md)

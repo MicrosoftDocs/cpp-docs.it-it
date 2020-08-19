@@ -200,7 +200,7 @@ Riferimento lvalue a un oggetto `basic_istringstream`.
 
 La funzione membro scambia i valori di questo oggetto e i valori di *right*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\

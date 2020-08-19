@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a712b6da89433b9db6de9f2a676bf6e89d2e0e6e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169890"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560822"
 ---
 # <a name="create-a-c-makefile-project"></a>Creare un progetto makefile C++
 
-Un *makefile* è un file di testo contenente istruzioni su come creare e collegare (o *compilare*) un set di file di codice sorgente C++. Un programma *make* legge il makefile e richiama un compilatore, un linker e possibilmente altri programmi per creare un file eseguibile. L'implementazione Microsoft del programma *make* viene chiamata [NMAKE](nmake-reference.md).
+Un *makefile* è un file di testo contenente istruzioni su come creare e collegare (o *compilare*) un set di file di codice sorgente C++. Un programma *make* legge il makefile e richiama un compilatore, un linker e possibilmente altri programmi per creare un file eseguibile. L'implementazione di Microsoft del programma *make* è chiamata [NMAKE](nmake-reference.md).
 
 Nel caso in cui sia già disponibile un progetto makefile, è possibile scegliere una delle opzioni seguenti se si vuole codificare il file o eseguirne il debug nell'IDE di Visual Studio:
 
@@ -38,7 +38,7 @@ Il file di output specificato nel progetto non influisce sul nome creato dallo s
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Per creare un progetto makefile in Visual Studio 2019
 
-1. Scegliere **File** > **Nuovo** > **Progetto** dal menu principale di Visual Studio, quindi digitare "makefile" nella casella di ricerca. In alternativa, nella finestra di dialogo **Nuovo progetto** espandere **Visual C++**  > **Generale** (Visual Studio 2015) o **Altro** (Visual Studio 2017) e quindi selezionare una delle due opzioni a seconda che la destinazione sia Windows o Linux.
+1. Dal menu principale di Visual Studio scegliere **file**  >  **nuovo**  >  **progetto** e digitare "Makefile" nella casella di ricerca. In alternativa, nella finestra di dialogo **Nuovo progetto** espandere **Visual C++** > **Generale** (Visual Studio 2015) o **Altro** (Visual Studio 2017) e quindi selezionare una delle due opzioni a seconda che la destinazione sia Windows o Linux.
 
 1. **Solo Windows**: nella pagina **impostazioni di configurazione debug** specificare le informazioni relative a comando, output, Pulisci e ricompila per le compilazioni di debug e di vendita al dettaglio. Fare clic su **Avanti** se si vogliono specificare impostazioni diverse per la configurazione di una versione.
 
@@ -50,7 +50,7 @@ Il file di output specificato nel progetto non influisce sul nome creato dallo s
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Per creare un progetto makefile in Visual Studio 2015 o Visual Studio 2017
 
-1. Nella pagina iniziale di Visual Studio, digitare "makefile" nella casella di ricerca **Nuovo progetto**. In alternativa, nella finestra di dialogo **Nuovo progetto** espandere **Visual C++**  > **Generali** (Visual Studio 2015) o **Altro** (Visual Studio 2017) e quindi selezionare **Progetto makefile** nel riquadro Modelli per aprire la procedura guidata di creazione del progetto.
+1. Nella pagina iniziale di Visual Studio, digitare "makefile" nella casella di ricerca **Nuovo progetto**. In alternativa, nella finestra di dialogo **Nuovo progetto** espandere **Visual C++** > **Generali** (Visual Studio 2015) o **Altro** (Visual Studio 2017) e quindi selezionare **Progetto makefile** nel riquadro Modelli per aprire la procedura guidata di creazione del progetto.
 
 1. Nella pagina **Impostazioni applicazione** specificare le informazioni relative a ricompilazione, comandi, output e pulitura per le build di debug e vendita.
 
@@ -76,7 +76,7 @@ Dopo aver creato il progetto makefile, è possibile visualizzare e modificare og
 
 IntelliSense non funziona nei progetti makefile quando determinate impostazioni di progetto o opzioni del compilatore sono configurate in modo non corretto. Per configurare i progetti makefile in modo che IntelliSense funzioni come previsto, seguire questa procedura:
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà**. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà**. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -94,7 +94,7 @@ IntelliSense non funziona nei progetti makefile quando determinate impostazioni 
 
    - Impostare la proprietà **Assembly a uso forzato** per specificare quali assembly .NET elaborare durante la compilazione del progetto makefile. Per altre informazioni, vedere [/FU (Specifica file #using da usare)](fu-name-forced-hash-using-file.md).
 
-   - Impostare la proprietà **Opzioni aggiuntive** per specificare opzioni aggiuntive del compilatore che IntelliSense deve usare durante l'analisi dei file C++.
+   - Impostare la proprietà **Opzioni aggiuntive** per specificare le opzioni aggiuntive del compilatore che verranno utilizzate da IntelliSense durante l'analisi dei file C++.
 
 1. Scegliere **OK** per chiudere le pagine delle proprietà.
 
@@ -102,10 +102,10 @@ IntelliSense non funziona nei progetti makefile quando determinate impostazioni 
 
 Alla successiva apertura del progetto makefile nell'ambiente di sviluppo di Visual Studio, eseguire il comando **Pulisci soluzione** e quindi il comando **Compila soluzione** nel progetto makefile. IntelliSense funzionerà correttamente nell'IDE.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[Riferimenti a NMAKE](nmake-reference.md)<br>
-[Procedura: creare C++ un progetto da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md)
-[caratteri speciali in un makefile](special-characters-in-a-makefile.md)<br/>
+[Riferimento a NMAKE](nmake-reference.md)<br>
+[Procedura: Creare un progetto C++ da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md)<br>
+[Caratteri speciali in un makefile](special-characters-in-a-makefile.md)<br/>
 [Contenuto di un makefile](contents-of-a-makefile.md)<br/>

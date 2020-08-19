@@ -155,7 +155,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 *modalità*\
 in Valore [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) che specifica la modalità di disegno corrente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

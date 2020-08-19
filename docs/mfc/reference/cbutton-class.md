@@ -1105,7 +1105,7 @@ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
 Questa funzione membro emula la funzionalità del messaggio di BCM_SETTEXTMARGIN, come descritto nella sezione dei [pulsanti](/windows/win32/controls/buttons) della Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

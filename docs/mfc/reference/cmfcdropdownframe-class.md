@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownFrame (classe)
+title: Classe CMFCDropDownFrame
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDropDownFrame
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752424"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560894"
 ---
-# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame (classe)
+# <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 
-Fornisce la funzionalità della finestra cornice a discesa alle barre degli strumenti a discesa e ai pulsanti della barra degli strumenti a discesa.
+Fornisce la funzionalità della finestra cornice a discesa per le barre degli strumenti a discesa e i pulsanti della barra degli strumenti a discesa.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,23 +48,23 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |||
 |-|-|
 |Nome|Descrizione|
-|[CMFCDropDownFrame::Create](#create)|Crea un oggetto `CMFCDropDownFrame`.|
+|[CMFCDropDownFrame:: create](#create)|Crea un oggetto `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Recupera la barra dei menu padre del riquadro a discesa.|
-|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Recupera il menu a comparsa principale del riquadro a discesa.|
-|`CMFCDropDownFrame::GetThisClass`|Utilizzato dal framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
-|[CMFCDropDownFrame::RecalcLayoutCMFCDropDownFrame::RecalcLayout](#recalclayout)|Riposiziona il riquadro a discesa.|
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Imposta se la finestra della barra degli strumenti a discesa figlio viene distrutta automaticamente.|
+|[CMFCDropDownFrame:: GetParentMenuBar](#getparentmenubar)|Recupera la barra dei menu padre del frame a discesa.|
+|[CMFCDropDownFrame:: GetParentPopupMenu](#getparentpopupmenu)|Recupera il menu popup padre del frame a discesa.|
+|`CMFCDropDownFrame::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
+|[CMFCDropDownFrame:: RecalcLayout](#recalclayout)|Riposiziona il frame a discesa.|
+|[CMFCDropDownFrame:: SetAutoDestroy](#setautodestroy)|Imposta un valore che indica se la finestra della barra degli strumenti a discesa figlio viene distrutta automaticamente.|
 
 ### <a name="remarks"></a>Osservazioni
 
 Questa classe non è destinata a essere utilizzata direttamente dal codice.
 
-Il framework utilizza questa classe per `CMFCDropDownToolbar` `CMFCDropDownToolbarButton` fornire il comportamento del frame alle classi e . Per ulteriori informazioni su queste classi, vedere [CMFCDropDownToolBar (classe)](../../mfc/reference/cmfcdropdowntoolbar-class.md) e [CMFCDropDownToolbarButton (classe).](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
+Il Framework usa questa classe per fornire il comportamento del frame `CMFCDropDownToolbar` alle `CMFCDropDownToolbarButton` classi e. Per ulteriori informazioni su queste classi, vedere [classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) e [classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come `CMFCDropDownFrame` recuperare `CFrameWnd` un puntatore a un oggetto da una classe e come impostare la finestra della barra degli strumenti a discesa figlio per essere eliminata automaticamente.
+Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CMFCDropDownFrame` oggetto da una `CFrameWnd` classe e come impostare la finestra della barra degli strumenti a discesa figlio in modo che venga distrutta automaticamente.
 
 [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]
 
@@ -86,7 +86,7 @@ Nell'esempio seguente viene illustrato come `CMFCDropDownFrame` recuperare `CFra
 
 **Intestazione:** afxdropdowntoolbar.h
 
-## <a name="cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create
+## <a name="cmfcdropdownframecreate"></a><a name="create"></a> CMFCDropDownFrame:: create
 
 Crea un oggetto `CMFCDropDownFrame`.
 
@@ -100,27 +100,31 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-|||
-|-|-|
-|Parametro|Descrizione|
-|*pWndParent (padre di pWndParent)*|[in] Finestra padre del frame a discesa.|
-|*x*|[in] Coordinata orizzontale dello schermo per la posizione del riquadro in basso.|
-|*Y*|[in] Coordinata verticale dello schermo per la posizione del riquadro in basso.|
-|*PWndOriginToolbar*|[in] Barra degli strumenti con i pulsanti a discesa utilizzati da questo metodo per popolare il nuovo oggetto frame a discesa.|
+*pWndParent*\
+in Finestra padre del frame a discesa.
+
+*x*\
+in Coordinata orizzontale dello schermo per la posizione del frame di discesa.
+
+*y*\
+in Coordinata verticale dello schermo per la posizione del frame di discesa.
+
+*pWndOriginToolbar*\
+in Barra degli strumenti che contiene i pulsanti a discesa utilizzati da questo metodo per popolare il nuovo oggetto cornice a discesa.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il frame a discesa è stato creato correttamente. in caso contrario, FALSE.
+TRUE se il frame a discesa è stato creato correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo chiama il metodo [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) di base per creare la finestra cornice a discesa con lo stile WS_POPUP. La finestra cornice a discesa viene visualizzata in corrispondenza delle coordinate dello schermo specificate. Questo metodo ha esito negativo se il [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metodo restituisce FALSE.
+Questo metodo chiama il metodo [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) di base per creare la finestra cornice a discesa con lo stile WS_POPUP. La finestra cornice a discesa viene visualizzata in corrispondenza delle coordinate dello schermo specificate. Questo metodo ha esito negativo se il metodo [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) restituisce false.
 
-La `CMFCDropDownFrame` classe crea una `CMFCDropDownToolBar` copia del parametro fornito. Questo metodo copia le immagini dei `pWndOriginToolbar` pulsanti `m_pWndOriginToolbar` e gli stati dei pulsanti dal parametro al membro dati.
+La `CMFCDropDownFrame` classe crea una copia del parametro fornito `CMFCDropDownToolBar` . Questo metodo copia le immagini dei pulsanti e gli Stati dei pulsanti dal `pWndOriginToolbar` parametro al `m_pWndOriginToolbar` membro dati.
 
-## <a name="cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar
+## <a name="cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a> CMFCDropDownFrame:: GetParentMenuBar
 
-Recupera la barra dei menu padre del riquadro a discesa.
+Recupera la barra dei menu padre del frame a discesa.
 
 ```
 CMFCMenuBar* GetParentMenuBar() const;
@@ -132,11 +136,11 @@ Puntatore alla barra dei menu padre del frame a discesa oppure NULL se il frame 
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo recupera la barra dei menu padre dal pulsante padre. Questo metodo restituisce NULL se il frame a discesa non dispone di alcun pulsante padre o il pulsante padre non dispone di alcuna barra dei menu padre.
+Questo metodo recupera la barra dei menu padre dal pulsante padre. Questo metodo restituisce NULL se il frame a discesa non dispone di un pulsante padre o se il pulsante padre non dispone di una barra dei menu padre.
 
-## <a name="cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu
+## <a name="cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a> CMFCDropDownFrame:: GetParentPopupMenu
 
-Recupera il menu a comparsa principale del riquadro a discesa.
+Recupera il menu popup padre del frame a discesa.
 
 ```
 CMFCDropDownFrame* GetParentPopupMenu() const;
@@ -148,11 +152,11 @@ Puntatore al menu a discesa padre del frame a discesa oppure NULL se il frame no
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo recupera il menu padre dal pulsante padre. Questo metodo restituisce NULL se il frame a discesa non dispone di alcun pulsante padre o il pulsante padre non dispone di alcun menu padre.
+Questo metodo recupera il menu padre dal pulsante padre. Questo metodo restituisce NULL se il frame a discesa non dispone di un pulsante padre o se il pulsante padre non dispone di un menu padre.
 
-## <a name="cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayoutCMFCDropDownFrame::RecalcLayout
+## <a name="cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a> CMFCDropDownFrame:: RecalcLayout
 
-Riposiziona il riquadro a discesa.
+Riposiziona il frame a discesa.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -160,18 +164,16 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-|||
-|-|-|
-|Parametro|Descrizione|
-|*bNotifica*|[in] Non utilizzato.|
+*bNotify*\
+[in] Non utilizzato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il framework chiama questo metodo quando viene creato il frame a discesa o la finestra padre viene ridimensionata. Questo metodo calcola la posizione e le dimensioni del riquadro a discesa utilizzando la posizione e le dimensioni della finestra padre.
+Il Framework chiama questo metodo quando viene creato il frame a discesa oppure la finestra padre viene ridimensionata. Questo metodo calcola la posizione e le dimensioni del frame a discesa utilizzando la posizione e le dimensioni della finestra padre.
 
-## <a name="cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy
+## <a name="cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a> CMFCDropDownFrame:: SetAutoDestroy
 
-Imposta se la finestra della barra degli strumenti a discesa figlio viene distrutta automaticamente.
+Imposta un valore che indica se la finestra della barra degli strumenti a discesa figlio viene distrutta automaticamente.
 
 ```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -179,16 +181,16 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAutoDistruggi*<br/>
-[in] TRUE per eliminare automaticamente la finestra della barra degli strumenti a discesa associata; in caso contrario, FALSE.
+*bAutoDestroy*<br/>
+in TRUE per eliminare automaticamente la finestra della barra degli strumenti a discesa associata; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se *bAutoDestroy* è TRUE, il `CMFCDropDownFrame` distruttore elimina la finestra della barra degli strumenti a discesa associata. Il valore predefinito è TRUE.
+Se *bAutoDestroy* è true, il `CMFCDropDownFrame` distruttore Elimina la finestra della barra degli strumenti a discesa associata. Il valore predefinito è TRUE.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[CMFCDropDownToolbarButton (classe)](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
+[Classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
