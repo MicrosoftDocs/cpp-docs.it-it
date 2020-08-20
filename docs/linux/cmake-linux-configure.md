@@ -2,12 +2,12 @@
 title: Configurare un progetto CMake per Linux in Visual Studio
 description: Come configurare le impostazioni di CMake per Linux in Visual Studio
 ms.date: 08/08/2020
-ms.openlocfilehash: d39423b803b66d6bdf55cc67d488e74ccb682323
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4bc6d5d82a0f1cd21e8f989eb92b431d38b2bf5c
+ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048191"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88659344"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Configurare un progetto CMake per Linux in Visual Studio
 
@@ -145,7 +145,7 @@ Usare le impostazioni seguenti per eseguire i comandi nel sistema Linux prima e 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare le sessioni di debug di CMake](../build/configure-cmake-debugging-sessions.md)
+[Configurare le sessioni di debug di CMake](../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json)
 
 ## <a name="see-also"></a>Vedere anche
 
