@@ -1,18 +1,19 @@
 ---
 title: '&lt;&gt;funzioni charconv'
-ms.date: 07/22/2020
+description: Descrive le <charconv> funzioni di libreria che convertono valori integer o a virgola mobile in o da chars
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565950"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722154"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;funzioni charconv
 
@@ -93,21 +94,17 @@ Per le conversioni a virgola mobile, il numero di cifre di precisione per il val
 
 [To_chars_result](to-chars-result-structure.md) contenente il risultato della conversione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni che accettano un parametro di [chars_format](chars-format-class.md) determinano l'identificatore di conversione come se si utilizzasse `printf()` come indicato di seguito: l'identificatore di conversione è `'f'` se `fmt` è `chars_format::fixed` , `'e'` se `fmt` è, `chars_format::scientific` `'a'` (senza il valore iniziali `0x` nel risultato) se `fmt` è `chars_format::hex` e se è `'g'` `fmt` `chars_format::general` . La specifica della notazione fissa più breve può comunque produrre un output lungo perché potrebbe essere la rappresentazione più breve possibile quando il valore è molto grande o molto piccolo.
 
 Nella tabella seguente viene descritto il comportamento di conversione in base a diverse combinazioni di `fmt` `precision` parametri e. Il termine "comportamento di round trip più breve" si riferisce alla scrittura del minor numero di cifre necessarie in modo che l'analisi di tale rappresentazione tramite la `from_chars` funzione corrispondente recuperi il valore esattamente.
 
-| `fmt`e `precision` combinazione | Output |
+| `fmt` e `precision` combinazione | Output |
 |--|--|
 |  Nessuno | Qualunque sia la notazione fissa o scientifica è più breve, preferendo un valore fisso come spareggio.</br>Questo comportamento non può essere simulato da un overload che accetta il `fmt` parametro. |
 | `fmt` | Comportamento del round trip più breve per il formato specificato, ad esempio il formato scientifico più breve. |
 | `fmt` e `precision` | Usa la precisione specificata, `printf()` lo stile seguente, senza il comportamento di round trip più breve. |
-
-### <a name="return-value"></a>Valore restituito
-
-[To_chars_result](to-chars-result-structure.md) che include il risultato della conversione.
 
 ### <a name="example"></a>Esempio
 
@@ -186,7 +183,7 @@ Per le conversioni di interi, la base da usare durante la conversione. Deve esse
 *FMT*\
 Per le conversioni a virgola mobile, il formato della sequenza di caratteri da convertire. Per informazioni dettagliate, vedere [chars_format](chars-format-class.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le `from_chars()` funzioni analizzano la stringa \[ `first` , `last` ) per un modello di numero, dove \[ `first` , `last` è necessario che sia un intervallo valido.
 
@@ -245,7 +242,7 @@ int main()
 
 /STD: è necessario c++ 17 o versione successiva.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<charconv>](charconv.md)  
 [Stringa decimale più breve che arrotonda i round trip](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
