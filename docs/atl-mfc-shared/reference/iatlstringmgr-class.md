@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: bee9c3d27ea05a40d6835d69079fc3e0a56efb86
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219053"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832009"
 ---
 # <a name="iatlstringmgr-class"></a>Classe IAtlStringMgr
 
@@ -35,7 +35,7 @@ __interface IAtlStringMgr
 
 ### <a name="methods"></a>Metodi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Allocare](#allocate)|Chiamare questo metodo per allocare una nuova struttura di dati stringa.|
 |[Clone](#clone)|Chiamare questo metodo per restituire un puntatore a un nuovo gestore di stringhe da utilizzare con un'altra istanza di `CSimpleStringT` .|
@@ -53,7 +53,7 @@ Questa interfaccia gestisce la memoria utilizzata dalle classi stringa indipende
 
 **Intestazione:** atlsimpstr. h
 
-## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr:: allocate
+## <a name="iatlstringmgrallocate"></a><a name="allocate"></a> IAtlStringMgr:: allocate
 
 Alloca una nuova struttura di dati stringa.
 
@@ -83,7 +83,7 @@ Chiamare [IAtlStringMgr:: Free](#free) o [IAtlStringMgr:: Reallocate](#reallocat
 > [!NOTE]
 > Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr:: Clone
+## <a name="iatlstringmgrclone"></a><a name="clone"></a> IAtlStringMgr:: Clone
 
 Restituisce un puntatore a un nuovo gestore di stringhe da utilizzare con un'altra istanza di `CSimpleStringT` .
 
@@ -104,7 +104,7 @@ Tuttavia, se il gestore della memoria non supporta l'utilizzo da parte di più i
 > [!NOTE]
 > Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr:: Free
+## <a name="iatlstringmgrfree"></a><a name="free"></a> IAtlStringMgr:: Free
 
 Libera una struttura di dati stringa.
 
@@ -124,7 +124,7 @@ Libera il blocco di memoria specificato allocato in precedenza da [allocare](#al
 > [!NOTE]
 > Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr:: GetNilString
+## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a> IAtlStringMgr:: GetNilString
 
 Restituisce un puntatore a una struttura di dati stringa per una stringa vuota.
 
@@ -146,7 +146,7 @@ Chiamare questa funzione per restituire una rappresentazione di una stringa vuot
 > [!NOTE]
 > Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr:: Reallocate
+## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a> IAtlStringMgr:: Reallocate
 
 Rialloca una struttura di dati stringa.
 

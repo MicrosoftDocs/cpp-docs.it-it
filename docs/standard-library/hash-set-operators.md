@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 1769519d3bc92f329c347f083e64ba1f35a719db
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b662ea260ca650fc51b17c804594fe25434f61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212306"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845794"
 ---
 # <a name="lthash_setgt-operators"></a>Operatori &lt;hash_set&gt;
 
-||||
-|-|-|-|
-|[operatore! =](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operatore = =](#op_eq_eq)|
-|[operatore = = (hash_multiset)](#op_eq_eq_hash_multiset)|
+[operatore! =](#op_neq)\
+[operatore! = (hash_multiset)](#op_neq_hash_multiset)\
+[operatore = =](#op_eq_eq)\
+[operatore = = (hash_multiset)](#op_eq_eq_hash_multiset)
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operatore! = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a> operatore! = (hash_multiset)
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>operatore = = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a> operatore = = (hash_multiset)
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_set](../standard-library/unordered-set-class.md).

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 850d5e3a5434aa44e23a7f74aeb9c306ab6c0a8e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a79cb91a6b0e6ca633540fd37f7a0e1ece53b712
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203208"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845785"
 ---
 # <a name="steady_clock-struct"></a>Struct steady_clock
 
@@ -42,7 +42,7 @@ class high_resolution_clock
 
 ## <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |`now`|Restituisce l'ora corrente come `time_point` valore.|
 

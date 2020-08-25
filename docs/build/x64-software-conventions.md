@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c47ec86e80b50bb2b313a2c84a3f375681e2870
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223772"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838828"
 ---
 # <a name="x64-software-conventions"></a>Convenzioni del software x64
 
@@ -44,22 +44,21 @@ Sebbene sia possibile accedere ai dati con qualsiasi allineamento, è consigliab
 
 - Octaword-128 bit
 
-|||||
-|-|-|-|-|
 |Tipo scalare|Tipo di dati C|Dimensioni di archiviazione (in byte)|Allineamento consigliato|
-|**INT8**|**`char`**|1|Byte|
-|**UINT8**|**`unsigned char`**|1|Byte|
-|**INT16**|**`short`**|2|Word|
-|**UINT16**|**`unsigned short`**|2|Word|
-|**INT32**|**`int`**, **`long`**|4|Parola doppia|
-|**UINT32**|**unsigned int, unsigned long**|4|Parola doppia|
-|**INT64**|**`__int64`**|8|Quadrupla|
-|**UINT64**|**unsigned __int64**|8|Quadrupla|
-|**FP32 (precisione singola)**|**`float`**|4|Parola doppia|
-|**FP64 (precisione doppia)**|**`double`**|8|Quadrupla|
-|**PUNTATORE**|__\*__|8|Quadrupla|
-|**`__m64`**|**__m64 struct**|8|Quadrupla|
-|**`__m128`**|**__m128 struct**|16|Octaword|
+|-|-|-|-|
+|**`INT8`**|**`char`**|1|Byte|
+|**`UINT8`**|**`unsigned char`**|1|Byte|
+|**`INT16`**|**`short`**|2|Word|
+|**`UINT16`**|**`unsigned short`**|2|Word|
+|**`INT32`**|**`int`**, **`long`**|4|Parola doppia|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|4|Parola doppia|
+|**`INT64`**|**`__int64`**|8|Quadrupla|
+|**`UINT64`**|**`unsigned __int64`**|8|Quadrupla|
+|**`FP32`** (precisione singola)|**`float`**|4|Parola doppia|
+|**`FP64`** (precisione doppia)|**`double`**|8|Quadrupla|
+|**`POINTER`**|__\*__|8|Quadrupla|
+|**`__m64`**|**`struct __m64`**|8|Quadrupla|
+|**`__m128`**|**`struct __m128`**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Aggregati e unioni
 
@@ -79,22 +78,21 @@ Altri tipi, ad esempio matrici, strutture e unioni, presentano requisiti di alli
 
 Nella tabella seguente viene illustrato l'allineamento fortemente suggerito per i membri scalari di unioni e strutture.
 
-||||
-|-|-|-|
 |Tipo scalare|Tipo di dati C|Allineamento richiesto|
-|**INT8**|**`char`**|Byte|
-|**UINT8**|**`unsigned char`**|Byte|
-|**INT16**|**`short`**|Word|
-|**UINT16**|**`unsigned short`**|Word|
-|**INT32**|**`int`**, **`long`**|Parola doppia|
-|**UINT32**|**unsigned int, unsigned long**|Parola doppia|
-|**INT64**|**`__int64`**|Quadrupla|
-|**UINT64**|**unsigned __int64**|Quadrupla|
-|**FP32 (precisione singola)**|**`float`**|Parola doppia|
-|**FP64 (precisione doppia)**|**`double`**|Quadrupla|
-|**PUNTATORE**|<strong>\*</strong>|Quadrupla|
-|**`__m64`**|**__m64 struct**|Quadrupla|
-|**`__m128`**|**__m128 struct**|Octaword|
+|-|-|-|
+|**`INT8`**|**`char`**|Byte|
+|**`UINT8`**|**`unsigned char`**|Byte|
+|**`INT16`**|**`short`**|Word|
+|**`UINT16`**|**`unsigned short`**|Word|
+|**`INT32`**|**`int`**, **`long`**|Parola doppia|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|Parola doppia|
+|**`INT64`**|**`__int64`**|Quadrupla|
+|**`UINT64`**|**`unsigned __int64`**|Quadrupla|
+|**`FP32`** (precisione singola)|**`float`**|Parola doppia|
+|**`FP64`** (precisione doppia)|**`double`**|Quadrupla|
+|**`POINTER`**|<strong>\*</strong>|Quadrupla|
+|**`__m64`**|**`struct __m64`**|Quadrupla|
+|**`__m128`**|**`struct __m128`**|Octaword|
 
 Si applicano le seguenti regole di allineamento aggregate:
 
@@ -191,9 +189,8 @@ L'architettura x64 prevede 16 registri di utilizzo generico (in seguito denomina
 
 Nella tabella seguente viene descritto il modo in cui ogni registro viene usato durante le chiamate di funzione:
 
-||||
+|Registrazione|Stato|Uso|
 |-|-|-|
-|Register|Stato|Uso|
 |RAX|Volatile|Registro del valore restituito|
 |RCX|Volatile|Primo argomento Integer|
 |RDX|Volatile|Secondo argomento Integer|

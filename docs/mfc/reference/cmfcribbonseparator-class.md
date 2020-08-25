@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560868"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831801"
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Costruisce un oggetto `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Aggiunge un separatore all'elenco dei **comandi** nella finestra di dialogo **Personalizza** . Esegue l'override di [CMFCRibbonBaseElement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).|
 |`CMFCRibbonSeparator::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |`CMFCRibbonSeparator::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCRibbonSeparator:: CopyFrom](#copyfrom)|Metodo Copy che imposta le variabili membro di un separatore da un altro oggetto.|
 |[CMFCRibbonSeparator:: GetRegularSize](#getregularsize)|Restituisce la dimensione di un separatore.|
 |[CMFCRibbonSeparator:: deseparatore](#isseparator)|Indica se si tratta di un separatore.|
@@ -248,7 +245,7 @@ in Ignorato.
 *bHighlighted*\
 in Ignorato.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

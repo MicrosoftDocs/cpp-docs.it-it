@@ -1,17 +1,17 @@
 ---
-title: call_as (C++ attributo com)
+title: call_as (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ae620ed6f2b01cc52e4a9c76217f044db925f11
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167334"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838920"
 ---
 # <a name="call_as"></a>call_as
 
@@ -34,7 +34,7 @@ L'attributo **call_as** C++ ha la stessa funzionalità dell'attributo [call_as](
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra come è possibile usare **call_as** per eseguire il mapping di una funzione non (`f1`) a una funzione utilizzabile in remoto (`Remf1`):
+Nel codice seguente viene illustrato come è possibile utilizzare **call_as** per eseguire il mapping di una funzione non ( `f1` ) a una funzione utilizzabile in remoto ( `Remf1` ):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -50,14 +50,12 @@ __interface IMInterface {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -65,4 +63,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
-[local](local-cpp.md)
+[locale](local-cpp.md)

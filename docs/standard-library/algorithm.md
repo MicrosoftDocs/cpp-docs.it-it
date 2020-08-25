@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205535"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845822"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -46,7 +46,7 @@ Gli algoritmi numerici della libreria standard C++ forniti per l'elaborazione nu
 
 ### <a name="function-templates"></a>Modelli di funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.|
 |[all_of](algorithm-functions.md#all_of)|Restituisce **`true`** quando una condizione è presente in ogni elemento nell'intervallo specificato.|

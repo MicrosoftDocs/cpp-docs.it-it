@@ -29,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211107"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845666"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
-Implementa proprietà per un'ampia gamma di interfacce di proprietà OLE DB, ad esempio `IDBProperties`, `IDBProperties`e `IRowsetInfo`.
+Implementa proprietà per un'ampia gamma di interfacce di proprietà OLE DB (ad esempio,, `IDBProperties` `IDBProperties` e `IRowsetInfo` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -50,17 +50,17 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe che contiene il `BEGIN_PROPSET_MAP`.
+Classe che contiene `BEGIN_PROPSET_MAP` .
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[GetPropValue](#getpropvalue)|Ottiene una proprietà da un set di proprietà.|
 |[IsValidValue](#isvalidvalue)|Utilizzato per convalidare un valore prima di impostare una proprietà.|
@@ -76,7 +76,7 @@ La maggior parte di questa classe è un dettaglio di implementazione.
 
 Per ulteriori informazioni sulle macro utilizzate in una mappa di set di proprietà, vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: GetPropValue
 
 Ottiene una proprietà da un set di proprietà.
 
@@ -101,9 +101,9 @@ out Puntatore a un Variant che contiene il nuovo valore della proprietà.
 
 ### <a name="return-value"></a>Valore restituito
 
-`Failure` in caso di errore e S_OK in caso di esito positivo.
+`Failure` in caso di errore e S_OK se ha esito positivo.
 
-## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a> CUtlProps:: IsValidValue
 
 Utilizzato per convalidare un valore prima di impostare una proprietà.
 
@@ -130,7 +130,7 @@ Valore HRESULT standard. Il valore restituito predefinito è S_OK.
 
 Se si desidera eseguire routine di convalida in un valore che si sta per utilizzare per impostare una proprietà, è necessario eseguire l'override di questa funzione. È ad esempio possibile convalidare DBPROP_AUTH_PASSWORD in base a una tabella delle password per determinare un valore valido.
 
-## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a> CUtlProps:: OnInterfaceRequested
 
 Gestisce le richieste di un'interfaccia facoltativa quando un consumer chiama un metodo su una delle interfacce di creazione degli oggetti.
 
@@ -143,15 +143,15 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>Parametri
 
 *riid*<br/>
-in IID per l'interfaccia richiesta. Per ulteriori informazioni, vedere la descrizione del parametro *riid* di `ICommand::Execute` nella Guida di *riferimento per programmatori OLE DB* (in *MDAC SDK*).
+in IID per l'interfaccia richiesta. Per ulteriori informazioni, vedere la descrizione del parametro *riid* di `ICommand::Execute` in *OLE DB Programmer ' s Reference* (in *MDAC SDK*).
 
 ### <a name="remarks"></a>Osservazioni
 
-`OnInterfaceRequested` gestisce le richieste del consumer per un'interfaccia facoltativa quando un consumer chiama un metodo su una delle interfacce di creazione di oggetti, ad esempio `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`o `ICommand`. Imposta la proprietà OLE DB corrispondente per l'interfaccia richiesta. Se, ad esempio, il consumer richiede `IID_IRowsetLocate`, `OnInterfaceRequested` imposta l'interfaccia `DBPROP_IRowsetLocate`. In questo modo viene mantenuto lo stato corretto durante la creazione del set di righe.
+`OnInterfaceRequested` gestisce le richieste del consumer per un'interfaccia facoltativa quando un consumer chiama un metodo su una delle interfacce di creazione di oggetti, ad esempio `IDBCreateSession` ,, `IDBCreateCommand` `IOpenRowset` o `ICommand` . Imposta la proprietà OLE DB corrispondente per l'interfaccia richiesta. Se, ad esempio, il consumer richiede `IID_IRowsetLocate` , `OnInterfaceRequested` imposta l' `DBPROP_IRowsetLocate` interfaccia. In questo modo viene mantenuto lo stato corretto durante la creazione del set di righe.
 
-Questo metodo viene chiamato quando il consumer chiama `IOpenRowset::OpenRowset` o `ICommand::Execute`.
+Questo metodo viene chiamato quando il consumer chiama `IOpenRowset::OpenRowset` o `ICommand::Execute` .
 
-Se un consumer apre un oggetto e richiede un'interfaccia facoltativa, il provider deve impostare la proprietà associata a tale interfaccia su VARIANT_TRUE. Per consentire l'elaborazione specifica della proprietà, `OnInterfaceRequested` viene chiamato prima della chiamata del metodo `Execute` del provider. Per impostazione predefinita, `OnInterfaceRequested` gestisce le interfacce seguenti:
+Se un consumer apre un oggetto e richiede un'interfaccia facoltativa, il provider deve impostare la proprietà associata a tale interfaccia su VARIANT_TRUE. Per consentire l'elaborazione specifica della proprietà, `OnInterfaceRequested` viene chiamato prima della chiamata al metodo del provider `Execute` . Per impostazione predefinita, `OnInterfaceRequested` gestisce le interfacce seguenti:
 
 - `IRowsetLocate`
 
@@ -165,7 +165,7 @@ Se un consumer apre un oggetto e richiede un'interfaccia facoltativa, il provide
 
 Se si desidera gestire altre interfacce, eseguire l'override di questa funzione nell'origine dati, nella sessione, nel comando o nella classe del set di righe per elaborare le funzioni. Per assicurarsi che le proprietà dell'impostazione impostino anche le proprietà concatenate (vedere [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)), è necessario eseguire l'override delle normali interfacce di proprietà set/get.
 
-## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 
 Chiamato dopo l'impostazione di una proprietà per gestire le proprietà concatenate.
 
@@ -194,11 +194,11 @@ Se si desidera gestire proprietà concatenate, ad esempio segnalibri o aggiornam
 
 ### <a name="example"></a>Esempio
 
-In questa funzione, l'utente ottiene l'ID della proprietà dal parametro `DBPROP*`. A questo punto è possibile confrontare l'ID con una proprietà per concatenare. Quando viene trovata la proprietà, `SetProperties` viene chiamato con la proprietà che ora verrà impostata insieme all'altra proprietà. In questo caso, se si ottiene la proprietà `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`o `DBPROP_ORDEREDBOOKMARKS`, è possibile impostare la proprietà `DBPROP_BOOKMARKS`.
+In questa funzione, l'utente ottiene l'ID della proprietà dal `DBPROP*` parametro. A questo punto è possibile confrontare l'ID con una proprietà per concatenare. Quando viene trovata la proprietà, `SetProperties` viene chiamato con la proprietà che ora verrà impostata insieme all'altra proprietà. In questo caso, se si ottiene la `DBPROP_IRowsetLocate` `DBPROP_LITERALBOOKMARKS` proprietà, o `DBPROP_ORDEREDBOOKMARKS` , è possibile impostare la `DBPROP_BOOKMARKS` Proprietà.
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a> CUtlProps:: SetPropValue
 
 Imposta una proprietà in un set di proprietà.
 
@@ -223,9 +223,9 @@ in Puntatore a un Variant che contiene il nuovo valore della proprietà.
 
 ### <a name="return-value"></a>Valore restituito
 
-`Failure` in caso di errore e S_OK in caso di esito positivo.
+`Failure` in caso di errore e S_OK se ha esito positivo.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

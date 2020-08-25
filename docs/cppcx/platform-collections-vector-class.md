@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: 5a35efb3ca1590931ce1db5fd12d7c930b258286
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dc467b8db3cd6ec88395554eef7f109877f10d41
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218403"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839088"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -93,10 +93,9 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 
 ### <a name="events"></a>Eventi
 
-|||
-|-|-|
-|Nome|Descrizione|
-|evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler \<T> ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Si verifica quando l'oggetto Vector subisce delle modifiche.|
+| Nome | Descrizione |
+|--|--|
+| evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler \<T> ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) | Si verifica quando l'oggetto Vector subisce delle modifiche. |
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -108,7 +107,7 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 
 **Spazio dei nomi:** Platform::Collections
 
-## <a name="vectorappend-method"></a><a name="append"></a>Metodo Vector:: Append
+## <a name="vectorappend-method"></a><a name="append"></a> Metodo Vector:: Append
 
 Inserisce l'elemento specificato dopo l'ultimo elemento nel vettore corrente.
 
@@ -120,10 +119,10 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
+*index*<br/>
 Elemento da inserire nel vettore. Il tipo di *elemento* è definito dal TypeName *T* .
 
-## <a name="vectorclear-method"></a><a name="clear"></a>Metodo Vector:: Clear
+## <a name="vectorclear-method"></a><a name="clear"></a> Metodo Vector:: Clear
 
 Elimina tutti gli elementi nell'oggetto Vector corrente.
 
@@ -133,7 +132,7 @@ Elimina tutti gli elementi nell'oggetto Vector corrente.
 virtual void Clear();
 ```
 
-## <a name="vectorfirst-method"></a><a name="first"></a>Metodo Vector:: First
+## <a name="vectorfirst-method"></a><a name="first"></a> Metodo Vector:: First
 
 Restituisce un iteratore che fa riferimento al primo elemento nell'oggetto Vector.
 
@@ -153,7 +152,7 @@ Un modo pratico per conservare l'iteratore restituito da First () consiste nell'
 
 Quando è necessaria una coppia di iteratori da passare a una funzione STL, usare le funzioni gratuite [Windows:: Foundation:: Collections:: Begin](../cppcx/begin-function.md) e [Windows:: Foundation:: Collections:: end](../cppcx/end-function.md)
 
-## <a name="vectorgetat-method"></a><a name="getat"></a>Metodo Vector:: GetA
+## <a name="vectorgetat-method"></a><a name="getat"></a> Metodo Vector:: GetA
 
 Recupera l'elemento dell'oggetto Vector corrente identificato dall'indice specificato.
 
@@ -165,14 +164,14 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 ### <a name="return-value"></a>Valore restituito
 
 Elemento specificato dal parametro *index* . Il tipo di elemento è definito dall'oggetto TypeName *T* .
 
-## <a name="vectorgetmany-method"></a><a name="getmany"></a>Metodo Vector:: GetMany
+## <a name="vectorgetmany-method"></a><a name="getmany"></a> Metodo Vector:: GetMany
 
 Recupera una sequenza di elementi dall'oggetto Vector corrente, a partire dall'indice specificato e li copia nella matrice allocata dal chiamante.
 
@@ -200,7 +199,7 @@ Numero di elementi recuperati.
 
 Questa funzione non deve essere usata direttamente dal codice client. Viene usato internamente nella [funzione to_vector](../cppcx/to-vector-function.md) per consentire una conversione efficiente di Platform:: Vector istanze in istanze std:: Vector.
 
-## <a name="vectorgetview-method"></a><a name="getview"></a>Metodo Vector:: GetView
+## <a name="vectorgetview-method"></a><a name="getview"></a> Metodo Vector:: GetView
 
 Restituisce una visualizzazione di sola lettura di un oggetto Vector, ovvero un oggetto IVectorView.
 
@@ -214,7 +213,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Oggetto IVectorView.
 
-## <a name="vectorindexof-method"></a><a name="indexof"></a>Metodo Vector:: IndexOf
+## <a name="vectorindexof-method"></a><a name="indexof"></a> Metodo Vector:: IndexOf
 
 Cerca l'elemento specificato nell'oggetto Vector corrente e, se lo trova, restituisce l'indice dell'elemento.
 
@@ -229,7 +228,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 *value*<br/>
 Elemento da cercare.
 
-*Indice*<br/>
+*index*<br/>
 Indice in base zero dell'elemento se viene trovato il *valore* del parametro; in caso contrario, 0.
 
 Il parametro *index* è 0 se l'elemento è il primo elemento del vettore o se l'elemento non è stato trovato. Se il valore restituito è **`true`** , l'elemento è stato trovato ed è il primo elemento. in caso contrario, l'elemento non è stato trovato.
@@ -242,7 +241,7 @@ Il parametro *index* è 0 se l'elemento è il primo elemento del vettore o se l'
 
 IndexOf usa std::find_if per trovare l'elemento. I tipi di elemento personalizzati dovrebbero quindi essere in rapporto di overload con l'operatore == e != in modo da abilitare i confronti di eguaglianza necessari per find_if.
 
-## <a name="vectorinsertat-method"></a><a name="insertat"></a>Metodo Vector:: InsertAt
+## <a name="vectorinsertat-method"></a><a name="insertat"></a> Metodo Vector:: InsertAt
 
 Inserisce l'elemento specificato nel vettore corrente in corrispondenza dell'elemento identificato dall'indice specificato.
 
@@ -254,13 +253,13 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 *item*<br/>
 Elemento da inserire nel vettore in corrispondenza dell'elemento specificato da *index*. Il tipo di *elemento* è definito dal TypeName *T* .
 
-## <a name="vectorremoveat-method"></a><a name="removeat"></a>Metodo Vector:: RemoveAt
+## <a name="vectorremoveat-method"></a><a name="removeat"></a> Metodo Vector:: RemoveAt
 
 Elimina l'elemento identificato dall'indice specificato dall'oggetto Vector corrente.
 
@@ -272,10 +271,10 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
-## <a name="vectorremoveatend-method"></a><a name="removeatend"></a>Metodo Vector:: RemoveAtEnd
+## <a name="vectorremoveatend-method"></a><a name="removeatend"></a> Metodo Vector:: RemoveAtEnd
 
 Elimina l'elemento alla fine dell'oggetto Vector corrente.
 
@@ -285,7 +284,7 @@ Elimina l'elemento alla fine dell'oggetto Vector corrente.
 virtual void RemoveAtEnd();
 ```
 
-## <a name="vectorreplaceall-method"></a><a name="replaceall"></a>Metodo Vector:: ReplaceAll
+## <a name="vectorreplaceall-method"></a><a name="replaceall"></a> Metodo Vector:: ReplaceAll
 
 Elimina gli elementi nell'oggetto Vector corrente, quindi li inserisce dalla matrice specificata.
 
@@ -300,7 +299,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*<br/>
 Matrice di oggetti il cui tipo è definito dall'oggetto TypeName *T* .
 
-## <a name="vectorsetat-method"></a><a name="setat"></a>Metodo Vector:: SetAt
+## <a name="vectorsetat-method"></a><a name="setat"></a> Metodo Vector:: SetAt
 
 Assegna il valore specificato all'elemento nell'oggetto Vector corrente che è identificato dall'indice specificato.
 
@@ -312,13 +311,13 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 *item*<br/>
 Valore da assegnare all'elemento specificato. Il tipo di *elemento* è definito dal TypeName *T* .
 
-## <a name="vectorsize-method"></a><a name="size"></a>Metodo Vector:: size
+## <a name="vectorsize-method"></a><a name="size"></a> Metodo Vector:: size
 
 Restituisce il numero di elementi nell'oggetto Vector corrente.
 
@@ -332,7 +331,7 @@ virtual property unsigned int Size;
 
 Numero di elementi nell'oggetto Vector corrente.
 
-## <a name="vectorvector-constructor"></a><a name="ctor"></a>Costruttore vector:: Vector
+## <a name="vectorvector-constructor"></a><a name="ctor"></a> Costruttore vector:: Vector
 
 Inizializza una nuova istanza della classe Vector.
 

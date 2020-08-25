@@ -33,12 +33,12 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-ms.openlocfilehash: 98d5609d17f5932a81be916b878eb25333869591
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68ad011af1a53452c0f3cfda02bdf80582a8431b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947746"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845952"
 ---
 # <a name="_spawnlp-_wspawnlp"></a>_spawnlp, _wspawnlp
 
@@ -76,14 +76,14 @@ Modalità di esecuzione del processo chiamante.
 *cmdname*<br/>
 Percorso del file da eseguire.
 
-*arg0*, *arg1*, ... *argn*<br/>
+*arg0*, *arg1*,... *argN*<br/>
 Elenco dei puntatori agli argomenti. L'argomento *arg0* è in genere un puntatore a *CmdName*. Gli argomenti *arg1* tramite *argN* sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. Dopo *argN*, deve essere presente un puntatore **null** per contrassegnare la fine dell'elenco di argomenti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore restituito da un oggetto sincrono **_spawnlp** o **wspawnlp** ( **_P_WAIT** specificato per la *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da un **_spawnlp** asincrono o **wspawnlp** ( **_P_NOWAIT** o **_P_NOWAITO** specificato per la *modalità*) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama in modo specifico la routine di **uscita** con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Un valore restituito-1 indica un errore (il nuovo processo non è stato avviato). In questo caso **errno** viene impostato su uno dei valori seguenti.
+Il valore restituito da un **_spawnlp** sincrono o da un **_wspawnlp** (**_P_WAIT** specificato per la *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da un **_spawnlp** asincrono o da un **_wspawnlp** (**_P_NOWAIT** o **_P_NOWAITO** specificato per la *modalità*) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama in modo specifico la routine di **uscita** con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Un valore restituito-1 indica un errore (il nuovo processo non è stato avviato). In questo caso **errno** viene impostato su uno dei valori seguenti.
 
-|||
+| Valore | Descrizione |
 |-|-|
 | **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
 | **EINVAL** | argomento *mode* non valido. |
@@ -91,9 +91,9 @@ Il valore restituito da un oggetto sincrono **_spawnlp** o **wspawnlp** ( **_P_W
 | **ENOEXEC** | Il file specificato non è eseguibile o il formato del file eseguibile non è valido. |
 | **ENOMEM** | Memoria insufficiente per eseguire il nuovo processo. |
 
-Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ognuna di queste funzioni crea ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato e usando la variabile di ambiente **path** per trovare il file da eseguire.
 
@@ -106,19 +106,19 @@ Queste funzioni convalidano i relativi parametri. Se *CmdName* o *arg0* è una s
 |**_spawnlp**|\<process.h>|
 |**_wspawnlp**|\<stdio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio in [Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
+Vedere l'esempio in [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, funzioni _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[interruzione](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 634a78274a9c7a4ed75466b083f4ee4880401630
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5d7a7e2ba3c962a1ef63b14fed5d4bfb67c38b44
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230169"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845679"
 ---
 # <a name="chi_squared_distribution-class"></a>Classe chi_squared_distribution
 
@@ -76,10 +76,8 @@ Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione chi quadrato. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
-||||
-|-|-|-|
-|[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|
-|`chi_squared_distribution::operator()`||[param_type](#param_type)|
+[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)\
+[param_type](#param_type)
 
 La funzione di proprietà `n()` restituisce il valore per il parametro di distribuzione archiviato `n`.
 
@@ -224,7 +222,7 @@ Distribution for 10 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution:: chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a> chi_squared_distribution:: chi_squared_distribution
 
 Costruisce la distribuzione.
 
@@ -249,7 +247,7 @@ Il primo costruttore crea un oggetto il cui valore `n` archiviato include il val
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::p aram_type
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a> chi_squared_distribution::p aram_type
 
 Archivia i parametri della distribuzione.
 

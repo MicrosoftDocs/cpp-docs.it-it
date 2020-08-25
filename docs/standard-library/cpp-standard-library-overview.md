@@ -7,50 +7,51 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e4d49b01f9602d5e6d7316a3a258ffa69bbcc369
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452447"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839036"
 ---
 # <a name="c-standard-library-overview"></a>Panoramica sulla libreria standard C++
 
-Tutte le entità di libreria di C++ sono dichiarate o definite in una o più intestazioni standard. Questa implementazione include due intestazioni aggiuntive, \<hash_map > e \<hash_set >, che non sono richieste dallo C++ standard. Per un elenco completo di intestazioni supportate da questa implementazione, vedere [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione).
+Tutte le entità di libreria di C++ sono dichiarate o definite in una o più intestazioni standard. Questa implementazione include due intestazioni aggiuntive, \<hash_map> e \<hash_set>, che non sono necessarie per lo Standard C++. Per un elenco completo di intestazioni supportate da questa implementazione, vedere [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione).
 
 Un'implementazione indipendente della libreria C++ fornisce solo un sottoinsieme di queste intestazioni:
 
-|||
-|-|-|
-|[\<cstddef>](../standard-library/cstddef.md)|[\<cstdlib>](../standard-library/cstdlib.md) (che dichiara almeno le funzioni `abort`, `atexit` e `exit`)|
-|[\<exception>](../standard-library/exception.md)|[\<limits>](../standard-library/limits.md)|
-|[\<new>](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|
+[\<cstdarg>](../standard-library/cstdarg.md)\
+[\<cstddef>](../standard-library/cstddef.md)\
+[\<cstdlib>](../standard-library/cstdlib.md) (dichiarando almeno le funzioni `abort` , `atexit` e `exit` ) \
+[\<exception>](../standard-library/exception.md)\
+[\<limits>](../standard-library/limits.md)\
+[\<new>](../standard-library/new.md)
 
 Le intestazioni della libreria C++ hanno due suddivisioni più ampie:
 
-- Convenzioni di [iostreams](../standard-library/iostreams-conventions.md).
+- convenzioni di [iostreams](../standard-library/iostreams-conventions.md) .
 
 - Convenzioni di [riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md).
 
 Questa sezione contiene le sezioni seguenti:
 
-- [Using C++ Library Headers](../standard-library/using-cpp-library-headers.md) (Uso delle intestazioni della libreria C++)
+- [Uso delle intestazioni della libreria C++](../standard-library/using-cpp-library-headers.md)
 
 - [Convenzioni della libreria C++](../standard-library/cpp-library-conventions.md)
 
-- [iostreams Conventions](../standard-library/iostreams-conventions.md) (Convenzioni di iostream)
+- [convenzioni di iostreams](../standard-library/iostreams-conventions.md)
 
-- [Avvio e chiusura di un programma C++](../standard-library/cpp-program-startup-and-termination.md)
+- [Avvio e chiusura del programma C++](../standard-library/cpp-program-startup-and-termination.md)
 
-- [Librerie protette: libreria standard C++](../standard-library/safe-libraries-cpp-standard-library.md)
+- [Librerie sicure: libreria standard C++](../standard-library/safe-libraries-cpp-standard-library.md)
 
 - [Iteratori verificati](../standard-library/checked-iterators.md)
 
-- [Debug Iterator Support](../standard-library/debug-iterator-support.md) (Supporto degli iteratori di debug)
+- [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md)
 
-- [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+- [Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
 
-- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
+- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 - [Spazio dei nomi stdext](../standard-library/stdext-namespace.md)
 

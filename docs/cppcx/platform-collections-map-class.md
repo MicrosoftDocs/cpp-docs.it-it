@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610907"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839140"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -90,10 +90,9 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 ### <a name="events"></a>Eventi
 
-|||
-|-|-|
-|Nome|Descrizione|
-|Evento [Map:: mapchanged](#mapchanged)|Si verifica quando l'oggetto Map subisce delle modifiche.|
+| Nome | Descrizione |
+|--|--|
+| Evento [Map:: mapchanged](#mapchanged) | Si verifica quando l'oggetto Map subisce delle modifiche. |
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

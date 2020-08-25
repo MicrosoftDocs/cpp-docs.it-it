@@ -7,16 +7,16 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 158301ec3caacced1663892071b17ef2b8f8e741
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c68de0ee8e6376731254adf965fb9a81f10f2861
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328664"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838854"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 
-Quando si crea un nuovo progetto in Visual Studio, al progetto viene aggiunto un *file di intestazione precompilato* denominato *PCH. h* . (In Visual Studio 2017 e versioni precedenti, il file era denominato *stdafx. h*). Lo scopo del file è velocizzare il processo di compilazione. Tutti i file di intestazione stabili, ad esempio le intestazioni della `<vector>`libreria standard, ad esempio, devono essere inclusi qui. L'intestazione precompilata viene compilata solo quando viene modificato il file o i file in esso inclusi. Se si apportano modifiche solo al codice sorgente del progetto, la compilazione ignorerà la compilazione per l'intestazione precompilata.
+Quando si crea un nuovo progetto in Visual Studio, al progetto viene aggiunto un *file di intestazione precompilato* denominato *PCH. h* . (In Visual Studio 2017 e versioni precedenti, il file era denominato *stdafx. h*). Lo scopo del file è velocizzare il processo di compilazione. Tutti i file di intestazione stabili, ad esempio le intestazioni della libreria standard, ad esempio `<vector>` , devono essere inclusi qui. L'intestazione precompilata viene compilata solo quando viene modificato il file o i file in esso inclusi. Se si apportano modifiche solo al codice sorgente del progetto, la compilazione ignorerà la compilazione per l'intestazione precompilata.
 
 Le opzioni del compilatore per le intestazioni precompilate sono [/Y](reference/y-precompiled-headers.md). Nelle pagine delle proprietà del progetto le opzioni si trovano in **proprietà di configurazione > C/C++ > le intestazioni precompilate**. È possibile scegliere di non usare le intestazioni precompilate e specificare il nome del file di intestazione e il nome e il percorso del file di output.
 
@@ -87,26 +87,58 @@ Quando si specifica l'opzione Usa file di intestazione precompilata (/Yu), il co
 
 ### <a name="pragma-consistency"></a>Coerenza pragma
 
-I pragma elaborati durante la creazione di un file PCH influiscono in genere sul file con cui viene successivamente utilizzato il file PCH. I `comment` pragma `message` e non influiscono sul resto della compilazione.
+I pragma elaborati durante la creazione di un file PCH influiscono in genere sul file con cui viene successivamente utilizzato il file PCH. I `comment` `message` pragma e non influiscono sul resto della compilazione.
 
 Questi pragma hanno effetto solo sul codice all'interno del file PCH. non influiscono sul codice che successivamente usa il file PCH:
 
-||||
-|-|-|-|
-|`comment`|`page`|`subtitle`|
-|`linesize`|`pagesize`|`title`|
-|`message`|`skip`||
+:::row:::
+   :::column span="":::
+      `comment`\
+      `linesize`
+   :::column-end:::
+   :::column span="":::
+      `message`\
+      `page`
+   :::column-end:::
+   :::column span="":::
+      `pagesize`\
+      `skip`
+   :::column-end:::
+   :::column span="":::
+      `subtitle`\
+      `title`
+   :::column-end:::
+:::row-end:::
 
 Questi pragma vengono conservati come parte di un'intestazione precompilata e influiscono sul resto di una compilazione che usa l'intestazione precompilata:
 
-||||
-|-|-|-|
-|`alloc_text`|`include_alias`|`pack`|
-|`auto_inline`|`init_seg`|`pointers_to_members`|
-|`check_stack`|`inline_depth`|`setlocale`|
-|`code_seg`|`inline_recursion`|`vtordisp`|
-|`data_seg`|`intrinsic`|`warning`|
-|`function`|`optimize`||
+:::row:::
+   :::column span="":::
+      `alloc_text`\
+      `auto_inline`\
+      `check_stack`\
+      `code_seg`\
+      `data_seg`
+   :::column-end:::
+   :::column span="":::
+      `function`\
+      `include_alias`\
+      `init_seg`\
+      `inline_depth`
+   :::column-end:::
+   :::column span="":::
+      `inline_recursion`\
+      `intrinsic`\
+      `optimize`\
+      `pack`
+   :::column-end:::
+   :::column span="":::
+      `pointers_to_members`\
+      `setlocale`\
+      `vtordisp`\
+      `warning`
+   :::column-end:::
+:::row-end:::
 
 ## <a name="consistency-rules-for-yc-and-yu"></a>Regole di uniformità per /Yc e /Yu
 
@@ -154,7 +186,7 @@ Continuando il diagramma, APPLIB. obj rappresenta il codice di supporto usato ne
 
 MYAPP. obj rappresenta l'applicazione finale. Viene creato da MYAPP. cpp, i file elencati nella macro UNSTABLEHDRS e il codice precompilato dall'intestazione precompilata.
 
-Infine, il file eseguibile (MYAPP. EXE) viene creato collegando i file elencati nella macro obj (APPLIB. obj e MYAPP. obj).
+Infine, il file eseguibile (MYAPP.EXE) viene creato collegando i file elencati nella macro obj (APPLIB. obj e MYAPP. obj).
 
 ## <a name="sample-makefile-for-pch"></a>Makefile di esempio per PCH
 

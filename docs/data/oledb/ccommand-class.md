@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 73b02f0ffb9d9b98a17933cc3b17c8627121e3ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228921"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838438"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
 
@@ -91,7 +91,7 @@ Per usare un OLE DB comando che può restituire più risultati, specificare [CMu
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[Close](#close)|Chiude il comando corrente.|
 |[GetNextResult](#getnextresult)|Recupera il risultato successivo durante l'utilizzo di più set di risultati.|
@@ -99,12 +99,12 @@ Per usare un OLE DB comando che può restituire più risultati, specificare [CMu
 
 ### <a name="inherited-methods"></a>Metodi ereditati
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[Creare](#create)|Crea un nuovo comando per la sessione specificata, quindi imposta il testo del comando.|
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|
 |[GetParameterInfo](#getparameterinfo)|Ottiene un elenco di parametri, i relativi nomi e tipi del comando.|
-|[Preparazione](#prepare)|Convalida e ottimizza il comando corrente.|
+|[Preparare](#prepare)|Convalida e ottimizza il comando corrente.|
 |[ReleaseCommand](#releasecommand)|Rilascia la funzione di accesso parametro se necessario, quindi rilascia il comando.|
 |[SetParameterInfo](#setparameterinfo)|Specifica il tipo nativo di ogni parametro di comando.|
 |[Unprepare](#unprepare)|Rimuove il piano di esecuzione corrente dei comandi.|
@@ -117,7 +117,7 @@ La classe di funzioni di accesso che si sta utilizzando determina il metodo di a
 
 Notare che non è possibile utilizzare le stored procedure con il provider OLE BD per Jet, in quanto da questo non supportate. Nelle stringhe delle query sono infatti ammesse solo costanti.
 
-## <a name="ccommandclose"></a><a name="close"></a>CCommand:: Close
+## <a name="ccommandclose"></a><a name="close"></a> CCommand:: Close
 
 Rilascia il set di righe della funzione di accesso associato al comando.
 
@@ -141,7 +141,7 @@ L'esempio seguente mostra come chiamare `Close` e `ReleaseCommand` quando si ese
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand:: GetNextResult
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a> CCommand:: GetNextResult
 
 Recupera il set di risultati successivo se ne è disponibile uno.
 
@@ -170,7 +170,7 @@ Se un set di risultati è stato recuperato in precedenza, questa funzione rilasc
 
 È consigliabile chiamare questa funzione solo se sono stati specificati più risultati impostando il `CCommand` parametro di modello *TMultiple* = `CMultipleResults` .
 
-## <a name="ccommandopen"></a><a name="open"></a>CCommand:: Open
+## <a name="ccommandopen"></a><a name="open"></a> CCommand:: Open
 
 Esegue ed eventualmente associa il comando.
 
@@ -256,9 +256,9 @@ La terza forma di `Open` consente alla stringa di comando di essere null, a caus
 Utilizzare la quarta forma di `Open` quando è già stato creato un comando e si desidera eseguire una singola [preparazione](../../data/oledb/ccommand-prepare.md) e più esecuzioni.
 
 > [!NOTE]
-> `Open`chiama `Execute` , che a sua volta chiama `GetNextResult` .
+> `Open` chiama `Execute` , che a sua volta chiama `GetNextResult` .
 
-## <a name="ccommandcreate"></a><a name="create"></a>CCommand:: create
+## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: create
 
 Chiama [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) per creare un comando per la sessione specificata, quindi chiama [ICommandText:: secommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) per specificare il testo del comando.
 
@@ -296,7 +296,7 @@ Valore HRESULT standard.
 
 Il primo form di `Create` accetta una stringa di comando Unicode. Il secondo formato `Create` accetta una stringa di comando ANSI, fornita per compatibilità con le versioni precedenti delle applicazioni ANSI esistenti.
 
-## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand:: CreateCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a> CCommand:: CreateCommand
 
 Crea un nuovo comando.
 
@@ -309,7 +309,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 #### <a name="parameters"></a>Parametri
 
 *sessione*<br/>
-in `CSession`Oggetto da associare al nuovo comando.
+in `CSession` Oggetto da associare al nuovo comando.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -319,7 +319,7 @@ Valore HRESULT standard.
 
 Questo metodo crea un comando utilizzando l'oggetto sessione specificato.
 
-## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand:: GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a> CCommand:: GetParameterInfo
 
 Ottiene un elenco di parametri, i relativi nomi e tipi del comando.
 
@@ -339,7 +339,7 @@ Vedere [ICommandWithParameters:: GetParameterInfo](/previous-versions/windows/de
 
 Valore HRESULT standard.
 
-## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand::P ripare
+## <a name="ccommandprepare"></a><a name="prepare"></a> CCommand::P ripare
 
 Convalida e ottimizza il comando corrente.
 
@@ -362,7 +362,7 @@ Valore HRESULT standard.
 
 Questo metodo esegue il wrapping del metodo OLE DB [ICommandPrepare::P ripare](/previous-versions/windows/desktop/ms718370(v=vs.85)).
 
-## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand:: ReleaseCommand
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a> CCommand:: ReleaseCommand
 
 Rilascia la funzione di accesso del parametro, quindi rilascia il comando stesso.
 
@@ -374,9 +374,9 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Osservazioni
 
-`ReleaseCommand`viene utilizzato insieme a `Close` . Vedere [Close](../../data/oledb/ccommand-close.md) per i dettagli di utilizzo.
+`ReleaseCommand` viene utilizzato insieme a `Close` . Vedere [Close](../../data/oledb/ccommand-close.md) per i dettagli di utilizzo.
 
-## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand:: separameterinfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: separameterinfo
 
 Specifica il tipo nativo di ogni parametro di comando.
 
@@ -396,7 +396,7 @@ Vedere [ICommandWithParameters:: separameterinfo](/previous-versions/windows/des
 
 Valore HRESULT standard.
 
-## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand:: Unprepare
+## <a name="ccommandunprepare"></a><a name="unprepare"></a> CCommand:: Unprepare
 
 Rimuove il piano di esecuzione corrente dei comandi.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232794"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838880"
 ---
 # <a name="coclass"></a>coclass
 
@@ -53,15 +53,15 @@ Infine, qualsiasi interfaccia duale che non viene definita utilizzando IDL incor
 
 L'attributo **coclass** rende inoltre disponibili le funzioni seguenti tramite codice inserito o, nel caso di `GetObjectCLSID` , come metodo statico nella classe di base `CComCoClass` :
 
-- `UpdateRegistry`registra le class factory della classe di destinazione.
+- `UpdateRegistry` registra le class factory della classe di destinazione.
 
 - `GetObjectCLSID`, correlato alla registrazione, può essere utilizzato anche per ottenere il CLSID della classe di destinazione.
 
-- `GetObjectFriendlyName`per impostazione predefinita, restituisce una stringa nel formato " \<*target class name*> `Object` ". Se questa funzione è già presente, non viene aggiunta. Aggiungere questa funzione alla classe di destinazione per restituire un nome più amichevole rispetto a quello generato automaticamente.
+- `GetObjectFriendlyName` per impostazione predefinita, restituisce una stringa nel formato " \<*target class name*> `Object` ". Se questa funzione è già presente, non viene aggiunta. Aggiungere questa funzione alla classe di destinazione per restituire un nome più amichevole rispetto a quello generato automaticamente.
 
 - `GetProgID`, correlato alla registrazione, restituisce la stringa specificata con l'attributo [ProgID](progid.md) .
 
-- `GetVersionIndependentProgID`ha la stessa funzionalità di `GetProgID` , ma restituisce la stringa specificata con [vi_progid](vi-progid.md).
+- `GetVersionIndependentProgID` ha la stessa funzionalità di `GetProgID` , ma restituisce la stringa specificata con [vi_progid](vi-progid.md).
 
 Vengono apportate le modifiche seguenti, correlate alla mappa COM, alla classe di destinazione:
 
@@ -127,9 +127,7 @@ public:
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|

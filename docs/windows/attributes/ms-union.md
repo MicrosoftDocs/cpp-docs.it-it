@@ -1,17 +1,17 @@
 ---
-title: ms_union (C++ attributo com)
+title: ms_union (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166640"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838841"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -56,13 +56,11 @@ __interface IFireTabCtrl {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Unioni non incapsulate|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|`dispinterface`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -70,4 +68,4 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

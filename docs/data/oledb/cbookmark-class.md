@@ -66,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359326"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838477"
 ---
 # <a name="cbookmark-class"></a>Classe CBookmark
 
-Contiene un valore di segnalibro nel buffer.
+Include un valore di segnalibro nel buffer.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -89,8 +89,8 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="parameters"></a>Parametri
 
-*nDimensioni*<br/>
-Dimensione del buffer del segnalibro in byte. Quando *nSize* è zero, il buffer del segnalibro verrà creato dinamicamente in fase di esecuzione.
+*nSize*<br/>
+Dimensioni in byte del buffer dei segnalibri. Quando *nSize* è zero, il buffer del segnalibro verrà creato dinamicamente in fase di esecuzione.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -100,24 +100,24 @@ Dimensione del buffer del segnalibro in byte. Quando *nSize* è zero, il buffer 
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
-|[Cbookmark](#cbookmark)|Il costruttore|
+|[CBookmark](#cbookmark)|Costruttore|
 |[GetBuffer](#getbuffer)|Recupera il puntatore al buffer.|
 |[GetSize](#getsize)|Recupera la dimensione del buffer in byte.|
 |[SetBookmark](#setbookmark)|Imposta il valore del segnalibro.|
 
 ### <a name="operators"></a>Operatori
 
-|||
+| Nome | Descrizione |
 |-|-|
-|[operatore .](#operator)|Assegna una `CBookmark` classe a un'altra.|
+|[operatore =](#operator)|Assegna una `CBookmark` classe a un'altra classe.|
 
 ## <a name="remarks"></a>Osservazioni
 
-`CBookmark<0>`è una specializzazione `CBookmark`modello di ; il buffer viene creato dinamicamente in fase di esecuzione.
+`CBookmark<0>` è una specializzazione di modello di `CBookmark` . il buffer viene creato dinamicamente in fase di esecuzione.
 
-## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>Segnalibro CSegnalibro::CSegnalibro
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a> CBookmark:: CBookmark
 
 Costruttore.
 
@@ -130,19 +130,19 @@ CBookmark(DBLENGTH nSize);
 
 #### <a name="parameters"></a>Parametri
 
-*nDimensioni*<br/>
-[in] Dimensione del buffer del segnalibro in byte.
+*nSize*<br/>
+in Dimensioni in byte del buffer dei segnalibri.
 
 ### <a name="remarks"></a>Osservazioni
 
 La prima funzione imposta il buffer su NULL e la dimensione del buffer su 0. La seconda funzione imposta la dimensione del buffer su *nSize*e il buffer su una matrice di byte di *nSize* byte.
 
 > [!NOTE]
-> Questa funzione è `CBookmark<0>`disponibile solo in .
+> Questa funzione è disponibile solo in `CBookmark<0>` .
 
-## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>Segnalibro CSegnalibro::GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a> CBookmark:: GetBuffer
 
-Recupera il puntatore al buffer del segnalibro.
+Recupera il puntatore al buffer dei segnalibri.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -152,11 +152,11 @@ virtual BYTE* GetBuffer() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al buffer del segnalibro.
+Puntatore al buffer dei segnalibri.
 
-## <a name="cbookmarkgetsize"></a><a name="getsize"></a>Segnalibro CSegnalibro::GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a> CBookmark:: GetSize
 
-Recupera la dimensione del buffer del segnalibro.
+Recupera la dimensione del buffer dei segnalibri.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -168,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 Dimensioni del buffer in byte.
 
-## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>Segnalibro CSegnalibro::SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a> CBookmark:: sesegnalibro
 
-Copia il valore del segnalibro a `CBookmark` cui fa riferimento *pBuffer* nel buffer e imposta la dimensione del buffer su *nSize*.
+Copia il valore del segnalibro a cui fa riferimento *pbuffer* nel `CBookmark` buffer e imposta le dimensioni del buffer su *nSize*.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -180,21 +180,21 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*nDimensioni*<br/>
-[in] Dimensione del buffer del segnalibro.
+*nSize*<br/>
+in Dimensioni del buffer dei segnalibri.
 
 *pBuffer*<br/>
-[in] Puntatore alla matrice di byte contenente il valore del segnalibro.
+in Puntatore alla matrice di byte contenente il valore del segnalibro.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un HRESULT standard.
+Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione è `CBookmark<0>`disponibile solo in .
+Questa funzione è disponibile solo in `CBookmark<0>` .
 
-## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark::operatore
+## <a name="cbookmarkoperator-"></a><a name="operator"></a> CBookmark:: operator =
 
 Assegna un oggetto `CBookmark` a un altro oggetto.
 
@@ -206,9 +206,9 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo operatore è `CBookmark<0>`necessario solo in .
+Questo operatore è necessario solo in `CBookmark<0>` .
 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

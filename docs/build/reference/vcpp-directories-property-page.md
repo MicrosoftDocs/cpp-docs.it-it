@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 06e9508ae09f9c7581648b45098f497fda785013
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470797"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846030"
 ---
 # <a name="vc-directories-property-page-windows"></a>Pagina delle proprietà Directory di VC++ (Windows)
 
@@ -74,7 +74,7 @@ Per un elenco delle macro usate di frequente, vedere [macro comuni per i comandi
 
 - Definire le macro utente in un file con estensione props. Per altre informazioni, vedere [Macro della pagina delle proprietà](../working-with-project-properties.md).
 
-Per altre informazioni, vedere i post di blog seguenti: [VC++ Directories](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories) (Directory di VC++), [Inherited Properties and Property Sheets](https://docs.microsoft.com/cpp/build/project-property-inheritance) (Proprietà ereditate e finestre delle proprietà) e [Visual Studio 2010 C++ Project Upgrade Guide](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) (Guida all'aggiornamento dei progetti di Visual Studio 2010 C++).
+Per altre informazioni, vedere [ereditarietà delle proprietà nei progetti di Visual Studio](../project-property-inheritance.md)e questi post di Blog: [directory di VC + +](/archive/blogs/vsproject/vc-directories), [Guida all'aggiornamento del progetto C++ di Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Tipi di directory
 

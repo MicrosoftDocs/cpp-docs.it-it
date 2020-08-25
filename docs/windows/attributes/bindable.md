@@ -1,17 +1,17 @@
 ---
-title: associabileC++ (attributo com)
+title: Bindable (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167355"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838971"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,7 +25,7 @@ Indica che la proprietà supporta il data binding.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **associabile** C++ ha la stessa funzionalità dell'attributo MIDL [associabile](/windows/win32/Midl/bindable) . È possibile usarlo nelle proprietà definite con gli attributi [propget](propget.md), [propput](propput.md)o [propputref](propputref.md) oppure è possibile definire manualmente un metodo associabile.
+L'attributo C++ **associabile** ha la stessa funzionalità dell'attributo MIDL [associabile](/windows/win32/Midl/bindable) . È possibile usarlo nelle proprietà definite con gli attributi [propget](propget.md), [propput](propput.md)o [propputref](propputref.md) oppure è possibile definire manualmente un metodo associabile.
 
 Negli esempi MFC seguenti viene illustrato l'utilizzo di **Bindable**:
 
@@ -60,14 +60,12 @@ __interface IPropDemo : IDispatch {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
