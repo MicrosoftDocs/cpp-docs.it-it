@@ -5,10 +5,10 @@ ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 08/24/2020
 ms.locfileid: "87232196"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Bentornato in C++ - C++ moderno
@@ -52,7 +52,7 @@ Quando possibile, usare un puntatore intelligente quando si alloca la memoria he
 
 Le stringhe di tipo C sono un'altra fonte principale di bug. Utilizzando [ `std::string` e `std::wstring` ](../standard-library/basic-string-class.md), è possibile eliminare praticamente tutti gli errori associati alle stringhe di tipo C. Puoi anche sfruttare i vantaggi delle funzioni membro per la ricerca, l'accodamento, la presospensione e così via. Entrambi sono altamente ottimizzati per la velocità. Quando si passa una stringa a una funzione che richiede solo l'accesso in sola lettura, in C++ 17 è possibile usare [`std::string_view`](../standard-library/basic-string-view-class.md) per migliorare ulteriormente le prestazioni.
 
-## <a name="stdvector-and-other-standard-library-containers"></a>`std::vector`e altri contenitori della libreria standard
+## <a name="stdvector-and-other-standard-library-containers"></a>`std::vector` e altri contenitori della libreria standard
 
 Tutti i contenitori della libreria standard seguono il principio di RAII. Forniscono gli iteratori per l'attraversamento sicuro di elementi. E sono altamente ottimizzati per le prestazioni e sono stati accuratamente testati per correttezza. Usando questi contenitori, è possibile eliminare il rischio di bug o inefficienze che potrebbero essere introdotti in strutture di dati personalizzate. Anziché le matrici non elaborate, usare [`vector`](../standard-library/vector-class.md) come contenitore sequenziale in C++.
 
@@ -104,7 +104,7 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="auto-instead-of-explicit-type-names"></a>`auto`anziché nomi di tipi espliciti
+## <a name="auto-instead-of-explicit-type-names"></a>`auto` anziché nomi di tipi espliciti
 
 In c++ 11 è stata introdotta la [`auto`](auto-cpp.md) parola chiave da utilizzare nelle dichiarazioni di variabili, funzioni e modelli. **`auto`** indica al compilatore di dedurre il tipo dell'oggetto in modo che non sia necessario digitarlo in modo esplicito. **`auto`** è particolarmente utile quando il tipo dedotto è un modello annidato:
 
@@ -139,7 +139,7 @@ int main()
 }
 ```
 
-## <a name="constexpr-expressions-instead-of-macros"></a>`constexpr`espressioni anziché macro
+## <a name="constexpr-expressions-instead-of-macros"></a>`constexpr` espressioni anziché macro
 
 Le macro in C e C++ sono token elaborati dal preprocessore prima della compilazione. Ogni istanza di un token di macro viene sostituita con il valore o l'espressione definita prima che il file venga compilato. Le macro sono comunemente usate nella programmazione di tipo C per definire i valori costanti in fase di compilazione. Tuttavia, le macro sono soggette a errori ed è difficile eseguire il debug. Nel linguaggio C++ moderno, è consigliabile preferire le [`constexpr`](constexpr-cpp.md) variabili per le costanti in fase di compilazione:
 
@@ -150,7 +150,7 @@ constexpr int size = 10; // modern C++
 
 ### <a name="uniform-initialization"></a>Inizializzazione uniforme
 
-Nel linguaggio C++ moderno, è possibile usare l'inizializzazione con parentesi graffe per qualsiasi tipo. Questa forma di inizializzazione è particolarmente utile quando si inizializzano matrici, vettori o altri contenitori. Nell'esempio seguente `v2` viene inizializzato con tre istanze di `S` . `v3`viene inizializzata con tre istanze di `S` che vengono inizializzate utilizzando le parentesi graffe. Il compilatore deduce il tipo di ogni elemento in base al tipo dichiarato di `v3` .
+Nel linguaggio C++ moderno, è possibile usare l'inizializzazione con parentesi graffe per qualsiasi tipo. Questa forma di inizializzazione è particolarmente utile quando si inizializzano matrici, vettori o altri contenitori. Nell'esempio seguente `v2` viene inizializzato con tre istanze di `S` . `v3` viene inizializzata con tre istanze di `S` che vengono inizializzate utilizzando le parentesi graffe. Il compilatore deduce il tipo di ogni elemento in base al tipo dichiarato di `v3` .
 
 ```cpp
 #include <vector>
@@ -210,7 +210,7 @@ Il linguaggio C++ moderno enfatizza le eccezioni anziché i codici di errore com
 
 Usare lo struct della libreria standard C++ [`std::atomic`](../standard-library/atomic-structure.md) e i tipi correlati per i meccanismi di comunicazione tra thread.
 
-## <a name="stdvariant-c17"></a>`std::variant`(C++ 17)
+## <a name="stdvariant-c17"></a>`std::variant` (C++ 17)
 
 Le unioni vengono comunemente utilizzate nella programmazione di tipo C per conservare la memoria consentendo a membri di tipi diversi di occupare la stessa posizione di memoria. Tuttavia, le unioni non sono indipendenti dai tipi e sono soggette a errori di programmazione. In c++ 17 è stata introdotta la [`std::variant`](../standard-library/variant-class.md) classe come alternativa più affidabile e sicura alle unioni. La [`std::visit`](../standard-library/variant-functions.md#visit) funzione può essere usata per accedere ai membri di un `variant` tipo in modo indipendente dai tipi.
 
