@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fe2d0e57c0746f25187028b85157d66ee736ca4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212163"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836426"
 ---
 # <a name="ltnewgt"></a>&lt;Nuovo&gt;
 
@@ -31,13 +31,13 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili.  L'im
 
 ### <a name="objects"></a>Oggetti
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[nothrow](../standard-library/new-functions.md#nothrow)|Fornisce un oggetto da usare come argomento per le **`nothrow`** versioni di **`new`** e **`delete`** .|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[new_handler](../standard-library/new-typedefs.md#new_handler)|Tipo che punta a una funzione appropriata per l'uso come nuovo gestore.|
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
@@ -45,7 +45,7 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili.  L'im
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
 |[riciclare](../standard-library/new-functions.md#launder)||
@@ -53,7 +53,7 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili.  L'im
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore delete](../standard-library/new-operators.md#op_delete)|Funzione chiamata da un'espressione delete per rendere nuovamente disponibile l'archiviazione di singoli oggetti.|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funzione chiamata da un'espressione delete per deallocare memoria per una matrice di oggetti.|
@@ -62,13 +62,13 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili.  L'im
 
 ### <a name="enums"></a>Enumerazioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[align_val_t](../standard-library/new-operators.md#op_align_val_t)||
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe bad_alloc](../standard-library/bad-alloc-class.md)|La classe descrive un'eccezione generata per indicare che una richiesta di allocazione ha avuto esito negativo.|
 |[Classe bad_array_new_length](../standard-library/bad-array-new-length.md)||

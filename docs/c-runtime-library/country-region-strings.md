@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: d5d8c10e30886c1b34bb5dc95296bc594acda1a4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373567"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831853"
 ---
 # <a name="countryregion-strings"></a>stringhe relative a paesi
 
-Le stringhe di paese e area geografica possono essere combinate con una stringa di lingua per creare una specifica delle impostazioni locali per le funzioni `setlocale`, `_wsetlocale`, `_create_locale`e `_wcreate_locale` . Per gli elenchi di nomi di paese e di area supportati da varie versioni del sistema operativo Windows, vedere le colonne **Language**, **location**e **Tag Language** della tabella in [appendice a: comportamento del prodotto](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) in \[ MS-LCID]: informazioni di riferimento sull'identificatore del codice lingua (LCID) di Windows. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample) (NLS: esempio di API basate sui nomi).
+Le stringhe di paese e area geografica possono essere combinate con una stringa di lingua per creare una specifica delle impostazioni locali per le funzioni `setlocale`, `_wsetlocale`, `_create_locale`e `_wcreate_locale` . Per gli elenchi di nomi di paese e di area supportati da varie versioni del sistema operativo Windows, vedere le colonne **Language**, **location**e **Tag Language** della tabella in [appendice a: comportamento del prodotto](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) in \[ MS-LCID]: informazioni di riferimento sull'identificatore del codice lingua (LCID) di Windows. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample) (NLS: esempio di API basate sui nomi).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Altre stringhe di paese e area geografica supportate
 

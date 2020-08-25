@@ -10,22 +10,24 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3117ce7e962468855172a463c375392930e7c81
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366411"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833231"
 ---
 # <a name="ltregexgt-operators"></a>Operatori &lt;regex&gt;
 
-||||
-|-|-|-|
-|[operatore!](#op_neq)|[Operatore&gt;](#op_gt)|[Operatore&gt;=](#op_gt_eq)|
-|[Operatore&lt;](#op_lt)|[Operatore&lt;&lt;](#op_lt_lt)|[Operatore&lt;=](#op_lt_eq)|
-|[operatore di comando](#op_eq_eq)|
+[operatore! =](#op_neq)\
+[operatore&gt;](#op_gt)\
+[operatore&gt;=](#op_gt_eq)\
+[operatore&lt;](#op_lt)\
+[operatore&lt;&lt;](#op_lt_lt)\
+[operatore&lt;=](#op_lt_eq)\
+[operatore = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>operatore!
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Confronto non uguale tra vari oggetti.
 
@@ -69,16 +71,16 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 *BidIt*\
 Tipo di iteratore.
 
-*IOtratti*\
+*IOtraits*\
 Classe traits della stringa.
 
 *Alloc*\
 Classe Allocator.
 
-*Sinistra*\
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*va bene*\
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -144,7 +146,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Confronto minore di tra vari oggetti.
 
@@ -184,21 +186,21 @@ bool operator<(const sub_match<BidIt>& left,
 *BidIt*\
 Tipo di iteratore.
 
-*IOtratti*\
+*IOtraits*\
 Classe traits della stringa.
 
 *Alloc*\
 Classe Allocator.
 
-*Sinistra*\
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*va bene*\
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Ogni operatore di modello converte gli argomenti in un tipo stringa e restituisce true solo se il valore convertito di *left* confronta minore del valore convertito di *right*.
+Ciascun operatore modello converte gli argomenti in un tipo stringa e restituisce true solo se il valore convertito di *Left* è inferiore al valore convertito di *right*.
 
 ### <a name="example"></a>Esempio
 
@@ -254,7 +256,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operatore&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operatore&lt;&lt;
 
 Inserisce un oggetto sub_match in un flusso.
 
@@ -269,7 +271,7 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 *Elem*\
 Tipo dell'elemento.
 
-*IOtratti*\
+*IOtraits*\
 Classe traits della stringa.
 
 *Alloc*\
@@ -278,10 +280,10 @@ Classe Allocator.
 *BidIt*\
 Tipo di iteratore.
 
-*Os*\
+*del sistema operativo*\
 Flusso di output.
 
-*va bene*\
+*Ok*\
 Oggetto da inserire.
 
 ### <a name="remarks"></a>Osservazioni
@@ -314,7 +316,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Confronto minore di o uguale tra vari oggetti.
 
@@ -354,16 +356,16 @@ bool operator<=(const sub_match<BidIt>& left,
 *BidIt*\
 Tipo di iteratore.
 
-*IOtratti*\
+*IOtraits*\
 Classe traits della stringa.
 
 *Alloc*\
 Classe Allocator.
 
-*Sinistra*\
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*va bene*\
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -424,7 +426,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore di comando
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Confronto uguale tra vari oggetti.
 
@@ -468,16 +470,16 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 *BidIt*\
 Tipo di iteratore.
 
-*IOtratti*\
+*IOtraits*\
 Classe traits della stringa.
 
 *Alloc*\
 Classe Allocator.
 
-*Sinistra*\
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*va bene*\
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -486,11 +488,11 @@ Ciascun operatore modello converte ciascun argomento in un tipo stringa e restit
 
 Quando un operatore modello converte gli argomenti in un tipo stringa, usa la prima trasformazione applicabile tra quelle seguenti:
 
-gli argomenti i cui tipi `match_results` sono `sub_match` una specializzazione `str` del modello di classe o vengono convertiti chiamando la funzione membro;
+gli argomenti i cui tipi sono una specializzazione del modello di classe `match_results` o `sub_match` vengono convertiti chiamando la `str` funzione membro.
 
-gli argomenti i cui tipi sono `basic_string` una specializzazione del modello di classe non sono modificati;
+gli argomenti i cui tipi sono una specializzazione del modello di classe `basic_string` sono invariati;
 
-tutti gli altri tipi di argomento vengono convertiti passando il valore `basic_string`dell'argomento al costruttore per una specializzazione appropriata del modello di classe .
+tutti gli altri tipi di argomento vengono convertiti passando il valore dell'argomento al costruttore per una specializzazione appropriata del modello di classe `basic_string` .
 
 ### <a name="example"></a>Esempio
 
@@ -551,7 +553,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Confronto maggiore di tra vari oggetti.
 
@@ -591,16 +593,16 @@ bool operator>(const sub_match<BidIt>& left,
 *BidIt*\
 Tipo di iteratore.
 
-*IOtratti*\
+*IOtraits*\
 Classe traits della stringa.
 
 *Alloc*\
 Classe Allocator.
 
-*Sinistra*\
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*va bene*\
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -661,7 +663,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Confronto maggiore di o uguale tra vari oggetti.
 
@@ -701,16 +703,16 @@ bool operator>=(const sub_match<BidIt>& left,
 *BidIt*\
 Tipo di iteratore.
 
-*IOtratti*\
+*IOtraits*\
 Classe traits della stringa.
 
 *Alloc*\
 Classe Allocator.
 
-*Sinistra*\
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*va bene*\
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -773,11 +775,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>regex](../standard-library/regex.md)\
+[\<regex>](../standard-library/regex.md)\
 [Classe regex_constants](../standard-library/regex-constants-class.md)\
 [Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funzioni di> regex](../standard-library/regex-functions.md)\
+[\<regex> funzioni](../standard-library/regex-functions.md)\
 [Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[regex_token_iterator classe](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Classe regex_traits](../standard-library/regex-traits-class.md)\
 [\<regex> typedef](../standard-library/regex-typedefs.md)

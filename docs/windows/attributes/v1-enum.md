@@ -1,17 +1,17 @@
 ---
-title: v1_enum (C++ attributo com)
+title: v1_enum (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 1a189f6f1c5ef9d4ae77df9f1eda3f3671ddaf52
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6529a32b0bfe2de09191e9cced8f6bd98e7ffdcc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166107"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832984"
 ---
 # <a name="v1_enum"></a>v1_enum
 
@@ -44,18 +44,16 @@ enum eList {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Tipo enumerato|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)

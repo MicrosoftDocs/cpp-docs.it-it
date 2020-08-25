@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212124"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833180"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -59,9 +59,9 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
-|||
+|Nome|Descrizione|
 |-|-|
-|hash|Genera un hash di una stringa.|
+|`hash`|Genera un hash di una stringa.|
 |[scambio](../standard-library/string-functions.md#swap)|Scambia le matrici di caratteri di due stringhe.|
 |[stod](../standard-library/string-functions.md#stod)|Converte una sequenza di caratteri in un oggetto **`double`** .|
 |[stof](../standard-library/string-functions.md#stof)|Converte una sequenza di caratteri in un oggetto **`float`** .|
@@ -88,7 +88,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="specializations"></a>Specializzazioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[\<char>Struct char_traits](../standard-library/char-traits-char-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits` \<CharType> per un elemento di tipo **`char`** .|
 |[Struct char_traits<wchar_t>](../standard-library/char-traits-wchar-t-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits` \<CharType> per un elemento di tipo **`wchar_t`** .|

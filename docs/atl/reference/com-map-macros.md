@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 191a0ba0aeda6ad18cdac7ba14f7ab5f3b2282f7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 100402e17ca1bee5f338c37f2315fbc4898a713e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833582"
 ---
 # <a name="com-map-macros"></a>Macro mappa COM
 
 Queste macro definiscono le mappe dell'interfaccia COM.
 
-|||
+|Macro|Descrizione|
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|Contrassegna l'inizio delle voci della mappa dell'interfaccia COM.|
 |[END_COM_MAP](#end_com_map)|Contrassegna la fine delle voci della mappa dell'interfaccia COM.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom.h
+**Intestazione:** atlcom. h
 
-## <a name="begin_com_map"></a><a name="begin_com_map"></a>BEGIN_COM_MAP
+## <a name="begin_com_map"></a><a name="begin_com_map"></a> BEGIN_COM_MAP
 
-La mappa COM è il meccanismo che espone le `QueryInterface`interfacce su un oggetto a un client tramite .
+La mappa COM è il meccanismo che espone le interfacce di un oggetto a un client tramite `QueryInterface` .
 
 ```
 BEGIN_COM_MAP(x)
@@ -37,20 +37,20 @@ BEGIN_COM_MAP(x)
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
-[in] Nome dell'oggetto classe su cui si espongono le interfacce.
+*x*<br/>
+in Nome dell'oggetto classe in cui si stanno esponendo le interfacce.
 
 ### <a name="remarks"></a>Osservazioni
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) restituisce solo puntatori per le interfacce nella mappa COM. Iniziare la mappa dell'interfaccia con la macro BEGIN_COM_MAP, aggiungere voci per ciascuna delle interfacce con la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) o una delle relative varianti e completare la mappa con la macro [END_COM_MAP.](#end_com_map)
+[CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) restituisce solo i puntatori per le interfacce nella mappa com. Avviare la mappa dell'interfaccia con la macro BEGIN_COM_MAP, aggiungere voci per ogni interfaccia con la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) o una delle relative varianti e completare la mappa con la macro [END_COM_MAP](#end_com_map) .
 
 ### <a name="example"></a>Esempio
 
-Dall'esempio ATL [BEEPER:](../../overview/visual-cpp-samples.md)
+Dall'esempio di [beeper](../../overview/visual-cpp-samples.md) ATL:
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-## <a name="end_com_map"></a><a name="end_com_map"></a>END_COM_MAP
+## <a name="end_com_map"></a><a name="end_com_map"></a> END_COM_MAP
 
 Termina la definizione della mappa dell'interfaccia COM.
 
@@ -61,4 +61,4 @@ END_COM_MAP()
 ## <a name="see-also"></a>Vedere anche
 
 [Macro](../../atl/reference/atl-macros.md)<br/>
-[Funzioni globali della mappa COMCOM Map Global Functions](../../atl/reference/com-map-global-functions.md)
+[Funzioni globali della mappa COM](../../atl/reference/com-map-global-functions.md)

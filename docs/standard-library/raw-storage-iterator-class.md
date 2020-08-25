@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217636"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831424"
 ---
 # <a name="raw_storage_iterator-class"></a>Classe raw_storage_iterator
 
@@ -46,26 +46,26 @@ Questa classe di adattatori viene usata quando è necessario separare allocazion
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Costruisce un iteratore di archiviazione non elaborato con un iteratore di output sottostante specificato.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[element_type](#element_type)|Fornisce un tipo che descrive un elemento da archiviare in un iteratore di archiviazione non elaborato.|
 |[iter_type](#iter_type)|Fornisce un tipo che descrive un iteratore sottostante a un iteratore di archiviazione non elaborato.|
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore](#op_star)|Operatore di dereferenziazione utilizzato per implementare l'espressione dell'iteratore di output \* `ii`  =  `x` .|
 |[operatore =](#op_eq)|Operatore di assegnazione utilizzato per implementare l'espressione dell'iteratore di archiviazione non elaborata \* `i`  =  `x` per l'archiviazione in memoria.|
 |[operatore + +](#op_add_add)|Operatori di incremento prefisso e incremento suffisso per iteratori di archiviazione non elaborati.|
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Fornisce un tipo che descrive un elemento da archiviare in un iteratore di archiviazione non elaborato.
 
@@ -77,7 +77,7 @@ typedef Type element_type;
 
 Il tipo è un sinonimo del parametro di modello della classe raw_storage_iterator `Type` .
 
-### <a name="iter_type"></a><a name="iter_type"></a>iter_type
+### <a name="iter_type"></a><a name="iter_type"></a> iter_type
 
 Fornisce un tipo che descrive un iteratore sottostante a un iteratore di archiviazione non elaborato.
 
@@ -89,7 +89,7 @@ typedef ForwardIterator iter_type;
 
 Il tipo è un sinonimo del parametro di modello `ForwardIterator`.
 
-### <a name="operator"></a><a name="op_star"></a>operatore\*
+### <a name="operator"></a><a name="op_star"></a> operatore\*
 
 Operatore di dereferenziazione utilizzato per implementare l'espressione dell'iteratore di archiviazione non elaborato \* *II*  =  *x*.
 
@@ -157,7 +157,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>operatore =
+### <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Operatore di assegnazione usato per implementare l'espressione dell'iteratore di archiviazione \* *non elaborato i*  =  *x* per l'archiviazione in memoria.
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_add_add"></a>operatore + +
+### <a name="operator"></a><a name="op_add_add"></a> operatore + +
 
 Operatori di incremento prefisso e incremento suffisso per iteratori di archiviazione non elaborati.
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a> raw_storage_iterator
 
 Costruisce un iteratore di archiviazione non elaborato con un iteratore di output sottostante specificato.
 

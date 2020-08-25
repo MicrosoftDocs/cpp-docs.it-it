@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: d328cd7bcfed257b423a440041b6806149736ed0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215296"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831385"
 ---
 # <a name="db_source"></a>db_source
 
@@ -50,7 +50,7 @@ Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](
 
 ## <a name="example"></a>Esempio
 
-In questo esempio viene chiamato **db_source** su una classe per creare una connessione all'origine dati `ds` utilizzando il database Northwind. `ds`è un handle per l'origine dati, che può essere utilizzato internamente alla `CMyCommand` classe.
+In questo esempio viene chiamato **db_source** su una classe per creare una connessione all'origine dati `ds` utilizzando il database Northwind. `ds` è un handle per l'origine dati, che può essere utilizzato internamente alla `CMyCommand` classe.
 
 ```cpp
 // db_source_1.cpp
@@ -68,9 +68,7 @@ class CMyCommand {};
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , membro, metodo, locale|
 |**Ripetibile**|No|

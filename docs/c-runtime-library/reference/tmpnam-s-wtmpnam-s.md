@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2168a1bef5b8eb20a1f59460146559f4fa9f2645
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917480"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831580"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -82,11 +82,10 @@ Entrambe queste funzioni restituiscono 0 in caso di esito positivo o un numero d
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|||||
-|-|-|-|-|
-|*Str*|*sizeInChars*|**Valore restituito**|**Contenuto di**  *Str*|
-|**NULL**|any|**EINVAL**|non modificato|
-|Not **null** (punta alla memoria valida)|troppo breve|**ERANGE**|non modificato|
+| *Str* | *sizeInChars* | **Valore restituito** | **Contenuto di** *Str* |
+|--|--|--|--|
+| **NULL** | any | **EINVAL** | non modificato |
+| Not **null** (punta alla memoria valida) | troppo breve | **ERANGE** | non modificato |
 
 Se *Str* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 

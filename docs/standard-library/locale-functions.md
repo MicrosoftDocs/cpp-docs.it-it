@@ -34,24 +34,32 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224812"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833244"
 ---
 # <a name="ltlocalegt-functions"></a>Funzioni &lt;locale&gt;
 
-||||
-|-|-|-|
-|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[ToLower](#tolower)|[ToUpper](#toupper)|[use_facet](#use_facet)|
+[has_facet](#has_facet)\
+[isalnum](#isalnum)\
+[isalpha](#isalpha)\
+[iscntrl](#iscntrl)\
+[IsDigit](#isdigit)\
+[isgraph](#isgraph)\
+[IsLower](#islower)\
+[isprint](#isprint)\
+[ispunct](#ispunct)\
+[isspace](#isspace)\
+[IsUpper](#isupper)\
+[isxdigit](#isxdigit)\
+[ToLower](#tolower)\
+[ToUpper](#toupper)\
+[use_facet](#use_facet)
 
-## <a name="has_facet"></a><a name="has_facet"></a>has_facet
+## <a name="has_facet"></a><a name="has_facet"></a> has_facet
 
 Verifica se un facet specifico viene archiviato nelle impostazioni locali specificate.
 
@@ -94,7 +102,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a><a name="isalnum"></a>isalnum
+## <a name="isalnum"></a><a name="isalnum"></a> isalnum
 
 Verifica se un elemento delle impostazioni locali è un carattere alfabetico o numerico.
 
@@ -161,7 +169,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a><a name="isalpha"></a>isalpha
+## <a name="isalpha"></a><a name="isalpha"></a> isalpha
 
 Verifica se un elemento delle impostazioni locali è un carattere alfabetico.
 
@@ -226,7 +234,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a> iscntrl
 
 Verifica se un elemento delle impostazioni locali è un carattere di controllo.
 
@@ -291,7 +299,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>IsDigit
+## <a name="isdigit"></a><a name="isdigit"></a> IsDigit
 
 Verifica se un elemento delle impostazioni locali è un carattere numerico.
 
@@ -356,7 +364,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a><a name="isgraph"></a>isgraph
+## <a name="isgraph"></a><a name="isgraph"></a> isgraph
 
 Verifica se un elemento delle impostazioni locali è un carattere alfanumerico o di punteggiatura.
 
@@ -421,7 +429,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>IsLower
+## <a name="islower"></a><a name="islower"></a> IsLower
 
 Verifica se un elemento delle impostazioni locali è un carattere minuscolo.
 
@@ -486,7 +494,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a><a name="isprint"></a>isprint
+## <a name="isprint"></a><a name="isprint"></a> isprint
 
 Verifica se un elemento delle impostazioni locali è un carattere stampabile.
 
@@ -550,7 +558,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a><a name="ispunct"></a>ispunct
+## <a name="ispunct"></a><a name="ispunct"></a> ispunct
 
 Verifica se un elemento delle impostazioni locali è un carattere di punteggiatura.
 
@@ -615,7 +623,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a><a name="isspace"></a>isspace
+## <a name="isspace"></a><a name="isspace"></a> isspace
 
 Verifica se un elemento delle impostazioni locali è uno spazio vuoto.
 
@@ -680,7 +688,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>IsUpper
+## <a name="isupper"></a><a name="isupper"></a> IsUpper
 
 Verifica se un elemento delle impostazioni locali è un carattere maiuscolo.
 
@@ -745,7 +753,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a> isxdigit
 
 Verifica se un elemento delle impostazioni locali è un carattere utilizzato per rappresentare un numero esadecimale.
 
@@ -812,7 +820,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>ToLower
+## <a name="tolower"></a><a name="tolower"></a> ToLower
 
 Converte un carattere in minuscolo.
 
@@ -861,7 +869,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>ToUpper
+## <a name="toupper"></a><a name="toupper"></a> ToUpper
 
 Converte un carattere in maiuscolo.
 
@@ -910,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a><a name="use_facet"></a>use_facet
+## <a name="use_facet"></a><a name="use_facet"></a> use_facet
 
 Restituisce un riferimento a un facet di un tipo specificato archiviato nelle impostazioni locali.
 

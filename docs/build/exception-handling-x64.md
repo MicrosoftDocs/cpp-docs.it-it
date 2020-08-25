@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224045"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835051"
 ---
 # <a name="x64-exception-handling"></a>Gestione delle eccezioni x64
 
@@ -24,7 +24,7 @@ Per la gestione delle eccezioni e il supporto del debug sono necessarie diverse 
 
 Per la gestione delle eccezioni basata su tabella è richiesta una voce di tabella per tutte le funzioni che allocano lo spazio dello stack o chiamano un'altra funzione (ad esempio, funzioni non foglia). Il formato delle voci della tabella di funzioni è:
 
-|||
+|Dimensione|Valore|
 |-|-|
 |ULONG|Indirizzo iniziale della funzione|
 |ULONG|Indirizzo finale funzione|
@@ -36,7 +36,7 @@ La struttura di RUNTIME_FUNCTION deve essere DWORD allineata in memoria. Tutti g
 
 La struttura delle informazioni sui dati di rimozione viene utilizzata per registrare gli effetti di una funzione sul puntatore dello stack e la posizione in cui vengono salvati i registri non volatili nello stack:
 
-|||
+|Dimensione|Valore|
 |-|-|
 |UBYTE: 3|Versione|
 |UBYTE: 5|Flags|
@@ -49,14 +49,14 @@ La struttura delle informazioni sui dati di rimozione viene utilizzata per regis
 
 (1) gestore eccezioni
 
-|||
+|Dimensione|Valore|
 |-|-|
 |ULONG|Indirizzo del gestore di eccezioni|
 |Variabile|Dati del gestore specifici della lingua (facoltativo)|
 
 (2) informazioni di rimozione concatenate
 
-|||
+|Dimensione|Valore|
 |-|-|
 |ULONG|Indirizzo iniziale della funzione|
 |ULONG|Indirizzo finale funzione|
@@ -64,7 +64,7 @@ La struttura delle informazioni sui dati di rimozione viene utilizzata per regis
 
 La struttura di UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa significa ogni campo:
 
-- **Version**
+- **Versione**
 
    Numero di versione dei dati di rimozione, attualmente 1.
 
@@ -114,7 +114,7 @@ La struttura di UNWIND_INFO deve essere DWORD allineata in memoria. Ecco cosa si
 
 La matrice di codice di rimozione viene usata per registrare la sequenza di operazioni nel prologo che interessano i registri non volatili e RSP. Il formato di ogni elemento di codice è il seguente:
 
-|||
+|Dimensione|Valore|
 |-|-|
 |UBYTE|Offset nel prologo|
 |UBYTE: 4|Codice dell'operazione di rimozione|
@@ -136,15 +136,15 @@ Per i codici operativi `UWOP_SAVE_XMM128` e `UWOP_SAVE_XMM128_FAR` , l'offset è
 
 Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
-- `UWOP_PUSH_NONVOL`(0) 1 nodo
+- `UWOP_PUSH_NONVOL` (0) 1 nodo
 
   Eseguire il push di un registro di tipo integer non volatile, diminuendo RSP da 8. Le informazioni sull'operazione sono il numero del registro. A causa dei vincoli su epilogo, i `UWOP_PUSH_NONVOL` codici di rimozione devono essere visualizzati per primi nel prologo e corrispondenti, l'ultimo nella matrice di codice di rimozione. Questo ordinamento relativo si applica a tutti gli altri codici di rimozione ad eccezione di `UWOP_PUSH_MACHFRAME` .
 
-- `UWOP_ALLOC_LARGE`(1) 2 o 3 nodi
+- `UWOP_ALLOC_LARGE` (1) 2 o 3 nodi
 
   Allocare un'area di grandi dimensioni nello stack. Esistono due formati. Se le informazioni sull'operazione sono uguali a 0, la dimensione dell'allocazione divisa per 8 viene registrata nello slot successivo, consentendo un'allocazione fino a 512K-8. Se le informazioni sull'operazione sono uguali a 1, le dimensioni non ridimensionate dell'allocazione vengono registrate nei due slot successivi nel formato little endian, consentendo allocazioni fino a 4GB-8.
 
-- `UWOP_ALLOC_SMALL`(2) 1 nodo
+- `UWOP_ALLOC_SMALL` (2) 1 nodo
 
   Allocare un'area di piccole dimensioni nello stack. La dimensione dell'allocazione è il campo delle informazioni sull'operazione \* 8 + 8, che consente allocazioni da 8 a 128 byte.
 
@@ -156,31 +156,31 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
   |da 136 a 512K-8 byte|`UWOP_ALLOC_LARGE`, informazioni sull'operazione = 0|
   |da 512K a 4G-8 byte|`UWOP_ALLOC_LARGE`, informazioni operazione = 1|
 
-- `UWOP_SET_FPREG`(3) 1 nodo
+- `UWOP_SET_FPREG` (3) 1 nodo
 
   Stabilire il registro del puntatore del frame impostando il registro su un offset del RSP corrente. L'offset è uguale al campo offset del registro frame (ridimensionato) nella UNWIND_INFO \* 16, consentendo gli offset da 0 a 240. L'uso di un offset consente di stabilire un puntatore a un frame che punta al centro dell'allocazione dello stack fisso, aiutando la densità del codice consentendo a più accessi di usare moduli di istruzioni brevi. Il campo informazioni sull'operazione è riservato e non deve essere usato.
 
-- `UWOP_SAVE_NONVOL`(4) 2 nodi
+- `UWOP_SAVE_NONVOL` (4) 2 nodi
 
   Salvare un registro di tipo integer non volatile nello stack usando un MOV anziché un PUSH. Questo codice viene usato principalmente per la *riduzione del wrapping*, in cui un registro non volatile viene salvato nello stack in una posizione allocata in precedenza. Le informazioni sull'operazione sono il numero del registro. L'offset dello stack ridimensionato per 8 viene registrato nello slot di codice di un'operazione di rimozione successiva, come descritto nella nota sopra.
 
-- `UWOP_SAVE_NONVOL_FAR`(5) 3 nodi
+- `UWOP_SAVE_NONVOL_FAR` (5) 3 nodi
 
   Salvare un registro di tipo integer non volatile nello stack con un offset lungo, usando un MOV anziché un PUSH. Questo codice viene usato principalmente per la *riduzione del wrapping*, in cui un registro non volatile viene salvato nello stack in una posizione allocata in precedenza. Le informazioni sull'operazione sono il numero del registro. L'offset dello stack non ridimensionato viene registrato nei due slot di codice delle operazioni di rimozione successivi, come descritto nella nota sopra.
 
-- `UWOP_SAVE_XMM128`(8) 2 nodi
+- `UWOP_SAVE_XMM128` (8) 2 nodi
 
   Salvare tutti i 128 bit di un registro XMM non volatile nello stack. Le informazioni sull'operazione sono il numero del registro. L'offset dello stack ridimensionato per 16 viene registrato nello slot successivo.
 
-- `UWOP_SAVE_XMM128_FAR`(9) 3 nodi
+- `UWOP_SAVE_XMM128_FAR` (9) 3 nodi
 
   Salvare tutti i 128 bit di un registro XMM non volatile nello stack con un offset lungo. Le informazioni sull'operazione sono il numero del registro. L'offset dello stack non ridimensionato viene registrato nei due slot successivi.
 
-- `UWOP_PUSH_MACHFRAME`(10) 1 nodo
+- `UWOP_PUSH_MACHFRAME` (10) 1 nodo
 
   Eseguire il push di un frame del computer.  Questo codice di rimozione viene usato per registrare l'effetto di un'interruzione dell'hardware o di un'eccezione. Esistono due formati. Se le informazioni sull'operazione sono uguali a 0, uno di questi frame è stato inserito nello stack:
 
-  |||
+  |Posizione|Valore|
   |-|-|
   |RSP + 32|SS|
   |RSP + 24|RSP precedente|
@@ -190,16 +190,16 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
   Se le informazioni sull'operazione sono uguali a 1, è stato eseguito il push di uno di questi frame:
 
-  |||
+  |Posizione|Valore|
   |-|-|
   |RSP + 40|SS|
   |RSP + 32|RSP precedente|
   |RSP + 24|EFLAGS|
   |RSP + 16|CS|
   |RSP + 8|RIP|
-  |RSP|Codice di errore|
+  |RSP|Codice errore|
 
-  Questo codice di rimozione viene sempre visualizzato in un prologo fittizio, che non viene mai effettivamente eseguito, ma viene invece visualizzato prima del punto di ingresso reale di una routine di interrupt ed esiste solo per fornire una posizione per simulare il push di un frame del computer. `UWOP_PUSH_MACHFRAME`registra la simulazione, che indica che il computer ha concettualmente eseguito questa operazione:
+  Questo codice di rimozione viene sempre visualizzato in un prologo fittizio, che non viene mai effettivamente eseguito, ma viene invece visualizzato prima del punto di ingresso reale di una routine di interrupt ed esiste solo per fornire una posizione per simulare il push di un frame del computer. `UWOP_PUSH_MACHFRAME` registra la simulazione, che indica che il computer ha concettualmente eseguito questa operazione:
 
   1. Pop RIP Address return dall'inizio dello stack in *Temp*
   
@@ -221,7 +221,7 @@ Il codice dell'operazione di rimozione è uno dei valori seguenti:
 
 Il significato dei bit delle informazioni sull'operazione dipende dal codice operativo. Per codificare un registro di utilizzo generico (Integer), viene usato questo mapping:
 
-|||
+|bit|Registrazione|
 |-|-|
 |0|RAX|
 |1|RCX|

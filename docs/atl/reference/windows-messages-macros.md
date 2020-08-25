@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: a5a6d45c64d6123128ae362c1ef5643392439f41
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4cd3c2eea24449eb17050b147d9c59560d8358f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329415"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834440"
 ---
 # <a name="windows-messages-macros"></a>Macro di messaggi di Windows
 
-Questa macro inoltra i messaggi della finestra.
+Questa macro trasmette i messaggi della finestra.
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|Consente di inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione.|
+|[WM_FORWARDMSG](#wm_forwardmsg)|Utilizzare per inviare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase.h
+**Intestazione:** atlbase. h
 
-## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a>WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a> WM_FORWARDMSG
 
-Questa macro inoltra un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione.
+Questa macro trasmette un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione.
 
 ```
 WM_FORWARDMSG
@@ -33,16 +33,16 @@ WM_FORWARDMSG
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il messaggio è stato elaborato, zero in caso contrario.
+Diverso da zero se il messaggio è stato elaborato; in caso contrario, zero.
 
 ### <a name="remarks"></a>Osservazioni
 
-Utilizzare WM_FORWARDMSG per inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione. I parametri LPARAM e WPARAM vengono utilizzati come segue:
+Utilizzare WM_FORWARDMSG per inviare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione. I parametri LPARAM e WPARAM vengono usati come indicato di seguito:
 
-|Parametro|Uso|
+|Parametro|Utilizzo|
 |---------------|-----------|
-|Wparam|Dati definiti dall'utente|
-|Lparam|Puntatore a `MSG` una struttura che contiene informazioni su un messaggio|
+|WPARAM|Dati definiti dall'utente|
+|LPARAM|Puntatore a una `MSG` struttura che contiene informazioni su un messaggio|
 
 ### <a name="example"></a>Esempio
 

@@ -1,17 +1,17 @@
 ---
-title: ID (C++ attributo com)
+title: ID (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168057"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830553"
 ---
 # <a name="id"></a>id
 
@@ -38,14 +38,12 @@ Per un esempio su come usare l' **ID**, vedere l'esempio relativo a [Bindable](b
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -53,7 +51,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
-[Attributi di membro dati](data-member-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[Attributi dei membri dati](data-member-attributes.md)<br/>
+[DefaultValue](defaultvalue.md)<br/>
 [in](in-cpp.md)<br/>
 [out](out-cpp.md)

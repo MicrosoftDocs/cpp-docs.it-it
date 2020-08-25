@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9187bddef456f131982d39fd64dacea5953b959b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222563"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831477"
 ---
 # <a name="condition_variable_any-class"></a>Classe condition_variable_any
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[condition_variable_any](#condition_variable_any)|Costruisce un oggetto `condition_variable_any`.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[notify_all](#notify_all)|Sblocca tutti i thread in attesa dell'oggetto `condition_variable_any`.|
 |[notify_one](#notify_one)|Sblocca uno dei thread in attesa dell'oggetto `condition_variable_any`.|
@@ -53,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.|
 |[wait_until](#wait_until)|Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.|
 
-## <a name="condition_variable_any"></a><a name="condition_variable_any"></a>condition_variable_any
+## <a name="condition_variable_any"></a><a name="condition_variable_any"></a> condition_variable_any
 
 Costruisce un oggetto `condition_variable_any`.
 
@@ -65,7 +65,7 @@ condition_variable_any();
 
 Se non è disponibile memoria sufficiente, il costruttore genera un oggetto [system_error](../standard-library/system-error-class.md) che ha un codice di errore `not_enough_memory`. Se l'oggetto non può essere costruito perché non è disponibile un'altra risorsa, il costruttore genera un oggetto `system_error` che ha un codice di errore `resource_unavailable_try_again`.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Sblocca tutti i thread in attesa dell'oggetto `condition_variable_any`.
 
@@ -73,7 +73,7 @@ Sblocca tutti i thread in attesa dell'oggetto `condition_variable_any`.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Sblocca uno dei thread in attesa dell'oggetto `condition_variable_any`.
 
@@ -81,7 +81,7 @@ Sblocca uno dei thread in attesa dell'oggetto `condition_variable_any`.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>attendere
+## <a name="wait"></a><a name="wait"></a> attendere
 
 Blocca un thread.
 
@@ -112,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.
 
@@ -155,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.
 

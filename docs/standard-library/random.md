@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: e52033c68bc5bee21abed0af0e86cbb76000435d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ffbfba7a7cc4a7dfebbc2dcc074842de3c1ac
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217649"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831438"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,7 +19,7 @@ Definisce strutture per la generazione casuale di numeri, permettendo la creazio
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**:\<random>
+**Intestazione**: \<random>
 
 **Spazio dei nomi:** std
 
@@ -225,9 +225,8 @@ Nella sezione seguente sono elencati i generatori di numeri casuali uniformi dis
 
 #### <a name="non-deterministic-generator"></a><a name="rd"></a> Generatore non deterministico
 
-|||
-|-|-|
-|[Classe random_device](../standard-library/random-device-class.md)|Genera una sequenza casuale non deterministica e sicura a livello di crittografia usando un dispositivo esterno. È usato in genere per il seeding di un motore. Offre prestazioni ridotte ma qualità molto elevata. Per ulteriori informazioni, vedere la [sezione Osservazioni](#comments).|
+[Classe random_device](../standard-library/random-device-class.md)\
+Genera una sequenza casuale non deterministica e sicura a livello di crittografia usando un dispositivo esterno. È usato in genere per il seeding di un motore. Offre prestazioni ridotte ma qualità molto elevata. Per ulteriori informazioni, vedere la [sezione Osservazioni](#comments).
 
 #### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Typedef di motore con parametri predefiniti
 
@@ -281,7 +280,7 @@ Per la creazione di istanze di motori e adattatori del motore. Per altre informa
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24`motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).
+- `ranlux24` motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +292,7 @@ Per la creazione di istanze di motori e adattatori del motore. Per altre informa
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48`motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).
+- `ranlux48` motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -309,7 +308,7 @@ Per la creazione di istanze di motori e adattatori del motore. Per altre informa
 
 I modelli di motore sono usati come generatori URNG autonomi o come motori di base passati ad [adattatori del motore](#engadapt). In genere sono create istanze corrispondenti con un [typedef di motore predefinito](#typedefs) e le istanze sono passate a una [distribuzione](#distributions). Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)|Genera una sequenza casuale usando l'algoritmo congruenziale lineare. È estremamente semplice e offre la qualità più bassa.|
 |[Classe mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Genera una sequenza casuale usando l'algoritmo twister Mersenne. È estremamente complesso e offre la qualità più elevata, ad eccezione della classe random_device class. Prestazioni molto elevate.|
@@ -319,7 +318,7 @@ I modelli di motore sono usati come generatori URNG autonomi o come motori di ba
 
 Gli adattatori del motore sono modelli che adattano altri motori (di base). In genere sono create istanze corrispondenti con un [typedef di motore predefinito](#typedefs) e le istanze sono passate a una [distribuzione](#distributions). Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe discard_block_engine](../standard-library/discard-block-engine-class.md)|Genera una sequenza casuale, eliminando i valori restituiti dal motore di base corrispondente.|
 |[Classe independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Genera una sequenza casuale con un numero specificato di bit tramite la creazione di nuovi pacchetti di bit dai valori restituiti dal motore di base corrispondente.|
@@ -333,7 +332,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="uniform-distributions"></a>Distribuzioni uniformi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Produce una distribuzione uniforme di valori di tipo Integer in un intervallo che si trova nell'intervallo chiuso \[a, b] (inclusivo- inclusivo).|
 |[Classe uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Produce una distribuzione uniforme di valori reali (a virgola mobile) in un intervallo che si trova nell'intervallo semiaperto [a, b) (inclusivo-esclusivo).|
@@ -343,7 +342,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="bernoulli-distributions"></a>Distribuzioni di Bernoulli
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produce una distribuzione di Bernoulli di **`bool`** valori.|
 |[Classe binomial_distribution](../standard-library/binomial-distribution-class.md)|Produce una distribuzione binomiale di valori di tipo Integer.|
@@ -354,7 +353,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="normal-distributions"></a>Distribuzioni normali
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Produce una distribuzione Cauchy di valori reali (a virgola mobile).|
 |[Classe chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Produce una distribuzione del chi quadrato di valori reali (a virgola mobile).|
@@ -367,7 +366,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="poisson-distributions"></a>Distribuzioni di Poisson
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe exponential_distribution](../standard-library/exponential-distribution-class.md)|Produce una distribuzione esponenziale di valori reali (a virgola mobile).|
 |[Classe extreme_value_distribution](../standard-library/extreme-value-distribution-class.md)|Produce una distribuzione dei valori estremi di valori reali (a virgola mobile).|
@@ -379,7 +378,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="sampling-distributions"></a>Distribuzioni di campionamento
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe discrete_distribution](../standard-library/discrete-distribution-class.md)|Produce una distribuzione discreta di valori di tipo Integer.|
 |[Classe piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Produce una distribuzione costante a tratti di valori reali (a virgola mobile).|
@@ -391,7 +390,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 In questa sezione sono elencate le funzioni di utilità generali disponibili nell'intestazione \<random>.
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe seed_seq](../standard-library/seed-seq-class.md)|Genera una sequenza di seeding criptata non distorta. Usata per evitare la replica di flussi di varianti casuali. Risulta utile quando i motori creano istanze di molti generatori URNG.|
 
@@ -399,22 +398,22 @@ In questa sezione sono elencate le funzioni di utilità generali disponibili nel
 
 In questa sezione sono elencati gli operatori disponibili nell'intestazione \<random>.
 
-|||
+|Nome|Descrizione|
 |-|-|
 |`operator==`|Verifica se il generatore URNG sul lato sinistro dell'operatore è uguale al motore sul lato destro.|
 |`operator!=`|Verifica se il generatore URNG sul lato sinistro dell'operatore è diverso dal motore sul lato destro.|
 |`operator<<`|Scrive le informazioni sullo stato in un flusso.|
 |`operator>>`|Estrae le informazioni sullo stato da un flusso.|
 
-## <a name="engines-and-distributions"></a><a name="engdist"></a>Motori e distribuzioni
+## <a name="engines-and-distributions"></a><a name="engdist"></a> Motori e distribuzioni
 
 Per informazioni su ognuna di queste categorie di modelli di classe definite in, vedere le sezioni seguenti \<random> . Entrambe le categorie di modelli di classe accettano un tipo come argomento e usano i nomi dei parametri di modello condivisi per descrivere le proprietà del tipo consentite come tipo di argomento effettivo, come indicato di seguito:
 
-- `IntType`indica,,, **`short`** **`int`** **`long`** **`long long`** , **`unsigned short`** , **`unsigned int`** , **`unsigned long`** o **`unsigned long long`** .
+- `IntType` indica,,, **`short`** **`int`** **`long`** **`long long`** , **`unsigned short`** , **`unsigned int`** , **`unsigned long`** o **`unsigned long long`** .
 
-- `UIntType`indica **`unsigned short`** , **`unsigned int`** , **`unsigned long`** o **`unsigned long long`** .
+- `UIntType` indica **`unsigned short`** , **`unsigned int`** , **`unsigned long`** o **`unsigned long long`** .
 
-- `RealType`indica un oggetto **`float`** , **`double`** o **`long double`** .
+- `RealType` indica un oggetto **`float`** , **`double`** o **`long double`** .
 
 ### <a name="engines"></a>Motori
 
@@ -440,7 +439,7 @@ Ogni motore e adattatore del motore include i membri seguenti:
 
 - Un costruttore esplicito con argomento `seed_seq& seq` che crea un generatore sottoposto a seeding come se l'operazione fosse eseguita chiamando `seed(seq)`.
 
-- `void discard(unsigned long long count)`chiama in modo efficace i `operator()` `count` tempi e ignora ogni valore.
+- `void discard(unsigned long long count)` chiama in modo efficace i `operator()` `count` tempi e ignora ogni valore.
 
 Gli **adattatori del motore** supportano anche questi membri (`Engine` è il primo parametro di modello di un adattatore del motore e designa il tipo del motore di base):
 
@@ -496,7 +495,7 @@ Per altre informazioni, vedere gli argomenti secondari di riferimento seguenti. 
 
 In Visual Studio sono disponibili due generatori URNG molto utili, ovvero `mt19937` e `random_device`, come mostrato in questa tabella di confronto:
 
-|URNG|Veloci|Sicuro a livello di crittografia|Compatibile con seeding|Deterministico|
+|URNG|Veloce|Sicuro a livello di crittografia|Compatibile con seeding|Deterministico|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|Sì|No|Sì|Sì<sup>*</sup>|
 |`random_device`|No|Sì|No|No|

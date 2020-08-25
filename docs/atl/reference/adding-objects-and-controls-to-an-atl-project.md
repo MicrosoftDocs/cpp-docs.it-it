@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075296"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832451"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e controlli a un progetto ATL
 
@@ -25,11 +25,15 @@ ms.locfileid: "80075296"
 
 È possibile usare una delle procedure guidate per il codice ATL per aggiungere un oggetto o un controllo ai progetti basati su ATL o MFC. Per ogni oggetto o controllo COM aggiunto, la procedura guidata genera file con estensione h e cpp, nonché un file con estensione rgs per il supporto del Registro di sistema basato su script. In Visual Studio sono disponibili le procedure guidate per il codice ATL seguenti:
 
-||||
-|-|-|-|
-|[Oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md)|[Finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md)|[Controllo ATL](../../atl/reference/atl-control-wizard.md)|
-|[Pagina delle proprietà ATL](../../atl/reference/atl-property-page-wizard.md)|[Componente pagine ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[Aggiungi supporto ATL a MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Creazione guidata componente ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Provider OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|
+- [Oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md)
+- [Finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md)
+- [Controllo ATL](../../atl/reference/atl-control-wizard.md)
+- [Pagina delle proprietà ATL](../../atl/reference/atl-property-page-wizard.md)
+- [Componente pagine ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md)
+- [Consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md)
+- [Aggiungi supporto ATL a MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)
+- [Creazione guidata componente ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [Provider OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)
 
 > [!NOTE]
 > Prima di aggiungere un oggetto ATL al progetto, è necessario esaminare i dettagli e i requisiti per l'oggetto negli argomenti correlati della Guida.
@@ -52,5 +56,5 @@ ms.locfileid: "80075296"
 [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Tipi di progetto C++ in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
-[Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
+[Programmazione con il codice di runtime di C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Configurazioni di progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)

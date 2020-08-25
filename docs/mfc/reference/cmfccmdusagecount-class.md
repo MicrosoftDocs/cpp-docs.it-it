@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561102"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834277"
 ---
 # <a name="cmfccmdusagecount-class"></a>Classe CMFCCmdUsageCount
 
@@ -41,17 +41,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Costruttore predefinito.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCCmdUsageCount:: AddCmd](#addcmd)|Incrementa di uno il contatore associato al comando specificato.|
 |[CMFCCmdUsageCount:: GetCount](#getcount)|Recupera il conteggio di utilizzo associato all'ID di comando specificato.|
 |[CMFCCmdUsageCount:: HasEnoughInformation](#hasenoughinformation)|Determina se l'oggetto ha raccolto la quantità minima di dati di rilevamento.|
@@ -62,9 +60,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>Membri dei dati
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |`m_CmdUsage`|`CMap`Oggetto che esegue il mapping dei comandi ai conteggi di utilizzo.|
 |`m_nMinUsagePercentage`|Percentuale di utilizzo minima per un comando da utilizzare di frequente.|
 |`m_nStartCount`|Il contatore iniziale utilizzato per determinare se l'oggetto ha raccolto la quantità minima di dati di rilevamento.|
@@ -228,7 +225,7 @@ Questo metodo imposta rispettivamente i `CMFCCmdUsageCount` membri dati della cl
 
 Nelle compilazioni di debug questo metodo genera un errore di asserzione se il parametro *nMinUsagePercentage* è maggiore o uguale a 100.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

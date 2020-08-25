@@ -1,17 +1,17 @@
 ---
-title: LCID (C++ attributo com)
+title: LCID (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7533cd9b269a879c5c2f061dcdfc632b1b27c871
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214799"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834180"
 ---
 # <a name="lcid"></a>lcid
 
@@ -25,7 +25,7 @@ Consente di passare un identificatore delle impostazioni locali a una funzione.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **LCID** C++ implementa la funzionalità dell'attributo MIDL di [LCID](/windows/win32/Midl/lcid) . Se si desidera implementare impostazioni locali per un blocco di libreria, utilizzare il parametro **LCID =** `lcid` per l'attributo [Module](module-cpp.md) .
+L'attributo **LCID** C++ implementa la funzionalità dell'attributo MIDL [LCID](/windows/win32/Midl/lcid) . Se si desidera implementare impostazioni locali per un blocco di libreria, utilizzare il parametro **LCID =** `lcid` per l'attributo [Module](module-cpp.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -44,18 +44,16 @@ __interface IStatic {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)
+[Attributi del parametro](parameter-attributes.md)

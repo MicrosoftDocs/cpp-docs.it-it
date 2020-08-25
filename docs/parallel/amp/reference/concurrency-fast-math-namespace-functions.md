@@ -46,43 +46,94 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: cd0882b072cfe26cd83e63024ae6837dc962ebf9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff919016449723ad67e029a249ec222ccf1fe6a4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376406"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831060"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency::fast_math
 
-||||
-|-|-|-|
-|[Acos](#acos)|[acosf](#acosf)|[Asin](#asin)|
-|[asinf](#asinf)|[Atan](#atan)|[atan2](#atan2)|
-|[atan2f](#atan2f)|[atanf](#atanf)|[Ceil](#ceil)|
-|[ceilf](#ceilf)|[Perché](#cos)|[cosf](#cosf)|
-|[cosh](#cosh)|[coshf](#coshf)|[Exp](#exp)|
-|[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|
-|[fabs](#fabs)|[fabsf](#fabsf)|[Pavimento](#floor)|
-|[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|
-|[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|
-|[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|
-|[isfinite](#isfinite)|[isinf](#isinf)|[isan](#isnan)|
-|[ldexp](#ldexp)|[ldexpf](#ldexpf)|[Registro](#log)|
-|[log10 (informazioni in due)](#log10)|[log10f](#log10f)|[log2 (informazioni in due)](#log2)|
-|[log2f](#log2f)|[logf](#logf)|[modf](#modf)|
-|[modff](#modff)|[pow](#pow)|[powf](#powf)|
-|[Rotondo](#round)|[roundf](#roundf)|[rsqrt (rsqrt)](#rsqrt)|
-|[rsqrtf (informazioni in base al sistema in tra](#rsqrtf)|[signbit](#signbit)|[signbitf](#signbitf)|
-|[Peccato](#sin)|[Sincos](#sincos)|[sincosmo](#sincosf)|
-|[sinf](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|
-|[Sqrt](#sqrt)|[sqrtf](#sqrtf)|[Tan](#tan)|
-|[tanf](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|
-|[trunc](#trunc)|[truncf](#truncf)|
+:::row:::
+   :::column span="":::
+      [`acos`](#acos)\
+      [`acosf`](#acosf)\
+      [`asin`](#asin)\
+      [`asinf`](#asinf)\
+      [`atan`](#atan)\
+      [`atan2`](#atan2)\
+      [`atan2f`](#atan2f)\
+      [`atanf`](#atanf)\
+      [`ceil`](#ceil)\
+      [`ceilf`](#ceilf)\
+      [`cos`](#cos)\
+      [`cosf`](#cosf)\
+      [`cosh`](#cosh)\
+      [`coshf`](#coshf)\
+      [`exp`](#exp)\
+      [`exp2`](#exp2)\
+      [`exp2f`](#exp2f)
+   :::column-end:::
+   :::column span="":::
+      [`expf`](#expf)\
+      [`fabs`](#fabs)\
+      [`fabsf`](#fabsf)\
+      [`floor`](#floor)\
+      [`floorf`](#floorf)\
+      [`fmax`](#fmax)\
+      [`fmaxf`](#fmaxf)\
+      [`fmin`](#fmin)\
+      [`fminf`](#fminf)\
+      [`fmod`](#fmod)\
+      [`fmodf`](#fmodf)\
+      [`frexp`](#frexp)\
+      [`frexpf`](#frexpf)\
+      [`isfinite`](#isfinite)\
+      [`isinf`](#isinf)\
+      [`isnan`](#isnan)
+   :::column-end:::
+   :::column span="":::
+      [`ldexp`](#ldexp)\
+      [`ldexpf`](#ldexpf)\
+      [`log`](#log)\
+      [`log10`](#log10)\
+      [`log10f`](#log10f)\
+      [`log2`](#log2)\
+      [`log2f`](#log2f)\
+      [`logf`](#logf)\
+      [`modf`](#modf)\
+      [`modff`](#modff)\
+      [`pow`](#pow)\
+      [`powf`](#powf)\
+      [`round`](#round)\
+      [`roundf`](#roundf)\
+      [`rsqrt`](#rsqrt)\
+      [`rsqrtf`](#rsqrtf)
+   :::column-end:::
+   :::column span="":::
+      [`signbit`](#signbit)\
+      [`signbitf`](#signbitf)\
+      [`sin`](#sin)\
+      [`sincos`](#sincos)\
+      [`sincosf`](#sincosf)\
+      [`sinf`](#sinf)\
+      [`sinh`](#sinh)\
+      [`sinhf`](#sinhf)\
+      [`sqrt`](#sqrt)\
+      [`sqrtf`](#sqrtf)\
+      [`tan`](#tan)\
+      [`tanf`](#tanf)\
+      [`tanh`](#tanh)\
+      [`tanhf`](#tanhf)\
+      [`trunc`](#trunc)\
+      [`truncf`](#truncf)
+   :::column-end:::
+:::row-end:::
 
-## <a name="acos"></a><a name="acos"></a>Acos
+## <a name="acos"></a><a name="acos"></a> Acos
 
-Calcola l'arcocoseno dell'argomento
+Calcola l'arcoseno dell'argomento
 
 ```cpp
 inline float acos(float _X) restrict(amp);
@@ -95,11 +146,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore arccosino dell'argomento
+Restituisce il valore arcoseno dell'argomento.
 
-## <a name="acosf"></a><a name="acosf"></a>acosf
+## <a name="acosf"></a><a name="acosf"></a> acosf
 
-Calcola l'arcocoseno dell'argomento
+Calcola l'arcoseno dell'argomento
 
 ```cpp
 inline float acosf(float _X) restrict(amp);
@@ -112,9 +163,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore arccosino dell'argomento
+Restituisce il valore arcoseno dell'argomento.
 
-## <a name="asin"></a><a name="asin"></a>Asin
+## <a name="asin"></a><a name="asin"></a> Asin
 
 Calcola l'arcoseno dell'argomento
 
@@ -129,9 +180,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore dell'arcoseno dell'argomento
+Restituisce il valore arcoseno dell'argomento.
 
-## <a name="asinf"></a><a name="asinf"></a>asinf
+## <a name="asinf"></a><a name="asinf"></a> asinf
 
 Calcola l'arcoseno dell'argomento
 
@@ -146,9 +197,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore dell'arcoseno dell'argomento
+Restituisce il valore arcoseno dell'argomento.
 
-## <a name="atan"></a><a name="atan"></a>Atan
+## <a name="atan"></a><a name="atan"></a> Atan
 
 Calcola l'arcotangente dell'argomento.
 
@@ -163,11 +214,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore arcotangente dell'argomento
+Restituisce il valore arcotangente dell'argomento.
 
-## <a name="atan2"></a><a name="atan2"></a>atan2
+## <a name="atan2"></a><a name="atan2"></a> atan2
 
-Calcola l'arcotangente di _Y/_X
+Calcola il arcotangente di _Y/_X
 
 ```cpp
 inline float atan2(
@@ -185,11 +236,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore dell'arcotangente di _Y/_X
+Restituisce il valore arcotangente di _Y/_X
 
-## <a name="atan2f"></a><a name="atan2f"></a>atan2f
+## <a name="atan2f"></a><a name="atan2f"></a> atan2f
 
-Calcola l'arcotangente di _Y/_X
+Calcola il arcotangente di _Y/_X
 
 ```cpp
 inline float atan2f(
@@ -207,9 +258,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore dell'arcotangente di _Y/_X
+Restituisce il valore arcotangente di _Y/_X
 
-## <a name="atanf"></a><a name="atanf"></a>atanf
+## <a name="atanf"></a><a name="atanf"></a> atanf
 
 Calcola l'arcotangente dell'argomento.
 
@@ -224,9 +275,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore arcotangente dell'argomento
+Restituisce il valore arcotangente dell'argomento.
 
-## <a name="ceil"></a><a name="ceil"></a>Ceil
+## <a name="ceil"></a><a name="ceil"></a> ceil
 
 Calcola il limite massimo dell'argomento
 
@@ -241,9 +292,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il limite massimo dell'argomento
+Restituisce il limite dell'argomento
 
-## <a name="ceilf"></a><a name="ceilf"></a>ceilf
+## <a name="ceilf"></a><a name="ceilf"></a> ceilf
 
 Calcola il limite massimo dell'argomento
 
@@ -258,9 +309,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il limite massimo dell'argomento
+Restituisce il limite dell'argomento
 
-## <a name="cosf"></a><a name="cosf"></a>cosf
+## <a name="cosf"></a><a name="cosf"></a> cosf
 
 Calcola il coseno dell'argomento.
 
@@ -275,9 +326,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore coseno dell'argomento
+Restituisce il valore del coseno dell'argomento.
 
-## <a name="coshf"></a><a name="coshf"></a>coshf
+## <a name="coshf"></a><a name="coshf"></a> coshf
 
 Calcola il valore del coseno iperbolico dell'argomento
 
@@ -292,9 +343,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore coseno iperbolico dell'argomento
+Restituisce il valore del coseno iperbolico dell'argomento.
 
-## <a name="cos"></a><a name="cos"></a>Perché
+## <a name="cos"></a><a name="cos"></a> cos
 
 Calcola il coseno dell'argomento.
 
@@ -309,9 +360,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore coseno dell'argomento
+Restituisce il valore del coseno dell'argomento.
 
-## <a name="cosh"></a><a name="cosh"></a>Cosh
+## <a name="cosh"></a><a name="cosh"></a> cosh
 
 Calcola il valore del coseno iperbolico dell'argomento
 
@@ -326,9 +377,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore coseno iperbolico dell'argomento
+Restituisce il valore del coseno iperbolico dell'argomento.
 
-## <a name="exp"></a><a name="exp"></a>Exp
+## <a name="exp"></a><a name="exp"></a> exp
 
 Calcola l'esponenziale in base e dell'argomento
 
@@ -345,7 +396,7 @@ Valore a virgola mobile
 
 Restituisce l'esponenziale in base e dell'argomento
 
-## <a name="exp2"></a><a name="exp2"></a>exp2
+## <a name="exp2"></a><a name="exp2"></a> exp2
 
 Calcola l'esponenziale in base 2 dell'argomento
 
@@ -362,7 +413,7 @@ Valore a virgola mobile
 
 Restituisce l'esponenziale in base 2 dell'argomento.
 
-## <a name="exp2f"></a><a name="exp2f"></a>exp2f
+## <a name="exp2f"></a><a name="exp2f"></a> exp2f
 
 Calcola l'esponenziale in base 2 dell'argomento
 
@@ -379,7 +430,7 @@ Valore a virgola mobile
 
 Restituisce l'esponenziale in base 2 dell'argomento.
 
-## <a name="expf"></a><a name="expf"></a>expf
+## <a name="expf"></a><a name="expf"></a> expf
 
 Calcola l'esponenziale in base e dell'argomento
 
@@ -396,9 +447,9 @@ Valore a virgola mobile
 
 Restituisce l'esponenziale in base e dell'argomento
 
-## <a name="fabs"></a><a name="fabs"></a>Fab
+## <a name="fabs"></a><a name="fabs"></a> Fabs
 
-Restituisce il valore assoluto dell'argomento
+Restituisce il valore assoluto dell'argomento.
 
 ```cpp
 inline float fabs(float _X) restrict(amp);
@@ -411,11 +462,11 @@ Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore assoluto dell'argomento
+Restituisce il valore assoluto dell'argomento.
 
-## <a name="fabsf"></a><a name="fabsf"></a>fabsf
+## <a name="fabsf"></a><a name="fabsf"></a> fabsf
 
-Restituisce il valore assoluto dell'argomento
+Restituisce il valore assoluto dell'argomento.
 
 ```cpp
 inline float fabsf(float _X) restrict(amp);
@@ -428,9 +479,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore assoluto dell'argomento
+Restituisce il valore assoluto dell'argomento.
 
-## <a name="floor"></a><a name="floor"></a>Pavimento
+## <a name="floor"></a><a name="floor"></a> Floor
 
 Calcola il piano dell'argomento
 
@@ -445,9 +496,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il piano dell'argomento
+Restituisce il piano dell'argomento.
 
-## <a name="floorf"></a><a name="floorf"></a>floorf
+## <a name="floorf"></a><a name="floorf"></a> floorf
 
 Calcola il piano dell'argomento
 
@@ -462,9 +513,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il piano dell'argomento
+Restituisce il piano dell'argomento.
 
-## <a name="fmax"></a><a name="fmax"></a>Fmax
+## <a name="fmax"></a><a name="fmax"></a> Fmax
 
 Determinare il valore numerico massimo degli argomenti
 
@@ -486,7 +537,7 @@ Valore Integer
 
 Restituisce il valore numerico massimo degli argomenti
 
-## <a name="fmaxf"></a><a name="fmaxf"></a>fmaxf (inquestoeil
+## <a name="fmaxf"></a><a name="fmaxf"></a> fmaxf
 
 Determinare il valore numerico massimo degli argomenti
 
@@ -508,7 +559,7 @@ Valore a virgola mobile
 
 Restituisce il valore numerico massimo degli argomenti
 
-## <a name="fmin"></a><a name="fmin"></a>fmin
+## <a name="fmin"></a><a name="fmin"></a> Fmin
 
 Determinare il valore numerico minimo degli argomenti
 
@@ -530,7 +581,7 @@ Valore Integer
 
 Restituisce il valore numerico minimo degli argomenti
 
-## <a name="fminf"></a><a name="fminf"></a>fminf
+## <a name="fminf"></a><a name="fminf"></a> fminf
 
 Determinare il valore numerico minimo degli argomenti
 
@@ -552,7 +603,7 @@ Valore a virgola mobile
 
 Restituisce il valore numerico minimo degli argomenti
 
-## <a name="fmod"></a><a name="fmod"></a>Fmod
+## <a name="fmod"></a><a name="fmod"></a> fmod
 
 Calcola il resto a virgola mobile di _X/_Y
 
@@ -574,7 +625,7 @@ Valore a virgola mobile
 
 Restituisce il resto a virgola mobile di _X/_Y
 
-## <a name="fmodf"></a><a name="fmodf"></a>fmodf
+## <a name="fmodf"></a><a name="fmodf"></a> fmodf
 
 Calcola il resto a virgola mobile di _X/_Y.
 
@@ -596,9 +647,9 @@ Valore a virgola mobile
 
 Restituisce il resto a virgola mobile di _X/_Y
 
-## <a name="frexp"></a><a name="frexp"></a>frexp
+## <a name="frexp"></a><a name="frexp"></a> frexp
 
-Ottiene la mantissa e l'esponente di _X
+Ottiene mantissa ed esponente di _X
 
 ```cpp
 inline float frexp(
@@ -612,15 +663,15 @@ inline float frexp(
 Valore a virgola mobile
 
 *_Exp*<br/>
-Restituisce l'esponente intero di _X in valore a virgola mobile
+Restituisce l'esponente integer di _X in un valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la _X mantissa
+Restituisce mantissa _X
 
-## <a name="frexpf"></a><a name="frexpf"></a>frexpf
+## <a name="frexpf"></a><a name="frexpf"></a> frexpf
 
-Ottiene la mantissa e l'esponente di _X
+Ottiene mantissa ed esponente di _X
 
 ```cpp
 inline float frexpf(
@@ -634,13 +685,13 @@ inline float frexpf(
 Valore a virgola mobile
 
 *_Exp*<br/>
-Restituisce l'esponente intero di _X in valore a virgola mobile
+Restituisce l'esponente integer di _X in un valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la _X mantissa
+Restituisce mantissa _X
 
-## <a name="isfinite"></a><a name="isfinite"></a>isfinite
+## <a name="isfinite"></a><a name="isfinite"></a> isFinite
 
 Determina se l'argomento ha un valore finito
 
@@ -657,7 +708,7 @@ Valore a virgola mobile
 
 Restituisce un valore diverso da zero se e solo se l'argomento ha un valore finito
 
-## <a name="isinf"></a><a name="isinf"></a>isinf
+## <a name="isinf"></a><a name="isinf"></a> isinf
 
 Determina se l'argomento è un infinito
 
@@ -674,9 +725,9 @@ Valore a virgola mobile
 
 Restituisce un valore diverso da zero se e solo se l'argomento ha un valore infinito
 
-## <a name="isnan"></a><a name="isnan"></a>isan
+## <a name="isnan"></a><a name="isnan"></a> IsNaN
 
-Determina se l'argomento è un NaN
+Determina se l'argomento è NaN
 
 ```cpp
 inline int isnan(float _X) restrict(amp);
@@ -691,9 +742,9 @@ Valore a virgola mobile
 
 Restituisce un valore diverso da zero se e solo se l'argomento ha un valore NaN
 
-## <a name="ldexp"></a><a name="ldexp"></a>ldexp
+## <a name="ldexp"></a><a name="ldexp"></a> ldexp
 
-Calcola un numero reale dalla mantissa e dall'esponente
+Calcola un numero reale da mantissa ed esponente
 
 ```cpp
 inline float ldexp(
@@ -707,15 +758,15 @@ inline float ldexp(
 Valore a virgola mobile, mentissa
 
 *_Exp*<br/>
-Esponente intero
+Esponente integer
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce \* _X 2-_Exp
+Restituisce _X \* 2 ^ _Exp
 
-## <a name="ldexpf"></a><a name="ldexpf"></a>ldexpf
+## <a name="ldexpf"></a><a name="ldexpf"></a> ldexpf
 
-Calcola un numero reale dalla mantissa e dall'esponente
+Calcola un numero reale da mantissa ed esponente
 
 ```cpp
 inline float ldexpf(
@@ -729,13 +780,13 @@ inline float ldexpf(
 Valore a virgola mobile, mentissa
 
 *_Exp*<br/>
-Esponente intero
+Esponente integer
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce \* _X 2-_Exp
+Restituisce _X \* 2 ^ _Exp
 
-## <a name="log"></a><a name="log"></a>Registro
+## <a name="log"></a><a name="log"></a> log
 
 Calcola il logaritmo in base e dell'argomento
 
@@ -752,7 +803,7 @@ Valore a virgola mobile
 
 Restituisce il logaritmo in base e dell'argomento
 
-## <a name="log10"></a><a name="log10"></a>log10 (informazioni in due)
+## <a name="log10"></a><a name="log10"></a> log10
 
 Calcola il logaritmo in base 10 dell'argomento
 
@@ -769,7 +820,7 @@ Valore a virgola mobile
 
 Restituisce il logaritmo in base 10 dell'argomento
 
-## <a name="log10f"></a><a name="log10f"></a>log10f (informazioni in netto
+## <a name="log10f"></a><a name="log10f"></a> log10f
 
 Calcola il logaritmo in base 10 dell'argomento
 
@@ -786,7 +837,7 @@ Valore a virgola mobile
 
 Restituisce il logaritmo in base 10 dell'argomento
 
-## <a name="log2"></a><a name="log2"></a>log2 (informazioni in due)
+## <a name="log2"></a><a name="log2"></a> log2
 
 Calcola il logaritmo in base 2 dell'argomento
 
@@ -803,7 +854,7 @@ Valore a virgola mobile
 
 Restituisce il logaritmo in base 2 dell'argomento
 
-## <a name="log2f"></a><a name="log2f"></a>log2f (registro di sistema)
+## <a name="log2f"></a><a name="log2f"></a> log2f
 
 Calcola il logaritmo in base 2 dell'argomento
 
@@ -820,7 +871,7 @@ Valore a virgola mobile
 
 Restituisce il logaritmo in base 10 dell'argomento
 
-## <a name="logf"></a><a name="logf"></a>logf (registro)
+## <a name="logf"></a><a name="logf"></a> logf
 
 Calcola il logaritmo in base e dell'argomento
 
@@ -837,9 +888,9 @@ Valore a virgola mobile
 
 Restituisce il logaritmo in base e dell'argomento
 
-## <a name="modf"></a><a name="modf"></a>modf
+## <a name="modf"></a><a name="modf"></a> modf
 
-Divide _X in parti frazionarie e intere.
+Suddivide _X in parti frazionarie e intere.
 
 ```cpp
 inline float modf(
@@ -859,9 +910,9 @@ Riceve parte intera del valore
 
 Restituisce la parte frazionaria con segno di _X
 
-## <a name="modff"></a><a name="modff"></a>modff
+## <a name="modff"></a><a name="modff"></a> modff
 
-Divide _X in parti frazionarie e intere.
+Suddivide _X in parti frazionarie e intere.
 
 ```cpp
 inline float modff(
@@ -881,7 +932,7 @@ Riceve parte intera del valore
 
 Restituisce la parte frazionaria con segno di _X
 
-## <a name="pow"></a><a name="pow"></a>Pow
+## <a name="pow"></a><a name="pow"></a> POW
 
 Calcola _X elevato alla potenza di _Y
 
@@ -903,7 +954,7 @@ Valore a virgola mobile, esponente
 
 Restituisce il valore di _X elevato alla potenza di _Y
 
-## <a name="powf"></a><a name="powf"></a>powf (file powf)
+## <a name="powf"></a><a name="powf"></a> powf
 
 Calcola _X elevato alla potenza di _Y
 
@@ -923,9 +974,9 @@ Valore a virgola mobile, esponente
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="round"></a><a name="round"></a>Rotondo
+## <a name="round"></a><a name="round"></a> turno
 
-Arrotonda _X all'intero più vicino
+Arrotonda _X al numero intero più vicino
 
 ```cpp
 inline float round(float _X) restrict(amp);
@@ -940,9 +991,9 @@ Valore a virgola mobile
 
 Restituisce l'intero più vicino di _X
 
-## <a name="roundf"></a><a name="roundf"></a>roundf
+## <a name="roundf"></a><a name="roundf"></a> roundf
 
-Arrotonda _X all'intero più vicino
+Arrotonda _X al numero intero più vicino
 
 ```cpp
 inline float roundf(float _X) restrict(amp);
@@ -957,7 +1008,7 @@ Valore a virgola mobile
 
 Restituisce l'intero più vicino di _X
 
-## <a name="rsqrt"></a><a name="rsqrt"></a>rsqrt (rsqrt)
+## <a name="rsqrt"></a><a name="rsqrt"></a> rsqrt
 
 Restituisce il reciproco della radice quadrata dell'argomento
 
@@ -974,7 +1025,7 @@ Valore a virgola mobile
 
 Restituisce il reciproco della radice quadrata dell'argomento
 
-## <a name="rsqrtf"></a><a name="rsqrtf"></a>rsqrtf (informazioni in base al sistema in tra
+## <a name="rsqrtf"></a><a name="rsqrtf"></a> rsqrtf
 
 Restituisce il reciproco della radice quadrata dell'argomento
 
@@ -991,7 +1042,7 @@ Valore a virgola mobile
 
 Restituisce il reciproco della radice quadrata dell'argomento
 
-## <a name="signbit"></a><a name="signbit"></a>signbit
+## <a name="signbit"></a><a name="signbit"></a> signbit
 
 Determina se il segno di _X è negativo
 
@@ -1008,7 +1059,7 @@ Valore a virgola mobile
 
 Restituisce un valore diverso da zero se e solo se il segno di _X è negativo
 
-## <a name="signbitf"></a><a name="signbitf"></a>signbitf
+## <a name="signbitf"></a><a name="signbitf"></a> signbitf
 
 Determina se il segno di _X è negativo
 
@@ -1025,9 +1076,9 @@ Valore a virgola mobile
 
 Restituisce un valore diverso da zero se e solo se il segno di _X è negativo
 
-## <a name="sin"></a><a name="sin"></a>Peccato
+## <a name="sin"></a><a name="sin"></a> peccato
 
-Calcola il valore sine dell'argomento
+Calcola il valore del seno dell'argomento.
 
 ```cpp
 inline float sin(float _X) restrict(amp);
@@ -1040,11 +1091,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore sine dell'argomento
+Restituisce il valore del seno dell'argomento.
 
-## <a name="sinf"></a><a name="sinf"></a>sinf
+## <a name="sinf"></a><a name="sinf"></a> sinf
 
-Calcola il valore sine dell'argomento
+Calcola il valore del seno dell'argomento.
 
 ```cpp
 inline float sinf(float _X) restrict(amp);
@@ -1057,11 +1108,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore sine dell'argomento
+Restituisce il valore del seno dell'argomento.
 
-## <a name="sincos"></a><a name="sincos"></a>Sincos
+## <a name="sincos"></a><a name="sincos"></a> SinCos
 
-Calcola il valore sine e coseno di _X
+Calcola il valore del seno e del coseno di _X
 
 ```cpp
 inline void sincos(
@@ -1076,14 +1127,14 @@ inline void sincos(
 Valore a virgola mobile
 
 *_S*<br/>
-Restituisce il valore sine di _X
+Restituisce il valore del seno di _X
 
 *_C*<br/>
-Restituisce il valore coseno di _X
+Restituisce il valore del coseno di _X
 
-## <a name="sincosf"></a><a name="sincosf"></a>sincosmo
+## <a name="sincosf"></a><a name="sincosf"></a> sincosf
 
-Calcola il valore sine e coseno di _X
+Calcola il valore del seno e del coseno di _X
 
 ```cpp
 inline void sincosf(
@@ -1098,12 +1149,12 @@ inline void sincosf(
 Valore a virgola mobile
 
 *_S*<br/>
-Restituisce il valore sine di _X
+Restituisce il valore del seno di _X
 
 *_C*<br/>
-Restituisce il valore coseno di _X
+Restituisce il valore del coseno di _X
 
-## <a name="sinh"></a><a name="sinh"></a>Sinh
+## <a name="sinh"></a><a name="sinh"></a> sinh
 
 Calcola il valore del seno iperbolico dell'argomento
 
@@ -1118,9 +1169,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore del seno iperbolico dell'argomento
+Restituisce il valore del seno iperbolico dell'argomento.
 
-## <a name="sinhf"></a><a name="sinhf"></a>sinhf
+## <a name="sinhf"></a><a name="sinhf"></a> sinhf
 
 Calcola il valore del seno iperbolico dell'argomento
 
@@ -1135,11 +1186,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore del seno iperbolico dell'argomento
+Restituisce il valore del seno iperbolico dell'argomento.
 
-## <a name="sqrt"></a><a name="sqrt"></a>Sqrt
+## <a name="sqrt"></a><a name="sqrt"></a> sqrt
 
-Calcola la radice squre dell'argomento
+Calcola la radice Squre dell'argomento
 
 ```cpp
 inline float sqrt(float _X) restrict(amp);
@@ -1152,11 +1203,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la radice squre dell'argomento
+Restituisce la radice Squre dell'argomento.
 
-## <a name="sqrtf"></a><a name="sqrtf"></a>sqrtf (informazioni in base al testo in cui
+## <a name="sqrtf"></a><a name="sqrtf"></a> sqrtf
 
-Calcola la radice squre dell'argomento
+Calcola la radice Squre dell'argomento
 
 ```cpp
 inline float sqrtf(float _X) restrict(amp);
@@ -1169,11 +1220,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la radice squre dell'argomento
+Restituisce la radice Squre dell'argomento.
 
-## <a name="tan"></a><a name="tan"></a>Tan
+## <a name="tan"></a><a name="tan"></a> Tan
 
-Calcola il valore tangente dell'argomento
+Calcola il valore tangente dell'argomento.
 
 ```cpp
 inline float tan(float _X) restrict(amp);
@@ -1186,11 +1237,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore tangente dell'argomento
+Restituisce il valore tangente dell'argomento.
 
-## <a name="tanf"></a><a name="tanf"></a>tanf
+## <a name="tanf"></a><a name="tanf"></a> TANF
 
-Calcola il valore tangente dell'argomento
+Calcola il valore tangente dell'argomento.
 
 ```cpp
 inline float tanf(float _X) restrict(amp);
@@ -1203,9 +1254,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore tangente dell'argomento
+Restituisce il valore tangente dell'argomento.
 
-## <a name="tanh"></a><a name="tanh"></a>tanh
+## <a name="tanh"></a><a name="tanh"></a> tanh
 
 Calcola il valore della tangente iperbolica dell'argomento
 
@@ -1220,9 +1271,9 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore della tangente iperbolica dell'argomento
+Restituisce il valore della tangente iperbolica dell'argomento.
 
-## <a name="tanhf"></a><a name="tanhf"></a>tanhf
+## <a name="tanhf"></a><a name="tanhf"></a> tanhf
 
 Calcola il valore della tangente iperbolica dell'argomento
 
@@ -1237,11 +1288,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il valore della tangente iperbolica dell'argomento
+Restituisce il valore della tangente iperbolica dell'argomento.
 
-## <a name="trunc"></a><a name="trunc"></a>trunc
+## <a name="trunc"></a><a name="trunc"></a> trunc
 
-Tronca l'argomento al componente integer
+Tronca l'argomento al componente Integer
 
 ```cpp
 inline float trunc(float _X) restrict(amp);
@@ -1254,11 +1305,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il componente intero dell'argomento
+Restituisce il componente Integer dell'argomento.
 
-## <a name="truncf"></a><a name="truncf"></a>truncf
+## <a name="truncf"></a><a name="truncf"></a> truncf
 
-Tronca l'argomento al componente integer
+Tronca l'argomento al componente Integer
 
 ```cpp
 inline float truncf(float _X) restrict(amp);
@@ -1271,11 +1322,11 @@ Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il componente intero dell'argomento
+Restituisce il componente Integer dell'argomento.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** spazio **dei nomi** amp_math.h: Concurrency::fast_math
+**Intestazione:** amp_math. h **spazio dei nomi:** concurrency:: fast_math
 
 ## <a name="see-also"></a>Vedere anche
 

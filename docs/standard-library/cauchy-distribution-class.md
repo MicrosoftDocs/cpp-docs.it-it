@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 965ad6751938c07a0a62fedc8f65d53f9f6d2b04
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8e35815a702878fde702e772edb21899608e7f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217831"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830800"
 ---
 # <a name="cauchy_distribution-class"></a>Classe cauchy_distribution
 
@@ -80,10 +80,8 @@ Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione di Cauchy. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
-||||
-|-|-|-|
-|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
+[cauchy_distribution](#cauchy_distribution)\
+[param_type](#param_type)
 
 Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `a` e `b`.
 
@@ -240,7 +238,7 @@ Distribution for 10 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution:: cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a> cauchy_distribution:: cauchy_distribution
 
 Costruisce la distribuzione.
 
@@ -268,7 +266,7 @@ Il primo costruttore crea un oggetto il cui valore `a` archiviato include il val
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::p aram_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a> cauchy_distribution::p aram_type
 
 Archivia tutti i parametri della distribuzione.
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182499"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831463"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -107,19 +107,19 @@ Un oggetto `function` vuoto non include un oggetto chiamabile o un riferimento a
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[funzione](#function)|Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.|
+|[function](#function)|Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[result_type](#result_type)|Tipo restituito dell'oggetto chiamabile archiviato.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[assign](#assign)|Assegna un oggetto chiamabile a questo oggetto funzione.|
 |[scambio](#swap)|Scambia due oggetti chiamabili.|
@@ -128,13 +128,13 @@ Un oggetto `function` vuoto non include un oggetto chiamabile o un riferimento a
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore non specificato](#op_unspecified)|Verifica se è presente un oggetto chiamabile archiviato.|
 |[operatore ()](#op_call)|Chiama un oggetto chiamabile.|
 |[operatore =](#op_eq)|Sostituisce l'oggetto chiamabile archiviato.|
 
-## <a name="assign"></a><a name="assign"></a>assegnare
+## <a name="assign"></a><a name="assign"></a> assegnare
 
 Assegna un oggetto chiamabile a questo oggetto funzione.
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>operatore non specificato
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> operatore non specificato
 
 Verifica se è presente un oggetto chiamabile archiviato.
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>operatore ()
+## <a name="operator"></a><a name="op_call"></a> operatore ()
 
 Chiama un oggetto chiamabile.
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Sostituisce l'oggetto chiamabile archiviato.
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 Tipo restituito dell'oggetto chiamabile archiviato.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia due oggetti chiamabili.
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a><a name="target"></a>destinazione
+## <a name="target"></a><a name="target"></a> destinazione
 
 Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 Ottiene le informazioni sui tipi per l'oggetto chiamabile.
 

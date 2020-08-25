@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623455"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831684"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: aggiungere, modificare o eliminare controlli (C++)
 
@@ -166,20 +166,38 @@ Dopo aver aggiunto un controllo comune o un controllo Rich Edit a una finestra d
 
 Attualmente, l' **editor finestre** non aggiunge automaticamente codice al progetto quando si trascinano e rilasciano i controlli comuni seguenti o i controlli Rich Edit in una finestra di dialogo. Inoltre, Visual Studio non fornisce un errore o un avviso quando si verifica questo problema. Per risolvere il problema, aggiungere manualmente il codice per il controllo.
 
-||||
-|-|-|-|
-|Dispositivo di scorrimento|Controllo Tree|Selezione data e ora|
-|Controllo di selezione|Controllo Tab|Month Calendar|
-|Controllo dello stato di avanzamento|Controllo animazione|Controllo indirizzo IP|
-|Tasto di scelta|Controllo Rich Edit|Casella combinata estesa|
-|Controllo elenco|Controllo Rich Edit 2,0|Controllo personalizzato|
+:::row:::
+   :::column span="":::
+      Controllo animazione \
+      Controllo personalizzato \
+      Selezione data e ora \
+      Casella combinata estesa
+   :::column-end:::
+   :::column span="":::
+      Tasto di scelta rapida \
+      Controllo indirizzi IP \
+      Controllo elenco \
+      Month Calendar
+   :::column-end:::
+   :::column span="":::
+      Controllo progress \
+      Controllo Rich Edit 2,0 \
+      Controllo Rich Edit \
+      Dispositivo di scorrimento
+   :::column-end:::
+   :::column span="":::
+      Controllo di selezione \
+      Controllo tab \
+      Controllo Tree
+   :::column-end:::
+:::row-end:::
 
 Per utilizzare i controlli comuni in una finestra di dialogo, è necessario chiamare [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) o `AFXInitCommonControls` prima di creare la finestra di dialogo.
 
 Per usare i controlli RichEdit, è necessario chiamare `LoadLibrary` . Per ulteriori informazioni, vedere [informazioni sui controlli Rich Edit](/windows/win32/Controls/about-rich-edit-controls) nell'Windows SDK e [Panoramica del controllo Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
-> Per usare un controllo RichEdit con MFC, è prima necessario chiamare [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) per caricare il controllo richedit 2,0 (Riched20. DLL) oppure chiamare [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) per caricare il controllo richedit 1,0 precedente (Riched32. DLL).
+> Per usare un controllo RichEdit con MFC, è prima necessario chiamare [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) per caricare il controllo richedit 2,0 (RICHED20.DLL) o chiamare [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) per caricare il controllo 1,0 RichEdit precedente (RICHED32.DLL).
 >
 > È possibile usare la classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) corrente con il controllo richedit 1,0 precedente, ma `CRichEditCtrl` è progettato solo per supportare il controllo richedit 2,0. Poiché RichEdit 1,0 e RichEdit 2,0 sono simili, la maggior parte dei metodi funzionerà. Tuttavia, esistono alcune differenze tra i controlli 1,0 e 2,0, quindi alcuni metodi potrebbero funzionare in modo errato o non funzionare affatto.
 

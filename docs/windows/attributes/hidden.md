@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: e0e3c5cb0355f3bedd8ecee57b034f0d9dde87df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffa1ce01cfd570de7b699e415f10b27acf525047
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224435"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830956"
 ---
 # <a name="hidden"></a>hidden
 
@@ -33,9 +33,7 @@ Vedere l'esempio per [associabile](bindable.md) per un esempio di come usare **H
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**interfaccia**, **`class`** , **`struct`** , metodo, proprietà|
 |**Ripetibile**|No|

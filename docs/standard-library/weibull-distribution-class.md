@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 73b307fe0231b549a41accd48bba2a6f017486e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d16c1f7f864d52222a7fd4e1e2a5e543b8c21809
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224513"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831697"
 ---
 # <a name="weibull_distribution-class"></a>Classe weibull_distribution
 
@@ -77,10 +77,8 @@ Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . P
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione di Weibull. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
-||||
-|-|-|-|
-|[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|
+[weibull_distribution](#weibull_distribution)\
+[param_type](#param_type)|
 
 Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati *a* e *b*.
 
@@ -213,7 +211,7 @@ Distribution for 10 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution:: weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a> weibull_distribution:: weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -239,7 +237,7 @@ Il primo costruttore crea un oggetto il cui valore `a` archiviato include il val
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::p aram_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a> weibull_distribution::p aram_type
 
 Archivia i parametri della distribuzione.
 

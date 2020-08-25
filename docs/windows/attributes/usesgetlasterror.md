@@ -1,17 +1,17 @@
 ---
-title: usesgetlasterror (C++ attributo com)
+title: usesgetlasterror (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e3d3c292554350d85296971a9bd3620909ef47c7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166133"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831632"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -25,7 +25,7 @@ Indica al chiamante che se si verifica un errore durante la chiamata a tale funz
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **usesgetlasterror** C++ ha la stessa funzionalità dell'attributo MIDL di [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
+L'attributo **usesgetlasterror** di C++ ha la stessa funzionalità dell'attributo MIDL di [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
 
 ## <a name="example"></a>Esempio
 
@@ -33,14 +33,12 @@ Vedere l'esempio [idl_module](idl-module.md) per un esempio di come usare **uses
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|attributo **Module**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

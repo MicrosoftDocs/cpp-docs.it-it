@@ -1,17 +1,17 @@
 ---
-title: local (C++ attributo com)
+title: local (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dea62653478e451af00fa47b72984f3b580aadc0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214747"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834089"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -25,7 +25,7 @@ Quando viene usato nell'intestazione dell'interfaccia, consente di usare il comp
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **local** C++ ha la stessa funzionalità dell'attributo MIDL [locale](/windows/win32/Midl/local) .
+L'attributo C++ **locale** ha la stessa funzionalità dell'attributo MIDL [locale](/windows/win32/Midl/local) .
 
 ## <a name="example"></a>Esempio
 
@@ -33,13 +33,11 @@ Per un esempio su come usare **local**, vedere [call_as](call-as.md) .
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**interfaccia**, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|`dispinterface`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

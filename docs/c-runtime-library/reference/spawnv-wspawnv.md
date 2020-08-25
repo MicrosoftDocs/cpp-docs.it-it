@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-ms.openlocfilehash: b29b1739f4511cd8f600d051aa0d754dbc8be224
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffed211fffc7b994fa04fde7210339b9355197fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909241"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830813"
 ---
 # <a name="_spawnv-_wspawnv"></a>_spawnv, _wspawnv
 
@@ -80,7 +80,7 @@ Matrice di puntatori agli argomenti. L'argomento *argv*[0] è in genere un punta
 
 Il valore restituito da un **_spawnv** sincrono o da un **_wspawnv** (**_P_WAIT** specificato per la *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da un **_spawnv** asincrono o da un **_wspawnv** (**_P_NOWAIT** o **_P_NOWAITO** specificato per la *modalità*) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama in modo specifico la routine di **uscita** con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Un valore restituito-1 indica un errore (il nuovo processo non è stato avviato). In questo caso **errno** viene impostato su uno dei valori seguenti.
 
-|||
+| Valore | Descrizione |
 |-|-|
 | **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
 | **EINVAL** | argomento *mode* non valido. |
@@ -113,7 +113,7 @@ Vedere l'esempio in [_spawn, _wspawn Functions](../../c-runtime-library/spawn-ws
 
 ## <a name="see-also"></a>Vedere anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn, funzioni _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [interruzione](abort.md)<br/>
 [atexit](atexit.md)<br/>

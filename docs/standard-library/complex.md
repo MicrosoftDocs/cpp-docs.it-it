@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222576"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831502"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -20,7 +20,7 @@ Definisce il modello di classe del contenitore `complex` e i relativi modelli di
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**:\<complex>
+**Intestazione**: \<complex>
 
 **Spazio dei nomi:** std
 
@@ -72,7 +72,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[ABS](../standard-library/complex-functions.md#abs)|Calcola il modulo di un numero complesso.|
 |[Acos](../standard-library/complex-functions.md#acos)||
@@ -102,7 +102,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore! =](../standard-library/complex-operators.md#op_neq)|Verifica la disuguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|
 |[operatore](../standard-library/complex-operators.md#op_star)|Moltiplica due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|
@@ -115,7 +115,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[complesso\<double>](../standard-library/complex-double.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`double`** , dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
 |[complesso\<float>](../standard-library/complex-float.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`float`** , dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
@@ -126,7 +126,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 L' \<complex> intestazione definisce i [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) seguenti che creano un numero complesso con la parte reale che è zero e la parte immaginaria è il valore del parametro di input.
 
-|||
+|Dichiarazione|Descrizione|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Restituisce `complex<double>{0.0, static_cast<double>(d)}`.|

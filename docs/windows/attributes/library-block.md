@@ -1,17 +1,17 @@
 ---
-title: library_block (C++ attributo com)
+title: library_block (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13988abc12eb0b136dfc8d2c0d597005b56f0526
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214773"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834116"
 ---
 # <a name="library_block"></a>library_block
 
@@ -44,14 +44,12 @@ __interface IMyInterface {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

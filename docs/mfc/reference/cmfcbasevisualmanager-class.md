@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561323"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834297"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe CMFCBaseVisualManager
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCBaseVisualManager:: CMFCBaseVisualManager](#cmfcbasevisualmanager)|Costruisce e inizializza un oggetto `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|Disegna un controllo casella di controllo utilizzando il tema Windows corrente.|
 |[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|Disegna un bordo della casella combinata usando il tema di Windows corrente.|
 |[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|Disegna un pulsante a discesa della casella combinata usando il tema Windows corrente.|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|Chiama `CloseThemeData` per tutti gli handle ottenuti in `UpdateSystemColors` .|
 |[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|Chiama `OpenThemeData` per ottenere gli handle per il disegno di diversi controlli: Windows, barre degli strumenti, pulsanti e così via.|
 
@@ -415,7 +412,7 @@ void UpdateSystemColors();
 
 Solo per uso interno.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

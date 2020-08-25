@@ -1,18 +1,18 @@
 ---
-title: '&lt;memory_resource &gt;'
+title: '&lt;memory_resource&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: 752396bb06b292ce29b7c6cd292287955b6066a7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: de88feb691d0ec1bc9bf9b9dc2bc40cbc31a1cfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687716"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831047"
 ---
-# <a name="ltmemory_resourcegt"></a>&lt;memory_resource &gt;
+# <a name="ltmemory_resourcegt"></a>&lt;memory_resource&gt;
 
 Definisce il modello di classe del contenitore memory_resource e i relativi modelli di supporto.
 
@@ -22,24 +22,24 @@ Definisce il modello di classe del contenitore memory_resource e i relativi mode
 #include <memory_resource>
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Verifica se l'oggetto memory_resource sul lato sinistro dell'operatore non è uguale all'oggetto memory_resource a destra.|
-|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Verifica se l'oggetto memory_resource a sinistra dell'operatore è uguale all'oggetto memory_resource sul lato destro.|
+|[operatore! =](../standard-library/memory-resource-operators.md#op_neq)|Verifica se l'oggetto memory_resource sul lato sinistro dell'operatore non è uguale all'oggetto memory_resource sul lato destro.|
+|[operatore = =](../standard-library/memory-resource-operators.md#op_eq_eq)|Verifica se l'oggetto memory_resource a sinistra dell'operatore è uguale all'oggetto memory_resource sul lato destro.|
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[polymorphic_allocator](../standard-library/memory-resource-functions.md#poly_alloc)||
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[get_default_resource](../standard-library/memory-resource-functions.md#get_default)||
 |[new_delete_resource](../standard-library/memory-resource-functions.md#new_delete)||
@@ -48,7 +48,7 @@ Definisce il modello di classe del contenitore memory_resource e i relativi mode
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe memory_resource](../standard-library/memory-resource-class.md)||
 |[Classe monotonic_buffer_resource](../standard-library/monotonic-buffer-resource-class.md)||
@@ -58,6 +58,6 @@ Definisce il modello di classe del contenitore memory_resource e i relativi mode
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

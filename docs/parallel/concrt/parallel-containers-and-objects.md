@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: dffe9b3490f52645414643ebc23ab78553abafff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7387173378e79a4707008a11846eab19d7ae4341
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213905"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831788"
 ---
 # <a name="parallel-containers-and-objects"></a>Contenitori e oggetti paralleli
 
@@ -21,7 +21,7 @@ Un *contenitore simultaneo* fornisce accesso sicuro alla concorrenza alle operaz
 
 Un *oggetto simultaneo* viene condiviso contemporaneamente tra i componenti. Un processo che calcola lo stato di un oggetto simultaneo in parallelo produce lo stesso risultato di un altro processo che calcola lo stesso stato in modo seriale. La classe [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) è un esempio di tipo di oggetto simultaneo. La `combinable` classe consente di eseguire calcoli in parallelo, quindi combinare tali calcoli in un risultato finale. Utilizzare gli oggetti simultanei quando si utilizzerebbe un meccanismo di sincronizzazione, ad esempio un mutex, per sincronizzare l'accesso a una variabile o a una risorsa condivisa.
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 In questo argomento vengono descritti in dettaglio i contenitori e gli oggetti paralleli seguenti.
 
@@ -63,11 +63,11 @@ Oggetti simultanei:
 
   - [esempi](#combinable-examples)
 
-## <a name="concurrent_vector-class"></a><a name="vector"></a>Classe concurrent_vector
+## <a name="concurrent_vector-class"></a><a name="vector"></a> Classe concurrent_vector
 
 La classe [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) è una classe contenitore di sequenze che, proprio come la classe [std:: Vector](../../standard-library/vector-class.md) , consente di accedere in modo casuale ai relativi elementi. La `concurrent_vector` classe Abilita le operazioni di Accodamento e accesso agli elementi indipendenti dalla concorrenza. Le operazioni di Accodamento non invalidano i puntatori o gli iteratori esistenti. Anche le operazioni di accesso e attraversamento degli iteratori sono sicure per la concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico.
 
-### <a name="differences-between-concurrent_vector-and-vector"></a><a name="vector-differences"></a>Differenze tra concurrent_vector e Vector
+### <a name="differences-between-concurrent_vector-and-vector"></a><a name="vector-differences"></a> Differenze tra concurrent_vector e Vector
 
 La `concurrent_vector` classe è molto simile alla `vector` classe. La complessità delle operazioni di accesso di Accodamento, accesso agli elementi e iteratore su un oggetto corrisponde a quella di `concurrent_vector` un `vector` oggetto. I punti seguenti illustrano dove `concurrent_vector` differisce da `vector` :
 
@@ -87,27 +87,56 @@ La `concurrent_vector` classe è molto simile alla `vector` classe. La complessi
 
 - Il runtime non definisce una versione specializzata di `concurrent_vector` per il tipo **`bool`** .
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a>Operazioni indipendenti dalla concorrenza
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Operazioni indipendenti dalla concorrenza
 
 Tutti i metodi che aggiungono o aumentano le dimensioni di un `concurrent_vector` oggetto o accedono a un elemento in un `concurrent_vector` oggetto sono indipendenti dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico. L'eccezione a questa regola è il `resize` metodo.
 
 La tabella seguente illustra i `concurrent_vector` metodi e gli operatori comuni che sono indipendenti dalla concorrenza.
 
-||||
-|-|-|-|
-|[at](reference/concurrent-vector-class.md#at)|[fine](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
-|[iniziare](reference/concurrent-vector-class.md#begin)|[fronte](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
-|[Indietro](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
-|[capacità](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
-|[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
+:::row:::
+   :::column span="":::
+      [`at`](reference/concurrent-vector-class.md#at)\
+      [`back`](reference/concurrent-vector-class.md#back)\
+      [`begin`](reference/concurrent-vector-class.md#begin)\
+      [`capacity`](reference/concurrent-vector-class.md#capacity)
+   :::column-end:::
+   :::column span="":::
+      [`empty`](reference/concurrent-vector-class.md#empty)\
+      [`end`](reference/concurrent-vector-class.md#end)\
+      [`front`](reference/concurrent-vector-class.md#front)\
+      [`grow_by`](reference/concurrent-vector-class.md#grow_by)
+   :::column-end:::
+   :::column span="":::
+      [`grow_to_at_least`](reference/concurrent-vector-class.md#grow_to_at_least)\
+      [`max_size`](reference/concurrent-vector-class.md#max_size)\
+      [`operator[]`](reference/concurrent-vector-class.md#operator_at)\
+      [`push_back`](reference/concurrent-vector-class.md#push_back)
+   :::column-end:::
+   :::column span="":::
+      [`rbegin`](reference/concurrent-vector-class.md#rbegin)\
+      [`rend`](reference/concurrent-vector-class.md#rend)\
+      [`size`](reference/concurrent-vector-class.md#size)
+   :::column-end:::
+:::row-end:::
 
 Le operazioni fornite dal runtime per la compatibilità con la libreria standard C++, ad esempio, `reserve` non sono indipendenti dalla concorrenza. La tabella seguente illustra i metodi e gli operatori comuni che non sono indipendenti dalla concorrenza.
 
-|||
-|-|-|
-|[assign](reference/concurrent-vector-class.md#assign)|[riserva](reference/concurrent-vector-class.md#reserve)|
-|[deselezionare](reference/concurrent-vector-class.md#clear)|[ridimensionare](reference/concurrent-vector-class.md#resize)|
-|[operatore =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
+:::row:::
+   :::column span="":::
+      [`assign`](reference/concurrent-vector-class.md#assign)\
+      [`clear`](reference/concurrent-vector-class.md#clear)
+   :::column-end:::
+   :::column span="":::
+      [`operator=`](reference/concurrent-vector-class.md#operator_eq)\
+      [`reserve`](reference/concurrent-vector-class.md#reserve)
+   :::column-end:::
+   :::column span="":::
+      [`resize`](reference/concurrent-vector-class.md#resize)
+   :::column-end:::
+   :::column span="":::
+      [`shrink_to_fit`](reference/concurrent-vector-class.md#shrink_to_fit)
+   :::column-end:::
+:::row-end:::
 
 Le operazioni che modificano il valore degli elementi esistenti non sono indipendenti dalla concorrenza. Usare un oggetto di sincronizzazione, ad esempio un oggetto [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) per sincronizzare le operazioni di lettura e scrittura simultanee per lo stesso elemento dati. Per altre informazioni sugli oggetti di sincronizzazione, vedere [strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md).
 
@@ -117,7 +146,7 @@ Quando si converte il codice esistente che usa `vector` per usare `concurrent_ve
 
 Sebbene il `end` metodo sia indipendente dalla concorrenza, una chiamata simultanea al metodo [push_back](reference/concurrent-vector-class.md#push_back) causa la modifica del valore restituito da `end` . Il numero di elementi che l'iteratore attraversa è indeterminato. Pertanto, questo programma può produrre un risultato diverso ogni volta che viene eseguito. Quando il tipo di elemento non è semplice, è possibile che esista un race condition tra `push_back` le chiamate a e `end` . Il `end` metodo può restituire un elemento allocato, ma non completamente inizializzato.
 
-### <a name="exception-safety"></a><a name="vector-exceptions"></a>Sicurezza delle eccezioni
+### <a name="exception-safety"></a><a name="vector-exceptions"></a> Sicurezza delle eccezioni
 
 Se un'operazione di crescita o assegnazione genera un'eccezione, lo stato dell' `concurrent_vector` oggetto diventa non valido. Il comportamento di un `concurrent_vector` oggetto che si trova in uno stato non valido è indefinito, a meno che non sia specificato diversamente. Tuttavia, il distruttore libera sempre la memoria allocata dall'oggetto, anche se lo stato dell'oggetto non è valido.
 
@@ -129,11 +158,11 @@ Il tipo di dati degli elementi Vector, `T` , deve soddisfare i requisiti seguent
 
 [All'[inizio](#top)]
 
-## <a name="concurrent_queue-class"></a><a name="queue"></a>Classe concurrent_queue
+## <a name="concurrent_queue-class"></a><a name="queue"></a> Classe concurrent_queue
 
 La classe [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) , proprio come la classe [std:: Queue](../../standard-library/queue-class.md) , consente di accedere agli elementi front e back. La `concurrent_queue` classe Abilita le operazioni di Accodamento e rimozione dalla coda della concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico. La `concurrent_queue` classe fornisce inoltre supporto per gli iteratori non indipendenti dalla concorrenza.
 
-### <a name="differences-between-concurrent_queue-and-queue"></a><a name="queue-differences"></a>Differenze tra concurrent_queue e Queue
+### <a name="differences-between-concurrent_queue-and-queue"></a><a name="queue-differences"></a> Differenze tra concurrent_queue e Queue
 
 La `concurrent_queue` classe è molto simile alla `queue` classe. I punti seguenti illustrano dove `concurrent_queue` differisce da `queue` :
 
@@ -147,27 +176,47 @@ La `concurrent_queue` classe è molto simile alla `queue` classe. I punti seguen
 
 - La `concurrent_queue` classe fornisce il metodo [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) anziché il `size` metodo. Il `unsafe_size` metodo non è indipendente dalla concorrenza.
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a>Operazioni indipendenti dalla concorrenza
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Operazioni indipendenti dalla concorrenza
 
 Tutti i metodi che accodano o deaccodano da un `concurrent_queue` oggetto sono indipendenti dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico.
 
 La tabella seguente illustra i `concurrent_queue` metodi e gli operatori comuni che sono indipendenti dalla concorrenza.
 
-|||
-|-|-|
-|[empty](reference/concurrent-queue-class.md#empty)|[push](reference/concurrent-queue-class.md#push)|
-|[get_allocator](reference/concurrent-queue-class.md#get_allocator)|[try_pop](reference/concurrent-queue-class.md#try_pop)|
+:::row:::
+   :::column span="":::
+      [`empty`](reference/concurrent-queue-class.md#empty)
+   :::column-end:::
+   :::column span="":::
+      [`get_allocator`](reference/concurrent-queue-class.md#get_allocator)
+   :::column-end:::
+   :::column span="":::
+      [`push`](reference/concurrent-queue-class.md#push)
+   :::column-end:::
+   :::column span="":::
+      [`try_pop`](reference/concurrent-queue-class.md#try_pop)
+   :::column-end:::
+:::row-end:::
 
 Sebbene il `empty` metodo sia indipendente dalla concorrenza, un'operazione simultanea può causare l'aumento o la riduzione della coda prima che il `empty` metodo venga restituito.
 
 La tabella seguente illustra i metodi e gli operatori comuni che non sono indipendenti dalla concorrenza.
 
-|||
-|-|-|
-|[deselezionare](reference/concurrent-queue-class.md#clear)|[unsafe_end](reference/concurrent-queue-class.md#unsafe_end)|
-|[unsafe_begin](reference/concurrent-queue-class.md#unsafe_begin)|[unsafe_size](reference/concurrent-queue-class.md#unsafe_size)|
+:::row:::
+   :::column span="":::
+      [`clear`](reference/concurrent-queue-class.md#clear)
+   :::column-end:::
+   :::column span="":::
+      [`unsafe_begin`](reference/concurrent-queue-class.md#unsafe_begin)
+   :::column-end:::
+   :::column span="":::
+      [`unsafe_end`](reference/concurrent-queue-class.md#unsafe_end)
+   :::column-end:::
+   :::column span="":::
+      [`unsafe_size`](reference/concurrent-queue-class.md#unsafe_size)
+   :::column-end:::
+:::row-end:::
 
-### <a name="iterator-support"></a><a name="queue-iterators"></a>Supporto degli iteratori
+### <a name="iterator-support"></a><a name="queue-iterators"></a> Supporto degli iteratori
 
 `concurrent_queue`Fornisce gli iteratori non indipendenti dalla concorrenza. Si consiglia di usare questi iteratori solo per il debug.
 
@@ -179,9 +228,9 @@ Un `concurrent_queue` iteratore attraversa gli elementi solo nella direzione di 
 |`operator*`|Recupera un riferimento all'elemento corrente.|
 |`operator->`|Recupera un puntatore all'elemento corrente.|
 
-[All'[inizio](#top)]
+\[In [alto](#top)]
 
-## <a name="concurrent_unordered_map-class"></a><a name="unordered_map"></a>Classe concurrent_unordered_map
+## <a name="concurrent_unordered_map-class"></a><a name="unordered_map"></a> Classe concurrent_unordered_map
 
 La classe [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) è una classe contenitore associativa che, proprio come la classe [std:: unordered_map](../../standard-library/unordered-map-class.md) , controlla una sequenza di lunghezza variabile di elementi di tipo [std::p Air \<const Key, Ty> ](../../standard-library/pair-structure.md). Si pensi a una mappa non ordinata come a un dizionario in cui è possibile aggiungere una coppia chiave-valore o cercare un valore in base alla chiave. Questa classe è utile quando si dispone di più thread o attività che devono accedere simultaneamente a un contenitore condiviso, inserirlo o aggiornarlo.
 
@@ -191,7 +240,7 @@ Nell'esempio seguente viene illustrata la struttura di base per l'utilizzo di `c
 
 Per un esempio che usa `concurrent_unordered_map` per eseguire un'operazione di mapping e riduzione in parallelo, vedere [procedura: eseguire operazioni di mapping e riduzione in parallelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
-### <a name="differences-between-concurrent_unordered_map-and-unordered_map"></a><a name="map-differences"></a>Differenze tra concurrent_unordered_map e unordered_map
+### <a name="differences-between-concurrent_unordered_map-and-unordered_map"></a><a name="map-differences"></a> Differenze tra concurrent_unordered_map e unordered_map
 
 La `concurrent_unordered_map` classe è molto simile alla `unordered_map` classe. I punti seguenti illustrano dove `concurrent_unordered_map` differisce da `unordered_map` :
 
@@ -199,37 +248,68 @@ La `concurrent_unordered_map` classe è molto simile alla `unordered_map` classe
 
 - Le operazioni di inserimento non invalidano i puntatori o gli iteratori esistenti, né modificano l'ordine degli elementi già presenti nella mappa. Le operazioni di inserimento e attraversamento possono verificarsi simultaneamente.
 
-- `concurrent_unordered_map`supporta solo l'iterazione in diretta.
+- `concurrent_unordered_map` supporta solo l'iterazione in diretta.
 
 - L'inserimento non invalida o aggiorna gli iteratori restituiti da `equal_range` . L'inserimento può aggiungere elementi diversi alla fine dell'intervallo. L'iteratore Begin punta a un elemento EQUAL.
 
 Per evitare deadlock, nessun metodo di `concurrent_unordered_map` blocca un blocco quando chiama l'allocatore di memoria, le funzioni hash o altro codice definito dall'utente. Inoltre, è necessario assicurarsi che la funzione hash valuti sempre le chiavi uguali allo stesso valore. Le funzioni hash migliori distribuiscono le chiavi in modo uniforme nello spazio di codice hash.
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a>Operazioni indipendenti dalla concorrenza
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Operazioni indipendenti dalla concorrenza
 
 La `concurrent_unordered_map` classe consente operazioni di inserimento e accesso agli elementi indipendenti dalla concorrenza. Le operazioni di inserimento non invalidano i puntatori o gli iteratori esistenti. Anche le operazioni di accesso e attraversamento degli iteratori sono sicure per la concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico. La tabella seguente illustra i `concurrent_unordered_map` metodi e gli operatori comunemente usati che sono indipendenti dalla concorrenza.
 
-|||||
-|-|-|-|-|
-|[at](reference/concurrent-unordered-map-class.md#at)|`count`|`find`|[key_eq](reference/concurrent-unordered-map-class.md#key_eq)|
-|`begin`|`empty`|`get_allocator`|`max_size`|
-|`cbegin`|`end`|`hash_function`|[operator&#91;&#93;](reference/concurrent-unordered-map-class.md#operator_at)|
-|`cend`|`equal_range`|[insert](reference/concurrent-unordered-map-class.md#insert)|`size`|
+:::row:::
+   :::column span="":::
+      [`at`](reference/concurrent-unordered-map-class.md#at)\
+      [`begin`](reference/concurrent-unordered-map-class.md#begin)\
+      [`cbegin`](reference/concurrent-unordered-map-class.md#cbegin)\
+      [`cend`](reference/concurrent-unordered-map-class.md#cend)
+   :::column-end:::
+   :::column span="":::
+      [`count`](reference/concurrent-unordered-map-class.md#count)\
+      [`empty`](reference/concurrent-unordered-map-class.md#empty)\
+      [`end`](reference/concurrent-unordered-map-class.md#cend)\
+      [`equal_range`](reference/concurrent-unordered-map-class.md#equal_range)
+   :::column-end:::
+   :::column span="":::
+      [`find`](reference/concurrent-unordered-map-class.md#find)\
+      [`get_allocator`](reference/concurrent-unordered-map-class.md#get_allocator)\
+      [`hash_function`](reference/concurrent-unordered-map-class.md#hash_function)\
+      [`insert`](reference/concurrent-unordered-map-class.md#insert)
+   :::column-end:::
+   :::column span="":::
+      [`key_eq`](reference/concurrent-unordered-map-class.md#key_eq)\
+      [`max_size`](reference/concurrent-unordered-map-class.md#max_size)\
+      [`operator[]`](./reference/concurrent-unordered-map-class.md#operator_at)\
+      [`size`](reference/concurrent-unordered-map-class.md#size)
+   :::column-end:::
+:::row-end:::
 
 Sebbene il `count` metodo possa essere chiamato in modo sicuro dai thread in esecuzione simultanea, diversi thread possono ricevere risultati diversi se un nuovo valore viene inserito simultaneamente nel contenitore.
 
 La tabella seguente illustra i metodi e gli operatori comunemente usati che non sono indipendenti dalla concorrenza.
 
-||||
-|-|-|-|
-|`clear`|`max_load_factor`|`rehash`|
-|`load_factor`|[operatore =](reference/concurrent-unordered-map-class.md#operator_eq)
+:::row:::
+   :::column span="":::
+      [`clear`](reference/concurrent-unordered-map-class.md#clear)\
+      [`load_factor`](reference/concurrent-unordered-map-class.md#load_factor)
+   :::column-end:::
+   :::column span="":::
+      [`max_load_factor`](reference/concurrent-unordered-map-class.md#max_load_factor)
+   :::column-end:::
+   :::column span="":::
+      [`operator=`](reference/concurrent-unordered-map-class.md#operator_eq)
+   :::column-end:::
+   :::column span="":::
+      [`rehash`](reference/concurrent-unordered-map-class.md#rehash)
+   :::column-end:::
+:::row-end:::
 
 Oltre a questi metodi, qualsiasi metodo che inizia con `unsafe_` non è anche indipendente dalla concorrenza.
 
 [All'[inizio](#top)]
 
-## <a name="concurrent_unordered_multimap-class"></a><a name="unordered_multimap"></a>Classe concurrent_unordered_multimap
+## <a name="concurrent_unordered_multimap-class"></a><a name="unordered_multimap"></a> Classe concurrent_unordered_multimap
 
 La classe [Concurrency:: concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) somiglia strettamente alla `concurrent_unordered_map` classe, ad eccezione del fatto che consente di eseguire il mapping di più valori alla stessa chiave. Si differenzia anche da `concurrent_unordered_map` nei modi seguenti:
 
@@ -237,13 +317,13 @@ La classe [Concurrency:: concurrent_unordered_multimap](../../parallel/concrt/re
 
 - La `concurrent_unordered_multimap` classe non fornisce `operator[]` né il `at` metodo.
 
-Nell'esempio seguente viene illustrata la struttura di base per l'utilizzo di `concurrent_unordered_multimap` . Questo esempio Mostra come inserire chiavi di caratteri nell'intervallo [' a',' i ']. `concurrent_unordered_multimap`consente a una chiave di avere più valori.
+Nell'esempio seguente viene illustrata la struttura di base per l'utilizzo di `concurrent_unordered_multimap` . Questo esempio Mostra come inserire chiavi di caratteri nell'intervallo [' a',' i ']. `concurrent_unordered_multimap` consente a una chiave di avere più valori.
 
 [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]
 
 [All'[inizio](#top)]
 
-## <a name="concurrent_unordered_set-class"></a><a name="unordered_set"></a>Classe concurrent_unordered_set
+## <a name="concurrent_unordered_set-class"></a><a name="unordered_set"></a> Classe concurrent_unordered_set
 
 La classe [Concurrency:: concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) è strettamente simile alla `concurrent_unordered_map` classe, ad eccezione del fatto che gestisce i valori anziché le coppie chiave-valore. La `concurrent_unordered_set` classe non fornisce `operator[]` né il `at` metodo.
 
@@ -253,7 +333,7 @@ Nell'esempio seguente viene illustrata la struttura di base per l'utilizzo di `c
 
 [All'[inizio](#top)]
 
-## <a name="concurrent_unordered_multiset-class"></a><a name="unordered_multiset"></a>Classe concurrent_unordered_multiset
+## <a name="concurrent_unordered_multiset-class"></a><a name="unordered_multiset"></a> Classe concurrent_unordered_multiset
 
 La classe [Concurrency:: concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) somiglia strettamente alla `concurrent_unordered_set` classe, ad eccezione del fatto che consente valori duplicati. Si differenzia anche da `concurrent_unordered_set` nei modi seguenti:
 
@@ -261,19 +341,19 @@ La classe [Concurrency:: concurrent_unordered_multiset](../../parallel/concrt/re
 
 - La `concurrent_unordered_multiset` classe non fornisce `operator[]` né il `at` metodo.
 
-Nell'esempio seguente viene illustrata la struttura di base per l'utilizzo di `concurrent_unordered_multiset` . In questo esempio vengono inseriti i valori di carattere nell'intervallo [' a',' i ']. `concurrent_unordered_multiset`consente il verificarsi di un valore più volte.
+Nell'esempio seguente viene illustrata la struttura di base per l'utilizzo di `concurrent_unordered_multiset` . In questo esempio vengono inseriti i valori di carattere nell'intervallo [' a',' i ']. `concurrent_unordered_multiset` consente il verificarsi di un valore più volte.
 
 [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]
 
 [All'[inizio](#top)]
 
-## <a name="combinable-class"></a><a name="combinable"></a>Classe combinable
+## <a name="combinable-class"></a><a name="combinable"></a> Classe combinable
 
 La classe [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) fornisce un archivio locale di thread riutilizzabile che consente di eseguire calcoli con granularità fine, quindi unire tali calcoli in un risultato finale. È possibile considerare un oggetto `combinable` come una variabile di riduzione.
 
 La `combinable` classe è utile quando si dispone di una risorsa condivisa tra più thread o attività. La `combinable` classe consente di eliminare lo stato condiviso fornendo l'accesso alle risorse condivise in modo senza blocco. Questa classe fornisce pertanto un'alternativa all'utilizzo di un meccanismo di sincronizzazione, ad esempio un mutex, per sincronizzare l'accesso ai dati condivisi da più thread.
 
-### <a name="methods-and-features"></a><a name="combinable-features"></a>Metodi e funzionalità
+### <a name="methods-and-features"></a><a name="combinable-features"></a> Metodi e funzionalità
 
 Nella tabella seguente vengono illustrati alcuni dei metodi importanti della `combinable` classe. Per ulteriori informazioni su tutti i `combinable` metodi della classe, vedere [classe combinable](../../parallel/concrt/reference/combinable-class.md).
 

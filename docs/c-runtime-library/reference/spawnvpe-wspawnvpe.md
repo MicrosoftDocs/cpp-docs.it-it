@@ -36,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 8f974dcfe59551c2fd0fddd7d9c66fb3d46d9b7f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c35e693624676cf588c6b85334fadc7c7915b2a7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919703"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831320"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -85,7 +85,7 @@ Matrice di puntatori alle impostazioni d'ambiente.
 
 Il valore restituito da un **_spawnvpe** sincrono o da un **_wspawnvpe** (**_P_WAIT** specificato per la *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da un **_spawnvpe** asincrono o da un **_wspawnvpe** (**_P_NOWAIT** o **_P_NOWAITO** specificato per la *modalità*) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama in modo specifico la routine di **uscita** con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Un valore restituito-1 indica un errore (il nuovo processo non è stato avviato). In questo caso **errno** viene impostato su uno dei valori seguenti:
 
-|||
+| Valore | Descrizione |
 |-|-|
 | **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
 | **EINVAL** | argomento *mode* non valido. |

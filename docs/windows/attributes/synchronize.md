@@ -1,17 +1,17 @@
 ---
-title: Synchronize (C++ attributo com)
+title: Synchronize (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: a0f4702de4cfde8586cc573f9ff5a6195984d207
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a7edbaa4e572af18bec9b3b6bef54594d6511390
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214513"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831671"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -27,13 +27,13 @@ Sincronizza l'accesso al metodo di destinazione.
 
 L'attributo **Synchronize** C++ implementa il supporto per sincronizzare il metodo di destinazione di un oggetto. La sincronizzazione consente a più oggetti di usare una risorsa comune, ad esempio un metodo di una classe, controllando l'accesso del metodo di destinazione.
 
-Il codice inserito da questo attributo chiama il metodo `Lock` appropriato (determinato dal modello di Threading) all'inizio del metodo di destinazione. Quando viene terminato il metodo, `Unlock` viene chiamato automaticamente. Per ulteriori informazioni su queste funzioni, vedere [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
+Il codice inserito da questo attributo chiama il `Lock` metodo appropriato (determinato dal modello di Threading) all'inizio del metodo di destinazione. Quando il metodo viene terminato, `Unlock` viene chiamato automaticamente. Per ulteriori informazioni su queste funzioni, vedere [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se ad esempio `progid` viene applicato, vengono applicati anche `vi_progid` e `coclass`.
+Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Se, ad esempio, `progid` viene applicato `vi_progid` , `coclass` vengono applicati anche.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente fornisce la sincronizzazione per il metodo di `UpdateBalance` dell'oggetto `CMyClass`.
+Il codice seguente fornisce la sincronizzazione per il `UpdateBalance` metodo dell' `CMyClass` oggetto.
 
 ```cpp
 // cpp_attr_ref_synchronize.cpp
@@ -62,14 +62,12 @@ class CMyClass {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Metodo della classe, metodo|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Uno o più degli elementi seguenti: `coclass`, `progid`o `vi_progid`.|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Uno o più degli elementi seguenti: `coclass` , `progid` o `vi_progid` .|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

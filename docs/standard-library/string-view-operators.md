@@ -17,24 +17,27 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222237"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833218"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;operatori di string_view &gt;
 
 Usare questi operatori per confrontare due oggetti string_view o un string_view e un altro oggetto stringa, ad esempio [std:: String](basic-string-class.md)o **char \* **, per il quale viene fornita una conversione implicita.
 
-||||
-|-|-|-|
-|[operatore! =](#op_neq)|[operatore&gt;](#op_gt)|[operatore&gt;=](#op_gt_eq)|
-|[operatore&lt;](#op_lt)|[operatore&lt;&lt;](#op_lt_lt)|[operatore&lt;=](#op_lt_eq)|
-|[operatore = =](#op_eq_eq)|[operatore "" SV](#op_sv)|
+[operatore! =](#op_neq)\
+[operatore&gt;](#op_gt)\
+[operatore&gt;=](#op_gt_eq)\
+[operatore&lt;](#op_lt)\
+[operatore&lt;&lt;](#op_lt_lt)\
+[operatore&lt;=](#op_lt_eq)\
+[operatore = =](#op_eq_eq)\
+[operatore "" SV](#op_sv)
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.
 
@@ -73,7 +76,7 @@ Deve esistere una conversione implicita da *convertible_string_type* al string_v
 
 Il confronto si basa su un confronto pairwise lessicografico tra le sequenze di caratteri. Se hanno lo stesso numero di elementi e gli elementi sono tutti uguali, i due oggetti sono uguali. In caso contrario, non sono uguali.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.
 
@@ -112,7 +115,7 @@ Deve esistere una conversione implicita da *convertible_string_type* al string_v
 
 Il confronto si basa su un confronto pairwise lessicografico tra le sequenze di caratteri. Se hanno lo stesso numero di elementi e gli elementi sono tutti uguali, i due oggetti sono uguali.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto sul lato sinistro dell'operatore è minore dell'oggetto a destra sidestring_view
 
@@ -173,7 +176,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è minore o uguale all'oggetto a destra.
 
@@ -210,7 +213,7 @@ Qualsiasi tipo di stringa convertibile o un oggetto di tipo `basic_string_view` 
 
 Vedere [Operator &lt; ](#op_lt).
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operatore&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operatore&lt;&lt;
 
 Scrive un string_view in un flusso di output.
 
@@ -236,7 +239,7 @@ flusso di output in cui viene eseguita la scrittura.
 
 Utilizzare questo operatore per inserire il contenuto di un string_view in un flusso di output, ad esempio utilizzando [std:: cout](iostream.md#cout).
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore dell'oggetto a destra.
 
@@ -273,7 +276,7 @@ Qualsiasi tipo di stringa convertibile o un oggetto di tipo `basic_string_view` 
 
 Vedere [Operator &lt; ](#op_lt).
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore o uguale all'oggetto a destra.
 
@@ -310,7 +313,7 @@ Qualsiasi tipo di stringa convertibile o un oggetto di tipo `basic_string_view` 
 
 Vedere [Operator &lt; ](#op_lt).
 
-## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>operatore "" SV (string_view valore letterale)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a> operatore "" SV (string_view valore letterale)
 
 Costruisce un string_view da un valore letterale stringa. Richiede lo spazio dei nomi `std::literals::string_view_literals` .
 

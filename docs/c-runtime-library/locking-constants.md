@@ -19,14 +19,14 @@ helpviewer_keywords:
 - _LK_RLCK constant
 - LK_LOCK constant
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
-ms.openlocfilehash: d559a68e8fede6e0b6dd40505a041b14da703681
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8cfc1f933179e043f464a69f3ac5cf4ca25763e0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738497"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830826"
 ---
-# <a name="locking-constants"></a>Costanti _locking
+# <a name="_locking-constants"></a>Costanti _locking
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,7 +40,7 @@ L'argomento *mode* nella chiamata alla funzione `_locking` specifica l'azione di
 
 L'argomento *mode* deve essere una delle costanti manifesto seguenti.
 
-|||
+|Valore|Descrizione|
 |-|-|
 | `_LK_LOCK`  | Blocca i byte specificati. Se i byte non possono essere bloccati, la funzione tenterà di bloccarli nuovamente dopo 1 secondo. Se, dopo 10 tentativi, i byte non possono essere bloccati, la funzione restituisce un errore.  |
 | `_LK_RLCK`  | Uguale a `_LK_LOCK`.  |
