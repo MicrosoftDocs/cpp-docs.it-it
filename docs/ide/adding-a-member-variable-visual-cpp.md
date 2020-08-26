@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215998"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845133"
 ---
 # <a name="add-a-member-variable"></a>Aggiungere una variabile membro
 
@@ -68,8 +68,8 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
   Imposta l'accesso alla variabile membro. I modificatori di accesso sono parole chiave che specificano l'accesso di altre classi alla variabile membro. Per ulteriori informazioni sulla specifica dell'accesso, vedere [controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md). Il livello di accesso della variabile membro è impostato su per **`public`** impostazione predefinita.
 
-  - [pubblico](../cpp/public-cpp.md)
-  - [protetto](../cpp/protected-cpp.md)
+  - [public](../cpp/public-cpp.md)
+  - [protected](../cpp/protected-cpp.md)
   - [privata](../cpp/private-cpp.md)
 
 - **Tipo di variabile**
@@ -80,13 +80,15 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
     Per informazioni sui tipi, vedere [tipi fondamentali](../cpp/fundamental-types-cpp.md).
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - Se si aggiunge una variabile membro per un controllo di finestra di dialogo, questa casella viene compilata con il tipo di oggetto restituito per un controllo o un valore. Se si seleziona **Controllo**, **Tipo variabile** specifica la classe di base del controllo selezionato nella casella **ID controllo**. Se il controllo di finestra di dialogo può contenere un valore e se si seleziona **Valore**, **Tipo di variabile** specifica il tipo appropriato per il valore che il controllo può contenere. Per altre informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](#dialog-box-controls-and-variable-types).
 
@@ -106,7 +108,7 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
   |Opzione|Descrizione|
   |------------|-----------------|
-  |**Controllare**|Questa opzione è impostata per impostazione predefinita per il tipo di controllo. Gestisce il controllo e non lo stato o il contenuto del controllo (come è possibile fare con una casella di riepilogo, una casella combinata o una casella di modifica).|
+  |**Controllo**|Questa opzione è impostata per impostazione predefinita per il tipo di controllo. Gestisce il controllo e non lo stato o il contenuto del controllo (come è possibile fare con una casella di riepilogo, una casella combinata o una casella di modifica).|
   |**Valore**|Questa opzione è disponibile per i tipi di controllo che possono contenere un valore o visualizzare uno stato, ad esempio una casella di modifica o una casella di controllo. È anche disponibile per i tipi di controllo per i quali si può gestire un intervallo, dei contenuti o lo stato. Per altre informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](#dialog-box-controls-and-variable-types).|
 
 - **Categoria**

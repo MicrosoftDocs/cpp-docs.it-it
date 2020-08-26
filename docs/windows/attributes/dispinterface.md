@@ -1,17 +1,17 @@
 ---
-title: interfaccia dispatchC++ (attributo com)
+title: dispatch (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dd2a0883418ff79af53285d3cf51dba7601a363c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168239"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845393"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -44,13 +44,11 @@ Per informazioni su come usare [dispinterface](bindable.md) , vedere l'esempio r
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -61,6 +59,6 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi per utilizzo](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[custom](custom-cpp.md)<br/>
+[personalizzato](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

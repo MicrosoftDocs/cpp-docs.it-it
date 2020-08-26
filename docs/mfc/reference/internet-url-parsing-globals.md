@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 742b381ecb55c433d0f384174b7612fcc21e9716
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c7ce6eeee6deb4537d09e102b925a742ada04650
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356616"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837164"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Globals e helper di analisi URL Internet
 
@@ -18,19 +18,19 @@ Quando un client invia una query al server Internet, è possibile usare una dell
 
 ## <a name="internet-url-parsing-globals"></a>Funzioni globali di analisi degli URL Internet
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[AfxParseURL](#afxparseurl)|Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti.|
 |[AfxParseURLEx](#afxparseurlex)|Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti, oltre a fornire il nome utente e la password.|
 
 ## <a name="other-internet-helpers"></a>Altri helper Internet
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[AfxThrowInternetException](#afxthrowinternetexception)|Genera un'eccezione correlata alla connessione Internet.|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|Determina il tipo di un handle Internet.|
 
-## <a name="afxparseurl"></a><a name="afxparseurl"></a>AfxParseURL
+## <a name="afxparseurl"></a><a name="afxparseurl"></a> AfxParseURL
 
 Questo globale viene usato in [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
@@ -49,7 +49,7 @@ BOOL AFXAPI AfxParseURL(
 Puntatore a una stringa contenente l'URL da analizzare.
 
 *dwServiceType*<br/>
-Indica il tipo di servizio Internet. Sono disponibili i valori seguenti:
+Indica il tipo di servizio Internet. I possibili valori sono i seguenti:
 
 - AFX_INET_SERVICE_FTP
 
@@ -115,7 +115,7 @@ Ad esempio, `AfxParseURL` analizza gli URL del form *Service://server/dir/dir/Ob
 
   **Intestazione** AFXINET. h
 
-## <a name="afxparseurlex"></a><a name="afxparseurlex"></a>AfxParseURLEx
+## <a name="afxparseurlex"></a><a name="afxparseurlex"></a> AfxParseURLEx
 
 Questa funzione globale è la versione estesa di [AfxParseURL](#afxparseurl) e viene usata in [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
@@ -137,7 +137,7 @@ BOOL AFXAPI AfxParseURLEx(
 Puntatore a una stringa contenente l'URL da analizzare.
 
 *dwServiceType*<br/>
-Indica il tipo di servizio Internet. Sono disponibili i valori seguenti:
+Indica il tipo di servizio Internet. I possibili valori sono i seguenti:
 
 - AFX_INET_SERVICE_FTP
 
@@ -187,7 +187,7 @@ Riferimento a un `CString` oggetto contenente la password dell'utente.
 *dwFlags*<br/>
 Flag che controllano come analizzare l'URL. Può essere una combinazione dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |ICU_DECODE|Converte le sequenze di escape% XX in caratteri.|
 |ICU_NO_ENCODE|Non convertire i caratteri non sicuri nella sequenza di escape.|
@@ -195,7 +195,7 @@ Flag che controllano come analizzare l'URL. Può essere una combinazione dei val
 |ICU_ENCODE_SPACES_ONLY|Codifica solo gli spazi.|
 |ICU_BROWSER_MODE|Non codificare o decodificare i caratteri dopo ' #' o '' e non rimuovere gli spazi vuoti finali dopo ''. Se questo valore non viene specificato, l'intero URL viene codificato e gli spazi vuoti finali vengono rimossi.|
 
-Se si usa l'impostazione predefinita MFC, che non è un flag, la funzione converte tutti i caratteri non sicuri e le metasequenze \\, ad esempio., \. \\. e..., in sequenze di escape.
+Se si usa l'impostazione predefinita MFC, che non è un flag, la funzione converte tutti i caratteri non sicuri e le metasequenze, ad esempio \\ ., \.. e \\ ..., in sequenze di escape.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -212,7 +212,7 @@ Analizza una stringa URL e restituisce il tipo di servizio e i relativi componen
 
   **Intestazione** AFXINET. h
 
-## <a name="afxgetinternethandletype"></a><a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a><a name="afxgetinternethandletype"></a> AfxGetInternetHandleType
 
 Usare questa funzione globale per determinare il tipo di un handle Internet.
 
@@ -233,7 +233,7 @@ Qualsiasi tipo di servizio Internet definito da WININET. H. Per un elenco di que
 
 ### <a name="remarks"></a>Osservazioni
 
-Nell'elenco seguente sono inclusi i tipi Internet possibili `AfxGetInternetHandleType`restituiti da.
+Nell'elenco seguente sono inclusi i tipi Internet possibili restituiti da `AfxGetInternetHandleType` .
 
 - INTERNET_HANDLE_TYPE_INTERNET
 
@@ -268,7 +268,7 @@ Nell'elenco seguente sono inclusi i tipi Internet possibili `AfxGetInternetHandl
 
 **Intestazione:** AFXINET. h
 
-## <a name="afxthrowinternetexception"></a><a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a><a name="afxthrowinternetexception"></a> AfxThrowInternetException
 
 Genera un'eccezione Internet.
 

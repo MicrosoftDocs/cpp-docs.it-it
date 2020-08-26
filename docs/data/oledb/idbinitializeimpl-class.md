@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218325"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845536"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 
@@ -69,20 +69,20 @@ Classe derivata da `IDBInitializeImpl` .
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[IDBInitializeImpl](#idbinitializeimpl)|Costruttore.|
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-|||
+| Nome | Descrizione |
 |-|-|
-|[Initialize](#initialize)|Avvia il provider.|
+|[Inizializzare](#initialize)|Avvia il provider.|
 |[Uninitialize](#uninitialize)|Arresta il provider.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[m_dwStatus](#dwstatus)|Flag dell'origine dati.|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Puntatore all'implementazione delle informazioni sulle proprietà del database.|
@@ -91,7 +91,7 @@ Classe derivata da `IDBInitializeImpl` .
 
 Interfaccia obbligatoria sugli oggetti origine dati e sull'interfaccia facoltativa sugli enumeratori.
 
-## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a> IDBInitializeImpl:: IDBInitializeImpl
 
 Costruttore.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Inizializza tutti i membri dati.
 
-## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a> IDBInitializeImpl:: Initialize
 
 Inizializza l'oggetto datasource preparandone il supporto della proprietà.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Vedere [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> IDBInitializeImpl:: Uninitialize
 
 Inserisce l'oggetto origine dati in uno stato non inizializzato liberando risorse interne, ad esempio il supporto della proprietà.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Vedere [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> IDBInitializeImpl:: m_dwStatus
 
 Flag dell'origine dati.
 
@@ -155,13 +155,13 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-|||
+| Valore | Descrizione |
 |-|-|
 |`DSF_MASK_INIT`|Maschera per consentire il ripristino dello stato non inizializzato.|
 |`DSF_PERSIST_DIRTY`|Impostare se l'oggetto origine dati richiede la persistenza, ovvero se sono state apportate modifiche.|
 |`DSF_INITIALIZED`|Impostare se l'origine dati è stata inizializzata.|
 
-## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a> IDBInitializeImpl:: m_pCUtlPropInfo
 
 Puntatore all'oggetto di implementazione per le informazioni sulle proprietà del database.
 

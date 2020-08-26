@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 515307bd79059c22b5b40cd8b47ce8809ede8f04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560855"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837606"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -1303,9 +1303,8 @@ DWORD m_dwRestartManagerSupportFlags;
 
 Per abilitare Gestione riavvio, impostare sul `m_dwRestartManagerSupportFlags` comportamento desiderato. Nella tabella seguente vengono illustrati i flag disponibili.
 
-|||
-|-|-|
 |Flag|Descrizione|
+|-|-|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|L'applicazione viene registrata usando [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager). Gestione riavvio è responsabile per il riavvio dell'applicazione se si chiude in modo imprevisto.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|L'applicazione viene registrata con Gestione riavvio e gestione riavvio chiama la funzione di callback di ripristino al riavvio dell'applicazione. La funzione di callback di recupero predefinita è [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Il salvataggio automatico è abilitato e gestione riavvio Salva in automatico tutti i documenti aperti al riavvio dell'applicazione.|
@@ -1982,7 +1981,7 @@ in Parametro di input per la funzione di callback di ripristino. Per ulteriori i
 in Periodo di attesa del gestore di riavvio per la restituzione della funzione di callback di ripristino. Questo parametro è in millisecondi.
 
 *dwCallbackFlags*\
-in Flag passati alla funzione di callback di ripristino. Riservato per utilizzi futuri.
+in Flag passati alla funzione di callback di ripristino. Riservato per usi futuri.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2403,7 +2402,7 @@ Specifica l'ID del modello utente dell'applicazione.
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [CWinThread (classe)](../../mfc/reference/cwinthread-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,20 +1,20 @@
 ---
-title: default_delete Struct
+title: Struct default_delete
 ms.date: 04/04/2019
 f1_keywords:
 - memory/std::default_delete
 helpviewer_keywords:
 - default_delete struct
-ms.openlocfilehash: e9e1fcc68539e55486f4ea27e6dd5c49bed11fdf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8baa9f5d294cf083fd55414cd529e438f328d1a1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269263"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845081"
 ---
-# <a name="defaultdelete-struct"></a>default_delete Struct
+# <a name="default_delete-struct"></a>Struct default_delete
 
-Un oggetto funzione predefinito che esegue l'operazione di divisione (`operator/`) sui relativi argomenti.
+Oggetto funzione predefinito che esegue l'operazione di divisione ( `operator/` ) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,25 +25,25 @@ template <class T>
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<memory>
+**Intestazione:**\<memory>
 
 **Spazio dei nomi:** std
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[default_delete](#default_delete)|Costruttore per oggetti di tipo `default_delete`.|
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[operator()](#op_paren)|Un operatore di riferimento per accedere a `default_delete`.|
+|[operatore ()](#op_paren)|Operatore di riferimento a cui accedere `default_delete` .|
 
-## <a name="default_delete"></a> default_delete
+## <a name="default_delete"></a><a name="default_delete"></a> default_delete
 
 Costruttore per oggetti di tipo `default_delete`.
 
@@ -53,9 +53,9 @@ template <class U>
     default_delete(const default_delete<U>&) noexcept;
 ```
 
-## <a name="op_paren"></a> operator()
+## <a name="operator"></a><a name="op_paren"></a> operatore ()
 
-Un operatore di riferimento per accedere a `default_delete`.
+Operatore di riferimento a cui accedere `default_delete` .
 
 ```cpp
 void operator()(T*) const;

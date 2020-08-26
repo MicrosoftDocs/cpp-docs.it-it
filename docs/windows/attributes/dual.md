@@ -1,17 +1,17 @@
 ---
-title: Dual (C++ attributo com)
+title: Dual (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168213"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845406"
 ---
 # <a name="dual"></a>dual
 
@@ -25,7 +25,7 @@ Inserisce un'interfaccia nel file con estensione IDL come interfaccia duale.
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando l'attributo **doppio** C++ precede un'interfaccia, l'interfaccia viene inserita all'interno del blocco di libreria nel file IDL generato.
+Quando l'attributo **Dual** C++ precede un'interfaccia, l'interfaccia viene posizionata all'interno del blocco di libreria nel file IDL generato.
 
 ## <a name="example"></a>Esempio
 
@@ -55,13 +55,11 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|`dispinterface`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -70,7 +68,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi per utilizzo](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[personalizzato](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

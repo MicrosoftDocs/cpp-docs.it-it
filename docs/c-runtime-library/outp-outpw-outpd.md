@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404060"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837086"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
@@ -91,7 +91,7 @@ Le funzioni `_outp`, `_outpw`e `_outpd` scrivono un byte, una parola e una parol
 
 Poiché queste funzioni scrivono direttamente su una porta I/O, non possono essere usate nel codice di Windows in modalità utente.
 
-Per informazioni sull'uso delle porte I/O nel sistema operativo Windows, vedere [comunicazioni seriali](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Per informazioni sull'uso delle porte I/O nel sistema operativo Windows, vedere [comunicazioni seriali](/previous-versions/ff802693(v=msdn.10)).
 
 I `outp` `outpw` nomi e sono i nomi obsoleti e deprecati per le `_outp` `_outpw` funzioni e. Per altre informazioni, vedere [nomi di funzioni POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 

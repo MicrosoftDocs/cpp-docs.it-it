@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 2e30595a549eefc6a5eecc27be98ded5221dcc16
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 409211bc59d9df8a82a9f452efeff6b6db0fde39
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201310"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837112"
 ---
 # <a name="max_is"></a>max_is
 
@@ -34,9 +34,7 @@ L'attributo **max_is** C++ ha la stessa funzionalità dell'attributo [max_is](/w
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Campo in **`struct`** o **`union`** , parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|

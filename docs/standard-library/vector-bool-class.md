@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: b91167a331423ccd43ba2158c1a9d8bfce666361
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562450"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845419"
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 
@@ -56,7 +56,7 @@ Le operazioni che gestiscono il **`bool`** tipo corrispondono ai valori nell'arc
 
 ### <a name="proxy-class"></a>Classe proxy
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[\<bool>classe Vector Reference](#reference_class)|Classe che funge da proxy per simulare il comportamento di `bool&` e i cui oggetti possono fornire riferimenti agli elementi (singoli bit) all'interno di un oggetto `vector<bool>`.|
 
@@ -376,7 +376,7 @@ Elemento da scambiare con l'elemento a *sinistra* .
 
 Tale overload supporta i requisiti di proxy speciali di `vector<bool>`. [vector](../standard-library/vector-class.md)::swap ha la stessa funzionalità dell'overload con singolo argomento di `vector<bool>::swap()`.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

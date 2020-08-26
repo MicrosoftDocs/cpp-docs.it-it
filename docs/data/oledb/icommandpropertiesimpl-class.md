@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210808"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845575"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
@@ -45,11 +45,11 @@ Classe Properties.
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[GetProperties](#getproperties)|Restituisce l'elenco di proprietà nel gruppo di proprietà del set di righe attualmente richiesto per il set di righe.|
 |[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà del set di righe.|
@@ -58,7 +58,7 @@ Classe Properties.
 
 Questa operazione è obbligatoria nei comandi. L'implementazione viene fornita da una funzione statica definita dalla [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
 
-## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl:: GetProperties
 
 Restituisce tutti i set di proprietà richiesti utilizzando la mappa delle proprietà del comando.
 
@@ -79,7 +79,7 @@ Vedere [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/m
 
 Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: seproprietà
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl:: seproprietà
 
 Imposta le proprietà per l'oggetto Command.
 
@@ -97,4 +97,4 @@ Vedere [ICommandProperties:: seproperties](/previous-versions/windows/desktop/ms
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

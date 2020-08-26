@@ -2,12 +2,12 @@
 title: Sistema di tipi (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221549"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845146"
 ---
 # <a name="type-system-ccx"></a>Sistema di tipi (C++/CX)
 
@@ -35,12 +35,11 @@ I metadati nel file .winmd rappresentano l'area pubblicata del codice. I tipi pu
 
 La visibilità di un tipo o di un metodo nei metadati dipende da quali modificatori di accessibilità sono ad esso applicati. Per essere visibile, un tipo deve essere dichiarato in uno spazio dei nomi e deve essere dichiarato come pubblico. È possibile utilizzare una classe di riferimento non pubblica come tipo di supporto interno nel codice, tuttavia non sarà visibile nei metadati. Anche in una classe di riferimento pubblica, non tutti i membri sono necessariamente visibili. La tabella seguente elenca la relazione tra gli identificatori di accesso C++ in una classe di riferimento pubblica e la visibilità dei metadati Windows Runtime:
 
-|||
-|-|-|
-|**Pubblicato nei metadati**|**Non pubblicato nei metadati**|
-|public|private|
-|protected|interno|
-|protetto pubblico|protetto privato|
+| Pubblicato nei metadati | Non pubblicato nei metadati |
+|--|--|
+| public | private |
+| protected | internal |
+| protetto pubblico | protetto privato |
 
 È possibile utilizzare il **Visualizzatore oggetti** per visualizzare il contenuto dei file .winmd. I componenti di Windows Runtime inclusi in Windows si trovano nel file Windows. winmd. Il file con estensione WinMD predefinito contiene i tipi fondamentali usati in C++/CX e Platform. winmd contiene tipi aggiuntivi dello spazio dei nomi Platform. Per impostazione predefinita, questi tre file. winmd sono inclusi in ogni progetto C++ per le app piattaforma UWP (Universal Windows Platform).
 
@@ -169,7 +168,7 @@ Una variabile boxed è un tipo di valore di cui è stato eseguito il wrapping in
 
 Per ulteriori informazioni, vedi [Boxing](../cppcx/boxing-c-cx.md).
 
-### <a name="attributes"></a>Attributi
+### <a name="attributes"></a>Attributes
 
 Un attributo è un valore di metadati che può essere applicato a qualsiasi tipo Windows Runtime o membro di tipo e può essere esaminato in fase di esecuzione. Il Windows Runtime definisce un set di attributi comuni nello `Windows::Foundation::Metadata` spazio dei nomi. Gli attributi definiti dall'utente nelle interfacce pubbliche non sono supportati da Windows Runtime in questa versione.
 

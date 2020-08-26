@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 57f163fd36c0f25508d94a84495fcaf1956e277d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751484"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837203"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>funzioni di bitmap grige e retinate
 
@@ -24,7 +24,7 @@ MFC fornisce due funzioni visualizzare una bitmap con l'aspetto di un controllo 
 
 ![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "Confronto delle versioni di icone grigie e originali")
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Disegna una versione in grigio di una bitmap.|
 |[AfxGetGrayBitmap](#afxgetgraybitmap)|Copia una versione in grigio di una bitmap.|
@@ -35,12 +35,12 @@ MFC fornisce anche due funzioni per la sostituzione dello sfondo di una bitmap c
 
 ![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "Confronto delle versioni di icone con dithering e originali")
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Disegna una bitmap con uno sfondo con dithering.|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copia una bitmap con uno sfondo con dithering.|
 
-## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a> AfxDrawGrayBitmap
 
 Disegna una versione in grigio di una bitmap.
 
@@ -61,13 +61,13 @@ Punta al controller di dominio di destinazione.
 *x*<br/>
 Coordinata X di destinazione.
 
-*Y*<br/>
+*y*<br/>
 Coordinata Y di destinazione.
 
 *rSrc*<br/>
 Bitmap di origine.
 
-*crBackground (informazioni in background)*<br/>
+*crBackground*<br/>
 Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).
 
 ### <a name="remarks"></a>Osservazioni
@@ -84,7 +84,7 @@ La bitmap disegnata con `AfxDrawGrayBitmap` avrà l'aspetto di un controllo disa
 
 **Intestazione:** afxwin.h
 
-## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a> AfxGetGrayBitmap
 
 Copia una versione in grigio di una bitmap.
 
@@ -103,7 +103,7 @@ Bitmap di origine.
 *pDest*<br/>
 Bitmap di destinazione.
 
-*crBackground (informazioni in background)*<br/>
+*crBackground*<br/>
 Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).
 
 ### <a name="remarks"></a>Osservazioni
@@ -120,9 +120,9 @@ La bitmap copiata con `AfxGetGrayBitmap` avrà l'aspetto di un controllo disabil
 
 **Intestazione:** afxwin.h
 
-## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a> AfxDrawDitheredBitmap
 
-Disegna una bitmap, sostituendone lo sfondo con un motivo dithered (checker).
+Disegna una bitmap, sostituendo lo sfondo con un modello di controllo.
 
 ```cpp
 void AFXAPI AfxDrawDitheredBitmap(
@@ -142,21 +142,21 @@ Punta al controller di dominio di destinazione.
 *x*<br/>
 Coordinata X di destinazione.
 
-*Y*<br/>
+*y*<br/>
 Coordinata Y di destinazione.
 
 *rSrc*<br/>
 Bitmap di origine.
 
-*cr1 (in questo*<br/>
-Uno dei due colori dither, in genere il bianco.
+*CR1*<br/>
+Uno dei due colori di dithering, in genere bianco.
 
-*cr2 (in questo momento)*<br/>
-L'altro colore dither, in genere grigio chiaro (COLOR_MENU).
+*CR2*<br/>
+Altro colore di dithering, in genere grigio chiaro (COLOR_MENU).
 
 ### <a name="remarks"></a>Osservazioni
 
-La bitmap di origine viene disegnata sul controller di dominio di destinazione con un motivo a due colori (*cr1* e *cr2*) a scacchi che sostituisce lo sfondo della bitmap. Lo sfondo della bitmap di origine è definito come i suoi pixel bianchi e tutti i pixel corrispondenti al colore del pixel nell'angolo superiore sinistro della bitmap.
+La bitmap di origine viene disegnata sul controller di dominio di destinazione con un modello con controllo a due colori (*CR1* e *CR2*) che sostituisce lo sfondo della bitmap. Lo sfondo della bitmap di origine viene definito come pixel bianchi e tutti i pixel che corrispondono al colore del pixel nell'angolo superiore sinistro della bitmap.
 
 ![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "Confronto delle versioni di icone con dithering e originali")
 
@@ -168,9 +168,9 @@ La bitmap di origine viene disegnata sul controller di dominio di destinazione c
 
 **Intestazione:** afxwin.h
 
-## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a> AfxGetDitheredBitmap
 
-Copia una bitmap, sostituendone lo sfondo con un motivo dithered (checker).
+Copia una bitmap, sostituendo lo sfondo con un modello di controllo.
 
 ```cpp
 void AFXAPI AfxGetDitheredBitmap(
@@ -188,17 +188,17 @@ Bitmap di origine.
 *pDest*<br/>
 Bitmap di destinazione.
 
-*cr1 (in questo*<br/>
-Uno dei due colori dither, in genere il bianco.
+*CR1*<br/>
+Uno dei due colori di dithering, in genere bianco.
 
-*cr2 (in questo momento)*<br/>
-L'altro colore dither, in genere grigio chiaro (COLOR_MENU).
+*CR2*<br/>
+Altro colore di dithering, in genere grigio chiaro (COLOR_MENU).
 
 ### <a name="remarks"></a>Osservazioni
 
-La bitmap di origine viene copiata nella bitmap di destinazione con un motivo a due colori (*cr1* e *cr2*) a seguito dello sfondo della bitmap di origine. Lo sfondo della bitmap di origine è definito come i suoi pixel bianchi e tutti i pixel corrispondenti al colore del pixel nell'angolo superiore sinistro della bitmap.
+La bitmap di origine viene copiata nella bitmap di destinazione con un modello con controllo a due colori (*CR1* e *CR2*) che sostituisce lo sfondo della bitmap di origine. Lo sfondo della bitmap di origine viene definito come pixel bianchi e tutti i pixel che corrispondono al colore del pixel nell'angolo superiore sinistro della bitmap.
 
-![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap (informazioni in inglese)")
+![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
 
 ### <a name="example"></a>Esempio
 

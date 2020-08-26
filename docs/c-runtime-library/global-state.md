@@ -1,53 +1,53 @@
 ---
-title: Stato globale nel CRT
+title: Stato globale in CRT
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a794f201184c10c11611138d30d14b36b00405a7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745357"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845185"
 ---
-# <a name="global-state-in-the-crt"></a>Stato globale nel CRT
+# <a name="global-state-in-the-crt"></a>Stato globale in CRT
 
-Alcune funzioni nell'Universal C Runtime (UCRT) utilizzano lo stato globale. Ad esempio, `setlocale()` imposta le impostazioni locali per l'intero programma, che influisce sui separatori di cifre, sulla tabella codici di testo e così via.
+Alcune funzioni in Universal C Runtime (UCRT) utilizzano lo stato globale. Ad esempio, `setlocale()` imposta le impostazioni locali per l'intero programma, che influiscono sui separatori di cifre, sulla tabella codici del testo e così via.
 
-Lo stato globale di UCRT non è condiviso tra le applicazioni e il sistema operativo. Ad esempio, se `setlocale()`l'applicazione chiama , non influirà sulle impostazioni locali per i componenti del sistema operativo che utilizza nodi del linguaggio C o viceversa.
+Lo stato globale di UCRT non è condiviso tra le applicazioni e il sistema operativo. Se, ad esempio, l'applicazione chiama `setlocale()` , non influirà sulle impostazioni locali per i componenti del sistema operativo che usano il runtime del linguaggio C o viceversa.
 
-## <a name="os-specific-versions-of-crt-functions"></a>Versioni specifiche del sistema operativo delle funzioni CRT
+## <a name="os-specific-versions-of-crt-functions"></a>Versioni specifiche del sistema operativo di funzioni CRT
 
-In UCRT, le funzioni che interagiscono con lo stato `_o_`globale hanno una funzione "gemella", preceduta da . Ad esempio:
+In UCRT, le funzioni che interagiscono con lo stato globale hanno una funzione "Twin", con prefisso `_o_` . Ad esempio:
 
-- `setlocale()`influisce sullo stato globale specifico dell'app.
-- `_o_setlocale()`influisce sullo stato globale condiviso da tutti i componenti del sistema operativo, ma non sulle app.
+- `setlocale()` influiscono sullo stato globale specifico dell'app.
+- `_o_setlocale()` influiscono sullo stato globale condiviso da tutti i componenti del sistema operativo, ma non dalle app.
 
-L'unica differenza tra queste funzioni "gemelle" è che quando leggono/scrivono lo stato CRT `_o_`globale, le versioni specifiche del sistema operativo (ovvero le versioni che iniziano con ) utilizzano la copia del sistema operativo dello stato globale anziché la copia dello stato globale dell'app.
+L'unica differenza tra queste funzioni "gemelle" è che quando leggono/scrivono lo stato della libreria CRT globale, le versioni specifiche del sistema operativo (ovvero le versioni che iniziano con `_o_` ) usano la copia del sistema operativo dello stato globale invece della copia dello stato globale dell'app.
 
-Le versioni specifiche del sistema operativo `ucrt.osmode.lib`di queste funzioni sono in . Ad esempio, la versione specifica `setlocale()` del sistema operativo di è`_o_setlocale()`
+Le versioni specifiche del sistema operativo di queste funzioni sono in `ucrt.osmode.lib` . Ad esempio, la versione specifica del sistema operativo di `setlocale()` è `_o_setlocale()`
 
-Esistono due modi per isolare lo stato CRT del componente dallo stato CRT di un'app:There are two ways to isolate your component's CRT state from an app's CRT state:
+Esistono due modi per isolare lo stato CRT del componente dallo stato CRT di un'app:
 
-- Collegare staticamente il componente utilizzando le opzioni del compilatore /MT (release) o MTd (debug). Per informazioni dettagliate, vedere [/MD, /MT, /LD](https://docs.microsoft.com/cpp/build/reference/md-mt-ld-use-run-time-library?view=vs-2019). Si noti che il collegamento statico può aumentare notevolmente le dimensioni binarie.
-- A partire da Windows 10 20H2, ottenere l'isolamento dello stato CRT collegando dinamicamente la libreria CRT ma chiamare le esportazioni in modalità sistema operativo (le funzioni che iniziano con _o_). Per chiamare le esportazioni in modalità sistema operativo, collegare in modo `/NODEFAULTLIB:libucrt.lib` statico come `/NODEFAULTLIB:libucrtd.lib` in precedenza, ma ignorare l'UCRT statico utilizzando l'opzione del linker (rilascio) o (debug) Vedere [/NODEFAULTLIB (Ignora librerie)](https://docs.microsoft.com/cpp/build/reference/nodefaultlib-ignore-libraries?view=vs-2019) per i dettagli. E `ucrt.osmode.lib` aggiungere all'input del linker.
+- Collegare in modo statico il componente usando le opzioni del compilatore/MT (Release) o MTd (debug). Per informazioni dettagliate, vedere [/MD,/MT,/LD](../build/reference/md-mt-ld-use-run-time-library.md). Si noti che il collegamento statico può aumentare significativamente le dimensioni binarie.
+- A partire da Windows 10 20H2, ottenere l'isolamento dello stato CRT tramite il collegamento dinamico a CRT, ma chiamare le esportazioni in modalità sistema operativo, ovvero le funzioni che iniziano con _o_. Per chiamare le esportazioni in modalità sistema operativo, collegare staticamente come prima, ma ignorare il UCRT statico usando l'opzione del linker `/NODEFAULTLIB:libucrt.lib` (versione) o `/NODEFAULTLIB:libucrtd.lib` (debug) vedere [/NODEFAULTLIB (Ignora librerie)](../build/reference/nodefaultlib-ignore-libraries.md) per informazioni dettagliate. E aggiungono `ucrt.osmode.lib` all'input del linker.
 
 > [!Note]
-> Nel codice sorgente, `setlocale()` `_o_setlocale()`scrivere , non . Quando si `ucrt.osmode.lib`esegue il collegamento a , il linker sostituirà automaticamente la versione specifica del sistema operativo della funzione. Cioè, `setlocale()` sarà sostituito con `_o_setlocale()`.
+> Nel codice sorgente scrivere `setlocale()` , non `_o_setlocale()` . Quando si esegue `ucrt.osmode.lib` il collegamento, il linker sostituisce automaticamente la versione specifica del sistema operativo della funzione. Ovvero, `setlocale()` verrà sostituito con `_o_setlocale()` .
 
-Il `ucrt.osmode.lib` collegamento contro disabilita alcune chiamate UCRT che sono disponibili solo in modalità app. Tentativo di chiamare questi si tradurrà in un errore di collegamento.
+`ucrt.osmode.lib`Il collegamento a Disabilita alcune chiamate UCRT disponibili solo in modalità app. Il tentativo di chiamare questi comporterà un errore di collegamento.
 
-## <a name="global-state-affected-by-appos-separation"></a>Stato globale interessato dalla separazione app/OS
+## <a name="global-state-affected-by-appos-separation"></a>Stato globale interessato dalla separazione app/sistema operativo
 
 Lo stato globale interessato dalla separazione dello stato dell'app e del sistema operativo include:
 
 - [Dati delle impostazioni locali](locale.md)
-- Gestori di segnale impostati dal [segnale](reference/signal.md)
-- Routine di terminazione impostate per [terminazione](reference/set-terminate-crt.md)
+- Gestori dei segnali impostati dal [segnale](reference/signal.md)
+- Routine di terminazione impostate da [Terminate](reference/set-terminate-crt.md)
 - [errno e _doserrno](errno-doserrno-sys-errlist-and-sys-nerr.md)
-- Stato di generazione di numeri casuali utilizzato da [rand](reference/rand.md) e [srand](reference/srand.md)
-- Funzioni che restituiscono un buffer che l'utente non deve rilasciare: [strtok, wcstok, _mbstok](reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) [Tmpnam,](reference/tempnam-wtempnam-tmpnam-wtmpnam.md) [asctime _wtmpnam, _wasctime](reference/asctime-wasctime.md) [gmtime, _gmtime32 _gmtime64 _fcvt](reference/gmtime-gmtime32-gmtime64.md) [_ecvt](reference/fcvt.md) [_ecvt](reference/ecvt.md) [strerror, _strerror, _wcserror __wcserror](reference/strerror-strerror-wcserror-wcserror.md)
-- Il buffer utilizzato da [_putch, _putwch](reference/putch-putwch.md)
+- Stato di generazione dei numeri casuali usato da [Rand](reference/rand.md) e [srand](reference/srand.md)
+- Funzioni che restituiscono un buffer che l'utente non deve rilasciare: [strtok, wcstok, _mbstok](reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) [tmpnam, _wtmpnam](reference/tempnam-wtempnam-tmpnam-wtmpnam.md) [asctime, _wasctime](reference/asctime-wasctime.md) [gmtime, _gmtime32](reference/gmtime-gmtime32-gmtime64.md) [_gmtime64 _fcvt _ecvt](reference/fcvt.md) [_ecvt](reference/ecvt.md) [strerror,](reference/strerror-strerror-wcserror-wcserror.md) _strerror, _wcserror __wcserror
+- Buffer utilizzato da [_putch, _putwch](reference/putch-putwch.md)
 - [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)
 - [_set_new_handler](reference/set-new-handler.md) e [_set_new_mode](reference/set-new-mode.md)
 - [fmode] (text-and-binary-mode-file-i-o.md)
@@ -55,4 +55,4 @@ Lo stato globale interessato dalla separazione dello stato dell'app e del sistem
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni di riferimento sulla libreria di runtime del codice C](c-run-time-library-reference.md)
+[Riferimenti alla libreria di runtime C](c-run-time-library-reference.md)

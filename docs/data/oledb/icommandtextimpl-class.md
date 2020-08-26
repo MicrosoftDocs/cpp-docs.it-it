@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210730"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845120"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
 
@@ -44,24 +44,24 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe Command derivata da `ICommandTextImpl`.
+Classe Command derivata da `ICommandTextImpl` .
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** altdb. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[GetCommandText](#getcommandtext)|Restituisce il comando di testo impostato dall'ultima chiamata a [CommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
 |[SetCommandText](#setcommandtext)|Imposta il testo del comando, sostituendo il testo del comando esistente.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[m_strCommandText](#strcommandtext)|Archivia il testo del comando.|
 
@@ -69,7 +69,7 @@ Classe Command derivata da `ICommandTextImpl`.
 
 Interfaccia obbligatoria sui comandi.
 
-## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: GetCommandText
 
 Restituisce il comando di testo impostato dall'ultima chiamata a [CommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
@@ -84,7 +84,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 Vedere [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*. Il parametro *pguidDialect* viene ignorato per impostazione predefinita.
 
-## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: secommandtext
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a> ICommandTextImpl:: secommandtext
 
 Imposta il testo del comando, sostituendo il testo del comando esistente.
 
@@ -99,7 +99,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 Vedere [ICommandText:: CommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a> ICommandTextImpl:: m_strCommandText
 
 Archivia la stringa di testo del comando.
 
@@ -112,4 +112,4 @@ CComBSTR m_strCommandText;
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

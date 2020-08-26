@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240266"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845068"
 ---
-# <a name="referencewrapper-class"></a>Classe reference_wrapper
+# <a name="reference_wrapper-class"></a>Classe reference_wrapper
 
 Esegue il wrapping di un riferimento
 
@@ -47,7 +47,7 @@ class reference_wrapper
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Un oggetto `reference_wrapper<Ty>` è un wrapper costruibile e assegnabile per la copia per un riferimento a un oggetto o a una funzione di tipo `Ty` e contiene un puntatore che punta a un oggetto di quel tipo. Un oggetto `reference_wrapper` può essere usato per archiviare i riferimenti in contenitori standard e per passare gli oggetti per riferimento a `std::bind`.
 
@@ -55,35 +55,35 @@ Il tipo `Ty` deve essere un tipo di oggetto o un tipo di funzione, altrimenti si
 
 Le funzioni helper [std::ref](functional-functions.md#ref) e [std::cref](functional-functions.md#cref) possono essere usate per creare oggetti `reference_wrapper`.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Costruisce un oggetto `reference_wrapper`.|
 
-### <a name="typedefs"></a>Definizioni typedef
+### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[result_type](#result_type)|Tipo di risultato di un riferimento debole di cui è stato eseguito il wrapping.|
 |[type](#type)|Tipo di riferimento di cui è stato eseguito il wrapping.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[get](#get)|Ottiene il riferimento di cui è stato eseguito il wrapping.|
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[operator Ty&amp;](#op_ty_amp)|Ottiene un puntatore al riferimento di cui è stato eseguito il wrapping.|
-|[operator()](#op_call)|Chiama il riferimento di cui è stato eseguito il wrapping.|
+|[operatore Ty&amp;](#op_ty_amp)|Ottiene un puntatore al riferimento di cui è stato eseguito il wrapping.|
+|[operatore ()](#op_call)|Chiama il riferimento di cui è stato eseguito il wrapping.|
 
-## <a name="get"></a> get
+## <a name="get"></a><a name="get"></a> Ottieni
 
 Ottiene il riferimento di cui è stato eseguito il wrapping.
 
@@ -91,7 +91,7 @@ Ottiene il riferimento di cui è stato eseguito il wrapping.
 Ty& get() const noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione membro restituisce il riferimento al wrapper.
 
@@ -122,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> operator Ty&amp;
+## <a name="operator-tyamp"></a><a name="op_ty_amp"></a> operatore Ty&amp;
 
 Ottiene il riferimento di cui è stato eseguito il wrapping.
 
@@ -130,7 +130,7 @@ Ottiene il riferimento di cui è stato eseguito il wrapping.
 operator Ty&() const noexcept;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 L'operatore membro restituisce `*ptr`.
 
@@ -158,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="operator"></a><a name="op_call"></a> operatore ()
 
 Chiama il riferimento di cui è stato eseguito il wrapping.
 
@@ -175,7 +175,7 @@ Tipi dell'elenco di argomenti.
 *args*\
 Elenco di argomenti.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La funzione modello `operator()` restituisce `std::invoke(get(), std::forward<Types>(args)...)`.
 
@@ -204,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper
+## <a name="reference_wrapper"></a><a name="reference_wrapper"></a> reference_wrapper
 
 Costruisce un oggetto `reference_wrapper`.
 
@@ -220,7 +220,7 @@ Tipo di cui eseguire il wrapping.
 *Val*\
 Valore di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Il costruttore imposta il valore archiviato `ptr` su `&val`.
 
@@ -255,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 Tipo di risultato di un riferimento debole di cui è stato eseguito il wrapping.
 
@@ -263,7 +263,7 @@ Tipo di risultato di un riferimento debole di cui è stato eseguito il wrapping.
 typedef R result_type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Typedef `result_type` è un sinonimo del tipo di risultato debole di una funzione di cui è stato eseguito il wrapping. Questo typedef è significativo solo per i tipi di funzione.
 
@@ -294,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> Tipo
+## <a name="type"></a>Tipo di<a name="type"></a>
 
 Tipo di riferimento di cui è stato eseguito il wrapping.
 
@@ -302,7 +302,7 @@ Tipo di riferimento di cui è stato eseguito il wrapping.
 typedef Ty type;
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Typedef è un sinonimo dell'argomento di modello `Ty`.
 

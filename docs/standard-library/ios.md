@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212267"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845484"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,7 +20,7 @@ Definisce diversi tipi e funzioni alla base del funzionamento delle intestazioni
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**:\<ios>
+**Intestazione**: \<ios>
 
 **Spazio dei nomi:** std
 
@@ -43,7 +43,7 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[iOS](../standard-library/ios-typedefs.md#ios)|Supporta la classe ios dalla libreria iostream precedente.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Supporta operazioni interne.|
@@ -54,7 +54,7 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="manipulators"></a>Manipolatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Specifica che le variabili di tipo [bool](../cpp/bool-cpp.md) vengono visualizzate come **`true`** o **`false`** nel flusso.|
 |[Dec](../standard-library/ios-functions.md#dec)|Specifica che le variabili Integer vengano visualizzate nella notazione in base 10.|
@@ -62,7 +62,7 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[fissa](../standard-library/ios-functions.md#fixed)|Specifica che un numero a virgola mobile venga visualizzato nella notazione decimale fissa.|
 |[hex](../standard-library/ios-functions.md#hex)|Specifica che le variabili Integer vengono visualizzate nella notazione in base 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
-|[interno](../standard-library/ios-functions.md#internal)|Fa sì che il segno di un numero venga giustificato a sinistra e il numero a destra.|
+|[internal](../standard-library/ios-functions.md#internal)|Fa sì che il segno di un numero venga giustificato a sinistra e il numero a destra.|
 |[sinistra](../standard-library/ios-functions.md#left)|Fa sì che il testo la cui larghezza non corrisponde a quella dell'output venga visualizzato nel flusso allineato con il margine sinistro.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Specifica che le variabili di tipo [bool](../cpp/bool-cpp.md) vengano visualizzate come 1 o 0 nel flusso.|
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Disattiva l'indicazione della base notazionale in cui viene visualizzato un numero.|
@@ -83,7 +83,7 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="error-reporting"></a>Segnalazione errori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -93,7 +93,7 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Il modello di classe descrive le funzioni membro e di archiviazione comuni ai flussi di input (della classe modello [basic_istream](../standard-library/basic-istream-class.md)) e ai flussi di output (del modello di classe [basic_ostream](../standard-library/basic-ostream-class.md)) che dipendono dai parametri del modello.|
 |[fpos](../standard-library/fpos-class.md)|Il modello di classe descrive un oggetto in grado di archiviare tutte le informazioni necessarie per ripristinare un indicatore di posizione del file arbitrario all'interno di qualsiasi flusso.|

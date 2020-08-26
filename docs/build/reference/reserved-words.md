@@ -17,39 +17,86 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 16caacb77e052eebc8e2cd101990ee373535bd6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62893d4af1633bc2c89d2d6a0fa71309a0411ad5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171151"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836842"
 ---
 # <a name="reserved-words"></a>Parole riservate
 
 Le parole seguenti sono riservate al linker. Questi nomi possono essere utilizzati come argomenti nelle [istruzioni di definizione dei moduli](module-definition-dot-def-files.md) solo se il nome è racchiuso tra virgolette doppie ("").
 
-||||
-|-|-|-|
-|**Apploader**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**PRECARICARE**|
-|**BASE**|**IOPL**|**PRIVATA**|
-|**CODICE**|**Libreria**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
-|**CONFORMI**|**LOADONCALL**<sup>1</sup>|**Pure**<sup>1</sup>|
-|**DATI**|**LONGNAMES**<sup>2</sup>|**READONLY**|
-|**DESCRIZIONE**|**Mobile**<sup>1</sup>|**READWRITE**|
-|**DEV386**|**Mobile**<sup>1</sup>|**REALMODE**<sup>1</sup>|
-|**ANNULLABILE**|**PIÙ**|**RESIDENTI**|
-|**DINAMICO**|**NOME**|**RESIDENTNAME**<sup>1</sup>|
-|**SOLO ESECUZIONE**|**NewFiles**<sup>2</sup>|**SEZIONI**|
-|**EXECUTEONLY**|**NoData**<sup>1</sup>|**SEGMENTI**|
-|**ESECUZIONESCRITTURA**|**NOIOPL**<sup>1</sup>|**CONDIVISO**|
-|**EXETYPE**|**NONAME**|**SINGOLO**|
-|**EXPORTS**|Non **conforme**<sup>1</sup>|**STACKSIZE**|
-|**Corretto**<sup>1</sup>|**Non ELIMINAbile**|**STUB**|
-|**Funzioni**<sup>2</sup>|**NONE**|**VERSION**|
-|**HEAPSIZE**|**NONSHARED**|**WINDOWAPI**|
-|**IMPORTAZIONI**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**Impure**<sup>1</sup>|**OGGETTI**|**WINDOWS**|
-|**Includi**<sup>2</sup>|**Vecchio**<sup>1</sup>||
+:::row:::
+   :::column span="":::
+      **`APPLOADER`**<sup>1</sup>\
+      **`BASE`**\
+      **`CODE`**\
+      **`CONFORMING`**\
+      **`DATA`**\
+      **`DESCRIPTION`**\
+      **`DEV386`**\
+      **`DISCARDABLE`**\
+      **`DYNAMIC`**\
+      **`EXECUTE-ONLY`**\
+      **`EXECUTEONLY`**\
+      **`EXECUTEREAD`**\
+      **`EXETYPE`**\
+      **`EXPORTS`**\
+      **`FIXED`**<sup>1</sup>
+   :::column-end:::
+   :::column span="":::
+      **`FUNCTIONS`**<sup>2</sup>\
+      **`HEAPSIZE`**\
+      **`IMPORTS`**\
+      **`IMPURE`**<sup>1</sup>\
+      **`INCLUDE`**<sup>2</sup>\
+      **`INITINSTANCE`**<sup>2</sup>\
+      **`IOPL`**\
+      **`LIBRARY`**<sup>1</sup>\
+      **`LOADONCALL`**<sup>1</sup>\
+      **`LONGNAMES`**<sup>2</sup>\
+      **`MOVABLE`**<sup>1</sup>\
+      **`MOVEABLE`**<sup>1</sup>\
+      **`MULTIPLE`**\
+      **`NAME`**\
+      **`NEWFILES`**<sup>2</sup>
+   :::column-end:::
+   :::column span="":::
+      **`NODATA`**<sup>1</sup>\
+      **`NOIOPL`**<sup>1</sup>\
+      **`NONAME`**\
+      **`NONCONFORMING`**<sup>1</sup>\
+      **`NONDISCARDABLE`**\
+      **`NONE`**\
+      **`NONSHARED`**\
+      **`NOTWINDOWCOMPAT`**<sup>1</sup>\
+      **`OBJECTS`**\
+      **`OLD`**<sup>1</sup>\
+      **`PRELOAD`**\
+      **`PRIVATE`**\
+      **`PROTMODE`**<sup>2</sup>\
+      **`PURE`**<sup>1</sup>\
+      **`READONLY`**
+   :::column-end:::
+   :::column span="":::
+      **`READWRITE`**\
+      **`REALMODE`**<sup>1</sup>\
+      **`RESIDENT`**\
+      **`RESIDENTNAME`**<sup>1</sup>\
+      **`SECTIONS`**\
+      **`SEGMENTS`**\
+      **`SHARED`**\
+      **`SINGLE`**\
+      **`STACKSIZE`**\
+      **`STUB`**\
+      **`VERSION`**\
+      **`WINDOWAPI`**\
+      **`WINDOWCOMPAT`**\
+      **`WINDOWS`**
+   :::column-end:::
+:::row-end:::
 
 <sup>1</sup> il linker genera un avviso ("ignorato") quando rileva questo termine. Tuttavia, la parola è ancora riservata.
 

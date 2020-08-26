@@ -1,17 +1,17 @@
 ---
-title: idl_module (C++ attributo com)
+title: idl_module (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168044"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845224"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -44,10 +44,10 @@ Opzionale ID di un argomento della Guida in un file con estensione hlp o CHM.
 *helpcontext*<br/>
 Opzionale ID della Guida per questa libreria dei tipi.
 
-*hidden*<br/>
+*nascosto*<br/>
 Opzionale Parametro che impedisce la visualizzazione della libreria. Per altre informazioni, vedere l'attributo MIDL [hidden](/windows/win32/Midl/hidden) .
 
-*restricted*<br/>
+*limitato*<br/>
 Opzionale I membri della libreria non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](/windows/win32/Midl/restricted) .
 
 *Dichiarazione di funzione*<br/>
@@ -78,14 +78,12 @@ void FuncName(int i);
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -93,4 +91,4 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>
-[entry](entry.md)
+[voce](entry.md)

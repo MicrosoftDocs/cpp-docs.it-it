@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222797"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837346"
 ---
 # <a name="event-maps"></a>Mappe eventi
 
@@ -29,7 +29,7 @@ Per supportare le mappe eventi, MFC fornisce le seguenti macro:
 
 ### <a name="event-map-declaration-and-demarcation"></a>Dichiarazione e delimitazione della mappa eventi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|Consente di dichiarare che una mappa eventi verrà utilizzata in una classe per eseguire il mapping degli eventi alle funzioni che generano eventi (deve essere utilizzata nella dichiarazione di classe).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|Consente di iniziare la definizione di una mappa eventi (che sarà utilizzata nell'implementazione della classe).|
@@ -37,19 +37,19 @@ Per supportare le mappe eventi, MFC fornisce le seguenti macro:
 
 ### <a name="event-mapping-macros"></a>Macro per il mapping degli eventi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|Indica quale funzione che genera eventi genererà l'evento specificato.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Indica quale funzione che genera eventi genererà l'evento specificato, con un ID invio designato.|
 
 ### <a name="message-mapping-macros"></a>Macro per il mapping di messaggi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|Indica un verbo personalizzato gestito dal controllo OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Consente di eseguire l'override di un mapping dei verbi standard del controllo OLE.|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 Ogni `COleControl` classe derivata da nel programma può fornire una mappa eventi per specificare gli eventi che il controllo deve generare.
 
@@ -67,7 +67,7 @@ Per ulteriori informazioni sulle mappe eventi, vedere l'articolo [controlli Acti
 
 **Intestazione** afxctl. h
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 Inizia la definizione della mappa eventi.
 
@@ -93,7 +93,7 @@ Per ulteriori informazioni sulle mappe eventi e sulla macro BEGIN_EVENT_MAP, ved
 
 **Intestazione** afxctl. h
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 Usare la macro END_EVENT_MAP per terminare la definizione della mappa eventi.
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 **Intestazione** afxctl. h
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 Definisce una voce della mappa eventi per un evento personalizzato.
 
@@ -171,7 +171,7 @@ Le `VTS_` costanti e i relativi significati sono i seguenti:
 
 **Intestazione** afxctl. h
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 Definisce una funzione di generazione di eventi per un evento personalizzato appartenente all'ID di invio specificato da *DISPID*.
 
@@ -211,7 +211,7 @@ Per un elenco delle `VTS_` costanti, vedere [EVENT_CUSTOM](#event_custom).
 
 **Intestazione** afxctl. h
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
 Questa macro definisce una voce della mappa messaggi che esegue il mapping di un verbo personalizzato a una funzione membro specifica del controllo.
 
@@ -246,7 +246,7 @@ I valori dei parametri *lpMsg*, *hwndParent*e *lpRect* vengono ricavati dai para
 
 **Intestazione** AFXOLE. h
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 Usare questa macro per eseguire l'override del comportamento predefinito di un verbo standard.
 

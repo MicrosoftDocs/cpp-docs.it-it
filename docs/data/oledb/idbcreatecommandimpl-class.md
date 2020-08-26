@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210717"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845549"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
@@ -33,7 +33,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Oggetto della sessione derivato da `IDBCreateCommandImpl`.
+Oggetto della sessione derivato da `IDBCreateCommandImpl` .
 
 *CommandClass*<br/>
 Classe Command.
@@ -42,11 +42,11 @@ Classe Command.
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|
 
@@ -54,7 +54,7 @@ Classe Command.
 
 Interfaccia facoltativa nell'oggetto Session per ottenere un nuovo comando.
 
-## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a> IDBCreateCommandImpl:: CreateCommand
 
 Crea un nuovo comando e restituisce l'interfaccia richiesta.
 
@@ -70,7 +70,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 Vedere [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-Alcuni parametri corrispondono ai parametri di *riferimento di OLE DB Programmer* con nomi diversi, descritti in `IDBCreateCommand::CreateCommand`:
+Alcuni parametri corrispondono ai parametri di *riferimento di OLE DB Programmer* con nomi diversi, descritti in `IDBCreateCommand::CreateCommand` :
 
 |Parametri del modello di OLE DB|Parametri *di riferimento di OLE DB Programmer*|
 |--------------------------------|------------------------------------------------|
@@ -79,4 +79,4 @@ Alcuni parametri corrispondono ai parametri di *riferimento di OLE DB Programmer
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

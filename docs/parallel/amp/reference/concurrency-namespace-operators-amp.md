@@ -2,22 +2,34 @@
 title: Operatori dello spazio dei nomi Concurrency (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b6353e1edbe216dcb8aa5a342e139d826b82c6c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228479"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845341"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operatori dello spazio dei nomi Concurrency (AMP)
 
-||||
-|-|-|-|
-|[operatore! =](#operator_neq)|[operatore](#operator_mod)|[operatore](#operator_star)|
-|[operatore +](#operator_add)|[operatore](#operator-)|[operatore](#operator_div)|
-|[operatore = =](#operator_eq_eq)|
+:::row:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator+`](#operator_add)\
+      [`operator-`](#operator-)
+   :::column-end:::
+   :::column span="":::
+      [`operator*`](#operator_star)\
+      [`operator/`](#operator_div)
+   :::column-end:::
+   :::column span="":::
+      [`operator%`](#operator_mod)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operatore = =
 
 Determina se gli argomenti specificati sono uguali.
 
@@ -46,7 +58,7 @@ Una delle tuple da confrontare.
 
 **`true`** Se le tuple sono uguali. in caso contrario, **`false`** .
 
-## <a name="operator"></a><a name="operator_neq"></a>operatore! =
+## <a name="operator"></a><a name="operator_neq"></a> operatore! =
 
 Determina se gli argomenti specificati non sono uguali.
 
@@ -75,7 +87,7 @@ Una delle tuple da confrontare.
 
 **`true`** Se le tuple non sono uguali. in caso contrario, **`false`** .
 
-## <a name="operator"></a><a name="operator_add"></a>operatore +
+## <a name="operator"></a><a name="operator_add"></a> operatore +
 
 Calcola la somma dei componenti degli argomenti specificati.
 
@@ -120,7 +132,7 @@ Uno degli argomenti da aggiungere.
 
 Somma dei componenti degli argomenti specificati.
 
-## <a name="operator-"></a><a name="operator-"></a>operatore
+## <a name="operator-"></a><a name="operator-"></a> operatore
 
 Calcola la differenza in termini di componente tra gli argomenti specificati.
 
@@ -165,7 +177,7 @@ Argomento da sottrarre.
 
 Differenza relativa ai componenti tra gli argomenti specificati.
 
-## <a name="operator"></a><a name="operator_star"></a>operatore
+## <a name="operator"></a><a name="operator_star"></a> operatore
 
 Calcola il prodotto per componente degli argomenti specificati.
 
@@ -202,7 +214,7 @@ Una delle tuple da moltiplicare.
 
 Prodotto componente per gli argomenti specificati.
 
-## <a name="operator"></a><a name="operator_div"></a>operatore
+## <a name="operator"></a><a name="operator_div"></a> operatore
 
 Calcola il quoziente per componente degli argomenti specificati.
 
@@ -239,7 +251,7 @@ Tupla in base alla quale dividere.
 
 Quoziente per componente degli argomenti specificati.
 
-## <a name="operator"></a><a name="operator_mod"></a>operatore
+## <a name="operator"></a><a name="operator_mod"></a> operatore
 
 Calcola il modulo del primo argomento specificato in base al secondo argomento specificato.
 

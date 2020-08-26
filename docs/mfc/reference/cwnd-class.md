@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: aaeee501ef9c05fb19ac7561f7ff7567bae18793
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62298872def1a6e0e262c5339d323b83ad9bbc3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562558"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837645"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1818,7 +1818,7 @@ Specifica le coordinate client del punto da testare.
 *nFlags*<br/>
 Specifica le finestre figlio da ignorare. Questo parametro può essere una combinazione dei valori seguenti:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |CWP_ALL|Non ignorare alcuna finestra figlio|
 |CWP_SKIPINVISIBLE|Ignora le finestre figlio invisibili|
@@ -1966,7 +1966,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 Identifica l'oggetto a cui accede il proxy Active Accessibility. Può essere uno dei valori seguenti
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |OBJID_CLIENT|Si riferisce all'area client della finestra.|
 
@@ -5680,7 +5680,7 @@ Utilizzare la funzione globale [AfxMessageBox](../../mfc/reference/cstring-forma
 
 Di seguito vengono illustrate le varie icone di sistema che possono essere utilizzate in una finestra di messaggio:
 
-|||
+|Icona|Macro|
 |-|-|
 |![Icona Arresta &#40;x&#41;](../../mfc/reference/media/vc364f1.gif "Icona Arresta &#40;x&#41;")|MB_ICONHAND, MB_ICONSTOP e MB_ICONERROR|
 |![Icona della Guida &#40; &#41;](../../mfc/reference/media/vc364f2.gif "Icona della Guida &#40; &#41;")|MB_ICONQUESTION|
@@ -6126,7 +6126,7 @@ Contiene il conteggio delle ripetizioni, il numero di volte in cui la sequenza d
 *nFlags*<br/>
 Contiene il codice di analisi, il codice di transizione della chiave, lo stato della chiave precedente e il codice del contesto, come illustrato nell'elenco seguente:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-15|Specifica il numero di ripetizioni. Il valore è il numero di volte in cui la sequenza di tasti viene ripetuta a causa dell'arresto della chiave da parte dell'utente.|
 |16-23|Specifica il codice di analisi. Il valore dipende dall'OEM (Original Equipment Manufacturer)|
@@ -6344,7 +6344,7 @@ Contiene un puntatore long a una struttura di dati [COMPAREITEMSTRUCT](/windows/
 
 Indica la posizione relativa dei due elementi. Può trattarsi di uno dei valori seguenti:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |-1|L'elemento 1 Ordina prima dell'elemento 2.|
 |0|Gli elementi 1 e 2 vengono ordinati allo stesso modo.|
@@ -6542,7 +6542,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, il codice di transizione della chiave, lo stato della chiave precedente e il codice del contesto, come illustrato nell'elenco seguente:
 
-|valore|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0-7|Codice di analisi (valore dipendente dall'OEM). Byte basso della parola di ordine superiore.|
 |8|Chiave estesa, ad esempio un tasto funzione o una chiave sul tastierino numerico (1 se è una chiave estesa; in caso contrario, 0).|
@@ -7401,7 +7401,7 @@ Numero di ripetizioni (il numero di volte in cui la sequenza di tasti viene ripe
 *nFlags*<br/>
 Specifica il codice di analisi, il codice di transizione della chiave, lo stato della chiave precedente e il codice del contesto, come illustrato nell'elenco seguente:
 
-|valore|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0-7|Codice di analisi (valore dipendente dall'OEM).|
 |8|Chiave estesa, ad esempio un tasto funzione o una chiave sul tastierino numerico (1 se è una chiave estesa).|
@@ -7446,7 +7446,7 @@ Numero di ripetizioni (il numero di volte in cui la sequenza di tasti viene ripe
 *nFlags*<br/>
 Specifica il codice di analisi, il codice di transizione della chiave, lo stato della chiave precedente e il codice del contesto, come illustrato nell'elenco seguente:
 
-|valore|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0-7|Codice di analisi (valore dipendente dall'OEM). Byte basso della parola di ordine superiore.|
 |8|Chiave estesa, ad esempio un tasto funzione o una chiave sul tastierino numerico (1 se è una chiave estesa; in caso contrario, 0).|
@@ -7772,7 +7772,7 @@ Contiene un puntatore all'oggetto selezionato `CMenu` . Il puntatore può essere
 
 La parola più ordinata del valore restituito deve contenere uno dei seguenti codici di comando:
 
-|valore|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0|Indica a Windows di rimuovere il carattere premuto dall'utente e di creare un breve beep sull'altoparlante del sistema.|
 |1|Indica a Windows di chiudere il menu corrente.|
@@ -9564,7 +9564,7 @@ Specifica il conteggio delle ripetizioni (il numero di volte in cui la sequenza 
 *nFlags*<br/>
 Il parametro *nFlags* può includere i valori seguenti:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-15|Specifica il numero di ripetizioni. Il valore è il numero di volte in cui la sequenza di tasti viene ripetuta a causa dell'arresto della chiave da parte dell'utente.|
 |16-23|Specifica il codice di analisi. Il valore dipende dall'OEM (Original Equipment Manufacturer)|
@@ -9688,7 +9688,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, il codice di transizione della chiave, lo stato della chiave precedente e il codice del contesto, come illustrato nell'elenco seguente:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-7|Codice di analisi (valore dipendente dall'OEM). Byte basso della parola di ordine superiore.|
 |8|Chiave estesa, ad esempio un tasto funzione o una chiave sul tastierino numerico (1 se è una chiave estesa; in caso contrario, 0).|
@@ -9727,7 +9727,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, il codice di transizione della chiave, lo stato della chiave precedente e il codice del contesto, come illustrato nell'elenco seguente:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-7|Codice di analisi (valore dipendente dall'OEM). Byte basso della parola di ordine superiore.|
 |8|Chiave estesa, ad esempio un tasto funzione o una chiave sul tastierino numerico (1 se è una chiave estesa; in caso contrario, 0).|
@@ -9774,7 +9774,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, il codice di transizione della chiave, lo stato della chiave precedente e il codice del contesto, come illustrato nell'elenco seguente:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-7|Codice di analisi (valore dipendente dall'OEM). Byte basso della parola di ordine superiore.|
 |8|Chiave estesa, ad esempio un tasto funzione o una chiave sul tastierino numerico (1 se è una chiave estesa; in caso contrario, 0).|
@@ -12499,7 +12499,7 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

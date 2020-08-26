@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215569"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845029"
 ---
 # <a name="ltthreadgt-operators"></a>Operatori &lt;thread&gt;
 
-||||
-|-|-|-|
-|[operatore! =](#op_neq)|[operatore&gt;](#op_gt)|[operatore&gt;=](#op_gt_eq)|
-|[operatore&lt;](#op_lt)|[operatore&lt;&lt;](#op_lt_lt)|[operatore&lt;=](#op_lt_eq)|
-|[operatore = =](#op_eq_eq)|
+[operatore! =](#op_neq)\
+[operatore&gt;](#op_gt)\
+[operatore&gt;=](#op_gt_eq)\
+[operatore&lt;](#op_lt)\
+[operatore&lt;&lt;](#op_lt_lt)\
+[operatore&lt;=](#op_lt_eq)\
+[operatore = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Determina se un oggetto `thread::id` è maggiore o uguale a un altro.
 
@@ -59,7 +61,7 @@ L'oggetto `thread::id` corretto.
 
 Questa funzione non genera eccezioni.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Determina se un oggetto `thread::id` è maggiore di un altro.
 
@@ -85,7 +87,7 @@ L'oggetto `thread::id` corretto.
 
 Questa funzione non genera eccezioni.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Determina se un oggetto `thread::id` è minore o uguale a un altro.
 
@@ -111,7 +113,7 @@ L'oggetto `thread::id` corretto.
 
 Questa funzione non genera eccezioni.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Determina se un oggetto `thread::id` è minore di un altro.
 
@@ -139,7 +141,7 @@ L'operatore definisce un ordinamento totale per tutti gli oggetti `thread::id`. 
 
 Questa funzione non genera eccezioni.
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Confronta due oggetti `thread::id` per stabilirne la disuguaglianza.
 
@@ -165,7 +167,7 @@ L'oggetto `thread::id` corretto.
 
 Questa funzione non genera eccezioni.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Confronta due oggetti `thread::id` per stabilirne l'uguaglianza.
 
@@ -191,7 +193,7 @@ L'oggetto `thread::id` corretto.
 
 Questa funzione non genera eccezioni.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operatore&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operatore&lt;&lt;
 
 Inserisce una rappresentazione testo di un oggetto `thread::id` in un flusso.
 

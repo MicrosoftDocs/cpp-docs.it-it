@@ -1,17 +1,17 @@
 ---
-title: out (C++ attributo com)
+title: out (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b99e520a11c2e8110d2e63fa85ddb1dd444e56e6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214673"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837099"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -33,20 +33,18 @@ Per un'illustrazione dell'uso di [out](bindable.md) , vedere l'esempio per **bin
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[Attributi del parametro](parameter-attributes.md)<br/>
+[DefaultValue](defaultvalue.md)<br/>
 [id](id.md)

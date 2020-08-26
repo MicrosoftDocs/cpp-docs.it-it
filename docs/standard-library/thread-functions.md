@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232859"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845042"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[scambio](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[scambio](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 Identifica in modo univoco il thread di esecuzione corrente.
 
@@ -40,7 +41,7 @@ thread::id this_thread::get_id() noexcept;
 
 Oggetto di tipo [thread::id](../standard-library/thread-class.md) che identifica in modo univoco il thread di esecuzione corrente.
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 Blocca il thread chiamante.
 
@@ -59,7 +60,7 @@ Oggetto [duration](../standard-library/duration-class.md) che specifica un inter
 
 La funzione blocca il thread chiamante per almeno il tempo specificato da *Rel_time*. Questa funzione non genera eccezioni.
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 La funzione blocca il thread chiamante almeno fino all'ora specificata.
 
@@ -79,7 +80,7 @@ Rappresenta un punto nel tempo.
 
 Questa funzione non genera eccezioni.
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia gli stati dei due oggetti `thread`.
 
@@ -99,7 +100,7 @@ L'oggetto `thread` corretto.
 
 La funzione chiama `Left.swap(Right)`.
 
-## <a name="yield"></a><a name="yield"></a>rendimento
+## <a name="yield"></a><a name="yield"></a> rendimento
 
 Segnala al sistema operativo di eseguire altri thread, anche se in genere l'esecuzione del thread corrente dovrebbe continuare.
 

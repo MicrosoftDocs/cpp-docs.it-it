@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561817"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837619"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -1364,9 +1364,8 @@ Handle dell'elemento della visualizzazione struttura ad albero che occupa il pun
 
 Quando viene chiamata questa funzione, il parametro *PT* specifica le coordinate del punto da testare. La funzione restituisce l'handle dell'elemento in corrispondenza del punto specificato o NULL se nessun elemento occupa il punto. Inoltre, il parametro *pFlags* contiene un valore che indica la posizione del punto specificato. I valori possibili sono:
 
-|||
+|Valore|Descrizione|
 |-|-|
-|valore|Significato|
 |TVHT_ABOVE|Sopra l'area client.|
 |TVHT_BELOW|Sotto l'area client.|
 |TVHT_NOWHERE|Nell'area client, ma sotto l'ultimo elemento.|
@@ -1379,7 +1378,6 @@ Quando viene chiamata questa funzione, il parametro *PT* specifica le coordinate
 |TVHT_ONITEMSTATEICON|Sull'icona di stato per un elemento della visualizzazione struttura ad albero che si trova in uno stato definito dall'utente.|
 |TVHT_TOLEFT|A sinistra dell'area client.|
 |TVHT_TORIGHT|A destra dell'area client.|
-|||
 
 ### <a name="example"></a>Esempio
 

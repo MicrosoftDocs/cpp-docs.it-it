@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b4309e794a83e6c13dcf0051791cd1762a6d5012
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210691"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845562"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
 
@@ -36,17 +36,17 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `IConvertTypeImpl`.
+Classe derivata da `IConvertTypeImpl` .
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[CanConvert](#canconvert)|Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.|
 
@@ -54,7 +54,7 @@ Classe derivata da `IConvertTypeImpl`.
 
 Questa interfaccia è obbligatoria per i comandi, i set di righe e i set di righe dell'indice. `IConvertTypeImpl` implementa l'interfaccia delegando l'oggetto di conversione fornito da OLE DB.
 
-## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl:: CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a> IConvertTypeImpl:: CanConvert
 
 Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.
 
@@ -72,9 +72,9 @@ Vedere [IConvertType:: CanConvert](/previous-versions/windows/desktop/ms711224(v
 
 ### <a name="remarks"></a>Osservazioni
 
-Usa la conversione dei dati OLE DB in `MSADC.DLL`.
+USA OLE DB conversione dei dati in `MSADC.DLL` .
 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

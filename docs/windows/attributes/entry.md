@@ -1,17 +1,17 @@
 ---
-title: entry (C++ attributo com)
+title: entry (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 9bdfc64506f26ee4e9876920821883a0fa12bc7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 63e5ccebb1d3844af8dd11b4b094abe96e3e257c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167095"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845315"
 ---
 # <a name="entry"></a>entry
 
@@ -30,7 +30,7 @@ ID del punto di ingresso.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **entry** C++ ha la stessa funzionalità dell'attributo MIDL della [voce](/windows/win32/Midl/entry) .
+La **voce** C++ attribute ha la stessa funzionalità della [voce](/windows/win32/Midl/entry) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -38,14 +38,12 @@ Vedere l'esempio per [idl_module](idl-module.md) per un esempio di utilizzo dell
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Attributo `idl_module`|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

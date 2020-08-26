@@ -20,12 +20,12 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: 4e6b4c3298c063038e7365496f26f50d3789be86
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: f938d9e92bc2f447ecfa82f2bfb27c8fda7652ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "70311791"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845107"
 ---
 # <a name="irowsetnotifyimpl-class"></a>Classe IRowsetNotifyImpl
 
@@ -41,23 +41,23 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[OnFieldChange](#onfieldchange)|Notifica al consumer tutte le modifiche apportate al valore di una colonna.|
-|[OnRowChange](#onrowchange)|Notifica al consumer la prima modifica apportata a una riga o di qualsiasi modifica che influisca sull'intera riga.|
-|[OnRowsetChange](#onrowsetchange)|Notifica al consumer tutte le modifiche che interessano l'intero set di righe.|
+|[OnRowChange](#onrowchange)|Notifica al consumer la prima modifica apportata a una riga o tutte le modifiche che hanno effetto sull'intera riga.|
+|[OnRowsetChange](#onrowsetchange)|Notifica al consumer tutte le modifiche che hanno effetto sull'intero set di righe.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Vedere [ricezione di notifiche](../../data/oledb/receiving-notifications.md) sull'implementazione dell'interfaccia del punto di connessione sul consumer.
 
-`IRowsetNotifyImpl` fornisce un'implementazione fittizia per `IRowsetNotify`, con funzioni vuote per i metodi di `IRowsetNotify` [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))e [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). Se si eredita da questa classe quando si implementa un'interfaccia di `IRowsetNotify`, è possibile implementare solo i metodi necessari. È anche necessario fornire implementazioni vuote per gli altri metodi.
+`IRowsetNotifyImpl` fornisce un'implementazione fittizia per `IRowsetNotify` , con funzioni vuote per i `IRowsetNotify` metodi [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)), [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85))e [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)). Se si eredita da questa classe quando si implementa un' `IRowsetNotify` interfaccia, è possibile implementare solo i metodi necessari. È anche necessario fornire implementazioni vuote per gli altri metodi.
 
-## <a name="onfieldchange"></a>IRowsetNotifyImpl:: OnFieldChange
+## <a name="irowsetnotifyimplonfieldchange"></a><a name="onfieldchange"></a> IRowsetNotifyImpl:: OnFieldChange
 
 Notifica al consumer tutte le modifiche apportate al valore di una colonna.
 
@@ -82,13 +82,13 @@ Per le descrizioni dei parametri, vedere [IRowsetNotify:: OnFieldChange](/previo
 
 Per le descrizioni dei valori restituiti, vedere [IRowsetNotify:: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo esegue il wrapping del metodo [IRowsetNotify:: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) . Per informazioni dettagliate, vedere la descrizione del metodo nella Guida di riferimento per programmatori OLE DB.
 
-## <a name="onrowchange"></a>IRowsetNotifyImpl:: OnRowChange
+## <a name="irowsetnotifyimplonrowchange"></a><a name="onrowchange"></a> IRowsetNotifyImpl:: OnRowChange
 
-Notifica al consumer la prima modifica apportata a una riga o di qualsiasi modifica che influisca sull'intera riga.
+Notifica al consumer la prima modifica apportata a una riga o tutte le modifiche che hanno effetto sull'intera riga.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -110,13 +110,13 @@ Per le descrizioni dei parametri, vedere [IRowsetNotify:: OnRowChange](/previous
 
 Per le descrizioni dei valori restituiti, vedere [IRowsetNotify:: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo esegue il wrapping del metodo [IRowsetNotify:: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) . Per informazioni dettagliate, vedere la descrizione del metodo nella Guida di riferimento per programmatori OLE DB.
 
-## <a name="onrowsetchange"></a>IRowsetNotifyImpl:: OnRowsetChange
+## <a name="irowsetnotifyimplonrowsetchange"></a><a name="onrowsetchange"></a> IRowsetNotifyImpl:: OnRowsetChange
 
-Notifica al consumer tutte le modifiche che interessano l'intero set di righe.
+Notifica al consumer tutte le modifiche che hanno effetto sull'intero set di righe.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -136,12 +136,12 @@ Per le descrizioni dei parametri, vedere [IRowsetNotify:: OnRowsetChange](/previ
 
 Per le descrizioni dei valori restituiti, vedere [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) .
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Questo metodo esegue il wrapping del metodo [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) . Per informazioni dettagliate, vedere la descrizione del metodo nella Guida di riferimento per programmatori OLE DB.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-Classe [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
-[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)
+[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)) 
+ [Classe IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)

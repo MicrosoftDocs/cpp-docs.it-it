@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8eef2f3dc7880f9b2a937a26db1b74687fa00f1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06d0511317c21f6b132349d7d6cd6c2d6f20bc1b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222836"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837372"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 
@@ -36,7 +36,7 @@ In questo argomento vengono elencate le funzioni di DDX_Field utilizzate per sca
 
 ### <a name="ddx_field-functions"></a>Funzioni DDX_Field
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[DDX_FieldCBIndex](#ddx_fieldcbindex)|Trasferisce dati di tipo integer tra un membro dati di un campo recordset e l'indice della selezione corrente in una casella combinata in un [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
 |[DDX_FieldCBString](#ddx_fieldcbstring)|Trasferisce i `CString` dati tra un membro dati del campo recordset e il controllo di modifica di una casella combinata in un oggetto `CRecordView` o `CDaoRecordView` . Quando si trasferiscono dati dal recordset al controllo, questa funzione seleziona l'elemento nella casella combinata che inizia con i caratteri nella stringa specificata.|
@@ -50,7 +50,7 @@ In questo argomento vengono elencate le funzioni di DDX_Field utilizzate per sca
 |[DDX_FieldSlider](#ddx_fieldslider)|Sincronizza la posizione Thumb di un controllo dispositivo di scorrimento in una visualizzazione di record e un **`int`** membro dati del campo di un recordset. |
 |[DDX_FieldText](#ddx_fieldtext)|Le versioni di overload sono disponibili per il trasferimento **`int`** dei dati, **uint**, **`long`** ,, `DWORD` [CString](../../atl-mfc-shared/reference/cstringt-class.md), **`float`** , **`double`** , **`short`** , [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)e [COleCurrency](../../mfc/reference/colecurrency-class.md) tra un membro dati di un campo recordset e una casella di modifica in un oggetto `CRecordView` o `CDaoRecordView` .|
 
-## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex
+## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a> DDX_FieldCBIndex
 
 La `DDX_FieldCBIndex` funzione Sincronizza l'indice dell'elemento selezionato nel controllo casella di riepilogo di un controllo casella combinata in una visualizzazione di record e un **`int`** membro dati del campo di un recordset associato alla visualizzazione dei record.
 
@@ -76,7 +76,7 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID di un controllo nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*Indice*<br/>
+*index*<br/>
 Riferimento a un membro dati del campo nell' `CRecordset` oggetto o associato `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -98,7 +98,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
 **Intestazione:** AFXDAO. h
 
-## <a name="ddx_fieldcbstring"></a><a name="ddx_fieldcbstring"></a>DDX_FieldCBString
+## <a name="ddx_fieldcbstring"></a><a name="ddx_fieldcbstring"></a> DDX_FieldCBString
 
 La `DDX_FieldCBString` funzione gestisce il trasferimento dei dati [CString](../../atl-mfc-shared/reference/cstringt-class.md) tra il controllo di modifica di un controllo casella combinata in una visualizzazione di record e un `CString` membro dati del campo di un recordset associato alla visualizzazione dei record.
 
@@ -146,7 +146,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . N
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact
+## <a name="ddx_fieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a> DDX_FieldCBStringExact
 
 La `DDX_FieldCBStringExact` funzione gestisce il trasferimento dei dati [CString](../../atl-mfc-shared/reference/cstringt-class.md) tra il controllo di modifica di un controllo casella combinata in una visualizzazione di record e un `CString` membro dati del campo di un recordset associato alla visualizzazione dei record.
 
@@ -194,7 +194,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldcheck"></a><a name="ddx_fieldcheck"></a>DDX_FieldCheck
+## <a name="ddx_fieldcheck"></a><a name="ddx_fieldcheck"></a> DDX_FieldCheck
 
 La `DDX_FieldCheck` funzione gestisce il trasferimento dei **`int`** dati tra un controllo casella di controllo in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo e un **`int`** membro dati della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
@@ -236,7 +236,7 @@ Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](.
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldlbindex"></a><a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex
+## <a name="ddx_fieldlbindex"></a><a name="ddx_fieldlbindex"></a> DDX_FieldLBIndex
 
 La `DDX_FieldLBIndex` funzione Sincronizza l'indice dell'elemento selezionato in un controllo casella di riepilogo in una visualizzazione di record e un **`int`** membro dati del campo di un recordset associato alla visualizzazione dei record.
 
@@ -262,7 +262,7 @@ Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID di un controllo nell'oggetto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*Indice*<br/>
+*index*<br/>
 Riferimento a un membro dati del campo nell' `CRecordset` oggetto o associato `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -284,7 +284,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) .
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldlbstring"></a><a name="ddx_fieldlbstring"></a>DDX_FieldLBString
+## <a name="ddx_fieldlbstring"></a><a name="ddx_fieldlbstring"></a> DDX_FieldLBString
 
 `DDX_FieldLBString` consente di copiare la selezione corrente di un controllo casella di riepilogo in una visualizzazione di record in un membro dati del campo [CString](../../atl-mfc-shared/reference/cstringt-class.md) di un recordset associato alla visualizzazione dei record.
 
@@ -332,7 +332,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact
+## <a name="ddx_fieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a> DDX_FieldLBStringExact
 
 La `DDX_FieldLBStringExact` funzione copia la selezione corrente di un controllo casella di riepilogo in una visualizzazione di record in un membro dati del campo [CString](../../atl-mfc-shared/reference/cstringt-class.md) di un recordset associato alla visualizzazione dei record.
 
@@ -380,7 +380,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldradio"></a><a name="ddx_fieldradio"></a>DDX_FieldRadio
+## <a name="ddx_fieldradio"></a><a name="ddx_fieldradio"></a> DDX_FieldRadio
 
 La `DDX_FieldRadio` funzione associa una **`int`** variabile membro in base zero al recordset di una visualizzazione di record con il pulsante di opzione attualmente selezionato in un gruppo di pulsanti di opzione nella visualizzazione di record.
 
@@ -428,7 +428,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldscroll"></a><a name="ddx_fieldscroll"></a>DDX_FieldScroll
+## <a name="ddx_fieldscroll"></a><a name="ddx_fieldscroll"></a> DDX_FieldScroll
 
 La `DDX_FieldScroll` funzione Sincronizza la posizione di scorrimento di un controllo barra di scorrimento in una visualizzazione di record e un **`int`** membro dati del campo di un recordset associato alla visualizzazione dei record (o con qualsiasi variabile Integer a cui si sceglie di eseguire il mapping).
 
@@ -476,7 +476,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
   **Intestazione** AFXDAO. h
 
-## <a name="ddx_fieldslider"></a><a name="ddx_fieldslider"></a>DDX_FieldSlider
+## <a name="ddx_fieldslider"></a><a name="ddx_fieldslider"></a> DDX_FieldSlider
 
 La `DDX_FieldSlider` funzione Sincronizza la posizione Thumb di un controllo dispositivo di scorrimento in una visualizzazione di record e un **`int`** membro dati del campo di un recordset associato alla visualizzazione dei record (o con qualsiasi variabile di tipo Integer a cui si sceglie di eseguire il mapping).
 
@@ -514,7 +514,7 @@ Puntatore all' `CRecordset` oggetto associato o `CDaoRecordset` con cui vengono 
 
 Quando si spostano i dati dal recordset al dispositivo di scorrimento, questa funzione imposta la posizione del dispositivo di scorrimento sul valore specificato in *valore*. In caso di trasferimento dal recordset al controllo, se il campo del recordset è null, la posizione del controllo dispositivo di scorrimento è impostata su 0. In caso di trasferimento dal controllo al recordset, se il controllo è vuoto, il valore del campo recordset è 0.
 
-`DDX_FieldSlider`non scambia le informazioni sull'intervallo con i controlli dispositivo di scorrimento in grado di impostare un intervallo anziché semplicemente una posizione.
+`DDX_FieldSlider` non scambia le informazioni sull'intervallo con i controlli dispositivo di scorrimento in grado di impostare un intervallo anziché semplicemente una posizione.
 
 Utilizzare il primo override della funzione se si utilizzano le classi basate su ODBC. Utilizzare il secondo override con le classi basate su DAO.
 
@@ -528,7 +528,7 @@ Per un esempio di DDX_Field generale, vedere [DDX_FieldText](#ddx_fieldtext) . L
 
 **Intestazione:** AFXDAO. h
 
-## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a>DDX_FieldText
+## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a> DDX_FieldText
 
 La `DDX_FieldText` funzione gestisce il trasferimento dei **`int`** **`short`** dati,, **`long`** , DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **`float`** , **`double`** , **bool**o **byte** tra un controllo casella di modifica e i membri dati del campo di un recordset.
 

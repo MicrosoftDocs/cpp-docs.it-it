@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331953"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845055"
 ---
 # <a name="regex_constants-namespace"></a>Spazio dei nomi regex_constants
 
@@ -107,7 +107,7 @@ namespace regex_constants {
 
 Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei relativi flag associati.
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[error_type](#error_type)|Indicatori per segnalare errori di sintassi di espressione regolare.|
 |[match_flag_type](#match_flag_type)|Flag per opzioni di corrispondenza delle espressioni regolari.|
@@ -115,11 +115,11 @@ Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<regex>
+**Intestazione:**\<regex>
 
 **Spazio dei nomi:** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> regex_constants:: error_type
 
 Indicatori per segnalare errori di sintassi di espressione regolare.
 
@@ -180,7 +180,7 @@ Il tipo è un tipo enumerato che descrive un oggetto che può contenere flag di 
 
 `error_backref` -- l'espressione contiene un backreference non valido
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> regex_constants:: match_flag_type
 
 Flag per opzioni di corrispondenza delle espressioni regolari.
 
@@ -238,7 +238,7 @@ I flag di formato sono:
 
 `format_first_only` -- non cercare corrispondenze dopo la prima
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> regex_constants:: syntax_option_type
 
 Flag per selezionare le opzioni di sintassi.
 
@@ -290,11 +290,11 @@ I modificatori di sintassi sono:
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>regex](../standard-library/regex.md)\
+[\<regex>](../standard-library/regex.md)\
 [Classe regex_error](../standard-library/regex-error-class.md)\
-[\<funzioni di> regex](../standard-library/regex-functions.md)\
+[\<regex> funzioni](../standard-library/regex-functions.md)\
 [Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operatori di> regex](../standard-library/regex-operators.md)\
-[regex_token_iterator classe](../standard-library/regex-token-iterator-class.md)\
+[\<regex> operatori](../standard-library/regex-operators.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Classe regex_traits](../standard-library/regex-traits-class.md)\
 [\<regex> typedef](../standard-library/regex-typedefs.md)
