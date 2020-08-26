@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: eb782b0d16c4bc826da4ea9291756f34ca0eaf29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215413"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840141"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -34,7 +34,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[ABS](../standard-library/valarray-functions.md#abs)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al valore assoluto degli elementi dell'oggetto valarray di input.|
 |[Acos](../standard-library/valarray-functions.md#acos)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali all'arcocoseno degli elementi dell'oggetto valarray di input.|
@@ -58,7 +58,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore! =](../standard-library/valarray-operators.md#op_neq)|Verifica se gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti sono diversi o se tutti gli elementi di un oggetto valarray sono diversi da un valore specificato del tipo di elemento dell'oggetto valarray.|
 |[operatore](../standard-library/valarray-operators.md#op_mod)|Ottiene il resto della divisione degli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti, della divisione di un oggetto valarray per un valore specificato del tipo di elemento dell'oggetto valarray oppure della divisione di un valore specificato per un oggetto valarray.|
@@ -81,7 +81,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe gslice](../standard-library/gslice-class.md)|Classe di utilità per l'oggetto valarray usato per definire sezioni multidimensionali di un oggetto valarray.|
 |[Classe gslice_array](../standard-library/gslice-array-class.md)|Modello di classe ausiliario interno che supporta oggetti sezione generale fornendo operazioni tra matrici di subset definite dalla sezione generale di un oggetto valarray.|
@@ -93,7 +93,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="specializations"></a>Specializzazioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[valarray ( \<bool> classe)](../standard-library/valarray-bool-class.md)|Versione specializzata del modello di classe valarray \<**Type**> per gli elementi di tipo **`bool`** .|
 

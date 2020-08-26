@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203874"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834778"
 ---
 # <a name="auto_ptr-class"></a>Classe auto_ptr
 
@@ -71,19 +71,19 @@ Il modello di classe descrive un puntatore intelligente, denominato `auto_ptr` ,
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[auto_ptr](#auto_ptr)|Costruttore per oggetti di tipo `auto_ptr`.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[element_type](#element_type)|Il tipo è un sinonimo del parametro di modello `Type`.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[get](#get)|La funzione membro restituisce il puntatore `myptr` archiviato.|
 |[versione](#release)|Il membro sostituisce il puntatore archiviato `myptr` con un puntatore Null e restituisce il puntatore archiviato in precedenza.|
@@ -91,7 +91,7 @@ Il modello di classe descrive un puntatore intelligente, denominato `auto_ptr` ,
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore =](#op_eq)|Operatore di assegnazione che trasferisce la proprietà da un oggetto `auto_ptr` a un altro.|
 |[operatore](#op_star)|Operatore di dereferenziazione per oggetti di tipo `auto_ptr`.|
@@ -99,7 +99,7 @@ Il modello di classe descrive un puntatore intelligente, denominato `auto_ptr` ,
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Esegue il cast da un tipo di `auto_ptr` a un altro tipo di `auto_ptr`.|
 |[operatore auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Esegue il cast da un `auto_ptr` a un `auto_ptr_ref`.|
 
-### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a> auto_ptr
 
 Costruttore per oggetti di tipo `auto_ptr`.
 
@@ -126,7 +126,7 @@ L'oggetto `auto_ptr` che deve essere copiato dal costruttore.
 
 Il primo costruttore archivia *ptr* in `myptr` , il puntatore archiviato all'oggetto allocato. Il secondo costruttore trasferisce la proprietà del puntatore archiviato a *destra*, archiviando *right*. [rilasciare](#release) in `myptr` .
 
-Il terzo costruttore si comporta come il secondo, ad eccezione del fatto che archivia `right` . `ref`. `release`in `myptr` , dove `ref` è il riferimento archiviato in `right` .
+Il terzo costruttore si comporta come il secondo, ad eccezione del fatto che archivia `right` . `ref`. `release` in `myptr` , dove `ref` è il riferimento archiviato in `right` .
 
 Il costruttore di modello si comporta come il secondo costruttore, a condizione che un puntatore a `Other` possa essere convertito in modo implicito in un puntatore a `Type` .
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Il tipo è un sinonimo del parametro di modello `Type`.
 
@@ -197,7 +197,7 @@ Il tipo è un sinonimo del parametro di modello `Type`.
 typedef Type element  _type;
 ```
 
-### <a name="get"></a><a name="get"></a>Ottieni
+### <a name="get"></a><a name="get"></a> Ottieni
 
 La funzione membro restituisce il puntatore `myptr` archiviato.
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>operatore =
+### <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Operatore di assegnazione che trasferisce la proprietà da un oggetto `auto_ptr` a un altro.
 
@@ -284,7 +284,7 @@ L'assegnazione valuta l'espressione `delete myptr` , ma solo se il puntatore arc
 
 Per un esempio di utilizzo dell'operatore membro, vedere [auto_ptr](#auto_ptr).
 
-### <a name="operator"></a><a name="op_star"></a>operatore
+### <a name="operator"></a><a name="op_star"></a> operatore
 
 Operatore di dereferenziazione per oggetti di tipo `auto_ptr`.
 
@@ -304,7 +304,7 @@ L'operatore di riferimento indiretto restituisce `*`[get](#get). Di conseguenza,
 
 Per un esempio di come usare la funzione membro, vedere [auto_ptr](#auto_ptr).
 
-### <a name="operator-gt"></a><a name="op_arrow"></a>operatore&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a> operatore&gt;
 
 Operatore per consentire l'accesso ai membri.
 
@@ -324,7 +324,7 @@ L'operatore di selezione restituisce [Get](#get) `( )` , in modo che il membro d
 
 Per un esempio di come usare la funzione membro, vedere [auto_ptr](#auto_ptr).
 
-### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>operatore auto_ptr &lt; altro&gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a> operatore auto_ptr &lt; altro&gt;
 
 Esegue il cast da un tipo di `auto_ptr` a un altro tipo di `auto_ptr`.
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>operatore auto_ptr_ref &lt; altro&gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a> operatore auto_ptr_ref &lt; altro&gt;
 
 Esegue il cast da un `auto_ptr` a un `auto_ptr_ref`.
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a><a name="release"></a>versione
+### <a name="release"></a><a name="release"></a> versione
 
 Il membro sostituisce il puntatore archiviato `myptr` con un puntatore Null e restituisce il puntatore archiviato in precedenza.
 
@@ -477,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a><a name="reset"></a>reimpostazione
+### <a name="reset"></a><a name="reset"></a> reimpostazione
 
 La funzione membro valuta l'espressione `delete myptr` , ma solo se il valore del puntatore archiviato `myptr` cambia in seguito a una chiamata di funzione. Sostituisce quindi il puntatore archiviato con `ptr`.
 

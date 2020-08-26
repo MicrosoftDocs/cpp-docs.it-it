@@ -14,21 +14,32 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: c2d9b84a2be42df38df36bb90c0b5aeee076bf6a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dbf7577969ec43de47339bf80327007ac857a5a7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623615"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834973"
 ---
 # <a name="ltallocatorsgt-macros"></a>Macro &lt;allocators&gt;
 
-||||
-|-|-|-|
-|[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
-|[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
+:::row:::
+   :::column span="":::
+      [`ALLOCATOR_DECL`](#allocator_decl)\
+      [`CACHE_CHUNKLIST`](#cache_chunklist)
+   :::column-end:::
+   :::column span="":::
+      [`CACHE_FREELIST`](#cache_freelist)
+   :::column-end:::
+   :::column span="":::
+      [`CACHE_SUBALLOC`](#cache_suballoc)
+   :::column-end:::
+   :::column span="":::
+      [`SYNC_DEFAULT`](#sync_default)
+   :::column-end:::
+:::row-end:::
 
-## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
+## <a name="allocator_decl"></a><a name="allocator_decl"></a> ALLOCATOR_DECL
 
 Restituisce un modello di classe allocator.
 
@@ -68,7 +79,7 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a><a name="cache_chunklist"></a>CACHE_CHUNKLIST
+## <a name="cache_chunklist"></a><a name="cache_chunklist"></a> CACHE_CHUNKLIST
 
 Restituisce `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
@@ -78,7 +89,7 @@ Restituisce `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
+## <a name="cache_freelist"></a><a name="cache_freelist"></a> CACHE_FREELIST
 
 Restituisce `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
@@ -88,7 +99,7 @@ Restituisce `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
+## <a name="cache_suballoc"></a><a name="cache_suballoc"></a> CACHE_SUBALLOC
 
 Restituisce `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
@@ -98,7 +109,7 @@ Restituisce `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
+## <a name="sync_default"></a><a name="sync_default"></a> SYNC_DEFAULT
 
 Restituisce un filtro di sincronizzazione.
 

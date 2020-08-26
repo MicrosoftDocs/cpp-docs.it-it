@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 14c9298758e9d55445affaf5a65c81910a9ab151
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224227"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833478"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e segnalazione errori
 
 Queste macro forniscono funzionalità di debug e di traccia utili.
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Scrive, nella finestra di output, qualsiasi perdita di interfaccia che viene rilevata quando `_Module.Term` viene chiamato il metodo.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Scrive tutte le chiamate a nella `QueryInterface` finestra di output.|
@@ -32,7 +32,7 @@ Queste macro forniscono funzionalità di debug e di traccia utili.
 |[ATLTRACE](#atltrace)|Segnala gli avvisi a un dispositivo di output, ad esempio la finestra del debugger, in base ai flag e ai livelli indicati. Incluso per la compatibilità con le versioni precedenti.|
 |[ATLTRACE2](#atltrace2)|Segnala gli avvisi a un dispositivo di output, ad esempio la finestra del debugger, in base ai flag e ai livelli indicati.|
 
-## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a> _ATL_DEBUG_INTERFACES
 
 Definire questa macro prima di includere tutti i file di intestazione ATL per tracciare tutti gli `AddRef` `Release` elementi e le chiamate sulle interfacce dei componenti alla finestra di output.
 
@@ -63,7 +63,7 @@ Le informazioni fornite qui vengono mappate direttamente alle informazioni forni
 > [!NOTE]
 > _ATL_DEBUG_INTERFACES può essere usato nelle compilazioni al dettaglio.
 
-## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a> _ATL_DEBUG_QI
 
 Scrive tutte le chiamate a nella `QueryInterface` finestra di output.
 
@@ -77,7 +77,7 @@ Se una chiamata a ha `QueryInterface` esito negativo, la finestra di output visu
 
 *Nome interfaccia* - `failed`
 
-## <a name="atlassert"></a><a name="atlassert"></a>ATLASSERT
+## <a name="atlassert"></a><a name="atlassert"></a> ATLASSERT
 
 La macro ATLASSERT esegue la stessa funzionalità della macro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) trovata nella libreria di runtime del linguaggio C.
 
@@ -98,7 +98,7 @@ Nelle build di debug, ATLASSERT valuta *BooleanExpression* e genera un report di
 
 **Intestazione:** atldef. h
 
-## <a name="atlensure"></a><a name="atlensure"></a>ATLENSURE
+## <a name="atlensure"></a><a name="atlensure"></a> ATLENSURE
 
 Questa macro viene utilizzata per convalidare i parametri passati a una funzione.
 
@@ -135,7 +135,7 @@ La differenza tra ATLENSURE e ATLASSERT è che ATLENSURE genera un'eccezione nel
 
 **Intestazione:** AFX. h
 
-## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>ATLTRACENOTIMPL
+## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a> ATLTRACENOTIMPL
 
 Nelle build di debug di ATL Invia la stringa " *funcname* non è implementato" al dispositivo di dump e restituisce E_NOTIMPL.
 
@@ -160,7 +160,7 @@ Nelle build di rilascio, restituisce semplicemente E_NOTIMPL.
 
 **Intestazione:** ATLTRACE. h
 
-## <a name="atltrace"></a><a name="atltrace"></a>ATLTRACE
+## <a name="atltrace"></a><a name="atltrace"></a> ATLTRACE
 
 Segnala gli avvisi a un dispositivo di output, ad esempio la finestra del debugger, in base ai flag e ai livelli indicati. Incluso per la compatibilità con le versioni precedenti.
 
@@ -191,7 +191,7 @@ in Stringa formattata da inviare al dispositivo di dump.
 
 Per una descrizione di ATLTRACE, vedere [ATLTRACE2](#atltrace2) . ATLTRACE e ATLTRACE2 hanno lo stesso comportamento, ATLTRACE è incluso per la compatibilità con le versioni precedenti.
 
-## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
+## <a name="atltrace2"></a><a name="atltrace2"></a> ATLTRACE2
 
 Segnala gli avvisi a un dispositivo di output, ad esempio la finestra del debugger, in base ai flag e ai livelli indicati.
 

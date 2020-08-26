@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: e7da3463b142fbca83387e52394ee33f42636124
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27a9a2f5a05535bd11b8091059e5be277b9692c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213788"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832919"
 ---
 # <a name="vi_progid"></a>vi_progid
 
@@ -46,9 +46,7 @@ Vedere l'esempio di [coclasse](coclass.md) per un uso di esempio di **vi_progid*
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|

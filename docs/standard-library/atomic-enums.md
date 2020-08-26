@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: f41c5b238f74e85bc18e9ff5c3aa6a0050fe27e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d8a4e9196e27933c75a32c256114e968b55678a6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376915"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834895"
 ---
 # <a name="ltatomicgt-enums"></a>Enumerazioni &lt;atomic&gt;
 
-## <a name="memory_order-enum"></a><a name="memory_order_enum"></a>Enum memory_order
+## <a name="memory_order-enum"></a><a name="memory_order_enum"></a> Enumerazione memory_order
 
 Fornisce nomi simbolici per le operazioni di sincronizzazione sulle posizioni di memoria. Queste operazioni influiscono sul modo in cui gli assegnamenti in un thread diventano visibili in un altro.
 
@@ -30,9 +30,9 @@ typedef enum memory_order {
 } memory_order;
 ```
 
-### <a name="enumeration-members"></a>Membri di enumerazione
+### <a name="enumeration-members"></a>Membri dell'enumerazione
 
-|||
+|Nome|Descrizione|
 |-|-|
 |`memory_order_relaxed`|Nessun ordinamento necessario.|
 |`memory_order_consume`|Un'operazione di caricamento funge da operazione di utilizzo sulla posizione di memoria.|
@@ -43,4 +43,4 @@ typedef enum memory_order {
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>atomica](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

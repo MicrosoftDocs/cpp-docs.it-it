@@ -98,12 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: bf59438ca30462866cd90e281903356b863e36aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec53e2a907cd38b262ec305d10ae63ad746f29b5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833335"
 ---
 # <a name="list-class"></a>Classe list
 
@@ -138,13 +138,13 @@ Includere l'intestazione standard della libreria standard C++ \<list> per defini
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[list](#list)|Costruisce un elenco di dimensioni specifiche, con elementi di un valore specifico, con un oggetto `allocator` specifico o come copia di un altro elenco.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per un oggetto elenco.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un **`const`** elemento in un elenco.|
@@ -161,7 +161,7 @@ Includere l'intestazione standard della libreria standard C++ \<list> per defini
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[assign](#assign)|Elimina elementi da un elenco e copia un nuovo set di elementi nell'elenco di destinazione.|
 |[Indietro](#back)|Restituisce un riferimento all'ultimo elemento di un elenco.|
@@ -200,15 +200,15 @@ Includere l'intestazione standard della libreria standard C++ \<list> per defini
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore =](#op_eq)|Sostituisce gli elementi dell'elenco con una copia di un altro elenco.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**:\<list>
+**Intestazione**: \<list>
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Tipo che rappresenta la classe allocator per un oggetto elenco.
 
@@ -218,13 +218,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-`allocator_type`è un sinonimo del parametro di modello *allocator*.
+`allocator_type` è un sinonimo del parametro di modello *allocator*.
 
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo a [get_allocator](#get_allocator).
 
-## <a name="assign"></a><a name="assign"></a>assegnare
+## <a name="assign"></a><a name="assign"></a> assegnare
 
 Elimina elementi da un elenco e copia un nuovo set di elementi in un elenco specificato.
 
@@ -313,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a><a name="back"></a>Indietro
+## <a name="back"></a><a name="back"></a> Indietro
 
 Restituisce un riferimento all'ultimo elemento di un elenco.
 
@@ -363,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a>iniziare
+## <a name="begin"></a><a name="begin"></a> iniziare
 
 Restituisce un iteratore che punta al primo elemento di un elenco.
 
@@ -416,7 +416,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Restituisce un **`const`** iteratore che punta al primo elemento nell'intervallo.
 
@@ -442,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Restituisce un **`const`** iteratore che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
@@ -470,7 +470,7 @@ auto i2 = Container.cend();
 
 Non è consigliabile dereferenziare il valore restituito da `cend`.
 
-## <a name="clear"></a><a name="clear"></a>deselezionare
+## <a name="clear"></a><a name="clear"></a> deselezionare
 
 Cancella tutti gli elementi di un elenco.
 
@@ -505,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere un **`const`** elemento in un elenco.
 
@@ -521,7 +521,7 @@ Un tipo `const_iterator` non può essere usato per modificare il valore di un el
 
 Vedere l'esempio per [back](#back).
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Fornisce un puntatore a un **`const`** elemento in un elenco.
 
@@ -535,7 +535,7 @@ Un tipo `const_pointer` non può essere usato per modificare il valore di un ele
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto list.
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Tipo che fornisce un riferimento a un **`const`** elemento archiviato in un elenco per la lettura e l'esecuzione di **`const`** operazioni.
 
@@ -579,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi **`const`** elemento di un elenco.
 
@@ -595,7 +595,7 @@ Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e 
 
 Vedere l'esempio per [rbegin](#rbegin).
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Restituisce un iteratore const che punta al primo elemento di un elenco invertito.
 
@@ -639,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento di un elenco invertito.
 
@@ -690,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Tipo Signed Integer che può essere usato per rappresentare il numero di elementi di un elenco in un intervallo compreso tra gli elementi a cui puntano gli iteratori.
 
@@ -747,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Inserisce un elemento costruito sul posto in un elenco in una posizione specificata.
 
@@ -791,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 Aggiunge un elemento costruito sul posto alla fine di un elenco.
 
@@ -832,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 Aggiunge un elemento costruito sul posto all'inizio di un elenco.
 
@@ -873,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a><a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a> vuoto
 
 Verifica se un elenco è vuoto.
 
@@ -910,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>fine
+## <a name="end"></a><a name="end"></a> fine
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un elenco.
 
@@ -925,7 +925,7 @@ Iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento 
 
 ### <a name="remarks"></a>Osservazioni
 
-`end`viene usato per verificare se un iteratore ha raggiunto la fine del relativo elenco.
+`end` viene usato per verificare se un iteratore ha raggiunto la fine del relativo elenco.
 
 ### <a name="example"></a>Esempio
 
@@ -970,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a><a name="erase"></a>cancellare
+## <a name="erase"></a><a name="erase"></a> cancellare
 
 Rimuove un elemento o un intervallo di elementi di un elenco dalle posizioni specificate.
 
@@ -1045,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a><a name="front"></a>fronte
+## <a name="front"></a><a name="front"></a> fronte
 
 Restituisce un riferimento al primo elemento di un elenco.
 
@@ -1092,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Restituisce una copia dell'oggetto allocator usato per costruire un elenco.
 
@@ -1132,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>inserire
+## <a name="insert"></a><a name="insert"></a> inserire
 
 Inserisce un elemento, un numero di elementi o un intervallo di elementi in un elenco in una posizione specificata.
 
@@ -1238,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>iteratore
+## <a name="iterator"></a><a name="iterator"></a> iteratore
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un elenco.
 
@@ -1254,7 +1254,7 @@ Un tipo `iterator` può essere usato per modificare il valore di un elemento.
 
 Vedere l'esempio per [begin](#begin).
 
-## <a name="list"></a><a name="list"></a>elenco
+## <a name="list"></a><a name="list"></a> elenco
 
 Costruisce un elenco di dimensioni specifiche, con elementi di un valore specifico, con un allocatore specifico oppure come copia di tutto o parte di un altro elenco.
 
@@ -1412,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Restituisce la lunghezza massima di un elenco.
 
@@ -1443,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a><a name="merge"></a>merge
+## <a name="merge"></a><a name="merge"></a> merge
 
 Rimuove gli elementi dall'elenco di argomenti, li inserisce nell'elenco di destinazione e ordina il nuovo set combinato di elementi in ordine crescente o in un altro ordine specificato.
 
@@ -1527,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Sostituisce gli elementi dell'elenco con una copia di un altro elenco.
 
@@ -1600,7 +1600,7 @@ Un tipo `pointer` può essere usato per modificare il valore di un elemento.
 
 Nella maggior parte dei casi, è consigliabile usare un tipo [iterator](#iterator) per accedere agli elementi di un oggetto list.
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 Rimuove l'elemento alla fine di un elenco.
 
@@ -1642,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 Elimina l'elemento all'inizio di un elenco.
 
@@ -1684,7 +1684,7 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 Aggiunge un elemento alla fine di un elenco.
 
@@ -1739,7 +1739,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 Aggiunge un elemento all'inizio di un elenco.
 
@@ -1794,7 +1794,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Restituisce un iteratore che indirizza al primo elemento di una lista invertita.
 
@@ -1865,7 +1865,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a><a name="reference"></a>riferimento
+## <a name="reference"></a><a name="reference"></a> riferimento
 
 Tipo che fornisce un riferimento a un elemento archiviato in un elenco.
 
@@ -1901,7 +1901,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a><a name="remove"></a>rimuovere
+## <a name="remove"></a><a name="remove"></a> rimuovere
 
 Cancella gli elementi in un elenco che corrispondono a un valore specificato.
 
@@ -1958,7 +1958,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a><a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a> remove_if
 
 Cancella da un elenco gli elementi per cui è soddisfatto un predicato specificato.
 
@@ -2023,7 +2023,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un oggetto list invertito.
 
@@ -2109,7 +2109,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a><a name="resize"></a>ridimensionare
+## <a name="resize"></a><a name="resize"></a> ridimensionare
 
 Specifica una nuova dimensione per un elenco.
 
@@ -2176,7 +2176,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a><a name="reverse"></a>inverso
+## <a name="reverse"></a><a name="reverse"></a> inverso
 
 Inverte l'ordine in cui gli elementi sono disposti in un elenco.
 
@@ -2220,7 +2220,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un elenco invertito.
 
@@ -2236,7 +2236,7 @@ Un tipo `reverse_iterator` viene usato per scorrere l'elenco in ordine inverso.
 
 Vedere l'esempio per [rbegin](#rbegin).
 
-## <a name="size"></a><a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a> dimensioni
 
 Restituisce il numero di elementi in un elenco
 
@@ -2277,7 +2277,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Tipo che conta il numero di elementi in un elenco.
 
@@ -2289,7 +2289,7 @@ typedef typename Allocator::size_type size_type;
 
 Vedere l'esempio per [size](#size).
 
-## <a name="sort"></a><a name="sort"></a>ordinamento
+## <a name="sort"></a><a name="sort"></a> ordinamento
 
 Dispone gli elementi di un elenco in ordine crescente o in relazione a un altro ordine definito dall'utente.
 
@@ -2354,7 +2354,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a><a name="splice"></a>giuntura
+## <a name="splice"></a><a name="splice"></a> giuntura
 
 Rimuove elementi da un elenco di origine e li inserisce in un elenco di destinazione.
 
@@ -2477,7 +2477,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia gli elementi di due elenchi.
 
@@ -2542,7 +2542,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a><a name="unique"></a>unico
+## <a name="unique"></a><a name="unique"></a> unico
 
 Rimuove gli elementi duplicati adiacenti o gli elementi adiacenti che soddisfano un altro predicato binario da un elenco.
 
@@ -2615,7 +2615,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Tipo che rappresenta il tipo di dati archiviati in un elenco.
 

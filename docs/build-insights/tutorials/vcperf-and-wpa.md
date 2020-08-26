@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
-ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
+ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865052"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833400"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Esercitazione: vcperf e Windows Performance Analyzer
 
@@ -23,7 +23,7 @@ Gli strumenti di build Insights per C++ sono disponibili in Visual Studio 2019. 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-In questa esercitazione verrà illustrato come utilizzare *vcperf. exe* per raccogliere una traccia della compilazione C++. Si apprenderà anche come visualizzare questa traccia in Windows Performance Analyzer.
+In questa esercitazione si apprenderà come usare *vcperf.exe* per raccogliere una traccia della compilazione C++. Si apprenderà anche come visualizzare questa traccia in Windows Performance Analyzer.
 
 ## <a name="step-1-install-and-configure-windows-performance-analyzer"></a>Passaggio 1: installare e configurare Windows Performance Analyzer
 
@@ -35,7 +35,7 @@ Una versione di WPA che supporta Visual C++ Build Insights è attualmente dispon
 
 Nota: per l'installazione di Windows Performance Analyzer è necessario Windows 8 o versione successiva.
 
-1. Passare alla [pagina di download](https://docs.microsoft.com/windows-hardware/get-started/adk-install)di Windows ADK.
+1. Passare alla [pagina di download](/windows-hardware/get-started/adk-install)di Windows ADK.
 
 1. Scaricare e installare la versione più recente di Windows ADK.
 
@@ -43,7 +43,7 @@ Nota: per l'installazione di Windows Performance Analyzer è necessario Windows 
 
    ![Schermata di selezione delle funzionalità del programma di installazione di Windows Performance Analyzer](media/wpa-installation.png)
 
-### <a name="to-configure-wpa"></a><a name="configuration-steps"></a>Per configurare WPA
+### <a name="to-configure-wpa"></a><a name="configuration-steps"></a> Per configurare WPA
 
 Per la visualizzazione delle tracce di build Insights C++ in WPA è necessario un componente aggiuntivo speciale. Per installarlo, attenersi alla procedura seguente:
 
@@ -55,14 +55,14 @@ Per la visualizzazione delle tracce di build Insights C++ in WPA è necessario u
     1. In Visual Studio 2019 versione 16,6 e successive questo file è disponibile qui: `C:\Program Files (x86)\Microsoft Visual Studio\2019\{Edition}\VC\Tools\MSVC\{Version}\bin\Host{Architecture}\{Architecture}` .
     1. Nel pacchetto NuGet di build Insights per C++, questo file è disponibile qui: `wpa\{Architecture}` .
     1. Nei percorsi precedenti sostituire le variabili racchiuse tra parentesi graffe, come indicato di seguito:
-        1. `{Edition}`è l'edizione di Visual Studio 2019, ad esempio community, Professional o Enterprise.
-        1. `{Version}`è la versione di MSVC. Scegliere quello più elevato disponibile.
+        1. `{Edition}` è l'edizione di Visual Studio 2019, ad esempio community, Professional o Enterprise.
+        1. `{Version}` è la versione di MSVC. Scegliere quello più elevato disponibile.
         1. `{Architecture}`: scegliere `x64` se si dispone di una versione a 64 bit di Windows. In caso contrario, scegliere `x86` .
     1. La directory di installazione di WPA è in genere: `C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit` .
 
 1. Nella directory di installazione di WPA aprire il `perfcore.ini` file e aggiungere una voce per `perf_msvcbuildinsights.dll` .
 
-## <a name="step-2-trace-your-build-with-vcperfexe"></a>Passaggio 2: tracciare la compilazione con vcperf. exe
+## <a name="step-2-trace-your-build-with-vcperfexe"></a>Passaggio 2: tracciare la compilazione con vcperf.exe
 
 Per visualizzare i dati di build Insights in C++, è necessario prima raccoglierli in un file di traccia attenendosi alla procedura seguente:
 
@@ -71,7 +71,7 @@ Per visualizzare i dati di build Insights in C++, è necessario prima raccoglier
 
 1. Nella finestra del prompt dei comandi immettere il comando seguente:
 
-   **vcperf. exe/Start _sessionname_**
+   **vcperf.exe/Start _sessionname_**
 
    Scegliere un nome di sessione da ricordare per *sessionname*.
 
@@ -79,29 +79,29 @@ Per visualizzare i dati di build Insights in C++, è necessario prima raccoglier
 
 1. Nella finestra del prompt dei comandi immettere il comando seguente:
 
-   **vcperf. exe/Stop _sessionname_ _TraceFile. etl_**
+   **vcperf.exe/Stop _sessionname_ _TraceFile. etl_**
 
    Usare lo stesso nome di sessione scelto per *sessionname* prima. Scegliere un nome appropriato per il file di traccia *TraceFile. etl* .
 
-Di seguito viene illustrata una tipica sequenza di comandi *vcperf. exe* in una finestra del prompt dei comandi per gli sviluppatori:
+Di seguito è riportato un esempio di una tipica sequenza di comandi di *vcperf.exe* in una finestra del prompt dei comandi per gli sviluppatori:
 
-![Uno scenario semplice di utilizzo di vcperf. exe](media/vcperf-simple-usage.png)
+![Uno scenario semplice di utilizzo di vcperf.exe](media/vcperf-simple-usage.png)
 
-### <a name="important-notes-about-vcperfexe"></a>Note importanti su vcperf. exe
+### <a name="important-notes-about-vcperfexe"></a>Note importanti sulle vcperf.exe
 
-- I privilegi di amministratore sono necessari per avviare o arrestare una traccia *vcperf. exe* . Usare una finestra del prompt dei comandi per gli sviluppatori aperta usando **Esegui come amministratore**.
+- Per avviare o arrestare un *vcperf.exe* traccia sono necessari privilegi di amministratore. Usare una finestra del prompt dei comandi per gli sviluppatori aperta usando **Esegui come amministratore**.
 
 - È possibile eseguire una sola sessione di traccia per volta in un computer.
 
 - Assicurarsi di ricordare il nome della sessione usato per avviare la traccia. Può essere problematico arrestare una sessione in esecuzione senza conoscerne il nome.
 
-- Analogamente a *CL.* exe e *link. exe*, l'utilità da riga di comando *vcperf. exe* è inclusa in un'installazione MSVC. Per ottenere questo componente non sono necessari passaggi aggiuntivi.
+- Proprio come *cl.exe* e *link.exe*, l'utilità da riga di comando *vcperf.exe* è inclusa in un'installazione di MSVC. Per ottenere questo componente non sono necessari passaggi aggiuntivi.
 
-- *vcperf. exe* raccoglie informazioni su tutti gli strumenti MSVC in esecuzione nel sistema. Di conseguenza, non è necessario avviare la compilazione dallo stesso prompt dei comandi usato per raccogliere la traccia. È possibile compilare il progetto da un prompt dei comandi diverso o anche in Visual Studio.
+- *vcperf.exe* raccoglie informazioni su tutti gli strumenti di MSVC in esecuzione nel sistema. Di conseguenza, non è necessario avviare la compilazione dallo stesso prompt dei comandi usato per raccogliere la traccia. È possibile compilare il progetto da un prompt dei comandi diverso o anche in Visual Studio.
 
-### <a name="vcperfexe-is-open-source"></a>vcperf. exe è open source
+### <a name="vcperfexe-is-open-source"></a>vcperf.exe è open source
 
-Se si vuole compilare ed eseguire la propria versione di *vcperf. exe*, è possibile clonarlo dal [repository GitHub vcperf](https://github.com/microsoft/vcperf).
+Se si vuole compilare ed eseguire la propria versione di *vcperf.exe*, è possibile clonarla dal [repository GitHub vcperf](https://github.com/microsoft/vcperf).
 
 ## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>Passaggio 3: visualizzare la traccia in Windows Performance Analyzer
 
@@ -124,7 +124,7 @@ Altre visualizzazioni sono disponibili nel pannello Graph Explorer. Trascinarli 
 Informazioni sulle operazioni WPA comuni che consentono di analizzare le tracce di compilazione.
 
 [Informazioni di riferimento: comandi vcperf](/cpp/build-insights/reference/vcperf-commands)\
-Il riferimento al comando *vcperf. exe* elenca tutte le opzioni di comando disponibili.
+Il riferimento al comando *vcperf.exe* elenca tutte le opzioni di comando disponibili.
 
 [Informazioni di riferimento: visualizzazioni di Windows Performance Analyzer](/cpp/build-insights/reference/wpa-views)\
 Vedere questo articolo per informazioni dettagliate sulle visualizzazioni di build Insights di C++ in WPA.

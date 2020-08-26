@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b515578e658d658722f92e48a7ac5ab78727c465
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690048"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834947"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
@@ -19,18 +19,18 @@ Definisce la **matrice** del modello della classe del contenitore e diversi mode
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<array>
+**Intestazione:**\<array>
 
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Anche la libreria \<array > USA l'istruzione `#include <initializer_list>`.
+> La \<array> libreria usa anche l' `#include <initializer_list>` istruzione.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Archivia una sequenza di elementi a lunghezza fissa.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Esegue il wrapping del tipo di un elemento di matrice.|
@@ -38,21 +38,21 @@ Definisce la **matrice** del modello della classe del contenitore e diversi mode
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[operator==](../standard-library/array-operators.md#op_eq_eq)|confronto tra matrici, uguale|
-|[operator!=](../standard-library/array-operators.md#op_neq)|confronto tra matrici, diverso|
-|[operator\<](../standard-library/array-operators.md#op_lt)|confronto tra matrici, minore di|
-|[operator>=](../standard-library/array-operators.md#op_gt_eq)|confronto tra matrici, maggiore di o uguale|
-|[operator>](../standard-library/array-operators.md#op_gt)|confronto tra matrici, maggiore di|
-|[operator<=](../standard-library/array-operators.md#op_lt_eq)|confronto tra matrici, minore di o uguale|
+|[operatore = =](../standard-library/array-operators.md#op_eq_eq)|confronto tra matrici, uguale|
+|[operatore! =](../standard-library/array-operators.md#op_neq)|confronto tra matrici, diverso|
+|[operatore\<](../standard-library/array-operators.md#op_lt)|confronto tra matrici, minore di|
+|[operatore>=](../standard-library/array-operators.md#op_gt_eq)|confronto tra matrici, maggiore di o uguale|
+|[operatore>](../standard-library/array-operators.md#op_gt)|confronto tra matrici, maggiore di|
+|[operatore<=](../standard-library/array-operators.md#op_lt_eq)|confronto tra matrici, minore di o uguale|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Ottenere l'elemento di matrice specificato.|
-|[swap](../standard-library/array-functions.md#swap)|Scambia il contenuto di una matrice con il contenuto di un'altra matrice.|
+|[scambio](../standard-library/array-functions.md#swap)|Scambia il contenuto di una matrice con il contenuto di un'altra matrice.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232937"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832607"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -68,13 +68,13 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[coda](#queue)|Costruisce un `queue` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da `queue`.|
 |[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `queue`.|
@@ -82,7 +82,7 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Indietro](#back)|Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine della `queue`.|
 |[empty](#empty)|Verifica se `queue` è vuoto.|
@@ -91,7 +91,7 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 |[push](#push)|Aggiunge un elemento alla fine dell'oggetto `queue`.|
 |[size](#size)|Restituisce il numero di elementi nel `queue`.|
 
-## <a name="back"></a><a name="back"></a>Indietro
+## <a name="back"></a><a name="back"></a> Indietro
 
 Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine dell'oggetto queue.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Tipo che fornisce il contenitore di base da adattare.
 
@@ -155,7 +155,7 @@ Per altre informazioni su `Container`, vedere la sezione Note dell'argomento [Cl
 
 Vedere l'esempio relativo a [queue](#queue) per indicazioni su come dichiarare e usare `container_type`.
 
-## <a name="empty"></a><a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a> vuoto
 
 Verifica se un oggetto queue è vuoto.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>fronte
+## <a name="front"></a><a name="front"></a> fronte
 
 Restituisce un riferimento al primo elemento all'inizio dell'oggetto queue.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>popup
+## <a name="pop"></a><a name="pop"></a> popup
 
 Rimuove un elemento dall'inizio dell'oggetto queue.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>spingere
+## <a name="push"></a><a name="push"></a> spingere
 
 Aggiunge un elemento alla fine dell'oggetto queue.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a> dimensioni
 
 Restituisce il numero di elementi dell'oggetto queue.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un oggetto queue.
 
@@ -482,7 +482,7 @@ Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'ogg
 
 Vedere l'esempio relativo a [queue::front](#front) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto queue.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 7b1cea29a782f291f1e85f7a143730825958d91b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229779"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833348"
 ---
 # <a name="optimization-best-practices"></a>Procedure consigliate di ottimizzazione
 
@@ -40,7 +40,7 @@ Si consiglia inoltre di generare i simboli di debug, anche con le build di versi
 
 L' **`/Op`** opzione del compilatore è stata rimossa e sono state aggiunte le quattro opzioni del compilatore seguenti che gestiscono le ottimizzazioni a virgola mobile:
 
-|||
+|Opzione|Descrizione|
 |-|-|
 |**`/fp:precise`**|Si tratta dell'indicazione predefinita e deve essere usata nella maggior parte dei casi.|
 |**`/fp:fast`**|Consigliato se le prestazioni sono di importanza fondamentale, ad esempio nei giochi. Questo comporterà le prestazioni più veloci.|
@@ -87,7 +87,7 @@ Per altre informazioni, vedere [`optimize`](../preprocessor/optimize.md).
 
 L'incorporamento è una delle ottimizzazioni più importanti eseguite dal compilatore e in questo caso si parla di un paio di pragma che consentono di modificare questo comportamento.
 
-`#pragma inline_recursion`è utile per specificare se si desidera che l'applicazione sia in grado di incorporare una chiamata ricorsiva. Per impostazione predefinita è disattivato. Per la ricorsione superficiale di funzioni di piccole dimensioni è possibile attivare questa funzionalità. Per altre informazioni, vedere [`inline_recursion`](../preprocessor/inline-recursion.md).
+`#pragma inline_recursion` è utile per specificare se si desidera che l'applicazione sia in grado di incorporare una chiamata ricorsiva. Per impostazione predefinita è disattivato. Per la ricorsione superficiale di funzioni di piccole dimensioni è possibile attivare questa funzionalità. Per altre informazioni, vedere [`inline_recursion`](../preprocessor/inline-recursion.md).
 
 Un altro pragma utile per limitare la profondità dell'incorporamento è `#pragma inline_depth` . Questa operazione è in genere utile nelle situazioni in cui si sta tentando di limitare le dimensioni di un programma o di una funzione. Per altre informazioni, vedere [`inline_depth`](../preprocessor/inline-depth.md).
 

@@ -1,5 +1,5 @@
 ---
-title: CComTearOffObject (classe)
+title: Classe CComTearOffObject
 ms.date: 11/04/2016
 f1_keywords:
 - CComTearOffObject
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: de7528d3972991c233ee4b9037f609b89d0f7434
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3eee1d33d5eded75d8805584a24e6b6f396a8369
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327315"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833621"
 ---
-# <a name="ccomtearoffobject-class"></a>CComTearOffObject (classe)
+# <a name="ccomtearoffobject-class"></a>Classe CComTearOffObject
 
 Questa classe implementa un'interfaccia tear-off.
 
@@ -36,9 +36,9 @@ class CComTearOffObject : public Base
 #### <a name="parameters"></a>Parametri
 
 *Base*<br/>
-La classe tear-off, `CComTearOffObjectBase` derivata da e le interfacce che si desidera che l'oggetto tear-off per supportare.
+La classe tear-off, derivata da `CComTearOffObjectBase` e le interfacce desiderate per il supporto dell'oggetto tear-off.
 
-ATL implementa le interfacce tear-off in `CComTearOffObjectBase` due fasi: `QueryInterface`i `CComTearOffObject` metodi gestiscono il conteggio dei riferimenti e , mentre implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown).
+ATL implementa le interfacce di strappo in due fasi: i `CComTearOffObjectBase` metodi gestiscono il conteggio dei riferimenti e `QueryInterface` , mentre `CComTearOffObject` implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown).
 
 ## <a name="members"></a>Membri
 
@@ -46,38 +46,38 @@ ATL implementa le interfacce tear-off in `CComTearOffObjectBase` due fasi: `Quer
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Costruttore.|
-|[Oggetto CComTearOffObject::CComTearOffObject](#dtor)|Distruttore.|
+|[CComTearOffObject:: CComTearOffObject](#ccomtearoffobject)|Costruttore.|
+|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComTearOffObject::AddRef](#addref)|Incrementa il conteggio `CComTearOffObject` dei riferimenti per un oggetto.|
-|[CComTearOffObject::QueryInterface](#queryinterface)|Restituisce un puntatore all'interfaccia richiesta nella classe tear-off o nella classe proprietaria.|
-|[CComTearOffObject::Release](#release)|Decrementa il conteggio `CComTearOffObject` dei riferimenti per un oggetto e lo distrugge.|
+|[CComTearOffObject:: AddRef](#addref)|Incrementa il conteggio dei riferimenti per un `CComTearOffObject` oggetto.|
+|[CComTearOffObject:: QueryInterface](#queryinterface)|Restituisce un puntatore all'interfaccia richiesta nella classe tear-off o nel proprietario.|
+|[CComTearOffObject:: Release](#release)|Decrementa il conteggio dei riferimenti per un `CComTearOffObject` oggetto e lo elimina.|
 
 ### <a name="ccomtearoffobjectbase-methods"></a>Metodi CComTearOffObjectBase
 
-|||
+|Funzione|Descrizione|
 |-|-|
 |[CComTearOffObjectBase](#ccomtearoffobjectbase)|Costruttore.|
 
 ### <a name="ccomtearoffobjectbase-data-members"></a>Membri dati CComTearOffObjectBase
 
-|||
+|Membro dei dati|Descrizione|
 |-|-|
-|[m_pOwner](#m_powner)|Puntatore a `CComObject` un derivato dalla classe proprietaria.|
+|[m_pOwner](#m_powner)|Puntatore a un oggetto `CComObject` derivato dalla classe Owner.|
 
 ## <a name="remarks"></a>Osservazioni
 
-`CComTearOffObject`implementa un'interfaccia tear-off come oggetto separato di cui viene creata un'istanza solo quando viene eseguita una query su tale interfaccia. Lo strappo viene eliminato quando il conteggio dei riferimenti diventa zero. In genere, si compila un'interfaccia tear-off per un'interfaccia che viene utilizzata raramente, poiché l'utilizzo di un tear-off salva un puntatore vtable in tutte le istanze dell'oggetto principale.
+`CComTearOffObject` implementa un'interfaccia di strappo come oggetto separato di cui viene creata un'istanza solo quando viene eseguita una query su tale interfaccia. Lo strappo viene eliminato quando il conteggio dei riferimenti diventa zero. In genere, si compila un'interfaccia di strappo per un'interfaccia raramente utilizzata, poiché l'utilizzo di un tear-off salva un puntatore vtable in tutte le istanze dell'oggetto principale.
 
-È necessario derivare la classe `CComTearOffObjectBase` che implementa il tear-off da e da qualsiasi interfaccia si desidera che l'oggetto tear-off per supportare. `CComTearOffObjectBase`è templatized sulla classe proprietaria e sul modello di thread. La classe owner è la classe dell'oggetto per il quale viene implementato uno strappo. Se non si specifica un modello di thread, viene utilizzato il modello di thread predefinito.
+È necessario derivare la classe implementando l'oggetto tear-off da `CComTearOffObjectBase` e da qualsiasi interfaccia che si desidera venga supportata dall'oggetto tear-off. `CComTearOffObjectBase` è creato un modello sulla classe Owner e sul modello di thread. La classe Owner è la classe dell'oggetto per cui è in corso l'implementazione di un tear-off. Se non si specifica un modello di thread, viene utilizzato il modello di thread predefinito.
 
-È necessario creare una mappa COM per la classe tear-off. Quando ATL crea un'istanza del `CComTearOffObject<CYourTearOffClass>` tear-off, verrà creato o `CComCachedTearOffObject<CYourTearOffClass>`.
+È necessario creare una mappa COM per la classe tear-off. Quando ATL crea un'istanza dello strappo, creerà `CComTearOffObject<CYourTearOffClass>` o `CComCachedTearOffObject<CYourTearOffClass>` .
 
-Ad esempio, nell'esempio BEEPER, la `CBeeper2` classe è `CBeeper` la classe tear-off e la classe è la classe proprietaria:
+Nell'esempio BEEPer, ad esempio, la `CBeeper2` classe è la classe tear-off e la `CBeeper` classe è la classe Owner:
 
 [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]
 
@@ -89,11 +89,11 @@ Ad esempio, nell'esempio BEEPER, la `CBeeper2` classe è `CBeeper` la classe tea
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom.h
+**Intestazione:** atlcom. h
 
-## <a name="ccomtearoffobjectaddref"></a><a name="addref"></a>CComTearOffObject::AddRef
+## <a name="ccomtearoffobjectaddref"></a><a name="addref"></a> CComTearOffObject:: AddRef
 
-Incrementa di uno `CComTearOffObject` il conteggio dei riferimenti dell'oggetto.
+Incrementa di uno il conteggio dei riferimenti dell' `CComTearOffObject` oggetto.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -103,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Valore che può essere utile per la diagnostica e il test.
 
-## <a name="ccomtearoffobjectccomtearoffobject"></a><a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject
+## <a name="ccomtearoffobjectccomtearoffobject"></a><a name="ccomtearoffobject"></a> CComTearOffObject:: CComTearOffObject
 
 Costruttore.
 
@@ -113,14 +113,14 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*Pv*<br/>
-[in] Puntatore che verrà convertito in `CComObject<Owner>` un puntatore a un oggetto.
+*PV*<br/>
+in Puntatore che verrà convertito in un puntatore a un `CComObject<Owner>` oggetto.
 
 ### <a name="remarks"></a>Osservazioni
 
 Incrementa di uno il conteggio dei riferimenti del proprietario.
 
-## <a name="ccomtearoffobjectccomtearoffobject"></a><a name="dtor"></a>Oggetto CComTearOffObject::CComTearOffObject
+## <a name="ccomtearoffobjectccomtearoffobject"></a><a name="dtor"></a> CComTearOffObject:: ~ CComTearOffObject
 
 Distruttore.
 
@@ -130,9 +130,9 @@ Distruttore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Libera tutte le risorse allocate, chiama FinalRelease e decrementa il numero di blocchi del modulo.
+Libera tutte le risorse allocate, chiama FinalRelease e decrementa il conteggio dei blocchi del modulo.
 
-## <a name="ccomtearoffobjectccomtearoffobjectbase"></a><a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase
+## <a name="ccomtearoffobjectccomtearoffobjectbase"></a><a name="ccomtearoffobjectbase"></a> CComTearOffObject:: CComTearOffObjectBase
 
 Costruttore.
 
@@ -142,11 +142,11 @@ CComTearOffObjectBase();
 
 ### <a name="remarks"></a>Osservazioni
 
-Inizializza il [membro m_pOwner](#m_powner) su NULL.
+Inizializza il membro [m_pOwner](#m_powner) su null.
 
-## <a name="ccomtearoffobjectm_powner"></a><a name="m_powner"></a>CComTearOffObject::m_pOwner
+## <a name="ccomtearoffobjectm_powner"></a><a name="m_powner"></a> CComTearOffObject:: m_pOwner
 
-Puntatore a un oggetto [CComObject](../../atl/reference/ccomobject-class.md) derivato da *Owner*.
+Puntatore a un oggetto [CComObject](../../atl/reference/ccomobject-class.md) derivato dal *proprietario*.
 
 ```
 CComObject<Owner>* m_pOwner;
@@ -155,13 +155,13 @@ CComObject<Owner>* m_pOwner;
 ### <a name="parameters"></a>Parametri
 
 *Proprietario*<br/>
-[in] Classe per la quale viene implementato uno strappo.
+in Classe per la quale è in corso l'implementazione di un tear-off.
 
 ### <a name="remarks"></a>Osservazioni
 
 Il puntatore viene inizializzato su NULL durante la costruzione.
 
-## <a name="ccomtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComTearOffObject::QueryInterface
+## <a name="ccomtearoffobjectqueryinterface"></a><a name="queryinterface"></a> CComTearOffObject:: QueryInterface
 
 Recupera un puntatore all'interfaccia richiesta.
 
@@ -171,11 +171,11 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*Iid*<br/>
-[in] IID dell'interfaccia richiesta.
+*IID*<br/>
+in IID dell'interfaccia richiesta.
 
-*Oggetto ppv*<br/>
-[fuori] Puntatore al puntatore a interfaccia identificato da *iid*o NULL se l'interfaccia non viene trovata.
+*ppvObject*<br/>
+out Puntatore al puntatore a interfaccia identificato da *IID*oppure null se l'interfaccia non viene trovata.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -183,11 +183,11 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Esegue prima una query per le interfacce sulla classe tear-off. Se l'interfaccia non è presente, esegue una query per l'interfaccia sull'oggetto proprietario. Se l'interfaccia `IUnknown`richiesta `IUnknown` è , restituisce il valore del proprietario.
+Esegue prima una query per le interfacce della classe tear-off. Se l'interfaccia non è presente, esegue una query per l'interfaccia nell'oggetto proprietario. Se l'interfaccia richiesta è `IUnknown` , restituisce l'oggetto `IUnknown` del proprietario.
 
-## <a name="ccomtearoffobjectrelease"></a><a name="release"></a>CComTearOffObject::Release
+## <a name="ccomtearoffobjectrelease"></a><a name="release"></a> CComTearOffObject:: Release
 
-Decrementa il conteggio dei riferimenti di uno e, se `CComTearOffObject`il conteggio dei riferimenti è zero, elimina il valore di .
+Decrementa il conteggio dei riferimenti di uno e, se il conteggio dei riferimenti è zero, Elimina `CComTearOffObject` .
 
 ```
 STDMETHOD_ULONG Release();
@@ -195,9 +195,9 @@ STDMETHOD_ULONG Release();
 
 ### <a name="return-value"></a>Valore restituito
 
-Nelle compilazioni non di debug, restituisce sempre zero. Nelle build di debug restituisce un valore che può essere utile per la diagnostica o il test.
+Nelle compilazioni non di debug restituisce sempre zero. Nelle build di debug restituisce un valore che può essere utile per la diagnostica o il test.
 
 ## <a name="see-also"></a>Vedere anche
 
-[CComCachedTearOffObject (classe)](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
+[Classe CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

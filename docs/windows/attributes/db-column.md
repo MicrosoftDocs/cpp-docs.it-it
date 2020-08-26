@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: b78fb081895b7a3e8f0e266810cd19d1b2792240
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222147"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833115"
 ---
 # <a name="db_column"></a>db_column
 
@@ -100,9 +100,7 @@ class CProducts {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , Member, metodo|
 |**Ripetibile**|No|

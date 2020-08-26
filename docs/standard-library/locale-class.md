@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224825"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833257"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -159,7 +159,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="static-functions"></a>Funzioni statiche
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[classico](#classic)|La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.|
 |[globale](#global)|Reimposta le impostazioni locali predefinite per il programma.|
@@ -186,7 +186,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 **Spazio dei nomi:** std
 
-## <a name="localecategory"></a><a name="category"></a>locale:: Category
+## <a name="localecategory"></a><a name="category"></a> locale:: Category
 
 Tipo Integer che fornisce i valori della maschera di bit per indicare le famiglie di facet standard.
 
@@ -226,7 +226,7 @@ Altri due valori utili sono:
 
 È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste costanti, come in `monetary` &#124; `time` .
 
-## <a name="localeclassic"></a><a name="classic"></a>impostazioni locali:: classico
+## <a name="localeclassic"></a><a name="classic"></a> impostazioni locali:: classico
 
 La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="localecombine"></a><a name="combine"></a>impostazioni locali:: combine
+## <a name="localecombine"></a><a name="combine"></a> impostazioni locali:: combine
 
 Inserisce un facet delle impostazioni locali specificate nelle impostazioni locali di destinazione.
 
@@ -329,7 +329,7 @@ int main() {
 }
 ```
 
-## <a name="facet-class"></a><a name="facet_class"></a>Classe facet
+## <a name="facet-class"></a><a name="facet_class"></a> Classe facet
 
 Classe utilizzata come classe base per tutti i facet delle impostazioni locali.
 
@@ -346,11 +346,11 @@ private:
 
 ### <a name="remarks"></a>Osservazioni
 
-Non è possibile copiare o assegnare un oggetto della classe `facet` . È possibile creare e distruggere oggetti derivati dalla classe `locale::facet` ma non oggetti della classe di base proper. In genere, si costruisce un oggetto `_Myfac` derivato da `facet` quando si costruisce un oggetto `locale` , come in`locale loc(locale::classic(), new _Myfac);`
+Non è possibile copiare o assegnare un oggetto della classe `facet` . È possibile creare e distruggere oggetti derivati dalla classe `locale::facet` ma non oggetti della classe di base proper. In genere, si costruisce un oggetto `_Myfac` derivato da `facet` quando si costruisce un oggetto `locale` , come in `locale loc(locale::classic(), new _Myfac);`
 
 In questi casi, il costruttore per la classe base `facet` deve avere un argomento *References* zero. Quando l'oggetto non è più necessario, viene eliminato, quindi si fornisce un argomento di *riferimento* diverso da zero solo nei rari casi in cui si assume la responsabilità della durata dell'oggetto.
 
-## <a name="localeglobal"></a><a name="global"></a>impostazioni locali:: Global
+## <a name="localeglobal"></a><a name="global"></a> impostazioni locali:: Global
 
 Reimposta le impostazioni locali predefinite per il programma. Questa chiamata influiscono sulle impostazioni locali globali per C e C++.
 
@@ -399,7 +399,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C
 ```
 
-## <a name="id-class"></a><a name="id_class"></a>Classe ID
+## <a name="id-class"></a><a name="id_class"></a> Classe ID
 
 La classe di membro fornisce un'identificazione dei facet univoca utilizzata come indice per cercare i facet nelle impostazioni locali.
 
@@ -416,7 +416,7 @@ class id
 
 La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Non è possibile copiare o assegnare un oggetto della classe `id` .
 
-## <a name="localelocale"></a><a name="locale"></a>impostazioni locali:: impostazioni locali
+## <a name="localelocale"></a><a name="locale"></a> impostazioni locali:: impostazioni locali
 
 Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali. Include anche un distruttore.
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="localename"></a><a name="name"></a>locale:: Name
+## <a name="localename"></a><a name="name"></a> locale:: Name
 
 Restituisce il nome delle impostazioni locali archiviate.
 
@@ -551,7 +551,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="localeoperator"></a><a name="op_eq"></a>locale:: operator =
+## <a name="localeoperator"></a><a name="op_eq"></a> locale:: operator =
 
 Assegna impostazioni locali.
 
@@ -559,7 +559,7 @@ Assegna impostazioni locali.
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="localeoperator"></a><a name="op_neq"></a>locale:: operator! =
+## <a name="localeoperator"></a><a name="op_neq"></a> locale:: operator! =
 
 Verifica l'ineguaglianza di due impostazioni locali.
 
@@ -620,7 +620,7 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="localeoperator"></a><a name="op_call"></a>locale:: operator ()
+## <a name="localeoperator"></a><a name="op_call"></a> locale:: operator ()
 
 Confronta due `basic_string` oggetti in base alle regole di confronto lessicografico definite dal facet std:: COLLATE delle impostazioni locali <charT> .
 
@@ -686,7 +686,7 @@ int main( )
 0
 ```
 
-## <a name="localeoperator"></a><a name="op_eq_eq"></a>locale:: operator = =
+## <a name="localeoperator"></a><a name="op_eq_eq"></a> locale:: operator = =
 
 Verifica l'uguaglianza di due impostazioni locali.
 

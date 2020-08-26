@@ -23,18 +23,18 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: a6b1ce33fe201338a0cc9356f2ef86e598629fd6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10d11b2b6e78220c1c562d100ee7886026a94b22
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833868"
 ---
 # <a name="atl-typedefs"></a>Typedef ATL
 
 Il Active Template Library include i typedef seguenti.
 
-|||
+|Typedef|Descrizione|
 |-|-|
 |[_ATL_BASE_MODULE](#_atl_base_module)|Definito come typedef basato su [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).|
 |[_ATL_COM_MODULE](#_atl_com_module)|Definito come typedef basato su [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).|
@@ -53,7 +53,7 @@ Il Active Template Library include i typedef seguenti.
 |[LPCURL](#lpcurl)|Puntatore a un oggetto [curl](../../atl/reference/curl-class.md) costante.|
 |[LPURL](#lpurl)|Puntatore a un oggetto [curl](../../atl/reference/curl-class.md) .|
 
-## <a name="_atl_base_module"></a><a name="_atl_base_module"></a>_ATL_BASE_MODULE
+## <a name="_atl_base_module"></a><a name="_atl_base_module"></a> _ATL_BASE_MODULE
 
 Definito come typedef basato su _ATL_BASE_MODULE70.
 
@@ -71,7 +71,7 @@ Le classi che fanno parte delle classi del modulo ATL 7,0 derivano dalla struttu
 
 **Intestazione:** atlcore. h
 
-## <a name="_atl_com_module"></a><a name="_atl_com_module"></a>_ATL_COM_MODULE
+## <a name="_atl_com_module"></a><a name="_atl_com_module"></a> _ATL_COM_MODULE
 
 Definito come typedef basato su _ATL_COM_MODULE70.
 
@@ -87,7 +87,7 @@ Utilizzato dai progetti ATL che utilizzano le funzionalità COM. Basato su [_ATL
 
 **Intestazione:** atlbase. h
 
-## <a name="_atl_module"></a><a name="_atl_module"></a>_ATL_MODULE
+## <a name="_atl_module"></a><a name="_atl_module"></a> _ATL_MODULE
 
 Definito come typedef basato su _ATL_MODULE70.
 
@@ -103,7 +103,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 
 Basato su [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).
 
-## <a name="_atl_win_module"></a><a name="_atl_win_module"></a>_ATL_WIN_MODULE
+## <a name="_atl_win_module"></a><a name="_atl_win_module"></a> _ATL_WIN_MODULE
 
 Definito come typedef basato su _ATL_WIN_MODULE70.
 
@@ -119,7 +119,7 @@ Utilizzato da qualsiasi progetto ATL che utilizza le funzionalità di windowing.
 
 **Intestazione:** atlbase. h
 
-## <a name="atl_url_port"></a><a name="atl_url_port"></a>ATL_URL_PORT
+## <a name="atl_url_port"></a><a name="atl_url_port"></a> ATL_URL_PORT
 
 Tipo usato da [curl](curl-class.md) per specificare un numero di porta.
 
@@ -131,7 +131,7 @@ typedef WORD ATL_URL_PORT;
 
 **Intestazione:** atlutil. h
 
-## <a name="ccomdispatchdriver"></a><a name="ccomdispatchdriver"></a>CComDispatchDriver
+## <a name="ccomdispatchdriver"></a><a name="ccomdispatchdriver"></a> CComDispatchDriver
 
 Questa classe gestisce i puntatori di interfaccia COM.
 
@@ -143,7 +143,7 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 
 **Intestazione:** atlbase. h
 
-## <a name="ccomglobalsthreadmodel"></a><a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel
+## <a name="ccomglobalsthreadmodel"></a><a name="ccomglobalsthreadmodel"></a> CComGlobalsThreadModel
 
 Chiama i metodi del modello di thread appropriato, indipendentemente dal modello di threading utilizzato.
 
@@ -164,7 +164,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 A seconda del modello di threading utilizzato dall'applicazione, il **`typedef`** nome `CComGlobalsThreadModel` fa riferimento a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Queste classi forniscono **`typedef`** nomi aggiuntivi per fare riferimento a una classe di sezione critica.
 
 > [!NOTE]
-> `CComGlobalsThreadModel`non fa riferimento alla classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
+> `CComGlobalsThreadModel` non fa riferimento alla classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
 `CComGlobalsThreadModel`L'utilizzo di consente di specificare una particolare classe del modello di Threading. Indipendentemente dal modello di threading utilizzato, verranno chiamati i metodi appropriati.
 
@@ -175,7 +175,7 @@ In aggiunta a `CComGlobalsThreadModel` , ATL fornisce il **`typedef`** nome [CCo
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ; M = `CComMultiThreadModel`
 
 `CComObjectThreadModel`Da usare all'interno di una singola classe di oggetti. Usare `CComGlobalsThreadModel` in un oggetto disponibile a livello globale per il programma o quando si vuole proteggere le risorse del modulo tra più thread.
 
@@ -183,7 +183,7 @@ S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
 
 **Intestazione:** atlbase. h
 
-## <a name="ccomobjectthreadmodel"></a><a name="ccomobjectthreadmodel"></a>CComObjectThreadModel
+## <a name="ccomobjectthreadmodel"></a><a name="ccomobjectthreadmodel"></a> CComObjectThreadModel
 
 Chiama i metodi del modello di thread appropriato, indipendentemente dal modello di threading utilizzato.
 
@@ -204,7 +204,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 A seconda del modello di threading utilizzato dall'applicazione, il **`typedef`** nome `CComObjectThreadModel` fa riferimento a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Queste classi forniscono **`typedef`** nomi aggiuntivi per fare riferimento a una classe di sezione critica.
 
 > [!NOTE]
-> `CComObjectThreadModel`non fa riferimento alla classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
+> `CComObjectThreadModel` non fa riferimento alla classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
 `CComObjectThreadModel`L'utilizzo di consente di specificare una particolare classe del modello di Threading. Indipendentemente dal modello di threading utilizzato, verranno chiamati i metodi appropriati.
 
@@ -215,7 +215,7 @@ In aggiunta a `CComObjectThreadModel` , ATL fornisce il **`typedef`** nome [CCom
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ; M = `CComMultiThreadModel`
 
 `CComObjectThreadModel`Da usare all'interno di una singola classe di oggetti. Usare `CComGlobalsThreadModel` in un oggetto disponibile a livello globale per il programma o quando si vuole proteggere le risorse del modulo tra più thread.
 
@@ -223,7 +223,7 @@ S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
 
 **Intestazione:** atlbase. h
 
-## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a>CContainedWindow
+## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a> CContainedWindow
 
 Questa classe è una specializzazione di `CContainedWindowT` .
 
@@ -237,9 +237,9 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 ### <a name="remarks"></a>Osservazioni
 
-`CContainedWindow`è una specializzazione di [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Se si desidera modificare la classe di base o i tratti, utilizzare `CContainedWindowT` direttamente.
+`CContainedWindow` è una specializzazione di [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Se si desidera modificare la classe di base o i tratti, utilizzare `CContainedWindowT` direttamente.
 
-## <a name="cpath"></a><a name="cpath"></a>CPath
+## <a name="cpath"></a><a name="cpath"></a> CPath
 
 Una specializzazione di [CPathT](../../atl/reference/cpatht-class.md) con `CString` .
 
@@ -251,7 +251,7 @@ typedef CPathT<CString> CPath;
 
 **Intestazione:** atlpath. h
 
-## <a name="cpatha"></a><a name="cpatha"></a>CPathA
+## <a name="cpatha"></a><a name="cpatha"></a> CPathA
 
 Una specializzazione di [CPathT](../../atl/reference/cpatht-class.md) con `CStringA` .
 
@@ -263,7 +263,7 @@ typedef CPathT<CStringA> CPathA;
 
 **Intestazione:** atlpath. h
 
-## <a name="cpathw"></a><a name="cpathw"></a>CPathW
+## <a name="cpathw"></a><a name="cpathw"></a> CPathW
 
 Una specializzazione di [CPathT](../../atl/reference/cpatht-class.md) con `CStringW` .
 
@@ -275,7 +275,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 **Intestazione:** atlpath. h
 
-## <a name="csimplevalarray"></a><a name="csimplevalarray"></a>CSimpleValArray
+## <a name="csimplevalarray"></a><a name="csimplevalarray"></a> CSimpleValArray
 
 Rappresenta una matrice per l'archiviazione di tipi semplici.
 
@@ -285,13 +285,13 @@ Rappresenta una matrice per l'archiviazione di tipi semplici.
 
 ### <a name="remarks"></a>Osservazioni
 
-`CSimpleValArray`viene fornito per la creazione e la gestione di matrici contenenti tipi di dati semplici. Si tratta di una semplice #define di [CSimpleArray](../../atl/reference/csimplearray-class.md).
+`CSimpleValArray` viene fornito per la creazione e la gestione di matrici contenenti tipi di dati semplici. Si tratta di una semplice #define di [CSimpleArray](../../atl/reference/csimplearray-class.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlsimpcoll. h
 
-## <a name="lpcurl"></a><a name="lpcurl"></a>LPCURL
+## <a name="lpcurl"></a><a name="lpcurl"></a> LPCURL
 
 Puntatore a un oggetto [curl](../../atl/reference/curl-class.md) costante.
 
@@ -303,7 +303,7 @@ typedef const CUrl* LPCURL;
 
 **Intestazione:** atlutil. h
 
-## <a name="defaultthreadtraits"></a><a name="defaultthreadtraits"></a>DefaultThreadTraits
+## <a name="defaultthreadtraits"></a><a name="defaultthreadtraits"></a> DefaultThreadTraits
 
 Classe dei tratti di thread predefinita.
 
@@ -325,7 +325,7 @@ Se il progetto corrente usa la libreria CRT multithreading, DefaultThreadTraits 
 
 **Intestazione:** atlbase. h
 
-## <a name="lpurl"></a><a name="lpurl"></a>LPURL
+## <a name="lpurl"></a><a name="lpurl"></a> LPURL
 
 Puntatore a un oggetto [curl](../../atl/reference/curl-class.md) .
 

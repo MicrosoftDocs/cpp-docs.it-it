@@ -62,29 +62,46 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 15a2d86fcaf83c470f52c879ab6fe7525f80aec8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5252fbb12682af3e5d1480208c4cbe4d32af7d05
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203949"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834856"
 ---
 # <a name="ltatomicgt-functions"></a>Funzioni &lt;atomic&gt;
 
-||||
-|-|-|-|
-|[atomic_compare_exchange_strong](#atomic_compare_exchange_strong)|[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit)|[atomic_compare_exchange_weak](#atomic_compare_exchange_weak)|
-|[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit)|[atomic_exchange](#atomic_exchange)|[atomic_exchange_explicit](#atomic_exchange_explicit)|
-|[atomic_fetch_add](#atomic_fetch_add)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit)|[atomic_fetch_and](#atomic_fetch_and)|
-|[atomic_fetch_and_explicit](#atomic_fetch_and_explicit)|[atomic_fetch_or](#atomic_fetch_or)|[atomic_fetch_or_explicit](#atomic_fetch_or_explicit)|
-|[atomic_fetch_sub](#atomic_fetch_sub)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit)|[atomic_fetch_xor](#atomic_fetch_xor)|
-|[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit)|[atomic_flag_clear](#atomic_flag_clear)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit)|
-|[atomic_flag_test_and_set](#atomic_flag_test_and_set)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit)|[atomic_init](#atomic_init)|
-|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|
-|[atomic_signal_fence](#atomic_signal_fence)|[atomic_store](#atomic_store)|[atomic_store_explicit](#atomic_store_explicit)|
-|[atomic_thread_fence](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|
+[atomic_compare_exchange_strong](#atomic_compare_exchange_strong)\
+[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit)\
+[atomic_compare_exchange_weak](#atomic_compare_exchange_weak)\
+[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit)\
+[atomic_exchange](#atomic_exchange)\
+[atomic_exchange_explicit](#atomic_exchange_explicit)\
+[atomic_fetch_add](#atomic_fetch_add)\
+[atomic_fetch_add_explicit](#atomic_fetch_add_explicit)\
+[atomic_fetch_and](#atomic_fetch_and)\
+[atomic_fetch_and_explicit](#atomic_fetch_and_explicit)\
+[atomic_fetch_or](#atomic_fetch_or)\
+[atomic_fetch_or_explicit](#atomic_fetch_or_explicit)\
+[atomic_fetch_sub](#atomic_fetch_sub)\
+[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit)\
+[atomic_fetch_xor](#atomic_fetch_xor)\
+[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit)\
+[atomic_flag_clear](#atomic_flag_clear)\
+[atomic_flag_clear_explicit](#atomic_flag_clear_explicit)\
+[atomic_flag_test_and_set](#atomic_flag_test_and_set)\
+[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit)\
+[atomic_init](#atomic_init)\
+[atomic_is_lock_free](#atomic_is_lock_free)\
+[atomic_load](#atomic_load)\
+[atomic_load_explicit](#atomic_load_explicit)\
+[atomic_signal_fence](#atomic_signal_fence)\
+[atomic_store](#atomic_store)\
+[atomic_store_explicit](#atomic_store_explicit)\
+[atomic_thread_fence](#atomic_thread_fence)\
+[kill_dependency](#kill_dependency)
 
-## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
+## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a> atomic_compare_exchange_strong
 
 Esegue un'operazione di confronto e scambio atomico.
 
@@ -121,7 +138,7 @@ Valore di tipo `Ty`.
 
 Questo metodo esegue un'operazione di confronto e scambio atomico usando argomenti `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti. Per altre informazioni, vedere [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit).
 
-## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit
+## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a> atomic_compare_exchange_strong_explicit
 
 Esegue un'operazione di *confronto e scambio atomico*.
 
@@ -168,7 +185,7 @@ Secondo argomento `memory_order`. Il valore di *Order2* non può essere `memory_
 
 Un' *operazione di confronto e scambio atomico* confronta il valore archiviato nell'oggetto a cui punta *Atom* rispetto al valore a cui punta *Exp*. Se i valori sono uguali, il valore archiviato nell'oggetto a cui punta *Atom* viene sostituito con *value* usando un' `read-modify-write` operazione e applicando i vincoli dell'ordine di memoria specificati da *Order1*. Se i valori non sono uguali, l'operazione sostituisce il valore a cui fa riferimento *Exp* con il valore archiviato nell'oggetto a cui punta *Atom* e applica i vincoli dell'ordine di memoria specificati da *Order2*.
 
-## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
+## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
 
 Esegue un'operazione di *confronto e scambio atomico debole*.
 
@@ -205,7 +222,7 @@ Valore di tipo `Ty`.
 
 Questo metodo esegue un'operazione di *confronto e scambio atomico debole* con argomenti `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti. Per altre informazioni, vedere [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit).
 
-## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit
+## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit
 
 Esegue un'operazione di *confronto e scambio atomico debole*.
 
@@ -252,7 +269,7 @@ Secondo argomento `memory_order`. Il valore di *Order2* non può essere `memory_
 
 Sia le versioni solide che quelle deboli di un' *operazione di confronto e scambio atomiche* garantiscono che non archivino il nuovo valore se i valori previsti e correnti non sono uguali. Il sapore forte garantisce che il nuovo valore venga archiviato se i valori previsti e correnti sono uguali. La caratteristica debole può talvolta restituire **`false`** e non archiviare il nuovo valore anche se i valori correnti e previsti sono uguali. In altre parole, la funzione restituirà **`false`** , ma un esame successivo del valore previsto potrebbe rivelare che non è stato modificato e pertanto deve essere confrontato come uguale.
 
-## <a name="atomic_exchange"></a><a name="atomic_exchange"></a>atomic_exchange
+## <a name="atomic_exchange"></a><a name="atomic_exchange"></a> atomic_exchange
 
 USA *value* per sostituire il valore archiviato di *Atom*.
 
@@ -280,7 +297,7 @@ Valore archiviato di *Atom* prima di Exchange.
 
 La `atomic_exchange` funzione esegue un' `read-modify-write` operazione per scambiare il valore archiviato in *Atom* con *value*, usando il `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
+## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
 
 Sostituisce il valore archiviato di *Atom* con *value*.
 
@@ -317,7 +334,7 @@ Valore archiviato di *Atom* prima di Exchange.
 
 La `atomic_exchange_explicit` funzione esegue un' `read-modify-write` operazione per scambiare il valore archiviato in *Atom* con *value*, all'interno dei vincoli di memoria specificati dall' *ordine*.
 
-## <a name="atomic_fetch_add"></a><a name="atomic_fetch_add"></a>atomic_fetch_add
+## <a name="atomic_fetch_add"></a><a name="atomic_fetch_add"></a> atomic_fetch_add
 
 Aggiunge un valore a un valore esistente archiviato in un oggetto `atomic`.
 
@@ -354,7 +371,7 @@ integral atomic_fetch_add(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_add(atomic-integral* Atom, integral Value) noexcept;
 ```
 
-## <a name="atomic_fetch_add_explicit"></a><a name="atomic_fetch_add_explicit"></a>atomic_fetch_add_explicit
+## <a name="atomic_fetch_add_explicit"></a><a name="atomic_fetch_add_explicit"></a> atomic_fetch_add_explicit
 
 Aggiunge un valore a un valore esistente archiviato in un oggetto `atomic`.
 
@@ -404,7 +421,7 @@ integral atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```
 
-## <a name="atomic_fetch_and"></a><a name="atomic_fetch_and"></a>atomic_fetch_and
+## <a name="atomic_fetch_and"></a><a name="atomic_fetch_and"></a> atomic_fetch_and
 
 Esegue un `and` bit per bit in un valore e un valore esistente archiviato in un oggetto `atomic`.
 
@@ -431,7 +448,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 La `atomic_fetch_and` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un valore bit per bit `and` di e il valore corrente archiviato in *Atom*, usando *Value* il `memory_order_seq_cst` vincolo [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-## <a name="atomic_fetch_and_explicit"></a><a name="atomic_fetch_and_explicit"></a>atomic_fetch_and_explicit
+## <a name="atomic_fetch_and_explicit"></a><a name="atomic_fetch_and_explicit"></a> atomic_fetch_and_explicit
 
 Esegue un `and` bit per bit di un valore e un valore esistente archiviato in un oggetto `atomic`.
 
@@ -468,7 +485,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 La `atomic_fetch_and_explicit` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un valore bit per bit `and` di e il valore corrente archiviato in *Atom*, all'interno dei vincoli di memoria specificati dall' *ordine*. *Value*
 
-## <a name="atomic_fetch_or"></a><a name="atomic_fetch_or"></a>atomic_fetch_or
+## <a name="atomic_fetch_or"></a><a name="atomic_fetch_or"></a> atomic_fetch_or
 
 Esegue un `or` bit per bit in un valore e un valore esistente archiviato in un oggetto `atomic`.
 
@@ -495,7 +512,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 La `atomic_fetch_or` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un valore bit per bit `or` di e il valore corrente archiviato in *Atom*, usando *Value* il `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_fetch_or_explicit"></a><a name="atomic_fetch_or_explicit"></a>atomic_fetch_or_explicit
+## <a name="atomic_fetch_or_explicit"></a><a name="atomic_fetch_or_explicit"></a> atomic_fetch_or_explicit
 
 Esegue un `or` bit per bit in un valore e un valore esistente archiviato in un oggetto `atomic`.
 
@@ -532,7 +549,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 La `atomic_fetch_or_explicit` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un valore bit per bit `or` di e il valore corrente archiviato in *Atom*, entro i vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati dall' *ordine*. *Value*
 
-## <a name="atomic_fetch_sub"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub
+## <a name="atomic_fetch_sub"></a><a name="atomic_fetch_sub"></a> atomic_fetch_sub
 
 Sottrae un valore da un valore esistente archiviato in un oggetto `atomic`.
 
@@ -573,7 +590,7 @@ integral atomic_fetch_sub(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_sub(atomic-integral* Atom, integral Value) noexcept;
 ```
 
-## <a name="atomic_fetch_sub_explicit"></a><a name="atomic_fetch_sub_explicit"></a>atomic_fetch_sub_explicit
+## <a name="atomic_fetch_sub_explicit"></a><a name="atomic_fetch_sub_explicit"></a> atomic_fetch_sub_explicit
 
 Sottrae un valore da un valore esistente archiviato in un oggetto `atomic`.
 
@@ -622,7 +639,7 @@ integral atomic_fetch_sub_explicit(
     memory_order Order) noexcept;
 ```
 
-## <a name="atomic_fetch_xor"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor
+## <a name="atomic_fetch_xor"></a><a name="atomic_fetch_xor"></a> atomic_fetch_xor
 
 Esegue un `exclusive or` bit per bit in un valore e un valore esistente archiviato in un oggetto `atomic`.
 
@@ -650,7 +667,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 La `atomic_fetch_xor` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un valore bit per bit `exclusive or` di e il valore corrente archiviato in *Atom*, usando *Value* il `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_fetch_xor_explicit"></a><a name="atomic_fetch_xor_explicit"></a>atomic_fetch_xor_explicit
+## <a name="atomic_fetch_xor_explicit"></a><a name="atomic_fetch_xor_explicit"></a> atomic_fetch_xor_explicit
 
 Esegue un `exclusive or` bit per bit in un valore e un valore esistente archiviato in un oggetto `atomic`.
 
@@ -687,7 +704,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 La `atomic_fetch_xor_explicit` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un valore bit per bit `exclusive or` di e il valore corrente archiviato in *atom*, all'interno dei vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati dall' *ordine*. *Value*
 
-## <a name="atomic_flag_clear"></a><a name="atomic_flag_clear"></a>atomic_flag_clear
+## <a name="atomic_flag_clear"></a><a name="atomic_flag_clear"></a> atomic_flag_clear
 
 Imposta il **`bool`** flag in un oggetto [atomic_flag](../standard-library/atomic-flag-structure.md) su **`false`** , all'interno della `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
@@ -701,7 +718,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 *Bandiera*\
 Puntatore a un oggetto `atomic_flag`.
 
-## <a name="atomic_flag_clear_explicit"></a><a name="atomic_flag_clear_explicit"></a>atomic_flag_clear_explicit
+## <a name="atomic_flag_clear_explicit"></a><a name="atomic_flag_clear_explicit"></a> atomic_flag_clear_explicit
 
 Imposta il **`bool`** flag in un oggetto [atomic_flag](../standard-library/atomic-flag-structure.md) su **`false`** , entro i vincoli di [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati.
 
@@ -718,7 +735,7 @@ Puntatore a un oggetto `atomic_flag`.
 *Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_flag_test_and_set"></a><a name="atomic_flag_test_and_set"></a>atomic_flag_test_and_set
+## <a name="atomic_flag_test_and_set"></a><a name="atomic_flag_test_and_set"></a> atomic_flag_test_and_set
 
 Imposta il **`bool`** flag in un oggetto [atomic_flag](../standard-library/atomic-flag-structure.md) su **`true`** , entro i vincoli della `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
@@ -736,7 +753,7 @@ Puntatore a un oggetto `atomic_flag`.
 
 Valore iniziale del *flag*.
 
-## <a name="atomic_flag_test_and_set_explicit"></a><a name="atomic_flag_test_and_set_explicit"></a>atomic_flag_test_and_set_explicit
+## <a name="atomic_flag_test_and_set_explicit"></a><a name="atomic_flag_test_and_set_explicit"></a> atomic_flag_test_and_set_explicit
 
 Imposta il **`bool`** flag in un oggetto [atomic_flag](../standard-library/atomic-flag-structure.md) su **`true`** , entro i vincoli di [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati.
 
@@ -757,7 +774,7 @@ Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 Valore iniziale del *flag*.
 
-## <a name="atomic_init"></a><a name="atomic_init"></a>atomic_init
+## <a name="atomic_init"></a><a name="atomic_init"></a> atomic_init
 
 Imposta il valore archiviato in un oggetto `atomic`.
 
@@ -780,7 +797,7 @@ Valore di tipo `Ty`.
 
 `atomic_init` non è un'operazione atomica. Non è thread-safe.
 
-## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a>atomic_is_lock_free
+## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a> atomic_is_lock_free
 
 Specifica se le operazioni atomiche in un oggetto `atomic` sono *senza blocco*.
 
@@ -804,7 +821,7 @@ Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
 Un tipo atomico è senza blocco se nessuna operazione atomica su tale tipo usa i blocchi. Se questa funzione restituisce true, il tipo può essere usato nei gestori di segnale.
 
-## <a name="atomic_load"></a><a name="atomic_load"></a>atomic_load
+## <a name="atomic_load"></a><a name="atomic_load"></a> atomic_load
 
 Recupera il valore archiviato in un oggetto `atomic`.
 
@@ -828,7 +845,7 @@ Il valore recuperato archiviato in *Atom*.
 
 `atomic_load` usa `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) in modo implicito.
 
-## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a>atomic_load_explicit
+## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a> atomic_load_explicit
 
 Recupera il valore archiviato in un oggetto `atomic` entro un [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificato.
 
@@ -851,7 +868,7 @@ Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Non us
 
 Il valore recuperato archiviato in *Atom*.
 
-## <a name="atomic_signal_fence"></a><a name="atomic_signal_fence"></a>atomic_signal_fence
+## <a name="atomic_signal_fence"></a><a name="atomic_signal_fence"></a> atomic_signal_fence
 
 Agisce come *limite* (ovvero una primitiva di sincronizzazione della memoria che applica l'ordinamento tra le operazioni di caricamento/archiviazione) tra altri limiti in un thread di chiamata che hanno gestori di segnale eseguiti nello stesso thread.
 
@@ -868,7 +885,7 @@ Un vincolo di ordinamento della memoria che determina il tipo di limite.
 
 L'argomento *Order* determina il tipo di recinzione.
 
-|||
+|Valore|Descrizione|
 |-|-|
 |`memory_order_relaxed`|Il limite non ha effetto.|
 |`memory_order_consume`|Il limite è un limite di acquisizione.|
@@ -877,7 +894,7 @@ L'argomento *Order* determina il tipo di recinzione.
 |`memory_order_acq_rel`|Il limite è sia un limite di acquisizione che un limite di rilascio.|
 |`memory_order_seq_cst`|Il limite è sia un limite di acquisizione che un limite di rilascio ed è sequenzialmente coerente.|
 
-## <a name="atomic_store"></a><a name="atomic_store"></a>atomic_store
+## <a name="atomic_store"></a><a name="atomic_store"></a> atomic_store
 
 Memorizza in maniera atomica un valore in un oggetto atomico.
 
@@ -900,7 +917,7 @@ Valore di tipo `Ty`.
 
 `atomic_store`Archivia il *valore* nell'oggetto a cui punta *Atom*, all'interno del vincolo `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a>atomic_store_explicit
+## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a> atomic_store_explicit
 
 Memorizza in maniera atomica un valore in un oggetto atomico.
 
@@ -931,9 +948,9 @@ Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Non us
 
 ### <a name="remarks"></a>Osservazioni
 
-`atomic_store`Archivia il *valore* nell'oggetto a cui punta *Atom*, all'interno `memory_order` di specificato dall' *ordine*.
+`atomic_store` Archivia il *valore* nell'oggetto a cui punta *Atom*, all'interno `memory_order` di specificato dall' *ordine*.
 
-## <a name="atomic_thread_fence"></a><a name="atomic_thread_fence"></a>atomic_thread_fence
+## <a name="atomic_thread_fence"></a><a name="atomic_thread_fence"></a> atomic_thread_fence
 
 Agisce come *limite* (ovvero una primitiva di sincronizzazione della memoria che applica l'ordinamento tra le operazioni di caricamento/archiviazione) senza un'operazione atomica associata.
 
@@ -950,7 +967,7 @@ Un vincolo di ordinamento della memoria che determina il tipo di limite.
 
 L'argomento *Order* determina il tipo di recinzione.
 
-|||
+|Valore|Descrizione|
 |-|-|
 |`memory_order_relaxed`|Il limite non ha effetto.|
 |`memory_order_consume`|Il limite è un limite di acquisizione.|
@@ -959,7 +976,7 @@ L'argomento *Order* determina il tipo di recinzione.
 |`memory_order_acq_rel`|Il limite è sia un limite di acquisizione che un limite di rilascio.|
 |`memory_order_seq_cst`|Il limite è sia un limite di acquisizione che un limite di rilascio ed è sequenzialmente coerente.|
 
-## <a name="kill_dependency"></a><a name="kill_dependency"></a>kill_dependency
+## <a name="kill_dependency"></a><a name="kill_dependency"></a> kill_dependency
 
 Rimuove una dipendenza.
 
