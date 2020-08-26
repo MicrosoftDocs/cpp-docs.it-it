@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - any/std::bad_any_cast
 - any/std::bad_any_cast::what
-ms.openlocfilehash: 5172281d1918a8b4ac33bcf412bf4be82b04ef56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b47ca4f615c6f317f17ce64e8388ae5d698185ea
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268683"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844587"
 ---
-# <a name="badanycast-class"></a>Classe bad_any_cast
+# <a name="bad_any_cast-class"></a>Classe bad_any_cast
 
-Gli oggetti generati da un tentativo fallito `any_cast`.
+Oggetti generati da un oggetto non riuscito `any_cast` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,11 +26,11 @@ class bad_any_cast
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[what](#what)|Restituisce il tipo.|
+|[cosa](#what)|Restituisce il tipo.|
 
-## <a name="what"></a> Novità
+## <a name="what"></a><a name="what"></a> cosa
 
 Restituisce il tipo.
 

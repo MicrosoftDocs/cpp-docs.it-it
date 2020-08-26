@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 9fbe4a4079fcbb8414e09d0f7dd814a3957e0822
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d0f86c2588eed506bc9b8408e01bccdb6d1aad9d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910679"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844067"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -63,16 +63,16 @@ Se ha esito positivo, **_open_osfhandle** restituisce un descrittore di file di 
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_open_osfhandle** alloca un descrittore di file di runtime C. Associa questo descrittore di file con l'handle di file del sistema operativo specificato da *osfhandle*. Per evitare un avviso del compilatore, eseguire il cast di dell'argomento *osfhandle* da **HANDLE** a **intptr_t**. L'argomento *flags* è un'espressione integer formata da una o più delle costanti del manifesto definite in \<fcntl.h>. È possibile utilizzare l'operatore OR bit per bit ( **&#124;** ) per combinare due o più costanti manifesto per formare l'argomento dei *flag* .
+La funzione **_open_osfhandle** alloca un descrittore di file di runtime C. Associa questo descrittore di file con l'handle di file del sistema operativo specificato da *osfhandle*. Per evitare un avviso del compilatore, eseguire il cast di dell'argomento *osfhandle* da **HANDLE** a **intptr_t**. L'argomento *Flags* è un'espressione Integer formata da una o più costanti manifesto definite in \<fcntl.h> . È possibile utilizzare l'operatore OR bit per bit ( **&#124;** ) per combinare due o più costanti manifesto per formare l'argomento dei *flag* .
 
-Queste costanti manifesto sono definite in \<fcntl.h>:
+Queste costanti manifeste sono definite in \<fcntl.h> :
 
-|||
-|-|-|
-| **\_O\_Aggiungi** | Posiziona un puntatore del file alla fine del file prima di ogni operazione di scrittura. |
-| **\_O\_RDONLY** | Apre il file in sola lettura. |
-| **\_testo\_O** | Apre il file in modalità testo (convertito). |
-| **\_O\_WTEXT** | Apre il file in modalità Unicode (convertito in UTF-16). |
+| Costante | Descrizione |
+|--|--|
+| **\_O \_ Aggiungi** | Posiziona un puntatore del file alla fine del file prima di ogni operazione di scrittura. |
+| **\_O \_ RDONLY** | Apre il file in sola lettura. |
+| **\_\_Testo O** | Apre il file in modalità testo (convertito). |
+| **\_O \_ WTEXT** | Apre il file in modalità Unicode (convertito in UTF-16). |
 
 La chiamata **_open_osfhandle** trasferisce la proprietà dell'handle di file Win32 al descrittore di file. Per chiudere un file aperto tramite **_open_osfhandle**, chiamare [\_close](close.md). Anche l'handle di file del sistema operativo sottostante viene chiuso da una chiamata a **_close**. Non chiamare la funzione Win32 **CloseHandle** sull'handle originale. Se il descrittore del file è di proprietà di un **file &#42;** flusso, una chiamata a [fclose](fclose-fcloseall.md) chiude sia il descrittore del file che l'handle sottostante. In questo caso non chiamare **_close** per il descrittore di file o **CloseHandle** per l'handle originale.
 
@@ -88,5 +88,5 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [\_get_osfhandle](get-osfhandle.md)

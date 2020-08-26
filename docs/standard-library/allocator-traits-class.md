@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617420"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844808"
 ---
 # <a name="allocator_traits-class"></a>Classe allocator_traits
 
@@ -58,11 +58,11 @@ template <class Alloc>
     class allocator_traits;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |`allocator_type`|Questo tipo è un sinonimo del parametro di modello `Alloc`.|
 |`const_pointer`|Questo tipo è `Alloc::const_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<const value_type>`.|
@@ -80,16 +80,16 @@ template <class Alloc>
 
 I metodi statici seguenti chiamano il metodo corrispondente in un parametro allocatore specificato.
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[allocate](#allocate)|Metodo statico che alloca la memoria usando il parametro allocatore specificato.|
+|[allocare](#allocate)|Metodo statico che alloca la memoria usando il parametro allocatore specificato.|
 |[costrutto](#construct)|Metodo statico che usa un allocatore specificato per costruire un oggetto.|
 |[deallocare](#deallocate)|Metodo statico che usa un allocatore specificato per deallocare un numero specificato di oggetti.|
 |[eliminare](#destroy)|Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.|
 |[max_size](#max_size)|Metodo statico che usa un allocatore specificato per determinare il numero massimo di oggetti che possono essere allocati.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Metodo statico che chiama `select_on_container_copy_construction`nell'allocatore specificato.|
 
-### <a name="allocate"></a><a name="allocate"></a>allocare
+### <a name="allocate"></a><a name="allocate"></a> allocare
 
 Metodo statico che alloca la memoria usando il parametro allocatore specificato.
 
@@ -119,7 +119,7 @@ Il primo metodo statico restituisce `al.allocate(count)`.
 
 Il secondo metodo statico restituisce `al.allocate(count, hint)`, se l'espressione è ben formata; in caso contrario, restituisce `al.allocate(count)`.
 
-### <a name="construct"></a><a name="construct"></a>costruire
+### <a name="construct"></a><a name="construct"></a> costruire
 
 Metodo statico che usa un allocatore specificato per costruire un oggetto.
 
@@ -143,7 +143,7 @@ Elenco di argomenti passato al costruttore dell'oggetto.
 
 La funzione membro statica chiama `al.construct(ptr, args...)`, se l'espressione è ben formata; in caso contrario, restituisce `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-### <a name="deallocate"></a><a name="deallocate"></a>deallocare
+### <a name="deallocate"></a><a name="deallocate"></a> deallocare
 
 Metodo statico che usa un allocatore specificato per deallocare un numero specificato di oggetti.
 
@@ -170,7 +170,7 @@ Questo metodo chiama `al.deallocate(ptr, count)`.
 
 Questo metodo non genera nulla.
 
-### <a name="destroy"></a><a name="destroy"></a>eliminare
+### <a name="destroy"></a><a name="destroy"></a> eliminare
 
 Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.
 
@@ -191,7 +191,7 @@ Puntatore alla posizione dell'oggetto.
 
 Questo metodo chiama `al.destroy(ptr)`, se l'espressione è ben formata; in caso contrario, restituisce `ptr->~Uty()`.
 
-### <a name="max_size"></a><a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a> max_size
 
 Metodo statico che usa un allocatore specificato per determinare il numero massimo di oggetti che possono essere allocati.
 
@@ -208,7 +208,7 @@ Un oggetto allocatore.
 
 Questo metodo restituisce `al.max_size()`, se l'espressione è ben formata; in caso contrario, restituisce `numeric_limits<size_type>::max()`.
 
-### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 Metodo statico che chiama `select_on_container_copy_construction`nell'allocatore specificato.
 

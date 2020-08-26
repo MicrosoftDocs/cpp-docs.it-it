@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88087007"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842950"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica
 
@@ -26,7 +26,7 @@ L'argomento *locale* delle funzioni [setlocale, \_wsetlocale](../c-runtime-libra
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-Il formato *locale-name* è una stringa standard IEFT breve, ad esempio `en-US` per la lingua inglese (Stati Uniti) o `bs-Cyrl-BA` per la lingua bosniaca (Cirillico, Bosnia ed Erzegovina). Questi formati sono i preferiti. Per un elenco dei nomi delle impostazioni locali supportati dalla versione del sistema operativo Windows, vedere la colonna **tag lingua** della tabella in [appendice a: comportamento del prodotto](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) in \[ MS-LCID]: informazioni di riferimento sull'identificatore del codice lingua (LCID) di Windows. Sono elencate le parti lingua, script e paese supportate dei nomi delle impostazioni locali. Per informazioni sui nomi delle impostazioni locali supportati che presentano ordinamenti non predefiniti, vedere la colonna dei **nomi delle impostazioni locali** nell'articolo relativo agli [identificatori di ordinamento](/windows/win32/Intl/sort-order-identifiers). In Windows 10 o versioni successive, sono consentiti i nomi delle impostazioni locali che corrispondono ai tag di lingua [BCP-47](https://tools.ietf.org/html/bcp47) validi. Ad esempio, `jp-US` è un tag BCP-47 valido, ma in effetti è solo `US` per le funzionalità delle impostazioni locali.
+Il formato *locale-name* è una stringa standard IEFT breve, ad esempio `en-US` per la lingua inglese (Stati Uniti) o `bs-Cyrl-BA` per la lingua bosniaca (Cirillico, Bosnia ed Erzegovina). Questi formati sono i preferiti. Per un elenco dei nomi delle impostazioni locali supportati dalla versione del sistema operativo Windows, vedere la colonna **tag lingua** della tabella in [appendice a: comportamento del prodotto](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) in \[ MS-LCID]: informazioni di riferimento sull'identificatore del codice lingua (LCID) di Windows. Sono elencate le parti lingua, script e paese supportate dei nomi delle impostazioni locali. Per informazioni sui nomi delle impostazioni locali supportati che presentano ordinamenti non predefiniti, vedere la colonna dei **nomi delle impostazioni locali** nell'articolo relativo agli [identificatori di ordinamento](/windows/win32/Intl/sort-order-identifiers). In Windows 10 o versioni successive, sono consentiti i nomi delle impostazioni locali che corrispondono ai tag di lingua [BCP-47](https://tools.ietf.org/html/bcp47) validi. Ad esempio, `jp-US` è un tag BCP-47 valido, ma in effetti è solo `US` per le funzionalità delle impostazioni locali.
 
 *Lingua* \[ **\_** _-regione_ \[ __.__ *tabella codici*]] il form viene archiviato nell'impostazione delle impostazioni locali per una categoria quando si usa una stringa di lingua, o una stringa lingua e una stringa paese o area geografica, per creare le impostazioni locali. Il set delle stringhe di lingua supportate è descritto in [Language Strings](../c-runtime-library/language-strings.md) (Stringhe di lingue), mentre l'elenco delle stringhe di paese/area geografica supportate è riportato in [Country/Region Strings](../c-runtime-library/country-region-strings.md) (Stringhe di paese/area geografica). Se la lingua specificata non è associata all'area geografica o al paese specificato, nelle impostazioni locali viene archiviata la lingua predefinita dell'area geografica o del paese specificato. Questo formato non è consigliabile per le stringhe delle impostazioni locali incorporate nel codice o serializzate nell'archiviazione perché tali stringhe hanno molte più probabilità di subire modifiche in seguito a un aggiornamento del sistema operativo rispetto al formato del nome delle impostazioni locali.
 

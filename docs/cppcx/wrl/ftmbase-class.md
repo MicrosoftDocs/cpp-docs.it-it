@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: f28a850c365bc9a75d8e5b100e5e5cc0a1c5dc10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404564"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844041"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 
@@ -86,7 +86,7 @@ Per ulteriori informazioni, vedere la [classe RuntimeClass](runtimeclass-class.m
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase:: CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a> FtmBase:: CreateGlobalInterfaceTable
 
 Crea una tabella di interfaccia globale (GIT).
 
@@ -107,9 +107,9 @@ S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per altre informazioni, vedere [`IGlobalInterfaceTable`](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
+Per altre informazioni, vedere [`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
 
-## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::D isconnectObject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a> FtmBase::D isconnectObject
 
 Rilascia forzatamente tutte le connessioni esterne a un oggetto. Il server dell'oggetto chiama l'implementazione dell'oggetto di questo metodo prima di arrestarsi.
 
@@ -128,7 +128,7 @@ Riservato per utilizzi futuri; deve essere zero.
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase:: FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a> FtmBase:: FtmBase
 
 Inizializza una nuova istanza della classe `FtmBase`.
 
@@ -136,7 +136,7 @@ Inizializza una nuova istanza della classe `FtmBase`.
 FtmBase();
 ```
 
-## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase:: GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a> FtmBase:: GetMarshalSizeMax
 
 Ottenere il limite superiore per il numero di byte necessari per effettuare il marshalling del puntatore a interfaccia specificato nell'oggetto specificato.
 
@@ -179,7 +179,7 @@ Al termine di questa operazione, puntatore al limite superiore sulla quantità d
 
 S_OK in caso di esito positivo; in caso contrario, E_FAIL o E_NOINTERFACE.
 
-## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase:: GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a> FtmBase:: GetUnmarshalClass
 
 Ottiene il CLSID utilizzato da COM per individuare la DLL che contiene il codice per il proxy corrispondente. COM carica questa DLL per creare un'istanza non inizializzata del proxy.
 
@@ -221,7 +221,7 @@ Al termine di questa operazione, puntatore al CLSID da utilizzare per creare un 
 
 S_OK in caso di esito positivo; in caso contrario, S_FALSE.
 
-## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase:: MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a> FtmBase:: MarshalInterface
 
 Scrive in un flusso i dati necessari per inizializzare un oggetto proxy in un processo client.
 
@@ -270,7 +270,7 @@ STG_E_MEDIUMFULL il flusso è pieno.
 
 E_FAIL l'operazione non è riuscita.
 
-## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase:: marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a> FtmBase:: marshaller_
 
 Include un riferimento al gestore di marshalling a thread libero.
 
@@ -278,7 +278,7 @@ Include un riferimento al gestore di marshalling a thread libero.
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase:: ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a> FtmBase:: ReleaseMarshalData
 
 Elimina un pacchetto di dati di cui è stato effettuato il marshalling.
 
@@ -297,7 +297,7 @@ Puntatore a un flusso che contiene il pacchetto di dati da eliminare definitivam
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase:: UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a> FtmBase:: UnmarshalInterface
 
 Inizializza un proxy appena creato e restituisce un puntatore a interfaccia a tale proxy.
 

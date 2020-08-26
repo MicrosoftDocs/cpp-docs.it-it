@@ -15,12 +15,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844743"
 ---
 # <a name="any-class"></a>qualsiasi classe
 
@@ -38,13 +38,13 @@ class any
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[qualsiasi](#any)|Costruisce un oggetto di tipo `any`.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[emplace](#emplace)|Imposta un valore qualsiasi.|
 |[has_value](#has_value)|Restituisce **`true`** se un oggetto ha un valore.|
@@ -54,11 +54,11 @@ class any
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore =](#op_eq)|Sostituisce any con una copia di un altro oggetto.|
 
-## <a name="any"></a><a name="any"></a>qualsiasi
+## <a name="any"></a><a name="any"></a> qualsiasi
 
 Costruisce un oggetto di tipo `any`. Include anche un distruttore.
 
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Imposta un valore qualsiasi.
 
@@ -87,7 +87,7 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 Restituisce **`true`** se un oggetto ha un valore.
 
@@ -95,7 +95,7 @@ Restituisce **`true`** se un oggetto ha un valore.
 bool has_value() const noexcept;
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Sostituisce any con una copia di un altro oggetto.
 
@@ -111,7 +111,7 @@ template <class T>
 *Ok*\
 Qualsiasi oggetto copiato nell'oggetto any.
 
-## <a name="reset"></a><a name="reset"></a>reimpostazione
+## <a name="reset"></a><a name="reset"></a> reimpostazione
 
 Reimposta un valore any.
 
@@ -119,7 +119,7 @@ Reimposta un valore any.
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia due oggetti.
 

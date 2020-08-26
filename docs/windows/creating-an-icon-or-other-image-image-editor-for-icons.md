@@ -79,12 +79,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 931d84f16b46ea8fe21ecc0a63d20dac958ce960
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a331e310f031462c903546a2896317aae0c0d719
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160438"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843365"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Procedura: creare un'icona o un'altra immagine
 
@@ -94,7 +94,7 @@ ms.locfileid: "80160438"
 
 Icone e cursori sono risorse grafiche che possono contenere più immagini di diverse dimensioni e le combinazioni di colori per diversi tipi di dispositivi di visualizzazione. Un cursore presenta anche un'area sensibile, il percorso utilizzato da Windows per tenere traccia della posizione. Le icone e i cursori vengono creati e modificati usando l' **editor di immagini**, così come le bitmap e altre immagini.
 
-Quando si crea una nuova icona o un nuovo cursore, l' **editor di immagini** crea innanzitutto un'immagine di un tipo standard. L'immagine viene inizialmente riempita con il colore della schermata (trasparente). Se l'immagine è un cursore, l'area sensibile si trova inizialmente nell'angolo superiore sinistro con coordinate `0,0`.
+Quando si crea una nuova icona o un nuovo cursore, l' **editor di immagini** crea innanzitutto un'immagine di un tipo standard. L'immagine viene inizialmente riempita con il colore della schermata (trasparente). Se l'immagine è un cursore, l'area sensibile è inizialmente l'angolo superiore sinistro con le coordinate `0,0` .
 
 Per impostazione predefinita, l' **editor di immagini** supporta la creazione di immagini aggiuntive per i dispositivi illustrati nella tabella seguente. È possibile creare immagini per altri dispositivi digitando i parametri di larghezza, altezza e numero di colori nella finestra di dialogo dell' **immagine personalizzata** .
 
@@ -125,18 +125,33 @@ Quando si apre la risorsa icona o cursore nell' [editor di immagini](../windows/
 > [!NOTE]
 > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
-La finestra di dialogo **nuovo tipo di immagine del dispositivo &lt;&gt;** consente di creare una nuova immagine del dispositivo di un tipo specificato. Per aprire la finestra di dialogo **nuovo \<dispositivo > immagine** , passare a **immagine** menu > **nuovo tipo di immagine**. Sono incluse le proprietà seguenti: **tipo di immagine di destinazione** e **personalizzato**.
+La finestra di dialogo **nuovo &lt; tipo di &gt; immagine del dispositivo** consente di creare una nuova immagine del dispositivo di un tipo specificato. Per aprire la finestra di dialogo **nuova \<Device> immagine** , passare a **immagine**menu  >  **nuovo tipo di immagine**. Sono incluse le proprietà seguenti: **tipo di immagine di destinazione** e **personalizzato**.
 
 La proprietà **tipo immagine di destinazione** elenca i tipi di immagine disponibili in cui è possibile selezionare il tipo di immagine che si desidera aprire:
 
-||||
-|-|-|-|
-|-16 x 16, 16 colori|-48 x 48, 16 colori|-96 x 96, 16 colori|
-|-16 x 16, 256 colori|-48 x 48, 256 colori|-96 x 96, 256 colori|
-|-16 x 16, monocromatico|-48 x 48, monocromatico|-96 x 96, monocromatico|
-|-32 x 32, 16 colori|-64 x 64, 16 colori||
-|-32 x 32, 256 colori|-64 x 64, 256 colori||
-|-32 x 32, monocromatico|-64 x 64, monocromatico||
+:::row:::
+   :::column span="":::
+      16 x 16, 16 colori \
+      32 x 32, 16 colori \
+      48 x 48, 16 colori \
+      64 x 64, 16 colori \
+      96 x 96, 16 colori
+   :::column-end:::
+   :::column span="":::
+      16 x 16, 256 colori \
+      32 x 32, 256 colori \
+      48 x 48, 256 colori \
+      64 x 64, 256 colori \
+      96 x 96, 256 colori
+   :::column-end:::
+   :::column span="":::
+      16 x 16, monocromatico \
+      32 x 32, monocromatico \
+      48 x 48, monocromatico \
+      64 x 64, monocromatico \
+      96 x 96, monocromatico
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Le immagini esistenti non verranno visualizzate in questo elenco.
@@ -147,11 +162,11 @@ La finestra di dialogo **immagine personalizzata** consente di creare una nuova 
 
 |Proprietà|Descrizione|
 |---|---|
-|**Width**|Fornisce uno spazio per immettere la larghezza dell'immagine personalizzata in pixel (1-512, limite di 2048).|
-|**Height**|Fornisce uno spazio per l'immissione dell'altezza dell'immagine personalizzata in pixel (1-512, limite di 2048).|
+|**Larghezza**|Fornisce uno spazio per immettere la larghezza dell'immagine personalizzata in pixel (1-512, limite di 2048).|
+|**Altezza**|Fornisce uno spazio per l'immissione dell'altezza dell'immagine personalizzata in pixel (1-512, limite di 2048).|
 |**Colori**|Fornisce uno spazio per scegliere il numero di colori per l'immagine personalizzata: 2, 16 o 256.|
 
-Usare la finestra di dialogo **Apri immagine&gt; dispositivo &lt;** per aprire le immagini C++ del dispositivo nei progetti. Elenca le immagini del dispositivo esistenti nella risorsa corrente (immagini che fanno parte della risorsa corrente). La seguente proprietà include:
+Usare la finestra di dialogo **Apri &lt; &gt; immagine dispositivo** per aprire le immagini del dispositivo in progetti C++. Elenca le immagini del dispositivo esistenti nella risorsa corrente (immagini che fanno parte della risorsa corrente). La seguente proprietà include:
 
 |Proprietà|Descrizione|
 |---|---|
@@ -163,30 +178,30 @@ Usare la finestra di dialogo **Apri immagine&gt; dispositivo &lt;** per aprire l
 
 1. Nella finestra di [dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md)selezionare **icona** o **cursore** e scegliere **nuovo**. Per le icone, questa azione crea una risorsa icona con un'icona 32 × 32, a 16 colori. Per i cursori viene creata un'immagine 32 × 32, monocromatico (a 2 colori).
 
-   Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa immagine nella finestra di dialogo **Inserisci risorsa** , significa che sono disponibili i modelli della barra degli strumenti. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
+   Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa immagine nella finestra di dialogo **Inserisci risorsa** , significa che i modelli della barra degli strumenti sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Per aggiungere un'immagine per un diverso dispositivo di visualizzazione
 
-1. Passare a **immagine** del menu > **nuova immagine del dispositivo**oppure fare clic con il pulsante destro del mouse nel riquadro Editor di **Immagini** e scegliere **nuova immagine dispositivo**.
+1. Passare a **immagine**menu  >  **nuovo dispositivo immagine**oppure fare clic con il pulsante destro del mouse nel riquadro **editor di immagini** e scegliere **nuova immagine dispositivo**.
 
 1. Selezionare il tipo di immagine che si desidera aggiungere. È anche possibile selezionare **personalizzato** per creare un'icona le cui dimensioni non sono disponibili nell'elenco predefinito.
 
 ### <a name="to-copy-a-device-image"></a>Per copiare un'immagine del dispositivo
 
-1. Passare a **immagine** del menu > **aprire l'immagine del dispositivo** e scegliere un'immagine dall'elenco immagini correnti. Ad esempio, scegliere la versione 32 × 32, a 16 colori di un'icona.
+1. Vai a **immagine**del menu  >  **Apri immagine dispositivo** e scegli un'immagine dall'elenco immagini correnti. Ad esempio, scegliere la versione 32 × 32, a 16 colori di un'icona.
 
-1. Copiare l'immagine icona attualmente visualizzata (**Ctrl**+**C**).
+1. Copiare l'immagine icona attualmente visualizzata (**CTRL** + **C**).
 
 1. Aprire un'immagine diversa dell'icona in un'altra finestra dell' **editor di immagini** . Ad esempio, aprire la versione 16 × 16 a 16 colori dell'icona.
 
-1. Incollare l'immagine dell'icona (**Ctrl**+**V**) da una finestra dell' **editor di immagini** all'altra. Se si incollano dimensioni maggiori in una dimensione inferiore, è possibile usare gli handle dell'icona per ridimensionare l'immagine.
+1. Incollare l'immagine dell'icona (**CTRL** + **V**) da una finestra dell' **editor di immagini** all'altra. Se si incollano dimensioni maggiori in una dimensione inferiore, è possibile usare gli handle dell'icona per ridimensionare l'immagine.
 
 ### <a name="to-delete-a-device-image"></a>Per eliminare un'immagine del dispositivo
 
-Quando l'immagine dell'icona viene visualizzata nell' **editor di immagini**, passare a **immagine** del menu > **Elimina immagine del dispositivo**. Quando si elimina l'ultima immagine icona nella risorsa, viene eliminata anche la risorsa.
+Quando l'immagine dell'icona viene visualizzata nell' **editor di immagini**, passare a menu **immagine**  >  **Elimina immagine dispositivo**. Quando si elimina l'ultima immagine icona nella risorsa, viene eliminata anche la risorsa.
 
 > [!NOTE]
-> Quando si preme il tasto **Canc** , le immagini e i colori disegnati su un'icona vengono eliminati, ma l'icona rimane ed è ora possibile riprogettarla. Se si preme **Canc** per errore, premere **CTRL**+**Z** per annullare l'azione.
+> Quando si preme il tasto **Canc** , le immagini e i colori disegnati su un'icona vengono eliminati, ma l'icona rimane ed è ora possibile riprogettarla. Se si preme **Canc** per errore, premere **CTRL** + **Z** per annullare l'azione.
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Per creare aree trasparenti o inverse nelle immagini del dispositivo
 
@@ -195,7 +210,7 @@ Nell' [editor di immagini](../windows/image-editor-for-icons.md)l'icona iniziale
 La schermata e i colori inversi applicati alle icone e ai cursori formano e colorano l'immagine derivata o assegnano aree inverse. I colori indicano le parti dell'immagine che dispongono di tali attributi. È possibile modificare i colori che rappresentano gli attributi relativi al colore dello schermo e al colore inverso nella modifica. Queste modifiche non influiscono sull'aspetto dell'icona o del cursore nell'applicazione.
 
 > [!NOTE]
-> Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella **Guida** a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, passare a **strumenti** di menu > **Importa ed Esporta impostazioni**. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella **Guida** a seconda dell'edizione o delle impostazioni attive. Per modificare le impostazioni, passare a menu **strumenti**  >  **Importa/Esporta impostazioni**. Per altre informazioni, vedere [personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>Per creare aree trasparenti o inverse
 
@@ -224,7 +239,7 @@ Usando l' **editor di immagini**, le icone e i cursori possono essere di grandi 
 
 1. Nella finestra di [dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md)selezionare **icona** o **cursore** e scegliere **nuovo**.
 
-1. Passare a **immagine** del menu > **nuova immagine del dispositivo** e selezionare lo stile di immagine a 256 colori desiderato.
+1. Passare a **immagine**menu  >  **nuovo dispositivo immagine** e selezionare lo stile di immagine a 256 colori desiderato.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Per scegliere un colore dalla tavolozza dei colori 256 per le icone grandi
 
@@ -237,11 +252,11 @@ Per creare una selezione dalla tavolozza colori 256, è necessario selezionare i
    Il colore selezionato diventerà il colore corrente nella tavolozza **colori** della finestra **colori** .
 
    > [!NOTE]
-   > La tavolozza iniziale utilizzata per le immagini a 256 colori corrisponde alla tavolozza restituita dall'API di Windows `CreateHalftonePalette`. Tutte le icone destinate alla shell di Windows devono usare questa tavolozza per evitare lo sfarfallio durante la realizzazione della tavolozza.
+   > La tavolozza iniziale utilizzata per le immagini a 256 colori corrisponde alla tavolozza restituita dall' `CreateHalftonePalette` API Windows. Tutte le icone destinate alla shell di Windows devono usare questa tavolozza per evitare lo sfarfallio durante la realizzazione della tavolozza.
 
 ### <a name="to-set-a-cursors-hot-spot"></a>Per impostare l'area sensibile di un cursore
 
-L'area sensibile di un cursore è il punto in cui Windows si riferisce al rilevamento della posizione del cursore. Per impostazione predefinita, l'area sensibile è impostata sull'angolo superiore sinistro del cursore con coordinate `0,0`. La proprietà **hotspot** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window) Mostra le coordinate di area sensibile.
+L'area sensibile di un cursore è il punto in cui Windows si riferisce al rilevamento della posizione del cursore. Per impostazione predefinita, l'area sensibile è impostata sull'angolo superiore sinistro del cursore con le coordinate `0,0` . La proprietà **hotspot** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window) Mostra le coordinate di area sensibile.
 
 1. Nella [barra degli strumenti dell'editor di immagini](../windows/toolbar-image-editor-for-icons.md)scegliere lo strumento **Imposta HotSpot** .
 
@@ -256,17 +271,17 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 > [!NOTE]
 > Questo processo non si applica alle icone e ai cursori.
 
-1. Passare a **file** di menu > **Apri**, quindi selezionare **file**.
+1. Scegliere Apri dal menu **file**  >  **Open**, quindi selezionare **file**.
 
-1. Nella finestra **di dialogo nuovo file**scegliere la cartella **visuale C++**  , quindi selezionare **file bitmap (. bmp)** nella casella **modelli** e selezionare **Apri**.
+1. Nella finestra di **dialogo nuovo file**scegliere la cartella **Visual C++** , quindi selezionare **file bitmap (. bmp)** nella casella **modelli** e selezionare **Apri**.
 
    La bitmap viene aperta nell' **editor di immagini**.
 
 1. Apportare modifiche alla nuova bitmap in base alle esigenze.
 
-1. Con la bitmap ancora aperta nell' **editor di immagini**, passare a **File** di menu > **Salva *nomefile*. bmp come**.
+1. Con la bitmap ancora aperta nell' **editor di immagini**, andare al menu **file**  >  **Salva *nomefile*. bmp come**.
 
-1. Nella finestra di dialogo **Salva file con** nome digitare il nome che si desidera assegnare al file e l'estensione che denota il formato di file desiderato nella casella **nome file** . Ad esempio, *MyFile. gif*.
+1. Nella finestra di dialogo **Salva file con** nome digitare il nome che si desidera assegnare al file e l'estensione che denota il formato di file desiderato nella casella **nome file** . Ad esempio, *myfile.gif*.
 
    > [!NOTE]
    > È necessario creare o aprire la bitmap all'esterno del progetto per salvarla in un altro formato di file. Se viene creato o aperto nel progetto, il comando **Salva con nome** non sarà disponibile. Per altre informazioni, vedere [visualizzazione di risorse in un file script di risorsa all'esterno di un progetto (standalone)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
@@ -279,19 +294,19 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 
 1. Aprire l'immagine nell' **editor di immagini**.
 
-1. Passare al **file** di menu > **Salva *nomefile con nome*** .
+1. Andare al menu **file**  >  **Salva *nomefile con nome* **.
 
 1. Nella casella **nome file** della finestra di dialogo **Salva file** con nome digitare il nome del file e l'estensione che denota il formato desiderato.
 
 1. Selezionare **Salva**.
 
-### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Per aggiungere una nuova risorsa immagine a un C++ progetto non gestito
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Per aggiungere una nuova risorsa immagine a un progetto C++ non gestito
 
 1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* , quindi scegliere **Inserisci risorsa**. Se nel file *RC* è già presente una risorsa immagine esistente, ad esempio un cursore, è sufficiente fare clic con il pulsante destro del mouse sulla cartella del **cursore** e scegliere **Inserisci cursore**.
 
 1. Nella finestra di [dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md)selezionare il tipo di risorsa immagine che si vuole creare, ad esempio**bitmap**, quindi scegliere **nuovo**.
 
-   Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa immagine nella finestra di dialogo **Inserisci risorsa** , significa che sono disponibili i modelli della barra degli strumenti. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
+   Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa immagine nella finestra di dialogo **Inserisci risorsa** , significa che i modelli della barra degli strumenti sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
 
 ### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Per aggiungere una nuova risorsa immagine a un progetto in un linguaggio di programmazione .NET
 
@@ -307,7 +322,7 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

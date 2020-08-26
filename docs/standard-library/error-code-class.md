@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-ms.openlocfilehash: 3f272c25572ebebd95e5a59b50094d8e1872c90a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5bbd67d2967a1a6d070ece54ea464a2a5a2deac9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228284"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844457"
 ---
 # <a name="error_code-class"></a>Classe error_code
 
@@ -44,19 +44,19 @@ Un oggetto di tipo classe `error_code` archivia un valore di codice di errore e 
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[error_code](#error_code)|Costruisce un oggetto di tipo `error_code`.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[value_type](#value_type)|Tipo che rappresenta il valore del codice di errore archiviato.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[assign](#assign)|Assegna un valore di codice di errore e una categoria a un codice di errore.|
 |[category](#category)|Restituisce la categoria dell'errore.|
@@ -66,7 +66,7 @@ Un oggetto di tipo classe `error_code` archivia un valore di codice di errore e 
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore = =](#op_eq_eq)|Verifica l'uguaglianza tra oggetti `error_code`.|
 |[operatore! =](#op_neq)|Verifica la disuguaglianza tra oggetti `error_code`.|
@@ -74,7 +74,7 @@ Un oggetto di tipo classe `error_code` archivia un valore di codice di errore e 
 |[operatore =](#op_eq)|Assegna un nuovo valore di enumerazione all'oggetto `error_code`.|
 |[operatore bool](#op_bool)|Crea una variabile di tipo `error_code`.|
 
-### <a name="assign"></a><a name="assign"></a>assegnare
+### <a name="assign"></a><a name="assign"></a> assegnare
 
 Assegna un valore di codice di errore e una categoria a un codice di errore.
 
@@ -94,7 +94,7 @@ La categoria dell'errore da archiviare nell'`error_code`.
 
 La funzione membro Archivia *Val* come valore del codice di errore e un puntatore a *_Cat*.
 
-### <a name="category"></a><a name="category"></a>Categoria
+### <a name="category"></a><a name="category"></a> Categoria
 
 Restituisce la categoria dell'errore.
 
@@ -104,7 +104,7 @@ const error_category& category() const;
 
 #### <a name="remarks"></a>Osservazioni
 
-### <a name="clear"></a><a name="clear"></a>deselezionare
+### <a name="clear"></a><a name="clear"></a> deselezionare
 
 Cancella il valore del codice di errore e la categoria.
 
@@ -116,7 +116,7 @@ clear();
 
 La funzione membro archivia un valore del codice di errore zero e un puntatore all'oggetto [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-### <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
+### <a name="default_error_condition"></a><a name="default_error_condition"></a> default_error_condition
 
 Restituisce la condizione di errore predefinita.
 
@@ -132,7 +132,7 @@ La [error_condition](../standard-library/error-condition-class.md) specificata d
 
 Questa funzione membro restituisce `category().default_error_condition(value())`.
 
-### <a name="error_code"></a><a name="error_code"></a>error_code
+### <a name="error_code"></a><a name="error_code"></a> error_code
 
 Costruisce un oggetto di tipo `error_code`.
 
@@ -166,7 +166,7 @@ Il secondo costruttore archivia *Val* come valore del codice di errore e un punt
 
 Il terzo costruttore archivia `(value_type)_Errcode` come valore del codice di errore e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-### <a name="message"></a><a name="message"></a>Messaggio
+### <a name="message"></a><a name="message"></a> Messaggio
 
 Restituisce il nome del codice di errore.
 
@@ -182,7 +182,7 @@ string message() const;
 
 Questa funzione membro restituisce `category().message(value())`.
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica l'uguaglianza tra oggetti `error_code`.
 
@@ -203,7 +203,7 @@ Oggetto di cui verificare l'uguaglianza.
 
 L'operatore membro restituisce `category() == right.category() && value == right.value()`.
 
-### <a name="operator"></a><a name="op_neq"></a>operatore! =
+### <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica la disuguaglianza tra oggetti `error_code`.
 
@@ -224,7 +224,7 @@ L'oggetto di cui verificare la disuguaglianza.
 
 L'operatore membro restituisce `!(*this == right)`.
 
-### <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto `error_code` è più piccolo dell'oggetto `error_code` passato per il confronto.
 
@@ -245,7 +245,7 @@ L'oggetto error_code da confrontare.
 
 L'operatore membro restituisce `category() < right.category() || category() == right.category() && value < right.value()`.
 
-### <a name="operator"></a><a name="op_eq"></a>operatore =
+### <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Assegna un nuovo valore di enumerazione all'oggetto `error_code`.
 
@@ -268,7 +268,7 @@ Un riferimento all'oggetto `error_code` a cui viene assegnato il nuovo valore di
 
 L'operatore membro archivia `(value_type)_Errcode` come valore del codice di errore e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category). Restituisce **`*this`** .
 
-### <a name="operator-bool"></a><a name="op_bool"></a>operatore bool
+### <a name="operator-bool"></a><a name="op_bool"></a> operatore bool
 
 Crea una variabile di tipo `error_code`.
 
@@ -296,7 +296,7 @@ value_type value() const;
 
 Il valore del codice di errore archiviato di tipo [value_type](#value_type).
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 Tipo che rappresenta il valore del codice di errore archiviato.
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212264"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843248"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
 
@@ -71,28 +71,28 @@ Tipo di classe della funzione di accesso che si desidera venga utilizzata dal se
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
-|-|-|
-|[CArrayRowset](#carrayrowset)|Costruttore.|
-|[Snapshot](#snapshot)|Legge l'intero set di righe in memoria.|
+| Nome | Descrizione |
+|--|--|
+| [CArrayRowset](#carrayrowset) | Costruttore. |
+| [Snapshot](#snapshot) | Legge l'intero set di righe in memoria. |
 
 ### <a name="operators"></a>Operatori
 
-|||
-|-|-|
-|[Operatore&#91;&#93;](#operator)|Accede a un elemento del set di righe.|
+| Nome | Descrizione |
+|--|--|
+| [Operatore&#91;&#93;](#operator) | Accede a un elemento del set di righe. |
 
 ### <a name="data-members"></a>Membri dei dati
 
-|||
-|-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Numero di righe già lette.|
+| Nome | Descrizione |
+|--|--|
+| [CArrayRowset::m_nRowsRead](#nrowsread) | Numero di righe già lette. |
 
-## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
 
 Crea un nuovo oggetto `CArrayRowset`.
 
@@ -107,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 [in] Numero massimo di righe nel rowset.
 
-## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a> CArrayRowset:: snapshot
 
 Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.
 
@@ -117,7 +117,7 @@ Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.
 HRESULT Snapshot() throw();
 ```
 
-## <a name="carrayrowsetoperator"></a><a name="operator"></a>Operatore CArrayRowset::
+## <a name="carrayrowsetoperator"></a><a name="operator"></a> Operatore CArrayRowset::
 
 Fornisce la sintassi di tipo matrice per l'accesso a una riga nel set di righe.
 
@@ -143,7 +143,7 @@ Contenuto della riga richiesta.
 
 Se *nrow* supera il numero di righe nel set di righe, viene generata un'eccezione.
 
-## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a> CArrayRowset:: m_nRowsRead
 
 Contiene il numero di righe nel set di righe già lette.
 
@@ -156,5 +156,5 @@ ULONG m_nRowsRead;
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)

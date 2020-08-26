@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210301"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844834"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `ISessionPropertiesImpl`.
+Classe derivata da `ISessionPropertiesImpl` .
 
 *PropClass*<br/>
 Classe di proprietà definibile dall'utente che per impostazione predefinita è *T*.
@@ -44,11 +44,11 @@ Classe di proprietà definibile dall'utente che per impostazione predefinita è 
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[GetProperties](#getproperties)|Restituisce l'elenco di proprietà nel gruppo di proprietà della sessione attualmente impostato per la sessione.|
 |[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà della sessione.|
@@ -57,9 +57,9 @@ Classe di proprietà definibile dall'utente che per impostazione predefinita è 
 
 Interfaccia obbligatoria sulle sessioni. Questa classe implementa le proprietà della sessione chiamando una funzione statica definita dalla [mappa del set di proprietà](../../data/oledb/begin-propset-map.md). La mappa del set di proprietà deve essere specificata nella classe di sessione.
 
-## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl:: GetProperties
 
-Restituisce l'elenco di proprietà nel gruppo di proprietà `DBPROPSET_SESSION` attualmente impostato nella sessione.
+Restituisce l'elenco di proprietà del `DBPROPSET_SESSION` gruppo di proprietà attualmente impostate per la sessione.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -74,9 +74,9 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 Vedere [ISessionProperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: seproprietà
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a> ISessionPropertiesImpl:: seproprietà
 
-Imposta le proprietà nel gruppo di proprietà `DBPROPSET_SESSION`.
+Imposta le proprietà nel `DBPROPSET_SESSION` gruppo di proprietà.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -92,4 +92,4 @@ Vedere [ISessionProperties:: seproperties](/previous-versions/windows/desktop/ms
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

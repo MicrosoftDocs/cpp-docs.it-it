@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233483"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843287"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -62,19 +62,19 @@ Classe del set di righe.
 
 ### <a name="methods"></a>Metodi
 
-|||
-|-|-|
-|[Associare](#bind)|Crea associazioni (utilizzate quando `bBind` viene specificato come **`false`** in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset](#caccessorrowset)|Costruttore.|
-|[Close](#close)|Chiude il set di righe e le funzioni di accesso.|
-|[FreeRecordMemory](#freerecordmemory)|Libera tutte le colonne del record corrente che devono essere liberate.|
-|[GetColumnInfo](#getcolumninfo)|Implementa [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+| Nome | Descrizione |
+|--|--|
+| [Associare](#bind) | Crea associazioni (utilizzate quando `bBind` viene specificato come **`false`** in [CCommand:: Open](../../data/oledb/ccommand-open.md)). |
+| [CAccessorRowset](#caccessorrowset) | Costruttore. |
+| [Close](#close) | Chiude il set di righe e le funzioni di accesso. |
+| [FreeRecordMemory](#freerecordmemory) | Libera tutte le colonne del record corrente che devono essere liberate. |
+| [GetColumnInfo](#getcolumninfo) | Implementa [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
 ## <a name="remarks"></a>Osservazioni
 
 `TAccessor`La classe gestisce la funzione di accesso. La classe *TRowset* gestisce il set di righe.
 
-## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: bind
 
 Crea le associazioni se è stato specificato `bBind` come **`false`** in [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 Valore HRESULT standard.
 
-## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
 
 Inizializza l'oggetto `CAccessorRowset`.
 
@@ -98,7 +98,7 @@ Inizializza l'oggetto `CAccessorRowset`.
 CAccessorRowset();
 ```
 
-## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset:: Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a> CAccessorRowset:: Close
 
 Rilascia tutte le funzioni di accesso attive e il set di righe.
 
@@ -112,7 +112,7 @@ void Close();
 
 Rilascia qualsiasi memoria associata.
 
-## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset:: FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a> CAccessorRowset:: FreeRecordMemory
 
 Libera tutte le colonne del record corrente che devono essere liberate.
 
@@ -122,7 +122,7 @@ Libera tutte le colonne del record corrente che devono essere liberate.
 void FreeRecordMemory();
 ```
 
-## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
 
 Ottiene le informazioni sulla colonna dal set di righe aperto.
 

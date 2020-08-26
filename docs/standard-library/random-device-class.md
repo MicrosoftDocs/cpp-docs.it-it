@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320276"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843547"
 ---
 # <a name="random_device-class"></a>Classe random_device
 
@@ -51,10 +51,9 @@ public:
 
 ## <a name="members"></a>Membri
 
-|||
-|-|-|
-|[random_device](#random_device)|[Entropia](#entropy)|
-|[random_device::operator()](#op_call)||
+[random_device](#random_device)\
+[entropia](#entropy)\
+[random_device::operator()](#op_call)
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -64,7 +63,7 @@ I risultati di `random_device` sono distribuiti in modo uniforme nell'intervallo
 
 Non è garantito che `random_device` abbia come risultato una chiamata non di blocco.
 
-In genere, `random_device` è usato per il seeding di altri generatori creati con motori o adattatori del motore. Per ulteriori informazioni, vedere [ \<>casuale ](../standard-library/random.md).
+In genere, `random_device` è usato per il seeding di altri generatori creati con motori o adattatori del motore. Per altre informazioni, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="example"></a>Esempio
 
@@ -100,15 +99,15 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-Questo esempio è semplicistico e non rappresentativo dei casi d'utilizzo generali per questo generatore. Per un esempio di [ \< ](../standard-library/random.md)codice più rappresentativo, vedere random>.
+Questo esempio è semplicistico e non rappresentativo dei casi d'utilizzo generali per questo generatore. Per un esempio di codice più rappresentativo, vedere [\<random>](../standard-library/random.md) .
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<random>
+**Intestazione:**\<random>
 
 **Spazio dei nomi:** std
 
-## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a> random_device:: random_device
 
 Costruisce il generatore.
 
@@ -120,7 +119,7 @@ random_device(const std::string& = "");
 
 Il costruttore inizializza il generatore in base alle esigenze, ignorando il parametro di stringa. Se non è stato possibile inizializzare `random_device`, genera un valore di un tipo definito dall'implementazione derivato dall'oggetto [exception](../standard-library/exception-class.md).
 
-## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::entropia
+## <a name="random_deviceentropy"></a><a name="entropy"></a> random_device:: entropia
 
 Stima la casualità dell'origine.
 
@@ -132,7 +131,7 @@ double entropy() const noexcept;
 
 La funzione membro restituisce una stima della casualità dell'origine, misurata in bit.
 
-## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device:operator()
+## <a name="random_deviceoperator"></a><a name="op_call"></a> operatore random_device:: ()
 
 Restituisce un valore casuale.
 
@@ -146,4 +145,4 @@ Restituisce valori distribuiti in modo uniforme nell'intervallo chiuso [ `min, m
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>casuali](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

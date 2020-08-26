@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224630"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844301"
 ---
 # <a name="stack-class"></a>Classe stack
 
@@ -64,13 +64,13 @@ Gli oggetti stack sono confrontabili tra uguaglianza se e solo se gli elementi d
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[stack](#stack)|Costruisce un `stack` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da un oggetto `stack`.|
 |[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `stack`.|
@@ -78,7 +78,7 @@ Gli oggetti stack sono confrontabili tra uguaglianza se e solo se gli elementi d
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[empty](#empty)|Verifica se `stack` è vuoto.|
 |[popup](#pop)|Rimuove l'elemento dalla parte superiore di `stack`.|
@@ -86,7 +86,7 @@ Gli oggetti stack sono confrontabili tra uguaglianza se e solo se gli elementi d
 |[size](#size)|Restituisce il numero di elementi nel `stack`.|
 |[top](#top)|Restituisce un riferimento a un elemento nella parte superiore di `stack`.|
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Tipo che fornisce il contenitore di base da adattare.
 
@@ -104,7 +104,7 @@ Per altre informazioni su `Container`, vedere la sezione Note dell'argomento [Cl
 
 Vedere l'esempio relativo a [stack::stack](#stack) per indicazioni su come dichiarare e usare `container_type`.
 
-## <a name="empty"></a><a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a> vuoto
 
 Verifica se uno stack è vuoto.
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a><a name="pop"></a>popup
+## <a name="pop"></a><a name="pop"></a> popup
 
 Rimuove l'elemento all'inizio dello stack.
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>spingere
+## <a name="push"></a><a name="push"></a> spingere
 
 Aggiunge un elemento all'inizio dello stack.
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a><a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a> dimensioni
 
 Restituisce il numero di elementi presenti nello stack.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Tipo Unsigned Integer in grado di rappresentare il numero di elementi di uno stack.
 
@@ -311,7 +311,7 @@ Il tipo è un sinonimo del `size_type` del contenitore di base adattato dallo st
 
 Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="stack"></a><a name="stack"></a>stack
+## <a name="stack"></a><a name="stack"></a> stack
 
 Costruisce uno stack vuoto o che rappresenta una copia totale o parziale di una classe contenitore di base.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a><a name="top"></a>In alto
+## <a name="top"></a><a name="top"></a> In alto
 
 Restituisce un riferimento a un elemento all'inizio dello stack.
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento in uno stack.
 

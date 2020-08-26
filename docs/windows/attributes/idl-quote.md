@@ -1,17 +1,17 @@
 ---
-title: idl_quote (C++ attributo com)
+title: idl_quote (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168029"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844236"
 ---
 # <a name="idl_quote"></a>idl_quote
 
@@ -26,11 +26,11 @@ Consente di utilizzare costrutti IDL non supportati nella versione corrente di V
 ### <a name="parameters"></a>Parametri
 
 *text*<br/>
-Nome dell'attributo che il compilatore Microsoft C++ deve passare al file IDL generato senza restituire un errore del compilatore.
+Il nome dell'attributo che si desidera venga passato dal compilatore Microsoft C++ al file IDL generato senza restituire un errore del compilatore.
 
 ## <a name="remarks"></a>Osservazioni
 
-Se l'attributo **idl_quote** C++ viene utilizzato come attributo autonomo (con un punto e virgola dopo la parentesi di chiusura), il *testo* viene inserito nel file con estensione IDL Unito così com'è. Se **idl_quote** viene utilizzato su un simbolo, il *testo* viene inserito nel blocco di attributi per tale simbolo.
+Se l'attributo **idl_quote** C++ viene usato come attributo autonomo (con un punto e virgola dopo la parentesi quadra di chiusura), il *testo* viene inserito nel file IDL Unito così com'è. Se **idl_quote** viene utilizzato su un simbolo, il *testo* viene inserito nel blocco di attributi per tale simbolo.
 
 ## <a name="example"></a>Esempio
 
@@ -73,14 +73,12 @@ Questo codice causa `MYFLOT` e `MYDUB` e la voce di *testo* da inserire nel file
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
