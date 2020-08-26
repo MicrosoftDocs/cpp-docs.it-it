@@ -1,17 +1,17 @@
 ---
-title: IncludiC++ (attributo com)
+title: include (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b75df74ee69ee4f89eb7bf18fb6bcd77d8a6284
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166783"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842195"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -30,13 +30,13 @@ Nome di un file che si desidera includere nel file con estensione IDL generato.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **include** C++ determina la posizione di un'istruzione `#include` sotto l'istruzione `import "docobj.idl"` nel file IDL generato.
+L'attributo di **inclusione** C++ fa sì `#include` che un'istruzione venga posizionata sotto l' `import "docobj.idl"` istruzione nel file con estensione IDL generato.
 
-L'attributo **include** C++ ha la stessa funzionalità dell'attributo MIDL di [inclusione](/windows/win32/Midl/include) .
+L'attributo di **inclusione** C++ ha la stessa funzionalità dell'attributo MIDL di [inclusione](/windows/win32/Midl/include) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra un esempio di come usare **include**. Per questo esempio, il file include. h contiene solo un'istruzione `#include`.
+Il codice seguente illustra un esempio di come usare **include**. Per questo esempio, il file include. h contiene solo un' `#include` istruzione.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -47,14 +47,12 @@ Il codice seguente illustra un esempio di come usare **include**. Per questo ese
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -64,5 +62,5 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
-[includelib](includelib-cpp.md)<br/>
+[includelib (](includelib-cpp.md)<br/>
 [importlib](importlib.md)

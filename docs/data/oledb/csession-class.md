@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211133"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841103"
 ---
 # <a name="csession-class"></a>Classe CSession
 
@@ -61,24 +61,24 @@ class CSession
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
-|[Abort](#abort)|Annulla (termina) la transazione.|
+|[Interruzione](#abort)|Annulla (termina) la transazione.|
 |[Close](#close)|Chiude la sessione.|
-|[Eseguire il commit](#commit)|Esegue il commit della transazione.|
+|[Eseguire il commit](#commit)|Consente di eseguire il commit della transazione.|
 |[GetTransactionInfo](#gettransactioninfo)|Restituisce informazioni relative a una transazione.|
 |[Apri](#open)|Apre una nuova sessione per l'oggetto origine dati.|
 |[StartTransaction](#starttransaction)|Inizia una nuova transazione per questa sessione.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Una o più sessioni possono essere associate a ogni connessione del provider (origine dati), rappresentata da un oggetto [CDataSource](../../data/oledb/cdatasource-class.md) . Per creare un nuovo `CSession` per un `CDataSource`, chiamare [CSession:: Open](../../data/oledb/csession-open.md). Per iniziare una transazione di database, `CSession` fornisce il metodo `StartTransaction`. Una volta avviata una transazione, è possibile eseguirne il commit utilizzando il metodo `Commit` oppure annullarla utilizzando il metodo `Abort`.
+Una o più sessioni possono essere associate a ogni connessione del provider (origine dati), rappresentata da un oggetto [CDataSource](../../data/oledb/cdatasource-class.md) . Per creare un nuovo oggetto `CSession` per un oggetto `CDataSource` , chiamare [CSession:: Open](../../data/oledb/csession-open.md). Per iniziare una transazione di database, `CSession` fornisce il `StartTransaction` metodo. Una volta avviata una transazione, è possibile eseguirne il commit utilizzando il `Commit` metodo oppure annullarla utilizzando il `Abort` metodo.
 
-## <a name="csessionabort"></a><a name="abort"></a>CSession:: Abort
+## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
 Termina la transazione.
 
@@ -98,7 +98,7 @@ Vedere [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.8
 
 Valore HRESULT standard.
 
-## <a name="csessionclose"></a><a name="close"></a>CSession:: Close
+## <a name="csessionclose"></a><a name="close"></a> CSession:: Close
 
 Chiude la sessione, che è stata aperta da [CSession:: Open](../../data/oledb/csession-open.md).
 
@@ -110,11 +110,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>Osservazioni
 
-Rilascia il puntatore `m_spOpenRowset`.
+Rilascia il `m_spOpenRowset` puntatore.
 
-## <a name="csessioncommit"></a><a name="commit"></a>CSession:: commit
+## <a name="csessioncommit"></a><a name="commit"></a> CSession:: commit
 
-Esegue il commit della transazione.
+Consente di eseguire il commit della transazione.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -136,7 +136,7 @@ Valore HRESULT standard.
 
 Per ulteriori informazioni, vedere [ITransaction:: commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
-## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession:: GetTransactionInfo
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a> CSession:: GetTransactionInfo
 
 Restituisce informazioni relative a una transazione.
 
@@ -158,7 +158,7 @@ Valore HRESULT standard.
 
 Per ulteriori informazioni, vedere [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="csessionopen"></a><a name="open"></a>CSession:: Open
+## <a name="csessionopen"></a><a name="open"></a> CSession:: Open
 
 Apre una nuova sessione per l'oggetto origine dati.
 
@@ -187,9 +187,9 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-È necessario aprire l'oggetto origine dati utilizzando [CDataSource:: Open](../../data/oledb/cdatasource-open.md) prima di passarlo a `CSession::Open`.
+È necessario aprire l'oggetto origine dati utilizzando [CDataSource:: Open](../../data/oledb/cdatasource-open.md) prima di passarlo a `CSession::Open` .
 
-## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession:: StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 
 Inizia una nuova transazione per questa sessione.
 
@@ -218,4 +218,4 @@ Per ulteriori informazioni, vedere [ITransactionLocal:: StartTransaction](/previ
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

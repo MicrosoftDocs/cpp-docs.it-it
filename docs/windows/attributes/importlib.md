@@ -1,17 +1,17 @@
 ---
-title: importlib (C++ attributo com)
+title: importlib (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 004533282ca089a076df6b110d52701abc16f71d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166809"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842221"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,7 +30,7 @@ Nome di un file tlb, racchiuso tra virgolette, che si desidera importare nella l
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **importlib** C++ fa sì che un'istruzione `importlib` venga inserita nel blocco della libreria del file IDL generato. L'attributo **importlib** ha la stessa funzionalità dell'attributo MIDL di [importlib](/windows/win32/Midl/importlib) .
+L'attributo C++ **importlib** fa sì `importlib` che un'istruzione venga inserita nel blocco della libreria del file IDL generato. L'attributo **importlib** ha la stessa funzionalità dell'attributo MIDL di [importlib](/windows/win32/Midl/importlib) .
 
 ## <a name="example"></a>Esempio
 
@@ -45,14 +45,12 @@ Il codice seguente illustra un esempio di come usare **importlib**:
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -62,5 +60,5 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
-[include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)
+[includere](include-cpp.md)<br/>
+[includelib (](includelib-cpp.md)

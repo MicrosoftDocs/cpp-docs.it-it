@@ -2,12 +2,12 @@
 title: 2. Direttive
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: c3aadcf34e013c66dec81ca4b09dce4144294ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228401"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841974"
 ---
 # <a name="2-directives"></a>2. Direttive
 
@@ -21,7 +21,7 @@ La sintassi di una direttiva OpenMP viene formalmente specificata dalla grammati
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-Ogni direttiva inizia con `#pragma omp` , per ridurre il rischio di conflitti con le direttive pragma (non OpenMP o Vendor Extensions) con lo stesso nome. Il resto della direttiva segue le convenzioni degli standard C e C++ per le direttive del compilatore. In particolare, gli spazi vuoti possono essere utilizzati prima e dopo e in `#` alcuni casi è necessario utilizzare gli spazi vuoti per separare le parole in una direttiva. I token `#pragma omp` di pre-elaborazione che seguono sono soggetti alla sostituzione della macro.
+Ogni direttiva inizia con  `#pragma omp` , per ridurre il rischio di conflitti con le direttive pragma (non OpenMP o Vendor Extensions) con lo stesso nome. Il resto della direttiva segue le convenzioni degli standard C e C++ per le direttive del compilatore. In particolare, gli spazi vuoti possono essere utilizzati prima e dopo e in `#` alcuni casi è necessario utilizzare gli spazi vuoti per separare le parole in una direttiva. I token `#pragma omp` di pre-elaborazione che seguono sono soggetti alla sostituzione della macro.
 
 Le direttive fanno distinzione tra maiuscole e minuscole. L'ordine in cui le clausole vengono visualizzate nelle direttive non è significativo. Le clausole sulle direttive possono essere ripetute in base alle esigenze, in base alle restrizioni elencate nella descrizione di ogni clausola. Se in una clausola viene visualizzata l'opzione *Variable-list* , è necessario specificare solo le variabili. È possibile specificare solo un *nome di direttiva* per ogni direttiva.  Ad esempio, la direttiva seguente non è consentita:
 
@@ -191,12 +191,12 @@ La `schedule` clausola specifica il modo in cui le iterazioni del `for` ciclo so
 
 Tabella 2-1: `schedule` valori *Kind* della clausola
 
-|||
+|Valore|Descrizione|
 |-|-|
 |static|Quando `schedule(static,` *chunk_size* `)` si specifica chunk_size, le iterazioni sono divise in blocchi di dimensioni specificate da *chunk_size*. I blocchi vengono assegnati staticamente ai thread del team in base a una modalità Round Robin nell'ordine del numero del thread. Quando non viene specificato alcun *chunk_size* , lo spazio di iterazione è diviso in blocchi di dimensioni approssimativamente uguali, con un blocco assegnato a ogni thread.|
 |dinamico|Quando `schedule(dynamic,` *chunk_size* `)` si specifica chunk_size, le iterazioni sono divise in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread esegue il blocco di iterazioni e quindi attende la successiva assegnazione, fino a quando non rimane alcun blocco da assegnare. L'ultimo blocco da assegnare può avere un numero inferiore di iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
 |guidato|Quando `schedule(guided,` *chunk_size* `)` si specifica chunk_size, le iterazioni vengono assegnate ai thread in blocchi con dimensioni decrescenti. Quando un thread termina il blocco di iterazioni assegnato, viene assegnato dinamicamente a un altro blocco, fino a quando non ne viene lasciato nessuno. Per un *chunk_size* di 1, le dimensioni di ogni blocco corrispondono approssimativamente al numero di iterazioni non assegnate divise per il numero di thread. Queste dimensioni diminuiscono quasi esponenzialmente a 1. Per un *chunk_size* con valore *k* maggiore di 1, le dimensioni diminuiscono in modo quasi esponenziale fino a *k*, ad eccezione del fatto che l'ultimo blocco può contenere meno di *k* iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
-|runtime|Quando `schedule(runtime)` si specifica, la decisione relativa alla pianificazione viene posticipata fino al runtime. Il *tipo* di pianificazione e le dimensioni dei blocchi possono essere scelti in fase di esecuzione impostando la variabile di ambiente `OMP_SCHEDULE` . Se questa variabile di ambiente non è impostata, la pianificazione risultante è definita dall'implementazione. Quando `schedule(runtime)` si specifica, *chunk_size* non deve essere specificato.|
+|runtime|Quando `schedule(runtime)` si specifica, la decisione relativa alla pianificazione viene posticipata fino al runtime. Il *tipo* di pianificazione e le dimensioni dei blocchi possono essere scelti in fase di esecuzione impostando la variabile di ambiente `OMP_SCHEDULE` . Se questa variabile di ambiente non è impostata, la pianificazione risultante è definita dall'implementazione. Quando  `schedule(runtime)` si specifica, *chunk_size* non deve essere specificato.|
 
 In assenza di una clausola definita in modo esplicito `schedule` , l'impostazione predefinita `schedule` è definita dall'implementazione.
 
@@ -407,9 +407,9 @@ La `atomic` direttiva assicura che una posizione di memoria specifica venga aggi
 L'istruzione expression deve avere uno dei seguenti formati:
 
 - *binop x* `=` *espressione expr*
-- *x* `++`
+- *x*`++`
 - `++` *x*
-- *x* `--`
+- *x*`--`
 - `--` *x*
 
 Nelle espressioni precedenti:
@@ -462,21 +462,21 @@ Se gli oggetti che richiedono la sincronizzazione possono essere tutti designati
 Una `flush` direttiva senza un *elenco di variabili* Sincronizza tutti gli oggetti condivisi tranne gli oggetti inaccessibili con durata di archiviazione automatica. È probabile che si disponga di un sovraccarico maggiore rispetto a un oggetto `flush` con un *elenco di variabili*. Una `flush` direttiva senza un *elenco di variabili* è implicita per le direttive seguenti:
 
 - `barrier`
-- All'ingresso e all'uscita da`critical`
-- All'ingresso e all'uscita da`ordered`
-- All'ingresso e all'uscita da`parallel`
-- All'uscita da`for`
-- All'uscita da`sections`
-- All'uscita da`single`
-- All'ingresso e all'uscita da`parallel for`
-- All'ingresso e all'uscita da`parallel sections`
+- All'ingresso e all'uscita da `critical`
+- All'ingresso e all'uscita da `ordered`
+- All'ingresso e all'uscita da `parallel`
+- All'uscita da `for`
+- All'uscita da `sections`
+- All'uscita da `single`
+- All'ingresso e all'uscita da `parallel for`
+- All'ingresso e all'uscita da `parallel sections`
 
 La direttiva non è implicita se `nowait` è presente una clausola. Si noti che la `flush` direttiva non è implicita per uno dei seguenti elementi:
 
-- Alla voce`for`
-- All'ingresso o all'uscita da`master`
-- Alla voce`sections`
-- Alla voce`single`
+- Alla voce `for`
+- All'ingresso o all'uscita da `master`
+- Alla voce `sections`
+- Alla voce `single`
 
 Un riferimento che accede al valore di un oggetto con un tipo qualificato volatile si comporta come se fosse presente una `flush` direttiva che specifica l'oggetto in corrispondenza del punto di sequenza precedente. Un riferimento che modifica il valore di un oggetto con un tipo qualificato volatile si comporta come se fosse presente una `flush` direttiva che specifica l'oggetto in corrispondenza del punto di sequenza successivo.
 
@@ -601,7 +601,7 @@ Le sezioni seguenti descrivono le clausole degli attributi di condivisione dei d
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
 - [condiviso](#2724-shared)
-- [predefinita](#2725-default)
+- [default](#2725-default)
 - [riduzione](#2726-reduction)
 - [copyin](#2727-copyin)
 - [copyprivate](#2728-copyprivate)
@@ -717,10 +717,10 @@ Una riduzione viene in genere specificata per un'istruzione con uno dei formati 
 
 - *x* `=` *x* *op* *expr*
 - *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* (ad eccezione della sottrazione)
-- *x* `++`
+- *x* `=` *expr* *op* *x*  (ad eccezione della sottrazione)
+- *x*`++`
 - `++` *x*
-- *x* `--`
+- *x*`--`
 - `--` *x*
 
 dove:
@@ -860,14 +860,14 @@ L'annidamento dinamico delle direttive deve rispettare le regole seguenti:
 
 - `for``sections` `single` le direttive, e che si associano allo stesso `parallel` non sono consentite annidate all'interno di altre.
 
-- `critical`le direttive con lo stesso nome non possono essere annidate all'interno di altre. Si noti che questa restrizione non è sufficiente per impedire il deadlock.
+- `critical` le direttive con lo stesso nome non possono essere annidate all'interno di altre. Si noti che questa restrizione non è sufficiente per impedire il deadlock.
 
 - `for`le `sections` `single` direttive, e non sono consentite nell'extent dinamico delle `critical` `ordered` aree, e `master` se le direttive vengono associate allo stesso `parallel` modo delle aree.
 
-- `barrier`le direttive non sono consentite nell'ambito dinamico delle `for` `ordered` aree,,, `sections` `single` , `master` e `critical` se le direttive vengono associate allo stesso `parallel` modo delle aree.
+- `barrier` le direttive non sono consentite nell'ambito dinamico delle `for` `ordered` aree,,, `sections` `single` , `master` e `critical` se le direttive vengono associate allo stesso `parallel` modo delle aree.
 
-- `master`le direttive non sono consentite nell'extent dinamico delle `for` `sections` `single` direttive, e se le `master` direttive vengono associate allo stesso `parallel` modo delle direttive di condivisione del lavoro.
+- `master` le direttive non sono consentite nell'extent dinamico delle `for` `sections` `single` direttive, e se le `master` direttive vengono associate allo stesso `parallel` modo delle direttive di condivisione del lavoro.
 
-- `ordered`le direttive non sono consentite nell'ambito dinamico delle `critical` aree se le direttive vengono associate allo stesso modo delle `parallel` aree.
+- `ordered` le direttive non sono consentite nell'ambito dinamico delle `critical` aree se le direttive vengono associate allo stesso modo delle `parallel` aree.
 
 - Una direttiva consentita quando eseguita in modo dinamico all'interno di un'area parallela è consentita anche quando viene eseguita all'esterno di un'area parallela. Quando viene eseguita in modo dinamico al di fuori di un'area parallela specificata dall'utente, la direttiva viene eseguita da un team composto solo dal thread master.

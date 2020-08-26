@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: ad4987422fd200faef141150908d4df0722f669a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 304dfe0e026a9fbba899c1ef17c06cf1baf1529b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366269"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841051"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 
-Utilizzato in `CCommand` `CTable` una dichiarazione o.
+Utilizzato in una `CCommand` `CTable` dichiarazione o.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,8 +46,8 @@ class CStreamRowset
 
 ### <a name="parameters"></a>Parametri
 
-*TAccesso*<br/>
-Classe di accessor.
+*TAccessor*<br/>
+Classe della funzione di accesso.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -57,14 +57,14 @@ Classe di accessor.
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
-|[CStreamRowset](#cstreamrowset)|Costruttore. Crea un'istanza `CStreamRowset` e inizializza l'oggetto.|
-|[Chiudi](#close)|Rilascia il puntatore a interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) nella classe.|
+|[CStreamRowset](#cstreamrowset)|Costruttore. Crea un'istanza dell'oggetto e lo inizializza `CStreamRowset` .|
+|[Close](#close)|Rilascia il puntatore all'interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) nella classe.|
 
 ## <a name="remarks"></a>Osservazioni
 
-Utilizzare `CStreamRowset` nella `CCommand` `CTable` dichiarazione o, ad esempio:
+Usare `CStreamRowset` nella `CCommand` dichiarazione o `CTable` , ad esempio:
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
@@ -72,18 +72,18 @@ o
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute`restituisce `ISequentialStream` un puntatore, `m_spStream`memorizzato in . Utilizzare quindi `Read` il metodo per recuperare i dati (stringa Unicode) in formato XML. Ad esempio:
+`ICommand::Execute` Restituisce un `ISequentialStream` puntatore, archiviato in `m_spStream` . Si usa quindi il `Read` metodo per recuperare i dati (stringa Unicode) in formato XML. Ad esempio:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
-SQL Server 2000 esegue la formattazione XML e restituisce tutte le colonne e tutte le righe del set di righe come un'unica stringa XML.
+SQL Server 2000 esegue la formattazione XML e restituirà tutte le colonne e tutte le righe del set di righe come una stringa XML.
 
 > [!NOTE]
 > Questa funzionalità funziona solo con SQL Server 2000.
 
-## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a>CStreamRowset::CStreamRowsetCStreamRowset::CStreamRowset
+## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a> CStreamRowset:: CStreamRowset
 
-Crea un'istanza `CStreamRowset` e inizializza l'oggetto.
+Crea un'istanza dell'oggetto e lo inizializza `CStreamRowset` .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -91,9 +91,9 @@ Crea un'istanza `CStreamRowset` e inizializza l'oggetto.
 CStreamRowset();
 ```
 
-## <a name="cstreamrowsetclose"></a><a name="close"></a>CStreamRowset::Close
+## <a name="cstreamrowsetclose"></a><a name="close"></a> CStreamRowset:: Close
 
-Rilascia il puntatore a interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) nella classe.
+Rilascia il puntatore all'interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) nella classe.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -104,4 +104,4 @@ void Close();
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

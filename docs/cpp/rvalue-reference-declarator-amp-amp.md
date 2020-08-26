@@ -1,19 +1,19 @@
 ---
-title: Dichiaratore di riferimento rvalue:&amp;&amp;
+title: 'Dichiaratore di riferimento rvalue: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 65eec84447043b89ff94b77b7aed22b1b06f58e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227101"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842039"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue: &amp;&amp;
 
 Contiene un riferimento a un'espressione rvalue.
 
@@ -391,13 +391,12 @@ Questa versione della funzione `print_type_and_value` inoltra quindi il relativo
 
 Nella tabella seguente vengono riepilogate le regole di compressione dei riferimenti per la deduzione del tipo di argomento del modello:
 
-|||
-|-|-|
-|Tipo espanso|Tipo compresso|
-|`T& &`|`T&`|
-|`T& &&`|`T&`|
-|`T&& &`|`T&`|
-|`T&& &&`|`T&&`|
+| Tipo espanso | Tipo compresso |
+|--|--|
+| `T& &` | `T&` |
+| `T& &&` | `T&` |
+| `T&& &` | `T&` |
+| `T&& &&` | `T&&` |
 
 La deduzione dell'argomento di modello è un elemento importante dell'implementazione dell'inoltro perfetto. La sezione Inoltro perfetto, presentata in precedenza in questo argomento, descrive l'inoltro perfetto più dettagliatamente.
 

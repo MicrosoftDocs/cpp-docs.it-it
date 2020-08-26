@@ -13,24 +13,31 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d330a1dcd819dd48713887db789371ed4a8fee35
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 11defadff0b1785f6e4c5aba6356f7b68a78b9fc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215530"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841779"
 ---
 # <a name="lttype_traitsgt-functions"></a>Funzioni &lt;type_traits&gt;
 
-||||
-|-|-|-|
-|[is_assignable](#is_assignable)|[is_copy_assignable](#is_copy_assignable)|[is_copy_constructible](#is_copy_constructible)|
-|[is_default_constructible](#is_default_constructible)|[is_move_assignable](#is_move_assignable)|[is_move_constructible](#is_move_constructible)|
-|[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_nothrow_swappable](#is_nothrow_swappable)|[is_nothrow_swappable_with](#is_nothrow_swappable_with)|
-|[is_swappable](#is_swappable)|[is_swappable_with](#is_swappable_with)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|
-|[is_trivially_move_assignable](#is_trivially_move_assignable)|[is_trivially_move_constructible](#is_trivially_move_constructible)|
+[is_assignable](#is_assignable)\
+[is_copy_assignable](#is_copy_assignable)\
+[is_copy_constructible](#is_copy_constructible)\
+[is_default_constructible](#is_default_constructible)\
+[is_move_assignable](#is_move_assignable)\
+[is_move_constructible](#is_move_constructible)\
+[is_nothrow_move_assignable](#is_nothrow_move_assignable)\
+[is_nothrow_swappable](#is_nothrow_swappable)\
+[is_nothrow_swappable_with](#is_nothrow_swappable_with)\
+[is_swappable](#is_swappable)\
+[is_swappable_with](#is_swappable_with)\
+[is_trivially_copy_assignable](#is_trivially_copy_assignable)\
+[is_trivially_move_assignable](#is_trivially_move_assignable)\
+[is_trivially_move_constructible](#is_trivially_move_constructible)
 
-## <a name="is_assignable"></a><a name="is_assignable"></a>is_assignable
+## <a name="is_assignable"></a><a name="is_assignable"></a> is_assignable
 
 Verifica se un valore di tipo *from* può essere assegnato *a un tipo* .
 
@@ -51,7 +58,7 @@ Il tipo di oggetto che fornisce il valore.
 
 L'espressione non valutata `declval<To>() = declval<From>()` deve essere nel formato corretto. Sia *da* che *da a* devono essere tipi completi, **`void`** , o matrici di associazione sconosciuta.
 
-## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a>is_copy_assignable
+## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a> is_copy_assignable
 
 Test se è il tipo può essere copiato in un'assegnazione.
 
@@ -69,7 +76,7 @@ Tipo su cui eseguire una query.
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un operatore di assegnazione di copia; in caso contrario, contiene false. Equivale a is_assignable \<Ty&, const Ty&> .
 
-## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a>is_copy_constructible
+## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a> is_copy_constructible
 
 Verifica se il tipo ha un costruttore di copia.
 
@@ -121,7 +128,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false
 ```
 
-## <a name="is_default_constructible"></a><a name="is_default_constructible"></a>is_default_constructible
+## <a name="is_default_constructible"></a><a name="is_default_constructible"></a> is_default_constructible
 
 Verifica se il tipo ha un costruttore predefinito.
 
@@ -173,7 +180,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="is_move_assignable"></a><a name="is_move_assignable"></a>is_move_assignable
+## <a name="is_move_assignable"></a><a name="is_move_assignable"></a> is_move_assignable
 
 Verifica se il tipo può essere assegnato mediante spostamento.
 
@@ -191,7 +198,7 @@ Tipo su cui eseguire una query.
 
 Un tipo può essere assegnato mediante spostamento se un riferimento rvalue a tale tipo può essere assegnato a un riferimento al tipo stesso. Il predicato del tipo è equivalente a `is_assignable<T&, T&&>`. I tipi assegnabili mediante spostamento includono tipi scalari referenziabili e tipi di classe con operatori di assegnazione mediante spostamento generati dal compilatore o definiti dall'utente.
 
-## <a name="is_move_constructible"></a><a name="is_move_constructible"></a>is_move_constructible
+## <a name="is_move_constructible"></a><a name="is_move_constructible"></a> is_move_constructible
 
 Verifica se il tipo ha un costruttore di spostamento.
 
@@ -209,7 +216,7 @@ Il tipo da valutare
 
 Predicato di tipo che restituisce true se il tipo *T* può essere costruito usando un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
 
-## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
+## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable
 
 Verifica se il tipo ha un **`nothrow`** operatore di assegnazione di spostamento.
 
@@ -227,31 +234,31 @@ Tipo su cui eseguire una query.
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* ha un operatore nothrow di assegnazione di spostamento; in caso contrario, contiene false.
 
-## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a>is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a> is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a> is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a><a name="is_swappable"></a>is_swappable
+## <a name="is_swappable"></a><a name="is_swappable"></a> is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a><a name="is_swappable_with"></a>is_swappable_with
+## <a name="is_swappable_with"></a><a name="is_swappable_with"></a> is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
 ```
 
-## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a>is_trivially_copy_assignable
+## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable
 
 Verifica se il tipo ha un operatore di assegnazione di copia semplice.
 
@@ -271,7 +278,7 @@ Un'istanza del predicato di tipo contiene true se il tipo *T* è una classe che 
 
 Un costruttore di assegnazione per una classe *t* è semplice se viene specificato in modo implicito, la classe *t* non ha funzioni virtuali, la classe *t* non ha basi virtuali, le classi di tutti i membri dati non statici del tipo di classe hanno operatori di assegnazione semplici e le classi di tutti i membri dati non statici di tipo matrice della classe hanno operatori di assegnazione semplici.
 
-## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
+## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a> is_trivially_move_assignable
 
 Verifica se il tipo ha un operatore di assegnazione di spostamento semplice.
 
@@ -301,7 +308,7 @@ le classi di tutti i membri dati non statici del tipo di classe hanno operatori 
 
 le classi di tutti i membri dati non statici di tipo matrice della classe hanno operatori di assegnazione di spostamento semplici
 
-## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a>is_trivially_move_constructible
+## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a> is_trivially_move_constructible
 
 Verifica se il tipo ha un costruttore di spostamento semplice.
 

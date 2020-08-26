@@ -1,17 +1,17 @@
 ---
-title: DefaultValue (C++ attributo com)
+title: DefaultValue (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b6a50bd7156eb9d6873e5ef08f6d75508fa3e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214844"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841688"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -30,7 +30,7 @@ Valore predefinito del parametro.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **DefaultValue** C++ ha la stessa funzionalità dell'attributo MIDL di [DefaultValue](/windows/win32/Midl/defaultvalue) .
+L'attributo **DefaultValue** di C++ ha la stessa funzionalità dell'attributo MIDL di [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Esempio
 
@@ -56,21 +56,19 @@ __interface IFireTabCtrl : IDispatch {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi del parametro](parameter-attributes.md)<br/>
 [out](out-cpp.md)<br/>
 [retval](retval.md)<br/>
 [in](in-cpp.md)<br/>

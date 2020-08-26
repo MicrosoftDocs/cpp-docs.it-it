@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562012"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841636"
 ---
 # <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
 
@@ -43,7 +43,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|||
+| Nome | Descrizione |
 |-|-|
 |Nome|Descrizione|
 |`CAutoHideDockSite::CAutoHideDockSite`|Costruisce un oggetto `CAutoHideDockSite`.|
@@ -51,7 +51,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|||
+| Nome | Descrizione |
 |-|-|
 |Nome|Descrizione|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Indica se l'oggetto `CAutoHideDockSite` viene visualizzato nel menu del riquadro.|
@@ -65,7 +65,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>Membri dei dati
 
-|||
+| Nome | Descrizione |
 |-|-|
 |Nome|Descrizione|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|Definisce la dimensione dello spazio tra le barre degli strumenti e il bordo della barra di ancoraggio. Questo spazio viene misurato dal bordo sinistro o dal bordo superiore, a seconda dell'allineamento dello spazio di ancoraggio.|
@@ -244,7 +244,7 @@ in Puntatore a un riquadro oggetto [CMFCAutoHideBar](../../mfc/reference/cmfcaut
 
 Questo metodo cerca la riga che contiene *pAutoHideToolbar*. Chiama `CMFCAutoHideBar.UnSetAutoHideMode` tutti gli `CMFCAutoHideBar` oggetti in tale riga. Se *pAutoHideToolbar* non viene trovato o è null, questo metodo chiama `CMFCAutoHideBar.UnSetAutoHideMode` per tutti gli `CMFCAutoHideBar` oggetti in `CAutoHideDockSite` .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

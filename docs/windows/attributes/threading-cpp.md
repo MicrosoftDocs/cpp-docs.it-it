@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193068"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840817"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,15 +28,15 @@ Specifica il modello di threading per un oggetto COM.
 *model*<br/>
 Opzionale Uno dei modelli di threading seguenti:
 
-- `apartment`(threading Apartment)
+- `apartment` (threading Apartment)
 
-- `neutral`(.NET Framework componenti senza interfaccia utente)
+- `neutral` (.NET Framework componenti senza interfaccia utente)
 
-- `single`(threading semplice)
+- `single` (threading semplice)
 
-- `free`(threading libero)
+- `free` (threading libero)
 
-- `both`(Apartment e Threading libero)
+- `both` (Apartment e Threading libero)
 
 Il valore predefinito è `apartment`.
 
@@ -54,9 +54,7 @@ Vedere l'esempio [concesso in licenza](licensed.md) per un esempio di utilizzo d
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|

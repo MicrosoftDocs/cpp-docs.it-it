@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 786f76d9f7fd2eee73c6b1d009186bf93ea0c667
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858074"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842689"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Direttive pragma e parola chiave __pragma
 
@@ -26,12 +26,12 @@ Le direttive pragma specificano funzionalità del compilatore specifiche del com
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma** *stringa di token*\
+> **#pragma** *stringa di token* #pragma\
 > **__pragma (** *token-String* **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Ogni implementazione di C e C++ supporta alcune funzionalità esclusive del computer host o del sistema operativo di utilizzo. Alcuni programmi, ad esempio, devono esercitare un controllo preciso sulla posizione dei dati in memoria o controllare il modo in cui determinate funzioni ricevono parametri. Le direttive **#pragma** consentono a ogni compilatore di offrire funzionalità specifiche del sistema operativo e del computer, mantenendo al tempo stesso la compatibilità complessiva con i linguaggi C++ C e.
+Ogni implementazione di C e C++ supporta alcune funzionalità esclusive del computer host o del sistema operativo di utilizzo. Alcuni programmi, ad esempio, devono esercitare un controllo preciso sulla posizione dei dati in memoria o controllare il modo in cui determinate funzioni ricevono parametri. Le direttive **#pragma** consentono a ogni compilatore di offrire funzionalità specifiche del sistema operativo e del computer, mantenendo al tempo stesso la compatibilità complessiva con i linguaggi C e C++.
 
 I pragma sono specifici del computer o del sistema operativo per definizione e sono in genere diversi per ogni compilatore. I pragma possono essere usati nelle direttive condizionali, per fornire nuove funzionalità del preprocessore o per fornire al compilatore informazioni definite dall'implementazione.
 
@@ -41,24 +41,59 @@ Il compilatore genera un avviso quando rileva un pragma che non riconosce e cont
 
 I compilatori Microsoft C e C++ riconoscono i seguenti pragma:
 
-||||
-|-|-|-|
-|[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
-|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|
-|[component](../preprocessor/component.md)|[conform](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
-|[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
-|[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
-|[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
-|[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
-|[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)|[omp](../preprocessor/omp.md)|
-|[once](../preprocessor/once.md)|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|
-|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|
-|[region, endregion](../preprocessor/region-endregion.md)|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|
-|[setlocale](../preprocessor/setlocale.md)|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|
-|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|[warning](../preprocessor/warning.md)||
+:::row:::
+   :::column span="":::
+      [`alloc_text`](../preprocessor/alloc-text.md)\
+      [`auto_inline`](../preprocessor/auto-inline.md)\
+      [`bss_seg`](../preprocessor/bss-seg.md)\
+      [`check_stack`](../preprocessor/check-stack.md)\
+      [`code_seg`](../preprocessor/code-seg.md)\
+      [`comment`](../preprocessor/comment-c-cpp.md)\
+      [`component`](../preprocessor/component.md)\
+      [`conform`](../preprocessor/conform.md)<sup>1</sup>\
+      [`const_seg`](../preprocessor/const-seg.md)\
+      [`data_seg`](../preprocessor/data-seg.md)\
+      [`deprecated`](../preprocessor/deprecated-c-cpp.md)
+   :::column-end:::
+   :::column span="":::
+      [`detect_mismatch`](../preprocessor/detect-mismatch.md)\
+      [`fenv_access`](../preprocessor/fenv-access.md)\
+      [`float_control`](../preprocessor/float-control.md)\
+      [`fp_contract`](../preprocessor/fp-contract.md)\
+      [`function`](../preprocessor/function-c-cpp.md)\
+      [`hdrstop`](../preprocessor/hdrstop.md)\
+      [`include_alias`](../preprocessor/include-alias.md)\
+      [`init_seg`](../preprocessor/init-seg.md)<sup>1</sup>\
+      [`inline_depth`](../preprocessor/inline-depth.md)\
+      [`inline_recursion`](../preprocessor/inline-recursion.md)
+   :::column-end:::
+   :::column span="":::
+      [`intrinsic`](../preprocessor/intrinsic.md)\
+      [`loop`](../preprocessor/loop.md)<sup>1</sup>\
+      [`make_public`](../preprocessor/make-public.md)\
+      [`managed`](../preprocessor/managed-unmanaged.md)\
+      [`message`](../preprocessor/message.md)\
+      [`omp`](../preprocessor/omp.md)\
+      [`once`](../preprocessor/once.md)\
+      [`optimize`](../preprocessor/optimize.md)\
+      [`pack`](../preprocessor/pack.md)\
+      [`pointers_to_members`](../preprocessor/pointers-to-members.md)<sup>1</sup>
+   :::column-end:::
+   :::column span="":::
+      [`pop_macro`](../preprocessor/pop-macro.md)\
+      [`push_macro`](../preprocessor/push-macro.md)\
+      [`region`, endregion](../preprocessor/region-endregion.md)\
+      [`runtime_checks`](../preprocessor/runtime-checks.md)\
+      [`section`](../preprocessor/section.md)\
+      [`setlocale`](../preprocessor/setlocale.md)\
+      [`strict_gs_check`](../preprocessor/strict-gs-check.md)\
+      [`unmanaged`](../preprocessor/managed-unmanaged.md)\
+      [`vtordisp`](../preprocessor/vtordisp.md)<sup>1</sup>\
+      [`warning`](../preprocessor/warning.md)
+   :::column-end:::
+:::row-end:::
 
-<sup>1</sup> supportato solo dal C++ compilatore.
+<sup>1</sup> supportato solo dal compilatore C++.
 
 ## <a name="pragmas-and-compiler-options"></a>Pragma e opzioni del compilatore
 
@@ -103,6 +138,6 @@ return _hr; \
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti perC++ il preprocessore C/](../preprocessor/c-cpp-preprocessor-reference.md)\
+[Riferimenti per il preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)\
 [Pragma C](../c-language/c-pragmas.md)\
 [Parole chiave](../cpp/keywords-cpp.md)

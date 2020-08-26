@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419707"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842637"
 ---
 # <a name="ltostreamgt-functions"></a>Funzioni &lt;ostream&gt;
 
-Queste sono le funzioni del modello globale definite in &lt;&gt;ostream. Per le funzioni membro, vedere la documentazione relativa alla [classe basic_ostream](basic-ostream-class.md) .
+Queste sono le funzioni del modello globale definite in &lt; ostream &gt; . Per le funzioni membro, vedere la documentazione relativa alla [classe basic_ostream](basic-ostream-class.md) .
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[Endl](#endl)\
+[finisce](#ends)\
+[filo](#flush)\
+[scambio](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -43,10 +43,10 @@ basic_ostream<Elem, Tr>& endl(
 *Elem*\
 Tipo dell'elemento.
 
-\ *OSTR*
+*OSTR*\
 Oggetto di tipo **basic_ostream**.
 
-\ *TR*
+*TR*\
 Tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -90,10 +90,10 @@ basic_ostream<Elem, Tr>& ends(
 *Elem*\
 Tipo dell'elemento.
 
-\ *OSTR*
+*OSTR*\
 Oggetto di tipo `basic_ostream`.
 
-\ *TR*
+*TR*\
 Tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -139,10 +139,10 @@ basic_ostream<Elem, Tr>& flush(
 *Elem*\
 Tipo dell'elemento.
 
-\ *OSTR*
+*OSTR*\
 Oggetto di tipo `basic_ostream`.
 
-\ *TR*
+*TR*\
 Tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -187,13 +187,13 @@ void swap(
 *Elem*\
 Tipo dell'elemento.
 
-\ *TR*
+*TR*\
 Tratti di carattere.
 
-\ a *sinistra*
+*sinistra*\
 Riferimento lvalue a un oggetto `basic_ostream`.
 
-\ a *destra*
+*Ok*\
 Riferimento lvalue a un oggetto `basic_ostream`.
 
 ### <a name="remarks"></a>Osservazioni

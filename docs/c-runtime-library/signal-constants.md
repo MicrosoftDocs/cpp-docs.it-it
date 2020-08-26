@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738725"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841142"
 ---
 # <a name="signal-constants"></a>Costanti signal
 
@@ -36,7 +36,7 @@ ms.locfileid: "57738725"
 
 L'argomento `sig` deve essere una delle costanti di manifesto elencate di seguito (definite in SIGNAL.H).
 
-|||
+|Costante|Descrizione|
 |-|-|
 |SIGABRT|Terminazione anomala. L'azione predefinita termina il programma chiamante con codice di uscita 3.  |
 |SIGABRT_COMPAT|Equivale a SIGABRT. Per la compatibilità con altre piattaforme.  |
@@ -50,5 +50,5 @@ L'argomento `sig` deve essere una delle costanti di manifesto elencate di seguit
 ## <a name="see-also"></a>Vedere anche
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
-[raise](../c-runtime-library/reference/raise.md)<br/>
+[sollevare](../c-runtime-library/reference/raise.md)<br/>
 [Costanti globali](../c-runtime-library/global-constants.md)

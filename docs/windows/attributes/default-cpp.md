@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b53420d721b43f9a51b19c4cc8e4a83fc8b94ed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215270"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842442"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -95,9 +95,7 @@ L'attributo di [origine](source-cpp.md) include anche un esempio di come usare *
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , membro dati|
 |**Ripetibile**|No|

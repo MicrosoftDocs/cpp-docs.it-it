@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: a2d2ae8133310f3a93b6eefc30c67045a47cd94f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561466"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841493"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -51,16 +51,14 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CKeyboardManager:: CKeyboardManager](#ckeyboardmanager)|Costruisce un oggetto `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CKeyboardManager:: CleanUp](#cleanup)|Cancella le tabelle dei tasti di scelta rapida.|
 |[CKeyboardManager:: FindDefaultAccelerator](#finddefaultaccelerator)|Recupera il tasto di scelta rapida predefinito per il comando e la finestra specificati.|
 |[CKeyboardManager:: IsKeyHandled](#iskeyhandled)|Determina se una chiave viene gestita dalla tabella dei tasti di scelta rapida.|
@@ -377,7 +375,7 @@ Diverso da zero se il metodo ha esito positivo; in caso contrario, 0.
 
 Usare questa funzione per sostituire la tabella dei collegamenti esistente con i nuovi tasti di scelta rapida per diversi oggetti della finestra cornice. La funzione riceve un modello di documento come parametro per ottenere l'accesso a tutti gli oggetti della finestra cornice connessi al modello di documento specificato.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

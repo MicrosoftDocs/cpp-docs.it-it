@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222550"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842429"
 ---
 # <a name="condition_variable-class"></a>Classe condition_variable
 
@@ -41,13 +41,13 @@ class condition_variable;
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[condition_variable](#condition_variable)|Costruisce un oggetto `condition_variable`.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[native_handle](#native_handle)|Restituisce il tipo specifico per l'implementazione che rappresenta l'handle condition_variable.|
 |[notify_all](#notify_all)|Sblocca tutti i thread in attesa dell'oggetto `condition_variable`.|
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.|
 |[wait_until](#wait_until)|Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.|
 
-## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a> condition_variable
 
 Costruisce un oggetto `condition_variable`.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 Se non è disponibile memoria sufficiente, il costruttore genera un oggetto [system_error](../standard-library/system-error-class.md) che ha un codice di errore `not_enough_memory`. Se l'oggetto non può essere costruito perché non è disponibile un'altra risorsa, il costruttore genera un oggetto `system_error` che ha un codice di errore `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 Restituisce il tipo specifico per l'implementazione che rappresenta l'handle condition_variable.
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` viene definito come un puntatore a strutture di dati interne di runtime di concorrenza.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Sblocca tutti i thread in attesa dell'oggetto `condition_variable`.
 
@@ -88,7 +88,7 @@ Sblocca tutti i thread in attesa dell'oggetto `condition_variable`.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Sblocca uno dei thread in attesa dell'oggetto `condition_variable`.
 
@@ -96,7 +96,7 @@ Sblocca uno dei thread in attesa dell'oggetto `condition_variable`.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>attendere
+## <a name="wait"></a><a name="wait"></a> attendere
 
 Blocca un thread.
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.
 

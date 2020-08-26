@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 9af502d65dd81efdedc6b80951f11d68f766cb31
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373710"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842624"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (utilizzo della funzionalità ASLR)
 
@@ -23,7 +23,7 @@ Specifica se generare un'immagine eseguibile che può essere ribasata in modo ca
 
 > **/DynamicBase**[**: No**]
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 L'opzione **/DynamicBase** modifica l'intestazione di un' *immagine eseguibile*, un file con estensione dll o exe, per indicare se l'applicazione deve essere ribasata in modo casuale in fase di caricamento e consente la sequenza casuale di allocazione degli indirizzi virtuali, che influiscono sulla posizione di memoria virtuale di heap, stack e altre allocazioni del sistema operativo. L'opzione **/DynamicBase** si applica alle immagini a 32 bit e a 64 bit. ASLR è supportato in Windows Vista e nei sistemi operativi successivi. L'opzione viene ignorata dai sistemi operativi precedenti.
 
@@ -46,4 +46,4 @@ Per impostazione predefinita, **/DynamicBase** è abilitato. Per disabilitare qu
 - [Informazioni di riferimento sul linker MSVC](linking.md)
 - [Opzioni del linker MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Difese di sicurezza software ISV di Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
+- [Difese di sicurezza software ISV di Windows](/previous-versions/bb430720(v=msdn.10))

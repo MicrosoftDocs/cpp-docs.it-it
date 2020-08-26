@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: a24f324576c872e7fe509b742aa58d6c230ec24a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212488"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841558"
 ---
 # <a name="cexception-class"></a>Classe CException
 
@@ -50,7 +50,7 @@ Poiché `CException` è una classe di base astratta, non è possibile creare `CE
 
 Di seguito sono elencate le classi derivate e le relative descrizioni:
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Classe base per le eccezioni MFC critiche per le risorse|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Condizione di eccezione argomento non valido|
@@ -84,7 +84,7 @@ Se un'eccezione viene rilevata da una delle macro, l' `CException` oggetto viene
 
 **Intestazione:** AFX. h
 
-## <a name="cexceptioncexception"></a><a name="cexception"></a>CException:: CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a> CException:: CException
 
 Questa funzione membro costruisce un `CException` oggetto.
 
@@ -101,7 +101,7 @@ Specificare TRUE se la memoria per l' `CException` oggetto è stata allocata nel
 
 Normalmente non è necessario chiamare direttamente questo costruttore. Una funzione che genera un'eccezione deve creare un'istanza di una `CException` classe derivata da e chiamare il relativo costruttore oppure utilizzare una delle funzioni throw MFC, ad esempio [AfxThrowFileException](exception-processing.md#afxthrowfileexception), per generare un tipo predefinito. Questa documentazione viene fornita solo per completezza.
 
-## <a name="cexceptiondelete"></a><a name="delete"></a>CException::D Elimina
+## <a name="cexceptiondelete"></a><a name="delete"></a> CException::D Elimina
 
 Questa funzione verifica se l' `CException` oggetto è stato creato nell'heap e, in tal caso, chiama l' **`delete`** operatore sull'oggetto.
 
@@ -168,7 +168,7 @@ if (pFile != NULL)
 }
 ```
 
-## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException:: ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a> CException:: ReportError
 
 Chiamare questa funzione membro per segnalare all'utente il testo dell'errore in una finestra di messaggio.
 

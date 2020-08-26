@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920308"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842117"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -62,12 +62,12 @@ Puntatore allo stato di spostamento corrente del byte iniziale di *Str*.
 
 Uno dei valori seguenti:
 
-|||
-|-|-|
-0|Il *numero* successivo o un minor numero di byte completa il carattere multibyte che rappresenta il carattere wide null.
-da 1 a *count*inclusi|Il *conteggio* successivo o un minor numero di byte completa un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte.
-(size_t)(-2)|Il *numero* di byte successivo contribuisce a un carattere multibyte incompleto ma potenzialmente valido e tutti i byte del *conteggio* sono stati elaborati.
-(size_t)(-1)|Si è verificato un errore di codifica. Il *numero* di byte successivo o inferiore non contribuisce a un carattere multibyte completo e valido. In questo caso **errno** è impostato su EILSEQ e lo stato di conversione in *mbstate* non è specificato.
+| Valore | Descrizione |
+|--|--|
+| 0 | Il *numero* successivo o un minor numero di byte completa il carattere multibyte che rappresenta il carattere wide null. |
+| da 1 a *count*inclusi | Il *conteggio* successivo o un minor numero di byte completa un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte. |
+| (size_t)(-2) | Il *numero* di byte successivo contribuisce a un carattere multibyte incompleto ma potenzialmente valido e tutti i byte del *conteggio* sono stati elaborati. |
+| (size_t)(-1) | Si è verificato un errore di codifica. Il *numero* di byte successivo o inferiore non contribuisce a un carattere multibyte completo e valido. In questo caso **errno** è impostato su EILSEQ e lo stato di conversione in *mbstate* non è specificato. |
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -158,4 +158,4 @@ Character count: 25
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>

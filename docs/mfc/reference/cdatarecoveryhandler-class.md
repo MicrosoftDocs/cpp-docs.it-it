@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561973"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842923"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[CDataRecoveryHandler:: CDataRecoveryHandler](#cdatarecoveryhandler)|Costruisce un oggetto `CDataRecoveryHandler`.|
 
 ### <a name="methods"></a>Metodi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[CDataRecoveryHandler:: AutosaveAllDocumentInfo](#autosavealldocumentinfo)|Salva in automatico ogni file registrato con la `CDataRecoveryHandler` classe.|
 |[CDataRecoveryHandler:: AutosaveDocumentInfo](#autosavedocumentinfo)|Salva in automatico il documento specificato.|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>Membri dei dati
 
-|||
+|Nome|Descrizione|
 |-|-|
 |m_bRestoringPreviousOpenDocs|Indica se il gestore di recupero dati riapre i documenti aperti in precedenza.|
 |m_bSaveDocumentInfoOnIdle|Indica se il gestore del recupero dati Salva i documenti nel ciclo di inattività successivo.|
@@ -664,7 +664,7 @@ Quando un utente salva un documento, l'applicazione rimuove il file salvato in m
 
 Per usare questo metodo, è necessario impostare AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES in *m_dwRestartManagerSupportFlags*.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

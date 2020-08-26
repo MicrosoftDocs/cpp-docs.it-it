@@ -1,17 +1,17 @@
 ---
-title: importidl (C++ attributo com)
+title: importidl (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166822"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842247"
 ---
 # <a name="importidl"></a>importidl
 
@@ -30,7 +30,7 @@ Identifica il nome del file con estensione IDL da unire al file IDL che verrà g
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **importidl** C++ posiziona la sezione all'esterno del blocco di libreria (in *idl_file*) al file IDL generato dal programma e alla sezione Library (in *idl_file*) nella sezione Library del file. IDL generato dal programma.
+L'attributo **importidl** di C++ inserisce la sezione all'esterno del blocco di libreria (in *idl_file*) al file IDL generato dal programma e alla sezione Library (in *idl_file*) nella sezione Library del file. IDL generato dal programma.
 
 Si consiglia di utilizzare **importidl**, ad esempio, se si desidera utilizzare un file con estensione IDL codificato manualmente con il file IDL generato.
 
@@ -45,14 +45,12 @@ Si consiglia di utilizzare **importidl**, ad esempio, se si desidera utilizzare 
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -62,5 +60,5 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importlib](importlib.md)<br/>
-[include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)
+[includere](include-cpp.md)<br/>
+[includelib (](includelib-cpp.md)

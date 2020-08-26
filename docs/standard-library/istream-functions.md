@@ -5,20 +5,19 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1fede2726d3d8f5dd678b95fd7a22a301ea95a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363072"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840973"
 ---
 # <a name="ltistreamgt-functions"></a>Funzioni &lt;istream&gt;
 
-|||
-|-|-|
-|[Swap](#istream_swap)|[Ws](#ws)|
+[scambio](#istream_swap)\
+[WS](#ws)
 
-## <a name="swap"></a><a name="istream_swap"></a>Swap
+## <a name="swap"></a><a name="istream_swap"></a> scambio
 
 Scambia gli elementi di due oggetti di flusso.
 
@@ -36,13 +35,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 Flusso.
 
-*va bene*\
+*Ok*\
 Flusso.
 
-## <a name="ws"></a><a name="ws"></a>Ws
+## <a name="ws"></a><a name="ws"></a> WS
 
 Ignora gli spazi nel flusso.
 
@@ -61,7 +60,7 @@ Flusso.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il manipolatore estrae ed elimina tutti gli `ch` elementi per i quali [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) è true.
+Il manipolatore estrae ed Elimina tutti gli elementi `ch` per i quali [use_facet](../standard-library/basic-filebuf-class.md#open) <  **CType** \< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **CType** \< **Elem**> :: **Space**, **ch**) è true.
 
 La funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) se raggiunge la fine del file durante l'estrazione degli elementi. Restituisce *_Istr*.
 

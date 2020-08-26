@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: d0b9faf0bd11892c05e25e981e8cd729cb623dd4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219326"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842455"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Linee guida per sviluppatori C++ per canali laterali di esecuzione speculativa
 
@@ -21,7 +21,7 @@ Questo articolo contiene indicazioni per gli sviluppatori che assistono all'iden
 
 Le linee guida fornite in questo articolo sono correlate alle classi di vulnerabilità rappresentate da:
 
-1. CVE-2017-5753, noto anche come Spectre Variant 1. Questa classe di vulnerabilità hardware è correlata ai canali laterali che possono verificarsi a causa di un'esecuzione speculativa che si verifica in seguito a una stima errata del ramo condizionale. Il compilatore Microsoft C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per l' `/Qspectre` opzione che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codifica potenzialmente vulnerabili correlati a CVE-2017-5753. L' `/Qspectre` opzione è disponibile anche in Visual Studio 2015 Update da 3 a [KB 4338871](https://support.microsoft.com/help/4338871). La documentazione relativa al flag [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fornisce ulteriori informazioni sugli effetti e sull'utilizzo.
+1. CVE-2017-5753, noto anche come Spectre Variant 1. Questa classe di vulnerabilità hardware è correlata ai canali laterali che possono verificarsi a causa di un'esecuzione speculativa che si verifica in seguito a una stima errata del ramo condizionale. Il compilatore Microsoft C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per l' `/Qspectre` opzione che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codifica potenzialmente vulnerabili correlati a CVE-2017-5753. L' `/Qspectre` opzione è disponibile anche in Visual Studio 2015 Update da 3 a [KB 4338871](https://support.microsoft.com/help/4338871). La documentazione relativa al [`/Qspectre`](../build/reference/qspectre.md) flag fornisce ulteriori informazioni sugli effetti e sull'utilizzo.
 
 2. CVE-2018-3639, noto anche come [SSB (speculative Store bypass)](https://aka.ms/sescsrdssb). Questa classe di vulnerabilità hardware è correlata ai canali laterali che possono verificarsi a causa di un'esecuzione speculativa di un carico in anticipo rispetto a un archivio dipendente in seguito a una stima errata dell'accesso alla memoria.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Si noti che entrambi questi esempi comportano una modifica speculativa dei puntatori a rami indiretti allocati nello stack. È possibile che si verifichino modifiche speculative anche per variabili globali, memoria allocata dall'heap e persino memoria di sola lettura in alcune CPU. Per la memoria allocata nello stack, il compilatore Microsoft C++ esegue già i passaggi per rendere più difficile speculativamente modificare le destinazioni dei rami indiretti allocati dallo stack, ad esempio riordinando le variabili locali in modo che i buffer siano posizionati accanto a un cookie di sicurezza come parte della funzionalità di sicurezza del compilatore [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) .
+Si noti che entrambi questi esempi comportano una modifica speculativa dei puntatori a rami indiretti allocati nello stack. È possibile che si verifichino modifiche speculative anche per variabili globali, memoria allocata dall'heap e persino memoria di sola lettura in alcune CPU. Per la memoria allocata nello stack, il compilatore Microsoft C++ esegue già i passaggi per rendere più difficile speculativamente modificare le destinazioni dei rami indiretti allocati dallo stack, ad esempio riordinando le variabili locali in modo che i buffer vengano posizionati accanto a un cookie di sicurezza come parte della [`/GS`](../build/reference/gs-buffer-security-check.md) funzionalità di sicurezza del compilatore.
 
 ## <a name="speculative-type-confusion"></a>Confusione tra tipi speculativi
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barriera alla speculazione tramite strumentazione in fase di compilazione
 
-Il compilatore Microsoft C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per l' `/Qspectre` opzione che inserisce automaticamente una barriera di speculazione per un set limitato di modelli di codifica potenzialmente vulnerabili correlati a CVE-2017-5753. La documentazione relativa al flag [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fornisce ulteriori informazioni sugli effetti e sull'utilizzo. È importante notare che questo flag non copre tutti i modelli di codifica potenzialmente vulnerabili e che tali sviluppatori non devono basarsi su di esso come mitigazione completa per questa classe di vulnerabilità.
+Il compilatore Microsoft C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per l' `/Qspectre` opzione che inserisce automaticamente una barriera di speculazione per un set limitato di modelli di codifica potenzialmente vulnerabili correlati a CVE-2017-5753. La documentazione relativa al [`/Qspectre`](../build/reference/qspectre.md) flag fornisce ulteriori informazioni sugli effetti e sull'utilizzo. È importante notare che questo flag non copre tutti i modelli di codifica potenzialmente vulnerabili e che tali sviluppatori non devono basarsi su di esso come mitigazione completa per questa classe di vulnerabilità.
 
 ### <a name="masking-array-indices"></a>Mascheramento degli indici di matrice
 

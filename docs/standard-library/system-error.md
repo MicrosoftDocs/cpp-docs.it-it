@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 18df18379fbee8271ba5cf851b04210f1dfddf57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898857"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841883"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Includere l'intestazione \<system_error > per definire la classe di eccezione `system_error` e i modelli correlati per l'elaborazione degli errori di sistema di basso livello.
+Includere l'intestazione \<system_error> per definire la classe di eccezione `system_error` e i modelli correlati per l'elaborazione degli errori di sistema di basso livello.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<system_error>
+**Intestazione:**\<system_error>
 
 **Spazio dei nomi:** std
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-### <a name="objects"></a>Oggetti di
+### <a name="objects"></a>Oggetti
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Rappresenta la categoria di errori generici.|
 |[is_error_code_enum_v](../standard-library/system-error-functions.md#is_error_code_enum_v)||
@@ -37,29 +37,29 @@ Includere l'intestazione \<system_error > per definire la classe di eccezione `s
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Crea un oggetto `error_code`.|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Crea un oggetto `error_condition`.|
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.|
-|[operator!=](../standard-library/system-error-operators.md#op_neq)|Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.|
-|[operator<](../standard-library/system-error-operators.md#op_lt)|Verifica se un oggetto è più piccolo dell'oggetto passato per il confronto.|
-|[operator<<](../standard-library/system-error-operators.md#op_ostream)||
+|[operatore = =](../standard-library/system-error-operators.md#op_eq_eq)|Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.|
+|[operatore! =](../standard-library/system-error-operators.md#op_neq)|Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.|
+|[operatore<](../standard-library/system-error-operators.md#op_lt)|Verifica se un oggetto è più piccolo dell'oggetto passato per il confronto.|
+|[operatore<<](../standard-library/system-error-operators.md#op_ostream)||
 
 ### <a name="enums"></a>Enumerazioni
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Fornisce nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Fornisce nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>` .|
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[error_category](../standard-library/error-category-class.md)|Rappresenta la base comune astratta per gli oggetti che descrive una categoria di codici di errore.|
 |[error_code](../standard-library/error-code-class.md)|Rappresenta gli errori di sistema di basso livello che sono specifici dell'implementazione.|

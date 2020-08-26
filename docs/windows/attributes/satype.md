@@ -1,21 +1,21 @@
 ---
-title: satype (C++ attributo com)
+title: satype (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16da256f491dbb0002d92cadaceda14a49eb2192
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166276"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842780"
 ---
 # <a name="satype"></a>satype
 
-Specifica il tipo di dati della struttura `SAFEARRAY`.
+Specifica il tipo di dati della `SAFEARRAY` struttura.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,25 +26,23 @@ Specifica il tipo di dati della struttura `SAFEARRAY`.
 ### <a name="parameters"></a>Parametri
 
 *data_type*<br/>
-Il tipo di dati per la struttura di dati `SAFEARRAY` passati come parametro a un metodo di interfaccia.
+Tipo di dati per la `SAFEARRAY` struttura di dati passata come parametro a un metodo di interfaccia.
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|nessuno|
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **satype** C++ specifica il tipo di dati della `SAFEARRAY`.
+L'attributo **satype** di C++ specifica il tipo di dati di `SAFEARRAY` .
 
 > [!NOTE]
-> Un livello di riferimento indiretto viene eliminato dal puntatore `SAFEARRAY` nel file con estensione IDL generato dal modo in cui viene dichiarata nel file con estensione cpp.
+> Un livello di riferimento indiretto viene eliminato dal `SAFEARRAY` puntatore nel file con estensione IDL generato dal modo in cui viene dichiarata nel file con estensione cpp.
 
 ## <a name="example"></a>Esempio
 
@@ -62,6 +60,6 @@ __interface A {
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi del parametro](parameter-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
 [id](id.md)
