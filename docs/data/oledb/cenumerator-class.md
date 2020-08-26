@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214919"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838152"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
@@ -48,7 +48,7 @@ class CEnumerator :
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[Find](#find)|Esegue una ricerca attraverso i provider disponibili (origini dati) per cercare un elemento con il nome specificato.|
 |[GetMoniker](#getmoniker)|Recupera l'interfaccia `IMoniker` per il record corrente.|
@@ -58,7 +58,7 @@ class CEnumerator :
 
 È possibile recuperare i `ISourcesRowset` dati indirettamente da questa classe.
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator:: Find
 
 Cerca un nome specificato tra i provider disponibili.
 
@@ -81,7 +81,7 @@ in Nome da cercare.
 
 Questo nome esegue il mapping al `SOURCES_NAME` membro dell'interfaccia [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator:: GetMoniker
 
 Analizza il nome visualizzato per estrarre il componente della stringa che può essere convertito in un moniker.
 
@@ -106,7 +106,7 @@ in Nome visualizzato da analizzare.
 
 Valore HRESULT standard.
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator:: Open
 
 Associa il moniker per l'enumeratore, se ne viene specificato uno, recupera il set di righe per l'enumeratore chiamando [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 

@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e879e7ffd9f674769e32548195f5017e27e64576
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560529"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846238"
 ---
 # <a name="set-class"></a>Classe set
 
@@ -145,13 +145,13 @@ L'iteratore fornito dalla classe set è un iteratore bidirezionale, ma le funzio
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[set](#set)|Costruisce un set vuoto o che rappresenta una copia totale o parziale di un altro set.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per l'oggetto del set.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un **`const`** elemento nel set.|
@@ -171,7 +171,7 @@ L'iteratore fornito dalla classe set è un iteratore bidirezionale, ma le funzio
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[iniziare](#begin)|Restituisce un iteratore che punta al primo elemento del set.|
 |[cbegin](#cbegin)|Restituisce un iteratore const che punta al primo elemento del set.|
@@ -201,7 +201,7 @@ L'iteratore fornito dalla classe set è un iteratore bidirezionale, ma le funzio
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore =](#op_eq)|Sostituisce gli elementi di un set con una copia di un altro set.|
 

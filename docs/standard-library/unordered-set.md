@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978c717cf0d893d19947a98268ff0c49b2b24f9d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688795"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846381"
 ---
 # <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
@@ -19,32 +19,32 @@ Definisce i modelli di classe del contenitore [unordered_multiset](../standard-l
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<unordered_set>
+**Intestazione:**\<unordered_set>
 
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Anche la libreria \<unordered_set > USA l'istruzione `#include <initializer_list>`.
+> La \<unordered_set> libreria usa anche l' `#include <initializer_list>` istruzione.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe unordered_multiset](../standard-library/unordered-multiset-class.md)|Archivia la tabella hash di chiavi.|
 |[Classe unordered_set](../standard-library/unordered-set-class.md)|Archivia la tabella hash di chiavi.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Verifica se l'oggetto unordered_multiset a sinistra dell'operatore non è uguale all'oggetto unordered_multiset a destra.|
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Verifica se l'oggetto unordered_multiset a sinistra dell'operatore è uguale all'oggetto unordered_multiset a destra.|
-|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Scambia due oggetti multiset.|
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Verifica se l'oggetto unordered_set a sinistra dell'operatore non è uguale all'oggetto unordered_set a destra.|
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Verifica se l'oggetto unordered_set a sinistra dell'operatore è uguale all'oggetto unordered_set a destra.|
-|[swap](../standard-library/unordered-set-functions.md#swap)|Scambia due oggetti set.|
+|[operatore! =](../standard-library/unordered-set-operators.md#op_neq)|Verifica se l'oggetto unordered_multiset a sinistra dell'operatore non è uguale all'oggetto unordered_multiset a destra.|
+|[operatore = =](../standard-library/unordered-set-operators.md#op_eq_eq)|Verifica se l'oggetto unordered_multiset a sinistra dell'operatore è uguale all'oggetto unordered_multiset a destra.|
+|[scambio](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Scambia due oggetti multiset.|
+|[operatore! =](../standard-library/unordered-set-operators.md#op_neq)|Verifica se l'oggetto unordered_set a sinistra dell'operatore non è uguale all'oggetto unordered_set a destra.|
+|[operatore = =](../standard-library/unordered-set-operators.md#op_eq_eq)|Verifica se l'oggetto unordered_set a sinistra dell'operatore è uguale all'oggetto unordered_set a destra.|
+|[scambio](../standard-library/unordered-set-functions.md#swap)|Scambia due oggetti set.|
 
 ## <a name="see-also"></a>Vedere anche
 

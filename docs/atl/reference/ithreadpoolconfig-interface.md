@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-ms.openlocfilehash: e4b90534fa89ef2aeffe4cd682d92efc16452487
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cba82055c292fc966dc2328773cce4aa64d45a64
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326350"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835428"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfaccia IThreadPoolConfig
 
 Questa interfaccia fornisce metodi per la configurazione di un pool di thread.
 
 > [!IMPORTANT]
-> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,12 +36,12 @@ __interface
 
 ### <a name="methods"></a>Metodi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[GetSize](#getsize)|Chiamare questo metodo per ottenere il numero di thread nel pool.|
-|[GetTimeout](#gettimeout)|Chiamare questo metodo per ottenere il tempo massimo in millisecondi durante il momento in cui il pool di thread attenderà l'arresto di un thread.|
-|[ImpostaDimensione](#setsize)|Chiamare questo metodo per impostare il numero di thread nel pool.|
-|[Settimeout](#settimeout)|Chiamare questo metodo per impostare il tempo massimo in millisecondi durante il momento in cui il pool di thread attenderà l'arresto di un thread.|
+|[GetTimeout](#gettimeout)|Chiamare questo metodo per ottenere il tempo massimo, in millisecondi, durante il quale il pool di thread resterà in attesa dell'arresto di un thread.|
+|[SetSize](#setsize)|Chiamare questo metodo per impostare il numero di thread nel pool.|
+|[SetTimeout](#settimeout)|Chiamare questo metodo per impostare il tempo massimo, in millisecondi, durante il quale il pool di thread resterà in attesa dell'arresto di un thread.|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -49,9 +49,9 @@ Questa interfaccia viene implementata da [CThreadPool](../../atl/reference/cthre
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlutil.h
+**Intestazione:** atlutil. h
 
-## <a name="ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSizeIThreadPoolConfig::GetSize
+## <a name="ithreadpoolconfiggetsize"></a><a name="getsize"></a> IThreadPoolConfig:: GetSize
 
 Chiamare questo metodo per ottenere il numero di thread nel pool.
 
@@ -61,20 +61,20 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parametri
 
-*PnNumThreads (file pnNumThreads)*<br/>
-[fuori] Indirizzo della variabile che, in caso di esito positivo, riceve il numero di thread nel pool.
+*pnNumThreads*<br/>
+out Indirizzo della variabile che, in esito positivo, riceve il numero di thread nel pool.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]
 
-## <a name="ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout
+## <a name="ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a> IThreadPoolConfig:: getTimeout
 
-Chiamare questo metodo per ottenere il tempo massimo in millisecondi durante il momento in cui il pool di thread attenderà l'arresto di un thread.
+Chiamare questo metodo per ottenere il tempo massimo, in millisecondi, durante il quale il pool di thread resterà in attesa dell'arresto di un thread.
 
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
@@ -82,18 +82,18 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parametri
 
-*pdwMaxWait (pdwMaxWait)*<br/>
-[fuori] Indirizzo della variabile che, in caso di esito positivo, riceve il tempo massimo in millisecondi durante il momento in cui il pool di thread attenderà l'arresto di un thread.
+*pdwMaxWait*<br/>
+out Indirizzo della variabile che, in caso di esito positivo, riceve il tempo massimo in millisecondi durante il quale il pool di thread resterà in attesa dell'arresto di un thread.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ### <a name="example"></a>Esempio
 
-Vedere [IThreadPoolConfig::GetSize](#getsize).
+Vedere [IThreadPoolConfig:: GetSize](#getsize).
 
-## <a name="ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize
+## <a name="ithreadpoolconfigsetsize"></a><a name="setsize"></a> IThreadPoolConfig:: sesize
 
 Chiamare questo metodo per impostare il numero di thread nel pool.
 
@@ -103,24 +103,24 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parametri
 
-*nNumThreads (informazioni in base ai thread di*<br/>
+*nNumThreads*<br/>
 Numero richiesto di thread nel pool.
 
-Se *nNumThreads* è negativo, il suo valore assoluto verrà moltiplicato per il numero di processori nel computer per ottenere il numero totale di thread.
+Se *nNumThreads* è negativo, il relativo valore assoluto verrà moltiplicato per il numero di processori nel computer per ottenere il numero totale di thread.
 
 Se *nNumThreads* è zero, ATLS_DEFAULT_THREADSPERPROC verrà moltiplicato per il numero di processori nel computer per ottenere il numero totale di thread.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ### <a name="example"></a>Esempio
 
-Vedere [IThreadPoolConfig::GetSize](#getsize).
+Vedere [IThreadPoolConfig:: GetSize](#getsize).
 
-## <a name="ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout
+## <a name="ithreadpoolconfigsettimeout"></a><a name="settimeout"></a> IThreadPoolConfig:: timeout
 
-Chiamare questo metodo per impostare il tempo massimo in millisecondi durante il momento in cui il pool di thread attenderà l'arresto di un thread.
+Chiamare questo metodo per impostare il tempo massimo, in millisecondi, durante il quale il pool di thread resterà in attesa dell'arresto di un thread.
 
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
@@ -129,15 +129,15 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ### <a name="parameters"></a>Parametri
 
 *dwMaxWait*<br/>
-Tempo massimo richiesto in millisecondi durante il periodo di attesa dell'arresto di un thread.
+Tempo massimo richiesto, in millisecondi, durante il quale il pool di thread resterà in attesa dell'arresto di un thread.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di errore.
+Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
 ### <a name="example"></a>Esempio
 
-Vedere [IThreadPoolConfig::GetSize](#getsize).
+Vedere [IThreadPoolConfig:: GetSize](#getsize).
 
 ## <a name="see-also"></a>Vedere anche
 

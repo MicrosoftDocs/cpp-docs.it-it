@@ -4,18 +4,18 @@ description: Descrizioni riepilogative degli esempi disponibili nel repository d
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56e9cfe72e58a12fb381c88616496820908006c8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226763"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846368"
 ---
 # <a name="visual-studio-c-samples"></a>Esempi di Visual Studio C++
 
 Gli esempi per Visual Studio C++ sono disponibili sul Web. Microsoft ha prodotto molti esempi di C++ che dimostrano funzionalità diverse tra più tecnologie. Ecco alcune delle posizioni per trovare esempi aggiuntivi:
 
-- [Esempi di Microsoft Docs-C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
+- [Esempi di Microsoft Docs-C++](/samples/browse/?term=c%2B%2B)
 
 - [Esempi di Windows su GitHub](https://microsoft.github.io/windows/)
 
@@ -25,7 +25,7 @@ Gli esempi per Visual Studio C++ sono disponibili sul Web. Microsoft ha prodotto
 
 - [Esempi di codice ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-- [Esempi di sviluppo hardware Windows](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
+- [Esempi di sviluppo hardware Windows](/samples/browse/?products=windows-wdk)
 
 ## <a name="archived-c-samples-on-github"></a>Esempi di C++ archiviati in GitHub
 
@@ -194,7 +194,7 @@ Visual Studio includeva il codice di esempio C++ nelle versioni precedenti. Il c
 
 | Nome esempio | Descrizione |
 |--|--|
-| [Collect](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Vengono illustrate le classi Collection MFC basate su modelli C++ e classi Collection standard predefinite. |
+| [Raccogliere](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Vengono illustrate le classi Collection MFC basate su modelli C++ e classi Collection standard predefinite. |
 | [Cubo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Applicazione OpenGL in cui vengono utilizzati i contesti di periferica MFC insieme ai contesti di risorsa di OpenGL. |
 | [DLLHusk](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Viene illustrata la condivisione della versione DLL della libreria MFC con un'applicazione e una DLL personalizzata. |
 | [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Presenta una DLL regolare che può essere collegata alla libreria MFC in modo statico o in modo dinamico. |

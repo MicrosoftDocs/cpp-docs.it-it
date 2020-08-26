@@ -23,23 +23,22 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301691"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836078"
 ---
 # <a name="to-functions"></a>Funzioni to
 
 Ognuna delle funzioni **to** e le relative macro associate, se presenti, convertono un singolo carattere in un altro carattere.
 
-|||
-|-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+[__toascii](../c-runtime-library/reference/toascii-toascii.md)\
+[ToLower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
+[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le conversioni delle funzioni **to** e delle macro sono le seguenti.
 
@@ -48,10 +47,10 @@ Le conversioni delle funzioni **to** e delle macro sono le seguenti.
 |`__toascii`|`__toascii`|Converte `c` in un carattere ASCII|
 |`tolower`|`tolower`|Converte `c` in minuscolo se appropriato|
 |`_tolower`|`_tolower`|Converte `c` in minuscolo|
-|`towlower`|nessuna|Converte `c` nella lettera minuscola con carattere wide corrispondente|
+|`towlower`|Nessuno|Converte `c` nella lettera minuscola con carattere wide corrispondente|
 |`toupper`|`toupper`|Converte `c` in maiuscolo se appropriato|
 |`_toupper`|`_toupper`|Converte `c` in maiuscolo|
-|`towupper`|nessuna|Converte c nella lettera maiuscola con carattere wide corrispondente|
+|`towupper`|Nessuno|Converte c nella lettera maiuscola con carattere wide corrispondente|
 
 Per usare le versioni funzione delle routine **to** definite anche come macro, rimuovere le definizioni di macro con le direttive `#undef` o non includere CTYPE.H. Se si usa l'opzione del compilatore /Za, il compilatore usa la versione funzione di `toupper` o `tolower`. Le dichiarazioni delle funzioni `toupper` e `tolower` sono in STDLIB.H.
 
@@ -67,7 +66,7 @@ Le routine `_tolower` e `_toupper`:
 
 - Sono versioni indipendenti dalle impostazioni locali e molto più veloci di `tolower` e **toupper**.
 
-- Possono essere usate solo quando **isascii(** `c` **)** e rispettivamente **isupper(** `c` **)** o **islower(** `c` **)** sono diversi da zero.
+- Può essere utilizzato solo quando i valori di tipo **(**) e () `c` **)** rispettivamente sono diversi da **isupper(** `c` **)** **islower(** `c` **)** zero.
 
 - Hanno risultati indefiniti se `c` non è una lettera ASCII con la combinazione di maiuscole/minuscole appropriata per la conversione.
 
@@ -117,6 +116,6 @@ sOME OF these LETTERS ARE cAPITALS.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../c-runtime-library/data-conversion.md)<br/>
+[Conversione dati](../c-runtime-library/data-conversion.md)<br/>
 [Impostazioni locali](../c-runtime-library/locale.md)<br/>
-[Routine is, isw](../c-runtime-library/is-isw-routines.md)
+[is, ISW routines](../c-runtime-library/is-isw-routines.md)

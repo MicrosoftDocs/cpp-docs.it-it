@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228115"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846264"
 ---
 # <a name="sample-container-members"></a>Membri contenitore di esempio
 
@@ -20,7 +20,7 @@ ms.locfileid: "87228115"
 
 ## <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|Descrive un oggetto che può essere usato come iteratore costante per la sequenza controllata.|
 |[const_reference](../standard-library/container-class-const-reference.md)|Descrive un oggetto che può essere usato come riferimento costante a un elemento della sequenza controllata.|
@@ -34,7 +34,7 @@ ms.locfileid: "87228115"
 
 ## <a name="member-functions"></a>Funzioni di membro
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[iniziare](../standard-library/container-class-begin.md)|Restituisce un iteratore inverso che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota).|
 |[deselezionare](../standard-library/container-class-clear.md)|Chiama [erase](../standard-library/container-class-erase.md)( [begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).|

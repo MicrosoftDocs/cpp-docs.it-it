@@ -5,22 +5,35 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 6cef9304be17dd39e0f0b020133abd08f07fba7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194381"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836011"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatori dello spazio dei nomi concurrency
 
-||||
-|-|-|-|
-|[operatore! =](#operator_neq)|[operatore&amp;&amp;](#operator_amp_amp)|[operatore&gt;](#operator_gt)|
-|[operatore&gt;=](#operator_gt_eq)|[operatore&lt;](#operator_lt)|[operatore&lt;=](#operator_lt_eq)|
-|[operatore = =](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
+:::row:::
+   :::column span="":::
+      [`operator||`](#operator_lor)\
+      [`operator&&`](#operator_amp_amp)
+   :::column-end:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator<`](#operator_lt)\
+      [`operator<=`](#operator_lt_eq)
+   :::column-end:::
+   :::column span="":::
+      [`operator>`](#operator_gt)\
+      [`operator>=`](#operator_gt_eq)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator124124-operator"></a><a name="operator_lor"></a>operatore&#124;&#124; operator
+## <a name="operator124124-operator"></a><a name="operator_lor"></a> operatore&#124;&#124; operator
 
 Crea un'attività che verrà completata correttamente quando una delle attività fornite come argomenti verranno completate correttamente.
 
@@ -113,7 +126,7 @@ Attività che viene completata correttamente quando entrambe le attività di inp
 
 Se una delle attività viene annullata o viene generata un'eccezione, l'attività restituita verrà completata in anticipo, nello stato annullato, e l'eccezione, se presente, verrà generata se si chiama `get()` o `wait()` su tale attività.
 
-## <a name="operator-operator"></a><a name="operator_eq_eq"></a>operatore operator = =
+## <a name="operator-operator"></a><a name="operator_eq_eq"></a> operatore operator = =
 
 Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è uguale all'oggetto `concurrent_vector` sul lato destro.
 
@@ -151,7 +164,7 @@ Due vettori simultanei sono uguali se hanno lo stesso numero di elementi e se i 
 
 Questo metodo non è indipendente dalla concorrenza rispetto ad altri metodi che possono modificare uno dei vettori simultanei `_A` o `_B` .
 
-## <a name="operator-operator"></a><a name="operator_neq"></a>operatore operator! =
+## <a name="operator-operator"></a><a name="operator_neq"></a> operatore operator! =
 
 Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore non è uguale all'oggetto `concurrent_vector` sul lato destro.
 
@@ -189,7 +202,7 @@ Due vettori simultanei sono uguali se hanno lo stesso numero di elementi e se i 
 
 Questo metodo non è indipendente dalla concorrenza rispetto ad altri metodi che possono modificare uno dei vettori simultanei `_A` o `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt"></a>operatore &lt; operator
+## <a name="operatorlt-operator"></a><a name="operator_lt"></a> operatore &lt; operator
 
 Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore dell'oggetto `concurrent_vector` sul lato destro.
 
@@ -227,7 +240,7 @@ Il comportamento di questo operatore è identico all'operatore equivalente per l
 
 Questo metodo non è indipendente dalla concorrenza rispetto ad altri metodi che possono modificare uno dei vettori simultanei `_A` o `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>Operator &lt; = (operatore)
+## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a> Operator &lt; = (operatore)
 
 Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore o uguale all'oggetto `concurrent_vector` sul lato destro.
 
@@ -265,7 +278,7 @@ Il comportamento di questo operatore è identico all'operatore equivalente per l
 
 Questo metodo non è indipendente dalla concorrenza rispetto ad altri metodi che possono modificare uno dei vettori simultanei `_A` o `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt"></a>operatore &gt; operator
+## <a name="operatorgt-operator"></a><a name="operator_gt"></a> operatore &gt; operator
 
 Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore dell'oggetto `concurrent_vector` sul lato destro.
 
@@ -303,7 +316,7 @@ Il comportamento di questo operatore è identico all'operatore equivalente per l
 
 Questo metodo non è indipendente dalla concorrenza rispetto ad altri metodi che possono modificare uno dei vettori simultanei `_A` o `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>Operator &gt; = (operatore)
+## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a> Operator &gt; = (operatore)
 
 Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `concurrent_vector` sul lato destro.
 

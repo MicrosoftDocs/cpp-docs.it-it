@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de9aafe5b04b949112c44be09ac36bede7e7f660
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216466"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838178"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 
@@ -115,7 +115,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[CDynamicParameterAccessor](#cdynamicparameteraccessor)|Costruttore.|
 |[GetParam](#getparam)|Recupera i dati del parametro dal buffer.|
@@ -139,7 +139,7 @@ Le informazioni di parametro vengono archiviate in un buffer creato e gestito da
 
 Per un esempio che illustra come usare questa classe per eseguire un SQL Server stored procedure e ottenere i valori dei parametri di output, vedere il codice di esempio [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) nel repository [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) su GitHub.
 
-## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a>CDynamicParameterAccessor:: CDynamicParameterAccessor
+## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor:: CDynamicParameterAccessor
 
 Costruttore.
 
@@ -165,7 +165,7 @@ Dimensioni massime del BLOB in byte; i dati della colonna su questo valore vengo
 
 Per ulteriori informazioni sulla gestione dei BLOB, vedere il costruttore [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) .
 
-## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a>CDynamicParameterAccessor:: GetParam
+## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a> CDynamicParameterAccessor:: GetParam
 
 Recupera i dati non stringa per un parametro specificato dal buffer dei parametri.
 
@@ -203,7 +203,7 @@ Per le versioni non basate su modelli, punta alla memoria contenente i dati recu
 
 Utilizzare `GetParam` per recuperare i dati dei parametri non stringa dal buffer. Usare [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) per recuperare i dati dei parametri di stringa dal buffer.
 
-## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor:: GetParamCount
+## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a> CDynamicParameterAccessor:: GetParamCount
 
 Recupera il numero di parametri archiviati nel buffer.
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 Numero di parametri.
 
-## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a>CDynamicParameterAccessor:: GetParamIO
+## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a> CDynamicParameterAccessor:: GetParamIO
 
 Determina se il parametro specificato è un parametro di input o output.
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
-## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor:: GetParamLength
+## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a> CDynamicParameterAccessor:: GetParamLength
 
 Recupera la lunghezza del parametro specificato archiviato nel buffer.
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 Il primo override restituisce **`true`** in caso di esito positivo o **`false`** negativo. Il secondo override punta alla memoria che contiene la lunghezza del parametro.
 
-## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor:: getparamname
+## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a> CDynamicParameterAccessor:: getparamname
 
 Recupera il nome del parametro specificato.
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 Nome del parametro specificato.
 
-## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a>CDynamicParameterAccessor:: GetParamStatus
+## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a> CDynamicParameterAccessor:: GetParamStatus
 
 Recupera lo stato del parametro specificato archiviato nel buffer.
 
@@ -319,7 +319,7 @@ out Puntatore alla variabile che contiene lo stato DBSTATUS del parametro specif
 
 Il primo override restituisce **`true`** in caso di esito positivo o **`false`** negativo. Il secondo override punta alla memoria che contiene lo stato del parametro specificato.
 
-## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor:: GetParamString
+## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a> CDynamicParameterAccessor:: GetParamString
 
 Recupera i dati string del parametro specificato archiviato nel buffer.
 
@@ -367,7 +367,7 @@ Questo metodo avrà esito negativo se il buffer *pbuffer* non è sufficientement
 
 Utilizzare `GetParamString` per recuperare i dati dei parametri di stringa dal buffer. Utilizzare [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) per recuperare i dati dei parametri non stringa dal buffer.
 
-## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor:: GetParamType
+## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a> CDynamicParameterAccessor:: GetParamType
 
 Recupera il tipo di dati di un parametro specificato.
 
@@ -390,7 +390,7 @@ out Puntatore alla variabile che contiene il tipo di dati del parametro specific
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
-## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor:: separat
+## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a> CDynamicParameterAccessor:: separat
 
 Imposta il buffer del parametro usando i dati (non di stringa) specificati.
 
@@ -433,7 +433,7 @@ Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
 Utilizzare `SetParam` per impostare dati di parametri non stringa nel buffer. Usare [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) per impostare i dati dei parametri di stringa nel buffer.
 
-## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor:: SetParamLength
+## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a> CDynamicParameterAccessor:: SetParamLength
 
 Imposta la lunghezza del parametro specificato archiviato nel buffer.
 
@@ -456,7 +456,7 @@ in Lunghezza in byte del parametro specificato.
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
-## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor:: SetParamStatus
+## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a> CDynamicParameterAccessor:: SetParamStatus
 
 Imposta lo stato del parametro specificato archiviato nel buffer.
 
@@ -479,7 +479,7 @@ in Stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATU
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
-## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor:: SetParamString
+## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a> CDynamicParameterAccessor:: SetParamString
 
 Imposta i dati string del parametro specificato archiviato nel buffer.
 
@@ -508,7 +508,7 @@ in Stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATU
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
-`SetParamString`avrà esito negativo se si tenta di impostare una stringa maggiore della dimensione massima specificata per *pString*.
+`SetParamString` avrà esito negativo se si tenta di impostare una stringa maggiore della dimensione massima specificata per *pString*.
 
 Utilizzare `SetParamString` per impostare i dati dei parametri di stringa nel buffer. Utilizzare [separator](../../data/oledb/cdynamicparameteraccessor-setparam.md) per impostare dati di parametri non stringa nel buffer.
 

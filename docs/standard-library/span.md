@@ -5,12 +5,12 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813535"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846186"
 ---
 # <a name="ltspangt"></a>&lt;intervallo&gt;
 
@@ -56,27 +56,27 @@ int main()
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|:-|
 |[intervallo](span-class.md)| Fornisce una visualizzazione su una sequenza contigua di oggetti. |
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|:-|
 |[operatore =](span-class.md#op_eq)| Assegnazione span |
 |[operatore\[\]](span-class.md#op_at)| Accesso a elementi |
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| Ottiene i byte di sola lettura sottostanti dell'intervallo. |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | Ottiene i byte sottostanti dell'intervallo. |
 
 ### <a name="constants"></a>Costanti
 
-|||
+|Nome|Descrizione|
 |-|:-|
 | **dynamic_extent** | Indica che la dimensione dell'intervallo è determinata in fase di esecuzione anziché in fase di compilazione. Quando il numero di elementi nell'intervallo è noto in fase di compilazione, viene specificato come parametro di `Extent` modello. Quando il numero non è noto fino al runtime, specificare in `dynamic_extent` alternativa. |
 

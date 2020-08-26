@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1f543c4d8edac751195d37414c030dfe2df94fa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230026"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846355"
 ---
 # <a name="restricted"></a>restricted
 
@@ -63,11 +63,9 @@ class c : public a, public b
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
-|**Si applica a**|Metodo di interfaccia, **interfaccia**, **`class`** ,**`struct`**|
+|**Si applica a**|Metodo di interfaccia, **interfaccia**, **`class`** , **`struct`**|
 |**Ripetibile**|No|
 |**Attributi richiesti**|**coclasse** (se applicata a **`class`** o **`struct`** )|
 |**Attributi non validi**|Nessuno|

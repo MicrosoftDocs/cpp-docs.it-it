@@ -14,23 +14,24 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 16c26212cac13602e981f42d8333518da90615fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d419984243d3970533f30814fe0ff451199afb34
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370668"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837970"
 ---
 # <a name="ltfuturegt-functions"></a>Funzioni &lt;future&gt;
 
-||||
-|-|-|-|
-|[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|
-|[make_error_condition](#make_error_condition)|[Swap](#swap)|
+[Async](#async)\
+[future_category](#future_category)\
+[make_error_code](#make_error_code)\
+[make_error_condition](#make_error_condition)\
+[scambio](#swap)|
 
-## <a name="async"></a><a name="async"></a>Async
+## <a name="async"></a><a name="async"></a> Async
 
-Rappresenta un *provider asincrono.*
+Rappresenta un *provider asincrono*.
 
 ```cpp
 template <class Fn, class... ArgTypes>
@@ -44,16 +45,16 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametri
 
-*Politica*\
+*politica*\
 Valore [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Osservazioni
 
 Definizioni delle abbreviazioni:
 
-|||
+|Abbreviazione|Descrizione|
 |-|-|
-|*dfn (inn*|Risultato della chiamata a `decay_copy(forward<Fn>(fn))`.|
+|*DFN*|Risultato della chiamata a `decay_copy(forward<Fn>(fn))`.|
 |*dargs*|Risultati delle chiamate `decay_copy(forward<ArgsTypes>(args...))`.|
 |*Ty*|Tipo `result_of<Fn(ArgTypes...)>::type`.|
 
@@ -63,18 +64,18 @@ La seconda funzione restituisce un oggetto `future<Ty>` il cui *stato asincrono 
 
 A meno che `decay<Fn>::type` non sia un tipo diverso da launch, la seconda funzione non fa parte della risoluzione dell'overload.
 
-Lo standard di C' afferma che se i criteri sono launch::async, la funzione crea un nuovo thread. Tuttavia l'implementazione Microsoft è attualmente non conforme. Ottiene i thread dal Pool di thread di Windows, che in alcuni casi può fornire un thread riciclato anziché uno nuovo. Ciò significa `launch::async` che la `launch::async|launch::deferred`politica viene effettivamente implementata come .  Un'altra implicazione dell'implementazione basata su ThreadPool è che non vi è alcuna garanzia che le variabili locali del thread verranno distrutte al completamento del thread. Se il thread viene riciclato e `async`fornito a una nuova chiamata a , le variabili precedenti continueranno a esistere. Si consiglia pertanto di non utilizzare `async`variabili locali di thread con .
+Lo standard C++ indica che se il criterio è launch:: async, la funzione crea un nuovo thread. Tuttavia, l'implementazione Microsoft è attualmente non conforme. Ottiene i thread dal pool di thread di Windows, che in alcuni casi può fornire un thread riciclato anziché uno nuovo. Ciò significa che il `launch::async` criterio è effettivamente implementato come `launch::async|launch::deferred` .  Un'altra implicazione dell'implementazione basata su ThreadPool è che non esiste alcuna garanzia che le variabili thread-local vengano distrutte al completamento del thread. Se il thread viene riciclato e fornito a una nuova chiamata a `async` , le variabili obsolete saranno ancora disponibili. Si consiglia pertanto di non utilizzare variabili locali di thread con `async` .
 
-Se *policy* policy `launch::deferred`è , la funzione contrassegna lo stato asincrono associato come contenente una *funzione posticipata* e restituisce . La prima chiamata a qualsiasi funzione non temporizzata che attende che lo stato asincrono associato sia ready in effetti chiama la funzione posticipata valutando `INVOKE(dfn, dargs..., Ty)`.
+Se il *criterio* è `launch::deferred` , la funzione contrassegna lo stato asincrono associato come contenente una *funzione posticipata* e restituisce. La prima chiamata a qualsiasi funzione non temporizzata che attende che lo stato asincrono associato sia ready in effetti chiama la funzione posticipata valutando `INVOKE(dfn, dargs..., Ty)`.
 
 In tutti i casi, lo stato asincrono associato dell'oggetto `future` non viene impostato su *ready* fino al completamento della valutazione di `INVOKE(dfn, dargs..., Ty)`, indipendentemente dal fatto che venga generata un'eccezione o che la procedura termini normalmente. Il risultato dello stato asincrono associato è un'eccezione se ne è stata generata una oppure qualsiasi valore restituito dalla valutazione.
 
 > [!NOTE]
 > Per un oggetto `future` (o per l'ultimo oggetto [shared_future](../standard-library/shared-future-class.md)) associato a un'attività avviata con `std::async`, il distruttore si blocca se l'attività non è stata completata. In altri termini, si blocca se questo thread non ha ancora chiamato `.get()` o `.wait()` e l'attività è ancora in esecuzione. Se un oggetto `future` ottenuto da `std::async` viene spostato al di fuori dell'ambito locale, l'altro codice che lo usa deve tenere presente che il relativo distruttore può bloccarsi per consentire allo stato condiviso di diventare ready.
 
-La pseudo-funzione `INVOKE` è definita nella [ \<funzione>](../standard-library/functional.md).
+La pseudo-funzione `INVOKE` è definita in [\<functional>](../standard-library/functional.md) .
 
-## <a name="future_category"></a><a name="future_category"></a>future_category
+## <a name="future_category"></a><a name="future_category"></a> future_category
 
 Restituisce un riferimento all'oggetto [error_category](../standard-library/error-category-class.md) che caratterizza gli errori associati a oggetti `future`.
 
@@ -82,7 +83,7 @@ Restituisce un riferimento all'oggetto [error_category](../standard-library/erro
 const error_category& future_category() noexcept;
 ```
 
-## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a> make_error_code
 
 Crea un oggetto [error_code](../standard-library/error-code-class.md) insieme all'oggetto [error_category](../standard-library/error-category-class.md) che caratterizza gli errori [future](../standard-library/future-class.md).
 
@@ -99,7 +100,7 @@ Valore [future_errc](../standard-library/future-enums.md#future_errc) che identi
 
 `error_code(static_cast<int>(Errno), future_category());`
 
-## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a> make_error_condition
 
 Crea un oggetto [error_condition](../standard-library/error-condition-class.md) insieme all'oggetto [error_category](../standard-library/error-category-class.md) che caratterizza gli errori [future](../standard-library/future-class.md).
 
@@ -116,9 +117,9 @@ Valore [future_errc](../standard-library/future-enums.md#future_errc) che identi
 
 `error_condition(static_cast<int>(Errno), future_category());`
 
-## <a name="swap"></a><a name="swap"></a>Swap
+## <a name="swap"></a><a name="swap"></a> scambio
 
-Scambia *lo stato asincrono associato* di un `promise` oggetto con quello di un altro.
+Scambia lo *stato asincrono associato* di un `promise` oggetto con quello di un altro oggetto.
 
 ```cpp
 template <class Ty>
@@ -133,9 +134,9 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 *Sinistra*\
 L'oggetto `promise` a sinistra.
 
-*va bene*\
+*Ok*\
 L'oggetto `promise` corretto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>futuro](../standard-library/future.md)
+[\<future>](../standard-library/future.md)

@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212023"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838295"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
 
-Eredita dalla struttura `DBPROPIDSET` e aggiunge un costruttore che Inizializza i campi chiave e il metodo di accesso [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
+Eredita dalla `DBPROPIDSET` struttura e aggiunge un costruttore che Inizializza i campi chiave e il metodo di accesso [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,11 +52,11 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[AddPropertyID](#addpropertyid)|Aggiunge una proprietà al set di ID proprietà.|
 |[CDBPropIDSet](#cdbpropidset)|Costruttore.|
@@ -64,15 +64,15 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ### <a name="operators"></a>Operatori
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[operatore =](#op_equal)|Assegna il contenuto di un ID proprietà impostato su un altro.|
 
 ## <a name="remarks"></a>Osservazioni
 
-I consumer OLE DB utilizzano strutture `DBPROPIDSET` per passare una matrice di ID di proprietà per cui il consumer desidera ottenere informazioni sulle proprietà. Le proprietà identificate in una singola struttura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) appartengono a un set di proprietà.
+I consumer OLE DB utilizzano `DBPROPIDSET` le strutture per passare una matrice di ID di proprietà per cui il consumer desidera ottenere informazioni sulle proprietà. Le proprietà identificate in una singola struttura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) appartengono a un set di proprietà.
 
-## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a>CDBPropIDSet:: AddPropertyID
+## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a> CDBPropIDSet:: AddPropertyID
 
 Aggiunge un ID proprietà al set di ID proprietà.
 
@@ -87,9 +87,9 @@ bool AddPropertyID(DBPROPID propid) throw();
 *propid*<br/>
 [in] ID proprietà da aggiungere al set di ID proprietà.
 
-## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a>CDBPropIDSet:: CDBPropIDSet
+## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a> CDBPropIDSet:: CDBPropIDSet
 
-Costruttore. Inizializza i campi di `rgProperties`, `cProperties`e (facoltativamente) `guidPropertySet` della struttura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
+Costruttore. Inizializza i `rgProperties` `cProperties` campi, e (facoltativamente) `guidPropertySet` della struttura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -104,14 +104,14 @@ CDBPropIDSet();
 #### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-in GUID utilizzato per inizializzare il campo `guidPropertySet`.
+in GUID utilizzato per inizializzare il `guidPropertySet` campo.
 
 *propidset*<br/>
 [in] Altro oggetto `CDBPropIDSet` per la costruzione di copia.
 
-## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a>CDBPropIDSet:: Seguid
+## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a> CDBPropIDSet:: Seguid
 
-Imposta il campo GUID nella struttura `DBPROPIDSET`.
+Imposta il campo GUID nella `DBPROPIDSET` struttura.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -122,13 +122,13 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-in GUID utilizzato per impostare il campo `guidPropertySet` della struttura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
+in GUID utilizzato per impostare il `guidPropertySet` campo della struttura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
 ### <a name="remarks"></a>Osservazioni
 
 Questo campo può essere impostato anche dal [Costruttore](../../data/oledb/cdbpropidset-cdbpropidset.md) . Chiamare questa funzione se si usa il costruttore predefinito per questa classe.
 
-## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a>CDBPropIDSet:: operator =
+## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet:: operator =
 
 Assegna il contenuto di un ID proprietà impostato su un altro set di proprietà ID.
 
@@ -141,4 +141,4 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

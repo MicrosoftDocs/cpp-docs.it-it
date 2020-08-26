@@ -5,20 +5,19 @@ f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 45da89793c3f4ea131404fc3392413e7aea9ef3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 907772069c192b3ef75c7366e079b1da1dd36f8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373387"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846251"
 ---
 # <a name="ltscoped_allocatorgt-operators"></a>Operatori &lt;scoped_allocator&gt;
 
-|||
-|-|-|
-|[operatore!](#op_neq)|[operatore di comando](#op_eq_eq)|
+[operatore! =](#op_neq)\
+[operatore = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>operatore!
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica la disuguaglianza dei due oggetti `scoped_allocator_adaptor`.
 
@@ -31,17 +30,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 L'oggetto `scoped_allocator_adaptor` a sinistra.
 
-*va bene*\
+*Ok*\
 L'oggetto `scoped_allocator_adaptor` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
 `!(left == right)`
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore di comando
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica l'uguaglianza di due oggetti `scoped_allocator_adaptor`.
 
@@ -54,10 +53,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*Sinistra*\
+*sinistra*\
 L'oggetto `scoped_allocator_adaptor` a sinistra.
 
-*va bene*\
+*Ok*\
 L'oggetto `scoped_allocator_adaptor` corretto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -66,4 +65,4 @@ L'oggetto `scoped_allocator_adaptor` corretto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[>scoped_allocator<](../standard-library/scoped-allocator.md)
+[<scoped_allocator>](../standard-library/scoped-allocator.md)

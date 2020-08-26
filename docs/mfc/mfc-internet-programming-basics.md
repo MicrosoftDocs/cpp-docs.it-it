@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b41ce97a9b5efe6ad84c543f5c49dd091557b3a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405026"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846316"
 ---
 # <a name="mfc-internet-programming-basics"></a>Concetti di base della programmazione Internet MFC
 
@@ -36,17 +36,17 @@ MFC fornisce classi che supportano la programmazione Internet. È possibile util
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-- [Classi MFC correlate con Internet](internet-related-mfc-classes.md)
+- [Classi MFC correlate a Internet](internet-related-mfc-classes.md)
 
-- [Informazioni Internet per argomento](internet-information-by-topic.md)
+- [Informazioni internet per argomento](internet-information-by-topic.md)
 
-- [Informazioni Internet per attività](internet-information-by-task.md)
+- [Informazioni internet per attività](internet-information-by-task.md)
 
 - [Tecnologia attiva su Internet](active-technology-on-the-internet.md)
 
-- [Concetti di base su WinInet](wininet-basics.md)
+- [Nozioni di base su WinInet](wininet-basics.md)
 
-- [Nozioni di base su HTML](html-basics.md)
+- [Nozioni fondamentali su HTML](html-basics.md)
 
 ## <a name="related-sections"></a>Sezioni correlate
 
@@ -68,12 +68,12 @@ MFC fornisce classi che supportano la programmazione Internet. È possibile util
 
 - [Supporto ATL per controlli DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Siti Web per altre informazioni
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a> Siti Web per altre informazioni
 
-Per ulteriori informazioni sulla tecnologia Microsoft Internet, vedere [Microsoft docs](https://docs.microsoft.com/).
+Per ulteriori informazioni sulla tecnologia Microsoft Internet, vedere [rete e Internet](/windows/win32/networking).
 
 Il [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) pubblica le specifiche per le tecnologie HTML, http, CGI e altre World Wide Web.
 
-## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>Ulteriori informazioni su Internet
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> Ulteriori informazioni su Internet
 
 La sezione OLE del Windows SDK contiene informazioni aggiuntive sulla programmazione OLE. Queste informazioni forniscono informazioni dettagliate sull'uso diretto delle funzioni Win32 WinInet, anziché tramite le classi MFC. Contiene inoltre informazioni generali sulle tecnologie Internet.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211866"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838165"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 
@@ -32,13 +32,13 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**: atldbcli.h
+**Intestazione**: atldbcli. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[GetString](#getstring)|Recupera i dati specificati di colonna come stringa.|
 |[SetString](#setstring)|Imposta i dati specificati di colonna come stringa.|
@@ -49,13 +49,13 @@ Mentre [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) richiede i
 
 Il tipo nativo di dati della colonna nell'archivio dati non è importante; se il provider supporta la conversione di dati, potrà fornire i dati in formato stringa. Se il provider non supporta la conversione dal tipo di dati nativo a una stringa (non è comune), la chiamata di richiesta restituirà il valore DB_S_ERRORSOCCURED e lo stato per la colonna corrispondente indicherà un problema di conversione con DBSTATUS_E_CANTCONVERTVALUE.
 
-Utilizzare `CDynamicStringAccessor` metodi per ottenere informazioni sulle colonne. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione.
+Usare i `CDynamicStringAccessor` metodi per ottenere informazioni sulle colonne. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione.
 
 Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere i dati dal buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)oppure archiviarli nel buffer usando [sestring](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
 Per una discussione ed esempi sull'uso delle classi di funzioni di accesso dinamiche, vedere [uso delle funzioni di accesso dinamiche](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a> CDynamicStringAccessor:: GetString
 
 Recupera i dati specificati di colonna come stringa.
 
@@ -79,13 +79,13 @@ in Puntatore a una stringa di caratteri che contiene il nome della colonna.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al valore stringa recuperato dalla colonna specificata. Il valore è di tipo `BaseType`, che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno. Restituisce NULL se la colonna specificata non viene trovata.
+Puntatore al valore stringa recuperato dalla colonna specificata. Il valore è di tipo `BaseType` , che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno. Restituisce NULL se la colonna specificata non viene trovata.
 
 ### <a name="remarks"></a>Osservazioni
 
 Il secondo modulo di sostituzione accetta il nome della colonna come stringa ANSI. Il terzo modulo di sostituzione accetta il nome della colonna come stringa Unicode.
 
-## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: sestring
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a> CDynamicStringAccessor:: sestring
 
 Imposta i dati specificati di colonna come stringa.
 
@@ -115,7 +115,7 @@ in Puntatore ai dati stringa da scrivere nella colonna specificata.
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al valore stringa in cui impostare la colonna specificata. Il valore è di tipo `BaseType`, che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno.
+Puntatore al valore stringa in cui impostare la colonna specificata. Il valore è di tipo `BaseType` , che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -126,7 +126,7 @@ Se _SECURE_ATL è definito per avere un valore diverso da zero, verrà generato 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>

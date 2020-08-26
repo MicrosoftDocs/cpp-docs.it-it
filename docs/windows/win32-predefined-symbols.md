@@ -6,18 +6,18 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165925"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835649"
 ---
 # <a name="win32-predefined-symbols"></a>Simboli già definiti di Win32
 
 Questi simboli sono definiti nei file di intestazione Win32 e supportano le funzioni e le azioni dell'applicazione Windows standard. Questi simboli vengono usati principalmente con gli elementi comuni dell'interfaccia utente. Quando si utilizzano i controlli negli editor di risorse, questi simboli verranno visualizzati nella [finestra Proprietà](/visualstudio/ide/reference/properties-window) associata ai controlli comuni. Se, ad esempio, nella barra degli strumenti è visualizzata l'icona dell'applicazione, l'icona verrà associata al simbolo IDI_SMALL nella finestra delle **Proprietà** .
 
-|||
+|Nome|Descrizione|
 |-|-|
 |IDABORT|controllo Finestra di dialogo, pulsante Interrompi|
 |IDC_STATIC|controllo Testo statico in una finestra di dialogo|
@@ -42,4 +42,4 @@ Win32
 
 [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)<br/>
 [Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)<br/>
-[Simboli predefiniti di ATL](../windows/atl-predefined-symbols.md)<br/>
+[Simboli predefiniti ATL](../windows/atl-predefined-symbols.md)<br/>

@@ -29,29 +29,29 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 472200d6941867387d99ab52c08a70467f802f62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219118"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838087"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funzioni &lt;functional&gt;
 
 Queste funzioni sono deprecate in C++ 11 e rimosse in C++ 17:
 
-||||
-|-|-|-|
-|[bind1st](#bind1st) |[bind2nd](#bind2nd)|[mem_fun](#mem_fun)|
-|[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
+[bind1st](#bind1st)\
+[bind2nd](#bind2nd)\
+[mem_fun](#mem_fun)\
+[mem_fun_ref](#mem_fun_ref)\
+[ptr_fun](#ptr_fun)
 
 Queste funzioni sono deprecate in C++ 17:
 
-|||
-|-|-|
-|[not1](#not1)|[not2](#not2)|
+[not1](#not1)\
+[not2](#not2)
 
-## <a name="bind"></a><a name="bind"></a>associare
+## <a name="bind"></a><a name="bind"></a> associare
 
 Associa gli argomenti a un oggetto richiamabile.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a><a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a> bind1st
 
 Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria. Associa il primo argomento della funzione binaria a un valore specificato. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a> bind2nd
 
 Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria. Associa il secondo argomento della funzione binaria a un valore specificato. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a><a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a> bit_and
 
 Oggetto funzione predefinito che esegue un'operazione AND bit per bit (Binary `operator&` ) sui relativi argomenti.
 
@@ -381,7 +381,7 @@ Risultato di `Left & Right`. Il modello specializzato esegue un inoltro perfetto
 
 Il funtore `bit_and` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator&` binario.
 
-## <a name="bit_not"></a><a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a> bit_not
 
 Oggetto funzione predefinito che esegue un'operazione di complemento (NOT) bit per bit (unario `operator~` ) sul relativo argomento. Aggiunto in C++ 14.
 
@@ -417,7 +417,7 @@ Risultato di `~ Right`. Il modello specializzato esegue un inoltro perfetto del 
 
 Il funtore `bit_not` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator~` binario.
 
-## <a name="bit_or"></a><a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a> bit_or
 
 Oggetto funzione predefinito che esegue un'operazione OR bit per bit ( `operator|` ) sui relativi argomenti.
 
@@ -458,7 +458,7 @@ Risultato di `Left | Right`. Il modello specializzato esegue un inoltro perfetto
 
 Il funtore `bit_or` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano `operator|`.
 
-## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a> bit_xor
 
 Oggetto funzione predefinito che esegue un'operazione XOR bit per bit (Binary `operator^` ) sui relativi argomenti.
 
@@ -499,7 +499,7 @@ Risultato di `Left ^ Right`. Il modello specializzato esegue un inoltro perfetto
 
 Il funtore `bit_xor` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator^` binario.
 
-## <a name="cref"></a><a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a> cref
 
 Costruisce un oggetto `reference_wrapper` di tipo const da un argomento.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a><a name="invoke"></a>richiamare
+## <a name="invoke"></a><a name="invoke"></a> richiamare
 
 Richiama qualsiasi oggetto chiamabile con gli argomenti specificati. Aggiunto in C++ 17.
 
@@ -588,15 +588,15 @@ Richiama l'oggetto chiamabile *FN* usando gli *argomenti*dei parametri. In realt
 
 - `(t1.*f)(t2, ..., tN)` quando `f` è un puntatore alla funzione membro di classe `T` e `t1` è un oggetto di tipo `T`, un riferimento a un oggetto di tipo `T` o un riferimento a un oggetto di un tipo derivato da `T`. Ovvero quando `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` è true.
 
-- `(t1.get().*f)(t2, ..., tN)`Quando `f` è un puntatore alla funzione membro della classe `T` ed `std::decay_t<decltype(t1)>` è una specializzazione di `std::reference_wrapper` .
+- `(t1.get().*f)(t2, ..., tN)` Quando `f` è un puntatore alla funzione membro della classe `T` ed `std::decay_t<decltype(t1)>` è una specializzazione di `std::reference_wrapper` .
 
-- `((*t1).*f)(t2, ..., tN)`Quando `f` è un puntatore alla funzione membro della classe `T` e `t1` non è uno dei tipi precedenti.
+- `((*t1).*f)(t2, ..., tN)` Quando `f` è un puntatore alla funzione membro della classe `T` e `t1` non è uno dei tipi precedenti.
 
 - `t1.*f` quando N == 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `t1` è un oggetto di tipo `T`, un riferimento a un oggetto di tipo `T` o un riferimento a un oggetto di un tipo derivato da `T`.  Ovvero quando `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` è true.
 
-- `t1.get().*f`Quando N = = 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `std::decay_t<decltype(t1)>` è una specializzazione di `std::reference_wrapper` .
+- `t1.get().*f` Quando N = = 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `std::decay_t<decltype(t1)>` è una specializzazione di `std::reference_wrapper` .
 
-- `(*t1).*f`Quando N = = 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `t1` non è uno dei tipi precedenti.
+- `(*t1).*f` Quando N = = 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `t1` non è uno dei tipi precedenti.
 
 - `f(t1, t2, ..., tN)` in tutti gli altri casi.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a> mem_fn
 
 Genera un wrapper di chiamata semplice.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a> mem_fun
 
 Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore. Deprecato in C++ 11 per [mem_fn](#mem_fn) e [Binding](#bind)e rimosso in c++ 17.
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a> mem_fun_ref
 
 Funzioni modello helper usate per costruire gli adattatori dell'oggetto funzione per funzioni membro se inizializzate mediante argomenti di riferimento. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a><a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a> not1
 
 Restituisce il complemento di un predicato unario. Deprecato per [not_fn](#not_fn) in c++ 17.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a><a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a> not2
 
 Restituisce il complemento di un predicato binario. Deprecato per [not_fn](#not_fn) in c++ 17.
 
@@ -1079,9 +1079,9 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a><a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a> not_fn
 
-Il `not_fn` modello di funzione accetta un oggetto chiamabile e restituisce un oggetto chiamabile. Quando l'oggetto chiamabile restituito viene richiamato in un secondo momento con alcuni argomenti, li passa all'oggetto chiamabile originale e il risultato viene negato in modo logico. Conserva il comportamento di qualificazione const e categoria valore dell'oggetto richiamabile di cui è stato eseguito il wrapper. `not_fn`è una novità di c++ 17 e sostituisce le funzionalità deprecate `std::not1` , `std::not2` , `std::unary_negate` e `std::binary_negate` .
+Il `not_fn` modello di funzione accetta un oggetto chiamabile e restituisce un oggetto chiamabile. Quando l'oggetto chiamabile restituito viene richiamato in un secondo momento con alcuni argomenti, li passa all'oggetto chiamabile originale e il risultato viene negato in modo logico. Conserva il comportamento di qualificazione const e categoria valore dell'oggetto richiamabile di cui è stato eseguito il wrapper. `not_fn` è una novità di c++ 17 e sostituisce le funzionalità deprecate `std::not1` , `std::not2` , `std::unary_negate` e `std::binary_negate` .
 
 ```cpp
 template <class Callable>
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a> ptr_fun
 
 Funzioni modello helper usate per convertire i puntatori a funzioni unarie e binarie rispettivamente in funzioni adattabili unarie e binarie. Deprecato in C++ 11, rimosso in C++ 17.
 
@@ -1210,7 +1210,7 @@ Un puntatore a funzione è un oggetto funzione. Può essere passato a qualsiasi 
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a><a name="ref"></a>Ref
+## <a name="ref"></a><a name="ref"></a> Ref
 
 Costruisce un oggetto `reference_wrapper` da un argomento.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia due oggetti `function`.
 

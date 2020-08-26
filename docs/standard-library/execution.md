@@ -1,19 +1,19 @@
 ---
-title: '&gt; di esecuzione &lt;'
+title: '&lt;esecuzione&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 81e9aa63265c367412fda709aacd5ca3953e9fdf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835936"
 ---
-# <a name="ltexecutiongt"></a>&gt; di esecuzione &lt;
+# <a name="ltexecutiongt"></a>&lt;esecuzione&gt;
 
 Descrive i criteri di esecuzione per gli algoritmi paralleli.
 
@@ -32,7 +32,7 @@ namespace std::execution {
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Struct is_execution_policy](is-execution-policy-struct.md)|Rileva i criteri di esecuzione allo scopo di escludere le firme di funzione dalla partecipazione alla risoluzione dell'overload altrimenti ambigua.|
 |[Classe parallel_policy](parallel-policy-class.md)|Utilizzato come tipo univoco per distinguere l'overload dell'algoritmo parallelo e indicare che l'esecuzione di un algoritmo parallelo può essere parallela.|
@@ -41,12 +41,12 @@ namespace std::execution {
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<esecuzione >
+**Intestazione:**\<execution>
 
 **Spazio dei nomi:** stdext
 
 ## <a name="see-also"></a>Vedere anche
 
-[Header Files Reference](cpp-standard-library-header-files.md)\ (Riferimento file di intestazione)
-[Sicurezza dei thread nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\
-[Riferimento per la libreria standard C++](cpp-standard-library-reference.md)
+[Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
+[Thread safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per la libreria standard C++](cpp-standard-library-reference.md)

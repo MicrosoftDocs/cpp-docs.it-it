@@ -5,12 +5,12 @@ f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 6074c80b20ae0c69d34768bc16d7aaae16c99579
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232820"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835662"
 ---
 # <a name="ltvariantgt"></a>&lt;variant&gt;
 
@@ -26,7 +26,7 @@ Un oggetto Variant include e gestisce un valore. Se la variante contiene un valo
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore = =](../standard-library/forward-list-operators.md#op_eq_eq)|Verifica se l'oggetto variant sul lato sinistro dell'operatore è uguale all'oggetto variant a destra.|
 |[operatore! =](../standard-library/forward-list-operators.md#op_neq)|Verifica se l'oggetto variant sul lato sinistro dell'operatore non è uguale all'oggetto variant a destra.|
@@ -37,7 +37,7 @@ Un oggetto Variant include e gestisce un valore. Se la variante contiene un valo
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[get](../standard-library/variant-functions.md#get)|Ottiene la variante di un oggetto.|
 |[get_if](../standard-library/variant-functions.md#get_if)|Ottiene la variante di un oggetto, se esistente.|
@@ -47,14 +47,14 @@ Un oggetto Variant include e gestisce un valore. Se la variante contiene un valo
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[bad_variant_access](../standard-library/bad-variant-access-class.md)|Oggetti generati per segnalare accessi non validi al valore di un oggetto Variant.|
 |[variant](../standard-library/variant.md)|Oggetto per il quale è possibile mantenere un valore di uno dei tipi alternativi o nessun valore.|
 
 ### <a name="structs"></a>Struct
 
-|||
+|Nome|Description|
 |-|-|
 |[hash](../standard-library/hash-structure.md)||
 |[monostato](../standard-library/monostate-structure.md)|Un tipo alternativo per una variante per rendere il tipo Variant predefinito costruibile.|
@@ -64,7 +64,7 @@ Un oggetto Variant include e gestisce un valore. Se la variante contiene un valo
 
 ### <a name="objects"></a>Oggetti
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[variant_npos](../standard-library/variant-functions.md#variant_npos)||
 

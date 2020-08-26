@@ -2,12 +2,12 @@
 title: Spazi dei nomi e visibilità del tipo (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: cbfbd8c27065121eb176d9a62662eab7e1f4271b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230974"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837801"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Spazi dei nomi e visibilità del tipo (C++/CX)
 
@@ -28,15 +28,14 @@ In un delegato, un'interfaccia o una classe di riferimento privata, nessun membr
 
 Utilizza i modificatori di accesso riportati di seguito per controllare sia la visibilità dei metadati che l'accessibilità del codice sorgente.
 
-||||
-|-|-|-|
-|Modificatore|Significato|Emesso nei metadati?|
-|private|L'accessibilità predefinita. Lo stesso significato di C++ standard.|No|
-|protetto|Lo stesso significato di C++ standard, sia nell'app o nel componente che nei metadati.|Sì|
-|public|Lo stesso significato di C++ standard.|Sì|
-|`public protected` -oppure- `protected public`|Accessibilità protetta nei metadati, pubblica nell'app o nel componente.|Sì|
-|`protected private` o `private protected`|Non visibile nei metadati; accessibilità protetta nell'app o nel componente.||
-|`internal` o `private public`|Il membro è pubblico nell'app o nel componente, ma non è visibile nei metadati.|No|
+| Modificatore | Significato | Emesso nei metadati? |
+|--|--|--|
+| **`private`** | L'accessibilità predefinita. Lo stesso significato di C++ standard. | No |
+| **`protected`** | Lo stesso significato di C++ standard, sia nell'app o nel componente che nei metadati. | Sì |
+| **`public`** | Lo stesso significato di C++ standard. | Sì |
+| **`public protected`** o **`protected public`** | Accessibilità protetta nei metadati, pubblica nell'app o nel componente. | Sì |
+| **`protected private`** o **`private protected`** | Non visibile nei metadati; accessibilità protetta nell'app o nel componente. |  |
+| **`internal`** o **`private public`** | Il membro è pubblico nell'app o nel componente, ma non è visibile nei metadati. | No |
 
 ## <a name="windows-runtime-namespaces"></a>Spazi dei nomi Windows Runtime
 
@@ -46,13 +45,12 @@ L'API Windows è costituita da tipi dichiarati in Windows:: \* namespaces. Quest
 
 I/CX C++ definiscono determinati tipi in questi spazi dei nomi come parte della proiezione del sistema di tipi di Windows Runtime.
 
-|||
-|-|-|
-|**Spazio dei nomi**|**Descrizione**|
-|default|Contiene i tipi numerici e char16 incorporati. Questi tipi sono inclusi nell'ambito di ogni spazio dei nomi e un' **`using`** istruzione non è mai necessaria.|
-|Piattaforma|Contiene principalmente tipi pubblici che corrispondono a Windows Runtime tipi quali `Array<T>` ,, `String` `Guid` e `Boolean` . Include inoltre i tipi di supporto specifici quali `Platform::Agile<T>` e `Platform::Box<T>`.|
-|Platform::Collections|Contiene le classi di raccolta concrete che implementano le interfacce di raccolta Windows Runtime `IVector` , `IMap` e così via. Questi tipi sono definiti nel file di intestazione collection.h, non in platform.winmd.|
-|Platform::Details|Contiene i tipi utilizzati dal compilatore e che non sono per uso pubblico.|
+| Spazio dei nomi | Descrizione |
+|--|--|
+| default | Contiene i tipi numerici e char16 incorporati. Questi tipi sono inclusi nell'ambito di ogni spazio dei nomi e un' **`using`** istruzione non è mai necessaria. |
+| `Platform` | Contiene principalmente tipi pubblici che corrispondono a Windows Runtime tipi quali `Array<T>` ,, `String` `Guid` e `Boolean` . Include inoltre i tipi di supporto specifici quali `Platform::Agile<T>` e `Platform::Box<T>`. |
+| `Platform::Collections` | Contiene le classi di raccolta concrete che implementano le interfacce di raccolta Windows Runtime `IVector` , `IMap` e così via. Questi tipi sono definiti nel file di intestazione collection.h, non in platform.winmd. |
+| `Platform::Details` | Contiene i tipi utilizzati dal compilatore e che non sono per uso pubblico. |
 
 ## <a name="see-also"></a>Vedere anche
 

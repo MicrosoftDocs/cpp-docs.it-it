@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845640"
 ---
 # <a name="ctable-class"></a>Classe CTable
 
@@ -45,11 +45,11 @@ Classe del set di righe.
 
 **Intestazione:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[Apri](#open)|Consente di aprire la tabella.|
 
@@ -57,7 +57,7 @@ Classe del set di righe.
 
 Vedere [CCommand](../../data/oledb/ccommand-class.md) per informazioni su come eseguire un comando per accedere a un set di righe.
 
-## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
+## <a name="ctableopen"></a><a name="open"></a> CTable:: Open
 
 Consente di aprire la tabella.
 
@@ -92,7 +92,7 @@ in Nome della tabella da aprire, passato come stringa Unicode.
 in Nome della tabella da aprire, passato come stringa ANSI.
 
 *dbid*<br/>
-in `DBID` della tabella da aprire.
+in Oggetto `DBID` della tabella da aprire.
 
 *pPropSet*<br/>
 in Puntatore a una matrice di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) che contiene le proprietà e i valori da impostare. Vedere [set di proprietà e gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* nel Windows SDK. Il valore predefinito di NULL non specifica alcuna proprietà.
@@ -111,4 +111,4 @@ Per ulteriori informazioni, vedere [IOpenRowset:: OPENROWSET](/previous-versions
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

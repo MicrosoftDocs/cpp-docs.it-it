@@ -1,17 +1,17 @@
 ---
-title: intervallo (C++ attributo com)
+title: Range (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214617"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839478"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,15 +25,15 @@ Specifica un intervallo di valori consentiti per argomenti o campi i cui valori 
 
 ### <a name="parameters"></a>Parametri
 
-*low*<br/>
+*basso*<br/>
 Valore dell'intervallo minimo.
 
-*high*<br/>
+*alta*<br/>
 Valore di intervallo massimo.
 
 ## <a name="remarks"></a>Osservazioni
 
-L'attributo **Range** C++ ha la stessa funzionalità dell'attributo [Range](/windows/win32/Midl/range) MIDL.
+L'attributo dell' **intervallo** C++ ha la stessa funzionalità dell'attributo [Range](/windows/win32/Midl/range) MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -53,14 +53,12 @@ __interface ICustom {
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Metodo di interfaccia, parametro interface|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
@@ -68,5 +66,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
-[Attributi di membro dati](data-member-attributes.md)
+[Attributi del parametro](parameter-attributes.md)<br/>
+[Attributi dei membri dati](data-member-attributes.md)

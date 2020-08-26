@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403868"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837788"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: associazione dinamica di colonne di dati (ODBC)
 
@@ -92,12 +92,12 @@ L'associazione dinamica di colonne aggiunte in fase di esecuzione richiede i pas
 
 Nella tabella seguente sono illustrati i quattro elenchi con cui è necessario lavorare.
 
-|||
-|-|-|
-|**Current-Table-Columns**| (Elenco 1 nella figura) Un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel recordset.|
-|**Bound-Recordset-Columns**| (Elenco 2 nella figura) Un elenco delle colonne associate nel recordset. Queste colonne contengono già istruzioni RFX nella funzione `DoFieldExchange`.|
-|**Columns-To-Bind-Dynamically**| (Elenco 3 nella figura) Un elenco delle colonne presenti nella tabella ma non nel recordset. Queste sono le colonne da associare in modo dinamico.|
-|**Dynamic-Column-Values**| (Elenco 4 nella figura) Un elenco che contiene l'archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Gli elementi di questo elenco corrispondono a quelli in Columns-to-Bind-Dynamically, con una relazione uno a uno.|
+| Elenco | Descrizione |
+|--|--|
+| **Current-Table-Columns** | (Elenco 1 nella figura) Un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel recordset. |
+| **Bound-Recordset-Columns** | (Elenco 2 nella figura) Un elenco delle colonne associate nel recordset. Queste colonne contengono già istruzioni RFX nella funzione `DoFieldExchange`. |
+| **Columns-To-Bind-Dynamically** | (Elenco 3 nella figura) Un elenco delle colonne presenti nella tabella ma non nel recordset. Queste sono le colonne da associare in modo dinamico. |
+| **Dynamic-Column-Values** | (Elenco 4 nella figura) Un elenco che contiene l'archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Gli elementi di questo elenco corrispondono a quelli in Columns-to-Bind-Dynamically, con una relazione uno a uno. |
 
 ### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> Compilazione degli elenchi
 
