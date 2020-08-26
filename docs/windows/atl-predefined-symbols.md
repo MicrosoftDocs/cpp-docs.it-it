@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 4ce2d8060c7218226340a591c6295a573f99dad8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8134f334b0143a360fd3e02c04bca7a65ce67ce0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619772"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836387"
 ---
 # <a name="atl-predefined-symbols"></a>Simboli predefiniti di ATL
 
@@ -18,7 +18,7 @@ Questi simboli sono definiti nei file di intestazione ATL, ma supportano le funz
 
 Quando si utilizzano finestre di dialogo e controlli nell' [editor finestre](dialog-editor.md), questi simboli verranno visualizzati nel [finestra Proprietà](/visualstudio/ide/reference/properties-window) associato ai controlli comuni. Se, ad esempio, nella finestra di dialogo è presente un pulsante **Annulla** , tale comando verrà associato al simbolo IDCANCEL nella finestra **Proprietà** .
 
-|||
+|Nome|Descrizione|
 |-|-|
 |IDABORT|controllo Finestra di dialogo, pulsante Interrompi|
 |IDC_STATIC|controllo Controllo statico|

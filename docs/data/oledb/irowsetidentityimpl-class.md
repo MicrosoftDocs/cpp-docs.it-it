@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 20f558099c02d7de8a20b3cf631812b44a742a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210406"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836143"
 ---
 # <a name="irowsetidentityimpl-class"></a>Classe IRowsetIdentityImpl
 
@@ -35,24 +35,24 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `IRowsetIdentityImpl`.
+Classe derivata da `IRowsetIdentityImpl` .
 
 *RowClass*<br/>
-Unità di archiviazione per il `HROW`.
+Unità di archiviazione per `HROW` .
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="methods"></a>Metodi
 
-|||
+| Nome | Descrizione |
 |-|-|
 |[IsSameRow](#issamerow)|Confronta due handle di riga per verificare se fanno riferimento alla stessa riga.|
 
-## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>IRowsetIdentityImpl:: IsSameRow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a> IRowsetIdentityImpl:: IsSameRow
 
 Confronta due handle di riga per verificare se fanno riferimento alla stessa riga.
 
@@ -69,9 +69,9 @@ Vedere [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629
 
 ### <a name="remarks"></a>Osservazioni
 
-Per confrontare gli handle di riga, questo metodo esegue il cast degli handle di `HROW` ai membri `RowClass` e chiama `memcmp` nei puntatori.
+Per confrontare gli handle di riga, questo metodo esegue il cast degli `HROW` handle ai `RowClass` membri e chiama `memcmp` sui puntatori.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

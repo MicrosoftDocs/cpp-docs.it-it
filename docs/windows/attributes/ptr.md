@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c01fe93d8c4092b3a4754b0c70ff161d66dfe49f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224383"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839868"
 ---
 # <a name="ptr"></a>ptr
 
@@ -33,11 +33,9 @@ Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di utilizzo 
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
-|**Si applica a**|Parametro di interfaccia, metodo di interfaccia,**`typedef`**|
+|**Si applica a**|Parametro di interfaccia, metodo di interfaccia, **`typedef`**|
 |**Ripetibile**|No|
 |**Attributi richiesti**|Nessuno|
 |**Attributi non validi**|Nessuno|

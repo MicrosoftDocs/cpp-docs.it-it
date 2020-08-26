@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 0b951fc76635f67115f4a832ed316d66b6de7497
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376287"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836699"
 ---
 # <a name="translation-mode-constants"></a>Costanti modalità di conversione
 
@@ -38,7 +38,7 @@ Le costanti di manifesto `_O_BINARY` e `_O_TEXT` determinano la modalità di con
 
 Di seguito sono elencati i valori consentiti:
 
-|||
+|Valore|Descrizione|
 |-|-|
 `_O_TEXT`  | Apre un file in modalità testo (convertito). Le combinazioni di ritorno a capo-avanzamento riga sono convertite in un singolo avanzamento riga in fase di input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura e lettura/scrittura `fopen` verifica la presenza della combinazione CTRL+Z alla fine del file e, se possibile, la rimuove. Questa operazione viene eseguita perché l'utilizzo delle funzioni `fseek` e `ftell` per spostarsi all'interno di un file che terminano con CTRL+Z può causare un comportamento non corretto di `fseek` in prossimità della fine del file.
 `_O_BINARY`  | Apre un file in modalità binaria (non convertita). Le conversioni precedenti vengono eliminate.

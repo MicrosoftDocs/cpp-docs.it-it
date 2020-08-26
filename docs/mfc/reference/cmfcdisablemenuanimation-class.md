@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 97a93e000b3e12d8ec4824100059581216b1b8d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752414"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840765"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>Classe CMFCDisableMenuAnimation
 
-Disabilita l'animazione del menu a comparsa.
+Disabilita l'animazione del menu popup.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,33 +29,30 @@ class CMFCDisableMenuAnimation
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Costruisce un oggetto `CMFCDisableMenuAnimation`.|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
-|[CMFCDisableMenuAnimation::Restore](#restore)|Ripristina l'animazione precedente utilizzata dal framework per visualizzare un menu a comparsa.|
+|-|-|
+|[CMFCDisableMenuAnimation:: Restore](#restore)|Ripristina l'animazione precedente utilizzata dal Framework per visualizzare un menu di scelta rapida.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|||
-|-|-|
 |Nome|Descrizione|
-|`CMFCDisableMenuAnimation::m_animType`|Memorizza il tipo di animazione del menu a comparsa precedente.|
+|-|-|
+|`CMFCDisableMenuAnimation::m_animType`|Archivia il tipo di animazione del menu popup precedente.|
 
 ### <a name="remarks"></a>Osservazioni
 
-Utilizzate questa classe helper per disattivare temporaneamente l'animazione del menu a comparsa (ad esempio, quando elaborate i comandi del mouse o della tastiera).
+Usare questa classe helper per disabilitare temporaneamente l'animazione del menu popup, ad esempio quando si elaborano i comandi del mouse o della tastiera.
 
-Un `CMFCDisableMenuAnimation` oggetto disabilita l'animazione del menu a comparsa durante la sua durata. Il costruttore memorizza il tipo di `m_animType` animazione del menu `CMFCPopupMenu::NO_ANIMATION`a comparsa corrente nel campo e imposta il tipo di animazione corrente su . Il distruttore ripristina il tipo di animazione precedente.
+Un `CMFCDisableMenuAnimation` oggetto Disabilita l'animazione del menu popup durante la relativa durata. Il costruttore archivia il tipo di animazione del menu popup corrente nel `m_animType` campo e imposta il tipo di animazione corrente su `CMFCPopupMenu::NO_ANIMATION` . Il distruttore ripristina il tipo di animazione precedente.
 
-È possibile `CMFCDisableMenuAnimation` creare un oggetto nello stack per disabilitare l'animazione del menu a comparsa in una singola funzione. Se si desidera disabilitare l'animazione `CMFCDisableMenuAnimation` del menu a comparsa tra le funzioni, creare un oggetto nell'heap e quindi eliminarlo quando si desidera ripristinare l'animazione del menu a comparsa.
+È possibile creare un `CMFCDisableMenuAnimation` oggetto nello stack per disabilitare l'animazione del menu popup in una singola funzione. Se si desidera disabilitare l'animazione del menu popup tra le funzioni, creare un `CMFCDisableMenuAnimation` oggetto nell'heap e quindi eliminarlo quando si desidera ripristinare l'animazione del menu popup.
 
 ## <a name="example"></a>Esempio
 
@@ -69,11 +66,11 @@ Nell'esempio seguente viene illustrato come utilizzare lo stack per disabilitare
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxpopupmenu.h
+**Intestazione:** afxpopupmenu. h
 
-## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restore
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a> CMFCDisableMenuAnimation:: Restore
 
-Ripristina l'animazione precedente utilizzata dal framework per visualizzare un menu a comparsa.
+Ripristina l'animazione precedente utilizzata dal Framework per visualizzare un menu di scelta rapida.
 
 ```cpp
 void Restore ();
@@ -81,7 +78,7 @@ void Restore ();
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo viene `CMFCDisableMenuAnimation` chiamato dal distruttore per ripristinare l'animazione precedente utilizzata dal framework per visualizzare un menu a comparsa.
+Questo metodo viene chiamato dal `CMFCDisableMenuAnimation` distruttore per ripristinare l'animazione precedente utilizzata dal Framework per visualizzare un menu di scelta rapida.
 
 ## <a name="see-also"></a>Vedere anche
 

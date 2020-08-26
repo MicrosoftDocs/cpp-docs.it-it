@@ -1,17 +1,17 @@
 ---
-title: pointer_default (C++ attributo com)
+title: pointer_default (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e4e5ce03e8c0e6ca19814f5d228305b0d97322f9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166536"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836192"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -38,14 +38,12 @@ Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di utilizzo 
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

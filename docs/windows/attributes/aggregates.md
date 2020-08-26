@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 65a166faa9380272c87af92ebaf8294c0e0b1af3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e745cae5710bbf8df1314ec20a4a0b72545c0591
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217285"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836361"
 ---
 # <a name="aggregates"></a>aggregati
 
@@ -79,9 +79,7 @@ struct CObject : IObject
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|Sì|

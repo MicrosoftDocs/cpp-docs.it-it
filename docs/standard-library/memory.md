@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202961"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836465"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -28,10 +28,10 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[AddressOf](../standard-library/memory-functions.md#addressof)|Ottiene l'indirizzo true di un oggetto.|
-|[allineare](../standard-library/memory-functions.md#align)|Restituisce un puntatore a un intervallo di dimensioni specificate in base all'allineamento e all'indirizzo iniziali forniti.|
+|[align](../standard-library/memory-functions.md#align)|Restituisce un puntatore a un intervallo di dimensioni specificate in base all'allineamento e all'indirizzo iniziali forniti.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crea un `shared_ptr` agli oggetti allocati e costruiti per un tipo specificato con un allocatore specificato.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
@@ -77,7 +77,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore! =](../standard-library/memory-operators.md#op_neq)|Verifica la disuguaglianza tra gli oggetti allocatore di una classe specificata.|
 |[operatore = =](../standard-library/memory-operators.md#op_eq_eq)|Verifica l'uguaglianza tra gli oggetti allocatore di una classe specificata.|
@@ -89,7 +89,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Il modello di classe descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per matrici di oggetti di tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Descrive un oggetto che determina tutte le informazioni necessarie per un contenitore abilitato dall'allocatore.|
@@ -104,7 +104,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="structures"></a>Strutture
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,7 +114,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="specializations"></a>Specializzazioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|Specializzazione dell'allocatore del modello di classe da digitare **`void`** , che definisce solo i tipi di membri che hanno senso in questo contesto specifico.|
 

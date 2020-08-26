@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230246"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846511"
 ---
 # <a name="binomial_distribution-class"></a>Classe binomial_distribution
 
@@ -81,10 +81,8 @@ Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`int`** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
 I membri `t()` di proprietà e `p()` restituiscono rispettivamente i valori *t* e *p* dei parametri di distribuzione attualmente archiviati.
 
@@ -231,7 +229,7 @@ Histogram for 100 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution:: binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a> binomial_distribution:: binomial_distribution
 
 Costruisce la distribuzione.
 
@@ -259,7 +257,7 @@ Il primo costruttore crea un oggetto il cui valore *p* archiviato include il val
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a> binomial_distribution::p aram_type
 
 Archivia tutti i parametri della distribuzione.
 

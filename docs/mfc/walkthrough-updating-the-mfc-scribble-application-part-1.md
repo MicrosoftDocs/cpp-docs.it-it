@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 9fc2903180a055c18c6f3779b1da55ee347d2535
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9eda80fbabf939b9e3a5f8a0ef5b76e46656740
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230428"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840258"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 1)
 
@@ -26,7 +26,7 @@ In questa procedura dettagliata viene modificato l'esempio classico di Scribble 
 
 [Esempio scribble 1,0 MFC](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Per informazioni sulla conversione in Visual Studio 2017 o versioni successive, vedere [Guida al porting: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 In questa parte della procedura dettagliata sono incluse le seguenti sezioni:
 
@@ -42,7 +42,7 @@ In questa parte della procedura dettagliata sono incluse le seguenti sezioni:
 
 - [Impostazione dell'aspetto dell'applicazione](#setlook)
 
-## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a>Sostituzione delle classi di base
+## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a> Sostituzione delle classi di base
 
 Per convertire un'applicazione che supporta un menu in un'applicazione che supporta una barra multifunzione, è necessario derivare le classi dell'applicazione, della finestra cornice e della barra degli strumenti da classi base aggiornate. Si consiglia di non modificare l'esempio Scribble originale. Al contrario, pulire il progetto Scribble, copiarlo in un'altra directory e quindi modificare la copia.
 
@@ -103,11 +103,11 @@ Per convertire un'applicazione che supporta un menu in un'applicazione che suppo
 
 1. Salvare i cambiamenti, quindi compilare ed eseguire l'applicazione.
 
-## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a>Aggiunta di bitmap al progetto
+## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a> Aggiunta di bitmap al progetto
 
 I quattro passaggi successivi di questa procedura dettagliata richiedono risorse bitmap. È possibile ottenere le bitmap appropriate in diversi modi:
 
-- Usare gli [editor di risorse](../windows/resource-editors.md) per creare bitmap personalizzate. In alternativa, è possibile usare gli editor di risorse per assemblare bitmap dalle immagini con estensione png (Portable Network Graphics) incluse in Visual Studio e scaricabili dalla [libreria di immagini di Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Usare gli [editor di risorse](../windows/resource-editors.md) per creare bitmap personalizzate. In alternativa, è possibile usare gli editor di risorse per assemblare bitmap dalle immagini con estensione png (Portable Network Graphics) incluse in Visual Studio e scaricabili dalla [libreria di immagini di Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
 
     Tuttavia, l'interfaccia utente della **barra multifunzione** richiede che alcune bitmap supportino immagini trasparenti. Le bitmap trasparenti utilizzano pixel a 32 bit, dove 24 bit specificano i componenti rosso, verde e blu del colore e 8 bit definiscono un *canale alfa* che specifica la trasparenza del colore. Con gli editor risorse correnti è possibile visualizzare, ma non modificare, le bitmap con pixel a 32 bit. Pertanto, utilizzare un editor di immagini esterno anziché gli editor risorse per modificare le bitmap trasparenti.
 
@@ -153,7 +153,7 @@ In questa procedura dettagliata vengono copiati i file di risorse dall'esempio c
    > [!NOTE]
    > Poiché sono necessarie solo le prime quattro immagini 16x16 (16x64), è possibile ritagliare la larghezza del lato destro di questa bitmap da 128 a 64.
 
-## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a>Aggiunta di una risorsa barra multifunzione al progetto
+## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a> Aggiunta di una risorsa barra multifunzione al progetto
 
 Quando si converte un'applicazione che utilizza menu in un'applicazione che utilizza una barra multifunzione, non è necessario rimuovere o disabilitare i menu esistenti. È sufficiente creare una risorsa della barra multifunzione, aggiungere pulsanti della barra multifunzione e quindi associare i nuovi pulsanti alle voci di menu esistenti. Sebbene i menu non siano più visibili, i messaggi della barra multifunzione vengono instradati tramite i menu e i collegamenti di menu continuano a funzionare.
 
@@ -206,7 +206,7 @@ Una barra multifunzione è costituita dal pulsante **applicazione** , ovvero dal
 
    1. Sono stati modificati i **pulsanti**. Fare clic su **Chiudi** per uscire dall' **Editor elementi**.
 
-## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a>Creazione di un'istanza della barra multifunzione
+## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a> Creazione di un'istanza della barra multifunzione
 
 Nei passaggi seguenti viene illustrato come creare un'istanza della barra multifunzione quando si avvia l'applicazione. Per aggiungere una barra multifunzione a un'applicazione, dichiarare la barra multifunzione nel file mainfrm.h. Quindi, nel file mainfrm.cpp, scrivere il codice per caricare la risorsa barra multifunzione.
 
@@ -230,7 +230,7 @@ Nei passaggi seguenti viene illustrato come creare un'istanza della barra multif
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a>Personalizzazione della risorsa della barra multifunzione
+## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a> Personalizzazione della risorsa della barra multifunzione
 
 Ora che è stato creato il pulsante **applicazione** , è possibile aggiungere elementi alla barra multifunzione.
 
@@ -247,7 +247,7 @@ Ora che è stato creato il pulsante **applicazione** , è possibile aggiungere e
 
 1. Salvare le modifiche, quindi compilare ed eseguire l'applicazione. Verrà visualizzata l'applicazione Scribble con una barra multifunzione nella parte superiore della finestra al posto della barra dei menu. La barra multifunzione deve avere una categoria, **Home**e **Home** deve avere un pannello, **Edit**. I pulsanti della barra multifunzione aggiunti devono essere associati ai gestori eventi esistenti e i pulsanti **Apri**, **Chiudi**, **Salva**, **stampa**e **Cancella tutti** dovrebbero funzionare come previsto.
 
-## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a>Impostazione dell'aspetto dell'applicazione
+## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a> Impostazione dell'aspetto dell'applicazione
 
 Un *gestore di visualizzazione* è un oggetto globale che controlla tutto il disegno per un'applicazione. Dal momento che l'applicazione originale Scribble utilizza lo stile dell'interfaccia utente (UI) di Office 2000, l'aspetto dell'applicazione potrebbe risultare datato. È possibile reimpostare l'applicazione in modo che utilizzi il gestore visualizzazione di Office 2007 e che risulti simile a un'applicazione di Office 2007.
 

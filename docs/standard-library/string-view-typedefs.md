@@ -6,21 +6,21 @@ f1_keywords:
 - xstring/std::u16string_view
 - xstring/std::u32string_view
 - xstring/std::wstring_view
-ms.openlocfilehash: 6aadd4ad3ff08a0b020fd8e683e60063fe516c63
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2afaaea466cc3b1ca46d2acdf0ceb5a42c597743
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215595"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836130"
 ---
 # <a name="ltstring_viewgt-typedefs"></a>&lt;&gt;typedef string_view
 
-||||
-|-|-|-|
-|[string_view](#string_view)|[u16string_view](#u16string_view)|[u32string_view](#u32string_view)|
-|[wstring_view](#wstring_view)|
+[string_view](#string_view)\
+[u16string_view](#u16string_view)\
+[u32string_view](#u32string_view)\
+[wstring_view](#wstring_view)
 
-## <a name="string_view"></a><a name="string_view"></a>string_view
+## <a name="string_view"></a><a name="string_view"></a> string_view
 
 Tipo che descrive una specializzazione del modello di classe [basic_string_view](../standard-library/basic-string-view-class.md) con elementi di tipo **`char`** .
 
@@ -40,7 +40,7 @@ basic_string_view<char> str("Hello");
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u16string_view"></a><a name="u16string_view"></a>u16string_view
+## <a name="u16string_view"></a><a name="u16string_view"></a> u16string_view
 
 Tipo che descrive una specializzazione del modello di classe [basic_string_view](../standard-library/basic-string-view-class.md) con elementi di tipo **`char16_t`** .
 
@@ -52,7 +52,7 @@ typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u32string_view"></a><a name="u32string_view"></a>u32string_view
+## <a name="u32string_view"></a><a name="u32string_view"></a> u32string_view
 
 Tipo che descrive una specializzazione del modello di classe [basic_string_view](../standard-library/basic-string-view-class.md) con elementi di tipo **`char32_t`** .
 
@@ -64,7 +64,7 @@ typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="wstring_view"></a><a name="wstring_view"></a>wstring_view
+## <a name="wstring_view"></a><a name="wstring_view"></a> wstring_view
 
 Tipo che descrive una specializzazione del modello di classe [basic_string_view](../standard-library/basic-string-view-class.md) con elementi di tipo **`wchar_t`** .
 

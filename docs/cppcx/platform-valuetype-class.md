@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182951"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846550"
 ---
 # <a name="platformvaluetype-class"></a>Classe Platform::ValueType
 
@@ -26,11 +26,11 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>Metodi pubblici
 
-|||
-|-|-|
-|[ValueType::ToString](#tostring)|Restituisce una rappresentazione di stringa dell'oggetto. Ereditato da [platform:: Object](../cppcx/platform-object-class.md).|
+| Nome | Descrizione |
+|--|--|
+| [ValueType:: ToString](#tostring) | Restituisce una rappresentazione in formato stringa dell'oggetto. Ereditato da [Platform:: Object](../cppcx/platform-object-class.md). |
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 La classe ValueType viene usata per costruire i tipi valore. ValueType è derivato da Object, che contiene i membri di base. Tuttavia, il compilatore consente di scollegare i membri di base dai tipi valore derivati dalla classe ValueType. Il compilatore ricollega questi membri di base quando un tipo valore è di tipo boxed.
 
@@ -40,13 +40,13 @@ La classe ValueType viene usata per costruire i tipi valore. ValueType è deriva
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-## <a name="tostring"></a> Metodo ValueType:: ToString
+## <a name="valuetypetostring-method"></a><a name="tostring"></a> Metodo ValueType:: ToString
 
-Restituisce una rappresentazione di stringa dell'oggetto.
+Restituisce una rappresentazione in formato stringa dell'oggetto.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -56,7 +56,7 @@ Platform::String ToString();
 
 ### <a name="return-value"></a>Valore restituito
 
-Platform:: String che rappresenta il valore.
+Oggetto Platform:: String che rappresenta il valore.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 138011ec4ccf6c010f002d61cdb8ae8b0bac1796
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212150"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836400"
 ---
 # <a name="normal_distribution-class"></a>Classe normal_distribution
 
@@ -78,10 +78,8 @@ Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . P
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione normale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
-||||
-|-|-|-|
-|[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
+[normal_distribution](#normal_distribution)\
+[param_type](#param_type)
 
 Le funzioni di proprietà `mean()` e `stddev()` restituiscono i valori per i parametri di distribuzione archiviati *Mean* e *StdDev* rispettivamente.
 
@@ -187,7 +185,7 @@ Distribution for 10 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution:: normal_distribution
+## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a> normal_distribution:: normal_distribution
 
 Costruisce la distribuzione.
 
@@ -215,7 +213,7 @@ Il primo costruttore crea un oggetto il cui valore `mean` archiviato include il 
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution::p aram_type
+## <a name="normal_distributionparam_type"></a><a name="param_type"></a> normal_distribution::p aram_type
 
 Archivia i parametri della distribuzione.
 

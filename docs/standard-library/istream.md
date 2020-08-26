@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 37399bb50f195c683b52eea4c8fadf8679d62852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233093"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846459"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -36,7 +36,7 @@ Definisce il modello di classe basic_istream, che media le estrazioni per iostre
 
 ### <a name="manipulators"></a>Manipolatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[WS](../standard-library/istream-functions.md#ws)|Ignora gli spazi nel flusso.|
 |[scambio](../standard-library/istream-functions.md#istream_swap)|Scambia due oggetti flusso.|

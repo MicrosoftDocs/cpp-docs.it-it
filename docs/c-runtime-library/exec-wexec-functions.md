@@ -56,23 +56,33 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351660"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839725"
 ---
 # <a name="_exec-_wexec-functions"></a>Funzioni _exec, _wexec
 
 Ogni funzione in questa famiglia carica ed esegue un nuovo processo:
 
-|||
-|-|-|
-|[_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)|
-|[_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|
-|[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
-|[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
+:::row:::
+   :::column span="":::
+      [_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)\
+      [_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)\
+      [_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)
+   :::column-end:::
+   :::column span="":::
+      [_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)\
+      [_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)\
+      [_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)
+   :::column-end:::
+   :::column span="":::
+      [_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)\
+      [_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)
+   :::column-end:::
+:::row-end:::
 
 La lettera alla fine del nome della funzione identifica la modifica.
 
@@ -118,7 +128,7 @@ Le chiamate `_execl`, `_execle`, `_execlp` e `_execlpe` vengono in genere usate 
 
 Le chiamate `_execv`, `_execve`, `_execvp` e `_execvpe` sono utili quando il numero di parametri per il nuovo processo è variabile. I puntatori ai parametri vengono passati come matrice, `argv`. Il parametro `argv`[0] è generalmente un puntatore a `cmdname`. I parametri da `argv`[1] a `argv`[`n`] puntano alle stringhe di caratteri che costituiscono il nuovo elenco di parametri. Il parametro `argv`[`n`+1] deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco dei parametri.
 
-I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Si `value` noti che non è racchiuso tra virgolette doppie.) L'elemento finale `envp` della matrice deve essere **NULL.** Quando `envp` stesso è **NULL**, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.
+I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. Si noti che `value` non è racchiuso tra virgolette doppie. L'elemento finale della `envp` matrice deve essere **null**. Quando `envp` stesso è **NULL**, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.
 
 Un programma eseguito tramite una delle funzioni `_exec` viene sempre caricato in memoria come se il campo di allocazione massima nell'intestazione del file .exe fosse stato impostato sul valore predefinito 0xFFFFH.
 
@@ -238,10 +248,10 @@ int main( int ac, char* av[] )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Process and Environment Control](../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
-[Interrompere](../c-runtime-library/reference/abort.md)<br/>
+[Controllo processo e ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
+[interruzione](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[Funzioni _spawn e _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funzioni _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

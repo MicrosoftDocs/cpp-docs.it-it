@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 5168bd054d045f624a970b177113203179e1fb8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd5153a8eb0652aed7d963fb1dbdb1277e4f6718
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212202"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836452"
 ---
 # <a name="negative_binomial_distribution-class"></a>Classe negative_binomial_distribution
 
@@ -78,10 +78,8 @@ Il tipo di risultato Integer, il valore predefinito è **`int`** . Per i tipi po
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`int`** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale negativa. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
-||||
-|-|-|-|
-|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
+[negative_binomial_distribution](#negative_binomial_distribution)\
+[param_type](#param_type)
 
 I membri `k()` di proprietà e `p()` restituiscono i valori del parametro di distribuzione attualmente archiviati *k* e *p* rispettivamente.
 
@@ -221,7 +219,7 @@ Histogram for 100 samples:
 
 **Spazio dei nomi:** std
 
-## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution:: negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a> negative_binomial_distribution:: negative_binomial_distribution
 
 Costruisce la distribuzione.
 
@@ -249,7 +247,7 @@ Il primo costruttore crea un oggetto il cui valore `p` archiviato include il val
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::p aram_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a> negative_binomial_distribution::p aram_type
 
 Archivia i parametri della distribuzione.
 

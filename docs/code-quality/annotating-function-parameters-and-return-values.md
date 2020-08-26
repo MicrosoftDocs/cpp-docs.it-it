@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b1831a2a504bb12473f564cd914340bc429fab8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231260"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836674"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Annotazione di parametri di funzione e valori restituiti
 
@@ -188,7 +188,7 @@ Per le annotazioni nella tabella seguente, quando un parametro puntatore viene a
      void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
      ```
 
-     In questo esempio, il chiamante fornisce un buffer di `size` elementi per `p1` . `MyStringCopy`rende validi alcuni di questi elementi. Ancora più importante, l' `_Null_terminated_` annotazione su `PWSTR` significa che `p1` è con terminazione null in fase di post-stato. In questo modo, il numero di elementi validi è ancora ben definito, ma non è necessario un conteggio di elementi specifico.
+     In questo esempio, il chiamante fornisce un buffer di `size` elementi per `p1` . `MyStringCopy` rende validi alcuni di questi elementi. Ancora più importante, l' `_Null_terminated_` annotazione su `PWSTR` significa che `p1` è con terminazione null in fase di post-stato. In questo modo, il numero di elementi validi è ancora ben definito, ma non è necessario un conteggio di elementi specifico.
 
      La `_bytes_` variante restituisce la dimensione in byte anziché gli elementi. Usare questa variante solo se le dimensioni non possono essere espresse come elementi. Ad esempio, **`char`** le stringhe utilizzeranno la `_bytes_` variante solo se una funzione simile che usa **`wchar_t`** .
 
@@ -272,15 +272,37 @@ Per le annotazioni nella tabella seguente, quando un parametro puntatore viene a
 Quando un'annotazione del parametro puntatore include `_opt_` , indica che il parametro può essere null. In caso contrario, l'annotazione si comporta allo stesso modo della versione che non include `_opt_` . Di seguito è riportato un elenco delle `_opt_` varianti delle annotazioni dei parametri del puntatore:
 
 :::row:::
-    :::column:::
-        `_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`
-    :::column-end:::
-    :::column:::
-        `_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`
-    :::column-end:::
-    :::column:::
-        `_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`
-    :::column-end:::
+   :::column:::
+      `_In_opt_`\
+      `_Out_opt_`\
+      `_Inout_opt_`\
+      `_In_opt_z_`\
+      `_Inout_opt_z_`\
+      `_In_reads_opt_`\
+      `_In_reads_bytes_opt_`\
+      `_In_reads_opt_z_`
+   :::column-end:::
+   :::column:::
+      `_Out_writes_opt_`\
+      `_Out_writes_opt_z_`\
+      `_Inout_updates_opt_`\
+      `_Inout_updates_bytes_opt_`\
+      `_Inout_updates_opt_z_`\
+      `_Out_writes_to_opt_`\
+      `_Out_writes_bytes_to_opt_`\
+      `_Out_writes_all_opt_`\
+      `_Out_writes_bytes_all_opt_`
+   :::column-end:::
+   :::column:::
+      `_Inout_updates_to_opt_`\
+      `_Inout_updates_bytes_to_opt_`\
+      `_Inout_updates_all_opt_`\
+      `_Inout_updates_bytes_all_opt_`\
+      `_In_reads_to_ptr_opt_`\
+      `_In_reads_to_ptr_opt_z_`\
+      `_Out_writes_to_ptr_opt_`\
+      `_Out_writes_to_ptr_opt_z_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="output-pointer-parameters"></a>Parametri del puntatore di output
@@ -439,17 +461,30 @@ Un uso comune del parametro Reference è per i parametri di output. Per i parame
 Il valore restituito di una funzione è simile a un `_Out_` parametro, ma è a un livello diverso di dereferenziazione e non è necessario considerare il concetto di puntatore al risultato. Per le annotazioni seguenti, il valore restituito è l'oggetto con annotazioni, ovvero un indicatore scalare, un puntatore a uno struct o un puntatore a un buffer. Queste annotazioni hanno la stessa semantica dell' `_Out_` annotazione corrispondente.
 
 :::row:::
-    :::column:::
-        `_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`
-    :::column-end:::
-    :::column:::
-        `_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`
-    :::column-end:::
+   :::column:::
+      `_Ret_z_`\
+      `_Ret_writes_(s)`\
+      `_Ret_writes_bytes_(s)`\
+      `_Ret_writes_z_(s)`\
+      `_Ret_writes_to_(s,c)`\
+      `_Ret_writes_maybenull_(s)`\
+      `_Ret_writes_to_maybenull_(s)`\
+      `_Ret_writes_maybenull_z_(s)`
+   :::column-end:::
+   :::column:::
+      `_Ret_maybenull_`\
+      `_Ret_maybenull_z_`\
+      `_Ret_null_`\
+      `_Ret_notnull_`\
+      `_Ret_writes_bytes_to_`\
+      `_Ret_writes_bytes_maybenull_`\
+      `_Ret_writes_bytes_to_maybenull_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="format-string-parameters"></a>Parametri della stringa di formato
 
-- `_Printf_format_string_`Indica che il parametro è una stringa di formato da utilizzare in un' `printf` espressione.
+- `_Printf_format_string_` Indica che il parametro è una stringa di formato da utilizzare in un' `printf` espressione.
 
      **Esempio**
 
@@ -464,7 +499,7 @@ Il valore restituito di una funzione è simile a un `_Out_` parametro, ma è a u
     }
     ```
 
-- `_Scanf_format_string_`Indica che il parametro è una stringa di formato da utilizzare in un' `scanf` espressione.
+- `_Scanf_format_string_` Indica che il parametro è una stringa di formato da utilizzare in un' `scanf` espressione.
 
      **Esempio**
 
@@ -479,7 +514,7 @@ Il valore restituito di una funzione è simile a un `_Out_` parametro, ma è a u
     }
     ```
 
-- `_Scanf_s_format_string_`Indica che il parametro è una stringa di formato da utilizzare in un' `scanf_s` espressione.
+- `_Scanf_s_format_string_` Indica che il parametro è una stringa di formato da utilizzare in un' `scanf_s` espressione.
 
      **Esempio**
 

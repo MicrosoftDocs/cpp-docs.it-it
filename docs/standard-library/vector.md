@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 4e9f3e4a35cd772897e326fafedf359062e6128b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224526"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840011"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -93,7 +93,7 @@ Secondo vettore (a destra) in un'operazione di confronto.
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore! =](../standard-library/vector-operators.md#op_neq)|Verifica se l'oggetto vettore a sinistra dell'operatore non è uguale all'oggetto vettore a destra.|
 |[operatore<](../standard-library/vector-operators.md#op_lt)|Verifica se l'oggetto vettore a sinistra dell'operatore è minore dell'oggetto vettore a destra.|
@@ -104,13 +104,13 @@ Secondo vettore (a destra) in un'operazione di confronto.
 
 ### <a name="classes"></a>Classi
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[Classe Vector](../standard-library/vector-class.md)|Modello di classe di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e consentono l'accesso casuale veloce a qualsiasi elemento.|
 
 ### <a name="specializations"></a>Specializzazioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |hash|Restituisce un hash del vettore.|
 |[\<bool>classe Vector](../standard-library/vector-bool-class.md)|Specializzazione completa del vettore del modello di classe per gli elementi di tipo **`bool`** con un allocatore per il tipo sottostante utilizzato dalla specializzazione.|

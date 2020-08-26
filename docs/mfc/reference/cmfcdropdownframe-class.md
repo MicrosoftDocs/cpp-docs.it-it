@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560894"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840739"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 
@@ -37,17 +37,15 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Costruttore predefinito.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|||
-|-|-|
 |Nome|Descrizione|
+|-|-|
 |[CMFCDropDownFrame:: create](#create)|Crea un oggetto `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |[CMFCDropDownFrame:: GetParentMenuBar](#getparentmenubar)|Recupera la barra dei menu padre del frame a discesa.|
@@ -188,7 +186,7 @@ in TRUE per eliminare automaticamente la finestra della barra degli strumenti a 
 
 Se *bAutoDestroy* è true, il `CMFCDropDownFrame` distruttore Elimina la finestra della barra degli strumenti a discesa associata. Il valore predefinito è TRUE.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

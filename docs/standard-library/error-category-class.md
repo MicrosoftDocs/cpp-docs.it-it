@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224877"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840167"
 ---
 # <a name="error_category-class"></a>Classe error_category
 
@@ -45,13 +45,13 @@ Due oggetti predefiniti implementano `error_category`: [generic_category](../sta
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[value_type](#value_type)|Tipo che rappresenta il valore del codice di errore archiviato.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[default_error_condition](#default_error_condition)|Archivia il valore di codice di errore per un oggetto condizione di errore.|
 |[equivalente](#equivalent)|Restituisce un valore che specifica se gli oggetti di errore sono equivalenti.|
@@ -62,14 +62,14 @@ Due oggetti predefiniti implementano `error_category`: [generic_category](../sta
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
-|[operatore =](#op_as)||
+|[operatore =](#op_as)|Operatore di assegnazione.|
 |[operatore = =](#op_eq_eq)|Verifica l'uguaglianza tra oggetti `error_category`.|
 |[operatore! =](#op_neq)|Verifica la disuguaglianza tra oggetti `error_category`.|
 |[operatore<](#op_lt)|Verifica se l'oggetto [error_category](../standard-library/error-category-class.md) è più piccolo dell'oggetto `error_category` passato per il confronto.|
 
-## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a> default_error_condition
 
 Archivia il valore di codice di errore per un oggetto condizione di errore.
 
@@ -88,7 +88,7 @@ Restituisce `error_condition(_Errval, *this)`.
 
 ### <a name="remarks"></a>Osservazioni
 
-### <a name="equivalent"></a><a name="equivalent"></a>equivalente
+### <a name="equivalent"></a><a name="equivalent"></a> equivalente
 
 Restituisce un valore che specifica se gli oggetti di errore sono equivalenti.
 
@@ -121,13 +121,13 @@ La prima funzione membro restituisce `*this == _Cond.category() && _Cond.value()
 
 La seconda funzione membro restituisce `*this == _Code.category() && _Code.value() == _Errval`.
 
-### <a name="generic_category"></a><a name="generic"></a>generic_category
+### <a name="generic_category"></a><a name="generic"></a> generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a><a name="message"></a>Messaggio
+### <a name="message"></a><a name="message"></a> Messaggio
 
 Restituisce il nome del codice di errore specificato.
 
@@ -158,13 +158,13 @@ virtual const char *name() const = 0;
 
 Restituisce il nome della categoria come una stringa di byte che termina con Null.
 
-### <a name="operator"></a><a name="op_as"></a>operatore =
+### <a name="operator"></a><a name="op_as"></a> operatore =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica l'uguaglianza tra oggetti `error_category`.
 
@@ -185,7 +185,7 @@ Oggetto di cui verificare l'uguaglianza.
 
 Questo operatore membro restituisce `this == &right`.
 
-### <a name="operator"></a><a name="op_neq"></a>operatore! =
+### <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica la disuguaglianza tra oggetti `error_category`.
 
@@ -206,7 +206,7 @@ L'oggetto di cui verificare la disuguaglianza.
 
 L'operatore membro restituisce `(!*this == right)`.
 
-### <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto [error_category](../standard-library/error-category-class.md) è più piccolo dell'oggetto `error_category` passato per il confronto.
 
@@ -227,13 +227,13 @@ L'oggetto `error_category` da confrontare.
 
 L'operatore membro restituisce `this < &right`.
 
-### <a name="system_category"></a><a name="system"></a>system_category
+### <a name="system_category"></a><a name="system"></a> system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 Tipo che rappresenta il valore del codice di errore archiviato.
 

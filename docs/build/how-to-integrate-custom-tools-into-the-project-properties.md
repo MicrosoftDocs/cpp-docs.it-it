@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 821fb1637306c70d850f12fc1b954860557f47f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373749"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840440"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procedura: integrare strumenti personalizzati nelle proprietà del progetto
 
@@ -17,7 +17,7 @@ ms.locfileid: "86373749"
 
 La sezione **Proprietà di configurazione** della finestra **Pagine delle proprietà** visualizza gruppi di impostazioni noti come *regole*. Ogni regola contiene le impostazioni per uno strumento o un gruppo di funzionalità. La regola **Linker**, ad esempio, contiene le impostazioni per lo strumento linker. Le impostazioni in una regola possono essere suddivise in *categorie*.
 
-Questo documento illustra come creare in una cartella set un file che contenga le proprietà per lo strumento personalizzato, in modo che queste vengano caricate all'avvio di Visual Studio. Per informazioni su come modificare il file, vedere [Platform Extensibilty Part 2](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2) (Estendibilità della piattaforma, parte 2) nel blog del team del progetto Visual Studio.
+Questo documento illustra come creare in una cartella set un file che contenga le proprietà per lo strumento personalizzato, in modo che queste vengano caricate all'avvio di Visual Studio. Per informazioni su come modificare il file, vedere [Platform Extensibilty Part 2](/archive/blogs/vsproject/platform-extensibility-part-2) (Estendibilità della piattaforma, parte 2) nel blog del team del progetto Visual Studio.
 
 ### <a name="to-add-or-change-project-properties"></a>Per aggiungere o modificare proprietà del progetto
 

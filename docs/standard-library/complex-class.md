@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230091"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836544"
 ---
 # <a name="complex-class"></a>Classe complex
 
@@ -46,26 +46,26 @@ Sono presenti specializzazioni esplicite di modelli di classe complessi per i tr
 
 ### <a name="constructors"></a>Costruttori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[complesso](#complex)|Costruisce un numero complesso con parti reali e immaginarie specificate oppure come copia di un altro numero complesso.|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[value_type](#value_type)|Tipo che rappresenta il tipo di dati usato per rappresentare le parti reale e immaginaria di un numero complesso.|
 
 ### <a name="functions"></a>Funzioni
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[imag](#imag)|Estrae il componente immaginario di un numero complesso.|
 |[real](#real)|Estrae il componente reale di un numero complesso.|
 
 ### <a name="operators"></a>Operatori
 
-|||
+|Nome|Descrizione|
 |-|-|
 |[operatore * =](#op_star_eq)|Moltiplica un numero complesso di destinazione per un fattore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.|
 |[operatore + =](#op_add_eq)|Aggiunge un numero a un numero complesso di destinazione, in cui il numero aggiunto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.|
@@ -73,7 +73,7 @@ Sono presenti specializzazioni esplicite di modelli di classe complessi per i tr
 |[operatore/=](#op_div_eq)|Divide un numero complesso di destinazione per un divisore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.|
 |[operatore =](#op_eq)|Assegna un numero a un numero complesso di destinazione, in cui il numero assegnato può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene assegnato.|
 
-## <a name="complex"></a><a name="complex"></a>complesso
+## <a name="complex"></a><a name="complex"></a> complesso
 
 Costruisce un numero complesso con parti reali e immaginarie specificate oppure come copia di un altro numero complesso.
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a><a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a> imag
 
 Estrae il componente immaginario di un numero complesso.
 
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="operator"></a><a name="op_star_eq"></a>operatore * =
+## <a name="operator"></a><a name="op_star_eq"></a> operatore * =
 
 Moltiplica un numero complesso di destinazione per un fattore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="operator"></a><a name="op_add_eq"></a>operatore + =
+## <a name="operator"></a><a name="op_add_eq"></a> operatore + =
 
 Aggiunge un numero a un numero complesso di destinazione, in cui il numero aggiunto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.
 
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-_eq"></a>operatore-=
+## <a name="operator-"></a><a name="operator-_eq"></a> operatore-=
 
 Sottrae un numero da un numero complesso di destinazione, in cui il numero sottratto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.
 
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div_eq"></a>operatore/=
+## <a name="operator"></a><a name="op_div_eq"></a> operatore/=
 
 Divide un numero complesso di destinazione per un divisore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.
 
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Assegna un numero a un numero complesso di destinazione, in cui il numero assegnato può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene assegnato.
 
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a><a name="real"></a>reale
+## <a name="real"></a><a name="real"></a> reale
 
 Ottiene o imposta il componente reale di un numero complesso.
 
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Tipo che rappresenta il tipo di dati usato per rappresentare le parti reale e immaginaria di un numero complesso.
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-`value_type`è un sinonimo del parametro di modello complesso della classe `Type` .
+`value_type` è un sinonimo del parametro di modello complesso della classe `Type` .
 
 ### <a name="example"></a>Esempio
 

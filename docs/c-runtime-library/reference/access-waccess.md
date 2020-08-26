@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920262"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846589"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -73,11 +73,11 @@ Attributo di lettura/scrittura.
 
 Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione restituisce-1 se il file specificato non esiste o non ha la modalità specificata. in questo caso, `errno` viene impostato come illustrato nella tabella seguente.
 
-|||
-|-|-|
-`EACCES`|Accesso non consentito: l'impostazione di autorizzazione del file non consente l'accesso specificato.
-`ENOENT`|Nome file o percorso non trovato.
-`EINVAL`|Parametro non valido.
+| Valore | Descrizione |
+|--|--|
+| `EACCES` | Accesso non consentito: l'impostazione di autorizzazione del file non consente l'accesso specificato. |
+| `ENOENT` | Nome file o percorso non trovato. |
+| `EINVAL` | Parametro non valido. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -149,7 +149,7 @@ File crt_ACCESS.C does not have write permission.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

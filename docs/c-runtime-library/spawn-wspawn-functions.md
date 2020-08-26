@@ -48,23 +48,31 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322964"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840414"
 ---
 # <a name="_spawn-_wspawn-functions"></a>Funzioni _spawn, _wspawn
 
 Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:
 
-|||
-|-|-|
-|[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|
-|[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|
-|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
-|[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|
+:::row:::
+   :::column span="":::
+      [_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)\
+      [_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)\
+      [_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)\
+      [_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)\
+   :::column-end:::
+   :::column span="":::
+      [_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)\
+      [_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)\
+      [_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)\
+      [_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)\
+   :::column-end:::
+:::row-end:::
 
 La lettera alla fine del nome della funzione determina la variazione.
 
@@ -94,7 +102,7 @@ Le funzioni `_spawn` creano ed eseguono un nuovo processo. Gestiscono automatica
 
 Deve essere disponibile memoria sufficiente per il caricamento e l'esecuzione del nuovo processo. L'argomento `mode` determina l'azione eseguita dal processo chiamante prima e durante `_spawn`. I valori seguenti per `mode` sono definiti in Process.h:
 
-|||
+|Valore|Descrizione|
 |-|-|
 | `_P_OVERLAY`  | Sovrappone un processo chiamante con un nuovo processo, distruggendo il processo chiamante (lo stesso effetto delle chiamate `_exec`).  |
 | `_P_WAIT`  | Sospende un thread chiamante finché l'esecuzione del nuovo processo non è stata completata (`_spawn` sincrono).  |
@@ -130,7 +138,7 @@ Le chiamate `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` sono utili quando es
 
 ## <a name="environment-of-the-spawned-process"></a>Ambiente del processo generato
 
-I file che vengono aperti quando viene effettuata una chiamata `_spawn` rimangono aperti nel nuovo processo. Nelle chiamate `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, il nuovo processo eredita l'ambiente del processo chiamante. È possibile utilizzare le chiamate `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` per modificare l'ambiente per il nuovo processo passando un elenco delle impostazioni di ambiente tramite l'argomento `envp`. L'argomento `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Si `value` noti che non è racchiuso tra virgolette doppie.) L'elemento finale `envp` della matrice deve essere **NULL.** Quando la stessa `envp` è **NULL**, il processo generato eredita le impostazioni di ambiente del processo padre.
+I file che vengono aperti quando viene effettuata una chiamata `_spawn` rimangono aperti nel nuovo processo. Nelle chiamate `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, il nuovo processo eredita l'ambiente del processo chiamante. È possibile utilizzare le chiamate `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` per modificare l'ambiente per il nuovo processo passando un elenco delle impostazioni di ambiente tramite l'argomento `envp`. L'argomento `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. Si noti che `value` non è racchiuso tra virgolette doppie. L'elemento finale della `envp` matrice deve essere **null**. Quando la stessa `envp` è **NULL**, il processo generato eredita le impostazioni di ambiente del processo padre.
 
 Le funzioni `_spawn` possono passare tutte le informazioni sui file aperti, inclusa la modalità di traduzione, al nuovo processo. Queste informazioni vengono passate in modalità reale tramite la voce `C_FILE_INFO` nell'ambiente. Il codice di avvio in genere elabora questa voce, quindi la elimina dall'ambiente. Tuttavia, se una funzione `_spawn` genera un processo non C, questa voce rimane nell'ambiente. La stampa dell'ambiente indica i caratteri grafici nella stringa di definizione per la voce poiché le informazioni sull'ambiente vengono passate in forma binaria in modalità reale. Non dovrebbe avere altri effetti sulle operazioni normali. In modalità protetta, le informazioni sull'ambiente vengono passate in forma di testo e pertanto non contengono caratteri grafici.
 
@@ -231,10 +239,10 @@ from SPAWN!
 
 ## <a name="see-also"></a>Vedere anche
 
-[Process and Environment Control](../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
-[Interrompere](../c-runtime-library/reference/abort.md)<br/>
+[Controllo processo e ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
+[interruzione](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[Funzioni _exec _wexec](../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, funzioni _wexec](../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_flushall](../c-runtime-library/reference/flushall.md)<br/>
 [_getmbcp](../c-runtime-library/reference/getmbcp.md)<br/>

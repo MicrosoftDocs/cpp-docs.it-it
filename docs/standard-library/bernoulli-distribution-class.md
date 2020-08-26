@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb63451c8789f7d390e2387ed8fadae23d1c7a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230259"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846524"
 ---
 # <a name="bernoulli_distribution-class"></a>Classe bernoulli_distribution
 
@@ -73,10 +73,8 @@ Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [
 
 La classe descrive una distribuzione che produce valori di tipo **`bool`** , distribuiti in base alla funzione di probabilità discreta della distribuzione di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
-||||
-|-|-|-|
-|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|
-|`bernoulli_distribution::operator()`||[param_type](#param_type)|
+[bernoulli_distribution](#bernoulli_distribution)\
+[param_type](#param_type)
 
 Il membro di proprietà `p()` restituisce il valore per il parametro di distribuzione attualmente archiviato `p`.
 
@@ -158,7 +156,7 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 **Spazio dei nomi:** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution:: bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a> bernoulli_distribution:: bernoulli_distribution
 
 Costruisce la distribuzione.
 
@@ -183,7 +181,7 @@ Il primo costruttore crea un oggetto il cui valore `p` archiviato include il val
 
 Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::p aram_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a> bernoulli_distribution::p aram_type
 
 Contiene i parametri della distribuzione.
 

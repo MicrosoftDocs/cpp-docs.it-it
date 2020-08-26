@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224487"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836374"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,11 +28,11 @@ Indica che la classe supporta l'aggregazione.
 *value*<br/>
 Opzionale Parametro per indicare quando l'oggetto COM può essere aggregato:
 
-- `never`Impossibile aggregare l'oggetto COM.
+- `never` Impossibile aggregare l'oggetto COM.
 
-- `allowed`L'oggetto COM può essere creato direttamente oppure può essere aggregato. Questa è la modalità predefinita.
+- `allowed` L'oggetto COM può essere creato direttamente oppure può essere aggregato. Questa è l'impostazione predefinita.
 
-- `always`L'oggetto COM non può essere creato direttamente e può essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'interfaccia dell'oggetto di aggregazione `IUnknown` (controllo `IUnknown` ).
+- `always` L'oggetto COM non può essere creato direttamente e può essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'interfaccia dell'oggetto di aggregazione `IUnknown` (controllo `IUnknown` ).
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -68,9 +68,7 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Requisiti
 
-### <a name="attribute-context"></a>Contesto attributo
-
-|||
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|No|

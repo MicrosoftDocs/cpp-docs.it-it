@@ -2,12 +2,12 @@
 title: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231637"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839673"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -98,9 +98,8 @@ I progetti che usano questa opzione evidenziano un problema durante l'aggiorname
 
 La tabella seguente elenca le librerie delle quali è stato cambiato il contenuto a partire da Visual Studio 2015. Per eseguire l'aggiornamento è necessario aggiungere i nomi libreria nuovi nella seconda colonna alle librerie nella prima colonna. Alcune di queste librerie sono librerie di importazione, ma ciò non dovrebbe essere rilevante.
 
-|||
-|-|-|
 |Se si usava:|È necessario usare queste librerie:|
+|-|-|
 |LIBCMT.lib|libcmt.lib, libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib, libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib, ucrt.lib, vcruntime.lib|

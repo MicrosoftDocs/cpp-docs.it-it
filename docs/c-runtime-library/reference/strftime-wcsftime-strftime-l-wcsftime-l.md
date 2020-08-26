@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215140"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846576"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -127,9 +127,8 @@ L'argomento *Format* è costituito da uno o più codici; come in **printf**, i c
 
 Le funzioni **strftime** supportano questi codici di formattazione:
 
-|||
-|-|-|
 |Codice|Stringa di sostituzione|
+|-|-|
 |**% a**|Nome del giorno della settimana abbreviato nelle impostazioni locali|
 |**% A**|Nome del giorno della settimana completo nelle impostazioni locali|
 |**% b**|Nome abbreviato del mese nelle impostazioni locali|
