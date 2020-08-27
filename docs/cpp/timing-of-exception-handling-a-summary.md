@@ -1,6 +1,7 @@
 ---
-title: 'Tempi di gestione delle eccezioni: un riepilogo'
-ms.date: 05/07/2019
+title: 'Intervallo di gestione delle eccezioni: Riepilogo'
+description: La tempistica e l'ordine di esecuzione della gestione delle eccezioni in Microsoft C++.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 17d1c250a98afc2b86c198735602df7d80118bd4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ce501d8d74b6f0f7ca92e193c39f8ce58a66053
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316602"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898363"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Tempi di gestione delle eccezioni: un riepilogo
+# <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: Riepilogo
 
-Viene eseguito un gestore di terminazione indipendentemente dal modo in cui il blocco di istruzioni **__try** viene terminato. Le cause includono l'uscita `longjmp` dal blocco **__try,** un'istruzione che trasferisce il controllo all'esterno del blocco e la rimozione dello stack a causa della gestione delle eccezioni.
+Un gestore terminazioni viene eseguito indipendentemente dal modo in cui il **`__try`** blocco di istruzioni viene terminato. Le cause includono il salto all'esterno del **`__try`** blocco, un' `longjmp` istruzione che trasferisce il controllo dal blocco e la rimozione dello stack a causa della gestione delle eccezioni.
 
 > [!NOTE]
-> Il compilatore Microsoft Cè supporta `setjmp` due `longjmp` forme di istruzione e . La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per utilizzare questa versione, \<includere il file setjmp.h>. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per utilizzare questa versione, \<includere il file setjmpex.h>. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
+> Il compilatore Microsoft C++ supporta due forme delle `setjmp` istruzioni e `longjmp` . La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<setjmp.h> . L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<setjmpex.h> . L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
 
 Il sistema operativo esegue tutti i gestori terminazioni nell'ordine corretto (incluso il corpo di un gestore eccezioni), prima che sia possibile eseguire qualsiasi altro codice.
 
@@ -31,15 +32,15 @@ Quando la causa dell'interruzione è un'eccezione, il sistema deve innanzitutto 
 
 1. Viene generata un'eccezione.
 
-1. Il sistema esamina la gerarchia dei gestori eccezioni attivi ed esegue il filtro del gestore con precedenza più elevata; questo è il gestore eccezioni installato più recentemente e quello con un livello di annidamento più profondo, in termini di blocchi e chiamate di funzione.
+1. Il sistema esamina la gerarchia dei gestori di eccezioni attivi ed esegue il filtro del gestore con la precedenza più alta. Si tratta del gestore di eccezioni installato più di recente e più profondamente annidato, in base ai blocchi e alle chiamate di funzione.
 
-1. Se questo filtro supera il controllo (restituisce 0), il processo continua fino a quando non viene trovato un filtro che non invece non lo supera.
+1. Se il filtro passa il controllo (restituisce 0), il processo continua fino a quando non viene trovato un filtro che non supera il controllo.
 
-1. Se questo filtro restituisce -1, l'esecuzione continua nel punto in cui è stata generata l'eccezione e non viene eseguita alcuna terminazione.
+1. Se questo filtro restituisce-1, l'esecuzione continua dove è stata generata l'eccezione e non viene completata alcuna terminazione.
 
 1. Se il filtro restituisce 1, si verificano i seguenti eventi:
 
-   - Il sistema rimuove lo stack, deselezionando tutti gli stack frame tra il codice attualmente in esecuzione (dove è stata generata l'eccezione) e lo stack frame contenente il gestore eccezioni che ottiene il controllo.
+   - Il sistema rimuove lo stack: Cancella tutti gli stack frame tra la posizione in cui è stata generata l'eccezione e la stack frame che contiene il gestore di eccezioni.
 
    - Man mano che lo stack viene rimosso, viene eseguito ogni gestore terminazioni presente nello stack.
 

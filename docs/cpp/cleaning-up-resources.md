@@ -1,6 +1,7 @@
 ---
-title: Pulizia di risorse
-ms.date: 11/04/2016
+title: Pulizia delle risorse
+description: Come rilasciare le risorse durante un gestore di terminazione per la gestione strutturata delle eccezioni.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - termination handlers [C++], cleaning up resources
 - exception handling [C++], cleaning up resources
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dae92a515db25b9985a890d7d08cc213f88ecfea
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229051"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898431"
 ---
-# <a name="cleaning-up-resources"></a>Pulizia di risorse
+# <a name="cleaning-up-resources"></a>Pulizia delle risorse
 
-Durante l'esecuzione del gestore terminazioni, potrebbe essere possibile non sapere quali risorse sono effettivamente allocate prima che il gestore terminazioni venga chiamato. È possibile che il blocco di istruzioni **__try** sia stato interrotto prima dell'allocazione di tutte le risorse, in modo che non tutte le risorse siano state aperte.
+Durante l'esecuzione del gestore di terminazione, è possibile che non si conoscano le risorse che sono state acquisite prima della chiamata del gestore di terminazione. È possibile che il **`__try`** blocco di istruzioni sia stato interrotto prima dell'acquisizione di tutte le risorse, in modo che non tutte le risorse siano state aperte.
 
-Di conseguenza, per essere certi, è necessario verificare quali risorse sono effettivamente aperte prima di procedere con la pulizia gestione-terminazione. Una procedura consigliata consiste in:
+Per essere sicuri, è consigliabile verificare quali risorse sono aperte prima di procedere con la pulizia della gestione della terminazione. Una procedura consigliata consiste in:
 
 1. Inizializzare gli handle su NULL.
 
-1. Nel blocco di istruzioni **__try** allocare le risorse. Gli handle vengono impostati su valori positivi mentre la risorsa viene allocata.
+1. Nel **`__try`** blocco di istruzioni acquisire le risorse. Gli handle vengono impostati su valori positivi quando viene acquisita la risorsa.
 
 1. Nel **`__finally`** blocco di istruzioni rilasciare ogni risorsa la cui variabile handle o flag corrispondente è diversa da zero o not null.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente, ad esempio, usa un gestore di terminazione per chiudere tre file e un blocco di memoria allocati nel blocco di istruzioni **__try** . Prima di pulire una risorsa, il codice controlla se la risorsa è stata allocata.
+Il codice seguente, ad esempio, usa un gestore di terminazione per chiudere tre file e rilasciare un blocco di memoria. Queste risorse sono state acquisite nel **`__try`** blocco di istruzioni. Prima di pulire una risorsa, il codice verifica prima di tutto se la risorsa è stata acquisita.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp

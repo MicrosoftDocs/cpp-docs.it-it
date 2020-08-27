@@ -1,20 +1,21 @@
 ---
 title: Limitazioni ai gestori di eccezioni
-ms.date: 11/04/2016
+description: Vengono descritte le restrizioni relative al passaggio a blocchi di gestione delle eccezioni strutturate.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - restrictions, exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 31d63524-0e8c-419f-b87c-061f4c0ea470
-ms.openlocfilehash: 1f80cb1574cbfef0783c7e55dcd198dfb822f566
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c4182f065789533bf7599621d8d2829b2d52d6ed
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225904"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898453"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Limitazioni ai gestori di eccezioni
 
-La limitazione principale dell'utilizzo dei gestori di eccezioni nel codice è che non è possibile utilizzare un' **`goto`** istruzione per passare a un blocco di istruzioni **__try** . È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. È possibile uscire da un blocco di istruzioni **__try** e annidare i gestori delle eccezioni come si sceglie.
+La limitazione principale dell'utilizzo dei gestori di eccezioni nel codice è che non è possibile utilizzare un' **`goto`** istruzione per passare a un **`__try`** blocco di istruzioni. È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. È possibile uscire da un **`__try`** blocco di istruzioni ed è possibile annidare i gestori delle eccezioni come si sceglie.
 
 ## <a name="see-also"></a>Vedere anche
 

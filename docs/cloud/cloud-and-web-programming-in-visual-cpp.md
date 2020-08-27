@@ -3,12 +3,12 @@ title: Programmazione Web e cloud in Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274640"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898668"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programmazione Web e cloud in Visual C++
 
@@ -30,7 +30,7 @@ In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
 - [OneDrive e SharePoint in Microsoft Graph](https://dev.onedrive.com/README.htm)
 
-  L'API OneDrive fornisce un set di servizi HTTP per connettere l'applicazione a file e cartelle in Office 365 e SharePoint Server 2016.
+  L'API OneDrive fornisce un set di servizi HTTP per connettere l'applicazione a file e cartelle in Microsoft 365 e SharePoint Server 2016.
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>Windows e API di rete multipiattaforma
 
@@ -51,7 +51,7 @@ In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
 - [Interfaccia IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Runtime o app desktop di Windows per connettersi a Internet su HTTP ed eseguire GET, PUT e altri comandi HTTP. Per altre informazioni, vedere [Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Runtime o app desktop di Windows per connettersi a Internet su HTTP ed eseguire GET, PUT e altri comandi HTTP. Per ulteriori informazioni, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [Internet di Windows (WinInet)](/windows/win32/WinInet/portal)
 
