@@ -1,6 +1,7 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
-ms.date: 11/04/2016
+description: Riferimento API per snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_, che scrivono i dati formattati in una stringa.
+ms.date: 08/27/2020
 api_name:
 - _snwprintf
 - _snprintf
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4d8865d5297afe3d48f2bb48cc85a0d10535dfd
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948000"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062198"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -150,13 +151,13 @@ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni 
 
 ## <a name="return-value"></a>Valore restituito
 
-Lasciare che **Len** sia la lunghezza della stringa di dati formattata, escluso il valore null di terminazione. Sia **Len** che *count* sono in byte per **snprintf** e **_snprintf**, caratteri wide per **_snwprintf**.
+Lasciare che **Len** sia la lunghezza della stringa di dati formattata, escluso il valore null di terminazione. Sia **Len** che **count** sono il numero di caratteri per **snprintf** e **_snprintf**e il numero di caratteri wide per **_snwprintf**.
 
-Per tutte le funzioni, se il*conteggio* **Len** < , i caratteri **Len** vengono archiviati nel *buffer*, viene aggiunto un carattere di terminazione null e viene restituito **Len** .
+Per tutte le funzioni, **se**  <  il*conteggio*Len, i caratteri **Len** vengono archiviati nel *buffer*, viene aggiunto un carattere di terminazione null e viene restituito **Len** .
 
-La funzione **snprintf** tronca l'output quando **Len** è maggiore o uguale al *conteggio*, inserendo un carattere di terminazione null in `buffer[count-1]`. Il valore restituito è **Len**, il numero di caratteri che sarebbe stato restituito se il *conteggio* era sufficientemente grande. La funzione **snprintf** restituisce un valore negativo se si verifica un errore di codifica.
+La funzione **snprintf** tronca l'output quando **Len** è maggiore o uguale al *conteggio*, inserendo un carattere di terminazione null in `buffer[count-1]` . Il valore restituito è **Len**, il numero di caratteri che sarebbe stato restituito se il *conteggio* era sufficientemente grande. La funzione **snprintf** restituisce un valore negativo se si verifica un errore di codifica.
 
-Per tutte le funzioni diverse **da snprintf**, **se len** = *count*, **Len** characters vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito **Len** . Se il*conteggio* **Len** > , i caratteri di *conteggio* vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito un valore negativo.
+Per tutte le funzioni diverse **da snprintf**, se **Len**  =  *count*, **Len** characters vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito **Len** . Se **len**  >  il*conteggio*Len, i caratteri di *conteggio* vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito un valore negativo.
 
 Se *buffer* è un puntatore null e *count* è zero, **Len** viene restituito come numero di caratteri necessari per formattare l'output, escluso il carattere null di terminazione. Per eseguire correttamente una chiamata con lo stesso *argomento* e i parametri delle *impostazioni locali* , allocare un buffer contenente almeno **Len** + 1 caratteri.
 
@@ -164,20 +165,20 @@ Se il *buffer* è un puntatore null e *count* è diverso da zero oppure se *Form
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **snprintf** e la famiglia **_snprintf** del formato di funzioni e il *conteggio* di un numero inferiore di caratteri nel *buffer*. La funzione **snprintf** archivia sempre un carattere di terminazione null, troncando l'output, se necessario. La famiglia di funzioni **_snprintf** aggiunge un carattere di terminazione null solo se la lunghezza della stringa formattata è rigorosamente minore dei caratteri di *conteggio* . Ogni *argomento* , se presente, viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso formato e la stessa funzione dell'argomento *Format* per [printf](printf-printf-l-wprintf-wprintf-l.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+La funzione **snprintf** e la famiglia **_snprintf** di funzioni formattano e archiviano il *numero* di caratteri nel *buffer*. La funzione **snprintf** archivia sempre un carattere di terminazione null, troncando l'output, se necessario. Il **_snprintf** famiglia di funzioni aggiunge un carattere di terminazione null solo se la lunghezza della stringa formattata è rigorosamente minore dei caratteri di *conteggio* . Ogni *argomento* , se presente, viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso formato e la stessa funzione dell'argomento *Format* per [printf](printf-printf-l-wprintf-wprintf-l.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente. Poiché le funzioni **_snprintf** non garantiscono la terminazione null, in particolare quando il valore restituito è *count*, assicurarsi che siano seguite dal codice che aggiunge il carattere di terminazione null. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 A partire da UCRT in Visual Studio 2015 e Windows 10, **snprintf** non è più identico a **_snprintf**. Il comportamento della funzione **snprintf** è ora conforme allo standard C99.
 
-**_snwprintf** è una versione a caratteri wide di **_snprintf**; gli argomenti del puntatore a **_snwprintf** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **_snwprintf** potrebbe differire da quello di **_snprintf**. **_snwprintf**, proprio come **swprintf**, scrive l'output in una stringa anziché in una destinazione di tipo **file**.
+**_snwprintf** è una versione a caratteri wide di **_snprintf**; gli argomenti del puntatore per **_snwprintf** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **_snwprintf** potrebbe differire da quello **_snprintf**. **_snwprintf**, proprio come **swprintf**, scrive l'output in una stringa anziché in una destinazione di tipo **file**.
 
-Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
-In C++ queste funzioni presentano overload dei modelli che richiamano le relative controparti più sicure e recenti. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ queste funzioni presentano overload dei modelli che richiamano le relative controparti più sicure e recenti. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -193,7 +194,7 @@ In C++ queste funzioni presentano overload dei modelli che richiamano le relativ
 |**snprintf**, **_snprintf**,  **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**, **_snwprintf_l**|\<stdio.h> o \<wchar.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -311,7 +312,7 @@ character count = 69
 ## <a name="see-also"></a>Vedere anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per strtod, _strtod_l, wcstod, _wcstod_l, che convertono le stringhe in un valore a precisione doppia.
+ms.date: 08/27/2020
 api_name:
 - wcstod
 - _wcstod_l
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a9c7fd36b28b0a709c2e21a5e23d8a71d5f8a15
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233977"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062172"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -125,9 +126,24 @@ Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'anali
 
 **strtod** prevede che *strSource* faccia riferimento a una stringa di uno dei seguenti formati:
 
-[*spazi vuoti*] [*segno*] {*cifre* [*radix* *cifre*radice] &#124; *radix* *cifre*radice} [{**e** &#124; **e**} [*Sign*] *digits*] [*spazio vuoto*] [*Sign*] {**0x** &#124; **0x**} {*hexdigits* [*radice* *hexdigits*] &#124; *radice* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*spazio vuoto*] [*Sign*] {**inf** &#124; **Infinity**} [*spazio*] [*Sign*] **NaN** [*Sequence*]
+[*spazi vuoti*] [*segno*] {*cifre* [*radix* *cifre*radice] &#124; *radix* *cifre*radice} [{**e** &#124; **e**} [*Sign*] *digits*]*[spazio vuoto*] [*Sign*] {**0x** &#124; **0x**} {*hexdigits* [*radice* *hexdigits*] &#124; *radice* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *digits*] [*spazio*] [*Sign*] {**inf** &#124; **Infinity**} [*spazio*] [*Sign*] **NaN** [*Sequence*]
 
-Lo spazio *vuoto* iniziali facoltativo può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* corrispondono a una o più cifre decimali; *hexdigits* sono una o più cifre esadecimali; la *radice* è il carattere punto radice, un punto (.) nelle impostazioni locali "C" predefinite oppure il valore specifico delle impostazioni locali se le impostazioni locali correnti sono diverse o se *le impostazioni locali sono specificate* . una *sequenza* è una sequenza di caratteri alfanumerici o di sottolineatura. Nei formati con numero decimale e esadecimale, se non sono presenti cifre prima del carattere punto radice, è necessario che almeno uno venga visualizzato dopo il carattere punto radice. Nel formato decimale, le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo. Nel formato esadecimale, le cifre esadecimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**p** o **p**) e da un Integer esadecimale con segno facoltativo che rappresenta l'esponente come potenza di 2. In entrambi i casi, se non è presente una parte dell'esponente o un carattere punto di base, viene utilizzato un carattere punto radice per seguire l'ultima cifra nella stringa. Il caso viene ignorato nei form **inf** e **NaN** . Il primo carattere che non rientra in uno di questi moduli interrompe l'analisi.
+Lo spazio *vuoto* iniziali facoltativo può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. \
+il *segno* è più (+) o meno (-). \
+le *cifre* corrispondono a una o più cifre decimali. \
+*hexdigits* sono una o più cifre esadecimali. \
+la *radice* è il carattere punto radice, un punto (.) nelle impostazioni locali "C" predefinite oppure il valore specifico delle impostazioni locali se le impostazioni locali correnti sono diverse o se *le impostazioni locali sono specificate* . \
+ Una *sequenza* è una sequenza di caratteri alfanumerici o di sottolineatura.
+
+Nei formati con numero decimale e esadecimale, se non sono presenti cifre prima del carattere punto radice, è necessario che almeno uno venga visualizzato dopo il carattere punto radice. 
+
+Nel formato decimale, le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo. 
+
+Nel formato esadecimale, le cifre esadecimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**p** o **p**) e un intero decimale con segno facoltativo che rappresenta l'esponente come potenza di 2.
+
+In entrambi i casi, se non è presente una parte dell'esponente o un carattere punto di base, viene utilizzato un carattere punto radice per seguire l'ultima cifra nella stringa.
+
+Il caso viene ignorato nei form **inf** e **NaN** . Il primo carattere che non rientra in uno di questi moduli interrompe l'analisi.
 
 Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponenti di tipo FORTRAN (**d** o **d**). Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente. Le versioni UCRT supportano stringhe esadecimali e sequenze di andata e ritorno dei valori INF e NAN, che non sono supportate nelle versioni precedenti. Questo può anche causare modifiche di rilievo nel codice. Ad esempio, la stringa "0x1a" verrebbe interpretata da **strtod** come 0,0 nelle versioni precedenti, ma come 26,0 nella versione UCRT.
 

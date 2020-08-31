@@ -1,6 +1,7 @@
 ---
 title: Classe CComboBox
-ms.date: 11/04/2016
+description: Informazioni di riferimento sulle API per la classe della casella combinata di Windows MFC CComboBox
+ms.date: 08/27/2020
 f1_keywords:
 - CComboBox
 - AFXWIN/CComboBox
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 515a079ca4f6c3896733bbebec424f63455fb979
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561674"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062185"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -920,7 +921,8 @@ Lunghezza, in byte, della stringa, escluso il carattere null di terminazione. Se
 
 ### <a name="remarks"></a>Osservazioni
 
-Il secondo formato di questa funzione membro compila un `CString` oggetto con il testo dell'elemento.
+Il secondo formato di questa funzione membro compila un `CString` oggetto con il testo dell'elemento. \
+Se *nIndex* non è valido, questa funzione genera un' `E_INVALIDARG` eccezione (codice errore: `-2147024809` , `0x80070057` ).
 
 ### <a name="example"></a>Esempio
 
@@ -1554,7 +1556,7 @@ Questa funzione membro non ha alcun effetto su una casella combinata creata con 
 
   Vedere l'esempio per [CComboBox:: GetDroppedState](#getdroppedstate).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [CTRLBARS di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
