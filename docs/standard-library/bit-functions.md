@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: 44ec7c4fb2f3fc303b9a96b2b6d5273279fcac12
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194550"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281809"
 ---
 # <a name="ltbitgt-functions"></a>&lt;funzioni di bit &gt;
 
@@ -101,7 +101,7 @@ float f = inf
 std::bit_cat<int>(f) = 7f800000
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il codice di basso livello deve spesso interpretare un oggetto di un tipo come un altro tipo. L'oggetto reinterpretato ha la stessa rappresentazione di bit dell'originale, ma è un tipo diverso.
 
@@ -150,7 +150,7 @@ int main()
     {
         auto nextClosestPowerOf2 = std::bit_ceil(i);
         std::cout << "\nbit_ceil(0b" << std::bitset<4>(i) << ") = "
-            << "0b" << std::bitset<4>(nextClosestPowerOf2);
+                  << "0b" << std::bitset<4>(nextClosestPowerOf2);
     }
     return 0;
 }
@@ -165,7 +165,7 @@ bit_ceil(0b0100) = 0b0100
 bit_ceil(0b0101) = 0b1000
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -201,7 +201,7 @@ int main()
     {
         auto previousPowerOf2 = std::bit_floor(i);
         std::cout << "\nbit_floor(0b" << std::bitset<4>(i) << ") = 0b"
-            << std::bitset<4>(previousPowerOf2);
+                  << std::bitset<4>(previousPowerOf2);
     }
     return 0;
 }
@@ -216,7 +216,7 @@ bit_floor(0b0100) = 0b0100
 bit_floor(0b0101) = 0b0100
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -252,7 +252,7 @@ int main()
     for (unsigned i=0u; i <= 8u; ++i)
     {
         std::cout << "\nbit_width(" << i << ") = "
-                      << std::bit_width(i);
+                  << std::bit_width(i);
     }
     return 0;
 }
@@ -270,7 +270,7 @@ bit_width(7) = 3
 bit_width(8) = 4
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -323,7 +323,7 @@ countl_zero(0b01000000) = 1
 countl_zero(0b10000000) = 0
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -355,11 +355,11 @@ Numero di bit consecutivi impostati su uno, a partire dal bit più significativo
 int main()
 {
     unsigned char value = 0;
-        for (unsigned char bit = 128; bit > 0; bit /= 2)
+    for (unsigned char bit = 128; bit > 0; bit /= 2)
     {
         value |= bit;
         std::cout << "\ncountl_one(0b" << std::bitset<8>(value) << ") = "
-            << std::countl_one(value);
+                  << std::countl_one(value);
     }
     return 0;
 }
@@ -376,7 +376,7 @@ countl_one(0b11111110) = 7
 countl_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -411,7 +411,7 @@ int main()
     for (unsigned char result = 0, i = 0; i < 9; i++)
     {
         std::cout << "\ncountr_zero(0b" << std::bitset<8>(result) << ") = "
-            << std::countr_zero(result);
+                  << std::countr_zero(result);
         result = result == 0 ? 1 : result * 2;
     }
     return 0;
@@ -430,7 +430,7 @@ countr_zero(0b01000000) = 6
 countr_zero(0b10000000) = 7
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -466,7 +466,7 @@ int main()
     {
         value |= bit;
         std::cout << "\ncountr_one(0b" << std::bitset<8>(value) << ") = "
-                      << std::countr_one(value);
+                  << std::countr_one(value);
     }
     return 0;
 }
@@ -483,7 +483,7 @@ countr_one(0b01111111) = 7
 countr_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -518,7 +518,7 @@ int main()
     for (auto i = 0u; i < 10u; ++i)
     {
         std::cout << "has_single_bit(0b" << std::bitset<4>(i) << ") = "
-            << std::boolalpha << std::has_single_bit(i) << '\n';
+                  << std::boolalpha << std::has_single_bit(i) << '\n';
     }
     return 0;
 }
@@ -537,7 +537,7 @@ has_single_bit(0b1000) = true
 has_single_bit(0b1001) = false
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -571,7 +571,7 @@ int main()
    for (unsigned char value = 0; value < 16; value++)
     {
         std::cout << "\npopcount(0b" << std::bitset<4>(value) << ") = "
-                      << std::popcount(value);
+                  << std::popcount(value);
     }
     return 0;
 }
@@ -596,7 +596,7 @@ popcount(0b1110) = 3
 popcount(0b1111) = 4
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -658,7 +658,7 @@ rotl(0b10000000, 1) = 0b00000001
 rotl(0b00000001,-1) = 0b10000000
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -720,7 +720,7 @@ rotr(0b00000001, 1) = 0b10000000
 rotr(0b10000000,-1) = 0b00000001
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 

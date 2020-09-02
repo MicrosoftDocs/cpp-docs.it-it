@@ -1,7 +1,7 @@
 ---
 title: Opzioni del linker MSVC
 description: Elenco delle opzioni supportate dal linker di Microsoft LINKer.
-ms.date: 02/09/2020
+ms.date: 09/01/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257546"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281796"
 ---
 # <a name="linker-options"></a>Opzioni del linker
 
@@ -23,11 +23,11 @@ LINK.exe consente di collegare file in formato COFF (Common Object File Format )
 
 La tabella seguente contiene un elenco di opzioni per LINK.exe. Per altre informazioni su LINK, vedere:
 
-- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
+- [Opzioni di collegamento controllate dal compilatore](compiler-controlled-link-options.md)
 
-- [File di input LINK](link-input-files.md)
+- [File di input collegamento](link-input-files.md)
 
-- [Output di LINK](link-output.md)
+- [Output del collegamento](link-output.md)
 
 - [Parole riservate](reserved-words.md)
 
@@ -49,6 +49,7 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|Specifica che un modulo MSIL (Microsoft Intermediate Language) deve essere importato nell'assembly.|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|Incorpora un file di risorse gestite in un assembly.|
 |[/BASE](base-base-address.md)|Imposta un indirizzo di base per il programma.|
+|[/CETCOMPAT](cetcompat.md)|Contrassegna il file binario come compatibile con lo shadow stack CET.|
 |[/CGTHREADS](cgthreads-compiler-threads.md)|Imposta il numero di thread cl.exe da usare per l'ottimizzazione e la generazione di codice quando si specifica la generazione del codice in fase di collegamento.|
 |[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)|Imposta il tipo (IJW, pure o safe) di un'immagine CLR.|
 |[/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Conserva l'ultimo codice di errore delle funzioni chiamate con il meccanismo P/Invoke.|
@@ -66,19 +67,19 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|Crea un driver in modalità kernel.|
 |[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Specifica se generare un'immagine eseguibile che viene ribasata in fase di caricamento utilizzando la funzionalità ASLR (Address Space Layout randomation).|
 |[/ENTRY](entry-entry-point-symbol.md)|Imposta indirizzo iniziale.|
-|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| Operazione deprecata. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| Deprecato. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/EXPORT](export-exports-a-function.md)|Esporta una funzione.|
 |[/FILEALIGN](filealign.md)|Allinea le sezioni all'interno del file di output in multipli di un valore specificato.|
 |[/FIXED](fixed-fixed-base-address.md)|Crea un programma caricabile solo nel relativo indirizzo di base preferito.|
 |[/FORCE](force-force-file-output.md)|Forza il completamento di un collegamento nonostante la presenza di simboli non risolti o definiti più volte.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Crea un'immagine su cui si può applicare una patch a caldo.|
-|[/GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Entrambe queste opzioni specificano la generazione di un file di *`.pgd`* da parte del linker per supportare l'ottimizzazione PGO (PGO). / GENPROFILE e /FASTGENPROFILE usano parametri predefiniti diversi.|
+|[/GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Entrambe queste opzioni specificano la generazione di un *`.pgd`* file da parte del linker per supportare l'ottimizzazione PGO (PGO). / GENPROFILE e /FASTGENPROFILE usano parametri predefiniti diversi.|
 |[/GUARD](guard-enable-guard-checks.md)|Abilita la protezione guard flusso di controllo.|
 |[/HEAP](heap-set-heap-size.md)|Imposta le dimensioni in byte dell'heap.|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Specifica il supporto per la funzionalità ASLR a 64 bit a entropia elevata.|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Specifica il nome del file di *`.idl`* e di altri file di output MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Specifica il nome del *`.idl`* file e di altri file di output MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Disattiva l'output degli avvisi del linker specificati.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Impedisce l'elaborazione delle informazioni sugli attributi in un file di *`.idl`* .|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Impedisce l'elaborazione delle informazioni sugli attributi in un *`.idl`* file.|
 |[/IMPLIB](implib-name-import-library.md)|Esegue l'override del nome predefinito della libreria di importazione.|
 |[/INCLUDE](include-force-symbol-references.md)|Impone di includere riferimenti al simbolo.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Controlla il collegamento incrementale.|
@@ -92,10 +93,10 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 |[/LTCG](ltcg-link-time-code-generation.md)|Specifica la generazione del codice in fase di collegamento.|
 |[/MACHINE](machine-specify-target-platform.md)|Specifica la piattaforma di destinazione.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Crea un file manifesto side-by-side e facoltativamente lo incorpora nel file binario.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Specifica una sezione \<> dependentAssembly nel file manifesto.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Specifica una \<dependentAssembly> sezione nel file manifesto.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Modifica il nome predefinito del file manifesto.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Specifica un file di input del manifesto che il linker deve elaborare e incorporare nel file binario. Questa opzione si può usare più volte per specificare più file di input del manifesto.|
-|[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Specifica se le informazioni sul Controllo dell'account utente sono incorporate nel manifesto del programma.|
+|[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Specifica se le informazioni di Controllo dell'account utente sono incorporate nel manifesto del programma.|
 |[/MAP](map-generate-mapfile.md)|Crea un file MAP.|
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|Include le informazioni specificate nel file di mapping.|
 |[/MERGE](merge-combine-sections.md)|Combina le sezioni.|
@@ -112,19 +113,19 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 |[/PDB](pdb-use-program-database.md)|Crea un file PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Usa un percorso alternativo per salvare un file PDB.|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Crea un file PDB senza simboli privati.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Specifica un file di *`.pgd`* per le ottimizzazioni PGO.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Specifica un *`.pgd`* file per le ottimizzazioni PGO.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Obsoleto** Crea una compilazione instrumentata PGO thread-safe.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Produce un file di output che può essere usato con il profiler di Strumenti per le prestazioni.|
-|[/RELEASE](release-set-the-checksum.md)|Imposta il checksum nell'intestazione del *`.exe`* .|
+|[/RELEASE](release-set-the-checksum.md)|Imposta il checksum nell' *`.exe`* intestazione.|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Specifica che l'immagine conterrà una tabella di gestori eccezioni sicuri.|
 |[/SECTION](section-specify-section-attributes.md)|Esegue l'override gli attributi di una sezione.|
 |[/SOURCELINK](sourcelink.md)|Specifica un file SourceLink da aggiungere al PDB.|
 |[/STACK](stack-stack-allocations.md)|Imposta le dimensioni in byte dello stack.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Connette un programma stub MS-DOS a un programma Win32.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Indica al sistema operativo come eseguire il file di *`.exe`* .|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Indica al sistema operativo come eseguire il *`.exe`* file.|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Indica al sistema operativo di copiare l'output del linker in un file di scambio prima di eseguirlo.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Specifica l'ID di risorsa della libreria dei tipi generata dal linker.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Specifica il nome del file di *`.tlb`* e di altri file di output MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Specifica il nome del *`.tlb`* file e di altri file di output MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Crea un'applicazione specificamente progettata per l'esecuzione in Terminal Server.|
 |[/USEPROFILE](useprofile.md)|USA i dati di training per l'ottimizzazione PGO per creare un'immagine ottimizzata.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Visualizza i messaggi di stato del linker.|
@@ -141,5 +142,5 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 
 ## <a name="see-also"></a>Vedere anche
 
-[C/C++ Building Reference](c-cpp-building-reference.md)\ (Informazioni di riferimento per la compilazione in C/C++)
+[Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)\
 [Informazioni di riferimento sul linker MSVC](linking.md)

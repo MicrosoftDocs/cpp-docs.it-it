@@ -1,17 +1,17 @@
 ---
 title: /CETCOMPAT (compatibile con lo stack UTC)
-ms.date: 06/30/2020
+ms.date: 09/01/2020
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 35078ac9e6177e34562db14b30f4ef8f987d98bc
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813563"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281827"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (compatibile con lo stack UTC)
 
@@ -45,7 +45,7 @@ A partire da Visual Studio 2019 versione 16,7:
 
 1. Selezionare la proprietà **compatibile shadow stack CET** .
 
-1. Nel controllo DropDown scegliere **`Yes (/CETCOMPAT)`** di abilitare i metadati di continuazione eh o **`No (/CETCOMPAT:NO)`** di disabilitarlo.
+1. Nel controllo DropDown scegliere **`Yes (/CETCOMPAT)`** di contrassegnare il file binario come compatibile con lo stack UTC o **`No (/CETCOMPAT:NO)`** di contrassegnarlo come non compatibile.
 
 Nelle versioni precedenti di Visual Studio 2019:
 
@@ -53,7 +53,7 @@ Nelle versioni precedenti di Visual Studio 2019:
 
 1. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del**linker**proprietà di configurazione  >  **Command Line** .
 
-1. Nel controllo di modifica **Opzioni aggiuntive** aggiungere *`/CETCOMPAT`* per abilitare i metadati della continuazione eh oppure *`/CETCOMPAT:NO`* per disabilitarlo in modo esplicito.
+1. Nel controllo di modifica **Opzioni aggiuntive** aggiungere *`/CETCOMPAT`* per contrassegnare il file binario come compatibile con lo shadow stack UTC oppure *`/CETCOMPAT:NO`* per contrassegnarlo esplicitamente come non compatibile.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
