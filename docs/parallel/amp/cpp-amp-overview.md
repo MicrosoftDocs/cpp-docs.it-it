@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222758"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427725"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 
@@ -238,7 +238,7 @@ Nella tabella seguente sono riepilogate le analogie e le differenze tra le `arra
 
 La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito.
 
-`array`gli oggetti possono essere utilizzati per specificare un controllo con granularità fine sull'utilizzo della memoria condivisa se l'acceleratore associato lo supporta. Se un tasto di scelta rapida supporta la memoria condivisa è determinato dalla proprietà [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) dell'acceleratore, che restituisce **`true`** quando è supportata la memoria condivisa. Se la memoria condivisa è supportata, l' [enumerazione access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per le allocazioni di memoria sul tasto di scelta rapida è determinata dalla `default_cpu_access_type` Proprietà. Per impostazione predefinita `array` , `array_view` gli oggetti e accettano lo stesso `access_type` nome del database primario associato `accelerator` .
+`array` gli oggetti possono essere utilizzati per specificare un controllo con granularità fine sull'utilizzo della memoria condivisa se l'acceleratore associato lo supporta. Se un tasto di scelta rapida supporta la memoria condivisa è determinato dalla proprietà [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) dell'acceleratore, che restituisce **`true`** quando è supportata la memoria condivisa. Se la memoria condivisa è supportata, l' [enumerazione access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per le allocazioni di memoria sul tasto di scelta rapida è determinata dalla `default_cpu_access_type` Proprietà. Per impostazione predefinita `array` , `array_view` gli oggetti e accettano lo stesso `access_type` nome del database primario associato `accelerator` .
 
 Impostando la proprietà del [membro dati array:: cpu_access_type](reference/array-class.md#cpu_access_type) di un oggetto in `array` modo esplicito, è possibile esercitare un controllo accurato sulla modalità di utilizzo della memoria condivisa, in modo che sia possibile ottimizzare l'applicazione per le caratteristiche di prestazioni dell'hardware, in base ai modelli di accesso alla memoria dei kernel di calcolo. Un oggetto `array_view` riflette lo stesso oggetto a `cpu_access_type` cui è `array` associato; in alternativa, se la array_view viene costruita senza un'origine dati, `access_type` riflette l'ambiente che prima ne determina l'allocazione di spazio di archiviazione. Ovvero, se l'accesso viene eseguito per la prima volta dall'host (CPU), si comporta come se fosse stato creato su un'origine dati della CPU e condivide il `access_type` di `accelerator_view` associato da Capture. Tuttavia, se l'accesso è stato eseguito per la prima volta da un oggetto `accelerator_view` , si comporta come se fosse stato creato `array` su un oggetto creato in `accelerator_view` e condivide l'oggetto di `array` `access_type` .
 
@@ -508,4 +508,4 @@ Il modulo e la divisione di interi senza segno offrono prestazioni significativa
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Sintassi delle espressioni lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Riferimento (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Blog sulla programmazione parallela nel codice nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)
+[Blog sulla programmazione parallela nel codice nativo](/archive/blogs/nativeconcurrency/)

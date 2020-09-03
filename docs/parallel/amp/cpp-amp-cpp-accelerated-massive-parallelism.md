@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ AMP (see C++ Accelerated Massive Parallelism)
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
-ms.openlocfilehash: 516b69a0371ceb9365e79d5465879711289076c0
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 243c476b6536278eb09b26b24becb65276d6e48a
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404860"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427634"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
@@ -29,7 +29,7 @@ C++ AMP (C++ Accelerated Massive Parallelism) accelera l'esecuzione del codice C
 |[Procedura dettagliata: moltiplicazione di matrici](../../parallel/amp/walkthrough-matrix-multiplication.md)|Viene illustrata la moltiplicazione di matrici utilizzando codice e affiancamento C++ AMP.|
 |[Procedura dettagliata: debug di un'applicazione C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Viene illustrato come creare ed eseguire il debug di un'applicazione che usa la riduzione parallela per sommare un'ampia gamma di numeri interi.|
 
-## <a name="reference"></a>Riferimento
+## <a name="reference"></a>Informazioni di riferimento
 
 [Riferimento (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
 [Parola chiave tile_static](../../cpp/tile-static-keyword.md)<br/>
@@ -37,6 +37,6 @@ C++ AMP (C++ Accelerated Massive Parallelism) accelera l'esecuzione del codice C
 
 ## <a name="other-resources"></a>Risorse aggiuntive
 
-[Blog sulla programmazione parallela nel codice nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)<br/>
-[C++ AMP progetti di esempio per il download](https://go.microsoft.com/fwlink/p/?linkid=248508)<br/>
+[Blog sulla programmazione parallela nel codice nativo](/archive/blogs/nativeconcurrency/)<br/>
+[C++ AMP progetti di esempio per il download](/archive/blogs/nativeconcurrency/c-amp-sample-projects-for-download)<br/>
 [Analisi del codice di C++ AMP con il Visualizzatore di concorrenza](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)
