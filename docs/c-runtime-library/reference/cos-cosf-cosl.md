@@ -1,6 +1,7 @@
 ---
 title: cos, cosf, cosl
-ms.date: 6/5/2020
+description: Informazioni di riferimento sulle API per cos, cosf e cosl; che calcolano il valore del coseno di un numero a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - cos
 - cosf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0e723708076067cf4d2ed896542ac08406a87ee
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221926"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556801"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -54,16 +55,15 @@ Calcola il coseno.
 double cos( double x );
 float cosf( float x );
 long double cosl( long double x );
-```
+#define cos(X) // Requires C11 or higher
 
-```cpp
 float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,12 +72,14 @@ Coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si ver
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|**_DOMAIN**|
+|± QNAN, IND|Nessuno|**_DOMAIN**|
 |± INF|**Non valido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, **cos** accetta sempre e restituisce un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **cos** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `cos()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |-------------|---------------------|-|
 |**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> o \<math.h>|
+|**cos () (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

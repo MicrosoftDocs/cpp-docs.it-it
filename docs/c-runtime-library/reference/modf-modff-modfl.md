@@ -1,5 +1,6 @@
 ---
 title: modf, modff, modfl
+description: Informazioni di riferimento sulle API per modf, modff e modFL; che dividono un valore a virgola mobile in parti frazionarie e intere.
 ms.date: 4/2/2020
 api_name:
 - modff
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216869"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556762"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -70,7 +71,7 @@ Puntatore alla parte intera archiviata.
 
 ## <a name="return-value"></a>Valore restituito
 
-Questa funzione restituisce la parte frazionaria con segno di *x*. Non vi è restituzione di errori.
+Questa funzione restituisce la parte frazionaria con segno di *x*. Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -86,7 +87,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**modf**, **modff**, **modFL**|C\<math.h><br /><br /> C++:, \<cmath> o\<math.h>|
+|**modf**, **modff**, **modFL**|C \<math.h><br /><br /> C++:, \<cmath> o \<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

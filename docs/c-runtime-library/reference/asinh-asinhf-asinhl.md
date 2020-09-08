@@ -1,6 +1,7 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per asinh, asinhf e asinhl; che calcola il seno iperbolico inverso di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - asinh
 - asinhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232651"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556788"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -51,9 +52,8 @@ Calcola il seno iperbolico inverso.
 double asinh( double x );
 float asinhf( float x );
 long double asinhl( long double x );
-```
+#define asinh(X) // Requires C11 or higher
 
-```cpp
 float asinh( float x );  // C++ only
 long double asinh( long double x );  // C++ only
 ```
@@ -69,19 +69,23 @@ Le funzioni **asinh** restituiscono il seno iperbolico inverso (seno iperbolico 
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|nessuno|nessuno|
+|± QNAN, IND, INF|Nessuno|Nessuno|
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si usa C++, è possibile chiamare overload di **asinh** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C **asinh** accetta e restituisce sempre **`double`** .
+Quando si usa C++, è possibile chiamare overload di **asinh** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **asinh** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `asinh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath>o \< Math. h<|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> o \<math.h>|
+|**asinh () (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

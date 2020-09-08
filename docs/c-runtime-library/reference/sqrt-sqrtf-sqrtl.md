@@ -1,6 +1,7 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 6/5/2020
+description: Informazioni di riferimento sulle API per sqrt, sqrtf e sqrtl; oggetto che calcola una radice quadrata di un numero a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - sqrtl
 - sqrtf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17526b4e4a7eca5d36c01069dbe975bb035d1f58
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229363"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556775"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -66,16 +67,19 @@ float sqrtf(
 long double sqrtl(
    long double x
 );
+#define sqrt(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile non negativo
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Sqrt** che accettano i **`float`** tipi o **`long double`** . In un programma C, **Sqrt** accetta e restituisce sempre **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Sqrt** che accettano i **`float`** tipi o **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **Sqrt** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `sqrt()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -85,15 +89,16 @@ Le funzioni **Sqrt** restituiscono la radice quadrata di *x*. Per impostazione p
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND|none|_DOMAIN|
-|- ∞|none|_DOMAIN|
-|x<0|none|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
+|- ∞|Nessuno|_DOMAIN|
+|x<0|Nessuno|_DOMAIN|
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**Sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt () (macro)** | \<tgmath.h> ||
 
 Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
