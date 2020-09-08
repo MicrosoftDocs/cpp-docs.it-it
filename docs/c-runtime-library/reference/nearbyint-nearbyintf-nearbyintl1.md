@@ -1,6 +1,7 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per nearbyint, nearbyintf e nearbyintl; che arrotonda il valore a virgola mobile specificato a un intero e restituisce tale valore in un formato a virgola mobile.
+ms.date: 9/1/2020
 api_name:
 - nearbyint
 - nearbyintf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9717559518032c6f1f2126c7ded7cb90603bce64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216856"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556385"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -54,16 +55,15 @@ Arrotonda il valore a virgola mobile specificato a un intero e restituisce tale 
 double nearbyint( double x );
 float nearbyintf( float x );
 long double nearbyintl( long double x );
-```
+#define nearbyint( X ) // Requires C11 or higher
 
-```cpp
 float nearbyint( float x ); //C++ only
 long double nearbyint( long double x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Il valore da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -84,15 +84,18 @@ La differenza principale tra questa funzione e [rint](rint-rintf-rintl.md) è ch
 
 Dato che i valori a virgola massimi sono interi esatti, questa funzione da sola non genererà mai un overflow. È invece possibile un overflow del valore restituito nell'output, a seconda della versione della funzione usata.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **nearbyint** che accettano e restituiscono **`float`** **`long double`** parametri o. In un programma C **nearbyint** accetta sempre due valori Double e restituisce un valore Double.
+C++ consente l'overload, quindi è possibile chiamare overload di **nearbyint** che accettano e restituiscono **`float`** **`long double`** parametri o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **nearbyint** accetta sempre due valori Double e restituisce un valore Double.
+
+Se si usa la \<tgmath.h> `nearbyint()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**nearbyint**, **nearbyintf**, **nearbyintl**|\<math.h>|\<cmath> o \<math.h>|
+|**nearbyint** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

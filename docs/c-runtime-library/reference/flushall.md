@@ -1,5 +1,6 @@
 ---
 title: _flushall
+description: Riferimento API per _flushall; che Scarica tutti i flussi e cancella tutti i buffer.
 ms.date: 4/2/2020
 api_name:
 - _flushall
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: 1a53eeedd5dfa0f9c01fa5883a9db33e26e3ea17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c93dddea50c182b86bd4d09ae9f214e87491e830
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911616"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556723"
 ---
 # <a name="_flushall"></a>_flushall
 
@@ -48,7 +49,7 @@ int _flushall( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**_flushall** restituisce il numero di flussi aperti (input e output). Non vi è restituzione di errori.
+**_flushall** restituisce il numero di flussi aperti (input e output). Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 

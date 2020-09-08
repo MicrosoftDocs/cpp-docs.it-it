@@ -1,5 +1,6 @@
 ---
 title: setjmp
+description: Informazioni di riferimento sulle API per setjmp; che consente di salvare lo stato corrente del programma.
 ms.date: 08/14/2018
 api_name:
 - setjmp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: beaf56a03c1bd157257d604bfd0ebefb219d0225
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3ea08e5379433e313e08870f735322b7d985aa64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226151"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555605"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -52,7 +53,7 @@ Variabile in cui è archiviato l'ambiente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 dopo aver salvato l'ambiente dello stack. Se **setjmp** restituisce come risultato di una `longjmp` chiamata, restituisce l'argomento *value* di `longjmp` o se l'argomento *value* di `longjmp` è 0, **setjmp** restituisce 1. Non vi è restituzione di errori.
+Restituisce 0 dopo aver salvato l'ambiente dello stack. Se **setjmp** restituisce come risultato di una `longjmp` chiamata, restituisce l'argomento *value* di `longjmp` o se l'argomento *value* di `longjmp` è 0, **setjmp** restituisce 1. Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 

@@ -1,5 +1,6 @@
 ---
 title: _itoa, funzioni _itow
+description: Riferimento API per _itoa e _itow; che converte un Integer in una stringa.
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843495"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555463"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Converte un intero in una stringa. Sono disponibili versioni più sicure di queste funzioni. vedere [_itoa_s, funzioni di _itow_s](itoa-s-itow-s.md).
+Converte un intero in una stringa. Sono disponibili versioni più sicure di queste funzioni, vedere [_itoa_s, funzioni di _itow_s](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -193,7 +194,7 @@ Lunghezza del buffer in unità del tipo di carattere. Questo parametro viene ded
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore al *buffer*. Non vi è restituzione di errori.
+Ognuna di queste funzioni restituisce un puntatore al *buffer*. Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 

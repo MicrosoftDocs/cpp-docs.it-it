@@ -1,6 +1,7 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per fabs, fabsf e fabsl; che calcola il valore assoluto di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - fabsf
 - fabs
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a819172fc94224ff4c51c8fc342b142ffbe05ae7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234120"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554838"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -66,32 +67,37 @@ float fabsf(
 long double fabsl(
    long double x
 );
+
+#define fabs(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **fabs** restituiscono il valore assoluto dell'argomento *x*. Non vi è restituzione di errori.
+Le funzioni **fabs** restituiscono il valore assoluto dell'argomento *x*. Non viene restituito alcun errore.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
 
 ## <a name="remarks"></a>Osservazioni
 
-C++ consente l'overload, quindi è possibile chiamare gli overload di **fabs** se si include l' \<cmath> intestazione. In un programma C **fabs** accetta e restituisce sempre un oggetto **`double`** .
+C++ consente l'overload, quindi è possibile chiamare gli overload di **fabs** se si include l' \<cmath> intestazione. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **fabs** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `fabs()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|-----------------------|---------------------------|
 |**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> o \<math.h>|
+|**fabs** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

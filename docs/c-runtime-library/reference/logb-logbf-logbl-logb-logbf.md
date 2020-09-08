@@ -1,6 +1,7 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per logb, logbf, logbl, _logb e _logbf; che estrae il valore dell'esponente di un argomento a virgola mobile.
+ms.date: 9/1/2020
 api_name:
 - logb
 - _logb
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1131fda94e4748d2fb2f2197f68966aaacc11d05
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218572"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556214"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -82,11 +83,12 @@ double _logb(
 float _logbf(
    float x
 );
+#define logb(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
@@ -97,7 +99,9 @@ Un valore a virgola mobile.
 
 Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se le *x* fossero rappresentate con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **logb** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **logb** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `logb()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -112,6 +116,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
+|**logb** (macro) | \<tgmath.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 

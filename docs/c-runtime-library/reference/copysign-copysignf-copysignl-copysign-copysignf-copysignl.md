@@ -1,6 +1,7 @@
 ---
 title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
-ms.date: 04/05/2018
+description: Riferimento API per la restituzione di un valore che ha la grandezza di un argomento e il segno di un altro tramite copysign ()
+ms.date: 9/1/2020
 api_name:
 - copysignf
 - copysignl
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f9ffe56e82f6a82da15fde3f8efea60fc1c0f9f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221939"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554864"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -81,25 +82,28 @@ long double _copysignl(
    long double x,
    long double y
 );
+#define copysign(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Il valore a virgola mobile restituito come grandezza del risultato.
 
-*y*<br/>
+*y*\
 Il valore a virgola mobile restituito come segno del risultato.
 
 [Routine del supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **copysign** restituiscono un valore a virgola mobile che combina la grandezza di *x* e il segno di *y*. Non vi è restituzione di errori.
+Le funzioni **copysign** restituiscono un valore a virgola mobile che combina la grandezza di *x* e il segno di *y*. Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **copysign** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **copysign** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **copysign** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **copysign** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `copysign()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -107,6 +111,7 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **copysign** 
 |-------------|---------------------|
 |**_copysign**|\<float.h>|
 |**copysign**, **copysignf**, **copysignl**, **_copysignf**, **_copysignl**|\<math.h>|
+|**copysign** (macro) | \<tgmath.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 

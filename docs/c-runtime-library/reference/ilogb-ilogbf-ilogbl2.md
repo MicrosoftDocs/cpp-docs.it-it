@@ -1,6 +1,7 @@
 ---
 title: ilogb, ilogbf, ilogbl2
-ms.date: 04/05/2018
+description: Informazioni di riferimento sulle API per ilogb, ilogbf e ilogbl2; che recupera un intero che rappresenta l'esponente in base 2 non distorta del valore specificato.
+ms.date: 9/1/2020
 api_name:
 - ilogb
 - ilogbf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27c329cca1edb9d30bb6b9b641f94d174c9c406
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232521"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556372"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -66,11 +67,13 @@ int ilogbf(
 int ilogbl(
    long double x
 );
+
+#define ilogbl(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore specificato.
 
 ## <a name="return-value"></a>Valore restituito
@@ -88,7 +91,9 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **ilogb** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **ilogb** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **ilogb** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **ilogb** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `ilogb()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 La chiamata a questa funzione è simile alla chiamata della funzione **logb** equivalente, quindi al cast del valore restituito a **`int`** .
 
@@ -97,6 +102,7 @@ La chiamata a questa funzione è simile alla chiamata della funzione **logb** eq
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
 |**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
+|**ilogb** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

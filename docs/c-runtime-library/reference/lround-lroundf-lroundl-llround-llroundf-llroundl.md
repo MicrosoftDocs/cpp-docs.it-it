@@ -1,6 +1,7 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per lround, lroundf, lroundl, llround, llroundf e llroundl; che arrotonda un valore a virgola mobile all'intero più vicino.
+ms.date: 9/1/2020
 api_name:
 - llround
 - llroundf
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216895"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555319"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -90,24 +91,27 @@ long long llroundf(
 long long llroundl(
    long double x
 );
+#define lround(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **lround** e **llround** restituiscono il **`long`** valore integer più vicino **`long long`** a *x*. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non vi è restituzione di errori.
+Le funzioni **lround** e **llround** restituiscono il **`long`** valore integer più vicino **`long long`** a *x*. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non viene restituito alcun errore.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **lround** o **llround** che accettano e restituiscono **`float`** valori e **`long double`** . In un programma C, **lround** e **llround** accettano sempre e restituiscono un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **lround** o **llround** che accettano e restituiscono **`float`** valori e **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **lround** e **llround** accettano sempre e restituiscono **`double`** .
+
+Se si usa la \<tgmath.h> `lround()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -116,6 +120,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
+|**lround** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

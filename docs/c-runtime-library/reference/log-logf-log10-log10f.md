@@ -1,6 +1,7 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
-ms.date: 6/5/2020
+description: Informazioni di riferimento sulle API per log, logf, logl, log10, log10f e log10l; che calcolano i logaritmi.
+ms.date: 9/1/2020
 api_name:
 - log10f
 - logf
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f308281705170308ec83e4a5efd9c7825ba47591
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218598"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556282"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -62,24 +63,24 @@ Calcola logaritmi.
 ## <a name="syntax"></a>Sintassi
 
 ```C
-double log( double x );
-float logf( float x );
-long double logl( double x );
-double log10( double x );
-float log10f ( float x );
-long double log10l( double x );
-```
+double log(double x);
+float logf(float x);
+long double logl(double x);
+double log10(double x);
+float log10f (float x);
+long double log10l(double x);
+#define log(X) // Requires C11 or higher
+#define log10(X) // Requires C11 or higher
 
-```cpp
-float log( float x );  // C++ only
-long double log( long double x );  // C++ only
-float log10( float x );  // C++ only
-long double log10( long double x );  // C++ only
+float log(float x);  // C++ only
+long double log(long double x);  // C++ only
+float log10(float x);  // C++ only
+long double log10(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore di cui trovare il logaritmo.
 
 ## <a name="return-value"></a>Valore restituito
@@ -88,7 +89,7 @@ Le funzioni di **log** restituiscono il logaritmo naturale (base *e*) di *x* in 
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|NON VALIDO|_DOMAIN|
 
@@ -96,7 +97,9 @@ Le funzioni di **log** restituiscono il logaritmo naturale (base *e*) di *x* in 
 
 ## <a name="remarks"></a>Osservazioni
 
-C++ consente l'overload, quindi è possibile chiamare overload di **log** e **log10** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, **log** e **log10** accettano sempre e restituiscono **`double`** .
+C++ consente l'overload, quindi è possibile chiamare overload di **log** e **log10** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **log** e **log10** accettano sempre e restituiscono **`double`** .
+
+Se si usa la \<tgmath.h> `log()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -105,6 +108,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**log**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**log** (macro) | \<tgmath.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

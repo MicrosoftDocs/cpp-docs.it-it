@@ -1,6 +1,7 @@
 ---
 title: sin, sinf, sinl
-ms.date: 6/5/2020
+description: Informazioni di riferimento sulle API per sin, sinf e sinl; che calcola il seno di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - sinl
 - sinf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d1921dd4537c9dcc955c264a36992d86defada8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216726"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556191"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -54,6 +55,7 @@ Calcola il seno di un valore a virgola mobile.
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+#define sin(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,7 +65,7 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
@@ -79,7 +81,9 @@ Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_err
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **sin** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, **sin** accetta e restituisce sempre **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **sin** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **sin** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `sin()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -88,6 +92,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-|-|-|
 |**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> o \<math.h>|
+|**sin () (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

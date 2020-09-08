@@ -1,5 +1,6 @@
 ---
 title: _lrotl, _lrotr
+description: 'Informazioni di riferimento sulle API per _lrotl e _lrotr; che ruotano i bit a sinistra (_lrotl) o a destra (_lrotr). '
 ms.date: 04/04/2018
 api_name:
 - _lrotl
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ccd14f7aa6ba3c1278063593aecee20c6789110d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953037"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555007"
 ---
 # <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Ruota i bit a sinistra ( **_lrotl**) o a destra ( **_lrotr**).
+Ruota i bit a sinistra (**_lrotl**) o a destra (**_lrotr**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,9 +63,9 @@ Numero di bit di cui spostare *value*.
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambe le funzioni restituiscono il valore ruotato. Non vi è restituzione di errori.
+Entrambe le funzioni restituiscono il valore ruotato. Non viene restituito alcun errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le funzioni **_lrotl** e **_lrotr** ruotano il *valore* in base a *Turn* bit. **_lrotl** ruota il valore a sinistra, verso un bit più significativo. **_lrotr** ruota il valore a destra, verso i bit meno significativi. Entrambe le funzioni ruotano i bit da una estremità all'altra di *value*.
 
@@ -74,7 +75,7 @@ Le funzioni **_lrotl** e **_lrotr** ruotano il *valore* in base a *Turn* bit. **
 |-------------|---------------------|
 |**_lrotl**, **_lrotr**|\<stdlib.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -102,5 +103,5 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_rotl, _rotl64, _rotr, _rotr64](rotl-rotl64-rotr-rotr64.md)<br/>

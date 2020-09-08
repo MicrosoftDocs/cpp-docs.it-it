@@ -1,6 +1,7 @@
 ---
 title: floor, floorf, floorl
-ms.date: 6/5/2020
+description: Informazioni di riferimento sulle API per Floor, floorf e flooral; che calcola la superficie di un valore.
+ms.date: 9/1/2020
 api_name:
 - floorf
 - floorl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218682"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556736"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -64,34 +65,38 @@ float floorf(
 long double floorl(
    long double x
 );
+#define floor(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **floor** restituiscono un valore a virgola mobile che rappresenta l'intero più grande minore o uguale a *x*. Non vi è restituzione di errori.
+Le funzioni **floor** restituiscono un valore a virgola mobile che rappresenta l'intero più grande minore o uguale a *x*. Non viene restituito alcun errore.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
 
 **floor** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-C++ consente l'overload, quindi è possibile chiamare gli overload di **floor** che accettano e restituiscono **`float`** valori e **`long double`** . In un programma C, **floor** accetta sempre e restituisce un **`double`** .
+C++ consente l'overload, quindi è possibile chiamare gli overload di **floor** che accettano e restituiscono **`float`** valori e **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **floor** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `floor()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**floor**, **floorf**, **floorl**|\<math.h>|
+|macro **floor** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -1,6 +1,7 @@
 ---
 title: fmin, fminf, fminl
-ms.date: 04/05/2018
+description: Informazioni di riferimento sulle API per FMIN, fminf e fminl; che determina il minore di due valori.
+ms.date: 9/1/2020
 api_name:
 - fmin
 - fminf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a070835d809c6adcb5b7bfd57b5373886b348ca
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216986"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556710"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -71,14 +72,16 @@ long double fminl(
    long double x,
    long double y
 );
+
+#define fmin(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Primo valore da confrontare.
 
-*y*<br/>
+*y*\
 Secondo valore da confrontare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -95,13 +98,16 @@ La funzione non provoca la chiamata di [_matherr](matherr.md) , genera eccezioni
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **FMIN** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **FMIN** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **FMIN** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **FMIN** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `fmin()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**FMIN**, **fminf**, **fminl**|C\<math.h><br />C++: \<math.h> o\<cmath>|
+|**FMIN**, **fminf**, **fminl**|C \<math.h><br />C++: \<math.h> o \<cmath>|
+|**FMIN** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

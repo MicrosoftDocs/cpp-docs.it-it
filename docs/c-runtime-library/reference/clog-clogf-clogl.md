@@ -1,5 +1,6 @@
 ---
 title: clog, clogf, clogl
+description: Informazioni di riferimento sulle API per intasamento, clogf e zoccolo; che recuperano il logaritmo naturale di un numero complesso, con un ramo tagliato lungo l'asse reale negativo.
 ms.date: 11/04/2016
 api_name:
 - clog
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 255f83a93c5c7a0c724fad143f028c2832be3173
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942914"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555072"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -66,7 +67,7 @@ _Lcomplex clogl(
 
 ### <a name="parameters"></a>Parametri
 
-*z*<br/>
+*z*\
 Base del logaritmo.
 
 ## <a name="return-value"></a>Valore restituito
@@ -83,17 +84,17 @@ I possibili valori restituiti sono:
 |NaN|NaN|
 |+ ∞|+ ∞|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **intasamento** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C, lo **zoccolo** accetta sempre e restituisce un valore **_Dcomplex** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **intasamento** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C, lo **zoccolo** accetta sempre e restituisce un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**clog**,               **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**intasamento**,               **clogf**, **zoccolo**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

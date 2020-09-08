@@ -1,5 +1,6 @@
 ---
 title: _umask
+description: Riferimento API per _umask; che imposta la maschera di autorizzazione file predefinita.
 ms.date: 4/2/2020
 api_name:
 - _umask
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3735ecd7ba194009945d3717982d7828ecee3c1e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913850"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554929"
 ---
 # <a name="_umask"></a>_umask
 
-Imposta la maschera di autorizzazione file predefinita. È disponibile una versione più sicura di questa funzione; vedere [_umask_s](umask-s.md).
+Imposta la maschera di autorizzazione file predefinita. Per una versione più sicura di questa funzione, vedere [_umask_s](umask-s.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,7 +56,7 @@ Impostazione di autorizzazione predefinita.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_umask** restituisce il valore precedente di *pmode*. Non vi è restituzione di errori.
+**_umask** restituisce il valore precedente di *pmode*. Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -118,8 +119,8 @@ Oldmask = 0x0000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

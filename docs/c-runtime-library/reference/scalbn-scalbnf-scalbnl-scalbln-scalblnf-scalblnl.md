@@ -1,6 +1,7 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per scalbn, scalbnf, scalbnl, scalbln, scalblnf e scalblnl; che moltiplica un numero a virgola mobile per una potenza integrale di `FLT_RADIX` .
+ms.date: 9/1/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a01811e5fcfb28c0557e0232d76649c867748b1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231377"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556671"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -80,18 +81,14 @@ long double scalbnl(
    long double x,
    int exp
 );
+
+#define scalbn(X, INT) // Requires C11 or higher
+
 double scalbln(
    double x,
    long exp
 );
-float scalbln(
-   float x,
-   long exp
-);  // C++ only
-long double scalbln(
-   long double x,
-   long exp
-);  // C++ only
+
 float scalblnf(
    float x,
    long exp
@@ -100,14 +97,25 @@ long double scalblnl(
    long double x,
    long exp
 );
+
+#define scalbln(X, LONG) // Requires C11 or higher
+
+float scalbln(
+   float x,
+   long exp
+);  // C++ only
+long double scalbln(
+   long double x,
+   long exp
+);  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile.
 
-*exp*<br/>
+*exp*\
 Esponente dell'intero.
 
 ## <a name="return-value"></a>Valore restituito
@@ -120,15 +128,18 @@ Per ulteriori informazioni su **errno** e sui possibili valori restituiti degli 
 
 **FLT_RADIX** viene definito \<float.h> come la radice a virgola mobile nativa; nei sistemi binari, ha un valore pari a 2 e **scalbn** è equivalente a [ldexp](ldexp.md).
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **scalbn** e **scalbln** che accettano e restituiscono i **`float`** **`long double`** tipi o. In un programma C **scalbn** accetta sempre un **`double`** e un **`int`** e restituisce un oggetto e **`double`** **scalbln** accetta sempre un oggetto **`double`** e un oggetto **`long`** e restituisce un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **scalbn** e **scalbln** che accettano e restituiscono i **`float`** **`long double`** tipi o. In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione, **scalbn** accetta sempre un **`double`** e un **`int`** e restituisce un oggetto e **`double`** **scalbln** accetta sempre un oggetto **`double`** e un oggetto **`long`** e restituisce un oggetto **`double`** .
+
+Se si usano le \<tgmath.h> `scalbn()` `scalbln` macro o, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn () o scalbln (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -1,6 +1,7 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 6/5/2020
+description: Riferimento API per calcuating il limite massimo di un valore con il valore di cella ().
+ms.date: 9/1/2020
 api_name:
 - ceilf
 - ceil
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3079f52c79d6d888923025357bb21adc782aa5cd
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221952"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555243"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -64,26 +65,29 @@ float ceilf(
 long double ceill(
    long double x
 );
+#define ceil(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le **funzioni di** cella di sola risposta restituiscono un valore a virgola mobile che rappresenta il numero intero più piccolo maggiore o uguale a *x*. Non vi è restituzione di errori.
+Le **funzioni di** cella di sola risposta restituiscono un valore a virgola mobile che rappresenta il numero intero più piccolo maggiore o uguale a *x*. Non viene restituito alcun errore.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
 
 il valore di **cella ha un'** implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ **consente l'overload** , è possibile chiamare gli overload di una cella che accettano i **`float`** **`long double`** tipi o. In un programma **C, è** sempre necessario e restituisce un **`double`** .
+Poiché C++ **consente l'overload** , è possibile chiamare gli overload di una cella che accettano i **`float`** **`long double`** tipi o. In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione **ceil** , il numero di unità viene sempre eseguito e viene restituito un **`double`** .
+
+Se si utilizza la <tgmath. h> `ceil()` macro, il tipo di argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -92,6 +96,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**ceil**cella, **ceilf**, **ceill**|\<math.h>|
+|**macro di** cella | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

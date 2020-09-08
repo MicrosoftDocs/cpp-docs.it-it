@@ -1,5 +1,6 @@
 ---
 title: gmtime, _gmtime32, _gmtime64
+description: Informazioni di riferimento sulle API per gmtime, _gmtime32 e _gmtime64; che converte un valore time_t in una struttura TM.
 ms.date: 4/2/2020
 api_name:
 - _gmtime32
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b3dd09e828b972f05a4c45c30ebc3e5edb68f551
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234107"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556463"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -77,7 +78,7 @@ Puntatore a una struttura di tipo [tm](../../c-runtime-library/standard-types.md
 |**tm_yday**|Giorno dell'anno (0-365; 1 gennaio = 0).|
 |**tm_isdst**|Sempre 0 per **gmtime**.|
 
-Entrambe le versioni a 32 bit e 64 bit di **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtimee](mkgmtime-mkgmtime32-mkgmtime64.md)e [localtime](localtime-localtime32-localtime64.md) usano una struttura **TM** comune per ogni thread per la conversione. Ogni chiamata a una di queste funzioni elimina il risultato di una chiamata precedente. Se *sourceTime* rappresenta una data precedente alla mezzanotte del 1 gennaio 1970, **gmtime** restituisce **null**. Non vi è restituzione di errori.
+Entrambe le versioni a 32 bit e 64 bit di **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtimee](mkgmtime-mkgmtime32-mkgmtime64.md)e [localtime](localtime-localtime32-localtime64.md) usano una struttura **TM** comune per ogni thread per la conversione. Ogni chiamata a una di queste funzioni elimina il risultato di una chiamata precedente. Se *sourceTime* rappresenta una data precedente alla mezzanotte del 1 gennaio 1970, **gmtime** restituisce **null**. Non viene restituito alcun errore.
 
 **_gmtime64**, che usa la struttura **__time64_t** , consente di esprimere le date fino a 23:59:59, 31 dicembre 3000, UTC, mentre **_gmtime32** rappresentano solo le date fino al 23:59:59 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per entrambe le funzioni.
 
@@ -87,7 +88,7 @@ Queste funzioni convalidano i relativi parametri. Se *sourceTime* è un puntator
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_gmtime32** suddivide il valore *sourceTime* e lo archivia in una struttura allocata in modo statico di tipo **TM**, definita nel tempo. H. Il valore di *sourceTime* viene in genere ottenuto da una chiamata alla funzione [Time](time-time32-time64.md) .
+La funzione **_gmtime32** suddivide il valore *sourceTime* e lo archivia in una struttura allocata in modo statico di tipo **TM**, definita in time. H. Il valore di *sourceTime* viene in genere ottenuto da una chiamata alla funzione [Time](time-time32-time64.md) .
 
 > [!NOTE]
 > Nella maggior parte dei casi l'ambiente di destinazione tenta di determinare se è in vigore l'ora legale. La libreria di runtime C presuppone l'uso delle regole relative agli Stati Uniti per implementare il calcolo dell'ora legale.

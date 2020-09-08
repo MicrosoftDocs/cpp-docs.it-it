@@ -1,6 +1,7 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per lrint (), lrintf (), lrintl (), llrint (), llrintf () e llrintl (); che arrotonda il valore a virgola mobile specificato al valore integrale più vicino, usando la modalità di arrotondamento e la direzione correnti.
+ms.date: 9/1/2020
 api_name:
 - lrint
 - lrintl
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f208c183400aac7a110bb6fd87398d4377fe8f06
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216908"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555020"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -105,12 +106,14 @@ long long int llrintf(
 long long int llrintl(
    long double x
 );
+
+#define lrint(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
-Valore da arrotondare.
+*x*\
+Il valore da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -122,7 +125,9 @@ Se ha esito positivo, restituisce il valore integrale arrotondato di *x*.
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **lrint** e **llrint** che accettano i **`float`** tipi e **`long double`** . In un programma C, **lrint** e **llrint** accettano sempre un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **lrint** e **llrint** che accettano i **`float`** tipi e **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **lrint** e **llrint** accettano sempre un **`double`** .
+
+Se si usa la \<tgmath.h> `llrint()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Se *x* non rappresenta l'equivalente a virgola mobile di un valore integrale, queste funzioni generano **FE_INEXACT**.
 
@@ -132,12 +137,13 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|**lrint** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)

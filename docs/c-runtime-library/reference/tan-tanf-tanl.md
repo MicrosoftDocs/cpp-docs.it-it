@@ -1,6 +1,7 @@
 ---
 title: tan, tanf, tanl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per Tan, TANF e Tanl; che calcola la tangente di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - tan
 - tanf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215127"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556541"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -54,6 +55,7 @@ Calcola la tangente.
 double tan( double x );
 float tanf( float x );
 long double tanl( long double x );
+#define tan(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,7 +65,7 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,12 +74,14 @@ Le funzioni **Tan** restituiscono la tangente di *x*. Se *x* è maggiore o ugual
 
 |Input|Eccezione SEH|**Matherr** Eccezione|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|none|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
 |± INF|**Non valido**|_DOMAIN|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tan** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, **Tan** accetta e restituisce sempre **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tan** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione, **Tan** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `tan()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -86,6 +90,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
 |**Tan**, **TANF**, **Tanl**|\<math.h>|\<cmath> o \<math.h>|
+|**Tan () (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

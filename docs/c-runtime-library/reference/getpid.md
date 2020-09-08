@@ -1,5 +1,6 @@
 ---
 title: _getpid
+description: Riferimento API per _getpid, che ottiene l'identificazione del processo.
 ms.date: 11/04/2016
 api_name:
 - _getpid
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc2de8e0b6e87d04bd9ae29ce3a945c048af00e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954991"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556489"
 ---
 # <a name="_getpid"></a>_getpid
 
@@ -48,9 +49,9 @@ int _getpid( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce l'ID processo ottenuto dal sistema. Non vi è restituzione di errori.
+Restituisce l'ID processo ottenuto dal sistema. Non viene restituito alcun errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **_getpid** Ottiene l'ID del processo dal sistema. L'ID processo identifica in modo univoco il processo chiamante.
 
@@ -60,7 +61,7 @@ La funzione **_getpid** Ottiene l'ID del processo dal sistema. L'ID processo ide
 |-------------|---------------------|
 |**_getpid**|\<process.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -87,5 +88,5 @@ Process id: 3584
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_mktemp, _wmktemp](mktemp-wmktemp.md)<br/>

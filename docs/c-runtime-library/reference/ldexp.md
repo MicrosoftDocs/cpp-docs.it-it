@@ -1,6 +1,7 @@
 ---
 title: ldexp, ldexpf, ldexpl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per ldexp, ldexpf e ldexpl; che moltiplica un numero a virgola mobile per una potenza integrale di due.
+ms.date: 9/1/2020
 api_name:
 - ldexp
 - ldexpf
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6ce6bcbc8adbc62e8d8598b97a6f77e04fee1511
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216921"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555449"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -57,14 +58,6 @@ double ldexp(
    double x,
    int exp
 );
-float ldexp(
-   float x,
-   int exp
-);  // C++ only
-long double ldexp(
-   long double x,
-   int exp
-);  // C++ only
 float ldexpf(
    float x,
    int exp
@@ -73,14 +66,24 @@ long double ldexpl(
    long double x,
    int exp
 );
+#define ldexp(X, INT) // Requires C11 or higher
+
+float ldexp(
+   float x,
+   int exp
+);  // C++ only
+long double ldexp(
+   long double x,
+   int exp
+);  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile.
 
-*exp*<br/>
+*exp*\
 Esponente dell'intero.
 
 ## <a name="return-value"></a>Valore restituito
@@ -91,7 +94,9 @@ Per ulteriori informazioni su **errno** e sui possibili valori restituiti degli 
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **ldexp** che accettano i **`float`** **`long double`** tipi o. In un programma C **ldexp** accetta sempre un oggetto **`double`** e un oggetto **`int`** e restituisce un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **ldexp** che accettano i **`float`** **`long double`** tipi o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **ldexp** accetta sempre un **`double`** e un **`int`** e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `ldexp()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -100,6 +105,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
 |**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp** (macro) | \<tgmath.h> ||
 
 Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

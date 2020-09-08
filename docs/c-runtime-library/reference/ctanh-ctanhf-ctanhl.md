@@ -1,5 +1,6 @@
 ---
 title: ctanh, ctanhf, ctanhl
+description: Informazioni di riferimento sulle API per ctanh, ctanhf, ctanhl; che calcola la tangente iperbolica complessa di un numero complesso.
 ms.date: 11/04/2016
 api_name:
 - ctanh
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 959d48853e3edac707a7daea615270b20dad37e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941955"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555866"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -66,7 +67,7 @@ _Lcomplex ctanhl(
 
 ### <a name="parameters"></a>Parametri
 
-*z*<br/>
+*z*\
 Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
@@ -75,10 +76,10 @@ Tangente iperbolica complessa di *z*.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|_DOMAIN|
-|± ∞ (tan, tanf)|NON VALIDO|_DOMAIN|
+|± ∞, QNAN, IND|Nessuno|_DOMAIN|
+|± ∞ (Tan, TANF)|NON VALIDO|_DOMAIN|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **ctanh** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **ctanh** accetta e restituisce sempre un valore **_Dcomplex** .
 

@@ -1,5 +1,6 @@
 ---
 title: _chgsign, _chgsignf, _chgsignl
+description: Informazioni di riferimento sulle API per _chgsign, _chgsignf e _chgsignl; che inverte il segno di un argomento a virgola mobile.
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943131"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555202"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -64,7 +65,7 @@ Valore a virgola mobile da modificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **_chgsign** restituiscono un valore uguale all'argomento a virgola mobile *x*, ma con il segno invertito. Non vi è restituzione di errori.
+Le funzioni **_chgsign** restituiscono un valore uguale all'argomento a virgola mobile *x*, ma con il segno invertito. Non viene restituito alcun errore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -73,10 +74,10 @@ Le funzioni **_chgsign** restituiscono un valore uguale all'argomento a virgola 
 |**_chgsign**|\<float.h>|
 |**_chgsignf**, **_chgsignl**|\<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)<br/>

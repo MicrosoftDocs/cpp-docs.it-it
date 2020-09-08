@@ -1,6 +1,7 @@
 ---
 title: acosh, acoshf, acoshl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per acosh, acoshf e acoshl; che calcola il coseno iperbolico inverso di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - acoshf
 - acosh
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef6d47ca07f96be84962303c13162b154086e5f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220756"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555111"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -54,16 +55,15 @@ Calcola il coseno iperbolico inverso.
 double acosh( double x );
 float acoshf( float x );
 long double acoshl( long double x );
-```
+#define acosh(X) // Requires C11 or higher
 
-```cpp
 float acosh( float x );  // C++ only
 long double acosh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,20 +72,23 @@ Le funzioni **acosh** restituiscono il coseno iperbolico inverso (coseno iperbol
 
 |Input|Eccezione SEH|Eccezione`_matherr`|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|none|none|
-|*x* < 1|none|none|
+|± QNAN, IND, INF|Nessuno|Nessuno|
+|*x* < 1|Nessuno|Nessuno|
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si usa C++, è possibile chiamare overload di **acosh** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C **acosh** accetta e restituisce sempre **`double`** .
+Quando si usa C++, è possibile chiamare overload di **acosh** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **acosh** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `acosh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**acosh () (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

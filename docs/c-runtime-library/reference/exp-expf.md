@@ -1,6 +1,7 @@
 ---
 title: exp, expf, expl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per exp, expf e soluz; che calcolano l'esponenziale.
+ms.date: 08/31/2020
 api_name:
 - expf
 - expl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234172"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555891"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,11 +65,12 @@ float expf(
 long double expl(
    long double x
 );
+#define exp(z) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile in cui exponentiate il logaritmo naturale base *e* da.
 
 ## <a name="return-value"></a>Valore restituito
@@ -86,15 +88,18 @@ La funzione **Exp** ha un'implementazione che usa Streaming SIMD Extensions 2 (S
 
 ## <a name="remarks"></a>Osservazioni
 
-C++ consente l'overload, quindi è possibile chiamare gli overload di **Exp** che accettano un **`float`** **`long double`** argomento o. In un programma C, **Exp** accetta e restituisce sempre un **`double`** .
+C++ consente l'overload, quindi è possibile chiamare gli overload di **Exp** che accettano un **`float`** **`long double`** argomento o. In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione, **Exp** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `exp()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|---------------------|---|
 |**Exp**, **expf**, **soluz**|\<math.h>|\<cmath> o \<math.h>|
+|macro **Exp**| \<tgmath.h> || 
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

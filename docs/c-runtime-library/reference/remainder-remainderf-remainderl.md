@@ -1,6 +1,7 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 4/2/2020
+description: Riferimento API per resto, remainderf e restol; che calcola il resto del quoziente di due valori a virgola mobile, arrotondato al valore integrale più vicino.
+ms.date: 9/1/2020
 api_name:
 - remainderl
 - remainder
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216804"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556009"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -51,19 +52,18 @@ Calcola il resto del quoziente di due valori a virgola mobile, arrotondati al va
 double remainder( double x, double y );
 float remainderf( float x, float y );
 long double remainderl( long double x, long double y );
-```
+#define remainder(X, Y) // Requires C11 or higher
 
-```cpp
 float remainder( float x, float y ); /* C++ only */
 long double remainder( long double x, long double y ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Numeratore.
 
-*y*<br/>
+*y*\
 Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
@@ -74,15 +74,18 @@ Resto a virgola mobile di *x*  /  *y*. Se il valore di *y* è 0,0, **resto** res
 
 Le funzioni **resto** calcolano il resto a virgola mobile *r* di *x*  /  *y* in modo che *x*  =  *n* \* *y*  +  *r*, dove *n*è il numero intero più vicino al valore *x*  /  *y* e *n*è anche ogni volta che &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Quando *r* = 0, *r* ha lo stesso segno di *x*.
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **resto** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C il **resto** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **resto** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **resto** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `remainder()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
+|Function|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |--------------|---------------------|-|
 |**resto**, **remainderf**, **restol**|\<math.h>|\<cmath> o \<math.h>|
+|**resto** (macro) | \<tgmath.h> ||
 
 Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -110,8 +113,8 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
-[imaxdiv](imaxdiv.md)<br/>
-[fmod, fmodf](fmod-fmodf.md)<br/>
-[remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[ldiv, lldiv](ldiv-lldiv.md)\
+[imaxdiv](imaxdiv.md)\
+[fmod, fmodf](fmod-fmodf.md)\
+[remquo, remquof, remquol](remquo-remquof-remquol.md)

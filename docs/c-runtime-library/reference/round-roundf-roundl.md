@@ -1,6 +1,7 @@
 ---
 title: round, roundf, roundl
-ms.date: 4/2/2020
+description: Riferimento API per round, roundf e roundal; che arrotonda un valore a virgola mobile all'intero più vicino.
+ms.date: 9/1/2020
 api_name:
 - round
 - roundl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a7e47dd3a528e45abc8247a64bf5c4d81164e95
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226177"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556645"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -63,24 +64,27 @@ float roundf(
 long double roundl(
    long double x
 );
+#define round(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **round** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non vi è restituzione di errori.
+Le funzioni **round** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non viene restituito alcun errore.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **round** che accettano e restituiscono **`float`** **`long double`** i valori e. In un programma C, **round** accetta sempre e restituisce un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **round** che accettano e restituiscono **`float`** **`long double`** i valori e. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **round** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `round()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -89,6 +93,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**round**, **roundf**, **roundal**|\<math.h>|
+|**round** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

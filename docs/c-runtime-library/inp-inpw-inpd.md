@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825829"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556476"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>INP, _inp, inpw, _inpw, _inpd
 
-Input, da una porta, un byte (`inp`, `_inp`), una parola (`inpw`, `_inpw`) o una parola doppia (`_inpd`).
+Input, da una porta, un byte ( `inp` , `_inp` ), una parola ( `inpw` , `_inpw` ) o una parola doppia ( `_inpd` ).
 
 > [!IMPORTANT]
 > Queste funzioni sono obsolete. A partire da Visual Studio 2015, non sono disponibili in CRT. \
@@ -72,7 +72,7 @@ Numero porta di I/O.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni restituiscono il byte, la parola o la parola doppia letti da `port`. Non vi è restituzione di errori.
+Le funzioni restituiscono il byte, la parola o la parola doppia letti da `port`. Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -80,7 +80,7 @@ Le funzioni `_inp`, `_inpw`e `_inpd` leggono un byte, una parola e una doppia pa
 
 Dato che queste funzioni leggono direttamente da una porta I/O, non possono essere usate nel codice utente.
 
-I `inp` nomi `inpw` e sono i nomi obsoleti e deprecati `_inp` per `_inpw` le funzioni e. Per altre informazioni, vedere [nomi di funzioni POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+I `inp` `inpw` nomi e sono i nomi obsoleti e deprecati per le `_inp` `_inpw` funzioni e. Per altre informazioni, vedere [nomi di funzioni POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Requisiti
 

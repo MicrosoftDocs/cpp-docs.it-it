@@ -1,6 +1,7 @@
 ---
 title: fma, fmaf, fmal
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per FMA, fmaf e Fmal; che moltiplica due valori insieme, aggiunge un terzo valore, quindi arrotonda il risultato, senza perdere alcuna precisione a causa dell'arrotondamento intermedio.
+ms.date: 9/1/2020
 api_name:
 - fma
 - fmaf
@@ -37,16 +38,16 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9ae92c28f24b6281d73450c7cabaad775a84d42
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216999"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556697"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Moltiplica due valori, aggiunge un terzo valore e quindi arrotonda il risultato, senza perdita di precisione grazie all'arrotondamento intermedio.
+Moltiplica due valori insieme, aggiunge un terzo valore, quindi arrotonda il risultato, senza perdere alcuna precisione a causa dell'arrotondamento intermedio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -80,17 +81,19 @@ long double fmal(
    long double  y,
    long double z
 );
+
+#define fma(X, Y, Z) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Primo valore da moltiplicare.
 
-*y*<br/>
+*y*\
 Secondo valore da moltiplicare.
 
-*z*<br/>
+*z*\
 Il valore da aggiungere.
 
 ## <a name="return-value"></a>Valore restituito
@@ -112,7 +115,9 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **FMA** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, **FMA** accetta e restituisce sempre un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **FMA** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **FMA** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `fma()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Questa funzione calcola il valore come per la precisione infinita e quindi arrotonda il risultato finale.
 
@@ -120,9 +125,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**FMA**, **fmaf**, **Fmal**|\<math.h>|\<cmath>|
+|**FMA** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

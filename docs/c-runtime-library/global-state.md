@@ -1,14 +1,15 @@
 ---
 title: Stato globale in CRT
+description: Viene descritto come viene gestito lo stato globale condiviso nel runtime C universale.
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: a794f201184c10c11611138d30d14b36b00405a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1c787147ea3df36ce120837ef5b2c68b1bf58b1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845185"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554669"
 ---
 # <a name="global-state-in-the-crt"></a>Stato globale in CRT
 

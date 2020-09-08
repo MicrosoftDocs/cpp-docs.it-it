@@ -1,6 +1,7 @@
 ---
 title: sinh, sinhf, sinhl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per il calcolo del seno iperbolico di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - sinh
 - sinhl
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229415"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556177"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -54,16 +55,15 @@ Calcola il seno iperbolico.
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);
-```
+#define sinh(x) // Requires C11 or higher
 
-```cpp
 float sinh(float x);  // C++ only
 long double sinh(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
@@ -79,7 +79,9 @@ Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_err
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ **consente l'overload** , è possibile chiamare gli overload di che accettano e restituiscono **`float`** **`long double`** valori o. In un programma **C, il** valore di e restituisce sempre **`double`** .
+Poiché C++ **consente l'overload** , è possibile chiamare gli overload di che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione **sinh** , il valore di l'operazione viene sempre eseguito e restituito da **`double`** .
+
+Se si usa la \<tgmath.h> `sinh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -88,6 +90,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-|-|-|
 |**sinh** **sinhf**, **sinhl**|\<math.h>|\<cmath> o \<math.h>|
+|**() (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

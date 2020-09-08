@@ -1,6 +1,7 @@
 ---
 title: fmod, fmodf, fmodl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per fmod, fmodf e fmodl; che calcola il resto a virgola mobile.
+ms.date: 9/1/2020
 api_name:
 - fmod
 - fmodf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216973"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556086"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -68,11 +69,13 @@ long double fmodl(
    long double x,
    long double y
 );
+
+#define fmod(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*, *y*<br/>
+*x*, *y*\
 Valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
@@ -83,15 +86,18 @@ Valori a virgola mobile.
 
 La funzione **fmod** calcola il resto a virgola mobile *f* di *x*  /  *y* in modo *che x*  =  *i* \* *y*  +  *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **fmod** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C **fmod** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
+C++ consente l'overload, quindi è possibile chiamare overload di **fmod** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **fmod** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `fmod()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria|
+|Function|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|**fmod** (macro) | \<tgmath.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

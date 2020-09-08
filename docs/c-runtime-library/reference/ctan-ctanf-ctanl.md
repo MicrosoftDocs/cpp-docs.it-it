@@ -1,5 +1,6 @@
 ---
 title: ctan, ctanf, ctanl
+description: Informazioni di riferimento sulle API per CTAN, ctanf e ctanl; che recupera la tangente di un numero complesso.
 ms.date: 11/04/2016
 api_name:
 - ctan
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74fa33a6bf6b99e8606094aff3845fdfd79d48a2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938450"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555904"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -66,7 +67,7 @@ _Lcomplex ctanl(
 
 ### <a name="parameters"></a>Parametri
 
-*z*<br/>
+*z*\
 Numero complesso che rappresenta l'angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
@@ -75,10 +76,10 @@ Tangente della *z*.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|_DOMAIN|
-|± ∞ (**tan**, **tanf**)|NON VALIDO|_DOMAIN|
+|± ∞, QNAN, IND|Nessuno|_DOMAIN|
+|± ∞ (**Tan**, **TANF**)|NON VALIDO|_DOMAIN|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **CTAN** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **CTAN** accetta e restituisce sempre un valore **_Dcomplex** .
 
@@ -86,9 +87,9 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **CTAN** che 
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**ctan**,               **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**CTAN**,  **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

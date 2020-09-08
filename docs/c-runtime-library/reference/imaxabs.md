@@ -1,5 +1,6 @@
 ---
 title: imaxabs
+description: Riferimento API per imaxabs, che calcola il valore assoluto di un intero di qualsiasi dimensione.
 ms.date: 04/05/2018
 api_name:
 - imaxabs
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 599e8a0cb20f24bda24201be40fa1acc0ade993c
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954684"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555501"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -50,10 +51,10 @@ Valore intero.
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione **imaxabs** restituisce il valore assoluto dell'argomento. Non vi è restituzione di errori.
+La funzione **imaxabs** restituisce il valore assoluto dell'argomento. Non viene restituito alcun errore.
 
 > [!NOTE]
-> Poiché l'intervallo di numeri interi negativi che possono essere rappresentati con **intmax_t** è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati, è possibile fornire un argomento a **imaxabs** che non può essere convertito. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, il comportamento di **imaxabs** non è definito.
+> Poiché l'intervallo di numeri interi negativi che possono essere rappresentati usando **intmax_t** è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati, è possibile fornire un argomento a **imaxabs** che non può essere convertito. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, il comportamento di **imaxabs** non è definito.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -93,8 +94,8 @@ The absolute value of -9223372036854775806 is 9223372036854775806
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>

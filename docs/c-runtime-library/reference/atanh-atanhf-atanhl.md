@@ -1,6 +1,7 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per atanh, atanhf e atanhl; che calcola la tangente iperbolica inversa di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - atanhl
 - atanhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0a8e06963519553144c7e49d26e61dbbde51c21
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232599"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555592"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -51,16 +52,15 @@ Calcola la tangente iperbolica inversa.
 double atanh( double x );
 float atanhf( float x );
 long double atanhl( long double x );
-```
+#define atanh(X) // Requires C11 or higher
 
-```cpp
 float atanh( float x );  // C++ only
 long double atanh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
@@ -69,20 +69,23 @@ Le funzioni **atanh** restituiscono la tangente iperbolico inversa (tangente ipe
 
 |Input|Eccezione SEH|**Matherr** Eccezione|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|nessuno|nessuno|
-|*X* ≥ 1; *x* ≤-1|nessuno|nessuno|
+|± QNAN, IND|Nessuno|Nessuno|
+|*X* ≥ 1; *x* ≤-1|Nessuno|Nessuno|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **atanh** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **atanh** accetta e restituisce sempre **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **atanh** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **atanh** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `atanh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> o \<math.h>|
+|**atanh () (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

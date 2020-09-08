@@ -1,6 +1,7 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per remquo, remquof e remquol; che calcola il resto di due valori integer e archivia un valore intero con il segno e la grandezza approssimativa del quoziente in una posizione specificata in un parametro.
+ms.date: 9/1/2020
 api_name:
 - remquof
 - remquo
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216791"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554968"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -51,22 +52,21 @@ Calcola il resto di due valori interi e archivia un valore intero con il segno e
 double remquo( double numer, double denom, int* quo );
 float remquof( float numer, float denom, int* quo );
 long double remquol( long double numer, long double denom, int* quo );
-```
+#define remquo(X, Y, INT_PTR) // Requires C11 or higher
 
-```cpp
 float remquo( float numer, float denom, int* quo ); /* C++ only */
 long double remquo( long double numer, long double denom, int* quo ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*numero*<br/>
+*numero*\
 Numeratore.
 
-*Denom*<br/>
+*Denom*\
 Denominatore.
 
-*quo*<br/>
+*quo*\
 Puntatore a un intero per archiviare un valore con il segno e la grandezza approssimativa del quoziente.
 
 ## <a name="return-value"></a>Valore restituito
@@ -77,15 +77,18 @@ Puntatore a un intero per archiviare un valore con il segno e la grandezza appro
 
 La funzione **remquo** calcola il resto a virgola mobile *f* di *x*  /  *y* in modo *che x*  =  *i* \* *y*  +  *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **remquo** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **remquo** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
+C++ consente l'overload, quindi è possibile chiamare overload di **remquo** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **remquo** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `remquo()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
+|Function|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> o \<math.h>|
+|**remquo** (macro) | \<tgmath.h> ||
 
 Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

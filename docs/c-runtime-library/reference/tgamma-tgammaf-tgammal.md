@@ -1,6 +1,7 @@
 ---
 title: tgamma, tgammaf, tgammal
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per tgamma, tgammaf e tgammal; che determinano la funzione gamma del valore specificato.
+ms.date: 9/1/2020
 api_name:
 - tgamma
 - tgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49020ca0697e920dccf188df4ad024820966571
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218520"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555176"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -55,14 +56,6 @@ double tgamma(
    double x
 );
 
-float tgamma(
-   float x
-); //C++ only
-
-long double tgamma(
-   long double x
-); //C++ only
-
 float tgammaf(
    float x
 );
@@ -70,11 +63,21 @@ float tgammaf(
 long double tgammal(
    long double x
 );
+
+#define tgamma(X) // Requires C11 or higher
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore di cui trovare la funzione gamma.
 
 ## <a name="return-value"></a>Valore restituito
@@ -99,7 +102,9 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **tgamma** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **tgamma** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **tgamma** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **tgamma** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `tgamma()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Se x è un numero naturale, questa funzione restituisce il fattoriale di (x-1).
 
@@ -107,9 +112,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
-|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**, **tgammaf**,  **tgammal**|\<math.h>|\<cmath>|
+|**tgamma** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

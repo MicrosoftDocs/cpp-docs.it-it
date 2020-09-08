@@ -1,5 +1,6 @@
 ---
 title: _getche_nolock, _getwche_nolock
+description: Riferimento API per _getche_nolock e _getwche_nolock; che ottiene un carattere dalla console, con Echo e senza bloccare il thread.
 ms.date: 4/2/2020
 api_name:
 - _getche_nolock
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: 901c823d2e6539d7c07e3521c5d372b7816eb9b8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: faee0ea1e104367a113b5462cb8aa7541646976d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910769"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556062"
 ---
 # <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock, _getwche_nolock
 
@@ -63,7 +64,7 @@ wint_t _getwche_nolock( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il carattere letto. Non vi è restituzione di errori.
+Restituisce il carattere letto. Non viene restituito alcun errore.
 
 ## <a name="remarks"></a>Osservazioni
 

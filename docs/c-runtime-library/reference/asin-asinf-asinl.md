@@ -1,6 +1,7 @@
 ---
 title: asin, asinf, asinl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per Asin, asinf e asinl; che calcola l'arcoseno di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189441"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556658"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -51,16 +52,15 @@ Calcola l'arcoseno.
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore di cui deve essere calcolato l'arcoseno.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,12 +72,14 @@ Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **Asin** re
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|**Non valido**|**_DOMAIN**|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
 |&#124;x&#124;>1|**Non valido**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Asin** con **`float`** **`long double`** i valori e. In un programma C, **Asin** accetta sempre e restituisce un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Asin** con **`float`** **`long double`** i valori e. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **Asin** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `asin()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
 |**Asin**, **asinf**, **asinl**|\<math.h>|\<cmath> o \<math.h>|
+|**Asin () (macro)** | \<tgmath.h> ||
 
 ## <a name="example"></a>Esempio
 

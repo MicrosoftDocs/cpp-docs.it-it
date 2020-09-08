@@ -1,5 +1,6 @@
 ---
 title: _fileno
+description: Riferimento API per _fileno; che ottiene il descrittore di file associato a un flusso.
 ms.date: 4/2/2020
 api_name:
 - _fileno
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c07f446cc3c5c29fb102a74b2b095957589eab46
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919469"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554851"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -55,7 +56,7 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_fileno** restituisce il descrittore del file. Non vi è restituzione di errori. Il risultato non è definito se il *flusso* non specifica un file aperto. Se il flusso è **null**, **_fileno** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** su **EINVAL**.
+**_fileno** restituisce il descrittore del file. Non viene restituito alcun errore. Il risultato non è definito se il *flusso* non specifica un file aperto. Se il flusso è **null**, **_fileno** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** su **EINVAL**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

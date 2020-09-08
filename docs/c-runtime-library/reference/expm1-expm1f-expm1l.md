@@ -1,6 +1,7 @@
 ---
 title: expm1, expm1f, expm1l
-ms.date: 04/05/2018
+description: Informazioni di riferimento sulle API per expm1, expm1f e expm1; che calcola l'esponenziale in base e di un valore, meno uno.
+ms.date: 9/1/2020
 api_name:
 - expm1l
 - expm1
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 63e984f2228ac6896cd9d2ea959b491565bfb8d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6d352e91d895cd63c7134faff90bc1bc43a50708
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234133"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556502"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -59,11 +60,12 @@ float expm1f(
 long double expm1l(
    long double x
 );
+#define expm1(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Il valore esponenziale a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
@@ -72,13 +74,16 @@ Le funzioni **expm1** restituiscono un valore a virgola mobile che rappresenta e
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **expm1** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C **expm1** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **expm1** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **expm1** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `expm1()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**expm1**, **expm1f**, **expm1l**|\<math.h>|
+|**expm1** (macro) | \<tgmath.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

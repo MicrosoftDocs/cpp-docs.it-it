@@ -1,6 +1,7 @@
 ---
 title: rint, rintf, rintl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per Rint, rintf e rintl; che arrotondano un valore a virgola mobile all'intero più vicino nel formato a virgola mobile.
+ms.date: 9/1/2020
 api_name:
 - rintf
 - rintl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ed1fa279694d3df75db5963e5a571d58299e415
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216765"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555345"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -51,38 +52,40 @@ Arrotonda un valore a virgola mobile all'intero più vicino nel formato a virgol
 double rint( double x );
 float rintf( float x );
 long double rintl( long double x );
-```
+#define rint(X) // Requires C11 or higher
 
-```cpp
 float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **rint** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. I valori a metà vengono arrotondati in base all'impostazione corrente della modalità di arrotondamento a virgola mobile, come per le funzioni **nearbyint** . Diversamente dalle funzioni **nearbyint** , le funzioni **rint** possono generare l'eccezione a virgola mobile **FE_INEXACT** se il risultato è diverso dal valore dell'argomento. Non vi è restituzione di errori.
+Le funzioni **rint** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. I valori a metà vengono arrotondati in base all'impostazione corrente della modalità di arrotondamento a virgola mobile, come per le funzioni **nearbyint** . Diversamente dalle funzioni **nearbyint** , le funzioni **rint** possono generare l'eccezione a virgola mobile **FE_INEXACT** se il risultato è diverso dal valore dell'argomento. Non viene restituito alcun errore.
 
 |Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|none|
-|Valori denormalizzati|EXCEPTION_FLT_UNDERFLOW|none|
+|± ∞, QNAN, IND|Nessuno|Nessuno|
+|Valori denormalizzati|EXCEPTION_FLT_UNDERFLOW|Nessuno|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **rint** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C **rint** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **rint** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **rint** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `rint()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rint** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

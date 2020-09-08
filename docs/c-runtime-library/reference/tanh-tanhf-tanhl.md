@@ -1,6 +1,7 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per tanh, tanhf e tanhl; che calcola la tangente iperbolica di un valore a virgola mobile.
+ms.date: 08/31/2020
 api_name:
 - tanh
 - tanhf
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa93f56ebec5e8aa06c7317534adb12ae9e68e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215114"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556580"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -52,6 +53,7 @@ Calcola la tangente iperbolica.
 double tanh( double x );
 float tanhf( float x );
 long double tanhl( long double x );
+#define tanh(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -61,20 +63,22 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **tanh** restituiscono la tangente iperbolica di *x*. Non vi è restituzione di errori.
+Le funzioni **tanh** restituiscono la tangente iperbolica di *x*. Non viene restituito alcun errore.
 
 |Input|Eccezione SEH|**Matherr** Eccezione|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|none|_DOMAIN|
+|± QNAN, IND|Nessuno|_DOMAIN|
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **tanh** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C **tanh** accetta e restituisce sempre **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **tanh** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **tanh** accetta e restituisce sempre **`double`** .
+
+Se si usa la \<tgmath.h> `tanh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -83,6 +87,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C)|
 |-------------|---------------------|-|
 |**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> o \<math.h>|
+|**tanh () (macro)** | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

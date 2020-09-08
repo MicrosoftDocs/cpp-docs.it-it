@@ -1,6 +1,7 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 4/2/2020
+description: Informazioni di riferimento sulle API per hypot, hypotf, hypotl, _hypot, _hypotf e _hypotl; che calcola l'ipotenusa.
+ms.date: 9/1/2020
 api_name:
 - _hypotf
 - hypot
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 199e330dcd78c372a0279cac9f0e96cb47c561e8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919838"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556450"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -82,11 +83,12 @@ long double _hypotl(
    long double x,
    long double y
 );
+#define hypotf(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*, *y*<br/>
+*x*, *y*\
 Valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
@@ -97,9 +99,11 @@ Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_err
 
 ## <a name="remarks"></a>Osservazioni
 
-Le funzioni **hypot** calcolano la lunghezza dell'ipotenusa di un triangolo rettangolo, data la lunghezza dei due lati *x* e *y* (in altre parole, la radice quadrata di *x*<sup>2</sup> + *y*<sup>2</sup>).
+Le funzioni **hypot** calcolano la lunghezza dell'ipotenusa di un triangolo rettangolo, data la lunghezza dei due lati *x* e *y* (in altre parole, la radice quadrata di *x*<sup>2</sup>  +  *y*<sup>2</sup>).
 
 Le versioni delle funzioni con caratteri di sottolineatura iniziali sono fornite per compatibilità con standard precedenti. Il comportamento è identico per le versioni senza caratteri di sottolineatura iniziali. È consigliabile usare le versioni senza caratteri di sottolineatura iniziali per il nuovo codice.
+
+Se si usa la \<tgmath.h> `hypot()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -108,6 +112,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot** (macro) | \<tgmath.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -135,6 +140,6 @@ If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [_matherr](matherr.md)<br/>

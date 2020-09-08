@@ -1,6 +1,7 @@
 ---
 title: fdim, fdimf, fdiml
-ms.date: 04/05/2018
+description: Informazioni di riferimento sulle API per fdim, fdimf e fdiml; che determina la differenza positiva tra due valori.
+ms.date: 9/1/2020
 api_name:
 - fdim
 - fdimf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 406fc5cfe543aa0865760df9ff780c62e78510fc
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221913"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554786"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -71,14 +72,16 @@ long double fdiml(
    long double x,
    long double y
 );
+
+#define fdim(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Primo valore.
 
-*y*<br/>
+*y*\
 Secondo valore.
 
 ## <a name="return-value"></a>Valore restituito
@@ -102,15 +105,18 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **fdim** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C **fdim** accetta e restituisce sempre un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare overload di **fdim** che accettano e restituiscono i **`float`** tipi e **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **fdim** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `fdim()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Ad eccezione della gestione NaN, questa funzione è equivalente a `fmax(x - y, 0)` .
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
+|**fdim** (macro) | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

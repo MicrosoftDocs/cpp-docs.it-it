@@ -1,5 +1,6 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
+description: Informazioni di riferimento sulle API per _rotl, _rotl64, _rotr e _rotr64; che ruotano i bit a sinistra (_rotl) o a destra (_rotr).
 ms.date: 04/05/2018
 api_name:
 - _rotr64
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2fb6b2674ed7d50cff63ae45f22af63b0120597
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949142"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556593"
 ---
 # <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Ruota i bit a sinistra ( **_rotl**) o a destra ( **_rotr**).
+Ruota i bit a sinistra (**_rotl**) o a destra (**_rotr**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -86,11 +87,11 @@ Numero di bit da spostare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore ruotato. Non vi è restituzione di errori.
+Il valore ruotato. Non viene restituito alcun errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le funzioni **_rotl** e **_rotr** ruotano il *valore* senza segno per *MAIUSC* bit. **_rotl** ruota il valore a sinistra. **_rotr** ruota il valore a destra. Entrambe le funzioni ruotano i bit da una estremità all'altra di *value*.
+Le funzioni **_rotl** e **_rotr** ruotano il *valore* senza segno per *spostare* i bit. **_rotl** ruota il valore a sinistra. **_rotr** ruota il valore a destra. Entrambe le funzioni ruotano i bit da una estremità all'altra di *value*.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -99,7 +100,7 @@ Le funzioni **_rotl** e **_rotr** ruotano il *valore* senza segno per *MAIUSC* b
 |**_rotl**, **_rotl64**|\<stdlib.h>|
 |**_rotr**, **_rotr64**|\<stdlib.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -143,5 +144,5 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_lrotl, _lrotr](lrotl-lrotr.md)<br/>

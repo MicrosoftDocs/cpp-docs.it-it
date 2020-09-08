@@ -1,6 +1,7 @@
 ---
 title: trunc, truncf, truncl
-ms.date: 04/05/2018
+description: Informazioni di riferimento sulle API per tronca, truncf, truncl; che determinano l'intero più vicino minore o uguale al valore a virgola mobile specificato.
+ms.date: 9/1/2020
 api_name:
 - trunc
 - truncf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1f2fde95bb944aa461bb95a9ad30fac204552b9
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232391"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556632"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -48,18 +49,16 @@ Restituisce l'intero più prossimo minore o uguale al valore a virgola mobile sp
 
 ```C
 double trunc( double x );
-float trunc( float x ); //C++ only
 long double truncl( long double x );
-```
+#define trunc(X) // Requires C11 or higher
 
-```cpp
 long double trunc( long double x ); //C++ only
 float trunc( float x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*\
 Valore da troncare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -78,7 +77,9 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tronca** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, **Tronca** accetta sempre e restituisce un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tronca** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione, **Tronca** accetta sempre e restituisce un **`double`** .
+
+Se si usa la \<tgmath.h> `trunc()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Poiché i valori a virgola mobile più grandi sono numeri interi esatti, questa funzione non genererà un overflow autonomamente. Tuttavia, è possibile causare l'overflow della funzione restituendo un valore in un tipo Integer.
 
@@ -86,9 +87,10 @@ Poiché i valori a virgola mobile più grandi sono numeri interi esatti, questa 
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione|Intestazione C|Intestazione C++|
+|Function|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**Tronca**, **truncf**, **truncl**|\<math.h>|\<cmath>|
+|**Tronca** macro | \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
