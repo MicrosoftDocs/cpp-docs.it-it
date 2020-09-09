@@ -1,29 +1,30 @@
 ---
-title: Impostazione di un collegamento statico al codice di Registrar (solo C++)
-ms.date: 11/04/2016
+title: Configurazione di un collegamento statico nel codice del Registrar (solo C++)
+description: Come collegare in modo statico il codice C++ al codice del registrar ATL.
+ms.date: 09/03/2020
 helpviewer_keywords:
 - statically linking to ATL Registrar code
 - linking [C++], to ATL Registrar code
 ms.assetid: 835f5885-87a6-48fa-91e6-60988ee65538
-ms.openlocfilehash: b95bd17abca3237710956f3a1bf1b1d6fa9df51e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f08f7d9433ae1344c7a98a5c52502d03bad21e91
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196666"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609158"
 ---
-# <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Impostazione di un collegamento statico al codice di Registrar (solo C++)
+# <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Impostazione di un collegamento statico al codice del registrar (solo C++)
 
-I client di C++ è possono creare un collegamento statico al codice di registrazione. Collegamento statico del parser del Registrar aggiunge circa 5 KB a una build di rilascio.
+I client C++ possono creare un collegamento statico al codice del registrar. Il collegamento statico del parser del Registrar aggiunge approssimativamente 5K a una build di rilascio.
 
-Il modo più semplice per configurare il collegamento statico si presuppone di aver specificato [DECLARE_REGISTRY_RESOURCEID](reference/registry-macros.md#declare_registry_resourceid) nella dichiarazione dell'oggetto. (Questa è la specifica predefinita usata da ATL.)
+Il modo più semplice per configurare il collegamento statico presuppone che sia stato specificato [`DECLARE_REGISTRY_RESOURCEID`](reference/registry-macros.md#declare_registry_resourceid) nella dichiarazione dell'oggetto. Si tratta della specifica predefinita utilizzata da ATL.
 
-## <a name="to-create-a-static-link-using-declareregistryresourceid"></a>Per creare un collegamento statico mediante DECLARE_REGISTRY_RESOURCEID
+## <a name="to-create-a-static-link-using-declare_registry_resourceid"></a>Per creare un collegamento statico utilizzando `DECLARE_REGISTRY_RESOURCEID`
 
-1. Specificare [/D](../build/reference/d-preprocessor-definitions.md)  **\_ATL\_statico\_registro** anziché **/D \_ATL\_DLL**.
+1. Specificare **`/D _ATL_STATIC_REGISTRY`** invece di **`/D _ATL_DLL`** nella riga di comando CL. Per altre informazioni, vedere [`/D`](../build/reference/d-preprocessor-definitions.md).
 
-1. RECOMPILE.
+1. Ricompilare.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Registro di sistema ATL (Registrar)](../atl/atl-registry-component-registrar.md)
+[Componente registro di sistema (Registrar)](../atl/atl-registry-component-registrar.md)

@@ -6,12 +6,12 @@ ms.date: 07/25/2020
 helpviewer_keywords:
 - keywords [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: 13b174a40621b8aeeae58d4ccae8e4e51c8fdd44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 96fb4e6a51630f3b5297c6428297980b5c51ca36
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843326"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609139"
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 
@@ -288,9 +288,9 @@ Questi identificatori sono attributi estesi per il **`__declspec`** modificatore
 
 <sup>f</sup> applicabile solo a estensioni gestite per C++. Questa sintassi è ora deprecata. Per altre informazioni, vedere [Estensioni componenti per le piattaforme runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
-<sup>f</sup> applicabile a C++/CLI.
+<sup>g</sup> applicabile a C++/CLI.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Convenzioni lessicali](lexical-conventions.md)<br/>
 [Operatori, precedenza e associatività predefiniti di C++](cpp-built-in-operators-precedence-and-associativity.md)

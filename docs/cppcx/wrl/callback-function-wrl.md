@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8615b92f9b46dcfc6e36867c51eeefdb7a5f5e81
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214136"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609090"
 ---
 # <a name="callback-function-wrl"></a>Funzione di callback (WRL)
 
@@ -24,7 +24,7 @@ template<
    typename TCallback
 >
 ComPtr<TDelegateInterface> Callback(
-   TCallbackcallback
+   TCallback callback
 );
 template<
    typename TDelegateInterface,
@@ -233,16 +233,16 @@ Oggetto che rappresenta l'oggetto di callback e la relativa funzione membro.
 *object*<br/>
 L'oggetto di cui la funzione membro viene chiamata quando si verifica un evento.
 
-*method*<br/>
+*Metodo*<br/>
 La funzione membro da chiamare quando si verifica un evento.
 
 ## <a name="return-value"></a>Valore restituito
 
 Oggetto la cui funzione membro è il metodo di callback specificato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La base di un oggetto delegato deve essere `IUnknown`, non `IInspectable`.
+La base di un oggetto delegato deve essere `IUnknown` , non `IInspectable` .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -250,6 +250,6 @@ La base di un oggetto delegato deve essere `IUnknown`, non `IInspectable`.
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL](microsoft-wrl-namespace.md)
+[Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)

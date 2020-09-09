@@ -1,31 +1,32 @@
 ---
 title: Classi parziali (C++/CX)
+description: Come dichiarare e usare classi parziali in C++/CX.
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70225069c948a50b38ac3642113cf940c86cf8da
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185463"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609065"
 ---
 # <a name="partial-classes-ccx"></a>Classi parziali (C++/CX)
 
-Una classe parziale è un costrutto che supporta scenari in cui tu effettui la modifica di una parte di una definizione di classe e il software che genera codice automaticamente, ad esempio la finestra di progettazione XAML, modifica il codice nella stessa classe. Utilizzando una classe parziale, puoi impedire alla finestra di progettazione di sovrascrivere il tuo codice. In un progetto di Visual Studio, il modificatore `partial` viene applicato automaticamente al file generato.
+Una classe parziale è un costrutto che supporta scenari in cui tu effettui la modifica di una parte di una definizione di classe e il software che genera codice automaticamente, ad esempio la finestra di progettazione XAML, modifica il codice nella stessa classe. Utilizzando una classe parziale, puoi impedire alla finestra di progettazione di sovrascrivere il tuo codice. In un progetto di Visual Studio, il **`partial`** modificatore viene applicato automaticamente al file generato.
 
 ## <a name="syntax"></a>Sintassi
 
-Per definire una classe parziale, utilizza la parola chiave `partial` immediatamente prima della classe di chiave della definizione di classe normale. Una parola chiave come `partial ref class` è una parola chiave contestuale contenente spazi vuoti. Le definizioni parziali sono supportate nei seguenti costrutti.
+Per definire una classe parziale, usare la **`partial`** parola chiave immediatamente prima della chiave di classe di che altrimenti sarebbe una definizione di classe normale. Una parola chiave, ad esempio, **`partial ref class`** è una parola chiave contestuale che contiene spazi vuoti. Le definizioni parziali sono supportate nei seguenti costrutti.
 
-- **`class`** o**`struct`**
+- **`class`** o **`struct`**
 
-- **`ref class`** o**`ref struct`**
+- **`ref class`** o **`ref struct`**
 
-- **`value class`** o**`value struct`**
+- **`value class`** o **`value struct`**
 
-- **`enum`** o**`enum class`**
+- **`enum`** o **`enum class`**
 
-- `ref interface`, **`interface class`** , **`interface struct`** o **' __interface**
+- **`ref interface`**, **`interface class`** , **`interface struct`** o **`__interface`**
 
 - **`union`**
 
@@ -35,7 +36,7 @@ In questo esempio viene illustrata un'operazione parziale **`ref class`** :
 
 ## <a name="contents"></a>Contenuto
 
-Se la parola chiave `partial` è stata omessa, una definizione di classe parziale può contenere qualsiasi elemento che può essere incluso in una definizione di classe completa. Ciò significa che, con un'unica eccezione, una definizione di classe parziale può includere qualsiasi costrutto valido come le classi di base, i membri dati, le funzioni membro, le enumerazioni, le dichiarazioni Friend e gli attributi. Sono inoltre consentite le definizioni inline dei membri dati statici.
+Una definizione di classe parziale può contenere qualsiasi elemento che la definizione di classe completa può contenere se la **`partial`** parola chiave è stata omessa. Ciò significa che, con un'unica eccezione, una definizione di classe parziale può includere qualsiasi costrutto valido come le classi di base, i membri dati, le funzioni membro, le enumerazioni, le dichiarazioni Friend e gli attributi. Sono inoltre consentite le definizioni inline dei membri dati statici.
 
 L'unica eccezione è l'accessibilità della classe. Ad esempio, l'istruzione `public partial class MyInvalidClass {/* ... */};` non è corretta. Gli identificatori di accesso utilizzati in una definizione di classe parziale per MyInvalidClass non influiscono sull'accessibilità predefinita in una successiva definizione di classe parziale o completa per MyInvalidClass.
 
@@ -45,13 +46,13 @@ Nel frammento di codice riportato di seguito viene illustrata l'impostazione del
 
 ## <a name="declaration"></a>Dichiarazione
 
-La definizione parziale di una classe come *MyClass* è solo una dichiarazione di MyClass. In altre parole, si limita a introdurre il nome *MyClass*. *MyClass* non può essere usato in un modo che richieda una definizione di classe, ad esempio quando le dimensioni di *MyClass* sono note o quando si usa una base o un membro di *MyClass*. *MyClass* viene considerato definito solo quando il compilatore rileva una definizione non parziale di *MyClass*.
+Una definizione parziale di una classe, ad esempio, `MyClass` è solo una dichiarazione di MyClass. Ovvero introduce solo il nome `MyClass` . `MyClass` non può essere utilizzato in modo che richieda una definizione di classe, ad esempio, conoscendo la dimensione di `MyClass` o utilizzando una base o un membro di `MyClass` . `MyClass` viene considerato definito solo quando il compilatore rileva una definizione non parziale di `MyClass` .
 
-Nell'esempio seguente viene illustrato il comportamento dichiarativo di una classe parziale. Dopo la dichiarazione #1 si può usare *MyClass* come se fosse scritto come dichiarazione con prototipo, `ref class MyClass;`. La dichiarazione n.2 equivale alla dichiarazione n.1. La dichiarazione n.3 è valida perché è una dichiarazione con prototipo per una classe. La dichiarazione n.4 non è valida perché
+Nell'esempio seguente viene illustrato il comportamento dichiarativo di una classe parziale. Dopo la #1 di dichiarazione, `MyClass` può essere usato come se fosse scritto come dichiarazione con il nome `ref class MyClass;` . La dichiarazione n.2 equivale alla dichiarazione n.1. La dichiarazione n.3 è valida perché è una dichiarazione con prototipo per una classe. La dichiarazione n.4 non è valida perché
 
-*MyClass* non è completamente definito.
+`MyClass` non è completamente definita.
 
-La dichiarazione #5 non usa la parola chiave `partial` e definisce completamente *MyClass*. Pertanto, la dichiarazione #6 è valida.
+La dichiarazione #5 non usa la **`partial`** parola chiave e la dichiarazione definisce completamente `MyClass` . Pertanto, la dichiarazione #6 è valida.
 
 [!code-cpp[Cx_partial#03](../cppcx/codesnippet/CPP/partialclassexample/class1.h#03)]
 
@@ -59,7 +60,7 @@ La dichiarazione #5 non usa la parola chiave `partial` e definisce completamente
 
 Per ogni definizione completa di una classe possono esservi zero o più definizioni di classe parziali.
 
-Ogni definizione di classe parziale deve precedere a livello lessicale la definizione completa della stessa classe, ma non ne deve precedere le dichiarazioni con prototipo. Se non è presente alcuna definizione completa della classe, le dichiarazioni di classe parziali possono solo essere dichiarazioni con prototipo.
+Ogni definizione di classe parziale di una classe deve precedere in modo lessicale la definizione completa di tale classe, ma non deve precedere le dichiarazioni con la classe. Se non è presente alcuna definizione completa della classe, le dichiarazioni di classe parziali possono solo essere dichiarazioni con prototipo.
 
 Tutte le chiavi di classe, ad esempio **`class`** e, **`struct`** devono corrispondere. Ad esempio, non è corretto scrivere il codice `partial class X {}; struct X {};`.
 
@@ -85,17 +86,17 @@ Una classe parziale non può essere un modello.
 
 Una classe parziale non può estendersi oltre un'unità di conversione.
 
-La `partial` parola chiave è supportata solo in combinazione con la parola chiave **`ref class`** o la parola **`value class`** chiave.
+La **`partial`** parola chiave è supportata solo in combinazione con la parola chiave **`ref class`** o la parola **`value class`** chiave.
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
-Nell'esempio seguente la definizione della classe `Address` si estende a due file di codice. Il file `Address.details.h` viene modificato dalla finestra di progettazione e tu devi modificare `Address.h`. La parola chiave `partial` viene utilizzata solo nella definizione della classe nel primo file.
+Nell'esempio seguente la definizione della classe `Address` si estende a due file di codice. Il file `Address.details.h` viene modificato dalla finestra di progettazione e tu devi modificare `Address.h`. Solo la definizione della classe nel primo file usa la **`partial`** parola chiave.
 
 [!code-cpp[cx_partial#07](../cppcx/codesnippet/CPP/partialclassexample/address.details.h#07)]
 
 [!code-cpp[cx_partial#09](../cppcx/codesnippet/CPP/partialclassexample/address.h#09)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
