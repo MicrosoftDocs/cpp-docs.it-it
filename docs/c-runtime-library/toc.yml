@@ -64,6 +64,8 @@
       href: ../c-runtime-library/crt-initialization.md
     - name: Stato globale in CRT
       href: ../c-runtime-library/global-state.md
+    - name: Operazione matematiche generiche di tipo
+      href: ../c-runtime-library/tgmath.md
 - name: Routine di Universal C Runtime per categoria
   expanded: false
   items:
