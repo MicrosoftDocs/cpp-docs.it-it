@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d9f59817a499f4d529363c88adc57154268c0bc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229805"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039586"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Supporto per Apri cartella per i sistemi di compilazione C++ in Visual Studio
 
@@ -31,7 +31,7 @@ CMake è integrato nell'IDE di Visual Studio come componente del carico di lavor
 
 Per usare l'IDE di Visual Studio con un sistema di compilazione o un set di strumenti del compilatore non direttamente supportato dal menu principale, selezionare **file | Apri | Oppure premere** **CTRL + MAIUSC + ALT + o**. Passare alla cartella che contiene i file del codice sorgente. Per compilare il progetto, configurare IntelliSense e impostare i parametri di debug, si aggiungono tre file JSON:
 
-| | |
+| File | Descrizione |
 |-|-|
 |CppProperties.json|Specifica informazioni di configurazione personalizzate per l'esplorazione. Se necessario, creare questo file nella cartella radice del progetto. (Non usato nei progetti CMake.)|
 |tasks.vs.json|Specificare i comandi di compilazione personalizzati. Accessibile tramite il comando **Configura attività** nel menu di scelta rapida **Esplora soluzioni**.|
@@ -179,7 +179,7 @@ Per altre informazioni, vedere [Riferimento allo schema Tasks.vs.json](tasks-vs-
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurare i parametri di debug con launch.vs.json
 
-Per personalizzare gli argomenti della riga di comando del programma e le istruzioni di debug, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Verrà aperto unlaunch.vs.jsesistente *nel* file o, se non ne esiste alcuno, verrà creato un nuovo file con un set di impostazioni di avvio minime. Per prima cosa, è possibile scegliere il tipo di sessione di debug che si desidera configurare. Per eseguire il debug di un progetto MinGw-W64, si sceglie **avvio C/C++ per MinGW/Cygwin (gdb)**. Questa operazione crea una configurazione di avvio per l'uso di *gdb.exe* con alcune ipotesi colte sui valori predefiniti. Uno di questi valori predefiniti è `MINGW_PREFIX` . È possibile sostituire il percorso letterale (come illustrato di seguito) oppure è possibile definire una `MINGW_PREFIX` Proprietà in *CppProperties.js*in:
+Per personalizzare gli argomenti della riga di comando del programma e le istruzioni di debug, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Verrà aperto unlaunch.vs.jsesistente * nel* file o, se non ne esiste alcuno, verrà creato un nuovo file con un set di impostazioni di avvio minime. Per prima cosa, è possibile scegliere il tipo di sessione di debug che si desidera configurare. Per eseguire il debug di un progetto MinGw-W64, si sceglie **avvio C/C++ per MinGW/Cygwin (gdb)**. Questa operazione crea una configurazione di avvio per l'uso di *gdb.exe* con alcune ipotesi colte sui valori predefiniti. Uno di questi valori predefiniti è `MINGW_PREFIX` . È possibile sostituire il percorso letterale (come illustrato di seguito) oppure è possibile definire una `MINGW_PREFIX` Proprietà in *CppProperties.js*in:
 
 ```json
 {

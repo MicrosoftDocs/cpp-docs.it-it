@@ -3,12 +3,12 @@ title: Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Wi
 description: Guida di riferimento alle funzioni CRT non supportate nelle app piattaforma UWP (Universal Windows Platform).
 ms.date: 04/16/2020
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: cfe5fbc1ce505c255e074dda2c3a240b46754eee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 793283a5c20f04e58de22fcfca5ede1926de369c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845718"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041835"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)
 
@@ -18,7 +18,7 @@ La tabella seguente elenca le funzioni CRT non disponibili quando si compilano a
 
 ## <a name="unsupported-crt-functions"></a>Funzioni CRT non supportate
 
-|Funzione|Descrizione|Soluzione alternativa|
+| Funzione | Descrizione | Soluzione alternativa |
 |-|-|-|
 |`_beep` `_sleep` `_seterrormode`|Queste funzioni sono obsolete nelle precedenti versioni di CRT. Inoltre, le API Win32 corrispondenti non sono disponibili per le app UWP.|Nessuna soluzione alternativa.|
 |`chdir` `_chdrive` `getcwd`|Queste funzioni sono obsolete o non sono thread-safe.|Usare `_chdir` , `_getcwd` e le funzioni correlate.|
@@ -33,12 +33,12 @@ La tabella seguente elenca le funzioni CRT non disponibili quando si compilano a
 |`_getsystime` `_setsystime`|Queste API sono obsolete nelle precedenti versioni di CRT. Inoltre, l'utente non può impostare l'ora di sistema in un'app UWP a causa della mancanza di autorizzazioni.|Per ottenere solo l'ora di sistema, usa l'API Win32 `GetSystemTime`. L'ora di sistema non può essere impostata.|
 |`_environ``_putenv` `_putenv_s` `_searchenv` `_searchenv_s` `_dupenv_s` `_wputenv` `_wputenv_s` `_wsearchenv` getenv `_wdupenv_s` `_wenviron` getenv_s `_wgetenv` putenv `_wgetenv_s` `_wsearchenv_s``tzset`|Le variabili di ambiente non sono disponibili per le app UWP.|Nessuna soluzione alternativa. Per impostare il fuso orario, usare `_tzset` .|
 |`_loaddll` `_getdllprocaddr` `_unloaddll`|Queste funzioni sono obsolete nelle precedenti versioni di CRT. Inoltre, un utente non può caricare DLL ad eccezione di quelle nello stesso pacchetto dell'applicazione.|Usare le API Win32 `LoadPackagedLibrary`, `GetProcAddress`e `FreeLibrary` per caricare e usare le DLL disponibili nel pacchetto.|
-|`_wexecl``_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe`'' spawnl ` ` spawnle ` ` spawnlp ` ` spawnlpe spawnv spawnve spawnvp spawnvpe ` ` ` ` ` ` ` ` ` ` System '|La funzionalità non è disponibile nelle app UWP. Un'app UWP non può richiamare un'altra app UWP o un'app desktop.|Nessuna soluzione alternativa.|
+|`_wexecl` `_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe` `spawnl` `spawnle` `spawnlp` `spawnlpe` `spawnv` `spawnve` `spawnvp` `spawnvpe` `system`|La funzionalità non è disponibile nelle app UWP. Un'app UWP non può richiamare un'altra app UWP o un'app desktop.|Nessuna soluzione alternativa.|
 |`_heapwalk` `_heapadd` `_heapchk` `_heapset` `_heapused`|Queste funzioni vengono in genere usate per l'interazione con l'heap. Tuttavia, le API Win32 corrispondenti non sono supportate nelle app UWP. Inoltre le app non possono più creare o usare heap privati.|Nessuna soluzione alternativa. Tuttavia, la funzione `_heapwalk` è disponibile in CRT DEBUG solo a scopo di debug. Queste funzioni non possono essere usate nelle app caricate nel Microsoft Store.|
 
 Le funzioni seguenti sono disponibili in CRT per le app UWP. Tuttavia, usarli solo quando non è possibile usare le API Win32 o Windows Runtime corrispondenti, ad esempio quando si esegue il porting di codebase di grandi dimensioni:
 
-|Funzioni|Soluzione alternativa|
+| Funzioni | Soluzione alternativa |
 |-|-|
 |Funzioni stringa a byte singolo, ad esempio `strcat`, `strcpy`, `strlwr`e così via.|Rendere le app UWP rigorosamente Unicode perché tutte le API Win32 e le API Windows Runtime esposte usano solo set di caratteri Unicode.  Le funzioni a byte singolo sono state lasciate per il porting di codebase di grandi dimensioni, ma in caso contrario devono essere evitate. Quando possibile, è consigliabile utilizzare le corrispondenti funzioni con caratteri wide.|
 |Funzioni I/O di flusso e file di basso livello, ad esempio `fopen`, `open`e così via.|Queste funzioni sono sincrone, che non sono consigliate per le app UWP. Nelle app UWP usare API asincrone per aprire, leggere e scrivere nei file, in modo da evitare il blocco del thread UI. Esempi di tali API sono quelle incluse nella classe `Windows::Storage::FileIO` .|
@@ -47,7 +47,7 @@ Le funzioni seguenti sono disponibili in CRT per le app UWP. Tuttavia, usarli so
 
 Le API citate in precedenza e le API seguenti non sono disponibili nelle app di Windows 8. x Store e nelle app Windows Phone 8. x.
 
-|Funzioni|Descrizione|Soluzione alternativa|
+| Funzioni | Descrizione | Soluzione alternativa |
 |-|-|-|
 |`_beginthread` `_beginthreadex` `_endthread` `_endthreadex`|Le API Win32 di threading non sono disponibili nelle app di Windows 8.x Store.|In sostituzione usare `Windows Runtime Windows::System::Threading::ThreadPool` o `concurrency::task` .|
 |`_chdir` `_wchdir` `_getcwd` `_getdcwd` `_wgetcwd` `_wgetdcwd`|Il concetto di una directory di lavoro non è applicabile alle app di Windows 8. x Store.|Usare invece percorsi completi.|

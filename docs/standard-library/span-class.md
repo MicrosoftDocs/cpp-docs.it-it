@@ -1,5 +1,6 @@
 ---
 title: classe Span (libreria standard C++) | Microsoft Docs
+description: Informazioni di riferimento sulle API per la classe Span STL (Standard Template Library), che fornisce una visualizzazione semplificata di una sequenza di oggetti contigua.
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 297104820f5498e59397db9025aed1675984a060
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560452"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039964"
 ---
 # <a name="span-class-c-standard-library"></a>classe Span (libreria standard C++)
 
@@ -83,7 +84,7 @@ class span;
 
 [Guida alla deduzione](#deduction_guides)
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 | **Definizioni dei tipi** | **Descrizione** |
 |-|-|
@@ -121,7 +122,7 @@ class span;
 |[span:: operator =](#op_eq)| Sostituire l'intervallo.|
 |[operatore span::\[\]](#op_at)| Ottiene l'elemento in corrispondenza della posizione specificata. |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Tutte le `span` funzioni membro hanno una complessità temporale costante.
 
@@ -133,7 +134,7 @@ A differenza `array` `vector` di o, un span non "possiede" gli elementi al suo i
 
 **Spazio dei nomi:** std
 
-**Opzione del compilatore:** /std: c + + Latest più recente
+**Opzione del compilatore:** [/std: c + + Latest più recente](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="spanback"></a><a name="back"></a> `span::back`
 
@@ -271,7 +272,7 @@ Tipo degli elementi nell'intervallo.
 using element_type = T;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo viene tratto dal parametro di modello `T` quando viene creato un intervallo.
 
@@ -337,7 +338,7 @@ constexpr iterator end() const noexcept;
 
 Iteratore che punta appena oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `end` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
@@ -372,7 +373,7 @@ Il numero di elementi viene specificato come parametro per il modello o per la f
 
 Intervallo che contiene `count` gli elementi dall'inizio di questo intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare la versione modello di questa funzione quando possibile per convalidare in fase di `count` compilazione e mantenere le informazioni sull'intervallo poiché restituisce un intervallo di extent fisso.
 
@@ -452,7 +453,7 @@ Tipo di un iteratore sugli elementi span.
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo tipo funge da iteratore sugli elementi in un intervallo.
 
@@ -497,7 +498,7 @@ Il numero può essere specificato come parametro per il modello o per la funzion
 
 Intervallo contenente gli ultimi `count` elementi di questo intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare la versione modello di questa funzione quando possibile per convalidare in fase di `count` compilazione e mantenere le informazioni sull'intervallo poiché restituisce un intervallo di extent fisso.
 
@@ -589,7 +590,7 @@ Intervallo da assegnare a questo.
 
 `*this`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'assegnazione esegue una copia superficiale del puntatore ai dati e della dimensione. Una copia superficiale è sicura perché `span` non alloca memoria per gli elementi in esso contenuti.
 
@@ -741,7 +742,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 Iteratore inverso per il segnaposto che segue l'ultimo elemento nell'intervallo invertito; ovvero il segnaposto prima del primo elemento nell'intervallo non invertito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `rend` viene usato con un intervallo invertito proprio come span [:: end](#end) viene usato con un intervallo. Usarlo per verificare se un iteratore inverso ha raggiunto la fine del relativo intervallo.
 
@@ -955,7 +956,7 @@ Crea una copia di questo intervallo.
 *r*\
 Costruisce un intervallo da questo intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un intervallo non libera spazio di archiviazione per gli elementi nell'intervallo perché non è il proprietario dell'archiviazione degli oggetti al suo interno.
 
@@ -1016,7 +1017,7 @@ Posizione nell'intervallo in cui iniziare l'intervallo.
 
 Intervallo che inizia in corrispondenza `offset` di in questo intervallo. Contiene `count` elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È disponibile una versione modello di questa funzione che controlla il conteggio in fase di compilazione, in modo da mantenere le informazioni sull'intervallo restituendo un intervallo di extent fisso.
 
@@ -1116,7 +1117,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<span>](../standard-library/span.md)  
 [Come usare la deduzione dell'argomento del modello di classe](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

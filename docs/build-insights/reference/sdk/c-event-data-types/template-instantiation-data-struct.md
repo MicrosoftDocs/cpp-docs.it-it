@@ -1,6 +1,6 @@
 ---
-title: struttura TEMPLATE_INSTANTIATION_DATA
-description: L'SDK di build Insights di C'è TEMPLATE_INSTANTIATION_DATA riferimento alla struttura.
+title: Struttura TEMPLATE_INSTANTIATION_DATA
+description: Il riferimento alla struttura TEMPLATE_INSTANTIATION_DATA di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a38d19368e7c0a9912907f1da6e7a2e31ffe8d90
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15bbb25c3abac339201179e763bffd916dba0480
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325323"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040873"
 ---
-# <a name="template_instantiation_data-structure"></a>struttura TEMPLATE_INSTANTIATION_DATA
+# <a name="template_instantiation_data-structure"></a>Struttura TEMPLATE_INSTANTIATION_DATA
 
 ::: moniker range="<=vs-2015"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -39,16 +39,16 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 } TEMPLATE_INSTANTIATION_DATA;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-|  |  |
+| Nome | Descrizione |
 |--|--|
 | `SpecializationSymbolKey` | Chiave per il tipo di specializzazione del modello. Questo valore è univoco all'interno della traccia analizzata. |
 | `PrimaryTemplateSymbolKey` | Chiave per il tipo di modello primario specializzato. Questo valore è univoco all'interno della traccia analizzata. |
-| `KindCode` | Tipo della creazione di istanze del modello. Per ulteriori informazioni, vedere [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
+| `KindCode` | Tipo di creazione dell'istanza del modello. Per ulteriori informazioni, vedere [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le chiavi `TEMPLATE_INSTANTIATION_DATA` nella struttura sono univoche all'interno della traccia analizzata. Tuttavia, due chiavi diverse provenienti da passaggi front-end del compilatore diversi possono puntare a due tipi identici. Quando `TEMPLATE_INSTANTIATION_DATA` si utilizzano informazioni da più passaggi front-end del compilatore, usare gli eventi [SYMBOL_NAME](../event-table.md#symbol-name) per determinare se due tipi sono uguali. `SymbolName`Gli eventi vengono generati alla fine di un passaggio front-end del compilatore, dopo che sono state eseguite tutte le istanze del modello.
+Le chiavi nella `TEMPLATE_INSTANTIATION_DATA` struttura sono univoche all'interno della traccia analizzata. Tuttavia, due chiavi diverse provenienti da passaggi front-end del compilatore diversi possono puntare a due tipi identici. Quando `TEMPLATE_INSTANTIATION_DATA` si utilizzano informazioni provenienti da più passaggi front-end del compilatore, utilizzare gli eventi [SYMBOL_NAME](../event-table.md#symbol-name) per determinare se due tipi sono uguali. `SymbolName` gli eventi vengono generati alla fine di un passaggio front-end del compilatore, dopo che sono state eseguite tutte le creazioni di istanze di modello.
 
 ::: moniker-end

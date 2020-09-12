@@ -1,15 +1,16 @@
 ---
 title: '&lt;string_view&gt;'
-ms.date: 04/18/2019
+description: Panoramica di `basic_string_view` che fa riferimento a una sequenza contigua costante di oggetti di tipo char.
+ms.date: 9/4/2020
 helpviewer_keywords:
 - string_view header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 13b6f5c63b9426fc4c31527f0d1ae8291d07807f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f74f6c5855f71b0df46f585e874002cdb4308e42
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222212"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039911"
 ---
 # <a name="ltstring_viewgt"></a>&lt;string_view&gt;
 
@@ -23,7 +24,7 @@ Definisce il modello di classe `basic_string_view` e i tipi e gli operatori corr
 
 ## <a name="remarks"></a>Osservazioni
 
-La famiglia string_view di specializzazioni di modelli fornisce un modo efficiente per passare un handle di sola lettura, indipendente dalle eccezioni e non proprietario ai dati di tipo carattere di qualsiasi oggetto di tipo stringa con il primo elemento della sequenza nella posizione zero. Un parametro di funzione di tipo `string_view` (ovvero un typedef per `basic_string_view<char>` ) può accettare argomenti come `std::string` , **char \* **o qualsiasi altra classe simile a una stringa di caratteri stretti per cui è definita una conversione implicita in `string_view` . Analogamente, un parametro `wstring_view` di `u16string_view` o `u32string_view` può accettare qualsiasi tipo stringa per cui è definita una conversione implicita. Per ulteriori informazioni, vedere [Basic_string_view Class](../standard-library/basic-string-view-class.md).
+La `string_view` famiglia di specializzazioni di modelli fornisce un modo efficiente per passare un handle di sola lettura, indipendente dalle eccezioni e non proprietario ai dati di tipo carattere di qualsiasi oggetto di tipo stringa con il primo elemento della sequenza nella posizione zero. Un parametro di funzione di tipo `string_view` (ovvero un typedef per `basic_string_view<char>` ) può accettare argomenti come `std::string` , `char*` o qualsiasi altra classe simile a una stringa di caratteri ristretti per cui è definita una conversione implicita in `string_view` . Analogamente, un parametro `wstring_view` di `u16string_view` o `u32string_view` può accettare qualsiasi tipo stringa per cui è definita una conversione implicita. Per ulteriori informazioni, vedere [Basic_string_view Class](../standard-library/basic-string-view-class.md).
 
 ### <a name="typedefs"></a>Typedef
 
@@ -67,8 +68,8 @@ Gli \<string_view> operatori possono confrontare `string_view` oggetti con ogget
 
 - **Spazio dei nomi:** std
 
-- **Opzione del compilatore:** std: c++ 17 (o versione successiva)
+- **Opzione del compilatore:** [std: c++ 17](../build/reference/std-specify-language-standard-version.md) o versione successiva.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

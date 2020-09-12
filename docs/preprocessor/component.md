@@ -8,12 +8,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 578c590bdb4223f173e0249c18d0eea4e78a18db
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 73b308fdc426be9b403b808d4e638b4f5c1e9149
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220474"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040730"
 ---
 # <a name="component-pragma"></a>Pragma component
 
@@ -21,11 +21,11 @@ Controlla la raccolta di informazioni di visualizzazione o di informazioni sulle
 
 ## <a name="syntax"></a>Sintassi
 
-> **componente #pragma (browser,** { **on** | **off** } [ **,** **riferimenti** [ **,** *nome* ]] **)**  \
-> **componente #pragma (minrebuild,** { **on** | **off** } **)**  \
-> **componente #pragma (mintypeinfo,** { **on** | **off** } **)**
+> **componente #pragma (browser,** { **on** \| **off** } \[ **,** **riferimenti** \[ **,** *nome* ]] **)** \
+> **componente #pragma (minrebuild,** { **on** \| **off** } **)** \
+> **componente #pragma (mintypeinfo,** { **on** \| **off** } **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 ### <a name="browser"></a>Browser
 
@@ -42,7 +42,7 @@ arresta la raccolta di informazioni di visualizzazione da parte del compilatore.
 > [!NOTE]
 > Per attivare la raccolta di informazioni di visualizzazione con questo pragma, [è necessario abilitare prima le informazioni di visualizzazione](../build/reference/building-browse-information-files-overview.md).
 
-L' opzione References può essere utilizzata con o senza l'argomento *Name* . L'uso di **riferimenti** senza *nome* consente di attivare o disattivare la raccolta di riferimenti (altre informazioni di visualizzazione continuano a essere raccolte, tuttavia). Ad esempio:
+L'opzione **References** può essere utilizzata con o senza l'argomento *Name* . L'uso di **riferimenti** senza *nome* consente di attivare o disattivare la raccolta di riferimenti (altre informazioni di visualizzazione continuano a essere raccolte, tuttavia). Ad esempio:
 
 ```cpp
 #pragma component(browser, off, references)
@@ -72,7 +72,7 @@ Per impedire al preprocessore di espandere il *nome* (ad esempio, espandendo nul
 
 ### <a name="minimal-rebuild"></a>Ricompilazione minima
 
-La funzionalità deprecata [/GM (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md) richiede al compilatore di creare e C++ archiviare le informazioni sulle dipendenze della classe, che occupa spazio su disco. Per risparmiare spazio su disco, è possibile `#pragma component( minrebuild, off )` usare ogni volta che non è necessario raccogliere informazioni sulle dipendenze, ad esempio, in file di intestazione che non cambiano. Inserisci `#pragma component( minrebuild, on )` dopo le classi non modificabili per attivare di nuovo la raccolta delle dipendenze.
+La funzionalità deprecata [/GM (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md) richiede al compilatore di creare e archiviare le informazioni sulle dipendenze della classe C++, che occupa spazio su disco. Per risparmiare spazio su disco, è possibile usare `#pragma component( minrebuild, off )` ogni volta che non è necessario raccogliere informazioni sulle dipendenze, ad esempio, in file di intestazione che non cambiano. Inserisci `#pragma component( minrebuild, on )` dopo le classi non modificabili per attivare di nuovo la raccolta delle dipendenze.
 
 ### <a name="reduce-type-information"></a>Ridurre le informazioni sul tipo
 
@@ -82,8 +82,8 @@ L' `mintypeinfo` opzione consente di ridurre le informazioni di debug per l'area
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-Per altre informazioni, vedere l'opzione del compilatore [/GM (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md) .
+Per altre informazioni, vedere l'opzione del compilatore [/GM (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md)  .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

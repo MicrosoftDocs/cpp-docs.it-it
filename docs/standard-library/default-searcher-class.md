@@ -5,12 +5,12 @@ f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 307fc6da3b383690e0b65bff2a72f386a37d6711
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203728"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039690"
 ---
 # <a name="default_searcher-class"></a>Classe default_searcher
 
@@ -34,16 +34,16 @@ class default_searcher
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-| | |
+| Membro | Descrizione |
 | - | - |
 | **Costruttore** | |
-| [default_searcher](#default-searcher-constructor) | |
+| [default_searcher](#default-searcher-constructor) | Costruisce un'istanza di ricerca. |
 | **Operatori** | |
-| [operatore ()](#operator-call) | |
+| [operatore ()](#operator-call) | Richiama l'operazione sulla sequenza. |
 
-## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>Costruttore default_searcher
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a> Costruttore default_searcher
 
 Costruisce un `default_searcher` oggetto funzione utilizzando la sequenza di ricerca e un predicato di uguaglianza.
 
@@ -70,13 +70,13 @@ Fine della sequenza da cercare.
 *Pred*\
 Predicato di confronto di uguaglianza facoltativo per gli elementi di sequenza. Se non viene specificato un tipo di confronto di uguaglianza, il valore predefinito è `std::equal_to` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Genera qualsiasi eccezione generata dal costruttore di copia dei tipi *BinaryPredicate* o *ForwardIterator* .
 
 Questa classe è una novità di C++ 17. C++ 20 ha creato il costruttore **`constexpr`** .
 
-## <a name="operator"></a><a name="operator-call"></a>operatore ()
+## <a name="operator"></a><a name="operator-call"></a> operatore ()
 
 Operatore di chiamata dell'operatore di funzione. Cerca nella sequenza di argomenti `[first, last)` la sequenza specificata per il costruttore.
 
@@ -100,7 +100,7 @@ Elemento iniziale della sequenza in cui eseguire la ricerca.
 *Ultima*\
 Fine della sequenza nella quale eseguire la ricerca.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce una coppia di iteratori. L' *iteratore iniziale i è* il risultato effettivo di:
 
@@ -112,7 +112,7 @@ Il secondo iteratore della coppia è *Last* se *i** è *l'ultimo*. In caso contr
 
 Questa classe è una novità di C++ 17. C++ 20 ha eseguito l'operatore di chiamata **`constexpr`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<functional>](functional.md)\
 [funzioni per gli algoritmi](algorithm-functions.md)\

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281809"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039812"
 ---
 # <a name="ltbitgt-functions"></a>&lt;funzioni di bit &gt;
 
@@ -101,7 +101,7 @@ float f = inf
 std::bit_cat<int>(f) = 7f800000
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il codice di basso livello deve spesso interpretare un oggetto di un tipo come un altro tipo. L'oggetto reinterpretato ha la stessa rappresentazione di bit dell'originale, ma è un tipo diverso.
 
@@ -111,7 +111,7 @@ Invece di usare `reinterpret_cast` , o `memcpy()` , `bit_cast()` è un modo migl
 
 Questo overload partecipa solo alla risoluzione dell'overload se:
 -  `sizeof(To) == sizeof(From)`
-- `To` e `From` sono [is_trivially_copyable](https://docs.microsoft.com/cpp/standard-library/is-trivially-copyable-class?view=vs-2019`).
+- `To` e `From` sono [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Questo modello di funzione è `constexpr` se e solo se `To` , `From` e i tipi dei relativi oggetti suboggetto sono:
 - non è un tipo di Unione o puntatore
@@ -165,7 +165,7 @@ bit_ceil(0b0100) = 0b0100
 bit_ceil(0b0101) = 0b1000
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -216,7 +216,7 @@ bit_floor(0b0100) = 0b0100
 bit_floor(0b0101) = 0b0100
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -270,7 +270,7 @@ bit_width(7) = 3
 bit_width(8) = 4
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -323,7 +323,7 @@ countl_zero(0b01000000) = 1
 countl_zero(0b10000000) = 0
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -376,7 +376,7 @@ countl_one(0b11111110) = 7
 countl_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -430,7 +430,7 @@ countr_zero(0b01000000) = 6
 countr_zero(0b10000000) = 7
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -483,7 +483,7 @@ countr_one(0b01111111) = 7
 countr_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -537,7 +537,7 @@ has_single_bit(0b1000) = true
 has_single_bit(0b1001) = false
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -596,7 +596,7 @@ popcount(0b1110) = 3
 popcount(0b1111) = 4
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -658,7 +658,7 @@ rotl(0b10000000, 1) = 0b00000001
 rotl(0b00000001,-1) = 0b10000000
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -720,7 +720,7 @@ rotr(0b00000001, 1) = 0b10000000
 rotr(0b10000000,-1) = 0b00000001
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -730,7 +730,7 @@ Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` 
 
 **Spazio dei nomi:** std
 
-`/std:c++latest` è obbligatorio
+[/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) è obbligatorio.
 
 ## <a name="see-also"></a>Vedere anche
 

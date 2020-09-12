@@ -1,6 +1,6 @@
 ---
-title: struttura INVOCATION_VERSION_DATA
-description: L'SDK di analisi di compilazione di C'è INVOCATION_VERSION_DATA riferimento alla struttura.
+title: Struttura INVOCATION_VERSION_DATA
+description: Il riferimento alla struttura INVOCATION_VERSION_DATA di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1211b4eb999fd63767af71c6884d7d20d6920df0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec54c560dd408dc3beecbc20eaac69d389c7ec37
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325477"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041559"
 ---
-# <a name="invocation_version_data-structure"></a>struttura INVOCATION_VERSION_DATA
+# <a name="invocation_version_data-structure"></a>Struttura INVOCATION_VERSION_DATA
 
 ::: moniker range="<=vs-2015"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `INVOCATION_VERSION_DATA` struttura descrive un numero di versione come un gruppo di valori integrali.
+La `INVOCATION_VERSION_DATA` struttura descrive un numero di versione come gruppo di valori integrali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,13 +40,13 @@ typedef struct INVOCATION_VERSION_DATA_TAG
 } INVOCATION_VERSION_DATA;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-|  |  |
+| Nome | Descrizione |
 |--|--|
-| `VersionMajor` | Il numero principale della versione. |
-| `VersionMinor` | Il numero minore della versione. |
-| `BuildNumberMajor` | Il numero principale della build. |
-| `BuildNumberMinor` | Il numero minore della build. |
+| `VersionMajor` | Numero principale della versione. |
+| `VersionMinor` | Numero secondario della versione. |
+| `BuildNumberMajor` | Numero principale della compilazione. |
+| `BuildNumberMinor` | Numero secondario della compilazione. |
 
 ::: moniker-end

@@ -4,20 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: 3851003500d37a11a88736cf611b69a2d6b1813c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228154"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039768"
 ---
 # <a name="ltostreamgt-operators"></a>Operatori &lt;ostream&gt;
 
-||
-|-|
-|[operatore&lt;&lt;](#op_lt_lt)|
+[operatore&lt;&lt;](#op_lt_lt)
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operatore&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operatore&lt;&lt;
 
 Scrive vari tipi nel flusso.
 
@@ -102,7 +100,7 @@ Tipo
 
 Flusso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe `basic_ostream` definisce inoltre diversi operatori di inserimento. Per ulteriori informazioni, vedere [basic_ostream:: operator &lt; &lt; ](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 

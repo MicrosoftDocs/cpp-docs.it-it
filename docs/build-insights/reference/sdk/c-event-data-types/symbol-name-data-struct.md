@@ -1,6 +1,6 @@
 ---
-title: struttura SYMBOL_NAME_DATA
-description: L'SDK di approfondimenti sulla compilazione di C'è SYMBOL_NAME_DATA riferimento alla struttura.
+title: Struttura SYMBOL_NAME_DATA
+description: Il riferimento alla struttura SYMBOL_NAME_DATA di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1217572f20a772fde629533d6ab170c14dc5b5e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d234c6c225eff87a0eecd98fa5ff60bf92db97f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325345"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041913"
 ---
-# <a name="symbol_name_data-structure"></a>struttura SYMBOL_NAME_DATA
+# <a name="symbol_name_data-structure"></a>Struttura SYMBOL_NAME_DATA
 
 ::: moniker range="<=vs-2015"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -38,15 +38,15 @@ typedef struct SYMBOL_NAME_DATA_TAG
 } SYMBOL_NAME_DATA;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-|  |  |
+| Nome | Descrizione |
 |--|--|
 | `Key` | Chiave del simbolo. Questo valore è univoco all'interno della traccia analizzata. |
 | `Name` | Nome del simbolo. |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-I simboli provenienti da due passaggi front-end del compilatore diverso possono avere lo stesso nome ma una chiave diversa. In questo caso, utilizzare i nomi dei simboli per determinare se due tipi sono uguali.
+I simboli provenienti da due passaggi front-end del compilatore diversi possono avere lo stesso nome ma una chiave diversa. In questo caso, usare i nomi dei simboli per determinare se due tipi sono uguali.
 
 ::: moniker-end

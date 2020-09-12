@@ -12,14 +12,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a79cb91a6b0e6ca633540fd37f7a0e1ece53b712
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 341cae04742d72fdcc7483e74977bf413854df82
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845785"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039651"
 ---
-# <a name="steady_clock-struct"></a>Struct steady_clock
+# <a name="high_resolution_clock-struct"></a>struct high_resolution_clock
 
 Rappresenta un' *high_resolution* Clock.
 
@@ -29,7 +29,7 @@ Rappresenta un' *high_resolution* Clock.
 class high_resolution_clock
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedef
 

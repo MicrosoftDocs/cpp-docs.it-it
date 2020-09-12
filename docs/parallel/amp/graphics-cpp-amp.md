@@ -2,12 +2,12 @@
 title: Grafica (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182811"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041458"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 
@@ -27,7 +27,7 @@ I `norm` `unorm` tipi e sono tipi scalari che limitano l'intervallo di **`float`
 
 La libreria short vector fornisce alcune funzionalità del [tipo di vettore](https://go.microsoft.com/fwlink/p/?linkid=248500) definito in HLSL e viene in genere usata per definire Texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono **`double`** , **`float`** , **`int`** , `norm` , `uint` e `unorm` . I nomi dei tipi sono riportati nella tabella seguente. Per ogni tipo è presente anche un oggetto corrispondente **`typedef`** che non contiene un carattere di sottolineatura nel nome. I tipi con i caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). I tipi che non dispongono dei caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati dai tipi fondamentali con nome simile, ad esempio **`__int8`** e **`__int16`** .
 
-||Lunghezza 2|Lunghezza 3|Lunghezza 4|
+|Type|Lunghezza 2|Lunghezza 3|Lunghezza 4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
@@ -406,7 +406,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 Il runtime di C++ AMP supporta l'interoperabilità tra `texture<T,1>` e l' [interfaccia ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503), tra `texture<T,2>` e l' [interfaccia ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317)e tra `texture<T,3>` e l' [interfaccia ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). Il metodo [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) accetta un `texture` oggetto e restituisce un' `IUnknown` interfaccia. Il metodo [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) accetta un' `IUnknown` interfaccia e un `accelerator_view` oggetto e restituisce un `texture` oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe double_2](../../parallel/amp/reference/double-2-class.md)<br/>
 [Classe double_3](../../parallel/amp/reference/double-3-class.md)<br/>

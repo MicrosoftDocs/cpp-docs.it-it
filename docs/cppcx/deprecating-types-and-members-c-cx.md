@@ -2,12 +2,12 @@
 title: Deprecazione di tipi e membri (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740506"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040327"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Deprecazione di tipi e membri (C++/CX)
 
@@ -39,23 +39,27 @@ public:
 
 Nella seguente tabella sono elencati i costrutti a cui può essere applicato l'attributo Deprecated:
 
-| |
-|-|
-|Controllo XAML|
-|delegato|
-|event|
-|campo di enumerazione|
-|enum|
-|struct|
-|statico|
-|classe|
-|interfaccia|
-|proprietà|
-|campo struct|
-|costruttore con parametri|
+:::row:::
+   :::column span="":::
+      classe
+      Delegato
+      enum
+      campo enum \
+      evento
+      interfaccia
+   :::column-end:::
+   :::column span="":::
+      Metodo
+      Costruttore con parametri \
+      proprietà\
+      struct
+      campo struct \
+      Controllo XAML
+   :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
-[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti agli spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

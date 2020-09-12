@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: d074646a333090138c916bc4d3b7a2e072731b3d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228414"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042043"
 ---
 # <a name="scheduler-policies"></a>Criteri dell'utilità di pianificazione
 
@@ -26,17 +26,17 @@ Quando si usa il metodo [Concurrency:: CurrentScheduler:: create](reference/curr
 
 L'enumerazione [Concurrency::P olicyelementkey](reference/concurrency-namespace-enums.md#policyelementkey) definisce le chiavi dei criteri associate al utilità di pianificazione. Nella tabella seguente vengono descritte le chiavi dei criteri e il valore predefinito utilizzato dal runtime per ognuno di essi.
 
-|Chiave dei criteri|Descrizione|Default Value|
-|----------------|-----------------|-------------------|
-|`SchedulerKind`|Valore [Concurrency:: SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) che specifica il tipo di thread da utilizzare per pianificare le attività.|`ThreadScheduler` (utilizzare thread normali). È l'unico valore valido per questa chiave.|
-|`MaxConcurrency`|**`unsigned int`** Valore che specifica il numero massimo di risorse di concorrenza utilizzate dall'utilità di pianificazione.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
-|`MinConcurrency`|**`unsigned int`** Valore che specifica il numero minimo di risorse di concorrenza utilizzate dall'utilità di pianificazione.|`1`|
-|`TargetOversubscriptionFactor`|**`unsigned int`** Valore che specifica il numero di thread da allocare a ogni risorsa di elaborazione.|`1`|
-|`LocalContextCacheSize`|**`unsigned int`** Valore che specifica il numero massimo di contesti che possono essere memorizzati nella cache nella coda locale di ogni processore virtuale.|`8`|
-|`ContextStackSize`|**`unsigned int`** Valore che specifica le dimensioni dello stack, in kilobyte, da riservare per ogni contesto.|`0`(usare le dimensioni predefinite dello stack)|
-|`ContextPriority`|**`int`** Valore che specifica la priorità del thread di ogni contesto. Può trattarsi di qualsiasi valore che è possibile passare a [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) o `INHERIT_THREAD_PRIORITY` .|`THREAD_PRIORITY_NORMAL`|
-
-|`SchedulingProtocol`| Valore [Concurrency:: SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) che specifica l'algoritmo di pianificazione da utilizzare. | `EnhanceScheduleGroupLocality` | |`DynamicProgressFeedback`| Una [concorrenza::D valore ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) che specifica se ribilanciare le risorse in base alle informazioni sullo stato di avanzamento basate sulle statistiche.<br /><br /> **Nota** Non impostare questo criterio su `ProgressFeedbackDisabled` perché è riservato per l'utilizzo da parte del runtime. |`ProgressFeedbackEnabled`|
+| Chiave dei criteri | Descrizione | Valore predefinito |
+|--|--|--|
+| `SchedulerKind` | Valore [Concurrency:: SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) che specifica il tipo di thread da utilizzare per pianificare le attività. | `ThreadScheduler` (utilizzare thread normali). È l'unico valore valido per questa chiave. |
+| `MaxConcurrency` | **`unsigned int`** Valore che specifica il numero massimo di risorse di concorrenza utilizzate dall'utilità di pianificazione. | [concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources) |
+| `MinConcurrency` | **`unsigned int`** Valore che specifica il numero minimo di risorse di concorrenza utilizzate dall'utilità di pianificazione. | `1` |
+| `TargetOversubscriptionFactor` | **`unsigned int`** Valore che specifica il numero di thread da allocare a ogni risorsa di elaborazione. | `1` |
+| `LocalContextCacheSize` | **`unsigned int`** Valore che specifica il numero massimo di contesti che possono essere memorizzati nella cache nella coda locale di ogni processore virtuale. | `8` |
+| `ContextStackSize` | **`unsigned int`** Valore che specifica le dimensioni dello stack, in kilobyte, da riservare per ogni contesto. | `0` (usare le dimensioni predefinite dello stack) |
+| `ContextPriority` | **`int`** Valore che specifica la priorità del thread di ogni contesto. Può trattarsi di qualsiasi valore che è possibile passare a [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) o `INHERIT_THREAD_PRIORITY` . | `THREAD_PRIORITY_NORMAL` |
+| `SchedulingProtocol` | Valore [Concurrency:: SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) che specifica l'algoritmo di pianificazione da utilizzare. | `EnhanceScheduleGroupLocality` |
+| `DynamicProgressFeedback` | Una [concorrenza::D valore ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) che specifica se ribilanciare le risorse in base alle informazioni sullo stato di avanzamento basate sulle statistiche.<br /><br /> **Nota** Non impostare questo criterio su `ProgressFeedbackDisabled` perché è riservato per l'utilizzo da parte del runtime. | `ProgressFeedbackEnabled` |
 
 Ogni utilità di pianificazione usa i propri criteri durante la pianificazione delle attività. I criteri associati a un'utilità di pianificazione non influiscono sul comportamento di nessun'altra utilità di pianificazione. Non è inoltre possibile modificare i criteri dell'utilità di pianificazione dopo avere creato l' `Scheduler` oggetto.
 
@@ -51,7 +51,7 @@ Utilizzare il metodo [Concurrency:: CurrentScheduler:: GetPolicy](reference/curr
 
 Per esaminare gli esempi che usano criteri dell'utilità di pianificazione specifici per controllare il comportamento dell'utilità di pianificazione, vedere [procedura: specificare criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) e [procedura: creare agenti che usano criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Procedura: specificare criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>

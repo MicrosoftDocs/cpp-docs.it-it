@@ -1,24 +1,25 @@
 ---
 title: '&lt;cstddef&gt;'
-ms.date: 11/04/2016
+description: Viene descritto <> stddef. h, che garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria standard C vengano dichiarati nello `std` spazio dei nomi.
+ms.date: 9/4/2020
 f1_keywords:
 - <cstddef>
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 186de0e893c413a25d31d4f1431c280d749e9541
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222524"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040028"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
 Include l'intestazione della libreria standard C \<stddef.h> e aggiunge i nomi associati allo `std` spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria standard C vengano dichiarati nello `std` spazio dei nomi.
 
 > [!NOTE]
-> \<cstddef>include il tipo **byte** e non include il tipo **`wchar_t`** .
+> \<cstddef> include il tipo **byte** e non include il tipo **`wchar_t`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -77,7 +78,7 @@ template <class IntType>
     IntType to_integer(byte b) noexcept;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\

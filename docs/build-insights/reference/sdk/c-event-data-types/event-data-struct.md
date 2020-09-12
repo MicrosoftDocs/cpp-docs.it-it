@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229922"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041822"
 ---
 # <a name="event_data-structure"></a>Struttura EVENT_DATA
 
@@ -56,9 +56,9 @@ typedef struct EVENT_DATA_TAG
 } EVENT_DATA;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-|  |  |
+| Nome | Descrizione |
 |--|--|
 | `EventId` | Numero che identifica l'evento. Per un elenco degli identificatori di evento, vedere [event_id](event-id-enum.md). |
 | `EventInstanceId` | Numero che identifica in modo univoco l'evento corrente all'interno di una traccia. Questo valore non viene modificato durante l'analisi o la registrazione più volte della stessa traccia. Utilizzare questo campo per identificare lo stesso evento in più analisi o la riregistrazione passa sulla stessa traccia. |
@@ -77,13 +77,13 @@ typedef struct EVENT_DATA_TAG
 | `EventName` | Stringa ANSI contenente il nome dell'entità identificata da `EventId` . |
 | `EventWideName` | Stringa di caratteri "wide" che contiene il nome dell'entità identificata da `EventId` . |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Molti campi in `EVENT_DATA` contengono i conteggi dei cicli. C++ Build Insights usa il contatore delle prestazioni della finestra come origine dei cicli. `TickFrequency`Per convertirlo in un'unità di tempo appropriata, ad esempio i secondi, è necessario usare un conteggio dei segni di selezione con il campo. Vedere l'esempio seguente per eseguire questa conversione. `EVENT_DATA`non contiene un campo per il numero di cicli regolari di un'attività. Per ottenere questo valore, sottrarre `StartTimestamp` da `StopTimestamp` . `EVENT_DATA`è una struttura che deve essere usata dagli utenti dell'API C. Per gli utenti dell'API C++, le classi come gli [eventi](../cpp-event-data-types/event.md) eseguono le conversioni automatiche.
+Molti campi in `EVENT_DATA` contengono i conteggi dei cicli. C++ Build Insights usa il contatore delle prestazioni della finestra come origine dei cicli. `TickFrequency`Per convertirlo in un'unità di tempo appropriata, ad esempio i secondi, è necessario usare un conteggio dei segni di selezione con il campo. Vedere l'esempio seguente per eseguire questa conversione. `EVENT_DATA` non contiene un campo per il numero di cicli regolari di un'attività. Per ottenere questo valore, sottrarre `StartTimestamp` da `StopTimestamp` . `EVENT_DATA` è una struttura che deve essere usata dagli utenti dell'API C. Per gli utenti dell'API C++, le classi come gli [eventi](../cpp-event-data-types/event.md) eseguono le conversioni automatiche.
 
 Il valore del `EVENT_DATA` `Data` campo dipende dal valore del `EventId` campo. Il valore di `Data` viene descritto nella tabella seguente. Alcuni identificatori di entità potrebbero mancare nella tabella seguente. In questo caso, il `Data` campo è impostato su **`nullptr`** o zero.
 
-| Valore della proprietà `EventId` | Tipo a cui punta`Data` |
+| Valore della proprietà `EventId` | Tipo a cui punta `Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |

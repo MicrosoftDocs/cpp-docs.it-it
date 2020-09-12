@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520927"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042056"
 ---
 # <a name="pair-structure"></a>Struttura pair
 
@@ -70,17 +70,18 @@ Coppia i cui valori devono essere usati per inizializzare gli elementi di un'alt
 
 ## <a name="return-value"></a>Valore restituito
 
-Il primo costruttore (predefinito) Inizializza il primo elemento della coppia sul valore predefinito di tipo `T1` e il secondo elemento sul valore predefinito di tipo `T2` .
+Il primo costruttore (predefinito) Inizializza il primo elemento della coppia sul valore predefinito di tipo `T1` e il secondo elemento sul valore predefinito di tipo `T2` .  Viene definito se entrambi i tipi sono default-costruibile.
 
-Il secondo costruttore inizializza il primo elemento della coppia su *val1* e il secondo su *val2.*
+Il secondo costruttore inizializza il primo elemento della coppia su *val1* e la seconda su *val2.*  Viene definito se entrambi i tipi sono Copy-costruibile.
 
-Il terzo costruttore (modello) inizializza il primo elemento della coppia su `Right`. **first** e il secondo su `Right`. **secondo**.
+Il terzo costruttore (modello) Inizializza il primo elemento della coppia a `Right` . **prima** e la seconda a `Right` . **secondo**.  Viene definito se entrambi i tipi della coppia sono costruibile dai tipi di valore forniti.
 
-Il quarto costruttore inizializza il primo elemento della coppia su *val1* e la seconda su *val2* usando il [dichiaratore di riferimento rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+Il quarto costruttore inizializza il primo elemento della coppia su *val1* e la seconda su *val2* usando il [dichiaratore di riferimento rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).  Viene definito se entrambi i tipi della coppia sono costruibile dai tipi di valore forniti.
 
 ## <a name="remarks"></a>Commenti
 
-Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2` , rispettivamente. Il tipo `first_type` è lo stesso del parametro di modello `T1` e il tipo `second_type` è lo stesso del parametro di modello `T2` . `T1`ognuno di essi `T2` deve fornire solo un costruttore predefinito, un costruttore a singolo argomento e un distruttore. Tutti i membri del tipo `pair` sono pubblici, perché il tipo è dichiarato come **`struct`** anziché come **`class`** . Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. Il secondo soddisfa i requisiti per un contenitore associativo di coppie e ha un tipo di valore nel formato `pair< const key_type, mapped_type >` .
+Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2` , rispettivamente. Il tipo `first_type` è lo stesso del parametro di modello `T1` e il tipo `second_type` è lo stesso del parametro di modello `T2` . `T1` ognuno di essi `T2` deve fornire solo un costruttore predefinito, un costruttore a singolo argomento e un distruttore. Tutti i membri del tipo `pair` sono pubblici, perché il tipo è dichiarato come **`struct`** anziché come **`class`** . Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. Il secondo soddisfa i requisiti per un contenitore associativo di coppie e ha un tipo di valore nel formato `pair< const key_type, mapped_type >` .
 
 ## <a name="example"></a>Esempio
 

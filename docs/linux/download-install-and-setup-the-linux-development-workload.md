@@ -3,12 +3,12 @@ title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: bc75610aaefe2a3bdd919cbc4dd81413202794c6
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 3f8e6eb8285652078e5f26ca58601bc6ccfa80d1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765747"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040977"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
@@ -36,7 +36,7 @@ Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni 
 
    ![Casella di ricerca di Windows](media/visual-studio-installer-search.png)
 
-1. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando si apre il programma di installazione, scegliere **modifica**, quindi fare clic sulla scheda **carichi di lavoro** . scorrere verso il basso fino ad **altri set di strumenti** e selezionare il carico di lavoro **sviluppo per Linux con C++** .
+1. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando si apre il programma di installazione, scegliere **modifica**e quindi fare clic sulla scheda **carichi di lavoro** . Scorrere verso il basso fino ad **altri set di strumenti** e selezionare il carico di lavoro **sviluppo per Linux con C++** .
 
    ![Carico di lavoro Visual C++ per lo sviluppo di applicazioni Linux](media/linuxworkload.png)
 
@@ -56,10 +56,10 @@ In Windows 10 è possibile installare e impostare come destinazione la distribuz
 
 Per i progetti Linux in Visual Studio è necessario che le dipendenze seguenti siano installate nel sistema Linux remoto o in WSL:
 
-- **Un compilatore** -Visual Studio 2019 dispone del supporto completo per GCC e [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **Un compilatore** -Visual Studio 2019 dispone del supporto completo per GCC e [Clang](../build/clang-support-cmake.md).
 - **GDB** -Visual Studio avvia automaticamente gdb nel sistema Linux e usa il front-end del debugger di Visual Studio per offrire un'esperienza di debug completa in Linux.
 - **rsync** e **zip** : l'inclusione di rsync e zip consente a Visual Studio di estrarre i file di intestazione dal sistema Linux al file System di Windows per l'uso da parte di IntelliSense.
-- **Assicurarsi**
+- **make**
 - **OpenSSH-server** (solo sistemi Linux remoti): Visual Studio si connette a sistemi Linux remoti tramite una connessione SSH sicura.
 - **CMake** (solo progetti CMake): è possibile installare [i file binari CMake collegati staticamente da Microsoft per Linux](https://github.com/microsoft/CMake/releases).
 - **Ninja-Build** (solo progetti CMake)- [Ninja](https://ninja-build.org/) è il generatore predefinito per le configurazioni Linux e WSL in Visual Studio 2019 versione 16,6 o successiva.
@@ -75,7 +75,7 @@ Per i progetti Linux in Visual Studio è necessario che le dipendenze seguenti s
 - **GCC** -Visual Studio 2017 offre supporto completo per GCC.
 - **GDB** -Visual Studio avvia automaticamente gdb sul sistema Linux e usa il front-end del debugger di Visual Studio per offrire un'esperienza di debug completa in Linux.
 - **rsync** e **zip** : l'inclusione di rsync e zip consente a Visual Studio di estrarre i file di intestazione dal sistema Linux al file System di Windows da usare per IntelliSense.
-- **Assicurarsi**
+- **make**
 - **OpenSSH-server** -Visual Studio si connette a sistemi Linux remoti tramite una connessione SSH sicura.
 - **CMake** (solo progetti CMake): è possibile installare [i file binari CMake collegati staticamente da Microsoft per Linux](https://github.com/microsoft/CMake/releases).
 

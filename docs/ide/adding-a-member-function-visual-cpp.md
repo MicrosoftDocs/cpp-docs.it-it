@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228687"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040782"
 ---
 # <a name="add-a-member-function"></a>Aggiungere una funzione membro
 
@@ -44,14 +44,27 @@ Dopo aver aggiunto la funzione membro usando la procedura guidata, è possibile 
 
   Imposta il tipo restituito per la funzione membro da aggiungere. È possibile specificare un tipo restituito personalizzato oppure selezionarlo dall'elenco dei tipi disponibili. Per altre informazioni sui tipi, vedere [Tipi fondamentali](../cpp/fundamental-types-cpp.md).
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned int`** |
-  | **`double`** | **`long`** | **`unsigned long`** |
-  | **`float`** | **`short`** | **`void`** |
-  | `HRESULT` | **`unsigned char`** | |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**\
+      **`int`**
+   :::column-end:::
+   :::column span="":::
+      **`long`**\
+      **`short`**\
+      **`unsigned char`**\
+      **`unsigned int`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned long`**\
+      **`void`**\
+      `HRESULT`
+   :::column-end:::
+:::row-end:::
 
-- **Nome funzione**
+- **Nome della funzione**
 
   Imposta il nome della funzione membro da aggiungere.
 
@@ -59,11 +72,23 @@ Dopo aver aggiunto la funzione membro usando la procedura guidata, è possibile 
 
   Imposta il tipo di parametro da aggiungere per la funzione membro, se la funzione membro include parametri. È possibile specificare un tipo di parametro personalizzato oppure selezionarlo dall'elenco dei tipi disponibili.
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned char`** |
-  | **`double`** | **`long`** | **`unsigned int`** |
-  | **`float`** | **`short`** | **`unsigned long`** |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**
+   :::column-end:::
+   :::column span="":::
+      **`int`**\
+      **`long`**\
+      **`short`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned char`**\
+      **`unsigned int`**\
+      **`unsigned long`**
+   :::column-end:::
+:::row-end:::
 
 - **Nome parametro**
 
@@ -77,9 +102,9 @@ Dopo aver aggiunto la funzione membro usando la procedura guidata, è possibile 
 
   Imposta l'accesso alla funzione membro. I modificatori di accesso sono parole chiave che specificano l'accesso di altre classi alla funzione membro. Per altre informazioni sulla specifica dell'accesso, vedere [Controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md). Il livello di accesso della funzione membro è impostato su per **`public`** impostazione predefinita.
 
-  - [pubblico](../cpp/public-cpp.md)
-  - [protetto](../cpp/protected-cpp.md)
-  - [privata](../cpp/private-cpp.md)
+  - [public](../cpp/public-cpp.md)
+  - [protected](../cpp/protected-cpp.md)
+  - [private](../cpp/private-cpp.md)
 
   Controllare se la nuova funzione membro è statica o virtuale e se è inline o pura. Se si imposta la funzione membro come pura, la casella di controllo **Virtual** è selezionata e la casella di controllo **Inline** non è più disponibile. L'impostazione predefinita prevede una funzione membro non statica non virtuale.
 

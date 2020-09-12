@@ -1,35 +1,34 @@
 ---
-title: Panoramica del preprocessore sperimentale MSVC
-description: Il preprocessore MSVC è in fase di conformità con gli standard C/C.
-ms.date: 02/09/2020
+title: Panoramica di MSVC nuovo preprocessore
+description: È in corso l'aggiornamento del preprocessore MSVC per la conformità con gli standard C/C++.
+ms.date: 09/10/2020
 helpviewer_keywords:
 - preprocessor, experimental
-ms.openlocfilehash: 00c34ef75270e505d3781cf7eedf4d8aba95ee6e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+- preprocessor, new
+ms.openlocfilehash: c95f923d8c38250958e26431b61a71a1e6a7fdda
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337489"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041367"
 ---
-# <a name="msvc-experimental-preprocessor-overview"></a>Panoramica del preprocessore sperimentale MSVC
+# <a name="msvc-new-preprocessor-overview"></a>Panoramica di MSVC nuovo preprocessore
 
 ::: moniker range="vs-2015"
 
-Visual Studio 2015 utilizza il preprocessore tradizionale, che non è conforme al linguaggio standard di C. Un preprocessore sperimentale è disponibile in Visual Studio 2017 e Visual Studio 2019 utilizzando l'opzione del compilatore [/experimental:preprocessor.](../build/reference/experimental-preprocessor.md) Ulteriori informazioni sull'utilizzo del nuovo preprocessore in Visual Studio 2017 e Visual Studio 2019 sono disponibili. Per visualizzare la documentazione per la versione preferita di Visual Studio, usare il controllo Selettore **versione.** Si trova nella parte superiore del sommario in questa pagina.
+Visual Studio 2015 usa il preprocessore tradizionale, che non è conforme a C++ standard o C99. A partire da Visual Studio 2019 versione 16,5, il nuovo supporto per il preprocessore per lo standard C++ 20 è completo della funzionalità. Queste modifiche sono disponibili tramite l'opzione del compilatore [/Zc: preprocessore](../build/reference/zc-preprocessor.md) . Una versione sperimentale del nuovo preprocessore è disponibile a partire da Visual Studio 2017 versione 15,8 e successive con l'opzione del compilatore [/Experimental: Preprocessor](../build/reference/experimental-preprocessor.md) . Altre informazioni sull'uso del nuovo preprocessore in Visual Studio 2017 e Visual Studio 2019 sono disponibili. Per visualizzare la documentazione per la versione preferita di Visual Studio, usare il controllo selettore della **versione** . Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Stiamo aggiornando il preprocessore di Microsoft C, per migliorare la conformità agli standard, correggere i bug di lunga data e modificare alcuni comportamenti ufficialmente indefiniti. Abbiamo anche aggiunto una nuova diagnostica per avvisare in caso di errori nelle definizioni di macro.
+Stiamo aggiornando il preprocessore Microsoft C++ per migliorare la conformità agli standard, correggere i bug di lunga durata e modificare alcuni comportamenti ufficialmente non definiti. È stata anche aggiunta la nuova diagnostica per avvisare gli errori nelle definizioni delle macro.
 
-Queste modifiche sono disponibili utilizzando l'opzione del compilatore [/experimental:preprocessore](../build/reference/experimental-preprocessor.md) in Visual Studio 2017 o Visual Studio 2019. Il comportamento predefinito del preprocessore rimane lo stesso delle versioni precedenti.
-
-A partire da Visual Studio 2019 versione 16.5, il supporto sperimentale per il preprocessore per lo standard C .
+A partire da Visual Studio 2019 versione 16,5, il supporto del preprocessore per lo standard C++ 20 è il completamento delle funzionalità. Queste modifiche sono disponibili tramite l'opzione del compilatore [/Zc: preprocessore](../build/reference/zc-preprocessor.md) . Una versione sperimentale del nuovo preprocessore è disponibile nelle versioni precedenti a partire da Visual Studio 2017 versione 15,8. È possibile abilitarlo usando l'opzione del compilatore [/Experimental: Preprocessor](../build/reference/experimental-preprocessor.md) . Il comportamento predefinito del preprocessore rimane identico a quello delle versioni precedenti.
 
 ## <a name="new-predefined-macro"></a>Nuova macro predefinita
 
-È possibile rilevare quale preprocessore è in uso in fase di compilazione. Controllare il valore della [ \_\_](predefined-macros.md) macro predefinita MSVC TRADITIONAL per stabilire se il preprocessore tradizionale è in uso. Questa macro viene impostata incondizionatamente dalle versioni del compilatore che la supportano, indipendentemente dal preprocessore richiamato. Il valore è 1 per il preprocessore tradizionale. È 0 per il preprocessore conforme.
+È possibile rilevare il preprocessore utilizzato in fase di compilazione. Controllare il valore della macro predefinita [`_MSVC_TRADITIONAL`](predefined-macros.md) per indicare se il preprocessore tradizionale è in uso. Questa macro viene impostata in modo incondizionato dalle versioni del compilatore che la supportano, indipendentemente dal preprocessore che viene richiamato. Il valore è 1 per il preprocessore tradizionale. È 0 per il preprocessore conforme.
 
 ```cpp
 #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -39,13 +38,13 @@ A partire da Visual Studio 2019 versione 16.5, il supporto sperimentale per il p
 #endif
 ```
 
-## <a name="behavior-changes-in-the-experimental-preprocessor"></a>Modifiche del comportamento nel preprocessore sperimentaleBehavior changes in the experimental preprocessor
+## <a name="behavior-changes-in-the-new-preprocessor"></a>Modifiche del comportamento nel nuovo preprocessore
 
-Il lavoro iniziale sul preprocessore sperimentale si è concentrato sul rendere tutte le espansioni delle macro conformi allo standard. Consente di utilizzare il compilatore MSVC con librerie attualmente bloccate dai comportamenti tradizionali. Abbiamo testato il preprocessore aggiornato su progetti del mondo reale. Ecco alcuni dei cambiamenti di interruzione più comuni che abbiamo trovato:
+Il lavoro iniziale sul nuovo preprocessore è stato incentrato sul fatto che tutte le espansioni della macro sono conformi allo standard. Consente di usare il compilatore MSVC con le librerie che attualmente sono bloccate dai comportamenti tradizionali. Il preprocessore aggiornato è stato testato in progetti reali. Ecco alcune delle modifiche di rilievo più comuni rilevate:
 
 ### <a name="macro-comments"></a>Commenti macro
 
-Il preprocessore tradizionale si basa su buffer di caratteri anziché su token del preprocessore. Consente comportamenti insoliti, ad esempio il seguente trucco di commento del preprocessore, che non funziona con il preprocessore conforme:
+Il preprocessore tradizionale è basato sui buffer di caratteri anziché sui token del preprocessore. Consente un comportamento insolito, ad esempio il seguente Trick del commento per il preprocessore, che non funziona con il preprocessore conforme:
 
 ```cpp
 #if DISAPPEAR
@@ -58,7 +57,7 @@ Il preprocessore tradizionale si basa su buffer di caratteri anziché su token d
 DISAPPEARING_TYPE myVal;
 ```
 
-La correzione conforme agli standard `int myVal` è `#ifdef/#endif` quella di dichiarare all'interno delle direttive appropriate:
+La correzione conforme agli standard consiste nel dichiarare `int myVal` all'interno delle `#ifdef/#endif` direttive appropriate:
 
 ```cpp
 #define MYVAL 1
@@ -68,9 +67,9 @@ int myVal;
 #endif
 ```
 
-### <a name="lval"></a>L'lval
+### <a name="lval"></a>L # Val
 
-Il preprocessore tradizionale combina in modo non corretto un prefisso di stringa con il risultato dell'operatore di [stringizing (Sezione ):](stringizing-operator-hash.md)
+Il preprocessore tradizionale combina erroneamente un prefisso di stringa al risultato dell'operatore [per (#)](stringizing-operator-hash.md) :
 
 ```cpp
  #define DEBUG_INFO(val) L"debug prefix:" L#val
@@ -80,7 +79,7 @@ Il preprocessore tradizionale combina in modo non corretto un prefisso di string
 const wchar_t *info = DEBUG_INFO(hello world);
 ```
 
-In questo caso, il `L` prefisso non è necessario perché i valori letterali stringa adiacenti vengono combinati comunque dopo l'espansione della macro. La correzione compatibile con le versioni precedenti consiste nel modificare la definizione:
+In questo caso, il `L` prefisso non è necessario perché i valori letterali stringa adiacenti vengono combinati in seguito all'espansione della macro. La correzione compatibile con le versioni precedenti consiste nel modificare la definizione:
 
 ```cpp
 #define DEBUG_INFO(val) L"debug prefix:" #val
@@ -88,37 +87,37 @@ In questo caso, il `L` prefisso non è necessario perché i valori letterali str
 //                                       no prefix
 ```
 
-Lo stesso problema si riscontra anche nelle macro di convenienza che "stringize" l'argomento a un valore letterale stringa ampia:
+Lo stesso problema si trova anche nelle macro di praticità che "stringize" l'argomento a un valore letterale stringa "wide":
 
 ```cpp
  // The traditional preprocessor creates a single wide string literal token
 #define STRING(str) L#str
 ```
 
-È possibile risolvere il problema in vari modi:
+È possibile risolvere il problema in diversi modi:
 
-- Utilizzare la concatenazione di stringhe di `L""` e `#str` per aggiungere prefisso. I valori letterali stringa adiacenti vengono combinati dopo l'espansione della macro:Adjacent string literals are combined after macro expansion:
+- Utilizzare la concatenazione di stringhe di `L""` e `#str` per aggiungere il prefisso. I valori letterali stringa adiacenti vengono combinati dopo l'espansione della macro:
 
    ```cpp
    #define STRING1(str) L""#str
    ```
 
-- Aggiungere il `#str` prefisso dopo è stringa con ulteriore espansione macro
+- Aggiungere il prefisso dopo che `#str` è in sequenza con l'espansione della macro aggiuntiva
 
    ```cpp
    #define WIDE(str) L##str
    #define STRING2(str) WIDE(#str)
    ```
 
-- Usare l'operatore `##` di concatenazione per combinare i token. L'ordine delle `##` `#` operazioni per e non è specificato, `#` anche `##` se tutti i compilatori sembrano valutare l'operatore prima in questo caso.
+- Usare l'operatore di concatenazione `##` per combinare i token. L'ordine delle operazioni per `##` e non `#` è specificato, anche se tutti i compilatori sembrano valutare l' `#` operatore prima `##` in questo caso.
 
    ```cpp
    #define STRING3(str) L## #str
    ```
 
-### <a name="warning-on-invalid-"></a>Avvertenza su non valida\#\#
+### <a name="warning-on-invalid-"></a>Avviso non valido \#\#
 
-Quando [l'operatore](token-pasting-operator-hash-hash.md) di incollamento di token (Sezione ) non genera un singolo token di pre-elaborazione valido, il comportamento non è definito. Il preprocessore tradizionale non riesce automaticamente a combinare i token. Il nuovo preprocessore corrisponde al comportamento della maggior parte degli altri compilatori e genera una diagnostica.
+Quando l' [operatore di incollamento dei token (# #)](token-pasting-operator-hash-hash.md) non genera un singolo token di pre-elaborazione valido, il comportamento non è definito. Il preprocessore tradizionale non riesce a combinare i token in modo invisibile all'utente. Il nuovo preprocessore corrisponde al comportamento della maggior parte degli altri compilatori ed emette una diagnostica.
 
 ```cpp
 // The ## is unnecessary and does not result in a single preprocessing token.
@@ -127,9 +126,9 @@ Quando [l'operatore](token-pasting-operator-hash-hash.md) di incollamento di tok
 ADD_STD(string) s;
 ```
 
-### <a name="comma-elision-in-variadic-macros"></a>Elisione da virgola in macro variediche
+### <a name="comma-elision-in-variadic-macros"></a>Elissa virgola nelle macro Variadic
 
-Il preprocessore MSVC tradizionale rimuove `__VA_ARGS__` sempre le virgole prima delle sostituzioni vuote. Il preprocessore sperimentale segue più da vicino il comportamento di altri compilatori multipiattaforma popolari. Affinché la virgola venga rimossa, l'argomento variadic deve essere mancante `##` (non solo vuoto) e deve essere contrassegnato con un operatore. Prendere in considerazione gli esempi seguenti:
+Il preprocessore MSVC tradizionale rimuove sempre le virgole prima delle `__VA_ARGS__` sostituzioni vuote. Il nuovo preprocessore segue in modo più accurato il comportamento di altri compilatori multipiattaforma diffusi. Per rimuovere la virgola, l'argomento Variadic deve essere mancante (non solo vuoto) e deve essere contrassegnato con un `##` operatore. Si consideri l'esempio seguente:
 
 ```cpp
 void func(int, int = 2, int = 3);
@@ -149,7 +148,7 @@ int main()
 }
 ```
 
-Nell'esempio seguente, nella `FUNC2(1)` chiamata all'argomento variadic manca la macro richiamata. Nella chiamata `FUNC2(1, )` all'argomento variadic è vuoto, ma non manca (notare la virgola nell'elenco di argomenti).
+Nell'esempio seguente, nella chiamata all' `FUNC2(1)` argomento Variadic non è presente nella macro richiamata. Nella chiamata all' `FUNC2(1, )` argomento Variadic è vuoto, ma non è presente (si noti la virgola nell'elenco di argomenti).
 
 ```cpp
 #define FUNC2(a, ...) func(a , ## __VA_ARGS__)
@@ -163,11 +162,11 @@ int main()
 }
 ```
 
-Nel prossimo standard di C, 20, questo `__VA_OPT__`problema è stato risolto aggiungendo . Il supporto sperimentale per il preprocessore per è disponibile a partire da Visual Studio 2019 versione 16.5.Experimental preprocessor support for `__VA_OPT__` is available starting in Visual Studio 2019 version 16.5.
+Nel prossimo standard C++ 20, questo problema è stato risolto aggiungendo `__VA_OPT__` . Il nuovo supporto per il preprocessore per  `__VA_OPT__` è disponibile a partire da Visual Studio 2019 versione 16,5.
 
-### <a name="c20-variadic-macro-extension"></a>L'estensione di una macro variadica C
+### <a name="c20-variadic-macro-extension"></a>Estensione macro c++ 20 Variadic
 
-L'elisione dell'argomento macro variadic c'è 20:
+Il nuovo preprocessore supporta l'argomento macro Variadic di C++ 20.
 
 ```cpp
 #define FUNC(a, ...) __VA_ARGS__ + a
@@ -178,11 +177,11 @@ int main()
   }
 ```
 
-Questo codice non è conforme prima dello standard di C. In MSVC, il preprocessore sperimentale estende il comportamento di**`/std:c++14`** C- 20 alle modalità standard del linguaggio inferiore ( , **`/std:c++17`**). Questa estensione corrisponde al comportamento di altri principali compilatori multipiattaforma di C .
+Questo codice non è conforme allo standard C++ 20. In MSVC il nuovo preprocessore estende questo comportamento C++ 20 alle modalità standard del linguaggio più basso ( **`/std:c++14`** , **`/std:c++17`** ). Questa estensione corrisponde al comportamento di altri compilatori C++ multipiattaforma principali.
 
-### <a name="macro-arguments-are-unpacked"></a>Gli argomenti macro sono "decompressi"
+### <a name="macro-arguments-are-unpacked"></a>Gli argomenti della macro sono "decompressi"
 
-Nel preprocessore tradizionale, se una macro inoltra uno dei relativi argomenti a un'altra macro dipendente, l'argomento non viene "decompresso" quando viene inserito. Di solito questa ottimizzazione passa inosservata, ma può portare a un comportamento insolito:
+Nel preprocessore tradizionale, se una macro invia uno degli argomenti a un'altra macro dipendente, l'argomento non viene "decompresso" quando viene inserito. Questa ottimizzazione, in genere, non viene osservata, ma può causare un comportamento insolito:
 
 ```cpp
 // Create a string out of the first argument, and the rest of the arguments.
@@ -197,11 +196,11 @@ const char* c[2] = { A(1, 2) };
 // const char c[2] = { "1, 2", };
 ```
 
-Quando si `A()`espande , il preprocessore tradizionale inoltra `__VA_ARGS__` tutti gli argomenti inclusi nel primo argomento `TWO_STRINGS` di TWO_STRINGS, che lascia vuoto l'argomento variadico. Questo fa sì `#first` che il risultato di essere "1, 2" piuttosto che solo "1". Se si sta seguendo da vicino, allora ci si `#__VA_ARGS__` potrebbe chiedere cosa è successo al risultato dell'espansione del preprocessore `""`tradizionale: se il parametro variadic è vuoto dovrebbe risultare in una stringa vuota letterale . Un problema separato ha mantenuto il token letterale stringa vuota da generare.
+Quando `A()` si espande, il preprocessore tradizionale trasmette tutti gli argomenti inclusi nel pacchetto nel `__VA_ARGS__` primo argomento di TWO_STRINGS, che lascia vuoto l'argomento Variadic `TWO_STRINGS` . Questo fa sì che il risultato di `#first` sia "1,2" anziché solo "1". Se si sta seguendo attentamente, è possibile che si stiano chiedendo cosa sia successo al risultato di `#__VA_ARGS__` nell'espansione del preprocessore tradizionale: se il parametro Variadic è vuoto, è necessario che venga generato un valore letterale stringa vuoto `""` . Un problema separato mantiene la generazione del token letterale stringa vuoto.
 
-### <a name="rescanning-replacement-list-for-macros"></a>Rianalisi dell'elenco di sostituzione per le macro
+### <a name="rescanning-replacement-list-for-macros"></a>Ripetizione dell'analisi dell'elenco di sostituzione per le macro
 
-Dopo la sostituzione di una macro, i token risultanti vengono nuovamente analizzati alla ricerca di identificatori di macro aggiuntivi da sostituire. L'algoritmo utilizzato dal preprocessore tradizionale per eseguire la ripetizione non è conforme, come illustrato in questo esempio in base al codice effettivo:The algorithm used by the traditional preprocessor for doing the rescan isn't conforming, as shown in this example based on actual code:
+Dopo la sostituzione di una macro, i token risultanti vengono sottoposti a scansione per la sostituzione di identificatori di macro aggiuntivi. L'algoritmo utilizzato dal preprocessore tradizionale per eseguire la ripetizione dell'analisi non è conforme, come illustrato in questo esempio in base al codice effettivo:
 
 ```cpp
 #define CAT(a,b) a ## b
@@ -220,16 +219,18 @@ DO_THING(1, "World");
 // IMPL1 ( "Hello","World");
 ```
 
-Anche se questo esempio può sembrare un po 'artificioso, abbiamo visto in codice del mondo reale. Per vedere cosa sta succedendo, possiamo abbattere l'espansione a partire `DO_THING`da:
+Sebbene questo esempio possa sembrare un po' escogitato, lo abbiamo visto in codice reale.
 
-1. `DO_THING(1, "World")`si espande a`CAT(IMPL, 1) ECHO(("Hello", "World"))`
-1. `CAT(IMPL, 1)`si espande `IMPL ## 1`a , che si espande a`IMPL1`
-1. Ora i token sono in questo stato:`IMPL1 ECHO(("Hello", "World"))`
-1. Il preprocessore trova l'identificatore `IMPL1`macro di tipo funzione. Poiché non è seguito `(`da un oggetto , non è considerato una chiamata di macro simile a una funzione.
-1. Il preprocessore passa ai token seguenti. Trova la macro `ECHO` di tipo funzione: `ECHO(("Hello", "World"))`, che si espande`("Hello", "World")`
-1. `IMPL1`non viene mai più considerato per l'espansione, quindi il risultato completo delle espansioni è:`IMPL1("Hello", "World");`
+Per vedere cosa succede, possiamo suddividere l'espansione a partire da `DO_THING` :
 
-Per modificare la macro in modo che si comporti allo stesso modo sia nel preprocessore sperimentale che nel preprocessore tradizionale, aggiungere un altro livello di riferimento indiretto:
+1. `DO_THING(1, "World")` si espande fino a `CAT(IMPL, 1) ECHO(("Hello", "World"))`
+1. `CAT(IMPL, 1)` si espande in `IMPL ## 1` , che si espande in `IMPL1`
+1. Ora i token sono in questo stato: `IMPL1 ECHO(("Hello", "World"))`
+1. Il preprocessore trova l'identificatore macro di tipo funzione `IMPL1` . Poiché non è seguito da un oggetto `(` , non viene considerata una chiamata di macro simile a una funzione.
+1. Il preprocessore passa ai token seguenti. Trova la macro simile a una funzione `ECHO` che viene richiamata: `ECHO(("Hello", "World"))` , che si espande in `("Hello", "World")`
+1. `IMPL1` non viene mai considerato di nuovo per l'espansione, quindi il risultato completo delle espansioni è: `IMPL1("Hello", "World");`
+
+Per modificare la macro in modo che si comporti nello stesso modo sia nel nuovo preprocessore che nel preprocessore tradizionale, aggiungere un altro livello di riferimento indiretto:
 
 ```cpp
 #define CAT(a,b) a##b
@@ -245,12 +246,12 @@ DO_THING_FIXED(1, "World");
 // do_thing_one( "Hello", "World");
 ```
 
-## <a name="incomplete-features"></a>Caratteristiche incomplete
+## <a name="incomplete-features-before-165"></a>Funzionalità incomplete prima del 16,5
 
-A partire da Visual Studio 2019 versione 16.5, il preprocessore sperimentale è completo di funzionalità per C . Nelle versioni precedenti di Visual Studio, il preprocessore sperimentale è per lo più completo, anche se una logica di direttiva del preprocessore ancora esegue il fallback al comportamento tradizionale. Ecco un elenco parziale delle funzionalità incomplete nelle versioni di Visual Studio precedenti alla versione 16.5:Here's a partial list of incomplete features in Visual Studio versions before 16.5:
+A partire da Visual Studio 2019 versione 16,5, il nuovo preprocessore è dotato di funzionalità complete per C++ 20. Nelle versioni precedenti di Visual Studio, il nuovo preprocessore è prevalentemente completo, sebbene la logica di una direttiva per il preprocessore continui a riportare il comportamento tradizionale. Ecco un elenco parziale delle funzionalità incomplete nelle versioni di Visual Studio precedenti alla 16,5:
 
 - Supporto per `_Pragma`
-- Caratteristiche di C-20
-- Bug di blocco dell'incremento: gli operatori logici nelle espressioni costanti del preprocessore non sono completamente implementati nel nuovo preprocessore prima della versione 16.5. In `#if` alcune direttive, il nuovo preprocessore può ripiegare sul preprocessore tradizionale. L'effetto è evidente solo quando le macro non compatibili con il preprocessore tradizionale vengono espanse. Può accadere quando si creano slot del preprocessore Boost.
+- Funzionalità di c++ 20
+- Bug di blocco Boost: gli operatori logici nelle espressioni costanti del preprocessore non sono implementati completamente nel nuovo preprocessore prima della versione 16,5. In alcune `#if` direttive, il nuovo preprocessore può eseguire il fallback al preprocessore tradizionale. L'effetto è evidente solo quando le macro incompatibili con il preprocessore tradizionale vengono espanse. Questo può verificarsi quando si compilano slot per il preprocessore Boost.
 
 ::: moniker-end

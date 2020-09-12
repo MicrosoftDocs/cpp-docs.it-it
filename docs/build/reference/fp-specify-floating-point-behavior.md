@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: f85f9b397ef3ab5bd070be1f4c81845405b14020
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234380"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040912"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Specifica il comportamento della virgola mobile)
 
@@ -43,11 +43,11 @@ Se il codice a virgola mobile non dipende dall'ordine delle operazioni e delle e
 
 #### <a name="strict"></a>strict
 
-`/fp:strict`ha un comportamento simile a `/fp:precise` , ovvero il compilatore conserva le proprietà di ordinamento e arrotondamento di origine del codice a virgola mobile quando genera e ottimizza il codice oggetto per il computer di destinazione e osserva lo standard durante la gestione di valori speciali. Inoltre, il programma può accedere o modificare l'ambiente a virgola mobile in modo sicuro in fase di esecuzione.
+`/fp:strict` ha un comportamento simile a `/fp:precise` , ovvero il compilatore conserva le proprietà di ordinamento e arrotondamento di origine del codice a virgola mobile quando genera e ottimizza il codice oggetto per il computer di destinazione e osserva lo standard durante la gestione di valori speciali. Inoltre, il programma può accedere o modificare l'ambiente a virgola mobile in modo sicuro in fase di esecuzione.
 
 In `/fp:strict` , il compilatore genera codice che consente al programma di annullare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere registri di stato a virgola mobile o modificare le modalità di arrotondamento. Viene arrotondata alla precisione del codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in corrispondenza di assegnazioni, in cast, quando un argomento a virgola mobile viene passato a una chiamata di funzione e quando un valore a virgola mobile viene restituito da una chiamata di funzione. I calcoli intermedi possono essere eseguiti alla precisione del computer. Cast può essere usato per arrotondare in modo esplicito i calcoli intermedi. Il compilatore non esegue trasformazioni algebriche sulle espressioni a virgola mobile, ad esempio la riassociazione o la distribuzione, a meno che non sia garantita la produzione di un risultato identico bit per bit. Le espressioni che coinvolgono valori speciali (NaN, + Infinity,-Infinity,-0,0) vengono elaborate in base alle specifiche IEEE-754. Ad esempio, `x != x` restituisce **`true`** se x è NaN. Le contrazioni a virgola mobile non vengono generate in `/fp:strict` .
 
-`/fp:strict`è più costoso dal punto di vista `/fp:precise` del calcolo perché il compilatore deve inserire istruzioni aggiuntive per intercettare le eccezioni e consentire ai programmi di accedere o modificare l'ambiente a virgola mobile in fase di esecuzione. Se il codice non usa questa funzionalità, ma richiede l'ordinamento e l'arrotondamento del codice sorgente oppure si basa su valori speciali, usare `/fp:precise` . In caso contrario, è consigliabile usare `/fp:fast` , che può produrre codice più veloce e più piccolo.
+`/fp:strict` è più costoso dal punto di vista `/fp:precise` del calcolo perché il compilatore deve inserire istruzioni aggiuntive per intercettare le eccezioni e consentire ai programmi di accedere o modificare l'ambiente a virgola mobile in fase di esecuzione. Se il codice non usa questa funzionalità, ma richiede l'ordinamento e l'arrotondamento del codice sorgente oppure si basa su valori speciali, usare `/fp:precise` . In caso contrario, è consigliabile usare `/fp:fast` , che può produrre codice più veloce e più piccolo.
 
 #### <a name="fast"></a>veloce
 
@@ -55,7 +55,7 @@ L' `/fp:fast` opzione consente al compilatore di riordinare, combinare o semplif
 
 In `/fp:fast` il compilatore genera codice progettato per l'esecuzione nell'ambiente a virgola mobile predefinito e presuppone che l'ambiente a virgola mobile non sia accessibile o modificato in fase di esecuzione. Ciò significa che il codice non annulla il mascheramento delle eccezioni a virgola mobile, i registri di stato a virgola mobile in lettura o scrittura o la modifica delle modalità di arrotondamento.
 
-`/fp:fast`è destinato a programmi che non richiedono un ordinamento rigoroso del codice sorgente e l'arrotondamento delle espressioni a virgola mobile e che non si basano sulle regole standard per la gestione di valori speciali, ad esempio NaN. Se il codice a virgola mobile richiede la conservazione dell'ordinamento e dell'arrotondamento del codice sorgente oppure si basa sul comportamento standard di valori speciali, usare [/FP: precise](#precise). Se il codice accede o modifica l'ambiente a virgola mobile per modificare le modalità di arrotondamento, annullare il mascheramento delle eccezioni a virgola mobile o controllare lo stato a virgola mobile, usare [/FP: Strict](#strict).
+`/fp:fast` è destinato a programmi che non richiedono un ordinamento rigoroso del codice sorgente e l'arrotondamento delle espressioni a virgola mobile e che non si basano sulle regole standard per la gestione di valori speciali, ad esempio NaN. Se il codice a virgola mobile richiede la conservazione dell'ordinamento e dell'arrotondamento del codice sorgente oppure si basa sul comportamento standard di valori speciali, usare [/FP: precise](#precise). Se il codice accede o modifica l'ambiente a virgola mobile per modificare le modalità di arrotondamento, annullare il mascheramento delle eccezioni a virgola mobile o controllare lo stato a virgola mobile, usare [/FP: Strict](#strict).
 
 #### <a name="except"></a>except
 
@@ -63,7 +63,7 @@ L' `/fp:except` opzione genera il codice per garantire che tutte le eccezioni a 
 
 Si noti che non `/fp:except` Abilita alcuna eccezione a virgola mobile, ma è necessaria per consentire ai programmi di abilitare le eccezioni a virgola mobile. Vedere [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) per informazioni su come abilitare le eccezioni a virgola mobile.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `/fp`È possibile specificare più opzioni nella stessa riga di comando del compilatore. Solo una delle `/fp:strict` `/fp:fast` Opzioni, e `/fp:precise` può essere applicata alla volta. Se nella riga di comando viene specificata più di una di queste opzioni, l'opzione successiva avrà la precedenza e il compilatore genererà un avviso. Le `/fp:strict` `/fp:except` Opzioni e non sono compatibili con `/clr` .
 
@@ -73,11 +73,11 @@ L'opzione [/za](za-ze-disable-language-extensions.md) (compatibilità ANSI) non 
 
 Il compilatore fornisce tre direttive pragma per eseguire l'override del comportamento a virgola mobile specificato nella riga di comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)e [fp_contract](../../preprocessor/fp-contract.md). È possibile usare queste direttive per controllare il comportamento della virgola mobile a livello di funzione, non all'interno di una funzione. Si noti che queste direttive non corrispondono direttamente alle `/fp` Opzioni. In questa tabella viene illustrato il `/fp` mapping tra le direttive Options e pragma. Per ulteriori informazioni, vedere la documentazione per le singole opzioni e le direttive pragma.
 
-||float_control (preciso)|float_control (eccetto)|fenv_access|fp_contract|
+| Opzione | float_control (preciso) | float_control (eccetto) | fenv_access | fp_contract |
 |-|-|-|-|-|
-|`/fp:fast`|spento|spento|spento|in|
-|`/fp:precise`|in|spento|spento|in|
-|`/fp:strict`|in|in|in|spento|
+|`/fp:fast`|spento|spento|spento|on|
+|`/fp:precise`|in|spento|spento|on|
+|`/fp:strict`|on|on|in|spento|
 
 ### <a name="the-default-floating-point-environment"></a>Ambiente a virgola mobile predefinito
 
@@ -266,7 +266,7 @@ Quando viene compilato tramite `/O2` `/fp:precise` o `/O2` `/fp:strict` , è pos
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: struttura FUNCTION_DATA
-description: L'SDK di FUNCTION_DATA di Build Insights in C.
+title: Struttura FUNCTION_DATA
+description: Il riferimento alla struttura FUNCTION_DATA di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ec715192e3480932d351cdb4be1443c329a4868b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1034ce01bba6422d0c47fc34b308cafcc113e32b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325533"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041744"
 ---
-# <a name="function_data-structure"></a>struttura FUNCTION_DATA
+# <a name="function_data-structure"></a>Struttura FUNCTION_DATA
 
 ::: moniker range="<=vs-2015"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -37,9 +37,9 @@ typedef struct FUNCTION_DATA_TAG
 } FUNCTION_DATA;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-|  |  |
+| Nome | Descrizione |
 |--|--|
 | `Name` | Nome della funzione, codificato in UTF-8. |
 

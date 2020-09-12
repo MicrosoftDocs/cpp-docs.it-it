@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 348638b2a6b5a97491d9929b22a983b43794da9a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845172"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041627"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -80,14 +80,14 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*key*|*base*|*confrontare*|*number*|*width*|**`errno`**|
+|*key*|*base*|*confrontare*|*number*|*width*|**`errno`** valore|
 |-|-|-|-|-|-|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
 |any|any|**NULL**|any|any|**EINVAL**|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **bsearch_s** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento della matrice e restituisce uno dei valori seguenti che specifica la relazione:
 
@@ -195,7 +195,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

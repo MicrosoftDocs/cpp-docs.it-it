@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833257"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040601"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -202,7 +202,7 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo di un **`int`** tipo che può rappresentare un gruppo di elementi distinti di un tipo di maschera di maschera locale per le impostazioni locali della classe oppure può essere usato per rappresentare qualsiasi categoria di impostazioni locali C corrispondenti. Gli elementi sono i seguenti:
 
@@ -238,7 +238,7 @@ static const locale& classic();
 
 Riferimento alle impostazioni locali C.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le impostazioni locali C classiche sono le impostazioni locali ASCII per la lingua inglese (Stati Uniti) all'interno della libreria C standard. Si tratta delle impostazioni locali usate in modo implicito nei programmi che non sono internazionali.
 
@@ -344,7 +344,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non è possibile copiare o assegnare un oggetto della classe `facet` . È possibile creare e distruggere oggetti derivati dalla classe `locale::facet` ma non oggetti della classe di base proper. In genere, si costruisce un oggetto `_Myfac` derivato da `facet` quando si costruisce un oggetto `locale` , come in `locale loc(locale::classic(), new _Myfac);`
 
@@ -367,7 +367,7 @@ Impostazioni locali che devono essere usate come predefinite dal programma.
 
 Impostazioni locali precedenti alla reimpostazione delle impostazioni locali predefinite.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 All'avvio del programma, le impostazioni locali globali coincidono con le impostazioni locali classiche. La funzione `global()` chiama `setlocale( LC_ALL, loc.name. c_str())` per definire delle impostazioni locali corrispondenti nella libreria C standard.
 
@@ -412,7 +412,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Non è possibile copiare o assegnare un oggetto della classe `id` .
 
@@ -452,7 +452,7 @@ Categoria da sostituire nelle impostazioni locali costruite.
 *new_facet*\
 Facet da sostituire nelle impostazioni locali costruite.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore inizializza l'oggetto in modo che corrisponda alle impostazioni locali globali. Il secondo e il terzo costruttore inizializzano tutte le categorie delle impostazioni locali affinché il comportamento sia coerente con il nome delle impostazioni locali *locale_name*. I costruttori rimanenti copiano *from_locale*, con le eccezioni indicate:
 
@@ -576,7 +576,7 @@ Una delle impostazioni locali di cui verificare la disuguaglianza.
 
 Valore booleano che è **`true`** se le impostazioni locali non sono copie delle stesse impostazioni locali. È **`false`** se le impostazioni locali sono copie delle stesse impostazioni locali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due impostazioni locali sono uguali se le impostazioni locali sono uguali, se una è una copia dell'altra o se hanno nomi identici.
 
@@ -622,7 +622,7 @@ loc3 (English_United States.1252) are not equal.
 
 ## <a name="localeoperator"></a><a name="op_call"></a> locale:: operator ()
 
-Confronta due `basic_string` oggetti in base alle regole di confronto lessicografico definite dal facet std:: COLLATE delle impostazioni locali <charT> .
+Confronta due `basic_string` oggetti in base alle regole di confronto lessicografico definite dal facet delle impostazioni locali `std::collate<charT>` .
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -643,7 +643,7 @@ Seconda stringa da confrontare.
 
 - **`true`** Se *Left* è lessicografico minore di *right*; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro gestisce in modo efficace quanto segue:
 
@@ -703,7 +703,7 @@ Una delle impostazioni locali di cui verificare l'uguaglianza.
 
 Valore booleano che è **`true`** se le impostazioni locali sono copie delle stesse impostazioni locali. È **`false`** se le impostazioni locali non sono copie delle stesse impostazioni locali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due impostazioni locali sono uguali se le impostazioni locali sono uguali, se una è una copia dell'altra o se hanno nomi identici.
 

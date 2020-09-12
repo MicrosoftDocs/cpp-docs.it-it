@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f576d971425a67fc533bb417583173617615e3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215192"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040405"
 ---
 # <a name="opt-optimizations"></a>/OPT (Ottimizzazioni)
 
@@ -30,9 +30,9 @@ Controlla le ottimizzazioni eseguite da LINK durante una compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/opt:**{**ref**  |  **NOREF**} \
-> **/Opt:**{**ICF**[ **=** _iterazioni_] | **NOICF**} \
-> **/opt:**{**LBR**  |  **NOLBR**}
+> **/opt:**{**ref** \| **NOREF**} \
+> **/Opt:**{**ICF** \[ **=** _iterazioni_ICF] \| **NOICF**} \
+> **/opt:**{**LBR** \| **NOLBR**}
 
 ## <a name="arguments"></a>Argomenti
 
@@ -65,7 +65,7 @@ Le opzioni **/opt: LBR** e **/opt: NOLBR** si applicano solo ai file binari ARM.
 
 Per impostazione predefinita, l'opzione **/opt: LBR** viene impostata quando il collegamento incrementale non è abilitato. Se si desidera un collegamento non incrementale, ma non le ottimizzazioni del ramo lungo, specificare **/opt: NOLBR**. L'opzione **/opt: LBR** Disabilita il collegamento incrementale.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando viene usato nella riga di comando, per impostazione predefinita il linker è **/opt: Ref, ICF, LBR**. Se si specifica **/debug** , il valore predefinito è **/opt: NOREF, NOICF, NOLBR**.
 
@@ -105,7 +105,7 @@ Gli argomenti **/opt** sono spesso impostati per i progetti creati usando la fin
 
 - Vedere le proprietà <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Informazioni di riferimento sul linker MSVC](linking.md)
 - [Opzioni del linker MSVC](linker-options.md)

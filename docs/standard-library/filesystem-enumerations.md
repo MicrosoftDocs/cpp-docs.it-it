@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368420"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041939"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
 
@@ -24,11 +24,11 @@ Questo argomento illustra le enumerazioni nell'intestazione del file system.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<experimental/filesystem>
+**Intestazione:**\<experimental/filesystem>
 
 **Spazio dei nomi:** std::experimental::filesystem
 
-## <a name="copy_options"></a><a name="copy_options"></a>copy_options
+## <a name="copy_options"></a><a name="copy_options"></a> copy_options
 
 Enumerazione dei valori di maschera di bit che viene usata con le funzioni [copy](filesystem-functions.md#copy) e [copy_file](filesystem-functions.md#copy_file) per specificare comportamenti.
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valori
 
-|`Name`|Descrizione|
+| Nome | Descrizione |
 |------------|-----------------|
 |`none`|Eseguire il comportamento predefinito per l'operazione.|
 |`skip_existing`|Non copiare se il file esiste già, non segnalare un errore.|
@@ -84,9 +84,9 @@ enum class directory_options {
 |`none`|Comportamento predefinito: ignorare i collegamenti simbolici a directory. L'autorizzazione negata è un errore.|
 |`follow_directory_symlink`|Considerare i collegamenti simbolici a directory come directory effettive.|
 
-## <a name="file_type"></a><a name="file_type"></a>file_type
+## <a name="file_type"></a><a name="file_type"></a> file_type
 
-Enumerazione di tipi di file. I valori supportati sono regular, directory, not_found e unknown.
+Enumerazione di tipi di file. I valori supportati sono regular, directory, not_found e Unknown.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valori
 
-|Nome|valore|Descrizione|
+|Nome|Valore|Descrizione|
 |----------|-----------|-----------------|
 |`not_found`|-1|Rappresenta un file che non esiste.|
 |`none`|0|Rappresenta un file che non ha alcun attributo di tipo. (non supportato).|
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|Rappresenta un socket nei sistemi basati su UNIX. (non supportato).|
 |`unknown`|8|Rappresenta un file il cui stato non può essere determinato.|
 
-## <a name="perm_options"></a><a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a> perm_options
 
-Include `replace`valori `add` `remove`, `nofollow`, , e .
+Include i valori `replace` ,, `add` `remove` e `nofollow` .
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a><a name="perms"></a>Perms
+## <a name="perms"></a><a name="perms"></a> perms
 
-Flag per le autorizzazioni del file. I valori supportati sono essenzialmente "readonly" e tutti. Per un file readonly non è impostato alcun bit *_write. In caso contrario, è impostato il bit `all` (0x0777).
+Flag per le autorizzazioni del file. I valori supportati sono essenzialmente "ReadOnly" e all. Per un file readonly non è impostato alcun bit *_write. In caso contrario, è impostato il bit `all` (0x0777).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[\<>del file system](../standard-library/filesystem.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

@@ -1,16 +1,17 @@
 ---
 title: '&lt;intervallo&gt;'
+description: Informazioni di riferimento sulle API per lo spazio dei nomi dell'estensione STL (Standard Template Library), che fornisce una visualizzazione semplificata di una sequenza di oggetti contigua.
 ms.date: 05/28/2020
 f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f4c6b141dfea6464e58d06e221a39a693469d31c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846186"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039872"
 ---
 # <a name="ltspangt"></a>&lt;intervallo&gt;
 
@@ -50,9 +51,9 @@ int main()
 
 **Spazio dei nomi:** std
 
-**Opzione del compilatore:** /std: c + + Latest più recente
+**Opzione del compilatore:** [/std: c + + Latest più recente](../build/reference/std-specify-language-standard-version.md)
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Classi
 
@@ -80,6 +81,6 @@ int main()
 |-|:-|
 | **dynamic_extent** | Indica che la dimensione dell'intervallo è determinata in fase di esecuzione anziché in fase di compilazione. Quando il numero di elementi nell'intervallo è noto in fase di compilazione, viene specificato come parametro di `Extent` modello. Quando il numero non è noto fino al runtime, specificare in `dynamic_extent` alternativa. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

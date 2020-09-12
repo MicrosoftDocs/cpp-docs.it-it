@@ -7,28 +7,26 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 19c0bd3a0685abe36c020a5dda930f5683a4baa9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183435"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040886"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
 
 Tre funzioni di callback vengono visualizzate nel libreria Microsoft Foundation Class. Queste funzioni di callback vengono passate a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Si noti che tutte le funzioni di callback devono intercettare le eccezioni MFC prima di tornare a Windows, perché non è possibile generare eccezioni tra i limiti di callback. Per ulteriori informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).
 
-|Nome||
-|----------|-----------------|
-|[Funzione di callback per CDC::EnumObjects](#enum_objects)||
-|[Funzione di callback per CDC::GrayString](#graystring)||
-|[Funzione di callback per CDC::SetAbortProc](#setabortproc)||
+[Funzione di callback per CDC:: EnumObjects](#enum_objects)\
+[Funzione di callback per CDC:: GrayString](#graystring)\
+[Funzione di callback per CDC::SetAbortProc](#setabortproc)
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxwin.h
 
-## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a>Funzione di callback per CDC:: EnumObjects
+## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a> Funzione di callback per CDC:: EnumObjects
 
 Il nome del *ObjectFunc* è un segnaposto per il nome della funzione fornito dall'applicazione.
 
@@ -52,11 +50,11 @@ Punta ai dati forniti dall'applicazione passati alla funzione `EnumObjects`.
 
 La funzione di callback restituisce un oggetto **`int`** . Il valore restituito è definito dall'utente. Se la funzione di callback restituisce 0, `EnumObjects` arresta l'enumerazione prima.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il nome effettivo deve essere esportato.
 
-## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a>Funzione di callback per CDC:: GrayString
+## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a> Funzione di callback per CDC:: GrayString
 
 *OutputFunc* è un segnaposto per il nome della funzione di callback fornita dall'applicazione.
 
@@ -84,11 +82,11 @@ Specifica il numero di caratteri da restituire.
 
 Il valore restituito della funzione di callback deve essere TRUE per indicare l'esito positivo; in caso contrario, è FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di callback (*OutputFunc*) deve creare un'immagine relativa alle coordinate (0, 0) anziché (*x*, *y*).
 
-## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a>Funzione di callback per CDC:: SetAbortProc
+## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a> Funzione di callback per CDC:: SetAbortProc
 
 Il nome *AbortFunc* è un segnaposto per il nome della funzione fornito dall'applicazione.
 
@@ -112,11 +110,11 @@ Specifica se si è verificato un errore. È 0 se non si è verificato alcun erro
 
 Il valore restituito dalla funzione del gestore di interruzione è diverso da zero se il processo di stampa deve continuare e 0 se è stato annullato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il nome effettivo deve essere esportato, come descritto nella sezione Note di [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Strutture, stili, callback e mappe messaggi](structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>

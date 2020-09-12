@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c935c20d6c1c009cff64d48e0c0122c8b91bbba3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842975"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041159"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Driver in modalità kernel di Windows NT)
 
 >/DRIVER [: SOLO |: WDM]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Usare l'opzione del linker **/driver** per compilare un driver in modalità kernel di Windows NT.
 
@@ -49,9 +49,9 @@ Se è specificato **/driver** :
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
-- Vedere [VCLinkerTool. driver Property](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- Vedere [VCLinkerTool. driver Property](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

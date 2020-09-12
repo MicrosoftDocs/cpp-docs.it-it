@@ -1,6 +1,7 @@
 ---
 title: Classe unordered_set
-ms.date: 11/04/2016
+description: Riferimento API per la classe contenitore della libreria standard C++ `unordered_set` , usata per archiviare e recuperare dati da una raccolta non ordinata.
+ms.date: 9/9/2020
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -26,6 +27,7 @@ f1_keywords:
 - unordered_set/std::unordered_set::cend
 - unordered_set/std::unordered_set::clear
 - unordered_set/std::unordered_set::count
+- unordered_set/std::unordered_set::contains
 - unordered_set/std::unordered_set::emplace
 - unordered_set/std::unordered_set::emplace_hint
 - unordered_set/std::unordered_set::empty
@@ -71,6 +73,7 @@ helpviewer_keywords:
 - std::unordered_set::cbegin
 - std::unordered_set::cend
 - std::unordered_set::clear
+- std::unordered_set::contains
 - std::unordered_set::count
 - std::unordered_set::emplace
 - std::unordered_set::emplace_hint
@@ -134,16 +137,16 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839517"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040041"
 ---
 # <a name="unordered_set-class"></a>Classe unordered_set
 
-Il modello di classe descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi di tipo `const Key` . La sequenza viene ordinata in modo debole da una funzione hash, che esegue il partizionamento della sequenza in un set ordinato di sottosequenze denominate bucket. In ogni bucket una funzione di confronto determina se una coppia di elementi ha un ordinamento equivalente. Ogni elemento viene utilizzato sia come chiave di ordinamento che come valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario mediante una serie di operazioni che possono essere indipendenti dal numero di elementi della sequenza (tempo costante), almeno quando tutti i bucket sono più o meno lunghi uguali. Nella peggiore delle ipotesi, quando tutti gli elementi si trovano in un unico bucket, il numero di operazioni è proporzionale al numero di elementi della sequenza (tempo lineare). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.
+Il modello di classe descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi di tipo `const Key` . La sequenza viene ordinata in modo debole da una funzione hash, che esegue il partizionamento della sequenza in un set ordinato di sottosequenze denominate bucket. All'interno di ogni bucket, una funzione di confronto determina se una coppia di elementi ha un ordinamento equivalente. Ogni elemento viene utilizzato sia come chiave di ordinamento che come valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario mediante una serie di operazioni che possono essere indipendenti dal numero di elementi della sequenza (tempo costante), almeno quando tutti i bucket sono più o meno lunghi uguali. Nella peggiore delle ipotesi, quando tutti gli elementi si trovano in un unico bucket, il numero di operazioni è proporzionale al numero di elementi della sequenza (tempo lineare). L'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori, che puntano all'elemento rimosso.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -170,7 +173,7 @@ Tipo di oggetto della funzione di confronto di uguaglianza.
 *Alloc*\
 Classe Allocator.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedef
 
@@ -203,6 +206,7 @@ Classe Allocator.
 |[cbegin](#cbegin)|Indica l'inizio della sequenza controllata.|
 |[cend](#cend)|Designa la fine della sequenza controllata.|
 |[deselezionare](#clear)|Rimuove tutti gli elementi.|
+|[contiene](#contains)<sup>c++ 20</sup>|Controllare se è presente un elemento con la chiave specificata in `unordered_set` .|
 |[count](#count)|Trova il numero di elementi corrispondenti a una chiave specificata.|
 |[emplace](#emplace)|Aggiunge un elemento costruito sul posto.|
 |[emplace_hint](#emplace_hint)|Aggiunge un elemento costruito sul posto, con il suggerimento.|
@@ -230,15 +234,15 @@ Classe Allocator.
 |-|-|
 |[unordered_set:: operator =](#op_eq)|Copia una tabella hash.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'oggetto ordina la sequenza che controlla chiamando due oggetti archiviati, un oggetto della funzione di confronto di tipo [unordered_set:: key_equal](#key_equal) e un oggetto funzione hash di tipo [unordered_set:: hasher](#hasher). È possibile accedere al primo oggetto archiviato chiamando la funzione membro [unordered_set:: key_eq](#key_eq) `()` ; e si accede al secondo oggetto archiviato chiamando la funzione membro [unordered_set:: hash_function](#hash) `()` . In particolare, per tutti i valori `X` e `Y` di tipo `Key`, la chiamata a `key_eq()(X, Y)` restituisce true solo se i valori dei due argomenti hanno un ordinamento equivalente; la chiamata a `hash_function()(keyval)` produce una distribuzione di valori di tipo `size_t`. A differenza del modello di classe [Unordered_multiset classe](../standard-library/unordered-multiset-class.md), un oggetto di tipo `unordered_set` garantisce che `key_eq()(X, Y)` sia sempre false per due elementi qualsiasi della sequenza controllata. Le chiavi sono univoche.
 
 L'oggetto consente inoltre di archiviare un fattore di carico massimo che specifica il numero medio massimo di elementi per bucket desiderato. Se l'inserimento di un elemento comporta il superamento del fattore di carico massimo da parte di [unordered_set:: load_factor](#load_factor) `()` , il contenitore aumenta il numero di bucket e ricompila la tabella hash in base alle esigenze.
 
-L'ordine effettivo degli elementi nella sequenza controllata dipende dalla funzione hash, dalla funzione di confronto, dall'ordine di inserimento, dal fattore di carico massimo e dal numero corrente di bucket. Non è in genere possibile prevedere l'ordine degli elementi nella sequenza selezionata. Si può tuttavia avere sempre la certezza dell'adiacenza dei subset di elementi con un ordinamento equivalente nella sequenza controllata.
+L'ordine effettivo degli elementi nella sequenza controllata dipende dalla funzione hash, dalla funzione di confronto, dall'ordine di inserimento, dal fattore di carico massimo e dal numero corrente di bucket. Non è in genere possibile prevedere l'ordine degli elementi nella sequenza controllata. Si può tuttavia avere sempre la certezza dell'adiacenza dei subset di elementi con un ordinamento equivalente nella sequenza controllata.
 
-L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un oggetto allocatore archiviato di tipo [unordered_set:: allocator_type](#allocator_type). Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto di tipo `allocator` . Si noti che l'oggetto allocatore archiviato non viene copiato dopo l'assegnazione dell'oggetto contenitore.
+L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un oggetto allocatore archiviato di tipo [unordered_set:: allocator_type](#allocator_type). Tale oggetto allocatore deve avere la stessa interfaccia esterna di un oggetto di tipo `allocator` . L'oggetto allocatore archiviato non viene copiato quando viene assegnato l'oggetto contenitore.
 
 ## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set:: allocator_type
 
@@ -248,7 +252,7 @@ Tipo di un allocatore per gestire l'archiviazione.
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Alloc`.
 
@@ -297,7 +301,7 @@ const_local_iterator begin(size_type nbucket) const;
 *nbucket*\
 Numero di bucket.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le prime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota). Le ultime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento del bucket *nbucket* (o appena oltre la fine di un bucket vuoto).
 
@@ -370,7 +374,7 @@ size_type bucket(const Key& keyval) const;
 *keyval*\
 Valore della chiave da mappare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero di bucket che corrisponde attualmente al valore della chiave *keyval*.
 
@@ -420,7 +424,7 @@ Ottiene il numero di bucket.
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero corrente di bucket.
 
@@ -510,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 *nbucket*\
 Numero di bucket.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono le dimensioni del bucket numero *nbucket*.
 
@@ -564,9 +568,9 @@ const_iterator cbegin() const;
 
 **`const`** Iteratore di accesso in avanti che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
+Con il valore restituito di `cbegin` , gli elementi dell'intervallo non possono essere modificati.
 
 È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri come `Container` un contenitore (non **`const`** ) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()` .
 
@@ -590,7 +594,7 @@ const_iterator cend() const;
 
 **`const`** Iteratore di accesso in avanti che punta poco oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
@@ -604,7 +608,7 @@ auto i2 = Container.cend();
 // i2 isContainer<T>::const_iterator
 ```
 
-Non è consigliabile dereferenziare il valore restituito da `cend`.
+`cend`Non è possibile dereferenziare il valore restituito da.
 
 ## <a name="clear"></a><a name="clear"></a> deselezionare
 
@@ -614,7 +618,7 @@ Rimuove tutti gli elementi.
 void clear();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro chiama [unordered_set:: erase](#erase) `(` [unordered_set:: Begin](#begin) `(),` [unordered_set:: end](#end) `())` .
 
@@ -678,9 +682,9 @@ Tipo di un iteratore costante per la sequenza controllata.
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo descrive un oggetto che può essere usato come iteratore costante in avanti per la sequenza controllata. Qui è descritto come sinonimo del tipo definito dall'implementazione `T1`.
+Il tipo descrive un oggetto che può essere usato come iteratore costante in avanti per la sequenza controllata. Viene descritta come un sinonimo del tipo definito dall'implementazione `T1` .
 
 ### <a name="example"></a>Esempio
 
@@ -720,9 +724,9 @@ Tipo di un iteratore di bucket costante per la sequenza controllata.
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo descrive un oggetto che può essere usato come iteratore in avanti costante per un bucket. Qui è descritto come sinonimo del tipo definito dall'implementazione `T5`.
+Il tipo descrive un oggetto che può essere usato come iteratore in avanti costante per un bucket. Viene descritta come un sinonimo del tipo definito dall'implementazione `T5` .
 
 ### <a name="example"></a>Esempio
 
@@ -767,7 +771,7 @@ Tipo di un puntatore costante a un elemento.
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come puntatore costante a un elemento della sequenza controllata.
 
@@ -812,7 +816,7 @@ Tipo di un riferimento costante a un elemento.
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come riferimento costante a un elemento della sequenza controllata.
 
@@ -849,6 +853,57 @@ int main()
 [c] [b] [a]
 ```
 
+## <a name="contains"></a><a name="contains"></a> contiene
+
+Verifica se esiste un elemento con la chiave specificata in `unordered_set` .
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>Parametri
+
+*K*\
+Tipo di chiave.
+
+*chiave*\
+Valore della chiave dell'elemento da cercare.
+
+### <a name="return-value"></a>Valore restituito
+
+`true` Se l'elemento viene trovato nel contenitore. `false` in caso contrario,.
+
+### <a name="remarks"></a>Commenti
+
+`contains()` è una novità di C++ 20. Per usarlo, specificare l'opzione del compilatore [/std: c + + Latest più recente](../build/reference/std-specify-language-standard-version.md) .
+
+`template<class K> bool contains(const K& key) const` partecipa solo alla risoluzione dell'overload se `key_compare` è trasparente.
+
+### <a name="example"></a>Esempio
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_set>
+#include <iostream>
+
+int main()
+{
+    std::unordered_set<int> theUnorderedSet = { 1, 2 };
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedSet.contains(2) << '\n';
+    std::cout << theUnorderedSet.contains(3) << '\n';
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
+
 ## <a name="count"></a><a name="count"></a> conteggio
 
 Trova il numero di elementi corrispondenti a una chiave specificata.
@@ -862,7 +917,7 @@ size_type count(const Key& keyval) const;
 *keyval*\
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero di elementi nell'intervallo delimitato da [unordered_set:: equal_range](#equal_range) `(keyval)` .
 
@@ -911,9 +966,9 @@ Tipo di una distanza Signed tra due elementi.
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo di valore integer con segno descrive un oggetto che può rappresentare la differenza tra gli indirizzi di due elementi qualsiasi della sequenza controllata. Qui è descritto come sinonimo del tipo definito dall'implementazione `T3`.
+Il tipo di valore integer con segno descrive un oggetto che può rappresentare la differenza tra gli indirizzi di due elementi qualsiasi della sequenza controllata. Viene descritta come un sinonimo del tipo definito dall'implementazione `T3` .
 
 ### <a name="example"></a>Esempio
 
@@ -981,11 +1036,11 @@ Oggetto il `pair` cui **`bool`** componente restituisce true se è stato eseguit
 
 Per accedere al componente iterator di una coppia `pr` restituita da questa funzione membro, usare `pr.first` e per dereferenziarlo, usare `*(pr.first)`. Per accedere al **`bool`** componente di una coppia `pr` restituita da questa funzione membro, usare `pr.second` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non invalida alcun iteratore né riferimento.
 
-Durante l'inserimento, se viene generata un'eccezione che non si trova nella funzione hash del contenitore, quest'ultimo non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito.
+Durante l'inserimento, se viene generata un'eccezione ma non si verifica nella funzione hash del contenitore, il contenitore non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito.
 
 Per un esempio di codice, vedere [set:: emplace](../standard-library/set-class.md#emplace).
 
@@ -1006,7 +1061,7 @@ Args&&... args);
 Argomenti inoltrati per costruire un elemento da inserire in un oggetto unordered_set a meno che quest'ultimo non contenga già tale elemento o, più in generale, a meno che non contenga già un elemento la cui la chiave sia equivalentemente ordinata.
 
 *in cui*\
-Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.
+Suggerimento sulla posizione in cui iniziare la ricerca del punto di inserimento corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1014,11 +1069,11 @@ Iteratore all'elemento appena inserito.
 
 Se l'inserimento ha avuto esito negativo perché l'elemento esiste già, restituisce un iteratore all'elemento esistente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non invalida alcun iteratore né riferimento.
 
-Durante l'inserimento, se viene generata un'eccezione che non si trova nella funzione hash del contenitore, quest'ultimo non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito.
+Durante l'inserimento, se viene generata un'eccezione ma non si verifica nella funzione hash del contenitore, il contenitore non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito.
 
 Per un esempio di codice, vedere [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
@@ -1030,7 +1085,7 @@ Verifica se sono presenti o meno degli elementi.
 bool empty() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce true per una sequenza controllata vuota.
 
@@ -1105,7 +1160,7 @@ const_local_iterator end(size_type nbucket) const;
 *nbucket*\
 Numero di bucket.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le prime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine della sequenza. Le ultime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine del bucket *nbucket*.
 
@@ -1171,7 +1226,7 @@ equal_range(const Key& keyval) const;
 *keyval*\
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce una coppia di iteratori `X` in modo che `[X.first, X.second)` delimiti solo gli elementi della sequenza controllata che hanno un ordinamento equivalente con *keyval*. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.
 
@@ -1254,7 +1309,7 @@ Per le prime due funzioni membro, iteratore bidirezionale che definisce il primo
 
 Per la terza funzione membro, restituisce il numero di elementi rimossi dall'oggetto unordered_set.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un esempio di codice, vedere [set::erase](../standard-library/set-class.md#erase).
 
@@ -1271,7 +1326,7 @@ const_iterator find(const Key& keyval) const;
 *keyval*\
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce [unordered_set:: equal_range](#equal_range) `(keyval).first` .
 
@@ -1325,7 +1380,7 @@ Ottiene l'oggetto allocatore archiviato.
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce l'oggetto allocatore archiviato.
 
@@ -1363,7 +1418,7 @@ Ottiene l'oggetto della funzione hash archiviato.
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce l'oggetto archiviato della funzione hash.
 
@@ -1401,7 +1456,7 @@ Tipo della funzione hash.
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Hash`.
 
@@ -1487,17 +1542,17 @@ Le funzioni membro a elemento singolo, (1) e (2), restituiscono una [coppia](../
 
 Le funzioni membro a elemento singolo con suggerimento, (3) e (4), restituiscono un iteratore che fa riferimento alla posizione in cui il nuovo elemento è stato inserito in unordered_set o all'elemento già esistente se esiste un elemento con una chiave equivalente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non ci sono iteratori, puntatori o riferimenti invalidati da questa funzione.
 
-Se viene generata un'eccezione durante l'inserimento di un solo elemento, ma l'eccezione non si manifesta nella funzione hash del contenitore, lo stato del contenitore non verrà modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito. Se viene generata un'eccezione durante l'inserimento di più elementi, il contenitore viene lasciato in uno stato non specificato ma comunque valido.
+Durante l'inserimento di un solo elemento, se viene generata un'eccezione ma non si verifica nella funzione hash del contenitore, lo stato del contenitore non viene modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito. Se viene generata un'eccezione durante l'inserimento di più elementi, il contenitore viene lasciato in uno stato non specificato ma comunque valido.
 
 Per accedere al componente iteratore di un oggetto `pair` `pr` restituito dalle funzioni membro a elemento singolo, usare `pr.first` ; per dereferenziare l'iteratore all'interno della coppia restituita, usare `*pr.first` , che fornisce un elemento. Per accedere al **`bool`** componente, usare `pr.second` . Per un esempio, vedere il codice di esempio più avanti in questo articolo.
 
 L'oggetto [value_type](../standard-library/map-class.md#value_type) di un contenitore è un typedef appartenente al contenitore e, per set, `unordered_set<V>::value_type` è di tipo `const V`.
 
-La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in un unordered_set che corrisponde a ogni elemento a cui punta un iteratore nell'intervallo. non viene `[First, Last)` quindi inserito l' *ultimo* . La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `s.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `s`. Solo gli elementi che hanno valori univoci nell'intervallo vengono inseriti; i duplicati vengono ignorati. Per osservare quali elementi vengono rifiutati, usare le versioni con un singolo elemento di `insert`.
+La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in un unordered_set che corrisponde a ogni elemento a cui punta un iteratore nell'intervallo `[First, Last)` . non viene quindi inserito l' *ultimo* . La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `s.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `s`. Solo gli elementi che hanno valori univoci nell'intervallo vengono inseriti; i duplicati vengono ignorati. Per osservare quali elementi vengono rifiutati, usare le versioni con un singolo elemento di `insert`.
 
 La funzione membro dell'elenco di inizializzatori (6) usa un [initializer_list](../standard-library/initializer-list.md) per copiare gli elementi nel unordered_set.
 
@@ -1525,7 +1580,7 @@ Ottiene l'oggetto archiviato della funzione di confronto.
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce l'oggetto archiviato della funzione di confronto.
 
@@ -1565,7 +1620,7 @@ Tipo della funzione di confronto.
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Pred`.
 
@@ -1605,7 +1660,7 @@ Tipo di una chiave di ordinamento.
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Key`.
 
@@ -1657,7 +1712,7 @@ Conta il numero medio di elementi per bucket.
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce `(float)` [unordered_set:: size](#size) `() / (float)` [unordered_set:: bucket_count](#bucket_count) `()` , il numero medio di elementi per bucket.
 
@@ -1742,9 +1797,9 @@ Tipo di iteratore di bucket.
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo descrive un oggetto che può essere usato come iteratore in avanti per un bucket. Qui è descritto come sinonimo del tipo definito dall'implementazione `T4`.
+Il tipo descrive un oggetto che può essere usato come iteratore in avanti per un bucket. Viene descritta come un sinonimo del tipo definito dall'implementazione `T4` .
 
 ### <a name="example"></a>Esempio
 
@@ -1789,7 +1844,7 @@ Ottiene il numero massimo di bucket.
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero massimo di bucket attualmente consentiti.
 
@@ -1881,7 +1936,7 @@ void max_load_factor(float factor);
 *Factor*\
 Nuovo fattore di carico massimo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro sostituisce il fattore di carico massimo archiviato con *Factor*.
 
@@ -1966,7 +2021,7 @@ Ottiene la dimensione massima della sequenza controllata.
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce la lunghezza della sequenza più lunga che l'oggetto può controllare.
 
@@ -2008,7 +2063,7 @@ unordered_set& operator=(unordered_set&& right);
 *Ok*\
 [Unordered_set](../standard-library/unordered-set-class.md) copiato nell'oggetto `unordered_set` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo la cancellazione di tutti gli elementi esistenti in un oggetto `unordered_set` , `operator=` copia o sposta il contenuto di *direttamente* in `unordered_set` .
 
@@ -2057,7 +2112,7 @@ Tipo di un puntatore a un elemento.
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come puntatore a un elemento della sequenza controllata.
 
@@ -2103,7 +2158,7 @@ Tipo di un riferimento a un elemento.
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come riferimento a un elemento della sequenza controllata.
 
@@ -2154,7 +2209,7 @@ void rehash(size_type nbuckets);
 *nbuckets*\
 Numero di bucket richiesto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro modifica il numero di bucket in modo da essere almeno *nbuckets* e ricompila la tabella hash in base alle esigenze.
 
@@ -2226,7 +2281,7 @@ Conta il numero di elementi.
 size_type size() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce la lunghezza della sequenza controllata.
 
@@ -2291,9 +2346,9 @@ Tipo di una distanza Unsigned tra due elementi.
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo Unsigned Integer descrive un oggetto che può rappresentare la lunghezza di una sequenza controllata. Qui è descritto come sinonimo del tipo definito dall'implementazione `T2`.
+Il tipo Unsigned Integer descrive un oggetto che può rappresentare la lunghezza di una sequenza controllata. Viene descritta come un sinonimo del tipo definito dall'implementazione `T2` .
 
 ### <a name="example"></a>Esempio
 
@@ -2332,7 +2387,7 @@ void swap(unordered_set& right);
 *Ok*\
 Contenitore con cui eseguire lo scambio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia le sequenze controllate tra **`*this`** e *right*. Se [unordered_set:: get_allocator](#get_allocator) `() == right.get_allocator()` , esegue tale operazione in un tempo costante, genera un'eccezione solo in seguito alla copia dell'oggetto tratti archiviato di tipo e non `Tr` invalida riferimenti, puntatori o iteratori che definiscono gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
 
@@ -2458,7 +2513,7 @@ Contenitore da copiare.
 *IList*\
 Oggetto initializer_list contenente gli elementi da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore specifica una copia della sequenza controllata da *right*. Il secondo costruttore specifica una sequenza controllata vuota. Il terzo costruttore specifica una copia della sequenza spostando a *destra* il quarto all'ottavo costruttore usa un initializer_list per specificare gli elementi da copiare. Il nono costruttore inserisce la sequenza di valori degli elementi `[first, last)`.
 
@@ -2480,7 +2535,7 @@ Tipo di un elemento.
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un elemento nella sequenza controllata.
 

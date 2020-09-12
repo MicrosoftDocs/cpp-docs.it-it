@@ -1,19 +1,19 @@
 ---
-title: Enumerazione endian
+title: endian enum
 description: Enumerazione utilizzata per specificare l'oggetto di tipo scalare
 ms.date: 08/27/2020
 f1_keywords:
 - bit/std::endian
 helpviewer_keywords:
 - std::endian
-ms.openlocfilehash: 78df181e20d0e5d72508bd0fc86118528a312d6b
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: b535bc009fbdc0b047444a6bc2ca36eed7a6d1cb
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194545"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040080"
 ---
-# <a name="endian-enum"></a>Enumerazione endian
+# <a name="endian-enum"></a>endian enum
 
 Indica la caratteristica di tutti i tipi scalari.
 
@@ -27,7 +27,7 @@ enum class endian {
  };
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 |Elemento|Descrizione|
 |-|-|
@@ -44,7 +44,7 @@ Tutti i tipi scalari nativi sono little-endian per le piattaforme che Microsoft 
 
 **Spazio dei nomi:** std
 
-`/std:c++latest` è obbligatorio
+[/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) è obbligatorio.
 
 ## <a name="see-also"></a>Vedere anche
 

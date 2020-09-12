@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3a6083f39e12182ae512f5327b5f7d8d89deb2a2
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913374"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039547"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -72,15 +72,15 @@ Funzione di callback che confronta due elementi. Il primo è un puntatore alla c
 
 **bCerca** restituisce un puntatore a un'occorrenza della *chiave* nella matrice a cui punta la *base*. Se *Key* non viene trovato, la funzione restituisce **null**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **bCerca** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento di matrice. Restituisce uno dei valori seguenti che specificano la relazione:
 
-|Valore restituito dalla routine di *confronto*|Description|
+|Valore restituito dalla routine di *confronto*|Descrizione|
 |-----------------------------------------|-----------------|
-|\< 0|La chiave è minore dell'elemento della matrice.|
-|0|La chiave è uguale all'elemento della matrice.|
-|> 0|La chiave è maggiore dell'elemento della matrice.|
+|`< 0`|La chiave è minore dell'elemento della matrice.|
+|`0`|La chiave è uguale all'elemento della matrice.|
+|`> 0`|La chiave è maggiore dell'elemento della matrice.|
 
 Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su `EINVAL` e la funzione restituisce **null**.
 
@@ -139,7 +139,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

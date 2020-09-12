@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: a5a0534ba74cc9b125e94d4ece133c2449700a67
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: e8e312eacb46d82270d7ca1782b04d06012b207d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446537"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041536"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitatori per i tag della documentazione di Visual C++
 
@@ -17,9 +17,9 @@ L'uso dei tag della documentazione richiede la specifica di delimitatori per ind
 
 È possibile usare con i tag della documentazione XML i tipi di delimitatori seguenti:
 
-| | |
+| Delimitatore | Descrizione |
 |-|-|
-| `///` | Si tratta del formato illustrato negli esempi di documentazione e usato da Visual Studio C++ modelli di progetto.  |
+| `///` | Questo è il formato illustrato negli esempi di documentazione e usato dai modelli di progetto di Visual Studio C++.  |
 | `/** */`  | Delimitatori di più righe.  |
 
 Quando si usano i delimitatori `/** */` è necessario rispettare determinate regole di formattazione:
@@ -30,7 +30,7 @@ Quando si usano i delimitatori `/** */` è necessario rispettare determinate reg
 
 - Per le righe successive a quella che inizia con il delimitatore `/**`, il compilatore cerca un modello comune all'inizio di ogni riga costituito da uno spazio vuoto facoltativo e un asterisco (`*`), seguiti da altri spazi vuoti facoltativi. Se il compilatore rileva un set comune di caratteri all'inizio di ogni riga, ignorerà il modello per tutte le righe successive al delimitatore `/**` fino a, ed eventualmente includendo, la riga contenente il delimitatore `*/`.
 
-Ecco alcuni esempi:
+Di seguito alcuni esempi:
 
 - La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I formati dei due tag seguenti produrranno gli stessi commenti:
 
@@ -68,6 +68,6 @@ Ecco alcuni esempi:
     */
     ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

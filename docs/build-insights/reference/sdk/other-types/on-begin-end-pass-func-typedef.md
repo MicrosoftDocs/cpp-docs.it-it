@@ -1,6 +1,6 @@
 ---
-title: Tipode OnBeginEndPassFunc
-description: Il riferimento typedef OnBeginEndPassFunc dell'SDK di Build Insights in C.
+title: OnBeginEndPassFunc (typedef)
+description: Informazioni di riferimento su typedef di build Insights SDK per C++ OnBeginEndPassFunc.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3b3fc453245a47463c29ceeb30dfdc48c79aef35
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2008dfb86d6f45a1c05a59e1f0f4f8c7868dcda2
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329090"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041978"
 ---
-# <a name="onbeginendpassfunc-typedef"></a>Tipode OnBeginEndPassFunc
+# <a name="onbeginendpassfunc-typedef"></a>OnBeginEndPassFunc (typedef)
 
 ::: moniker range="<=vs-2015"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Il `OnBeginEndPassFunc` typedef è una delle firme di funzione utilizzate nelle strutture [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) e [RELOG_CALLBACKS.](relog-callbacks-struct.md)
+Il `OnBeginEndPassFunc` typedef è una delle firme di funzione utilizzate nelle strutture [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) e [RELOG_CALLBACKS](relog-callbacks-struct.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,9 +34,9 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnBeginEndPassFunc)(
     void*                           callbackContext);
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-|  |  |
+| Nome | Descrizione |
 |--|--|
 | `callbackContext` |  |
 
