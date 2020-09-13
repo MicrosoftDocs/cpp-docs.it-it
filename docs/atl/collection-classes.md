@@ -1,16 +1,16 @@
 ---
-title: Classi di raccolta ATL
+title: Classi Collection in ATL
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: a93810b91cefd897b55cae4760ade32374900eb3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739531"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041419"
 ---
 # <a name="collection-classes"></a>Classi Collection
 
@@ -78,7 +78,7 @@ Le classi seguenti forniscono supporto per matrici, elenchi, mappe e metodi di t
 
 - [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) Questa classe è un helper per la classe [CSimpleMap](../atl/reference/csimplemap-class.md) .
 
-- [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) Questa classe fornisce funzioni statiche utilizzate dalle classi di raccolta `CString` che archiviano oggetti.
+- [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) Questa classe fornisce funzioni statiche utilizzate dalle classi di raccolta che archiviano `CString` oggetti.
 
 - [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) Questa classe fornisce funzioni statiche correlate alle stringhe archiviate negli oggetti classe della raccolta. È simile a [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), ma esegue confronti senza distinzione tra maiuscole e minuscole.
 
@@ -86,9 +86,9 @@ Le classi seguenti forniscono supporto per matrici, elenchi, mappe e metodi di t
 
 ## <a name="related-articles"></a>Articoli correlati
 
-[Classi di raccolta ATL](../atl/atl-collection-classes.md)
+[Panoramica della classe di raccolta ATL](../atl/atl-collection-classes.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)<br/>
-[Classi di raccolta](../atl/atl-collection-classes.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)<br/>
+[Classi Collection](../atl/atl-collection-classes.md)
