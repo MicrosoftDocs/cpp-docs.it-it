@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: f5340f2e56a367734293d661d9d89eb0db522fd2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3694dc72860892d778533de2e40898faf9cc287d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842052"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042160"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -643,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 e versioni successive**: l' **`using`** istruzione nella modalità **/std: c++ 17** riporta nell'ambito tutti i costruttori della classe di base, ad eccezione di quelli che hanno una firma identica ai costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori. Vedere anche miglioramenti apportati [a Visual Studio 2017 versione 15,7](../overview/cpp-conformance-improvements.md?view=vs-2017#improvements_157).
+**Visual Studio 2017 e versioni successive**: l' **`using`** istruzione nella modalità **/std: c++ 17** riporta nell'ambito tutti i costruttori della classe di base, ad eccezione di quelli che hanno una firma identica ai costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori.
 
 ::: moniker-end
 
@@ -698,6 +698,6 @@ int main(){
 - [Costruttori di spostamento e operatori di assegnazione spostamento](move-constructors-and-move-assignment-operators-cpp.md)
 - [Delega dei costruttori](delegating-constructors.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](classes-and-structs-cpp.md)

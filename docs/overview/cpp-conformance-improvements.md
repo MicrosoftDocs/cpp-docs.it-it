@@ -3,12 +3,12 @@ title: Miglioramenti della conformità di C++
 ms.date: 08/04/2020
 description: Microsoft C++ in Visual Studio si avvicina alla conformità completa con lo standard di linguaggio C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841389"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042121"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Miglioramenti della conformità di C++ in Visual Studio 2017
 
@@ -744,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>L'output del preprocessore conserva le nuove righe
 
-Il preprocessore sperimentale conserva ora le nuove righe e gli spazi vuoti quando si usa **`/P`** o **`/E`** con **`/experimental:preprocessor`** . Questa modifica può essere disabilitata tramite **`/d1experimental:preprocessor:oldWhitespace`** .
+Il preprocessore sperimentale conserva ora le nuove righe e gli spazi vuoti quando si usa **`/P`** o **`/E`** con **`/experimental:preprocessor`** .
 
 Dato questo esempio di origine,
 
@@ -3651,6 +3651,6 @@ Per evitare l'errore, rimuovere il **`constexpr`** qualificatore dalla creazione
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tabella di conformità al linguaggio C++ di Microsoft](visual-cpp-language-conformance.md)

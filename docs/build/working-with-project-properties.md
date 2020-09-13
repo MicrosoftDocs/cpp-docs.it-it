@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078242"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042186"
 ---
 # <a name="set-compiler-and-build-properties"></a>Impostare il compilatore e le proprietà di compilazione
 
-Nell'IDE tutte le informazioni necessarie per compilare un progetto vengono esposte come *proprietà*. Queste informazioni includono nome dell'applicazione, estensione (ad esempio DLL, LIB, EXE), opzioni del compilatore, opzioni del linker, impostazioni del debugger, istruzioni di compilazione personalizzate e molti altri elementi. In genere, è possibile utilizzare le *pagine delle proprietà* per visualizzare e modificare queste proprietà. Per accedere alle pagine delle proprietà, scegliere **Project** > **_NomeProgetto_ Properties** dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.
+Nell'IDE tutte le informazioni necessarie per compilare un progetto vengono esposte come *proprietà*. Queste informazioni includono nome dell'applicazione, estensione (ad esempio DLL, LIB, EXE), opzioni del compilatore, opzioni del linker, impostazioni del debugger, istruzioni di compilazione personalizzate e molti altri elementi. In genere, è possibile utilizzare le *pagine delle proprietà* per visualizzare e modificare queste proprietà. Per accedere alle pagine delle proprietà, scegliere **Project**  >  **_NomeProgetto_ Properties** dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.
 
 ## <a name="default-properties"></a>Proprietà predefinite
 
@@ -46,7 +46,7 @@ Il valore della piattaforma di destinazione **Qualsiasi CPU** che è possibile r
 Per ulteriori informazioni sull'impostazione delle proprietà per una compilazione di debug, vedere:
 
 - [Impostazioni di progetto per una configurazione di debug C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
-- [Impostazioni e preparazione del debugger](/visualstudio/debugger/debugger-settings-and-preparation)
+- [Impostazioni di debug e preparazione](/visualstudio/debugger/debugger-settings-and-preparation)
 - [Preparazione al debug: tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Specificare file di simboli (PDB) e di origine nel debugger di Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
@@ -72,7 +72,7 @@ La figura seguente mostra le pagine delle proprietà per un progetto Visual Stud
 Si applica a tutti gli elementi di una configurazione del progetto. Presenta la sintassi `$(name)`. Un esempio di macro globale è `$(VCInstallDir)`, che archivia la directory radice dell'installazione di Visual Studio. Una macro globale corrisponde a `PropertyGroup` in MSBuild.
 
 *macro elemento*<br/>
-Presenta la sintassi `%(name)`. Per un file una macro di elemento si applica solo a quel file. Ad esempio è possibile usare `%(AdditionalIncludeDirectories)` per specificare le directory di inclusione che si applicano solo a un determinato file. Questo tipo di macro di elemento corrisponde ai metadati `ItemGroup` in MSBuild. Quando viene usata nel contesto di una configurazione di progetto, una macro di elemento viene applicata a tutti i file di un certo tipo. Ad esempio, la proprietà di configurazione **definizioni preprocessore** di C/C++ può `%(PreprocessorDefinitions)` prendere una macro di elemento che si applica a tutti i file con estensione cpp nel progetto. Questo tipo di macro di elemento corrisponde ai metadati `ItemDefinitionGroup` in MSBuild. Per altre informazioni, vedere [definizioni di elementi](/visualstudio/msbuild/item-definitions).
+Presenta la sintassi `%(name)`. Per un file una macro di elemento si applica solo a quel file. Ad esempio è possibile usare `%(AdditionalIncludeDirectories)` per specificare le directory di inclusione che si applicano solo a un determinato file. Questo tipo di macro di elemento corrisponde ai metadati `ItemGroup` in MSBuild. Quando viene usata nel contesto di una configurazione di progetto, una macro di elemento viene applicata a tutti i file di un certo tipo. Ad esempio, la proprietà di configurazione **definizioni preprocessore** di C/C++ può prendere una `%(PreprocessorDefinitions)` macro di elemento che si applica a tutti i file con estensione cpp nel progetto. Questo tipo di macro di elemento corrisponde ai metadati `ItemDefinitionGroup` in MSBuild. Per altre informazioni, vedere [definizioni di elementi](/visualstudio/msbuild/item-definitions).
 
 ### <a name="user-defined-macros"></a>Macro definite dall'utente
 
@@ -82,7 +82,7 @@ Una macro definita dall'utente viene archiviata in una finestra delle proprietà
 
 #### <a name="to-create-a-user-defined-macro"></a>Per creare una macro definita dall'utente
 
-1. Aprire la finestra **Gestione proprietà** . Sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > **altre** > **Gestione proprietà**di Windows. Aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con. User), quindi scegliere **Proprietà**. Verrà visualizzata la finestra di dialogo **pagine delle proprietà** per la finestra delle proprietà.
+1. Aprire la finestra **Gestione proprietà** . Sulla barra dei menu scegliere Visualizza. **View**  >  **Gestione proprietà** o **visualizzare**  >  **altre**  >  **Gestione proprietà**Windows.) Aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con. User), quindi scegliere **Proprietà**. Verrà visualizzata la finestra di dialogo **pagine delle proprietà** per la finestra delle proprietà.
 
 1. Nel riquadro sinistro della finestra di dialogo selezionare **macro utente**. Nel riquadro destro scegliere il pulsante **Aggiungi macro** per aprire la finestra di dialogo **Aggiungi macro utente** .
 
@@ -90,17 +90,17 @@ Una macro definita dall'utente viene archiviata in una finestra delle proprietà
 
 ## <a name=""></a><a name="property_editor">Editor proprietà</a>
 
-È possibile usare l'Editor della proprietà per modificare alcune proprietà stringa e selezionare le macro come valori. Per accedere all'Editor proprietà, selezionare una proprietà in una pagina delle proprietà, quindi scegliere il pulsante freccia in giù a destra. Se l'elenco a discesa contiene ** \<modifica>**, è possibile selezionarlo per visualizzare l'editor proprietà per la proprietà.
+È possibile usare l'Editor della proprietà per modificare alcune proprietà stringa e selezionare le macro come valori. Per accedere all'Editor proprietà, selezionare una proprietà in una pagina delle proprietà, quindi scegliere il pulsante freccia in giù a destra. Se l'elenco a discesa contiene **\<Edit>** , è possibile sceglierlo per visualizzare l'editor proprietà per la proprietà.
 
-![Elenco a discesa&#95;editor&#95;proprietà](media/property_editor_dropdown.png "Property_Editor_Dropdown")
+![Per accedere all'editor proprietà viene usato un controllo a discesa delle proprietà](media/property_editor_dropdown.png "Elenco a discesa editor proprietà")
 
 Nell'editor delle proprietà è possibile scegliere il pulsante **macro** per visualizzare le macro disponibili e i relativi valori correnti. La figura seguente mostra l'editor di proprietà per la proprietà **directory di inclusione aggiuntive** dopo aver scelto il pulsante **macro** . Quando la casella di controllo **eredita da padre o da impostazioni predefinite progetto** è selezionata e si aggiunge un nuovo valore, questo viene aggiunto a tutti i valori attualmente ereditati. Se si deseleziona la casella di controllo, il nuovo valore sostituisce i valori ereditati. Nella maggior parte dei casi lasciare selezionata la casella di controllo.
 
-![Editor proprietà, Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
+![Finestra di dialogo dell'editor di proprietà per la proprietà directory di inclusione](media/propertyeditorvc.png "PropertyEditorVC")
 
 ## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>Aggiungere una directory di inclusione al set di directory predefinite
 
-Quando si aggiunge una directory di inclusione a un progetto, è importante non eseguire l'override di tutte le directory predefinite. Il modo corretto per aggiungere una directory consiste nell'aggiungere il nuovo percorso, ad esempio "C:\MyNewIncludeDir\", e quindi aggiungere la macro **$ (IncludePath)** al valore della proprietà.
+Quando si aggiunge una directory di inclusione a un progetto, è importante non eseguire l'override di tutte le directory predefinite. Il modo corretto per aggiungere una directory consiste nell'aggiungere il nuovo percorso, ad esempio "C:\MyNewIncludeDir \" , e quindi aggiungere la macro **$ (IncludePath)** al valore della proprietà.
 
 ## <a name="quickly-browse-and-search-all-properties"></a>Sfoglia e cerca rapidamente tutte le proprietà
 
@@ -117,7 +117,7 @@ ricerca solo nei valori (sottostringa senza distinzione tra maiuscole e minuscol
 
 ## <a name="set-environment-variables-for-a-build"></a>Impostare le variabili di ambiente per una compilazione
 
-Il compilatore MSVC (cl. exe) riconosce alcune variabili di ambiente, in particolare LIB, LIBPATH, PATH e INCLUDE. Quando si esegue la compilazione con l'IDE, le proprietà impostate nella pagina delle proprietà [directory di VC + +](reference/vcpp-directories-property-page.md) vengono usate per impostare tali variabili di ambiente. Se i valori LIB, LIBPATH e INCLUDE sono già stati impostati, ad esempio da un prompt dei comandi dello sviluppatore, vengono sostituiti con i valori delle proprietà MSBuild corrispondenti. La compilazione antepone il valore della proprietà delle directory di file eseguibili Directory di VC++ a PATH. È possibile impostare una variabile di ambiente definita dall'utente creando una macro definita dall'utente e quindi selezionando la casella **imposta questa macro come variabile di ambiente nell'ambiente di compilazione**.
+Il compilatore MSVC (cl.exe) riconosce alcune variabili di ambiente, in particolare LIB, LIBPATH, PATH e INCLUDE. Quando si esegue la compilazione con l'IDE, le proprietà impostate nella pagina delle proprietà [directory di VC + +](reference/vcpp-directories-property-page.md) vengono usate per impostare tali variabili di ambiente. Se i valori LIB, LIBPATH e INCLUDE sono già stati impostati, ad esempio da un prompt dei comandi dello sviluppatore, vengono sostituiti con i valori delle proprietà MSBuild corrispondenti. La compilazione antepone il valore della proprietà delle directory di file eseguibili Directory di VC++ a PATH. È possibile impostare una variabile di ambiente definita dall'utente creando una macro definita dall'utente e quindi selezionando la casella **imposta questa macro come variabile di ambiente nell'ambiente di compilazione**.
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>Impostare le variabili di ambiente per una sessione di debug
 
@@ -136,8 +136,8 @@ Descrive l'ordine di valutazione per i file. props,. targets,. vcxproj e le vari
 [Modificare le proprietà e le destinazioni senza modificare il file di progetto](modify-project-properties-without-changing-project-file.md)<br/>
 Come creare impostazioni di compilazione temporanee senza dover modificare un file di progetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Progetti di Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Progetti di Visual Studio-C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [Struttura dei file con estensione vcxproj e props](reference/vcxproj-file-structure.md)<br/>
 [File XML delle pagine delle proprietà](reference/property-page-xml-files.md)<br/>

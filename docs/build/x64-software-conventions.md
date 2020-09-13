@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 7c47ec86e80b50bb2b313a2c84a3f375681e2870
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 94c44e4ee142249fefcc966febc471ce940ab86a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838828"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042173"
 ---
 # <a name="x64-software-conventions"></a>Convenzioni del software x64
 
@@ -149,7 +149,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Esempio di conversione AMD-layout di struttura 2](../build/media/vcamd_conv_ex_3_block.png "Esempio di conversione AMD-layout di struttura 2")
+![Esempio di conversione AMD 3 layout struttura](../build/media/vcamd_conv_ex_3_block.png "Esempio di conversione AMD 3 layout struttura")
 
 #### <a name="example-4"></a>Esempio 4
 
@@ -163,7 +163,7 @@ _declspec(align(8)) union {
 }
 ```
 
-![Esempio di conversione AMD 4 Union layouit](../build/media/vcamd_conv_ex_4_block.png "Esempio di conversione AMD 4 Union layouit")
+![Esempio di conversione di AMD 4 layout Unione](../build/media/vcamd_conv_ex_4_block.png "Esempio di conversione di AMD 4 layout Unione")
 
 ### <a name="bitfields"></a>Campi di bit
 
@@ -189,7 +189,7 @@ L'architettura x64 prevede 16 registri di utilizzo generico (in seguito denomina
 
 Nella tabella seguente viene descritto il modo in cui ogni registro viene usato durante le chiamate di funzione:
 
-|Registrazione|Stato|Uso|
+|Register|Stato|Uso|
 |-|-|-|
 |RAX|Volatile|Registro del valore restituito|
 |RCX|Volatile|Primo argomento Integer|
@@ -235,6 +235,6 @@ Gli intrinseci supportati dal compilatore sono descritti in [intrinseci del comp
 
 Il formato di immagine eseguibile x64 è PE32 +. Le immagini eseguibili (sia dll che exe) sono limitate a una dimensione massima di 2 gigabyte, quindi l'indirizzamento relativo con lo spostamento a 32 bit può essere usato per indirizzare i dati di immagini statiche. Questi dati includono la tabella degli indirizzi di importazione, le costanti di stringa, i dati globali statici e così via.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Convenzioni di chiamata](../cpp/calling-conventions.md)

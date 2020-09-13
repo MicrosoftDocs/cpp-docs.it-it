@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127842"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042199"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: creare e usare la propria libreria a collegamento dinamico (C++)
 
@@ -54,7 +54,7 @@ Per collegamenti a ulteriori informazioni sulle DLL, vedere [Creare DLL C/C++ in
 
 ::: moniker range="vs-2015"
 
-- Una copia di Visual Studio. Per informazioni su come scaricare e installare Visual Studio 2015, vedere [installare Visual studio 2015](/visualstudio/install/install-visual-studio-2015?view=vs-2015). Utilizzare un'installazione **personalizzata** per installare il compilatore e gli strumenti C++, poiché non sono installati per impostazione predefinita.
+- Una copia di Visual Studio. Per informazioni su come scaricare e installare Visual Studio 2015, vedere [installare Visual studio 2015](/visualstudio/install/install-visual-studio-2015?view=vs-2015&preserve-view=true). Utilizzare un'installazione **personalizzata** per installare il compilatore e gli strumenti C++, poiché non sono installati per impostazione predefinita.
 
 ::: moniker-end
 
@@ -101,7 +101,7 @@ Quando viene creata la soluzione, è possibile visualizzare i file di progetto e
 
 1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.
 
-1. Nel riquadro sinistro della finestra di dialogo **nuovo progetto** selezionare **installato** > **Visual C++** > **desktop di Windows**. Nel riquadro centrale selezionare **libreria a collegamento dinamico (dll)**. Immettere *MathLibrary* nella casella **nome** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
+1. Nel riquadro sinistro della finestra di dialogo **nuovo progetto** selezionare **installato**  >  **Visual C++**  >  **desktop di Windows**. Nel riquadro centrale selezionare **libreria a collegamento dinamico (dll)**. Immettere *MathLibrary* nella casella **nome** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
    ![Assegnare un nome al progetto MathLibrary](media/mathlibrary-new-project-name-159.png "Assegnare un nome al progetto MathLibrary")
 
@@ -143,7 +143,7 @@ A questo punto la DLL non fa molto. Successivamente, verrà creato un file di in
 
 ### <a name="to-add-a-header-file-to-the-dll"></a>Per aggiungere un file di intestazione alla DLL
 
-1. Per creare un file di intestazione per le funzioni, sulla barra dei menu scegliere **progetto** > **Aggiungi nuovo elemento**.
+1. Per creare un file di intestazione per le funzioni, sulla barra dei menu scegliere **progetto**  >  **Aggiungi nuovo elemento**.
 
 1. Nel riquadro sinistro della finestra di dialogo **Aggiungi nuovo elemento** selezionare **Visual C++**. Nel riquadro centrale selezionare **File di intestazione (.h)**. Specificare *MathLibrary. h* come nome per il file di intestazione.
 
@@ -202,7 +202,7 @@ Quando viene definita la macro **MATHLIBRARY&#95;EXPORTS**, la macro **MATHLIBRA
 
 ::: moniker range=">=vs-2019"
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo **file di origine** e scegliere **Aggiungi** > **nuovo elemento**. Creare un nuovo file con estensione cpp denominato *MathLibrary. cpp*, nello stesso modo in cui è stato aggiunto un nuovo file di intestazione nel passaggio precedente.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo **file di origine** e scegliere **Aggiungi**  >  **nuovo elemento**. Creare un nuovo file con estensione cpp denominato *MathLibrary. cpp*, nello stesso modo in cui è stato aggiunto un nuovo file di intestazione nel passaggio precedente.
 
 1. Nella finestra dell'editor selezionare la scheda **MathLibrary.cpp** se è già aperta. In caso contrario, in **Esplora soluzioni**fare doppio clic su **MathLibrary. cpp** nella cartella **file di origine** del progetto **MathLibrary** per aprirlo.
 
@@ -336,7 +336,7 @@ Quando viene definita la macro **MATHLIBRARY&#95;EXPORTS**, la macro **MATHLIBRA
 
 ::: moniker-end
 
-Per verificare che tutto funzioni finora, compilare la libreria di collegamento dinamico. Per compilare **, scegliere** > compila Compila**soluzione** dalla barra dei menu. La DLL e l'output del compilatore correlato vengono inseriti in una cartella denominata *debug* direttamente sotto la cartella della soluzione. Se si crea una build di rilascio, l'output viene inserito in una cartella denominata *Release*. L'output dovrebbe essere simile a quanto segue:
+Per verificare che tutto funzioni finora, compilare la libreria di collegamento dinamico. Per compilare **, scegliere Compila compila**  >  **soluzione** dalla barra dei menu. La DLL e l'output del compilatore correlato vengono inseriti in una cartella denominata *debug* direttamente sotto la cartella della soluzione. Se si crea una build di rilascio, l'output viene inserito in una cartella denominata *Release*. L'output dovrebbe essere simile al seguente:
 
 ::: moniker range=">=vs-2019"
 
@@ -457,7 +457,7 @@ Successivamente, per chiamare le funzioni MathLibrary nel codice sorgente, il pr
 
 1. Nella casella di riepilogo a discesa **configurazione** selezionare **tutte le configurazioni** se non è già selezionata.
 
-1. Nel riquadro sinistro selezionare **Proprietà** > di configurazione**C/C++** > **generale**.
+1. Nel riquadro sinistro selezionare proprietà di **configurazione**  >  **C/C++**  >  **generale**.
 
 1. Nel riquadro delle proprietà selezionare il controllo elenco a discesa accanto alla casella di modifica **Directory di inclusione aggiuntive** e quindi scegliere **Modifica**.
 
@@ -515,7 +515,7 @@ Per risolvere questo problema, è possibile copiare il file di libreria direttam
 
 1. Nella casella di riepilogo a discesa **configurazione** selezionare **tutte le configurazioni** se non è già selezionata. Garantisce che tutte le modifiche alle proprietà siano valide per le compilazioni di debug e di rilascio.
 
-1. Nel riquadro sinistro selezionare **Proprietà** > di configurazione**input**del**linker** > . Nel riquadro delle proprietà selezionare il controllo elenco a discesa accanto alla casella di modifica **Dipendenze aggiuntive** e quindi scegliere **Modifica**.
+1. Nel riquadro sinistro selezionare proprietà di **configurazione**  >  input del**linker**  >  **Input**. Nel riquadro delle proprietà selezionare il controllo elenco a discesa accanto alla casella di modifica **Dipendenze aggiuntive** e quindi scegliere **Modifica**.
 
    ![Modificare la proprietà Dipendenze aggiuntive](media/mathclient-additional-dependencies-property.png "Modificare la proprietà Dipendenze aggiuntive")
 
@@ -525,7 +525,7 @@ Per risolvere questo problema, è possibile copiare il file di libreria direttam
 
 1. Scegliere **OK** per tornare alla finestra di dialogo **Pagine delle proprietà**.
 
-1. Nel riquadro sinistro selezionare **Proprietà** > di configurazione**collegamento** > **generale**. Nel riquadro delle proprietà selezionare il controllo elenco a discesa accanto alla casella di modifica **Directory librerie aggiuntive** e quindi scegliere **Modifica**.
+1. Nel riquadro sinistro selezionare proprietà di **configurazione**  >  **collegamento**  >  **generale**. Nel riquadro delle proprietà selezionare il controllo elenco a discesa accanto alla casella di modifica **Directory librerie aggiuntive** e quindi scegliere **Modifica**.
 
    ![Modificare la proprietà Directory librerie aggiuntive](media/mathclient-additional-library-directories-property.png "Modificare la proprietà Directory librerie aggiuntive")
 
@@ -551,7 +551,7 @@ Un modo per evitare questo problema consiste nel copiare la DLL nella directory 
 
 1. Nella casella di riepilogo a discesa **configurazione** selezionare **tutte le configurazioni** se non sono già selezionate.
 
-1. Nel riquadro sinistro selezionare **Proprietà** > di configurazione**eventi** > di compilazione**evento post-compilazione**.
+1. Nel riquadro sinistro selezionare proprietà di **configurazione**  >  **eventi di compilazione**  >  **evento post-compilazione**.
 
 1. Nel riquadro delle proprietà selezionare il controllo modifica nel campo **riga di comando** . Se sono state seguite le istruzioni per inserire il progetto client in una soluzione separata dal progetto DLL, immettere questo comando:
 
@@ -563,7 +563,7 @@ Un modo per evitare questo problema consiste nel copiare la DLL nella directory 
 
 1. Scegliere il pulsante **OK** per salvare le modifiche alle proprietà del progetto.
 
-A questo punto l'app client include tutto il necessario per la compilazione e l'esecuzione. Compilare l'applicazione scegliendo **Compila** > **Compila soluzione** sulla barra dei menu. La finestra di **output** in Visual Studio dovrebbe avere un aspetto simile a quello dell'esempio seguente, a seconda della versione di Visual Studio:
+A questo punto l'app client include tutto il necessario per la compilazione e l'esecuzione. Compilare l'applicazione scegliendo **Compila**  >  **Compila soluzione** sulla barra dei menu. La finestra di **output** in Visual Studio dovrebbe avere un aspetto simile a quello dell'esempio seguente, a seconda della versione di Visual Studio:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------
@@ -573,7 +573,7 @@ A questo punto l'app client include tutto il necessario per la compilazione e l'
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-È stata completata la creazione di un'applicazione che chiama le funzioni nella DLL. Eseguire ora l'applicazione per vederne le funzioni. Sulla barra dei menu scegliere **debug** > **Avvia senza eseguire debug**. Visual Studio apre una finestra di comando in cui eseguire il programma. L'ultima parte dell'output sarà simile al seguente:
+È stata completata la creazione di un'applicazione che chiama le funzioni nella DLL. Eseguire ora l'applicazione per vederne le funzioni. Sulla barra dei menu scegliere **debug**  >  **Avvia senza eseguire debug**. Visual Studio apre una finestra di comando in cui eseguire il programma. L'ultima parte dell'output sarà simile al seguente:
 
 ![Avviare l'app client senza debug](media/mathclient-run-without-debugging.png "Avviare l'app client senza debug")
 
@@ -583,6 +583,6 @@ Ora che sono state create una DLL e un'applicazione client, è possibile sperime
 
 Quando si distribuisce l'app, è necessario distribuire anche le DLL usate. Il modo più semplice per rendere disponibili le DLL compilate o da terze parti è inserirle nella stessa directory dell'app. È noto come *distribuzione locale dell'app*. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Chiamata di funzioni DLL da applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
