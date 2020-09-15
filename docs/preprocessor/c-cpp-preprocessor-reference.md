@@ -6,18 +6,18 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: e53f7270a71e5e7c3f456be7d55d49eaf352aecb
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e72146d8b88f5a4bffcaaa121f6851d740ec948b
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040743"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075634"
 ---
 # <a name="cc-preprocessor-reference"></a>Riferimenti al preprocessore C/C++
 
 Il *riferimento al preprocessore c/c++* illustra il preprocessore implementato in Microsoft C/c++. Il preprocessore esegue alcune operazioni preliminari sui file C e C++ prima che siano passati al compilatore. È possibile utilizzare il preprocessore per compilare in modo condizionale il codice, inserire file, specificare i messaggi di errore in fase di compilazione e applicare le regole specifiche del computer alle sezioni di codice.
 
-In Visual Studio 2019 l'opzione del compilatore [/Experimental: preprocessore](../build/reference/experimental-preprocessor.md) Abilita una nuova implementazione del preprocessore. La nuova implementazione è ancora in corso ed è quindi considerata sperimentale. È concepito per essere conforme a C99, C11 e C++ 20. Per altre informazioni, vedere [MSVC New Preprocessor Overview](preprocessor-experimental-overview.md).
+In Visual Studio 2019 l'opzione del compilatore [/Zc: preprocessore](../build/reference/zc-preprocessor.md) fornisce un preprocessore C11 e C17 completamente conforme. Si tratta dell'impostazione predefinita quando si usa il flag del compilatore `/std:c11` o `/std:c17` .
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 

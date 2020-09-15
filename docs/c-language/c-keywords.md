@@ -1,114 +1,137 @@
 ---
 title: Parole chiave C
-ms.date: 10/09/2018
+description: Parole chiave nelle estensioni standard C e del compilatore C Microsoft.
+ms.date: 09/12/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 1b49da349a6552022dfd9e8e66e85634f4694645
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f459b81c2b3f314218108f3f367eec0c1bf17f26
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838776"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075738"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
-Le parole chiave sono parole con significato particolare per il compilatore C. Nelle fasi di conversione 7 e 8 un identificatore non può avere la stessa ortografia e gli stessi caratteri maiuscoli/minuscoli di una parola chiave C. (Vedere una descrizione delle [fasi di conversione](../preprocessor/phases-of-translation.md) nella Guida di *riferimento al preprocessore*. per informazioni sugli identificatori, vedere [identificatori](../c-language/c-identifiers.md).) Il linguaggio C usa le parole chiave seguenti:
+Le *parole chiave* sono parole con un significato speciale per il compilatore C. Nelle fasi 7 e 8 della traduzione un identificatore non può avere la stessa ortografia e la stessa combinazione di maiuscole e minuscole della parola chiave C. Per altre informazioni, vedere [fasi di conversione](../preprocessor/phases-of-translation.md) in *riferimenti al preprocessore*. Per ulteriori informazioni sugli identificatori, vedere [identificatori](../c-language/c-identifiers.md).
+
+## <a name="standard-c-keywords"></a>Parole chiave C standard
+
+Nel linguaggio C vengono utilizzate le parole chiave seguenti:
 
 :::row:::
     :::column:::
         **`auto`**\
-        **`double`**\
-        **`int`**\
-        **`struct`**\
         **`break`**\
-        **`else`**\
-        **`long`**\
-        **`switch`**
-    :::column-end:::
-    :::column:::
         **`case`**\
-        **`enum`**\
-        **`register`**\
-        **`typedef`**\
         **`char`**\
-        **`extern`**\
-        **`return`**\
-        **`union`**
-    :::column-end:::
-    :::column:::
         **`const`**\
-        **`float`**\
-        **`short`**\
-        **`unsigned`**\
         **`continue`**\
-        **`for`**\
-        **`signed`**\
-        **`void`**
+        **`default`**\
+        **`do`**\
+        **`double`**\
+        **`else`**\
+        **`enum`**
     :::column-end:::
     :::column:::
-        **`default`**\
+        **`extern`**\
+        **`float`**\
+        **`for`**\
         **`goto`**\
-        **`sizeof`**\
-        **`volatile`**\
-        **`do`**\
         **`if`**\
+        **`inline`**<sup>1, a</sup>\
+        **`int`**\
+        **`long`**\
+        **`register`**\
+        **`restrict`**<sup>1, a</sup>\
+        **`return`**
+    :::column-end:::
+    :::column:::
+        **`short`**\
+        **`signed`**\
+        **`sizeof`**\
         **`static`**\
-        **`while`**
+        **`struct`**\
+        **`switch`**\
+        **`typedef`**\
+        **`union`**\
+        **`unsigned`**\
+        **`void`**\
+        **`volatile`**
+    :::column-end:::
+    :::column:::
+        **`while`**\
+        **`_Alignas`**<sup>2, a</sup>\
+        **`_Alignof`**<sup>2, a</sup>\
+        **`_Atomic`**<sup>2, b</sup>\
+        **`_Bool`**<sup>1, a</sup>\
+        **`_Complex`**<sup>1, b</sup>\
+        **`_Generic`**<sup>2, a</sup>\
+        **`_Imaginary`**<sup>1, b</sup>\
+        **`_Noreturn`**<sup>2, a</sup>\
+        **`_Static_assert`**<sup>2, a</sup>\
+        **`_Thread_local`**<sup>2, b</sup>
     :::column-end:::
 :::row-end:::
 
-Non è possibile ridefinire le parole chiave. È possibile tuttavia specificare il testo da sostituire alle parole chiave prima della compilazione tramite le [direttive per il preprocessore](../preprocessor/preprocessor-directives.md) C.
+<sup>1</sup>  parole chiave introdotte in C99 ISO.
 
-**Specifico di Microsoft**
+<sup>2</sup>   parole chiave introdotte in ISO C11.
 
-Lo standard ANSI C consente agli identificatori con due caratteri di sottolineatura iniziali di essere riservati per le implementazioni del compilatore. Di conseguenza, la convenzione di Microsoft consiste nel far precedere i nomi delle parole chiave specifiche di Microsoft da un doppio carattere di sottolineatura. Queste parole non possono essere usate come nomi di identificatori. Per una descrizione delle regole ANSI per la denominazione degli identificatori, incluso l'uso del doppio carattere di sottolineatura, vedere [Identificatori](../c-language/c-identifiers.md).
+<sup>a partire da</sup>  Visual Studio 2019 versione 16,8, queste parole chiave sono supportate nel codice compilato come C quando **`/std:c11`** **`/std:c17`** si specificano le opzioni del compilatore o.
+
+<sup>b</sup>  a partire da Visual Studio 2019 versione 16,8, queste parole chiave vengono riconosciute ma non supportate dal compilatore nel codice compilato come C **`/std:c11`** quando **`/std:c17`** si specificano le opzioni del compilatore o.
+
+Non è possibile ridefinire le parole chiave. Tuttavia, è possibile specificare il testo per sostituire le parole chiave prima della compilazione usando le [direttive per il preprocessore](../preprocessor/preprocessor-directives.md)C.
+
+## <a name="microsoft-specific-c-keywords"></a>Parole chiave C specifiche di Microsoft
+
+Gli standard ANSI e ISO C consentono agli identificatori con due caratteri di sottolineatura iniziali di essere riservati per le implementazioni del compilatore. La convenzione Microsoft prevede di precedere i nomi delle parole chiave specifiche di Microsoft con due caratteri di sottolineatura. Queste parole non possono essere usate come nomi di identificatori. Per una descrizione delle regole per la denominazione degli identificatori, incluso l'uso di due caratteri di sottolineatura, vedere [identificatori](../c-language/c-identifiers.md).
 
 Le parole chiave e gli identificatori speciali seguenti sono riconosciuti dal compilatore C Microsoft:
 
 :::row:::
     :::column:::
-        **`__asm`**<sup>3</sup>\
-        **`dllimport`**<sup>2</sup>\
-        **`__int8`**<sup>3</sup>\
-        **`naked`**<sup>2</sup>\
-        **`__based`**<sup>1, 3</sup>
+        **`__asm`**<sup>5</sup>\
+        **`dllimport`**<sup>4</sup>\
+        **`__int8`**<sup>5</sup>\
+        **`naked`**<sup>4</sup>\
+        **`__based`**<sup>3, 5</sup>
     :::column-end:::
     :::column:::
-        **`__except`**<sup>3</sup>\
-        **`__int16`**<sup>3</sup>\
-        **`__stdcall`**<sup>3</sup>\
-        **`__cdecl`**<sup>3</sup>\
+        **`__except`**<sup>5</sup>\
+        **`__int16`**<sup>5</sup>\
+        **`__stdcall`**<sup>5</sup>\
+        **`__cdecl`**<sup>5</sup>\
         **`__fastcall`**
     :::column-end:::
     :::column:::
-        **`__int32`**<sup>3</sup>\
-        **`thread`**<sup>2</sup>\
-        **`__declspec`**<sup>3</sup>\
-        **`__finally`**<sup>3</sup>\
-        **`__int64`**<sup>3</sup>
+        **`__int32`**<sup>5</sup>\
+        **`thread`**<sup>4</sup>\
+        **`__declspec`**<sup>5</sup>\
+        **`__finally`**<sup>5</sup>\
+        **`__int64`**<sup>5</sup>
     :::column-end:::
     :::column:::
-        **`__try`**<sup>3</sup>\
-        **`dllexport`**<sup>2</sup>\
-        **`__inline`**<sup>3</sup>\
-        **`__leave`**<sup>3</sup>
+        **`__try`**<sup>5</sup>\
+        **`dllexport`**<sup>4</sup>\
+        **`__inline`**<sup>5</sup>\
+        **`__leave`**<sup>5</sup>
     :::column-end:::
 :::row-end:::
 
-<sup>1</sup> la **`__based`** parola chiave ha usi limitati per le compilazioni di destinazione a 32 bit e a 64 bit.
+<sup>3</sup> la **`__based`** parola chiave ha usi limitati per le compilazioni di destinazione a 32 bit e a 64 bit.
 
-<sup>2</sup> si tratta di identificatori speciali se usati con **`__declspec`** ; l'uso in altri contesti non è limitato.
+<sup>4</sup> si tratta di identificatori speciali se usati con. **`__declspec`** l'uso in altri contesti non è limitato.
 
-<sup>3</sup> Per garantire la compatibilità con le versioni precedenti, queste parole chiave sono disponibili sia con due caratteri di sottolineatura iniziali sia con un singolo carattere di sottolineatura iniziale quando sono abilitate le estensioni Microsoft.
+<sup>5</sup> per compatibilità con le versioni precedenti, queste parole chiave sono disponibili con due caratteri di sottolineatura iniziali e un singolo carattere di sottolineatura principale quando le estensioni Microsoft sono abilitate.
 
-Le estensioni Microsoft sono attivate per impostazione predefinita. Per assicurarsi che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando l'opzione [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) durante la compilazione. In questo caso, vengono disabilitate alcune parole chiave specifiche di Microsoft.
+Le estensioni Microsoft sono attivate per impostazione predefinita. Per semplificare la creazione di codice portabile, è possibile disabilitare le estensioni Microsoft specificando l'opzione [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) durante la compilazione. Quando si usa questa opzione, alcune parole chiave specifiche di Microsoft sono disabilitate.
 
-Quando le estensioni Microsoft sono abilitate, è possibile utilizzare le parole chiave elencate in precedenza nei programmi. Per la compatibilità ANSI, la maggior parte di tali parole chiave è preceduta da un doppio carattere di sottolineatura. Le quattro eccezioni,,, **`dllexport`** **`dllimport`** **`naked`** e **`thread`** , vengono utilizzate solo con **`__declspec`** e pertanto non richiedono un doppio carattere di sottolineatura. Ai fini della compatibilità con le versioni precedenti, sono supportate le versioni con singolo carattere di sottolineatura delle parole chiave rimanenti.
-
-**TERMINA specifica Microsoft**
+Quando le estensioni Microsoft sono abilitate, è possibile utilizzare le parole chiave elencate in precedenza nei programmi. Per la conformità agli standard, la maggior parte di queste parole chiave è preceduta da un doppio carattere di sottolineatura. Le quattro eccezioni,,, **`dllexport`** **`dllimport`** **`naked`** e **`thread`** , vengono utilizzate solo con **`__declspec`** e non richiedono un doppio carattere di sottolineatura iniziali. Ai fini della compatibilità con le versioni precedenti, sono supportate le versioni con singolo carattere di sottolineatura delle parole chiave rimanenti.
 
 ## <a name="see-also"></a>Vedere anche
 
