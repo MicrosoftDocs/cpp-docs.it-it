@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 88a678a19043d3229218dd69afbf8548348817df
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988429"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683962"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Procedura: utilizzare un tipo nativo in una compilazione /clr
 
@@ -19,9 +19,9 @@ ms.locfileid: "74988429"
 
 Ogni assembly deve contenere la definizione di tutti i tipi nativi che utilizzerà.
 
-Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Per altre informazioni, vedere [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 In questo esempio viene creato un componente che definisce e utilizza un tipo nativo.
 
@@ -39,8 +39,6 @@ public ref struct ManagedClass {
    }
 };
 ```
-
-## <a name="example"></a>Esempio
 
 In questo esempio viene definito un client che utilizza il componente. Si noti che è un errore accedere al tipo nativo, a meno che non sia definito in modulo.
 
@@ -63,4 +61,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

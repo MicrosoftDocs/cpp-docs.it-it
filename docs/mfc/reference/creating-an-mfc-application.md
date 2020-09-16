@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 115ca6b4ab32482707cffd08ef575c93b2f3bfa9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e7435a8538c04867a810e525e053109a7abc04d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040093"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683455"
 ---
 # <a name="creating-an-mfc-application"></a>Creazione di un'applicazione MFC
 
@@ -42,7 +42,7 @@ Il modo più semplice per creare un'applicazione MFC consiste nell'usare la crea
 
 Per ulteriori informazioni, vedere [creazione di un'applicazione MFC basata su form](creating-a-forms-based-mfc-application.md).
 
-![Creazione guidata applicazione MFC di Visual Studio 2019](media/mfc-app-wizard.png)
+![Screenshot della creazione guidata applicazione MFC in Visual Studio 2019.](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Per creare un'applicazione console MFC
 
@@ -53,7 +53,7 @@ Un'applicazione console MFC è un programma da riga di comando che utilizza libr
 1. Modificare il nome del progetto in base alle esigenze, quindi fare clic su **Avanti** per aprire la **creazione guidata desktop di Windows**.
 1. Controllare la casella **intestazioni MFC** e impostare gli altri valori in base alle esigenze, quindi fare clic su **fine**.
 
-![Finestra di dialogo progetto desktop Windows di Visual Studio 2019](media/windows-desktop-wizard.png)
+![Screenshot della creazione guidata desktop di Windows in Visual Studio 2019.](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ Un'applicazione console MFC è un programma da riga di comando che utilizza libr
 
 Per ulteriori informazioni, vedere [creazione di un'applicazione MFC basata su form](creating-a-forms-based-mfc-application.md).
 
-![Creazione guidata applicazione MFC di Visual Studio 2017](media/mfc-app-wizard.png)
+![Screenshot della creazione guidata applicazione MFC in Visual Studio 2017.](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Per creare un'applicazione console MFC
 
@@ -80,7 +80,7 @@ Un'applicazione console MFC è un programma da riga di comando che utilizza libr
 1. Modificare il nome del progetto in base alle esigenze, quindi fare clic su **OK** per aprire la **creazione guidata desktop di Windows**.
 1. Controllare la casella **intestazioni MFC** e impostare gli altri valori in base alle esigenze, quindi fare clic su **fine**.
 
-![Finestra di dialogo progetto desktop Windows di Visual Studio 2017](media/windows-desktop-wizard-2017.png)
+![Screenshot della creazione guidata desktop di Windows in Visual Studio 2017.](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
@@ -95,7 +95,7 @@ Un'applicazione console MFC è un programma da riga di comando che utilizza libr
 
 Per ulteriori informazioni, vedere [creazione di un'applicazione MFC basata su form](creating-a-forms-based-mfc-application.md).
 
-![Creazione guidata applicazione MFC di Visual Studio 2015](media/mfc-app-wizard-2015.png)
+![Screenshot della creazione guidata applicazione MFC in Visual Studio 2015.](media/mfc-app-wizard-2015.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Per creare un'applicazione console MFC
 
@@ -111,7 +111,7 @@ Un'applicazione console MFC è un programma da riga di comando che utilizza libr
 
 Una volta creato il progetto, è possibile visualizzare i file generati in **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [Tipi di file creati per i progetti di Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md)

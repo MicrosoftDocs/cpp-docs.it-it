@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 243c75f4726927c54989c33c1738e38938aa5f64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44cb33bae43b32b12dda95423aec5484f61aa596
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221679"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683416"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
@@ -28,7 +28,7 @@ Con le eccezioni indicate di seguito, la **`deprecated`** dichiarazione offre la
 
 Se il compilatore rileva l'uso di un identificatore deprecato o dell' [`[[deprecated]]`](attributes.md) attributo standard, viene generato un avviso [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) .
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nel seguente codice di esempio viene illustrato come contrassegnare funzioni come deprecate e come specificare un messaggio che verrà visualizzato in fase di compilazione, quando viene utilizzata la funzione deprecata.
 
@@ -48,8 +48,6 @@ int main() {
    func3(1);   // C4996
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Nel seguente codice di esempio viene illustrato come contrassegnare classi come deprecate e come specificare un messaggio che verrà visualizzato in fase di compilazione, quando viene utilizzata la classe deprecata.
 

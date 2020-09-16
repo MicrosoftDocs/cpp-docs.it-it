@@ -54,16 +54,16 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: a79012e7f2750a4eab12318ffcd52e5e15c30c83
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 6e7197648fd91b2280d406c19c1019ca23f6a470
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825605"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684300"
 ---
 # <a name="cimage-class"></a>Classe CImage
 
-`CImage`offre supporto ottimizzato per le bitmap, inclusa la possibilità di caricare e salvare immagini in formati JPEG, GIF, BMP e Portable Network Graphics (PNG).
+`CImage` offre supporto ottimizzato per le bitmap, inclusa la possibilità di caricare e salvare immagini in formati JPEG, GIF, BMP e Portable Network Graphics (PNG).
 
 > [!IMPORTANT]
 > Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
@@ -89,11 +89,11 @@ class CImage
 |[CImage:: AlphaBlend](#alphablend)|Visualizza le bitmap con pixel trasparenti o semitrasparenti.|
 |[CImage:: Connetti](#attach)|Connette un HBITMAP a un `CImage` oggetto. Può essere usato con bitmap di sezione non DIB o bitmap di sezione DIB.|
 |[CImage:: BitBlt](#bitblt)|Copia una bitmap dal contesto di dispositivo di origine a questo contesto di dispositivo corrente.|
-|[CImage:: create](#create)|Crea una bitmap di sezione DIB e la collega all'oggetto costruito `CImage` in precedenza.|
-|[CImage:: CreateEx](#createex)|Crea una bitmap di sezione DIB (con parametri aggiuntivi) e la associa all'oggetto costruito `CImage` in precedenza.|
+|[CImage:: create](#create)|Crea una bitmap di sezione DIB e la collega all'oggetto costruito in precedenza `CImage` .|
+|[CImage:: CreateEx](#createex)|Crea una bitmap di sezione DIB (con parametri aggiuntivi) e la associa all'oggetto costruito in precedenza `CImage` .|
 |[CImage::D estroy](#destroy)|Scollega la bitmap dall' `CImage` oggetto ed elimina la bitmap.|
 |[CImage::D etach](#detach)|Scollega la bitmap da un `CImage` oggetto.|
-|[CImage::D RAW](#draw)|Copia una bitmap da un rettangolo di origine in un rettangolo di destinazione. `Draw`estende o comprime la bitmap per adattarla alle dimensioni del rettangolo di destinazione, se necessario, e gestisce la fusione alfa e i colori trasparenti.|
+|[CImage::D RAW](#draw)|Copia una bitmap da un rettangolo di origine in un rettangolo di destinazione. `Draw` estende o comprime la bitmap per adattarla alle dimensioni del rettangolo di destinazione, se necessario, e gestisce la fusione alfa e i colori trasparenti.|
 |[CImage:: GetBits](#getbits)|Recupera un puntatore ai valori effettivi dei pixel della bitmap.|
 |[CImage:: GetBPP](#getbpp)|Recupera i bit per pixel.|
 |[CImage:: GetColorTable](#getcolortable)|Recupera i valori di colore rosso, verde, blu (RGB) da un intervallo di voci nella tabella dei colori.|
@@ -116,8 +116,8 @@ class CImage
 |[CImage:: MaskBlt](#maskblt)|Combina i dati relativi al colore per le bitmap di origine e di destinazione utilizzando la maschera e l'operazione raster specificate.|
 |[CImage::P lgBlt](#plgblt)|Esegue un trasferimento a blocchi di bit da un rettangolo in un contesto di dispositivo di origine in un parallelogramma in un contesto di dispositivo di destinazione.|
 |[CImage:: ReleaseDC](#releasedc)|Rilascia il contesto di dispositivo recuperato con [CImage:: GetDC](#getdc).|
-|[CImage:: ReleaseGDIPlus](#releasegdiplus)|Rilascia le risorse utilizzate da GDI+. Deve essere chiamato per liberare risorse create da un oggetto `CImage` globale.|
-|[CImage:: Save](#save)|Salva un'immagine come tipo specificato. `Save`Impossibile specificare le opzioni per le immagini.|
+|[CImage:: ReleaseGDIPlus](#releasegdiplus)|Rilascia le risorse utilizzate da GDI+. Deve essere chiamato per liberare risorse create da un `CImage` oggetto globale.|
+|[CImage:: Save](#save)|Salva un'immagine come tipo specificato. `Save` Impossibile specificare le opzioni per le immagini.|
 |[CImage:: SetColorTable](#setcolortable)|Imposta i valori di colore rosso, verde, blu) in un intervallo di voci nella tabella dei colori della sezione DIB.|
 |[CImage:: sepixel](#setpixel)|Imposta il pixel in corrispondenza delle coordinate specificate sul colore specificato.|
 |[CImage:: SetPixelIndexed](#setpixelindexed)|Imposta il pixel in corrispondenza delle coordinate specificate sul colore in corrispondenza dell'indice specificato della tavolozza.|
@@ -134,7 +134,7 @@ class CImage
 
 ## <a name="remarks"></a>Osservazioni
 
-`CImage`accetta le bitmap che sono sezioni di bitmap indipendenti dal dispositivo (DIB); Tuttavia, è possibile usare [create](#create) o [CImage:: Load](#load) solo con le sezioni DIB. È possibile alleghi una bitmap di sezione non DIB a `CImage` un oggetto utilizzando [Connetti](#attach), ma non è possibile utilizzare i `CImage` metodi seguenti, che supportano solo bitmap di sezione DIB:
+`CImage` accetta le bitmap che sono sezioni di bitmap indipendenti dal dispositivo (DIB); Tuttavia, è possibile usare [create](#create) o [CImage:: Load](#load) solo con le sezioni DIB. È possibile alleghi una bitmap di sezione non DIB a un `CImage` oggetto utilizzando [Connetti](#attach), ma non è possibile utilizzare i `CImage` metodi seguenti, che supportano solo bitmap di sezione DIB:
 
 - [GetBits](#getbits)
 
@@ -153,14 +153,14 @@ class CImage
 Per determinare se una bitmap collegata è una sezione DIB, chiamare [IsDibSection](#isdibsection).
 
 > [!NOTE]
-> In Visual Studio .NET 2003 questa classe mantiene un conteggio del numero di `CImage` oggetti creati. Ogni volta che il conteggio passa a 0, `GdiplusShutdown` la funzione viene chiamata automaticamente per rilasciare le risorse utilizzate da GDI+. Ciò garantisce che tutti `CImage` gli oggetti creati direttamente o indirettamente dalle DLL vengano sempre eliminati correttamente e `GdiplusShutdown` che non vengano chiamati `DllMain`da.
+> In Visual Studio .NET 2003 questa classe mantiene un conteggio del numero di `CImage` oggetti creati. Ogni volta che il conteggio passa a 0, la funzione `GdiplusShutdown` viene chiamata automaticamente per rilasciare le risorse utilizzate da GDI+. Ciò garantisce che tutti `CImage` gli oggetti creati direttamente o indirettamente dalle DLL vengano sempre eliminati correttamente e che `GdiplusShutdown` non vengano chiamati da `DllMain` .
 
 > [!NOTE]
-> Non è `CImage` consigliabile usare gli oggetti globali in una dll. Se è necessario usare un oggetto globale `CImage` in una dll, chiamare [CImage:: ReleaseGDIPlus](#releasegdiplus) per rilasciare in modo esplicito le risorse usate da GDI+.
+> `CImage`Non è consigliabile usare gli oggetti globali in una dll. Se è necessario usare un oggetto globale `CImage` in una dll, chiamare [CImage:: ReleaseGDIPlus](#releasegdiplus) per rilasciare in modo esplicito le risorse usate da GDI+.
 
-`CImage`non può essere selezionato in un nuovo [CDC](../../mfc/reference/cdc-class.md). `CImage`Crea il proprio HDC per l'immagine. Poiché un HBITMAP può essere selezionato solo in un HDC alla volta, il HBITMAP associato a `CImage` non può essere selezionato in un altro HDC. Se è necessario un CDC, recuperare l'HDC da `CImage` e assegnarlo a [CDC:: FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
+`CImage` non può essere selezionato in un nuovo [CDC](../../mfc/reference/cdc-class.md). `CImage` Crea il proprio HDC per l'immagine. Poiché un HBITMAP può essere selezionato solo in un HDC alla volta, il HBITMAP associato a `CImage` non può essere selezionato in un altro HDC. Se è necessario un CDC, recuperare l'HDC da `CImage` e assegnarlo a [CDC:: FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 ```cpp
 // Get a CDC for the image
@@ -171,9 +171,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-Quando si usa `CImage` in un progetto MFC, tenere presente quali funzioni membro nel progetto prevedono un puntatore a un oggetto [CBitmap](../../mfc/reference/cbitmap-class.md) . Se si `CImage` vuole usare con una funzione di questo tipo, ad esempio [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), usare [CBitmap:: FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), passare `CImage` il HBITMAP e usare l'oggetto `CBitmap*`restituito.
-
-## <a name="example"></a>Esempio
+Quando si usa `CImage` in un progetto MFC, tenere presente quali funzioni membro nel progetto prevedono un puntatore a un oggetto [CBitmap](../../mfc/reference/cbitmap-class.md) . Se si vuole usare `CImage` con una funzione di questo tipo, ad esempio [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), usare [CBitmap:: FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), passare il `CImage` HBITMAP e usare l'oggetto restituito `CBitmap*` .
 
 ```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
@@ -188,12 +186,12 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 }
 ```
 
-Tramite `CImage`, è possibile accedere ai bit effettivi di una sezione DIB. È possibile usare un `CImage` oggetto in qualsiasi punto in cui in precedenza è stata usata una sezione Win32 HBITMAP o DIB.
+Tramite `CImage` , è possibile accedere ai bit effettivi di una sezione DIB. È possibile usare un `CImage` oggetto in qualsiasi punto in cui in precedenza è stata usata una sezione Win32 HBITMAP o DIB.
 
 È possibile utilizzare `CImage` da MFC o ATL.
 
 > [!NOTE]
-> Quando si crea un progetto utilizzando `CImage`, è necessario definire `CString` prima di includere *atlimage. h*. Se il progetto usa ATL senza MFC, includere *atlstr. h* prima di includere *atlimage. h*. Se il progetto Usa MFC (o se è un progetto ATL con supporto MFC), includere *afxstr. h* prima di includere *atlimage. h*.
+> Quando si crea un progetto utilizzando `CImage` , è necessario definire `CString` prima di includere *atlimage. h*. Se il progetto usa ATL senza MFC, includere *atlstr. h* prima di includere *atlimage. h*. Se il progetto Usa MFC (o se è un progetto ATL con supporto MFC), includere *afxstr. h* prima di includere *atlimage. h*.
 >
 > Analogamente, è necessario includere *atlimage. h* prima di includere *Atlimpl. cpp*. Per eseguire questa operazione in modo semplice, includere *atlimage. h* in *PCH.* h (*stdafx. h* in Visual Studio 2017 e versioni precedenti).
 
@@ -201,7 +199,7 @@ Tramite `CImage`, è possibile accedere ai bit effettivi di una sezione DIB. È 
 
 **Intestazione:** atlimage. h
 
-## <a name="cimagealphablend"></a><a name="alphablend"></a>CImage:: AlphaBlend
+## <a name="cimagealphablend"></a><a name="alphablend"></a> CImage:: AlphaBlend
 
 Visualizza le bitmap con pixel trasparenti o semitrasparenti.
 
@@ -294,7 +292,7 @@ Le bitmap Alpha-Blend supportano la fusione di colori in base ai singoli pixel.
 
 Quando *bBlendOp* è impostato sul valore predefinito di AC_SRC_OVER, la bitmap di origine viene posizionata sulla bitmap di destinazione in base ai valori alfa dei pixel di origine.
 
-## <a name="cimageattach"></a><a name="attach"></a>CImage:: Connetti
+## <a name="cimageattach"></a><a name="attach"></a> CImage:: Connetti
 
 Connette *HBITMAP* a un `CImage` oggetto.
 
@@ -308,7 +306,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 Handle per un HBITMAP.
 
 *eOrientation*<br/>
-Specifica l'orientamento della bitmap. Può essere uno dei seguenti:
+Specifica l'orientamento della bitmap. Può essere uno dei valori seguenti:
 
 - DIBOR_DEFAULT l'orientamento della bitmap è determinato dal sistema operativo.
 
@@ -320,7 +318,7 @@ Specifica l'orientamento della bitmap. Può essere uno dei seguenti:
 
 La bitmap può essere una bitmap di sezione non DIB o una bitmap di sezione DIB. Vedere [IsDibSection](#isdibsection) per un elenco di metodi che è possibile usare solo con le bitmap della sezione DIB.
 
-## <a name="cimagebitblt"></a><a name="bitblt"></a>CImage:: BitBlt
+## <a name="cimagebitblt"></a><a name="bitblt"></a> CImage:: BitBlt
 
 Copia una bitmap dal contesto di dispositivo di origine a questo contesto di dispositivo corrente.
 
@@ -386,7 +384,7 @@ Coordinata y logica dell'angolo superiore sinistro del rettangolo di origine.
 Struttura [Rect](/windows/win32/api/windef/ns-windef-rect) che indica il rettangolo di destinazione.
 
 *pointSrc*<br/>
-`POINT` Struttura che indica l'angolo superiore sinistro del rettangolo di origine.
+`POINT`Struttura che indica l'angolo superiore sinistro del rettangolo di origine.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -396,7 +394,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Per ulteriori informazioni, vedere [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) nel Windows SDK.
 
-## <a name="cimagecimage"></a><a name="cimage"></a>CImage:: CImage
+## <a name="cimagecimage"></a><a name="cimage"></a> CImage:: CImage
 
 Costruisce un oggetto `CImage`.
 
@@ -408,13 +406,13 @@ CImage() throw();
 
 Una volta creato l'oggetto, chiamare [create](#create), [Load](#load), [LoadFromResource](#loadfromresource)o [Connetti](#attach) per alleghiare una bitmap all'oggetto.
 
-**Nota** In Visual Studio questa classe mantiene un conteggio del numero di `CImage` oggetti creati. Ogni volta che il conteggio passa a 0, `GdiplusShutdown` la funzione viene chiamata automaticamente per rilasciare le risorse utilizzate da GDI+. Ciò garantisce che tutti `CImage` gli oggetti creati direttamente o indirettamente dalle DLL vengano sempre eliminati correttamente e `GdiplusShutdown` che non vengano chiamati da DllMain.
+**Nota** In Visual Studio questa classe mantiene un conteggio del numero di `CImage` oggetti creati. Ogni volta che il conteggio passa a 0, la funzione `GdiplusShutdown` viene chiamata automaticamente per rilasciare le risorse utilizzate da GDI+. Ciò garantisce che tutti `CImage` gli oggetti creati direttamente o indirettamente dalle DLL vengano sempre eliminati correttamente e che `GdiplusShutdown` non vengano chiamati da DllMain.
 
-Non è `CImage` consigliabile usare gli oggetti globali in una dll. Se è necessario usare un oggetto globale `CImage` in una dll, chiamare [CImage:: ReleaseGDIPlus](#releasegdiplus) per rilasciare in modo esplicito le risorse usate da GDI+.
+`CImage`Non è consigliabile usare gli oggetti globali in una dll. Se è necessario usare un oggetto globale `CImage` in una dll, chiamare [CImage:: ReleaseGDIPlus](#releasegdiplus) per rilasciare in modo esplicito le risorse usate da GDI+.
 
-## <a name="cimagecreate"></a><a name="create"></a>CImage:: create
+## <a name="cimagecreate"></a><a name="create"></a> CImage:: create
 
-Crea una `CImage` bitmap e la collega all'oggetto costruito `CImage` in precedenza.
+Crea una `CImage` bitmap e la collega all'oggetto costruito in precedenza `CImage` .
 
 ```
 BOOL Create(
@@ -447,9 +445,9 @@ Specifica se l'oggetto bitmap ha un canale alfa. Può essere una combinazione di
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-## <a name="cimagecreateex"></a><a name="createex"></a>CImage:: CreateEx
+## <a name="cimagecreateex"></a><a name="createex"></a> CImage:: CreateEx
 
-Crea una `CImage` bitmap e la collega all'oggetto costruito `CImage` in precedenza.
+Crea una `CImage` bitmap e la collega all'oggetto costruito in precedenza `CImage` .
 
 ```
 BOOL CreateEx(
@@ -475,7 +473,7 @@ Numero di bit per pixel nella bitmap. In genere 4, 8, 16, 24 o 32. Può essere 1
 *eCompression*<br/>
 Specifica il tipo di compressione per una bitmap compressa dal basso verso l'alto. I possibili valori sono i seguenti:
 
-- BI_RGB il formato non è compresso. L'impostazione di questo valore `CImage::CreateEx` quando si chiama è `CImage::Create`equivalente alla chiamata a.
+- BI_RGB il formato non è compresso. L'impostazione di questo valore quando `CImage::CreateEx` si chiama è equivalente alla chiamata a `CImage::Create` .
 
 - BI_BITFIELDS il formato non è compresso e la tabella dei colori è costituita da tre maschere colori DWORD che specificano rispettivamente i componenti rosso, verde e blu di ogni pixel. Questo valore è valido se usato con bitmap a 16 e 32 BPP.
 
@@ -503,7 +501,7 @@ DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
-## <a name="cimagedestroy"></a><a name="destroy"></a>CImage::D estroy
+## <a name="cimagedestroy"></a><a name="destroy"></a> CImage::D estroy
 
 Scollega la bitmap dall' `CImage` oggetto ed elimina la bitmap.
 
@@ -511,7 +509,7 @@ Scollega la bitmap dall' `CImage` oggetto ed elimina la bitmap.
 void Destroy() throw();
 ```
 
-## <a name="cimagedetach"></a><a name="detach"></a>CImage::D etach
+## <a name="cimagedetach"></a><a name="detach"></a> CImage::D etach
 
 Scollega una bitmap da un `CImage` oggetto.
 
@@ -523,7 +521,7 @@ HBITMAP Detach() throw();
 
 Handle per la bitmap scollegato o NULL se non è collegata alcuna bitmap.
 
-## <a name="cimagedraw"></a><a name="draw"></a>CImage::D RAW
+## <a name="cimagedraw"></a><a name="draw"></a> CImage::D RAW
 
 Copia una bitmap dal contesto di dispositivo di origine al contesto di dispositivo corrente.
 
@@ -609,11 +607,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-`Draw`esegue la stessa operazione di [StretchBlt](#stretchblt), a meno che l'immagine non contenga un colore trasparente o un canale alfa. In tal caso, `Draw` esegue la stessa operazione di [TransparentBlt](#transparentblt) o [AlphaBlend](#alphablend) secondo le esigenze.
+`Draw` esegue la stessa operazione di [StretchBlt](#stretchblt), a meno che l'immagine non contenga un colore trasparente o un canale alfa. In tal caso, `Draw` esegue la stessa operazione di [TransparentBlt](#transparentblt) o [AlphaBlend](#alphablend) secondo le esigenze.
 
-Per le versioni `Draw` di che non specificano un rettangolo di origine, l'intera immagine di origine è l'impostazione predefinita. Per la versione di `Draw` che non specifica una dimensione per il rettangolo di destinazione, la dimensione dell'immagine di origine è l'impostazione predefinita e non si verifica alcuna estensione o compattazione.
+Per le versioni di `Draw` che non specificano un rettangolo di origine, l'intera immagine di origine è l'impostazione predefinita. Per la versione di `Draw` che non specifica una dimensione per il rettangolo di destinazione, la dimensione dell'immagine di origine è l'impostazione predefinita e non si verifica alcuna estensione o compattazione.
 
-## <a name="cimagegetbits"></a><a name="getbits"></a>CImage:: GetBits
+## <a name="cimagegetbits"></a><a name="getbits"></a> CImage:: GetBits
 
 Recupera un puntatore ai valori di bit effettivi di un determinato pixel in una bitmap.
 
@@ -630,9 +628,9 @@ Puntatore al buffer bitmap. Se la bitmap è una DIB dal basso in alto, il puntat
 Utilizzando questo puntatore, insieme al valore restituito da [GetPitch](#getpitch), è possibile individuare e modificare i singoli pixel in un'immagine.
 
 > [!NOTE]
-> Questo metodo supporta solo bitmap di sezione DIB; di conseguenza, si accede ai pixel di `CImage` un oggetto allo stesso modo dei pixel di una sezione DIB. Il puntatore restituito punta al pixel nella posizione (0,0).
+> Questo metodo supporta solo bitmap di sezione DIB; di conseguenza, si accede ai pixel di un `CImage` oggetto allo stesso modo dei pixel di una sezione DIB. Il puntatore restituito punta al pixel nella posizione (0,0).
 
-## <a name="cimagegetbpp"></a><a name="getbpp"></a>CImage:: GetBPP
+## <a name="cimagegetbpp"></a><a name="getbpp"></a> CImage:: GetBPP
 
 Recupera il valore bits per pixel.
 
@@ -648,9 +646,9 @@ Numero di bit per pixel.
 
 Questo valore determina il numero di bit che definiscono ogni pixel e il numero massimo di colori nella bitmap.
 
-I bit per pixel sono in genere 1, 4, 8, 16, 24 o 32. Per ulteriori `biBitCount` informazioni su questo valore, vedere il membro di [BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) nel Windows SDK.
+I bit per pixel sono in genere 1, 4, 8, 16, 24 o 32. `biBitCount`Per ulteriori informazioni su questo valore, vedere il membro di [BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) nel Windows SDK.
 
-## <a name="cimagegetcolortable"></a><a name="getcolortable"></a>CImage:: GetColorTable
+## <a name="cimagegetcolortable"></a><a name="getcolortable"></a> CImage:: GetColorTable
 
 Recupera i valori di colore rosso, verde, blu (RGB) da un intervallo di voci nella tavolozza della sezione DIB.
 
@@ -672,7 +670,7 @@ Numero di voci della tabella dei colori da recuperare.
 *prgbColors*<br/>
 Puntatore alla matrice di strutture [RGBQUAD](/windows/win32/api/wingdi/ns-wingdi-rgbquad) per recuperare le voci della tabella dei colori.
 
-## <a name="cimagegetdc"></a><a name="getdc"></a>CImage:: GetDC
+## <a name="cimagegetdc"></a><a name="getdc"></a> CImage:: GetDC
 
 Recupera il contesto di dispositivo in cui è attualmente selezionata l'immagine.
 
@@ -686,9 +684,9 @@ Handle per un contesto di dispositivo.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ogni chiamata a `GetDC`, è necessario avere una chiamata successiva a [ReleaseDC](#releasedc).
+Per ogni chiamata a `GetDC` , è necessario avere una chiamata successiva a [ReleaseDC](#releasedc).
 
-## <a name="cimagegetexporterfilterstring"></a><a name="getexporterfilterstring"></a>CImage:: GetExporterFilterString
+## <a name="cimagegetexporterfilterstring"></a><a name="getexporterfilterstring"></a> CImage:: GetExporterFilterString
 
 Trova i formati di immagine disponibili per il salvataggio delle immagini.
 
@@ -728,27 +726,27 @@ _T("All Image Files"));
 *dwExclude*<br/>
 Set di flag di bit che specificano i tipi di file da escludere dall'elenco. I flag consentiti sono:
 
-- `excludeGIF`= 0x01 esclude i file GIF.
+- `excludeGIF` = 0x01 esclude i file GIF.
 
-- `excludeBMP`= 0x02 esclude i file BMP (bitmap di Windows).
+- `excludeBMP` = 0x02 esclude i file BMP (bitmap di Windows).
 
-- `excludeEMF`= 0x04 esclude i file EMF (Enhanced Metafile).
+- `excludeEMF` = 0x04 esclude i file EMF (Enhanced Metafile).
 
-- `excludeWMF`= 0x08 esclude i file WMF (Windows Metafile).
+- `excludeWMF` = 0x08 esclude i file WMF (Windows Metafile).
 
-- `excludeJPEG`= 0x10 esclude i file JPEG.
+- `excludeJPEG` = 0x10 esclude i file JPEG.
 
-- `excludePNG`= 0x20 esclude i file PNG.
+- `excludePNG` = 0x20 esclude i file PNG.
 
-- `excludeTIFF`= 0x40 esclude i file TIFF.
+- `excludeTIFF` = 0x40 esclude i file TIFF.
 
-- `excludeIcon`= 0x80 esclude i file ICO (icona di Windows).
+- `excludeIcon` = 0x80 esclude i file ICO (icona di Windows).
 
-- `excludeOther`= 0x80000000 esclude qualsiasi altro tipo di file non elencato sopra.
+- `excludeOther` = 0x80000000 esclude qualsiasi altro tipo di file non elencato sopra.
 
-- `excludeDefaultLoad`= 0 per il caricamento, tutti i tipi di file sono inclusi per impostazione predefinita
+- `excludeDefaultLoad` = 0 per il caricamento, tutti i tipi di file sono inclusi per impostazione predefinita
 
-- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF`Per il salvataggio, questi file vengono esclusi per impostazione predefinita perché in genere presentano requisiti speciali.
+- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` Per il salvataggio, questi file vengono esclusi per impostazione predefinita perché in genere presentano requisiti speciali.
 
 *chSeparator*<br/>
 Separatore usato tra i formati di immagine. Vedere **osservazioni** Per ulteriori informazioni.
@@ -763,15 +761,15 @@ Valore HRESULT standard.
 
 Il formato del parametro *strExporter* è il seguente:
 
-file description0&#124;\*. ext0&#124;filedescription1&#124;\*. EXT1&#124;... Descrizione file *n*&#124;\*. ext *n*&#124;&#124;
+file description0&#124;\* . ext0&#124;filedescription1&#124;\* . EXT1&#124;... Descrizione file *n*&#124;\* . ext *n*&#124;&#124;
 
-dove ' &#124;' è il carattere separatore specificato `chSeparator`da. Ad esempio:
+dove ' &#124;' è il carattere separatore specificato da `chSeparator` . Ad esempio:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
-Se si passa questa stringa a un oggetto MFC `CFileDialog` , utilizzare il separatore predefinito ' &#124;'. Usare il separatore null ' \ 0' se si passa questa stringa a una finestra di dialogo Salva file comune.
+Se si passa questa stringa a un oggetto MFC, utilizzare il separatore predefinito ' &#124;' `CFileDialog` . Usare il separatore null ' \ 0' se si passa questa stringa a una finestra di dialogo Salva file comune.
 
-## <a name="cimagegetheight"></a><a name="getheight"></a>CImage:: GetHeight
+## <a name="cimagegetheight"></a><a name="getheight"></a> CImage:: GetHeight
 
 Recupera l'altezza, in pixel, di un'immagine.
 
@@ -783,7 +781,7 @@ int GetHeight() const throw();
 
 Altezza, in pixel, di un'immagine.
 
-## <a name="cimagegetimporterfilterstring"></a><a name="getimporterfilterstring"></a>CImage:: GetImporterFilterString
+## <a name="cimagegetimporterfilterstring"></a><a name="getimporterfilterstring"></a> CImage:: GetImporterFilterString
 
 Trova i formati di immagine disponibili per il caricamento di immagini.
 
@@ -823,27 +821,27 @@ _T("All Image Files"));
 *dwExclude*<br/>
 Set di flag di bit che specificano i tipi di file da escludere dall'elenco. I flag consentiti sono:
 
-- `excludeGIF`= 0x01 esclude i file GIF.
+- `excludeGIF` = 0x01 esclude i file GIF.
 
-- `excludeBMP`= 0x02 esclude i file BMP (bitmap di Windows).
+- `excludeBMP` = 0x02 esclude i file BMP (bitmap di Windows).
 
-- `excludeEMF`= 0x04 esclude i file EMF (Enhanced Metafile).
+- `excludeEMF` = 0x04 esclude i file EMF (Enhanced Metafile).
 
-- `excludeWMF`= 0x08 esclude i file WMF (Windows Metafile).
+- `excludeWMF` = 0x08 esclude i file WMF (Windows Metafile).
 
-- `excludeJPEG`= 0x10 esclude i file JPEG.
+- `excludeJPEG` = 0x10 esclude i file JPEG.
 
-- `excludePNG`= 0x20 esclude i file PNG.
+- `excludePNG` = 0x20 esclude i file PNG.
 
-- `excludeTIFF`= 0x40 esclude i file TIFF.
+- `excludeTIFF` = 0x40 esclude i file TIFF.
 
-- `excludeIcon`= 0x80 esclude i file ICO (icona di Windows).
+- `excludeIcon` = 0x80 esclude i file ICO (icona di Windows).
 
-- `excludeOther`= 0x80000000 esclude qualsiasi altro tipo di file non elencato sopra.
+- `excludeOther` = 0x80000000 esclude qualsiasi altro tipo di file non elencato sopra.
 
-- `excludeDefaultLoad`= 0 per il caricamento, tutti i tipi di file sono inclusi per impostazione predefinita
+- `excludeDefaultLoad` = 0 per il caricamento, tutti i tipi di file sono inclusi per impostazione predefinita
 
-- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF`Per il salvataggio, questi file vengono esclusi per impostazione predefinita perché in genere presentano requisiti speciali.
+- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` Per il salvataggio, questi file vengono esclusi per impostazione predefinita perché in genere presentano requisiti speciali.
 
 *chSeparator*<br/>
 Separatore usato tra i formati di immagine. Vedere **osservazioni** Per ulteriori informazioni.
@@ -854,15 +852,15 @@ Separatore usato tra i formati di immagine. Vedere **osservazioni** Per ulterior
 
 Il formato del parametro *strImporter* è il seguente:
 
-file description0&#124;\*. ext0&#124;filedescription1&#124;\*. EXT1&#124;... Descrizione file *n*&#124;\*. ext *n*&#124;&#124;
+file description0&#124;\* . ext0&#124;filedescription1&#124;\* . EXT1&#124;... Descrizione file *n*&#124;\* . ext *n*&#124;&#124;
 
 dove ' &#124;' è il carattere separatore specificato da *chSeparator*. Ad esempio:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
-Se si passa questa stringa a un oggetto MFC `CFileDialog` , utilizzare il separatore predefinito ' &#124;'. Se si passa questa stringa a una finestra di dialogo **Apri file** comune, utilizzare il separatore null ' \ 0'.
+Se si passa questa stringa a un oggetto MFC, utilizzare il separatore predefinito ' &#124;' `CFileDialog` . Se si passa questa stringa a una finestra di dialogo **Apri file** comune, utilizzare il separatore null ' \ 0'.
 
-## <a name="cimagegetmaxcolortableentries"></a><a name="getmaxcolortableentries"></a>CImage:: GetMaxColorTableEntries
+## <a name="cimagegetmaxcolortableentries"></a><a name="getmaxcolortableentries"></a> CImage:: GetMaxColorTableEntries
 
 Recupera il numero massimo di voci nella tabella dei colori.
 
@@ -878,7 +876,7 @@ Numero di voci nella tabella dei colori.
 
 Questo metodo supporta solo bitmap di sezione DIB.
 
-## <a name="cimagegetpitch"></a><a name="getpitch"></a>CImage:: GetPitch
+## <a name="cimagegetpitch"></a><a name="getpitch"></a> CImage:: GetPitch
 
 Recupera il passo di un'immagine.
 
@@ -899,7 +897,7 @@ Usare `GetPitch` with [GetBits](#getbits) per trovare i singoli pixel di un'imma
 > [!NOTE]
 > Questo metodo supporta solo bitmap di sezione DIB.
 
-## <a name="cimagegetpixel"></a><a name="getpixel"></a>CImage:: GetPixel
+## <a name="cimagegetpixel"></a><a name="getpixel"></a> CImage:: GetPixel
 
 Recupera il colore del pixel nella posizione specificata da *x* e *y*.
 
@@ -919,7 +917,7 @@ Coordinata y del pixel.
 
 Valore rosso, verde, blu (RGB) del pixel. Se il pixel è esterno all'area di ritaglio corrente, il valore restituito viene CLR_INVALID.
 
-## <a name="cimagegetpixeladdress"></a><a name="getpixeladdress"></a>CImage:: GetPixelAddress
+## <a name="cimagegetpixeladdress"></a><a name="getpixeladdress"></a> CImage:: GetPixelAddress
 
 Recupera l'indirizzo esatto di un pixel.
 
@@ -939,12 +937,12 @@ Coordinata y del pixel.
 
 L'indirizzo viene determinato in base alle coordinate di un pixel, al passo della bitmap e ai bit per pixel.
 
-Per i formati con meno di 8 bit per pixel, questo metodo restituisce l'indirizzo del byte contenente il pixel. Se, ad esempio, il formato dell'immagine ha 4 bit per `GetPixelAddress` pixel, restituisce l'indirizzo del primo pixel nel byte ed è necessario calcolare per 2 pixel per byte.
+Per i formati con meno di 8 bit per pixel, questo metodo restituisce l'indirizzo del byte contenente il pixel. Se, ad esempio, il formato dell'immagine ha 4 bit per pixel, `GetPixelAddress` restituisce l'indirizzo del primo pixel nel byte ed è necessario calcolare per 2 pixel per byte.
 
 > [!NOTE]
 > Questo metodo supporta solo bitmap di sezione DIB.
 
-## <a name="cimagegettransparentcolor"></a><a name="gettransparentcolor"></a>CImage:: GetTransparentColor
+## <a name="cimagegettransparentcolor"></a><a name="gettransparentcolor"></a> CImage:: GetTransparentColor
 
 Recupera la posizione indicizzata del colore trasparente nella tavolozza dei colori.
 
@@ -956,7 +954,7 @@ LONG GetTransparentColor() const throw();
 
 Indice del colore trasparente.
 
-## <a name="cimagegetwidth"></a><a name="getwidth"></a>CImage:: GetWidth
+## <a name="cimagegetwidth"></a><a name="getwidth"></a> CImage:: GetWidth
 
 Recupera la larghezza, in pixel, di un'immagine.
 
@@ -968,7 +966,7 @@ int GetWidth() const throw();
 
 Larghezza della bitmap, espressa in pixel.
 
-## <a name="cimageisdibsection"></a><a name="isdibsection"></a>CImage:: IsDIBSection
+## <a name="cimageisdibsection"></a><a name="isdibsection"></a> CImage:: IsDIBSection
 
 Determina se la bitmap collegata è una sezione DIB.
 
@@ -998,7 +996,7 @@ Se la bitmap non è una sezione DIB, non è possibile usare i `CImage` metodi se
 
 - [SetColorTable](#setcolortable)
 
-## <a name="cimageisindexed"></a><a name="isindexed"></a>CImage:: inindexed
+## <a name="cimageisindexed"></a><a name="isindexed"></a> CImage:: inindexed
 
 Determina se i pixel di una bitmap vengono mappati a una tavolozza dei colori.
 
@@ -1017,7 +1015,7 @@ Questo metodo restituisce TRUE solo se la bitmap è a 8 bit (colori 256) o meno.
 > [!NOTE]
 > Questo metodo supporta solo bitmap di sezione DIB.
 
-## <a name="cimageisnull"></a><a name="isnull"></a>CImage:: IsNull
+## <a name="cimageisnull"></a><a name="isnull"></a> CImage:: IsNull
 
 Determina se una bitmap è attualmente caricata.
 
@@ -1029,7 +1027,7 @@ bool IsNull() const throw();
 
 Questo metodo restituisce TRUE se una bitmap non è attualmente caricata. in caso contrario, FALSE.
 
-## <a name="cimageistransparencysupported"></a><a name="istransparencysupported"></a>CImage:: IsTransparencySupported
+## <a name="cimageistransparencysupported"></a><a name="istransparencysupported"></a> CImage:: IsTransparencySupported
 
 Indica se l'applicazione supporta le bitmap trasparenti.
 
@@ -1045,7 +1043,7 @@ Diverso da zero se la piattaforma corrente supporta la trasparenza. In caso cont
 
 Se il valore restituito è diverso da zero e la trasparenza è supportata, una chiamata a [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt)o a [disegni](#draw) gestirà i colori trasparenti.
 
-## <a name="cimageload"></a><a name="load"></a>CImage:: Load
+## <a name="cimageload"></a><a name="load"></a> CImage:: Load
 
 Carica un'immagine.
 
@@ -1072,7 +1070,7 @@ Carica l'immagine specificata da *pszFileName* o *pStream*.
 
 I tipi di immagine validi sono BMP, GIF, JPEG, PNG e TIFF.
 
-## <a name="cimageloadfromresource"></a><a name="loadfromresource"></a>CImage:: LoadFromResource
+## <a name="cimageloadfromresource"></a><a name="loadfromresource"></a> CImage:: LoadFromResource
 
 Carica un'immagine da una risorsa BITMAP.
 
@@ -1101,7 +1099,7 @@ ID della risorsa da caricare.
 
 La risorsa deve essere di tipo BITMAP.
 
-## <a name="cimagemaskblt"></a><a name="maskblt"></a>CImage:: MaskBlt
+## <a name="cimagemaskblt"></a><a name="maskblt"></a> CImage:: MaskBlt
 
 Combina i dati relativi al colore per le bitmap di origine e di destinazione utilizzando la maschera e l'operazione raster specificate.
 
@@ -1180,10 +1178,10 @@ Specifica i codici operativi raster ternari in primo piano e in background usati
 Riferimento a una `RECT` struttura che identifica la destinazione.
 
 *pointSrc*<br/>
-`POINT` Struttura che indica l'angolo superiore sinistro del rettangolo di origine.
+`POINT`Struttura che indica l'angolo superiore sinistro del rettangolo di origine.
 
 *pointMask*<br/>
-`POINT` Struttura che indica l'angolo superiore sinistro della bitmap della maschera.
+`POINT`Struttura che indica l'angolo superiore sinistro della bitmap della maschera.
 
 *pointDest*<br/>
 Riferimento a una `POINT` struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.
@@ -1196,11 +1194,11 @@ Diverso da zero se ha esito positivo, in caso contrario 0.
 
 Questo metodo si applica solo a Windows NT, versioni 4,0 e successive.
 
-## <a name="cimageoperator-hbitmap"></a><a name="operator_hbitmap"></a>CImage:: operator HBITMAP
+## <a name="cimageoperator-hbitmap"></a><a name="operator_hbitmap"></a> CImage:: operator HBITMAP
 
 Utilizzare questo operatore per ottenere l'handle di Windows GDI associato dell' `CImage` oggetto. Questo operatore è un operatore di cast, che supporta l'uso diretto di un oggetto HBITMAP.
 
-## <a name="cimageplgblt"></a><a name="plgblt"></a>CImage::P lgBlt
+## <a name="cimageplgblt"></a><a name="plgblt"></a> CImage::P lgBlt
 
 Esegue un trasferimento a blocchi di bit da un rettangolo in un contesto di dispositivo di origine in un parallelogramma in un contesto di dispositivo di destinazione.
 
@@ -1270,11 +1268,11 @@ Diverso da zero se ha esito positivo, in caso contrario 0.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se *hbmMask* identifica una bitmap monocromatica valida `PlgBit` , usa questa bitmap per mascherare i bit dei dati relativi al colore dal rettangolo di origine.
+Se *hbmMask* identifica una bitmap monocromatica valida, `PlgBit` Usa questa bitmap per mascherare i bit dei dati relativi al colore dal rettangolo di origine.
 
 Questo metodo si applica solo a Windows NT, versioni 4,0 e successive. Per informazioni più dettagliate, vedere [PlgBlt](/windows/win32/api/wingdi/nf-wingdi-plgblt) nel Windows SDK.
 
-## <a name="cimagereleasedc"></a><a name="releasedc"></a>CImage:: ReleaseDC
+## <a name="cimagereleasedc"></a><a name="releasedc"></a> CImage:: ReleaseDC
 
 Rilascia il contesto di dispositivo.
 
@@ -1286,7 +1284,7 @@ void ReleaseDC() const throw();
 
 Poiché è possibile selezionare una sola bitmap in un contesto di dispositivo alla volta, è necessario chiamare `ReleaseDC` per ogni chiamata a [GetDC](#getdc).
 
-## <a name="cimagereleasegdiplus"></a><a name="releasegdiplus"></a>CImage:: ReleaseGDIPlus
+## <a name="cimagereleasegdiplus"></a><a name="releasegdiplus"></a> CImage:: ReleaseGDIPlus
 
 Rilascia le risorse utilizzate da GDI+.
 
@@ -1298,7 +1296,7 @@ void ReleaseGDIPlus() throw();
 
 Questo metodo deve essere chiamato per liberare risorse allocate da un `CImage` oggetto globale. Vedere [CImage:: CImage](#cimage).
 
-## <a name="cimagesave"></a><a name="save"></a>CImage:: Save
+## <a name="cimagesave"></a><a name="save"></a> CImage:: Save
 
 Salva un'immagine nel flusso o nel file specificato sul disco.
 
@@ -1321,15 +1319,15 @@ Puntatore a un oggetto IStream COM contenente i dati dell'immagine del file.
 Puntatore al nome file dell'immagine.
 
 *guidFileType*<br/>
-Tipo di file in cui salvare l'immagine. Può essere uno dei seguenti:
+Tipo di file in cui salvare l'immagine. Può essere uno dei valori seguenti:
 
-- `ImageFormatBMP`Immagine bitmap non compressa.
+- `ImageFormatBMP` Immagine bitmap non compressa.
 
-- `ImageFormatPNG`Immagine compressa di Portable Network Graphic (PNG).
+- `ImageFormatPNG` Immagine compressa di Portable Network Graphic (PNG).
 
-- `ImageFormatJPEG`Immagine compressa JPEG.
+- `ImageFormatJPEG` Immagine compressa JPEG.
 
-- `ImageFormatGIF`Immagine compressa GIF.
+- `ImageFormatGIF` Immagine compressa GIF.
 
 > [!NOTE]
 > Per un elenco completo di costanti, vedere **costanti del formato del file di immagine** nel Windows SDK.
@@ -1342,7 +1340,7 @@ Valore HRESULT standard.
 
 Chiamare questa funzione per salvare l'immagine usando il nome e il tipo specificati. Se il parametro *guidFileType* non è incluso, verrà utilizzata l'estensione di file del nome file per determinare il formato dell'immagine. Se non viene specificata alcuna estensione, l'immagine verrà salvata in formato BMP.
 
-## <a name="cimagesetcolortable"></a><a name="setcolortable"></a>CImage:: SetColorTable
+## <a name="cimagesetcolortable"></a><a name="setcolortable"></a> CImage:: SetColorTable
 
 Imposta i valori di colore rosso, verde, blu (RGB) per un intervallo di voci nella tavolozza della sezione DIB.
 
@@ -1368,7 +1366,7 @@ Puntatore alla matrice di strutture [RGBQUAD](/windows/win32/api/wingdi/ns-wingd
 
 Questo metodo supporta solo bitmap di sezione DIB.
 
-## <a name="cimagesetpixel"></a><a name="setpixel"></a>CImage:: sepixel
+## <a name="cimagesetpixel"></a><a name="setpixel"></a> CImage:: sepixel
 
 Imposta il colore di un pixel in una posizione specificata nella bitmap.
 
@@ -1391,7 +1389,7 @@ Il colore in cui si imposta il pixel.
 
 Questo metodo ha esito negativo se le coordinate dei pixel si trovano al di fuori dell'area di visualizzazione selezionata.
 
-## <a name="cimagesetpixelindexed"></a><a name="setpixelindexed"></a>CImage:: SetPixelIndexed
+## <a name="cimagesetpixelindexed"></a><a name="setpixelindexed"></a> CImage:: SetPixelIndexed
 
 Imposta il colore del pixel sul colore situato in *iIndex* nella tavolozza dei colori.
 
@@ -1410,7 +1408,7 @@ Posizione verticale del pixel da impostare.
 *iIndex*<br/>
 Indice di un colore nella tavolozza dei colori.
 
-## <a name="cimagesetpixelrgb"></a><a name="setpixelrgb"></a>CImage:: SetPixelRGB
+## <a name="cimagesetpixelrgb"></a><a name="setpixelrgb"></a> CImage:: SetPixelRGB
 
 Imposta il pixel nei percorsi specificati da *x* e *y* sui colori indicati da *r*, *g*e *b*, in un'immagine rossa, verde, blu (RGB).
 
@@ -1444,7 +1442,7 @@ Intensità del colore blu.
 
 I parametri rosso, verde e blu sono rappresentati da un numero compreso tra 0 e 255. Se si impostano tutti e tre i parametri su zero, il colore risultante combinato è nero. Se si impostano tutti e tre i parametri su 255, il colore risultante combinato è bianco.
 
-## <a name="cimagesettransparentcolor"></a><a name="settransparentcolor"></a>CImage:: SetTransparentColor
+## <a name="cimagesettransparentcolor"></a><a name="settransparentcolor"></a> CImage:: SetTransparentColor
 
 Imposta un colore in una determinata posizione indicizzata come trasparente.
 
@@ -1461,7 +1459,7 @@ Indice, in una tavolozza dei colori, del colore da impostare su Transparent. Se-
 
 Indice del colore precedentemente impostato come Transparent.
 
-## <a name="cimagestretchblt"></a><a name="stretchblt"></a>CImage:: StretchBlt
+## <a name="cimagestretchblt"></a><a name="stretchblt"></a> CImage:: StretchBlt
 
 Copia una bitmap dal contesto di dispositivo di origine a questo contesto di dispositivo corrente.
 
@@ -1544,7 +1542,7 @@ Diverso da zero se ha esito positivo, in caso contrario 0.
 
 Per ulteriori informazioni, vedere [StretchBlt](/windows/win32/api/wingdi/nf-wingdi-stretchblt) nel Windows SDK.
 
-## <a name="cimagetransparentblt"></a><a name="transparentblt"></a>CImage:: TransparentBlt
+## <a name="cimagetransparentblt"></a><a name="transparentblt"></a> CImage:: TransparentBlt
 
 Copia una bitmap dal contesto di dispositivo di origine a questo contesto di dispositivo corrente.
 
@@ -1625,7 +1623,7 @@ TRUE se ha esito positivo, in caso contrario FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-`TransparentBlt`è supportato per le bitmap di origine di 4 bit per pixel e 8 bit per pixel. Usare [CImage:: AlphaBlend](#alphablend) per specificare 32 bitmap con bit per pixel con trasparenza.
+`TransparentBlt` è supportato per le bitmap di origine di 4 bit per pixel e 8 bit per pixel. Usare [CImage:: AlphaBlend](#alphablend) per specificare 32 bitmap con bit per pixel con trasparenza.
 
 ### <a name="example"></a>Esempio
 

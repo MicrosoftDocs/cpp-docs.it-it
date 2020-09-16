@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: f6f20d9af424fdd4254fc15e0580d62b9dfba144
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8e59dd44b81846d48dc5bf7172ce17444f75e6ef
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184475"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685710"
 ---
 # <a name="compiler-error-c3491"></a>Errore del compilatore C3491
 
@@ -25,7 +25,7 @@ Un'espressione lambda non modificabile non può modificare il valore di una vari
 
 - Passare la variabile mediante riferimento all'elenco di acquisizione dell'espressione lambda.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'errore C3491 perché il corpo di un'espressione lambda non modificabile modifica la variabile di acquisizione `m`:
 
@@ -38,8 +38,6 @@ int main()
    [m](int n) { m = n; }(99); // C3491
 }
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente risolve C3491 dichiarando l'espressione lambda con la **`mutable`** parola chiave:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: b83845f0ed0efeee6485780c7e4f828e40473e9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6db814e405c0b13cdf40fc81a1f23c6d59fd5f00
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186699"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684664"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>Avviso del compilatore (livello 1) C4488
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186699"
 
 Una classe deve implementare tutti i membri di un'interfaccia da cui eredita direttamente. Un membro implementato deve avere accessibilità pubblica e deve essere contrassegnato come Virtual.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 C4488 può verificarsi se un membro implementato non è pubblico. L'esempio seguente genera l'C4488.
 
@@ -39,8 +39,6 @@ public:
    virtual void f1() {}
 };
 ```
-
-## <a name="example"></a>Esempio
 
 C4488 può verificarsi se un membro implementato non è contrassegnato come Virtual. L'esempio seguente genera l'C4488.
 

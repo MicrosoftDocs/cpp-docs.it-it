@@ -11,12 +11,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 67cdae033c3c8669c8bc7ae1d2e3584ef68498f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe92d3f2927cd6c5b3df16850e2925fc42055d0
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227842"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684144"
 ---
 # <a name="if-statement-c"></a>Istruzione if (C)
 
@@ -34,7 +34,7 @@ Nel primo formato della sintassi se *expression* è true (diversa da zero), l'is
 
 Di seguito sono riportati alcuni esempi dell' **`if`** istruzione:
 
-```
+```C
 if ( i > 0 )
     y = x / i;
 else
@@ -48,7 +48,7 @@ In questo esempio, l'istruzione `y = x/i;` viene eseguita se `i` è maggiore di 
 
 Quando si annidano **`if`** istruzioni e **`else`** clausole, utilizzare le parentesi graffe per raggruppare le istruzioni e le clausole in istruzioni composte che chiariscono le finalità. Se non sono presenti parentesi graffe, il compilatore risolve le ambiguità associando ogni oggetto al **`else`** più vicino che non **`if`** dispone di un **`else`** .
 
-```
+```C
 if ( i > 0 )           /* Without braces */
     if ( j > i )
         x = j;
@@ -58,7 +58,7 @@ if ( i > 0 )           /* Without braces */
 
 **`else`** In questo esempio la clausola viene associata all' **`if`** istruzione interna. Se `i` è minore o uguale a 0, nessun valore viene assegnato a `x`.
 
-```
+```C
 if ( i > 0 )
 {                      /* With braces */
     if ( j > i )

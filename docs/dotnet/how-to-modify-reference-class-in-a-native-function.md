@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a9ff21390f8a5d7b20c8c36e596f80140ccb9a39
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988227"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683949"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Procedura: modificare una classe di riferimenti in una funzione nativa
 
 È possibile passare una classe di riferimento con una matrice CLR a una funzione nativa e modificare la classe usando i servizi PInvoke.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Compilare la seguente libreria nativa.
 
@@ -46,8 +46,6 @@ extern "C"  {
     }
 };
 ```
-
-## <a name="example"></a>Esempio
 
 Compilare l'assembly seguente.
 
@@ -91,4 +89,4 @@ In managed: intarr: 300, 400
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

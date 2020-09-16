@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845692"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684903"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -73,7 +73,7 @@ Un iteratore verificato fa riferimento a un iteratore che chiama `invalid_parame
 
 Gli adattatori degli iteratori che supportano gli iteratori verificati sono la [classe checked_array_iterator](../standard-library/checked-array-iterator-class.md) e la [classe unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Quando si esegue la compilazione utilizzando _ITERATOR_DEBUG_LEVEL impostato su 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento che non rientra nei limiti del contenitore utilizzando l'operatore di indicizzazione di determinate classi.
 
@@ -102,8 +102,6 @@ int main()
 
 Il programma stampa "67" e quindi visualizza una finestra di dialogo di errore di asserzione contenente informazioni aggiuntive sull'errore.
 
-## <a name="example"></a>Esempio
-
 Analogamente, quando si esegue la compilazione utilizzando _ITERATOR_DEBUG_LEVEL impostato su 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento utilizzando `front` o `back` nelle classi contenitore quando il contenitore è vuoto.
 
 ```cpp
@@ -125,8 +123,6 @@ int main()
 ```
 
 Il programma visualizza una finestra di dialogo di errore di asserzione contenente informazioni aggiuntive sull'errore.
-
-## <a name="example"></a>Esempio
 
 I vari scenari relativi ai casi di utilizzo degli iteratori con commenti su ciascuno di essi vengono illustrati nel codice seguente. Per impostazione predefinita, _ITERATOR_DEBUG_LEVEL è impostato su 2 nelle build di debug e su 0 nelle compilazioni al dettaglio.
 

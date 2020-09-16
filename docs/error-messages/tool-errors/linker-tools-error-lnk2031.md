@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73ca4a51737d1c073b3164f7e5aaa6deba369a38
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225202"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684183"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Errore degli strumenti del linker LNK2031
 
@@ -23,7 +23,7 @@ Quando si tenta di importare una funzione nativa in un'immagine pura, tenere pre
 
 L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Questo esempio di codice genera un componente con una funzione esportata nativa, la cui Convenzione di chiamata è implicitamente [__cdecl](../../cpp/cdecl.md).
 
@@ -34,8 +34,6 @@ extern "C" {
    __declspec(dllexport) int func() { return 3; }
 };
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene creato un client pure che utilizza la funzione nativa. Tuttavia, la convenzione di chiamata in **/CLR: pure** è [__clrcall](../../cpp/clrcall.md). L'esempio seguente genera l'LNK2031.
 
@@ -49,8 +47,6 @@ int main() {
    return func();
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene illustrato come utilizzare la funzione nativa da un'immagine pure. Si noti l' **`__cdecl`** identificatore della convenzione di chiamata esplicita.
 

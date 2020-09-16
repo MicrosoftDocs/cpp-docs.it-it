@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5060c4b34005c1cc066e002d20ca70cbfea0fbef
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234276"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684820"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -157,7 +157,7 @@ Solo versioni multithread delle [librerie di runtime C](../../c-runtime-library/
 
 Per usare **_beginthread** o **_beginthreadex**, l'applicazione deve collegarsi a una delle librerie di runtime C multithread.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente vengono utilizzati **_beginthread** e **_endthread**.
 
@@ -276,8 +276,6 @@ void Bounce( void * parg )
 ```
 
 Premere un tasto qualsiasi per chiudere l'applicazione di esempio.
-
-## <a name="example"></a>Esempio
 
 Il codice di esempio seguente illustra come è possibile usare l'handle del thread restituito da **_beginthreadex** con l'API di sincronizzazione [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject). Il thread principale attende che il secondo thread termini prima di continuare. Quando il secondo thread chiama **_endthreadex**, il relativo oggetto thread passa allo stato segnalato. Ciò consente al thread principale di continuare l'esecuzione. Questa operazione non può essere eseguita con **_beginthread** e **_endthread**, perché **_endthread** chiama **CloseHandle**, che elimina l'oggetto thread prima che possa essere impostato sullo stato segnalato.
 

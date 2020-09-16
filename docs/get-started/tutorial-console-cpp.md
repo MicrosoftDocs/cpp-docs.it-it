@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5f448e68878e211969c89f7c4c750e3231d3a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14e1e18da5cdabae5366d4ba97a2260d5e99f076
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230584"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685321"
 ---
 # <a name="create-a-console-calculator-in-c"></a>Creare un calcolatore console in C++
 
@@ -75,11 +75,11 @@ Il modello per una nuova applicazione console di Windows crea una semplice app "
 
 1. Per compilare il progetto scegliere **Compila soluzione** dal menu **Compila**. Nella finestra **Output** vengono visualizzati i risultati del processo di compilazione.
 
-   ![Compilare il progetto](./media/calc-vs2019-build-your-project.png "Compilare il progetto")
+   ![Screenshot di Visual Studio 2019 con la finestra di output che mostra il risultato del processo di compilazione.](./media/calc-vs2019-build-your-project.png "Compilare il progetto")
 
 1. Per eseguire il codice, nella barra dei menu selezionare **Debug**, **Avvia senza eseguire debug**.
 
-   ![Avviare il progetto](./media/calc-vs2019-hello-world-console.png "Avviare il progetto")
+   ![Screenshot di Visual Studio 2019 Microsoft Visual Studio Console di debug visualizzazione del codice eseguito correttamente.](./media/calc-vs2019-hello-world-console.png "Avviare il progetto")
 
    Si apre una finestra della console si apre e quindi viene eseguita l'app. Quando viene avviata in Visual Studio, un'app console esegue il codice, quindi stampa "Premere un tasto qualsiasi per chiudere questa finestra. . ." per consentire di visualizzare l'output. Congratulazioni! Si è creata la prima app console "Hello, World!" in Visual Studio.
 
@@ -142,11 +142,11 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
 1. Accedere al menu **Progetto** e scegliere **Aggiungi classe**. Nella casella di modifica **Nome classe** immettere *Calculator*. Scegliere **OK**. Due nuovi file vengono aggiunti al progetto. Per salvare tutti i file modificati in una sola volta, premere **CTRL+MAIUSC+S**. Si tratta di un tasto di scelta rapida per **file**  >  **Save All**. È anche disponibile un pulsante della barra degli strumenti per **Salva tutto**, un'icona con due dischi floppy, accanto al pulsante **Salva**. In generale, è buona norma scegliere spesso **Salva tutto** in modo da non tralasciare qualche file quando si salva.
 
-   ![Creare la classe Calculator](./media/calc-vs2019-create-calculator-class.png "Creare la classe Calculator")
+   ![Screenshot della finestra di dialogo Aggiungi classe con calcolatore digitato nella casella di testo nome classe.](./media/calc-vs2019-create-calculator-class.png "Creare la classe Calculator")
 
    Una classe è simile a un progetto per un oggetto che esegue un'operazione. In questo caso si definisce una calcolatrice e il modo in cui deve funzionare. La procedura guidata **Aggiungi classe** usata in precedenza ha creato i file H e CPP che hanno lo stesso nome della classe. È possibile visualizzare un elenco completo dei file di progetto nella finestra di **Esplora soluzioni** , visibile sul lato dell'IDE. Se la finestra non è visibile, è possibile aprirla dalla barra dei menu: scegliere **Visualizza**  >  **Esplora soluzioni**.
 
-   ![Esplora soluzioni](./media/calc-vs2019-solution-explorer.png "Esplora soluzioni")
+   ![Screenshot della finestra di Esplora soluzioni di Visual Studio 2019 che Visualizza il progetto Calculator tutorial.](./media/calc-vs2019-solution-explorer.png "Esplora soluzioni")
 
    Nell'editor verranno ora aperte tre schede: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se si chiude accidentalmente uno di essi, è possibile riaprirlo facendo doppio clic su di esso nella finestra **Esplora soluzioni** .
 
@@ -170,7 +170,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
 1. Si noterà una sottolineatura a zig zag verde sotto `Calculate`, che appare perché non è ancora stata definita la funzione `Calculate` nel file CPP. Passare il mouse sulla parola, fare clic sulla lampadina (in questo caso, un cacciavite) visualizzata e scegliere **Crea definizione di 'Calculate' in Calculator.cpp**.
 
-   ![Crea definizione di calcolo](./media/calc-vs2019-create-definition.png "Crea definizione di calcolo")
+   ![Screenshot di Visual Studio 2019 che mostra l'opzione di creazione della definizione dell'opzione Calculate in Calculator C P p evidenziata.](./media/calc-vs2019-create-definition.png "Crea definizione di calcolo")
 
    Viene visualizzato un popup con un'anteprima della modifica del codice apportata nell'altro file. Il codice è stato aggiunto a *Calculator.cpp*.
 
@@ -262,9 +262,9 @@ Se a questo punto si compila e si esegue nuovamente il codice, verrà comunque c
 
 1. Premere **CTRL+F5** per ricompilare e avviare l'app.
 
-1. Immettere `5 + 5` e premere **invio**. Verificare che il risultato sia 10.
+1. Immettere `5 + 5` e premere **INVIO**. Verificare che il risultato sia 10.
 
-   ![Risultato di 5 + 5](./media/calc-vs2019-five-plus-five.png "Risultato di 5 + 5")
+   ![Screenshot di Visual Studio 2019 Microsoft Visual Studio Console di debug che mostra il risultato corretto di 5 + 5.](./media/calc-vs2019-five-plus-five.png "Risultato di 5 + 5")
 
 ## <a name="debug-the-app"></a>Eseguire il debug dell'app
 
@@ -274,29 +274,29 @@ Poiché l'utente è libero di digitare qualsiasi cosa nella finestra della conso
 
 1. Impostare un punto di interruzione sulla riga `result = c.Calculate(x, oper, y);`, subito dopo aver richiesto l'input dell'utente. Per impostare il punto di interruzione, fare clic accanto alla riga nella barra grigia verticale lungo il bordo sinistro della finestra dell'editor. Viene visualizzato un punto rosso.
 
-   ![Imposta un punto di interruzione](./media/calc-vs2019-set-breakpoint.png "Imposta punto di interruzione")
+   ![Screenshot di Visual Studio 2019 che mostra il punto rosso che rappresenta un punto di interruzione.](./media/calc-vs2019-set-breakpoint.png "Imposta punto di interruzione")
 
    A questo punto, durante il debug del programma, l'esecuzione viene sempre sospesa in corrispondenza di quella riga. È già appurato che il programma funziona nei casi semplici. Poiché non si vuole sospendere l'esecuzione ogni volta, il punto di interruzione verrà impostato come condizionale.
 
 1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione e scegliere **Condizioni**. Nella casella di modifica per la condizione immettere `(y == 0) && (oper == '/')`. Scegliere il pulsante **Chiudi** al termine. La condizione viene salvata automaticamente.
 
-   ![Impostare un punto di interruzione condizionale](./media/calc-vs2019-conditional-breakpoint.png "Impostare un punto di interruzione condizionale")
+   ![Screenshot di Visual Studio 2019 che mostra la sezione delle impostazioni del punto di interruzione e una condizione aggiunta a è true value.](./media/calc-vs2019-conditional-breakpoint.png "Impostare un punto di interruzione condizionale")
 
    Ora si sospende l'esecuzione in corrispondenza del nel punto di interruzione nel caso specifico in cui viene tentata una divisione per 0.
 
 1. Per eseguire il debug del programma, premere **F5** o scegliere il pulsante della barra degli strumenti **Debugger Windows locale**, ovvero il pulsante con l'icona a forma di freccia verde. Nell'app console, se si immette un valore del tipo "5 - 0", il programma ha un comportamento normale e rimane in esecuzione. Tuttavia, se si digita "10 / 0", si interrompe in corrispondenza del punto di interruzione. È anche possibile inserire un numero qualsiasi di spazi tra l'operatore e i numeri: `cin` è abbastanza intelligente da analizzare l'input in modo appropriato.
 
-   ![Sospendi in corrispondenza del punto di interruzione condizionale](./media/calc-vs2019-debug-breakpoint.png "Sospendi in corrispondenza del punto di interruzione condizionale")
+   ![Screenshot di Visual Studio 2019 che mostra che il programma è stato sospeso in corrispondenza del punto di interruzione condizionale.](./media/calc-vs2019-debug-breakpoint.png "Sospendi in corrispondenza del punto di interruzione condizionale")
 
 ### <a name="useful-windows-in-the-debugger"></a>Finestre utili nel debugger
 
 Ogni volta che si esegue il debug del codice, è possibile notare che vengono visualizzate alcune nuove finestre. Queste finestre possono semplificare l'esperienza di debug. Osservare la finestra **Auto**. La finestra **Auto** contiene i valori correnti delle variabili usate almeno tre righe prima e fino alla riga corrente. Per visualizzare tutte le variabili da tale funzione, passare alla finestra **Variabili locali**. È effettivamente possibile modificare i valori di queste variabili in tempo reale durante il debug, per vedere quale effetto possono avere sul programma. In questo caso non verranno modificate.
 
-   ![Finestra variabili locali](./media/calc-vs2019-debug-locals.png "Finestra variabili locali")
+   ![Screenshot della finestra variabili locali in Visual Studio 2019.](./media/calc-vs2019-debug-locals.png "Finestra variabili locali")
 
 È anche possibile passare il mouse sulle variabili nel codice stesso per visualizzarne i valori correnti dove l'esecuzione è attualmente in pausa. Verificare che la finestra dell'editor sia attiva facendo clic su di essa.
 
-   ![Passare il mouse per visualizzare i valori delle variabili correnti](./media/calc-vs2019-hover-tooltip.png "Passare il mouse per visualizzare i valori delle variabili correnti")
+   ![Screenshot di Visual Studio 2019 che mostra la descrizione comando visualizzata per visualizzare il valore della variabile.](./media/calc-vs2019-hover-tooltip.png "Passare il mouse per visualizzare i valori delle variabili correnti")
 
 ### <a name="to-continue-debugging"></a>Per continuare il debug
 
@@ -308,7 +308,7 @@ Ogni volta che si esegue il debug del codice, è possibile notare che vengono vi
 
    Sembra che il programma si comporti come previsto: accetta il primo numero e lo divide per il secondo. Sulla riga `cout` passare il mouse sulla variabile `result` o esaminare `result` nella finestra **Auto**. Si noterà che il relativo valore è elencato come "inf" e questo non è corretto, quindi si vedrà come risolvere il problema. La riga `cout` restituisce semplicemente qualsiasi valore archiviato in `result`, quindi se si va avanti di un'altra riga usando **F10**, la finestra della console visualizza:
 
-   ![Risultato della divisione per zero](./media/calc-vs2019-divide-by-zero-fail.png "Risultato della divisione per zero")
+   ![Screenshot di Visual Studio 2019 Microsoft Visual Studio Console di debug mostrando il risultato della divisione per zero.](./media/calc-vs2019-divide-by-zero-fail.png "Risultato della divisione per zero")
 
    Ciò accade perché la divisione per zero non è definita, quindi il programma non ha una risposta numerica per l'operazione richiesta.
 
@@ -359,7 +359,7 @@ Ogni volta che si esegue il debug del codice, è possibile notare che vengono vi
 
 1. Ora premere **F5** una volta. L'esecuzione del programma continua finché non deve essere sospesa per richiedere l'input dell'utente. Immettere di nuovo `10 / 0`. A questo punto viene stampato un messaggio più utile. Viene chiesto all'utente di immettere altro input e il programma continua normalmente l'esecuzione.
 
-   ![Risultato finale dopo le modifiche](./media/calc-vs2019-final-verification.png "Risultato finale dopo le modifiche")
+   ![Screenshot di Visual Studio 2019 Microsoft Visual Studio Console di debug mostrando il risultato finale dopo le modifiche.](./media/calc-vs2019-final-verification.png "Risultato finale dopo le modifiche")
 
    > [!Note]
    > Quando si modifica il codice mentre si è in modalità di debug, è possibile che il codice risulti non aggiornato. Ciò si verifica quando il debugger sta ancora eseguendo il codice precedente e non lo ha ancora aggiornato con le modifiche. In questo caso nel debugger viene visualizzata una finestra di dialogo per informare l'utente. A volte può essere necessario premere **F5** per aggiornare il codice in esecuzione. In particolare, se si apporta una modifica in una funzione mentre il punto di esecuzione è all'interno di tale funzione, è necessario uscire dalla funzione e ritornare al suo interno per ottenere il codice aggiornato. Se per qualche motivo questa operazione non funziona e viene visualizzato un messaggio di errore, è possibile interrompere il debug facendo clic sul quadrato rosso nella barra degli strumenti sotto i menu della parte superiore dell'IDE, quindi avviare di nuovo il debug immettendo **F5** o scegliendo la freccia verde di riproduzione accanto al pulsante di arresto nella barra degli strumenti.
@@ -437,11 +437,11 @@ Il modello per una nuova applicazione console di Windows crea una semplice app "
 
 1. Per compilare il progetto scegliere **Compila soluzione** dal menu **Compila**. Nella finestra **Output** vengono visualizzati i risultati del processo di compilazione.
 
-   ![Compilare il progetto](./media/calculator-initial-build-output.png "Compilare il progetto")
+   ![Screenshot di Visual Studio con la finestra di output che mostra il risultato del processo di compilazione.](./media/calculator-initial-build-output.png "Compilare il progetto")
 
 1. Per eseguire il codice, nella barra dei menu selezionare **Debug**, **Avvia senza eseguire debug**.
 
-   ![Avviare il progetto](./media/calculator-hello-world-console.png "Avviare il progetto")
+   ![Screenshot della Microsoft Visual Studio Console di debug la visualizzazione del codice è stata eseguita correttamente.](./media/calculator-hello-world-console.png "Avviare il progetto")
 
    Si apre una finestra della console si apre e quindi viene eseguita l'app. Quando viene avviata in Visual Studio, un'app console esegue il codice, quindi stampa "Premere un tasto per continuare. . ." per consentire di visualizzare l'output. Congratulazioni! Si è creata la prima app console "Hello, World!" in Visual Studio.
 
@@ -508,11 +508,11 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
 1. Accedere al menu **Progetto** e scegliere **Aggiungi classe**. Nella casella di modifica **Nome classe** immettere *Calculator*. Scegliere **OK**. Due nuovi file vengono aggiunti al progetto. Per salvare tutti i file modificati in una sola volta, premere **CTRL+MAIUSC+S**. Si tratta di un tasto di scelta rapida per **file**  >  **Save All**. È anche disponibile un pulsante della barra degli strumenti per **Salva tutto**, un'icona con due dischi floppy, accanto al pulsante **Salva**. In generale, è buona norma scegliere spesso **Salva tutto** in modo da non tralasciare qualche file quando si salva.
 
-   ![Creare la classe Calculator](./media/calculator-create-class.gif "Creare la classe Calculator")
+   ![Breve video che mostra l'utente che apre la finestra di dialogo Aggiungi classe, digitando Calculator nel campo nome classe e selezionando O K.](./media/calculator-create-class.gif "Creare la classe Calculator")
 
    Una classe è simile a un progetto per un oggetto che esegue un'operazione. In questo caso si definisce una calcolatrice e il modo in cui deve funzionare. La procedura guidata **Aggiungi classe** usata in precedenza ha creato i file H e CPP che hanno lo stesso nome della classe. È possibile visualizzare un elenco completo dei file di progetto nella finestra di **Esplora soluzioni** , visibile sul lato dell'IDE. Se la finestra non è visibile, è possibile aprirla dalla barra dei menu: scegliere **Visualizza**  >  **Esplora soluzioni**.
 
-   ![Esplora soluzioni](./media/calculator-solution-explorer.png "Esplora soluzioni")
+   ![Screenshot della finestra di Esplora soluzioni che Visualizza il progetto Calculator tutorial.](./media/calculator-solution-explorer.png "Esplora soluzioni")
 
    Nell'editor verranno ora aperte tre schede: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se si chiude accidentalmente uno di essi, è possibile riaprirlo facendo doppio clic su di esso nella finestra **Esplora soluzioni** .
 
@@ -536,7 +536,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
 1. Si noterà una sottolineatura a zig zag verde sotto `Calculate`, che appare perché non è ancora stata definita la funzione `Calculate` nel file CPP. Passare il mouse sulla parola, fare clic sulla lampadina visualizzata e scegliere l'opzione che consente di **creare una definizione di "Calculate" in Calculator.cpp**. Viene visualizzato un popup con un'anteprima della modifica del codice apportata nell'altro file. Il codice è stato aggiunto a *Calculator.cpp*.
 
-   ![Crea definizione di calcolo](./media/calculator-create-definition.gif "Crea definizione di calcolo")
+   ![Breve video che illustra l'utente che seleziona l'opzione per la creazione di una definizione di calcolo in Calculator C P P.](./media/calculator-create-definition.gif "Crea definizione di calcolo")
 
    Attualmente restituisce solo 0.0. Seguire questa procedura per intervenire. Premere **ESC** per chiudere l'elemento popup.
 
@@ -626,9 +626,9 @@ Se a questo punto si compila e si esegue nuovamente il codice, verrà comunque c
 
 1. Premere **CTRL+F5** per ricompilare e avviare l'app.
 
-1. Immettere `5 + 5` e premere **invio**. Verificare che il risultato sia 10.
+1. Immettere `5 + 5` e premere **INVIO**. Verificare che il risultato sia 10.
 
-   ![Risultato di 5 + 5](./media/calculator-five-plus-five.png "Risultato di 5 + 5")
+   ![Screenshot della Microsoft Visual Studio Console di debug che mostra il risultato corretto di 5 + 5.](./media/calculator-five-plus-five.png "Risultato di 5 + 5")
 
 ## <a name="debug-the-app"></a>Eseguire il debug dell'app
 
@@ -638,19 +638,19 @@ Poiché l'utente è libero di digitare qualsiasi cosa nella finestra della conso
 
 1. Impostare un punto di interruzione sulla riga `result = c.Calculate(x, oper, y);`, subito dopo aver richiesto l'input dell'utente. Per impostare il punto di interruzione, fare clic accanto alla riga nella barra grigia verticale lungo il bordo sinistro della finestra dell'editor. Viene visualizzato un punto rosso.
 
-   ![Imposta un punto di interruzione](./media/calculator-set-breakpoint.gif "Imposta punto di interruzione")
+   ![Breve video di Visual Studio che illustra l'utente che crea il punto rosso che rappresenta un punto di interruzione.](./media/calculator-set-breakpoint.gif "Imposta punto di interruzione")
 
    A questo punto, durante il debug del programma, l'esecuzione viene sempre sospesa in corrispondenza di quella riga. È già appurato che il programma funziona nei casi semplici. Poiché non si vuole sospendere l'esecuzione ogni volta, il punto di interruzione verrà impostato come condizionale.
 
 1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione e scegliere **Condizioni**. Nella casella di modifica per la condizione immettere `(y == 0) && (oper == '/')`. Scegliere il pulsante **Chiudi** al termine. La condizione viene salvata automaticamente.
 
-   ![Impostare un punto di interruzione condizionale](./media/calculator-conditional-breakpoint.gif "Impostare un punto di interruzione condizionale")
+   ![Breve video di Visual Studio 2019 che mostra l'utente che apre la sezione delle impostazioni del punto di interruzione e imposta un punto di interruzione condizionale.](./media/calculator-conditional-breakpoint.gif "Impostare un punto di interruzione condizionale")
 
    Ora si sospende l'esecuzione in corrispondenza del nel punto di interruzione nel caso specifico in cui viene tentata una divisione per 0.
 
 1. Per eseguire il debug del programma, premere **F5** o scegliere il pulsante della barra degli strumenti **Debugger Windows locale**, ovvero il pulsante con l'icona a forma di freccia verde. Nell'app console, se si immette un valore del tipo "5 - 0", il programma ha un comportamento normale e rimane in esecuzione. Tuttavia, se si digita "10 / 0", si interrompe in corrispondenza del punto di interruzione. È anche possibile inserire un numero qualsiasi di spazi tra l'operatore e i numeri. `cin` è abbastanza intelligente da analizzare l'input in modo appropriato.
 
-   ![Sospendi in corrispondenza del punto di interruzione condizionale](./media/calculator-debug-conditional.gif "Sospendi in corrispondenza del punto di interruzione condizionale")
+   ![Breve video di Visual Studio che mostra che il programma è stato sospeso in corrispondenza del punto di interruzione condizionale.](./media/calculator-debug-conditional.gif "Sospendi in corrispondenza del punto di interruzione condizionale")
 
 ### <a name="useful-windows-in-the-debugger"></a>Finestre utili nel debugger
 
@@ -660,11 +660,11 @@ Ogni volta che si esegue il debug del codice, è possibile notare che vengono vi
 
 Per visualizzare tutte le variabili da tale funzione, passare alla finestra **Variabili locali**. È effettivamente possibile modificare i valori di queste variabili in tempo reale durante il debug, per vedere quale effetto possono avere sul programma. In questo caso non verranno modificate.
 
-   ![Finestra variabili locali](./media/calculator-locals.png "Finestra variabili locali")
+   ![Screenshot della finestra variabili locali.](./media/calculator-locals.png "Finestra variabili locali")
 
 È anche possibile passare il mouse sulle variabili nel codice stesso per visualizzarne i valori correnti dove l'esecuzione è attualmente in pausa. Verificare che la finestra dell'editor sia attiva facendo clic su di essa.
 
-   ![Passare il mouse per visualizzare i valori delle variabili correnti](./media/calculator-hover-tooltip.gif "Passare il mouse per visualizzare i valori delle variabili correnti")
+   ![Breve video che mostra la descrizione comando visualizzata per visualizzare il valore della variabile.](./media/calculator-hover-tooltip.gif "Passare il mouse per visualizzare i valori delle variabili correnti")
 
 ### <a name="to-continue-debugging"></a>Per continuare il debug
 
@@ -678,7 +678,7 @@ Per visualizzare tutte le variabili da tale funzione, passare alla finestra **Va
 
    Sembra che il programma si comporti come previsto: accetta il primo numero e lo divide per il secondo. Sulla riga `cout` passare il mouse sulla variabile `result` o esaminare `result` nella finestra **Auto**. Si noterà che il relativo valore è elencato come "inf" e questo non è corretto, quindi si vedrà come risolvere il problema. La riga `cout` restituisce semplicemente qualsiasi valore archiviato in `result`, quindi se si va avanti di un'altra riga usando **F10**, la finestra della console visualizza:
 
-   ![Risultato della divisione per zero](./media/calculator-divide-by-zero-fail.png "Risultato della divisione per zero")
+   ![Screenshot della Microsoft Visual Studio Console di debug mostrando il risultato della divisione per zero.](./media/calculator-divide-by-zero-fail.png "Risultato della divisione per zero")
 
    Ciò accade perché la divisione per zero non è definita, quindi il programma non ha una risposta numerica per l'operazione richiesta.
 
@@ -730,7 +730,7 @@ Per visualizzare tutte le variabili da tale funzione, passare alla finestra **Va
 
 1. Ora premere **F5** una volta. L'esecuzione del programma continua finché non deve essere sospesa per richiedere l'input dell'utente. Immettere di nuovo `10 / 0`. A questo punto viene stampato un messaggio più utile. Viene chiesto all'utente di immettere altro input e il programma continua normalmente l'esecuzione.
 
-   ![Risultato finale dopo le modifiche](./media/calculator-final-verification.gif "Risultato finale dopo le modifiche")
+   ![Breve video della Microsoft Visual Studio Console di debug mostrando il risultato finale dopo le modifiche.](./media/calculator-final-verification.gif "Risultato finale dopo le modifiche")
 
    > [!Note]
    > Quando si modifica il codice mentre si è in modalità di debug, è possibile che il codice risulti non aggiornato. Ciò si verifica quando il debugger sta ancora eseguendo il codice precedente e non lo ha ancora aggiornato con le modifiche. In questo caso nel debugger viene visualizzata una finestra di dialogo per informare l'utente. A volte può essere necessario premere **F5** per aggiornare il codice in esecuzione. In particolare, se si apporta una modifica in una funzione mentre il punto di esecuzione è all'interno di tale funzione, è necessario uscire dalla funzione e ritornare al suo interno per ottenere il codice aggiornato. Se per qualche motivo questa operazione non funziona e viene visualizzato un messaggio di errore, è possibile interrompere il debug facendo clic sul quadrato rosso nella barra degli strumenti sotto i menu della parte superiore dell'IDE, quindi avviare di nuovo il debug immettendo **F5** o scegliendo la freccia verde di riproduzione accanto al pulsante di arresto nella barra degli strumenti.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85c99feee72d94f50ec19394cf8aec7a3c9811bc
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198133"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684980"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avviso del compilatore (livello 4) C4754
 
@@ -21,7 +21,7 @@ Dal momento che il risultato del confronto è sempre lo stesso viene generato l'
 
 Le regole di conversione degli Integer sono complesse ed esistono molte insidie sottili. In alternativa alla correzione di ogni avviso C4754, è possibile aggiornare il codice per usare la [libreria SafeInt](../../safeint/safeint-library.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Questo esempio genera C4754:
 
@@ -58,8 +58,6 @@ Per eliminare l'avviso, è possibile modificare l'istruzione di assegnazione per
 unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;
 ```
-
-## <a name="example"></a>Esempio
 
 Anche l'esempio seguente genera l'errore C4754.
 

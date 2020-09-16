@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "77415715"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684365"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Panoramica dello sviluppo con C++ in Visual Studio
 
@@ -25,23 +25,23 @@ Un *progetto* è fondamentalmente un set di file di codice sorgente e risorse, a
 
 Visual Studio offre il supporto per qualsiasi sistema di progetto o strumento di compilazione personalizzato, nonché il supporto completo per IntelliSense, esplorazione e debug:
 
-- **MSBuild** è il sistema di progetto nativo di Visual Studio. Quando si seleziona **File** > **nuovo** > **progetto** dal menu principale, vengono visualizzati molti tipi di modelli di *progetto* MSBuild che consentono di iniziare rapidamente a sviluppare diversi tipi di applicazioni C .
+- **MSBuild** è il sistema di progetto nativo di Visual Studio. Quando si seleziona **file**  >  **nuovo**  >  **progetto** dal menu principale, vengono visualizzati molti tipi di modelli di *progetto* MSBuild che consentono di iniziare rapidamente a sviluppare tipi diversi di applicazioni C++.
 
    ::: moniker range="vs-2019"
 
-   ![Nuovi modelli di progetto](../build/media/mathclient-project-name-2019.png "Finestra di dialogo Nuovo progetto di Visual Studio 2019")
+   ![Nuovi modelli di progetto](../build/media/mathclient-project-name-2019.png "Finestra di dialogo nuovo progetto di Visual Studio 2019")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![Modelli di progetto](media/vs2017-new-project.png "Finestra di dialogo Nuovo progetto di Visual Studio 2017")
+   ![Modelli di progetto](media/vs2017-new-project.png "Finestra di dialogo nuovo progetto di Visual Studio 2017")
 
    ::: moniker-end
 
    In generale, è consigliabile usare questi modelli per i nuovi progetti a meno che non si stia usando un progetto CMake esistente o un altro sistema di progetto. Per altre informazioni, vedere [Creazione e gestione di progetti basati su MSBuild](../build/creating-and-managing-visual-cpp-projects.md).
 
-- **CMake** è un sistema di compilazione multipiattaforma che è integrato nell'IDE di Visual Studio quando si installa lo sviluppo desktop con il carico di lavoro di C . È possibile usare il modello di progetto CMake per i nuovi progetti oppure aprire semplicemente una cartella con un file CMakeLists.txt. Per altre informazioni, vedere [Progetti CMake in Visual Studio](../build/cmake-projects-in-visual-studio.md).
+- **CMake** è un sistema di compilazione multipiattaforma integrato nell'IDE di Visual Studio quando si installa il carico di lavoro sviluppo di applicazioni desktop con C++. È possibile usare il modello di progetto CMake per i nuovi progetti oppure aprire semplicemente una cartella con un file CMakeLists.txt. Per altre informazioni, vedere [Progetti CMake in Visual Studio](../build/cmake-projects-in-visual-studio.md).
 
 - Altri sistemi di compilazione C++, inclusa una raccolta separata di file, sono supportati tramite la funzionalità **Apri cartella**. Creare semplici file JSON per richiamare il programma di compilazione e configurare le sessioni di debug. Per altre informazioni, vedere [Progetti Apri cartella per C++](../build/open-folder-projects-cpp.md).
 
@@ -51,13 +51,13 @@ Il controllo del codice sorgente consente di coordinare il lavoro tra più svilu
 
 ::: moniker range="vs-2019"
 
-![Esplora team](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Screenshot della finestra di Team Explorer in Visual Studio 2019.](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![Esplora team](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Screenshot della finestra di Team Explorer in Visual Studio 2017.](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
 
 ::: moniker-end
 
@@ -71,9 +71,9 @@ Usare l'utilità di gestione pacchetti [vcpkg](../build/vcpkg.md) per ottenere e
 
 Se il programma ha un'interfaccia utente, è possibile usare una finestra di progettazione per inserirvi rapidamente controlli come pulsanti, caselle di riepilogo e così via. Quando si trascina un controllo dalla finestra degli strumenti e lo si rilascia sulla superficie di disegno, Visual Studio genera le risorse e il codice necessari per fare in modo che tutto funzioni correttamente. Quindi si scrive il codice per personalizzare l'aspetto e il comportamento.
 
-![Designer e Casella degli strumenti](media/vs2017-toolbox-designer.png "Casella degli strumenti e progettazione di Visual Studio 2017")
+![Finestra di progettazione e casella degli strumenti](media/vs2017-toolbox-designer.png "Casella degli strumenti e finestra di progettazione di Visual Studio 2017")
 
-Per ulteriori informazioni sulla progettazione di un'interfaccia utente per un'app piattaforma Windows universale, vedere [Progettazione e interfaccia utente](https://developer.microsoft.com/windows/design).
+Per ulteriori informazioni sulla progettazione di un'interfaccia utente per un'app piattaforma UWP (Universal Windows Platform), vedere [progettazione e interfaccia](https://developer.microsoft.com/windows/design)utente.
 
 Per altre informazioni sulla creazione di un'interfaccia utente per un'applicazione MFC, vedere [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Per informazioni sui programmi Windows Win32, vedere [Applicazioni desktop di Windows](../windows/windows-desktop-applications-cpp.md).
 
@@ -81,19 +81,19 @@ Per altre informazioni sulla creazione di un'interfaccia utente per un'applicazi
 
 Dopo aver creato un progetto, tutti i file di progetto vengono visualizzati nella finestra **Esplora soluzioni**. Una *soluzione* è un contenitore logico per uno o più progetti correlati. Quando si fa clic su un file con estensione h o cpp in **Esplora soluzioni**, il file viene aperto nell'editor di codice.
 
-![Esplora soluzioni ed editor di codice](media/vs2017-solution-explorer-code-editor.png "Esplora soluzioni di Visual Studio 2017 e editor di codice")
+![Editor Esplora soluzioni e codice](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 Esplora soluzioni e l'editor di codice")
 
 L'editor di codice è un elaboratore di testo specializzato per il codice sorgente C++. L'editor applica colori specifici alle parole chiave del linguaggio, ai nomi di metodi e variabili e ad altri elementi del codice per rendere quest'ultimo più leggibile e di più facile comprensione. Offre anche strumenti per effettuare il refactoring del codice, spostarsi tra i diversi file e comprendere come è strutturato il codice. Per altre informazioni, vedere [Scrittura e refactoring del codice](../ide/writing-and-refactoring-code-cpp.md).
 
 ## <a name="add-and-edit-resources"></a>Aggiungere e modificare risorse
 
-Un programma o una DLL di Windows include in genere alcune *risorse,* ad esempio finestre di dialogo, icone, immagini, stringhe localizzabili, schermate iniziali, stringhe di connessione al database o dati arbitrari. Visual Studio include strumenti per l'aggiunta e la modifica di risorse. Per ulteriori informazioni, vedere [Utilizzo dei file](../windows/working-with-resource-files.md)di risorse .
+Un programma o una DLL di Windows include in genere alcune *risorse*, ad esempio finestre di dialogo, icone, immagini, stringhe localizzabili, schermate iniziali, stringhe di connessione del database o dati arbitrari. Visual Studio include strumenti per l'aggiunta e la modifica delle risorse. Per altre informazioni, vedere [uso dei file di risorse](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Compilazione (compilare e collegare)
 
-Scegliere **Compila** > **soluzione** di compilazione sulla barra dei menu oppure immettere la combinazione di tasti Ctrl , Maiusc **e B** per compilare e collegare un progetto. Gli errori e gli avvisi di compilazione vengono segnalati nell'Elenco errori (**Ctrl ,\\E**). Nella finestra di **output** **(ALT-2**) vengono visualizzate informazioni sul processo di compilazione.
+Scegliere **Compila**Compila  >  **soluzione** dalla barra dei menu oppure premere la combinazione di tasti **CTRL + MAIUSC + B** per compilare e collegare un progetto. Gli errori e gli avvisi di compilazione vengono segnalati nella Elenco errori (**CTRL + \\ , E**). La finestra di **output** (**ALT + 2**) Mostra le informazioni sul processo di compilazione.
 
-![Finestra di output ed elenco errori](media/vs2017-output-error-list.png "Finestra Output di Visual Studio 2017 ed Elenco errori")
+![Finestra di output e Elenco errori](media/vs2017-output-error-list.png "Finestra di output di Visual Studio 2017 e Elenco errori")
 
 Per altre informazioni sulla configurazione delle build, vedere [Uso delle proprietà del progetto](../build/working-with-project-properties.md) e [Progetti e sistemi di compilazione](../build/projects-and-build-systems-cpp.md).
 
@@ -101,7 +101,7 @@ Per altre informazioni sulla configurazione delle build, vedere [Uso delle propr
 
 ## <a name="debug"></a>Debug
 
-È possibile avviare il debug premendo **F5**. L'esecuzione viene sospesa su tutti i punti di interruzione impostati (premendo **F9).** È inoltre possibile eseguire il codice una riga alla volta (**F10**), visualizzare i valori di variabili o registri e anche in alcuni casi apportare modifiche nel codice e continuare il debug senza ricompilare. La figura seguente mostra una sessione di debug in cui l'esecuzione viene arrestata in un punto di interruzione. I valori dei membri della struttura dati sono visibili nella **finestra Espressione di controllo**.
+È possibile avviare il debug premendo **F5**. L'esecuzione viene sospesa in corrispondenza di tutti i punti di interruzione impostati (premendo **F9**). È anche possibile esaminare il codice una riga alla volta (**F10**), visualizzare i valori delle variabili o dei registri e anche in alcuni casi apportare modifiche al codice e continuare a eseguire il debug senza ricompilare. La figura seguente mostra una sessione di debug in cui l'esecuzione viene arrestata in un punto di interruzione. I valori dei membri della struttura dati sono visibili nella **finestra Espressione di controllo**.
 
 ![Sessione di debug](media/vs2017-debug-watch.png "Sessione di debug di Visual Studio 2017")
 
@@ -115,7 +115,7 @@ Visual Studio include il framework di unit test Microsoft per C++, nonché il su
 
 Per altre informazioni, vedere [Verifying Code by Using Unit Tests ](/visualstudio/test/unit-test-your-code) (Verifica del codice tramite unit test) e [Scrivere unit test per C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-## <a name="analyze"></a>Analisi
+## <a name="analyze"></a>Analizzare
 
 Visual Studio include strumenti statici di analisi del codice in grado di rilevare potenziali problemi nel codice sorgente. Questi strumenti includono un'implementazione degli strumenti di controllo delle regole [Linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Per altre informazioni, vedere [Code analysis for C/C++ overview](/cpp/code-quality/code-analysis-for-c-cpp-overview) (Panoramica dell'analisi codice per C/C++).
 
@@ -123,7 +123,7 @@ Visual Studio include strumenti statici di analisi del codice in grado di rileva
 
 È possibile distribuire ai clienti sia le applicazioni desktop tradizionali che le applicazioni UWP tramite Microsoft Store. La distribuzione di CRT viene gestita automaticamente in background. Per altre informazioni, vedere [Pubblicare app e giochi per Windows](/windows/uwp/publish/).
 
-È inoltre possibile distribuire un desktop nativo di C, in un altro computer. Per altre informazioni, vedere [Distribuzione di applicazioni desktop](../windows/deploying-native-desktop-applications-visual-cpp.md).
+È anche possibile distribuire un desktop C++ nativo in un altro computer. Per altre informazioni, vedere [Distribuzione di applicazioni desktop](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
 Per altre informazioni sulla distribuzione di un programma C++/CLI, vedere [Guida alla distribuzione per gli sviluppatori](/dotnet/framework/deployment/deployment-guide-for-developers).
 

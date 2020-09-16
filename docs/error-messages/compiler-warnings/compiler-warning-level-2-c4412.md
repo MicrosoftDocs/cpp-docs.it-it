@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 79b4ac95fbac344ff86922b84870e01c6681ed69
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161789"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684993"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Avviso del compilatore (livello 2) C4412
 
-> '*Function*': la firma della funzione contiene il tipo '*Type*'; C++ gli oggetti non sono sicuri di passare tra codice puro e misto o nativo.
+> '*Function*': la firma della funzione contiene il tipo '*Type*'; Gli oggetti C++ non sono sicuri per passare tra codice puro e misto o nativo.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -23,7 +23,7 @@ L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e no
 
 Il compilatore ha rilevato una situazione potenzialmente non sicura che può causare un errore di runtime: è stata eseguita una chiamata da un modulo **/CLR: pure** a una funzione importata tramite dllimport e la firma della funzione contiene un tipo unsafe. Un tipo non è sicuro se contiene una funzione membro o un membro dati che è un tipo unsafe o un riferimento indiretto a un tipo unsafe.
 
-Questo non è sicuro a causa della differenza tra le convenzioni di chiamata predefinite tra il codice puro e il codice nativo (o nativo e gestito misto). Quando si importano (tramite `dllimport`) una funzione in un modulo **/CLR: pure** , assicurarsi che le dichiarazioni di ogni tipo nella firma siano identiche a quelle presenti nel modulo che esporta la funzione (con particolare attenzione alle differenze nelle convenzioni di chiamata implicite).
+Questo non è sicuro a causa della differenza tra le convenzioni di chiamata predefinite tra il codice puro e il codice nativo (o nativo e gestito misto). Quando si importa (tramite `dllimport` ) una funzione in un modulo **/CLR: pure** , assicurarsi che le dichiarazioni di ogni tipo nella firma siano identiche a quelle presenti nel modulo che esporta la funzione (con particolare attenzione alle differenze nelle convenzioni di chiamata implicite).
 
 Una funzione membro virtuale è particolarmente soggetta a risultati imprevisti.  Tuttavia, anche una funzione non virtuale deve essere testata per assicurarsi di ottenere i risultati corretti. Se si è certi di ottenere i risultati corretti, è possibile ignorare questo avviso.
 
@@ -31,7 +31,7 @@ C4412 è disattivato per impostazione predefinita. Per ulteriori informazioni, v
 
 Per risolvere il problema, rimuovere tutte le funzioni dal tipo.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C4412.
 
@@ -59,9 +59,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
-
-L'esempio seguente è un file di intestazione che dichiara due tipi. Il tipo di `Unsafe` non è sicuro perché contiene una funzione membro.
+L'esempio seguente è un file di intestazione che dichiara due tipi. Il `Unsafe` tipo non è sicuro perché contiene una funzione membro.
 
 ```cpp
 // C4412.h
@@ -79,8 +77,6 @@ struct Safe {
 };
 ```
 
-## <a name="example"></a>Esempio
-
 Questo esempio Esporta le funzioni con i tipi definiti nel file di intestazione.
 
 ```cpp
@@ -96,9 +92,7 @@ __declspec(dllexport) Unsafe * __cdecl func() { return new Unsafe; }
 __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```
 
-## <a name="example"></a>Esempio
-
-La convenzione di chiamata predefinita in una compilazione **/CLR: pure** è diversa da una compilazione nativa.  Quando si include C4412. h, per impostazione predefinita `Test` `__clrcall`. Se si compila ed esegue il programma (non si utilizza **/c**), il programma genererà un'eccezione.
+La convenzione di chiamata predefinita in una compilazione **/CLR: pure** è diversa da una compilazione nativa.  Quando C4412. h è incluso, il `Test` valore predefinito è `__clrcall` . Se si compila ed esegue il programma (non si utilizza **/c**), il programma genererà un'eccezione.
 
 L'esempio seguente genera l'C4412.
 

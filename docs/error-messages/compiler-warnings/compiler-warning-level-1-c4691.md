@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: 8065129e20b627eb387421455527f6aaec3fdc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a4d1de621983794acfae4de7707ba127df9a1b7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175376"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685567"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>Avviso del compilatore (livello 1) C4691
 
@@ -21,9 +21,9 @@ Al file di metadati che contiene la definizione di tipo originale non viene fatt
 
 Nel caso in cui si stia ricompilando il *file*, C4691 può essere ignorato o disattivato con pragma [warning](../../preprocessor/warning.md).  Ovvero, se il file che si sta compilando corrisponde al file in cui il compilatore prevede di trovare la definizione del tipo, è possibile ignorare C4691.
 
-Tuttavia, può verificarsi un comportamento imprevisto se il compilatore utilizza una definizione non appartenente allo stesso assembly a cui si fa riferimento nei metadati; I tipi CLR sono digitati non solo dal nome del tipo, ma anche dall'assembly.  Ovvero un tipo Z dall'assembly z. dll è diverso da un tipo Z dall'assembly y. dll.
+Tuttavia, può verificarsi un comportamento imprevisto se il compilatore utilizza una definizione non appartenente allo stesso assembly a cui si fa riferimento nei metadati; I tipi CLR sono digitati non solo dal nome del tipo, ma anche dall'assembly.  Ovvero un tipo Z dall'assembly z.dll è diverso da un tipo Z dall'assembly y.dll.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Questo esempio contiene la definizione di tipo originale.
 
@@ -33,9 +33,7 @@ Questo esempio contiene la definizione di tipo originale.
 public ref class Original_Type {};
 ```
 
-## <a name="example"></a>Esempio
-
-Questo esempio fa riferimento a C4691_a. dll e dichiara un campo di tipo Original_Type.
+Questo esempio fa riferimento a C4691_a.dll e dichiara un campo di tipo Original_Type.
 
 ```cpp
 // C4691_b.cpp
@@ -47,9 +45,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Esempio
-
-L'esempio seguente genera l'C4691.  Si noti che questo esempio contiene una definizione per Original_Type e non fa riferimento a C4691a. dll.
+L'esempio seguente genera l'C4691.  Si noti che questo esempio contiene una definizione per Original_Type e non fa riferimento a C4691a.dll.
 
 Per risolverlo, fare riferimento al file di metadati che contiene la definizione di tipo originale e rimuovere la dichiarazione e la definizione locali.
 

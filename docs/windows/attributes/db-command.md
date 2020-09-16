@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831372"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684586"
 ---
 # <a name="db_command"></a>db_command
 
@@ -123,7 +123,7 @@ Se *bulk_fetch* è minore di 1, `SetRows` restituirà zero.
 
 Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Questo esempio definisce un comando che consente di selezionare i nomi e i cognomi da una tabella in cui la colonna di stato corrisponde a "CA". **db_command** crea e legge un set di righe in cui è possibile chiamare funzioni generate dalla procedura guidata, ad esempio [OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), nonché funzioni membro `CRowset` come [MoveNext](../../data/oledb/crowset-movenext.md).
 
@@ -163,8 +163,6 @@ struct CAuthors {
 };
 ```
 
-## <a name="example"></a>Esempio
-
 ```cpp
 // db_command.cpp
 // compile with: /c
@@ -192,8 +190,6 @@ int main(int argc, _TCHAR* argv[]) {
    CoUninitialize();
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Questo esempio usa `db_source` in una classe di origine dati `CMySource`e `db_command` nelle classi di comando `CCommand1` e `CCommand2`.
 
@@ -242,8 +238,8 @@ int main() {
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , membro, metodo, locale|
 |**Ripetibile**|No|
-|**Attributi richiesti**|Nessuno|
-|**Attributi non validi**|Nessuno|
+|**Attributi richiesti**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

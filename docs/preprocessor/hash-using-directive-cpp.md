@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0da255957e92a570750da2687bf1444df2e6ab13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219430"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684261"
 ---
 # <a name="using-directive-ccli"></a>direttiva #using (C++/CLI)
 
@@ -30,7 +30,7 @@ Importa i metadati in un programma compilato con [/CLR](../build/reference/clr-c
 ### <a name="parameters"></a>Parametri
 
 *file*\
-Un file MSIL (Microsoft Intermediate Language) *`.dll`* ,, *`.exe`* *`.netmodule`* o *`.obj`* . ad esempio:
+Un file MSIL (Microsoft Intermediate Language) *`.dll`* ,, *`.exe`* *`.netmodule`* o *`.obj`* . Ad esempio,
 
 `#using <MyComponent.dll>`
 
@@ -72,7 +72,7 @@ Il compilatore cerca i riferimenti lungo il percorso seguente:
 
 - Directory nella variabile di ambiente LIBPATH.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 È possibile compilare un assembly che fa riferimento a un secondo assembly che a sua volta fa riferimento a un terzo assembly. È necessario fare riferimento in modo esplicito al terzo assembly dal primo se si usa in modo esplicito uno dei relativi tipi.
 
@@ -81,8 +81,6 @@ Il compilatore cerca i riferimenti lungo il percorso seguente:
 // compile with: /clr /LD
 public ref class A {};
 ```
-
-## <a name="example"></a>Esempio
 
 ```cpp
 // using_assembly_B.cpp
@@ -94,8 +92,6 @@ public:
    void Test() {}
 };
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente, il compilatore non segnala un errore relativo al riferimento *using_assembly_A.dll*, perché il programma non usa alcuno dei tipi definiti in *using_assembly_A. cpp*.
 

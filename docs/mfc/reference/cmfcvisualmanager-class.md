@@ -344,18 +344,18 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: bf6c663b6c841f4bc06255845d924cab58d87f1f
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752841"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683910"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 
 Fornisce supporto per modificare l'aspetto dell'applicazione a un livello globale. La classe `CMFCVisualManager` funziona insieme a una classe che fornisce le istruzioni per disegnare i controlli GUI dell'applicazione utilizzando uno stile coerente. Queste altre classi sono definite come gestori visualizzazione ed ereditano da `CMFCBaseVisualManager`.
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella\\MFC\\atlmfc\\src di VC** per l'installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella \\ \\ \\ MFC atlmfc src di VC** per l'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -367,13 +367,13 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|Costruttore predefinito.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCVisualManager:: AdjustFrames](#adjustframes)||
 |[CMFCVisualManager:: AdjustToolbars](#adjusttoolbars)||
@@ -452,7 +452,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager:: OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Chiamata eseguita dal framework quando disegna la barra di divisione per una barra di Outlook. La barra di divisione è una barra orizzontale utilizzata per raggruppare i controlli.|
 |[CMFCVisualManager:: OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Chiamata eseguita dal framework quando disegna il bordo di un pulsante della pagina di Outlook. I pulsanti della pagina di Outlook vengono visualizzati se il riquadro della barra di Outlook contiene più pulsanti di quelli che è possibile visualizzare.|
 |[CMFCVisualManager:: OnDrawPaneBorder](#ondrawpaneborder)|Chiamata eseguita dal framework quando disegna il bordo di una [classe CPane](../../mfc/reference/cpane-class.md).|
-|[CMFCVisualManager:: OnDrawPaneCaption](#ondrawpanecaption)|Chiamato dal framework quando disegna la didascalia per un `CPane`.|
+|[CMFCVisualManager:: OnDrawPaneCaption](#ondrawpanecaption)|Chiamato dal framework quando disegna la didascalia per un `CPane` .|
 |[CMFCVisualManager:: OnDrawPaneDivider](#ondrawpanedivider)||
 |[CMFCVisualManager:: OnDrawPopupWindowBorder](#ondrawpopupwindowborder)||
 |[CMFCVisualManager:: OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)||
@@ -547,15 +547,15 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ## <a name="remarks"></a>Osservazioni
 
-Poiché la `CMFCVisualManager` classe controlla l'interfaccia utente grafica dell'applicazione, ogni applicazione può avere un'istanza di `CMFCVisualManager`o un'istanza di una classe derivata da `CMFCVisualManager`. L'applicazione può anche funzionare senza un `CMFCVisualManager`. Usare il metodo `GetInstance` statico per ottenere un puntatore all'oggetto derivato `CMFCVisualManager`da corrente.
+Poiché la `CMFCVisualManager` classe controlla l'interfaccia utente grafica dell'applicazione, ogni applicazione può avere un'istanza di `CMFCVisualManager` o un'istanza di una classe derivata da `CMFCVisualManager` . L'applicazione può anche funzionare senza un `CMFCVisualManager` . Usare il metodo statico `GetInstance` per ottenere un puntatore all' `CMFCVisualManager` oggetto derivato da corrente.
 
-Per modificare l'aspetto dell'applicazione, è necessario utilizzare altre classi che forniscono metodi per disegnare tutti gli elementi visivi dell'applicazione. Alcuni esempi di queste classi sono la classe [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md), la [classe CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)e la [classe CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md). Quando si desidera modificare l'aspetto dell'applicazione, passare uno di questi gestori di oggetti visivi al metodo `SetDefaultManager`. Per un esempio in cui viene illustrato il modo in cui l'applicazione può simulare l'aspetto di Microsoft Office 2003, vedere la [classe CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md).
+Per modificare l'aspetto dell'applicazione, è necessario utilizzare altre classi che forniscono metodi per disegnare tutti gli elementi visivi dell'applicazione. Alcuni esempi di queste classi sono la classe [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md), la [classe CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)e la [classe CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md). Quando si desidera modificare l'aspetto dell'applicazione, passare uno di questi gestori di oggetti visivi al metodo `SetDefaultManager` . Per un esempio in cui viene illustrato il modo in cui l'applicazione può simulare l'aspetto di Microsoft Office 2003, vedere la [classe CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md).
 
 Tutti i metodi di disegno sono virtuali. Questo consente di creare uno stile di visualizzazione personalizzato per l'interfaccia utente grafica dell'applicazione. Se si desidera creare uno stile di visualizzazione personalizzato, derivare una classe da una delle classi di Visual Manager ed eseguire l'override dei metodi di disegno che si desidera modificare.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
-In questo esempio viene illustrato come creare un'istanza degli oggetti `CMFCVisualManager` standard e personalizzati.
+In questo esempio viene illustrato come creare un'istanza degli oggetti standard e personalizzati `CMFCVisualManager` .
 
 ```cpp
 void CMFCSkinsApp::SetSkin (int iIndex)
@@ -585,8 +585,6 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 }
 ```
 
-## <a name="example"></a>Esempio
-
 Nell'esempio seguente viene illustrato come recuperare i valori predefiniti di un `CMFCVisualManager` oggetto. Questo frammento di codice fa parte dell' [esempio riquadro attività](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
@@ -603,7 +601,7 @@ Nell'esempio seguente viene illustrato come recuperare i valori predefiniti di u
 
 **Intestazione:** afxvisualmanager. h
 
-## <a name="cmfcvisualmanageradjustframes"></a><a name="adjustframes"></a>CMFCVisualManager:: AdjustFrames
+## <a name="cmfcvisualmanageradjustframes"></a><a name="adjustframes"></a> CMFCVisualManager:: AdjustFrames
 
 ```
 static void __stdcall AdjustFrames();
@@ -611,7 +609,7 @@ static void __stdcall AdjustFrames();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageradjusttoolbars"></a><a name="adjusttoolbars"></a>CMFCVisualManager:: AdjustToolbars
+## <a name="cmfcvisualmanageradjusttoolbars"></a><a name="adjusttoolbars"></a> CMFCVisualManager:: AdjustToolbars
 
 ```
 static void __stdcall AdjustToolbars();
@@ -619,7 +617,7 @@ static void __stdcall AdjustToolbars();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageralwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFCVisualManager:: AlwaysHighlight3DTabs
+## <a name="cmfcvisualmanageralwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a> CMFCVisualManager:: AlwaysHighlight3DTabs
 
 Il Framework chiama questo metodo per determinare se le schede 3D devono essere sempre evidenziate nell'applicazione.
 
@@ -629,13 +627,13 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`TRUE`Se è necessario evidenziare le schede 3D.
+`TRUE` Se è necessario evidenziare le schede 3D.
 
 ### <a name="remarks"></a>Osservazioni
 
 Eseguire l'override di questa funzione in una gestione visiva derivata e restituire TRUE se le schede 3D devono essere sempre evidenziate. L'implementazione predefinita di questo metodo restituisce FALSE.
 
-## <a name="cmfcvisualmanagercmfcvisualmanager"></a><a name="cmfcvisualmanager"></a>CMFCVisualManager:: CMFCVisualManager
+## <a name="cmfcvisualmanagercmfcvisualmanager"></a><a name="cmfcvisualmanager"></a> CMFCVisualManager:: CMFCVisualManager
 
 ```
 CMFCVisualManager(BOOL bTemporary = FALSE);
@@ -647,7 +645,7 @@ in *bTemporary*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerdestroyinstance"></a><a name="destroyinstance"></a>CMFCVisualManager::D estroyInstance
+## <a name="cmfcvisualmanagerdestroyinstance"></a><a name="destroyinstance"></a> CMFCVisualManager::D estroyInstance
 
 ```
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
@@ -659,7 +657,7 @@ in *bAutoDestroyOnly*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFCVisualManager::D oDrawHeaderSortArrow
+## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a> CMFCVisualManager::D oDrawHeaderSortArrow
 
 ```cpp
 void DoDrawHeaderSortArrow(
@@ -678,7 +676,7 @@ in *bDlgCtrl*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a>CMFCVisualManager::D rawComboBorderWinXP
+## <a name="cmfcvisualmanagerdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a> CMFCVisualManager::D rawComboBorderWinXP
 
 ```
 virtual BOOL DrawComboBorderWinXP(CDC*,
@@ -690,7 +688,7 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;CDC*<br/>
+in *&#42;CDC *<br/>
 in *CRect*<br/>
 in *Bool*<br/>
 
@@ -698,7 +696,7 @@ in *Bool*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a>CMFCVisualManager::D rawComboDropButtonWinXP
+## <a name="cmfcvisualmanagerdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a> CMFCVisualManager::D rawComboDropButtonWinXP
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(CDC*,
@@ -710,7 +708,7 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;CDC*<br/>
+in *&#42;CDC *<br/>
 in *CRect*<br/>
 in *Bool*<br/>
 
@@ -718,7 +716,7 @@ in *Bool*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a>CMFCVisualManager::D rawPushButtonWinXP
+## <a name="cmfcvisualmanagerdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a> CMFCVisualManager::D rawPushButtonWinXP
 
 ```
 virtual BOOL DrawPushButtonWinXP(CDC*,
@@ -729,16 +727,16 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;CDC*<br/>
+in *&#42;CDC *<br/>
 in *CRect*<br/>
-in *&#42;CMFCButton*<br/>
+in *&#42;CMFCButton *<br/>
 in *Uint*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerdrawtextonglass"></a><a name="drawtextonglass"></a>CMFCVisualManager::D rawTextOnGlass
+## <a name="cmfcvisualmanagerdrawtextonglass"></a><a name="drawtextonglass"></a> CMFCVisualManager::D rawTextOnGlass
 
 ```
 virtual BOOL DrawTextOnGlass(
@@ -763,7 +761,7 @@ in *clrText*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFCVisualManager:: EnableToolbarButtonFill
+## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a> CMFCVisualManager:: EnableToolbarButtonFill
 
 ```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
@@ -775,7 +773,7 @@ in *bEnable*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetautohidebuttontextcolor"></a><a name="getautohidebuttontextcolor"></a>CMFCVisualManager:: GetAutoHideButtonTextColor
+## <a name="cmfcvisualmanagergetautohidebuttontextcolor"></a><a name="getautohidebuttontextcolor"></a> CMFCVisualManager:: GetAutoHideButtonTextColor
 
 Il Framework chiama questo metodo per recuperare il colore del testo di un pulsante Nascondi automaticamente.
 
@@ -796,7 +794,7 @@ Parametro [COLORREF](/windows/win32/gdi/colorref) che specifica il colore del te
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare il colore del testo di un pulsante Nascondi automaticamente nell'applicazione. A tale scopo, restituire il colore che si desidera venga utilizzato dall'applicazione come colore del testo.
 
-## <a name="cmfcvisualmanagergetbuttonextraborder"></a><a name="getbuttonextraborder"></a>CMFCVisualManager:: GetButtonExtraBorder
+## <a name="cmfcvisualmanagergetbuttonextraborder"></a><a name="getbuttonextraborder"></a> CMFCVisualManager:: GetButtonExtraBorder
 
 Il Framework chiama questo metodo quando disegna un pulsante della barra degli strumenti.
 
@@ -812,7 +810,7 @@ Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) che contiene le d
 
 Alcune interfacce devono estendere i bordi dei pulsanti della barra degli strumenti. Eseguire l'override di questo metodo in un gestore di oggetti visivi personalizzato per estendere i bordi dei pulsanti della barra degli strumenti nell'applicazione. L'implementazione predefinita di questo metodo restituisce una dimensione vuota.
 
-## <a name="cmfcvisualmanagergetcaptionbartextcolor"></a><a name="getcaptionbartextcolor"></a>CMFCVisualManager:: GetCaptionBarTextColor
+## <a name="cmfcvisualmanagergetcaptionbartextcolor"></a><a name="getcaptionbartextcolor"></a> CMFCVisualManager:: GetCaptionBarTextColor
 
 Il Framework chiama questo metodo per recuperare il colore del testo nella barra del titolo.
 
@@ -833,7 +831,7 @@ Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il colore del testo
 
 Eseguire l'override di questo metodo nella classe derivata per personalizzare il colore del testo per una barra del titolo. Nel metodo sottoposto a override, restituire il colore desiderato.
 
-## <a name="cmfcvisualmanagergetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a>CMFCVisualManager:: GetCaptionButtonExtraBorder
+## <a name="cmfcvisualmanagergetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a> CMFCVisualManager:: GetCaptionButtonExtraBorder
 
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
@@ -843,7 +841,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager:: GetDockingPaneCaptionExtraHeight
+## <a name="cmfcvisualmanagergetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a> CMFCVisualManager:: GetDockingPaneCaptionExtraHeight
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -853,7 +851,7 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a>CMFCVisualManager:: GetDockingTabsBordersSize
+## <a name="cmfcvisualmanagergetdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a> CMFCVisualManager:: GetDockingTabsBordersSize
 
 Il Framework chiama questo metodo quando disegna un riquadro ancorato e a schede.
 
@@ -871,7 +869,7 @@ Un riquadro ancorato viene a schede quando l'utente ancora più riquadri nello s
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi personalizzato per modificare le dimensioni del bordo delle barre di controllo a schede ancorate. L'implementazione predefinita restituisce -1.
 
-## <a name="cmfcvisualmanagergethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager:: GetHighlightedMenuItemTextColor
+## <a name="cmfcvisualmanagergethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a> CMFCVisualManager:: GetHighlightedMenuItemTextColor
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -885,7 +883,7 @@ in *p*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetinstance"></a><a name="getinstance"></a>CMFCVisualManager:: GetInstance
+## <a name="cmfcvisualmanagergetinstance"></a><a name="getinstance"></a> CMFCVisualManager:: GetInstance
 
 Restituisce un puntatore all'oggetto della [classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) corrente per l'applicazione.
 
@@ -899,9 +897,9 @@ Puntatore a un oggetto `CMFCVisualManager`.
 
 ### <a name="remarks"></a>Osservazioni
 
-A un'applicazione può essere associato `CMFCVisualManager` un solo oggetto. Sono inclusi tutti gli `CMFCVisualManager` oggetti derivati dalla classe. Questo metodo restituisce un puntatore all'oggetto associato `CMFCVisualManager` . Se all'applicazione non è associato `CMFCVisualManager` alcun oggetto, questo metodo ne creerà uno e lo associerà all'applicazione.
+A un'applicazione può essere associato un solo `CMFCVisualManager` oggetto. Sono inclusi tutti gli oggetti derivati dalla `CMFCVisualManager` classe. Questo metodo restituisce un puntatore all'oggetto associato `CMFCVisualManager` . Se all'applicazione non è associato alcun `CMFCVisualManager` oggetto, questo metodo ne creerà uno e lo associerà all'applicazione.
 
-## <a name="cmfcvisualmanagergetmditabsborderssize"></a><a name="getmditabsborderssize"></a>CMFCVisualManager:: GetMDITabsBordersSize
+## <a name="cmfcvisualmanagergetmditabsborderssize"></a><a name="getmditabsborderssize"></a> CMFCVisualManager:: GetMDITabsBordersSize
 
 Il Framework chiama questo metodo per determinare la dimensione del bordo di una finestra di MDITabs prima di disegnare la finestra.
 
@@ -917,7 +915,7 @@ Dimensioni del bordo della finestra MDITabs.
 
 Eseguire l'override di questa funzione in una classe derivata per personalizzare le dimensioni del bordo della finestra MDITabs.
 
-## <a name="cmfcvisualmanagergetmenuimagemargin"></a><a name="getmenuimagemargin"></a>CMFCVisualManager:: GetMenuImageMargin
+## <a name="cmfcvisualmanagergetmenuimagemargin"></a><a name="getmenuimagemargin"></a> CMFCVisualManager:: GetMenuImageMargin
 
 ```
 virtual int GetMenuImageMargin() const;
@@ -927,7 +925,7 @@ virtual int GetMenuImageMargin() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetmenuitemtextcolor"></a><a name="getmenuitemtextcolor"></a>CMFCVisualManager:: GetMenuItemTextColor
+## <a name="cmfcvisualmanagergetmenuitemtextcolor"></a><a name="getmenuitemtextcolor"></a> CMFCVisualManager:: GetMenuItemTextColor
 
 ```
 virtual COLORREF GetMenuItemTextColor(
@@ -946,7 +944,7 @@ in *bDisabled*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetmenushadowdepth"></a><a name="getmenushadowdepth"></a>CMFCVisualManager:: GetMenuShadowDepth
+## <a name="cmfcvisualmanagergetmenushadowdepth"></a><a name="getmenushadowdepth"></a> CMFCVisualManager:: GetMenuShadowDepth
 
 Recupera la larghezza e l'altezza dell'ombreggiatura del menu.
 
@@ -962,7 +960,7 @@ Larghezza e altezza dell'ombreggiatura del menu in pixel.
 
 La larghezza e l'altezza dell'ombreggiatura del menu sono equivalenti. Il valore predefinito è 7 pixel.
 
-## <a name="cmfcvisualmanagergetncbtnsize"></a><a name="getncbtnsize"></a>CMFCVisualManager:: GetNcBtnSize
+## <a name="cmfcvisualmanagergetncbtnsize"></a><a name="getncbtnsize"></a> CMFCVisualManager:: GetNcBtnSize
 
 Chiamata eseguita dal framework quando deve recuperare le dimensioni dei pulsanti di sistema.
 
@@ -983,7 +981,7 @@ Parametro [CSize](../../atl-mfc-shared/reference/csize-class.md) che indica le d
 
 I pulsanti di sistema sono i pulsanti nella didascalia della finestra cornice che eseguono il mapping ai comandi **Chiudi**, **Riduci a icona**, **Ingrandisci**e **Ripristina**. Le dimensioni di questi pulsanti dipendono dal gestore di visualizzazione corrente. Eseguire l'override di questo metodo se si desidera personalizzare le dimensioni dei pulsanti di sistema nell'applicazione.
 
-## <a name="cmfcvisualmanagergetpopupmenubordersize"></a><a name="getpopupmenubordersize"></a>CMFCVisualManager:: GetPopupMenuBorderSize
+## <a name="cmfcvisualmanagergetpopupmenubordersize"></a><a name="getpopupmenubordersize"></a> CMFCVisualManager:: GetPopupMenuBorderSize
 
 Il Framework chiama questo metodo per ottenere la dimensione del bordo dei menu popup.
 
@@ -999,7 +997,7 @@ Integer che specifica le dimensioni del bordo dei menu popup.
 
 Eseguire l'override di questo metodo per personalizzare le dimensioni del bordo dei menu popup nell'applicazione.
 
-## <a name="cmfcvisualmanagergetpopupmenugap"></a><a name="getpopupmenugap"></a>CMFCVisualManager:: GetPopupMenuGap
+## <a name="cmfcvisualmanagergetpopupmenugap"></a><a name="getpopupmenugap"></a> CMFCVisualManager:: GetPopupMenuGap
 
 ```
 virtual int GetPopupMenuGap() const;
@@ -1009,7 +1007,7 @@ virtual int GetPopupMenuGap() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a>CMFCVisualManager:: GetPropertyGridGroupColor
+## <a name="cmfcvisualmanagergetpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a> CMFCVisualManager:: GetPropertyGridGroupColor
 
 Il Framework chiama questo metodo per ottenere il colore di sfondo di un elenco di proprietà.
 
@@ -1030,7 +1028,7 @@ Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il colore di sfondo
 
 Eseguire l'override di questa funzione per personalizzare il colore di sfondo di un elenco di proprietà nell'applicazione.
 
-## <a name="cmfcvisualmanagergetpropertygridgrouptextcolor"></a><a name="getpropertygridgrouptextcolor"></a>CMFCVisualManager:: GetPropertyGridGroupTextColor
+## <a name="cmfcvisualmanagergetpropertygridgrouptextcolor"></a><a name="getpropertygridgrouptextcolor"></a> CMFCVisualManager:: GetPropertyGridGroupTextColor
 
 Il Framework chiama questo metodo per recuperare il colore del testo di un elenco di proprietà.
 
@@ -1051,7 +1049,7 @@ Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il colore del testo
 
 Eseguire l'override di questa funzione per personalizzare il colore del testo di un elenco di proprietà nell'applicazione.
 
-## <a name="cmfcvisualmanagergetribbonhyperlinktextcolor"></a><a name="getribbonhyperlinktextcolor"></a>CMFCVisualManager:: GetRibbonHyperlinkTextColor
+## <a name="cmfcvisualmanagergetribbonhyperlinktextcolor"></a><a name="getribbonhyperlinktextcolor"></a> CMFCVisualManager:: GetRibbonHyperlinkTextColor
 
 ```
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
@@ -1065,7 +1063,7 @@ in *pHyperLink*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetribbonpopupbordersize"></a><a name="getribbonpopupbordersize"></a>CMFCVisualManager:: GetRibbonPopupBorderSize
+## <a name="cmfcvisualmanagergetribbonpopupbordersize"></a><a name="getribbonpopupbordersize"></a> CMFCVisualManager:: GetRibbonPopupBorderSize
 
 ```
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
@@ -1073,13 +1071,13 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;CMFCRibbonPanelMenu*<br/>
+in *&#42;CMFCRibbonPanelMenu *<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetribbonquickaccesstoolbarchevronoffset"></a><a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager:: GetRibbonQuickAccessToolBarChevronOffset
+## <a name="cmfcvisualmanagergetribbonquickaccesstoolbarchevronoffset"></a><a name="getribbonquickaccesstoolbarchevronoffset"></a> CMFCVisualManager:: GetRibbonQuickAccessToolBarChevronOffset
 
 ```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
@@ -1089,7 +1087,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetribbonquickaccesstoolbarrightmargin"></a><a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager:: GetRibbonQuickAccessToolBarRightMargin
+## <a name="cmfcvisualmanagergetribbonquickaccesstoolbarrightmargin"></a><a name="getribbonquickaccesstoolbarrightmargin"></a> CMFCVisualManager:: GetRibbonQuickAccessToolBarRightMargin
 
 ```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
@@ -1099,7 +1097,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetribbonquickaccesstoolbartextcolor"></a><a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager:: GetRibbonQuickAccessToolBarTextColor
+## <a name="cmfcvisualmanagergetribbonquickaccesstoolbartextcolor"></a><a name="getribbonquickaccesstoolbartextcolor"></a> CMFCVisualManager:: GetRibbonQuickAccessToolBarTextColor
 
 ```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -1113,7 +1111,7 @@ in *bDisabled*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetribbonslidercolors"></a><a name="getribbonslidercolors"></a>CMFCVisualManager:: GetRibbonSliderColors
+## <a name="cmfcvisualmanagergetribbonslidercolors"></a><a name="getribbonslidercolors"></a> CMFCVisualManager:: GetRibbonSliderColors
 
 ```
 virtual void GetRibbonSliderColors(
@@ -1136,7 +1134,7 @@ in *clrFill*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetribbonstatusbartextcolor"></a><a name="getribbonstatusbartextcolor"></a>CMFCVisualManager:: GetRibbonStatusBarTextColor
+## <a name="cmfcvisualmanagergetribbonstatusbartextcolor"></a><a name="getribbonstatusbartextcolor"></a> CMFCVisualManager:: GetRibbonStatusBarTextColor
 
 ```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -1150,7 +1148,7 @@ in *pStatusBar*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetshowallmenuitemsheight"></a><a name="getshowallmenuitemsheight"></a>CMFCVisualManager:: GetShowAllMenuItemsHeight
+## <a name="cmfcvisualmanagergetshowallmenuitemsheight"></a><a name="getshowallmenuitemsheight"></a> CMFCVisualManager:: GetShowAllMenuItemsHeight
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -1167,7 +1165,7 @@ in *sizeDefault*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetsmartdockingbaseguidecolors"></a><a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager:: GetSmartDockingBaseGuideColors
+## <a name="cmfcvisualmanagergetsmartdockingbaseguidecolors"></a><a name="getsmartdockingbaseguidecolors"></a> CMFCVisualManager:: GetSmartDockingBaseGuideColors
 
 ```
 virtual void GetSmartDockingBaseGuideColors(
@@ -1182,7 +1180,7 @@ in *clrBaseGroupBorder*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetsmartdockinghighlighttonecolor"></a><a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager:: GetSmartDockingHighlightToneColor
+## <a name="cmfcvisualmanagergetsmartdockinghighlighttonecolor"></a><a name="getsmartdockinghighlighttonecolor"></a> CMFCVisualManager:: GetSmartDockingHighlightToneColor
 
 ```
 virtual COLORREF GetSmartDockingHighlightToneColor();
@@ -1192,7 +1190,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a>CMFCVisualManager:: GetSmartDockingTheme
+## <a name="cmfcvisualmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a> CMFCVisualManager:: GetSmartDockingTheme
 
 Restituisce un tema usato per visualizzare i marcatori di ancoraggio intelligente.
 
@@ -1206,7 +1204,7 @@ Restituisce uno dei seguenti valori enumerati: AFX_SDT_DEFAULT, AFX_SDT_VS2005, 
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergetstatusbarpanetextcolor"></a><a name="getstatusbarpanetextcolor"></a>CMFCVisualManager:: GetStatusBarPaneTextColor
+## <a name="cmfcvisualmanagergetstatusbarpanetextcolor"></a><a name="getstatusbarpanetextcolor"></a> CMFCVisualManager:: GetStatusBarPaneTextColor
 
 ```
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -1223,7 +1221,7 @@ in *pPane*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettabframecolors"></a><a name="gettabframecolors"></a>CMFCVisualManager:: GetTabFrameColors
+## <a name="cmfcvisualmanagergettabframecolors"></a><a name="gettabframecolors"></a> CMFCVisualManager:: GetTabFrameColors
 
 Il Framework chiama questa funzione quando deve recuperare il set di colori per il disegno di una finestra di tabulazione.
 
@@ -1273,7 +1271,7 @@ out Puntatore a un riferimento per un pennello. Questo metodo archivia il pennel
 
 Eseguire l'override di questa funzione in una classe derivata se si desidera personalizzare il set di colori utilizzato dal framework quando viene disegnata una finestra di tabulazione.
 
-## <a name="cmfcvisualmanagergettabhorzmargin"></a><a name="gettabhorzmargin"></a>CMFCVisualManager:: GetTabHorzMargin
+## <a name="cmfcvisualmanagergettabhorzmargin"></a><a name="gettabhorzmargin"></a> CMFCVisualManager:: GetTabHorzMargin
 
 ```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
@@ -1281,13 +1279,13 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;CMFCBaseTabCtrl*<br/>
+in *&#42;CMFCBaseTabCtrl *<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettabtextcolor"></a><a name="gettabtextcolor"></a>CMFCVisualManager:: GetTabTextColor
+## <a name="cmfcvisualmanagergettabtextcolor"></a><a name="gettabtextcolor"></a> CMFCVisualManager:: GetTabTextColor
 
 ```
 virtual COLORREF GetTabTextColor(
@@ -1298,7 +1296,7 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;CMFCBaseTabCtrl*<br/>
+in *&#42;CMFCBaseTabCtrl *<br/>
 [in] *int*<br/>
 in *Bool*<br/>
 
@@ -1306,7 +1304,7 @@ in *Bool*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspanegroupcaptionheight"></a><a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager:: GetTasksPaneGroupCaptionHeight
+## <a name="cmfcvisualmanagergettaskspanegroupcaptionheight"></a><a name="gettaskspanegroupcaptionheight"></a> CMFCVisualManager:: GetTasksPaneGroupCaptionHeight
 
 ```
 int GetTasksPaneGroupCaptionHeight() const;
@@ -1316,7 +1314,7 @@ int GetTasksPaneGroupCaptionHeight() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspanegroupcaptionhorzoffset"></a><a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager:: GetTasksPaneGroupCaptionHorzOffset
+## <a name="cmfcvisualmanagergettaskspanegroupcaptionhorzoffset"></a><a name="gettaskspanegroupcaptionhorzoffset"></a> CMFCVisualManager:: GetTasksPaneGroupCaptionHorzOffset
 
 ```
 int GetTasksPaneGroupCaptionHorzOffset() const;
@@ -1326,7 +1324,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspanegroupcaptionvertoffset"></a><a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager:: GetTasksPaneGroupCaptionVertOffset
+## <a name="cmfcvisualmanagergettaskspanegroupcaptionvertoffset"></a><a name="gettaskspanegroupcaptionvertoffset"></a> CMFCVisualManager:: GetTasksPaneGroupCaptionVertOffset
 
 ```
 int GetTasksPaneGroupCaptionVertOffset() const;
@@ -1336,7 +1334,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspanegroupvertoffset"></a><a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager:: GetTasksPaneGroupVertOffset
+## <a name="cmfcvisualmanagergettaskspanegroupvertoffset"></a><a name="gettaskspanegroupvertoffset"></a> CMFCVisualManager:: GetTasksPaneGroupVertOffset
 
 ```
 int GetTasksPaneGroupVertOffset() const;
@@ -1346,7 +1344,7 @@ int GetTasksPaneGroupVertOffset() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspanehorzmargin"></a><a name="gettaskspanehorzmargin"></a>CMFCVisualManager:: GetTasksPaneHorzMargin
+## <a name="cmfcvisualmanagergettaskspanehorzmargin"></a><a name="gettaskspanehorzmargin"></a> CMFCVisualManager:: GetTasksPaneHorzMargin
 
 ```
 int GetTasksPaneHorzMargin() const;
@@ -1356,7 +1354,7 @@ int GetTasksPaneHorzMargin() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspaneiconhorzoffset"></a><a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager:: GetTasksPaneIconHorzOffset
+## <a name="cmfcvisualmanagergettaskspaneiconhorzoffset"></a><a name="gettaskspaneiconhorzoffset"></a> CMFCVisualManager:: GetTasksPaneIconHorzOffset
 
 ```
 int GetTasksPaneIconHorzOffset() const;
@@ -1366,7 +1364,7 @@ int GetTasksPaneIconHorzOffset() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspaneiconvertoffset"></a><a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager:: GetTasksPaneIconVertOffset
+## <a name="cmfcvisualmanagergettaskspaneiconvertoffset"></a><a name="gettaskspaneiconvertoffset"></a> CMFCVisualManager:: GetTasksPaneIconVertOffset
 
 ```
 int GetTasksPaneIconVertOffset() const;
@@ -1376,7 +1374,7 @@ int GetTasksPaneIconVertOffset() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspanetaskhorzoffset"></a><a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager:: GetTasksPaneTaskHorzOffset
+## <a name="cmfcvisualmanagergettaskspanetaskhorzoffset"></a><a name="gettaskspanetaskhorzoffset"></a> CMFCVisualManager:: GetTasksPaneTaskHorzOffset
 
 ```
 int GetTasksPaneTaskHorzOffset() const;
@@ -1386,7 +1384,7 @@ int GetTasksPaneTaskHorzOffset() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettaskspanevertmargin"></a><a name="gettaskspanevertmargin"></a>CMFCVisualManager:: GetTasksPaneVertMargin
+## <a name="cmfcvisualmanagergettaskspanevertmargin"></a><a name="gettaskspanevertmargin"></a> CMFCVisualManager:: GetTasksPaneVertMargin
 
 ```
 int GetTasksPaneVertMargin() const;
@@ -1396,7 +1394,7 @@ int GetTasksPaneVertMargin() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFCVisualManager:: GetToolbarButtonTextColor
+## <a name="cmfcvisualmanagergettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a> CMFCVisualManager:: GetToolbarButtonTextColor
 
 Il Framework chiama questo metodo per determinare il colore del testo di un pulsante della barra degli strumenti.
 
@@ -1420,11 +1418,11 @@ Colore del testo di *p* quando presenta lo stato indicato dallo *stato*.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il colore del testo di un oggetto [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) dipende dallo stato del pulsante. Gli stati possibili di un pulsante della barra `ButtonsIsRegular`degli `ButtonsIsPressed`strumenti sono `ButtonsIsHighlighted`, o.
+Il colore del testo di un oggetto [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) dipende dallo stato del pulsante. Gli stati possibili di un pulsante della barra degli strumenti sono `ButtonsIsRegular` , `ButtonsIsPressed` o `ButtonsIsHighlighted` .
 
 Eseguire l'override di questa funzione per personalizzare il colore del testo di un pulsante della barra degli strumenti nell'applicazione.
 
-## <a name="cmfcvisualmanagergettoolbarcustomizebuttonmargin"></a><a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager:: GetToolBarCustomizeButtonMargin
+## <a name="cmfcvisualmanagergettoolbarcustomizebuttonmargin"></a><a name="gettoolbarcustomizebuttonmargin"></a> CMFCVisualManager:: GetToolBarCustomizeButtonMargin
 
 ```
 virtual int GetToolBarCustomizeButtonMargin() const;
@@ -1434,7 +1432,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettoolbardisabledcolor"></a><a name="gettoolbardisabledcolor"></a>CMFCVisualManager:: GetToolbarDisabledColor
+## <a name="cmfcvisualmanagergettoolbardisabledcolor"></a><a name="gettoolbardisabledcolor"></a> CMFCVisualManager:: GetToolbarDisabledColor
 
 ```
 virtual COLORREF GetToolbarDisabledColor() const;
@@ -1444,7 +1442,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettoolbardisabledtextcolor"></a><a name="gettoolbardisabledtextcolor"></a>CMFCVisualManager:: GetToolbarDisabledTextColor
+## <a name="cmfcvisualmanagergettoolbardisabledtextcolor"></a><a name="gettoolbardisabledtextcolor"></a> CMFCVisualManager:: GetToolbarDisabledTextColor
 
 Il Framework chiama questa funzione per determinare il colore del testo dei pulsanti della barra degli strumenti non disponibili.
 
@@ -1460,7 +1458,7 @@ Il colore utilizzato dal Framework per il colore del testo dei pulsanti della ba
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi personalizzato per impostare il colore del testo dei pulsanti della barra degli strumenti non disponibili.
 
-## <a name="cmfcvisualmanagergettoolbarhighlightcolor"></a><a name="gettoolbarhighlightcolor"></a>CMFCVisualManager:: GetToolbarHighlightColor
+## <a name="cmfcvisualmanagergettoolbarhighlightcolor"></a><a name="gettoolbarhighlightcolor"></a> CMFCVisualManager:: GetToolbarHighlightColor
 
 ```
 virtual COLORREF GetToolbarHighlightColor();
@@ -1470,7 +1468,7 @@ virtual COLORREF GetToolbarHighlightColor();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagergettooltipinfo"></a><a name="gettooltipinfo"></a>CMFCVisualManager:: GetToolTipInfo
+## <a name="cmfcvisualmanagergettooltipinfo"></a><a name="gettooltipinfo"></a> CMFCVisualManager:: GetToolTipInfo
 
 ```
 virtual BOOL GetToolTipInfo(
@@ -1487,7 +1485,7 @@ in *nType*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerhasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a>CMFCVisualManager:: HasOverlappedAutoHideButtons
+## <a name="cmfcvisualmanagerhasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a> CMFCVisualManager:: HasOverlappedAutoHideButtons
 
 Restituisce un valore che indica se i pulsanti Nascondi automaticamente si sovrappongono nel gestore di visualizzazione corrente.
 
@@ -1499,7 +1497,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 TRUE se i pulsanti Nascondi automaticamente si sovrappongono; FALSE in caso contrario.
 
-## <a name="cmfcvisualmanagerisautodestroy"></a><a name="isautodestroy"></a>CMFCVisualManager:: IsAutoDestroy
+## <a name="cmfcvisualmanagerisautodestroy"></a><a name="isautodestroy"></a> CMFCVisualManager:: IsAutoDestroy
 
 ```
 BOOL IsAutoDestroy() const;
@@ -1509,7 +1507,7 @@ BOOL IsAutoDestroy() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager:: IsDefaultWinXPPopupButton
+## <a name="cmfcvisualmanagerisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a> CMFCVisualManager:: IsDefaultWinXPPopupButton
 
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
@@ -1517,13 +1515,13 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;CMFCDesktopAlertWndButton*<br/>
+in *&#42;CMFCDesktopAlertWndButton *<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerisdockingtabhasborder"></a><a name="isdockingtabhasborder"></a>CMFCVisualManager:: IsDockingTabHasBorder
+## <a name="cmfcvisualmanagerisdockingtabhasborder"></a><a name="isdockingtabhasborder"></a> CMFCVisualManager:: IsDockingTabHasBorder
 
 Restituisce un valore che indica se il gestore di visualizzazione corrente disegna bordi intorno ai riquadri ancorati e a schede.
 
@@ -1539,7 +1537,7 @@ TRUE se la gestione visiva Disegna bordi intorno ai riquadri ancorati e a schede
 
 I riquadri ancorati diventano a schede quando più riquadri sono ancorati alla stessa posizione.
 
-## <a name="cmfcvisualmanagerisembossdisabledimage"></a><a name="isembossdisabledimage"></a>CMFCVisualManager:: IsEmbossDisabledImage
+## <a name="cmfcvisualmanagerisembossdisabledimage"></a><a name="isembossdisabledimage"></a> CMFCVisualManager:: IsEmbossDisabledImage
 
 Specifica se il Framework imprime le immagini non disponibili.
 
@@ -1555,7 +1553,7 @@ Diverso da zero se il Framework imprime immagini che non sono disponibili; in ca
 
 Questo metodo viene chiamato da [CMFCToolBarImages::D RAW](../../mfc/reference/cmfctoolbarimages-class.md#draw) quando disegna un'immagine sulla barra degli strumenti che non è disponibile.
 
-## <a name="cmfcvisualmanagerisfadeinactiveimage"></a><a name="isfadeinactiveimage"></a>CMFCVisualManager:: IsFadeInactiveImage
+## <a name="cmfcvisualmanagerisfadeinactiveimage"></a><a name="isfadeinactiveimage"></a> CMFCVisualManager:: IsFadeInactiveImage
 
 Il Framework chiama questo metodo quando disegna immagini inattive sulla barra degli strumenti o in un menu.
 
@@ -1571,7 +1569,7 @@ Diverso da zero se il Framework usa l'effetto di illuminazione quando disegna im
 
 È possibile attivare o disattivare l'effetto di illuminazione chiamando [CMFCVisualManager:: SetFadeInactiveImage](#setfadeinactiveimage). L'effetto di illuminazione è quello che rende sbiadite le immagini non disponibili.
 
-## <a name="cmfcvisualmanagerisframemenucheckeditems"></a><a name="isframemenucheckeditems"></a>CMFCVisualManager:: IsFrameMenuCheckedItems
+## <a name="cmfcvisualmanagerisframemenucheckeditems"></a><a name="isframemenucheckeditems"></a> CMFCVisualManager:: IsFrameMenuCheckedItems
 
 ```
 BOOL IsFrameMenuCheckedItems() const;
@@ -1581,7 +1579,7 @@ BOOL IsFrameMenuCheckedItems() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerishighlightonenotetabs"></a><a name="ishighlightonenotetabs"></a>CMFCVisualManager:: IsHighlightOneNoteTabs
+## <a name="cmfcvisualmanagerishighlightonenotetabs"></a><a name="ishighlightonenotetabs"></a> CMFCVisualManager:: IsHighlightOneNoteTabs
 
 ```
 virtual BOOL IsHighlightOneNoteTabs() const;
@@ -1591,7 +1589,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFCVisualManager:: IsHighlightWholeMenuItem
+## <a name="cmfcvisualmanagerishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a> CMFCVisualManager:: IsHighlightWholeMenuItem
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -1601,7 +1599,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerislayeredribbonkeytip"></a><a name="islayeredribbonkeytip"></a>CMFCVisualManager:: IsLayeredRibbonKeyTip
+## <a name="cmfcvisualmanagerislayeredribbonkeytip"></a><a name="islayeredribbonkeytip"></a> CMFCVisualManager:: IsLayeredRibbonKeyTip
 
 ```
 virtual BOOL IsLayeredRibbonKeyTip() const;
@@ -1611,7 +1609,7 @@ virtual BOOL IsLayeredRibbonKeyTip() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerismenuflatlook"></a><a name="ismenuflatlook"></a>CMFCVisualManager:: IsMenuFlatLook
+## <a name="cmfcvisualmanagerismenuflatlook"></a><a name="ismenuflatlook"></a> CMFCVisualManager:: IsMenuFlatLook
 
 Indica se i pulsanti di menu vengono visualizzati come flat.
 
@@ -1627,7 +1625,7 @@ Diverso da zero se i pulsanti di menu vengono visualizzati come flat; 0 in caso 
 
 Per impostazione predefinita, i pulsanti di menu non sono visualizzati come flat. Usare il metodo [CMFCVisualManager:: SetMenuFlatLook](#setmenuflatlook) per modificare questo comportamento. Quando i pulsanti di menu vengono visualizzati come flat, non cambiano aspetto quando l'utente fa clic su di essi.
 
-## <a name="cmfcvisualmanagerisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a>CMFCVisualManager:: IsOfficeXPStyleMenus
+## <a name="cmfcvisualmanagerisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a> CMFCVisualManager:: IsOfficeXPStyleMenus
 
 Indica se il gestore di visualizzazione implementa i menu dello stile di Office XP.
 
@@ -1643,7 +1641,7 @@ Diverso da zero se il gestore visualizzazione Visualizza i menu di tipo Office X
 
 La [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) chiama questo metodo quando deve creare il menu e l'ombreggiatura. Per impostazione predefinita, questo metodo restituisce FALSE. Se si desidera utilizzare menu popup simili ai menu popup in Office XP, eseguire l'override di questo metodo in un gestore degli oggetti visivi personalizzato e restituire TRUE.
 
-## <a name="cmfcvisualmanagerisoffsetpressedbutton"></a><a name="isoffsetpressedbutton"></a>CMFCVisualManager:: IsOffsetPressedButton
+## <a name="cmfcvisualmanagerisoffsetpressedbutton"></a><a name="isoffsetpressedbutton"></a> CMFCVisualManager:: IsOffsetPressedButton
 
 ```
 virtual BOOL IsOffsetPressedButton() const;
@@ -1653,7 +1651,7 @@ virtual BOOL IsOffsetPressedButton() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerisownerdrawcaption"></a><a name="isownerdrawcaption"></a>CMFCVisualManager:: IsOwnerDrawCaption
+## <a name="cmfcvisualmanagerisownerdrawcaption"></a><a name="isownerdrawcaption"></a> CMFCVisualManager:: IsOwnerDrawCaption
 
 Indica se il gestore di visualizzazione corrente implementa le didascalie create dal proprietario.
 
@@ -1665,7 +1663,7 @@ virtual BOOL IsOwnerDrawCaption();
 
 TRUE se tutte le finestre cornice dell'applicazione hanno didascalie di estrazione del proprietario; In caso contrario, FALSE.
 
-## <a name="cmfcvisualmanagerisownerdrawmenucheck"></a><a name="isownerdrawmenucheck"></a>CMFCVisualManager:: IsOwnerDrawMenuCheck
+## <a name="cmfcvisualmanagerisownerdrawmenucheck"></a><a name="isownerdrawmenucheck"></a> CMFCVisualManager:: IsOwnerDrawMenuCheck
 
 ```
 virtual BOOL IsOwnerDrawMenuCheck();
@@ -1675,7 +1673,7 @@ virtual BOOL IsOwnerDrawMenuCheck();
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerisshadowhighlightedimage"></a><a name="isshadowhighlightedimage"></a>CMFCVisualManager:: IsShadowHighlightedImage
+## <a name="cmfcvisualmanagerisshadowhighlightedimage"></a><a name="isshadowhighlightedimage"></a> CMFCVisualManager:: IsShadowHighlightedImage
 
 Indica se il gestore di visualizzazione Visualizza le ombreggiature durante il rendering delle immagini evidenziate.
 
@@ -1687,7 +1685,7 @@ BOOL IsShadowHighlightedImage() const;
 
 Diverso da zero quando il gestore di visualizzazione Visualizza le ombre sotto le immagini evidenziate; 0 in caso contrario.
 
-## <a name="cmfcvisualmanageristoolbarbuttonfillenabled"></a><a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager:: IsToolbarButtonFillEnabled
+## <a name="cmfcvisualmanageristoolbarbuttonfillenabled"></a><a name="istoolbarbuttonfillenabled"></a> CMFCVisualManager:: IsToolbarButtonFillEnabled
 
 ```
 BOOL IsToolbarButtonFillEnabled() const;
@@ -1697,7 +1695,7 @@ BOOL IsToolbarButtonFillEnabled() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageristoolbarroundshape"></a><a name="istoolbarroundshape"></a>CMFCVisualManager:: IsToolbarRoundShape
+## <a name="cmfcvisualmanageristoolbarroundshape"></a><a name="istoolbarroundshape"></a> CMFCVisualManager:: IsToolbarRoundShape
 
 ```
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
@@ -1705,13 +1703,13 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 
 ### <a name="parameters"></a>Parametri
 
-in *&#42;di CMFCToolBar*<br/>
+in *&#42;di CMFCToolBar *<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageriswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a>CMFCVisualManager:: IsWindowsThemingSupported
+## <a name="cmfcvisualmanageriswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a> CMFCVisualManager:: IsWindowsThemingSupported
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -1721,7 +1719,7 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageronactivateapp"></a><a name="onactivateapp"></a>CMFCVisualManager:: OnActivateApp
+## <a name="cmfcvisualmanageronactivateapp"></a><a name="onactivateapp"></a> CMFCVisualManager:: OnActivateApp
 
 ```
 virtual void OnActivateApp(
@@ -1736,7 +1734,7 @@ in *bActive*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a>CMFCVisualManager:: OnDrawAutoHideButtonBorder
+## <a name="cmfcvisualmanagerondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a> CMFCVisualManager:: OnDrawAutoHideButtonBorder
 
 Il framework chiama questo metodo quando disegna il bordo di un pulsante Nascondi automaticamente.
 
@@ -1766,9 +1764,9 @@ in Puntatore al pulsante Nascondi automaticamente. Il Framework sta disegnando i
 
 Eseguire l'override di questo metodo in una classe derivata se si desidera personalizzare l'aspetto del bordo di un pulsante Nascondi automaticamente. Per impostazione predefinita, questo metodo riempie un bordo flat con il colore di ombreggiatura predefinito per l'applicazione.
 
-Il parametro *rectBorderSize* non contiene le coordinate del bordo. Contiene le dimensioni del bordo nei membri `top`dati, `bottom`, `left`e. `right` Un valore minore o uguale a 0 indica nessun bordo sul lato del pulsante Nascondi automaticamente.
+Il parametro *rectBorderSize* non contiene le coordinate del bordo. Contiene le dimensioni del bordo nei `top` `bottom` `left` membri dati,, e `right` . Un valore minore o uguale a 0 indica nessun bordo sul lato del pulsante Nascondi automaticamente.
 
-## <a name="cmfcvisualmanagerondrawbargripper"></a><a name="ondrawbargripper"></a>CMFCVisualManager:: OnDrawBarGripper
+## <a name="cmfcvisualmanagerondrawbargripper"></a><a name="ondrawbargripper"></a> CMFCVisualManager:: OnDrawBarGripper
 
 Chiamata eseguita dal framework quando disegna il grip per una barra di controllo.
 
@@ -1798,7 +1796,7 @@ in Puntatore a una barra di controllo. Il gestore visuale disegna il grip di que
 
 L'implementazione predefinita di questo metodo Visualizza il grip standard. Per personalizzare l'aspetto del grip, eseguire l'override di questo metodo in una classe personalizzata derivata dalla `CMFCVisualManager` classe.
 
-## <a name="cmfcvisualmanagerondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCVisualManager:: OnDrawBrowseButton
+## <a name="cmfcvisualmanagerondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a> CMFCVisualManager:: OnDrawBrowseButton
 
 Il Framework chiama questo metodo quando disegna il pulsante Sfoglia per un controllo di modifica.
 
@@ -1834,9 +1832,9 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questa funzione in una classe derivata se si desidera personalizzare l'aspetto dei pulsanti Sfoglia nelle istanze della [classe CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md). I valori possibili per lo stato del pulsante sono `ButtonsIsRegular`, `ButtonsIsPressed`e. `ButtonsIsHighlighted`
+Eseguire l'override di questa funzione in una classe derivata se si desidera personalizzare l'aspetto dei pulsanti Sfoglia nelle istanze della [classe CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md). I valori possibili per lo stato del pulsante sono `ButtonsIsRegular` , `ButtonsIsPressed` e `ButtonsIsHighlighted` .
 
-## <a name="cmfcvisualmanagerondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFCVisualManager:: OnDrawButtonBorder
+## <a name="cmfcvisualmanagerondrawbuttonborder"></a><a name="ondrawbuttonborder"></a> CMFCVisualManager:: OnDrawButtonBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un pulsante della barra degli strumenti.
 
@@ -1866,9 +1864,9 @@ in Tipo di dati enumerato che specifica lo stato corrente del pulsante della bar
 
 L'implementazione predefinita di questo metodo Visualizza il bordo standard. Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del bordo di un pulsante della barra degli strumenti.
 
-Gli stati possibili di un pulsante della barra `ButtonsIsRegular`degli `ButtonsIsPressed`strumenti sono `ButtonsIsHighlighted`, o.
+Gli stati possibili di un pulsante della barra degli strumenti sono `ButtonsIsRegular` , `ButtonsIsPressed` o `ButtonsIsHighlighted` .
 
-## <a name="cmfcvisualmanagerondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFCVisualManager:: OnDrawButtonSeparator
+## <a name="cmfcvisualmanagerondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a> CMFCVisualManager:: OnDrawButtonSeparator
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -1889,7 +1887,7 @@ in *bHorz*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawcaptionbarborder"></a><a name="ondrawcaptionbarborder"></a>CMFCVisualManager:: OnDrawCaptionBarBorder
+## <a name="cmfcvisualmanagerondrawcaptionbarborder"></a><a name="ondrawcaptionbarborder"></a> CMFCVisualManager:: OnDrawCaptionBarBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un oggetto della [classe CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) .
 
@@ -1923,7 +1921,7 @@ in Parametro booleano che specifica se il bordo presenta un aspetto bidimensiona
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto del bordo di una barra del titolo.
 
-## <a name="cmfcvisualmanagerondrawcaptionbarbuttonborder"></a><a name="ondrawcaptionbarbuttonborder"></a>CMFCVisualManager:: OnDrawCaptionBarButtonBorder
+## <a name="cmfcvisualmanagerondrawcaptionbarbuttonborder"></a><a name="ondrawcaptionbarbuttonborder"></a> CMFCVisualManager:: OnDrawCaptionBarButtonBorder
 
 ```
 virtual void OnDrawCaptionBarButtonBorder(
@@ -1950,7 +1948,7 @@ in *bIsSysButton*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawcaptionbarinfoarea"></a><a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManager:: OnDrawCaptionBarInfoArea
+## <a name="cmfcvisualmanagerondrawcaptionbarinfoarea"></a><a name="ondrawcaptionbarinfoarea"></a> CMFCVisualManager:: OnDrawCaptionBarInfoArea
 
 ```
 virtual void OnDrawCaptionBarInfoArea(
@@ -1967,7 +1965,7 @@ in *pBar*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFCVisualManager:: OnDrawCaptionButton
+## <a name="cmfcvisualmanagerondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a> CMFCVisualManager:: OnDrawCaptionButton
 
 Il Framework chiama questo metodo quando disegna un oggetto [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md) .
 
@@ -2007,11 +2005,11 @@ in Indice dell'immagine per l'icona da utilizzare per il pulsante. Se *nImageID*
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questo metodo Visualizza un piccolo pulsante dall'istanza globale della `CMenuImages` classe. I pulsanti sono elencati nel file di intestazione per `CMenuImages`. Alcuni esempi sono `CMenuImages::IdClose`, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight`, `CMenuImages::IdArowDown`, `CMenuImages::IdArowUp`e `CMenuImages::IdPinHorz`.
+L'implementazione predefinita di questo metodo Visualizza un piccolo pulsante dall'istanza globale della `CMenuImages` classe. I pulsanti sono elencati nel file di intestazione per `CMenuImages` . Alcuni esempi sono `CMenuImages::IdClose` , `CMenuImages::IdArowLeft` , `CMenuImages::IdArowRight` , `CMenuImages::IdArowDown` , `CMenuImages::IdArowUp` e `CMenuImages::IdPinHorz` .
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto dei pulsanti della didascalia.
 
-## <a name="cmfcvisualmanagerondrawcheckbox"></a><a name="ondrawcheckbox"></a>CMFCVisualManager:: OnDrawCheckBox
+## <a name="cmfcvisualmanagerondrawcheckbox"></a><a name="ondrawcheckbox"></a> CMFCVisualManager:: OnDrawCheckBox
 
 ```
 virtual void OnDrawCheckBox(
@@ -2032,7 +2030,7 @@ in *bEnabled*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFCVisualManager:: OnDrawCheckBoxEx
+## <a name="cmfcvisualmanagerondrawcheckboxex"></a><a name="ondrawcheckboxex"></a> CMFCVisualManager:: OnDrawCheckBoxEx
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -2055,7 +2053,7 @@ in *bEnabled*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFCVisualManager:: OnDrawComboBorder
+## <a name="cmfcvisualmanagerondrawcomboborder"></a><a name="ondrawcomboborder"></a> CMFCVisualManager:: OnDrawComboBorder
 
 Il Framework chiama questo metodo quando disegna il bordo intorno a un'istanza della [Classe CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
@@ -2093,7 +2091,7 @@ in Puntatore a un `CMFCToolBarComboBoxButton` oggetto. Il framework disegna ques
 
 Eseguire l'override di questo metodo nella gestione visiva derivata per personalizzare l'aspetto del bordo della casella combinata.
 
-## <a name="cmfcvisualmanagerondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFCVisualManager:: OnDrawComboDropButton
+## <a name="cmfcvisualmanagerondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a> CMFCVisualManager:: OnDrawComboDropButton
 
 Il Framework chiama questo metodo quando disegna il pulsante di eliminazione di un [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
@@ -2131,7 +2129,7 @@ in Puntatore a un `CMFCToolBarComboBoxButton` oggetto. Il framework disegna il p
 
 Eseguire l'override di questo metodo nel gestore elementi visivi derivato per personalizzare l'aspetto del pulsante di rilascio di un pulsante della casella combinata.
 
-## <a name="cmfcvisualmanagerondrawcontrolborder"></a><a name="ondrawcontrolborder"></a>CMFCVisualManager:: OnDrawControlBorder
+## <a name="cmfcvisualmanagerondrawcontrolborder"></a><a name="ondrawcontrolborder"></a> CMFCVisualManager:: OnDrawControlBorder
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -2143,7 +2141,7 @@ in *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawdefaultribbonimage"></a><a name="ondrawdefaultribbonimage"></a>CMFCVisualManager:: OnDrawDefaultRibbonImage
+## <a name="cmfcvisualmanagerondrawdefaultribbonimage"></a><a name="ondrawdefaultribbonimage"></a> CMFCVisualManager:: OnDrawDefaultRibbonImage
 
 Questo metodo viene chiamato dal framework quando viene disegnata l'immagine predefinita utilizzata per il pulsante della barra multifunzione.
 
@@ -2177,7 +2175,7 @@ in Parametro booleano che indica se il pulsante della barra multifunzione è evi
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato se si desidera personalizzare l'immagine utilizzata per il pulsante della barra multifunzione.
 
-## <a name="cmfcvisualmanagerondraweditborder"></a><a name="ondraweditborder"></a>CMFCVisualManager:: OnDrawEditBorder
+## <a name="cmfcvisualmanagerondraweditborder"></a><a name="ondraweditborder"></a> CMFCVisualManager:: OnDrawEditBorder
 
 Il Framework chiama questo metodo quando disegna il bordo intorno a un'istanza della [classe CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md).
 
@@ -2209,9 +2207,9 @@ in Puntatore a un `CMFCToolBarEditBoxButton` oggetto. Il framework disegna il bo
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per `CMFCToolBarEditBoxButton` personalizzare il bordo di un oggetto.
+Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare il bordo di un `CMFCToolBarEditBoxButton` oggetto.
 
-## <a name="cmfcvisualmanagerondrawexpandingbox"></a><a name="ondrawexpandingbox"></a>CMFCVisualManager:: OnDrawExpandingBox
+## <a name="cmfcvisualmanagerondrawexpandingbox"></a><a name="ondrawexpandingbox"></a> CMFCVisualManager:: OnDrawExpandingBox
 
 ```
 virtual void OnDrawExpandingBox(
@@ -2230,7 +2228,7 @@ in *colorBox*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManager:: OnDrawFloatingToolbarBorder
+## <a name="cmfcvisualmanagerondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a> CMFCVisualManager:: OnDrawFloatingToolbarBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di una barra degli strumenti mobile.
 
@@ -2260,11 +2258,11 @@ in Rettangolo che specifica la dimensione del bordo della barra degli strumenti.
 
 Una barra degli strumenti mobile è una barra degli strumenti visualizzata come finestra con mini-cornice. Questa situazione si verifica in genere quando un utente trascina una barra degli strumenti in modo che non sia più ancorata.
 
-La dimensione del bordo è specificata dal parametro corrispondente in *rectBorderSize*. Ad esempio, la larghezza del bordo superiore della barra degli strumenti è specificata da `rectBorderSize.top`.
+La dimensione del bordo è specificata dal parametro corrispondente in *rectBorderSize*. Ad esempio, la larghezza del bordo superiore della barra degli strumenti è specificata da `rectBorderSize.top` .
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del bordo di una barra degli strumenti mobile.
 
-## <a name="cmfcvisualmanagerondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFCVisualManager:: OnDrawHeaderCtrlBorder
+## <a name="cmfcvisualmanagerondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a> CMFCVisualManager:: OnDrawHeaderCtrlBorder
 
 Il Framework chiama questo metodo quando disegna il bordo intorno a un'istanza della [classe CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).
 
@@ -2298,7 +2296,7 @@ in Parametro booleano che indica se il controllo intestazione è evidenziato.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare il bordo del controllo intestazione.
 
-## <a name="cmfcvisualmanagerondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManager:: OnDrawHeaderCtrlSortArrow
+## <a name="cmfcvisualmanagerondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a> CMFCVisualManager:: OnDrawHeaderCtrlSortArrow
 
 Il Framework chiama questa funzione quando disegna la freccia di ordinamento di un controllo intestazione.
 
@@ -2326,9 +2324,9 @@ in Valore booleano che specifica la direzione della freccia di ordinamento.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se *bIsUp* è true, il gestore di visualizzazione disegna una freccia di ordinamento verso l'alto. Se è FALSE, il gestore di visualizzazione disegna una freccia giù di ordinamento. Eseguire `OnDrawHeaderCtrlSortArrow` l'override in una classe derivata per personalizzare l'aspetto del pulsante di ordinamento.
+Se *bIsUp* è true, il gestore di visualizzazione disegna una freccia di ordinamento verso l'alto. Se è FALSE, il gestore di visualizzazione disegna una freccia giù di ordinamento. Eseguire l'override `OnDrawHeaderCtrlSortArrow` in una classe derivata per personalizzare l'aspetto del pulsante di ordinamento.
 
-## <a name="cmfcvisualmanagerondrawmenuarrowoncustomizelist"></a><a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager:: OnDrawMenuArrowOnCustomizeList
+## <a name="cmfcvisualmanagerondrawmenuarrowoncustomizelist"></a><a name="ondrawmenuarrowoncustomizelist"></a> CMFCVisualManager:: OnDrawMenuArrowOnCustomizeList
 
 ```
 virtual void OnDrawMenuArrowOnCustomizeList(
@@ -2345,7 +2343,7 @@ in *bSelected*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFCVisualManager:: OnDrawMenuBorder
+## <a name="cmfcvisualmanagerondrawmenuborder"></a><a name="ondrawmenuborder"></a> CMFCVisualManager:: OnDrawMenuBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
@@ -2371,7 +2369,7 @@ in Rettangolo che specifica i limiti del menu popup.
 
 L'implementazione predefinita di questo metodo consente di visualizzare il bordo del menu standard. Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del bordo del menu.
 
-## <a name="cmfcvisualmanagerondrawmenucheck"></a><a name="ondrawmenucheck"></a>CMFCVisualManager:: OnDrawMenuCheck
+## <a name="cmfcvisualmanagerondrawmenucheck"></a><a name="ondrawmenucheck"></a> CMFCVisualManager:: OnDrawMenuCheck
 
 ```
 virtual void OnDrawMenuCheck(
@@ -2392,7 +2390,7 @@ in *bIsRadio*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawmenuitembutton"></a><a name="ondrawmenuitembutton"></a>CMFCVisualManager:: OnDrawMenuItemButton
+## <a name="cmfcvisualmanagerondrawmenuitembutton"></a><a name="ondrawmenuitembutton"></a> CMFCVisualManager:: OnDrawMenuItemButton
 
 ```
 virtual void OnDrawMenuItemButton(
@@ -2413,7 +2411,7 @@ in *bDisabled*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawmenulabel"></a><a name="ondrawmenulabel"></a>CMFCVisualManager:: OnDrawMenuLabel
+## <a name="cmfcvisualmanagerondrawmenulabel"></a><a name="ondrawmenulabel"></a> CMFCVisualManager:: OnDrawMenuLabel
 
 ```
 virtual COLORREF OnDrawMenuLabel(
@@ -2430,7 +2428,7 @@ in *PDC*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawmenuresizebar"></a><a name="ondrawmenuresizebar"></a>CMFCVisualManager:: OnDrawMenuResizeBar
+## <a name="cmfcvisualmanagerondrawmenuresizebar"></a><a name="ondrawmenuresizebar"></a> CMFCVisualManager:: OnDrawMenuResizeBar
 
 ```
 virtual void OnDrawMenuResizeBar(
@@ -2447,7 +2445,7 @@ in *nResizeFlags*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawmenuscrollbutton"></a><a name="ondrawmenuscrollbutton"></a>CMFCVisualManager:: OnDrawMenuScrollButton
+## <a name="cmfcvisualmanagerondrawmenuscrollbutton"></a><a name="ondrawmenuscrollbutton"></a> CMFCVisualManager:: OnDrawMenuScrollButton
 
 Il Framework chiama questo metodo quando disegna un pulsante di scorrimento dei menu.
 
@@ -2485,7 +2483,7 @@ in Valore booleano che indica se il pulsante è disabilitato.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto dei pulsanti di scorrimento dei menu. I pulsanti di scorrimento del menu vengono visualizzati sul bordo dei menu popup quando l'altezza totale delle voci di menu supera l'altezza del menu a comparsa.
 
-## <a name="cmfcvisualmanagerondrawmenushadow"></a><a name="ondrawmenushadow"></a>CMFCVisualManager:: OnDrawMenuShadow
+## <a name="cmfcvisualmanagerondrawmenushadow"></a><a name="ondrawmenushadow"></a> CMFCVisualManager:: OnDrawMenuShadow
 
 ```
 virtual void OnDrawMenuShadow(
@@ -2514,7 +2512,7 @@ in *bRTL*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFCVisualManager:: OnDrawMenuSystemButton
+## <a name="cmfcvisualmanagerondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a> CMFCVisualManager:: OnDrawMenuSystemButton
 
 Il Framework chiama questo metodo quando disegna un pulsante di sistema di menu per l'applicazione.
 
@@ -2550,7 +2548,7 @@ I pulsanti di sistema di menu sono i pulsanti **Chiudi**, **Riduci a icona**, **
 
 L'implementazione predefinita per questo metodo chiama [CDC::D rawframecontrol](../../mfc/reference/cdc-class.md#drawframecontrol) con il tipo di DFC_CAPTION. Eseguire l'override di questo metodo nella classe di gestione visiva derivata per personalizzare l'aspetto dei pulsanti di sistema.
 
-## <a name="cmfcvisualmanagerondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFCVisualManager:: OnDrawMiniFrameBorder
+## <a name="cmfcvisualmanagerondrawminiframeborder"></a><a name="ondrawminiframeborder"></a> CMFCVisualManager:: OnDrawMiniFrameBorder
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -2569,7 +2567,7 @@ in *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawoutlookbarsplitter"></a><a name="ondrawoutlookbarsplitter"></a>CMFCVisualManager:: OnDrawOutlookBarSplitter
+## <a name="cmfcvisualmanagerondrawoutlookbarsplitter"></a><a name="ondrawoutlookbarsplitter"></a> CMFCVisualManager:: OnDrawOutlookBarSplitter
 
 Il Framework chiama questo metodo quando disegna la barra di divisione per una barra di Outlook.
 
@@ -2591,7 +2589,7 @@ in Rettangolo che specifica i limiti della barra di divisione.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto dei separatori in una barra di Outlook.
 
-## <a name="cmfcvisualmanagerondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManager:: OnDrawOutlookPageButtonBorder
+## <a name="cmfcvisualmanagerondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a> CMFCVisualManager:: OnDrawOutlookPageButtonBorder
 
 Chiamata eseguita dal framework quando disegna il bordo di un pulsante della pagina di Outlook.
 
@@ -2621,7 +2619,7 @@ in Valore booleano che specifica se il pulsante è premuto.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi personalizzato per modificare l'aspetto del pulsante della pagina di Outlook.
 
-## <a name="cmfcvisualmanagerondrawpaneborder"></a><a name="ondrawpaneborder"></a>CMFCVisualManager:: OnDrawPaneBorder
+## <a name="cmfcvisualmanagerondrawpaneborder"></a><a name="ondrawpaneborder"></a> CMFCVisualManager:: OnDrawPaneBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un oggetto della [classe CPane](../../mfc/reference/cpane-class.md) .
 
@@ -2647,7 +2645,7 @@ in Rettangolo che indica i limiti del riquadro.
 
 L'implementazione predefinita di questo metodo Visualizza il bordo standard. Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto del bordo.
 
-## <a name="cmfcvisualmanagerondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManager:: OnDrawPaneCaption
+## <a name="cmfcvisualmanagerondrawpanecaption"></a><a name="ondrawpanecaption"></a> CMFCVisualManager:: OnDrawPaneCaption
 
 Il Framework chiama questo metodo quando disegna una didascalia per un'istanza della [classe CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
@@ -2685,7 +2683,7 @@ Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il colore del testo
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto delle didascalie dei riquadri.
 
-## <a name="cmfcvisualmanagerondrawpanedivider"></a><a name="ondrawpanedivider"></a>CMFCVisualManager:: OnDrawPaneDivider
+## <a name="cmfcvisualmanagerondrawpanedivider"></a><a name="ondrawpanedivider"></a> CMFCVisualManager:: OnDrawPaneDivider
 
 ```
 virtual void OnDrawPaneDivider(
@@ -2704,7 +2702,7 @@ in *bAutoHideMode*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawpopupwindowborder"></a><a name="ondrawpopupwindowborder"></a>CMFCVisualManager:: OnDrawPopupWindowBorder
+## <a name="cmfcvisualmanagerondrawpopupwindowborder"></a><a name="ondrawpopupwindowborder"></a> CMFCVisualManager:: OnDrawPopupWindowBorder
 
 ```
 virtual void OnDrawPopupWindowBorder(
@@ -2719,7 +2717,7 @@ in *PDC*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager:: OnDrawPopupWindowButtonBorder
+## <a name="cmfcvisualmanagerondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a> CMFCVisualManager:: OnDrawPopupWindowButtonBorder
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -2736,7 +2734,7 @@ in *p*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawpopupwindowcaption"></a><a name="ondrawpopupwindowcaption"></a>CMFCVisualManager:: OnDrawPopupWindowCaption
+## <a name="cmfcvisualmanagerondrawpopupwindowcaption"></a><a name="ondrawpopupwindowcaption"></a> CMFCVisualManager:: OnDrawPopupWindowCaption
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -2755,7 +2753,7 @@ in *pPopupWnd*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbonapplicationbutton"></a><a name="ondrawribbonapplicationbutton"></a>CMFCVisualManager:: OnDrawRibbonApplicationButton
+## <a name="cmfcvisualmanagerondrawribbonapplicationbutton"></a><a name="ondrawribbonapplicationbutton"></a> CMFCVisualManager:: OnDrawRibbonApplicationButton
 
 Il Framework chiama questo metodo quando disegna il **pulsante principale** sulla barra multifunzione.
 
@@ -2777,7 +2775,7 @@ in Puntatore al **pulsante principale** sulla barra multifunzione.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato se si desidera personalizzare l'aspetto del **pulsante principale**.
 
-## <a name="cmfcvisualmanagerondrawribbonbuttonborder"></a><a name="ondrawribbonbuttonborder"></a>CMFCVisualManager:: OnDrawRibbonButtonBorder
+## <a name="cmfcvisualmanagerondrawribbonbuttonborder"></a><a name="ondrawribbonbuttonborder"></a> CMFCVisualManager:: OnDrawRibbonButtonBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un pulsante sulla barra multifunzione.
 
@@ -2797,9 +2795,9 @@ in Puntatore a un oggetto [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutto
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato `CMFCRibbonButton`per personalizzare l'aspetto di un oggetto.
+Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un oggetto `CMFCRibbonButton` .
 
-## <a name="cmfcvisualmanagerondrawribbonbuttonsgroup"></a><a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManager:: OnDrawRibbonButtonsGroup
+## <a name="cmfcvisualmanagerondrawribbonbuttonsgroup"></a><a name="ondrawribbonbuttonsgroup"></a> CMFCVisualManager:: OnDrawRibbonButtonsGroup
 
 Il Framework chiama questo metodo quando disegna un gruppo di pulsanti sulla barra multifunzione.
 
@@ -2829,7 +2827,7 @@ Valore riservato. L'implementazione predefinita restituisce -1.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un gruppo di pulsanti sulla barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawribboncaption"></a><a name="ondrawribboncaption"></a>CMFCVisualManager:: OnDrawRibbonCaption
+## <a name="cmfcvisualmanagerondrawribboncaption"></a><a name="ondrawribboncaption"></a> CMFCVisualManager:: OnDrawRibbonCaption
 
 Il Framework chiama questo metodo quando disegna la barra del titolo della finestra cornice principale. Il Framework chiama questo metodo solo se la barra multifunzione è integrata con il frame principale.
 
@@ -2859,7 +2857,7 @@ in Rettangolo che specifica i limiti per il testo della barra del titolo.
 
 Eseguire l'override di questa funzione in un gestore di oggetti visivi derivato per personalizzare l'aspetto della barra del titolo. Questo metodo influiscono sulla barra del titolo solo se la barra multifunzione è integrata con la finestra cornice principale.
 
-## <a name="cmfcvisualmanagerondrawribboncaptionbutton"></a><a name="ondrawribboncaptionbutton"></a>CMFCVisualManager:: OnDrawRibbonCaptionButton
+## <a name="cmfcvisualmanagerondrawribboncaptionbutton"></a><a name="ondrawribboncaptionbutton"></a> CMFCVisualManager:: OnDrawRibbonCaptionButton
 
 Il Framework chiama questo metodo quando disegna un pulsante della didascalia presente sulla barra multifunzione.
 
@@ -2881,7 +2879,7 @@ Puntatore a una `CMFCRibbonCaptionButton` classe. Il framework disegna questo pu
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un pulsante della didascalia sulla barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawribboncategory"></a><a name="ondrawribboncategory"></a>CMFCVisualManager:: OnDrawRibbonCategory
+## <a name="cmfcvisualmanagerondrawribboncategory"></a><a name="ondrawribboncategory"></a> CMFCVisualManager:: OnDrawRibbonCategory
 
 Il Framework chiama questo metodo quando disegna un oggetto [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) .
 
@@ -2909,7 +2907,7 @@ Una categoria della barra multifunzione è un raggruppamento logico di comandi d
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di una categoria della barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawribboncategorycaption"></a><a name="ondrawribboncategorycaption"></a>CMFCVisualManager:: OnDrawRibbonCategoryCaption
+## <a name="cmfcvisualmanagerondrawribboncategorycaption"></a><a name="ondrawribboncategorycaption"></a> CMFCVisualManager:: OnDrawRibbonCategoryCaption
 
 Il Framework chiama questo metodo quando disegna la barra del titolo per una categoria della barra multifunzione.
 
@@ -2935,7 +2933,7 @@ Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il colore del testo
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto della barra del titolo di una categoria della barra multifunzione. Per ulteriori informazioni sulla barra del titolo, vedere [classe CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).
 
-## <a name="cmfcvisualmanagerondrawribboncategoryscroll"></a><a name="ondrawribboncategoryscroll"></a>CMFCVisualManager:: OnDrawRibbonCategoryScroll
+## <a name="cmfcvisualmanagerondrawribboncategoryscroll"></a><a name="ondrawribboncategoryscroll"></a> CMFCVisualManager:: OnDrawRibbonCategoryScroll
 
 ```
 virtual void OnDrawRibbonCategoryScroll(
@@ -2950,7 +2948,7 @@ in *pScroll*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribboncategorytab"></a><a name="ondrawribboncategorytab"></a>CMFCVisualManager:: OnDrawRibbonCategoryTab
+## <a name="cmfcvisualmanagerondrawribboncategorytab"></a><a name="ondrawribboncategorytab"></a> CMFCVisualManager:: OnDrawRibbonCategoryTab
 
 Il Framework chiama questo metodo quando disegna la scheda per una categoria della barra multifunzione.
 
@@ -2980,7 +2978,7 @@ Colore utilizzato per il testo nella scheda della categoria della barra multifun
 
 Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto di una scheda di categoria della barra multifunzione. Per ulteriori informazioni sulle categorie della barra multifunzione, vedere [classe CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md).
 
-## <a name="cmfcvisualmanagerondrawribboncheckboxonlist"></a><a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager:: OnDrawRibbonCheckBoxOnList
+## <a name="cmfcvisualmanagerondrawribboncheckboxonlist"></a><a name="ondrawribboncheckboxonlist"></a> CMFCVisualManager:: OnDrawRibbonCheckBoxOnList
 
 ```
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -3001,7 +2999,7 @@ in *bHighlighted*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribboncolorpalettebox"></a><a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager:: OnDrawRibbonColorPaletteBox
+## <a name="cmfcvisualmanagerondrawribboncolorpalettebox"></a><a name="ondrawribboncolorpalettebox"></a> CMFCVisualManager:: OnDrawRibbonColorPaletteBox
 
 ```
 virtual void OnDrawRibbonColorPaletteBox(
@@ -3032,7 +3030,7 @@ in *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbondefaultpanebutton"></a><a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManager:: OnDrawRibbonDefaultPaneButton
+## <a name="cmfcvisualmanagerondrawribbondefaultpanebutton"></a><a name="ondrawribbondefaultpanebutton"></a> CMFCVisualManager:: OnDrawRibbonDefaultPaneButton
 
 Il Framework chiama questo metodo quando disegna il pulsante predefinito per il riquadro della barra multifunzione.
 
@@ -3056,7 +3054,7 @@ Il Framework Visualizza il pulsante predefinito quando un riquadro della barra m
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del pulsante predefinito.
 
-## <a name="cmfcvisualmanagerondrawribbondefaultpanebuttoncontext"></a><a name="ondrawribbondefaultpanebuttoncontext"></a>CMFCVisualManager:: OnDrawRibbonDefaultPaneButtonContext
+## <a name="cmfcvisualmanagerondrawribbondefaultpanebuttoncontext"></a><a name="ondrawribbondefaultpanebuttoncontext"></a> CMFCVisualManager:: OnDrawRibbonDefaultPaneButtonContext
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonContext(
@@ -3071,7 +3069,7 @@ in *p*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbondefaultpanebuttonindicator"></a><a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManager:: OnDrawRibbonDefaultPaneButtonIndicator
+## <a name="cmfcvisualmanagerondrawribbondefaultpanebuttonindicator"></a><a name="ondrawribbondefaultpanebuttonindicator"></a> CMFCVisualManager:: OnDrawRibbonDefaultPaneButtonIndicator
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -3092,7 +3090,7 @@ in *bHighlighted*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbongalleryborder"></a><a name="ondrawribbongalleryborder"></a>CMFCVisualManager:: OnDrawRibbonGalleryBorder
+## <a name="cmfcvisualmanagerondrawribbongalleryborder"></a><a name="ondrawribbongalleryborder"></a> CMFCVisualManager:: OnDrawRibbonGalleryBorder
 
 ```
 virtual void OnDrawRibbonGalleryBorder(
@@ -3109,7 +3107,7 @@ in *rectBorder*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbongallerybutton"></a><a name="ondrawribbongallerybutton"></a>CMFCVisualManager:: OnDrawRibbonGalleryButton
+## <a name="cmfcvisualmanagerondrawribbongallerybutton"></a><a name="ondrawribbongallerybutton"></a> CMFCVisualManager:: OnDrawRibbonGalleryButton
 
 ```
 virtual void OnDrawRibbonGalleryButton(
@@ -3124,7 +3122,7 @@ in *p*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbonkeytip"></a><a name="ondrawribbonkeytip"></a>CMFCVisualManager:: OnDrawRibbonKeyTip
+## <a name="cmfcvisualmanagerondrawribbonkeytip"></a><a name="ondrawribbonkeytip"></a> CMFCVisualManager:: OnDrawRibbonKeyTip
 
 ```
 virtual void OnDrawRibbonKeyTip(
@@ -3143,7 +3141,7 @@ in *Str*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbonlabel"></a><a name="ondrawribbonlabel"></a>CMFCVisualManager:: OnDrawRibbonLabel
+## <a name="cmfcvisualmanagerondrawribbonlabel"></a><a name="ondrawribbonlabel"></a> CMFCVisualManager:: OnDrawRibbonLabel
 
 Il Framework chiama questo metodo quando disegna l'etichetta della barra multifunzione.
 
@@ -3169,7 +3167,7 @@ in Rettangolo che specifica i limiti del pannello della barra multifunzione.
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'etichetta della barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawribbonmainpanelbuttonborder"></a><a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManager:: OnDrawRibbonMainPanelButtonBorder
+## <a name="cmfcvisualmanagerondrawribbonmainpanelbuttonborder"></a><a name="ondrawribbonmainpanelbuttonborder"></a> CMFCVisualManager:: OnDrawRibbonMainPanelButtonBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) posizionato nel pannello **principale** .
 
@@ -3189,9 +3187,9 @@ in Puntatore a un oggetto `CMFCRibbonButton` situato nel pannello principale del
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l' `CMFCRibbonButton` aspetto del bordo di un oggetto nel pannello **principale** .
+Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del bordo di un oggetto `CMFCRibbonButton` nel pannello **principale** .
 
-## <a name="cmfcvisualmanagerondrawribbonmainpanelframe"></a><a name="ondrawribbonmainpanelframe"></a>CMFCVisualManager:: OnDrawRibbonMainPanelFrame
+## <a name="cmfcvisualmanagerondrawribbonmainpanelframe"></a><a name="ondrawribbonmainpanelframe"></a> CMFCVisualManager:: OnDrawRibbonMainPanelFrame
 
 Il Framework chiama questo metodo quando disegna il frame intorno a [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
 
@@ -3208,16 +3206,16 @@ virtual void OnDrawRibbonMainPanelFrame(
 in Puntatore a un contesto di dispositivo.
 
 *pPanel*<br/>
-in Puntatore a `CMFCRibbonMainPanel`.
+in Puntatore a `CMFCRibbonMainPanel` .
 
 *Rect*<br/>
-in Rettangolo che specifica i limiti dell'oggetto `CMFCRibbonMainPanel`.
+in Rettangolo che specifica i limiti dell'oggetto `CMFCRibbonMainPanel` .
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l' `CMFCRibbonMainPanel`aspetto del frame per l'oggetto.
+Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del frame per l'oggetto `CMFCRibbonMainPanel` .
 
-## <a name="cmfcvisualmanagerondrawribbonmenucheckframe"></a><a name="ondrawribbonmenucheckframe"></a>CMFCVisualManager:: OnDrawRibbonMenuCheckFrame
+## <a name="cmfcvisualmanagerondrawribbonmenucheckframe"></a><a name="ondrawribbonmenucheckframe"></a> CMFCVisualManager:: OnDrawRibbonMenuCheckFrame
 
 ```
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -3234,7 +3232,7 @@ in *p*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawribbonpanel"></a><a name="ondrawribbonpanel"></a>CMFCVisualManager:: OnDrawRibbonPanel
+## <a name="cmfcvisualmanagerondrawribbonpanel"></a><a name="ondrawribbonpanel"></a> CMFCVisualManager:: OnDrawRibbonPanel
 
 Il Framework chiama questo metodo quando disegna un oggetto [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) .
 
@@ -3268,7 +3266,7 @@ Colore del testo nel pannello della barra multifunzione.
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto di un pannello della barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawribbonpanelcaption"></a><a name="ondrawribbonpanelcaption"></a>CMFCVisualManager:: OnDrawRibbonPanelCaption
+## <a name="cmfcvisualmanagerondrawribbonpanelcaption"></a><a name="ondrawribbonpanelcaption"></a> CMFCVisualManager:: OnDrawRibbonPanelCaption
 
 Il Framework chiama questo metodo quando disegna la didascalia di una [classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md).
 
@@ -3294,7 +3292,7 @@ in Rettangolo che specifica i limiti della didascalia per il pannello della barr
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto delle didascalie per i pannelli della barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawribbonprogressbar"></a><a name="ondrawribbonprogressbar"></a>CMFCVisualManager:: OnDrawRibbonProgressBar
+## <a name="cmfcvisualmanagerondrawribbonprogressbar"></a><a name="ondrawribbonprogressbar"></a> CMFCVisualManager:: OnDrawRibbonProgressBar
 
 Il Framework chiama questo metodo quando disegna una [classe CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md).
 
@@ -3328,7 +3326,7 @@ in Parametro booleano che indica la modalità dell'indicatore di stato. Il valor
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto di un indicatore di stato.
 
-## <a name="cmfcvisualmanagerondrawribbonquickaccesstoolbarseparator"></a><a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManager:: OnDrawRibbonQuickAccessToolBarSeparator
+## <a name="cmfcvisualmanagerondrawribbonquickaccesstoolbarseparator"></a><a name="ondrawribbonquickaccesstoolbarseparator"></a> CMFCVisualManager:: OnDrawRibbonQuickAccessToolBarSeparator
 
 Il Framework chiama questo metodo quando disegna un separatore sulla **barra di accesso rapido** di una barra multifunzione.
 
@@ -3354,7 +3352,7 @@ in Rettangolo che specifica i limiti del separatore.
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto dei separatori della barra multifunzione sulla **barra di accesso rapido**.
 
-## <a name="cmfcvisualmanagerondrawribbonrecentfilesframe"></a><a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManager:: OnDrawRibbonRecentFilesFrame
+## <a name="cmfcvisualmanagerondrawribbonrecentfilesframe"></a><a name="ondrawribbonrecentfilesframe"></a> CMFCVisualManager:: OnDrawRibbonRecentFilesFrame
 
 Il Framework chiama questo metodo quando disegna un frame intorno a un elenco di file recenti.
 
@@ -3380,7 +3378,7 @@ in Rettangolo che specifica i limiti del frame per l'elenco dei file recenti.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto dell'elenco dei file recenti.
 
-## <a name="cmfcvisualmanagerondrawribbonsliderchannel"></a><a name="ondrawribbonsliderchannel"></a>CMFCVisualManager:: OnDrawRibbonSliderChannel
+## <a name="cmfcvisualmanagerondrawribbonsliderchannel"></a><a name="ondrawribbonsliderchannel"></a> CMFCVisualManager:: OnDrawRibbonSliderChannel
 
 Il Framework chiama questo metodo quando disegna il canale di una [classe CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md).
 
@@ -3406,7 +3404,7 @@ in Rettangolo che specifica i limiti per il canale del dispositivo di scorriment
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto del canale del dispositivo di scorrimento della barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawribbonsliderthumb"></a><a name="ondrawribbonsliderthumb"></a>CMFCVisualManager:: OnDrawRibbonSliderThumb
+## <a name="cmfcvisualmanagerondrawribbonsliderthumb"></a><a name="ondrawribbonsliderthumb"></a> CMFCVisualManager:: OnDrawRibbonSliderThumb
 
 Il Framework chiama questo metodo quando disegna il cursore di un oggetto [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .
 
@@ -3426,7 +3424,7 @@ virtual void OnDrawRibbonSliderThumb(
 in Puntatore a un contesto di dispositivo.
 
 *pSlider*<br/>
-in Puntatore a un oggetto `CMFCRibbonSlider`. Il framework disegna il cursore del dispositivo di scorrimento della barra multifunzione.
+in Puntatore a un oggetto `CMFCRibbonSlider` . Il framework disegna il cursore del dispositivo di scorrimento della barra multifunzione.
 
 *Rect*<br/>
 in Rettangolo che specifica i limiti del cursore del dispositivo di scorrimento della barra multifunzione.
@@ -3442,9 +3440,9 @@ in Parametro booleano che indica se il controllo Thumb non è disponibile.
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l' `CMFCRibbonSlider`aspetto del cursore per un oggetto.
+Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del cursore per un oggetto `CMFCRibbonSlider` .
 
-## <a name="cmfcvisualmanagerondrawribbonsliderzoombutton"></a><a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManager:: OnDrawRibbonSliderZoomButton
+## <a name="cmfcvisualmanagerondrawribbonsliderzoombutton"></a><a name="ondrawribbonsliderzoombutton"></a> CMFCVisualManager:: OnDrawRibbonSliderZoomButton
 
 Il Framework chiama questo metodo quando disegna i pulsanti di zoom per un oggetto [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .
 
@@ -3486,7 +3484,7 @@ in Parametro booleano che indica se il pulsante non è disponibile.
 
 Per impostazione predefinita, i pulsanti zoom sul dispositivo di scorrimento della barra multifunzione sono un cerchio con un segno + o-al centro. Per personalizzare l'aspetto dei pulsanti dello zoom, eseguire l'override di questo metodo in un gestore di oggetti visivi derivato.
 
-## <a name="cmfcvisualmanagerondrawribbonstatusbarpane"></a><a name="ondrawribbonstatusbarpane"></a>CMFCVisualManager:: OnDrawRibbonStatusBarPane
+## <a name="cmfcvisualmanagerondrawribbonstatusbarpane"></a><a name="ondrawribbonstatusbarpane"></a> CMFCVisualManager:: OnDrawRibbonStatusBarPane
 
 Il Framework chiama questo metodo quando disegna un riquadro sulla barra di stato.
 
@@ -3516,7 +3514,7 @@ Valore riservato. L'implementazione predefinita restituisce -1.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un riquadro sulla barra di stato.
 
-## <a name="cmfcvisualmanagerondrawribbontabsframe"></a><a name="ondrawribbontabsframe"></a>CMFCVisualManager:: OnDrawRibbonTabsFrame
+## <a name="cmfcvisualmanagerondrawribbontabsframe"></a><a name="ondrawribbontabsframe"></a> CMFCVisualManager:: OnDrawRibbonTabsFrame
 
 Il Framework chiama questo metodo quando disegna il frame intorno a un set di schede della barra multifunzione.
 
@@ -3546,7 +3544,7 @@ Valore riservato. Per impostazione predefinita, questo metodo restituisce-1.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare il frame intorno a un set di schede sulla barra multifunzione.
 
-## <a name="cmfcvisualmanagerondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFCVisualManager:: OnDrawScrollButtons
+## <a name="cmfcvisualmanagerondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a> CMFCVisualManager:: OnDrawScrollButtons
 
 ```
 virtual void OnDrawScrollButtons(
@@ -3567,7 +3565,7 @@ in *bHilited*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManager:: OnDrawSeparator
+## <a name="cmfcvisualmanagerondrawseparator"></a><a name="ondrawseparator"></a> CMFCVisualManager:: OnDrawSeparator
 
 Il Framework chiama questo metodo quando disegna un separatore.
 
@@ -3597,7 +3595,7 @@ in Parametro booleano che indica l'orientamento di un riquadro ancorato. Il valo
 
 I separatori vengono usati sulle barre di controllo per separare i gruppi di icone correlate. L'implementazione predefinita per questo metodo Visualizza il separatore standard. Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del separatore.
 
-## <a name="cmfcvisualmanagerondrawshowallmenuitems"></a><a name="ondrawshowallmenuitems"></a>CMFCVisualManager:: OnDrawShowAllMenuItems
+## <a name="cmfcvisualmanagerondrawshowallmenuitems"></a><a name="ondrawshowallmenuitems"></a> CMFCVisualManager:: OnDrawShowAllMenuItems
 
 ```
 virtual void OnDrawShowAllMenuItems(
@@ -3614,7 +3612,7 @@ in *stato* di<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawspinbuttons"></a><a name="ondrawspinbuttons"></a>CMFCVisualManager:: OnDrawSpinButtons
+## <a name="cmfcvisualmanagerondrawspinbuttons"></a><a name="ondrawspinbuttons"></a> CMFCVisualManager:: OnDrawSpinButtons
 
 Il Framework chiama questo metodo quando disegna un'istanza della [classe CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md).
 
@@ -3636,7 +3634,7 @@ in Puntatore a un contesto di dispositivo.
 in Rettangolo che specifica i limiti del controllo di selezione.
 
 *nState*<br/>
-in Flag che indica lo stato del controllo di selezione. Per ulteriori informazioni, vedere le sezione Note.
+in Flag che indica lo stato del controllo di selezione. Per altre informazioni, vedere la sezione Osservazioni.
 
 *bOrientation*<br/>
 in Parametro booleano che specifica l'orientamento del controllo di selezione. Il valore TRUE indica che il controllo di selezione è orizzontale. In caso contrario, è verticale.
@@ -3660,7 +3658,7 @@ Il parametro *nState* indica lo stato del controllo di selezione. Il parametro �
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un controllo di selezione.
 
-## <a name="cmfcvisualmanagerondrawsplitterborder"></a><a name="ondrawsplitterborder"></a>CMFCVisualManager:: OnDrawSplitterBorder
+## <a name="cmfcvisualmanagerondrawsplitterborder"></a><a name="ondrawsplitterborder"></a> CMFCVisualManager:: OnDrawSplitterBorder
 
 Il Framework chiama questo metodo quando disegna il bordo intorno a un'istanza della [classe CSplitterWndEx](csplitterwndex-class.md).
 
@@ -3686,7 +3684,7 @@ in Rettangolo che specifica i limiti della finestra con separatore.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del bordo di una finestra con separatore.
 
-## <a name="cmfcvisualmanagerondrawsplitterbox"></a><a name="ondrawsplitterbox"></a>CMFCVisualManager:: OnDrawSplitterBox
+## <a name="cmfcvisualmanagerondrawsplitterbox"></a><a name="ondrawsplitterbox"></a> CMFCVisualManager:: OnDrawSplitterBox
 
 Il Framework chiama questo metodo quando disegna la casella di trascinamento per un'istanza della [classe CSplitterWndEx](csplitterwndex-class.md). La casella di trascinamento viene visualizzata quando l'utente seleziona la barra di divisione e modifica le dimensioni delle finestre figlio.
 
@@ -3712,7 +3710,7 @@ in Rettangolo che specifica i limiti della finestra con separatore.
 
 Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto della casella di trascinamento per una finestra con barra di divisione.
 
-## <a name="cmfcvisualmanagerondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFCVisualManager:: OnDrawStatusBarPaneBorder
+## <a name="cmfcvisualmanagerondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a> CMFCVisualManager:: OnDrawStatusBarPaneBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un oggetto [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) .
 
@@ -3744,9 +3742,9 @@ in Stile della barra di stato.
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto `CMFCStatusBar` del bordo di un oggetto.
+Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto del bordo di un `CMFCStatusBar` oggetto.
 
-## <a name="cmfcvisualmanagerondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a>CMFCVisualManager:: OnDrawStatusBarProgress
+## <a name="cmfcvisualmanagerondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a> CMFCVisualManager:: OnDrawStatusBarProgress
 
 Il Framework chiama questo metodo quando disegna l'indicatore di stato sull'oggetto [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) .
 
@@ -3794,9 +3792,9 @@ in Parametro booleano che indica se visualizzare la rappresentazione testuale de
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per `CMFCStatusBar` personalizzare l'aspetto dell'oggetto.
+Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto dell' `CMFCStatusBar` oggetto.
 
-## <a name="cmfcvisualmanagerondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFCVisualManager:: OnDrawStatusBarSizeBox
+## <a name="cmfcvisualmanagerondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a> CMFCVisualManager:: OnDrawStatusBarSizeBox
 
 Il Framework chiama questo metodo quando disegna la casella delle dimensioni per un [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md).
 
@@ -3820,9 +3818,9 @@ in Rettangolo che specifica i limiti della casella delle dimensioni.
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto della `CMFCStatusBar`casella dimensioni in un oggetto.
+Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto della casella dimensioni in un oggetto `CMFCStatusBar` .
 
-## <a name="cmfcvisualmanagerondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManager:: OnDrawTab
+## <a name="cmfcvisualmanagerondrawtab"></a><a name="ondrawtab"></a> CMFCVisualManager:: OnDrawTab
 
 Il Framework chiama questo metodo quando disegna le schede per un oggetto [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) .
 
@@ -3858,7 +3856,7 @@ Un `CMFCBaseTabCtrl` oggetto chiama questo metodo quando elabora il messaggio di
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto delle schede.
 
-## <a name="cmfcvisualmanagerondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a>CMFCVisualManager:: OnDrawTabCloseButton
+## <a name="cmfcvisualmanagerondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a> CMFCVisualManager:: OnDrawTabCloseButton
 
 Il Framework chiama questo metodo quando disegna il pulsante **Chiudi** nella scheda attiva.
 
@@ -3896,7 +3894,7 @@ in Parametro booleano che indica se il pulsante **Chiudi** è disabilitato.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del pulsante **Chiudi** nella scheda attiva di *pTabWnd*.
 
-## <a name="cmfcvisualmanagerondrawtabcontent"></a><a name="ondrawtabcontent"></a>CMFCVisualManager:: OnDrawTabContent
+## <a name="cmfcvisualmanagerondrawtabcontent"></a><a name="ondrawtabcontent"></a> CMFCVisualManager:: OnDrawTabContent
 
 Il Framework chiama questo metodo quando disegna il contenuto che si trova all'interno di un'istanza della [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
@@ -3932,9 +3930,9 @@ in Colore del testo all'interno della scheda.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'interno di una scheda contiene il testo e le icone della scheda. eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto delle schede.
+L'interno di una scheda contiene il testo e le icone della scheda. Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto delle schede.
 
-## <a name="cmfcvisualmanagerondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFCVisualManager:: OnDrawTabsButtonBorder
+## <a name="cmfcvisualmanagerondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a> CMFCVisualManager:: OnDrawTabsButtonBorder
 
 Il Framework chiama questo metodo quando disegna il bordo di un pulsante di tabulazione.
 
@@ -3968,7 +3966,7 @@ in Puntatore alla finestra della scheda padre.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto del bordo del pulsante di tabulazione.
 
-## <a name="cmfcvisualmanagerondrawtask"></a><a name="ondrawtask"></a>CMFCVisualManager:: OnDrawTask
+## <a name="cmfcvisualmanagerondrawtask"></a><a name="ondrawtask"></a> CMFCVisualManager:: OnDrawTask
 
 Il Framework chiama questo metodo quando disegna un oggetto [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
@@ -4004,7 +4002,7 @@ Il Framework Visualizza le attività sulla barra delle applicazioni sia come ico
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto delle attività sulla barra delle applicazioni.
 
-## <a name="cmfcvisualmanagerondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a>CMFCVisualManager:: OnDrawTasksGroupAreaBorder
+## <a name="cmfcvisualmanagerondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a> CMFCVisualManager:: OnDrawTasksGroupAreaBorder
 
 Il Framework chiama questo metodo quando disegna un bordo intorno a un gruppo in una [classe CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md).
 
@@ -4034,7 +4032,7 @@ in Parametro booleano che specifica se l'area del gruppo ha un titolo. Il valore
 
 Eseguire l'override di questa funzione in una classe derivata per personalizzare il bordo intorno a un'area del gruppo nel riquadro attività.
 
-## <a name="cmfcvisualmanagerondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFCVisualManager:: OnDrawTasksGroupCaption
+## <a name="cmfcvisualmanagerondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a> CMFCVisualManager:: OnDrawTasksGroupCaption
 
 Il Framework chiama questo metodo quando disegna la didascalia per un oggetto [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) .
 
@@ -4068,9 +4066,9 @@ in Parametro booleano che indica se il gruppo può essere compresso.
 
 I gruppi di attività vengono visualizzati nell'oggetto [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
-Eseguire l'override di questo metodo in una classe derivata per personalizzare la `CMFCTasksPaneTaskGroup`didascalia di un oggetto.
+Eseguire l'override di questo metodo in una classe derivata per personalizzare la didascalia di un oggetto `CMFCTasksPaneTaskGroup` .
 
-## <a name="cmfcvisualmanagerondrawtasksgroupicon"></a><a name="ondrawtasksgroupicon"></a>CMFCVisualManager:: OnDrawTasksGroupIcon
+## <a name="cmfcvisualmanagerondrawtasksgroupicon"></a><a name="ondrawtasksgroupicon"></a> CMFCVisualManager:: OnDrawTasksGroupIcon
 
 ```
 virtual void OnDrawTasksGroupIcon(
@@ -4093,7 +4091,7 @@ in *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagerondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFCVisualManager:: OnDrawTearOffCaption
+## <a name="cmfcvisualmanagerondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a> CMFCVisualManager:: OnDrawTearOffCaption
 
 Il Framework chiama questo metodo quando disegna la didascalia per una [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
@@ -4121,7 +4119,7 @@ Questa funzione viene chiamata dal framework quando un `CMFCPopupMenu` oggetto e
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto delle didascalie per le barre tear-off.
 
-## <a name="cmfcvisualmanagerondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a>CMFCVisualManager:: OnDrawToolBoxFrame
+## <a name="cmfcvisualmanagerondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a> CMFCVisualManager:: OnDrawToolBoxFrame
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -4136,7 +4134,7 @@ in *PDC*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageronerasemdiclientarea"></a><a name="onerasemdiclientarea"></a>CMFCVisualManager:: OnEraseMDIClientArea
+## <a name="cmfcvisualmanageronerasemdiclientarea"></a><a name="onerasemdiclientarea"></a> CMFCVisualManager:: OnEraseMDIClientArea
 
 Il Framework chiama questo metodo quando cancella l'area client MDI.
 
@@ -4162,7 +4160,7 @@ Valore riservato. L'implementazione predefinita restituisce FALSE.
 
 Eseguire l'override di questo metodo per eseguire codice personalizzato quando il gestore visualizzazione cancella l'area client MDI.
 
-## <a name="cmfcvisualmanageronerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a>CMFCVisualManager:: OnErasePopupWindowButton
+## <a name="cmfcvisualmanageronerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a> CMFCVisualManager:: OnErasePopupWindowButton
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -4179,7 +4177,7 @@ in *p*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageronerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManager:: OnEraseTabsArea
+## <a name="cmfcvisualmanageronerasetabsarea"></a><a name="onerasetabsarea"></a> CMFCVisualManager:: OnEraseTabsArea
 
 Il Framework chiama questo metodo quando cancella l'area della scheda di una finestra di tabulazione.
 
@@ -4207,7 +4205,7 @@ Questa funzione viene chiamata dal framework quando un oggetto della [classe CMF
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto delle schede.
 
-## <a name="cmfcvisualmanageronerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFCVisualManager:: OnEraseTabsButton
+## <a name="cmfcvisualmanageronerasetabsbutton"></a><a name="onerasetabsbutton"></a> CMFCVisualManager:: OnEraseTabsButton
 
 Il Framework chiama questo metodo quando cancella il testo e l'icona di un pulsante di tabulazione.
 
@@ -4239,7 +4237,7 @@ Il Framework Cancella il testo e l'icona di un pulsante quando un oggetto [CMFCB
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto dei pulsanti di tabulazione.
 
-## <a name="cmfcvisualmanageronerasetabsframe"></a><a name="onerasetabsframe"></a>CMFCVisualManager:: OnEraseTabsFrame
+## <a name="cmfcvisualmanageronerasetabsframe"></a><a name="onerasetabsframe"></a> CMFCVisualManager:: OnEraseTabsFrame
 
 Il Framework chiama questo metodo quando cancella un frame in una [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
@@ -4259,7 +4257,7 @@ in Puntatore a un contesto di dispositivo.
 in Rettangolo che specifica i limiti della finestra della scheda.
 
 *pTabWnd*<br/>
-in Puntatore a una finestra di tabulazione. Il Framework Cancella un frame per questo `CMFCBaseTabCtrl`oggetto.
+in Puntatore a una finestra di tabulazione. Il Framework Cancella un frame per questo oggetto `CMFCBaseTabCtrl` .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4269,7 +4267,7 @@ TRUE se il metodo ha esito positivo; In caso contrario, FALSE.
 
 Questo metodo riempie l'area indicata da *Rect* con il colore di sfondo della scheda attiva. Viene chiamato quando un `CMFCBaseTabCtrl` oggetto elabora un messaggio di WM_PAINT e cancella un frame di tabulazione.
 
-## <a name="cmfcvisualmanageronfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a>CMFCVisualManager:: OnFillAutoHideButtonBackground
+## <a name="cmfcvisualmanageronfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a> CMFCVisualManager:: OnFillAutoHideButtonBackground
 
 Il framework chiama questo metodo quando riempie lo sfondo di un pulsante Nascondi automaticamente.
 
@@ -4295,7 +4293,7 @@ in Puntatore a un oggetto [CMFCAutoHideButton](../../mfc/reference/cmfcautohideb
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un pulsante Nascondi automaticamente.
 
-## <a name="cmfcvisualmanageronfillbarbackground"></a><a name="onfillbarbackground"></a>CMFCVisualManager:: OnFillBarBackground
+## <a name="cmfcvisualmanageronfillbarbackground"></a><a name="onfillbarbackground"></a> CMFCVisualManager:: OnFillBarBackground
 
 Il Framework chiama questo metodo quando riempie lo sfondo di un oggetto [CBasePane](../../mfc/reference/cbasepane-class.md) .
 
@@ -4327,15 +4325,15 @@ in Valore riservato.
 
 ### <a name="remarks"></a>Osservazioni
 
-L'implementazione predefinita di questo metodo riempie lo sfondo della barra con il colore di sfondo 3D dalla variabile `afxGlobalData`globale. Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare lo sfondo di un riquadro.
+L'implementazione predefinita di questo metodo riempie lo sfondo della barra con il colore di sfondo 3D dalla variabile globale `afxGlobalData` . Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare lo sfondo di un riquadro.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare l' `OnFillBarBackground` oggetto nella `CMFCVisualManager` classe. Questo frammento di codice fa parte dell' [esempio di demo di Outlook](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare l'oggetto `OnFillBarBackground` nella `CMFCVisualManager` classe. Questo frammento di codice fa parte dell' [esempio di demo di Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 
-## <a name="cmfcvisualmanageronfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFCVisualManager:: OnFillButtonInterior
+## <a name="cmfcvisualmanageronfillbuttoninterior"></a><a name="onfillbuttoninterior"></a> CMFCVisualManager:: OnFillButtonInterior
 
 Il Framework chiama questo metodo quando riempie lo sfondo di un pulsante della barra degli strumenti.
 
@@ -4365,9 +4363,9 @@ in Stato del pulsante della barra degli strumenti.
 
 L'implementazione predefinita di questo metodo usa il colore predefinito per riempire lo sfondo. Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare lo sfondo di un pulsante della barra degli strumenti.
 
-Gli stati possibili di un pulsante della barra `ButtonsIsRegular`degli `ButtonsIsPressed`strumenti sono `ButtonsIsHighlighted`, o.
+Gli stati possibili di un pulsante della barra degli strumenti sono `ButtonsIsRegular` , `ButtonsIsPressed` o `ButtonsIsHighlighted` .
 
-## <a name="cmfcvisualmanageronfillcaptionbarbutton"></a><a name="onfillcaptionbarbutton"></a>CMFCVisualManager:: OnFillCaptionBarButton
+## <a name="cmfcvisualmanageronfillcaptionbarbutton"></a><a name="onfillcaptionbarbutton"></a> CMFCVisualManager:: OnFillCaptionBarButton
 
 ```
 virtual COLORREF OnFillCaptionBarButton(
@@ -4396,7 +4394,7 @@ in *bIsSysButton*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageronfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a>CMFCVisualManager:: OnFillCommandsListBackground
+## <a name="cmfcvisualmanageronfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a> CMFCVisualManager:: OnFillCommandsListBackground
 
 Il Framework chiama questo metodo quando riempie lo sfondo di un pulsante della barra degli strumenti che appartiene a un elenco di comandi. Questo elenco di comandi fa parte della finestra di dialogo di personalizzazione.
 
@@ -4426,7 +4424,7 @@ Colore del testo per il pulsante della barra degli strumenti.
 
 Per ulteriori informazioni sull'elenco di personalizzazioni, vedere [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). L'implementazione predefinita di questo metodo riempie lo sfondo in base alla combinazione di colori dell'interfaccia attualmente selezionata.
 
-## <a name="cmfcvisualmanageronfillheaderctrlbackground"></a><a name="onfillheaderctrlbackground"></a>CMFCVisualManager:: OnFillHeaderCtrlBackground
+## <a name="cmfcvisualmanageronfillheaderctrlbackground"></a><a name="onfillheaderctrlbackground"></a> CMFCVisualManager:: OnFillHeaderCtrlBackground
 
 Il Framework chiama questo metodo quando riempie lo sfondo di un controllo intestazione.
 
@@ -4452,7 +4450,7 @@ in Rettangolo che specifica i limiti del controllo intestazione.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un controllo intestazione.
 
-## <a name="cmfcvisualmanageronfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManager:: OnFillMiniFrameCaption
+## <a name="cmfcvisualmanageronfillminiframecaption"></a><a name="onfillminiframecaption"></a> CMFCVisualManager:: OnFillMiniFrameCaption
 
 Il Framework chiama questo metodo quando riempie la barra del titolo di una finestra con mini-cornice.
 
@@ -4486,7 +4484,7 @@ Colore utilizzato per riempire lo sfondo della barra del titolo.
 
 L'implementazione predefinita per questo metodo riempie la barra del titolo con il colore della didascalia corrente per la pelle attiva.
 
-## <a name="cmfcvisualmanageronfilloutlookbarcaption"></a><a name="onfilloutlookbarcaption"></a>CMFCVisualManager:: OnFillOutlookBarCaption
+## <a name="cmfcvisualmanageronfilloutlookbarcaption"></a><a name="onfilloutlookbarcaption"></a> CMFCVisualManager:: OnFillOutlookBarCaption
 
 Il Framework chiama questo metodo quando riempie lo sfondo di una barra del titolo di Outlook.
 
@@ -4512,7 +4510,7 @@ out Riferimento a un parametro [COLORREF](/windows/win32/gdi/colorref) . Il meto
 
 L'implementazione predefinita di questo metodo riempie la barra del titolo con il colore per le ombreggiature in base all'interfaccia corrente. Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare il colore della barra del titolo di Outlook.
 
-## <a name="cmfcvisualmanageronfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFCVisualManager:: OnFillOutlookPageButton
+## <a name="cmfcvisualmanageronfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a> CMFCVisualManager:: OnFillOutlookPageButton
 
 Il Framework chiama questo metodo quando riempie l'area interna di un pulsante della pagina di Outlook.
 
@@ -4546,7 +4544,7 @@ out Riferimento a un parametro [COLORREF](/windows/win32/gdi/colorref) . Questo 
 
 Eseguire l'override di questa funzione in un gestore di oggetti visivi derivato per personalizzare l'aspetto dei pulsanti della pagina di Outlook.
 
-## <a name="cmfcvisualmanageronfillpopupwindowbackground"></a><a name="onfillpopupwindowbackground"></a>CMFCVisualManager:: OnFillPopupWindowBackground
+## <a name="cmfcvisualmanageronfillpopupwindowbackground"></a><a name="onfillpopupwindowbackground"></a> CMFCVisualManager:: OnFillPopupWindowBackground
 
 Il Framework chiama questo metodo quando riempie lo sfondo di una finestra popup.
 
@@ -4568,7 +4566,7 @@ in Rettangolo che specifica i limiti della finestra popup.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto delle finestre popup.
 
-## <a name="cmfcvisualmanageronfillribbonbutton"></a><a name="onfillribbonbutton"></a>CMFCVisualManager:: OnFillRibbonButton
+## <a name="cmfcvisualmanageronfillribbonbutton"></a><a name="onfillribbonbutton"></a> CMFCVisualManager:: OnFillRibbonButton
 
 Il Framework chiama questo metodo quando riempie l'area interna di un pulsante della barra multifunzione.
 
@@ -4594,7 +4592,7 @@ Colore del testo per il pulsante della barra multifunzione specificato da *p* se
 
 Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto dei pulsanti della barra multifunzione.
 
-## <a name="cmfcvisualmanageronfillribbonedit"></a><a name="onfillribbonedit"></a>CMFCVisualManager:: OnFillRibbonEdit
+## <a name="cmfcvisualmanageronfillribbonedit"></a><a name="onfillribbonedit"></a> CMFCVisualManager:: OnFillRibbonEdit
 
 Il Framework chiama questo metodo quando riempie l'area interna di un'istanza della `CMFCRibbonRichEditCtrl` classe.
 
@@ -4642,11 +4640,11 @@ in Riferimento al colore del testo selezionato nel controllo di modifica.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il `CMFCRibbonRichEditCtrl` valore indicato da *Pedit* può essere parte di un pulsante della casella combinata sulla barra multifunzione.
+Il valore `CMFCRibbonRichEditCtrl` indicato da *Pedit* può essere parte di un pulsante della casella combinata sulla barra multifunzione.
 
-Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato `CMFCRibbonRichEditCtrl`per personalizzare l'aspetto di un oggetto.
+Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un oggetto `CMFCRibbonRichEditCtrl` .
 
-## <a name="cmfcvisualmanageronfillribbonmainpanelbutton"></a><a name="onfillribbonmainpanelbutton"></a>CMFCVisualManager:: OnFillRibbonMainPanelButton
+## <a name="cmfcvisualmanageronfillribbonmainpanelbutton"></a><a name="onfillribbonmainpanelbutton"></a> CMFCVisualManager:: OnFillRibbonMainPanelButton
 
 Il Framework chiama questo metodo quando riempie l'area interna di un pulsante della barra multifunzione che si trova nel pannello **principale** .
 
@@ -4672,7 +4670,7 @@ Colore del testo per il pulsante della barra multifunzione specificato da *p* se
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto dei pulsanti della barra multifunzione nel pannello **principale** .
 
-## <a name="cmfcvisualmanageronfillribbonmenuframe"></a><a name="onfillribbonmenuframe"></a>CMFCVisualManager:: OnFillRibbonMenuFrame
+## <a name="cmfcvisualmanageronfillribbonmenuframe"></a><a name="onfillribbonmenuframe"></a> CMFCVisualManager:: OnFillRibbonMenuFrame
 
 Il Framework chiama questo metodo quando riempie la cornice del menu del pannello della barra multifunzione.
 
@@ -4696,9 +4694,9 @@ in Rettangolo che specifica i limiti del frame di menu.
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto `CMFCRibbonMainPanel`della barra dei menu per l'oggetto.
+Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto della barra dei menu per l'oggetto `CMFCRibbonMainPanel` .
 
-## <a name="cmfcvisualmanageronfillribbonquickaccesstoolbarpopup"></a><a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager:: OnFillRibbonQuickAccessToolBarPopup
+## <a name="cmfcvisualmanageronfillribbonquickaccesstoolbarpopup"></a><a name="onfillribbonquickaccesstoolbarpopup"></a> CMFCVisualManager:: OnFillRibbonQuickAccessToolBarPopup
 
 ```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -4715,7 +4713,7 @@ in *pMenuBar*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageronfillsplitterbackground"></a><a name="onfillsplitterbackground"></a>CMFCVisualManager:: OnFillSplitterBackground
+## <a name="cmfcvisualmanageronfillsplitterbackground"></a><a name="onfillsplitterbackground"></a> CMFCVisualManager:: OnFillSplitterBackground
 
 Il Framework chiama questo metodo quando riempie lo sfondo di una finestra con separatore.
 
@@ -4741,7 +4739,7 @@ in Rettangolo che specifica i limiti della finestra con separatore.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di una finestra con separatore.
 
-## <a name="cmfcvisualmanageronfilltab"></a><a name="onfilltab"></a>CMFCVisualManager:: OnFillTab
+## <a name="cmfcvisualmanageronfilltab"></a><a name="onfilltab"></a> CMFCVisualManager:: OnFillTab
 
 Il Framework chiama questo metodo quando riempie lo sfondo di una finestra di tabulazione.
 
@@ -4779,7 +4777,7 @@ in Puntatore al controllo struttura a schede padre.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto delle schede.
 
-## <a name="cmfcvisualmanageronfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a>CMFCVisualManager:: OnFillTasksGroupInterior
+## <a name="cmfcvisualmanageronfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a> CMFCVisualManager:: OnFillTasksGroupInterior
 
 Il Framework chiama questo metodo quando riempie l'area interna di un oggetto [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) .
 
@@ -4805,7 +4803,7 @@ in Valore booleano che indica se l'interno è riempito con un colore speciale.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto di un gruppo di attività.
 
-## <a name="cmfcvisualmanageronfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a>CMFCVisualManager:: OnFillTasksPaneBackground
+## <a name="cmfcvisualmanageronfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a> CMFCVisualManager:: OnFillTasksPaneBackground
 
 Il Framework chiama questo metodo quando riempie lo sfondo di un controllo [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
@@ -4825,9 +4823,9 @@ in Rettangolo che specifica i limiti del riquadro attività.
 
 ### <a name="remarks"></a>Osservazioni
 
-Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per `CMFCTasksPane` personalizzare l'aspetto di un oggetto.
+Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto di un `CMFCTasksPane` oggetto.
 
-## <a name="cmfcvisualmanageronhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFCVisualManager:: OnHighlightMenuItem
+## <a name="cmfcvisualmanageronhighlightmenuitem"></a><a name="onhighlightmenuitem"></a> CMFCVisualManager:: OnHighlightMenuItem
 
 Il Framework chiama questo metodo quando disegna una voce di menu evidenziata.
 
@@ -4859,7 +4857,7 @@ L'implementazione predefinita di questo metodo non usa i parametri *p* o *clrTex
 
 Eseguire l'override di questo metodo in un gestore oggetti visivi derivato per personalizzare l'aspetto delle voci di menu evidenziate. Usare il parametro *clrText* per modificare il colore del testo di una voce di menu evidenziata.
 
-## <a name="cmfcvisualmanageronhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManager:: OnHighlightRarelyUsedMenuItems
+## <a name="cmfcvisualmanageronhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a> CMFCVisualManager:: OnHighlightRarelyUsedMenuItems
 
 Il Framework chiama questo metodo quando disegna un comando di menu evidenziato.
 
@@ -4881,7 +4879,7 @@ in Rettangolo che specifica i limiti del comando evidenziato.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto dei comandi di menu evidenziati.
 
-## <a name="cmfcvisualmanageronncactivate"></a><a name="onncactivate"></a>CMFCVisualManager:: OnNcActivate
+## <a name="cmfcvisualmanageronncactivate"></a><a name="onncactivate"></a> CMFCVisualManager:: OnNcActivate
 
 ```
 virtual BOOL OnNcActivate(
@@ -4898,7 +4896,7 @@ in *bActive*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanageronncpaint"></a><a name="onncpaint"></a>CMFCVisualManager:: OnNcPaint
+## <a name="cmfcvisualmanageronncpaint"></a><a name="onncpaint"></a> CMFCVisualManager:: OnNcPaint
 
 Questo metodo viene chiamato dal framework quando viene disegnata l'area non client.
 
@@ -4928,7 +4926,7 @@ Valore riservato. L'implementazione predefinita restituisce FALSE.
 
 Eseguire l'override di questo metodo in un gestore di oggetti visivi derivato per personalizzare l'aspetto dei pulsanti cornice e didascalia della finestra.
 
-## <a name="cmfcvisualmanageronsetwindowregion"></a><a name="onsetwindowregion"></a>CMFCVisualManager:: OnSetWindowRegion
+## <a name="cmfcvisualmanageronsetwindowregion"></a><a name="onsetwindowregion"></a> CMFCVisualManager:: OnSetWindowRegion
 
 Il Framework chiama questo metodo dopo aver impostato un'area che contiene i frame e i menu popup.
 
@@ -4954,7 +4952,7 @@ TRUE se il metodo ha esito positivo; In caso contrario, FALSE.
 
 Il Framework chiama questo metodo per notificare al gestore oggetti visivi che è stata impostata un'area per i menu a comparsa e i frame. Per ulteriori informazioni, vedere [CWindow:: SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn).
 
-## <a name="cmfcvisualmanageronupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManager:: OnUpdateSystemColors
+## <a name="cmfcvisualmanageronupdatesystemcolors"></a><a name="onupdatesystemcolors"></a> CMFCVisualManager:: OnUpdateSystemColors
 
 Il Framework chiama questa funzione quando modifica i colori di sistema.
 
@@ -4966,7 +4964,7 @@ virtual void OnUpdateSystemColors();
 
 Il Framework chiama questo metodo come parte dell'elaborazione del messaggio di WM_SYSCOLORCHANGE. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questo metodo in una gestione visiva derivata se si desidera eseguire codice personalizzato quando i colori cambiano nell'applicazione.
 
-## <a name="cmfcvisualmanagerredrawall"></a><a name="redrawall"></a>CMFCVisualManager:: RedrawAll
+## <a name="cmfcvisualmanagerredrawall"></a><a name="redrawall"></a> CMFCVisualManager:: RedrawAll
 
 Ridisegnato immediatamente tutte le barre di controllo nell'applicazione.
 
@@ -4974,7 +4972,7 @@ Ridisegnato immediatamente tutte le barre di controllo nell'applicazione.
 static void RedrawAll();
 ```
 
-## <a name="cmfcvisualmanagerribboncategorycolortorgb"></a><a name="ribboncategorycolortorgb"></a>CMFCVisualManager:: RibbonCategoryColorToRGB
+## <a name="cmfcvisualmanagerribboncategorycolortorgb"></a><a name="ribboncategorycolortorgb"></a> CMFCVisualManager:: RibbonCategoryColorToRGB
 
 ```
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
@@ -4988,7 +4986,7 @@ in *colore*<br/>
 
 ### <a name="remarks"></a>Osservazioni
 
-## <a name="cmfcvisualmanagersetdefaultmanager"></a><a name="setdefaultmanager"></a>CMFCVisualManager:: SetDefaultManager
+## <a name="cmfcvisualmanagersetdefaultmanager"></a><a name="setdefaultmanager"></a> CMFCVisualManager:: SetDefaultManager
 
 Imposta il gestore predefinito.
 
@@ -5007,7 +5005,7 @@ Utilizzare la `CMFCVisualManager` classe e tutti i gestori di oggetti visivi der
 
 Utilizzare questo metodo per modificare il gestore di visualizzazione utilizzato dall'applicazione.
 
-## <a name="cmfcvisualmanagersetembossdisabledimage"></a><a name="setembossdisabledimage"></a>CMFCVisualManager:: SetEmbossDisabledImage
+## <a name="cmfcvisualmanagersetembossdisabledimage"></a><a name="setembossdisabledimage"></a> CMFCVisualManager:: SetEmbossDisabledImage
 
 Abilita o Disabilita la modalità in rilievo per le immagini della barra degli strumenti disabilitate.
 
@@ -5024,7 +5022,7 @@ in Parametro booleano che indica se abilitare la modalità in rilievo per le imm
 
 Usare la funzione [CMFCVisualManager:: IsEmbossDisabledImage](#isembossdisabledimage) per determinare se la modalità in rilievo è abilitata.
 
-## <a name="cmfcvisualmanagersetfadeinactiveimage"></a><a name="setfadeinactiveimage"></a>CMFCVisualManager:: SetFadeInactiveImage
+## <a name="cmfcvisualmanagersetfadeinactiveimage"></a><a name="setfadeinactiveimage"></a> CMFCVisualManager:: SetFadeInactiveImage
 
 Abilita o Disabilita l'effetto di illuminazione per le immagini inattive in un menu o una barra degli strumenti.
 
@@ -5041,7 +5039,7 @@ in Parametro booleano che specifica se abilitare l'effetto di illuminazione.
 
 Questa funzionalità controlla se le immagini inattive appaiono sbiadite in un menu o in una barra degli strumenti. Usare il metodo [CMFCVisualManager:: IsFadeInactiveImage](#isfadeinactiveimage) per determinare se questa funzionalità è abilitata.
 
-## <a name="cmfcvisualmanagersetmenuflatlook"></a><a name="setmenuflatlook"></a>CMFCVisualManager:: SetMenuFlatLook
+## <a name="cmfcvisualmanagersetmenuflatlook"></a><a name="setmenuflatlook"></a> CMFCVisualManager:: SetMenuFlatLook
 
 Imposta un flag che indica se i pulsanti di menu vengono visualizzati come flat. In caso contrario, vengono visualizzati tridimensionali.
 
@@ -5058,7 +5056,7 @@ in Parametro booleano che indica se i pulsanti di menu vengono visualizzati come
 
 Per impostazione predefinita, questa funzionalità non è abilitata.
 
-## <a name="cmfcvisualmanagersetmenushadowdepth"></a><a name="setmenushadowdepth"></a>CMFCVisualManager:: SetMenuShadowDepth
+## <a name="cmfcvisualmanagersetmenushadowdepth"></a><a name="setmenushadowdepth"></a> CMFCVisualManager:: SetMenuShadowDepth
 
 Imposta la larghezza e l'altezza dell'ombreggiatura del menu.
 
@@ -5075,7 +5073,7 @@ in Intero che specifica la profondità dell'ombreggiatura del menu in pixel.
 
 L'altezza e la larghezza dell'ombreggiatura del menu devono essere identiche. Il valore predefinito è 7 pixel.
 
-## <a name="cmfcvisualmanagersetshadowhighlightedimage"></a><a name="setshadowhighlightedimage"></a>CMFCVisualManager:: SetShadowHighlightedImage
+## <a name="cmfcvisualmanagersetshadowhighlightedimage"></a><a name="setshadowhighlightedimage"></a> CMFCVisualManager:: SetShadowHighlightedImage
 
 Imposta un flag che indica se [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) Visualizza le ombreggiature per le immagini evidenziate.
 
@@ -5097,4 +5095,4 @@ Per impostazione predefinita, questa funzionalità è disabilitata.
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager:: GetInstance](#getinstance)<br/>
-[Gestione visualizzazione](../../mfc/visualization-manager.md)
+[Gestione visualizzazioni](../../mfc/visualization-manager.md)

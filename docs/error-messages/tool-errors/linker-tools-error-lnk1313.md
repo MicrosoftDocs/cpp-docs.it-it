@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03ff61a1f3501b3ea106138e957a657ed064e645
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194863"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683442"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Errore degli strumenti del linker LNK1313
 
@@ -23,7 +23,7 @@ La versione corrente di Visual C++ non supporta il collegamento di file obj nati
 
 L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 ```cpp
 // LNK1313.cpp
@@ -32,16 +32,12 @@ L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e no
 int main() {}
 ```
 
-## <a name="example"></a>Esempio
-
 ```cpp
 // LNK1313_b.cpp
 // compile with: /c /clr
 // an IJW module
 void test(){}
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore LNK1313.
 

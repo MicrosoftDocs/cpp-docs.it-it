@@ -4,12 +4,12 @@ description: Nuove funzionalità e correzioni del compilatore e degli strumenti 
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041679"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684745"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
@@ -514,9 +514,9 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 
 Diverse operazioni C++ che usano il motore IntelliSense per il refactoring e lo spostamento di codice vengono eseguite molto più velocemente. I numeri seguenti sono basati sulla soluzione di Visual Studio Chromium con i progetti 3500:
 
-| Feature | Miglioramento delle prestazioni |
+| Funzionalità | Miglioramento delle prestazioni |
 |--|--|
-| Rinominare | 5.3x |
+| Rinomina | 5.3x |
 | Modifica firma | 4.5x |
 | Trova tutti i riferimenti | 4.7x |
 
@@ -649,7 +649,7 @@ Il set di strumenti Clang/C2 fornito con Visual Studio 2017 supporta ora l' **`/
 
 I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) (Linee guida di base per C++) ora sono distribuiti con Visual Studio. Abilitare i controlli nella pagina delle **estensioni di analisi del codice** nelle pagine delle proprietà del progetto. Le estensioni vengono quindi incluse quando si esegue l'analisi del codice. Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
 
-![Viene illustrato come utilizzare la pagina delle proprietà analisi codice per selezionare Regole di base di C++ RuleSet.](media/CppCoreCheck.png "Pagina delle proprietà di CppCoreCheck")
+![Screenshot della finestra di dialogo Pagine delle proprietà in cui sono visualizzate le proprietà di configurazione > analisi codice > generale selezionato e una serie di controlli principali elencati nella sezione eseguire questo set di regole.](media/CppCoreCheck.png "Pagina delle proprietà di CppCoreCheck")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versione 15.3
 
@@ -697,7 +697,7 @@ Visual Studio Diagnostica della grafica Tools: è possibile usarli per registrar
 
 - **Ricerca e filtro nella tabella degli oggetti:** un modo rapido e semplice per individuare le risorse che si stanno cercando.
 
-  ![Mostra la posizione dei controlli Filter e search nella finestra tabella oggetti.](media/search.png)
+  ![Screenshot della sezione tabella oggetti con l'elenco a discesa tipo e la casella di testo di ricerca denominata.](media/search.png)
 
 - **Cronologia risorse:** consente di visualizzare con facilità l'intera cronologia delle modifiche di una risorsa usata durante il rendering di un frame acquisito. Per richiamare la cronologia per qualsiasi risorsa, fare clic sull'icona di clock accanto a qualsiasi collegamento ipertestuale della risorsa.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6639165856f09db25a2b96c41db2bb94ab93aa99
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042199"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683624"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: creare e usare la propria libreria a collegamento dinamico (C++)
 
@@ -91,7 +91,7 @@ In questo set di attività, si crea un progetto per la DLL, quindi si aggiunge c
 
 Quando viene creata la soluzione, è possibile visualizzare i file di progetto e di origine generati nella finestra **Esplora soluzioni** in Visual Studio.
 
-![Soluzione generata in Visual Studio](media/mathlibrary-solution-explorer-162.png "Soluzione generata in Visual Studio")
+![Screenshot della finestra di Esplora soluzioni di Visual Studio 2019 con la libreria matematica evidenziata.](media/mathlibrary-solution-explorer-162.png "Soluzione generata in Visual Studio")
 
 ::: moniker-end
 
@@ -103,13 +103,13 @@ Quando viene creata la soluzione, è possibile visualizzare i file di progetto e
 
 1. Nel riquadro sinistro della finestra di dialogo **nuovo progetto** selezionare **installato**  >  **Visual C++**  >  **desktop di Windows**. Nel riquadro centrale selezionare **libreria a collegamento dinamico (dll)**. Immettere *MathLibrary* nella casella **nome** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
-   ![Assegnare un nome al progetto MathLibrary](media/mathlibrary-new-project-name-159.png "Assegnare un nome al progetto MathLibrary")
+   ![Screenshot della finestra di dialogo nuovo progetto di Visual Studio 2017 che mostra la libreria Math nella casella di testo nome.](media/mathlibrary-new-project-name-159.png "Assegnare un nome al progetto MathLibrary")
 
 1. Scegliere il pulsante **OK** per creare il progetto.
 
 Quando viene creata la soluzione, è possibile visualizzare i file di progetto e di origine generati nella finestra **Esplora soluzioni** in Visual Studio.
 
-![Soluzione generata in Visual Studio](media/mathlibrary-solution-explorer-159.png "Soluzione generata in Visual Studio")
+![Screenshot della finestra di Esplora soluzioni di Visual Studio 2017 con la libreria matematica evidenziata.](media/mathlibrary-solution-explorer-159.png "Soluzione generata in Visual Studio")
 
 ::: moniker-end
 
@@ -121,7 +121,7 @@ Quando viene creata la soluzione, è possibile visualizzare i file di progetto e
 
 1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** espandere **Installati** > **Modelli** e selezionare **Visual C++ **, quindi nel riquadro centrale selezionare **Applicazione console Win32**. Immettere *MathLibrary* nella casella di modifica **nome** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
-   ![Assegnare un nome al progetto MathLibrary](media/mathlibrary-project-name.png "Assegnare un nome al progetto MathLibrary")
+   ![Screenshot della finestra di dialogo nuovo progetto di Visual Studio 2015 che mostra la libreria Math nella casella di testo nome.](media/mathlibrary-project-name.png "Assegnare un nome al progetto MathLibrary")
 
 1. Scegliere il pulsante **OK** per chiudere la finestra di dialogo **Nuovo progetto** e avviare la **Creazione guidata applicazione Win32**.
 
@@ -135,7 +135,7 @@ Quando viene creata la soluzione, è possibile visualizzare i file di progetto e
 
 Quando viene completata la soluzione, il progetto e i file di origine generati saranno visibili nella finestra **Esplora soluzioni** in Visual Studio.
 
-![Soluzione generata in Visual Studio](media/mathlibrary-solution-explorer-153.png "Soluzione generata in Visual Studio")
+![Screenshot della finestra di Esplora soluzioni di Visual Studio 2015 con la libreria matematica evidenziata.](media/mathlibrary-solution-explorer-153.png "Soluzione generata in Visual Studio")
 
 ::: moniker-end
 
@@ -405,7 +405,7 @@ Per evitare codice non sincronizzato, è consigliabile impostare il percorso di 
 
 1. Nella pagina **Configura nuovo progetto** immettere *MathClient* nella casella **nome progetto** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Deselezionare **posiziona soluzione e progetto nella stessa directory** se è selezionata.
 
-   ![Assegnare un nome al progetto client](media/mathclient-project-name-2019.png "Assegnare un nome al progetto client")
+   ![Screenshot della finestra di dialogo Crea nuovo progetto con l'opzione app console evidenziata.](media/mathclient-project-name-2019.png "Assegnare un nome al progetto client")
 
 1. Scegliere il pulsante **Crea** per creare il progetto client.
 
@@ -421,7 +421,7 @@ Viene creato automaticamente un progetto di applicazione console minimo. Il nome
 
 1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** selezionare **Desktop di Windows** in **Installati** > **Visual C++ **. Nel riquadro centrale selezionare **applicazione console di Windows**. Specificare il nome del progetto, *MathClient*, nella casella di modifica **nome** .  Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
-   ![Assegnare un nome al progetto client](media/mathclient-new-project-name-159.png "Assegnare un nome al progetto client")
+   ![Screenshot della finestra di dialogo nuovo progetto con installato > Visual C Plus Plus > desktop di Windows selezionato, l'applicazione console Windows evidenziata e il client Math digitato nella casella di testo nome.](media/mathclient-new-project-name-159.png "Assegnare un nome al progetto client")
 
 1. Scegliere **OK** per creare il progetto di app client.
 
@@ -437,7 +437,7 @@ Viene creato automaticamente un progetto di applicazione console minimo. Il nome
 
 1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** selezionare **Win32** in **Installati** > **Modelli** > **Visual C++**. Nel riquadro centrale, selezionare **Progetto console Win32**. Specificare il nome del progetto, *MathClient*, nella casella di modifica **nome** . Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
-   ![Assegnare un nome al progetto client](media/mathclient-project-name.png "Assegnare un nome al progetto client")
+   ![Screenshot della finestra di dialogo nuovo progetto con i modelli di > installati > Visual C Plus Plus > Win32 selezionato, l'applicazione console Win32 Visual C Plus Plus evidenziato e il client Math digitato nella casella di testo nome.](media/mathclient-project-name.png "Assegnare un nome al progetto client")
 
 1. Scegliere il pulsante **OK** per chiudere la finestra di dialogo **Nuovo progetto** e avviare la **Creazione guidata applicazione Win32**. Nella pagina **Panoramica** della finestra di dialogo **Creazione guidata applicazione Win32** , scegliere il pulsante **Avanti** .
 
@@ -583,6 +583,6 @@ Ora che sono state create una DLL e un'applicazione client, è possibile sperime
 
 Quando si distribuisce l'app, è necessario distribuire anche le DLL usate. Il modo più semplice per rendere disponibili le DLL compilate o da terze parti è inserirle nella stessa directory dell'app. È noto come *distribuzione locale dell'app*. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Chiamata di funzioni DLL da applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

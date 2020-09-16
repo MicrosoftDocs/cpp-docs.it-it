@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: be3cdaac79c60143648985c1782df76422a1fc98
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 20897ba27350835b4b896c5afd89790331c59220
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162829"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685606"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Avviso del compilatore (livello 1) C4378
 
 Per eseguire gli inizializzatori è necessario ottenere i puntatori a funzione; si consiglia System:: ModuleHandle:: ResolveMethodHandle
 
-In **/CLR**i simboli degli inizializzatori contengono token di funzione e non puntatori di funzioni.  È necessario convertire i token in puntatori utilizzando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+In **/CLR**i simboli degli inizializzatori contengono token di funzione e non puntatori di funzioni.  È necessario convertire i token in puntatori usando <xref:System.ModuleHandle.ResolveMethodHandle%2A> .
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C4378.
 
@@ -62,8 +62,6 @@ int main () {
    InitializeObjects();
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene illustrato come risolvere C4378.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures, continue keyword
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
-ms.openlocfilehash: 3cf5d1c25b8edc70bd686ca26ad98b15b970383c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27d1d0aa0e49c5c46e4ea4e010635ca0057c3f85
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218910"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684833"
 ---
 # <a name="continue-statement-c"></a>Istruzione continue (C)
 
@@ -31,7 +31,7 @@ L'iterazione successiva di **`do`** un' **`for`** istruzione, o **`while`** vien
 
 Di seguito è riportato un esempio dell' **`continue`** istruzione:
 
-```
+```C
 while ( i-- > 0 )
 {
     x = f( i );

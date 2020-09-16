@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: 0ba3a8f9e60ab0b84266dd25b6b9ccfe10f75561
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 893dd9241f83895d253fc8b5513f56cab272e31c
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186712"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684677"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>Avviso del compilatore (livello 1) C4486
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186712"
 
 Poiché una funzione membro virtuale privata di una classe o di uno struct gestito non è accessibile o sottoposta a override, deve essere contrassegnata come [sealed](../../extensions/sealed-cpp-component-extensions.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C4486.
 
@@ -32,8 +32,6 @@ private:
    virtual void f1() sealed {}   // OK
 };
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene illustrato un possibile utilizzo di una funzione virtuale sealed privata.
 

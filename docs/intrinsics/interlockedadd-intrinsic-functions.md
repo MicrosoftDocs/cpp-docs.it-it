@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217729"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683897"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>Funzioni intrinseche _InterlockedAdd
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Queste funzioni eseguono un'aggiunta atomica, che assicura che l'operazione venga completata correttamente quando più di un thread ha accesso a una variabile condivisa.
 
@@ -90,7 +90,7 @@ Entrambe le funzioni restituiscono il risultato dell'addizione.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_InterlockedAdd`|ARM, ARM64|
 |`_InterlockedAdd_acq`|ARM, ARM64|
@@ -101,15 +101,15 @@ Entrambe le funzioni restituiscono il risultato dell'addizione.
 |`_InterlockedAdd64_nf`|ARM, ARM64|
 |`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Le versioni di queste funzioni con il suffisso `_acq` o `_rel` eseguono un'aggiunta interlocked in base alla semantica di acquisizione o rilascio. La semantica di *acquisizione* significa che il risultato dell'operazione viene reso visibile a tutti i thread e processori prima di eventuali letture e scritture di memoria successive. L'acquisizione è utile quando si entra in una sezione critica. La semantica di *rilascio* significa che tutte le letture e le scritture di memoria vengono forzate a essere rese visibili a tutti i thread e processori prima che il risultato dell'operazione venga reso visibile. Il rilascio è utile quando si esce da una sezione critica. Le funzioni intrinseche con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
+Le versioni di queste funzioni con il suffisso `_acq` o `_rel` eseguono un'aggiunta interlocked in base alla semantica di acquisizione o rilascio. La *semantica di acquisizione* significa che il risultato dell'operazione viene reso visibile a tutti i thread e processori prima di eventuali letture e scritture di memoria successive. L'acquisizione è utile quando si entra in una sezione critica. La *semantica di rilascio* significa che tutte le letture e le scritture di memoria vengono forzate a essere rese visibili a tutti i thread e processori prima che il risultato dell'operazione venga reso visibile. Il rilascio è utile quando si esce da una sezione critica. Le funzioni intrinseche con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
 
 Queste routine sono disponibili solo come funzioni intrinseche.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 ```cpp
 // interlockedadd.cpp
@@ -135,8 +135,6 @@ int main()
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
-
-## <a name="example"></a>Esempio
 
 ```cpp
 // interlockedadd64.cpp
@@ -167,7 +165,7 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

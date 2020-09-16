@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: f0bd8f3a96555cc29d06f74fb44a73bbed32889b
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 72eada34c6a64a8b4591afbee03b686f3da3ee11
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825578"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685411"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Specifica file EXE)
 
@@ -43,7 +43,7 @@ Se si specifica l'opzione [/c (compila senza collegamento)](c-compile-without-li
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Aprire la pagina delle proprietà**generale** del**linker** >  **Proprietà** > di configurazione.
+1. Aprire la **Configuration Properties**  >  pagina delle proprietà generale del**linker**proprietà di configurazione  >  **General** .
 
 1. Modificare la proprietà **file di output** . Scegliere **OK** per salvare le modifiche.
 
@@ -51,15 +51,13 @@ Se si specifica l'opzione [/c (compila senza collegamento)](c-compile-without-li
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
-La riga di comando seguente compila e collega tutti i file di origine C nella directory corrente. Il file eseguibile risultante è denominato PROCESS. exe e viene creato nella directory "C:\Utenti\nome Name\repos\My Project\bin".
+La riga di comando seguente compila e collega tutti i file di origine C nella directory corrente. Il file eseguibile risultante è denominato PROCESS.exe e viene creato nella directory "C:\Utenti\nome Name\repos\My Project\bin".
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 ```
-
-## <a name="example"></a>Esempio
 
 La riga di comando seguente crea un file eseguibile `C:\BIN` con lo stesso nome di base del primo file di origine nella directory corrente:
 
@@ -72,4 +70,4 @@ CL /FeC:\BIN\ *.C
 [Opzioni del file di output (/F)](output-file-f-options.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
-[Specifica del nome del percorso](specifying-the-pathname.md)<br/>
+[Specifica del percorso](specifying-the-pathname.md)<br/>

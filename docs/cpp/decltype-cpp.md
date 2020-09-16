@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561388"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683481"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -56,7 +56,7 @@ const A* a = new A();
 
 Esaminare quindi i tipi restituiti dalle quattro istruzioni riportate **`decltype`** nella tabella seguente.
 
-|.|Type|Note|
+|Istruzione|Type|Note|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|[Riferimento rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) a un oggetto **`const int`** .|
 |`decltype(var);`|**`int`**|Il tipo di variabile `var`:|
@@ -100,7 +100,7 @@ Le funzioni di inoltro eseguono il wrapping delle chiamate ad altre funzioni. Si
 
 In questo scenario non è possibile scrivere un'espressione di tipo appropriata senza l' **`decltype`** identificatore di tipo. L' **`decltype`** identificatore di tipo Abilita funzioni di inoltri generiche perché non perde le informazioni necessarie sul fatto che una funzione restituisca un tipo di riferimento. Per un esempio di codice di una funzione di inoltro, vedere l'esempio della funzione di modello `myFunc` precedente.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio di codice seguente viene dichiarato il tipo restituito ritardo-specificato della funzione di modello `Plus()`. La `Plus` funzione elabora i due operandi con l' **`operator+`** Overload. Di conseguenza, l'interpretazione dell'operatore di addizione ( **`+`** ) e il tipo restituito della `Plus` funzione dipendono dai tipi degli argomenti della funzione.
 
@@ -173,8 +173,6 @@ Plus(dx, dy) = 13.5
 Hello, world!
 x3.Dump() = 42
 ```
-
-## <a name="example"></a>Esempio
 
 **Visual Studio 2017 e versioni successive:** Il compilatore analizza gli **`decltype`** argomenti quando vengono dichiarati i modelli anziché creare un'istanza. Di conseguenza, se nell'argomento viene individuata una specializzazione non dipendente **`decltype`** , non verrà rinviata all'ora di creazione dell'istanza e verrà elaborata immediatamente e gli eventuali errori risultanti verranno diagnosticati in quel momento.
 
