@@ -3,12 +3,12 @@ title: Configurare un progetto C++ MSBuild per Linux in Visual Studio
 ms.date: 08/06/2020
 description: Configurare un progetto Linux basato su MSBuild in Visual Studio in modo da poterlo compilare.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043863"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685956"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Configurare un progetto C++ MSBuild per Linux in Visual Studio
 
@@ -110,13 +110,13 @@ Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiat
 
 ::: moniker range="vs-2017"
 
-![IntelliSense per le intestazioni remote](media/remote-header-intellisense.png)
+![Screenshot che mostra la finestra di dialogo Opzioni con la gestione connessione multipiattaforma > > le intestazioni remote gestione IntelliSense selezionata.](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![IntelliSense per le intestazioni remote](media/connection-manager-vs2019.png)
+![Screenshot che mostra la finestra di dialogo Opzioni con la gestione connessione > multipiattaforma selezionata.](media/connection-manager-vs2019.png)
 
 È possibile abilitare la registrazione per la risoluzione dei problemi:
 
@@ -124,7 +124,7 @@ Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiat
 
 ::: moniker-end
 
-## <a name="linux-target-locale"></a><a name="locale"></a>Impostazioni locali di destinazione per Linux
+## <a name="linux-target-locale"></a><a name="locale"></a> Impostazioni locali di destinazione per Linux
 
 Le impostazioni della lingua di Visual Studio non vengono propagate a destinazioni Linux perché Visual Studio non gestisce o configura i pacchetti installati. I messaggi visualizzati nella finestra di **output** , ad esempio gli errori di compilazione, vengono visualizzati usando la lingua e le impostazioni locali della destinazione Linux. È necessario configurare le destinazioni di Linux per le impostazioni locali desiderate.
 

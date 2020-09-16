@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 673fe6a8b5eb6dfcd9caa841b18d5b47fb7858bf
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228791"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686090"
 ---
 # <a name="compiler-error-c3535"></a>Errore del compilatore C3535
 
@@ -27,7 +27,7 @@ Il tipo della variabile dichiarata dalla **`auto`** parola chiave non può esser
 
 1. Assicurarsi che se la dichiarazione è un puntatore a un tipo, l'espressione di inizializzazione è un tipo di puntatore.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente viene restituito C3535 perché l'espressione di inizializzazione restituisce **`void`** .
 
@@ -42,8 +42,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>Esempio
-
 Nell'esempio seguente viene restituito C3535 perché l'istruzione dichiara una variabile `x` come puntatore a un tipo dedotto, ma il tipo dell'espressione dell'inizializzatore è Double. Di conseguenza, il compilatore non può dedurre il tipo della variabile.
 
 ```cpp
@@ -55,8 +53,6 @@ int main()
    return 0;
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene restituito C3535 perché `p` la variabile dichiara un puntatore a un tipo dedotto, ma l'espressione di inizializzazione non è un tipo di puntatore.
 

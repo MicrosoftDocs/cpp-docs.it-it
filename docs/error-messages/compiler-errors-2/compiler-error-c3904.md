@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2c5737a4442761cbaa84b532907e579eddb423d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749048"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686065"
 ---
 # <a name="compiler-error-c3904"></a>Errore del compilatore C3904
 
 ' property_accessor ': è necessario specificare i parametri numerici
 
-Controllare il numero di parametri nel `get` e `set` i metodi in base alle dimensioni della proprietà.
+Verificare il numero di parametri nei `get` metodi e `set` rispetto alle dimensioni della proprietà.
 
-- Il numero di parametri per il metodo `get` deve essere uguale al numero di dimensioni della proprietà o essere zero per le proprietà non indicizzate.
+- Il numero di parametri per il `get` metodo deve essere uguale al numero di dimensioni della proprietà o essere zero per le proprietà non indicizzate.
 
-- Il numero di parametri del metodo di `set` deve essere superiore al numero di dimensioni della proprietà.
+- Il numero di parametri del `set` metodo deve essere un numero maggiore del numero di dimensioni della proprietà.
 
 Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C3904.
 
@@ -46,8 +46,6 @@ ref class X {
    };
 };
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'C3904.
 

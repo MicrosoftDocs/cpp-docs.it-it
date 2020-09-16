@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-ms.openlocfilehash: 6eb1a05eaf6669daa4cb7142ff16a57f7caf39cd
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 85e9025c26cc821cdbd8e5218e184f05e2b96b24
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857606"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685831"
 ---
 # <a name="__clrcall"></a>__clrcall
 
@@ -23,15 +23,15 @@ I punti di ingresso sono funzioni separate e generate dal compilatore. Se una fu
 
 Quando si accetta l'indirizzo di una funzione nativa se non si specifica **__clrcall** , il compilatore utilizza il punto di ingresso nativo. **__clrcall** indica che la funzione è gestita e non è necessario passare attraverso la transizione da gestito a nativo. In questo caso, il compilatore utilizza il punto di ingresso gestito.
 
-Quando si usa `/clr` (non `/clr:pure` o `/clr:safe`) e **__clrcall** non viene usato, l'accettazione dell'indirizzo di una funzione restituisce sempre l'indirizzo della funzione del punto di ingresso nativo. Quando si utilizza **__clrcall** , la funzione del punto di ingresso nativo non viene creata, quindi si ottiene l'indirizzo della funzione gestita, non una funzione thunk del punto di ingresso. Per ulteriori informazioni, vedere [doppio thunk](../dotnet/double-thunking-cpp.md). Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Quando `/clr` `/clr:pure` viene usato (non o `/clr:safe` ) e **__clrcall** non viene usato, l'accettazione dell'indirizzo di una funzione restituisce sempre l'indirizzo della funzione del punto di ingresso nativo. Quando si utilizza **__clrcall** , la funzione del punto di ingresso nativo non viene creata, quindi si ottiene l'indirizzo della funzione gestita, non una funzione thunk del punto di ingresso. Per ulteriori informazioni, vedere [doppio thunk](../dotnet/double-thunking-cpp.md). Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
 [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implica che tutte le funzioni e i puntatori a funzione sono **__clrcall** e il compilatore non consentirà a una funzione all'interno di modulo di essere contrassegnata con un valore diverso da **__clrcall**. Quando si usa **/CLR: pure** , è possibile specificare **__clrcall** solo sui puntatori a funzione e sulle dichiarazioni esterne.
 
-È possibile chiamare direttamente **__clrcall** funzioni da codice C++ esistente compilato utilizzando **/CLR** , purché tale funzione disponga di un'implementazione MSIL. non è possibile chiamare le funzioni di **__clrcall** direttamente da funzioni che dispongono di intrinisics inline e chiamano specifiche della CPU, ad esempio, anche se tali funzioni vengono compilate con `/clr`.
+È possibile chiamare direttamente **__clrcall** funzioni dal codice C++ esistente compilato utilizzando **/CLR** , purché tale funzione disponga di un'implementazione MSIL. non è possibile chiamare le funzioni di **__clrcall** direttamente da funzioni con ASM inline e chiamate intrinisics specifiche della CPU, ad esempio, anche se tali funzioni vengono compilate con `/clr` .
 
-i puntatori a funzione **__clrcall** devono essere utilizzati solo nel dominio dell'applicazione in cui sono stati creati.  Invece di passare **__clrcall** puntatori a funzione tra domini applicazione, usare <xref:System.CrossAppDomainDelegate>. Per altre informazioni, vedere [domini applicazione e oggetti C++visivi ](../dotnet/application-domains-and-visual-cpp.md).
+i puntatori a funzione **__clrcall** devono essere utilizzati solo nel dominio dell'applicazione in cui sono stati creati.  Invece di passare **__clrcall** puntatori a funzione tra domini applicazione, usare <xref:System.CrossAppDomainDelegate> . Per ulteriori informazioni, vedere [domini applicazione e Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Si noti che quando una funzione viene dichiarata con **__clrcall**, il codice verrà generato quando necessario; ad esempio, quando viene chiamata la funzione.
 
@@ -69,8 +69,6 @@ in Func1
 in Func1
 in Func1
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente dimostra che è possibile definire un puntatore a funzione in modo da dichiarare, ad esempio, che il puntatore a funzione verrà richiamato solo dal codice gestito. Ciò consente al compilatore di chiamare direttamente la funzione gestita ed evitare il punto di ingresso nativo (problema del doppio thunk).
 

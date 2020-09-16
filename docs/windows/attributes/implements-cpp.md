@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842351"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686743"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -42,12 +42,12 @@ Per impostazione predefinita, `coclass` nella coclasse IDL vengono aggiunte solo
 |-|-|
 |**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|Sì|
-|**Attributi richiesti**|Nessuno|
-|**Attributi non validi**|Nessuno|
+|**Attributi richiesti**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente è in tre parti: un file con estensione IDL e il file con estensione h associato e un file C++.
 
@@ -96,8 +96,6 @@ library odod
    };
 }
 ```
-
-## <a name="example"></a>Esempio
 
 E il seguente file con estensione h, che deve essere disponibile anche per il compilatore.
 
@@ -376,8 +374,6 @@ CBar;
 #endif
 #endif
 ```
-
-## <a name="example"></a>Esempio
 
 Nel programma seguente, senza Implements, `IBar1` , `IBar2` e `ISna` non sarà presente nell'oggetto `coclass` IDL generato.
 

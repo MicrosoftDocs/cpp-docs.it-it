@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: ea7341b9c587a764c7366fa7b7c89e4fc67bc7d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 76729f49358e2a05b425730517e88ba14f2909c6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230857"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685724"
 ---
 # <a name="compiler-error-c3490"></a>Errore del compilatore C3490
 
@@ -23,7 +23,7 @@ Un'espressione lambda dichiarata in un **`const`** metodo non può modificare i 
 
 - Rimuovere il **`const`** modificatore dalla dichiarazione del metodo.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente viene generato C3490 perché modifica la variabile membro `_i` in un **`const`** Metodo:
 
@@ -41,8 +41,6 @@ class C
    int _i;
 };
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene risolto C3490 rimuovendo il **`const`** modificatore dalla dichiarazione del metodo:
 

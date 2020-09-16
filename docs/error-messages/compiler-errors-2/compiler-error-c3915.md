@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d83a837a24fe36b61d3f0fccae4dbe4e93cd3261
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756279"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686051"
 ---
 # <a name="compiler-error-c3915"></a>Errore del compilatore C3915
 
@@ -21,7 +21,7 @@ Un tipo non ha una proprietà indicizzata predefinita.
 
 Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C3915.
 
@@ -46,9 +46,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
-
-C3915 può anche verificarsi se si tenta di utilizzare un indicizzatore predefinito nello stesso modulo in cui è stato definito con <xref:System.Reflection.DefaultMemberAttribute>.
+C3915 può anche verificarsi se si tenta di utilizzare un indicizzatore predefinito nello stesso modulo in cui è stato definito con <xref:System.Reflection.DefaultMemberAttribute> .
 
 L'esempio seguente genera l'C3915.
 

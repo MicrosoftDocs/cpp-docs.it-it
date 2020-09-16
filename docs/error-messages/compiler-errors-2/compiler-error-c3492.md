@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdaeb8797eb71b205f737d08e74430f161cb8caa
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738310"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686548"
 ---
 # <a name="compiler-error-c3492"></a>Errore del compilatore C3492
 
@@ -23,7 +23,7 @@ Non è possibile acquisire un membro di un'unione senza nome.
 
 - Assegnare un nome all'unione e passare la struttura di unione completa all'elenco di acquisizione dell'espressione lambda.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'errore C3492 perché acquisisce un membro di un'unione anonima:
 
@@ -42,8 +42,6 @@ int main()
    [&x](char ch) { x = ch; }(ch); // C3492
 }
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente risolve l'errore C3492, assegnando un nome all'unione e passando la struttura di unione completa all'elenco di acquisizione dell'espressione lambda:
 

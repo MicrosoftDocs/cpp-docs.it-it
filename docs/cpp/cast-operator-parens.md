@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190157"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686319"
 ---
 # <a name="cast-operator-"></a>Operatore cast: ()
 
@@ -28,7 +28,7 @@ Qualsiasi espressione unaria viene considerata un'espressione cast.
 
 Il compilatore considera *cast-expression* come di tipo *type-name* dopo un cast di tipo. I cast possono essere utilizzati per convertire gli oggetti di qualsiasi tipo scalare verso o da qualsiasi altro tipo scalare. I cast di tipo espliciti sono limitati dalle stesse regole che determinano gli effetti delle conversioni implicite. I limiti aggiuntivi sui cast possono risultare dalle dimensioni effettive o dalla rappresentazione di tipi specifici.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 ```cpp
 // expre_CastOperator.cpp
@@ -47,8 +47,6 @@ int main()
     cout << "i = " << i << endl;
 }
 ```
-
-## <a name="example"></a>Esempio
 
 ```cpp
 // expre_CastOperator2.cpp
@@ -121,7 +119,7 @@ Raw Bytes after cast:   Exciting
 ## <a name="see-also"></a>Vedere anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operatore di conversione di tipi esplicita: ()](../cpp/explicit-type-conversion-operator-parens.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatore di conversione esplicita del tipo: ()](../cpp/explicit-type-conversion-operator-parens.md)<br/>
 [Operatori di cast](../cpp/casting-operators.md)<br/>
-[Operatori di cast](../c-language/cast-operators.md)
+[Operatori cast](../c-language/cast-operators.md)

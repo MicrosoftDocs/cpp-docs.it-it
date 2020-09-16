@@ -5,12 +5,12 @@ ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 07e88da9a8a3712e1d37e319c29fd25aebce8ea7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 333bb6ce1f3ea0db6b07d70ddd60d4a4be337abd
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749303"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686509"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
 
@@ -32,7 +32,7 @@ Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e l
 
 1. Nella finestra di dialogo **Configura nuovo progetto** immettere *HelloWorld* nella casella di modifica **nome progetto** . Scegliere **Crea** per creare il progetto.
 
-   ![Nome e creazione del nuovo progetto](media/vs2019-configure-new-project-hello-world.png "Nome e creazione del nuovo progetto")
+   ![Screenshot della finestra di dialogo Configura nuovo progetto con Hello World digitato nel campo di testo nome progetto.](media/vs2019-configure-new-project-hello-world.png "Nome e creazione del nuovo progetto")
 
    Visual Studio crea un nuovo progetto. È possibile aggiungere e modificare il codice sorgente. Per impostazione predefinita, il modello di applicazione console compila il codice sorgente con un'app "Hello World":
 
@@ -52,7 +52,7 @@ Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e l
 
 1. Nella finestra di dialogo **nuovo progetto** selezionare **installato > Visual C++** se non è già selezionato, quindi scegliere il modello di **progetto vuoto** . Nel campo **nome** immettere *HelloWorld*. Scegliere **OK** per creare il progetto.
 
-   ![Nome e creazione del nuovo progetto](media/vscpp-concierge-project-name-callouts.png "Nome e creazione del nuovo progetto")
+   ![Screenshot della finestra di dialogo nuovo progetto con installato > Visual C Plus più selezionato e denominato out, l'opzione di progetto vuota denominata out e hellow World digitato nella casella di testo nome.](media/vscpp-concierge-project-name-callouts.png "Nome e creazione del nuovo progetto")
 
 Visual Studio crea un nuovo progetto vuoto. È possibile specializzarsi per il tipo di app che si vuole creare e aggiungere i file di codice sorgente. Questa operazione verrà eseguita più avanti.
 

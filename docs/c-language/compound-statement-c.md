@@ -5,12 +5,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: 93f7fd24049c744874fb0ab3bda37eedef3a139a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 473a4acfa9f6fa2c9089f242a24962570cae4f1c
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87200582"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686470"
 ---
 # <a name="compound-statement-c"></a>Istruzione composta (C)
 
@@ -39,7 +39,7 @@ Le variabili dichiarate in un blocco con la **`auto`** **`register`** parola chi
 
 In questo esempio viene illustrata un'istruzione composta:
 
-```
+```C
 if ( i > 0 )
 {
     line[i] = x;

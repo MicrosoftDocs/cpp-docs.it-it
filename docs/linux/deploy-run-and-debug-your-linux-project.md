@@ -3,12 +3,12 @@ title: Distribuire, eseguire ed eseguire il debug del progetto C++ MSBuild per L
 description: Viene descritto come compilare, eseguire ed eseguire il debug del codice nella destinazione remota da un progetto C++ Linux basato su MSBuild in Visual Studio.
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4200e30b445f4a09fc60083db0067996c96ea953
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043889"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686704"
 ---
 # <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Distribuire, eseguire ed eseguire il debug del progetto MSBuild Linux
 
@@ -38,7 +38,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
    Per il debug delle applicazioni in esecuzione su Linux viene usato GDB. Quando si esegue il debug in un sistema remoto (non WSL), è possibile eseguire GDB in due modi diversi selezionabili dall'opzione **Modalità di debug** nella pagina delle proprietà **Debug** del progetto:
 
-   ![Opzioni GDB](media/vs2019-debugger-settings.png)
+   ![Screenshot della finestra di dialogo Pagine delle proprietà dell'app console Linux di Visual Studio 2019 con proprietà di configurazione > debug selezionato e la modalità di debug evidenziate con G B D selezionato ed evidenziato dall'elenco a discesa.](media/vs2019-debugger-settings.png)
 
    ::: moniker-end
 
@@ -46,7 +46,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
    Per il debug delle applicazioni in esecuzione su Linux viene usato GDB. È possibile eseguire GDB in due modalità diverse, selezionabili dall'opzione **Modalità di debug** nella pagina delle proprietà di **debug** del progetto:
 
-   ![Opzioni GDB](media/vs2017-debugger-settings.png)
+   ![Screenshot della finestra di dialogo Pagine delle proprietà dell'app console Linux di Visual Studio 2017 con proprietà di configurazione > debug selezionato e la modalità di debug evidenziate con G B D selezionato ed evidenziato dall'elenco a discesa.](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 
@@ -92,7 +92,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 ## <a name="configure-other-debugging-options-msbuild-projects"></a>Configurare altre opzioni di debug (progetti MSBuild)
 
 - Gli argomenti della riga di comando possono essere passati all'eseguibile usando l'elemento **Argomenti del programma** nella pagina delle proprietà di **debug** del progetto.
-- È possibile esportare la `DISPLAY` variabile di ambiente usando il **comando di pre-avvio** nelle pagine delle proprietà di**debug** del progetto. Ad esempio: `export DISPLAY=:0.0`
+- È possibile esportare la `DISPLAY` variabile di ambiente usando il **comando di pre-avvio** nelle pagine delle proprietà di**debug** del progetto. ad esempio `export DISPLAY=:0.0`
 
    ![Argomenti del programma](media/settings_programarguments.png)
 
@@ -123,7 +123,7 @@ L'elemento **AttachOptionsForConnection** include la maggior parte degli attribu
 
 ::: moniker range="vs-2019"
 
-## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a>Specificare computer diversi per la compilazione e il debug in progetti Linux basati su MSBuild
+## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a> Specificare computer diversi per la compilazione e il debug in progetti Linux basati su MSBuild
 
 In Visual Studio 2019 versione 16,1 è possibile separare il computer di compilazione remota dal computer di debug remoto per i progetti Linux basati su MSBuild e i progetti CMake destinati a un computer Linux remoto. Ad esempio, è ora possibile eseguire la compilazione su un sistema x64 e distribuire in un dispositivo ARM, quando si usano scenari IoT come destinazione.
 

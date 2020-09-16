@@ -4,12 +4,12 @@ description: Usare l'editor di codice C++ in Visual Studio per formattare, esplo
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 43c4529ae0c5ac5a8c4fae2ae402ed3c6e222c37
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206219"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686332"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Modificare ed effettuare il refactoring del codice C++ in Visual Studio
 
@@ -98,17 +98,17 @@ Per alcuni tipi di errori e i modelli di codice comuni, l'editor offre una **Cor
 
 Nell'esempio seguente poiché è stato dichiarato un `vector` ma non è stata trovata alcuna definizione, l'editor suggerisce di includere il file di intestazione necessario:
 
-![C&#43;&#43; correzione rapida](../ide/media/quick-fix-for-header-cpp.png "Correzione rapida C++")
+![Screenshot che mostra l'errore controllo ortografia durante e la correzione rapida offerta dall'editor.](../ide/media/quick-fix-for-header-cpp.png "Correzione rapida C++")
 
 L'editor offre anche correzioni rapide per alcune opportunità di refactoring. Ad esempio, se si dichiara una classe in un file di intestazione, Visual Studio suggerisce di creare una definizione in un file separato con estensione cpp.
 
-![C&#43;&#43; correzione rapida](../ide/media/quick-fix.png "Correzione rapida C++")
+![Screenshot che illustra la correzione rapida con l'opzione di creazione della definizione dell'iteratore della route del canale nel canale punto C P P evidenziato.](../ide/media/quick-fix.png "Correzione rapida C++")
 
-## <a name="change-tracking"></a>Rilevamento modifiche
+## <a name="change-tracking"></a>Change tracking
 
 Ogni volta che si apporta una modifica in un file, viene visualizzata una barra gialla a sinistra per indicare che sono state apportate modifiche non salvate. Quando si salva il file, la barra diventa verde. Le barre di colore giallo e verde rimangono visualizzate fino a quando il documento rimane aperto nell'editor. Le barre rappresentano le modifiche apportate dall'ultima apertura del documento.
 
-![C&#43;&#43; rilevamento modifiche](../ide/media/change-tracking-cpp.png "Rilevamento modifiche")
+![C&#43;&#43; rilevamento modifiche](../ide/media/change-tracking-cpp.png "Change tracking")
 
 ## <a name="move-code"></a>Spostare il codice
 
@@ -134,9 +134,9 @@ Per altre informazioni, vedere [Aggiunta di funzionalità con creazioni guidate 
 
 ## <a name="refactoring"></a>Refactoring
 
-I refactoring sono disponibili nel menu di scelta rapida Azioni rapide oppure facendo clic su una [lampadina](/visualstudio/ide/perform-quick-actions-with-light-bulbs) nell'editor.  Alcuni sono inclusi anche nel menu **Modifica > Refactoring**.  Queste funzionalità includono:
+I refactoring sono disponibili nel menu di scelta rapida Azioni rapide oppure facendo clic su una [lampadina](/visualstudio/ide/perform-quick-actions-with-light-bulbs) nell'editor.  Alcuni sono inclusi anche nel menu **Modifica > Refactoring**.  Queste funzionalità comprendono:
 
-- [Rinomina](refactoring/rename.md)
+- [Rinominare](refactoring/rename.md)
 - [Estrai funzione](refactoring/extract-function.md)
 - [Implementare virtuali puri](refactoring/implement-pure-virtuals.md)
 - [Crea dichiarazione/definizione](refactoring/create-declaration-definition.md)

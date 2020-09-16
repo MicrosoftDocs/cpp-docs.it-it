@@ -3,12 +3,12 @@ title: Creare un progetto C++ MSBuild per Linux in Visual Studio
 ms.date: 08/04/2020
 description: Creare un nuovo progetto Linux basato su MSBuild in Visual Studio.
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 559a868ebdea7e3b835a82c31849d0e2fdeaa6c9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043850"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686691"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>Creare un progetto C++ MSBuild per Linux in Visual Studio
 
@@ -31,7 +31,7 @@ Per creare un nuovo progetto Linux in Visual Studio 2017, seguire questa procedu
 1. Selezionare **File > Nuovo progetto** in Visual Studio o premere **CTRL + MAIUSC + N**.
 1. Selezionare il nodo **Visual C++ > Multipiattaforma > Linux**, quindi selezionare il tipo di progetto che si vuole creare. Immettere un **nome** e una **posizione**, quindi scegliere **OK**.
 
-   ![Nuovo progetto Linux](media/newproject.png)
+   ![Screenshot che mostra la finestra di dialogo nuovo progetto con Visual C Plus Plus > multipiattaforma > Linux selezionata, tutti i tipi di progetto indicati e le caselle di testo nome e percorso.](media/newproject.png)
 
    | Tipo progetto | Descrizione |
    | ------------ | --- |
@@ -61,7 +61,7 @@ Per creare un nuovo progetto Linux in Visual Studio 2019, seguire questa procedu
 1. Selezionare **File > Nuovo progetto** in Visual Studio o premere **CTRL + MAIUSC + N**.
 1. Impostare **Linguaggio** su **C++** e cercare "Linux". Selezionare il tipo di progetto da creare, quindi scegliere **Avanti**. Immettere un **nome** e una **posizione** e scegliere **Crea**.
 
-   ![Nuovo progetto Linux](media/newproject-vs2019.png)
+   ![Screenshot della finestra di dialogo Aggiungi nuovo progetto con Linux digitato nella casella di testo Cerca.](media/newproject-vs2019.png)
 
    | Tipo progetto | Descrizione |
    | ------------ | --- |

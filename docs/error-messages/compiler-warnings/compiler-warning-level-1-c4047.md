@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-ms.openlocfilehash: 1bed592325f864e41f7dfdf2edaad86630e4b205
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: be2f755793de53aa8ba88ac0a77c5031c7112226
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164196"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686405"
 ---
 # <a name="compiler-warning-level-1-c4047"></a>Avviso del compilatore (livello 1) C4047
 
@@ -19,7 +19,7 @@ ms.locfileid: "80164196"
 
 Un puntatore può puntare a una variabile (un livello di riferimento indiretto), a un altro puntatore che punta a una variabile (due livelli di riferimento indiretto) e così via.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C4047:
 
@@ -38,8 +38,6 @@ int main() {
    p2 = q2;
 }
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'C4047:
 

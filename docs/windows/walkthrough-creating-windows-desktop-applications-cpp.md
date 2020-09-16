@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231572"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686600"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procedura dettagliata: creare un'applicazione desktop di Windows tradizionale (C++)
 
@@ -55,11 +55,11 @@ Per creare il primo progetto desktop di Windows, seguire questa procedura. Man m
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **DesktopApp** , scegliere **Aggiungi**, quindi scegliere **nuovo elemento**.
 
-   ![Aggiungi nuovo elemento al progetto DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Aggiungi nuovo elemento al progetto DesktopApp")
+   ![Breve video che mostra l'utente che aggiunge un nuovo elemento al progetto DesktopApp in Visual Studio 2019.](../build/media/desktop-app-project-add-new-item-153.gif "Aggiungi nuovo elemento al progetto DesktopApp")
 
 1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **File di C++ (.cpp)**. Nella casella **nome** Digitare un nome per il file, ad esempio *HelloWindowsDesktop. cpp*. Scegliere **Aggiungi**.
 
-   ![Aggiungere il file con estensione cpp al progetto DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Aggiungere il file con estensione cpp al progetto DesktopApp")
+   ![Screenshot della finestra di dialogo Aggiungi nuovo elemento in Visual Studio 2019 con installato > Visual C Plus più selezionato e l'opzione del file C Plus Plus evidenziata.](../build/media/desktop-app-add-cpp-file-153.png "Aggiungere il file con estensione cpp al progetto DesktopApp")
 
 Il progetto è stato creato e il file di origine viene aperto nell'editor. Per continuare, passare a [creare il codice](#create-the-code).
 
@@ -75,17 +75,17 @@ Il progetto è stato creato e il file di origine viene aperto nell'editor. Per c
 
    Nella casella **nome** Digitare un nome per il progetto, ad esempio *DesktopApp*. Scegliere **OK**.
 
-   ![Assegnare un nome al progetto DesktopApp](../build/media/desktop-app-new-project-name-153.png "Assegnare un nome al progetto DesktopApp")
+   ![Screenshot della finestra di dialogo nuovo progetto in Visual Studio 2017 con installato > Visual C Plus Plus > desktop di Windows selezionato, l'opzione di creazione guidata desktop di Windows evidenziato e DesktopApp digitato nella casella di testo nome.](../build/media/desktop-app-new-project-name-153.png "Assegnare un nome al progetto DesktopApp")
 
 1. Nella finestra di dialogo **progetto desktop Windows** , in **tipo di applicazione**Selezionare **applicazione Windows (exe)**. In **Opzioni aggiuntive**selezionare **Progetto vuoto**. Assicurarsi che l' **intestazione precompilata** non sia selezionata. Scegliere **OK** per creare il progetto.
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **DesktopApp** , scegliere **Aggiungi**, quindi scegliere **nuovo elemento**.
 
-   ![Aggiungi nuovo elemento al progetto DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Aggiungi nuovo elemento al progetto DesktopApp")
+   ![Breve video che mostra l'utente che aggiunge un nuovo elemento al progetto DesktopApp in Visual Studio 2017.](../build/media/desktop-app-project-add-new-item-153.gif "Aggiungi nuovo elemento al progetto DesktopApp")
 
 1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **File di C++ (.cpp)**. Nella casella **nome** Digitare un nome per il file, ad esempio *HelloWindowsDesktop. cpp*. Scegliere **Aggiungi**.
 
-   ![Aggiungere il file con estensione cpp al progetto DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Aggiungere il file con estensione cpp al progetto DesktopApp")
+   ![Screenshot della finestra di dialogo Aggiungi nuovo elemento in Visual Studio 2017 con installato > Visual C Plus più selezionato e l'opzione del file C Plus Plus evidenziata.](../build/media/desktop-app-add-cpp-file-153.png "Aggiungere il file con estensione cpp al progetto DesktopApp")
 
 Il progetto è stato creato e il file di origine viene aperto nell'editor. Per continuare, passare a [creare il codice](#create-the-code).
 
@@ -101,7 +101,7 @@ Il progetto è stato creato e il file di origine viene aperto nell'editor. Per c
 
    Nella casella **nome** Digitare un nome per il progetto, ad esempio *DesktopApp*. Scegliere **OK**.
 
-   ![Assegnare un nome al progetto DesktopApp](../build/media/desktop-app-new-project-name-150.png "Assegnare un nome al progetto DesktopApp")
+   ![Screenshot della finestra di dialogo nuovo progetto in Visual Studio 2015 con i modelli di > installati > Visual C Plus Plus > Win32 selezionato, l'opzione del progetto Win32 evidenziato e DesktopApp digitato nella casella di testo nome.](../build/media/desktop-app-new-project-name-150.png "Assegnare un nome al progetto DesktopApp")
 
 1. Nella pagina **Panoramica** della **creazione guidata applicazione Win32**fare clic su **Avanti**.
 
@@ -111,11 +111,11 @@ Il progetto è stato creato e il file di origine viene aperto nell'editor. Per c
 
 1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto DesktopApp, scegliere **Aggiungi**, quindi scegliere **nuovo elemento**.
 
-   ![Aggiungi nuovo elemento al progetto DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "Aggiungi nuovo elemento al progetto DesktopApp")
+   ![Breve video che mostra l'utente che aggiunge un nuovo elemento al progetto DesktopApp in Visual Studio 2015.](../build/media/desktop-app-project-add-new-item-150.gif "Aggiungi nuovo elemento al progetto DesktopApp")
 
 1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **File di C++ (.cpp)**. Nella casella **nome** Digitare un nome per il file, ad esempio *HelloWindowsDesktop. cpp*. Scegliere **Aggiungi**.
 
-   ![Aggiungere il file con estensione cpp al progetto DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Aggiungere il file con estensione cpp al progetto DesktopApp")
+   ![Screenshot della finestra di dialogo Aggiungi nuovo elemento in Visual Studio 2015 con installato > Visual C Plus più selezionato e l'opzione del file C Plus Plus evidenziata.](../build/media/desktop-app-add-cpp-file-150.png "Aggiungere il file con estensione cpp al progetto DesktopApp")
 
 Il progetto è stato creato e il file di origine viene aperto nell'editor.
 
@@ -388,7 +388,7 @@ Si apprenderà quindi come creare il codice per un'applicazione desktop di Windo
    }
    ```
 
-   `HDC`nel codice è un handle per un contesto di dispositivo, che viene usato per creare l'area client della finestra. Utilizzare le `BeginPaint` `EndPaint` funzioni e per preparare e completare il disegno nell'area client. `BeginPaint`Restituisce un handle per il contesto di periferica di visualizzazione usato per disegnare nell'area client. `EndPaint`termina la richiesta di disegno e rilascia il contesto di dispositivo.
+   `HDC` nel codice è un handle per un contesto di dispositivo, che viene usato per creare l'area client della finestra. Utilizzare le `BeginPaint` `EndPaint` funzioni e per preparare e completare il disegno nell'area client. `BeginPaint` Restituisce un handle per il contesto di periferica di visualizzazione usato per disegnare nell'area client. `EndPaint` termina la richiesta di disegno e rilascia il contesto di dispositivo.
 
 1. Un'applicazione gestisce in genere molti altri messaggi. Ad esempio, [WM_CREATE](/windows/win32/winmsg/wm-create) al momento della creazione di una finestra e [WM_DESTROY](/windows/win32/winmsg/wm-destroy) quando la finestra viene chiusa. Il codice seguente illustra una funzione `WndProc` di base, ma completa.
 

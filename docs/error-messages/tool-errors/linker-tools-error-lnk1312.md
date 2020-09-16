@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 69af2bd2c22fdb1188cf0b7119791e451e80f966
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990915"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686496"
 ---
 # <a name="linker-tools-error-lnk1312"></a>Errore degli strumenti del linker LNK1312
 
@@ -19,7 +19,7 @@ file danneggiato o non valido: Impossibile importare l'assembly
 
 Quando si compila un assembly, un file diverso da un modulo o un assembly compilato con **/CLR** è stato passato all'opzione del linker **/ASSEMBLYMODULE** .  Se è stato passato un file oggetto a **/ASSEMBLYMODULE**, è sufficiente passare l'oggetto direttamente al linker, anziché a **/ASSEMBLYMODULE**.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente è stato creato il file con estensione obj.
 
@@ -31,8 +31,6 @@ public:
    int i;
 };
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'LNK1312.
 

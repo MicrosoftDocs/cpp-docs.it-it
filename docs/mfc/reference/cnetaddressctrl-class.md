@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 30fc510272afc90ae37b583e807d10c3374df052
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562129"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686587"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -37,7 +37,7 @@ La classe `CNetAddressCtrl` rappresenta il controllo indirizzo di rete, che è p
 class CNetAddressCtrl : public CEdit
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -66,13 +66,11 @@ Nella figura seguente è illustrata una finestra di dialogo che contiene un cont
 
 ![Finestra di dialogo con controllo per l'indirizzo di rete e finestra popup](../../mfc/reference/media/cnetaddctrl.png "Finestra di dialogo con controllo per l'indirizzo di rete e finestra popup")
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio di codice seguente è una parte di una finestra di dialogo che convalida un indirizzo di rete. I gestori eventi per tre pulsanti di opzione specificano che l'indirizzo di rete può essere uno dei tre tipi di indirizzo. L'utente immette un indirizzo nella casella di testo del controllo di rete, quindi preme un pulsante per convalidare l'indirizzo. Se l'indirizzo è valido, viene visualizzato un messaggio di operazione completata; in caso contrario, viene visualizzato il messaggio di errore infotip predefinito.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
-
-## <a name="example"></a>Esempio
 
 L'esempio di codice seguente dal file di intestazione della finestra di dialogo definisce le variabili [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) e [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) richieste dal metodo [CNetAddressCtrl:: GetAddress](#getaddress) .
 
@@ -256,7 +254,7 @@ Usare il metodo [CNetAddressCtrl:: SetAllowType](#setallowtype) per specificare 
 
 Questo messaggio richiama la macro [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) , descritta nell'Windows SDK. Tale macro invia il messaggio di NCM_SETALLOWTYPE.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Classe CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

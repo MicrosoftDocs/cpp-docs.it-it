@@ -2,12 +2,12 @@
 title: Configurare progetti Linux per l'uso di Address Sanitizer
 description: Descrive come configurare i progetti Linux C++ in Visual Studio per l'uso di Address Sanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364315"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686665"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurare progetti Linux per l'uso di Address Sanitizer
 
@@ -33,13 +33,13 @@ Quando Address Sanitizer rileva un errore, arresta l'esecuzione immediatamente. 
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Abilitare Address Sanitizer per progetti Linux basati su MSBuild
 
 > [!NOTE]
-> A partire da Visual Studio 2019 versione 16.4, AddressSanitizer per i progetti Linux viene abilitato tramite **le proprietà** > di configurazione**C/C.** > **Enable Address Sanitizer**
+> A partire da Visual Studio 2019 versione 16,4, AddressSanitizer per i progetti Linux è abilitato tramite le **proprietà di configurazione**  >  **C/C++**  >  **abilitare l'igienizzazione degli indirizzi**.
 
-Per abilitare Address Sanitizer per progetti Linux basati su MSBuild, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Proprietà**. Successivamente, passare a Proprietà**Sanitizers** > di **configurazione****C/C** >  L'abilitazione di Address Sanitizer viene eseguita tramite flag del compilatore e del linker. Perché funzioni, è necessario ricompilare il progetto.
+Per abilitare Address Sanitizer per progetti Linux basati su MSBuild, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Proprietà**. Passare quindi a **proprietà di configurazione**  >  sterilizzatori**C/C++**  >  **Sanitizers**. L'abilitazione di Address Sanitizer viene eseguita tramite flag del compilatore e del linker. Perché funzioni, è necessario ricompilare il progetto.
 
 ![Abilitare Address Sanitizer per un progetto MSBuild](media/msbuild-asan-prop-page.png)
 
-È possibile passare flag di runtime ASan facoltativi passando a **Proprietà** > di configurazione che**debug contrassegni** > di**runtime AddressSanitizer**. Fare clic sulla freccia verso il basso per aggiungere o rimuovere flag.
+È possibile passare flag di runtime Asan facoltativi passando a **proprietà di configurazione**  >  **debug**dei  >  **flag di runtime AddressSanitizer**. Fare clic sulla freccia verso il basso per aggiungere o rimuovere flag.
 
 ![Configurare flag di runtime di Address Sanitizer](media/msbuild-asan-runtime-flags.png)
 
@@ -49,11 +49,11 @@ Per abilitare Address Sanitizer per CMake, fare clic con il pulsante destro del 
 
 Assicurarsi di aver selezionato una configurazione Linux (ad esempio, **Linux-Debug**) nel riquadro sinistro della finestra di dialogo:
 
-![Configurazione di debug Linux](media/linux-debug-configuration.png)
+![Screenshot del riquadro sinistro con il debug di Linux elencato come una delle opzioni di configurazione.](media/linux-debug-configuration.png)
 
 Le opzioni di Address Sanitizer sono in **Generali**. Immettere i flag di runtime di Address Sanitizer nel formato "flag=valore", separandoli con il punto e virgola.
 
-![Configurazione di debug Linux](media/cmake-settings-asan-options.png)
+![Screenshot dell'opzione Abilita sanificatore indirizzo che mostra alcuni flag di runtime di sterilizzazione degli indirizzi.](media/cmake-settings-asan-options.png)
 
 ## <a name="install-the-asan-debug-symbols"></a>Installare i simboli di debug di Address Sanitizer
 

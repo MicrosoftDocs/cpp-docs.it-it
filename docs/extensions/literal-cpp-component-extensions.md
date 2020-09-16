@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214256"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686730"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI e C++/CX)
 
@@ -49,7 +49,7 @@ Per altre informazioni, vedere [static](../cpp/storage-classes-cpp.md) e [const]
 
 **literal** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Questo esempio mostra che una variabile **letterale** implica **`static`** .
 
@@ -64,8 +64,6 @@ int main() {
    int value = X::i;
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene illustrato l'effetto di literal nei metadati:
 
@@ -87,8 +85,6 @@ Si noti la differenza nei metadati per `sc` e `lit`: la direttiva `modopt` viene
 ```
 .field public static literal int32 lit = int32(0x0000000A)
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente, creato in C#, fa riferimento ai metadati creati nell'esempio precedente e mostra l'effetto delle variabili **literal** e **static const**:
 

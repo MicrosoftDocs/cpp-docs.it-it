@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: e2329111e916df9eac99d156bcf58a58e148cb08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9339797f42967ef1de0253b1e51092e6d98df5d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228817"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686782"
 ---
 # <a name="compiler-error-c3532"></a>Errore del compilatore C3532
 
@@ -25,7 +25,7 @@ Il tipo indicato non può essere dichiarato con la **`auto`** parola chiave. Non
 
 1. Assicurarsi di non dichiarare una matrice o un tipo restituito di metodo.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente restituisce C3532 perché la **`auto`** parola chiave non può dichiarare un tipo restituito dal metodo.
 
@@ -34,8 +34,6 @@ L'esempio seguente restituisce C3532 perché la **`auto`** parola chiave non pu�
 // Compile with /Zc:auto
 auto f(){}   // C3532
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene restituito C3532 perché la **`auto`** parola chiave non può dichiarare una matrice.
 

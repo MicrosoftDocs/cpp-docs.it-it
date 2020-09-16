@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833115"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686483"
 ---
 # <a name="db_column"></a>db_column
 
@@ -25,7 +25,7 @@ Associa una colonna specificata a una variabile nel set di righe.
 
 ### <a name="parameters"></a>Parametri
 
-*ordinal*<br/>
+*ordinale*<br/>
 Il numero di colonna ordinale ( `DBCOLUMNINFO` ordinale) o il nome della colonna (stringa ANSI o Unicode) corrispondente a un campo nel set di righe a cui associare i dati. Se si utilizzano i numeri, è possibile ignorare gli ordinali consecutivi (ad esempio: 1, 2, 3, 5). Il nome può contenere spazi se il provider di OLE DB usato lo supporta. È ad esempio possibile utilizzare uno dei formati seguenti:
 
 ```cpp
@@ -58,7 +58,7 @@ Quando il provider di attributi del consumer applica questo attributo a una clas
 
 Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Questo esempio associa una colonna di una tabella a un **`long`** membro dati e specifica i campi di stato e lunghezza.
 
@@ -77,8 +77,6 @@ class CProducts {
    [ db_column("1", status="m_dwProductIDStatus", length="m_dwProductIDLength") ] LONG m_ProductID;
 };
 ```
-
-## <a name="example"></a>Esempio
 
 Questo esempio associa quattro colonne a un oggetto **`long`** , una stringa di caratteri, un timestamp e un `DB_NUMERIC` numero intero, in questo ordine.
 
@@ -104,8 +102,8 @@ class CProducts {
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , Member, metodo|
 |**Ripetibile**|No|
-|**Attributi richiesti**|Nessuno|
-|**Attributi non validi**|Nessuno|
+|**Attributi richiesti**|nessuno|
+|**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

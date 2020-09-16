@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162036"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686522"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Avviso del compilatore (livello 2) C4250
 
@@ -22,6 +22,8 @@ Due o più membri hanno lo stesso nome. Quello in `class2` viene ereditato perch
 Per disattivare C4250, usare il pragma [warning](../../preprocessor/warning.md) .
 
 Poiché una classe base virtuale è condivisa tra più classi derivate, un nome in una classe derivata domina un nome in una classe base. Data la gerarchia di classi seguente, ad esempio, sono presenti due definizioni di func ereditate all'interno di Diamond, ovvero l'istanza vbc:: Func () tramite la classe debole e l'oggetto dominante:: Func () tramite la classe dominante. Chiamata non qualificata di Func () tramite un oggetto classe Diamond, che chiama sempre l'istanza dominate:: Func ().  Se la classe debole doveva introdurre un'istanza di Func (), nessuna definizione verrebbe dominata e la chiamata verrebbe contrassegnata come ambigua.
+
+## <a name="examples"></a>Esempi
 
 ```cpp
 // C4250.cpp
@@ -44,8 +46,6 @@ int main() {
    d.func();   // C4250
 }
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'C4250.
 
@@ -77,8 +77,6 @@ int main() {
    cout << eObject.operator int() << endl;
 }
 ```
-
-## <a name="example"></a>Esempio
 
 In questo esempio viene illustrata una situazione più complessa. L'esempio seguente genera l'C4250.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 18ca9f7d61d96dcc81935bd3563f57bc37da8cd7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e3c773d0498a35c7b5d053268bff26f9943103b
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228804"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686769"
 ---
 # <a name="compiler-error-c3533"></a>Errore del compilatore C3533
 
@@ -23,7 +23,7 @@ Un metodo o un parametro di modello non può essere dichiarato con la **`auto`**
 
 1. Rimuovere la **`auto`** parola chiave dalla dichiarazione di parametro.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente viene restituito C3533 perché dichiara un parametro di funzione con la **`auto`** parola chiave e viene compilato con **/Zc: auto**.
 
@@ -32,8 +32,6 @@ Nell'esempio seguente viene restituito C3533 perché dichiara un parametro di fu
 // Compile with /Zc:auto
 void f(auto j) {} // C3533
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene restituito C3533 in modalità C++ 14 perché dichiara un parametro di modello con la **`auto`** parola chiave e viene compilato con **/Zc: auto**. In C++ 17 si tratta di una definizione valida di un modello di classe con un singolo parametro di modello non di tipo il cui tipo viene dedotto.
 

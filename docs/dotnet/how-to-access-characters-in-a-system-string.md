@@ -7,20 +7,20 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb62eb0fecbee202e4d01635a60da565241822ee
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221367"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686795"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: accedere ai caratteri in System::String
 
 È possibile accedere ai caratteri di un <xref:System.String> oggetto per le chiamate a prestazioni elevate a funzioni non gestite che accettano `wchar_t*` stringhe. Il metodo produce un puntatore interno al primo carattere dell' <xref:System.String> oggetto. Questo puntatore può essere modificato direttamente o aggiunto e passato a una funzione che prevede una stringa ordinata **`wchar_t`** .
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
-`PtrToStringChars`Restituisce un oggetto <xref:System.Char> , che è un puntatore interno (noto anche come `byref` ). Di conseguenza, è soggetto a Garbage Collection. Non è necessario aggiungere questo puntatore a meno che non lo si passi a una funzione nativa.
+`PtrToStringChars` Restituisce un oggetto <xref:System.Char> , che è un puntatore interno (noto anche come `byref` ). Di conseguenza, è soggetto a Garbage Collection. Non è necessario aggiungere questo puntatore a meno che non lo si passi a una funzione nativa.
 
 Si consideri il codice seguente.  L'aggiunta non è necessaria perché `ppchar` è un puntatore interno e se il Garbage Collector sposta la stringa a cui punta, verrà aggiornato anche `ppchar` . Senza un [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), il codice funzionerà e non avrà il potenziale impatto sulle prestazioni causato dall'aggiunta.
 
@@ -45,8 +45,6 @@ int main() {
 ```Output
 abcdefg
 ```
-
-## <a name="example"></a>Esempio
 
 Questo esempio mostra dove è necessario aggiungere il blocco.
 
@@ -74,8 +72,6 @@ int main() {
 ```Output
 7
 ```
-
-## <a name="example"></a>Esempio
 
 Un puntatore interno ha tutte le proprietà di un puntatore C++ nativo. Ad esempio, è possibile usarlo per esaminare una struttura di dati collegata ed eseguire inserimenti ed eliminazioni usando un solo puntatore:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228713"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686613"
 ---
 # <a name="generic-delegates-ccli"></a>Delegati generici (C++/CLI)
 
@@ -50,7 +50,7 @@ Nome del delegato.
 *formal-parameters*<br/>
 (Facoltativo) Elenco di parametri del delegato.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 I parametri di tipo delegato sono specificati nel punto in cui viene creato un oggetto delegato. Sia il delegato sia il metodo associato a esso devono avere la stessa firma. Di seguito è riportato un esempio di una dichiarazione di delegato generico.
 
@@ -60,8 +60,6 @@ I parametri di tipo delegato sono specificati nel punto in cui viene creato un o
 generic <class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene mostrato che:
 
@@ -104,8 +102,6 @@ int main() {
       gcnew GenDelegate<int>(&MyClass::MyStaticMethod<int>);
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene dichiarato un delegato generico `GenDelegate<ItemType>` di cui, successivamente, viene creata un'istanza associandolo al metodo `MyMethod` in cui viene utilizzato il parametro di tipo `ItemType`. Vengono create e richiamate due istanze del delegato (Integer e double).
 
