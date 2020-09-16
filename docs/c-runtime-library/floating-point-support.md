@@ -1,6 +1,7 @@
 ---
 title: Supporto delle funzioni matematiche e a virgola mobile
-ms.date: 01/31/2019
+description: Viene descritto il supporto della virgola mobile nella libreria di runtime di Microsoft Universal C (UCRT)
+ms.date: 9/14/2020
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226229"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569586"
 ---
 # <a name="math-and-floating-point-support"></a>Supporto delle funzioni matematiche e a virgola mobile
 
 La libreria di Universal C Runtime (UCRT) include molte funzioni della libreria delle operazioni matematiche con numeri interi e a virgola mobile, incluse tutte quelle richieste dallo standard ISO C99. L'implementazione delle funzioni a virgola mobile consente di bilanciare prestazioni e correttezza. Dato che generare un risultato con il corretto arrotondamento può avere costi proibitivi, queste funzioni sono progettate per ottenere in modo efficiente un'approssimazione molto vicina al risultato arrotondato correttamente. Nella maggior parte dei casi, il risultato prodotto è compreso entro +/-1 ulp rispetto al risultato arrotondato correttamente, sebbene in alcuni casi possa esistere un'imprecisione maggiore.
+
+Per ISO C standard 11 (C11) e versioni successive, l' \<tgmath.h> intestazione, oltre a includere \<math.h> e \<complex.h> , fornisce macro che richiamano una funzione matematica corrispondente in base ai tipi dei parametri. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](tgmath.md) .
 
 Molte delle funzioni della libreria delle operazioni matematiche a virgola mobile hanno implementazioni diverse per architetture della CPU differenti. La versione di CRT x86 a 32 bit, ad esempio, può avere un'implementazione diversa di CRT x64 a 64 bit. Alcune funzioni potrebbero inoltre avere più implementazioni per una particolare architettura della CPU. L'implementazione più efficiente viene selezionata in modo dinamico in fase di esecuzione a seconda del set di istruzioni supportate dalla CPU. Ad esempio, in CRT x86 a 32 bit alcune funzioni hanno sia un'implementazione x87 che un'implementazione SSE2. In caso di esecuzione su una CPU che supporta SSE2, viene usata l'implementazione SSE2 più veloce. Per l'esecuzione su una CPU che non supporta SSE2 viene usata l'implementazione x87 più lenta. Dato che implementazioni diverse delle funzioni della libreria delle operazioni matematiche possono usare istruzioni diverse della CPU e algoritmi differenti per produrre i risultati, le funzioni possono produrre risultati diversi con CPU differenti. Nella maggior parte dei casi, i risultati sono compresi entro +/-1 ulp rispetto al risultato arrotondato correttamente, ma i risultati effettivi possono variare tra CPU diverse.
 
@@ -34,9 +37,9 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Calcola l'arcoseno iperbolico
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Calcola l'arcotangente
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Calcola l'arcotangente iperbolica
-[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte una stringa specifica delle impostazioni locali in un oggetto**`double`**
-[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte una stringa in un oggetto.**`double`**
-[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte una stringa specifica delle impostazioni locali in un oggetto **`float`** o**`long double`**
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte una stringa specifica delle impostazioni locali in un oggetto **`double`**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte una stringa in un oggetto. **`double`**
+[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Converte una stringa specifica delle impostazioni locali in un oggetto **`float`** o **`long double`**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Calcola la radice cubica
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Calcola il limite massimo
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Calcola l'inverso additivo
@@ -126,16 +129,16 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcola il seno iperbolico
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcola la radice quadrata
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Ottiene la parola di stato nelle operazioni a virgola mobile
-[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Converte una stringa in un oggetto.**`float`**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte una stringa in un oggetto.**`long double`**
+[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Converte una stringa in un oggetto. **`float`**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Converte una stringa in un oggetto. **`long double`**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcola la tangente
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcola la tangente iperbolica
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcola la funzione gamma
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Tronca la parte frazionaria
-[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte una stringa di caratteri wide in un oggetto**`double`**
+[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte una stringa di caratteri wide in un oggetto **`double`**
 [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcola la funzione di Bessel
 
 ## <a name="see-also"></a>Vedere anche
 
-[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Primitive a virgola mobile](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)\
+[Primitive a virgola mobile](../c-runtime-library/reference/floating-point-primitives.md)

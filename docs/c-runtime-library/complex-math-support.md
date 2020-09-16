@@ -1,5 +1,6 @@
 ---
 title: Supporto di operazioni matematiche complesse C
+description: Descrive il supporto matematico complesso in linguaggio C nella libreria di runtime di Microsoft C (CRT)
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215179"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569545"
 ---
 # <a name="c-complex-math-support"></a>Supporto di operazioni matematiche complesse C
 
@@ -28,9 +29,9 @@ L'implementazione Microsoft dell'intestazione complex.h definisce questi tipi co
 
 |Tipo standard|Tipo Microsoft|
 |-|-|
-|**`float complex`** o**`float _Complex`**|**_Fcomplex**|
-|**`double complex`** o**`double _Complex`**|**_Dcomplex**|
-|**`long double complex`** o**`long double _Complex`**|**_Lcomplex**|
+|**`float complex`** o **`float _Complex`**|**_Fcomplex**|
+|**`double complex`** o **`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** o **`long double _Complex`**|**_Lcomplex**|
 
 L'intestazione math.h definisce un tipo separato, **struct _complex**, usato per la funzione [_cabs](../c-runtime-library/reference/cabs.md). Il tipo **struct _complex** non viene usato dalle funzioni matematiche complesse equivalenti [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
@@ -99,4 +100,5 @@ Poiché i numeri complessi non sono un tipo nativo nel compilatore Microsoft, gl
 
 ## <a name="see-also"></a>Vedere anche
 
-[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Tipo-Math generico](tgmath.md)\
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)
