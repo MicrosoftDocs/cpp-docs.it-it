@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 360fedc6cadf275704a790c257c42ac8bde7873d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231962"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742060"
 ---
 # <a name="compiler-error-c3409"></a>Errore del compilatore C3409
 
@@ -35,7 +35,7 @@ Il compilatore può generare questo errore quando si utilizzano le parentesi qua
 
    Per ulteriori informazioni sulla sintassi delle espressioni lambda, vedere [sintassi delle espressioni lambda](../../cpp/lambda-expression-syntax.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente viene generato C3409.
 
@@ -53,8 +53,6 @@ __interface x {};
 [coclass, uuid("00000000-0000-0000-0000-000000000001")]
 class b : public x {};
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene generato C3409 perché un'espressione lambda utilizza la **`mutable`** specifica, ma non fornisce un elenco di parametri. Il compilatore non è in grado di determinare se le parentesi quadre sono parte della definizione di un'espressione lambda o di un blocco di attributi.
 

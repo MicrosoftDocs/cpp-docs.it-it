@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2092
 ms.assetid: 037e44ae-16c8-489a-a512-dcdf7f7795a6
-ms.openlocfilehash: b530663cae2292ebeab1b871e495e9a45e4633cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8f2b83b4099308ea1d0bb127d8cea377ab65da96
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754667"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741891"
 ---
 # <a name="compiler-error-c2092"></a>Errore del compilatore C2092
 
@@ -19,7 +19,7 @@ il tipo di elemento di matrice ' nome matrice ' non può essere una funzione
 
 Non sono consentite matrici di funzioni. Usare una matrice di puntatori a funzioni.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C2092:
 
@@ -28,8 +28,6 @@ L'esempio seguente genera l'C2092:
 typedef void (F) ();
 typedef F AT[10];   // C2092
 ```
-
-## <a name="example"></a>Esempio
 
 Possibile soluzione:
 

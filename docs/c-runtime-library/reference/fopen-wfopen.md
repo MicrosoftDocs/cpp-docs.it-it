@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216960"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743061"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -157,8 +157,9 @@ Le opzioni seguenti possono essere aggiunte alla *modalità* per specificare com
 
 |modificatore di *modalità*|Comportamento|
 |-|-|
+| **x** | Impone l'esito negativo della funzione se *filename* esiste già. Può essere usato solo con gli identificatori "w" o "w +". |
 | **c** | Abilitare il flag commit per il *nome file* associato, in modo che il contenuto del buffer di file venga scritto direttamente su disco se viene chiamato **fflush** o **_flushall** . |
-| **n** | Reimpostare il flag di commit per il *nome file* associato su "no-commit". Questa è la modalità predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a COMMODE.OBJ. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a COMMODE.OBJ (vedere [Link Options](../../c-runtime-library/link-options.md)). |
+| **n** | Reimpostare il flag di commit per il *nome file* associato su "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a COMMODE.OBJ. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a COMMODE.OBJ (vedere [Link Options](../../c-runtime-library/link-options.md)). |
 | **N** | Specifica che il file non viene ereditato dai processi figlio. |
 | **S** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco. |
 | **R** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
@@ -178,6 +179,7 @@ I caratteri validi per la stringa della *modalità* utilizzata in **fopen** e **
 |**w +**|** \_ O \_ RDWR** (in genere ** \_ o \_ RDWR** &#124; ** \_ o \_ Crea** &#124; ** \_ o \_ Tronca**)|
 |**b**|**\_\_binario O**|
 |**t**|**\_\_Testo O**|
+|**x**|**\_O \_ escl.**|
 |**c**|Nessuno|
 |**n**|Nessuno|
 |**S**|**\_O \_ sequenziale**|

@@ -1,6 +1,6 @@
 ---
 title: /ERRORREPORT (Segnala gli errori interni del linker)
-description: Guida di riferimento per le opzioni della riga di comando di Microsoft NMAKE.
+description: Informazioni su come usare/ERRORREPORT.
 ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 7d16904da8490018235278347f23e37339739415
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257689"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742736"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Segnala gli errori interni del linker)
 
@@ -23,7 +23,7 @@ L'opzione **/errorreport** è deprecata. A partire da Windows Vista, la segnalaz
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Errorreport:** \[ **none** \| **prompt** \| **coda** \| **Send** ]
+> **/Errorreport:** \[ **Nessuna** \| **messaggio di richiesta** \| **coda** \| di **Invia** ]
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -33,7 +33,7 @@ Gli argomenti **/errorreport** vengono sottoposti a override dalle impostazioni 
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Aprire la pagina delle proprietà proprietà di **configurazione** > **linker** > **Avanzate** .
+1. Aprire la **Configuration Properties**  >  pagina delle proprietà avanzate del**linker**proprietà di configurazione  >  **Advanced** .
 
 1. Modificare la proprietà **segnalazione errori** .
 

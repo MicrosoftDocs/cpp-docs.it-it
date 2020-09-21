@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837760"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742944"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -28,7 +28,7 @@ private ref class Array<TArg, 1> :
     public IBoxArray<TArg>
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 Platform:: Array eredita tutti i relativi metodi dalla [Classe Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) e implementa la `Value` proprietà dell' [interfaccia Platform:: IBoxArray](../cppcx/platform-iboxarray-interface.md).
 
@@ -66,7 +66,7 @@ Opzione del compilatore: **/ZW**
 
 Inizializza una matrice modificabile unidimensionale di tipi specificati dal parametro di modello di classe, *T*.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 Array(unsigned int size);
@@ -92,7 +92,7 @@ Per ulteriori informazioni sulla creazione di istanze di Platform:: Array, veder
 
 Recupera un riferimento all'elemento di matrice in corrispondenza della posizione di indice specificata.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 T& get(unsigned int index)  const;
@@ -111,7 +111,7 @@ Elemento di matrice specificato dal parametro `index`.
 
 Recupera un handle alla matrice corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 property Array^ Value;

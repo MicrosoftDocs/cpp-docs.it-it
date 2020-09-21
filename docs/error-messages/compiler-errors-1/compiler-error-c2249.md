@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac396fe5fa3505311f5a45ebb49dae283e35248c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212800"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741414"
 ---
 # <a name="compiler-error-c2249"></a>Errore del compilatore C2249
 
@@ -19,7 +19,7 @@ ms.locfileid: "87212800"
 
 `member`Viene ereditato da una **`virtual`** classe o una struttura di base non pubblica.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C2249.
 
@@ -39,8 +39,6 @@ int main() {
    b.pubFunc();    // OK
 }
 ```
-
-## <a name="example"></a>Esempio
 
 C2249 può verificarsi anche se si tenta di assegnare un flusso dalla libreria standard C++ a un altro flusso.  L'esempio seguente genera l'C2249.
 

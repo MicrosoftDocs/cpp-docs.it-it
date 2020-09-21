@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: b4af5dd3839672152c53c902b73c1ea51b7feb6b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835468"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742788"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Funzioni globali di debug e segnalazione errori
 
@@ -119,7 +119,7 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 in CLSID dell'oggetto che segnala l'errore.
 
 *lpszDesc*<br/>
@@ -195,7 +195,7 @@ Per i progetti ATL, è possibile fornire la propria implementazione di questa fu
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldef. h
 
@@ -217,7 +217,7 @@ Se _ATL_NO_EXCEPTIONS non è definito in un progetto ATL, la funzione genera un'
 
 Se _ATL_NO_EXCEPTIONS è definito, la funzione causa un errore di asserzione anziché generare un'eccezione.
 
-## <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldef. h
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2057
 ms.assetid: 038a99d6-1f5a-42fa-8449-03b4ff11ee0b
-ms.openlocfilehash: 1c873a0ba956adedea3311ac8e1844a629caa44b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: bdcf97ab6ea877af4e0713fc96ffd38f299e8234
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302029"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741449"
 ---
 # <a name="compiler-error-c2057"></a>Errore del compilatore C2057
 
@@ -21,7 +21,7 @@ Il contesto richiede un'espressione costante, un'espressione il cui valore è no
 
 Il compilatore deve conoscere le dimensioni di un tipo in fase di compilazione per allocare lo spazio per un'istanza di tale tipo.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'errore C2057 e mostra come risolverlo:
 
@@ -34,8 +34,6 @@ int main() {
    int b[i]; // OK - value of i is fixed and known to compiler
 }
 ```
-
-## <a name="example"></a>Esempio
 
 C ha regole più restrittive per le espressioni costanti.  L'esempio seguente genera l'errore C2057 e mostra come risolverlo:
 

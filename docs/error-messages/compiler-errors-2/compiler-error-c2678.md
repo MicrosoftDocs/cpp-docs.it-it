@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-ms.openlocfilehash: 390752d5d34685afc8b5fc5401fd75585bb48dd0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c8f5b06e6c2f9966d714f4a360525617dbff400f
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760335"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743178"
 ---
 # <a name="compiler-error-c2678"></a>Errore del compilatore C2678
 
@@ -19,9 +19,9 @@ ms.locfileid: "74760335"
 
 Per usare l'operatore, è necessario eseguirne l'overload per il tipo specificato o definire una conversione in un tipo per cui l'operatore è definito.
 
-## <a name="example"></a>Esempio
-
 L'errore C2678 può verificarsi quando l'operando sinistro è qualificato da const, ma l'operatore è definito in modo da accettare un argomento non constante.
+
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'errore C2678 e mostra come risolverlo:
 
@@ -46,8 +46,6 @@ int main() {
    combo2 += 9; // OK - operator+= matches non-const Combo
 }
 ```
-
-## <a name="example"></a>Esempio
 
 L'errore C2678 può verificarsi anche se non si blocca un membro nativo prima di chiamare una funzione membro su di esso.
 

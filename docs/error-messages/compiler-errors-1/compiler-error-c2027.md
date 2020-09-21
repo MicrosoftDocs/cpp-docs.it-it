@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 59d0e5d5a5f0957f2d73cdb863ccee9a2dd2a026
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751001"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743256"
 ---
 # <a name="compiler-error-c2027"></a>Errore del compilatore C2027
 
@@ -19,7 +19,7 @@ uso del tipo non definito ' type '
 
 Un tipo non può essere utilizzato fino a quando non viene definito. Per risolvere l'errore, assicurarsi che il tipo sia completamente definito prima di farvi riferimento.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C2027.
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
-
-È possibile dichiarare un puntatore a un tipo dichiarato ma non definito. Ma C++ non consente un riferimento a un tipo non definito.
+È possibile dichiarare un puntatore a un tipo dichiarato ma non definito. Tuttavia, C++ non consente un riferimento a un tipo non definito.
 
 L'esempio seguente genera l'C2027.
 

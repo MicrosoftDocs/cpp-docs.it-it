@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221432"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743308"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -124,9 +124,9 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire un numero di
 |[not1 (STL/CLR)](#not1)|Genera un unary_negate per un functor.|
 |[not2 (STL/CLR)](#not2)|Genera un binary_negate per un functor.|
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a> binary_delegate (STL/CLR)
 
 La classe genereic descrive un delegato a due argomenti. Viene usato per specificare un delegato in termini di argomento e tipi restituiti.
 
@@ -202,7 +202,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
 
 La classe genereic descrive un delegato a due argomenti che restituisce **`void`** . Viene usato per specificare un delegato in termini di argomento.
 
@@ -272,7 +272,7 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a> binary_negate (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce l'oggetto logico NOT del relativo functor archiviato a due argomenti. Viene usato per specificare un oggetto funzione in base al relativo functor archiviato.
 
@@ -305,7 +305,7 @@ public:
 *Fun*<br/>
 Tipo del functor archiviato.
 
-## <a name="member-functions"></a>Funzioni di membro
+### <a name="member-functions"></a>Funzioni di membro
 
 |Definizione del tipo|Descrizione|
 |---------------------|-----------------|
@@ -386,7 +386,7 @@ int main()
 1 0
 ```
 
-## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a> bind1st (STL/CLR)
 
 Genera un oggetto `binder1st` per un argomento e un functor.
 
@@ -412,7 +412,7 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-*sinistra*<br/>
+*sinistro*<br/>
 Primo argomento di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
@@ -467,7 +467,7 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a> bind2nd (STL/CLR)
 
 Genera un oggetto `binder2nd` per un argomento e un functor.
 
@@ -493,7 +493,7 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-*Ok*<br/>
+*right*<br/>
 Secondo argomento di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
@@ -548,7 +548,7 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a> binder1st (STL/CLR)
 
 La classe modello descrive un functor a un solo argomento che, quando chiamato, restituisce il relativo functore archiviato a due argomenti chiamato con il primo argomento archiviato e il secondo argomento fornito. Viene usato per specificare un oggetto funzione in base al relativo functor archiviato.
 
@@ -653,7 +653,7 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a> binder2nd (STL/CLR)
 
 La classe modello descrive un functor a un solo argomento che, quando chiamato, restituisce il relativo functore a due argomenti archiviato chiamato con il primo argomento fornito e il secondo argomento archiviato. Viene usato per specificare un oggetto funzione in base al relativo functor archiviato.
 
@@ -685,7 +685,7 @@ public:
 *Fun*<br/>
 Tipo del functor archiviato.
 
-## <a name="member-functions"></a>Funzioni di membro
+### <a name="member-functions"></a>Funzioni di membro
 
 |Definizione del tipo|Descrizione|
 |---------------------|-----------------|
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides-stlclr"></a><a name="divides"></a>divide (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a> divide (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce il primo argomento diviso per il secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -859,7 +859,7 @@ int main()
 2 3
 ```
 
-## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a> equal_to (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento è uguale al secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater-stlclr"></a><a name="greater"></a>maggiore (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a> maggiore (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento è maggiore del secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1061,7 +1061,7 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a> greater_equal (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento è maggiore o uguale al secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1162,7 +1162,7 @@ int main()
 1 0
 ```
 
-## <a name="less-stlclr"></a><a name="less"></a>less (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a> less (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento è minore del secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1263,7 +1263,7 @@ int main()
 0 1
 ```
 
-## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a> less_equal (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento è minore o uguale al secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1364,7 +1364,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a> logical_and (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento e il secondo test sono true. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1465,7 +1465,7 @@ int main()
 1 0
 ```
 
-## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a> logical_not (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il relativo argomento viene testato come false. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1555,7 +1555,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a> logical_or (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento o il secondo test è true. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus-stlclr"></a><a name="minus"></a>meno (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a> meno (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce il primo argomento meno il secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus-stlclr"></a><a name="modulus"></a>modulo (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a> modulo (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce il primo argomento modulo il secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1858,7 +1858,7 @@ int main()
 1 0
 ```
 
-## <a name="multiplies-stlclr"></a><a name="multiplies"></a>Moltiplicazioni (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a> Moltiplicazioni (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce il primo argomento per il secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate-stlclr"></a><a name="negate"></a>negazione (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a> negazione (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce il relativo argomento negato. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce true solo se il primo argomento non è uguale al secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -2150,7 +2150,7 @@ int main()
 0 1
 ```
 
-## <a name="not1-stlclr"></a><a name="not1"></a>not1 (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a> not1 (STL/CLR)
 
 Genera un oggetto `unary_negate` per un functor.
 
@@ -2222,7 +2222,7 @@ int main()
 1 0
 ```
 
-## <a name="not2-stlclr"></a><a name="not2"></a>not2 (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a> not2 (STL/CLR)
 
 Genera un oggetto `binary_negate` per un functor.
 
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus-stlclr"></a><a name="plus"></a>più (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a> più (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce il primo argomento più il secondo. Viene usato per specificare un oggetto funzione in termini di tipo di argomento.
 
@@ -2404,7 +2404,7 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a> unary_delegate (STL/CLR)
 
 La classe genereic descrive un delegato di un solo argomento. Viene usato per specificare un delegato in termini di argomento e tipi restituiti.
 
@@ -2470,7 +2470,7 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
 
 La classe genereic descrive un delegato di un solo argomento che restituisce **`void`** . Viene usato per specificare un delegato in termini di tipo di argomento.
 
@@ -2533,7 +2533,7 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a> unary_negate (STL/CLR)
 
 La classe modello descrive un functor che, quando chiamato, restituisce l'oggetto logico NOT del relativo functor archiviato a un argomento. Viene usato per specificare un oggetto funzione in base al relativo functor archiviato.
 

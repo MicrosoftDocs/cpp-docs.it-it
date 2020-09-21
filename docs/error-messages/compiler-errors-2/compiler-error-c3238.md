@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: 6f60a9abbc5702c1a0d14d0f894c9b1684378c3f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1f238a3be27023c755544438166aae1b2b2967d3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759360"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741983"
 ---
 # <a name="compiler-error-c3238"></a>Errore del compilatore C3238
 
@@ -19,9 +19,9 @@ ms.locfileid: "74759360"
 
 In un'applicazione client è stato definito un tipo già definito, mediante la sintassi di inoltro dei tipi, in un assembly di riferimento. Non è possibile definire entrambi i tipi nell'ambito dell'applicazione.
 
-Per ulteriori informazioni, vedere [tipo di inoltriC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
+Per ulteriori informazioni, vedere l' [invio del tipo (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente crea un assembly che contiene un tipo che è stato inoltrato da un altro assembly.
 
@@ -31,8 +31,6 @@ L'esempio seguente crea un assembly che contiene un tipo che è stato inoltrato 
 public ref class R {};
 ```
 
-## <a name="example"></a>Esempio
-
 L'esempio seguente crea un assembly che conteneva la definizione del tipo, ma che adesso contiene solo la sintassi di inoltro dei tipi.
 
 ```cpp
@@ -41,8 +39,6 @@ L'esempio seguente crea un assembly che conteneva la definizione del tipo, ma ch
 #using "C3238.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C3238.
 

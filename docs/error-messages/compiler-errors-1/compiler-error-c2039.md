@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6dc79db11f08ce00cdb86e930173c052cd5187ed
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757683"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742684"
 ---
 # <a name="compiler-error-c2039"></a>Errore del compilatore C2039
 
@@ -19,7 +19,7 @@ ms.locfileid: "74757683"
 
 Il codice chiama erroneamente o fa riferimento a un membro di una struttura, di una classe o di un'Unione.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C2039.
 
@@ -35,8 +35,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
-
 L'esempio seguente genera l'C2039.
 
 ```cpp
@@ -49,8 +47,6 @@ int main() {
    Console::WriteLine( "{0}", DateTime::Now::get());   // OK
 }
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'C2039.
 
@@ -68,8 +64,6 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK
 ```
 
-## <a name="example"></a>Esempio
-
 C2039 può verificarsi anche se si tenta di accedere in modo errato a un indicizzatore predefinito. Nell'esempio seguente viene definito un componente creato in C#.
 
 ```
@@ -84,8 +78,6 @@ public class B {
    }
 };
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'C2039.
 
@@ -103,8 +95,6 @@ int main() {
    Console::WriteLine(n);
 }
 ```
-
-## <a name="example"></a>Esempio
 
 C2039 può verificarsi anche se si usano i generics. L'esempio seguente genera l'C2039.
 
@@ -128,8 +118,6 @@ int main() {
    f(gcnew R());
 }
 ```
-
-## <a name="example"></a>Esempio
 
 C2039 può verificarsi quando si prova a rilasciare risorse gestite o non gestite. Per ulteriori informazioni, vedere [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 

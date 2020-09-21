@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3412
 ms.assetid: aa4dd43b-54ce-4cda-85c1-1a77dd6e34fa
-ms.openlocfilehash: ad241b656464746333760cfcbc134c91e49bf44e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6918e3be0a0288bab50d63a188bc33df87fe7754
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761416"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742892"
 ---
 # <a name="compiler-error-c3412"></a>Errore del compilatore C3412
 
@@ -19,7 +19,7 @@ ms.locfileid: "74761416"
 
 Un modello non può essere specializzato nell'ambito della classe, solo nell'ambito globale o dello spazio dei nomi.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C3412.
 
@@ -31,8 +31,6 @@ struct S {
    struct S<int> {};   // C3412 in a class
 };
 ```
-
-## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene illustrata una possibile risoluzione.
 

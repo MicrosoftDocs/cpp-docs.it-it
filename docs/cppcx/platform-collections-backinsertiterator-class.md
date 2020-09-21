@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 56393fd522ecd0e2f161dfa5b9fe8230563c0f65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5c82a776a537d469d42a16bd4f425e7bb2c13aa
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223486"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742931"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Classe Platform::Collections::BackInsertIterator
 
@@ -35,7 +35,7 @@ Tipo di elemento nella raccolta corrente.
 
 La classe BackInsertIterator implementa le regole richieste da [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md).
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -61,11 +61,11 @@ La classe BackInsertIterator implementa le regole richieste da [back_insert_iter
 
 **Spazio dei nomi:** Platform::Collections
 
-## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a>Costruttore BackInsertIterator:: BackInsertIterator
+## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a> Costruttore BackInsertIterator:: BackInsertIterator
 
 Inizializza una nuova istanza della classe `BackInsertIterator`.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```
 explicit BackInsertIterator(
@@ -81,11 +81,11 @@ Oggetto IVector \<T> .
 
 Un oggetto `BackInsertIterator` inserisce gli elementi dopo l'ultimo elemento dell'oggetto specificato dal parametro `v`.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a>Operatore BackInsertIterator:: operator =
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a> Operatore BackInsertIterator:: operator =
 
 Aggiunge l'oggetto specificato alla fine della raccolta sequenziale corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```
 BackInsertIterator& operator=( const T& t);
@@ -100,11 +100,11 @@ Oggetto da aggiungere alla raccolta corrente.
 
 Riferimento all'oggetto BackInsertIterator corrente.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a>Operatore BackInsertIterator:: operator *
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a> Operatore BackInsertIterator:: operator *
 
 Recupera un riferimento all'oggetto BackInsertIterator corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```
 BackInsertIterator& operator*();
@@ -118,11 +118,11 @@ Riferimento all'oggetto BackInsertIterator corrente.
 
 Questo operatore restituisce un riferimento all'oggetto BackInsertIterator corrente, non a qualsiasi elemento nella raccolta corrente.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a>Operatore BackInsertIterator:: operator + +
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a> Operatore BackInsertIterator:: operator + +
 
 Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```
 BackInsertIterator& operator++();

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ed645535300e0a7c4d27f8bed43d3143bae7e97a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757618"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742866"
 ---
 # <a name="compiler-error-c3225"></a>Errore del compilatore C3225
 
@@ -21,7 +21,7 @@ Il tipo dell'argomento di tipo generico non è corretto.
 
 Per altre informazioni, vedere [Generics](../../extensions/generics-cpp-component-extensions.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Non è possibile creare un'istanza di un tipo generico con un tipo nativo. L'esempio seguente genera l'C3225.
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
-
-Nell'esempio seguente viene creato un componente C#utilizzando. Si noti che il vincolo specifica che è possibile creare un'istanza del tipo generico solo con un tipo di valore.
+L'esempio seguente crea un componente con C#. Si noti che il vincolo specifica che è possibile creare un'istanza del tipo generico solo con un tipo di valore.
 
 ```
 // C3225_b.cs
@@ -52,9 +50,7 @@ Nell'esempio seguente viene creato un componente C#utilizzando. Si noti che il v
 public class MyList<T> where T: struct {}
 ```
 
-## <a name="example"></a>Esempio
-
-In questo esempio viene utilizzato C#il componente creato da e viene violato il vincolo di cui è possibile creare un'istanza solo con un tipo di valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'C3225.
+In questo esempio viene utilizzato il componente creato da C# e viene violato il vincolo di cui è possibile creare un'istanza solo con un tipo di valore diverso da <xref:System.Nullable> . L'esempio seguente genera l'C3225.
 
 ```cpp
 // C3225_c.cpp

@@ -95,12 +95,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: a2f7dafc99c8632f420bcd8119fe489353cf4b28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7db6367ae7d5096c47666a1ea930720f061c9dd
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221380"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743126"
 ---
 # <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
@@ -208,7 +208,7 @@ L'oggetto ordina ogni bucket che controlla chiamando un oggetto delegato archivi
 
 È possibile accedere all'oggetto delegato archiviato chiamando la funzione membro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Tale oggetto delegato deve definire un ordinamento equivalente tra chiavi di tipo [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Ciò significa che, per due chiavi `X` e `Y` :
 
-`key_comp()(X, Y)`Restituisce lo stesso risultato booleano a ogni chiamata.
+`key_comp()(X, Y)` Restituisce lo stesso risultato booleano a ogni chiamata.
 
 Se `key_comp()(X, Y) && key_comp()(Y, X)` è true, `X` e `Y` si afferma che hanno un ordinamento equivalente.
 
@@ -218,7 +218,7 @@ Si noti che il contenitore garantisce solo che gli elementi le cui chiavi hanno 
 
 L'oggetto determina quale bucket deve contenere una chiave di ordinamento specificata chiamando un oggetto delegato archiviato di tipo [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` per ottenere un valore integer che dipende dal valore della chiave. È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è la funzione `System::Object::hash_value(key_type)` . Ciò significa che per tutte le chiavi `X` e `Y` :
 
-`hash_delegate()(X)`Restituisce lo stesso risultato Integer a ogni chiamata.
+`hash_delegate()(X)` Restituisce lo stesso risultato Integer a ogni chiamata.
 
 Se `X` e `Y` hanno un ordinamento equivalente, `hash_delegate()(X)` deve restituire lo stesso risultato Integer di `hash_delegate()(Y)` .
 
@@ -234,9 +234,9 @@ Un iteratore di hash_set archivia un handle al nodo hash_set associato, che a su
 
 La cancellazione o la rimozione di un elemento chiama il distruttore per il valore archiviato. L'eliminazione definitiva del contenitore Cancella tutti gli elementi. Pertanto, un contenitore il cui tipo di elemento è una classe di riferimento garantisce che nessun elemento sopravviva al contenitore. Si noti, tuttavia, che un contenitore di handle *non elimina definitivamente* i relativi elementi.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-## <a name="hash_setbegin-stlclr"></a><a name="begin"></a>hash_set:: begin (STL/CLR)
+## <a name="hash_setbegin-stlclr"></a><a name="begin"></a> hash_set:: begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -278,7 +278,7 @@ int main()
     }
 ```
 
-## <a name="hash_setbucket_count-stlclr"></a><a name="bucket_count"></a>hash_set:: bucket_count (STL/CLR)
+## <a name="hash_setbucket_count-stlclr"></a><a name="bucket_count"></a> hash_set:: bucket_count (STL/CLR)
 
 Conta il numero di bucket.
 
@@ -352,7 +352,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_setclear-stlclr"></a><a name="clear"></a>hash_set:: Clear (STL/CLR)
+## <a name="hash_setclear-stlclr"></a><a name="clear"></a> hash_set:: Clear (STL/CLR)
 
 Rimuove tutti gli elementi.
 
@@ -410,7 +410,7 @@ a b
 size() = 0
 ```
 
-## <a name="hash_setconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_set:: const_iterator (STL/CLR)
+## <a name="hash_setconst_iterator-stlclr"></a><a name="const_iterator"></a> hash_set:: const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -452,7 +452,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setconst_reference-stlclr"></a><a name="const_reference"></a>hash_set:: const_reference (STL/CLR)
+## <a name="hash_setconst_reference-stlclr"></a><a name="const_reference"></a> hash_set:: const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -497,7 +497,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_set:: const_reverse_iterator (STL/CLR)
+## <a name="hash_setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso costante per la sequenza controllata.
 
@@ -539,7 +539,7 @@ int main()
 c b a
 ```
 
-## <a name="hash_setcount-stlclr"></a><a name="count"></a>hash_set:: Count (STL/CLR)
+## <a name="hash_setcount-stlclr"></a><a name="count"></a> hash_set:: Count (STL/CLR)
 
 Trova il numero di elementi corrispondenti a una chiave specificata.
 
@@ -592,7 +592,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="hash_setdifference_type-stlclr"></a><a name="difference_type"></a>hash_set::d ifference_type (STL/CLR)
+## <a name="hash_setdifference_type-stlclr"></a><a name="difference_type"></a> hash_set::d ifference_type (STL/CLR)
 
 Tipi di una distanza con segno tra due elementi.
 
@@ -647,7 +647,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="hash_setempty-stlclr"></a><a name="empty"></a>hash_set:: Empty (STL/CLR)
+## <a name="hash_setempty-stlclr"></a><a name="empty"></a> hash_set:: Empty (STL/CLR)
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -699,7 +699,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="hash_setend-stlclr"></a><a name="end"></a>hash_set:: end (STL/CLR)
+## <a name="hash_setend-stlclr"></a><a name="end"></a> hash_set:: end (STL/CLR)
 
 Designa la fine della sequenza controllata.
 
@@ -748,7 +748,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="hash_setequal_range-stlclr"></a><a name="equal_range"></a>hash_set:: equal_range (STL/CLR)
+## <a name="hash_setequal_range-stlclr"></a><a name="equal_range"></a> hash_set:: equal_range (STL/CLR)
 
 Trova un intervallo che corrisponde a una chiave specificata.
 
@@ -808,7 +808,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="hash_seterase-stlclr"></a><a name="erase"></a>hash_set:: erase (STL/CLR)
+## <a name="hash_seterase-stlclr"></a><a name="erase"></a> hash_set:: erase (STL/CLR)
 
 Rimuove gli elementi in corrispondenza delle posizioni specificate.
 
@@ -892,7 +892,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="hash_setfind-stlclr"></a><a name="find"></a>hash_set:: Find (STL/CLR)
+## <a name="hash_setfind-stlclr"></a><a name="find"></a> hash_set:: Find (STL/CLR)
 
 Trova un elemento che corrisponde a una chiave specificata.
 
@@ -948,7 +948,7 @@ find b = b
 find C = False
 ```
 
-## <a name="hash_setgeneric_container-stlclr"></a><a name="generic_container"></a>hash_set:: generic_container (STL/CLR)
+## <a name="hash_setgeneric_container-stlclr"></a><a name="generic_container"></a> hash_set:: generic_container (STL/CLR)
 
 Tipo dell'interfaccia generica per il contenitore.
 
@@ -1012,7 +1012,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="hash_setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_set:: generic_iterator (STL/CLR)
+## <a name="hash_setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> hash_set:: generic_iterator (STL/CLR)
 
 Tipo di un iteratore da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -1068,7 +1068,7 @@ a b c
 a
 ```
 
-## <a name="hash_setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_set:: generic_reverse_iterator (STL/CLR)
+## <a name="hash_setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> hash_set:: generic_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso da usare con l'interfaccia generica per il contenitore.
 
@@ -1124,7 +1124,7 @@ a b c
 c
 ```
 
-## <a name="hash_setgeneric_value-stlclr"></a><a name="generic_value"></a>hash_set:: generic_value (STL/CLR)
+## <a name="hash_setgeneric_value-stlclr"></a><a name="generic_value"></a> hash_set:: generic_value (STL/CLR)
 
 Tipo di un elemento da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -1178,7 +1178,7 @@ a b c
 a
 ```
 
-## <a name="hash_sethash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_set:: hash_delegate (STL/CLR)
+## <a name="hash_sethash_delegate-stlclr"></a><a name="hash_delegate"></a> hash_set:: hash_delegate (STL/CLR)
 
 Trova un elemento che corrisponde a una chiave specificata.
 
@@ -1216,7 +1216,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_sethash_set-stlclr"></a><a name="hash_set"></a>hash_set:: hash_set (STL/CLR)
+## <a name="hash_sethash_set-stlclr"></a><a name="hash_set"></a> hash_set:: hash_set (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -1257,7 +1257,7 @@ Fine dell'intervallo da inserire.
 *Pred*<br/>
 Predicato di ordinamento per la sequenza controllata.
 
-*Ok*<br/>
+*right*<br/>
 Oggetto o un intervallo da inserire.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1456,7 +1456,7 @@ a b c
 a b c
 ```
 
-## <a name="hash_sethasher-stlclr"></a><a name="hasher"></a>hash_set:: hasher (STL/CLR)
+## <a name="hash_sethasher-stlclr"></a><a name="hasher"></a> hash_set:: hasher (STL/CLR)
 
 Delegato di hashing per una chiave.
 
@@ -1495,7 +1495,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_setinsert-stlclr"></a><a name="insert"></a>hash_set:: Insert (STL/CLR)
+## <a name="hash_setinsert-stlclr"></a><a name="insert"></a> hash_set:: Insert (STL/CLR)
 
 Aggiunge elementi.
 
@@ -1517,7 +1517,7 @@ Inizio dell'intervallo da inserire.
 *last*<br/>
 Fine dell'intervallo da inserire.
 
-*Ok*<br/>
+*right*<br/>
 Enumerazione da inserire.
 
 *Val*<br/>
@@ -1611,7 +1611,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="hash_setiterator-stlclr"></a><a name="iterator"></a>hash_set:: iterator (STL/CLR)
+## <a name="hash_setiterator-stlclr"></a><a name="iterator"></a> hash_set:: iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1653,7 +1653,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a>hash_set:: key_comp (STL/CLR)
+## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due chiavi.
 
@@ -1712,66 +1712,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a>hash_set:: key_comp (STL/CLR)
-
-Copia il delegato di ordinamento per due chiavi.
-
-### <a name="syntax"></a>Sintassi
-
-```cpp
-key_compare^key_comp();
-```
-
-### <a name="remarks"></a>Osservazioni
-
-La funzione membro restituisce il delegato di ordinamento utilizzato per ordinare la sequenza controllata. Viene utilizzato per confrontare due chiavi.
-
-### <a name="example"></a>Esempio
-
-```cpp
-// cliext_hash_set_key_comp.cpp
-// compile with: /clr
-#include <cliext/hash_set>
-
-typedef cliext::hash_set<wchar_t> Myhash_set;
-int main()
-    {
-    Myhash_set c1;
-    Myhash_set::key_compare^ kcomp = c1.key_comp();
-
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",
-        kcomp(L'a', L'a'));
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",
-        kcomp(L'a', L'b'));
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",
-        kcomp(L'b', L'a'));
-    System::Console::WriteLine();
-
-    // test a different ordering rule
-    Myhash_set c2 = cliext::greater<wchar_t>();
-    kcomp = c2.key_comp();
-
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",
-        kcomp(L'a', L'a'));
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",
-        kcomp(L'a', L'b'));
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",
-        kcomp(L'b', L'a'));
-    return (0);
-    }
-```
-
-```Output
-compare(L'a', L'a') = True
-compare(L'a', L'b') = True
-compare(L'b', L'a') = False
-
-compare(L'a', L'a') = False
-compare(L'a', L'b') = False
-compare(L'b', L'a') = True
-```
-
-## <a name="hash_setkey_compare-stlclr"></a><a name="key_compare"></a>hash_set:: key_compare (STL/CLR)
+## <a name="hash_setkey_compare-stlclr"></a><a name="key_compare"></a> hash_set:: key_compare (STL/CLR)
 
 Delegato di ordinamento per due chiavi.
 
@@ -1831,7 +1772,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_setkey_type-stlclr"></a><a name="key_type"></a>hash_set:: key_type (STL/CLR)
+## <a name="hash_setkey_type-stlclr"></a><a name="key_type"></a> hash_set:: key_type (STL/CLR)
 
 Tipo di una chiave di ordinamento.
 
@@ -1876,7 +1817,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setload_factor-stlclr"></a><a name="load_factor"></a>hash_set:: load_factor (STL/CLR)
+## <a name="hash_setload_factor-stlclr"></a><a name="load_factor"></a> hash_set:: load_factor (STL/CLR)
 
 Conta il numero medio di elementi per bucket.
 
@@ -1950,7 +1891,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_setlower_bound-stlclr"></a><a name="lower_bound"></a>hash_set:: lower_bound (STL/CLR)
+## <a name="hash_setlower_bound-stlclr"></a><a name="lower_bound"></a> hash_set:: lower_bound (STL/CLR)
 
 Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2007,7 +1948,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="hash_setmake_value-stlclr"></a><a name="make_value"></a>hash_set:: make_value (STL/CLR)
+## <a name="hash_setmake_value-stlclr"></a><a name="make_value"></a> hash_set:: make_value (STL/CLR)
 
 Costruisce un oggetto valore.
 
@@ -2053,7 +1994,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_set:: max_load_factor (STL/CLR)
+## <a name="hash_setmax_load_factor-stlclr"></a><a name="max_load_factor"></a> hash_set:: max_load_factor (STL/CLR)
 
 Ottiene o imposta il numero massimo di elementi per bucket.
 
@@ -2120,7 +2061,7 @@ int main()
     }
 ```
 
-## <a name="hash_setoperator-stlclr"></a><a name="op"></a>hash_set:: operator = (STL/CLR)
+## <a name="hash_setoperator-stlclr"></a><a name="op"></a> hash_set:: operator = (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -2132,7 +2073,7 @@ hash_set<Key>% operator=(hash_set<Key>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*Ok*<br/>
+*right*<br/>
 Contenitore da copiare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -2175,7 +2116,7 @@ a b c
 a b c
 ```
 
-## <a name="hash_setrbegin-stlclr"></a><a name="rbegin"></a>hash_set:: rbegin (STL/CLR)
+## <a name="hash_setrbegin-stlclr"></a><a name="rbegin"></a> hash_set:: rbegin (STL/CLR)
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -2223,7 +2164,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="hash_setreference-stlclr"></a><a name="reference"></a>hash_set:: Reference (STL/CLR)
+## <a name="hash_setreference-stlclr"></a><a name="reference"></a> hash_set:: Reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -2268,7 +2209,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setrehash-stlclr"></a><a name="rehash"></a>hash_set:: rehash (STL/CLR)
+## <a name="hash_setrehash-stlclr"></a><a name="rehash"></a> hash_set:: rehash (STL/CLR)
 
 Ricompila la tabella hash.
 
@@ -2342,7 +2283,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_setrend-stlclr"></a><a name="rend"></a>hash_set:: rend (STL/CLR)
+## <a name="hash_setrend-stlclr"></a><a name="rend"></a> hash_set:: rend (STL/CLR)
 
 Indica la fine della sequenza controllata inversa.
 
@@ -2391,7 +2332,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="hash_setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_set:: reverse_iterator (STL/CLR)
+## <a name="hash_setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> hash_set:: reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -2433,7 +2374,7 @@ int main()
 c b a
 ```
 
-## <a name="hash_setsize-stlclr"></a><a name="size"></a>hash_set:: size (STL/CLR)
+## <a name="hash_setsize-stlclr"></a><a name="size"></a> hash_set:: size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -2487,7 +2428,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="hash_setsize_type-stlclr"></a><a name="size_type"></a>hash_set:: size_type (STL/CLR)
+## <a name="hash_setsize_type-stlclr"></a><a name="size_type"></a> hash_set:: size_type (STL/CLR)
 
 Tipo di una distanza con segno tra due elementi.
 
@@ -2535,7 +2476,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="hash_setswap-stlclr"></a><a name="swap"></a>hash_set:: swap (STL/CLR)
+## <a name="hash_setswap-stlclr"></a><a name="swap"></a> hash_set:: swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2547,7 +2488,7 @@ void swap(hash_set<Key>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*Ok*<br/>
+*right*<br/>
 Contenitore con cui scambiare il contenuto.
 
 ### <a name="remarks"></a>Osservazioni
@@ -2603,7 +2544,7 @@ d e f
 a b c
 ```
 
-## <a name="hash_setto_array-stlclr"></a><a name="to_array"></a>hash_set:: to_array (STL/CLR)
+## <a name="hash_setto_array-stlclr"></a><a name="to_array"></a> hash_set:: to_array (STL/CLR)
 
 Copia la sequenza controllata in una nuova matrice.
 
@@ -2653,7 +2594,7 @@ a b c d
 a b c
 ```
 
-## <a name="hash_setupper_bound-stlclr"></a><a name="upper_bound"></a>hash_set:: upper_bound (STL/CLR)
+## <a name="hash_setupper_bound-stlclr"></a><a name="upper_bound"></a> hash_set:: upper_bound (STL/CLR)
 
 Trova la fine dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2710,7 +2651,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="hash_setvalue_comp-stlclr"></a><a name="value_comp"></a>hash_set:: value_comp (STL/CLR)
+## <a name="hash_setvalue_comp-stlclr"></a><a name="value_comp"></a> hash_set:: value_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due valori di elemento.
 
@@ -2754,7 +2695,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="hash_setvalue_compare-stlclr"></a><a name="value_compare"></a>hash_set:: value_compare (STL/CLR)
+## <a name="hash_setvalue_compare-stlclr"></a><a name="value_compare"></a> hash_set:: value_compare (STL/CLR)
 
 Delegato di ordinamento per i valori di due elementi.
 
@@ -2799,7 +2740,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="hash_setvalue_type-stlclr"></a><a name="value_type"></a>hash_set:: value_type (STL/CLR)
+## <a name="hash_setvalue_type-stlclr"></a><a name="value_type"></a> hash_set:: value_type (STL/CLR)
 
 Tipo di un elemento.
 

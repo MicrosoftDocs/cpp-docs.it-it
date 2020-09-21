@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755993"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743217"
 ---
 # <a name="compiler-error-c2666"></a>Errore del compilatore C2666
 
 ' Identifier ': gli overload dei numeri hanno conversioni simili
 
 Una funzione o un operatore di overload è ambiguo.   Gli elenchi di parametri formali potrebbero essere troppo simili per la risoluzione dell'ambiguità da parte del compilatore.  Per correggere l'errore, eseguire il cast esplicito di uno o più parametri effettivi.
+
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C2666:
 
@@ -41,11 +43,9 @@ Questo errore può essere generato anche in seguito alle operazioni di conformit
 
 - la conversione delle qualifiche non corrisponde alla conversione di identità
 
-Per gli operatori binari \<, >, \<= e > =, un parametro passato viene ora convertito in modo implicito nel tipo dell'operando se il tipo del parametro definisce un operatore di conversione definito dall'utente per la conversione nel tipo dell'operando. È ora possibile ambiguità.
+Per gli operatori binari \<, > , \<=, and > =, un parametro passato viene ora convertito in modo implicito nel tipo dell'operando se il tipo del parametro definisce un operatore di conversione definito dall'utente per la conversione nel tipo dell'operando. È ora possibile ambiguità.
 
-Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++studio, chiamare l'operatore Class in modo esplicito usando la sintassi della funzione.
-
-## <a name="example"></a>Esempio
+Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, chiamare l'operatore Class in modo esplicito usando la sintassi della funzione.
 
 ```cpp
 // C2666b.cpp
@@ -101,8 +101,6 @@ int main()
         printf_s("str1.operator char*() < str2\n");
 }
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera C2666
 

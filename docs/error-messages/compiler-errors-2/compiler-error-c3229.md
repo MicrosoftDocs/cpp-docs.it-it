@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3229
 ms.assetid: f2d90923-aa8b-444f-ab10-1f37dbb864e1
-ms.openlocfilehash: cd1b4ec21cc041b611b20892c96de0e1170e7a11
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bf205259eda45c79ac0c3c772d4f437cb3ac14b8
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743328"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743087"
 ---
 # <a name="compiler-error-c3229"></a>Errore del compilatore C3229
 
@@ -19,7 +19,7 @@ ms.locfileid: "74743328"
 
 Non è possibile usare i parametri generici con `*`, `^`o `&`.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'errore C3229.
 
@@ -37,8 +37,6 @@ ref class D {
    T u;
 };
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C3229.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560634"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742970"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ Il compilatore esamina la **`static_assert`** dichiarazione per gli errori di si
 
 È possibile usare la **`static_assert`** parola chiave nello spazio dei nomi, nella classe o nell'ambito del blocco. La **`static_assert`** parola chiave è tecnicamente una dichiarazione, anche se non introduce il nuovo nome nel programma, perché può essere utilizzata nell'ambito dello spazio dei nomi.
 
-## <a name="description"></a>Descrizione
+## <a name="description-of-static_assert-with-namespace-scope"></a>Descrizione di static_assert con ambito dello spazio dei nomi
 
 Nell'esempio seguente la **`static_assert`** dichiarazione ha un ambito dello spazio dei nomi. Poiché il compilatore riconosce la dimensione di tipo `void *`, l'espressione viene valutata immediatamente.
 
-## <a name="example"></a>Esempio
+## <a name="example-of-static_assert-with-namespace-scope"></a>Esempio di static_assert con ambito dello spazio dei nomi
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description-of-static_assert-with-class-scope"></a>Descrizione di static_assert con ambito classe
 
 Nell'esempio seguente la **`static_assert`** dichiarazione ha ambito di classe. **`static_assert`** Verifica che un parametro di modello sia un tipo di *dati Plain Old* (POD). Il compilatore esamina la **`static_assert`** dichiarazione quando viene dichiarata, ma non valuta il parametro *Constant-Expression* fino a quando non `basic_string` viene creata un'istanza del modello di classe in `main()` .
 
-## <a name="example"></a>Esempio
+## <a name="example-of-static_assert-with-class-scope"></a>Esempio di static_assert con ambito della classe
 
 ```cpp
 #include <type_traits>

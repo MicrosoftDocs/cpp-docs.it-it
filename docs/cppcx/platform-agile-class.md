@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 839002a614b54990fdc9180fa06737ff43039a4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226937"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742957"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 
@@ -41,7 +41,7 @@ La maggior parte delle classi nella Windows Runtime è agile. Un oggetto Agile p
 
 La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rappresenta l'oggetto non Agile e il *contesto*dell'oggetto Agile. Il contesto specifica il modello di threading e il comportamento di marshalling di un oggetto Agile. Il sistema operativo usa il contesto per determinare come eseguire il marshalling di un oggetto.
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -82,11 +82,11 @@ La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rap
 
 **Intestazione:** agile.h
 
-## <a name="agileagile-constructor"></a><a name="ctor"></a>Costruttore agile:: agile
+## <a name="agileagile-constructor"></a><a name="ctor"></a> Costruttore agile:: agile
 
 Inizializza una nuova istanza della classe Agile.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 Agile();
@@ -107,11 +107,11 @@ Nella seconda versione di questo costruttore, oggetto utilizzato per inizializza
 
 La prima versione di questo costruttore rappresenta il costruttore predefinito. Nella seconda versione viene inizializzata la nuova classe Agile dell'istanza dall'oggetto specificato dal parametro `object`. La terza versione rappresenta il costruttore di copia. La quarta versione rappresenta il costruttore di spostamento. Questo costruttore non può generare eccezioni.
 
-## <a name="agileagile-destructor"></a><a name="dtor"></a>Distruttore agile:: ~ agile
+## <a name="agileagile-destructor"></a><a name="dtor"></a> Distruttore agile:: ~ agile
 
 Eliminata l'istanza corrente della classe Agile.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 ~Agile();
@@ -121,11 +121,11 @@ Eliminata l'istanza corrente della classe Agile.
 
 Questo distruttore rilascia inoltre l'oggetto rappresentato dall'oggetto Agile corrente.
 
-## <a name="agileget-method"></a><a name="get"></a>Metodo Agile:: Get
+## <a name="agileget-method"></a><a name="get"></a> Metodo Agile:: Get
 
 Restituisce un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 T^ Get() const;
@@ -135,13 +135,13 @@ T^ Get() const;
 
 Handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
-Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per conservare il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio: `auto x = myAgileTvariable->Get();`.
+Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per conservare il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio `auto x = myAgileTvariable->Get();`.
 
-## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a>Metodo Agile:: GetAddressOf
+## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a> Metodo Agile:: GetAddressOf
 
 Reinizializza l'oggetto Agile corrente e restituisce l'indirizzo di un handle a un oggetto di tipo `T`.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 T^* GetAddressOf() throw();
@@ -160,11 +160,11 @@ Indirizzo di un handle a un oggetto di tipo `T`.
 
 Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente, reinizializza i membri dati dell'oggetto Agile, acquisisce il contesto di threading corrente e quindi restituisce l'indirizzo di una variabile handle-oggetto che può rappresentare un oggetto non Agile. Per far sì che un'istanza della classe Agile rappresenti un oggetto, usare l'operatore di assegnazione ([agile:: operator =](#operator-assign)) per assegnare l'oggetto all'istanza della classe Agile.
 
-## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a>Metodo Agile:: GetAddressOfForInOut
+## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a> Metodo Agile:: GetAddressOfForInOut
 
 Restituisce l'indirizzo di un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 T^* GetAddressOfForInOut()  throw();
@@ -183,11 +183,11 @@ Indirizzo di un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
 Questa operazione acquisisce il contesto di threading corrente e successivamente restituisce l'indirizzo di un handle all'oggetto sottostante.
 
-## <a name="agilerelease-method"></a><a name="release"></a>Metodo Agile:: Release
+## <a name="agilerelease-method"></a><a name="release"></a> Metodo Agile:: Release
 
 Rimuove l'oggetto e il contesto sottostanti dell'oggetto Agile corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 void Release() throw();
@@ -201,7 +201,7 @@ Se esistono, l'oggetto e il contesto sottostanti dell'oggetto Agile corrente ven
 
 Recupera un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 T^ operator->() const throw();
@@ -213,11 +213,11 @@ Handle all'oggetto rappresentato dall'oggetto Agile corrente.
 
 Questo operatore restituisce un tipo interno riservato. Un modo pratico per conservare il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo.
 
-## <a name="agileoperator-operator"></a><a name="operator-assign"></a>Operatore Agile:: operator =
+## <a name="agileoperator-operator"></a><a name="operator-assign"></a> Operatore Agile:: operator =
 
 Assegna l'oggetto specificato all'oggetto Agile corrente.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 Agile<T> operator=( T^ object ) throw();

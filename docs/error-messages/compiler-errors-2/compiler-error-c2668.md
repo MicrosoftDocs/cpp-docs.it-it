@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b0539e7c794852f7e4b28d60f4b402a020bed1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177157"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743204"
 ---
 # <a name="compiler-error-c2668"></a>Errore del compilatore C2668
 
@@ -21,7 +21,7 @@ Impossibile risolvere la chiamata di funzione in overload specificata. È consig
 
 È possibile ottenere questo errore anche tramite l'uso del modello. Se nella stessa classe sono presenti una funzione membro regolare e una funzione membro basata su modelli con la stessa firma, è necessario che il modello sia prima di tutto. Si tratta di una limitazione dell'implementazione corrente di Visual C++.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'C2668:
 
@@ -40,8 +40,6 @@ int main() {
    func( (X)d, (X)d );   // OK, uses func( X, X )
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Un altro modo per risolvere questo errore è con una [dichiarazione using](../../cpp/using-declaration.md):
 
@@ -84,11 +82,9 @@ class MyTestCase : public AppTestCase {
 };
 ```
 
-## <a name="example"></a>Esempio
-
 Questo errore può essere generato anche in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: conversione ambigua sul cast della costante 0.
 
-La conversione in un cast con la costante 0 è ambigua perché int richiede una conversione sia a Long che a void *. Per correggere l'errore, eseguire il cast di 0 al tipo esatto del parametro della funzione usato per, in modo che non sia necessario eseguire alcuna conversione (questo codice sarà valido nelle versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++Studio).
+La conversione in un cast con la costante 0 è ambigua perché int richiede una conversione sia a Long che a void *. Per correggere l'errore, eseguire il cast di 0 al tipo esatto del parametro della funzione usato per, in modo che non sia necessario eseguire alcuna conversione (questo codice sarà valido nelle versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++).
 
 ```cpp
 // C2668c.cpp
@@ -108,8 +104,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
-
 Questo errore può verificarsi perché CRT dispone ora di forme float e Double di tutte le funzioni matematiche.
 
 ```cpp
@@ -123,8 +117,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
-
 Questo errore può verificarsi perché il Pow (int, int) è stato rimosso da Math. h in CRT.
 
 ```cpp
@@ -135,8 +127,6 @@ int main() {
    pow((double)9,9);   // OK
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Questo codice ha esito positivo in Visual Studio 2015 ma ha esito negativo in Visual Studio 2017 e versioni successive con C2668. In Visual Studio 2015 il compilatore tratta erroneamente copy-list-initialization come l'oggetto copy-initialization normale, considerando solo la conversione dei costruttori per la risoluzione dell'overload.
 

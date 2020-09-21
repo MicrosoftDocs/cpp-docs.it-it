@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3468
 ms.assetid: cfd320db-2f6e-4e0d-ba02-e79ece87e1e0
-ms.openlocfilehash: e4a507dad1d795e703e8db7f8704aad959c95b6f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f22a01c5c26a55a5908c20f3b123971fadd43544
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757307"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742814"
 ---
 # <a name="compiler-error-c3468"></a>Errore del compilatore C3468
 
@@ -21,9 +21,9 @@ ms.locfileid: "74757307"
 
 È possibile inoltrare solo i tipi in un assembly.
 
-Per ulteriori informazioni, vedere [tipo di invio (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Per altre informazioni, vedere [invio di tipi (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente crea un modulo.
 
@@ -32,8 +32,6 @@ L'esempio seguente crea un modulo.
 // compile with: /LN /clr
 public ref class R {};
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C3468.
 

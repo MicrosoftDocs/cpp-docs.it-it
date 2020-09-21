@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-ms.openlocfilehash: 1d82d367c5b77f54548403b7b142aa740919b6c2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 56eeac18d5b8efc32501bf54e2de3aa216e05a13
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756565"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742021"
 ---
 # <a name="compiler-error-c3465"></a>Errore del compilatore C3465
 
@@ -19,9 +19,9 @@ per utilizzare il tipo 'type' è necessario fare riferimento all'assembly 'assem
 
 L'inoltro dei tipi non verrà eseguito per un'applicazione client finché non si ricompila il client. Quando si esegue la ricompilazione,sarà necessario un riferimento per ogni assembly che contiene la definizione di un tipo usato nell'applicazione client.
 
-Per ulteriori informazioni, vedere [tipo di invio (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Per altre informazioni, vedere [invio di tipi (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera un assembly che contiene il nuovo percorso di un tipo.
 
@@ -34,8 +34,6 @@ public:
 };
 ```
 
-## <a name="example"></a>Esempio
-
 L'esempio seguente genera un assembly che conteneva la definizione del tipo, ma che adesso contiene la sintassi di inoltro per il tipo.
 
 ```cpp
@@ -44,8 +42,6 @@ L'esempio seguente genera un assembly che conteneva la definizione del tipo, ma 
 #using "C3465.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C3465.
 
