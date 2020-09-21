@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-ms.openlocfilehash: b781e9f81342f35d66eca222bd338252b739096c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c4f099ba241b56291074202e6c03ad98ee97f756
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737491"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743503"
 ---
 # <a name="compiler-error-c2004"></a>Errore del compilatore C2004
 
@@ -21,7 +21,7 @@ Dopo la parola chiave preprocessore deve essere presente un identificatore tra p
 
 Questo errore può verificarsi anche in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: parentesi mancante nella direttiva del preprocessore. Se in una direttiva del preprocessore manca la parentesi di chiusura, il compilatore genera un errore.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'errore C2004:
 
@@ -37,8 +37,6 @@ int main()
     #endif
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Possibile soluzione:
 

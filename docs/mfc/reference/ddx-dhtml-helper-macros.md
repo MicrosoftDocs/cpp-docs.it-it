@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: 6158bffceda7ac83b79b6ff8bd7fce0378759819
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eeea85872422edcf421ba2fe254c8f03c093fe3c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837463"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743451"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml le macro Helper
 
@@ -67,7 +67,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare.
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Questa macro chiama la funzione [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) utilizzando l'ID di invio DISPID_IHTMLANCHORELEMENT_HREF.
 
@@ -93,7 +93,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare.
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Questa macro chiama la funzione [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) utilizzando l'ID di invio DISPID_IHTMLANCHORELEMENT_TARGET.
 
@@ -119,7 +119,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare.
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Questa macro chiama la funzione [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) utilizzando l'ID di invio DISPID_IHTMLELEMENT_INNERHTML.
 
@@ -145,7 +145,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare.
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Questa macro chiama la funzione [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) utilizzando l'ID di invio DISPID_IHTMLELEMENT_INNERTEXT.
 
@@ -171,7 +171,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare. Vedere *valore* in [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Questa macro avrà esito positivo solo se eseguita su controlli che dispongono di una proprietà Value. I controlli che dispongono di una proprietà valore includono caselle di modifica, caselle di riepilogo e caselle combinate.
 
@@ -199,7 +199,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare.
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Questa macro chiama la funzione [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) utilizzando l'ID di invio DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -225,7 +225,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare.
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Questa macro chiama la funzione [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) utilizzando l'ID di invio DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -251,7 +251,7 @@ Valore specificato per il parametro ID del controllo HTML.
 *var*<br/>
 Valore da scambiare.
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
 Quando si usa la macro DDX_DHtml_Img_Src per recuperare la proprietà src per un elemento IMAGE, l'oggetto Image di Internet Explorer restituisce l'URL con escape completo per l'origine dell'immagine. Se, ad esempio, si utilizza la macro DDX_DHtml_Img_Src per impostare la proprietà src di un elemento IMAGE sulla stringa "some interessante Picture", quando si recupera la proprietà, Internet Explorer restituirà la stringa "res://d:\myapplication\myapp.exe/some%20interesting%20picture."
 

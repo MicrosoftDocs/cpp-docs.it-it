@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: b75509beb7287fad5e51dc9d15fc3e47cacf6854
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0c185e873f526403e86cb5a80f6e0631f8654284
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751315"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743438"
 ---
 # <a name="icommandui-interface"></a>Interfaccia ICommandUI
 
@@ -31,109 +31,109 @@ Gestisce i comandi dell'interfaccia utente.
 interface class ICommandUI
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[icommandui__Check](#check)|Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di controllo appropriato.|
-|[ICommandUI::ContinueRoutingICommandUI::ContinueRouting](#continuerouting)|Indica al meccanismo di routing dei comandi di continuare a instradare il messaggio corrente lungo la catena di gestori.|
-|[ICommandUI::Abilitato](#enabled)|Abilita o disabilita l'elemento dell'interfaccia utente per questo comando.|
-|[ICommandUI::ID](#id)|Ottiene l'ID dell'oggetto dell'interfaccia utente rappresentato dall'oggetto. `ICommandUI`|
-|[ICommandUI::IndiceICommandUI::Index](#index)|Ottiene l'indice dell'oggetto dell'interfaccia utente rappresentato dall'oggetto. `ICommandUI`|
-|[ICommandUI::Radio](#radio)|Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di controllo appropriato.|
-|[ICommandUI::Testo](#text)|Imposta il testo dell'elemento dell'interfaccia utente per questo comando.|
+|[icommandui__Check](#check)|Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.|
+|[ICommandUI:: ContinueRouting](#continuerouting)|Indica al meccanismo di routing del comando di continuare a indirizzare il messaggio corrente alla catena di gestori.|
+|[ICommandUI:: Enabled](#enabled)|Abilita o Disabilita l'elemento dell'interfaccia utente per questo comando.|
+|[ICommandUI:: ID](#id)|Ottiene l'ID dell'oggetto interfaccia utente rappresentato dall' `ICommandUI` oggetto.|
+|[ICommandUI:: index](#index)|Ottiene l'indice dell'oggetto dell'interfaccia utente rappresentato dall' `ICommandUI` oggetto.|
+|[ICommandUI:: Radio](#radio)|Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.|
+|[ICommandUI:: Text](#text)|Imposta il testo dell'elemento dell'interfaccia utente per questo comando.|
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Questa interfaccia fornisce metodi e proprietà che gestiscono i comandi dell'interfaccia utente. `ICommandUI`è simile alla [classe CCmdUI](../../mfc/reference/ccmdui-class.md), ad eccezione del fatto che `ICommandUI` viene utilizzata per le applicazioni MFC che interagiscono con i componenti .NET.
+Questa interfaccia fornisce i metodi e le proprietà che gestiscono i comandi dell'interfaccia utente. `ICommandUI` è simile alla [classe CCmdUI](../../mfc/reference/ccmdui-class.md), ad eccezione `ICommandUI` del fatto che viene usato per le applicazioni MFC che interagiscono con i componenti .NET.
 
-`ICommandUI`viene utilizzato all'interno di un gestore di ON_UPDATE_COMMAND_UI in una classe derivata da [ICommandTarget.](../../mfc/reference/icommandtarget-interface.md) Quando un utente di un'applicazione attiva (seleziona o fa clic) un menu, ogni voce di menu viene visualizzata come abilitata o disabilitata. La destinazione di ogni comando di menu fornisce queste informazioni implementando un gestore di ON_UPDATE_COMMAND_UI. Per ognuno degli oggetti dell'interfaccia utente di comando nell'applicazione, utilizzare la [Creazione guidata classe](mfc-class-wizard.md) per creare una voce della mappa messaggi e un prototipo di funzione per ogni gestore.
+`ICommandUI` viene usato all'interno di un gestore di ON_UPDATE_COMMAND_UI in una classe derivata da [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Quando un utente di un'applicazione attiva (Seleziona o fa clic) un menu, ogni voce di menu viene visualizzata come abilitata o disabilitata. La destinazione di ogni comando di menu fornisce queste informazioni implementando un gestore ON_UPDATE_COMMAND_UI. Per ogni oggetto dell'interfaccia utente del comando nell'applicazione, usare la [creazione guidata classe](mfc-class-wizard.md) per creare una voce della mappa messaggi e un prototipo di funzione per ogni gestore.
 
-Per ulteriori informazioni `ICommandUI` sull'utilizzo dell'interfaccia nel routing dei comandi, vedere [Procedura: aggiungere il routing](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)dei comandi al controllo Windows Form .
+Per altre informazioni sull'uso dell' `ICommandUI` interfaccia nel routing dei comandi, vedere [procedura: aggiungere il routing dei comandi al controllo Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
-Per ulteriori informazioni sull'utilizzo di Windows Form, vedere [Utilizzo di un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Per ulteriori informazioni sull'utilizzo di Windows Forms, vedere [utilizzo di un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-Per ulteriori informazioni sulla modalità di gestione dei comandi dell'interfaccia utente in MFC, vedere [Classe CCmdUI](../../mfc/reference/ccmdui-class.md).
+Per ulteriori informazioni sulla gestione dei comandi dell'interfaccia utente in MFC, vedere la [classe CCmdUI](../../mfc/reference/ccmdui-class.md).
 
-## <a name="icommanduicheck"></a><a name="check"></a>ICommandUI::Controlla
+## <a name="icommanduicheck"></a><a name="check"></a> ICommandUI:: check
 
-Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di controllo appropriato.
+Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.
 
 ```
 property UICheckState Check;
 ```
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando sullo stato di controllo appropriato. Impostare Controllo sui seguenti valori:
+Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato. Impostare controlla sui valori seguenti:
 
-- 0 Deselezionare
-- 1 Controllare
-- 2 Impostare indeterminato
+- 0 deseleziona
+- 1 controllo
+- 2 impostare indeterminato
 
-## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRoutingICommandUI::ContinueRouting
+## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a> ICommandUI:: ContinueRouting
 
-Indica al meccanismo di routing dei comandi di continuare a instradare il messaggio corrente lungo la catena di gestori.
+Indica al meccanismo di routing dei comandi di continuare il routing del messaggio corrente alla catena di gestori.
 
 ```cpp
 void ContinueRouting();
 ```
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Si tratta di una funzione membro avanzata che deve essere utilizzata insieme a un gestore di ON_COMMAND_EX che restituisce FALSE. Per ulteriori informazioni, vedere Nota tecnica TN006: mappe messaggi.
+Si tratta di una funzione membro avanzata da usare insieme a un gestore di ON_COMMAND_EX che restituisce FALSE. Per ulteriori informazioni, vedere la nota tecnica TN006: mappe messaggi.
 
-## <a name="icommanduienabled"></a><a name="enabled"></a>ICommandUI::Abilitato
+## <a name="icommanduienabled"></a><a name="enabled"></a> ICommandUI:: Enabled
 
-Abilita o disabilita l'elemento dell'interfaccia utente per questo comando.
+Abilita o Disabilita l'elemento dell'interfaccia utente per questo comando.
 
 ```
 property bool Enabled;
 ```
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Questa proprietà abilita o disabilita l'elemento dell'interfaccia utente per questo comando. Impostare Abilitato su TRUE per abilitare l'elemento, FALSE per disabilitarlo.
+Questa proprietà Abilita o Disabilita l'elemento dell'interfaccia utente per questo comando. Impostare Enabled su TRUE per abilitare l'elemento, FALSE per disabilitarlo.
 
-## <a name="icommanduiid"></a><a name="id"></a>ICommandUI::ID
+## <a name="icommanduiid"></a><a name="id"></a> ICommandUI:: ID
 
-Ottiene l'ID dell'oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
+Ottiene l'ID dell'oggetto interfaccia utente rappresentato dall'oggetto ICommandUI.
 
 ```
 property unsigned int ID;
 ```
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Questa proprietà ottiene l'ID (un handle) della voce di menu, pulsante della barra degli strumenti o altro oggetto dell'interfaccia utente rappresentato dal ICommandUI oggetto.
+Questa proprietà ottiene l'ID (un handle) della voce di menu, il pulsante della barra degli strumenti o un altro oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
 
-## <a name="icommanduiindex"></a><a name="index"></a>ICommandUI::IndiceICommandUI::Index
+## <a name="icommanduiindex"></a><a name="index"></a> ICommandUI:: index
 
-Ottiene l'indice dell'oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
+Ottiene l'indice dell'oggetto interfaccia utente rappresentato dall'oggetto ICommandUI.
 
 ```
 property unsigned int Index;
 ```
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Questa proprietà ottiene l'indice (un handle) della voce di menu, pulsante della barra degli strumenti o altro oggetto dell'interfaccia utente rappresentato dal ICommandUI oggetto.
+Questa proprietà ottiene l'indice (un handle) della voce di menu, il pulsante della barra degli strumenti o un altro oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
 
-## <a name="icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio
+## <a name="icommanduiradio"></a><a name="radio"></a> ICommandUI:: Radio
 
-Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di controllo appropriato.
+Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.
 
 ```
 property bool Radio;
 ```
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando sullo stato di controllo appropriato. Impostare Radio su TRUE per abilitare l'elemento; in caso contrario, FALSE.
+Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato. Impostare radio su TRUE per abilitare l'elemento; in caso contrario, FALSE.
 
-## <a name="icommanduitext"></a><a name="text"></a>ICommandUI::Testo
+## <a name="icommanduitext"></a><a name="text"></a> ICommandUI:: Text
 
 Imposta il testo dell'elemento dell'interfaccia utente per questo comando.
 
@@ -141,13 +141,13 @@ Imposta il testo dell'elemento dell'interfaccia utente per questo comando.
 property String^ Text;
 ```
 
-## <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Osservazioni
 
-Questa proprietà imposta il testo dell'elemento dell'interfaccia utente per questo comando. Impostare Text su un handle di stringa di testo.
+Questa proprietà imposta il testo dell'elemento dell'interfaccia utente per questo comando. Imposta il testo su un handle di stringa di testo.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxwinforms.h (definita nell'assembly atlmfc.lib.mfcmifc80.dll)
+**Intestazione:** afxwinforms. h (definita nell'assembly atlmfc\lib\mfcmifc80.dll)
 
 ## <a name="see-also"></a>Vedere anche
 

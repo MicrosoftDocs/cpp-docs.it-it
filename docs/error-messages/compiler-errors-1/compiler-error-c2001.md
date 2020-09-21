@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6b40a3bd186b5c45a0ea5163f433635ab1e7b07f
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756838"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743490"
 ---
 # <a name="compiler-error-c2001"></a>Errore del compilatore da C2001
 
@@ -25,7 +25,7 @@ Una costante di stringa non può proseguire in una seconda riga, a meno che non 
 
 La fine della prima riga con \n non è sufficiente.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
 L'esempio seguente genera l'da C2001:
 
@@ -42,8 +42,6 @@ int main()
              world");
 }
 ```
-
-## <a name="example"></a>Esempio
 
 Gli spazi all'inizio della riga successiva dopo un carattere di continuazione di riga vengono inclusi nella costante di stringa. Nessuno degli esempi illustrati in precedenza incorpora un carattere di nuova riga nella costante di stringa. È possibile incorporare un carattere di nuova riga come illustrato di seguito:
 
