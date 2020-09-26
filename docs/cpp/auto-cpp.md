@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 675f6919b6804cfb1d2c5395d046cb5fa39e625d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229194"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353038"
 ---
-# <a name="auto-c"></a>`auto`C++
+# <a name="auto-c"></a>`auto` C++
 
 Deduce il tipo di una variabile dichiarata dall'espressione di inizializzazione.
 
@@ -65,7 +65,7 @@ La **`auto`** parola chiave è un modo semplice per dichiarare una variabile con
 
 ## <a name="references-and-cv-qualifiers"></a>Riferimenti ed elementi cv-qualifier
 
-Si noti che l'utilizzo di **`auto`** Elimina i riferimenti, i **`const`** qualificatori e i **`volatile`** qualificatori. Prendere in considerazione gli esempi seguenti:
+Si noti che l'utilizzo di **`auto`** Elimina i riferimenti, i **`const`** qualificatori e i **`volatile`** qualificatori. Si consideri l'esempio seguente:
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -220,10 +220,9 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[`auto`Parola chiave](../cpp/auto-keyword.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[`/Zc:auto`(Deduce il tipo di variabile)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[`sizeof`Operatore](../cpp/sizeof-operator.md)<br/>
+[`/Zc:auto` (Deduce il tipo di variabile)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[`sizeof` Operatore](../cpp/sizeof-operator.md)<br/>
 [`typeid`](../extensions/typeid-cpp-component-extensions.md)<br/>
 [`operator new`](new-operator-cpp.md)<br/>
 [Dichiarazioni e definizioni](declarations-and-definitions-cpp.md)<br/>

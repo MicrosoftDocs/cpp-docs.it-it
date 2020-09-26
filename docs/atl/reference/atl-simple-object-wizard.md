@@ -7,24 +7,24 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: bd4c9eede16ed086020dd8f12d90876e50a0a341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319210"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352687"
 ---
 # <a name="atl-simple-object-wizard"></a>Creazione guidata oggetto semplice ATL
 
-Questa procedura guidata consente di inserire nel progetto un oggetto COM minimo. Utilizzare questa pagina della procedura guidata per specificare i nomi che identificano la classe e i file di C, per l'oggetto e le relative funzionalità COM.
+Questa procedura guidata consente di inserire nel progetto un oggetto COM minimo. Utilizzare questa pagina della procedura guidata per specificare i nomi che identificano la classe e i file C++ per l'oggetto e la relativa funzionalità COM.
 
-Utilizzare la pagina [Opzioni](../../atl/reference/options-atl-simple-object-wizard.md) di questa procedura guidata per specificare il modello di threading dell'oggetto, il relativo supporto di aggregazione e se supporta le interfacce duali e l'automazione. È inoltre possibile indicare il supporto per l'interfaccia delle informazioni sugli errori, i punti di connessione, il supporto di Internet Explorer e il marshalling a thread libero.
+Utilizzare la pagina [Opzioni](../../atl/reference/options-atl-simple-object-wizard.md) di questa procedura guidata per specificare il modello di threading dell'oggetto, il relativo supporto di aggregazione e se supporta le interfacce duali e l'automazione. È inoltre possibile indicare il supporto per l'interfaccia informazioni sugli errori, i punti di connessione, il supporto di Internet Explorer e il marshalling a thread libero.
 
 ## <a name="remarks"></a>Osservazioni
 
 A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
-## <a name="names"></a>nomi
+## <a name="names"></a>Nomi
 
 Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al progetto. Ad eccezione di **Nome breve**, tutte le altre caselle possono essere modificate indipendentemente dalle altre. Se si modifica il testo per **Nome breve**, la modifica viene applicata ai nomi di tutte le altre caselle in questa pagina. Se si modifica il nome di **CoClass** nella sezione COM, la modifica viene applicata alle caselle **Tipo** e **ProgID**, ma il nome di **Interfaccia** non viene modificato. Questo comportamento di denominazione è progettato per rendere tutti i nomi facilmente identificabili durante lo sviluppo del controllo.
 
@@ -45,7 +45,7 @@ Fornisce informazioni per la classe C++ creata per l'oggetto.
 
    La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
 
-- **Class**
+- **Classe**
 
    Imposta il nome della classe da creare. Questo nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso tipico per un nome di classe.
 
@@ -63,18 +63,18 @@ Fornisce informazioni per la classe C++ creata per l'oggetto.
 
    Per impostazione predefinita, qualsiasi oggetto aggiunto dopo aver impostato questa opzione viene designato come con attributi (la casella di controllo è selezionata). È possibile deselezionare questa casella per aggiungere un oggetto che non usa attributi.
 
-   Per altre informazioni, vedere [Impostazioni applicazione, Creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md).
+   Per ulteriori informazioni [, vedere Impostazioni applicazione, creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [meccanismi di base degli attributi](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .
 
 ## <a name="com"></a>COM
 
 Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
-- **CoClass**
+- **Coclasse**
 
    Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto.
 
    > [!NOTE]
-   > Se si crea il progetto utilizzando gli attributi o se si indica in questa pagina della procedura `coclass` guidata che l'oggetto utilizza gli attributi, non è possibile modificare questa opzione perché ATL non include l'attributo.
+   > Se si crea il progetto utilizzando gli attributi oppure si indica a questa pagina della procedura guidata che l'oggetto utilizza gli attributi, non è possibile modificare questa opzione perché ATL non include l' `coclass` attributo.
 
 - **Tipo**
 
@@ -84,7 +84,7 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
    Imposta l'interfaccia creata per l'oggetto. Questa interfaccia contiene i metodi personalizzati.
 
-- **Progid**
+- **ProgID**
 
    Imposta il nome che può essere usato dai contenitori invece del CLSID dell'oggetto.
 

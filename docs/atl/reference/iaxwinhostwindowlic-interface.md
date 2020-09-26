@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: 55a96e27e58d844ec6fabec689dc2aedf536a9a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d7a63fc63b8abcf8574ea9a2fed2556635dba045
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835454"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352947"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>Interfaccia IAxWinHostWindowLic
 
@@ -26,7 +26,7 @@ Questa interfaccia fornisce metodi per la modifica di un controllo concesso in l
 interface IAxWinHostWindowLic : IAxWinHostWindow
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -39,7 +39,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 `IAxWinHostWindowLic` eredita da [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) e aggiunge metodi che supportano la creazione di controlli con licenza.
 
-Per un esempio che usa i membri di questa interfaccia, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
+Per un esempio che usa i membri di questa interfaccia, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -75,7 +75,7 @@ La chiamata a questo metodo equivale alla chiamata di [IAxWinHostWindowLic:: Cre
 
 ### <a name="example"></a>Esempio
 
-Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLic` .
+Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLic` .
 
 ## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> IAxWinHostWindowLic:: CreateControlLicEx
 
@@ -103,4 +103,4 @@ Per una descrizione dei parametri rimanenti e del valore restituito, vedere [IAx
 
 ### <a name="example"></a>Esempio
 
-Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLicEx` .
+Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLicEx` .

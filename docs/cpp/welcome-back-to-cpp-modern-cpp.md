@@ -4,12 +4,12 @@ description: Vengono descritti i nuovi idiomi di programmazione in C++ moderno e
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232196"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353051"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Bentornato in C++ - C++ moderno
 
@@ -75,7 +75,7 @@ Quando è necessaria l'ottimizzazione delle prestazioni, è consigliabile usare:
 
 - Contenitori associativi non ordinati, ad esempio [`unordered_map`](../standard-library/unordered-map-class.md) . Si tratta di un overhead minore per ogni elemento e di una ricerca a tempo costante, ma possono essere più difficili da usare in modo corretto ed efficiente.
 
-- Ordinato `vector` . Per altre informazioni, vedere [Algoritmi](../cpp/algorithms-modern-cpp.md).
+- Ordinato `vector` . Per altre informazioni, vedere [Algoritmi](../standard-library/algorithms.md).
 
 Non usare matrici di tipo C. Per le API precedenti che richiedono l'accesso diretto ai dati, usare i metodi della funzione di accesso, ad esempio `f(vec.data(), vec.size());` . Per ulteriori informazioni sui contenitori, vedere la pagina relativa ai [contenitori della libreria standard C++](../standard-library/stl-containers.md).
 

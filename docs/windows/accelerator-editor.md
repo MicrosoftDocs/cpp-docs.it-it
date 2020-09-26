@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c98ff1fd44b73b3f204e9b952836c387f7f21146
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623492"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353090"
 ---
 # <a name="accelerator-editor-c"></a>Editor tasti di scelta rapida (C++)
 
@@ -72,7 +72,7 @@ Di seguito sono riportate le voci valide per la proprietà **Modifier** nella ta
    |valore|Descrizione|
    |-----------|-----------------|
    |**Nessuno**|L'utente preme solo il valore della **chiave** .<br/><br/>Questo valore viene usato più efficacemente con i valori ASCII/ANSI da 001 a 026, interpretato come ^ A-^ Z (**CTRL + a** fino A **CTRL + z**).|
-   |**ALT**|L'utente deve premere **ALT** prima del valore della **chiave** .|
+   |**Alt**|L'utente deve premere **ALT** prima del valore della **chiave** .|
    |**CTRL**|L'utente deve premere **CTRL** prima del valore della **chiave** , non valido con il tipo ASCII.|
    |**MAIUSC**|L'utente deve premere **MAIUSC** prima del valore della **chiave** .|
    |**CTRL + ALT**|L'utente deve premere **CTRL** e **ALT** prima del valore della **chiave** , non valido con il tipo ASCII.|
@@ -184,7 +184,7 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 1. Passare alla [finestra Proprietà](/visualstudio/ide/reference/properties-window) e digitare i valori da condividere con tutti gli acceleratori selezionati.
 
 > [!NOTE]
-> Ogni valore del modificatore viene visualizzato come proprietà booleana nella finestra **Proprietà** . Se si modifica un valore di [modificatore](../windows/accelerator-modifier-property.md) nella finestra **Proprietà** , la tabella Accelerator considera il nuovo modificatore come un'aggiunta ai modificatori precedentemente presenti. Per questo motivo, se si impostano i valori dei modificatori, è necessario impostarli tutti per assicurarsi che ogni acceleratore condivida le stesse impostazioni del **modificatore** .
+> Ogni valore del modificatore viene visualizzato come proprietà booleana nella finestra **Proprietà** . Se si modifica un valore di modificatore nella finestra **Proprietà** , la tabella Accelerator considera il nuovo modificatore come un'aggiunta ai modificatori precedentemente presenti. Per questo motivo, se si impostano i valori dei modificatori, è necessario impostarli tutti per assicurarsi che ogni acceleratore condivida le stesse impostazioni del **modificatore** .
 
 ## <a name="requirements"></a>Requisiti
 

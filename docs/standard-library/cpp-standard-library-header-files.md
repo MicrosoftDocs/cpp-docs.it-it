@@ -6,12 +6,12 @@ helpviewer_keywords:
 - header files, C++ Standard Library
 - C++ Standard Library, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-ms.openlocfilehash: 0bbd67468c1df8b9e7c078f498d19f01f848149c
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: dfadfb99e10fdb916b3fb4dc515f89e6f9252fde
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281848"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352882"
 ---
 # <a name="c-standard-library-header-files"></a>File di intestazione della libreria standard C++
 
@@ -23,11 +23,11 @@ File di intestazione per la libreria standard C++ e per le estensioni, per categ
 
 | Category | Intestazioni |
 | - | - |
-| [Algoritmi](../cpp/algorithms-modern-cpp.md) | [\<algorithm>](algorithm.md), [\<cstdlib>](cstdlib.md), [\<numeric>](numeric.md) |
+| [Algoritmi](./algorithms.md) | [\<algorithm>](algorithm.md), [\<cstdlib>](cstdlib.md), [\<numeric>](numeric.md) |
 | Operazioni atomiche |  [\<atomic>](atomic.md)<sup>11</sup> |
 | Wrapper della libreria C | [\<cassert>](cassert.md), [\<ccomplex>](ccomplex.md) <sup>11 a b</sup>, [\<cctype>](cctype.md) , [\<cerrno>](cerrno.md) , [\<cfenv>](cfenv.md) <sup>11</sup>, [\<cfloat>](cfloat.md) , [\<cinttypes>](cinttypes.md) <sup>11</sup>, [\<ciso646>](ciso646.md) <sup>b</sup>, [\<climits>](climits.md) , [\<clocale>](clocale.md) , [\<cmath>](cmath.md) , [\<csetjmp>](csetjmp.md) , [\<csignal>](csignal.md) , [\<cstdalign>](cstdalign.md) <sup>11 a b</sup>, [\<cstdarg>](cstdarg.md) , [\<cstdbool>](cstdbool.md) <sup>11 a</sup>b, [\<cstddef>](cstddef.md) , [\<cstdint>](cstdint.md) <sup>11</sup>, [\<cstdio>](cstdio.md) , [\<cstdlib>](cstdlib.md) , [\<cstring>](cstring.md) , [\<ctgmath>](ctgmath.md) <sup>11 a b</sup>, [\<ctime>](ctime.md) , [\<cuchar>](cuchar.md) <sup>11</sup>, [\<cwchar>](cwchar.md) ,[\<cwctype>](cwctype.md) |
 | Concetti | \<concepts><sup>20</sup> |
-| [Contenitori](../cpp/containers-modern-cpp.md) | |
+| [Contenitori](./stl-containers.md) | |
 | Contenitori sequenza | [\<array>](array.md)<sup>11</sup>, [\<deque>](deque.md) , [\<forward_list>](forward-list.md) <sup>11</sup>, [\<list>](list.md) ,[\<vector>](vector.md) |
 | Contenitori associativi ordinati| [\<map>](map.md), [\<set>](set.md) |
 | Contenitori associativi non ordinati | [\<unordered_map>](unordered-map.md)<sup>11</sup>, [\<unordered_set>](unordered-set.md) <sup>11</sup> |
@@ -45,7 +45,7 @@ File di intestazione per la libreria standard C++ e per le estensioni, per categ
 | Intervalli | \<ranges><sup>20</sup> |
 | Espressioni regolari | [\<regex>](regex.md)<sup>11</sup> |
 | Stringhe e dati di tipo carattere | [\<charconv>](charconv.md)<sup>17</sup>, [\<cctype>](cctype.md) , [\<cstdlib>](cstdlib.md) , [\<cstring>](cstring.md) , [\<cuchar>](cuchar.md) <sup>11</sup>, [\<cwchar>](cwchar.md) , [\<cwctype>](cwctype.md) , [\<regex>](regex.md) <sup>11</sup>, [\<string>](string.md) , [\<string_view>](string-view.md) <sup>17</sup> |
-| Ora | [\<chrono>](chrono.md)<sup>11</sup>, [\<ctime>](ctime.md) |
+| Tempo | [\<chrono>](chrono.md)<sup>11</sup>, [\<ctime>](ctime.md) |
 
 <sup>11</sup> aggiunti nello standard c++ 11. \
 <sup>14</sup> aggiunti nello standard c++ 14. \
@@ -61,9 +61,9 @@ File di intestazione per la libreria standard C++ e per le estensioni, per categ
 
 |Category|Intestazioni|
 |-|-|
-|[Algoritmi](../cpp/algorithms-modern-cpp.md)|[\<algorithm>](algorithm.md)|
+|[Algoritmi](./algorithms.md)|[\<algorithm>](algorithm.md)|
 |Wrapper della libreria C|[\<cassert>](cassert.md), [\<cctype>](cctype.md), [\<cerrno>](cerrno.md), [\<cfenv>](cfenv.md), [\<cfloat>](cfloat.md), [\<cinttypes>](cinttypes.md), [\<ciso646>](ciso646.md), [\<climits>](climits.md), [\<clocale>](clocale.md), [\<cmath>](cmath.md), [\<csetjmp>](csetjmp.md), [\<csignal>](csignal.md), [\<cstdarg>](cstdarg.md), [\<cstdbool>](cstdbool.md), [\<cstddef>](cstddef.md), [\<cstdint>](cstdint.md), [\<cstdio>](cstdio.md), [\<cstdlib>](cstdlib.md), [\<cstring>](cstring.md), [\<ctgmath>](ctgmath.md), [\<ctime>](ctime.md), [\<cwchar>](cwchar.md), [\<cwctype>](cwctype.md)|
-|[Contenitori](../cpp/containers-modern-cpp.md)||
+|[Contenitori](./stl-containers.md)||
 |Contenitori sequenza|[\<array>](array.md), [\<deque>](deque.md), [\<forward_list>](forward-list.md), [\<list>](list.md), [\<vector>](vector.md)|
 |Contenitori associativi ordinati| [\<map>](map.md), [\<set>](set.md)|
 |Contenitori associativi non ordinati|[\<unordered_map>](unordered-map.md), [\<unordered_set>](unordered-set.md)|

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: cb949f9a17a6b751dae40202bf82e6cb321b526b
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565963"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352791"
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 
-Una matrice è una sequenza di oggetti dello stesso tipo che occupano un'area di memoria contigua. Le matrici di tipo C tradizionali sono l'origine di molti bug, ma sono ancora comuni, soprattutto nelle basi di codice precedenti. Nel linguaggio C++ moderno, è consigliabile usare [std:: Vector](../standard-library/vector-class.md) o [std:: Array](../standard-library/array-class-stl.md) anziché le matrici di tipo C descritte in questa sezione. In entrambi i tipi di libreria standard i relativi elementi vengono archiviati come blocco di memoria contiguo. Forniscono tuttavia una maggiore indipendenza dai tipi e supportano gli iteratori che puntano a una posizione valida all'interno della sequenza. Per altre informazioni, vedere [contenitori (C++ moderno)](containers-modern-cpp.md).
+Una matrice è una sequenza di oggetti dello stesso tipo che occupano un'area di memoria contigua. Le matrici di tipo C tradizionali sono l'origine di molti bug, ma sono ancora comuni, soprattutto nelle basi di codice precedenti. Nel linguaggio C++ moderno, è consigliabile usare [std:: Vector](../standard-library/vector-class.md) o [std:: Array](../standard-library/array-class-stl.md) anziché le matrici di tipo C descritte in questa sezione. In entrambi i tipi di libreria standard i relativi elementi vengono archiviati come blocco di memoria contiguo. Forniscono tuttavia una maggiore indipendenza dai tipi e supportano gli iteratori che puntano a una posizione valida all'interno della sequenza. Per ulteriori informazioni, vedere [contenitori](../standard-library/stl-containers.md).
 
 ## <a name="stack-declarations"></a>Dichiarazioni dello stack
 

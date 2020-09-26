@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 467925baf59598d743650d4f98d210f789f2b179
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833556"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353116"
 ---
 # <a name="composite-control-global-functions"></a>Funzioni globali di controllo composito
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Per altre informazioni sulla modifica degli script delle risorse, vedere [procedura: aprire un file script di risorsa in formato testo](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Per ulteriori informazioni sulle istruzioni di controllo della definizione delle risorse, vedere [parametri di controllo comuni](/windows/win32/menurc/common-control-parameters) in Windows SDK: SDK Tools.
+Per altre informazioni sulla modifica degli script di risorse, vedere [procedura: creare risorse](../../windows/how-to-create-a-resource-script-file.md). Per ulteriori informazioni sulle istruzioni di controllo della definizione delle risorse, vedere [parametri di controllo comuni](/windows/win32/menurc/common-control-parameters) in Windows SDK: SDK Tools.
 
 Per ulteriori informazioni sulle finestre di dialogo in generale, vedere [DialogBox](/windows/win32/api/winuser/nf-winuser-dialogboxw) e [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) nel Windows SDK.
 
@@ -298,7 +298,7 @@ Uno dei valori HRESULT standard.
 
 ### <a name="example"></a>Esempio
 
-Per un esempio di come usare, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLic` .
+Per un esempio di come usare, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLic` .
 
 ## <a name="atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a> AtlAxCreateControlLicEx
 
@@ -365,7 +365,7 @@ Uno dei valori HRESULT standard.
 
 ### <a name="example"></a>Esempio
 
-Per un esempio di come usare, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLicEx` .
+Per un esempio di come usare, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLicEx` .
 
 ## <a name="atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a> AtlAxAttachControl
 

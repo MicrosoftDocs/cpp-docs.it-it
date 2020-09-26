@@ -4,12 +4,12 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 16b2863bc3919edadeef29691c4588838010d9dc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7bdc371e5575375f5e72a1a6c0c51890921b1f4
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319264"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353129"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -38,55 +38,55 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
       Selezionare un provider appropriato per gestire la connessione all'origine dati. Il tipo di provider in genere è determinato dal tipo di database cui ci si connette. Fare clic sul pulsante **Avanti** oppure sulla scheda **Connessione**.
 
-  - **Scheda Connessione**
+  - Scheda **connessione**
 
-      Il contenuto di questa scheda dipende dal provider selezionato. Sebbene esistano molti tipi di provider, in questa sezione vengono illustrate le connessioni per i due più comuni: dati SQL e ODBC. Gli altri sono varianti simili dei campi descritti qui.
+      Il contenuto di questa scheda dipende dal provider selezionato. Sebbene esistano molti tipi di provider, in questa sezione vengono illustrate le connessioni per i due dati più comuni: SQL e ODBC. Gli altri sono varianti simili dei campi descritti qui.
 
       Per dati SQL:
 
-      1. **Selezionare o immettere il nome di un server:** Fare clic sul menu a discesa per visualizzare tutti i server dati registrati sulla rete e selezionarne uno.
+      1. **Selezionare o immettere il nome di un server:** Fare clic sul menu elenco a discesa per visualizzare tutti i server dei dati registrati nella rete e selezionarne uno.
 
-      1. **Immettere le informazioni per accedere al server:** Immettere un nome utente e una password per accedere al server dati.
+      1. **Immettere le informazioni per l'accesso al server:** Immettere un nome utente e una password per accedere al server di dati.
 
          > [!NOTE]
          > Esiste un problema di sicurezza relativo alla funzionalità "Consenti salvataggio password" della finestra di dialogo Proprietà di Data Link. In "Immettere le informazioni per l'accesso al server" sono disponibili due pulsanti di opzione:
          >
-         > - **Utilizzare la protezione integrata di Windows NT**
+         > - **Usa la sicurezza integrata di Windows NT**
          > - **Usa nome utente e password specifici**
          >
          > Se si seleziona **Utilizza nome utente e password specifici**, è possibile scegliere di salvare la password (usando la casella di controllo "Consenti salvataggio password"), ma questa opzione non è sicura. È consigliabile selezionare **Usa sicurezza integrata di Windows NT**: questa opzione è sicura perché crittografa la password.
          > In alcuni casi può essere necessario selezionare "Consenti salvataggio password". Ad esempio, se si sta rilasciando una libreria con una soluzione di database privata, è necessario non accedere al database direttamente, ma usare invece un'applicazione di livello intermedio per verificare l'utente (tramite qualsiasi schema di autenticazione scelto) e quindi limitare il tipo di dati disponibili per l'utente.
 
-      1. **Selezionare il database sul server:** Fare clic sul menu a discesa per visualizzare tutti i database registrati nel server dati e selezionarne uno.
+      1. **Selezionare il database nel server:** Fare clic sul menu elenco a discesa per visualizzare tutti i database registrati nel server dati e selezionarne uno.
 
          \- - oppure -
 
-         Collegare un file di **database come nome di database:** Specificare un file da utilizzare come database; immettere il nome di percorso esplicito.
+         **Alleghi un file di database come nome di database:** Specificare un file da utilizzare come database. Immettere il percorso esplicito.
 
       Per dati ODBC:
 
       1. **Specificare l'origine dei dati:** È possibile utilizzare un nome di origine dati o una stringa di connessione.
 
-         **Usa nome origine dati:Use data source name:** Questo elenco a discesa visualizza le origini dati registrate nel computer. È possibile configurare le origini dati in anticipo tramite Amministrazione origine dati ODBC
+         **Usa nome origine dati:** Questo elenco a discesa consente di visualizzare le origini dati registrate nel computer. È possibile configurare le origini dati in anticipo tramite Amministrazione origine dati ODBC
 
          \- - oppure -
 
-         **Usa stringa di connessione:Use connection string:** Immettere una stringa di connessione già ottenuta oppure fare clic sul pulsante **Compila;** viene visualizzata la finestra di dialogo **Seleziona origine dati.** Selezionare un'origine dati file o computer e fare clic su **OK**.
+         **Usa stringa di connessione:** Immettere una stringa di connessione già ottenuta oppure fare clic sul pulsante **Compila** ; verrà visualizzata la finestra di dialogo **Seleziona origine dati** . Selezionare un'origine dati file o computer e fare clic su **OK**.
 
          > [!NOTE]
          > È possibile ottenere una stringa di connessione visualizzando le proprietà di una connessione esistente in **Esplora server** oppure è possibile creare una connessione facendo doppio clic su **Aggiungi connessione** in **Esplora server**.
 
-      1. **Immettere le informazioni per accedere al server:** Immettere un nome utente e una password per accedere al server dati.
+      1. **Immettere le informazioni per l'accesso al server:** Immettere un nome utente e una password per accedere al server di dati.
 
       1. Immettere il catalogo iniziale da usare.
 
       1. Fare clic su **Test connessione**. Se il test riesce, fare clic su **OK**. In caso contrario, controllare le informazioni di accesso, provare un altro database o provare un altro server dati.
 
-  - **Scheda Avanzate**
+  - Scheda **Avanzate**
 
-      **Impostazioni di rete:** Specificare il **livello** di rappresentazione (il livello di rappresentazione che il server può utilizzare quando si rappresenta il client; corrisponde direttamente ai livelli di rappresentazione RPC) e il **livello** di protezione (il livello di protezione dei dati inviati tra client e server; corrisponde direttamente ai livelli di protezione RPC).
+      **Impostazioni di rete:** Specificare il **livello** di rappresentazione (il livello di rappresentazione che il server è autorizzato a utilizzare quando si rappresenta il client; corrisponde direttamente ai livelli di rappresentazione RPC) e al **livello di protezione** (il livello di protezione dei dati inviati tra client e server; corrisponde direttamente ai livelli di protezione RPC).
 
-      **Altro:** In **Timeout connessione**specificare il numero di secondi di tempo di inattività consentiti prima che si verifichi un timeout. In **Autorizzazioni di accesso** specificare le autorizzazioni di accesso per la connessione dati.
+      **Altro:** In **timeout connessione**specificare il numero di secondi di tempo di inattività consentiti prima che si verifichi un timeout. In **Autorizzazioni di accesso** specificare le autorizzazioni di accesso per la connessione dati.
 
       Per altre informazioni sulle proprietà di inizializzazione avanzate, vedere la documentazione fornita con ogni provider OLE DB specifico.
 
@@ -96,7 +96,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
       Fare clic su **OK** per completare la procedura. Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database**. Da questa finestra di dialogo selezionare la tabella, la visualizzazione o la stored procedure che verrà usata dal consumer.
 
-- **Class**
+- **Classe**
 
    Dopo aver selezionato un'origine dati, in questa casella viene immesso un nome di classe predefinito in base alla tabella o alla stored procedure selezionata (vedere **Selezionare un'origine dati** di seguito). È possibile modificare il nome della classe.
 
@@ -155,13 +155,13 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
     // for consumer type of 'table'
     ```
 
-     Per altre informazioni, vedere [Meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md).
+     Per ulteriori informazioni, vedere [meccanismi di base degli attributi](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .
 
 - **Tipo**
 
    Selezionare uno di questi pulsanti di opzione per specificare se la classe consumer verrà derivata da `CTable` o `CCommand` (impostazione predefinita).
 
-  - **tavolo**
+  - **Tabella**
 
       Selezionare questa opzione se si vuole usare `CTable` o `db_table` per creare le dichiarazioni di classe della tabella e delle funzioni di accesso alla tabella.
 
@@ -173,11 +173,11 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
    Selezionare le caselle di controllo per specificare i tipi di aggiornamenti che devono essere supportati nel consumer (l'impostazione predefinita è nessuno). Ognuna delle opzioni seguenti imposterà [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) e le voci appropriate per [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) nella mappa del set di proprietà.
 
-  - **Cambiare**
+  - **Modifica**
 
       Specifica che il consumer supporta gli aggiornamenti dei dati di riga nel set di righe.
 
-  - **Insert**
+  - **Inserimento**
 
       Specifica che il consumer supporta l'inserimento di righe nel set di righe.
 

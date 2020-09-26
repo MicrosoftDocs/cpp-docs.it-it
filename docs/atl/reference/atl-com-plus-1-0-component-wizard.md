@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b1fea925c5f6d657e398933b5fb26cf09c28055
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321683"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353155"
 ---
 # <a name="atl-com-10-component-wizard"></a>Creazione guidata componente ATL COM+ 1.0
 
@@ -29,7 +29,7 @@ Usare questa procedura guidata per aggiungere al progetto un oggetto che support
 
 A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
-## <a name="names"></a>nomi
+## <a name="names"></a>Nomi
 
 Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al progetto. Ad eccezione di **Nome breve**, tutte le altre caselle possono essere modificate indipendentemente dalle altre. Se si modifica il testo per **Nome breve**, la modifica viene applicata ai nomi di tutte le altre caselle in questa pagina. Se si modifica il nome di **CoClass** nella sezione COM, la modifica viene applicata alle caselle **Tipo** e **ProgID**, ma il nome di **Interfaccia** non viene modificato. Questo comportamento di denominazione è progettato per rendere tutti i nomi facilmente identificabili durante lo sviluppo del controllo.
 
@@ -43,7 +43,7 @@ Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al pro
 
    La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
 
-- **Class**
+- **Classe**
 
    Imposta il nome della classe da creare. Questo nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso tipico per un nome di classe.
 
@@ -61,13 +61,13 @@ Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al pro
 
    Per impostazione predefinita, qualsiasi oggetto aggiunto dopo aver impostato questa opzione viene designato come con attributi (la casella di controllo è selezionata). È possibile deselezionare questa casella per aggiungere un oggetto che non usa attributi.
 
-   Per altre informazioni, vedere [Impostazioni applicazione, Creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md).
+   Per ulteriori informazioni [, vedere Impostazioni applicazione, creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [meccanismi di base degli attributi](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .
 
 ### <a name="com"></a>COM
 
 Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
-- **CoClass**
+- **Coclasse**
 
    Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto.
 
@@ -82,7 +82,7 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
    Imposta l'interfaccia creata per l'oggetto. Questa interfaccia contiene i metodi personalizzati.
 
-- **Progid**
+- **ProgID**
 
    Imposta il nome che può essere usato dai contenitori invece del CLSID dell'oggetto.
 

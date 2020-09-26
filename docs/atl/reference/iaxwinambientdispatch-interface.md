@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: a53481a57676b5b4a253a3501d3536e5115907a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dbd682451ca5499aef4b16b3b51feba8411bdd12
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833413"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352960"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interfaccia IAxWinAmbientDispatch
 
@@ -55,7 +55,7 @@ Questa interfaccia fornisce metodi per specificare le caratteristiche del conten
 interface IAxWinAmbientDispatch : IDispatch
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -98,7 +98,7 @@ Questa interfaccia è esposta dagli oggetti di hosting del controllo ActiveX di 
 
 Se si sta collegando a ATL90.dll, **AxHost** caricherà le informazioni sul tipo dalla libreria dei tipi nella dll.
 
-Per ulteriori informazioni, vedere l' [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
+Per ulteriori informazioni, vedere l' [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) .
 
 ## <a name="requirements"></a>Requisiti
 

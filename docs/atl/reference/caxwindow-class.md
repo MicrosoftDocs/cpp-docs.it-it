@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 1301baef874ac4e482a1b2a7f0a2ee6b1b63396f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833829"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353077"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -36,7 +36,7 @@ Questa classe fornisce metodi per la modifica di una finestra che ospita un cont
 class CAxWindow : public CWindow
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -170,7 +170,7 @@ Vedere [CAxWindow2T:: CreateControlLic](../../atl/reference/caxwindow2t-class.md
 
 ### <a name="example"></a>Esempio
 
-Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControl` .
+Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControl` .
 
 ## <a name="caxwindowcreatecontrolex"></a><a name="createcontrolex"></a> CAxWindow:: CreateControlEx
 
@@ -242,7 +242,7 @@ Vedere [CAxWindow2T:: CreateControlLicEx](../../atl/reference/caxwindow2t-class.
 
 ### <a name="example"></a>Esempio
 
-Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControlEx` .
+Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControlEx` .
 
 ## <a name="caxwindowgetwndclassname"></a><a name="getwndclassname"></a> CAxWindow:: GetWndClassName
 

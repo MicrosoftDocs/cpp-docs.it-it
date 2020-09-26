@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: a78beeab663ef1b467cdec32ca51132e8134a9b2
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 3e29d049c50f0410daf16b4bd1322676fd499fd2
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707046"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352674"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Creazione guidata componente ASP ATL
 
@@ -67,21 +67,21 @@ Fornisce informazioni per la classe C++ creata per l'oggetto.
 
    Per i progetti senza attributi, per impostazione predefinita qualsiasi oggetto aggiunto dopo aver impostato questa opzione viene designato come con attributi (la casella di controllo è selezionata). È possibile deselezionare questa casella per aggiungere un oggetto che non usa attributi.
 
-   Per altre informazioni, vedere [Impostazioni applicazione, Creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md).
+   Per ulteriori informazioni [, vedere Impostazioni applicazione, creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [meccanismi di base degli attributi](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .
 
 ### <a name="com"></a>COM
 
 Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
-- **CoClass**
+- **Coclasse**
 
    Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto. Se il progetto o questo oggetto usa attributi, non è possibile modificare questa opzione, perché ATL non include l'attributo **CoClass**.
 
-- **Type**
+- **Tipo**
 
    Imposta la descrizione dell'oggetto che verrà visualizzata nel Registro di sistema per la coclasse.
 
-- **Interface**
+- **Interfaccia**
 
    Imposta l'interfaccia creata per l'oggetto. Questa interfaccia contiene i metodi personalizzati.
 

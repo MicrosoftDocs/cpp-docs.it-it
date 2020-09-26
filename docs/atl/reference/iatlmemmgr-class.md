@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: a33414ec1c1b01742382150049f8e99f4a70ae34
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833426"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353012"
 ---
 # <a name="iatlmemmgr-class"></a>Classe IAtlMemMgr
 
@@ -30,7 +30,7 @@ Questa classe rappresenta l'interfaccia per un gestore della memoria.
 __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -937,7 +937,7 @@ La chiamata a questo metodo equivale alla chiamata di [IAxWinHostWindowLic:: Cre
 
 ### <a name="example"></a>Esempio
 
-Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLic` .
+Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLic` .
 
 ## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> IAxWinHostWindowLic:: CreateControlLicEx
 
@@ -965,7 +965,7 @@ Per una descrizione dei parametri rimanenti e del valore restituito, vedere [IAx
 
 ### <a name="example"></a>Esempio
 
-Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLicEx` .
+Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLicEx` .
 
 ## <a name="see-also"></a>Vedere anche
 
