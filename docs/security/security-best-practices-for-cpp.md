@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 12b2db55a393928683e65c8faca49595fbbebc51
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 63c5567cf1b06d52aa4b458a9ca127039e5c5daf
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389961"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499595"
 ---
 # <a name="security-best-practices-for-c"></a>Procedure di sicurezza consigliate per C++
 
@@ -23,21 +23,21 @@ Questo articolo contiene informazioni su strumenti e procedure di sicurezza. Il 
 
 Queste funzionalità di sicurezza sono incorporate nel compilatore e nel linker di Microsoft C++:
 
-[`/guard`(Abilita Guard flusso di controllo)](../build/reference/guard-enable-control-flow-guard.md)<br/>
+[`/guard` (Abilita Guard flusso di controllo)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Fa in modo che il compilatore analizzi il flusso di controllo per le destinazioni di chiamata indirette in fase di compilazione e quindi per inserire il codice per verificare le destinazioni in fase di esecuzione.
 
-[`/GS`(Controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md)<br/>
+[`/GS` (Controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md)<br/>
 Indica al compilatore di inserire il codice di rilevamento di sovraccarico nelle funzioni esposte al rischio di exploit. Quando viene rilevato un sovraccarico, l'esecuzione viene interrotta. Per impostazione predefinita, questa opzione è attivata.
 
-[`/SAFESEH`(L'immagine ha gestori delle eccezioni sicuri)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
+[`/SAFESEH` (L'immagine ha gestori delle eccezioni sicuri)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
 Indica al linker di includere nell'immagine di output una tabella contenente l'indirizzo di ogni gestore di eccezioni. In fase di esecuzione, il sistema operativo usa la tabella per verificare che vengano eseguiti solo i gestori di eccezione legittimi. Questo consente di evitare l'esecuzione di gestori di eccezione introdotti da un attacco dannoso in fase di esecuzione. Per impostazione predefinita, questa opzione è impostata su OFF.
 
 [`/NXCOMPAT`](../build/reference/nxcompat.md), [ `/NXCOMPAT` (Compatibile con protezione esecuzione programmi)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) queste opzioni del compilatore e del linker abilitano la compatibilità DEP (Data Execution Prevention). Protezione esecuzione programmi protegge la CPU dall'esecuzione di pagine non di codice.
 
-[`/analyze`(Analisi codice)](../build/reference/analyze-code-analysis.md)<br/>
-Questa opzione del compilatore attiva l'analisi codice che segnala i potenziali problemi di sicurezza, ad esempio sovraccarico del buffer, memoria non inizializzata, dereferenziazione puntatore Null e perdite di memoria. Per impostazione predefinita, questa opzione è impostata su OFF. Per ulteriori informazioni, vedere [Cenni preliminari sull'analisi del codice per C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+[`/analyze` (Analisi codice)](../build/reference/analyze-code-analysis.md)<br/>
+Questa opzione del compilatore attiva l'analisi codice che segnala i potenziali problemi di sicurezza, ad esempio sovraccarico del buffer, memoria non inizializzata, dereferenziazione puntatore Null e perdite di memoria. Per impostazione predefinita, questa opzione è impostata su OFF. Per ulteriori informazioni, vedere [Cenni preliminari sull'analisi del codice per C/C++](../code-quality/code-analysis-for-c-cpp-overview.md).
 
-[`/DYNAMICBASE`(Usare la sequenza casuale del layout dello spazio degli indirizzi)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
+[`/DYNAMICBASE` (Usare la sequenza casuale del layout dello spazio degli indirizzi)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Questa opzione del linker consente la compilazione di un'immagine eseguibile che può essere caricata in posizioni diverse in memoria all'inizio dell'esecuzione. Questa opzione rende inoltre il percorso dello stack in memoria molto meno prevedibile.
 
 ## <a name="security-enhanced-crt"></a>CRT con sicurezza avanzata

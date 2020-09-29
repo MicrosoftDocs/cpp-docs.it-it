@@ -5,16 +5,16 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: 15ec81fb4fafd7850162a1feab28e72d469aff91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06418bc1a331a5c77653087434a5cc621f92e7d7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87206003"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498549"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP che usa una variabile di riduzione per l'utilizzo del runtime di concorrenza
 
-In questo esempio viene illustrato come convertire un ciclo OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md) che utilizza la clausola [reduction](../../parallel/openmp/reference/reduction.md) per utilizzare la runtime di concorrenza.
+In questo esempio viene illustrato come convertire un ciclo OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../openmp/reference/openmp-directives.md#for-openmp) che utilizza la clausola [reduction](../openmp/reference/openmp-clauses.md#reduction) per utilizzare la runtime di concorrenza.
 
 La `reduction` clausola OpenMP consente di specificare una o più variabili thread-private che sono soggette a un'operazione di riduzione alla fine dell'area parallela. OpenMP definisce un set di operatori di riduzione. Ogni variabile di riduzione deve essere scalare, ad esempio,, **`int`** **`long`** e **`float`** . OpenMP definisce inoltre diverse restrizioni relative alla modalità di utilizzo delle variabili di riduzione in un'area parallela.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: 7866afd26c901181f2b4193a87daf5dca2b0c67f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fa7b4122b513d48194dedeb39daecd1dfd7223eb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226685"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499584"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementazione di una finestra di dialogo
 
@@ -20,7 +20,7 @@ Esistono due modi per aggiungere una finestra di dialogo al progetto ATL: utiliz
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Aggiunta di una finestra di dialogo con la creazione guidata finestra di dialogo ATL
 
-Nella finestra di [dialogo Aggiungi classe](../ide/add-class-dialog-box.md)selezionare l'oggetto finestra di dialogo ATL per aggiungere una finestra di dialogo al progetto ATL. Compilare la creazione guidata finestra di dialogo ATL in modo appropriato e fare clic su **fine**. La procedura guidata consente di aggiungere al progetto una classe derivata da [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) . Aprire **visualizzazione risorse** dal menu **Visualizza** , individuare la finestra di dialogo e fare doppio clic su di essa per aprirla nell'editor risorse.
+Nella finestra di [dialogo Aggiungi classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)selezionare l'oggetto finestra di dialogo ATL per aggiungere una finestra di dialogo al progetto ATL. Compilare la creazione guidata finestra di dialogo ATL in modo appropriato e fare clic su **fine**. La procedura guidata consente di aggiungere al progetto una classe derivata da [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) . Aprire **visualizzazione risorse** dal menu **Visualizza** , individuare la finestra di dialogo e fare doppio clic su di essa per aprirla nell'editor risorse.
 
 > [!NOTE]
 > Se la finestra di dialogo è derivata da `CAxDialogImpl` , può ospitare controlli ActiveX e Windows. Se non si desidera il sovraccarico del supporto del controllo ActiveX nella classe della finestra di dialogo, utilizzare invece [CSimpleDialog](../atl/reference/csimpledialog-class.md) o [CDialogImpl](../atl/reference/cdialogimpl-class.md) .
@@ -34,7 +34,7 @@ L'implementazione di una finestra di dialogo è simile all'implementazione di un
 > [!NOTE]
 > Quando si crea una finestra di dialogo mediante la creazione guidata finestra di dialogo ATL, la procedura guidata aggiunge automaticamente il `IDD` membro come **`enum`** tipo.
 
-`CDialogImpl`consente di implementare una finestra di dialogo modale o non modale che ospita i controlli Windows. `CAxDialogImpl`consente di implementare una finestra di dialogo modale o non modale che ospita controlli ActiveX e Windows.
+`CDialogImpl` consente di implementare una finestra di dialogo modale o non modale che ospita i controlli Windows. `CAxDialogImpl` consente di implementare una finestra di dialogo modale o non modale che ospita controlli ActiveX e Windows.
 
 Per creare una finestra di dialogo modale, creare un'istanza della `CDialogImpl` classe derivata da (o `CAxDialogImpl` derivata da), quindi chiamare il metodo [DoModal](../atl/reference/cdialogimpl-class.md#domodal) . Per chiudere una finestra di dialogo modale, chiamare il metodo [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) da un gestore di messaggi. Per creare una finestra di dialogo non modale, chiamare il metodo [create](../atl/reference/cdialogimpl-class.md#create) anziché `DoModal` . Per eliminare definitivamente una finestra di dialogo non modale, chiamare [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).
 

@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108432"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500164"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -82,7 +82,7 @@ Come usare le funzionalità di produttività disponibili nell'editor di C++ per 
 [Debug del codice nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Usare il debugger di Visual Studio con i progetti C++.
 
-[Cenni preliminari sull'analisi del codice per C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Cenni preliminari sull'analisi del codice per C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 Usare le annotazioni SAL o le verifiche di Linee guida di base di C++ per eseguire l'analisi statica.
 
 [Scrivere unit test per C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -152,7 +152,7 @@ Algoritmi paralleli e asincroni eseguiti sulla CPU.
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Algoritmi paralleli in modalità massiccia eseguiti sulla GPU.
 
-[Libreria di modelli di Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Libreria di modelli di Windows Runtime (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 App e componenti UWP (Universal Windows Platform).
 
 [Programmazione .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

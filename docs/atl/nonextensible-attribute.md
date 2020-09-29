@@ -1,22 +1,22 @@
 ---
-title: nonextensible (attributo)
+title: Attributo non estendibile
 ms.date: 11/04/2016
 helpviewer_keywords:
 - nonextensible attribute
 - dual interfaces, nonextensible attribute
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
-ms.openlocfilehash: cc57acb8bd7bc3e32c764606da651f57316ceabf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda2a0d43144b6e9832e061e7198b3f3e65f8b86
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250104"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500117"
 ---
-# <a name="nonextensible-attribute"></a>nonextensible (attributo)
+# <a name="nonextensible-attribute"></a>Attributo non estendibile
 
-Se un'interfaccia duale verrà estesa non in fase di esecuzione (vale a dire, se non sono forniti metodi o proprietà attraverso `IDispatch::Invoke` che non sono disponibili tramite la vtable), è consigliabile applicare il **nonextensible** attributo all'interfaccia definizione. Questo attributo fornisce informazioni per le lingue client (ad esempio Visual Basic) che può essere usato per abilitare la verifica del codice completo in fase di compilazione. Se questo attributo viene omesso, i bug possono rimanere nascosti nel codice client alla fase di esecuzione.
+Se un'interfaccia duale non verrà estesa in fase di esecuzione (ovvero, non si forniranno metodi o proprietà tramite `IDispatch::Invoke` che non sono disponibili tramite vtable), è necessario applicare l'attributo non **estensibile** alla definizione dell'interfaccia. Questo attributo fornisce informazioni alle lingue client, ad esempio Visual Basic, che possono essere usate per abilitare la verifica completa del codice in fase di compilazione. Se questo attributo non viene specificato, i bug potrebbero rimanere nascosti nel codice client fino alla fase di esecuzione.
 
-Per altre informazioni sul **nonextensible** attributo e un esempio, vedere [nonextensible](../windows/nonextensible.md).
+Per ulteriori informazioni sull'attributo non **estendibile** e un esempio, vedere non [estendibile](../windows/attributes/nonextensible.md).
 
 ## <a name="see-also"></a>Vedere anche
 

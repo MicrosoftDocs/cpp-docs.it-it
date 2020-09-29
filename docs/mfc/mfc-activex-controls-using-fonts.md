@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 58f387ba6f4d7cdffb3ffc1f7be6f9acde8314f4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618173"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499695"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controlli ActiveX MFC: utilizzo dei tipi di carattere
 
@@ -36,13 +36,13 @@ Questo articolo include gli argomenti seguenti:
 
 - [Uso delle proprietà dei tipi di carattere personalizzate nel controllo](#_core_implementing_a_custom_font_property)
 
-## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a>Uso della proprietà del tipo di carattere Stock
+## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a> Uso della proprietà del tipo di carattere Stock
 
 Le proprietà del tipo di carattere predefinite sono preimplementate dalla classe [COleControl](reference/colecontrol-class.md). Inoltre, è disponibile anche una pagina delle proprietà del tipo di carattere standard, che consente all'utente di modificare vari attributi dell'oggetto tipo di carattere, ad esempio il nome, la dimensione e lo stile.
 
 Accedere all'oggetto tipo di carattere tramite le funzioni [GetFont](reference/colecontrol-class.md#getfont), [sefont](reference/colecontrol-class.md#setfont)e [InternalGetFont](reference/colecontrol-class.md#internalgetfont) di `COleControl` . L'utente del controllo accederà all'oggetto del tipo di carattere tramite le `GetFont` funzioni e allo `SetFont` stesso modo di qualsiasi altra proprietà get/set. Quando è richiesto l'accesso all'oggetto tipo di carattere dall'interno di un controllo, usare la `InternalGetFont` funzione.
 
-Come descritto in [controlli ActiveX MFC: Proprietà](mfc-activex-controls-properties.md), l'aggiunta di proprietà predefinite è facile con l' [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md). Si sceglie la proprietà font e l'aggiunta guidata proprietà inserisce automaticamente la voce del tipo di carattere di magazzino nella mappa di invio del controllo.
+Come descritto in [controlli ActiveX MFC: Proprietà](mfc-activex-controls-properties.md), l'aggiunta di proprietà predefinite è facile con l' [Aggiunta guidata proprietà](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard). Si sceglie la proprietà font e l'aggiunta guidata proprietà inserisce automaticamente la voce del tipo di carattere di magazzino nella mappa di invio del controllo.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Per aggiungere la proprietà stock font utilizzando l'aggiunta guidata proprietà
 
@@ -90,7 +90,7 @@ L'aggiunta guidata proprietà aggiunge la riga seguente alla mappa di invio del 
 
 [!code-cpp[NVC_MFC_AxFont#3](codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]
 
-## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a>Modifica della funzione onpare
+## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a> Modifica della funzione onpare
 
 L'implementazione predefinita di `OnDraw` Usa il tipo di carattere di sistema Windows per tutto il testo visualizzato nel controllo. Ciò significa che è necessario modificare il `OnDraw` codice selezionando l'oggetto del tipo di carattere nel contesto di dispositivo. A tale scopo, chiamare [COleControl:: SelectStockFont](reference/colecontrol-class.md#selectstockfont) e passare il contesto di dispositivo del controllo, come illustrato nell'esempio seguente:
 
@@ -98,7 +98,7 @@ L'implementazione predefinita di `OnDraw` Usa il tipo di carattere di sistema Wi
 
 Dopo che la `OnDraw` funzione è stata modificata per l'utilizzo dell'oggetto tipo di carattere, qualsiasi testo all'interno del controllo viene visualizzato con le caratteristiche della proprietà del tipo di carattere azionario del controllo.
 
-## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a>Uso delle proprietà dei tipi di carattere personalizzate nel controllo
+## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a> Uso delle proprietà dei tipi di carattere personalizzate nel controllo
 
 Oltre alla proprietà stock font, il controllo ActiveX può includere proprietà del tipo di carattere personalizzate. Per aggiungere una proprietà del tipo di carattere personalizzata è necessario:
 
@@ -108,7 +108,7 @@ Oltre alla proprietà stock font, il controllo ActiveX può includere proprietà
 
 - [Implementazione di una nuova interfaccia di notifica dei tipi di carattere](#_core_implementing_a_new_font_notification_interface).
 
-### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a>Implementazione di una proprietà Font personalizzata
+### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a> Implementazione di una proprietà Font personalizzata
 
 Per implementare una proprietà del tipo di carattere personalizzata, utilizzare l'aggiunta guidata proprietà per aggiungere la proprietà, quindi apportare alcune modifiche al codice. Nelle sezioni seguenti viene descritto come aggiungere la `HeadingFont` proprietà personalizzata al controllo di esempio.
 
@@ -198,7 +198,7 @@ Dopo che la proprietà del tipo di carattere personalizzata è stata implementat
 
 Dopo aver apportato queste modifiche, ricompilare l'intero progetto per incorporare le funzionalità aggiuntive.
 
-### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a>Elaborazione delle notifiche dei tipi di carattere
+### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a> Elaborazione delle notifiche dei tipi di carattere
 
 Nella maggior parte dei casi è necessario che il controllo conosca quando le caratteristiche dell'oggetto tipo di carattere sono state modificate. Ogni oggetto del tipo di carattere è in grado di fornire notifiche quando viene modificato chiamando una funzione membro dell' `IFontNotification` interfaccia implementata da `COleControl` .
 
@@ -211,7 +211,7 @@ Le linee continue nella figura precedente mostrano che entrambi gli oggetti Font
 
 Un modo per distinguere tra le notifiche degli oggetti del tipo di carattere del controllo consiste nel creare un'implementazione separata dell' `IFontNotification` interfaccia per ogni oggetto del tipo di carattere nel controllo. Questa tecnica consente di ottimizzare il codice di disegno aggiornando solo la stringa o le stringhe che usano il tipo di carattere modificato di recente. Nelle sezioni seguenti vengono illustrati i passaggi necessari per implementare interfacce di notifica separate per una seconda proprietà del tipo di carattere. Si presuppone che la seconda proprietà del tipo di carattere sia la `HeadingFont` proprietà aggiunta nella sezione precedente.
 
-### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a>Implementazione di una nuova interfaccia di notifica dei tipi di carattere
+### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a> Implementazione di una nuova interfaccia di notifica dei tipi di carattere
 
 Per distinguere tra le notifiche di due o più tipi di carattere, è necessario implementare una nuova interfaccia di notifica per ogni tipo di carattere utilizzato nel controllo. Le sezioni seguenti descrivono come implementare una nuova interfaccia di notifica dei tipi di carattere modificando l'intestazione e i file di implementazione del controllo.
 
@@ -236,5 +236,5 @@ Dopo aver apportato queste modifiche al progetto, ricompilare il progetto e usar
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: uso di immagini in un controllo ActiveX](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
 [Controlli ActiveX MFC: utilizzo delle pagine delle proprietà predefinite](mfc-activex-controls-using-stock-property-pages.md)

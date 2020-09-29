@@ -6,12 +6,12 @@ ms.date: 07/25/2020
 helpviewer_keywords:
 - keywords [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: 96fb4e6a51630f3b5297c6428297980b5c51ca36
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: b875b4df797985dc21f54f48ceeaa86574f31ac6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609139"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498760"
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 
@@ -26,7 +26,7 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
         [`and`](bitwise-and-operator-amp.md)<sup>b</sup>\
         [`and_eq`](assignment-operators.md)<sup>b</sup>\
         [`asm`](../assembler/inline/asm.md)<sup>oggetto</sup>\
-        [`auto`](auto-keyword.md)\
+        [`auto`](./auto-cpp.md)\
         [`bitand`](bitwise-and-operator-amp.md)<sup>b</sup>\
         [`bitor`](bitwise-inclusive-or-operator-pipe.md)<sup>b</sup>\
         [`bool`](bool-cpp.md)\
@@ -61,7 +61,7 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
         [`enum`](enumerations-cpp.md)\
         [`explicit`](user-defined-type-conversions-cpp.md)\
         **`export`**<sup>c</sup>\
-        [`extern`](using-extern-to-specify-linkage.md)\
+        [`extern`](./extern-cpp.md)\
         [`false`](false-cpp.md)\
         [`float`](fundamental-types-cpp.md)\
         [`for`](for-statement-cpp.md)\
@@ -240,20 +240,20 @@ Questi identificatori sono attributi estesi per il **`__declspec`** modificatore
 
 :::row:::
     :::column:::
-        [`__abstract`](../dotnet/declaration-of-a-managed-class-type.md)<sup>f</sup>\
-        [`__box`](../dotnet/value-type-semantics.md)<sup>f</sup>\
-        [`__delegate`](../dotnet/delegates-and-events.md)<sup>f</sup>\
-        [`__gc`](../dotnet/declaration-of-a-clr-reference-class-object.md)<sup>f</sup>\
+        [`__abstract`](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<sup>f</sup>\
+        [`__box`](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<sup>f</sup>\
+        [`__delegate`](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<sup>f</sup>\
+        [`__gc`](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<sup>f</sup>\
         [`__identifier`](../extensions/identifier-cpp-cli.md)\
-        [`__nogc`](../dotnet/declaration-of-a-clr-reference-class-object.md)<sup>f</sup>\
+        [`__nogc`](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<sup>f</sup>\
         [`__noop`](../intrinsics/noop.md)\
         **`__pin`**<sup>f</sup>\
         **`__property`**<sup>f</sup>\
         **`__sealed`**<sup>f</sup>
     :::column-end:::
     :::column:::
-        [`__try_cast`](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)<sup>f</sup>\
-        [`__value`](../dotnet/value-type-semantics.md)<sup>f</sup>\
+        [`__try_cast`](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<sup>f</sup>\
+        [`__value`](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<sup>f</sup>\
         [`abstract`](../extensions/abstract-cpp-component-extensions.md)<sup>g</sup>\
         [`array`](../extensions/arrays-cpp-component-extensions.md)<sup>g</sup>\
         [`as_friend`](../preprocessor/hash-using-directive-cpp.md)\
@@ -290,7 +290,7 @@ Questi identificatori sono attributi estesi per il **`__declspec`** modificatore
 
 <sup>g</sup> applicabile a C++/CLI.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Convenzioni lessicali](lexical-conventions.md)<br/>
 [Operatori, precedenza e associatività predefiniti di C++](cpp-built-in-operators-precedence-and-associativity.md)

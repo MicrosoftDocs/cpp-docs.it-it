@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226008"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499820"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -40,7 +40,7 @@ Specifiche facoltative del modello. Per ulteriori informazioni, vedere [modelli]
 *MS-decl-spec*<br/>
 Specifica della classe di archiviazione facoltativa. Per ulteriori informazioni, fare riferimento alla parola chiave [__declspec](../cpp/declspec.md) .
 
-*Tag*<br/>
+*tag*<br/>
 Nome del tipo assegnato alla classe. Il tag diventa una parola riservata nell'ambito della classe. Il tag è facoltativo. Se omesso, viene definita una classe anonima. Per ulteriori informazioni, vedere [tipi di classe anonimi](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
@@ -50,7 +50,7 @@ Elenco facoltativo delle classi o delle strutture da cui questa classe deriva i 
 Elenco dei membri della classe. Per ulteriori informazioni, vedere [Cenni preliminari sui membri della classe](../cpp/class-member-overview.md) .
 
 *declarators*<br/>
-Elenco dei dichiaratori che specificano i nomi di una o più istanze del tipo di classe. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della classe sono **`public`** . Questo è più comune nelle strutture, i cui membri dati sono **`public`** per impostazione predefinita, rispetto alle classi. Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](../cpp/overview-of-declarators.md) .
+Elenco dei dichiaratori che specificano i nomi di una o più istanze del tipo di classe. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della classe sono **`public`** . Questo è più comune nelle strutture, i cui membri dati sono **`public`** per impostazione predefinita, rispetto alle classi. Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](./declarations-and-definitions-cpp.md) .
 
 ## <a name="remarks"></a>Osservazioni
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
-ms.openlocfilehash: 1d91d98082a5c5d6d45bfa31e81c59e8925aa2c2
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: d63f73e17e47f2cabb8f1a55c71325ec7068a2c8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694218"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500371"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Aggiungere una classe da un controllo ActiveX
 
@@ -34,7 +34,7 @@ Un controllo ActiveX è un componente software riutilizzabile basato sul modello
 
 1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi **Aggiungi classe**.
 
-1. Nella finestra di dialogo [Aggiungi classe](../ide/add-class-dialog-box.md) nel riquadro **Modelli** scegliere **Classe MFC da controllo ActiveX** e quindi **Apri** per visualizzare l'[Aggiunta guidata classe da controllo ActiveX](#add-class-from-activex-control-wizard).
+1. Nella finestra di dialogo [Aggiungi classe](./adding-a-class-visual-cpp.md#add-class-dialog-box) nel riquadro **Modelli** scegliere **Classe MFC da controllo ActiveX** e quindi **Apri** per visualizzare l'[Aggiunta guidata classe da controllo ActiveX](#add-class-from-activex-control-wizard).
 
 Nella procedura guidata è possibile aggiungere più di un'interfaccia in un controllo ActiveX. È anche possibile creare classi da più di un controllo ActiveX in un'unica sessione della procedura guidata.
 
@@ -56,7 +56,7 @@ Usare questa procedura guidata per aggiungere una classe MFC da un controllo Act
 
   |Opzione|Descrizione|
   |------------|-----------------|
-  |**Registry**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
+  |**Registro**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
   |**File**|La libreria dei tipi non è necessariamente registrata nel sistema, ma è archiviata in un file. Specificare il percorso del file in **Percorso**.|
 
 - **Controlli ActiveX disponibili**
@@ -75,7 +75,7 @@ Usare questa procedura guidata per aggiungere una classe MFC da un controllo Act
 
   Specifica le interfacce nel controllo ActiveX. La procedura guidata usa le interfacce della selezione corrente di **Controlli ActiveX disponibili** o le interfacce del file della libreria dei tipi specificato in **Percorso**.
 
-  |Pulsante Trasferimento|Descrizione|
+  |Pulsante di trasferimento|Descrizione|
   |---------------------|-----------------|
   |**>**|Aggiunge l'interfaccia selezionata nell'elenco **Interfacce**. Non disponibile se non è selezionata alcuna interfaccia.|
   |**>>**|Aggiunge tutte le interfacce nel controllo ActiveX. La procedura guidata usa le interfacce della selezione corrente di **Controlli ActiveX disponibili** o le interfacce del file della libreria dei tipi specificato in **Percorso**.|
@@ -84,9 +84,9 @@ Usare questa procedura guidata per aggiungere una classe MFC da un controllo Act
 
 - **Classi generate**
 
-  Specifica i nomi di classe da generare dalle interfacce aggiunte usando il pulsante **>** o **>>**. È possibile selezionare questa casella per selezionare una classe e quindi usare le frecce Su o Giù per scorrere l'elenco. Quando si seleziona **Fine** il nome di ogni classe creata viene visualizzato nella casella **Classe** e il nome di ogni file generato viene visualizzato nella casella **File .h**. È possibile selezionare solo una classe alla volta in questa casella.
+  Specifica i nomi di classe da generare dalle interfacce aggiunte utilizzando il **>** pulsante o **>>** . È possibile selezionare questa casella per selezionare una classe e quindi usare le frecce Su o Giù per scorrere l'elenco. Quando si seleziona **Fine** il nome di ogni classe creata viene visualizzato nella casella **Classe** e il nome di ogni file generato viene visualizzato nella casella **File .h**. È possibile selezionare solo una classe alla volta in questa casella.
 
-  È possibile rimuovere una classe selezionandola nell'elenco e facendo clic su **<**. Non è necessario selezionare una classe nella casella **Classi generate** per rimuovere tutte le classi. Se si seleziona **<<**, vengono rimosse tutte le classi nella casella **Classi generate**.
+  È possibile rimuovere una classe selezionandola in questo elenco e selezionando **<** . Non è necessario selezionare una classe nella casella **Classi generate** per rimuovere tutte le classi. Selezionando **<<** , vengono rimosse tutte le classi nella casella **classi generate** .
 
 - **Classe**
 

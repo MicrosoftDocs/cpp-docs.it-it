@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 746cfdce3265dff7e5b20a5135aa026aca9facdf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5934a456b519d14def14018f966c7bff8206c3c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832100"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500136"
 ---
 # <a name="coledatetimespan-class"></a>Classe COleDateTimeSpan
 
@@ -43,7 +43,7 @@ Rappresenta un'ora relativa, un intervallo di tempo.
 class COleDateTimeSpan
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -93,7 +93,7 @@ Un `COleDateTimeSpan` mantiene il tempo in giorni.
 
 `COleDateTimeSpan` viene usato con la classe complementare [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime` Incapsula il `DATE` tipo di dati dell'automazione OLE. `COleDateTime` rappresenta i valori temporali assoluti. Tutti i `COleDateTime` calcoli coinvolgono `COleDateTimeSpan` i valori. La relazione tra queste classi è analoga a quella tra [CTime](../../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).
 
-Per ulteriori informazioni sulle `COleDateTime` classi e `COleDateTimeSpan` , vedere l'articolo [data e ora: supporto di automazione](../../atl-mfc-shared/date-and-time-automation-support.md).
+Per ulteriori informazioni sulle `COleDateTime` classi e `COleDateTimeSpan` , vedere l'articolo [data e ora: supporto di automazione](../date-and-time.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -162,7 +162,7 @@ Tutti questi costruttori creano nuovi `COleDateTimeSpan` oggetti inizializzati s
 
 Lo stato del nuovo `COleDateTimeSpan` oggetto è impostato su valido.
 
-Per ulteriori informazioni sui limiti per i `COleDateTimeSpan` valori, vedere l'articolo [data e ora: supporto](../../atl-mfc-shared/date-and-time-automation-support.md)per l'automazione.
+Per ulteriori informazioni sui limiti per i `COleDateTimeSpan` valori, vedere l'articolo [data e ora: supporto](../date-and-time.md)per l'automazione.
 
 ### <a name="example"></a>Esempio
 
@@ -403,7 +403,7 @@ Lo stato di un `COleDateTimeSpan` oggetto non è valido nei casi seguenti:
 
 Per ulteriori informazioni sulle operazioni che possono impostare lo stato su non valido, vedere [COleDateTimeSpan:: operator +,-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) e [COleDateTimeSpan:: operator + =,-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq).
 
-Per ulteriori informazioni sui limiti per i `COleDateTimeSpan` valori, vedere l'articolo [data e ora: supporto](../../atl-mfc-shared/date-and-time-automation-support.md)per l'automazione.
+Per ulteriori informazioni sui limiti per i `COleDateTimeSpan` valori, vedere l'articolo [data e ora: supporto](../date-and-time.md)per l'automazione.
 
 ## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a> COleDateTimeSpan:: GetTotalDays
 
@@ -603,7 +603,7 @@ Per ulteriori informazioni sulle operazioni che possono impostare lo stato su no
 > [!CAUTION]
 > Questo membro dati è per le situazioni di programmazione avanzate. È necessario utilizzare le funzioni membro inline [GetStatus](#getstatus) e [sestatus](#setstatus). `SetStatus`Per ulteriori avvertenze su come impostare in modo esplicito questo membro dati, vedere.
 
-Per ulteriori informazioni sui limiti per i `COleDateTimeSpan` valori, vedere l'articolo [data e ora: supporto](../../atl-mfc-shared/date-and-time-automation-support.md)per l'automazione.
+Per ulteriori informazioni sui limiti per i `COleDateTimeSpan` valori, vedere l'articolo [data e ora: supporto](../date-and-time.md)per l'automazione.
 
 ## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a> COleDateTimeSpan:: operator =
 

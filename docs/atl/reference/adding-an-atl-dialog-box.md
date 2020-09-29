@@ -6,34 +6,34 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: ebbb610debe5d480cd1161149f89c4d357f9cd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71290cf0763ac6594985acc4cb11562efe7028e6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261605"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499373"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Aggiunta di una finestra di dialogo ATL
 
-Per aggiungere una finestra di dialogo ATL al progetto, il progetto deve essere un progetto ATL o un progetto MFC che include il supporto ATL. È possibile usare la [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.
+Per aggiungere una finestra di dialogo ATL al progetto, il progetto deve essere un progetto ATL o un progetto MFC che includa il supporto per ATL. È possibile utilizzare la [creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.
 
-Per impostazione predefinita, la creazione guidata finestra di dialogo ATL implementa una finestra di dialogo derivata da [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Questa classe include il supporto per l'hosting di controlli ActiveX e Windows. Se non si desidera il sovraccarico di supporto per il controllo ActiveX, una volta generato il codice con la procedura guidata, sostituire tutte le istanze del `CAxDialogImpl` con uno [CSimpleDialog](../../atl/reference/csimpledialog-class.md) oppure [CDialogImpl](../../atl/reference/cdialogimpl-class.md) come classe base .
+Per impostazione predefinita, la creazione guidata finestra di dialogo ATL implementa una finestra di dialogo derivata da [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Questa classe include il supporto per l'hosting di controlli ActiveX e Windows. Se non si desidera il sovraccarico del supporto del controllo ActiveX, dopo che la procedura guidata ha generato il codice, sostituire tutte le istanze di `CAxDialogImpl` con [CSimpleDialog](../../atl/reference/csimpledialog-class.md) o [CDialogImpl](../../atl/reference/cdialogimpl-class.md) come classe di base.
 
 > [!NOTE]
-> `CSimpleDialog` Crea solo le finestre di dialogo modale che supportano solo i controlli comuni di Windows. `CDialogImpl` Crea finestre di dialogo modale o non modale.
+> `CSimpleDialog` Crea solo le finestre di dialogo modali che supportano solo i controlli comuni di Windows. `CDialogImpl` consente di creare finestre di dialogo modali o non modali.
 
 ## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Per aggiungere una risorsa finestra di dialogo ATL al progetto
 
-1. Creare un progetto ATL usando il [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md).
+1. Creare un progetto ATL utilizzando la [creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md).
 
-1. Dal [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare clic sul nome del progetto e fare clic su **Add** dal menu di scelta rapida. Fare clic su **aggiungere classe**.
+1. Da [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** dal menu di scelta rapida. Fare clic su **Aggiungi classe**.
 
-1. Nel **modelli** riquadro della finestra il [Aggiungi classe](../../ide/add-class-dialog-box.md) della finestra di dialogo fare clic su **finestra di dialogo ATL**. Fare clic su **aperto** per visualizzare i [Creazione guidata finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md).
+1. Nel riquadro **modelli** della finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) fare clic su **ATL finestra**di dialogo. Fare clic su **Apri** per visualizzare la [creazione guidata finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md).
 
-Per altre informazioni, vedere [implementazione di una finestra di dialogo](../../atl/implementing-a-dialog-box.md).
+Per ulteriori informazioni, vedere [implementazione di una](../../atl/implementing-a-dialog-box.md)finestra di dialogo.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
-[Classi di finestre](../../atl/atl-window-classes.md)<br/>
+[Classi finestra](../../atl/atl-window-classes.md)<br/>
 [Mappe messaggi](../../atl/message-maps-atl.md)

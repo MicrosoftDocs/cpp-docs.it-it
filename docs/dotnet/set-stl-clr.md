@@ -89,12 +89,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: 76f67ad900e975ff084f5760e6830c6a5d229e86
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4aeb08bd71f4c2925037aef707ca60453c38af8f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214886"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500610"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
@@ -198,11 +198,11 @@ Tipo del componente chiave di un elemento nella sequenza controllata.
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla come singoli nodi. Inserisce gli elementi in un albero (quasi) bilanciato che mantiene ordinato modificando i collegamenti tra i nodi, mai copiando il contenuto di un nodo in un altro. Ciò significa che è possibile inserire e rimuovere elementi liberamente senza disturbare gli elementi rimanenti.
 
-L'oggetto ordina la sequenza che controlla chiamando un oggetto delegato archiviato di tipo [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). È possibile specificare l'oggetto delegato archiviato quando si costruisce il set; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<(key_type, key_type)` . È possibile accedere a questo oggetto archiviato chiamando la funzione membro [set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md) `()` .
+L'oggetto ordina la sequenza che controlla chiamando un oggetto delegato archiviato di tipo [set:: key_compare (STL/CLR)](#key_compare). È possibile specificare l'oggetto delegato archiviato quando si costruisce il set; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<(key_type, key_type)` . È possibile accedere a questo oggetto archiviato chiamando la funzione membro [set:: key_comp (STL/CLR)](#key_comp) `()` .
 
-Tale oggetto delegato deve imporre un ordinamento debole rigoroso per le chiavi di tipo [set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Ciò significa che, per due chiavi `X` e `Y` :
+Tale oggetto delegato deve imporre un ordinamento debole rigoroso per le chiavi di tipo [set:: key_type (STL/CLR)](#key_type). Ciò significa che, per due chiavi `X` e `Y` :
 
-`key_comp()(X, Y)`Restituisce lo stesso risultato booleano a ogni chiamata.
+`key_comp()(X, Y)` Restituisce lo stesso risultato booleano a ogni chiamata.
 
 Se `key_comp()(X, Y)` è true, `key_comp()(Y, X)` deve essere false.
 
@@ -214,7 +214,7 @@ Per qualsiasi elemento `X` che precede `Y` nella sequenza controllata, `key_comp
 
 Ogni elemento funge da EY e da un valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario con un numero di operazioni proporzionale al logaritmo del numero di elementi nella sequenza (ora logaritmica). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.
 
-Un set supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti in base a un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore set per raggiungere il nodo Head e quindi confrontare uguale a `end()` . Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()` .
+Un set supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti in base a un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [set:: end (STL/CLR)](#end) `()` . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore set per raggiungere il nodo Head e quindi confrontare uguale a `end()` . Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()` .
 
 Si noti che non è possibile fare riferimento a un elemento set direttamente in base alla relativa posizione numerica, che richiede un iteratore ad accesso casuale.
 
@@ -224,7 +224,7 @@ La cancellazione o la rimozione di un elemento chiama il distruttore per il valo
 
 ## <a name="members"></a>Membri
 
-## <a name="setbegin-stlclr"></a><a name="begin"></a>set:: begin (STL/CLR)
+## <a name="setbegin-stlclr"></a><a name="begin"></a> set:: begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="setclear-stlclr"></a><a name="clear"></a>set:: Clear (STL/CLR)
+## <a name="setclear-stlclr"></a><a name="clear"></a> set:: Clear (STL/CLR)
 
 Rimuove tutti gli elementi.
 
@@ -284,7 +284,7 @@ void clear();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro chiama in modo efficace [set:: erase (STL/CLR)](../dotnet/set-erase-stl-clr.md) `(` [set:: begin (STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
+La funzione membro chiama in modo efficace [set:: erase (STL/CLR)](#erase) `(` [set:: begin (STL/CLR)](#begin) `(),` [set:: end (STL/CLR)](#end) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>set:: const_iterator (STL/CLR)
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a> set:: const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>set:: const_reference (STL/CLR)
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a> set:: const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -417,7 +417,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>set:: const_reverse_iterator (STL/CLR)
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> set:: const_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso costante per la sequenza controllata.
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="setcount-stlclr"></a><a name="count"></a>set:: Count (STL/CLR)
+## <a name="setcount-stlclr"></a><a name="count"></a> set:: Count (STL/CLR)
 
 Trova il numero di elementi corrispondenti a una chiave specificata.
 
@@ -512,7 +512,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>set::d ifference_type (STL/CLR)
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a> set::d ifference_type (STL/CLR)
 
 Tipi di una distanza con segno tra due elementi.
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="setempty-stlclr"></a><a name="empty"></a>set:: Empty (STL/CLR)
+## <a name="setempty-stlclr"></a><a name="empty"></a> set:: Empty (STL/CLR)
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -579,7 +579,7 @@ bool empty();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [set:: size (STL/CLR)](../dotnet/set-size-stl-clr.md) `() == 0` . Viene usato per verificare se il set è vuoto.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [set:: size (STL/CLR)](#size) `() == 0` . Viene usato per verificare se il set è vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="setend-stlclr"></a><a name="end"></a>set:: end (STL/CLR)
+## <a name="setend-stlclr"></a><a name="end"></a> set:: end (STL/CLR)
 
 Designa la fine della sequenza controllata.
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>set:: equal_range (STL/CLR)
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a> set:: equal_range (STL/CLR)
 
 Trova un intervallo che corrisponde a una chiave specificata.
 
@@ -685,7 +685,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [set:: upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [set:: lower_bound (STL/CLR)](#lower_bound) `(key),` [set:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="seterase-stlclr"></a><a name="erase"></a>set:: erase (STL/CLR)
+## <a name="seterase-stlclr"></a><a name="erase"></a> set:: erase (STL/CLR)
 
 Rimuove gli elementi in corrispondenza delle posizioni specificate.
 
@@ -756,7 +756,7 @@ Elemento da cancellare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso o [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
+La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso o [set:: end (STL/CLR)](#end) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
 
 La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [ `first` , `last` ) e restituisce un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi o `end()` se tale elemento non esiste. Viene usato per rimuovere zero o più elementi contigui.
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="setfind-stlclr"></a><a name="find"></a>set:: Find (STL/CLR)
+## <a name="setfind-stlclr"></a><a name="find"></a> set:: Find (STL/CLR)
 
 Trova un elemento che corrisponde a una chiave specificata.
 
@@ -829,7 +829,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
+Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [set:: end (STL/CLR)](#end) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -868,7 +868,7 @@ find b = b
 find C = False
 ```
 
-## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>set:: generic_container (STL/CLR)
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a> set:: generic_container (STL/CLR)
 
 Tipo dell'interfaccia generica per il contenitore.
 
@@ -932,7 +932,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>set:: generic_iterator (STL/CLR)
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> set:: generic_iterator (STL/CLR)
 
 Tipo di un iteratore da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -988,7 +988,7 @@ a b c
 a
 ```
 
-## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>set:: generic_reverse_iterator (STL/CLR)
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> set:: generic_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso da usare con l'interfaccia generica per il contenitore.
 
@@ -1044,7 +1044,7 @@ a b c
 c
 ```
 
-## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>set:: generic_value (STL/CLR)
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a> set:: generic_value (STL/CLR)
 
 Tipo di un elemento da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="setinsert-stlclr"></a><a name="insert"></a>set:: Insert (STL/CLR)
+## <a name="setinsert-stlclr"></a><a name="insert"></a> set:: Insert (STL/CLR)
 
 Aggiunge elementi.
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="setiterator-stlclr"></a><a name="iterator"></a>set:: iterator (STL/CLR)
+## <a name="setiterator-stlclr"></a><a name="iterator"></a> set:: iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1256,7 +1256,7 @@ int main()
 a b c
 ```
 
-## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>set:: key_comp (STL/CLR)
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a> set:: key_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due chiavi.
 
@@ -1315,7 +1315,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>set:: key_compare (STL/CLR)
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a> set:: key_compare (STL/CLR)
 
 Delegato di ordinamento per due chiavi.
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_type-stlclr"></a><a name="key_type"></a>set:: key_type (STL/CLR)
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a> set:: key_type (STL/CLR)
 
 Tipo di una chiave di ordinamento.
 
@@ -1420,7 +1420,7 @@ int main()
 a b c
 ```
 
-## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>set:: lower_bound (STL/CLR)
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a> set:: lower_bound (STL/CLR)
 
 Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.
 
@@ -1437,7 +1437,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [set:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -1477,7 +1477,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="setmake_value-stlclr"></a><a name="make_value"></a>set:: make_value (STL/CLR)
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a> set:: make_value (STL/CLR)
 
 Costruisce un oggetto valore.
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="setoperator-stlclr"></a><a name="op_as"></a>set:: operator = (STL/CLR)
+## <a name="setoperator-stlclr"></a><a name="op_as"></a> set:: operator = (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>set:: rbegin (STL/CLR)
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a> set:: rbegin (STL/CLR)
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="setreference-stlclr"></a><a name="reference"></a>set:: Reference (STL/CLR)
+## <a name="setreference-stlclr"></a><a name="reference"></a> set:: Reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="setrend-stlclr"></a><a name="rend"></a>set:: rend (STL/CLR)
+## <a name="setrend-stlclr"></a><a name="rend"></a> set:: rend (STL/CLR)
 
 Indica la fine della sequenza controllata inversa.
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>set:: reverse_iterator (STL/CLR)
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> set:: reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="setset-stlclr"></a><a name="set"></a>set:: set (STL/CLR)
+## <a name="setset-stlclr"></a><a name="set"></a> set:: set (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="setsize-stlclr"></a><a name="size"></a>set:: size (STL/CLR)
+## <a name="setsize-stlclr"></a><a name="size"></a> set:: size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -1945,7 +1945,7 @@ size_type size();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [set:: Empty (STL/CLR)](../dotnet/set-empty-stl-clr.md) `()` .
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [set:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Esempio
 
@@ -1987,7 +1987,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="setsize_type-stlclr"></a><a name="size_type"></a>set:: size_type (STL/CLR)
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a> set:: size_type (STL/CLR)
 
 Tipo di una distanza con segno tra due elementi.
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="setswap-stlclr"></a><a name="swap"></a>set:: swap (STL/CLR)
+## <a name="setswap-stlclr"></a><a name="swap"></a> set:: swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2103,7 +2103,7 @@ d e f
 a b c
 ```
 
-## <a name="setto_array-stlclr"></a><a name="to_array"></a>set:: to_array (STL/CLR)
+## <a name="setto_array-stlclr"></a><a name="to_array"></a> set:: to_array (STL/CLR)
 
 Copia la sequenza controllata in una nuova matrice.
 
@@ -2153,7 +2153,7 @@ a b c d
 a b c
 ```
 
-## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>set:: upper_bound (STL/CLR)
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a> set:: upper_bound (STL/CLR)
 
 Trova la fine dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2170,7 +2170,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina l'ultimo elemento della `X` sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina l'ultimo elemento della `X` sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [set:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -2210,7 +2210,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>set:: value_comp (STL/CLR)
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a> set:: value_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due valori di elemento.
 
@@ -2254,7 +2254,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>set:: value_compare (STL/CLR)
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a> set:: value_compare (STL/CLR)
 
 Delegato di ordinamento per i valori di due elementi.
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>set:: value_type (STL/CLR)
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a> set:: value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -2344,7 +2344,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operatore! = (set) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a> operatore! = (set) (STL/CLR)
 
 Confronto elenco non uguale.
 
@@ -2414,7 +2414,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>operatore &lt; (set) (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a> operatore &lt; (set) (STL/CLR)
 
 Elenco minore del confronto.
 
@@ -2484,7 +2484,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>operatore &lt; = (set) (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a> operatore &lt; = (set) (STL/CLR)
 
 Elenco di confronto minore o uguale a.
 
@@ -2554,7 +2554,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_eq"></a>operatore = = (set) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a> operatore = = (set) (STL/CLR)
 
 Elenca confronto uguale.
 
@@ -2624,7 +2624,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>operatore &gt; (set) (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a> operatore &gt; (set) (STL/CLR)
 
 Elenco maggiore di confronto.
 
@@ -2694,7 +2694,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>operatore &gt; = (set) (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a> operatore &gt; = (set) (STL/CLR)
 
 Elenco di confronto maggiore o uguale a.
 

@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743308"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499710"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -124,7 +124,7 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire un numero di
 |[not1 (STL/CLR)](#not1)|Genera un unary_negate per un functor.|
 |[not2 (STL/CLR)](#not2)|Genera un binary_negate per un functor.|
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a> binary_delegate (STL/CLR)
 
@@ -412,12 +412,12 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-*sinistro*<br/>
+*sinistra*<br/>
 Primo argomento di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il primo argomento in un functor a un solo argomento che lo chiama con un secondo argomento.
+La funzione di modello restituisce [binder1st (STL/CLR)](#binder1st) `<Fun>(functor, left)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il primo argomento in un functor a un solo argomento che lo chiama con un secondo argomento.
 
 ### <a name="example"></a>Esempio
 
@@ -493,12 +493,12 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-*right*<br/>
+*Ok*<br/>
 Secondo argomento di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il secondo argomento in un functor a un solo argomento che lo chiama con un primo argomento.
+La funzione di modello restituisce [binder2nd (STL/CLR)](#binder2nd) `<Fun>(functor, right)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il secondo argomento in un functor a un solo argomento che lo chiama con un primo argomento.
 
 ### <a name="example"></a>Esempio
 
@@ -2173,7 +2173,7 @@ Functore di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` . Viene usato come un modo pratico per eseguire il wrapping di un functor a un solo argomento in un functor che fornisce il proprio NOT logico.
+La funzione di modello restituisce [unary_negate (STL/CLR)](#unary_negate) `<Fun>(functor)` . Viene usato come un modo pratico per eseguire il wrapping di un functor a un solo argomento in un functor che fornisce il proprio NOT logico.
 
 ### <a name="example"></a>Esempio
 
@@ -2245,7 +2245,7 @@ Functore di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione di modello restituisce [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti in un functor che fornisce il proprio NOT logico.
+La funzione di modello restituisce [binary_negate (STL/CLR)](#negate) `<Fun>(functor)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti in un functor che fornisce il proprio NOT logico.
 
 ### <a name="example"></a>Esempio
 

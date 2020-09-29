@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un gestore dell'evento
+title: Aggiungere un gestore eventi
 ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.eventhandler.overview
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b1928de1aacb9c66c9f784f4eee41ce2c444b820
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447502"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499646"
 ---
-# <a name="add-an-event-handler"></a>Aggiungere un gestore dell'evento
+# <a name="add-an-event-handler"></a>Aggiungere un gestore eventi
 
 Dall'editor di risorse è possibile aggiungere un nuovo gestore dell'evento o modificare un gestore dell'evento esistente per un controllo di finestra di dialogo usando la [Creazione guidata gestore eventi](#event-handler-wizard).
 
@@ -38,7 +38,7 @@ Dall'editor di risorse è possibile aggiungere un nuovo gestore dell'evento o mo
 
    Se il tipo di messaggio selezionato ha già un gestore dell'evento per la classe selezionata, **Aggiungi e modifica** non è disponibile e **Modifica codice** è disponibile. Selezionare **Modifica codice** per aprire l'editor di testo nella funzione esistente.
 
-In alternativa, è possibile aggiungere i gestori di eventi dalla [finestra Proprietà](/visualstudio/ide/reference/properties-window). Per altre informazioni, vedere [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md).
+In alternativa, è possibile aggiungere i gestori di eventi dalla [finestra Proprietà](/visualstudio/ide/reference/properties-window). Per altre informazioni, vedere [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-editing-or-deleting-controls.md).
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -46,7 +46,7 @@ In alternativa, è possibile aggiungere i gestori di eventi dalla [finestra Prop
 
 ## <a name="event-handler-wizard"></a>Creazione guidata gestore eventi
 
-Questa procedura guidata aggiunge un gestore dell'evento per un controllo di finestra di dialogo alla classe selezionata. Se si aggiunge un gestore dell'evento dalla [finestra Proprietà](/visualstudio/ide/reference/properties-window), è possibile aggiungerlo solo la classe che implementa la finestra di dialogo. Per altre informazioni, vedere [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Questa procedura guidata aggiunge un gestore dell'evento per un controllo di finestra di dialogo alla classe selezionata. Se si aggiunge un gestore dell'evento dalla [finestra Proprietà](/visualstudio/ide/reference/properties-window), è possibile aggiungerlo solo la classe che implementa la finestra di dialogo. Per altre informazioni, vedere [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-editing-or-deleting-controls.md).
 
 - **Nome comando**
 

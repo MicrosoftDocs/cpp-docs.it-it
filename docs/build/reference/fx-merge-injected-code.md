@@ -12,12 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292302"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500103"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Esegue il merge del codice)
 
@@ -29,7 +29,7 @@ Produce una copia di ogni file di origine con il codice inserito nell'origine.
 /Fx
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per distinguere un file di origine unito da un file di origine originale, **/Fx** aggiunge un'estensione mrg tra il nome e l'estensione del file. Ad esempio, un file denominato MyCode.cpp contenente codice con attributi e compilato con **/Fx** crea un file denominato MyCode.mrg.cpp contenente il codice seguente:
 
@@ -52,7 +52,7 @@ In un file MRG, il codice inserito a causa di un attributo verrà delimitato nel
 //--- End Injected Code
 ```
 
-L'attributo [no_injected_text](../../windows/no-injected-text.md) viene incorporato in un file MRG che consente la compilazione del file MRG senza dover reinserire il testo.
+L'attributo [no_injected_text](../../windows/attributes/no-injected-text.md) viene incorporato in un file MRG che consente la compilazione del file MRG senza dover reinserire il testo.
 
 Ricordare che il file di origine MRG è una rappresentazione del codice sorgente inserito dal compilatore. Il file MRG potrebbe non essere compilato o eseguito esattamente come il file originale.
 
@@ -62,7 +62,7 @@ Se il programma include un file di intestazione che usa il codice inserito, **/F
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 

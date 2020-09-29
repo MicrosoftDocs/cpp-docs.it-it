@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838165"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498673"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 
@@ -51,7 +51,7 @@ Il tipo nativo di dati della colonna nell'archivio dati non è importante; se il
 
 Usare i `CDynamicStringAccessor` metodi per ottenere informazioni sulle colonne. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione.
 
-Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere i dati dal buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)oppure archiviarli nel buffer usando [sestring](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere i dati dal buffer usando [GetString](#getstring)oppure archiviarli nel buffer usando [sestring](#setstring).
 
 Per una discussione ed esempi sull'uso delle classi di funzioni di accesso dinamiche, vedere [uso delle funzioni di accesso dinamiche](../../data/oledb/using-dynamic-accessors.md).
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b4bb198ae883e53e7947ce7f123bb0d3f092aaf3
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752470"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500395"
 ---
 # <a name="compiler-error-c3743"></a>Errore del compilatore C3743
 
 può solo collegare o scollegare un'intera interfaccia quando il parametro ' layout_dependent ' di event_receiver è true
 
-La funzione [__unhook](../../cpp/unhook.md) varia in base al numero di parametri accettati in base al valore passato al parametro `layout_dependent` della classe [event_receiver](../../windows/event-receiver.md) .
+La funzione [__unhook](../../cpp/unhook.md) varia in base al numero di parametri accettati in base al valore passato al `layout_dependent` parametro nella classe [event_receiver](../../windows/attributes/event-receiver.md) .
 
 L'esempio seguente genera l'C3743:
 

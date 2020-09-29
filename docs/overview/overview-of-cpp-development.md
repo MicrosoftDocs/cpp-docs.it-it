@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684365"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500284"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Panoramica dello sviluppo con C++ in Visual Studio
 
@@ -75,7 +75,7 @@ Se il programma ha un'interfaccia utente, è possibile usare una finestra di pro
 
 Per ulteriori informazioni sulla progettazione di un'interfaccia utente per un'app piattaforma UWP (Universal Windows Platform), vedere [progettazione e interfaccia](https://developer.microsoft.com/windows/design)utente.
 
-Per altre informazioni sulla creazione di un'interfaccia utente per un'applicazione MFC, vedere [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Per informazioni sui programmi Windows Win32, vedere [Applicazioni desktop di Windows](../windows/windows-desktop-applications-cpp.md).
+Per altre informazioni sulla creazione di un'interfaccia utente per un'applicazione MFC, vedere [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Per informazioni sui programmi Windows Win32, vedere [Applicazioni desktop di Windows](../windows/desktop-applications-visual-cpp.md).
 
 ## <a name="write-code"></a>Scrittura di codice
 
@@ -117,7 +117,7 @@ Per altre informazioni, vedere [Verifying Code by Using Unit Tests ](/visualstud
 
 ## <a name="analyze"></a>Analizzare
 
-Visual Studio include strumenti statici di analisi del codice in grado di rilevare potenziali problemi nel codice sorgente. Questi strumenti includono un'implementazione degli strumenti di controllo delle regole [Linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Per altre informazioni, vedere [Code analysis for C/C++ overview](/cpp/code-quality/code-analysis-for-c-cpp-overview) (Panoramica dell'analisi codice per C/C++).
+Visual Studio include strumenti statici di analisi del codice in grado di rilevare potenziali problemi nel codice sorgente. Questi strumenti includono un'implementazione degli strumenti di controllo delle regole [Linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Per altre informazioni, vedere [Code analysis for C/C++ overview](../code-quality/code-analysis-for-c-cpp-overview.md) (Panoramica dell'analisi codice per C/C++).
 
 ## <a name="deploy-completed-applications"></a>Distribuire le applicazioni completate
 

@@ -5,34 +5,34 @@ helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-ms.openlocfilehash: 836b19cef38549bcdf6cddeeda5bbb7fee08a1c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fac1efeb3d373a8324828a8b10f0570f253f6103
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261364"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499287"
 ---
 # <a name="adding-an-atl-control"></a>Aggiunta di un controllo ATL
 
-Utilizzare questa procedura guidata per aggiungere un oggetto di interfaccia utente a un progetto che supporta le interfacce per tutti i contenitori potenziali. Per supportare queste interfacce, il progetto deve avere stato creato come un'applicazione ATL o come un'applicazione MFC che contiene il supporto per ATL. È possibile usare la [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.
+Usare questa procedura guidata per aggiungere un oggetto interfaccia utente a un progetto che supporta le interfacce per tutti i potenziali contenitori. Per supportare queste interfacce, il progetto deve essere stato creato come applicazione ATL o come applicazione MFC che contiene il supporto per ATL. È possibile utilizzare la [creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.
 
 ## <a name="to-add-an-atl-control-to-your-project"></a>Per aggiungere un controllo ATL al progetto
 
-1. In uno **Esplora soluzioni** oppure [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare doppio clic il nome del progetto a cui si desidera aggiungere l'oggetto semplice ATL.
+1. In **Esplora soluzioni** o [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code)fare clic con il pulsante destro del mouse sul nome del progetto a cui si desidera aggiungere l'oggetto semplice ATL.
 
-1. Fare clic su **Add** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
+1. Fare clic su **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
 
-1. Nel [Aggiungi classe](../../ide/add-class-dialog-box.md) finestra di dialogo, nel riquadro dei modelli, fare clic su **del controllo ATL**e quindi fare clic su **Add** per visualizzare il [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md).
+1. Nel riquadro modelli della finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) fare clic su **controllo ATL**, quindi su **Aggiungi** per visualizzare la [creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md).
 
-Usando il **Creazione guidata controllo ATL**, è possibile creare uno dei tre tipi di controlli:
+Utilizzando la **creazione guidata controllo ATL**, è possibile creare uno dei tre tipi di controllo seguenti:
 
 - Un controllo standard
 
-- Un controllo composito
+- Controllo composito
 
-- Un controllo DHTML
+- Controllo DHTML
 
-Inoltre, è possibile ridurre le dimensioni del controllo e rimuovere le interfacce non utilizzate dalla maggior parte dei contenitori selezionando **controllo minimo** nel **opzioni** pagina della procedura guidata.
+Inoltre, è possibile ridurre le dimensioni del controllo e rimuovere le interfacce non utilizzate dalla maggior parte dei contenitori selezionando il **controllo minimo** nella pagina **Opzioni** della procedura guidata.
 
 ## <a name="see-also"></a>Vedere anche
 

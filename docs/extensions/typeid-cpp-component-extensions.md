@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225111"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500385"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI e C++/CX)
 
@@ -74,7 +74,7 @@ Nome di un tipo (dichiaratore astratto) per il quale si vuole ottenere l'oggetto
 
 **`typeid`** deve essere in grado di valutare un nome di tipo (tipo) in fase di compilazione, mentre GetType valuta il tipo da restituire in fase di esecuzione.
 
-**`typeid`** può assumere un nome di tipo nativo o Common Language Runtime alias per il nome del tipo nativo; Per ulteriori informazioni, vedere [.NET Framework equivalenti ai tipi nativi c++ (c++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) .
+**`typeid`** può assumere un nome di tipo nativo o Common Language Runtime alias per il nome del tipo nativo; Per ulteriori informazioni, vedere [.NET Framework equivalenti ai tipi nativi c++ (c++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet) .
 
 **`typeid`** funziona anche con i tipi nativi, sebbene restituisca comunque `System::Type` .  Per ottenere una struttura type_info, usare [ `typeid` operator](../cpp/typeid-operator.md).
 
@@ -82,7 +82,7 @@ Nome di un tipo (dichiaratore astratto) per il quale si vuole ottenere l'oggetto
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio seguente confronta la parola chiave typeid con il membro `GetType()`.
 

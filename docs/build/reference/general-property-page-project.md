@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: bb301f63bfd1e6839d7893cdc03d61e021409666
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166758"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500067"
 ---
 # <a name="general-property-page-project"></a>Pagina delle proprietà Generale (Progetto)
 
 ::: moniker range=">=vs-2019"
 
-Questo argomento si applica ai progetti di Visual Studio per Windows. Per i progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++ ](../../linux/prop-pages-linux.md). Per i progetti CMake, vedere [progetti CMake in Visual Studio](../cmake-projects-in-visual-studio.md). Per i progetti Android, vedere [Proprietà generali del progetto C++(Android)](/cpp/cross-platform/general-android-prop-page). Per i progetti makefile Android, vedere [Proprietà generali del progetto C++ (makefile Android)](/cpp/cross-platform/general-makefile-android-prop-page)
+Questo argomento si applica ai progetti di Visual Studio per Windows. Per i progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++](../../linux/prop-pages-linux.md). Per i progetti CMake, vedere [progetti CMake in Visual Studio](../cmake-projects-in-visual-studio.md). Per i progetti Android, vedere [Proprietà generali del progetto (Android C++)](../../cross-platform/general-android-prop-page.md). Per i progetti makefile Android, vedere [Proprietà generali del progetto (makefile di Android C++)](../../cross-platform/general-makefile-android-prop-page.md)
 
 Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Esplora soluzioni e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate le proprietà seguenti:
 
@@ -94,7 +94,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Es
 
    Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti C++ di Visual Studio possono avere come destinazione il set di strumenti predefinito installato da Visual Studio o uno dei set di strumenti installati da diverse versioni precedenti di Visual Studio, inclusi i set di strumenti per la creazione di file eseguibili che possono essere eseguiti in Windows XP. Per informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- **C++Standard del linguaggio**
+- **Standard del linguaggio C++**
 
    Specifica lo standard del linguaggio da utilizzare. Il valore predefinito è/std: c++ 14. Specificare/std: c++ 17 per usare le funzionalità di C++ 17 o/std: c++ + Latest per usare C++ 20 o altre funzionalità sperimentali. Per ulteriori informazioni, vedere [/STD (specifica la versione standard del linguaggio)](std-specify-language-standard-version.md)
 
@@ -118,7 +118,7 @@ In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante de
 
    Specifica la versione minima della piattaforma su cui può essere eseguito il progetto. Questa proprietà viene visualizzata solo se il tipo di progetto lo supporta. Se l'app può sfruttare i vantaggi delle funzionalità di una versione più recente di Windows SDK, ma può comunque essere eseguita nelle versioni precedenti senza queste funzionalità, al limite con una certa perdita di prestazioni, il valore di queste due proprietà potrebbe differire. In questo caso, il codice deve verificare la versione della piattaforma su cui viene eseguito al runtime senza tentare di usare funzionalità non disponibili in versioni precedenti della piattaforma.
 
-   Il C++ sistema del progetto non applica questa opzione. L'opzione è comunque inclusa per coerenza con gli altri linguaggi, come C# e JavaScript, e come guida per chiunque usi il progetto. Visual C++ non genera un errore se si usa una funzionalità non disponibile nella versione minima.
+   Il sistema del progetto C++ non applica questa opzione. L'opzione è comunque inclusa per coerenza con gli altri linguaggi, come C# e JavaScript, e come guida per chiunque usi il progetto. Visual C++ non genera un errore se si usa una funzionalità non disponibile nella versione minima.
 
 - **Versione di Windows SDK (Visual Studio 2017)**
 
@@ -200,13 +200,13 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
 - **Uso di MFC**
 
-   Consente di specificare se il progetto MFC si collega in modo statico o dinamico alla DLL MFC. Per i progetti non MFC, è possibile selezionare **Usa librerie standard di Windows** per consentire il collegamento a diverse librerie Win32 incluse quando si usa MFC.
+   Specifica se il progetto sarà collegato staticamente o dinamicamente alla DLL MFC. Per i progetti non MFC, è possibile selezionare **Usa librerie standard di Windows** per consentire il collegamento a diverse librerie Win32 incluse quando si usa MFC.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
 
 - **Set di caratteri**
 
-   Consente di specificare se è necessario impostare _UNICODE o _MBCS. Influisce anche sul punto di ingresso del linker nei casi appropriati.
+   Definisce se deve essere impostato _UNICODE o _MBCS. Influisce anche sul punto di ingresso del linker nei casi appropriati.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
 
@@ -220,7 +220,7 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
    Nei progetti gestiti specifica la versione di .NET framework di destinazione.
 
-- **Ottimizzazione intero programma**
+- **Con ottimizzazione intero programma**
 
    Specifica l'opzione del compilatore [/GL](gl-whole-program-optimization.md) e l'opzione del linker [/LTCG](ltcg-link-time-code-generation.md). Per impostazione predefinita, questa opzione è disabilitata per le configurazioni di debug ed è abilitata per le configurazioni di versione finale.
 
@@ -232,4 +232,4 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++riferimento alla pagina delle proprietà del progetto](property-pages-visual-cpp.md)
+[Riferimento alla pagina delle proprietà del progetto C++](property-pages-visual-cpp.md)

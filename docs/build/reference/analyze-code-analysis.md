@@ -12,14 +12,14 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 643d8428e3760926832429db5a4425e078ed776b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389792"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500090"
 ---
-# <a name="analyze-code-analysis"></a>`/analyze`(Analisi codice)
+# <a name="analyze-code-analysis"></a>`/analyze` (Analisi codice)
 
 Abilita le opzioni di controllo e analisi del codice.
 
@@ -84,14 +84,14 @@ Abilita il plug-in PREfast specificato come parte delle esecuzioni dell'analisi 
 
 ::: moniker range="<=vs-2017"
 
-LocalEspC.dll è il plug-in che implementa i controlli di analisi del codice correlati alla concorrenza nell'intervallo di avvisi di C261XX. Ad esempio, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+LocalEspC.dll è il plug-in che implementa i controlli di analisi del codice correlati alla concorrenza nell'intervallo di avvisi di C261XX. Ad esempio, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
-Per eseguire LocalEspC.dll, usare questa opzione del compilatore:**`/analyze:plugin LocalEspC.dll`**
+Per eseguire LocalEspC.dll, usare questa opzione del compilatore: **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck.dll implementa i controlli di analisi del codice correlati alla concorrenza nell'intervallo di avvisi di C261XX. Ad esempio, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+ConcurrencyCheck.dll implementa i controlli di analisi del codice correlati alla concorrenza nell'intervallo di avvisi di C261XX. Ad esempio, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Per eseguire ConcurrencyCheck.dll, eseguire prima questo comando da un prompt dei comandi per gli sviluppatori:
 
@@ -136,14 +136,14 @@ Il set di regole personalizzate di esempio seguente indica al motore regole di v
 ::: moniker-end
 
 **`/analyze:stacksize`***numero* di\
-Il parametro *Number* utilizzato con questa opzione specifica la dimensione, in byte, dell'stack frame per cui viene generato l'avviso [C6262](/cpp/code-quality/c6262) . Lo spazio prima del *numero* è facoltativo. Se questo parametro non è specificato, la dimensione stack frame è 16KB per impostazione predefinita.
+Il parametro *Number* utilizzato con questa opzione specifica la dimensione, in byte, dell'stack frame per cui viene generato l'avviso [C6262](../../code-quality/c6262.md) . Lo spazio prima del *numero* è facoltativo. Se questo parametro non è specificato, la dimensione stack frame è 16KB per impostazione predefinita.
 
 **`/analyze:WX-`**\
 Gli avvisi di analisi del codice non vengono considerati errori quando si compila tramite **`/WX`** . Per ulteriori informazioni, vedere [ `/WX` (livello di avviso)](compiler-option-warning-level.md).
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni, vedere [Cenni preliminari sull'analisi del codice per c/c++ e sull'](/cpp/code-quality/code-analysis-for-c-cpp-overview) [analisi del codice per gli avvisi di c/c++](/cpp/code-quality/code-analysis-for-c-cpp-warnings).
+Per ulteriori informazioni, vedere [Cenni preliminari sull'analisi del codice per c/c++ e sull'](../../code-quality/code-analysis-for-c-cpp-overview.md) [analisi del codice per gli avvisi di c/c++](../../code-quality/code-analysis-for-c-cpp-warnings.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 

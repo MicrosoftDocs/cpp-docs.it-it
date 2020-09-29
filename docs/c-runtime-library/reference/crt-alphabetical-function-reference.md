@@ -1,35 +1,35 @@
 ---
-title: Libreria UCRT riferimento alfabetico alle funzioni
+title: Riferimento alfabetico alle funzioni UCRT
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340339"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499399"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>Libreria UCRT riferimento alfabetico alle funzioni
+# <a name="ucrt-alphabetical-function-reference"></a>Riferimento alfabetico alle funzioni UCRT
 
-La documentazione di riferimento della libreria Universal C Runtime (UCRT, spesso con la sola CRT) viene disposto in ordine alfabetico dalla routine. Per trovare una routine CRT in base alle funzionalità, vedere [routine di Universal C runtime per categoria](../../c-runtime-library/run-time-routines-by-category.md).
+La documentazione di riferimento della libreria Universal C Runtime (UCRT, spesso solo CRT) è disposta in ordine alfabetico in base alla routine. Per trovare una routine CRT in base alla funzionalità, vedere [routine di runtime C universali per categoria](../../c-runtime-library/run-time-routines-by-category.md).
 
 ## <a name="a"></a>A
 
-[abort](abort.md)
+[interruzione](abort.md)
 
-[abs](abs-labs-llabs-abs64.md)
+[ABS](abs-labs-llabs-abs64.md)
 
 [_abs64](abs-labs-llabs-abs64.md)
 
-[access](access-crt.md)
+[accesso](access-crt.md)
 
 [_access](access-waccess.md)
 
 [_access_s](access-s-waccess-s.md)
 
-[acos](acos-acosf-acosl.md)
+[Acos](acos-acosf-acosl.md)
 
 [acosf](acos-acosf-acosl.md)
 
@@ -77,7 +77,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_amsg_exit](amsg-exit.md)
 
-[ e ](and.md)
+[and](and.md)
 
 [and_eq](and-eq.md)
 
@@ -85,7 +85,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [asctime_s](asctime-s-wasctime-s.md)
 
-[asin](asin-asinf-asinl.md)
+[Asin](asin-asinf-asinl.md)
 
 [asinf](asin-asinf-asinl.md)
 
@@ -97,7 +97,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [asinl](asin-asinf-asinl.md)
 
-[assert](assert-macro-assert-wassert.md)
+[Assert](assert-macro-assert-wassert.md)
 
 [_assert](assert-macro-assert-wassert.md)
 
@@ -107,7 +107,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_ASSERTE](assert-asserte-assert-expr-macros.md)
 
-[atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+[Atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 [atan2](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
@@ -191,7 +191,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_cabs](cabs.md)
 
-[cabs](cabs-cabsf-cabsl.md)
+[taxi](cabs-cabsf-cabsl.md)
 
 [cabsf](cabs-cabsf-cabsl.md)
 
@@ -321,7 +321,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [clock](clock.md)
 
-[clog](clog-clogf-clogl.md)
+[intasare](clog-clogf-clogl.md)
 
 [clog10](clog10-clog10f-clog10l.md)
 
@@ -343,7 +343,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_configthreadlocale](configthreadlocale.md)
 
-[conj](conj-conjf-conjl.md)
+[CONJ](conj-conjf-conjl.md)
 
 [conjf](conj-conjf-conjl.md)
 
@@ -571,7 +571,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_dup](dup-dup2.md)
 
-[dup](posix-dup-dup2.md)
+[DUP](posix-dup-dup2.md)
 
 [_dup2](dup-dup2.md)
 
@@ -593,7 +593,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_endthreadex](endthread-endthreadex.md)
 
-[eof](posix-eof.md)
+[EOF](posix-eof.md)
 
 [_eof](eof.md)
 
@@ -753,7 +753,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_filelengthi64](filelength-filelengthi64.md)
 
-[fileno](posix-fileno.md)
+[Fileno](posix-fileno.md)
 
 [_fileno](fileno.md)
 
@@ -787,7 +787,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_finitef](finite-finitef.md)
 
-[floor](floor-floorf-floorl.md)
+[Floor](floor-floorf-floorl.md)
 
 [floorf](floor-floorf-floorl.md)
 
@@ -1027,7 +1027,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_getch_nolock](getch-nolock-getwch-nolock.md)
 
-[getchar](getchar-getwchar.md)
+[GetChar](getchar-getwchar.md)
 
 [_getchar_nolock](getchar-nolock-getwchar-nolock.md)
 
@@ -1171,7 +1171,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [isatty](posix-isatty.md)
 
-[isblank](isblank-iswblank-isblank-l-iswblank-l.md)
+[ISBLANK](isblank-iswblank-isblank-l-iswblank-l.md)
 
 [_isblank_l](isblank-iswblank-isblank-l-iswblank-l.md)
 
@@ -1199,13 +1199,13 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_isdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
-[isfinite](finite-finitef.md)
+[isFinite](finite-finitef.md)
 
 [isgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_isgraph_l](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
-[isgreater](floating-point-ordering.md)
+[più grande](floating-point-ordering.md)
 
 [isgreaterequal](floating-point-ordering.md)
 
@@ -1215,7 +1215,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_isleadbyte_l](isleadbyte-isleadbyte-l.md)
 
-[isless](floating-point-ordering.md)
+[meno di](floating-point-ordering.md)
 
 [islessequal](floating-point-ordering.md)
 
@@ -1349,7 +1349,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_ismbstrail_l](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[isnan](isnan-isnan-isnanf.md)
+[IsNaN](isnan-isnan-isnanf.md)
 
 [_isnan](isnan-isnan-isnanf.md)
 
@@ -1441,7 +1441,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_isxdigit_l](isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)
 
-[itoa](itoa-itow.md)
+[ITOA](itoa-itow.md)
 
 [_itoa](itoa-itow.md)
 
@@ -1459,11 +1459,11 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_j1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[j1](j0-j1-jn.md)
+[J1](j0-j1-jn.md)
 
 [_jn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[jn](j0-j1-jn.md)
+[Gv](j0-j1-jn.md)
 
 ## <a name="k"></a>K
 
@@ -1477,7 +1477,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [ldexp](ldexp.md)
 
-[ldiv](ldiv-lldiv.md)
+[ldiv](./div.md)
 
 [_lfind](lfind.md)
 
@@ -1493,7 +1493,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [llabs](abs-labs-llabs-abs64.md)
 
-[lldiv](ldiv-lldiv.md)
+[lldiv](./div.md)
 
 [llrint](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
@@ -1523,7 +1523,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_lock_file](lock-file.md)
 
-[locking](posix-locking.md)
+[blocco](posix-locking.md)
 
 [_locking](locking.md)
 
@@ -1577,7 +1577,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_lsearch](lsearch.md)
 
-[lsearch](posix-lsearch.md)
+[incrementa dovrebbe](posix-lsearch.md)
 
 [_lsearch_s](lsearch-s.md)
 
@@ -1967,7 +1967,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 ## <a name="n"></a>N
 
-[nan](nan-nanf-nanl.md)
+[Nan](nan-nanf-nanl.md)
 
 [nanf](nan-nanf-nanl.md)
 
@@ -2019,7 +2019,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_open_osfhandle](open-osfhandle.md)
 
-[o](or.md)
+[or](or.md)
 
 [or_eq](or-eq.md)
 
@@ -2033,7 +2033,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_popen](popen-wpopen.md)
 
-[pow](pow-powf-powl.md)
+[POW](pow-powf-powl.md)
 
 [powf](pow-powf-powl.md)
 
@@ -2113,7 +2113,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [rand_s](rand-s.md)
 
-[read](posix-read.md)
+[lettura](posix-read.md)
 
 [_read](read.md)
 
@@ -2125,7 +2125,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[remainder](remainder-remainderf-remainderl.md)
+[resto](remainder-remainderf-remainderl.md)
 
 [remainderf](remainder-remainderf-remainderl.md)
 
@@ -2143,7 +2143,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_resetstkoflw](resetstkoflw.md)
 
-[rewind](rewind.md)
+[Rewind](rewind.md)
 
 [rint](rint-rintf-rintl.md)
 
@@ -2167,7 +2167,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_rotr64](rotl-rotl64-rotr-rotr64.md)
 
-[round](round-roundf-roundl.md)
+[turno](round-roundf-roundl.md)
 
 [roundf](round-roundf-roundl.md)
 
@@ -2285,7 +2285,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_setmbcp](setmbcp.md)
 
-[setmode](posix-setmode.md)
+[setMode](posix-setmode.md)
 
 [_setmode](setmode.md)
 
@@ -2295,7 +2295,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [signbit](signbit.md)
 
-[sin](sin-sinf-sinl.md)
+[peccato](sin-sinf-sinl.md)
 
 [sinf](sin-sinf-sinl.md)
 
@@ -2459,7 +2459,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_strdup](strdup-wcsdup-mbsdup.md)
 
-[strdup](strdup-wcsdup.md)
+[StrDup](strdup-wcsdup.md)
 
 [_strdup_dbg](strdup-dbg-wcsdup-dbg.md)
 
@@ -2645,7 +2645,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_strxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
 
-[swab](posix-swab.md)
+[tampone](posix-swab.md)
 
 [_swab](swab.md)
 
@@ -2671,11 +2671,11 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
 
-[system](system-wsystem.md)
+[sistema](system-wsystem.md)
 
 ## <a name="t"></a>T
 
-[tan](tan-tanf-tanl.md)
+[Tan](tan-tanf-tanl.md)
 
 [tanf](tan-tanf-tanl.md)
 
@@ -2699,7 +2699,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_tempnam_dbg](tempnam-dbg-wtempnam-dbg.md)
 
-[terminate](terminate-crt.md)
+[terminare](terminate-crt.md)
 
 [tgamma](tgamma-tgammaf-tgammal.md)
 
@@ -2731,13 +2731,13 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [toascii](toascii-toascii.md)
 
-[tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
+[ToLower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower_l](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[ToUpper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 [_toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
@@ -2763,7 +2763,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_tzset](tzset.md)
 
-## <a name="u"></a>G
+## <a name="u"></a>U
 
 [_ui64toa](itoa-itow.md)
 
@@ -2791,7 +2791,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [__uncaught_exception](uncaught-exception.md)
 
-[Imprevisto](unexpected-crt.md)
+[inaspettato](unexpected-crt.md)
 
 [ungetc](ungetc-ungetwc.md)
 
@@ -3385,7 +3385,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_write](write.md)
 
-[write](posix-write.md)
+[scrittura](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 
@@ -3485,13 +3485,13 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_wutime64](utime-utime32-utime64-wutime-wutime32-wutime64.md)
 
-## <a name="x"></a>x
+## <a name="x"></a>X
 
 [xor](xor.md)
 
 [xor_eq](xor-eq.md)
 
-## <a name="y"></a>Y
+## <a name="y"></a>S
 
 [_y0](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
@@ -3499,7 +3499,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_y1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[y1](y0-y1-yn.md)
+[Y1](y0-y1-yn.md)
 
 [_yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
@@ -3507,4 +3507,4 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti della libreria di runtime di C](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Riferimenti alla libreria di runtime C](../../c-runtime-library/c-run-time-library-reference.md)<br/>

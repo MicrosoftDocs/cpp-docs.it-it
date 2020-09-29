@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
-ms.openlocfilehash: 48d0fef86908f3ba5a547417d0625febc5226454
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7235d86ed00663b81aaddb87fdeae957c0f73053
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752704"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500417"
 ---
 # <a name="compiler-error-c3739"></a>Errore del compilatore C3739
 
 ' Class ': la sintassi è supportata solo quando il parametro ' layout_dependent ' di event_receiver è true
 
-Si è tentato di associare un'intera interfaccia di eventi ma `layout_dependent` sull'attributo [event_receiver](../../windows/event-receiver.md) non è true; è necessario associare un solo evento alla volta.
+Si è tentato di associare un'intera interfaccia di eventi `layout_dependent` ma [event_receiver](../../windows/attributes/event-receiver.md) attributo non è true. è necessario associare un solo evento alla volta.
 
 L'esempio seguente genera l'C3739:
 

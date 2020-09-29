@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 2adbadecacb41a8e92cd36f55da9b376b4e1b006
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1c9fa5a6df4cbb1c18e5d5406bdde0197d155b2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227517"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498828"
 ---
 # <a name="__event"></a>__event
 
@@ -77,7 +77,7 @@ Per il codice di esempio, vedere [gestione degli eventi in com](../cpp/event-han
 
 Per informazioni sulla codifica di eventi nella nuova sintassi, vedere [evento](../extensions/event-cpp-component-extensions.md).
 
-Gli eventi gestiti sono membri dati o metodi. Quando viene usato con un evento, il tipo restituito di un delegato deve essere conforme al [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Il tipo restituito del gestore eventi deve corrispondere al tipo restituito del delegato. Per ulteriori informazioni sui delegati, vedere [delegati ed eventi](../dotnet/delegates-and-events.md). Se un evento gestito è un membro dati, il relativo tipo deve essere un puntatore a un delegato.
+Gli eventi gestiti sono membri dati o metodi. Quando viene usato con un evento, il tipo restituito di un delegato deve essere conforme al [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Il tipo restituito del gestore eventi deve corrispondere al tipo restituito del delegato. Per ulteriori informazioni sui delegati, vedere [delegati ed eventi](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md). Se un evento gestito è un membro dati, il relativo tipo deve essere un puntatore a un delegato.
 
 In .NET Framework, è possibile trattare un membro dati come se fosse un metodo (ovvero, il metodo `Invoke` del delegato corrispondente). È necessario predefinire il tipo delegato per la dichiarazione di un membro dati di eventi gestiti. In contrasto, un metodo dell'evento gestito definisce in modo implicito il delegato gestito corrispondente se questo non è già stato definito. Ad esempio, è possibile dichiarare un valore dell'evento quale `OnClick` come evento seguente:
 

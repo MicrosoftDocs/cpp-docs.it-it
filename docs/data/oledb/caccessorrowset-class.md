@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843287"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498725"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -64,7 +64,7 @@ Classe del set di righe.
 
 | Nome | Descrizione |
 |--|--|
-| [Associare](#bind) | Crea associazioni (utilizzate quando `bBind` viene specificato come **`false`** in [CCommand:: Open](../../data/oledb/ccommand-open.md)). |
+| [Associare](#bind) | Crea associazioni (utilizzate quando `bBind` viene specificato come **`false`** in [CCommand:: Open](./ccommand-class.md#open)). |
 | [CAccessorRowset](#caccessorrowset) | Costruttore. |
 | [Close](#close) | Chiude il set di righe e le funzioni di accesso. |
 | [FreeRecordMemory](#freerecordmemory) | Libera tutte le colonne del record corrente che devono essere liberate. |
@@ -76,7 +76,7 @@ Classe del set di righe.
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: bind
 
-Crea le associazioni se è stato specificato `bBind` come **`false`** in [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Crea le associazioni se è stato specificato `bBind` come **`false`** in [CCommand:: Open](./ccommand-class.md#open).
 
 ### <a name="syntax"></a>Sintassi
 
