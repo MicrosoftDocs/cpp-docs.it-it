@@ -10,22 +10,22 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5d0427962ddb7d6409f07b99c0f618b340ee00df
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988185"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414295"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++
 
-In questo argomento viene illustrato il marshalling di callback e delegati (la versione gestita di un callback) tra codice gestito e non gestito C++mediante Visual.
+In questo argomento viene illustrato il marshalling di callback e delegati (la versione gestita di un callback) tra codice gestito e non gestito usando Visual C++.
 
 Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma anche le funzioni possono essere definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-configure-unmanaged-api-to-trigger-managed-delegate"></a>Esempio: configurare un'API non gestita per attivare un delegato gestito
 
-Nell'esempio seguente viene illustrato come configurare un'API non gestita per attivare un delegato gestito. Viene creato un delegato gestito e uno dei metodi di interoperabilità, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, viene usato per recuperare il punto di ingresso sottostante per il delegato. Questo indirizzo viene quindi passato alla funzione non gestita, che lo chiama senza conoscere il fatto che viene implementato come funzione gestita.
+Nell'esempio seguente viene illustrato come configurare un'API non gestita per attivare un delegato gestito. Viene creato un delegato gestito e viene usato uno dei metodi di interoperabilità, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A> , per recuperare il punto di ingresso sottostante per il delegato. Questo indirizzo viene quindi passato alla funzione non gestita, che lo chiama senza conoscere il fatto che viene implementato come funzione gestita.
 
 Si noti che è possibile, ma non necessario, aggiungere il delegato utilizzando [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per impedire che venga rilocato o eliminato dall'Garbage Collector. La protezione da Garbage Collection prematura è necessaria, ma l'aggiunta garantisce una maggiore protezione del necessario, poiché impedisce la raccolta, ma impedisce anche la rilocazione.
 
@@ -77,7 +77,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-function-pointer-stored-by-unmanaged-api"></a>Esempio: puntatore a funzione archiviato da un'API non gestita
 
 L'esempio seguente è simile all'esempio precedente, ma in questo caso il puntatore a funzione fornito viene archiviato dall'API non gestita, in modo che possa essere richiamato in qualsiasi momento, richiedendo che Garbage Collection venga eliminato per un periodo di tempo arbitrario. Di conseguenza, nell'esempio seguente viene utilizzata un'istanza globale di <xref:System.Runtime.InteropServices.GCHandle> per impedire che il delegato venga rilocato, indipendentemente dall'ambito della funzione. Come illustrato nel primo esempio, l'uso di pin_ptr non è necessario per questi esempi, ma in questo caso non funzionerebbe comunque, perché l'ambito di una pin_ptr è limitato a una singola funzione.
 
@@ -141,4 +141,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

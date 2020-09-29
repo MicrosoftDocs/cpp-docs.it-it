@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 303fa73f09220b2139d681bf3109fd843299a900
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bea22a0d9fdc5c1ddbd9da2af7078228a6315e80
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172412"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414139"
 ---
 # <a name="consuming-generics-ccli"></a>Utilizzo dei generics (C++/CLI)
 
 I generics creati con un linguaggio .NET (o per la piattaforma UWP) possono essere usati in altri linguaggi. A differenza dei modelli, un generico in un assembly compilato rimane sempre generico. Pertanto, è possibile creare un'istanza del tipo generico in un assembly diverso e persino in un linguaggio diverso rispetto all'assembly in cui è stato definito il tipo generico.
 
-## <a name="example"></a>Esempio
+## <a name="example-generic-class-defined-in-c"></a>Esempio: classe generica definita in C #
 
 ### <a name="description"></a>Descrizione
 
@@ -80,7 +80,7 @@ public class CircularList<ItemType> {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-consume-assembly-authored-in-c"></a>Esempio: utilizzo dell'assembly creato in C #
 
 ### <a name="description"></a>Descrizione
 

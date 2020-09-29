@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92bdc41cf9ebe2389f2d22dab211029899283266
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221328"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414594"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedura: Dichiarare gli identificatori di override nelle compilazioni native (C++/CLI)
 
@@ -18,7 +18,7 @@ ms.locfileid: "87221328"
 > [!NOTE]
 > Il linguaggio standard ISO C++ 11 presenta l'identificatore di [override](../cpp/override-specifier.md) e l'identificatore [finale](../cpp/final-specifier.md) ed entrambi sono supportati in Visual Studio `final` anziché **`sealed`** in codice che deve essere compilato come solo nativo.
 
-## <a name="example"></a>Esempio
+## <a name="example-sealed-is-valid"></a>Esempio: sealed è valido
 
 ### <a name="description"></a>Descrizione
 
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-override-is-valid"></a>Esempio: override valido
 
 ### <a name="description"></a>Descrizione
 
@@ -69,7 +69,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-abstract-is-valid"></a>Esempio: abstract è valido
 
 ### <a name="description"></a>Descrizione
 

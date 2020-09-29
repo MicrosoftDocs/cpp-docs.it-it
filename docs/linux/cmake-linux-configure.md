@@ -2,12 +2,12 @@
 title: Configurare un progetto CMake per Linux in Visual Studio
 description: Come configurare le impostazioni di CMake per Linux in Visual Studio
 ms.date: 08/08/2020
-ms.openlocfilehash: 4bc6d5d82a0f1cd21e8f989eb92b431d38b2bf5c
-ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
+ms.openlocfilehash: 762f135988587e777c2a33a1bd402770c297226b
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88659344"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414542"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Configurare un progetto CMake per Linux in Visual Studio
 
@@ -102,7 +102,7 @@ Quando si esegue una compilazione:
 
 ## <a name="choose-a-linux-target"></a>Scegliere una destinazione Linux
 
-Quando si apre una cartella del progetto CMake, Visual Studio analizza il file di *CMakeLists.txt* e specifica una destinazione Windows **x86-debug**. Per fare riferimento a un sistema Linux remoto, modificare le impostazioni di progetto in **Linux-debug** o **Linux-Release**.
+Quando si apre una cartella del progetto CMake, Visual Studio analizza il file di *CMakeLists.txt* e specifica una destinazione Windows **x86-debug**. Per fare riferimento a un sistema Linux remoto, modificare le impostazioni di progetto in base al compilatore Linux. Se ad esempio si usa GCC in Linux e si esegue la compilazione con le informazioni di debug, si sceglie:  **linux-gcc-debug** o **linux-gcc-Release**.
 
 Se si specifica una destinazione Linux remota, il codice sorgente viene copiato nel sistema remoto.
 
@@ -117,7 +117,15 @@ Dopo aver selezionato una destinazione, CMake viene eseguito automaticamente nel
 
 Se la destinazione è il sottosistema Windows per Linux (WSL), non è necessario aggiungere una connessione remota.
 
-Per WSL di destinazione, selezionare **Gestisci configurazioni** nell'elenco a discesa Configurazione sulla barra degli strumenti principale. Quindi premere il pulsante **Aggiungi configurazione** e scegliere **WSL-debug** o **WSL-Release** se si usa GCC. Usare le varianti Clang se si usa il set di strumenti Clang/LLVM.
+Per WSL di destinazione, selezionare **Gestisci configurazioni** nell'elenco a discesa Configurazione sulla barra degli strumenti principale:
+
+![Configurazioni di gestione CMake](../build/media/vs2019-cmake-manage-configurations.png "Elenco a discesa delle configurazioni di CMake")
+
+Viene visualizzata la finestra **CMakeSettings.js** .
+
+![Aggiungere la configurazione](media/cmake-linux-configurations.png "Aggiungere una configurazione a impostazioni CMake")
+
+Premere **Aggiungi configurazione** (il pulsante verde "+"), quindi scegliere **linux-gcc-debug** o **linux-gcc-Release** se si usa GCC. Usare le varianti Clang se si usa il set di strumenti Clang/LLVM.  Premere **Select** , quindi **CTRL + S** per salvare la configurazione.
 
 **Visual Studio 2019 versione 16,1** Quando si fa riferimento a WSL, non è necessario che Visual Studio copi i file di origine e mantenga due copie sincrone della struttura di compilazione perché il compilatore in Linux ha accesso diretto ai file di origine nelle finestre di file system montate.
 ::: moniker-end

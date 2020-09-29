@@ -7,20 +7,18 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: e7d8239f49e527ead0a2e9dfbcca5e7e55f8c766
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224500"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414516"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procedura: convertire vari tipi di stringhe
 
 In questo argomento viene illustrato come convertire diversi tipi di stringa di Visual C++ in altre stringhe. I tipi di stringhe analizzati includono `char *` , `wchar_t*` , [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md)e <xref:System.String?displayProperty=fullName> . In tutti i casi, una copia della stringa viene eseguita quando viene convertita nel nuovo tipo. Tutte le modifiche apportate alla nuova stringa non avranno effetto sulla stringa originale e viceversa.
 
-## <a name="converting-from-char-"></a>Conversione da char\*
-
-## <a name="example"></a>Esempio
+## <a name="example-convert-from-char-"></a>Esempio: conversione da char *
 
 ### <a name="description"></a>Descrizione
 
@@ -119,9 +117,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchar_t-"></a>Conversione da wchar_t\*
-
-## <a name="example"></a>Esempio
+## <a name="example-convert-from-wchar_t-"></a>Esempio: conversione da wchar_t *
 
 ### <a name="description"></a>Descrizione
 
@@ -243,9 +239,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-_bstr_t"></a>Conversione da _bstr_t
-
-## <a name="example"></a>Esempio
+## <a name="example-convert-from-_bstr_t"></a>Esempio: conversione da _bstr_t
 
 ### <a name="description"></a>Descrizione
 
@@ -343,9 +337,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-ccombstr"></a>Conversione da CComBSTR
-
-## <a name="example"></a>Esempio
+## <a name="example-convert-from-ccombstr"></a>Esempio: conversione da CComBSTR
 
 ### <a name="description"></a>Descrizione
 
@@ -453,15 +445,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-cstring"></a>Conversione da CString
-
-## <a name="example"></a>Esempio
+## <a name="example-convert-from-cstring"></a>Esempio: conversione da CString
 
 ### <a name="description"></a>Descrizione
 
-In questo esempio viene illustrato come eseguire la conversione da un oggetto `CString` agli altri tipi di stringa sopra elencati. `CString`è basato sul tipo di dati TCHAR, che a sua volta dipende dall'eventuale definizione del simbolo `_UNICODE` . Se `_UNICODE` non è definito, `TCHAR` viene definito come carattere e `CString` contiene una stringa di caratteri multibyte; se `_UNICODE` è definito, `TCHAR` viene definito come **`wchar_t`** e `CString` contiene una stringa di caratteri wide.
+In questo esempio viene illustrato come eseguire la conversione da un oggetto `CString` agli altri tipi di stringa sopra elencati. `CString` è basato sul tipo di dati TCHAR, che a sua volta dipende dall'eventuale definizione del simbolo `_UNICODE` . Se `_UNICODE` non è definito, `TCHAR` viene definito come carattere e `CString` contiene una stringa di caratteri multibyte; se `_UNICODE` è definito, `TCHAR` viene definito come **`wchar_t`** e `CString` contiene una stringa di caratteri wide.
 
-`CStringA`la stringa multibyte è sempre la versione di `CString` , `CStringW` è solo la stringa di caratteri wide. Né `CStringA` né `CStringW` utilizzano `_UNICODE` per determinare la modalità di compilazione. `CStringA`e `CStringW` vengono usati in questo esempio per chiarire le differenze minime nell'allocazione delle dimensioni del buffer e nella gestione dell'output.
+`CStringA` la stringa multibyte è sempre la versione di `CString` , `CStringW` è solo la stringa di caratteri wide. Né `CStringA` né `CStringW` utilizzano `_UNICODE` per determinare la modalità di compilazione. `CStringA` e `CStringW` vengono usati in questo esempio per chiarire le differenze minime nell'allocazione delle dimensioni del buffer e nella gestione dell'output.
 
 ### <a name="code"></a>Codice
 
@@ -597,9 +587,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basic_string"></a>Conversione da basic_string
-
-## <a name="example"></a>Esempio
+## <a name="example-convert-from-basic_string"></a>Esempio: conversione da basic_string
 
 ### <a name="description"></a>Descrizione
 
@@ -693,9 +681,7 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>Conversione da System:: String
-
-## <a name="example"></a>Esempio
+## <a name="example-convert-from-systemstring"></a>Esempio: conversione da System:: String
 
 ### <a name="description"></a>Descrizione
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195577"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414490"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)
 
@@ -20,7 +20,7 @@ Un oggetto **interior_ptr** può essere usato con un tipo valore.
 > [!IMPORTANT]
 > Questa funzionalità del linguaggio è supportata dall'opzione del compilatore `/clr`, ma non dall'opzione del compilatore `/ZW`.
 
-## <a name="example"></a>Esempio
+## <a name="example-interior_ptr-with-value-type"></a>Esempio: interior_ptr con tipo di valore
 
 ### <a name="description"></a>Descrizione
 
@@ -65,7 +65,7 @@ int main() {
 3
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-this-pointer"></a>Esempio: puntatore
 
 ### <a name="description"></a>Descrizione
 
@@ -87,7 +87,7 @@ value struct V {
 };
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-address-of-operator"></a>Esempio: operatore address-of
 
 ### <a name="description"></a>Descrizione
 

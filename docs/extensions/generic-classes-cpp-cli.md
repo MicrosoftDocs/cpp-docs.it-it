@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216024"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414126"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 
@@ -157,7 +157,7 @@ Questa sezione mostra l'uso di campi statici e di istanza in classi generiche.
 
 Le variabili di istanza di una classe generica possono avere tipi e inizializzatori di variabili che includono parametri di tipo dalla classe contenitore.
 
-## <a name="example"></a>Esempio
+## <a name="example-different-generic-classes"></a>Esempio: classi generiche diverse
 
 Nell'esempio seguente vengono create tre diverse istanze della classe generica, MyClass \<ItemType> , usando gli argomenti di tipo appropriati ( **`int`** , **`double`** e **String**).
 
@@ -205,7 +205,7 @@ Alla creazione di un nuovo tipo generico, vengono create nuove istanze di tutte 
 
 Le variabili statiche possono usare qualsiasi parametro di tipo dalla classe contenitore.
 
-## <a name="example"></a>Esempio
+## <a name="example-use-static-variables"></a>Esempio: usare variabili statiche
 
 L'esempio seguente mostra l'uso di campi statici e di un costruttore statico all'interno di una classe generica.
 
@@ -282,7 +282,7 @@ La firma di un metodo non generico può includere uno o più parametri di tipo d
 
 Anche il corpo di questi metodi può usare parametri di tipo.
 
-## <a name="example"></a>Esempio
+## <a name="example-declare-non-generic-method"></a>Esempio: dichiarare un metodo non generico
 
 L'esempio seguente dichiara un metodo non generico `ProtectData` all'interno della classe generica `MyClass<ItemType>`. Il metodo usa il parametro di tipo di classe `ItemType` nella propria firma in un tipo costruito aperto.
 
@@ -343,7 +343,7 @@ Amount: $123.00**
 
 È possibile dichiarare metodi generici in classi sia generiche sia non generiche. Ad esempio:
 
-## <a name="example"></a>Esempio
+## <a name="example-declare-generic-and-non-generic-methods"></a>Esempio: dichiarare metodi generici e non generici
 
 ```cpp
 // generics_method2.cpp
@@ -369,7 +369,7 @@ Il metodo non generico è comunque generico, nel senso che contiene parametri ag
 
 Tutti i tipi di metodi nelle classi generiche possono essere generici, inclusi metodi statici, di istanza e virtuali.
 
-## <a name="example"></a>Esempio
+## <a name="example-declare-and-use-generic-methods"></a>Esempio: dichiarare e usare metodi generici
 
 L'esempio seguente mostra la dichiarazione e l'uso di metodi generici all'interno di classi generiche:
 
@@ -453,9 +453,9 @@ Poiché non esiste alcun modo per fare riferimento al parametro di tipo esterno,
 
 Quando i tipi generici annidati costruiti vengono denominati, il parametro di tipo per il tipo esterno non è incluso nell'elenco dei parametri di tipo per il tipo interno, anche se al tipo interno vengono aggiunti parametri in modo implicito dal parametro di tipo del tipo esterno. Nel caso precedente un nome di un tipo costruito sarà `Outer<int>::Inner<string>`.
 
-L'esempio seguente mostra la creazione e la lettura di un elenco collegato tramite tipi annidati in classi generiche.
+## <a name="example-build-and-read-linked-list"></a>Esempio: compilare e leggere l'elenco collegato
 
-## <a name="example"></a>Esempio
+L'esempio seguente mostra la creazione e la lettura di un elenco collegato tramite tipi annidati in classi generiche.
 
 ```cpp
 // generics_linked_list.cpp
@@ -556,7 +556,7 @@ Reading nodes:
 
 - A proprietà, eventi, indicizzatori e operatori non è possibile aggiungere parametri.
 
-## <a name="example"></a>Esempio
+## <a name="example-declare-instance-property"></a>Esempio: dichiarare la proprietà Instance
 
 Questo esempio mostra dichiarazioni di una proprietà dell'istanza all'interno di una classe generica.
 
@@ -596,7 +596,7 @@ int main() {
 John, 234
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-generic-class-with-event"></a>Esempio: classe generica con evento
 
 L'esempio seguente mostra una classe generica con un evento.
 
@@ -663,7 +663,7 @@ int main() {
 
 Le regole per la dichiarazione e l'uso di struct generici sono identiche a quelle per le classi generiche, ad eccezione delle differenze indicate nelle informazioni di riferimento per il linguaggio Visual C++.
 
-## <a name="example"></a>Esempio
+## <a name="example-declare-generic-struct"></a>Esempio: dichiarare uno struct generico
 
 Nell'esempio seguente viene dichiarato uno struct generico, `MyGenStruct` , con un campo, `myField` , e vengono assegnati valori di tipi diversi ( **`int`** , **`double`** , `String^` ) a questo campo.
 

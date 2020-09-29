@@ -1,6 +1,7 @@
 ---
 title: Editor barra degli strumenti (C++)
-ms.date: 02/14/2019
+description: Utilizzare l'editor della barra degli strumenti di Visual Studio per creare risorse della barra degli strumenti e convertire le bitmap in risorse barra degli strumenti.
+ms.date: 09/26/2020
 f1_keywords:
 - vc.editors.toolbar.F1
 - vc.editors.toolbar
@@ -50,29 +51,29 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: ca7f031cbdcfc3378a0917e84b257fd7212563e1
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 042bfafb1e55d45145306a8c388e1e3559fa9a33
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353025"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413801"
 ---
 # <a name="toolbar-editor-c"></a>Editor barra degli strumenti (C++)
 
-L' **Editor barra degli** strumenti consente di creare risorse della barra degli strumenti e convertire le bitmap in risorse della barra degli strumenti. Nell' **Editor barra degli strumenti** viene utilizzata una visualizzazione grafica per visualizzare una barra degli strumenti e i pulsanti che somigliano molto a quelli che verranno esaminati in un'applicazione completata.
+L' **Editor barra degli** strumenti consente di creare risorse della barra degli strumenti e convertire le bitmap in risorse della barra degli strumenti. L' **Editor barra degli strumenti** usa una visualizzazione grafica. Mostra una barra degli strumenti e i pulsanti che somigliano in modo simile a un'applicazione completata.
 
-La finestra dell' **Editor della barra degli strumenti** Mostra due visualizzazioni di un'immagine del pulsante, come la finestra dell' **editor di immagini** . Una barra di divisione separa i due riquadri ed è possibile trascinare la barra di divisione da un lato all'altro per modificare le dimensioni relative dei riquadri. Nel riquadro attivo viene visualizzato un bordo di selezione e sopra le due visualizzazioni dell'immagine si trova la barra degli strumenti dell'oggetto.
+La finestra dell' **Editor della barra degli strumenti** Mostra due visualizzazioni di un'immagine del pulsante, come la finestra dell' **editor di immagini** . Una barra di divisione separa i due riquadri. Per modificare le dimensioni relative dei riquadri, è possibile trascinare la barra di divisione da Side a Side. Nel riquadro attivo viene visualizzato un bordo di selezione e sopra le due visualizzazioni dell'immagine si trova la barra degli strumenti dell'oggetto.
 
 ![Editor barra degli strumenti](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
 **Editor barra degli strumenti**
 
-L' **Editor barra degli strumenti** è analogo all' **editor di immagini** in funzionalità e le voci di menu, gli strumenti grafici e la griglia bitmap tra i due sono uguali. Nel menu **immagine** è presente un comando di menu che consente di spostarsi tra l' **Editor della barra degli strumenti** e l' **editor di immagini**. Per ulteriori informazioni sull'utilizzo della barra degli strumenti **grafica** , della tavolozza dei **colori** o del menu **immagine** , vedere [editor di immagini](../windows/image-editor-for-icons.md).
+L' **Editor barra degli strumenti** è analogo all' **editor di immagini** in funzionalità. Le voci di menu, gli strumenti grafici e la griglia bitmap tra i due elementi sono uguali. Nel menu **immagine** è presente un comando di menu che consente di spostarsi tra l' **Editor della barra degli strumenti** e l' **editor di immagini**. Per ulteriori informazioni sull'utilizzo della barra degli strumenti **grafica** , della tavolozza dei **colori** o del menu **immagine** , vedere [editor di immagini](../windows/image-editor-for-icons.md).
 
-È possibile creare una nuova barra degli strumenti in un progetto C++ convertendo una bitmap. Il grafico della bitmap converte le immagini dei pulsanti di una barra degli strumenti. In genere la bitmap contiene diverse immagini dei pulsanti in una singola bitmap, con un'immagine per ogni pulsante. Le immagini possono essere di qualsiasi dimensione, perché il valore predefinito è 16 pixel di larghezza e l'altezza dell'immagine. È possibile specificare la dimensione delle immagini dei pulsanti nella finestra di dialogo **nuova risorsa barra degli strumenti** quando si sceglie **Editor barra degli strumenti** dal menu **immagine** , mentre nell' **editor di immagini**.
+È possibile creare una nuova barra degli strumenti in un progetto C++ convertendo una bitmap. Il grafico della bitmap converte le immagini dei pulsanti di una barra degli strumenti. In genere la bitmap contiene diverse immagini dei pulsanti in una singola bitmap, con un'immagine per ogni pulsante. Le immagini possono essere di qualsiasi dimensione, perché il valore predefinito è 16 pixel di larghezza e l'altezza dell'immagine. È possibile specificare la dimensione delle immagini dei pulsanti nella finestra di dialogo **nuova risorsa barra degli strumenti** . Per specificare le dimensioni, scegliere **Editor barra degli strumenti** dal menu **immagine** nell' **editor di immagini**.
 
 La finestra di dialogo **nuova risorsa barra degli strumenti** consente di specificare la larghezza e l'altezza dei pulsanti aggiunti a una risorsa barra degli strumenti in un progetto C++. Il valore predefinito è 16 × 15 pixel.
 
-Una bitmap utilizzata per creare una barra degli strumenti ha una larghezza massima di 2048, pertanto se si imposta la **larghezza del pulsante** su *512*, è possibile avere solo quattro pulsanti. Se si imposta la larghezza su *513*, è possibile avere solo tre pulsanti.
+Una bitmap utilizzata per creare una barra degli strumenti ha una larghezza massima di 2048. Se si imposta la **larghezza del pulsante** su *512*, è possibile avere solo quattro pulsanti. Se si imposta la larghezza su *513*, è possibile avere solo tre pulsanti.
 
 La finestra di dialogo **nuova risorsa barra degli strumenti** presenta le proprietà seguenti:
 
@@ -84,7 +85,7 @@ La finestra di dialogo **nuova risorsa barra degli strumenti** presenta le propr
 > [!NOTE]
 > Le immagini vengono ritagliate in base alla larghezza e all'altezza specificate e i colori vengono adattati per l'utilizzo dei colori della barra degli strumenti standard (16 colori).
 
-Per impostazione predefinita, un pulsante nuovo o vuoto viene visualizzato all'estremità destra della barra degli strumenti. È possibile spostare questo pulsante prima di modificarlo. Quando si crea un nuovo pulsante, viene visualizzato un altro pulsante vuoto a destra del pulsante modificato. Quando si salva una barra degli strumenti, il pulsante vuoto non viene salvato.
+Per impostazione predefinita, una barra degli strumenti Visualizza un pulsante nuovo o vuoto nell'estremità destra della barra degli strumenti. È possibile spostare questo pulsante prima di modificarlo. Quando si crea un nuovo pulsante, viene visualizzato un altro pulsante vuoto a destra del pulsante modificato. Il pulsante vuoto non viene salvato quando si salva una barra degli strumenti.
 
 Un pulsante della barra degli strumenti presenta le proprietà seguenti:
 
@@ -95,7 +96,7 @@ Un pulsante della barra degli strumenti presenta le proprietà seguenti:
 |**Altezza**|Imposta l'altezza del pulsante. L'altezza di un pulsante modifica l'altezza di tutti i pulsanti sulla barra degli strumenti. è consigliabile usare 15 pixel.|
 |**Messaggio di richiesta**|Definisce il messaggio visualizzato nella barra di stato. L'aggiunta di *\n* e di un nome aggiunge una **Descrizione comando** al pulsante della barra degli strumenti. Per ulteriori informazioni, vedere [per creare una descrizione comando per un pulsante della barra degli strumenti](#to-create-a-tool-tip-for-a-toolbar-button).|
 
-**Larghezza** e **altezza** si applicano a tutti i pulsanti. Una bitmap utilizzata per creare una barra degli strumenti ha una larghezza massima di 2048, pertanto se si imposta la larghezza del pulsante su *512*, è possibile disporre solo di quattro pulsanti e se si imposta la larghezza su *513*, è possibile avere solo tre pulsanti.
+**Larghezza** e **altezza** si applicano a tutti i pulsanti. Una bitmap utilizzata per creare una barra degli strumenti ha una larghezza massima di 2048. Ciò significa che se si imposta la larghezza del pulsante su *512*, è possibile avere solo quattro pulsanti. Se si imposta la larghezza su *513*, è possibile avere solo tre pulsanti.
 
 ## <a name="how-to"></a>Procedure
 
@@ -111,7 +112,7 @@ L' **Editor barra degli strumenti** consente di:
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Per convertire le bitmap in risorse della barra degli strumenti
 
-1. Aprire una risorsa bitmap esistente nell' [editor di immagini](../windows/image-editor-for-icons.md). Se la bitmap non è già presente nel file *RC* , fare clic con il pulsante destro del mouse sul file *RC* e scegliere **Importa**, quindi passare alla bitmap che si desidera aggiungere al file *RC* e selezionare **Apri**.
+1. Aprire una risorsa bitmap esistente nell' [editor di immagini](../windows/image-editor-for-icons.md). Se la bitmap non è già presente nel file *RC* , fare clic con il pulsante destro del mouse sul file *RC* e scegliere **Importa**. Passare quindi alla bitmap che si desidera aggiungere al file *RC* e selezionare **Apri**.
 
 1. Passare all' **Image**  >  **Editor della barra degli strumenti**dell'immagine del menu.
 
@@ -130,7 +131,7 @@ L' **Editor barra degli strumenti** consente di:
 
 1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources) espandere la cartella delle risorse (ad esempio, *Project1. RC*).
 
-1. Espandere la cartella della **barra degli strumenti** e selezionare una barra degli strumenti da modificare, quindi eseguire una delle operazioni seguenti:
+1. Espandere la cartella della **barra degli strumenti** e selezionare una barra degli strumenti per modificare, quindi:
 
    - Assegnare un ID al pulsante vuoto all'estremità destra della barra degli strumenti. Questa operazione può essere eseguita modificando la proprietà **ID** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). Ad esempio, è possibile assegnare a un pulsante della barra degli strumenti lo stesso ID di un'opzione di menu. In questo caso, utilizzare la casella di riepilogo a discesa per selezionare l' **ID** dell'opzione di menu.
 
@@ -157,18 +158,18 @@ L' **Editor barra degli strumenti** consente di:
 
 Nel riquadro **visualizzazione barra degli strumenti** trascinare il pulsante che si desidera spostare nella nuova posizione sulla barra degli strumenti.
 
-- Per copiare i pulsanti da una barra degli strumenti, tenere premuto il tasto **CTRL** e nel riquadro **visualizzazione barra degli** strumenti trascinare il pulsante nella nuova posizione sulla barra degli strumenti o in una posizione su un'altra barra degli strumenti.
+- Per copiare i pulsanti da una barra degli strumenti, tenere premuto il tasto **CTRL** . Nel riquadro **visualizzazione barra degli strumenti** trascinare il pulsante nella nuova posizione sulla barra degli strumenti. In alternativa, trascinarlo in un percorso su un'altra barra degli strumenti.
 
 - Per eliminare un pulsante della barra degli strumenti, selezionare il pulsante della barra degli strumenti e trascinarlo sulla barra degli strumenti.
 
-- Per inserire o rimuovere spazio tra i pulsanti di una barra degli strumenti, trascinarli da o verso un altro sulla barra degli strumenti.
+- Per inserire o rimuovere spazio tra i pulsanti di una barra degli strumenti, trascinarli dall'uno all'altro sulla barra degli strumenti.
 
-|Action|Passaggio|
+|Azione|Passaggio|
 |------|------|
 |Per inserire uno spazio prima di un pulsante non seguito da uno spazio|Trascinare il pulsante a destra o a sinistra fino a quando non si sovrappone al pulsante avanti circa la metà.|
 |Per inserire uno spazio prima di un pulsante seguito da uno spazio e per il mantenimento dello spazio finale|Trascinare il pulsante finché il bordo destro o inferiore sta semplicemente toccando il pulsante avanti o semplicemente si sovrappone.|
 |Per inserire uno spazio prima di un pulsante seguito da uno spazio e chiudere lo spazio seguente|Trascinare il pulsante a destra o a sinistra fino a quando non si sovrappone al pulsante avanti circa la metà.|
-|Per rimuovere uno spazio tra i pulsanti di una barra degli strumenti|Trascinare il pulsante su un lato dello spazio verso il pulsante sull'altro lato dello spazio fino a quando non si sovrappone al pulsante avanti circa la metà.|
+|Per rimuovere uno spazio tra i pulsanti di una barra degli strumenti|Selezionare il pulsante su un lato dello spazio. Trascinarlo verso il pulsante sull'altro lato dello spazio fino a quando non si sovrappone al pulsante avanti circa la metà.|
 
 > [!NOTE]
 > Se non è presente alcuno spazio sul lato del pulsante da cui si trascina il mouse e si trascina il pulsante più a metà oltre il pulsante adiacente, l'editor della **barra degli strumenti** inserisce uno spazio sul lato opposto del pulsante che si sta trascinando.
@@ -203,6 +204,5 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor](../windows/resource-editors.md) 
- di risorse [Menu e altre risorse](/windows/win32/menurc/resources)<br/>
-[Proprietà dei pulsanti della barra degli strumenti](../windows/toolbar-button-properties.md)<br/>
+[Editor di risorse](../windows/resource-editors.md)\
+[Menu e altre risorse](/windows/win32/menurc/resources)

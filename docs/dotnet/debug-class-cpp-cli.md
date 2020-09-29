@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393779"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414152"
 ---
 # <a name="debug-class-ccli"></a>Classe Debug (C++/CLI)
 
-Quando si usa <xref:System.Diagnostics.Debug> in un'applicazione Visual C++, il comportamento rimane invariato tra una build di rilascio e di debug.
+Quando si usa <xref:System.Diagnostics.Debug> in un'applicazione Visual C++, il comportamento non viene modificato tra una compilazione di debug e una build di rilascio.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il comportamento per <xref:System.Diagnostics.Trace> è identico a quello per la classe Debug, ma dipende dalla definizione del simbolo TRACE viene definito. Ciò significa che è necessario `#ifdef` qualsiasi codice correlate alle tracce per evitare il comportamento di debug nella build di rilascio.
+Il comportamento di <xref:System.Diagnostics.Trace> è identico al comportamento della classe debug, ma dipende dalla traccia del simbolo da definire. Ciò significa che è necessario `#ifdef` qualsiasi codice correlato alla traccia per impedire il comportamento di debug in una build di rilascio.
 
-## <a name="example"></a>Esempio
+## <a name="example-always-executes-output-statements"></a>Esempio: esegue sempre le istruzioni di output
 
 ### <a name="description"></a>Descrizione
 
-L'esempio seguente viene sempre eseguito le istruzioni di output, indipendentemente dal fatto che si esegue la compilazione con **senza /DDEBUG** oppure **/DTRACE**.
+Nell'esempio seguente vengono sempre eseguite le istruzioni di output, indipendentemente dal fatto che si esegua la compilazione con **/DDEBUG** o **/DTrace**.
 
 ### <a name="code"></a>Codice
 
@@ -58,11 +58,11 @@ Hello World.
 test
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-use-ifdef-and-endif-directives"></a>Esempio: usare direttive #ifdef e #endif
 
 ### <a name="description"></a>Descrizione
 
-Per ottenere il comportamento previsto (vale a dire, nessuna "test" output stampato per una build di rilascio), è necessario usare il `#ifdef` e `#endif` direttive. Esempio di codice precedente viene modificato di sotto per illustrare questa correzione:
+Per ottenere il comportamento previsto, ovvero nessun output di test stampato per una build di rilascio, è necessario utilizzare le `#ifdef` `#endif` direttive e. L'esempio di codice precedente è stato modificato di seguito per illustrare questa correzione:
 
 ### <a name="code"></a>Codice
 

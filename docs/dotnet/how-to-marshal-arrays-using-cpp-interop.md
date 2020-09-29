@@ -9,20 +9,20 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0ccf71d40db0bc6989620d2ca126ce74311805da
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988197"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413827"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: effettuare il marshalling di matrici utilizzando l'interoperabilità C++
 
-In questo argomento viene illustrato un facet di interoperabilità visiva C++ . Per ulteriori informazioni, vedere [utilizzo C++ dell'interoperabilità (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+In questo argomento viene illustrato un facet di interoperabilità Visual C++. Per ulteriori informazioni, vedere [utilizzo dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma queste funzioni interagiscono nello stesso modo se definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-pass-managed-array-to-unmanaged-function"></a>Esempio: passare una matrice gestita a una funzione non gestita
 
 Nell'esempio seguente viene illustrato come passare una matrice gestita a una funzione non gestita. La funzione gestita USA [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per disattivare Garbage Collection per la matrice prima di chiamare la funzione non gestita. Se si specifica la funzione non gestita con un puntatore bloccato nell'heap GC, è possibile evitare il sovraccarico dovuto alla creazione di una copia della matrice. Per dimostrare che la funzione non gestita sta accedendo alla memoria heap GC, modifica il contenuto della matrice e le modifiche vengono riflesse quando la funzione gestita riprende il controllo.
 
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-pass-unmanaged-array-to-managed-function"></a>Esempio: passare una matrice non gestita a una funzione gestita
 
 Nell'esempio seguente viene illustrato il passaggio di una matrice non gestita a una funzione gestita. La funzione gestita accede direttamente alla memoria dell'Array (anziché creare una matrice gestita e copiando il contenuto della matrice), che consente di riflettere le modifiche apportate dalla funzione gestita nella funzione non gestita quando il controllo viene recuperato.
 
@@ -131,4 +131,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

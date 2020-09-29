@@ -1,6 +1,7 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 06/09/2020
+description: Funzioni con i miglioramenti della sicurezza per ottenere un messaggio di errore di sistema o stampare un messaggio di errore fornito dall'utente.
+ms.date: 09/25/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 4e594a37425714ef521c083785120e2262225b19
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664326"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414620"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -80,6 +81,9 @@ errno_t __wcserror_s(
    size_t sizeInWords,
    const wchar_t *strErrMsg
 );
+```
+
+```cpp
 template <size_t size>
 errno_t strerror_s(
    char (&buffer)[size],
@@ -104,26 +108,26 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>Parametri
 
-*buffer*<br/>
+*buffer*\
 Buffer contenente la stringa di errore.
 
-*sizeInBytes*<br/>
+*sizeInBytes*\
 Numero di byte nel buffer.
 
-*sizeInWords*<br/>
+*sizeInWords*\
 Numero di parole nel buffer.
 
-*errnum*<br/>
+*errnum*\
 Numero di errore.
 
-*strErrMsg*<br/>
+*strErrMsg*\
 Messaggio fornito dall'utente.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 
-### <a name="error-condtions"></a>Condizioni di errore
+### <a name="error-conditions"></a>Condizioni di errore
 
 |*buffer*|*sizeInBytes/sizeInWords*|*strErrMsg*|Contenuto del *buffer*|
 |--------------|------------------------|-----------------|--------------------------|
@@ -131,6 +135,8 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 |any|0|any|non modificato|
 
 ## <a name="remarks"></a>Osservazioni
+
+La funzione **strerror_s** è thread-safe.
 
 La funzione **strerror_s** esegue il mapping di *errnum* a una stringa di messaggio di errore, restituendo la stringa nel *buffer*. **_strerror_s** non accetta il numero di errore. Usa il valore corrente di **errno** per determinare il messaggio appropriato. Né **strerror_s** né **_strerror_s** stampano effettivamente il messaggio. a tale proposito, è necessario chiamare una funzione di output, ad esempio [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
@@ -142,7 +148,7 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-Se *strErrMsg* è **null**, **_strerror_s** restituisce una stringa nel *buffer* contenente il messaggio di errore di sistema per l'ultima chiamata di libreria che ha generato un errore. La stringa del messaggio di errore termina con il carattere di nuova riga ("\n"). Se *strErrMsg* è diverso da **null**, **_strerror_s** restituisce una stringa nel *buffer* contenente (nell'ordine) il messaggio della stringa, i due punti, uno spazio, il messaggio di errore di sistema per l'ultima chiamata di libreria che produce un errore e un carattere di nuova riga. La lunghezza massima consentita del messaggio stringa è pari a 94 caratteri.
+Se *strErrMsg* è **null**, **_strerror_s** restituisce una stringa nel *buffer* che contiene il messaggio di errore di sistema per l'ultima chiamata di libreria che ha generato un errore. La stringa del messaggio di errore termina con il carattere di nuova riga ("\n"). Se *strErrMsg* non è uguale a **null**, **_strerror_s** restituisce una stringa nel *buffer* che contiene (in ordine) il messaggio della stringa, i due punti, uno spazio, il messaggio di errore di sistema per l'ultima chiamata di libreria che ha generato un errore e un carattere di nuova riga. La lunghezza massima consentita del messaggio stringa è pari a 94 caratteri.
 
 Queste funzioni troncano il messaggio di errore se la lunghezza supera la dimensione del buffer-1. La stringa risultante nel *buffer* sarà sempre con terminazione null.
 
@@ -181,7 +187,7 @@ Vedere l'esempio relativo a [perror](perror-wperror.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[clearerr](clearerr.md)<br/>
-[ferror](ferror.md)<br/>
-[perror, _wperror](perror-wperror.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)\
+[clearerr](clearerr.md)\
+[ferror](ferror.md)\
+[perror, _wperror](perror-wperror.md)

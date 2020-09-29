@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: migliorare le prestazioni con i genericsC++(/CLI)'
+title: 'Procedura: Migliorare le prestazioni con i generics (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 039c5b069351249e51d961d9d1757ed6b09ef99c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181941"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414165"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Procedura: migliorare le prestazioni con i genericsC++(/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Procedura: Migliorare le prestazioni con i generics (C++/CLI)
 
 Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo. Il tipo effettivo del parametro di tipo viene rinviato fino alla chiamata da parte del codice client. Per altre informazioni sui generics, vedere [Generics](generics-cpp-component-extensions.md).
 
 In questo articolo viene illustrato il modo in cui i generics consentono di aumentare le prestazioni di un'applicazione in cui sono utilizzate le raccolte.
 
-## <a name="example"></a>Esempio
+## <a name="example-two-main-drawbacks-of-net-framework-collections"></a>Esempio: due svantaggi principali delle raccolte di .NET Framework
 
 .NET Framework viene fornito con molte classi di raccolta nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>. La maggior parte di queste raccolte funziona con oggetti di tipo <xref:System.Object?displayProperty=fullName>. In questo modo, nelle raccolte può essere archiviato qualsiasi tipo, poiché tutti i tipi disponibili in .NET Framework, anche quelli di valore, derivano da <xref:System.Object?displayProperty=fullName>. Tuttavia, questo approccio presenta due svantaggi.
 
@@ -78,7 +78,7 @@ Popped a String: Seven
 Popped an int: 7
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-benefit-of-using-generic-collection"></a>Esempio: vantaggio dell'uso della raccolta generica
 
 Nel nuovo spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName> sono contenute molte delle stesse raccolte disponibili nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>, ma sono state modificate per accettare i parametri di tipo generico. In questo modo vengono eliminati i due svantaggi delle raccolte non generiche: il boxing e l'unboxing dei tipi di valore e l'impossibilità di specificare i tipi da archiviare nelle raccolte. Le operazioni nelle due raccolte sono identiche; l'unica differenza è la modalità di creazione di istanze.
 

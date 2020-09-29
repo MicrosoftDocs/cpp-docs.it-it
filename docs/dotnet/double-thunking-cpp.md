@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 6b2d3b4415b81dc5a9b7d0e36c154d9ee74b98ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f0fc5567baaa0c4f3fea410770963adf51e8366
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221484"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414009"
 ---
 # <a name="double-thunking-c"></a>Doppio thunk (C++)
 
@@ -29,7 +29,7 @@ Analogamente, se si esporta ([dllexport, dllimport](../cpp/dllexport-dllimport.m
 
 Il compilatore è stato aggiornato per ridurre il doppio thunk non necessario. Ogni funzione con un tipo gestito nella firma (incluso il tipo restituito), ad esempio, verrà contrassegnata in modo implicito come `__clrcall` .
 
-## <a name="example"></a>Esempio
+## <a name="example-double-thunking"></a>Esempio: doppio thunk
 
 ### <a name="description"></a>Descrizione
 
@@ -87,7 +87,7 @@ after calling struct S
 __thiscall T::~T(void)
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-effect-of-double-thunking"></a>Esempio: effetto del doppio thunk
 
 ### <a name="description"></a>Descrizione
 

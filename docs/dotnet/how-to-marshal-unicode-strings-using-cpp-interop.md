@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: da320dbd41e7158e3bc2482b96a73c1f4728a01b
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988166"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414308"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe Unicode utilizzando l'interoperabilità C++
 
-In questo argomento viene illustrato un facet di interoperabilità visiva C++ . Per ulteriori informazioni, vedere [utilizzo C++ dell'interoperabilità (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+In questo argomento viene illustrato un facet di interoperabilità Visual C++. Per ulteriori informazioni, vedere [utilizzo dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 Negli esempi di codice seguenti vengono utilizzate le direttive #pragma [gestite e non gestite](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file, ma queste funzioni interagiscono nello stesso modo se definite in file distinti. I file che contengono solo funzioni non gestite non devono essere compilati con [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 In questo argomento viene illustrato come passare le stringhe Unicode da una funzione gestita a una funzione non gestita e viceversa. Per l'interoperabilità con altri tipi di stringhe, vedere gli argomenti seguenti:
 
-- [Procedura: Effettuare il marshalling di stringhe ANSI tramite l'interoperabilità C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di stringhe ANSI utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-- [Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-## <a name="example"></a>Esempio
+## <a name="example-pass-unicode-string-from-managed-to-unmanaged-function"></a>Esempio: passare una stringa Unicode dalla funzione gestita a quella non gestita
 
 Per passare una stringa Unicode da una funzione gestita a una funzione non gestita, è possibile usare la funzione PtrToStringChars (dichiarata in Vcclr. h) per accedere alla memoria in cui è archiviata la stringa gestita. Poiché questo indirizzo verrà passato a una funzione nativa, è importante che la memoria venga bloccata con [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per impedire che i dati di stringa vengano rilocati, se si verifica un ciclo di Garbage Collection mentre viene eseguita la funzione non gestita.
 
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-data-marshaling-required-to-access-unicode-string"></a>Esempio: marshalling dei dati richiesto per accedere alla stringa Unicode
 
-Nell'esempio seguente viene illustrato il marshalling dei dati richiesto per accedere a una stringa Unicode in una funzione gestita chiamata da una funzione non gestita. La funzione gestita, alla ricezione della stringa Unicode nativa, la converte in una stringa gestita usando il metodo <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>.
+Nell'esempio seguente viene illustrato il marshalling dei dati richiesto per accedere a una stringa Unicode in una funzione gestita chiamata da una funzione non gestita. La funzione gestita, alla ricezione della stringa Unicode nativa, la converte in una stringa gestita usando il <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> metodo.
 
 ```cpp
 // MarshalUnicode2.cpp
@@ -97,4 +97,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,6 +1,7 @@
 ---
 title: for each, in
-ms.date: 11/04/2016
+description: C++/CLI per ogni, nella descrizione dell'istruzione ed esempi.
+ms.date: 09/25/2020
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: f1f5523eb22bd8a839da9b3f73dd6c3718b4fd63
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7f228a773dfcbe791e26ea3e1bd8cfba7f3ab028
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825793"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413919"
 ---
 # <a name="for-each-in"></a>for each, in
 
-Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Il suo utilizzo non è tuttavia consigliato. Si consiglia di utilizzare un' [istruzione for standard basata sull'intervallo (C++)](../cpp/range-based-for-statement-cpp.md) .
+Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Tuttavia, il suo utilizzo non è consigliato. Si consiglia di utilizzare un' [istruzione for standard basata sull'intervallo (C++)](../cpp/range-based-for-statement-cpp.md) .
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
@@ -49,17 +50,7 @@ L'istruzione `for each` viene utilizzata per scorrere una raccolta. È possibile
 
 Le *istruzioni* vengono eseguite per ogni elemento nella matrice o nella raccolta. Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.
 
-`for each`e `in` sono [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
-
-Per altre informazioni:
-
-- [Scorrere la raccolta di librerie standard C++ tramite for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
-
-- [Procedura: Scorrere le matrici con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
-
-- [Procedura: Scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
-
-- [Procedura: Scorrere una raccolta definita dall'utente con for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+`for each` e `in` sono [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -97,8 +88,6 @@ int main() {
 }
 ```
 
-**Output**
-
 ```Output
 abcd
 
@@ -107,14 +96,14 @@ Testing
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-**Osservazioni:**
+### <a name="remarks"></a>Osservazioni
 
 La sintassi CLR è la stessa della sintassi di **tutti i runtime** , ad eccezione di quanto segue.
 
 *expression*<br/>
-Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere tale che il compilatore possa convertirlo <xref:System.Object> da nel tipo di *identificatore* .
+Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere tale che il compilatore possa convertirlo da <xref:System.Object> nel tipo di *identificatore* .
 
-*l'espressione* restituisce un tipo <xref:System.Collections.IEnumerable>che implementa, <xref:System.Collections.Generic.IEnumerable%601>o un tipo che definisce un `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti in. `IEnumerator`
+l' *espressione* restituisce un tipo che implementa <xref:System.Collections.IEnumerable> , <xref:System.Collections.Generic.IEnumerable%601> o un tipo che definisce un `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti in `IEnumerator` .
 
 ### <a name="requirements"></a>Requisiti
 
@@ -149,8 +138,6 @@ int main() {
 }
 ```
 
-**Output**
-
 ```Output
 abcd
 
@@ -159,4 +146,5 @@ Testing
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../extensions/component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per le piattaforme di runtime](../extensions/component-extensions-for-runtime-platforms.md)\
+[Istruzione for basata su intervallo (C++)](../cpp/range-based-for-statement-cpp.md)
