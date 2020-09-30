@@ -8,12 +8,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 05/26/2020
-  ms.openlocfilehash: 7a858d9f26c106988156813b3f1f6bbe995e620a
-  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.openlocfilehash: 3d90635c4b1d458369d1d7c9b1cfa9273161b4d2
+  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84153529"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91509791"
 landingContent:
 - title: Informazioni su come creare app per dispositivi mobili multipiattaforma
   linkLists:
@@ -42,7 +42,7 @@ landingContent:
     - text: Riferimento alla pagina delle proprietà multipiattaforma di C++
       url: cross-platform-prop-pages.md
     - text: Documentazione della piattaforma UWP (Universal Windows Platform)
-      url: /cpp/cppcx/universal-windows-apps-cpp
+      url: ../cppcx/universal-windows-apps-cpp.md
     - text: Documentazione dell'API iOS
       url: https://developer.apple.com/reference
     - text: Documentazione dell'API Android

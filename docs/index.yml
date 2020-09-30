@@ -10,12 +10,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 06/04/2020
-  ms.openlocfilehash: ac1e391207037bf88fd866181533662aa5856b69
-  ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+  ms.openlocfilehash: 6bfbf763e738a5c53f0b6df0b4790b762ab901f2
+  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88836971"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91509727"
 highlightedContent:
   items:
   - title: Installare Visual Studio e scegliere i carichi di lavoro di C++
@@ -36,23 +36,23 @@ conceptualContent:
   - title: Informazioni sull'uso dell'IDE di Visual Studio
     links:
     - text: Presentazione guidata di Visual Studio
-      url: https://docs.microsoft.com/visualstudio/ide/visual-studio-ide
+      url: /visualstudio/ide/visual-studio-ide
       itemType: overview
     - text: Aprire il codice da un repository
-      url: https://docs.microsoft.com/visualstudio/get-started/tutorial-open-project-from-repo
+      url: /visualstudio/get-started/tutorial-open-project-from-repo
       itemType: tutorial
     - text: Scrivere e modificare il codice
-      url: https://docs.microsoft.com/visualstudio/ide/index-writing-code
+      url: /visualstudio/ide/index-writing-code
       itemType: tutorial
     - text: Compilare il codice
-      url: https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio
+      url: /visualstudio/ide/compiling-and-building-in-visual-studio
       itemType: tutorial
     - text: Eseguire il debug del codice
       itemType: tutorial
-      url: https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus
+      url: /visualstudio/debugger/quickstart-debug-with-cplusplus
     - text: Eseguire test del codice
       itemType: tutorial
-      url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
+      url: /visualstudio/test/writing-unit-tests-for-c-cpp
   - title: Scrivere app C++ e C in Visual Studio
     links:
     - text: Creare un'app calcolatore console
@@ -147,7 +147,7 @@ additionalContent:
       - text: Sviluppo della piattaforma UWP (Universal Windows Platform)
         url: cppcx/universal-windows-apps-cpp.md
       - text: Sviluppo per Windows Desktop
-        url: windows/windows-desktop-applications-cpp.md
+        url: ./windows/desktop-applications-visual-cpp.md
       - text: Sviluppo per Linux
         url: linux/index.yml
       - text: Sviluppo di app per dispositivi mobili
@@ -161,11 +161,11 @@ additionalContent:
       - text: Compilare progetti di codice
         url: build/projects-and-build-systems-cpp.md
       - text: Eseguire il debug del codice
-        url: https://docs.microsoft.com/visualstudio/debugger/debugging-native-code
+        url: /visualstudio/debugger/debugging-native-code
       - text: Analizzare il codice
         url: code-quality/index.yml
       - text: Migliorare le prestazioni delle app
-        url: https://docs.microsoft.com/visualstudio/profiling
+        url: /visualstudio/profiling
       - text: Convertire e aggiornare codice
         url: porting/visual-cpp-porting-and-upgrading-guide.md
     - title: Librerie
