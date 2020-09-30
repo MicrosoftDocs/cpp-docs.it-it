@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3056
 ms.assetid: 9500173d-870b-49b3-8e88-0ee93586d19a
-ms.openlocfilehash: 97a403420e5923f23f804eeaff33af1698ff6a53
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dd000e56d5fc24929e4d06e1bf0100ad9647610a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761156"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501589"
 ---
 # <a name="compiler-error-c3056"></a>Errore del compilatore C3056
 
 'symbol': il simbolo non si trova nello stesso ambito della direttiva 'threadprivate'
 
-Un simbolo usato in una clausola [threadprivate](../../parallel/openmp/reference/threadprivate.md) clausola deve essere nello stesso ambito della clausola `threadprivate` .
+Un simbolo usato in una clausola [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) clausola deve essere nello stesso ambito della clausola `threadprivate` .
 
 L'esempio seguente genera l'errore C3056:
 

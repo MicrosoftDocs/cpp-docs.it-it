@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bd4dd73c79085a2c2d85a5dbacbfd20bc920108e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845575"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501756"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
@@ -56,7 +56,7 @@ Classe Properties.
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa operazione è obbligatoria nei comandi. L'implementazione viene fornita da una funzione statica definita dalla [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
+Questa operazione è obbligatoria nei comandi. L'implementazione viene fornita da una funzione statica definita dalla [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) macro.
 
 ## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl:: GetProperties
 
@@ -77,7 +77,7 @@ Vedere [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/m
 
 ### <a name="remarks"></a>Osservazioni
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 
 ## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl:: seproprietà
 

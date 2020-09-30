@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838438"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501010"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
 
@@ -104,7 +104,7 @@ Per usare un OLE DB comando che può restituire più risultati, specificare [CMu
 |[Creare](#create)|Crea un nuovo comando per la sessione specificata, quindi imposta il testo del comando.|
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|
 |[GetParameterInfo](#getparameterinfo)|Ottiene un elenco di parametri, i relativi nomi e tipi del comando.|
-|[Preparare](#prepare)|Convalida e ottimizza il comando corrente.|
+|[Preparazione](#prepare)|Convalida e ottimizza il comando corrente.|
 |[ReleaseCommand](#releasecommand)|Rilascia la funzione di accesso parametro se necessario, quindi rilascia il comando.|
 |[SetParameterInfo](#setparameterinfo)|Specifica il tipo nativo di ogni parametro di comando.|
 |[Unprepare](#unprepare)|Rimuove il piano di esecuzione corrente dei comandi.|
@@ -131,7 +131,7 @@ void Close();
 
 Un comando usa un set di righe, una funzione di accesso del set di risultati e (facoltativamente) una funzione di accesso ai parametri (a differenza delle tabelle che non supportano i parametri e non necessitano di una funzione di accesso ai parametri).
 
-Quando si esegue un comando, è necessario chiamare sia `Close` che [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) dopo il comando.
+Quando si esegue un comando, è necessario chiamare sia `Close` che [ReleaseCommand](#releasecommand) dopo il comando.
 
 Quando si vuole eseguire ripetutamente lo stesso comando, è necessario rilasciare ogni funzione di accesso del set di risultati chiamando `Close` prima di chiamare `Execute` . Alla fine della serie è necessario rilasciare la funzione di accesso al parametro chiamando `ReleaseCommand` . Un altro scenario comune è la chiamata di un stored procedure con parametri di output. In molti provider, ad esempio il provider di OLE DB per SQL Server, i valori dei parametri di output non saranno accessibili fino a quando non si chiude la funzione di accesso del set di risultati. Chiamare `Close` per chiudere il set di righe restituito e la funzione di accesso del set di risultati, ma non la funzione di accesso ai parametri, consentendo di recuperare i valori dei parametri di output.
 
@@ -213,7 +213,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 in Sessione in cui eseguire il comando.
 
 *wszCommand*<br/>
-in Comando da eseguire, passato come stringa Unicode. Può essere NULL quando `CAccessor` si usa, nel qual caso il comando verrà recuperato dal valore passato alla macro [DEFINE_COMMAND](../../data/oledb/define-command.md) . Per informazioni dettagliate, vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
+in Comando da eseguire, passato come stringa Unicode. Può essere NULL quando `CAccessor` si usa, nel qual caso il comando verrà recuperato dal valore passato alla macro [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . Per informazioni dettagliate, vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
 *szCommand*<br/>
 in Uguale a *wszCommand* , con la differenza che questo parametro accetta una stringa di comando ANSI. Il quarto form di questo metodo può assumere un valore NULL. Per informazioni dettagliate, vedere la sezione "osservazioni" più avanti in questo argomento.
@@ -253,14 +253,14 @@ Il secondo formato `Open` accetta una stringa di comando ANSI e nessun valore pr
 
 La terza forma di `Open` consente alla stringa di comando di essere null, a causa del tipo **`int`** con un valore predefinito null. Viene fornito per chiamare `Open(session, NULL);` o `Open(session);` perché null è di tipo **`int`** . Questa versione richiede e dichiara che il **`int`** parametro è null.
 
-Utilizzare la quarta forma di `Open` quando è già stato creato un comando e si desidera eseguire una singola [preparazione](../../data/oledb/ccommand-prepare.md) e più esecuzioni.
+Utilizzare la quarta forma di `Open` quando è già stato creato un comando e si desidera eseguire una singola [preparazione](#prepare) e più esecuzioni.
 
 > [!NOTE]
 > `Open` chiama `Execute` , che a sua volta chiama `GetNextResult` .
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: create
 
-Chiama [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) per creare un comando per la sessione specificata, quindi chiama [ICommandText:: secommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) per specificare il testo del comando.
+Chiama [CCommand:: CreateCommand](#createcommand) per creare un comando per la sessione specificata, quindi chiama [ICommandText:: secommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) per specificare il testo del comando.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Osservazioni
 
-`ReleaseCommand` viene utilizzato insieme a `Close` . Vedere [Close](../../data/oledb/ccommand-close.md) per i dettagli di utilizzo.
+`ReleaseCommand` viene utilizzato insieme a `Close` . Vedere [Close](#close) per i dettagli di utilizzo.
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: separameterinfo
 

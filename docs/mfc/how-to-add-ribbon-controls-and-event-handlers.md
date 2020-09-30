@@ -5,12 +5,12 @@ helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 560524c36dbf57faec3b4b6372cade047f9fe7de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d6382c8ebf73fe7a26b3950cc1965b229c22dbb7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618475"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501223"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedura: aggiungere controlli Ribbon e gestori eventi
 
@@ -30,7 +30,7 @@ In questo argomento viene aperta la finestra di progettazione della barra multif
 
 1. Fare clic con il pulsante destro del mouse sul pulsante e scegliere **Aggiungi gestore eventi**.
 
-1. Nella **creazione guidata gestore eventi**, confermare le impostazioni predefinite e fare clic su **Aggiungi e modifica**. Per ulteriori informazioni, vedere [creazione guidata gestore eventi](../ide/event-handler-wizard.md).
+1. Nella **creazione guidata gestore eventi**, confermare le impostazioni predefinite e fare clic su **Aggiungi e modifica**. Per ulteriori informazioni, vedere [creazione guidata gestore eventi](../ide/adding-an-event-handler-visual-cpp.md#event-handler-wizard).
 
 1. Nell'editor di codice aggiungere il codice seguente nella funzione del gestore:
 

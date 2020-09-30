@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: cc24df1f15d43c384e6bf3853766fad82cf51255
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0b142a73f66a796f3e22bae0aeacb88dc018aea9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707706"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501870"
 ---
 # <a name="creating-a-simple-consumer"></a>Creazione di un consumer semplice
 
@@ -29,7 +29,7 @@ Usare la **Creazione guidata progetto ATL** e la **Creazione guidata Consumer OL
 
    Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-1. Nel riquadro **Tipi di progetto** fare clic sulla cartella **Installati** > **Visual C++**  > **Desktop di Windows** e quindi fare clic sull'icona **Creazione guidata applicazione desktop di Windows** nel riquadro **Modelli**. Nella casella **Nome** immettere il nome del progetto, ad esempio *MyCons*.
+1. Nel riquadro **Tipi di progetto** fare clic sulla cartella **Installati** > **Visual C++ ** > **Desktop di Windows** e quindi fare clic sull'icona **Creazione guidata applicazione desktop di Windows** nel riquadro **Modelli**. Nella casella **Nome** immettere il nome del progetto, ad esempio *MyCons*.
 
 1. Fare clic su **OK**.
 
@@ -43,13 +43,13 @@ Usare quindi la **Creazione guidata Consumer OLE DB ATL** per aggiungere un ogge
 
 ## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Per creare un consumer con la Creazione guidata consumer OLE DB ATL
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto `MyCons`.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul `MyCons` progetto.
 
 1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Nuovo elemento**.
 
-   Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
+   Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento** .
 
-1. Nel riquadro **Categorie** fare clic su **Installati** > **Visual C++**  > **ATL**, fare clic sull'icona  **Consumer OLE DB ATL** nel riquadro **Modelli** e quindi fare clic su **Aggiungi**.
+1. Nel riquadro **Categorie** fare clic su **Installati** > **Visual C++ ** > **ATL**, fare clic sull'icona ** Consumer OLE DB ATL** nel riquadro **Modelli** e quindi fare clic su **Aggiungi**.
 
    Viene avviata la **Creazione guidata consumer OLE DB ATL**.
 
@@ -64,7 +64,7 @@ Usare quindi la **Creazione guidata Consumer OLE DB ATL** per aggiungere un ogge
    1. Nella scheda **Connessione** specificare le informazioni necessarie, ad esempio il nome del server, l'ID di accesso e la password per l'origine dati e il database nel server.
 
       > [!NOTE]
-      > Esiste un problema di sicurezza relativo alla funzionalità **Consenti salvataggio password** della finestra di dialogo **Proprietà di Data Link**. In **Immettere le informazioni per l'accesso al server** sono disponibili due pulsanti di opzione: **Usa sicurezza integrata di Windows NT** e **Utilizza nome utente e password specifici**.
+      > Esiste un problema di sicurezza relativo alla funzionalità **Consenti salvataggio password** della finestra di dialogo **Proprietà di Data Link**. In **immettere le informazioni per l'accesso al server**sono disponibili due pulsanti di opzione: **Usa la sicurezza integrata di Windows NT** e **Usa un nome utente e una password specifici**.
 
       > [!NOTE]
       > Se si seleziona **Utilizza nome utente e password specifici**, è possibile scegliere di salvare la password (usando la casella di controllo **Consenti salvataggio password**), ma questa opzione non è sicura. È consigliabile selezionare **Usa sicurezza integrata di Windows NT**: questa opzione usa Windows NT per verificare l'identità dell'utente.
@@ -82,7 +82,7 @@ Usare quindi la **Creazione guidata Consumer OLE DB ATL** per aggiungere un ogge
 
 1. La procedura guidata immette i nomi per `Class` e **File con estensione h** in base al nome della tabella, della visualizzazione o della stored procedure selezionata. È possibile modificare questi nomi se lo si desidera.
 
-1. Deselezionare la casella di controllo **Con attributi** in modo che la procedura guidata crei il codice del consumer tramite [classi di modelli OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) invece degli [attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md) predefiniti.
+1. Deselezionare la casella di controllo **Con attributi** in modo che la procedura guidata crei il codice del consumer tramite [classi di modelli OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) invece degli [attributi del consumer OLE DB](../../windows/attributes/ole-db-consumer-attributes.md) predefiniti.
 
 1. In **Tipo** selezionare **Comando**.
 
@@ -110,4 +110,4 @@ La procedura guidata genera una classe di comando e una classe di record utente,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Creazione di un consumer di OLE DB tramite una procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

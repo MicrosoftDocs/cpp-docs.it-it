@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3320
 ms.assetid: 2ef72d9a-1f1d-4b2e-b244-9fd3f3e70cb6
-ms.openlocfilehash: 0289d49ebbb0e30153beb6b0b2bc758bff5ef118
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 98af3c84b48aa8e69ad883bf73299f2697618ce1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201305"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501329"
 ---
 # <a name="compiler-error-c3320"></a>Errore del compilatore C3320
 
 'type': il nome del tipo non può essere uguale alla proprietà 'name' del modulo
 
-Un tipo definito dall'utente (UDT) esportato, che può essere uno struct, una classe, un'enumerazione o un'Unione, non può avere lo stesso nome del parametro passato alla proprietà Name dell'attributo [Module](../../windows/module-cpp.md) .
+Un tipo definito dall'utente (UDT) esportato, che può essere uno struct, una classe, un'enumerazione o un'Unione, non può avere lo stesso nome del parametro passato alla proprietà Name dell'attributo [Module](../../windows/attributes/module-cpp.md) .
 
 ## <a name="example"></a>Esempio
 

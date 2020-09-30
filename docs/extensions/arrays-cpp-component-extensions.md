@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182240"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500897"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Matrici (C++/CLI e C++/CX)
 
@@ -32,7 +32,7 @@ Diversamente da C++ standard, l'indice non è un sinonimo di aritmetica dei punt
 
 Per altre informazioni sulle matrici, vedere:
 
-- [Procedura: Usare matrici in C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Procedura: usare matrici in C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Elenchi di argomenti variabili (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -52,16 +52,16 @@ Il primo esempio della sintassi usa la parola chiave aggregata **ref new** per a
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(Facoltativo) Uno o più di questi identificatori di classe di archiviazione: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+*Qualificazioni*<br/>
+(Facoltativo) Uno o più di questi identificatori di classe di archiviazione: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*tipo matrice*<br/>
 Tipo della variabile di matrice. I tipi validi sono le classi e i tipi fondamentali di Windows Runtime, classi e struct di riferimento e puntatori nativi (`type*`).
 
-*rank*<br/>
+*Rank*<br/>
 (Facoltativo) Numero di dimensioni nella matrice. Deve essere 1.
 
-*identifier*<br/>
+*identificatore*<br/>
 Nome della variabile di matrice.
 
 *initialization-type*<br/>
@@ -78,7 +78,7 @@ Tipo dei valori che inizializzano la matrice. In genere *array-type* e *initiali
 
 Opzione del compilatore: `/ZW`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio seguente crea una matrice unidimensionale che contiene 100 elementi.
 
@@ -108,16 +108,16 @@ Il primo esempio della sintassi usa la parola chiave **gcnew** per allocare una 
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(Facoltativo) Uno o più di questi identificatori di classe di archiviazione: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+*Qualificazioni*<br/>
+(Facoltativo) Uno o più di questi identificatori di classe di archiviazione: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*tipo matrice*<br/>
 Tipo della variabile di matrice. I tipi validi sono classi e tipi fondamentali di Windows Runtime, classi e struct di riferimento, classi e struct di valore, puntatori nativi (`type*`) e tipi POD (dati non aggiornati) nativi.
 
-*rank*<br/>
+*Rank*<br/>
 (Facoltativo) Numero di dimensioni nella matrice. Il valore predefinito è 1, il valore massimo è 32. Ogni dimensione della matrice è a sua volta una matrice.
 
-*identifier*<br/>
+*identificatore*<br/>
 Nome della variabile di matrice.
 
 *initialization-type*<br/>
@@ -141,7 +141,7 @@ Tutte le matrici gestite ereditano da `System::Array`. Qualsiasi metodo o propri
 
 Quando si alloca una matrice il cui tipo di elemento è puntatore a una classe gestita, gli elementi sono inizializzati da 0.
 
-Quando si alloca una matrice il cui tipo di elemento è un tipo valore `V`, il costruttore predefinito per `V` viene applicato a ogni elemento della matrice. Per altre informazioni, vedere [Equivalenti di .NET Framework a tipi nativi C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+Quando si alloca una matrice il cui tipo di elemento è un tipo valore `V`, il costruttore predefinito per `V` viene applicato a ogni elemento della matrice. Per altre informazioni, vedere [Equivalenti di .NET Framework a tipi nativi C++ (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet).
 
 In fase di compilazione è possibile rilevare se un tipo è una matrice Common Language Runtime (CLR) tramite `__is_ref_array(type)`. Per altre informazioni, vedere [Supporto del compilatore per caratteristiche di tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -149,7 +149,7 @@ In fase di compilazione è possibile rilevare se un tipo è una matrice Common L
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio seguente crea una matrice unidimensionale che contiene 100 elementi e una matrice tridimensionale che contiene 3 elementi nella prima dimensione, 5 elementi nella seconda e 6 elementi nella terza.
 
@@ -170,4 +170,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

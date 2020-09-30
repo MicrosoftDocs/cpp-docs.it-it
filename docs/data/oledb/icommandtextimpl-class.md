@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845120"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501727"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
 
@@ -56,7 +56,7 @@ Classe Command derivata da `ICommandTextImpl` .
 
 | Nome | Descrizione |
 |-|-|
-|[GetCommandText](#getcommandtext)|Restituisce il comando di testo impostato dall'ultima chiamata a [CommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[GetCommandText](#getcommandtext)|Restituisce il comando di testo impostato dall'ultima chiamata a [CommandText](#setcommandtext).|
 |[SetCommandText](#setcommandtext)|Imposta il testo del comando, sostituendo il testo del comando esistente.|
 
 ### <a name="data-members"></a>Membri dei dati
@@ -71,7 +71,7 @@ Interfaccia obbligatoria sui comandi.
 
 ## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: GetCommandText
 
-Restituisce il comando di testo impostato dall'ultima chiamata a [CommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
+Restituisce il comando di testo impostato dall'ultima chiamata a [CommandText](#setcommandtext).
 
 ### <a name="syntax"></a>Sintassi
 

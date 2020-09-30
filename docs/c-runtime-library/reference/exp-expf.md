@@ -36,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: f6733f293f1c8f78e8143d9fdd395013147bbe83
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555891"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502105"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -96,10 +96,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|---------------------|---|
 |**Exp**, **expf**, **soluz**|\<math.h>|\<cmath> o \<math.h>|
-|macro **Exp**| \<tgmath.h> || 
+|macro **Exp**| \<tgmath.h> ||
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

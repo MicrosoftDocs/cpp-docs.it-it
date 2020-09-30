@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fceb57e062b9179245ba235fb497ff526a6660e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214828"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501679"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procedura dettagliata: compilare un programma C++/CLI destinato a CLR in Visual Studio
 
@@ -84,7 +84,7 @@ I passaggi seguenti variano leggermente a seconda della versione di Visual Studi
 
 1. Fare clic sulla scheda appena creata in Visual Studio e digitare un programma Visual C++ valido oppure copiare e incollare uno dei programmi di esempio.
 
-   Ad esempio è possibile usare il programma disponibile in [Procedura: Scrivere un file di testo (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) (nel nodo **Gestione di file e I/O** della Guida alla programmazione).
+   Ad esempio è possibile usare il programma disponibile in [Procedura: Scrivere un file di testo (C++/CLI)](./file-handling-and-i-o-cpp-cli.md#write_text) (nel nodo **Gestione di file e I/O** della Guida alla programmazione).
 
    Se si usa il programma di esempio, si noti che si usa la **`gcnew`** parola chiave anziché **`new`** quando si crea un oggetto .NET e che **`gcnew`** restituisce un handle ( `^` ) anziché un puntatore ( `*` ):
 

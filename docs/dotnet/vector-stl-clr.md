@@ -91,12 +91,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: a01025732699e755a624d7f67071f575ac52ec96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9abecfa6e0bbdf74514e2b7162d1d22a84fa01b2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214841"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502407"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -215,7 +215,7 @@ La cancellazione o la rimozione di un elemento chiama il distruttore per il valo
 
 ## <a name="members"></a>Membri
 
-## <a name="vectorassign-stlclr"></a><a name="assign"></a>Vector:: Assign (STL/CLR)
+## <a name="vectorassign-stlclr"></a><a name="assign"></a> Vector:: Assign (STL/CLR)
 
 Sostituisce tutti gli elementi.
 
@@ -296,7 +296,7 @@ a b
 a b c
 ```
 
-## <a name="vectorat-stlclr"></a><a name="at"></a>Vector:: at (STL/CLR)
+## <a name="vectorat-stlclr"></a><a name="at"></a> Vector:: at (STL/CLR)
 
 Accede a un elemento in una posizione specificata.
 
@@ -308,7 +308,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Osservazioni
@@ -348,7 +348,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorback-stlclr"></a><a name="back"></a>Vector:: Back (STL/CLR)
+## <a name="vectorback-stlclr"></a><a name="back"></a> Vector:: Back (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -399,7 +399,7 @@ back() = c
 a b x
 ```
 
-## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>Vector:: back_item (STL/CLR)
+## <a name="vectorback_item-stlclr"></a><a name="back_item"></a> Vector:: back_item (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -450,7 +450,7 @@ back_item = c
 a b x
 ```
 
-## <a name="vectorbegin-stlclr"></a><a name="begin"></a>Vector:: begin (STL/CLR)
+## <a name="vectorbegin-stlclr"></a><a name="begin"></a> Vector:: begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -505,7 +505,7 @@ a b c
 x y c
 ```
 
-## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>Vector:: Capacity (STL/CLR)
+## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a> Vector:: Capacity (STL/CLR)
 
 Restituisce la dimensione dello spazio di memorizzazione allocato per il contenitore.
 
@@ -517,7 +517,7 @@ size_type capacity();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce lo spazio di archiviazione attualmente allocato per mantenere la sequenza controllata, un valore almeno pari a [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` . Viene usato per determinare il grado di crescita del contenitore prima che sia necessario riallocare lo spazio di archiviazione per la sequenza controllata.
+La funzione membro restituisce lo spazio di archiviazione attualmente allocato per mantenere la sequenza controllata, un valore almeno pari a [vector:: size (STL/CLR)](#size) `()` . Viene usato per determinare il grado di crescita del contenitore prima che sia necessario riallocare lo spazio di archiviazione per la sequenza controllata.
 
 ### <a name="example"></a>Esempio
 
@@ -555,7 +555,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorclear-stlclr"></a><a name="clear"></a>Vector:: Clear (STL/CLR)
+## <a name="vectorclear-stlclr"></a><a name="clear"></a> Vector:: Clear (STL/CLR)
 
 Rimuove tutti gli elementi.
 
@@ -567,7 +567,7 @@ void clear();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro chiama in modo efficace vector [:: erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [vector:: begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
+La funzione membro chiama in modo efficace vector [:: erase (STL/CLR)](#erase) `(` [vector:: begin (STL/CLR)](#begin) `(),` [vector:: end (STL/CLR)](#end) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -612,7 +612,7 @@ a b
 size() = 0
 ```
 
-## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>Vector:: const_iterator (STL/CLR)
+## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a> Vector:: const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -653,7 +653,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>Vector:: const_reference (STL/CLR)
+## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a> Vector:: const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -697,7 +697,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>Vector:: const_reverse_iterator (STL/CLR)
+## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> Vector:: const_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso costante per la sequenza controllata.
 
@@ -739,7 +739,7 @@ int main()
 c b a
 ```
 
-## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>Vector::d ifference_type (STL/CLR)
+## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a> Vector::d ifference_type (STL/CLR)
 
 Tipi di una distanza con segno tra due elementi.
 
@@ -793,7 +793,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="vectorempty-stlclr"></a><a name="empty"></a>Vector:: Empty (STL/CLR)
+## <a name="vectorempty-stlclr"></a><a name="empty"></a> Vector:: Empty (STL/CLR)
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -805,7 +805,7 @@ bool empty();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() == 0` . Viene usato per verificare se il vettore è vuoto.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [vector:: size (STL/CLR)](#size) `() == 0` . Viene usato per verificare se il vettore è vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -844,7 +844,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="vectorend-stlclr"></a><a name="end"></a>Vector:: end (STL/CLR)
+## <a name="vectorend-stlclr"></a><a name="end"></a> Vector:: end (STL/CLR)
 
 Designa la fine della sequenza controllata.
 
@@ -900,7 +900,7 @@ a b c
 a x y
 ```
 
-## <a name="vectorerase-stlclr"></a><a name="erase"></a>Vector:: erase (STL/CLR)
+## <a name="vectorerase-stlclr"></a><a name="erase"></a> Vector:: erase (STL/CLR)
 
 Rimuove gli elementi in corrispondenza delle posizioni specificate.
 
@@ -928,7 +928,7 @@ La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*pu
 
 La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`). Viene usato per rimuovere zero o più elementi contigui.
 
-Entrambe le funzioni membro restituiscono un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi oppure [vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `()` se tale elemento non esiste.
+Entrambe le funzioni membro restituiscono un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi oppure [vector:: end (STL/CLR)](#end) `()` se tale elemento non esiste.
 
 Quando si cancellano gli elementi, il numero di copie di elementi è lineare nel numero di elementi compresi tra la fine della cancellazione e la fine più vicina della sequenza. (Quando si cancellano uno o più elementi a una delle estremità della sequenza, non viene eseguita alcuna copia degli elementi).
 
@@ -979,7 +979,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="vectorfront-stlclr"></a><a name="front"></a>Vector:: Front (STL/CLR)
+## <a name="vectorfront-stlclr"></a><a name="front"></a> Vector:: Front (STL/CLR)
 
 Accede al primo elemento.
 
@@ -1030,7 +1030,7 @@ front() = a
 x b c
 ```
 
-## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>Vector:: front_item (STL/CLR)
+## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a> Vector:: front_item (STL/CLR)
 
 Accede al primo elemento.
 
@@ -1081,7 +1081,7 @@ front_item = a
 x b c
 ```
 
-## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>Vector:: generic_container (STL/CLR)
+## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a> Vector:: generic_container (STL/CLR)
 
 Tipo dell'interfaccia generica per il contenitore.
 
@@ -1147,7 +1147,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>Vector:: generic_iterator (STL/CLR)
+## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> Vector:: generic_iterator (STL/CLR)
 
 Tipo di un iteratore da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -1205,7 +1205,7 @@ a b c
 a a c
 ```
 
-## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>Vector:: generic_reverse_iterator (STL/CLR)
+## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> Vector:: generic_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso da usare con l'interfaccia generica per il contenitore.
 
@@ -1262,7 +1262,7 @@ a b c
 a c c
 ```
 
-## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>Vector:: generic_value (STL/CLR)
+## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a> Vector:: generic_value (STL/CLR)
 
 Tipo di un elemento da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -1318,7 +1318,7 @@ a b c
 a a c
 ```
 
-## <a name="vectorinsert-stlclr"></a><a name="insert"></a>Vector:: Insert (STL/CLR)
+## <a name="vectorinsert-stlclr"></a><a name="insert"></a> Vector:: Insert (STL/CLR)
 
 Aggiunge elementi in una posizione specificata.
 
@@ -1427,7 +1427,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>Vector:: iterator (STL/CLR)
+## <a name="vectoriterator-stlclr"></a><a name="iterator"></a> Vector:: iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1476,7 +1476,7 @@ a b c
 x b c
 ```
 
-## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>Vector:: operator = (STL/CLR)
+## <a name="vectoroperator-stlclr"></a><a name="op_as"></a> Vector:: operator = (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -1529,7 +1529,7 @@ a b c
 a b c
 ```
 
-## <a name="vectoroperatorstlclr"></a><a name="op"></a>Operatore Vector:: (STL/CLR)
+## <a name="vectoroperatorstlclr"></a><a name="op"></a> Operatore Vector:: (STL/CLR)
 
 Accede a un elemento in una posizione specificata.
 
@@ -1541,7 +1541,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1581,7 +1581,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>Vector::p op_back (STL/CLR)
+## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a> Vector::p op_back (STL/CLR)
 
 Rimuove l'ultimo elemento.
 
@@ -1628,7 +1628,7 @@ a b c
 a b
 ```
 
-## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>Vector::p ush_back (STL/CLR)
+## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a> Vector::p ush_back (STL/CLR)
 
 Aggiunge un nuovo elemento ultimo.
 
@@ -1668,7 +1668,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>Vector:: rbegin (STL/CLR)
+## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a> Vector:: rbegin (STL/CLR)
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -1723,7 +1723,7 @@ a b c
 a y x
 ```
 
-## <a name="vectorreference-stlclr"></a><a name="reference"></a>Vector:: Reference (STL/CLR)
+## <a name="vectorreference-stlclr"></a><a name="reference"></a> Vector:: Reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -1778,7 +1778,7 @@ a b c
 A B C
 ```
 
-## <a name="vectorrend-stlclr"></a><a name="rend"></a>Vector:: rend (STL/CLR)
+## <a name="vectorrend-stlclr"></a><a name="rend"></a> Vector:: rend (STL/CLR)
 
 Indica la fine della sequenza controllata inversa.
 
@@ -1834,7 +1834,7 @@ a b c
 y x c
 ```
 
-## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>Vector:: Reserve (STL/CLR)
+## <a name="vectorreserve-stlclr"></a><a name="reserve"></a> Vector:: Reserve (STL/CLR)
 
 Garantisce una capacità di crescita minima per il contenitore.
 
@@ -1889,7 +1889,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorresize-stlclr"></a><a name="resize"></a>Vector:: Resize (STL/CLR)
+## <a name="vectorresize-stlclr"></a><a name="resize"></a> Vector:: Resize (STL/CLR)
 
 Modifica il numero di elementi.
 
@@ -1910,7 +1910,7 @@ Valore dell'elemento di riempimento.
 
 ### <a name="remarks"></a>Osservazioni
 
-Le funzioni membro assicurano che [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` restituisca *new_size*. Se la sequenza controllata deve essere più lunga, la prima funzione membro accoda elementi con valore `value_type()` , mentre la seconda funzione membro accoda gli elementi con il valore *Val*. Per rendere la sequenza controllata più breve, entrambe le funzioni membro cancellano in modo efficace l'ultimo elemento [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size` . Viene usato per garantire che la sequenza controllata abbia dimensioni *new_size*, tagliando o riempiendo la sequenza controllata corrente.
+Le funzioni membro assicurano che [vector:: size (STL/CLR)](#size) `()` restituisca *new_size*. Se la sequenza controllata deve essere più lunga, la prima funzione membro accoda elementi con valore `value_type()` , mentre la seconda funzione membro accoda gli elementi con il valore *Val*. Per rendere la sequenza controllata più breve, entrambe le funzioni membro cancellano in modo efficace l'ultimo elemento [vector:: size (STL/CLR)](#size) `() -` `new_size` . Viene usato per garantire che la sequenza controllata abbia dimensioni *new_size*, tagliando o riempiendo la sequenza controllata corrente.
 
 ### <a name="example"></a>Esempio
 
@@ -1949,7 +1949,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>Vector:: reverse_iterator (STL/CLR)
+## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> Vector:: reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -1998,7 +1998,7 @@ c b a
 x b a
 ```
 
-## <a name="vectorsize-stlclr"></a><a name="size"></a>Vector:: size (STL/CLR)
+## <a name="vectorsize-stlclr"></a><a name="size"></a> Vector:: size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -2010,7 +2010,7 @@ size_type size();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [vector:: Empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md) `()` .
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [vector:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Esempio
 
@@ -2051,7 +2051,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>Vector:: size_type (STL/CLR)
+## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a> Vector:: size_type (STL/CLR)
 
 Tipo di una distanza Signed tra due elementi.
 
@@ -2096,7 +2096,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="vectorswap-stlclr"></a><a name="swap"></a>Vector:: swap (STL/CLR)
+## <a name="vectorswap-stlclr"></a><a name="swap"></a> Vector:: swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2160,7 +2160,7 @@ x x x x x
 a b c
 ```
 
-## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>Vector:: to_array (STL/CLR)
+## <a name="vectorto_array-stlclr"></a><a name="to_array"></a> Vector:: to_array (STL/CLR)
 
 Copia la sequenza controllata in una nuova matrice.
 
@@ -2209,7 +2209,7 @@ a b c d
 a b c
 ```
 
-## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>Vector:: value_type (STL/CLR)
+## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a> Vector:: value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -2254,7 +2254,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorvector-stlclr"></a><a name="vector"></a>Vector:: Vector (STL/CLR)
+## <a name="vectorvector-stlclr"></a><a name="vector"></a> Vector:: Vector (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -2399,7 +2399,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>operatore! = (Vector) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_neq"></a> operatore! = (Vector) (STL/CLR)
 
 Confronto vettore non uguale.
 
@@ -2468,7 +2468,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>operatore &lt; (Vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a> operatore &lt; (Vector) (STL/CLR)
 
 Vettore minore del confronto.
 
@@ -2537,7 +2537,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>Operator &lt; = (Vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a> Operator &lt; = (Vector) (STL/CLR)
 
 Confronto tra Vector minore di o uguale a.
 
@@ -2606,7 +2606,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>operatore = = (Vector) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_eq"></a> operatore = = (Vector) (STL/CLR)
 
 Confronto vettoriale uguale.
 
@@ -2675,7 +2675,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>operatore &gt; (Vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a> operatore &gt; (Vector) (STL/CLR)
 
 Vettore maggiore del confronto.
 
@@ -2744,7 +2744,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>Operator &gt; = (Vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a> Operator &gt; = (Vector) (STL/CLR)
 
 Vettore di confronto maggiore o uguale a.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0f54b244526bbda878dd75b0e1ca97a89d680ea6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02ac25b693e4d8f7bb6739708d23eb1df0ebf190
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621998"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500880"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Tasti di scelta rapida (editor di immagini C++ per le icone)
 
@@ -22,9 +22,9 @@ Di seguito sono riportati i tasti di scelta rapida per i comandi dell'editor di 
 |Comando|Chiavi|Descrizione|
 |-------------|----------|-----------------|
 |Image. AirBrushTool|**CTRL**  +  **Oggetto**|Disegna usando un aerografo con le dimensioni e il colore selezionati.|
-|Image.BrushTool|**CTRL**  +  **B**|Disegna utilizzando un pennello con la forma, le dimensioni e il colore selezionati.|
-|Image. CopyAndOutlineSelection|**CTRL**  +  **Sposta**  +  **U**|Consente di creare e strutturare una copia della selezione corrente. Se il colore di sfondo è contenuto nella selezione corrente, verrà escluso se è stata selezionata l'opzione [trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) .|
-|Image.DrawOpaque|**CTRL**  +  **J**|Rende [opaca o trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)la selezione corrente.|
+|Image.BrushTool|**CTRL** + **B**|Disegna utilizzando un pennello con la forma, le dimensioni e il colore selezionati.|
+|Image. CopyAndOutlineSelection|**CTRL**  +  **Sposta**  +  **U**|Consente di creare e strutturare una copia della selezione corrente. Se il colore di sfondo è contenuto nella selezione corrente, verrà escluso se è stata selezionata l'opzione [trasparente](./image-editor-for-icons.md) .|
+|Image.DrawOpaque|**CTRL** + **J**|Rende [opaca o trasparente](./image-editor-for-icons.md)la selezione corrente.|
 |Image.EllipseTool|**CTRL**  +  **P**|Disegna un'ellisse con la larghezza e il colore di linea selezionati.|
 |Image. EraserTool|**CTRL**  +  **Sposta**  +  **I**|Cancella una parte dell'immagine, con il colore di sfondo corrente.|
 |Image.FilledEllipseTool|**CTRL**  +  **Sposta**  +  **ALT**  +  **P**|Consente di disegnare un'ellisse piena.|
@@ -37,7 +37,7 @@ Di seguito sono riportati i tasti di scelta rapida per i comandi dell'editor di 
 |Image.LineTool|**CTRL**  +  **L**|Consente di disegnare una linea retta con la forma, la dimensione e il colore selezionati.|
 |Image.MagnificationTool|**CTRL**  +  **M**|Attiva lo strumento di **ingrandimento** , che consente di ingrandire sezioni specifiche dell'immagine.|
 |Image.Magnify|**CTRL**  +  **Sposta**  +  **M**|Consente di passare dall'ingrandimento corrente all'ingrandimento 1:1 e viceversa.|
-|Image.NewImageType|**Insert**|Avvia la finestra di [ \<Device> dialogo nuovo tipo di immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) in cui è possibile creare un'immagine per un tipo di immagine diverso.|
+|Image.NewImageType|**Inserimento**|Avvia la finestra di [ \<Device> dialogo nuovo tipo di immagine](./creating-an-icon-or-other-image-image-editor-for-icons.md) in cui è possibile creare un'immagine per un tipo di immagine diverso.|
 |Image.NextColor|**CTRL**  +  **]**<br /><br /> - oppure -<br /><br /> **CTRL**  +  **Freccia destra**|Consente di modificare il colore di primo piano nel colore successivo della tavolozza.|
 |Image.NextRightColor|**CTRL**  +  **Sposta**  +  **]**<br /><br /> - oppure -<br /><br /> **Sposta**  +  **CTRL**  +  **Freccia destra**|Consente di modificare il colore di sfondo nel colore successivo della tavolozza.|
 |Image.OutlinedEllipseTool|**Sposta**  +  **ALT**  +  **P**|Consente di disegnare un'ellisse piena con un contorno.|
@@ -50,18 +50,18 @@ Di seguito sono riportati i tasti di scelta rapida per i comandi dell'editor di 
 |Image.RectangleTool|ATL + R|Disegna un rettangolo con la lunghezza e il colore di linea selezionati.|
 |Image.Rotate90Degrees|**CTRL**  +  **Sposta**  +  **H**|Consente di ruotare di 90 gradi l'immagine o la selezione.|
 |Image.RoundedRectangleTool|**ALT**  +  **W**|Disegna un rettangolo arrotondato con lo spessore e il colore della linea selezionati.|
-|Image.ShowGrid|**CTRL**  +  **ALT**  +  **S**|Consente di selezionare o deselezionare l'opzione **griglia pixel** nella finestra di [dialogo Impostazioni griglia](../windows/grid-settings-dialog-box-image-editor-for-icons.md).|
-|Image.ShowTileGrid|**CTRL**  +  **Sposta**  +  **ALT**  +  **S**|Consente di selezionare o deselezionare l'opzione **griglia affiancata** nella finestra di [dialogo Impostazioni griglia](../windows/grid-settings-dialog-box-image-editor-for-icons.md).|
+|Image.ShowGrid|**CTRL**  +  **ALT**  +  **S**|Consente di selezionare o deselezionare l'opzione **griglia pixel** nella finestra di [dialogo Impostazioni griglia](./image-editor-for-icons.md).|
+|Image.ShowTileGrid|**CTRL**  +  **Sposta**  +  **ALT**  +  **S**|Consente di selezionare o deselezionare l'opzione **griglia affiancata** nella finestra di [dialogo Impostazioni griglia](./image-editor-for-icons.md).|
 |Image.SmallBrush|**CTRL**  +  **.** (punto)|Riduce le dimensioni del **pennello** a un pixel. Vedere anche Image.LargerBrush e Image.SmallerBrush in questa tabella.|
 |Image.SmallerBrush|**Ctrl**  +  CTRL **-** meno|Consente di ridurre le dimensioni del pennello di un pixel in tutte le direzioni. Per incrementare nuovamente le dimensioni del pennello, vedere Image.LargerBrush in questa tabella.|
-|Image.TextTool|**CTRL**  +  **T**|Apre la finestra di [dialogo strumento testo](../windows/text-tool-dialog-box-image-editor-for-icons.md).|
+|Image.TextTool|**CTRL**  +  **T**|Apre la finestra di [dialogo strumento testo](./image-editor-for-icons.md).|
 |Image. UseSelectionAsBrush|**CTRL**  +  **U**|Consente di disegnare utilizzando la selezione corrente come pennello.|
 |Image.ZoomIn|**CTRL**  +  **Sposta**  +  **.** (punto)<br /><br /> - oppure -<br /><br /> **CTRL**  +  **Freccia su**|Consente di incrementare l'ingrandimento della visualizzazione corrente.|
 |Image.ZoomOut|**CTRL**  +  **,** (virgola)<br /><br /> - oppure -<br /><br /> **CTRL**  +  **Freccia giù**|Consente di ridurre l'ingrandimento della visualizzazione corrente.|
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

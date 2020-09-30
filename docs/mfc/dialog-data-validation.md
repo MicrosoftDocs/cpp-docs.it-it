@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-ms.openlocfilehash: 99540214d1b903c66d350145c08ab657d12ef8f7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9de2db002d7f06e797531c09af0a021c402eec7d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616748"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502281"
 ---
 # <a name="dialog-data-validation"></a>Convalida dei dati delle finestre di dialogo
 
@@ -22,10 +22,10 @@ ms.locfileid: "84616748"
 
 È anche possibile definire routine DDX e DDV personalizzate. Per informazioni dettagliate su questo e altri aspetti di DDX e DDV, vedere la [Nota tecnica 26 di MFC](tn026-ddx-and-ddv-routines.md).
 
-La [procedura guidata Aggiungi variabile membro](../ide/add-member-variable-wizard.md) consente di scrivere tutte le chiamate DDX e DDV nella mappa dati.
+La [procedura guidata Aggiungi variabile membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) consente di scrivere tutte le chiamate DDX e DDV nella mappa dati.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Convalida e DDX (Dialog Data Exchange)](dialog-data-exchange-and-validation.md)<br/>
+[Convalida e scambio di dati della finestra di dialogo](dialog-data-exchange-and-validation.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)<br/>
 [DDX (Dialog Data Exchange)](dialog-data-exchange.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: 607122b5592c9db4fc2ad4cabf369b4605b2673b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 246eed6592b892c3bd233d9217e26e7bf7a49ff8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228765"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502314"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>Avviso del compilatore (livello 3) C4645
 
 la funzione dichiarata con __declspec(noreturn) ha un'istruzione return
 
-È stata trovata un'istruzione [return](../../cpp/return-statement-in-program-termination-cpp.md) in una funzione contrassegnata con il modificatore [noreturn](../../cpp/noreturn.md) **`__declspec`** . L' **`return`** istruzione è stata ignorata.
+È stata trovata un'istruzione [return](../../cpp/program-termination.md) in una funzione contrassegnata con il modificatore [noreturn](../../cpp/noreturn.md) **`__declspec`** . L' **`return`** istruzione è stata ignorata.
 
 L'esempio seguente genera l'errore C4645:
 

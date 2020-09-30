@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: cf07154c6b681e2ad30a85a62a0db996c3f3d911
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 07952c979fd66291b1744521d83e4556f010d297
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078316"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500785"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
 
@@ -38,11 +38,11 @@ Produce un file di output che può essere usato con il profiler di Strumenti per
 
 /PROFILE fa in modo che il linker generi una sezione di rilocazione nell'immagine del programma.  Una sezione di rilocazione consente al profiler di trasformare l'immagine del programma per ottenere i dati del profilo.
 
-**/Profile** è disponibile solo nelle versioni Enterprise (Team Development).  Per altre informazioni su PREfast, vedere [analisi del codice per CC++ /Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+**/Profile** è disponibile solo nelle versioni Enterprise (Team Development).  Per ulteriori informazioni su PREfast, vedere [Cenni preliminari sull'analisi del codice per C/C++](../../code-quality/code-analysis-for-c-cpp-overview.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -58,9 +58,9 @@ Produce un file di output che può essere usato con il profiler di Strumenti per
 
 ### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Per impostare questa opzione del linker nel progetto CMake di Visual Studio
 
-Il progetto **CMake** non dispone di una **pagina delle proprietà**. è possibile impostare le opzioni del linker modifica CMakeLists. txt.
+Il progetto **CMake** non dispone di una **pagina delle proprietà**. è possibile impostare le opzioni del linker modifica CMakeLists.txt.
 
-1. Aprire CMakeLists. txt nella directory radice del progetto.
+1. Aprire il CMakeLists.txt nella directory radice del progetto.
 
 1. Aggiungere il codice seguente. Per informazioni dettagliate, vedere [riferimenti a CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
 

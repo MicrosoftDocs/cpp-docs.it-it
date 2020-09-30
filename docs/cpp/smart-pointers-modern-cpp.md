@@ -3,12 +3,12 @@ title: Puntatori intelligenti (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 698843ced3235d9622af3610a5209669407e9e05
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e511cc513cdb35b06b976ce022c5e4edea35040b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186139"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500687"
 ---
 # <a name="smart-pointers-modern-c"></a>Puntatori intelligenti (C++ moderno)
 
@@ -16,7 +16,7 @@ Nella programmazione C++ moderna, la libreria standard include i *puntatori inte
 
 ## <a name="uses-for-smart-pointers"></a>Utilizzi per i puntatori intelligenti
 
-I puntatori intelligenti sono definiti nello `std` spazio dei nomi nel [\<memory>](../standard-library/memory.md) file di intestazione. Sono cruciali per l' [RAII](objects-own-resources-raii.md) o l' *acquisizione di risorse è* l'idioma di programmazione dell'inizializzazione. L'obiettivo principale di questo linguaggio è assicurare che l'acquisizione delle risorse avvenga contemporaneamente all'inizializzazione dell'oggetto, in modo che tutte le risorse per l'oggetto vengano create e rese disponibili in una riga di codice. In pratica, il principio fondamentale di RAII è assegnare la proprietà delle risorse allocate dall'heap, ad esempio gli handle di oggetti di memoria o di memoria allocati in modo dinamico, a un oggetto allocato dallo stack il cui distruttore contiene il codice per eliminare o liberare la risorsa ed eventuale codice di pulizia associato.
+I puntatori intelligenti sono definiti nello `std` spazio dei nomi nel [\<memory>](../standard-library/memory.md) file di intestazione. Sono cruciali per l' [RAII](./object-lifetime-and-resource-management-modern-cpp.md) o l' *acquisizione di risorse è* l'idioma di programmazione dell'inizializzazione. L'obiettivo principale di questo linguaggio è assicurare che l'acquisizione delle risorse avvenga contemporaneamente all'inizializzazione dell'oggetto, in modo che tutte le risorse per l'oggetto vengano create e rese disponibili in una riga di codice. In pratica, il principio fondamentale di RAII è assegnare la proprietà delle risorse allocate dall'heap, ad esempio gli handle di oggetti di memoria o di memoria allocati in modo dinamico, a un oggetto allocato dallo stack il cui distruttore contiene il codice per eliminare o liberare la risorsa ed eventuale codice di pulizia associato.
 
 Nella maggior parte dei casi, quando si inizializza un handle di risorsa o puntatore non elaborato per puntare a una risorsa effettiva, passare immediatamente il puntatore a un puntatore intelligente. Nel linguaggio C++ moderno, i puntatori non elaborati vengono utilizzati esclusivamente in blocchi di codice piccoli con ambito limitato, nei cicli o nelle funzioni di supporto per le quali le prestazioni sono importanti e non può crearsi confusione circa la proprietà.
 
@@ -68,7 +68,7 @@ Nella sezione seguente vengono riepilogati i diversi tipi di puntatori intellige
 Utilizzare questi puntatori intelligenti come prima scelta per incapsulare i puntatori in oggetti C++ non aggiornati (POCO, plain old C++ object).
 
 - `unique_ptr`<br/>
-   Consente esattamente un proprietario del puntatore sottostante. Utilizzarlo come scelta predefinita per POCO, a meno che non sia necessario un `shared_ptr`. Può essere spostato a un nuovo proprietario, ma non copiato o condiviso. Sostituisce `auto_ptr`, che è deprecato. Confrontare con `boost::scoped_ptr`. `unique_ptr`è piccolo ed efficiente; la dimensione è un puntatore e supporta i riferimenti rvalue per l'inserimento e il recupero rapidi dalle raccolte di librerie standard C++. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e usare Unique_ptr istanze](how-to-create-and-use-unique-ptr-instances.md) e [unique_ptr classe](../standard-library/unique-ptr-class.md).
+   Consente esattamente un proprietario del puntatore sottostante. Utilizzarlo come scelta predefinita per POCO, a meno che non sia necessario un `shared_ptr`. Può essere spostato a un nuovo proprietario, ma non copiato o condiviso. Sostituisce `auto_ptr`, che è deprecato. Confrontare con `boost::scoped_ptr`. `unique_ptr` è piccolo ed efficiente; la dimensione è un puntatore e supporta i riferimenti rvalue per l'inserimento e il recupero rapidi dalle raccolte di librerie standard C++. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e usare Unique_ptr istanze](how-to-create-and-use-unique-ptr-instances.md) e [unique_ptr classe](../standard-library/unique-ptr-class.md).
 
 - `shared_ptr`<br/>
    Puntatore intelligente con conteggio dei riferimenti. Utilizzarlo quando si desidera assegnare un puntatore non elaborato a più proprietari, ad esempio quando si restituisce una copia di un puntatore da un contenitore, ma si desidera conservare l'originale. Il puntatore non elaborato non viene eliminato finché tutti i proprietari di `shared_ptr` non sono usciti dall'ambito o non hanno ceduto in altro modo la proprietà. Ha le dimensioni di due puntatori, uno per l'oggetto e uno per il blocco di controllo condiviso che contiene il conteggio dei riferimenti. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e usare Shared_ptr istanze](how-to-create-and-use-shared-ptr-instances.md) e [shared_ptr classe](../standard-library/shared-ptr-class.md).

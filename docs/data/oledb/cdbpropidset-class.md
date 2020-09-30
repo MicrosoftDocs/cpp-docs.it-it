@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838295"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502507"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
 
-Eredita dalla `DBPROPIDSET` struttura e aggiunge un costruttore che Inizializza i campi chiave e il metodo di accesso [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
+Eredita dalla `DBPROPIDSET` struttura e aggiunge un costruttore che Inizializza i campi chiave e il metodo di accesso [AddPropertyID](#addpropertyid) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -126,7 +126,7 @@ in GUID utilizzato per impostare il `guidPropertySet` campo della struttura [DBP
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo campo può essere impostato anche dal [Costruttore](../../data/oledb/cdbpropidset-cdbpropidset.md) . Chiamare questa funzione se si usa il costruttore predefinito per questa classe.
+Questo campo può essere impostato anche dal [Costruttore](#cdbpropidset) . Chiamare questa funzione se si usa il costruttore predefinito per questa classe.
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet:: operator =
 

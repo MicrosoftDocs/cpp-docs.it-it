@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838347"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502543"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
 
@@ -95,7 +95,7 @@ class CDataSource
 
 ## <a name="remarks"></a>Osservazioni
 
-Per una singola connessione è possibile creare una o più sessioni di database. Queste sessioni sono rappresentate da `CSession` . È necessario chiamare [CDataSource:: Open](../../data/oledb/cdatasource-open.md) per aprire la connessione prima di creare una sessione con `CSession::Open` .
+Per una singola connessione è possibile creare una o più sessioni di database. Queste sessioni sono rappresentate da `CSession` . È necessario chiamare [CDataSource:: Open](#open) per aprire la connessione prima di creare una sessione con `CSession::Open` .
 
 Per un esempio di come usare `CDataSource` , vedere l'esempio [catdb](../../overview/visual-cpp-samples.md) .
 
@@ -159,7 +159,7 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ottenere una singola proprietà, utilizzare [GetProperty](../../data/oledb/cdatasource-getproperty.md).
+Per ottenere una singola proprietà, utilizzare [GetProperty](#getproperty).
 
 ## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource:: GetProperty
 
@@ -190,7 +190,7 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per ottenere più proprietà, utilizzare [GetProperties](../../data/oledb/cdatasource-getproperties.md).
+Per ottenere più proprietà, utilizzare [GetProperties](#getproperties).
 
 ## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource:: Open
 
@@ -239,7 +239,7 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 in Oggetto `CLSID` del provider di dati.
 
 *pPropSet*<br/>
@@ -391,7 +391,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 in Oggetto `CLSID` di un provider di dati.
 
 *szProgID*<br/>

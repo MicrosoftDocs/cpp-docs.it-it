@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: aca5c78c07852317308427d935eef5942523512b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761252"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501397"
 ---
 # <a name="compiler-error-c3138"></a>Errore del compilatore C3138
 
 ' Interface ': un'interfaccia ' attribute ' deve ereditare da IDispatch o da un'interfaccia che eredita da IDispatch
 
-Un'interfaccia con gli attributi [Dual](../../windows/dual.md) o [dispatch](../../windows/dispinterface.md) non ha `IDispatch` come interfaccia di base diretta o indiretta.
+Un'interfaccia con gli attributi [Dual](../../windows/attributes/dual.md) o [Dispatch](../../windows/attributes/dispinterface.md) non dispone di un' `IDispatch` interfaccia di base diretta o indiretta.
 
 L'esempio seguente genera l'C3138:
 

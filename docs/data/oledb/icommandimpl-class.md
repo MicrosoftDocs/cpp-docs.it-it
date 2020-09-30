@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845588"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501825"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 
@@ -132,7 +132,7 @@ HRESULT CancelExecution();
 
 ## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl:: CreateRowset
 
-Chiamato da [Execute](../../data/oledb/icommandimpl-execute.md) per creare un singolo set di righe.
+Chiamato da [Execute](#execute) per creare un singolo set di righe.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -201,7 +201,7 @@ Vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)
 
 L'interfaccia in uscita richiesta sarà un'interfaccia acquisita dall'oggetto set di righe creato da questa funzione.
 
-`Execute` chiama [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Eseguire l'override dell'implementazione predefinita per creare più di un set di righe o fornire condizioni personalizzate per la creazione di set di righe diversi.
+`Execute` chiama [CreateRowset](#createrowset). Eseguire l'override dell'implementazione predefinita per creare più di un set di righe o fornire condizioni personalizzate per la creazione di set di righe diversi.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl:: GetDBSession
 

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211458"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500661"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Creazione di un consumer senza utilizzare una procedura guidata
 
@@ -17,7 +17,7 @@ L'esempio seguente presuppone che si stia aggiungendo il supporto per consumer O
 
 Per aggiungere il supporto per consumer OLE DB senza usare la **Creazione guidata consumer OLE DB ATL**:
 
-- Nel file *PCH. h* aggiungere le istruzioni `#include` seguenti:
+- Nel file *PCH. h* aggiungere le `#include` istruzioni seguenti:
 
     ```cpp
     #include <atlbase.h>
@@ -46,7 +46,7 @@ A livello di codice un consumer esegue in genere la sequenza di operazioni segue
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- Chiamare [CDataSource::Open](../../data/oledb/cdatasource-open.md) o una delle sue varianti.
+- Chiamare [CDataSource::Open](./cdatasource-class.md#open) o una delle sue varianti.
 
 - Aprire una connessione all'origine dati, aprire la sessione e aprire e inizializzare il set di righe (e se è un comando, eseguirlo):
 
@@ -68,7 +68,7 @@ A livello di codice un consumer esegue in genere la sequenza di operazioni segue
     ds.Close();
     ```
 
-   Se si usa un comando, può essere necessario chiamare `ReleaseCommand` dopo `Close`. L'esempio di codice in [CCommand::Close](../../data/oledb/ccommand-close.md) mostra come chiamare `Close` e `ReleaseCommand`.
+   Se si usa un comando, può essere necessario chiamare `ReleaseCommand` dopo `Close`. L'esempio di codice in [CCommand::Close](./ccommand-class.md#close) mostra come chiamare `Close` e `ReleaseCommand`.
 
 - Chiamare `CoUnInitialize` per annullare l'inizializzazione di COM. Questo viene chiamato nel codice principale.
 
@@ -78,4 +78,4 @@ A livello di codice un consumer esegue in genere la sequenza di operazioni segue
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un consumer OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+[Creazione di un consumer di OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

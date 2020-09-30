@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209872"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500908"
 ---
 # <a name="ole-db-templates"></a>Modelli OLE DB
 
@@ -27,13 +27,13 @@ Fornisce collegamenti alle classi di modelli di provider OLE DB, elencate in bas
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Panoramica della programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
+[Panoramica della programmazione OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
 Descrive OLE DB e l'accesso universale ai dati in OLE DB.
 
 [guida di riferimento per programmatori OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
 Fornisce collegamenti alla documentazione di Windows SDK in OLE DB.
 
-[Esempi di modelli OLE DB](../../overview/visual-cpp-samples.md)<br/>
+[Esempi di modelli di OLE DB](../../overview/visual-cpp-samples.md)<br/>
 Fornisce collegamenti a esempi di modelli OLE DB che illustrano come usare OLE DB nei progetti.
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
@@ -42,7 +42,7 @@ Illustra i concetti relativi ai modelli di consumer OLE DB.
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 Illustra i concetti relativi ai modelli di provider OLE DB.
 
-[Creazione di un consumer OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
+[Creazione di un consumer di OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
 Descrive la creazione di un consumer di modelli OLE DB.
 
 [Creazione di un provider semplice in sola lettura](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
@@ -51,7 +51,7 @@ Descrive la creazione di un semplice provider di sola lettura che legge una copp
 [Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)<br/>
 Descrive la creazione di provider in grado di scrivere nell'archivio dati.
 
-[Attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md)<br/>
+[Attributi del consumer OLE DB](../../windows/attributes/ole-db-consumer-attributes.md)<br/>
 Illustra un'interfaccia semplificata per inserire il codice in base ai modelli di consumer OLE DB per creare consumer OLE DB funzionanti.
 
 [Informazioni di riferimento su Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)<br/>

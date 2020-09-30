@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 86da5081fbe63728b062879838ac3ffe78504ccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80a43446f0367acb89a04fdaa8198b5cff5a6697
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211484"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500965"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classi generate mediante la Creazione guidata consumer
 
@@ -150,7 +150,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>Classi di record utente inserite dagli attributi
 
-Se si crea un consumer OLE DB usando gli attributi di database ([db_command](../../windows/db-command.md) o [db_table](../../windows/db-table.md)), gli attributi inseriscono una classe di record utente con un nome nel formato "_*ClassName*Accessor". Se ad esempio la classe di comando è stata denominata `COrders`, la classe di record utente sarà `_COrdersAccessor`. Benché la classe di record utente venga visualizzata in **Visualizzazione classi**, facendo doppio clic su di essa è possibile passare alla classe di comando o di tabella nel file di intestazione. In questi casi, la visualizzazione del codice inserito dagli attributi consente solo di visualizzare la dichiarazione effettiva della classe di record utente.
+Se si crea un consumer OLE DB usando gli attributi di database ([db_command](../../windows/attributes/db-command.md) o [db_table](../../windows/attributes/db-table.md)), gli attributi inseriscono una classe di record utente con un nome nel formato "_*ClassName*Accessor". Se ad esempio la classe di comando è stata denominata `COrders`, la classe di record utente sarà `_COrdersAccessor`. Benché la classe di record utente venga visualizzata in **Visualizzazione classi**, facendo doppio clic su di essa è possibile passare alla classe di comando o di tabella nel file di intestazione. In questi casi, la visualizzazione del codice inserito dagli attributi consente solo di visualizzare la dichiarazione effettiva della classe di record utente.
 
 È possibile che si verifichino problemi se si aggiungono metodi o si esegue l'override di metodi in consumer con attributi. Ad esempio, aggiungendo un costruttore di `_COrdersAccessor` alla dichiarazione `COrders` , in realtà viene aggiunto un costruttore alla classe `COrdersAccessor` inserita. Un costruttore di questo tipo può inizializzare le colonne o i parametri, ma non è possibile creare un costruttore di copia in questo modo, perché questo non può creare direttamente istanze dell'oggetto `COrdersAccessor`. Se è necessario un costruttore (o un altro metodo) direttamente nella classe `COrders`, è consigliabile definire una nuova classe derivante da `COrders` e aggiungere i metodi necessari qui.
 
@@ -190,4 +190,4 @@ Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del cod
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Creazione di un consumer di OLE DB tramite una procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
