@@ -43,12 +43,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 8c41a09ce35819403b2361dcf5ad53eb93b7a615
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: edb534eb533d63c9298b7b7e9aced1be3e8652d9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945282"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502784"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -130,40 +130,50 @@ Puntatore a un elenco di argomenti.
 *locale*<br/>
 Impostazioni locali da usare.
 
-Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Valore restituito
 
-**vsnprintf_s**, **_vsnprintf_s** e **_vsnwprintf_s** restituiscono il numero di caratteri scritti, escluso il carattere null di terminazione, o un valore negativo se si verifica un errore di output. **vsnprintf_s** è identico a **_vsnprintf_s**. **vsnprintf_s** è incluso per la conformità allo standard ANSI. **_vnsprintf** viene mantenuto per compatibilità con le versioni precedenti.
+**vsnprintf_s**, **_vsnprintf_s** e **_vsnwprintf_s** restituiscono il numero di caratteri scritti, escluso il carattere null di terminazione, o un valore negativo se si verifica un troncamento dei dati o un errore di output.
 
-Se lo spazio di archiviazione necessario per archiviare i dati e un valore null di terminazione supera *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), a meno che *count* non sia [_TRUNCATE](../../c-runtime-library/truncate.md), nel qual caso la maggior parte del la stringa che si adatta al *buffer* viene scritta e viene restituito-1. Se l'esecuzione continua dopo il gestore di parametro non valido, queste funzioni impostano il *buffer* su una stringa vuota, impostano **errno** su **ERANGE**e restituiscono-1.
+* Se *count* è minore di *sizeOfBuffer* e il numero di caratteri dei dati è minore o uguale a *count*oppure *count* è [_TRUNCATE](../../c-runtime-library/truncate.md) e il numero di caratteri dei dati è minore di *sizeOfBuffer*, vengono scritti tutti i dati e viene restituito il numero di caratteri.
 
-Se il *buffer* o il *formato* è un puntatore **null** o se *count* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1.
+* Se *count* è minore di *sizeOfBuffer* ma i dati superano il *numero* di caratteri, verranno scritti i primi caratteri di *conteggio* . Il troncamento dei dati rimanenti si verifica e viene restituito-1 senza richiamare il gestore di parametro non valido.
+
+* Se *count* è [_TRUNCATE](../../c-runtime-library/truncate.md) e il numero di caratteri dei dati è uguale o superiore a *sizeOfBuffer*, la maggior parte della stringa che rientrerà nel *buffer* (con terminazione null) viene scritta. Il troncamento dei dati rimanenti si verifica e viene restituito-1 senza richiamare il gestore di parametro non valido.
+
+* Se *count* è uguale a o supera *sizeOfBuffer* , ma il numero di caratteri dei dati è minore di *sizeOfBuffer*, tutti i dati vengono scritti (con terminazione null) e viene restituito il numero di caratteri.
+
+* Se *count* e il numero di caratteri dei dati è uguale o superiore a *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione continua dopo il gestore di parametro non valido, queste funzioni impostano il *buffer* su una stringa vuota, impostano **errno** su **ERANGE**e restituiscono-1.
+
+* Se il *buffer* o il *formato* è un puntatore **null** o se *count* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|**Condizione**|INVIO|**errno**|
+|**Condition**|Return|**errno**|
 |-----------------|------------|-------------|
 |il *buffer* è **null**|-1|**EINVAL**|
 |il *formato* è **null**|-1|**EINVAL**|
-|*count* <= 0|-1|**EINVAL**|
+|*conteggio* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* troppo piccolo (e *count* ! = **_TRUNCATE**)|-1 (e il *buffer* è impostato su una stringa vuota)|**ERANGE**|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
+
+**vsnprintf_s** è identico a **_vsnprintf_s**. **vsnprintf_s** è incluso per la conformità allo standard ANSI. **_vnsprintf** viene mantenuta per compatibilità con le versioni precedenti.
 
 Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive fino a *conteggiare* i caratteri dei dati specificati nella memoria a cui punta il *buffer* e aggiunge un valore null di terminazione.
 
 Se *count* è [_TRUNCATE](../../c-runtime-library/truncate.md), queste funzioni scrivono la maggior parte della stringa che rientrerà nel *buffer* lasciando spazio per un valore null di terminazione. Se l'intera stringa (con terminazione null) si integra nel *buffer*, queste funzioni restituiscono il numero di caratteri scritti (escluso il carattere null di terminazione); in caso contrario, queste funzioni restituiscono-1 per indicare che si è verificato il troncamento.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Per assicurarsi che sia disponibile spazio per il carattere null di terminazione, assicurarsi che *count* sia rigorosamente inferiore alla lunghezza del buffer o usare **_TRUNCATE**.
+> Per assicurarsi che sia disponibile spazio per il carattere null di terminazione, verificare che il *conteggio* sia rigorosamente inferiore rispetto alla lunghezza del buffer o usare **_TRUNCATE**.
 
-In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -178,7 +188,7 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli.
 |-------------|---------------------|----------------------|
 |**vsnprintf_s**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
 |**_vsnprintf_s**, **_vsnprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio.h> o \<wchar.h> , e \<stdarg.h>|\<varargs.h>*|
 
 \* Richiesto per la compatibilità con UNIX V.
 
@@ -222,5 +232,5 @@ nSize: -1, buff: Hi there!
 [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

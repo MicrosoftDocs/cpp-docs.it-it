@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389948"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503386"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Riferimento a Linee guida di base di C++ Checker
 
-In questa sezione sono elencati Linee guida di base di C++ avvisi del controllo. Per informazioni sull'analisi del codice, vedere [ `/analyze` (analisi del codice)](/cpp/build/reference/analyze-code-analysis) e [avvio rapido: analisi del codice per C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+In questa sezione sono elencati Linee guida di base di C++ avvisi del controllo. Per informazioni sull'analisi del codice, vedere [ `/analyze` (analisi del codice)](../build/reference/analyze-code-analysis.md) e [avvio rapido: analisi del codice per C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Alcuni avvisi appartengono a più di un gruppo e non a tutti gli avvisi è associato un argomento di riferimento completo.
@@ -196,7 +196,7 @@ Questa *funzione* di chiamata di funzione può utilizzare `constexpr` se si desi
 Non sezionare. Vedere [linee guida di base di C++ es. 63](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es63-dont-slice).
 
 [NO_CONST_CAST_UNNECESSARY C26465](c26465.md)\
-Non usare `const_cast` per eseguire il cast `const` . `const_cast`non è obbligatorio; la conversione non è stata rimossa da const o dalla volatilità. Vedere [linee guida di base di C++ Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
+Non usare `const_cast` per eseguire il cast `const` . `const_cast` non è obbligatorio; la conversione non è stata rimossa da const o dalla volatilità. Vedere [linee guida di base di C++ Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
 
 [NO_STATIC_DOWNCAST_POLYMORPHIC C26466](c26466.md)\
 Non usare `static_cast` downcast. Un cast da un tipo polimorfico deve usare dynamic_cast. Vedere [linee guida di base di C++ tipo. 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast).
@@ -264,7 +264,7 @@ Preferisce utilizzare `gsl::at()` invece dell'operatore di indice non controllat
 Provare a usare `gsl::finally` se l'azione finale è intenzionale. Vedere [linee guida di base di C++: GSL. util: Utilities](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities).
 
 [NO_SPAN_FROM_TEMPORARY C26449](c26449.md)\
-`gsl::span`o `std::string_view` creato da un oggetto temporaneo non sarà valido quando l'oggetto temporaneo viene invalidato. Vedere [linee guida di base di C++: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
+`gsl::span` o `std::string_view` creato da un oggetto temporaneo non sarà valido quando l'oggetto temporaneo viene invalidato. Vedere [linee guida di base di C++: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
 
 ## <a name="deprecated-warnings"></a>Avvisi deprecati
 

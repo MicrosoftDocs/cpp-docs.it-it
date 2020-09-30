@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Utilizzare i colori'
+title: 'Procedura: utilizzare il colore'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.color
@@ -62,154 +62,154 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c9134fde9053f57f8848a37b1442728f6111c98
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387766"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502942"
 ---
-# <a name="how-to-work-with-color"></a>Procedura: Utilizzare i colori
+# <a name="how-to-work-with-color"></a>Procedura: utilizzare il colore
 
-Il **Editor di immagini** contiene molte funzionalità che gestiscono e personalizzare i colori in modo specifico. È possibile impostare un colore di primo piano o in background, riempire le aree limitate con il colore o selezionare un colore in un'immagine da utilizzare come colore di primo piano o di sfondo corrente. È possibile usare gli strumenti nel [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md) con la tavolozza dei colori nella **colori** finestra per creare immagini.
+L' **editor di immagini** contiene molte funzionalità che gestiscono e personalizzano i colori in modo specifico. È possibile impostare un colore di primo piano o di sfondo, riempire le aree delimitate con colore oppure selezionare un colore in un'immagine da utilizzare come colore di primo piano o di sfondo corrente. È possibile utilizzare strumenti sulla [barra degli](./image-editor-for-icons.md) strumenti dell'editor di immagini insieme alla tavolozza colori nella finestra **colori** per creare immagini.
 
-Tutti i colori per monocromatico e le immagini di 16 colori, vengono visualizzati nei **colori** tavolozza nel **colori** finestra. Insieme a 16 colori standard, è possibile creare colori personalizzati. Modifica di uno qualsiasi dei colori della tavolozza immediatamente cambierà il colore corrispondente nell'immagine.
+Tutti i colori per le immagini monocromatiche e a 16 colori vengono visualizzati nella tavolozza **colori** della finestra **colori** . Insieme ai 16 colori standard, è possibile creare colori personalizzati. La modifica di uno dei colori della tavolozza modificherà immediatamente il colore corrispondente nell'immagine.
 
-Quando si lavora con icona a 256 colori e immagini di cursore, la **colori** proprietà nel [finestra proprietà](/visualstudio/ide/reference/properties-window) viene usato. Per altre informazioni, vedere [creazione di un cursore o l'icona a 256 colori](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).
+Quando si utilizzano immagini di cursore e icone a colori 256, viene utilizzata la proprietà **Colors** nel [finestra Proprietà](/visualstudio/ide/reference/properties-window) . Per ulteriori informazioni, vedere [creazione di un'icona o di un cursore a 256 colori](./creating-an-icon-or-other-image-image-editor-for-icons.md).
 
-È possibile creare anche le immagini a colori true. Tuttavia campioni di colore true non vengono visualizzati nella tavolozza completa la **colori** finestra; vengono visualizzati solo nell'area indicatore di colore in primo piano o in background. Colori true vengono creati utilizzando il **regola colori** nella finestra di dialogo.
+È anche possibile creare immagini con colori reali. Tuttavia, gli esempi di colore true non vengono visualizzati nella tavolozza completa della finestra **colori** ; vengono visualizzate solo nell'area indicatore di colore di primo piano o di sfondo. I colori veri vengono creati utilizzando la finestra di dialogo del **selettore colori personalizzato** .
 
-È possibile salvare le tavolozze di colori personalizzati sul disco e ricaricarli in base alle esigenze. La tavolozza dei colori usata più di recente è salvato nel Registro di sistema e caricato automaticamente al successivo che avvio di Visual Studio.
+È possibile salvare le tavolozze dei colori personalizzate su disco e ricaricarle in base alle esigenze. La tavolozza dei colori usata più di recente viene salvata nel registro di sistema e viene caricata automaticamente al successivo avvio di Visual Studio.
 
-Il **colori** finestra dispone di due parti:
+La finestra **colori** è costituita da due parti:
 
-- Il **tavolozza di colori**, che è una matrice di campioni di colore che rappresentano i colori disponibili. È possibile selezionare gli esempi per scegliere i colori di primo piano e sfondo quando si usano gli strumenti di grafica.
+- **Tavolozza colori**, ovvero una matrice di campioni di colore che rappresentano i colori che è possibile usare. È possibile selezionare gli esempi per scegliere i colori di primo piano e di sfondo quando si usano gli strumenti di grafica.
 
-- Il **indicatore colori**, che mostra i colori di sfondo e primo piano e i selettori per il colore dello schermo e inverso.
+- **Indicatore di colore**, che mostra i colori di primo piano e di sfondo e i selettori per lo schermo e il colore inverso.
 
    ![Colors window](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
-   **I colori** finestra
+   Finestra **colori**
 
 > [!NOTE]
-> Il **schermata colore** e **inversione di colore** strumenti sono disponibili solo per le icone e cursori.
+> Il **colore dello schermo** e gli strumenti di **colore inverso** sono disponibili solo per le icone e i cursori.
 
-È possibile usare la **colori** finestra con il [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md).
+È possibile utilizzare la finestra **colori** con la [barra degli strumenti dell'editor di immagini](./image-editor-for-icons.md).
 
-- Per visualizzare il **colori** finestra, pulsante destro del mouse in un **Editor di immagini** riquadro e scegliere **Visualizza finestra colori**, o passare al menu [immagine](../windows/image-menu-image-editor-for-icons.md)  >  **Mostra finestra colori**.
+- Per visualizzare la finestra **colori** , fare clic con il pulsante destro del mouse su un riquadro dell' **editor di immagini** e scegliere **Mostra colori finestra**o vai a menu [immagine](./image-editor-for-icons.md)  >  **Mostra colori**.
 
-- Per nascondere il **colori** finestra, è possibile rimuovere la finestra (questa azione consentirà la finestra Nascondi automaticamente quando non è in uso) o selezionare il **Chiudi** pulsante.
+- Per nascondere la finestra **colori** , Rimuovi la finestra. questa azione consente di nascondere automaticamente la finestra quando non è in uso, oppure di selezionare il pulsante **Chiudi** .
 
-Il **colori** tavolozza inizialmente Visualizza 16 colori standard. Con i colori visualizzati, è anche possibile creare colori personalizzati. È quindi possibile salvare e caricare una tavolozza colori personalizzata.
+La tavolozza **colori** Visualizza inizialmente 16 colori standard. Con i colori visualizzati, è anche possibile creare colori personalizzati. È quindi possibile salvare e caricare una Tavolozza colori personalizzata.
 
-Il **regola colori** nella finestra di dialogo consente di personalizzare i colori utilizzati per l'immagine con le proprietà seguenti:
+La finestra di dialogo **selezione colori personalizzata** consente di personalizzare i colori utilizzati per l'immagine con le proprietà seguenti:
 
 |Proprietà|Descrizione|
 |--------------------------|--------------------------|
-|**Visualizzazione delle sfumature**|Modifica i valori del colore selezionato.<br/><br/>Posizionare il selettore di precisione sul colore che si desidera modificare e spostare il dispositivo di scorrimento verso l'alto o verso il basso per modificare la luminosità o valori RGB del colore.|
-|**Barra luminosità**|Imposta la luminosità per il colore selezionato nel **visualizzazione delle sfumature** casella.<br/><br/>Selezionare e trascinare la freccia bianca la barra della luminosità maggiore o verso il basso per il minore. Il **colore** casella viene visualizzato il colore selezionato e l'effetto della luminosità è impostato.|
-|**Colore**|Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.|
-|**Hue**|Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.|
-|**Sat**|Specifica il valore di saturazione del colore che si sta definendo. La saturazione è la quantità di colore in una tonalità specificata. I valori compresi tra 0 e 240.|
-|**Lum**|Elenca la luminosità del colore che si sta definendo. I valori compresi tra 0 e 240.|
-|**Rosso**|Specifica il valore di colore rosso del colore che si sta definendo. I valori compresi tra 0 e 255.|
-|**Verde**|Specifica il valore di colore verde del colore che si sta definendo. I valori compresi tra 0 e 255.|
-|**Blu**|Specifica il valore di colore blu del colore che si sta definendo. I valori compresi tra 0 e 255.|
+|**Visualizzazione colore sfumatura**|Modifica i valori di un colore selezionato.<br/><br/>Posizionare il mirino sul colore che si vuole modificare e spostare il dispositivo di scorrimento verso l'alto o verso il basso per modificare la luminosità o i valori RGB del colore.|
+|**Barra luminosità**|Imposta la luminosità per il colore selezionato nella casella di **visualizzazione colore sfumatura** .<br/><br/>Selezionare e trascinare la freccia bianca verso l'alto della barra per ottenere una maggiore luminosità o un valore inferiore. Nella casella **colore** viene visualizzato il colore selezionato e l'effetto della luminosità impostata.|
+|**Colore**|Elenca la tonalità (valore della rotellina dei colori) del colore che si sta definendo. I valori sono compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è cyan, 200 è magenta e 240 è blu.|
+|**Hue**|Elenca la tonalità (valore della rotellina dei colori) del colore che si sta definendo. I valori sono compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è cyan, 200 è magenta e 240 è blu.|
+|**Sat**|Specifica il valore di saturazione del colore che si sta definendo. Saturazione è la quantità di colore in una tonalità specificata. I valori sono compresi tra 0 e 240.|
+|**Lum**|Elenca la luminosità (luminosità) del colore che si sta definendo. I valori sono compresi tra 0 e 240.|
+|**Red**|Specifica il valore rosso del colore che si sta definendo. I valori sono compresi tra 0 e 255.|
+|**Green**|Specifica il valore verde del colore che si sta definendo. I valori sono compresi tra 0 e 255.|
+|**Blue**|Specifica il valore blu del colore che si sta definendo. I valori sono compresi tra 0 e 255.|
 
-È possibile salvare e caricare un **colori** tavolozza contenente colori personalizzati. Per impostazione predefinita, il **colori** tavolozza usato di recente viene caricata automaticamente quando si avvia Visual Studio.
+È possibile salvare e caricare una tavolozza dei **colori** che contiene colori personalizzati. Per impostazione predefinita, la tavolozza **colori** usata più di recente viene caricata automaticamente all'avvio di Visual Studio.
 
 > [!TIP]
-> Poiché il **Editor di immagini** non è in grado di ripristinare il valore predefinito **colori** tavolozza, è consigliabile salvare il valore predefinito **colori** con un nome, ad esempio  *PAL* oppure *default. PAL* in modo che sia possibile ripristinare facilmente le impostazioni predefinite.
+> Poiché l' **editor di immagini** non è in grado di ripristinare la tavolozza **colori** predefinita, è necessario salvare la tavolozza **colori** predefiniti con un nome, ad esempio *standard. PAL* o *default. PAL* , in modo da poter ripristinare facilmente le impostazioni predefinite.
 
-Usare la **colori della tavolozza caricare** finestra di dialogo per caricare le tavolozze di colori speciale da usare nel progetto C++ con le proprietà seguenti:
+Utilizzare la finestra di dialogo **Carica tavolozza** per caricare le tavolozze dei colori speciali da utilizzare nel progetto C++ con le proprietà seguenti:
 
 |Proprietà|Descrizione|
 |-----------------|-----------------|
-|**Cerca in**|Specifica la posizione in cui si desidera individuare un file o cartella.<br/><br/>Selezionare la freccia per scegliere un altro percorso o selezionare l'icona della cartella sulla barra degli strumenti per spostare i livelli.|
-|**Nome del file**|Fornisce uno spazio è possibile digitare il nome del file da aprire.<br/><br/>Per trovare rapidamente un file che aperto in precedenza, selezionare il nome del file nell'elenco a discesa, se disponibile.<br/><br/>Se esegue una ricerca per un file, è possibile usare un asterisco (*) come caratteri jolly. Ad esempio, è possibile digitare \*.\* per visualizzare un elenco di tutti i file. È anche possibile digitare il percorso completo di un file, ad esempio, *C:\My c:\Documenti\MiaTavolozzaColori.PAL* oppure  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
-|**Tipo file**|Elenca i tipi di file da visualizzare.<br/><br/>Tavolozza (*. PAL) è il tipo di file predefinito per le tavolozze di colori.|
+|**Look in**|Specifica il percorso in cui si desidera individuare un file o una cartella.<br/><br/>Selezionare la freccia per scegliere un'altra posizione oppure selezionare l'icona della cartella sulla barra degli strumenti per spostare i livelli.|
+|**Nome file**|Fornisce uno spazio per la digitazione del nome del file che si desidera aprire.<br/><br/>Per trovare rapidamente un file aperto in precedenza, selezionare il nome del file nell'elenco a discesa, se disponibile.<br/><br/>Se si sta cercando un file, è possibile usare asterischi (*) come caratteri jolly. È ad esempio possibile digitare \* . \* per visualizzare un elenco di tutti i file. È anche possibile digitare il percorso completo di un file, ad esempio *C:\My Documents\MyColorPalette.PAL* o * \\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
+|**Tipo file**|Elenca i tipi di file da visualizzare.<br/><br/>Tavolozza (*. PAL) è il tipo di file predefinito per le tavolozze dei colori.|
 
 ## <a name="how-to"></a>Procedure
 
-### <a name="to-select-foreground-or-background-colors"></a>Selezione dei colori di primo piano o in background
+### <a name="to-select-foreground-or-background-colors"></a>Per selezionare i colori di primo piano o di sfondo
 
-Fatta eccezione per il **gomma**, gli strumenti disponibili sul **Editor di immagini** disegno sulla barra degli strumenti con il colore di primo piano o in background corrente quando si preme il pulsante sinistro o destro del mouse, rispettivamente.
+Ad eccezione della **gomma**, gli strumenti sulla barra degli strumenti dell' **editor di immagini** vengono disegnato con il colore di primo piano o di sfondo corrente quando si preme rispettivamente il pulsante sinistro o destro del mouse.
 
-- Per selezionare un colore di primo piano, con il pulsante sinistro del mouse, selezionare il colore desiderato la **colori** tavolozza.
+- Per selezionare un colore di primo piano, con il pulsante sinistro del mouse, selezionare il colore desiderato nella tavolozza **colori** .
 
-- Per selezionare un colore di sfondo, con il pulsante destro del mouse, selezionare il colore desiderato la **colori** tavolozza.
+- Per selezionare un colore di sfondo, con il pulsante destro del mouse, selezionare il colore desiderato nella tavolozza **colori** .
 
 ### <a name="to-fill-a-bounded-area-of-an-image-with-a-color"></a>Per riempire un'area delimitata di un'immagine con un colore
 
-Il **Editor di immagini** fornisce le **riempire** dello strumento per la compilazione di uno qualsiasi di racchiuso tra area dell'immagine con il colore di disegno o il colore di sfondo corrente.
+L' **editor di immagini** fornisce lo strumento di **riempimento** per riempire qualsiasi area dell'immagine racchiusa con il colore di disegno corrente o il colore di sfondo corrente.
 
-### <a name="to-use-the-fill-tool"></a>Usare lo strumento riempimento
+### <a name="to-use-the-fill-tool"></a>Per utilizzare lo strumento riempimento
 
-1. Usare il **Editor di immagini** sulla barra degli strumenti oppure passare al menu **immagine** > **strumenti** e selezionare il **riempire** dello strumento.
+1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a **Image**  >  **strumenti** immagine menu e selezionare lo strumento **riempimento** .
 
-1. Se necessario, scegliere i colori di disegno. Nel [tavolozza di colori](../windows/colors-window-image-editor-for-icons.md), selezionare il pulsante sinistro del mouse per selezionare un colore di primo piano o il pulsante destro del mouse per selezionare un colore di sfondo.
+1. Se necessario, scegliere disegno colori. Nella [tavolozza colori](./image-editor-for-icons.md)selezionare il pulsante sinistro del mouse per selezionare un colore di primo piano o il pulsante destro del mouse per selezionare un colore di sfondo.
 
-1. Spostare il **riempimento** strumento per l'area da riempire.
+1. Spostare lo strumento **riempimento** nell'area che si desidera riempire.
 
-1. Selezionare il pulsante sinistro o destro del mouse da riempire con il colore primo piano o il colore di sfondo, rispettivamente.
+1. Selezionare il pulsante sinistro o destro del mouse per riempire rispettivamente il colore di primo piano o il colore di sfondo.
 
-### <a name="to-pick-up-a-color-from-an-image-to-use-elsewhere"></a>Per selezionare un colore da un'immagine da utilizzare altrove
+### <a name="to-pick-up-a-color-from-an-image-to-use-elsewhere"></a>Per selezionare un colore da un'immagine da usare altrove
 
-Il **Seleziona colore**, o selezione colori, lo strumento consente di creare colori nell'immagine il colore primo piano corrente o il colore di sfondo, a seconda se si preme il pulsante destro del mouse o sinistra. Per annullare il **Seleziona colore** strumento, scegliere un altro strumento.
+Lo strumento **Seleziona colore**, o pickup colore, rende qualsiasi colore sull'immagine il colore di primo piano o il colore di sfondo corrente, a seconda che venga premuto il pulsante sinistro o destro del mouse. Per annullare lo strumento **Seleziona colore** , scegliere un altro strumento.
 
-1. Usare il **Editor di immagini** sulla barra degli strumenti oppure passare al menu **immagine** > **strumenti** e selezionare il **Seleziona colore** dello strumento.
+1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a **Image**  >  **strumenti** immagine menu e selezionare lo strumento **Seleziona colore** .
 
 1. Selezionare il colore che si desidera prelevare dall'immagine.
 
    > [!NOTE]
-   > Una volta selezionato un colore, il **Editor di immagini** strumento riattiva utilizzati di recente.
+   > Dopo aver selezionato un colore, l' **editor di immagini** riattiva lo strumento usato più di recente.
 
-1. Disegnare con il pulsante sinistro del mouse per il colore primo piano o il pulsante destro del mouse per il colore di sfondo.
+1. Viene disegnato usando il pulsante sinistro del mouse per il colore di primo piano o il pulsante destro del mouse per il colore di sfondo.
 
-### <a name="to-choose-the-background"></a>Scegliere lo sfondo
+### <a name="to-choose-the-background"></a>Per scegliere lo sfondo
 
-Quando si sposta o si copia una selezione da un'immagine, sono tutti i pixel nella selezione che corrispondono al colore di sfondo corrente, per impostazione predefinita, trasparente ed essi non oscurano pixel nel percorso di destinazione.
+Quando si sposta o si copia una selezione da un'immagine, i pixel della selezione che corrispondono al colore di sfondo corrente sono, per impostazione predefinita, trasparenti e non nascondono i pixel nella posizione di destinazione.
 
-È possibile passare da uno sfondo trasparente (predefinito) a uno sfondo opaco e viceversa. Quando si usa uno strumento di selezione, il **sfondo trasparente** e **sfondo opaco** vengono visualizzate le opzioni nel **opzione** selettore sul **Editordiimmagini** sulla barra degli strumenti.
+È possibile passare da uno sfondo trasparente (impostazione predefinita) a uno sfondo opaco e viceversa. Quando si usa uno strumento di selezione, le opzioni **sfondo trasparente** e **sfondo opaco** vengono visualizzate nel **selettore di opzioni nella** barra degli strumenti dell' **editor di immagini** .
 
-![Opzioni sfondo &#45; opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "opzioni di sfondo &#45; opaco o trasparente")<br/>
-**Opzioni trasparenti e opache** nella **barra degli strumenti Editor di immagini**
+![Opzioni dello sfondo &#45; opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "Opzioni dello sfondo &#45; opaco o trasparente")<br/>
+**Opzioni trasparenti e opache** sulla **barra degli strumenti dell'editor di immagini**
 
-#### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Per passare da uno sfondo trasparente e opaco
+#### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Per passare dallo sfondo trasparente a quello opaco
 
-Nel **Editor di immagini** sulla barra degli strumenti, seleziona la **opzione** selettore e quindi scegliere lo sfondo appropriato:
+Nella barra degli strumenti dell' **editor di immagini** selezionare il selettore di **Opzioni** , quindi scegliere lo sfondo appropriato:
 
-- **Sfondo opaco (O)**: Immagine esistente è coperta da tutte le parti della selezione.
+- **Sfondo opaco (O)**: l'immagine esistente è nascosta da tutte le parti della selezione.
 
-- **Sfondo trasparente (T)**: Nelle parti della selezione che corrispondono al colore di sfondo corrente viene visualizzata l'immagine esistente.
+- **Sfondo trasparente (T)**: l'immagine esistente viene visualizzata attraverso parti della selezione che corrispondono al colore di sfondo corrente.
 
 > [!TIP]
-> Per creare un collegamento, nelle **immagine** menu, seleziona o deselezionare **opaco**.
+> Per un tasto di scelta rapida, scegliere o deselezionare **opaco**per il menu **immagine** .
 
-Durante l'esecuzione di una selezione attiva per modificare le parti dell'immagine sono trasparenti, è possibile modificare il colore di sfondo.
+È possibile modificare il colore di sfondo mentre una selezione è già in vigore per modificare le parti dell'immagine trasparenti.
 
 ### <a name="to-invert-the-colors-in-a-selection"></a>Per invertire i colori in una selezione
 
-Il **Editor di immagini** fornisce un modo pratico per invertire i colori nella parte selezionata dell'immagine in modo che è possibile capire come viene visualizzata un'immagine con colori invertiti.
+L' **editor di immagini** offre un modo pratico per invertire i colori nella parte selezionata dell'immagine, in modo da poter indicare la modalità di visualizzazione di un'immagine con colori invertiti.
 
-Per invertire i colori nella selezione corrente, andare al menu **immagine** > **Inverti colori**.
+Per invertire i colori nella selezione corrente, passare a **immagine**menu  >  **Inverti colori**.
 
 ### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>Per personalizzare o modificare i colori nella tavolozza colori
 
-1. Passare al menu di scelta **immagine** > **regola colori**.
+1. Vai a menu **immagine**  >  **Regola colori**.
 
-1. Nel **regola colori** finestra di dialogo casella, definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriate o scegliere un colore nella **visualizzazione delle sfumature** casella.
+1. Nella finestra di dialogo **selettore colori personalizzato** definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriate o scegliere un colore nella casella di **visualizzazione colore sfumatura** .
 
-1. Impostare la luminosità spostando il dispositivo di scorrimento **luminosità** barra.
+1. Impostare la luminosità spostando il dispositivo di scorrimento sulla barra **luminosità** .
 
-1. Molti colori personalizzati sono retinati. Se si desidera il colore a tinta unita più vicino al colore retinato, fare doppio clic il **colore** casella.
+1. Molti colori personalizzati sono retinati. Se si desidera che il colore a tinta unita sia più vicino al colore con rethereing, fare doppio clic sulla casella **colore** .
 
-   Se si decide in seguito si desidera che il colore retinato, spostare il dispositivo di scorrimento **luminosità** barre o a spostare il mirino **visualizzazione delle sfumature** nuovamente la casella per ripristinare il dithering.
+   Se in un secondo momento si decide di volere il colore retinato, spostare il dispositivo di scorrimento sulla barra **luminosità** oppure spostare di nuovo i mirini nella casella di **visualizzazione colore sfumatura** per ripristinare la dithering.
 
 1. Selezionare **OK** per aggiungere il nuovo colore.
 
 ### <a name="to-save-a-custom-colors-palette"></a>Per salvare una tavolozza di colori personalizzati
 
-1. Passare al menu di scelta **immagine** > **Salva tavolozza**.
+1. Passare a menu **immagine**  >  **Salva tavolozza**.
 
 1. Passare alla directory in cui si intende salvare la tavolozza e digitare un nome per la tavolozza.
 
@@ -217,18 +217,18 @@ Per invertire i colori nella selezione corrente, andare al menu **immagine** > *
 
 ### <a name="to-load-a-custom-colors-palette"></a>Per caricare una tavolozza di colori personalizzati
 
-1. Passare al menu di scelta **immagine** > **Carica tavolozza**.
+1. Passare a menu **Image**  >  **Load palette**.
 
-1. Nel **Carica tavolozza** dialogo casella, passare alla directory corretta e selezionare la tavolozza che si desidera caricare. **Colore** tavolozze vengono salvate con un'estensione di file PAL.
+1. Nella finestra di dialogo **Carica tavolozza** , passare alla directory corretta e selezionare la tavolozza che si desidera caricare. Le tavolozze dei **colori** vengono salvate con l'estensione di file PAL.
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
-[Procedura: Creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Procedura: Modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Procedura: Usare uno strumento di disegno](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Procedura: creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Procedura: modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Procedura: usare uno strumento di disegno](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: e81ea442578e69bdd28301eba8f70561f6aa76c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5c00a35e375d133fbd3a6ed7fe3591e4b0cd54b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230545"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503122"
 ---
 # <a name="add-a-generic-c-class"></a>Aggiungere una classe C++ generica
 
@@ -25,7 +25,7 @@ ms.locfileid: "87230545"
 
 1. Nella **Visualizzazione classi** fare clic con il pulsante destro del mouse sul progetto a cui aggiungere la nuova classe, scegliere **Aggiungi** e quindi **Classe**.
 
-1. Nella finestra di dialogo [Aggiungi classe](../ide/add-class-dialog-box.md) nel riquadro dei modelli selezionare **Classe C++**. Selezionare **Aggiungi** per visualizzare la [Creazione guidata classe C++ generica](#generic-c-class-wizard).
+1. Nella finestra di dialogo [Aggiungi classe](./adding-a-class-visual-cpp.md#add-class-dialog-box) nel riquadro dei modelli selezionare **Classe C++**. Selezionare **Aggiungi** per visualizzare la [Creazione guidata classe C++ generica](#generic-c-class-wizard).
 
 1. Nella procedura guidata specificare un nome di classe, quindi definire le impostazioni o accettare le impostazioni predefinite.
 
@@ -51,7 +51,7 @@ Aggiunge una classe C++ generica a un progetto. La classe non eredita da ATL o M
 
   Imposta il nome del file di implementazione per la nuova classe. Per impostazione predefinita, il nome è basato sul nome specificato in **Nome classe**. Per salvare il file di implementazione nel percorso desiderato o per aggiungere la definizione di classe a un file esistente, selezionare il pulsante con i puntini di sospensione (**...**). Se si specifica un file esistente e si seleziona **fine**, la procedura guidata richiede di specificare se la definizione della classe deve essere aggiunta al contenuto del file. Per aggiungere la definizione, selezionare **Sì**; per tornare alla procedura guidata e specificare un altro nome file, selezionare **No**.
 
-- **Classe base**
+- **Classe di base**
 
   Imposta la classe base per la nuova classe.
 

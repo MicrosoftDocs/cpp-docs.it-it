@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686483"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503539"
 ---
 # <a name="db_column"></a>db_column
 
@@ -50,7 +50,7 @@ Opzionale Variabile membro utilizzata per conservare la dimensione della colonna
 
 ## <a name="remarks"></a>Osservazioni
 
-**db_column** associa la colonna della tabella specificata a una variabile nel set di righe. Delimita i dati dei membri che possono partecipare all' `IAccessor` associazione basata su OLE DB. Questo attributo imposta la mappa delle colonne normalmente definita usando le macro di consumer OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)e [COLUMN_ENTRY](../../data/oledb/column-entry.md). Questi consentono di modificare la [struttura OLE DB DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) per associare la colonna specificata. Ogni membro contrassegnato con l'attributo **db_column** occuperà una voce nella mappa delle colonne sotto forma di voce di colonna. Questo attributo viene pertanto chiamato in cui inserire la mappa delle colonne, ovvero nel comando o nella classe della tabella.
+**db_column** associa la colonna della tabella specificata a una variabile nel set di righe. Delimita i dati dei membri che possono partecipare all' `IAccessor` associazione basata su OLE DB. Questo attributo imposta la mappa delle colonne normalmente definita usando le macro di consumer OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map), [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)e [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry). Questi consentono di modificare la [struttura OLE DB DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) per associare la colonna specificata. Ogni membro contrassegnato con l'attributo **db_column** occuperà una voce nella mappa delle colonne sotto forma di voce di colonna. Questo attributo viene pertanto chiamato in cui inserire la mappa delle colonne, ovvero nel comando o nella classe della tabella.
 
 Utilizzare **db_column** insieme agli attributi [db_table](db-table.md) o [db_command](db-command.md) .
 
@@ -58,7 +58,7 @@ Quando il provider di attributi del consumer applica questo attributo a una clas
 
 Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Questo esempio associa una colonna di una tabella a un **`long`** membro dati e specifica i campi di stato e lunghezza.
 
@@ -98,12 +98,12 @@ class CProducts {
 
 ## <a name="requirements"></a>Requisiti
 
-| Contesto dell'attributo | Valore |
+| Contesto dell'attributo | valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , Member, metodo|
 |**Ripetibile**|No|
-|**Attributi richiesti**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

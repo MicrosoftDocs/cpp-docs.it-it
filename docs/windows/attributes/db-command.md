@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684586"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504591"
 ---
 # <a name="db_command"></a>db_command
 
@@ -97,7 +97,7 @@ TCHAR m_state[3] = 'CA';
 *HRESULT*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
-*associazioni*<br/>
+*bindings*<br/>
 (Facoltativo) Consente di separare i parametri di associazione dal comando OLE DB.
 
 Se si specifica un valore per *bindings*, **db_command** analizzerà il valore associato e non il parametro \[*bindtype*]. Questo utilizzo consente di usare la sintassi del provider OLE DB. Per disabilitare l'analisi, senza parametri di associazione, specificare `Bindings=""`.
@@ -123,9 +123,9 @@ Se *bulk_fetch* è minore di 1, `SetRows` restituirà zero.
 
 Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
-Questo esempio definisce un comando che consente di selezionare i nomi e i cognomi da una tabella in cui la colonna di stato corrisponde a "CA". **db_command** crea e legge un set di righe in cui è possibile chiamare funzioni generate dalla procedura guidata, ad esempio [OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), nonché funzioni membro `CRowset` come [MoveNext](../../data/oledb/crowset-movenext.md).
+Questo esempio definisce un comando che consente di selezionare i nomi e i cognomi da una tabella in cui la colonna di stato corrisponde a "CA". **db_command** crea e legge un set di righe in cui è possibile chiamare funzioni generate dalla procedura guidata, ad esempio [OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), nonché funzioni membro `CRowset` come [MoveNext](../../data/oledb/crowset-class.md#movenext).
 
 Si noti che per questo codice è necessario specificare la propria stringa di connessione al database pubs. Per informazioni su come eseguire questa operazione nell'ambiente di sviluppo, vedere [Procedura: Connettersi a un database e visualizzare gli oggetti esistenti](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [Aggiungere nuove connessioni](/visualstudio/data-tools/add-new-connections).
 
@@ -234,12 +234,12 @@ int main() {
 
 ## <a name="requirements"></a>Requisiti
 
-| Contesto dell'attributo | Valore |
+| Contesto dell'attributo | valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , membro, metodo, locale|
 |**Ripetibile**|No|
-|**Attributi richiesti**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

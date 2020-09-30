@@ -1,5 +1,5 @@
 ---
-title: Editor di immagini per leC++icone ()
+title: Editor di immagini per le icone (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
@@ -39,14 +39,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 47798b5d628484482dffdc963d6e8c7a809f42ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bb028833aa0e9f0615ec7575dbe41feb173efedb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168016"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504382"
 ---
-# <a name="image-editor-for-icons-c"></a>Editor di immagini per leC++icone ()
+# <a name="image-editor-for-icons-c"></a>Editor di immagini per le icone (C++)
 
 Quando si seleziona un file di immagine, ad esempio ico, BMP o PNG, in **Esplora soluzioni**, l'immagine viene aperta nell'editor di **Immagini** nello stesso modo in cui i file di codice vengono aperti nell' **editor di codice**. Quando è attiva una scheda dell' **editor di immagini** , vengono visualizzate le barre degli strumenti con molti strumenti per la creazione e la modifica di immagini. Insieme a bitmap, icone e cursori, è possibile modificare le immagini in formato GIF o JPEG utilizzando i comandi del menu **immagine** e gli strumenti della barra degli strumenti dell' **editor di immagini** .
 
@@ -57,7 +57,7 @@ Le risorse grafiche sono le immagini definite per l'applicazione. È possibile c
 
 È anche possibile usare l' **editor di immagini** e l' [editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Gli editor di risorse di Visual Studio non supportano la modifica delle risorse incorporate.
 
-Oltre a creare nuove risorse grafiche, è possibile [importare immagini esistenti](../windows/how-to-copy-resources.md#import-and-export-resources) per la modifica e quindi aggiungerle al progetto. È anche possibile aprire e modificare immagini che non fanno parte di un progetto per la [modifica di immagini](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)autonome.
+Oltre a creare nuove risorse grafiche, è possibile [importare immagini esistenti](../windows/how-to-copy-resources.md#import-and-export-resources) per la modifica e quindi aggiungerle al progetto. È anche possibile aprire e modificare immagini che non fanno parte di un progetto per la [modifica di immagini](./selecting-an-area-of-an-image-image-editor-for-icons.md)autonome.
 
 Per informazioni sull' **editor di immagini**, vedere come [creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [usare uno strumento di disegno](../windows/using-a-drawing-tool-image-editor-for-icons.md), [lavorare con](../windows/working-with-color-image-editor-for-icons.md)i [tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)e colore.
 
@@ -81,10 +81,10 @@ Il menu **immagine** , visualizzato solo quando l' **editor di immagini** è att
 |**Carica tavolozza**|Apre la finestra di dialogo **Carica tavolozza** , che consente di caricare i colori della tavolozza precedentemente salvati in un file. PAL.|
 |**Salva tavolozza**|Salva i colori della tavolozza in un file con estensione PAL.|
 |**Opaco**|Quando questa opzione è selezionata, rende opaca la selezione corrente.<br/><br/>Quando è deselezionata, rende trasparente la selezione corrente.|
-|**Editor barra degli strumenti**|Apre la finestra di [dialogo nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md).|
+|**Editor barra degli strumenti**|Apre la finestra di [dialogo nuova risorsa barra degli strumenti](./toolbar-editor.md).|
 |**Impostazioni griglia**|Apre la finestra di dialogo **Impostazioni griglia** in cui è possibile specificare griglie per l'immagine.|
-|**Nuovo tipo di immagine**|Apre la finestra di [dialogo nuovo tipo di immagine > \<dispositivo](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Una singola risorsa icona può contenere diverse immagini di dimensioni diverse e Windows può usare le dimensioni dell'icona appropriate a seconda di come verrà visualizzato. Un nuovo tipo di dispositivo non modifica le dimensioni dell'icona, bensì crea una nuova immagine all'interno dell'icona. Si applica solo a icone e cursori.|
-|**Tipo di immagine icona/cursore corrente**|Apre un sottomenu che elenca le prime nove immagini del cursore o dell'icona disponibili. L'ultimo comando del sottomenu **più**, apre la finestra di [dialogo apri \<dispositivo > immagine](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Nuovo tipo di immagine**|Apre la finestra di [ \<Device> dialogo nuovo tipo di immagine](./creating-an-icon-or-other-image-image-editor-for-icons.md).<br/><br/>Una singola risorsa icona può contenere diverse immagini di dimensioni diverse e Windows può usare le dimensioni dell'icona appropriate a seconda di come verrà visualizzato. Un nuovo tipo di dispositivo non modifica le dimensioni dell'icona, bensì crea una nuova immagine all'interno dell'icona. Si applica solo a icone e cursori.|
+|**Tipo di immagine icona/cursore corrente**|Apre un sottomenu che elenca le prime nove immagini del cursore o dell'icona disponibili. L'ultimo comando del sottomenu **più**, apre la finestra di [ \<Device> dialogo Apri immagine](./creating-an-icon-or-other-image-image-editor-for-icons.md).|
 |**Elimina tipo di immagine**|Elimina l'immagine del dispositivo selezionata.|
 |**Strumenti**|Avvia un sottomenu che contiene tutti gli strumenti disponibili dalla barra degli strumenti dell' **editor di immagini** .|
 
@@ -94,16 +94,16 @@ La finestra di dialogo **Impostazioni griglia** consente di specificare le impos
 |---|---|
 |**Griglia in pixel**|Quando questa opzione è selezionata, viene visualizzata una griglia intorno a ogni pixel nell' **editor di immagini**.<br/><br/>La griglia viene visualizzata solo con le risoluzioni 4 × e successive.|
 |**Griglia affiancata**|Quando questa opzione è selezionata, viene visualizzata una griglia intorno a blocchi di pixel nell' **editor di immagini**, specificata dai valori di spaziatura della griglia.|
-|**Width**|Specifica la larghezza di ogni blocco di sezioni.<br/><br/>Questa proprietà è utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.|
-|**Height**|Specifica l'altezza di ogni blocco di sezioni.<br/><br/>Questa proprietà è utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.|
+|**Larghezza**|Specifica la larghezza di ogni blocco di sezioni.<br/><br/>Questa proprietà è utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.|
+|**Altezza**|Specifica l'altezza di ogni blocco di sezioni.<br/><br/>Questa proprietà è utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.|
 
 ## <a name="toolbar"></a>Barra degli strumenti
 
 La barra degli strumenti dell' **editor di immagini** contiene gli strumenti per disegnare, disegnare, immettere testo, cancellare e modificare le visualizzazioni. Contiene anche un selettore di opzioni con cui è possibile selezionare le opzioni per l'uso di ogni strumento. Ad esempio, è possibile scegliere tra diverse larghezze del pennello, fattori di ingrandimento e stili di linea.
 
-Tutti gli strumenti disponibili sulla barra degli strumenti dell' **editor di immagini** sono disponibili anche nell' **immagine** del menu > **Tools**. Per utilizzare la barra degli strumenti dell' **editor di immagini** e il selettore di **Opzioni** , selezionare lo strumento o l'opzione desiderata.
+Tutti gli strumenti disponibili sulla barra degli strumenti dell' **editor di immagini** sono disponibili anche dagli strumenti per le **Immagini**dei menu  >  **Tools**. Per utilizzare la barra degli strumenti dell' **editor di immagini** e il selettore di **Opzioni** , selezionare lo strumento o l'opzione desiderata.
 
-![Barra degli strumenti Editor di immagini](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
+![Barra degli strumenti dell'editor di immagini](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Barra degli strumenti **editor di immagini**
 
 > [!TIP]
@@ -111,7 +111,7 @@ Barra degli strumenti **editor di immagini**
 
 Poiché molti degli strumenti di disegno sono disponibili sulla [tastiera](../windows/accelerator-keys-image-editor-for-icons.md), è talvolta utile nascondere la barra degli strumenti dell' **editor di immagini** .
 
-- Per visualizzare o nascondere la barra degli strumenti **editor di immagini** , passare a **visualizzazione** menu > **barre degli strumenti** e scegliere **editor di immagini**.
+- Per visualizzare o nascondere la barra degli strumenti **editor di immagini** , passare a menu **visualizzazione**  >  **barre degli strumenti** e scegliere **editor di immagini**.
 
 > [!NOTE]
 > Gli elementi di questa barra degli strumenti non saranno disponibili quando un file di immagine dal progetto o dalla soluzione corrente non è aperto nell' **editor di immagini**.
@@ -120,14 +120,14 @@ Poiché molti degli strumenti di disegno sono disponibili sulla [tastiera](../wi
 
 Con il selettore di **Opzioni** è possibile specificare la larghezza di una linea, un tratto di pennello e altro ancora. L'icona del pulsante di selezione delle **Opzioni** cambia a seconda dello strumento selezionato.
 
-![Selettore forme disegno&#45;sulla barra degli strumenti dell'editor di immagini](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
+![Disegno&#45;selettore forme sulla barra degli strumenti dell'editor di immagini](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
 Selettore di **Opzioni** nella barra degli strumenti **editor di immagini**
 
 ### <a name="text-tool"></a>Strumento testo
 
 Utilizzare la finestra di dialogo **strumento testo** per aggiungere testo a una risorsa di cursore, bitmap o icona.
 
-Per accedere a questa finestra di dialogo, aprire l' **editor di immagini** e passare a menu **immagine** > **strumenti**, quindi selezionare il comando **strumento testo** .
+Per accedere a questa finestra di dialogo, aprire l' **editor di immagini** e passare a menu **Image**  >  **Tools**, quindi selezionare il comando **strumento testo** .
 
 > [!TIP]
 > È possibile fare clic con il pulsante destro del mouse sulla finestra di dialogo **strumento testo** per accedere a un menu di scelta rapida predefinito contenente un elenco di comandi standard di Windows.
@@ -148,13 +148,13 @@ Per accedere a questa finestra di dialogo, selezionare il pulsante **carattere**
 
 Di seguito è riportato un esempio di come aggiungere testo a un'icona in un'applicazione Windows e modificare il tipo di carattere del testo.
 
-1. Creare un' C++ applicazione Windows Forms. Per informazioni dettagliate, vedere [procedura: creare Windows Forms applicazioni](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Per impostazione predefinita, al progetto viene aggiunto un file *app. ico* .
+1. Creare un'applicazione C++ Windows Forms. Per informazioni dettagliate, vedere [procedura: creare Windows Forms applicazioni](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Per impostazione predefinita, al progetto viene aggiunto un file *app. ico* .
 
 1. In **Esplora soluzioni**fare doppio clic sul file *app. ico*. Si aprirà l' **editor di immagini** .
 
-1. Passare a menu **immagine** > **strumenti** e selezionare **strumento testo**.
+1. Passare a strumenti **immagine**menu  >  **Tools** e selezionare **strumento testo**.
 
-1. Nella finestra di dialogo **strumento testo** Digitare *C++* l'area di testo vuota. Questo testo verrà visualizzato in una casella ridimensionabile posizionata nell'angolo superiore sinistro di *app. ico* nell' **editor di immagini**.
+1. Nella finestra di dialogo **strumento testo** Digitare *C++* nell'area di testo vuota. Questo testo verrà visualizzato in una casella ridimensionabile posizionata nell'angolo superiore sinistro di *app. ico* nell' **editor di immagini**.
 
 1. Nell' **editor di immagini**trascinare la casella ridimensionabile al centro di *app. ico* per migliorare la leggibilità del testo.
 
@@ -206,13 +206,13 @@ Per impostazione predefinita, l' **editor di immagini** Visualizza la visualizza
 
 Per tutti i riquadri dell' **editor di immagini** con un fattore di ingrandimento maggiore o uguale a 4, è possibile visualizzare una griglia che delimita i singoli pixel nell'immagine.
 
-1. Passare a **immagine** menu > **Impostazioni griglia**.
+1. Passare a menu **Immagini**  >  **griglia impostazioni**.
 
 1. Selezionare la casella di controllo **griglia in pixel** per visualizzare la griglia oppure deselezionare la casella per nascondere la griglia.
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

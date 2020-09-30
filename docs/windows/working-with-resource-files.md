@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165886"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502905"
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
 
 > [!WARNING]
 > Questa sezione si applica ad applicazioni desktop di Windows scritte in C++.
 >
-> Per informazioni sulle risorse nelle app piattaforma UWP (Universal Windows Platform) scritte in C++, vedere [definizione delle risorse dell'app](/windows/uwp/app-resources/)o aggiunta di risorse C++a progetti/CLI (gestiti). vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework.
+> Per informazioni sulle risorse nelle app piattaforma UWP (Universal Windows Platform) scritte in C++, vedere [definizione delle risorse dell'app](/windows/uwp/app-resources/)o aggiunta di risorse a progetti c++/CLI (gestiti). vedere [risorse nelle applicazioni desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework.
 
 Le risorse possono essere costituite da una vasta gamma di elementi, ad esempio:
 
@@ -52,10 +52,10 @@ Vengono descritti gli editor di risorse disponibili in Visual Studio e i tipi di
 [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
 Vengono forniti collegamenti alla documentazione di Visual C++.
 
-[Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)<br/>
+[Comunica con Microsoft](/visualstudio/ide/talk-to-us)<br/>
 Include collegamenti a informazioni sull'uso della documentazione disponibile, su come contattare il supporto tecnico e su come usare le funzionalità di accessibilità.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Applicazioni desktop di Windows](../windows/windows-desktop-applications-cpp.md)<br/>
+[Applicazioni desktop di Windows](./desktop-applications-visual-cpp.md)<br/>
 [Menu e altre risorse](/windows/win32/menurc/resources)

@@ -4,18 +4,18 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: cc96b5ed931713ca64a0582ca1cc18a8526ea8af
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616688"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504265"
 ---
 # <a name="active-template-library-atl-concepts"></a>Concetti relativi alla Libreria ATL (Active Template Library)
 
 La libreria ATL (Active Template Library) è costituita da una serie di classi C++ basate su modelli che consentono di creare oggetti COM (Component Object Model) rapidi e di piccole dimensioni. Include un supporto speciale per le principali funzionalità COM, tra cui implementazioni predefinite, interfacce duali, interfacce dell'enumeratore standard, punti di connessione, interfacce a scomparsa e controllo ActiveX.
 
-Se si programma molto con ATL, è utile conoscere meglio gli attributi COM e .NET che semplificano la programmazione COM. Per altre informazioni, vedere [Programmazione con attributi](../windows/attributed-programming-concepts.md). Gli attributi COM e .NET non devono essere confusi con la funzione \[\[attribute]] nel codice standard C++.
+Se si programma molto con ATL, è utile conoscere meglio gli attributi COM e .NET che semplificano la programmazione COM. Per altre informazioni, vedere [Programmazione con attributi](../windows/attributes/cpp-attributes-com-net.md). Gli attributi COM e .NET non devono essere confusi con la funzione \[\[attribute]] nel codice standard C++.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -46,7 +46,7 @@ Offre istruzioni dettagliate per la creazione di un controllo DHTML.
 [Punti di connessione ATL](atl-connection-points.md)<br/>
 Spiega cosa sono i punti di connessione e come vengono implementi da ATL.
 
-[Gestione di eventi e ATL](event-handling-and-atl.md)<br/>
+[Gestione degli eventi e ATL](event-handling-and-atl.md)<br/>
 Descrive i passaggi da eseguire per gestire gli eventi COM tramite le classi ATL [IDispEventImpl](reference/idispeventimpl-class.md) e [IDispEventSimpleImpl](reference/idispeventsimpleimpl-class.md).
 
 [ATL e il gestore di marshalling a thread libero](atl-and-the-free-threaded-marshaler.md)<br/>
@@ -55,7 +55,7 @@ Offre informazioni dettagliate sull'opzione Creazione guidata oggetto semplice A
 [Specifica di un modello di threading per un progetto](specifying-the-threading-model-for-a-project-atl.md)<br/>
 Descrive le macro disponibili per controllare le prestazioni in fase di esecuzione relative al threading nel progetto.
 
-[Classi di modulo ATL](atl-module-classes.md)<br/>
+[Classi del modulo ATL](atl-module-classes.md)<br/>
 Illustra le nuovi classi di modulo in ATL 7.0. Le classi di modulo implementano le funzionalità di base richieste da ATL.
 
 [Servizi ATL](atl-services.md)<br/>
@@ -70,7 +70,7 @@ Descrive come usare array e mapping in ATL.
 [Componente del Registro di sistema ATL (registrar)](atl-registry-component-registrar.md)<br/>
 Illustra la sintassi e i parametri sostituibili per gli script ATL. Spiega anche come configurare un collegamento statico al registrar.
 
-[Programmazione con il codice runtime C e ATL](programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmazione con il codice di runtime di C e ATL](programming-with-atl-and-c-run-time-code.md)<br/>
 Illustra i vantaggi del collegamento statico o dinamico alla libreria di runtime del linguaggio C (CRT).
 
 [Programmazione con CComBSTR](programming-with-ccombstr-atl.md)<br/>
@@ -96,7 +96,7 @@ Contiene informazioni sulla Creazione guidata progetto ATL.
 [Creazione guidata controllo ATL](reference/atl-control-wizard.md)<br/>
 Descrive come aggiungere le classi.
 
-[Programmazione con attributi](../windows/attributed-programming-concepts.md)<br/>
+[Programmazione con attributi](../windows/attributes/cpp-attributes-com-net.md)<br/>
 Offre una panoramica dell'uso di attributi per semplificare la programmazione COM, nonché un elenco di collegamenti ad argomenti più dettagliati.
 
 [Panoramica della classe ATL](atl-class-overview.md)<br/>

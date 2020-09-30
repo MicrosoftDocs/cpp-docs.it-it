@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 91b6365334b977957ff6bd6c25278d4088961a2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59d81c0b835171132ebf29739a4e130191a87769
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222069"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504448"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Procedura: definire l'accesso e i valori del controllo (C++)
 
@@ -103,14 +103,14 @@ In genere, gli utenti della tastiera spostano lo stato attivo di input da un con
 
 1. Premere **invio** al termine dell'aggiunta di valori.
 
-Per informazioni sull'ampliamento della parte a discesa di una casella combinata, vedere [impostazione delle dimensioni della casella combinata e del relativo elenco a discesa](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).
+Per informazioni sull'ampliamento della parte a discesa di una casella combinata, vedere [impostazione delle dimensioni della casella combinata e del relativo elenco a discesa](./arrangement-of-controls-on-dialog-boxes.md).
 
 > [!NOTE]
 > Non è possibile aggiungere valori ai progetti Win32 utilizzando questa procedura (la proprietà **dei dati** è disattivata per i progetti Win32). Poiché i progetti Win32 non dispongono di librerie che aggiungono questa funzionalità, è necessario aggiungere i valori a una casella combinata con un progetto Win32 a livello di codice.
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Per verificare l'aspetto dei valori in una casella combinata
 
-1. Dopo aver immesso i valori nella proprietà **Data** , selezionare il pulsante **test** nella [barra degli strumenti dell'editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+1. Dopo aver immesso i valori nella proprietà **Data** , selezionare il pulsante **test** nella [barra degli strumenti dell'editor finestre](./dialog-editor.md).
 
 1. Provare a scorrere l'intero elenco di valori. I valori vengono visualizzati esattamente come sono digitati nella proprietà **dati** nella finestra **Proprietà** . Non esiste alcun controllo ortografico o di maiuscole.
 
@@ -118,7 +118,7 @@ Per informazioni sull'ampliamento della parte a discesa di una casella combinata
 
 ## <a name="radio-button-values"></a>Valori dei pulsanti di opzione
 
-Quando si aggiungono pulsanti di opzione a una finestra di dialogo, considerarli come gruppi impostando una proprietà **Group** nella finestra **Proprietà** per il primo pulsante del gruppo. Nell' [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md)viene quindi visualizzato un ID di controllo per tale pulsante di opzione, consentendo di aggiungere una variabile membro per il gruppo di pulsanti di opzione.
+Quando si aggiungono pulsanti di opzione a una finestra di dialogo, considerarli come gruppi impostando una proprietà **Group** nella finestra **Proprietà** per il primo pulsante del gruppo. Nell' [Aggiunta guidata variabile membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard)viene quindi visualizzato un ID di controllo per tale pulsante di opzione, consentendo di aggiungere una variabile membro per il gruppo di pulsanti di opzione.
 
 È possibile avere più di un gruppo di pulsanti di opzione in una finestra di dialogo. Aggiungere ogni gruppo utilizzando la procedura riportata di seguito.
 
@@ -139,7 +139,7 @@ Quando si aggiungono pulsanti di opzione a una finestra di dialogo, considerarli
 
 1. Fare clic con il pulsante destro del mouse sul primo controllo pulsante di opzione nell'ordine di tabulazione (il controllo dominante e quello con la proprietà **Group** impostata su **true**) e scegliere **Aggiungi variabile**.
 
-1. Nell' [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md)selezionare la casella di controllo **Variabile controllo** , quindi il pulsante di opzione **Valore** .
+1. Nell' [Aggiunta guidata variabile membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard)selezionare la casella di controllo **Variabile controllo** , quindi il pulsante di opzione **Valore** .
 
    - Nella casella **Nome variabile** digitare il nome della nuova variabile membro.
 

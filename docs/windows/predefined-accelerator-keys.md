@@ -1,5 +1,5 @@
 ---
-title: Tasti di sceltaC++rapida ()
+title: Tasti di scelta rapida (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
 - accelerator keys
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: beb4e878138da3dc2905c86e18fedc658d7ceecf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4f838caa8ca9e4a996fa4cb8018d663c6c7aecea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215150"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504300"
 ---
-# <a name="accelerator-keys-c"></a>Tasti di sceltaC++rapida ()
+# <a name="accelerator-keys-c"></a>Tasti di scelta rapida (C++)
 
 ## <a name="predefined-accelerator-keys"></a>Tasti di scelta rapida predefiniti
 
@@ -55,15 +55,15 @@ Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un
 |VK_OEM_1|Windows Per la tastiera standard degli Stati Uniti, il tasto **;:**|
 |VK_OEM_102|Windows Il tasto parentesi angolare o il tasto barra rovesciata sulla tastiera RT 102-Key|
 |VK_OEM_2|Windows Per la tastiera standard degli Stati Uniti, il **/?** Key|
-|VK_OEM_3|Windows Per la tastiera standard degli Stati Uniti, la chiave di **`~**|
+|VK_OEM_3|Windows Per la tastiera standard degli Stati Uniti, la **`~** chiave|
 |VK_OEM_4|Windows Per la tastiera standard degli Stati Uniti, **[{** Key|
-|VK_OEM_5|Windows Per la tastiera standard degli Stati Uniti, la chiave di **\\&#124;**|
+|VK_OEM_5|Windows Per la tastiera standard degli Stati Uniti, la chiave di ** \\&#124;**|
 |VK_OEM_6|Windows Per la tastiera standard degli Stati Uniti, il tasto **]}**|
 |VK_OEM_7|Windows Per la tastiera standard degli Stati Uniti, il tasto ' virgolette singole/virgolette doppie '|
 |VK_OEM_COMMA|Windows Per ogni paese/area geografica **, la chiave**|
-|VK_OEM_MINUS|Windows Per ogni paese/area geografica, la chiave di **-**|
+|VK_OEM_MINUS|Windows Per ogni paese/area geografica, la **-** chiave|
 |VK_OEM_PERIOD|Windows Per ogni paese/area geografica, il **.** Key|
-|VK_OEM_PLUS|Windows Per ogni paese/area geografica, la chiave di **+**|
+|VK_OEM_PLUS|Windows Per ogni paese/area geografica, la **+** chiave|
 |VK_PACKET|Windows Utilizzato per passare i caratteri Unicode come se fossero sequenze di tasti.|
 |VK_RCONTROL|Tasto **CTRL destro**|
 |VK_RMENU|Tasto **menu a destra**|
@@ -77,7 +77,7 @@ Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un
 
 ## <a name="accelerator-key-association"></a>Associazione tasto di scelta rapida
 
-Molte volte si vuole che una voce di menu e una combinazione di tasti esegua lo stesso comando del programma. Questa azione viene eseguita assegnando lo stesso identificatore di risorsa (ID) alla voce di menu e a una voce nella tabella dei tasti di scelta rapida dell'applicazione. È quindi modificare la didascalia della voce di menu per visualizzare il nome del tasto di scelta rapida. Per ulteriori informazioni sulle voci di menu e sui tasti di scelta rapida, vedere [comandi di menu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+Molte volte si vuole che una voce di menu e una combinazione di tasti esegua lo stesso comando del programma. Questa azione viene eseguita assegnando lo stesso identificatore di risorsa (ID) alla voce di menu e a una voce nella tabella dei tasti di scelta rapida dell'applicazione. È quindi modificare la didascalia della voce di menu per visualizzare il nome del tasto di scelta rapida. Per ulteriori informazioni sulle voci di menu e sui tasti di scelta rapida, vedere [comandi di menu](./menu-command-properties.md).
 
 ## <a name="requirements"></a>Requisiti
 

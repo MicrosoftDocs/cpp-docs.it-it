@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 53ea92c2eece31829a7554c0f9accf2e56d727a9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840726"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504009"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macro per i modelli di provider OLE DB
 
@@ -118,7 +118,7 @@ in GUID della proprietà.
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
@@ -140,7 +140,7 @@ in UPROPSET_HIDDEN per tutti i set di proprietà che non si desidera esporre o U
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_propset_map"></a><a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
@@ -208,7 +208,7 @@ in GUID della proprietà.
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="end_propset_map"></a><a name="end_propset_map"></a> END_PROPSET_MAP
 
@@ -222,7 +222,7 @@ END_PROPSET_MAP()
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry"></a><a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
@@ -241,11 +241,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 
 #### <a name="remarks"></a>Osservazioni
 
-La macro imposta il valore della proprietà di tipo `DWORD` su un valore predefinito definito in ATLDB. H. Per impostare la proprietà su un valore di propria scelta, usare [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Per impostare `VARTYPE` contemporaneamente e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) per la proprietà, utilizzare [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+La macro imposta il valore della proprietà di tipo `DWORD` su un valore predefinito definito in ATLDB. H. Per impostare la proprietà su un valore di propria scelta, usare [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value). Per impostare `VARTYPE` contemporaneamente e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) per la proprietà, utilizzare [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
@@ -276,11 +276,11 @@ DBPROPOPTIONS_REQUIRED o DBPROPOPTIONS_SETIFCHEAP. In genere, non è necessario 
 
 #### <a name="remarks"></a>Osservazioni
 
-Con questa macro è possibile specificare direttamente il valore della proprietà di tipo `DWORD` nonché le opzioni e i flag. Per impostare semplicemente una proprietà sul valore predefinito indicato in ATLDB.H, usare [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Per impostare una proprietà su un valore a scelta, senza impostare opzioni o flag, usare [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).
+Con questa macro è possibile specificare direttamente il valore della proprietà di tipo `DWORD` nonché le opzioni e i flag. Per impostare semplicemente una proprietà sul valore predefinito indicato in ATLDB.H, usare [PROPERTY_INFO_ENTRY](#property_info_entry). Per impostare una proprietà su un valore a scelta, senza impostare opzioni o flag, usare [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value).
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
@@ -302,11 +302,11 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 
 #### <a name="remarks"></a>Osservazioni
 
-Con questa macro è possibile specificare direttamente il valore della proprietà di tipo `DWORD` . Per impostare la proprietà su un valore predefinito definito in ATLDB. H, utilizzare [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Per impostare il valore, i flag e le opzioni per la proprietà, utilizzare [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Con questa macro è possibile specificare direttamente il valore della proprietà di tipo `DWORD` . Per impostare la proprietà su un valore predefinito definito in ATLDB. H, utilizzare [PROPERTY_INFO_ENTRY](#property_info_entry). Per impostare il valore, i flag e le opzioni per la proprietà, utilizzare [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Vedere [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
@@ -341,7 +341,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Vedere [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry"></a><a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -358,7 +358,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *nome*<br/>
 in Nome della colonna.
 
-*ordinal*<br/>
+*ordinale*<br/>
 [in] Numero di colonna. A meno che la colonna non sia una colonna di segnalibri, il numero di colonna non deve essere 0.
 
 *membro*<br/>
@@ -379,7 +379,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *nome*<br/>
 in Nome della colonna.
 
-*ordinal*<br/>
+*ordinale*<br/>
 [in] Numero di colonna. A meno che la colonna non sia una colonna di segnalibri, il numero di colonna non deve essere 0.
 
 *DbType*<br/>
@@ -394,7 +394,7 @@ Consente di specificare il tipo di dati della colonna.
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Vedere [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -411,7 +411,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *nome*<br/>
 in Nome della colonna.
 
-*ordinal*<br/>
+*ordinale*<br/>
 [in] Numero di colonna. A meno che la colonna non sia una colonna di segnalibri, il numero di colonna non deve essere 0.
 
 *flags*<br/>
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *nome*<br/>
 in Nome della colonna.
 
-*ordinal*<br/>
+*ordinale*<br/>
 [in] Numero di colonna. A meno che la colonna non sia una colonna di segnalibri, il numero di colonna non deve essere 0.
 
 *size*<br/>
@@ -466,7 +466,7 @@ Consente di specificare le dimensioni della colonna.
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Vedere [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -483,7 +483,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *nome*<br/>
 in Nome della colonna.
 
-*ordinal*<br/>
+*ordinale*<br/>
 [in] Numero di colonna. A meno che la colonna non sia una colonna di segnalibri, il numero di colonna non deve essere 0.
 
 *membro*<br/>
@@ -495,7 +495,7 @@ Utilizzare questa macro quando si presuppone che i dati della colonna siano [DBT
 
 #### <a name="example"></a>Esempio
 
-Vedere [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Vedere [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -512,7 +512,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *nome*<br/>
 in Nome della colonna.
 
-*ordinal*<br/>
+*ordinale*<br/>
 [in] Numero di colonna. A meno che la colonna non sia una colonna di segnalibri, il numero di colonna non deve essere 0.
 
 *DbType*<br/>
@@ -526,7 +526,7 @@ in Variabile membro nella classe di dati che archivia i dati.
 
 #### <a name="remarks"></a>Osservazioni
 
-Analogo a [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) ma consente inoltre di specificare il tipo di dati della colonna e le dimensioni.
+Analogo a [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) ma consente inoltre di specificare il tipo di dati della colonna e le dimensioni.
 
 ### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 
@@ -543,7 +543,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *nome*<br/>
 in Nome della colonna.
 
-*ordinal*<br/>
+*ordinale*<br/>
 [in] Numero di colonna. A meno che la colonna non sia una colonna di segnalibri, il numero di colonna non deve essere 0.
 
 *membro*<br/>

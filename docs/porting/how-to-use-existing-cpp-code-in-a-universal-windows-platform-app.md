@@ -3,12 +3,12 @@ title: "Procedura: Usare codice C++ esistente in un'app UWP (Universal Windows P
 description: Modi per usare le app e le librerie di codice esistenti in app piattaforma UWP (Universal Windows Platform).
 ms.date: 09/04/2020
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 1e946d588f1a14018ebb11a60b319c2d54658f25
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: fd23c875d67654e96a828f4dba412dd74652912a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609137"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503672"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: Usare codice C++ esistente in un'app UWP (Universal Windows Platform)
 
@@ -30,7 +30,7 @@ Per esporre la funzionalità ai chiamanti in altre lingue, è possibile converti
 
 La discussione precedente non si applica ai componenti COM, che devono essere gestiti in modo diverso. Se si dispone di un server COM in un file EXE o DLL, è possibile utilizzarlo in un progetto di Windows universale. Assemblarlo come [componente COM senza registrazione](/windows/win32/sbscs/creating-registration-free-com-objects), aggiungerlo al progetto come file di contenuto e crearne un'istanza usando [`CoCreateInstanceFromApp`](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) . Per altre informazioni, vedere [Using Free-COM DLL in Windows Store C++ Project](/archive/blogs/win8devsupport/using-free-com-dll-in-windows-store-c-project) (Uso di DLL senza COM in progetti C++ di Windows Store).
 
-Se si vuole trasferire una libreria COM esistente a UWP, è anche possibile convertirla in un componente Windows Runtime. Si consiglia la libreria C++/WinRT per queste porte, ma è anche possibile usare la libreria di [modelli c++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md). WRL è deprecato e non supporta tutte le funzionalità di ATL e OLE. Il fatto che tale porta sia fattibile dipende dalle funzionalità di COM, ATL e OLE richieste dal componente.
+Se si vuole trasferire una libreria COM esistente a UWP, è anche possibile convertirla in un componente Windows Runtime. Si consiglia la libreria C++/WinRT per queste porte, ma è anche possibile usare la libreria di [modelli c++ Windows Runtime (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md). WRL è deprecato e non supporta tutte le funzionalità di ATL e OLE. Il fatto che tale porta sia fattibile dipende dalle funzionalità di COM, ATL e OLE richieste dal componente.
 
 Indipendentemente dagli scenari di sviluppo scelti, è necessario tenere presente una serie di definizioni di macro. È possibile usare queste macro nel codice per compilare il codice in modo condizionale in Win32 Desktop classico e in UWP.
 
@@ -237,6 +237,6 @@ Quando si usa C++/CX, è possibile aggiungere tipi di riferimento e altri costru
 
 1. Testare il componente aggiungendovi un riferimento da un progetto dell'app UWP e aggiungere codice per chiamare le API pubbliche create.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Porting to the Universal Windows Platform](../porting/porting-to-the-universal-windows-platform-cpp.md) (Conversione in Universal Windows Platform)

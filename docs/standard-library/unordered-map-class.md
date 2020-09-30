@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 2f30b5683d8487830d596fc8185430c8a4c4c7b0
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f8ffd7b3990f2d0ab40f8059e65f0aba4d4c8e0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352414"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503588"
 ---
 # <a name="unordered_map-class"></a>Classe unordered_map
 
@@ -926,7 +926,7 @@ Valore della chiave dell'elemento da cercare.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'elemento viene trovato nel contenitore. `false` in caso contrario,. 
+`true` Se l'elemento viene trovato nel contenitore. `false` in caso contrario,.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -948,7 +948,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedMap.contains(1) << '\n';
     std::cout << theUnorderedMap.contains(2) << '\n';
-    
+
     return 0;
 }
 ```
@@ -2924,6 +2924,4 @@ int main()
 ## <a name="see-also"></a>Vedere anche
 
 [<unordered_map>](../standard-library/unordered-map.md)\
-[Contenitori](./stl-containers.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

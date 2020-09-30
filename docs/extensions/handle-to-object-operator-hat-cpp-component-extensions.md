@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8927ef0e34f2c2b12722d453e0dde6f7357eb33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225150"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503139"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operatore handle all'oggetto (^) (C++/CLI e C++/CX)
 
-Il *dichiaratore di handle* ( `^` , pronunciato "Hat"), modifica l' [identificatore](../cpp/overview-of-declarators.md) di tipo per indicare che l'oggetto dichiarato deve essere eliminato automaticamente quando il sistema determina che l'oggetto non è più accessibile.
+Il *dichiaratore di handle* ( `^` , pronunciato "Hat"), modifica l' [identificatore](../cpp/declarations-and-definitions-cpp.md) di tipo per indicare che l'oggetto dichiarato deve essere eliminato automaticamente quando il sistema determina che l'oggetto non è più accessibile.
 
 ## <a name="accessing-the-declared-object"></a>Accesso all'oggetto dichiarato
 
@@ -40,7 +40,7 @@ Dal momento che i puntatori nativi C++ (`*`) e i riferimenti (`&`) non sono rife
 
 Per altre informazioni, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 In questo esempio viene illustrato come creare un'istanza di un tipo di riferimento nell'heap gestito.  Viene inoltre spiegato che è possibile inizializzare un handle con un altro, ottenendo due riferimenti allo stesso oggetto dell'heap gestito e sottoposto a Garbage Collection. Si noti che l'assegnazione di [nullptr](nullptr-cpp-component-extensions.md) a un handle non contrassegna l'oggetto per il processo di Garbage Collection.
 

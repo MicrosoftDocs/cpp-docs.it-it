@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 1c69e8878885acd80c285691fb0861a476af03ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 008d2ab420034e628251c08222bf2e9f723deab1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160515"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504503"
 ---
 # <a name="how-to-create-symbols-c"></a>Procedura: creare simboli (C++)
 
@@ -39,14 +39,14 @@ La finestra di dialogo contiene le proprietà seguenti:
 
 |Proprietà|Descrizione|
 |--------------------------|------------------------------------------|
-|**Nome**|Visualizza il nome del simbolo.<br/><br/>Per ulteriori informazioni, vedere [restrizioni relative ai nomi di simboli](../windows/symbol-name-restrictions.md).|
-|**Valore**|Visualizza il valore numerico del simbolo.<br/><br/>Per altre informazioni, vedere [restrizioni relative ai valori dei simboli](../windows/symbol-value-restrictions.md).|
+|**Nome**|Visualizza il nome del simbolo.<br/><br/>Per ulteriori informazioni, vedere [restrizioni relative ai nomi di simboli](./changing-a-symbol-or-symbol-name-id.md).|
+|**Valore**|Visualizza il valore numerico del simbolo.<br/><br/>Per altre informazioni, vedere [restrizioni relative ai valori dei simboli](./changing-a-symbol-or-symbol-name-id.md).|
 |**In uso**|Se è selezionata, questa opzione specifica che il simbolo viene usato da una o più risorse.<br/><br/>La risorsa o le risorse sono elencate nella casella **utilizzato da** .|
 |**Mostra simboli di sola lettura**|Se è selezionata, questa opzione visualizza le risorse di sola lettura.<br/><br/>Per impostazione predefinita, nella finestra di dialogo **simbolo risorsa** vengono visualizzate solo le risorse modificabili nel file di script di risorsa, ma con questa opzione selezionata, le risorse modificabili vengono visualizzate in grassetto e le risorse di sola lettura vengono visualizzate in testo normale.|
 |**Usato da**|Visualizza la risorsa o le risorse che usano il simbolo selezionato nell'elenco dei simboli.<br/><br/>Per passare all'editor per una determinata risorsa, selezionare la risorsa nella casella **usato da** e scegliere **Visualizza uso**.|
 |**Nuovo**|Apre la finestra di dialogo **nuovo simbolo** che consente di definire il nome e, se necessario, un valore per un nuovo identificatore di risorsa simbolico.|
-|**Modifica**|Apre la finestra di dialogo **Cambia simbolo** che consente di modificare il nome o il valore di un simbolo.<br/><br/>Se è relativo a un controllo o a una risorsa in uso, è possibile modificare il simbolo solo tramite l'editor di risorse corrispondente. Per altre informazioni, vedere [gestire i simboli](../windows/changing-unassigned-symbols.md).|
-|**Visualizza utilizzo**|Apre la risorsa contenente il simbolo nell'editor di risorse corrispondente.|
+|**Modifica**|Apre la finestra di dialogo **Cambia simbolo** che consente di modificare il nome o il valore di un simbolo.<br/><br/>Se è relativo a un controllo o a una risorsa in uso, è possibile modificare il simbolo solo tramite l'editor di risorse corrispondente. Per altre informazioni, vedere [gestire i simboli](./changing-a-symbol-or-symbol-name-id.md).|
+|**Visualizza uso**|Apre la risorsa contenente il simbolo nell'editor di risorse corrispondente.|
 
 ## <a name="create-symbols"></a>Crea simboli
 

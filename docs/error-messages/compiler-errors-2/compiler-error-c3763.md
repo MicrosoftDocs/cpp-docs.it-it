@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7ccb3d846982bbf9a52a7267549f6481b5a1bd9b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757254"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503960"
 ---
 # <a name="compiler-error-c3763"></a>Errore del compilatore C3763
 
 ' type ':' retval ' è out ' possono essere visualizzati solo in un tipo di puntatore a dati
 
-Gli attributi [out](../../windows/out-cpp.md) o [retval](../../windows/retval.md) possono essere visualizzati solo nei parametri di tipo pointer. Rimuovere l'attributo o creare il parametro di tipo pointer.
+Gli attributi [out](../../windows/attributes/out-cpp.md) o [retval](../../windows/attributes/retval.md) possono essere visualizzati solo nei parametri di tipo pointer. Rimuovere l'attributo o creare il parametro di tipo pointer.
 
 L'esempio seguente genera l'C3763:
 

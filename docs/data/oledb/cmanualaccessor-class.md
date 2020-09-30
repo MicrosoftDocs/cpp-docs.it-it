@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838100"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504097"
 ---
 # <a name="cmanualaccessor-class"></a>Classe CManualAccessor
 
@@ -104,7 +104,7 @@ in Puntatore alla variabile da associare allo stato della colonna, se necessario
 
 ### <a name="remarks"></a>Osservazioni
 
-Per usare questa funzione, è necessario chiamare prima [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Non è possibile aggiungere più voci rispetto al numero di colonne specificato in `CreateAccessor` .
+Per usare questa funzione, è necessario chiamare prima [CreateAccessor](#createaccessor). Non è possibile aggiungere più voci rispetto al numero di colonne specificato in `CreateAccessor` .
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor:: AddParameterEntry
 
@@ -148,7 +148,7 @@ in Specifica se il parametro a cui è associata l'associazione è un parametro d
 
 ### <a name="remarks"></a>Osservazioni
 
-Per usare questa funzione, è necessario chiamare prima [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
+Per usare questa funzione, è necessario chiamare prima [CreateParameterAccessor](#createparameteraccessor).
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor:: CreateAccessor
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>Parametri
 
 *nBindEntries*<br/>
-in Numero di colonne. Questo numero deve corrispondere al numero di chiamate alla funzione [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
+in Numero di colonne. Questo numero deve corrispondere al numero di chiamate alla funzione [CManualAccessor:: AddBindEntry](#addbindentry) .
 
 *pBuffer*<br/>
 in Puntatore al buffer in cui sono archiviate le colonne di output.
@@ -210,7 +210,7 @@ Uno dei valori HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-È necessario chiamare questa funzione prima di chiamare [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
+È necessario chiamare questa funzione prima di chiamare [AddParameterEntry](#addparameterentry).
 
 ## <a name="see-also"></a>Vedere anche
 

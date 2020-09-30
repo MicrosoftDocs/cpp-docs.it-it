@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230493"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503877"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà personalizzate
 
@@ -40,7 +40,7 @@ Le proprietà personalizzate sono disponibili in quattro tipi di implementazione
 
    L'implementazione con parametri è supportata dalla procedura guidata Aggiungi proprietà. Una proprietà con parametri (talvolta denominata matrice di proprietà) può essere usata per accedere a un set di valori tramite una singola proprietà del controllo. La macro di immissione della mappa di invio per questa implementazione è DISP_PROPERTY_PARAM. Per ulteriori informazioni sull'implementazione di questo tipo, vedere [implementazione di una proprietà con parametri](mfc-activex-controls-advanced-topics.md) nell'articolo controlli ActiveX: argomenti avanzati.
 
-## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a>Utilizzo dell'aggiunta guidata proprietà per aggiungere una proprietà personalizzata
+## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a> Utilizzo dell'aggiunta guidata proprietà per aggiungere una proprietà personalizzata
 
 Nella procedura seguente viene illustrata l'aggiunta di una proprietà personalizzata, CircleOffset, che utilizza l'implementazione dei metodi get/set. La proprietà personalizzata CircleOffset consente all'utente del controllo di sfalsare il cerchio dal centro del rettangolo di delimitazione del controllo. La procedura per l'aggiunta di proprietà personalizzate con un'implementazione diversa dai metodi get/set è molto simile.
 
@@ -56,7 +56,7 @@ Questa stessa procedura può essere utilizzata anche per aggiungere altre propri
 
 1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi proprietà**.
 
-   Verrà visualizzata l' [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md).
+   Verrà visualizzata l' [Aggiunta guidata proprietà](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard).
 
 1. Nella casella **nome proprietà** digitare *CircleOffset*.
 
@@ -68,7 +68,7 @@ Questa stessa procedura può essere utilizzata anche per aggiungere altre propri
 
 1. Fare clic su **Fine**.
 
-## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a>Aggiunta guidata proprietà modifiche per le proprietà personalizzate
+## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a> Aggiunta guidata proprietà modifiche per le proprietà personalizzate
 
 Quando si aggiunge la proprietà personalizzata CircleOffset, l'aggiunta guidata proprietà apporta modifiche all'intestazione. H) e l'implementazione di (. CPP) file della classe del controllo.
 

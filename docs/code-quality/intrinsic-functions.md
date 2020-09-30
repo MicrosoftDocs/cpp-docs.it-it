@@ -10,12 +10,12 @@ f1_keywords:
 - _Nullterm_length_
 - _Inexpressible_
 ms.assetid: adf29f8c-89fd-4a5e-9804-35ac83e1c457
-ms.openlocfilehash: 0aed625cfa17c75bbfb36506436e9e2c52a7a13b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1a7bae43a6fcd875f2e713695969f0d88b0dfe5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216674"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504163"
 ---
 # <a name="intrinsic-functions"></a>Funzioni intrinseche
 
@@ -29,7 +29,7 @@ Le seguenti annotazioni di funzioni intrinseche forniscono l'utilità generale p
 |----------------|-----------------|
 |`_Curr_`|Sinonimo dell'oggetto attualmente annotato.  Quando viene utilizzata l'annotazione `_At_`, `_Curr_` è identica al primo parametro di `_At_`.  In caso contrario, è il parametro o l'intera funzione/valore restituito con cui l'annotazione è lessicalmente associata.|
 |`_Inexpressible_(expr)`|Esprime una situazione in cui la dimensione di un buffer è troppo complessa per essere rappresentata con un'espressione di annotazione, ad esempio quando viene calcolata esaminando un set di dati di input e successivamente contando i membri selezionati.|
-|`_Nullterm_length_(param)`|`param`numero di elementi nel buffer fino a che non include un carattere di terminazione null. Può essere applicato a qualsiasi buffer di tipo non di aggregazione, non void.|
+|`_Nullterm_length_(param)`|`param` numero di elementi nel buffer fino a che non include un carattere di terminazione null. Può essere applicato a qualsiasi buffer di tipo non di aggregazione, non void.|
 |`_Old_(expr)`|Una volta valutato nella precondizione, `_Old_` restituisce il valore di input `expr`.  Una volta valutato nella post condizione, restituisce il valore `expr` come sarebbe stato valutato nella precondizione.|
 |`_Param_(n)`|Il `n` parametro per una funzione, il conteggio da 1 a `n` e `n` è una costante integrale letterale. Se il parametro è denominato, questa annotazione è identica all'accesso al parametro in base al nome. **Nota:** `n` può fare riferimento ai parametri posizionali definiti da puntini di sospensione oppure possono essere utilizzati nei prototipi di funzione in cui non vengono utilizzati i nomi.  |
 |`return`|La parola chiave riservata C/C++ **`return`** può essere usata in un'espressione SAL per indicare il valore restituito di una funzione.  Il valore è disponibile solo nello stato di post; è un errore di sintassi utilizzarlo in uno stato di pre.|
@@ -40,9 +40,9 @@ Le seguenti annotazioni di funzioni intrinseche abilitano la modifica delle stri
 
 |Annotazione|Descrizione|
 |----------------|-----------------|
-|`_String_length_(param)`|`param`numero di elementi nella stringa che non include un carattere di terminazione null. Questa annotazione è riservata ai tipi di stringa di caratteri.|
-|`strlen(param)`|`param`numero di elementi nella stringa che non include un carattere di terminazione null. Questa annotazione è riservata per l'utilizzo su matrici di caratteri ed è simile alla funzione di runtime C [strlen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l).|
-|`wcslen(param)`|`param`numero di elementi nella stringa fino a un carattere di terminazione null, ma non incluso. Questa annotazione è riservata per l'uso su matrici di caratteri wide ed è simile alla funzione di runtime C [wcslen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l).|
+|`_String_length_(param)`|`param` numero di elementi nella stringa che non include un carattere di terminazione null. Questa annotazione è riservata ai tipi di stringa di caratteri.|
+|`strlen(param)`|`param` numero di elementi nella stringa che non include un carattere di terminazione null. Questa annotazione è riservata per l'utilizzo su matrici di caratteri ed è simile alla funzione di runtime C [strlen ()](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).|
+|`wcslen(param)`|`param` numero di elementi nella stringa fino a un carattere di terminazione null, ma non incluso. Questa annotazione è riservata per l'uso su matrici di caratteri wide ed è simile alla funzione di runtime C [wcslen ()](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).|
 
 ## <a name="see-also"></a>Vedere anche
 

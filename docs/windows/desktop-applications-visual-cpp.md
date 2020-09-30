@@ -3,12 +3,12 @@ title: Applicazioni desktop (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: f8e3dd386aee835ff383ba7567a5c320f206476e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404961"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504442"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 
@@ -38,13 +38,13 @@ Qualsiasi applicazione desktop in C++ può usare le classi e le funzioni di runt
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Applicazioni console di Windows in C++](console-applications-in-visual-cpp.md)|Contiene informazioni sulle applicazioni console. Un'applicazione console Win32 (o Win64) non ha una finestra specifica e non può attivare un ciclo di messaggi. Viene eseguita nella finestra della console e l'input e l'output vengono gestiti tramite la riga di comando.|
+|[Applicazioni console di Windows in C++](./overview-of-windows-programming-in-cpp.md)|Contiene informazioni sulle applicazioni console. Un'applicazione console Win32 (o Win64) non ha una finestra specifica e non può attivare un ciclo di messaggi. Viene eseguita nella finestra della console e l'input e l'output vengono gestiti tramite la riga di comando.|
 |[Procedura dettagliata: creazione di applicazioni desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare una semplice applicazione desktop di Windows.|
-|[Creazione di un'applicazione desktop di Windows vuota](creating-an-empty-windows-desktop-application.md)|Creazione di un progetto desktop di Windows privo di file predefiniti.|
-|[Aggiunta di file a un'applicazione Win32 vuota](adding-files-to-an-empty-win32-applications.md)|Come aggiungere file a un progetto vuoto.|
+|[Creazione di un'applicazione desktop di Windows vuota](./overview-of-windows-programming-in-cpp.md)|Creazione di un progetto desktop di Windows privo di file predefiniti.|
+|[Aggiunta di file a un'applicazione Win32 vuota](./overview-of-windows-programming-in-cpp.md)|Come aggiungere file a un progetto vuoto.|
 |[Uso di file di risorse](working-with-resource-files.md)|Come aggiungere immagini, icone, tabelle di stringhe e altre risorse a un'applicazione desktop.|
 |[Risorse per la creazione di un gioco con DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Collegamenti al contenuto per la creazione di giochi in C++.|
-|[Procedura dettagliata: creazione e utilizzo di una libreria statica](walkthrough-creating-and-using-a-static-library-cpp.md)|Come creare un file binario con estensione LIB.|
+|[Procedura dettagliata: creazione e utilizzo di una libreria statica](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|Come creare un file binario con estensione LIB.|
 |[Procedura: usare Windows 10 SDK in un'applicazione desktop di Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contiene i passaggi per configurare il progetto da compilare mediante Windows 10 SDK.|
 
 ## <a name="related-articles"></a>Articoli correlati

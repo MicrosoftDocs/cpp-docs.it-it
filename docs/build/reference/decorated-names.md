@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 20e7f5855b771caf23217e5c17db50a890e28113
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0cda21b1650fa660175248c15560a7ab0b251d07
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223850"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504248"
 ---
 # <a name="decorated-names"></a>Nomi decorati
 
@@ -22,7 +22,7 @@ Le convenzioni di denominazione decorate sono state modificate in diverse versio
 > [!NOTE]
 > Le librerie compilate con Visual Studio 2015 possono essere utilizzate da applicazioni compilate con Visual Studio 2017 o Visual Studio 2019.
 
-## <a name="using-decorated-names"></a><a name="Using"></a>Uso dei nomi decorati
+## <a name="using-decorated-names"></a><a name="Using"></a> Uso dei nomi decorati
 
 Di solito non è necessario conoscere il nome decorato per scrivere un codice che esegua la compilazione e crei il collegamento correttamente. I nomi decorati sono un dettaglio di implementazione interno del compilatore e del linker. Gli strumenti in genere possono gestire il nome nel formato non decorato. Tuttavia, un nome decorato a volte è necessario quando si specifica un nome di funzione per il linker e altri strumenti. Ad esempio, per trovare una corrispondenza con funzioni C++ in overload, membri di spezi dei nomi, costruttori di classe, distruttori e speciali funzioni membro, è necessario specificare il nome decorato. Per informazioni dettagliate sui flag di opzione e altre situazioni in cui sono necessari i nomi decorati, vedere la documentazione sugli strumenti e le opzioni in uso.
 
@@ -30,7 +30,7 @@ Se si modifica il nome della funzione, la classe, la convenzione di chiamata, il
 
 La decorazione dei nomi è importante anche quando si crea un collegamento a un codice scritto in altri linguaggi di programmazione o si usano altri compilatori. Ogni compilatore usa una convenzione di decorazione dei nomi diversa. Quando l'eseguibile crea un collegamento a un codice scritto in un altro linguaggio, si deve prestare particolare attenzione nel trovare una corrispondenza con i nomi esportati e importati e con le convenzioni di chiamata. Il codice della lingua dell'assembly deve usare i nomi decorati MSVC e le convenzioni di chiamata per il collegamento al codice sorgente scritto usando MSVC.
 
-## <a name="format-of-a-c-decorated-name"></a><a name="Format"></a>Formato di un nome decorato C++
+## <a name="format-of-a-c-decorated-name"></a><a name="Format"></a> Formato di un nome decorato C++
 
 Un nome decorato per una funzione C++ contiene le informazioni seguenti:
 
@@ -53,7 +53,7 @@ I nomi della funzione e della classe vengono codificati nel nome decorato. La pa
 |`int a(char){int i=3;return i;};`|`?a@@YAHD@Z`|
 |`void __stdcall b::c(float){};`|`?c@b@@AAGXM@Z`|
 
-## <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a>Formato di un nome decorato in C
+## <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a> Formato di un nome decorato in C
 
 Il formato della decorazione per una funzione C dipende dalla convenzione di chiamata usata nella dichiarazione, come mostrato nella tabella seguente. Questo è il formato della decorazione usato anche quando viene dichiarato che il codice C++ ha un collegamento `extern "C"`. La convenzione di chiamata predefinita è **`__cdecl`** . Si noti che in un ambiente a 64 bit le funzioni non sono decorate.
 
@@ -64,7 +64,7 @@ Il formato della decorazione per una funzione C dipende dalla convenzione di chi
 |**`__fastcall`**|Segni iniziali e finali ( **`@`** ) seguiti da un numero decimale che rappresenta il numero di byte nell'elenco di parametri|
 |**`__vectorcall`**|Due segni di chiocciola finali ( **`@@`** ) seguiti da un numero decimale di byte nell'elenco di parametri|
 
-## <a name="viewing-decorated-names"></a><a name="Viewing"></a>Visualizzazione dei nomi decorati
+## <a name="viewing-decorated-names"></a><a name="Viewing"></a> Visualizzazione dei nomi decorati
 
 È possibile ottenere il formato decorato di un nome di simbolo dopo avere compilato il file di origine contenente il prototipo o la definizione di dati, oggetti o funzioni. Per esaminare i nomi decorati nel programma, è possibile usare uno dei metodi seguenti:
 
@@ -82,7 +82,7 @@ Il formato della decorazione per una funzione C dipende dalla convenzione di chi
 
 2. Per trovare il formato decorato di un simbolo, cercare il nome non decorato tra parentesi. Il nome decorato si trova sulla stessa riga, dopo un carattere barra verticale (&#124;) e prima del nome non decorato.
 
-## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a>Visualizzazione di nomi non decorati
+## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a> Visualizzazione di nomi non decorati
 
 È possibile usare undname.exe per convertire un nome decorato nel formato non decorato. In questo esempio viene illustrato come funziona:
 
@@ -98,4 +98,4 @@ is :- "private: void __thiscall a::func1(int)"
 ## <a name="see-also"></a>Vedere anche
 
 [Ulteriori strumenti di compilazione MSVC](c-cpp-build-tools.md)<br/>
-[Uso di extern per specificare un collegamento](../../cpp/using-extern-to-specify-linkage.md)
+[Uso di extern per specificare un collegamento](../../cpp/extern-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: /sourceDependencies (report dipendenze a livello di origine)
+title: /sourceDependencies (report delle dipendenze a livello di origine)
 description: Guida di riferimento all'opzione del compilatore/sourceDependencies in Microsoft C++.
 ms.date: 07/29/2020
 f1_keywords:
@@ -7,18 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - /sourceDependencies compiler option
 - /sourceDependencies
-ms.openlocfilehash: 3198353ea7569c426a556522d6b931fe23c7f12c
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 0c1866812435c777f6f1fd7ed7f9db788a8cf031
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528072"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502847"
 ---
-# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies`(Report dipendenze a livello di origine)
+# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies` (Report dipendenze a livello di origine)
 
 Indica al compilatore di generare un file JSON che detaili le dipendenze a livello di origine utilizzate durante la compilazione.
 
 Il file JSON contiene un elenco delle dipendenze di origine, tra cui:
+
 - File di intestazione (intestazioni transitive e incluse direttamente).
 - Il PCH usato (se **`/Yu`** è specificato).
 - Moduli importati e unità di intestazione importata (sia transitiva che direttamente, moduli/unità di intestazione).
@@ -36,7 +37,7 @@ Il compilatore scrive l'output delle dipendenze di origine nel nome file specifi
 *Directory*\
 Se l'argomento è una directory, il compilatore genera i file delle dipendenze di origine nella directory specificata. Il nome del file di output è basato sul nome completo del file di input, con un'estensione accodata *`.json`* . Se, ad esempio, il file fornito al compilatore è *`main.cpp`* , il nome file di output generato è *`main.cpp.json`* .
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 L' **`/sourceDependencies`** opzione del compilatore è disponibile a partire da Visual Studio 2019 versione 16,7. Non è abilitato per impostazione predefinita.
 
@@ -46,7 +47,7 @@ Quando si verifica un errore non irreversibile del compilatore, le informazioni 
 
 Tutti i percorsi dei file vengono visualizzati come percorsi assoluti nell'output.
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Dato il codice di esempio seguente:
 

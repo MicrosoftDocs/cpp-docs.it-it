@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840388"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504047"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
 
@@ -69,7 +69,7 @@ Classe di proprietà definibile dall'utente che per impostazione predefinita è 
 
 ## <a name="remarks"></a>Osservazioni
 
-Interfaccia obbligatoria nei set di righe. Questa classe implementa le proprietà del set di righe tramite la [mappa del set di proprietà](../../data/oledb/begin-propset-map.md) definita nella classe Command. Anche se la classe del set di righe sembra usare i set di proprietà della classe Command, il set di righe viene fornito con la relativa copia delle proprietà della fase di esecuzione, quando viene creato da un oggetto Command o Session.
+Interfaccia obbligatoria nei set di righe. Questa classe implementa le proprietà del set di righe tramite la [mappa del set di proprietà](./macros-for-ole-db-provider-templates.md#begin_propset_map) definita nella classe Command. Anche se la classe del set di righe sembra usare i set di proprietà della classe Command, il set di righe viene fornito con la relativa copia delle proprietà della fase di esecuzione, quando viene creato da un oggetto Command o Session.
 
 ## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl:: GetProperties
 

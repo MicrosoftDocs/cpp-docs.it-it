@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833140"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503558"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -33,7 +33,7 @@ Valore booleano che specifica se la funzione di accesso viene recuperata automat
 
 ## <a name="remarks"></a>Osservazioni
 
-**db_accessor** definisce la funzione di accesso OLE DB sottostante `db_column` per `db_param` gli attributi e successivi all'interno della stessa classe o funzione. **db_accessor** è utilizzabile a livello di membro e viene utilizzato per raggruppare `db_column` gli attributi che fanno parte dell' `IAccessor` associazione basata su OLE DB. Viene usato in combinazione con gli `db_table` `db_command` attributi o. La chiamata di questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macro.
+**db_accessor** definisce la funzione di accesso OLE DB sottostante `db_column` per `db_param` gli attributi e successivi all'interno della stessa classe o funzione. **db_accessor** è utilizzabile a livello di membro e viene utilizzato per raggruppare `db_column` gli attributi che fanno parte dell' `IAccessor` associazione basata su OLE DB. Viene usato in combinazione con gli `db_table` `db_command` attributi o. La chiamata di questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) e [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) macro.
 
 **db_accessor** genera un set di righe e lo associa alle mappe della funzione di accesso corrispondenti. Se non si chiama **db_accessor**, la funzione di accesso 0 verrà generata automaticamente e verrà eseguito il mapping di tutte le associazioni di colonna a questo blocco della funzione di accesso.
 
@@ -67,7 +67,7 @@ public:
 
 ## <a name="requirements"></a>Requisiti
 
-| Contesto dell'attributo | Valore |
+| Contesto dell'attributo | valore |
 |-|-|
 |**Si applica a**|Blocchi di attributi|
 |**Ripetibile**|No|

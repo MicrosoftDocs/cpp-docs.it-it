@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c729fa183a03860de012e64d110f3b3ac7e7e8d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686600"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503664"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procedura dettagliata: creare un'applicazione desktop di Windows tradizionale (C++)
 
@@ -29,7 +29,7 @@ L'API Windows (nota anche come API Win32, Windows Desktop API e Windows API clas
 
 - Una copia di Visual Studio. Per informazioni su come scaricare e installare Visual Studio, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio). Quando si esegue il programma di installazione, assicurarsi che sia selezionato il carico di lavoro **Sviluppo di applicazioni desktop con C++**. Non è un problema se il carico di lavoro non è stato installato durante l'installazione di Visual Studio. È possibile eseguire nuovamente il programma di installazione e installarlo ora.
 
-   ![Sviluppo per desktop con C++](../build/media/desktop-development-with-cpp.png "Sviluppo per desktop con C++")
+   ![Sviluppo per desktop con C++](../build/media/desktop-development-with-cpp.png "Sviluppo di applicazioni desktop con C++")
 
 - Conoscenza dei concetti di base dell'uso dell'IDE di Visual Studio. Se si sono usate app desktop di Windows in precedenza, è probabilmente possibile riuscire a seguire. Per informazioni introduttive, vedere [Panoramica delle funzionalità dell'IDE di Visual Studio](/visualstudio/ide/visual-studio-ide).
 
@@ -141,7 +141,7 @@ Si apprenderà quindi come creare il codice per un'applicazione desktop di Windo
    Per informazioni sui parametri e sul valore restituito di questa funzione, vedere [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Quali sono tutte le parole aggiuntive, ad esempio `CALLBACK` , o `HINSTANCE` `_In_` ? L'API Windows tradizionale usa i typedef e le macro del preprocessore in modo estensivo per astrarre alcuni dettagli dei tipi e del codice specifico della piattaforma, ad esempio le convenzioni di chiamata, le **`__declspec`** dichiarazioni e i pragma del compilatore. In Visual Studio è possibile usare la funzionalità [informazioni rapide](/visualstudio/ide/using-intellisense#quick-info) di IntelliSense per vedere cosa definiscono questi typedef e macro. Posizionare il puntatore del mouse sulla parola di interesse o selezionarla e premere **CTRL** + **K**, **CTRL** + **I** per una piccola finestra popup contenente la definizione. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense). I parametri e i tipi restituiti spesso utilizzano le *annotazioni SAL* per facilitare l'intercettazione degli errori di programmazione. Per ulteriori informazioni, vedere [utilizzo delle annotazioni SAL per ridurre i difetti del codice C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Quali sono tutte le parole aggiuntive, ad esempio `CALLBACK` , o `HINSTANCE` `_In_` ? L'API Windows tradizionale usa i typedef e le macro del preprocessore in modo estensivo per astrarre alcuni dettagli dei tipi e del codice specifico della piattaforma, ad esempio le convenzioni di chiamata, le **`__declspec`** dichiarazioni e i pragma del compilatore. In Visual Studio è possibile usare la funzionalità [informazioni rapide](/visualstudio/ide/using-intellisense#quick-info) di IntelliSense per vedere cosa definiscono questi typedef e macro. Posizionare il puntatore del mouse sulla parola di interesse o selezionarla e premere **CTRL** + **K**, **CTRL** + **I** per una piccola finestra popup contenente la definizione. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense). I parametri e i tipi restituiti spesso utilizzano le *annotazioni SAL* per facilitare l'intercettazione degli errori di programmazione. Per ulteriori informazioni, vedere [utilizzo delle annotazioni SAL per ridurre i difetti del codice C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
 1. I programmi desktop di Windows richiedono &lt; Windows. h>. &lt;TCHAR. h> definisce la `TCHAR` macro, che in definitiva viene risolta **`wchar_t`** in se il simbolo Unicode viene definito nel progetto; in caso contrario, viene risolto in **`char`** .  Se si compila sempre con UNICODE abilitato, non è necessario TCHAR e può essere usato **`wchar_t`** direttamente.
 
@@ -592,4 +592,4 @@ Congratulazioni! Questa procedura dettagliata è stata completata ed è stata cr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Applicazioni desktop di Windows](../windows/windows-desktop-applications-cpp.md)
+[Applicazioni desktop di Windows](./desktop-applications-visual-cpp.md)

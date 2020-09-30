@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 078d702232cde49a4666551a8d9fcbb320173450
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615341"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503536"
 ---
 # <a name="binary-editor-c"></a>Editor binario (C++)
 
@@ -116,14 +116,14 @@ Se si vuole usare l' **editor binario** su una risorsa già modificata in un'alt
 
 1. Selezionare **OK** per registrare le modifiche.
 
-Un altro modo per creare una risorsa personalizzata consiste nell'importare un file esterno come risorsa personalizzata, vedere [procedura: gestire le risorse](../windows/how-to-import-and-export-resources.md).
+Un altro modo per creare una risorsa personalizzata consiste nell'importare un file esterno come risorsa personalizzata, vedere [procedura: gestire le risorse](./how-to-copy-resources.md).
 
 > [!NOTE]
 > La creazione di nuove risorse personalizzate o di dati richiede Win32.
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

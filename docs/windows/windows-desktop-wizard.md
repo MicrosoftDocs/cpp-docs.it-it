@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 3ba53be8e412a39d938198cbd7f2587496ea38eb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47984b4c4416bf129efb226381fe778659aa16ca
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165951"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503521"
 ---
 # <a name="windows-desktop-wizard"></a>Creazione guidata applicazione desktop di Windows
 
-La creazione guidata desktop di Windows sostituisce la creazione guidata applicazione Win32 in Visual Studio 2017 e versioni successive. La procedura guidata consente di creare uno dei quattro tipi di C++ progetto (elencati nell'intestazione della tabella riportata di seguito). In ogni caso, è possibile specificare opzioni aggiuntive appropriate per il tipo di progetto aperto.
+La creazione guidata desktop di Windows sostituisce la creazione guidata applicazione Win32 in Visual Studio 2017 e versioni successive. La procedura guidata consente di creare uno dei quattro tipi di progetti C++ (elencati nell'intestazione della tabella riportata di seguito). In ogni caso, è possibile specificare opzioni aggiuntive appropriate per il tipo di progetto aperto.
 
    ![Creazione guidata applicazione desktop di Windows](media/windows-desktop-wizard.png)
 
@@ -51,10 +51,10 @@ Crea il tipo di applicazione specificato.
 
 |Opzione|Descrizione|
 |------------|-----------------|
-|**Applicazione console**|Crea un'applicazione console. Le C++ [librerie di runtime](../c-runtime-library/c-run-time-library-reference.md) visive forniscono inoltre output e input dalle finestre della console con le funzioni di I/O standard, ad esempio `printf_s()` e `scanf_s()`. Un'applicazione console non dispone di un'interfaccia utente grafica. Viene compilato in un file con estensione exe e può essere eseguito come applicazione autonoma dalla riga di comando.<br /><br /> È possibile aggiungere il supporto MFC e ATL a un'applicazione console.|
-|**Applicazione Windows**|Crea un programma Win32. Un programma Win32 è un'applicazione eseguibile (EXE) scritta in C C++o, usando le chiamate all'API Win32 per creare un'interfaccia utente grafica.<br /><br /> Non è possibile aggiungere il supporto MFC o ATL a un'applicazione Windows.|
-|**Libreria a collegamento dinamico**|Crea una libreria di collegamento dinamico (DLL) Win32. Una DLL Win32 è un file binario, scritto in C o C++, che utilizza le chiamate all'API Win32 anziché alle classi MFC e che funge da libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni.<br /><br /> Non è possibile aggiungere il supporto MFC o ATL a un'applicazione DLL creata tramite questa procedura guidata, ma è possibile creare una DLL MFC scegliendo **nuovo > progetto > DLL MFC**.|
-|**Libreria statica**|Crea una libreria statica. Una libreria statica è un file contenente oggetti e le relative funzioni e dati che si collegano al programma quando viene compilato il file eseguibile. In questo argomento viene illustrato come creare i file di avvio e le [proprietà del progetto](../build/reference/property-pages-visual-cpp.md) per una libreria statica. Un file di libreria statica offre i vantaggi seguenti:<br /><br />-Una libreria statica Win32 è utile se l'applicazione in uso effettua chiamate all'API Win32 anziché alle classi MFC.<br />-Il processo di collegamento è lo stesso indipendentemente dal fatto che il resto dell'applicazione Windows sia scritto in C++C o in.<br />-È possibile collegare una libreria statica a un programma basato su MFC o a un programma non MFC.|
+|**Applicazione console**|Crea un'applicazione console. Le [librerie di runtime](../c-runtime-library/c-run-time-library-reference.md) Visual C++ forniscono inoltre output e input dalle finestre della console con le funzioni di I/O standard, ad esempio `printf_s()` e `scanf_s()` . Un'applicazione console non dispone di un'interfaccia utente grafica. Viene compilato in un file con estensione exe e può essere eseguito come applicazione autonoma dalla riga di comando.<br /><br /> È possibile aggiungere il supporto MFC e ATL a un'applicazione console.|
+|**Applicazione Windows**|Crea un programma Win32. Un programma Win32 è un'applicazione eseguibile (EXE) scritta in C o C++, usando le chiamate all'API Win32 per creare un'interfaccia utente grafica.<br /><br /> Non è possibile aggiungere il supporto MFC o ATL a un'applicazione Windows.|
+|**Libreria di collegamento dinamico**|Crea una libreria di collegamento dinamico (DLL) Win32. Una DLL Win32 è un file binario, scritto in C o C++, che utilizza le chiamate all'API Win32 anziché alle classi MFC e funge da libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni.<br /><br /> Non è possibile aggiungere il supporto MFC o ATL a un'applicazione DLL creata tramite questa procedura guidata, ma è possibile creare una DLL MFC scegliendo **nuovo > progetto > DLL MFC**.|
+|**Libreria statica**|Crea una libreria statica. Una libreria statica è un file contenente oggetti e le relative funzioni e dati che si collegano al programma quando viene compilato il file eseguibile. In questo argomento viene illustrato come creare i file di avvio e le [proprietà del progetto](../build/reference/property-pages-visual-cpp.md) per una libreria statica. Un file di libreria statica offre i vantaggi seguenti:<br /><br />-Una libreria statica Win32 è utile se l'applicazione in uso effettua chiamate all'API Win32 anziché alle classi MFC.<br />-Il processo di collegamento è lo stesso indipendentemente dal fatto che il resto dell'applicazione Windows sia scritto in C o in C++.<br />-È possibile collegare una libreria statica a un programma basato su MFC o a un programma non MFC.|
 
 ## <a name="additional-options"></a>Opzioni aggiuntive
 
@@ -62,7 +62,7 @@ Definisce il supporto e le opzioni per l'applicazione, a seconda del tipo.
 
 |Opzione|Descrizione|
 |------------|-----------------|
-|**Progetto vuoto**|Specifica che i file di progetto sono vuoti. Se si dispone di un set di file di codice sorgente, ad esempio file con estensione cpp, file di intestazione, icone, barre degli strumenti, finestre di dialogo e così via, e si desidera creare C++ un progetto nell'ambiente di sviluppo visivo, è necessario innanzitutto creare un progetto vuoto, quindi aggiungere i file al progetto.<br /><br /> Questa selezione non è disponibile per i progetti di libreria statica.|
+|**Progetto vuoto**|Specifica che i file di progetto sono vuoti. Se si dispone di un set di file di codice sorgente, ad esempio file con estensione cpp, file di intestazione, icone, barre degli strumenti, finestre di dialogo e così via, e si desidera creare un progetto nell'ambiente di sviluppo Visual C++, è necessario innanzitutto creare un progetto vuoto, quindi aggiungere i file al progetto.<br /><br /> Questa selezione non è disponibile per i progetti di libreria statica.|
 |**Simboli di esportazione**|Specifica che il progetto DLL Esporta simboli.|
 |**Intestazione precompilata**|Specifica che il progetto di libreria statica usa un'intestazione precompilata.|
 |**Controlli Security Development Lifecycle (SDL)**|Per ulteriori informazioni su SDL, vedere [Microsoft Security Development Lifecycle (SDL) linee guida](../build/reference/sdl-enable-additional-security-checks.md) per il processo|
@@ -78,12 +78,12 @@ Aggiungere il supporto per una delle librerie fornite in Visual C++.
 
 ## <a name="remarks"></a>Osservazioni
 
-Dopo aver creato un'applicazione desktop di Windows, è possibile aggiungere classi C++ generiche usando la procedura guidata per codice [generico](../ide/generic-cpp-class-wizard.md) . È possibile aggiungere altri elementi, quali file HTML, file di intestazione, risorse o file di testo.
+Dopo aver creato un'applicazione desktop di Windows, è possibile aggiungere classi C++ generiche usando la procedura guidata per codice [generico](../ide/adding-a-generic-cpp-class.md#generic-c-class-wizard) . È possibile aggiungere altri elementi, quali file HTML, file di intestazione, risorse o file di testo.
 
 > [!NOTE]
 > Non è possibile aggiungere classi ATL ed è possibile aggiungere classi MFC solo a quei tipi di applicazioni desktop di Windows che supportano MFC (vedere la tabella precedente).
 
-È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per ulteriori informazioni sui file creati dalla procedura guidata per il progetto, vedere il file generato dal progetto, `ReadMe.txt`. Per ulteriori informazioni sui tipi di file, i [tipi di file creati per C++ i progetti di Visual Studio](../build/reference/file-types-created-for-visual-cpp-projects.md).
+È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per ulteriori informazioni sui file creati dalla procedura guidata per il progetto, vedere il file generato dal progetto `ReadMe.txt` . Per ulteriori informazioni sui tipi di file, i [tipi di file creati per i progetti Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 

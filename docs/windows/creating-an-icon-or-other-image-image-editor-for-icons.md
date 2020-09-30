@@ -79,16 +79,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: a331e310f031462c903546a2896317aae0c0d719
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bbaa008d8dac74588fc15bfebbc7cb2611260349
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843365"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504553"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Procedura: creare un'icona o un'altra immagine
 
-È possibile creare una nuova immagine, una bitmap, un'icona, un cursore o una barra degli strumenti e quindi utilizzare l' **editor di immagini** per personalizzarne l'aspetto. È anche possibile creare una nuova bitmap basata su un [modello di risorsa](../windows/how-to-use-resource-templates.md).
+È possibile creare una nuova immagine, una bitmap, un'icona, un cursore o una barra degli strumenti e quindi utilizzare l' **editor di immagini** per personalizzarne l'aspetto. È anche possibile creare una nuova bitmap basata su un [modello di risorsa](./how-to-create-a-resource-script-file.md).
 
 ## <a name="icons-and-cursors-image-resources-for-display-devices"></a>Icone e cursori: risorse immagine per i dispositivi di visualizzazione
 
@@ -176,7 +176,7 @@ Usare la finestra di dialogo **Apri &lt; &gt; immagine dispositivo** per aprire 
 
 1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* , quindi scegliere **Inserisci risorsa**. Se nel file *RC* è già presente una risorsa immagine, ad esempio un cursore, è possibile fare clic con il pulsante destro del mouse sulla cartella del **cursore** e scegliere **Inserisci cursore**.
 
-1. Nella finestra di [dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md)selezionare **icona** o **cursore** e scegliere **nuovo**. Per le icone, questa azione crea una risorsa icona con un'icona 32 × 32, a 16 colori. Per i cursori viene creata un'immagine 32 × 32, monocromatico (a 2 colori).
+1. Nella finestra di [dialogo Inserisci risorsa](./how-to-create-a-resource-script-file.md)selezionare **icona** o **cursore** e scegliere **nuovo**. Per le icone, questa azione crea una risorsa icona con un'icona 32 × 32, a 16 colori. Per i cursori viene creata un'immagine 32 × 32, monocromatico (a 2 colori).
 
    Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa immagine nella finestra di dialogo **Inserisci risorsa** , significa che i modelli della barra degli strumenti sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
 
@@ -205,7 +205,7 @@ Quando l'immagine dell'icona viene visualizzata nell' **editor di immagini**, pa
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Per creare aree trasparenti o inverse nelle immagini del dispositivo
 
-Nell' [editor di immagini](../windows/image-editor-for-icons.md)l'icona iniziale o l'immagine del cursore ha un attributo trasparente. Sebbene le immagini icona e cursore siano rettangolari, molti non vengono visualizzati, perché le parti dell'immagine sono trasparenti e l'immagine sottostante sullo schermo viene visualizzata attraverso l'icona o il cursore. Quando si trascina un'icona, le parti dell'immagine possono essere visualizzate in un colore invertito. Questo effetto viene creato impostando il colore dello schermo e il colore inverso nella [finestra colori](../windows/colors-window-image-editor-for-icons.md).
+Nell' [editor di immagini](../windows/image-editor-for-icons.md)l'icona iniziale o l'immagine del cursore ha un attributo trasparente. Sebbene le immagini icona e cursore siano rettangolari, molti non vengono visualizzati, perché le parti dell'immagine sono trasparenti e l'immagine sottostante sullo schermo viene visualizzata attraverso l'icona o il cursore. Quando si trascina un'icona, le parti dell'immagine possono essere visualizzate in un colore invertito. Questo effetto viene creato impostando il colore dello schermo e il colore inverso nella [finestra colori](./image-editor-for-icons.md).
 
 La schermata e i colori inversi applicati alle icone e ai cursori formano e colorano l'immagine derivata o assegnano aree inverse. I colori indicano le parti dell'immagine che dispongono di tali attributi. È possibile modificare i colori che rappresentano gli attributi relativi al colore dello schermo e al colore inverso nella modifica. Queste modifiche non influiscono sull'aspetto dell'icona o del cursore nell'applicazione.
 
@@ -227,7 +227,7 @@ La schermata e i colori inversi applicati alle icone e ai cursori formano e colo
    Il colore complementare viene assegnato automaticamente per l'altro selettore.
 
    > [!TIP]
-   > Se si fa doppio clic sullo **schermo** o sul selettore del colore **inverso** , viene visualizzata la finestra di [dialogo Selezione colori personalizzata](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) .
+   > Se si fa doppio clic sullo **schermo** o sul selettore del colore **inverso** , viene visualizzata la finestra di [dialogo Selezione colori personalizzata](./image-editor-for-icons.md) .
 
 ### <a name="use-the-256-color-palette"></a>Usare la tavolozza colori 256
 
@@ -237,13 +237,13 @@ Usando l' **editor di immagini**, le icone e i cursori possono essere di grandi 
 
 1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* , quindi scegliere **Inserisci risorsa**. Se nel file *RC* è già presente una risorsa immagine, ad esempio un cursore, è possibile fare clic con il pulsante destro del mouse sulla cartella del **cursore** e scegliere **Inserisci cursore**.
 
-1. Nella finestra di [dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md)selezionare **icona** o **cursore** e scegliere **nuovo**.
+1. Nella finestra di [dialogo Inserisci risorsa](./how-to-create-a-resource-script-file.md)selezionare **icona** o **cursore** e scegliere **nuovo**.
 
 1. Passare a **immagine**menu  >  **nuovo dispositivo immagine** e selezionare lo stile di immagine a 256 colori desiderato.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Per scegliere un colore dalla tavolozza dei colori 256 per le icone grandi
 
-Per creare una selezione dalla tavolozza colori 256, è necessario selezionare i colori dalla tavolozza **colori** nella [finestra colori](../windows/colors-window-image-editor-for-icons.md).
+Per creare una selezione dalla tavolozza colori 256, è necessario selezionare i colori dalla tavolozza **colori** nella [finestra colori](./image-editor-for-icons.md).
 
 1. Selezionare l'icona o il cursore grande oppure creare una nuova icona o cursore di grandi dimensioni.
 
@@ -258,7 +258,7 @@ Per creare una selezione dalla tavolozza colori 256, è necessario selezionare i
 
 L'area sensibile di un cursore è il punto in cui Windows si riferisce al rilevamento della posizione del cursore. Per impostazione predefinita, l'area sensibile è impostata sull'angolo superiore sinistro del cursore con le coordinate `0,0` . La proprietà **hotspot** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window) Mostra le coordinate di area sensibile.
 
-1. Nella [barra degli strumenti dell'editor di immagini](../windows/toolbar-image-editor-for-icons.md)scegliere lo strumento **Imposta HotSpot** .
+1. Nella [barra degli strumenti dell'editor di immagini](./image-editor-for-icons.md)scegliere lo strumento **Imposta HotSpot** .
 
 1. Selezionare il pixel che si desidera assegnare come area sensibile del cursore.
 
@@ -284,13 +284,13 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 1. Nella finestra di dialogo **Salva file con** nome digitare il nome che si desidera assegnare al file e l'estensione che denota il formato di file desiderato nella casella **nome file** . Ad esempio, *myfile.gif*.
 
    > [!NOTE]
-   > È necessario creare o aprire la bitmap all'esterno del progetto per salvarla in un altro formato di file. Se viene creato o aperto nel progetto, il comando **Salva con nome** non sarà disponibile. Per altre informazioni, vedere [visualizzazione di risorse in un file script di risorsa all'esterno di un progetto (standalone)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+   > È necessario creare o aprire la bitmap all'esterno del progetto per salvarla in un altro formato di file. Se viene creato o aperto nel progetto, il comando **Salva con nome** non sarà disponibile. Per altre informazioni, vedere [visualizzazione di risorse in un file script di risorsa all'esterno di un progetto (standalone)](./how-to-create-a-resource-script-file.md).
 
 1. Selezionare **Salva**.
 
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>Per convertire un'immagine da un formato a un altro
 
-È possibile aprire immagini GIF o JPEG nell' **editor di immagini** e salvarle come bitmap. Inoltre, è possibile aprire un file bitmap e salvarlo come GIF o JPEG. Le immagini utilizzate non devono far parte di un progetto per la modifica nell'ambiente di sviluppo (vedere [modifica di immagini](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)autonome).
+È possibile aprire immagini GIF o JPEG nell' **editor di immagini** e salvarle come bitmap. Inoltre, è possibile aprire un file bitmap e salvarlo come GIF o JPEG. Le immagini utilizzate non devono far parte di un progetto per la modifica nell'ambiente di sviluppo (vedere [modifica di immagini](./selecting-an-area-of-an-image-image-editor-for-icons.md)autonome).
 
 1. Aprire l'immagine nell' **editor di immagini**.
 
@@ -304,7 +304,7 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 
 1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* , quindi scegliere **Inserisci risorsa**. Se nel file *RC* è già presente una risorsa immagine esistente, ad esempio un cursore, è sufficiente fare clic con il pulsante destro del mouse sulla cartella del **cursore** e scegliere **Inserisci cursore**.
 
-1. Nella finestra di [dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md)selezionare il tipo di risorsa immagine che si vuole creare, ad esempio**bitmap**, quindi scegliere **nuovo**.
+1. Nella finestra di [dialogo Inserisci risorsa](./how-to-create-a-resource-script-file.md)selezionare il tipo di risorsa immagine che si vuole creare, ad esempio**bitmap**, quindi scegliere **nuovo**.
 
    Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa immagine nella finestra di dialogo **Inserisci risorsa** , significa che i modelli della barra degli strumenti sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
 
@@ -332,7 +332,7 @@ Nessuno
 [Procedura: utilizzare il colore](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
-[Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
-[Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
+[Converting Bitmaps to Toolbars](./toolbar-editor.md)<br/>
+[Creating New Toolbars](./toolbar-editor.md)<br/>
 [Icons](/windows/win32/menurc/icons)<br/>
 [Cursors](/windows/win32/menurc/cursors)<br/>-->

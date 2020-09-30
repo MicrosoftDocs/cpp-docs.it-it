@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: e931a0246340e81049df6ed0f8e26a4b91b570c7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5ac4cba4e8ad8a08fa1010758c5a343501d3af2c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215192"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504411"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Procedura: includere risorse in fase di compilazione (C++)
 
@@ -40,24 +40,24 @@ Per impostazione predefinita, tutte le risorse si trovano in un file di script d
 
 - Per includere le risorse utilizzate da progetti diversi o che fanno parte di un sistema di controllo della versione del codice sorgente. Queste risorse devono esistere in una posizione centrale in cui le modifiche avranno effetto su tutti i progetti.
 
-- Per includere le risorse, ad esempio le risorse RCDATA, che sono un formato personalizzato. Le risorse di RCDATA presentano requisiti speciali in cui non è possibile usare un'espressione come valore per il campo `nameID`.
+- Per includere le risorse, ad esempio le risorse RCDATA, che sono un formato personalizzato. Le risorse di RCDATA presentano requisiti speciali in cui non è possibile usare un'espressione come valore per il `nameID` campo.
 
 Se sono presenti sezioni nei file RC esistenti che soddisfano una di queste condizioni, inserire queste sezioni in uno o più file RC distinti e includerli nel progetto usando la finestra di dialogo **Inclusioni risorsa** .
 
 ## <a name="resource-includes"></a>Inclusioni risorsa
 
-È possibile aggiungere risorse da altri file al progetto in fase di compilazione visualizzandoli nella casella **direttive in fase di compilazione** della finestra di dialogo **Inclusioni risorsa** . Utilizzare la finestra di dialogo **Inclusioni risorsa** per modificare la normale disposizione operativa dell'ambiente del progetto per archiviare tutte le risorse nel file Project. RC e tutti i [simboli](../windows/symbols-resource-identifiers.md) in `Resource.h`.
+È possibile aggiungere risorse da altri file al progetto in fase di compilazione visualizzandoli nella casella **direttive in fase di compilazione** della finestra di dialogo **Inclusioni risorsa** . Utilizzare la finestra di dialogo **Inclusioni risorsa** per modificare la normale disposizione operativa dell'ambiente di progetto per archiviare tutte le risorse nel file Project. RC e tutti i [simboli](../windows/symbols-resource-identifiers.md) in `Resource.h` .
 
 Per iniziare, aprire la finestra di dialogo **Inclusioni risorsa** facendo clic con il pulsante destro del mouse su un file rc in [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources), scegliere **Includi risorse** e prendere nota delle proprietà seguenti:
 
 | Proprietà | Descrizione |
 |---|---|
-| **File di intestazione simboli** | Consente di modificare il nome del file di intestazione in cui vengono archiviate le definizioni dei simboli per i file di risorse.<br/><br/>Per ulteriori informazioni, vedere [modifica dei nomi dei file di intestazione dei simboli](../windows/changing-the-names-of-symbol-header-files.md). |
-| **Direttive per simboli di sola lettura** | Consente di includere i file di intestazione che contengono simboli che non devono essere modificati.<br/><br/>Ad esempio, i file di simboli da condividere con altri progetti. Può inoltre includere i file con estensione h MFC. Per ulteriori informazioni, vedere [inclusione di simboli condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md). |
+| **File di intestazione simboli** | Consente di modificare il nome del file di intestazione in cui vengono archiviate le definizioni dei simboli per i file di risorse.<br/><br/>Per ulteriori informazioni, vedere [modifica dei nomi dei file di intestazione dei simboli](./changing-a-symbol-or-symbol-name-id.md). |
+| **Direttive per simboli di sola lettura** | Consente di includere i file di intestazione che contengono simboli che non devono essere modificati.<br/><br/>Ad esempio, i file di simboli da condividere con altri progetti. Può inoltre includere i file con estensione h MFC. Per ulteriori informazioni, vedere [inclusione di simboli condivisi (di sola lettura) o calcolati](./changing-a-symbol-or-symbol-name-id.md). |
 | **Direttive in fase di compilazione** | Consente di includere i file di risorse creati e modificati separatamente dalle risorse nel file di risorse principale, che contengono direttive in fase di compilazione, ad esempio le direttive che includono le risorse in modo condizionale, o che contengono risorse in un formato personalizzato.<br/><br/>È anche possibile usare la **casella direttive in fase di compilazione** per includere file di risorse MFC standard. |
 
 > [!NOTE]
-> Le voci in queste caselle di testo vengono visualizzate nel file RC contrassegnato da `TEXTINCLUDE 1`, `TEXTINCLUDE 2`e `TEXTINCLUDE 3` rispettivamente. Per ulteriori informazioni, vedere [TN035: utilizzo di più file di risorse e file di C++intestazione con Visual ](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
+> Le voci in queste caselle di testo vengono visualizzate nel file RC contrassegnato `TEXTINCLUDE 1` rispettivamente da, `TEXTINCLUDE 2` e `TEXTINCLUDE 3` . Per ulteriori informazioni, vedere [TN035: utilizzo di più file di risorse e file di intestazione con Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
 Dopo aver apportato modifiche al file di risorse usando la finestra di dialogo **Inclusioni risorsa** , è necessario chiudere e riaprire il file *RC* per rendere effettive le modifiche.
 
@@ -79,12 +79,12 @@ Le risorse nei file inclusi in questo modo vengono rese solo parte del file eseg
 
 ### <a name="to-find-symbols-in-resources"></a>Per trovare i simboli nelle risorse
 
-1. Vai a menu **modifica** > [Trova simbolo](/visualstudio/ide/go-to).
+1. Vai a menu **modifica**  >  [Trova simbolo](/visualstudio/ide/go-to).
 
    > [!TIP]
    > Per usare le [espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) nella ricerca, selezionare [Cerca nei file](/visualstudio/ide/reference/find-command) nel menu **modifica** anziché **Trova simbolo**. Selezionare la casella di controllo **USA: espressioni regolari** nella finestra di [dialogo Trova](/visualstudio/ide/finding-and-replacing-text) e nella casella **trova** è possibile scegliere un'espressione di ricerca regolare dall'elenco a discesa. Quando si seleziona un'espressione da questo elenco, viene sostituito come testo di ricerca nella casella **trova** .
 
-1. Nella casella **trova** selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare il tasto di scelta rapida che si desidera trovare, ad esempio `ID_ACCEL1`.
+1. Nella casella **trova** selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare il tasto di scelta rapida che si desidera trovare, ad esempio `ID_ACCEL1` .
 
 1. Selezionare una delle opzioni **trova** e scegliere **Trova successivo**.
 
