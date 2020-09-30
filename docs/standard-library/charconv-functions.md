@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: cde2ae6b6275543ec74d859b9a953f8673da9c2b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88722154"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507746"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;funzioni charconv
 
@@ -94,7 +94,7 @@ Per le conversioni a virgola mobile, il numero di cifre di precisione per il val
 
 [To_chars_result](to-chars-result-structure.md) contenente il risultato della conversione.
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Le funzioni che accettano un parametro di [chars_format](chars-format-class.md) determinano l'identificatore di conversione come se si utilizzasse `printf()` come indicato di seguito: l'identificatore di conversione è `'f'` se `fmt` è `chars_format::fixed` , `'e'` se `fmt` è, `chars_format::scientific` `'a'` (senza il valore iniziali `0x` nel risultato) se `fmt` è `chars_format::hex` e se è `'g'` `fmt` `chars_format::general` . La specifica della notazione fissa più breve può comunque produrre un output lungo perché potrebbe essere la rappresentazione più breve possibile quando il valore è molto grande o molto piccolo.
 
@@ -121,7 +121,7 @@ template <typename T> void TestToChars(const T t)
     char buf[100]; // 100 is large enough for double and long double values because the longest possible outputs are "-1.23456735e-36" and "-1.2345678901234567e-100".
     constexpr size_t size = IsFloat ? 15 : 24;
     const std::to_chars_result res = std::to_chars(buf, buf + size, t);  // points to buffer area it can use. Must be char, not wchar_t, etc.
-    
+
     if (res.ec == std::errc{}) // no error
     {
         // %.*s provides the exact number of characters to output because the output range, [buf, res.ptr), isn't null-terminated
@@ -183,7 +183,7 @@ Per le conversioni di interi, la base da usare durante la conversione. Deve esse
 *FMT*\
 Per le conversioni a virgola mobile, il formato della sequenza di caratteri da convertire. Per informazioni dettagliate, vedere [chars_format](chars-format-class.md) .
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Le `from_chars()` funzioni analizzano la stringa \[ `first` , `last` ) per un modello di numero, dove \[ `first` , `last` è necessario che sia un intervallo valido.
 
@@ -242,7 +242,7 @@ int main()
 
 /STD: è necessario c++ 17 o versione successiva.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [\<charconv>](charconv.md)  
 [Stringa decimale più breve che arrotonda i round trip](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 

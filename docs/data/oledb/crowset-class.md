@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 8cacbd6d188b3453c0111cca6565b7def9e3aa1e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b351530326e0dc4ed0b72db50d17717824eb6bb4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831567"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507282"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 
@@ -282,7 +282,7 @@ Classe della funzione di accesso. Il valore predefinito è `CAccessorBase`.
 |[MoveToRatio](#movetoratio)|Recupera le righe a partire da una posizione frazionaria nel set di righe.|
 |[ReleaseRows](#releaserows)|Chiama [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) per rilasciare l'handle di riga corrente.|
 |[SetData](#setdata)|Imposta i valori dei dati in una o più colonne di una riga utilizzando [IRowsetChange: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Annulla](#undo)|Annulla le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).|
+|[Annulla](#undo)|Annulla le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](#update).|
 |[Aggiornamento](#update)|Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o aggiornamento.|
 |[UpdateAll](#updateall)|Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o aggiornamento.|
 
@@ -308,7 +308,7 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo incrementa il conteggio dei riferimenti per l'handle di riga corrente. Chiamare [ReleaseRows](../../data/oledb/crowset-releaserows.md) per decrementare il conteggio. Le righe restituite dai metodi di spostamento hanno un conteggio dei riferimenti di uno.
+Questo metodo incrementa il conteggio dei riferimenti per l'handle di riga corrente. Chiamare [ReleaseRows](#releaserows) per decrementare il conteggio. Le righe restituite dai metodi di spostamento hanno un conteggio dei riferimenti di uno.
 
 ## <a name="crowsetclose"></a><a name="close"></a> CRowset:: Close
 
@@ -497,7 +497,7 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si specifica una funzione di accesso che non è un autoaccesso in [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), usare questo metodo per ottenere i dati in modo esplicito passando il numero di funzione di accesso.
+Se si specifica una funzione di accesso che non è un autoaccesso in [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor), usare questo metodo per ottenere i dati in modo esplicito passando il numero di funzione di accesso.
 
 ## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a> CRowset:: GetDataHere
 
@@ -820,7 +820,7 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Per il `SetData` form che non accetta argomenti, vengono utilizzate tutte le funzioni di accesso per l'aggiornamento. In genere si chiama `SetData` per impostare i valori dei dati nelle colonne di una riga, quindi chiamare [Update](../../data/oledb/crowset-update.md) per trasmettere tali modifiche.
+Per il `SetData` form che non accetta argomenti, vengono utilizzate tutte le funzioni di accesso per l'aggiornamento. In genere si chiama `SetData` per impostare i valori dei dati nelle colonne di una riga, quindi chiamare [Update](#update) per trasmettere tali modifiche.
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetChange` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetChange` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -828,7 +828,7 @@ L'operazione di impostazione potrebbe non riuscire se una o più colonne non son
 
 ## <a name="crowsetundo"></a><a name="undo"></a> CRowset:: Undo
 
-Annulla le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).
+Annulla le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](#update).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -886,7 +886,7 @@ Valore HRESULT standard.
 
 ### <a name="remarks"></a>Osservazioni
 
-Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o aggiornamento della riga (utilizzando `Update` o [UpdateAll](../../data/oledb/crowset-updateall.md)). In genere si chiama [SetData](../../data/oledb/crowset-setdata.md) per impostare i valori dei dati nelle colonne di una riga e quindi si chiama `Update` per trasmettere tali modifiche.
+Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o aggiornamento della riga (utilizzando `Update` o [UpdateAll](#updateall)). In genere si chiama [SetData](#setdata) per impostare i valori dei dati nelle colonne di una riga e quindi si chiama `Update` per trasmettere tali modifiche.
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetUpdate` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -915,7 +915,7 @@ out Puntatore alla posizione in cui viene `Update` restituito il valore dello st
 
 ### <a name="remarks"></a>Osservazioni
 
-Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o aggiornamento di tali righe tramite [Update](../../data/oledb/crowset-update.md) o `UpdateAll` . `UpdateAll` aggiornerà ogni riga modificata, indipendentemente dal fatto che sia ancora presente il relativo handle (vedere *pphRow*).
+Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o aggiornamento di tali righe tramite [Update](#update) o `UpdateAll` . `UpdateAll` aggiornerà ogni riga modificata, indipendentemente dal fatto che sia ancora presente il relativo handle (vedere *pphRow*).
 
 Se ad esempio si è utilizzato `Insert` per inserire cinque righe in un set di righe, è possibile chiamare `Update` cinque volte o chiamare `UpdateAll` una sola volta per aggiornarle tutte.
 

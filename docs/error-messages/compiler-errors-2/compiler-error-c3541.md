@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 32926d0ef9343bad9ed73458e4d52d317b628109
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d6179657462325a30de0c4548becff4b4cf86c9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221042"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508075"
 ---
 # <a name="compiler-error-c3541"></a>Errore del compilatore C3541
 
@@ -37,6 +37,6 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Parola chiave auto](../../cpp/auto-keyword.md)<br/>
+[Parola chiave auto](../../cpp/auto-cpp.md)<br/>
 [/Zc: auto (deduce il tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [TypeId](../../extensions/typeid-cpp-component-extensions.md)

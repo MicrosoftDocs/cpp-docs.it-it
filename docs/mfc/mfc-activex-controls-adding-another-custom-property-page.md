@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: 33fd297ee509b341d39d9db21af54a3988f6256e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a749c5d8d676ac85c3c2085eb041328aff599ab8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618281"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508877"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzata
 
@@ -55,7 +55,7 @@ Per ulteriori informazioni sull'utilizzo delle pagine delle proprietà in un con
 
 1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
 
-   Verrà visualizzata la finestra di dialogo [Aggiungi classe](../ide/add-class-dialog-box.md) .
+   Verrà visualizzata la finestra di dialogo [Aggiungi classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) .
 
 1. Fare doppio clic sul modello di **classe MFC** .
 

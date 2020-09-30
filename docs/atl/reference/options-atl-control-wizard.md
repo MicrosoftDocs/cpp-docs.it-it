@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 25db3995687011de5e9cc0a98506cd26f2f1af0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 481c97fe7621e9592317f629c2cf87f2f719d5d1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495448"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506921"
 ---
 # <a name="options-atl-control-wizard"></a>Opzioni, Creazione guidata controllo ATL
 
 Utilizzare questa pagina della procedura guidata per definire il tipo di controllo che si sta creando e il livello di supporto dell'interfaccia in esso contenuto.
 
-## <a name="uielement-list"></a>Elenco UIElement
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia
 
 ### <a name="control-type"></a>Tipo di controllo
 
 Il tipo di controllo che si desidera creare.
 
-- **Controllo standard**: Controllo ActiveX.
+- **Controllo standard**: un controllo ActiveX.
 
-- **Controllo composito**: Controllo ActiveX che può contenere (simile a una finestra di dialogo) altri controlli ActiveX o controlli Windows. Un controllo composito include quanto segue:
+- **Controllo composito**: un controllo ActiveX che può contenere (simile a una finestra di dialogo) altri controlli ActiveX o controlli Windows. Un controllo composito include quanto segue:
 
   - Modello per la finestra di dialogo che implementa il controllo composito.
 
   - Una risorsa personalizzata, REGISTRY, che registra automaticamente il controllo composito quando viene richiamato.
 
-  - C++ Classe che implementa il controllo composito.
+  - Classe C++ che implementa il controllo composito.
 
   - Interfaccia COM, esposta dal controllo composito.
 
@@ -39,7 +39,7 @@ Il tipo di controllo che si desidera creare.
 
     Per impostazione predefinita, questo controllo imposta [CComControlBase:: m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) su true per indicare che si tratta di un controllo a finestre. Implementa una mappa di sink. Per ulteriori informazioni, vedere [supporto per il controllo DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
-- **Controllo DHTML**: Un controllo DHTML ATL specifica l'interfaccia utente, usando HTML. La classe dell'interfaccia utente DHTML contiene una mappa COM. Per impostazione predefinita, questo controllo imposta [CComControlBase:: m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) su true per indicare che si tratta di un controllo a finestre.
+- **Controllo DHTML**: un controllo DHTML ATL specifica l'interfaccia utente, usando HTML. La classe dell'interfaccia utente DHTML contiene una mappa COM. Per impostazione predefinita, questo controllo imposta [CComControlBase:: m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) su true per indicare che si tratta di un controllo a finestre.
 
    Per ulteriori informazioni, vedere [identificazione degli elementi del progetto di controllo DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
@@ -51,29 +51,29 @@ Supporta solo le interfacce che sono assolutamente necessarie per la maggior par
 
 Aggiunge il supporto di aggregazione per il controllo che si sta creando. Per ulteriori informazioni, vedere [aggregazione](../../atl/aggregation.md).
 
-- **Sì**: Creare un controllo che può essere aggregato.
+- **Sì**: crea un controllo che può essere aggregato.
 
-- **No**: Creare un controllo che non può essere aggregato.
+- **No**: crea un controllo che non può essere aggregato.
 
-- **Solo**: Creare un controllo di cui è possibile creare un'istanza solo tramite l'aggregazione.
+- **Solo**: creare un controllo di cui è possibile creare un'istanza solo tramite l'aggregazione.
 
 ### <a name="threading-model"></a>Modello di threading.
 
 Specifica che il modello di threading utilizzato dal controllo.
 
-- **Singolo**: Il controllo viene eseguito solo nel thread COM primario.
+- **Single**: il controllo viene eseguito solo nel thread com primario.
 
-- **Apartment**: Il controllo può essere creato in qualsiasi Apartment a thread singolo. Valore predefinito.
+- **Apartment**: il controllo può essere creato in qualsiasi Apartment a thread singolo. Valore predefinito.
 
 ### <a name="interface"></a>Interfaccia
 
 Tipo di interfaccia esposto dal controllo al contenitore.
 
-- **Doppio**: Crea un'interfaccia che espone proprietà e metodi tramite `IDispatch` e direttamente tramite il VTBL.
+- **Dual**: crea un'interfaccia che espone proprietà e metodi tramite `IDispatch` e direttamente tramite il VTBL.
 
-- **Custom**: Crea un'interfaccia che espone metodi direttamente tramite un VTBL.
+- **Custom**: crea un'interfaccia che espone metodi direttamente tramite un VTBL.
 
-   Se si seleziona **personalizzato**, è possibile specificare che il controllo è **compatibile con l'automazione**. Se si seleziona **compatibile con l'automazione**, la procedura guidata aggiunge l'attributo [oleautomation](../../windows/oleautomation.md) all'interfaccia in IDL e l'interfaccia può essere sottoposta a marshalling dal gestore di marshalling universale in Oleaut32. dll. Per ulteriori informazioni, vedere i [Dettagli](/windows/win32/com/marshaling-details) del marshalling nel Windows SDK.
+   Se si seleziona **personalizzato**, è possibile specificare che il controllo è **compatibile con l'automazione**. Se si seleziona **compatibile con l'automazione**, la procedura guidata aggiunge l'attributo [oleautomation](../../windows/attributes/oleautomation.md) all'interfaccia in IDL e l'interfaccia può essere sottoposta a marshalling dal gestore di marshalling universale in oleaut32.dll. Per ulteriori informazioni, vedere i [Dettagli del marshalling](/windows/win32/com/marshaling-details) nel Windows SDK.
 
    Inoltre, se si seleziona **compatibile con l'automazione**, tutti i parametri per tutti i metodi del controllo devono essere compatibili con le varianti.
 
@@ -83,7 +83,7 @@ Imposta un supporto vario aggiuntivo per il controllo.
 
 - **Punti di connessione**: Abilita i punti di connessione per l'oggetto rendendo la classe dell'oggetto derivata da [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) e consentendo l'esposizione di un'interfaccia di origine.
 
-- **Concesso in licenza**: Aggiunge il supporto al controllo per la [gestione delle licenze](/windows/win32/com/licensing). I controlli con licenza possono essere ospitati solo se il computer client dispone della licenza corretta.
+- **Concesso in licenza**: aggiunge il supporto al controllo per la [gestione delle licenze](/windows/win32/com/licensing). I controlli con licenza possono essere ospitati solo se il computer client dispone della licenza corretta.
 
 ## <a name="see-also"></a>Vedere anche
 

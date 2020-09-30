@@ -4,18 +4,18 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f9876a2ce164d0a129ba21405ec61fdcbbd8de91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845159"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507470"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Usare set di regole per specificare le regole C++ da eseguire
 
 In Visual Studio è possibile creare e modificare un set di *regole* personalizzate per soddisfare specifiche esigenze di progetto associate all'analisi del codice. I set di regole predefiniti vengono archiviati in *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* .
 
-**Visual Studio 2017 versione 15,7 e successive:** È possibile creare set di regole personalizzati utilizzando qualsiasi editor di testo e applicarli nelle compilazioni della riga di comando indipendentemente dal sistema di compilazione in uso. Per altre informazioni, vedere [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis).
+**Visual Studio 2017 versione 15,7 e successive:** È possibile creare set di regole personalizzati utilizzando qualsiasi editor di testo e applicarli nelle compilazioni della riga di comando indipendentemente dal sistema di compilazione in uso. Per altre informazioni, vedere [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md).
 
 Per creare un set di regole C++ personalizzato in Visual Studio, è necessario aprire un progetto C/C++ nell'IDE di Visual Studio. Si apre quindi un set di regole standard nell'editor del set di regole e quindi si aggiungono o rimuovono regole specifiche e, facoltativamente, si modifica l'azione che si verifica quando l'analisi del codice determina che una regola è stata violata.
 
@@ -98,7 +98,7 @@ Per creare un nuovo set di regole personalizzate, salvarlo con un nuovo nome fil
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Per creare un set di regole in un editor di testo
 
-È possibile creare un set di regole personalizzato in un editor di testo, archiviarlo in qualsiasi posizione con un' *`.ruleset`* estensione e applicarlo con l' [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) opzione del compilatore.
+È possibile creare un set di regole personalizzato in un editor di testo, archiviarlo in qualsiasi posizione con un' *`.ruleset`* estensione e applicarlo con l' [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) opzione del compilatore.
 
 Nell'esempio seguente viene illustrato un file di set di regole di base che è possibile utilizzare come punto di partenza:
 

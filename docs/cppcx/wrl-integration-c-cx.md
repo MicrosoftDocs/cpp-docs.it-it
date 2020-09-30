@@ -2,28 +2,28 @@
 title: Integrazione WRL (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-ms.openlocfilehash: a3c8b824d2cd932a7d284804f3f28781654045e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ea0f6aece985a2ee74916e737b9aab1bf0d1d96
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304150"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507404"
 ---
 # <a name="wrl-integration-ccx"></a>Integrazione WRL (C++/CX)
 
-È possibile combinare liberamente il codice WRL con codice di libreria modelli C++ (WRL) di Windows Runtime. Nella stessa unità di conversione, è possibile utilizzare oggetti dichiarati con WRL handle a oggetto (`^`) la notazione e WRL smart puntatore (`ComPtr<T>`) notation. Tuttavia, è necessario gestire manualmente i valori restituiti e i codici di errore WRL HRESULT ed eccezioni WRL.
+È possibile combinare liberamente il codice WRL con Windows Runtime codice WRL (C++ Template Library). Nella stessa unità di conversione è possibile usare oggetti dichiarati con la notazione handle a oggetto ( `^` ) WRL e la notazione del puntatore intelligente WRL ( `ComPtr<T>` ). Tuttavia, è necessario gestire manualmente i valori restituiti e i codici di errore HRESULT e le eccezioni WRL di WRL.
 
-## <a name="wrl-development"></a>Sviluppo di WRL
+## <a name="wrl-development"></a>Sviluppo WRL
 
-Per altre informazioni sulla creazione e l'utilizzo dei componenti WRL, vedere [libreria modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).
+Per ulteriori informazioni sulla creazione e sull'utilizzo di componenti WRL, vedere [Windows Runtime libreria di modelli C++ (WRL)](./wrl/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Esempio
 
-Il frammento di codice seguente illustra l'uso di WRL e WRL per usare le classi di Windows Runtime e analizzare un file di metadati.
+Nel frammento di codice seguente viene illustrato l'utilizzo di WRL e WRL per utilizzare Windows Runtime classi ed esaminare un file di metadati.
 
-L'esempio è tratto da un frammento di codice all'interno del forum di App di Microsoft Store predefiniti. L'autore del frammento di codice presenta le seguenti dichiarazioni di non responsabilità e condizioni:
+L'esempio è tratto da un frammento di codice nel Forum Building Microsoft Store Apps. L'autore del frammento di codice presenta le seguenti dichiarazioni di non responsabilità e condizioni:
 
-1. C++ non fornisce API specifiche che si riflettono sui tipi Windows Runtime, ma i file di metadati Windows (con estensione winmd) per un tipo sono pienamente compatibili con i file di metadati CLR. Windows fornisce la nuova API di individuazione dei metadati (RoGetMetaDataFile) per ottenere il file .winmd per un determinato tipo. Tuttavia, queste API sono limitate all'uso da parte degli sviluppatori C++ perché non è possibile creare istanze di una classe.
+1. C++ non fornisce API specifiche per la reflection sui tipi di Windows Runtime, ma i file di metadati di Windows (con estensione winmd) per un tipo sono completamente compatibili con i file di metadati CLR. Windows fornisce la nuova API di individuazione dei metadati (RoGetMetaDataFile) per ottenere il file .winmd per un determinato tipo. Tuttavia, queste API sono limitate all'uso da parte degli sviluppatori C++ perché non è possibile creare istanze di una classe.
 
 1. Una volta compilato il codice, dovrai anche passare i file Runtimeobject.lib e Rometadata.lib al linker.
 

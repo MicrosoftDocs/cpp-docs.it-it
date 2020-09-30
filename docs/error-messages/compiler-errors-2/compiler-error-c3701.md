@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3701
 ms.assetid: a7faaa87-d2f5-4d6a-9a2f-5cab2d24a648
-ms.openlocfilehash: 6852d130b0f10282b8c22b0053760eca120252c7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c15cd9ce841d79787b3be9829c76038803b54d4d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758021"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508062"
 ---
 # <a name="compiler-error-c3701"></a>Errore del compilatore C3701
 
 ' Function ': event_source non ha eventi
 
-Si è provato a usare [event_source](../../windows/event-source.md) in una classe senza metodi di evento. Per correggere l'errore, aggiungere uno o più eventi alla classe.
+Si è provato a usare [event_source](../../windows/attributes/event-source.md) in una classe senza metodi di evento. Per correggere l'errore, aggiungere uno o più eventi alla classe.
 
 L'esempio seguente genera l'C3701:
 

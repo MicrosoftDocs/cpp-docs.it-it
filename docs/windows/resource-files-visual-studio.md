@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 463c27959b049436e29f872c966bc276c6ef5f2d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167875"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507015"
 ---
 # <a name="resource-files-c"></a>File di risorse (C++)
 
@@ -46,7 +46,7 @@ Il termine *file di risorse* può fare riferimento a un numero di tipi di file, 
 
 - Una singola risorsa esistente come file autonomo. Questo tipo include una bitmap, un'icona o un file di cursore a cui fa riferimento un file RC.
 
-- Un file di intestazione generato dall'ambiente di sviluppo. Questo tipo include `Resource.h`, a cui fa riferimento un file RC.
+- Un file di intestazione generato dall'ambiente di sviluppo. Questo tipo include `Resource.h` , a cui fa riferimento un file RC.
 
 Le risorse disponibili in altri tipi di file, ad esempio i file con estensione exe, dll e res, sono definite *risorse*.
 
@@ -54,7 +54,7 @@ Le risorse disponibili in altri tipi di file, ad esempio i file con estensione e
 
 - Usare file di risorse annidati e inclusi in modo condizionale.
 
-- Aggiornare le risorse esistenti o convertirle in C++oggetti visivi.
+- Aggiornare le risorse esistenti o convertirle in Visual C++.
 
 - Importare o esportare risorse grafiche nel o dal file di risorse corrente.
 
@@ -78,7 +78,7 @@ Per modificare le risorse contenute, è possibile aprire i seguenti tipi di file
 | resx | File di risorse gestite |
 | EXE | File eseguibili |
 | DLL | File di libreria a collegamento dinamico |
-| .bmp, .ico, .dib, .cur | Bitmap, icona, barra degli strumenti e file di cursore |
+| BMP, ICO, DIB, cur | Bitmap, icona, barra degli strumenti e file di cursore |
 
 Quando si modificano le risorse, l'ambiente di Visual Studio funziona con e influiscono sui file seguenti:
 
@@ -90,7 +90,7 @@ Quando si modificano le risorse, l'ambiente di Visual Studio funziona con e infl
 
 ## <a name="manifest-resources"></a>Risorse di manifesto
 
-Nei C++ progetti desktop, le risorse di manifesto sono file XML che descrivono le dipendenze utilizzate da un'applicazione. In Visual Studio, ad esempio, il file manifesto generato dalla procedura guidata MFC definisce la versione delle DLL dei controlli comuni di Windows che l'applicazione deve usare:
+Nei progetti desktop C++, le risorse di manifesto sono file XML che descrivono le dipendenze utilizzate da un'applicazione. In Visual Studio, ad esempio, il file manifesto generato dalla procedura guidata MFC definisce la versione delle DLL dei controlli comuni di Windows che l'applicazione deve usare:
 
 ```xml
 <description>Your app description here</description>
@@ -108,12 +108,12 @@ Nei C++ progetti desktop, le risorse di manifesto sono file XML che descrivono l
 </dependency>
 ```
 
-Per un'applicazione Windows XP o Windows Vista, la risorsa del manifesto deve specificare la versione più recente dei controlli comuni di Windows per l'applicazione da utilizzare. Nell'esempio precedente viene usata la versione `6.0.0.0`, che supporta il [controllo Syslink](/windows/win32/Controls/syslink-overview).
+Per un'applicazione Windows XP o Windows Vista, la risorsa del manifesto deve specificare la versione più recente dei controlli comuni di Windows per l'applicazione da utilizzare. Nell'esempio precedente viene usata `6.0.0.0` la versione, che supporta il [controllo Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > È possibile avere solo una risorsa di manifesto per modulo.
 
-Per visualizzare le informazioni sulla versione e sul tipo contenute in una risorsa di manifesto, aprire il file in un visualizzatore XML o nell'editor di testo di Visual Studio. Se si apre una risorsa di manifesto da [Visualizzazione risorse](../windows/resource-view-window.md), la risorsa verrà aperta in formato binario.
+Per visualizzare le informazioni sulla versione e sul tipo contenute in una risorsa di manifesto, aprire il file in un visualizzatore XML o nell'editor di testo di Visual Studio. Se si apre una risorsa di manifesto da [Visualizzazione risorse](./how-to-create-a-resource-script-file.md), la risorsa verrà aperta in formato binario.
 
 ### <a name="to-open-a-manifest-resource"></a>Per aprire una risorsa di manifesto
 

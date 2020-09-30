@@ -15,22 +15,22 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: 1aaeea11dd7916332ab0c281561550039ee03498
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9e4b203a5f7ae452d4d81e52a50b2004baa6ea7c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616779"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507036"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Convalida e DDX (Dialog Data Exchange)
 
-DDX (Dialog Data Exchange) è un modo semplice per inizializzare i controlli nella finestra di dialogo e raccogliere i dati di input dall'utente. La convalida dei dati della finestra di dialogo è un modo semplice per convalidare l'immissione di dati in una finestra di dialogo. Per sfruttare i vantaggi di DDX e DDV nelle finestre di dialogo, utilizzare la [procedura guidata Aggiungi variabile membro](../ide/add-member-variable-wizard.md) per creare i membri dati e impostare i relativi tipi di dati e specificare regole di convalida.
+DDX (Dialog Data Exchange) è un modo semplice per inizializzare i controlli nella finestra di dialogo e raccogliere i dati di input dall'utente. La convalida dei dati della finestra di dialogo è un modo semplice per convalidare l'immissione di dati in una finestra di dialogo. Per sfruttare i vantaggi di DDX e DDV nelle finestre di dialogo, utilizzare la [procedura guidata Aggiungi variabile membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) per creare i membri dati e impostare i relativi tipi di dati e specificare regole di convalida.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Scambio di dati della finestra di dialogo](dialog-data-exchange.md)
 
-- [Convalida dei dati della finestra di dialogo](dialog-data-validation.md)
+- [Convalida dei dati delle finestre di dialogo](dialog-data-validation.md)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231117"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507466"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -38,7 +38,7 @@ Specifiche facoltative del modello. Per ulteriori informazioni, vedere le [speci
 *MS-decl-spec*<br/>
 Specifica della classe di archiviazione facoltativa. Per ulteriori informazioni, fare riferimento alla parola chiave [__declspec](../cpp/declspec.md) .
 
-*Tag*<br/>
+*tag*<br/>
 Nome del tipo assegnato alla struttura. Il tag diventa una parola riservata nell'ambito della struttura. Il tag è facoltativo. Se omesso, viene definita una struttura anonima. Per ulteriori informazioni, vedere [tipi di classe anonimi](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
@@ -48,7 +48,7 @@ Elenco facoltativo delle classi o delle strutture da cui questa struttura derive
 Elenco dei membri della struttura. Per ulteriori informazioni, vedere [Cenni preliminari sui membri della classe](../cpp/class-member-overview.md) . L'unica differenza è che **`struct`** viene usato al posto di **`class`** .
 
 *declarators*<br/>
-Elenco di dichiaratori che specificano i nomi della struttura. Gli elenchi dei dichiaratori dichiarano una o più istanze del tipo di struttura. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della struttura sono **`public`** . Gli elenchi di inizializzatori sono comuni nelle strutture perché i membri dati sono **`public`** per impostazione predefinita.  Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](../cpp/overview-of-declarators.md) .
+Elenco di dichiaratori che specificano i nomi della struttura. Gli elenchi dei dichiaratori dichiarano una o più istanze del tipo di struttura. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della struttura sono **`public`** . Gli elenchi di inizializzatori sono comuni nelle strutture perché i membri dati sono **`public`** per impostazione predefinita.  Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](./declarations-and-definitions-cpp.md) .
 
 ## <a name="remarks"></a>Osservazioni
 

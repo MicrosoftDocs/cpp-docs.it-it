@@ -97,12 +97,12 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-ms.openlocfilehash: 4907665c25f65affab0fc2c0bbd37f70d6a3c352
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a6bb7a262df21a835f1e870f2bce29480467c543
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211046"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508541"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -206,11 +206,11 @@ Tipo del componente chiave di un elemento nella sequenza controllata.
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla come singoli nodi. Inserisce gli elementi in un albero (quasi) bilanciato che mantiene ordinato modificando i collegamenti tra i nodi, mai copiando il contenuto di un nodo in un altro. Ciò significa che è possibile inserire e rimuovere elementi liberamente senza disturbare gli elementi rimanenti.
 
-L'oggetto ordina la sequenza che controlla chiamando un oggetto delegato archiviato di tipo [multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md). È possibile specificare l'oggetto delegato archiviato quando si costruisce il multiset; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<(key_type, key_type)` . È possibile accedere a questo oggetto archiviato chiamando la funzione membro [multiset:: key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md) `()` .
+L'oggetto ordina la sequenza che controlla chiamando un oggetto delegato archiviato di tipo [multiset:: key_compare (STL/CLR)](#key_compare). È possibile specificare l'oggetto delegato archiviato quando si costruisce il multiset; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<(key_type, key_type)` . È possibile accedere a questo oggetto archiviato chiamando la funzione membro [multiset:: key_comp (STL/CLR)](#key_comp) `()` .
 
-Tale oggetto delegato deve imporre un ordinamento debole rigoroso per le chiavi di tipo [multiset:: key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md). Ciò significa che, per due chiavi `X` e `Y` :
+Tale oggetto delegato deve imporre un ordinamento debole rigoroso per le chiavi di tipo [multiset:: key_type (STL/CLR)](#key_type). Ciò significa che, per due chiavi `X` e `Y` :
 
-`key_comp()(X, Y)`Restituisce lo stesso risultato booleano a ogni chiamata.
+`key_comp()(X, Y)` Restituisce lo stesso risultato booleano a ogni chiamata.
 
 Se `key_comp()(X, Y)` è true, `key_comp()(Y, X)` deve essere false.
 
@@ -222,7 +222,7 @@ Per qualsiasi elemento `X` che precede `Y` nella sequenza controllata, `key_comp
 
 Ogni elemento funge da EY e da un valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario con un numero di operazioni proporzionale al logaritmo del numero di elementi nella sequenza (ora logaritmica). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.
 
-Un multiset supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti in base a un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()` . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore multiset per raggiungere il nodo Head e quindi confrontare uguale a `end()` . Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()` .
+Un multiset supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti in base a un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [multiset:: end (STL/CLR)](#end) `()` . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore multiset per raggiungere il nodo Head e quindi confrontare uguale a `end()` . Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()` .
 
 Si noti che non è possibile fare riferimento a un elemento multiset direttamente in base alla relativa posizione numerica, che richiede un iteratore ad accesso casuale.
 
@@ -232,7 +232,7 @@ La cancellazione o la rimozione di un elemento chiama il distruttore per il valo
 
 ## <a name="members"></a>Membri
 
-## <a name="multisetbegin-stlclr"></a><a name="begin"></a>multiset:: begin (STL/CLR)
+## <a name="multisetbegin-stlclr"></a><a name="begin"></a> multiset:: begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -280,7 +280,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="multisetclear-stlclr"></a><a name="clear"></a>multiset:: Clear (STL/CLR)
+## <a name="multisetclear-stlclr"></a><a name="clear"></a> multiset:: Clear (STL/CLR)
 
 Rimuove tutti gli elementi.
 
@@ -292,7 +292,7 @@ void clear();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro chiama in modo efficace [multiset:: erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md) `(` [multiset:: begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md) `(),` [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
+La funzione membro chiama in modo efficace [multiset:: erase (STL/CLR)](#erase) `(` [multiset:: begin (STL/CLR)](#begin) `(),` [multiset:: end (STL/CLR)](#end) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -338,7 +338,7 @@ a b
 size() = 0
 ```
 
-## <a name="multisetconst_iterator-stlclr"></a><a name="const_iterator"></a>multiset:: const_iterator (STL/CLR)
+## <a name="multisetconst_iterator-stlclr"></a><a name="const_iterator"></a> multiset:: const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -380,7 +380,7 @@ int main()
 a b c
 ```
 
-## <a name="multisetconst_reference-stlclr"></a><a name="const_reference"></a>multiset:: const_reference (STL/CLR)
+## <a name="multisetconst_reference-stlclr"></a><a name="const_reference"></a> multiset:: const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -425,7 +425,7 @@ int main()
 a b c
 ```
 
-## <a name="multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>multiset:: const_reverse_iterator (STL/CLR)
+## <a name="multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> multiset:: const_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso costante per la sequenza controllata.
 
@@ -467,7 +467,7 @@ int main()
 c b a
 ```
 
-## <a name="multisetcount-stlclr"></a><a name="count"></a>multiset:: Count (STL/CLR)
+## <a name="multisetcount-stlclr"></a><a name="count"></a> multiset:: Count (STL/CLR)
 
 Trova il numero di elementi corrispondenti a una chiave specificata.
 
@@ -520,7 +520,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="multisetdifference_type-stlclr"></a><a name="difference_type"></a>multiset::d ifference_type (STL/CLR)
+## <a name="multisetdifference_type-stlclr"></a><a name="difference_type"></a> multiset::d ifference_type (STL/CLR)
 
 Tipi di una distanza con segno tra due elementi.
 
@@ -575,7 +575,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="multisetempty-stlclr"></a><a name="empty"></a>multiset:: Empty (STL/CLR)
+## <a name="multisetempty-stlclr"></a><a name="empty"></a> multiset:: Empty (STL/CLR)
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -587,7 +587,7 @@ bool empty();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [multiset:: size (STL/CLR)](../dotnet/multiset-size-stl-clr.md) `() == 0` . Viene usato per verificare se il multiset è vuoto.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [multiset:: size (STL/CLR)](#size) `() == 0` . Viene usato per verificare se il multiset è vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -627,7 +627,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="multisetend-stlclr"></a><a name="end"></a>multiset:: end (STL/CLR)
+## <a name="multisetend-stlclr"></a><a name="end"></a> multiset:: end (STL/CLR)
 
 Designa la fine della sequenza controllata.
 
@@ -676,7 +676,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="multisetequal_range-stlclr"></a><a name="equal_range"></a>multiset:: equal_range (STL/CLR)
+## <a name="multisetequal_range-stlclr"></a><a name="equal_range"></a> multiset:: equal_range (STL/CLR)
 
 Trova un intervallo che corrisponde a una chiave specificata.
 
@@ -693,7 +693,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [multiset:: lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md) `(key),` [multiset:: upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [multiset:: lower_bound (STL/CLR)](#lower_bound) `(key),` [multiset:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -736,7 +736,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="multiseterase-stlclr"></a><a name="erase"></a>multiset:: erase (STL/CLR)
+## <a name="multiseterase-stlclr"></a><a name="erase"></a> multiset:: erase (STL/CLR)
 
 Rimuove gli elementi in corrispondenza delle posizioni specificate.
 
@@ -764,7 +764,7 @@ Elemento da cancellare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso oppure [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
+La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso oppure [multiset:: end (STL/CLR)](#end) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
 
 La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [ `first` , `last` ) e restituisce un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi o `end()` se tale elemento non esiste. Viene usato per rimuovere zero o più elementi contigui.
 
@@ -820,7 +820,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="multisetfind-stlclr"></a><a name="find"></a>multiset:: Find (STL/CLR)
+## <a name="multisetfind-stlclr"></a><a name="find"></a> multiset:: Find (STL/CLR)
 
 Trova un elemento che corrisponde a una chiave specificata.
 
@@ -837,7 +837,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
+Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [multiset:: end (STL/CLR)](#end) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -876,7 +876,7 @@ find b = b
 find C = False
 ```
 
-## <a name="multisetgeneric_container-stlclr"></a><a name="generic_container"></a>multiset:: generic_container (STL/CLR)
+## <a name="multisetgeneric_container-stlclr"></a><a name="generic_container"></a> multiset:: generic_container (STL/CLR)
 
 Tipo dell'interfaccia generica per il contenitore.
 
@@ -940,7 +940,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>multiset:: generic_iterator (STL/CLR)
+## <a name="multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> multiset:: generic_iterator (STL/CLR)
 
 Tipo di un iteratore da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -996,7 +996,7 @@ a b c
 a
 ```
 
-## <a name="multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>multiset:: generic_reverse_iterator (STL/CLR)
+## <a name="multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> multiset:: generic_reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso da usare con l'interfaccia generica per il contenitore.
 
@@ -1052,7 +1052,7 @@ a b c
 c
 ```
 
-## <a name="multisetgeneric_value-stlclr"></a><a name="generic_value"></a>multiset:: generic_value (STL/CLR)
+## <a name="multisetgeneric_value-stlclr"></a><a name="generic_value"></a> multiset:: generic_value (STL/CLR)
 
 Tipo di un elemento da utilizzare con l'interfaccia generica per il contenitore.
 
@@ -1106,7 +1106,7 @@ a b c
 a
 ```
 
-## <a name="multisetinsert-stlclr"></a><a name="insert"></a>multiset:: Insert (STL/CLR)
+## <a name="multisetinsert-stlclr"></a><a name="insert"></a> multiset:: Insert (STL/CLR)
 
 Aggiunge elementi.
 
@@ -1219,7 +1219,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="multisetiterator-stlclr"></a><a name="iterator"></a>multiset:: iterator (STL/CLR)
+## <a name="multisetiterator-stlclr"></a><a name="iterator"></a> multiset:: iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="multisetkey_comp-stlclr"></a><a name="key_comp"></a>multiset:: key_comp (STL/CLR)
+## <a name="multisetkey_comp-stlclr"></a><a name="key_comp"></a> multiset:: key_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due chiavi.
 
@@ -1320,7 +1320,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="multisetkey_compare-stlclr"></a><a name="key_compare"></a>multiset:: key_compare (STL/CLR)
+## <a name="multisetkey_compare-stlclr"></a><a name="key_compare"></a> multiset:: key_compare (STL/CLR)
 
 Delegato di ordinamento per due chiavi.
 
@@ -1380,7 +1380,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="multisetkey_type-stlclr"></a><a name="key_type"></a>multiset:: key_type (STL/CLR)
+## <a name="multisetkey_type-stlclr"></a><a name="key_type"></a> multiset:: key_type (STL/CLR)
 
 Tipo di una chiave di ordinamento.
 
@@ -1425,7 +1425,7 @@ int main()
 a b c
 ```
 
-## <a name="multisetlower_bound-stlclr"></a><a name="lower_bound"></a>multiset:: lower_bound (STL/CLR)
+## <a name="multisetlower_bound-stlclr"></a><a name="lower_bound"></a> multiset:: lower_bound (STL/CLR)
 
 Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.
 
@@ -1442,7 +1442,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [multiset:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -1482,7 +1482,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="multisetmake_value-stlclr"></a><a name="make_value"></a>multiset:: make_value (STL/CLR)
+## <a name="multisetmake_value-stlclr"></a><a name="make_value"></a> multiset:: make_value (STL/CLR)
 
 Costruisce un oggetto valore.
 
@@ -1528,7 +1528,7 @@ int main()
 a b c
 ```
 
-## <a name="multisetmultiset-stlclr"></a><a name="multiset"></a>multiset:: multiset (STL/CLR)
+## <a name="multisetmultiset-stlclr"></a><a name="multiset"></a> multiset:: multiset (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -1699,7 +1699,7 @@ c b a
 a b c
 ```
 
-## <a name="multisetoperator-stlclr"></a><a name="op_as"></a>multiset:: operator = (STL/CLR)
+## <a name="multisetoperator-stlclr"></a><a name="op_as"></a> multiset:: operator = (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -1754,7 +1754,7 @@ a b c
 a b c
 ```
 
-## <a name="multisetrbegin-stlclr"></a><a name="rbegin"></a>multiset:: rbegin (STL/CLR)
+## <a name="multisetrbegin-stlclr"></a><a name="rbegin"></a> multiset:: rbegin (STL/CLR)
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -1802,7 +1802,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="multisetreference-stlclr"></a><a name="reference"></a>multiset:: Reference (STL/CLR)
+## <a name="multisetreference-stlclr"></a><a name="reference"></a> multiset:: Reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -1847,7 +1847,7 @@ int main()
 a b c
 ```
 
-## <a name="multisetrend-stlclr"></a><a name="rend"></a>multiset:: rend (STL/CLR)
+## <a name="multisetrend-stlclr"></a><a name="rend"></a> multiset:: rend (STL/CLR)
 
 Indica la fine della sequenza controllata inversa.
 
@@ -1896,7 +1896,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>multiset:: reverse_iterator (STL/CLR)
+## <a name="multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> multiset:: reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -1938,7 +1938,7 @@ int main()
 c b a
 ```
 
-## <a name="multisetsize-stlclr"></a><a name="size"></a>multiset:: size (STL/CLR)
+## <a name="multisetsize-stlclr"></a><a name="size"></a> multiset:: size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -1950,7 +1950,7 @@ size_type size();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [multiset:: Empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md) `()` .
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [multiset:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Esempio
 
@@ -1992,7 +1992,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="multisetsize_type-stlclr"></a><a name="size_type"></a>multiset:: size_type (STL/CLR)
+## <a name="multisetsize_type-stlclr"></a><a name="size_type"></a> multiset:: size_type (STL/CLR)
 
 Tipo di una distanza con segno tra due elementi.
 
@@ -2040,7 +2040,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="multisetswap-stlclr"></a><a name="swap"></a>multiset:: swap (STL/CLR)
+## <a name="multisetswap-stlclr"></a><a name="swap"></a> multiset:: swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2108,7 +2108,7 @@ d e f
 a b c
 ```
 
-## <a name="multisetto_array-stlclr"></a><a name="to_array"></a>multiset:: to_array (STL/CLR)
+## <a name="multisetto_array-stlclr"></a><a name="to_array"></a> multiset:: to_array (STL/CLR)
 
 Copia la sequenza controllata in una nuova matrice.
 
@@ -2158,7 +2158,7 @@ a b c d
 a b c
 ```
 
-## <a name="multisetupper_bound-stlclr"></a><a name="upper_bound"></a>multiset:: upper_bound (STL/CLR)
+## <a name="multisetupper_bound-stlclr"></a><a name="upper_bound"></a> multiset:: upper_bound (STL/CLR)
 
 Trova la fine dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2175,7 +2175,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina l'ultimo elemento della `X` sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina l'ultimo elemento della `X` sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [multiset:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -2215,7 +2215,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="multisetvalue_comp-stlclr"></a><a name="value_comp"></a>multiset:: value_comp (STL/CLR)
+## <a name="multisetvalue_comp-stlclr"></a><a name="value_comp"></a> multiset:: value_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due valori di elemento.
 
@@ -2259,7 +2259,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="multisetvalue_compare-stlclr"></a><a name="value_compare"></a>multiset:: value_compare (STL/CLR)
+## <a name="multisetvalue_compare-stlclr"></a><a name="value_compare"></a> multiset:: value_compare (STL/CLR)
 
 Delegato di ordinamento per i valori di due elementi.
 
@@ -2304,7 +2304,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="multisetvalue_type-stlclr"></a><a name="value_type"></a>multiset:: value_type (STL/CLR)
+## <a name="multisetvalue_type-stlclr"></a><a name="value_type"></a> multiset:: value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -2349,7 +2349,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-multiset-stlclr"></a><a name="op_neq"></a>operatore! = (multiset) (STL/CLR)
+## <a name="operator-multiset-stlclr"></a><a name="op_neq"></a> operatore! = (multiset) (STL/CLR)
 
 Confronto elenco non uguale.
 
@@ -2419,7 +2419,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-multiset-stlclr"></a><a name="op_lt"></a>operatore &lt; (multiset) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lt"></a> operatore &lt; (multiset) (STL/CLR)
 
 Elenco minore del confronto.
 
@@ -2489,7 +2489,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-multiset-stlclr"></a><a name="op_lteq"></a>Operator &lt; = (multiset) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lteq"></a> Operator &lt; = (multiset) (STL/CLR)
 
 Elenco di confronto minore o uguale a.
 
@@ -2559,7 +2559,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-multiset-stlclr"></a><a name="op_eq"></a>operatore = = (multiset) (STL/CLR)
+## <a name="operator-multiset-stlclr"></a><a name="op_eq"></a> operatore = = (multiset) (STL/CLR)
 
 Elenca confronto uguale.
 
@@ -2629,7 +2629,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-multiset-stlclr"></a><a name="op_gt"></a>operatore &gt; (multiset) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gt"></a> operatore &gt; (multiset) (STL/CLR)
 
 Elenco maggiore di confronto.
 
@@ -2699,7 +2699,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-multiset-stlclr"></a><a name="op_gteq"></a>Operator &gt; = (multiset) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gteq"></a> Operator &gt; = (multiset) (STL/CLR)
 
 Elenco di confronto maggiore o uguale a.
 

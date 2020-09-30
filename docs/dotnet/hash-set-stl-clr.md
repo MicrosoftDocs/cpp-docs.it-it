@@ -95,12 +95,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: a7db6367ae7d5096c47666a1ea930720f061c9dd
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: c6df41836433b952d7d2e0e7d744270174c5768a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743126"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508738"
 ---
 # <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
@@ -204,9 +204,9 @@ Tipo del componente chiave di un elemento nella sequenza controllata.
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla come singoli nodi in un elenco collegato bidirezionale. Per velocizzare l'accesso, l'oggetto gestisce anche una matrice di lunghezza variabile di puntatori nell'elenco (tabella hash), gestendo in modo efficace l'intero elenco come sequenza di sottoelenchi o bucket. Inserisce gli elementi in un bucket che mantiene ordinato modificando i collegamenti tra i nodi, mai copiando il contenuto di un nodo in un altro. Ciò significa che è possibile inserire e rimuovere elementi liberamente senza disturbare gli elementi rimanenti.
 
-L'oggetto ordina ogni bucket che controlla chiamando un oggetto delegato archiviato di tipo [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<=(key_type, key_type)` .
+L'oggetto ordina ogni bucket che controlla chiamando un oggetto delegato archiviato di tipo [hash_set:: key_compare (STL/CLR)](#key_compare). È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<=(key_type, key_type)` .
 
-È possibile accedere all'oggetto delegato archiviato chiamando la funzione membro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Tale oggetto delegato deve definire un ordinamento equivalente tra chiavi di tipo [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Ciò significa che, per due chiavi `X` e `Y` :
+È possibile accedere all'oggetto delegato archiviato chiamando la funzione membro [hash_set:: key_comp (STL/CLR)](#key_comp) `()` . Tale oggetto delegato deve definire un ordinamento equivalente tra chiavi di tipo [hash_set:: key_type (STL/CLR)](#key_type). Ciò significa che, per due chiavi `X` e `Y` :
 
 `key_comp()(X, Y)` Restituisce lo stesso risultato booleano a ogni chiamata.
 
@@ -216,7 +216,7 @@ Qualsiasi regola di ordinamento che si comporta come `operator<=(key_type, key_t
 
 Si noti che il contenitore garantisce solo che gli elementi le cui chiavi hanno un ordinamento equivalente (e quale hash per lo stesso valore Integer) siano adiacenti all'interno di un bucket. A differenza della classe modello [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md), un oggetto della classe modello `hash_set` garantisce che le chiavi per tutti gli elementi siano univoche. (Due chiavi non hanno un ordinamento equivalente).
 
-L'oggetto determina quale bucket deve contenere una chiave di ordinamento specificata chiamando un oggetto delegato archiviato di tipo [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` per ottenere un valore integer che dipende dal valore della chiave. È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è la funzione `System::Object::hash_value(key_type)` . Ciò significa che per tutte le chiavi `X` e `Y` :
+L'oggetto determina quale bucket deve contenere una chiave di ordinamento specificata chiamando un oggetto delegato archiviato di tipo [hash_set:: hasher (STL/CLR)](#hasher). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [hash_set:: hash_delegate (STL/CLR)](#hash_delegate) `()` per ottenere un valore integer che dipende dal valore della chiave. È possibile specificare l'oggetto delegato archiviato quando si costruisce la hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è la funzione `System::Object::hash_value(key_type)` . Ciò significa che per tutte le chiavi `X` e `Y` :
 
 `hash_delegate()(X)` Restituisce lo stesso risultato Integer a ogni chiamata.
 
@@ -224,9 +224,9 @@ Se `X` e `Y` hanno un ordinamento equivalente, `hash_delegate()(X)` deve restitu
 
 Ogni elemento viene utilizzato sia come chiave sia come valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario con una serie di operazioni indipendenti dal numero di elementi nella sequenza (tempo costante), almeno nei casi migliori. Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.
 
-Se i valori hash non sono distribuiti in modo uniforme, tuttavia, una tabella hash può essere degenerata. Nell'estremo, per una funzione hash che restituisce sempre lo stesso valore, la ricerca, l'inserimento e la rimozione sono proporzionali al numero di elementi nella sequenza (tempo lineare). Il contenitore tenta di scegliere una funzione hash ragionevole, le dimensioni del bucket medio e le dimensioni della tabella hash (numero totale di bucket), ma è possibile eseguire l'override di una o tutte le opzioni. Vedere, ad esempio, le funzioni [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) e [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
+Se i valori hash non sono distribuiti in modo uniforme, tuttavia, una tabella hash può essere degenerata. Nell'estremo, per una funzione hash che restituisce sempre lo stesso valore, la ricerca, l'inserimento e la rimozione sono proporzionali al numero di elementi nella sequenza (tempo lineare). Il contenitore tenta di scegliere una funzione hash ragionevole, le dimensioni del bucket medio e le dimensioni della tabella hash (numero totale di bucket), ma è possibile eseguire l'override di una o tutte le opzioni. Vedere, ad esempio, le funzioni [hash_set:: max_load_factor (STL/CLR)](#max_load_factor) e [hash_set:: rehash (STL/CLR)](#rehash).
 
-Un hash_set supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti, dato un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di hash_set per raggiungere il nodo Head e quindi confrontare uguale a `end()` . Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()` .
+Un hash_set supporta gli iteratori bidirezionali, il che significa che è possibile passare agli elementi adiacenti, dato un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [hash_set:: end (STL/CLR)](#end) `()` . È possibile decrementare questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di hash_set per raggiungere il nodo Head e quindi confrontare uguale a `end()` . Non è tuttavia possibile dereferenziare l'iteratore restituito da `end()` .
 
 Si noti che non è possibile fare riferimento a un elemento hash_set direttamente in base alla posizione numerica, che richiede un iteratore ad accesso casuale.
 
@@ -234,7 +234,7 @@ Un iteratore di hash_set archivia un handle al nodo hash_set associato, che a su
 
 La cancellazione o la rimozione di un elemento chiama il distruttore per il valore archiviato. L'eliminazione definitiva del contenitore Cancella tutti gli elementi. Pertanto, un contenitore il cui tipo di elemento è una classe di riferimento garantisce che nessun elemento sopravviva al contenitore. Si noti, tuttavia, che un contenitore di handle *non elimina definitivamente* i relativi elementi.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ## <a name="hash_setbegin-stlclr"></a><a name="begin"></a> hash_set:: begin (STL/CLR)
 
@@ -364,7 +364,7 @@ void clear();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro chiama in modo efficace [hash_set:: erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set:: begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
+La funzione membro chiama in modo efficace [hash_set:: erase (STL/CLR)](#erase) `(` [hash_set:: begin (STL/CLR)](#begin) `(),` [hash_set:: end (STL/CLR)](#end) `())` . Viene usato per garantire che la sequenza controllata sia vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -659,7 +659,7 @@ bool empty();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() == 0` . Viene usato per verificare se la hash_set è vuota.
+La funzione membro restituisce true per una sequenza controllata vuota. Equivale a [hash_set:: size (STL/CLR)](#size) `() == 0` . Viene usato per verificare se la hash_set è vuota.
 
 ### <a name="example"></a>Esempio
 
@@ -765,7 +765,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](#lower_bound) `(key),` [hash_set:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -836,7 +836,7 @@ Elemento da cancellare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso o [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
+La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso o [hash_set:: end (STL/CLR)](#end) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
 
 La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [ `first` , `last` ) e restituisce un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi o `end()` se tale elemento non esiste. Viene usato per rimuovere zero o più elementi contigui.
 
@@ -909,7 +909,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
+Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [hash_set:: end (STL/CLR)](#end) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -1257,7 +1257,7 @@ Fine dell'intervallo da inserire.
 *Pred*<br/>
 Predicato di ordinamento per la sequenza controllata.
 
-*right*<br/>
+*Ok*<br/>
 Oggetto o un intervallo da inserire.
 
 ### <a name="remarks"></a>Osservazioni
@@ -1517,7 +1517,7 @@ Inizio dell'intervallo da inserire.
 *last*<br/>
 Fine dell'intervallo da inserire.
 
-*right*<br/>
+*Ok*<br/>
 Enumerazione da inserire.
 
 *Val*<br/>
@@ -1829,7 +1829,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce `(float)` [hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set:: bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md) `()` . Viene usato per determinare le dimensioni medie del bucket.
+La funzione membro restituisce `(float)` [hash_set:: size (STL/CLR)](#size) `() /` [hash_set:: bucket_count (STL/CLR)](#bucket_count) `()` . Viene usato per determinare le dimensioni medie del bucket.
 
 ### <a name="example"></a>Esempio
 
@@ -1908,7 +1908,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina il primo elemento `X` nella sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina il primo elemento `X` nella sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [hash_set:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 
@@ -2073,7 +2073,7 @@ hash_set<Key>% operator=(hash_set<Key>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Contenitore da copiare.
 
 ### <a name="remarks"></a>Osservazioni
@@ -2221,7 +2221,7 @@ void rehash();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro ricompila la tabella hash, assicurando che [hash_set:: load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). In caso contrario, la tabella hash aumenta di dimensioni solo se necessario dopo un inserimento. Non diminuisce mai automaticamente le dimensioni. Viene usato per regolare le dimensioni della tabella hash.
+La funzione membro ricompila la tabella hash, assicurando che [hash_set:: load_factor (STL/CLR)](#load_factor) `() <=` [hash_set:: max_load_factor (STL/CLR)](#max_load_factor). In caso contrario, la tabella hash aumenta di dimensioni solo se necessario dopo un inserimento. Non diminuisce mai automaticamente le dimensioni. Viene usato per regolare le dimensioni della tabella hash.
 
 ### <a name="example"></a>Esempio
 
@@ -2386,7 +2386,7 @@ size_type size();
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [hash_set:: Empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md) `()` .
+La funzione membro restituisce la lunghezza della sequenza controllata. Viene usato per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se è sufficiente che la sequenza abbia dimensioni diversi da zero, vedere [hash_set:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Esempio
 
@@ -2488,7 +2488,7 @@ void swap(hash_set<Key>% right);
 
 #### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*<br/>
 Contenitore con cui scambiare il contenuto.
 
 ### <a name="remarks"></a>Osservazioni
@@ -2611,7 +2611,7 @@ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Osservazioni
 
-La funzione membro determina l'ultimo elemento della `X` sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
+La funzione membro determina l'ultimo elemento della `X` sequenza controllata che effettua l'hashing allo stesso bucket della *chiave* e ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [hash_set:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
 ### <a name="example"></a>Esempio
 

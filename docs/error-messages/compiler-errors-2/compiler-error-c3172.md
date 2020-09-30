@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: 1da2676d660d23e3fb71b56263779b1f1edacbf9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ca0eab35f6e60d81a324156905619ceb7ace8830
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761738"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508288"
 ---
 # <a name="compiler-error-c3172"></a>Errore del compilatore C3172
 
 ' module_name ': Impossibile specificare attributi di idl_module diversi in un progetto
 
-[idl_module](../../windows/idl-module.md) attributi con lo stesso nome ma con parametri `dllname` o `version` diversi sono stati trovati in due dei file di una compilazione. È possibile specificare un solo attributo `idl_module` univoco per compilazione.
+[idl_module](../../windows/attributes/idl-module.md) attributi con lo stesso nome ma con `dllname` parametri diversi o `version` in due file in una compilazione. `idl_module`È possibile specificare un solo attributo univoco per compilazione.
 
-Gli attributi di `idl_module` identici possono essere specificati in più file di codice sorgente.
+`idl_module`Gli attributi identici possono essere specificati in più di un file di codice sorgente.
 
-Ad esempio, se sono stati trovati gli attributi `idl_module` seguenti:
+Ad esempio, se `idl_module` sono stati trovati gli attributi seguenti:
 
 ```cpp
 // C3172.cpp

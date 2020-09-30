@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833400"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507772"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Esercitazione: vcperf e Windows Performance Analyzer
 
@@ -123,10 +123,10 @@ Altre visualizzazioni sono disponibili nel pannello Graph Explorer. Trascinarli 
 [Esercitazione: Nozioni di base su Windows Performance Analyzer](wpa-basics.md)\
 Informazioni sulle operazioni WPA comuni che consentono di analizzare le tracce di compilazione.
 
-[Informazioni di riferimento: comandi vcperf](/cpp/build-insights/reference/vcperf-commands)\
+[Informazioni di riferimento: comandi vcperf](../reference/vcperf-commands.md)\
 Il riferimento al comando *vcperf.exe* elenca tutte le opzioni di comando disponibili.
 
-[Informazioni di riferimento: visualizzazioni di Windows Performance Analyzer](/cpp/build-insights/reference/wpa-views)\
+[Informazioni di riferimento: visualizzazioni di Windows Performance Analyzer](../reference/wpa-views.md)\
 Vedere questo articolo per informazioni dettagliate sulle visualizzazioni di build Insights di C++ in WPA.
 
 [Analizzatore prestazioni Windows](/windows-hardware/test/wpt/windows-performance-analyzer)\

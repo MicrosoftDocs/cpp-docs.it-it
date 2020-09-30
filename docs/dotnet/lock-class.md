@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225618"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508644"
 ---
 # <a name="lock-class"></a>Classe lock
 
@@ -33,7 +33,7 @@ ref class lock;
 
 ## <a name="remarks"></a>Osservazioni
 
-`lock`è disponibile solo per gli oggetti CLR e può essere utilizzato solo nel codice CLR.
+`lock` è disponibile solo per gli oggetti CLR e può essere utilizzato solo nel codice CLR.
 
 Internamente, la classe Lock USA <xref:System.Threading.Monitor> per sincronizzare l'accesso. Per ulteriori informazioni, vedere l'articolo di riferimento.
 
@@ -69,7 +69,7 @@ Internamente, la classe Lock USA <xref:System.Threading.Monitor> per sincronizza
 
 **Spazio dei nomi** msclr
 
-## <a name="locklock"></a><a name="lock"></a>Lock:: Lock
+## <a name="locklock"></a><a name="lock"></a> Lock:: Lock
 
 Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.
 
@@ -107,11 +107,11 @@ Genera un'eccezione <xref:System.ApplicationException> se l'acquisizione del blo
 
 Le prime tre forme del costruttore tentano di acquisire un blocco su `_object` entro il periodo di timeout specificato (o <xref:System.Threading.Timeout.Infinite> se non è specificato alcun valore).
 
-Il quarto form del costruttore non acquisisce un blocco su `_object` . `lock_later`è un membro dell' [enumerazione lock_when](../dotnet/lock-when-enum.md). Utilizzare [Lock:: Acquire](../dotnet/lock-acquire.md) o [lock:: try_acquire](../dotnet/lock-try-acquire.md) per acquisire il blocco in questo caso.
+Il quarto form del costruttore non acquisisce un blocco su `_object` . `lock_later` è un membro dell' [enumerazione lock_when](../dotnet/lock-when-enum.md). Utilizzare [Lock:: Acquire](#acquire) o [lock:: try_acquire](#try-acquire) per acquisire il blocco in questo caso.
 
 Il blocco verrà rilasciato automaticamente quando viene chiamato il distruttore.
 
-`_object`non può essere <xref:System.Threading.ReaderWriterLock> .  In caso contrario, verrà generato un errore del compilatore.
+`_object` non può essere <xref:System.Threading.ReaderWriterLock> .  In caso contrario, verrà generato un errore del compilatore.
 
 ### <a name="example"></a>Esempio
 
@@ -203,7 +203,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>Lock:: ~ Lock
+## <a name="locklock"></a><a name="tilde-lock"></a> Lock:: ~ Lock
 
 Distrugge un `lock` oggetto.
 
@@ -213,7 +213,7 @@ Distrugge un `lock` oggetto.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il distruttore chiama [Lock:: Release](../dotnet/lock-release.md).
+Il distruttore chiama [Lock:: Release](#release).
 
 ### <a name="example"></a>Esempio
 
@@ -305,7 +305,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>Lock:: Acquire
+## <a name="lockacquire"></a><a name="acquire"></a> Lock:: Acquire
 
 Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.
 
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>Lock:: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a> Lock:: is_locked
 
 Indica se viene mantenuto un blocco.
 
@@ -527,7 +527,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>Lock:: operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a> Lock:: operator bool
 
 Operatore per `lock` l'utilizzo di in un'espressione condizionale.
 
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>Lock:: Release
+## <a name="lockrelease"></a><a name="release"></a> Lock:: Release
 
 Rilascia un blocco.
 
@@ -738,7 +738,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>Lock:: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a> Lock:: try_acquire
 
 Acquisisce un blocco su un oggetto, in attesa del periodo di tempo specificato e restituisce un oggetto **`bool`** per segnalare l'esito positivo dell'acquisizione anziché generare un'eccezione.
 
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>Lock:: operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a> Lock:: operator = =
 
 Operatore di uguaglianza.
 
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock:: operator! =
+## <a name="lockoperator"></a><a name="operator-inequality"></a> Lock:: operator! =
 
 Operatore di disuguaglianza.
 

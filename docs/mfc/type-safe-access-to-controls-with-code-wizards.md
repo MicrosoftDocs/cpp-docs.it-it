@@ -7,16 +7,16 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: bfbc27dbcdeeb38c40f5d989bacd65a23198d4f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213970"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507889"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accesso indipendente dai tipi a controlli con creazioni guidate codice
 
-Se si ha familiarità con le funzionalità DDX, è possibile usare la proprietà Control nella [procedura guidata Aggiungi variabile membro](../ide/add-member-variable-wizard.md) per creare l'accesso indipendente dai tipi. Questo approccio è più semplice rispetto alla creazione di controlli senza creazioni guidate codice.
+Se si ha familiarità con le funzionalità DDX, è possibile usare la proprietà Control nella [procedura guidata Aggiungi variabile membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) per creare l'accesso indipendente dai tipi. Questo approccio è più semplice rispetto alla creazione di controlli senza creazioni guidate codice.
 
 Se si desidera semplicemente accedere al valore di un controllo, DDX lo fornisce. Se si desidera eseguire altre operazioni oltre ad accedere al valore di un controllo, utilizzare la procedura guidata Aggiungi variabile membro per aggiungere una variabile membro della classe appropriata alla classe della finestra di dialogo. Alleghi questa variabile membro alla proprietà del controllo.
 

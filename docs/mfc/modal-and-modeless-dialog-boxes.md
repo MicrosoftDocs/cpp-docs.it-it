@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d3497a19ab14dcc9f14dc0419eb65ea033135b6e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622216"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508854"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Finestre di dialogo modali e non modali
 
@@ -30,7 +30,7 @@ Per creare una finestra di dialogo per il programma, è necessario eseguire le o
 
 1. Creare una classe di finestre di dialogo.
 
-1. Connettere i [controlli della risorsa della finestra di dialogo ai gestori di messaggi](../windows/adding-event-handlers-for-dialog-box-controls.md) nella classe della finestra di dialogo.
+1. Connettere i [controlli della risorsa della finestra di dialogo ai gestori di messaggi](../windows/adding-editing-or-deleting-controls.md) nella classe della finestra di dialogo.
 
 1. Aggiungere i membri dati associati ai controlli della finestra di dialogo e specificare le [convalide dei](dialog-data-validation.md) dati della finestra di dialogo e dello [scambio di dati](dialog-data-exchange.md) per i controlli.
 

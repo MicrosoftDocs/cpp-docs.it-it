@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 449fc2ddabc2bcf5b9b9f130a5e6816cdf4bc98d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685515"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507728"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Esercitazione: Nozioni di base su Windows Performance Analyzer
 
@@ -59,8 +59,8 @@ Questa immagine mostra un grafico a barre di esempio di una chiamata al collegam
 ## <a name="see-also"></a>Vedere anche
 
 [Esercitazione: vcperf e Windows Performance Analyzer](vcperf-and-wpa.md)\
-[Informazioni di riferimento: comandi vcperf](/cpp/build-insights/reference/vcperf-commands)\
-[Informazioni di riferimento: visualizzazioni di Windows Performance Analyzer](/cpp/build-insights/reference/wpa-views)\
+[Informazioni di riferimento: comandi vcperf](../reference/vcperf-commands.md)\
+[Informazioni di riferimento: visualizzazioni di Windows Performance Analyzer](../reference/wpa-views.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

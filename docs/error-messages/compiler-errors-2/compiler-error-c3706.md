@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 461850b2c1686343f23c77274b8fb2ca6fd9071e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757982"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508011"
 ---
 # <a name="compiler-error-c3706"></a>Errore del compilatore C3706
 
 ' Function ': deve essere un'interfaccia COM per generare eventi COM
 
-L'interfaccia evento utilizzata per generare eventi COM deve essere un'interfaccia COM. In questa situazione, l'interfaccia deve essere definita utilizzando un attributo visivo C++ oppure importata utilizzando [#import](../../preprocessor/hash-import-directive-cpp.md) da una libreria dei tipi con l'attributo embedded_idl di #import.
+L'interfaccia evento utilizzata per generare eventi COM deve essere un'interfaccia COM. In questa situazione, l'interfaccia deve essere definita utilizzando un attributo Visual C++ o importata utilizzando [#import](../../preprocessor/hash-import-directive-cpp.md) da una libreria dei tipi con l'attributo embedded_idl di #import.
 
-Si noti che le righe `#include` dei file di intestazione ATL mostrati nell'esempio seguente sono necessarie per l'utilizzo di eventi COM. Per correggere l'errore, rendere `IEvents` (l'interfaccia di eventi) un'interfaccia COM applicando uno degli attributi seguenti alla definizione dell'interfaccia: [Object](../../windows/object-cpp.md), [Dual](../../windows/dual.md)o [Dispatch](../../windows/dispinterface.md).
+Si noti che le `#include` righe dei file di intestazione ATL mostrati nell'esempio seguente sono necessarie per l'utilizzo di eventi com. Per correggere l'errore, creare `IEvents` (l'interfaccia di eventi) un'interfaccia com applicando uno degli attributi seguenti alla definizione dell'interfaccia: [Object](../../windows/attributes/object-cpp.md), [Dual](../../windows/attributes/dual.md)o [Dispatch](../../windows/attributes/dispinterface.md).
 
 Se un'interfaccia è da un file di intestazione generato da MIDL, il compilatore non lo riconosce come interfaccia COM.
 

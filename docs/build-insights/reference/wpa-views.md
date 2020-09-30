@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8bbcc43ef19adfd85a3679a2136d471333a74a10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5b13ee08becd472b3bc52319212b84a9c8ffc25
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224097"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508810"
 ---
 # <a name="reference-windows-performance-analyzer-views"></a>Informazioni di riferimento: visualizzazioni di Windows Performance Analyzer
 
@@ -28,7 +28,7 @@ Questo articolo fornisce informazioni dettagliate su ognuna delle visualizzazion
 - descrizioni delle colonne di dati; e
 - set di impostazioni disponibili per ogni visualizzazione, inclusi l'uso previsto e la modalità di visualizzazione preferita.
 
-Se non si ha familiarità con WPA, è consigliabile acquisire familiarità con le [nozioni di base di WPA per le informazioni di compilazione di C++](/cpp/build-insights/tutorials/wpa-basics).
+Se non si ha familiarità con WPA, è consigliabile acquisire familiarità con le [nozioni di base di WPA per le informazioni di compilazione di C++](../tutorials/wpa-basics.md).
 
 ## <a name="build-explorer"></a>Build Explorer
 
@@ -55,7 +55,7 @@ La visualizzazione Build Explorer viene utilizzata per:
 | Nome                     | Nome dell'attività o della proprietà rappresentata da questo evento. |
 | Tempo                     | Timestamp che identifica il momento in cui si è verificato l'evento. |
 | Strumento                     | Lo strumento in esecuzione quando si è verificato questo evento. Il valore di questa colonna è CL o link. |
-| Type                     | Tipo dell'evento corrente. Questo valore può essere Activity o Property. |
+| Tipo                     | Tipo dell'evento corrente. Questo valore può essere Activity o Property. |
 | valore                    | Se l'evento corrente è una proprietà, questa colonna contiene il relativo valore. Questa colonna viene lasciata vuota quando l'evento corrente è un'attività. |
 
 ### <a name="build-explorer-view-presets"></a>Set di impostazioni di visualizzazione di Esplora compilazione
@@ -64,7 +64,7 @@ La visualizzazione Build Explorer viene utilizzata per:
 |-----------------------|---------------------|------------|
 | Statistiche attività   | Grafico/tabella       | Utilizzare questo set di impostazioni per visualizzare le statistiche aggregate per tutte le attività di Esplora compilazione. In modalità tabella è necessario sapere a colpo d'occhio se la compilazione è dominata dall'analisi, dalla generazione del codice o dal linker. Le durate aggregate per ogni attività sono ordinate in ordine decrescente. Eseguire il drill-through espandendo il nodo principale per individuare facilmente le chiamate che importano più tempo per queste attività principali. Se lo si desidera, è possibile modificare le impostazioni WPA per visualizzare le medie o altri tipi di aggregazioni. In modalità grafico, vedere quando ogni attività è attiva durante la compilazione. |
 | Chiamate           | Grafico               | Scorrere verso il basso un elenco di chiamate nella visualizzazione grafico ordinate in base all'ora di inizio. È possibile usarla insieme alla visualizzazione CPU (campionata) per trovare le chiamate che si allineano con le zone di utilizzo della CPU ridotte. Rilevare i problemi di parallelismo. |
-| Proprietà di chiamata | Tabella               | Trovare rapidamente le informazioni chiave su una chiamata del compilatore o del linker specificata. Determinare la versione, la directory di lavoro o la riga di comando completa utilizzata per richiamarla. |
+| Proprietà di chiamata | Table               | Trovare rapidamente le informazioni chiave su una chiamata del compilatore o del linker specificata. Determinare la versione, la directory di lavoro o la riga di comando completa utilizzata per richiamarla. |
 | Tempistica             | Grafico               | Vedere un grafico a barre relativo alla modalità di parallelismo della compilazione. Identificare a colpo d'occhio i problemi di parallelismo e i colli di bottiglia. Configurare WPA per assegnare significati diversi alle barre in base alle esigenze. Scegliere descrizioni della chiamata come ultima colonna raggruppata per visualizzare un grafico a barre codificato a colori di tutte le chiamate. Consente di identificare rapidamente i colpevoli che richiedono molto tempo. Quindi, eseguire lo zoom avanti e scegliere il nome dell'attività come ultima colonna raggruppata per visualizzare le parti più lunghe. |
 
 ## <a name="files"></a>File
@@ -83,7 +83,7 @@ La visualizzazione file viene utilizzata per:
 | BuildTimelineId          | * |
 | Componente                | * |
 | Conteggio                    | * |
-| Livello nidificazione                    | Posizione in base zero nell'albero di inclusione in cui viene trovato il file. Il conteggio inizia dalla radice dell'albero di inclusione. Il valore 0 corrisponde in genere a un file. c/. cpp. |
+| Profondità                    | Posizione in base zero nell'albero di inclusione in cui viene trovato il file. Il conteggio inizia dalla radice dell'albero di inclusione. Il valore 0 corrisponde in genere a un file. c/. cpp. |
 | ExclusiveDuration        | * |
 | IncludedBy               | Percorso completo del file in cui è incluso il file corrente. |
 | IncludedPath             | Percorso completo del file corrente. |
@@ -92,13 +92,13 @@ La visualizzazione file viene utilizzata per:
 | StartTime                | Timestamp che rappresenta l'ora in cui è stato generato l'evento del file corrente. |
 | Strumento                     | * |
 
-\*Il valore di questa colonna è identico a quello della visualizzazione [Build Explorer](#build-explorer-view-data-columns) .
+\* Il valore di questa colonna è identico a quello della visualizzazione [Build Explorer](#build-explorer-view-data-columns) .
 
 ### <a name="files-view-presets"></a>Set di impostazioni di visualizzazione file
 
 | Nome del set di impostazioni | Modalità di visualizzazione preferita | Uso |
 |-------------|---------------------|------------|
-| Statistiche  | Tabella               | Vedere i file con il tempo di analisi aggregato più elevato esaminando l'elenco in ordine decrescente. Usare queste informazioni per ristrutturare le intestazioni o decidere quali elementi includere nel file PCH. |
+| Statistiche  | Table               | Vedere i file con il tempo di analisi aggregato più elevato esaminando l'elenco in ordine decrescente. Usare queste informazioni per ristrutturare le intestazioni o decidere quali elementi includere nel file PCH. |
 
 ## <a name="functions"></a>Funzioni
 
@@ -113,26 +113,26 @@ La visualizzazione funzioni viene utilizzata per identificare le funzioni con un
 | BuildTimelineId          | * |
 | Componente                | * |
 | Conteggio                    | * |
-| Durata                 | Durata dell'attività di generazione del codice per questa funzione. |
+| Duration                 | Durata dell'attività di generazione del codice per questa funzione. |
 | FunctionName             | Nome della funzione in fase di generazione del codice. |
 | InvocationId             | * |
 | StartTime                | Timestamp che rappresenta il momento in cui è stato generato l'evento della funzione corrente. |
 | Strumento                     | * |
 
-\*Il valore di questa colonna è identico a quello della visualizzazione [Build Explorer](#build-explorer-view-data-columns) .
+\* Il valore di questa colonna è identico a quello della visualizzazione [Build Explorer](#build-explorer-view-data-columns) .
 
 ### <a name="functions-view-presets"></a>Set di impostazioni di visualizzazione funzioni
 
 | Nome del set di impostazioni | Modalità di visualizzazione preferita | Uso |
 |-------------|---------------------|------------|
-| Statistiche  | Tabella               | Vedere le funzioni con il massimo tempo di generazione del codice aggregato esaminando l'elenco in ordine decrescente. Possono suggerire la posizione in cui il codice sovrautilizza la **`__forceinline`** parola chiave o che alcune funzioni potrebbero essere troppo grandi. |
+| Statistiche  | Table               | Vedere le funzioni con il massimo tempo di generazione del codice aggregato esaminando l'elenco in ordine decrescente. Possono suggerire la posizione in cui il codice sovrautilizza la **`__forceinline`** parola chiave o che alcune funzioni potrebbero essere troppo grandi. |
 | Tempistica   | Grafico               | Esaminare il grafico a barre per apprendere la posizione e la durata delle funzioni che importano più tempo per la generazione. Verificare se sono allineati con colli di bottiglia nella visualizzazione Build Explorer. In caso affermativo, intraprendere le azioni appropriate per ridurre il tempo di generazione del codice e sfruttare i tempi di compilazione. |
 
 ## <a name="see-also"></a>Vedere anche
 
-[Introduzione a C++ Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[Introduzione a C++ Build Insights](../get-started-with-cpp-build-insights.md)\
 [Informazioni di riferimento: comandi vcperf](vcperf-commands.md)\
-[Esercitazione: Nozioni di base su Windows Performance Analyzer](/cpp/build-insights/tutorials/wpa-basics)\
+[Esercitazione: Nozioni di base su Windows Performance Analyzer](../tutorials/wpa-basics.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

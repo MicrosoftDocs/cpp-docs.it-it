@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841077"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507223"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
@@ -75,7 +75,7 @@ class CSimpleRow
 
 ## <a name="remarks"></a>Osservazioni
 
-Un handle di riga è logicamente un tag univoco per una riga di risultati. `IRowsetImpl` Crea un nuovo oggetto `CSimpleRow` per ogni riga richiesta in [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` può anche essere sostituito con la propria implementazione dell'handle di riga, poiché si tratta di un argomento di modello predefinito per `IRowsetImpl` . L'unico requisito per la sostituzione di questa classe consiste nel fare in modo che la classe di sostituzione fornisca un costruttore che accetta un solo parametro di tipo **Long**.
+Un handle di riga è logicamente un tag univoco per una riga di risultati. `IRowsetImpl` Crea un nuovo oggetto `CSimpleRow` per ogni riga richiesta in [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows). `CSimpleRow` può anche essere sostituito con la propria implementazione dell'handle di riga, poiché si tratta di un argomento di modello predefinito per `IRowsetImpl` . L'unico requisito per la sostituzione di questa classe consiste nel fare in modo che la classe di sostituzione fornisca un costruttore che accetta un solo parametro di tipo **Long**.
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow:: AddRefRow
 
@@ -123,7 +123,7 @@ in Indice per il set di righe corrente.
 
 ### <a name="remarks"></a>Osservazioni
 
-Imposta [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) su *iRowsetCur*.
+Imposta [m_iRowset](#irowset) su *iRowsetCur*.
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow:: ReleaseRow
 

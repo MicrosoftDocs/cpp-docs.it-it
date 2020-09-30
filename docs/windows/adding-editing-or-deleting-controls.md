@@ -42,18 +42,18 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352752"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508827"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: aggiungere, modificare o eliminare controlli (C++)
 
 Utilizzando l' **editor finestre**, è possibile aggiungere, ridimensionare, modificare ed eliminare controlli nelle finestre di dialogo. È anche possibile modificare le proprietà di un controllo, ad esempio l'ID, o se inizialmente è visibile in fase di esecuzione.
 
-La scheda **editor finestre** viene visualizzata nella [finestra casella degli strumenti](/visualstudio/ide/reference/toolbox) quando si lavora nell' **editor finestre**. È anche possibile personalizzare la finestra **casella degli strumenti** per facilitarne l'uso. Per ulteriori informazioni, vedere [utilizzo della casella degli strumenti](/visualstudio/ide/using-the-toolbox) e [visualizzare o nascondere la finestra della casella degli strumenti](showing-or-hiding-the-dialog-editor-toolbar.md).
+La scheda **editor finestre** viene visualizzata nella [finestra casella degli strumenti](/visualstudio/ide/reference/toolbox) quando si lavora nell' **editor finestre**. È anche possibile personalizzare la finestra **casella degli strumenti** per facilitarne l'uso. Per ulteriori informazioni, vedere [utilizzo della casella degli strumenti](/visualstudio/ide/using-the-toolbox) e [visualizzare o nascondere la finestra della casella degli strumenti](./dialog-editor.md).
 
 > [!TIP]
 > Quando si utilizza l' **editor finestre**, in molti casi è possibile selezionare il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi utilizzati di frequente.
@@ -94,7 +94,7 @@ La scheda **editor finestre** viene visualizzata nella [finestra casella degli s
 1. Rilasciare il pulsante del mouse. Il controllo si installa nella finestra di dialogo con le dimensioni specificate.
 
 > [!TIP]
-> È possibile ridimensionare il controllo dopo averlo rilasciato nella finestra di dialogo spostando gli handle di ridimensionamento sul bordo del controllo. Per altre informazioni, vedere [ridimensionamento di singoli controlli](../windows/sizing-individual-controls.md).
+> È possibile ridimensionare il controllo dopo averlo rilasciato nella finestra di dialogo spostando gli handle di ridimensionamento sul bordo del controllo. Per altre informazioni, vedere [ridimensionamento di singoli controlli](./arrangement-of-controls-on-dialog-boxes.md).
 
 ### <a name="to-add-a-custom-control"></a>Per aggiungere un controllo personalizzato
 
@@ -129,7 +129,7 @@ La scheda **editor finestre** viene visualizzata nella [finestra casella degli s
 
 1. Quando si preme il tasto **CTRL** , fare doppio clic sul controllo della finestra di dialogo.
 
-   Verrà visualizzata la [procedura guidata Aggiungi variabile membro](../ide/add-member-variable-wizard.md) .
+   Verrà visualizzata la [procedura guidata Aggiungi variabile membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) .
 
 1. Digitare le informazioni appropriate nella procedura guidata **Aggiungi variabile membro** . Per ulteriori informazioni, vedere [Dialog Data Exchange](../mfc/dialog-data-exchange.md).
 

@@ -5,12 +5,12 @@ f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: 59807749105512e0eb61acfdf60ef463febbc3a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246109"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507703"
 ---
 # <a name="ltcharconvgt"></a>&lt;charconv&gt;
 
@@ -39,7 +39,7 @@ Di seguito sono elencati alcuni dei vantaggi derivanti dall'utilizzo della `<cha
 
 ### <a name="types"></a>Tipi
 
-| Tipo | Description |
+| Tipo | Descrizione |
 |-|:-|
 | [chars_format](chars-format-class.md) | Specifica il tipo di formattazione, ad esempio scientifico, esadecimale e così via. |
 | [from_chars_result](from-chars-result-structure.md) | Include il risultato di una `from_chars` conversione. |
@@ -55,4 +55,3 @@ Di seguito sono elencati alcuni dei vantaggi derivanti dall'utilizzo della `<cha
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](cpp-standard-library-header-files.md)
-

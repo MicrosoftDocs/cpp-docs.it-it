@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3038
 ms.assetid: 140ada3e-5636-43ef-a4ee-22a9f66a771f
-ms.openlocfilehash: 26fee4f5d636ac56ae01499f6b600d38f56bbe46
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7da7dcf1f03c05511ba4bb970e898bc06b9ae3bd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754966"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508423"
 ---
 # <a name="compiler-error-c3038"></a>Errore del compilatore C3038
 
 'var': la variabile nella clausola 'private' non può essere una variabile di riduzione nel contesto di inclusione
 
-Le variabili incluse nella clausola [reduction](../../parallel/openmp/reference/reduction.md) di una direttiva parallela non possono essere specificate in una clausola [private](../../parallel/openmp/reference/private-openmp.md) in una direttiva per la condivisione del lavoro associata a un costrutto parallelo.
+Le variabili incluse nella clausola [reduction](../../parallel/openmp/reference/openmp-clauses.md#reduction) di una direttiva parallela non possono essere specificate in una clausola [private](../../parallel/openmp/reference/openmp-clauses.md#private-openmp) in una direttiva per la condivisione del lavoro associata a un costrutto parallelo.
 
 L'esempio seguente genera l'errore C3038:
 
