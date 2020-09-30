@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3041
 ms.assetid: 9df1ae44-3ac7-4c6c-899f-f35ffe7ccf0d
-ms.openlocfilehash: f9f9b9a598760b251d911f3f0a5ddd1114dd764c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 06233369bfd813d53e895a559fa8a6cf8f885fa7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754940"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506407"
 ---
 # <a name="compiler-error-c3041"></a>Errore del compilatore C3041
 
 'var': la variabile nella clausola 'copyprivate' deve essere privata nel contesto di inclusione
 
-Una variabile passata a [copyprivate](../../parallel/openmp/reference/copyprivate.md) non può essere condivisa nel contesto di inclusione.
+Una variabile passata a [copyprivate](../../parallel/openmp/reference/openmp-clauses.md#copyprivate) non può essere condivisa nel contesto di inclusione.
 
 L'esempio seguente genera l'errore C3041:
 

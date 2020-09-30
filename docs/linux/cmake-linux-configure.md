@@ -2,12 +2,12 @@
 title: Configurare un progetto CMake per Linux in Visual Studio
 description: Come configurare le impostazioni di CMake per Linux in Visual Studio
 ms.date: 08/08/2020
-ms.openlocfilehash: 762f135988587e777c2a33a1bd402770c297226b
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 32c851791402b59c941ae088fa637d3d9953dd1b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414542"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504720"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Configurare un progetto CMake per Linux in Visual Studio
 
@@ -53,6 +53,7 @@ La configurazione predefinita per Linux-debug in Visual Studio 2017 (e Visual St
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -97,6 +98,7 @@ In Visual Studio 2019 versione 16,6 o successiva, Ninja è il generatore predefi
 Per altre informazioni su queste impostazioni, vedere [Informazioni di riferimento su CMakeSettings.json](../build/cmakesettings-reference.md).
 
 Quando si esegue una compilazione:
+
 - Se la destinazione è un sistema remoto, Visual Studio sceglie il primo sistema remoto nell'elenco in **strumenti** > **Opzioni** > **Cross Platform** > **gestione connessione** multipiattaforma per impostazione predefinita per le destinazioni remote.
 - Se non viene trovata alcuna connessione remota, viene richiesto di crearne una. Per altre informazioni, vedere [Connettersi al computer Linux remoto](connect-to-your-remote-linux-computer.md).
 

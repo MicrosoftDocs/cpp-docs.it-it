@@ -35,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: face2eb5f7c6220e1a4369ae0aa11514a918d21c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556788"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505604"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -77,12 +77,11 @@ Quando si usa C++, è possibile chiamare overload di **asinh** che accettano e r
 
 Se si usa la \<tgmath.h> `asinh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
-
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |--------------|--------------|------------------|
 |**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> o \<math.h>|
 |**asinh () (macro)** | \<tgmath.h> ||

@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954638"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505627"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -46,19 +46,19 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>Parametri
 
-*numer*<br/>
+*numero*<br/>
 Numeratore.
 
-*denom*<br/>
+*Denom*<br/>
 Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
 
 **imaxdiv** chiamato con argomenti di tipo [intmax_t](../../c-runtime-library/standard-types.md) restituisce una struttura di tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) che comprende il quoziente e il resto.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **imaxdiv** divide i *numeri* per *Denom* e quindi calcola il quoziente e il resto. La **struttura imaxdiv_t** contiene il quoziente **, intmax_t** **quot**e il resto, **intmax_t** **REM**. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
+La funzione **imaxdiv** divide i *numeri* per *Denom* e quindi calcola il quoziente e il resto. La **struttura imaxdiv_t** contiene il quoziente **, intmax_t** **quot**e il resto **intmax_t** **REM**. Il segno del quoziente è identico a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -105,6 +105,6 @@ results in a quotient of 1079252848505, and a remainder of 5170
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[ldiv, lldiv](./div.md)<br/>

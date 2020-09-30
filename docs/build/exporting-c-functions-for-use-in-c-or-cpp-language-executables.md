@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dcf46e6bdde66a303afc2c4ec94fc8aefdd5e5d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273573"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506642"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++
 
@@ -52,7 +52,7 @@ extern "C" {
 
 - [Esportare e importare utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da usare](determining-which-exporting-method-to-use.md)
 
 - [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -62,7 +62,7 @@ extern "C" {
 
 - [Nomi decorati](reference/decorated-names.md)
 
-- [Uso di extern per specificare un collegamento](../cpp/using-extern-to-specify-linkage.md)
+- [Uso di extern per specificare un collegamento](../cpp/extern-cpp.md)
 
 ## <a name="see-also"></a>Vedere anche
 

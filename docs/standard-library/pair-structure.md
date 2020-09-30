@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0a78d5074c37f4fbbfb736125626fa4b7fc7e275
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042056"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505760"
 ---
 # <a name="pair-structure"></a>Struttura pair
 
@@ -76,10 +76,9 @@ Il secondo costruttore inizializza il primo elemento della coppia su *val1* e la
 
 Il terzo costruttore (modello) Inizializza il primo elemento della coppia a `Right` . **prima** e la seconda a `Right` . **secondo**.  Viene definito se entrambi i tipi della coppia sono costruibile dai tipi di valore forniti.
 
-
 Il quarto costruttore inizializza il primo elemento della coppia su *val1* e la seconda su *val2* usando il [dichiaratore di riferimento rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).  Viene definito se entrambi i tipi della coppia sono costruibile dai tipi di valore forniti.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2` , rispettivamente. Il tipo `first_type` è lo stesso del parametro di modello `T1` e il tipo `second_type` è lo stesso del parametro di modello `T2` . `T1` ognuno di essi `T2` deve fornire solo un costruttore predefinito, un costruttore a singolo argomento e un distruttore. Tutti i membri del tipo `pair` sono pubblici, perché il tipo è dichiarato come **`struct`** anziché come **`class`** . Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. Il secondo soddisfa i requisiti per un contenitore associativo di coppie e ha un tipo di valore nel formato `pair< const key_type, mapped_type >` .
 

@@ -35,18 +35,18 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623072"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505727"
 ---
 # <a name="how-to-manage-symbols"></a>Procedura: gestire i simboli
 
 Quando si crea una nuova risorsa o un nuovo oggetto risorsa, l'ambiente di sviluppo lo assegna un nome di simbolo predefinito, ad esempio `IDD_DIALOG1` . È possibile utilizzare il [finestra Proprietà](/visualstudio/ide/reference/properties-window) per modificare il nome del simbolo predefinito o per modificare il nome di un simbolo già associato a una risorsa.
 
-Per i simboli associati a una singola risorsa, è anche possibile usare la finestra **Proprietà** per modificare il valore del simbolo. È possibile usare la finestra di [dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md) per modificare il valore dei simboli non attualmente assegnati a una risorsa.
+Per i simboli associati a una singola risorsa, è anche possibile usare la finestra **Proprietà** per modificare il valore del simbolo. È possibile usare la finestra di [dialogo Simboli risorsa](./creating-new-symbols.md) per modificare il valore dei simboli non attualmente assegnati a una risorsa.
 
 In genere tutte le definizioni dei simboli vengono salvate in `Resource.h` . Tuttavia, potrebbe essere necessario modificare il nome file di inclusione in modo da poter, ad esempio, usare più file di risorse nella stessa directory.
 
@@ -74,7 +74,7 @@ I nomi dei simboli sono soggetti alle restrizioni riportate di seguito.
 
 I nomi dei simboli dispongono di prefissi descrittivi che indicano il tipo di risorsa o di oggetto che rappresentano. Tali prefissi descrittivi iniziano con l'ID di combinazione testo. La libreria MFC (Microsoft Foundation Class) utilizza le convenzioni di denominazione dei simboli illustrate nella tabella seguente:
 
-|Category|Prefisso|Uso|
+|Category|Prefisso|Usa|
 |--------------|------------|---------|
 |Risorse|IDR_, IDD_, IDC_, IDI_, IDB_|Acceleratore o menu (e risorse associate o personalizzate), finestra di dialogo, cursore, icona, bitmap|
 |Voci di menu|ID_|Voce di menu|
@@ -92,7 +92,7 @@ I nomi dei simboli dispongono di prefissi descrittivi che indicano il tipo di ri
    Se si digita un nuovo nome di simbolo, viene automaticamente assegnato un valore.
 
 > [!NOTE]
-> È possibile usare la finestra di [dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md) per modificare i nomi dei simboli non attualmente assegnati a una risorsa.
+> È possibile usare la finestra di [dialogo Simboli risorsa](./creating-new-symbols.md) per modificare i nomi dei simboli non attualmente assegnati a una risorsa.
 
 ## <a name="symbol-value-restrictions"></a>Restrizioni relative ai valori dei simboli
 
@@ -141,7 +141,7 @@ Alcune limitazioni dei valori dei simboli sono:
 
 ## <a name="change-or-delete-symbols"></a>Modificare o eliminare simboli
 
-Nella finestra di [dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md)è possibile modificare o eliminare i simboli esistenti che non sono già stati assegnati a una risorsa o a un oggetto.
+Nella finestra di [dialogo Simboli risorsa](./creating-new-symbols.md)è possibile modificare o eliminare i simboli esistenti che non sono già stati assegnati a una risorsa o a un oggetto.
 
 ### <a name="to-change-an-unassigned-symbol"></a>Per modificare un simbolo non assegnato
 
@@ -161,7 +161,7 @@ Nella finestra di dialogo **simboli risorsa** selezionare il simbolo che si desi
 
 ## <a name="include-symbols"></a>Includi simboli
 
-La prima volta che l'ambiente di sviluppo legge un file di risorse creato da un'altra applicazione, contrassegna tutto, inclusi i file di intestazione, come di sola lettura. Sebbene sia possibile utilizzare la finestra di [dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md) per aggiungere ulteriori file di intestazione dei simboli di sola lettura.
+La prima volta che l'ambiente di sviluppo legge un file di risorse creato da un'altra applicazione, contrassegna tutto, inclusi i file di intestazione, come di sola lettura. Sebbene sia possibile utilizzare la finestra di [dialogo Inclusioni risorsa](./how-to-include-resources-at-compile-time.md) per aggiungere ulteriori file di intestazione dei simboli di sola lettura.
 
 Un motivo per cui è possibile voler usare le definizioni dei simboli di sola lettura è per i file di simboli che si intende condividere tra più progetti.
 
@@ -185,7 +185,7 @@ L'ambiente interpreterà correttamente questi simboli calcolati purché:
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Per includere simboli condivisi (di sola lettura) nel file di risorse
 
-1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* e scegliere [Includi risorse](../windows/resource-includes-dialog-box.md).
+1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* e scegliere [Includi risorse](./how-to-include-resources-at-compile-time.md).
 
 1. Nella casella **direttive per simboli di sola lettura** utilizzare la `#include` direttiva del compilatore per specificare il file in cui si desidera mantenere i simboli di sola lettura.
 
@@ -204,7 +204,7 @@ L'ambiente interpreterà correttamente questi simboli calcolati purché:
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Per modificare il nome del file di intestazione simboli di risorsa
 
-1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* e scegliere [Includi risorse](../windows/resource-includes-dialog-box.md).
+1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* e scegliere [Includi risorse](./how-to-include-resources-at-compile-time.md).
 
 1. Nella casella **file di intestazione simboli** Digitare il nuovo nome per il file di inclusione.
 

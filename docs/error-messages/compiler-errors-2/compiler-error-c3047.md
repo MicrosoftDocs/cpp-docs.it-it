@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3047
 ms.assetid: 91c14566-5958-433d-8549-0e8bc3196f76
-ms.openlocfilehash: c6b8530aa1a1d5b8a0bfa735a9cc759a698ae841
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 41312e09996e2fe007cdc13c0369b5154e720841
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761325"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506217"
 ---
 # <a name="compiler-error-c3047"></a>Errore del compilatore C3047
 
 Un blocco strutturato in un'area 'sections' OpenMP deve essere preceduto da '#pragma omp section'
 
-Qualsiasi codice in un blocco di codice introdotto da una direttiva [sections](../../parallel/openmp/reference/sections-openmp.md) deve trovarsi in un blocco di codice introdotto da una direttiva `section` .
+Qualsiasi codice in un blocco di codice introdotto da una direttiva [sections](../../parallel/openmp/reference/openmp-directives.md#sections-openmp) deve trovarsi in un blocco di codice introdotto da una direttiva `section` .
 
 L'esempio seguente genera l'errore C3047:
 

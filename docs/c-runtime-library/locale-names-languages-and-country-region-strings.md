@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c7695b3e51eac44853dc89a0f2a683192562cea2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842950"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505614"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica
 
@@ -48,11 +48,9 @@ _wsetlocale(LC_ALL, L"de-DE");
 _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 ```
 
-
 ## <a name="utf-8-support"></a>Supporto per UTF-8
 
 È possibile abilitare il supporto UTF-8 usando la tabella codici UTF-8 nella stringa delle impostazioni locali. Per ulteriori informazioni, vedere la [sezione `setlocale` supporto per UTF-8](../c-runtime-library/reference/setlocale-wsetlocale.md#utf-8-support) in.
-
 
 ## <a name="see-also"></a>Vedere anche
 

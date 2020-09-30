@@ -3,16 +3,16 @@ title: launch.vs.jsper riferimento allo schema (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841987"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505672"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.jsper riferimento allo schema (C++)
 
-Usare il *launch.vs.jssu* file per configurare i parametri di debug. Per creare il file. fare clic con il pulsante destro del mouse su un file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Scegliere l'opzione che corrisponde maggiormente al progetto e quindi usare le proprietà seguenti per modificare la configurazione in base alle esigenze. Per altre informazioni sul debug di progetti CMake, vedere [configurare sessioni di debug CMake](/cpp/build/configure-cmake-debugging-sessions).
+Usare il *launch.vs.jssu* file per configurare i parametri di debug. Per creare il file. fare clic con il pulsante destro del mouse su un file eseguibile in **Esplora soluzioni** e scegliere **debug e avvia Impostazioni**. Scegliere l'opzione che corrisponde maggiormente al progetto e quindi usare le proprietà seguenti per modificare la configurazione in base alle esigenze. Per altre informazioni sul debug di progetti CMake, vedere [configurare sessioni di debug CMake](./configure-cmake-debugging-sessions.md).
 
 ## <a name="default-properties"></a>Proprietà predefinite
 
@@ -38,7 +38,7 @@ Usare il *launch.vs.jssu* file per configurare i parametri di debug. Per creare 
 |Proprietà|Type|Descrizione|
 |-|-|-|
 |`program`|string|Percorso completo dell'eseguibile del programma nel computer remoto. Quando si usa CMake, la macro `${debugInfo.fullTargetPath}` può essere usata come valore di questo campo.|
-|`processId`|integer|ID processo facoltativo a cui connettersi il debugger.|
+|`processId`|numero intero|ID processo facoltativo a cui connettersi il debugger.|
 |`sourceFileMap`|object|Mapping dei file di origine facoltativi passati al motore di debug. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` o `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }` . Esempio: `{ "/home/user/foo": "C:\\foo" }` o `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Vedere [Opzioni mappa file di origine](#source_file_map_options).|
 |`additionalProperties`|string|Uno degli sourceFileMapOptions. come illustrato più avanti.|
 |`MIMode`|string|Indica il tipo di debugger della console abilitato per MI a cui si connetterà MIDebugEngine. I valori consentiti sono "GDB", "LLDB".|

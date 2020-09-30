@@ -1,5 +1,5 @@
 ---
-title: Controlli della finestra diC++dialogo () | Microsoft Docs
+title: Controlli della finestra di dialogo (C++) | Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: c79021387de2c8bc8f7f106a93797b7efb07d6df
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160411"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505714"
 ---
-# <a name="dialog-box-controls-c"></a>Controlli della finestra diC++dialogo ()
+# <a name="dialog-box-controls-c"></a>Controlli della finestra di dialogo (C++)
 
 È possibile aggiungere controlli a una finestra di dialogo utilizzando la scheda **editor finestre** della [casella degli strumenti](/visualstudio/ide/reference/toolbox) che consente di scegliere il controllo desiderato e trascinarlo nella finestra di dialogo. Per impostazione predefinita, la finestra **casella degli strumenti** è impostata su Nascondi automaticamente. Viene visualizzato come una scheda sul margine sinistro della soluzione quando l' **editor finestre** è aperto. Tuttavia, è possibile aggiungere la finestra **casella degli strumenti** nella posizione selezionando il pulsante **Nascondi automaticamente** nell'angolo superiore destro della finestra. Per ulteriori informazioni su come controllare il comportamento di questa finestra, vedere [gestione della finestra](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
@@ -39,36 +39,36 @@ I controlli standard disponibili nella **casella degli strumenti** con gli event
 |Nome del controllo|Evento predefinito|
 |---|---|
 |[Button (controllo)](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Controllo casella di controllo](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Controllo casella combinata](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Modifica controllo](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|[Controllo Check Box](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Controllo Combo Box](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
+|[Controllo Edit](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |Casella di gruppo|(non applicabile)|
 |[Controllo casella di riepilogo](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Controllo pulsante di opzione](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Controllo testo statico](../mfc/reference/cstatic-class.md)|(non applicabile)|
-|[Controllo immagine](../mfc/reference/cpictureholder-class.md)|(non applicabile)|
-|[Controllo Rich Edit 2,0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[Controllo barra di scorrimento](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
+|[Controllo Radio Button](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Controllo Static Text](../mfc/reference/cstatic-class.md)|(non applicabile)|
+|[Controllo Picture](../mfc/reference/cpictureholder-class.md)|(non applicabile)|
+|[Controllo Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
+|[Controllo Scroll Bar](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
-> Per ulteriori informazioni sull'utilizzo del controllo **Richedit 1,0** con MFC, vedere [utilizzo del controllo richedit 1,0 con gli](../windows/using-the-richedit-1-0-control-with-mfc.md) esempi di controlli MFC e [Rich Edit](../mfc/rich-edit-control-examples.md).
+> Per ulteriori informazioni sull'utilizzo del controllo **Richedit 1,0** con MFC, vedere [utilizzo del controllo richedit 1,0 con gli](./adding-editing-or-deleting-controls.md) esempi di controlli MFC e [Rich Edit](../mfc/rich-edit-control-examples.md).
 
 I [controlli comuni di Windows](../mfc/controls-mfc.md) disponibili nella **casella degli strumenti** per fornire funzionalità migliorate sono:
 
 |Nome del controllo|Evento predefinito|
 |---|---|
 |[Controllo dispositivo di scorrimento](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Controllo di selezione](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Controllo dello stato di avanzamento](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Controllo tasto di scelta](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Controllo elenco](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[Controllo Spin](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Controllo Progress](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
+|[Controllo Hot Key](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[Controllo List](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
 |[Controllo Tree](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
 |[Controllo Tab](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Controllo animazione](../mfc/using-an-animation-control.md)|ACN_START|
+|[Controllo Animation](../mfc/using-an-animation-control.md)|ACN_START|
 |[Controllo selezione data e ora](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Controllo calendario mensile](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[Controllo Month Calendar](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
 |[Controllo indirizzi IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Controllo casella combinata estesa](../mfc/creating-an-extended-combo-box-control.md)||
+|[Controllo Extended Combo Box](../mfc/creating-an-extended-combo-box-control.md)||
 |Controllo personalizzato|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>Controlli personalizzati
@@ -78,7 +78,7 @@ L' **editor finestre** consente di utilizzare i controlli utente o personalizzat
 > [!NOTE]
 > I controlli personalizzati in questo senso non devono essere confusi con i controlli ActiveX. I controlli ActiveX venivano talvolta chiamati controlli personalizzati OLE. Inoltre, non confondere questi controlli con i controlli creati dal proprietario in Windows.
 
-Questa funzionalità ha lo scopo di consentire l'uso di controlli diversi da quelli forniti da Windows. In fase di esecuzione, il controllo è associato a una classe della finestra (non uguale a C++ una classe). Un modo più comune per eseguire la stessa attività consiste nell'installare qualsiasi controllo, ad esempio un controllo statico, nella finestra di dialogo. Quindi, in fase di esecuzione, nella funzione [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) rimuovere tale controllo e sostituirlo con il proprio controllo personalizzato.
+Questa funzionalità ha lo scopo di consentire l'uso di controlli diversi da quelli forniti da Windows. In fase di esecuzione, il controllo è associato a una classe della finestra (non uguale a una classe C++). Un modo più comune per eseguire la stessa attività consiste nell'installare qualsiasi controllo, ad esempio un controllo statico, nella finestra di dialogo. Quindi, in fase di esecuzione, nella funzione [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) rimuovere tale controllo e sostituirlo con il proprio controllo personalizzato.
 
 > [!NOTE]
 > Si tratta di una tecnica obsoleta. Attualmente, nella maggior parte dei casi è consigliabile scrivere un controllo ActiveX o una sottoclasse di un controllo comune di Windows.
@@ -104,6 +104,6 @@ Win32
 [Editor finestre](../windows/dialog-editor.md)
 
 <!--
-[Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Adding Event Handlers for Dialog Box Controls](./adding-editing-or-deleting-controls.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/adding-a-member-variable-visual-cpp.md#dialog-box-controls-and-variable-types)<br/>
 [Controls](../mfc/controls-mfc.md)<br/>-->

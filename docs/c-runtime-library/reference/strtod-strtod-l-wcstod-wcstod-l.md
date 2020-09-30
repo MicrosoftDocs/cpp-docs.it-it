@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
-ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
+ms.openlocfilehash: 5a791b5d0be218a49be28930c191de3eb4acf4be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89933827"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505545"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -135,9 +135,9 @@ le *cifre* corrispondono a una o più cifre decimali. \
 la *radice* è il carattere punto radice, un punto (.) nelle impostazioni locali "C" predefinite oppure il valore specifico delle impostazioni locali se le impostazioni locali correnti sono diverse o se *le impostazioni locali sono specificate* . \
  Una *sequenza* è una sequenza di caratteri alfanumerici o di sottolineatura.
 
-Nei formati con numero decimale e esadecimale, se non sono presenti cifre prima del carattere punto radice, è necessario che almeno uno venga visualizzato dopo il carattere punto radice. 
+Nei formati con numero decimale e esadecimale, se non sono presenti cifre prima del carattere punto radice, è necessario che almeno uno venga visualizzato dopo il carattere punto radice.
 
-Nel formato decimale, le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo. 
+Nel formato decimale, le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero con segno facoltativo.
 
 Nel formato esadecimale, le cifre esadecimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**p** o **p**) e un intero decimale con segno facoltativo che rappresenta l'esponente come potenza di 2.
 

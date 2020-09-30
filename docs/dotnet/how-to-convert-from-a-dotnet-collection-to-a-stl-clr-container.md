@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: a7b2ee94f02e663690287ecfa6bc8a7230830a95
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 4993571d479924edc71a277887a8bd95fc4fd463
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686457"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506434"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Procedura: conversione da raccolta .NET a contenitore STL/CLR
 
@@ -24,13 +24,13 @@ In questo argomento viene illustrato come convertire le raccolte .NET nei conten
 
 -OPPURE-
 
-1. Creare un contenitore STL/CLR generico creando un oggetto [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Questa classe modello accetta un'interfaccia di raccolta .NET come argomento. Per verificare quali interfacce sono supportate, vedere [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Creare un contenitore STL/CLR generico creando un oggetto [collection_adapter](./adapter-stl-clr.md#collection_adapter) . Questa classe modello accetta un'interfaccia di raccolta .NET come argomento. Per verificare quali interfacce sono supportate, vedere [collection_adapter (STL/CLR)](./adapter-stl-clr.md#collection_adapter).
 
 1. Copiare il contenuto della raccolta .NET nel contenitore. Questa operazione può essere eseguita usando un [algoritmo](../dotnet/algorithm-stl-clr.md)STL/CLR oppure eseguendo l'iterazione sulla raccolta .NET e inserendo una copia di ogni elemento nel contenitore STL/CLR.
 
    Nel secondo esempio viene illustrata questa procedura.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 In questo esempio viene creato un oggetto generico a cui vengono <xref:System.Collections.Generic.List%601> aggiunti 5 elementi. Si crea quindi un oggetto `vector` usando il costruttore che accetta <xref:System.Collections.Generic.IEnumerable%601> come argomento.
 
