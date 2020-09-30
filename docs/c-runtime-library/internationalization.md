@@ -1,25 +1,35 @@
 ---
 title: Internazionalizzazione
-ms.date: 11/04/2016
+ms.date: 09/29/2020
+description: Descrizione del supporto della libreria di runtime Microsoft per la scrittura di app per i mercati internazionali.
+ms.topic: conceptual
 helpviewer_keywords:
 - localization, routines for
 - locale-dependent routines
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 215caf2051458bda4597713cf7b22c03b416f5c7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 61b06f3820631f0d3bcec2633d736c606daee301
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443162"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590212"
 ---
 # <a name="internationalization"></a>Internazionalizzazione
 
-La libreria di runtime Microsoft fornisce molte routine utili per la creazione di versioni diverse di un programma destinato ai mercati internazionali. Sono incluse [routine correlate alle impostazioni locali](../c-runtime-library/locale.md), routine a caratteri wide, routine a caratteri multibyte e routine di testo generico. Per praticità, la maggior parte delle routine correlate alle impostazioni locali è suddivisa in questo riferimento in base alle operazioni che esegue. In questa sezione e nel riferimento alfabetico le routine a caratteri multibyte e le routine a caratteri wide vengono descritte con le controparti a caratteri a singolo byte, qualora esistano.
+La libreria di runtime Microsoft fornisce molte routine che è possibile usare per personalizzare l'app per i mercati internazionali, ad esempio:
+- [routine correlate alle impostazioni locali](../c-runtime-library/locale.md)
+- routine a caratteri wide
+- routine di caratteri multibyte
+- routine di testo generico
 
-Sono inoltre incluse le alternative dell'operatore ISO646.
+Per praticità, la maggior parte delle routine correlate alle impostazioni locali vengono categorizzate in base alle operazioni eseguite.
 
-## <a name="see-also"></a>Vedere anche
+Le routine multibyte e le routine a caratteri wide vengono descritte insieme alle rispettive controparti con caratteri a byte singolo, quando sono disponibili.
 
-[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+Sono incluse anche le alternative dell'operatore ISO646.
+
+## <a name="see-also"></a>Vedi anche
+
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

@@ -1,15 +1,17 @@
 ---
 title: Flag di direzione
+description: Descrive l'effetto del flag di direzione della CPU sulle funzioni di runtime di Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: 04e096c6a62f806f4c214745a8401b1730eda3a6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a8f06b3b8caf08e1d3db2159bfc730e25229733b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443388"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589991"
 ---
 # <a name="direction-flag"></a>Flag di direzione
 
@@ -19,6 +21,6 @@ Nelle routine di runtime del linguaggio C si presuppone che il flag di direzione
 
 Le funzioni della libreria di runtime del linguaggio C, come le routine per la gestione delle stringhe e quelle per la gestione del buffer, prevedono che il flag di direzione non sia impostato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

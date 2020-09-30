@@ -1,17 +1,18 @@
 ---
-title: Tipo-Math generico
+title: Operazione matematiche generiche di tipo
 description: Descrive le macro in <> tgmath. h che semplificano la scrittura di codice C che chiama la funzione matematica corretta, in base al tipo di argomento.
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557677"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590225"
 ---
-# <a name="type-generic-math"></a>Tipo-Math generico
+# <a name="type-generic-math"></a>Operazione matematiche generiche di tipo
 
 Per ISO C standard 11 (C11) e versioni successive, l' \<tgmath.h> intestazione, oltre a includere \<math.h> e \<complex.h> , fornisce macro che richiamano una funzione matematica corrispondente in base ai tipi dei parametri.
 
@@ -94,6 +95,6 @@ Nella tabella seguente sono elencate le macro disponibili in e le relative opzio
 
 Windows SDK versione 10.0.20201.0 o successiva.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla libreria di runtime C](c-run-time-library-reference.md)

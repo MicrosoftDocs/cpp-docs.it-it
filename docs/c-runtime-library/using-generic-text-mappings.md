@@ -1,5 +1,7 @@
 ---
 title: Utilizzo di mapping testo generico
+description: Introduzione ai mapping specifici di Microsoft per tipi di dati, routine e altri oggetti nel runtime C.
+ms.topic: conceptual
 ms.date: 11/04/2016
 f1_keywords:
 - _UNICODE
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea3b1eef413a0d9f52e81795c04424d533b83504
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221874"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590108"
 ---
 # <a name="using-generic-text-mappings"></a>Utilizzo di mapping testo generico
 
@@ -97,10 +99,10 @@ Pertanto, è possibile scrivere, mantenere e compilare un unico file di codice s
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Mapping di testo generico](../c-runtime-library/generic-text-mappings.md)<br/>
-[Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)<br/>
+[Mapping di tipi di dati](../c-runtime-library/data-type-mappings.md)<br/>
 [Mapping di costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Mapping di routine](../c-runtime-library/routine-mappings.md)<br/>
 [Un programma di testo generico di esempio](../c-runtime-library/a-sample-generic-text-program.md)

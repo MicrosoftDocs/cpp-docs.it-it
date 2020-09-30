@@ -1,15 +1,16 @@
 ---
 title: Stato globale in CRT
-description: Viene descritto come viene gestito lo stato globale condiviso nel runtime C universale.
+description: Viene descritto il modo in cui lo stato globale condiviso viene gestito in Microsoft Universal C Runtime.
+ms.topic: conceptual
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: d1c787147ea3df36ce120837ef5b2c68b1bf58b1
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 60532fbdb905bd8ea78b4ce705ec8ecc3e374d9d
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554669"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589731"
 ---
 # <a name="global-state-in-the-crt"></a>Stato globale in CRT
 
@@ -54,6 +55,6 @@ Lo stato globale interessato dalla separazione dello stato dell'app e del sistem
 - [fmode] (text-and-binary-mode-file-i-o.md)
 - [Informazioni sul fuso orario](time-management.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla libreria di runtime C](c-run-time-library-reference.md)

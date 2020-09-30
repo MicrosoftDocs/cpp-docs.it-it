@@ -1,18 +1,20 @@
 ---
 title: File di intestazione obbligatori e facoltativi
+description: Quando usare i file di intestazione obbligatori o facoltativi dalla libreria di runtime di Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - c.headers
 helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: 8d1547ae7dd3b6adb33271e93e85022f04859886
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79a45aaba5e2872b23e70f3fd276d6f3cae11167
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211606"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589809"
 ---
 # <a name="required-and-optional-header-files"></a>File di intestazione obbligatori e facoltativi
 
@@ -26,6 +28,6 @@ La descrizione di ogni routine di runtime include un elenco di file di inclusion
 
 I file di intestazione della libreria di runtime forniscono dichiarazioni di funzione nello stile standard raccomandato dall'ANSI/ISO C. Il compilatore esegue il controllo dei tipi in qualsiasi riferimento di routine che viene creato dopo la dichiarazione di funzione associata. Le dichiarazioni di funzione sono particolarmente importanti per le routine che restituiscono un valore di un tipo diverso da **`int`** , che corrisponde all'impostazione predefinita. Le routine che non specificano il valore restituito appropriato nella dichiarazione verranno prese in considerazione dal compilatore per restituire un oggetto **`int`** , il che può causare risultati imprevisti. Per altre informazioni, vedere [Controllo dei tipi](../c-runtime-library/type-checking-crt.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

@@ -1,18 +1,20 @@
 ---
 title: Prestazioni librerie multithread
+description: Panoramica su come ottenere le migliori prestazioni dalle librerie multithreading di Microsoft C Runtime.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748363"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590199"
 ---
 # <a name="multithreaded-libraries-performance"></a>Prestazioni librerie multithread
 
@@ -34,6 +36,6 @@ Le prestazioni delle librerie con multithreading sono state migliorate e sono vi
 
 - L'esposizione dell'handle heap CRT consente di abilitare Windows Low Fragmentation Heap (LFH) per l'heap CRT, che consente di migliorare notevolmente le prestazioni negli scenari altamente ridimensionati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

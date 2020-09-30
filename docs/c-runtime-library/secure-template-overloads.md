@@ -1,6 +1,8 @@
 ---
 title: Overload di modelli sicuri
+description: Descrizione degli overload dei modelli di runtime di Microsoft C che forniscono funzioni con sicurezza avanzata.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
@@ -11,16 +13,16 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e795d4d68aaeb176ba0809a08310def23662028
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361130"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589640"
 ---
 # <a name="secure-template-overloads"></a>Overload di modelli sicuri
 
-Microsoft ha deprecato molte funzioni della libreria di runtime C (CRT) a favore di versioni con sicurezza avanzata. `strcpy_s`, ad esempio, è la sostituzione più sicura per `strcpy`. Le funzioni deprecate generano spesso errori di protezione, poiché non impediscono operazioni che possono comportare la sovrascrittura della memoria. Per impostazione predefinita, il compilatore genera un avviso di deprecazione quando si usa una di queste funzioni. CRT fornisce overload di modelli C++ per queste funzioni per semplificare la transizione alle varianti più sicure.
+Microsoft ha deprecato molte funzioni della libreria di runtime C (CRT) a favore di versioni con sicurezza avanzata. `strcpy_s`, ad esempio, è la sostituzione più sicura per `strcpy`. Le funzioni deprecate sono origini comuni di bug di sicurezza, poiché non impediscono operazioni che possono sovrascrivere la memoria. Per impostazione predefinita, il compilatore genera un avviso di deprecazione quando si usa una di queste funzioni. CRT fornisce overload di modelli C++ per queste funzioni per semplificare la transizione alle varianti più sicure.
 
 Questo snippet di codice, ad esempio, genera un avviso in quanto `strcpy` è deprecato:
 
@@ -29,7 +31,7 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-L'avviso di deprecazione informa l'utente che il codice può non essere sicuro. Dopo aver verificato che il codice non può sovrascrivere la memoria, sono disponibili varie opzioni. È possibile scegliere di ignorare l'avviso, di eliminare l'avviso definendo il simbolo `_CRT_SECURE_NO_WARNINGS` prima delle istruzioni include per le intestazioni CRT oppure di aggiornare il codice in modo da usare `strcpy_s`:
+L'avviso di deprecazione informa l'utente che il codice può non essere sicuro. Se è stato verificato che il codice non è in grado di sovrascrivere la memoria, sono disponibili diverse opzioni. È possibile scegliere di ignorare l'avviso, di eliminare l'avviso definendo il simbolo `_CRT_SECURE_NO_WARNINGS` prima delle istruzioni include per le intestazioni CRT oppure di aggiornare il codice in modo da usare `strcpy_s`:
 
 ```cpp
 char szBuf[10];
@@ -47,7 +49,7 @@ char szBuf[10];
 strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 ```
 
-La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` non interessa le funzioni che accettano un conteggio, come `strncpy`. Per abilitare gli overload di modello per le funzioni di conteggio, definire `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` su 1. Prima di eseguire questa operazione, tuttavia, assicurarsi che il codice passi il numero dei caratteri, non la dimensione del buffer (un errore comune). Inoltre, il codice che scrive esplicitamente una terminazione null alla fine del buffer dopo la chiamata di funzione non è necessario se viene chiamata la variante sicura. Se è necessario il troncamento, vedere [_TRUNCATE](../c-runtime-library/truncate.md).
+La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` non influisce sulle funzioni che accettano un conteggio, ad esempio `strncpy` . Per abilitare gli overload di modello per le funzioni di conteggio, definire `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` su 1. Prima di eseguire questa operazione, tuttavia, assicurarsi che il codice passi il numero dei caratteri, non la dimensione del buffer (un errore comune). Inoltre, il codice che scrive esplicitamente una terminazione null alla fine del buffer dopo la chiamata di funzione non è necessario se viene chiamata la variante sicura. Se è necessario il troncamento, vedere [_TRUNCATE](../c-runtime-library/truncate.md).
 
 > [!NOTE]
 > La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` necessita che anche `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` sia definito come 1. Se `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` è definito come 1 e `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` è definito come 0, l'applicazione non eseguirà alcun overload di modello.
@@ -67,7 +69,7 @@ Solo il nome della funzione deve essere modificato (aggiungendo "_s"); l'overloa
 
 Per impostazione predefinita, `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` e `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` sono definiti come 0 (disabilitato) e `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` è definito come 1 (abilitato).
 
-Si noti che questi overload di modello funzionano solo per le matrici statiche. I buffer allocati dinamicamente richiedono modifiche aggiuntive al codice sorgente. Rivedere gli esempi illustrati in precedenza:
+Questi overload di modello funzionano solo per le matrici statiche. I buffer allocati dinamicamente richiedono modifiche aggiuntive al codice sorgente. Rivedere gli esempi illustrati in precedenza:
 
 ```cpp
 #define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
@@ -75,7 +77,7 @@ Si noti che questi overload di modello funzionano solo per le matrici statiche. 
 // ...
 
 char *szBuf = (char*)malloc(10);
-strcpy(szBuf, "test"); // still deprecated; you have to change it to
+strcpy(szBuf, "test"); // still deprecated; change it to
                        // strcpy_s(szBuf, 10, "test");
 ```
 
@@ -87,11 +89,11 @@ E questo:
 // ...
 
 char *szBuf = (char*)malloc(10);
-strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
+strcpy_s(szBuf, "test"); // doesn't compile; change it to
                          // strcpy_s(szBuf, 10, "test");
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Funzionalità di sicurezza in CRTSecurity Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
-[Funzioni della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Funzionalità di sicurezza in CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
+[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

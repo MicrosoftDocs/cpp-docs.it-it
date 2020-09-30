@@ -1,6 +1,8 @@
 ---
 title: UNIX
+description: Linee guida per il trasferimento del programma a UNIX.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - unix
 helpviewer_keywords:
@@ -9,26 +11,26 @@ helpviewer_keywords:
 - POSIX file names
 - UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
-ms.openlocfilehash: edabb639d8f45680415473ad7b017d426b931ab5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 07f5ffeec8696ded5880c45ed2ea1a5107bee48c
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745245"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590147"
 ---
 # <a name="unix"></a>UNIX
 
 Se si intende trasferire i programmi su UNIX, attenersi alle seguenti linee guida:
 
-- Non rimuovere i file di intestazione dalla sottodirectory SYS. È possibile inserire i file di intestazione SYS altrove solo se non si intende trasferire i programmi su UNIX.
+- Non rimuovere i file di intestazione dalla sottodirectory SYS. È possibile inserire i file di intestazione SYS altrove solo se non si intende trasferire i programmi in UNIX.
 
-- Usare il delimitatore di percorso compatibile con UNIX nelle routine che accettano stringhe che rappresentano i percorsi e i nomi file come argomenti. Per questo scopo UNIX supporta solo la barra (/), mentre i sistemi operativi Win32 supportano sia la barra rovesciata (\\) che la barra (/). Questa documentazione utilizza quindi le barre compatibili con UNIX, ad esempio, come delimitatori di percorso nelle istruzioni `#include`. (Tuttavia, la shell dei comandi del sistema operativo Windows, CMD.EXE, non supporta la barra nei comandi immessi nel prompt dei comandi).
+- Usare il delimitatore di percorso compatibile con UNIX nelle routine che accettano stringhe che rappresentano i percorsi e i nomi file come argomenti. UNIX supporta solo la barra (/) a questo scopo, ma i sistemi operativi Win32 supportano sia la barra rovesciata ( \\ ) che la barra (/). Questa documentazione usa le barre compatibili con UNIX come delimitatori di percorso nelle `#include` istruzioni, ad esempio. Tuttavia, la shell dei comandi del sistema operativo Windows, CMD.EXE, non supporta la barra nei comandi immessi al prompt dei comandi.
 
-- Utilizzare i percorsi e i nomi file che funzionano correttamente in UNIX, in cui viene fatta la distinzione tra maiuscole e minuscole. Il file system della tabella di allocazione file (FAT) nei sistemi operativi Win32 non fa la distinzione tra maiuscole e minuscole; il file system NTFS preserva le maiuscole e minuscole per gli elenchi delle directory, ma le ignora nelle ricerche dei file e in altre operazioni di sistema.
+- Usare i percorsi e i nomi file che funzionano correttamente in UNIX, che fa distinzione tra maiuscole e minuscole. Il file system FAT (file allocation table) nei sistemi operativi Win32 non fa distinzione tra maiuscole e minuscole. Il file system NTFS conserva la distinzione tra maiuscole e minuscole per gli elenchi di directory, ma ignora la distinzione tra maiuscole e minuscole nelle ricerche di file
 
-    > [!NOTE]
-    >  In questa versione di Visual C++, le informazioni di compatibilità con UNIX sono state rimosse dalle descrizioni delle funzioni.
+> [!NOTE]
+>  In questa versione di Visual C++, le informazioni di compatibilità con UNIX sono state rimosse dalle descrizioni delle funzioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Compatibilità](../c-runtime-library/compatibility.md)

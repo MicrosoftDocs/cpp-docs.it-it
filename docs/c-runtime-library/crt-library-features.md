@@ -1,7 +1,8 @@
 ---
 title: Funzionalità libreria CRT
-description: I file che contengono le librerie di runtime di Microsoft C e le relative opzioni del compilatore associate e le direttive del preprocessore.
+description: Elenco di file che contengono le librerie di runtime di Microsoft C e le relative opzioni del compilatore e direttive per il preprocessore associate.
 ms.date: 09/03/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 2f46577ba81c57c2050f0cae4ae2af73152ba2a4
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 0e0d34c1121f0bf4e2fdfabc521e0365084761eb
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609110"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589783"
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 

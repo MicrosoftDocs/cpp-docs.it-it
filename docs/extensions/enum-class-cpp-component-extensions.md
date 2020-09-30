@@ -3,12 +3,12 @@ title: enum class (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219716"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590316"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class (C++/CLI e C++/CX)
 
@@ -16,7 +16,7 @@ Dichiara un'enumerazione nell'ambito dello spazio dei nomi che è un tipo defini
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 C++/CX e C++/CLI supportano **public enum class** e **private enum class**, che sono simili a **enum class** C++ standard, ma con l'aggiunta dell'identificatore di accessibilità. In **/clr** il tipo **enum class** C++11 è consentito, ma genera l'avviso C4472 che ha lo scopo di verificare se si vuole specificare davvero il tipo enumerazione ISO e non il tipo C++/CX e C++/CLI. Per ulteriori informazioni sulla parola chiave C++ standard ISO **`enum`** , vedere [enumerazioni](../cpp/enumerations-cpp.md).
 
@@ -53,13 +53,13 @@ Il valore di ogni enumeratore è un'espressione costante che viene definita in m
 *var*<br/>
 (Facoltativo) Nome di una variabile del tipo di enumerazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni ed esempi, vedere [Enumerazioni](../cppcx/enums-c-cx.md).
 
 Il compilatore genera messaggi di errore se l'espressione costante che definisce il valore di un enumeratore non può essere rappresentata da *underlying-type*.  Tuttavia, il compilatore non segnala un errore per un valore non appropriato per il tipo sottostante. Ad esempio:
 
-- Se *underlying-type* è numerico e un enumeratore specifica il valore massimo per questo tipo, non è possibile rappresentare il valore della enumerazione successiva definita in modo implicito.
+- Se il *tipo sottostante* è numerico e un enumeratore specifica il valore massimo per quel tipo, non è possibile rappresentare il valore della successiva enumerazione definita in modo implicito.
 
 - Se il *tipo sottostante* è **`bool`** e vengono definiti in modo implicito più di due enumeratori, non è possibile rappresentare gli enumeratori dopo i primi due.
 
@@ -97,7 +97,7 @@ Nome dell'enumerazione. Le enumerazioni gestite anonime non sono consentite.
 *var*<br/>
 (Facoltativo) Nome di una variabile del tipo di enumerazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **enum class** ed **enum struct** sono dichiarazioni equivalenti.
 

@@ -1,5 +1,7 @@
 ---
 title: I/O flusso Unicode in modalità testo e binaria
+description: Descrizione delle conversioni di caratteri con I/O del flusso Unicode.
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stream I/O routines
@@ -7,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: b41818bbb625a8c875771e86e3d82b74f4291e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9c4ef7da54463021f9487849df0235ae289e38fa
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444500"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590238"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>I/O flusso Unicode in modalità testo e binaria
 
@@ -24,7 +26,7 @@ Quando una routine di I/O del flusso Unicode (come **fwprintf**, **fwscanf**, **
 
 Tuttavia, quando una funzione di I/O del flusso Unicode viene eseguita in modalità binaria, il file viene considerato come Unicode e nessuna conversione CR-LF o conversione di caratteri si verifica durante l'input o l'output. Usare l'istruzione `_setmode( _fileno( stdin ), _O_BINARY );` per usare correttamente `wcin` in un file di testo Unicode.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Input e output](../c-runtime-library/input-and-output.md)<br/>
