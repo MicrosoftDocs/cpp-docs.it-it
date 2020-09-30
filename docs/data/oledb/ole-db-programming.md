@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: 8699eddd2af0dc6c15ecfefe313622ec94286154
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85cfc23630cf035489fb441fd2c85b1c0a696c71
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210093"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509533"
 ---
 # <a name="ole-db-programming"></a>Programmazione OLE DB
 
@@ -25,10 +25,10 @@ Inoltre, è possibile utilizzare gli attributi per implementare i modelli di con
 |-------------------------|---------|
 |Uso dei modelli consumer OLE DB (concetti)|[Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
 |Uso dei modelli provider OLE DB (concetti)|[Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
-|Classi e macro dei modelli OLE DB|[Riferimento ai modelli](../../data/oledb/ole-db-templates.md) di OLE DB C++(Visual)|
-|Attributi del consumer OLE DB|[Attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md)|
+|Classi e macro dei modelli OLE DB|[Riferimento ai modelli di OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|
+|Attributi del consumer OLE DB|[Attributi del consumer OLE DB](../../windows/attributes/ole-db-consumer-attributes.md)|
 |Interfacce OLE DB|Guida [di riferimento per programmatori OLE DB](/sql/connect/oledb/oledb-driver-for-sql-server) (nella Windows SDK)|
-|Esempi di modelli OLE DB|[Esempi di modelli OLE DB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB)|
+|Esempi di modelli OLE DB|[Esempi di modelli di OLE DB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB)|
 |Cenni preliminari sulla programmazione dell'accesso ai dati (Visual C++)|[Programmazione dell'accesso ai dati](../../data/data-access-programming-mfc-atl.md)|
 |Argomenti concettuali su ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|
 

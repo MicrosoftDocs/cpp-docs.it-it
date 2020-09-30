@@ -15,12 +15,12 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209443"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509431"
 ---
 # <a name="user-records"></a>Record utente
 
@@ -64,7 +64,7 @@ Se si usa la **Creazione guidata consumer OLE DB ATL** per generare un consumer,
 
 Per una discussione dettagliata degli scenari in cui è necessario usare più funzioni di accesso, vedere [Uso di più funzioni di accesso per un set di righe](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
 
-L'esempio seguente mostra il record utente modificato per supportare più funzioni di accesso nel set di righe. Invece di BEGIN_COLUMN_MAP e END_COLUMN_MAP, usa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) per ogni funzione di accesso. La macro BEGIN_ACCESSOR specifica il numero di funzioni di accesso (offset da zero) e indica se la funzione di accesso è una funzione di accesso automatica. Le funzioni di accesso automatiche chiamano `GetData` per recuperare i dati automaticamente in una chiamata a [MoveNext](../../data/oledb/crowset-movenext.md). Le funzioni di accesso non automatiche richiedono di recuperare i dati in modo esplicito. Usare una funzione di accesso non automatica se si esegue il binding a un campo dati di grandi dimensioni (ad esempio, un'immagine bitmap) che è preferibile non recuperare per ogni record.
+L'esempio seguente mostra il record utente modificato per supportare più funzioni di accesso nel set di righe. Invece di BEGIN_COLUMN_MAP e END_COLUMN_MAP, usa [BEGIN_ACCESSOR_MAP](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor_map) e [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) per ogni funzione di accesso. La macro BEGIN_ACCESSOR specifica il numero di funzioni di accesso (offset da zero) e indica se la funzione di accesso è una funzione di accesso automatica. Le funzioni di accesso automatiche chiamano `GetData` per recuperare i dati automaticamente in una chiamata a [MoveNext](./crowset-class.md#movenext). Le funzioni di accesso non automatiche richiedono di recuperare i dati in modo esplicito. Usare una funzione di accesso non automatica se si esegue il binding a un campo dati di grandi dimensioni (ad esempio, un'immagine bitmap) che è preferibile non recuperare per ogni record.
 
 ```cpp
 class CMultiArtists

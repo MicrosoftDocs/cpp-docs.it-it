@@ -7,12 +7,12 @@ helpviewer_keywords:
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: 09ddc113450fadb208e4f8471bc9aacf596a53f1
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 6ad8d50049d34a711937f3d1f73157ce26f69808
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182611"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509683"
 ---
 # <a name="create-a-com-interface"></a>Creare un'interfaccia COM
 
@@ -28,7 +28,7 @@ Visual Studio offre modelli e procedure guidate che consentono di creare progett
 
   Aprire la [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) per creare un controllo ActiveX con un'interfaccia dispatch e una mappa eventi, definite rispettivamente nel file con estensione idl e nella classe del controllo.
 
-- [Aggiunta di un controllo ATL](../atl/reference/adding-an-atl-control.md).
+- [Aggiungere un controllo ATL](../atl/reference/adding-an-atl-control.md).
 
   Usare una combinazione tra la [Creazione guidata progetto ATL](../atl/reference/atl-project-wizard.md) e la [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md) per creare un controllo ActiveX ATL.
 
@@ -36,14 +36,14 @@ Visual Studio offre modelli e procedure guidate che consentono di creare progett
 
   Questa procedura guidata genera file di origine IDL e una mappa COM nelle classi del progetto.
 
-Dopo l'apertura di un progetto ATL, la finestra di dialogo [Aggiungi classe](../ide/add-class-dialog-box.md) consente di scegliere tra altre procedure guidate e modelli per l'aggiunta delle interfacce COM al progetto. Le seguenti procedure guidate consentono di stabilire una o più interfacce per l'oggetto:
+Dopo l'apertura di un progetto ATL, la finestra di dialogo [Aggiungi classe](./adding-a-class-visual-cpp.md#add-class-dialog-box) consente di scegliere tra altre procedure guidate e modelli per l'aggiunta delle interfacce COM al progetto. Le seguenti procedure guidate consentono di stabilire una o più interfacce per l'oggetto:
 
-- [Creazione guidata componente ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [Creazione guidata componente COM+ ATL 1,0](../atl/reference/atl-com-plus-1-0-component-wizard.md)
 - [Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md)
-- [Creazione guidata componente ASP ATL](../atl/reference/atl-active-server-page-component-wizard.md)
+- [Creazione guidata componente Active Server ATL](../atl/reference/atl-active-server-page-component-wizard.md)
 - [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md)
 
-È anche possibile implementare nuove interfacce nel controllo COM. È sufficiente fare clic con il pulsante destro del mouse sulla classe del controllo dell'oggetto in Visualizzazione classi e scegliere [Implementa interfaccia](../ide/implement-interface-wizard.md).
+È anche possibile implementare nuove interfacce nel controllo COM. È sufficiente fare clic con il pulsante destro del mouse sulla classe del controllo dell'oggetto in Visualizzazione classi e scegliere [Implementa interfaccia](./implementing-an-interface-visual-cpp.md#implement-interface-wizard).
 
 > [!NOTE]
 > In Visual Studio non è disponibile una procedura guidata per l'aggiunta di un'interfaccia a un progetto. È possibile aggiungere un'interfaccia a un progetto ATL o nel contesto dell'[aggiunta del supporto ATL a un progetto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) aggiungendo un oggetto semplice con la [Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md). In alternativa, aprire il file IDL del progetto e creare l'interfaccia digitando quanto segue:
@@ -80,9 +80,9 @@ Per le classi di oggetti COM basati su ATL e MFC è possibile modificare l'imple
 
 Le tre procedure guidate seguenti consentono di personalizzare le interfacce esistenti. Sono disponibili in Visualizzazione classi:
 
-|Wizard|Tipo di progetto|
+|Procedura guidata|Tipo di progetto|
 |------------|------------------|
-|[Aggiunta guidata proprietà](../ide/names-add-property-wizard.md)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere la proprietà.<br /><br />Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata proprietà in base alle esigenze:<br /><br />- Per le interfacce dispatch nei progetti creati tramite la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la chiamata dell'Aggiunta guidata proprietà determina la visualizzazione di opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata proprietà offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />- Per tutte le altre interfacce, l'Aggiunta guidata proprietà offre opzioni utili nella maggior parte delle situazioni.|
-|[Aggiunta guidata metodo](../ide/add-method-wizard.md)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere il metodo.<br /><br />Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata metodo in base alle esigenze:<br /><br />- Per le interfacce dispatch nei progetti creati tramite la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), l'uso di Aggiunta guidata metodo determina la visualizzazione di opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata metodo offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />- Per tutte le altre interfacce, le procedure guidate **Aggiungi metodo** offrono opzioni utili nella maggior parte delle situazioni.|
+|[Aggiunta guidata proprietà](./adding-a-property-visual-cpp.md#names-add-property-wizard)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere la proprietà.<br /><br />Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata proprietà in base alle esigenze:<br /><br />-Per dispinterfaces nei progetti creati tramite la [creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la chiamata della procedura guidata Aggiungi proprietà fornisce opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata proprietà offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />- Per tutte le altre interfacce, l'Aggiunta guidata proprietà offre opzioni utili nella maggior parte delle situazioni.|
+|[Aggiunta guidata metodo](./adding-a-method-visual-cpp.md#add-method-wizard)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere il metodo.<br /><br />Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata metodo in base alle esigenze:<br /><br />- Per le interfacce dispatch nei progetti creati tramite la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), l'uso di Aggiunta guidata metodo determina la visualizzazione di opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata metodo offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />-Per tutte le altre interfacce, le procedure guidate per l' **aggiunta di metodi** offrono opzioni utili nella maggior parte dei casi.|
 
-È anche possibile implementare nuove interfacce nel controllo COM. È sufficiente fare clic con il pulsante destro del mouse sulla classe del controllo dell'oggetto in Visualizzazione classi e scegliere [Implementa interfaccia](../ide/implement-interface-wizard.md).
+È anche possibile implementare nuove interfacce nel controllo COM. È sufficiente fare clic con il pulsante destro del mouse sulla classe del controllo dell'oggetto in Visualizzazione classi e scegliere [Implementa interfaccia](./implementing-an-interface-visual-cpp.md#implement-interface-wizard).

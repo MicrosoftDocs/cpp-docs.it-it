@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: aa6e5d1ea7d1bc2d7ebfaf07c7c9f808b37e9804
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219768"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509712"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Estensioni componenti per .NET e UWP
 
@@ -78,7 +78,7 @@ Le parole chiave seguenti sono state aggiunte alle estensioni di C++.
 |**gcnew**|No|Alloca tipi sull'heap sottoposto a Garbage Collection. Usare anziché **`new`** e **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|Sì|Alloca un tipo Windows Runtime. Usare anziché **`new`** e **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Sì|Indica che un membro può essere inizializzato solo in fase di dichiarazione o in un costruttore statico.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**valore letterale**|Sì|Crea una variabile letterale.|[valore letterale](literal-cpp-component-extensions.md)|
+|**literal**|Sì|Crea una variabile letterale.|[literal](literal-cpp-component-extensions.md)|
 |**`nullptr`**|No|Indica che un handle o un puntatore non punta a un oggetto.|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Costrutti di modello
@@ -110,7 +110,7 @@ In questa sezione vengono elencati i costrutti di programmazione aggiuntivi e gl
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows Runtime e CLR) Permette di usare parole chiave come identificatori.|
 |[Elenchi di argomenti variabili (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime e CLR) Permette ad alcune funzioni di accettare un numero variabile di argomenti.|
-|[.NET Framework equivalenti ai tipi nativi C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Elenca i tipi CLR usati al posto dei tipi integrali di C++.|
+|[.NET Framework equivalenti ai tipi nativi C++ (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet)|Elenca i tipi CLR usati al posto dei tipi integrali di C++.|
 |[AppDomain](../cpp/appdomain.md) **`__declspec`** modificatore|**`__declspec`** modificatore che impone che esistano variabili globali e statiche per AppDomain.|
 |[Cast di tipo C con /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Descrive come vengono interpretati i cast di tipo C.|
 |Convenzione di chiamata [__clrcall](../cpp/clrcall.md)|Indica la convenzione di chiamata conforme a CLR.|

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039812"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509987"
 ---
 # <a name="ltbitgt-functions"></a>&lt;funzioni di bit &gt;
 
@@ -101,19 +101,22 @@ float f = inf
 std::bit_cat<int>(f) = 7f800000
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Il codice di basso livello deve spesso interpretare un oggetto di un tipo come un altro tipo. L'oggetto reinterpretato ha la stessa rappresentazione di bit dell'originale, ma è un tipo diverso.
 
 Invece di usare `reinterpret_cast` , o `memcpy()` , `bit_cast()` è un modo migliore per eseguire queste conversioni. È preferibile:
+
 - `bit_cast()` è `constexpr`
 - `bit_cast()` richiede che i tipi siano facilmente copiabili e le stesse dimensioni. In questo modo si evitano potenziali problemi che è possibile riscontrare usando `reinterpret_cast` e `memcpy` perché potrebbero essere usati per inavvertitamente e in modo non corretto, per convertire i tipi non facilmente copiabili. Inoltre, `memcpy()` può essere usato per copiare inavvertitamente tra tipi che non hanno le stesse dimensioni. Ad esempio, un valore Double (8 byte) in un int senza segno (4 byte) o viceversa.
 
 Questo overload partecipa solo alla risoluzione dell'overload se:
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` e `From` sono [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Questo modello di funzione è `constexpr` se e solo se `To` , `From` e i tipi dei relativi oggetti suboggetto sono:
+
 - non è un tipo di Unione o puntatore
 - non è un puntatore a un tipo di membro
 - non qualificato per volatile
@@ -165,7 +168,7 @@ bit_ceil(0b0100) = 0b0100
 bit_ceil(0b0101) = 0b1000
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -216,7 +219,7 @@ bit_floor(0b0100) = 0b0100
 bit_floor(0b0101) = 0b0100
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -270,7 +273,7 @@ bit_width(7) = 3
 bit_width(8) = 4
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -323,7 +326,7 @@ countl_zero(0b01000000) = 1
 countl_zero(0b10000000) = 0
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -376,7 +379,7 @@ countl_one(0b11111110) = 7
 countl_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -430,7 +433,7 @@ countr_zero(0b01000000) = 6
 countr_zero(0b10000000) = 7
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
@@ -483,14 +486,14 @@ countr_one(0b01111111) = 7
 countr_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 Verificare se per un valore è impostato un solo bit. Equivale a verificare se un valore è una potenza di due.
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -537,14 +540,14 @@ has_single_bit(0b1000) = true
 has_single_bit(0b1001) = false
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
 ## <a name="popcount"></a>`popcount`
 
 Contare il numero di bit impostati su uno in un valore Unsigned Integer.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -596,14 +599,14 @@ popcount(0b1110) = 3
 popcount(0b1111) = 4
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
 ## <a name="rotl"></a>`rotl`
 
 Ruota i bit di un valore di Unsigned Integer a sinistra del numero di volte specificato. I bit che "rientrano" del bit più a sinistra vengono ruotati nel bit più a destra.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -658,14 +661,14 @@ rotl(0b10000000, 1) = 0b00000001
 rotl(0b00000001,-1) = 0b10000000
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 
 ## <a name="rotr"></a>`rotr`
 
 Ruota i bit di `value` destra del numero di volte specificato. I bit che "rientrano" del bit più a destra vengono ruotati di nuovo nel bit più a sinistra.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;
@@ -720,7 +723,7 @@ rotr(0b00000001, 1) = 0b10000000
 rotr(0b10000000,-1) = 0b00000001
 ```
 
-### <a name="remarks"></a>Commenti
+### <a name="remarks"></a>Osservazioni
 
 Questa funzione di modello partecipa solo alla risoluzione dell'overload se `T` è un tipo di Unsigned Integer. Ad esempio: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` e così via.
 

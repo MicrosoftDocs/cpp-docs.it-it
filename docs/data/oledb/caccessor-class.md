@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 2b30cef2baf8c13c5001e44901b984aa1293494d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 032274d7dc85aa823cd28cf61e4606903f13ad9e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212303"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509554"
 ---
 # <a name="caccessor-class"></a>Classe CAccessor
 
@@ -39,7 +39,7 @@ Viene utilizzato quando un record viene associato in modo statico a un'origine d
 
 Utilizzare questo tipo di funzione di accesso quando si conosce la struttura e il tipo del database.
 
-Se la funzione di accesso contiene campi che puntano a memoria, ad esempio un `BSTR` o un'interfaccia, che devono essere liberati, chiamare la funzione membro [CAccessorRowset:: FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) prima di leggere il record successivo.
+Se la funzione di accesso contiene campi che puntano a memoria, ad esempio un' `BSTR` interfaccia o, che devono essere liberati, chiamare la funzione membro [CAccessorRowset:: FreeRecordMemory](./caccessorrowset-class.md#freerecordmemory) prima di leggere il record successivo.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,4 +48,4 @@ Se la funzione di accesso contiene campi che puntano a memoria, ad esempio un `B
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

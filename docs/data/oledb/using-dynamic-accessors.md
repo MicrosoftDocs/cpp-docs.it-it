@@ -5,22 +5,22 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: 4539247894c3980464e744c76cea450324372382
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403061"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509417"
 ---
 # <a name="using-dynamic-accessors"></a>Utilizzo delle funzioni di accesso dinamiche
 
-Le funzioni di accesso dinamici è possibile accedere a un'origine dati quando non si dispone di alcuna conoscenza dello schema del database (struttura sottostante). La libreria di modelli OLE DB fornisce diverse classi che consentono di.
+Le funzioni di accesso dinamiche consentono di accedere a un'origine dati quando non si conosce lo schema del database (struttura sottostante). La libreria di modelli di OLE DB offre diverse classi utili.
 
-Il [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) esempio viene illustrato come usare le classi di funzione di accesso dinamica per ottenere informazioni sulla colonna e creare in modo dinamico le funzioni di accesso.
+Nell'esempio [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) viene illustrato come utilizzare le classi di funzioni di accesso dinamiche per ottenere informazioni sulle colonne e creare funzioni di accesso dinamiche.
 
-## <a name="using-cdynamicaccessor"></a>Utilizzo di CDynamicAccessor
+## <a name="using-cdynamicaccessor"></a>Uso di CDynamicAccessor
 
-[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) consente di accedere a un'origine dati quando non si dispone di alcuna conoscenza dello schema del database (la struttura del database sottostante). `CDynamicAccessor` i metodi di recuperare informazioni quali i nomi delle colonne, numero e tipo di dati. Utilizzare queste informazioni di colonna per creare una funzione di accesso in modo dinamico in fase di esecuzione. Le informazioni di colonna vengono archiviate in un buffer che viene creato e gestito da questa classe. Ottenere dati dal buffer tramite il [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) (metodo).
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) consente di accedere a un'origine dati quando non si conosce lo schema del database, ovvero la struttura sottostante del database. `CDynamicAccessor` i metodi ottengono informazioni sulla colonna, ad esempio i nomi delle colonne, il conteggio e il tipo di dati. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione. Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Recuperare i dati dal buffer usando il metodo [GetValue](./cdynamicaccessor-class.md#getvalue) .
 
 ## <a name="example"></a>Esempio
 
@@ -88,11 +88,11 @@ int main(int argc, char* argv[] )
 }
 ```
 
-## <a name="using-cdynamicstringaccessor"></a>Utilizzo di CDynamicStringAccessor
+## <a name="using-cdynamicstringaccessor"></a>Uso di CDynamicStringAccessor
 
-[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) funziona come [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), tranne che in un aspetto importante. Sebbene `CDynamicAccessor` richiede i dati in formato nativo indicato dal provider, `CDynamicStringAccessor` richiede che il provider recuperi tutti i dati dall'archivio dati come dati di tipo stringa. Il processo è particolarmente utile per eseguire semplici operazioni che non richiedono il calcolo di valori nell'archivio dati, ad esempio visualizzare o stampare il contenuto dell'archivio dati.
+[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) funziona come [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), tranne che in un modo importante. Mentre `CDynamicAccessor` richiede i dati nel formato nativo segnalato dal provider, `CDynamicStringAccessor` richiede che il provider recuperi tutti i dati a cui si accede dall'archivio dati come dati di stringa. Il processo è particolarmente utile per le attività semplici che non richiedono il calcolo dei valori nell'archivio dati, ad esempio la visualizzazione o la stampa del contenuto dell'archivio dati.
 
-Usare `CDynamicStringAccessor` metodi per ottenere informazioni sulla colonna. Utilizzare queste informazioni di colonna per creare una funzione di accesso in modo dinamico in fase di esecuzione. Le informazioni di colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere dati dal buffer, utilizzare [CDynamicStringAccessor:: GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) o se archiviarlo per il buffer usando [:: GetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Usare i `CDynamicStringAccessor` metodi per ottenere informazioni sulla colonna. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione. Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Recuperare i dati dal buffer usando [CDynamicStringAccessor:: GetString](./cdynamicstringaccessor-class.md#getstring) o archiviarli nel buffer tramite [CDynamicStringAccessor:: sestring](./cdynamicstringaccessor-class.md#setstring).
 
 ## <a name="example"></a>Esempio
 
@@ -148,13 +148,13 @@ int main(int argc, char* argv[] )
 }
 ```
 
-## <a name="using-cdynamicparameteraccessor"></a>Usando CDynamicParameterAccessor
+## <a name="using-cdynamicparameteraccessor"></a>Uso di CDynamicParameterAccessor
 
-[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) è simile a [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), ad eccezione del fatto che `CDynamicParameterAccessor` Ottiene le informazioni sui parametri da impostare chiamando il [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) interfaccia. Il provider deve supportare `ICommandWithParameters` in modo che il consumer usi questa classe.
+[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) è simile a [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), ad eccezione `CDynamicParameterAccessor` del fatto che ottiene le informazioni sui parametri da impostare chiamando l'interfaccia [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) . Il provider deve supportare `ICommandWithParameters` in modo che il consumer usi questa classe.
 
-Le informazioni di parametro vengono archiviate in un buffer creato e gestito da questa classe. Ottenere i dati dei parametri dal buffer usando [CDynamicParameterAccessor:: GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) e [CDynamicParameterAccessor:: GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).
+Le informazioni di parametro vengono archiviate in un buffer creato e gestito da questa classe. Ottenere i dati dei parametri dal buffer usando [CDynamicParameterAccessor:: GetParam](./cdynamicparameteraccessor-class.md#getparam) e [CDynamicParameterAccessor:: GetParamType](./cdynamicparameteraccessor-class.md#getparamtype).
 
-Per un esempio che illustra come usare questa classe per eseguire una stored procedure SQL Server e ottenere i valori dei parametri output, vedere la [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) esempi di codice nelle [VCSamples Microsoft](https://github.com/Microsoft/VCSamples) repository in GitHub.
+Per un esempio che illustra come usare questa classe per eseguire un SQL Server stored procedure e ottenere i valori dei parametri di output, vedere il codice di esempio [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) nel repository [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) su GitHub.
 
 ## <a name="see-also"></a>Vedere anche
 

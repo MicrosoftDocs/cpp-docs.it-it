@@ -7,28 +7,28 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 1ad1a91e8a79238eee773d92a756b0238e8901d5
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707493"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509449"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporto dei set di righe dello schema
 
-I set di righe dello schema consentono ai consumer di ottenere informazioni su un archivio dati senza conoscere la struttura, o lo schema, sottostante. Un archivio dati può ad esempio contenere tabelle organizzate in una gerarchia definita dall'utente, quindi non ci sarebbe alcun modo per conoscere lo schema, se non leggendolo. Un altro esempio è offerto dalle procedure guidate Visual C++, che usano i set di righe dello schema per generare funzioni di accesso per il consumer. Per consentire al consumer di ottenere le informazioni, l'oggetto sessione del provider espone i metodi nell'interfaccia [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)). Nelle applicazioni Visual C++ si usa la classe [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) per implementare `IDBSchemaRowset`.
+I set di righe dello schema consentono ai consumer di ottenere informazioni su un archivio dati senza conoscere la struttura, o lo schema, sottostante. Un archivio dati può ad esempio contenere tabelle organizzate in una gerarchia definita dall'utente, quindi non ci sarebbe alcun modo per conoscere lo schema, se non leggendolo. Come altro esempio, le procedure guidate di Visual C++ usano set di righe dello schema per generare funzioni di accesso per il consumer. Per consentire al consumer di eseguire questa operazione, l'oggetto sessione del provider espone i metodi sull'interfaccia [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) . Nelle applicazioni Visual C++ si usa la classe [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) per implementare `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` supporta i metodi seguenti:
 
-- [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) controlla la validità delle restrizioni rispetto a un set di righe dello schema.
+- [CheckRestrictions](./idbschemarowsetimpl-class.md#checkrestrictions) controlla la validità delle restrizioni rispetto a un set di righe dello schema.
 
-- [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) implementa una funzione di creazione di oggetti COM per l'oggetto specificato dal parametro di modello.
+- [CreateSchemaRowset](./idbschemarowsetimpl-class.md#createschemarowset) implementa una funzione di creazione di oggetti COM per l'oggetto specificato dal parametro di modello.
 
-- [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) specifica le restrizioni supportate in un set di righe dello schema specifico.
+- [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) specifica le restrizioni supportate in un set di righe dello schema specifico.
 
-- [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) restituisce un set di righe dello schema (ereditato dall'interfaccia).
+- [IDBSchemaRowset::GetRowset](./idbschemarowsetimpl-class.md#getrowset) restituisce un set di righe dello schema (ereditato dall'interfaccia).
 
-- [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) restituisce un elenco di set di righe dello schema accessibili da `IDBSchemaRowsetImpl::GetRowset` (ereditato dall'interfaccia).
+- [GetSchemas](./idbschemarowsetimpl-class.md#getschemas) restituisce un elenco di set di righe dello schema accessibili da `IDBSchemaRowsetImpl::GetRowset` (ereditato dall'interfaccia).
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Supporto della Creazione guidata provider OLE DB ATL
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` eredita da `IDBSchemaRowsetImpl`, quindi ha tutti i metodi per la gestione delle restrizioni. Usando `CSchemaRowsetImpl`, dichiarare tre classi figlio (elencate nella mappa di schema precedente): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` e `CUpdateSessionPTSchemaRowset`. Ognuna di queste classi figlio ha un metodo `Execute` che gestisce il rispettivo set di restrizioni (criteri di ricerca). Ogni metodo `Execute` confronta i valori dei parametri *cRestrictions* e *rgRestrictions*. Vedere la descrizione di questi parametri in [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+`CUpdateSession` eredita da `IDBSchemaRowsetImpl`, quindi ha tutti i metodi per la gestione delle restrizioni. Usando `CSchemaRowsetImpl`, dichiarare tre classi figlio (elencate nella mappa di schema precedente): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` e `CUpdateSessionPTSchemaRowset`. Ognuna di queste classi figlio ha un metodo `Execute` che gestisce il rispettivo set di restrizioni (criteri di ricerca). Ogni metodo `Execute` confronta i valori dei parametri *cRestrictions* e *rgRestrictions*. Vedere la descrizione di questi parametri in [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
 
 Per altre informazioni sulle restrizioni corrispondenti a un particolare set di righe dello schema, vedere la tabella dei GUID dei set di righe dello schema in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) nella **guida di riferimento per programmatori OLE DB** in Windows SDK.
 
@@ -273,4 +273,4 @@ Per un esempio di provider che supporta i set di righe dello schema, vedere l'es
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tecniche avanzate del provider](../../data/oledb/advanced-provider-techniques.md)
+[Tecniche avanzate per i provider](../../data/oledb/advanced-provider-techniques.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 4e3c773d0498a35c7b5d053268bff26f9943103b
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c77c5c0fff8f8d9c1c64ba11773503b197006b67
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686769"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510116"
 ---
 # <a name="compiler-error-c3533"></a>Errore del compilatore C3533
 
@@ -23,7 +23,7 @@ Un metodo o un parametro di modello non può essere dichiarato con la **`auto`**
 
 1. Rimuovere la **`auto`** parola chiave dalla dichiarazione di parametro.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente viene restituito C3533 perché dichiara un parametro di funzione con la **`auto`** parola chiave e viene compilato con **/Zc: auto**.
 
@@ -43,5 +43,5 @@ template<auto T> class C {}; // C3533
 
 ## <a name="see-also"></a>Vedere anche
 
-[Parola chiave auto](../../cpp/auto-keyword.md)<br/>
+[Parola chiave auto](../../cpp/auto-cpp.md)<br/>
 [/Zc: auto (deduce il tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)

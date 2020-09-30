@@ -80,22 +80,22 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: ee732cfb414f011e95edbbb57b218d81179d44f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ac21096f18b1331759f9bf7dfe613100298b7296
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168577"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509657"
 ---
 # <a name="how-to-layout-controls-c"></a>Procedura: layout di controlli (C++)
 
-Nell' **editor finestre** sono disponibili strumenti di layout che consentono di allineare e ridimensionare automaticamente i controlli. Per la maggior parte delle attività, è possibile utilizzare la [barra degli strumenti dell'editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Tutti i comandi della barra degli strumenti dell' **editor finestre** sono disponibili anche nel menu **formato** e la maggior parte dei [tasti di scelta rapida](../windows/accelerator-keys-for-the-dialog-editor.md).
+Nell' **editor finestre** sono disponibili strumenti di layout che consentono di allineare e ridimensionare automaticamente i controlli. Per la maggior parte delle attività, è possibile utilizzare la [barra degli strumenti dell'editor finestre](./dialog-editor.md). Tutti i comandi della barra degli strumenti dell' **editor finestre** sono disponibili anche nel menu **formato** e la maggior parte dei [tasti di scelta rapida](./dialog-editor.md).
 
 Molti comandi di layout per le finestre di dialogo sono disponibili solo quando è selezionato più di un controllo. È possibile selezionare un singolo controllo o più controlli e, quando si seleziona più di un controllo, il primo è quello selezionato per impostazione predefinita il controllo dominante.
 
 La posizione, l'altezza e la larghezza del controllo corrente vengono visualizzate nell'angolo inferiore destro della barra di stato. Quando viene selezionata l'intera finestra di dialogo, la barra di stato Visualizza la posizione della finestra di dialogo nel suo complesso e l'altezza e la larghezza.
 
-## <a name="arrange-controls"></a>Disponi controlli
+## <a name="arrange-controls"></a>Disporre i controlli
 
 È possibile disporre i controlli nelle finestre di dialogo con l' **editor finestre** in uno dei tre stati diversi:
 
@@ -105,9 +105,9 @@ La posizione, l'altezza e la larghezza del controllo corrente vengono visualizza
 
 - Senza funzionalità di allineamento o allineamento.
 
-La [barra degli strumenti dell'editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) contiene i pulsanti che controllano lo stato.
+La [barra degli strumenti dell'editor finestre](./dialog-editor.md) contiene i pulsanti che controllano lo stato.
 
-- Per modificare lo stato, selezionare l'icona appropriata oppure passare a **formato** menu > **impostazioni della Guida**.
+- Per modificare lo stato, selezionare l'icona appropriata oppure passare a menu **formato**  >  **Guida Impostazioni**.
 
 La finestra di dialogo **Impostazioni Guida** presenta le proprietà seguenti:
 
@@ -116,8 +116,8 @@ La finestra di dialogo **Impostazioni Guida** presenta le proprietà seguenti:
 |**Guide di layout**|Consente di visualizzare le impostazioni per le guide di layout.|
 |**Nessuno**|Nasconde gli strumenti di layout.|
 |**Righelli e guide**|Se abilitata, aggiunge righelli agli strumenti di layout e consente di inserire le guide nei righelli. Le guide predefinite sono i margini.|
-|**Griglia**|Crea una griglia di layout. I nuovi controlli verranno allineati automaticamente alla griglia.|
-|**Spaziatura griglia**|Consente di visualizzare le impostazioni per la spaziatura della griglia in unità della finestra di dialogo (DLU).|
+|**Pannello Grid**|Crea una griglia di layout. I nuovi controlli verranno allineati automaticamente alla griglia.|
+|**spaziatura di griglia**|Consente di visualizzare le impostazioni per la spaziatura della griglia in unità della finestra di dialogo (DLU).|
 |**Larghezza: dlu**|Imposta la larghezza della griglia di layout in DLU. Una DLU orizzontale è la larghezza media del tipo di carattere della finestra di dialogo divisa per 4.|
 |**Altezza: dlu**|Imposta l'altezza della griglia di layout in DLU. Una DLU verticale è l'altezza media del tipo di carattere della finestra di dialogo divisa per 8.|
 
@@ -145,17 +145,17 @@ Le guide vengono visualizzate come linee tratteggiate blu nella finestra di dial
 
 I segni di graduazione nei righelli che determinano la spaziatura delle guide e dei controlli sono definiti da unità di dialogo (DLU). Una DLU si basa sulle dimensioni del tipo di carattere della finestra di dialogo, normalmente a 8 punti MS Shell Dlg. Una DLU orizzontale è la larghezza media del tipo di carattere della finestra di dialogo divisa per quattro. Una DLU verticale è l'altezza media del tipo di carattere divisa per 8.
 
-- Per modificare gli intervalli dei segni di graduazione, passare a **formato** menu > **Impostazioni Guida**, quindi nel campo **Spaziatura griglia** specificare una nuova larghezza e altezza in DLU.
+- Per modificare gli intervalli dei segni di graduazione, passare a menu **formato**  >  **Guida Impostazioni**, quindi nel campo **Spaziatura griglia** specificare una nuova larghezza e altezza in DLU.
 
 ### <a name="layout-grid"></a>Griglia layout
 
 Quando si posizionano o si organizzano i controlli in una finestra di dialogo, utilizzare la griglia di layout per un posizionamento più preciso. Quando la griglia è attivata, i controlli si bloccano sulle linee tratteggiate della griglia come se fossero magnetizzati.
 
-- Per attivare o disattivare la griglia di layout, passare a **formato** menu > **Impostazioni Guida** e selezionare o deselezionare il pulsante **griglia** .
+- Per attivare o disattivare la griglia di layout, passare a menu **Formatta**  >  **Impostazioni Guida** e selezionare o deselezionare il pulsante **griglia** .
 
-   È comunque possibile controllare la griglia nelle singole finestre dell' **Editor** finestre usando il pulsante **attiva/Rimuovi griglia** della [barra degli strumenti dell'editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+   È comunque possibile controllare la griglia nelle singole finestre dell' **Editor** finestre usando il pulsante **attiva/Rimuovi griglia** della [barra degli strumenti dell'editor finestre](./dialog-editor.md).
 
-- Per modificare le dimensioni della griglia di layout, passare a **formato** menu > **Impostazioni Guida** e digitare l'altezza e la larghezza in DLU per le celle nella griglia. L'altezza o la larghezza minima è 4.
+- Per modificare le dimensioni della griglia di layout, passare a menu **formato**  >  **Guida Impostazioni** e digitare l'altezza e la larghezza in DLU per le celle nella griglia. L'altezza o la larghezza minima è 4.
 
 ### <a name="disable-guides"></a>Disabilitare le guide
 
@@ -165,14 +165,14 @@ Quando si posizionano o si organizzano i controlli in una finestra di dialogo, u
 
 - Per spostare le guide senza spostare i controlli bloccati, trascinare la guida tenendo premuto il tasto **MAIUSC** .
 
-- Per disattivare le guide, passare a **formato** menu > **impostazioni della Guida**. Quindi, in **guide di layout**selezionare **nessuno**.
+- Per disattivare le guide, passare a menu **formato**  >  **Guida Impostazioni**. Quindi, in **guide di layout**selezionare **nessuno**.
 
    > [!TIP]
-   > È anche possibile usare il tasto di scelta rapida nel **formato** menu > Visualizza **/Nascondi guide**.
+   > È anche possibile usare il tasto di scelta rapida nel **formato**menu  >  **guide**.
 
 ## <a name="select-controls"></a>Selezionare i controlli
 
-Selezionare i controlli per ridimensionarli, allinearli, spostarli, copiarli o eliminarli, quindi completare l'operazione desiderata. Nella maggior parte dei casi, è necessario selezionare più di un controllo per utilizzare gli strumenti di ridimensionamento e allineamento nella [barra degli strumenti dell'editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+Selezionare i controlli per ridimensionarli, allinearli, spostarli, copiarli o eliminarli, quindi completare l'operazione desiderata. Nella maggior parte dei casi, è necessario selezionare più di un controllo per utilizzare gli strumenti di ridimensionamento e allineamento nella [barra degli strumenti dell'editor finestre](./dialog-editor.md).
 
 Quando si seleziona un controllo, è presente un bordo ombreggiato con quadratini di ridimensionamento (attivi) o vuoti (inattivi), quadratini piccoli che vengono visualizzati nel bordo di selezione. Quando vengono selezionati più controlli, il controllo dominante dispone di quadratini di ridimensionamento a tinta unita e tutti gli altri controlli selezionati hanno handle di ridimensionamento vuoti.
 
@@ -212,7 +212,7 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 
 - Per ridimensionare automaticamente un controllo in modo da adattarlo al testo al suo interno, passare a **formato** menu o fare clic con il pulsante destro del mouse sul controllo e scegliere **dimensioni per contenuto**.
 
-- Per impostare le stesse dimensioni dei controlli, selezionare i controlli che si desidera ridimensionare e passare a **formato** menu > le **stesse dimensioni**, quindi scegliere **sia**, **altezza**o **larghezza**.
+- Per impostare le stesse dimensioni dei controlli, selezionare i controlli che si desidera ridimensionare e passare a **formato**menu  >  **imposta le stesse dimensioni**, quindi scegliere **sia**, **altezza**o **larghezza**.
 
    È possibile ridimensionare un gruppo di controlli in base alla dimensione del controllo dominante, che è il controllo selezionato per primo nella serie. La dimensione finale dei controlli del gruppo dipende dalle dimensioni del controllo dominante.
 
@@ -222,7 +222,7 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 
 ### <a name="other-controls"></a>Altri controlli
 
-È possibile ridimensionare una casella combinata quando la si aggiunge alla finestra di dialogo. È inoltre possibile specificare le dimensioni della casella di riepilogo a discesa. Per ulteriori informazioni, vedere [aggiunta di valori a un controllo casella combinata](../windows/adding-values-to-a-combo-box-control.md).
+È possibile ridimensionare una casella combinata quando la si aggiunge alla finestra di dialogo. È inoltre possibile specificare le dimensioni della casella di riepilogo a discesa. Per ulteriori informazioni, vedere [aggiunta di valori a un controllo casella combinata](./defining-mnemonics-access-keys.md).
 
 1. Selezionare il pulsante con la freccia a discesa a destra della casella combinata.
 
@@ -232,7 +232,7 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 
 1. Utilizzare il quadratino di ridimensionamento inferiore per modificare le dimensioni iniziali dell'area dell'elenco a discesa.
 
-   ![Ridimensionamento di una casella combinata&#45;in un progetto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+   ![Ridimensionamento delle caselle di&#45;combinate in un progetto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
 
 1. Selezionare di nuovo la freccia a discesa per chiudere la parte dell'elenco a discesa della casella combinata.
 
@@ -241,11 +241,11 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 >
 > Impostare una larghezza massima per l'elemento più ampio chiamando [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) nel codice. Se non si imposta questo valore, la barra di scorrimento non verrà visualizzata, neanche quando gli elementi nella casella di riepilogo sono più ampi della casella.
 
-## <a name="align-controls"></a>Allinea controlli
+## <a name="align-controls"></a>Allineare i controlli
 
-- Per allineare i controlli, selezionare i controlli che si desidera allineare. Vai a **formato** menu > **Allinea** e scegli uno degli allineamenti seguenti:
+- Per allineare i controlli, selezionare i controlli che si desidera allineare. Vai a menu **formato**  >  **Allinea** e scegli uno degli allineamenti seguenti:
 
-   |Alignment|Descrizione|
+   |Allineamento|Descrizione|
    |-----|-----------|
    |**Sinistre**|Allinea i controlli selezionati lungo il lato sinistro.|
    |**Centri**|Allinea orizzontalmente i controlli selezionati lungo i punti centrali.|
@@ -256,26 +256,26 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 
    Assicurarsi di selezionare il controllo che si vuole usare per primo o impostarlo come controllo dominante prima di eseguire il comando di allineamento o ridimensionamento come posizione finale del gruppo di controlli in base alla posizione del controllo dominante.
 
-- Per controllare lo spazio uniforme, selezionare i controlli che si desidera ridisporre. Passare a **formato** menu > **spazio** in modo uniforme e scegliere uno degli allineamenti di spaziatura seguenti:
+- Per controllare lo spazio uniforme, selezionare i controlli che si desidera ridisporre. Vai a menu **Formatta**  >  **spazio** in modo uniforme e scegli uno degli allineamenti di spaziatura seguenti:
 
-   |Spacing|Descrizione|
+   |Spaziatura|Descrizione|
    |---|---|
-   |**Attraverso**|Spaziatura uniforme tra il controllo più a sinistra e quello più a destra selezionato.|
+   |**Spaziatura orizzontale**|Spaziatura uniforme tra il controllo più a sinistra e quello più a destra selezionato.|
    |**Giù**|Controlla lo spazio in modo uniforme tra il controllo superiore e il controllo inferiori selezionato.|
 
-- Per centrare i controlli, selezionare il controllo o i controlli che si desidera ridisporre. Passare a **formato** menu > **Center nella finestra di dialogo** e scegliere uno dei seguenti accordi:
+- Per centrare i controlli, selezionare il controllo o i controlli che si desidera ridisporre. Passare a menu **Format**  >  **Center nella finestra di dialogo** e scegliere uno dei seguenti accordi:
 
    |Disposizione|Descrizione|
    |---|---|
-   |**Verticale**|Centra i controlli verticalmente nella finestra di dialogo.|
-   |**Orizzontale**|Centra i controlli orizzontalmente nella finestra di dialogo.|
+   |**Vertical**|Centra i controlli verticalmente nella finestra di dialogo.|
+   |**Ridimensionamento orizzontale**|Centra i controlli orizzontalmente nella finestra di dialogo.|
 
-- Per allineare i pulsanti di push, selezionare uno o più pulsanti di push. Passare a **formato** menu > disposizione **pulsanti**, quindi scegliere uno dei seguenti accordi:
+- Per allineare i pulsanti di push, selezionare uno o più pulsanti di push. Passare a menu **formato disposizione**  >  **pulsanti**, quindi scegliere uno dei seguenti accordi:
 
    |Disposizione|Descrizione|
    |---|---|
-   |**Right**|Allinea i pulsanti di push lungo il bordo destro della finestra di dialogo.|
-   |**In basso**|Allinea i pulsanti di push lungo il bordo inferiore della finestra di dialogo.|
+   |**Ok**|Allinea i pulsanti di push lungo il bordo destro della finestra di dialogo.|
+   |**Parte inferiore**|Allinea i pulsanti di push lungo il bordo inferiore della finestra di dialogo.|
 
    Se si seleziona un controllo diverso da un pulsante di push, la relativa posizione non è interessata.
 

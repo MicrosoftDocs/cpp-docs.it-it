@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d70a1901c457d9fbdbe8712d84999e256a54d0c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecb11c54d4c5926fbead0196c441ec23e8b0891f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209774"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509523"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Riferimento a una proprietà nel provider
 
@@ -25,7 +25,7 @@ Creare un oggetto [CDBPropSet](../../data/oledb/cdbpropset-class.md) usando il g
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-Chiamare [AddProperty](../../data/oledb/cdbpropset-addproperty.md), passando l'ID della proprietà e un valore da assegnare alla proprietà. Il tipo di valore dipende dalla proprietà che si sta usando.
+Chiamare [AddProperty](./cdbpropset-class.md#addproperty), passando l'ID della proprietà e un valore da assegnare alla proprietà. Il tipo di valore dipende dalla proprietà che si sta usando.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -35,7 +35,7 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);
 ```
 
-Utilizzare l'interfaccia `IRowset` per chiamare `GetProperties`. Passare il set di proprietà come parametro. Ecco il codice finale:
+Utilizzare l' `IRowset` interfaccia per chiamare `GetProperties` . Passare il set di proprietà come parametro. Ecco il codice finale:
 
 ```cpp
 CAgentRowset<CCustomCommand>* pRowset = (CAgentRowset<CCustomCommand>*) pThis;
@@ -68,4 +68,4 @@ if (pPropSet)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Uso dei modelli di provider di OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

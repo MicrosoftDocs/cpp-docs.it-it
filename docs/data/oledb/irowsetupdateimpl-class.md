@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 7a63062a02ebcc6c8a89fadceb36dc81bc9af88c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844925"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509780"
 ---
 # <a name="irowsetupdateimpl-class"></a>Classe IRowsetUpdateImpl
 
@@ -84,7 +84,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 Classe derivata da `IRowsetUpdateImpl` .
 
-*Storage*<br/>
+*Archiviazione*<br/>
 Record utente.
 
 *UpdateArray*<br/>
@@ -163,7 +163,7 @@ Vedere [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=v
 
 ### <a name="remarks"></a>Osservazioni
 
-Questo metodo esegue l'override del metodo [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) , ma include la memorizzazione nella cache dei dati originali per consentire l'elaborazione immediata o posticipata dell'operazione.
+Questo metodo esegue l'override del metodo [IRowsetChangeImpl:: SetData](./irowsetchangeimpl-class.md#setdata) , ma include la memorizzazione nella cache dei dati originali per consentire l'elaborazione immediata o posticipata dell'operazione.
 
 ## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a> IRowsetUpdateImpl:: GetOriginalData
 
@@ -278,7 +278,7 @@ Per altri parametri, vedere [IRowsetUpdate:: Update](/previous-versions/windows/
 
 ### <a name="remarks"></a>Osservazioni
 
-Le modifiche vengono trasmesse chiamando [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Per rendere effettive le modifiche, il consumer deve chiamare [CRowset:: Update](../../data/oledb/crowset-update.md) . Impostare *prgRowStatus* su un valore appropriato come descritto in [Stati di riga](/previous-versions/windows/desktop/ms722752(v=vs.85)) nella Guida di *riferimento per programmatori OLE DB*.
+Le modifiche vengono trasmesse chiamando [IRowsetChangeImpl:: FlushData](./irowsetchangeimpl-class.md#flushdata). Per rendere effettive le modifiche, il consumer deve chiamare [CRowset:: Update](./crowset-class.md#update) . Impostare *prgRowStatus* su un valore appropriato come descritto in [Stati di riga](/previous-versions/windows/desktop/ms722752(v=vs.85)) nella Guida di *riferimento per programmatori OLE DB*.
 
 ## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a> IRowsetUpdateImpl:: IsUpdateAllowed
 
@@ -305,7 +305,7 @@ out Stato restituito all'utente.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se si determina che un aggiornamento deve essere consentito, restituisce S_OK; in caso contrario, restituisce E_FAIL. Se si consente un aggiornamento, è necessario impostare anche `DBROWSTATUS` in [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) su uno [stato di riga](/previous-versions/windows/desktop/ms722752(v=vs.85))appropriato.
+Se si determina che un aggiornamento deve essere consentito, restituisce S_OK; in caso contrario, restituisce E_FAIL. Se si consente un aggiornamento, è necessario impostare anche `DBROWSTATUS` in [IRowsetUpdateImpl:: Update](#update) su uno [stato di riga](/previous-versions/windows/desktop/ms722752(v=vs.85))appropriato.
 
 ## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a> IRowsetUpdateImpl:: m_mapCachedData
 

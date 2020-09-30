@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212943"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509440"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 
@@ -20,11 +20,11 @@ Un'operazione di database di base consiste nell'aggiornamento o nella scrittura 
 
 I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di righe: impostazione dei valori di colonna all'interno di una riga, inserimento di una riga ed eliminazione di una riga. Per completare queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa l'interfaccia [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) ed esegue l'override dei metodi di interfaccia seguenti:
 
-- [SetData](../../data/oledb/crowset-setdata.md) modifica i valori della colonna in una riga di un set di righe ed equivale al comando SQL UPDATE.
+- [SetData](./crowset-class.md#setdata) modifica i valori della colonna in una riga di un set di righe ed equivale al comando SQL UPDATE.
 
-- [Insert](../../data/oledb/crowset-insert.md) inserisce una riga in un set di righe ed equivale al comando SQL INSERT.
+- [Insert](./crowset-class.md#insert) inserisce una riga in un set di righe ed equivale al comando SQL INSERT.
 
-- [Delete](../../data/oledb/crowset-delete.md) elimina le righe da un set di righe ed equivale al comando SQL DELETE.
+- [Delete](./crowset-class.md#delete) elimina le righe da un set di righe ed equivale al comando SQL DELETE.
 
 ## <a name="supporting-update-operations"></a>Supporto delle operazioni di aggiornamento
 
@@ -52,7 +52,7 @@ Le operazioni di modifica, inserimento o eliminazione potrebbero non riuscire se
 
 ## <a name="setting-data-in-rows"></a>Impostazione dei dati nelle righe
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) imposta i valori dei dati in una o più colonne della riga corrente. Il codice seguente imposta i valori dei membri dati associati alle colonne `Name` e `Units in Stock` della tabella `Products` e quindi chiama `SetData` per scrivere tali valori nella centesima riga del set di righe:
+[CRowset::SetData](./crowset-class.md#setdata) imposta i valori dei dati in una o più colonne della riga corrente. Il codice seguente imposta i valori dei membri dati associati alle colonne `Name` e `Units in Stock` della tabella `Products` e quindi chiama `SetData` per scrivere tali valori nella centesima riga del set di righe:
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -74,13 +74,13 @@ HRESULT hr = product.SetData();
 
 ## <a name="inserting-rows-into-rowsets"></a>Inserimento di righe nel set di righe
 
-[CRowset::Insert](../../data/oledb/crowset-insert.md) crea e inizializza una nuova riga usando i dati dalla funzione di accesso. `Insert` crea una nuova riga dopo la riga corrente. È necessario specificare se si vuole spostare la riga corrente alla riga successiva o lasciarla nella posizione in cui si trova. A tale scopo, impostare il parametro *bGetRow* :
+[CRowset::Insert](./crowset-class.md#insert) crea e inizializza una nuova riga usando i dati dalla funzione di accesso. `Insert` crea una nuova riga dopo la riga corrente. È necessario specificare se si vuole spostare la riga corrente alla riga successiva o lasciarla nella posizione in cui si trova. A tale scopo, impostare il parametro *bGetRow* :
 
 ```cpp
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **`false`**(valore predefinito) specifica che la riga corrente viene incrementata alla riga successiva (nel qual caso punta alla riga inserita).
+- **`false`** (valore predefinito) specifica che la riga corrente viene incrementata alla riga successiva (nel qual caso punta alla riga inserita).
 
 - **`true`** Specifica che la riga corrente rimane dove si trova.
 
@@ -131,13 +131,13 @@ m_dwQuantityPerUnitLength = 10;        // "Pack of 10" has 10 characters
 HRESULT hr = product.Insert();
 ```
 
-Per un esempio più dettagliato, vedere [CRowset::Insert](../../data/oledb/crowset-insert.md).
+Per un esempio più dettagliato, vedere [CRowset::Insert](./crowset-class.md#insert).
 
 Per altre informazioni sull'impostazione dei membri dati per stato e lunghezza, vedere [Membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
 ## <a name="deleting-rows-from-rowsets"></a>Eliminazione delle righe dal set di righe
 
-[CRowset::Delete](../../data/oledb/crowset-delete.md) elimina la riga corrente dal set di righe. Il codice seguente chiama `Delete` per rimuovere la centesima riga del set di righe:
+[CRowset::Delete](./crowset-class.md#delete) elimina la riga corrente dal set di righe. Il codice seguente chiama `Delete` per rimuovere la centesima riga del set di righe:
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -156,9 +156,9 @@ HRESULT hr = product.Delete();
 
 Se non diversamente specificato, le chiamate ai metodi `SetData`, `Insert` e `Delete` aggiornano immediatamente l'archivio dati. Tuttavia, è possibile rinviare gli aggiornamenti in modo che il consumer archivi tutte le modifiche in una cache locale e le trasferisca all'archivio dati quando si chiama uno dei metodi di aggiornamento seguenti:
 
-- [CRowset::Update](../../data/oledb/crowset-update.md) trasferisce tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o dall'ultima chiamata a `Update`.
+- [CRowset::Update](./crowset-class.md#update) trasferisce tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o dall'ultima chiamata a `Update`.
 
-- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) trasferisce tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o dall'ultima chiamata a `Update`Update.
+- [CRowset::UpdateAll](./crowset-class.md#updateall) trasferisce tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o dall'ultima chiamata a `Update`Update.
 
 Tenere presente che l'aggiornamento tramite Update indica specificamente di apportare modifiche al comando e non deve essere confuso con il comando SQL **UPDATE** (`SetData` è equivalente al comando SQL **UPDATE**).
 
@@ -204,7 +204,7 @@ Per garantire che le modifiche in sospeso vengano trasferite, è necessario chia
 
 Ad esempio, se la prima chiamata a `Update` non fosse presente nel codice precedente, la riga 100 rimarrebbe invariata, mentre verrebbe modificata la riga 101. Dopo tale punto, l'applicazione dovrebbe chiamare `UpdateAll` oppure tornare alla riga 100 e chiamare `Update` per aggiornare tale riga.
 
-Infine, uno dei motivi principali per il rinvio delle modifiche consiste nella possibilità di annullarle. La chiamata a [CRowset::Undo](../../data/oledb/crowset-undo.md) ripristina lo stato della cache delle modifiche locale allo stato dell'archivio dati prima che venissero apportate le modifiche in sospeso. È importante notare che `Undo` non esegue il rollback dello stato della cache locale al passaggio precedente (lo stato prima dell'ultima modifica), bensì cancella la cache locale per la riga. `Undo`, inoltre, ha effetto solo sulla riga corrente.
+Infine, uno dei motivi principali per il rinvio delle modifiche consiste nella possibilità di annullarle. La chiamata a [CRowset::Undo](./crowset-class.md#undo) ripristina lo stato della cache delle modifiche locale allo stato dell'archivio dati prima che venissero apportate le modifiche in sospeso. È importante notare che `Undo` non esegue il rollback dello stato della cache locale al passaggio precedente (lo stato prima dell'ultima modifica), bensì cancella la cache locale per la riga. `Undo`, inoltre, ha effetto solo sulla riga corrente.
 
 ## <a name="see-also"></a>Vedere anche
 

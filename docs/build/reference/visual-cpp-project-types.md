@@ -10,40 +10,40 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: f322d16bbbe91d229fb8efdfb5f2d35cb0a686ae
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e929142181ebd849c820ad50e5ce64c2d4f5ab44
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079230"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509331"
 ---
 # <a name="c-project-templates"></a>Modelli di progetto C++
 
-I modelli di progetto di Visual Studio generano i file di codice sorgente, le opzioni del compilatore, i menu, le barre degli strumenti, le icone, i riferimenti e le istruzioni `#include` appropriate per il tipo di progetto che si vuole creare. Visual Studio include diversi tipi di C++ modelli di progetto e fornisce procedure guidate per molti di essi, in modo da poter personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.
+I modelli di progetto di Visual Studio generano i file di codice sorgente, le opzioni del compilatore, i menu, le barre degli strumenti, le icone, i riferimenti e `#include` le istruzioni appropriati per il tipo di progetto che si vuole creare. Visual Studio include diversi tipi di modelli di progetto C++ e fornisce le procedure guidate per molti di essi, in modo da poter personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.
 
 > [!NOTE]
-> È possibile creare un progetto in linguaggio C usando i modelli di progetto C++. Nel progetto generato trovare i file con estensione cpp e modificarla con c. Quindi, nella pagina **Proprietà progetto** per il progetto (non per la soluzione) espandere **Proprietà di configurazione**, **C/C++** e selezionare **Avanzate**. Impostare l'opzione **Compila come** su **Compila come codice C (/TC)** .
+> È possibile creare un progetto in linguaggio C usando i modelli di progetto C++. Nel progetto generato trovare i file con estensione cpp e modificarla con c. Quindi, nella pagina **Proprietà progetto** per il progetto (non per la soluzione) espandere **Proprietà di configurazione**, **C/C++** e selezionare **Avanzate**. Impostare l'opzione **Compila come** su **Compila come codice C (/TC)**.
 
 ## <a name="project-templates"></a>Modelli di progetto
 
-I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prodotto e dai carichi di lavoro installati. Se è stato installato lo sviluppo di applicazioni C++ desktop con carico di lavoro, C++ Visual Studio dispone di questi modelli di progetto.
+I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prodotto e dai carichi di lavoro installati. Se è stato installato il carico di lavoro sviluppo di applicazioni desktop con C++, Visual Studio include i modelli di progetto C++.
 
-### <a name="windows-desktop"></a>Desktop di Windows
+### <a name="windows-desktop"></a>Windows Desktop
 
 |Modello di progetto|Descrizione|
 |----------------------|-----------------------------|
-|[Applicazione console di Windows](../../windows/creating-a-console-application.md)|Progetto per la creazione di un'applicazione console di Windows.|
+|[Applicazione console di Windows](../../windows/overview-of-windows-programming-in-cpp.md)|Progetto per la creazione di un'applicazione console di Windows.|
 |[Applicazione desktop di Windows](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Progetto per la creazione di un'applicazione desktop di Windows (Win32).|
 |[Libreria di collegamento dinamico](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Progetto per la creazione di una libreria di collegamento dinamico (DLL).|
-|[Libreria statica](../../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Progetto per la creazione di una libreria statica (LIB).|
+|[Libreria statica](../walkthrough-creating-and-using-a-static-library-cpp.md)|Progetto per la creazione di una libreria statica (LIB).|
 |[Creazione guidata applicazione desktop di Windows](../../windows/windows-desktop-wizard.md)|Una procedura guidata per la creazione di librerie e applicazioni desktop di Windows con opzioni aggiuntive.|
 
 ### <a name="general"></a>Generale
 
 |Modello di progetto|Descrizione|
 |----------------------|-----------------------------|
-|Progetto vuoto|Progetto vuoto per la creazione di un'applicazione, libreria o DLL. È necessario aggiungere le risorse o il codice necessari.|
-|[Progetto makefile](creating-a-makefile-project.md)|Progetto che esegue il wrapping di un makefile di Windows in un progetto di Visual Studio. Per aprire un makefile così com'è in Visual Studio, usare [Apri cartella](../open-folder-projects-cpp.md).|
+|Progetto vuoto|Progetto vuoto per la creazione di un'applicazione, una libreria o una DLL. È necessario aggiungere il codice o le risorse richieste.|
+|[Progetto Makefile](creating-a-makefile-project.md)|Progetto che esegue il wrapping di un makefile di Windows in un progetto di Visual Studio. Per aprire un makefile così com'è in Visual Studio, usare [Apri cartella](../open-folder-projects-cpp.md).|
 |Progetto elementi condivisi|Progetto utilizzato per la condivisione di file di codice o file di risorse tra più progetti. Questo tipo di progetto non produce un file eseguibile.|
 
 ### <a name="atl"></a>ATL
@@ -56,7 +56,7 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 |Modello di progetto|Descrizione|
 |----------------------|-----------------------------|
-|[Progetto per unit test nativi](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Progetto contenente unit test C++ nativi.|
+|[Progetto di unit test nativo](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Progetto contenente unit test C++ nativi.|
 
 ### <a name="mfc"></a>MFC
 
@@ -83,8 +83,8 @@ Per una panoramica delle app universali di Windows in C++, vedere [App universal
 |App unit test|Progetto per creare un'app unit test per app della piattaforma UWP (Universal Windows Platform).|
 |DLL|Progetto per una libreria di collegamento dinamico (DLL) nativa che può essere usata in un'app della piattaforma UWP (Universal Windows Platform) o in un componente di runtime.|
 |Libreria statica|Progetto per una libreria di collegamento statico (LIB) nativa che può essere usata in un'app della piattaforma UWP (Universal Windows Platform) o in un componente di runtime.|
-|Componente di Windows Runtime|Progetto per un componente Windows Runtime che può essere usato in un'app della piattaforma UWP (Universal Windows Platform), indipendentemente dal linguaggio di programmazione usato per scrivere l'app.|
-|Progetto di creazione pacchetti di applicazione Windows|Un progetto che crea un pacchetto UWP (Universal Windows Platform) che consente a un'applicazione desktop di essere caricata tramite sideload o distribuita tramite Microsoft Store.|
+|Componente Windows Runtime|Progetto per un componente Windows Runtime che può essere usato in un'app della piattaforma UWP (Universal Windows Platform), indipendentemente dal linguaggio di programmazione usato per scrivere l'app.|
+|Progetto di creazione pacchetti per applicazioni Windows|Un progetto che crea un pacchetto UWP (Universal Windows Platform) che consente a un'applicazione desktop di essere caricata tramite sideload o distribuita tramite Microsoft Store.|
 
 ## <a name="todo-comments"></a>Commenti TODO
 

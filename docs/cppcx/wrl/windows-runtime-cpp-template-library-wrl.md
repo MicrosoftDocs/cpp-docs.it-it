@@ -3,12 +3,12 @@ title: Libreria di modelli di Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840536"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509796"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
 
@@ -32,7 +32,7 @@ La libreria di modelli Windows Runtime C++ e C++/CX offrono diversi vantaggi. Ec
 - C++/CX rappresenta i valori HRESULT COM come eccezioni. Se è stata ereditata una codebase che utilizza COM o una che non utilizza le eccezioni, è possibile che la Windows Runtime libreria di modelli C++ sia un modo più naturale per lavorare con l'Windows Runtime perché non è necessario utilizzare eccezioni.
 
    > [!NOTE]
-   > La libreria di modelli Windows Runtime C++ usa i valori HRESULT e non genera eccezioni. Inoltre, la libreria di modelli Windows Runtime C++ utilizza i puntatori intelligenti e il modello RAII per garantire che gli oggetti vengano eliminati correttamente quando il codice dell'applicazione genera un'eccezione. Per ulteriori informazioni sui puntatori intelligenti e RAII, vedere la pagina relativa alle risorse intelligenti per i [puntatori](../../cpp/smart-pointers-modern-cpp.md) e [gli oggetti (RAII)](../../cpp/objects-own-resources-raii.md).
+   > La libreria di modelli Windows Runtime C++ usa i valori HRESULT e non genera eccezioni. Inoltre, la libreria di modelli Windows Runtime C++ utilizza i puntatori intelligenti e il modello RAII per garantire che gli oggetti vengano eliminati correttamente quando il codice dell'applicazione genera un'eccezione. Per ulteriori informazioni sui puntatori intelligenti e RAII, vedere la pagina relativa alle risorse intelligenti per i [puntatori](../../cpp/smart-pointers-modern-cpp.md) e [gli oggetti (RAII)](../../cpp/object-lifetime-and-resource-management-modern-cpp.md).
 
 - Lo scopo e la progettazione della libreria di modelli Windows Runtime C++ sono ispirati dalla Active Template Library (ATL), ovvero un set di classi C++ basate su modelli che semplificano la programmazione di oggetti COM. Poiché Windows Runtime libreria di modelli C++ usa il linguaggio C++ standard per eseguire il wrapping del Windows Runtime, è possibile trasferire più facilmente e interagire con molti componenti COM esistenti scritti in ATL per il Windows Runtime. Se si conosce già ATL, è possibile che Windows Runtime programmazione della libreria di modelli C++ sia più semplice.
 

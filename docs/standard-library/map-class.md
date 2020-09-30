@@ -91,12 +91,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: ee98c7e694912d27585755f0ff29eafd0cdbdbca
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 44e73b422f10c63756c247fc7bbacd2f2de3235a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353103"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509680"
 ---
 # <a name="map-class"></a>Classe map
 
@@ -645,7 +645,7 @@ Valore della chiave dell'elemento da cercare.
 
 `contains()` è una novità di C++ 20. Per usarlo, specificare l'opzione del compilatore [/std: c + + Latest più recente](../build/reference/std-specify-language-standard-version.md) .
 
-`template<class K> bool contains(const K& key) const` partecipa solo alla risoluzione dell'overload se `key_compare` è trasparente. Per ulteriori informazioni, vedere [ricerca eterogenea nei contenitori associativi](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) .
+`template<class K> bool contains(const K& key) const` partecipa solo alla risoluzione dell'overload se `key_compare` è trasparente. Per ulteriori informazioni, vedere [ricerca eterogenea nei contenitori associativi](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) .
 
 ### <a name="example"></a>Esempio
 
@@ -667,7 +667,7 @@ int main()
     // call template function
     std::map<std::string, int, std::less<>> m2 = {{"ten", 10}, {"twenty", 20}, {"thirty", 30}};
     std::cout << m2.contains("ten");
-    
+
     return 0;
 }
 ```

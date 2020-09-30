@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844834"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509769"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
 
@@ -55,7 +55,7 @@ Classe di proprietà definibile dall'utente che per impostazione predefinita è 
 
 ## <a name="remarks"></a>Osservazioni
 
-Interfaccia obbligatoria sulle sessioni. Questa classe implementa le proprietà della sessione chiamando una funzione statica definita dalla [mappa del set di proprietà](../../data/oledb/begin-propset-map.md). La mappa del set di proprietà deve essere specificata nella classe di sessione.
+Interfaccia obbligatoria sulle sessioni. Questa classe implementa le proprietà della sessione chiamando una funzione statica definita dalla [mappa del set di proprietà](./macros-for-ole-db-provider-templates.md#begin_propset_map). La mappa del set di proprietà deve essere specificata nella classe di sessione.
 
 ## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl:: GetProperties
 

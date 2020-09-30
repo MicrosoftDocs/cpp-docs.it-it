@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 57ae8f2d0b7f02732032151f86617498e5201c61
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389779"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509756"
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 
@@ -21,7 +21,7 @@ Il compilatore genera un errore C1083 quando non riesce a trovare un file necess
 
 ## <a name="the-specified-file-name-is-wrong"></a>Il nome file specificato non è corretto
 
-Nome di un file digitato in modo non corretto. ad esempio:
+Nome di un file digitato in modo non corretto. Ad esempio,
 
 `#include <algorithm.h>`
 
@@ -63,7 +63,7 @@ il file non viene trovato. Usare il percorso corretto rispetto alla directory sp
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemi relativi alla libreria di terze parti e vcpkg
 
-Se questo errore viene visualizzato quando si tenta di configurare una libreria di terze parti come parte della compilazione, si consiglia [`vcpkg`](../../vcpkg.md) di usare, una gestione pacchetti C++, per installare e compilare la libreria. vcpkg supporta un [elenco di librerie di terze parti di](https://github.com/Microsoft/vcpkg/tree/master/ports)grandi dimensioni e in continua crescita e imposta tutte le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto.
+Se questo errore viene visualizzato quando si tenta di configurare una libreria di terze parti come parte della compilazione, si consiglia [`vcpkg`](../../build/vcpkg.md) di usare, una gestione pacchetti C++, per installare e compilare la libreria. vcpkg supporta un [elenco di librerie di terze parti di](https://github.com/Microsoft/vcpkg/tree/master/ports)grandi dimensioni e in continua crescita e imposta tutte le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Il file si trova nel progetto, ma non nel percorso di ricerca di inclusione
 

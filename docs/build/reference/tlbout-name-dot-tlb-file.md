@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62913eaadd0f0a88f05ce347a6778062a1e66f17
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317640"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509339"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Assegna un nome al file TLB)
 
@@ -27,28 +27,28 @@ ms.locfileid: "62317640"
 ## <a name="arguments"></a>Argomenti
 
 *path*<br/>
-Specifica un percorso assoluto o relativo per in cui deve essere creato il file con estensione tlb.
+Specifica del percorso assoluto o relativo per la posizione in cui deve essere creato il file con estensione tlb.
 
 *filename*<br/>
-Specifica il nome del file con estensione tlb creato dal compilatore MIDL. Non presuppone alcuna estensione di file; specificare *filename*tlb se si desidera che l'estensione tlb.
+Specifica il nome del file con estensione TLB creato dal compilatore MIDL. Non viene presupposta alcuna estensione di file; specificare *filename*. tlb se si desidera un'estensione tlb.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-L'opzione /TLBOUT specifica il nome e l'estensione del file con estensione tlb.
+L'opzione/TLBOUT specifica il nome e l'estensione del file tlb.
 
-Il compilatore MIDL viene chiamato dal linker MSVC durante il collegamento progetti con la [modulo](../../windows/module-cpp.md) attributo.
+Il compilatore MIDL viene chiamato dal linker MSVC quando si collegano i progetti con l'attributo [Module](../../windows/attributes/module-cpp.md) .
 
-Se non viene specificata l'opzione /TLBOUT, il file con estensione tlb otterrà il nome dalla [/IDLOUT](idlout-name-midl-output-files.md) *filename*. Se /IDLOUT non viene specificato, verrà chiamato il file con estensione tlb vc70.
+Se/TLBOUT non è specificato, il file con estensione TLB otterrà il nome da [/IDLOUT](idlout-name-midl-output-files.md) *filename*. Se/IDLOUT non è specificato, il file con estensione tlb verrà denominato vc70. tlb.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Scegliere il **Linker** cartella.
+1. Fare clic sulla cartella **Linker**.
 
-1. Scegliere il **IDL incorporato** pagina delle proprietà.
+1. Fare clic sulla pagina delle proprietà **IDL incorporato** .
 
-1. Modificare il **libreria dei tipi** proprietà.
+1. Modificare la proprietà della **libreria dei tipi** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
@@ -59,5 +59,5 @@ Se non viene specificata l'opzione /TLBOUT, il file con estensione tlb otterrà 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)<br/>
 [/IGNOREIDL (non elabora gli attributi in MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (specifica opzioni della riga di comando MIDL)](midl-specify-midl-command-line-options.md)<br/>
-[Compilazione di un programma con attributi](../../windows/building-an-attributed-program.md)
+[/MIDL (specifica le opzioni della riga di comando MIDL)](midl-specify-midl-command-line-options.md)<br/>
+[Compilazione di un programma con attributi](../../windows/attributes/cpp-attributes-com-net.md)

@@ -4,12 +4,12 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311849"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508969"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
 
@@ -33,7 +33,7 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla **Creazion
 > [!NOTE]
 > Per creare un'applicazione consumer per testare `MyProv`, ovvero lo stesso provider descritto in [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md), è necessario includere il supporto dei segnalibri come descritto in [Aggiunta del supporto di segnalibri al consumer](#bookmark).
 
-## <a name="retrieve" ></a> Recupero dei dati con il consumer
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> Recupero dei dati con il consumer
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Per modificare l'applicazione console per usare il consumer OLE DB
 
@@ -64,7 +64,7 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla **Creazion
     }
     ```
 
-## <a name="bookmark" ></a> Aggiunta del supporto di segnalibri al consumer
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> Aggiunta del supporto di segnalibri al consumer
 
 Un segnalibro è una colonna che identifica in modo univoco le righe della tabella. In genere si tratta della colonna chiave, ma non è sempre così. La colonna è specifica del provider. Questa sezione illustra come aggiungere il supporto dei segnalibri. A tale scopo, è necessario eseguire la procedura seguente nella classe di record utente:
 
@@ -72,7 +72,7 @@ Un segnalibro è una colonna che identifica in modo univoco le righe della tabel
 
 - Richiedere una colonna segnalibro al provider impostando la proprietà `DBPROP_IRowsetLocate`.
 
-- Aggiungere una voce segnalibro al mapping delle colonne usando la macro [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+- Aggiungere una voce segnalibro al mapping delle colonne usando la macro [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry).
 
 La procedura precedente fornisce il supporto dei segnalibri e un oggetto segnalibro con cui lavorare. L'esempio di codice seguente illustra un segnalibro con i passaggi seguenti:
 
@@ -80,7 +80,7 @@ La procedura precedente fornisce il supporto dei segnalibri e un oggetto segnali
 
 - Restituire come output nel file i dati del set di righe, riga per riga.
 
-- Spostare il cursore del set di righe al segnalibro chiamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Spostare il cursore del set di righe al segnalibro chiamando [MoveToBookmark](./crowset-class.md#movetobookmark).
 
 - Restituire come output la riga con il segnalibro, aggiungendola alla fine del file.
 
@@ -207,4 +207,4 @@ Per altre informazioni sui segnalibri, vedere [Using Bookmarks](../../data/oledb
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Creazione di un consumer di OLE DB tramite una procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

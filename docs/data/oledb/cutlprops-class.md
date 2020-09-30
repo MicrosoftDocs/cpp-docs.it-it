@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845666"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509092"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
@@ -72,9 +72,9 @@ Classe che contiene `BEGIN_PROPSET_MAP` .
 
 La maggior parte di questa classe è un dettaglio di implementazione.
 
-`CUtlProps` contiene due membri per l'impostazione interna delle proprietà: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) e [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` contiene due membri per l'impostazione interna delle proprietà: [GetPropValue](#getpropvalue) e [SetPropValue](#setpropvalue).
 
-Per ulteriori informazioni sulle macro utilizzate in una mappa di set di proprietà, vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
+Per ulteriori informazioni sulle macro utilizzate in una mappa di set di proprietà, vedere [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) e [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map).
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: GetPropValue
 
@@ -163,7 +163,7 @@ Se un consumer apre un oggetto e richiede un'interfaccia facoltativa, il provide
 
 - `IRowsetScroll`
 
-Se si desidera gestire altre interfacce, eseguire l'override di questa funzione nell'origine dati, nella sessione, nel comando o nella classe del set di righe per elaborare le funzioni. Per assicurarsi che le proprietà dell'impostazione impostino anche le proprietà concatenate (vedere [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)), è necessario eseguire l'override delle normali interfacce di proprietà set/get.
+Se si desidera gestire altre interfacce, eseguire l'override di questa funzione nell'origine dati, nella sessione, nel comando o nella classe del set di righe per elaborare le funzioni. Per assicurarsi che le proprietà dell'impostazione impostino anche le proprietà concatenate (vedere [OnPropertyChanged](#onpropertychanged)), è necessario eseguire l'override delle normali interfacce di proprietà set/get.
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 

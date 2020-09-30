@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: f9742ce1e15a817923c144544eb3bb6325e76765
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040054"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509951"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -27,11 +27,11 @@ Sono ad esempio disponibili funzioni per ruotare i bit, trovare il numero di bit
 
 [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) è obbligatorio.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="types"></a>Tipi
 
-| Type | Descrizione |
+| Tipo | Descrizione |
 |--------|----------|
 | [Endian](bit-enum.md) | Specifica la caratteristica di tipo scalare. |
 
@@ -52,6 +52,6 @@ Sono ad esempio disponibili funzioni per ruotare i bit, trovare il numero di bit
 |[rotl](bit-functions.md#rotl) | Calcola il risultato di una rotazione a sinistra bit per bit. |
 |[rotr](bit-functions.md#rotr) | Calcola il risultato di una rotazione a destra bit per bit. |
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](cpp-standard-library-header-files.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: eea0ebeaf83b9203cf57f7b35fe3dd1ec2d63d81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844002"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509044"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (classe)
 
@@ -78,13 +78,13 @@ La classe da cui `IDBSchemaRowsetImpl` viene ereditata. In genere, questa classe
 | Nome | Descrizione |
 |-|-|
 |[GetRowset](#getrowset)|Restituisce un set di righe dello schema.|
-|[GetSchemas](#getschemas)|Restituisce un elenco di set di righe dello schema accessibili da [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).|
+|[GetSchemas](#getschemas)|Restituisce un elenco di set di righe dello schema accessibili da [IDBSchemaRowsetImpl::GetRowset](#getrowset).|
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa classe implementa l'interfaccia [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) e la funzione di creazione di modelli [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
+Questa classe implementa l'interfaccia [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) e la funzione di creazione di modelli [CreateSchemaRowset](#createschemarowset).
 
-OLE DB usa set di righe dello schema per restituire dati relativi ai dati in un provider. Questi dati vengono spesso definiti "metadati". Per impostazione predefinita, un provider deve sempre supportare `DBSCHEMA_TABLES` , `DBSCHEMA_COLUMNS` e `DBSCHEMA_PROVIDER_TYPES` , come descritto in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in *OLE DB Programmer ' s Reference*. I set di righe vengono definiti in una mappa di schema. Per informazioni sulle voci della mappa di schema, vedere [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
+OLE DB usa set di righe dello schema per restituire dati relativi ai dati in un provider. Questi dati vengono spesso definiti "metadati". Per impostazione predefinita, un provider deve sempre supportare `DBSCHEMA_TABLES` , `DBSCHEMA_COLUMNS` e `DBSCHEMA_PROVIDER_TYPES` , come descritto in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in *OLE DB Programmer ' s Reference*. I set di righe vengono definiti in una mappa di schema. Per informazioni sulle voci della mappa di schema, vedere [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry).
 
 La creazione guidata provider OLEDB, all'interno della creazione guidata oggetto ATL, genera automaticamente il codice per i set di righe dello schema nel progetto. Per impostazione predefinita, la procedura guidata supporta i set di righe dello schema obbligatori indicati in precedenza. Quando si crea un consumer utilizzando la creazione guidata oggetto ATL, la procedura guidata utilizza i set di righe dello schema per associare i dati corretti a un provider. Se non si implementano i set di righe dello schema per fornire i metadati corretti, la procedura guidata non li assocerà.
 
@@ -112,13 +112,13 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 [in] Il numero di restrizioni che il consumer ha passato per il set di righe dello schema.
 
 *rgRestrictions*<br/>
-[in] Una matrice di lunghezza *cRestrictions* di valori di restrizione da impostare. Per ulteriori informazioni, vedere la descrizione del parametro *rgRestrictions* in [serestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+[in] Una matrice di lunghezza *cRestrictions* di valori di restrizione da impostare. Per ulteriori informazioni, vedere la descrizione del parametro *rgRestrictions* in [serestrictions](#setrestrictions).
 
 ### <a name="remarks"></a>Osservazioni
 
 Usa `CheckRestrictions` per controlla la validità delle restrizioni per un set di righe dello schema. Controlla le restrizioni per `DBSCHEMA_TABLES` i `DBSCHEMA_COLUMNS` set di `DBSCHEMA_PROVIDER_TYPES` righe dello schema, e. Chiamarlo per determinare se la chiamata di un consumer a `IDBSchemaRowset::GetRowset` è corretta. Se si desidera supportare set di righe dello schema diversi da quelli elencati sopra, creare una funzione personalizzata per eseguire questa operazione.
 
-`CheckRestrictions` determina se il consumer sta chiamando [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) con la restrizione corretta e il tipo di restrizione corretto (ad esempio, un VT_BSTR per una stringa) supportato dal provider. Determina inoltre se è supportato il numero corretto di restrizioni. Per impostazione predefinita `CheckRestrictions` chiederà al provider, tramite la chiamata di [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , le restrizioni che supporta su un determinato set di righe. Quindi confronterà le restrizioni del consumer con quelle supportate dal provider dando un esito positivo o negativo.
+`CheckRestrictions` determina se il consumer sta chiamando [GetRowset](#getrowset) con la restrizione corretta e il tipo di restrizione corretto (ad esempio, un VT_BSTR per una stringa) supportato dal provider. Determina inoltre se è supportato il numero corretto di restrizioni. Per impostazione predefinita `CheckRestrictions` chiederà al provider, tramite la chiamata di [SetRestrictions](#setrestrictions) , le restrizioni che supporta su un determinato set di righe. Quindi confronterà le restrizioni del consumer con quelle supportate dal provider dando un esito positivo o negativo.
 
 Per ulteriori informazioni sui set di righe dello schema, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* nel Windows SDK.
 
@@ -199,7 +199,7 @@ in Il numero di restrizioni nella matrice *rgRestrictions* e il numero di GUID n
 
 ### <a name="remarks"></a>Osservazioni
 
-L' `IDBSchemaRowset` oggetto chiama `SetRestrictions` per determinare le restrizioni supportate su uno specifico set di righe dello schema (viene chiamato da [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) tramite un puntatore di cui è stato eseguito il cast). Le restrizioni consentono agli utenti di recuperare solo le righe corrispondenti (ad esempio, trovare tutte le colonne nella tabella "MyTable"). Sono facoltative e, nel caso in cui nessuna sia supportata (impostazione predefinita), vengono restituiti sempre tutti i dati.
+L' `IDBSchemaRowset` oggetto chiama `SetRestrictions` per determinare le restrizioni supportate su uno specifico set di righe dello schema (viene chiamato da [GetSchemas](#getschemas) tramite un puntatore di cui è stato eseguito il cast). Le restrizioni consentono agli utenti di recuperare solo le righe corrispondenti (ad esempio, trovare tutte le colonne nella tabella "MyTable"). Sono facoltative e, nel caso in cui nessuna sia supportata (impostazione predefinita), vengono restituiti sempre tutti i dati.
 
 L'implementazione predefinita di questo metodo imposta gli elementi della matrice *rgRestrictions* su 0. Per impostare restrizioni diverse da quelle predefinite nella classe di sessione eseguire l'override di tali impostazioni.
 
@@ -254,13 +254,13 @@ in Oggetto esterno `IUnknown` durante l'aggregazione; in caso contrario, null.
 
 ### <a name="remarks"></a>Osservazioni
 
-Il metodo richiede che l'utente disponga di una mappa di schema nella classe di sessione. Utilizzando le informazioni sulla mappa dello schema, `GetRowset` Crea un oggetto set di righe specificato se il parametro *rguidSchema* è uguale a uno dei GUID delle voci della mappa. Per una descrizione della voce di mapping, vedere [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) .
+Il metodo richiede che l'utente disponga di una mappa di schema nella classe di sessione. Utilizzando le informazioni sulla mappa dello schema, `GetRowset` Crea un oggetto set di righe specificato se il parametro *rguidSchema* è uguale a uno dei GUID delle voci della mappa. Per una descrizione della voce di mapping, vedere [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry) .
 
 Vedere [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) nel Windows SDK.
 
 ## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a> IDBSchemaRowsetImpl:: GetSchemas
 
-Restituisce un elenco di set di righe dello schema accessibili da [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
+Restituisce un elenco di set di righe dello schema accessibili da [IDBSchemaRowsetImpl::GetRowset](#getrowset).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -291,5 +291,5 @@ L'implementazione di questa funzione richiede che l'utente di disporre di una ma
 
 [Classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [Supporto di set di righe dello schema](../../data/oledb/supporting-schema-rowsets.md)<br/>
-[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)<br/>
+[SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)<br/>
 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider)

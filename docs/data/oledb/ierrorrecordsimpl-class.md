@@ -63,16 +63,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: 189f97e72f1cb87de7e4c4a388128c2a76c42961
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb0e236a31846e3465d76b6904a7b4c57a2b8cf4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832438"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509004"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Classe IErrorRecordsImpl
 
-Implementa l'interfaccia OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) , aggiungendo record e recuperando record da un membro dati ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) di tipo **CAtlArray<** `RecordClass` **>** .
+Implementa l'interfaccia OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) , aggiungendo record e recuperando record da un membro dati ([m_rgErrors](#rgerrors)) di tipo **CAtlArray<** `RecordClass` **>** .
 
 ## <a name="syntax"></a>Sintassi
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9dce5fad3b38b0b0b396ff036f437af90e3e6d38
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753185"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510083"
 ---
 # <a name="compiler-error-c3719"></a>Errore del compilatore C3719
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-Per correggere l'errore, applicare gli attributi [Object](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md)e [event_receiver](../../windows/event-receiver.md) in modo appropriato per creare le classi in cui si usano le classi com dell'interfaccia. Ad esempio:
+Per correggere l'errore, applicare gli attributi [Object](../../windows/attributes/object-cpp.md), [coclass](../../windows/attributes/coclass.md), [event_source](../../windows/attributes/event-source.md)e [event_receiver](../../windows/attributes/event-receiver.md) in modo appropriato per creare le classi in cui si usano le classi com dell'interfaccia. Ad esempio:
 
 ```cpp
 // C3719b.cpp

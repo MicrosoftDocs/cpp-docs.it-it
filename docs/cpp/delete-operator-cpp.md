@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221692"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509147"
 ---
 # <a name="delete-operator-c"></a>Operatore delete (C++)
 
@@ -50,7 +50,7 @@ Quando **`delete`** viene usato per deallocare la memoria per un oggetto della c
 
 Se l'operando per l' **`delete`** operatore è un l-value modificabile, il relativo valore non è definito dopo l'eliminazione dell'oggetto.
 
-Se viene specificata l'opzione del compilatore [/SDL (Enable Additional Security Checks)](/cpp/build/reference/sdl-enable-additional-security-checks) , l'operando dell' **`delete`** operatore viene impostato su un valore non valido dopo l'eliminazione dell'oggetto.
+Se viene specificata l'opzione del compilatore [/SDL (Enable Additional Security Checks)](../build/reference/sdl-enable-additional-security-checks.md) , l'operando dell' **`delete`** operatore viene impostato su un valore non valido dopo l'eliminazione dell'oggetto.
 
 ## <a name="using-delete"></a>Utilizzo di delete
 

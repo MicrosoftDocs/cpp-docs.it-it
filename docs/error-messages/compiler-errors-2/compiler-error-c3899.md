@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f3650d994e3102f71ab1d3598a4d1482f50b3334
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749113"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510035"
 ---
 # <a name="compiler-error-c3899"></a>Errore del compilatore C3899
 
 ' var ': utilizzo l-value del membro dati initonly non consentito direttamente in un'area parallela della classe ' Class '
 
-Un membro dati [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) non può essere inizializzato all'interno di una parte di un costruttore che si trova in un'area [parallela](../../parallel/openmp/reference/parallel.md) .  Questo è dovuto al fatto che il compilatore esegue una rilocazione interna di tale codice, in modo che non fa più parte del costruttore.
+Un membro dati [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) non può essere inizializzato all'interno di tale parte di un costruttore che si trova in un'area [parallela](../../parallel/openmp/reference/openmp-directives.md#parallel) .  Questo è dovuto al fatto che il compilatore esegue una rilocazione interna di tale codice, in modo che non fa più parte del costruttore.
 
 Per risolvere il tentativo, inizializzare il membro dati initonly nel costruttore, ma all'esterno dell'area parallela.
 

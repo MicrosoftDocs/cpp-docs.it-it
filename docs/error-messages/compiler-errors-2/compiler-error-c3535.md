@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 673fe6a8b5eb6dfcd9caa841b18d5b47fb7858bf
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a4bda0825e8b71eb49fe9691755d8e42fd059c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686090"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510094"
 ---
 # <a name="compiler-error-c3535"></a>Errore del compilatore C3535
 
@@ -27,7 +27,7 @@ Il tipo della variabile dichiarata dalla **`auto`** parola chiave non può esser
 
 1. Assicurarsi che se la dichiarazione è un puntatore a un tipo, l'espressione di inizializzazione è un tipo di puntatore.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente viene restituito C3535 perché l'espressione di inizializzazione restituisce **`void`** .
 
@@ -66,5 +66,5 @@ auto *p = x;  // C3535
 
 ## <a name="see-also"></a>Vedere anche
 
-[Parola chiave auto](../../cpp/auto-keyword.md)<br/>
+[Parola chiave auto](../../cpp/auto-cpp.md)<br/>
 [Tipi fondamentali](../../cpp/fundamental-types-cpp.md)

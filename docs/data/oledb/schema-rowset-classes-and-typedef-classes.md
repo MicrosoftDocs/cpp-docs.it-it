@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209703"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509498"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classi Rowset dello schema e classi Typedef
 
@@ -561,7 +561,7 @@ Uno schema è una raccolta di oggetti di database di proprietà o creati da un d
 
 I set di righe dello schema sono set di righe predefiniti che rappresentano i metadati. I set di righe dello schema vengono in genere utilizzati nella programmazione dinamica, in cui la struttura del database non è nota in fase di compilazione. È possibile utilizzare questi set di righe dello schema per ottenere informazioni su un database in fase di esecuzione.
 
-Utilizzare le classi typedef per creare un'istanza dei set di righe dello schema. Di seguito sono elencate le classi typedef e set di righe dello schema corrispondenti. Dopo aver creato un'istanza del set di righe dello schema, è necessario chiamare [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) . Questo metodo restituisce un set di risultati in base alle restrizioni specificate. Per informazioni sulle colonne di restrizione associate a ogni set di righe dello schema, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
+Utilizzare le classi typedef per creare un'istanza dei set di righe dello schema. Di seguito sono elencate le classi typedef e set di righe dello schema corrispondenti. Dopo aver creato un'istanza del set di righe dello schema, è necessario chiamare [CRestrictions:: Open](./crestrictions-class.md#open) . Questo metodo restituisce un set di risultati in base alle restrizioni specificate. Per informazioni sulle colonne di restrizione associate a ogni set di righe dello schema, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
 
 Nella tabella seguente vengono visualizzati tutti i set di righe dello schema OLE DB e la classe di informazioni e la classe typedef dei modelli di OLE DB corrispondenti.
 
@@ -588,7 +588,7 @@ Nella tabella seguente vengono visualizzati tutti i set di righe dello schema OL
 |[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
 |[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
 |[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[STATISTICS](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
+|[Statistiche](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
 |[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
 |[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
 |[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
@@ -598,9 +598,9 @@ Nella tabella seguente vengono visualizzati tutti i set di righe dello schema OL
 |[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>CAssertions, CAssertionInfo
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a> CAssertions, CAssertionInfo
 
-Chiamare la classe typedef `CAssertions` per implementare la classe di parametri `CAssertionInfo`.
+Chiamare la classe typedef `CAssertions` per implementare la classe di parametri `CAssertionInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -619,9 +619,9 @@ Nella tabella seguente sono elencati i membri dati della classe per `CAssertionI
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>CCatalogs, CCatalogInfo
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a> CCatalogs, CCatalogInfo
 
-Chiamare la classe typedef `CCatalogs` per implementare la classe di parametri `CCatalogInfo`.
+Chiamare la classe typedef `CCatalogs` per implementare la classe di parametri `CCatalogInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -636,9 +636,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szName|CATALOG_NAME|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>CCharacterSets, CCharacterSetInfo
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a> CCharacterSets, CCharacterSetInfo
 
-Chiamare la classe typedef `CCharacterSets` per implementare la classe di parametri `CCharacterSetInfo`.
+Chiamare la classe typedef `CCharacterSets` per implementare la classe di parametri `CCharacterSetInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -659,9 +659,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
 
-Chiamare la classe typedef `CCheckConstraints` per implementare la classe di parametri `CCheckConstraintInfo`.
+Chiamare la classe typedef `CCheckConstraints` per implementare la classe di parametri `CCheckConstraintInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -679,9 +679,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>CCollations, CCollationInfo
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a> CCollations, CCollationInfo
 
-Chiamare la classe typedef `CCollations` per implementare la classe di parametri `CCollationInfo`.
+Chiamare la classe typedef `CCollations` per implementare la classe di parametri `CCollationInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -701,9 +701,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
 
-Chiamare la classe typedef `CColumnDomainUsage` per implementare la classe di parametri `CColumnDomainUsageInfo`.
+Chiamare la classe typedef `CColumnDomainUsage` per implementare la classe di parametri `CColumnDomainUsageInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -725,9 +725,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
 
-Chiamare la classe typedef `CColumnPrivileges` per implementare la classe di parametri `CColumnPrivilegeInfo`.
+Chiamare la classe typedef `CColumnPrivileges` per implementare la classe di parametri `CColumnPrivilegeInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -750,9 +750,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>CColumns, CColumnsInfo
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a> CColumns, CColumnsInfo
 
-Chiamare la classe typedef `CColumns` per implementare la classe di parametri `CColumnsInfo`.
+Chiamare la classe typedef `CColumns` per implementare la classe di parametri `CColumnsInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -793,9 +793,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
 
-Chiamare la classe typedef `CConstraintColumnUsage` per implementare la classe di parametri `CConstraintColumnUsageInfo`.
+Chiamare la classe typedef `CConstraintColumnUsage` per implementare la classe di parametri `CConstraintColumnUsageInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -817,9 +817,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
 
-Chiamare la classe typedef `CConstraintTableUsage` per implementare la classe di parametri `CConstraintTableUsageInfo`.
+Chiamare la classe typedef `CConstraintTableUsage` per implementare la classe di parametri `CConstraintTableUsageInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -838,9 +838,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
 
-Chiamare la classe typedef `CForeignKeys` per implementare la classe di parametri `CForeignKeysInfo`.
+Chiamare la classe typedef `CForeignKeys` per implementare la classe di parametri `CForeignKeysInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -868,9 +868,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="cindexes-cindexinfo"></a><a name="index"></a>CIndexes, CIndexInfo
+## <a name="cindexes-cindexinfo"></a><a name="index"></a> CIndexes, CIndexInfo
 
-Chiamare la classe typedef `CIndexes` per implementare la classe di parametri `CIndexInfo`.
+Chiamare la classe typedef `CIndexes` per implementare la classe di parametri `CIndexInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -907,9 +907,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
 
-Chiamare la classe typedef `CKeyColumns` per implementare la classe di parametri `CKeyColumnInfo`.
+Chiamare la classe typedef `CKeyColumns` per implementare la classe di parametri `CKeyColumnInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -932,9 +932,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
 
-Chiamare la classe typedef `CPrimaryKeys` per implementare la classe di parametri `CPrimaryKeyInfo`.
+Chiamare la classe typedef `CPrimaryKeys` per implementare la classe di parametri `CPrimaryKeyInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -954,9 +954,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|ORDINALE|
 
-## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
 
-Chiamare la classe typedef `CProcedureColumns` per implementare la classe di parametri `CProcedureColumnInfo`.
+Chiamare la classe typedef `CProcedureColumns` per implementare la classe di parametri `CProcedureColumnInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -985,9 +985,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>CProcedureParamInfo CProcedureParameters
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a> CProcedureParamInfo CProcedureParameters
 
-Chiamare la classe typedef `CProcedureParameters` per implementare la classe di parametri `CProcedureParamInfo`.
+Chiamare la classe typedef `CProcedureParameters` per implementare la classe di parametri `CProcedureParamInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1015,9 +1015,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>CProcedures, CProcedureInfo
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a> CProcedures, CProcedureInfo
 
-Chiamare la classe typedef `CProcedures` per implementare la classe di parametri `CProcedureInfo`.
+Chiamare la classe typedef `CProcedures` per implementare la classe di parametri `CProcedureInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1036,9 +1036,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>CProviderTypes, CProviderInfo
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a> CProviderTypes, CProviderInfo
 
-Chiamare la classe typedef `CProviderTypes` per implementare la classe di parametri `CProviderInfo`.
+Chiamare la classe typedef `CProviderTypes` per implementare la classe di parametri `CProviderInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1071,9 +1071,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
 
-Chiamare la classe typedef `CReferentialConstraints` per implementare la classe di parametri `CReferentialConstraintInfo`.
+Chiamare la classe typedef `CReferentialConstraints` per implementare la classe di parametri `CReferentialConstraintInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1096,9 +1096,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>CSchemata, CSchemataInfo
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a> CSchemata, CSchemataInfo
 
-Chiamare la classe typedef `CSchemata` per implementare la classe di parametri `CSchemataInfo`.
+Chiamare la classe typedef `CSchemata` per implementare la classe di parametri `CSchemataInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1117,9 +1117,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
 
-Chiamare la classe typedef `CSQLLanguages` per implementare la classe di parametri `CSQLLanguageInfo`.
+Chiamare la classe typedef `CSQLLanguages` per implementare la classe di parametri `CSQLLanguageInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1139,9 +1139,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>CStatistics, CStatisticInfo
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a> CStatistics, CStatisticInfo
 
-Chiamare la classe typedef `CStatistics` per implementare la classe di parametri `CStatisticInfo`.
+Chiamare la classe typedef `CStatistics` per implementare la classe di parametri `CStatisticInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1158,9 +1158,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
 
-Chiamare la classe typedef `CTableConstraints` per implementare la classe di parametri `CTableConstraintInfo`.
+Chiamare la classe typedef `CTableConstraints` per implementare la classe di parametri `CTableConstraintInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1183,9 +1183,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
 
-Chiamare la classe typedef `CTablePrivileges` per implementare la classe di parametri `CTablePrivilegeInfo`.
+Chiamare la classe typedef `CTablePrivileges` per implementare la classe di parametri `CTablePrivilegeInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1205,9 +1205,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ctables-ctableinfo"></a><a name="table"></a>CTables, CTableInfo
+## <a name="ctables-ctableinfo"></a><a name="table"></a> CTables, CTableInfo
 
-Chiamare la classe typedef `CTables` per implementare la classe di parametri `CTableInfo`.
+Chiamare la classe typedef `CTables` per implementare la classe di parametri `CTableInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1226,9 +1226,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_guidTable|TABLE_GUID|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>CTranslations, CTranslationInfo
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a> CTranslations, CTranslationInfo
 
-Chiamare la classe typedef `CTranslations` per implementare la classe di parametri `CTranslationInfo`.
+Chiamare la classe typedef `CTranslations` per implementare la classe di parametri `CTranslationInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1250,9 +1250,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
 
-Chiamare la classe typedef `CUsagePrivileges` per implementare la classe di parametri `CUsagePrivilegeInfo`.
+Chiamare la classe typedef `CUsagePrivileges` per implementare la classe di parametri `CUsagePrivilegeInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1273,9 +1273,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
 
-Chiamare la classe typedef `CViewColumnUsage` per implementare la classe di parametri `CViewColumnInfo`.
+Chiamare la classe typedef `CViewColumnUsage` per implementare la classe di parametri `CViewColumnInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1297,9 +1297,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="cviews-cviewinfo"></a><a name="view"></a>CViews, CViewInfo
+## <a name="cviews-cviewinfo"></a><a name="view"></a> CViews, CViewInfo
 
-Chiamare la classe typedef `CViews` per implementare la classe di parametri `CViewInfo`.
+Chiamare la classe typedef `CViews` per implementare la classe di parametri `CViewInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -1319,9 +1319,9 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|DESCRIZIONE|
 
-## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>CViewTableUsage, CViewTableInfo
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a> CViewTableUsage, CViewTableInfo
 
-Chiamare la classe typedef `CViewTableUsage` per implementare la classe di parametri `CViewTableInfo`.
+Chiamare la classe typedef `CViewTableUsage` per implementare la classe di parametri `CViewTableInfo` .
 
 ### <a name="remarks"></a>Osservazioni
 

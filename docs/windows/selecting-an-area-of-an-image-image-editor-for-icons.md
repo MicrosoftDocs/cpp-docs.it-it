@@ -39,21 +39,21 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 9324e3dc5c6691a7b50f137da1fad446b416e968
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecfd69594c05c210743e0c22c804a4713a8229ef
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167849"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509641"
 ---
 # <a name="how-to-edit-an-image"></a>Procedura: modificare un'immagine
 
 È possibile utilizzare gli strumenti di selezione per definire un'area di un'immagine che si desidera tagliare, copiare, cancellare, ridimensionare, invertire o spostare. Con lo strumento **selezione rettangolo** è possibile definire e selezionare un'area rettangolare dell'immagine. Con lo strumento di **selezione irregolare** è possibile disegnare un contorno a mano libera dell'area che si desidera selezionare per le operazioni Taglia, copia o altro.
 
 > [!NOTE]
-> Vedere gli strumenti **selezione rettangolo** e **selezione irregolare** illustrati nella [barra degli](../windows/toolbar-image-editor-for-icons.md) strumenti dell'editor di immagini oppure visualizzare le descrizioni comandi associate a ogni pulsante sulla barra degli strumenti dell' **editor di immagini** .
+> Vedere gli strumenti **selezione rettangolo** e **selezione irregolare** illustrati nella [barra degli](./image-editor-for-icons.md) strumenti dell'editor di immagini oppure visualizzare le descrizioni comandi associate a ogni pulsante sulla barra degli strumenti dell' **editor di immagini** .
 
-È anche possibile creare un pennello personalizzato da una selezione. Per ulteriori informazioni, vedere [creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).
+È anche possibile creare un pennello personalizzato da una selezione. Per ulteriori informazioni, vedere [creazione di un pennello personalizzato](./using-a-drawing-tool-image-editor-for-icons.md).
 
 ## <a name="how-to"></a>Procedure
 
@@ -61,7 +61,7 @@ Per modificare un'immagine, vedere come:
 
 ### <a name="to-select-an-image"></a>Per selezionare un'immagine
 
-1. Utilizzare la barra degli strumenti **editor di immagini** o passare a **immagine** menu > **strumenti** e scegliere lo strumento di selezione desiderato.
+1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a **Image**  >  **strumenti** immagine menu e scegliere lo strumento di selezione desiderato.
 
 1. Spostare il punto di inserimento in un angolo dell'area dell'immagine che si desidera selezionare. Quando il punto di inserimento è posizionato sull'immagine, vengono visualizzati i peli incrociati.
 
@@ -81,7 +81,7 @@ Inoltre, è possibile ridimensionare la selezione, se include l'intera immagine 
 
 #### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Per tagliare la selezione corrente e spostarla negli Appunti
 
-Vai a menu **Edit** > **Cut**.
+Vai a menu **modifica**  >  **taglia**.
 
 #### <a name="to-copy-the-selection"></a>Per copiare la selezione
 
@@ -93,7 +93,7 @@ Vai a menu **Edit** > **Cut**.
 
 #### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Per incollare il contenuto degli Appunti in un'immagine
 
-1. Vai a menu **modifica** > **Incolla**.
+1. Vai a menu **modifica**  >  **Incolla**.
 
    Il contenuto degli Appunti, racchiuso dal bordo di selezione, viene visualizzato nell'angolo superiore sinistro del riquadro.
 
@@ -103,7 +103,7 @@ Vai a menu **Edit** > **Cut**.
 
 #### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Per eliminare la selezione corrente senza trasferirla negli Appunti
 
-Vai a menu **modifica** > **Elimina**.
+Vai a menu **modifica**  >  **Elimina**.
 
    L'area originale della selezione viene riempita con il colore di sfondo corrente.
 
@@ -118,17 +118,17 @@ Vai a menu **modifica** > **Elimina**.
 
 1. Per ancorare la selezione nell'immagine nella nuova posizione, selezionare all'esterno del bordo di selezione.
 
-Per ulteriori informazioni sul disegno con una selezione, vedere [creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).
+Per ulteriori informazioni sul disegno con una selezione, vedere [creazione di un pennello personalizzato](./using-a-drawing-tool-image-editor-for-icons.md).
 
 ### <a name="to-flip-an-image"></a>Per capovolgere un'immagine
 
 È possibile capovolgere o ruotare un'immagine per creare un'immagine speculare dell'originale, capovolgere l'immagine oppure ruotare l'immagine a destra di 90 gradi alla volta.
 
-- Per capovolgere orizzontalmente l'immagine (immagine speculare), passare all' **immagine** del menu > **capovolgere orizzontalmente**.
+- Per capovolgere orizzontalmente l'immagine (immagine speculare), passare all' **immagine**del menu  >  **Capovolgi orizzontalmente**.
 
-- Per capovolgere l'immagine verticalmente (capovolgere), passare all' **immagine** del menu > **capovolgere verticalmente**.
+- Per capovolgere l'immagine verticalmente (a discesa), passare a menu **immagine**  >  **Capovolgi verticale**.
 
-- Per ruotare l'immagine di 90 gradi, passare all' **immagine** del menu > **ruotare 90 gradi**.
+- Per ruotare l'immagine di 90 gradi, passare all' **immagine**del menu  >  **ruotare 90 gradi**.
 
    > [!NOTE]
    > È anche possibile usare i [tasti](../windows/accelerator-keys-image-editor-for-icons.md) di scelta rapida per questi comandi oppure accedere ai comandi dal menu di scelta rapida (selezionare all'esterno dell'immagine nell' **editor di immagini**).
@@ -143,11 +143,11 @@ Quando la selezione include l'intera immagine, l' **editor di immagini** compatt
 
 Sono disponibili due meccanismi per ridimensionare un'immagine, ovvero i quadratini di ridimensionamento e il [finestra Proprietà](/visualstudio/ide/reference/properties-window). Trascinare i quadratini di ridimensionamento per modificare le dimensioni di tutta o parte di un'immagine. Gli handle di ridimensionamento che è possibile trascinare sono solidi. Non è possibile trascinare gli handle vuoti. Utilizzare la finestra **Proprietà** per ridimensionare solo l'intera immagine, non una parte selezionata.
 
-![Ridimensionamento di handle in una bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
+![Quadratini di ridimensionamento in una bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
 Quadratini di ridimensionamento
 
 > [!NOTE]
-> Se è stata selezionata l'opzione **griglia affiancata** nella finestra di [dialogo Impostazioni griglia](../windows/grid-settings-dialog-box-image-editor-for-icons.md), il ridimensionamento viene agganciato alla successiva riga della griglia affiancata. Se è selezionata solo l'opzione **griglia pixel** (impostazione predefinita), il ridimensionamento viene bloccato sul successivo pixel disponibile.
+> Se è stata selezionata l'opzione **griglia affiancata** nella finestra di [dialogo Impostazioni griglia](./image-editor-for-icons.md), il ridimensionamento viene agganciato alla successiva riga della griglia affiancata. Se è selezionata solo l'opzione **griglia pixel** (impostazione predefinita), il ridimensionamento viene bloccato sul successivo pixel disponibile.
 
 #### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Per ridimensionare un'intera immagine utilizzando la finestra Proprietà
 
@@ -190,7 +190,7 @@ In genere, l' **editor di immagini** seleziona o ingrandisce un'immagine quando 
 
 È possibile aprire e modificare le immagini nell'ambiente di sviluppo analogamente a qualsiasi applicazione grafica, ad esempio aprendo una bitmap per la modifica autonoma. Le immagini utilizzate non devono far parte di un progetto di Visual Studio.
 
-1. Vai a **file** di menu > **Apri**.
+1. Scegliere Apri dal menu **file**  >  **Open**.
 
 1. Nella casella **file di tipo** selezionare **tutti i file**.
 
@@ -207,16 +207,16 @@ In genere, l' **editor di immagini** seleziona o ingrandisce un'immagine quando 
    |Proprietà|Descrizione|
    |--------------|-----------------|
    |**Colori**|Specifica la combinazione di colori per l'immagine. Selezionare **monocromatico**, **16**o **256**o **true color**.<br/><br/>Se l'immagine è già stata disegnata con una tavolozza a 16 colori, la selezione di **monocromie** causa le sostituzioni di nero e bianco per i colori nell'immagine. Il contrasto non viene sempre mantenuto: ad esempio, le aree adiacenti di rosso e verde sono entrambe convertite in nero.|
-   |**Filename**|Specifica il nome del file di immagine.<br/><br/>Per impostazione predefinita, Visual Studio assegna un nome file di base creato rimuovendo i primi quattro caratteri ("IDB_") dall'identificatore di risorsa predefinito (IDB_BITMAP1) e aggiungendo l'estensione appropriata. Il nome del file per l'immagine in questo esempio è *bitmap1. bmp*. È possibile rinominarlo *MYBITMAP1. bmp*.|
-   |**Height**|Imposta l'altezza dell'immagine in pixel. Il valore predefinito è 48.<br/><br/>L'immagine viene ritagliata o viene aggiunto uno spazio vuoto sotto l'immagine esistente.|
+   |**Filename**|Specifica il nome del file di immagine.<br/><br/>Per impostazione predefinita, Visual Studio assegna un nome file di base creato rimuovendo i primi quattro caratteri ("IDB_") dall'identificatore di risorsa predefinito (IDB_BITMAP1) e aggiungendo l'estensione appropriata. Il nome del file per l'immagine in questo esempio verrebbe *BITMAP1.bmp*. È possibile rinominarlo *MYBITMAP1.bmp*.|
+   |**Altezza**|Imposta l'altezza dell'immagine in pixel. Il valore predefinito è 48.<br/><br/>L'immagine viene ritagliata o viene aggiunto uno spazio vuoto sotto l'immagine esistente.|
    |**ID**|Imposta l'identificatore della risorsa.<br/><br/>Per un'immagine, Microsoft Visual Studio, per impostazione predefinita, assegna il successivo identificatore disponibile in una serie: IDB_BITMAP1, IDB_BITMAP2 e così via. Per le icone e i cursori vengono utilizzati nomi simili.|
-   |**Tavolozza**|Modifica le proprietà del colore.<br/><br/>Fare doppio clic per selezionare un colore e visualizzare la finestra di [dialogo del selettore colori personalizzato](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriate.|
+   |**Tavolozza**|Modifica le proprietà del colore.<br/><br/>Fare doppio clic per selezionare un colore e visualizzare la finestra di [dialogo del selettore colori personalizzato](./image-editor-for-icons.md). Definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriate.|
    |**SaveCompressed**|Indica se l'immagine è in un formato compresso. Questa proprietà è di sola lettura.<br/><br/>Visual Studio non consente di salvare le immagini in un formato compresso. Pertanto, per le immagini create in Visual Studio, questa proprietà sarà **false**. Se si apre un'immagine compressa (creata in un altro programma) in Visual Studio, questa proprietà sarà **true**. Se si salva un'immagine compressa con Visual Studio, questa verrà decompressa e questa proprietà tornerà a **false**.|
-   |**Width**|Imposta la larghezza dell'immagine in pixel. Il valore predefinito per le bitmap è 48.<br/><br/>L'immagine viene ritagliata o viene aggiunto uno spazio vuoto a destra dell'immagine esistente.|
+   |**Larghezza**|Imposta la larghezza dell'immagine in pixel. Il valore predefinito per le bitmap è 48.<br/><br/>L'immagine viene ritagliata o viene aggiunto uno spazio vuoto a destra dell'immagine esistente.|
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

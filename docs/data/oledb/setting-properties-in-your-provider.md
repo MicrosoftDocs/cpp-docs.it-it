@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: f5d5ac364096ea1a4505b2ead81f25367a9c9458
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3717282d284990b1b8038f6954ee971938cf7921
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212956"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509478"
 ---
 # <a name="setting-properties-in-your-provider"></a>Impostazione di proprietà nel provider
 
@@ -18,7 +18,7 @@ Trovare il gruppo di proprietà e l'ID proprietà per la proprietà desiderata. 
 
 Nel codice del provider generato dalla procedura guidata, trovare la mappa delle proprietà corrispondente al gruppo di proprietà. Il nome del gruppo di proprietà corrisponde in genere al nome dell'oggetto. Le proprietà Command e rowset sono disponibili nel comando o nel set di righe. l'origine dati e le proprietà di inizializzazione sono disponibili nell'oggetto origine dati.
 
-Nella mappa delle proprietà aggiungere una macro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) . PROPERTY_INFO_ENTRY_EX accetta quattro parametri:
+Nella mappa delle proprietà aggiungere una macro [PROPERTY_INFO_ENTRY_EX](./macros-for-ole-db-provider-templates.md#property_info_entry_ex) . PROPERTY_INFO_ENTRY_EX accetta quattro parametri:
 
 - ID della proprietà corrispondente alla proprietà. Rimuovere i primi sette caratteri ("DBPROP_") dall'inizio del nome della proprietà. Ad esempio, se si desidera aggiungere `DBPROP_MAXROWS` , passare `MAXROWS` come primo elemento. Se si tratta di una proprietà personalizzata, passare il nome completo del GUID (ad esempio, `DBMYPROP_MYPROPERTY` ).
 
@@ -33,19 +33,19 @@ Nella mappa delle proprietà aggiungere una macro [PROPERTY_INFO_ENTRY_EX](../..
 - Valore di base della proprietà. Potrebbe trattarsi di `VARIANT_FALSE` un tipo booleano o zero per un tipo Integer, ad esempio. Il valore della proprietà è a meno che non venga modificato.
 
     > [!NOTE]
-    > Alcune proprietà sono connesse o concatenate ad altre proprietà, ad esempio segnalibri o aggiornamenti. Quando un consumer imposta una proprietà su true, potrebbe essere impostata anche un'altra proprietà. I modelli di provider OLE DB supportano questa operazione tramite il metodo [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
+    > Alcune proprietà sono connesse o concatenate ad altre proprietà, ad esempio segnalibri o aggiornamenti. Quando un consumer imposta una proprietà su true, potrebbe essere impostata anche un'altra proprietà. I modelli di provider OLE DB supportano questa operazione tramite il metodo [CUtlProps:: OnPropertyChanged](./cutlprops-class.md#onpropertychanged).
 
 ## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Proprietà ignorate dai provider Microsoft OLE DB
 
 I provider Microsoft OLE DB ignorano le proprietà OLE DB seguenti:
 
-- `DBPROP_MAXROWS`funziona solo per i provider di sola lettura (ovvero dove `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` sono **`false`** ); in caso contrario, questa proprietà non è supportata.
+- `DBPROP_MAXROWS` funziona solo per i provider di sola lettura (ovvero dove `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` sono **`false`** ); in caso contrario, questa proprietà non è supportata.
 
-- `DBPROP_MAXPENDINGROWS`viene ignorato; il provider specifica il proprio limite.
+- `DBPROP_MAXPENDINGROWS` viene ignorato; il provider specifica il proprio limite.
 
-- `DBPROP_MAXOPENROWS`viene ignorato; il provider specifica il proprio limite.
+- `DBPROP_MAXOPENROWS` viene ignorato; il provider specifica il proprio limite.
 
-- `DBPROP_CANHOLDROWS`viene ignorato; il provider specifica il proprio limite.
+- `DBPROP_CANHOLDROWS` viene ignorato; il provider specifica il proprio limite.
 
 ## <a name="see-also"></a>Vedere anche
 

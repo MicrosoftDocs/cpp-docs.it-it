@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d9ab62d82c231a36a866597c1fad000eb616d835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990121"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510012"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>Avviso del compilatore (livello 4) C4682
 
 'parameter': non sono stati specificati attributi di parametro direzionali. Verrà usato [in]
 
-Un metodo su un parametro in un'interfaccia con attributi non ha uno degli attributi direzionali: [in](../../windows/in-cpp.md) o [out](../../windows/out-cpp.md). Il valore predefinito del parametro è in.
+Un metodo su un parametro in un'interfaccia con attributi non ha uno degli attributi direzionali: [in](../../windows/attributes/in-cpp.md) o [out](../../windows/attributes/out-cpp.md). Il valore predefinito del parametro è in.
 
 Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
