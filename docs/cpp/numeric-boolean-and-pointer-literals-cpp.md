@@ -7,12 +7,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: def223682b58f3d0c8bd3dd88f6d54fc5aa8b8a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84fdac7010805fc4d0a429231a080ab11d5c595a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186451"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662256"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Valori letterali numerici, booleani e puntatore
 
@@ -31,7 +31,7 @@ In alcuni casi è importante indicare al compilatore come interpretare un valore
 
 ## <a name="integer-literals"></a>Valori letterali Integer
 
-I valori letterali Integer iniziano con una cifra e non includono parti frazionarie o esponenti. È possibile specificare valori letterali Integer in formato decimale, ottale o esadecimale. È possibile specificare tipi firmati o non firmati e tipi long o short.
+I valori letterali Integer iniziano con una cifra e non includono parti frazionarie o esponenti. È possibile specificare valori letterali integer in formato decimale, binario, ottale o esadecimale. È possibile specificare facoltativamente un valore letterale integer come senza segno e come tipo Long o Long, usando un suffisso.
 
 Se non è presente alcun prefisso o suffisso, il compilatore fornirà un tipo di valore letterale integrale **`int`** (32 bit), se il valore si adatta, in caso contrario fornirà il tipo **`long long`** (64 bit).
 

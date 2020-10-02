@@ -14,14 +14,14 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: c954794d6d0fd087eee74ebb7e86d77b89a9a8fc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 6c0009e5236f33119ed411dc81ce6a4385f21a2a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180799"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662268"
 ---
-# <a name="ltcg-link-time-code-generation"></a>`/LTCG`(Generazione di codice in fase di collegamento)
+# <a name="ltcg-link-time-code-generation"></a>`/LTCG` (Generazione di codice in fase di collegamento)
 
 Usare **`/LTCG`** per eseguire l'ottimizzazione dell'intero programma o per creare strumentazione di ottimizzazione PGO (PGO), eseguire il training e creare compilazioni ottimizzate dal profilo.
 
@@ -38,22 +38,22 @@ Queste opzioni sono deprecate a partire da Visual Studio 2015:
 **`INCREMENTAL`**<br/>
 Opzionale Specifica che il linker applica solo l'ottimizzazione dell'intero programma o la generazione del codice in fase di collegamento (LTCG) ai file interessati da una modifica, anziché l'intero progetto. Per impostazione predefinita, questo flag non è impostato quando **`/LTCG`** si specifica e l'intero progetto viene collegato usando l'ottimizzazione dell'intero programma.
 
-**`NOSTATUS`**&#124;**`STATUS`**<br/>
+**`NOSTATUS`** &#124; **`STATUS`**<br/>
 (Facoltativo) Specifica se il linker visualizza un indicatore di stato che mostra la percentuale di completamento del collegamento. Per impostazione predefinita, queste informazioni sullo stato non vengono visualizzate.
 
 **`OFF`**<br/>
 (Facoltativo) Disabilita la generazione del codice in fase di collegamento. Questo comportamento è identico a quando **`/LTCG`** non è specificato nella riga di comando.
 
 **`PGINSTRUMENT`**<br/>
-(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** and `[/GENPROFILE` o `/FASTGENPROFILE` ] (genprofile-fastgenprofile-generate-profiling-Instrumented-Build.MD) per generare una compilazione instrumentata per l'ottimizzazione PGO. I dati che sono raccolti dalle esecuzioni instrumentate sono utilizzati per creare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGI`** .
+(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** e [ `/GENPROFILE` `/FASTGENPROFILE` o](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) per generare una compilazione instrumentata per l'ottimizzazione PGO. I dati che sono raccolti dalle esecuzioni instrumentate sono utilizzati per creare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGI`** .
 
 **`PGOPTIMIZE`**<br/>
-(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** e [`/USEPROFILE`](useprofile.md) per compilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGO`** .
+(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** e  [`/USEPROFILE`](useprofile.md) per compilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGO`** .
 
 **`PGUPDATE`**<br/>
-(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** e **`/USEPROFILE`** per ricompilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGU`** .
+(Facoltativo) Questa opzione è deprecata a partire da Visual Studio 2015. Usare invece **`/LTCG`** e  **`/USEPROFILE`** per ricompilare un'immagine ottimizzata. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md). La forma abbreviata di questa opzione è **`/LTCG:PGU`** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L' **`/LTCG`** opzione indica al linker di chiamare il compilatore ed eseguire l'ottimizzazione dell'intero programma. È anche possibile eseguire un'ottimizzazione PGO. Per altre informazioni, vedere [Ottimizzazioni PGO](../profile-guided-optimizations.md).
 
@@ -129,13 +129,13 @@ Se una funzione viene chiamata tramite un puntatore a funzione o se una funzione
 > [!NOTE]
 > Se si usa **`/LTCG`** e si ridefiniscono `mainCRTStartup` , l'applicazione può avere un comportamento imprevedibile che si riferisce al codice utente eseguito prima dell'inizializzazione degli oggetti globali. Esistono tre modi per risolvere questo problema: non ridefinire `mainCRTStartup` , non compilare il file che contiene `mainCRTStartup` usando **`/LTCG`** o inizializzare staticamente variabili e oggetti globali.
 
-### <a name="ltcg-and-msil-modules"></a>`/LTCG`e moduli MSIL
+### <a name="ltcg-and-msil-modules"></a>`/LTCG` e moduli MSIL
 
 Quando si specifica, i moduli compilati usando [`/GL`](gl-whole-program-optimization.md) e [`/clr`](clr-common-language-runtime-compilation.md) possono essere usati come input per il linker **`/LTCG`** .
 
 - **`/LTCG`** può accettare file oggetto nativi e file oggetto misti nativi/gestiti (compilati con **`/clr`** ). Le **`/clr:pure`** **`/clr:safe`** Opzioni del compilatore e sono deprecate in visual studio 2015 e non supportate in visual studio 2017 e versioni successive.
 
-- **`/LTCG:PGI`** non accetta moduli nativi compilati con **`/GL`** e**`/clr`**
+- **`/LTCG:PGI`** non accetta moduli nativi compilati con **`/GL`** e **`/clr`**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
