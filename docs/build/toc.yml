@@ -369,6 +369,8 @@
               href: ../build/reference/property-page-xml-files.md
             - name: Struttura dei file con estensione vcxproj e props
               href: ../build/reference/vcxproj-file-structure.md
+            - name: File con estensione vcxproj e caratteri jolly
+              href: ../build/reference/vcxproj-files-and-wildcards.md
             - name: File di progetto di esempio
               href: ../build/reference/project-files.md
             - name: Struttura dei file con estensione vcxproj.filters
