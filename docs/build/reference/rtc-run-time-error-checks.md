@@ -1,5 +1,6 @@
 ---
 title: /RTC (Controlli di runtime)
+description: Opzioni/RTC del compilatore Microsoft C/C++ per i controlli degli errori di run-time.
 ms.date: 07/31/2020
 f1_keywords:
 - /rtc
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: eefec0956bebe9f72324f3cbc61fccbc5e2e24d7
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 888a81d0d5c21b0b85420a43d534c5b2742aa082
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520538"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765232"
 ---
-# <a name="rtc-run-time-error-checks"></a>`/RTC`(Controlli degli errori di run-time)
+# <a name="rtc-run-time-error-checks"></a>`/RTC` (Controlli degli errori di run-time)
 
 Utilizzato per abilitare e disabilitare la funzionalità di controllo degli errori di run-time, insieme al pragma [runtime_checks](../../preprocessor/runtime-checks.md) .
 
@@ -93,7 +94,7 @@ c = a;  // No run-time error with /RTCu
 
 Se una variabile potrebbe essere stata inizializzata, non viene segnalata in fase di esecuzione da **`/RTCu`** . Ad esempio, dopo l'alias di una variabile tramite un puntatore, il compilatore non tiene traccia della variabile e segnala usi non inizializzati. In effetti, è possibile inizializzare una variabile prendendone l'indirizzo. **`&`** In questa situazione l'operatore funziona come un operatore di assegnazione.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 I controlli degli errori di run-time consentono di individuare i problemi nel codice in esecuzione. per altre informazioni, vedere [procedura: usare i controlli runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
@@ -109,7 +110,7 @@ La `__MSVC_RUNTIME_CHECKS` direttiva per il preprocessore verrà definita quando
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**delle  >  proprietà di generazione del**codice** **C/C++**.  
+1. Selezionare la pagina delle proprietà di **configurazione**delle  >  proprietà di generazione del codice**C/C++**  >  **Code Generation** .
 
 1. Modificare una o entrambe le proprietà seguenti: **controlli runtime di base** o **controllo del tipo di dimensioni minori**.
 

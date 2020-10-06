@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 2552f9eea79aa0a3545d9746d85cacfbd9a3f25d
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f854f3cc6e61e3022e784befc738bf28c1adeb6c
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353168"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765241"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
 
@@ -58,7 +58,7 @@ Ogni tipo di risorsa ha un editor di risorse specifico per quel tipo di risorsa.
 
 Alcuni tipi di risorse sono singoli file che possono essere importati e usati in vari modi. sono incluse bitmap, icone, cursori, barre degli strumenti e file HTML. Tali risorse hanno nomi file e [identificatori di risorsa](../windows/symbols-resource-identifiers.md). Altri, ad esempio finestre di dialogo, menu e tabelle di stringhe nei progetti Win32, esistono solo come parte di un file di script di risorsa (RC) o di un file di modello di risorse (con estensione RCT).
 
-Le risorse possono anche essere modificate all'esterno del progetto senza aprire il progetto. Per altre informazioni, vedere [procedura: creare risorse](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Le risorse possono anche essere modificate all'esterno del progetto senza aprire il progetto. Per altre informazioni, vedere [procedura: creare risorse](./how-to-create-a-resource-script-file.md).
 
 > [!NOTE]
 > È possibile modificare le proprietà di una risorsa utilizzando la finestra **Proprietà** .
@@ -124,7 +124,7 @@ Le risorse seguenti non forniscono un'anteprima visiva: acceleratore, manifesto,
 
 ## <a name="requirements"></a>Requisiti
 
-nessuno
+Nessuno
 
 ## <a name="see-also"></a>Vedere anche
 

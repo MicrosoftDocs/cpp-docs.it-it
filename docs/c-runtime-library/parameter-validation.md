@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: 60ded7fc5a4388b2c4bf87ab5a388caab5fc47c2
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 8378e4bf9bdfc950002c3ed8c3ef50c27a3c162d
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589822"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765264"
 ---
 # <a name="parameter-validation"></a>Convalida dei parametri
 
@@ -25,11 +25,11 @@ Nelle build di debug, la macro di parametro non valido in genere genera un'asser
 
 La funzione di invio del gestore di parametri non validi chiama il gestore di parametri non validi attualmente assegnato. Per impostazione predefinita, il parametro non valido chiama `_invoke_watson` , che fa sì che l'applicazione chiuda e generi un piccolo dump. Se abilitata dal sistema operativo, una finestra di dialogo chiede all'utente se desidera inviare il dump di arresto anomalo a Microsoft per l'analisi.
 
-È possibile modificare questo comportamento usando le funzioni [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) o [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) per impostare il gestore di parametri non validi sulla propria funzione. Se la funzione specificata non termina l'applicazione, il controllo viene restituito alla funzione che ha ricevuto i parametri non validi. In CRT queste funzioni arresteranno normalmente l'esecuzione della funzione, imposteranno `errno` su un codice di errore e restituiranno un codice di errore. In molti casi, il `errno` valore e il valore restituito sono entrambi `EINVAL` , per indicare un parametro non valido. In alcuni casi, viene restituito un codice di errore più specifico, ad esempio `EBADF` per un puntatore di file non valido passato come parametro. 
+È possibile modificare questo comportamento usando le funzioni [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) o [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) per impostare il gestore di parametri non validi sulla propria funzione. Se la funzione specificata non termina l'applicazione, il controllo viene restituito alla funzione che ha ricevuto i parametri non validi. In CRT queste funzioni arresteranno normalmente l'esecuzione della funzione, imposteranno `errno` su un codice di errore e restituiranno un codice di errore. In molti casi, il `errno` valore e il valore restituito sono entrambi `EINVAL` , per indicare un parametro non valido. In alcuni casi, viene restituito un codice di errore più specifico, ad esempio `EBADF` per un puntatore di file non valido passato come parametro.
 
 Per altre informazioni su `errno`, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Funzionalità di sicurezza in CRT](../c-runtime-library/security-features-in-the-crt.md)\
 [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
