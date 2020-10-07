@@ -55,12 +55,12 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: b730933879df04d2455b5eae6fc5abf16bbf4484
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ab8e9e0243a298f5ef39b38b3fd345572cafa587
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219274"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806560"
 ---
 # <a name="basic_ios-class"></a>Classe basic_ios
 
@@ -77,10 +77,10 @@ class basic_ios : public ios_base
 ### <a name="parameters"></a>Parametri
 
 *Elem*\
-Tipo.
+Tipo carattere.
 
 *Tratti*\
-Variabile di tipo `char_traits`.
+Tipo che fornisce informazioni sul tipo di carattere. il valore predefinito è `char_traits < Elem >` .
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -123,7 +123,7 @@ Oggetto della classe **basic_ios \<class Elem, class Traits> ** archivia:
 |[exceptions](#exceptions)|Indica quali eccezioni verranno generate dal flusso.|
 |[esito negativo](#fail)|Indica un errore per estrarre un campo valido da un flusso.|
 |[riempimento](#fill)|Specifica o restituisce il carattere che verrà usato quando il testo non è largo quanto il flusso.|
-|[buona](#good)|Indica che le condizioni del flusso sono buone.|
+|[good](#good)|Indica che le condizioni del flusso sono buone.|
 |[imbue](#imbue)|Modifica le impostazioni locali.|
 |[init](#init)|Chiamato dai costruttori `basic_ios`.|
 |[move](#move)|Sposta tutti i valori, ad eccezione del puntatore al buffer del flusso, dal parametro all'oggetto corrente.|
@@ -150,7 +150,7 @@ Oggetto della classe **basic_ios \<class Elem, class Traits> ** archivia:
 
 **Spazio dei nomi:** std
 
-## <a name="basic_iosbad"></a><a name="bad"></a>basic_ios:: non valido
+## <a name="basic_iosbad"></a><a name="bad"></a> basic_ios:: non valido
 
 Indica una perdita di integrità del buffer del flusso
 
@@ -183,7 +183,7 @@ int main( void )
 }
 ```
 
-## <a name="basic_iosbasic_ios"></a><a name="basic_ios"></a>basic_ios:: basic_ios
+## <a name="basic_iosbasic_ios"></a><a name="basic_ios"></a> basic_ios:: basic_ios
 
 Costruisce la classe basic_ios.
 
@@ -201,7 +201,7 @@ Buffer standard in cui archiviare gli elementi di input o output.
 
 Il primo costruttore inizializza i relativi oggetti membro chiamando [init](#init)(_ *Sb*). Il secondo costruttore (protetto) lascia i relativi oggetti membro non inizializzati. Una chiamata successiva a `init` deve inizializzare l'oggetto prima che possa essere eliminato definitivamente.
 
-## <a name="basic_ioschar_type"></a><a name="char_type"></a>basic_ios:: char_type
+## <a name="basic_ioschar_type"></a><a name="char_type"></a> basic_ios:: char_type
 
 Sinonimo del parametro di modello `Elem`.
 
@@ -209,7 +209,7 @@ Sinonimo del parametro di modello `Elem`.
 typedef Elem char_type;
 ```
 
-## <a name="basic_iosclear"></a><a name="clear"></a>basic_ios:: Clear
+## <a name="basic_iosclear"></a><a name="clear"></a> basic_ios:: Clear
 
 Cancella tutti i flag di errore.
 
@@ -240,7 +240,7 @@ Se `state` **&** [Exceptions](#exceptions) è diverso da zero, viene generato un
 
 Per esempi relativi all'uso di, vedere [rdstate](#rdstate) e [getline](../standard-library/string-functions.md#getline) `clear` .
 
-## <a name="basic_ioscopyfmt"></a><a name="copyfmt"></a>basic_ios:: copyfmt
+## <a name="basic_ioscopyfmt"></a><a name="copyfmt"></a> basic_ios:: copyfmt
 
 Copia i flag da un flusso a un altro.
 
@@ -283,7 +283,7 @@ int main( )
 }
 ```
 
-## <a name="basic_ioseof"></a><a name="eof"></a>basic_ios:: EOF
+## <a name="basic_ioseof"></a><a name="eof"></a> basic_ios:: EOF
 
 Indica se è stata raggiunta la fine del flusso.
 
@@ -321,7 +321,7 @@ int main( int argc, char* argv[] )
 }
 ```
 
-## <a name="basic_iosexceptions"></a><a name="exceptions"></a>basic_ios:: Exceptions
+## <a name="basic_iosexceptions"></a><a name="exceptions"></a> basic_ios:: Exceptions
 
 Indica quali eccezioni verranno generate dal flusso.
 
@@ -380,7 +380,7 @@ Exception class: class std::ios_base::failure
 Exception description: ios_base::eofbit set
 ```
 
-## <a name="basic_iosfail"></a><a name="fail"></a>basic_ios:: Fail
+## <a name="basic_iosfail"></a><a name="fail"></a> basic_ios:: Fail
 
 Indica un errore per estrarre un campo valido da un flusso.
 
@@ -410,7 +410,7 @@ int main( void )
 }
 ```
 
-## <a name="basic_iosfill"></a><a name="fill"></a>basic_ios:: Fill
+## <a name="basic_iosfill"></a><a name="fill"></a> basic_ios:: Fill
 
 Specifica o restituisce il carattere che verrà usato quando il testo non è largo quanto il flusso.
 
@@ -457,7 +457,7 @@ xxxxa
 x
 ```
 
-## <a name="basic_iosgood"></a><a name="good"></a>basic_ios:: valido
+## <a name="basic_iosgood"></a><a name="good"></a> basic_ios:: valido
 
 Indica che le condizioni del flusso sono buone.
 
@@ -475,7 +475,7 @@ Per altre informazioni su `goodbit`, vedere [ios_base::iostate](../standard-libr
 
 Vedere [basic_ios::bad](#bad) per un esempio di utilizzo di `good`.
 
-## <a name="basic_iosimbue"></a><a name="imbue"></a>basic_ios:: imbuto
+## <a name="basic_iosimbue"></a><a name="imbue"></a> basic_ios:: imbuto
 
 Modifica le impostazioni locali.
 
@@ -518,7 +518,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iosinit"></a><a name="init"></a>basic_ios:: init
+## <a name="basic_iosinit"></a><a name="init"></a> basic_ios:: init
 
 Chiamata da costruttori basic_ios.
 
@@ -558,7 +558,7 @@ La funzione membro archivia i valori in tutti gli oggetti membro in modo che si 
 
 - [iword](../standard-library/ios-base-class.md#iword) restituisce zero e [pword](../standard-library/ios-base-class.md#pword) restituisce un puntatore null per i valori di tutti gli argomenti.
 
-## <a name="basic_iosint_type"></a><a name="int_type"></a>basic_ios:: int_type
+## <a name="basic_iosint_type"></a><a name="int_type"></a> basic_ios:: int_type
 
 Sinonimo di `traits_type::int_type`.
 
@@ -566,7 +566,7 @@ Sinonimo di `traits_type::int_type`.
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_iosmove"></a><a name="move"></a>basic_ios:: Move
+## <a name="basic_iosmove"></a><a name="move"></a> basic_ios:: Move
 
 Sposta tutti i valori, ad eccezione del puntatore al buffer del flusso, dal parametro all'oggetto corrente.
 
@@ -583,7 +583,7 @@ L'oggetto `ios_base` da cui spostare i valori.
 
 La funzione membro protected sposta tutti i valori archiviati in *right* ad **`*this`** eccezione di archiviato `stream buffer pointer` , che è invariato a *destra* e impostato su un puntatore null in **`*this`** . L'oggetto archiviato `tie pointer` è impostato su un puntatore null a *destra*.
 
-## <a name="basic_iosnarrow"></a><a name="narrow"></a>basic_ios:: Narrow
+## <a name="basic_iosnarrow"></a><a name="narrow"></a> basic_ios:: Narrow
 
 Individua il carattere equivalente per un `char_type` specifico.
 
@@ -628,7 +628,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iosoff_type"></a><a name="off_type"></a>basic_ios:: off_type
+## <a name="basic_iosoff_type"></a><a name="off_type"></a> basic_ios:: off_type
 
 Sinonimo di `traits_type::off_type`.
 
@@ -636,7 +636,7 @@ Sinonimo di `traits_type::off_type`.
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_iosoperator-void-"></a><a name="op_void_star"></a>basic_ios:: operator void *
+## <a name="basic_iosoperator-void-"></a><a name="op_void_star"></a> basic_ios:: operator void *
 
 Indica se il flusso è ancora valido.
 
@@ -666,7 +666,7 @@ int main( )
 1
 ```
 
-## <a name="basic_iosoperator"></a><a name="op_not"></a>basic_ios:: operator!
+## <a name="basic_iosoperator"></a><a name="op_not"></a> basic_ios:: operator!
 
 Indica se il flusso è corretto.
 
@@ -696,7 +696,7 @@ int main( )
 0
 ```
 
-## <a name="basic_iosoperator-bool"></a><a name="op_bool"></a>basic_ios:: operator bool
+## <a name="basic_iosoperator-bool"></a><a name="op_bool"></a> basic_ios:: operator bool
 
 Consente l'uso di un `basic_ios` oggetto come **`bool`** . La conversione automatica de tipo è disabilitata per impedire effetti collaterali imprevisti comuni.
 
@@ -708,7 +708,7 @@ explicit operator bool() const;
 
 L'operatore restituisce un valore convertibile in **`false`** solo se `fail()` . Il tipo restituito è convertibile solo in **`bool`** , non in `void *` o altri tipi scalari noti.
 
-## <a name="basic_iospos_type"></a><a name="pos_type"></a>basic_ios::p os_type
+## <a name="basic_iospos_type"></a><a name="pos_type"></a> basic_ios::p os_type
 
 Sinonimo di `traits_type::pos_type`.
 
@@ -716,7 +716,7 @@ Sinonimo di `traits_type::pos_type`.
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_iosrdbuf"></a><a name="rdbuf"></a>basic_ios:: rdbuf
+## <a name="basic_iosrdbuf"></a><a name="rdbuf"></a> basic_ios:: rdbuf
 
 Indirizza un flusso al buffer specificato.
 
@@ -761,7 +761,7 @@ int main( )
 test2
 ```
 
-## <a name="basic_iosrdstate"></a><a name="rdstate"></a>basic_ios:: rdstate
+## <a name="basic_iosrdstate"></a><a name="rdstate"></a> basic_ios:: rdstate
 
 Legge lo stato dei bit per i flag.
 
@@ -810,7 +810,7 @@ int main( )
 1
 ```
 
-## <a name="basic_iossetstate"></a><a name="setstate"></a>basic_ios:: sestate
+## <a name="basic_iossetstate"></a><a name="setstate"></a> basic_ios:: sestate
 
 Imposta flag aggiuntivi.
 
@@ -859,7 +859,7 @@ int main( )
 1
 ```
 
-## <a name="basic_iosset_rdbuf"></a><a name="set_rdbuf"></a>basic_ios:: set_rdbuf
+## <a name="basic_iosset_rdbuf"></a><a name="set_rdbuf"></a> basic_ios:: set_rdbuf
 
 Assegna un buffer del flusso in modo che sia il buffer di lettura per questo oggetto flusso.
 
@@ -877,7 +877,7 @@ Buffer del flusso che deve diventare il buffer di lettura.
 
 La funzione membro protetto Archivia *Strbuf* in `stream buffer pointer` . Non chiama `clear` .
 
-## <a name="basic_iostie"></a><a name="tie"></a>basic_ios:: Tie
+## <a name="basic_iostie"></a><a name="tie"></a> basic_ios:: Tie
 
 Assicura che un flusso venga elaborato prima di un altro flusso.
 
@@ -918,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iostraits_type"></a><a name="traits_type"></a>basic_ios:: traits_type
+## <a name="basic_iostraits_type"></a><a name="traits_type"></a> basic_ios:: traits_type
 
 Sinonimo del parametro di modello `Traits`.
 
@@ -926,7 +926,7 @@ Sinonimo del parametro di modello `Traits`.
 typedef Traits traits_type;
 ```
 
-## <a name="basic_ioswiden"></a><a name="widen"></a>basic_ios:: Widen
+## <a name="basic_ioswiden"></a><a name="widen"></a> basic_ios:: Widen
 
 Trova l'equivalente `char_type` a un oggetto specificato **`char`** .
 
@@ -967,7 +967,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iosswap"></a><a name="swap"></a>basic_ios:: swap
+## <a name="basic_iosswap"></a><a name="swap"></a> basic_ios:: swap
 
 Scambia i valori in questo oggetto `basic_ios` con quelli di un altro oggetto `basic_ios`. Tuttavia, i puntatori ai buffer di flusso non vengono scambiati.
 
