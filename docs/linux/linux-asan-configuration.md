@@ -1,13 +1,13 @@
 ---
 title: Configurare progetti Linux per l'uso di Address Sanitizer
 description: Descrive come configurare i progetti Linux C++ in Visual Studio per l'uso di Address Sanitizer.
-ms.date: 09/25/2020
-ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.date: 10/7/2020
+ms.openlocfilehash: 3c2f78346e4a2049e3482ba4093d8a6212f54e9a
+ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414198"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847151"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurare progetti Linux per l'uso di Address Sanitizer
 
@@ -39,7 +39,7 @@ Per abilitare Address Sanitizer per progetti Linux basati su MSBuild, fare clic 
 
 ![Abilitare Address Sanitizer per un progetto MSBuild](media/msbuild-asan-prop-page.png)
 
-È possibile passare flag di runtime Asan facoltativi passando a **proprietà di configurazione**  >  **debug**dei  >  **flag di runtime AddressSanitizer**. Fare clic sulla freccia verso il basso per aggiungere o rimuovere flag.
+È possibile passare flag di runtime Asan facoltativi passando a **proprietà di configurazione**  >  **debug**dei  >  **flag di runtime AddressSanitizer**. Fare clic sulla freccia rivolta verso il basso per aggiungere o rimuovere flag.
 
 ![Configurare flag di runtime di Address Sanitizer](media/msbuild-asan-runtime-flags.png)
 
@@ -84,5 +84,7 @@ Loaded '/usr/lib/x86_64-linux-gnu/libasan.so.4'. Symbols loaded.
 ```bash
 sudo apt-get install libasan4-dbg
 ```
+
+Le istruzioni complete per l'installazione dei pacchetti di simboli di debug in Ubuntu sono disponibili in [pacchetti di simboli di debug](https://wiki.ubuntu.com/Debug%20Symbol%20Packages).
 
 Se è stata eseguita l'abilitazione di Address Sanitizer, nella parte superiore del riquadro **Debug** della finestra **Output** Visual Studio chiede di installare i simboli di debug di Address Sanitizer.
