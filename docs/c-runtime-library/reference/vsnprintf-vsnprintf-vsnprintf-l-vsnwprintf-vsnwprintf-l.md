@@ -56,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: e6ed3d146458f514691fe0b20a4c88ffebb5f877
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075764"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008692"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -172,7 +172,7 @@ Il valore restituito da tutte queste funzioni non include la terminazione null, 
 - Se *count* è zero, ma il *buffer* non è **null**, non viene scritto alcun elemento e la funzione restituisce `-1` .
 - Se *Format* è **null**o se il *buffer* è **null** e *count* non è uguale a zero, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta i dati e scrive fino a *conteggiare* i caratteri nella memoria a cui punta il *buffer*. La funzione **vsnprintf** scrive sempre un carattere di terminazione null, anche se tronca l'output. Quando si usano **_vsnprintf** e **_vsnwprintf**, il buffer avrà una terminazione null solo se è presente spazio alla fine, ovvero se il numero di caratteri da scrivere è minore di *count*.
 
@@ -206,7 +206,7 @@ In C++ queste funzioni presentano overload di modello che richiamano le relative
 
 Le funzioni **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-use-wide-characters-with-_vsnwprintf"></a>Esempio: usare caratteri wide con `_vsnwprintf()`
 
 ```C
 // crt_vsnwprintf.c
@@ -248,7 +248,7 @@ nSize: -1, buff: Hi there!
 
 Il comportamento cambia se si usa vsnprintf, insieme ai parametri con stringa "narrow". Il parametro *count* può essere l'intera dimensione del buffer e il valore restituito è il numero di caratteri che sarebbero stati scritti se il *conteggio* fosse sufficientemente grande:
 
-## <a name="example"></a>Esempio
+## <a name="example-use-vsnprintf-with-narrow-strings"></a>Esempio: utilizzo `vsnprintf()` di stringhe Narrow
 
 ```C
 // crt_vsnprintf.c

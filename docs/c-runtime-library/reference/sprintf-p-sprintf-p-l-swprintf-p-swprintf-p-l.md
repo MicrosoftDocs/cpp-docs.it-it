@@ -45,12 +45,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c694567aa7554319d5821678a18c3b5392f89965
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958024"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008844"
 ---
 # <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -104,17 +104,17 @@ Argomenti facoltativi per la stringa di formato.
 *locale*<br/>
 Impostazioni locali da usare.
 
-Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Valore restituito
 
 Numero di caratteri scritti oppure-1 se si è verificato un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **_sprintf_p** formatta e archivia una serie di caratteri e valori nel *buffer*. Ogni argomento in *argument_list* (se presente) viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. L'argomento *Format* usa la [sintassi per la specifica del formato per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra **_sprintf_p** e **sprintf_s** è che **_sprintf_p** supporta i parametri posizionali, che consente di specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+La funzione **_sprintf_p** formatta e archivia una serie di caratteri e valori nel *buffer*. Ogni argomento nell' *argument_list* , se presente, viene convertito e restituito in base alla specifica di formato corrispondente nel *formato*. L'argomento *Format* usa la [sintassi per la specifica del formato per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra **_sprintf_p** e **sprintf_s** è che **_sprintf_p** supporta i parametri posizionali, che consente di specificare l'ordine in cui gli argomenti vengono utilizzati nella stringa di formato. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p** è una versione a caratteri wide di **_sprintf_p**; gli argomenti del puntatore a **_swprintf_p** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **_swprintf_p** può essere diverso da quello in **_sprintf_p**. **_swprintf_p** e **fwprintf_p** si comportano in modo identico, ad eccezione del fatto che **_swprintf_p** scrive l'output in una stringa anziché in una destinazione di tipo **file**e **_swprintf_p** richiede il parametro *count* per specificare il parametro numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+**_swprintf_p** è una versione a caratteri wide di **_sprintf_p**; gli argomenti del puntatore per **_swprintf_p** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **_swprintf_p** può essere diverso da quello **_sprintf_p**. **_swprintf_p** e **fwprintf_p** si comportano in modo identico, ad eccezione del fatto che **_swprintf_p** scrive l'output in una stringa anziché in una destinazione di tipo **file**e **_swprintf_p** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 **_sprintf_p** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere null di terminazione. **_swprintf_p** restituisce il numero di caratteri wide archiviati nel *buffer*, senza contare il carattere wide null di terminazione. Se *buffer* o *Format* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
@@ -134,7 +134,7 @@ La funzione **_sprintf_p** formatta e archivia una serie di caratteri e valori n
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-use-_sprintf_p-to-format-data"></a>Esempio: usare _sprintf_p per formattare i dati
 
 ```C
 // crt_sprintf_p.c
@@ -177,7 +177,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-error-code-handling"></a>Esempio: gestione del codice di errore
 
 ```C
 // crt_swprintf_p.c
@@ -221,4 +221,4 @@ Wrote -1 characters
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
 [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
-[Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[printf_p parametri posizionali](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

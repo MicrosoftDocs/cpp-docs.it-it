@@ -4,66 +4,66 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee5aa122983a315e55884c643a9b7894f075e260
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384504"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008953"
 ---
 # <a name="user-defined-operators-ccli"></a>Operatori definiti dall'utente (C++/CLI)
 
-Operatori definiti dall'utente per i tipi gestiti sono consentiti come membri statici o membri di istanza o in ambito globale. Tuttavia, solo gli operatori statici sono accessibili tramite i metadati per i client che vengono scritti in un linguaggio diverso da Visual C++.
+Gli operatori definiti dall'utente per i tipi gestiti sono consentiti come membri statici o membri di istanza o in ambito globale. Tuttavia, solo gli operatori statici sono accessibili tramite metadati ai client scritti in una lingua diversa da Visual C++.
 
-In un tipo riferimento, uno dei parametri di un operatore definito dall'utente statico deve essere uno dei seguenti:
+In un tipo riferimento, uno dei parametri di un operatore statico definito dall'utente deve essere uno dei seguenti:
 
-- Un handle (`type` ^) a un'istanza del tipo di inclusione.
+- Handle ( `type` ^) a un'istanza del tipo di inclusione.
 
-- Un riferimento indiretto tipo riferimento (`type`^ & o di tipo ^ %) per un handle per un'istanza del tipo di inclusione.
+- Riferimento indiretto del tipo di riferimento ( `type` ^& o Type ^%) a un handle per un'istanza del tipo di inclusione.
 
-In un tipo valore, uno dei parametri di un operatore definito dall'utente statico deve essere uno dei seguenti:
+In un tipo valore, uno dei parametri di un operatore statico definito dall'utente deve essere uno dei seguenti:
 
-- Dello stesso tipo del tipo di inclusione valore.
+- Dello stesso tipo del tipo di valore di inclusione.
 
-- Un riferimento indiretto al tipo puntatore (`type`^) per il tipo di inclusione.
+- Puntatore indiretto del tipo di puntatore ( `type` ^) al tipo di inclusione.
 
-- Un riferimento indiretto tipo riferimento (`type`% o `type`&) per il tipo di inclusione.
+- Riferimento indiretto del tipo di riferimento ( `type` % o `type`&) al tipo di inclusione.
 
-- Un riferimento indiretto tipo riferimento (`type`^ % o `type`^ &) per l'handle.
+- Riferimento indiretto del tipo di riferimento ( `type` ^% o `type` ^&) all'handle.
 
 È possibile definire gli operatori seguenti:
 
-|Operatore|Form unario/binario?|
+|Operatore|Moduli unari/binari?|
 |--------------|--------------------------|
 |!|Unario|
-|!=|Binario|
-|%|Binario|
+|!=|Binary|
+|%|Binary|
 |&|Unario e binario|
-|&&|Binario|
+|&&|Binary|
 |*|Unario e binario|
 |+|Unario e binario|
 |++|Unario|
-|,|Binario|
+|,|Binary|
 |-|Unario e binario|
 |--|Unario|
 |->|Unario|
-|/|Binario|
-|<|Binario|
-|<<|Binario|
-|\<=|Binario|
-|=|Binario|
-|==|Binario|
-|>|Binario|
-|>=|Binario|
-|>>|Binario|
-|^|Binario|
-|False|Unario|
+|/|Binary|
+|<|Binary|
+|<<|Binary|
+|\<=|Binary|
+|=|Binary|
+|==|Binary|
+|>|Binary|
+|>=|Binary|
+|>>|Binary|
+|^|Binary|
+|false|Unario|
 |true|Unario|
-|&#124;|Binario|
-|&#124;&#124;|Binario|
+|&#124;|Binary|
+|&#124;&#124;|Binary|
 |~|Unario|
 
-## <a name="example"></a>Esempio
+## <a name="example-user-defined-operators"></a>Esempio: operatori definiti dall'utente
 
 ```cpp
 // mcppv2_user-defined_operators.cpp
@@ -135,9 +135,9 @@ int main() {
 -3
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-operator-synthesis"></a>Esempio: sintesi di operatori
 
-L'esempio seguente illustra una sintesi di operatori, che è disponibile solo quando si usa **/clr** da compilare. Sintesi di operatori consente di creare il modulo di assegnazione di un operatore binario, se non è definito, in cui la parte sinistra dell'operatore di assegnazione è un tipo CLR.
+Nell'esempio seguente viene illustrata l'operatore Synthesis, che è disponibile solo quando si utilizza **/CLR** per la compilazione. Operatore Synthesis crea il form di assegnazione di un operatore binario, se non ne è stato definito uno, in cui il lato sinistro dell'operatore di assegnazione ha un tipo CLR.
 
 ```cpp
 // mcppv2_user-defined_operators_2.cpp

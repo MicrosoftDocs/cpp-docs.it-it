@@ -26,12 +26,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: f1c9446f9c3f0d637ea53d54584258959677b339
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232417"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008628"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -54,7 +54,7 @@ Puntatore a una funzione di conversione di eccezioni strutturate C scritta dall'
 
 Restituisce un puntatore alla funzione di conversione precedente registrata da **_set_se_translator**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **`nullptr`** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_set_se_translator** fornisce un modo per gestire le eccezioni Win32 (eccezioni strutturate C) come eccezioni tipizzate C++. Per consentire a ogni eccezione C di essere gestita da un **`catch`** gestore C++, definire innanzitutto una classe wrapper di eccezione c che può essere utilizzata o derivata da per attribuire un tipo di classe specifico a un'eccezione c. Per utilizzare questa classe, installare una funzione di conversione delle eccezioni C personalizzata che viene chiamata dal meccanismo interno di gestione delle eccezioni ogni volta che viene generata un'eccezione C. All'interno della funzione di conversione è possibile generare qualsiasi eccezione tipizzata che può essere rilevata da un gestore C++ corrispondente **`catch`** .
 
@@ -84,7 +84,7 @@ Quando si utilizzano **_set_se_translator** da codice gestito (codice compilato 
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-catch-__try-exception-error"></a>Esempio: intercettare un errore di eccezione __try
 
 Questo esempio esegue il wrapping delle chiamate per impostare un convertitore di eccezioni strutturate e per ripristinare quello precedente in una classe RAII `Scoped_SE_Translator` . Questa classe consente di introdurre un convertitore specifico dell'ambito come singola dichiarazione. Il distruttore della classe ripristina il convertitore originale quando il controllo lascia l'ambito.
 
@@ -157,7 +157,7 @@ In __finally
 Caught a __try exception, error c0000094.
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-catch-se_exception-error"></a>Esempio: Catch SE_Exception Error
 
 Sebbene la funzionalità fornita da **_set_se_translator** non sia disponibile nel codice gestito, è possibile utilizzare questo mapping nel codice nativo, anche se il codice nativo si trova in una compilazione sotto l'opzione **/CLR** , purché il codice nativo venga indicato utilizzando `#pragma unmanaged` . Se viene generata un'eccezione strutturata nel codice gestito di cui è necessario eseguire il mapping, il codice che genera e gestisce l'eccezione deve essere contrassegnato `#pragma unmanaged` . Il codice seguente illustra un possibile utilizzo. Per altre informazioni, vedere [Direttive pragma e parola chiave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 

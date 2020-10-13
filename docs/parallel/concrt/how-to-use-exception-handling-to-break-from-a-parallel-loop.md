@@ -5,12 +5,12 @@ helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: 9cf42df0926022f93633a6b5b1365ae9fc646a1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f6842e3093a577289c0c4432d96298e3c7b2bb92
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213918"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008498"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel
 
@@ -18,19 +18,19 @@ In questo argomento viene illustrato come scrivere un algoritmo di ricerca per u
 
 Nell'argomento [annullamento](cancellation-in-the-ppl.md) viene illustrato il ruolo dell'annullamento nella libreria di modelli paralleli. L'uso della gestione delle eccezioni è un metodo meno efficiente per annullare il lavoro parallelo rispetto all'uso dei metodi [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e [Concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . Tuttavia, uno scenario in cui l'utilizzo della gestione delle eccezioni per annullare il lavoro è appropriato è quando si effettua una chiamata in una libreria di terze parti che utilizza attività o algoritmi paralleli, ma non fornisce un `task_group` `structured_task_group` oggetto o da annullare.
 
-## <a name="example"></a>Esempio
+## <a name="example-basic-tree-type"></a>Esempio: tipo di albero di base
 
 Nell'esempio seguente viene illustrato un `tree` tipo di base che contiene un elemento dati e un elenco di nodi figlio. Nella sezione seguente viene illustrato il corpo del `for_all` metodo, che esegue in modo ricorsivo una funzione lavoro in ogni nodo figlio.
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example-perform-work-in-parallel"></a>Esempio: eseguire il lavoro in parallelo
 
 Nell'esempio seguente viene illustrato il `for_all` metodo. Usa l'algoritmo [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) per eseguire una funzione lavoro in ogni nodo dell'albero in parallelo.
 
 [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example--search-the-tree-for-a-value"></a>Esempio: ricerca di un valore nell'albero
 
 Nell'esempio seguente viene illustrata la funzione `search_for_value` che cerca un valore nell'oggetto `tree` fornito. Questa funzione passa al `for_all` Metodo una funzione lavoro che genera un'eccezione quando trova un nodo della struttura ad albero che contiene il valore fornito.
 
@@ -40,7 +40,7 @@ Quando la funzione lavoro fornita a un gruppo di attività genera un'eccezione, 
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example-create-and-search-a-tree-in-parallel"></a>Esempio: creare ed eseguire ricerche in un albero in parallelo
 
 Nell'esempio seguente viene creato un `tree` oggetto e viene eseguita la ricerca di diversi valori in parallelo. La `build_tree` funzione viene illustrata più avanti in questo argomento.
 
@@ -48,7 +48,7 @@ Nell'esempio seguente viene creato un `tree` oggetto e viene eseguita la ricerca
 
 In questo esempio viene utilizzato l'algoritmo [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) per cercare i valori in parallelo. Per ulteriori informazioni su questo algoritmo, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-finished-exception-handling-code-sample"></a>Esempio: fine dell'esempio di codice di gestione delle eccezioni
 
 Nell'esempio completo seguente viene utilizzata la gestione delle eccezioni per la ricerca di valori in una struttura ad albero di base.
 

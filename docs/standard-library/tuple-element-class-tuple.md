@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: be9d9fe56d35e96e4179eb511edccd475a369f32
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684453"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008294"
 ---
 # <a name="tuple_element-class"></a>Classe tuple_element
 
@@ -56,37 +56,37 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 di *Indice*
+*Indice*\
 Indice dell'elemento designato.
 
-@No__t_1 *tupla*
+*Tupla*\
 Tipo della tupla.
 
-*Elem* \
+*Elem*\
 Tipo di un elemento della matrice.
 
-*Dimensioni* \
+*Dimensioni*\
 Dimensione della matrice.
 
-@No__t_1 *T1*
+*T1*\
 Tipo del primo elemento in una coppia.
 
-@No__t_1 *T2*
+*T2*\
 Tipo del secondo elemento di una coppia.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il modello di classe `tuple_element` dispone di un typedef annidato `type` che è un sinonimo del tipo in corrispondenza dell'indice *della tupla*del tipo di tupla.
+Il modello `tuple_element` di classe dispone di un typedef annidato `type` che è un sinonimo del tipo in corrispondenza dell' *Indice* della *tupla*del tipo di tupla.
 
 Il typedef `tuple_element_t` è un alias conveniente per `tuple_element<Index, Tuple>::type`.
 
-La specializzazione del modello di classe per le matrici fornisce un'interfaccia a un `array` come tupla di elementi `Size`, ognuno dei quali ha lo stesso tipo. Ogni specializzazione dispone di un typedef annidato `type` che è un sinonimo del tipo dell'elemento *index* della `array`, con qualsiasi qualificazione const-volatile mantenuta.
+La specializzazione del modello di classe per le matrici fornisce un'interfaccia a un oggetto `array` come tupla di `Size` elementi, ognuno dei quali ha lo stesso tipo. Ogni specializzazione dispone di un typedef annidato `type` che è un sinonimo del tipo dell'elemento *index* di `array` , con qualsiasi qualificazione const-volatile mantenuta.
 
 Le specializzazioni modello per i tipi `pair` forniscono ciascuna un singolo membro typedef, `type`, che è un sinonimo del tipo di elemento in corrispondenza della posizione specificata nella coppia, con qualsiasi qualificazione const e/o volatile mantenuta. Il typedef `tuple_element_t` è un alias conveniente per `tuple_element<N, pair<T1, T2>>::type`.
 
-Utilizzare la [funzione get &lt;utility &gt;](../standard-library/utility-functions.md#get) per restituire l'elemento in una posizione specificata o di un tipo specificato.
+Utilizzare l' [ &lt; utilità &gt; Get Function](../standard-library/utility-functions.md#get) per restituire l'elemento in una posizione specificata o di un tipo specificato.
 
-## <a name="example"></a>Esempio
+## <a name="example-get-an-element-from-a-tuple"></a>Esempio: ottenere un elemento da una tupla
 
 ```cpp
 #include <tuple>
@@ -111,7 +111,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-get-an-element-from-an-array"></a>Esempio: ottenere un elemento da una matrice
 
 ```cpp
 #include <array>
@@ -141,7 +141,7 @@ int main()
 0
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-get-an-element-from-a-pair"></a>Esempio: ottenere un elemento da una coppia
 
 ```cpp
 #include <utility>
@@ -174,10 +174,10 @@ int main() {
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<tuple>
+**Intestazione:**\<tuple>
 
-**Intestazione:** \<array> (per la specializzazione di matrice)
+**Intestazione:** \<array> (per la specializzazione di matrici)
 
-**Intestazione:** \<utility > (per le specializzazioni delle coppie)
+**Intestazione:** \<utility> (per le specializzazioni delle coppie)
 
 **Spazio dei nomi:** std

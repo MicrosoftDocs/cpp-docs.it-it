@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 81dd7483c49a699ac53ea53d33481fa6539d484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c3ed59262ec5ad061572d23c1166b2153cb16ca
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223655"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008580"
 ---
 # <a name="new-operator-c"></a>Operatore new (C++)
 
@@ -70,7 +70,7 @@ Specifica il tipo da allocare; può essere un tipo incorporato o un tipo definit
 *initializer*<br/>
 Fornisce un valore per l'oggetto inizializzato. Gli inizializzatori non possono essere specificati per le matrici. L' **`new`** operatore creerà matrici di oggetti solo se la classe dispone di un costruttore predefinito.
 
-## <a name="example"></a>Esempio
+## <a name="example-allocate-and-free-a-character-array"></a>Esempio: allocare e liberare una matrice di caratteri
 
 Nell'esempio di codice che segue vengono allocati una matrice di caratteri e un oggetto della classe `CName`, quindi vengono successivamente liberati.
 
@@ -115,7 +115,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-new-operator"></a>Esempio: `new` operator
 
 Se si usa il nuovo form di posizione dell' **`new`** operatore, il form con gli argomenti oltre alla dimensione dell'allocazione, il compilatore non supporta un form di posizione dell' **`delete`** operatore se il costruttore genera un'eccezione. Ad esempio:
 

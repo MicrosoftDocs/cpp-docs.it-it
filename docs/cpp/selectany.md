@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cd2ec4e22d94c42432a1fc3e39afd5540302d22
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213229"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008217"
 ---
 # `selectany`
 
@@ -24,7 +24,7 @@ Viene indicato al compilatore che l'elemento dati globale (variabile o oggetto) 
 
 > **`__declspec( selectany )`***dichiaratore*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 In fase di collegamento, se sono visualizzate più definizioni di COMDAT, il linker ne sceglie una e ignora il resto. Se l'opzione del linker [`/OPT:REF`](../build/reference/opt-optimizations.md) (ottimizzazioni) è selezionata, si verificherà l'eliminazione di COMDAT per rimuovere tutti gli elementi di dati senza riferimenti nell'output del linker.
 
@@ -37,7 +37,7 @@ In genere, un elemento dati globale può essere inizializzato solo una volta, in
 > [!NOTE]
 > **`selectany`** può essere applicato solo all'inizializzazione effettiva di elementi di dati globali visibile esternamente.
 
-## <a name="example"></a>Esempio
+## <a name="example-selectany-attribute"></a>Esempio: `selectany` attribute
 
 Questo codice Mostra come usare l' **`selectany`** attributo:
 
@@ -71,7 +71,7 @@ int i;
 __declspec(selectany) X x(1);
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-use-selectany-attribute-to-ensure-data-comdat-folding"></a>Esempio: usare `selectany` Attribute per garantire la riduzione dei dati COMDAT
 
 Questo codice illustra come usare l' **`selectany`** attributo per garantire la riduzione dei dati COMDAT quando si usa anche l' [`/OPT:ICF`](../build/reference/opt-optimizations.md) opzione del linker. Si noti che i dati devono essere contrassegnati con **`selectany`** e inseriti in una **`const`** sezione (ReadOnly). È necessario specificare esplicitamente la sezione di sola lettura.
 

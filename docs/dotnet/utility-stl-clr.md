@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: faf7f607f9433fa3e4813957b24220a5e66e1e49
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500591"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008611"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -80,8 +80,6 @@ Includere l'intestazione STL/CLR `<cliext/utility>` per definire la classe model
 |Funzione|Descrizione|
 |--------------|-----------------|
 |[make_pair (STL/CLR)](#make_pair)|Creare una coppia da una coppia di valori.|
-
-## <a name="members"></a>Membri
 
 ## <a name="pair-stlclr"></a><a name="pair"></a> Pair (STL/CLR)
 
@@ -124,7 +122,7 @@ Tipo del secondo valore di cui è stato eseguito il Wrapped.
 |--------------|-----------------|
 |[pair::operator= (STL/CLR)](#op_as)|Sostituisce la coppia di valori archiviati.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'oggetto archivia una coppia di valori. Usare questa classe modello per combinare due valori in un unico oggetto. Inoltre, l'oggetto `cliext::pair` (descritto qui) archivia solo i tipi gestiti. per archiviare una coppia di tipi non gestiti `std::pair` , usare, dichiarato in `<utility>` .
 
@@ -217,7 +215,7 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 *Ok*<br/>
 Coppia da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la coppia di valori archiviati con una copia della coppia di valori archiviati a *destra*.
 
@@ -270,7 +268,7 @@ Primo valore da archiviare.
 *val2*<br/>
 Secondo valore da archiviare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore:
 
@@ -420,7 +418,7 @@ void swap(pair<Value1, Value2>% right);
 *Ok*<br/>
 Coppia con cui scambiare il contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia la coppia di valori archiviati tra **`*this`** e *right*.
 
@@ -500,7 +498,7 @@ Primo valore di cui eseguire il wrapping.
 *second*<br/>
 Secondo valore di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce `pair<Value1, Value2>(first, second)`. Viene usato per costruire un `pair<Value1, Value2>` oggetto da una coppia di valori.
 
@@ -548,7 +546,7 @@ Coppia sinistra da confrontare.
 *Ok*<br/>
 Coppia corretta da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato come *right* quando le due coppie vengono confrontate elemento per elemento.
 
@@ -602,7 +600,7 @@ Coppia sinistra da confrontare.
 *Ok*<br/>
 Coppia corretta da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` . Viene usato per verificare se *Left* viene ordinato prima di *destra* quando le due coppie vengono confrontate elemento per elemento.
 
@@ -656,7 +654,7 @@ Coppia sinistra da confrontare.
 *Ok*<br/>
 Coppia corretta da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando le due coppie vengono confrontate elemento per elemento.
 
@@ -710,7 +708,7 @@ Coppia sinistra da confrontare.
 *Ok*<br/>
 Coppia corretta da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `left.first ==` `right.first &&` `left.second ==` `right.second` . Viene usato per verificare se *Left* è ordinato come *right* quando le due coppie vengono confrontate elemento per elemento.
 
@@ -764,7 +762,7 @@ Coppia sinistra da confrontare.
 *Ok*<br/>
 Coppia corretta da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando le due coppie vengono confrontate elemento per elemento.
 
@@ -818,7 +816,7 @@ Coppia sinistra da confrontare.
 *Ok*<br/>
 Coppia corretta da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left < right)` . Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando le due coppie vengono confrontate elemento per elemento.
 

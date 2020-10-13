@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915815"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008422"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -67,14 +67,14 @@ Se a questa funzione vengono passati parametri non validi, viene richiamato il g
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_setmode** *imposta la modalità di conversione* del file fornita da *FD*. Se si passa **_O_TEXT** *modalità* , viene impostata la modalità testo (ovvero la traduzione). Le combinazioni di ritorno a capo/avanzamento riga (CR-LF) vengono convertite in un singolo carattere di avanzamento riga nell'input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Il passaggio di **_O_BINARY** imposta la modalità binaria (non convertita), in cui queste conversioni vengono omesse.
 
 È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT**o **_O_WTEXT** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento.
 
 > [!CAUTION]
-> La modalità Unicode è per le funzioni di stampa Wide ( `wprintf`ad esempio,) e non è supportata per le funzioni di stampa narrow. L'uso di una funzione di stampa narrow su un flusso in modalità Unicode attiva un'asserzione.
+> La modalità Unicode è per le funzioni di stampa Wide (ad esempio, `wprintf` ) e non è supportata per le funzioni di stampa narrow. L'uso di una funzione di stampa narrow su un flusso in modalità Unicode attiva un'asserzione.
 
 **_setmode** viene in genere usato per modificare la modalità di conversione predefinita di **stdin** e **stdout**, ma è possibile usarla in qualsiasi file. Se si applicano **_setmode** al descrittore di file per un flusso, chiamare **_setmode** prima di eseguire qualsiasi operazione di input o output nel flusso.
 
@@ -91,7 +91,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-use-_setmode-to-change-stdin"></a>Esempio: usare _setmode per modificare STDIN
 
 ```C
 // crt_setmode.c
@@ -119,7 +119,7 @@ int main( void )
 'stdin' successfully changed to binary mode
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-use-_setmode-to-change-stdout"></a>Esempio: usare _setmode per modificare stdout
 
 ```C
 // crt_setmodeunicode.c
@@ -141,7 +141,7 @@ int main(void) {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

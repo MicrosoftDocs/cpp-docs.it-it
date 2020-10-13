@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-ms.openlocfilehash: d96046c629e812e342ce86b850b6d52a57094997
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7b7e374328b6d234426d8263e4c6655191133700
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188441"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008898"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Risoluzione dell'overload di chiamate a modelli di funzioni
 
 Un modello di funzione può eseguire l'overload delle funzioni non template dello stesso nome. In questi casi, le chiamate di funzione vengono risolte innanzitutto utilizzando la deduzione dell'argomento di modello, per creare un'istanza del modello di funzione con una specializzazione univoca. Se la deduzione dell'argomento di modello non riesce, vengono presi in considerazione gli altri overload di funzione per risolvere la chiamata. Tali altri overload, noti anche come set candidati, includono funzioni non template e altri modelli di funzione per i quali si è creata un'istanza. Se la deduzione dell'argomento di modello viene eseguita correttamente, la funzione generata viene confrontata con le altre funzioni, al fine di determinare la migliore corrispondenza in base alle regole di risoluzione dell'overload. Per ulteriori informazioni, vedere [Overload della funzione](function-overloading.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-choose-a-nontemplate-function"></a>Esempio: scelta di una funzione non template
 
 Se una funzione non template risulta essere una corrispondenza ugualmente valida, rispetto a una funzione di modello, viene scelta la funzione non template (a meno che gli argomenti di modello non siano stati specificati in modo esplicito), come nella chiamata `f(1, 1)` riportata nell'esempio seguente.
 
@@ -48,7 +48,7 @@ void f(T1, T2)
 void f(T1, T2)
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-exact-match-template-function-preferred"></a>Esempio: funzione di modello di corrispondenza esatta preferita
 
 Nell'esempio seguente, viene dimostrato come, nel caso in cui la funzione non template richieda una conversione, si preferisca la funzione di modello esattamente corrispondente.
 
@@ -83,4 +83,4 @@ void f(T1, T2)
 ## <a name="see-also"></a>Vedere anche
 
 [Risoluzione dei nomi](../cpp/templates-and-name-resolution.md)<br/>
-[typename](../cpp/typename.md)
+[typeName](../cpp/typename.md)

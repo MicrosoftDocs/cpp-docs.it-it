@@ -5,18 +5,18 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 835bd968035b355ded9636d446d44d4ce069c248
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173621"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008886"
 ---
 # <a name="missing-function-body-or-variable"></a>Codice di funzione o variabile mancante
 
 Con un prototipo di funzione, il compilatore può continuare senza errori, ma il linker non è in grado di risolvere una chiamata a un indirizzo perché non esiste alcun codice di funzione o spazio variabile riservato. Questo errore non verrà visualizzato fino a quando non si crea una chiamata alla funzione che deve essere risolta dal linker.
 
-## <a name="example"></a>Esempio
+## <a name="example-call-to-an-undefined-function"></a>Esempio: chiamata a una funzione non definita
 
 La chiamata di funzione in Main provocherà LNK2019 poiché il prototipo consente al compilatore di ritenere che la funzione esista.  Il linker rileva che non lo è.
 
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-call-to-an-implemented-function"></a>Esempio: chiamata a una funzione implementata
 
-In C++, assicurarsi di includere l'implementazione di una funzione specifica per una classe e non solo di un prototipo nella definizione della classe. Se si definisce la classe all'esterno del file di intestazione, assicurarsi di includere il nome della classe prima della funzione (`Classname::memberfunction`).
+In C++, assicurarsi di includere l'implementazione di una funzione specifica per una classe e non solo di un prototipo nella definizione della classe. Se si definisce la classe all'esterno del file di intestazione, assicurarsi di includere il nome della classe prima della funzione ( `Classname::memberfunction` ).
 
 ```cpp
 // LNK2019_MFBV_2.cpp

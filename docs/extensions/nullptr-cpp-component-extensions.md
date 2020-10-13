@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214230"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008359"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI e C++/CX)
 
@@ -51,7 +51,7 @@ Le chiamate di funzione tra linguaggi che usano valori di puntatore Null per il 
 
 Non è possibile inizializzare un handle su zero; **`nullptr`** è possibile usare solo. L'assegnazione di una costante 0 a un handle di oggetto produce un valore `Int32` boxed e un cast a `Object^`.
 
-## <a name="example"></a>Esempio
+## <a name="example-nullptr-keyword"></a>Esempio: `nullptr` parola chiave
 
 Nell'esempio di codice seguente viene illustrato che la **`nullptr`** parola chiave può essere utilizzata ovunque sia possibile utilizzare un handle, un puntatore nativo o un argomento della funzione. Nell'esempio viene dimostrato che la **`nullptr`** parola chiave può essere utilizzata per controllare un riferimento prima che venga utilizzato.
 
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-use-nullptr-and-zero-interchangeably"></a>Esempio: usare `nullptr` e zero in modo intercambiabile
 
 Nell'esempio di codice seguente viene illustrato che **`nullptr`** e zero possono essere utilizzati in modo interscambiabile nei puntatori nativi.
 
@@ -119,7 +119,7 @@ pMyClass == nullptr
 pMyClass == 0
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-interpret-nullptr-as-a-handle"></a>Esempio: interpretare `nullptr` come handle
 
 Nell'esempio di codice seguente viene illustrato che **`nullptr`** viene interpretato come un handle per qualsiasi tipo o un puntatore nativo a qualsiasi tipo. Nel caso di overload di funzioni con handle a tipi diversi, verrà generato un errore di ambiguità. **`nullptr`** Sarebbe necessario eseguire il cast esplicito a un tipo.
 
@@ -137,7 +137,7 @@ void f_null() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-cast-nullptr"></a>Esempio: cast `nullptr`
 
 L'esempio di codice seguente mostra che il cast **`nullptr`** è consentito e restituisce un puntatore o un handle al tipo di cast che contiene il **`nullptr`** valore.
 
@@ -158,7 +158,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-pass-nullptr-as-a-function-parameter"></a>Esempio: passare `nullptr` come parametro di funzione
 
 Nell'esempio di codice seguente viene illustrato che **`nullptr`** può essere utilizzato come parametro di funzione.
 
@@ -179,7 +179,7 @@ int main() {
 test
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-default-initialization"></a>Esempio: inizializzazione predefinita
 
 Nell'esempio di codice seguente viene illustrato che quando gli handle vengono dichiarati e non inizializzati in modo esplicito, vengono inizializzati per impostazione predefinita su **`nullptr`** .
 
@@ -206,7 +206,7 @@ int main() {
 NULL
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-assign-nullptr-to-a-native-pointer"></a>Esempio: assegnazione `nullptr` a un puntatore nativo
 
 Nell'esempio di codice seguente viene illustrato che **`nullptr`** può essere assegnato a un puntatore nativo quando si esegue la compilazione con `/clr` .
 

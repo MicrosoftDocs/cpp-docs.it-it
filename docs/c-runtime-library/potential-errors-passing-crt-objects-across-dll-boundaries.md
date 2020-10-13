@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: f6d831ac8b86be8a6669e8ee6c66da64507d129f
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2d42803b5eca7a43f122d209b7d9e2d4e45c38de
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590186"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008945"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL
 
@@ -33,7 +33,7 @@ Poiché ogni copia della libreria CRT dispone di un proprio gestore dell'heap, l
 
 La DLL e i relativi client usano in genere la stessa copia della libreria CRT solo se sono collegati al momento del caricamento alla stessa versione della DLL CRT. Poiché la versione DLL della libreria Universal CRT usata da Visual Studio 2015 e versioni successive in Windows 10, è ora un componente Windows distribuito in modo centralizzato (ucrtbase.dll), è lo stesso per le app compilate con Visual Studio 2015 e versioni successive. Tuttavia, anche quando il codice CRT è identico, non è possibile assegnare memoria allocata in un heap a un componente che usa un heap diverso.
 
-## <a name="example"></a>Esempio
+## <a name="example-pass-file-handle-across-dll-boundary"></a>Esempio: passare l'handle di file tra i limiti DLL
 
 ### <a name="description"></a>Descrizione
 
@@ -75,7 +75,7 @@ int main(void)
 this is a string
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-pass-environment-variables-across-dll-boundary"></a>Esempio: passare le variabili di ambiente attraverso i limiti DLL
 
 ### <a name="description"></a>Descrizione
 
@@ -128,6 +128,6 @@ Se entrambi i file DLL e exe sono compilati con `/MD` , in modo che venga usata 
 New MYLIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

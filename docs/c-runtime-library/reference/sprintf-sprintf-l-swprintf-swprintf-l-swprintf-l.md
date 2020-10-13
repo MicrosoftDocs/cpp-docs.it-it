@@ -49,12 +49,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 9a3f10fc89d93717edfb032dea910040589c1254
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: da3c5b3660b481fd3a7140adbc236f44cd51f37e
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334953"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008816"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -162,7 +162,7 @@ In C++ queste funzioni presentano overload di modello che richiamano le relative
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-use-sprintf-to-format-data"></a>Esempio: usare sprintf per formattare i dati
 
 ```C
 // crt_sprintf.c
@@ -199,7 +199,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-error-code-handling"></a>Esempio: gestione del codice di errore
 
 ```C
 // crt_swprintf.c

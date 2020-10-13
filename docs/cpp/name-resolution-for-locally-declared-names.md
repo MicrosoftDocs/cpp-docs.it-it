@@ -2,18 +2,18 @@
 title: Risoluzione dei nomi per nomi dichiarati in locale
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
-ms.openlocfilehash: 2c75c09308f6ba07039de4d2811b9bedaba71e44
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0216154b55e9742c2c4f3f5df7e6d612e16ec9b1
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177898"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008930"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Risoluzione dei nomi per nomi dichiarati in locale
 
 È possibile fare riferimento al nome stesso del modello con o senza gli argomenti di modello. Nell'ambito di un modello di classe, il nome stesso fa riferimento al modello. Nell'ambito della specializzazione o della specializzazione parziale di un modello, il nome da solo fa riferimento alla specializzazione o alla specializzazione parziale. È inoltre possibile fare riferimento alle altre specializzazioni o alle specializzazioni parziali del modello con gli argomenti di modello appropriati.
 
-## <a name="example"></a>Esempio
+## <a name="example-specialization-versus-partial-specialization"></a>Esempio: specializzazione rispetto alla specializzazione parziale
 
 Nel codice riportato di seguito viene illustrato che il nome A del modello della classe viene interpretato in modo diverso nell'ambito di una specializzazione o di una specializzazione parziale.
 
@@ -35,7 +35,7 @@ template<> class A<int> {
 };
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-name-conflict-between-template-parameter-and-object"></a>Esempio: conflitto di nomi tra il parametro del modello e l'oggetto
 
 In caso di un conflitto di nomi tra un parametro di modello e un altro oggetto, il parametro di modello può o non essere nascosto. Le regole seguenti consentiranno di determinare la precedenza.
 
@@ -55,7 +55,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-define-member-function-outside-class-template"></a>Esempio: definire la funzione membro all'esterno del modello di classe
 
 Nel definire le funzioni membro di un modello all'esterno del modello di classe, è possibile utilizzare un nome del parametro di modello diverso. Se la definizione di funzione membro di modello utilizza un nome diverso per il parametro di modello rispetto a quello utilizzato dalla dichiarazione e il nome utilizzato nella definizione è in conflitto con un altro membro della dichiarazione, il membro della dichiarazione di modello ha la precedenza.
 
@@ -90,7 +90,7 @@ int main() {
 Z::Z()
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-define-template-or-member-function-outside-namespace"></a>Esempio: definire il modello o la funzione membro all'esterno dello spazio dei nomi
 
 Quando si definisce una funzione o una funzione membro di modello all'esterno dello spazio dei nomi in cui è stato dichiarato il modello, l'argomento di modello ha la precedenza sui nomi degli altri membri dello spazio dei nomi.
 
@@ -124,7 +124,7 @@ int main() {
 C<T>::g
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-base-class-or-member-name-hides-template-argument"></a>Esempio: il nome della classe base o del membro nasconde l'argomento di modello
 
 Nelle definizioni esterne alla dichiarazione della classe di modello, se una classe di modello dispone di una classe base che non dipende da un argomento di modello e se la classe base o uno dei suoi membri hanno lo stesso nome di un argomento di modello, la classe base o il nome del membro nascondono l'argomento di modello.
 

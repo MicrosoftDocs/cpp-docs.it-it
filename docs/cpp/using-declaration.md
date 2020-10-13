@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 072ecd325a76e80dbd710c241e39fdf7b969e537
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227023"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008245"
 ---
 # <a name="using-declaration"></a>dichiarazione using
 
@@ -33,11 +33,11 @@ using declarator-list ;
 
 *elenco di dichiaratori* Elenco delimitato da virgole di **`typename`** dichiaratori non *qualificati* di [] *Nested-Name-specifier* , seguiti facoltativamente da puntini di sospensione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Una dichiarazione using introduce un nome non qualificato come sinonimo di un'entità dichiarata altrove. Consente di usare un singolo nome da uno spazio dei nomi specifico senza qualificazione esplicita nell'area di dichiarazione in cui viene visualizzata. Questo si differenzia dalla [direttiva using](../cpp/namespaces-cpp.md#using_directives), che consente l'uso di *tutti* i nomi in uno spazio dei nomi senza qualificazione. La **`using`** parola chiave viene usata anche per gli [alias di tipo](../cpp/aliases-and-typedefs-cpp.md).
 
-## <a name="example"></a>Esempio
+## <a name="example-using-declaration-in-class-field"></a>Esempio: `using` dichiarazione nel campo della classe
 
 Una dichiarazione using può essere usata in una definizione di classe.
 
@@ -83,7 +83,7 @@ In B::f()
 In B::g()
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-using-declaration-to-declare-a-member"></a>Esempio: `using` dichiarazione per dichiarare un membro
 
 Quando viene usato per dichiarare un membro, una dichiarazione using deve fare riferimento a un membro di una classe base.
 
@@ -123,7 +123,7 @@ int main() {
 In B::f()
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-using-declaration-with-explicit-qualification"></a>Esempio: `using` dichiarazione con qualificazione esplicita
 
 È possibile fare riferimento ai membri dichiarati utilizzando una dichiarazione using utilizzando la qualificazione esplicita. Il `::` prefisso fa riferimento allo spazio dei nomi globale.
 
@@ -163,7 +163,7 @@ In f
 In A::g
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-using-declaration-synonyms-and-aliases"></a>Esempio: `using` sinonimi e alias di dichiarazione
 
 Quando viene eseguita una dichiarazione using, il sinonimo creato dalla dichiarazione si riferisce solo alle definizioni valide nel punto della dichiarazione using. Le definizioni aggiunte a uno spazio dei nomi dopo la dichiarazione using non sono sinonimi validi.
 
@@ -192,7 +192,7 @@ void b() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-local-declarations-and-using-declarations"></a>Esempio: dichiarazioni e dichiarazioni locali `using`
 
 Per quanto riguarda le funzioni negli spazi dei nomi, se in un'area dichiarativa vengono specificati un set di dichiarazioni locali e l'utilizzo di dichiarazioni per un singolo nome, è necessario che tutti facciano riferimento alla stessa entità o che tutti facciano riferimento a funzioni.
 
@@ -215,7 +215,7 @@ void g() {
 
 Nell'esempio precedente l' `using B::i` istruzione causa la `int i` dichiarazione di un secondo nella `g()` funzione. L' `using B::f` istruzione non è in conflitto con la `f(char)` funzione perché i nomi di funzione introdotti da `B::f` presentano tipi di parametro diversi.
 
-## <a name="example"></a>Esempio
+## <a name="example-local-function-declarations-and-using-declarations"></a>Esempio: dichiarazioni e dichiarazioni di funzioni locali `using`
 
 Una dichiarazione di funzione locale non può avere lo stesso nome e lo stesso tipo di una funzione introdotta mediante la dichiarazione. Ad esempio:
 
@@ -242,7 +242,7 @@ void h() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-using-declaration-and-inheritance"></a>Esempio: `using` dichiarazione ed ereditarietà
 
 Per quanto riguarda l'ereditarietà, quando una dichiarazione using introduce un nome di una classe di base in un ambito di classe derivata, le funzioni membro nella classe derivata eseguono l'override delle funzioni membro virtuali con lo stesso nome e tipi di argomento nella classe di base.
 
@@ -300,7 +300,7 @@ In B::g
 In D::g(char)
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-using-declaration-accessibility"></a>Esempio: `using` accessibilità della dichiarazione
 
 Tutte le istanze di un nome indicate in una dichiarazione using devono essere accessibili. In particolare, se una classe derivata usa una dichiarazione using per accedere a un membro di una classe base, il nome del membro deve essere accessibile. Se il nome è quello di una funzione membro in overload, tutte le funzioni denominate devono essere accessibili.
 
@@ -327,5 +327,5 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazi dei nomi](../cpp/namespaces-cpp.md)<br/>
+[Namespaces](../cpp/namespaces-cpp.md) (Spazi dei nomi)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

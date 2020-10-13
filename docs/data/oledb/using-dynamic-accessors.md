@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4f42d6f20da819cf325cad06a04878b46e52352a
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509417"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008677"
 ---
 # <a name="using-dynamic-accessors"></a>Utilizzo delle funzioni di accesso dinamiche
 
@@ -22,7 +22,7 @@ Nell'esempio [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/maste
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) consente di accedere a un'origine dati quando non si conosce lo schema del database, ovvero la struttura sottostante del database. `CDynamicAccessor` i metodi ottengono informazioni sulla colonna, ad esempio i nomi delle colonne, il conteggio e il tipo di dati. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione. Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Recuperare i dati dal buffer usando il metodo [GetValue](./cdynamicaccessor-class.md#getvalue) .
 
-## <a name="example"></a>Esempio
+## <a name="example-cdynamic-accessors"></a>Esempio: funzioni di accesso CDynamic
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -94,7 +94,7 @@ int main(int argc, char* argv[] )
 
 Usare i `CDynamicStringAccessor` metodi per ottenere informazioni sulla colonna. Queste informazioni sulla colonna vengono usate per creare una funzione di accesso dinamicamente in fase di esecuzione. Le informazioni sulla colonna vengono archiviate in un buffer creato e gestito da questa classe. Recuperare i dati dal buffer usando [CDynamicStringAccessor:: GetString](./cdynamicstringaccessor-class.md#getstring) o archiviarli nel buffer tramite [CDynamicStringAccessor:: sestring](./cdynamicstringaccessor-class.md#setstring).
 
-## <a name="example"></a>Esempio
+## <a name="example-cdynamicstringaccessor"></a>Esempio: CDynamicStringAccessor
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp

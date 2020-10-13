@@ -26,12 +26,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64bed4dac2bbaeb60c7b04a600af38f455caf08d
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232495"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008257"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -56,7 +56,7 @@ La routine **_malloca** restituisce un **`void`** puntatore allo spazio allocato
 
 Se *size* è maggiore di **_ALLOCA_S_THRESHOLD**, **_malloca** tenta di allocare sull'heap e restituisce un puntatore null se non è possibile allocare lo spazio. Se le *dimensioni* sono minori o uguali a **_ALLOCA_S_THRESHOLD**, **_malloca** tenta di allocare nello stack e viene generata un'eccezione di overflow dello stack se lo spazio non può essere allocato. L'eccezione di overflow dello stack non è un'eccezione C++. si tratta di un'eccezione strutturata. Anziché utilizzare la gestione delle eccezioni C++, è necessario utilizzare la [gestione delle eccezioni strutturata](../../cpp/structured-exception-handling-c-cpp.md) (SEH) per rilevare questa eccezione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **_malloca** alloca i byte di *dimensioni* dallo stack di programmi o dall'heap se la richiesta supera una determinata dimensione in byte fornita da **_ALLOCA_S_THRESHOLD**. La differenza tra **_malloca** e **_alloca** è che **_alloca** alloca sempre nello stack, indipendentemente dalle dimensioni. A differenza **_alloca**, che non richiede o non consente una **chiamata a free per liberare** la memoria così allocata, **_malloca** richiede l'uso di [_freea](freea.md) per liberare memoria. In modalità di debug, **_malloca** alloca sempre memoria dall'heap.
 
@@ -81,7 +81,7 @@ Oltre alle restrizioni precedenti, quando si usa l'opzione [/CLR (Common Languag
 |-------------|---------------------|
 |**_malloca**|\<malloc.h>|
 
-## <a name="example"></a>Esempio
+## <a name="example-malloca"></a>Esempio: malloca
 
 ```C
 // crt_malloca_simple.c
@@ -101,7 +101,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-malloca-exception"></a>Esempio: malloca Exception
 
 ```C
 // crt_malloca_exception.c

@@ -4,12 +4,12 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: e57f67eeca93572b26ee03033cbe4dcf90431f78
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550771"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008871"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
 
@@ -168,7 +168,7 @@ Nelle procedure seguenti viene descritto come scrivere un costruttore di spostam
     return *this;
     ```
 
-## <a name="example"></a>Esempio
+## <a name="example-complete-move-constructor-and-assignment-operator"></a>Esempio: costruttore di spostamento completo e operatore di assegnazione
 
 Nell'esempio seguente vengono mostrati il costruttore di spostamento e l'operatore di assegnazione di spostamento completi per la classe `MemoryBlock`:
 
@@ -217,7 +217,7 @@ MemoryBlock& operator=(MemoryBlock&& other) noexcept
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-use-move-semantics-to-improve-performance"></a>Esempio di utilizzo della semantica di spostamento per migliorare le prestazioni
 
 Nell'esempio seguente viene mostrato come la semantica di spostamento possa migliorare le prestazioni delle applicazioni in uso. Nell'esempio vengono aggiunti due elementi a un oggetto vettore, quindi viene inserito un nuovo elemento tra i due elementi esistenti. La `vector` classe utilizza la semantica di spostamento per eseguire in modo efficiente l'operazione di inserimento spostando gli elementi del vettore anziché copiarli.
 

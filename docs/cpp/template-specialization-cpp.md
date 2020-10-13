@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f71c2c3862bd015ba3edcd17aeac85472eb2562
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223577"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008908"
 ---
 # <a name="template-specialization-c"></a>Specializzazione modello
 
@@ -19,7 +19,7 @@ I modelli di classe possono essere parzialmente specializzati e la classe risult
 
 - Un modello dispone di un solo tipo, ma è necessaria una specializzazione per i tipi di puntatore, riferimento, puntatore a membro o puntatore a funzione. La specializzazione stessa è ancora un modello sul tipo puntato o cui è stato fatto riferimento.
 
-## <a name="example"></a>Esempio
+## <a name="example-partial-specialization-of-class-templates"></a>Esempio: specializzazione parziale di modelli di classe
 
 ```cpp
 // partial_specialization_of_class_templates.cpp
@@ -66,7 +66,7 @@ PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0
 PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-partial-specialization-for-pointer-types"></a>Esempio: specializzazione parziale per i tipi di puntatore
 
 Se si dispone di una classe di raccolta di modelli che accetta qualsiasi tipo `T` , è possibile creare una specializzazione parziale che accetta qualsiasi tipo di puntatore `T*` . Nel codice seguente viene illustrato un modello di classe di raccolta `Bag` e una specializzazione parziale per i tipi di puntatore in cui la raccolta dereferenzia i tipi di puntatore prima di copiarli nella matrice. La raccolta quindi archivia i valori a cui si fa riferimento. Con il modello originale, solo i puntatori sarebbero stati archiviati nella raccolta, lasciando i dati vulnerabili all'eliminazione o alla modifica. In questa versione speciale del puntatore della raccolta, viene aggiunto il codice per verificare un puntatore null nel metodo `add`.
 
@@ -178,7 +178,7 @@ Null pointer!
 3 87 8 100
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-define-partial-specialization-so-one-type-is-int"></a>Esempio: definire la specializzazione parziale in modo che un tipo sia `int`
 
 Nell'esempio seguente viene definita una classe modello che accetta coppie di due tipi qualsiasi e quindi definisce una specializzazione parziale della classe modello specializzata in modo che uno dei tipi sia **`int`** . La specializzazione definisce un metodo di ordinamento aggiuntivo che implementa un ordinamento a bolle semplice in base all'intero.
 
