@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218026"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135528"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfacce generiche (C++/CLI)
 
@@ -36,7 +36,7 @@ Per altre informazioni sulle interfacce, vedere [interface class](interface-clas
 (Facoltativo) Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributi, vedere **attributi**.
 
 *class-key*<br/>
-**`class`** o**`typename`**
+**`class`** o **`typename`**
 
 *type-parameter-identifier(s)*<br/>
 Elenco di identificatori delimitati da virgole.
@@ -59,7 +59,7 @@ Dichiarazioni dei membri di interfaccia.
 *declarators*<br/>
 (Facoltativo) Dichiarazioni di variabili basate su questo tipo.
 
-## <a name="example"></a>Esempio
+## <a name="example-how-to-declare-and-instantiate-a-generic-interface"></a>Esempio: come dichiarare e creare un'istanza di un'interfaccia generica
 
 L'esempio seguente illustra come dichiarare un'interfaccia generica e crearne un'istanza. Nell'esempio viene dichiarata l'interfaccia generica `IList<ItemType>`. Questa viene quindi implementata da due classi generiche `List1<ItemType>` e `List2<ItemType>`, con implementazioni diverse.
 
@@ -236,7 +236,7 @@ Array List
 List2
 ```
 
-## <a name="example"></a>Esempio
+## <a name="example-declare-a-generic-interface"></a>Esempio: dichiarare un'interfaccia generica
 
 Questo esempio dichiara un'interfaccia generica, `IMyGenIface`, e due interfacce non generiche, `IMySpecializedInt` e `ImySpecializedString`, che specializzano l'interfaccia `IMyGenIface`. Le due interfacce specializzate vengono quindi implementate da due classi, `MyIntClass` e `MyStringClass`. L'esempio illustra come specializzare le interfacce generiche, creare istanze di interfacce generiche e non generiche e chiamare i membri implementati in modo esplicito nelle interfacce.
 

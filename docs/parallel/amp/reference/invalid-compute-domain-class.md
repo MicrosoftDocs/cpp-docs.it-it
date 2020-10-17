@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 09418991e805e494c1d79ef31980bbec66a2e172
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126461"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135567"
 ---
 # <a name="invalid_compute_domain-class"></a>invalid_compute_domain (classe)
 
@@ -45,13 +45,13 @@ class invalid_compute_domain : public runtime_exception;
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
-## <a name="ctor"></a>invalid_compute_domain
+## <a name="invalid_compute_domain"></a><a name="ctor"></a> invalid_compute_domain
 
 Inizializza una nuova istanza della classe.
 
-## <a name="syntax"></a>Sintassi
+### <a name="syntax"></a>Sintassi
 
 ```cpp
 explicit invalid_compute_domain(
@@ -67,7 +67,7 @@ Descrizione dell'errore.
 
 ### <a name="return-value"></a>Valore restituito
 
-Istanza della classe `invalid_compute_domain`
+Istanza della `invalid_compute_domain` classe
 
 ## <a name="see-also"></a>Vedere anche
 

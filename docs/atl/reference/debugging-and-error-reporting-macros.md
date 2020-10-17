@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833478"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135541"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e segnalazione errori
 
@@ -40,7 +40,7 @@ Definire questa macro prima di includere tutti i file di intestazione ATL per tr
 #define _ATL_DEBUG_INTERFACES
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'output di traccia verrà visualizzato come illustrato di seguito:
 
@@ -71,7 +71,7 @@ Scrive tutte le chiamate a nella `QueryInterface` finestra di output.
 #define _ATL_DEBUG_QI
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se una chiamata a ha `QueryInterface` esito negativo, la finestra di output visualizzerà:
 
@@ -90,11 +90,11 @@ ATLASSERT(booleanExpression);
 *booleanExpression*<br/>
 Espressione (inclusi i puntatori) che restituisce un valore diverso da zero oppure 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle build di debug, ATLASSERT valuta *BooleanExpression* e genera un report di debug quando il risultato è false.
 
-## <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldef. h
 
@@ -115,7 +115,7 @@ Specifica un'espressione booleana da testare.
 *h*<br/>
 Specifica un codice di errore da restituire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Queste macro forniscono un meccanismo per rilevare e notificare all'utente l'utilizzo non corretto dei parametri.
 
@@ -131,7 +131,7 @@ La differenza tra ATLENSURE e ATLASSERT è che ATLENSURE genera un'eccezione nel
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti
 
 **Intestazione:** AFX. h
 
@@ -148,7 +148,7 @@ ATLTRACENOTIMPL(funcname);
 *funcname*<br/>
 in Stringa che contiene il nome della funzione non implementata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle build di rilascio, restituisce semplicemente E_NOTIMPL.
 
@@ -156,7 +156,7 @@ Nelle build di rilascio, restituisce semplicemente E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti
 
 **Intestazione:** ATLTRACE. h
 
@@ -181,13 +181,13 @@ in Stringa e variabili da inviare alla finestra di output o a qualsiasi applicaz
 *category*<br/>
 in Tipo di evento o metodo su cui creare un report. Per un elenco di categorie, vedere la sezione Osservazioni.
 
-*livello*<br/>
+*level*<br/>
 in Livello di traccia da segnalare. Per informazioni dettagliate, vedere la sezione Osservazioni.
 
 *lpszFormat*<br/>
 in Stringa formattata da inviare al dispositivo di dump.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione di ATLTRACE, vedere [ATLTRACE2](#atltrace2) . ATLTRACE e ATLTRACE2 hanno lo stesso comportamento, ATLTRACE è incluso per la compatibilità con le versioni precedenti.
 
@@ -212,13 +212,13 @@ in Stringa da inviare alla finestra di output o a qualsiasi applicazione che int
 *category*<br/>
 in Tipo di evento o metodo su cui creare un report. Per un elenco di categorie, vedere la sezione Osservazioni.
 
-*livello*<br/>
+*level*<br/>
 in Livello di traccia da segnalare. Per informazioni dettagliate, vedere la sezione Osservazioni.
 
 *lpszFormat*<br/>
 in `printf`Stringa di formato in stile da utilizzare per creare una stringa da inviare al dispositivo di dump.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La forma abbreviata di ATLTRACE2 scrive una stringa nella finestra di output del debugger. Il secondo formato di ATLTRACE2 scrive anche l'output nella finestra di output del debugger, ma è soggetto alle impostazioni dello strumento di traccia ATL/MFC (vedere l' [esempio ATLTraceTool](../../overview/visual-cpp-samples.md)). Se, ad esempio, si imposta *Level* su 4 e lo strumento di traccia ATL/MFC sul livello 0, il messaggio non verrà visualizzato. il *livello* può essere 0, 1, 2, 3 o 4. Il valore predefinito 0 indica solo i problemi più gravi.
 

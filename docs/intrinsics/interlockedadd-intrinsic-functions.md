@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c611a22e696b9dda0c6910cd4aac84399cc7d20a
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683897"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135554"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>Funzioni intrinseche _InterlockedAdd
 
@@ -90,7 +90,7 @@ Entrambe le funzioni restituiscono il risultato dell'addizione.
 
 ## <a name="requirements"></a>Requisiti
 
-|Intrinsic|Architettura|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_InterlockedAdd`|ARM, ARM64|
 |`_InterlockedAdd_acq`|ARM, ARM64|
@@ -103,13 +103,13 @@ Entrambe le funzioni restituiscono il risultato dell'addizione.
 
 **File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le versioni di queste funzioni con il suffisso `_acq` o `_rel` eseguono un'aggiunta interlocked in base alla semantica di acquisizione o rilascio. La *semantica di acquisizione* significa che il risultato dell'operazione viene reso visibile a tutti i thread e processori prima di eventuali letture e scritture di memoria successive. L'acquisizione è utile quando si entra in una sezione critica. La *semantica di rilascio* significa che tutte le letture e le scritture di memoria vengono forzate a essere rese visibili a tutti i thread e processori prima che il risultato dell'operazione venga reso visibile. Il rilascio è utile quando si esce da una sezione critica. Le funzioni intrinseche con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
 
 Queste routine sono disponibili solo come funzioni intrinseche.
 
-## <a name="examples"></a>Esempi
+## <a name="example-_interlockedadd"></a>Esempio: `_InterlockedAdd`
 
 ```cpp
 // interlockedadd.cpp
@@ -130,11 +130,13 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output-_interlockedadd"></a>Output `_InterlockedAdd`
 
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
+
+## <a name="example-_interlockedadd64"></a>Esempio: `_InterlockedAdd64`
 
 ```cpp
 // interlockedadd64.cpp
@@ -158,7 +160,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output-_interlockedadd64"></a>Output `_InterlockedAdd64`
 
 ```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff

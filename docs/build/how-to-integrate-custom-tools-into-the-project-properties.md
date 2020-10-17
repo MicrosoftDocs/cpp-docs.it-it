@@ -1,40 +1,58 @@
 ---
 title: 'Procedura: integrare strumenti personalizzati nelle proprietà del progetto'
-ms.date: 05/16/2019
+description: Come integrare strumenti personalizzati nelle proprietà del progetto nei progetti Visual Studio C++.
+ms.date: 10/08/2020
 helpviewer_keywords:
-- 'msbuild (c++), howto: integrate custom tools'
-ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 821fb1637306c70d850f12fc1b954860557f47f7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+- 'MSBuild (C++), howto: integrate custom tools'
+ms.openlocfilehash: 4b88bf94a92efaf5046fd83e5c6358f3fdf80895
+ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840440"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099667"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procedura: integrare strumenti personalizzati nelle proprietà del progetto
 
-È possibile aggiungere opzioni di strumenti personalizzati nella finestra **Pagine delle proprietà** tramite la creazione di un file XML Schema sottostante.
+È possibile aggiungere opzioni dello strumento personalizzato alla finestra **pagine delle proprietà** di Visual Studio creando un file XML.
 
-La sezione **Proprietà di configurazione** della finestra **Pagine delle proprietà** visualizza gruppi di impostazioni noti come *regole*. Ogni regola contiene le impostazioni per uno strumento o un gruppo di funzionalità. La regola **Linker**, ad esempio, contiene le impostazioni per lo strumento linker. Le impostazioni in una regola possono essere suddivise in *categorie*.
+Nella sezione **proprietà di configurazione** della finestra pagine delle **Proprietà** vengono visualizzati i gruppi di impostazioni noti come *regole*. Ogni regola contiene le impostazioni per uno strumento o un gruppo di funzionalità. La regola **Linker**, ad esempio, contiene le impostazioni per lo strumento linker. Le impostazioni in una regola possono essere suddivise in *categorie*.
 
-Questo documento illustra come creare in una cartella set un file che contenga le proprietà per lo strumento personalizzato, in modo che queste vengano caricate all'avvio di Visual Studio. Per informazioni su come modificare il file, vedere [Platform Extensibilty Part 2](/archive/blogs/vsproject/platform-extensibility-part-2) (Estendibilità della piattaforma, parte 2) nel blog del team del progetto Visual Studio.
+È possibile creare un file di regole che contiene le proprietà dello strumento personalizzato in modo che le proprietà vengano caricate all'avvio di Visual Studio. Per informazioni su come modificare il file, vedere [estendibilità della piattaforma parte 2](/archive/blogs/vsproject/platform-extensibility-part-2) nel Blog del team di progetto di Visual Studio.
+
+::: moniker range="vs-2015"
+
+La cartella in cui inserire il file delle regole dipende dalle impostazioni locali e dalla versione di Visual Studio in uso. In un prompt dei comandi per gli sviluppatori di Visual Studio 2015 o versione precedente la cartella Rules è *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>`* . Il `<version>` valore è *`v140`* in Visual Studio 2015. `<locale>`È un LCID, ad esempio, `1033` per l'inglese. Si userà un percorso diverso per ogni edizione di Visual Studio installata e per ciascuna lingua. Ad esempio, il percorso predefinito della cartella Rules per Visual Studio 2015 Community Edition in inglese potrebbe essere *`C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140\1033\`* .
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+La cartella in cui inserire il file delle regole dipende dalle impostazioni locali e dalla versione di Visual Studio in uso. In un prompt dei comandi per gli sviluppatori di Visual Studio 2017 la cartella Rules è *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* . `<locale>`È un LCID, ad esempio, `1033` per l'inglese. In un prompt dei comandi per gli sviluppatori di Visual Studio 2015 o versione precedente la cartella Rules è *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* , dove il `<version>` valore è *`v140`* in Visual Studio 2015. Si userà un percorso diverso per ogni edizione di Visual Studio installata e per ciascuna lingua. Ad esempio, il percorso predefinito della cartella Rules per Visual Studio 2017 Community Edition in inglese potrebbe essere *`C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\`* .
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+La cartella in cui inserire il file delle regole dipende dalle impostazioni locali e dalla versione di Visual Studio in uso. In un prompt dei comandi per gli sviluppatori di Visual Studio 2019 o versioni successive la cartella Rules è *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\<locale>\`* , dove il `<version>` valore è *`v160`* in Visual Studio 2019. `<locale>`È un LCID, ad esempio, `1033` per l'inglese. In Visual Studio 2017 la cartella Rules è *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* . In un prompt dei comandi per gli sviluppatori di Visual Studio 2015 o versione precedente la cartella Rules è *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* . Si userà un percorso diverso per ogni edizione di Visual Studio installata e per ciascuna lingua. Ad esempio, il percorso predefinito della cartella Rules per Visual Studio 2019 Community Edition in inglese potrebbe essere *`C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\1033\`* .
+
+::: moniker-end
 
 ### <a name="to-add-or-change-project-properties"></a>Per aggiungere o modificare proprietà del progetto
 
 1. Nell'editor XML, creare un file XML.
 
-1. Salvare il file nella cartella `VCTargets\1033` di Visual Studio. Il percorso è diverso per ogni edizione di Visual Studio installata e per ogni lingua. Ad esempio, il percorso predefinito della cartella per Visual Studio 2019 Community Edition in lingua inglese è `C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\VC\VCTargets`. Modificare il percorso per la lingua e l'edizione di Visual Studio in uso. Ogni regola nella finestra **Pagine delle proprietà** è rappresentata da un file XML in questa cartella. Assicurarsi che il nome del file sia univoco all'interno della cartella.
+1. Salvare il file nella cartella regole predefinite. Modificare il percorso per la lingua e l'edizione di Visual Studio in uso. Ogni regola nella finestra **Pagine delle proprietà** è rappresentata da un file XML in questa cartella. Assicurarsi che il nome del file sia univoco all'interno della cartella.
 
-1. Copiare il contenuto del file `%ProgramFiles%\Microsoft Visual Studio\2019\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>\cl.xml` (o in qualunque percorso), chiuderlo senza salvare le modifiche e quindi incollare il contenuto nel nuovo file XML. È possibile usare qualsiasi file XML Schema. Questo è solo uno dei file che è possibile usare per iniziare con un modello.
+1. Copiare il contenuto di un file di regole esistente, ad esempio *`rc.xml`* , chiuderlo senza salvare le modifiche, quindi incollare il contenuto nel nuovo file XML. È possibile copiare qualsiasi file di XML Schema da usare come modello. Sceglierne uno simile allo strumento.
 
 1. Nel nuovo file XML modificare il contenuto in base alle esigenze. Assicurarsi di modificare il **nome della regola** e **Rule. DisplayName** nella parte superiore del file.
 
 1. Salvare le modifiche e chiudere il file.
 
-1. I file XML in `%ProgramFiles%\Microsoft Visual Studio\2019\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>` (o nel percorso in cui sono stati salvati) vengono caricati all'avvio di Visual Studio. Per testare il nuovo file, quindi, riavviare Visual Studio.
+1. I file XML nella cartella Rules vengono caricati all'avvio di Visual Studio. Per testare il nuovo file, riavviare Visual Studio.
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e quindi scegliere **Proprietà**. Nel riquadro sinistro della finestra **Pagine delle proprietà** verificare che sia presente un nuovo nodo con il nome della regola.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su un progetto, quindi scegliere **Proprietà**. Nella finestra **pagine delle proprietà** verificare che sia presente un nuovo nodo con il nome della regola.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [MSBuild nella riga di comando-C++](msbuild-visual-cpp.md)
