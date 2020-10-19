@@ -1,14 +1,15 @@
 ---
 title: Proprietà C/C++ (Linux C++)
-ms.date: 06/07/2019
+ms.date: 10/14/2020
+description: Descrive le opzioni di compilazione di Linux nella pagina delle proprietà di Visual Studio C/C++
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0840327b30d94b4845adef7788fd73f4e797775f
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441479"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176244"
 ---
 # <a name="cc-properties-linux-c"></a>Proprietà C/C++ (Linux C++)
 
@@ -36,6 +37,9 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Compilatore C++ | Consente di specificare il programma da richiamare durante la compilazione di file di origine C++ oppure il percorso del compilatore C++ nel sistema remoto. |
 | Timeout compilazione | Timeout di compilazione remota in millisecondi. |
 | Copia file oggetto | Consente di specificare se copiare i file oggetto compilati dal sistema remoto al computer locale. |
+| Numero massimo processi di compilazione paralleli | Numero di processi da creare in parallelo durante la compilazione. Il valore predefinito è 1. Se si usa il sottosistema Windows per Linux (WSL) versione 1, il limite è 64. |
+| Convalida architettura | Specificare se verificare se la piattaforma di destinazione del progetto corrisponde al sistema remoto.|
+| Abilita sanificatore indirizzo | Compilare il programma con l'igienizzatore degli indirizzi, ovvero un rilevatore di errori di memoria veloce in grado di rilevare problemi di memoria di runtime, ad esempio use-after-free, ed eseguire controlli fuori limite.|
 
 ## <a name="optimization"></a>Optimization
 
@@ -50,8 +54,8 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ## <a name="preprocessor"></a>Preprocessore
 
-| Proprietà | Descrizione | Opzioni |
-|--|--|--|
+| Proprietà | Descrizione |
+|--|--|
 | Definizioni del preprocessore | Definisce i simboli di pre-elaborazione per il file origine. (-D) |
 | Rimuovi definizioni per il preprocessore | Rimuove una o più definizioni per il preprocessore.  (-U \[macro]) |
 | Rimuovi tutte le definizioni per il preprocessore | Rimuove tutti i valori precedentemente definiti per il preprocessore.  (-undef) |
@@ -73,14 +77,14 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
 | Abilita informazioni sui tipi in fase di esecuzione | Aggiunge codice per il controllo dei tipi di oggetto C++ in fase di esecuzione (informazioni sui tipi in fase di esecuzione).     (frtti, fno-rtti) |
-| Standard del linguaggio C | Determina lo standard del linguaggio C. | **Predefinito**<br/>**C89**: standard del linguaggio C89.<br/>**C99**: standard del linguaggio C99.<br/>**C11**: standard del linguaggio C11.<br/>**C99 (dialetto GNU)**: standard del linguaggio C99 (dialetto GNU).<br/>**C11 (GNU Dialect)** - C11 (GNU Dialect) Language Standard. |
-| Standard del linguaggio C++ | Determina lo standard del linguaggio C++. | **Predefinito**<br/>**C++03**: standard del linguaggio C++03.<br/>**C-11** - Standard linguistico C-11.<br/>**C++14**: standard del linguaggio C++14.<br/>**C++03 (dialetto GNU)**: standard del linguaggio C++03 (dialetto GNU).<br/>**C++11 (dialetto GNU)**: standard del linguaggio C++11 (dialetto GNU).<br/>**C++14 (dialetto GNU)**: standard del linguaggio C++14 (dialetto GNU). |
+| Standard del linguaggio C | Determina lo standard del linguaggio C. | **Default**<br/>**C89**: standard del linguaggio C89.<br/>**C99**: standard del linguaggio C99.<br/>**C11**: standard del linguaggio C11.<br/>**C99 (dialetto GNU)**: standard del linguaggio C99 (dialetto GNU).<br/>**C11 (dialetto GNU)** : standard del linguaggio C11 (dialetto GNU). |
+| Standard del linguaggio C++ | Determina lo standard del linguaggio C++. | **Default**<br/>**C++03**: standard del linguaggio C++03.<br/>**C++ 11** -standard del linguaggio c++ 11.<br/>**C++14**: standard del linguaggio C++14.<br/>**C++03 (dialetto GNU)**: standard del linguaggio C++03 (dialetto GNU).<br/>**C++11 (dialetto GNU)**: standard del linguaggio C++11 (dialetto GNU).<br/>**C++14 (dialetto GNU)**: standard del linguaggio C++14 (dialetto GNU). |
 
 ## <a name="advanced"></a>Avanzate
 
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
-| Compila come | Seleziona il linguaggio di compilazione per i file con estensione c e cpp. (-x c, -x c++) | **Valore predefinito**: viene rilevato in base all'estensione c o cpp.<br/>**Compila come codice C** - Compila come codice C.Compile as C Code - Compile as C code.<br/>**Compilare come codice C** , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , |
+| Compila come | Seleziona il linguaggio di compilazione per i file con estensione c e cpp. (-x c, -x c++) | **Valore predefinito**: viene rilevato in base all'estensione c o cpp.<br/>**Compila come codice c** . Compila come codice c.<br/>**Compila come codice c++** : Compila come codice c++. |
 | File di inclusione forzati | Specifica uno o più file di inclusione forzati (-include \[nome]) |
 
 ::: moniker-end

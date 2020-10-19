@@ -1,6 +1,7 @@
 ---
 title: Avvisi del compilatore da C4800 a C5999
-ms.date: 04/21/2019
+description: Tabella degli avvisi del compilatore Microsoft C/C++ C4800 tramite C5999.
+ms.date: 10/18/2020
 f1_keywords:
 - C4808
 - C4809
@@ -193,14 +194,27 @@ helpviewer_keywords:
 - C5205
 - C5206
 - C5207
-ms.openlocfilehash: 71a924982a1375f378e6935859aae05f0298bd22
-ms.sourcegitcommit: 00af3df3331854b23693ee844e5e7c10c8b05a90
+- C5209
+- C5210
+- C5211
+- C5212
+- C5213
+- C5214
+- C5215
+- C5216
+- C5217
+- C5218
+- C5219
+- C5220
+- C5221
+ms.openlocfilehash: 1092aca672c41c21bbdf5e52593e70c0c0e06cdc
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491401"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176258"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Avvisi del compilatore da C4800 a C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Avvisi del compilatore C4800 tramite C5999
 
 Negli articoli di questa sezione della documentazione viene illustrato un subset dei messaggi di avviso generati dal compilatore.
 
@@ -216,8 +230,8 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | [Avviso del compilatore (livello 1) C4805](compiler-warning-level-1-c4805.md) | '*Operation*': combinazione non affidabile del tipo '*tipo1*' e del tipo '*tipo2*' nell'operazione |
 | [Avviso del compilatore (livello 1) C4806](compiler-warning-level-1-c4806.md) | '*Operation*': operazione non affidabile: nessun valore di tipo '*tipo1*' promosso al tipo '*tipo2*' può essere uguale alla costante specificata |
 | [Avviso del compilatore (livello 1) C4807](compiler-warning-level-1-c4807.md) | '*Operation*': combinazione non affidabile del tipo '*tipo1*' e del campo di bit signed di tipo '*tipo2*' |
-| Avviso del compilatore (livello 1) C4808 | `case`'*value*' non è un valore valido per la `switch` condizione di tipo ' `bool` ' |
-| Avviso del compilatore (livello 1) C4809 | `switch`l'etichetta '' dell'istruzione è ridondante `default` . `case` sono state specificate tutte le etichette '' possibili |
+| Avviso del compilatore (livello 1) C4808 | `case` '*value*' non è un valore valido per la `switch` condizione di tipo ' `bool` ' |
+| Avviso del compilatore (livello 1) C4809 | `switch` l'etichetta '' dell'istruzione è ridondante `default` . `case` sono state specificate tutte le etichette '' possibili |
 | [Avviso del compilatore (livello 1) C4810](compiler-warning-level-1-c4810.md) | valore di `pragma pack(show)` = = n |
 | [Avviso del compilatore (livello 1) C4811](compiler-warning-level-1-c4811.md) | valore di `pragma conform(forScope, show)`  ==  *value* |
 | [Avviso del compilatore (livello 1) C4812](compiler-warning-level-1-c4812.md) | stile di dichiarazione obsoleto: usare '*new_syntax*' |
@@ -228,16 +242,16 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | [Avviso del compilatore (livello 4) C4820](compiler-warning-level-4-c4820.md) | riempimento byte '*bytes*' aggiunto dopo il costrutto '*MEMBER_NAME*' |
 | [Avviso del compilatore (livello 1) C4821](compiler-warning-level-1-c4821.md) | Impossibile determinare il tipo di codifica Unicode. salvare il file con la firma (BOM) |
 | [Avviso del compilatore (livello 1) C4822](compiler-warning-level-1-c4822.md) | ' member function ': la funzione membro della classe locale non dispone di un corpo |
-| [Avviso del compilatore (livello 3) C4823](compiler-warning-level-3-c4823.md) | '*Function*': USA puntatori di blocco ma la semantica di rimozione non è abilitata. Prendere in considerazione l'uso di`/EHa` |
+| [Avviso del compilatore (livello 3) C4823](compiler-warning-level-3-c4823.md) | '*Function*': USA puntatori di blocco ma la semantica di rimozione non è abilitata. Prendere in considerazione l'uso di `/EHa` |
 | Avviso del compilatore (livello 2) C4826 | La conversione da'*tipo1*' a'*tipo2*' ha un segno esteso. Questo potrebbe causare un comportamento imprevisto in fase di esecuzione. |
-| Avviso del compilatore (livello 3) C4827 | Un metodo ' `ToString` ' pubblico con 0 parametri deve essere contrassegnato come `virtual` e`override` |
+| Avviso del compilatore (livello 3) C4827 | Un metodo ' `ToString` ' pubblico con 0 parametri deve essere contrassegnato come `virtual` e `override` |
 | [Avviso del compilatore (livello 1) C4829](compiler-warning-level-1-c4829.md) | Parametri probabilmente errati per il funzionamento `main` . Prendere in considerazione ' `int main(Platform::Array<Platform::String^>^ argv)` ' |
 | [Avviso del compilatore (livello 1) C4835](compiler-warning-level-1-c4835.md) | '*Variable*': l'inizializzatore per i dati esportati non verrà eseguito finché il codice gestito non viene eseguito per la prima volta nell'assembly host |
 | Avviso del compilatore (livello 4) C4837 | rilevato trigramma:' `??` *character*' sostituito da'*character*' |
 | [Avviso del compilatore (livello 1) C4838](compiler-warning-level-1-c4838.md) | la conversione da'*TYPE_1*' a'*TYPE_2*' richiede una conversione verso un tipo di caratteri più piccolo |
 | [Avviso del compilatore (livello 3) C4839](compiler-warning-level-3-c4839.md) | uso non standard della classe '*Type*' come argomento di una funzione Variadic |
 | [Avviso del compilatore (livello 4) C4840](compiler-warning-level-4-c4840.md) | uso non portabile della classe '*Type*' come argomento di una funzione Variadic |
-| Avviso del compilatore (livello 4) C4841 | utilizzata estensione non standard: indicatore di membro composto utilizzato in`offsetof` |
+| Avviso del compilatore (livello 4) C4841 | utilizzata estensione non standard: indicatore di membro composto utilizzato in `offsetof` |
 | Avviso del compilatore (livello 4) C4842 | `offsetof`non è garantito che il risultato di '' applicato a un tipo che usa l'ereditarietà multipla sia coerente tra le versioni del compilatore |
 | Avviso del compilatore C4843 | '*tipo1*': un gestore di eccezioni di riferimento a un tipo di matrice o di funzione non è raggiungibile. usare '*tipo2*' |
 | Avviso del compilatore C4844 | ' `export module` *`module_name`* `;` ' è ora la sintassi preferita per dichiarare un'interfaccia di modulo |
@@ -248,7 +262,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | Avviso del compilatore C4854 | comportamento non definito del puntatore null di associazione a riferimento |
 | Avviso del compilatore C4855 | l'acquisizione implicita di ' `this` ' tramite ' `[=]` ' è deprecata in ' version ' |
 | Avviso del compilatore C4856 | '*value*' non è un argomento valido per ' `/d1initAll:FillPattern` ' (il valore deve essere compreso tra 0 e 255). Flag della riga di comando ignorato |
-| Avviso del compilatore C4857 | La modalità c++/CLI non supporta le versioni C++ successive a C++ 17; impostazione della lingua su`/std:c++17` |
+| Avviso del compilatore C4857 | La modalità c++/CLI non supporta le versioni C++ successive a C++ 17; impostazione della lingua su `/std:c++17` |
 | [Avviso del compilatore (livello 4) C4866](c4866.md) | il compilatore non può applicare l'ordine di valutazione da sinistra a destra per la chiamata a *operator_name* |
 | [Avviso del compilatore (errore) avviso C4867](compiler-warning-c4867.md) | '*Function*': chiamata di funzione mancante nell'elenco degli argomenti; usare "*Call*" per creare un puntatore al membro |
 | [Avviso del compilatore (livello 4) C4868](compiler-warning-c4868.md) | il compilatore '_file_(*Line_number*)' non può applicare l'ordine di valutazione da sinistra a destra nell'elenco di inizializzazione tra parentesi graffe |
@@ -277,13 +291,13 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | [Avviso del compilatore (livello 4) C4932](compiler-warning-level-4-c4932.md) | `__identifier(`*identificatore* `)` di e l' `__identifier(` *identificatore* non `)` sono distinguibili |
 | Avviso del compilatore (livello 1) C4934 | ' `__delegate(multicast)` ' è deprecato. usare ' `__delegate` ' |
 | [Avviso del compilatore (livello 1) C4935](compiler-warning-level-1-c4935.md) | identificatore di accesso assembly modificato da'*Access*' |
-| [Avviso del compilatore (livello 1, errore) C4936](compiler-warning-c4936.md) | Questa __declspec è supportata solo se compilata con `/clr` o`/clr:pure` |
+| [Avviso del compilatore (livello 1, errore) C4936](compiler-warning-c4936.md) | Questa __declspec è supportata solo se compilata con `/clr` o `/clr:pure` |
 | [Avviso del compilatore (livello 4) C4937](compiler-warning-level-4-c4937.md) | '*Text1*' è*text2*' non sono distinguibili come argomenti per '*Directive*' |
-| [Avviso del compilatore (livello 4) C4938](compiler-warning-level-4-c4938.md) | '*var*': la variabile di riduzione a virgola mobile può causare risultati incoerenti in `/fp:strict` o`#pragma fenv_access` |
+| [Avviso del compilatore (livello 4) C4938](compiler-warning-level-4-c4938.md) | '*var*': la variabile di riduzione a virgola mobile può causare risultati incoerenti in `/fp:strict` o `#pragma fenv_access` |
 | [Avviso del compilatore C4939](compiler-warning-level-1-c4939.md) | #pragma vtordisp è deprecato e verrà rimosso in una futura versione di Visual C++ |
 | [Avviso del compilatore (livello 1) C4944](compiler-warning-level-1-c4944.md) | '*Symbol*': non è possibile importare il simbolo da'*Assembly1*': perché'*Symbol*' esiste già nell'ambito corrente |
 | [Avviso del compilatore (livello 1) C4945](compiler-warning-level-1-c4945.md) | '*Symbol*': non è possibile importare il simbolo da'*Assembly1*': perché'*Symbol*' è già stato importato da un altro assembly '*Assembly2*' |
-| [Avviso del compilatore (livello 1) C4946](compiler-warning-level-1-c4946.md) | `reinterpret_cast`usato tra le classi correlate:'*Class1*' è*Class2*' |
+| [Avviso del compilatore (livello 1) C4946](compiler-warning-level-1-c4946.md) | `reinterpret_cast` usato tra le classi correlate:'*Class1*' è*Class2*' |
 | [Avviso del compilatore (livello 1) C4947](compiler-warning-level-1-c4947.md) | '*type_or_member*': contrassegnato come obsoleto |
 | [Avviso del compilatore (livello 2) C4948](compiler-warning-level-2-c4948.md) | il tipo restituito di '*funzione di accesso*' non corrisponde all'ultimo tipo di parametro del setter corrispondente |
 | [Avviso del compilatore (livello 1 e livello 4) C4949](compiler-warning-level-1-and-level-4-c4949.md) | i pragma ' `managed` ' è `unmanaged` ' sono significativi solo se compilati con ' `/clr[:option]` ' |
@@ -305,7 +319,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | [Avviso del compilatore (livello 1) C4965](compiler-warning-level-1-c4965.md) | casella implicita di Integer 0; usare nullptr o cast esplicito |
 | Avviso del compilatore (livello 1) C4966 | '*Function*' ha un' `__code_seg` annotazione con nome di segmento non supportato, annotazione ignorata |
 | Avviso del compilatore C4970 | Costruttore delegato: oggetto di destinazione ignorato perché'*Type*' è statico |
-| Avviso del compilatore (livello 1) C4971 | Ordine degli argomenti: \<target object> , \<target function> per il costruttore di delegato è deprecato, usare \<target function> ,\<target object=""> |
+| Avviso del compilatore (livello 1) C4971 | Ordine degli argomenti: \<target object> , \<target function> per il costruttore di delegato è deprecato, usare \<target function> , \<target object=""> |
 | [Avviso del compilatore (livello 1, errore) C4972](compiler-warning-c4972.md) | La modifica o il trattamento diretto del risultato di una operazione di unboxing come lvalue non è verificabile |
 | Avviso del compilatore (livello 1) C4973 | '*Symbol*': contrassegnato come deprecato |
 | Avviso del compilatore (livello 1) C4974 | '*Symbol*': contrassegnato come deprecato |
@@ -334,7 +348,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | Avviso del compilatore (livello 4) C5029 | utilizzata estensione non standard: gli attributi di allineamento in C++ si applicano solo a variabili, membri dati e tipi di tag |
 | Avviso del compilatore (livello 3) C5030 | l'attributo '*attribute-name*' non è riconosciuto |
 | Avviso del compilatore (livello 4) C5031 | `#pragma warning(pop)`: probabile mancata corrispondenza, schiocco dello stato di avviso inserito in un file diverso |
-| Avviso del compilatore (livello 4) C5032 | rilevato `#pragma warning(push)` senza corrispondente`#pragma warning(pop)` |
+| Avviso del compilatore (livello 4) C5032 | rilevato `#pragma warning(push)` senza corrispondente `#pragma warning(pop)` |
 | Avviso del compilatore (livello 1) C5033 | '*Storage-Class*' non è più una classe di archiviazione supportata |
 | Avviso del compilatore C5034 | l'uso di '*intrinsic*' intrinseco causa la compilazione della *funzione function-name* come codice Guest |
 | Avviso del compilatore C5035 | l'uso della funzionalità'*feature*' comporta la compilazione del *nome della funzione* di funzione come codice Guest |
@@ -362,11 +376,11 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | Avviso del compilatore C5057 | il riferimento all'unità di intestazione per ' name ' esiste già.  L'unità di intestazione ' header-name ' verrà ignorata |
 | Avviso del compilatore C5058 | errore file system: Impossibile trovare il file di intestazione ' nome file ' per l'unità di intestazione ' unit-name ' |
 | Avviso del compilatore C5059 | i controlli di runtime e il sanificatore degli indirizzi non sono attualmente supportati-disabilitazione di controlli di runtime |
-| Avviso del compilatore C5060 | `/Qpar`e l'indirizzo igienizzatore non è attualmente supportato-disabilitazione della parallelizzazione automatica |
+| Avviso del compilatore C5060 | `/Qpar` e l'indirizzo igienizzatore non è attualmente supportato-disabilitazione della parallelizzazione automatica |
 | Avviso del compilatore C5061 | l'uso di un operatore virgola come espressione di indice è stato deprecato |
 | Avviso del compilatore C5062 | l'inizializzazione dell'elenco diretto enum tra' Type-1' è Type-2' non è più supportata |
 | Avviso del compilatore C5063 | ' `std::is_constant_evaluated` ' restituisce sempre true nelle espressioni valutate in modo manifesto costanti |
-| Avviso del compilatore (livello 1) C5100 | `__VA_ARGS__`è riservato per l'uso in macro Variadic |
+| Avviso del compilatore (livello 1) C5100 | `__VA_ARGS__` è riservato per l'uso in macro Variadic |
 | Avviso del compilatore (livello 1) C5101 | l'uso della direttiva per il preprocessore in un elenco di argomenti macro simile a una funzione è un comportamento non definito |
 | Avviso del compilatore (livello 1) C5102 | la definizione macro '*value*' della riga di comando non valida verrà ignorata |
 | Avviso del compilatore (livello 1) C5103 | Se si incolla '*token1*' è*token2*' non si ottiene un token di pre-elaborazione valido |
@@ -374,7 +388,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | [Avviso del compilatore (livello 1) C5105](c5105.md) | l'espansione della macro che produce ' defined ' presenta un comportamento non definito |
 | Avviso del compilatore (livello 1) C5106 | macro ridefinita con nomi di parametro diversi |
 | Avviso del compilatore (livello 1) C5107 | manca il carattere '*char*' di terminazione |
-| Avviso del compilatore C5108 | `__VA_OPT__`è riservato per l'uso in macro Variadic |
+| Avviso del compilatore C5108 | `__VA_OPT__` è riservato per l'uso in macro Variadic |
 | Avviso del compilatore C5200 | la funzionalità' feature-name ' richiede il flag del compilatore ' Option-Name ' |
 | Avviso del compilatore C5201 | una dichiarazione di modulo può essere visualizzata solo all'inizio di un'unità di conversione, a meno che non venga usato un frammento di modulo globale |
 | Avviso del compilatore C5202 | un frammento di modulo globale può contenere solo direttive per il preprocessore |
@@ -384,6 +398,19 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 | Avviso del compilatore C5206 | i tipi restituiti dedotti per le coroutine sono un'estensione non standard |
 | Avviso del compilatore C5207 | il requisito semplice dichiara la validità dell'espressione ' `e->id` '. Si intendeva ' `{ e } -> id` '? È possibile disattivare l'avviso utilizzando ' `{ e->id }` ' |
 | [Avviso del compilatore (livello 1) C5208](c5208.md) | classe senza nome utilizzata nel `typedef` nome non può dichiarare membri diversi da membri dati non statici, enumerazioni di membri o classi membro |
+| Avviso del compilatore C5209 | la sintassi C++ 20 per un'acquisizione init è stata modificata in ' &... inizializzatore identificatore opt ' |
+| Avviso del compilatore C5210 | '*Name*' non è un riferimento di unità di intestazione valido. ignorando |
+| Avviso del compilatore C5212 | '*Name*' non è un riferimento denominato valido. trattamento come riferimento al file |
+| Avviso del compilatore C5213 | il riferimento denominato '*Name*' viene considerato come una partizione denominata ma il nome non è specificato. trattamento come riferimento al file |
+| Avviso del compilatore C5214 | l'applicazione di '*Modifier*' a un operando con un tipo qualificato volatile è deprecata in c++ 20 |
+| Avviso del compilatore C5215 | '*Name*' un parametro di funzione con un tipo qualificato volatile è deprecato in c++ 20 |
+| Avviso del compilatore C5216 | '*Name*' un tipo restituito volatile qualificato è deprecato in c++ 20 |
+| Avviso del compilatore C5217 | una dichiarazione di binding strutturata che include volatile è deprecata in C++ 20 |
+| Avviso del compilatore C5218 | l'eliminazione definitiva potrebbe non comportarsi come previsto quando vengono utilizzati commutatori non conformi ' `/Zc:sizedDealloc-` ' o ' `/Zc:alignedNew-` ' |
+| Avviso del compilatore C5219 | conversione implicita da'*Type-1*' a'*Type-2*', possibile perdita di dati |
+| Avviso del compilatore C5220 | '*Name*': un membro dati non statico con un tipo qualificato volatile non implica più che i costruttori di copia/spostamento generati dal compilatore e gli operatori di assegnazione di copia/spostamento non siano semplici |
+| Avviso del compilatore C5221 | L'oggetto `xfg::rename` è deprecato. |
+
 
 ## <a name="see-also"></a>Vedere anche
 

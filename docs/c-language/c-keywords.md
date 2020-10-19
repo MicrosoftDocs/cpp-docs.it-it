@@ -1,18 +1,18 @@
 ---
 title: Parole chiave C
 description: Parole chiave nelle estensioni standard C e del compilatore C Microsoft.
-ms.date: 10/12/2020
+ms.date: 10/15/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: cb255e1d7ce6bc15bf13bc1e3152bc3464ea5ec2
-ms.sourcegitcommit: 651348f8cd92ab0d52f09e9225a7eb41562559db
+ms.openlocfilehash: 24981c8d70cb56b4578fd905a30ccc57eaa83d45
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059795"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176222"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
@@ -130,7 +130,7 @@ Le parole chiave e gli identificatori speciali seguenti sono riconosciuti dal co
 
 <sup>5</sup> per compatibilità con le versioni precedenti, queste parole chiave sono disponibili con due caratteri di sottolineatura iniziali e un singolo carattere di sottolineatura principale quando le estensioni Microsoft sono abilitate.
 
-<sup>6</sup> quando <Assert. h> non è incluso, il compilatore Microsoft Visual C esegue **`static_assert`** il mapping alla **`_Static_assert`** parola chiave C11.
+<sup>6</sup> se non si include <> Assert. h, il compilatore Microsoft Visual C esegue **`static_assert`** il mapping alla **`_Static_assert`** parola chiave C11.
 
 Le estensioni Microsoft sono attivate per impostazione predefinita. Per semplificare la creazione di codice portabile, è possibile disabilitare le estensioni Microsoft specificando l'opzione [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) durante la compilazione. Quando si usa questa opzione, alcune parole chiave specifiche di Microsoft sono disabilitate.
 

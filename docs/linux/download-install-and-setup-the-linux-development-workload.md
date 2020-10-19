@@ -3,12 +3,12 @@ title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 3f8e6eb8285652078e5f26ca58601bc6ccfa80d1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040977"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176273"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
@@ -157,7 +157,7 @@ Il computer di destinazione che esegue Fedora usa il programma di installazione 
 
 A questo punto si è pronti per creare o aprire un progetto Linux e configurarlo per l'esecuzione nel sistema di destinazione. Per altre informazioni, vedere:
 
-- [Creare un nuovo progetto Linux](create-a-new-linux-project.md)
+- [Creare un nuovo progetto C++ MSBuild per Linux](create-a-new-linux-project.md)
 - [Configurare un progetto CMake per Linux](cmake-linux-project.md)
 
 ::: moniker-end

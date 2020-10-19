@@ -1,14 +1,14 @@
 ---
 title: Configurare un progetto C++ MSBuild per Linux in Visual Studio
-ms.date: 08/06/2020
+ms.date: 10/16/2020
 description: Configurare un progetto Linux basato su MSBuild in Visual Studio in modo da poterlo compilare.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 51837dc86d041b9120f984cc01f8db06d696b292
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685956"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176327"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Configurare un progetto C++ MSBuild per Linux in Visual Studio
 
@@ -26,7 +26,7 @@ Questo argomento descrive come configurare un progetto Linux basato su MSBuild c
 
 **Visual Studio 2019 versione 16,1**:
 
-- Quando la destinazione è WSL, è possibile evitare le operazioni di copia necessarie per la compilazione e IntelliSense quando le destinazioni sono i sistemi Linux remoti.
+- Quando si fa riferimento a WSL, è possibile evitare le operazioni di copia necessarie per compilare e ottenere IntelliSense necessarie quando si usa un sistema Linux remoto come destinazione.
 
 - È possibile specificare destinazioni Linux separate per la compilazione e il debug.
 
@@ -40,6 +40,10 @@ Per visualizzare le opzioni di configurazione, selezionare il menu **> Propriet�
 
 Per impostazione predefinita, viene generato un file eseguibile con estensione out. Per compilare una libreria statica o dinamica, o per usare un makefile esistente, usare l'impostazione **Tipo di configurazione**.
 
+Se si sta compilando per il sottosistema Windows per Linux (WSL), WSL versione 1 è limitata a 64 processi di compilazione paralleli. Questa regola è regolata dall'impostazione relativa al **numero massimo di processi di compilazione paralleli** nelle **proprietà di configurazione > C/C++ > generale**.
+
+Indipendentemente dalla versione di WSL in uso, se si prevede di usare più di 64 processi di compilazione paralleli, è consigliabile creare con Ninja, che in genere sarà più veloce e affidabile. Per compilare con Ninja, usare l'impostazione **Abilita compilazione incrementale** in **proprietà di configurazione > generale**.
+
 Per altre informazioni sulle impostazioni nelle pagine delle proprietà, vedere [Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux](prop-pages-linux.md).
 
 ## <a name="remote-settings"></a>Impostazioni remote
@@ -52,7 +56,7 @@ Per modificare le impostazioni relative al computer Linux remoto, configurare le
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 versione 16,1**: per fare riferimento al sottosistema Windows per Linux, fare clic sulla freccia verso il basso per il **set di strumenti della piattaforma** e scegliere **WSL_1_0**. Le altre opzioni remote scompariranno e al loro posto verrà visualizzato il percorso alla shell WSL predefinita:
+   **Visual Studio 2019 versione 16,7**: per fare riferimento al sottosistema Windows per Linux (WSL), impostare l'elenco a discesa del **set di strumenti della piattaforma** su **gcc per il sottosistema Windows per Linux**. Le altre opzioni remote scompariranno e al loro posto verrà visualizzato il percorso alla shell WSL predefinita:
 
    ![Computer di generazione WSL](media/wsl-remote-vs2019.png)
 
@@ -67,7 +71,7 @@ Per modificare le impostazioni relative al computer Linux remoto, configurare le
 - La **directory del progetto di compilazione remota** è quella in cui verrà compilato il progetto specifico nel computer Linux remoto. Per impostazione predefinita, sarà **$(directoryradiceremota)/$(nomeprogetto)**, che si espanderà in una directory denominata come il progetto corrente, nella directory radice impostata in precedenza.
 
 > [!NOTE]
-> Per modificare compilatori C e C++ predefiniti o il linker e l'archiver usati per compilare il progetto, usare le voci corrispondenti nella sezione **C/C++ > Generale** e nella sezione **Linker > General**. È possibile ad esempio specificare una versione specifica di GCC o Clang. Per altre informazioni, vedere [Proprietà C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) e [Proprietà del linker (Linux C++)](prop-pages/linker-linux.md).
+> Per modificare compilatori C e C++ predefiniti o il linker e l'archiver usati per compilare il progetto, usare le voci corrispondenti nella sezione **C/C++ > Generale** e nella sezione **Linker > General**. È possibile ad esempio specificare una versione specifica di GCC o Clang. Per altre informazioni, vedere [Proprietà C/C++ (Linux c++)](prop-pages/c-cpp-linux.md) e [proprietà del linker (Linux c++)](prop-pages/linker-linux.md).
 
 ## <a name="copy-sources-remote-systems-only"></a>Copiare le origini (solo sistemi remoti)
 
@@ -106,7 +110,7 @@ Questa funzionalità dipende dal computer Linux in cui è installato il file ZIP
 sudo apt install zip
 ```
 
-Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiattaforma > Gestione connessione > Gestione intestazioni remote per IntelliSense**. Per aggiornare la cache di intestazione dopo aver apportato le modifiche nel computer Linux, selezionare la connessione remota e quindi selezionare **Aggiorna**. Selezionare **Elimina** per rimuovere le intestazioni senza eliminare la connessione stessa. Selezionare **Esplora** per aprire la directory locale in **Esplora file**. Considerare questa cartella come di sola lettura. Per scaricare le intestazioni per una connessione esistente creata prima di Visual Studio 2017 versione 15.3, selezionare la connessione e quindi **Scarica**.
+Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiattaforma > Gestione connessione > Gestione intestazioni remote per IntelliSense**. Per aggiornare la cache di intestazione dopo aver apportato le modifiche nel computer Linux, selezionare la connessione remota e quindi selezionare **Aggiorna**. Selezionare **Elimina** per rimuovere le intestazioni senza eliminare la connessione stessa. Selezionare **Esplora** per aprire la directory locale in **Esplora file**. Considerare questa cartella come di sola lettura. Per scaricare le intestazioni per una connessione esistente creata prima di Visual Studio 2017 versione 15,3, selezionare la connessione e quindi selezionare **Scarica**.
 
 ::: moniker range="vs-2017"
 

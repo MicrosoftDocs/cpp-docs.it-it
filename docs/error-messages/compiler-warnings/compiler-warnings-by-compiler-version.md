@@ -1,15 +1,16 @@
 ---
 title: Avvisi del compilatore per versione del compilatore
-ms.date: 04/22/2019
+description: Tabella degli avvisi del compilatore Microsoft C/C++ per versione del compilatore.
+ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: d8d47e9dbfce9e22cf7aab2e3e7beab72d86c770
-ms.sourcegitcommit: 00af3df3331854b23693ee844e5e7c10c8b05a90
+ms.openlocfilehash: b470663e3cea8ec62a1737fb19e9ec5a277d27cc
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491375"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176313"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore per versione del compilatore
 
@@ -44,12 +45,33 @@ Queste versioni del compilatore hanno introdotto nuovi avvisi:
 |  Visual Studio 2019 versione 16.4 | 19.24.28314.0 |
 | Visual Studio 2019 versione 16,5 | 19.25.28610.0 |
 | Visual Studio 2019 versione 16,6 | 19.26.28805.0 |
+| Visual Studio 2019 versione 16,7 | 19.26.29112.0 |
 
 È possibile specificare solo il numero principale, i numeri principali e secondari oppure i numeri principale, secondario e Build per l' **`/Wv`** opzione. Il compilatore segnala tutti gli avvisi che corrispondono a versioni che iniziano con il numero specificato. Elimina tutti gli avvisi per le versioni successive al numero specificato. Ad esempio, **`/Wv:17`** segnala gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 e Elimina gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versioni successive. Per non visualizzare gli avvisi introdotti in Visual Studio 2015 Update 2 e versioni successive, è possibile usare **`/Wv:19.00.23506`** . Usare **`/Wv:19.11`** per segnalare gli avvisi introdotti in qualsiasi versione di Visual Studio precedente a Visual studio 2017 versione 15,5, ma non visualizzare gli avvisi introdotti in Visual studio 2017 versione 15,5 e successive.
 
 Le sezioni seguenti elencano gli avvisi introdotti da ogni versione di Visual C++ che possono essere eliminati usando l' **`/Wv`** opzione del compilatore. L' **`/Wv`** opzione non può escludere gli avvisi che non sono elencati, che hanno predato le versioni specificate del compilatore.
 
 ::: moniker range=">= vs-2019"
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Avvisi introdotti in Visual Studio 2019 versione 16,7 (compilatore versione 19.27.29112.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.26`** .
+
+| Avviso | Message |
+|--|--|
+| C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
+| C5209 | `the C++20 syntax for an init-capture has changed to '& ...opt identifier initializer'` |
+| C5210 | `'name' is not a valid header unit reference; ignoring` |
+| C5212 | `'name' is not a valid named reference; treating as reference to file` |
+| C5213 | `'name' named reference is treated as a named partition but the name is not specified; treating as reference to file` |
+| C5214 | `applying 'modifier' to an operand with a volatile qualified type is deprecated in C++20` |
+| C5215 | `'name' a function parameter with a volatile qualified type is deprecated in C++20` |
+| C5216 | `'name' a volatile qualified return type is deprecated in C++20` |
+| C5217 | `a structured binding declaration that includes volatile is deprecated in C++20` |
+| C5218 | `destroying delete may not behave as intended when non-conforming switches '/Zc:sizedDealloc-' or '/Zc:alignedNew-' are used` |
+| C5219 | `implicit conversion from 'type-1' to 'type-2', possible loss of data` |
+| C5220 | `'name': a non-static data member with a volatile qualified type no longer implies%$N that compiler generated copy/move constructors and copy/move assignment operators are not trivial` |
+| C5221 | `xfg::rename is deprecated.` |
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-166-compiler-version-1926288050"></a>Avvisi introdotti in Visual Studio 2019 versione 16,6 (compilatore versione 19.26.28805.0)
 
@@ -752,4 +774,4 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 [Avvisi del compilatore C4000-C5999](compiler-warnings-c4000-c5999.md) \
 [/WV (opzione del compilatore)](../../build/reference/compiler-option-warning-level.md) \
 [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
-[avviso](../../preprocessor/warning.md)
+[warning](../../preprocessor/warning.md)
