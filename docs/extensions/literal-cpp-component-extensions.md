@@ -1,57 +1,51 @@
 ---
-title: literal (C++/CLI e C++/CX)
-ms.date: 10/12/2018
+title: valore letterale (C++/CLI)
+description: La parola chiave Literal è una parola chiave sensibile al contesto di Microsoft C++/CLI per una costante in fase di compilazione.
+ms.date: 10/20/2020
 ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
 helpviewer_keywords:
 - literal keyword [C++]
-ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d71a535252ba51f89407670b474a34b407eaffc
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686730"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92337213"
 ---
-# <a name="literal-ccli-and-ccx"></a>literal (C++/CLI e C++/CX)
+# <a name="literal-ccli"></a>`literal` (C++/CLI)
 
-Una variabile (membro dati) contrassegnata come **literal** in una compilazione **/clr** è l'equivalente nativo di una variabile **static const**.
+Una variabile (membro dati) contrassegnata come **`literal`** in una **`/clr`** compilazione è una costante in fase di compilazione. Si tratta dell'equivalente nativo di una [`const`](/dotnet/csharp/language-reference/keywords/const) variabile C#.
 
 ## <a name="all-platforms"></a>Tutte le piattaforme
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.
 
-### <a name="requirements"></a>Requisiti
-
-Opzione del compilatore: `/ZW`
-
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Un membro dati contrassegnato come **literal** deve essere inizializzato quando dichiarato e il valore deve essere un tipo integrale, enumerazione o stringa. Per la conversione dal tipo dell'espressione di inizializzazione al tipo del membro dati const statico non deve essere richiesta una conversione definita dall'utente.
+Un membro dati contrassegnato come **`literal`** deve essere inizializzato quando viene dichiarato. Il valore deve essere un tipo integrale, enum o String costante. La conversione dal tipo dell'espressione di inizializzazione al tipo del **`literal`** membro dati non può richiedere una conversione definita dall'utente.
 
-In fase di esecuzione non viene allocata nessuna memoria per il campo letterale; tramite il compilatore viene inserito solo il relativo valore nei metadati per la classe.
+Non è stata allocata alcuna memoria per il campo in fase **`literal`** di esecuzione. il compilatore inserisce solo il relativo valore nei metadati per la classe. Il **`literal`** valore viene considerato come una costante in fase di compilazione. L'equivalente più vicino in C++ standard è **`constexpr`** , ma un membro dati non può essere **`constexpr`** in c++/CLI.
 
-Una variabile contrassegnata come **static const** non sarà disponibile nei metadati di altri compilatori.
+Una variabile contrassegnata come **`literal`** differisce da un oggetto contrassegnato **`static const`** . Un **`static const`** membro dati non viene reso disponibile nei metadati ad altri compilatori. Per altre informazioni, vedere [`static`](../cpp/storage-classes-cpp.md) e [`const`](../cpp/const-cpp.md).
 
-Per altre informazioni, vedere [static](../cpp/storage-classes-cpp.md) e [const](../cpp/const-cpp.md).
-
-**literal** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md).
+**`literal`** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="examples"></a>Esempi
 
-Questo esempio mostra che una variabile **letterale** implica **`static`** .
+Questo esempio mostra che una **`literal`** variabile implica **`static`** .
 
 ```cpp
 // mcppv2_literal.cpp
@@ -65,7 +59,7 @@ int main() {
 }
 ```
 
-Nell'esempio seguente viene illustrato l'effetto di literal nei metadati:
+Nell'esempio seguente viene illustrato l'effetto di **`literal`** nei metadati:
 
 ```cpp
 // mcppv2_literal2.cpp
@@ -78,15 +72,15 @@ public ref struct A {
 
 Si noti la differenza nei metadati per `sc` e `lit`: la direttiva `modopt` viene applicata a `sc`, cioè può essere ignorata dagli altri compilatori.
 
-```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
-```
-
-```
-.field public static literal int32 lit = int32(0x0000000A)
+```MSIL
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x00000001)
 ```
 
-L'esempio seguente, creato in C#, fa riferimento ai metadati creati nell'esempio precedente e mostra l'effetto delle variabili **literal** e **static const**:
+```MSIL
+.field public static literal int32 lit = int32(0x00000000)
+```
+
+L'esempio seguente, creato in C#, fa riferimento ai metadati creati nell'esempio precedente e Mostra l'effetto delle **`literal`** variabili e **`static const`** :
 
 ```csharp
 // mcppv2_literal3.cs
