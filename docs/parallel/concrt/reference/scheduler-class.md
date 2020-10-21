@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422115"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274719"
 ---
 # <a name="scheduler-class"></a>Classe Scheduler
 
@@ -44,26 +44,26 @@ class Scheduler;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Utilità di pianificazione](#ctor)|Un oggetto della classe `Scheduler` può essere creato solo usando metodi factory o in modo implicito.|
-|[~ Distruttore utilità di pianificazione](#dtor)|Un oggetto della classe `Scheduler` viene eliminato in modo implicito quando tutti i riferimenti esterni a tale classe cessano di esistere.|
+|[Utilità di pianificazione](#ctor)|Un oggetto della `Scheduler` classe può essere creato solo usando metodi factory o in modo implicito.|
+|[~ Distruttore utilità di pianificazione](#dtor)|Un oggetto della `Scheduler` classe viene eliminato in modo implicito quando tutti i riferimenti esterni a esso cessano di esistere.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Collega](#attach)|Connette l'utilità di pianificazione al contesto chiamante. Dopo la restituzione di questo metodo, il contesto chiamante viene gestito dall'utilità di pianificazione e l'utilità di pianificazione diventa l'utilità di pianificazione corrente.|
-|[Creare](#create)|Crea una nuova utilità di pianificazione il cui comportamento è descritto dal parametro `_Policy`, inserisce un riferimento iniziale nell'utilità di pianificazione e restituisce un puntatore a tale utilità.|
-|[CreateScheduleGroup](#createschedulegroup)|Di overload. Consente di creare un nuovo gruppo di pianificazione all'interno dell'utilità di pianificazione. La versione che accetta il parametro `_Placement` causa la distorsione delle attività all'interno del gruppo di pianificazione appena creato per l'esecuzione nella posizione specificata dal parametro.|
+|[Attach](#attach)|Connette l'utilità di pianificazione al contesto chiamante. Dopo la restituzione di questo metodo, il contesto chiamante viene gestito dall'utilità di pianificazione e l'utilità di pianificazione diventa l'utilità di pianificazione corrente.|
+|[Creare](#create)|Crea una nuova utilità di pianificazione il cui comportamento è descritto dal `_Policy` parametro, inserisce un riferimento iniziale nell'utilità di pianificazione e restituisce un puntatore a tale utilità.|
+|[CreateScheduleGroup](#createschedulegroup)|Di overload. Consente di creare un nuovo gruppo di pianificazione all'interno dell'utilità di pianificazione. La versione che accetta il parametro `_Placement` determina la distorsione delle attività all'interno del gruppo di pianificazione appena creato per l'esecuzione nella posizione specificata da quel parametro.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Restituisce il numero corrente di processori virtuali per l'utilità di pianificazione.|
 |[GetPolicy](#getpolicy)|Restituisce una copia del criterio con cui è stata creata l'utilità di pianificazione.|
 |[Id](#id)|Restituisce un identificatore univoco per l'utilità di pianificazione.|
 |[IsAvailableLocation](#isavailablelocation)|Determina se una determinata posizione è disponibile nell'utilità di pianificazione.|
 |[Riferimento](#reference)|Incrementa il conteggio dei riferimenti dell'utilità di pianificazione.|
-|[RegisterShutdownEvent](#registershutdownevent)|Fa in modo che l'handle di evento di Windows passato nel parametro `_Event` venga segnalato quando l'utilità di pianificazione viene arrestata e viene distrutta automaticamente. Nel momento in cui l'evento viene segnalato, tutto il lavoro pianificato per l'utilità di pianificazione è completo. Con questo metodo è possibile registrare più eventi di arresto.|
+|[RegisterShutdownEvent](#registershutdownevent)|Fa in modo che l'handle di evento di Windows passato nel `_Event` parametro venga segnalato quando l'utilità di pianificazione viene arrestata e viene distrutta automaticamente. Nel momento in cui l'evento viene segnalato, tutto il lavoro pianificato per l'utilità di pianificazione è completo. Con questo metodo è possibile registrare più eventi di arresto.|
 |[Versione](#release)|Decrementa il conteggio di riferimenti dell'utilità di pianificazione.|
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Reimposta i criteri dell'utilità di pianificazione predefiniti sul valore predefinito di Runtime. Alla successiva creazione di un'utilità di pianificazione predefinita, utilizzerà le impostazioni predefinite dei criteri di Runtime.|
 |[ScheduleTask](#scheduletask)|Di overload. Pianifica un'attività leggera all'interno dell'utilità di pianificazione. L'attività leggera sarà posizionata in un gruppo di pianificazione determinato dal runtime. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata.|
-|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Consente di usare un criterio definito dall'utente per creare l'utilità di pianificazione predefinita. Questo metodo può essere chiamato solo quando nel processo non è presente alcuna utilità di pianificazione predefinita. Dopo aver impostato un criterio predefinito, rimane attivo fino alla successiva chiamata valida al metodo `SetDefaultSchedulerPolicy` o [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .|
+|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Consente di usare un criterio definito dall'utente per creare l'utilità di pianificazione predefinita. Questo metodo può essere chiamato solo quando nel processo non è presente alcuna utilità di pianificazione predefinita. Dopo aver impostato un criterio predefinito, rimane attivo fino alla successiva chiamata valida al `SetDefaultSchedulerPolicy` metodo o al metodo [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -81,7 +81,7 @@ Il runtime di concorrenza creerà un'utilità di pianificazione predefinita per 
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="attach"></a>Collegare
+## <a name="attach"></a><a name="attach"></a> Collegare
 
 Connette l'utilità di pianificazione al contesto chiamante. Dopo la restituzione di questo metodo, il contesto chiamante viene gestito dall'utilità di pianificazione e l'utilità di pianificazione diventa l'utilità di pianificazione corrente.
 
@@ -95,13 +95,13 @@ Se si connette un'utilità di pianificazione, viene inserito in modo implicito u
 
 A un certo punto in futuro, è necessario chiamare il metodo [CurrentScheduler::D etach](currentscheduler-class.md#detach) per consentire l'arresto dell'utilità di pianificazione.
 
-Se questo metodo viene chiamato da un contesto già associato a un'utilità di pianificazione diversa, l'utilità di pianificazione esistente viene memorizzata come utilità di pianificazione precedente e l'utilità di pianificazione appena creata diventa l'utilità di pianificazione corrente. Quando si chiama il metodo `CurrentScheduler::Detach` in un secondo momento, l'utilità di pianificazione precedente viene ripristinata come utilità di pianificazione corrente.
+Se questo metodo viene chiamato da un contesto già associato a un'utilità di pianificazione diversa, l'utilità di pianificazione esistente viene memorizzata come utilità di pianificazione precedente e l'utilità di pianificazione appena creata diventa l'utilità di pianificazione corrente. Quando si chiama il `CurrentScheduler::Detach` metodo in un secondo momento, l'utilità di pianificazione precedente viene ripristinata come utilità di pianificazione corrente.
 
 Questo metodo genererà un'eccezione [improper_scheduler_attach](improper-scheduler-attach-class.md) se questa utilità di pianificazione è l'utilità di pianificazione corrente del contesto chiamante.
 
-## <a name="create"></a> Create
+## <a name="create"></a><a name="create"></a> Creare
 
-Crea una nuova utilità di pianificazione il cui comportamento è descritto dal parametro `_Policy`, inserisce un riferimento iniziale nell'utilità di pianificazione e restituisce un puntatore a tale utilità.
+Crea una nuova utilità di pianificazione il cui comportamento è descritto dal `_Policy` parametro, inserisce un riferimento iniziale nell'utilità di pianificazione e restituisce un puntatore a tale utilità.
 
 ```cpp
 static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
@@ -114,19 +114,19 @@ Criteri dell'utilità di pianificazione che descrivono il comportamento dell'uti
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un'utilità di pianificazione appena creata. A questo oggetto `Scheduler` viene applicato un conteggio di riferimenti iniziale.
+Puntatore a un'utilità di pianificazione appena creata. `Scheduler`Per questo oggetto è stato inserito un conteggio di riferimenti iniziale.
 
 ### <a name="remarks"></a>Osservazioni
 
-Dopo aver creato un'utilità di pianificazione con il metodo `Create`, è necessario chiamare il metodo `Release` in un determinato momento in futuro per rimuovere il conteggio dei riferimenti iniziale e consentire l'arresto dell'utilità di pianificazione.
+Dopo aver creato un'utilità di pianificazione con il `Create` metodo, è necessario chiamare il `Release` metodo in un momento successivo per rimuovere il conteggio dei riferimenti iniziale e consentire l'arresto dell'utilità di pianificazione.
 
 Un'utilità di pianificazione creata con questo metodo non è associata al contesto chiamante. Può essere collegato a un contesto usando il metodo [Attach](#attach) .
 
 Questo metodo può generare un'ampia gamma di eccezioni, tra cui [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) e [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
 
-## <a name="createschedulegroup"></a>CreateScheduleGroup
+## <a name="createschedulegroup"></a><a name="createschedulegroup"></a> CreateScheduleGroup
 
-Consente di creare un nuovo gruppo di pianificazione all'interno dell'utilità di pianificazione. La versione che accetta il parametro `_Placement` causa la distorsione delle attività all'interno del gruppo di pianificazione appena creato per l'esecuzione nella posizione specificata dal parametro.
+Consente di creare un nuovo gruppo di pianificazione all'interno dell'utilità di pianificazione. La versione che accetta il parametro `_Placement` determina la distorsione delle attività all'interno del gruppo di pianificazione appena creato per l'esecuzione nella posizione specificata da quel parametro.
 
 ```cpp
 virtual ScheduleGroup* CreateScheduleGroup() = 0;
@@ -141,7 +141,7 @@ Un riferimento a un percorso in cui le attività all'interno del gruppo di piani
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore al gruppo di pianificazione appena creato. A questo oggetto `ScheduleGroup` viene applicato un conteggio di riferimenti iniziale.
+Puntatore al gruppo di pianificazione appena creato. `ScheduleGroup`Per questo oggetto è stato inserito un conteggio di riferimenti iniziale.
 
 ### <a name="remarks"></a>Osservazioni
 
@@ -149,7 +149,7 @@ Al termine della pianificazione del lavoro, è necessario richiamare il metodo [
 
 Si noti che se l'utilità di pianificazione è stata creata in modo esplicito, è necessario rilasciare tutti i riferimenti a gruppi di pianificazione al suo interno, prima di rilasciare i riferimenti nell'utilità di pianificazione.
 
-## <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors
+## <a name="getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors
 
 Restituisce il numero corrente di processori virtuali per l'utilità di pianificazione.
 
@@ -161,7 +161,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 
 Numero corrente di processori virtuali per l'utilità di pianificazione.
 
-## <a name="getpolicy"></a>GetPolicy
+## <a name="getpolicy"></a><a name="getpolicy"></a> GetPolicy
 
 Restituisce una copia del criterio con cui è stata creata l'utilità di pianificazione.
 
@@ -173,7 +173,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 Una copia del criterio con cui è stata creata l'utilità di pianificazione.
 
-## <a name="id"></a>ID
+## <a name="id"></a><a name="id"></a> ID
 
 Restituisce un identificatore univoco per l'utilità di pianificazione.
 
@@ -185,7 +185,7 @@ virtual unsigned int Id() const = 0;
 
 Identificatore univoco per l'utilità di pianificazione.
 
-## <a name="isavailablelocation"></a>IsAvailableLocation
+## <a name="isavailablelocation"></a><a name="isavailablelocation"></a> IsAvailableLocation
 
 Determina se una determinata posizione è disponibile nell'utilità di pianificazione.
 
@@ -200,13 +200,13 @@ Riferimento alla posizione in cui eseguire una query sull'utilità di pianificaz
 
 ### <a name="return-value"></a>Valore restituito
 
-Indica se il percorso specificato dall'argomento `_Placement` è disponibile nell'utilità di pianificazione.
+Indica se il percorso specificato dall' `_Placement` argomento è o meno disponibile nell'utilità di pianificazione.
 
 ### <a name="remarks"></a>Osservazioni
 
 Si noti che il valore restituito è un campionamento istantaneo dell'eventuale disponibilità della posizione specificata. In presenza di più utilità di pianificazione, tramite la gestione delle risorse dinamiche è possibile aggiungere o sottrarre risorse dalle utilità di pianificazione in qualsiasi punto. In questo caso, la disponibilità della posizione specificata può cambiare.
 
-## <a name="reference"></a>Riferimento
+## <a name="reference"></a><a name="reference"></a> Riferimento
 
 Incrementa il conteggio dei riferimenti dell'utilità di pianificazione.
 
@@ -222,11 +222,11 @@ Conteggio dei riferimenti appena incrementato.
 
 Questa operazione viene in genere utilizzata per gestire la durata dell'utilità di pianificazione per la composizione. Quando il conteggio di riferimenti di un'utilità di pianificazione scende a zero, l'utilità di pianificazione si arresterà e si distruggerà dopo che tutto il lavoro nell'utilità di pianificazione sarà stato completato.
 
-Il metodo genererà un'eccezione [improper_scheduler_reference](improper-scheduler-reference-class.md) se il conteggio dei riferimenti prima della chiamata al metodo `Reference` era zero e la chiamata viene eseguita da un contesto che non è di proprietà dell'utilità di pianificazione.
+Il metodo genererà un'eccezione [improper_scheduler_reference](improper-scheduler-reference-class.md) se il conteggio dei riferimenti prima della chiamata al `Reference` metodo era zero e la chiamata viene eseguita da un contesto che non è di proprietà dell'utilità di pianificazione.
 
-## <a name="registershutdownevent"></a>RegisterShutdownEvent
+## <a name="registershutdownevent"></a><a name="registershutdownevent"></a> RegisterShutdownEvent
 
-Fa in modo che l'handle di evento di Windows passato nel parametro `_Event` venga segnalato quando l'utilità di pianificazione viene arrestata e viene distrutta automaticamente. Nel momento in cui l'evento viene segnalato, tutto il lavoro pianificato per l'utilità di pianificazione è completo. Con questo metodo è possibile registrare più eventi di arresto.
+Fa in modo che l'handle di evento di Windows passato nel `_Event` parametro venga segnalato quando l'utilità di pianificazione viene arrestata e viene distrutta automaticamente. Nel momento in cui l'evento viene segnalato, tutto il lavoro pianificato per l'utilità di pianificazione è completo. Con questo metodo è possibile registrare più eventi di arresto.
 
 ```cpp
 virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
@@ -237,7 +237,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 *_Event*<br/>
 Handle per un oggetto evento di Windows che verrà segnalato dal runtime quando l'utilità di pianificazione si arresta ed Elimina se stesso.
 
-## <a name="release"></a>Versione
+## <a name="release"></a><a name="release"></a> Versione
 
 Decrementa il conteggio di riferimenti dell'utilità di pianificazione.
 
@@ -253,7 +253,7 @@ Conteggio dei riferimenti appena decrementato.
 
 Questa operazione viene in genere utilizzata per gestire la durata dell'utilità di pianificazione per la composizione. Quando il conteggio di riferimenti di un'utilità di pianificazione scende a zero, l'utilità di pianificazione si arresterà e si distruggerà dopo che tutto il lavoro nell'utilità di pianificazione sarà stato completato.
 
-## <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy
+## <a name="resetdefaultschedulerpolicy"></a><a name="resetdefaultschedulerpolicy"></a> ResetDefaultSchedulerPolicy
 
 Reimposta i criteri dell'utilità di pianificazione predefiniti sul valore predefinito di Runtime. Alla successiva creazione di un'utilità di pianificazione predefinita, utilizzerà le impostazioni predefinite dei criteri di Runtime.
 
@@ -265,9 +265,9 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 
 Questo metodo può essere chiamato mentre un'utilità di pianificazione predefinita esiste nel processo. Non avrà alcun effetto sui criteri dell'utilità di pianificazione predefinita esistente. Tuttavia, se l'utilità di pianificazione predefinita è stata arrestata ed è stato creato un nuovo valore predefinito in un secondo momento, la nuova utilità di pianificazione utilizzerà le impostazioni predefinite dei criteri di Runtime.
 
-## <a name="ctor"></a>Scheduler
+## <a name="scheduler"></a><a name="ctor"></a> Scheduler
 
-Un oggetto della classe `Scheduler` può essere creato solo usando metodi factory o in modo implicito.
+Un oggetto della `Scheduler` classe può essere creato solo usando metodi factory o in modo implicito.
 
 ```cpp
 Scheduler();
@@ -275,19 +275,19 @@ Scheduler();
 
 ### <a name="remarks"></a>Osservazioni
 
-L'utilità di pianificazione predefinita del processo viene creata in modo implicito quando si utilizzano molte delle funzioni di runtime che richiedono che un'utilità di pianificazione venga collegata al contesto chiamante. I metodi all'interno della classe `CurrentScheduler` e le funzionalità dei livelli PPL e Agents eseguono in genere un allegato implicito.
+L'utilità di pianificazione predefinita del processo viene creata in modo implicito quando si utilizzano molte delle funzioni di runtime che richiedono che un'utilità di pianificazione venga collegata al contesto chiamante. I metodi all'interno della `CurrentScheduler` classe e delle funzionalità dei livelli ppl e Agents eseguono in genere un allegato implicito.
 
-È anche possibile creare un'utilità di pianificazione in modo esplicito tramite il metodo `CurrentScheduler::Create` o il metodo `Scheduler::Create`.
+È anche possibile creare un'utilità di pianificazione in modo esplicito tramite il `CurrentScheduler::Create` metodo o il `Scheduler::Create` metodo.
 
-## <a name="dtor"></a>~ Utilità di pianificazione
+## <a name="scheduler"></a><a name="dtor"></a> ~ Utilità di pianificazione
 
-Un oggetto della classe `Scheduler` viene eliminato in modo implicito quando tutti i riferimenti esterni a tale classe cessano di esistere.
+Un oggetto della `Scheduler` classe viene eliminato in modo implicito quando tutti i riferimenti esterni a esso cessano di esistere.
 
 ```cpp
 virtual ~Scheduler();
 ```
 
-## <a name="scheduletask"></a>ScheduleTask
+## <a name="scheduletask"></a><a name="scheduletask"></a> ScheduleTask
 
 Pianifica un'attività leggera all'interno dell'utilità di pianificazione. L'attività leggera sarà posizionata in un gruppo di pianificazione determinato dal runtime. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata.
 
@@ -313,9 +313,9 @@ Puntatore void ai dati che verranno passati come parametro al corpo dell'attivit
 *_Placement*<br/>
 Riferimento a una posizione in cui per l'attività leggera verrà data priorità all'esecuzione.
 
-## <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy
+## <a name="setdefaultschedulerpolicy"></a><a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
 
-Consente di usare un criterio definito dall'utente per creare l'utilità di pianificazione predefinita. Questo metodo può essere chiamato solo quando nel processo non è presente alcuna utilità di pianificazione predefinita. Dopo aver impostato un criterio predefinito, rimane attivo fino alla successiva chiamata valida al metodo `SetDefaultSchedulerPolicy` o [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .
+Consente di usare un criterio definito dall'utente per creare l'utilità di pianificazione predefinita. Questo metodo può essere chiamato solo quando nel processo non è presente alcuna utilità di pianificazione predefinita. Dopo aver impostato un criterio predefinito, rimane attivo fino alla successiva chiamata valida al `SetDefaultSchedulerPolicy` metodo o al metodo [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .
 
 ```cpp
 static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
@@ -328,11 +328,11 @@ Criterio da impostare come criterio dell'utilità di pianificazione predefinito.
 
 ### <a name="remarks"></a>Osservazioni
 
-Se il metodo `SetDefaultSchedulerPolicy` viene chiamato quando un'utilità di pianificazione predefinita esiste già nel processo, il runtime genererà un'eccezione [default_scheduler_exists](default-scheduler-exists-class.md) .
+Se il `SetDefaultSchedulerPolicy` metodo viene chiamato quando un'utilità di pianificazione predefinita esiste già nel processo, il runtime genererà un'eccezione [default_scheduler_exists](default-scheduler-exists-class.md) .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

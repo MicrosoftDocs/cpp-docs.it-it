@@ -1,26 +1,28 @@
 ---
 title: _Noreturn parola chiave e noreturn macro (C11)
 description: Descrive la `_Noreturn` parola chiave e la `noreturn` macro.
-ms.date: 10/16/2020
+ms.date: 10/19/2020
 f1_keywords:
 - _Noreturn_c
 - noreturn
 helpviewer_keywords:
 - keywords [C]
-ms.openlocfilehash: f876485b5be497688c5cf1dd8fca206d08560de0
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 68448d8b8c999c92fb240100c25048fa94a559b9
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92182816"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274685"
 ---
 # <a name="_noreturn-keyword-and-noreturn-macro-c11"></a>`_Noreturn` parola chiave e `noreturn` macro (C11)
 
-La `_Noreturn` parola chiave è stata introdotta in C11. Indica al compilatore che la funzione a cui viene applicato non restituisce alcun risultato. Il compilatore sa che il codice che segue una chiamata a una `_Noreturn` funzione non è raggiungibile.
+La `_Noreturn` parola chiave è stata introdotta in C11. Indica al compilatore che la funzione a cui viene applicata non viene restituita al chiamante. Il compilatore sa che il codice che segue una chiamata a una `_Noreturn` funzione non è raggiungibile. Un esempio di funzione che non restituisce è [Abort](../c-runtime-library/reference/abort.md). Se è possibile che il flusso di controllo torni al chiamante, la funzione non deve avere l' `_Noreturn` attributo.
 
-Una macro di praticità, `noreturn` , fornita in <> stdnoreturn. h, esegue il mapping alla `_Noreturn` parola chiave.
+La parola chiave viene in genere utilizzata tramite la macro convenience, `noreturn` , fornita in <stdnoreturn. h>, che esegue il mapping alla `_Noreturn` parola chiave.
 
 I vantaggi principali per l'utilizzo `_Noreturn` di (o l'equivalente `noreturn` ) sono l'intenzione della funzione di chiarire il codice per i lettori futuri e il rilevamento di codice non eseguibile in modo non intenzionale.
+
+Una funzione contrassegnata `noreturn` non deve includere un tipo restituito perché non restituisce un valore al chiamante. Il valore dovrebbe essere `void`.
 
 ## <a name="example-using-noreturn-macro-and-_noreturn-keyword"></a>Esempio `noreturn` di utilizzo di macro e `_Noreturn ` parole chiave
 
@@ -69,5 +71,6 @@ int main(void)
 ## <a name="see-also"></a>Vedere anche
 
 [/STD (specifica la versione standard del linguaggio)](../build/reference/std-specify-language-standard-version.md)\
-[/W4 (specifica il livello di avviso)](../build/reference/compiler-option-warning-level.md) 
- [Avviso di C4702](../error-messages\compiler-warnings\compiler-warning-level-4-c4702.md)
+[/W4 (specifica il livello di avviso)](../build/reference/compiler-option-warning-level.md)\
+[Avviso di C4702](../error-messages\compiler-warnings\compiler-warning-level-4-c4702.md)\
+[__declspec (noreturn)](../cpp/noreturn.md)
