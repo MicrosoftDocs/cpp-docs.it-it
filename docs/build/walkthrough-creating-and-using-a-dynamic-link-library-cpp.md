@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 6639165856f09db25a2b96c41db2bb94ab93aa99
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "90683624"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: creare e usare la propria libreria a collegamento dinamico (C++)
