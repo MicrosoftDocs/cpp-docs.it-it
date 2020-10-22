@@ -3,10 +3,10 @@ title: Spostarsi all'interno del codice C++ in Visual Studio
 description: Usare vari strumenti in Visual Studio per esplorare la codebase di C++.
 ms.date: 05/28/2019
 ms.openlocfilehash: cc13326dee14e952c78e521344a6244249179cb8
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "90683494"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Spostarsi all'interno del codice C++ in Visual Studio
