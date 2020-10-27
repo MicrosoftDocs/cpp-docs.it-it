@@ -1,6 +1,7 @@
 ---
 title: /clr (Compilazione Common Language Runtime)
-ms.date: 05/16/2019
+description: Usare l'opzione del compilatore Microsoft C++/CLR per compilare il codice C++/CLI e C++ come codice gestito.
+ms.date: 10/25/2020
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -13,87 +14,87 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: fa2be3d3ce17df104cda121e4869c975ec6dd440
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: b4634b63e58344893d99e2217e57693a2c169f66
+ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837300"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639094"
 ---
-# <a name="clr-common-language-runtime-compilation"></a>/clr (Compilazione Common Language Runtime)
+# <a name="clr-common-language-runtime-compilation"></a>`/clr` (Compilazione Common Language Runtime)
 
 Consente alle applicazioni e ai componenti di usare le funzionalità di Common Language Runtime (CLR).
 
 ## <a name="syntax"></a>Sintassi
 
-> **/clr**[**:**_options_]
+> **`/clr`**\[**`:`**_Opzioni_ ]
 
 ## <a name="arguments"></a>Argomenti
 
-*options*<br/>
-Una o più delle seguenti opzioni, delimitate da virgole.
+*Opzioni*\
+Uno o più degli argomenti delimitati da virgole seguenti.
 
-- none
+- Nessuno
 
-   Senza opzioni, **/clr** crea i metadati per l'applicazione. I metadati possono essere usati da altre applicazioni CLR e l'applicazione può usare tipi e dati nei metadati di altri componenti CLR. Per altre informazioni, vedere [Assembly misti (nativi e gestiti)](../../dotnet/mixed-native-and-managed-assemblies.md).
+   Senza opzioni, **`/clr`** Crea i metadati per l'applicazione. I metadati possono essere usati da altre applicazioni CLR e l'applicazione può usare tipi e dati nei metadati di altri componenti CLR. Per altre informazioni, vedere [Assembly misti (nativi e gestiti)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
-- **pure**
+- **`pure`**
 
-   **/clr:pure è deprecato**. L'opzione è stata rimossa in Visual Studio 2017 e versioni successive. È consigliabile convertire in C# il codice che deve essere MSIL pure.
+   **`/clr:pure` è deprecato** . L'opzione è stata rimossa in Visual Studio 2017 e versioni successive. È consigliabile convertire in C# il codice che deve essere MSIL pure.
 
-- **safe**
+- **`safe`**
 
-   **/clr:safe è deprecato**. L'opzione è stata rimossa in Visual Studio 2017 e versioni successive. È consigliabile convertire in C# il codice che deve essere safe MSIL.
+   **`/clr:safe` è deprecato** . L'opzione è stata rimossa in Visual Studio 2017 e versioni successive. È consigliabile convertire in C# il codice che deve essere safe MSIL.
 
-- **noAssembly**
+- **`noAssembly`**
 
-   **/clr:noAssembly è deprecato**. In alternativa, usare [/LN (Create MSIL Module)](ln-create-msil-module.md) .
+   **`/clr:noAssembly` è deprecato** . In alternativa, usare [ `/LN` (Crea modulo MSIL)](ln-create-msil-module.md) .
 
-   Specifica che un manifesto dell'assembly non deve essere inserito nel file di output. Per impostazione predefinita, l'opzione **noAssembly** non è attiva.
+   Indica al compilatore di non inserire un manifesto dell'assembly nel file di output. Per impostazione predefinita, l' **`noAssembly`** opzione non è attiva.
 
-   Un programma gestito senza metadati dell'assembly nel manifesto è detto *modulo*. L'opzione **noAssembly** può essere usata solo per produrre un modulo. Se si esegue la compilazione con [/c](c-compile-without-linking.md) e **/clr:noAssembly**, specificare l'opzione [/NOASSEMBLY](noassembly-create-a-msil-module.md) nella fase del linker per creare un modulo.
+   Un programma gestito senza metadati dell'assembly nel manifesto è noto come *modulo* . L' **`noAssembly`** opzione può essere usata solo per produrre un modulo. Se si compila usando [`/c`](c-compile-without-linking.md) e **`/clr:noAssembly`** , specificare l' [`/NOASSEMBLY`](noassembly-create-a-msil-module.md) opzione nella fase del linker per creare un modulo.
 
-   Nelle versioni precedenti a Visual Studio 2005 **/clr:noAssembly** richiede **/LD**. **/LD** è ora implicito quando si specifica **/clr:noAssembly**.
+   Prima di Visual Studio 2005, **`/clr:noAssembly`** obbligatorio **`/LD`** . **`/LD`** è ora implicito quando si specifica **`/clr:noAssembly`** .
 
-- **initialAppDomain**
+- **`initialAppDomain`**
 
-   Consente di eseguire un'applicazione Visual C++ nella versione 1 di CLR.  Un'applicazione compilata usando **initialAppDomain** non deve essere usata da un'applicazione che usa ASP.NET, perché questo non è supportato nella versione 1 di CLR.
+   Consente l'esecuzione di un'applicazione C++/CLI sulla versione 1 di CLR.  Un'applicazione compilata usando non **`initialAppDomain`** deve essere usata da un'applicazione che usa ASP.NET perché non è supportata nella versione 1 di CLR.
 
-- **nostdlib**
+- **`nostdlib`**
 
-   Indica al compilatore di ignorare la directory \clr predefinita. Il compilatore produce errori se si includono più versioni di una DLL, ad esempio System.dll. Questa opzione consente di specificare il framework specifico da usare durante la compilazione.
+   Indica al compilatore di ignorare la directory predefinita *`\clr`* . Il compilatore genera errori se si includono più versioni di una DLL, ad esempio System.dll. Questa opzione consente di specificare il Framework specifico da usare durante la compilazione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Quello gestito è un codice che può essere ispezionato e gestito da CLR. Il codice gestito può accedere agli oggetti gestiti. Per altre informazioni, vedere [/clr Restrictions](clr-restrictions.md).
+Quello gestito è un codice che può essere ispezionato e gestito da CLR. Il codice gestito può accedere agli oggetti gestiti. Per ulteriori informazioni, vedere [ `/clr ` restrizioni](clr-restrictions.md).
 
-Per informazioni su come sviluppare applicazioni che definiscono e utilizzano i tipi gestiti, vedere [Component Extensions for Runtime Platforms](../../extensions/component-extensions-for-runtime-platforms.md).
+Per informazioni sullo sviluppo di applicazioni che definiscono e utilizzano i tipi gestiti in C++, vedere [estensioni componenti per le piattaforme runtime](../../extensions/component-extensions-for-runtime-platforms.md).
 
-Un'applicazione compilata usando **/clr** non contiene necessariamente dati gestiti.
+Un'applicazione compilata utilizzando **`/clr`** può contenere o meno dati gestiti.
 
-Per abilitare il debug in un'applicazione gestita, vedere [/ASSEMBLYDEBUG (aggiunge DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
+Per abilitare il debug in un'applicazione gestita, vedere [ `/ASSEMBLYDEBUG` (aggiungere DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-Solo dei tipi CLR verrà creata un'istanza nell'heap del Garbage Collector. Per altre informazioni, vedere [Classes and Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) (Classi e struct). Per compilare un funzione nel codice nativo, usare la direttiva pragma `unmanaged` . Per altre informazioni, vedere [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
+Viene creata un'istanza solo dei tipi CLR nell'heap sottoposti a Garbage Collection. Per altre informazioni, vedere [Classes and Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) (Classi e struct). Per compilare un funzione nel codice nativo, usare la direttiva pragma `unmanaged` . Per ulteriori informazioni, vedere [ `managed` `unmanaged` . ](../../preprocessor/managed-unmanaged.md)
 
-Per impostazione predefinita, l'opzione **/clr** non è attiva. Quando l'opzione **/clr** è attiva, è attiva anche l'opzione **/MD** . Per altre informazioni, vedere [/MD, /MT, /LD (utilizzo della libreria di runtime)](md-mt-ld-use-run-time-library.md). **/MD** fa sì che le versioni multithread collegate in modo dinamico delle routine di runtime vengano selezionate dai file di intestazione (con estensione h) standard. Il multithreading è richiesto per la programmazione gestita perché il Garbage Collector CLR esegue i finalizzatori in un thread ausiliario.
+Per impostazione predefinita, **`/clr`** non è attivo. Quando **`/clr`** è attivo, **`/MD`** è attivo anche. Per ulteriori informazioni, vedere [ `/MD` , `/MT` , `/LD` (utilizzare Run-Time libreria)](md-mt-ld-use-run-time-library.md). **`/MD`** garantisce che le versioni multithreading collegate in modo dinamico delle routine di runtime vengano selezionate dai file di intestazione standard. Il multithreading è richiesto per la programmazione gestita perché il Garbage Collector CLR esegue i finalizzatori in un thread ausiliario.
 
-Se si esegue la compilazione usando **/c**, è possibile specificare il tipo CLR del file di output risultante con [/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
+Se si esegue la compilazione utilizzando **`/c`** , è possibile specificare il tipo CLR del file di output risultante utilizzando l' [`/CLRIMAGETYPE`](clrimagetype-specify-type-of-clr-image.md) opzione del linker.
 
-**/clr** implica **/EHa**. Nessun'altra opzione **/EH** è supportata per **/clr**. Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](eh-exception-handling-model.md).
+**`/clr`** implica **`/EHa`** e non **`/EH`** sono supportate altre opzioni per **`/clr`** . Per ulteriori informazioni, vedere [ `/EH` (modello di gestione delle eccezioni)](eh-exception-handling-model.md).
 
-Per altre informazioni su come determinare il tipo di immagine CLR di un file, vedere [/CLRHEADER](clrheader.md).
+Per informazioni su come determinare il tipo di immagine CLR di un file, vedere [`/CLRHEADER`](clrheader.md) .
 
-È necessario che tutti i moduli passati a una determinata chiamata del linker vengano compilati usando la stessa opzione del compilatore della libreria di runtime (**/MD** o **/LD**).
+Tutti i moduli passati a una determinata chiamata del linker devono essere compilati usando la stessa opzione del compilatore della libreria di runtime ( **`/MD`** o **`/LD`** ).
 
-Usare l'opzione del linker [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) per incorporare una risorsa in un assembly. Le opzione del linker[/DELAYSIGN](delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)e [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) consentono anche di personalizzare la creazione di un assembly.
+Usare l' [`/ASSEMBLYRESOURCE`](assemblyresource-embed-a-managed-resource.md) opzione del linker per incorporare una risorsa in un assembly. [`/DELAYSIGN`](delaysign-partially-sign-an-assembly.md)[`/KEYCONTAINER`](keycontainer-specify-a-key-container-to-sign-an-assembly.md)le opzioni, e del [`/KEYFILE`](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) linker consentono inoltre di personalizzare la modalità di creazione di un assembly.
 
-Quando si usa l'opzione **/clr** , il simbolo `_MANAGED` viene definito come 1. Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).
+Quando **`/clr`** si usa, il `_MANAGED` simbolo viene definito come 1. Per altre informazioni, vedere [macro predefinite](../../preprocessor/predefined-macros.md).
 
-Prima vengono inizializzate le variabili globali in un file oggetto nativo (durante DllMain se l'eseguibile è una DLL) e quindi vengono inizializzate le variabili globali nella sezione gestita (prima che il codice gestito venga eseguito). `#pragma` [init_seg](../../preprocessor/init-seg.md) ha effetto solo sull'ordine di inizializzazione nelle categorie gestite e non gestite.
+Le variabili globali in un file oggetto nativo vengono inizializzate per prime (durante `DllMain` se l'eseguibile è una dll) e quindi vengono inizializzate le variabili globali nella sezione gestita (prima dell'esecuzione di qualsiasi codice gestito). [`#pragma init_seg`](../../preprocessor/init-seg.md) influiscono solo sull'ordine di inizializzazione nelle categorie gestite e non gestite.
 
-## <a name="metadata-and-unnamed-classes"></a>Metadati e classi senza nome
+### <a name="metadata-and-unnamed-classes"></a>Metadati e classi senza nome
 
-Classi senza nome verranno visualizzate nei metadati denominati come segue: `$UnnamedClass$`*crc-del-nome-file-corrente*`$`*indice*`$`, dove *indice* è un numero sequenziale delle classi senza nome nella compilazione. Ad esempio, l'esempio di codice seguente genera una classe senza nome nei metadati.
+Le classi senza nome vengono visualizzate nei metadati sotto i nomi  `$UnnamedClass$<crc-of-current-file-name>$<index>$` , ad esempio, dove `<index>` è un conteggio sequenziale delle classi senza nome nella compilazione. Ad esempio, l'esempio di codice seguente genera una classe senza nome nei metadati.
 
 ```cpp
 // clr_unnamed_class.cpp
@@ -103,7 +104,21 @@ class {} x;
 
 Usare ildasm.exe per visualizzare i metadati.
 
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
+
+1. Impostare l'elenco a discesa **configurazione** su **tutte le configurazioni** e impostare l'elenco a discesa **piattaforma** su **tutte le piattaforme** .
+
+1. Selezionare la pagina Avanzate **proprietà di configurazione**  >  **Advanced** .
+
+1. Modificare la proprietà **supporto Common Language Runtime** . Scegliere **OK** per salvare le modifiche.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged>.
+
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Opzioni del compilatore MSVC](compiler-options.md)\
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)
