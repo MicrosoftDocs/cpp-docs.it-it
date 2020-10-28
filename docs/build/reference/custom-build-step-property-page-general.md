@@ -1,6 +1,7 @@
 ---
-title: 'Pagina delle proprietà Istruzione di compilazione personalizzata: Generale'
-ms.date: 11/04/2016
+title: 'Pagina Istruzione di compilazione personalizzata: Generale'
+description: Questo articolo descrive le proprietà disponibili nella pagina istruzione di compilazione personalizzata nella finestra di dialogo Pagine delle proprietà.
+ms.date: 10/27/2020
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
 - VC.Project.VCCustomBuildStep.CustomBuildAfterTargets
@@ -12,20 +13,20 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-ms.openlocfilehash: 329923140cf5a8f05e5c032ddb9e25c0ea45ec2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f2deef931821981b3301f44ba37660975fb811
+ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273079"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907584"
 ---
-# <a name="custom-build-step-property-page-general"></a>Pagina delle proprietà Istruzione di compilazione personalizzata: Generale
+# <a name="custom-build-step-property-page-general"></a>Pagina Istruzione di compilazione personalizzata: Generale
 
-Per ogni combinazione di configurazione del progetto e piattaforma di destinazione, è possibile specificare un'istruzione personalizzata da eseguire quando il progetto viene compilato.
+Per ogni combinazione di configurazione di progetto e piattaforma di destinazione nel progetto, è possibile specificare un passaggio personalizzato da eseguire quando il progetto viene compilato.
 
 Per la versione Linux di questa pagina, vedere [Proprietà Istruzione di compilazione personalizzata (Linux C++)](../../linux/prop-pages/custom-build-step-linux.md).
 
-## <a name="uielement-list"></a>Elenco UIElement
+## <a name="general-page"></a>Pagina Generale
 
 - **Riga di comando**
 
@@ -45,20 +46,20 @@ Per la versione Linux di questa pagina, vedere [Proprietà Istruzione di compila
 
 - **Esegui dopo ed Esegui prima**
 
-   Queste opzioni definiscono i tempi di esecuzione dell'istruzione personalizzata durante il processo di compilazione, relativamente alle destinazioni specificate. Le destinazioni più comunemente elencate sono BuildGenerateSources, BuildCompile e BuildLink perché rappresentano le istruzioni principali nel processo di compilazione. Altre destinazioni elencate spesso sono Midl, CLCompile e Link.
+   Queste opzioni definiscono i tempi di esecuzione dell'istruzione personalizzata durante il processo di compilazione, relativamente alle destinazioni specificate. Le destinazioni elencate più di frequente sono, `BuildGenerateSources` `BuildCompile` e `BuildLink` , perché rappresentano i passaggi principali del processo di compilazione. Altre destinazioni spesso elencate sono `Midl` , `CLCompile` e `Link` .
 
 - **Considera output come contenuto**
 
-   Questa opzione è significativa solo per le app della piattaforma UWP (Universal Windows Platform) o le app Windows Phone i cui file di contenuto sono tutti inclusi nel pacchetto appx.
+   Questa opzione è significativa solo per le app piattaforma UWP (Universal Windows Platform) o Windows Phone, che includono tutti i file di contenuto nel *`.appx`* pacchetto.
 
 ### <a name="to-specify-a-custom-build-step"></a>Per specificare un'istruzione di compilazione personalizzata
 
-1. Sulla barra dei menu scegliere **Progetto**, **Proprietà**. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Sulla barra dei menu scegliere proprietà **progetto**  >  **Properties** . Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Nella finestra di dialogo **Pagine delle proprietà** spostarsi nella pagina **Proprietà di configurazione**, **Istruzione di compilazione personalizzata**, **Generale**.
+1. Nella finestra di dialogo **pagine delle proprietà** passare alla pagina **proprietà di configurazione**  >  **istruzione di compilazione personalizzata**  >  **General** .
 
 1. Modificare le impostazioni.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alla pagina di proprietà progetto C++](property-pages-visual-cpp.md)
+[Riferimento alla pagina delle proprietà del progetto C++](property-pages-visual-cpp.md)
