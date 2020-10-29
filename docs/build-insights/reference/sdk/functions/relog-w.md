@@ -1,6 +1,6 @@
 ---
-title: RilogW
-description: Informazioni di riferimento per la funzione RelogW dell'SDK di Build Insights in C.
+title: RelogW
+description: Riferimento alla funzione RelogW di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c5d5f6e35c7cd24d2324ce1d8a0434d9048b1d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e01cf7ca769c60761999ca320a7f9a65b41a8ed6
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323803"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920060"
 ---
-# <a name="relogw"></a>RilogW
+# <a name="relogw"></a>RelogW
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `RelogW` funzione viene utilizzata per leggere gli eventi MSVC da una traccia ETW (Event Tracing for Windows) di input e scriverli in una nuova traccia ETW modificata.
+La `RelogW` funzione viene utilizzata per leggere gli eventi MSVC da una traccia di input Event Tracing for Windows (ETW) e scriverli in una nuova traccia ETW modificata.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,16 +39,16 @@ enum RESULT_CODE RelogW(
 ### <a name="parameters"></a>Parametri
 
 *inputLogFile*\
-Traccia ETW di input da cui si desidera leggere gli eventi.
+Traccia ETW di input da cui si vogliono leggere gli eventi.
 
-*outputLogFile (file outputLog)*\
+*outputLogFile*\
 File in cui scrivere i nuovi eventi.
 
 *relogDescriptor*\
-Puntatore a un oggetto [RELOG_DESCRIPTOR.](../other-types/relog-descriptor-struct.md) Utilizzare questo oggetto per configurare la sessione di riregistrazione.
+Puntatore a un oggetto [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) . Utilizzare questo oggetto per configurare la sessione di registrazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Codice di risultato dall'enumerazione [RESULT_CODE.](../other-types/result-code-enum.md)
+Codice risultato dell'enumerazione [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

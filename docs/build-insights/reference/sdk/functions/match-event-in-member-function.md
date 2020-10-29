@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62a7bf6bde62dee7fdf5b1d2ce9044491a123f94
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224149"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920190"
 ---
 # <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `MatchEventInMemberFunction` funzione viene usata per trovare la corrispondenza con un evento in base al tipo descritto dal primo parametro di una funzione membro. L'evento corrispondente viene quindi inviato alla funzione membro per un'ulteriore elaborazione.
 
@@ -61,7 +61,7 @@ Tipi dei parametri aggiuntivi accettati dalla funzione membro insieme al tipo di
 Tipi degli argomenti aggiuntivi passati a `MatchEventInMemberFunction` .
 
 *evento*\
-Evento da confrontare con il tipo di evento descritto da *TEvent*.
+Evento da confrontare con il tipo di evento descritto da *TEvent* .
 
 *objectPtr*\
 Puntatore a un oggetto su cui viene chiamato *memberFunc* .
@@ -78,7 +78,7 @@ Argomenti che vengono completati in modo perfetto per *memberFunc* insieme al pa
 
 ## <a name="remarks"></a>Osservazioni
 
-Il tipo di evento da utilizzare per il parametro *TEvent* può essere selezionato da un elenco di *classi di acquisizione*. Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
+Il tipo di evento da utilizzare per il parametro *TEvent* può essere selezionato da un elenco di *classi di acquisizione* . Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
 
 ## <a name="example"></a>Esempio
 

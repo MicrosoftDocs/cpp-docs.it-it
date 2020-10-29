@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: db02ce5656bf8970ead7b49d5580f7d81bebb1b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d416a10d5e2803cd978243a1e44625a2e696d42
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224136"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920177"
 ---
 # <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `MatchEventStackInMemberFunction` funzione viene utilizzata per trovare la corrispondenza con uno stack di eventi rispetto a una gerarchia di eventi specifica, descritta dall'elenco di parametri di una funzione membro. Le gerarchie corrispondenti vengono trasmesse alla funzione membro per un'ulteriore elaborazione. Per ulteriori informazioni su eventi, stack di eventi e gerarchie, vedere [tabella eventi](../event-table.md).
 
@@ -87,7 +87,7 @@ Tipo che contiene la funzione membro.
 *TReturn*\
 Tipo restituito della funzione membro.
 
-*T1*,..., *T10*\
+*T1* ,..., *T10*\
 Tipi che descrivono la gerarchia di eventi di cui trovare una corrispondenza.
 
 *TExtraParams*\
@@ -97,7 +97,7 @@ Tipi dei parametri aggiuntivi accettati dalla funzione membro e tipi di gerarchi
 Tipi degli argomenti aggiuntivi passati a `MatchEventStackInMemberFunction` .
 
 *eventStack*\
-Stack di eventi da confrontare con la gerarchia dei tipi di evento descritta da *T1* a *T10*.
+Stack di eventi da confrontare con la gerarchia dei tipi di evento descritta da *T1* a *T10* .
 
 *objectPtr*\
 Puntatore a un oggetto su cui viene chiamato *memberFunc* .
@@ -116,7 +116,7 @@ Argomenti che vengono completati in modo perfetto per *memberFunc* insieme ai pa
 
 Per la corrispondenza dell'ultimo evento in *eventStack* viene sempre eseguita la corrispondenza con l'ultima voce nella gerarchia dei tipi di evento. Tutti gli altri tipi nella gerarchia dei tipi di evento possono corrispondere a qualsiasi posizione in *eventStack* , ad eccezione dell'ultimo, purché si trovino nello stesso ordine.
 
-I tipi di evento da usare per i parametri da *T1* a *T10* sono selezionati da un elenco di *classi di acquisizione*. Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
+I tipi di evento da usare per i parametri da *T1* a *T10* sono selezionati da un elenco di *classi di acquisizione* . Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
 
 ## <a name="example"></a>Esempio
 

@@ -1,6 +1,6 @@
 ---
 title: Classe EventStack
-description: Informazioni di riferimento per la classe EventStack dell'SDK di Build Insights in C.
+description: Riferimento alla classe EventStack di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eaaaedcbf57fdaf8e437a80a7823488febac3e1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4f1e92011acdf8272fe631843c03c2f960a1234
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324973"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920710"
 ---
 # <a name="eventstack-class"></a>Classe EventStack
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `EventStack` classe è un insieme di [Oggetti Event.](event.md) Tutti gli eventi ricevuti da C, Build Insights `EventStack` SDK sono disponibili sotto forma di un oggetto. L'ultima voce in questo stack è l'evento attualmente in fase di elaborazione. Le voci che precedono l'ultima voce sono la gerarchia padre dell'evento corrente. Per ulteriori informazioni sul modello di eventi usato in Informazioni dettagliate sulla compilazione in C, vedere [la tabella](../event-table.md)degli eventi .
+La `EventStack` classe è una raccolta di oggetti [evento](event.md) . Tutti gli eventi ricevuti da C++ Build Insights SDK sono sotto forma di `EventStack` oggetto. L'ultima voce di questo stack è l'evento attualmente in fase di elaborazione. Le voci che precedono l'ultima voce sono la gerarchia padre dell'evento corrente. Per altre informazioni sul modello di eventi usato in C++ Build Insights, vedere [tabella eventi](../event-table.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,19 +41,19 @@ public:
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Costruttori
 
-[EventStack (Stack evento)](#event-stack)
+[EventStack](#event-stack)
 
 ### <a name="functions"></a>Funzioni
 
-[Operatore](#back)
-[Indietro[]](#subscript-operator)
-[Dimensione](#size)
+[Indietro](#back) 
+ [operator []](#subscript-operator) 
+ [Dimensioni](#size)
 
-## <a name="back"></a><a name="back"></a>Indietro
+## <a name="back"></a><a name="back"></a> Indietro
 
 ```cpp
 RawEvent Back() const;
@@ -61,9 +61,9 @@ RawEvent Back() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [RawEvent](raw-event.md) che rappresenta l'ultima voce nello stack. L'ultima voce in uno stack di eventi è l'evento che è stato attivato.
+Oggetto [RawEvent](raw-event.md) che rappresenta l'ultima voce nello stack. L'ultima voce in uno stack eventi è l'evento che è stato attivato.
 
-## <a name="eventstack"></a><a name="event-stack"></a>EventStack (Stack evento)
+## <a name="eventstack"></a><a name="event-stack"></a> EventStack
 
 ```cpp
 EventStack(const EVENT_COLLECTION_DATA& data);
@@ -71,14 +71,14 @@ EventStack(const EVENT_COLLECTION_DATA& data);
 
 ### <a name="parameters"></a>Parametri
 
-*Dati*\
-Dati non elaborati `EventStack` da cui viene compilato l'oggetto .
+*dati*\
+Dati non elaborati da cui `EventStack` viene compilato.
 
 ### <a name="remarks"></a>Osservazioni
 
-In genere non è `EventStack` necessario costruire oggetti manualmente. Vengono forniti dall'SDK di analisi di compilazione di C, quando gli eventi vengono elaborati durante una sessione di analisi o di nuova registrazione.
+Non è in genere necessario costruire `EventStack` oggetti. Vengono fornite da C++ Build Insights SDK quando gli eventi vengono elaborati durante una sessione di analisi o di registrazione.
 
-## <a name="operator"></a><a name="subscript-operator"></a>operatore[]
+## <a name="operator"></a><a name="subscript-operator"></a> operator []
 
 ```cpp
 RawEvent operator[] (size_t index) const;
@@ -91,7 +91,7 @@ Indice dell'elemento a cui accedere nello stack di eventi.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [RawEvent](raw-event.md) che rappresenta l'evento archiviato nella posizione indicata *dall'indice* nello stack di eventi.
+Oggetto [RawEvent](raw-event.md) che rappresenta l'evento archiviato nella posizione indicata da *index* nello stack di eventi.
 
 ## <a name="size"></a>Dimensioni dell'<a name="size"></a>
 
@@ -101,6 +101,6 @@ size_t Size() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Dimensione dello stack di eventi.
+Dimensioni dello stack di eventi.
 
 ::: moniker-end

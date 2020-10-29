@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 9a27d5fb49fe3576ee1f8d906219127d8b630c4e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 46fd15e184b3a4fb1f84cde3e3207c03c692ad2e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228661"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921880"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Procedura dettagliata: utilizzo di progetti e soluzioni (C++)
 
@@ -30,19 +30,19 @@ L'esercitazione è utile per comprendere le nozioni di base del linguaggio C++ e
 
 Per creare un progetto, è innanzitutto necessario scegliere un modello del tipo di progetto. Per ogni tipo di progetto, Visual Studio configura le impostazioni del compilatore e, a seconda del tipo, genera codice di avvio che è possibile modificare in un secondo momento. I passaggi seguenti variano leggermente a seconda della versione di Visual Studio in uso. Per visualizzare la documentazione per la versione preferita di Visual Studio, usare il controllo selettore della **versione** . Si trova nella parte superiore del sommario in questa pagina.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-a-project-in-visual-studio-2019"></a>Per creare un progetto in Visual Studio 2019
 
-1. Dal menu principale scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
+1. Dal menu principale scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto** .
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++ **, impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console** .
 
-1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva, immettere *Game* come nome per il progetto.
+1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti** . Nella pagina successiva, immettere *Game* come nome per il progetto.
 
    È possibile accettare il percorso predefinito nell'elenco a discesa **Percorso** oppure inserire un percorso diverso, o ancora scegliere il pulsante **Sfoglia** e passare alla cartella in cui salvare il progetto.
 
-   Quando si crea un progetto, Visual Studio lo inserisce in una soluzione. Per impostazione predefinita, il nome della soluzione è identico a quello del progetto. È possibile modificare il nome nella casella **Nome soluzione**. Per questo esempio, mantenere il nome predefinito.
+   Quando si crea un progetto, Visual Studio lo inserisce in una soluzione. Per impostazione predefinita, il nome della soluzione è identico a quello del progetto. È possibile modificare il nome nella casella **Nome soluzione** . Per questo esempio, mantenere il nome predefinito.
 
 1. Scegliere il pulsante **Crea** per creare il progetto.
 
@@ -50,21 +50,21 @@ Per creare un progetto, è innanzitutto necessario scegliere un modello del tipo
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ### <a name="to-create-a-project-in-visual-studio-2017"></a>Per creare un progetto in Visual Studio 2017
 
-1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto**.
+1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto** .
 
 1. Nel riquadro a sinistra della finestra di dialogo **Nuovo progetto** espandere **Installati** e selezionare **Visual C++** se non è già aperto.
 
-1. Nell'elenco dei modelli installati del riquadro centrale selezionare **Applicazione console di Windows**.
+1. Nell'elenco dei modelli installati del riquadro centrale selezionare **Applicazione console di Windows** .
 
-1. Immettere il nome del progetto nella casella **Nome**. Per questo esempio digitare *Game*.
+1. Immettere il nome del progetto nella casella **Nome** . Per questo esempio digitare *Game* .
 
    È possibile accettare il percorso predefinito nell'elenco a discesa **Percorso** oppure inserire un percorso diverso, o ancora scegliere il pulsante **Sfoglia** e passare alla cartella in cui salvare il progetto.
 
-   Quando si crea un progetto, Visual Studio lo inserisce in una soluzione. Per impostazione predefinita, il nome della soluzione è identico a quello del progetto. È possibile modificare il nome nella casella **Nome soluzione**. Per questo esempio, mantenere il nome predefinito.
+   Quando si crea un progetto, Visual Studio lo inserisce in una soluzione. Per impostazione predefinita, il nome della soluzione è identico a quello del progetto. È possibile modificare il nome nella casella **Nome soluzione** . Per questo esempio, mantenere il nome predefinito.
 
 1. Scegliere il pulsante **OK** per creare il progetto.
 
@@ -72,21 +72,21 @@ Per creare un progetto, è innanzitutto necessario scegliere un modello del tipo
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ### <a name="to-create-a-project-in-visual-studio-2015"></a>Per creare un progetto in Visual Studio 2015
 
-1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto**.
+1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto** .
 
 1. Nel riquadro a sinistra della finestra di dialogo **Nuovo progetto** espandere **Installati** e selezionare **Visual C++** se non è già aperto.
 
-1. Nell'elenco dei modelli installati nel riquadro centrale selezionare **Applicazione console Win32**.
+1. Nell'elenco dei modelli installati nel riquadro centrale selezionare **Applicazione console Win32** .
 
-1. Immettere il nome del progetto nella casella **Nome**. Per questo esempio digitare *Game*.
+1. Immettere il nome del progetto nella casella **Nome** . Per questo esempio digitare *Game* .
 
    È possibile accettare il percorso predefinito nell'elenco a discesa **Percorso** oppure inserire un percorso diverso, o ancora scegliere il pulsante **Sfoglia** e passare alla cartella in cui salvare il progetto.
 
-   Quando si crea un progetto, Visual Studio lo inserisce in una soluzione. Per impostazione predefinita, il nome della soluzione è identico a quello del progetto. È possibile modificare il nome nella casella **Nome soluzione**. Per questo esempio, mantenere il nome predefinito.
+   Quando si crea un progetto, Visual Studio lo inserisce in una soluzione. Per impostazione predefinita, il nome della soluzione è identico a quello del progetto. È possibile modificare il nome nella casella **Nome soluzione** . Per questo esempio, mantenere il nome predefinito.
 
 1. Scegliere il pulsante **OK** per creare il progetto.
 
@@ -98,17 +98,17 @@ Per creare un progetto, è innanzitutto necessario scegliere un modello del tipo
 
 È possibile usare **Esplora soluzioni** per organizzare e gestire progetti, file e altre risorse nella soluzione.
 
-In questa parte della procedura dettagliata viene illustrato come aggiungere una classe al progetto. Quando si aggiunge la classe, Visual Studio aggiunge i file corrispondenti con estensione h e cpp. È possibile visualizzare i risultati in **Esplora soluzioni**.
+In questa parte della procedura dettagliata viene illustrato come aggiungere una classe al progetto. Quando si aggiunge la classe, Visual Studio aggiunge i file corrispondenti con estensione h e cpp. È possibile visualizzare i risultati in **Esplora soluzioni** .
 
 ### <a name="to-add-a-class-to-a-project"></a>Per aggiungere una classe a un progetto
 
-1. Se la finestra di **Esplora soluzioni** non viene visualizzata, sulla barra dei menu di Visual Studio selezionare **Visualizza** > **Esplora soluzioni**.
+1. Se la finestra di **Esplora soluzioni** non viene visualizzata, sulla barra dei menu di Visual Studio selezionare **Visualizza** > **Esplora soluzioni** .
 
-1. In **Esplora soluzioni** selezionare il progetto **Game**. Sulla barra dei menu scegliere **progetto**  >  **Aggiungi classe**.
+1. In **Esplora soluzioni** selezionare il progetto **Game** . Sulla barra dei menu scegliere **progetto**  >  **Aggiungi classe** .
 
 1. Nella finestra di dialogo **Aggiungi classe** immettere *Cardgame* nella casella **nome classe** . Non modificare le impostazioni e i nomi di file predefiniti. Fare clic su **OK** .
 
-   In Visual Studio vengono creati i nuovi file, che vengono quindi aggiunti al progetto. I file sono visibili nella finestra **Esplora soluzioni**. I file Cardgame.h e Cardgame.cpp vengono aperti nell'editor.
+   In Visual Studio vengono creati i nuovi file, che vengono quindi aggiunti al progetto. I file sono visibili nella finestra **Esplora soluzioni** . I file Cardgame.h e Cardgame.cpp vengono aperti nell'editor.
 
 1. Modificare il file Cardgame.h come segue:
 
@@ -124,7 +124,7 @@ In questa parte della procedura dettagliata viene illustrato come aggiungere una
 
       `Cardgame();`
 
-      Modificare il costruttore per prendere un parametro di tipo **`int`** , denominato *Players*.
+      Modificare il costruttore per prendere un parametro di tipo **`int`** , denominato *Players* .
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
       `Cardgame(int players);`
@@ -182,7 +182,7 @@ In questa parte della procedura dettagliata viene illustrato come aggiungere una
     ```
 
    > [!NOTE]
-   > È possibile utilizzare il completamento automatico quando si scrive il codice. Se ad esempio si immette questo codice sulla tastiera, è possibile immettere *pl* o *tot* , quindi premere **CTRL** + **barra spaziatrice**. Il completamento automatico immette `players` o `totalParticipants`.
+   > È possibile utilizzare il completamento automatico quando si scrive il codice. Se ad esempio si immette questo codice sulla tastiera, è possibile immettere *pl* o *tot* , quindi premere **CTRL** + **barra spaziatrice** . Il completamento automatico immette `players` o `totalParticipants`.
 
 ## <a name="add-test-code-to-your-main-function"></a>Aggiungere codice di test alla funzione principale
 
@@ -227,7 +227,7 @@ A questo punto compilare il progetto ed eseguire l'app.
 
 ### <a name="to-build-and-run-the-project"></a>Per compilare ed eseguire il progetto
 
-1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione**.
+1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione** .
 
    Nella finestra **Output** viene visualizzato l'output di una compilazione. Se la compilazione ha esito positivo, l'output sarà analogo al seguente:
 
@@ -245,7 +245,7 @@ A questo punto compilare il progetto ed eseguire l'app.
 
    Se la compilazione ha esito negativo, confrontare il codice con quello visualizzato nei passaggi precedenti.
 
-1. Per eseguire il progetto, sulla barra dei menu scegliere **debug**  >  **Avvia senza eseguire debug**. Viene visualizzata una finestra della console e l'output è simile al seguente:
+1. Per eseguire il progetto, sulla barra dei menu scegliere **debug**  >  **Avvia senza eseguire debug** . Viene visualizzata una finestra della console e l'output è simile al seguente:
 
     ```Output
     4 players have started a new game.  There are now 4 players in total.

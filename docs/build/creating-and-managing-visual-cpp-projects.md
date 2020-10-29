@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a8e23a3c384ce9b5ac7e73d18958246b52eb95b5
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078685"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919384"
 ---
 # <a name="visual-studio-projects---c"></a>Progetti di Visual Studio - C++
 
@@ -21,17 +21,17 @@ Un *progetto di Visual Studio* è un progetto basato sul sistema di compilazione
 
 ## <a name="create-a-project"></a>Creare un progetto
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-È possibile creare progetti c++ scegliendo **file** > **nuovo** > **progetto**, quindi impostando la **lingua** su C++. Nell'elenco risultati è disponibile un elenco di modelli di progetto che è possibile filtrare impostando un'opzione in **Piattaforma** o **Tipo di progetto** e digitando parole chiave nella casella di ricerca.
+È possibile creare progetti c++ scegliendo **file**  >  **nuovo**  >  **progetto** , quindi impostando la **lingua** su C++. Nell'elenco risultati è disponibile un elenco di modelli di progetto che è possibile filtrare impostando un'opzione in **Piattaforma** o **Tipo di progetto** e digitando parole chiave nella casella di ricerca.
 
    ![Modelli di progetto di Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Finestra di dialogo nuovo progetto di Visual Studio 2019")
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
-È possibile creare progetti C++ scegliendo **file** > **nuovo** > **progetto**, quindi Visual C++ nel riquadro sinistro. Nel riquadro centrale è visualizzato un elenco di modelli di progetto:
+È possibile creare progetti C++ scegliendo **file**  >  **nuovo**  >  **progetto** , quindi Visual C++ nel riquadro sinistro. Nel riquadro centrale è visualizzato un elenco di modelli di progetto:
 
    ![Modelli di progetto](../overview/media/vs2017-new-project.png "Finestra di dialogo nuovo progetto di Visual Studio 2017")
 
@@ -43,11 +43,11 @@ Dopo aver creato un progetto, questo viene visualizzato nella finestra di [Esplo
 
    ![Esplora soluzioni](media/mathlibrary-solution-explorer-153.png)
 
-Quando si crea un nuovo progetto, viene creato anche un file di soluzione (con estensione sln). È possibile aggiungere altri progetti alla soluzione facendo clic su di essa con il pulsante destro del mouse in **Esplora soluzioni**. Il file di soluzione viene usato per coordinare le dipendenze di compilazione quando sono presenti più progetti correlati, ma non fa molto altro. Tutte le opzioni del compilatore vengono impostate a livello di progetto.
+Quando si crea un nuovo progetto, viene creato anche un file di soluzione (con estensione sln). È possibile aggiungere altri progetti alla soluzione facendo clic su di essa con il pulsante destro del mouse in **Esplora soluzioni** . Il file di soluzione viene usato per coordinare le dipendenze di compilazione quando sono presenti più progetti correlati, ma non fa molto altro. Tutte le opzioni del compilatore vengono impostate a livello di progetto.
 
 ## <a name="add-items"></a>Aggiungi elementi
 
-Per aggiungere file di codice sorgente, icone o qualsiasi altro elemento al progetto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Aggiungi > Nuovo** o **Aggiungi > Esistente**.
+Per aggiungere file di codice sorgente, icone o qualsiasi altro elemento al progetto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Aggiungi > Nuovo** o **Aggiungi > Esistente** .
 
 ## <a name="add-third-party-libraries"></a>Aggiungere librerie di terze parti
 
@@ -55,11 +55,11 @@ Per aggiungere librerie di terze parti, usare l'utilità di gestione pacchetti [
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Impostare le opzioni del compilatore e altre proprietà di compilazione
 
-Per configurare le impostazioni di compilazione di un progetto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà**. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](working-with-project-properties.md).
+Per configurare le impostazioni di compilazione di un progetto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà** . Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](working-with-project-properties.md).
 
 ## <a name="compile-and-run"></a>Compila ed esegui
 
-Per compilare ed eseguire il nuovo progetto, premere **F5** oppure fare clic sul *menu a discesa di debug* con la freccia verde sulla barra degli strumenti principale. Nell'*elenco a discesa di configurazione* occorre scegliere se eseguire una compilazione di *Debug* o *Rilascio* (o una configurazione personalizzata).
+Per compilare ed eseguire il nuovo progetto, premere **F5** oppure fare clic sul *menu a discesa di debug* con la freccia verde sulla barra degli strumenti principale. Nell' *elenco a discesa di configurazione* occorre scegliere se eseguire una compilazione di *Debug* o *Rilascio* (o una configurazione personalizzata).
 
 Un nuovo progetto viene compilato senza errori. Quando si aggiunge il proprio codice, si può a volte introdurre un errore o causare la generazione di un avviso. Un errore impedisce il completamento della compilazione, diversamente da un avviso. Tutti gli errori e gli avvisi vengono visualizzati sia nella Finestra di output che nell'Elenco errori quando si compila il progetto.
 
@@ -78,7 +78,7 @@ Come includere librerie, DLL e componenti COM e .NET in un progetto.
 [Organizzare i file di output del progetto](how-to-organize-project-output-files-for-builds.md)<br/>
 Come personalizzare la posizione dei file eseguibili creati nel processo di compilazione.
 
-[Istruzioni di compilazione personalizzate ed eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br/>
+[Procedure di compilazione personalizzate ed eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br/>
 Come aggiungere un comando arbitrario al processo di compilazione in punti specifici.
 
 [Creare un progetto da codice esistente](how-to-create-a-cpp-project-from-existing-code.md)<br/>

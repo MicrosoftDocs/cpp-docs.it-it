@@ -10,21 +10,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6f53a9b6c682a0af7d8a01f6378ed0574d8fa4ca
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a6ecff81a9f3d2b22107a8fa7fc26fad85d4f579
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041172"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919514"
 ---
 # <a name="c-build-insights-sdk"></a>C++ Build Insights SDK
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 C++ Build Insights SDK è una raccolta di API che consente di creare strumenti personalizzati sulla piattaforma C++ Build Insights. Questa pagina offre una panoramica di alto livello per iniziare.
 
@@ -37,7 +37,7 @@ C++ Build Insights SDK è una raccolta di API che consente di creare strumenti p
 1. Selezionare **Gestisci pacchetti NuGet** dal menu di scelta rapida.
 1. In alto a destra selezionare l'origine del pacchetto **NuGet.org** .
 1. Cercare la versione più recente del pacchetto Microsoft. cpp. BuildInsights.
-1. Scegliere **Installa**.
+1. Scegliere **Installa** .
 1. Accettare la licenza.
 
 Per informazioni sui concetti generali relativi all'SDK, vedere. È anche possibile accedere al [repository GitHub degli esempi di build Insights di c++](https://github.com/microsoft/cpp-build-insights-samples) ufficiale per vedere esempi di applicazioni c++ reali che usano l'SDK.
@@ -81,7 +81,7 @@ Quando si dispone di una traccia ETW, usare C++ Build Insights SDK per decomprim
 |--|--|--|--|
 | Impostazione di callback di evento | [IAnalyzer](other-types/ianalyzer-class.md)<br />[IRelogger](other-types/irelogger-class.md) | [ANALYSIS_CALLBACKS](other-types/analysis-callbacks-struct.md)<br />[RELOG_CALLBACKS](other-types/relog-callbacks-struct.md) | C++ Build Insights SDK fornisce eventi tramite funzioni di callback. In C++ implementare le funzioni di callback creando una classe Analyzer o relogger che eredita l'interfaccia IAnalyzer o IRelogger. In C implementare i callback nelle funzioni globali e fornire puntatori a essi nella struttura ANALYSIS_CALLBACKS o RELOG_CALLBACKS. |
 | Compilazione di gruppi | [MakeStaticAnalyzerGroup](functions/make-static-analyzer-group.md)<br />[MakeStaticReloggerGroup](functions/make-static-relogger-group.md)<br />[MakeDynamicAnalyzerGroup](functions/make-dynamic-analyzer-group.md)<br />[MakeDynamicReloggerGroup](functions/make-dynamic-relogger-group.md) |  | L'API C++ fornisce funzioni helper e tipi per raggruppare più oggetti analizzatore e relogger. I gruppi sono un modo accurato per dividere un'analisi complessa in passaggi più semplici. [vcperf](https://github.com/microsoft/vcperf) è organizzato in questo modo. |
-| Analisi o riregistrazione | [Analisi](functions/analyze.md)<br />[Relog](functions/relog.md) | [AnalyzeA](functions/analyze-a.md)<br />[AnalyzeW](functions/analyze-w.md)<br />[RelogA](functions/relog-a.md)<br />[RelogW](functions/relog-w.md) |  |
+| Analisi o riregistrazione | [Analyze (Analizza) ](functions/analyze.md)<br />[Relog](functions/relog.md) | [AnalyzeA](functions/analyze-a.md)<br />[AnalyzeW](functions/analyze-w.md)<br />[RelogA](functions/relog-a.md)<br />[RelogW](functions/relog-w.md) |  |
 
 ### <a name="analyzing-and-relogging"></a>Analisi e riregistrazione
 
@@ -152,7 +152,7 @@ int main()
 
 ### <a name="activities-and-simple-events"></a>Attività ed eventi semplici
 
-Gli eventi sono disponibili in due categorie: *attività* e *eventi semplici*. Le attività sono processi in corso nel tempo che hanno un inizio e una fine. Gli eventi semplici sono occorrenze puntuali e non hanno una durata. Quando si analizzano le tracce MSVC con C++ Build Insights SDK, si riceveranno eventi distinti quando un'attività viene avviata e arrestata. Quando si verifica un evento semplice, si riceverà un solo evento.
+Gli eventi sono disponibili in due categorie: *attività* e *eventi semplici* . Le attività sono processi in corso nel tempo che hanno un inizio e una fine. Gli eventi semplici sono occorrenze puntuali e non hanno una durata. Quando si analizzano le tracce MSVC con C++ Build Insights SDK, si riceveranno eventi distinti quando un'attività viene avviata e arrestata. Quando si verifica un evento semplice, si riceverà un solo evento.
 
 ### <a name="parent-child-relationships"></a>Relazioni padre-figlio
 
@@ -197,7 +197,7 @@ Ogni volta che C++ Build Insights SDK fornisce un evento, viene visualizzato sot
 
 #### <a name="matching-events-and-event-stacks"></a>Eventi e stack di eventi corrispondenti
 
-C++ Build Insights SDK consente di ottenere ogni evento in una traccia, ma la maggior parte del tempo si occupa solo di un sottoinsieme. In alcuni casi, è possibile che si occupi solo di un subset di *stack di eventi*. L'SDK fornisce funzionalità che consentono di estrarre rapidamente gli eventi o lo stack di eventi necessari e rifiutare quelli che non si desidera. Questa operazione viene eseguita tramite le funzioni corrispondenti:
+C++ Build Insights SDK consente di ottenere ogni evento in una traccia, ma la maggior parte del tempo si occupa solo di un sottoinsieme. In alcuni casi, è possibile che si occupi solo di un subset di *stack di eventi* . L'SDK fornisce funzionalità che consentono di estrarre rapidamente gli eventi o lo stack di eventi necessari e rifiutare quelli che non si desidera. Questa operazione viene eseguita tramite le funzioni corrispondenti:
 
 | Funzione | Descrizione |
 |--|--|
@@ -210,13 +210,13 @@ Le funzioni di corrispondenza dello stack `MatchEventStack` di eventi come Conse
 
 #### <a name="capture-classes"></a>Acquisisci classi
 
-Per utilizzare le `Match*` funzioni, è necessario specificare i tipi per i quali si desidera trovare una corrispondenza. Questi tipi sono selezionati da un elenco di *classi di acquisizione*. Le classi di acquisizione sono disponibili in diverse categorie, descritte di seguito.
+Per utilizzare le `Match*` funzioni, è necessario specificare i tipi per i quali si desidera trovare una corrispondenza. Questi tipi sono selezionati da un elenco di *classi di acquisizione* . Le classi di acquisizione sono disponibili in diverse categorie, descritte di seguito.
 
 | Category | Descrizione |
 |--|--|
 | Exact | Queste classi di acquisizione vengono usate per trovare la corrispondenza con un tipo di evento specifico e nessun altro. Un esempio è la classe del [compilatore](cpp-event-data-types/compiler.md) , che corrisponde all'evento del [compilatore](event-table.md#compiler) . |
 | Wildcard (Carattere jolly) | Queste classi di acquisizione possono essere usate per trovare la corrispondenza con qualsiasi evento dall'elenco di eventi supportati. Il carattere jolly dell' [attività](cpp-event-data-types/activity.md) , ad esempio, corrisponde a qualsiasi evento di attività. Un altro esempio è il carattere jolly [CompilerPass](cpp-event-data-types/compiler-pass.md) , che può corrispondere all'evento [FRONT_END_PASS](event-table.md#front-end-pass) o [BACK_END_PASS](event-table.md#back-end-pass) . |
-| Group | I nomi delle classi di acquisizione del gruppo terminano nel *gruppo*. Sono usati per trovare la corrispondenza con più eventi dello stesso tipo in una riga, ignorando gli spazi vuoti. Hanno senso solo quando si corrispondono a eventi ricorsivi, perché non si conosce il numero di elementi presenti nello stack di eventi. Ad esempio, l'attività [FRONT_END_FILE](event-table.md#front-end-file) si verifica ogni volta che il compilatore analizza un file. Questa attività è ricorsiva perché il compilatore potrebbe trovare una direttiva include durante l'analisi del file. La classe [FrontEndFile](cpp-event-data-types/front-end-file.md) corrisponde solo a un evento FRONT_END_FILE nello stack. Usare la classe [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) per trovare la corrispondenza con l'intera gerarchia di inclusione. |
+| Group | I nomi delle classi di acquisizione del gruppo terminano nel *gruppo* . Sono usati per trovare la corrispondenza con più eventi dello stesso tipo in una riga, ignorando gli spazi vuoti. Hanno senso solo quando si corrispondono a eventi ricorsivi, perché non si conosce il numero di elementi presenti nello stack di eventi. Ad esempio, l'attività [FRONT_END_FILE](event-table.md#front-end-file) si verifica ogni volta che il compilatore analizza un file. Questa attività è ricorsiva perché il compilatore potrebbe trovare una direttiva include durante l'analisi del file. La classe [FrontEndFile](cpp-event-data-types/front-end-file.md) corrisponde solo a un evento FRONT_END_FILE nello stack. Usare la classe [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) per trovare la corrispondenza con l'intera gerarchia di inclusione. |
 | Gruppo di caratteri jolly | Un gruppo di caratteri jolly combina le proprietà dei caratteri jolly e dei gruppi. L'unica classe di questa categoria è [InvocationGroup](cpp-event-data-types/invocation-group.md), che corrisponde e acquisisce tutti gli eventi del [linker](event-table.md#linker) e [del compilatore](event-table.md#compiler) in un singolo stack di eventi. |
 
 Per informazioni sulle classi di acquisizione che è possibile usare per la corrispondenza di ogni evento, vedere la [tabella degli eventi](event-table.md) .

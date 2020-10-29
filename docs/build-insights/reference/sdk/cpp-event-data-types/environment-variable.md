@@ -1,6 +1,6 @@
 ---
-title: Classe EnvironmentVariable
-description: Il riferimento alla classe EnvironmentVariable dell'SDK di Build Insights in C.
+title: Classe Metodo EnvironmentVariable
+description: Riferimento alla classe Metodo EnvironmentVariable di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 963c52e0ea9e048448c6f2b3ac62d9938817467e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f707ab744aaf6097975ba9e189815df3c9f32266
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325014"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920763"
 ---
-# <a name="environmentvariable-class"></a>Classe EnvironmentVariable
+# <a name="environmentvariable-class"></a>Classe Metodo EnvironmentVariable
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `EnvironmentVariable` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usalo per trovare una corrispondenza con un evento [ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
+La `EnvironmentVariable` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usarlo per trovare la corrispondenza con un evento [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-Insieme ai membri ereditati dalla classe `EnvironmentVariable` base [SimpleEvent](simple-event.md) , la classe contiene i membri seguenti:
+Insieme ai membri ereditati dalla relativa classe base [SimpleEvent](simple-event.md) , la `EnvironmentVariable` classe contiene i membri seguenti:
 
 ### <a name="constructors"></a>Costruttori
 
@@ -50,10 +50,10 @@ Insieme ai membri ereditati dalla classe `EnvironmentVariable` base [SimpleEvent
 
 ### <a name="functions"></a>Funzioni
 
-[Nome](#name)
-[Valore](#value)
+[Nome](#name) 
+ [Valore](#value) di
 
-## <a name="environmentvariable"></a><a name="environment-variable"></a>Variabile di ambienteEnvironmentVariable
+## <a name="environmentvariable"></a><a name="environment-variable"></a> Metodo EnvironmentVariable
 
 ```cpp
 EnvironmentVariable(const RawEvent& event);
@@ -61,10 +61,10 @@ EnvironmentVariable(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametri
 
-*Evento*\
-Un [evento ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
+*evento*\
+Evento [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
 
-## <a name="name"></a><a name="name"></a>Nome
+## <a name="name"></a><a name="name"></a> Nome
 
 ```cpp
 const wchar_t Name() const;
@@ -74,7 +74,7 @@ const wchar_t Name() const;
 
 Nome della variabile di ambiente.
 
-## <a name="value"></a><a name="value"></a> Valore
+## <a name="value"></a>Valore di <a name="value"></a>
 
 ```cpp
 const wchar_t Value() const;

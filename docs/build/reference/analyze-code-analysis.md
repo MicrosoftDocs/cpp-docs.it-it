@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dcf44f1d282a9dd39205aecb4e75b59a6e8481f9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500090"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919098"
 ---
 # <a name="analyze-code-analysis"></a>`/analyze` (Analisi codice)
 
@@ -25,7 +25,7 @@ Abilita le opzioni di controllo e analisi del codice.
 
 ## <a name="syntax"></a>Sintassi
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -42,7 +42,7 @@ Abilita le opzioni di controllo e analisi del codice.
 > **`/analyze:WX-`**
 
 ::: moniker-end
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -68,10 +68,10 @@ Abilita l'analisi nella modalità predefinita. L'output di analisi passa alla co
 I risultati dettagliati dell'analizzatore vengono scritti in formato XML in un file con lo stesso nome di base del file di origine e un'estensione di *`.pftlog`* . **`/analyze:autolog-`** Disabilita questo file di log.
 
 **`/analyze:autolog:ext`***estensione* di\
-I risultati dettagliati dell'analizzatore vengono scritti in formato XML in un file con lo stesso nome di base del file di origine e un'estensione di *estensione*.
+I risultati dettagliati dell'analizzatore vengono scritti in formato XML in un file con lo stesso nome di base del file di origine e un'estensione di *estensione* .
 
 **`/analyze:log`***nome file*\
-I risultati dettagliati dell'analizzatore vengono scritti in formato XML nel file specificato da *filename*.
+I risultati dettagliati dell'analizzatore vengono scritti in formato XML nel file specificato da *filename* .
 
 **`/analyze:max_paths`***numero* di\
 Il parametro *Number* utilizzato con questa opzione specifica il numero massimo di percorsi di codice da analizzare. Se questo parametro non è specificato, per impostazione predefinita il numero è 256. I valori più grandi provocano un controllo più approfondito, ma l'analisi potrebbe richiedere più tempo.
@@ -82,14 +82,14 @@ In genere, il compilatore genera codice ed esegue un controllo più accurato del
 **`/analyze:plugin`***plug-in-dll*\
 Abilita il plug-in PREfast specificato come parte delle esecuzioni dell'analisi del codice.
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 LocalEspC.dll è il plug-in che implementa i controlli di analisi del codice correlati alla concorrenza nell'intervallo di avvisi di C261XX. Ad esempio, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Per eseguire LocalEspC.dll, usare questa opzione del compilatore: **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ConcurrencyCheck.dll implementa i controlli di analisi del codice correlati alla concorrenza nell'intervallo di avvisi di C261XX. Ad esempio, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
@@ -114,7 +114,7 @@ Usare quindi questa opzione del compilatore: **`/analyze:plugin EspXEngine.dll`*
 **`/analyze:quiet`**\
 Disattiva l'output dell'analizzatore nella console o nella finestra di **output** di Visual Studio.
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 **`/analyze:ruleset`***FILE_PATH. RuleSet*\
 Consente di specificare i set di regole da analizzare, inclusi i set di regole personalizzati che è possibile creare manualmente. Quando questa opzione è impostata, il motore regole è più efficiente, perché esclude i membri non appartenenti al set di regole specificato prima di eseguire. In caso contrario, il motore controlla tutte le regole.
@@ -149,7 +149,7 @@ Per ulteriori informazioni, vedere [Cenni preliminari sull'analisi del codice pe
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la **Configuration Properties**  >  **Code Analysis**  >  pagina delle proprietà**generale** di analisi del codice delle proprietà di configurazione.
+1. Selezionare la **Configuration Properties**  >  **Code Analysis**  >  pagina delle proprietà **generale** di analisi del codice delle proprietà di configurazione.
 
 1. Modificare una o più proprietà di **analisi del codice** .
 
@@ -160,4 +160,4 @@ Per ulteriori informazioni, vedere [Cenni preliminari sull'analisi del codice pe
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)\
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

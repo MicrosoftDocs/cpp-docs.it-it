@@ -1,6 +1,6 @@
 ---
 title: Classe OptRef
-description: Il riferimento della classe OptRef dell'SDK di Build Insights.
+description: Riferimento alla classe OptRef di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: dca8cc62eed4b7136f88ed5ba6a1a168b2de56c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 72d3867456ecc2bb643239ddb0186668e43f69ef
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324440"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920515"
 ---
 # <a name="optref-class"></a>Classe OptRef
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `OptRef` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usalo per trovare una corrispondenza con un [evento OPT_REF.](../event-table.md#opt-ref)
+La `OptRef` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usarlo per trovare la corrispondenza con un evento [OPT_REF](../event-table.md#opt-ref) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-Insieme ai membri ereditati dalla relativa `OptRef` classe base [Activity,](activity.md) la classe contiene i membri seguenti:
+Insieme ai membri ereditati dalla relativa classe di base [Activity](activity.md) , la `OptRef` classe contiene i membri seguenti:
 
 ### <a name="constructors"></a>Costruttori
 
-[OptRef (opzione di riferimento)](#opt-ref)
+[OptRef](#opt-ref)
 
-## <a name="optref"></a><a name="opt-ref"></a>OptRef (opzione di riferimento)
+## <a name="optref"></a><a name="opt-ref"></a> OptRef
 
 ```cpp
 OptRef(const RawEvent& event);
@@ -53,7 +53,7 @@ OptRef(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametri
 
-*Evento*\
-Un [evento OPT_REF.](../event-table.md#opt-ref)
+*evento*\
+Evento [OPT_REF](../event-table.md#opt-ref) .
 
 ::: moniker-end

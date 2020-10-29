@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 21ce276af9317c06f3b717b41685f419d2362d70
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215881"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921685"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procedura dettagliata: Debug di un'applicazione C++ AMP
 
@@ -30,7 +30,7 @@ In questo argomento viene illustrato come eseguire il debug di un'applicazione c
 
 - Esecuzione di tutti i thread di un riquadro in una posizione specifica nel codice.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Prima di iniziare questa procedura dettagliata:
 
@@ -46,15 +46,15 @@ Prima di iniziare questa procedura dettagliata:
 
 Le istruzioni per la creazione di un progetto variano a seconda della versione di Visual Studio in uso. Verificare che sia selezionata la versione corretta nella parte superiore sinistra della pagina.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>Per creare il progetto di esempio in Visual Studio 2019
 
-1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto** .
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++ **, impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console** .
 
-1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva immettere `AMPMapReduce` nella casella **Nome** per specificare un nome per il progetto e specificare facoltativamente il percorso del progetto.
+1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti** . Nella pagina successiva immettere `AMPMapReduce` nella casella **Nome** per specificare un nome per il progetto e specificare facoltativamente il percorso del progetto.
 
    ![Assegnare un nome al progetto](../../build/media/mathclient-project-name-2019.png "Denominare il progetto")
 
@@ -62,23 +62,23 @@ Le istruzioni per la creazione di un progetto variano a seconda della versione d
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>Per creare il progetto di esempio in Visual Studio 2017 o Visual Studio 2015
 
 1. Avviare Visual Studio.
 
-1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto**.
+1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto** .
 
-1. In **installato** nel riquadro modelli scegliere **Visual C++**.
+1. In **installato** nel riquadro modelli scegliere **Visual C++** .
 
-1. Scegliere **applicazione console Win32**, digitare `AMPMapReduce` nella casella **nome** , quindi scegliere il pulsante **OK** .
+1. Scegliere **applicazione console Win32** , digitare `AMPMapReduce` nella casella **nome** , quindi scegliere il pulsante **OK** .
 
-1. Fare clic su **Avanti**.
+1. Fare clic su **Avanti** .
 
 1. Deselezionare la casella di controllo **intestazione precompilata** , quindi scegliere il pulsante **fine** .
 
-1. In **Esplora soluzioni**eliminare *stdafx. h*, *targetver. h*e *stdafx. cpp* dal progetto.
+1. In **Esplora soluzioni** eliminare *stdafx. h* , *targetver. h* e *stdafx. cpp* dal progetto.
 
 ::: moniker-end
 
@@ -203,15 +203,15 @@ Passaggi successivi:
     }
 ```
 
-1. Nella barra dei menu scegliere **file**  >  **Salva tutto**.
+1. Nella barra dei menu scegliere **file**  >  **Salva tutto** .
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per **AMPMapReduce**, quindi scegliere **proprietà**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per **AMPMapReduce** , quindi scegliere **proprietà** .
 
-1. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione**, scegliere intestazioni precompilate **C/C++**  >  **Precompiled Headers**.
+1. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione** , scegliere intestazioni precompilate **C/C++**  >  **Precompiled Headers** .
 
-1. Per la proprietà dell' **intestazione precompilata** , selezionare **non usare le intestazioni precompilate**, quindi scegliere il pulsante **OK** .
+1. Per la proprietà dell' **intestazione precompilata** , selezionare **non usare le intestazioni precompilate** , quindi scegliere il pulsante **OK** .
 
-1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione**.
+1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione** .
 
 ## <a name="debugging-the-cpu-code"></a>Debug del codice CPU
 
@@ -219,22 +219,22 @@ In questa procedura verrà usato il debugger Windows locale per assicurarsi che 
 
 ### <a name="to-debug-the-cpu-code"></a>Per eseguire il debug del codice CPU
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per **AMPMapReduce**, quindi scegliere **proprietà**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per **AMPMapReduce** , quindi scegliere **proprietà** .
 
-2. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione**, scegliere **debug**. Verificare che sia selezionato **debugger Windows locale** nell'elenco **debugger da avviare** .
+2. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione** , scegliere **debug** . Verificare che sia selezionato **debugger Windows locale** nell'elenco **debugger da avviare** .
 
-3. Tornare all' **editor di codice**.
+3. Tornare all' **editor di codice** .
 
 4. Impostare punti di interruzione nelle righe di codice mostrate nella figura seguente (approssimativamente linee 67 riga 70).
 
    ![Punti di interruzione CPU](../../parallel/amp/media/campcpubreakpoints.png "Punti di interruzione CPU") <br/>
    Punti di interruzione CPU
 
-5. Sulla barra dei menu scegliere **debug**  >  **Avvia debug**.
+5. Sulla barra dei menu scegliere **debug**  >  **Avvia debug** .
 
 6. Nella finestra **variabili locali** osservare il valore di `stride_size` fino a quando non viene raggiunto il punto di interruzione alla riga 70.
 
-7. Sulla barra dei menu scegliere **debug**  >  **Interrompi debug**.
+7. Sulla barra dei menu scegliere **debug**  >  **Interrompi debug** .
 
 ## <a name="debugging-the-gpu-code"></a>Debug del codice GPU
 
@@ -242,15 +242,15 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 ### <a name="to-debug-the-gpu-code"></a>Per eseguire il debug del codice GPU
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per **AMPMapReduce**, quindi scegliere **proprietà**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per **AMPMapReduce** , quindi scegliere **proprietà** .
 
-2. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione**, scegliere **debug**.
+2. Nella finestra di dialogo **pagine delle proprietà** , in **proprietà di configurazione** , scegliere **debug** .
 
-3. Nell'elenco **Debugger da avviare** selezionare **Debugger Windows locale**.
+3. Nell'elenco **Debugger da avviare** selezionare **Debugger Windows locale** .
 
 4. Nell'elenco **tipo di debugger** verificare che sia selezionata l'opzione **automatico** .
 
-    **Auto** è il valore predefinito. Prima di Windows 10, **solo la GPU** è il valore richiesto anziché **auto**.
+    **Auto** è il valore predefinito. Prima di Windows 10, **solo la GPU** è il valore richiesto anziché **auto** .
 
 5. Fare clic su **OK** .
 
@@ -259,11 +259,11 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
    ![Punti di interruzione GPU](../../parallel/amp/media/campgpubreakpoints.png "Punti di interruzione GPU") <br/>
    Punto di interruzione GPU
 
-7. Sulla barra dei menu scegliere **debug**  >  **Avvia debug**. I punti di interruzione nel codice della CPU alle righe 67 e 70 non vengono eseguiti durante il debug della GPU, perché tali righe di codice vengono eseguite sulla CPU.
+7. Sulla barra dei menu scegliere **debug**  >  **Avvia debug** . I punti di interruzione nel codice della CPU alle righe 67 e 70 non vengono eseguiti durante il debug della GPU, perché tali righe di codice vengono eseguite sulla CPU.
 
 ### <a name="to-use-the-gpu-threads-window"></a>Per utilizzare la finestra thread GPU
 
-1. Per aprire la finestra **thread GPU** , sulla barra dei menu scegliere **debug**  >  **Windows**  >  **thread GPU**Windows.
+1. Per aprire la finestra **thread GPU** , sulla barra dei menu scegliere **debug**  >  **Windows**  >  **thread GPU** Windows.
 
    È possibile controllare lo stato dei thread GPU nella finestra **thread GPU** visualizzata.
 
@@ -276,7 +276,7 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    Nella finestra **thread GPU** sono disponibili quattro thread GPU attivi e 28 thread GPU bloccati nell'istruzione [tile_barrier:: wait](reference/tile-barrier-class.md#wait) definita a circa la riga 21 ( `t_idx.barrier.wait();` ). Tutti i thread GPU 32 appartengono al primo riquadro, `tile[0]` . Una freccia punta alla riga che include il thread corrente. Per passare a un thread diverso, usare uno dei metodi seguenti:
 
-    - Nella riga per il thread a cui passare nella finestra **thread GPU** aprire il menu di scelta rapida e scegliere **passa a thread**. Se la riga rappresenta più di un thread, si passerà al primo thread secondo le coordinate del thread.
+    - Nella riga per il thread a cui passare nella finestra **thread GPU** aprire il menu di scelta rapida e scegliere **passa a thread** . Se la riga rappresenta più di un thread, si passerà al primo thread secondo le coordinate del thread.
 
     - Immettere i valori del riquadro e del thread del thread nelle caselle di testo corrispondenti, quindi scegliere il pulsante **Cambia thread** .
 
@@ -284,7 +284,7 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Per utilizzare la finestra stack in parallelo
 
-1. Per aprire la finestra **stack in parallelo** , sulla barra dei menu scegliere **debug**  >  stack in parallelo di**Windows**  >  **Parallel Stacks**.
+1. Per aprire la finestra **stack in parallelo** , sulla barra dei menu scegliere **debug**  >  stack in parallelo di **Windows**  >  **Parallel Stacks** .
 
    È possibile utilizzare la finestra **stack in parallelo** per controllare contemporaneamente gli stack frame di più thread GPU.
 
@@ -297,7 +297,7 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    32 thread passati dall' `_kernel_stub` istruzione lambda nella `parallel_for_each` chiamata di funzione e quindi alla `sum_kernel_tiled` funzione, in cui si verifica la riduzione parallela. 28 i thread 32 sono progrediti nell'istruzione [tile_barrier:: wait](reference/tile-barrier-class.md#wait) e rimangono bloccati alla riga 22, mentre gli altri 4 thread rimangono attivi nella `sum_kernel_tiled` funzione alla riga 30.
 
-   È possibile esaminare le proprietà di un thread GPU disponibili nella finestra **thread GPU** nel DataTip completo della finestra **stack in parallelo** . A tale scopo, posizionare il puntatore del mouse sul stack frame di **sum_kernel_tiled**. La figura seguente mostra DataTip.
+   È possibile esaminare le proprietà di un thread GPU disponibili nella finestra **thread GPU** nel DataTip completo della finestra **stack in parallelo** . A tale scopo, posizionare il puntatore del mouse sul stack frame di **sum_kernel_tiled** . La figura seguente mostra DataTip.
 
    ![Suggerimento dati per finestra Stack in parallelo](../../parallel/amp/media/campe.png "Suggerimento dati per finestra Stack in parallelo") <br/>
    DataTip thread GPU
@@ -306,7 +306,7 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 ### <a name="to-use-the-parallel-watch-window"></a>Per utilizzare la finestra Espressioni di controllo parallela
 
-1. Per aprire la finestra espressione di **controllo in parallelo** , sulla barra dei menu scegliere **debug**  >  **Windows**  >  **Parallel Watch**  >  **Parallel Watch 1**.
+1. Per aprire la finestra espressione di **controllo in parallelo** , sulla barra dei menu scegliere **debug**  >  **Windows**  >  **Parallel Watch**  >  **Parallel Watch 1** .
 
    È possibile usare la finestra espressione di **controllo in parallelo** per esaminare i valori di un'espressione tra più thread.
 
@@ -320,12 +320,12 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    È possibile ordinare in base a un'espressione specificata selezionando l'intestazione di colonna corrispondente.
 
-   Selezionare l'intestazione di colonna **localA [localIdx [0]]** per ordinare la colonna. Nella figura seguente vengono illustrati i risultati dell'ordinamento in base a **localA [localIdx [0]]**.
+   Selezionare l'intestazione di colonna **localA [localIdx [0]]** per ordinare la colonna. Nella figura seguente vengono illustrati i risultati dell'ordinamento in base a **localA [localIdx [0]]** .
 
    ![Finestra Espressione di controllo in parallelo con risultati ordinati](../../parallel/amp/media/campf.png "Finestra Espressione di controllo in parallelo con risultati ordinati") <br/>
    Risultati ordinamento
 
-   È possibile esportare il contenuto nella finestra espressione di **controllo in parallelo** in Excel scegliendo il pulsante **Excel** e scegliendo **Apri in Excel**. Se nel computer di sviluppo è installato Excel, viene aperto un foglio di lavoro di Excel che contiene il contenuto.
+   È possibile esportare il contenuto nella finestra espressione di **controllo in parallelo** in Excel scegliendo il pulsante **Excel** e scegliendo **Apri in Excel** . Se nel computer di sviluppo è installato Excel, viene aperto un foglio di lavoro di Excel che contiene il contenuto.
 
 6. Nell'angolo superiore destro della finestra espressione di controllo in **parallelo** è disponibile un controllo filtro che è possibile usare per filtrare il contenuto usando espressioni booleane. Immettere `localA[localIdx[0]] > 20000` nella casella di testo controllo filtro, quindi premere il tasto **invio** .
 
@@ -339,7 +339,7 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 1. Selezionare l'intestazione di colonna **[thread]** nella finestra espressione di **controllo in parallelo 1** per eseguire l'ordinamento in base all'indice del riquadro e all'indice del thread.
 
-2. Sulla barra dei menu scegliere **debug**  >  **continua**, in modo che i quattro thread attivi passino alla barriera successiva (definita alla riga 32 di AMPMapReduce. cpp).
+2. Sulla barra dei menu scegliere **debug**  >  **continua** , in modo che i quattro thread attivi passino alla barriera successiva (definita alla riga 32 di AMPMapReduce. cpp).
 
 3. Scegliere il simbolo del flag sul lato sinistro della riga contenente i quattro thread ora attivi.
 
@@ -350,14 +350,14 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    La finestra espressione di **controllo in parallelo** e la DataTip della finestra **stack in parallelo** indicano entrambi i thread contrassegnati.
 
-4. Se si desidera concentrarsi sui quattro thread contrassegnati, è possibile scegliere di visualizzare, nelle finestre **thread GPU**, espressione di **controllo in parallelo**e **stack in parallelo** , solo i thread contrassegnati.
+4. Se si desidera concentrarsi sui quattro thread contrassegnati, è possibile scegliere di visualizzare, nelle finestre **thread GPU** , espressione di **controllo in parallelo** e **stack in parallelo** , solo i thread contrassegnati.
 
    Scegliere il pulsante **Mostra solo con flag** in qualsiasi finestra o nella barra degli strumenti **posizione di debug** . Nella figura seguente viene illustrato il pulsante **Mostra solo con flag** nella barra degli strumenti **posizione di debug** .
 
    ![Barra degli strumenti Posizione di debug con icona Mostra solo elementi con flag](../../parallel/amp/media/camph.png "Barra degli strumenti Posizione di debug con icona Mostra solo elementi con flag") <br/>
    **Mostra pulsante solo con flag**
 
-   Ora le finestre **thread GPU**, espressione di **controllo in parallelo**e stack in **parallelo** visualizzano solo i thread contrassegnati.
+   Ora le finestre **thread GPU** , espressione di **controllo in parallelo** e stack in **parallelo** visualizzano solo i thread contrassegnati.
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Blocco e sblocco di thread GPU
 
@@ -367,9 +367,9 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 1. Scegliere il pulsante **Mostra solo con flag** per visualizzare tutti i thread.
 
-2. Nella barra dei menu scegliere **debug**  >  **continua**.
+2. Nella barra dei menu scegliere **debug**  >  **continua** .
 
-3. Aprire il menu di scelta rapida per la riga attiva, quindi scegliere **blocca**.
+3. Aprire il menu di scelta rapida per la riga attiva, quindi scegliere **blocca** .
 
    La seguente illustrazione della finestra **thread GPU** Mostra che tutti e quattro i thread sono bloccati.
 
@@ -380,32 +380,32 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 4. Sulla barra dei menu scegliere **debug**  >  **continua** per consentire ai successivi quattro thread GPU di avanzare oltre la barriera alla riga 22 e raggiungere il punto di interruzione alla riga 30. La finestra **thread GPU** Mostra che i quattro thread precedentemente bloccati rimangono bloccati e nello stato attivo.
 
-5. Sulla barra dei menu scegliere **debug**, **continua**.
+5. Sulla barra dei menu scegliere **debug** , **continua** .
 
 6. Dalla finestra **espressioni di controllo in parallelo** , è anche possibile scongelare singoli o più thread GPU.
 
 ### <a name="to-group-gpu-threads"></a>Per raggruppare i thread GPU
 
-1. Nel menu di scelta rapida per uno dei thread nella finestra **thread GPU** scegliere **Raggruppa per**, **Indirizzo**.
+1. Nel menu di scelta rapida per uno dei thread nella finestra **thread GPU** scegliere **Raggruppa per** , **Indirizzo** .
 
    I thread nella finestra **thread GPU** sono raggruppati in base all'indirizzo. L'indirizzo corrisponde all'istruzione nel disassembly in cui si trova ogni gruppo di thread. 24 thread sono alla riga 22 in cui viene eseguito il [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait) . 12 thread sono in corrispondenza dell'istruzione per la barriera alla riga 32. Quattro di questi thread sono contrassegnati. Otto thread si trovano nel punto di interruzione alla riga 30. Quattro di questi thread sono bloccati. Nella figura seguente sono illustrati i thread raggruppati nella finestra **thread GPU** .
 
    ![Finestra Thread GPU con thread raggruppati per indirizzo](../../parallel/amp/media/campl.png "Finestra Thread GPU con thread raggruppati per indirizzo") <br/>
    Thread raggruppati nella finestra **thread GPU**
 
-2. È anche possibile eseguire l'operazione **Group by** aprendo il menu di scelta rapida per la griglia dati della finestra espressione di **controllo in parallelo** , scegliendo **raggruppa**per e quindi scegliendo la voce di menu che corrisponde a come si desidera raggruppare i thread.
+2. È anche possibile eseguire l'operazione **Group by** aprendo il menu di scelta rapida per la griglia dati della finestra espressione di **controllo in parallelo** , scegliendo **raggruppa** per e quindi scegliendo la voce di menu che corrisponde a come si desidera raggruppare i thread.
 
 ## <a name="running-all-threads-to-a-specific-location-in-code"></a>Esecuzione di tutti i thread in una posizione specifica nel codice
 
-Si eseguono tutti i thread di un determinato riquadro alla riga che contiene il cursore usando Esegui il **riquadro corrente fino al cursore**.
+Si eseguono tutti i thread di un determinato riquadro alla riga che contiene il cursore usando Esegui il **riquadro corrente fino al cursore** .
 
 ### <a name="to-run-all-threads-to-the-location-marked-by-the-cursor"></a>Per eseguire tutti i thread nel percorso contrassegnato dal cursore
 
-1. Scegliere **Sblocca**dal menu di scelta rapida per i thread bloccati.
+1. Scegliere **Sblocca** dal menu di scelta rapida per i thread bloccati.
 
-2. Nell' **editor di codice**posizionare il cursore nella riga 30.
+2. Nell' **editor di codice** posizionare il cursore nella riga 30.
 
-3. Nel menu di scelta rapida per l' **editor di codice**scegliere **Esegui riquadro corrente fino al cursore**.
+3. Nel menu di scelta rapida per l' **editor di codice** scegliere **Esegui riquadro corrente fino al cursore** .
 
    I 24 thread precedentemente bloccati alla barriera alla riga 21 sono passati alla riga 32. Questa operazione viene visualizzata nella finestra **thread GPU** .
 

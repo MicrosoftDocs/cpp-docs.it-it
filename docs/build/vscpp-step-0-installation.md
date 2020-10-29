@@ -6,18 +6,18 @@ ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: 6f547b7e50d39b073232e913e660bf3ab96789cb
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550810"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922127"
 ---
 # <a name="install-c-and-c-support-in-visual-studio"></a>Installare il supporto C e C++ in Visual Studio
 
 Se non sono ancora stati scaricati e installati Visual Studio e gli strumenti di Microsoft C/C++, ecco come iniziare.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="visual-studio-2019-installation"></a>Installazione di Visual Studio 2019
 
@@ -46,10 +46,10 @@ Per domande sull'esecuzione di Visual Studio 2019 side by side con versioni prec
 
 ### <a name="step-2---download-visual-studio"></a>Passaggio 2: Scaricare Visual Studio
 
-Scaricare quindi il file del programma di avvio automatico di Visual Studio. A tale scopo, fare clic sul pulsante seguente, scegliere l'edizione di Visual Studio da scaricare, scegliere **Salva** e quindi scegliere **Apri cartella**.
+Scaricare quindi il file del programma di avvio automatico di Visual Studio. A tale scopo, fare clic sul pulsante seguente, scegliere l'edizione di Visual Studio da scaricare, scegliere **Salva** e quindi scegliere **Apri cartella** .
 
  > [!div class="button"]
- > [Scaricare Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
+ > [Download di Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>Passaggio 3: Installare il programma di installazione di Visual Studio
 
@@ -61,15 +61,15 @@ Eseguire il file del programma di avvio automatico per installare il programma d
    - **vs_professional.exe** per Visual Studio Professional
    - **vs_enterprise.exe** per Visual Studio Enterprise
 
-   Se viene visualizzata una notifica di Controllo dell'account utente, scegliere **Sì**.
+   Se viene visualizzata una notifica di Controllo dell'account utente, scegliere **Sì** .
 
-1. Verrà richiesto di confermare le [Condizioni di licenza](https://visualstudio.microsoft.com/license-terms/) e l'[Informativa sulla privacy](https://privacy.microsoft.com/privacystatement) di Microsoft. Scegliere **Continua**.
+1. Verrà richiesto di confermare le [Condizioni di licenza](https://visualstudio.microsoft.com/license-terms/) e l'[Informativa sulla privacy](https://privacy.microsoft.com/privacystatement) di Microsoft. Scegliere **Continua** .
 
 ### <a name="step-4---choose-workloads"></a>Passaggio 4: Scegliere i carichi di lavoro
 
-Una volta installato il programma di installazione, è possibile usarlo per personalizzare l'installazione selezionando i *carichi di lavoro*o i set di funzionalità desiderati. Ecco come.
+Una volta installato il programma di installazione, è possibile usarlo per personalizzare l'installazione selezionando i *carichi di lavoro* o i set di funzionalità desiderati. Ecco come.
 
-1. Individuare il carico di lavoro che si vuole installare nella schermata d'**installazione di Visual Studio**.
+1. Individuare il carico di lavoro che si vuole installare nella schermata d' **installazione di Visual Studio** .
 
    ![Visual Studio 2019: installare un carico di lavoro](../get-started/media/vs-installer-workloads.png)
 
@@ -79,16 +79,16 @@ Una volta installato il programma di installazione, è possibile usarlo per pers
 
    Il riquadro **Dettagli installazione** elenca i componenti inclusi e facoltativi installati da ogni carico di lavoro. È possibile selezionare o deselezionare i componenti facoltativi nell'elenco. Ad esempio, per supportare lo sviluppo usando i set di strumenti del compilatore di Visual Studio 2017 o 2015, scegliere i componenti facoltativi MSVC V141 o MSVC V140. È possibile aggiungere il supporto per MFC, l'estensione del linguaggio dei moduli sperimentali, IncrediBuild e altro ancora.
 
-1. Dopo aver scelto i carichi di lavoro e i componenti facoltativi desiderati, scegliere **Installa**.
+1. Dopo aver scelto i carichi di lavoro e i componenti facoltativi desiderati, scegliere **Installa** .
 
    A questo punto si apriranno diverse schermate di stato in cui sarà visualizzato l'avanzamento dell'installazione di Visual Studio.
 
 > [!TIP]
-> In qualsiasi momento dopo l'installazione, è possibile installare i carichi di lavoro o i componenti che non sono stati installati inizialmente. Se Visual Studio è aperto, passare a **strumenti**  >  **Ottieni strumenti e funzionalità...** per aprire il programma di installazione di Visual Studio. In alternativa, aprire **il programma di installazione di Visual Studio** dal menu Start. Da qui, è possibile scegliere i carichi di lavoro o i componenti che si vogliono installare. Scegliere quindi **Modifica**.
+> In qualsiasi momento dopo l'installazione, è possibile installare i carichi di lavoro o i componenti che non sono stati installati inizialmente. Se Visual Studio è aperto, passare a **strumenti**  >  **Ottieni strumenti e funzionalità...** per aprire il programma di installazione di Visual Studio. In alternativa, aprire **il programma di installazione di Visual Studio** dal menu Start. Da qui, è possibile scegliere i carichi di lavoro o i componenti che si vogliono installare. Scegliere quindi **Modifica** .
 
 ### <a name="step-5---choose-individual-components-optional"></a>Passaggio 5: Scegliere singoli componenti (facoltativo)
 
-Se non si vuole usare la funzionalità carichi di lavoro per personalizzare l'installazione di Visual Studio o si vuole aggiungere altri componenti rispetto a un carico di lavoro, è possibile farlo installando o aggiungendo singoli componenti dalla scheda **singoli componenti** . scegliere quello desiderato e quindi seguire le istruzioni.
+Se non si vuole usare la funzionalità carichi di lavoro per personalizzare l'installazione di Visual Studio o si desidera aggiungere altri componenti rispetto a un carico di lavoro, è possibile eseguire questa operazione installando o aggiungendo singoli componenti dalla scheda **singoli componenti** . Scegliere l'elemento desiderato e quindi seguire le istruzioni.
 
   ![Visual Studio 2019-installare i singoli componenti](../get-started/media/vs-installer-individual-components.png "Installare i singoli componenti di Visual Studio")
 
@@ -115,23 +115,23 @@ Un altro modo per poter modificare la lingua predefinita consiste nell'eseguire 
 
 1. Al termine dell'installazione di Visual Studio, fare clic sul pulsante **Avvia** per iniziare a sviluppare con Visual Studio.
 
-1. Nella finestra Start scegliere **Crea un nuovo progetto**.
+1. Nella finestra Start scegliere **Crea un nuovo progetto** .
 
 1. Nella casella di ricerca immettere il tipo di app da creare per visualizzare un elenco dei modelli disponibili. L'elenco dei modelli dipende dai carichi di lavoro che sono stati scelti durante l'installazione. Per visualizzare modelli diversi, è possibile scegliere carichi di lavoro differenti.
 
-   È anche possibile filtrare la ricerca in base a un linguaggio di programmazione specifico usando l'elenco a discesa **Linguaggio** e applicare filtri usando gli elenchi **Piattaforma** e **Tipo di progetto**.
+   È anche possibile filtrare la ricerca in base a un linguaggio di programmazione specifico usando l'elenco a discesa **Linguaggio** e applicare filtri usando gli elenchi **Piattaforma** e **Tipo di progetto** .
 
 1. Il nuovo progetto verrà aperto in Visual Studio e sarà possibile iniziare a scrivere codice.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="visual-studio-2017-installation"></a>Installazione di Visual Studio 2017
 
 In Visual Studio 2017 è facile scegliere e installare solo le funzionalità necessarie. Inoltre, grazie alla riduzione del footprint minimo, l'installazione viene eseguita velocemente e con un minore impatto sul sistema.
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 - Connessione Internet A banda larga. Il programma di installazione di Visual Studio può scaricare diversi gigabyte di dati.
 
@@ -141,7 +141,7 @@ In Visual Studio 2017 è facile scegliere e installare solo le funzionalità nec
 
 Per informazioni dettagliate sullo spazio su disco e sui requisiti del sistema operativo, vedere requisiti di sistema per la [famiglia di prodotti Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). Il programma di installazione segnala la quantità di spazio su disco necessaria per le opzioni selezionate.
 
-### <a name="download-and-install"></a>Download e installazione
+### <a name="download-and-install"></a>Scaricare e installare
 
 1. Scaricare la versione più recente del programma di installazione di Visual Studio 2017 per Windows.
 
@@ -151,7 +151,7 @@ Per informazioni dettagliate sullo spazio su disco e sui requisiti del sistema o
    >[!Tip]
    > L'edizione Community è per singoli sviluppatori, per la formazione in classe, la ricerca accademica e per lo sviluppo open source. Per altri usi, installare [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) oppure [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
-1. Trovare il file del programma di installazione scaricato ed eseguirlo. Può essere visualizzato nel browser o potrebbe trovarsi nella cartella Downloads. Per l'esecuzione del programma di installazione sono necessari privilegi di amministratore. Potrebbe essere visualizzata una finestra di dialogo di **controllo dell'account utente** in cui viene chiesto di concedere l'autorizzazione per consentire al programma di installazione di apportare modifiche al sistema. scegliere **Sì**. In caso di problemi, trovare il file scaricato in Esplora file, fare clic con il pulsante destro del mouse sull'icona del programma di installazione e scegliere **Esegui come amministratore** dal menu di scelta rapida.
+1. Trovare il file del programma di installazione scaricato ed eseguirlo. Può essere visualizzato nel browser o potrebbe trovarsi nella cartella Downloads. Per l'esecuzione del programma di installazione sono necessari privilegi di amministratore. Potrebbe essere visualizzata una finestra di dialogo di **controllo dell'account utente** in cui viene chiesto di concedere l'autorizzazione per consentire al programma di installazione di apportare modifiche al sistema. scegliere **Sì** . In caso di problemi, trovare il file scaricato in Esplora file, fare clic con il pulsante destro del mouse sull'icona del programma di installazione e scegliere **Esegui come amministratore** dal menu di scelta rapida.
 
    ![Scaricare e installare il Programma di installazione di Visual Studio](media/vscpp-concierge-run-installer.gif "Scaricare e installare il Programma di installazione di Visual Studio")
 
@@ -159,13 +159,13 @@ Per informazioni dettagliate sullo spazio su disco e sui requisiti del sistema o
 
    ![Sviluppo di applicazioni desktop con carico di lavoro C++](media/desktop-development-with-cpp.png "Sviluppo per desktop con C++")
 
-   Per C e C++, selezionare il carico di lavoro **sviluppo di applicazioni desktop con c++** , quindi scegliere **Installa**.
+   Per C e C++, selezionare il carico di lavoro **sviluppo di applicazioni desktop con c++** , quindi scegliere **Installa** .
 
    ![Installare il carico di lavoro sviluppo di applicazioni desktop con C++](media/vscpp-concierge-choose-workload.gif "Installare il carico di lavoro sviluppo di applicazioni desktop con C++")
 
 1. Al termine dell'installazione, fare clic sul pulsante **Launch (avvia** ) per avviare Visual Studio.
 
-   La prima volta che si esegue Visual Studio, viene chiesto di accedere con un account Microsoft. Se non ne hai uno, puoi crearlo gratuitamente. È inoltre necessario scegliere un tema. Se lo si desidera, è possibile modificarlo in un secondo momento.
+   La prima volta che si esegue Visual Studio, viene chiesto di accedere con un account Microsoft. Se non si dispone di una tale organizzazione, è possibile crearne una gratuitamente. È inoltre necessario scegliere un tema. Se lo si desidera, è possibile modificarlo in un secondo momento.
 
    Potrebbero essere necessari alcuni minuti di Visual Studio per prepararsi all'uso la prima volta che viene eseguita. Ecco come appare in un breve intervallo di tempo:
 
@@ -181,11 +181,11 @@ Per informazioni dettagliate sullo spazio su disco e sui requisiti del sistema o
 
 ::: moniker-end
 
-::: moniker range="<vs-2017"
+::: moniker range="<msvc-150"
 
 ## <a name="visual-studio-2015-installation"></a>Installazione di Visual Studio 2015
 
-Per installare Visual Studio 2015, passare alla pagina per il [download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Eseguire il programma di installazione, scegliere **Installazione personalizzata** e quindi scegliere il componente C++. Per aggiungere il supporto C e C++ a un'installazione di Visual Studio 2015 esistente, fare clic sul pulsante Start di Windows e digitare installazione **applicazioni**. Aprire il programma dall'elenco dei risultati, quindi individuare l'installazione di Visual Studio 2015 nell'elenco dei programmi installati. Fare doppio clic su di esso, quindi scegliere **modifica** e selezionare i componenti Visual C++ da installare.
+Per installare Visual Studio 2015, passare alla pagina per il [download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Eseguire il programma di installazione, scegliere **Installazione personalizzata** e quindi scegliere il componente C++. Per aggiungere il supporto C e C++ a un'installazione di Visual Studio 2015 esistente, fare clic sul pulsante Start di Windows e digitare installazione **applicazioni** . Aprire il programma dall'elenco dei risultati, quindi individuare l'installazione di Visual Studio 2015 nell'elenco dei programmi installati. Fare doppio clic su di esso, quindi scegliere **modifica** e selezionare i componenti Visual C++ da installare.
 
 In generale, è consigliabile usare la versione più recente di Visual Studio anche se è necessario compilare il codice usando il compilatore di Visual Studio 2015. Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per compilare progetti precedenti](../porting/use-native-multi-targeting.md).
 

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 04178c435bbd0ca80e412efc39a1b736062d95e7
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 61378e0aa2cee94420849195a94203be078418ff
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706770"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921113"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Stringhe, Creazione guidata pagina delle proprietà ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La Creazione guidata pagina delle proprietà ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Fornisce il testo associato alla pagina delle proprietà.
 
-- **Titolo**
+- **Title**
 
    Ottiene il testo visualizzato nella scheda della pagina delle proprietà.
 
@@ -35,7 +35,7 @@ Fornisce il testo associato alla pagina delle proprietà.
 
 - **File della Guida**
 
-   Imposta il nome del file della Guida che descrive come usare la pagina delle proprietà. Questo nome non deve includere un percorso. Quando l'utente preme **?**, viene aperto il file della Guida nella directory specificata nel valore della chiave HelpDir nelle voci del Registro di sistema della pagina delle proprietà nel valore CLSID corrispondente.
+   Imposta il nome del file della Guida che descrive come usare la pagina delle proprietà. Questo nome non deve includere un percorso. Quando l'utente preme **?** , viene aperto il file della Guida nella directory specificata nel valore della chiave HelpDir nelle voci del Registro di sistema della pagina delle proprietà nel valore CLSID corrispondente.
 
 ::: moniker-end
 

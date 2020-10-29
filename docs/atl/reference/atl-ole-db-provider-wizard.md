@@ -4,26 +4,26 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706969"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921139"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni successive.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ## <a name="remarks"></a>Osservazioni
 
-A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
+A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE** . Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
 La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB ATL:
 
@@ -31,7 +31,7 @@ La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB
 
    Digitare il nome breve del provider da creare. Le altre caselle di modifica della procedura guidata verranno completate automaticamente in base al nome digitato qui. È possibile modificare le altre caselle del nome se lo si desidera.
 
-- **CoClass**
+- **Coclasse**
 
    Nome della coclasse. Il nome di ProgID cambierà in modo da corrispondere a questo nome.
 
@@ -43,15 +43,15 @@ La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB
 
 - **ProgID**
 
-   Il ProgID o identificatore a livello di codice è una stringa di testo che l'applicazione può usare al posto di un GUID. Il nome di ProgID ha il formato *Nomeprogetto.Nomecoclasse*.
+   Il ProgID o identificatore a livello di codice è una stringa di testo che l'applicazione può usare al posto di un GUID. Il nome di ProgID ha il formato *Nomeprogetto.Nomecoclasse* .
 
-- **Version**
+- **Versione**
 
    Numero di versione del provider. Il valore predefinito è 1.
 
-- **Classe origine dati**
+- **Classe DataSource**
 
-   Nome della classe di origine dati, nel formato C*Nomebreve*Source.
+   Nome della classe di origine dati, nel formato C *Nomebreve* Source.
 
 - **File H di origine dati**
 
@@ -59,7 +59,7 @@ La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB
 
 - **Session class** (Classe di sessione)
 
-   Nome della classe di sessione, nel formato C*Nomebreve*Session.
+   Nome della classe di sessione, nel formato C *Nomebreve* Session.
 
 - **File H di sessione**
 
@@ -67,7 +67,7 @@ La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB
 
 - **Command class** (Classe di comando)
 
-   Nome della classe di comando, nel formato C*Nomebreve*Command.
+   Nome della classe di comando, nel formato C *Nomebreve* Command.
 
 - **File H di comando**
 
@@ -75,7 +75,7 @@ La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB
 
 - **Rowset class** (Classe di set di righe)
 
-   Nome della classe di set di righe, nel formato C*Nomebreve*Rowset.
+   Nome della classe di set di righe, nel formato C *Nomebreve* Rowset.
 
 - **File H di rowset**
 

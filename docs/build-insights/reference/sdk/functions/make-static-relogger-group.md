@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b74ee778ffafbcb4c292b4b36b309d5ff4d66c27
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1d49f15a14675f265e1f63ef8795f442f49ad5d4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224162"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920203"
 ---
 # <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `MakeStaticReloggerGroup` funzione viene usata per creare un gruppo di relogger statico che può essere passato a funzioni come [relog](relog.md). I membri di un gruppo di relogger ricevono gli eventi uno alla volta da sinistra a destra fino a quando non vengono elaborati tutti gli eventi in una traccia.
 
@@ -40,7 +40,7 @@ auto MakeStaticReloggerGroup(TReloggerPtrs... reloggers);
 Questo parametro viene sempre dedotto.
 
 *rilogger*\
-Pacchetto di parametri di [`IRelogger`](../other-types/irelogger-class.md) puntatori incluso nel gruppo statico relogger. Questi puntatori possono essere RAW, `std::unique_ptr` o `std::shared_ptr` . [`IAnalyzer`](../other-types/ianalyzer-class.md)i puntatori sono considerati anche `IRelogger` puntatori a causa di una relazione di ereditarietà.
+Pacchetto di parametri di [`IRelogger`](../other-types/irelogger-class.md) puntatori incluso nel gruppo statico relogger. Questi puntatori possono essere RAW, `std::unique_ptr` o `std::shared_ptr` . [`IAnalyzer`](../other-types/ianalyzer-class.md) i puntatori sono considerati anche `IRelogger` puntatori a causa di una relazione di ereditarietà.
 
 ### <a name="return-value"></a>Valore restituito
 

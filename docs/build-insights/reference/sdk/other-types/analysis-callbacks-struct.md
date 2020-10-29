@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a24755befdd446051ae376b49d3dca06c7bc3320
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3fae97370ff9366ffc2fbd8d046a73c30125e554
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041042"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919930"
 ---
 # <a name="analysis_callbacks-structure"></a>Struttura ANALYSIS_CALLBACKS
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `ANALYSIS_CALLBACKS` struttura viene utilizzata per l'inizializzazione di un oggetto [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) o [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Specifica le funzioni da chiamare durante l'analisi o la registrazione di una traccia di Event Tracing for Windows (ETW).
 
@@ -56,7 +56,7 @@ typedef struct ANALYSIS_CALLBACKS_TAG
 | `OnBeginAnalysisPass` | Chiamato quando si inizia un passaggio di analisi o il passaggio di registrazione, prima di elaborare qualsiasi evento. |
 | `OnEndAnalysisPass` | Chiamato quando termina un passaggio di analisi o il passaggio di registrazione, dopo l'elaborazione di tutti gli eventi. |
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 La fase di analisi di una sessione di registrazione viene considerata parte della sessione di registrazione e può contenere più sessioni di analisi. Per questo motivo, `OnBeginAnalysis` viene chiamato due volte in una riga all'inizio di una sessione di registrazione. `OnEndAnalysis` viene chiamato alla fine della fase di analisi, prima di avviare la fase di riregistrazione e una volta alla fine della fase di registrazione. La fase di riregistrazione contiene sempre un singolo passaggio di registrazione.
 

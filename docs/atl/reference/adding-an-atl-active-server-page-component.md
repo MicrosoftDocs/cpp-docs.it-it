@@ -2,22 +2,22 @@
 title: Aggiunta di un componente ASP ATL
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 0180077de7ab96cb75736d34e112731e47b9589b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 08d49baa547342843b525f871de9570d4e752068
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499352"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921165"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La Creazione guidata componente ASP ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Per aggiungere un oggetto ATL (Active Template Library) al progetto, questo deve essere stato creato come applicazione ATL COM o come applicazione MFC che contiene supporto ATL. È possibile usare la [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL, selezionare **Aggiungi supporto ATL a MFC** dalla [finestra di dialogo Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) oppure [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.
 
@@ -33,9 +33,9 @@ I componenti ASP fanno parte dell'architettura di Internet Information Services,
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto a cui si vuole aggiungere il componente ASP ATL.
 
-1. Scegliere **Aggiungi**dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
+1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe** .
 
-1. Nella finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box), nel riquadro **Modelli**, fare clic su **Componente pagine ASP ATL** e quindi su **Apri** per visualizzare la [Creazione guidata componente ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. Nella finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box), nel riquadro **Modelli** , fare clic su **Componente pagine ASP ATL** e quindi su **Apri** per visualizzare la [Creazione guidata componente ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ::: moniker-end
 

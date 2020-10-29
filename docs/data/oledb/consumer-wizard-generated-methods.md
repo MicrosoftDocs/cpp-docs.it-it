@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 15d41aabee174a409ad11e4422292bcea5f10bbf
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500698"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919124"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metodi generati mediante la Creazione guidata consumer
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 La **Creazione guidata consumer OLE DB ATL** e la **Creazione guidata applicazione MFC** generano alcune funzioni di cui è consigliabile tenere conto. Alcuni metodi vengono implementati in modo diverso nei progetti con attributi e di conseguenza esistono alcune limitazioni. Ogni caso viene descritto di seguito. Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).
 
@@ -31,7 +31,7 @@ La **Creazione guidata consumer OLE DB ATL** e la **Creazione guidata applicazio
 
 - `GetRowsetProperties` recupera un puntatore alla proprietà del set di righe impostata con le proprietà che possono essere impostate.
 
-- `OpenDataSource` apre l'origine dati usando la stringa di inizializzazione specificata nella finestra di dialogo **Proprietà di Data Link**.
+- `OpenDataSource` apre l'origine dati usando la stringa di inizializzazione specificata nella finestra di dialogo **Proprietà di Data Link** .
 
 - `CloseDataSource` chiude l'origine dati in modo appropriato.
 

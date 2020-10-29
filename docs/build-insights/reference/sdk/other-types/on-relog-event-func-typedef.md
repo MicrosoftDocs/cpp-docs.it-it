@@ -1,6 +1,6 @@
 ---
-title: Tipode OnRelogEventFunc
-description: Riferimento typedef OnRelogEventFunc dell'SDK di Build Insights.
+title: OnRelogEventFunc (typedef)
+description: Informazioni di riferimento su typedef di build Insights SDK per C++ OnRelogEventFunc.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed639ab59b900f97d29dc69240e45b2f52f2f3b3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329073"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919748"
 ---
-# <a name="onrelogeventfunc-typedef"></a>Tipode OnRelogEventFunc
+# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc (typedef)
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Il `OnRelogEventFunc` typedef è una delle firme di funzione utilizzate nella struttura [RELOG_CALLBACKS.](relog-callbacks-struct.md)
+Il `OnRelogEventFunc` typedef è una delle firme di funzione utilizzate nella struttura [RELOG_CALLBACKS](relog-callbacks-struct.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,17 +38,17 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 
 ### <a name="parameters"></a>Parametri
 
-*eventStack (impilare)*\
-Stack di eventi per l'evento corrente. Per ulteriori informazioni sugli stack di eventi, vedere [Eventi](../event-table.md).
+*eventStack*\
+Stack di eventi per l'evento corrente. Per ulteriori informazioni sugli stack di eventi, vedere [eventi](../event-table.md).
 
 *relogSession*\
-Puntatore alla sessione di nuova registrazione da utilizzare quando si chiama [InjectEvent](../functions/inject-event.md).
+Puntatore della sessione di registrazione da usare quando si chiama [InjectEvent](../functions/inject-event.md).
 
 *callbackContext*\
-Valore di contesto impostato per questo callback in [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
+Il valore di contesto impostato per questo callback in [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore [CALLBACK_CODE](callback-code-enum.md) che controlla ciò che dovrebbe accadere successivamente.
+Valore [CALLBACK_CODE](callback-code-enum.md) che controlla la funzione successiva.
 
 ::: moniker-end

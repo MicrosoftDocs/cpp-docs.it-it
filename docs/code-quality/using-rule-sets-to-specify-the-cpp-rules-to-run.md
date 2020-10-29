@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: f9876a2ce164d0a129ba21405ec61fdcbbd8de91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 53e1122cd1aac74401ca956ee24ebcdf79883228
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507470"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921906"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Usare set di regole per specificare le regole C++ da eseguire
 
@@ -23,9 +23,9 @@ Per creare un nuovo set di regole personalizzate, salvarlo con un nuovo nome fil
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Per creare una regola personalizzata da un singolo set di regole esistente
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-1. In Esplora soluzioni aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
+1. In Esplora soluzioni aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà** .
 
 1. Nella finestra di dialogo **pagine delle proprietà** selezionare la **Configuration Properties** > **Code Analysis** > pagina delle proprietà **generale** analisi del codice delle proprietà di configurazione.
 
@@ -40,9 +40,9 @@ Per creare un nuovo set di regole personalizzate, salvarlo con un nuovo nome fil
 1. Scegliere **Apri** per visualizzare le regole nell'Editor set di regole.
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. In Esplora soluzioni aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
+1. In Esplora soluzioni aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà** .
 
 1. Nella finestra di dialogo **pagine delle proprietà** selezionare la pagina delle proprietà **configurazione** > **analisi codice** proprietà > **Microsoft** .
 
@@ -60,7 +60,7 @@ Per creare un nuovo set di regole personalizzate, salvarlo con un nuovo nome fil
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Per modificare un set di regole nell'Editor set di regole
 
-- Per modificare il nome visualizzato del set di regole, scegliere **finestra Proprietà**dal menu **Visualizza** . Immettere il nome visualizzato nella casella **nome** . Si noti che il nome visualizzato può essere diverso dal nome del file.
+- Per modificare il nome visualizzato del set di regole, scegliere **finestra Proprietà** dal menu **Visualizza** . Immettere il nome visualizzato nella casella **nome** . Si noti che il nome visualizzato può essere diverso dal nome del file.
 
 - Per aggiungere tutte le regole del gruppo a un set di regole personalizzate, selezionare la casella di controllo del gruppo. Per rimuovere tutte le regole del gruppo, deselezionare la casella di controllo.
 
@@ -78,23 +78,23 @@ Per creare un nuovo set di regole personalizzate, salvarlo con un nuovo nome fil
 
 ## <a name="to-group-filter-or-change-the-fields-in-the-rule-set-editor-by-using-the-rule-set-editor-toolbar"></a>Per raggruppare, filtrare o modificare i campi nell'editor del set di regole tramite la barra degli strumenti Editor set di regole
 
-- Per espandere le regole in tutti i gruppi, scegliere **Espandi tutto**.
+- Per espandere le regole in tutti i gruppi, scegliere **Espandi tutto** .
 
-- Per comprimere le regole in tutti i gruppi, scegliere **Comprimi tutto**.
+- Per comprimere le regole in tutti i gruppi, scegliere **Comprimi tutto** .
 
 - Per modificare il campo in base al quale vengono raggruppate le regole, scegliere il campo dall'elenco **Raggruppa per** . Per visualizzare le regole non raggruppate, scegliere **\<None>** .
 
-- Per aggiungere o rimuovere campi nelle colonne della regola, scegliere **Opzioni colonne**.
+- Per aggiungere o rimuovere campi nelle colonne della regola, scegliere **Opzioni colonne** .
 
-- Per nascondere le regole che non si applicano alla soluzione corrente, scegliere **Nascondi regole che non si applicano alla soluzione corrente**.
+- Per nascondere le regole che non si applicano alla soluzione corrente, scegliere **Nascondi regole che non si applicano alla soluzione corrente** .
 
-- Per passare tra le regole di visualizzazione e di occultamento a cui è stata assegnata l'azione di errore, scegliere **Mostra regole che possono generare errori di analisi del codice**.
+- Per passare tra le regole di visualizzazione e di occultamento a cui è stata assegnata l'azione di errore, scegliere **Mostra regole che possono generare errori di analisi del codice** .
 
-- Per passare tra le regole di visualizzazione e di occultamento a cui è stata assegnata l'azione di avviso, scegliere **Mostra regole che possono generare avvisi di analisi del codice**.
+- Per passare tra le regole di visualizzazione e di occultamento a cui è stata assegnata l'azione di avviso, scegliere **Mostra regole che possono generare avvisi di analisi del codice** .
 
-- Per passare tra le regole di visualizzazione e di occultamento a cui è stata assegnata l'azione **Nessuna** , scegliere **Mostra regole non abilitate**.
+- Per passare tra le regole di visualizzazione e di occultamento a cui è stata assegnata l'azione **Nessuna** , scegliere **Mostra regole non abilitate** .
 
-- Per aggiungere o rimuovere set di regole predefinite di Microsoft sul set di regole corrente, scegliere **Aggiungi o Rimuovi set di regole figlio**.
+- Per aggiungere o rimuovere set di regole predefinite di Microsoft sul set di regole corrente, scegliere **Aggiungi o Rimuovi set di regole figlio** .
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Per creare un set di regole in un editor di testo
 

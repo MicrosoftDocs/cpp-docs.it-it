@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 054bdf75dcfca42b8c202565fb44df671f17f912
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bfbfdc28870a13a9cdb19d0ec050ea2e69fe1208
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831619"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920814"
 ---
 # <a name="compilerpass-class"></a>Classe CompilerPass
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `CompilerPass` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usarlo per trovare la corrispondenza con un evento [BACK_END_PASS](../event-table.md#back-end-pass) o [FRONT_END_PASS](../event-table.md#front-end-pass) .
 
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 Insieme ai membri ereditati dalla relativa classe di base [Activity](activity.md) , la `CompilerPass` classe contiene i membri seguenti:
 
@@ -59,7 +59,7 @@ Insieme ai membri ereditati dalla relativa classe di base [Activity](activity.md
 
 #### <a name="passcode"></a>Codice
 
-|Valore|Descrizione|
+|valore|Descrizione|
 |-|-|
 |FRONT_END|Passaggio front-end.|
 |BACK_END|Passaggio del back-end.|

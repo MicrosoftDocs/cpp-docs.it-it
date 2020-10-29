@@ -1,6 +1,6 @@
 ---
 title: Analisi
-description: Informazioni di riferimento per la funzione di analisi di Build Insights in C.
+description: Guida di riferimento alla funzione di analisi di build Insights SDK per C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 08b3643270cc785b3fbea36720d192b4a1473104
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e593b690231adf6f04161f9c3ff6aef3217f9ef
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324102"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920320"
 ---
 # <a name="analyze"></a>Analisi
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `Analyze` funzione viene utilizzata per analizzare una traccia ETW (Event Tracing for Windows) ottenuta da MSVC durante la traccia di una compilazione in linguaggio C. Gli eventi nella traccia ETW vengono inoltrati in sequenza a un gruppo di analizzatori fornito dal chiamante. Questa funzione supporta analisi a più passaggi che consentono di inoltrare il flusso di eventi al gruppo di analizzatori più volte di seguito.
+La `Analyze` funzione viene utilizzata per analizzare una traccia di Event Tracing for Windows (ETW) ottenuta da MSVC durante la traccia di una compilazione C++. Gli eventi nella traccia ETW vengono trasmessi in sequenza a un gruppo analizzatore fornito dal chiamante. Questa funzione supporta le analisi multi-pass che consentono di inoltrare il flusso di eventi al gruppo analizzatore più volte in una riga.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,19 +46,19 @@ RESULT_CODE Analyze(
 ### <a name="parameters"></a>Parametri
 
 *TAnalyzerGroupMembers*\
-Questo parametro è sempre dedotto.
+Questo parametro viene sempre dedotto.
 
 *inputLogFile*\
-Traccia ETW di input da cui si desidera leggere gli eventi.
+Traccia ETW di input da cui si vogliono leggere gli eventi.
 
-*numberOfPasses (numerodipasse)*\
-Numero di passaggi di analisi da eseguire sulla traccia di input. La traccia viene passata tramite il gruppo di analizzatori fornito una volta per ogni passaggio di analisi.
+*numberOfPasses*\
+Numero di sessioni di analisi da eseguire sulla traccia di input. La traccia viene passata al gruppo analizzatore specificato una volta per ogni sessione di analisi.
 
-*analyzerGruppo*\
-Gruppo di analizzatori utilizzato per l'analisi. Chiamare [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) per creare un gruppo di analizzatori. Per utilizzare un gruppo di analizzatori dinamici ottenuto da [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), incapsularlo innanzitutto all'interno di un gruppo di analizzatori statici passandone l'indirizzo a `MakeStaticAnalyzerGroup`.
+*analyzerGroup*\
+Gruppo analizzatore utilizzato per l'analisi. Chiamare [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) per creare un gruppo analizzatore. Per usare un gruppo di analizzatori dinamici ottenuto da [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), incapsularlo prima all'interno di un gruppo di analizzatori statici passandone l'indirizzo a `MakeStaticAnalyzerGroup` .
 
 ### <a name="return-value"></a>Valore restituito
 
-Codice di risultato dall'enumerazione [RESULT_CODE.](../other-types/result-code-enum.md)
+Codice risultato dell'enumerazione [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

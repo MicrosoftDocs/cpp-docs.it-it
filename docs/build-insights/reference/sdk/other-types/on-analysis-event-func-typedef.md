@@ -1,6 +1,6 @@
 ---
-title: Tipode OnAnalysisEventFunc
-description: Il riferimento typedef OnAnalysisEventFunc dell'SDK di Build Insights in C.
+title: OnAnalysisEventFunc (typedef)
+description: Informazioni di riferimento su typedef di build Insights SDK per C++ OnAnalysisEventFunc.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eacd174279caff0db22586d5e40d3a866afc4459
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 069c89a01fa466e86986a821e5dd9d0b09f5c81a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329119"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919787"
 ---
-# <a name="onanalysiseventfunc-typedef"></a>Tipode OnAnalysisEventFunc
+# <a name="onanalysiseventfunc-typedef"></a>OnAnalysisEventFunc (typedef)
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Il `OnAnalysisEventFunc` typedef è una delle firme di funzione utilizzate nella struttura [ANALYSIS_CALLBACKS.](analysis-callbacks-struct.md)
+Il `OnAnalysisEventFunc` typedef è una delle firme di funzione utilizzate nella struttura [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,14 +37,14 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnAnalysisEventFunc)(
 
 ### <a name="parameters"></a>Parametri
 
-*eventStack (impilare)*\
-Stack di eventi per l'evento corrente. Per ulteriori informazioni sugli stack di eventi, vedere [Eventi](../event-table.md).
+*eventStack*\
+Stack di eventi per l'evento corrente. Per ulteriori informazioni sugli stack di eventi, vedere [eventi](../event-table.md).
 
 *callbackContext*\
-Valore di contesto impostato per questo callback in [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) o [RELOG_DESCRIPTOR](relog-descriptor-struct.md).
+Il valore di contesto impostato per questo callback in [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) o [RELOG_DESCRIPTOR](relog-descriptor-struct.md).
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore [CALLBACK_CODE](callback-code-enum.md) che controlla ciò che dovrebbe accadere successivamente.
+Valore [CALLBACK_CODE](callback-code-enum.md) che controlla la funzione successiva.
 
 ::: moniker-end

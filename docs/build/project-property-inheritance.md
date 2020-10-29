@@ -4,12 +4,12 @@ description: Funzionamento dell'ereditarietà delle proprietà nei progetti di V
 ms.date: 02/21/2020
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 00afe982156597aa166c2c5de98f3027e3f84bdb
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: 17b23426f70bb2d306491e538d30cffc0f202362
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099706"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919215"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Ereditarietà delle proprietà nei progetti di Visual Studio
 
@@ -17,19 +17,19 @@ Il sistema di progetto nativo di Visual Studio si basa su MSBuild. MSBuild defin
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>File con estensione vcxproj, props e targets
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Le proprietà del progetto vengono archiviate in diversi file. Alcune sono archiviate direttamente nel *`.vcxproj`* file di progetto. Altri derivano da altri *`.targets`* *`.props`* file o che vengono importati dal file di progetto e che forniscono valori predefiniti. I file di progetto di Visual Studio 2015 sono disponibili in una cartella specifica delle impostazioni locali nella directory di base, *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\v140`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Le proprietà del progetto vengono archiviate in diversi file. Alcune sono archiviate direttamente nel *`.vcxproj`* file di progetto. Altri derivano da altri *`.targets`* *`.props`* file o che vengono importati dal file di progetto e che forniscono valori predefiniti. I file di progetto di Visual Studio 2017 sono disponibili in una cartella specifica delle impostazioni locali nella directory di base, *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Le proprietà del progetto vengono archiviate in diversi file. Alcune sono archiviate direttamente nel *`.vcxproj`* file di progetto. Altri derivano da altri *`.targets`* *`.props`* file o che vengono importati dal file di progetto e che forniscono valori predefiniti. I file di progetto di Visual Studio sono disponibili in una cartella specifica delle impostazioni locali nella directory di base, *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>`* . `<version>`È specifico della versione di Visual Studio. È *`v160`* per Visual Studio 2019.
 
@@ -80,11 +80,11 @@ Per altre informazioni, vedere [proprietà di MSBuild](/visualstudio/msbuild/msb
 
 Una configurazione è solo un gruppo arbitrario di proprietà a cui viene assegnato un nome. Visual Studio fornisce configurazioni di debug e di rilascio. Ogni imposta le varie proprietà in modo appropriato per una build di debug o di rilascio. È possibile utilizzare il **Configuration Manager** per definire configurazioni personalizzate. Si tratta di un modo pratico per raggruppare le proprietà per una versione specifica della build.
 
-Per avere un'idea più approfondita delle configurazioni di compilazione, aprire **Gestione proprietà**. È possibile aprirlo scegliendo **visualizza > gestione proprietà** o **visualizza > altre Gestione proprietà di Windows >**, a seconda delle impostazioni. **Gestione proprietà** dispone di nodi per ogni coppia di configurazione e piattaforma nel progetto. In ognuno di questi nodi sono presenti nodi per le finestre delle proprietà ( *`.props`* file) che impostano alcune proprietà specifiche per tale configurazione.
+Per avere un'idea più approfondita delle configurazioni di compilazione, aprire **Gestione proprietà** . È possibile aprirlo scegliendo **visualizza > gestione proprietà** o **visualizza > altre Gestione proprietà di Windows >** , a seconda delle impostazioni. **Gestione proprietà** dispone di nodi per ogni coppia di configurazione e piattaforma nel progetto. In ognuno di questi nodi sono presenti nodi per le finestre delle proprietà ( *`.props`* file) che impostano alcune proprietà specifiche per tale configurazione.
 
 ![Gestione proprietà](media/property-manager.png "Gestione proprietà")
 
-Ad esempio, è possibile passare al riquadro generale nelle pagine delle proprietà. Modificare la proprietà set di caratteri in "non impostato" invece di "USA Unicode", quindi fare clic su **OK**. Il Gestione proprietà ora non mostra alcuna finestra delle proprietà di **supporto Unicode** . Viene rimosso per la configurazione corrente, ma è ancora presente per altre configurazioni.
+Ad esempio, è possibile passare al riquadro generale nelle pagine delle proprietà. Modificare la proprietà set di caratteri in "non impostato" invece di "USA Unicode", quindi fare clic su **OK** . Il Gestione proprietà ora non mostra alcuna finestra delle proprietà di **supporto Unicode** . Viene rimosso per la configurazione corrente, ma è ancora presente per altre configurazioni.
 
 Per altre informazioni su Gestione proprietà e sulle finestre delle proprietà, vedere [Condividere o riutilizzare le impostazioni dei progetti di Visual Studio C++](create-reusable-property-configurations.md).
 

@@ -4,77 +4,77 @@ ms.date: 08/29/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 45087434c0093f99383096761d58a8029c9d5009
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c915408eede80c1564dacc88ab7b9354bd72fc11
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373015"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918838"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Creazione guidata consumer ODBC MFC (C++)
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni successive.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Questa procedura guidata consente di impostare una classe recordset ODBC e le associazioni dati necessarie per accedere all'origine dati specificata.
+Questa procedura guidata configura una classe recordset ODBC e le associazioni dati necessarie per accedere all'origine dati specificata.
 
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia
 
 - **Origine dati**
 
-  Il pulsante **Origine dati** consente di impostare l'origine dati specificata utilizzando il driver ODBC specificato. Per ulteriori informazioni sui file di origine dati (DSN), vedere [origini dati File](/sql/odbc/reference/file-data-sources) nell'SDK ODBC.
+  Il pulsante **origine dati** consente di configurare l'origine dati specificata utilizzando il driver ODBC specificato. Per ulteriori informazioni sui file di origine dati (DSN), vedere [origini dati file](/sql/odbc/reference/file-data-sources) in ODBC SDK.
 
-  Nella finestra di dialogo **Seleziona origine dati** sono disponibili due schede:
+  Nella finestra di dialogo **Seleziona origine dati sono disponibili** due schede:
 
-  - **Scheda Origine dati file:**
+  - Scheda **origine dati file** :
 
-     La casella **Cerca in** specifica la directory in cui selezionare i file da utilizzare come origini dati. L'impostazione predefinita è , ovvero . Le origini dati sui file esistenti (file con estensione dsn) vengono visualizzate nella casella di riepilogo principale. È possibile impostare le origini dati in anticipo utilizzando la scheda **DSN su file** in [Amministrazione origine dati ODBC](/sql/odbc/admin/odbc-data-source-administrator)oppure crearne di nuove utilizzando questa finestra di dialogo.
+     Nella casella **Cerca in** viene specificata la directory in cui selezionare i file da utilizzare come origini dati. Il valore predefinito è \Programmi\file Comuni\odbc\data sources. Le origini dati dei file esistenti (file con estensione DSN) vengono visualizzate nella casella di riepilogo principale. È possibile configurare le origini dati in anticipo utilizzando la scheda **DSN file** di [Amministrazione origine dati ODBC](/sql/odbc/admin/odbc-data-source-administrator)o crearne di nuove utilizzando questa finestra di dialogo.
 
-     Per creare una nuova origine dati file `New` da questa finestra di dialogo, fare clic per specificare un nome DSN; viene visualizzata la finestra di dialogo **Crea nuova origine dati.** Nella finestra di dialogo Crea nuova origine `Next` **dati,** selezionare un driver appropriato e fare clic su ; fare clic su **Sfoglia**e selezionare il nome del file da utilizzare come origine dati (è necessario selezionare "Tutti i file" per visualizzare i file non DSN, ad esempio i file xls); fare `Next`clic su e quindi su **Fine**. Se è stato selezionato un file non DSN, verrà visualizzato una finestra di dialogo specifica del driver, ad esempio "Programma di installazione ODBC di Microsoft Excel", che convertirà il file in un DSN.
+     Per creare una nuova origine dati file da questa finestra di dialogo, fare clic su questa opzione `New` per specificare un nome DSN. verrà visualizzata la finestra di dialogo **Crea nuova origine dati** . Nella finestra di dialogo **Crea nuova origine dati** selezionare un driver appropriato e fare clic su, fare clic `Next` su **Sfoglia** e selezionare il nome del file da utilizzare come origine dati (è necessario selezionare "tutti i file" per visualizzare i file non DSN, ad esempio i file con estensione xls), fare clic su `Next` , quindi fare clic su **fine** . Se è stato selezionato un file non DSN, viene visualizzata una finestra di dialogo specifica del driver, ad esempio "installazione ODBC di Microsoft Excel", che converte il file in un DSN.
 
      > [!NOTE]
-     > È inoltre possibile creare una nuova origine dati file in anticipo utilizzando l'Amministratore origine dati ODBC. Dal menu **Start** selezionare **Impostazioni**, **Pannello di controllo**, Strumenti di **amministrazione**, Origini **dati (ODBC)** e quindi **Amministratore origine dati ODBC**.
+     > È inoltre possibile creare una nuova origine dati di file in anticipo utilizzando Amministrazione origine dati ODBC. Dal menu **Start** selezionare **Impostazioni** , pannello di **controllo** , **strumenti di amministrazione** , **origini dati (ODBC)** , quindi **Amministrazione origine dati ODBC** .
 
-     La casella **Nome DSN** consente di specificare un nome per l'origine dati file. È necessario assicurarsi che il nome DSN termini con l'estensione di file appropriata, ad esempio xls per i file di Excel o mdb per i file di Access.
+     La casella **nome DSN** consente di specificare un nome per l'origine dati del file. È necessario assicurarsi che il nome DSN termini con l'estensione di file appropriata, ad esempio xls per i file di Excel o mdb per i file di Access.
 
-     Per ulteriori informazioni sui DSN, vedere [Origini dati File](/sql/odbc/reference/file-data-sources) nell'SDK di ODBC.
+     Per ulteriori informazioni sui DSN, vedere [file Data Sources](/sql/odbc/reference/file-data-sources) in ODBC SDK.
 
-  - **Scheda Origine dati macchina:**
+  - Scheda **origine dati computer** :
 
-     Questa scheda elenca le origini system e User DATA. Le origini dati utente sono specifiche di un utente in questo computer. Le origini dati di sistema possono essere utilizzate da tutti gli utenti del computer o in un servizio a livello di sistema. Vedere Origini dati macchina nell'SDK ODBCSee [Machine Data Sources](/sql/odbc/reference/machine-data-sources) in the ODBC SDK
+     Questa scheda elenca le origini dati del sistema e dell'utente. Le origini dati utente sono specifiche di un utente di questo computer. Le origini dati di sistema possono essere usate da tutti gli utenti in questo computer o in un servizio a livello. Vedere [origini dati del computer](/sql/odbc/reference/machine-data-sources) in ODBC SDK
 
-     Per ulteriori informazioni sulle origini dati ODBC, vedere [origini dati](/sql/odbc/reference/data-sources) nell'SDK ODBC.
+     Per ulteriori informazioni sulle origini dati ODBC, vedere [origini dati](/sql/odbc/reference/data-sources) in ODBC SDK.
 
-  Fare clic su **OK** per completare la procedura. Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database**. In questa finestra di dialogo selezionare la tabella o la vista che verrà utilizzata dal consumer. Si noti che è possibile selezionare più viste e tabelle tenendo premuto il tasto di controllo mentre si fa clic sugli elementi. Fare clic su **OK** per completare la procedura.
+  Fare clic su **OK** per completare la procedura. Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database** . Da questa finestra di dialogo selezionare la tabella o la vista che verrà utilizzata dal consumer. Si noti che è possibile selezionare più viste e tabelle tenendo premuto il tasto CTRL mentre si fa clic sugli elementi. Fare clic su **OK** per completare la procedura.
 
-- **Class**
+- **Classe**
 
-   Nome della classe consumer, basato per impostazione predefinita sul nome del file o dell'origine dati del computer selezionata.
+   Nome della classe consumer, basato per impostazione predefinita sul nome del file o dell'origine dati del computer selezionato.
 
 - **File con estensione h**
 
-   Nome del file di intestazione della classe consumer, basato per impostazione predefinita sul nome del file o dell'origine dati del computer selezionata.
+   Nome del file di intestazione della classe consumer, basato per impostazione predefinita sul nome del file o dell'origine dati del computer selezionato.
 
 - **File con estensione cpp**
 
-   Nome del file di implementazione della classe consumer, basato per impostazione predefinita sul nome del file o dell'origine dati del computer selezionata.
+   Nome del file di implementazione della classe consumer, basato per impostazione predefinita sul nome del file o dell'origine dati del computer selezionato.
 
 - **Tipo**
 
-   Specifica se il recordset è un dynaset (impostazione predefinita) o uno snapshot.
+   Specifica se il recordset è di un dynaset (impostazione predefinita) o di uno snapshot.
 
-  - **Dynaset**: Specifica che il recordset è un dynaset. Un dynaset è il risultato di una query che fornisce una vista indicizzata nei dati del database sottoposto a query. Un dynaset memorizza nella cache solo un indice integrale dei dati originali e offre quindi un miglioramento delle prestazioni rispetto a uno snapshot. L'indice punta direttamente a ogni record trovato come risultato di una query e indica se un record viene rimosso. È inoltre possibile accedere alle informazioni aggiornate nei record sottoposti a query. Questa è la modalità predefinita.
+  - **Dynaset** : specifica che il recordset è un dynaset. Un dynaset è il risultato di una query che fornisce una vista indicizzata nei dati del database sottoposto a query. Un dynaset memorizza nella cache solo un indice integrale per i dati originali e pertanto offre un miglioramento delle prestazioni in uno snapshot. L'indice punta direttamente a ogni record trovato come risultato di una query e indica se un record viene rimosso. È anche possibile accedere alle informazioni aggiornate nei record sottoposti a query. Questo è il valore predefinito.
 
-  - **Snapshot**: Specifica che il recordset è uno snapshot. Uno snapshot è il risultato di una query ed è una vista in un database in un unico momento. Tutti i record trovati come risultato della query vengono memorizzati nella cache, pertanto non vengono visualizzate modifiche ai record originali.
+  - **Snapshot** : specifica che il recordset è uno snapshot. Uno snapshot è il risultato di una query ed è una visualizzazione di un database in un determinato momento. Tutti i record trovati come risultato della query vengono memorizzati nella cache, pertanto non vengono visualizzate modifiche ai record originali.
 
-- **Associare tutte le colonne**
+- **Associa tutte le colonne**
 
-   Specifica se tutte le colonne della tabella selezionata sono associate. Se si seleziona questa casella (impostazione predefinita), tutte le colonne vengono associate; Se non si seleziona questa casella, non viene associata alcuna colonna ed è necessario associarle manualmente nella classe recordset.
+   Specifica se sono associate tutte le colonne della tabella selezionata. Se si seleziona questa casella (impostazione predefinita), vengono associate tutte le colonne; Se non si seleziona questa casella, nessuna colonna viene associata ed è necessario associarle manualmente nella classe recordset.
 
 ::: moniker-end
 
