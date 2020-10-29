@@ -1,6 +1,6 @@
 ---
 title: InjectEvent
-description: Informazioni di riferimento per la funzione InjectEvent dell'SDK di Build Insights in C.
+description: Riferimento alla funzione InjectEvent di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c82aad5923eff60e5c72ceccaa39aa136f942665
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4d85f17a6d553d9dffa727824e6d4de94518645
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324044"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922836"
 ---
 # <a name="injectevent"></a>InjectEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `InjectEvent` funzione viene chiamata all'interno di un relogger che implementa l'interfaccia [IRelogger.](../other-types/irelogger-class.md) Viene utilizzato per scrivere un evento ETW (Event Tracing for Windows) nel file di traccia di output di una sessione di nuova registrazione.
+La `InjectEvent` funzione viene chiamata all'interno di un relogger che implementa l'interfaccia [IRelogger](../other-types/irelogger-class.md) . Viene usato per scrivere un evento Event Tracing for Windows (ETW) nel file di traccia di output di una sessione di registrazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,34 +45,34 @@ void InjectEvent(
 ### <a name="parameters"></a>Parametri
 
 *relogSession*\
-Puntatore alla sessione di riregistrazione. Viene fornita una sessione di riregistrazione ai relogger che implementano l'interfaccia. `IRelogger` Per ulteriori informazioni, vedere [IRelogger](../other-types/irelogger-class.md).
+Puntatore alla sessione di registrazione. Una sessione di riregistrazione viene fornita ai relogger che implementano l' `IRelogger` interfaccia. Per ulteriori informazioni, vedere [IRelogger](../other-types/irelogger-class.md).
 
-*id provider*\
-GUID del provider Event Tracing for Windows (ETW) con il quale viene nuovamente registrato l'evento ETW.
+*providerId*\
+GUID del provider Event Tracing for Windows (ETW) in cui l'evento ETW viene riregistrato.
 
-*Eventdescriptor*\
-Descrittore dell'evento ETW per l'evento ETW che viene nuovamente registrato.
+*eventDescriptor*\
+Descrittore di eventi ETW per l'evento ETW registrato.
 
-*Processid*\
-Identificatore di processo (PID) per l'evento ETW che viene nuovamente registrato.
+*processId*\
+Identificatore di processo (PID) per l'evento ETW registrato.
 
-*threadId (ID thread)*\
-Identificatore del thread (TID) per l'evento ETW che viene registrato nuovamente.
+*threadId*\
+Identificatore del thread (TID) per l'evento ETW registrato.
 
-*processorIndice*\
-Indice del processore per l'evento ETW che viene registrato nuovamente.
+*processorIndex*\
+Indice del processore per l'evento ETW registrato.
 
-*Timestamp*\
-Timestamp per l'evento ETW che viene registrato nuovamente.
+*timestamp*\
+Timestamp per l'evento ETW registrato.
 
-*Dati*\
-Puntatore ai dati che devono essere inclusi nell'evento ETW relogged.
+*dati*\
+Puntatore ai dati che devono essere inclusi nell'evento ETW registrato.
 
-*Bytecount*\
-La dimensione dei dati, in byte, a cui puntano i *dati*.
+*byteCount*\
+Dimensione dei dati, in byte, a cui puntano i *dati* .
 
 ## <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni sui concetti ETW, ad esempio *il GUID del provider* e il descrittore di *eventi,* vedere la [documentazione di ETW](/windows/win32/etw/about-event-tracing). Per informazioni dettagliate su come avviare una sessione di re-logging con l'SDK di build Insights, vedere [Relog](relog.md).
+Per ulteriori informazioni sui concetti ETW, ad esempio il *GUID del provider* e il *descrittore di eventi* , vedere la [documentazione ETW](/windows/win32/etw/about-event-tracing). Per informazioni dettagliate su come avviare una sessione di registrazione con C++ Build Insights SDK, vedere [relog](relog.md).
 
 ::: moniker-end

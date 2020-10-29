@@ -6,22 +6,22 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 6544f5ddf0b81fdec893308bb10e0c19cea73005
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499447"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923900"
 ---
 # <a name="implementing-property-pages"></a>Implementazione delle pagine delle proprietà
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La Creazione guidata pagina delle proprietà ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Le pagine delle proprietà sono oggetti COM che implementano l'interfaccia `IPropertyPage` o `IPropertyPage2`. ATL fornisce il supporto per l'implementazione delle pagine delle proprietà tramite la [Creazione guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) nella [finestra di dialogo Aggiungi classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box).
 
@@ -29,7 +29,7 @@ Per creare una pagina delle proprietà con ATL:
 
 - Creare o aprire un progetto server di libreria di collegamento dinamico (DLL) ATL.
 
-- Aprire la [finestra di dialogo Aggiungi classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) e selezionare **Pagina delle proprietà ATL**.
+- Aprire la [finestra di dialogo Aggiungi classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) e selezionare **Pagina delle proprietà ATL** .
 
 - Assicurarsi che la pagina delle proprietà abbia un threading di tipo apartment (poiché ha un'interfaccia utente).
 
@@ -51,7 +51,7 @@ Per creare una pagina delle proprietà con ATL:
 Per un esempio di implementazione della pagina delle proprietà, vedere [esempio: implementazione di una pagina delle proprietà](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
-> Se si vuole ospitare controlli ActiveX nella pagina delle proprietà, è necessario modificare la derivazione della classe generata dalla procedura guidata. Sostituire **CDialogImpl \<CYourClass> ** con **CAxDialogImpl \<CYourClass> ** nell'elenco delle classi base.
+> Se si vuole ospitare controlli ActiveX nella pagina delle proprietà, è necessario modificare la derivazione della classe generata dalla procedura guidata. Sostituire **CDialogImpl \<CYourClass>** con **CAxDialogImpl \<CYourClass>** nell'elenco delle classi base.
 
 ::: moniker-end
 

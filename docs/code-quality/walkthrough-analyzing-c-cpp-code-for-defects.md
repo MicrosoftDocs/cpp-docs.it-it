@@ -8,12 +8,12 @@ helpviewer_keywords:
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-ms.openlocfilehash: 65da18f5f6d1972276f1cb8e306e82314282e40a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb81ca376651c17c760ee776510303efaa13fd9a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227712"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924773"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>Procedura dettagliata: analisi del codice C/C++ per i difetti
 
@@ -26,7 +26,7 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
 - Considera l'avviso come un errore.
 - Annotare il codice sorgente per migliorare l'analisi del difetto del codice.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Una copia dell' [esempio CppDemo](../code-quality/demo-sample.md).
 - Conoscenza di base di C/C++.
@@ -35,25 +35,25 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
 
 ### <a name="to-run-code-defect-analysis-on-native-code"></a>Per eseguire l'analisi del difetto del codice sul codice nativo
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. Aprire la soluzione CppDemo in Visual Studio.
 
-     La soluzione CppDemo ora popola **Esplora soluzioni**.
+     La soluzione CppDemo ora popola **Esplora soluzioni** .
 
-1. Scegliere **Ricompila soluzione**dal menu **Compila** .
+1. Scegliere **Ricompila soluzione** dal menu **Compila** .
 
      La soluzione viene compilata senza errori o avvisi.
 
-1. In **Esplora soluzioni**selezionare il progetto codedifettos.
+1. In **Esplora soluzioni** selezionare il progetto codedifettos.
 
-1. Scegliere **Proprietà**dal menu **progetto** .
+1. Scegliere **Proprietà** dal menu **progetto** .
 
      Verrà visualizzata la finestra di dialogo **pagine delle proprietà Codedifettos** .
 
 1. Selezionare la pagina delle proprietà **analisi codice** .
 
-1. Modificare la proprietà **Abilita analisi codice su compilazione** su **Sì**. Scegliere **OK** per salvare le modifiche.
+1. Modificare la proprietà **Abilita analisi codice su compilazione** su **Sì** . Scegliere **OK** per salvare le modifiche.
 
 1. Ricompilare il progetto codedifettos.
 
@@ -61,22 +61,22 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. Aprire la soluzione CppDemo in Visual Studio.
 
-     La soluzione CppDemo ora popola **Esplora soluzioni**.
+     La soluzione CppDemo ora popola **Esplora soluzioni** .
 
-1. Scegliere **Ricompila soluzione**dal menu **Compila** .
+1. Scegliere **Ricompila soluzione** dal menu **Compila** .
 
      La soluzione viene compilata senza errori o avvisi.
 
      > [!NOTE]
      > In Visual Studio 2017 potrebbe essere visualizzato un avviso non corretto `E1097 unknown attribute "no_init_all"` nel motore di IntelliSense. È possibile ignorare questo avviso.
 
-1. In **Esplora soluzioni**selezionare il progetto codedifettos.
+1. In **Esplora soluzioni** selezionare il progetto codedifettos.
 
-1. Scegliere **Proprietà**dal menu **progetto** .
+1. Scegliere **Proprietà** dal menu **progetto** .
 
      Verrà visualizzata la finestra di dialogo **pagine delle proprietà Codedifettos** .
 
@@ -92,9 +92,9 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
 
 ### <a name="to-analyze-code-defect-warnings"></a>Per analizzare gli avvisi di errore del codice
 
-1. Scegliere **Elenco errori**dal menu **Visualizza** .
+1. Scegliere **Elenco errori** dal menu **Visualizza** .
 
-     Questa voce di menu potrebbe non essere visibile. Dipende dal profilo dello sviluppatore scelto in Visual Studio. Potrebbe essere necessario puntare ad **altre finestre** dal menu **Visualizza** , quindi scegliere **Elenco errori**.
+     Questa voce di menu potrebbe non essere visibile. Dipende dal profilo dello sviluppatore scelto in Visual Studio. Potrebbe essere necessario puntare ad **altre finestre** dal menu **Visualizza** , quindi scegliere **Elenco errori** .
 
 1. Nella finestra **Elenco errori** fare doppio clic sull'avviso seguente:
 
@@ -108,7 +108,7 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
    if (SUCCEEDED(ReadUserAccount()))
    ```
 
-1. Nella **Elenco errori**fare doppio clic sull'avviso seguente:
+1. Nella **Elenco errori** fare doppio clic sull'avviso seguente:
 
      C6282: operatore errato: assegnazione di una costante in un contesto booleano. Provare a usare ' = ='.
 
@@ -128,25 +128,25 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
 
 ### <a name="to-enable-the-source-code-annotation-warnings-in-annotationc"></a>Per abilitare gli avvisi di annotazione del codice sorgente nell'annotazione. c
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. In Esplora soluzioni selezionare il progetto annotazioni.
 
-1. Scegliere **Proprietà**dal menu **progetto** .
+1. Scegliere **Proprietà** dal menu **progetto** .
 
      Verrà visualizzata la finestra di dialogo **pagine delle proprietà delle annotazioni** .
 
 1. Selezionare la pagina delle proprietà **analisi codice** .
 
-1. Modificare la proprietà **Abilita analisi codice su compilazione** su **Sì**. Scegliere **OK** per salvare le modifiche.
+1. Modificare la proprietà **Abilita analisi codice su compilazione** su **Sì** . Scegliere **OK** per salvare le modifiche.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. In Esplora soluzioni selezionare il progetto annotazioni.
 
-1. Scegliere **Proprietà**dal menu **progetto** .
+1. Scegliere **Proprietà** dal menu **progetto** .
 
      Verrà visualizzata la finestra di dialogo **pagine delle proprietà delle annotazioni** .
 
@@ -160,9 +160,9 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
 
 1. Ricompilare il progetto delle annotazioni.
 
-1. Scegliere **Esegui analisi codice sulle annotazioni**dal menu **Compila** .
+1. Scegliere **Esegui analisi codice sulle annotazioni** dal menu **Compila** .
 
-1. Nella **Elenco errori**fare doppio clic sull'avviso seguente:
+1. Nella **Elenco errori** fare doppio clic sull'avviso seguente:
 
      C6011: dereferenziazione del puntatore NULL ' newNode '.
 
@@ -196,9 +196,9 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
    _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
-1. Dal menu **Genera** scegliere **Esegui analisi del codice sulla soluzione**.
+1. Dal menu **Genera** scegliere **Esegui analisi del codice sulla soluzione** .
 
-1. Nella **Elenco errori**fare doppio clic sull'avviso seguente:
+1. Nella **Elenco errori** fare doppio clic sull'avviso seguente:
 
      C6011: dereferenziazione del puntatore NULL ' node '.
 
@@ -213,7 +213,7 @@ In questa procedura dettagliata verranno fornite le seguenti operazioni:
    }
    ```
 
-1. Dal menu **Genera** scegliere **Esegui analisi del codice sulla soluzione**.
+1. Dal menu **Genera** scegliere **Esegui analisi del codice sulla soluzione** .
 
      Il progetto viene ora compilato senza avvisi o errori.
 

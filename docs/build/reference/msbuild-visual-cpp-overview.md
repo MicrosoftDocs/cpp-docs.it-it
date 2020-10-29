@@ -4,16 +4,16 @@ description: File di supporto, proprietà e destinazioni utilizzati da MSBuild p
 ms.date: 10/14/2020
 helpviewer_keywords:
 - MSBuild overview
-ms.openlocfilehash: b08db751bfe04c7cd3ce2c2f4741c9ee8956cf74
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: e99b9a428d9c6149debc06e1dfab7a69c3590196
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099680"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924387"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Elementi interni di MSBuild per i progetti C++
 
-Quando si impostano le proprietà del progetto nell'ambiente di sviluppo integrato (IDE) e quindi si salva il progetto, Visual Studio scrive le impostazioni del progetto nel file di progetto. Il file di progetto contiene impostazioni univoche per il progetto. Tuttavia, non contiene tutte le impostazioni necessarie per compilare il progetto. Il file di progetto contiene elementi `Import` che includono una rete di altri *file di supporto*. I file di supporto contengono le proprietà, le destinazioni e le impostazioni rimanenti necessarie per compilare il progetto.
+Quando si impostano le proprietà del progetto nell'ambiente di sviluppo integrato (IDE) e quindi si salva il progetto, Visual Studio scrive le impostazioni del progetto nel file di progetto. Il file di progetto contiene impostazioni univoche per il progetto. Tuttavia, non contiene tutte le impostazioni necessarie per compilare il progetto. Il file di progetto contiene elementi `Import` che includono una rete di altri *file di supporto* . I file di supporto contengono le proprietà, le destinazioni e le impostazioni rimanenti necessarie per compilare il progetto.
 
 La maggior parte delle destinazioni e delle proprietà nei file di supporto esiste esclusivamente allo scopo di implementare il sistema di compilazione. Questo articolo illustra le proprietà e le destinazioni utili che è possibile specificare nella riga di comando di MSBuild. Per individuare altre destinazioni e proprietà, esaminare i file nelle directory dei file di supporto.
 
@@ -21,7 +21,7 @@ La maggior parte delle destinazioni e delle proprietà nei file di supporto esis
 
 Per impostazione predefinita, i file di supporto di Visual Studio primari si trovano nelle directory seguenti. Queste informazioni sono specifiche della versione.
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
@@ -39,7 +39,7 @@ Per impostazione predefinita, i file di supporto di Visual Studio primari si tro
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
@@ -79,7 +79,7 @@ Per impostazione predefinita, i file di supporto di Visual Studio primari si tro
 
 Le directory dei file di supporto contengono file con queste estensioni:
 
-| Estensione | Description |
+| Estensione | Descrizione |
 | --------- | ----------- |
 | *`.targets`* | Contiene elementi XML `Target` che specificano le attività eseguite dalla destinazione. Può inoltre contenere elementi `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup` ed elementi `Item` definiti dall'utente utilizzabili per assegnare file e opzioni della riga di comando ai parametri delle attività.<br /><br /> Per altre informazioni, vedere [Elemento Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild). |
 | *`.props`* | Contiene elementi `Property Group` ed elementi XML `Property` definiti dall'utente che specificano le impostazioni di file e parametri usate durante una compilazione.<br /><br /> Può inoltre contenere elementi `ItemDefinitionGroup` ed elementi XML `Item` definiti dall'utente che specificano impostazioni aggiuntive. Gli elementi definiti in un gruppo di definizioni di elementi sono simili alle proprietà, ma non è possibile accedervi dalla riga di comando. I file di progetto di Visual Studio usano spesso gli elementi al posto delle proprietà per rappresentare le impostazioni.<br /><br /> Per altre informazioni, vedere [elemento ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [elemento ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)e [elemento Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild). |
@@ -117,7 +117,7 @@ Sono disponibili centinaia di destinazioni nei file di supporto di Visual Studio
 
 Nella tabella seguente sono elencate diverse destinazioni utili orientate all'utente.
 
-| Destinazione | Description |
+| Destinazione | Descrizione |
 | ------ | ----------- |
 | BscMake | Esegue lo strumento Microsoft Browse Information Maintenance Utility, bscmake.exe. |
 | Compilare | Compila il progetto.<br /><br /> Questa destinazione è l'impostazione predefinita per un progetto. |
@@ -135,7 +135,7 @@ Nella tabella seguente sono elencate diverse destinazioni utili orientate all'ut
 > [!NOTE]
 > In Visual Studio 2017 e versioni successive il supporto dei progetti C++ per i file **xsd** è deprecato. È comunque possibile usare **Microsoft.VisualC.CppCodeProvider** aggiungendo **CppCodeProvider.dll** manualmente alla Global Assembly Cache.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Riferimenti alle attività MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
 [Attività BscMake](/visualstudio/msbuild/bscmake-task)\

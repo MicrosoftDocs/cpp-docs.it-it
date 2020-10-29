@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 6b0ca74bbd03682f91206c21c3413d4ad168b60a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e1eeb7e466e325772d6a1522e77983fd3de04293
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185867"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923955"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Avviso del compilatore (livello 1) C4727
 
@@ -20,13 +20,13 @@ ms.locfileid: "80185867"
 > [!NOTE]
 > In Visual Studio 2017 e versioni precedenti, l'intestazione precompilata è denominata *stdafx. h* per impostazione predefinita e in visual studio 2019 e versioni successive viene chiamato *PCH. h* per impostazione predefinita.
 
-C4727 si verifica quando si compila più moduli con **/YC**e dove il compilatore è stato in grado di contrassegnare tutti i file con estensione obj con lo stesso timestamp. pch.
+C4727 si verifica quando si compila più moduli con **/YC** e dove il compilatore è stato in grado di contrassegnare tutti i file con estensione obj con lo stesso timestamp. pch.
 
 Per risolvere, compilare un file di origine con **/Yc/c** (crea PCH) e gli altri vengono compilati separatamente con **/Yu/c** (USA PCH), quindi collegarli insieme.
 
 Quindi, se sono state effettuate le operazioni seguenti e viene generato C4727:
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 **CL/CLR/GL a. cpp b. cpp c. cpp/Ycstdafx.h**
 
@@ -38,7 +38,7 @@ Verranno invece eseguite le operazioni seguenti:
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 **CL/CLR/GL a. cpp b. cpp c. cpp/YC%s**
 
@@ -52,6 +52,6 @@ Verranno invece eseguite le operazioni seguenti:
 
 Per ulteriori informazioni, vedere
 
-- [/Yc (crea il file di intestazione precompilato)](../../build/reference/yc-create-precompiled-header-file.md)
+- [/YC (crea il file di intestazione precompilata)](../../build/reference/yc-create-precompiled-header-file.md)
 
-- [/Yu (usa il file di intestazione precompilato)](../../build/reference/yu-use-precompiled-header-file.md)
+- [/Yu (USA il file di intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md)

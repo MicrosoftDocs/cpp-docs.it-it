@@ -1,6 +1,6 @@
 ---
-title: PreLTCGOptRef (classe)
-description: Il riferimento della classe PreLTCGOptRef dell'SDK di Build Insights.
+title: Classe PreLTCGOptRef
+description: Riferimento alla classe PreLTCGOptRef di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a48dc2db0345333da3ec66ccb3a345323b4f10c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6786e317f0221126ec6e15c50f3fad58c5982266
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324393"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923010"
 ---
-# <a name="preltcgoptref-class"></a>PreLTCGOptRef (classe)
+# <a name="preltcgoptref-class"></a>Classe PreLTCGOptRef
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `PreLTCGOptRef` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usalo per trovare una corrispondenza con un [evento PRE_LTCG_OPT_REF.](../event-table.md#pre-ltcg-opt-ref)
+La `PreLTCGOptRef` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Usarlo per trovare la corrispondenza con un evento [PRE_LTCG_OPT_REF](../event-table.md#pre-ltcg-opt-ref) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-Insieme ai membri ereditati dalla relativa `PreLTCGOptRef` classe base [Activity,](activity.md) la classe contiene i membri seguenti:
+Insieme ai membri ereditati dalla relativa classe di base [Activity](activity.md) , la `PreLTCGOptRef` classe contiene i membri seguenti:
 
 ### <a name="constructors"></a>Costruttori
 
-[PreLTCGOptRef (preLTCGOptRef)](#pre-ltcg-opt-ref)
+[PreLTCGOptRef](#pre-ltcg-opt-ref)
 
-## <a name="preltcgoptref"></a><a name="pre-ltcg-opt-ref"></a>PreLTCGOptRef (preLTCGOptRef)
+## <a name="preltcgoptref"></a><a name="pre-ltcg-opt-ref"></a> PreLTCGOptRef
 
 ```cpp
 PreLTCGOptRef(const RawEvent& event);
@@ -53,7 +53,7 @@ PreLTCGOptRef(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametri
 
-*Evento*\
-Un evento [PRE_LTCG_OPT_REF.](../event-table.md#pre-ltcg-opt-ref)
+*evento*\
+Evento [PRE_LTCG_OPT_REF](../event-table.md#pre-ltcg-opt-ref) .
 
 ::: moniker-end

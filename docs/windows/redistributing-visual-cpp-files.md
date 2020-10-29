@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 7a639f7ad7deb76cade47b0162012dcb70cb0d69
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: a660e67b2664417438ea9fa7acddbde4c20c307a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446753"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924146"
 ---
 # <a name="redistributing-visual-c-files"></a>Ridistribuzione di file Visual C++
 
@@ -25,19 +25,19 @@ ms.locfileid: "86446753"
 
 Quando si distribuisce un'applicazione, è necessario distribuire i file necessari per il suo supporto. Se uno di questi file viene fornito da Microsoft, verificare se è consentito ridistribuirli. È presente un collegamento alle condizioni di licenza di Visual Studio nell'IDE. Usare il collegamento condizioni di licenza nella finestra di dialogo informazioni su Microsoft Visual Studio. In alternativa, scaricare le EULA e le licenze pertinenti dalla directory delle [licenze](https://visualstudio.microsoft.com/license-terms/)di Visual Studio.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Per visualizzare "l'elenco REDIST" a cui si fa riferimento nella sezione "codice distribuibile" delle condizioni di licenza del software Microsoft Visual Studio 2019, vedere [file di codice distribuibile per Microsoft Visual Studio 2019](/visualstudio/releases/2019/redistribution#-distributable-code-files-for-visual-studio-2019)
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Per visualizzare l'"elenco REDIST" a cui si fa riferimento nella sezione "codice distribuibile" delle condizioni di licenza del software Microsoft Visual Studio 2017, vedere [file di codice distribuibile per Microsoft Visual Studio 2017](/visualstudio/productinfo/2017-redistribution-vs#-distributable-code-files-for-visual-studio-2017).
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Per visualizzare l'"elenco REDIST" a cui si fa riferimento nella sezione "codice distribuibile" delle condizioni di licenza del software Microsoft Visual Studio 2015, vedere [file di codice distribuibile per Microsoft Visual Studio 2015](/visualstudio/productinfo/2015-redistribution-vs#-distributable-code-files-for-visual-studio-2015).
 
@@ -65,11 +65,11 @@ I moduli di unione ridistribuibili devono essere inclusi nel pacchetto di Window
 
 ## <a name="install-individual-redistributable-files"></a>Installare singoli file ridistribuibili
 
-È anche possibile installare direttamente le DLL ridistribuibili nella *cartella locale dell'applicazione*. Si tratta della cartella che contiene il file dell'applicazione eseguibile. Per motivi di manutenzione, non è consigliabile usare questo percorso di installazione.
+È anche possibile installare direttamente le DLL ridistribuibili nella *cartella locale dell'applicazione* . Si tratta della cartella che contiene il file dell'applicazione eseguibile. Per motivi di manutenzione, non è consigliabile usare questo percorso di installazione.
 
 ## <a name="potential-run-time-errors"></a>Errori di run-time potenziali
 
-Se Windows non riesce a trovare una delle DLL ridistribuibili della libreria richieste dall'applicazione, potrebbe essere visualizzato un messaggio simile al seguente: "l'applicazione non è stata avviata perché *Library*. dll non è stato trovato. La reinstallazione dell'applicazione potrebbe risolvere il problema ".
+Se Windows non riesce a trovare una delle DLL ridistribuibili della libreria richieste dall'applicazione, potrebbe essere visualizzato un messaggio simile al seguente: "l'applicazione non è stata avviata perché *Library* . dll non è stato trovato. La reinstallazione dell'applicazione potrebbe risolvere il problema ".
 
 Per risolvere questo tipo di errore, verificare che il programma di installazione dell'applicazione venga compilato correttamente. Verificare che le librerie ridistribuibili vengano distribuite correttamente nel sistema di destinazione. Per altre informazioni, vedere [Informazioni sulle dipendenze di un'applicazione Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md).
 

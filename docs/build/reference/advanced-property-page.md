@@ -4,22 +4,22 @@ ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 3d6694e44d3da4023998a0335cd06c85b353b2b1
-ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
+ms.openlocfilehash: 3b1e45f984cd40d6ea42ead25b045fc8688ad0a7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144165"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924037"
 ---
 # <a name="advanced-property-page"></a>Pagina delle proprietà avanzate
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 La pagina delle proprietà avanzate è disponibile in Visual Studio 2019 e versioni successive. Per visualizzare la documentazione relativa a tale versione, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La pagina delle proprietà avanzate è disponibile in Visual Studio 2019 e versioni successive.
 
@@ -31,7 +31,7 @@ La pagina delle proprietà avanzate è disponibile in Visual Studio 2019 e versi
 
 - **Estensioni da eliminare durante la pulitura**
 
-   L'opzione **Pulisci** (menu **Compila**) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate in questa proprietà vengono eliminati quando viene eseguita la **pulizia** o quando si ricompila. Il sistema di compilazione Elimina tutti i file con queste estensioni nella directory intermedia. Elimina anche eventuali output noti della compilazione, indipendentemente dalla posizione. Che include gli output intermedi, ad esempio *`.obj`* i file. È possibile specificare caratteri jolly in questa proprietà.
+   L'opzione **Pulisci** (menu **Compila** ) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate in questa proprietà vengono eliminati quando viene eseguita la **pulizia** o quando si ricompila. Il sistema di compilazione Elimina tutti i file con queste estensioni nella directory intermedia. Elimina anche eventuali output noti della compilazione, indipendentemente dalla posizione. Che include gli output intermedi, ad esempio *`.obj`* i file. È possibile specificare caratteri jolly in questa proprietà.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
@@ -81,7 +81,7 @@ La pagina delle proprietà avanzate è disponibile in Visual Studio 2019 e versi
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
 
-- **Con ottimizzazione intero programma**
+- **Ottimizzazione intero programma**
 
    Specifica l' [`/GL`](gl-whole-program-optimization.md) opzione del compilatore e l' [`/LTCG`](ltcg-link-time-code-generation.md) opzione del linker. Per impostazione predefinita, l'ottimizzazione dell'intero programma è disabilitata per le configurazioni di debug e abilitata per le configurazioni di rilascio.
 

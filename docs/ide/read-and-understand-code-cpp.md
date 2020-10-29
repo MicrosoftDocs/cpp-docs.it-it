@@ -2,12 +2,12 @@
 title: Leggere e comprendere il codice C++ in Visual Studio
 description: Usare l'editor di codice C++ in Visual Studio per formattare e comprendere il codice.
 ms.date: 05/28/2019
-ms.openlocfilehash: 3da4224592cabd11e449fa4be395eba046c0e554
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cd152ffbbd106c6a31a21da35d08b53555047209
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686130"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924649"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Leggere e comprendere il codice C++ in Visual Studio
 
@@ -23,7 +23,7 @@ Il codice non usato, ad esempio il codice sotto un #if 0, ha un colore più sbia
 
 ![Codice inattivo](../ide/media/inactive-code-cpp.png "Codice C++ inattivo")
 
-È possibile personalizzare i colori digitando "Tipi di carattere" in **Avvio veloce** e quindi scegliendo **Tipi di carattere e colori**. Nella finestra di dialogo **Tipi di carattere e colori** scorrere verso il basso fino alle opzioni di C/C++, quindi scegliere un tipo di carattere e/o un colore personalizzato.
+È possibile personalizzare i colori digitando "Tipi di carattere" in **Avvio veloce** e quindi scegliendo **Tipi di carattere e colori** . Nella finestra di dialogo **Tipi di carattere e colori** scorrere verso il basso fino alle opzioni di C/C++, quindi scegliere un tipo di carattere e/o un colore personalizzato.
 
 ## <a name="outlining"></a>struttura
 
@@ -37,7 +37,7 @@ Altre opzioni di struttura si trovano in **modifica**  >  **struttura** nel menu
 
 ## <a name="line-numbers"></a>Numeri di riga
 
-È possibile aggiungere numeri di riga al progetto passando a **strumenti**  >  **Opzioni**  >  **editor di testo**  >  **tutti i linguaggi**  >  **generale** oppure cercando "numero di riga" con **avvio veloce (CTRL + Q)**. I numeri riga possono essere impostati per tutti i linguaggi o solo per determinati linguaggi, tra cui C++.
+È possibile aggiungere numeri di riga al progetto passando a **strumenti**  >  **Opzioni**  >  **editor di testo**  >  **tutti i linguaggi**  >  **generale** oppure cercando "numero di riga" con **avvio veloce (CTRL + Q)** . I numeri riga possono essere impostati per tutti i linguaggi o solo per determinati linguaggi, tra cui C++.
 
 ## <a name="scroll-and-zoom"></a>Scorrimento e zoom
 
@@ -49,7 +49,7 @@ La **modalità mappa** della barra di scorrimento consente di scorrere rapidamen
 
 ![Mappa del codice in C&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mappa codice")
 
-Per attivare la **modalità mappa**, digitare "map" nella casella di ricerca **avvio veloce** della barra degli strumenti principale e scegliere **Usa modalità mappa di scorrimento**. Per altre informazioni, vedere [Procedura: Tenere traccia del codice personalizzando la barra di scorrimento](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Per attivare la **modalità mappa** , digitare "map" nella casella di ricerca **avvio veloce** della barra degli strumenti principale e scegliere **Usa modalità mappa di scorrimento** . Per altre informazioni, vedere [Procedura: Tenere traccia del codice personalizzando la barra di scorrimento](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 Quando la **modalità mappa** è disattivata, la barra di scorrimento evidenzia comunque le modifiche apportate al file. Verde indica le modifiche salvate e giallo le modifiche non salvate.
 
@@ -57,23 +57,23 @@ Quando la **modalità mappa** è disattivata, la barra di scorrimento evidenzia 
 
 Passare il mouse su una qualsiasi variabile, funzione o su un altro simbolo per ottenere informazioni al suo riguardo, tra cui la dichiarazione e i commenti che si trovano appena prima.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Screenshot che mostra la descrizione comando informazioni rapide in Visual Studio 2019.](../ide/media/quick-info-vs2019.png "Informazioni rapide")
 
-La descrizione comando **Informazioni rapide** ha un collegamento **Ricerca in linea**. Passare a **strumenti**  >  **Opzioni**  >  **editor di testo**  >  **C++**  >  **visualizzazione** C++ per specificare il provider di ricerca.
+La descrizione comando **Informazioni rapide** ha un collegamento **Ricerca in linea** . Passare a **strumenti**  >  **Opzioni**  >  **editor di testo**  >  **C++**  >  **visualizzazione** C++ per specificare il provider di ricerca.
 
-Se il codice contiene un errore, passare il puntatore su di esso per visualizzare il messaggio di errore in **Informazioni rapide**. Il messaggio di errore viene visualizzato anche nella finestra Elenco errori.
+Se il codice contiene un errore, passare il puntatore su di esso per visualizzare il messaggio di errore in **Informazioni rapide** . Il messaggio di errore viene visualizzato anche nella finestra Elenco errori.
 
 ![Informazioni rapide sull'errore](../ide/media/quickinfo-on-error.png "Informazioni rapide sull'errore")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Screenshot che mostra la descrizione comando informazioni rapide in Visual Studio 2017.](../ide/media/quick-info.png "Informazioni rapide")
 
-Se il codice contiene un errore, passare il puntatore su di esso per visualizzare il messaggio di errore in **Informazioni rapide**. Il messaggio di errore viene visualizzato anche nella finestra **Elenco errori**.
+Se il codice contiene un errore, passare il puntatore su di esso per visualizzare il messaggio di errore in **Informazioni rapide** . Il messaggio di errore viene visualizzato anche nella finestra **Elenco errori** .
 
 ![Informazioni rapide sull'errore](../ide/media/quickinfo-on-error.png "Informazioni rapide sull'errore")
 

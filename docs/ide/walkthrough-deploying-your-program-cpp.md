@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: eacbcef82f240589e71b59f80d8e19602ceda869
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c5d98687d6b5a49fb7b4b90aecf345a739c34a3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365014"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924674"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procedura dettagliata: Distribuzione di un programma (C++)
 
@@ -22,7 +22,7 @@ Dopo aver creato l'applicazione completando le procedure dettagliate correlate p
 
 La procedura dettagliata mostra come usare Windows Installer per distribuire l'applicazione. Ai fini della distribuzione, è possibile anche utilizzare ClickOnce. Per altre informazioni, vedere [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Per altre informazioni sulla distribuzione in generale, vedere [Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Nella procedura dettagliata si presuppone la conoscenza delle nozioni di base del linguaggio C++.
 
@@ -32,35 +32,35 @@ La procedura dettagliata mostra come usare Windows Installer per distribuire l'a
 
 ## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Installare il modello di progetto di installazione e distribuzione di Visual Studio
 
-I passaggi descritti in questa sezione variano a seconda della versione di Visual Studio installata. Per visualizzare la documentazione per la versione preferita di Visual Studio, usare il controllo Selettore **versione.** Si trova nella parte superiore del sommario in questa pagina.
+I passaggi descritti in questa sezione variano a seconda della versione di Visual Studio installata. Per visualizzare la documentazione per la versione preferita di Visual Studio, usare il controllo selettore della **versione** . Si trova nella parte superiore del sommario in questa pagina.
 
 <!-- markdownlint-disable MD034 -->
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Per installare il modello di progetto di installazione e distribuzione per Visual Studio 2019
 
-1. Se non è già stato fatto, scaricare l'estensione Progetti di installazione di Microsoft Visual Studio.If you haven't already done so, download the Microsoft Visual Studio Installer Projects extension. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio. Quando si è connessi a Internet, in Visual Studio scegliere **Estensioni** > **Gestisci estensioni**. Nella finestra di dialogo **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **INVIO**, selezionare **Microsoft Visual Studio \<versione> Installer Projects** e fare clic su **Scarica**. Scegliere di eseguire e installare l'estensione e quindi riavviare Visual Studio.
+1. Se non è già stato fatto, scaricare l'estensione per i progetti del programma di installazione Microsoft Visual Studio. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio. Quando si è connessi a Internet, in Visual Studio scegliere **estensioni**  >  **Gestisci estensioni** . Nella finestra di dialogo **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **invio** , selezionare **Microsoft Visual Studio \<version> progetti del programma di installazione** e fare clic su **download** . Scegliere di eseguire e installare l'estensione e quindi riavviare Visual Studio.
 
 1. Sulla barra dei menu di Visuali Studio scegliere **File** > **Progetti e soluzioni recenti** e quindi scegliere di riaprire il progetto.
 
-1. Nella barra dei menu scegliere **File** > **nuovo** > **progetto** per aprire la finestra di dialogo Crea **nuovo progetto.** Nella casella di ricerca digitare "installazione" e nell'elenco dei risultati scegliere **Progetto di installazione**.
+1. Sulla barra dei menu scegliere **file**  >  **nuovo**  >  **progetto** per aprire la finestra di dialogo **Crea un nuovo progetto** . Nella casella di ricerca digitare "installazione" e nell'elenco dei risultati scegliere **Progetto di installazione** .
 
-1. Immettere un nome per il progetto di installazione nella casella **Nome**. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene aperta una scheda **File Assistant (ProjectName)** (Assistente file - NomeProgetto).
+1. Immettere un nome per il progetto di installazione nella casella **Nome** . Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione** . Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene aperta una scheda **File Assistant (ProjectName)** (Assistente file - NomeProgetto).
 
-1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto**.
+1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto** .
 
-1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK**. Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)**.
+1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK** . Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)** .
 
-1. Selezionare l'elemento **Output primario da Game (attivo)**, fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)**. Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)**.
+1. Selezionare l'elemento **Output primario da Game (attivo)** , fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)** . Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)** .
 
 1. Rinominare l'elemento del collegamento in *Game* e quindi trascinarlo nel nodo **Menu Programmi dell'utente** sul lato sinistro della finestra.
 
-1. In **Esplora soluzioni** selezionare il progetto **Game Installer** e scegliere **Visualizza** > **Finestra Proprietà** o premere **F4** per aprire la finestra **Proprietà**.
+1. In **Esplora soluzioni** selezionare il progetto **Game Installer** e scegliere **Visualizza** > **Finestra Proprietà** o premere **F4** per aprire la finestra **Proprietà** .
 
-1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Ad esempio, utilizzare *Contoso* per **produttore**, *Programma di installazione giochi* per Nome **prodotto**e *\:https //www.contoso.com* per **SupportUrl**.
+1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Utilizzare, ad esempio, *Contoso* per **produttore** , programma di *installazione del gioco* per **nome prodotto** e *https \: //www.contoso.com* per **SupportUrl** .
 
-1. Nella barra dei menu scegliere **Gestione configurazione compilazione** > **Configuration Manager**. Nella tabella **Progetto**, nella colonna **Compilazione** selezionare la casella per **Game Installer**. Fare clic su **Chiudi**.
+1. Nella barra dei menu scegliere **Compila**  >  **Configuration Manager** . Nella tabella **Progetto** , nella colonna **Compilazione** selezionare la casella per **Game Installer** . Fare clic su **Chiudi** .
 
 1. Sulla barra dei menu scegliere **Compila** > **Compila soluzione** per compilare il progetto Game e il progetto Game Installer.
 
@@ -68,13 +68,13 @@ I passaggi descritti in questa sezione variano a seconda della versione di Visua
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Per installare il modello di progetto di installazione e distribuzione per Visual Studio 2017 e versioni precedenti
 
-1. Connettersi a Internet e quindi in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti**.
+1. Connettersi a Internet e quindi in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti** .
 
-1. In **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **INVIO**, selezionare **Microsoft Visual Studio \<versione> Installer Projects** e fare clic su **Scarica**.
+1. In **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **invio** , selezionare **Microsoft Visual Studio \<version> progetti del programma di installazione** e fare clic su **download** .
 
 1. Scegliere di installare l'estensione e quindi riavviare Visual Studio.
 
@@ -82,27 +82,27 @@ I passaggi descritti in questa sezione variano a seconda della versione di Visua
 
 ### <a name="to-create-a-setup-project-and-install-your-program"></a>Per creare un progetto di installazione e installare il programma
 
-1. Modificare la configurazione attiva della soluzione in Rilascio. Nella barra dei menu scegliere **Gestione configurazione compilazione** > **Configuration Manager**. Nella finestra di dialogo **Gestione configurazione** nell'elenco a discesa **Configurazione soluzione attiva** selezionare **Rilascio**. Scegliere il pulsante **Chiudi** per salvare la configurazione.
+1. Modificare la configurazione attiva della soluzione in Rilascio. Nella barra dei menu scegliere **Compila**  >  **Configuration Manager** . Nella finestra di dialogo **Gestione configurazione** nell'elenco a discesa **Configurazione soluzione attiva** selezionare **Rilascio** . Scegliere il pulsante **Chiudi** per salvare la configurazione.
 
-1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Nuovo progetto** .
 
-1. Nel riquadro sinistro della finestra di dialogo espandere i nodi**Altri tipi di progetto** **installati** > e quindi selezionare **Programma di installazione**di Visual Studio . Nel riquadro centrale selezionare **Progetto di installazione**.
+1. Nel riquadro sinistro della finestra di dialogo espandere i **Installed**  >  nodi **altri tipi di progetto** installati, quindi selezionare **programma di installazione di Visual Studio** . Nel riquadro centrale selezionare **Progetto di installazione** .
 
-1. Immettere un nome per il progetto di installazione nella casella **Nome**. Per questo esempio digitare *Game Installer*. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene visualizzata la scheda **File Assistant (Game Installer)** (Assistente file - Game Installer).
+1. Immettere un nome per il progetto di installazione nella casella **Nome** . Per questo esempio digitare *Game Installer* . Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione** . Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene visualizzata la scheda **File Assistant (Game Installer)** (Assistente file - Game Installer).
 
-1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto**.
+1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto** .
 
-1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK**. Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)**.
+1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK** . Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)** .
 
-1. Selezionare l'elemento **Output primario da Game (attivo)**, fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)**. Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)**.
+1. Selezionare l'elemento **Output primario da Game (attivo)** , fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)** . Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)** .
 
 1. Rinominare l'elemento del collegamento in *Game* e quindi trascinarlo nel nodo **Menu Programmi dell'utente** sul lato sinistro della finestra.
 
-1. In **Esplora soluzioni** selezionare il progetto **Game Installer** e scegliere **Visualizza** > **Finestra Proprietà** o premere **F4** per aprire la finestra **Proprietà**.
+1. In **Esplora soluzioni** selezionare il progetto **Game Installer** e scegliere **Visualizza** > **Finestra Proprietà** o premere **F4** per aprire la finestra **Proprietà** .
 
-1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Ad esempio, utilizzare *Contoso* per **produttore**, *Programma di installazione giochi* per Nome **prodotto**e *\:https //www.contoso.com* per **SupportUrl**.
+1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Utilizzare, ad esempio, *Contoso* per **produttore** , programma di *installazione del gioco* per **nome prodotto** e *https \: //www.contoso.com* per **SupportUrl** .
 
-1. Nella barra dei menu scegliere **Gestione configurazione compilazione** > **Configuration Manager**. Nella tabella **Progetto**, nella colonna **Compilazione** selezionare la casella per **Game Installer**. Fare clic su **Chiudi**.
+1. Nella barra dei menu scegliere **Compila**  >  **Configuration Manager** . Nella tabella **Progetto** , nella colonna **Compilazione** selezionare la casella per **Game Installer** . Fare clic su **Chiudi** .
 
 1. Sulla barra dei menu scegliere **Compila** > **Compila soluzione** per compilare il progetto Game e il progetto Game Installer.
 
@@ -116,6 +116,6 @@ I passaggi descritti in questa sezione variano a seconda della versione di Visua
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida di riferimento al linguaggio C](../cpp/cpp-language-reference.md)<br/>
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Progetti e sistemi di compilazione](../build/projects-and-build-systems-cpp.md)<br/>
 [Distribuzione di applicazioni desktop](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 74cf72feedd8dc8e1186d54a8abe840195964620
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076204"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923658"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opzioni, Creazione guidata pagina delle proprietà ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La Creazione guidata pagina delle proprietà ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Usare questa pagina della procedura guidata per definire il modello di threading e il livello di aggregazione della pagina delle proprietà che si sta creando.
 

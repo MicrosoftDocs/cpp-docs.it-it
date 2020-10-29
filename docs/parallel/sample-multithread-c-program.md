@@ -2,16 +2,16 @@
 title: Programma multithread di esempio in linguaggio C
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: eb1a07558dd9446e167c27ad08891f88c37fb4ec
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195808"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924761"
 ---
 # <a name="sample-multithread-c-program"></a>Programma multithread di esempio in linguaggio C
 
-Bounce. c è un programma multithread di esempio che crea un nuovo thread ogni volta che viene `a` digitata la lettera o. `A` Ogni thread rimbalza una lettera di un colore diverso intorno allo schermo. È possibile creare fino a 32 thread. La chiusura normale del programma si verifica quando `q` o `Q` è tipizzato.
+Bounce. c è un programma multithread di esempio che crea un nuovo thread ogni volta che `a` `A` viene digitata la lettera o. Ogni thread rimbalza una lettera di un colore diverso intorno allo schermo. È possibile creare fino a 32 thread. La chiusura normale del programma si verifica quando `q` o `Q` è tipizzato.
 
 ## <a name="compile-and-link-a-multithread-program"></a>Compilare e collegare un programma multithread
 
@@ -19,11 +19,11 @@ Per impostazione predefinita, i programmi vengono compilati come multithreading.
 
 ### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Per compilare e collegare il programma multithread Bounce. c dall'interno dell'ambiente di sviluppo
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. Nel menu **File**, scegliere **Nuovo** > **Progetto**.
+1. Nel menu **File** , scegliere **Nuovo** > **Progetto** .
 
-1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione console** con **C++** i tag, **Windows**e **console** . Scegliere **Avanti** per continuare.
+1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione console** con i tag **C++** , **Windows** e **console** . Scegliere **Avanti** per continuare.
 
 1. Nella finestra di dialogo **Configura nuovo progetto** immettere un nome per il progetto, ad esempio "rimbalzo". Scegliere **Crea** per continuare.
 
@@ -31,17 +31,17 @@ Per impostazione predefinita, i programmi vengono compilati come multithreading.
 
 1. Nella finestra modifica eliminare il codice sorgente esistente e sostituirlo con il codice di esempio.
 
-1. Scegliere **Compila soluzione** dal menu **Compila**.
+1. Scegliere **Compila soluzione** dal menu **Compila** .
 
 1. Premere **F5** per avviare il programma nel debugger.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-1. Nel menu **File**, scegliere **Nuovo** > **Progetto**.
+1. Nel menu **File** , scegliere **Nuovo** > **Progetto** .
 
-1. Nella finestra di dialogo **nuovo progetto** selezionare **oggetto C++ visivo** nel riquadro sinistro, quindi selezionare **progetto vuoto** nel riquadro centrale.
+1. Nella finestra di dialogo **nuovo progetto** selezionare **Visual C++** nel riquadro sinistro, quindi selezionare **progetto vuoto** nel riquadro centrale.
 
 1. Nella casella di modifica **nome** immettere un nome per il progetto, ad esempio "rimbalzo". Scegliere **OK** per creare il progetto vuoto.
 

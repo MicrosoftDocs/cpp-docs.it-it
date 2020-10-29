@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 15bbb25c3abac339201179e763bffd916dba0480
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c92fbd8ee7e1fff702757d003ab3bbe0bdabd886
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040873"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923439"
 ---
 # <a name="template_instantiation_data-structure"></a>Struttura TEMPLATE_INSTANTIATION_DATA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `TEMPLATE_INSTANTIATION_DATA` struttura descrive la creazione di un'istanza del modello.
 
@@ -47,7 +47,7 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 | `PrimaryTemplateSymbolKey` | Chiave per il tipo di modello primario specializzato. Questo valore è univoco all'interno della traccia analizzata. |
 | `KindCode` | Tipo di creazione dell'istanza del modello. Per ulteriori informazioni, vedere [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Le chiavi nella `TEMPLATE_INSTANTIATION_DATA` struttura sono univoche all'interno della traccia analizzata. Tuttavia, due chiavi diverse provenienti da passaggi front-end del compilatore diversi possono puntare a due tipi identici. Quando `TEMPLATE_INSTANTIATION_DATA` si utilizzano informazioni provenienti da più passaggi front-end del compilatore, utilizzare gli eventi [SYMBOL_NAME](../event-table.md#symbol-name) per determinare se due tipi sono uguali. `SymbolName` gli eventi vengono generati alla fine di un passaggio front-end del compilatore, dopo che sono state eseguite tutte le creazioni di istanze di modello.
 

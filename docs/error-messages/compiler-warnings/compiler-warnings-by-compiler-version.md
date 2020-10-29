@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b470663e3cea8ec62a1737fb19e9ec5a277d27cc
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176313"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924699"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore per versione del compilatore
 
@@ -51,7 +51,7 @@ Queste versioni del compilatore hanno introdotto nuovi avvisi:
 
 Le sezioni seguenti elencano gli avvisi introdotti da ogni versione di Visual C++ che possono essere eliminati usando l' **`/Wv`** opzione del compilatore. L' **`/Wv`** opzione non può escludere gli avvisi che non sono elencati, che hanno predato le versioni specificate del compilatore.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Avvisi introdotti in Visual Studio 2019 versione 16,7 (compilatore versione 19.27.29112.0)
 
@@ -151,7 +151,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 | C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avvisi introdotti in Visual Studio 2017 versione 15,8 (compilatore versione 19.15.26726.0)
 

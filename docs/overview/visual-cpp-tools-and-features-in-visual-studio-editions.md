@@ -4,22 +4,22 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c2ef6c539d5845beee044a963e0056d3287ba679
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845354"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924800"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Strumenti e funzionalità C++ nelle versioni di Visual Studio
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Le funzionalità C++ riportate di seguito sono disponibili in Visual Studio 2019. Se non diversamente specificato, tutte le funzionalità sono disponibili in tutte le edizioni: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alcune funzionalità richiedono carichi di lavoro specifici o componenti facoltativi che è possibile installare tramite il programma di installazione di Visual Studio.
 
 ## <a name="platforms"></a>Piattaforme
 
-- Desktop di Windows
+- Windows Desktop
 - Piattaforma UWP (Universal Windows Platform) (tablet, PC, Xbox, IoT e HoloLens)
 - Linux
 - Android
@@ -38,7 +38,7 @@ Le funzionalità C++ riportate di seguito sono disponibili in Visual Studio 2019
 
 Visual Studio include i carichi di lavoro seguenti per lo sviluppo con C++. È possibile installarli tutti o solo alcuni, insieme ad altri carichi di lavoro quali ad esempio Sviluppo per desktop .NET, Sviluppo Python, Sviluppo di Azure, Sviluppo di estensioni di Visual Studio e altri.
 
-### <a name="desktop-development-with-c"></a>Sviluppo di applicazioni desktop con C++
+### <a name="desktop-development-with-c"></a>Sviluppo per desktop con C++
 
 Inclusi:
 
@@ -204,7 +204,7 @@ Desktop di Windows:
 
 Piattaforma UWP (Universal Windows Platform) (C++/CX):
 
-- Applicazione vuota
+- App vuota
 - App DirectX 11 e XAML
 - App DirectX 11
 - App DirectX 12
@@ -309,7 +309,7 @@ Linux:
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Visual Studio 2017. Una X in una cella indica che la funzionalità è disponibile. Una cella vuota indica che la funzionalità non è disponibile. Le note tra parentesi indicano che una funzionalità è disponibile, ma limitata.
 
@@ -317,12 +317,12 @@ Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Vis
 
 |Piattaforma|Visual Studio Express per Windows 10|Visual Studio Express per Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |-|-|-|-|-|
-|Desktop di Windows||X|X|X|
+|Windows Desktop||X|X|X|
 |Piattaforma UWP (Universal Windows Platform) (telefono, tablet, PC, Xbox, IoT e HoloLens)|X||X|X|
 |Linux|X|X|
 |Microsoft Store 8.1|||X|X|
 |Windows Phone 8.0|||X|X|
-|Telefoni|||X|X|
+|Android|||X|X|
 |iOS|||X|X|
 
 ## <a name="compilers"></a>Compilatori

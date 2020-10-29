@@ -25,20 +25,20 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: bb301f63bfd1e6839d7893cdc03d61e021409666
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eaaa2c7428809c05532642b0f9ac53146c6f01a9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500067"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924281"
 ---
 # <a name="general-property-page-project"></a>Pagina delle proprietà Generale (Progetto)
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Questo argomento si applica ai progetti di Visual Studio per Windows. Per i progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++](../../linux/prop-pages-linux.md). Per i progetti CMake, vedere [progetti CMake in Visual Studio](../cmake-projects-in-visual-studio.md). Per i progetti Android, vedere [Proprietà generali del progetto (Android C++)](../../cross-platform/general-android-prop-page.md). Per i progetti makefile Android, vedere [Proprietà generali del progetto (makefile di Android C++)](../../cross-platform/general-makefile-android-prop-page.md)
 
-Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Esplora soluzioni e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate le proprietà seguenti:
+Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Esplora soluzioni e si seleziona **Proprietà** , nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate le proprietà seguenti:
 
 - **Directory di output**
 
@@ -86,7 +86,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Es
 
    Per la piattaforma di destinazione Windows, specifica la versione di Windows SDK necessaria per il progetto. Quando si installa un carico di lavoro C++ usando il programma di installazione di Visual Studio, vengono installati anche i componenti obbligatori di Windows SDK. Se nel computer sono installate altre versioni di Windows SDK, nell'elenco a discesa vengono visualizzate tutte le versioni degli strumenti di SDK installati.
 
-   Per sviluppare il progetto per Windows 7 o Windows Vista, usare il valore **8.1**, perché Windows SDK 8.1 è compatibile con le versioni precedenti di queste piattaforme. È anche necessario definire il valore appropriato per **_WIN32_WINNT** in targetver.h. For Windows 7, il valore è 0x0601. Vedere [Modifica di WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+   Per sviluppare il progetto per Windows 7 o Windows Vista, usare il valore **8.1** , perché Windows SDK 8.1 è compatibile con le versioni precedenti di queste piattaforme. È anche necessario definire il valore appropriato per **_WIN32_WINNT** in targetver.h. For Windows 7, il valore è 0x0601. Vedere [Modifica di WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
    È possibile installare il set di strumenti della piattaforma Windows XP incluso in Visual Studio per usare la versione corrente delle librerie per compilare i progetti di Windows XP e Windows 2003 Server. Per informazioni su come ottenere e usare questo set di strumenti della piattaforma, vedere [Configurazione di programmi per Windows XP](../configuring-programs-for-windows-xp.md). Per altre informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
@@ -100,9 +100,9 @@ Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Es
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante destro del mouse su un nodo del progetto in **Esplora soluzioni**e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate due sezioni di proprietà:
+In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante destro del mouse su un nodo del progetto in **Esplora soluzioni** e si seleziona **Proprietà** , nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate due sezioni di proprietà:
 
 - Generale
 
@@ -112,7 +112,7 @@ In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante de
 
 - **Piattaforma di destinazione**
 
-   Specifica la piattaforma su cui verrà eseguito il progetto. Ad esempio, Windows, Android o iOS. Il valore **Windows 10** indica che il progetto è destinato alla piattaforma UWP (Universal Windows Platform). Se il progetto è destinato a versioni precedenti di Windows, la versione non è elencata e il valore di questo campo indica semplicemente **Windows**. Si tratta di un campo di sola lettura che viene impostato quando si crea un progetto.
+   Specifica la piattaforma su cui verrà eseguito il progetto. Ad esempio, Windows, Android o iOS. Il valore **Windows 10** indica che il progetto è destinato alla piattaforma UWP (Universal Windows Platform). Se il progetto è destinato a versioni precedenti di Windows, la versione non è elencata e il valore di questo campo indica semplicemente **Windows** . Si tratta di un campo di sola lettura che viene impostato quando si crea un progetto.
 
 - **Versione della piattaforma di destinazione (Visual Studio 2015)**
 
@@ -124,7 +124,7 @@ In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante de
 
    Per la piattaforma di destinazione Windows, specifica la versione di Windows SDK necessaria per il progetto. Quando si installa un carico di lavoro C++ usando il programma di installazione di Visual Studio, vengono installati anche i componenti obbligatori di Windows SDK. Se nel computer sono installate altre versioni di Windows SDK, nell'elenco a discesa vengono visualizzate tutte le versioni degli strumenti di SDK installati.
 
-   Per sviluppare il progetto per Windows 7 o Windows Vista, usare il valore **8.1**, perché Windows SDK 8.1 è compatibile con le versioni precedenti di queste piattaforme. È anche necessario definire il valore appropriato per **_WIN32_WINNT** in targetver.h. For Windows 7, il valore è 0x0601. Vedere [Modifica di WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+   Per sviluppare il progetto per Windows 7 o Windows Vista, usare il valore **8.1** , perché Windows SDK 8.1 è compatibile con le versioni precedenti di queste piattaforme. È anche necessario definire il valore appropriato per **_WIN32_WINNT** in targetver.h. For Windows 7, il valore è 0x0601. Vedere [Modifica di WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
    È possibile installare il set di strumenti della piattaforma Windows XP incluso in Visual Studio per usare la versione corrente delle librerie per compilare i progetti di Windows XP e Windows 2003 Server. Per informazioni su come ottenere e usare questo set di strumenti della piattaforma, vedere [Configurazione di programmi per Windows XP](../configuring-programs-for-windows-xp.md). Per altre informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
@@ -150,7 +150,7 @@ In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante de
 
 - **Estensioni da eliminare durante la pulitura**
 
-   L'opzione **Pulisci** (menu **Compila**) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate con questa proprietà verranno eliminati quando si sceglie **Pulisci** o si esegue una ricompilazione. Oltre ai file di queste estensioni presenti nella directory intermedia, il sistema di compilazione eliminerà anche tutto l'output noto della compilazione indipendentemente da dove si trova (inclusi gli output intermedi come i file con estensione obj). È possibile specificare caratteri jolly.
+   L'opzione **Pulisci** (menu **Compila** ) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate con questa proprietà verranno eliminati quando si sceglie **Pulisci** o si esegue una ricompilazione. Oltre ai file di queste estensioni presenti nella directory intermedia, il sistema di compilazione eliminerà anche tutto l'output noto della compilazione indipendentemente da dove si trova (inclusi gli output intermedi come i file con estensione obj). È possibile specificare caratteri jolly.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
@@ -170,7 +170,7 @@ In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante de
 
 ## <a name="project-defaults"></a>Impostazioni predefinite progetto
 
-Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresentano proprietà predefinite che è possibile modificare. La definizione di queste proprietà è disponibile nei file con estensione props in *Directory di installazione*\VC\VCProjectDefaults.
+Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresentano proprietà predefinite che è possibile modificare. La definizione di queste proprietà è disponibile nei file con estensione props in *Directory di installazione* \VC\VCProjectDefaults.
 
 - **Tipo configurazione**
 
@@ -220,7 +220,7 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
    Nei progetti gestiti specifica la versione di .NET framework di destinazione.
 
-- **Con ottimizzazione intero programma**
+- **Ottimizzazione intero programma**
 
    Specifica l'opzione del compilatore [/GL](gl-whole-program-optimization.md) e l'opzione del linker [/LTCG](ltcg-link-time-code-generation.md). Per impostazione predefinita, questa opzione è disabilitata per le configurazioni di debug ed è abilitata per le configurazioni di versione finale.
 

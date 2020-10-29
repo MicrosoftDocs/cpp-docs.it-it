@@ -2,18 +2,18 @@
 title: 'Procedura dettagliata: moltiplicazione di matrici'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 6387e68304c7b1dbf0531729b7b73b519f40d159
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d45e731cefe51a815424aa941362dce8ceaa4500
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215868"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924353"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Procedura dettagliata: moltiplicazione di matrici
 
 Questa procedura dettagliata illustra come usare C++ AMP per accelerare l'esecuzione della moltiplicazione di matrici. Vengono presentati due algoritmi, uno senza affiancamento e uno con affiancamento.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Prima di iniziare:
 
@@ -27,41 +27,41 @@ Prima di iniziare:
 
 Le istruzioni per la creazione di un nuovo progetto variano a seconda della versione di Visual Studio installata. Per visualizzare la documentazione per la versione preferita di Visual Studio, usare il controllo selettore della **versione** . Si trova nella parte superiore del sommario in questa pagina.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-the-project-in-visual-studio-2019"></a>Per creare il progetto in Visual Studio 2019
 
-1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto** .
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++ **, impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console** .
 
-1. Dall'elenco filtrato dei tipi di progetto scegliere **progetto vuoto** , quindi fare clic su **Avanti**. Nella pagina successiva immettere *MatrixMultiply* nella casella **nome** per specificare un nome per il progetto e specificare il percorso del progetto, se necessario.
+1. Dall'elenco filtrato dei tipi di progetto scegliere **progetto vuoto** , quindi fare clic su **Avanti** . Nella pagina successiva immettere *MatrixMultiply* nella casella **nome** per specificare un nome per il progetto e specificare il percorso del progetto, se necessario.
 
    ![Nuova app console](../../build/media/mathclient-project-name-2019.png "Nuova app console")
 
 1. Scegliere il pulsante **Crea** per creare il progetto client.
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per **i file di origine**, quindi scegliere **Aggiungi** > **nuovo elemento**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per **i file di origine** , quindi scegliere **Aggiungi** > **nuovo elemento** .
 
-1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **file di C++ (. cpp)**, immettere *MatrixMultiply. cpp* nella casella **nome** , quindi scegliere il pulsante **Aggiungi** .
+1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **file di C++ (. cpp)** , immettere *MatrixMultiply. cpp* nella casella **nome** , quindi scegliere il pulsante **Aggiungi** .
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Per creare un progetto in Visual Studio 2017 o 2015
 
-1. Nella barra dei menu di Visual Studio scegliere **file** > **nuovo** > **progetto**.
+1. Nella barra dei menu di Visual Studio scegliere **file** > **nuovo** > **progetto** .
 
-1. In **installato** nel riquadro modelli selezionare **Visual C++**.
+1. In **installato** nel riquadro modelli selezionare **Visual C++** .
 
-1. Selezionare **progetto vuoto**, immettere *MatrixMultiply* nella casella **nome** , quindi scegliere il pulsante **OK** .
+1. Selezionare **progetto vuoto** , immettere *MatrixMultiply* nella casella **nome** , quindi scegliere il pulsante **OK** .
 
-1. Fare clic su **Avanti**.
+1. Fare clic su **Avanti** .
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per **i file di origine**, quindi scegliere **Aggiungi** > **nuovo elemento**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per **i file di origine** , quindi scegliere **Aggiungi** > **nuovo elemento** .
 
-1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **file di C++ (. cpp)**, immettere *MatrixMultiply. cpp* nella casella **nome** , quindi scegliere il pulsante **Aggiungi** .
+1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **file di C++ (. cpp)** , immettere *MatrixMultiply. cpp* nella casella **nome** , quindi scegliere il pulsante **Aggiungi** .
 
 ::: moniker-end
 
@@ -109,7 +109,7 @@ Un oggetto è una matrice di 3 per 2 e B è una matrice 2 per 3. Il prodotto del
 
    L'algoritmo è un'implementazione semplice della definizione della moltiplicazione di matrici. Non viene utilizzato alcun algoritmo parallelo o con thread per ridurre il tempo di calcolo.
 
-1. Nella barra dei menu scegliere **file**  >  **Salva tutto**.
+1. Nella barra dei menu scegliere **file**  >  **Salva tutto** .
 
 1. Premere il tasto di scelta rapida **F5** per avviare il debug e verificare che l'output sia corretto.
 
@@ -171,7 +171,7 @@ Un oggetto è una matrice di 3 per 2 e B è una matrice 2 per 3. Il prodotto del
    }
    ```
 
-1. Premere il **Ctrl**tasto + di scelta rapida CTRL**F5** per avviare il debug e verificare che l'output sia corretto.
+1. Premere il **Ctrl** tasto + di scelta rapida CTRL **F5** per avviare il debug e verificare che l'output sia corretto.
 
 1. Premere la **barra spaziatrice** per uscire dall'applicazione.
 
@@ -316,7 +316,7 @@ Per implementare questo algoritmo, il codice:
    }
    ```
 
-1. Premere il **Ctrl**tasto + di scelta rapida CTRL**F5** per avviare il debug e verificare che l'output sia corretto.
+1. Premere il **Ctrl** tasto + di scelta rapida CTRL **F5** per avviare il debug e verificare che l'output sia corretto.
 
 1. Per uscire dall'applicazione, premere la barra **spaziatrice** .
 

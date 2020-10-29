@@ -10,37 +10,37 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 5e31a0d747e7186814cba3ae1c4cf243569d87a8
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: 8d0f53ed13143ed7ff5c507df73937a86c07b5b8
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725708"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924201"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (Impostazione dei flag di caricamento dipendente predefiniti)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 L'opzione **/DEPENDENTLOADFLAG** richiede Visual Studio 2017 o versione successiva.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Imposta i flag di caricamento predefiniti usati quando il sistema operativo risolve le importazioni collegate in modo statico di un modulo.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/DEPENDENTLOADFLAG**[ __:__ *load_flags*]
+> **/DEPENDENTLOADFLAG** [ __:__*load_flags* ]
 
 ### <a name="arguments"></a>Argomenti
 
 *load_flags*<br/>
-Valore integer facoltativo che specifica i flag di caricamento da applicare durante la risoluzione delle dipendenze di importazione collegate in modo statico del modulo. Il valore predefinito è 0. Per un elenco di valori di flag supportati, vedere le voci `LOAD_LIBRARY_SEARCH_*` in [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
+Valore integer facoltativo che specifica i flag di caricamento da applicare durante la risoluzione delle dipendenze di importazione collegate in modo statico del modulo. Il valore predefinito è 0. Per un elenco di valori di flag supportati, vedere le `LOAD_LIBRARY_SEARCH_*` voci in [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando il sistema operativo risolve le importazioni collegate in modo statico di un modulo, usa l' [ordine di ricerca predefinito](/windows/win32/dlls/dynamic-link-library-search-order). Usare l'opzione **/DEPENDENTLOADFLAG** per specificare un valore *load_flags* che modifichi il percorso di ricerca usato per risolvere queste importazioni. Nei sistemi operativi supportati, viene modificato l'ordine di ricerca della risoluzione dell'importazione statica, simile a quello di [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) quando si usa `LOAD_LIBRARY_SEARCH` parametri. Per informazioni sull'ordine di ricerca impostato da *load_flags*, vedere l' [ordine di ricerca usando i flag di LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
+Quando il sistema operativo risolve le importazioni collegate in modo statico di un modulo, usa l' [ordine di ricerca predefinito](/windows/win32/dlls/dynamic-link-library-search-order). Usare l'opzione **/DEPENDENTLOADFLAG** per specificare un valore *load_flags* che modifichi il percorso di ricerca usato per risolvere queste importazioni. Nei sistemi operativi supportati, viene modificato l'ordine di ricerca della risoluzione dell'importazione statica, simile a quello di [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) quando si usano i `LOAD_LIBRARY_SEARCH` parametri. Per informazioni sull'ordine di ricerca impostato da *load_flags* , vedere l' [ordine di ricerca usando i flag di LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
 
 Questo flag può essere usato per rendere più difficile l'uso di un vettore di attacco di una [dll](/windows/win32/dlls/dynamic-link-library-security) . Si consideri ad esempio un'app a cui è stata collegata in modo statico una DLL:
 
@@ -48,7 +48,7 @@ Questo flag può essere usato per rendere più difficile l'uso di un vettore di 
 
 - Se la DLL non è presente nelle directory Application,%Windows%\System32 e% Windows%, l'importazione della risoluzione passa alla directory corrente. Un utente malintenzionato potrebbe inseminare una DLL.
 
-In entrambi i casi, se si specifica l'opzione di collegamento `/DEPENDENTLOADFLAG:0x800` (il valore del flag `LOAD_LIBRARY_SEARCH_SYSTEM32`), il percorso di ricerca del modulo è limitato alla directory%Windows%\System32 Offre una protezione dagli attacchi fitosanitari sulle altre directory. Per altre informazioni, vedere [sicurezza della libreria a collegamento dinamico](/windows/win32/dlls/dynamic-link-library-security).
+In entrambi i casi, se si specifica l'opzione `/DEPENDENTLOADFLAG:0x800` di collegamento (il valore del flag `LOAD_LIBRARY_SEARCH_SYSTEM32` ), il percorso di ricerca del modulo è limitato alla directory%Windows%\System32 Offre una protezione dagli attacchi fitosanitari sulle altre directory. Per altre informazioni, vedere [sicurezza della libreria a collegamento dinamico](/windows/win32/dlls/dynamic-link-library-security).
 
 Per visualizzare il valore impostato dall'opzione **/DEPENDENTLOADFLAG** in qualsiasi dll, utilizzare il comando [dumpbin](dumpbin-reference.md) con l'opzione [/loadConfig](loadconfig.md) .
 
@@ -58,9 +58,9 @@ L'opzione **/DEPENDENTLOADFLAG** è una novità di Visual Studio 2017. Si applic
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare le **proprietà di configurazione** > **linker** > pagina delle proprietà **riga di comando** .
+1. Selezionare la **Configuration Properties** > pagina delle proprietà della riga di comando del **linker** proprietà di configurazione > **Command Line** .
 
-1. Immettere l'opzione in **Opzioni aggiuntive**.
+1. Immettere l'opzione in **Opzioni aggiuntive** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

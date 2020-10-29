@@ -2,22 +2,22 @@
 title: Proprietà generali (progetto makefile di Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd92d77069024456020a09b22de3596b8192c5af
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446157"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924658"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Proprietà di un progetto makefile (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Questo è un elenco parziale delle proprietà disponibili in un progetto makefile di Linux. Molte proprietà di progetto Makefile sono identiche alle proprietà del progetto Applicazione Console di Linux C++.
 
@@ -28,7 +28,7 @@ Questo è un elenco parziale delle proprietà disponibili in un progetto makefil
 | Directory di output | Specifica un percorso relativo della directory dei file di output. Può includere variabili di ambiente. |
 | Directory intermedia | Specifica un percorso relativo della directory dei file intermedi. Può includere variabili di ambiente. |
 | File del log di compilazione | Specifica il file del log di compilazione in cui scrivere quando è abilitata la funzione di log di compilazione. |
-| Tipo configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)**: libreria dinamica (so)<br>**Libreria statica (.a)** - Libreria statica (.a)Static library (.a)<br>**Applicazione (.out)**: applicazione (out)<br>**Makefile**: makefile<br> |
+| Tipo configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)** : libreria dinamica (so)<br>**Libreria statica (. a)** -libreria statica (. a)<br>**Applicazione (.out)** : applicazione (out)<br>**Makefile** : makefile<br> |
 | Computer di compilazione remota | Computer o dispositivo di destinazione da usare per operazioni di compilazione, distribuzione e debug in remoto. |
 | Directory radice di compilazione remota | Consente di specificare un percorso di una directory nel computer remoto o nel dispositivo. |
 | Directory del progetto di compilazione remota | Consente di specificare un percorso di una directory nel computer remoto o nel dispositivo per il progetto. |

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 802e51ec4246f5ee95e3d204290743ffbd03be69
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 9b3c870998ce4f9ca55fb5bcc23ba66a1af46558
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041393"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922437"
 ---
 # <a name="relog_descriptor-structure"></a>Struttura RELOG_DESCRIPTOR
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `RELOG_DESCRIPTOR` struttura viene utilizzata con le funzioni [RelogA](../functions/relog-a.md) e [RelogW](../functions/relog-w.md) . Viene descritto il modo in cui una traccia di Event Tracing for Windows (ETW) deve essere riregistrata.
 
@@ -52,7 +52,7 @@ typedef struct RELOG_DESCRIPTOR_TAG
 | `AnalysisContext` | Contesto fornito dall'utente passato come argomento a tutte le funzioni di callback specificate in `AnalysisCallbacks` |
 | `RelogContext` | Contesto fornito dall'utente passato come argomento a tutte le funzioni di callback specificate in `RelogCallbacks` |
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 La riregistrazione degli eventi ETW durante una sessione di riregistrazione viene controllata dall'utente tramite le funzioni di callback specificate in `RelogCallbacks` . Tuttavia, gli eventi ETW di sistema, ad esempio gli esempi di CPU, non vengono trasmessi a queste funzioni di callback. Utilizzare il `SystemEventsRetentionFlags` campo per controllare la registrazione degli eventi ETW di sistema.
 

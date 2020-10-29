@@ -1,6 +1,6 @@
 ---
-title: StopAndAnalyzeTracingSession (StopAndAnalyzeTracingSession)
-description: Informazioni di riferimento per la funzione StopAndAnalyzeTracingSession di Build Insights in C.
+title: StopAndAnalyzeTracingSession
+description: Riferimento alla funzione StopAndAnalyzeTracingSession di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c9bd4a092c22dfcdfb6d463b74207ec11ee6d64
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81a8ce43ecedfa51874508193637969411ae52d6
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323709"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922707"
 ---
-# <a name="stopandanalyzetracingsession"></a>StopAndAnalyzeTracingSession (StopAndAnalyzeTracingSession)
+# <a name="stopandanalyzetracingsession"></a>StopAndAnalyzeTracingSession
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `StopAndAnalyzeTracingSession` funzione interrompe una sessione di traccia in corso e salva la traccia risultante in un file temporaneo. Una sessione di analisi viene quindi avviata immediatamente utilizzando il file temporaneo come input. Gli eseguibili che chiamano questa funzione devono disporre di privilegi di amministratore.
+La `StopAndAnalyzeTracingSession` funzione arresta una sessione di traccia in corso e salva la traccia risultante in un file temporaneo. Una sessione di analisi viene quindi avviata immediatamente utilizzando il file temporaneo come input. Gli eseguibili che chiamano questa funzione devono avere privilegi di amministratore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,20 +47,20 @@ RESULT_CODE StopAndAnalyzeTracingSession(
 
 ### <a name="parameters"></a>Parametri
 
-*nomesessione*\
-Nome della sessione di traccia da arrestare. Utilizzare lo stesso nome di sessione passato a [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)o [StartTracingSessionW](start-tracing-session-w.md).
+*Nomesessione*\
+Nome della sessione di traccia da arrestare. Usare lo stesso nome di sessione di quello passato a [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)o [StartTracingSessionW](start-tracing-session-w.md).
 
-*numberOfAnalysisPass*\
-Numero di passaggi di analisi da eseguire sulla traccia. La traccia viene passata tramite il gruppo di analizzatori fornito una volta per ogni passaggio di analisi.
+*numberOfAnalysisPasses*\
+Numero di sessioni di analisi da eseguire nella traccia. La traccia viene passata al gruppo analizzatore specificato una volta per ogni sessione di analisi.
 
 *Statistiche*\
-Puntatore a un [oggetto TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopAndAnalyzeTracingSession`scrive le statistiche di raccolta di tracce in questo oggetto prima della restituzione.
+Puntatore a un oggetto [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopAndAnalyzeTracingSession` scrive le statistiche della raccolta di traccia in questo oggetto prima della restituzione.
 
-*analyzerGruppo*\
-Gruppo di analizzatori utilizzato per l'analisi. Chiamare [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) per creare un gruppo di analizzatori. Se si desidera utilizzare un gruppo di analizzatori dinamici ottenuto da [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), incapsularlo innanzitutto all'interno di un gruppo di analizzatori statici passandone l'indirizzo a `MakeStaticAnalyzerGroup`.
+*analyzerGroup*\
+Gruppo analizzatore utilizzato per l'analisi. Chiamare [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) per creare un gruppo analizzatore. Se si vuole usare un gruppo di analizzatori dinamici ottenuto da [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), incapsularlo prima all'interno di un gruppo di analizzatori statici passandone l'indirizzo a `MakeStaticAnalyzerGroup` .
 
 ### <a name="return-value"></a>Valore restituito
 
-Codice di risultato dall'enumerazione [RESULT_CODE.](../other-types/result-code-enum.md)
+Codice risultato dell'enumerazione [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

@@ -4,12 +4,12 @@ description: Procedura dettagliata in cui viene illustrato come creare da zero u
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), walkthrough: create a project'
-ms.openlocfilehash: 4f17cd8c4f5f48d8be5cd7cb25940db87029e111
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: b3d4e8881f926e80e95832a27f7a5106ce876265
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099732"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924339"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procedura dettagliata: utilizzo di MSBuild per la creazione di un progetto Visual C++
 
@@ -28,7 +28,7 @@ In questa procedura dettagliata vengono illustrate le attività seguenti:
 
 - Uso di MSBuild per personalizzare il progetto.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per completare questa procedura dettagliata, sono necessari i prerequisiti seguenti:
 
@@ -36,21 +36,21 @@ Per completare questa procedura dettagliata, sono necessari i prerequisiti segue
 
 - Conoscenza generale del sistema MSBuild.
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > [!NOTE]
 > La maggior parte delle istruzioni di compilazione di basso livello sono contenute *`.targets`* nei *`.props`* file e definiti nella cartella destinazioni predefinite, archiviati nella proprietà `$(VCTargetsPath)` . Sono disponibili file come *`Microsoft.Cpp.Common.props`* . Il percorso predefinito per questi file in Visual Studio 2015 e nelle versioni precedenti è in *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > La maggior parte delle istruzioni di compilazione di basso livello sono contenute *`.targets`* nei *`.props`* file e definiti nella cartella destinazioni predefinite, archiviati nella proprietà `$(VCTargetsPath)` . Sono disponibili file come *`Microsoft.Cpp.Common.props`* . Il percorso predefinito per questi file in Visual Studio 2017 è in *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . Visual Studio 2015 e versioni precedenti sono stati archiviati in *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 > [!NOTE]
 > La maggior parte delle istruzioni di compilazione di basso livello sono contenute *`.targets`* nei *`.props`* file e definiti nella cartella destinazioni predefinite, archiviati nella proprietà `$(VCTargetsPath)` . Sono disponibili file come *`Microsoft.Cpp.Common.props`* . Il percorso predefinito per questi file è in *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`* . L' `<version>` elemento Path è specifico per la versione di Visual Studio. È *`v160`* per Visual Studio 2019. Visual Studio 2017 ha archiviato questi file in *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . Visual Studio 2015 e versioni precedenti sono stati archiviati in *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .

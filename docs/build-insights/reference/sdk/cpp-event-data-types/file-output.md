@@ -1,6 +1,6 @@
 ---
 title: Classe FileOutput
-description: Informazioni di riferimento per la classe FileOutput di Build Insights.
+description: Riferimento alla classe FileOutput di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 37823da8a4aaac0ce4094583b8aee8ac1eb04aaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65e23715d8ac47a8653215e8bd3ee7a43bbe80a3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324808"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923250"
 ---
 # <a name="fileoutput-class"></a>Classe FileOutput
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `FileOutput` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilizzarlo per trovare una corrispondenza con un evento [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)o [OBJ_OUTPUT](../event-table.md#obj-output) .
+La `FileOutput` classe viene utilizzata con le funzioni [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilizzarlo per trovare la corrispondenza con un evento [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)o [OBJ_OUTPUT](../event-table.md#obj-output) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -50,9 +50,9 @@ public:
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-Insieme ai membri ereditati dalla classe `FileOutput` base [SimpleEvent](simple-event.md) , la classe contiene i membri seguenti:
+Insieme ai membri ereditati dalla relativa classe base [SimpleEvent](simple-event.md) , la `FileOutput` classe contiene i membri seguenti:
 
 ### <a name="constructors"></a>Costruttori
 
@@ -60,10 +60,10 @@ Insieme ai membri ereditati dalla classe `FileOutput` base [SimpleEvent](simple-
 
 ### <a name="functions"></a>Funzioni
 
-[Path](#path)
-[Tipo di](#type) percorso
+[Percorso](#path) 
+ [Tipo](#type) di
 
-## <a name="fileoutput"></a><a name="file-output"></a>FileOutput
+## <a name="fileoutput"></a><a name="file-output"></a> FileOutput
 
 ```cpp
 FileOutput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametri
 
-*Evento*\
-Evento [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)o [OBJ_OUTPUT](../event-table.md#obj-output) .
+*evento*\
+Un evento [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)o [OBJ_OUTPUT](../event-table.md#obj-output) .
 
-## <a name="path"></a><a name="path"></a>Percorso
+## <a name="path"></a><a name="path"></a> Path
 
 ```cpp
 const wchar_t Path() const;

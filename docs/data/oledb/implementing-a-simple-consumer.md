@@ -4,22 +4,22 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2d59989f8afd180b39153eed1ad0a20435aad9d4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508969"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923903"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Gli argomenti seguenti illustrano come modificare i file creati dalla **Creazione guidata applicazione MFC** e dalla **Creazione guidata consumer OLE DB ATL** per creare un consumer semplice. L'esempio è composto dalle parti seguenti:
 

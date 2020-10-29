@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ae476c402c3ea0cad558ce41a979b4233e0f1dd3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 08627b6af601f6894aa228683ffb51232b015310
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224123"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922815"
 ---
 # <a name="matcheventstack"></a>MatchEventStack
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `MatchEventStack` funzione viene utilizzata per trovare una corrispondenza tra uno stack di eventi e una gerarchia di eventi specifica. Le gerarchie corrispondenti vengono trasmesse a un gestore per un'ulteriore elaborazione. Per ulteriori informazioni su eventi, stack di eventi e gerarchie, vedere [tabella eventi](../event-table.md).
 
@@ -56,10 +56,10 @@ Tipo che supporta `operator()` . Per ulteriori informazioni sugli argomenti che 
 Tipi degli argomenti aggiuntivi passati a `MatchEventStack` .
 
 *eventStack*\
-Stack di eventi da confrontare con la gerarchia dei tipi di evento descritta da *TEvent* e *TEvents*.
+Stack di eventi da confrontare con la gerarchia dei tipi di evento descritta da *TEvent* e *TEvents* .
 
 *Callable*\
-Quando si corrisponde correttamente allo stack di eventi con la gerarchia dei tipi di evento descritta da *TEvent* e *TEvents*, `MatchEventStack` richiama *Callable*. Passa a un argomento *richiamabile* un r-value per ogni tipo nella gerarchia di eventi. Il pacchetto di parametri *OutArgs* è stato perfezionato nei parametri rimanenti di *Callable*.
+Quando si corrisponde correttamente allo stack di eventi con la gerarchia dei tipi di evento descritta da *TEvent* e *TEvents* , `MatchEventStack` richiama *Callable* . Passa a un argomento *richiamabile* un r-value per ogni tipo nella gerarchia di eventi. Il pacchetto di parametri *OutArgs* è stato perfezionato nei parametri rimanenti di *Callable* .
 
 *Argomenti di*\
 Argomenti che vengono completati in modo perfetto per essere *richiamabili* insieme al tipo di evento corrispondente.
@@ -70,9 +70,9 @@ Argomenti che vengono completati in modo perfetto per essere *richiamabili* insi
 
 ## <a name="remarks"></a>Osservazioni
 
-L'ultimo evento in *eventStack* viene sempre associato all'ultima voce dell'elenco concatenato \[ *TEvent*, *TEvents...* \] Type. Tutte le altre voci *TEvent* e *TEvents* possono corrispondere a qualsiasi posizione in *eventStack* tranne l'ultima, purché siano nello stesso ordine.
+L'ultimo evento in *eventStack* viene sempre associato all'ultima voce dell'elenco concatenato \[ *TEvent* , *TEvents...* \] Type. Tutte le altre voci *TEvent* e *TEvents* possono corrispondere a qualsiasi posizione in *eventStack* tranne l'ultima, purché siano nello stesso ordine.
 
-I tipi di evento da usare per i parametri *TEvent* e *TEvents* sono selezionati da un elenco di *classi di acquisizione*. Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
+I tipi di evento da usare per i parametri *TEvent* e *TEvents* sono selezionati da un elenco di *classi di acquisizione* . Per un elenco di eventi e le classi di acquisizione che è possibile usare per trovare una corrispondenza, vedere [tabella eventi](../event-table.md).
 
 ## <a name="example"></a>Esempio
 

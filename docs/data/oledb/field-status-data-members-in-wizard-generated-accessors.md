@@ -5,26 +5,26 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 61ee867f664b6b0d885e35f6d58840b37ce322b9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 476c91f55071f6d1c7f243257273a32798813cae
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210912"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924637"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Quando si usa la **Creazione guidata consumer OLE DB ATL** per creare un consumer, la procedura guidata genera un membro dati della classe di record utente per ogni campo specificato nel mapping delle colonne. Ogni membro dati è di tipo `DWORD` e contiene un valore di stato corrispondente al relativo campo.
 
-Per un membro dati *m_OwnerID*, ad esempio, la procedura guidata genera un membro dati aggiuntivo per lo stato del campo (*dwOwnerIDStatus*) e un altro per la lunghezza del campo (*dwOwnerIDLength*). Viene inoltre generato un mapping delle colonne con voci COLUMN_ENTRY_LENGTH_STATUS.
+Per un membro dati *m_OwnerID* , ad esempio, la procedura guidata genera un membro dati aggiuntivo per lo stato del campo ( *dwOwnerIDStatus* ) e un altro per la lunghezza del campo ( *dwOwnerIDLength* ). Viene inoltre generato un mapping delle colonne con voci COLUMN_ENTRY_LENGTH_STATUS.
 
 Questo comportamento è illustrato nel codice seguente:
 

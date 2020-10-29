@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: db0a4ccbab142d01f0506b77237dbb09d43a1cf0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500284"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924365"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Panoramica dello sviluppo con C++ in Visual Studio
 
-Microsoft C++ (MSVC) fa parte dell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di Visual Studio e condivide molti strumenti e finestre con altri linguaggi. Molti di questi, tra cui **Esplora soluzioni**, l'editor di codice e il debugger, sono documentati nell'articolo [IDE di Visual Studio](/visualstudio/get-started/visual-studio-ide). Spesso una finestra o uno strumento condiviso include un set di funzionalità leggermente diverso per C++ rispetto ad altri linguaggi. Alcuni strumenti o finestre sono disponibili solo nelle edizioni Visual Studio Professional o Visual Studio Enterprise.
+Microsoft C++ (MSVC) fa parte dell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di Visual Studio e condivide molti strumenti e finestre con altri linguaggi. Molti di questi, tra cui **Esplora soluzioni** , l'editor di codice e il debugger, sono documentati nell'articolo [IDE di Visual Studio](/visualstudio/get-started/visual-studio-ide). Spesso una finestra o uno strumento condiviso include un set di funzionalità leggermente diverso per C++ rispetto ad altri linguaggi. Alcuni strumenti o finestre sono disponibili solo nelle edizioni Visual Studio Professional o Visual Studio Enterprise.
 
 Oltre agli strumenti condivisi nell'IDE di Visual Studio, MSVC include diversi strumenti specifici per lo sviluppo di codice nativo. Tali strumenti sono elencati in questo articolo. Per un elenco degli strumenti disponibili in ogni edizione di Visual Studio, vedere [Strumenti e funzionalità C++ nelle versioni di Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
@@ -27,13 +27,13 @@ Visual Studio offre il supporto per qualsiasi sistema di progetto o strumento di
 
 - **MSBuild** è il sistema di progetto nativo di Visual Studio. Quando si seleziona **file**  >  **nuovo**  >  **progetto** dal menu principale, vengono visualizzati molti tipi di modelli di *progetto* MSBuild che consentono di iniziare rapidamente a sviluppare tipi diversi di applicazioni C++.
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
    ![Nuovi modelli di progetto](../build/media/mathclient-project-name-2019.png "Finestra di dialogo nuovo progetto di Visual Studio 2019")
 
    ::: moniker-end
 
-   ::: moniker range="<=vs-2017"
+   ::: moniker range="<=msvc-150"
 
    ![Modelli di progetto](media/vs2017-new-project.png "Finestra di dialogo nuovo progetto di Visual Studio 2017")
 
@@ -43,19 +43,19 @@ Visual Studio offre il supporto per qualsiasi sistema di progetto o strumento di
 
 - **CMake** è un sistema di compilazione multipiattaforma integrato nell'IDE di Visual Studio quando si installa il carico di lavoro sviluppo di applicazioni desktop con C++. È possibile usare il modello di progetto CMake per i nuovi progetti oppure aprire semplicemente una cartella con un file CMakeLists.txt. Per altre informazioni, vedere [Progetti CMake in Visual Studio](../build/cmake-projects-in-visual-studio.md).
 
-- Altri sistemi di compilazione C++, inclusa una raccolta separata di file, sono supportati tramite la funzionalità **Apri cartella**. Creare semplici file JSON per richiamare il programma di compilazione e configurare le sessioni di debug. Per altre informazioni, vedere [Progetti Apri cartella per C++](../build/open-folder-projects-cpp.md).
+- Altri sistemi di compilazione C++, inclusa una raccolta separata di file, sono supportati tramite la funzionalità **Apri cartella** . Creare semplici file JSON per richiamare il programma di compilazione e configurare le sessioni di debug. Per altre informazioni, vedere [Progetti Apri cartella per C++](../build/open-folder-projects-cpp.md).
 
 ## <a name="add-to-source-control"></a>Aggiungi al controllo del codice sorgente
 
-Il controllo del codice sorgente consente di coordinare il lavoro tra più sviluppatori, di isolare i lavori in corso dal codice di produzione e di eseguire il backup del codice sorgente. Visual Studio supporta Git e il [controllo della versione di Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) tramite la finestra **Team Explorer**.
+Il controllo del codice sorgente consente di coordinare il lavoro tra più sviluppatori, di isolare i lavori in corso dal codice di produzione e di eseguire il backup del codice sorgente. Visual Studio supporta Git e il [controllo della versione di Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) tramite la finestra **Team Explorer** .
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Screenshot della finestra di Team Explorer in Visual Studio 2019.](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Screenshot della finestra di Team Explorer in Visual Studio 2017.](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
 
@@ -79,7 +79,7 @@ Per altre informazioni sulla creazione di un'interfaccia utente per un'applicazi
 
 ## <a name="write-code"></a>Scrittura di codice
 
-Dopo aver creato un progetto, tutti i file di progetto vengono visualizzati nella finestra **Esplora soluzioni**. Una *soluzione* è un contenitore logico per uno o più progetti correlati. Quando si fa clic su un file con estensione h o cpp in **Esplora soluzioni**, il file viene aperto nell'editor di codice.
+Dopo aver creato un progetto, tutti i file di progetto vengono visualizzati nella finestra **Esplora soluzioni** . Una *soluzione* è un contenitore logico per uno o più progetti correlati. Quando si fa clic su un file con estensione h o cpp in **Esplora soluzioni** , il file viene aperto nell'editor di codice.
 
 ![Editor Esplora soluzioni e codice](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 Esplora soluzioni e l'editor di codice")
 
@@ -87,11 +87,11 @@ L'editor di codice è un elaboratore di testo specializzato per il codice sorgen
 
 ## <a name="add-and-edit-resources"></a>Aggiungere e modificare risorse
 
-Un programma o una DLL di Windows include in genere alcune *risorse*, ad esempio finestre di dialogo, icone, immagini, stringhe localizzabili, schermate iniziali, stringhe di connessione del database o dati arbitrari. Visual Studio include strumenti per l'aggiunta e la modifica delle risorse. Per altre informazioni, vedere [uso dei file di risorse](../windows/working-with-resource-files.md).
+Un programma o una DLL di Windows include in genere alcune *risorse* , ad esempio finestre di dialogo, icone, immagini, stringhe localizzabili, schermate iniziali, stringhe di connessione del database o dati arbitrari. Visual Studio include strumenti per l'aggiunta e la modifica delle risorse. Per altre informazioni, vedere [uso dei file di risorse](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Compilazione (compilare e collegare)
 
-Scegliere **Compila**Compila  >  **soluzione** dalla barra dei menu oppure premere la combinazione di tasti **CTRL + MAIUSC + B** per compilare e collegare un progetto. Gli errori e gli avvisi di compilazione vengono segnalati nella Elenco errori (**CTRL + \\ , E**). La finestra di **output** (**ALT + 2**) Mostra le informazioni sul processo di compilazione.
+Scegliere **Compila** Compila  >  **soluzione** dalla barra dei menu oppure premere la combinazione di tasti **CTRL + MAIUSC + B** per compilare e collegare un progetto. Gli errori e gli avvisi di compilazione vengono segnalati nella Elenco errori ( **CTRL + \\ , E** ). La finestra di **output** ( **ALT + 2** ) Mostra le informazioni sul processo di compilazione.
 
 ![Finestra di output e Elenco errori](media/vs2017-output-error-list.png "Finestra di output di Visual Studio 2017 e Elenco errori")
 
@@ -101,7 +101,7 @@ Per altre informazioni sulla configurazione delle build, vedere [Uso delle propr
 
 ## <a name="debug"></a>Debug
 
-È possibile avviare il debug premendo **F5**. L'esecuzione viene sospesa in corrispondenza di tutti i punti di interruzione impostati (premendo **F9**). È anche possibile esaminare il codice una riga alla volta (**F10**), visualizzare i valori delle variabili o dei registri e anche in alcuni casi apportare modifiche al codice e continuare a eseguire il debug senza ricompilare. La figura seguente mostra una sessione di debug in cui l'esecuzione viene arrestata in un punto di interruzione. I valori dei membri della struttura dati sono visibili nella **finestra Espressione di controllo**.
+È possibile avviare il debug premendo **F5** . L'esecuzione viene sospesa in corrispondenza di tutti i punti di interruzione impostati (premendo **F9** ). È anche possibile esaminare il codice una riga alla volta ( **F10** ), visualizzare i valori delle variabili o dei registri e anche in alcuni casi apportare modifiche al codice e continuare a eseguire il debug senza ricompilare. La figura seguente mostra una sessione di debug in cui l'esecuzione viene arrestata in un punto di interruzione. I valori dei membri della struttura dati sono visibili nella **finestra Espressione di controllo** .
 
 ![Sessione di debug](media/vs2017-debug-watch.png "Sessione di debug di Visual Studio 2017")
 
@@ -109,13 +109,13 @@ Per altre informazioni, vedere [Debugging in Visual Studio](/visualstudio/debugg
 
 ## <a name="test"></a>Test
 
-Visual Studio include il framework di unit test Microsoft per C++, nonché il supporto per Boost.Test, Google Test e CTest. Eseguire i test dalla finestra **Esplora test**:
+Visual Studio include il framework di unit test Microsoft per C++, nonché il supporto per Boost.Test, Google Test e CTest. Eseguire i test dalla finestra **Esplora test** :
 
 ![Esplora test](media/cpp-test-explorer-passed.png "Esplora test di Visual Studio 2017")
 
 Per altre informazioni, vedere [Verifying Code by Using Unit Tests ](/visualstudio/test/unit-test-your-code) (Verifica del codice tramite unit test) e [Scrivere unit test per C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-## <a name="analyze"></a>Analizzare
+## <a name="analyze"></a>Analisi
 
 Visual Studio include strumenti statici di analisi del codice in grado di rilevare potenziali problemi nel codice sorgente. Questi strumenti includono un'implementazione degli strumenti di controllo delle regole [Linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Per altre informazioni, vedere [Code analysis for C/C++ overview](../code-quality/code-analysis-for-c-cpp-overview.md) (Panoramica dell'analisi codice per C/C++).
 

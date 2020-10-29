@@ -1,6 +1,6 @@
 ---
 title: Classe IRelogger
-description: Informazioni di riferimento per la classe IRelogger dell'SDK di Build Insights in C.
+description: Riferimento alla classe IRelogger di C++ Build Insights SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 146377b2b44df43ed4b2f749efd9fb614a2a09c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e504ece95529f7279650062145f3ac0914449c98
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329151"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922513"
 ---
 # <a name="irelogger-class"></a>Classe IRelogger
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-L'SDK di approfondimenti per la compilazione in Cè è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione di queste versioni, impostare il controllo del selettore di versione di Visual Studio per questo articolo su Visual Studio 2017 o Visual Studio 2019.To see the documentation for these versions, set the Visual Studio **Version** selector control for this article to Visual Studio 2017 or Visual Studio 2019. Si trova nella parte superiore del sommario in questa pagina.
+C++ Build Insights SDK è compatibile con Visual Studio 2017 e versioni successive. Per visualizzare la documentazione relativa a queste versioni, impostare il controllo selettore di **versione** di Visual Studio per questo articolo su visual studio 2017 o visual studio 2019. Si trova nella parte superiore del sommario in questa pagina.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `IRelogger` classe fornisce un'interfaccia per la nuova registrazione di una traccia ETW (Event Tracing for Windows). Viene utilizzato con le funzioni [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md) e [MakeStaticReloggerGroup.](../functions/make-static-analyzer-group.md) Utilizzare `IRelogger` come classe base per creare un relogger personalizzato che può far parte di un gruppo relogger.
+La `IRelogger` classe fornisce un'interfaccia per la registrazione di una traccia di Event Tracing for Windows (ETW). Viene usato con le funzioni [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md) e [MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md) . Usare `IRelogger` come classe di base per creare il proprio relogger che può far parte di un gruppo di relogger.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -54,36 +54,36 @@ public:
 
 ## <a name="remarks"></a>Osservazioni
 
-Il valore restituito predefinito per tutte le `AnalysisControl::CONTINUE`funzioni che non vengono sostituite è . Per ulteriori informazioni, vedere [AnalysisControl](analysis-control-enum-class.md).
+Il valore restituito predefinito per tutte le funzioni di cui non è stato eseguito l'override è `AnalysisControl::CONTINUE` . Per ulteriori informazioni, vedere [AnalysisControl](analysis-control-enum-class.md).
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="destructor"></a>Distruttore
 
-[IRelogger](#irelogger-destructor)
+[~ IRelogger](#irelogger-destructor)
 
 ### <a name="functions"></a>Funzioni
 
-[OnBeginRelogging (Informazioni in base alle informazioni in cui è in](#on-begin-relogging)\
+[OnBeginRelogging](#on-begin-relogging)\
 [OnBeginReloggingPass](#on-begin-relogging-pass)\
-[OnEndRelogging (Informazioni in base alla data in stato di in](#on-end-relogging)\
+[OnEndRelogging](#on-end-relogging)\
 [OnEndReloggingPass](#on-end-relogging-pass)\
-[OnSimpleEvent (evento SuSimpleEvent)](#on-simple-event)\
+[OnSimpleEvent](#on-simple-event)\
 [OnStartActivity](#on-start-activity)\
 [OnStopActivity](#on-stop-activity)\
 [OnTraceInfo](#on-trace-info)
 
-## <a name="irelogger"></a><a name="irelogger-destructor"></a>IRelogger
+## <a name="irelogger"></a><a name="irelogger-destructor"></a> ~ IRelogger
 
-Distrugge la classe IRelogger.
+Elimina definitivamente la classe IRelogger.
 
 ```cpp
 virtual ~IRelogger();
 ```
 
-## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>OnBeginRelogging (Informazioni in base alle informazioni in cui è in
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a> OnBeginRelogging
 
-Questa funzione viene chiamata prima dell'inizio del passaggio di riregistrazione.
+Questa funzione viene chiamata prima dell'inizio del passaggio di registrazione.
 
 ```cpp
 virtual AnalysisControl OnBeginRelogging();
@@ -91,11 +91,11 @@ virtual AnalysisControl OnBeginRelogging();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
-## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a> OnBeginReloggingPass
 
-Questa funzione viene chiamata all'inizio del passaggio di riregistrazione.
+Questa funzione viene chiamata all'inizio del passaggio di registrazione.
 
 ```cpp
 virtual AnalysisControl OnBeginReloggingPass();
@@ -103,11 +103,11 @@ virtual AnalysisControl OnBeginReloggingPass();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
-## <a name="onendrelogging"></a><a name="on-end-relogging"></a>OnEndRelogging (Informazioni in base alla data in stato di in
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a> OnEndRelogging
 
-Questa funzione viene chiamata al termine del passaggio di riregistrazione.
+Questa funzione viene chiamata al termine del passaggio di registrazione.
 
 ```cpp
 virtual AnalysisControl OnEndRelogging();
@@ -115,11 +115,11 @@ virtual AnalysisControl OnEndRelogging();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
-## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>OnEndReloggingPass
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a> OnEndReloggingPass
 
-Questa funzione viene chiamata alla fine del passaggio di riregistrazione.
+Questa funzione viene chiamata alla fine del passaggio di registrazione.
 
 ```cpp
 virtual AnalysisControl OnEndReloggingPass();
@@ -127,45 +127,45 @@ virtual AnalysisControl OnEndReloggingPass();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
-## <a name="onsimpleevent"></a><a name="on-simple-event"></a>OnSimpleEvent (evento SuSimpleEvent)
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a> OnSimpleEvent
 
 ```cpp
 virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 ```
 
-Questa funzione viene chiamata durante l'elaborazione di un evento semplice.
+Questa funzione viene chiamata quando viene elaborato un evento semplice.
 
 ### <a name="parameters"></a>Parametri
 
-*eventStack (impilare)*\
-Stack di eventi per questo evento semplice. Per ulteriori informazioni sugli stack di eventi, vedere [Eventi](../event-table.md).
+*eventStack*\
+Stack di eventi per questo semplice evento. Per ulteriori informazioni sugli stack di eventi, vedere [eventi](../event-table.md).
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
-## <a name="onstartactivity"></a><a name="on-start-activity"></a>OnStartActivity
+## <a name="onstartactivity"></a><a name="on-start-activity"></a> OnStartActivity
 
 ```cpp
 virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 ```
 
-Questa funzione viene chiamata durante l'elaborazione di un evento di avvio dell'attività.
+Questa funzione viene chiamata quando viene elaborato un evento di avvio dell'attività.
 
 ### <a name="parameters"></a>Parametri
 
-*eventStack (impilare)*\
-Stack di eventi per questo evento di avvio dell'attività. Per ulteriori informazioni sugli stack di eventi, vedere [Eventi](../event-table.md).
+*eventStack*\
+Stack di eventi per questo evento di avvio dell'attività. Per ulteriori informazioni sugli stack di eventi, vedere [eventi](../event-table.md).
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
-## <a name="onstopactivity"></a><a name="on-stop-activity"></a>OnStopActivity
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a> OnStopActivity
 
-Questa funzione viene chiamata durante l'elaborazione di un evento di interruzione di attività.
+Questa funzione viene chiamata quando viene elaborato un evento di arresto dell'attività.
 
 ```cpp
 virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
@@ -173,28 +173,28 @@ virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 
 ### <a name="parameters"></a>Parametri
 
-*eventStack (impilare)*\
-Lo stack di eventi per questo evento di interruzione dell'attività. Per ulteriori informazioni sugli stack di eventi, vedere [Eventi](../event-table.md).
+*eventStack*\
+Stack di eventi per questo evento di arresto dell'attività. Per ulteriori informazioni sugli stack di eventi, vedere [eventi](../event-table.md).
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
-## <a name="ontraceinfo"></a><a name="on-trace-info"></a>OnTraceInfo
+## <a name="ontraceinfo"></a><a name="on-trace-info"></a> OnTraceInfo
 
 ```cpp
 virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 ```
 
-Questa funzione viene chiamata una volta all'inizio di ogni passaggio di analisi o relogging.
+Questa funzione viene chiamata una volta all'inizio di ogni analisi o passaggio di registrazione.
 
 ### <a name="parameters"></a>Parametri
 
-*Traceinfo*\
-Oggetto [TraceInfo](../cpp-event-data-types/trace-info.md) oggetto che contiene proprietà utili sulla traccia utilizzata per l'utente.
+*traceInfo*\
+Oggetto [TraceInfo](../cpp-event-data-types/trace-info.md) che contiene le proprietà utili relative alla traccia utilizzata.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa deve accadere successivamente.
+Codice [AnalysisControl](analysis-control-enum-class.md) che descrive cosa dovrebbe avvenire successivamente.
 
 ::: moniker-end
