@@ -1,6 +1,7 @@
 ---
 title: _configthreadlocale
-ms.date: 4/2/2020
+ms.date: 10/29/2020
+description: Descrive la funzione di runtime di Microsoft C `_configthreadlocale`  utilizzata per configurare le opzioni delle impostazioni locali per thread.
 api_name:
 - _configthreadlocale
 - _o__configthreadlocale
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 26bcfe0d93a8c2b1a14e6afc0d413a5c7e4a7f6e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ffea30f8547088d6117ee980cdf28f017e87e83
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917312"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102324"
 ---
-# <a name="_configthreadlocale"></a>_configthreadlocale
+# `_configthreadlocale`
 
 Configura le opzioni delle impostazioni locali per thread.
 
@@ -50,28 +51,28 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ### <a name="parameters"></a>Parametri
 
-*per_thread_locale_type*<br/>
+*`per_thread_locale_type`*\
 Opzione da impostare. Una delle opzioni elencate nella tabella seguente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Stato delle impostazioni locali per thread precedente (**_DISABLE_PER_THREAD_LOCALE** o **_ENABLE_PER_THREAD_LOCALE**) oppure-1 in caso di errore.
+Stato delle impostazioni locali per thread precedente ( **`_DISABLE_PER_THREAD_LOCALE`** o **`_ENABLE_PER_THREAD_LOCALE`** ) oppure-1 in caso di errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_configurethreadlocale** viene utilizzata per controllare l'utilizzo di impostazioni locali specifiche del thread. Usare una di queste opzioni di *per_thread_locale_type* per specificare o determinare lo stato delle impostazioni locali per thread:
+La **`_configthreadlocale`** funzione viene utilizzata per controllare l'utilizzo di impostazioni locali specifiche del thread. Usare una di queste *`per_thread_locale_type`* Opzioni per specificare o determinare lo stato delle impostazioni locali per thread:
 
 | Opzione | Descrizione |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | Fare in modo che il thread corrente usi impostazioni locali specifiche per thread. Le chiamate successive a **setlocale** in questo thread influiscono solo sulle impostazioni locali del thread. |
-| **_DISABLE_PER_THREAD_LOCALE** | Fare in modo che il thread corrente usi le impostazioni locali globali. Le chiamate successive a **setlocale** in questo thread influiscono su altri thread che usano le impostazioni locali globali. |
+| **`_ENABLE_PER_THREAD_LOCALE`** | Fare in modo che il thread corrente usi impostazioni locali specifiche per thread. Le chiamate successive a **`setlocale`** in questo thread influiscono solo sulle impostazioni locali del thread. |
+| **`_DISABLE_PER_THREAD_LOCALE`** | Fare in modo che il thread corrente usi le impostazioni locali globali. Le chiamate successive a **`setlocale`** in questo thread influiscono su altri thread che usano le impostazioni locali globali. |
 | **0** | Recupera l'impostazione corrente per questo particolare thread. |
 
-Queste funzioni influiscono sul comportamento di **setlocale**, **_tsetlocale**, **_wsetlocale**e **_setmbcp**. Quando le impostazioni locali per thread sono disabilitate, qualsiasi chiamata successiva a **setlocale** o **_wsetlocale** modifica le impostazioni locali di tutti i thread che utilizzano le impostazioni locali globali. Quando le impostazioni locali per thread sono abilitate **, setlocale** o **_wsetlocale** influiscono solo sulle impostazioni locali del thread corrente.
+Queste funzioni influiscono sul comportamento di **`setlocale`** ,, **`_tsetlocale`** **`_wsetlocale`** e **`_setmbcp`** . Quando le impostazioni locali per thread sono disabilitate, qualsiasi chiamata successiva a **`setlocale`** o **`_wsetlocale`** modifica le impostazioni locali di tutti i thread che utilizzano le impostazioni locali globali. Quando le impostazioni locali per thread sono abilitate **`setlocale`** o **`_wsetlocale`** influiscono solo sulle impostazioni locali del thread corrente.
 
-Se si usa **_configurethreadlocale** per abilitare le impostazioni locali per thread, è **consigliabile chiamare setlocale** o **_wsetlocale** per impostare le impostazioni locali preferite in tale thread subito dopo.
+Se si utilizza **`_configthreadlocale`** per abilitare le impostazioni locali per thread, è consigliabile chiamare **`setlocale`** o **`_wsetlocale`** per impostare le impostazioni locali preferite in tale thread subito dopo.
 
-Se *per_thread_locale_type* non è uno dei valori elencati nella tabella, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce-1.
+Se *`per_thread_locale_type`* non è uno dei valori elencati nella tabella, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **`errno`** su **`EINVAL`** e restituisce-1.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -79,7 +80,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_configthreadlocale**|\<locale.h>|
+|**`_configthreadlocale`**|\`<impostazioni locali. h>'|
 
 ## <a name="example"></a>Esempio
 
@@ -192,7 +193,7 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>Vedere anche
 
-[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Multithreading e impostazioni locali](../../parallel/multithreading-and-locales.md)<br/>
+[`setlocale`, `_wsetlocale`](setlocale-wsetlocale.md)\
+[`_beginthread`, `_beginthreadex`](beginthread-beginthreadex.md)\
+[Locale](../../c-runtime-library/locale.md)\
+[Multithreading e impostazioni locali](../../parallel/multithreading-and-locales.md)
