@@ -16,7 +16,7 @@ ms.locfileid: "93238486"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
-Le *parole chiave* sono parole con un significato speciale per il compilatore C. Nelle fasi 7 e 8 della traduzione un identificatore non può avere la stessa ortografia e la stessa combinazione di maiuscole e minuscole della parola chiave C. Per altre informazioni, vedere [fasi di conversione](../preprocessor/phases-of-translation.md) in *riferimenti al preprocessore* . Per ulteriori informazioni sugli identificatori, vedere [identificatori](../c-language/c-identifiers.md).
+Le *parole chiave* sono parole con un significato speciale per il compilatore C. Nelle fasi 7 e 8 della traduzione un identificatore non può avere la stessa ortografia e la stessa combinazione di maiuscole e minuscole della parola chiave C. Per altre informazioni, vedere [fasi di conversione](../preprocessor/phases-of-translation.md) in *riferimenti al preprocessore*. Per ulteriori informazioni sugli identificatori, vedere [identificatori](../c-language/c-identifiers.md).
 
 ## <a name="standard-c-keywords"></a>Parole chiave C standard
 

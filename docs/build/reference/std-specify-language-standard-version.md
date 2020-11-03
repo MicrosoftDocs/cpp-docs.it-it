@@ -107,7 +107,7 @@ Il compilatore non supporta le funzionalità facoltative di ISO C11. Diverse fun
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare **Proprietà di configurazione** , **C/C++** , **Linguaggio** .
+1. Selezionare **Proprietà di configurazione** , **C/C++** , **Linguaggio**.
 
 1. Nello standard del linguaggio **C++** (o per c, **standard del linguaggio c** ) scegliere lo standard del linguaggio da supportare dal controllo a discesa, quindi scegliere **OK** o **applica** per salvare le modifiche.
 

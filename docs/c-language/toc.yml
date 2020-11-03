@@ -481,23 +481,7 @@
         - name: Definizioni e convenzioni
           href: ../c-language/definitions-and-conventions.md
         - name: Grammatica lessicale
-          items:
-            - name: Grammatica lessicale
-              href: ../c-language/lexical-grammar.md
-            - name: Riepilogo dei token
-              href: ../c-language/summary-of-tokens.md
-            - name: Riepilogo delle parole chiave
-              href: ../c-language/summary-of-keywords.md
-            - name: Riepilogo degli identificatori
-              href: ../c-language/summary-of-identifiers.md
-            - name: Riepilogo delle costanti
-              href: ../c-language/summary-of-constants.md
-            - name: Riepilogo dei valori letterali stringa
-              href: ../c-language/summary-of-string-literals.md
-            - name: Operatori (C)
-              href: ../c-language/operators-c.md
-            - name: Segni di punteggiatura
-              href: ../c-language/punctuators.md
+          href: ../c-language/lexical-grammar.md
         - name: Grammatica di struttura della frase
           items:
             - name: Grammatica di struttura della frase
