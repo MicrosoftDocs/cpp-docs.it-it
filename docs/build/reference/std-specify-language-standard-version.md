@@ -1,7 +1,7 @@
 ---
 title: /std (specifica la versione standard del linguaggio)
 description: L'opzione del compilatore MSVC/STD specifica lo standard del linguaggio C o C++ supportato dal compilatore.
-ms.date: 09/11/2020
+ms.date: 10/29/2020
 f1_keywords:
 - /std
 - -std
@@ -11,12 +11,12 @@ f1_keywords:
 - /std:c17
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 82f37377dc223bfe3f5e578e1c7f390da91752a1
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 208789071ff028107d3c7311c3b5c6cf3eea7c1d
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075829"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238473"
 ---
 # <a name="std-specify-language-standard-version"></a>`/std` (Specifica la versione standard del linguaggio)
 
@@ -77,13 +77,13 @@ A partire da Visual Studio 2019 versione 16,8, è possibile specificare **`/std:
 
 Quando si specifica **`/std:c11`** o **`/std:c17`** , MSVC supporta tutte le funzionalità richieste di C11 e C17. Le opzioni del compilatore abilitano il supporto per queste funzionalità:
 
-- **`_Pragma`**
+- [`_Pragma`](../../preprocessor/pragma-directives-and-the-pragma-keyword.md#the-_pragma-preprocessing-operator-c99-c11)
 
 - **`restrict`**
 
 - **`_Noreturn`** e \<stdnoreturn.h>
 
-- **`_Alignas`**, **`_Alignof`** e \<stdalign.h>
+- **`_Alignas`** , **`_Alignof`** e \<stdalign.h>
 
 - **`_Generic`** e \<tgmath.h>
 
@@ -107,11 +107,11 @@ Il compilatore non supporta le funzionalità facoltative di ISO C11. Diverse fun
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare **Proprietà di configurazione**, **C/C++**, **Linguaggio**.
+1. Selezionare **Proprietà di configurazione** , **C/C++** , **Linguaggio** .
 
-1. Nello standard del linguaggio **C++** (o per c, **standard del linguaggio c**) scegliere lo standard del linguaggio da supportare dal controllo a discesa, quindi scegliere **OK** o **applica** per salvare le modifiche.
+1. Nello standard del linguaggio **C++** (o per c, **standard del linguaggio c** ) scegliere lo standard del linguaggio da supportare dal controllo a discesa, quindi scegliere **OK** o **applica** per salvare le modifiche.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

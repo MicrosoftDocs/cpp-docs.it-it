@@ -1,6 +1,7 @@
 ---
 title: Direttive pragma e parola chiave __pragma
-ms.date: 08/29/2019
+description: Descrive le direttive pragma disponibili in Microsoft Visual C e C++ (MSVC)
+ms.date: 10/30/2020
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 786f76d9f7fd2eee73c6b1d009186bf93ea0c667
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842689"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238408"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Direttive pragma e parola chiave __pragma
 
@@ -26,8 +27,8 @@ Le direttive pragma specificano funzionalità del compilatore specifiche del com
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma** *stringa di token* #pragma\
-> **__pragma (** *token-String* **)**
+> **#`pragma`***stringa di token*\
+> **`__pragma(`***stringa* **`)`** di token due caratteri di sottolineatura iniziali, ovvero **`_Pragma(`** *stringa di estensione specifica di Microsoft, valore letterale* **`)`** //C99
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -35,7 +36,9 @@ Ogni implementazione di C e C++ supporta alcune funzionalità esclusive del comp
 
 I pragma sono specifici del computer o del sistema operativo per definizione e sono in genere diversi per ogni compilatore. I pragma possono essere usati nelle direttive condizionali, per fornire nuove funzionalità del preprocessore o per fornire al compilatore informazioni definite dall'implementazione.
 
-La *stringa di token* è una serie di caratteri che fornisce una specifica istruzione del compilatore e gli eventuali argomenti. Il simbolo di cancelletto ( **#** ) deve essere il primo carattere diverso da uno spazio vuoto nella riga che contiene il pragma. Gli spazi vuoti possono separare il simbolo di cancelletto e la parola "pragma". Dopo **#pragma**, scrivere il testo che il convertitore può analizzare come token di pre-elaborazione. L'argomento da **#pragma** è soggetto all'espansione della macro.
+La *stringa di token* è una serie di caratteri che rappresentano una specifica istruzione del compilatore e gli eventuali argomenti. Il simbolo di cancelletto ( **#** ) deve essere il primo carattere diverso da uno spazio vuoto nella riga che contiene il pragma. Gli spazi vuoti possono separare il simbolo di cancelletto e la parola "pragma". Dopo **#pragma** , scrivere il testo che il convertitore può analizzare come token di pre-elaborazione. L'argomento da **#pragma** è soggetto all'espansione della macro.
+
+Il *valore letterale stringa* è l'input per `_Pragma` . Le virgolette esterne e gli spazi vuoti iniziali e finali vengono rimossi. `\"` viene sostituito con `"` e `\\` viene sostituito con `\` .
 
 Il compilatore genera un avviso quando rileva un pragma che non riconosce e continua la compilazione.
 
@@ -114,9 +117,9 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Parola chiave __pragma ()
 
-Il compilatore supporta inoltre la parola chiave **__pragma** specifica di Microsoft, che ha la stessa funzionalità della direttiva **#pragma** . La differenza è che la parola chiave **__pragma** può essere utilizzata inline in una definizione di macro. La direttiva **#pragma** non è utilizzabile in una definizione di macro, perché il compilatore interpreta il carattere di cancelletto (' #') nella direttiva come [operatore per (#)](../preprocessor/stringizing-operator-hash.md).
+Il compilatore supporta inoltre la **`__pragma`** parola chiave specifica di Microsoft, che ha la stessa funzionalità della **`#pragma`** direttiva. La differenza è che la **`__pragma`** parola chiave può essere utilizzata inline in una definizione di macro. La **`#pragma`** direttiva non può essere utilizzata in una definizione di macro, perché il compilatore interpreta il carattere di cancelletto (' #') nella direttiva come [operatore per (#)](../preprocessor/stringizing-operator-hash.md).
 
-Nell'esempio di codice riportato di seguito viene illustrato come utilizzare la parola chiave **__pragma** in una macro. Questo codice è stato estratto dall'intestazione mfcdual.h presente nell'esempio ACDUAL in "Esempi di supporto COM per il compilatore":
+Nell'esempio di codice seguente viene illustrato come **`__pragma`** è possibile utilizzare la parola chiave in una macro. Questo codice viene estratto dall'intestazione *MFCDUAL. h* nell'esempio ACDUAL in "esempi di supporto com del compilatore":
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -134,6 +137,48 @@ _hr = DualHandleException(_riidSource, e); \
 } \
 END_CATCH_ALL \
 return _hr; \
+```
+
+## <a name="the-_pragma-preprocessing-operator-c99-c11"></a>`_Pragma`Operatore di pre-elaborazione (C99, c++ 11)
+
+`_Pragma` è simile alla parola chiave specifica di Microsoft [`__pragma`](#the-__pragma-keyword) , ad eccezione del fatto che fa parte dello standard. È stata introdotta per C in C99. Per C++, è stato introdotto in C++ 11.
+
+ Consente di inserire i pragma in una definizione di macro. Ha un carattere di sottolineatura iniziale `_` anziché due caratteri di sottolineatura iniziali `__` che la parola chiave specifica di Microsoft ha e la prima lettera è in maiuscolo.
+
+Il valore letterale stringa deve essere quello che verrà altrimenti inserito in seguito a un' *`#pragma`* istruzione. Ad esempio:
+
+```c
+#pragma message("--the #pragma way")
+_Pragma ("message( \"the _Pragma way\")") 
+```
+
+Le virgolette e le barre rovesciate devono essere precedute da un carattere di escape, come illustrato in precedenza. Una stringa pragma che non viene riconosciuta viene ignorata.
+
+Nell'esempio di codice seguente viene illustrata la modalità di **`_Pragma`** utilizzo della parola chiave in una macro simile a un'asserzione quando non si desidera ricevere un avviso quando l'espressione della condizione risulta costante. 
+
+La definizione della macro usa l'idioma do/while (0) per le macro con più istruzioni, in modo che possa essere usato come se si trattasse di un'istruzione. Per ulteriori informazioni, vedere la [macro multiriga C](https://stackoverflow.com/questions/1067226/c-multi-line-macro-do-while0-vs-scope-block) in stack overflow. L'istruzione _Pragma si applica solo alla riga di codice successiva.
+
+```C
+// Compile with /W4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MY_ASSERT(BOOL_EXPRESSION) \
+    do { \
+        _Pragma("warning(suppress: 4127)") /* C4127 conditional expression is constant */  \
+        if (!(BOOL_EXPRESSION)) {   \
+            printf("MY_ASSERT FAILED: \"" #BOOL_EXPRESSION "\" on %s(%d)", __FILE__, __LINE__); \
+            exit(-1); \
+        } \
+    } while (0)
+
+int main()
+{
+    MY_ASSERT(0 && "Note that there is no warning: C4127 conditional expression is constant");
+
+    return 0;
+}
 ```
 
 ## <a name="see-also"></a>Vedere anche

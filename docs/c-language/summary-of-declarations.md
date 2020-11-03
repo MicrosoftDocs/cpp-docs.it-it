@@ -1,179 +1,225 @@
 ---
 title: Riepilogo di dichiarazioni
-ms.date: 11/04/2016
+description: Informazioni sulla grammatica C standard per le dichiarazioni implementate dal compilatore Microsoft C/C++.
+ms.date: 10/30/2020
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 894ed5e39ac8019048b6730d5e3b34de22f3a0c7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 691424cc6f4efa59411397a13850d2057d4fcc50
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220847"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238460"
 ---
 # <a name="summary-of-declarations"></a>Riepilogo di dichiarazioni
 
-*`declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`attribute-seq`* <sub>opt</sub> *`init-declarator-list`* <sub>opt</sub>**`;`**
+*`declaration`* :\
+&emsp;*`declaration-specifiers`**`attribute-seq`* <sub>opt</sub><sup>1</sup> *`init-declarator-list`* <sub>opt</sub>**`;`**\
+&emsp;*`static_assert-declaration`*
 
-*`declaration-specifiers`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`storage-class-specifier`**`declaration-specifiers`* <sub>consenso esplicito</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-specifier`**`declaration-specifiers`* <sub>consenso esplicito</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier`**`declaration-specifiers`* <sub>consenso esplicito</sub>
+*`declaration-specifiers`* :\
+&emsp;*`storage-class-specifier`**`declaration-specifiers`* <sub>consenso esplicito</sub>\
+&emsp;*`type-specifier`**`declaration-specifiers`* <sub>consenso esplicito</sub>\
+&emsp;*`type-qualifier`**`declaration-specifiers`* <sub>consenso esplicito</sub>\
+&emsp;*`function-specifier`**`declaration-specifiers`* <sub>consenso esplicito</sub>\
+&emsp;*`alignment-specifier`**`declaration-specifiers`* <sub>consenso esplicito</sub>
 
-*`attribute-seq`*: &nbsp; &nbsp; &nbsp; &nbsp; / \* Specifico di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`attribute`**`attribute-seq`* <sub>consenso esplicito</sub>
+*`attribute-seq`*<sup>1</sup>: \
+&emsp;*`attribute`*<sup>1</sup> *`attribute-seq`* <sub>opt</sub><sup>1</sup>
 
-*`attribute`*: una delle &nbsp; &nbsp; &nbsp; &nbsp; / \* specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[`__asm`](../assembler/inline/asm.md) [`__clrcall`](../cpp/clrcall.md) [`__stdcall`](../cpp/stdcall.md) [`__based`](../cpp/based-grammar.md) [`__fastcall`](../cpp/fastcall.md) [`__thiscall`](../cpp/thiscall.md) [`__cdecl`](../cpp/cdecl.md) [`__inline`](../cpp/inline-functions-cpp.md) [`__vectorcall`](../cpp/vectorcall.md)
+*`attribute`*<sup>1, 2</sup>: uno tra \
+&emsp;**`__asm`** **`__based`** **`__cdecl`** **`__clrcall`** **`__fastcall`** **`__inline`** **`__stdcall`** **`__thiscall`** **`__vectorcall`**
 
-*`init-declarator-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator-list`*  **`,`**  *`init-declarator`*
+*`init-declarator-list`* :\
+&emsp;*`init-declarator`*\
+&emsp;*`init-declarator-list`* **`,`** *`init-declarator`*
 
-*`init-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*  **`=`**  *`initializer`* /\*Per l'inizializzazione scalare\*/
+*`init-declarator`* :\
+&emsp;*`declarator`*\
+&emsp;*`declarator`* **`=`** *`initializer`*
 
-*`storage-class-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`auto`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`register`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`static`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`extern`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`***`extended-decl-modifier-seq`* **`)`** /\* Specifiche di Microsoft\*/
+*`storage-class-specifier`* :\
+&emsp;**`auto`**\
+&emsp;**`extern`**\
+&emsp;**`register`**\
+&emsp;**`static`**\
+&emsp;**`_Thread_local`**\
+&emsp;**`typedef`**\
+&emsp;**`__declspec`****`(`** *`extended-decl-modifier-seq`* **`)`** <sup>1</sup>
 
-*`type-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`void`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`char`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`short`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int8`** /\*Specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int16`** /\*Specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int32`** /\*Specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int64`** /\*Specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`long`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`float`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`double`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`signed`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-or-union-specifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enum-specifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`typedef-name`*
+*`extended-decl-modifier-seq`*<sup>1</sup>: \
+&emsp;*`extended-decl-modifier`*<sub>consenso esplicito</sub>\
+&emsp;*`extended-decl-modifier-seq`* *`extended-decl-modifier`*
 
-*`type-qualifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`const`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`volatile`**
+*`extended-decl-modifier`*<sup>1</sup>: \
+&emsp;**`thread`**\
+&emsp;**`naked`**\
+&emsp;**`dllimport`**\
+&emsp;**`dllexport`**
 
-*`declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>consenso esplicito</sub>*`direct-declarator`*
+*`type-specifier`* :\
+&emsp;**`void`**\
+&emsp;**`char`**\
+&emsp;**`short`**\
+&emsp;**`int`**\
+&emsp;**`__int8`**<sup>1</sup>\
+&emsp;**`__int16`**<sup>1</sup>\
+&emsp;**`__int32`**<sup>1</sup>\
+&emsp;**`__int64`**<sup>1</sup>\
+&emsp;**`long`**\
+&emsp;**`float`**\
+&emsp;**`double`**\
+&emsp;**`signed`**\
+&emsp;**`unsigned`**\
+&emsp;**`_Bool`**\
+&emsp;**`_Complex`**\
+&emsp;*`atomic-type-specifier`*\
+&emsp;*`struct-or-union-specifier`*\
+&emsp;*`enum-specifier`*\
+&emsp;*`typedef-name`*
 
-*`direct-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`declarator`* **`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`***`[`** *`constant-expression`* <sub>consenso esplicito</sub>**`]`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`***`(`** *`parameter-type-list`* **`)`** /\* Dichiaratore nuovo stile\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`***`(`** *`identifier-list`* <sub>opt</sub> **`)`**  / \* dichiaratore di tipo obsoleto opt\*/
+*`struct-or-union-specifier`* :\
+&emsp;*`struct-or-union`**`identifier`* <sub>consenso esplicito</sub> **`{`** *`struct-declaration-list`***`}`**\
+&emsp;*`struct-or-union`* *`identifier`*
 
-*`pointer`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>`*`</strong>*`type-qualifier-list`* <sub>consenso esplicito</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>`*`</strong>*`type-qualifier-list`* <sub>consenso esplicito</sub>*`pointer`*
+*`struct-or-union`* :\
+&emsp;**`struct`**\
+&emsp;**`union`**
 
-*`parameter-type-list`*: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / \* Elenco di parametri\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
+*`struct-declaration-list`* :\
+&emsp;*`struct-declaration`*\
+&emsp;*`struct-declaration-list`* *`struct-declaration`*
 
-*`parameter-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`,`** *`parameter-declaration`*
+*`struct-declaration`* :\
+&emsp;*`specifier-qualifier-list`**`struct-declarator-list`* <sub>consenso esplicito</sub>**`;`**\
+&emsp;*`static_assert-declaration`*
 
-*`type-qualifier-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier-list`* *`type-qualifier`*
+*`specifier-qualifier-list`* :\
+&emsp;*`type-specifier`**`specifier-qualifier-list`* <sub>consenso esplicito</sub>\
+&emsp;*`type-qualifier`**`specifier-qualifier-list`* <sub>consenso esplicito</sub>\
+&emsp;*`alignment-specifier`**`specifier-qualifier-list`* <sub>consenso esplicito</sub>
 
-*`enum-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***`identifier`* <sub>consenso esplicito</sub> **`{`** *`enumerator-list`***`}`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`enum`** *`identifier`*
+*`struct-declarator-list`* :\
+&emsp;*`struct-declarator`*\
+&emsp;*`struct-declarator-list`* **`,`** *`struct-declarator`*
 
-*`enumerator-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumerator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumerator-list`* **`,`** *`enumerator`*
+*`struct-declarator`* :\
+&emsp;*`declarator`*\
+&emsp;*`declarator`*<sub>consenso esplicito</sub> **`:`***`constant-expression`*
 
-*`enumerator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumeration-constant`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumeration-constant`* **`=`** *`constant-expression`*
+*`enum-specifier`* :\
+&emsp;**`enum`***`identifier`* <sub>consenso esplicito</sub> **`{`** *`enumerator-list`***`}`**\
+&emsp;**`enum`***`identifier`* <sub>consenso esplicito</sub> **`{`** *`enumerator-list`* **`,`****`}`**\
+&emsp;**`enum`** *`identifier`*
 
-*`enumeration-constant`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*
+*`enumerator-list`* :\
+&emsp;*`enumerator`*\
+&emsp;*`enumerator-list`* **`,`** *`enumerator`*
 
-*`struct-or-union-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-or-union`**`identifier`* <sub>consenso esplicito</sub> **`{`** *`struct-declaration-list`***`}`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-or-union`* *`identifier`*
+*`enumerator`* :\
+&emsp;*`enumeration-constant`*\
+&emsp;*`enumeration-constant`* **`=`** *`constant-expression`*
 
-*`struct-or-union`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
+*`atomic-type-specifier`* :\
+&emsp;**`_Atomic`** **`(`** *`type-name`* **`)`**
 
-*`struct-declaration-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-declaration-list`* *`struct-declaration`*
+*`type-qualifier`* :\
+&emsp;**`const`**\
+&emsp;**`restrict`**\
+&emsp;**`volatile`**\
+&emsp;**`_Atomic`**
 
-*`struct-declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`specifier-qualifier-list`* *`struct-declarator-list`* **`;`**
+*`function-specifier`* :\
+&emsp;**`inline`**\
+&emsp;**`_Noreturn`**
 
-*`specifier-qualifier-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-specifier`**`specifier-qualifier-list`* <sub>consenso esplicito</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier`**`specifier-qualifier-list`* <sub>consenso esplicito</sub>
+*`alignment-specifier`* :\
+&emsp;**`_Alignas`** **`(`** *`type-name`* **`)`**\
+&emsp;**`_Alignas`** **`(`** *`constant-expression`* **`)`**
 
-*`struct-declarator-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-declarator`* *`struct-declarator-list`* **`,`** *`struct-declarator`*
+*`declarator`* :\
+&emsp;*`pointer`*<sub>consenso esplicito</sub>*`direct-declarator`*
 
-*`struct-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-specifier`**`declarator`* <sub>consenso esplicito</sub> **`:`***`constant-expression`*
+*`direct-declarator`* :\
+&emsp;*`identifier`*\
+&emsp;**`(`** *`declarator`* **`)`**\
+&emsp;*`direct-declarator`* opt **`[`** *`type-qualifier-list`* <sub>opt</sub> *`assignment-expression`* <sub>opt</sub>**`]`**\
+&emsp;*`direct-declarator`***`[`** **`static`** *`type-qualifier-list`* <sub>consenso esplicito</sub> *`assignment-expression`***`]`**\
+&emsp;*`direct-declarator`* **`[`** *`type-qualifier-list`* **`static`** *`assignment-expression`* **`]`**\
+&emsp;*`direct-declarator`***`[`** *`type-qualifier-list`* <sub>consenso esplicito</sub> **`*`****`]`**\
+&emsp;*`direct-declarator`* **`(`** *`parameter-type-list`* **`)`**\
+&emsp;*`direct-declarator`***`(`** *`identifier-list`* <sub>consenso esplicito</sub> **`)`** <sup>3</sup>
 
-*`parameter-declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`declarator`* /\* Dichiaratore denominato\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`abstract-declarator`* <sub>consenso esplicito</sub>  / \* Dichiaratore anonimo\*/
+*`pointer`* :\
+&emsp;**`*`***`type-qualifier-list`* <sub>consenso esplicito</sub>\
+&emsp;**`*`***`type-qualifier-list`* <sub>consenso esplicito</sub>*`pointer`*
 
-*`identifier-list`*:/ \* Per i dichiaratori obsoleti\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier-list`* **`,`** *`identifier`*
+*`type-qualifier-list`* :\
+&emsp;*`type-qualifier`*\
+&emsp;*`type-qualifier-list`* *`type-qualifier`*
 
-*`abstract-declarator`*:/ \* Usato con dichiaratori anonimi\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>consenso esplicito</sub>*`direct-abstract-declarator`*
+*`parameter-type-list`* :\
+&emsp;*`parameter-list`*\
+&emsp;*`parameter-list`* **`,`** **`...`**
 
-*`direct-abstract-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`abstract-declarator`* **`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-abstract-declarator`*<sub>consenso esplicito</sub> **`[`** *`constant-expression`* <sub>consenso esplicito</sub>**`]`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-abstract-declarator`*<sub>consenso esplicito</sub> **`(`** *`parameter-type-list`* <sub>consenso esplicito</sub>**`)`**
+*`parameter-list`* :\
+&emsp;*`parameter-declaration`*\
+&emsp;*`parameter-list`* **`,`** *`parameter-declaration`*
 
-*`initializer`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`assignment-expression`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`{`***`initializer-list`* **`}`** /\* Per l'inizializzazione aggregata\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`{`** *`initializer-list`* **`, }`**
+*`parameter-declaration`* :\
+&emsp;*`declaration-specifiers`* *`declarator`*\
+&emsp;*`declaration-specifiers`**`abstract-declarator`* <sub>consenso esplicito</sub>
 
-*`initializer-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`initializer`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`initializer-list`* **`,`** *`initializer`*
+*`identifier-list`* :/ \* Per i dichiaratori obsoleti \*/\
+&emsp;*`identifier`*\
+&emsp;*`identifier-list`* **`,`** *`identifier`*
 
-*`type-name`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`specifier-qualifier-list`**`abstract-declarator`* <sub>consenso esplicito</sub>
+*`type-name`* :\
+&emsp;*`specifier-qualifier-list`**`abstract-declarator`* <sub>consenso esplicito</sub>
 
-*`typedef-name`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*
+*`abstract-declarator`* :\
+&emsp;*`pointer`*\
+&emsp;*`pointer`*<sub>consenso esplicito</sub>*`direct-abstract-declarator`*
 
-*`extended-decl-modifier-seq`*: &nbsp; &nbsp; &nbsp; &nbsp; / \* Specifico di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>consenso esplicito</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier-seq`* *`extended-decl-modifier`*
+*`direct-abstract-declarator`* :\
+&emsp;**`(`** *`abstract-declarator`* **`)`**\
+&emsp;*`direct-abstract-declarator`* opt **`[`** *`type-qualifier-list`* <sub>opt</sub> *`assignment-expression`* <sub>opt</sub>**`]`**\
+&emsp;*`direct-abstract-declarator`***`[`** **`static`** *`type-qualifier-list`* <sub>consenso esplicito</sub> *`assignment-expression`***`]`**\
+&emsp;*`direct-abstract-declarator`* **`[`** *`type-qualifier-list`* **`static`** *`assignment-expression`* **`]`**\
+&emsp;*`direct-abstract-declarator`***`[`** *`type-qualifier-list`* <sub>consenso esplicito</sub> **`*`****`]`**\
+&emsp;*`direct-abstract-declarator`*<sub>consenso esplicito</sub> **`(`** *`parameter-type-list`* <sub>consenso esplicito</sub>**`)`**
 
-*`extended-decl-modifier`*: &nbsp; &nbsp; &nbsp; &nbsp; / \* Specifico di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**
+*`typedef-name`* :\
+&emsp;*`identifier`*
+
+*`initializer`* :\
+&emsp;*`assignment-expression`*\
+&emsp;**`{`** *`initializer-list`* **`}`**\
+&emsp;**`{`** *`initializer-list`* **`, }`**
+
+*`initializer-list`* :\
+&emsp;*`designation`*<sub>consenso esplicito</sub>*`initializer`*\
+&emsp;*`initializer-list`***`,`** *`designation`* <sub>consenso esplicito</sub>*`initializer`*
+
+*`designation`* :\
+&emsp;*`designator-list`* **`=`**
+
+*`designator-list`* :\
+&emsp;*`designator`*\
+&emsp;*`designator-list`* *`designator`*
+
+*`designator`* :\
+&emsp;**`[`** *`constant-expression`* **`]`**\
+&emsp;**`.`** *`identifier`*
+
+*`static_assert-declaration`* :\
+&emsp;**`_Static_assert`** **`(`** *`constant-expression`* **`,`** *`string-literal`* **`)`** **`;`**
+
+<sup>1</sup> questo elemento di grammatica è specifico di Microsoft. \
+<sup>2</sup> per ulteriori informazioni su questi elementi, vedere [`__asm`](../assembler/inline/asm.md) , [`__clrcall`](../cpp/clrcall.md) , [`__stdcall`](../cpp/stdcall.md) , [`__based`](../cpp/based-grammar.md) , [`__fastcall`](../cpp/fastcall.md) , [`__thiscall`](../cpp/thiscall.md) , [`__cdecl`](../cpp/cdecl.md) , [`__inline`](../cpp/inline-functions-cpp.md) e [`__vectorcall`](../cpp/vectorcall.md) .
+<sup>3</sup> questo stile è obsoleto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Convenzioni di chiamata](../cpp/calling-conventions.md)<br/>
-[Grammatica della struttura di frase](../c-language/phrase-structure-grammar.md)<br/>
+[Convenzioni di chiamata](../cpp/calling-conventions.md)\
+[Grammatica della struttura di frase](./phrase-structure-grammar.md)\
 [Convenzioni di chiamata obsolete](../cpp/obsolete-calling-conventions.md)

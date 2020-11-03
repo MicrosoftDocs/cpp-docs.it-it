@@ -1,6 +1,7 @@
 ---
 title: Operatori di assegnazione C
-ms.date: 06/14/2018
+description: Operatori di assegnazione del linguaggio C standard, sintassi e significato.
+ms.date: 10/30/2020
 helpviewer_keywords:
 - remainder assignment operator (%=)
 - '&= operator'
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 460e18772689de0d28fcfda3295a49b2f8a3c0d7
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168799"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238512"
 ---
 # <a name="c-assignment-operators"></a>Operatori di assegnazione C
 
@@ -43,28 +44,28 @@ Un'operazione di assegnazione assegna il valore dell'operando destro al percorso
 
 ## <a name="syntax"></a>Sintassi
 
-*assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*espressione condizionale*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+*`assignment-expression`* :\
+&emsp;*`conditional-expression`*\
+&emsp;*`unary-expression`* *`assignment-operator`* *`assignment-expression`*
 
-*assignment-operator*: uno tra<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+*`assignment-operator`* : uno tra<br/>
+&emsp;**`=`** **`*=`** **`/=`** **`%=`** **`+=`** **`-=`** **`<<=`** **`>>=`** **`&=`** **`^=`** **`|=`**
 
 Gli operatori di assegnazione in C possono sia trasformare che assegnare valori in un'unica operazione. In C sono disponibili gli operatori di assegnazione seguenti:
 
 |Operatore|Operazione eseguita|
 |--------------|-------------------------|
-|**=**|Assegnazione singola|
-|**&#42;=**|Assegnazione di moltiplicazione|
-|**/=**|Assegnazione di divisione|
-|**%=**|Assegnazione di resto|
-|**+=**|Assegnazione di addizione|
-|**-=**|Assegnazione di sottrazione|
-|**<\<=**|Assegnazione di spostamento a sinistra|
-|**>>=**|Assegnazione di spostamento a destra|
-|**&=**|Assegnazione AND bit per bit|
-|**^=**|Assegnazione OR esclusivo bit per bit|
-|**&#124;=**|Assegnazione OR inclusivo bit per bit|
+|**`=`**|Assegnazione singola|
+|**`*=`**|Assegnazione di moltiplicazione|
+|**`/=`**|Assegnazione di divisione|
+|**`%=`**|Assegnazione di resto|
+|**`+=`**|Assegnazione di addizione|
+|**`-=`**|Assegnazione di sottrazione|
+|**`<<=`**|Assegnazione di spostamento a sinistra|
+|**`>>=`**|Assegnazione di spostamento a destra|
+|**`&=`**|Assegnazione AND bit per bit|
+|**`^=`**|Assegnazione OR esclusivo bit per bit|
+|**`|=`**|Assegnazione OR inclusivo bit per bit|
 
 Nell'assegnazione il tipo del valore destro viene convertito nel tipo del valore a sinistra e il valore viene archiviato nell'operando sinistro dopo che l'assegnazione è stata eseguita. L'operando sinistro non deve essere una matrice, una funzione o una costante. Il percorso specifico di conversione, che dipende dai due tipi, è descritto in dettaglio in [Conversioni di tipi](../c-language/type-conversions-c.md).
 
