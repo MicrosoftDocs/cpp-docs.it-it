@@ -3,12 +3,12 @@ title: Creare progetti multipiattaforma C++ in Visual Studio
 description: Come configurare, compilare ed eseguire il debug di un progetto CMake Open Source C++ in Visual Studio destinato a Linux e Windows.
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c420e0ee04e85d49ad752da085d38b2c5ff9d4fa
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040483"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344657"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Esercitazione: Creare progetti multipiattaforma C++ in Visual Studio
 
@@ -31,10 +31,10 @@ In questa esercitazione verranno illustrate le procedure per:
 
 * Configurare un computer Linux per lo sviluppo C++ multipiattaforma
   * Visual Studio non richiede alcuna distribuzione specifica di Linux. Il sistema operativo può essere eseguito in un computer fisico, in una VM o nel cloud. È anche possibile usare il sottosistema Windows per Linux (WSL). Tuttavia, per questa esercitazione è necessario un ambiente grafico. WSL non è consigliato perché è destinato principalmente alle operazioni da riga di comando.
-  * Visual Studio richiede questi strumenti nel computer Linux: compilatori C++, GDB, SSH, rsync, Ninja e zip. Nei sistemi basati su Debian è possibile usare questo comando per installare le dipendenze seguenti:
+  * Visual Studio richiede questi strumenti nel computer Linux: compilatori C++, GDB, SSH, rsync, make e zip. Nei sistemi basati su Debian è possibile usare questo comando per installare le dipendenze seguenti:
 
     ```cmd
-    sudo apt install -y openssh-server build-essential gdb rsync ninja-build zip
+    sudo apt install -y openssh-server build-essential gdb rsync make zip
     ```
 
   * Visual Studio richiede una versione recente di CMake nel computer Linux in cui è abilitata la modalità server (almeno 3,8). Microsoft produce una build universale di CMake che è possibile installare in qualsiasi distribuzione Linux. Si consiglia di usare questa compilazione per assicurarsi di disporre delle funzionalità più recenti. È possibile ottenere i file binari di CMake dalla [fork Microsoft del repository CMake](https://github.com/Microsoft/CMake/releases) in GitHub. Passare a questa pagina e scaricare la versione corrispondente all'architettura di sistema nel computer Linux e quindi contrassegnarla come eseguibile:
@@ -109,7 +109,7 @@ Visual Studio crea una configurazione di **debug x64** predefinita per Windows. 
 
    ![Finestra di dialogo Aggiungi configurazione a CMakeSettings](media/cmake-bullet3-add-configuration-x64-debug.png)
 
-   Questa finestra di dialogo Mostra tutte le configurazioni incluse in Visual Studio, oltre a tutte le configurazioni personalizzate create dall'utente. Se si vuole continuare a usare una configurazione di **debug x64** , deve essere la prima aggiunta. Selezionare **x64-debug**, quindi scegliere il pulsante **Seleziona** . Visual Studio crea il CMakeSettings.jsnel file con una configurazione per **x64-debug**e lo salva su disco. È possibile impostare il nome desiderato per le configurazioni modificando il parametro name direttamente in CMakeSettings.json.
+   Questa finestra di dialogo Mostra tutte le configurazioni incluse in Visual Studio, oltre a tutte le configurazioni personalizzate create dall'utente. Se si vuole continuare a usare una configurazione di **debug x64** , deve essere la prima aggiunta. Selezionare **x64-debug** , quindi scegliere il pulsante **Seleziona** . Visual Studio crea il CMakeSettings.jsnel file con una configurazione per **x64-debug** e lo salva su disco. È possibile impostare il nome desiderato per le configurazioni modificando il parametro name direttamente in CMakeSettings.json.
 
 ## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Impostazione di un punto di interruzione, compilazione ed esecuzione in Windows
 
@@ -144,6 +144,8 @@ In questo passaggio verrà eseguito il debug di un programma di esempio che illu
 ## <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Aggiungere una configurazione Linux e connettersi al computer remoto
 
 1. Aggiungere una configurazione Linux. Fare clic con il pulsante destro del mouse sul file CMakeSettings.json in **Esplora soluzioni** e selezionare **Aggiungi configurazione**. Viene visualizzata la finestra di dialogo Aggiungi configurazione a CMakeSettings descritta in precedenza. Selezionare **Linux-debug** questa volta, quindi salvare il CMakeSettings.jsnel file (Ctrl + s).
+
+1. **Visual Studio 2019 versione 16,6 o successiva** Scorrere fino alla fine dell'editor delle impostazioni di CMake e selezionare **Mostra impostazioni avanzate**. Selezionare **makefile UNIX** come **Generatore CMake** , quindi salvare il CMakeSettings.jsnel file (Ctrl + s).
 
 1. Selezionare **Linux-debug** nell'elenco a discesa configurazione.
 

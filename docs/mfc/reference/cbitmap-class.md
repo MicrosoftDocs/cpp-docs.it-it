@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: adb2a461de5e82fa76ce0ed9961d970f46dbe26a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c19a54584390312cfd1657e88898cdb044179d0
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834986"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344579"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -51,7 +51,7 @@ Incapsula una bitmap GDI (Graphics Device Interface) di Windows e fornisce funzi
 class CBitmap : public CGdiObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -83,7 +83,7 @@ class CBitmap : public CGdiObject
 |----------|-----------------|
 |[CBitmap:: operator HBITMAP](#operator_hbitmap)|Restituisce l'handle di Windows collegato all' `CBitmap` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per usare un `CBitmap` oggetto, costruire l'oggetto, associarvi un handle bitmap con una delle funzioni membro di inizializzazione, quindi chiamare le funzioni membro dell'oggetto.
 
@@ -109,7 +109,7 @@ Costruisce un oggetto `CBitmap`.
 CBitmap();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto risultante deve essere inizializzato con una delle funzioni membro di inizializzazione.
 
@@ -147,7 +147,7 @@ Punta a una matrice di byte che contiene i valori iniziali dei bit della bitmap.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una bitmap a colori, il parametro *nPlanes* o *nBitcount* deve essere impostato su 1. Se entrambi i parametri vengono impostati su 1, `CreateBitmap` crea una bitmap monocromatica.
 
@@ -174,7 +174,7 @@ Punta a una struttura [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) che c
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Sebbene non sia possibile selezionare direttamente una bitmap per un dispositivo di visualizzazione, è possibile selezionarla come bitmap corrente per un contesto di dispositivo di memoria utilizzando [CDC:: SelezionaOggetto](../../mfc/reference/cdc-class.md#selectobject) e copiata in qualsiasi contesto di dispositivo compatibile utilizzando la funzione [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [CDC:: StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) . La funzione [CDC::P atblt](../../mfc/reference/cdc-class.md#patblt) può copiare la bitmap per il pennello corrente direttamente nel contesto del dispositivo di visualizzazione.
 
@@ -208,7 +208,7 @@ Specifica l'altezza della bitmap (in pixel).
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap ha lo stesso numero di piani di colore o lo stesso formato bits per pixel del contesto di dispositivo specificato. Può essere selezionato come bitmap corrente per qualsiasi dispositivo di memoria compatibile con quello specificato da *PDC*.
 
@@ -246,7 +246,7 @@ Specifica l'altezza in bit della bitmap.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap ha lo stesso numero di piani di colore o lo stesso formato bits per pixel del contesto di dispositivo specificato. Un'applicazione può selezionare questa bitmap come bitmap corrente per un dispositivo di memoria compatibile con quello specificato da *PDC*.
 
@@ -271,7 +271,7 @@ Specifica una bitmap GDI di Windows.
 
 Puntatore a un `CBitmap` oggetto in caso di esito positivo; in caso contrario null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un `CBitmap` oggetto non è già collegato all'handle, `CBitmap` viene creato e collegato un oggetto temporaneo. Questo `CBitmap` oggetto temporaneo è valido solo fino alla successiva esecuzione del tempo di inattività dell'applicazione nel ciclo di eventi, quindi vengono eliminati tutti gli oggetti grafici temporanei. Un altro modo per affermare questo problema è che l'oggetto temporaneo è valido solo durante l'elaborazione di un messaggio di finestra.
 
@@ -292,7 +292,7 @@ Puntatore a una struttura [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) c
 
 Diverso da zero se il metodo ha avuto esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cbitmapgetbitmapbits"></a><a name="getbitmapbits"></a> CBitmap:: GetBitmapBits
 
@@ -316,7 +316,7 @@ Puntatore al buffer che riceverà la bitmap.
 
 Numero di byte copiati nel buffer se il metodo ha avuto esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare [CBitmap:: GetBitmap](#getbitmap) per determinare le dimensioni del buffer richieste.
 
@@ -332,7 +332,7 @@ CSize GetBitmapDimension() const;
 
 Larghezza e altezza della bitmap, misurata in unità di 0,1 millimetri. L'altezza si trova nel `cy` membro dell' `CSize` oggetto e la larghezza si trova nel `cx` membro. Se la larghezza e l'altezza della bitmap non sono state impostate utilizzando `SetBitmapDimension` , il valore restituito è 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si presuppone che l'altezza e la larghezza siano state impostate in precedenza utilizzando la funzione membro [SetBitmapDimension](#setbitmapdimension) .
 
@@ -357,7 +357,7 @@ Specifica il numero ID della risorsa bitmap.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap caricata è associata all' `CBitmap` oggetto.
 
@@ -404,11 +404,11 @@ Numero di mappe a colori a cui punta *lpColorMap*.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, `LoadMappedBitmap` eseguirà il mapping dei colori usati comunemente nei glifi dei pulsanti.
 
-Per informazioni sulla creazione di una mappa di bit mappata, vedere la funzione di Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) e la struttura [mappatura](/windows/win32/api/commctrl/ns-commctrl-colormap) nella Windows SDK.
+Per informazioni sulla creazione di una mappa di bit mappata, vedere la funzione di Windows [CreateMappedBitmap](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap) e la struttura [mappatura](/windows/win32/api/commctrl/ns-commctrl-colormap) nella Windows SDK.
 
 ## <a name="cbitmaploadoembitmap"></a><a name="loadoembitmap"></a> CBitmap:: LoadOEMBitmap
 
@@ -470,7 +470,7 @@ ID del bitmap di Windows predefinito. I valori possibili sono elencati di seguit
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I nomi di bitmap che iniziano con OBM_OLD rappresentano le bitmap usate dalle versioni di Windows precedenti alla 3,0.
 
@@ -488,7 +488,7 @@ operator HBITMAP() const;
 
 Se ha esito positivo, un handle per l'oggetto GDI Windows rappresentato dall' `CBitmap` oggetto; in caso contrario, null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo operatore è un operatore di cast che supporta l'uso diretto di un `HBITMAP` oggetto.
 
@@ -538,7 +538,7 @@ Specifica l'altezza della bitmap (in unità 0,1 millimetri).
 
 Dimensioni bitmap precedenti. L'altezza si trova nella `cy` variabile membro dell' `CSize` oggetto e la larghezza si trova nella `cx` variabile membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 GDI non utilizza questi valori eccetto per restituirli quando un'applicazione chiama la funzione membro [GetBitmapDimension](#getbitmapdimension) .
 

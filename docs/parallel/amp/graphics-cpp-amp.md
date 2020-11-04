@@ -2,12 +2,12 @@
 title: Grafica (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041458"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344722"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 
@@ -25,9 +25,9 @@ I `norm` `unorm` tipi e sono tipi scalari che limitano l'intervallo di **`float`
 
 ## <a name="short-vector-library"></a>Libreria Short Vector
 
-La libreria short vector fornisce alcune funzionalità del [tipo di vettore](https://go.microsoft.com/fwlink/p/?linkid=248500) definito in HLSL e viene in genere usata per definire Texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono **`double`** , **`float`** , **`int`** , `norm` , `uint` e `unorm` . I nomi dei tipi sono riportati nella tabella seguente. Per ogni tipo è presente anche un oggetto corrispondente **`typedef`** che non contiene un carattere di sottolineatura nel nome. I tipi con i caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). I tipi che non dispongono dei caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati dai tipi fondamentali con nome simile, ad esempio **`__int8`** e **`__int16`** .
+La libreria short vector fornisce alcune funzionalità del [tipo di vettore](/windows/win32/direct3dhlsl/dx-graphics-hlsl-vector) definito in HLSL e viene in genere usata per definire Texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono **`double`** , **`float`** , **`int`** , `norm` , `uint` e `unorm` . I nomi dei tipi sono riportati nella tabella seguente. Per ogni tipo è presente anche un oggetto corrispondente **`typedef`** che non contiene un carattere di sottolineatura nel nome. I tipi con i caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). I tipi che non dispongono dei caratteri di sottolineatura si trovano nello [spazio dei nomi Concurrency:: graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati dai tipi fondamentali con nome simile, ad esempio **`__int8`** e **`__int16`** .
 
-|Type|Lunghezza 2|Lunghezza 3|Lunghezza 4|
+|Tipo|Lunghezza 2|Lunghezza 3|Lunghezza 4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
@@ -57,7 +57,7 @@ L'operazione viene eseguita per componente tra ogni componente dello short vecto
 
 ### <a name="swizzling-expressions"></a>Espressioni swizzling
 
-La Libreria Short Vector supporta il costrutto della funzione di accesso `vector_type.identifier` per accedere ai componenti di uno short vector. `identifier`, Noto come *espressione swizzling*, specifica i componenti del vettore. L'espressione può essere un l-value o un r-value. I singoli caratteri nell'identificatore possono essere: x, y, z e w; o r, g, b e a. "x" e "r" indicano che il componente zero, "y" e "g" indicano il primo componente e così via. Si noti che non è possibile usare "x" e "r" nello stesso identificatore. Quindi, "RGBA" e "xyzw" restituiscono lo stesso risultato. Le funzioni di accesso con un solo componente come "x" e "y" sono tipi di valore scalari. Le funzioni di accesso con più componenti sono tipi short vector. Se ad esempio si crea un vettore di `int_4` denominato `fourInts` con i valori 2, 4, 6 e 8, `fourInts.y` restituisce il numero intero 4 e `fourInts.rg` restituisce un oggetto `int_2` con i valori 2 e 4.
+La Libreria Short Vector supporta il costrutto della funzione di accesso `vector_type.identifier` per accedere ai componenti di uno short vector. `identifier`, Noto come *espressione swizzling* , specifica i componenti del vettore. L'espressione può essere un l-value o un r-value. I singoli caratteri nell'identificatore possono essere: x, y, z e w; o r, g, b e a. "x" e "r" indicano che il componente zero, "y" e "g" indicano il primo componente e così via. Si noti che non è possibile usare "x" e "r" nello stesso identificatore. Quindi, "RGBA" e "xyzw" restituiscono lo stesso risultato. Le funzioni di accesso con un solo componente come "x" e "y" sono tipi di valore scalari. Le funzioni di accesso con più componenti sono tipi short vector. Se ad esempio si crea un vettore di `int_4` denominato `fourInts` con i valori 2, 4, 6 e 8, `fourInts.y` restituisce il numero intero 4 e `fourInts.rg` restituisce un oggetto `int_2` con i valori 2 e 4.
 
 ## <a name="texture-classes"></a>Classi Texture
 
@@ -67,7 +67,7 @@ Molte GPU dispongono di hardware e cache ottimizzati per recuperare pixel e texe
 
 - Uno short vector con due o quattro componenti. L'unica eccezione è `double_4`, che non è consentito.
 
-L'oggetto `texture` può avere una dimensione pari a 1, 2 o 3. L'oggetto `texture` può essere acquisito solo per riferimento nell'espressione lambda di una chiamata a `parallel_for_each`. La trama viene archiviata sulla GPU come oggetto texture Direct3D. Per altre informazioni sulle trame e i Texel in Direct3D, vedere [Introduzione alle trame in Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
+L'oggetto `texture` può avere una dimensione pari a 1, 2 o 3. L'oggetto `texture` può essere acquisito solo per riferimento nell'espressione lambda di una chiamata a `parallel_for_each`. La trama viene archiviata sulla GPU come oggetto texture Direct3D. Per altre informazioni sulle trame e i Texel in Direct3D, vedere [Introduzione alle trame in Direct3D 11](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures-intro).
 
 Il tipo di texel utilizzato può essere uno dei molti formati di trama utilizzati nella programmazione grafica. Un formato RGBA, ad esempio, potrebbe utilizzare 32 bit, con 8 bit per ciascun elemento scalare R, G, B e A. L'hardware trama di una scheda grafica può accedere ai singoli elementi in base al formato. Se ad esempio si utilizza il formato RGBA, l'hardware trama consente di estrarre ciascun elemento a 8 bit in una forma a 32 bit. In C++ AMP è possibile impostare i bit per elemento scalare del texel per poter accedere automaticamente ai singoli elementi scalari nel codice senza scorrere i bit.
 
@@ -342,7 +342,7 @@ Si noti come una visualizzazione delle trame con tipo di elemento non const e co
 
 Il tipo di elemento di un oggetto `texture_view`, il relativo stato const e il numero dei componenti sono fondamentali per determinare se la visualizzazione supporta il campionamento delle trame e la modalità di accesso ai livelli di mipmap:
 
-|Type|Componenti|Lettura|Scrittura|campionamento|Accesso alle mipmap|
+|Tipo|Componenti|Lettura|Scrittura|campionamento|Accesso alle mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|Sì|No (1)|Sì|Sì, indicizzabile. L'intervallo viene determinato al momento della creazione delle istanze.|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|Sì<br /><br /> No (2)|Sì<br /><br /> Sì|No (1)<br /><br /> No (1)|Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.<br /><br /> Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.|
@@ -404,9 +404,9 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Interoperabilità
 
-Il runtime di C++ AMP supporta l'interoperabilità tra `texture<T,1>` e l' [interfaccia ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503), tra `texture<T,2>` e l' [interfaccia ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317)e tra `texture<T,3>` e l' [interfaccia ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). Il metodo [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) accetta un `texture` oggetto e restituisce un' `IUnknown` interfaccia. Il metodo [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) accetta un' `IUnknown` interfaccia e un `accelerator_view` oggetto e restituisce un `texture` oggetto.
+Il runtime di C++ AMP supporta l'interoperabilità tra `texture<T,1>` e l' [interfaccia ID3D11Texture1D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture1d), tra `texture<T,2>` e l' [interfaccia ID3D11Texture2D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture2d)e tra `texture<T,3>` e l' [interfaccia ID3D11Texture3D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture3d). Il metodo [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) accetta un `texture` oggetto e restituisce un' `IUnknown` interfaccia. Il metodo [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) accetta un' `IUnknown` interfaccia e un `accelerator_view` oggetto e restituisce un `texture` oggetto.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Classe double_2](../../parallel/amp/reference/double-2-class.md)<br/>
 [Classe double_3](../../parallel/amp/reference/double-3-class.md)<br/>

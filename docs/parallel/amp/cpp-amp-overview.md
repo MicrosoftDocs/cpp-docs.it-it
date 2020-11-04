@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
-ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
+ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427725"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344748"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 
@@ -360,7 +360,7 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>Accelerazione del codice: riquadri e barriere
 
-È possibile ottenere un'accelerazione aggiuntiva usando l'affiancamento. L'affiancamento divide i thread in subset o *riquadri*rettangolari uguali. È possibile determinare le dimensioni appropriate del riquadro in base al set di dati e all'algoritmo di codifica. Per ogni thread, è possibile accedere al percorso *globale* di un elemento dati relativo all'intero `array` o `array_view` e accedere al percorso *locale* rispetto al riquadro. L'uso del valore di indice locale semplifica il codice perché non è necessario scrivere il codice per tradurre i valori di indice da globale a locale. Per usare l'affiancamento, chiamare il [Metodo extent:: Tile](reference/extent-class.md#tile) sul dominio di calcolo nel `parallel_for_each` metodo e usare un oggetto [tiled_index](../../parallel/amp/reference/tiled-index-class.md) nell'espressione lambda.
+È possibile ottenere un'accelerazione aggiuntiva usando l'affiancamento. L'affiancamento divide i thread in subset o *riquadri* rettangolari uguali. È possibile determinare le dimensioni appropriate del riquadro in base al set di dati e all'algoritmo di codifica. Per ogni thread, è possibile accedere al percorso *globale* di un elemento dati relativo all'intero `array` o `array_view` e accedere al percorso *locale* rispetto al riquadro. L'uso del valore di indice locale semplifica il codice perché non è necessario scrivere il codice per tradurre i valori di indice da globale a locale. Per usare l'affiancamento, chiamare il [Metodo extent:: Tile](reference/extent-class.md#tile) sul dominio di calcolo nel `parallel_for_each` metodo e usare un oggetto [tiled_index](../../parallel/amp/reference/tiled-index-class.md) nell'espressione lambda.
 
 Nelle applicazioni tipiche gli elementi in una sezione sono correlati in qualche modo e il codice deve accedere e tenere traccia dei valori nel riquadro. Per eseguire questa operazione, usare la parola chiave [tile_static](../../cpp/tile-static-keyword.md) keyword e il [Metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait) . Una variabile con la parola chiave **tile_static** dispone di un ambito in un intero riquadro e viene creata un'istanza della variabile per ogni sezione. È necessario gestire la sincronizzazione dell'accesso dei thread di sezione alla variabile. Il [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait) arresta l'esecuzione del thread corrente fino a quando tutti i thread nella sezione non hanno raggiunto la chiamata a `tile_barrier::wait` . È quindi possibile accumulare i valori nel riquadro usando variabili **tile_static** . Sarà quindi possibile completare tutti i calcoli che richiedono l'accesso a tutti i valori.
 
@@ -473,9 +473,9 @@ Analogamente ad altre librerie di C++, è possibile usare C++ AMP nelle app UWP.
 
 - [Uso di C++ AMP nelle app UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Procedura dettagliata: creazione di un componente Windows Runtime di base in C++ e chiamata da JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Procedura dettagliata: creazione di un componente Windows Runtime di base in C++ e chiamata da JavaScript](/previous-versions/windows/apps/hh755833(v=vs.140))
 
-- [Utilità di ottimizzazione dei viaggi di Bing mappe, un'app di Windows Store in JavaScript e C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Utilità di ottimizzazione dei viaggi di Bing mappe, un'app di Windows Store in JavaScript e C++](/previous-versions/windows/apps/hh699893(v=vs.140))
 
 - [Come usare C++ AMP da C# usando il Windows Runtime](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c-using-winrt/)
 

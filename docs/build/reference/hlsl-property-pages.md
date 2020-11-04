@@ -23,16 +23,16 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 - VC.Project.FXCompilerTool.CompileD2DCustomEffect
 - VC.Project.FXCompilerTool.MultiProcFXC
-ms.openlocfilehash: a45ae433e5adaa8aeaf32215d4af7ad0a247af04
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 629a242d3698c9c3c2d3c697298b5c6625e4768f
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606404"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344683"
 ---
 # <a name="hlsl-compiler-property-pages"></a>Pagine delle proprietà del compilatore HLSL
 
-È possibile usare le pagine delle proprietà del compilatore HLSL (fxc.exe) per configurare la compilazione dei singoli file shader HLSL. È anche possibile specificare argomenti della riga di comando per il compilatore HLSL usando la proprietà **Opzioni aggiuntive** della pagina delle proprietà della **riga di comando** . sono inclusi gli argomenti che non possono essere configurati utilizzando altre proprietà delle pagine delle proprietà HLSL. Per informazioni sul compilatore HLSL, vedere [Effect-Compiler Tool](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409) (Compilatore degli effetti)
+È possibile usare le pagine delle proprietà del compilatore HLSL (fxc.exe) per configurare la compilazione dei singoli file shader HLSL. È anche possibile specificare argomenti della riga di comando per il compilatore HLSL usando la proprietà **Opzioni aggiuntive** della pagina delle proprietà della **riga di comando** . sono inclusi gli argomenti che non possono essere configurati utilizzando altre proprietà delle pagine delle proprietà HLSL. Per informazioni sul compilatore HLSL, vedere [Effect-Compiler Tool](/windows/win32/direct3dtools/fxc) (Compilatore degli effetti)
 
 ## <a name="hlsl-general-property-page"></a>Pagina delle proprietà generale di HLSL
 
@@ -40,7 +40,7 @@ ms.locfileid: "68606404"
 
 Specifica una o più directory da aggiungere al percorso di inclusione. Usare il punto e virgola (;) come delimitatore per più percorsi. (/I [percorso])
 
-### <a name="entrypoint-name"></a>Nome del EntryPoint
+### <a name="entrypoint-name"></a>Nome del punto di ingresso
 
 Specifica il nome del punto di ingresso per lo shader (/E [nome])
 
@@ -56,13 +56,13 @@ L'argomento della riga di comando **/Od** per il compilatore HLSL applica in mod
 
 ### <a name="shader-type"></a>Tipo shader
 
-Specifica il tipo di shader. Tipi diversi di shader implementano parti diverse della pipeline grafica. Alcuni tipi di shader (specificati dalla proprietà **Modello di shader**) sono disponibili solo in modelli di shader più recenti, come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
+Specifica il tipo di shader. Tipi diversi di shader implementano parti diverse della pipeline grafica. Alcuni tipi di shader (specificati dalla proprietà **Modello di shader** ) sono disponibili solo in modelli di shader più recenti, come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
 
-Questa proprietà corrisponde alla parte **\[type** dell'argomento della riga di comando **/T \[type]_\[model]** per il compilatore HLSL. La proprietà **Modello di shader** specifica la parte dell'argomento **[model]** .
+Questa proprietà corrisponde alla parte del **\[ tipo]** dell'argomento della riga di comando **/t \[ Type] _ \[ Model]** al compilatore HLSL. La proprietà **Modello di shader** specifica la parte dell'argomento **[model]**.
 
-**Scelte**
+**Choices**
 
-- **Effect**
+- **Effetto**
 - **Vertex shader**
 - **Pixel shader**
 - **Geometry shader**
@@ -72,11 +72,11 @@ Questa proprietà corrisponde alla parte **\[type** dell'argomento della riga di
 - **Libreria**
 - **Genera oggetto firma radice**
 
-### <a name="shader-model"></a>Modello Shader
+### <a name="shader-model"></a>Modello di shader
 
-Specifica il modello di shader. I diversi modelli di shader hanno funzionalità diverse. In generale, i modelli di shader più recenti offrono funzionalità avanzate, ma richiedono componenti hardware grafici più moderni per eseguire il codice dello shader. Alcuni tipi di shader (specificati dalla proprietà **Tipo di shader**) sono disponibili solo in modelli di shader più recenti come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
+Specifica il modello di shader. I diversi modelli di shader hanno funzionalità diverse. In generale, i modelli di shader più recenti offrono funzionalità avanzate, ma richiedono componenti hardware grafici più moderni per eseguire il codice dello shader. Alcuni tipi di shader (specificati dalla proprietà **Tipo di shader** ) sono disponibili solo in modelli di shader più recenti come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
 
-Questa proprietà corrisponde alla parte **\[model]** dell'argomento della riga di comando **/T \[type]_\[model]** per il compilatore HLSL. La proprietà **Tipo di shader** specifica la parte dell'argomento **[type]** .
+Questa proprietà corrisponde alla parte del **\[ modello]** dell'argomento della riga di comando **/t \[ Type] _ \[ Model]** al compilatore HLSL. La proprietà **Tipo di shader** specifica la parte dell'argomento **[type]**.
 
 ### <a name="all-resources-bound"></a>Tutte le risorse con binding
 
@@ -84,7 +84,7 @@ Il compilatore presuppone che tutte le risorse a cui può fare riferimento uno s
 
 ### <a name="enable-unbounded-descriptor-tables"></a>Abilita tabelle descrittore senza limiti
 
-Informare il compilatore che uno shader può contenere una dichiarazione di una matrice di risorse con intervallo non associato (/enable_unbounded_descriptor_tables). Disponibile per Modello shader 5.1 e versioni successive.
+Informare il compilatore che uno shader può contenere una dichiarazione di una matrice di risorse con intervallo non vincolato (/enable_unbounded_descriptor_tables). Disponibile per Modello shader 5.1 e versioni successive.
 
 ### <a name="set-root-signature"></a>Imposta firma radice
 
@@ -120,7 +120,7 @@ Considera tutti gli avvisi del compilatore come errori. Per un nuovo progetto, p
 
 Specifica un nome per il nome della variabile nel file di intestazione (/VN [nome])
 
-### <a name="header-file-name"></a>Nome file di intestazione
+### <a name="header-file-name"></a>Nome file intestazione
 
 Specifica un nome per il file di intestazione contenente il codice oggetto. (/FH [nome])
 
@@ -132,11 +132,11 @@ Specifica un nome per il file oggetto. (/Fo [nome])
 
 Specifica il contenuto del file di output in linguaggio assembly. (/FC,/FX)
 
-**Scelte**
+**Choices**
 
 - **Nessun** elenco.
 - **Elenco solo assembly** -file di codice assembly
-- Codice dell' **assembly e** codice dell'assembly esadecimale e file di elenco esadecimale
+- Codice dell'assembly e codice dell'assembly **esadecimale** e file di elenco esadecimale
 
 ### <a name="assembler-output-file"></a>File di output assembler
 
@@ -144,6 +144,6 @@ Specifica il nome file per il file listato di codice assembly
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++riferimento alla pagina delle proprietà del progetto](property-pages-visual-cpp.md)<br>
-[Pagine delle proprietà Riga di comando](command-line-property-pages.md)<br>
-[Compiling Shaders](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409) (Compilazione di shader)
+[Riferimento alla pagina delle proprietà del progetto C++](property-pages-visual-cpp.md)<br>
+[Pagine delle proprietà della riga di comando](command-line-property-pages.md)<br>
+[Compilazione di shader](/windows/win32/direct3dhlsl/dx-graphics-hlsl-part1)
