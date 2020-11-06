@@ -1,13 +1,14 @@
 ---
 title: Proprietà del debugger (Linux C++) | Microsoft Docs
+description: Descrive le proprietà del debugger di Microsoft Visual Studio Linux C++
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: 2b55a0db001c98be72ac88c17c62b21e98ec4888
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0d43877df817f40cfd97a03c4f66730ab17138d8
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924521"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334221"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Proprietà di debug C++ (Linux C++)
 
@@ -35,5 +36,6 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Abilita pretty print Python | Abilita la pretty print di valori di espressione. Supportata solo nella modalità di debug "gdb". |
 | File di visualizzazione | File di visualizzazione nativa predefinito (con estensione natvis) contenente le direttive di visualizzazione per i tipi SLT. Gli altri file con estensione natvis che appartengono alla soluzione corrente vengono caricati automaticamente. |
 | Mapping percorsi file di origine aggiuntivi | Percorsi equivalenti aggiuntivi utilizzabili dal debugger per eseguire il mapping di nomi file di origine Windows a nomi file di origine Linux. Il formato è " \<windows-path> = \<linux-path> ;...". A un nome file di origine trovato nel percorso Windows viene fatto riferimento come se si trovasse nella stessa posizione relativa nel percorso Linux. Per i file trovati nel progetto locale non è richiesto alcun mapping aggiuntivo. |
+| Percorso GDB | **Visual studio 2019 versione 16,9** : specifica il percorso dell'eseguibile GDB che verrà usato da Visual Studio. |
 
 ::: moniker-end

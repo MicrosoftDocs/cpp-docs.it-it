@@ -1,16 +1,16 @@
 ---
 title: Come segnalare un problema con il set di strumenti di Microsoft C++
-description: Come creare una buona segnalazione di problema e le informazioni di ripro per il set di strumenti di Microsoft C.
+description: Come creare un report di problemi e informazioni di riproduzione valide per il set di strumenti di Microsoft C++.
 ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a89966b46efbef9800f3f3ddf836723bbb3b06f
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "71685700"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334247"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti o la documentazione di Microsoft C++
 
@@ -18,7 +18,7 @@ Se si riscontrano problemi con il compilatore (MSVC), il linker o altri strument
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>Come segnalare un problema con il set di strumenti C++
 
-Il modo migliore per segnalare un problema è inviare un report che include una descrizione del problema individuato. Il report dovrebbe includere tutti i dettagli del modo in cui è stato compilato il programma, oltre a includere una *riproduzione del problema*, ovvero un test case completo utilizzabile per riprodurre il problema nei computer Microsoft. Queste informazioni consentono a Microsoft di verificare rapidamente se il problema riguarda il codice e non è specifico dell'ambiente locale, nonché di determinare se influisce su altre versioni del compilatore e di diagnosticarne la causa.
+Il modo migliore per segnalare un problema è inviare un report che include una descrizione del problema individuato. Il report dovrebbe includere tutti i dettagli del modo in cui è stato compilato il programma, oltre a includere una *riproduzione del problema* , ovvero un test case completo utilizzabile per riprodurre il problema nei computer Microsoft. Queste informazioni consentono a Microsoft di verificare rapidamente se il problema riguarda il codice e non è specifico dell'ambiente locale, nonché di determinare se influisce su altre versioni del compilatore e di diagnosticarne la causa.
 
 Nelle sezioni seguenti vengono presentate le caratteristiche di un buon report. Viene descritto come generare una procedura di riproduzione per il tipo di problema individuato e come inviare il report al team di prodotto. I report sono strumenti importanti per tutti gli sviluppatori. Grazie per contribuire a migliorare Microsoft C++.
 
@@ -77,7 +77,7 @@ Per trovare facilmente queste informazioni, vedere il log di compilazione immedi
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Per segnalare i contenuti della riga di comando
 
-1. Individuare il file **CL.command.1.tlog** e aprirlo. Per impostazione predefinita, questo file \\si trova\\nella cartella Documenti nella *versione*\\\\di Visual Studio Projects*Configuration*\\*NomeProgetto*\\*NomeProgetto*\\*NomeProgetto NomeProgetto*.tlog CL.command.1.tlog o nella cartella Utente in \\\\Source Repos\\*NomeSoluzione NomeProgetto*\\*NomeProgetto*\\*Configuration*\\*NomeProgetto NomeProgetto*.tlog\\CL.command.1.tlog. Se si usa un altro sistema di compilazione o se è stato modificato il percorso predefinito per il progetto, il file può trovarsi in una posizione diversa.
+1. Individuare il file **CL.command.1.tlog** e aprirlo. Per impostazione predefinita, questo file si trova nella cartella documenti in \\ Visual Studio *Version* Projects \\ \\ *SolutionName* \\ *NomeProgetto* \\ *Configuration* \\ *NomeProgetto*. tlog \\ CL. Command. 1. tlog o nella cartella utente in \\ source \\ repository \\ *SolutionName* \\ *NomeProgetto* \\ *Configuration* \\ *NomeProgetto*. tlog \\ CL. Command. 1. tlog. Se si usa un altro sistema di compilazione o se è stato modificato il percorso predefinito per il progetto, il file può trovarsi in una posizione diversa.
 
    Il file contiene i nomi dei file del codice sorgente seguiti dagli argomenti della riga di comando usati per la compilazione, disposti su singole righe.
 
@@ -111,7 +111,7 @@ Una procedura di riproduzione esaustiva è:
 
 - **Confronto con l'ultima versione del compiler** Le procedure di riproduzione devono usare l'aggiornamento più recente dell'ultima versione del set di strumenti quando possibile. In alternativa, usare la versione provvisoria più recente dell'aggiornamento successivo o della versione principale successiva. Spesso è possibile che i problemi che si verificano ancora nelle versioni precedenti del set di strumenti siano stati risolti nelle versioni più recenti. Il backporting delle correzioni in versioni precedenti avviene solo in casi eccezionali.
 
-- **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Lo standard C++ stabilisce in definitiva la correttezza del programma e nessun compilatore è perfetto. Tuttavia, quando Clang e GCC accettano il codice senza una diagnostica e MSVC non lo accetta, probabilmente ciò indica un bug nel compilatore Microsoft. (Altre possibilità includono differenze nel comportamento di Unix e Windows, o diversi livelli di implementazione degli standard di C e così via.) Quando tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
+- **Confronto con altri compilatori** , se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Lo standard C++ stabilisce in definitiva la correttezza del programma e nessun compilatore è perfetto. Tuttavia, quando Clang e GCC accettano il codice senza una diagnostica e MSVC non lo accetta, probabilmente ciò indica un bug nel compilatore Microsoft. Altre possibilità includono differenze nel comportamento di UNIX e Windows o livelli diversi di implementazione di standard C++ e così via. Quando tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
 
    In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](https://coliru.stacked-crooked.com/).
 
@@ -314,13 +314,13 @@ Dopo aver generato i file pre-elaborati, è consigliabile verificare che il prob
 
 1. Confermare che il problema sia ancora riproducibile dal file pre-elaborato.
 
-Infine, allegare alla segnalazione i file pre-elaborati per la procedura di riproduzione (*nomefile*.i e *nomemodulo*.i) e l'output con estensione ifc.
+Infine, allegare alla segnalazione i file pre-elaborati per la procedura di riproduzione ( *nomefile*.i e *nomemodulo*.i) e l'output con estensione ifc.
 
 ### <a name="link-repros"></a>Procedure di riproduzione del collegamento
 
-Un *collegamento repro* è il contenuto generato dal linker di una directory, specificato dalla variabile di ambiente **di ripro del\_collegamento,** o come argomento dell'opzione del linker [/LINKREPRO.](../build/reference/linkrepro.md) Contiene gli artefatti della compilazione che insieme dimostrano un problema che si verifica in fase di collegamento. Ad esempio un arresto anomalo del back-end che interessa la Generazione codice in fase di collegamento (LTCG) o un arresto anomalo del linker. Questi elementi di compilazione sono quelli necessari come input del linker in modo che il problema può essere riprodotto. Un collegamento repro può essere creato facilmente utilizzando questa variabile di ambiente. Abilita la funzionalità di generazione della procedura di riproduzione predefinita del linker.
+Una procedura di *riproduzione del collegamento* è il contenuto generato dal linker di una directory, specificata dalla variabile di ambiente di **\_ ripetizione dei collegamenti** o come argomento dell'opzione del linker [/LINKREPRO](../build/reference/linkrepro.md) . Contiene gli artefatti della compilazione che insieme dimostrano un problema che si verifica in fase di collegamento. Ad esempio un arresto anomalo del back-end che interessa la Generazione codice in fase di collegamento (LTCG) o un arresto anomalo del linker. Questi elementi di compilazione sono quelli necessari come input del linker in modo che il problema possa essere riprodotto. È possibile creare facilmente una procedura di riproduzione del collegamento utilizzando questa variabile di ambiente. Abilita la funzionalità di generazione della procedura di riproduzione predefinita del linker.
 
-#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Per generare una ripro di collegamento utilizzando la variabile di ambiente link_repro
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Per generare una procedura di riproduzione del collegamento utilizzando la variabile di ambiente link_repro
 
 1. Acquisire gli argomenti della riga di comando usati per compilare la procedura di riproduzione, come descritto in [Per segnalare i contenuti della riga di comando](#to-report-the-contents-of-the-command-line).
 
@@ -328,9 +328,9 @@ Un *collegamento repro* è il contenuto generato dal linker di una directory, sp
 
 1. Nella finestra della console del prompt dei comandi per gli sviluppatori passare alla directory che contiene il progetto della procedura di riproduzione.
 
-1. Immettere **mkdir linkrepro** per creare una directory denominata *linkrepro* per il collegamento repro. È possibile utilizzare un nome diverso per acquisire un altro collegamento repro.
+1. Immettere **mkdir linkrepro** per creare una directory denominata *linkrepro* per la riproduzione del collegamento. Per acquisire un'altra ripetizione del collegamento, è possibile usare un nome diverso.
 
-1. Immettere il comando **set link\_repro=linkrepro** per impostare la variabile di ambiente **link\_repro** nella directory creata. Se la compilazione viene eseguita da una directory diversa, come spesso accade per i progetti più complessi, impostare **il\_collegamento repro** al percorso completo della directory di ripro del collegamento.
+1. Immettere il comando **set link\_repro=linkrepro** per impostare la variabile di ambiente **link\_repro** nella directory creata. Se la compilazione viene eseguita da una directory diversa, come spesso accade per progetti più complessi, impostare la riproduzione del **collegamento \_** sul percorso completo della directory di riproduzione del collegamento.
 
 1. Per compilare il progetto della procedura di riproduzione in Visual Studio, immettere il comando **devenv** nella finestra della console del prompt dei comandi per gli sviluppatori. Ciò assicura che il valore della variabile di ambiente **link\_repro** sia visibile in Visual Studio. Per compilare il progetto nella riga di comando, usare gli argomenti della riga di comando acquisiti in precedenza per duplicare la compilazione della procedura di riproduzione.
 
@@ -340,29 +340,29 @@ Un *collegamento repro* è il contenuto generato dal linker di una directory, sp
 
 1. Nella finestra della console del prompt dei comandi per gli sviluppatori immettere il comando **set link\_repro=** per cancellare la variabile di ambiente **link\_repro**.
 
-Infine, creare un pacchetto del repro comprimendo l'intera directory linkrepro in un file .zip o simile e allegarlo al report.
+Infine, creare un pacchetto per la riproduzione comprimendo l'intera directory linkrepro in un file con estensione zip o simile e alleghila al report.
 
-L'opzione del linker **/LINKREPRO** ha lo stesso effetto della variabile di ambiente **link\_repro.** È possibile utilizzare l'opzione [/LINKREPROTARGET](../build/reference/linkreprotarget.md) per specificare il nome in base al quale filtrare per il collegamento generato repro. Per utilizzare **/LINKREPROTARGET**, è inoltre necessario specificare l'opzione del linker **/OUT.**
+L'opzione del linker **/LINKREPRO** ha lo stesso effetto della variabile di ambiente di **\_ riproduzione del collegamento** . È possibile usare l'opzione [/LINKREPROTARGET](../build/reference/linkreprotarget.md) per specificare il nome da filtrare per la riproduzione del collegamento generata. Per usare **/LINKREPROTARGET** , è necessario specificare anche l'opzione **/out** del linker.
 
-#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Per generare un nuovo collegamento utilizzando l'opzione /LINKREPRO
+#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Per generare una procedura di riproduzione del collegamento utilizzando l'opzione/LINKREPRO
 
-1. Creare una directory per contenere il collegamento repro. Faremo riferimento al percorso completo della directory creato come _percorso-directory_. Racchiudere il percorso tra virgolette doppie.
+1. Creare una directory che contenga la riproduzione del collegamento. Si farà riferimento al percorso completo della directory creato come _directory-path_. Se sono inclusi spazi, utilizzare le virgolette doppie intorno al percorso.
 
-1. Aggiungere il comando **/LINKREPRO:**_percorso di directory_ alla riga di comando del linker. In Visual Studio aprire la finestra di dialogo **Pagine delle proprietà** per il progetto. Selezionare la pagina delle proprietà**Riga di comando** del**linker** >  **delle proprietà** > di configurazione. Quindi, immettere l'opzione **/LINKREPRO:**_percorso-directory_ nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
+1. Aggiungere il comando **/LINKREPRO:**_directory-path_ alla riga di comando del linker. In Visual Studio aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del **linker** proprietà di configurazione  >  **Command Line** . Quindi, immettere l'opzione **/LINKREPRO:**_directory-path_ nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
 
 1. Compilare il progetto della procedura di riproduzione e confermare che il problema previsto si è verificato.
 
-Infine, creare un pacchetto del repro comprimendo l'intera directory del percorso della _directory_ repro repro in un file .zip o simile e allegarlo al report.
+Infine, creare il pacchetto della procedura di riproduzione comprimendo l'intera directory del percorso del collegamento di _directory_ in un file con estensione zip o simile e allegarla al report.
 
 ### <a name="other-repros"></a>Altre procedure di riproduzione
 
-Se non è possibile ridurre il problema a un singolo file di origine o repro pre-elaborato e il problema non richiede un collegamento repro, è possibile esaminare un progetto IDE. Tutte le linee guida su come creare un buon rimprovero si applicaancoraancora: Il codice dovrebbe essere minimo e autonomo. Il problema dovrebbe verificarsi negli strumenti Microsoft più recenti e se rilevante, non dovrebbe comparire in altri compilatori.
+Se non è possibile ridurre il problema a un singolo file di origine o a una riproduzione pre-elaborata e il problema non richiede una procedura di riproduzione del collegamento, è possibile esaminare un progetto IDE. Si applicano tutte le indicazioni su come creare una ripetizione corretta: il codice deve essere minimo e indipendente. Il problema dovrebbe verificarsi negli strumenti Microsoft più recenti e se rilevante, non dovrebbe comparire in altri compilatori.
 
 Creare la procedura di riproduzione come progetto IDE minimo, comprimere l'intera struttura della directory in un file con estensione zip o simile e allegarla al report.
 
 ## <a name="ways-to-send-your-report"></a>Modi per inviare il report
 
-Esistono un paio di modi utili per inviare il report a Microsoft. È possibile usare lo strumento predefinito di Visual Studio [Segnala un problema ](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), o le pagine della [Community degli sviluppatori Visual Studio](https://developercommunity.visualstudio.com/). È anche disponibile il pulsante **Commenti sul prodotto** nella parte inferiore della pagina. La scelta dipende dal fatto che si desideri o meno usare gli strumenti predefiniti nell'IDE per acquisire gli screenshot e organizzare il report. Se si preferisce non usarli, è possibile usare direttamente il sito Web della community degli sviluppatori.
+Esistono un paio di modi utili per inviare il report a Microsoft. È possibile usare [lo strumento predefinito segnala un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)di Visual Studio o la pagina della [community degli sviluppatori di Visual Studio]( https://aka.ms/feedback/report?space=62) . È anche disponibile il pulsante **Commenti sul prodotto** nella parte inferiore della pagina. La scelta dipende dal fatto che si desideri o meno usare gli strumenti predefiniti nell'IDE per acquisire gli screenshot e organizzare il report. Se si preferisce non usarli, è possibile usare direttamente il sito Web della community degli sviluppatori.
 
 > [!NOTE]
 > Indipendentemente dalla modalità di invio del report, Microsoft rispetta la privacy degli utenti. Microsoft garantisce conformità a tutte le leggi che regolano la privacy dei dati. Per informazioni sul trattamento dei dati inviati a Microsoft, vedere l'[Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/privacystatement).
@@ -371,20 +371,20 @@ Esistono un paio di modi utili per inviare il report a Microsoft. È possibile u
 
 **Segnala un problema** è uno strumento di Visual Studio che consente agli utenti di segnalare i problemi con pochi clic. Viene visualizzato un modulo semplice per inviare informazioni dettagliate sul problema riscontrato. È quindi possibile inviare il report senza mai uscire dall'IDE.
 
-Segnalare il problema tramite lo strumento **Segnala un problema** dall'IDE è facile e comodo. È possibile accedervi dalla barra del titolo scegliendo l'icona **Invia commenti e suggerimenti** accanto alla casella di ricerca **Avvio veloce**. In alternativa, è possibile trovarlo sulla barra dei menu in **Guida** > **Invia commenti e suggerimenti** > **Segnala un problema**.
+Segnalare il problema tramite lo strumento **Segnala un problema** dall'IDE è facile e comodo. È possibile accedervi dalla barra del titolo scegliendo l'icona **Invia commenti e suggerimenti** accanto alla casella di ricerca **Avvio veloce**. In alternativa, è possibile trovarlo nella barra dei menu in **Guida**  >  **Invia commenti e suggerimenti**  >  **segnala un problema**.
 
 Quando si sceglie di segnalare un problema, eseguire la ricerca di problemi simili nella Community degli sviluppatori. Nel caso il problema sia stato segnalato in precedenza, votare a favore della segnalazione e aggiungere un commento con informazioni specifiche. Se non viene visualizzato un problema analogo, fare clic sul pulsante **Segnala un nuovo problema** nella parte inferiore della finestra di dialogo Commenti e suggerimenti di Visual Studio e seguire i passaggi per segnalare il problema.
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Usare le pagine della community di sviluppatori di Visual Studio
 
-Le pagine della community di sviluppatori di Visual Studio sono un altro modo pratico per segnalare problemi e trovare soluzioni per Visual Studio e il compilatore C++, strumenti e librerie. Sono disponibili pagine specifiche della community di sviluppatori per [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [Visual Studio per Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html), [Servizi Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) e [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html).
+Le pagine della community di sviluppatori di Visual Studio sono un altro modo pratico per segnalare problemi e trovare soluzioni per Visual Studio e il compilatore C++, strumenti e librerie. Sono disponibili pagine della community di sviluppatori specifiche per [Visual Studio](https://aka.ms/feedback/report?space=8), [Visual Studio per Mac](https://aka.ms/feedback/report?space=41), [.NET](https://aka.ms/feedback/report?space=61), [C++](https://aka.ms/feedback/report?space=62), [Azure DevOps](https://aka.ms/feedback/report?space=21)e [Azure DevOps server](https://aka.ms/feedback/report?space=22).
 
 Sotto le schede della community, nella parte superiore di ogni pagina, è presente una casella di ricerca. È possibile usarla per trovare i post che segnalano problemi simili ai propri. Possono già essere presenti soluzioni o altre informazioni utili relative al problema. Se un utente ha riportato lo stesso problema in precedenza, votare a favore della segnalazione e aggiungere un commento anziché procedere con una nuova segnalazione del problema. Per commentare, votare o segnalare un problema nuovo, potrebbe essere chiesto di accedere all'account di Visual Studio. Al primo accesso si dovrà accettare di concedere l'accesso al profilo personale all'app della community degli sviluppatori.
 
-Per problemi con l'uso del compilatore, del linker e altri strumenti e librerie di C++, usare la pagina relativa a [C++](https://developercommunity.visualstudio.com/spaces/62/index.html). Se un problema non è stato segnalato in precedenza, fare clic sul pulsante **Segnala un problema** accanto alla casella di ricerca. È possibile includere il codice della procedura di riproduzione e la riga di comando, screenshot, collegamenti alle discussioni correlate e qualsiasi altra informazione attinente e utile.
+Per i problemi relativi al compilatore C++, al linker e ad altri strumenti e librerie, cercare innanzitutto nella pagina della [community degli sviluppatori c++](https://aka.ms/vsfeedback/browsecpp) . Se un problema non è stato segnalato in precedenza, fare clic sul pulsante **Segnala un problema** accanto alla casella di ricerca. È possibile includere il codice della procedura di riproduzione e la riga di comando, screenshot, collegamenti alle discussioni correlate e qualsiasi altra informazione attinente e utile.
 
 > [!TIP]
-> Per altri tipi di problemi riscontrabili in Visual Studio non correlati al set di strumenti C++ (ad esempio, problemi dell'interfaccia utente, funzionalità dell'IDE interrotte o arresti anomali generali), usare lo strumento **Segnala un problema** nell'IDE. Si tratta della scelta migliore, considerate le funzionalità di screenshot e la possibilità di registrare le azioni dell'interfaccia utente che hanno portato al problema riscontrato. Questi tipi di errori possono essere cercati anche nel sito della [community degli sviluppatori](https://developercommunity.visualstudio.com/). Per ulteriori informazioni, vedere [Come segnalare un problema con Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
+> Per altri tipi di problemi riscontrabili in Visual Studio non correlati al set di strumenti C++ (ad esempio, problemi dell'interfaccia utente, funzionalità dell'IDE interrotte o arresti anomali generali), usare lo strumento **Segnala un problema** nell'IDE. Si tratta della scelta migliore, considerate le funzionalità di screenshot e la possibilità di registrare le azioni dell'interfaccia utente che hanno portato al problema riscontrato. Questi tipi di errori possono essere cercati anche nel sito della [community degli sviluppatori](https://aka.ms/feedback/report?space=8) di Visual Studio. Per ulteriori informazioni, vedere [come segnalare un problema con Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
 ### <a name="reports-and-privacy"></a>Segnalazioni e privacy
 

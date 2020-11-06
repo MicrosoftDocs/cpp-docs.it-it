@@ -1,26 +1,27 @@
 ---
-title: Cronologia delle modifiche di Visual C++ dal 2003 al 2015
+title: Cronologia delle modifiche di Microsoft C/C++ 2003-2015
+description: Tutte le modifiche di rilievo apportate in Microsoft C/C++ da Visual Studio 2003 a Visual Studio 2015 sono disponibili qui.
 ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b68d9c857db35791486dfc0c1ee02a096a8f5a0a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c444a44a7e32491783502486f1acbda464378e9c
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219469"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334107"
 ---
-# <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
+# <a name="microsoft-cc-change-history-2003---2015"></a>Cronologia delle modifiche di Microsoft C/C++ 2003-2015
 
 Questo articolo descrive tutte le modifiche di rilievo apportate in Visual Studio dalla versione 2003 alla 2015, in ordine cronologico inverso. I termini "nuovo comportamento" o "ora" fanno riferimento a Visual Studio 2015 e versioni successive. I termini "vecchio comportamento" e "prima" fanno riferimento a Visual Studio 2013 e alle versioni precedenti.
 
-Per informazioni sulla versione più recente di Visual Studio, vedere [Novità di Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) e [Miglioramenti della conformità di Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md).
+Per informazioni sulla versione più recente di Visual Studio, vedere Novità di [c++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) e [miglioramenti della conformità di C++ in Visual Studio](../overview/cpp-conformance-improvements.md).
 
 > [!NOTE]
 > Non sono state apportate modifiche binarie di rilevo tra Visual Studio 2015 e Visual Studio 2017.
 
-Quando si esegue l'aggiornamento a una nuova versione di Visual Studio, potrebbero verificarsi errori di compilazione e/o runtime nel codice precedentemente compilato ed eseguito correttamente. Le modifiche apportate alla nuova versione che provocano questi problemi sono note come *modifiche importanti*e in genere sono richieste dalle modifiche nel linguaggio C++ standard, nelle firme di funzione o nel layout degli oggetti in memoria.
+Quando si esegue l'aggiornamento a una nuova versione di Visual Studio, potrebbero verificarsi errori di compilazione e/o runtime nel codice precedentemente compilato ed eseguito correttamente. Le modifiche apportate alla nuova versione che provocano questi problemi sono note come *modifiche importanti* e in genere sono richieste dalle modifiche nel linguaggio C++ standard, nelle firme di funzione o nel layout degli oggetti in memoria.
 
 Per evitare errori di runtime difficili da rilevare e diagnosticare, è consigliabile evitare di collegarsi in modo statico a file binari compilati usando una versione diversa del compilatore. Inoltre, quando si esegue l'aggiornamento a un progetto EXE o DLL, assicurarsi di aggiornare anche le librerie collegate. Evitare di passare tipi CRT (runtime C) o C++ Standard Library (libreria di C++ standard) tra file binari (inclusi i file con estensione dll) compilati usando versioni diverse del compilatore. Per altre informazioni, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
@@ -38,13 +39,13 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 ## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Modifiche della conformità di Visual Studio 2015
 
-### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>Libreria di runtime C (CRT)
+### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> Libreria di runtime C (CRT)
 
 #### <a name="general-changes"></a>Modifiche generali
 
 - **File binari sottoposti a refactoring**
 
-   La libreria CRT è stata sottoposta a refactoring in due diversi file binari, un file Universal CRT (ucrtbase), che contiene la maggior parte delle funzionalità standard, e una libreria Runtime VC (vcruntime). La libreria con estensione vcruntime contiene le funzionalità associate al compilatore, ad esempio la gestione delle eccezioni e le funzioni intrinseche. Se si usano le impostazioni di progetto predefinite, questa modifica non ha alcun effetto perché il linker usa automaticamente le nuove librerie predefinite. Se la proprietà **Linker****Ignora tutte le librerie predefinite** del progetto è stata impostata su **Sì** o si usa l'opzione `/NODEFAULTLIB` del linker nella riga di comando, è necessario aggiornare l'elenco delle librerie (nella proprietà **Dipendenze aggiuntive**) per includere le nuove librerie sottoposte a refactoring. Sostituire la libreria CRT precedente (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) con le librerie di refactoring equivalenti. Per ognuna delle due librerie di refactoring, esistono versioni statiche (con estensione lib) e dinamiche (con estensione dll) e versioni di rilascio (senza alcun suffisso) e di debug (con il suffisso "d"). Le versioni dinamiche hanno una libreria di importazione con cui collegarsi. Le due librerie di refactoring sono Universal CRT, in particolare ucrtbase.dll o ucrtbase.lib, ucrtbased.dll o ucrtbased.lib e la libreria Runtime VC ibvcruntime.lib, vcruntime*versione*.dll, libvcruntimed.lib e vcruntimed*versione*.dll. *versione* sia in Visual Studio 2015 che in Visual Studio 2017 è 140. Vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md).
+   La libreria CRT è stata sottoposta a refactoring in due diversi file binari, un file Universal CRT (ucrtbase), che contiene la maggior parte delle funzionalità standard, e una libreria Runtime VC (vcruntime). La libreria con estensione vcruntime contiene le funzionalità associate al compilatore, ad esempio la gestione delle eccezioni e le funzioni intrinseche. Se si usano le impostazioni di progetto predefinite, questa modifica non ha alcun effetto perché il linker usa automaticamente le nuove librerie predefinite. Se la proprietà **Linker****Ignora tutte le librerie predefinite** del progetto è stata impostata su **Sì** o si usa l'opzione `/NODEFAULTLIB` del linker nella riga di comando, è necessario aggiornare l'elenco delle librerie (nella proprietà **Dipendenze aggiuntive** ) per includere le nuove librerie sottoposte a refactoring. Sostituire la libreria CRT precedente (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) con le librerie di refactoring equivalenti. Per ognuna delle due librerie di refactoring, esistono versioni statiche (con estensione lib) e dinamiche (con estensione dll) e versioni di rilascio (senza alcun suffisso) e di debug (con il suffisso "d"). Le versioni dinamiche hanno una libreria di importazione con cui collegarsi. Le due librerie di refactoring sono Universal CRT, in particolare ucrtbase.dll o ucrtbase.lib, ucrtbased.dll o ucrtbased.lib e la libreria Runtime VC ibvcruntime.lib, vcruntime *versione*.dll, libvcruntimed.lib e vcruntimed *versione*.dll. *versione* sia in Visual Studio 2015 che in Visual Studio 2017 è 140. Vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md).
 
 #### \<locale.h>
 
@@ -66,7 +67,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - **`float`** e le **`long double`** versioni di funzioni a virgola mobile,,, `acos` ,, `acosh` `asin` `asinh` `atan` `atanh` , `atan2` ,,, `cbrt` `ceil` `copysign` ,,,,,,,, `cos` ,, `cosh` `erf` `erfc` `exp` `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `lround` `modf` `nearbyint` `nextafter` `nexttoward` `remainder` `remquo` `rint` `round` `scalbln` `scalbn` `sin` `sinh` `sqrt` `tan` `tanh` `tgamma` ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, e`trunc`
+  - **`float`** e le **`long double`** versioni di funzioni a virgola mobile,,, `acos` ,, `acosh` `asin` `asinh` `atan` `atanh` , `atan2` ,,, `cbrt` `ceil` `copysign` ,,,,,,,, `cos` ,, `cosh` `erf` `erfc` `exp` `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `lround` `modf` `nearbyint` `nextafter` `nexttoward` `remainder` `remquo` `rint` `round` `scalbln` `scalbn` `sin` `sinh` `sqrt` `tan` `tanh` `tgamma` ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, e `trunc`
 
   Se si dispone di codice che usa `abs` con un tipo a virgola mobile che include solo l' \<math.h> intestazione, le versioni a virgola mobile non saranno più disponibili. La chiamata viene risolta in `abs(int)` anche con un argomento a virgola mobile, e viene generato l'errore seguente:
 
@@ -112,7 +113,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    Le definizioni di tutte le `printf` funzioni e `scanf` sono state spostate in linea in \<stdio.h> , \<conio.h> e altre intestazioni CRT. Questa modifica sostanziale genera un errore del linker (LNK2019, simbolo esterno non risolto) per tutti i programmi che hanno dichiarato localmente queste funzioni senza includere le intestazioni CRT appropriate. Se possibile, aggiornare il codice per includere le intestazioni CRT, ovvero aggiungere `#include <stdio.h>`, e le funzioni inline. Se invece non si vuole modificare il codice per includere questi file di intestazione, una soluzione alternativa consiste nell'aggiungere una libreria aggiuntiva all'input del linker legacy_stdio_definitions.lib.
 
-   Per aggiungere questa libreria all'input del linker nell'IDE, aprire il menu di scelta rapida per il nodo del progetto, scegliere **Proprietà**, quindi nella finestra di dialogo **Proprietà progetto** scegliere **Linker** e modificare l'**input del linker** per aggiungere `legacy_stdio_definitions.lib` all'elenco di valori delimitati da punto e virgola.
+   Per aggiungere questa libreria all'input del linker nell'IDE, aprire il menu di scelta rapida per il nodo del progetto, scegliere **Proprietà** , quindi nella finestra di dialogo **Proprietà progetto** scegliere **Linker** e modificare l' **input del linker** per aggiungere `legacy_stdio_definitions.lib` all'elenco di valori delimitati da punto e virgola.
 
    Se il progetto è collegato con librerie statiche compilate con una versione di Visual Studio precedente al 2015, il linker potrebbe segnalare un simbolo esterno non risolto. Questi errori potrebbero fare riferimento a definizioni interne per `_iob` , `_iob_func` o importazioni correlate per determinate \<stdio.h> funzioni sotto forma di _Imp_ \* . Microsoft consiglia di ricompilare tutte le librerie statiche con la versione più recente delle librerie e del compilatore C++ quando si aggiorna un progetto. Se la raccolta è una libreria di terze parti per cui l'origine non è disponibile, è consigliabile richiedere un aggiornamento binario da terze parti o incapsulare l'uso della libreria in una DLL separata, che deve essere compilata con la versione precedente del compilatore e delle librerie.
 
@@ -275,7 +276,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 #### \<time.h>
 
-- **clock**
+- **orologio**
 
    Nelle versioni precedenti la funzione [clock](../c-runtime-library/reference/clock.md) è stata implementata con l'API Windows [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). Con questa implementazione la funzione clock era sensibile all'ora di sistema e pertanto non era necessariamente monotonica. La funzione clock è stata reimplementata in termini di [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) ed è ora monotonica.
 
@@ -283,7 +284,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    Nelle versioni precedenti le funzioni [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) e [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) gestiscono in modo non corretto l'ora legale. Prima di Visual Studio 2013 tutte queste funzioni regolavano gli orari dell'ora solare in modo non corretto come se fossero nell'ora legale.
 
-   In Visual Studio 2013 il problema è stato corretto nella famiglia di funzioni **_stat**, ma non sono stati risolti problemi simili nelle famiglie delle funzioni **fstat** e **_utime**. Questa risoluzione parziale ha comportato problemi a causa di un'incoerenza tra le funzioni. Le famiglie delle funzioni **fstat** e **_utime** sono state corrette in modo che tutte le funzioni ora possano gestire l'ora legale in modo corretto e coerente.
+   In Visual Studio 2013 il problema è stato corretto nella famiglia di funzioni **_stat** , ma non sono stati risolti problemi simili nelle famiglie delle funzioni **fstat** e **_utime**. Questa risoluzione parziale ha comportato problemi a causa di un'incoerenza tra le funzioni. Le famiglie delle funzioni **fstat** e **_utime** sono state corrette in modo che tutte le funzioni ora possano gestire l'ora legale in modo corretto e coerente.
 
 - **asctime**
 
@@ -303,7 +304,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    La macro CLOCKS_PER_SEC ora si espande in un numero intero di tipo `clock_t`, come richiesto dal linguaggio C.
 
-#### <a name="c-standard-library"></a><a name="BK_STL"></a>Libreria standard C++
+#### <a name="c-standard-library"></a><a name="BK_STL"></a> Libreria standard C++
 
 Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Visual Studio della libreria standard C++ interrompe intenzionalmente la compatibilità binaria da una versione a quella successiva. Pertanto, se si usa la libreria standard C++, i file oggetto e le librerie statiche compilati usando versioni diverse non possono essere combinati in un file binario (EXE o DLL) e gli oggetti della libreria standard C++ non possono essere passati tra i file binari compilati usando versioni diverse. Tale combinazione genera errori del linker relativi a mancate corrispondenze di _MSC_VER. (_MSC_VER è la macro che contiene la versione principale del compilatore, ad esempio 1800 per Visual Studio 2013. Questo controllo non è in grado di rilevare la combinazione DLL e non è in grado di rilevare combinazioni che coinvolgono Visual Studio 2008 o versioni precedenti.
 
@@ -389,11 +390,11 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
 
 - **Microsoft Foundation Classes (MFC)**
 
-   Non è più incluso in un'installazione "Tipica" di Visual Studio a causa delle grandi dimensioni. Per installare MFC, scegliere l'opzione di installazione **Personalizzata** nel programma di installazione di Visual Studio 2015. Se Visual Studio 2015 è già installato, è possibile installare MFC eseguendo nuovamente il programma di installazione di **Visual Studio**. Scegliere l'opzione di installazione **Personalizzata** e quindi scegliere **Microsoft Foundation Classes**. È possibile eseguire nuovamente il programma di installazione di **Visual Studio** da **Pannello di controllo**, **Programmi e funzionalità** oppure dai supporti di installazione.
+   Non è più incluso in un'installazione "Tipica" di Visual Studio a causa delle grandi dimensioni. Per installare MFC, scegliere l'opzione di installazione **Personalizzata** nel programma di installazione di Visual Studio 2015. Se Visual Studio 2015 è già installato, è possibile installare MFC eseguendo nuovamente il programma di installazione di **Visual Studio**. Scegliere l'opzione di installazione **Personalizzata** e quindi scegliere **Microsoft Foundation Classes**. È possibile eseguire nuovamente il programma di installazione di **Visual Studio** da **Pannello di controllo** , **Programmi e funzionalità** oppure dai supporti di installazione.
 
    Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.
 
-#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>runtime di concorrenza
+#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a> runtime di concorrenza
 
 - **Macro Yield di Windows.h in conflitto con concurrency::Context::Yield**
 
@@ -411,7 +412,7 @@ In Visual Studio 2015 i miglioramenti apportati in modo costante alla conformit�
 
 Fortunatamente, queste differenze hanno un effetto minimo o nullo sulla maggior parte del codice sorgente. Quando è necessario modificare il codice sorgente o apportare altre modifiche per risolvere queste differenze, le correzioni sono in genere semplici e limitate. Sono stati inclusi numerosi esempi di codice sorgente in precedenza accettabile per cui potevano essere necessarie modifiche *(prima)* e di correzioni per la risoluzione dei problemi *(dopo)*.
 
-Benché queste differenze possano influire sul codice sorgente o altri elementi di compilazione, non influiscono sulla compatibilità binaria tra gli aggiornamenti alle versioni di Visual Studio. Una *modifica sostanziale*, molto più drastica, può influire sulla compatibilità binaria, ma le interruzioni della compatibilità binaria si verificano solo tra le versioni principali di Visual Studio, ad esempio tra Visual Studio 2013 e Visual Studio 2015. Per informazioni sulle modifiche sostanziali apportate tra Visual Studio 2013 e Visual Studio 2015, vedere [Modifiche della conformità di Visual Studio 2015](#VC_2015).
+Benché queste differenze possano influire sul codice sorgente o altri elementi di compilazione, non influiscono sulla compatibilità binaria tra gli aggiornamenti alle versioni di Visual Studio. Una *modifica sostanziale* , molto più drastica, può influire sulla compatibilità binaria, ma le interruzioni della compatibilità binaria si verificano solo tra le versioni principali di Visual Studio, ad esempio tra Visual Studio 2013 e Visual Studio 2015. Per informazioni sulle modifiche sostanziali apportate tra Visual Studio 2013 e Visual Studio 2015, vedere [Modifiche della conformità di Visual Studio 2015](#VC_2015).
 
 - [Miglioramenti della conformità in Visual Studio 2015](#VS_RTM)
 
@@ -421,7 +422,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - [Miglioramenti della conformità in Update 3](#VS_Update3)
 
-### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Miglioramenti della conformità in Visual Studio 2015
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Miglioramenti della conformità in Visual Studio 2015
 
 - /Zc:forScope- option
 
@@ -645,7 +646,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    La funzione `void operator delete(void *, size_t)` era un operatore **delete di posizionamento** corrispondente alla funzione **new di posizionamento**`void * operator new(size_t, size_t)` in C++11. Con la deallocazione con dimensione C++ 14, questa funzione Delete è ora una *funzione di deallocazione usuale* ( **`delete`** operatore globale). Lo standard richiede che, se l'uso di un operatore new cerca una funzione delete corrispondente e trova una funzione di deallocazione consueta, il programma non ha un formato corretto.
 
-   Si supponga, ad esempio, che il codice definisca un operatore **new** e **delete di posizionamento**:
+   Si supponga, ad esempio, che il codice definisca un operatore **new** e **delete di posizionamento** :
 
     ```cpp
     void * operator new(std::size_t, std::size_t);
@@ -1106,7 +1107,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Il valore letterale della stringa è una matrice costante**
 
-   Il codice seguente genera ora l'errore C2664: 'void f(void *)': impossibile convertire l'argomento 1 da 'const char (*)[2]' a 'void *'
+   Il codice seguente genera ora l'errore C2664: 'void f(void *)': impossibile convertire l'argomento 1 da 'const char (* )[2]' a 'void *'
 
     ```cpp
     void f(void *);
@@ -1215,7 +1216,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    Per correggere il codice, è possibile modificare il blocco catch in `catch (const D &)` ma, in genere, la soluzione migliore è quella di usare le macro MFC TRY/CATCH.
 
-- **`alignof`è ora una parola chiave**
+- **`alignof` è ora una parola chiave**
 
    Il codice seguente genera ora l'errore C2332: 'class': nome tag mancante. Per correggere il codice è necessario rinominare la classe o, se la classe sta eseguendo lo stesso lavoro di **`alignof`** , è sufficiente sostituire la classe con la parola chiave New.
 
@@ -1223,7 +1224,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     class alignof{}
     ```
 
-- **`constexpr`è ora una parola chiave**
+- **`constexpr` è ora una parola chiave**
 
    Il codice seguente genera ora l'errore C2059: errore di sintassi: ')'. Per correggere il codice, è necessario rinominare tutti i nomi di funzione o di variabile chiamati **`constexpr`** .
 
@@ -1496,7 +1497,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    Per correggere l'errore, in `S2` rimuovere la chiamata a `S1()` dal costruttore e, se necessario, inserirla in un'altra funzione.
 
-- **{}impedisce la conversione a puntatore**
+- **{} impedisce la conversione a puntatore**
 
    Il codice seguente genera ora l'errore C2439 'S::p': impossibile inizializzare il membro
 
@@ -1775,9 +1776,9 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    Inoltre, sebbene il compilatore non fornisca una diagnostica specifica, l'operatore inline **`new`** viene considerato in formato non valido.
 
-- **Chiamata di ' operator *Type*()' (conversione definita dall'utente) in tipi non di classe**
+- **Chiamata di ' operator *Type* ()' (conversione definita dall'utente) in tipi non di classe**
 
-   Le versioni precedenti del compilatore consentivano di chiamare 'operator *type*()' su tipi non classe ignorandolo senza avvisare. Questo comportamento precedente creava un rischio di generazione di codice errato senza avvisare, determinando un comportamento imprevedibile in fase di esecuzione. Il compilatore non accetta più il codice scritto in questo modo e genera invece l'errore del compilatore C2228.
+   Le versioni precedenti del compilatore consentivano di chiamare 'operator *type* ()' su tipi non classe ignorandolo senza avvisare. Questo comportamento precedente creava un rischio di generazione di codice errato senza avvisare, determinando un comportamento imprevedibile in fase di esecuzione. Il compilatore non accetta più il codice scritto in questo modo e genera invece l'errore del compilatore C2228.
 
     ```Output
     error C2228: left of '.operator type' must have class/struct/union
@@ -2173,7 +2174,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     warning C4720: unreachable code
     ```
 
-   In molti casi, l'avviso potrebbe essere generato solo durante la compilazione con ottimizzazioni abilitate, dal momento che le ottimizzazioni potrebbero incorporare più chiamate di funzione, eliminare il codice ridondante o altrimenti consentire di determinare che determinato codice non è eseguibile. Si è osservato che nuove istanze dell'avviso C4720 sono state generate di frequente nei blocchi **try/catch**, in special modo in relazione all'uso di [std::find](../standard-library/algorithm-functions.md#find).
+   In molti casi, l'avviso potrebbe essere generato solo durante la compilazione con ottimizzazioni abilitate, dal momento che le ottimizzazioni potrebbero incorporare più chiamate di funzione, eliminare il codice ridondante o altrimenti consentire di determinare che determinato codice non è eseguibile. Si è osservato che nuove istanze dell'avviso C4720 sono state generate di frequente nei blocchi **try/catch** , in special modo in relazione all'uso di [std::find](../standard-library/algorithm-functions.md#find).
 
    Esempio (prima)
 
@@ -2680,7 +2681,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     #include "c.h"
     ```
 
-- **File di intestazione precompilata (PCH) e directory di inclusione non corrispondenti ** (interessa solo `/Wall` `/WX`)
+- **File di intestazione precompilata (PCH) e directory di inclusione non corrispondenti** (interessa solo `/Wall` `/WX`)
 
    Le versioni precedenti del compilatore accettavano gli argomenti della riga di comando delle directory di inclusione non corrispondenti (`-I`) per il compilatore tra le compilazioni `-Yc` e `-Yu` quando venivano usati file di intestazione precompilata (PCH). Il codice scritto in questo modo non è più accettato dal compilatore. Il compilatore ora genera un avviso CC4599 per consentire l'identificazione degli argomenti della riga di comando delle directory di inclusione non corrispondenti (`-I`) quando si usano i file PCH.
 
@@ -2942,7 +2943,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
 - `reference_wrapper`, `ref()` e `cref()` ora impediscono l'associazione a oggetti temporanei.
 
-- \<random>ora applica rigorosamente le precondizioni in fase di compilazione.
+- \<random> ora applica rigorosamente le precondizioni in fase di compilazione.
 
 - Vari tratti di tipo della libreria standard C++ hanno la precondizione "T deve essere un tipo completo". Anche se ora il compilatore la applica in modo più rigido, questa precondizione non può essere applicata in tutte le situazioni. Poiché le violazioni di precondizione della libreria standard C++ attivano un comportamento non definito, lo standard non garantisce l'applicazione.
 
@@ -2952,7 +2953,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
    Come effetto collaterale di questa modifica, il case di identità non funziona più (common_type \<T> non produce sempre il tipo t). Questo comportamento è conforme alla Proposta, ma interrompe qualsiasi codice basato sul comportamento precedente.
 
-   Se è necessario un tratto di tipo identità, non usare l'elemento `std::identity` non standard definito in \<type_traits> , perché non funzionerà con \<void>. Diversamente, implementare un tratto di tipo di identità per le proprie esigenze. Ecco un esempio:
+   Se è necessario un tratto di tipo identità, non usare l'elemento `std::identity` non standard definito in \<type_traits> , perché non funzionerà con \<void>. Diversamente, implementare un tratto di tipo di identità per le proprie esigenze. Ad esempio:
 
     ```cpp
     template < typename T> struct Identity {
@@ -2962,7 +2963,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
 ### <a name="mfc-and-atl"></a>MFC e ATL
 
-- **Solo Visual Studio 2013**: la libreria MFC MBCS non è inclusa in Visual Studio perché il formato Unicode è così diffuso e l'utilizzo di MBCS è stato rifiutato in modo significativo. Questa modifica mantiene inoltre MFC più allineato a Windows SDK stesso, poiché molti dei nuovi controlli e messaggi sono solo Unicode. Tuttavia, se è necessario continuare a utilizzare la libreria MFC MBCS, è possibile scaricarla dall'area download Microsoft nella [libreria MFC multibyte per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.  Nota: la DLL MBCS è inclusa nei componenti di configurazione di C++ in Visual Studio 2015 e versioni successive.
+- **Solo Visual Studio 2013** : la libreria MFC MBCS non è inclusa in Visual Studio perché il formato Unicode è così diffuso e l'utilizzo di MBCS è stato rifiutato in modo significativo. Questa modifica mantiene inoltre MFC più allineato a Windows SDK stesso, poiché molti dei nuovi controlli e messaggi sono solo Unicode. Tuttavia, se è necessario continuare a utilizzare la libreria MFC MBCS, è possibile scaricarla dall'area download Microsoft nella [libreria MFC multibyte per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.  Nota: la DLL MBCS è inclusa nei componenti di configurazione di C++ in Visual Studio 2015 e versioni successive.
 
 - L'accessibilità per la barra multifunzione MFC è stata modificata.  Anziché un'architettura a un livello ora viene usata un'architettura gerarchica. È ancora possibile utilizzare il comportamento precedente chiamando `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3408,13 +3409,13 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Ordine di tabulazione dei controlli nelle finestre di dialogo MFC: l'ordine di tabulazione corretto di più controlli in una finestra di dialogo MFC è disturbato se un controllo ActiveX di MFC viene inserito nell'ordine di tabulazione. Questa modifica corregge il problema.
 
-   Ad esempio, creare un'applicazione di finestre di dialogo MFC che usa un controllo ActiveX e diversi controlli di modifica. Posizionare il controllo ActiveX nel mezzo dell'ordine di tabulazione dei controlli di modifica. Avviare l'applicazione, fare clic su un controllo di modifica il cui ordine di tabulazione si trova dopo il controllo ActiveX, quindi TAB. prima di questa modifica, lo stato attivo passa al controllo di modifica che segue il controllo ActiveX anziché il controllo di modifica successivo nell'ordine di tabulazione.
+   Ad esempio, creare un'applicazione di finestre di dialogo MFC che usa un controllo ActiveX e diversi controlli di modifica. Posizionare il controllo ActiveX nel mezzo dell'ordine di tabulazione dei controlli di modifica. Avviare l'applicazione, fare clic su un controllo di modifica il cui ordine di tabulazione si trova dopo il controllo ActiveX, quindi premere TAB. Prima di questa modifica, lo stato attivo passa al controllo di modifica che segue il controllo ActiveX anziché il controllo di modifica successivo nell'ordine di tabulazione.
 
-- `CFileDialog`Classe: `CFileDialog` non è possibile trasferire automaticamente i modelli personalizzati per la classe in Windows Vista. Si possono ancora usare, ma non hanno le funzionalità aggiuntive o l'aspetto delle finestre di dialogo di Windows Vista.
+- `CFileDialog` Classe: `CFileDialog` non è possibile trasferire automaticamente i modelli personalizzati per la classe in Windows Vista. Si possono ancora usare, ma non hanno le funzionalità aggiuntive o l'aspetto delle finestre di dialogo di Windows Vista.
 
 - Classe `CWnd` e classe `CFrameWnd`: il metodo `CWnd::GetMenuBarInfo` è stato rimosso.
 
-   Il metodo `CFrameWnd::GetMenuBarInfo` è ora un metodo non virtuale. Per altre informazioni, vedere la **funzione GetMenuBarInfo ** in Windows SDK.
+   Il metodo `CFrameWnd::GetMenuBarInfo` è ora un metodo non virtuale. Per altre informazioni, vedere la **funzione GetMenuBarInfo** in Windows SDK.
 
 - Supporto MFC per ISAPI: MFC non supporta più la compilazione di applicazioni con ISAPI (Internet Server Application Programming Interface). Per compilare un'applicazione ISAPI, chiamare direttamente le estensioni ISAPI.
 
@@ -3490,9 +3491,9 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Un membro dati statico non può essere inizializzato usando una classe derivata ([Errore del compilatore C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).
 
-- L'inizializzazione di un oggetto **`typedef`** non è consentita dallo standard e ora genera un errore del compilatore ([errore del compilatore C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).
+- L'inizializzazione di un oggetto **`typedef`** non è consentita dallo standard e ora genera un errore del compilatore ( [errore del compilatore C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).
 
-- **`bool`** è ora un tipo corretto ([errore del compilatore C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
+- **`bool`** è ora un tipo corretto ( [errore del compilatore C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
 
 - Un UDC ora può creare ambiguità con gli operatori di overload ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).
 

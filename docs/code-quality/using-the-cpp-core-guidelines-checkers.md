@@ -5,12 +5,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: a041ecd4053360ebfc0da198efe9a3decb73ffd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924790"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334143"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Usare i controlli delle Linee guida di base di C++
 
@@ -61,7 +61,7 @@ Un subset di regole di Regole di base di C++ è incluso nel set di regole consig
 
 1. Selezionare la pagina delle proprietà **configurazione** > **analisi codice** proprietà > **Microsoft** .
 
-1. Aprire l'elenco a discesa **regole attive** e selezionare **Scegli più set di regole** .
+1. Aprire l'elenco a discesa **regole attive** e selezionare **Scegli più set di regole**.
 
 1. Nella finestra di dialogo **Aggiungi o Rimuovi set di regole** scegliere i set di regole che si desidera includere.
 
@@ -96,7 +96,7 @@ In questo esempio vengono illustrati alcuni avvisi che le regole di Regole di ba
 
 - C26485 è associato alle regole. 3: nessun decadimento da matrice a puntatore.
 
-- C26481 è associato alle regole. 1: non usare l'aritmetica dei puntatori. In alternativa, utilizzare `span`.
+- C26481 è associato alle regole. 1: non usare l'aritmetica dei puntatori. Usare invece `span`.
 
 Installare e abilitare i set di regole di analisi del codice Regole di base di C++, quindi compilare il codice. L'analisi del codice restituisce i primi due avvisi ed evita la terza. Ecco l'output di compilazione del codice di esempio in Visual Studio 2015:
 
@@ -130,7 +130,7 @@ Quando vengono aggiunte nuove regole al controllo Linee guida di base di C++, il
 
 - **Regole enum** : queste regole applicano [i controlli correlati a enum dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
-- **Regole sperimentali** Si tratta di regole Regole di base di C++ sperimentali utili ma non pronte per l'uso quotidiano. Provarli e [fornire commenti e suggerimenti](https://developercommunity.visualstudio.com/content/idea/post.html?space=62). <sup>16,0</sup>
+- **Regole sperimentali** Si tratta di regole Regole di base di C++ sperimentali utili ma non pronte per l'uso quotidiano. Provarli e [fornire commenti e suggerimenti](https://aka.ms/feedback/suggest?space=62). <sup>16,0</sup>
 
 - **Regole di funzione** : due controlli che consentono di adottare l' **`noexcept`** identificatore. Sono parte delle linee guida per la [progettazione e l'implementazione di funzioni chiare](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
@@ -165,12 +165,12 @@ Quando vengono aggiunte nuove regole al controllo Linee guida di base di C++, il
 
 ::: moniker range="<=msvc-150"
 
-Per visualizzare i set di regole disponibili, aprire la finestra di dialogo delle **proprietà del progetto** . Nella finestra di dialogo **pagine delle proprietà** selezionare la **Configuration Properties**  >  **Code Analysis**  >  pagina delle proprietà **generale** analisi del codice delle proprietà di configurazione. Quindi, aprire l'elenco a discesa nella casella combinata **set di regole** per visualizzare i set di regole disponibili. Per compilare una combinazione personalizzata di set di regole, selezionare **Scegli più set di regole** . Nella finestra di dialogo **Aggiungi o Rimuovi set** di regole sono elencate le regole tra cui è possibile scegliere. Per ulteriori informazioni sull'utilizzo dei set di regole in Visual Studio, vedere [utilizzare set di regole per specificare le regole C++ da eseguire](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Per visualizzare i set di regole disponibili, aprire la finestra di dialogo delle **proprietà del progetto** . Nella finestra di dialogo **pagine delle proprietà** selezionare la **Configuration Properties**  >  **Code Analysis**  >  pagina delle proprietà **generale** analisi del codice delle proprietà di configurazione. Quindi, aprire l'elenco a discesa nella casella combinata **set di regole** per visualizzare i set di regole disponibili. Per compilare una combinazione personalizzata di set di regole, selezionare **Scegli più set di regole**. Nella finestra di dialogo **Aggiungi o Rimuovi set** di regole sono elencate le regole tra cui è possibile scegliere. Per ulteriori informazioni sull'utilizzo dei set di regole in Visual Studio, vedere [utilizzare set di regole per specificare le regole C++ da eseguire](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 ::: moniker range=">=msvc-160"
 
-Per visualizzare i set di regole disponibili, aprire la finestra di dialogo delle **proprietà del progetto** . Nella finestra di dialogo **pagine delle proprietà** selezionare la pagina delle proprietà **configurazione**  >  **analisi codice** proprietà  >  **Microsoft** . Quindi, aprire l'elenco a discesa nella casella combinata **regole attive** per visualizzare i set di regole disponibili. Per compilare una combinazione personalizzata di set di regole, selezionare **Scegli più set di regole** . Nella finestra di dialogo **Aggiungi o Rimuovi set** di regole sono elencate le regole tra cui è possibile scegliere. Per ulteriori informazioni sull'utilizzo dei set di regole in Visual Studio, vedere [utilizzare set di regole per specificare le regole C++ da eseguire](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Per visualizzare i set di regole disponibili, aprire la finestra di dialogo delle **proprietà del progetto** . Nella finestra di dialogo **pagine delle proprietà** selezionare la pagina delle proprietà **configurazione**  >  **analisi codice** proprietà  >  **Microsoft** . Quindi, aprire l'elenco a discesa nella casella combinata **regole attive** per visualizzare i set di regole disponibili. Per compilare una combinazione personalizzata di set di regole, selezionare **Scegli più set di regole**. Nella finestra di dialogo **Aggiungi o Rimuovi set** di regole sono elencate le regole tra cui è possibile scegliere. Per ulteriori informazioni sull'utilizzo dei set di regole in Visual Studio, vedere [utilizzare set di regole per specificare le regole C++ da eseguire](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 
@@ -224,7 +224,7 @@ Il compilatore Microsoft C++ ha un supporto limitato per l' `[[gsl::suppress]]` 
 
 Invece di #pragmas, è possibile utilizzare le opzioni della riga di comando nella pagina delle proprietà del file per non visualizzare gli avvisi relativi a un progetto o a un singolo file. Ad esempio, per disabilitare l'avviso C26400 per un file:
 
-1. Fare clic con il pulsante destro del mouse sul file in **Esplora soluzioni** e scegliere **Proprietà** .
+1. Fare clic con il pulsante destro del mouse sul file in **Esplora soluzioni** e scegliere **Proprietà**.
 
 1. Nella finestra di dialogo **pagine delle proprietà** selezionare la pagina delle proprietà proprietà di **configurazione**  >  **C/C++**  >  **riga di comando** .
 
@@ -322,7 +322,7 @@ A causa del modo in cui le regole di analisi del codice vengono caricate in Visu
 
 ### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Per aggiungere il pacchetto Microsoft. CppCoreCheck al progetto in Visual Studio 2015
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida del progetto nella soluzione a cui si desidera aggiungere il pacchetto. Scegliere **Gestisci pacchetti NuGet** per aprire **Gestione pacchetti NuGet** .
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida del progetto nella soluzione a cui si desidera aggiungere il pacchetto. Scegliere **Gestisci pacchetti NuGet** per aprire **Gestione pacchetti NuGet**.
 
 1. Nella finestra **Gestione pacchetti NuGet** cercare Microsoft. CppCoreCheck.
 
