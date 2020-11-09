@@ -10,12 +10,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 06/04/2020
-  ms.openlocfilehash: 6bfbf763e738a5c53f0b6df0b4790b762ab901f2
-  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+  ms.openlocfilehash: 487556549e382e6ce8b763229b1c037749263dc7
+  ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91509727"
+  ms.lasthandoff: 11/06/2020
+  ms.locfileid: "94334132"
 highlightedContent:
   items:
   - title: Installare Visual Studio e scegliere i carichi di lavoro di C++
@@ -182,4 +182,4 @@ additionalContent:
         url: cloud/cloud-and-web-programming-in-visual-cpp.md
       - text: Librerie della piattaforma UWP
         url: cppcx/namespaces-reference-c-cx.md
-  footer: '[Blog](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [segnalare un problema](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)contribuire alla documentazione C++: Leggere la [Guida per i collaboratori](/contribute/).'
+  footer: '[Microsoft Docs Q&A](/answers/topics/c%2B%2B.html) - [Blog del team C++](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Developer Community](https://aka.ms/vsfeedback/browsecpp) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [Come segnalare un problema](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Suggerire una funzionalità](https://aka.ms/feedback/suggest?space=62) - Contribuire alla documentazione di C++: Leggere la [Guida per i collaboratori](/contribute/).'
