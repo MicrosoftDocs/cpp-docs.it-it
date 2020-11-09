@@ -5,12 +5,12 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214945"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381597"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
 
@@ -64,7 +64,7 @@ Nel frammento di codice riportato di seguito i tipi `Coordinates` e `City` vengo
 
 ## <a name="parameter-passing-for-value-types"></a>Passaggio dei parametri per i tipi valore
 
-Se si ha un tipo valore come parametro di funzione o di metodo, normalmente viene passato per valore. Per gli oggetti di grandi dimensioni, tuttavia, questo può causare un problema di prestazioni. In Visual Studio2013 e versioni precedenti, i tipi valore in C++/CX vengono sempre passati per valore. In Visual Studio 2015 e versioni successive, è possibile passare i tipi valore per riferimento oppure per valore.
+Se si ha un tipo valore come parametro di funzione o di metodo, normalmente viene passato per valore. Per gli oggetti di grandi dimensioni, tuttavia, questo può causare un problema di prestazioni. In Visual Studio 2013 e versioni precedenti, i tipi di valore in C++/CX sono sempre passati per valore. In Visual Studio 2015 e versioni successive, è possibile passare i tipi valore per riferimento oppure per valore.
 
 Per dichiarare un parametro che passa un tipo valore per valore, usare codice simile al seguente:
 

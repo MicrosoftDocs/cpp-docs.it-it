@@ -1,6 +1,7 @@
 ---
-title: Typedef &lt;ios&gt;
-ms.date: 11/04/2016
+title: Typedef `<ios>`
+description: Descrive i typedef STL (Standard Template Library) C++ `<ios>` che supportano la `ios` classe dalla `iostream` libreria precedente.
+ms.date: 11/06/2020
 f1_keywords:
 - iosfwd/std::ios
 - iosfwd/std::streamoff
@@ -8,29 +9,28 @@ f1_keywords:
 - iosfwd/std::streamsize
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
-ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4af9636ab3317e7b81eb73dc74aef065b1287e21
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212280"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381636"
 ---
-# <a name="ltiosgt-typedefs"></a>Typedef &lt;ios&gt;
+# <a name="ios-typedefs"></a>Typedef `<ios>`
 
-## <a name="ios"></a><a name="ios"></a>iOS
+## `ios`
 
-Supporta la classe ios dalla libreria iostream precedente.
+Supporta la `ios` classe dalla libreria precedente `iostream` .
 
 ```cpp
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo è un sinonimo del modello di classe [basic_ios](../standard-library/basic-ios-class.md), specializzato per gli elementi di tipo **`char`** con tratti di carattere predefiniti.
+Il tipo è un sinonimo del modello di classe [`basic_ios`](../standard-library/basic-ios-class.md) , specializzato per gli elementi di tipo **`char`** con tratti di carattere predefiniti.
 
-## <a name="streamoff"></a><a name="streamoff"></a>streamoff
+## `streamoff`
 
 Supporta operazioni interne.
 
@@ -42,11 +42,11 @@ Supporta operazioni interne.
 #endif
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore `streamoff(-1)` indica in genere un offset errato.
+Il tipo è un intero con segno. Descrive un oggetto in grado di archiviare un offset di byte nelle operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non è necessariamente sufficientemente grande per rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore `streamoff(-1)` indica in genere un offset errato.
 
-## <a name="streampos"></a><a name="streampos"></a>streampos
+## `streampos`
 
 Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.
 
@@ -54,9 +54,9 @@ Contiene la posizione corrente del puntatore a un buffer o del puntatore a un fi
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo è un sinonimo di [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Il tipo è un sinonimo di [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Esempio
 
@@ -73,7 +73,7 @@ int main( )
    ofstream x( "iostream.txt" );
    x << "testing";
    streampos y = x.tellp( );
-   cout << y << endl;
+   cout << streamoff(y) << '\n';
 }
 ```
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>StreamSize
+## `streamsize`
 
 Denota le dimensioni del flusso.
 
@@ -93,13 +93,13 @@ Denota le dimensioni del flusso.
 #endif
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo è un intero con segno che descrive un oggetto in grado di archiviare il numero totale di elementi interessati da varie operazioni di flusso. La relativa rappresentazione contiene almeno 16 bit. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso.
+Il tipo è un intero con segno che descrive un oggetto in grado di archiviare il numero totale di elementi interessati da varie operazioni di flusso. La relativa rappresentazione contiene almeno 16 bit. Non è necessariamente sufficientemente grande per rappresentare una posizione di byte arbitraria all'interno di un flusso.
 
 ### <a name="example"></a>Esempio
 
-Dopo aver compilato ed eseguito il programma seguente, esaminare il file test.txt per visualizzare l'effetto dell'impostazione `streamsize`.
+Dopo la compilazione e l'esecuzione del programma seguente, esaminare il file `test.txt` per vedere l'effetto dell'impostazione `streamsize` .
 
 ```cpp
 // ios_streamsize.cpp
@@ -117,19 +117,19 @@ int main( )
 }
 ```
 
-## <a name="wios"></a><a name="wios"></a>wios
+## `wios`
 
-Supporta la classe wios dalla libreria iostream precedente.
+Supporta la `wios` classe dalla libreria precedente `iostream` .
 
 ```cpp
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo è un sinonimo del modello di classe [basic_ios](../standard-library/basic-ios-class.md), specializzato per gli elementi di tipo **`wchar_t`** con tratti di carattere predefiniti.
+Il tipo è un sinonimo del modello di classe [`basic_ios`](../standard-library/basic-ios-class.md) , specializzato per gli elementi di tipo **`wchar_t`** con tratti di carattere predefiniti.
 
-## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
+## `wstreampos`
 
 Contiene la posizione corrente del puntatore a un buffer o del puntatore a un file.
 
@@ -137,9 +137,9 @@ Contiene la posizione corrente del puntatore a un buffer o del puntatore a un fi
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il tipo è un sinonimo di [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Il tipo è un sinonimo di [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Esempio
 

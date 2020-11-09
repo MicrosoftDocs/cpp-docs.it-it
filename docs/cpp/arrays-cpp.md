@@ -1,17 +1,18 @@
 ---
 title: Matrici (C++)
-ms.date: 08/03/2020
+description: Informazioni su come dichiarare e usare il tipo di matrice nativo nel linguaggio di programmazione C++ standard.
+ms.date: 11/08/2020
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2a84e5db04d0a37ebd65e0d979e9b075b7c23312
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352791"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381584"
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 
@@ -44,7 +45,7 @@ In una dichiarazione di matrice C++, la dimensione della matrice viene specifica
     }
 ```
 
-Il primo elemento della matrice è l'elemento zero. L'ultimo elemento è l'elemento (*n*-1), dove *n* è il numero di elementi che la matrice può contenere. Il numero di elementi nella dichiarazione deve essere di un tipo integrale e deve essere maggiore di 0. È responsabilità dell'utente garantire che il programma non passi mai un valore all'operatore di pedice maggiore di `(size - 1)` .
+Il primo elemento della matrice è l'elemento zero. L'ultimo elemento è l'elemento ( *n* -1), dove *n* è il numero di elementi che la matrice può contenere. Il numero di elementi nella dichiarazione deve essere di un tipo integrale e deve essere maggiore di 0. È responsabilità dell'utente garantire che il programma non passi mai un valore all'operatore di pedice maggiore di `(size - 1)` .
 
 Una matrice di dimensioni zero è valida solo quando la matrice è l'ultimo campo in un oggetto **`struct`** o **`union`** e quando le estensioni Microsoft sono abilitate ( **`/Za`** o non sono **`/permissive-`** impostate).
 
@@ -136,7 +137,7 @@ Quando una matrice viene passata a una funzione, viene passata come puntatore al
 Nell'esempio seguente viene illustrata una funzione che accetta una matrice e una lunghezza. Il puntatore punta alla matrice originale, non a una copia. Poiché il parametro non è **`const`** , la funzione può modificare gli elementi della matrice.
 
 ```cpp
-void process(double p*, const size_t len)
+void process(double *p, const size_t len)
 {
     std::cout << "process:\n";
     for (size_t i = 0; i < len; ++i)
@@ -146,10 +147,10 @@ void process(double p*, const size_t len)
 }
 ```
 
-Dichiarare la matrice come const per renderla di sola lettura all'interno del blocco della funzione:
+Dichiarare e definire il parametro della matrice `p` come per impostarlo come **`const`** di sola lettura all'interno del blocco della funzione:
 
 ```cpp
-void process(const double p*, const size_t len);
+void process(const double *p, const size_t len);
 ```
 
 La stessa funzione può anche essere dichiarata in questi modi, senza alcuna modifica del comportamento. La matrice viene ancora passata come puntatore al primo elemento:
@@ -254,7 +255,7 @@ La funzione `FindMinToMkt` viene scritta in modo che l'aggiunta di nuove Factory
 
 ## <a name="initializing-arrays"></a>Inizializzazione di matrici
 
-Le matrici di oggetti che dispongono di un costruttore di classe vengono inizializzate dal costruttore. Quando sono presenti meno elementi nell'elenco di inizializzatori rispetto agli elementi nella matrice, il costruttore predefinito viene usato per gli elementi rimanenti. Se per la classe non è definito alcun costruttore predefinito, è necessario che l'elenco di inizializzatori sia *completo*, ovvero che sia presente un inizializzatore per ogni elemento nella matrice.
+Le matrici di oggetti che dispongono di un costruttore di classe vengono inizializzate dal costruttore. Quando sono presenti meno elementi nell'elenco di inizializzatori rispetto agli elementi nella matrice, il costruttore predefinito viene usato per gli elementi rimanenti. Se per la classe non è definito alcun costruttore predefinito, è necessario che l'elenco di inizializzatori sia *completo* , ovvero che sia presente un inizializzatore per ogni elemento nella matrice.
 
 Si consideri la classe `Point` che definisce due costruttori:
 
@@ -344,7 +345,7 @@ Analogamente ad altri operatori, l'operatore di indice ( `[]` ) può essere ride
 
 `*((array_name) + (subscript))`
 
-Come per tutti i tipi di puntatore, il ridimensionamento viene eseguito automaticamente per adattarsi alle dimensioni del tipo. Il valore risultante non è *n* byte dall'origine di `array_name` , bensì è l'elemento *n*della matrice. Per ulteriori informazioni su questa conversione, vedere [operatori additivi](additive-operators-plus-and.md).
+Come per tutti i tipi di puntatore, il ridimensionamento viene eseguito automaticamente per adattarsi alle dimensioni del tipo. Il valore risultante non è *n* byte dall'origine di `array_name` , bensì è l'elemento *n* della matrice. Per ulteriori informazioni su questa conversione, vedere [operatori additivi](additive-operators-plus-and.md).
 
 Analogamente, per le matrici multidimensionali, l'indirizzo viene derivato utilizzando il seguente metodo:
 
