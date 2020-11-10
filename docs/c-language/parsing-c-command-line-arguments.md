@@ -1,19 +1,21 @@
 ---
 title: Analisi di argomenti della riga di comando C
-ms.date: 11/04/2016
+description: Informazioni sul modo in cui il codice di avvio del runtime di Microsoft C interpreta gli argomenti della riga di comando per creare i parametri argv e argc.
+ms.date: 11/09/2020
 helpviewer_keywords:
 - quotation marks, command-line arguments
 - double quotation marks
+- double quote marks
 - command line, parsing
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 92921e91ee6bb37b2bf7b702a1b31ed045187b59
+ms.sourcegitcommit: b38485bb3a9d479e0c5d64ffc3d841fa2c2b366f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299091"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441255"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisi di argomenti della riga di comando C
 
@@ -23,15 +25,17 @@ Il codice di avvio C di Microsoft utilizza le regole seguenti quando interpreta 
 
 - Gli argomenti sono delimitati da spazi vuoti, ovvero da uno spazio o da una tabulazione.
 
-- Una stringa racchiusa tra virgolette doppie viene interpretata come argomento singolo, indipendentemente dalla presenza di spazi al suo interno. Una stringa tra virgolette può essere incorporata in un argomento. Si noti che il punto di**^** inserimento () non è riconosciuto come carattere di escape o delimitatore.
+- Il primo argomento ( `argv[0]` ) viene trattato in modo speciale. Rappresenta il nome del programma. Poiché deve essere un percorso valido, sono consentite le parti racchiuse tra virgolette doppie ( **`"`** ). Le virgolette doppie non sono incluse nell' `argv[0]` output. Le parti racchiuse tra virgolette doppie impediscono l'interpretazione di uno spazio o un carattere di tabulazione come fine dell'argomento. Le regole successive in questo elenco non sono valide.
 
-- Le virgolette doppie precedute da una barra rovesciata, ** \\"**, vengono interpretate come virgolette doppie (**"**).
+- Una stringa racchiusa tra virgolette doppie viene interpretata come un argomento singolo, indipendentemente dal fatto che contenga uno spazio vuoto. Una stringa tra virgolette può essere incorporata in un argomento. Il punto di inserimento ( **`^`** ) non è riconosciuto come carattere di escape o delimitatore. All'interno di una stringa tra virgolette, una coppia di virgolette doppie viene interpretata come virgolette doppie con escape singolo. Se la riga di comando termina prima che venga individuato un segno di virgolette doppie di chiusura, tutti i caratteri letti finora vengono restituiti come ultimo argomento.
 
-- Le barre rovesciate vengono interpretate letteralmente, a meno che non precedano virgolette doppie.
+- Un segno di virgolette doppie preceduto da una barra rovesciata ( **`\"`** ) viene interpretato come virgolette doppie ( **`"`** ).
 
-- Se un**\\**numero pari di barre rovesciate è seguito da virgolette doppie, viene inserita una barra rovesciata () nella `argv` matrice per ogni coppia di barre rovesciate (**\\**) e le virgolette doppie (**"**) vengono interpretate come delimitatori di stringa.
+- Le barre rovesciate vengono interpretate letteralmente, a meno che non precedano immediatamente virgolette doppie.
 
-- Se un numero dispari di barre rovesciate è seguito da virgolette doppie, viene inserita una barra**\\**rovesciata () nella `argv` matrice per ogni coppia di barre rovesciate (**\\**) e le virgolette doppie vengono interpretate come sequenza di escape dalla barra rovesciata rimanente, causando l'inserimento di virgolette doppie (**"**) letterali in `argv`.
+- Se un numero pari di barre rovesciate è seguito da un segno di virgolette doppie, viene inserita una barra rovesciata ( **`\`** ) nella `argv` matrice per ogni coppia di barre rovesciate ( **`\\`** ) e le virgolette doppie ( **`"`** ) vengono interpretate come delimitatore di stringa.
+
+- Se un numero dispari di barre rovesciate è seguito da un segno di virgolette doppie, viene inserita una barra rovesciata ( **`\`** ) nella `argv` matrice per ogni coppia di barre rovesciate ( **`\\`** ). Il segno di virgolette doppie viene interpretato come una sequenza di escape dalla barra rovesciata rimanente, causando l'inserimento di un segno di virgolette doppie ( **`"`** ) `argv` .
 
 In questo elenco vengono illustrate le regole precedenti per visualizzare il risultato interpretato come passato a `argv` per alcuni esempi di argomenti della riga di comando. L'output elencato nella seconda, terza e quarta colonna viene dal programma ARGS.C che segue l'elenco.
 
@@ -42,13 +46,13 @@ In questo elenco vengono illustrate le regole precedenti per visualizzare il ris
 |`a\\\b d"e f"g h`|`a\\\b`|`de fg`|`h`|
 |`a\\\"b c d`|`a\"b`|`c`|`d`|
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|
+|`a"b"" c d`|`ab" c d`|||
 
 ## <a name="example"></a>Esempio
 
 ### <a name="code"></a>Codice
 
 ```c
-// Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
 // argc  argv  envp
