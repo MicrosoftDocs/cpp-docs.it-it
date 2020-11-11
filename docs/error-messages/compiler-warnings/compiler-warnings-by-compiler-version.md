@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
+ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924699"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518817"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore per versione del compilatore
 
@@ -45,7 +45,7 @@ Queste versioni del compilatore hanno introdotto nuovi avvisi:
 |  Visual Studio 2019 versione 16.4 | 19.24.28314.0 |
 | Visual Studio 2019 versione 16,5 | 19.25.28610.0 |
 | Visual Studio 2019 versione 16,6 | 19.26.28805.0 |
-| Visual Studio 2019 versione 16,7 | 19.26.29112.0 |
+| Visual Studio 2019 versione 16,7 | 19.27.29112.0 |
 
 È possibile specificare solo il numero principale, i numeri principali e secondari oppure i numeri principale, secondario e Build per l' **`/Wv`** opzione. Il compilatore segnala tutti gli avvisi che corrispondono a versioni che iniziano con il numero specificato. Elimina tutti gli avvisi per le versioni successive al numero specificato. Ad esempio, **`/Wv:17`** segnala gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 e Elimina gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versioni successive. Per non visualizzare gli avvisi introdotti in Visual Studio 2015 Update 2 e versioni successive, è possibile usare **`/Wv:19.00.23506`** . Usare **`/Wv:19.11`** per segnalare gli avvisi introdotti in qualsiasi versione di Visual Studio precedente a Visual studio 2017 versione 15,5, ma non visualizzare gli avvisi introdotti in Visual studio 2017 versione 15,5 e successive.
 
@@ -57,7 +57,7 @@ Le sezioni seguenti elencano gli avvisi introdotti da ogni versione di Visual C+
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.26`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
 | C5209 | `the C++20 syntax for an init-capture has changed to '& ...opt identifier initializer'` |
@@ -77,7 +77,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.25`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
 | C5208 | `unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes` |
@@ -86,7 +86,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.24`** .
 
-|Avviso|Message|
+|Avviso|Messaggio|
 |-|-|
 | C5061 | `the use of a comma operator as a subscript expression has been deprecated` |
 | C5062 | `enum direct list initialization between 'type-1' and 'type-2' is no longer supported` |
@@ -100,7 +100,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.23`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | Avviso equivalente a C2429 per le funzionalità del linguaggio
 | C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
@@ -111,7 +111,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.22`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4856 | `'value' is not a valid argument for '/d1initAll:FillPattern' (value must be between 0 and 255). Command-line flag ignored` |
 | C4857 | `C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17` |
@@ -120,7 +120,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.21`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4855 | `implicit capture of 'this' via '[=]' is deprecated in 'version'` |
 | C5054 | `operator 'operator-name': deprecated between enumerations of different types` |
@@ -135,7 +135,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.20`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C5052 | `Keyword 'keyword-name' was introduced in C++<version> and requires use of the 'option-name' command-line option` |
 | C5053 | `support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension` |
@@ -144,7 +144,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.15`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
 | C4854 | `binding dereferenced null pointer to reference has undefined behavior` |
@@ -157,7 +157,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.14`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
 | C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
@@ -183,7 +183,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.13`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
@@ -192,7 +192,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.12`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
@@ -200,7 +200,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.11`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
 | C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
@@ -214,7 +214,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.10`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4597 | `undefined behavior: description` |
 | C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
@@ -236,7 +236,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
 | C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
@@ -249,7 +249,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00.23918`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4467 | `usage of ATL attributes is deprecated` |
 | C4596 | `'name': illegal qualified name in member declaration` |
@@ -260,7 +260,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00.23506`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4466 | `Could not perform coroutine heap elision` |
 | C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
@@ -271,7 +271,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:19.00.23026`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
 | C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
@@ -282,7 +282,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:18`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4427 | `'error': overflow in constant division, undefined behavior` |
 | C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
@@ -341,7 +341,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:17`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
 | C4316 | `'type': object allocated on the heap may not be aligned number` |
@@ -370,7 +370,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:16`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4330 | `attribute 'attribute' for section 'section' ignored` |
 | C4415 | `duplicate __declspec(code_seg('name'))` |
@@ -413,7 +413,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:15`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4352 | `'name': intrinsic function already defined` |
 | C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
@@ -429,7 +429,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:14`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
 | C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
@@ -444,7 +444,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:13`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
 | C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
@@ -587,7 +587,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:13.00.9466`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4343 | `#pragma optimize(description,off) overrides /Og option` |
 | C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
@@ -623,7 +623,7 @@ Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati uti
 
 Questi avvisi e tutti gli avvisi nelle versioni successive vengono eliminati utilizzando l'opzione del compilatore **`/Wv:12`** .
 
-| Avviso | Message |
+| Avviso | Messaggio |
 |--|--|
 | C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
 | C4097 | `expected pragma parameter to be 'restore' or 'off'` |
