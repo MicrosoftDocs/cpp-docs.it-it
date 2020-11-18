@@ -34,7 +34,7 @@ In questa procedura dettagliata vengono illustrate le seguenti attività:
 
 Analogamente a una libreria collegata in modo statico, una DLL _Esporta_ variabili, funzioni e risorse in base al nome. Un'app client _Importa_ i nomi per usare tali variabili, funzioni e risorse. Diversamente da una libreria collegata staticamente, Windows connette le importazioni nell'app alle esportazioni in una DLL in fase di caricamento o in fase di esecuzione, invece di farlo in fase di collegamento. Windows richiede informazioni aggiuntive che non fanno parte del modello di compilazione C++ standard per stabilire queste connessioni. Il compilatore MSVC implementa alcune estensioni specifiche di Microsoft per C++ per fornire queste informazioni aggiuntive. Queste estensioni verranno presentate man mano che si procede.
 
-Questa procedura dettagliata crea due soluzioni di Visual Studio: una che compila la DLL e una che compila l'app client. La DLL usa la convenzione di chiamata C. Può essere chiamato da app scritte in altri linguaggi di programmazione, a condizione che la piattaforma, le convenzioni di chiamata e le convenzioni di collegamento corrispondano. L'app client usa il _collegamento implicito_ , mentre Windows collega l'app alla DLL in fase di caricamento. Questo collegamento consente all'app di chiamare le funzioni fornite dalla DLL proprio come le funzioni in una libreria collegata staticamente.
+Questa procedura dettagliata crea due soluzioni di Visual Studio: una che compila la DLL e una che compila l'app client. La DLL usa la convenzione di chiamata C. Può essere chiamato da app scritte in altri linguaggi di programmazione, a condizione che la piattaforma, le convenzioni di chiamata e le convenzioni di collegamento corrispondano. L'app client usa il _collegamento implicito_, mentre Windows collega l'app alla DLL in fase di caricamento. Questo collegamento consente all'app di chiamare le funzioni fornite dalla DLL proprio come le funzioni in una libreria collegata staticamente.
 
 Questa procedura dettagliata non tratta alcune situazioni comuni. Il codice non Mostra l'uso di dll C++ da parte di altri linguaggi di programmazione. Non viene illustrato come [creare una DLL di sole risorse](creating-a-resource-only-dll.md)o come utilizzare il [collegamento esplicito](linking-an-executable-to-a-dll.md#linking-explicitly) per caricare le dll in fase di esecuzione anziché in fase di caricamento. Se si è certi, è possibile usare MSVC e Visual Studio per eseguire tutte queste operazioni.
 
@@ -81,9 +81,9 @@ In questo set di attività, si crea un progetto per la DLL, quindi si aggiunge c
 
    ![Creare un nuovo progetto di DLL](media/create-new-dll-project-2019.png "Creare il progetto MathLibrary")
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Libreria**.
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++**, impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Libreria**.
 
-1. Dall'elenco filtrato dei tipi di progetto selezionare **libreria a collegamento dinamico (dll)** , quindi fare clic su **Avanti**.
+1. Dall'elenco filtrato dei tipi di progetto selezionare **libreria a collegamento dinamico (dll)**, quindi fare clic su **Avanti**.
 
 1. Nella pagina **Configura nuovo progetto** immettere *MathLibrary* nella casella **nome progetto** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Deselezionare **posiziona soluzione e progetto nella stessa directory** se è selezionata.
 
@@ -119,7 +119,7 @@ Quando viene creata la soluzione, è possibile visualizzare i file di progetto e
 
 1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto**.
 
-1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** espandere **Installati** > **Modelli** e selezionare **Visual C++** , quindi nel riquadro centrale selezionare **Applicazione console Win32**. Immettere *MathLibrary* nella casella di modifica **nome** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
+1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** espandere **Installati** > **Modelli** e selezionare **Visual C++**, quindi nel riquadro centrale selezionare **Applicazione console Win32**. Immettere *MathLibrary* nella casella di modifica **nome** per specificare un nome per il progetto. Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
    ![Screenshot della finestra di dialogo nuovo progetto di Visual Studio 2015 che mostra la libreria Math nella casella di testo nome.](media/mathlibrary-project-name.png "Assegnare un nome al progetto MathLibrary")
 
@@ -127,7 +127,7 @@ Quando viene creata la soluzione, è possibile visualizzare i file di progetto e
 
    ![Panoramica della creazione guidata applicazione Win32](media/mathlibrary-project-wizard-1.png "Panoramica della creazione guidata applicazione Win32")
 
-1. Fare clic su **Avanti**. Nella pagina **Impostazioni applicazione** , in **Tipo di applicazione** , selezionare **DLL**.
+1. Fare clic su **Avanti**. Nella pagina **Impostazioni applicazione**, in **Tipo di applicazione**, selezionare **DLL**.
 
    ![Creazione di DLL nella creazione guidata applicazione Win32](media/mathlibrary-project-wizard-2.png "Creazione di DLL nella creazione guidata applicazione Win32")
 
@@ -194,15 +194,15 @@ A questo punto la DLL non fa molto. Successivamente, verrà creato un file di in
 
 Questo file di intestazione dichiara alcune funzioni per produrre una sequenza di Fibonacci generalizzata, dati due valori iniziali. Una chiamata a `fibonacci_init(1, 1)` genera la familiare sequenza di Fibonacci.
 
-Si notino le istruzioni del preprocessore nella parte superiore del file. Il nuovo modello di progetto per un progetto di DLL aggiunge **_NomeProgetto_ &#95;le esportazioni** alle macro del preprocessore definite. In questo esempio, Visual Studio definisce **MATHLIBRARY&#95;EXPORTS** quando viene compilato il progetto di DLL MathLibrary.
+Si notino le istruzioni del preprocessore nella parte superiore del file. Il nuovo modello di progetto per un progetto di DLL aggiunge **_NomeProgetto_&#95;le esportazioni** alle macro del preprocessore definite. In questo esempio, Visual Studio definisce **MATHLIBRARY&#95;EXPORTS** quando viene compilato il progetto di DLL MathLibrary.
 
-Quando viene definita la macro **MATHLIBRARY&#95;EXPORTS** , la macro **MATHLIBRARY&#95;API** imposta il modificatore `__declspec(dllexport)` sulle dichiarazioni di funzione. Questo modificatore indica al compilatore e al linker di esportare una funzione o una variabile dalla DLL per l'uso da parte di altre applicazioni. Quando **MATHLIBRARY&#95;EXPORTS** non è definito, ad esempio, quando il file di intestazione viene incluso da un'applicazione client, **MATHLIBRARY&#95;API** applica il modificatore `__declspec(dllimport)` alle dichiarazioni. Questo modificatore ottimizza l'importazione della funzione o della variabile in un'applicazione. Per altre informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Quando viene definita la macro **MATHLIBRARY&#95;EXPORTS**, la macro **MATHLIBRARY&#95;API** imposta il modificatore `__declspec(dllexport)` sulle dichiarazioni di funzione. Questo modificatore indica al compilatore e al linker di esportare una funzione o una variabile dalla DLL per l'uso da parte di altre applicazioni. Quando **MATHLIBRARY&#95;EXPORTS** non è definito, ad esempio, quando il file di intestazione viene incluso da un'applicazione client, **MATHLIBRARY&#95;API** applica il modificatore `__declspec(dllimport)` alle dichiarazioni. Questo modificatore ottimizza l'importazione della funzione o della variabile in un'applicazione. Per altre informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Per aggiungere un'implementazione alla DLL
 
 ::: moniker range=">=msvc-160"
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **file di origine** e scegliere **Aggiungi**  >  **nuovo elemento**. Creare un nuovo file con estensione cpp denominato *MathLibrary. cpp* , nello stesso modo in cui è stato aggiunto un nuovo file di intestazione nel passaggio precedente.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **file di origine** e scegliere **Aggiungi**  >  **nuovo elemento**. Creare un nuovo file con estensione cpp denominato *MathLibrary. cpp*, nello stesso modo in cui è stato aggiunto un nuovo file di intestazione nel passaggio precedente.
 
 1. Nella finestra dell'editor selezionare la scheda **MathLibrary.cpp** se è già aperta. In caso contrario, in **Esplora soluzioni** fare doppio clic su **MathLibrary. cpp** nella cartella **file di origine** del progetto **MathLibrary** per aprirlo.
 
@@ -387,7 +387,7 @@ Congratulazioni, è stata creata una DLL con Visual Studio. Nella prossima sezio
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>Creare un'app client che usa la DLL
 
-Quando si crea una DLL, si pensi a come può essere usata dalle app client. Per chiamare le funzioni o accedere ai dati esportati da una DLL, il codice sorgente del client deve disporre delle dichiarazioni disponibili in fase di compilazione. Al momento del collegamento, il linker richiede informazioni per risolvere le chiamate di funzione o gli accessi ai dati. Una DLL fornisce queste informazioni in una *libreria di importazione* , un file che contiene informazioni su come trovare le funzioni e i dati, anziché il codice effettivo. E in fase di esecuzione la DLL deve essere disponibile per il client, in una posizione individuabile dal sistema operativo.
+Quando si crea una DLL, si pensi a come può essere usata dalle app client. Per chiamare le funzioni o accedere ai dati esportati da una DLL, il codice sorgente del client deve disporre delle dichiarazioni disponibili in fase di compilazione. Al momento del collegamento, il linker richiede informazioni per risolvere le chiamate di funzione o gli accessi ai dati. Una DLL fornisce queste informazioni in una *libreria di importazione*, un file che contiene informazioni su come trovare le funzioni e i dati, anziché il codice effettivo. E in fase di esecuzione la DLL deve essere disponibile per il client, in una posizione individuabile dal sistema operativo.
 
 Che si tratti di un utente o di terze parti, il progetto di app client necessita di diverse informazioni per l'uso di una DLL. È necessario trovare le intestazioni che dichiarano le esportazioni DLL, le librerie di importazione per il linker e la DLL. Una soluzione consiste nel copiare tutti questi file nel progetto client. Per le DLL di terze parti che è improbabile vengano modificate durante lo sviluppo del client, questo metodo può rappresentare il modo migliore per usarle. Tuttavia, quando si crea anche la DLL, è preferibile evitare la duplicazione. Se si crea una copia locale di file DLL in fase di sviluppo, è possibile modificare accidentalmente un file di intestazione in una copia ma non in un'altra oppure utilizzare una libreria non aggiornata.
 
@@ -399,7 +399,7 @@ Per evitare codice non sincronizzato, è consigliabile impostare il percorso di 
 
 1. Sulla barra dei menu scegliere **file** > **nuovo** > **progetto** per aprire la finestra di dialogo **Crea un nuovo progetto** .
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++**, impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
 
 1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**.
 
@@ -419,7 +419,7 @@ Viene creato automaticamente un progetto di applicazione console minimo. Il nome
 
 1. Per creare un'app C++ che usa la DLL creata, nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
 
-1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** selezionare **Desktop di Windows** in **Installati** > **Visual C++**. Nel riquadro centrale selezionare **applicazione console di Windows**. Specificare il nome del progetto, *MathClient* , nella casella di modifica **nome** .  Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
+1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** selezionare **Desktop di Windows** in **Installati** > **Visual C++**. Nel riquadro centrale selezionare **applicazione console di Windows**. Specificare il nome del progetto, *MathClient*, nella casella di modifica **nome** .  Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
    ![Screenshot della finestra di dialogo nuovo progetto con installato > Visual C Plus Plus > desktop di Windows selezionato, l'applicazione console Windows evidenziata e il client Math digitato nella casella di testo nome.](media/mathclient-new-project-name-159.png "Assegnare un nome al progetto client")
 
@@ -435,7 +435,7 @@ Viene creato automaticamente un progetto di applicazione console minimo. Il nome
 
 1. Per creare un'app C++ che usa la DLL creata, nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
 
-1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** selezionare **Win32** in **Installati** > **Modelli** > **Visual C++**. Nel riquadro centrale, selezionare **Progetto console Win32**. Specificare il nome del progetto, *MathClient* , nella casella di modifica **nome** . Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
+1. Nel riquadro sinistro della finestra di dialogo **Nuovo progetto** selezionare **Win32** in **Installati** > **Modelli** > **Visual C++**. Nel riquadro centrale, selezionare **Progetto console Win32**. Specificare il nome del progetto, *MathClient*, nella casella di modifica **nome** . Lasciare i valori predefiniti per **percorso** e **Nome soluzione** . Impostare la **soluzione** per **creare una nuova soluzione**. Selezionare **Crea directory per soluzione** se è deselezionata.
 
    ![Screenshot della finestra di dialogo nuovo progetto con i modelli di > installati > Visual C Plus Plus > Win32 selezionato, l'applicazione console Win32 Visual C Plus Plus evidenziato e il client Math digitato nella casella di testo nome.](media/mathclient-project-name.png "Assegnare un nome al progetto client")
 
@@ -465,7 +465,7 @@ Successivamente, per chiamare le funzioni MathLibrary nel codice sorgente, il pr
 
 1. Fare doppio clic nel riquadro superiore della finestra di dialogo **Directory di inclusione aggiuntive** per abilitare un controllo di modifica. In alternativa, scegliere l'icona della cartella per creare una nuova voce.
 
-1. Nel controllo di modifica specificare il percorso del file di intestazione **MathLibrary.h**. È possibile scegliere il controllo con i puntini di sospensione ( **...** ) per passare alla cartella corretta.
+1. Nel controllo di modifica specificare il percorso del file di intestazione **MathLibrary.h**. È possibile scegliere il controllo con i puntini di sospensione (**...**) per passare alla cartella corretta.
 
    È anche possibile immettere un percorso relativo dai file di origine client alla cartella che contiene i file di intestazione della DLL. Se sono state seguite le istruzioni per inserire il progetto client in una soluzione separata dalla DLL, il percorso relativo dovrebbe essere simile al seguente:
 
