@@ -1,18 +1,19 @@
 ---
 title: 'Procedura dettagliata: creare e usare la propria libreria a collegamento dinamico (C++)'
 description: Usare C++ per creare una libreria di collegamento dinamico (DLL) di Windows in Visual Studio.
-ms.custom: conceptual
+ms.custom:
+- walkthrough
+- contperfq2
 ms.date: 08/22/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
-ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 0018df31e19a3f1a68a1c4a0bde37d6fa2678406
-ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
+ms.openlocfilehash: ca9aebd7103d36918940e52638b3c2cb52612c25
+ms.sourcegitcommit: 43a6ff739516dff62fee521d401eb4b1201cea8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92924476"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870688"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: creare e usare la propria libreria a collegamento dinamico (C++)
 
