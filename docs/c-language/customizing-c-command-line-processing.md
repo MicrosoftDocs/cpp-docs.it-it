@@ -1,6 +1,7 @@
 ---
 title: Personalizzazione dell'elaborazione dalla riga di comando C
-ms.date: 11/04/2016
+description: Come disattivare `main` l'argomento della funzione e la gestione dei parametri di ambiente nel codice di avvio del runtime.
+ms.date: 11/19/2020
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -11,22 +12,24 @@ helpviewer_keywords:
 - command line, processing arguments
 - suppressing environment processing
 - _exec function
-ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc306172491cd401caeecb3c87c0711f8b4ef911
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290689"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483295"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizzazione dell'elaborazione dalla riga di comando C
 
-Se il programma non accetta argomenti della riga di comando, è possibile salvare una piccola quantità di spazio eliminando l'utilizzo della routine di libreria che esegue l'elaborazione della riga di comando. Questa routine viene chiamata **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide), come descritto in [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md). Per eliminarne l'uso, definire una routine che non esegue alcuna operazione nel file che contiene la funzione **main** e denominarla **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide). La chiamata a **_setargv** o a **_wsetargv** viene soddisfatta dalla definizione di **_setargv** o **_wsetargv** creata e la versione di libreria non viene caricata.
+Se il programma non accetta argomenti della riga di comando, è possibile disattivare la routine di elaborazione da riga di comando per salvare una piccola quantità di spazio. Per evitarne l'uso, includere il *`noarg.obj`* file (per `main` e `wmain` ) nelle **`/link`** Opzioni del compilatore o nella **`LINK`** riga di comando.
 
-Analogamente, se non si accede mai alla tabella dell'ambiente tramite l'argomento `envp`, è possibile fornire una propria routine vuota da usare invece di **_setenvp** (o **_wsetenvp**), la routine di ambiente-elaborazione.
+Analogamente, se non si accede mai alla tabella dell'ambiente tramite l' *`envp`* argomento, è possibile disattivare la routine interna di elaborazione dell'ambiente. Per evitarne l'uso, includere il *`noenv.obj`* file (per `main` e `wmain` ) nelle **`/link`** Opzioni del compilatore o nella **`LINK`** riga di comando.
 
-Se il programma effettua chiamate alla famiglia di routine **_exec** o **_spawn** nella libreria run-time del linguaggio C, non si deve eliminare la routine di ambiente-elaborazione, poiché questa procedura viene usata per passare un ambiente dal processo di generazione al nuovo processo.
+Per altre informazioni sulle opzioni del linker di avvio runtime, vedere [Opzioni di collegamento](../c-runtime-library/link-options.md).
+
+Il programma potrebbe effettuare chiamate alla `spawn` `exec` famiglia di routine o nella libreria di runtime C. In tal caso, non è necessario disattivare la routine di elaborazione dell'ambiente, perché viene usata per passare un ambiente dal processo padre al processo figlio.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Funzione principale ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)
+[`main` esecuzione di funzioni e programmi](../c-language/main-function-and-program-execution.md)\
+[Opzioni di collegamento](../c-runtime-library/link-options.md).
