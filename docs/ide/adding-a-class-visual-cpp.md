@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
 ms.openlocfilehash: b1c64505a63b8720ed7aee855f2bbbbdb9134e28
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505978"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188835"
 ---
 # <a name="add-a-class"></a>Aggiungere una classe
 

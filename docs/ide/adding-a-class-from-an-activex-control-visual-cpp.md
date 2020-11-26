@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
 ms.openlocfilehash: d63f73e17e47f2cabb8f1a55c71325ec7068a2c8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500371"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188926"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Aggiungere una classe da un controllo ActiveX
 
@@ -54,7 +54,7 @@ Usare questa procedura guidata per aggiungere una classe MFC da un controllo Act
 
   Specifica il percorso della libreria dei tipi da cui viene creata la classe.
 
-  |Opzione|Descrizione|
+  |Opzione|Description|
   |------------|-----------------|
   |**Registro**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
   |**File**|La libreria dei tipi non è necessariamente registrata nel sistema, ma è archiviata in un file. Specificare il percorso del file in **Percorso**.|
@@ -75,7 +75,7 @@ Usare questa procedura guidata per aggiungere una classe MFC da un controllo Act
 
   Specifica le interfacce nel controllo ActiveX. La procedura guidata usa le interfacce della selezione corrente di **Controlli ActiveX disponibili** o le interfacce del file della libreria dei tipi specificato in **Percorso**.
 
-  |Pulsante di trasferimento|Descrizione|
+  |Pulsante di trasferimento|Description|
   |---------------------|-----------------|
   |**>**|Aggiunge l'interfaccia selezionata nell'elenco **Interfacce**. Non disponibile se non è selezionata alcuna interfaccia.|
   |**>>**|Aggiunge tutte le interfacce nel controllo ActiveX. La procedura guidata usa le interfacce della selezione corrente di **Controlli ActiveX disponibili** o le interfacce del file della libreria dei tipi specificato in **Percorso**.|
