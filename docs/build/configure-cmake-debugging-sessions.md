@@ -4,12 +4,12 @@ description: Viene descritto come usare Visual Studio per configurare le imposta
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: a790e26e5bf3980ffb81a3ba778577afacff95b4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922231"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440304"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurare le sessioni di debug di CMake
 
@@ -21,7 +21,7 @@ Il supporto di CMake nativo è disponibile in Visual Studio 2017 e versioni succ
 
 ::: moniker range=">=msvc-150"
 
-Tutte le destinazioni CMake eseguibili sono visualizzate nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale** . Selezionarne uno per avviare una sessione di debug e avviare il debugger.
+Tutte le destinazioni CMake eseguibili sono visualizzate nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale**. Selezionarne uno per avviare una sessione di debug e avviare il debugger.
 
 ![Elenco a discesa di elementi di avvio CMake](media/cmake-startup-item-dropdown.png "Elenco a discesa di elementi di avvio CMake")
 
@@ -29,11 +29,11 @@ Tutte le destinazioni CMake eseguibili sono visualizzate nell'elenco a discesa *
 
 ![Pulsante Visualizzazione destinazioni CMake](media/cmake-targets-view.png  "Voce di menu visualizzazione destinazioni CMake")
 
-Quindi, fare clic con il pulsante destro del mouse su un eseguibile e scegliere **debug** . Questo comando avvia automaticamente il debug della destinazione selezionata in base alla configurazione attiva.
+Quindi, fare clic con il pulsante destro del mouse su un eseguibile e scegliere **debug**. Questo comando avvia automaticamente il debug della destinazione selezionata in base alla configurazione attiva.
 
 ## <a name="customize-debugger-settings"></a>Personalizzare le impostazioni del debugger
 
-È possibile personalizzare le impostazioni del debugger per qualsiasi destinazione CMake eseguibile nel progetto. Si trovano in un file di configurazione denominato *launch.vs.json* , che si trova in una *`.vs`* cartella nella radice del progetto. Un file di configurazione di avvio è utile nella maggior parte degli scenari di debug, perché è possibile configurare e salvare i dettagli di configurazione del debug. Il file contiene tre punti di ingresso:
+È possibile personalizzare le impostazioni del debugger per qualsiasi destinazione CMake eseguibile nel progetto. Si trovano in un file di configurazione denominato *launch.vs.json*, che si trova in una *`.vs`* cartella nella radice del progetto. Un file di configurazione di avvio è utile nella maggior parte degli scenari di debug, perché è possibile configurare e salvare i dettagli di configurazione del debug. Il file contiene tre punti di ingresso:
 
 - **Menu debug:** Selezionare **debug > debug e avviare le impostazioni per $ {activeDebugTarget}** dal menu principale per personalizzare la configurazione di debug specifica per la destinazione di debug attiva. Se la destinazione di debug non è selezionata, questa opzione è disabilitata.
 
@@ -51,12 +51,11 @@ Quindi, fare clic con il pulsante destro del mouse su un eseguibile e scegliere 
 
 ## <a name="reference-keys-in-cmakesettingsjson"></a>Chiavi di riferimento in CMakeSettings.js
 
-Per fare riferimento a qualsiasi chiave in una *CMakeSettings.js* nel file, anteporre `cmake.` a tale chiave *launch.vs.jssu* . Nell'esempio seguente viene illustrato un semplice *launch.vs.jssu* file che esegue il pull del valore della `remoteCopySources` chiave nella *CMakeSettings.jssu* file per la configurazione attualmente selezionata:
+Per fare riferimento a qualsiasi chiave in una *CMakeSettings.js* nel file, anteporre `cmake.` a tale chiave *launch.vs.jssu*. Nell'esempio seguente viene illustrato un semplice *launch.vs.jssu* file che esegue il pull del valore della `remoteCopySources` chiave nella *CMakeSettings.jssu* file per la configurazione attualmente selezionata:
 
 ```json
 {
   "version": "0.2.1",
-  "defaults": {},
   "configurations": [
     {
       "type": "default",
@@ -69,13 +68,13 @@ Per fare riferimento a qualsiasi chiave in una *CMakeSettings.js* nel file, ante
 }
 ```
 
-Le **variabili di ambiente** definite in *CMakeSettings.json* possono essere utilizzate anche in launch.vs.jsutilizzando la sintassi `${env.VARIABLE_NAME}` . In Visual Studio 2019 versione 16,4 e successive, le destinazioni di debug vengono avviate automaticamente usando l'ambiente specificato in *CMakeSettings.js* . È possibile annullare una variabile di ambiente impostando il **valore su null** .
+Le **variabili di ambiente** definite in *CMakeSettings.json* possono essere utilizzate anche in launch.vs.jsutilizzando la sintassi `${env.VARIABLE_NAME}` . In Visual Studio 2019 versione 16,4 e successive, le destinazioni di debug vengono avviate automaticamente usando l'ambiente specificato in *CMakeSettings.js*. È possibile annullare una variabile di ambiente impostando il **valore su null**.
 
 ## <a name="launchvsjson-reference"></a>Launch.vs.jsper riferimento
 
 Sono disponibili molte *launch.vs.jssulle* proprietà per supportare tutti gli scenari di debug. Le proprietà seguenti sono comuni a tutte le configurazioni di debug, sia remote che locali:
 
-- `projectTarget`: Specifica la destinazione CMake da richiamare durante la compilazione del progetto. Questa proprietà viene popolata automaticamente da Visual Studio se si immette *launch.vs.js* dal **menu debug** o dalla **visualizzazione destinazioni** . Questo valore deve corrispondere al nome di una destinazione di debug esistente elencata nell'elenco a discesa **elemento di avvio** .
+- `projectTarget`: Specifica la destinazione CMake da richiamare durante la compilazione del progetto. Questa proprietà viene popolata automaticamente da Visual Studio se si immette *launch.vs.js* dal **menu debug** o dalla **visualizzazione destinazioni**. Questo valore deve corrispondere al nome di una destinazione di debug esistente elencata nell'elenco a discesa **elemento di avvio** .
 
 - `env`: Variabili di ambiente aggiuntive da aggiungere usando la sintassi:
 
@@ -96,10 +95,10 @@ In Visual Studio 2019 versione 16,6 è stata aggiunta una nuova configurazione d
 
 - `name`: Nome descrittivo per identificare la configurazione nell'elenco a discesa degli **elementi di avvio** .
 - `project`: Specifica il percorso relativo del file di progetto. In genere, non è necessario modificare questo percorso durante il debug di un progetto CMake.
-- `projectTarget`: Specifica la destinazione CMake da richiamare durante la compilazione del progetto. Questa proprietà viene popolata automaticamente da Visual Studio se si immette *launch.vs.js* dal **menu debug** o dalla **visualizzazione destinazioni** . Il valore di destinazione deve corrispondere al nome di una destinazione di debug esistente elencata nell'elenco a discesa **elemento di avvio** .
+- `projectTarget`: Specifica la destinazione CMake da richiamare durante la compilazione del progetto. Questa proprietà viene popolata automaticamente da Visual Studio se si immette *launch.vs.js* dal **menu debug** o dalla **visualizzazione destinazioni**. Il valore di destinazione deve corrispondere al nome di una destinazione di debug esistente elencata nell'elenco a discesa **elemento di avvio** .
 - `debuggerConfiguration`: Indica il set di valori predefiniti di debug da utilizzare. In Visual Studio 2019 versione 16,6, l'unica opzione valida è `gdb` . Visual Studio 2019 versione 16,7 o successiva supporta inoltre `gdbserver` .
 - `args`: Argomenti della riga di comando passati all'avvio al programma di cui è in corso il debug.
-- `env`: Variabili di ambiente aggiuntive passate al programma di cui è in corso il debug. Ad esempio `{"DISPLAY": "0.0"}`.
+- `env`: Variabili di ambiente aggiuntive passate al programma di cui è in corso il debug. Ad esempio: `{"DISPLAY": "0.0"}`.
 - `processID`: ID del processo Linux a cui connettersi. Utilizzato solo quando si esegue la connessione a un processo remoto. Per altre informazioni, vedere [risolvere i problemi di connessione ai processi usando GDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
 
 #### <a name="additional-options-for-the-gdb-configuration"></a>Opzioni aggiuntive per la `gdb` configurazione
@@ -131,7 +130,7 @@ Usare le opzioni seguenti per separare il computer di compilazione (definito in 
   - `targetMachine`: Il computer in cui viene copiato il file o la directory. Premere **CTRL + barra spaziatrice** per visualizzare un elenco di tutte le connessioni remote archiviate nella gestione connessione.
   - `sourcePath`: Percorso del file o della directory in `sourceMachine` .
   - `targetPath`: Percorso del file o della directory in `targetMachine` .
-  - `deploymentType`: Descrizione del tipo di distribuzione. `LocalRemote` e `RemoteRemote` sono supportati. `LocalRemote` indica che la copia dal file system locale al sistema remoto specificato da `remoteMachineName` in *launch.vs.jssu* . `RemoteRemote` indica che la copia dal sistema di compilazione remoto specificato in *CMakeSettings.js* al sistema remoto specificato in *launch.vs.js* in.
+  - `deploymentType`: Descrizione del tipo di distribuzione. `LocalRemote` e `RemoteRemote` sono supportati. `LocalRemote` indica che la copia dal file system locale al sistema remoto specificato da `remoteMachineName` in *launch.vs.jssu*. `RemoteRemote` indica che la copia dal sistema di compilazione remoto specificato in *CMakeSettings.js* al sistema remoto specificato in *launch.vs.js* in.
   - `executable`: Indica se il file distribuito è un eseguibile.
 
 ### <a name="execute-custom-gdb-commands"></a>Eseguire `gdb` comandi personalizzati
@@ -150,7 +149,7 @@ Abilitare la registrazione MIEngine per visualizzare i comandi inviati a `gdb` ,
 
 - `project`: Specifica il percorso relativo del file di progetto. In genere, non è necessario modificare questo valore quando si esegue il debug di un progetto CMake.
 
-- `projectTarget`: Specifica la destinazione CMake da richiamare durante la compilazione del progetto. Questa proprietà viene popolata automaticamente da Visual Studio se si immette *launch.vs.js* dal **menu debug** o dalla **visualizzazione destinazioni** . Questo valore deve corrispondere al nome di una destinazione di debug esistente elencata nell'elenco a discesa **elemento di avvio** .
+- `projectTarget`: Specifica la destinazione CMake da richiamare durante la compilazione del progetto. Questa proprietà viene popolata automaticamente da Visual Studio se si immette *launch.vs.js* dal **menu debug** o dalla **visualizzazione destinazioni**. Questo valore deve corrispondere al nome di una destinazione di debug esistente elencata nell'elenco a discesa **elemento di avvio** .
 
 - `args`: Argomenti della riga di comando passati all'avvio al programma di cui è in corso il debug.
 
@@ -227,7 +226,7 @@ Abilitare la registrazione MIEngine per visualizzare i comandi inviati a `gdb` ,
 
 ::: moniker range=">=msvc-150"
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Progetti CMake in Visual Studio](cmake-projects-in-visual-studio.md)\
 [Configurare un progetto CMake per Linux](../linux/cmake-linux-project.md)\
