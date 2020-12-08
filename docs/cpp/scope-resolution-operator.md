@@ -1,6 +1,7 @@
 ---
-title: "Operatore di risoluzione dell'ambito: ::"
-ms.date: 11/04/2016
+title: "Operatore di risoluzione dell'ambito: `::`"
+description: Informazioni sul funzionamento dell'operatore di risoluzione dell'ambito `::` in C++ standard.
+ms.date: 12/06/2020
 f1_keywords:
 - '::'
 helpviewer_keywords:
@@ -8,33 +9,44 @@ helpviewer_keywords:
 - operators [C++], scope resolution
 - scope resolution operator
 - ':: operator'
-ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff774d9fcca9f68cb2925af82c55ef438ab4d71a
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178886"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776531"
 ---
-# <a name="scope-resolution-operator-"></a>Operatore di risoluzione dell'ambito: ::
+# <a name="scope-resolution-operator-"></a>Operatore di risoluzione dell'ambito: `::`
 
-L'operatore di risoluzione dell'ambito **::** viene utilizzato per identificare e distinguere gli identificatori utilizzati in ambiti diversi. Per ulteriori informazioni sull'ambito, vedere [ambito](../cpp/scope-visual-cpp.md).
+L'operatore di risoluzione dell'ambito **`::`** viene usato per identificare e risolvere le ambiguità degli identificatori usati in ambiti diversi. Per ulteriori informazioni sull'ambito, vedere [ambito](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Sintassi
 
-```
-:: identifier
-class-name :: identifier
-namespace :: identifier
-enum class :: identifier
-enum struct :: identifier
-```
+> *`qualified-id`*:\
+> &emsp;*`nested-name-specifier`***`template`** <sub>consenso esplicito</sub>*`unqualified-id`*
 
-## <a name="remarks"></a>Osservazioni
+> *`nested-name-specifier`*:\
+> &emsp;**`::`**\
+> &emsp;*`type-name`* **`::`**\
+> &emsp;*`namespace-name`* **`::`**\
+> &emsp;*`decltype-specifier`* **`::`**\
+> &emsp;*`nested-name-specifier`* *`identifier`* **`::`**\
+> &emsp;*`nested-name-specifier`***`template`** <sub>consenso esplicito</sub> *`simple-template-id`***`::`**
+
+> *`unqualified-id`*:\
+> &emsp;*`identifier`*\
+> &emsp;*`operator-function-id`*\
+> &emsp;*`conversion-function-id`*\
+> &emsp;*`literal-operator-id`*\
+> &emsp;**`~`** *`type-name`*\
+> &emsp;**`~`** *`decltype-specifier`*\
+> &emsp;*`template-id`*
+
+## <a name="remarks"></a>Commenti
 
 `identifier` può essere una variabile una funzione oppure un valore di enumerazione.
 
-## <a name="with-classes-and-namespaces"></a>Con classi e spazi dei nomi
+## <a name="use--for-classes-and-namespaces"></a>`::`Da usare per classi e spazi dei nomi
 
 L'esempio seguente mostra in che modo l'operatore di risoluzione dell'ambito viene usato con gli spazi dei nomi e le classi:
 
@@ -80,7 +92,7 @@ int main() {
 }
 ```
 
-È possibile usare l'operatore di risoluzione dell'ambito per identificare un membro di uno spazio dei nomi oppure per identificare uno spazio dei nomi che nomina lo spazio dei nomi del membro in una direttiva using. Nell'esempio seguente, è possibile usare `NamespaceC` per qualificare `ClassB`, anche se `ClassB` è stato dichiarato in uno spazio dei nomi`NamespaceB`, perché `NamespaceB` è stato nominato in `NamespaceC` da una direttiva using.
+È possibile utilizzare l'operatore di risoluzione dell'ambito per identificare un membro di un oggetto **`namespace`** o per identificare uno spazio dei nomi che designa lo spazio dei nomi del membro in una **`using`** direttiva. Nell'esempio seguente, è possibile usare `NamespaceC` per qualificare `ClassB` , anche se `ClassB` è stato dichiarato nello spazio dei nomi `NamespaceB` , perché `NamespaceB` è stato nominato `NamespaceC` da una **`using`** direttiva.
 
 ```cpp
 namespace NamespaceB {
@@ -91,14 +103,15 @@ namespace NamespaceB {
 }
 
 namespace NamespaceC{
-    using namespace B;
+    using namespace NamespaceB;
 }
-int main() {
-    NamespaceB::ClassB c_b;
-    NamespaceC::ClassB c_c;
 
-    c_b.x = 3;
-    c_c.x = 4;
+int main() {
+    NamespaceB::ClassB b_b;
+    NamespaceC::ClassB c_b;
+
+    b_b.x = 3;
+    c_b.x = 4;
 }
 ```
 
@@ -128,7 +141,7 @@ int main() {
 }
 ```
 
-## <a name="with-static-members"></a>Con membri statici
+## <a name="use--for-static-members"></a>`::`Da usare per i membri statici
 
 Per chiamare i membri statici delle classi è necessario usare l'operatore di risoluzione dell'ambito.
 
@@ -148,7 +161,7 @@ int main() {
 }
 ```
 
-## <a name="with-scoped-enumerations"></a>Con enumerazioni con ambito
+## <a name="use--for-scoped-enumerations"></a>Usare `::` per enumerazioni con ambito
 
 L'operatore di risoluzione con ambito viene usato anche con i valori di una dichiarazione di [enumerazione](../cpp/enumerations-cpp.md)di enumerazione con ambito, come nell'esempio seguente:
 
@@ -164,7 +177,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori, precedenza e associatività predefiniti di C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Namespaces](../cpp/namespaces-cpp.md) (Spazi dei nomi)
