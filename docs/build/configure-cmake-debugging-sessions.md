@@ -1,15 +1,15 @@
 ---
 title: Configurare le sessioni di debug di CMake in Visual Studio
 description: Viene descritto come usare Visual Studio per configurare le impostazioni del debugger CMake.
-ms.date: 04/02/2020
+ms.date: 12/07/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
-ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
+ms.openlocfilehash: b289acf8d0aa89cef1d2a72c988b41d99914f828
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440304"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862568"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurare le sessioni di debug di CMake
 
@@ -112,6 +112,8 @@ In Visual Studio 2019 versione 16,6 è stata aggiunta una nuova configurazione d
 #### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>Opzioni aggiuntive consentite con la `gdbserver` configurazione (16,7 o versione successiva)
 
 - `program`: Il valore predefinito è `"${debugInfo.fullTargetPath}"` . Percorso UNIX dell'applicazione di cui eseguire il debug. Obbligatorio solo se diverso dall'eseguibile di destinazione nel percorso di compilazione o di distribuzione.
+> [!TIP]
+> La distribuzione non è ancora supportata per gli scenari locali di compilazione incrociata. Se si esegue la compilazione incrociata in Windows, ad esempio usando un compilatore incrociato in Windows per creare un eseguibile ARM di Linux, sarà necessario copiare manualmente il file binario nel percorso specificato da `program` nel computer ARM remoto prima del debug.
 - `remoteMachineName`: Il valore predefinito è `"${debugInfo.remoteMachineName}"` . Nome del sistema remoto che ospita il programma di cui eseguire il debug. Obbligatorio solo se diverso dal sistema di compilazione. Deve disporre di una voce esistente nella [gestione connessione](../linux/connect-to-your-remote-linux-computer.md). Premere **CTRL + barra spaziatrice** per visualizzare un elenco di tutte le connessioni remote esistenti.
 - `cwd`: Il valore predefinito è `"${debugInfo.defaultWorkingDirectory}"` . Percorso UNIX completo della directory nel sistema remoto in cui `program` viene eseguito. La directory deve esistere.
 - `gdbPath`: Il valore predefinito è `${debugInfo.vsInstalledGdb}` . Percorso completo di Windows per l'oggetto `gdb` usato per eseguire il debug. Per impostazione predefinita viene `gdb` installato con il carico di lavoro sviluppo di Linux con C/C++.
@@ -161,7 +163,7 @@ Abilitare la registrazione MIEngine per visualizzare i comandi inviati a `gdb` ,
 
 - `cwd`: Il valore predefinito è `"${debugInfo.defaultWorkingDirectory}"` . Percorso UNIX completo della directory nel sistema remoto in cui `program` viene eseguito. La directory deve esistere.
 
-- `environment`: Variabili di ambiente aggiuntive passate al programma di cui è in corso il debug. Ad esempio,
+- `environment`: Variabili di ambiente aggiuntive passate al programma di cui è in corso il debug. ad esempio:
 
   ```json
     "environment": [

@@ -4,12 +4,12 @@ description: vcpkg è una gestione pacchetti da riga di comando che semplifica n
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ec908824c19099ad6eaa46a4d85c0187ef12b3fd
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373632"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862555"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Gestione pacchetti C++ per Windows, Linux e macOS
 
@@ -29,12 +29,12 @@ Per le librerie nel catalogo di Windows, vcpkg Scarica le origini anziché i fil
 
 ## <a name="installation"></a>Installazione
 
-Clonare il repository vcpkg da GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg) . È possibile scaricarlo nel percorso di cartella preferito. Questo percorso è la *radice*vcpkg. Al termine del download, passare alla directory nella shell dei comandi.
+Clonare il repository vcpkg da GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg) . È possibile scaricarlo nel percorso di cartella preferito. Questo percorso è la *radice* vcpkg. Al termine del download, passare alla directory nella shell dei comandi.
 
 Nella directory radice di vcpkg eseguire il programma di avvio automatico vcpkg:
 
 - **`bootstrap-vcpkg.bat`** Windows
-- **`./bootstrap-vcpkg.sh`**(Linux, macOS)
+- **`./bootstrap-vcpkg.sh`** (Linux, macOS)
 
 In Linux o macOS potrebbe essere necessario anteporre i comandi vcpkg usando **`./`** negli esempi seguenti. Ricordarsi di eseguire questi comandi dalla directory radice di vcpkg.
 
@@ -185,10 +185,10 @@ Per impostazione predefinita, il **`vcpkg upgrade`** comando elenca solo le libr
 
 ### <a name="upgrade-options"></a>Opzioni di aggiornamento
 
-- **`--no-dry-run`** Eseguire l'aggiornamento; Quando non è specificato, il comando elenca solo i pacchetti non aggiornati.
-- **`--keep-going`** Continuare l'installazione dei pacchetti anche se si verifica un errore.
-- **`--triplet <t>`** Imposta la tripletta predefinita per i pacchetti non qualificati.
-- **`--vcpkg-root <path>`** Specificare la directory vcpkg da usare anziché la directory corrente o la directory degli strumenti.
+- **`--no-dry-run`**  Eseguire l'aggiornamento; Quando non è specificato, il comando elenca solo i pacchetti non aggiornati.
+- **`--keep-going`**  Continuare l'installazione dei pacchetti anche se si verifica un errore.
+- **`--triplet <t>`**  Imposta la tripletta predefinita per i pacchetti non qualificati.
+- **`--vcpkg-root <path>`**  Specificare la directory vcpkg da usare anziché la directory corrente o la directory degli strumenti.
 
 ### <a name="upgrade-example"></a>Esempio di aggiornamento
 
@@ -227,6 +227,8 @@ Gestione pacchetti vcpkg viene aggiornato regolarmente su GitHub. Per aggiornare
 
 Per disinstallare vcpkg, è sufficiente eliminare la directory vcpkg. L'eliminazione di questa directory Disinstalla la distribuzione di vcpkg e tutte le librerie installate da vcpkg.
 
+Tuttavia, se è stato eseguito **`vcpkg integrate install`** , è necessario eseguire **`vcpkg integrate remove`** per assicurarsi che l'integrazione venga pulita, prima che la cartella venga rimossa.
+
 ## <a name="send-feedback-about-vcpkg"></a>Inviare commenti e suggerimenti su vcpkg
 
 Usare il **`vcpkg contact --survey`** comando per inviare commenti e suggerimenti a Microsoft su vcpkg, inclusi i report sui bug e i suggerimenti per le funzionalità.
@@ -249,10 +251,10 @@ Il contenuto di un'istanza di vcpkg è:
 
 ## <a name="command-line-reference"></a>Riferimenti alla riga di comando
 
-|Comando|Descrizione|
+|Comando|Description|
 |---------|---------|
 |**`vcpkg search [pat]`**|Cerca i pacchetti disponibili da installare|
-|**`vcpkg install <pkg>...`**|Installa un pacchetto|
+|**`vcpkg install <pkg>...`**|Installare un pacchetto|
 |**`vcpkg remove <pkg>...`**|Disinstalla un pacchetto|
 |**`vcpkg remove --outdated`**|Disinstalla tutti i pacchetti non aggiornati|
 |**`vcpkg list`**|Elenca i pacchetti installati|
@@ -271,7 +273,7 @@ Il contenuto di un'istanza di vcpkg è:
 
 ### <a name="options"></a>Opzioni
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |---------|---------|
 |**`--triplet <t>`**|Specifica la tripletta dell'architettura di destinazione (impostazione predefinita: `%VCPKG_DEFAULT_TRIPLET%` , vedere anche **`vcpkg help triplet`** )|
 |**`--vcpkg-root <path>`**|Specifica la directory radice di vcpkg (impostazione predefinita: `%VCPKG_ROOT%`)|
