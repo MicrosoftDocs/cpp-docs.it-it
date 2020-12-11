@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: importazione ed esportazione di funzioni inline'
 title: Importazione ed esportazione di funzioni inline
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: abb0443ab8fbd315524350caaff34e0250147ed2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 053280685edf8fa88c969399e7905582534c7493
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156190"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importazione ed esportazione di funzioni inline
 
@@ -40,10 +41,10 @@ Una funzionalità di una funzione inline importata è che è possibile accettarn
 
 - [Esportare le funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinare il metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
+- [Determinare il metodo di esportazione da usare](determining-which-exporting-method-to-use.md)
 
 - [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Importazione ed esportazione](importing-and-exporting.md)

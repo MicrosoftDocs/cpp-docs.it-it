@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia IThreadPoolConfig'
 title: Interfaccia IThreadPoolConfig
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-ms.openlocfilehash: cba82055c292fc966dc2328773cce4aa64d45a64
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 143b456b08f7c5a14f99739cfe6bf424a3ee4baf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158010"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfaccia IThreadPoolConfig
 
@@ -32,18 +33,18 @@ __interface
     __declspec(uuid("B1F64757-6E88-4fa2-8886-7848B0D7E660")) IThreadPoolConfig : public IUnknown
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[GetSize](#getsize)|Chiamare questo metodo per ottenere il numero di thread nel pool.|
 |[GetTimeout](#gettimeout)|Chiamare questo metodo per ottenere il tempo massimo, in millisecondi, durante il quale il pool di thread resterà in attesa dell'arresto di un thread.|
 |[SetSize](#setsize)|Chiamare questo metodo per impostare il numero di thread nel pool.|
 |[SetTimeout](#settimeout)|Chiamare questo metodo per impostare il tempo massimo, in millisecondi, durante il quale il pool di thread resterà in attesa dell'arresto di un thread.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa interfaccia viene implementata da [CThreadPool](../../atl/reference/cthreadpool-class.md).
 
@@ -139,7 +140,7 @@ Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito 
 
 Vedere [IThreadPoolConfig:: GetSize](#getsize).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi](../../atl/reference/atl-classes.md)<br/>
 [Classe CThreadPool](../../atl/reference/cthreadpool-class.md)

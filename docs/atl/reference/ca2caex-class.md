@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CA2CAEX'
 title: Classe CA2CAEX
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-ms.openlocfilehash: 505c1e369bc5949fea291a2172c16d5e52c75567
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 89709280e94e07c549d179dc9a9863bd4bf2cbaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158595"
 ---
 # <a name="ca2caex-class"></a>Classe CA2CAEX
 
@@ -35,28 +36,28 @@ class CA2CAEX
 *t_nBufferLength*<br/>
 Dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CA2CAEX::CA2CAEX](#ca2caex)|Costruttore.|
 |[CA2CAEX:: ~ CA2CAEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CA2CAEX:: operator LPCSTR](#operator_lpcstr)|Operatore di conversione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CA2CAEX:: m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 A meno che non sia necessaria una funzionalità aggiuntiva, usare CA2CTEX, CT2CAEX o CA2CA nel proprio codice.
 
@@ -82,7 +83,7 @@ Vedere [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md)
 
 **Intestazione:** atlconv. h
 
-## <a name="ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX
+## <a name="ca2caexca2caex"></a><a name="ca2caex"></a> CA2CAEX::CA2CAEX
 
 Costruttore.
 
@@ -99,11 +100,11 @@ Stringa di testo da convertire.
 *nCodePage*<br/>
 Non usato in questa classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Crea il buffer necessario per la traduzione.
 
-## <a name="ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX:: ~ CA2CAEX
+## <a name="ca2caexca2caex"></a><a name="dtor"></a> CA2CAEX:: ~ CA2CAEX
 
 Distruttore.
 
@@ -111,11 +112,11 @@ Distruttore.
 ~CA2CAEX() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera il buffer allocato.
 
-## <a name="ca2caexm_psz"></a><a name="m_psz"></a>CA2CAEX:: m_psz
+## <a name="ca2caexm_psz"></a><a name="m_psz"></a> CA2CAEX:: m_psz
 
 Membro dati che archivia la stringa di origine.
 
@@ -123,7 +124,7 @@ Membro dati che archivia la stringa di origine.
 LPCSTR m_psz;
 ```
 
-## <a name="ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX:: operator LPCSTR
+## <a name="ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a> CA2CAEX:: operator LPCSTR
 
 Operatore di conversione.
 
@@ -135,7 +136,7 @@ operator LPCSTR() const throw();
 
 Restituisce la stringa di testo come tipo LPCSTR.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
 [Classe CA2WEX](../../atl/reference/ca2wex-class.md)<br/>

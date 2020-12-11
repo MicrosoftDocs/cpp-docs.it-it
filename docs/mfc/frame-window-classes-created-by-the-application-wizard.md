@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Frame-Window classi create dalla creazione guidata applicazione'
 title: Classi Frame-Window create dalla Creazione guidata applicazione
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: 00254bdf49015f26ac257789a15afd1e7f5cc31f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 38ed83d56737d0a26d9025a9940b34d3bd6d6126
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154981"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classi Frame-Window create dalla Creazione guidata applicazione
 
@@ -33,7 +34,7 @@ Se si sceglie di supportare una barra degli strumenti, la classe dispone anche d
 
 Queste classi della finestra cornice funzionano come create, ma per migliorarne le funzionalità è necessario aggiungere le variabili membro e le funzioni membro. È anche possibile che le classi di finestre gestiscano altri messaggi di Windows. Per ulteriori informazioni, vedere [modifica degli stili di una finestra creata da MFC](changing-the-styles-of-a-window-created-by-mfc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi della finestra cornice](frame-window-classes.md)<br/>
 [File di origine e di intestazione del controllo o del programma MFC](../build/reference/mfc-program-or-control-source-and-header-files.md)

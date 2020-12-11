@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: CMakeSettings.jssu riferimento allo schema'
 title: Informazioni di riferimento sullo schema CMakeSettings.json
 ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 61da0fd70ad68928872a2212b70377ab8a83a76a
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 2be5edb616764d56e7c08a51be19aab11a62f227
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156905"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informazioni di riferimento sullo schema CMakeSettings.json
 
@@ -71,9 +72,9 @@ La `configurations` matrice contiene tutte le configurazioni per un progetto CMa
 
 Poiché Ninja è progettato per velocità di configurazione rapide anziché per flessibilità e funzionalità, è impostato come predefinito. Tuttavia, alcuni progetti CMake potrebbero non essere in grado di eseguire una compilazione corretta usando Ninja. In tal caso, è possibile impostare CMake in modo da generare i progetti di Visual Studio.
 
-Per specificare un generatore di Visual Studio in Visual Studio 2017, aprire l'editor delle impostazioni dal menu principale scegliendo **CMake | Modificare le impostazioni di CMake** . Eliminare "Ninja" e digitare "V". Questa operazione attiva IntelliSense, che consente di scegliere il generatore desiderato.
+Per specificare un generatore di Visual Studio in Visual Studio 2017, aprire l'editor delle impostazioni dal menu principale scegliendo **CMake | Modificare le impostazioni di CMake**. Eliminare "Ninja" e digitare "V". Questa operazione attiva IntelliSense, che consente di scegliere il generatore desiderato.
 
-Per specificare un generatore di Visual Studio in Visual Studio 2019, fare clic con il pulsante destro del mouse sul file *CMakeLists.txt* in **Esplora soluzioni** e scegliere **Impostazioni CMake per progetto** > **Mostra impostazioni avanzate** del > **Generatore CMake** .
+Per specificare un generatore di Visual Studio in Visual Studio 2019, fare clic con il pulsante destro del mouse sul file *CMakeLists.txt* in **Esplora soluzioni** e scegliere **Impostazioni CMake per progetto** > **Mostra impostazioni avanzate** del > **Generatore CMake**.
 
 Quando la configurazione attiva specifica un generatore Visual Studio, per impostazione predefinita viene richiamato MSBuild.exe con gli argomenti `-m -v:minimal`. Per personalizzare la compilazione, all'interno del  *CMakeSettings.js* file, è possibile specificare [argomenti della riga di comando MSBuild](../build/reference/msbuild-visual-cpp-overview.md) aggiuntivi da passare al sistema di compilazione tramite la `buildCommandArgs` proprietà:
 
@@ -178,9 +179,9 @@ In  `CMakeSettings.json` è possibile definire le variabili di ambiente personal
 - `groupPriority`: Numero intero che specifica la priorità di queste variabili durante la valutazione. Gli elementi con il numero più elevato vengono valutati per primi.
 - `inheritEnvironments`: Matrice di valori che specificano il set di ambienti ereditati da questo gruppo. Questa funzionalità consente di ereditare ambienti predefiniti e di creare variabili di ambiente personalizzate che vengono passate a CMake.exe quando è in esecuzione.
 
-**Visual Studio 2019 versione 16,4 e successive:** Le destinazioni di debug vengono avviate automaticamente con l'ambiente specificato in *CMakeSettings.js* . È possibile eseguire l'override o aggiungere variabili di ambiente in base a una singola destinazione o ogni singola attività in [launch.vs.js](launch-vs-schema-reference-cpp.md) in e [tasks.vs.js](tasks-vs-json-schema-reference-cpp.md).
+**Visual Studio 2019 versione 16,4 e successive:** Le destinazioni di debug vengono avviate automaticamente con l'ambiente specificato in *CMakeSettings.js*. È possibile eseguire l'override o aggiungere variabili di ambiente in base a una singola destinazione o ogni singola attività in [launch.vs.js](launch-vs-schema-reference-cpp.md) in e [tasks.vs.js](tasks-vs-json-schema-reference-cpp.md).
 
-L'esempio seguente definisce una variabile globale, **BuildDir** , ereditata sia nella configurazione x86-Debug che nella configurazione x64-Debug. Ogni configurazione usa la variabile per specificare il valore della proprietà **buildRoot** per quella configurazione. Si noti anche come ogni configurazione usa la proprietà **inheritEnvironments** per specificare una variabile che si applica solo a quella configurazione.
+L'esempio seguente definisce una variabile globale, **BuildDir**, ereditata sia nella configurazione x86-Debug che nella configurazione x64-Debug. Ogni configurazione usa la variabile per specificare il valore della proprietà **buildRoot** per quella configurazione. Si noti anche come ogni configurazione usa la proprietà **inheritEnvironments** per specificare una variabile che si applica solo a quella configurazione.
 
 ```json
 {
@@ -212,7 +213,7 @@ L'esempio seguente definisce una variabile globale, **BuildDir** , ereditata sia
 }
 ```
 
-Nell'esempio seguente la configurazione x86-Debug definisce il proprio valore per la proprietà **BuildDir** . Questo valore sostituisce il valore impostato dalla proprietà **BuildDir** globale in modo che **BuildRoot** restituisca `D:\custom-builddir\x86-Debug`.
+Nell'esempio seguente la configurazione x86-Debug definisce il proprio valore per la proprietà **BuildDir**. Questo valore sostituisce il valore impostato dalla proprietà **BuildDir** globale in modo che **BuildRoot** restituisca `D:\custom-builddir\x86-Debug`.
 
 ```json
 {
@@ -258,7 +259,7 @@ Nell'esempio seguente la configurazione x86-Debug definisce il proprio valore pe
 
 ## <a name="macros"></a>Macro
 
-Le macro seguenti possono essere utilizzate in *CMakeSettings.js* :
+Le macro seguenti possono essere utilizzate in *CMakeSettings.js*:
 
 - `${workspaceRoot}` : percorso completo della cartella dell'area di lavoro
 - `${workspaceHash}` – hash della posizione dell'area di lavoro; utile per creare un identificatore univoco per l'area di lavoro corrente (ad esempio, da usare nei percorsi delle cartelle)
@@ -280,7 +281,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |--------------|------------|
 | --version  | versione ninja per la stampa ("1.7.1")|
 |   -C DIR   | passa a DIR prima di eseguire qualunque altra operazione|

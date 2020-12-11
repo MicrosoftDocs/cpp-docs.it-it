@@ -1,35 +1,36 @@
 ---
+description: 'Altre informazioni su: classi di utilità'
 title: Classi di utilità (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - utility classes
 ms.assetid: 33d5da9d-89a5-49f9-a873-a26499299d17
-ms.openlocfilehash: 2de899d6c70bde4f9f9ec7241d3c923f77ff8248
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95fbc6a557080175682f9f54a3ac6b9b7d0efdc6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157152"
 ---
 # <a name="utility-classes"></a>Classi di utilità
 
-Sono disponibili le seguenti classi di utilità indipendente da MFC:
+Sono disponibili le classi di utilità indipendenti da MFC seguenti:
 
-- [CImage](../atl-mfc-shared/reference/cimage-class.md) fornisce migliorato il supporto di bitmap, inclusa la possibilità di caricare e salvare le immagini JPEG, GIF, BMP, e formati di grafica PNG (Portable Network).
+- [CImage](../atl-mfc-shared/reference/cimage-class.md) Offre supporto ottimizzato per le bitmap, inclusa la possibilità di caricare e salvare immagini in formati JPEG, GIF, BMP e Portable Network Graphics (PNG).
 
-- [CPoint](../atl-mfc-shared/reference/cpoint-class.md) fornisce un'implementazione per l'archiviazione di coppie di coordinate (x, y).
+- [CPoint](../atl-mfc-shared/reference/cpoint-class.md) Fornisce un'implementazione per l'archiviazione di coppie di coordinate (x, y).
 
-- [CRect](../atl-mfc-shared/reference/crect-class.md) fornisce un'implementazione per l'archiviazione delle coordinate delle aree rettangolari.
+- [CRect](../atl-mfc-shared/reference/crect-class.md) Fornisce un'implementazione per archiviare le coordinate delle aree rettangolari.
 
-- [CSize](../atl-mfc-shared/reference/csize-class.md) fornisce un'implementazione per l'archiviazione di distanza, posizioni relative o valori accoppiati.
+- [CSize](../atl-mfc-shared/reference/csize-class.md) Fornisce un'implementazione per archiviare distanza, posizioni relative o valori abbinati.
 
-- [CString](../atl-mfc-shared/reference/cstringt-class.md) fornisce un'implementazione per l'archiviazione di stringhe di caratteri.
+- [CString](../atl-mfc-shared/reference/cstringt-class.md) Fornisce un'implementazione per l'archiviazione di stringhe di caratteri.
 
-- [CAdapt](../atl/reference/cadapt-class.md) un modello semplice utilizzato per il wrapping delle classi che consentono di ridefinire l'operatore address-of.
+- [CAdapt](../atl/reference/cadapt-class.md) Modello semplice utilizzato per eseguire il wrapping delle classi che ridefiniscono l'operatore address-of.
 
-- [U_rect](../atl/reference/u-rect-class.md) classe di adattatori argomento che consente il `RECT` puntatori o riferimenti da passare a una funzione che viene implementata in termini di puntatori.
+- [_U_RECT](../atl/reference/u-rect-class.md) Classe dell'adattatore di argomento che consente di `RECT` passare puntatori o riferimenti a una funzione implementata in termini di puntatori.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: esportazione da una DLL con __declspec (dllexport)'
 title: Esportazione da una DLL tramite __declspec(dllexport)
 ms.date: 05/06/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 77dc6dc14efe2a7ccf46c41477ed4fd6d1956856
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e662563e63881d893b9ef717b160844e9995eb0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156541"
 ---
 # <a name="exporting-from-a-dll-using-__declspecdllexport"></a>Esportazione da una DLL tramite __declspec(dllexport)
 
@@ -38,7 +39,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 > [!NOTE]
-> `__declspec(dllexport)`non può essere applicato a una funzione con la `__clrcall` convenzione di chiamata.
+> `__declspec(dllexport)` non può essere applicato a una funzione con la `__clrcall` convenzione di chiamata.
 
 Quando si compila la DLL, in genere si crea un file di intestazione che contiene i prototipi di funzione e/o le classi da esportare e si aggiungono **`__declspec(dllexport)`** alle dichiarazioni nel file di intestazione. Per rendere il codice più leggibile, definire una macro per **`__declspec(dllexport)`** e usare la macro con ogni simbolo da esportare:
 
@@ -72,6 +73,6 @@ Quando si compila la DLL, in genere si crea un file di intestazione che contiene
 
 - [Importazioni reciproche](mutual-imports.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esportazione da una DLL](exporting-from-a-dll.md)

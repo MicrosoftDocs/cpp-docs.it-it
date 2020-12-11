@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: concetti di applicazioni isolate e assembly affiancati'
 title: Concetti di applicazioni isolate e assembly side-by-side
 ms.date: 05/06/2019
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: f75a95ccca214f437152d13e099fbd9d03eaaee2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d66e70f95c4d969fdb41b44d609fb8a6c9feacbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156788"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concetti di applicazioni isolate e assembly side-by-side
 
@@ -34,6 +35,6 @@ In fase di esecuzione, Windows utilizza le informazioni sull'assembly contenute 
 
 In Visual Studio 2005 e Visual Studio 2008 le librerie ridistribuibili come ATL, MFC, CRT, C++ standard, OpenMP e MSDIA vengono distribuite come assembly affiancati condivisi nella cache degli assembly nativi. Nella versione corrente le librerie ridistribuibili utilizzano la distribuzione centrale. Per impostazione predefinita, tutte le applicazioni compilate mediante Visual Studio vengono compilate con il manifesto incorporato nel file binario finale e il manifesto descrive le dipendenze del file binario nelle librerie di Visual C++. Per comprendere la generazione di manifesti per le applicazioni C++, vedere [informazioni sulla generazione di manifesti per i programmi C/c++](understanding-manifest-generation-for-c-cpp-programs.md). Un manifesto non è necessario per le applicazioni collegate staticamente alle librerie che utilizzano o che utilizzano la distribuzione locale. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Compilazione di applicazioni isolate C/C++ e di assembly side-by-side](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

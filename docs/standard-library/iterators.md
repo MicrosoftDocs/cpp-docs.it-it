@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: iteratori'
 title: Iterators
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
-ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
+ms.openlocfilehash: 98263f69c49e0d645106e1ce29e6bb1a4330acea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87870152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112245"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -45,7 +46,7 @@ Le categorie di iteratori disponibili sono cinque. Per la potenza, le categorie 
 
 - **Input**. Un *iteratore* `X` di input può eseguire l'iterazione su una sequenza usando l' `++` operatore ed è in grado di leggere un elemento per un numero qualsiasi di volte usando l' `*` operatore. È possibile confrontare gli iteratori di input usando `==` gli `!=` operatori e. Dopo aver incrementato qualsiasi copia di un iteratore di input, non è possibile confrontare, dereferenziare o incrementare in seguito nessuna delle altre copie.
 
-- **In**poi. Un *iteratore in* `X` poi può eseguire l'iterazione su una sequenza usando l'operatore + + ed è in grado di leggere qualsiasi elemento o scrivere elementi non const un numero qualsiasi di volte usando l' `*` operatore. È possibile accedere ai membri degli elementi usando l' `->` operatore e confrontare gli iteratori in secondo uso usando gli `==` `!=` operatori e. È anche possibile eseguire più copie di un iteratore in avanti, ciascuna delle quali può essere dereferenziata e incrementata in modo indipendente. Un iteratore in in poi inizializzato senza riferimento a un contenitore viene chiamato *iteratore in in poi null*. Gli iteratori in avanti null risultano sempre uguali.
+- **In** poi. Un *iteratore in* `X` poi può eseguire l'iterazione su una sequenza usando l'operatore + + ed è in grado di leggere qualsiasi elemento o scrivere elementi non const un numero qualsiasi di volte usando l' `*` operatore. È possibile accedere ai membri degli elementi usando l' `->` operatore e confrontare gli iteratori in secondo uso usando gli `==` `!=` operatori e. È anche possibile eseguire più copie di un iteratore in avanti, ciascuna delle quali può essere dereferenziata e incrementata in modo indipendente. Un iteratore in in poi inizializzato senza riferimento a un contenitore viene chiamato *iteratore in in poi null*. Gli iteratori in avanti null risultano sempre uguali.
 
 - **Bidirezionale**. Un *iteratore bidirezionale* `X` può prendere il posto di un iteratore in avanti. È tuttavia possibile decrementare anche un iteratore bidirezionale, come in `--X` , `X--` o `(V = *X--)` . È possibile accedere ai membri degli elementi e confrontare gli iteratori bidirezionali nello stesso modo degli iteratori in avanti.
 
@@ -88,7 +89,7 @@ Un iteratore `Iterator` diverso da un puntatore all'oggetto deve anche definire 
 
 Microsoft C++ ora offre iteratori verificati e iteratori di debug per assicurarsi di non sovrascrivere i limiti del contenitore. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md) e [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

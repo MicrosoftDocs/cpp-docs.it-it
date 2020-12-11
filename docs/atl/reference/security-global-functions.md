@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni globali di sicurezza'
 title: Funzioni globali di sicurezza
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 0b42fe10ef1de517677b35a9fe54d0c6a04ff748
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10a3a3f358eba3aa1715bd375221f6ec35a56fcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157789"
 ---
 # <a name="security-global-functions"></a>Funzioni globali di sicurezza
 
@@ -30,7 +31,7 @@ Queste funzioni forniscono supporto per la modifica di oggetti SID e ACL.
 > [!IMPORTANT]
 > Le funzioni elencate nella tabella seguente non possono essere usate nelle applicazioni eseguite nel Windows Runtime.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AtlGetDacl](#atlgetdacl)|Chiamare questa funzione per recuperare le informazioni dell'elenco di controllo di accesso discrezionali (DACL) di un oggetto specificato.|
 |[AtlSetDacl](#atlsetdacl)|Chiamare questa funzione per impostare le informazioni dell'elenco di controllo di accesso discrezionali (DACL) di un oggetto specificato.|
@@ -75,7 +76,7 @@ Puntatore a un oggetto DACL che conterrà le informazioni di sicurezza recuperat
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle build di debug, si verificherà un errore di asserzione se *hObject* o *pDacl* non è valido.
 
@@ -112,7 +113,7 @@ Controllo del flusso di ereditarietà. Questo valore può essere 0 (impostazione
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle build di debug, si verificherà un errore di asserzione se *hObject* non è valido o se *dwInheritanceFlowControl* non è uno dei tre valori consentiti.
 
@@ -285,7 +286,7 @@ Se true, la funzione tenterà di abilitare il privilegio di SE_SECURITY_NAME e d
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se `AtlGetSacl` deve essere chiamato più volte su molti oggetti diversi, sarà più efficiente abilitare il privilegio di SE_SECURITY_NAME una volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.
 
@@ -330,7 +331,7 @@ Se true, la funzione tenterà di abilitare il privilegio di SE_SECURITY_NAME e d
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle build di debug, si verificherà un errore di asserzione se *hObject* non è valido o se *dwInheritanceFlowControl* non è uno dei tre valori consentiti.
 
@@ -379,7 +380,7 @@ Se true, la funzione tenterà di abilitare il privilegio di SE_SECURITY_NAME e d
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se `AtlGetSecurityDescriptor` deve essere chiamato più volte su molti oggetti diversi, sarà più efficiente abilitare il privilegio di SE_SECURITY_NAME una volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.
 

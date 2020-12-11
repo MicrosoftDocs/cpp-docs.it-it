@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia IDocHostUIHandlerDispatch'
 title: Interfaccia IDocHostUIHandlerDispatch
 ms.date: 07/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 4d80934a5768eda917c90345ddeeff017edf0eae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 59f9975f48a7ae63d5820a9c05f9baa49b8a5f25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158374"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interfaccia IDocHostUIHandlerDispatch
 
@@ -27,14 +28,14 @@ Interfaccia per il motore di analisi e rendering HTML Microsoft.
 interface IDocHostUIHandlerDispatch : IDispatch
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 > [!NOTE]
 > I collegamenti nella tabella seguente sono gli argomenti di riferimento di INet SDK per i membri dell'interfaccia [IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) . `IDocHostUIHandlerDispatch` ha la stessa funzionalità di `IDocUIHostHandler` , con la differenza che `IDocHostUIHandlerDispatch` è un'interfaccia dispatch mentre `IDocUIHostHandler` è un'interfaccia personalizzata.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|Chiamata eseguita dall'implementazione MSHTML di [IOleInPlaceActiveObject:: EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Chiamato anche quando MSHTML Visualizza l'interfaccia utente modale.|
 |[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|Chiamato sull'host da MSHTML per consentire all'host di sostituire l'oggetto dati di MSHTML.|
@@ -52,7 +53,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 |[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|Chiamato da MSHTML per consentire all'host la possibilità di modificare l'URL da caricare.|
 |[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|Notifica all'host che lo stato del comando è stato modificato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un host può sostituire i menu, le barre degli strumenti e i menu di scelta rapida usati da Microsoft HTML parsing and rendering Engine (MSHTML) implementando questa interfaccia.
 
@@ -65,6 +66,6 @@ La definizione di questa interfaccia è disponibile come IDL o C++, come illustr
 |IDL|ATLIFace. idl|
 |C++|ATLIFace. h (incluso anche in ATLBase. h)|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

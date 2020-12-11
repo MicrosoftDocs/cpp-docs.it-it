@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: corpo della funzione o variabile mancante'
 title: Codice di funzione o variabile mancante
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 835bd968035b355ded9636d446d44d4ce069c248
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 6a4349c380fc0f573adc8e372f9e4d2fc3f83873
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155163"
 ---
 # <a name="missing-function-body-or-variable"></a>Codice di funzione o variabile mancante
 
@@ -49,6 +50,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Errore degli strumenti del linker LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

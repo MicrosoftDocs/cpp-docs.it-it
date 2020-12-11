@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Dual'
 title: Dual (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1e72bd787bc73042b4f4a180ea119712021edaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112024"
 ---
 # <a name="dual"></a>dual
 
@@ -64,7 +65,7 @@ __interface IStatic : IDispatch
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi per utilizzo](attributes-by-usage.md)<br/>

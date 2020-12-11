@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: classi della finestra cornice (architettura)'
 title: Classi di finestre cornice (architettura)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-ms.openlocfilehash: 483112d197b7c7211989ecda8b774deb9f30d49e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 045108cd1e45325cf6069b5d8259ffab9abb0c2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155033"
 ---
 # <a name="frame-window-classes-architecture"></a>Classi di finestre cornice (architettura)
 
@@ -31,6 +32,6 @@ Classe base per le finestre cornice del documento di un'applicazione MDI.
 [COleIPFrameWnd](reference/coleipframewnd-class.md)<br/>
 Fornisce la finestra cornice per una visualizzazione quando un documento server viene modificato sul posto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

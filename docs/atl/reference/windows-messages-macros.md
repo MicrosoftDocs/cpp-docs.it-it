@@ -1,21 +1,22 @@
 ---
+description: 'Altre informazioni su: macro messaggi di Windows'
 title: Macro di messaggi di Windows
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: b4cd3c2eea24449eb17050b147d9c59560d8358f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: be5913c5eaa88ca0020a978f2b3f6686a6756715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157581"
 ---
 # <a name="windows-messages-macros"></a>Macro di messaggi di Windows
 
 Questa macro trasmette i messaggi della finestra.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[WM_FORWARDMSG](#wm_forwardmsg)|Utilizzare per inviare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione.|
 
@@ -35,7 +36,7 @@ WM_FORWARDMSG
 
 Diverso da zero se il messaggio è stato elaborato; in caso contrario, zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare WM_FORWARDMSG per inviare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione. I parametri LPARAM e WPARAM vengono usati come indicato di seguito:
 
@@ -50,6 +51,6 @@ Nell'esempio seguente, `m_hWndOther` rappresenta l'altra finestra che riceve que
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro](../../atl/reference/atl-macros.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di finestre cornice'
 title: Utilizzo di finestre cornice
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,41 +7,41 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-ms.openlocfilehash: ba304bce5bd0d91f4db8372b087c42c98b9c103d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7afcee5e0bcbcc3613fa45e4b6bce73c39f6cb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154448"
 ---
 # <a name="using-frame-windows"></a>Utilizzo di finestre cornice
 
-Il framework MFC Crea documento finestre cornice e i documenti e visualizzazioni, ovvero come parte dell'implementazione dei comandi nuovo e Apri il menu File. Poiché il framework esegue la maggior parte del lavoro frame-window per l'utente, è riprodurre solo un piccolo ruolo nella creazione, l'uso e l'eliminazione definitiva di tali finestre. È possibile, tuttavia, in modo esplicito creare proprie finestre cornice e le finestre figlio per scopi speciali.
+Il framework MFC crea le finestre cornice del documento, nonché le visualizzazioni e i documenti, come parte dell'implementazione dei comandi nuovi e aperti nel menu file. Poiché il Framework esegue la maggior parte della finestra cornice, si gioca solo un piccolo ruolo nella creazione, nell'uso e nell'eliminazione di tali finestre. È tuttavia possibile creare in modo esplicito finestre cornice e finestre figlio per scopi specifici.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Creazione di finestre cornice documento](../mfc/creating-document-frame-windows.md)
+- [Creazione di finestre cornice di documenti](../mfc/creating-document-frame-windows.md)
 
 - [Quando inizializzare gli oggetti CWnd](../mfc/when-to-initialize-cwnd-objects.md)
 
-- [Eliminazione definitiva di finestre cornice](../mfc/destroying-frame-windows.md)
+- [Eliminazione di finestre cornice](../mfc/destroying-frame-windows.md)
 
 - [Gestione di finestre figlio MDI](../mfc/managing-mdi-child-windows.md)
 
 - [Gestione della visualizzazione corrente](../mfc/managing-the-current-view.md)
 
-- [Gestione dei menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [Gestione di menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)
 
-- [Trascinare e rilasciare file in una finestra cornice](../mfc/dragging-and-dropping-files-in-a-frame-window.md)
+- [Trascinamento di file in una finestra cornice](../mfc/dragging-and-dropping-files-in-a-frame-window.md)
 
-- [Risponde a dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+- [Risposta a DDE (Dynamic Data Exchange)](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
-- [Orchestrazione di altre azioni della finestra](../mfc/orchestrating-other-window-actions.md)
+- [Orchestrazione di altre azioni delle finestre](../mfc/orchestrating-other-window-actions.md)
 
-- [La gestione della Guida sensibile al contesto](../mfc/orchestrating-other-window-actions.md)
+- [Gestione della Guida sensibile al contesto](../mfc/orchestrating-other-window-actions.md)
 
 - [Ruolo della finestra cornice in stampa e anteprima di stampa](../mfc/orchestrating-other-window-actions.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre cornice](../mfc/frame-windows.md)

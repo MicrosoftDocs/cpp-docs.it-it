@@ -1,21 +1,22 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni IStream'
 title: Funzioni &lt;istream&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: 6d1fede2726d3d8f5dd678b95fd7a22a301ea95a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c71770d8c6e86829eb4e0153abc924d612d3eff6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154175"
 ---
 # <a name="ltistreamgt-functions"></a>Funzioni &lt;istream&gt;
 
 [scambio](#istream_swap)\
-[WS](#ws)
+[ws](#ws)
 
 ## <a name="swap"></a><a name="istream_swap"></a> scambio
 
@@ -58,7 +59,7 @@ Flusso.
 
 Flusso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore estrae ed Elimina tutti gli elementi `ch` per i quali [use_facet](../standard-library/basic-filebuf-class.md#open) <  **CType** \< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **CType** \< **Elem**> :: **Space**, **ch**) è true.
 

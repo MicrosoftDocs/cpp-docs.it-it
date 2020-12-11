@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro della mappa delle proprietà'
 title: Macro della mappa delle proprietà
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 5e14c3cb82b9b7527ed8af42e181581097218360
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2fc7f96c42d7f9d3f116f13c9864ce857e32743
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157802"
 ---
 # <a name="property-map-macros"></a>Macro della mappa delle proprietà
 
 Queste macro definiscono le mappe delle proprietà e le voci.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_PROP_MAP](#begin_prop_map)|Contrassegna l'inizio della mappa delle proprietà ATL.|
 |[PROP_DATA_ENTRY](#prop_data_entry)|Indica l'extent o le dimensioni di un controllo ActiveX.|
@@ -48,7 +49,7 @@ BEGIN_PROP_MAP(theClass)
 *theClass*<br/>
 in Specifica la classe che contiene la mappa della proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La mappa delle proprietà archivia le descrizioni delle proprietà, i DISPID delle proprietà, i CLSID della pagina delle proprietà e `IDispatch` IID. Le classi [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)e [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) usano la mappa delle proprietà per recuperare e impostare queste informazioni.
 
@@ -79,7 +80,7 @@ in Membro dati contenente l'extent; ad esempio, `m_sizeExtent` .
 *vt*<br/>
 in Specifica il tipo VARIANT della proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro fa in modo che il membro dati specificato venga reso permanente.
 
@@ -109,13 +110,13 @@ in Descrizione della proprietà.
 *DISPID*<br/>
 in DISPID della proprietà.
 
-*clsid*<br/>
+*CLSID*<br/>
 in CLSID della pagina delle proprietà associata. Usare il valore speciale CLSID_NULL per una proprietà a cui non è associata una pagina delle proprietà.
 
 *vt*<br/>
 in Tipo della proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La macro PROP_ENTRY non era protetta e deprecata. È stata sostituita con PROP_ENTRY_TYPE.
 
@@ -141,7 +142,7 @@ in Descrizione della proprietà.
 *DISPID*<br/>
 in DISPID della proprietà.
 
-*clsid*<br/>
+*CLSID*<br/>
 in CLSID della pagina delle proprietà associata. Usare il valore speciale CLSID_NULL per una proprietà a cui non è associata una pagina delle proprietà.
 
 *iidDispatch*<br/>
@@ -150,7 +151,7 @@ in IID dell'interfaccia duale che definisce la proprietà.
 *vt*<br/>
 in Tipo della proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La macro PROP_ENTRY_EX non era protetta e deprecata. È stata sostituita con PROP_ENTRY_TYPE_EX.
 
@@ -172,10 +173,10 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 in CLSID di una pagina delle proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 PROP_PAGE è simile a [PROP_ENTRY_TYPE](#prop_entry_type), ma non richiede una descrizione della proprietà o un DISPID.
 
@@ -196,7 +197,7 @@ Contrassegna la fine della mappa delle proprietà dell'oggetto.
 END_PROP_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si crea un oggetto con la creazione guidata progetto ATL, la procedura guidata creerà una mappa delle proprietà vuota specificando [BEGIN_PROP_MAP](#begin_prop_map) seguito da END_PROP_MAP.
 
@@ -204,6 +205,6 @@ Quando si crea un oggetto con la creazione guidata progetto ATL, la procedura gu
 
 Vedere l'esempio per [BEGIN_PROP_MAP](#begin_prop_map).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro](../../atl/reference/atl-macros.md)

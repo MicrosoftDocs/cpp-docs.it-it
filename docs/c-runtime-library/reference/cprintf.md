@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: cprintf'
 title: cprintf
 ms.date: 12/16/2019
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - cprintf function
 ms.assetid: 573e6634-d7e5-4856-8c01-627dcfbd5fc8
-ms.openlocfilehash: 1f61043b1cf59ad31107bcfc333338a7493767cf
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c42a02afaaa820e58f32b251ad760cf3bee825ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155904"
 ---
 # <a name="cprintf"></a>cprintf
 
-Il nome di funzione specifico di Microsoft `cprintf` è un alias deprecato per la funzione di [_cprintf](cprintf-cprintf-l-cwprintf-cwprintf-l.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+Il nome della funzione specifica `cprintf` di Microsoft è un alias deprecato per la funzione [_cprintf](cprintf-cprintf-l-cwprintf-cwprintf-l.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
 
 È consigliabile usare invece la funzione di [_cprintf_s](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md) [_cprintf](cprintf-cprintf-l-cwprintf-cwprintf-l.md) o con sicurezza avanzata. In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.
 

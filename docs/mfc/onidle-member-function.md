@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzione membro OnIdle'
 title: Funzione membro OnIdle
 ms.date: 11/19/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], OnIdle method [MFC]
 - message handling [MFC], OnIdle method [MFC]
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
-ms.openlocfilehash: 17595713f942c7fe7784fa2a12adbcc583cad418
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a094b72f78db75d9f0f93ffa840d1d90cc96294c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619839"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112258"
 ---
 # <a name="onidle-member-function"></a>Funzione membro OnIdle
 
@@ -28,6 +29,6 @@ Ciclo del messaggio
 
 Per ulteriori informazioni sulle operazioni che è possibile eseguire nel ciclo inattivo, vedere [elaborazione del ciclo inattivo](idle-loop-processing.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [CWinApp: classe Application](cwinapp-the-application-class.md)

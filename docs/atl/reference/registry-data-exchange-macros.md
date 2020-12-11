@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro scambio di dati del registro di sistema'
 title: Macro scambio dati del registro di sistema
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: 507db77b525c526fe1cd47c7d75c34e15a6a0628
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ecfc5617922fe0a1ec7b134f61093a4ed3962a54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157776"
 ---
 # <a name="registry-data-exchange-macros"></a>Macro scambio dati del registro di sistema
 
 Queste macro eseguono operazioni di scambio dei dati del registro di sistema.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_RDX_MAP](#begin_rdx_map)|Contrassegna l'inizio della mappa di scambio dei dati del registro di sistema.|
 |[END_RDX_MAP](#end_rdx_map)|Contrassegna la fine della mappa di scambio dei dati del registro di sistema.|
@@ -43,11 +44,11 @@ Contrassegna l'inizio della mappa di scambio dei dati del registro di sistema.
 BEGIN_RDX_MAP
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le macro seguenti vengono utilizzate all'interno della mappa di scambio dei dati del registro di sistema per leggere e scrivere voci nel registro di sistema:
 
-|Macro|Descrizione|
+|Macro|Description|
 |-----------|-----------------|
 |[RDX_BINARY](#rdx_binary)|Associa la voce del registro di sistema specificata a una variabile membro specificata di tipo BYTE.|
 |[RDX_DWORD](#rdx_dword)|Associa la voce del registro di sistema specificata a una variabile membro specificata di tipo DWORD.|
@@ -94,7 +95,7 @@ Variabile membro da associare alla voce del registro di sistema specificata.
 *member_size*<br/>
 Dimensione, in byte, della variabile membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro viene utilizzata insieme alle macro BEGIN_RDX_MAP e END_RDX_MAP per associare una variabile membro a una determinata voce del registro di sistema. La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la funzione membro con lo stesso nome creato dalle macro BEGIN_RDX_MAP e END_RDX_MAP, deve essere utilizzata per eseguire lo scambio di dati tra il registro di sistema e le variabili membro nella mappa di RDX.
 
@@ -128,7 +129,7 @@ Variabile membro da associare alla voce del registro di sistema specificata.
 *member_size*<br/>
 Dimensione, in byte, della variabile membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro viene utilizzata insieme alle macro BEGIN_RDX_MAP e END_RDX_MAP per associare una variabile membro a una determinata voce del registro di sistema. La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la funzione membro con lo stesso nome creato dalle macro BEGIN_RDX_MAP e END_RDX_MAP, deve essere utilizzata per eseguire lo scambio di dati tra il registro di sistema e le variabili membro nella mappa di RDX.
 
@@ -162,7 +163,7 @@ Variabile membro da associare alla voce del registro di sistema specificata.
 *member_size*<br/>
 Dimensione, in byte, della variabile membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro viene utilizzata insieme alle macro BEGIN_RDX_MAP e END_RDX_MAP per associare una variabile membro a una determinata voce del registro di sistema. La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la funzione membro con lo stesso nome creato dalle macro BEGIN_RDX_MAP e END_RDX_MAP, deve essere utilizzata per eseguire lo scambio di dati tra il registro di sistema e le variabili membro nella mappa di RDX.
 
@@ -196,11 +197,11 @@ Variabile membro da associare alla voce del registro di sistema specificata.
 *member_size*<br/>
 Dimensione, in byte, della variabile membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro viene utilizzata insieme alle macro BEGIN_RDX_MAP e END_RDX_MAP per associare una variabile membro a una determinata voce del registro di sistema. La funzione globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), o la funzione membro con lo stesso nome creato dalle macro BEGIN_RDX_MAP e END_RDX_MAP, deve essere utilizzata per eseguire lo scambio di dati tra il registro di sistema e le variabili membro nella mappa di RDX.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: registrazione server funzioni globali'
 title: Funzioni globali di registrazione server
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: 4a84c311e34f1bc37b2f51e2152b6fcf2e46e2a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7841c162c2c7c0c93cd8edcd8fd6d78ae4bb2b1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157737"
 ---
 # <a name="server-registration-global-functions"></a>Funzioni globali di registrazione server
 
@@ -22,7 +23,7 @@ Queste funzioni forniscono supporto per la registrazione e l'annullamento della 
 > [!IMPORTANT]
 > Le funzioni elencate nella tabella seguente non possono essere usate nelle applicazioni eseguite nel Windows Runtime.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|Questa funzione viene chiamata per registrare ogni oggetto nella mappa oggetto.|
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Questa funzione viene chiamata per annullare la registrazione di ogni oggetto nella mappa oggetto.|
@@ -60,7 +61,7 @@ Punta al CLSID dell'oggetto da registrare. Se NULL, verranno registrati tutti gl
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AtlComModuleRegisterServer` esegue il mapping dell'oggetto generato automaticamente ATL e registra ogni oggetto della mappa. Se *pCLSID* non è null, viene registrato solo l'oggetto a cui fa riferimento *pCLSID* . in caso contrario, vengono registrati tutti gli oggetti.
 
@@ -92,7 +93,7 @@ Punta al CLSID dell'oggetto di cui annullare la registrazione. Se viene annullat
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AtlComModuleUnregisterServer` esamina la mappa dell'oggetto ATL e Annulla la registrazione di ogni oggetto nella mappa. Se *pCLSID* non è null, viene annullata la registrazione solo dell'oggetto a cui fa riferimento *pCLSID* . in caso contrario, viene annullata la registrazione di tutti gli oggetti.
 
@@ -124,7 +125,7 @@ Determina i tipi di connessione all'oggetto classe. I valori possibili sono REGC
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione helper viene utilizzata da [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsoleto in ATL 7,0) e [CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
@@ -145,7 +146,7 @@ Puntatore al modulo COM.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione helper viene utilizzata da [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsoleto in ATL 7,0) e [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
@@ -179,7 +180,7 @@ Puntatore al puntatore a interfaccia identificato da *riid*. Se l'oggetto non su
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione helper viene utilizzata da [CComModule:: GetClassObject](ccommodule-class.md#getclassobject) (obsoleto in ATL 7,0) e [CAtlDllModuleT:: GetClassObject](catldllmodulet-class.md#getclassobject).
 

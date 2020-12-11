@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costanti matematiche'
 title: Costanti Math
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: 156e4df4bcd4be457f2d14e7e5f5531d93d642be
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4591376b6320d9768acb1ed8ecc0d5098a046bf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438258"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156112"
 ---
 # <a name="math-constants"></a>Costanti Math
 
@@ -45,9 +46,9 @@ ms.locfileid: "79438258"
 
 I simboli seguenti sono definiti per i valori delle espressioni indicate:
 
-|Simbolo|Expression|valore|
+|Simbolo|Expression|Valore|
 |------------|----------------|-----------|
-|M_E|e|2.71828182845904523536|
+|M_E|h|2.71828182845904523536|
 |M_LOG2E|log2(e)|1.44269504088896340736|
 |M_LOG10E|log10(e)|0.434294481903251827651|
 |M_LN2|ln(2)|0.693147180559945309417|
@@ -65,6 +66,6 @@ Le costanti Math non sono definite in C/C++ standard. Per usarle, è prima neces
 
 Se il progetto viene compilato in modalità di rilascio, il file ATLComTime.h include math.h. Se si usa almeno una delle costanti Math in un progetto che include anche ATLComTime.h, è necessario definire `_USE_MATH_DEFINES` prima di includere ATLComTime.h.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Global Constants](../c-runtime-library/global-constants.md) (Costanti globali)
+[Costanti globali](../c-runtime-library/global-constants.md)

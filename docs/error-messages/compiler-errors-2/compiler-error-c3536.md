@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3536'
 title: Errore del compilatore C3536
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: 2380a9d42525cfb662fa014b89751d6dc8b9f192
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 62bd8bb75adfbf0e21f150f4240bb5f4011f6382
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112505"
 ---
 # <a name="compiler-error-c3536"></a>Errore del compilatore C3536
 
@@ -41,6 +42,6 @@ int main()
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parola chiave auto](../../cpp/auto-cpp.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: uso di CTreeCtrl'
 title: Utilizzo di CTreeCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3a8c3b9b9365faf5f2d0e4b100a1239311c5d57d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154578"
 ---
 # <a name="using-ctreectrl"></a>Utilizzo di CTreeCtrl
 
@@ -18,9 +19,9 @@ Un controllo struttura ad albero, rappresentato dalla classe [CTreeCtrl](../mfc/
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Confronto tra CTreeCtrl e CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
+- [CTreeCtrl e CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
 
-- [Uso di controlli Tree](../mfc/using-tree-controls.md)
+- [Utilizzo di controlli struttura ad albero](../mfc/using-tree-controls.md)
 
 - [Comunicazione con un controllo albero](../mfc/communicating-with-a-tree-control.md)
 
@@ -28,24 +29,24 @@ Un controllo struttura ad albero, rappresentato dalla classe [CTreeCtrl](../mfc/
 
 - [Elementi padre e figlio del controllo Tree](../mfc/tree-control-parent-and-child-items.md)
 
-- [Posizione degli elementi del controllo Tree](../mfc/tree-control-item-position.md)
+- [Posizione dell'elemento del controllo Tree](../mfc/tree-control-item-position.md)
 
 - [Etichette degli elementi del controllo Tree](../mfc/tree-control-item-labels.md)
 
 - [Modifica dell'etichetta del controllo Tree](../mfc/tree-control-label-editing.md)
 
-- [Panoramica degli stati degli elementi del controllo Tree](../mfc/tree-control-item-states-overview.md)
+- [Panoramica degli Stati degli elementi del controllo Tree](../mfc/tree-control-item-states-overview.md)
 
 - [Elenchi di immagini del controllo Tree](../mfc/tree-control-image-lists.md)
 
-- [Selezione elementi del controllo Tree](../mfc/tree-control-item-selection.md)
+- [Selezione dell'elemento del controllo Tree](../mfc/tree-control-item-selection.md)
 
-- [Operazioni di trascinamento del controllo Tree](../mfc/tree-control-drag-and-drop-operations.md)
+- [Operazioni di trascinamento e rilascio del controllo Tree](../mfc/tree-control-drag-and-drop-operations.md)
 
 - [Informazioni sugli elementi del controllo Tree](../mfc/tree-control-item-information.md)
 
 - [Messaggi di notifica del controllo Tree](../mfc/tree-control-notification-messages.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

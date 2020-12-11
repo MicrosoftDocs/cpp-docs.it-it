@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; iterator&gt;'
 title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 08e2051db70ee1891c7b60860c7ea0b423855be5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9c40d46c5cde45baa66c8173d2b6d8f0186d1bc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112063"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -24,7 +25,7 @@ Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iterator
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli iteratori costituiscono una generalizzazione dei puntatori, che astraggono dai requisiti di tali puntatori in modo da consentire al programma C++ di utilizzare strutture di dati diverse in maniera uniforme. Gli iteratori fungono da intermediari tra i contenitori e gli algoritmi generici. Anziché operare su tipi di dati specifici, gli algoritmi vengono definiti per operare su un intervallo specificato da un tipo di iteratore. L'algoritmo può operare su qualsiasi struttura di dati che soddisfa i requisiti dell'iteratore. Esistono cinque tipi o categorie di iteratori, ciascuno dotato di un proprio set di requisiti e funzionalità risultanti:
 
@@ -46,7 +47,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[anticipo](../standard-library/iterator-functions.md#advance)|Incrementa un iteratore di un numero specificato di posizioni.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Crea un iteratore in grado di inserire gli elementi nella parte finale di un contenitore specificato.|
@@ -57,7 +58,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 |[crend](../standard-library/iterator-functions.md#crend)||
 |[data](../standard-library/iterator-functions.md#data)||
 |[distance](../standard-library/iterator-functions.md#distance)|Determina il numero di incrementi tra le posizioni a cui puntano due iteratori.|
-|[fine](../standard-library/iterator-functions.md#end)|Recupera un iteratore all'elemento successivo all'ultimo elemento nel contenitore specificato.|
+|[end](../standard-library/iterator-functions.md#end)|Recupera un iteratore all'elemento successivo all'ultimo elemento nel contenitore specificato.|
 |[empty](../standard-library/iterator-functions.md#empty)||
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Crea un iteratore in grado di inserire elementi all'inizio di un contenitore specificato.|
 |[Inseritore](../standard-library/iterator-functions.md#inserter)|Adattatore dell'iteratore che aggiunge un nuovo elemento a un contenitore in corrispondenza di un punto di inserimento specificato.|
@@ -72,7 +73,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore! =](../standard-library/iterator-operators.md#op_neq)|Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.|
 |[operatore = =](../standard-library/iterator-operators.md#op_eq_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.|
@@ -85,7 +86,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Il modello di classe descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container` , a cui accede tramite l'oggetto protetto `pointer` archiviato denominato contenitore.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una `iterator_category` funzione che rappresenta un iteratore bidirezionale.|
@@ -106,7 +107,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Il modello di classe descrive un oggetto che si comporta come un iteratore ad accesso casuale, solo in senso inverso.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore ad accesso causale non verificato. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

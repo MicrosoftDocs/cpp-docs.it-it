@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: domande frequenti sulle DLL'
 title: Domande frequenti sulle DLL MFC
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: e12817e016376d5b76ec67e8bd10fbd3e85dbdda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 501ec5cb5c5a8f4993e4f54e5d0434e31a26af9e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156710"
 ---
 # <a name="dll-frequently-asked-questions"></a>Domande frequenti relative alle DLL
 
@@ -27,7 +28,7 @@ Di seguito sono riportate alcune domande frequenti sulle dll.
 
 - [Si è verificata una perdita di memoria nella normale DLL MFC, ma il mio codice sembra corretto. Come è possibile individuare la perdita di memoria?](#memory_leak)
 
-## <a name="can-an-mfc-dll-create-multiple-threads"></a><a name="mfc_multithreaded_1"></a>Una DLL MFC può creare più thread?
+## <a name="can-an-mfc-dll-create-multiple-threads"></a><a name="mfc_multithreaded_1"></a> Una DLL MFC può creare più thread?
 
 Eccetto durante l'inizializzazione, una DLL MFC può creare in modo sicuro più thread, purché utilizzi le funzioni TLS (thread local storage) Win32, ad esempio **TlsAlloc** per allocare l'archiviazione locale dei thread. Tuttavia, se una DLL MFC USA **`__declspec(thread)`** per allocare l'archiviazione locale di thread, l'applicazione client deve essere collegata in modo implicito alla dll. Se l'applicazione client si collega in modo esplicito alla DLL, la chiamata a **LoadLibrary** non caricherà correttamente la dll. Per ulteriori informazioni sulle variabili locali di thread nelle DLL, vedere [thread](../cpp/thread.md).
 
@@ -39,11 +40,11 @@ Una DLL MFC che crea un nuovo thread MFC durante l'avvio smetterà di rispondere
 
 - Funzione specificata `DllMain` o **RawDllMain** in una DLL di estensione MFC.
 
-## <a name="can-a-multithreaded-application-access-an-mfc-dll-in-different-threads"></a><a name="mfc_multithreaded_2"></a>Un'applicazione multithread può accedere a una DLL MFC in thread diversi?
+## <a name="can-a-multithreaded-application-access-an-mfc-dll-in-different-threads"></a><a name="mfc_multithreaded_2"></a> Un'applicazione multithread può accedere a una DLL MFC in thread diversi?
 
 Le applicazioni multithread possono accedere a DLL MFC regolari che si collegano dinamicamente alle DLL di estensione MFC e MFC da thread diversi. Un'applicazione può accedere a DLL MFC regolari che si collegano in modo statico a MFC da più thread creati nell'applicazione.
 
-## <a name="are-there-any-mfc-classes-or-functions-that-cannot-be-used-in-an-mfc-dll"></a><a name="mfc_prohibited_classes"></a>Esistono classi o funzioni MFC che non possono essere utilizzate in una DLL MFC?
+## <a name="are-there-any-mfc-classes-or-functions-that-cannot-be-used-in-an-mfc-dll"></a><a name="mfc_prohibited_classes"></a> Esistono classi o funzioni MFC che non possono essere utilizzate in una DLL MFC?
 
 Le DLL di estensione usano la `CWinApp` classe derivata da dell'applicazione client. Non devono avere una propria `CWinApp` classe derivata da.
 
@@ -51,7 +52,7 @@ Le normali DLL MFC devono avere una `CWinApp` classe derivata da e un singolo og
 
 Si noti che poiché il meccanismo non è `CWinApp::Run` applicabile a una dll, l'applicazione è proprietaria del pump principale del messaggio. Se la DLL apre finestre di dialogo non modali o ha una finestra cornice principale, il pump del messaggio principale dell'applicazione deve chiamare una routine esportata dalla DLL, che a sua volta chiama la `CWinApp::PreTranslateMessage` funzione membro dell'oggetto applicazione della dll.
 
-## <a name="what-optimization-techniques-should-i-use-to-improve-the-client-application39s-performance-when-loading"></a><a name="mfc_optimization"></a>Quali tecniche di ottimizzazione è consigliabile utilizzare per migliorare l'applicazione client&#39;le prestazioni durante il caricamento?
+## <a name="what-optimization-techniques-should-i-use-to-improve-the-client-application39s-performance-when-loading"></a><a name="mfc_optimization"></a> Quali tecniche di ottimizzazione è consigliabile utilizzare per migliorare l'applicazione client&#39;le prestazioni durante il caricamento?
 
 Se la DLL è una normale DLL MFC collegata in modo statico a MFC, la relativa modifica in una normale DLL MFC collegata a MFC riduce le dimensioni del file.
 
@@ -59,10 +60,10 @@ Se la DLL include un numero elevato di funzioni esportate, utilizzare un file co
 
 Le DLL collegate in modo implicito a un'applicazione vengono caricate quando viene caricata l'applicazione. Per migliorare le prestazioni durante il caricamento, provare a dividere la DLL in dll diverse. Inserire tutte le funzioni necessarie per l'applicazione chiamante subito dopo il caricamento in un'unica DLL e fare in modo che l'applicazione chiamante si colleghi a tale DLL. Inserire le altre funzioni che l'applicazione chiamante non ha bisogno immediatamente in un'altra DLL e fare in modo che l'applicazione si colleghi a tale DLL. Per ulteriori informazioni, vedere [collegare un eseguibile a una dll](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
 
-## <a name="there39s-a-memory-leak-in-my-regular-mfc-dll-but-my-code-looks-fine-how-can-i-find-the-memory-leak"></a><a name="memory_leak"></a>Si&#39;una perdita di memoria nella normale DLL MFC, ma il codice è corretto. Come è possibile individuare la perdita di memoria?
+## <a name="there39s-a-memory-leak-in-my-regular-mfc-dll-but-my-code-looks-fine-how-can-i-find-the-memory-leak"></a><a name="memory_leak"></a> Si&#39;una perdita di memoria nella normale DLL MFC, ma il codice è corretto. Come è possibile individuare la perdita di memoria?
 
 Una possibile causa della perdita di memoria è che MFC crea oggetti temporanei utilizzati all'interno delle funzioni del gestore di messaggi. Nelle applicazioni MFC questi oggetti temporanei vengono puliti automaticamente nella `CWinApp::OnIdle()` funzione chiamata tra l'elaborazione dei messaggi. Tuttavia, nelle librerie a collegamento dinamico (dll) MFC, la `OnIdle()` funzione non viene chiamata automaticamente. Di conseguenza, gli oggetti temporanei non vengono puliti automaticamente. Per pulire gli oggetti temporanei, la DLL deve chiamare in modo esplicito `OnIdle(1)` periodicamente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md)

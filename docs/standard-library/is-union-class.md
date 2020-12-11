@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_union Class'
 title: Classe is_union
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_union class
 - is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
-ms.openlocfilehash: 3b4383fd96c359661d225433dbe9e7dd8b7f939f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: be095053523a0348632d2c81c3a3a7eafe8593d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154305"
 ---
-# <a name="isunion-class"></a>Classe is_union
+# <a name="is_union-class"></a>Classe is_union
 
 Verifica se il tipo è un'unione.
 
@@ -30,9 +31,9 @@ struct is_union;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo di `cv-qualified` Unione o un form di un tipo di Unione; in caso contrario, include false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo di Unione o un `cv-qualified` form di un tipo di Unione; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -74,11 +75,11 @@ is_union<ints> == true
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_class](../standard-library/is-class-class.md)

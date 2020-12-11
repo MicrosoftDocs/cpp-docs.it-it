@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: informazioni sulla sintassi di Backus-Naur form (BNF)'
 title: Registrar ATL e sintassi Backus-Naur form (BNF)
 ms.date: 05/14/2019
 helpviewer_keywords:
 - BNF notation
 - Backus-Naur form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: 0f07a39863b586d524d060dc3df7117e2c930b3e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 7f392d442c4d43865faf9e788f8bf69288673398
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157347"
 ---
 # <a name="understanding-backus-naur-form-bnf-syntax"></a>Informazioni sulla sintassi Backus-Naur form (BNF)
 
@@ -32,7 +33,7 @@ Come indicato nella tabella precedente, gli script di registrazione usano valori
 |**ForceRemove**|Rimuove completamente la chiave successiva (se presente) e quindi la ricrea.|
 |**NoRemove**|Non rimuove la chiave successiva durante l'annullamento della registrazione.|
 |**Val**|Specifica che `<Key Name>` è effettivamente un valore denominato.|
-|**Elimina**|Elimina la chiave successiva durante la registrazione.|
+|**Eliminazione**|Elimina la chiave successiva durante la registrazione.|
 |**s**|Specifica che il valore successivo è una stringa (REG_SZ).|
 |**d**|Specifica che il valore successivo è un valore DWORD (REG_DWORD).|
 |**m**|Specifica che il valore successivo è un valore multistringa (REG_MULTI_SZ).|
@@ -44,31 +45,31 @@ Ecco alcuni esempi di sintassi che aiutano a comprendere come funzionano la nota
 
 ### <a name="syntax-example-1"></a>Esempio di sintassi 1
 
-> \<espressione registro di sistema>: \<: = aggiungi chiave>
+> \<registry expression> ::= \<Add Key>
 
 specifica che `registry expression` equivale a `Add Key`.
 
 ### <a name="syntax-example-2"></a>Esempio di sintassi 2
 
-> \<espressione registro di sistema>: \<: = aggiungi chiave> | \<Elimina chiave>
+> \<registry expression> ::= \<Add Key> | \<Delete Key>
 
 specifica che `registry expression` equivale a `Add Key` o `Delete Key`.
 
 ### <a name="syntax-example-3"></a>Esempio di sintassi 3
 
-> \<Nome chiave>:: ='\<alfanumerico>+'
+> \<Key Name> ::= '\<AlphaNumeric>+'
 
 Specifica che `Key Name` è equivalente a uno o più `AlphaNumeric` valori.
 
 ### <a name="syntax-example-4"></a>Esempio di sintassi 4
 
-> \<Aggiungi chiave>:: = [**ForceRemove** | **NoRemove** | **Val**]\<nome chiave>
+> \<Add Key>:: = [**ForceRemove**  |  **NoRemove**  |  **Val**]\<Key Name>
 
 specifica che `Add Key` equivale a `Key Name` e che i valori letterali stringa, `ForceRemove`, `NoRemove` e `val`, sono facoltativi.
 
 ### <a name="syntax-example-5"></a>Esempio di sintassi 5
 
-> \<Alfanumerico>:: = *qualsiasi carattere non null, ovvero ASCII 0*
+> \<AlphaNumeric> :: = *qualsiasi carattere non null, ovvero ASCII 0*
 
 specifica che `AlphaNumeric` equivale a qualsiasi carattere non NULL.
 
@@ -88,6 +89,6 @@ val 'testhex' = d '&H55'
 
 specifica che il nome della chiave `testhex` è un valore DWORD impostato su 55 esadecimale (85 decimale). Questo formato è conforme alla notazione **&H** riportata nella specifica di Visual Basic.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione di script del registrar](../atl/creating-registrar-scripts.md)

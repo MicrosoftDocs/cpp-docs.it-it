@@ -1,4 +1,5 @@
 ---
+description: "Ulteriori informazioni su: esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C"
 title: Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-ms.openlocfilehash: 38b13c1fc9c57354ba8160f6dbe0df6546fe7b5f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c11ee56afb6fc99dbdf5a795cb8551e54835cd67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156619"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C
 
@@ -46,6 +47,6 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [Uso di extern per specificare un collegamento](../cpp/extern-cpp.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esportazione da una DLL](exporting-from-a-dll.md)

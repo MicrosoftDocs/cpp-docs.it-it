@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia IWorkerThreadClient'
 title: Interfaccia IWorkerThreadClient
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: aa72f090a006d6936339582a919b0faf5cab6b03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb9113c9380453dad9f647fa2f5a2095ff12cea7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157984"
 ---
 # <a name="iworkerthreadclient-interface"></a>Interfaccia IWorkerThreadClient
 
@@ -29,16 +30,16 @@ ms.locfileid: "88835350"
 __interface IWorkerThreadClient
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CloseHandle](#closehandle)|Implementare questo metodo per chiudere l'handle associato a questo oggetto.|
 |[Eseguire](#execute)|Implementare questo metodo per eseguire il codice quando l'handle associato a questo oggetto diventa segnalato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Implementare questa interfaccia quando si dispone di codice che deve essere eseguito in un thread di lavoro in risposta a un handle che diventa segnalato.
 
@@ -63,7 +64,7 @@ Handle da chiudere.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'handle passato a questo metodo è stato precedentemente associato a questo oggetto da una chiamata a [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
@@ -93,7 +94,7 @@ Handle che è stato segnalato.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'handle e il puntatore DWORD/puntatore passati a questo metodo sono stati precedentemente associati a questo oggetto da una chiamata a [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
@@ -103,7 +104,7 @@ Nel codice seguente viene illustrata una semplice implementazione di `IWorkerThr
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi](../../atl/reference/atl-classes.md)<br/>
 [Classe CWorkerThread](../../atl/reference/cworkerthread-class.md)

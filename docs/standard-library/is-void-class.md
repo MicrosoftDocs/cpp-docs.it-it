@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_void Class'
 title: Classe is_void
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 49fef050393f7196fe26aa172ac02792ae5c717e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ddb7021f44336d62f45ccef3ea8da824b7c52183
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154279"
 ---
 # <a name="is_void-class"></a>Classe is_void
 
@@ -30,7 +31,7 @@ struct is_void;
 *T*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se il tipo *T* è **`void`** o un form qualificato CV di **`void`** ; in caso contrario, include false.
 
@@ -72,6 +73,6 @@ is_void<void> == true
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

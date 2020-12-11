@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione dei dati con le variabili di dati del documento'
 title: Gestione di dati con variabili dati documento
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-ms.openlocfilehash: 3d845b0fc3d00369d44c21c04a3fb7e3b8d6189e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d05bfe71d080c08b3e0f3bbd416421e612b5d7ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112206"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gestione di dati con variabili dati documento
 
@@ -30,6 +31,6 @@ Le visualizzazioni accedono all'oggetto Document usando il puntatore della vista
 
 Se per il trasferimento di dati frequente è necessario l'accesso diretto o si desidera utilizzare i membri non pubblici della classe Document, è consigliabile impostare la classe di visualizzazione come Friend (in termini di C++) della classe Document.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di documenti](using-documents.md)

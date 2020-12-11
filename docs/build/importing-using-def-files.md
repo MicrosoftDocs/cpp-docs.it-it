@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: importazione tramite i file DEF'
 title: Importazione tramite i file DEF
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: e4ac48dc013874c240411f78a733d32e116df25d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9eb4face47bf999daa8f969282cc621708a76006
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156151"
 ---
 # <a name="importing-using-def-files"></a>Importazione tramite i file DEF
 
@@ -28,7 +29,7 @@ EXPORTS
 
 Nella tabella seguente viene illustrato il motivo.
 
-|Parola chiave|Emette nella libreria di importazione|Esporta|
+|Parola chiave|Emette nella libreria di importazione|Esportazioni|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
@@ -61,6 +62,6 @@ L'uso di CONSTANT è più rischioso perché se si dimentica di usare il livello 
 
 Il linker MSVC corrente genera un avviso se rileva una costante nel file def per tenere conto di questo caso. L'unico motivo reale per usare CONSTANT è se non è possibile ricompilare il file oggetto in cui il file di intestazione non è stato elencato nel **`__declspec(dllimport)`** prototipo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Importazione in un'applicazione](importing-into-an-application.md)

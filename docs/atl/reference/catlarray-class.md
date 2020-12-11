@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAtlArray'
 title: Classe CAtlArray
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ae3f5aef84cac64adba20ef438f5063abda098e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158426"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -89,7 +90,7 @@ Codice utilizzato per copiare o spostare elementi.
 |[INARGTYPE](#inargtype)|Tipo di dati da utilizzare per l'aggiunta di elementi alla matrice.|
 |[OUTARGTYPE](#outargtype)|Tipo di dati da utilizzare per il recupero di elementi dalla matrice.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CAtlArray` fornisce metodi per la creazione e la gestione di una matrice di elementi di un tipo definito dall'utente. Sebbene simili alle matrici C standard, l' `CAtlArray` oggetto può ridursi e aumentare dinamicamente in base alle esigenze. L'indice della matrice inizia sempre dalla posizione 0 e il limite superiore può essere fisso oppure è consentito espandersi quando vengono aggiunti nuovi elementi.
 
@@ -121,7 +122,7 @@ Elemento da aggiungere alla matrice.
 
 Restituisce l'indice dell'elemento aggiunto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il nuovo elemento viene aggiunto alla fine della matrice. Se non viene specificato alcun elemento, viene aggiunto un elemento vuoto; ovvero, la dimensione della matrice è aumentata come se fosse stato aggiunto un elemento reale. Se l'operazione ha esito negativo, viene chiamato [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) con l'argomento E_OUTOFMEMORY.
 
@@ -146,7 +147,7 @@ Matrice da accodare.
 
 Restituisce l'indice del primo elemento accodato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli elementi nella matrice specificata vengono aggiunti alla fine della matrice esistente. Se necessario, la memoria verrà allocata per contenere i nuovi elementi.
 
@@ -166,7 +167,7 @@ Chiamare questo metodo per verificare che l'oggetto matrice sia valido.
 void AssertValid() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l'oggetto matrice non è valido, ATLASSERT genererà un'asserzione. Questo metodo è disponibile solo se è stato definito _DEBUG.
 
@@ -182,7 +183,7 @@ Costruttore.
 CAtlArray() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza l'oggetto matrice.
 
@@ -198,7 +199,7 @@ Distruttore.
 ~CAtlArray() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera tutte le risorse usate dall'oggetto Array.
 
@@ -215,7 +216,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 *aSrc*<br/>
 Origine degli elementi da copiare in una matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo per sovrascrivere gli elementi di una matrice con gli elementi di un'altra matrice. Se necessario, la memoria verrà allocata per contenere i nuovi elementi. Non è possibile copiare gli elementi di una matrice in se stesso.
 
@@ -238,7 +239,7 @@ Chiamare questo metodo per rimuovere tutti gli elementi vuoti dalla matrice.
 void FreeExtra() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti gli elementi vuoti vengono rimossi, ma le dimensioni e il limite superiore della matrice rimangono invariati.
 
@@ -262,7 +263,7 @@ Valore di indice dell'elemento di matrice da restituire.
 
 Restituisce un riferimento all'elemento di matrice obbligatorio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle compilazioni di debug viene generato un ATLASSERT se *IElement* supera il numero di elementi nella matrice. Nelle build di rilascio, un argomento non valido può causare un comportamento imprevedibile.
 
@@ -282,7 +283,7 @@ size_t GetCount() const throw();
 
 Restituisce il numero di elementi archiviati nella matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Poiché il primo elemento della matrice è nella posizione 0, il valore restituito da `GetCount` è sempre 1 maggiore dell'indice più grande.
 
@@ -331,7 +332,7 @@ Indice in corrispondenza del quale deve essere inserita la matrice.
 *paNew*<br/>
 Matrice da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli elementi della matrice *paNew* vengono copiati nell'oggetto Array, a partire dall'elemento *Tart*. Gli elementi della matrice esistenti vengono spostati per evitare che vengano sovrascritti.
 
@@ -363,7 +364,7 @@ Valore dell'elemento o degli elementi da inserire.
 *nCount*<br/>
 Numero di elementi da aggiungere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inserisce uno o più elementi nella matrice, a partire dall'indice *IElement*. Gli elementi esistenti vengono spostati per evitare che vengano sovrascritti.
 
@@ -385,7 +386,7 @@ bool IsEmpty() const throw();
 
 Restituisce true se la matrice è vuota; in caso contrario, false.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La matrice viene definita vuota se non contiene elementi. Pertanto, anche se la matrice contiene elementi vuoti, non è vuota.
 
@@ -411,7 +412,7 @@ Valore di indice dell'elemento di matrice da restituire.
 
 Restituisce un riferimento all'elemento di matrice obbligatorio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Esegue una funzione simile a [CAtlArray:: Geta](#getat). A differenza della classe MFC [CArray](../../mfc/reference/carray-class.md), questo operatore non può essere usato come sostituto di [CAtlArray:: SetAt](#setat).
 
@@ -433,7 +434,7 @@ Chiamare questo metodo per rimuovere tutti gli elementi dall'oggetto Array.
 void RemoveAll() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Rimuove tutti gli elementi dall'oggetto Array.
 
@@ -459,7 +460,7 @@ Indice del primo elemento da rimuovere.
 *nCount*<br/>
 Numero di elementi da rimuovere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Rimuove uno o più elementi dalla matrice. Tutti gli elementi rimanenti vengono spostati verso il basso. Il limite superiore viene decrementato, ma la memoria non viene liberata fino a quando non viene effettuata una chiamata a [CAtlArray:: FreeExtra](#freeextra) .
 
@@ -485,7 +486,7 @@ Indice che punta all'elemento della matrice da impostare.
 *elemento*<br/>
 Nuovo valore dell'elemento specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle compilazioni di debug viene generato un ATLASSERT se *IElement* supera il numero di elementi nella matrice. Nelle compilazioni finali, un parametro non valido può causare risultati imprevedibili.
 
@@ -513,7 +514,7 @@ Valore utilizzato per determinare la dimensione del buffer. Il valore-1 determin
 
 Restituisce true se la matrice è stata ridimensionata correttamente; in caso contrario, false.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La matrice può essere aumentata o ridotta di dimensioni. Se è aumentato, alla matrice vengono aggiunti elementi vuoti aggiuntivi. Se diminuita, gli elementi con gli indici più grandi verranno eliminati e la memoria verrà liberata.
 
@@ -539,7 +540,7 @@ Indice che punta all'elemento della matrice da impostare.
 *elemento*<br/>
 Nuovo valore dell'elemento specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Sostituisce il valore dell'elemento a cui punta l'indice. Se *IElement* è maggiore della dimensione corrente della matrice, la matrice viene aumentata automaticamente utilizzando una chiamata a [CAtlArray:: secount](#setcount). Nelle compilazioni di debug viene generato un ATLASSERT se l' `CAtlArray` oggetto non è valido. Nelle compilazioni finali, i parametri non validi possono provocare risultati imprevedibili.
 

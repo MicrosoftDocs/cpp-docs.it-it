@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: variabili di ambiente per le ottimizzazioni Profile-Guided'
 title: Variabili d'ambiente per le ottimizzazioni GPO
 ms.date: 03/14/2018
 helpviewer_keywords:
 - profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-ms.openlocfilehash: 099e57f1ac69223adafe7bec1af4cc3452915e86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd78db781fc19b7ecfd451e01dc046b21bd87d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156671"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Variabili d'ambiente per le ottimizzazioni GPO
 
@@ -21,7 +22,7 @@ Sono disponibili tre variabili di ambiente che interessano gli scenari di test i
 
 - **VCPROFILE_PATH** consente di specificare la cartella utilizzata per i file PGC.
 
-**Le variabili di ambiente PogoSafeMode e VCPROFILE_ALLOC_SCALE sono deprecate a partire da Visual Studio 2015.** Le opzioni del linker [/GENPROFILE o/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) e [/USEPROFILE](reference/useprofile.md) specificano lo stesso comportamento del linker delle variabili di ambiente.
+**Le variabili di ambiente PogoSafeMode e VCPROFILE_ALLOC_SCALE sono deprecate a partire da Visual Studio 2015.** Le opzioni del linker [/GENPROFILE o/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) e  [/USEPROFILE](reference/useprofile.md) specificano lo stesso comportamento del linker delle variabili di ambiente.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
@@ -37,7 +38,7 @@ Per eseguire la profilatura di PGO in modalità provvisoria, è necessario usare
 
 ### <a name="pogosafemode-syntax"></a>Sintassi di PogoSafeMode
 
-> **set PogoSafeMode**[**=**_valore_]
+> **set PogoSafeMode**[ **=** _valore_]
 
 Impostare **PogoSafeMode** su qualsiasi valore per abilitare la modalità provvisoria. Impostare senza un valore per cancellare un valore precedente e riabilitare la modalità rapida.
 
@@ -49,7 +50,7 @@ Modificare la variabile di ambiente **VCPROFILE_ALLOC_SCALE** per modificare la 
 
 ### <a name="vcprofile_alloc_scale-syntax"></a>Sintassi VCPROFILE_ALLOC_SCALE
 
-> **imposta VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **imposta VCPROFILE_ALLOC_SCALE**[ __=__ *scale_value*]
 
 Il parametro *scale_value* rappresenta un fattore di scala per la quantità di memoria desiderata per l'esecuzione di scenari di test.  Il valore predefinito è 1. Questa riga di comando, ad esempio, imposta il fattore di scala su 2:
 
@@ -61,14 +62,14 @@ Utilizzare la variabile di ambiente **VCPROFILE_PATH** per specificare la direct
 
 ### <a name="vcprofile_path-syntax"></a>Sintassi VCPROFILE_PATH
 
-> **imposta VCPROFILE_PATH**[**=**_percorso_]
+> **imposta VCPROFILE_PATH**[ **=** _percorso_]
 
 Impostare il parametro *path* sul percorso della directory in cui aggiungere i file PGC. Questa riga di comando, ad esempio, imposta la cartella su C:\profile:
 
 `set VCPROFILE_PATH=c:\profile`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Ottimizzazioni guidate da profilo (PGO)](profile-guided-optimizations.md)<br/>
+[Ottimizzazioni PGO](profile-guided-optimizations.md)<br/>
 [/GENPROFILE e/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/USEPROFILE](reference/useprofile.md)<br/>

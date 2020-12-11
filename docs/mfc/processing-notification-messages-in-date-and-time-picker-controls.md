@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: elaborazione dei messaggi di notifica nei controlli selezione data e ora'
 title: Elaborazione dei messaggi di notifica nel controlli selezione data e ora
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: 3c568d231cc02b2529a4d97ab7faed51c1737b19
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 07ac9c4c8ba58c833591409b1f5ab405cd05ebc3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154825"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Elaborazione dei messaggi di notifica nel controlli selezione data e ora
 
@@ -43,7 +44,7 @@ Nell'elenco seguente vengono descritte le diverse notifiche inviate dal controll
 
 - DTN_WMKEYDOWN Notifica all'elemento padre quando l'utente digita un campo di callback. Gestire questa notifica per emulare la stessa risposta da tastiera supportata per i campi non di callback in un controllo selezione data e ora. Per ulteriori informazioni su questa notifica, vedere [supporto dei campi di callback in un controllo DTP](/windows/win32/Controls/date-and-time-picker-controls) nel Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CDateTimeCtrl](using-cdatetimectrl.md)<br/>
 [Controlli](controls-mfc.md)

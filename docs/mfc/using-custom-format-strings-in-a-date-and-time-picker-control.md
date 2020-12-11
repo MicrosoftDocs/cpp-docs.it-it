@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di stringhe di formato personalizzate in un controllo selezione data e ora'
 title: Utilizzo di stringhe di formato personalizzate in un controllo selezione data e ora
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,32 +7,32 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], display styles
 - DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
-ms.openlocfilehash: 8da5ecaf473d6d3c35ddc1b95ac856ce8c12f163
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91add199ffd852a107588617d47a2fd51136596d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154552"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Utilizzo di stringhe di formato personalizzate in un controllo selezione data e ora
 
-Per impostazione predefinita, i controlli selezione data e ora offrono che tre tipi (ognuno dei quali corrisponde a uno stile univoco) di formato per visualizzare la data corrente o l'ora:
+Per impostazione predefinita, i controlli selezione data e ora forniscono tre tipi di formato (ogni formato corrispondente a uno stile univoco) per la visualizzazione della data o dell'ora corrente:
 
-- **DTS_LONGDATEFORMAT** Visualizza la data in formato esteso, un output simile al "Mercoledì, 3 gennaio 2000".
+- **DTS_LONGDATEFORMAT** Visualizza la data nel formato esteso, producendo output come "mercoledì 3 gennaio 2000".
 
-- **DTS_SHORTDATEFORMAT** Visualizza la data in formato abbreviato, di output, ad esempio "1/3/00".
+- **DTS_SHORTDATEFORMAT** Visualizza la data in formato breve, generando un output come "1/3/00".
 
-- **DTS_TIMEFORMAT** Visualizza il tempo in formato esteso, un output, ad esempio "5:31:42 PM".
+- **DTS_TIMEFORMAT** Visualizza l'ora nel formato lungo, producendo un output simile a "5:31:42 PM".
 
-Tuttavia, è possibile personalizzare l'aspetto della data o ora usando una stringa di formato personalizzato. Questa stringa personalizzata è costituita da caratteri di formato esistente, nonformat caratteri o una combinazione di entrambi. Dopo aver compilata la stringa personalizzata, effettuare una chiamata a [CDateTimeCtrl:: SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) passando la stringa personalizzata. Il controllo di selezione data e ora verrà quindi visualizzato il valore corrente usando la stringa di formato personalizzato.
+Tuttavia, è possibile personalizzare l'aspetto della data o dell'ora utilizzando una stringa di formato personalizzata. Questa stringa personalizzata è costituita da caratteri di formato esistenti, caratteri non in formato o da una combinazione di entrambi. Una volta compilata la stringa personalizzata, effettuare una chiamata a [CDateTimeCtrl:: Seformatt](../mfc/reference/cdatetimectrl-class.md#setformat) passando la stringa personalizzata. Il controllo selezione data e ora visualizzerà quindi il valore corrente usando la stringa di formato personalizzata.
 
-Esempio di codice seguente (dove *m_dtPicker* è il `CDateTimeCtrl` oggetto) viene illustrata una possibile soluzione:
+Nell'esempio di codice seguente, in cui *m_dtPicker* è l' `CDateTimeCtrl` oggetto, viene illustrata una possibile soluzione:
 
 [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]
 
-Oltre alle stringhe di formato personalizzato, selezione data e ora controlli supportano inoltre [campi callback](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+Oltre alle stringhe di formato personalizzate, i controlli selezione data e ora supportano anche i [campi di callback](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
+[Utilizzo di CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

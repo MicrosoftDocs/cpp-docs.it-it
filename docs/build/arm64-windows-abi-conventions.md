@@ -1,12 +1,13 @@
 ---
+description: 'Altre informazioni su: Panoramica delle convenzioni ABI di ARM64'
 title: Panoramica delle convenzioni ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
-ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
+ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157113"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -31,7 +32,7 @@ Infine, quando si fa riferimento ai tipi di dati, vengono riportate le seguenti 
 
 - **Short vector** : tipo di dati direttamente rappresentabile in SIMD, un vettore di 8 byte o 16 byte di elementi. È allineata alle dimensioni, a 8 byte o a 16 byte, dove ogni elemento può essere 1, 2, 4 o 8 byte.
 - **HFA (aggregazione a virgola mobile omogenea)** : un tipo di dati con 2 o 4 membri a virgola mobile identici, ovvero float o Double.
-- **HVA (aggregato short vector aggregate)** : tipo di dati con 2 o 4 membri con vettore corto identici.
+- **HVA (omogeneo Short-Vector aggregato)** : tipo di dati con 2 a 4 membri Short-Vector identici.
 
 ## <a name="base-requirements"></a>Requisiti di base
 
@@ -253,7 +254,7 @@ Tutte le CPU ARMv8 sono necessarie per supportare un registro del contatore di c
 
 Il contatore di cicli è un vero contatore di cicli, non un orologio a parete. La frequenza di conteggio varia in funzione della frequenza del processore. Se si ritiene che sia necessario essere a conoscenza della frequenza del contatore del ciclo, non è consigliabile utilizzare il contatore del ciclo. Si desidera invece misurare il tempo di clock, per il quale è necessario utilizzare `QueryPerformanceCounter` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Problemi comuni relativi alla migrazione di Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
 [Gestione delle eccezioni ARM64](arm64-exception-handling.md)

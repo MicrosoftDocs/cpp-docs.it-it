@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura: incorporare un manifesto all'interno di un'applicazione C/C++"
 title: "Procedura: incorporare un manifesto in un'applicazione C/C++"
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 2f125ee445d4ee9efdf21c37134d4c5adbca256d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce3bdd56b994498b223857b80989247fe9919e4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156346"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedura: incorporare un manifesto in un'applicazione C/C++
 
@@ -27,7 +28,7 @@ Esistono due modi per incorporare il manifesto all'interno di un'applicazione o 
    mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
    ```
 
-   o
+   oppure
 
    ```cmd
    mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
@@ -37,7 +38,7 @@ Esistono due modi per incorporare il manifesto all'interno di un'applicazione o 
 
 - Se si sta eseguendo una compilazione incrementale, attenersi alla procedura seguente:
 
-  - Collegare il file binario per generare il file MyApp. exe. manifest.
+  - Collegare il file binario per generare il file MyApp.exe. manifest.
 
   - Convertire il manifesto in un file di risorse.
 
@@ -47,7 +48,7 @@ Gli esempi seguenti illustrano come modificare i makefile per incorporare entram
 
 ## <a name="makefiles-before"></a>Makefile (prima)
 
-Si consideri lo script nmake per MyApp. exe, una semplice applicazione compilata da un file:
+Si consideri lo script nmake per MyApp.exe, un'applicazione semplice compilata da un file:
 
 ```
 # build MyApp.exe
@@ -67,9 +68,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Se lo script viene eseguito senza modifiche con Visual Studio, crea correttamente MyApp. exe. Crea anche il file manifesto esterno MyApp. exe. manifest, per l'uso da parte del sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.
+Se lo script viene eseguito senza modifiche con Visual Studio, viene creato correttamente MyApp.exe. Crea anche il file manifesto esterno MyApp.exe. manifest, per l'uso da parte del sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.
 
-Lo script nmake per MyLibrary. dll ha un aspetto molto simile:
+Lo script nmake per MyLibrary.dll ha un aspetto molto simile:
 
 ```
 # build MyLibrary.dll
@@ -94,7 +95,7 @@ clean :
 
 ## <a name="makefiles-after"></a>Makefile (dopo)
 
-Per compilare con manifesti incorporati, è necessario apportare quattro piccole modifiche ai makefile originali. Per il makefile di MyApp. exe:
+Per compilare con manifesti incorporati, è necessario apportare quattro piccole modifiche ai makefile originali. Per il makefile MyApp.exe:
 
 ```
 # build MyApp.exe
@@ -124,7 +125,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Per il makefile MyLibrary. dll:
+Per il makefile MyLibrary.dll:
 
 ```
 # build MyLibrary.dll
@@ -257,6 +258,6 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni sulla generazione di manifesti per i programmi C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

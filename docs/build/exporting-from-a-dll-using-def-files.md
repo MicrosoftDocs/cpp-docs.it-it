@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: esportazione da una DLL tramite i file DEF'
 title: Esportazione da una DLL tramite i file DEF
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5be5f2c4a5f6db5f1983da940d8a336f02c938f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156528"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Esportazione da una DLL tramite i file DEF
 
@@ -34,7 +35,7 @@ EXPORTS
    Min   @4
 ```
 
-Se si utilizza la [creazione guidata DLL MFC](../mfc/reference/mfc-dll-wizard.md) per creare una DLL MFC, tramite la procedura guidata viene creato automaticamente un file def di scheletro che verrà aggiunto automaticamente al progetto. Aggiungere i nomi delle funzioni da esportare in questo file. Per le dll non MFC, creare il file DEF e aggiungerlo al progetto. Passare quindi al **Project**  >  **Properties**  >  file di definizione del modulo di input del**linker**delle proprietà del progetto  >  **Input**  >  **Module Definition File** e immettere il nome del file def. Ripetere questo passaggio per ogni configurazione e piattaforma oppure eseguirlo contemporaneamente selezionando **configurazione = tutte le configurazioni**e **piattaforma = tutte le piattaforme**.
+Se si utilizza la [creazione guidata DLL MFC](../mfc/reference/mfc-dll-wizard.md) per creare una DLL MFC, tramite la procedura guidata viene creato automaticamente un file def di scheletro che verrà aggiunto automaticamente al progetto. Aggiungere i nomi delle funzioni da esportare in questo file. Per le dll non MFC, creare il file DEF e aggiungerlo al progetto. Passare quindi al   >    >  file di definizione del modulo di input del **linker** delle proprietà del progetto  >    >   e immettere il nome del file def. Ripetere questo passaggio per ogni configurazione e piattaforma oppure eseguirlo contemporaneamente selezionando **configurazione = tutte le configurazioni** e **piattaforma = tutte le piattaforme**.
 
 Se si esportano funzioni in un file C++, è necessario inserire i nomi decorati nel file DEF oppure definire le funzioni esportate con il collegamento C standard usando extern "C". Se è necessario inserire i nomi decorati nel file DEF, è possibile ottenerli usando lo strumento [dumpbin](../build/reference/dumpbin-reference.md) o l'opzione [/Map](../build/reference/map-generate-mapfile.md) del linker. Si noti che i nomi decorati prodotti dal compilatore sono specifici del compilatore. Se si inseriscono i nomi decorati prodotti dal compilatore Microsoft C++ (MSVC) in un file DEF, è necessario compilare anche le applicazioni che si collegano alla DLL usando la stessa versione di MSVC in modo che i nomi decorati nell'applicazione chiamante corrispondano ai nomi esportati nel file DEF della DLL.
 
@@ -85,6 +86,6 @@ Si noti che MFC usa i file DEF per esportare le funzioni e le classi dal MFCx0.d
 
 - [Importazioni reciproche](mutual-imports.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esportazione da una DLL](exporting-from-a-dll.md)

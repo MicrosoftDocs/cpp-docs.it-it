@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tmpnam_s, _wtmpnam_s'
 title: tmpnam_s, _wtmpnam_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 2168a1bef5b8eb20a1f59460146559f4fa9f2645
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fefaa0ca54ecd1a4ae0a61f10ab502cf5310648a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155787"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -70,7 +71,7 @@ errno_t _wtmpnam_s(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Puntatore che conterrà il nome generato.
 
 *sizeInChars*<br/>
@@ -82,14 +83,14 @@ Entrambe queste funzioni restituiscono 0 in caso di esito positivo o un numero d
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-| *Str* | *sizeInChars* | **Valore restituito** | **Contenuto di** *Str* |
+| *str* | *sizeInChars* | **Valore restituito** | **Contenuto di** *Str* |
 |--|--|--|--|
 | **NULL** | any | **EINVAL** | non modificato |
 | Not **null** (punta alla memoria valida) | troppo breve | **ERANGE** | non modificato |
 
 Se *Str* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni restituisce il nome di un file che non esiste. **tmpnam_s** restituisce un nome univoco nella directory temporanea di Windows designata restituita da [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Tenere presente che quando un nome di file è preceduto da una barra rovesciata senza informazioni sul percorso, ad esempio \nomef21, significa che il nome è valido per la directory di lavoro corrente.
 

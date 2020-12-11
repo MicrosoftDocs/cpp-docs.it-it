@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ON_UPDATE_COMMAND_UI macro'
 title: Macro ON_UPDATE_COMMAND_UI
 ms.date: 09/06/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: ba5a48fabb9142c080e688e189e0983ad5ba2eda
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 394ee2679e84c09223f61d485fac3e628dec7145
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112167"
 ---
 # <a name="on_update_command_ui-macro"></a>Macro ON_UPDATE_COMMAND_UI
 
@@ -26,6 +27,6 @@ Ad esempio, per aggiornare un comando Clear All nel menu Edit del programma, uti
 
 Come tutti i gestori, la dichiarazione di funzione Mostra la parola chiave **afx_msg** . Come tutti i gestori di aggiornamento, accetta un argomento, un puntatore a un `CCmdUI` oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Procedura: Aggiornare oggetti dell'interfaccia utente](how-to-update-user-interface-objects.md)
+[Procedura: aggiornare oggetti User-Interface](how-to-update-user-interface-objects.md)

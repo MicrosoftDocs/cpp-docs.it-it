@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cputs, _cputws'
 title: _cputs, _cputws
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7a519064b2a4318b5064074fbe9a0f09a3708d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155917"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
@@ -63,14 +64,14 @@ int _cputws(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa di output.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se ha esito positivo, **_cputs** restituisce 0. In caso contrario, restituisce un valore diverso da zero.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_cputs** scrive la stringa con terminazione null a cui punta *Str* direttamente nella console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
 

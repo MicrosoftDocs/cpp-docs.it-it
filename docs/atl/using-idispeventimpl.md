@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: uso di IDispEventImpl'
 title: Utilizzo di IDispEventImpl (ATL)
 ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 9684781ba99d96e2c58d450ee0ff892374e33aef
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 4ddab52eeac3c409b32393e8b8b07a85019143c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630591"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157178"
 ---
 # <a name="using-idispeventimpl"></a>Uso di IDispEventImpl
 
-Quando si `IDispEventImpl` USA per gestire gli eventi, è necessario:
+Quando `IDispEventImpl` si usa per gestire gli eventi, è necessario:
 
 - Derivare la classe da [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
 
@@ -47,7 +48,7 @@ methods:
 };
 ```
 
-Nell'esempio viene `#import` utilizzato per generare i file di intestazione necessari dalla libreria dei tipi di Word. Se si vuole usare questo esempio con altre versioni di Word, è necessario specificare il file dll Mso corretto. Ad esempio, Office 2000 fornisce Mso9. dll e OfficeXP fornisce MSO. dll. Questo codice è stato semplificato da *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti):
+Nell'esempio viene utilizzato `#import` per generare i file di intestazione necessari dalla libreria dei tipi di Word. Se si vuole usare questo esempio con altre versioni di Word, è necessario specificare il file dll Mso corretto. Ad esempio, Office 2000 fornisce mso9.dll e OfficeXP fornisce mso.dll. Questo codice è stato semplificato da *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti):
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
 
@@ -55,7 +56,7 @@ Il codice seguente viene visualizzato in NotSoSimple. h. Il codice pertinente è
 
 [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione di eventi](../atl/event-handling-and-atl.md)<br/>
+[Gestione degli eventi](../atl/event-handling-and-atl.md)<br/>
 [Esempio ATLEventHandling](../overview/visual-cpp-samples.md)

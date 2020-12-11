@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso dei documenti'
 title: Utilizzo di documenti
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,45 +15,45 @@ helpviewer_keywords:
 - printing [MFC], documents
 - writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
-ms.openlocfilehash: fb35d1731912b2e322bc61621f7900e0d98e1e72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 486604733808fb027d6dd0fbf81bb670c85313f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411591"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154500"
 ---
 # <a name="using-documents"></a>Utilizzo di documenti
 
-Lavorare insieme, documenti e visualizzazioni:
+Collaborazione, documenti e visualizzazioni:
 
-- Contengono, gestire e visualizzare le specifiche dell'applicazione [dati](../mfc/managing-data-with-document-data-variables.md).
+- Contenere, gestire e visualizzare i [dati](../mfc/managing-data-with-document-data-variables.md)specifici dell'applicazione.
 
-- Fornire un'interfaccia composta [variabili di dati del documento](../mfc/managing-data-with-document-data-variables.md) per la manipolazione dei dati.
+- Fornire un'interfaccia costituita da [variabili di dati del documento](../mfc/managing-data-with-document-data-variables.md) per la modifica dei dati.
 
-- Partecipare [scrivere e leggere file](../mfc/serializing-data-to-and-from-files.md).
+- Partecipare alla [scrittura e alla lettura di file](../mfc/serializing-data-to-and-from-files.md).
 
-- Partecipare [stampa](../mfc/role-of-the-view-in-printing.md).
+- Partecipare alla [stampa](../mfc/role-of-the-view-in-printing.md).
 
-- [Gestire](../mfc/handling-commands-in-the-document.md) la maggior parte dei comandi e messaggi dell'applicazione.
+- [Gestire](../mfc/handling-commands-in-the-document.md) la maggior parte dei comandi e dei messaggi dell'applicazione.
 
-Il documento è particolarmente coinvolte nella gestione dei dati. Store dei dati, in genere, in variabili membro di classe documento. La visualizzazione Usa queste variabili per accedere ai dati per la visualizzazione e aggiornare. Meccanismo di serializzazione predefinito del documento gestisce la lettura e scrittura dei dati da e verso i file. Documenti possono anche gestire i comandi (ma non i messaggi di Windows diverse da WM_COMMAND).
+Il documento è particolarmente impegnato nella gestione dei dati. Archiviare i dati, in genere, nelle variabili membro della classe Document. La vista usa queste variabili per accedere ai dati per la visualizzazione e l'aggiornamento. Il meccanismo di serializzazione predefinito del documento gestisce la lettura e la scrittura dei dati da e verso i file. I documenti possono anche gestire i comandi, ma non i messaggi di Windows diversi da WM_COMMAND.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Derivazione di una classe documento da CDocument](../mfc/deriving-a-document-class-from-cdocument.md)
 
-- [La gestione dei dati con variabili dati documento](../mfc/managing-data-with-document-data-variables.md)
+- [Gestione di dati con variabili dati di documento](../mfc/managing-data-with-document-data-variables.md)
 
-- [La serializzazione dei dati da e verso i file](../mfc/serializing-data-to-and-from-files.md)
+- [Serializzazione di dati da e verso file](../mfc/serializing-data-to-and-from-files.md)
 
 - [Esclusione del meccanismo di serializzazione](../mfc/bypassing-the-serialization-mechanism.md)
 
 - [Gestione dei comandi nel documento](../mfc/handling-commands-in-the-document.md)
 
-- [La funzione membro OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)
+- [Funzione membro OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)
 
-- [La funzione membro DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)
+- [Funzione membro DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Architettura documento/visualizzazione](../mfc/document-view-architecture.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: elaborazione dei messaggi di notifica nei controlli casella combinata estesa'
 title: Elaborazione dei messaggi di notifica nei controlli casella combinata estesi
 ms.date: 11/04/2016
 helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 58a7c5ec36807489d24014055c39775b4552be03
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ef004c3649ce78b24aa1c77aa90488ae6391dcca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154812"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Elaborazione dei messaggi di notifica nei controlli casella combinata estesi
 
@@ -32,7 +33,7 @@ L'elenco seguente descrive le diverse notifiche inviate dal controllo della case
 
 - CBEN_INSERTITEM Inviata quando viene inserito un nuovo elemento nel controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CComboBoxEx](using-ccomboboxex.md)<br/>
+[Utilizzo di CComboBoxEx](using-ccomboboxex.md)<br/>
 [Controlli](controls-mfc.md)

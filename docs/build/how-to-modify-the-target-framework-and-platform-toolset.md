@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura: modificare il Framework di destinazione e il set di strumenti della piattaforma'
 title: 'Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma'
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 8b3de299652efcdd8fd94622b890b6cec7b059e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73964897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156255"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma
 
@@ -18,7 +19,7 @@ ms.locfileid: "73964897"
 
 ## <a name="platform-toolset"></a>Set di strumenti della piattaforma
 
-Il set di strumenti della piattaforma è costituito dal compilatore C++ (cl. exe) e dal linker (link. exe), insieme alle librerie standard di C/C++. A partire da Visual Studio 2015, la versione principale del set di strumenti è rimasta a 14, il che significa che i progetti compilati con Visual Studio 2019 o Visual Studio 2017 sono compatibili con le versioni precedenti di Visual Studio 2015. La versione secondaria è stata aggiornata di 1 per ogni versione a partire da Visual Studio 2015:
+Il set di strumenti della piattaforma è costituito dal compilatore C++ (cl.exe) e dal linker (link.exe), insieme alle librerie standard di C/C++. A partire da Visual Studio 2015, la versione principale del set di strumenti è rimasta a 14, il che significa che i progetti compilati con Visual Studio 2019 o Visual Studio 2017 sono compatibili con le versioni precedenti di Visual Studio 2015. La versione secondaria è stata aggiornata di 1 per ogni versione a partire da Visual Studio 2015:
 
 - Visual Studio 2015: V140
 - Visual Studio 2017: V141
@@ -49,13 +50,13 @@ Quando si modifica il framework di destinazione, viene modificato anche il set d
 
 1. Salvare le modifiche e chiudere l'editor.
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Ricarica progetto**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto, quindi scegliere **Ricarica progetto**.
 
-1. Per verificare la modifica, in **Esplora soluzioni**fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida per il progetto (non per la soluzione), quindi scegliere **Proprietà** per aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Nel riquadro sinistro della finestra di dialogo espandere **Proprietà di configurazione** , quindi selezionare **Generale**. Verificare che in **Versione di .NET Framework di destinazione** sia visualizzata la nuova versione di .NET Framework.
+1. Per verificare la modifica, in **Esplora soluzioni** fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida per il progetto (non per la soluzione), quindi scegliere **Proprietà** per aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Nel riquadro sinistro della finestra di dialogo espandere **Proprietà di configurazione** , quindi selezionare **Generale**. Verificare che in **Versione di .NET Framework di destinazione** sia visualizzata la nuova versione di .NET Framework.
 
 ### <a name="to-change-the-platform-toolset"></a>Per modificare il set di strumenti della piattaforma
 
-1. In **Esplora soluzioni**di Visual Studio aprire il menu di scelta rapida per il progetto (non per la soluzione), quindi scegliere **Proprietà** per aprire la finestra di dialogo **Pagine delle proprietà** del progetto.
+1. In **Esplora soluzioni** di Visual Studio aprire il menu di scelta rapida per il progetto (non per la soluzione), quindi scegliere **Proprietà** per aprire la finestra di dialogo **Pagine delle proprietà** del progetto.
 
 1. Nella finestra di dialogo **Pagine delle proprietà** aprire l'elenco a discesa **Configurazione** , quindi selezionare **Tutte le configurazioni**.
 
@@ -65,6 +66,6 @@ Quando si modifica il framework di destinazione, viene modificato anche il set d
 
 1. Fare clic su **OK** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [MSBuild nella riga di comando-C++](msbuild-visual-cpp.md)

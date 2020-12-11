@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l'
 title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-ms.openlocfilehash: c14da7158a3e15a74a01630a8a1b475d3e496de9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0a6529a6a2861829028f11dd25e2b044faa498a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155956"
 ---
 # <a name="_cprintf_s-_cprintf_s_l-_cwprintf_s-_cwprintf_s_l"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
@@ -98,18 +99,18 @@ Impostazioni locali da usare.
 
 Numero di caratteri stampati.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Queste funzioni formattano e stampano una serie di caratteri e valori direttamente nella console, usando la funzione **_putch** ( **_putwch** per **_cwprintf_s**) per restituire i caratteri. Ogni *argomento* , se presente, viene convertito e restituito in base alla specifica di formato corrispondente nel *formato*. Il formato ha lo stesso formato e la stessa funzione del parametro *Format* per la funzione [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . Diversamente dalle funzioni **fprintf_s**, **printf_s**e **sprintf_s** , né **_cprintf_s** né **_cwprintf_s** convertono i caratteri di avanzamento riga in combinazioni di ritorno a capo/avanzamento riga (CR-LF) durante l'output.
+Queste funzioni formattano e stampano una serie di caratteri e valori direttamente nella console, usando la funzione **_putch** (**_putwch** per **_cwprintf_s**) per restituire i caratteri. Ogni *argomento* , se presente, viene convertito e restituito in base alla specifica di formato corrispondente nel *formato*. Il formato ha lo stesso formato e la stessa funzione del parametro *Format* per la funzione [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . Diversamente dalle funzioni **fprintf_s**, **printf_s** e **sprintf_s** , né **_cprintf_s** né **_cwprintf_s** converte i caratteri di avanzamento riga in combinazioni di ritorno a capo/avanzamento riga (CR-LF) durante l'output.
 
-Una differenza importante è che **_cwprintf_s** Visualizza i caratteri Unicode se usati in Windows NT. A differenza di **_cprintf_s**, **_cwprintf_s** usa le impostazioni locali della console corrente
+Una differenza importante è che **_cwprintf_s** Visualizza i caratteri Unicode se utilizzati in Windows NT. A differenza di **_cprintf_s**, **_cwprintf_s** usa le impostazioni locali della console corrente
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.
 
-Come le versioni non sicure (vedere [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), queste funzioni convalidano i relativi parametri e richiamano il gestore di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), se *Format* è un valore null puntatore. Queste funzioni differiscono dalle versioni non sicure nel fatto che anche la stringa di formato viene convalidata. Se sono presenti identificatori di formattazione sconosciuti o non corretti, queste funzioni richiamano il gestore di parametri non validi. In tutti i casi, se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
+Come le versioni non sicure (vedere [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), queste funzioni convalidano i relativi parametri e richiamano il gestore di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), se *Format* è un puntatore null. Queste funzioni differiscono dalle versioni non sicure nel fatto che anche la stringa di formato viene convalidata. Se sono presenti identificatori di formattazione sconosciuti o non corretti, queste funzioni richiamano il gestore di parametri non validi. In tutti i casi, se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -125,7 +126,7 @@ Come le versioni non sicure (vedere [_cprintf, _cprintf_l, _cwprintf, _cwprintf_
 |**_cprintf_s**, **_cprintf_s_l**|\<conio.h>|
 |**_cwprintf_s**, **_cwprintf_s_l**|\<conio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -160,7 +161,7 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>

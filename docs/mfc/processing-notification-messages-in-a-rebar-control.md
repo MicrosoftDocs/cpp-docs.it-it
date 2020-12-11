@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: elaborazione dei messaggi di notifica in un controllo Rebar'
 title: Elaborazione dei messaggi di notifica in un controllo Rebar
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: e1e1aaa5056b43f0dd23976fead94bc800163613
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6255f10068072f75f556cf1c8576008ab821ed27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154838"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Elaborazione dei messaggi di notifica in un controllo Rebar
 
@@ -40,7 +41,7 @@ L'oggetto controllo Rebar può inviare i messaggi di notifica seguenti:
 
 Per ulteriori informazioni su queste notifiche, vedere Guida di [riferimento al controllo Rebar](/windows/win32/controls/rebar-control-reference) nel Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CReBarCtrl](using-crebarctrl.md)<br/>
+[Utilizzo di CReBarCtrl](using-crebarctrl.md)<br/>
 [Controlli](controls-mfc.md)

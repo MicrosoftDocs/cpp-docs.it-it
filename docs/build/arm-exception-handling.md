@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: gestione delle eccezioni ARM'
 title: Gestione delle eccezioni ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 4bdf0c88f0c2fe445f3a8865353ca1259ba586fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d37d0ad65f436d1ff67677032f378a30b44e32a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157126"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -117,26 +118,26 @@ Per configurare il concatenamento dei frame, è presente l'istruzione 3A o 3B se
 
 Se viene specificata una regolazione non ridotta, l'istruzione 5 è la regolazione dello stack esplicita.
 
-Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazione push. Questa tabella riepiloga i registri salvati in base ai campi *C*, *L*, *R*e *PF* . In tutti i casi, *N* è uguale a *reg* + 4, *e* è uguale a *reg* + 8 e *S* è uguale a (~*stack Adjust*) & 3.
+Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazione push. Questa tabella riepiloga i registri salvati in base ai campi *C*, *L*, *R* e *PF* . In tutti i casi, *N* è uguale a *reg* + 4, *e* è uguale a *reg* + 8 e *S* è uguale a (~*stack Adjust*) & 3.
 
 |C|L|R|PF|Registri Integer sottoposti a push|Registri VFP sottoposti a push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|none|
-|0|0|0|1|r*S*-r*N*|none|
-|0|0|1|0|none|D8-d*E*|
-|0|0|1|1|r*S*-R3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|none|
-|0|1|0|1|r*S*-r*N*, LR|none|
-|0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|r*S*-R3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, R11|none|
-|1|0|0|1|r*S*-r*N*, R11|none|
-|1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|r*S*-R3, R11|D8-d*E*|
-|1|1|0|0|R4-r*N*, R11, LR|none|
-|1|1|0|1|r*S*-r*N*, R11, LR|none|
-|1|1|1|0|r11, LR|D8-d*E*|
-|1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
+|0|0|0|0|R4-r *N*|Nessuno|
+|0|0|0|1|r *S*-r *N*|Nessuno|
+|0|0|1|0|none|D8-d *E*|
+|0|0|1|1|r *S*-R3|D8-d *E*|
+|0|1|0|0|R4-r *N*, LR|Nessuno|
+|0|1|0|1|r *S*-r *N*, LR|Nessuno|
+|0|1|1|0|LR|D8-d *E*|
+|0|1|1|1|r *S*-R3, LR|D8-d *E*|
+|1|0|0|0|R4-r *N*, R11|Nessuno|
+|1|0|0|1|r *S*-r *N*, R11|Nessuno|
+|1|0|1|0|r11|D8-d *E*|
+|1|0|1|1|r *S*-R3, R11|D8-d *E*|
+|1|1|0|0|R4-r *N*, R11, LR|Nessuno|
+|1|1|0|1|r *S*-r *N*, R11, LR|Nessuno|
+|1|1|1|0|r11, LR|D8-d *E*|
+|1|1|1|1|r *S*-R3, R11, LR|D8-d *E*|
 
 Gli epiloghi per le funzioni canoniche hanno un formato analogo, ma in ordine inverso e con alcune opzioni aggiuntive. L'epilogo può contenere fino a 5 istruzioni e la sua forma dipende strettamente dalla forma del prologo.
 
@@ -263,11 +264,11 @@ La tabella seguente illustra il mapping dai codici di rimozione ai codici operat
 |FE||||32|end + nop a 32 bit nell'epilogo|
 |FF||||-|end|
 
-Viene visualizzato l'intervallo di valori esadecimali per ogni byte in un *codice*di codice di rimozione, insieme alle dimensioni opcode *Opsize* e all'interpretazione dell'istruzione originale corrispondente. Le celle vuote indicano codici di rimozione più brevi. Nelle istruzioni con valori ampi che coprono più byte, i bit più significativi sono archiviati per primi. Il campo *Opsize* Mostra le dimensioni del codice operativo implicite associate a ogni operazione Thumb-2. Le voci apparentemente duplicate nella tabella con diverse codifiche consentono di distinguere le varie dimensioni del codice operativo.
+Viene visualizzato l'intervallo di valori esadecimali per ogni byte in un *codice* di codice di rimozione, insieme alle dimensioni opcode *Opsize* e all'interpretazione dell'istruzione originale corrispondente. Le celle vuote indicano codici di rimozione più brevi. Nelle istruzioni con valori ampi che coprono più byte, i bit più significativi sono archiviati per primi. Il campo *Opsize* Mostra le dimensioni del codice operativo implicite associate a ogni operazione Thumb-2. Le voci apparentemente duplicate nella tabella con diverse codifiche consentono di distinguere le varie dimensioni del codice operativo.
 
 I codici di rimozione sono progettati in modo tale che il primo byte del codice indica sia la dimensione totale in byte del codice, sia la dimensione dell'opcode corrispondente nel flusso di istruzioni. Per calcolare la dimensione del prologo o epilogo, scorrere i codici di rimozione dall'inizio della sequenza fino alla fine e usare una tabella di ricerca o un metodo analogo per determinare la lunghezza dell'opcode corrispondente.
 
-I codici di rimozione 0xFD e 0xFE sono equivalenti al codice finale normale 0xFF, ma prevedono un codice operativo nop supplementare nel caso dell'epilogo, a 16 o 32 bit. Per i prologhi, i codici 0xFD, 0xFE e 0xFF sono perfettamente equivalenti. Questo account per le terminazioni comuni degli `bx lr` epiloghi o `b <tailcall-target>`, che non hanno un'istruzione di prologo equivalente. In questo modo aumentano le possibilità di condivisione delle sequenze di rimozione tra il prologo e gli epiloghi.
+I codici di rimozione 0xFD e 0xFE sono equivalenti al codice finale normale 0xFF, ma prevedono un codice operativo nop supplementare nel caso dell'epilogo, a 16 o 32 bit. Per i prologhi, i codici 0xFD, 0xFE e 0xFF sono perfettamente equivalenti. Questo account per le terminazioni comuni degli epiloghi `bx lr` o `b <tailcall-target>` , che non hanno un'istruzione di prologo equivalente. In questo modo aumentano le possibilità di condivisione delle sequenze di rimozione tra il prologo e gli epiloghi.
 
 In molti casi dovrebbe essere possibile usare lo stesso set di codici di rimozione per il prologo e tutti gli epiloghi. Per gestire la rimozione di prologhi ed epiloghi parzialmente eseguiti, tuttavia, possono essere necessarie più sequenze di codici di rimozione che variano per ordine e comportamento. Per questo motivo ogni epilogo ha un indice proprio nella matrice di rimozione per specificare l'inizio dell'esecuzione.
 
@@ -406,7 +407,7 @@ Il riutilizzo del codice di rimozione deve essere massiccio. L'indice specificat
 
 Se dopo gli epiloghi a istruzione singola ignorati non restano altri epiloghi, prendere in considerazione un formato .pdata compatto; diventa molto più probabile in assenza di un epilogo.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 In questi esempi, la base dell'immagine è in 0x00400000.
 
@@ -737,7 +738,7 @@ Function:
 
   - Regolazione *dello stack* = 1, che indica una regolazione dello stack di 1 × 4 byte
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica delle convenzioni ABI ARM](overview-of-arm-abi-conventions.md)<br/>
+[Panoramica delle convenzioni ARM ABI](overview-of-arm-abi-conventions.md)<br/>
 [Problemi comuni relativi alla migrazione di Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)

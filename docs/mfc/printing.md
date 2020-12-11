@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: stampa'
 title: Stampa
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: 3d2ef494be66171cbcbf2b8b9e19c29c8bdc5c2f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0cb4455b2de27d7b609226099b00a37dc8175db6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154864"
 ---
 # <a name="printing"></a>Stampa
 
 Microsoft Windows implementa la visualizzazione indipendente dal dispositivo. In MFC questo significa che le stesse chiamate di disegno, nella `OnDraw` funzione membro della classe di visualizzazione, sono responsabili del disegno sullo schermo e su altri dispositivi, ad esempio stampanti. Per l'anteprima di stampa, il dispositivo di destinazione è un output simulato della stampante sullo schermo.
 
-## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>Il ruolo di stampa rispetto a quello del Framework
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Il ruolo di stampa rispetto a quello del Framework
 
 La classe di visualizzazione ha le responsabilità seguenti:
 
@@ -46,9 +47,9 @@ Gli articoli seguenti illustrano in che modo il Framework supporta la stampa e l
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Come viene eseguita la stampa predefinita](how-default-printing-is-done.md)
+- [Procedura di stampa predefinita](how-default-printing-is-done.md)
 
-- [Documenti a più pagine](multipage-documents.md)
+- [Documenti con più pagine](multipage-documents.md)
 
 - [Intestazioni e piè di pagina](headers-and-footers.md)
 
@@ -56,6 +57,6 @@ Gli articoli seguenti illustrano in che modo il Framework supporta la stampa e l
 
 - [Anteprima di stampa](print-preview-architecture.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Stampa e anteprima di stampa](printing-and-print-preview.md)

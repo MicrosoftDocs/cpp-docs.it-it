@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: marshalling delle funzioni globali'
 title: Funzioni globali di marshalling
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: 79b19b613fbae49c0f8338dcadd2225e092fb371
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5652ccf89090ba1d0f00c03472e29da9158b781e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157945"
 ---
 # <a name="marshaling-global-functions"></a>Funzioni globali di marshalling
 
@@ -20,7 +21,7 @@ Queste funzioni forniscono supporto per il marshalling e la conversione dei dati
 > [!IMPORTANT]
 > Le funzioni elencate nella tabella seguente non possono essere usate nelle applicazioni eseguite nel Windows Runtime.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Rilascia i dati del marshalling e il `IStream` puntatore.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuovo oggetto flusso ed effettua il marshalling del puntatore a interfaccia specificato.|
@@ -73,7 +74,7 @@ out Puntatore all' `IStream` interfaccia nel nuovo oggetto flusso utilizzato per
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il flag di MSHLFLAGS_TABLESTRONG è impostato in modo che sia possibile effettuare il marshalling del puntatore a più flussi. Il puntatore può anche essere sottoposto a unmarshalling più volte.
 
