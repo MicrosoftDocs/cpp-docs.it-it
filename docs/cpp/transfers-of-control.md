@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: trasferimenti del controllo'
 title: Trasferimenti del controllo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: ef437d0a691ceff72485be1ff9584052f540031a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 263c30877100ec37768313fa64e7562a06096396
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161611"
 ---
 # <a name="transfers-of-control"></a>Trasferimenti del controllo
 

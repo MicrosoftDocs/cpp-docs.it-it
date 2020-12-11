@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiungere una classe C++ generica'
 title: Aggiungere una classe C++ generica
 ms.date: 11/09/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: d5c00a35e375d133fbd3a6ed7fe3591e4b0cd54b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ed84f7cf3d1b2e85c407c275b20a56ff06dddc21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160181"
 ---
 # <a name="add-a-generic-c-class"></a>Aggiungere una classe C++ generica
 
@@ -72,6 +73,6 @@ Aggiunge una classe C++ generica a un progetto. La classe non eredita da ATL o M
 
   Genera il costruttore della classe e la definizione della classe come funzioni inline nel file di intestazione.
 
-- **Gestiti**
+- **Gestito**
 
   Se selezionata, aggiunge una classe gestita e il file di intestazione. Se non è selezionata, aggiunge una classe nativa e il file di intestazione.

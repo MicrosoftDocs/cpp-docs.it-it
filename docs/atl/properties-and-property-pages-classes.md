@@ -1,5 +1,6 @@
 ---
-title: Le proprietà e classi delle pagine delle proprietà (ATL)
+description: 'Altre informazioni su: proprietà e classi di pagine delle proprietà'
+title: Classi Properties e Property Pages (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,28 +8,28 @@ helpviewer_keywords:
 - properties [ATL], classes
 - properties [ATL]
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
-ms.openlocfilehash: 05c3a67e278389bb2ab1b07e9d6cf63cbe347c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fddb9626afcab908ae6f7ffb085c263b7a84af7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249626"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159193"
 ---
-# <a name="properties-and-property-pages-classes"></a>Le proprietà e classi delle pagine delle proprietà
+# <a name="properties-and-property-pages-classes"></a>Classi di proprietà e pagine delle proprietà
 
-Le classi seguenti supportano le proprietà e pagine delle proprietà:
+Le classi seguenti supportano le proprietà e le pagine delle proprietà:
 
 - [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) Recupera o imposta le proprietà di un oggetto tramite un `IDispatch` puntatore.
 
-- [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) implementa le proprietà predefinite supportate da ATL.
+- [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) Implementa le proprietà predefinite supportate da ATL.
 
-- [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) accede alle informazioni nelle pagine delle proprietà di un oggetto.
+- [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) Accede alle informazioni nelle pagine delle proprietà di un oggetto.
 
-- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) archivia le proprietà di un oggetto in un contenitore di proprietà specificato dal client.
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) Archivia le proprietà di un oggetto in un contenitore di proprietà fornito dal client.
 
-- [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) gestisce una pagina particolare proprietà all'interno di una finestra delle proprietà.
+- [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) Gestisce una particolare pagina delle proprietà all'interno di una finestra delle proprietà.
 
-- [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) Analogamente a `IPropertyPageImpl`, ma anche di un client di selezionare una proprietà specifica in una pagina delle proprietà.
+- [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) Simile a `IPropertyPageImpl` , ma consente anche a un client di selezionare una proprietà specifica in una pagina delle proprietà.
 
 - [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) Ottiene i CLSID per le pagine delle proprietà supportate da un oggetto.
 
@@ -38,7 +39,7 @@ Le classi seguenti supportano le proprietà e pagine delle proprietà:
 
 [Pagine delle proprietà COM ATL](../atl/atl-com-property-pages.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)<br/>
-[Macro della mappa proprietà](../atl/reference/property-map-macros.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)<br/>
+[Macro della mappa delle proprietà](../atl/reference/property-map-macros.md)

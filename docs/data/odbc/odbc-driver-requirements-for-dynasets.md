@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: requisiti dei driver ODBC per dynaset'
 title: Requisiti dei driver ODBC per dynaset
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-ms.openlocfilehash: 4c436764649a1aa418e12300809482b45224dd46
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 9e72499eb500ae79248673e73b666bf535fcdcc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161013"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Requisiti dei driver ODBC per dynaset
 
@@ -25,6 +26,6 @@ Nella terminologia ODBC, i dynaset e gli snapshot vengono definiti cursori. Un c
 > [!NOTE]
 > Per i recordset aggiornabili, il driver ODBC deve supportare le istruzioni UPDATE posizionate o la `::SQLSetPos` funzione API ODBC. Se entrambi sono supportati, MFC utilizza `::SQLSetPos` per migliorare l'efficienza. In alternativa, per gli snapshot, è possibile utilizzare la libreria di cursori, che fornisce il supporto necessario per gli snapshot aggiornabili (cursori statici e istruzioni di aggiornamento posizionate).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)

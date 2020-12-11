@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Nozioni di base su ODBC'
 title: Nozioni fondamentali su ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 042b1ce6d12e4f4a2be57c0e2e8e01d9750f5357
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 94482abd046645e445ffae7f85f192514f4fff78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213213"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161182"
 ---
 # <a name="odbc-basics"></a>Nozioni fondamentali su ODBC
 
@@ -45,7 +46,7 @@ Di seguito sono riportati i componenti di ODBC:
 
 - Gestione driver ODBC
 
-   Libreria a collegamento dinamico (odbc32. dll) che carica i driver del database ODBC per conto di un'applicazione. Questa DLL è trasparente per l'applicazione.
+   Una libreria a collegamento dinamico (Odbc32.dll) che carica i driver del database ODBC per conto di un'applicazione. Questa DLL è trasparente per l'applicazione.
 
 - Driver di database ODBC
 
@@ -53,7 +54,7 @@ Di seguito sono riportati i componenti di ODBC:
 
 - [Libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-   Una libreria a collegamento dinamico (Odbccr32. dll) che risiede tra Gestione driver ODBC e i driver e gestisce lo scorrimento dei dati.
+   Una libreria a collegamento dinamico (Odbccr32.dll) che risiede tra Gestione driver ODBC e i driver e gestisce lo scorrimento dei dati.
 
 - [Amministratore ODBC](../../data/odbc/odbc-administrator.md)
 
@@ -65,6 +66,6 @@ Le classi di database supportano qualsiasi origine dati per la quale si dispone 
 
 Per un elenco dei driver ODBC inclusi in questa versione di Visual C++ e informazioni su come ottenere driver aggiuntivi, vedere [Elenco dei driver ODBC](../../data/odbc/odbc-driver-list.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

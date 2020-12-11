@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: ID comando'
 title: ID comandi
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-ms.openlocfilehash: f7d675891904301b16aafe3acb2c294eede6d8d8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: bba3b8b342b4d2e0c9492f9d0f3100a5d8f9e7d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619045"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159986"
 ---
 # <a name="command-ids"></a>ID comandi
 
@@ -20,6 +21,6 @@ Ad esempio, a un elemento Clear All nel menu Edit potrebbe essere assegnato un I
 
 Quando si creano menu personalizzati nell'editor di menu Visual C++, è consigliabile seguire la convenzione di denominazione della libreria di classi, come illustrato da **ID_FILE_OPEN**. I [comandi standard](standard-commands.md) illustrano i comandi standard definiti dalla libreria di classi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetti dell'interfaccia utente e ID comando](user-interface-objects-and-command-ids.md)

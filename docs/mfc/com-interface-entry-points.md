@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: punti di ingresso dell'interfaccia COM"
 title: Punti di ingresso all'interfaccia COM
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: 132dd7394119081dcaeb098c2088782ff5d40ae4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805ac906c3ccca246d1af71c689aaf768f789999
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160012"
 ---
 # <a name="com-interface-entry-points"></a>Punti di ingresso all'interfaccia COM
 
@@ -41,6 +42,6 @@ La parte della macro interessata alla gestione dello stato globale è la seguent
 
 In questa espressione, si presuppone che *m_pModuleState* sia una variabile membro dell'oggetto contenitore. Viene implementato dalla `CCmdTarget` classe base e viene inizializzato sul valore appropriato da `COleObjectFactory` , quando viene creata un'istanza dell'oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei dati dello stato dei moduli MFC](managing-the-state-data-of-mfc-modules.md)
+[Gestione dei dati sullo stato dei moduli MFC](managing-the-state-data-of-mfc-modules.md)

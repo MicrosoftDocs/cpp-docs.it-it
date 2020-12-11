@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: problemi comuni di migrazione di ARM Visual C++'
 title: Problemi comuni relativi alla migrazione di Visual C++ ARM
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 889eed2b02362f33446cd9441ef84f406817b01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b867d94fa8b80bd1a5be12b50718b979ee92a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224071"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163080"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problemi comuni relativi alla migrazione di Visual C++ ARM
 
@@ -54,7 +55,7 @@ Poiché il risultato di un'operazione di spostamento che supera il numero di bit
 
 ### <a name="variable-arguments-varargs-behavior"></a>Comportamento degli argomenti variabili (varargs)
 
-Nell'architettura ARM, i parametri dell'elenco di argomenti variabili passati nello stack sono soggetti a allineamento. Un parametro a 64 bit, ad esempio, è allineato a un limite di 64 bit. In x86 e x64 gli argomenti passati nello stack non sono soggetti a allineamento e a compressione. Questa differenza può causare una funzione Variadic come la `printf` lettura degli indirizzi di memoria che sono stati utilizzati come spaziatura interna su ARM se il layout previsto dell'elenco di argomenti variabili non corrisponde esattamente, anche se potrebbe funzionare per un subset di alcuni valori nelle architetture x86 o x64. Considerare questo esempio:
+Nell'architettura ARM, i parametri dell'elenco di argomenti variabili passati nello stack sono soggetti a allineamento. Un parametro a 64 bit, ad esempio, è allineato a un limite di 64 bit. In x86 e x64 gli argomenti passati nello stack non sono soggetti a allineamento e a compressione. Questa differenza può causare una funzione Variadic come la `printf` lettura degli indirizzi di memoria che sono stati utilizzati come spaziatura interna su ARM se il layout previsto dell'elenco di argomenti variabili non corrisponde esattamente, anche se potrebbe funzionare per un subset di alcuni valori nelle architetture x86 o x64. Prendere in considerazione questo esempio:
 
 ```C
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.
@@ -98,6 +99,6 @@ Nell'architettura ARM, il valore predefinito è **/volatile: ISO** perché i pro
 
 Nelle architetture x86 e x64 il valore predefinito è **/volatile: ms** perché gran parte del software già creato per queste architetture con MSVC si basa su di essi. Quando si compilano programmi x86 e x64, è possibile specificare l'opzione **/volatile: ISO** per evitare la dipendenza non necessaria dalla semantica volatile tradizionale e per promuovere la portabilità.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Configurare Visual C++ per processori ARM](configuring-programs-for-arm-processors-visual-cpp.md)

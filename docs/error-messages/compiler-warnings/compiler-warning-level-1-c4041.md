@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4041'
 title: Avviso del compilatore (livello 1) C4041
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4041
 ms.assetid: 107ee9fd-4b88-4f22-a18f-a20726831095
-ms.openlocfilehash: 14ea6d9cae3b490107b656153bb68815026971e1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3473be35182f6c99541aa2a0fc79de79dee4a07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160714"
 ---
 # <a name="compiler-warning-level-1-c4041"></a>Avviso del compilatore (livello 1) C4041
 

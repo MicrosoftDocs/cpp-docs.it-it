@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: creazione guidata componente della pagina Active Server ATL'
 title: Creazione guidata componente ASP ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: 191b739354827dc1b7f0fd22e5ba2fd57f7b14d0
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1edfa3262e311b2042c4e8acc7332f6d1b70f06a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158920"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Creazione guidata componente ASP ATL
 
@@ -25,15 +26,15 @@ Questa procedura guidata inserisce nel progetto un componente ASP (Active Server
 
 Usando questa procedura guidata, è possibile specificare il modello di threading del componente e il relativo supporto di aggregazione. È anche possibile indicare il supporto per l'interfaccia delle informazioni sugli errori, i punti di connessione e il marshalling con modello di threading Free.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE** . Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
+A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
 ## <a name="names"></a>Nomi
 
-Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al progetto. Ad eccezione di **Nome breve** , tutte le altre caselle possono essere modificate indipendentemente dalle altre. Se si modifica il testo per **Nome breve** , la modifica viene applicata ai nomi di tutte le altre caselle in questa pagina.
+Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al progetto. Ad eccezione di **Nome breve**, tutte le altre caselle possono essere modificate indipendentemente dalle altre. Se si modifica il testo per **Nome breve**, la modifica viene applicata ai nomi di tutte le altre caselle in questa pagina.
 
-Se si modifica il nome di **CoClass** nella sezione COM, la modifica viene applicata alle caselle **Tipo** e **ProgID** , ma il nome di **Interfaccia** non viene modificato. Questo comportamento di denominazione è progettato per rendere tutti i nomi facilmente identificabili durante lo sviluppo del controllo.
+Se si modifica il nome di **CoClass** nella sezione COM, la modifica viene applicata alle caselle **Tipo** e **ProgID**, ma il nome di **Interfaccia** non viene modificato. Questo comportamento di denominazione è progettato per rendere tutti i nomi facilmente identificabili durante lo sviluppo del controllo.
 
 ### <a name="c"></a>C++
 
@@ -41,23 +42,23 @@ Fornisce informazioni per la classe C++ creata per l'oggetto.
 
 - **Nome breve**
 
-   Imposta il nome radice per l'oggetto. Il nome specificato determina i nomi di `Class` e **CoClass** , i nomi di **File con estensione cpp** e **File con estensione h** , il nome di **Interfaccia** , i nomi di **Tipo** e il valore di **ProgID** , a meno che questi campi non vengano modificati singolarmente.
+   Imposta il nome radice per l'oggetto. Il nome specificato determina i nomi di `Class` e **CoClass**, i nomi di **File con estensione cpp** e **File con estensione h**, il nome di **Interfaccia**, i nomi di **Tipo** e il valore di **ProgID**, a meno che questi campi non vengano modificati singolarmente.
 
 - **File con estensione h**
 
-   Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve** . Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nel percorso desiderato o aggiungere la dichiarazione di classe a un file esistente. Se si seleziona un file esistente, la procedura guidata non lo salverà nel percorso selezionato finché non si sceglie **Fine** .
+   Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nel percorso desiderato o aggiungere la dichiarazione di classe a un file esistente. Se si seleziona un file esistente, la procedura guidata non lo salverà nel percorso selezionato finché non si sceglie **Fine**.
 
-   La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine** , la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
+   La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
 
 - **Classe**
 
-   Imposta il nome della classe da creare. Questo nome è basato sul nome specificato in **Nome breve** , preceduto da "C", il prefisso tipico per un nome di classe.
+   Imposta il nome della classe da creare. Questo nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso tipico per un nome di classe.
 
 - **File con estensione cpp**
 
-   Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve** . Fare clic sul pulsante con i puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **Fine** nella procedura guidata.
+   Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **Fine** nella procedura guidata.
 
-   La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine** , la procedura guidata chiede di specificare se l'implementazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
+   La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se l'implementazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
 
 - **Con attributi**
 
@@ -75,7 +76,7 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
 - **Coclasse**
 
-   Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto. Se il progetto o questo oggetto usa attributi, non è possibile modificare questa opzione, perché ATL non include l'attributo **CoClass** .
+   Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto. Se il progetto o questo oggetto usa attributi, non è possibile modificare questa opzione, perché ATL non include l'attributo **CoClass**.
 
 - **Tipo**
 
@@ -91,6 +92,6 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Componente pagine ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

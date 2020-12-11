@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: attività di programmazione Internet MFC'
 title: Attività di programmazione Internet MFC
 ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], getting started
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
-ms.openlocfilehash: 6d8a542ada94bc52ee2000bc92ae0457ec87609c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 26823dbd85222998ebf20947ac2af30a6b11e987
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617954"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159934"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Attività di programmazione Internet MFC
 
@@ -46,7 +47,7 @@ Per informazioni dettagliate su come iniziare, vedere gli argomenti seguenti:
 
 - [Sicurezza Internet](internet-security-cpp.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)<br/>
-[Informazioni Internet per attività](internet-information-by-task.md)
+[Informazioni internet per attività](internet-information-by-task.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: remove_all_extents Class'
 title: Classe remove_all_extents
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6c798e1f128b10ef94061573c93c3bb9e3aa4f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159726"
 ---
-# <a name="removeallextents-class"></a>Classe remove_all_extents
+# <a name="remove_all_extents-class"></a>Classe remove_all_extents
 
 Crea un tipo non matrice da un tipo matrice.
 
@@ -33,7 +34,7 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Un'istanza di `remove_all_extents<T>` include un tipo modificato che è il tipo di elemento del tipo di matrice *T* con tutte le dimensioni della matrice rimosse oppure *t* se *t* non è un tipo di matrice.
 
@@ -61,11 +62,11 @@ int main()
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe remove_extent](../standard-library/remove-extent-class.md)

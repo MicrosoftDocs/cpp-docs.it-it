@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: creazione guidata consumer OLE DB ATL'
 title: Creazione guidata consumer OLE DB ATL
 ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 490335f1f61987fc6e5b0b3806ee8e39c82f336f
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 5d5fb0e6d5ec08ba75aa84a501169544598d8843
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158699"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -24,19 +25,19 @@ Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni suc
 Questa procedura guidata configura una classe consumer OLE DB con le associazioni di dati necessarie per accedere all'origine dati specificata tramite il provider OLE DB indicato.
 
 > [!NOTE]
-> In questa procedura guidata è necessario fare clic sul pulsante **Origine dati** per selezionare un'origine dati prima di immettere i nomi nei campi `Class` e **File con estensione h** .
+> In questa procedura guidata è necessario fare clic sul pulsante **Origine dati** per selezionare un'origine dati prima di immettere i nomi nei campi `Class` e **File con estensione h**.
 
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia
 
 - **Origine dati**
 
-   Il pulsante **Origine dati** permette di configurare l'origine dati specificata usando il provider OLE DB indicato. Quando si fa clic su questo pulsante, viene visualizzata la finestra di dialogo **Proprietà di Data Link** . Per altre informazioni sulla creazione di stringhe di connessione e sulla finestra di dialogo **Proprietà di Data Link** , vedere [Panoramica dell'API Data Link](/previous-versions/windows/desktop/ms718102(v=vs.85)) nella documentazione di Windows SDK.
+   Il pulsante **Origine dati** permette di configurare l'origine dati specificata usando il provider OLE DB indicato. Quando si fa clic su questo pulsante, viene visualizzata la finestra di dialogo **Proprietà di Data Link**. Per altre informazioni sulla creazione di stringhe di connessione e sulla finestra di dialogo **Proprietà di Data Link**, vedere [Panoramica dell'API Data Link](/previous-versions/windows/desktop/ms718102(v=vs.85)) nella documentazione di Windows SDK.
 
-   Le informazioni aggiuntive seguenti descrivono le schede della finestra di dialogo **Proprietà di Data Link** .
+   Le informazioni aggiuntive seguenti descrivono le schede della finestra di dialogo **Proprietà di Data Link**.
 
   - Scheda **Provider**
 
-      Selezionare un provider appropriato per gestire la connessione all'origine dati. Il tipo di provider in genere è determinato dal tipo di database cui ci si connette. Fare clic sul pulsante **Avanti** oppure sulla scheda **Connessione** .
+      Selezionare un provider appropriato per gestire la connessione all'origine dati. Il tipo di provider in genere è determinato dal tipo di database cui ci si connette. Fare clic sul pulsante **Avanti** oppure sulla scheda **Connessione**.
 
   - Scheda **connessione**
 
@@ -54,7 +55,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
          > - **Usa la sicurezza integrata di Windows NT**
          > - **Usa nome utente e password specifici**
          >
-         > Se si seleziona **Utilizza nome utente e password specifici** , è possibile scegliere di salvare la password (usando la casella di controllo "Consenti salvataggio password"), ma questa opzione non è sicura. È consigliabile selezionare **Usa sicurezza integrata di Windows NT** : questa opzione è sicura perché crittografa la password.
+         > Se si seleziona **Utilizza nome utente e password specifici**, è possibile scegliere di salvare la password (usando la casella di controllo "Consenti salvataggio password"), ma questa opzione non è sicura. È consigliabile selezionare **Usa sicurezza integrata di Windows NT**: questa opzione è sicura perché crittografa la password.
          > In alcuni casi può essere necessario selezionare "Consenti salvataggio password". Ad esempio, se si sta rilasciando una libreria con una soluzione di database privata, è necessario non accedere al database direttamente, ma usare invece un'applicazione di livello intermedio per verificare l'utente (tramite qualsiasi schema di autenticazione scelto) e quindi limitare il tipo di dati disponibili per l'utente.
 
       1. **Selezionare il database nel server:** Fare clic sul menu elenco a discesa per visualizzare tutti i database registrati nel server dati e selezionarne uno.
@@ -71,16 +72,16 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
          \- - oppure -
 
-         **Usa stringa di connessione:** Immettere una stringa di connessione già ottenuta oppure fare clic sul pulsante **Compila** ; verrà visualizzata la finestra di dialogo **Seleziona origine dati** . Selezionare un'origine dati file o computer e fare clic su **OK** .
+         **Usa stringa di connessione:** Immettere una stringa di connessione già ottenuta oppure fare clic sul pulsante **Compila** ; verrà visualizzata la finestra di dialogo **Seleziona origine dati** . Selezionare un'origine dati file o computer e fare clic su **OK**.
 
          > [!NOTE]
-         > È possibile ottenere una stringa di connessione visualizzando le proprietà di una connessione esistente in **Esplora server** oppure è possibile creare una connessione facendo doppio clic su **Aggiungi connessione** in **Esplora server** .
+         > È possibile ottenere una stringa di connessione visualizzando le proprietà di una connessione esistente in **Esplora server** oppure è possibile creare una connessione facendo doppio clic su **Aggiungi connessione** in **Esplora server**.
 
       1. **Immettere le informazioni per l'accesso al server:** Immettere un nome utente e una password per accedere al server di dati.
 
       1. Immettere il catalogo iniziale da usare.
 
-      1. Fare clic su **Test connessione** . Se il test riesce, fare clic su **OK** . In caso contrario, controllare le informazioni di accesso, provare un altro database o provare un altro server dati.
+      1. Fare clic su **Test connessione**. Se il test riesce, fare clic su **OK**. In caso contrario, controllare le informazioni di accesso, provare un altro database o provare un altro server dati.
 
   - Scheda **Avanzate**
 
@@ -94,7 +95,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
       Questa scheda visualizza un riepilogo delle proprietà di inizializzazione per l'origine dati e la connessione specificate. È possibile modificare questi valori.
 
-      Fare clic su **OK** per completare la procedura. Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database** . Da questa finestra di dialogo selezionare la tabella, la visualizzazione o la stored procedure che verrà usata dal consumer.
+      Fare clic su **OK** per completare la procedura. Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database**. Da questa finestra di dialogo selezionare la tabella, la visualizzazione o la stored procedure che verrà usata dal consumer.
 
 - **Classe**
 
@@ -108,7 +109,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
    Questa opzione specifica se la procedura guidata creerà classi consumer tramite attributi o dichiarazioni di modello. Quando si seleziona questa opzione, la procedura guidata usa attributi invece di dichiarazioni di modello (impostazione predefinita). Quando si deseleziona questa opzione, la procedura guidata usa dichiarazioni di modello anziché attributi.
 
-  - Se si seleziona un tipo di consumer **Type****Table** , la procedura guidata usa gli attributi `db_source` e `db_table` per creare le dichiarazioni di classe della tabella e delle funzioni di accesso alla tabella e usa `db_column` per creare la mappa delle colonne. Ad esempio, crea questa mappa:
+  - Se si seleziona un tipo di consumer **Type****Table**, la procedura guidata usa gli attributi `db_source` e `db_table` per creare le dichiarazioni di classe della tabella e delle funzioni di accesso alla tabella e usa `db_column` per creare la mappa delle colonne. Ad esempio, crea questa mappa:
 
     ```cpp
     // Inject table class and table accessor class declarations
@@ -135,7 +136,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
         END_COLUMN_MAP()
     ```
 
-  - Se si seleziona un tipo di consumer **Type****Command** , la procedura guidata usa gli attributi `db_source` e `db_command` e usa `db_column` per creare la mappa delle colonne. Ad esempio, crea questa mappa:
+  - Se si seleziona un tipo di consumer **Type****Command**, la procedura guidata usa gli attributi `db_source` e `db_command` e usa `db_column` per creare la mappa delle colonne. Ad esempio, crea questa mappa:
 
     ```cpp
     [db_source("<initialization_string>"), db_command("SQL_command")]
@@ -187,7 +188,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

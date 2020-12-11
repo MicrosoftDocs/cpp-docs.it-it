@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _variant_t Extracters'
 title: Estrattori _variant_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55a02fdf422388b0e44a9aad77e86f7a76e80e3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161598"
 ---
 # <a name="_variant_t-extractors"></a>Estrattori _variant_t
 
@@ -107,12 +108,12 @@ Estrae i dati non elaborati da un oggetto incapsulato `VARIANT` . Se `VARIANT` n
 
 - **operatore _bstr_t ()** Estrae una stringa che viene incapsulata in un `_bstr_t` oggetto.
 
-- **operator IDispatch \* ()** estrae un puntatore all'interfaccia dispatch da un oggetto incapsulato `VARIANT` . `AddRef`viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
+- **operator IDispatch \* ()** estrae un puntatore all'interfaccia dispatch da un oggetto incapsulato `VARIANT` . `AddRef` viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
 
-- **operator IUnknown \* ()** estrae un puntatore a interfaccia com da un incapsulato `VARIANT` . `AddRef`viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
+- **operator IUnknown \* ()** estrae un puntatore a interfaccia com da un incapsulato `VARIANT` . `AddRef` viene chiamato sul puntatore risultante, quindi è possibile chiamare `Release` per liberarlo.
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _variant_t](../cpp/variant-t-class.md)

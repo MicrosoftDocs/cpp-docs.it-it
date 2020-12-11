@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ODBC: chiamata diretta delle funzioni API ODBC'
 title: "ODBC: chiamata diretta delle funzioni dell'API ODBC"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-ms.openlocfilehash: e1cb5df4a93fc642ccf4d500a5eb93690b0b3d75
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 3b82e0270242d59767e9d67e6eb7491a4607990f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161117"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: chiamata diretta delle funzioni dell'API ODBC
 
@@ -42,6 +43,6 @@ Per ulteriori informazioni su questi passaggi, vedere [ODBC Programmer ' s Refer
 
 Oltre a questi passaggi, è necessario eseguire passaggi aggiuntivi per controllare i valori restituiti dalla funzione, verificare che il programma non sia in attesa del completamento di una chiamata asincrona e così via. È possibile semplificare questi ultimi passaggi usando le macro AFX_SQL_ASYNC e AFX_SQL_SYNC. Per ulteriori informazioni, vedere [macro MFC e globali](../../mfc/reference/mfc-macros-and-globals.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)

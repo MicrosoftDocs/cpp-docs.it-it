@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: remove_extent Class'
 title: Classe remove_extent
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_extent class
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
-ms.openlocfilehash: 73af53d2b93d794e2479a33721bfeae71e531794
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6f088d58cafdafd9c6ebe4c1fcbbbd8db4dff69c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159674"
 ---
-# <a name="removeextent-class"></a>Classe remove_extent
+# <a name="remove_extent-class"></a>Classe remove_extent
 
 Crea un tipo di elemento da un tipo di matrice.
 
@@ -33,9 +34,9 @@ using remove_extent_t = typename remove_extent<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza di `remove_extent<T>` include un tipo modificato che è `T1` quando *T* è nel formato `T1[N]`; in caso contrario, *t*.
+Un'istanza di `remove_extent<T>` include un tipo modificato che è `T1` quando *T* è nel formato `T1[N]` ; in caso contrario, *t*.
 
 ## <a name="example"></a>Esempio
 
@@ -66,11 +67,11 @@ remove_extent_t<int[5][10]> == int [10]
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe remove_all_extents](../standard-library/remove-all-extents-class.md)

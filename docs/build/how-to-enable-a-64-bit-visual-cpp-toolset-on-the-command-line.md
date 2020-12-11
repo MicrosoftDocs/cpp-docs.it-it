@@ -1,4 +1,5 @@
 ---
+description: 'Per altre informazioni, vedere Procedura: abilitare un set di strumenti MSVC host x64 a 64 bit nella riga di comando'
 title: 'Procedura: abilitare un set di strumenti MSVC a 64 bit nella riga di comando'
 ms.date: 07/24/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5e712802f420d425f4a0291d88220c22d4aeb62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162729"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Procedura: abilitare un set di strumenti MSVC ospitato a 64 bit per x64 nella riga di comando
 
@@ -35,7 +36,7 @@ Per accedere a questi prompt dei comandi in Windows 8, nella schermata **Start**
 
 È possibile usare dalla riga di comando qualsiasi configurazione di compilazione degli strumenti nativi o con compilatore incrociato eseguendo il file di comando vcvarsall.bat. Questo file di comando configura il percorso e le variabili di ambiente che consentono un'architettura di compilazione specifica in una finestra del prompt dei comandi esistente. Per istruzioni specifiche, vedere [Percorsi dei file di comando per gli sviluppatori](building-on-the-command-line.md#developer_command_file_locations).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Per informazioni sugli strumenti specifici inclusi in ogni edizione di Visual Studio, vedere [Visual C++ Tools and Features in Visual Studio Editions](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md) (Strumenti e funzionalità di Visual C++ nelle versioni di Visual Studio).
@@ -44,6 +45,6 @@ Per accedere a questi prompt dei comandi in Windows 8, nella schermata **Start**
 
 Quando si installa un carico di lavoro C++ nel programma di installazione di Visual Studio, vengono sempre installati strumenti a 32 bit, ospitati su piattaforma x86, nativi e con compilatore incrociato per la compilazione di codice per piattaforme x86 e x64. Se si include il carico di lavoro della piattaforma UWP (Universal Windows Platform), vengono installati anche gli strumenti con compilatore incrociato ospitati su piattaforma x86 per la compilazione di codice ARM. Se si installano questi carichi di lavoro in un computer con processore x64 a 64 bit, si ottengono anche strumenti a 64 bit nativi con compilatore incrociato per la compilazione di codice x86, x64 e ARM. I compilatori a 32 e a 64 bit generano codice identico, ma gli strumenti a 64 bit supportano una maggiore quantità di memoria per i simboli di intestazione precompilata e le opzioni Ottimizzazione intero programma ([/GL](reference/gl-whole-program-optimization.md) e [/LTCG](reference/ltcg-link-time-code-generation.md)). In caso di limiti della memoria quando si usano gli strumenti a 32 bit, provare gli strumenti a 64 bit.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Configurare progetti C++ per destinazioni x64 a 64 bit](configuring-programs-for-64-bit-visual-cpp.md)<br/>

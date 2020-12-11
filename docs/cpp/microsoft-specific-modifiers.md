@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: modificatori specifici Microsoft'
 title: Modificatori specifici Microsoft
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: 2f56220ba15027a522264b91366cab9cf0b65d21
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dd82bf22da99e864a7b4898da1a99a12c3ad3de4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161624"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificatori specifici Microsoft
 
@@ -37,6 +38,6 @@ Molte delle parole chiave specifiche di Microsoft possono essere utilizzate per 
 |[__unaligned](unaligned.md)|Specifica che un puntatore a un tipo o ad altri dati non è allineato.|No|
 |[__vectorcall](vectorcall.md)|Il nome che segue dichiara una funzione che utilizza i registri, inclusi i registri SSE, se disponibili, anziché lo stack per il passaggio di un argomento.|Sì|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++](cpp-language-reference.md)

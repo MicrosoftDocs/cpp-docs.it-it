@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l'
 title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a935f43c00fab31a582012e938db16e3aa1a5f6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162378"
 ---
 # <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -96,13 +97,13 @@ Impostazioni locali da usare.
 
 Numero di caratteri stampati.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Queste funzioni formattano e stampano una serie di caratteri e valori direttamente nella console, usando la funzione **_putch** ( **_putwch** per **_cwprintf**) per restituire i caratteri. Ogni argomento in *argument_list* (se presente) viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. L'argomento *Format* usa la [sintassi per la specifica del formato per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Diversamente dalle funzioni **fprintf**, **printf**e **sprintf** , né **_cprintf** né **_cwprintf** convertono i caratteri di avanzamento riga in combinazioni di ritorno a capo/avanzamento riga (CR-LF) durante l'output.
+Queste funzioni formattano e stampano una serie di caratteri e valori direttamente nella console, usando la funzione **_putch** (**_putwch** per **_cwprintf**) per restituire i caratteri. Ogni argomento in *argument_list* , se presente, viene convertito e restituito in base alla specifica di formato corrispondente nel *formato*. L'argomento *Format* usa la [sintassi per la specifica del formato per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Diversamente dalle funzioni **fprintf**, **printf** e **sprintf** , non **_cprintf** né **_cwprintf** converte i caratteri di avanzamento riga in combinazioni di ritorno a capo/avanzamento riga (CR-LF) durante l'output.
 
 Una differenza importante è che **_cwprintf** Visualizza i caratteri Unicode quando viene usato in Windows. A differenza di **_cprintf**, **_cwprintf** usa le impostazioni locali della console correnti.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
 **_cprintf** convalida il parametro *Format* . Se *Format* è un puntatore null, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
 
@@ -123,7 +124,7 @@ Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad e
 |**_cprintf**, **_cprintf_l**|\<conio.h>|
 |**_cwprintf**, **_cwprintf_l**|\<conio.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -155,11 +156,11 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)<br/>
 [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)<br/>
 [_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)<br/>

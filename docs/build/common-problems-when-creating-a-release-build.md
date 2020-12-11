@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: problemi comuni durante la creazione di una build di rilascio'
 title: Problemi comuni durante la creazione di una build di rilascio
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: 9bd1cafe40417872d42f2e9e1427e5f2eccad7a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7470b87a33b9dc0cb6f7e85b9cfa7b7c1216a936
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163093"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemi comuni durante la creazione di una build di rilascio
 
@@ -38,9 +39,9 @@ L'elenco seguente mostra le differenze principali tra una compilazione di debug 
 
 - [Ottimizzazioni](#_core_optimizations)
 
-Per informazioni su come intercettare gli errori di compilazione della versione nelle build di debug, vedere l'opzione del compilatore [/gz (catch release-errori di compilazione di debug)](reference/gz-enable-stack-frame-run-time-error-checking.md) .
+Per informazioni su come intercettare gli errori di compilazione della versione nelle build di debug, vedere l'opzione del compilatore [/gz (Catch Release-Build Errors in debug build)](reference/gz-enable-stack-frame-run-time-error-checking.md) .
 
-## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Layout heap
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a> Layout heap
 
 Il layout dell'heap sarà causato da circa il 90% dei problemi evidenti quando un'applicazione funziona in fase di debug, ma non è rilasciata.
 
@@ -48,21 +49,21 @@ Quando si compila il progetto per il debug, si usa l'allocatore di memoria di de
 
 Per altre informazioni, vedere [verificare la sovrascrittura della memoria](checking-for-memory-overwrites.md) e [usare la build di debug per verificare la sovrascrittura della memoria](using-the-debug-build-to-check-for-memory-overwrite.md).
 
-## <a name="compilation"></a><a name="_core_compilation"></a>Compilazione
+## <a name="compilation"></a><a name="_core_compilation"></a> Compilazione
 
 Molte delle macro MFC e gran parte dell'implementazione di MFC cambiano quando si compila per la versione. In particolare, la macro ASSERT restituisce Nothing in una build di rilascio, quindi non viene eseguito alcun codice trovato nelle ASSERZIONi. Per altre informazioni, vedere [esaminare istruzioni Assert](using-verify-instead-of-assert.md).
 
 Alcune funzioni sono inline per aumentare la velocità nella build di rilascio. Le ottimizzazioni vengono in genere attivate in una build di rilascio. Viene usato anche un allocatore di memoria diverso.
 
-## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Supporto del puntatore
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a> Supporto del puntatore
 
 La mancanza di informazioni di debug rimuove la spaziatura interna dall'applicazione. In una build di rilascio, i puntatori randagi hanno maggiori possibilità di puntare a una memoria non inizializzata anziché puntare a informazioni di debug.
 
-## <a name="optimizations"></a><a name="_core_optimizations"></a>Ottimizzazioni
+## <a name="optimizations"></a><a name="_core_optimizations"></a> Ottimizzazioni
 
 A seconda della natura di determinati segmenti di codice, il compilatore di ottimizzazione potrebbe generare codice imprevisto. Questa è la causa meno probabile dei problemi di compilazione della versione, ma si verifica a volte. Per una soluzione, vedere [ottimizzazione del codice](optimizing-your-code.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Build di versione](release-builds.md)<br/>
-[Correzione dei problemi della build di versione](fixing-release-build-problems.md)
+[Correzione dei problemi di compilazione della versione](fixing-release-build-problems.md)

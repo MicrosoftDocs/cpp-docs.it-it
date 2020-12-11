@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: CppProperties.jsper riferimento'
 title: CppProperties.jsper riferimento
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9067a186d3ab111eda11246d06e3a9d7a164455f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163054"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.jsper riferimento
 
@@ -18,7 +19,7 @@ I progetti di cartella che non usano CMake possono archiviare le impostazioni di
 
 Una configurazione può avere una delle proprietà seguenti:
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`inheritEnvironments`| Specifica gli ambienti da applicare a questa configurazione.|
 |`name`|Nome della configurazione che verrà visualizzato nell'elenco a discesa configurazione C++|
@@ -64,7 +65,7 @@ Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per i motivi legacy.
 
 In Visual Studio sono disponibili gli ambienti predefiniti seguenti per Microsoft C++ che vengono mappati al Prompt dei comandi per gli sviluppatori corrispondente. Quando si eredita uno di questi ambienti, è possibile fare riferimento a qualsiasi variabile di ambiente utilizzando la proprietà globale `env` con questa sintassi macro: $ {ENV. \<VARIABLE> }.
 
-|Nome variabile|Descrizione|
+|Nome variabile|Description|
 |-----------|-----------------|
 |vsdev|Ambiente Visual Studio predefinito|
 |msvc_x86|Compilazione per x86 usando strumenti x86|
@@ -77,7 +78,7 @@ In Visual Studio sono disponibili gli ambienti predefiniti seguenti per Microsof
 
 Quando viene installato il carico di lavoro di Linux sono disponibili gli ambienti seguenti per la definizione di Linux e WSL come destinazione remota:
 
-|Nome variabile|Descrizione|
+|Nome variabile|Description|
 |-----------|-----------------|
 |linux_x86|Imposta come destinazione x86 Linux in modalità remota|
 |linux_x64|Imposta come destinazione x64 Linux in modalità remota|
@@ -125,7 +126,7 @@ Quando si definisce una proprietà **environments** all'interno di una configura
 
 È possibile accedere alle macro predefinite seguenti all'interno *CppProperties.js*:
 
-|Macro|Descrizione|
+|Macro|Description|
 |-|-|
 |`${workspaceRoot}`| Percorso completo della cartella dell'area di lavoro|
 |`${projectRoot}`| Percorso completo della cartella in cui viene inserito *CppProperties.js*|

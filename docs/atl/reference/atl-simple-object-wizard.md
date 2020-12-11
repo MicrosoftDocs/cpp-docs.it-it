@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: creazione guidata oggetto semplice ATL'
 title: Creazione guidata oggetto semplice ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: c19613e1b1b6bd746106ff57a87dcf0f7d3ad838
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352687"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158660"
 ---
 # <a name="atl-simple-object-wizard"></a>Creazione guidata oggetto semplice ATL
 
@@ -20,7 +21,7 @@ Questa procedura guidata consente di inserire nel progetto un oggetto COM minimo
 
 Utilizzare la pagina [Opzioni](../../atl/reference/options-atl-simple-object-wizard.md) di questa procedura guidata per specificare il modello di threading dell'oggetto, il relativo supporto di aggregazione e se supporta le interfacce duali e l'automazione. È inoltre possibile indicare il supporto per l'interfaccia informazioni sugli errori, i punti di connessione, il supporto di Internet Explorer e il marshalling a thread libero.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
@@ -88,6 +89,6 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
    Imposta il nome che può essere usato dai contenitori invece del CLSID dell'oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetto semplice ATL](../../atl/reference/adding-an-atl-simple-object.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiungere una variabile membro'
 title: Aggiungere una variabile membro
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b3af5c5920e465545623e9fa7239662954df2d66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845133"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160116"
 ---
 # <a name="add-a-member-variable"></a>Aggiungere una variabile membro
 
@@ -106,7 +107,7 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
   Imposta l'ID della variabile di controllo da aggiungere. Selezionare dall'elenco l'ID per il tipo di controllo per cui aggiungere la variabile membro. L'elenco è attivo solo quando la casella **Control variable** (Variabile di controllo) è selezionata ed è limitato agli ID per i controlli già aggiunti alla finestra di dialogo. Ad esempio, per il pulsante **OK** standard, l'ID controllo è **IDOK**.
 
-  |Opzione|Descrizione|
+  |Opzione|Description|
   |------------|-----------------|
   |**Controllo**|Questa opzione è impostata per impostazione predefinita per il tipo di controllo. Gestisce il controllo e non lo stato o il contenuto del controllo (come è possibile fare con una casella di riepilogo, una casella combinata o una casella di modifica).|
   |**Valore**|Questa opzione è disponibile per i tipi di controllo che possono contenere un valore o visualizzare uno stato, ad esempio una casella di modifica o una casella di controllo. È anche disponibile per i tipi di controllo per i quali si può gestire un intervallo, dei contenuti o lo stato. Per altre informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](#dialog-box-controls-and-variable-types).|

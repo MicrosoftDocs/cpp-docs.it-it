@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dll estensione MFC: Panoramica'
 title: 'DLL di estensione: cenni preliminari'
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: ea8e950e28907ea1a4a85c1f39392d5505f08c49
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b877eeaae2e67466d4b695820659c5718d552d0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162924"
 ---
-# <a name="mfc-extension-dlls-overview"></a>Panoramica delle DLL MFC di estensione
+# <a name="mfc-extension-dlls-overview"></a>MFC (DLL di estensione): Panoramica
 
 Una DLL di estensione MFC è una DLL che in genere implementa classi riutilizzabili derivate da classi di libreria Microsoft Foundation Class esistenti. Le DLL dell'estensione MFC vengono compilate utilizzando la versione della libreria a collegamento dinamico di MFC, nota anche come versione condivisa di MFC. Solo i file eseguibili MFC, ovvero applicazioni o DLL MFC regolari, compilati con la versione condivisa di MFC possono utilizzare una DLL di estensione MFC. Con una DLL di estensione MFC, è possibile derivare nuove classi personalizzate da MFC, quindi offrire questa versione estesa di MFC alle applicazioni che chiamano la DLL.
 
@@ -33,7 +34,7 @@ Per un esempio di una DLL che soddisfi i requisiti di base di una DLL di estensi
 
 - [Utilizzo di dll di estensione MFC per database, OLE e Sockets nelle normali DLL MFC](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [DLL non MFC: cenni preliminari](non-mfc-dlls-overview.md)
+- [DLL non MFC: Panoramica](non-mfc-dlls-overview.md)
 
 - [DLL MFC regolari collegate a MFC in modo statico](regular-dlls-statically-linked-to-mfc.md)
 
@@ -41,6 +42,6 @@ Per un esempio di una DLL che soddisfi i requisiti di base di una DLL di estensi
 
 - [Creazione di una DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di DLL](kinds-of-dlls.md)

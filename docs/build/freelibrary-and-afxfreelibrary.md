@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: FreeLibrary e AfxFreeLibrary'
 title: FreeLibrary e AfxFreeLibrary
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 0b530aca2ab036de186ff3fdb11be23f41e12d05
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: ea4da8c69aa663add85e740d99b68731e263b442
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162794"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary e AfxFreeLibrary
 
 I processi che si collegano in modo esplicito a una DLL chiamano la funzione [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) quando il modulo dll non è più necessario. Questa funzione decrementa il conteggio dei riferimenti del modulo. Se il conteggio dei riferimenti è pari a zero, viene annullato il mapping dallo spazio degli indirizzi del processo.
 
-In un'applicazione MFC utilizzare [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) anziché `FreeLibrary` per scaricare una DLL di estensione MFC. L'interfaccia (prototipo di funzione `AfxFreeLibrary` ) per è uguale `FreeLibrary`a.
+In un'applicazione MFC utilizzare [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) anziché `FreeLibrary` per scaricare una DLL di estensione MFC. L'interfaccia (prototipo di funzione) per `AfxFreeLibrary` è uguale a `FreeLibrary` .
 
 ## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
@@ -38,7 +39,7 @@ In un'applicazione MFC utilizzare [AfxFreeLibrary](../mfc/reference/application-
 
 - [GetProcAddress](getprocaddress.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md)\
 [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)\

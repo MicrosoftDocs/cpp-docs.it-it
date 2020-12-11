@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: qualsiasi classe'
 title: qualsiasi classe
 ms.date: 04/04/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1ff32693e216657bdc9057a7dd7899d9bc479b02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163418"
 ---
 # <a name="any-class"></a>qualsiasi classe
 
@@ -34,17 +35,17 @@ L'istanza archiviata è denominata valore contenuto. Due Stati sono gli stessi s
 class any
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[qualsiasi](#any)|Costruisce un oggetto di tipo `any`.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[emplace](#emplace)|Imposta un valore qualsiasi.|
 |[has_value](#has_value)|Restituisce **`true`** se un oggetto ha un valore.|
@@ -54,7 +55,7 @@ class any
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore =](#op_eq)|Sostituisce any con una copia di un altro oggetto.|
 

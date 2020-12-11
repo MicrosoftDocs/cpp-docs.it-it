@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni virtuali'
 title: Funzioni virtuali
 ms.date: 09/10/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8e253f8debd594b1918fdcb2aed75b559b07ca8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161338"
 ---
 # <a name="virtual-functions"></a>Funzioni virtuali
 

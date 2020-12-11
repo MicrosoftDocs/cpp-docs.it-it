@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: typedef ATL'
 title: Typedef ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 10d11b2b6e78220c1c562d100ee7886026a94b22
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb243ef3d16689a1a0ddeb81d3de0bb4ec234a9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158647"
 ---
 # <a name="atl-typedefs"></a>Typedef ATL
 
@@ -61,7 +62,7 @@ Definito come typedef basato su _ATL_BASE_MODULE70.
 typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzato in ogni progetto ATL. Basato su [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).
 
@@ -79,7 +80,7 @@ Definito come typedef basato su _ATL_COM_MODULE70.
 typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzato dai progetti ATL che utilizzano le funzionalità COM. Basato su [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).
 
@@ -99,7 +100,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 
 **Intestazione**
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Basato su [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).
 
@@ -111,7 +112,7 @@ Definito come typedef basato su _ATL_WIN_MODULE70.
 typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzato da qualsiasi progetto ATL che utilizza le funzionalità di windowing. Basato su [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).
 
@@ -159,7 +160,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 #endif
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A seconda del modello di threading utilizzato dall'applicazione, il **`typedef`** nome `CComGlobalsThreadModel` fa riferimento a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Queste classi forniscono **`typedef`** nomi aggiuntivi per fare riferimento a una classe di sezione critica.
 
@@ -199,7 +200,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 #endif
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A seconda del modello di threading utilizzato dall'applicazione, il **`typedef`** nome `CComObjectThreadModel` fa riferimento a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Queste classi forniscono **`typedef`** nomi aggiuntivi per fare riferimento a una classe di sezione critica.
 
@@ -235,7 +236,7 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 **Intestazione:** atlwin. h
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CContainedWindow` è una specializzazione di [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Se si desidera modificare la classe di base o i tratti, utilizzare `CContainedWindowT` direttamente.
 
@@ -283,7 +284,7 @@ Rappresenta una matrice per l'archiviazione di tipi semplici.
 #define CSimpleValArray CSimpleArray
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CSimpleValArray` viene fornito per la creazione e la gestione di matrici contenenti tipi di dati semplici. Si tratta di una semplice #define di [CSimpleArray](../../atl/reference/csimplearray-class.md).
 
@@ -337,7 +338,7 @@ typedef CUrl* LPURL;
 
 **Intestazione:** atlutil. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)<br/>
 [Funzioni](../../atl/reference/atl-functions.md)<br/>

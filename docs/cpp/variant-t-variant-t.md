@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _variant_t:: _variant_t'
 title: _variant_t::_variant_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-ms.openlocfilehash: 50c10eb4ff617f4bcdc69d2e1781a9920b9eb0e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e49f2cf42ce1d73cb18d280d335ed267cb11df3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161364"
 ---
 # <a name="_variant_t_variant_t"></a>_variant_t::_variant_t
 
@@ -196,7 +197,7 @@ Un valore `BYTE` da copiare nel nuovo oggetto `_variant_t`.
 *ui8Src*<br/>
 Valore **__int64 senza segno** da copiare nel nuovo `_variant_t` oggetto.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 - **_variant_t ()** Costruisce un `_variant_t` oggetto vuoto, `VT_EMPTY` .
 
@@ -230,12 +231,12 @@ Valore **__int64 senza segno** da copiare nel nuovo `_variant_t` oggetto.
 
 - **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool** `fAddRef` **= true)** Costruisce un `_variant_t` oggetto di tipo VT_DISPATCH da un puntatore a interfaccia com.       Se `fAddRef` è **`true`** , `AddRef` viene chiamato sul puntatore a interfaccia specificato in modo che corrisponda alla chiamata a `Release` che si verificherà quando l' `_variant_t` oggetto viene eliminato definitivamente. È necessario chiamare `Release` sul puntatore a interfaccia specificato. Se `fAddRef` è **`false`** , questo costruttore acquisisce la proprietà del puntatore a interfaccia fornito. non chiamare `Release` sul puntatore a interfaccia specificato.
 
-- **_variant_t (&decimale ** `decSrc` **)** costruisce un `_variant_t` oggetto di tipo VT_DECIMAL da un `DECIMAL` valore.    
+- **_variant_t (&decimale** `decSrc` **)** costruisce un `_variant_t` oggetto di tipo VT_DECIMAL da un `DECIMAL` valore.    
 
 - **_variant_t (byte** `bSrc` **)** costruisce un `_variant_t` oggetto di tipo `VT_UI1` da un `BYTE` valore.    
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _variant_t](../cpp/variant-t-class.md)

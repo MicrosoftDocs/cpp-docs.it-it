@@ -1,55 +1,56 @@
 ---
-title: La modifica del controllo DHTML ATL
+description: 'Altre informazioni su: modifica del controllo DHTML ATL'
+title: Modifica del controllo DHTML ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML controls, modifying
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: e594360cc6752a60bf2e07a1fb1d02041604d959
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 7ae9c102addd7a33341a8f16105a3581de10481e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66502999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159453"
 ---
-# <a name="modifying-the-atl-dhtml-control"></a>La modifica del controllo DHTML ATL
+# <a name="modifying-the-atl-dhtml-control"></a>Modifica del controllo DHTML ATL
 
-La creazione guidata controllo ATL fornisce codice di avvio è possibile compilare ed eseguire il controllo e perciò è possibile vedere come i metodi vengono scritti nei file di progetto e come DHTML chiama codice di C++ del controllo mediante i metodi di invio. È possibile aggiungere qualsiasi metodo di invio all'interfaccia. Quindi, è possibile chiamare i metodi nella risorsa di HTML.
+La creazione guidata controllo ATL fornisce codice iniziale per poter compilare ed eseguire il controllo, in modo da visualizzare il modo in cui i metodi vengono scritti nei file di progetto e il modo in cui il DHTML chiama il codice C++ del controllo usando i metodi dispatch. È possibile aggiungere qualsiasi metodo Dispatch all'interfaccia. Quindi, è possibile chiamare i metodi nella risorsa HTML.
 
 ## <a name="to-modify-the-atl-dhtml-control"></a>Per modificare il controllo DHTML ATL
 
-1. Nelle **Visualizzazione classi**, espandere il progetto di controllo.
+1. In **Visualizzazione classi** espandere il progetto di controllo.
 
-   Si noti che l'interfaccia che termina con "UI" ha un solo metodo, `OnClick`. L'interfaccia che non termina con "UI" è privo di metodi.
+   Si noti che l'interfaccia che termina con "UI" ha un solo metodo, `OnClick` . L'interfaccia che non termina con "UI" non dispone di metodi.
 
-1. Aggiungere un metodo denominato `MethodInvoked` all'interfaccia che non termina con "Dell'interfaccia utente."
+1. Aggiungere un metodo denominato `MethodInvoked` all'interfaccia che non termina con "UI".
 
-   Questo metodo verrà aggiunto all'interfaccia che viene usato per interagire con il contenitore, non per l'interfaccia utilizzata da DHTML per interagire con il controllo nel contenitore del controllo. Solo il contenitore può richiamare questo metodo.
+   Questo metodo verrà aggiunto all'interfaccia utilizzata nel contenitore dei controlli per l'interazione del contenitore e non per l'interfaccia utilizzata da DHTML per interagire con il controllo. Solo il contenitore può richiamare questo metodo.
 
-1. Individuare il metodo sottoposto a stub orizzontale nel file con estensione cpp e aggiungere codice per visualizzare una finestra di messaggio, ad esempio:
+1. Individuare il metodo di cui è stato effettuato il stub nel file con estensione cpp e aggiungere il codice per visualizzare una finestra di messaggio, ad esempio:
 
    [!code-cpp[NVC_ATL_COM#5](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_1.cpp)]
 
-1. Aggiungere un altro metodo denominato `HelloHTML`, solo questa volta, aggiungerlo all'interfaccia che termina con "Dell'interfaccia utente." Trovare i messaggi sottoposti a stub `HelloHTML` metodo nell'estensione cpp file e aggiungere codice per visualizzare una finestra di messaggio, ad esempio:
+1. Aggiungere un altro metodo denominato `HelloHTML` , solo questa volta, aggiungerlo all'interfaccia che termina con "UI". Individuare il metodo di cui è stato effettuato il Stub `HelloHTML` nel file con estensione cpp e aggiungere il codice per visualizzare una finestra di messaggio, ad esempio:
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. Aggiungere un terzo metodo `GoToURL`, all'interfaccia che non termina con "Dell'interfaccia utente." Implementare questo metodo chiamando [IWebBrowser2:: Navigate](/previous-versions//aa752133\(v=vs.85\)), come indicato di seguito:
+1. Aggiungere un terzo metodo, `GoToURL` , all'interfaccia che non termina con "UI". Implementare questo metodo chiamando [IWebBrowser2:: Navigate](/previous-versions//aa752133\(v=vs.85\)), come indicato di seguito:
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
-   È possibile usare il `IWebBrowser2` metodi perché ATL fornisce un puntatore a interfaccia per l'utente nel file con estensione h.
+   È possibile utilizzare i `IWebBrowser2` metodi perché ATL fornisce un puntatore a tale interfaccia nel file con estensione h.
 
-Successivamente, modificare la risorsa HTML per richiamare i metodi che è stato creato. Si aggiungeranno tre pulsanti per richiamare tali metodi.
+Modificare quindi la risorsa HTML per richiamare i metodi creati. Per richiamare questi metodi vengono aggiunti tre pulsanti.
 
 ## <a name="to-modify-the-html-resource"></a>Per modificare la risorsa HTML
 
-1. Nelle **Esplora soluzioni**, fare doppio clic sul file con estensione htm per visualizzare la risorsa HTML.
+1. In **Esplora soluzioni** fare doppio clic sul file con estensione htm per visualizzare la risorsa HTML.
 
-   Esaminare il codice HTML, in particolare le chiamate ai metodi di distribuzione Windows esterni. Il codice HTML chiama il progetto `OnClick` metodo e i parametri di indicano il corpo del controllo (`theBody`) e il colore da assegnare ("`red`"). Il testo che segue la chiamata al metodo è l'etichetta visualizzata sul pulsante.
+   Esaminare il codice HTML, in particolare le chiamate ai metodi di invio esterni di Windows. Il codice HTML chiama il metodo del progetto `OnClick` e i parametri indicano il corpo del controllo ( `theBody` ) e il colore da assegnare (" `red` "). Il testo che segue la chiamata al metodo è l'etichetta visualizzata sul pulsante.
 
-1. Aggiungere un altro `OnClick` metodo, cambia solo il colore. Ad esempio:
+1. Aggiungere un altro `OnClick` metodo, modificare solo il colore. Ad esempio:
 
     ```html
     <br>
@@ -57,7 +58,7 @@ Successivamente, modificare la risorsa HTML per richiamare i metodi che è stato
     <BUTTON onclick='window.external.OnClick(theBody, "white");'>Refresh</BUTTON>
     ```
 
-   Questo metodo creerà un pulsante, etichettato **Aggiorna**, che l'utente può fare clic per restituire il controllo per lo sfondo bianco originale.
+   Questo metodo creerà un pulsante, denominato **Refresh**, su cui l'utente può fare clic per restituire il controllo allo sfondo bianco originale.
 
 1. Aggiungere la chiamata al `HelloHTML` metodo creato. Ad esempio:
 
@@ -67,10 +68,10 @@ Successivamente, modificare la risorsa HTML per richiamare i metodi che è stato
     <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
-   Questo metodo creerà un pulsante, etichettato **HelloHTML**, che l'utente può fare clic per visualizzare il `HelloHTML` finestra di messaggio.
+   Questo metodo creerà un pulsante, denominato **HelloHTML**, su cui l'utente può fare clic per visualizzare la `HelloHTML` finestra di messaggio.
 
-È ora possibile compilare e [testare il controllo modificato DHTML](../atl/testing-the-modified-atl-dhtml-control.md).
+È ora possibile compilare e [testare il controllo DHTML modificato](../atl/testing-the-modified-atl-dhtml-control.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto per controlli DHTML](../atl/atl-support-for-dhtml-controls.md)

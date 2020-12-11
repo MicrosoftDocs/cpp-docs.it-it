@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore sizeof (C)'
 title: Operatore sizeof (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-ms.openlocfilehash: 1d06fc8b541cbce3771a485c8f71953be8f7d552
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a67a7068d6fa14ad3fc35fc9909251ff7e304341
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162404"
 ---
 # <a name="sizeof-operator-c"></a>Operatore sizeof (C)
 
@@ -51,7 +52,7 @@ const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 
 In questo esempio, `strings` è una matrice di puntatori a **`char`** . Il numero dei puntatori è il numero di elementi nella matrice, ma non è specificato. È facile determinare il numero di puntatori utilizzando l' **`sizeof`** operatore per calcolare il numero di elementi nella matrice. Il **`const`** valore integer `string_no` viene inizializzato su questo numero. Poiché è un **`const`** valore, `string_no` non può essere modificato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori C](c-operators.md)<br/>
 [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

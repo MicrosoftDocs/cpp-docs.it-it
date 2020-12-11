@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: remove_const Class'
 title: Classe remove_const
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 262c4ec34a0559afb7cf77849efce8fe577cf5b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159713"
 ---
-# <a name="removeconst-class"></a>Classe remove_const
+# <a name="remove_const-class"></a>Classe remove_const
 
 Crea un tipo non const dal tipo.
 
@@ -35,9 +36,9 @@ using remove_const_t = typename remove_const<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza di `remove_const<T>` include un tipo modificato che è `T1` quando *T* è nel formato `const T1`; in caso contrario, *t*.
+Un'istanza di `remove_const<T>` include un tipo modificato che è `T1` quando *T* è nel formato `const T1` ; in caso contrario, *t*.
 
 ## <a name="example"></a>Esempio
 
@@ -63,11 +64,11 @@ remove_const_t<const int> == int
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe add_const](../standard-library/add-const-class.md)\

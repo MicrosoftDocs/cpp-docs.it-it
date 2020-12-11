@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: remove_pointer Class'
 title: Classe remove_pointer
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_pointer class
 - remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
-ms.openlocfilehash: 786a1cba5fc35014e33e3e19245271adefec1372
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8739fcd197dc59f5163740d1290abd3faee1922a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451246"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159661"
 ---
-# <a name="removepointer-class"></a>Classe remove_pointer
+# <a name="remove_pointer-class"></a>Classe remove_pointer
 
 Crea il tipo dal puntatore al tipo.
 
@@ -33,9 +34,9 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza di `remove_pointer<T>` include un tipo modificato che è `T1` quando *T* è nel formato `T1*`, `T1* const`, `T1* volatile`o `T1* const volatile`, in caso contrario, *t*.
+Un'istanza di `remove_pointer<T>` include un tipo modificato che è `T1` quando *T* è nel formato `T1*` , `T1* const` , `T1* volatile` o `T1* const volatile` , in caso contrario, *t*.
 
 ## <a name="example"></a>Esempio
 
@@ -61,11 +62,11 @@ remove_pointer_t<int *> == int
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe add_pointer](../standard-library/add-pointer-class.md)

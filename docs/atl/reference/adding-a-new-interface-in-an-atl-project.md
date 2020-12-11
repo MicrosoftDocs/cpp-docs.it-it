@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiunta di una nuova interfaccia in un progetto ATL'
 title: Aggiunta di una nuova interfaccia in un progetto ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 8bf0138f85929e06b67e9a2e294eda8a2f385e1a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7db5cd5f613985caf22253736ae691f3af9240ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159141"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Aggiunta di una nuova interfaccia in un progetto ATL
 
@@ -26,7 +27,7 @@ Quando si aggiunge un'interfaccia all'oggetto o al controllo, si creano funzioni
 
 1. In [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code)fare clic con il pulsante destro del mouse sul nome della classe di un controllo. Ad esempio, un controllo completo o composito o qualsiasi altra classe del controllo che implementi una macro BEGIN_COM_MAP nel file di intestazione.
 
-1. Scegliere **Aggiungi**dal menu di scelta rapida, quindi fare clic su **implementa interfaccia**.
+1. Scegliere **Aggiungi** dal menu di scelta rapida, quindi fare clic su **implementa interfaccia**.
 
 1. Selezionare le interfacce da implementare nella [procedura guidata implementa interfaccia](../../ide/implementing-an-interface-visual-cpp.md#implement-interface-wizard). Se l'interfaccia non esiste in nessuna libreria dei tipi disponibile, è necessario aggiungerla manualmente al file IDL.
 
@@ -40,10 +41,10 @@ Quando si aggiunge un'interfaccia all'oggetto o al controllo, si creano funzioni
 
 1. Implementare i metodi nell'interfaccia.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Tipi di progetto C++ in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
-[Programmazione con il codice di runtime di C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmazione con ATL e codice C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurazioni di progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)

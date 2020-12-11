@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: utilizzo di un recordset ADO esistente'
 title: Utilizzo di un recordset ADO esistente
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4b5c3b5f621f3cbdba6f2d42fd95436495a5661e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160948"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilizzo di un recordset ADO esistente
 
 Per combinare OLE DB modelli di consumer e ADO (Active Data Objects), usare ADO per aprire un recordset (corrispondente a un set di righe nei modelli di consumer OLE DB). Quando si dispone di un recordset, eseguire le operazioni seguenti per connettersi a un set di righe OLE DB:
 
-1. Chiamare `QueryInterface` per i puntatori `IRowset` e `IAccessor`.
+1. Chiamare `QueryInterface` per i `IRowset` `IAccessor` puntatori e.
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,7 +28,7 @@ Per combinare OLE DB modelli di consumer e ADO (Active Data Objects), usare ADO 
     ```
 
     > [!NOTE]
-    > *lpUnk* punta all'oggetto `IUnknown` del recordset ADO.
+    > *lpUnk* punta all' `IUnknown` oggetto del recordset ADO.
 
 1. Alleghi la funzione di accesso e il set di righe alle classi di modelli di consumer appropriate OLE DB.
 
@@ -40,6 +41,6 @@ Per combinare OLE DB modelli di consumer e ADO (Active Data Objects), usare ADO 
     rs.SetAccessor(accessor);
     ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

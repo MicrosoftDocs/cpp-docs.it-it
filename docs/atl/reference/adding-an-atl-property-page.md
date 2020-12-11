@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: aggiunta di una pagina delle proprietà ATL'
 title: Aggiunta di una pagina delle proprietà ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 4cd7444d18d26124f8c3c642bba55fb7592f5c8b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7b2798cca257f0ab80c27a6e18a23b173f1d93a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159037"
 ---
 # <a name="adding-an-atl-property-page"></a>Aggiunta di una pagina delle proprietà ATL
 
@@ -35,7 +36,7 @@ Se si aggiunge una pagina delle proprietà per un controllo, il controllo deve s
 
 Dopo aver creato una pagina delle proprietà per un controllo, è necessario fornire la voce [PROP_PAGE](property-map-macros.md#prop_page) nella mappa delle proprietà per il controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Pagine delle proprietà](../../atl/atl-com-property-pages.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>

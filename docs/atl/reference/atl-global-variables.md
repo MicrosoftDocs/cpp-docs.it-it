@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: variabili globali ATL'
 title: Variabili globali ATL
 ms.date: 12/06/2017
 f1_keywords:
@@ -7,26 +8,26 @@ helpviewer_keywords:
 - global variables, ATL
 - _pAtlModule
 ms.assetid: e881a319-99ca-4f5d-8a0b-34b3dcd0f37f
-ms.openlocfilehash: 4f98b31d2454b7c6e903e5b5b87bceb4ddcb6961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d0544651e32f5e569973466af8ce04af1433766
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248160"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158777"
 ---
 # <a name="atl-global-variables"></a>Variabili globali ATL
 
-## <a name="patlmodule"></a>_pAtlModule
+## <a name="_patlmodule"></a>_pAtlModule
 
-Una variabile globale memorizzando un puntatore al modulo corrente.
+Variabile globale che archivia un puntatore al modulo corrente.
 
 ```cpp
 __declspec(selectany) CAtlModule * _pAtlModule
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Commenti
 
-I metodi in questa variabile globale sono utilizzabile per fornire la funzionalità che la classe CComModule (obsoleta) fornita in Visual C++ 6.0.
+I metodi di questa variabile globale possono essere usati per fornire la funzionalità fornita dalla classe (obsoleta) CComModule in Visual C++ 6,0.
 
 ### <a name="example"></a>Esempio
 

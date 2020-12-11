@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: modifica del progetto ATL'
 title: Modifica del progetto ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,22 +7,22 @@ helpviewer_keywords:
 - Dialog editor, working with composite controls
 - composite controls, adding controls
 ms.assetid: 59984518-748f-4b8b-875f-3e97d22d0b0f
-ms.openlocfilehash: 15a8f20f8618f77c8da3637e94c75adc772319cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 804e9a983db11af67c2a03690667cffab3385592
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159440"
 ---
 # <a name="modifying-the-atl-project"></a>Modifica del progetto ATL
 
-A questo punto, il progetto del controllo composito implementa gli oggetti necessari per il controllo composito. Il passaggio successivo consiste nell'aggiungere tutti i controlli che conterrà il controllo composito e gestire gli eventi necessari.
+A questo punto, il progetto di controllo composto implementa gli oggetti necessari per il controllo composito. Il passaggio successivo consiste nell'aggiungere tutti i controlli che il controllo composito conterrà e gestirà gli eventuali eventi necessari.
 
-Per aggiungere ulteriori controlli ActiveX o Windows, aggiungere un nuovo script di risorsa e quindi usare l'editor finestre. Per altre informazioni sull'aggiunta di controlli (e le attività correlate), vedere [finestra di dialogo Editor](../windows/dialog-editor.md).
+Per aggiungere altri controlli ActiveX o Windows, aggiungere un nuovo script di risorsa e quindi utilizzare l'editor finestre. Per ulteriori informazioni sull'aggiunta di controlli (e sulle attività correlate), vedere [editor finestre](../windows/dialog-editor.md).
 
 Per gestire gli eventi necessari dai controlli ActiveX, vedere [aggiunta di funzionalità al controllo composito](../atl/adding-functionality-to-the-composite-control.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nozioni fondamentali sul controllo composito](../atl/atl-composite-control-fundamentals.md)<br/>
 [Procedura: Creare un file script di risorsa](../windows/how-to-create-a-resource-script-file.md)

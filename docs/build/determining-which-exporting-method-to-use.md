@@ -1,5 +1,6 @@
 ---
-title: Determinare il metodo di esportazione da usare
+description: 'Altre informazioni su: determinare il metodo di esportazione da usare'
+title: Determinare il metodo di esportazione da utilizzare
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __declspec(dllexport) keyword [C++]
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
-ms.openlocfilehash: 974c32cef87801599ba0d14fd146e84ad874467f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d9e973d331ebd6190cd8e2a46601dfe2b057d09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162976"
 ---
-# <a name="determine-which-exporting-method-to-use"></a>Determinare il metodo di esportazione da usare
+# <a name="determine-which-exporting-method-to-use"></a>Determinare il metodo di esportazione da utilizzare
 
-È possibile esportare le funzioni in uno dei due modi, ovvero un file con estensione `__declspec(dllexport)` def o la parola chiave. Per decidere quale sia il modo migliore per la DLL, prendere in considerazione le domande seguenti:
+È possibile esportare le funzioni in uno dei due modi, ovvero un file con estensione def o la `__declspec(dllexport)` parola chiave. Per decidere quale sia il modo migliore per la DLL, prendere in considerazione le domande seguenti:
 
 - Si intende esportare altre funzioni in un secondo momento?
 
@@ -26,7 +27,7 @@ ms.locfileid: "62273737"
 
 L'esportazione di funzioni in un file con estensione def consente di controllare gli ordinali di esportazione. Quando si aggiunge una funzione esportata alla DLL, è possibile assegnarle un valore ordinale più elevato rispetto a qualsiasi altra funzione esportata. Quando si esegue questa operazione, le applicazioni che utilizzano il collegamento implicito non devono ricollegarsi alla libreria di importazione che contiene la nuova funzione. Questa operazione è molto utile se si progetta una DLL per l'uso da parte di molte applicazioni, in quanto è possibile aggiungere nuove funzionalità e assicurarsi che continui a funzionare correttamente con le applicazioni che si basano già su di essa. Ad esempio, le DLL MFC vengono compilate utilizzando i file def.
 
-Un altro vantaggio dell'uso di un file con estensione def è che è `NONAME` possibile usare l'attributo per esportare una funzione. In questo modo viene inserito solo il numero ordinale nella tabella exports della DLL. Per le dll con un numero elevato di funzioni esportate, `NONAME` l'utilizzo dell'attributo può ridurre le dimensioni del file dll. Per informazioni su come scrivere un'istruzione di definizione di modulo, vedere [regole per le istruzioni Module-Definition](reference/rules-for-module-definition-statements.md). Per informazioni sull'esportazione ordinale, vedere [esportazione di funzioni da una dll in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+Un altro vantaggio dell'uso di un file con estensione def è che è possibile usare l' `NONAME` attributo per esportare una funzione. In questo modo viene inserito solo il numero ordinale nella tabella exports della DLL. Per le dll con un numero elevato di funzioni esportate, l'utilizzo dell' `NONAME` attributo può ridurre le dimensioni del file dll. Per informazioni su come scrivere un'istruzione per la definizione di un modulo, vedere [regole per Module-Definition istruzioni](reference/rules-for-module-definition-statements.md). Per informazioni sull'esportazione ordinale, vedere [esportazione di funzioni da una dll in base al numero ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
 Uno svantaggio dell'uso di un file con estensione def è che se si esportano funzioni in un file C++, è necessario inserire i nomi decorati nel file def o definire le funzioni esportate usando extern "C" per evitare la decorazione del nome eseguita dal compilatore MSVC.
 
@@ -34,7 +35,7 @@ Se si inseriscono i nomi decorati nel file def, è possibile ottenerli usando lo
 
 ## <a name="pros-and-cons-of-using-__declspecdllexport"></a>Vantaggi e svantaggi dell'utilizzo di __declspec (dllexport)
 
-L' `__declspec(dllexport)` uso di è utile perché non è necessario preoccuparsi di mantenere un file def e ottenere i nomi decorati delle funzioni esportate. Tuttavia, l'utilità di questo metodo di esportazione è limitata dal numero di applicazioni collegate che si vuole ricompilare. Se si ricompila la DLL con le nuove esportazioni, è necessario ricompilare anche le applicazioni perché i nomi decorati per le funzioni C++ esportate potrebbero cambiare se si usa una versione diversa del compilatore per ricompilarla.
+`__declspec(dllexport)`L'uso di è utile perché non è necessario preoccuparsi di mantenere un file def e ottenere i nomi decorati delle funzioni esportate. Tuttavia, l'utilità di questo metodo di esportazione è limitata dal numero di applicazioni collegate che si vuole ricompilare. Se si ricompila la DLL con le nuove esportazioni, è necessario ricompilare anche le applicazioni perché i nomi decorati per le funzioni C++ esportate potrebbero cambiare se si usa una versione diversa del compilatore per ricompilarla.
 
 ### <a name="what-do-you-want-to-do"></a>Per saperne di più
 
@@ -60,6 +61,6 @@ L' `__declspec(dllexport)` uso di è utile perché non è necessario preoccupars
 
 - [Nomi decorati](reference/decorated-names.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esportazione da una DLL](exporting-from-a-dll.md)

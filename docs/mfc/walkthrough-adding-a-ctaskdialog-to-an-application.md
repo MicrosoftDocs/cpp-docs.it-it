@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: procedura dettagliata: aggiunta di un CTaskDialog a un'applicazione"
 title: "Procedura dettagliata: aggiunta di CTaskDialog a un'applicazione"
 ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: 3a970df4911fed643045a1c6b59fcda1a853dbcf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f7462551af785b85156f3f0b0f83b2ff3ddbf4c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159895"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: aggiunta di CTaskDialog a un'applicazione
 
@@ -94,7 +95,7 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>Per aggiungere funzionalità a CTaskDialog
 
-1. Passare alla finestra **Visualizzazione risorse**. Se la **visualizzazione risorse**non è visibile, è possibile aprirla dal menu **Visualizza** .
+1. Passare alla finestra **Visualizzazione risorse**. Se la **visualizzazione risorse** non è visibile, è possibile aprirla dal menu **Visualizza** .
 
 1. Espandere la finestra **Visualizzazione risorse** fino a quando non è possibile selezionare la cartella **Tabelle delle stringhe** . Espandere la finestra e fare doppio clic sulla voce **Tabelle delle stringhe** .
 
@@ -191,7 +192,7 @@ Compilare l'applicazione ed eseguirla. L'applicazione visualizza due finestre di
 
 Questi esempi non illustrano tutte le opzioni disponibili per un `CTaskDialog` , ma dovrebbero essere utili per iniziare. Per una descrizione completa della classe, vedere [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
 [Classe CTaskDialog](../mfc/reference/ctaskdialog-class.md)<br/>

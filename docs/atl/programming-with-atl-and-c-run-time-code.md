@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: programmazione con ATL e codice C Run-Time'
 title: Programmazione con il codice runtime C e ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,24 +8,24 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-ms.openlocfilehash: 0e44f2d944d64eb4eefc7bbd543eaaaa04c8a9de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a5074b17756f0c74159a6e7c051ada29de43eef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159245"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programmazione con il codice runtime C e ATL
 
-Questa sezione illustra i vantaggi dell'uso di libreria di Run-Time C (CRT) con il collegamento statico o dinamico.
+In questa sezione vengono illustrati i vantaggi derivanti dall'utilizzo della libreria C Run-Time (CRT) con il collegamento statico o dinamico.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-[Vantaggi e compromessi del metodo usato per collegarsi a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)<br/>
-Riepiloga i vantaggi e compromessi da collegamento statico a CRT o il collegamento in modo dinamico.
+[Vantaggi e compromessi del metodo usato per il collegamento a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)<br/>
+Riepiloga i vantaggi e i compromessi necessari per il collegamento statico a CRT o il collegamento dinamico.
 
 [Collegamento a CRT nel progetto ATL](../atl/linking-to-the-crt-in-your-atl-project.md)<br/>
-Vengono illustrate le impostazioni del progetto e le opzioni del linker per il collegamento a CRT. fornisce anche informazioni dettagliate su come collegamento a CRT influisce sull'immagine del programma.
+Illustra le impostazioni del progetto e le opzioni del linker per il collegamento a CRT. fornisce inoltre informazioni dettagliate sul modo in cui il collegamento a CRT influisca sull'immagine del programma.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
@@ -32,11 +33,11 @@ Vengono illustrate le impostazioni del progetto e le opzioni del linker per il c
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
 [DLL e comportamento delle librerie di runtime Visual C++](../build/run-time-library-behavior.md)<br/>
-Fornisce informazioni dettagliate su come funziona il codice di avvio VCRuntime e CRT.
+Fornisce informazioni dettagliate sul funzionamento del codice di avvio VCRuntime e CRT.
 
 [Librerie di runtime C](../c-runtime-library/crt-library-features.md)<br/>
-Illustra i vari file lib che includono le librerie di runtime C e sono elencate le opzioni del compilatore associate e direttive del preprocessore.
+Vengono illustrati i vari file lib che includono le librerie di runtime del linguaggio C e vengono elencate le opzioni del compilatore associate e le direttive per il preprocessore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)

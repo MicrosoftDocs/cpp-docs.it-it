@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: estensioni Microsoft'
 title: Estensioni Microsoft
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Microsoft extensions to C/C++
 ms.assetid: 68654516-24ef-4f33-aae2-175f86cc1979
-ms.openlocfilehash: 4b2ed06b31ffefb0d64d09864004256251a9b6cf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3a6bfb7e85c3b219d1dda67e051f731ecf54fe6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161638"
 ---
 # <a name="microsoft-extensions"></a>Estensioni Microsoft
 
@@ -28,9 +29,9 @@ ms.locfileid: "87223668"
 &nbsp;&nbsp;&nbsp;&nbsp;**`__cdecl`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`__fastcall`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`__stdcall`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__syscall`**(riservato per implementazioni future)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__oldcall`**(riservato per implementazioni future)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__unaligned`**(riservato per implementazioni future)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__syscall`** (riservato per implementazioni future)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__oldcall`** (riservato per implementazioni future)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__unaligned`** (riservato per implementazioni future)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`based-modifier`*
 
 *`based-modifier`*:<br/>

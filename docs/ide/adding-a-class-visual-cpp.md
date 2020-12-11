@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiungere una classe'
 title: Aggiungere una classe
 ms.date: 05/14/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: b1c64505a63b8720ed7aee855f2bbbbdb9134e28
-ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
+ms.openlocfilehash: 71e4221b57a0a871d2c80396f4ac2261a4214fc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96188835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160194"
 ---
 # <a name="add-a-class"></a>Aggiungere una classe
 

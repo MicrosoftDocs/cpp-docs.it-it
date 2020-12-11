@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: compilare componenti COM Registration-Free'
 title: 'Procedura: compilare componenti COM senza registrazione'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 783677c97835acc98751fc4a19f9405af752b71a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ddcb378989878749d170705b4808d8302523a73a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162716"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Procedura: compilare componenti COM senza registrazione
 
@@ -27,6 +28,6 @@ I componenti COM senza registrazione sono componenti COM con manifesti incorpora
 
 1. Compilare la soluzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Procedura: Compilare applicazioni isolate per l'utilizzo di componenti COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Procedura: compilare applicazioni isolate per l'utilizzo di componenti COM](how-to-build-isolated-applications-to-consume-com-components.md)

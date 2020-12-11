@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiungere una funzione membro'
 title: Aggiungere una funzione membro
 ms.date: 11/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e40cd3b70b90026ebaebe2ec0af2224d89868f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160155"
 ---
 # <a name="add-a-member-function"></a>Aggiungere una funzione membro
 
@@ -64,11 +65,11 @@ Dopo aver aggiunto la funzione membro usando la procedura guidata, è possibile 
    :::column-end:::
 :::row-end:::
 
-- **Nome della funzione**
+- **Nome funzione**
 
   Imposta il nome della funzione membro da aggiungere.
 
-- **Tipo di parametro**
+- **Tipo parametro**
 
   Imposta il tipo di parametro da aggiungere per la funzione membro, se la funzione membro include parametri. È possibile specificare un tipo di parametro personalizzato oppure selezionarlo dall'elenco dei tipi disponibili.
 
@@ -104,14 +105,14 @@ Dopo aver aggiunto la funzione membro usando la procedura guidata, è possibile 
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [privata](../cpp/private-cpp.md)
 
   Controllare se la nuova funzione membro è statica o virtuale e se è inline o pura. Se si imposta la funzione membro come pura, la casella di controllo **Virtual** è selezionata e la casella di controllo **Inline** non è più disponibile. L'impostazione predefinita prevede una funzione membro non statica non virtuale.
 
-  | Opzione | Descrizione |
+  | Opzione | Description |
   |--------|-------------|
   | [Statico](../cpp/storage-classes-cpp.md) |  Specifica che la funzione è globale e può essere chiamata all'esterno della classe, anche senza la creazione di istanze della classe. La funzione membro non ha accesso a membri non statici. Una funzione membro specificata come `Static` non può essere virtuale. |
-  | [Virtuale](../cpp/virtual-cpp.md) | Garantisce che venga chiamata la funzione membro corretta per un oggetto, indipendentemente dall'espressione usata per eseguire la chiamata di funzione. Una funzione membro specificata come `Virtual` non può essere statica. |
+  | [Le macchine](../cpp/virtual-cpp.md) | Garantisce che venga chiamata la funzione membro corretta per un oggetto, indipendentemente dall'espressione usata per eseguire la chiamata di funzione. Una funzione membro specificata come `Virtual` non può essere statica. |
   | **Puro** | Indica che non viene offerta alcuna implementazione per la funzione membro virtuale dichiarata. Il valore **Pure** può essere specificato solo per le funzioni membro virtuali. Una classe che contiene almeno una funzione membro virtuale pura è considerata una classe astratta. Le classi derivate dalla classe astratta devono implementare la funzione membro virtuale pura o sono anch'esse classi astratte. |
   | [Inline](../cpp/inline-functions-cpp.md) | Indica al compilatore di inserire una copia del corpo della funzione membro in ogni punto in cui viene chiamata la funzione membro. Una funzione membro specificata come **Inline** non può essere pura. |
 

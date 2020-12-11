@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: IEEE Floating-Point rappresentazione'
 title: Formato a virgola mobile IEEE
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 47802a32d43824b4e568ca520c360dc7b12cbf8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de48975ba13fae6117b095565f22265e28edf07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162651"
 ---
 # <a name="ieee-floating-point-representation"></a>Formato a virgola mobile IEEE
 
@@ -24,7 +25,7 @@ Microsoft C++ (MSVC) è coerente con gli standard numerici IEEE. Lo standard IEE
 
 I valori vengono archiviati come indicato di seguito:
 
-|valore|Archiviato come|
+|Valore|Archiviato come|
 |-----------|---------------|
 |precisione singola|bit di segno, esponente a 8 bit, separatore a 23 bit|
 |precisione doppia|bit di segno, esponente a 11 bit, separatore a 52 bit|
@@ -51,7 +52,7 @@ Il formato per la rappresentazione a virgola mobile è il seguente:
 |precisione singola| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
 |precisione doppia|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S`rappresenta il bit del segno, il `X` sono i bit dell'esponente distorta e i `M` separatore sono i bit. Il bit più a sinistra si presuppone nei formati a precisione singola e precisione doppia.
+`S` rappresenta il bit del segno, il `X` sono i bit dell'esponente distorta e i `M` separatore sono i bit. Il bit più a sinistra si presuppone nei formati a precisione singola e precisione doppia.
 
 Per spostare correttamente il punto binario, è necessario innanzitutto depolarizzare l'esponente, quindi spostare il punto binario a destra o a sinistra del numero di bit appropriato.
 
@@ -75,64 +76,64 @@ I valori + ∞ e − ∞ sono rappresentati da un esponente di tutti gli zeri e 
 
 Nel formato a virgola mobile IEEE è possibile rappresentare valori che non sono numeri reali, ad esempio 0/0. Un valore di questo tipo è denominato *NaN*. NaN è rappresentato da un esponente di tutti i valori e da un separatore diverso da zero. Esistono due tipi di NaNs, *quiet* Nans o QNaNs, *signaling* Nans o SNaNs. I NaNs tranquilli hanno un primo carattere in separatore e vengono propagati tramite un'espressione. Rappresentano un valore indeterminato, ad esempio il risultato della divisione per infinito o la moltiplicazione di un infinito per zero. I NaNs di segnalazione hanno uno zero principale in separatore. Vengono usati per le operazioni non valide, per segnalare un'eccezione hardware a virgola mobile.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Di seguito sono riportati alcuni esempi di formato a precisione singola:
 
 - Per il valore 2, il bit di segno è zero. L'esponente archiviato è 128 o 1000 0000 in formato binario, ovvero 127 più 1. La separatore binaria archiviata è (1.) 000 0000 0000 0000 0000 0000, che include un punto binario e 1 di primo livello implicito, quindi il separatore effettivo è uno.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |2|1 * 2<sup>1</sup>|0100 0000 0000 0000 0000 0000 0000 0000|0x40000000|
 
 - Valore-2. Uguale a + 2 ad eccezione del fatto che il bit di segno è impostato. La stessa cosa è vera per il negativo di tutti i numeri a virgola mobile del formato IEEE.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |-2|-1 * 2<sup>1</sup>|1100 0000 0000 0000 0000 0000 0000 0000|0xC0000000|
 
 - Valore 4. Lo stesso separatore, l'esponente aumenta di uno (il valore distorto è 129 o 100 0000 1 in formato binario.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |4|1 * 2<sup>2</sup>|0100 0000 1000 0000 0000 0000 0000 0000|0x40800000|
 
 - Valore 6. Stesso esponente, separatore è maggiore di metà. È (1.) 100 0000... 0000 0000, che, dal momento che si tratta di una frazione binaria, è 1 1/2 perché i valori delle cifre frazionarie sono 1/2, 1/4, 1/8 e così via.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |6|1,5 * 2<sup>2</sup>|0100 0000 1100 0000 0000 0000 0000 0000|0x40C00000|
 
 - Il valore 1. Lo stesso separatore di altre potenze di due, l'esponente distorta è uno minore di due a 127 o 011 1111 1 in formato binario.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |1|1 * 2<sup>0</sup>|0011 1111 1000 0000 0000 0000 0000 0000|0x3F800000|
 
 - Valore 0,75. L'esponente distorta è 126, 011 1111 0 in formato binario e separatore è (1.) 100 0000... 0000 0000, che è 1 1/2.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |0,75|1,5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
 
 - Valore 2,5. Esattamente uguale a due, tranne per il fatto che il bit che rappresenta 1/4 è impostato in separatore.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |2.5|1,25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
 
 - 1/10 è una frazione ripetuta in formato binario. Il valore di separatore è leggermente inferiore a 1,6 e l'esponente distorta indica che 1,6 deve essere diviso per 16. (È 011 1101 1 in formato binario, ovvero 123 in decimale). Il vero esponente è 123-127 =-4, il che significa che il fattore in base al quale moltiplicare è 2<sup>-4</sup> = 1/16. Il separatore archiviato viene arrotondato per eccesso nell'ultimo bit nel tentativo di rappresentare il numero non rappresentabile nel modo più accurato possibile. Il motivo per cui 1/10 e 1/100 non sono esattamente rappresentabili nel file binario è simile al motivo per cui 1/3 non è esattamente rappresentabile in decimale.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
-   |0.1|1,6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
+   |0,1|1,6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 
 - Zero è un caso speciale. Usa la formula per il valore positivo minimo rappresentabile, che è costituito da tutti zeri.
 
-   |valore|Formula|Rappresentazione binaria|Valore esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Valore esadecimale|
    |-|-|-|-|
    |0|1 * 2<sup>-128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Motivi per cui i numeri a virgola mobile potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md)
+[Perché i numeri di Floating-Point potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md)

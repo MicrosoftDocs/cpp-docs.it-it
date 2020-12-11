@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi di routing dei comandi'
 title: Classi di routing dei comandi
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC, command routing
 - command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
-ms.openlocfilehash: d7ff275d373cf50ab8ebe52ed454bd25cd473e11
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d469b119eb7c42c1385f27a3d8df54f3fd47c73f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159973"
 ---
 # <a name="command-routing-classes"></a>Classi di routing dei comandi
 
@@ -26,6 +27,6 @@ Funge da classe base per tutte le classi di oggetti che possono ricevere e rispo
 [CCmdUI](reference/ccmdui-class.md)<br/>
 Fornisce un'interfaccia a livello di codice per l'aggiornamento di oggetti dell'interfaccia utente, ad esempio voci di menu o pulsanti della barra di controllo. L'oggetto di destinazione del comando Abilita, Disabilita, verifica e/o cancella l'oggetto interfaccia utente con questo oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

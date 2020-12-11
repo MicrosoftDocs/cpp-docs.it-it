@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: utilizzo di librerie e componenti'
 title: Utilizzo di librerie e componenti nei progetti C++
 ms.date: 12/10/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8933afc1d3d9257e4a8b1d80a39c5fa15a9d438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163262"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilizzo di librerie e componenti
 
@@ -128,7 +129,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza il nome dell'assembly per l'assembly di riferimento.
 
-- **Impostazioni cultura**
+- **culture**
 
    Ottiene le impostazioni cultura del riferimento selezionato.
 
@@ -164,7 +165,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza la versione dell'assembly di riferimento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alla pagina delle proprietà del progetto C++](reference/property-pages-visual-cpp.md)<br>
 [Impostare il compilatore e le proprietà di compilazione C++ in Visual Studio](working-with-project-properties.md)

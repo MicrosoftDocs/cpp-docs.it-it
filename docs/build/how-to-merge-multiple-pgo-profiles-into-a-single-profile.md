@@ -1,20 +1,21 @@
 ---
+description: 'Altre informazioni su: procedura: unire più profili PGO in un unico profilo'
 title: 'Procedura: unire più profili PGO in un unico profilo'
 ms.date: 03/14/2018
 helpviewer_keywords:
 - merging profiles
 - profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
-ms.openlocfilehash: 451c0f30a271f5dce3974e172766da4a23340b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9549b9a26b0c16300c3750159f2c18c74dd293b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162690"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Procedura: unire più profili PGO in un unico profilo
 
-L'ottimizzazione PGO (PGO) è un ottimo strumento per la creazione di file binari ottimizzati basati su uno scenario profilato. Ma cosa accade se si dispone di un'applicazione che presenta diversi scenari importanti, ma distinti? Come si crea un singolo profilo che PGO può usare da diversi scenari? In Visual Studio, PGO Manager, [pgomgr. exe](pgomgr.md), esegue questo processo per l'utente.
+L'ottimizzazione PGO (PGO) è un ottimo strumento per la creazione di file binari ottimizzati basati su uno scenario profilato. Ma cosa accade se si dispone di un'applicazione che presenta diversi scenari importanti, ma distinti? Come si crea un singolo profilo che PGO può usare da diversi scenari? In Visual Studio, PGO Manager, [pgomgr.exe](pgomgr.md), esegue questa operazione.
 
 La sintassi per l'Unione dei profili è la seguente:
 
@@ -25,7 +26,7 @@ dove `num` è un peso facoltativo da usare per i file PGC aggiunti da questo mer
 > [!NOTE]
 > PGO Manager non funziona con i dati di profilo non aggiornati. Per unire un file PGC in un file con estensione PGD, il file con estensione PGC deve essere generato da un eseguibile creato dalla stessa chiamata di collegamento che ha generato il file PGD.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 In questo esempio, PGO Manager aggiunge pgcFile. pgc a pgdFile. pgd sei volte:
 
@@ -39,6 +40,6 @@ Se PGO Manager viene eseguito senza argomenti del file. PGC, Cerca nella directo
 
 `pgomgr /merge test.pgd`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Ottimizzazioni guidate da profilo (PGO)](profile-guided-optimizations.md)
+[Ottimizzazioni PGO](profile-guided-optimizations.md)

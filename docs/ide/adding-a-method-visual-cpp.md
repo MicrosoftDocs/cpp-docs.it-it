@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiungere un metodo'
 title: Aggiungere un metodo
 ms.date: 11/09/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - methods [C++], adding using wizards
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-ms.openlocfilehash: b0c8ddabc4ed08fd217545bad269f0b2e48dd49e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: fb472bd5df2709bc0d7115540f78e18b70d02528
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160025"
 ---
 # <a name="add-a-method"></a>Aggiungere un metodo
 
@@ -41,7 +42,7 @@ ms.locfileid: "69509545"
 ## <a name="in-this-section"></a>Contenuto della sezione
 
 - [Aggiunta guidata metodo](#add-method-wizard)
-- [Attributi IDL, Aggiunta guidata metodo](#idl-attributes-add-method-wizard)
+- [Attributi IDL, aggiunta guidata metodo](#idl-attributes-add-method-wizard)
 
 ## <a name="add-method-wizard"></a>Aggiunta guidata metodo
 
@@ -53,7 +54,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Tipo di dati restituito dal metodo. `HRESULT` è consigliato per tutti i tipi di interfaccia poiché offre un modo standard per restituire errori.
 
-  |Tipo interfaccia|DESCRIZIONE|
+  |Tipo interfaccia|Description|
   |--------------------|-----------------|
   |Interfaccia duale|`HRESULT`. Non modificabile.|
   |Interfaccia personalizzata|`HRESULT`. Non modificabile.|
@@ -65,7 +66,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Imposta il nome per il metodo.
 
-  |Tipo interfaccia|DESCRIZIONE|
+  |Tipo interfaccia|Description|
   |--------------------|-----------------|
   |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Specificare il nome del metodo.|
   |Interfaccia dispatch MFC|Specificare il nome del metodo o selezionare un nome di metodo suggerito dall'elenco. Se si seleziona un nome dall'elenco, il valore appropriato viene visualizzato nella casella **Tipo restituito** e non è modificabile.|
@@ -77,26 +78,26 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Se si seleziona uno dei metodi dell'elenco **Nome metodo**, selezionare l'implementazione predefinita o un'implementazione personalizzata.
 
-  |Tipo di metodo|DESCRIZIONE|
+  |Tipo di metodo|Description|
   |-----------------|-----------------|
-  |**Predefinito**|Valore predefinito. Inserisce l'implementazione predefinita del metodo selezionato nell'elenco **Nome metodo**. **Tipo restituito** non può essere modificato se si seleziona **Predefinito**.|
+  |**Grafico azionario**|Valore predefinito. Inserisce l'implementazione predefinita del metodo selezionato nell'elenco **Nome metodo**. **Tipo restituito** non può essere modificato se si seleziona **Predefinito**.|
   |**Personalizzato**|Inserisce un'implementazione stub del metodo selezionato nell'elenco **Nome metodo**. Per i tipi di metodo personalizzati, è possibile specificare il tipo restituito o selezionarne uno dall'elenco **Tipo restituito**.|
 
 - **Nome interno**
 
   Disponibile solo per i metodi personalizzati aggiunti a un'interfaccia dispatch MFC. Imposta il nome usato nella mappa di invio, il file di intestazione (con estensione h) e il file di implementazione (con estensione cpp). Per impostazione predefinita, il nome corrisponde a **Nome metodo**. È possibile modificare il nome del metodo se si usa un'interfaccia dispatch MFC o se si aggiunge un metodo personalizzato a un'interfaccia dispatch del controllo ActiveX MFC.
 
-  |Tipo interfaccia|DESCRIZIONE|
+  |Tipo interfaccia|Description|
   |--------------------|-----------------|
   |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Non disponibile.|
   |Interfaccia dispatch MFC|Impostare il nome del metodo per impostazione predefinita. È possibile modificare il nome interno.|
   |Interfaccia dispatch del controllo ActiveX MFC|È possibile impostare il nome interno solo per i metodi personalizzati. I metodi predefiniti non usano un nome interno.|
 
-- **Attributi dei parametri**
+- **Attributi parametro**
 
   Imposta attributi aggiuntivi per il parametro specificato in **Nome parametro**.
 
-  |Attributo del parametro|DESCRIZIONE|Combinazioni consentite|
+  |Attributo del parametro|Description|Combinazioni consentite|
   |-------------------------|-----------------|--------------------------|
   |**In**|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|Solo `in`<br /><br /> `in` e `out`|
   |**Out**|Indica che il parametro del puntatore viene restituito dalla routine chiamata alla routine chiamante (dal server al client).|Solo `out`<br /><br /> `in` e `out`<br /><br /> `out` e `retval`|
@@ -115,7 +116,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
   > [!NOTE]
   > Se si specifica un nome di parametro e quindi si seleziona **Fine** prima di selezionare **Aggiungi**, il parametro non viene aggiunto al metodo. È necessario trovare il metodo e inserire il parametro manualmente.
 
-- **Aggiungi**
+- **Aggiungere**
 
   Aggiunge il parametro specificato in **Nome parametro** e il tipo e gli attributi dei parametri all'**Elenco parametri**. Selezionare **Aggiungi** per aggiungere un parametro all'elenco.
 
@@ -123,7 +124,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Rimuove il parametro selezionato nell'**Elenco parametri** dall'elenco.
 
-- **Elenco parametri**
+- **Elenco di parametri**
 
   Visualizza tutti i parametri e i relativi modificatori e tipi aggiunti per il metodo. Quando si aggiungono i parametri, la procedura guidata aggiorna l'**Elenco parametri** in modo da visualizzare ogni parametro con il relativo modificatore e tipo.
 
@@ -159,7 +160,7 @@ Usare questa pagina dell'Aggiunta guidata metodo per specificare le impostazioni
 
   Non disponibile per le interfacce dispatch MFC.
 
-  |Attributo|DESCRIZIONE|
+  |Attributo|Descrizione|
   |---------------|-----------------|
   |`hidden`|Indica che il metodo esiste ma non deve essere visualizzato in un visualizzatore per utenti. Per altre informazioni, vedere [hidden](/windows/win32/Midl/hidden) in *MIDL Reference* (Riferimento MIDL).|
   |`source`|Indica che un membro del metodo è un'origine di eventi. Per altre informazioni, vedere [source](/windows/win32/Midl/source) in *MIDL Reference* (Riferimento MIDL).|
