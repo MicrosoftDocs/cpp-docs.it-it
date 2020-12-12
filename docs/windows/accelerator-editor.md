@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Editor acceleratore (C++)'
 title: Editor tasti di scelta rapida (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: c98ff1fd44b73b3f204e9b952836c387f7f21146
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: d6324b86a6e30f7169899a535012f4347f92bcf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280300"
 ---
 # <a name="accelerator-editor-c"></a>Editor tasti di scelta rapida (C++)
 
@@ -60,16 +61,16 @@ In genere i tasti di scelta rapida vengono usati per i comandi di programma disp
 
 La proprietà **ID** fa riferimento a ogni voce della tabella Accelerator nel codice del programma. Questa voce è il valore del comando che il programma riceve quando un utente preme il tasto di scelta rapida o una combinazione di tasti. Per fare in modo che un acceleratore corrisponda a una voce di menu, rendere l' **ID** uguale, purché l' **ID** della tabella dei tasti di scelta rapida corrisponda all' **ID** della risorsa di menu.
 
-Ogni **ID** acceleratore ha tre proprietà: **modificatore**, **chiave**e **tipo**
+Ogni **ID** acceleratore ha tre proprietà: **modificatore**, **chiave** e **tipo**
 
 La proprietà **Modifier** imposta le combinazioni di tasti di controllo per l'acceleratore.
 
 > [!NOTE]
-> Nella finestra **Proprietà** la proprietà **Modifier** viene visualizzata come tre proprietà **booleane** separate, che possono essere controllate in modo indipendente: **ALT**, **CTRL**e **MAIUSC**.
+> Nella finestra **Proprietà** la proprietà **Modifier** viene visualizzata come tre proprietà **booleane** separate, che possono essere controllate in modo indipendente: **ALT**, **CTRL** e **MAIUSC**.
 
 Di seguito sono riportate le voci valide per la proprietà **Modifier** nella tabella Accelerator:
 
-   |valore|Descrizione|
+   |Valore|Descrizione|
    |-----------|-----------------|
    |**Nessuno**|L'utente preme solo il valore della **chiave** .<br/><br/>Questo valore viene usato più efficacemente con i valori ASCII/ANSI da 001 a 026, interpretato come ^ A-^ Z (**CTRL + a** fino A **CTRL + z**).|
    |**Alt**|L'utente deve premere **ALT** prima del valore della **chiave** .|
@@ -78,13 +79,13 @@ Di seguito sono riportate le voci valide per la proprietà **Modifier** nella ta
    |**CTRL + ALT**|L'utente deve premere **CTRL** e **ALT** prima del valore della **chiave** , non valido con il tipo ASCII.|
    |**CTRL + MAIUSC**|L'utente deve premere **CTRL** e **spostare** prima del valore della **chiave** , non valido con il tipo ASCII.|
    |**ALT + MAIUSC**|L'utente deve premere **ALT** e **MAIUSC** prima del valore della **chiave** , non valido con il tipo ASCII.|
-   |**CTRL + ALT + MAIUSC**|L'utente deve premere **CTRL**, **ALT**e **MAIUSC** prima del valore della **chiave** , non valido con il tipo ASCII.|
+   |**CTRL + ALT + MAIUSC**|L'utente deve premere **CTRL**, **ALT** e **MAIUSC** prima del valore della **chiave** , non valido con il tipo ASCII.|
 
 La proprietà **chiave** imposta la chiave effettiva da usare come tasto di scelta rapida.
 
 Di seguito sono riportate le voci valide per la proprietà **chiave** nella tabella dei tasti di scelta rapida:
 
-   |valore|Descrizione|
+   |Valore|Description|
    |-----------|-----------------|
    |Numero intero compreso tra 0 e 255 in formato decimale.|Il valore determina se il valore viene considerato come ASCII o ANSI come indicato di seguito:<br/><br/>   -I numeri a una sola cifra vengono sempre interpretati come chiave corrispondente, anziché come valori ASCII o ANSI.<br/>   -I valori compresi tra 1 e 26, quando sono preceduti da zeri, vengono interpretati come ^ A-^ Z, che rappresenta il valore ASCII delle lettere dell'alfabeto quando viene premuto con il tasto **CTRL** .<br/>   -I valori da 27-32 vengono sempre interpretati come valori decimali a tre cifre da 027 a 032.<br/>   -I valori compresi tra 033 e 255, preceduti da 0 o non vengono interpretati come valori ANSI.|
    |Singolo carattere di tastiera.|I caratteri maiuscoli A-Z o numeri 0-9 possono essere valori ASCII o di chiave virtuale. Qualsiasi altro carattere è solo ASCII.|
@@ -122,13 +123,13 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 
 1. Selezionare una casella combinata a discesa o digitare per apportare le modifiche:
 
-   - Per **ID**selezionare un elenco o un tipo da modificare.
+   - Per **ID** selezionare un elenco o un tipo da modificare.
 
-   - Per **modificatore**selezionare dall'elenco.
+   - Per **modificatore** selezionare dall'elenco.
 
    - Per la **chiave**, selezionare dall'elenco o digitare per modificare.
 
-   - Per **tipo**selezionare **ASCII** o **VIRTKEY** dall'elenco.
+   - Per **tipo** selezionare **ASCII** o **VIRTKEY** dall'elenco.
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Per cercare una voce in una tabella dei tasti di scelta rapida aperta
 
@@ -142,7 +143,7 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 
 1. Aprire la tabella dei tasti di scelta rapida facendo doppio clic sull'icona in [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Fare clic con il pulsante destro del mouse all'interno della tabella dei tasti di scelta rapida e scegliere **nuovo acceleratore**oppure selezionare la voce di riga vuota nella parte inferiore della tabella.
+1. Fare clic con il pulsante destro del mouse all'interno della tabella dei tasti di scelta rapida e scegliere **nuovo acceleratore** oppure selezionare la voce di riga vuota nella parte inferiore della tabella.
 
 1. Selezionare un **ID** nell'elenco a discesa nella casella **ID** oppure digitare un nuovo *ID* nella casella **ID** .
 
@@ -159,7 +160,7 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 
 1. Selezionare la voce che si desidera eliminare oppure tenere premuto **CTRL** o **MAIUSC** mentre si selezionano più voci.
 
-1. Fare clic con il pulsante destro del mouse e scegliere **Elimina**o vai a menu **modifica**  >  **Elimina**.
+1. Fare clic con il pulsante destro del mouse e scegliere **Elimina** o vai a menu **modifica**  >  **Elimina**.
 
 > [!TIP]
 > È anche possibile premere il tasto **Canc** per eliminare.
@@ -168,9 +169,9 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 
 1. Aprire le tabelle dei tasti di scelta rapida in entrambi i file di script di risorsa e selezionare la voce che si desidera spostare.
 
-1. Scegliere **copia** o **taglia**dal menu **modifica** .
+1. Scegliere **copia** o **taglia** dal menu **modifica** .
 
-1. Selezionare una voce nel file di script di risorsa di destinazione e scegliere **Incolla**dal menu **modifica** .
+1. Selezionare una voce nel file di script di risorsa di destinazione e scegliere **Incolla** dal menu **modifica** .
 
 > [!NOTE]
 > È anche possibile usare le combinazioni di tasti per copiare e incollare.
@@ -190,7 +191,7 @@ Le procedure riportate di seguito si riferiscono all'utilizzo delle pagine delle
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di risorse](resource-editors.md)<br/>
 [Tasti di scelta rapida](predefined-accelerator-keys.md)<br/>

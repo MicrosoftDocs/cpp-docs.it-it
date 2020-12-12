@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: tasti di scelta rapida (editor di immagini C++ per le icone)'
 title: Tasti di scelta rapida (editor di immagini C++ per le icone)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 02ac25b693e4d8f7bb6739708d23eb1df0ebf190
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 74062789a7fc6ff6b3b15364d1379861f7bea1c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280287"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Tasti di scelta rapida (editor di immagini C++ per le icone)
 
@@ -53,7 +54,7 @@ Di seguito sono riportati i tasti di scelta rapida per i comandi dell'editor di 
 |Image.ShowGrid|**CTRL**  +  **ALT**  +  **S**|Consente di selezionare o deselezionare l'opzione **griglia pixel** nella finestra di [dialogo Impostazioni griglia](./image-editor-for-icons.md).|
 |Image.ShowTileGrid|**CTRL**  +  **Sposta**  +  **ALT**  +  **S**|Consente di selezionare o deselezionare l'opzione **griglia affiancata** nella finestra di [dialogo Impostazioni griglia](./image-editor-for-icons.md).|
 |Image.SmallBrush|**CTRL**  +  **.** (punto)|Riduce le dimensioni del **pennello** a un pixel. Vedere anche Image.LargerBrush e Image.SmallerBrush in questa tabella.|
-|Image.SmallerBrush|**Ctrl**  +  CTRL **-** meno|Consente di ridurre le dimensioni del pennello di un pixel in tutte le direzioni. Per incrementare nuovamente le dimensioni del pennello, vedere Image.LargerBrush in questa tabella.|
+|Image.SmallerBrush|  +  CTRL **-** meno|Consente di ridurre le dimensioni del pennello di un pixel in tutte le direzioni. Per incrementare nuovamente le dimensioni del pennello, vedere Image.LargerBrush in questa tabella.|
 |Image.TextTool|**CTRL**  +  **T**|Apre la finestra di [dialogo strumento testo](./image-editor-for-icons.md).|
 |Image. UseSelectionAsBrush|**CTRL**  +  **U**|Consente di disegnare utilizzando la selezione corrente come pennello.|
 |Image.ZoomIn|**CTRL**  +  **Sposta**  +  **.** (punto)<br /><br /> - oppure -<br /><br /> **CTRL**  +  **Freccia su**|Consente di incrementare l'ingrandimento della visualizzazione corrente.|
@@ -63,7 +64,7 @@ Di seguito sono riportati i tasti di scelta rapida per i comandi dell'editor di 
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di immagini per le icone](image-editor-for-icons.md)<br/>
 [Procedura: creare un'icona o un'altra immagine](creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>

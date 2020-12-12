@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: puntatori basati su (C)'
 title: Puntatori based (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - pointers, based
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
-ms.openlocfilehash: d1ef1ec98d718e408621f5303e809d09020d5719
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd6bc8b5df9a927266bc2b2b8693c97b291dba50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279884"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C)
 
@@ -44,6 +45,6 @@ Il puntatore `vpBuffer` viene assegnato l'indirizzo di memoria allocata in un qu
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: concetti di base sull'uso di eccezioni gestite"
 title: Concetti di base per l'utilizzo delle eccezioni gestite
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 4eeec5db00ceca5429f4a3a270e1b249a8955249
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1c6e405de2a82e32375092007dcc1f0fd8f654c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282601"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concetti di base per l'utilizzo delle eccezioni gestite
 
@@ -27,7 +28,7 @@ In questo argomento viene illustrata la gestione delle eccezioni nelle applicazi
 
 - [Blocchi try/catch per le estensioni CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Se si esegue la compilazione con l'opzione **/CLR** , è possibile gestire le eccezioni CLR <xref:System.Exception> e la classe standard fornisce molti metodi utili per l'elaborazione delle eccezioni CLR ed è consigliata come classe di base per le classi di eccezioni definite dall'utente.
 
@@ -35,7 +36,7 @@ Il rilevamento dei tipi di eccezione derivati da un'interfaccia non è supportat
 
 Per ulteriori informazioni sulle differenze nella gestione delle eccezioni nelle applicazioni gestite e non gestite, vedere [differenze nel comportamento di gestione delle eccezioni in estensioni gestite per C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
 
-## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Generazione di eccezioni in/CLR
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Generazione di eccezioni in/CLR
 
 L'espressione throw C++ viene estesa per generare un handle a un tipo CLR. Nell'esempio seguente viene creato un tipo di eccezione personalizzato, quindi viene generata un'istanza di tale tipo:
 
@@ -68,7 +69,7 @@ void GlobalFunction() {
 }
 ```
 
-## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Blocchi try/catch per le estensioni CLR
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Blocchi try/catch per le estensioni CLR
 
 La stessa **`try`** / **`catch`** struttura di blocco può essere utilizzata per intercettare le eccezioni CLR e native:
 
@@ -164,7 +165,7 @@ Se un tipo non gestito viene rilevato da catch (Object ^), non eliminerà defini
 
 Quando si generano o intercettano eccezioni non gestite, è consigliabile usare l'opzione del compilatore [/EHsc](../build/reference/eh-exception-handling-model.md) invece di **/EHS** o **/EHA**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>

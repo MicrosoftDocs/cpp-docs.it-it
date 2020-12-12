@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: chiamata di funzioni native da codice gestito'
 title: Chiamata a funzioni native da codice gestito
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,31 +10,31 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 0cdd5db4fae8d9167fa9ab1aeb6a4e8cbfe76ded
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b037027f863ff12ac83429715cdf50bff4549a93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282536"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chiamata a funzioni native da codice gestito
 
-Common Language Runtime fornisce Platform Invocation Services, o PInvoke, che consente al codice gestito di chiamare funzioni di tipo C in librerie native a collegamento dinamico (DLL). Lo stesso marshalling dei dati viene utilizzato per l'interoperabilità COM con il runtime e per il meccanismo "It Just Works" o IJW.
+Il Common Language Runtime fornisce servizi di chiamata della piattaforma, o PInvoke, che consente al codice gestito di chiamare funzioni di tipo C in librerie a collegamento dinamico (dll) native. Lo stesso marshalling dei dati viene usato come per l'interoperabilità COM con il runtime e per il meccanismo "it Just Works," o IJW.
 
 Per altre informazioni, vedere:
 
-- [Uso esplicito di PInvoke in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+- [Utilizzo di PInvoke esplicito in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-- [Utilizzo delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+- [Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-Gli esempi in questa `PInvoke` sezione illustrano solo come può essere utilizzato. `PInvoke`può semplificare il marshalling dei dati personalizzato perché si forniscono informazioni di marshalling in modo dichiarativo negli attributi anziché scrivere codice di marshalling procedurale.
+Gli esempi in questa sezione illustrano come `PInvoke` può essere usato. `PInvoke` consente di semplificare il marshalling dei dati personalizzato perché si forniscono informazioni di marshalling in modo dichiarativo negli attributi anziché scrivere codice di marshalling procedurale.
 
 > [!NOTE]
-> La libreria del marshalling fornisce un modo alternativo per effettuare il marshalling dei dati tra ambienti nativi e gestiti in modo ottimizzato. Per ulteriori informazioni sulla libreria del marshalling, vedere Cenni preliminari sul [Marshalling in C.](../dotnet/overview-of-marshaling-in-cpp.md) La libreria di marshalling è utilizzabile solo per i dati e non per le funzioni.
+> La libreria di marshalling fornisce un metodo alternativo per eseguire il marshalling dei dati tra ambienti nativi e gestiti in modo ottimizzato. Per ulteriori informazioni sulla libreria di marshalling, vedere [Cenni preliminari sul marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md) . La libreria di marshalling è utilizzabile solo per i dati e non per le funzioni.
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke e l'attributo DllImport
 
-Nell'esempio riportato `PInvoke` di seguito viene illustrato l'utilizzo di in un programma di Visual C. La funzione nativa puts è definita in msvcrt.dll. L'attributo DllImport viene utilizzato per la dichiarazione di puts.
+Nell'esempio seguente viene illustrato l'utilizzo di `PInvoke` in un programma Visual C++. La funzione nativa put è definita in msvcrt.dll. L'attributo DllImport viene usato per la dichiarazione di put.
 
 ```cpp
 // platform_invocation_services.cpp
@@ -50,7 +51,7 @@ int main() {
 }
 ```
 
-The following sample is equivalent to the previous sample, but uses IJW.
+L'esempio seguente è equivalente all'esempio precedente, ma usa IJW.
 
 ```cpp
 // platform_invocation_services_2.cpp
@@ -71,31 +72,31 @@ int main() {
 
 ### <a name="advantages-of-ijw"></a>Vantaggi di IJW
 
-- Non è necessario `DLLImport` scrivere dichiarazioni di attributo per le API non gestite utilizzate dal programma. È sufficiente includere il file di intestazione e collegarlo alla libreria di importazione.
+- Non è necessario scrivere `DLLImport` dichiarazioni di attributi per le API non gestite utilizzate dal programma. È sufficiente includere il file di intestazione e il collegamento con la libreria di importazione.
 
-- Il meccanismo IJW è leggermente più veloce (ad esempio, gli stub IJW non è necessario verificare la necessità di aggiungere o copiare elementi di dati perché questa operazione viene eseguita in modo esplicito dallo sviluppatore).
+- Il meccanismo IJW è leggermente più veloce. ad esempio, gli stub IJW non devono verificare la necessità di aggiungere o copiare elementi di dati perché questa operazione viene eseguita in modo esplicito dallo sviluppatore.
 
-- Illustra chiaramente i problemi di prestazioni. In questo caso, il fatto che si sta traducendo da una stringa Unicode a una stringa ANSI e che si dispone di un'allocazione di memoria e deallocazione. In questo caso, uno sviluppatore che scrive il `_putws` codice `PtrToStringChars` utilizzando IJW si renderebbe conto che la chiamata e l'utilizzo sarebbe migliore per le prestazioni.
+- Illustra chiaramente i problemi di prestazioni. In questo caso, il fatto che si esegue la conversione da una stringa Unicode a una stringa ANSI e che si disponga di un'allocazione e deallocazione di memoria supervisore. In questo caso, uno sviluppatore che scrive il codice utilizzando IJW si renderà conto che la chiamata `_putws` a e l'utilizzo `PtrToStringChars` di sarebbe migliore per le prestazioni.
 
-- Se si chiamano molte API non gestite usando gli stessi dati, il marshalling una sola volta e il passaggio della copia di cui è stato eseguito il marshalling è molto più efficiente rispetto al re-marshaling ogni volta.
+- Se si chiamano molte API non gestite usando gli stessi dati, il marshalling di una volta e il passaggio della copia con marshalling è molto più efficace del nuovo marshalling ogni volta.
 
 ### <a name="disadvantages-of-ijw"></a>Svantaggi di IJW
 
-- Il marshalling deve essere specificato in modo esplicito nel codice anziché in base agli attributi (che spesso hanno valori predefiniti appropriati).
+- Il marshalling deve essere specificato in modo esplicito nel codice anziché dagli attributi (che spesso hanno le impostazioni predefinite appropriate).
 
 - Il codice di marshalling è inline, dove è più invasivo nel flusso della logica dell'applicazione.
 
-- Poiché le API di `IntPtr` marshalling esplicito restituiscono i tipi per la portabilità da 32 a 64 bit, è necessario utilizzare chiamate aggiuntive. `ToPointer`
+- Poiché le API di marshalling esplicite restituiscono `IntPtr` tipi per la portabilità a 32 bit a 64 bit, è necessario utilizzare `ToPointer` chiamate aggiuntive.
 
-Il metodo specifico esposto da C , è il metodo più efficiente ed esplicito, a costo di una complessità aggiuntiva.
+Il metodo specifico esposto da C++ è il metodo più efficiente, esplicito, al costo di una maggiore complessità.
 
-Se l'applicazione utilizza principalmente tipi di dati non gestiti o se chiama più API non gestite rispetto alle API di .NET Framework, è consigliabile usare la funzionalità IJW. Per chiamare un'API occasionale non gestita in un'applicazione per lo più gestita, la scelta è più sottile.
+Se l'applicazione usa principalmente tipi di dati non gestiti o se chiama altre API non gestite rispetto a .NET Framework API, è consigliabile usare la funzionalità IJW. Per chiamare un'API occasionale non gestita in un'applicazione principalmente gestita, la scelta è più complessa.
 
 ## <a name="pinvoke-with-windows-apis"></a>PInvoke con API di Windows
 
 PInvoke è utile per chiamare le funzioni in Windows.
 
-In questo esempio, un programma di Visual C, interagisce con la funzione MessageBox che fa parte dell'API Win32.
+In questo esempio, un programma di Visual C++ interagisce con la funzione MessageBox che fa parte dell'API Win32.
 
 ```cpp
 // platform_invocation_services_4.cpp
@@ -113,28 +114,28 @@ int main() {
 }
 ```
 
-L'output è una finestra di messaggio con il titolo PInvoke Test e contiene il testo Hello World!.
+L'output è una finestra di messaggio con il titolo test PInvoke e contiene il testo Hello World.
 
-Le informazioni di marshalling vengono utilizzate anche da PInvoke per cercare funzioni nella DLL. In user32.dll non è in realtà alcuna funzione MessageBox, ma CharSet-CharSet::Ansi consente a PInvoke di utilizzare MessageBoxA, la versione ANSI, anziché MessageBoxW, che è la versione Unicode. In generale, è consigliabile utilizzare versioni Unicode di API non gestite perché ciò elimina l'overhead di conversione dal formato Unicode nativo degli oggetti stringa di .NET Framework in ANSI.
+Le informazioni di marshalling vengono inoltre utilizzate da PInvoke per cercare funzioni nella DLL. In user32.dll non è infatti presente alcuna funzione MessageBox, ma CharSet = CharSet:: ANSI consente a PInvoke di utilizzare MessageBoxa, la versione ANSI, anziché MessageBoxW, che è la versione Unicode. In generale, è consigliabile usare versioni Unicode di API non gestite perché questo Elimina l'overhead di traduzione dal formato Unicode nativo di .NET Framework oggetti stringa a ANSI.
 
-## <a name="when-not-to-use-pinvoke"></a>Quando non utilizzare PInvoke
+## <a name="when-not-to-use-pinvoke"></a>Quando non usare PInvoke
 
-L'utilizzo di PInvoke non è appropriato per tutte le funzioni di tipo C nelle DLL. Si supponga, ad esempio, che in mylib.dll sia presente una funzione makeSpecial dichiarata come segue:
+L'utilizzo di PInvoke non è appropriato per tutte le funzioni di tipo C in dll. Si supponga, ad esempio, che esista una funzione MakeSpecial in mylib.dll dichiarata come indicato di seguito:
 
 `char * MakeSpecial(char * pszString);`
 
-Se si utilizza PInvoke in un'applicazione di Visual C, è possibile scrivere qualcosa di simile al seguente:
+Se si utilizza PInvoke in un'applicazione Visual C++, è possibile scrivere qualcosa di simile al seguente:
 
 ```cpp
 [DllImport("mylib")]
 extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
 ```
 
-La difficoltà è che non è possibile eliminare la memoria per la stringa non gestita restituita da MakeSpecial. Altre funzioni chiamate tramite PInvoke restituiscono un puntatore a un buffer interno che non deve essere deallocato dall'utente. In questo caso, l'utilizzo della funzione IJW è la scelta più ovvia.
+La difficoltà è che non è possibile eliminare la memoria per la stringa non gestita restituita da MakeSpecial. Altre funzioni chiamate tramite PInvoke restituiscono un puntatore a un buffer interno che non deve essere deallocato dall'utente. In questo caso, l'uso della funzionalità IJW è la scelta più ovvia.
 
 ## <a name="limitations-of-pinvoke"></a>Limitazioni di PInvoke
 
-Non è possibile restituire lo stesso puntatore esatto da una funzione nativa che è stato preso come parametro. Se una funzione nativa restituisce il puntatore di cui è stato eseguito il marshalling da PInvoke, potrebbe verificarsi il danneggiamento della memoria e le eccezioni.
+Non è possibile restituire lo stesso puntatore esatto da una funzione nativa che è stata impiegata come parametro. Se una funzione nativa restituisce il puntatore a cui è stato effettuato il marshalling da PInvoke, è possibile che si verifichino danneggiamenti della memoria ed eccezioni.
 
 ```cpp
 __declspec(dllexport)
@@ -143,7 +144,7 @@ char* fstringA(char* param) {
 }
 ```
 
-L'esempio seguente presenta questo problema e anche se il programma può sembrare dare l'output corretto, l'output proviene dalla memoria che era stata liberata.
+L'esempio seguente mostra questo problema e anche se il programma può sembrare che fornisca l'output corretto, l'output viene restituito dalla memoria che è stata liberata.
 
 ```cpp
 // platform_invocation_services_5.cpp
@@ -166,15 +167,15 @@ int main() {
 }
 ```
 
-## <a name="marshaling-arguments"></a>Argomenti di marshallingMarshaling Arguments
+## <a name="marshaling-arguments"></a>Argomenti di marshalling
 
-Con `PInvoke`, non è necessario alcun marshalling tra i tipi primitivi nativi gestiti e c'è con lo stesso formato. Ad esempio, non è necessario alcun marshalling tra Int32 e int o tra Double e double.
+Con `PInvoke` , non è necessario alcun marshalling tra i tipi primitivi nativi gestiti e C++ con lo stesso formato. Ad esempio, non è richiesto alcun marshalling tra Int32 e int oppure tra Double e Double.
 
-Tuttavia, è necessario eseguire il marshalling di tipi che non hanno lo stesso formato. Sono inclusi i tipi char, string e struct. Nella tabella seguente vengono illustrati i mapping utilizzati dal gestore di marshalling per vari tipi:
+Tuttavia, è necessario effettuare il marshalling dei tipi che non hanno lo stesso formato. Sono inclusi i tipi char, String e struct. La tabella seguente illustra i mapping usati dal gestore di marshalling per diversi tipi:
 
-|wtypes.h|Visual C++|Visual C|Common Language Runtime|
+|wtypes. h|Visual C++|Visual C++ con/CLR|Common Language Runtime|
 |--------------|------------------|-----------------------------|-----------------------------|
-|HANDLE|Vuoto\*|Vuoto\*|IntPtr, UIntPtr|
+|HANDLE|vuoto \*|vuoto \*|IntPtr, UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
 |SHORT|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
@@ -185,20 +186,20 @@ Tuttavia, è necessario eseguire il marshalling di tipi che non hanno lo stesso 
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPSTR|Char\*|Stringa [in], StringBuilder [in, out]|Stringa [in], StringBuilder [in, out]|
-|LPCSTR|const char\*|Proprietà String .|string|
-|LPWSTR|Wchar_t\*|Stringa [in], StringBuilder [in, out]|Stringa [in], StringBuilder [in, out]|
-|LPCWSTR|const wchar_t \*|Proprietà String .|string|
+|LPSTR|char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCSTR|carattere const \*|Stringa ^|string|
+|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCWSTR|const wchar_t \*|Stringa ^|string|
 |FLOAT|float|float|Single|
 |DOUBLE|double|double|Double|
 
-Il gestore di marshalling blocca automaticamente la memoria allocata nell'heap di runtime se il relativo indirizzo viene passato a una funzione non gestita. Il blocco impedisce al Garbage Collector di spostare il blocco di memoria allocato durante la compattazione.
+Il gestore di marshalling blocca automaticamente la memoria allocata nell'heap di runtime se l'indirizzo viene passato a una funzione non gestita. Il blocco impedisce al Garbage Collector di trasferire il blocco di memoria allocato durante la compattazione.
 
-Nell'esempio illustrato in precedenza in questo argomento, il parametro CharSet di DllImport specifica la modalità di marshalling delle stringhe gestite. in questo caso, devono essere sottoposti a marshalling in stringhe ANSI per il lato nativo.
+Nell'esempio illustrato in precedenza in questo argomento, il parametro CharSet di DllImport specifica il modo in cui deve essere eseguito il marshalling delle stringhe gestite. in questo caso, è necessario effettuare il marshalling delle stringhe ANSI per il lato nativo.
 
-È possibile specificare le informazioni di marshalling per i singoli argomenti di una funzione nativa utilizzando l'attributo MarshalAs. Esistono diverse opzioni per il \* marshalling di un argomento String: BStr, ANSIBStr, TBStr, LPStr, LPWStr e LPTStr. Il valore predefinito è LPStr.
+È possibile specificare le informazioni di marshalling per i singoli argomenti di una funzione nativa utilizzando l'attributo marshalling. Sono disponibili diverse opzioni per il marshalling di un \* argomento stringa: BSTR, AnsiBStr, TBStr, LPSTR, LPWSTR e LPTSTR. Il valore predefinito è LPStr.
 
-In questo esempio, viene eseguito il marshalling della stringa come stringa di caratteri Unicode a byte doppio, LPWStr. L'output è la prima lettera di Hello World! perché il secondo byte della stringa sottoposta a marshalling è null e inserisce questo come il marcatore di fine stringa.
+In questo esempio viene eseguito il marshalling della stringa come stringa di caratteri Unicode a doppio byte, LPWStr. L'output è la prima lettera del Hello World. Poiché il secondo byte della stringa di cui è stato effettuato il marshalling è null, viene interpretato come il marcatore di fine della stringa.
 
 ```cpp
 // platform_invocation_services_3.cpp
@@ -215,16 +216,16 @@ int main() {
 }
 ```
 
-L'attributo MarshalAs si trova nello spazio dei nomi System::Runtime::InteropServices. L'attributo può essere utilizzato con altri tipi di dati, ad esempio matrici.
+L'attributo Marshales è nello spazio dei nomi System:: Runtime:: InteropServices. L'attributo può essere utilizzato con altri tipi di dati, ad esempio le matrici.
 
-Come accennato in precedenza nell'argomento, la libreria del marshalling fornisce un nuovo metodo ottimizzato per il marshalling dei dati tra ambienti nativi e gestiti. Per ulteriori informazioni, vedere Cenni preliminari [sul marshalling in C.](../dotnet/overview-of-marshaling-in-cpp.md)
+Come indicato in precedenza nell'argomento, la libreria di marshalling fornisce un nuovo metodo ottimizzato per il marshalling dei dati tra ambienti nativi e gestiti. Per ulteriori informazioni, vedere [Cenni preliminari sul marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 
-PInvoke ha un sovraccarico compreso tra 10 e 30 x86 istruzioni per chiamata. Oltre a questo costo fisso, il marshalling crea un sovraccarico aggiuntivo. Non esiste alcun costo di marshalling tra i tipi blittable che hanno la stessa rappresentazione nel codice gestito e non gestito. Ad esempio, non vi è alcun costo per la conversione tra int e Int32.
+PInvoke presenta un sovraccarico compreso tra 10 e 30 istruzioni x86 per chiamata. Oltre a questo costo fisso, il marshalling crea un sovraccarico aggiuntivo. Nessun costo di marshalling tra i tipi copiabili con la stessa rappresentazione in codice gestito e non gestito. Ad esempio, non è previsto alcun costo per la conversione tra int e Int32.
 
-Per migliorare le prestazioni, disporre di un numero inferiore di chiamate PInvoke che esegua il marshalling della maggior quantità possibile di dati, anziché di un numero maggiore di chiamate che evitano meno dati per chiamata.
+Per ottenere prestazioni migliori, disporre di un minor numero di chiamate PInvoke che effettuano il marshalling di più dati possibili, anziché più chiamate che eseguono il marshalling di meno dati per chiamata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Interoperabilità nativa e .NET](../dotnet/native-and-dotnet-interoperability.md)
+[Interoperabilità .NET e nativa](../dotnet/native-and-dotnet-interoperability.md)
