@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uniform_real_distribution Class'
 title: Classe uniform_real_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: ba2ec419e524ca571120fe82c7cbf63c1a97eaaa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ae272955cb7586342d403e332b981ca8a1005256
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132678"
 ---
 # <a name="uniform_real_distribution-class"></a>Classe uniform_real_distribution
 
@@ -74,7 +75,7 @@ public:
 *RealType*\
 Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione esclusiva inclusiva che produce valori di un tipo a virgola mobile integrale specificato dall'utente con una distribuzione, in modo che ogni valore sia ugualmente probabile. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -196,7 +197,7 @@ Limite superiore per i valori casuali, esclusivo.
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`a < b`
 
@@ -231,7 +232,7 @@ Limite superiore per i valori casuali, esclusivo.
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`a < b`
 

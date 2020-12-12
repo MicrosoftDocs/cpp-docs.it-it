@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCVisualManagerOfficeXP'
 title: Classe CMFCVisualManagerOfficeXP
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOfficeXP class [MFC]
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
-ms.openlocfilehash: c975a2b7ae7de12c154954e44470e7af9feeaa1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b248158b963de67e3b40c0e664ee9020091d25ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337804"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143403"
 ---
 # <a name="cmfcvisualmanagerofficexp-class"></a>Classe CMFCVisualManagerOfficeXP
 
-Il `CMFCVisualManagerOfficeXP` fornisce a un'applicazione un aspetto di Microsoft Office XP.
+`CMFCVisualManagerOfficeXP`Fornisce a un'applicazione un aspetto Microsoft Office XP.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,17 +24,17 @@ Il `CMFCVisualManagerOfficeXP` fornisce a un'applicazione un aspetto di Microsof
 class CMFCVisualManagerOfficeXP : public CMFCVisualManager
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-Tutti i membri di questa classe sono funzioni virtuali che derivano dal predecessore di questa classe [classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
+Tutti i membri di questa classe sono funzioni virtuali derivate dal predecessore di questa classe, [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Si utilizza il `CMFCVisualManagerOfficeXP` classe per modificare l'aspetto visivo dell'applicazione per ricordano quelle di Microsoft Office XP.
+Usare la `CMFCVisualManagerOfficeXP` classe per modificare l'aspetto visivo dell'applicazione in modo analogo a quello di Microsoft Office XP.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare `CMFCVisualManagerOfficeXP`. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare `CMFCVisualManagerOfficeXP` . Questo frammento di codice fa parte dell' [esempio Desktop Alert demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]
 
@@ -49,10 +50,10 @@ Nell'esempio seguente viene illustrato come utilizzare `CMFCVisualManagerOfficeX
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxvisualmanagerofficexp.h
+**Intestazione:** afxvisualmanagerofficexp. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)

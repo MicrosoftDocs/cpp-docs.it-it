@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia IAxWinAmbientDispatchEx'
 title: Interfaccia IAxWinAmbientDispatchEx
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 3359c17996eb78c3249abc83ff2d439381f209fe
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: c26ce7fb4f41273a498e3b28e9d6e15d4c89f9ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139724"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Interfaccia IAxWinAmbientDispatchEx
 
@@ -32,11 +33,11 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[SetAmbientDispatch](#setambientdispatch)|Questo metodo viene chiamato per integrare l'interfaccia della proprietà di ambiente predefinita con un'interfaccia definita dall'utente.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Includere questa interfaccia nelle applicazioni ATL collegate in modo statico ad ATL e ai controlli ActiveX host, in particolare i controlli ActiveX con proprietà di ambiente. Se non si include questa interfaccia, verrà generata questa asserzione: "si è omesso di passare LIBID a CComModule:: init"
 
@@ -75,10 +76,10 @@ Puntatore alla nuova interfaccia.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `SetAmbientDispatch` viene chiamato con un puntatore a una nuova interfaccia, questa nuova interfaccia verrà utilizzata per richiamare eventuali proprietà o metodi richiesti dal controllo ospitato, se tali proprietà non sono già state fornite da [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Interfaccia IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)

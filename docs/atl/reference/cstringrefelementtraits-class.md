@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CStringRefElementTraits'
 title: Classe CStringRefElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: 6fa8772033a5a82940cf30b2a73d6ea356269d67
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5523a2a451fc1825c443cf2d2e518b1c8dc2b340
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226555"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140387"
 ---
 # <a name="cstringrefelementtraits-class"></a>Classe CStringRefElementTraits
 
@@ -37,13 +38,13 @@ Tipo di dati da archiviare nella raccolta.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CStringRefElementTraits:: CompareElements](#compareelements)|Chiamare questa funzione statica per confrontare due elementi stringa per verificarne l'uguaglianza.|
 |[CStringRefElementTraits:: CompareElementsOrdered](#compareelementsordered)|Chiamare questa funzione statica per confrontare due elementi di stringa.|
 |[CStringRefElementTraits:: hash](#hash)|Chiamare questa funzione statica per calcolare un valore hash per l'elemento stringa specificato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa classe fornisce funzioni statiche per il confronto di stringhe e per la creazione di un valore hash. Queste funzioni sono utili quando si usa una classe Collection per archiviare dati basati su stringa. A differenza di [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` fa sì che gli `CString` argomenti vengano passati come **`const`** `CString&` riferimenti.
 
@@ -59,7 +60,7 @@ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-
 
 **Intestazione:** atlcoll. h
 
-## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits:: CompareElements
+## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a> CStringRefElementTraits:: CompareElements
 
 Chiamare questa funzione statica per confrontare due elementi stringa per verificarne l'uguaglianza.
 
@@ -79,7 +80,7 @@ Secondo elemento di stringa.
 
 Restituisce true se gli elementi sono uguali; in caso contrario, false.
 
-## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits:: CompareElementsOrdered
+## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a> CStringRefElementTraits:: CompareElementsOrdered
 
 Chiamare questa funzione statica per confrontare due elementi di stringa.
 
@@ -97,9 +98,9 @@ Secondo elemento di stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Zero se le stringhe sono identiche, < 0 se *str1* è minore di *str2*oppure > 0 se *str1* è maggiore di *str2*. Per eseguire i confronti, viene usato il metodo [CStringT:: compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) .
+Zero se le stringhe sono identiche, < 0 se *str1* è minore di *str2* oppure > 0 se *str1* è maggiore di *str2*. Per eseguire i confronti, viene usato il metodo [CStringT:: compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) .
 
-## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits:: hash
+## <a name="cstringrefelementtraitshash"></a><a name="hash"></a> CStringRefElementTraits:: hash
 
 Chiamare questa funzione statica per calcolare un valore hash per l'elemento stringa specificato.
 
@@ -116,7 +117,7 @@ Elemento stringa.
 
 Restituisce un valore hash, calcolato utilizzando il contenuto della stringa.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

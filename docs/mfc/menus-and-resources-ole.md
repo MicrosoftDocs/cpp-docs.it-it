@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: menu e risorse (OLE)'
 title: Menu e risorse (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: e705f28476df7b594f9648aee8317759211c66c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a6ec4f2750a99935cb0113a3ad607be8a80d4bfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133146"
 ---
 # <a name="menus-and-resources-ole"></a>Menu e risorse (OLE)
 
@@ -43,7 +44,7 @@ L'attivazione sul posto richiede che le applicazioni del contenitore e del serve
 
 A causa di questi problemi, le applicazioni di documento OLE create con la creazione guidata applicazione possono disporre di un massimo di quattro menu e risorse della tabella di tasti di scelta rapida distinti. Questi vengono utilizzati per i motivi seguenti:
 
-|Nome risorsa|Uso|
+|Nome risorsa|Usa|
 |-------------------|---------|
 |IDR_MAINFRAME|Utilizzato in un'applicazione MDI se nessun file è aperto o in un'applicazione SDI indipendentemente dai file aperti. Si tratta del menu standard utilizzato nelle applicazioni non OLE.|
 |tipo di IDR_ \<project>|Utilizzato in un'applicazione MDI se i file sono aperti. Utilizzato quando un'applicazione viene eseguita autonomamente. Si tratta del menu standard utilizzato nelle applicazioni non OLE.|
@@ -56,10 +57,10 @@ Gli articoli seguenti illustrano gli argomenti correlati a contenitori, server e
 
 - [Menu e risorse: aggiunte di contenitori](menus-and-resources-container-additions.md)
 
-- [Menu e risorse: aggiunte di server](menus-and-resources-server-additions.md)
+- [Menu e risorse: aggiunte server](menus-and-resources-server-additions.md)
 
-- [Menu e risorse: unione di menu](menus-and-resources-menu-merging.md)
+- [Menu e risorse: Unione di menu](menus-and-resources-menu-merging.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [OLE](ole-in-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: controlli ActiveX MFC: utilizzo delle pagine delle proprietà predefinite'
 title: 'Controlli ActiveX MFC: utilizzo delle pagine delle proprietà predefinite'
 ms.date: 09/12/2018
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: 18e482ca93166246df7569be9babff93d983dfd5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 37cb6e5b5dfa08c5e7935064a66c2c77fe8dcde6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618070"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133055"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Controlli ActiveX MFC: utilizzo delle pagine delle proprietà predefinite
 
@@ -46,12 +47,12 @@ Si noti che il conteggio delle pagine delle proprietà, nella BEGIN_PROPPAGEIDS 
 Dopo aver apportato queste modifiche, ricompilare il progetto. Il controllo dispone ora di pagine delle proprietà per le proprietà relative a tipo di carattere, immagine e colore.
 
 > [!NOTE]
-> Se non è possibile accedere alle pagine delle proprietà predefinite del controllo, il problema potrebbe essere dovuto al fatto che la DLL MFC (MFCxx. DLL) non è stata registrata correttamente con il sistema operativo corrente. Questo in genere risulta dall'installazione di Visual C++ in un sistema operativo diverso da quello attualmente in esecuzione.
+> Se non è possibile accedere alle pagine delle proprietà predefinite del controllo, il problema potrebbe essere dovuto al fatto che la DLL MFC (MFCxx.DLL) non è stata registrata correttamente con il sistema operativo corrente. Questo in genere risulta dall'installazione di Visual C++ in un sistema operativo diverso da quello attualmente in esecuzione.
 
 > [!TIP]
-> Se le pagine delle proprietà predefinite non sono visibili (vedere la nota precedente), registrare la DLL eseguendo RegSvr32. exe dalla riga di comando con il nome percorso completo della DLL.
+> Se le pagine delle proprietà predefinite non sono visibili (vedere la nota precedente), registrare la DLL eseguendo RegSvr32.exe dalla riga di comando con il nome percorso completo della DLL.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
 [Controlli ActiveX MFC: aggiunta di proprietà predefinite](mfc-activex-controls-adding-stock-properties.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __movsd'
 title: __movsd
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 4a735327253e0a3c605a17119e0821b915fd9394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133185"
 ---
 # <a name="__movsd"></a>__movsd
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera un'istruzione Move String`rep movsd`().
+Genera un'istruzione Move String ( `rep movsd` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,7 +37,7 @@ void __movsd(
 *Destinazione*\
 out Destinazione dell'operazione.
 
-*Source*\
+*Origine*\
 in Origine dell'operazione.
 
 *Conteggio*\
@@ -44,13 +45,13 @@ in Numero di parole doppie da copiare.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__movsd`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il risultato è che il primo *conteggio* parole doppie a cui punta l' *origine* viene copiato nella stringa di *destinazione* .
 
@@ -83,8 +84,8 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: operatori unario più e negazione: + e-'
 title: 'Operatori più e operatori di negazione unari: + e -'
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: de90cd2068f9b701167a340fe0b335e2a6c93102
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64478ccfa9191e5704c1e3c896b17bc0986dc0e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145769"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operatori più e operatori di negazione unari: + e -
 
@@ -45,7 +46,7 @@ La negazione unaria di quantità senza segno viene eseguita sottraendo il valore
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
 [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

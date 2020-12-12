@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro del punto di connessione'
 title: Macro del punto di connessione
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-ms.openlocfilehash: 6c716ad85ecb458b4be418a7e8554687dd19f3d8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bcb021abe128e15a598f485ab0c0a32a01f90327
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141128"
 ---
 # <a name="connection-point-macros"></a>Macro del punto di connessione
 
 Queste macro definiscono le mappe e le voci dei punti di connessione.
 
-|Macro|Descrizione|
+|Macro|Description|
 |-|-|
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Contrassegna l'inizio delle voci della mappa del punto di connessione.|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Immette i punti di connessione nella mappa.|
@@ -42,7 +43,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 *x*<br/>
 in Nome della classe che contiene i punti di connessione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Avviare la mappa dei punti di connessione con la macro BEGIN_CONNECTION_POINT_MAP, aggiungere voci per ogni punto di connessione con la macro [CONNECTION_POINT_ENTRY](#connection_point_entry) e completare la mappa con la macro [END_CONNECTION_POINT_MAP](#end_connection_point_map) .
 
@@ -69,7 +70,7 @@ in GUID dell'interfaccia aggiunta alla mappa del punto di connessione.
 *pIID*<br/>
 in Puntatore al GUID dell'interfaccia aggiunta.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le voci dei punti di connessione nella mappa vengono utilizzate da [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). La classe che contiene la mappa del punto di connessione deve ereditare da `IConnectionPointContainerImpl` .
 
@@ -89,7 +90,7 @@ Contrassegna la fine delle voci della mappa del punto di connessione.
 END_CONNECTION_POINT_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Avviare la mappa dei punti di connessione con la macro [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) , aggiungere voci per ogni punto di connessione con la macro [CONNECTION_POINT_ENTRY](#connection_point_entry) e completare la mappa con la macro END_CONNECTION_POINT_MAP.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CComCompositeControl'
 title: Classe CComCompositeControl
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: a37386c40f119c855dcb8584a72ce85c48a66381
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5c4d5b3e04855d570cab3a85bfe3a4c59482d990
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146822"
 ---
 # <a name="ccomcompositecontrol-class"></a>Classe CComCompositeControl
 
@@ -46,14 +47,14 @@ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComCompositeControl:: CComCompositeControl](#ccomcompositecontrol)|Costruttore.|
 |[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComCompositeControl:: AdviseSinkMap](#advisesinkmap)|Chiamare questo metodo per consigliare o annullare la notifica a tutti i controlli ospitati dal controllo composito.|
 |[CComCompositeControl:: CalcExtent](#calcextent)|Chiamare questo metodo per calcolare le dimensioni in unità HIMETRIC della risorsa finestra di dialogo utilizzata per ospitare il controllo composito.|
@@ -63,12 +64,12 @@ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComCompositeControl:: m_hbrBackground](#m_hbrbackground)|Pennello per lo sfondo.|
 |[CComCompositeControl:: m_hWndFocus](#m_hwndfocus)|Handle della finestra che attualmente ha lo stato attivo.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le classi derivate dalla classe `CComCompositeControl` ereditano la funzionalità di un controllo composito ActiveX. I controlli ActiveX derivati da `CComCompositeControl` sono ospitati da una finestra di dialogo standard. Questi tipi di controlli sono denominati controlli compositi perché sono in grado di ospitare altri controlli (controlli Windows nativi e controlli ActiveX).
 
@@ -117,7 +118,7 @@ True se è necessario consigliare tutti i controlli; in caso contrario, false.
 
 ### <a name="return-value"></a>Valore restituito
 
-| valore | Descrizione |
+| valore | Description |
 |--|--|
 | `S_OK` | Tutti i controlli nella mappa di sink di evento sono stati connessi o disconnessi correttamente dall'origine evento. |
 | `E_FAIL` | Non tutti i controlli nella mappa di sink di evento potrebbero essere connessi o disconnessi correttamente dall'origine eventi. |
@@ -126,7 +127,7 @@ True se è necessario consigliare tutti i controlli; in caso contrario, false.
 | `CONNECT_E_CANNOTCONNECT` | Il sink non supporta l'interfaccia richiesta da questo punto di connessione. |
 | `CONNECT_E_NOCONNECTION` | Il valore del cookie non rappresenta una connessione valida. Questo errore indica in genere un problema con una voce nella mappa sink di eventi del controllo o un problema con un argomento di modello usato in una `IDispEventImpl` `IDispEventSimpleImpl` classe di base o. |
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione di base di questo metodo esegue la ricerca nelle voci della mappa di sink di evento. Informa quindi o Annulla la notifica dei punti di connessione agli oggetti COM descritti dalle voci di sink della mappa di sink di evento. Questo metodo del membro si basa anche sul fatto che la classe derivata eredita da un'istanza di `IDispEventImpl` per ogni controllo della mappa di sink che deve essere consigliato o non consigliato.
 
@@ -147,7 +148,7 @@ Riferimento a una `SIZE` struttura che deve essere riempita da questo metodo.
 
 TRUE se il controllo è ospitato da una finestra di dialogo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La dimensione viene restituita nel parametro *size* .
 
@@ -177,7 +178,7 @@ Dati da passare al controllo durante la creazione del controllo. I dati passati 
 
 Handle per la finestra di dialogo del controllo composito appena creato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo viene in genere chiamato durante l'attivazione sul posto del controllo.
 
@@ -189,7 +190,7 @@ Costruttore.
 CComCompositeControl();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza i membri dati [CComCompositeControl:: m_hbrBackground](#m_hbrbackground) e [CComCompositeControl:: m_hWndFocus](#m_hwndfocus) su null.
 
@@ -201,7 +202,7 @@ Distruttore.
 ~CComCompositeControl();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Elimina l'oggetto in background, se esistente.
 
@@ -227,7 +228,7 @@ Il rettangolo di posizione del controllo composito nelle coordinate del client r
 
 Restituisce un handle per la finestra di dialogo del controllo composito appena creato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo chiama [CComCompositeControl:: create](#create) e [CComCompositeControl:: AdviseSinkMap](#advisesinkmap).
 
@@ -259,7 +260,7 @@ HRESULT SetBackgroundColorFromAmbient();
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Nozioni fondamentali sul controllo composito](../../atl/atl-composite-control-fundamentals.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi dei punti di connessione'
 title: Classi di punti di connessione (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - classes [C++], connection points
 - connection points classes
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
-ms.openlocfilehash: 0dba06b072e1e9ca545ccbea196fcfe371b02157
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 28d41f15aeafd98c8c9bcac27fde25d0b2037765
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148239"
 ---
 # <a name="connection-points-classes"></a>Classi di punti di connessione
 
@@ -37,10 +38,10 @@ Le classi seguenti forniscono supporto per i punti di connessione:
 
 [Punti di connessione](../atl/atl-connection-points.md)
 
-[Gestione di eventi e ATL](../atl/event-handling-and-atl.md)
+[Gestione degli eventi e ATL](../atl/event-handling-and-atl.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)<br/>
-[Macro di punto di connessione](../atl/reference/connection-point-macros.md)<br/>
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)<br/>
+[Macro del punto di connessione](../atl/reference/connection-point-macros.md)<br/>
 [Funzioni globali del punto di connessione](../atl/reference/connection-point-global-functions.md)

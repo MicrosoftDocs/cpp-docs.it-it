@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia IAxWinHostWindowLic'
 title: Interfaccia IAxWinHostWindowLic
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: d7a63fc63b8abcf8574ea9a2fed2556635dba045
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: bf13d6f0209b982955fdf015ef47643c83b27eee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139646"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>Interfaccia IAxWinHostWindowLic
 
@@ -30,12 +31,12 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CreateControlLic](#createcontrollic)|Crea un controllo concesso in licenza e lo collega all'oggetto host.|
 |[CreateControlLicEx](#createcontrollicex)|Crea un controllo concesso in licenza, lo collega all'oggetto host e, facoltativamente, configura un gestore eventi.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `IAxWinHostWindowLic` eredita da [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) e aggiunge metodi che supportano la creazione di controlli con licenza.
 
@@ -67,7 +68,7 @@ STDMETHOD(CreateControlLic)(
 *bstrLic*<br/>
 in BSTR che contiene la chiave di licenza per il controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione dei parametri rimanenti e del valore restituito, vedere [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) .
 
@@ -97,7 +98,7 @@ STDMETHOD(CreateControlLicEx)(
 *bstrLic*<br/>
 in BSTR che contiene la chiave di licenza per il controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione dei parametri rimanenti e del valore restituito, vedere [IAxWinHostWindow:: CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) .
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CStockPropImpl'
 title: Classe CStockPropImpl
 ms.date: 05/06/2019
 f1_keywords:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 9d54e4e5c49e73a12fc5d360c3963c2bcf5b2b38
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d2d71b4b318daeb6590e36d30f71e37a5d2b52b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140517"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 
@@ -120,7 +121,7 @@ Classe utilizzata per gestire le informazioni sul tipo per *T*. Il valore predef
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[get_Appearance](#get_appearance)|Chiamare questo metodo per ottenere lo stile di disegno usato dal controllo, ad esempio flat o 3D.|
 |[get_AutoSize](#get_autosize)|Chiamare questo metodo per ottenere lo stato del flag che indica se il controllo non può essere di altre dimensioni.|
@@ -178,7 +179,7 @@ Classe utilizzata per gestire le informazioni sul tipo per *T*. Il valore predef
 |[putref_MouseIcon](#putref_mouseicon)|Chiamare questo metodo per impostare le proprietà immagine dell'elemento grafico (icona, bitmap o metafile) da visualizzare quando il mouse è posizionato sul controllo, con un conteggio dei riferimenti.|
 |[putref_Picture](#putref_picture)|Chiamare questo metodo per impostare le proprietà dell'immagine di un elemento grafico (icona, bitmap o metafile) da visualizzare con un conteggio dei riferimenti.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CStockPropImpl` fornisce i metodi **put** e **Get** per ogni proprietà azionaria. Questi metodi forniscono il codice necessario per impostare o ottenere il membro dati associato a ogni proprietà e per notificare e sincronizzare con il contenitore quando viene modificata una proprietà.
 
@@ -956,7 +957,7 @@ Riservato.
 
 Restituisce E_FAIL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'handle della finestra è un valore di sola lettura.
 
@@ -1096,7 +1097,7 @@ Handle di finestra.
 
 Restituisce E_FAIL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'handle della finestra è un valore di sola lettura.
 
@@ -1117,7 +1118,7 @@ Puntatore alle proprietà del tipo di carattere del controllo.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Uguale a [CStockPropImpl::p ut_Font](#put_font), ma con un conteggio dei riferimenti.
 
@@ -1138,7 +1139,7 @@ Puntatore alle proprietà dell'immagine dell'elemento grafico.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Uguale a [CStockPropImpl::p ut_MouseIcon](#put_mouseicon), ma con un conteggio dei riferimenti.
 
@@ -1159,11 +1160,11 @@ Puntatore alle proprietà dell'immagine. Per ulteriori informazioni, vedere [IPi
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Uguale a [CStockPropImpl::p ut_Picture](#put_picture), ma con un conteggio dei riferimenti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>
 [Classe IDispatchImpl](../../atl/reference/idispatchimpl-class.md)

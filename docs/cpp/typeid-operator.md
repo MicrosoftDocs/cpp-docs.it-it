@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: operatore typeid'
 title: Operatore typeid
 ms.date: 10/04/2019
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: e17b88d81d9987ec586401e025e108cfbe88cb3b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8e036cbdcc540eca224b97b09d174362c454da6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145860"
 ---
 # <a name="typeid-operator"></a>Operatore typeid
 
@@ -32,7 +33,7 @@ L' **`typeid`** operatore esegue un controllo della fase di esecuzione quando vi
 
 - Un riferimento a una classe
 
-- Puntatore, dereferenziato con`*`
+- Puntatore, dereferenziato con `*`
 
 - Puntatore A indice ( `[ ]` ). Non è sicuro usare un indice con un puntatore a un tipo polimorfico.
 
@@ -90,7 +91,7 @@ T max( T arg1, T arg2 ) {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni sui tipi in fase di esecuzione](../cpp/run-time-type-information.md)\
 [Parole chiave](../cpp/keywords-cpp.md)

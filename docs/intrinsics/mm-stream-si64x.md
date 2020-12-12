@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mm_stream_si64x'
 title: _mm_stream_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2a68437905c0d5dd56a522d15985db7179921852
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133224"
 ---
 # <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Genera l'istruzione MOVNTI. Scrive i dati nell' *origine* in una posizione di memoria specificata dalla *destinazione*, senza inquinare le cache.
 
@@ -34,18 +35,18 @@ void _mm_stream_si64x(
 *Destinazione*\
 out Puntatore alla posizione in cui scrivere i dati di origine.
 
-*Source*\
+*Origine*\
 in Dati da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
-|`_mm_stream_si64x`|X64|
+|`_mm_stream_si64x`|x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
@@ -75,8 +76,8 @@ int main()
 0 ffffffffffff 0 0
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

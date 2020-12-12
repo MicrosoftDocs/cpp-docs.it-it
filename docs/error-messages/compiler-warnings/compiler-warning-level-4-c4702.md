@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4702'
 title: Avviso del compilatore (livello 4) C4702
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: a2d1f6f4bdc20a35638274e2099c00428f4f6ddf
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9a171641a2c923083471d510e27fbdb3ebd08832
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133796"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>Avviso del compilatore (livello 4) C4702
 
@@ -21,7 +22,7 @@ Questo avviso è il risultato delle operazioni di conformità del compilatore es
 
 Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, rimuovere il codice non eseguibile o assicurarsi che tutto il codice sorgente sia raggiungibile da un certo flusso di esecuzione.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C4702.
 
@@ -36,7 +37,7 @@ int main() {
 }
 ```
 
-Quando si esegue la compilazione con **/GX**, **/EHC**, **/EHsc**o **/EHac** e si usano le funzioni extern c, il codice può diventare irraggiungibile perché si presuppone che le funzioni extern c non vengano generate, quindi il blocco catch non è raggiungibile.  Se si ritiene che questo avviso non sia valido perché una funzione può generare, compilare con **/EHA** o **/EHS**, a seconda dell'eccezione generata.
+Quando si esegue la compilazione con **/GX**, **/EHC**, **/EHsc** o **/EHac** e si usano le funzioni extern c, il codice può diventare irraggiungibile perché si presuppone che le funzioni extern c non vengano generate, quindi il blocco catch non è raggiungibile.  Se si ritiene che questo avviso non sia valido perché una funzione può generare, compilare con **/EHA** o **/EHS**, a seconda dell'eccezione generata.
 
 Per ulteriori informazioni, vedere [/eh (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md) .
 

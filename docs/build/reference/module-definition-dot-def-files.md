@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Module-Definition (. File def)'
 title: File di definizione moduli (DEF)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,34 +7,34 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-ms.openlocfilehash: 0047f24722644cd9a68bbbf827ced26ad085d4c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52141a2917b2c82616597b2d070a84b96d1a653
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137813"
 ---
 # <a name="module-definition-def-files"></a>File di definizione moduli (DEF)
 
-I file di definizione moduli (def) forniscono linker con informazioni sulle esportazioni, attributi e altre informazioni sul programma da collegare. Un file con estensione def è particolarmente utile quando si compila una DLL. Poiché esistono [opzioni del Linker MSVC](linker-options.md) che può essere usato invece le istruzioni di definizione moduli, i file def in genere non sono necessari. È anche possibile usare [dllexport](../exporting-from-a-dll-using-declspec-dllexport.md) come un modo per specificare le funzioni esportate.
+I file di definizione moduli (con estensione def) forniscono al linker informazioni su esportazioni, attributi e altre informazioni sul programma da collegare. Un file con estensione def è particolarmente utile quando si compila una DLL. Poiché sono disponibili [Opzioni del linker MSVC](linker-options.md) che possono essere usate al posto delle istruzioni di definizione dei moduli, i file con estensione def non sono in genere necessari. È inoltre possibile utilizzare [__declspec (dllexport)](../exporting-from-a-dll-using-declspec-dllexport.md) come metodo per specificare le funzioni esportate.
 
-È possibile richiamare un file con estensione def durante la fase di collegamento con il [/DEF (specifica del File di definizione moduli)](def-specify-module-definition-file.md) l'opzione del linker.
+È possibile richiamare un file con estensione def durante la fase del linker con l'opzione del linker [/def (specificare il file di Module-Definition)](def-specify-module-definition-file.md) .
 
-Se si sta creando un file .exe che non contiene esportazioni, usando un file con estensione def renderà l'output del file più grande e più lento il caricamento.
+Se si compila un file con estensione exe privo di esportazioni, l'utilizzo di un file con estensione def renderà il caricamento del file di output maggiore e più lento.
 
-Per un esempio, vedere [esportazione da una DLL tramite i file DEF](../exporting-from-a-dll-using-def-files.md).
+Per un esempio, vedere [esportazione da una dll tramite i file def](../exporting-from-a-dll-using-def-files.md).
 
-Vedere le sezioni seguenti per altre informazioni:
+Per ulteriori informazioni, vedere le sezioni seguenti:
 
-- [Regole relative alle istruzioni di definizione dei moduli](rules-for-module-definition-statements.md)
+- [Regole per Module-Definition istruzioni](rules-for-module-definition-statements.md)
 
-- [EXPORTS](exports.md)
+- [Esporta](exports.md)
 
 - [HEAPSIZE](heapsize.md)
 
-- [LIBRARY](library.md)
+- [LIBRERIA](library.md)
 
-- [NAME](name-c-cpp.md)
+- [NOME](name-c-cpp.md)
 
 - [SEZIONI](sections-c-cpp.md)
 
@@ -45,7 +46,7 @@ Vedere le sezioni seguenti per altre informazioni:
 
 - [Parole riservate](reserved-words.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

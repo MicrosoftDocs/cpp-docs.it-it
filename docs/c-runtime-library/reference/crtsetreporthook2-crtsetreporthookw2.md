@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _CrtSetReportHook2, _CrtSetReportHookW2'
 title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eab1ad4da90d5a86b821c374aae0aeceb97d7518
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135720"
 ---
 # <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -66,13 +67,13 @@ Hook del report per installare o rimuovere la versione a caratteri "narrow" o "w
 
 -1 se si è verificato un errore con l'impostazione **EINVAL** o **ENOMEM** . in caso contrario, restituisce il conteggio dei riferimenti di *pfnNewHook* dopo la chiamata.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-**_CrtSetReportHook2** e **_CrtSetReportHookW2** consentono di associare o disassociare una funzione, mentre [_CrtSetReportHook](crtsetreporthook.md) consente solo di associare una funzione.
+**_CrtSetReportHook2** e **_CrtSetReportHookW2** consentono di associare o scollegare una funzione, mentre [_CrtSetReportHook](crtsetreporthook.md) consente solo di associare una funzione.
 
-È consigliabile usare **_CrtSetReportHook2** o **_CrtSetReportHookW2** anziché **_CrtSetReportHook** quando viene effettuata la chiamata all'hook in una dll e quando è possibile caricare più dll e impostare le proprie funzioni hook. In questo caso, le DLL possono essere scaricate in un ordine diverso rispetto all'ordine di caricamento e la funzione di hook può sempre puntare a una DLL scaricata. Eventuali output di debug arrestano in modo anomalo il processo se le funzioni hook sono state aggiunte con **_CrtSetReportHook**.
+È consigliabile usare **_CrtSetReportHook2** o **_CrtSetReportHookW2** invece di **_CrtSetReportHook** quando la chiamata all'hook viene eseguita in una dll e quando è possibile caricare più dll e impostare le proprie funzioni hook. In questo caso, le DLL possono essere scaricate in un ordine diverso rispetto all'ordine di caricamento e la funzione di hook può sempre puntare a una DLL scaricata. Eventuali output di debug arrestano in modo anomalo il processo se le funzioni hook sono state aggiunte con **_CrtSetReportHook**.
 
-Qualsiasi funzione hook aggiunta con **_CrtSetReportHook** viene chiamata se non sono presenti funzioni hook aggiunte con **_CrtSetReportHook2** o **_CrtSetReportHookW2** o se tutte le funzioni hook sono state aggiunte con **_CrtSetReportHook2** e **_ CrtSetReportHookW2** restituisce **false**.
+Qualsiasi funzione hook aggiunta con **_CrtSetReportHook** viene chiamata se non sono presenti funzioni di hook aggiunte con **_CrtSetReportHook2** o **_CrtSetReportHookW2** o se tutte le funzioni hook aggiunte con **_CrtSetReportHook2** e **_CrtSetReportHookW2** restituiscono **false**.
 
 La versione a caratteri wide di questa funzione è disponibile. Le funzioni di hook per i report accettano una stringa il cui tipo (caratteri wide o narrow) deve corrispondere alla versione di questa funzione usata. Usare il prototipo seguente di funzione di hook per i report usati con la versione a caratteri wide di questa funzione:
 
@@ -98,7 +99,7 @@ Queste funzioni convalidano i relativi parametri. Se *mode* o **pfnNewNook** non
 |**_CrtSetReportHook2**|\<crtdbg.h>|\<errno.h>|
 |**_CrtSetReportHookW2**|\<crtdbg.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -252,6 +253,6 @@ _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook2) returned 0
 _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook1) returned 0
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>

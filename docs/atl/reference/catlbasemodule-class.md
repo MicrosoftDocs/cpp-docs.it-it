@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAtlBaseModule'
 title: Classe CAtlBaseModule
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d57d6e631cb287496a4ff5516e97e65ec0152e30
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 249b2ad2d133ba0f407e9c5fabcf716b09605972
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147537"
 ---
 # <a name="catlbasemodule-class"></a>Classe CAtlBaseModule
 
@@ -36,30 +37,30 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlBaseModule:: CAtlBaseModule](#catlbasemodule)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlBaseModule:: AddResourceInstance](#addresourceinstance)|Aggiunge un'istanza di risorsa all'elenco di handle archiviati.|
 |[CAtlBaseModule:: GetHInstanceAt](#gethinstanceat)|Restituisce un handle per un'istanza di risorsa specificata.|
-|[CAtlBaseModule:: GetModuleInstance](#getmoduleinstance)|Restituisce l'istanza del modulo da `CAtlBaseModule` un oggetto.|
-|[CAtlBaseModule:: GetResourceInstance](#getresourceinstance)|Restituisce l'istanza della risorsa da `CAtlBaseModule` un oggetto.|
+|[CAtlBaseModule:: GetModuleInstance](#getmoduleinstance)|Restituisce l'istanza del modulo da un `CAtlBaseModule` oggetto.|
+|[CAtlBaseModule:: GetResourceInstance](#getresourceinstance)|Restituisce l'istanza della risorsa da un `CAtlBaseModule` oggetto.|
 |[CAtlBaseModule:: RemoveResourceInstance](#removeresourceinstance)|Rimuove un'istanza di risorsa dall'elenco degli handle archiviati.|
-|[CAtlBaseModule:: SetResourceInstance](#setresourceinstance)|Imposta l'istanza della risorsa di `CAtlBaseModule` un oggetto.|
+|[CAtlBaseModule:: SetResourceInstance](#setresourceinstance)|Imposta l'istanza della risorsa di un `CAtlBaseModule` oggetto.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlBaseModule:: m_bInitFailed](#m_binitfailed)|Variabile che indica se l'inizializzazione del modulo non è riuscita.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Un'istanza di `CAtlBaseModule` denominata _AtlBaseModule è presente in ogni progetto ATL, contenente un handle per l'istanza del modulo, un handle per il modulo che contiene le risorse (che per impostazione predefinita sono uno e lo stesso) e una matrice di handle ai moduli che forniscono le risorse primarie. `CAtlBaseModule`è possibile accedere in modo sicuro da più thread.
+Un'istanza di `CAtlBaseModule` denominata _AtlBaseModule è presente in ogni progetto ATL, contenente un handle per l'istanza del modulo, un handle per il modulo che contiene le risorse (che per impostazione predefinita sono uno e lo stesso) e una matrice di handle ai moduli che forniscono le risorse primarie. `CAtlBaseModule` è possibile accedere in modo sicuro da più thread.
 
 Questa classe sostituisce la classe [CComModule](../../atl/reference/ccommodule-class.md) obsoleta usata nelle versioni precedenti di ATL.
 
@@ -73,7 +74,7 @@ Questa classe sostituisce la classe [CComModule](../../atl/reference/ccommodule-
 
 **Intestazione:** atlcore. h
 
-## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule:: AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a> CAtlBaseModule:: AddResourceInstance
 
 Aggiunge un'istanza di risorsa all'elenco di handle archiviati.
 
@@ -90,7 +91,7 @@ Istanza di risorsa da aggiungere.
 
 Restituisce true se la risorsa è stata aggiunta correttamente; in caso contrario, false.
 
-## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule:: CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a> CAtlBaseModule:: CAtlBaseModule
 
 Costruttore.
 
@@ -98,11 +99,11 @@ Costruttore.
 CAtlBaseModule() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Crea l'oggetto `CAtlBaseModule`.
 
-## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule:: GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a> CAtlBaseModule:: GetHInstanceAt
 
 Restituisce un handle per un'istanza di risorsa specificata.
 
@@ -119,9 +120,9 @@ Numero dell'istanza di risorsa.
 
 Restituisce l'handle per l'istanza della risorsa o NULL se non esiste alcuna istanza di risorsa corrispondente.
 
-## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule:: GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a> CAtlBaseModule:: GetModuleInstance
 
-Restituisce l'istanza del modulo da `CAtlBaseModule` un oggetto.
+Restituisce l'istanza del modulo da un `CAtlBaseModule` oggetto.
 
 ```cpp
 HINSTANCE GetModuleInstance() throw();
@@ -131,7 +132,7 @@ HINSTANCE GetModuleInstance() throw();
 
 Restituisce l'istanza del modulo.
 
-## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule:: GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a> CAtlBaseModule:: GetResourceInstance
 
 Restituisce l'istanza della risorsa.
 
@@ -143,7 +144,7 @@ HINSTANCE GetResourceInstance() throw();
 
 Restituisce l'istanza della risorsa.
 
-## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule:: m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a> CAtlBaseModule:: m_bInitFailed
 
 Variabile che indica se l'inizializzazione del modulo non è riuscita.
 
@@ -151,11 +152,11 @@ Variabile che indica se l'inizializzazione del modulo non è riuscita.
 static bool m_bInitFailed;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 True se il modulo è stato inizializzato, false se non è stato possibile inizializzare.
 
-## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule:: RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a> CAtlBaseModule:: RemoveResourceInstance
 
 Rimuove un'istanza di risorsa dall'elenco degli handle archiviati.
 
@@ -172,9 +173,9 @@ Istanza di risorsa da rimuovere.
 
 Restituisce true se la risorsa è stata rimossa correttamente; in caso contrario, false.
 
-## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule:: SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a> CAtlBaseModule:: SetResourceInstance
 
-Imposta l'istanza della risorsa di `CAtlBaseModule` un oggetto.
+Imposta l'istanza della risorsa di un `CAtlBaseModule` oggetto.
 
 ```cpp
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
@@ -189,7 +190,7 @@ Nuova istanza della risorsa.
 
 Restituisce l'istanza della risorsa aggiornata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>
 [Classi modulo](../../atl/atl-module-classes.md)

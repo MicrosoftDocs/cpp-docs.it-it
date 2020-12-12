@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: overload degli operatori'
 title: Overload degli operatori
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: 822bd5efb3125e69ff60aa42ba6419969cace403
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23a35a87f9f370a9bb8f268ac1637a4a899ee5f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227231"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146029"
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 
@@ -26,7 +27,7 @@ La **`operator`** parola chiave dichiara una funzione che specifica il significa
 
 > *tipo* **`operator`** di *operatore-symbol* **(** *parameter-list* **)**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È possibile ridefinire la funzione della maggior parte degli operatori incorporati globalmente o classe per classe. Gli operatori di overload vengono implementati come funzioni.
 
@@ -34,29 +35,29 @@ Il nome di un operatore di overload è **`operator`** *x*, dove *x* è l'operato
 
 ### <a name="redefinable-operators"></a>Operatori ridefinibili
 
-|Operatore|Nome|Type|
+|Operatore|Nome|Tipo|
 |--------------|----------|----------|
 |**,**|Virgola|Binary|
-|**!**|NOT logico|Unaria|
+|**!**|NOT logico|Unario|
 |**!=**|Disuguaglianza|Binary|
-|**%**|Modulus|Binary|
+|**%**|Modulo|Binary|
 |**%=**|Assegnazione modulo|Binary|
 |**&**|AND bit per bit|Binary|
-|**&**|Address-of|Unaria|
+|**&**|Address-of|Unario|
 |**&&**|AND logico|Binary|
 |**&=**|Assegnazione AND bit per bit|Binary|
 |**( )**|Chiamata di funzione|—|
-|**( )**|Operatore cast|Unaria|
+|**( )**|Operatore cast|Unario|
 |**&#42;**|Moltiplicazione|Binary|
-|**&#42;**|Dereferenziazione del puntatore|Unaria|
+|**&#42;**|Dereferenziazione del puntatore|Unario|
 |**&#42;=**|Assegnazione di moltiplicazione|Binary|
 |**+**|Addizione|Binary|
-|**+**|Più unario|Unaria|
-|**++**|Incremento <sup>1</sup>|Unaria|
+|**+**|Più unario|Unario|
+|**++**|Incremento <sup>1</sup>|Unario|
 |**+=**|Assegnazione di addizione|Binary|
 |**-**|Sottrazione|Binary|
-|**-**|Negazione unaria|Unaria|
-|**--**|Decrementa <sup>1</sup>|Unaria|
+|**-**|Negazione unaria|Unario|
+|**--**|Decrementa <sup>1</sup>|Unario|
 |**-=**|Assegnazione di sottrazione|Binary|
 |**->**|Selezione dei membri|Binary|
 |**->&#42;**|Selezione puntatore a membro|Binary|
@@ -78,10 +79,10 @@ Il nome di un operatore di overload è **`operator`** *x*, dove *x* è l'operato
 |**&#124;**|OR inclusivo bit per bit|Binary|
 |**&#124;=**|Assegnazione OR inclusivo bit per bit|Binary|
 |**&#124;&#124;**|OR logico|Binary|
-|**~**|Complemento di uno|Unaria|
+|**~**|Complemento di uno|Unario|
 |**`delete`**|Elimina|—|
-|**`new`**|Nuovo|—|
-|operatori di conversione|operatori di conversione|Unaria|
+|**`new`**|Nuova|—|
+|operatori di conversione|operatori di conversione|Unario|
 
 <sup>1</sup> sono presenti due versioni degli operatori di incremento e decremento unari: preincrement e postincrement.
 
@@ -176,7 +177,7 @@ int main() {
 
 - [Accesso ai membri](../cpp/member-access.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

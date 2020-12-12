@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: tipi di espressioni'
 title: Tipi di espressioni
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++], types
 ms.assetid: 1e7540b0-8fdb-49ab-b3e1-6ec439ff473a
-ms.openlocfilehash: 587715cd1fd38bf6481ba833b1532f5e492d4803
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c68f89ac981d8918c60e2d67418d3f00778ca664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145782"
 ---
 # <a name="types-of-expressions"></a>Tipi di espressioni
 
@@ -36,6 +37,6 @@ Le espressioni C++ sono suddivise in diverse categorie:
 
 - [Informazioni sul tipo in fase di esecuzione](../cpp/run-time-type-information.md). Determina il tipo di un oggetto durante l'esecuzione del programma.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni](../cpp/expressions-cpp.md)

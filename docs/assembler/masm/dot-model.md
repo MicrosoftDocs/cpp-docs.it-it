@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:. MODEL (MASM a 32 bit)
 title: .MODEL
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: f4f69b88a2041a13a0b92445c61c4a84d43e442f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131430"
 ---
 # <a name="model-32-bit-masm"></a>. MODEL (MASM a 32 bit)
 
@@ -19,34 +20,34 @@ Inizializza il modello di memoria del programma. (solo MASM a 32 bit).
 
 ## <a name="syntax"></a>Sintassi
 
-> **. Modello** di *memoria-modello* ⟦ __,__ *tipo di linguaggio*⟧ ⟦ __,__ *stack-Option*⟧
+> **. Modello** di *memoria-modello* ⟦__,__ *tipo di linguaggio*⟧ ⟦__,__ *stack-Option*⟧
 
 ### <a name="parameters"></a>Parametri
 
-\ del *modello di memoria*
+*modello di memoria*\
 Parametro obbligatorio che determina le dimensioni dei puntatori di codice e di dati.
 
-\ del *tipo di linguaggio*
+*tipo di linguaggio*\
 Parametro facoltativo che imposta le convenzioni di denominazione e chiamata per le procedure e i simboli pubblici.
 
-\ *di opzioni dello stack*
+*opzione stack*\
 Parametro facoltativo.
 
 l' *opzione stack* non viene utilizzata se il *modello di memoria* è **Flat**.
 
 Se si specifica **NEARSTACK** , il segmento dello stack viene raggruppato in un singolo segmento fisico (**DGROUP**) insieme ai dati. Si presuppone che il registro del segmento stack (**SS**) contenga lo stesso indirizzo del registro del segmento di dati (**DS**). **FARSTACK** non raggruppa lo stack con **DGROUP**; **SS** , quindi, non è uguale a **DS**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-**. Il modello** non viene utilizzato in [MASM per x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
+**. Il modello** non viene utilizzato in [MASM per x64 (ml64.exe)](masm-for-x64-ml64-exe.md).
 
 La tabella seguente elenca i valori possibili per ogni parametro quando la destinazione è rappresentata da piattaforme a 16 bit e a 32 bit:
 
 |Parametro|Valori a 32 bit|Valori a 16 bit (supporto per lo sviluppo di versioni precedenti a 16 bit)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*modello di memoria*|**PIATTO**|**Tiny**, **small**, **Compact**, **medium**, **large**, **huge**, **Flat**|
-|*tipo di linguaggio*|**C**, **stdcall**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*opzione stack*|Non utilizzato|**NEARSTACK**, **FARSTACK**|
+|*tipo di linguaggio*|**C**, **stdcall**|**C**, **Basic**, **FORTRAN**, **Pascal**, **syscall**, **stdcall**|
+|*opzione stack*|Non usato|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Codice
 
@@ -88,5 +89,5 @@ end
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

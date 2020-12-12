@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: identificatore di override'
 title: Identificatore override
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: da29c5c37ff834513736bda02745d031fe3d92aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146003"
 ---
 # <a name="override-specifier"></a>Identificatore override
 
@@ -80,7 +81,7 @@ class DerivedClass: public BaseClass
 
 Per specificare che non è possibile eseguire l'override delle funzioni e che le classi non possono essere ereditate, utilizzare la parola chiave [Final](../cpp/final-specifier.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Identificatore final](../cpp/final-specifier.md)<br/>
+[Identificatore finale](../cpp/final-specifier.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

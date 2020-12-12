@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori di riferimento indiretto e address-of'
 title: Operatori address-of e di riferimento indiretto
 ms.date: 02/16/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-ms.openlocfilehash: e631959e69fbdf026886b7a67a3d4e4cd7266989
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bd05d9eee4a453d9d99198a1a8481fcebcf103dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137593"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operatori address-of e di riferimento indiretto
 
@@ -42,7 +43,7 @@ L'operatore unario address-of ( **&** ) restituisce l'indirizzo del relativo ope
 
 Se l'operando è il risultato di un operatore __&#42;__ unario, non viene valutato alcun operatore e ne deriva un risultato che corrisponde all'omissione di entrambi. Il risultato non è un lvalue e i vincoli sugli operatori vengono mantenuti. Se l'operando è il risultato di un operatore __&#91;&#93;__, non viene valutato né l'operatore __&__ né l'operatore __&#42;__ unario implicato dall'operatore __&#91;&#93;__. Il risultato ha lo stesso effetto della rimozione dell' __&__ operatore e della modifica dell'operatore __&#91;&#93;__ in un __+__ operatore. In caso contrario, il risultato è un puntatore all'oggetto o alla funzione definita dall'operando.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Gli esempi seguenti usano le dichiarazioni comuni che seguono:
 
@@ -82,7 +83,7 @@ assert( pround == proundup );
 
 Dopo che la funzione `roundup` è stata dichiarata, vengono dichiarati e inizializzati due puntatori a `roundup`. Il primo puntatore, `proundup`, viene inizializzata utilizzando solo il nome della funzione, mentre il secondo, `pround`, utilizza l'operatore address-of nell'inizializzazione. Le inizializzazioni sono equivalenti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore di riferimento indiretto: &#42;](../cpp/indirection-operator-star.md)<br/>
 [Operatore address-of: &](../cpp/address-of-operator-amp.md)

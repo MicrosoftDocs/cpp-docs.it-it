@@ -1,21 +1,22 @@
 ---
+description: 'Altre informazioni su: ordinamento parziale di modelli di funzione (C++)'
 title: Ordinamento parziale di modelli di funzione (C++)
 ms.date: 07/30/2019
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-ms.openlocfilehash: 0c4f11b4b3e02504c4786ea34441362b542959d6
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 701c97aa819d0294f69f2fe2a71ffb9bf0210afa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145899"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordinamento parziale di modelli di funzione (C++)
 
 Possono essere disponibili più modelli di funzioni corrispondente all'elenco di argomenti di una chiamata di funzione. In C++ viene definito un ordinamento parziale dei modelli di funzione per specificare la funzione che deve essere chiamata. L'ordinamento è parziale perché possono essere presenti alcuni modelli considerati ugualmente specializzati.
 
-Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze. Se, ad esempio, un modello di funzione accetta `T` un tipo e un altro modello `T*` di funzione che accetta `T*` è disponibile, la versione viene detta più specializzata. È preferibile rispetto alla `T` versione generica ogni volta che l'argomento è un tipo di puntatore, anche se entrambe le corrispondenze sono consentite.
+Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze. Se, ad esempio, un modello di funzione accetta un tipo `T` e un altro modello di funzione che accetta `T*` è disponibile, la `T*` versione viene detta più specializzata. È preferibile rispetto alla `T` versione generica ogni volta che l'argomento è un tipo di puntatore, anche se entrambe le corrispondenze sono consentite.
 
 Utilizzare la procedura seguente per determinare se un candidato di modello di funzione è più specializzato:
 
@@ -33,11 +34,11 @@ Utilizzare la procedura seguente per determinare se un candidato di modello di f
 
    1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento di tipo generico.
 
-   1. Un modello che accetta `T*` solo è più specializzato di uno solo `T`, perché un tipo `X*` ipotetico è un argomento valido per `T` un argomento di modello `X` , ma non è un argomento valido per un `T*`argomento di modello.
+   1. Un modello che accetta solo `T*` è più specializzato di uno solo `T` , perché un tipo ipotetico `X*` è un argomento valido per un `T` argomento di modello, ma `X` non è un argomento valido per un `T*` argomento di modello.
 
-   1. `const T`è più specializzato di `T`, perché `const X` è un argomento valido per un `T` argomento di modello, `X` ma non è un argomento valido per `const T` un argomento di modello.
+   1. `const T` è più specializzato di `T` , perché `const X` è un argomento valido per un `T` argomento di modello, ma `X` non è un argomento valido per un `const T` argomento di modello.
 
-   1. `const T*`è più specializzato di `T*`, perché `const X*` è un argomento valido per un `T*` argomento di modello, `X*` ma non è un argomento valido per `const T*` un argomento di modello.
+   1. `const T*` è più specializzato di `T*` , perché `const X*` è un argomento valido per un `T*` argomento di modello, ma `X*` non è un argomento valido per un `const T*` argomento di modello.
 
 ## <a name="example"></a>Esempio
 
@@ -81,6 +82,6 @@ More specialized function called
 Even more specialized function for const T*
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Modelli di funzioni](../cpp/function-templates.md)
+[Modelli di funzione](../cpp/function-templates.md)

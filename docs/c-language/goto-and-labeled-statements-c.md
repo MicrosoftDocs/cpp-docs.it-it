@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istruzioni GOTO e con etichetta (C)'
 title: Istruzioni goto e con etichetta (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: d84aa6701ef030dc494f6a40a7223d6f9bcd5073
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1372cd0699944449ccd44a76dd1d90206bfab68a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137644"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Istruzioni goto e con etichetta (C)
 
@@ -67,6 +68,6 @@ int main()
 
 In questo esempio, un' **`goto`** istruzione trasferisce il controllo al punto con etichetta `stop` quando `i` è uguale a 5.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzioni](../c-language/statements-c.md)

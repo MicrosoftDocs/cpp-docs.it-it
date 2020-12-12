@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: inizializzazione dei tipi aggregati'
 title: Inizializzazione di tipi di aggregazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a17e55f01e6a8844252dc0926942a27d40a6c7c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229623"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137618"
 ---
 # <a name="initializing-aggregate-types"></a>Inizializzazione di tipi di aggregazione
 
@@ -22,7 +23,7 @@ Un tipo *aggregato* può essere una struttura, un'unione o un tipo di matrice. S
 ## <a name="syntax"></a>Sintassi
 
 *inizializzatore*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inizializzatore-list*  **}** /* per l'inizializzazione aggregata\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inizializzatore-list*  **}** /* per l'inizializzazione aggregata \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{**  *inizializzatore-list*  **,}**
 
 *elenco di inizializzatori*:<br/>
@@ -55,7 +56,7 @@ La dimensione massima di una matrice è definita da **size_t**. Definito nel fil
 
 **TERMINA specifica Microsoft**
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 In questo esempio sono illustrati gli inizializzatori di una matrice.
 
@@ -150,6 +151,6 @@ union
 
 La variabile di unione `y`, presente in questo esempio, viene inizializzata. Il primo elemento dell'unione è una matrice, pertanto l'inizializzatore è un inizializzatore di aggregazione. L'elenco di inizializzatori `{'1'}` assegna i valori alla prima riga della matrice. Poiché nell'elenco viene visualizzato un solo valore, l'elemento presente nella prima colonna viene inizializzato al carattere `1` e i due elementi rimanenti nella riga vengono inizializzati sul valore 0 per impostazione predefinita. Analogamente, il primo elemento della seconda riga di `x` viene inizializzato al carattere `4`, mentre i due elementi rimanenti nella riga vengono inizializzati sul valore 0.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Inizializzazione](../c-language/initialization.md)

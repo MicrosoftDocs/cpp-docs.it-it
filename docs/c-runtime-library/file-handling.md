@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione file'
 title: Gestione di file
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 2a5c6ec3a70a85bf81f00b104d0c505677f609ac
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5727f2c4f1d0d79a471b8ec5a76ed719380e2d83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740060"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135772"
 ---
 # <a name="file-handling"></a>Gestione di file
 
@@ -25,7 +26,7 @@ Le librerie di runtime C presentano un limite di 512 per il numero di file che Ã
 
 Queste routine operano sui file designati da un descrittore di file.
 
-|Routine|Usare|
+|Routine|Usa|
 |-------------|---------|
 |[_chsize](../c-runtime-library/reference/chsize.md),[_chsize_s](../c-runtime-library/reference/chsize-s.md)|Modifica la dimensione del file|
 |[_filelength, _filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|Ottiene la lunghezza del file|
@@ -48,7 +49,7 @@ Queste routine operano sui file specificati da un percorso o nome file.
 |[_makepath, _wmakepath](../c-runtime-library/reference/makepath-wmakepath.md), [_makepath_s, _wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|Unisce i componenti del percorso in un singolo percorso completo|
 |[_mktemp, _wmktemp](../c-runtime-library/reference/mktemp-wmktemp.md), [_mktemp_s, _wmktemp_s](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)|Crea un filename univoco|
 |[remove, _wremove](../c-runtime-library/reference/remove-wremove.md)|Elimina file|
-|[rename, _wrename](../c-runtime-library/reference/rename-wrename.md)|Rinomina un file|
+|[rename, _wrename](../c-runtime-library/reference/rename-wrename.md)|Rinomina file|
 |[_splitpath, _wsplitpath](../c-runtime-library/reference/splitpath-wsplitpath.md), [_splitpath_s, _wsplitpath_s](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)|Analizza il percorso in componenti|
 |[_stat, _stat64, _stati64, _wstat, _wstat64, _wstati64](../c-runtime-library/reference/stat-functions.md)|Ottiene informazioni sullo stato dei file sul file denominato|
 |[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|Imposta la maschera di autorizzazioni predefinite per i nuovi file creati dal programma|
@@ -84,8 +85,8 @@ Le funzioni Win32 seguenti aprono anche file e pipe:
 
 - [CreateNamedPipe](/windows/win32/api/winbase/nf-winbase-createnamedpipea)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Controllo delle directory](../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../c-runtime-library/directory-control.md)<br/>
 [Chiamate di sistema](../c-runtime-library/system-calls.md)<br/>

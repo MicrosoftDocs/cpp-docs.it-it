@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Introduzione a COM'
 title: Introduzione a COM
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-ms.openlocfilehash: e29f761e0380357bc999af82cc4bde8bfbaf4d6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 635bce8c1214dddfc258ae6d2d6c7e751f778e9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147667"
 ---
 # <a name="introduction-to-com"></a>Introduzione a COM
 
@@ -30,7 +31,7 @@ I concetti fondamentali di COM sono i seguenti:
 
 - [Aggregazione](../atl/aggregation.md) : un modo in cui un oggetto può essere usato da un altro oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Introduzione a COM e a ATL](../atl/introduction-to-com-and-atl.md)<br/>
+[Introduzione a COM e ATL](../atl/introduction-to-com-and-atl.md)<br/>
 [Component Object Model (COM)](/windows/win32/com/the-component-object-model)

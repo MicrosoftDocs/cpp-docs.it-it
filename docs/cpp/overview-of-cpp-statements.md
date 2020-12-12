@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: Cenni preliminari sulle istruzioni C++'
 title: Cenni preliminari sulle istruzioni C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++]
 ms.assetid: e56996b2-b846-4b99-ac94-ac72fffc5ec7
-ms.openlocfilehash: d6bd6b5bb7ba4b83fbed63a40fecc8194cb3707a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e30b33bbc1aeb94c5b188ff7796a39b130bec827
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145951"
 ---
 # <a name="overview-of-c-statements"></a>Cenni preliminari sulle istruzioni C++
 
@@ -64,6 +65,6 @@ Gli articoli sulle istruzioni descrivono le seguenti parole chiave di C++:
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzioni](../cpp/statements-cpp.md)

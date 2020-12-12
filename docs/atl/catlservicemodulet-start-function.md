@@ -1,26 +1,27 @@
 ---
-title: Funzione CAtlServiceModuleT::StartCAtlServiceModuleT::Start Function
+description: 'Altre informazioni su: funzione funzione CAtlServiceModuleT:: Start'
+title: 'Funzione funzione CAtlServiceModuleT:: Start'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 50054bbb34bcc31a1d11dd8bfab797f98e4e82f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfdae47f88c7957a4470da3129f3d3e071614276
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148317"
 ---
-# <a name="catlservicemoduletstart-function"></a>Funzione CAtlServiceModuleT::StartCAtlServiceModuleT::Start Function
+# <a name="catlservicemoduletstart-function"></a>Funzione funzione CAtlServiceModuleT:: Start
 
-Quando il servizio `_tWinMain` viene `CAtlServiceModuleT::WinMain`eseguito, `CAtlServiceModuleT::Start`chiama , che a sua volta chiama .
+Quando il servizio viene eseguito, `_tWinMain` chiama `CAtlServiceModuleT::WinMain` , che a sua volta chiama `CAtlServiceModuleT::Start` .
 
-`CAtlServiceModuleT::Start`imposta una matrice `SERVICE_TABLE_ENTRY` di strutture che mappano ogni servizio alla relativa funzione di avvio. Questa matrice viene quindi passata alla funzione API Win32, [StartServiceCtrlDispatcher](/windows/win32/api/winsvc/nf-winsvc-startservicectrldispatcherw). In teoria, un file EXE potrebbe gestire `SERVICE_TABLE_ENTRY` più servizi e l'array potrebbe avere più strutture. Attualmente, tuttavia, un servizio generato da ATL supporta un solo servizio per EXE. Pertanto, la matrice ha una singola `_ServiceMain` voce che contiene il nome del servizio e come funzione di avvio. `_ServiceMain`è una funzione `CAtlServiceModuleT` membro statica che chiama `ServiceMain`la funzione membro non statica, .
+`CAtlServiceModuleT::Start` Configura una matrice di `SERVICE_TABLE_ENTRY` strutture che mappano ogni servizio alla relativa funzione di avvio. Questa matrice viene quindi passata alla funzione API Win32 [Impossibile eseguire StartServiceCtrlDispatcher](/windows/win32/api/winsvc/nf-winsvc-startservicectrldispatcherw). In teoria, un file EXE potrebbe gestire più servizi e la matrice potrebbe avere più `SERVICE_TABLE_ENTRY` strutture. Attualmente, tuttavia, un servizio generato da ATL supporta solo un servizio per ogni file EXE. Pertanto, la matrice ha una singola voce che contiene il nome del servizio e `_ServiceMain` come funzione di avvio. `_ServiceMain` è una funzione membro statica di `CAtlServiceModuleT` che chiama la funzione membro non statica `ServiceMain` .
 
 > [!NOTE]
-> `StartServiceCtrlDispatcher` La mancata connessione al gestore di controllo del servizio (SCM) probabilmente significa che il programma non è in esecuzione come servizio. In questo caso, `CAtlServiceModuleT::Run` il programma chiama direttamente in modo che il programma possa essere eseguito come server locale. Per ulteriori informazioni sull'esecuzione del programma come server locale, vedere [Suggerimenti per il debug](../atl/debugging-tips.md).
+> L'errore di `StartServiceCtrlDispatcher` per la connessione a gestione controllo servizi (SCM) significa probabilmente che il programma non è in esecuzione come servizio. In questo caso, il programma chiama `CAtlServiceModuleT::Run` direttamente, in modo che il programma possa essere eseguito come server locale. Per ulteriori informazioni sull'esecuzione del programma come server locale, vedere Suggerimenti per il [debug](../atl/debugging-tips.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Services](../atl/atl-services.md)<br/>
-[CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
+[Funzione CAtlServiceModuleT:: Start](../atl/reference/catlservicemodulet-class.md#start)

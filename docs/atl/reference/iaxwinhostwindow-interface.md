@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia IAxWinHostWindow'
 title: Interfaccia IAxWinHostWindow
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 44681b94e0bd1dfd757ebfa19f83074785dd95f5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 86cccd2b9ae19d5020cd1cf7ff2f0aff8759060e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139711"
 ---
 # <a name="iaxwinhostwindow-interface"></a>Interfaccia IAxWinHostWindow
 
@@ -33,11 +34,11 @@ Questa interfaccia fornisce metodi per la modifica di un controllo e del relativ
 interface IAxWinHostWindow : IUnknown
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AttachControl](#attachcontrol)|Connette un controllo esistente all'oggetto host.|
 |[CreateControl](#createcontrol)|Crea un controllo e lo collega all'oggetto host.|
@@ -46,7 +47,7 @@ interface IAxWinHostWindow : IUnknown
 |[SetExternalDispatch](#setexternaldispatch)|Imposta l' `IDispatch` interfaccia esterna.|
 |[SetExternalUIHandler](#setexternaluihandler)|Imposta l' `IDocHostUIHandlerDispatch` interfaccia esterna.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa interfaccia è esposta dagli oggetti di hosting del controllo ActiveX di ATL. Chiamare i metodi su questa interfaccia per creare e/o collegare un controllo all'oggetto host, per ottenere un'interfaccia da un controllo ospitato o per impostare l'interfaccia dispatch o il gestore dell'interfaccia utente esterno da usare quando si ospita il Web browser.
 
@@ -105,7 +106,7 @@ in Puntatore a un'interfaccia per un flusso contenente i dati di inizializzazion
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa finestra sarà sottoclassata dall'oggetto host che espone questa interfaccia in modo che i messaggi possano essere riflessi nel controllo e le altre funzionalità del contenitore funzioneranno.
 
@@ -151,7 +152,7 @@ in Puntatore all' `IUnknown` interfaccia dell'oggetto sink da connettere al punt
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A differenza del `CreateControl` metodo, `CreateControlEx` consente anche di ricevere un puntatore a interfaccia per il controllo appena creato e di configurare un sink di evento per ricevere gli eventi generati dal controllo.
 
@@ -213,11 +214,11 @@ in Puntatore a un' `IDocHostUIHandlerDispatch` interfaccia.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione viene utilizzata dai controlli (ad esempio, il controllo Web browser) che eseguono una query sul sito dell'host per l' `IDocHostUIHandlerDispatch` interfaccia.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Interfaccia IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
 [CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>

@@ -1,18 +1,19 @@
 ---
+description: 'Altre informazioni su: Pimpl per incapsulamento di Compile-Time (C++ moderno)'
 title: Pimpl per incapsulamento in fase di compilazione (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: f1eb06ad3a52be486f085babf699677951b1ee71
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 95d1ca4f377cc911e862885e86f846d8536d3b1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145886"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl per incapsulamento in fase di compilazione (C++ moderno)
 
-L' *idioma magnaccia* è una tecnica C++ moderna per nascondere l'implementazione, ridurre al minimo l'accoppiamento e separare le interfacce. Pimpl è breve per "puntatore all'implementazione". È possibile che l'utente abbia già familiarità con il concetto ma lo conosca con altri nomi, ad esempio Cheshire Cat o il linguaggio del firewall del compilatore.
+L' *idioma pimpal* è una tecnica C++ moderna che consente di nascondere l'implementazione, ridurre al minimo l'accoppiamento e separare le interfacce. Pimpl è breve per "puntatore all'implementazione". È possibile che l'utente abbia già familiarità con il concetto ma lo conosca con altri nomi, ad esempio Cheshire Cat o il linguaggio del firewall del compilatore.
 
 ## <a name="why-use-pimpl"></a>Perché usare pimpl?
 
@@ -39,7 +40,7 @@ L'idioma pimpl evita di ricompilare le cascate e i layout degli oggetti fragili.
 
 ## <a name="pimpl-implementation"></a>Implementazione di pimpl
 
-Definire la classe `impl` nel file con estensione cpp.
+Definire la `impl` classe nel file con estensione cpp.
 
 ```cpp
 // my_class.cpp
@@ -57,8 +58,8 @@ my_class::my_class(): pimpl( new impl )
 
 Valutare se aggiungere il supporto per la specializzazione di swap senza generazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[BentornatiC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)
