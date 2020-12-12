@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: layout dinamico'
 title: Layout dinamico
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-ms.openlocfilehash: 3108e7bae0be216dfb877d03c87fdc17ef7d69f2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 284109c4f34bd3d325c9748ccc1698a9a5b3fe02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291077"
 ---
 # <a name="dynamic-layout"></a>Layout dinamico
 
@@ -35,9 +36,9 @@ Dopo il ridimensionamento l'area della casella di riepilogo viene ampliata in mo
 
    ![Aprire la finestra di dialogo nell'editor di risorse.](../mfc/media/mfcdynamiclayout3.png "Aprire la finestra di dialogo nell'editor di risorse.")
 
-1. Selezionare un controllo e nella finestra **Proprietà** (in **Visualizzazione classi**) impostare le proprietà del layout dinamico. La sezione **layout dinamico** della finestra **Proprietà** contiene le proprietà **tipo di spostamento**, **tipo di ridimensionamento**e, a seconda dei valori selezionati per tali proprietà, proprietà specifiche che definiscono la quantità di controlli che spostano o modificano le dimensioni. Il **tipo in movimento** determina il modo in cui un controllo viene spostato quando viene modificata la dimensione della finestra di dialogo; Il **tipo di ridimensionamento** determina il modo in cui un controllo viene ridimensionato quando viene modificata la dimensione della finestra di dialogo. Lo stato di **tipo e il** **tipo di ridimensionamento** possono essere **orizzontali**, **verticali**, **entrambi**o **nessuno** , a seconda delle dimensioni che si desidera modificare dinamicamente. Il termine Orizzontale si riferisce alla dimensione X, mentre Verticale corrisponde alla direzione Y.
+1. Selezionare un controllo e nella finestra **Proprietà** (in **Visualizzazione classi**) impostare le proprietà del layout dinamico. La sezione **layout dinamico** della finestra **Proprietà** contiene le proprietà **tipo di spostamento**, **tipo di ridimensionamento** e, a seconda dei valori selezionati per tali proprietà, proprietà specifiche che definiscono la quantità di controlli che spostano o modificano le dimensioni. Il **tipo in movimento** determina il modo in cui un controllo viene spostato quando viene modificata la dimensione della finestra di dialogo; Il **tipo di ridimensionamento** determina il modo in cui un controllo viene ridimensionato quando viene modificata la dimensione della finestra di dialogo. Lo stato di **tipo e il** **tipo di ridimensionamento** possono essere **orizzontali**, **verticali**, **entrambi** o **nessuno** , a seconda delle dimensioni che si desidera modificare dinamicamente. Il termine Orizzontale si riferisce alla dimensione X, mentre Verticale corrisponde alla direzione Y.
 
-1. Se si vuole che un controllo, ad esempio un pulsante, sia a dimensione fissa e venga inserito in basso a destra, come avviene in comune per i pulsanti **OK** o **Annulla** , impostare il **tipo di ridimensionamento** su **None**e impostare il **tipo di spostamento** su **entrambi**. Per la **X spostamento** e lo spostamento dei valori **Y** in **tipo di spostamento**, impostare 100% per fare in modo che il controllo resti a una distanza fissa dall'angolo inferiore destro.
+1. Se si vuole che un controllo, ad esempio un pulsante, sia a dimensione fissa e venga inserito in basso a destra, come avviene in comune per i pulsanti **OK** o **Annulla** , impostare il **tipo di ridimensionamento** su **None** e impostare il **tipo di spostamento** su **entrambi**. Per la **X spostamento** e lo spostamento dei valori **Y** in **tipo di spostamento**, impostare 100% per fare in modo che il controllo resti a una distanza fissa dall'angolo inferiore destro.
 
    ![Layout dinamico](../mfc/media/mfcdynamiclayout1.png "Layout dinamico")
 
@@ -141,10 +142,10 @@ La procedura precedente è utile per specificare le proprietà del layout dinami
     END
     ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CMFCDynamicLayout](reference/cmfcdynamiclayout-class.md)<br/>
-[Classi dei controlli](control-classes.md)<br/>
-[Classi di finestre di dialogo](dialog-box-classes.md)<br/>
+[Classi di controlli](control-classes.md)<br/>
+[Classi della finestra di dialogo](dialog-box-classes.md)<br/>
 [Editor finestre](../windows/dialog-editor.md)<br/>
 [Layout dinamico della finestra di dialogo per MFC in Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

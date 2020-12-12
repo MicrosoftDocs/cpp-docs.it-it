@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: implements_category'
 title: implements_category (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: cd9a4de8834bc22368393e9ea4639884785af0f2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0efc240394c67ab7d470523b8dfe5025b7a0f978
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289543"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -28,7 +29,7 @@ Specifica le categorie di componenti implementate dalla classe di destinazione.
 *implements_category*<br/>
 ID della categoria implementata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **implements_category** C++ specifica le categorie di componenti implementate dalla classe di destinazione. A tale scopo, è necessario creare una mappa delle categorie e aggiungere voci separate specificate dall'attributo **implements_category** . Per altre informazioni, vedere [categorie di componenti e il](/windows/win32/com/component-categories-and-how-they-work)relativo funzionamento.
 
@@ -62,7 +63,7 @@ class CMyClass {};
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

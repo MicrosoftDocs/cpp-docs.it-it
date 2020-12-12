@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; iterator &gt; Operators'
 title: Operatori &lt;iterator&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 36851eab86a32fab9294129cf1918e0add528eb3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe47669bcd2ab72cd91bc9eee36afea975fab3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289699"
 ---
 # <a name="ltiteratorgt-operators"></a>Operatori &lt;iterator&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.
 
@@ -53,7 +54,7 @@ Oggetto di tipo `iterator`.
 
 **`true`** Se gli oggetti iteratore non sono uguali. **`false`** se gli oggetti iteratore sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto iteratore è uguale a un altro se entrambi puntano agli stessi elementi in un contenitore. Se due iteratori puntano a elementi diversi in un contenitore, non sono uguali.
 
@@ -119,7 +120,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.
 
@@ -157,7 +158,7 @@ Oggetto di tipo iteratore.
 
 **`true`** Se gli oggetti iteratore sono uguali. **`false`** se gli oggetti iteratore non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto iteratore è uguale a un altro se entrambi puntano agli stessi elementi in un contenitore. Se due iteratori puntano a elementi diversi in un contenitore, non sono uguali.
 
@@ -225,7 +226,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto iteratore a sinistra dell'operatore è minore all'oggetto iteratore a destra.
 
@@ -246,7 +247,7 @@ Oggetto di tipo `iterator`.
 
 **`true`** Se l'iteratore a sinistra dell'espressione è minore dell'iteratore a destra dell'espressione; **`false`** se è maggiore o uguale all'iteratore a destra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto iteratore è minore di un altro se punta a un elemento che si trova in una posizione precedente nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore. Un oggetto iteratore non è minore di un altro se punta allo stesso elemento dell'altro o a un elemento che si trova in una posizione successiva nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore.
 
@@ -316,7 +317,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto iteratore a sinistra dell'operatore è minore o uguale all'oggetto iteratore a destra.
 
@@ -337,7 +338,7 @@ Oggetto di tipo iteratore.
 
 **`true`** Se l'iteratore a sinistra dell'espressione è minore o uguale all'iteratore a destra dell'espressione; **`false`** se è maggiore dell'iteratore a destra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto iteratore è minore o uguale a un altro se punta allo stesso elemento o a un elemento che si trova in una posizione precedente nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore. Un oggetto iteratore è maggiore di un altro se punta a un elemento che si trova in una posizione successiva nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore.
 
@@ -411,7 +412,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore dell'oggetto iteratore a destra.
 
@@ -432,7 +433,7 @@ Oggetto di tipo iteratore.
 
 **`true`** Se l'iteratore a sinistra dell'espressione è maggiore dell'iteratore a destra dell'espressione; **`false`** se è minore o uguale all'iteratore a destra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto iteratore è maggiore di un altro se punta a un elemento che si trova in una posizione successiva nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore. Un oggetto iteratore non è maggiore di un altro se punta allo stesso elemento dell'altro o a un elemento che si trova in una posizione precedente nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore.
 
@@ -500,7 +501,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto iteratore a sinistra dell'operatore è maggiore o uguale all'oggetto iteratore a destra.
 
@@ -521,7 +522,7 @@ Oggetto di tipo iteratore.
 
 **`true`** Se l'iteratore a sinistra dell'espressione è maggiore o uguale all'iteratore a destra dell'espressione; **`false`** se è minore dell'iteratore a destra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto iteratore è maggiore o uguale a un altro se punta allo stesso elemento o a un elemento che si trova in una posizione successiva nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore. Un oggetto iteratore è minore di un altro se punta a un elemento che si trova in una posizione precedente nel contenitore rispetto all'elemento a cui punta l'altro oggetto iteratore.
 
@@ -595,7 +596,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operator"></a><a name="op_add"></a>operatore +
+## <a name="operator"></a><a name="op_add"></a> operatore +
 
 Aggiunge un offset a un iteratore e restituisce un oggetto `move_iterator` o un oggetto `reverse_iterator` che punta all'elemento inserito in corrispondenza della nuova posizione dell'offset.
 
@@ -623,7 +624,7 @@ Iteratore di cui deve essere eseguito l'offset.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il _Off di somma a *destra*  +  *_Off*.
+Restituisce il _Off di somma a *destra*  +  .
 
 ### <a name="example"></a>Esempio
 
@@ -674,7 +675,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>operatore
+## <a name="operator-"></a><a name="operator-"></a> operatore
 
 Sottrae un iteratore da un altro e restituisce la differenza.
 
@@ -702,7 +703,7 @@ Iteratore.
 
 Differenza tra due iteratori `.`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo operatore modello restituisce `left.base() - right.base()`.
 

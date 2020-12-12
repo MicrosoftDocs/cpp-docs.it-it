@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: eccezioni: eccezioni di database'
 title: 'Eccezioni: eccezioni di database'
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3e45f887d51b4b81196cd08d11f426f4ee6d4481
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290648"
 ---
 # <a name="exceptions-database-exceptions"></a>Eccezioni: eccezioni di database
 
@@ -26,7 +27,7 @@ Questo articolo illustra come gestire le eccezioni del database. La maggior part
 
 - [Esempio di gestione delle eccezioni del database](#_core_a_database_exception.2d.handling_example)
 
-## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a>Approcci alla gestione delle eccezioni
+## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a> Approcci alla gestione delle eccezioni
 
 L'approccio è lo stesso se si utilizza DAO (obsoleto) o ODBC.
 
@@ -52,7 +53,7 @@ Per le eccezioni DAO, sono in genere disponibili altre informazioni. È possibil
 
 Ulteriori informazioni sugli errori DAO, il tipo di oggetto errore DAO e la raccolta di errori DAO sono disponibili nella classe [CDaoException](reference/cdaoexception-class.md).
 
-## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>Esempio di gestione delle eccezioni del database
+## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a> Esempio di database Exception-Handling
 
 Nell'esempio seguente viene effettuato un tentativo di costruire un oggetto derivato da [CRecordset](reference/crecordset-class.md)nell'heap con l' **`new`** operatore, quindi viene aperto il recordset (per un'origine dati ODBC). Per un esempio simile per le classi DAO, vedere "esempio di eccezione DAO" riportata di seguito.
 
@@ -74,6 +75,6 @@ Per una descrizione delle informazioni sull'errore restituite da un `CDaoExcepti
 
 Quando si utilizzano i database di Microsoft Jet (MDB) e, nella maggior parte dei casi, quando si utilizza ODBC, sarà presente un solo oggetto Error. Nel rari casi in cui si utilizza un'origine dati ODBC e si verificano più errori, è possibile eseguire il ciclo tramite la raccolta di errori di DAO in base al numero di errori restituiti da [CDaoException:: GetErrorCount](reference/cdaoexception-class.md#geterrorcount). Ogni volta che si utilizza il ciclo, chiamare [CDaoException:: GetErrorInfo](reference/cdaoexception-class.md#geterrorinfo) per ricaricare il `m_pErrorInfo` membro dati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](exception-handling-in-mfc.md)

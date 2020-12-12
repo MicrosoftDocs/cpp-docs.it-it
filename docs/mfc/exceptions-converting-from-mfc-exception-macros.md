@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: eccezioni: conversione da macro di eccezioni MFC'
 title: 'Eccezioni: conversione da macro eccezioni MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83d4522dff902681e26a2bd098b46fea92bf1c6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290700"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Eccezioni: conversione da macro eccezioni MFC
 
 Si tratta di un argomento avanzato.
 
-Questo articolo illustra come convertire il codice esistente scritto con le macro di Microsoft Foundation Class ( **try**, **catch**, **throw**e così via) per usare le parole chiave di gestione delle eccezioni C++ **`try`** , **`catch`** e **`throw`** . Gli argomenti includono:
+Questo articolo illustra come convertire il codice esistente scritto con le macro di Microsoft Foundation Class ( **try**, **catch**, **throw** e così via) per usare le parole chiave di gestione delle eccezioni C++ **`try`** , **`catch`** e **`throw`** . Gli argomenti includono:
 
 - [Vantaggi della conversione](#_core_advantages_of_converting)
 
 - [Conversione di codice con macro di eccezione per l'utilizzo di eccezioni C++](#_core_doing_the_conversion)
 
-## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>Vantaggi della conversione
+## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a> Vantaggi della conversione
 
 Probabilmente non è necessario convertire il codice esistente, anche se è necessario essere a conoscenza delle differenze tra le implementazioni di macro nella versione MFC 3,0 e le implementazioni nelle versioni precedenti. Queste differenze e le successive modifiche al comportamento del codice sono illustrate in [eccezioni: modifiche alle macro delle eccezioni nella versione 3,0](exceptions-changes-to-exception-macros-in-version-3-0.md).
 
@@ -69,11 +70,11 @@ Un'altra differenza è la sintassi. La sintassi per macro e parole chiave è div
 
    Le macro usano **THROW_LAST** per generare di nuovo l'eccezione corrente. La **`throw`** parola chiave, senza argomento, ha lo stesso effetto.
 
-## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>Eseguire la conversione
+## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a> Eseguire la conversione
 
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Per convertire il codice usando le macro per usare le parole chiave di gestione delle eccezioni C++
 
-1. Individuare tutte le occorrenze delle macro MFC **try**, **catch**, **AND_CATCH**, **END_CATCH**, **throw**e **THROW_LAST**.
+1. Individuare tutte le occorrenze delle macro MFC **try**, **catch**, **AND_CATCH**, **END_CATCH**, **throw** e **THROW_LAST**.
 
 2. Sostituire o eliminare tutte le occorrenze delle macro seguenti:
 
@@ -95,7 +96,7 @@ Un'altra differenza è la sintassi. La sintassi per macro e parole chiave è div
 
    [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   in
+   to
 
    [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
@@ -111,6 +112,6 @@ Il codice nell'esempio seguente usa le parole chiave dell'eccezione C++, quindi 
 
 Per ulteriori informazioni, vedere [eccezioni: utilizzo delle macro MFC e delle eccezioni C++](exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](exception-handling-in-mfc.md)<br/>

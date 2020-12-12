@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: &lt; thread&gt;'
 title: '&lt;thread&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-ms.openlocfilehash: 251a423829a048e3d67b0bcf83107f52c3fdafca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3387d96772f1ed3322ce79b744e17b6bf494140d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232846"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289621"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -32,19 +33,19 @@ La `__STDCPP_THREADS__` macro viene definita come valore diverso da zero per ind
 
 ### <a name="public-classes"></a>Classi pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Classe thread](../standard-library/thread-class.md)|Definisce un oggetto usato per osservare e gestire un thread di esecuzione in un'applicazione.|
 
 ### <a name="public-structures"></a>Strutture pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Struttura hash (Libreria standard C++)](../standard-library/hash-structure-stl.md)|Definisce una funzione membro che restituisce un valore che è determinato in modo univoco da un oggetto `thread::id` . La funzione membro definisce una funzione [hash](../standard-library/hash-class.md) adatta per il mapping di valori di tipo `thread::id` a una distribuzione di valori di indice.|
 
 ### <a name="public-functions"></a>Funzioni pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|Identifica in modo univoco il thread di esecuzione corrente.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blocca il thread chiamante.|
@@ -54,7 +55,7 @@ La `__STDCPP_THREADS__` macro viene definita come valore diverso da zero per ind
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore operator>=](../standard-library/thread-operators.md#op_gt_eq)|Determina se un oggetto `thread::id` è maggiore o uguale a un altro.|
 |[operatore> operator](../standard-library/thread-operators.md#op_gt)|Determina se un oggetto `thread::id` è maggiore di un altro.|
@@ -64,7 +65,7 @@ La `__STDCPP_THREADS__` macro viene definita come valore diverso da zero per ind
 |[operatore operator = =](../standard-library/thread-operators.md#op_eq_eq)|Confronta due oggetti `thread::id` per stabilirne l'uguaglianza.|
 |[operatore<< operator](../standard-library/thread-operators.md#op_lt_lt)|Inserisce una rappresentazione testo di un oggetto `thread::id` in un flusso.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

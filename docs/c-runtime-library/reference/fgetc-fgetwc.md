@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fgetc, fgetwc'
 title: fgetc, fgetwc
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9567c6d24fe0ae978a3680171167168061339f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289231"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -67,7 +68,7 @@ Puntatore alla struttura **FILE**.
 
 **fgetc** restituisce il carattere letto come **`int`** o restituisce **EOF** per indicare un errore o la fine del file. **fgetwc** restituisce, come [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce **WEOF** per indicare un errore o la fine del file. Per entrambe le funzioni, usare **feof** o **ferrator** per distinguere tra un errore e una condizione di fine del file. Se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. Se il *flusso* è **null**, **fgetc** e **fgetwc** richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EOF**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni legge un singolo carattere dalla posizione corrente del file associato al *flusso*. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.
 
@@ -147,7 +148,7 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

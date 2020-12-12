@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCReBar'
 title: Classe CMFCReBar
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,17 +29,17 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: 409c97aba64c97ecf0443d14a70848cc298a44ba
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: fcfad39ddb9c5f3bdacc5a06ebb65d22bc8c7a4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289829"
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
 
-Un `CMFCReBar` oggetto è una barra di controllo che fornisce informazioni sul layout, la persistenza e lo stato per i controlli dell'armatura.
-Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
+Un `CMFCReBar` oggetto è una barra di controllo che fornisce informazioni di layout, persistenza e stato per i controlli Rebar.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella \\ \\ \\ MFC atlmfc src di VC** per l'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,53 +47,53 @@ Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **
 class CMFCReBar : public CPane
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CMFCReBar::AddBar](#addbar)|Aggiunge una banda a un'armatura.|
-|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Overrides [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
-|[CMFCReBar::CanFloat](#canfloat)|(Esegue l'override di [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
-|[CMFCReBar::Create](#create)|Crea il controllo Rebar e lo `CMFCReBar` associa all'oggetto.|
-|[CMFCReBar::EnableDocking (Docking)](#enabledocking)|(OverrideS [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
-|[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||
-|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Fornisce accesso diretto al controllo comune [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) sottostante.|
-|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Esegue l'override di [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|
-|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Esegue l'override di [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Overrides [CBasePane::OnUpdateCmdUI](cbasepane-class.md).)|
-|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Esegue l'override di [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|
+|[CMFCReBar:: AddBar](#addbar)|Aggiunge una banda a un controllo Rebar.|
+|[CMFCReBar:: CalcFixedLayout](#calcfixedlayout)|Esegue l'override di [CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).|
+|[CMFCReBar:: CanFloat](#canfloat)|Esegue l'override di [CBasePane:: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).|
+|[CMFCReBar:: create](#create)|Crea il controllo Rebar e lo collega all' `CMFCReBar` oggetto.|
+|[CMFCReBar:: EnableDocking](#enabledocking)|Esegue l'override di [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).|
+|[CMFCReBar:: GetReBarBandInfoSize](#getrebarbandinfosize)||
+|[CMFCReBar:: GetReBarCtrl](#getrebarctrl)|Fornisce accesso diretto al controllo comune [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) sottostante.|
+|[CMFCReBar:: OnShowControlBarMenu](#onshowcontrolbarmenu)|Esegue l'override di [CPane:: OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).|
+|[CMFCReBar:: OnToolHitTest](#ontoolhittest)|Esegue l'override di [CWnd:: OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).|
+|[CMFCReBar:: OnUpdateCmdUI](#onupdatecmdui)|Esegue l'override di [CBasePane:: OnUpdateCmdUI](cbasepane-class.md).|
+|[CMFCReBar:: SetPaneAlignment](#setpanealignment)|Esegue l'override di [CBasePane:: SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Un `CMFCReBar` oggetto può contenere diverse finestre figlio. Sono incluse le caselle di modifica, le barre degli strumenti e le caselle di riepilogo. È possibile ridimensionare l'armatura a livello di codice oppure l'utente può ridimensionare manualmente l'armatura trascinandone la barra gripper. È inoltre possibile impostare lo sfondo di un oggetto Rebar su una bitmap di propria scelta.
+Un `CMFCReBar` oggetto può contenere una varietà di finestre figlio. Sono incluse le caselle di modifica, le barre degli strumenti e le caselle di riepilogo. È possibile ridimensionare il controllo Rebar a livello di codice oppure l'utente può ridimensionare manualmente il controllo rebar trascinando la barra del controllo. È inoltre possibile impostare lo sfondo di un oggetto Rebar su una bitmap di propria scelta.
 
-Un oggetto Rebar si comporta in modo simile a un oggetto barra degli strumenti. Un controllo Rebar può contenere una o più bande e ogni banda può contenere una barra gripper, una bitmap, un'etichetta di testo e una finestra figlio.
+Un oggetto Rebar si comporta in modo analogo a un oggetto della barra degli strumenti. Un controllo Rebar può contenere una o più bande, ognuna delle quali può contenere una barra di pinza, una bitmap, un'etichetta di testo e una finestra figlio.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CMFCReBar` . Nell'esempio viene illustrato come creare un controllo Rebar e aggiungervi una banda. La banda funziona come una barra degli strumenti interna. Questo frammento di codice fa parte [dell'esempio Rebar Test](../../overview/visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCReBar` . Nell'esempio viene illustrato come creare un controllo Rebar e aggiungervi una banda. La banda funge da barra degli strumenti interna. Questo frammento di codice fa parte dell' [esempio di test del controllo Rebar](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[Cobject](../../mfc/reference/cobject-class.md)\
-&nbsp;[CCmdTarget (Destinazione comando)](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane (Riquadro di base)](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CPane (CPane)](../../mfc/reference/cpane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[- CMFCReBar (Bar)](../../mfc/reference/cmfcrebar-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CPane](../../mfc/reference/cpane-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CMFCReBar](../../mfc/reference/cmfcrebar-class.md) └
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxRebar.h
+**Intestazione:** afxRebar. h
 
-## <a name="cmfcrebaraddbar"></a><a name="addbar"></a>CMFCReBar::AddBar
+## <a name="cmfcrebaraddbar"></a><a name="addbar"></a> CMFCReBar:: AddBar
 
-Aggiunge una banda a un'armatura.
+Aggiunge una banda a un controllo Rebar.
 
 ```
 BOOL AddBar(
@@ -111,31 +112,31 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Parametri
 
-*pBar (Barra)*<br/>
-[in, out] Puntatore alla finestra figlio che deve essere inserita nell'armatura. L'oggetto di riferimento deve avere lo stile **WS_CHILD** finestra.
+*pBar*<br/>
+[in, out] Puntatore alla finestra figlio da inserire nel controllo Rebar. L'oggetto a cui si fa riferimento deve avere lo stile della finestra **WS_CHILD** .
 
-*pszText (testo psz)*<br/>
-[in] Specifica il testo da visualizzare sull'armatura. Il testo non fa parte della finestra figlio. Piuttosto, viene visualizzato sull'armatura stessa.
+*pszText*<br/>
+in Specifica il testo da visualizzare nel controllo Rebar. Il testo non fa parte della finestra figlio. Viene invece visualizzato sul rebar stesso.
 
-*pbmp*<br/>
-[in, out] Specifica la bitmap da visualizzare sullo sfondo dell'armatura.
+*PBMP*<br/>
+[in, out] Specifica la bitmap da visualizzare sullo sfondo del controllo Rebar.
 
-*DwStyle (in stile dwStyle)*<br/>
-[in] Contiene lo stile da applicare alla banda. Per un elenco completo degli stili `fStyle` di finca, vedere la descrizione per nella struttura [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) nella documentazione di Windows SDK.
+*dwStyle*<br/>
+in Contiene lo stile da applicare alla banda. Per un elenco completo degli stili delle bande, vedere la descrizione di `fStyle` nella struttura [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) nella documentazione di Windows SDK.
 
-*ClrFore*<br/>
-[in] Rappresenta il colore di primo piano dell'armatura.
+*clrFore*<br/>
+in Rappresenta il colore di primo piano del controllo Rebar.
 
-*ClrIndietro*<br/>
-[in] Rappresenta il colore di sfondo dell'armatura.
+*clrBack*<br/>
+in Rappresenta il colore di sfondo del controllo Rebar.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe la banda è stata aggiunta correttamente all'armatura; in caso contrario, FALSE.
+TRUE se la banda è stata aggiunta correttamente al controllo Rebar; in caso contrario, FALSE.
 
-## <a name="cmfcrebarcreate"></a><a name="create"></a>CMFCReBar::Create
+## <a name="cmfcrebarcreate"></a><a name="create"></a> CMFCReBar:: create
 
-Crea il controllo Rebar e lo associa all'oggetto [CMFCReBar.](../../mfc/reference/cmfcrebar-class.md)
+Crea il controllo Rebar e lo connette all'oggetto [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) .
 
 ```
 BOOL Create(
@@ -147,27 +148,27 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd (informazioni in due)*<br/>
+*pParentWnd*<br/>
 [in, out] Puntatore alla finestra padre di questo controllo Rebar.
 
 *dwCtrlStyle*<br/>
-[in] Specifica lo stile per il controllo Rebar. Il valore di stile predefinito è **RBS_BANDBORDERS**, che visualizza linee strette per separare le bande adiacenti nel controllo Rebar. Per un elenco di stili validi, vedere [Stili del controllo Rebar](/windows/win32/Controls/rebar-control-styles) nella documentazione di Windows SDK.
+in Specifica lo stile per il controllo Rebar. Il valore di stile predefinito è **RBS_BANDBORDERS**, che visualizza le linee strette per separare le bande adiacenti sul controllo Rebar. Per un elenco di stili validi, vedere [stili di controllo Rebar](/windows/win32/Controls/rebar-control-styles) nella documentazione di Windows SDK.
 
-*DwStyle (in stile dwStyle)*<br/>
-[in] Stile della finestra del controllo Rebar. Per un elenco degli stili validi, vedere [Stili finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+in Stile della finestra del controllo Rebar. Per un elenco di stili validi, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *nID*<br/>
-[in] ID della finestra figlio di Rebar.
+in ID della finestra figlio del controllo Rebar.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'armatura è stata creata correttamente. in caso contrario, FALSE.
+TRUE se il controllo Rebar è stato creato correttamente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebargetrebarctrl"></a><a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl
+## <a name="cmfcrebargetrebarctrl"></a><a name="getrebarctrl"></a> CMFCReBar:: GetReBarCtrl
 
-Fornisce accesso `CReBarCtrl` diretto al controllo `CMFCReBar` comune sottostante per gli oggetti.
+Fornisce accesso diretto al `CReBarCtrl` controllo comune sottostante per `CMFCReBar` gli oggetti.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -175,13 +176,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento all'oggetto `CReBarCtrl` sottostante.
+Riferimento all' `CReBarCtrl` oggetto sottostante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare questo metodo per sfruttare la funzionalità di controllo comune dell'armatura di Windows durante la personalizzazione dell'armatura.
+Chiamare questo metodo per sfruttare la funzionalità di controllo comune del rebar di Windows durante la personalizzazione del controllo Rebar.
 
-## <a name="cmfcrebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout
+## <a name="cmfcrebarcalcfixedlayout"></a><a name="calcfixedlayout"></a> CMFCReBar:: CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -191,14 +192,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAllunga*<br/>
-[in] *bHorz*<br/>
+in *bStretch*<br/>
+in *bHorz*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebarcanfloat"></a><a name="canfloat"></a>CMFCReBar::CanFloat
+## <a name="cmfcrebarcanfloat"></a><a name="canfloat"></a> CMFCReBar:: CanFloat
 
 ```
 virtual BOOL CanFloat() const;
@@ -206,9 +207,9 @@ virtual BOOL CanFloat() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebarenabledocking"></a><a name="enabledocking"></a>CMFCReBar::EnableDocking (Docking)
+## <a name="cmfcrebarenabledocking"></a><a name="enabledocking"></a> CMFCReBar:: EnableDocking
 
 ```cpp
 void EnableDocking(DWORD dwDockStyle);
@@ -216,11 +217,11 @@ void EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *DwDockStyle (stile dwDock)*<br/>
+in *dwDockStyle*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebargetrebarbandinfosize"></a><a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize
+## <a name="cmfcrebargetrebarbandinfosize"></a><a name="getrebarbandinfosize"></a> CMFCReBar:: GetReBarBandInfoSize
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -228,9 +229,9 @@ UINT GetReBarBandInfoSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu
+## <a name="cmfcrebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a> CMFCReBar:: OnShowControlBarMenu
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -242,9 +243,9 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebarontoolhittest"></a><a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest
+## <a name="cmfcrebarontoolhittest"></a><a name="ontoolhittest"></a> CMFCReBar:: OnToolHitTest
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -254,14 +255,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *punto*<br/>
-[in] *pTI*<br/>
+in *punto* di<br/>
+in *PTI*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI
+## <a name="cmfcrebaronupdatecmdui"></a><a name="onupdatecmdui"></a> CMFCReBar:: OnUpdateCmdUI
 
 ```
 virtual void OnUpdateCmdUI(
@@ -271,12 +272,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pTarget (Destinazione)*<br/>
-[in] *bDisableIfNoHndler*<br/>
+in *PTarget*<br/>
+in *bDisableIfNoHndler*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcrebarsetpanealignment"></a><a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment
+## <a name="cmfcrebarsetpanealignment"></a><a name="setpanealignment"></a> CMFCReBar:: SetPaneAlignment
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -284,13 +285,13 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *dwAllineamento*<br/>
+in *dwAlignment*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CReBarCtrl](../../mfc/reference/crebarctrl-class.md)<br/>
-[CPane Class](../../mfc/reference/cpane-class.md)
+[Classe CPane](../../mfc/reference/cpane-class.md)

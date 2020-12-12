@@ -1,16 +1,17 @@
 ---
+description: 'Ulteriori informazioni su: informazioni sulle immagini negli elenchi di immagini'
 title: Informazioni sulle immagini negli elenchi di immagini
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CImageList class [MFC], image information in
 - image lists [MFC], image information in
 ms.assetid: 73c41543-fa91-405d-b15b-0feffa6a72c1
-ms.openlocfilehash: c12198c769585763095d22b73d11f7af3c9d6fc0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c3a5f1cee0a06177d12b72673bf0ebf8e1a73933
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290141"
 ---
 # <a name="image-information-in-image-lists"></a>Informazioni sulle immagini negli elenchi di immagini
 
@@ -20,7 +21,7 @@ La funzione membro [GetImageCount](reference/cimagelist-class.md#getimagecount) 
 
 È possibile creare un'icona basata su un'immagine e una maschera in un elenco di immagini usando la funzione membro [ExtractIcon](reference/cimagelist-class.md#extracticon) . La funzione restituisce l'handle dell'icona nuova.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CImageList](using-cimagelist.md)<br/>
+[Utilizzo di CImageList](using-cimagelist.md)<br/>
 [Controlli](controls-mfc.md)

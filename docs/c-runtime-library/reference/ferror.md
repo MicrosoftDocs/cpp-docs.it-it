@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ferror'
 title: ferror
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc4034b1099bb4deed55f363b4a024371ad84e48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920145"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289465"
 ---
 # <a name="ferror"></a>ferror
 
@@ -58,7 +59,7 @@ Se non si è verificato alcun errore nel *flusso*, il **ferro** restituisce 0. I
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La routine del **ferratore** (implementata sia come funzione che come macro) testa un errore di lettura o scrittura nel file associato al *flusso*. Se si è verificato un errore, l'indicatore di errore per il flusso rimane impostato fino a quando il flusso non viene chiuso o riavvolto oppure finché non viene chiamato **clearerr** .
 
@@ -66,7 +67,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**ferror**|\<stdio.h>|
 
@@ -76,7 +77,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [feof](feof.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione degli errori](../../c-runtime-library/error-handling-crt.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>

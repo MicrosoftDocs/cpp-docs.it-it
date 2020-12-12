@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: eccezioni: generazione di eccezioni dalle funzioni personalizzate'
 title: 'Eccezioni: generazione di eccezioni da funzioni personalizzate'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a9d789680eeba218370471b1259c8c664f3c3cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290466"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Eccezioni: generazione di eccezioni da funzioni personalizzate
 
@@ -40,6 +41,6 @@ Quando viene generata un'eccezione, l'esecuzione della funzione corrente viene a
 > [!NOTE]
 > La gestione predefinita delle eccezioni di MFC si applica solo ai puntatori agli `CException` oggetti e agli oggetti delle `CException` classi derivate da. Nell'esempio precedente viene ignorato il meccanismo di eccezione di MFC.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](exception-handling-in-mfc.md)

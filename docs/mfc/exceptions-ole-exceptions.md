@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: eccezioni: eccezioni OLE'
 title: 'Eccezioni: eccezioni OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-ms.openlocfilehash: 7bd0b0cb2c9eb6fe49356ae8fd4602676d54fa66
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: da2a92d23dc7c11735c75482febea60916af289f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290518"
 ---
 # <a name="exceptions-ole-exceptions"></a>Eccezioni: eccezioni OLE
 
@@ -41,6 +42,6 @@ La differenza tra queste due classi è la quantità di informazioni che fornisco
 
 Due funzioni globali corrispondono alle due classi di eccezioni OLE: [AfxThrowOleException](reference/exception-processing.md#afxthrowoleexception) e [AfxThrowOleDispatchException](reference/exception-processing.md#afxthrowoledispatchexception). Utilizzarle per generare rispettivamente eccezioni OLE generali ed eccezioni OLE dispatch.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](exception-handling-in-mfc.md)

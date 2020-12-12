@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione delle eccezioni in MFC'
 title: Gestione delle eccezioni in MFC
 ms.date: 11/19/2019
 helpviewer_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: ef827af413513d1a1753f84b1cb69a66f41f690c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 15b0a054d3b1c0353c60c1c8dda03c9e704c077e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290752"
 ---
 # <a name="exception-handling-in-mfc"></a>Gestione delle eccezioni in MFC
 
@@ -65,7 +66,7 @@ Questo articolo include gli argomenti seguenti:
 
 - [Ulteriori informazioni sulle eccezioni](#_core_further_reading_about_exceptions)
 
-## <a name="when-to-use-exceptions"></a><a name="_core_when_to_use_exceptions"></a>Quando usare le eccezioni
+## <a name="when-to-use-exceptions"></a><a name="_core_when_to_use_exceptions"></a> Quando usare le eccezioni
 
 Quando una funzione viene chiamata durante l'esecuzione del programma, possono verificarsi tre categorie di risultati: esecuzione normale, esecuzione errata o esecuzione anomala. Ogni categoria è descritta di seguito.
 
@@ -83,7 +84,7 @@ Quando una funzione viene chiamata durante l'esecuzione del programma, possono v
 
 L'utilizzo delle eccezioni è particolarmente appropriato per l'esecuzione anomala.
 
-## <a name="mfc-exception-support"></a><a name="_core_mfc_exception_support"></a>Supporto delle eccezioni MFC
+## <a name="mfc-exception-support"></a><a name="_core_mfc_exception_support"></a> Supporto delle eccezioni MFC
 
 Se si usano direttamente le eccezioni C++ o si usano le macro di eccezioni MFC, si userà la [classe CException](reference/cexception-class.md) o `CException` gli oggetti derivati da che possono essere generati dal Framework o dall'applicazione.
 
@@ -92,7 +93,7 @@ Nella tabella seguente vengono illustrate le eccezioni predefinite fornite da MF
 |Exception (classe)|Significato|
 |---------------------|-------------|
 |[Classe CMemoryException](reference/cmemoryexception-class.md)|Memoria insufficiente|
-|[Classe CFileException](reference/cfileexception-class.md)|Eccezione file|
+|[CFileexception (classe)](reference/cfileexception-class.md)|Eccezione file|
 |[Classe CArchiveException](reference/carchiveexception-class.md)|Eccezione di archiviazione/serializzazione|
 |[Classe CNotSupportedException](reference/cnotsupportedexception-class.md)|Risposta alla richiesta di un servizio non supportato|
 |[Classe CResourceException](reference/cresourceexception-class.md)|Eccezione di allocazione risorse Windows|
@@ -104,7 +105,7 @@ Nella tabella seguente vengono illustrate le eccezioni predefinite fornite da MF
 
 A partire dalla versione 3.0, MCF utilizza le eccezioni C++, ma supporta ancora le precedenti macro di gestione delle eccezioni, che sono simili, nella forma, alle eccezioni C++. Sebbene per la creazione di nuovi programmi non sia consigliato utilizzare tali macro, le stesse sono ancora supportate per garantire la compatibilità con le versioni precedenti. Nei programmi che già utilizzano le macro, è possibile usare liberamente anche le eccezioni C++. Durante la pre-elaborazione, le macro restituiscono le parole chiave di gestione delle eccezioni definite nell'implementazione MSVC del linguaggio C++ a partire dalla versione Visual C++ 2,0. È possibile lasciare le macro di gestione delle eccezioni esistenti al loro posto, quando si inizia a utilizzare le eccezioni C++. Per informazioni sulla combinazione di macro e la gestione delle eccezioni C++ e sulla conversione di codice obsoleto per l'uso del nuovo meccanismo, vedere gli articoli [eccezioni: utilizzo di macro MFC ed eccezioni c++](exceptions-using-mfc-macros-and-cpp-exceptions.md) ed [eccezioni: conversione da macro di eccezioni MFC](exceptions-converting-from-mfc-exception-macros.md). Le macro delle eccezioni MFC precedenti, se ancora utilizzate, restituiscono parole chiave delle eccezioni C++. Vedere [eccezioni: modifiche alle macro delle eccezioni nella versione 3,0](exceptions-changes-to-exception-macros-in-version-3-0.md). MFC non supporta direttamente i gestori di eccezioni strutturate (SEH) di Windows NT, come descritto in [gestione delle eccezioni strutturata](/windows/win32/debug/structured-exception-handling).
 
-## <a name="further-reading-about-exceptions"></a><a name="_core_further_reading_about_exceptions"></a>Ulteriori informazioni sulle eccezioni
+## <a name="further-reading-about-exceptions"></a><a name="_core_further_reading_about_exceptions"></a> Ulteriori informazioni sulle eccezioni
 
 Negli articoli seguenti viene illustrato l'utilizzo della libreria MFC per la gestione delle eccezioni:
 
@@ -122,13 +123,13 @@ Negli articoli seguenti viene illustrato l'utilizzo della libreria MFC per la ge
 
 Negli articoli seguenti vengono confrontate le macro di eccezioni MFC con le parole chiave dell'eccezione C++ e viene illustrato come è possibile adattare il codice:
 
-- [Eccezioni: modifiche alle macro eccezioni nella versione 3.0](exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [Eccezioni: modifiche alle macro delle eccezioni nella versione 3,0](exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Eccezioni: conversione da macro eccezioni MFC](exceptions-converting-from-mfc-exception-macros.md)
+- [Eccezioni: conversione da macro di eccezioni MFC](exceptions-converting-from-mfc-exception-macros.md)
 
 - [Eccezioni: utilizzo di macro MFC ed eccezioni C++](exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure consigliate per C++ moderne per le eccezioni e la gestione degli errori](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Ricerca per categorie: creazione di classi di eccezioni personalizzate](https://go.microsoft.com/fwlink/p/?linkid=128045)

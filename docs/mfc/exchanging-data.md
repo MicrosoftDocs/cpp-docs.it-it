@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scambio di dati'
 title: Scambio di dati
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - exchanging data with property sheets [MFC]
 - DDX (dialog data exchange) [MFC], property sheets
 ms.assetid: 689f02d0-51a9-455b-8ffb-5b44f0aefa28
-ms.openlocfilehash: 5be82567e02fd5e935d42f9eff5bdee20fa0d5a8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9163434d51e3fa248f858434aece8f420e63197d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290446"
 ---
 # <a name="exchanging-data"></a>Scambio di dati
 
@@ -25,6 +26,6 @@ Nell'esempio seguente viene illustrato lo scambio di dati tra una visualizzazion
 
 [!code-cpp[NVC_MFCDocView#4](codesnippet/cpp/exchanging-data_1.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre delle proprietà](property-sheets-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fesetexceptflag'
 title: fesetexceptflag
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: da37c4a032533ae35c8481413c27ca1cb2e8c3c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289413"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -50,18 +51,18 @@ int fesetexceptflag(
 *pstatus*<br/>
 Puntatore a un oggetto **fexcept_t** contenente i valori a cui impostare i flag di stato delle eccezioni. L'oggetto può essere impostato da una precedente chiamata a [fegetexceptflag](fegetexceptflag2.md).
 
-*excepts*<br/>
+*eccetto*<br/>
 Flag di stato delle eccezioni a virgola mobile da impostare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se tutti i flag di stato delle eccezioni specificati sono impostati correttamente, restituisce 0. In caso contrario, viene restituito un valore diverso da zero.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **fesetexceptflag** imposta lo stato dei flag di stato delle eccezioni a virgola mobile specificati da ad *eccezione* dei valori corrispondenti impostati nell'oggetto **fexcept_t** a cui fa riferimento *pStatus*.  Non genera l'eccezione. Il puntatore *pStatus* deve puntare a un oggetto **fexcept_t** valido oppure il comportamento successivo non è definito. La funzione **fesetexceptflag** supporta questi valori di macro di eccezione in *excepts*, definiti in \<fenv. h >:
+La funzione **fesetexceptflag** imposta lo stato dei flag di stato delle eccezioni a virgola mobile specificati da ad *eccezione* dei valori corrispondenti impostati nell'oggetto **fexcept_t** a cui fa riferimento *pStatus*.  Non genera l'eccezione. Il puntatore *pStatus* deve puntare a un oggetto **fexcept_t** valido oppure il comportamento successivo non è definito. La funzione **fesetexceptflag** supporta questi valori di macro di eccezione in *excepts*, definiti in \<fenv.h> :
 
-|Macro di eccezioni|Descrizione|
+|Macro di eccezioni|Description|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Si è verificato un errore di singolarità o polo in un'operazione precedente a virgola mobile. È stato creato un valore di infinità.|
 |FE_INEXACT|La funzione è stata forzata ad arrotondare il risultato archiviato di un'operazione precedente a virgola mobile.|
@@ -74,7 +75,7 @@ L'argomento *excepts* può essere zero, una delle macro di eccezioni a virgola m
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
@@ -82,7 +83,7 @@ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [fegetexceptflag](fegetexceptflag2.md)<br/>

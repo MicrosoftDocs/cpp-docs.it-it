@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: come il Framework chiama il codice'
 title: Chiamate del codice dal framework
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: eebc431d8ba4d0edf7eddfe113d6f6559087be70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290375"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Chiamate del codice dal framework
 
@@ -31,6 +32,6 @@ Negli argomenti correlati, verranno illustrate le operazioni eseguite dal framew
 
 Per ulteriori informazioni, vedere [la classe CWinApp: la classe dell'applicazione](cwinapp-the-application-class.md) e i [modelli di documento e il processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Compilazione nel framework](building-on-the-framework.md)
+[Compilazione nel Framework](building-on-the-framework.md)

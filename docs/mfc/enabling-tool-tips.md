@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: abilitazione delle descrizioni comandi'
 title: Abilitazione di descrizioni comandi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - tool tips [MFC], initializing
 - tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
-ms.openlocfilehash: bdd5c54f9174c42e17db0be7e13ea31acfea2dcf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 677d2cc071e87f62f9bd2e700d8fdba166dfdee7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290947"
 ---
 # <a name="enabling-tool-tips"></a>Abilitazione di descrizioni comandi
 
@@ -24,6 +25,6 @@ ms.locfileid: "84615722"
 
 1. Specificare una stringa per ogni controllo nel gestore di [notifiche TTN_NEEDTEXT](handling-ttn-needtext-notification-for-tool-tips.md) . Il gestore è nella mappa messaggi della finestra che contiene i controlli figlio (ad esempio, la classe di visualizzazione form). Questo gestore deve chiamare una funzione che identifica il controllo e imposta **pszText** per specificare il testo utilizzato dal controllo descrizione comando.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Descrizioni comandi in Windows non derivate da CFrameWnd](tool-tips-in-windows-not-derived-from-cframewnd.md)

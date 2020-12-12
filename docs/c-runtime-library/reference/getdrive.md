@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _getdrive'
 title: _getdrive
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a8e9928504ad0320d5e96d21fdcafd2ff5f6ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289166"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -52,9 +53,9 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce l'unità corrente (predefinita) (1=A, 2=B e così via). Un valore restituito pari a zero indica che il percorso corrente non inizia con un nome di unità lettera, ad esempio un percorso UNC. In alternativa, significa che un'allocazione del buffer interna non è riuscita. Se un'allocazione interna ha `errno` esito negativo, viene impostato su ENOMEM.
+Restituisce l'unità corrente (predefinita) (1=A, 2=B e così via). Un valore restituito pari a zero indica che il percorso corrente non inizia con un nome di unità lettera, ad esempio un percorso UNC. In alternativa, significa che un'allocazione del buffer interna non è riuscita. Se un'allocazione interna ha esito negativo, `errno` viene impostato su ENOMEM.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -118,7 +119,7 @@ G: (Current directory is G:\)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md)<br/>

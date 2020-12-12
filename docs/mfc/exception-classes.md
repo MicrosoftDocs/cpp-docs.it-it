@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi di eccezioni'
 title: Classi di eccezioni
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-ms.openlocfilehash: 907b34b12ffdaa70c4377a1012a66662fbba12d0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c07bd93a0abf95dc7d5f46c710faaad2dcad08c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290765"
 ---
 # <a name="exception-classes"></a>Classi di eccezioni
 
@@ -54,6 +55,6 @@ Eccezione generata dall'impossibilità di caricare una risorsa di Windows.
 [CUserException](reference/cuserexception-class.md)<br/>
 Eccezione utilizzata per arrestare un'operazione avviata dall'utente. In genere, all'utente viene notificato il problema prima che questa eccezione venga generata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

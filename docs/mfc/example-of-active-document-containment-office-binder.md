@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: esempio di contenimento di documenti attivi: Binder di Office'
 title: 'Esempio di contenimento di documenti attivi: raccoglitore di Office'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: fe9ccb5b78d9a60c5b8b2a19fe0818a8e1682f00
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 075922f3a50df77f83aab90dc380e33f703737fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290830"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Esempio di contenimento di documenti attivi: raccoglitore di Office
 
@@ -28,6 +29,6 @@ Quando si seleziona un documento attivo di un altro tipo di applicazione, l'inte
 
 Esistono, naturalmente, altri tipi possibili di contenitori accanto ai Binder. Esplora file usa la tipica interfaccia a doppio riquadro in cui il riquadro sinistro usa un controllo albero per visualizzare un elenco gerarchico di directory in un'unità o in una rete, mentre nel riquadro destro vengono visualizzati i file contenuti nella directory attualmente selezionata. Un browser Internet: tipo di contenitore, ad esempio Microsoft Internet Explorer, anziché utilizzare un'interfaccia a doppio riquadro, in genere dispone di un singolo frame e fornisce la navigazione tramite collegamenti ipertestuali.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Contenimento dei documenti attivi](active-document-containment.md)
+[Contenimento del documento attivo](active-document-containment.md)

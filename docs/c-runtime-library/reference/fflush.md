@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fflush'
 title: fflush
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a23b4f580e0ed258bb111064b8564a6603562f64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912890"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289257"
 ---
 # <a name="fflush"></a>fflush
 
@@ -57,11 +58,11 @@ Puntatore alla struttura **FILE**.
 **fflush** restituisce 0 se il buffer è stato scaricato correttamente. Il valore 0 viene restituito anche nel caso in cui il flusso specificato non ha nessun buffer o viene aperto in sola lettura. Un valore restituito di **EOF** indica un errore.
 
 > [!NOTE]
-> Se **fflush** restituisce **EOF**, è possibile che i dati siano andati perduti a causa di un errore di scrittura. Quando si configura un gestore errori critico, è più sicuro disattivare il buffer con la funzione **setvbuf** o usare routine di i/o di basso livello, ad esempio **_open**, **_close**e **_Write** invece delle funzioni di i/o del flusso.
+> Se **fflush** restituisce **EOF**, è possibile che i dati siano andati perduti a causa di un errore di scrittura. Quando si configura un gestore errori critico, è più sicuro disattivare il buffer con la funzione **setvbuf** o usare routine di i/o di basso livello, ad esempio **_open**, **_close** e **_Write** invece delle funzioni di i/o del flusso.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **fflush** Scarica il *flusso*del flusso. Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità di lettura o se il flusso non ha buffer, la chiamata a **fflush** non ha alcun effetto e viene mantenuto qualsiasi buffer. Una chiamata a **fflush** nega l'effetto di qualsiasi chiamata precedente a **ungetc** per il flusso. Il flusso rimane aperto dopo la chiamata.
+La funzione **fflush** Scarica il *flusso* del flusso. Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità di lettura o se il flusso non ha buffer, la chiamata a **fflush** non ha alcun effetto e viene mantenuto qualsiasi buffer. Una chiamata a **fflush** nega l'effetto di qualsiasi chiamata precedente a **ungetc** per il flusso. Il flusso rimane aperto dopo la chiamata.
 
 Se il *flusso* è **null**, il comportamento è lo stesso di una chiamata a **fflush** in ogni flusso aperto. Tutti i flussi aperti in modalità scrittura e in modalità aggiornamento in cui l'ultima operazione è stata un'operazione di scrittura vengono scaricati. La chiamata non ha effetto su altri flussi.
 
@@ -75,7 +76,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 

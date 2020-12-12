@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _getdiskfree'
 title: _getdiskfree
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f17310b426ded63f3e1139e3d7212657d4c6efd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289205"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
@@ -66,7 +67,7 @@ Struttura **_diskfree_t** che verrà popolata con informazioni sull'unità.
 
 Se la funzione ha esito positivo, il valore restituito è zero. Se la funzione ha esito negativo, il valore restituito è il codice di errore. Il valore **errno** viene impostato per tutti gli errori restituiti dal sistema operativo. Per ulteriori informazioni sulle condizioni di errore indicate da **errno**, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La struttura del **_diskfree_t** è definita in Direct. h.
 
@@ -195,4 +196,4 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>

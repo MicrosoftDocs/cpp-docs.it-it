@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: eliminazione di tutti gli oggetti in una raccolta CObject'
 title: Eliminazione di tutti gli oggetti in una raccolta CObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 674253d06925bdf29e5606692a73911878f6c393
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291012"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Eliminazione di tutti gli oggetti in una raccolta CObject
 
@@ -34,7 +35,7 @@ Questo articolo illustra come eliminare gli oggetti in:
 
 - [Mappa](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Per eliminare tutti gli oggetti in un elenco di puntatori a CObject
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a> Per eliminare tutti gli oggetti in un elenco di puntatori a CObject
 
 1. Usare `GetHeadPosition` e `GetNext` per scorrere l'elenco.
 
@@ -50,7 +51,7 @@ L'ultima chiamata di funzione, `RemoveAll` , è una funzione membro di elenco ch
 
 Si noti la differenza tra l'eliminazione dell'oggetto di un elemento e la rimozione dell'elemento stesso. La rimozione di un elemento dall'elenco rimuove semplicemente il riferimento all'elenco all'oggetto. L'oggetto esiste ancora in memoria. Quando si elimina un oggetto, questo smette di esistere e la relativa memoria viene recuperata. Pertanto, è importante rimuovere un elemento subito dopo l'eliminazione dell'oggetto dell'elemento in modo che l'elenco non tenti di accedere a oggetti che non esistono più.
 
-#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>Per eliminare tutti gli elementi di una matrice
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a> Per eliminare tutti gli elementi di una matrice
 
 1. Usare i `GetSize` valori di indice Integer e per scorrere la matrice.
 
@@ -64,7 +65,7 @@ Si noti la differenza tra l'eliminazione dell'oggetto di un elemento e la rimozi
 
 Come nell'esempio di elenco precedente, è possibile chiamare `RemoveAll` per rimuovere tutti gli elementi di una matrice o `RemoveAt` per rimuovere un singolo elemento.
 
-#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>Per eliminare tutti gli elementi di una mappa
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a> Per eliminare tutti gli elementi di una mappa
 
 1. Usare `GetStartPosition` e `GetNextAssoc` per scorrere la matrice.
 
@@ -78,6 +79,6 @@ Come nell'esempio di elenco precedente, è possibile chiamare `RemoveAll` per ri
 
 È possibile chiamare `RemoveAll` per rimuovere tutti gli elementi di una mappa o `RemoveKey` per rimuovere un singolo elemento con la chiave specificata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Accesso a tutti i membri di una raccolta](accessing-all-members-of-a-collection.md)

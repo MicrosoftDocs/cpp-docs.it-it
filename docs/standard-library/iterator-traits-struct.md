@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: iterator_traits struct'
 title: Struct iterator_traits
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ac97b84ff7bcedc00f2b069ce05f734ac65618ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289680"
 ---
 # <a name="iterator_traits-struct"></a>Struct iterator_traits
 
@@ -31,23 +32,23 @@ struct iterator_traits {
    };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La struct modello definisce i tipi di membro:
 
-- `iterator_category`: sinonimo di `Iterator::iterator_category`.
+- `iterator_category`: sinonimo di `Iterator::iterator_category` .
 
-- `value_type`: sinonimo di `Iterator::value_type`.
+- `value_type`: sinonimo di `Iterator::value_type` .
 
-- `difference_type`: sinonimo di `Iterator::difference_type`.
+- `difference_type`: sinonimo di `Iterator::difference_type` .
 
 - `distance_type`: sinonimo di `Iterator::difference_type.`
 
-- `pointer`: sinonimo di `Iterator::pointer`.
+- `pointer`: sinonimo di `Iterator::pointer` .
 
-- `reference`: sinonimo di `Iterator::reference`.
+- `reference`: sinonimo di `Iterator::reference` .
 
-Le specializzazioni parziali determinano i tipi critici associati a un puntatore a un oggetto di tipo **type** <strong>\*</strong> o **const di tipo** <strong>\*</strong>.
+Le specializzazioni parziali determinano i tipi critici associati a un puntatore a un oggetto di tipo **Type** <strong>\*</strong> o **const** <strong>\*</strong> .
 
 In questa implementazione è anche possibile usare varie funzioni modello che non fanno uso di specializzazioni parziali:
 
@@ -118,12 +119,12 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<iterator>
+**Intestazione:**\<iterator>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

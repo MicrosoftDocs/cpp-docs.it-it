@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: eccezioni: utilizzo di macro MFC ed eccezioni C++'
 title: 'Eccezioni: utilizzo di macro MFC ed eccezioni C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 9e97eb545dedd3ac38dd93471f82aecc382717ae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f46cdff236f37ccdccde8215c7937300014aca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290447"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Eccezioni: utilizzo di macro MFC ed eccezioni C++
 
@@ -33,7 +34,7 @@ Questo articolo include gli argomenti seguenti:
 
 - [Blocchi try all'interno di blocchi catch](#_core_try_blocks_inside_catch_blocks)
 
-## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Combinazione di parole chiave e macro di eccezione
+## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a> Combinazione di parole chiave e macro di eccezione
 
 È possibile combinare macro di eccezioni MFC e parole chiave dell'eccezione C++ nello stesso programma. Tuttavia, non è possibile combinare macro MFC con parole chiave di eccezione C++ nello stesso blocco perché le macro eliminano automaticamente gli oggetti eccezione quando escono dall'ambito, mentre il codice che usa le parole chiave per la gestione delle eccezioni non lo fa. Per ulteriori informazioni, vedere l'articolo [eccezioni: catching and Deleting Exceptions](exceptions-catching-and-deleting-exceptions.md).
 
@@ -47,7 +48,7 @@ Il problema si verifica perché `e` viene eliminato quando l'esecuzione passa al
 
 [!code-cpp[NVC_MFCExceptions#11](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Blocchi try all'interno di blocchi catch
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a> Blocchi try all'interno di blocchi catch
 
 Non è possibile generare di nuovo l'eccezione corrente da un **`try`** blocco all'interno di un blocco **catch** . L'esempio seguente non è valido:
 
@@ -55,6 +56,6 @@ Non è possibile generare di nuovo l'eccezione corrente da un **`try`** blocco a
 
 Per altre informazioni, vedere [eccezioni: esame del contenuto delle eccezioni](exceptions-examining-exception-contents.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](exception-handling-in-mfc.md)

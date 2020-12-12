@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: come il Framework cerca le mappe messaggi'
 title: Come vengono cercate le mappe messaggi nel framework
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message maps [MFC], searching
 ms.assetid: fd1df878-5601-45d7-bd1f-b8f8e65b9a17
-ms.openlocfilehash: a50070882d17188cc3251693cb523a7b77d532c3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0c25015f0086e13d78c07f22a4b03633245c74b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290414"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Come vengono cercate le mappe messaggi nel framework
 
@@ -21,6 +22,6 @@ Il Framework cerca le corrispondenze con i messaggi in ingresso nella tabella de
 
 - [Mapping di intervalli di messaggi, ID di comando o ID di controllo a un unico gestore](handlers-for-message-map-ranges.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione e mapping dei messaggi](message-handling-and-mapping.md)

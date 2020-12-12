@@ -1,27 +1,28 @@
 ---
+description: 'Altre informazioni su: implementazione di aree di lavoro nei controlli List'
 title: Implementazione di aree di lavoro nei controlli List
 ms.date: 11/04/2016
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: abbf9dd823e13fab252b7af8f32338b0d801079b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 04eb935531dff0ac1ee240dec8690bd7ce1378a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290076"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementazione di aree di lavoro nei controlli List
 
-Per impostazione predefinita, un controllo elenco dispone tutti gli elementi in una griglia standard. Tuttavia, un altro metodo è supportato, aree di lavoro, che dispone gli elementi dell'elenco in gruppi rettangolari. Per un'immagine di un controllo elenco che implementa le aree di lavoro, vedere Utilizzo dei controlli elenco-visualizzazione nel Windows SDK.
+Per impostazione predefinita, un controllo elenco dispone tutti gli elementi in una griglia standard. Tuttavia, un altro metodo è supportato, aree di lavoro, che dispone gli elementi dell'elenco in gruppi rettangolari. Per un'immagine di un controllo elenco che implementa le aree di lavoro, vedere Utilizzo dei controlli List-View nel Windows SDK.
 
 > [!NOTE]
 > Le aree di lavoro sono visibili solo quando il controllo elenco è in modalità icona o piccola. Tuttavia, tutte le aree di lavoro correnti vengono mantenute se la visualizzazione passa alla modalità report o elenco.
 
 È possibile utilizzare le aree di lavoro per visualizzare un bordo vuoto (a sinistra, in alto e/o a destra degli elementi) o per visualizzare una barra di scorrimento orizzontale quando normalmente non ne è presente una. Un altro utilizzo comune consiste nel creare più aree di lavoro in cui gli elementi possono essere spostati o eliminati. Con questo metodo, è possibile creare aree in una singola visualizzazione con significati diversi. L'utente può quindi categorizzare gli elementi inserendoli in un'area diversa. Un esempio è costituito da una visualizzazione di un file system che ha un'area per i file di lettura/scrittura e un'altra area per i file di sola lettura. Se un elemento di file è stato spostato nell'area di sola lettura, diventa automaticamente di sola lettura. Se si trasferisce un file dall'area di sola lettura all'area di lettura/scrittura, il file verrà reso di lettura/scrittura.
 
-`CListCtrl`fornisce diverse funzioni membro per la creazione e la gestione delle aree di lavoro nel controllo elenco. [GetWorkAreas](reference/clistctrl-class.md#getworkareas) e [SetWorkAreas](reference/clistctrl-class.md#setworkareas) recuperano e impostano una matrice di `CRect` oggetti (o `RECT` strutture), in cui sono archiviate le aree di lavoro attualmente implementate per il controllo elenco. Inoltre, [GetNumberOfWorkAreas](reference/clistctrl-class.md#getnumberofworkareas) Recupera il numero corrente di aree di lavoro per il controllo elenco (per impostazione predefinita, zero).
+`CListCtrl` fornisce diverse funzioni membro per la creazione e la gestione delle aree di lavoro nel controllo elenco. [GetWorkAreas](reference/clistctrl-class.md#getworkareas) e [SetWorkAreas](reference/clistctrl-class.md#setworkareas) recuperano e impostano una matrice di `CRect` oggetti (o `RECT` strutture), in cui sono archiviate le aree di lavoro attualmente implementate per il controllo elenco. Inoltre, [GetNumberOfWorkAreas](reference/clistctrl-class.md#getnumberofworkareas) Recupera il numero corrente di aree di lavoro per il controllo elenco (per impostazione predefinita, zero).
 
 ## <a name="items-and-working-areas"></a>Elementi e aree di lavoro
 
@@ -37,7 +38,7 @@ Nell'esempio successivo vengono assegnati gli elementi elenco esistenti a ogni g
 
 [!code-cpp[NVC_MFCControlLadenDialog#21](codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CListCtrl](using-clistctrl.md)<br/>
 [Controlli](controls-mfc.md)

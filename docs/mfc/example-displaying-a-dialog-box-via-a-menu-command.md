@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: esempio: visualizzazione di una finestra di dialogo tramite un comando di menu'
 title: 'Esempio: visualizzazione di una finestra di dialogo tramite un comando di menu'
 ms.date: 09/07/2019
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 1cada8124cd7ea71a24367626508782b522cc746
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dcfa34eb05733d2f27176795a447e15949d6e274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290856"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Esempio: visualizzazione di una finestra di dialogo tramite un comando di menu
 
@@ -44,7 +45,7 @@ Le procedure utilizzano i nomi e i valori seguenti:
 
 1. Aggiungere una classe per la finestra di dialogo. Per ulteriori informazioni, vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md) .
 
-1. In **Visualizzazione classi**selezionare la classe Document (CDisplayDialogDoc). Nella finestra **Proprietà** fare clic sul pulsante **Eventi** . Fare doppio clic sull'ID del comando di menu (ID_VIEW_TEST). Fare quindi clic sulla freccia verso il basso e selezionare ** \<Add> OnViewTest**.
+1. In **Visualizzazione classi** selezionare la classe Document (CDisplayDialogDoc). Nella finestra **Proprietà** fare clic sul pulsante **Eventi** . Fare doppio clic sull'ID del comando di menu (ID_VIEW_TEST). Fare quindi clic sulla freccia verso il basso e selezionare **\<Add> OnViewTest**.
 
    Se il comando di menu è stato aggiunto al mainframe di un'applicazione MDI, selezionare invece la classe dell'applicazione (CDisplayDialogApp).
 
@@ -110,7 +111,7 @@ Le procedure utilizzano i nomi e i valori seguenti:
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](dialog-boxes.md)<br/>
 [Finestre di dialogo modali e non modali](modal-and-modeless-dialog-boxes.md)

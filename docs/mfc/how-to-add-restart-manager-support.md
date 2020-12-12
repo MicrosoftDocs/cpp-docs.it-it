@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura: aggiungere il supporto di gestione riavvio'
 title: 'Procedura: Aggiungere il supporto di Gestione riavvio'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 848cb3bb52ae13eb1b7798126becd13384fddeb6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: bf323b66dcf3b6f2571855cc789aa7a08e61ac39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290349"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Procedura: Aggiungere il supporto di Gestione riavvio
 
@@ -41,7 +42,7 @@ Per impostazione predefinita, le applicazioni MFC create tramite la creazione gu
 
 1. Compilare ed eseguire l'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CDataRecoveryHandler](reference/cdatarecoveryhandler-class.md)<br/>
 [CWinApp:: m_dwRestartManagerSupportFlags](reference/cwinapp-class.md#m_dwrestartmanagersupportflags)<br/>

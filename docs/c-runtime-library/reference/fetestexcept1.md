@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fetestexcept'
 title: fetestexcept
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 8a62ae33f2965916bd16e2e854555bf22d87a0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289387"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -46,18 +47,18 @@ int fetestexcept(
 
 ### <a name="parameters"></a>Parametri
 
-*excepts*<br/>
+*eccetto*<br/>
 OR bit per bit dei flag di stato a virgola mobile da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se l'esito è positivo, restituisce una maschera di bit che contiene OR bit per bit delle macro di eccezioni a virgola mobile che corrispondono ai flag di stato delle eccezioni attualmente impostati. Restituisce 0 se non è impostata nessuna eccezione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare il parametro *excepts* per specificare i flag di stato delle eccezioni da testare. La funzione **fetestexcept** usa queste macro di eccezioni definite in \<fenv. h > in *excepts* e il valore restituito:
+Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare il parametro *excepts* per specificare i flag di stato delle eccezioni da testare. La funzione **fetestexcept** usa queste macro di eccezioni definite in \<fenv.h> in *excepts* e il valore restituito:
 
-|Macro di eccezioni|Descrizione|
+|Macro di eccezioni|Description|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Si è verificato un errore di singolarità o polo in un'operazione precedente a virgola mobile. È stato creato un valore di infinità.|
 |FE_INEXACT|La funzione è stata forzata ad arrotondare il risultato archiviato di un'operazione precedente a virgola mobile.|
@@ -70,7 +71,7 @@ L'argomento *excepts* specificato può essere 0, una delle macro di eccezioni a 
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
@@ -78,8 +79,8 @@ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>
 [feraiseexcept](feraiseexcept.md)<br/>

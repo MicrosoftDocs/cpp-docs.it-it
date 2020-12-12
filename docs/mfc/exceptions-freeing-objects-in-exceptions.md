@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: eccezioni: liberare oggetti nelle eccezioni'
 title: 'Eccezioni: rilascio di oggetti nelle eccezioni'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 47b10f3ecb96875ceee986eadda4595d2afbb77e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290557"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Eccezioni: rilascio di oggetti nelle eccezioni
 
@@ -40,7 +41,7 @@ Questi due approcci sono illustrati di seguito come soluzioni per l'esempio prob
 
 Come scritto in precedenza, `myPerson` non verrà eliminato se viene generata un'eccezione da `SomeFunc` . L'esecuzione passa direttamente al gestore di eccezioni esterno successivo, ignorando l'uscita normale della funzione e il codice che elimina l'oggetto. Il puntatore all'oggetto esce dall'ambito quando l'eccezione lascia la funzione e la memoria occupata dall'oggetto non verrà mai recuperata finché il programma è in esecuzione. Si tratta di una perdita di memoria; viene rilevata utilizzando la diagnostica della memoria.
 
-## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>Gestione dell'eccezione localmente
+## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a> Gestione dell'eccezione localmente
 
 Il paradigma **try/catch** fornisce un metodo di programmazione difensiva per evitare perdite di memoria e garantire che gli oggetti vengano eliminati definitivamente quando si verificano eccezioni. Ad esempio, l'esempio illustrato in precedenza in questo articolo può essere riscritto come segue:
 
@@ -48,7 +49,7 @@ Il paradigma **try/catch** fornisce un metodo di programmazione difensiva per ev
 
 Questo nuovo esempio configura un gestore di eccezioni per intercettare l'eccezione e gestirla localmente. Chiude quindi la funzione normalmente ed Elimina l'oggetto. L'aspetto importante di questo esempio è che un contesto per intercettare l'eccezione viene stabilito con i blocchi **try/catch** . Senza un frame di eccezione locale, la funzione non saprà mai che è stata generata un'eccezione e non ha la possibilità di uscire normalmente ed eliminare l'oggetto.
 
-## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Generazione di eccezioni dopo l'eliminazione di oggetti
+## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a> Generazione di eccezioni dopo l'eliminazione di oggetti
 
 Un altro modo per gestire le eccezioni consiste nel passarli al contesto di gestione delle eccezioni esterno successivo. Nel **`catch`** blocco, è possibile eseguire alcune operazioni di pulizia degli oggetti allocati localmente e quindi generare l'eccezione in per un'ulteriore elaborazione.
 
@@ -64,6 +65,6 @@ Se si chiamano funzioni che possono generare eccezioni, è possibile usare blocc
 
 Per altre informazioni, vedere [Exceptions: catching and Deleting Exceptions](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](exception-handling-in-mfc.md)
