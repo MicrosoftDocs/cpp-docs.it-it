@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; IStream&gt;'
 title: '&lt;istream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c897441eef935cd6ef5a8b4e9f4676d06a57e1af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277817"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -27,7 +28,7 @@ Definisce il modello di classe basic_istream, che media le estrazioni per iostre
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[iostream](../standard-library/istream-typedefs.md#iostream)|Tipo `basic_iostream` specializzato in **`char`** .|
 |[IStream](../standard-library/istream-typedefs.md#istream)|Tipo `basic_istream` specializzato in **`char`** .|
@@ -38,7 +39,7 @@ Definisce il modello di classe basic_istream, che media le estrazioni per iostre
 
 |Nome|Descrizione|
 |-|-|
-|[WS](../standard-library/istream-functions.md#ws)|Ignora gli spazi nel flusso.|
+|[ws](../standard-library/istream-functions.md#ws)|Ignora gli spazi nel flusso.|
 |[scambio](../standard-library/istream-functions.md#istream_swap)|Scambia due oggetti flusso.|
 
 ### <a name="operators"></a>Operatori
@@ -54,7 +55,7 @@ Definisce il modello di classe basic_istream, che media le estrazioni per iostre
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Classe di flusso che può eseguire operazioni sia di input sia di output.|
 |[basic_istream](../standard-library/basic-istream-class.md)|Il modello di classe descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso con elementi di tipo `Elem` , noti anche come [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere sono determinati dalla classe `Tr` , nota anche come [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\

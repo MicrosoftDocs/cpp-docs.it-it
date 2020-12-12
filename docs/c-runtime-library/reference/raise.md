@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Raise'
 title: raise
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 81b92404603820948a384b6ad33421251a27c13c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb225e25ef0ff4e04f1ea8877a434c2af240cbfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919555"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274866"
 ---
 # <a name="raise"></a>raise
 
@@ -52,14 +53,14 @@ int raise(
 
 ### <a name="parameters"></a>Parametri
 
-*sig*<br/>
+*Sig*<br/>
 Segnale da inviare.
 
 ## <a name="return-value"></a>Valore restituito
 
 In caso di esito positivo, **raise** restituisce 0. In caso contrario, viene restituito un valore diverso da zero.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **raise** invia *sig* al programma in esecuzione. Se una chiamata precedente a **signal** ha installata una funzione di gestione del segnale per *sig*, **raise** esegue tale funzione. Se non è stata installata alcuna funzione di gestione, viene eseguita l'azione predefinita associata al valore di segnale *sig*, come indicato di seguito.
 
@@ -84,8 +85,8 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [interruzione](abort.md)<br/>
 [signal](signal.md)<br/>

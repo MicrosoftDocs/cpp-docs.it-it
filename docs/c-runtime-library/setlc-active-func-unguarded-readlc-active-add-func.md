@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ___setlc_active_func, ___unguarded_readlc_active_add_func'
 title: ___setlc_active_func, ___unguarded_readlc_active_add_func
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - ___setlc_active_func
 - ___unguarded_readlc_active_add_func
 ms.assetid: 605ec4e3-81e5-4ece-935a-f434768cc702
-ms.openlocfilehash: a7dd7d74992aeddffead1c6ef0d52cbc69848dad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85273b52102e9cca2e42ba4401da60b1d292560c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277088"
 ---
 # <a name="___setlc_active_func-___unguarded_readlc_active_add_func"></a>___setlc_active_func, ___unguarded_readlc_active_add_func
 
@@ -45,7 +46,7 @@ int * ___unguarded_readlc_active_add_func(void);
 
 Il valore restituito non è rilevante.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Sebbene le funzioni CRT interne `___setlc_active_func` e `___unguarded_readlc_active_add_func` siano obsolete e non vengano più usate, vengono esportate dalla libreria CRT per mantenere la compatibilità binaria. Lo scopo originale di `___setlc_active_func` è quello di restituire il numero di chiamate alla funzione `setlocale` attualmente attive. Lo scopo originale di `___unguarded_readlc_active_add_func` è quello di restituire il numero di funzioni che fanno riferimento alle impostazioni locali senza bloccarle.
 
@@ -53,8 +54,8 @@ Sebbene le funzioni CRT interne `___setlc_active_func` e `___unguarded_readlc_ac
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|`___setlc_active_func`, `___unguarded_readlc_active_add_func`|none|
+|`___setlc_active_func`, `___unguarded_readlc_active_add_func`|Nessuno|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

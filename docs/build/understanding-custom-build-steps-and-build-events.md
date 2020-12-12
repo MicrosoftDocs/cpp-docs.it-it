@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: informazioni sulle procedure di compilazione personalizzate e sugli eventi di compilazione'
 title: Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: da7e9399a1502c3d7ddaccbfb10a4d2b71fb85cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277401"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
 
@@ -66,12 +67,12 @@ Per ogni progetto in una soluzione, gli eventi di compilazione e le istruzioni d
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Specificare strumenti di compilazione personalizzati](specifying-custom-build-tools.md)<br/>
+[Specificare gli strumenti di compilazione personalizzati](specifying-custom-build-tools.md)<br/>
 [Specificare gli eventi di compilazione](specifying-build-events.md)<br/>
 [Risolvere i problemi relativi alle personalizzazioni di compilazione](troubleshooting-build-customizations.md)<br/>
 [Formattare l'output di un'istruzione di compilazione personalizzata o un evento di compilazione](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Progetti di Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Progetti di Visual Studio-C++](creating-and-managing-visual-cpp-projects.md)<br>
 [Macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md)

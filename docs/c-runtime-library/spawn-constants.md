@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: genera costanti'
 title: Costanti spawn
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0bac30346c974fa63d65da78a097cb24768cb313
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276959"
 ---
 # <a name="spawn-constants"></a>Costanti spawn
 
@@ -46,7 +47,7 @@ L'argomento `mode` determina le azioni intraprese dal processo chiamante prima e
 |`_P_NOWAIT`, `_P_NOWAITO`|Continua l'esecuzione del processo chiamante contemporaneamente al nuovo processo (`_spawn` asincrono).|
 |`_P_DETACH`|Continua l'esecuzione del processo chiamante; il nuovo processo viene eseguito in background senza accesso alla console o alla tastiera. Le chiamate a `_cwait` rispetto al nuovo processo avranno esito negativo. Questo è un `_spawn` asincrono.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Funzioni _spawn, _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funzioni _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [Costanti globali](../c-runtime-library/global-constants.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: logical_or struct'
 title: logical_or (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7b6578bb3405b2428724554d520ffe784b885a40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277674"
 ---
-# <a name="logicalor-struct"></a>logical_or (struct)
+# <a name="logical_or-struct"></a>logical_or (struct)
 
 Oggetto funzione predefinito che esegue l'operazione di disgiunzione logica ( `operator||`) negli argomenti.
 
@@ -39,20 +40,20 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di*, *T*, *U*\
+*Digitare*, *T*, *U*\
 Qualsiasi tipo che supporta un `operator||` che accetta gli operandi dei tipi specificati o dedotti.
 
-*A sinistra*\
-Operando sinistro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*Sinistra*\
+Operando sinistro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *T*.
 
 *Ok*\
-Operando destro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+Operando destro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
 Risultato di `Left || Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator||`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per i tipi definiti dall'utente, non si verifica alcun corto circuito nella valutazione degli operandi. Entrambi gli argomenti vengono valutati da `operator||`.
 

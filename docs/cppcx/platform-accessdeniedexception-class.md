@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: AccessDeniedException'
 title: Classe Platform::AccessDeniedException
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-ms.openlocfilehash: 4abbac977a256ff27f99caaf77393450d3ccf858
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dd1e543093000521bceb0abed128a1dac27a6e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276789"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Classe Platform::AccessDeniedException
 
@@ -25,7 +26,7 @@ Generata quando viene negato l'accesso a una risorsa o a una funzionalità.
 public ref class AccessDeniedException : COMException,    IException,    IPrintable,   IEquatable
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Quando incontri questa eccezione, assicurati di aver richiesto la funzionalità appropriata e di aver inserito le necessarie dichiarazioni nel manifesto del pacchetto della tua app. Per ulteriori informazioni, vedi [COMException](../cppcx/platform-comexception-class.md) .
 
@@ -35,10 +36,10 @@ Quando incontri questa eccezione, assicurati di aver richiesto la funzionalità 
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classe Platform::COMException](../cppcx/platform-comexception-class.md)
+[Classe Platform:: COMException](../cppcx/platform-comexception-class.md)

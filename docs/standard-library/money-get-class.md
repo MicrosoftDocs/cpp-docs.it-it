@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: money_get Class'
 title: Classe money_get
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: ab49dad1a24e57eb33834cc651d9ccdb50abe68c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6dfab2347799c78b89e2da9e00ebdb71af0c22d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277505"
 ---
 # <a name="money_get-class"></a>Classe money_get
 
@@ -42,7 +43,7 @@ Tipo utilizzato all'interno di un programma per codificare i caratteri delle imp
 *InputIterator*\
 Tipo di iteratore da cui le funzioni get leggono il relativo input.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
@@ -54,7 +55,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di input.|
@@ -73,7 +74,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 **Spazio dei nomi:** std
 
-## <a name="money_getchar_type"></a><a name="char_type"></a>money_get:: char_type
+## <a name="money_getchar_type"></a><a name="char_type"></a> money_get:: char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -81,11 +82,11 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello *CharType*.
 
-## <a name="money_getdo_get"></a><a name="do_get"></a>money_get::d o_get
+## <a name="money_getdo_get"></a><a name="do_get"></a> money_get::d o_get
 
 Funzione virtuale chiamata per estrarre un valore numerico da una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -127,13 +128,13 @@ Stringa in cui è archiviata la sequenza convertita.
 
 Iteratore di input che punta al primo elemento oltre il campo di input di tipo valuta.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo valuta completo e non vuoto. Se ha esito positivo, questo campo viene convertito in una sequenza di una o più cifre decimali, facoltativamente preceduto da un segno meno ( `-` ), per rappresentare la quantità e archivia il risultato nell'oggetto [string_type](#string_type) *Val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo valuta. In caso contrario, la funzione archivia una sequenza vuota in *Val* e imposta `ios_base::failbit` *lo stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo valuta valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `State`.
 
 La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che, se ha esito positivo, converte la sequenza di cifre con segno facoltativo in un valore di tipo **`long double`** e archivia tale valore in *Val*.
 
-Il formato di un campo di input di tipo valuta è determinato dal**fac** del [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class)restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet)  <  [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
+Il formato di un campo di input di tipo valuta è determinato dal **fac** del [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class)restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet)  <  [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
 In particolare:
 
@@ -165,7 +166,7 @@ Lo spazio vuoto arbitrario viene messo in corrispondenza nel punto in cui l'elem
 
 Vedere l'esempio relativo a [get](#get), che chiama `do_get`.
 
-## <a name="money_getget"></a><a name="get"></a>money_get:: Get
+## <a name="money_getget"></a><a name="get"></a> money_get:: Get
 
 Estrae un valore numerico da una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -209,7 +210,7 @@ Stringa in cui è archiviata la sequenza convertita.
 
 Iteratore di input che punta al primo elemento oltre il campo di input di tipo valuta.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Entrambe le funzioni membro restituiscono [do_get](#do_get) `(first, last, Intl, Iosbase, State, val)` .
 
@@ -262,7 +263,7 @@ int main( )
 };
 ```
 
-## <a name="money_getiter_type"></a><a name="iter_type"></a>money_get:: iter_type
+## <a name="money_getiter_type"></a><a name="iter_type"></a> money_get:: iter_type
 
 Tipo che descrive un iteratore di input.
 
@@ -270,11 +271,11 @@ Tipo che descrive un iteratore di input.
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello **InputIterator**.
 
-## <a name="money_getmoney_get"></a><a name="money_get"></a>money_get:: money_get
+## <a name="money_getmoney_get"></a><a name="money_get"></a> money_get:: money_get
 
 Costruttore per oggetti di tipo `money_get` utilizzati per estrarre i valori numerici dalle sequenze che rappresentano valori monetari.
 
@@ -287,7 +288,7 @@ explicit money_get(size_t _Refs = 0);
 *_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
@@ -295,13 +296,13 @@ I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \>1: questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="money_getstring_type"></a><a name="string_type"></a>money_get:: string_type
+## <a name="money_getstring_type"></a><a name="string_type"></a> money_get:: string_type
 
 Tipo che descrive una stringa contenente caratteri di tipo **CharType**.
 
@@ -309,11 +310,11 @@ Tipo che descrive una stringa contenente caratteri di tipo **CharType**.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<locale>](../standard-library/locale.md)\
 [Classe facet](../standard-library/locale-class.md#facet_class)\

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: logic_error Class'
 title: Classe logic_error
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: b94f7f4c2482f0317e37c6f4bf3618b91a175147
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b4b592d268a29a1bf1c095beb79904789d695e64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277713"
 ---
 # <a name="logic_error-class"></a>Classe logic_error
 
@@ -31,7 +32,7 @@ public:
 
 ## <a name="remarks"></a>Osservazioni
 
-Il valore restituito da `what()` è una copia di `message.data()` . Per ulteriori informazioni, vedere [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data) .
+Il valore restituito da `what()` è una copia di `message.data()` . Per altre informazioni, vedere [`what`](../standard-library/exception-class.md) e [`data`](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Esempio
 
@@ -66,7 +67,7 @@ Type: class std::logic_error
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe Exception](../standard-library/exception-class.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

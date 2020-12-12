@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Security-Enhanced versioni delle funzioni CRT'
 title: Versioni con sicurezza avanzata delle funzioni CRT
 ms.date: 03/21/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 9cc44caa047e087b2f3de9b5af142d1ea868e893
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 95e94eb7790ef589fee3287b6cee8997faac7ab6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277206"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versioni con sicurezza avanzata delle funzioni CRT
 
@@ -19,7 +20,7 @@ Sono disponibili altre versioni sicure delle routine di libreria di runtime. Per
 
 ## <a name="secure-functions"></a>Funzioni sicure
 
-|Funzione CRT|Funzione di sicurezza avanzata|Uso|
+|Funzione CRT|Funzione di sicurezza avanzata|Usa|
 |------------------|--------------------------------|---------|
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Determina l'autorizzazione di accesso ai file|
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|Alloca memoria sullo stack|
@@ -99,6 +100,6 @@ Sono disponibili altre versioni sicure delle routine di libreria di runtime. Per
 |[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)|[wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Converte una sequenza di caratteri wide in una sequenza di caratteri multibyte corrispondente|
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Converte un carattere wide nel carattere multibyte corrispondente|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

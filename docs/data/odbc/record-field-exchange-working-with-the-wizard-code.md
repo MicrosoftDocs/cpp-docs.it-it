@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scambio di campi di record: utilizzo del codice della procedura guidata'
 title: 'Trasferimento di campi di record: utilizzo del codice della creazione guidata'
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 8e42fc9da672ca4ef97e775776935650ab7f545a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6b44c7c5e3ec09e02e70ad5dd0fecfa434cc0a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278714"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Trasferimento di campi di record: utilizzo del codice della creazione guidata
 
@@ -30,7 +31,7 @@ ms.locfileid: "81367122"
 In questo argomento viene illustrato il codice scritto dalla Creazione guidata applicazione MFC e da **Aggiungi classe** (come descritto in [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e come è possibile modificare tale codice.
 
 > [!NOTE]
-> Questo argomento si applica alle classi derivate da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si usa il recupero di massa di righe, viene implementato il trasferimento di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per informazioni sulle differenze, vedere [Recordset: recupero di massa di record (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Questo argomento si applica alle classi derivate da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si usa il recupero di massa di righe, viene implementato il trasferimento di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Quando si crea una classe recordset con la Creazione guidata applicazione MFC o **Aggiungi classe**, la procedura guidata scrive automaticamente gli elementi seguenti correlati a RFX, in base alle scelte effettuate nel corso della procedura guidata per l'origine dati, le tabelle e le colonne:
 
@@ -102,7 +103,7 @@ Si notino le funzionalità seguenti della funzione:
 
 - Una chiamata a `CFieldExchange::SetFieldType`, tramite il puntatore `pFX`. Questa chiamata specifica che tutte le chiamate di funzione RFX fino alla fine di `DoFieldExchange` o alla chiamata successiva a `SetFieldType` sono colonne di output. Per altre informazioni, vedere [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Diverse chiamate alla funzione globale `RFX_Text`, una per ogni membro dati di campo (tutte le quali sono variabili `CString` nell'esempio). Queste chiamate specificano la relazione tra un nome di colonna nell'origine dati e un membro dati di campo. Le funzioni RFX eseguono il trasferimento dei dati effettivo. La libreria di classi fornisce le funzioni RFX per tutti i tipi di dati comuni. Per ulteriori informazioni sulle funzioni RFX, vedere Scambio di campi di [record: utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Diverse chiamate alla funzione globale `RFX_Text`, una per ogni membro dati di campo (tutte le quali sono variabili `CString` nell'esempio). Queste chiamate specificano la relazione tra un nome di colonna nell'origine dati e un membro dati di campo. Le funzioni RFX eseguono il trasferimento dei dati effettivo. La libreria di classi fornisce le funzioni RFX per tutti i tipi di dati comuni. Per ulteriori informazioni sulle funzioni RFX, vedere [trasferimento di campi di record: utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  L'ordine delle colonne nel set di risultati deve corrispondere all'ordine delle chiamate di funzione RFX in `DoFieldExchange`.
@@ -141,6 +142,6 @@ m_nFields += 3;
 
 Questo è il codice per l'aggiunta di tre nuovi campi. Se si aggiungono membri dati di parametro, è necessario inizializzare il membro dati [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams), che contiene il numero di membri dati di parametro. Posizionare l'inizializzazione `m_nParams` all'esterno delle parentesi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Scambio di campi record (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

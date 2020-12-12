@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: risoluzione dei problemi delle personalizzazioni di compilazione'
 title: Risoluzione dei problemi relativi alle personalizzazioni della compilazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - builds [C++], troubleshooting
 - custom build steps [C++], troubleshooting
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
-ms.openlocfilehash: 7a45b449dc9c3c4c81add37bbac0813c81133203
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e75dfeb32caf8c9c712c06b9dfb9e71f3e3c29b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277440"
 ---
 # <a name="troubleshooting-build-customizations"></a>Risoluzione dei problemi relativi alle personalizzazioni della compilazione
 
@@ -35,6 +36,6 @@ Se le istruzioni o gli eventi di compilazione personalizzati non funzionano come
 
 - Eseguire le istruzioni di compilazione personalizzate e gli eventi di compilazione uno alla volta per verificarne il comportamento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione](understanding-custom-build-steps-and-build-events.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istream_iterator Class'
 title: Classe istream_iterator
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 4ab1c6188a076b46f08b9ea171a8a945cbe1fc70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7247e96c68f1adcc145519fc1cca6b3401302854
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277908"
 ---
 # <a name="istream_iterator-class"></a>Classe istream_iterator
 
@@ -58,7 +59,7 @@ Dopo la costruzione o l'incrementazione di un oggetto della classe istream_itera
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo che fornisce il tipo di carattere di `istream_iterator`.|
 |[istream_type](#istream_type)|Tipo che fornisce il tipo di flusso di `istream_iterator`.|
@@ -78,7 +79,7 @@ Dopo la costruzione o l'incrementazione di un oggetto della classe istream_itera
 
 **Spazio dei nomi:** std
 
-## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator:: char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a> istream_iterator:: char_type
 
 Tipo che fornisce il tipo di carattere di `istream_iterator`.
 
@@ -86,7 +87,7 @@ Tipo che fornisce il tipo di carattere di `istream_iterator`.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Chartype`.
 
@@ -126,7 +127,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator:: istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a> istream_iterator:: istream_iterator
 
 Costruisce un iteratore di fine flusso come `istream_iterator` predefinito o un `istream_iterator` inizializzato nel tipo di flusso dell'iteratore da cui legge.
 
@@ -141,7 +142,7 @@ istream_iterator(istream_type& _Istr);
 *_Istr*\
 Flusso di input da leggere usato per inizializzare l'oggetto `istream_iterator`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore inizializza il puntatore del flusso di input con un puntatore Null e crea un iteratore di fine flusso. Il secondo costruttore inizializza il puntatore del flusso di input con *&_Istr*, quindi tenta di estrarre e archiviare un oggetto di tipo `Type` .
 
@@ -181,7 +182,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator:: istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a> istream_iterator:: istream_type
 
 Tipo che fornisce il tipo di flusso di `istream_iterator`.
 
@@ -189,7 +190,7 @@ Tipo che fornisce il tipo di flusso di `istream_iterator`.
 typedef basic_istream<CharType, Traits> istream_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo di `basic_istream` \< **CharType**, **Traits**> .
 
@@ -197,7 +198,7 @@ Il tipo è un sinonimo di `basic_istream` \< **CharType**, **Traits**> .
 
 Vedere [istream_iterator](#istream_iterator) per un esempio di come dichiarare e usare `istream_type`.
 
-## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator:: operator *
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a> istream_iterator:: operator *
 
 L'operatore di dereferenziazione restituisce l'oggetto archiviato di tipo `Type` a cui punta `istream_iterator`.
 
@@ -241,7 +242,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator:: operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a> istream_iterator:: operator-&gt;
 
 Restituisce il valore di un numero, se presente.
 
@@ -253,9 +254,9 @@ const Type* operator->() const;
 
 Valore di un membro, se presente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`i->m`equivale a`(*i).m`
+`i->m` equivale a `(*i).m`
 
 L'operatore restituisce `&*this`.
 
@@ -291,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator:: operator + +
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a> istream_iterator:: operator + +
 
 Estrae un oggetto incrementato dal flusso di input oppure copia tale oggetto prima di incrementarlo e restituisce la copia.
 
@@ -337,7 +338,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator:: traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a> istream_iterator:: traits_type
 
 Tipo che fornisce il tipo di tratti di `istream_iterator`.
 
@@ -345,7 +346,7 @@ Tipo che fornisce il tipo di tratti di `istream_iterator`.
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello *Traits*.
 

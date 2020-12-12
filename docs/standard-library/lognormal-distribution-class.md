@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: lognormal_distribution Class'
 title: Classe lognormal_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 28ecadfce3e52d9541358d8aa9f68b2e0857661b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e0d927d300cad3c26e8ffeaf2c4223caaa6d80af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277596"
 ---
 # <a name="lognormal_distribution-class"></a>Classe lognormal_distribution
 
@@ -71,7 +72,7 @@ public:
 *RealType*\
 Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione normale dei log. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -202,7 +203,7 @@ Parametro di distribuzione `s`.
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < s`
 
@@ -237,7 +238,7 @@ Parametro di distribuzione `s`.
 *Ok*\
 Struttura `param_type` usata per il confronto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < s`
 

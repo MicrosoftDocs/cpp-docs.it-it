@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: make_unsigned Class'
 title: Classe make_unsigned
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - make_unsigned class
 - make_unsigned
 ms.assetid: 7a6a3c4f-1a4c-47e8-9ee2-ac1f7b669353
-ms.openlocfilehash: 46b785b20d2ca8ff2de0dfa678b543fa7493aa92
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 3767a9971c17667b5d2fe545e524f563df2a7f42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277518"
 ---
 # <a name="make_unsigned-class"></a>Classe make_unsigned
 
@@ -33,7 +34,7 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza del modificatore di tipo include un tipo modificato che è *T* se `is_unsigned<T>` include true. In caso contrario è il tipo con segno più piccolo `ST` per il quale `sizeof (T) <= sizeof (ST)`.
 

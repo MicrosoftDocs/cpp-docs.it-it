@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: logical_not struct'
 title: logical_not (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 731b99faed6515268b93ec3a1a43c96796e49dd3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dc89a5a764d9f3182609b47c5f05eb8b3e167cec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277687"
 ---
-# <a name="logicalnot-struct"></a>logical_not (struct)
+# <a name="logical_not-struct"></a>logical_not (struct)
 
-Un oggetto funzione predefinito che esegue la logica non operazione (`operator!`) sul relativo argomento.
+Oggetto funzione predefinito che esegue l'operazione NOT logico ( `operator!` ) sul relativo argomento.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,8 +43,8 @@ struct logical_not<void>
 *Tipo*\
 Tipo che supporta un `operator!` che accetta un operando del tipo specificato o dedotto.
 
-*A sinistra*\
-L'operando sinistro dell'operazione di not logico. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *tipo*.
+*Sinistra*\
+L'operando sinistro dell'operazione di not logico. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del *tipo* dedotto.
 
 ## <a name="return-value"></a>Valore restituito
 

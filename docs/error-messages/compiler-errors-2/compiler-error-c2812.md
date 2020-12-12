@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2812'
 title: Errore del compilatore C2812
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2812
 ms.assetid: 22aadb8c-7232-489d-a3ad-60662dda30a8
-ms.openlocfilehash: cec92982646c64e6c5b669df328e4836d4f44df8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d59105397ae773c2a46b04a64eb50da3055c3a4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278422"
 ---
 # <a name="compiler-error-c2812"></a>Errore del compilatore C2812
 
-> \#importazione non è supportata con/CLR: pure e/CLR: safe
+> \#l'importazione non è supportata con/CLR: pure e/CLR: safe
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 

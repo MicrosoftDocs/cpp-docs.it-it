@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: money_put Class'
 title: Classe money_put
 ms.date: 11/01/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: d15667f4e30561dbba024f877530c4ff0f824f64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d7e35e870d4a065948123e9d21339095d36c4579
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277479"
 ---
 # <a name="money_put-class"></a>Classe money_put
 
@@ -43,7 +44,7 @@ Tipo utilizzato all'interno di un programma per codificare i caratteri delle imp
 *OutputIterator*\
 Tipo di iteratore in cui le funzioni Put monetarie scrivono il proprio output.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
@@ -55,7 +56,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di output.|
@@ -74,7 +75,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 **Spazio dei nomi:** std
 
-## <a name="money_putchar_type"></a><a name="char_type"></a>money_put:: char_type
+## <a name="money_putchar_type"></a><a name="char_type"></a> money_put:: char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -82,11 +83,11 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello **CharType**.
 
-## <a name="money_putdo_put"></a><a name="do_put"></a>money_put::d o_put
+## <a name="money_putdo_put"></a><a name="do_put"></a> money_put::d o_put
 
 Funzione virtuale chiamata per convertire un numero o una stringa in una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -127,7 +128,7 @@ Oggetto stringa da convertire.
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento prodotto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro virtuale protetta genera elementi sequenziali a partire da *Next* per produrre un campo di output di tipo valuta dall'oggetto [string_type](#string_type) *Val*. La sequenza controllata da *Val* deve iniziare con una o più cifre decimali, facoltativamente preceduta da un segno meno (-), che rappresenta la quantità. La funzione restituisce un iteratore che designa il primo elemento dopo il campo di output di tipo valuta generato.
 
@@ -169,7 +170,7 @@ La funzione chiama **iosbase**. **width**(0) per reimpostare la larghezza del ca
 
 Vedere l'esempio relativo a [put](#put), in cui la funzione membro virtuale viene chiamata da **put**.
 
-## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put:: iter_type
+## <a name="money_putiter_type"></a><a name="iter_type"></a> money_put:: iter_type
 
 Tipo che descrive un iteratore di output.
 
@@ -177,11 +178,11 @@ Tipo che descrive un iteratore di output.
 typedef OutputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello **OutputIterator.**
 
-## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put:: money_put
+## <a name="money_putmoney_put"></a><a name="money_put"></a> money_put:: money_put
 
 Costruttore per oggetti di tipo `money_put`.
 
@@ -194,7 +195,7 @@ explicit money_put(size_t _Refs = 0);
 *_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
@@ -202,13 +203,13 @@ I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \>1: questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="money_putput"></a><a name="put"></a>money_put::p UT
+## <a name="money_putput"></a><a name="put"></a> money_put::p UT
 
 Converte un numero o una stringa in una sequenza di caratteri che rappresenta un valore monetario.
 
@@ -249,7 +250,7 @@ Oggetto stringa da convertire.
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento prodotto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Entrambe le funzioni membro restituiscono [do_put](#do_put)( `next` ,, `_Intl` `_Iosbase` , `_Fill` , `val` ).
 
@@ -281,7 +282,7 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="money_putstring_type"></a><a name="string_type"></a>money_put:: string_type
+## <a name="money_putstring_type"></a><a name="string_type"></a> money_put:: string_type
 
 Tipo che descrive una stringa contenente caratteri di tipo `CharType`.
 
@@ -289,11 +290,11 @@ Tipo che descrive una stringa contenente caratteri di tipo `CharType`.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare sequenze di elementi dalla sequenza di origine.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<locale>](../standard-library/locale.md)\
 [Classe facet](../standard-library/locale-class.md#facet_class)\

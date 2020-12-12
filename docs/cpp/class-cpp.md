@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Class (C++)'
 title: class (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2b1e984f3facd4d2d212979a1dcf6be2eee3b3a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278740"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -52,7 +53,7 @@ Elenco dei membri della classe. Per ulteriori informazioni, vedere [Cenni prelim
 *declarators*<br/>
 Elenco dei dichiaratori che specificano i nomi di una o più istanze del tipo di classe. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della classe sono **`public`** . Questo è più comune nelle strutture, i cui membri dati sono **`public`** per impostazione predefinita, rispetto alle classi. Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](./declarations-and-definitions-cpp.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sulle classi in generale, fare riferimento a uno dei seguenti argomenti:
 

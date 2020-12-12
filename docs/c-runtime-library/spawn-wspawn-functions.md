@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _spawn, funzioni _wspawn'
 title: Funzioni _spawn, _wspawn
 ms.date: 11/04/2016
 api_location:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4b5fe1b386358095880c69fbf956c7c0a4a08ba9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276907"
 ---
 # <a name="_spawn-_wspawn-functions"></a>Funzioni _spawn, _wspawn
 
@@ -76,14 +77,14 @@ Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:
 
 La lettera alla fine del nome della funzione determina la variazione.
 
-|Lettera|Variant|
+|Letter|Variant|
 |-|-|
 | `e`  | `envp`, matrice di puntatori alle impostazioni d'ambiente, viene passata al nuovo processo.  |
 | `l`  | Gli argomenti della riga di comando vengono passati singolarmente alla funzione `_spawn`. Il suffisso viene utilizzato in genere quando un numero di parametri per un nuovo processo è noto in anticipo.  |
 | `p`  | Per trovare il file da eseguire viene usata la variabile di ambiente `PATH`.  |
 | `v`  | `argv`, matrice di puntatori agli argomenti della riga di comando, viene passata alla funzione `_spawn`. Il suffisso viene utilizzato in genere quando un numero di parametri per un nuovo processo è variabile.  |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni `_spawn` creano ed eseguono un nuovo processo. Gestiscono automaticamente gli argomenti stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. Le funzioni `_wspawn` sono versioni a caratteri wide delle funzioni `_spawn`; non gestiscono le stringhe di caratteri multibyte. In caso contrario, le funzioni `_wspawn` si comportano in modo identico alle controparti `_spawn`.
 
@@ -102,7 +103,7 @@ Le funzioni `_spawn` creano ed eseguono un nuovo processo. Gestiscono automatica
 
 Deve essere disponibile memoria sufficiente per il caricamento e l'esecuzione del nuovo processo. L'argomento `mode` determina l'azione eseguita dal processo chiamante prima e durante `_spawn`. I valori seguenti per `mode` sono definiti in Process.h:
 
-|Valore|Descrizione|
+|Valore|Description|
 |-|-|
 | `_P_OVERLAY`  | Sovrappone un processo chiamante con un nuovo processo, distruggendo il processo chiamante (lo stesso effetto delle chiamate `_exec`).  |
 | `_P_WAIT`  | Sospende un thread chiamante finché l'esecuzione del nuovo processo non è stata completata (`_spawn` sincrono).  |

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Classe RemoveIUnknown'
 title: Classe RemoveIUnknown
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-ms.openlocfilehash: cfcdefbb8d7cd12d2ebf99710f595fdd2fc16f76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0ef00ee9859a27252550aaeec6fb9b4f9ef2d5b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278727"
 ---
 # <a name="removeiunknown-class"></a>Classe RemoveIUnknown
 
@@ -31,19 +32,19 @@ class RemoveIUnknown : public T;
 *T*<br/>
 Classe.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Crea un tipo equivalente a un tipo `IUnknown`-based, ma dispone di funzioni membro `QueryInterface``AddRef` e `Release` non virtuali.
 
-Per impostazione predefinita, i metodi COM forniscono i metodi `QueryInterface`virtuali, `AddRef`e `Release`. Tuttavia, `ComPtr` non richiede il sovraccarico di metodi virtuali. `RemoveIUnknown` elimina tale overhead fornendo metodi privati, non virtuali `QueryInterface`, `AddRef`e `Release`.
+Per impostazione predefinita, i metodi COM forniscono i `QueryInterface` metodi virtuali, `AddRef` e `Release` . Tuttavia, `ComPtr` non richiede il sovraccarico di metodi virtuali. `RemoveIUnknown` Elimina tale overhead fornendo metodi privati, non virtuali `QueryInterface` , `AddRef` e `Release` .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|`ReturnType`|Sinonimo di un tipo equivalente al parametro di modello *T* ma con membri `IUnknown` non virtuali.|
+|`ReturnType`|Sinonimo di un tipo equivalente al parametro di modello *T* ma con membri non virtuali `IUnknown` .|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,6 +58,6 @@ Per impostazione predefinita, i metodi COM forniscono i metodi `QueryInterface`v
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

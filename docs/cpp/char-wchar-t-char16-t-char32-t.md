@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: char, wchar_t, char16_t, char32_t'
 title: char, wchar_t, char16_t, char32_t
 ms.date: 02/14/2018
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-ms.openlocfilehash: 6efbae1b8f6155410b823f1abef35c3dec90d458
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8bab56bf8a2cebe8409c9dc4ceecf931ec83260
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278792"
 ---
 # <a name="char-wchar_t-char16_t-char32_t"></a>char, wchar_t, char16_t, char32_t
 
