@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura: eseguire la conversione da un contenitore STL/CLR a una raccolta .NET'
 title: 'Procedura: conversione da contenitore STL/CLR a raccolta di .NET'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: a4a754bbee08e93e2db9af50f98d7603fabcd8d4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 93649ae411c53d21db5e660d8faa6aa707f74f16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181306"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Procedura: conversione da contenitore STL/CLR a raccolta di .NET
 
@@ -109,7 +110,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [Procedura: eseguire la conversione da una raccolta .NET a un contenitore STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>

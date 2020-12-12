@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _WAIT_CHILD, _WAIT_GRANDCHILD'
 title: _WAIT_CHILD, _WAIT_GRANDCHILD
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - _WAIT_CHILD constant
 - _WAIT_GRANDCHILD constant
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
-ms.openlocfilehash: 98858058add6a0a11d4f9331989c6816e38130aa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b14586232258f635b428b6c197213782591c8af1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181657"
 ---
-# <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
+# <a name="_wait_child-_wait_grandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,7 +37,7 @@ La funzione `_cwait` può essere utilizzata da qualsiasi processo per attendere 
 |`_WAIT_CHILD`|Il processo chiamante attende fino a quando il nuovo processo specificato termina.|
 |`_WAIT_GRANDCHILD`|Il processo chiamante attende fino a quando il nuovo processo specificato e tutti gli altri processi creati da tale nuovo processo terminano.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_cwait](../c-runtime-library/reference/cwait.md)<br/>
 [Costanti globali](../c-runtime-library/global-constants.md)
